@@ -14,12 +14,12 @@ caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 0bfbd13fb96fa78071043ed1ff564be2f9a8e30c
-ms.sourcegitcommit: ad297e041f0b7c65aa0bf7f4be8073d204977d9b
+ms.openlocfilehash: 0a61f022087de7f3055281252b43ba088e4b5bff
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2018
-ms.locfileid: "37923638"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38980888"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Solucionar um problema da instalação do Reporting Services
 
@@ -127,7 +127,7 @@ ms.locfileid: "37923638"
   
 -   [Onde encontrar o suplemento Reporting Services para produtos do SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
   
--   [Instalar o Primeiro Servidor de Relatório no Modo do SharePoint](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)  
+-   [Instalar o Primeiro Servidor de Relatório no Modo do SharePoint](http://msdn.microsoft.com/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)  
   
  ![Ícone de seta usado com o link Voltar ao Início](../../analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [Solução de problemas com instalações no modo do SharePoint](#bkmk_tshoot_sharepoint)  
   
@@ -183,7 +183,7 @@ ms.locfileid: "37923638"
   
  Essa funcionalidade não tem suporte porque o aplicativo de serviço do SQL Server Reporting Services não existe ou uma URL do servidor de relatórios não foi configurada na Administração Central.  
   
- **Solução alternativa:** Verifique se você tem um aplicativo de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e se ele foi configurado corretamente. Para obter mais informações, veja [Instalar o Primeiro Servidor de Relatório no Modo do SharePoint](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538).
+ **Solução alternativa:** Verifique se você tem um aplicativo de serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e se ele foi configurado corretamente. Para saber mais, confira [Instalar o primeiro servidor de relatório no modo do SharePoint](http://msdn.microsoft.com/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538).
   
  ![Ícone de seta usado com o link Voltar ao Início](../../analysis-services/instances/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao Início") [Solução de problemas com instalações no modo do SharePoint](#bkmk_tshoot_sharepoint)  
   

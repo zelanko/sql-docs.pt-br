@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d7f0ca959918e298d40eca5c925ccbf57e6173a2
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: d2d27efa67f446915de94ffd93edc0ed23db58e2
+ms.sourcegitcommit: 67d5f2a654b36da7fcc7c39d38b8bcf45791acc3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34329747"
+ms.lasthandoff: 07/14/2018
+ms.locfileid: "39038053"
 ---
 # <a name="altering-memory-optimized-tables"></a>Alterando tabelas com otimização de memória
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,40 +36,7 @@ A sintaxe ALTER TABLE é usada para fazer alterações no esquema de tabela, bem
   
 -   Sem o uso de uma instrução ALTER TABLE, as instruções CREATE INDEX, DROP INDEX e ALTER INDEX *não* têm suporte para índices em tabelas com otimização de memória.  
   
- A seguir, a sintaxe para as cláusulas ADD, DROP e ALTER INDEX na instrução ALTER TABLE.  
-  
-```
-| ADD   
-     {   
-        <column_definition>  
-      | <table_constraint>  
-      | <table_index>    
-     } [ ,...n ]  
-  
-| DROP   
-     {  
-         [ CONSTRAINT ]   
-         {   
-              constraint_name   
-         } [ ,...n ]  
-         | COLUMN   
-         {  
-              column_name   
-         } [ ,...n ]  
-         | INDEX   
-         {  
-              index_name   
-         } [ ,...n ]  
-     } [ ,...n ]  
-  
-| ALTER INDEX index_name  
-     {   
-         REBUILD WITH ( <rebuild_index_option> )     
-     }  
-}  
-```  
-  
- Os tipos de alteração a seguir têm suporte.  
+Os tipos de alteração a seguir têm suporte:  
   
 -   Alterando o número de buckets  
   

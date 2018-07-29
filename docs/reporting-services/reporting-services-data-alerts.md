@@ -15,12 +15,12 @@ caps.latest.revision: 33
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 1cfc5097bc391a9d8487506b2958635dead23b7a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0a62aafb5512562339ad387dcb1bf8f34efac09d
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028653"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38981208"
 ---
 # <a name="reporting-services-data-alerts"></a>Alertas de dados do Reporting Services
 
@@ -122,7 +122,7 @@ A seguir é apresentado um resumo das áreas principais dos alertas de dados do 
 ##  <a name="InstallAlerting"></a> Instalar os alertas de dados  
  O recurso de alertas de dados está disponível apenas quando o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] está instalado no modo integrado do SharePoint. Quando você instala o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no modo do SharePoint, a instalação cria automaticamente o banco de dados de alertas que armazena definições de alertas de dados e metadados de alertas, e duas páginas do SharePoint para gerenciamento de alertas, e adiciona o Designer de Alertas no site do SharePoint. Não há nenhuma etapa especial para execução, ou opções para definição de alertas durante a instalação.  
   
- Se você quiser saber mais sobre como instalar o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no modo do SharePoint, inclusive o serviço compartilhado do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , que é novo no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] e no aplicativo do serviço [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] que você deve criar e configurar antes de poder usar recursos do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , consulte [Instalar o Reporting Services no Modo do SharePoint para SharePoint 2010](http://msdn.microsoft.com/en-us/47efa72e-1735-4387-8485-f8994fb08c8c) na biblioteca MSDN.  
+ Se você quiser saber mais sobre como instalar o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no modo do SharePoint, inclusive o serviço compartilhado do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], que é novo no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] e no aplicativo do serviço [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] que você deve criar e configurar antes de poder usar recursos do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], consulte [Instalar o Reporting Services no Modo do SharePoint para SharePoint 2010](http://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c) na biblioteca MSDN.  
   
  Como mostra o diagrama anterior deste tópico, os alertas de dados usam trabalhos do SQL Server Agent. Para criar os trabalhos, o SQL Server Agent deve estar em execução. Talvez você tenha configurado o SQL Server Agent para iniciar automaticamente quando instalou o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Se não, você pode iniciar o SQL Server Agent manualmente. Para obter mais informações, consulte [Configurar o SQL Server Agent](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900) e [Iniciar, parar, pausar, retomar, reiniciar o mecanismo de banco de dados, o SQL Server Agent ou o serviço SQL Server Browser](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
@@ -137,7 +137,7 @@ A seguir é apresentado um resumo das áreas principais dos alertas de dados do 
   
  A tabela a seguir lista os elementos da configuração para alertas de dados e seus valores padrão, descrições e locais.  
   
-|Configuração|Valor Padrão|Description|Local|  
+|Configuração|Valor Padrão|Descrição|Local|  
 |-------------|-------------------|-----------------|--------------|  
 |AlertingCleanupCycleMinutes|20|Número de minutos entre inícios do ciclo de limpeza.|Arquivo de configuração do servidor de relatório|  
 |AlertingExecutionLogCleanupMinutes|10080|Número de minutos para manter entradas do log de execução.|Arquivo de configuração do servidor de relatório|  
@@ -151,7 +151,7 @@ A seguir é apresentado um resumo das áreas principais dos alertas de dados do 
 ### <a name="event-handlers-and-retry"></a>Manipuladores de Eventos e Repetir  
  Os manipuladores de eventos são:  
   
-|Manipulador de Eventos|Description|  
+|Manipulador de Eventos|Descrição|  
 |-------------------|-----------------|  
 |FireAlert|Clique em **Executar**  no Gerenciador de Alertas de Dados para iniciar o processamento imediato de uma definição de alerta.|  
 |FireSchedule|O SQL Server Agent inicia o agendamento de trabalho para uma definição de alerta.|  

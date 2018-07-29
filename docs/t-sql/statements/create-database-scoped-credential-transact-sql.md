@@ -25,13 +25,13 @@ caps.latest.revision: 21
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2b44199260af6886096e2ceabb071692e34b967f
-ms.sourcegitcommit: ad297e041f0b7c65aa0bf7f4be8073d204977d9b
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions || >= aps-pdw-2016
+ms.openlocfilehash: 0a7c0aa186874c068a82441dc8c4a3313e975964
+ms.sourcegitcommit: 87efa581f7d4d84e9e5c05690ee1cb43bd4532dc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2018
-ms.locfileid: "37923608"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38999296"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,7 +58,7 @@ WITH IDENTITY = 'identity_name'
  Especifica o nome da conta a ser usada ao conectar o servidor externamente. Para importar um arquivo do armazenamento de Blobs do Azure usando a chave de compartilhamento, o nome de identidade deve ser `SHARED ACCESS SIGNATURE`. Para carregar dados no SQL DW, qualquer valor válido pode ser usado para a identidade. Para mais informações sobre assinaturas de acesso compartilhado, consulte [Usando SAS (Assinatura de Acesso Compartilhado)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).  
   
  SECRET **='***secret***'**  
- Especifica o segredo necessário para a autenticação de saída. `SECRET` é necessário para importar um arquivo de armazenamento de Blobs do Azure. Para fazer o carregamento do armazenamento de Blobs do Azure no SQL DW, o Segredo deve ser a Chave de Armazenamento do Azure.  
+ Especifica o segredo necessário para a autenticação de saída. `SECRET` é necessário para importar um arquivo de armazenamento de Blobs do Azure. Para fazer o carregamento do armazenamento de Blobs do Azure no SQL DW ou no Parallel Data Warehouse, o Segredo deve ser a Chave de Armazenamento do Azure.  
 >  [!WARNING]
 >  O valor da chave SAS pode começar com um '?' (ponto de interrogação). Quando você usa a chave SAS, deve remover o '?' à esquerda. Caso contrário, seus esforços poderão ser bloqueados.  
   

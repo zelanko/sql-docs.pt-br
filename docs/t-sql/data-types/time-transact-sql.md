@@ -26,12 +26,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3b60fb0ee5e0c02ab541bd098fb22cbfb01cd501
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 704baf98a80b0fa17b10303e2ce18fec4463f39d
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37421565"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088118"
 ---
 # <a name="time-transact-sql"></a>hora (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "37421565"
 |Propriedade|Valor|  
 |--------------|-----------|  
 |Sintaxe|**time** [ (*escala de segundos fracionários*) ]|  
-|Uso|DECLARE @MyTime **time(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **time(7)** )|  
+|Uso|DECLARE \@MyTime **time(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **time(7)** )|  
 |*escala de segundos fracionários*|Especifica o número de dígitos para a parte fracionária dos segundos.<br /><br /> Pode ser um inteiro de 0 a 7. Para o Informatica, isso pode ser um inteiro de 0 a 3.<br /><br /> A escala fracionária padrão é de 7 (100ns).|  
 |Formato literal de cadeia de caracteres padrão<br /><br /> (usado para cliente de nível inferior)|hh:mm:ss[.nnnnnnn] para o Informatica)<br /><br /> Para obter mais informações, consulte a seção "Compatibilidade com versões anteriores de clientes de nível inferior" a seguir.|  
 |Intervalo|00:00:00.0000000 a 23:59:59.9999999 (00:00:00.000 a 23:59:59.999 para o Informatica)|  

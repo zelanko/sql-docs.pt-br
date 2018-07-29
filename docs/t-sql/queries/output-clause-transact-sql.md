@@ -34,12 +34,12 @@ caps.latest.revision: 94
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 90b258ba3b34d46a48e4ae34953ea5392052b5f0
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 23c580a6d65bdcdb5b01c6ee9c69918f0fa42d3a
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36252398"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088358"
 ---
 # <a name="output-clause-transact-sql"></a>cláusula OUTPUT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -80,8 +80,8 @@ ms.locfileid: "36252398"
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- @*table_variable*  
- Especifica uma variável **table** na qual as linhas retornadas são inseridas, em vez de serem retornadas ao chamador. @*table_variable* precisa ser declarada antes da instrução INSERT, UPDATE, DELETE ou MERGE.  
+ \@*table_variable*  
+ Especifica uma variável **table** na qual as linhas retornadas são inseridas, em vez de serem retornadas ao chamador. \@*table_variable* precisa ser declarada antes da instrução INSERT, UPDATE, DELETE ou MERGE.  
   
  Se *column_list* não for especificada, a variável **table** precisará ter o mesmo número de colunas que o conjunto de resultados de OUTPUT. As colunas de identidade e as colunas computadas são exceções, que devem ser ignoradas. Se *column_list* for especificada, as colunas omitidas precisarão permitir valores nulos ou ter valores padrão atribuídos.  
   
@@ -143,7 +143,7 @@ DELETE Sales.ShoppingCartItem
  Está disponível apenas para a instrução MERGE. Especifica uma coluna do tipo **nvarchar(10)** na cláusula OUTPUT em uma instrução MERGE que retorna um entre três valores para cada linha: 'INSERT', 'UPDATE' ou 'DELETE', de acordo com a ação que foi realizada nessa linha.  
   
 ## <a name="remarks"></a>Remarks  
- A cláusula OUTPUT \<dml_select_list> e a cláusula OUTPUT \<dml_select_list> INTO { **@***table_variable* | *output_table* } podem ser definidas em uma única instrução INSERT, UPDATE, DELETE ou MERGE.  
+ A cláusula OUTPUT \<dml_select_list> e a cláusula OUTPUT \<dml_select_list> INTO { **\@***table_variable* | *output_table*} podem ser definidas em uma única instrução INSERT, UPDATE, DELETE ou MERGE.  
   
 > [!NOTE]  
 >  Salvo indicação em contrário, as referências à cláusula OUTPUT se referem tanto à cláusula OUTPUT, quanto à cláusula OUTPUT INTO.  
@@ -207,9 +207,9 @@ DELETE Sales.ShoppingCartItem
   
 -   A cláusula OUTPUT INTO não é compatível com instruções INSERT que contêm uma cláusula \<dml_table_source>.  
   
--   @@ROWCOUNT retorna as linhas inseridas apenas pela instrução INSERT externa.  
+-   \@\@ROWCOUNT retorna as linhas inseridas apenas pela instrução INSERT externa.  
   
--   @@IDENTITY, SCOPE_IDENTIT e IDENT_CURRENT retornam valores de identidade gerados apenas pela instrução DML aninhada e não os valores gerados pela instrução INSERT externa.  
+-   \@\@IDENTITY, SCOPE_IDENTITY e IDENT_CURRENT retornam valores de identidade gerados apenas pela instrução DML aninhada, e não os valores gerados pela instrução INSERT externa.  
   
 -   As notificações de consulta tratam a instrução como uma única entidade, e o tipo de qualquer mensagem criada será o tipo DML aninhado, mesmo que alteração significativa seja proveniente da própria instrução INSERT.  
   

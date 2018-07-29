@@ -1,5 +1,6 @@
 ---
-title: Gerenciador de Conexões do Azure Data Lake Analytics | Microsoft Docs
+title: Gerenciador de conexões do Azure Data Lake Analytics | Microsoft Docs
+description: Um pacote do SSIS (SQL Server Integration Services) pode usar o Gerenciador de Conexões do Azure Data Lake Analytics para se conectar a uma conta do Data Lake Analytics.
 ms.custom: ''
 ms.date: 05/18/2018
 ms.prod: sql
@@ -19,47 +20,45 @@ caps.latest.revision: 7
 author: yanancai
 ms.author: yanacai
 manager: craigg
-ms.openlocfilehash: 17b63aad55cf50262d7e1e56267859b1a34cc9d3
-ms.sourcegitcommit: 44e9bf62f2c75449c17753ed66bf85c43928dbd5
+ms.openlocfilehash: e094cbbb5e9f51345fc22b6bb756ce2e10e97fba
+ms.sourcegitcommit: 84cc5ed00833279da3adbde9cb6133a4e788ed3f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854398"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39216957"
 ---
-# <a name="azure-data-lake-analytics-connection-manager"></a>Gerenciador de Conexão do Azure Data Lake Analytics
+# <a name="azure-data-lake-analytics-connection-manager"></a>Gerenciador de conexão do Azure Data Lake Analytics
 
-Um pacote do SSIS (SQL Server Integration Services) pode usar o Gerenciador de Conexões do Azure Data Lake Analytics para se conectar a uma conta do Azure Data Lake Analytics com um dos dois tipos de autenticação a seguir:
--   Identidade do Usuário do Azure AD
+Um pacote do SSIS (SQL Server Integration Services) pode usar o Gerenciador de Conexões do Azure Data Lake Analytics para se conectar a uma conta do Data Lake Analytics com um dos dois tipos de autenticação a seguir:
+-   Identidade de Usuário do Azure Active Directory (Azure AD)
 -   Identidade do Serviço do Azure AD 
 
-O gerenciador de conexões do Azure Data Lake Analytics é um componente do [Feature Pack do SSIS (SQL Server Integration Services) para Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
+O gerenciador de conexões do Data Lake Analytics é um componente do [Feature Pack do SSIS (SQL Server Integration Services) para Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
  
-## <a name="configure-the-azure-data-lake-analytics-connection-manager"></a>Configurar o Gerenciador de Conexão do Azure Data Lake Analytics
+## <a name="configure-the-connection-manager"></a>Configurar o gerenciador de conexões
 
-1.  Na caixa de diálogo **Adicionar gerenciador de conexões do SSIS**, selecione **AzureDataLakeAnalytics** e selecione **Adicionar**. A caixa de diálogo **Editor de conexões do Azure Data Lake Analytics** se abre.
+1. Na caixa de diálogo **Adicionar gerenciador de conexões do SSIS**, selecione **AzureDataLakeAnalytics** > **Adicionar**. A caixa de diálogo **Editor de conexões do Azure Data Lake Analytics** se abre.
   
-2.  Na caixa de diálogo **Editor do Gerenciador de Conexão do Azure Data Lake Analytics**, no campo **Nome da Conta ADLA**, forneça o nome da conta do Azure Data Lake Analytics. Por exemplo: myadlaaccountname.
+2. Na caixa de diálogo **Editor do Gerenciador de Conexões do Data Lake Analytics**, no campo **Nome da Conta ADLA**, forneça o nome da conta do Azure Data Lake Analytics. Por exemplo: myadlaaccountname.
   
-3.  No campo **Autenticação**, escolha o tipo de autenticação apropriado para acessar os dados no Azure Data Lake Analytics.
+3. No campo **Autenticação**, escolha o tipo de autenticação apropriado para acessar os dados no Data Lake Analytics.
 
-    1.  Se você selecionou a opção de autenticação **Identidade de Usuário do Azure AD**, faça o seguinte:
-        1. Forneça valores para os campos **Nome de Usuário** e **Senha**. 
+   A. Se você selecionou a opção de autenticação **Identidade de Usuário do Azure AD**:
+   
+      i. Forneça valores para os campos **Nome de Usuário** e **Senha**.    
+      ii. Selecione **Testar Conexão** para testar a conexão. Se você ou o administrador do locatário não consentiu anteriormente em permitir que o SSIS acessasse a conta do Data Lake Analytics, selecione **Aceitar** quando solicitado. Para obter mais informações sobre esta experiência de consentimento, consulte [integrando aplicativos com o Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-integrating-applications#updating-an-application).
     
-        2. Selecione **Testar Conexão** para testar a conexão. Se você ou o administrador do locatário não consentiu anteriormente em permitir que o SSIS acessasse a conta do Azure Data Lake Analytics, selecione **Aceitar** quando solicitado. Para obter mais informações sobre esta experiência de consentimento, consulte [integrando aplicativos com o Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-integrating-applications#updating-an-application).
+   > [!NOTE] 
+   > Quando você seleciona a opção de autenticação por **Identidade do Usuário do Azure AD**, a autenticação multifator e a autenticação por conta da Microsoft não têm suporte.
     
-        >   [!NOTE] 
-        > Quando você seleciona a opção de autenticação por **Identidade do Usuário do Azure AD**, a autenticação multifator e a autenticação por conta da Microsoft não têm suporte.
-    
-    2. Se você selecionou a opção de autenticação **Identidade do Serviço do Azure AD**, faça o seguinte:
-        1. Crie uma entidade de serviço e um aplicativo do AAD (Azure Active Directory) para acessar a conta do Azure Data Analytics. Para obter mais informações sobre essa opção de autenticação, consulte [Use o portal para criar a entidade de serviço e o aplicativo do Active Directory que pode acessar recursos](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal).
-    
-        2. Atribua as permissões apropriadas para permitir que este aplicativo do AAD acesse sua conta do Azure Data Analytics. Saiba como conceder permissões para sua conta do Azure Data Lake Analytics [usando o Assistente para Adicionar Usuário](https://docs.microsoft.com/azure/data-lake-analytics/data-lake-analytics-manage-use-portal#add-a-new-user). 
-    
-        3. Forneça valores para os campos **ID do aplicativo**, **Chave de Autenticação** e **ID do locatário**.
-    
-        4. Selecione **Testar Conexão** para testar a conexão.  
+   B. Se você selecionou a opção de autenticação **Identidade do Serviço do Azure AD**:
+   
+      i. Crie uma entidade de serviço e um aplicativo do Azure AD para acessar a conta do Data Lake Analytics. Para obter mais informações sobre essa opção de autenticação, consulte [Use o portal para criar a entidade de serviço e o aplicativo do Active Directory que pode acessar recursos](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal).    
+      ii. Atribua as permissões apropriadas para permitir que este aplicativo do Azure AD acesse sua conta do Data Lake Analytics. Saiba como conceder permissões para sua conta do Data Lake Analytics usando o [Assistente para Adicionar Usuário](https://docs.microsoft.com/azure/data-lake-analytics/data-lake-analytics-manage-use-portal#add-a-new-user).    
+      iii. Forneça valores para os campos **ID do aplicativo**, **Chave de Autenticação** e **ID do locatário**.    
+      iv. Selecione **Testar Conexão** para testar a conexão.  
 
-4.  Selecione **OK** para fechar a caixa de diálogo **Editor do Gerenciador de Conexões do Azure Data Lake Analytics**.  
+4. Selecione **OK** para fechar a caixa de diálogo **Editor do Gerenciador de Conexões do Azure Data Lake Analytics**.  
 
 ## <a name="view-the-properties-of-the-connection-manager"></a>Exibir as propriedades do gerenciador de conexões
 Você pode ver as propriedades do gerenciador de conexões criado na janela **Propriedades** .  

@@ -2,7 +2,7 @@
 title: Banco de dados tempdb | Microsoft Docs
 description: Este tópico fornece detalhes sobre a configuração e o uso do banco de dados tempdb no SQL Server e no Banco de Dados SQL do Azure
 ms.custom: P360
-ms.date: 12/19/2017
+ms.date: 07/17/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
@@ -23,15 +23,15 @@ ms.author: sstein
 manager: craigg
 ms.reviewer: carlrab
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 98e93ce7e85d6c027e2b9b347ff54425440d2674
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: d7a260337f00e6e37015855f9141fbd081e34e91
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34582318"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108368"
 ---
 # <a name="tempdb-database"></a>Banco de dados tempdb
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   O banco de dados do sistema **tempdb** é um recurso global disponível para todos os usuários conectados à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou conectados ao Banco de Dados SQL. O Tempdb é usado para manter:  
   
 - **Objetos de usuário** temporários criados explicitamente como: índices e tabelas temporárias globais ou locais, procedimentos armazenados temporários, variáveis de tabela, Tabelas retornadas em funções com valor de tabela ou cursores.  
@@ -44,7 +44,7 @@ ms.locfileid: "34582318"
   > Cada objeto interno usa um mínimo de nove páginas: uma página de IAM e uma extensão de oito páginas. Para obter mais informações sobre páginas e extensões, consulte [Páginas e extensões](../../relational-databases/pages-and-extents-architecture-guide.md#pages-and-extents).
 
   > [!IMPORTANT]
-  > O Banco de Dados SQL do Azure dá suporte a tabelas temporárias globais e a procedimentos armazenados temporários globais armazenados no tempdb e que estão no escopo do nível do banco de dados. As tabelas temporárias globais e os procedimentos armazenados temporários globais são compartilhados para as sessões de todos os usuários no mesmo Banco de Dados SQL do Azure. As sessões de usuário de outros bancos de dados SQL do Azure não podem acessar tabelas temporárias globais. Para obter mais informações, consulte [Tabelas temporárias globais no escopo do banco de dados (Banco de Dados SQL do Azure)](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database).
+  > O servidor lógico do Banco de Dados SQL do Azure dá suporte a tabelas temporárias globais e a procedimentos armazenados temporários globais armazenados no tempdb e que estão no escopo do nível do banco de dados. As tabelas temporárias globais e os procedimentos armazenados temporários globais são compartilhados para as sessões de todos os usuários no mesmo Banco de Dados SQL do Azure. As sessões de usuário de outros bancos de dados SQL do Azure não podem acessar tabelas temporárias globais. Para obter mais informações, consulte [Tabelas temporárias globais no escopo do banco de dados (Banco de Dados SQL do Azure)](../../t-sql/statements/create-table-transact-sql.md#database-scoped-global-temporary-tables-azure-sql-database). A [Instância Gerenciada do Banco de Dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) oferece suporte aos mesmos objetos temporários que o SQL Server. Para o servidor lógico do Banco de Dados SQL do Azure, apenas o banco de dados mestre e o banco de dados tempdb se aplicam. Para saber o conceito de servidor lógico e banco de dados mestre lógico, confira [O que é um servidor lógico do SQL Azure?](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-logical-server). Para conferir uma discussão sobre o tempdb no contexto do servidor lógico do Banco de Dados SQL do Azure, confira [Servidor lógico do Banco de dados tempdb no Banco de Dados SQL do Azure](#tempdb-database-in-sql-database). Para a Instância Gerenciada do Banco de Dados SQL do Azure, Todos os bancos de dados do sistema se aplicam. 
 
 - **Repositórios de versão**, que são uma coleção de páginas de dados que contém linhas de dados necessárias para dar suporte aos recursos que usam o controle de versão de linha. Existem dois armazenamentos de versão: um repositório de versão comum e um armazenamento de versão de criação de índice online. Os armazenamentos de versão contêm:
   - Versões de linha geradas por transações de modificação de dados em um banco de dados que usa a leitura de confirmados usando transações de isolação de controle de versão de linha ou isolação de instantâneo.  

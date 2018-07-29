@@ -32,12 +32,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e56a65ce4dd6ccfb31e8c55dad26b16c7c1415aa
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: d8fad120755b75f9d7e07f9e10c184de6f879810
+ms.sourcegitcommit: 9229fb9b37616e0b73e269d8b97c08845bc4b9f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37788287"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39024262"
 ---
 # <a name="backup-certificate-transact-sql"></a>BACKUP CERTIFICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -90,7 +90,9 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
   
  Quando você faz backup da chave privada em um arquivo, a criptografia é necessária. A senha usada para proteger o certificado de backup não é a mesma senha usada para criptografar a chave privada do certificado.  
   
- Para restaurar um certificado de backup, use a instrução [CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md).  
+ Para restaurar um certificado de backup, use a instrução [CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md).
+ 
+ Ao executar um backup, os arquivos serão colocados em uma ACL da conta de serviço da instância do SQL Server. Se você precisar restaurar o certificado para um servidor que está executando em uma conta diferente, será necessário ajustar as permissões nos arquivos para que a nova conta consiga lê-los. 
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão CONTROL no certificado e o conhecimento da senha que é usada para criptografar a chave privada. Se for feito backup somente da parte pública do certificado, será necessário ter alguma permissão no certificado e que a permissão VIEW não seja negada ao chamador no certificado.  

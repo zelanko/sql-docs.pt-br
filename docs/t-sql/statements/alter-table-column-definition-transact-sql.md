@@ -1,7 +1,7 @@
 ---
 title: column_definition (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/05/2017
+ms.date: 07/17/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 972d3c177d596240fba0a04625c5bbff36e80ae5
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: d727179427421ff0d7c06f8336f098f222d43eb3
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37785327"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109238"
 ---
 # <a name="alter-table-columndefinition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -157,8 +157,11 @@ DEFAULT
 *constant_expression*  
  É um valor literal, um NULL ou uma função de sistema usado como valor de coluna padrão. Se for usado em conjunto com uma coluna definida para ser de um tipo definido pelo usuário do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], a implementação do tipo deverá dar suporte a uma conversão implícita da *constant_expression* no tipo definido pelo usuário.  
   
-WITH VALUES  
- Especifica que o valor fornecido em DEFAULT *constant_expression* seja armazenado em uma nova coluna adicionada às linhas existentes. Se a coluna adicionada permitir valores nulos e WITH VALUES estiver especificado, o valor padrão será armazenado na coluna nova adicionada a linhas existentes. Se WITH VALUES não estiver especificado para colunas que permitem nulos, o valor NULL será armazenado na nova coluna nas linhas existentes. Se a nova coluna não permitir nulos, o valor padrão será armazenado em linhas novas, independentemente de WITH VALUES ser especificado.  
+WITH VALUES   
+ Ao adicionar uma coluna E uma restrição DEFAULT, se a coluna permitir valores NULLS o uso de WITH VALUES definirá, para as linhas existentes, o valor da nova coluna como o valor fornecido em *constant_expression* DEFAULT. Se a coluna que está sendo adicionada não permitir valores NULLS, o valor da coluna sempre será definido, para as linhas existentes, como o valor fornecido na *expressão constante* DEFAULT. A partir do SQL Server 2012, essa pode ser uma operação de metadados [adding-not-null-columns-as-an-online-operation](alter-table-transact-sql.md?view=sql-server-2017#adding-not-null-columns-as-an-online-operation).
+Se isso for usado quando a coluna relacionada também não estiver sendo adicionada, não terá qualquer efeito.
+ 
+ Especifica que o valor fornecido em DEFAULT *constant_expression* seja armazenado em uma nova coluna adicionada às linhas existentes. Se a coluna adicionada permitir valores nulos e WITH VALUES for especificado, o valor padrão será armazenado na nova coluna adicionada a linhas existentes. Se WITH VALUES não estiver especificado para colunas que permitem nulos, o valor NULL será armazenado na nova coluna nas linhas existentes. Se a nova coluna não permitir nulos, o valor padrão será armazenado em linhas novas, independentemente de WITH VALUES ser especificado.  
   
 IDENTITY  
  Especifica que a coluna nova é uma coluna de identidade. O [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] fornece um valor exclusivo e de incremento para a coluna. Quando você adiciona colunas de identificador a tabelas existentes, os números de identidade são adicionados às linhas existentes da tabela, com os valores de semente e de incremento. A ordem em que as linhas são atualizadas não é garantida. Os números de identidade também são gerados para todas as linhas adicionadas.  

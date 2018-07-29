@@ -1,7 +1,7 @@
 ---
 title: Nível de compatibilidade de ALTER DATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/03/2018
+ms.date: 07/16/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -28,12 +28,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6ec0fd8539a4d2a0f1c5a93ff6ed80d6fb95e5ef
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 57bafde547e9c2705d55308187fd53e241594d5f
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37791507"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088368"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Nível de compatibilidade de ALTER DATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,21 +46,21 @@ Para obter mais informações sobre as convenções de sintaxe, consulte [Conven
   
 ```  
 ALTER DATABASE database_name   
-SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 | 90 }  
+SET COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 | 90 }  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
  *database_name*  
  É o nome do banco de dados a ser modificado.  
   
- COMPATIBILITY_LEVEL { 140 | 130 | 120 | 110 | 100 | 90 | 80 }  
+ COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 }  
  É a versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com a qual o banco de dados será compatível. Os seguintes valores de nível de compatibilidade podem ser configurados (nem todas as versões dão suporte a todos os níveis de compatibilidade listados acima):  
   
 |Product|Versão do Mecanismo de Banco de Dados|Designação de nível de compatibilidade|Valores do nível de compatibilidade com suporte|  
 |-------------|-----------------------------|-------------------------------------|------------------------------------------|  
 |[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]|14|140|140, 130, 120, 110, 100|
-|Servidor lógico [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|12|130|140, 130, 120, 110, 100|  
-|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Instância gerenciada|12|130|140, 130, 120, 110, 100|  
+|Servidor lógico [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|12|130|150, 140, 130, 120, 110, 100|  
+|[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Instância gerenciada|12|130|150, 140, 130, 120, 110, 100|  
 |[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|13|130|130, 120, 110, 100|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|12|120|120, 110, 100|  
 |[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|11|110|110, 100, 90|  
@@ -166,6 +166,11 @@ Para obter o fluxo de trabalho recomendado para atualizar o nível de compatibil
 
 ## <a name="compatibility-levels-and-stored-procedures"></a>Níveis de compatibilidade e procedimentos armazenados  
  Quando um procedimento armazenado é executado, ele usa o nível de compatibilidade atual do banco de dados no qual está definido. Quando a configuração de compatibilidade de um banco de dados é alterada, todos os seus procedimentos armazenados são recompilados automaticamente conforme necessário.  
+
+## <a name="differences-between-compatibility-level-140-and-level-150"></a>Diferenças entre os níveis de compatibilidade 140 e 150  
+Esta seção descreve os novos comportamentos introduzidos com o nível de compatibilidade 150.
+
+O nível 150 de compatibilidade do banco do dados está atualmente em Versão Prévia Privada para o Banco de Dados SQL do Azure.  Esse nível de compatibilidade do banco de dados será associado à próxima geração de aprimoramentos de processamento de consulta, além do que foi introduzido no nível de compatibilidade 140 do banco de dados.  
 
 ## <a name="differences-between-compatibility-level-130-and-level-140"></a>Diferenças entre os níveis de compatibilidade 130 e 140  
 Esta seção descreve os novos comportamentos introduzidos com o nível de compatibilidade 140.

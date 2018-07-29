@@ -14,12 +14,12 @@ caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 524356687337eb962c262ea1e503fd2b40856623
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 8288e93ff860e79116815f5b5d5417d05786d262
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35410548"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082368"
 ---
 # <a name="catalogclearobjectparametervalue-ssisdb-database"></a>catalog.clear_object_parameter_value (Banco de dados SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,26 +37,26 @@ catalog.clear_object_parameter [ @folder_name = ] folder_name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @folder_name = ] *folder_name*  
+ [ \@folder_name = ] *folder_name*  
  O nome da pasta que contém o projeto. O *folder_name* é **nvarchar(128)**.  
   
- [ @project_name = ] *project_name*  
+ [ \@project_name = ] *project_name*  
  O nome do projeto. O *project_name* é **nvarchar(128)**.  
   
- [ @object_type = ] *object_type*  
+ [ \@object_type = ] *object_type*  
  O tipo do objeto. Os valores válidos incluem `20` para um projeto e `30` para um pacote. O *object_type* é **smallInt**.  
   
- [ @ object_name = ] *object_name*  
+ [ \@ object _name = ] *object _name*  
  O nome do pacote. O *object _name* é **nvarchar(260)**.  
   
- [ @parameter_ name = ] *parameter_name*  
+ [ \@parameter_ name = ] *parameter_name*  
  O nome do parâmetro. O *parameter_ name* é **nvarchar(128)**.  
   
 ## <a name="return-code-value"></a>Valor do código de retorno  
  0 (êxito)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhum  
+ None  
   
 ## <a name="permissions"></a>Permissões  
  Este procedimento armazenado exige uma das seguintes permissões:  

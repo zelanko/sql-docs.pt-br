@@ -24,12 +24,12 @@ caps.latest.revision: 115
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 35cfefdbc23ef269579476c098d31825b319a41e
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: ab20db9fedc4585e8d1011fa7cc29a60056fefe5
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35404748"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084478"
 ---
 # <a name="execute-sql-task"></a>Tarefa Executar SQL
   A tarefa Executar SQL executa instruções SQL ou procedimentos armazenados a partir de um pacote. A tarefa pode conter uma única instrução SQL ou várias instruções SQL que são executadas em sequência. Você pode usar a tarefa Executar SQL para os seguintes propósitos:  
@@ -218,7 +218,7 @@ Use a página **Mapeamento de Parâmetros** da caixa de diálogo **Editor da Tar
  **Nome do parâmetro**  
  Forneça um nome de parâmetro.  
   
- Dependendo do tipo de gerenciador de conexões usado pela tarefa, você deve usar números ou nomes de parâmetro. Alguns tipos de gerenciadores de conexões exigem que o primeiro caractere do nome do parâmetro seja o sinal @, nomes específicos como @Param1 ou então nomes de coluna como nomes de parâmetro.  
+ Dependendo do tipo de gerenciador de conexões usado pela tarefa, você deve usar números ou nomes de parâmetro. Alguns tipos de gerenciadores de conexões exigem que o primeiro caractere do nome do parâmetro seja o sinal \@, nomes específicos como \@Param1, ou nomes de coluna como nomes de parâmetro.  
   
  **Tamanho do Parâmetro**  
  Informe o tamanho dos parâmetros com comprimento variável, como cadeias de caracteres e campos binários.  
@@ -273,16 +273,16 @@ As instruções SQL e os procedimentos armazenados frequentemente usam parâmetr
 -   [Obtendo valores de códigos de retorno](#Return_codes)    
   
 ###  <a name="Parameter_names_and_markers"></a> Marcadores e nomes de parâmetro  
- Dependendo do tipo de conexão usado pela tarefa Executar SQL, a sintaxe do comando SQL utiliza marcadores de parâmetro diferentes. Por exemplo, o tipo de gerenciador de conexões [!INCLUDE[vstecado](../../includes/vstecado-md.md)] exige que o comando SQL use um marcador de parâmetro no formato **@varParameter**, enquanto que o tipo de conexão OLE DB exige o marcador de parâmetro ponto de interrogação (?).  
+ Dependendo do tipo de conexão usado pela tarefa Executar SQL, a sintaxe do comando SQL utiliza marcadores de parâmetro diferentes. Por exemplo, o tipo de gerenciador de conexões [!INCLUDE[vstecado](../../includes/vstecado-md.md)] exige que o comando SQL use um marcador de parâmetro no formato **\@varParameter**, enquanto que o tipo de conexão OLE DB exige o marcador de parâmetro ponto de interrogação (?).  
   
- Os nomes que você pode usar como nomes de parâmetro nos mapeamentos entre as variáveis e os parâmetros também variam por tipo de gerenciador de conexões. Por exemplo, o tipo de gerenciador de conexão [!INCLUDE[vstecado](../../includes/vstecado-md.md)] usa um nome definido pelo usuário com um prefixo @, enquanto o tipo de gerenciador de conexões OLE DB requer que você use o valor numérico de ordinal de base 0 como o nome do parâmetro.  
+ Os nomes que você pode usar como nomes de parâmetro nos mapeamentos entre as variáveis e os parâmetros também variam por tipo de gerenciador de conexões. Por exemplo, o tipo de gerenciador de conexão [!INCLUDE[vstecado](../../includes/vstecado-md.md)] usa um nome definido pelo usuário com um prefixo \@, enquanto o tipo de gerenciador de conexões OLE DB requer que você use o valor numérico de ordinal de base 0 como o nome do parâmetro.  
   
  A tabela a seguir resume os requisitos de comandos SQL para os tipos de gerenciador de conexões que podem ser utilizados pela tarefa Executar SQL.  
   
 |Tipo de conexão|Marcador de parâmetro|Nome do parâmetro|Exemplo de comando SQL|  
 |---------------------|----------------------|--------------------|-------------------------|  
 |ADO|?|Param1, Param2,...|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
-|[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|@\<nome do parâmetro>|@\<nome do parâmetro>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = @parmContactID|  
+|[!INCLUDE[vstecado](../../includes/vstecado-md.md)]|\@\<nome do parâmetro>|\@\<nome do parâmetro>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = \@parmContactID|  
 |ODBC|?|1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
 |EXCEL e OLE DB|?|0, 1, 2, 3, …|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
   
@@ -375,7 +375,7 @@ As instruções SQL e os procedimentos armazenados frequentemente usam parâmetr
   
 -   O tipo de conexão ADO pode usar quaisquer dois nomes de parâmetro, como Param1 e Param2, mas os parâmetros devem ser mapeados pela posição original na lista de parâmetros.  
   
--   O tipo de conexão [!INCLUDE[vstecado](../../includes/vstecado-md.md)] usa os nomes de parâmetro @parmMinProductID e @parmMaxProductID.  
+-   O tipo de conexão [!INCLUDE[vstecado](../../includes/vstecado-md.md)] usa os nomes de parâmetro \@parmMinProductID e \@parmMaxProductID.  
   
 ###  <a name="Stored_procedures"></a> Usar parâmetros com procedimentos armazenados  
  Os comandos SQL que executam procedimentos armazenados também podem usar mapeamento de parâmetro. As regras de como usar marcadores e nomes de parâmetros dependem do tipo de gerenciador de conexões utilizado por Executar SQL, assim como as regras para consultas parametrizadas.  
@@ -421,7 +421,7 @@ Esta seção descreve como usar uma instrução SQL parametrizada na tarefa Exec
     |Tipo de conexão|Marcador de parâmetro|  
     |---------------------|----------------------|  
     |ADO|?|  
-    |ADO.NET e SQLMOBILE|@\<nome do parâmetro>|  
+    |ADO.NET e SQLMOBILE|\@\<nome do parâmetro>|  
     |ODBC|?|  
     |EXCEL e OLE DB|?|  
   
@@ -444,7 +444,7 @@ Esta seção descreve como usar uma instrução SQL parametrizada na tarefa Exec
     |Tipo de conexão|Nome do Parâmetro|  
     |---------------------|--------------------|  
     |ADO|Param1, Param2,...|  
-    |ADO.NET e SQLMOBILE|@\<nome do parâmetro>|  
+    |ADO.NET e SQLMOBILE|\@\<nome do parâmetro>|  
     |ODBC|1, 2, 3, …|  
     |EXCEL e OLE DB|0, 1, 2, 3, …|  
   

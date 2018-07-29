@@ -19,12 +19,12 @@ caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d8af424b2ba5f8e23a0907c37d8f7e259e9d4192
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 4b16a7d07358ff1c561bc840a958e24205688b86
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36248448"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083368"
 ---
 # <a name="guidelines-for-using-xml-data-type-methods"></a>Diretrizes para usar métodos de tipo de dados xml
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ XQuery [xmldb_test.xmlcol.query()]: Attribute may not appear outside of an eleme
  As etapas de local, os parâmetros de função e os operadores que exigem singletons retornarão um erro se o compilador não puder determinar se um singleton está garantido no momento da execução. Este problema costuma acontecer com dados não digitados. Por exemplo, a pesquisa de um atributo requer um elemento pai de singleton. Um ordinal que selecione um único nó pai é suficiente. A avaliação de uma combinação **node()**-**value()** para extrair valores de atributo pode não exigir a especificação ordinal. Isso é demonstrado no próximo exemplo.  
   
 ### <a name="example-known-singleton"></a>Exemplo: Singleton conhecido  
- Neste exemplo, o método **nodes()** gera uma linha separada para cada elemento <`book`>. O método **value()** que é avaliado em um nó <`book`> extrai o valor de @genre e, sendo um atributo, é um singleton.  
+ Neste exemplo, o método **nodes()** gera uma linha separada para cada elemento <`book`>. O método **value()** que é avaliado em um nó <`book`> extrai o valor de \@genre e, sendo um atributo, é um singleton.  
   
 ```  
 SELECT nref.value('@genre', 'varchar(max)') LastName  

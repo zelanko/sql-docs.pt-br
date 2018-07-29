@@ -23,12 +23,12 @@ caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7a8bbdb0f98dea26d73ec465d6fd9e226329345a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 535aa58c0bf17e78c47012ffaea42916d55c1818
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33017323"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086018"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>Usar resultados de FOR XML no código do aplicativo
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -145,7 +145,7 @@ ms.locfileid: "33017323"
  Os resultados da página HTML gerada exibidos são semelhantes à seguinte saída de exemplo:  
   
 ##### <a name="server-side-processing"></a>Processamento no lado do servidor  
- Page Generated @ 3/11/2006 3:36:02 PM  
+ Page Generated \@ 3/11/2006 3:36:02 PM  
   
  Cadeia de Conexão = Provedor=SQLOLEDB;Fonte de Dados=MyServer;Catálogo Inicial=AdventureWorks;Segurança Integrada=SSPI;  
   

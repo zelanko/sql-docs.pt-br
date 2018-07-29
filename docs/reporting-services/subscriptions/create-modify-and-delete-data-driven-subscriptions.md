@@ -20,12 +20,12 @@ caps.latest.revision: 51
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: cb4b22c712593429a1ad3485e643af48626c5734
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2fee5948ab6a2cb9f7846980ec3838107364d581
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33032966"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983218"
 ---
 # <a name="create-modify-and-delete-data-driven-subscriptions"></a>Criar, modificar e excluir assinaturas controladas por dados
   Uma assinatura controlada por dados é uma assinatura com base em consulta que obtém os valores de dados usados para processar a assinatura em tempo de execução. Quando a assinatura é acionada, uma consulta é processada para obter informações atualizadas sobre destinatários, opções de entrega de relatórios, formatos de renderização e configurações de parâmetro. Os resultados da consulta são combinados com a definição da assinatura para criar uma assinatura dinâmica que usa os dados já mantidos em um banco de dados de funcionários, de clientes ou que contenha informações que podem ser usadas como dados do assinante.  
@@ -43,7 +43,7 @@ ms.locfileid: "33032966"
 -   [Executando a assinatura](#bkmk_run_subscription)  
   
 ##  <a name="bkmk_manage_and_delete"></a> Gerenciando e excluindo uma assinatura controlada por dados  
- Uma assinatura controlada por dados que está em andamento não pode ser interrompida nem excluída pela página Gerenciar Trabalhos do Gerenciador de Relatórios. Por esse motivo, é vantajoso usar uma agenda compartilhada para acionar a assinatura controlada por dados. Dessa forma, se quiser impedir temporariamente o processamento de uma assinatura, poderá fazer uma pausa na agenda que aciona a assinatura. Para saber mais, consulte [old_Criar e gerenciar assinaturas de servidores de relatório no modo Nativo](http://msdn.microsoft.com/en-us/7f46cbdb-5102-4941-bca2-5e0ff9012c6b).  
+ Uma assinatura controlada por dados que está em andamento não pode ser interrompida nem excluída pela página Gerenciar Trabalhos do Gerenciador de Relatórios. Por esse motivo, é vantajoso usar uma agenda compartilhada para acionar a assinatura controlada por dados. Dessa forma, se quiser impedir temporariamente o processamento de uma assinatura, poderá fazer uma pausa na agenda que aciona a assinatura. Para saber mais, consulte [old_Criar e gerenciar assinaturas de servidores de relatório no modo Nativo](http://msdn.microsoft.com/7f46cbdb-5102-4941-bca2-5e0ff9012c6b).  
   
  Para excluir uma assinatura controlada por dados, selecione-a na página Minhas Assinaturas ou na página Assinaturas de um relatório e clique em **Excluir**.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "33032966"
  [Crie e gerencie assinaturas de servidores de relatório no modo Nativo](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
  [Assinaturas e entrega &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Gerenciador de Relatórios &#40;Modo Nativo do SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [old_Crie e gerencie assinaturas de servidores de relatório no modo nativo](http://msdn.microsoft.com/en-us/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
+ [old_Criar e gerenciar assinaturas de servidores de relatório no modo nativo](http://msdn.microsoft.com/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
  [Página Assinaturas &#40;Gerenciador de Relatórios&#41;](http://msdn.microsoft.com/library/cf3a6bd0-e0b2-4875-a532-63ef34cfa860)   
  [Página Minhas Assinaturas &#40;Gerenciador de Relatórios&#41;](http://msdn.microsoft.com/library/491a85a3-f323-4155-a0a8-de2779899995)  
   

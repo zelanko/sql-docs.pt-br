@@ -21,12 +21,12 @@ caps.latest.revision: 45
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 401288bfde8caf4550260f7695d9bc13d07e468a
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: d7999de8fa0a00d6479483b3b352fe52622a00b1
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35322795"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983772"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verificar uma instalação do Reporting Services
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] podem ser instalados em um de dois modos: Nativo ou SharePoint. As etapas que você deve seguir para verificar a instalação dependem do modo do servidor de relatório.  
@@ -39,7 +39,7 @@ ms.locfileid: "35322795"
   
 2.  Verifique se o **Serviço SQL Server Reporting Services** está instalado e no estado **Executando** .  
   
-     Se você não vir o serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] na lista, verifique se o serviço está instalado. Para obter mais informações, veja [Instalar o Primeiro Servidor de Relatório no Modo do SharePoint](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538).  
+     Se você não vir o serviço do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] na lista, verifique se o serviço está instalado. Para saber mais, confira [Instalar o primeiro servidor de relatório no modo do SharePoint](http://msdn.microsoft.com/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538).  
   
 ### <a name="to-verify-the-service-application"></a>Para verificar o aplicativo de serviço  
   
@@ -71,7 +71,7 @@ ms.locfileid: "35322795"
   
 1.  Em uma biblioteca de documentos do SharePoint, crie um relatório básico do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que contém somente uma caixa de texto, por exemplo, um título. O relatório não contém fonte de dados ou conjunto de dados. A meta é verificar se você pode abrir o Construtor de Relatórios e um relatório básico será visualizado.  
   
-2.  Salve o relatório em uma biblioteca de documentos e execute o relatório da biblioteca. Para obter mais informações sobre como criar relatórios com o Construtor de Relatórios, veja [Iniciar o Construtor de Relatórios](http://msdn.microsoft.com/en-us/8c8c7d2e-b315-418d-bf65-90e7685e4259).  
+2.  Salve o relatório em uma biblioteca de documentos e execute o relatório da biblioteca. Para saber mais sobre como criar relatórios com o Construtor de Relatórios, confira [Iniciar o Construtor de Relatórios](http://msdn.microsoft.com/8c8c7d2e-b315-418d-bf65-90e7685e4259).  
   
 ### <a name="reporting-services-samples"></a>Exemplos do Reporting Services  
   
@@ -100,7 +100,7 @@ ms.locfileid: "35322795"
   
 2.  Use o [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] para criar uma nova pasta ou carregar um arquivo a fim de testar se as condições são devolvidas para o banco de dados do servidor de relatório. Se essas operações obtiverem êxito, a conexão estará funcional.  
   
-     Para obter mais informações, consulte [Portal da Web &#40;modo nativo do SSRS&#41;](http://msdn.microsoft.com/en-us/7349e626-6ed5-4d21-b05f-cf042ad9ad70).  
+     Para obter mais informações, consulte [Portal da Web &#40;modo nativo do SSRS&#41;](http://msdn.microsoft.com/7349e626-6ed5-4d21-b05f-cf042ad9ad70).  
   
 ### <a name="to-verify-that-report-designer-is-installed-and-running"></a>Para verificar se o Designer de Relatórios está instalado e em execução  
   

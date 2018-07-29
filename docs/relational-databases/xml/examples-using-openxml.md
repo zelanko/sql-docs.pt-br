@@ -31,12 +31,12 @@ caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 33f794f164a1fbd63ce65289c36b30391a87587b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: edd4106a1e58631112337d0dcae8da78907a519d
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33017415"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087478"
 ---
 # <a name="examples-using-openxml"></a>Exemplos: usando OPENXML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ LILAS      Carlos Gonzlez
   
  Como os elementos <`Customer`> não têm nenhum subelemento, se a mesma instrução SELECT for executada com *flags* definido como **2** para indicar mapeamento centrado em elemento, os valores de **CustomerID** e **ContactName** dos dois clientes serão retornados como NULL.  
   
- O @xmlDocument também pode ser do tipo **xml** ou do tipo **(n)varchar(max)**.  
+ O \@xmlDocument também podem ser do tipo **xml** ou do tipo **(n)varchar(max)**.  
   
  Se <`CustomerID`> e <`ContactName`> no documento XML forem subelementos, o mapeamento centrado em elemento recuperará os valores.  
   
@@ -474,7 +474,7 @@ EXEC sp_xml_removedocument @docHandle
   
  A instrução OPENXML ilustra o seguinte:  
   
--   *rowpattern* (/ROOT/Customer/Order/OrderDetail/@ProductID) termina com um atributo XML, **ProductID**. No conjunto de linhas resultante, uma linha é criada para cada nó de atributo selecionado no documento XML.  
+-   *rowpattern* (/ROOT/Customer/Order/OrderDetail/\@ProductID) termina com um atributo XML, **ProductID**. No conjunto de linhas resultante, uma linha é criada para cada nó de atributo selecionado no documento XML.  
   
 -   Neste exemplo, o parâmetro *flags* não é especificado. Em vez disso, os mapeamentos são especificados pelo parâmetro *ColPattern* .  
   
@@ -482,9 +482,9 @@ EXEC sp_xml_removedocument @docHandle
   
 -   O padrão XPath (**.**) especificado como *ColPattern* para a coluna **ProdID** no conjunto de linhas identifica o nó de contexto, o nó atual. De acordo com o *rowpattern* especificado, ele é o atributo **ProductID** do elemento <`OrderDetail`>.  
   
--   O *ColPattern*, **../@Quantity**, especificado para a coluna **Qty** no conjunto de linhas identifica o atributo **Quantity** do pai, <`OrderDetail`>, nó do nó de contexto, \<ProductID>.  
+-   O *ColPattern*, **../\@Quantity**, especificado para a coluna **Qty** no conjunto de linhas identifica o atributo **Quantity** do pai, <`OrderDetail`>, nó do nó de contexto, \<ProductID>.  
   
--   De maneira semelhante, o *ColPattern*, **../../@OrderID**, especificado para a coluna **OID** no conjunto de linhas identifica o atributo **OrderID** do pai, <`Order`>, do nó pai do nó de contexto. O nó pai é <`OrderDetail`>, e o nó de contexto é <`ProductID`>.  
+-   De maneira semelhante, o *ColPattern*, **../../\@OrderID**, especificado para a coluna **OID** no conjunto de linhas identifica o atributo **OrderID** do pai, <`Order`>, do nó pai do nó de contexto. O nó pai é <`OrderDetail`>, e o nó de contexto é <`ProductID`>.  
   
  Em seguida, a instrução SELECT recupera todas as colunas no conjunto de linhas fornecido pelo OPENXML.  
   
@@ -582,7 +582,7 @@ FROM   OPENXML (@h, '/Root/row', 10)
 EXEC sp_xml_removedocument @h  
 ```  
   
- Especificamente, você está passando uma variável de tipo **xml** (@x) para a função **sp_xml_preparedocument()**.  
+ Especificamente, você está passando uma variável de tipo **xml** (\@x) para a função **sp_xml_preparedocument()**.  
   
  Este é o resultado:  
   

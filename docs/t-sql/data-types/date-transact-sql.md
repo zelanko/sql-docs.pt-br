@@ -26,12 +26,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f7f20eda403c6f3fabea20e77a0c87b29a5f8dfb
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: e32dac3a1145695c33fc06c818f8c59361e025dd
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37415435"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083828"
 ---
 # <a name="date-transact-sql"></a>data (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +43,7 @@ Define uma data no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 |Propriedade|Valor|  
 |--------------|-----------|  
 |Sintaxe|**date**|  
-|Uso|DECLARE @MyDate **date**<br /><br /> CREATE TABLE Table1 ( Column1 **date** )|  
+|Uso|DECLARE \@MyDate **date**<br /><br /> CREATE TABLE Table1 ( Column1 **date** )|  
 |Formato literal de cadeia de caracteres padrão<br /><br /> (usado para cliente de nível inferior)|AAAA-MM-DD<br /><br /> Para obter mais informações, consulte a seção Compatibilidade com versões anteriores a seguir.|  
 |Intervalo|0001-01-01 a 9999-12-31 (1582-10-15 a 9999-12-31 para o Informatica)<br /><br /> 1 de janeiro de 1 CE até 31 de dezembro de 9999 CE (15 de outubro de 1582 CE a 31 de dezembro de 9999 CE para o Informatica)|  
 |Intervalos de elementos|AAAA são quatro dígitos de 0001 a 9999 que representam um ano. Para o Informatica, YYYY está limitado ao intervalo de 1582 a 9999.<br /><br /> MM são dois dígitos de 01 a 12 que representam um mês do ano especificado.<br /><br /> DD são dois dígitos de 01 a 31, dependendo do mês que representa um dia do mês especificado.|  

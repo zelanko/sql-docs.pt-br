@@ -15,12 +15,12 @@ caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: e74001a999a6a401c6c221ce4839e32b344f3bba
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0622d84da89af1f2cfda36500e5257168417ba14
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33025073"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39082448"
 ---
 # <a name="create-delete-or-modify-a-folder-web-portal"></a>Criar, excluir ou modificar uma pasta (portal da Web)
   É possível criar pastas para organizar e administrar os itens publicados em um servidor de relatório. Criar pastas pode ajudar os usuários a localizar relatórios de seu interesse. Para gerenciadores de conteúdo, pastas fornecem uma estrutura para a aplicação de permissões. É possível criar atribuições de função em pastas específicas para restringir o acesso a relatórios em desenvolvimento ou que não devem ser distribuídos amplamente.  
@@ -33,7 +33,7 @@ ms.locfileid: "33025073"
   
      A caixa de diálogo **Criar uma nova pasta** é aberta.  
   
-3.  Digite um nome de pasta. Um nome de pasta pode incluir espaços, mas não pode incluir caracteres reservados usados para codificação de URL: ; ? : @ & = + , $ / * < > |. Não é possível digitar uma série de nomes de pasta para criar várias pastas de uma vez.  
+3.  Digite um nome de pasta. Um nome de pasta pode incluir espaços, mas não pode incluir caracteres reservados usados para codificação de URL: ; ? : \@ & = + , $ / * < > |. Não é possível digitar uma série de nomes de pasta para criar várias pastas de uma vez.  
   
 4.  Selecione **Criar**.  
   

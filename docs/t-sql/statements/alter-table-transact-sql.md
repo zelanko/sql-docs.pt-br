@@ -63,12 +63,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5822dd89bbff8bb6982e65a310cce74324bd9fd7
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.openlocfilehash: fe68009506a8dbc48400148df7f7048f5a11a481
+ms.sourcegitcommit: 67d5f2a654b36da7fcc7c39d38b8bcf45791acc3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909576"
+ms.lasthandoff: 07/14/2018
+ms.locfileid: "39038203"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -82,7 +82,7 @@ ms.locfileid: "37909576"
 ## <a name="syntax"></a>Sintaxe  
   
 ```  
--- Syntax for SQL Server and Azure SQL Database  
+-- Disk-Based ALTER TABLE Syntax for SQL Server and Azure SQL Database
   
 ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name   
 {   
@@ -110,7 +110,7 @@ ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
         <column_definition>  
       | <computed_column_definition>  
       | <table_constraint>   
-      | <column_set_definition>   
+      | <column_set_definition> 
     } [ ,...n ]  
       | [ system_start_time_column_name datetime2 GENERATED ALWAYS AS ROW START   
                    [ HIDDEN ] [ NOT NULL ] [ CONSTRAINT constraint_name ] 
@@ -120,6 +120,7 @@ ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
            DEFAULT constant_expression [WITH VALUES] ,  
          ]  
        PERIOD FOR SYSTEM_TIME ( system_start_time_column_name, system_end_time_column_name )  
+       
     | DROP   
      [ {  
          [ CONSTRAINT ]  [ IF EXISTS ]  
@@ -148,6 +149,7 @@ ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
         TO target_table   
         [ PARTITION target_partition_number_expression ]  
         [ WITH ( <low_priority_lock_wait> ) ]  
+    
     | SET   
         (  
             [ FILESTREAM_ON =   
@@ -168,6 +170,7 @@ ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
                       ]  
                   }  
           )  
+      
     | REBUILD   
       [ [PARTITION = ALL]  
         [ WITH ( <rebuild_option> [ ,...n ] ) ]   
@@ -181,7 +184,6 @@ ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
     | <filetable_option>  
   
     | <stretch_configuration>  
-  
 }  
 [ ; ]  
   
@@ -189,7 +191,7 @@ ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
   
 <column_set_definition> ::=   
     column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS  
-  
+
 <drop_clustered_constraint_option> ::=    
     {   
         MAXDOP = max_degree_of_parallelism  
@@ -240,6 +242,136 @@ ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
         ABORT_AFTER_WAIT = { NONE | SELF | BLOCKERS } )   
 }  
 ```  
+  
+```  
+-- Memory optimized ALTER TABLE Syntax for SQL Server and Azure SQL Database
+  
+ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name   
+{   
+    ALTER COLUMN column_name   
+    {   
+        [ type_schema_name. ] type_name   
+            [ (   
+                {   
+                   precision [ , scale ]   
+                }   
+            ) ]   
+        [ COLLATE collation_name ]   
+        [ NULL | NOT NULL ] 
+    }  
+
+    | ALTER INDEX index_name   
+    {   
+        [ type_schema_name. ] type_name   
+        REBUILD   
+        [ [ NONCLUSTERED ] WITH ( BUCKET_COUNT = bucket_count )
+        ]  
+    }  
+    
+    | ADD   
+    {   
+        <column_definition>  
+      | <computed_column_definition>  
+      | <table_constraint> 
+      | <table_index>
+      | <column_index>
+    } [ ,...n ]  
+      | [ system_start_time_column_name datetime2 GENERATED ALWAYS AS ROW START   
+                   [ HIDDEN ] [ NOT NULL ] [ CONSTRAINT constraint_name ] 
+           DEFAULT constant_expression [WITH VALUES] ,  
+            system_end_time_column_name datetime2 GENERATED ALWAYS AS ROW END   
+                   [ HIDDEN ] [ NOT NULL ]  [ CONSTRAINT constraint_name ] 
+           DEFAULT constant_expression [WITH VALUES] ,  
+         ]  
+       PERIOD FOR SYSTEM_TIME ( system_start_time_column_name, system_end_time_column_name )  
+       
+    | DROP   
+     [ {  
+         CONSTRAINT  [ IF EXISTS ]  
+         {   
+              constraint_name   
+          } [ ,...n ]  
+      | INDEX  [ IF EXISTS ] 
+      {
+          index_name
+      } [ ,...n ]
+          | COLUMN  [ IF EXISTS ]  
+          {  
+              column_name   
+          } [ ,...n ]  
+          | PERIOD FOR SYSTEM_TIME  
+     } [ ,...n ]  
+    | [ WITH { CHECK | NOCHECK } ] { CHECK | NOCHECK } CONSTRAINT   
+        { ALL | constraint_name [ ,...n ] }   
+    
+    | { ENABLE | DISABLE } TRIGGER   
+        { ALL | trigger_name [ ,...n ] }  
+  
+    | SWITCH [ [ PARTITION ] source_partition_number_expression ]  
+        TO target_table   
+        [ PARTITION target_partition_number_expression ]  
+        [ WITH ( <low_priority_lock_wait> ) ]  
+    
+    | SET   
+        (  
+            SYSTEM_VERSIONING =   
+                  {   
+                      OFF   
+                  | ON   
+                      [ ( HISTORY_TABLE = schema_name . history_table_name   
+                          [, DATA_CONSISTENCY_CHECK = { ON | OFF } ] 
+                          [, HISTORY_RETENTION_PERIOD = 
+                          { 
+                               INFINITE | number {DAY | DAYS | WEEK | WEEKS 
+                 | MONTH | MONTHS | YEAR | YEARS } 
+                          } 
+                          ]  
+                        )  
+                      ]  
+                  }  
+          )  
+      
+    | <table_option>    
+}  
+[ ; ]  
+  
+-- ALTER TABLE options  
+  
+< table_constraint > ::=  
+ [ CONSTRAINT constraint_name ]  
+{    
+   { PRIMARY KEY | UNIQUE }  
+     {   
+       NONCLUSTERED (column [ ASC | DESC ] [ ,... n ])  
+       | NONCLUSTERED HASH (column [ ,... n ] ) WITH ( BUCKET_COUNT = bucket_count )   
+                    }   
+    | FOREIGN KEY   
+        ( column [ ,...n ] )   
+        REFERENCES referenced_table_name [ ( ref_column [ ,...n ] ) ]   
+    | CHECK ( logical_expression )   
+}  
+
+<column_index> ::=  
+  INDEX index_name  
+{ [ NONCLUSTERED ] | [ NONCLUSTERED ] HASH WITH (BUCKET_COUNT = bucket_count)  }  
+
+<table_index> ::=  
+  INDEX index_name  
+{   [ NONCLUSTERED ] HASH (column [ ,... n ] ) WITH (BUCKET_COUNT = bucket_count)   
+  | [ NONCLUSTERED ] (column [ ASC | DESC ] [ ,... n ] )   
+      [ ON filegroup_name | default ]  
+  | CLUSTERED COLUMNSTORE [WITH ( COMPRESSION_DELAY = {0 | delay [Minutes]})]  
+      [ ON filegroup_name | default ]   
+}  
+
+<table_option> ::=  
+{  
+    MEMORY_OPTIMIZED = ON   
+  | DURABILITY = {SCHEMA_ONLY | SCHEMA_AND_DATA}  
+  | SYSTEM_VERSIONING = ON [ ( HISTORY_TABLE = schema_name . history_table_name  
+        [, DATA_CONSISTENCY_CHECK = { ON | OFF } ] ) ]   
+}  
+``` 
   
 ```  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
@@ -318,7 +450,7 @@ ALTER TABLE [ database_name . [schema_name ] . | schema_name. ] source_table_nam
   
 -   Associada com uma definição padrão. Entretanto, o comprimento, a precisão e a escala de uma coluna podem ser alterados se o tipo de dados não for modificado.  
   
-O tipo de dados das colunas **text**, **ntext e **image** pode ser alterado somente das seguintes maneiras:  
+O tipo de dados das colunas **text**, **ntext** e **image** pode ser alterado somente das seguintes maneiras:  
   
 -   **text** a **varchar(max)**, **nvarchar(max)** ou **xml**  
   
@@ -326,7 +458,7 @@ O tipo de dados das colunas **text**, **ntext e **image** pode ser alterado some
   
 -   **image** a **varbinary(max)**  
   
-Algumas alterações de tipo de dados podem causar uma alteração nos dados. Por exemplo, alterar uma coluna nchar** ou **nvarchar** para **char** ou **varchar** pode levar à conversão de caracteres estendidos. Para obter mais informações, veja [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md). Reduzir a precisão ou escala de uma coluna pode causar o truncamento de dados.  
+Algumas alterações de tipo de dados podem causar uma alteração nos dados. Por exemplo, alterar uma coluna **nchar** ou **nvarchar** para **char** ou **varchar** pode levar à conversão de caracteres estendidos. Para obter mais informações, veja [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md). Reduzir a precisão ou escala de uma coluna pode causar o truncamento de dados.  
   
 > [!NOTE]
 > O tipo de dados de uma coluna em uma tabela particionada não pode ser alterado.  
@@ -379,7 +511,7 @@ COLLATE \< *collation_name* > especifica o novo agrupamento para a coluna altera
   
  A cláusula COLLATE pode ser usada para alterar os agrupamentos somente de colunas dos tipos de dados **char**, **varchar**, **nchar** e **nvarchar**. Para alterar o agrupamento de uma coluna de tipo de dados de alias definido pelo usuário, você deve executar instruções ALTER TABLE separadas para alterar a coluna para um tipo de dados de sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e alterar seu agrupamento. Depois, deve alterar novamente a coluna para um tipo de dados de alias.  
   
- ALTER COLUMN não poderá ter uma alteração de agrupamento se ocorrer uma ou mais das condições a seguir:  
+ALTER COLUMN não poderá ter uma alteração de agrupamento se ocorrer uma ou mais das condições a seguir:  
   
 -   Se uma restrição CHECK, FOREIGN KEY ou colunas computadas referenciarem a coluna alterada.  
 -   Se forem criados qualquer índice, estatísticas ou índice de texto completo na coluna. As estatísticas criadas automaticamente na coluna alterada serão descartadas se o agrupamento da coluna for alterado.  
@@ -483,12 +615,22 @@ WITH CHECK | WITH NOCHECK
  Se você não quiser verificar novas restrições CHECK ou FOREIGN KEY com relação aos dados existentes, use WITH NOCHECK. Nós não recomendamos fazer isso, com raríssimas exceções. A nova restrição será avaliada em todas as atualizações de dados posteriores. Qualquer violação que seja suprimida por WITH NOCHECK ao adicionar a restrição pode gerar falha em atualizações futuras caso elas atualizem as linhas com dados que não estejam de acordo com a restrição.  
   
  O otimizador de consulta não considera restrições que são definidas WITH NOCHECK. Tais restrições são ignoradas até que sejam reabilitadas, usando `ALTER TABLE table WITH CHECK CHECK CONSTRAINT ALL`.  
+
+ALTER INDEX *index_name* Especifica que o número de buckets para *index_name* foi alterado ou modificado.
   
- ADD  
- Especifica que uma ou mais definições de coluna, definições de coluna computadas ou restrições de tabela são adicionadas, ou as colunas que o sistema usará para controle de versão do sistema.  
+A sintaxe ALTER TABLE... ADD/DROP/ALTER INDEX só tem suporte para tabelas com otimização de memória.    
+
+> [!NOTE]
+> Sem o uso de uma instrução ALTER TABLE, as instruções CREATE INDEX, DROP INDEX e ALTER INDEX não têm suporte para índices em tabelas com otimização de memória. 
+
+ADD  
+Especifica que uma ou mais definições de coluna, definições de coluna computadas ou restrições de tabela são adicionadas, ou as colunas que o sistema usará para controle de versão do sistema. Para tabelas com otimização de memória, é possível adicionar um índice.
+
+> [!NOTE]
+> Sem o uso de uma instrução ALTER TABLE, as instruções CREATE INDEX, DROP INDEX e ALTER INDEX não têm suporte para índices em tabelas com otimização de memória. 
   
- PERIOD FOR SYSTEM_TIME ( system_start_time_column_name, system_end_time_column_name )  
- **Aplica-se a**: [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+PERIOD FOR SYSTEM_TIME ( system_start_time_column_name, system_end_time_column_name )  
+**Aplica-se a**: [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Especifica os nomes das colunas que o sistema usará para registrar o período para o qual um registro é válido. Você pode especificar colunas existentes ou criar novas colunas como parte do argumento ADD PERIOD FOR SYSTEM_TIME. As colunas devem ter o datatype de datetime2 e ser definidas como NOT NULL. Se uma coluna de período for definida como NULL, um erro será gerado. Você pode definir [column_constraint &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-table-column-constraint-transact-sql.md) e/ou [Especificar Valores Padrão para Colunas](../../relational-databases/tables/specify-default-values-for-columns.md) para as colunas system_start_time e system_end_time. Consulte o Exemplo A nos exemplos de [Controle de versão do sistema](#system_versioning) abaixo demonstrando o uso de um valor padrão para a coluna system_end_time.  
   
@@ -496,18 +638,25 @@ WITH CHECK | WITH NOCHECK
   
  Do [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)] em diante, os usuários poderão marcar uma ou ambas as colunas de período com o sinalizador **HIDDEN** para implicitamente ocultar essas colunas, de modo que **SELECT \* FROM***\<table>* não retorne um valor para essas colunas. Por padrão, as colunas de período não ficam ocultas. Para serem usadas, colunas ocultas devem ser explicitamente incluídas em todas as consultas que fazem referência direta à tabela temporal.  
   
- DROP  
- Especifica que uma ou mais definições de coluna, definições de coluna computada ou restrições de tabela são removidas, ou remover a especificação das colunas que o sistema usará para controle de versão do sistema.  
+DROP  
+Especifica que uma ou mais definições de coluna, definições de coluna computada ou restrições de tabela são removidas, ou remover a especificação das colunas que o sistema usará para controle de versão do sistema.  
   
- CONSTRAINT *constraint_name*  
- Especifica que *constraint_name* é removida da tabela. Várias restrições podem ser listadas.  
+CONSTRAINT *constraint_name*  
+Especifica que *constraint_name* é removida da tabela. Várias restrições podem ser listadas.  
   
- O nome definido pelo usuário ou fornecido pelo sistema das restrições pode ser determinado ao consultar as exibições do catálogo **sys.check_constraint**, **sys.default_constraints**, **sys.key_constraints** e **sys.foreign_keys**.  
+O nome definido pelo usuário ou fornecido pelo sistema das restrições pode ser determinado ao consultar as exibições do catálogo **sys.check_constraint**, **sys.default_constraints**, **sys.key_constraints** e **sys.foreign_keys**.  
   
- Uma restrição PRIMARY KEY não poderá ser descartada se um índice XML existir na tabela.  
+Uma restrição PRIMARY KEY não poderá ser descartada se um índice XML existir na tabela.  
+ 
+INDEX *index_name* Especifica que *index_name* foi removido da tabela.
   
- COLUMN *column_name*  
- Especifica que *constraint_name* ou *column_name* é removida da tabela. Várias colunas podem ser listadas.  
+A sintaxe ALTER TABLE... ADD/DROP/ALTER INDEX só tem suporte para tabelas com otimização de memória.    
+
+> [!NOTE]
+> Sem o uso de uma instrução ALTER TABLE, as instruções CREATE INDEX, DROP INDEX e ALTER INDEX não têm suporte para índices em tabelas com otimização de memória. 
+      
+COLUMN *column_name*  
+Especifica que *constraint_name* ou *column_name* é removida da tabela. Várias colunas podem ser listadas.  
   
  Uma coluna não pode ser descartada quando for:  
   
@@ -520,7 +669,7 @@ WITH CHECK | WITH NOCHECK
 -   Associada a uma regra.  
   
 > [!NOTE]  
->  Descartar uma coluna não recupera o espaço em disco da coluna. Talvez seja necessário recuperar o espaço em disco de uma coluna descartada quando o tamanho da linha de uma tabela estiver próximo do limite ou o exceder. Recupere o espaço, criando um índice clusterizado da tabela ou recriando um índice clusterizado existente usando [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md). Para obter informações sobre o impacto de remover tipos de dados LOB, consulte esta [entrada de blog CSS](http://blogs.msdn.com/b/psssql/archive/2012/12/03/how-it-works-gotcha-varchar-max-caused-my-queries-to-be-slower.aspx).  
+> Descartar uma coluna não recupera o espaço em disco da coluna. Talvez seja necessário recuperar o espaço em disco de uma coluna descartada quando o tamanho da linha de uma tabela estiver próximo do limite ou o exceder. Recupere o espaço, criando um índice clusterizado da tabela ou recriando um índice clusterizado existente usando [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md). Para obter informações sobre o impacto de remover tipos de dados LOB, consulte esta [entrada de blog CSS](http://blogs.msdn.com/b/psssql/archive/2012/12/03/how-it-works-gotcha-varchar-max-caused-my-queries-to-be-slower.aspx).  
   
  PERIOD FOR SYSTEM_TIME  
  **Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
@@ -551,7 +700,7 @@ WITH CHECK | WITH NOCHECK
  Para obter mais informações, consulte [Configurar operações de índice paralelo](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
 > [!NOTE]  
->  As operações de índice paralelas não estão disponíveis em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Edições e recursos compatíveis com o SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+> As operações de índice paralelas não estão disponíveis em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Edições e recursos compatíveis com o SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  ONLINE **=** { ON | **OFF** } \<conforme se aplica a drop_clustered_constraint_option>  
  Especifica se as tabelas subjacentes e os índices associados estão disponíveis para consultas e modificação de dados durante a operação de índice. O padrão é OFF. REBUILD pode ser executado como uma operação ONLINE.  
@@ -567,7 +716,7 @@ WITH CHECK | WITH NOCHECK
  Para obter mais informações, consulte [Como funcionam as operações de índice online](../../relational-databases/indexes/how-online-index-operations-work.md).  
   
 > [!NOTE]  
->  As operações de índice online não estão disponíveis em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Edições e recursos compatíveis com o SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+> As operações de índice online não estão disponíveis em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Edições e recursos compatíveis com o SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  MOVE TO { *partition_scheme_name ***(*** column_name* [ 1 **,** ... *n*] **)** | *filegroup* | **"** default **"** }  
  **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
@@ -897,7 +1046,7 @@ ONLINE **=** ON tem as seguintes restrições:
 É necessário ter espaço temporário em disco igual ao tamanho do índice clusterizado existente para descartar um índice clusterizado. Esse espaço adicional será liberado assim que a operação for concluída.  
   
 > [!NOTE]  
->  As opções listadas em *\<drop_clustered_constraint_option>* aplicam-se a índices clusterizados em tabelas e não podem ser aplicadas a índices clusterizados em exibições ou a índices não clusterizados.  
+> As opções listadas em *\<drop_clustered_constraint_option>* aplicam-se a índices clusterizados em tabelas e não podem ser aplicadas a índices clusterizados em exibições ou a índices não clusterizados.  
   
 ## <a name="replicating-schema-changes"></a>Replicando alterações de esquema  
  Por padrão, quando você executa ALTER TABLE em uma tabela publicada no Publicador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa alteração é propagada para todos os Assinantes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Essa funcionalidade tem algumas restrições e pode ser desabilitada. Para obter mais informações, consulte [Make Schema Changes on Publication Databases](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md) (Fazer alterações de esquema em bancos de dados de publicação).  

@@ -1,7 +1,7 @@
 ---
 title: SSIS – Como criar um pacote ETL | Microsoft Docs
 ms.custom: ''
-ms.date: 04/17/2018
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -23,12 +23,12 @@ caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 234b5a72f611ab2ac85db862c04af7d749e089ab
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 5d2af071661576fdcd63a46a424a457fb969aac9
+ms.sourcegitcommit: 87efa581f7d4d84e9e5c05690ee1cb43bd4532dc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35411728"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38999276"
 ---
 # <a name="ssis-how-to-create-an-etl-package"></a>SSIS: Como criar um pacote ETL
 
@@ -40,22 +40,24 @@ Ao instalar os dados de exemplo usados pelo tutorial, as versões concluídas do
 
 ## <a name="what-is-sql-server-integration-services-ssis"></a>O que é o SSIS (SQL Server Integration Services)?
 
-[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] O SSIS é uma plataforma para a criação de soluções de integração de dados de alto desempenho, incluindo os pacotes ETL (extração, transformação e carregamento) para armazenamento de dados. O SSIS inclui ferramentas gráficas e assistentes para criação e depuração de pacotes; tarefas para execução de funções de fluxo de trabalho como, por exemplo, operações de FTP, execução de instruções SQL e envio de mensagens de email; fontes de dados e destinos para extração e carregamento de dados; transformações para limpeza, agregação, junção e cópia de dados; um serviço de gerenciamento, o serviço do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para administração de execução e armazenamento de pacotes; e APIs (interfaces de programação de aplicativo) para programação do modelo de objeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
+[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] O SSIS é uma plataforma para a criação de soluções de integração de dados de alto desempenho, incluindo os pacotes ETL (extração, transformação e carregamento) para armazenamento de dados. O SSIS inclui ferramentas gráficas e assistentes para criação e depuração de pacotes; tarefas para execução de funções de fluxo de trabalho como, por exemplo, operações de FTP, execução de instruções SQL e envio de mensagens de email; fontes de dados e destinos para extração e carregamento de dados; transformações para limpeza, agregação, junção e cópia de dados; um serviço de gerenciamento, `SSISDB`, para administração de execução e armazenamento de pacotes; e APIs (interfaces de programação de aplicativo) para programação do modelo de objeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
 
 ## <a name="what-you-learn"></a>O que você aprenderá  
 O melhor modo de se familiarizar com as novas ferramentas, controles e recursos disponíveis no [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] é utilizando-os. Este tutorial explicará como usar o [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer para criar um pacote de ETL simples com looping, configurações, lógica de fluxo de erros e registro de logs.  
   
-## <a name="requirements"></a>Requisitos  
+## <a name="prerequisites"></a>Prerequisites  
 O tutorial é destinado a usuários familiarizados com operações básicas de banco de dados, mas que tiveram pouca experiência com os novos recursos disponíveis no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
 
-> [!IMPORTANT]
-> Recentemente, os arquivos de exemplo necessários para executar este tutorial não estavam mais disponíveis online em seu local anterior. Lamentamos a inconveniência. Disponibilizamos os arquivos em um novo local e atualizamos os links de download deste artigo.
-
-Para que você possa usar esse tutorial, os seguintes componentes devem estar instalados no sistema:  
+Para executar esse tutorial, os seguintes componentes devem estar instalados:  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] com o banco de dados **AdventureWorksDW2012** . Para baixar o banco de dados **AdventureWorksDW2012**, baixe `AdventureWorksDW2012.bak` em [Bancos de dados de exemplo do AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) e restaure o backup.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Para instalar o SQL Server e o SSIS, consulte [Instalar o Integration Services](install-windows/install-integration-services.md).
 
--   Dados de exemplo. Os dados de exemplo estão incluídos com os pacotes de lição do [!INCLUDE[ssIS](../includes/ssis-md.md)] . Para baixar os dados de exemplo e os pacotes de lição como um arquivo zip, veja [Tutorial do SQL Server Integration Services – Criar um pacote ETL simples](https://www.microsoft.com/download/details.aspx?id=56827).  
+-   O banco de dados de exemplo **AdventureWorksDW2012**. Para baixar o banco de dados **AdventureWorksDW2012**, baixe `AdventureWorksDW2012.bak` em [Bancos de dados de exemplo do AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) e restaure o backup.  
+
+-   Os arquivos de **dados de exemplo**. Os dados de exemplo estão incluídos com os pacotes de lição do [!INCLUDE[ssIS](../includes/ssis-md.md)] . Para baixar os dados de exemplo e os pacotes de lição como um arquivo zip, veja [Tutorial do SQL Server Integration Services – Criar um pacote ETL simples](https://www.microsoft.com/download/details.aspx?id=56827).
+
+    - A maioria dos arquivos no arquivo Zip é somente leitura a fim de impedir alterações acidentais. Para gravar algo em um arquivo ou alterá-lo, talvez você precise desligar o atributo somente leitura nas propriedades do arquivo.
+    - Os pacotes de exemplo pressupõem que os arquivos de dados estão na pasta `C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Creating a Simple ETL Package`. Se você descompactar o download em outro local, talvez precise atualizar o caminho do arquivo em vários locais nos pacotes de exemplo.
 
 ## <a name="lessons-in-this-tutorial"></a>Lições neste tutorial  
 [Lição 1: Criar um projeto e pacote básico com o SSIS](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)  

@@ -29,12 +29,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a807550f86205d3f1f6c341599188cea08b6ee97
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: e2c2625c036a1f8d6a66660760c383ad4b676eb7
+ms.sourcegitcommit: 87efa581f7d4d84e9e5c05690ee1cb43bd4532dc
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36240968"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38999316"
 ---
 # <a name="rollback-transaction-transact-sql"></a>ROLLBACK TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -74,7 +74,7 @@ ROLLBACK { TRAN | TRANSACTION }
   
  ROLLBACK TRANSACTION não pode referenciar um *savepoint_name* em transações distribuídas iniciadas explicitamente com BEGIN DISTRIBUTED TRANSACTION ou escalonada de uma transação local.  
   
- Uma transação não poderá ser revertida depois que uma instrução COMMIT TRANSACTION tiver sido executada, exceto quando COMMIT TRANSACTION estiver associada com uma transação aninhada que está contida dentro da transação que está sendo revertida. Nesse caso, a transação aninhada será revertida, mesmo se você tiver emitido um COMMIT TRANSACTION para ela.  
+ Uma transação não poderá ser revertida depois que uma instrução COMMIT TRANSACTION tiver sido executada, exceto quando COMMIT TRANSACTION estiver associada com uma transação aninhada que está contida dentro da transação que está sendo revertida. Nesse caso, a transação aninhada é revertida, mesmo se você tiver emitido um COMMIT TRANSACTION para ela.  
   
  Em uma transação, são permitidos nomes de ponto de salvamento duplicados, mas uma ROLLBACK TRANSACTION que usa o nome de ponto de salvamento duplicado reverte-se somente à SAVE TRANSACTION mais recente usando aquele nome de ponto de salvamento.  
   

@@ -22,12 +22,12 @@ caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 199b1abd026efdf383cbd982ac3ce79d36e5b5cc
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: f1cf60d0f7b775e4950b159c237b96e82a1b333f
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401348"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083348"
 ---
 # <a name="ole-db-source"></a>Origem de OLE DB
   A origem de OLE DB extrai dados de uma variedade de bancos de dados relacionais compatíveis com OLE DB usando uma tabela de banco de dados, uma exibição ou um comando SQL. Por exemplo, a origem de OLE DB pode extrair dados de tabelas em [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access ou bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -87,7 +87,7 @@ ms.locfileid: "35401348"
   
  `EXEC uspGetWhereUsedProductID ?, ?`  
   
- O procedimento armazenado espera as variáveis, `@StartProductID` e `@CheckDate`, para fornecer os valores de parâmetros. A ordem na qual os parâmetros aparecem na lista **Mapeamentos** é irrelevante. O único requisito é que os nomes de parâmetros correspondam aos nomes de variáveis no procedimento armazenado, incluindo o sinal @.  
+ O procedimento armazenado espera as variáveis, `@StartProductID` e `@CheckDate`, para fornecer os valores de parâmetros. A ordem na qual os parâmetros aparecem na lista **Mapeamentos** é irrelevante. O único requisito é que os nomes de parâmetros correspondam aos nomes de variáveis no procedimento armazenado, incluindo o sinal \@.  
   
 ### <a name="mapping-parameters-to-variables"></a>Mapeando parâmetros para variáveis  
  Os parâmetros são mapeados para variáveis que fornecem os valores de parâmetros em tempo de execução. As variáveis geralmente são definidas pelo usuário, embora você também possa usar as variáveis de sistema que o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece. Se você usar variáveis definidas pelo usuário, defina o tipo de dados que seja compatível com o tipo de dados da coluna à qual o parâmetro mapeado faz referência. Para obter mais informações, consulte [Variáveis do SSIS &#40;Integration Services&#41;](../../integration-services/integration-services-ssis-variables.md).  

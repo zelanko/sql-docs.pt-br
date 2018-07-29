@@ -18,12 +18,12 @@ caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 8f806cca92389f7682891cf110c807b6483f6c36
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 046cb064f7cb61bba17d7cff2c3cdd27e46e7b15
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35322505"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983238"
 ---
 # <a name="install-reporting-services-2016-in-sharepoint-mode"></a>Instalar o Reporting Services 2016 no modo do SharePoint
 
@@ -57,7 +57,7 @@ Há dois componentes principais do [!INCLUDE[ssRSnoversion](../../includes/ssrsn
   
  [Adicionar um front-end da Web do Reporting Services a um farm](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)  
   
- [Configurar o email para um serviço de aplicativo do Reporting Services &#40;SharePoint 2013 e SharePoint 2016&#41;](http://msdn.microsoft.com/en-us/38fc34a6-aae7-4dde-9ad2-f1eee0c42a9f)  
+ [Configurar o email para um serviço de aplicativo do Reporting Services &#40;SharePoint 2013 e SharePoint 2016&#41;](http://msdn.microsoft.com/38fc34a6-aae7-4dde-9ad2-f1eee0c42a9f)  
   
  [Provisionar Assinaturas e Alertas para aplicativos de serviço SSRS](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)  
   

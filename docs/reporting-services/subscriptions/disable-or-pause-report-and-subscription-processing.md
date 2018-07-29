@@ -26,12 +26,12 @@ caps.latest.revision: 47
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: dfddb0368d8c674c7f0148a395f97088d9143228
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 32f47807777b40fa2aac22c2e301183cc5c09d37
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33035523"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38985618"
 ---
 # <a name="disable-or-pause-report-and-subscription-processing"></a>Desabilitar ou pausar o processamento de relatório e assinatura
   Há várias abordagens que você pode usar para desabilitar ou pausar o processamento de relatório e assinatura do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . As abordagens neste tópico abrangem a desabilitação de uma assinatura para interromper a conexão com a fonte de dados. Nem todas as abordagens são possíveis com os dois modos de servidor do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . As tabelas a seguir resumem os métodos e os modos de servidor do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] com suporte:  
@@ -163,9 +163,9 @@ ForEach ($subscription in $subscriptions)
   
 -   Biblioteca do SharePoint (disponível somente a partir de um site do SharePoint que é integrado com um servidor de relatório no modo integrado do SharePoint)  
   
- A entrega de email deve ser configurada antes de ser usada. Se você não configurá-la, esse recurso não estará disponível. Para saber mais, confira [Configurar um servidor de relatório para entrega de email (Gerenciador de Configurações do SSRS)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83).  
+ A entrega de email deve ser configurada antes de ser usada. Se você não configurá-la, esse recurso não estará disponível. Para saber mais, confira [Configurar um servidor de relatório para entrega de email (Gerenciador de Configurações do SSRS)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83).  
   
- Se você desejar desabilitar extensões específicas, remova as entradas de extensão no arquivo **RSReportServer.config** . Para saber mais, confira [Arquivos de configuração do Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md) e [Configurar um servidor de relatório para entrega de email (Gerenciador de Configurações do SSRS)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83).  
+ Se você desejar desabilitar extensões específicas, remova as entradas de extensão no arquivo **RSReportServer.config** . Para saber mais, confira [Arquivos de configuração do Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md) e [Configurar um servidor de relatório para entrega de email (Gerenciador de Configurações do SSRS)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83).  
   
  Depois de ser removida, a extensão de entrega não está mais disponível no Gerenciador de Relatórios ou em um site do SharePoint. A remoção de uma extensão de entrega pode resultar em assinaturas inativas. Exclua as assinaturas ou configure-as para usar uma extensão de entrega diferente antes de remover uma extensão.  
   

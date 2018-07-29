@@ -14,12 +14,12 @@ caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 19f452f12c609f238d477258021590d5c7248619
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 2903000530d68dd95eff0f1ba9b9f8f6e5edbf22
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35408068"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085318"
 ---
 # <a name="generating-dump-files-for-package-execution"></a>Gerando arquivos de despejo para execução de pacote
   No [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], você pode criar arquivos de despejo de depuração que fornecem informações sobre a execução de um pacote. As informações contidas nestes arquivos podem ajudá-lo a solucionar problemas de execução de pacote.  
@@ -53,7 +53,7 @@ ms.locfileid: "35408068"
 |-------------------------|-----------------|-------------|  
 |Ambiente|A versão do sistema operacional, os dados de uso da memória, a ID do processo e o nome da imagem do processo. As informações sobre o ambiente estão no começo do arquivo .tmp.|# Despejo Textual do SSIS realizado em 9/13/2007 1:50:34 PM<br /><br /> #PID 4120<br /><br /> #Nome da Imagem [C:\Arquivos de Programas\Microsoft SQL Server\110\DTS\Binn\DTExec.exe]<br /><br /> # OS major=6 minor=0 build=6000<br /><br /> # Em execução em 2 processadores amd64 em WOW64<br /><br /> # Memória: 58% em uso. Física: 845M/2044M  Paginação: 2404M/4095M (disp./total)|  
 |Caminho e versão da DLL (Dynamic-link library)|Caminho e versão de cada DLL que o sistema carrega durante o processamento de um pacote.|# Módulo carregado: c:\bb\Sql\DTS\src\bin\debug\i386\DTExec.exe (10.0.1069.5)<br /><br /> # Módulo carregado: C:\Windows\SysWOW64\ntdll.dll (6.0.6000.16386)<br /><br /> # Módulo carregado: C:\Windows\syswow64\kernel32.dll (6.0.6000.16386)|  
-|Mensagens recentes|Mensagens recentes emitidas pelo sistema. Inclui hora, tipo, descrição e ID de thread de cada mensagem.|[M:1]   Entrada de buffer de anel:              (*pRecord)<br /><br /> [D:2]      <<\<CRingBufferLogging::RingBufferLoggingRecord>>> ( @ 0282F1A8 )<br /><br /> [E:3]         Carimbo de data/hora: 2007-09-13 13:50:32.786      (szTimeStamp)<br /><br /> [E:3]         ID de Thread: 2368           (ThreadID)<br /><br /> [E:3]         Nome do evento: OnError                        (EventName)<br /><br /> [E:3]         Nome da fonte:                (SourceName)<br /><br /> [E:3]         ID da fonte:                        (SourceID)<br /><br /> [E:3]         ID de execução:                 (ExecutionGUID)<br /><br /> [E:3]         Código de dados: -1073446879              (DataCode)<br /><br /> [E:3]         Descrição: o componente está ausente, não está registrado, não pode ser atualizado ou não tem as interfaces necessárias. As informações de contato desse componente são "".|  
+|Mensagens recentes|Mensagens recentes emitidas pelo sistema. Inclui hora, tipo, descrição e ID de thread de cada mensagem.|[M:1]   Entrada de buffer de anel:              (*pRecord)<br /><br /> [D:2]      <<\<CRingBufferLogging::RingBufferLoggingRecord>>> ( \@ 0282F1A8 )<br /><br /> [E:3]         Carimbo de data/hora: 2007-09-13 13:50:32.786      (szTimeStamp)<br /><br /> [E:3]         ID de Thread: 2368           (ThreadID)<br /><br /> [E:3]         Nome do evento: OnError                        (EventName)<br /><br /> [E:3]         Nome da fonte:                (SourceName)<br /><br /> [E:3]         ID da fonte:                        (SourceID)<br /><br /> [E:3]         ID de execução:                 (ExecutionGUID)<br /><br /> [E:3]         Código de dados: -1073446879              (DataCode)<br /><br /> [E:3]         Descrição: o componente está ausente, não está registrado, não pode ser atualizado ou não tem as interfaces necessárias. As informações de contato desse componente são "".|  
   
 ## <a name="related-information"></a>Informações relacionadas  
  [Caixa de diálogo Executar Pacote](../../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog)  

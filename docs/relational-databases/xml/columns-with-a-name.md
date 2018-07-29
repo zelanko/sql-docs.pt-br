@@ -17,29 +17,29 @@ caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 46b121595162e60bedecfb4338fa058bb7cb8c01
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6c591d7cb9a2eab7bca51c9829fbff82c37bf58c
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33011583"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084298"
 ---
 # <a name="columns-with-a-name"></a>Colunas com um nome
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   As seguintes são as condições específicas nas quais colunas de conjunto de linhas com um nome são mapeadas, diferenciando maiúsculas e minúsculas, para o XML resultante:  
   
--   O nome da coluna começa com uma arroba (@).  
+-   O nome da coluna começa com uma arroba (\@).  
   
--   O nome da coluna não começa com uma arroba (@).  
+-   O nome da coluna não começa com uma arroba (\@).  
   
--   O nome da coluna não começa com uma arroba @ e contém uma barra (/).  
+-   O nome da coluna não começa com uma arroba \@ e contém uma barra (/).  
   
 -   Várias colunas compartilham o mesmo prefixo.  
   
 -   Uma coluna tem um nome diferente.  
   
-## <a name="column-name-starts-with-an-at-sign-"></a>O nome da coluna começa com uma arroba (@)  
- Se o nome da coluna começar com uma arroba (@) e não contiver uma barra (/), um atributo do elemento `row` que tem o valor da coluna correspondente será criado. Por exemplo, a seguinte consulta retorna um conjunto de linhas (@PmId, Nome) de duas colunas. No XML resultante, um atributo **PmId** é adicionado ao elemento `row` correspondente e um valor de ProductModelID é atribuído a ele.  
+## <a name="column-name-starts-with-an-at-sign-"></a>O nome da coluna começa com uma arroba (\@)  
+ Se o nome da coluna começar com uma arroba (\@) e não contiver uma barra (/), um atributo do elemento `row` que tem o valor da coluna correspondente será criado. Por exemplo, a consulta a seguir retorna um conjunto de linhas de duas colunas (\@PmId, Name). No XML resultante, um atributo **PmId** é adicionado ao elemento `row` correspondente e um valor de ProductModelID é atribuído a ele.  
   
 ```  
   
@@ -71,8 +71,8 @@ FOR XML PATH
 go  
 ```  
   
-## <a name="column-name-does-not-start-with-an-at-sign-"></a>O nome da coluna não começa com uma arroba (@)  
- Se o nome da coluna não começar com uma arroba (@), não for um dos testes do nó XPath e não contiver uma barra (/), um elemento XML que é um subelemento do elemento linha, `row`, será criado, por padrão.  
+## <a name="column-name-does-not-start-with-an-at-sign-"></a>O nome da coluna não começa com uma arroba (\@)  
+ Se o nome da coluna não começar com uma arroba (\@), não for um dos testes do nó XPath e não contiver uma barra (/), um elemento XML que é um subelemento do elemento linha, `row`, será criado, por padrão.  
   
  A consulta a seguir especifica o nome da coluna, o resultado. Portanto, um filho do elemento `result` é adicionado ao elemento `row`.  
   
@@ -118,8 +118,8 @@ go
 </row>  
 ```  
   
-## <a name="column-name-does-not-start-with-an-at-sign--and-contains-a-slash-mark-"></a>O nome da coluna não começa com uma arroba @ e contém uma barra (/)  
- Se o nome da coluna não começar com uma arroba (@), mas contiver uma barra (/), o nome da coluna indicará uma hierarquia XML. Por exemplo, se o nome da coluna for “Name1/Name2/Name3.../Name***n*** ”, cada Name***i*** representará um nome do elemento que está aninhado no elemento da linha atual (para i=1) ou que está sob o elemento que tem o nome Name***i-1***. Se Name***n*** começar com '@', ele será mapeado para um atributo de elemento Name***n-1*** .  
+## <a name="column-name-does-not-start-with-an-at-sign--and-contains-a-slash-mark-"></a>O nome da coluna não começa com uma arroba \@ e contém uma barra (/)  
+ Se o nome da coluna não começar com uma arroba (\@), mas contiver uma barra (/), o nome da coluna indicará uma hierarquia XML. Por exemplo, se o nome da coluna for “Name1/Name2/Name3.../Name***n*** ”, cada Name***i*** representará um nome do elemento que está aninhado no elemento da linha atual (para i=1) ou que está sob o elemento que tem o nome Name***i-1***. Se Name***n*** começar com "\@", ele será mapeado para um atributo de elemento Name ***n-1***.  
   
  Por exemplo, a consulta a seguir retorna a ID e o nome de um funcionário que são representados como um elemento complexo EmpName que contém um Nome, Segundo nome e Sobrenome.  
   

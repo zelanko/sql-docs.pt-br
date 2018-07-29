@@ -23,12 +23,12 @@ caps.latest.revision: 53
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: fa0546bd09cd108c4e9cccbd5909cad94558d92d
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 3831509441516a08cfa8d651ecd8ffa93c16107f
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34550757"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39083538"
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>Criar, modificar e excluir fontes de dados compartilhadas (SSRS)
   Uma fonte de dados compartilhada é um conjunto de propriedades de conexão de fonte de dados que pode ser referenciada por vários relatórios, modelos e assinaturas controladas por dados que são executados em um servidor de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  As fontes de dados compartilhadas fornecem um modo fácil de gerenciar as propriedades da fonte de dados que geralmente são alteradas com o passar do tempo. Se a conta de usuário ou senha for alterada ou se você mover o banco de dados para outro servidor, as informações de conexão poderão ser atualizadas em um único lugar.  
@@ -79,7 +79,7 @@ ms.locfileid: "34550757"
   
 1.  No portal da Web, selecione **Nova** > **Fonte de dados**. 
   
-4.  Digite um nome para o item. Um nome deve conter pelo menos um caractere e deve começar com uma letra. Ele também pode incluir certos símbolos, mas não espaços nem os caracteres ; ? : @ & = + , $ / * < > | " /.  
+4.  Digite um nome para o item. Um nome deve conter pelo menos um caractere e deve começar com uma letra. Ele também pode incluir certos símbolos, mas não espaços nem os caracteres ; ? : \@ & = + , $ / * < > | " /.  
   
 5.  Como opção, digite uma descrição para oferecer aos usuários informações sobre a conexão.  
   

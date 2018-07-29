@@ -18,12 +18,12 @@ caps.latest.revision: 52
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 312d082d3126bd3f0365b674177b59d32e9b613b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1aae0ce86304b3093e9151ed1741b615f423c1e4
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33035203"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38984958"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>Crie e gerencie assinaturas de servidores de relatório no modo Nativo
   A assinatura padrão é criada por usuários individuais que desejam entregar um relatório por email ou em uma pasta compartilhada. Este tópico fornece informações sobre assinaturas padrão que são criadas e gerenciadas por usuários individuais. As assinaturas controladas por dados têm requisitos e etapas diferentes e são discutidas em um tópico separado. Para obter mais informações, consulte [Criar, modificar e excluir assinaturas controladas por dados](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)  
@@ -47,7 +47,7 @@ ms.locfileid: "33035203"
   
 -   Para usar a entrega de email, o servidor de relatório deve ser configurado para uma conexão de gateway ou de servidor SMTP antes de criar a assinatura.  
   
--   Para usar a entrega de compartilhamento de arquivos, a pasta de destino já deve estar definida. Para saber mais, confira [Configurar um servidor de relatório para entrega de email (Gerenciador de Configurações do SSRS)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83).  
+-   Para usar a entrega de compartilhamento de arquivos, a pasta de destino já deve estar definida. Para saber mais, confira [Configurar um servidor de relatório para entrega de email (Gerenciador de Configurações do SSRS)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83).  
   
  Antes de assinar um relatório, a fonte de dados do relatório deve estar configurada para usar credenciais armazenadas ou nenhuma credencial. Para obter mais informações, consulte [Armazenar credenciais em uma fonte de dados do Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md). Caso contrário, o botão **Nova Assinatura** não estará disponível.  
   
@@ -112,9 +112,9 @@ ms.locfileid: "33035203"
   
 4.  **Proprietário**: o proprietário do campo usa como padrão o usuário atual e não pode ser editado quando você cria a assinatura. No entanto, depois que a assinatura é salva, você pode alterar as propriedades da assinatura incluindo o proprietário e a descrição.  
   
-5.  **Entregue por**: selecione **Email**. Se **Email** não estiver disponível, isso indicará que o servidor de relatório não foi configurado para assinaturas de email. Consulte [Configurar um servidor de relatório para entrega de email (Gerenciador de Configurações do SSRS)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)  
+5.  **Entregue por**: selecione **Email**. Se **Email** não estiver disponível, isso indicará que o servidor de relatório não foi configurado para assinaturas de email. Consulte [Configurar um servidor de relatório para entrega de email (SSRS Configuration Manager)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)  
   
-6.  **Para**: o nome do destinatário no campo Para: é autoendereçado usando sua conta de usuário de domínio. Verifique se o formato é [nome de usuário]@[domínio.com]As configurações do servidor de relatório determinam se o campo **Para** é autoendereçado com sua conta de usuário. Para obter informações sobre como alterar os parâmetros de configuração de endereços de email, consulte [Configurar um servidor de relatório para entrega de email (Gerenciador de Configurações do SSRS)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83).  
+6.  **Para**: o nome do destinatário no campo Para: é autoendereçado usando sua conta de usuário de domínio. Verifique se o formato é [nome de usuário]@[domínio.com]As configurações do servidor de relatório determinam se o campo **Para** é autoendereçado com sua conta de usuário. Para obter informações sobre como alterar os parâmetros de configuração de endereços de email, consulte [Configurar um servidor de relatório para entrega de email (SSRS Configuration Manager)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83).  
   
     > [!NOTE]  
     >  Dependendo de suas permissões, você pode digitar o endereço de email no qual deseja entregar o relatório. Para especificar vários endereços de email, separe-os com um ponto-e-vírgula (;). Você também pode digitar endereços de email adicionais nas caixas de texto **Cc**, **Cco**e **Responder** . Você precisa ter permissão para gerenciar todas as assinaturas.  

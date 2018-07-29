@@ -23,12 +23,12 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8e10e011081d1e692bba4f1c63b024eb83784ae4
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 18e266b37d0fd7b96f2d54f2eb25a94b5a53e25f
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36255508"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086738"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**0**|O padrão será o mapeamento **centrado em atributo**.|  
 |**1**|Use o mapeamento **centrado em atributo**. Pode ser combinado com XML_ELEMENTS. Nesse caso, o mapeamento **centrado em atributo** é aplicado primeiro e, em seguida, o mapeamento **centrado em elemento** é aplicado a todas as colunas que ainda não foram tratadas.|  
 |**2**|Use o mapeamento **centrado em elemento**. Pode ser combinado com XML_ATTRIBUTES. Nesse caso, o mapeamento **centrado em atributo** é aplicado primeiro e, em seguida, o mapeamento **centrado em elemento** é aplicado a todas as colunas que ainda não foram tratadas.|  
-|**8**|Pode ser combinado (OR lógico) com XML_ATTRIBUTES ou XML_ELEMENTS. No contexto de recuperação, esse sinalizador indica que os dados consumidos não devem ser copiados para a propriedade de estouro **@mp:xmltext**.|  
+|**8**|Pode ser combinado (OR lógico) com XML_ATTRIBUTES ou XML_ELEMENTS. No contexto de recuperação, esse sinalizador indica que os dados consumidos não podem ser copiados para a propriedade de estouro **\@@mp:xmltex**.|  
   
  *SchemaDeclaration*  
  É a definição de esquema no formato: *ColName**ColType* [*ColPattern* | *MetaProperty*] [**,***ColNameColType* [* ColPattern* | *MetaProperty*]...]  

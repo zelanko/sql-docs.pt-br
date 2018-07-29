@@ -1,7 +1,7 @@
 ---
 title: Baixar o SQL Server Management Studio (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/26/2018
+ms.date: 07/20/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssms
@@ -28,12 +28,12 @@ caps.latest.revision: 145
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: da8872987bbd90664f2c6fb3477f91e323a2ce96
-ms.sourcegitcommit: dc9d656a1cdc73fa6333359480e638a7435102de
+ms.openlocfilehash: 567833724450a0240d68c8195bddd2d68d5c11e6
+ms.sourcegitcommit: d80aaa52562d828f9bfb932662ad779432301860
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36957679"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39188932"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Baixar o SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -45,9 +45,9 @@ Use o SQL Server Management Studio (SSMS) para consultar, criar e gerenciar seus
 
 O SSMS 17.X é a última geração do *SQL Server Management Studio* e é compatível com o SQL Server 2017.
 
-**[![baixar](../ssdt/media/download.png) Baixar o SQL Server Management Studio 17.8.1](https://go.microsoft.com/fwlink/?linkid=875802)**
+**[![download](../ssdt/media/download.png) Baixe o SQL Server Management Studio 17.8.1](https://go.microsoft.com/fwlink/?linkid=875802) (não é necessário ter uma versão anterior do SSMS 17.x no computador)**
 
-**[![baixar](../ssdt/media/download.png) Baixar o pacote de atualização do SQL Server Management Studio 17.8.1 (atualiza o 17.x para o 17.8.1)](https://go.microsoft.com/fwlink/?linkid=875804)**
+**[![download](../ssdt/media/download.png) Baixe o Pacote de Atualização do SQL Server Management Studio 17.8.1](https://go.microsoft.com/fwlink/?linkid=875804) (atualiza do 17.x para o 17.8.1; é necessário ter uma versão anterior do SSMS 17.x no computador)**
 
 
 **Informações da versão**
@@ -142,11 +142,16 @@ Esta versão do SSMS é compatível com as seguintes plataformas de 64 bits quan
 
 ## <a name="release-notes"></a>Notas de Versão
 
-A seguir estão os problemas e as limitações desta versão 17.8:
+A seguir estão os problemas e as limitações desta versão 17.8.1:
 
 - Clicar no botão *Script* após modificar qualquer propriedade do grupo de arquivos na janela *Propriedades* gera dois scripts: um script com uma instrução *USE <database>* e um segundo script com uma instrução *USE master*.  O script com *USE master* é gerado com erro e deve ser descartado. Execute o script que contém a instrução *USE <database>*.
 - Algumas caixas de diálogo exibem um erro de edição inválida ao trabalhar com novas edições *Uso Geral* ou *Comercialmente Crítico* do Banco de Dados SQL do Azure.
 - Pode ser observada alguma latência no visualizador XEvents. Este é um [problema conhecido no .NET Framework](https://github.com/Microsoft/dotnet/blob/master/releases/net472/dotnet472-changes.md#sql). Considere a atualização para o NetFx 4.7.2.
+- Monitor de replicação falha com um erro *Não foi possível carregar arquivo ou assembly...*. Para contornar este problema:
+  1. Feche *SqlMonitor.exe* (ou seja, o Repl Monitor) e o SSMS.
+  2. Baixe o *sqlmonitor.exe.config* atualizado de [https://1drv.ms/u/s!AizXOqHzD6izqpR zgdH7kEAxvRACw](https://1drv.ms/u/s!AizXOqHzD6izqpR-zgdH7kEAxvRACw).
+  3. Substitua *sqlmonitor.exe.config* (geralmente está em "C:\Arquivos de Programas (x86)\Microsoft SQL Server\140\Tools\Binn") por aquele que você baixou.
+  4. Reinicie o SSMS e/ou o Monitor de Replicação.
 
 
 ## <a name="uninstall-and-reinstall-ssms"></a>Desinstalar e reinstalar o SSMS

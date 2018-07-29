@@ -21,12 +21,12 @@ caps.latest.revision: 5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7e9f75fa35c61078ec4ec417b6b1542eea71a717
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.openlocfilehash: dbb28640bd0fe4dd6f4d609cfba14260c712a6b0
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842899"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087558"
 ---
 # <a name="query-processing-architecture-guide"></a>Guia da Arquitetura de Processamento de Consultas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -569,7 +569,7 @@ Além disso, as cláusulas de consulta a seguir não são parametrizadas. Observ
   * A expressão contém uma cláusula `CASE` .  
 * Argumentos para cláusulas de dica de consulta. Incluem o argumento `number_of_rows` da dica de consulta `FAST` , o argumento `number_of_processors` da dica de consulta `MAXDOP` e o argumento number da dica de consulta `MAXRECURSION` .
 
-A parametrização ocorre no nível das instruções Transact-SQL individuais. Em outras palavras, são parametrizadas instruções individuais em lote. Após a compilação, uma consulta parametrizada é executada no contexto do lote em que foi enviado originalmente. Se um plano de execução de uma consulta for armazenado em cache, você poderá determinar se a consulta foi parametrizada referenciando a coluna sql da exibição de gerenciamento dinâmico sys.syscacheobjects. Se uma consulta for parametrizada, os nomes e tipos de dados de parâmetros serão exibidos antes do texto do lote enviado nessa coluna (como @1 tinyint).
+A parametrização ocorre no nível das instruções Transact-SQL individuais. Em outras palavras, são parametrizadas instruções individuais em lote. Após a compilação, uma consulta parametrizada é executada no contexto do lote em que foi enviado originalmente. Se um plano de execução de uma consulta for armazenado em cache, você poderá determinar se a consulta foi parametrizada referenciando a coluna sql da exibição de gerenciamento dinâmico sys.syscacheobjects. Se uma consulta for parametrizada, os nomes e tipos de dados de parâmetros serão exibidos antes do texto do lote enviado nessa coluna, como (\@1 tinyint).
 
 > [!NOTE]
 > Os nomes de parâmetro são arbitrários. Os usuários ou os aplicativos não devem confiar em uma ordem de nomenclatura específica. Além disso, os seguintes itens podem ser alterados entre as versões do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e as atualizações do service pack: nomes de parâmetro, opção de literais com parâmetros e espaçamento no texto com parâmetros.

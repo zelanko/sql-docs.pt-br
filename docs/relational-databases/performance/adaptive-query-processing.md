@@ -2,7 +2,7 @@
 title: Processamento de consultas adaptável em bancos de dados Microsoft SQL | Microsoft Docs | Microsoft Docs
 description: Recursos de processamento de consulta adaptável para melhorar o desempenho da consulta no SQL Server (2017 e posteriores) e no Banco de Dados SQL do Azure.
 ms.custom: ''
-ms.date: 05/08/2018
+ms.date: 07/16/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,12 +16,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 092f623dff8bd240bdc5349a3e6973d5c139b23f
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: c7a38b9765d15e3d62c2ba022b356f627ee9c6ce
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34332437"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087498"
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>Processamento de consultas adaptável em bancos de dados SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -107,6 +107,29 @@ OPTION (USE HINT ('DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'));
 ```
 
 Uma dica de consulta USE HINT tem precedência sobre uma configuração de escopo do banco de dados ou uma configuração de sinalizador de rastreamento.
+
+## <a name="row-mode-memory-grant-feedback"></a>Comentários de concessão de memória do modo de linha
+**Aplica-se a**: Banco de Dados SQL como um recurso de visualização pública
+
+Os comentários de concessão de memória de modo de linha expande o recurso de comentários de concessão de memória do modo de lote, ajustando os tamanhos de concessão de memória para operadores de modo de lote e de linha.  
+
+Para habilitar a versão prévia dos comentários de concessão de memória de modo de linha no Banco de Dados SQL, habilite o nível de compatibilidade do banco de dados 150 para o banco de dados ao qual você está conectado ao executar a consulta.
+
+A atividade de comentários de concessão de memória de modo de linha ficará visível por meio do XEvent **memory_grant_updated_by_feedback**. 
+
+Começando com os comentários de concessão de memória de modo de linha, dois novos atributos de plano de consulta serão mostrados para planos pós-execução reais: **IsMemoryGrantFeedbackAdjusted** e **LastRequestedMemory**, que são adicionados ao elemento XML de plano de consulta MemoryGrantInfo. 
+
+LastRequestedMemory mostra a memória concedida em kilobytes (KB) na execução de consulta anterior. O atributo IsMemoryGrantFeedbackAdjusted permite que você verifique o estado dos comentários de concessão de memória para a instrução dentro de um plano de execução de consulta real. Os valores apresentados nesse atributo são os seguintes:
+
+| Valor de IsMemoryGrantFeedbackAdjusted | Descrição |
+|--- |--- |
+| Não: primeira execução | Os comentários de concessão de memória não ajustam a memória para a primeira compilação e execução associada.  |
+| Não: concessão precisa | Se não houver despejo no disco, e a instrução usar pelo menos 50% da memória concedida, os comentários de concessão de memória não serão acionados. |
+| Não: comentários desabilitados | Se os comentários de concessão de memória forem acionados continuamente e flutuarem entre as operações de aumento de memória e redução de memória, desabilitaremos os comentários de concessão de memória para a instrução. |
+| Sim: ajuste | Os comentários de concessão de memória foram aplicados e podem ser ainda mais ajustados para a próxima execução. |
+| Sim: estável | Os comentários de concessão de memória foram aplicados e a memória concedida está estável, ou seja, o que foi concedido para a execução anterior é o mesmo que foi concedido para a execução atual. |
+
+Os atributos de planejamento dos comentários de concessão de memória não são visíveis no momento em planos de execução de consultas gráficas do SQL Server Management Studio. Mas se quiser conferir testes iniciais exiba-os usando o XEvent SET STATISTICS XML ou query_post_execution_showplan.  
 
 ## <a name="batch-mode-adaptive-joins"></a>Junções Adaptáveis de modo de lote
 O recurso de Junções Adaptáveis de modo de lote permite a escolha de um método de [Junção hash ou de Junção de loops aninhados](../../relational-databases/performance/joins.md) a ser adiado até **depois** que a primeira entrada for verificada. O operador de Junção Adaptável define um limite que é usado para decidir quando mudar para um plano de Loops aninhados. Seu plano, portanto, pode alternar dinamicamente para uma estratégia de junção melhor durante a execução.

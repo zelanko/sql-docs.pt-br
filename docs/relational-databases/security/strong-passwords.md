@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 338548f4-c4d8-47ca-b597-5c9c0f2fa205
 caps.latest.revision: 30
 author: CarlRabeler
-ms.author: carlraba
+ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a3bd36744f5604729d782822296dd6568b90a847
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: 5ce04c1ef924224036f28b8b5dd1b4eb15c9a4a4
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36942622"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107958"
 ---
 # <a name="strong-passwords"></a>Senhas fortes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,9 +56,9 @@ ms.locfileid: "36942622"
   
 -   Contém ou começa com um caractere de espaço.  
   
--   Começa com o $ ou @.  
+-   Começa com o caractere $ ou \@.  
   
- Se usados em uma cadeia de conexão OLE DB ou ODBC, um logon ou senha não deve conter os seguintes caracteres: [] {}() , ; ? * ! @. Esses caracteres são usados para iniciar uma conexão ou valores de conexão separados.  
+ Se usados em uma cadeia de conexão OLE DB ou ODBC, um logon ou senha não deve conter os seguintes caracteres: [] {}() , ; ? * ! \@. Esses caracteres são usados para iniciar uma conexão ou valores de conexão separados.  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
  [Política de senha](../../relational-databases/security/password-policy.md)  

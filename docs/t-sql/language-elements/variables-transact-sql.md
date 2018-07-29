@@ -17,12 +17,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2ad62b912dbe788aa6fffb016440a597c0a27cce
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 1d411c73e322e4043645a161e059d5cd6f1a300f
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36249698"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088388"
 ---
 # <a name="variables-transact-sql"></a>Variáveis (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -34,7 +34,7 @@ Uma variável local Transact-SQL é um objeto que pode conter um único valor de
 * Para salvar um valor de dados a ser retornado por um código de retorno de procedimento armazenado ou valor de retorno de função.
 
 > [!NOTE]
-> Os nomes de algumas funções do sistema Transact-SQL começam com dois sinais *at* (@@). Embora nas versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] @@functions sejam referenciadas como variáveis globais, elas não são variáveis e não têm os mesmos comportamentos de variáveis. As funções @@functions são funções do sistema, e o uso de sua sintaxe segue as regras de funções.
+> Os nomes de algumas funções do sistema Transact-SQL começam com dois sinais de *arroba* (\@\@). Embora nas versões anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], as funções \@\@ tenham sido referidas como variáveis globais, elas não são variáveis e não têm os mesmos comportamentos de variáveis. As funções \@\@ são funções de sistema, e o uso de sua sintaxe segue as regras das funções.
 
 O script seguinte cria uma tabela de teste pequena e a popula com 26 linhas. O script usa uma variável para fazer três coisas: 
 
@@ -85,17 +85,17 @@ GO
 
 ## <a name="declaring-a-transact-sql-variable"></a>Declarando uma variável Transact-SQL
 A instrução DECLARE inicializa uma variável Transact-SQL por: 
-* Atribuição de um nome. O nome deve ter uma única @ como o primeiro caractere.
+* Atribuição de um nome. O nome deve ter uma única \@ como o primeiro caractere.
 * Atribuição de um tipo de dados fornecido por sistema ou definido pelo usuário e um comprimento. Para variáveis numéricas, precisão e escala também são atribuídas. Para variáveis do tipo XML, uma coleção de esquema opcional pode ser atribuída.
 * Definição do valor como NULL.
 
-Por exemplo, a instrução **DECLARE** a seguir cria uma variável local chamada **@mycounter** com um tipo de dados int.  
+Por exemplo, a instrução **DECLARE** seguinte cria uma variável local nomeada **\@mycounter** com um tipo de dados int.  
 ```sql
 DECLARE @MyCounter int;
 ```
 Para declarar mais de uma variável local, use uma vírgula depois da primeira variável local definida, e especifique o próximo nome de variável local e o tipo de dados.
 
-Por exemplo, a seguinte instrução **DECLARE** cria três variáveis locais chamadas **@LastName**, **@FirstName** e **@StateProvince** e inicializa cada uma como NULL:  
+Por exemplo, esta instrução **DECLARE** cria três variáveis locais chamadas **\@LastName**, **\@FirstName** e **\@StateProvince**, e inicializa cada uma como NULL:  
 ```sql
 DECLARE @LastName nvarchar(30), @FirstName nvarchar(20), @StateProvince nchar(2);
 ```
@@ -165,7 +165,7 @@ GO
 > [!WARNING]
 > Se houver várias cláusulas de atribuições em uma única instrução SELECT, o SQL Server não garante a ordem de avaliação das expressões. Observe que os efeitos são visíveis apenas se houver referências entre as atribuições.
 
-Se uma instrução SELECT retornar mais de uma linha e a variável referenciar uma expressão não escalar, a variável será definida com o valor retornado para a expressão na última linha do conjunto de resultados. Por exemplo, no seguinte lote, **@EmpIDVariable** é definido com o valor de **BusinessEntityID** da última linha retornada, que é 1:  
+Se uma instrução SELECT retornar mais de uma linha e a variável referenciar uma expressão não escalar, a variável será definida com o valor retornado para a expressão na última linha do conjunto de resultados. Por exemplo, no seguinte lote, **\@EmpIDVariable** é definido com o valor de **BusinessEntityID** da última linha retornada, que é 1:  
 
 ```sql
 USE AdventureWorks2014;

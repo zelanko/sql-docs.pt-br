@@ -17,12 +17,12 @@ caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cf241911ce9befc7b42e8c84fd6fddb7dcd10374
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 2ebaa1c922714413a29967d38aa8b60ebaa6c335
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34323747"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39086958"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>Expressões de consultas e nomes de recursos uniformes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -77,22 +77,22 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
   
  Por exemplo, especifique o Servidor para a classe **ServerCollection** , o Banco de dados para a classe **DatabaseCollection** .  
   
- @*PropertyName*  
- Especifica o nome de uma das propriedades da classe associada ao objeto especificado em *Objeto*. O nome da propriedade deve ser prefixado com o caractere @. Por exemplo, especifique @IsAnsiNull para a propriedade **IsAnsiNull** da classe **Database**.  
+ \@*PropertyName*  
+ Especifica o nome de uma das propriedades da classe associada ao objeto especificado em *Objeto*. O nome da propriedade deve ser prefixado com o caractere \@. Por exemplo, especifique \@IsAnsiNull para a propriedade **IsAnsiNull** da classe **Database**.  
   
- @*BooleanPropertyName*=true()  
+ \@*BooleanPropertyName*=true()  
  Enumera todos os objetos em que a propriedade booliana especificada está definida como TRUE.  
   
- @*BooleanPropertyName*=false()  
+ \@*BooleanPropertyName*=false()  
  Enumera todos os objetos em que a propriedade booliana especificada está definida como FALSE.  
   
- contains(@*StringPropertyName*, '*PatternString*')  
+ contains(\@*StringPropertyName*, '*PatternString*')  
  Enumera todos os objetos em que a propriedade da cadeia de caracteres especificada contém pelo menos uma ocorrência do conjunto de caracteres especificado em “*PatternString*”.  
   
- @*StringPropertyName*='*PatternString*'  
+ \@*StringPropertyName*='*PatternString*'  
  Enumera todos os objetos em que o valor da propriedade da cadeia de caracteres especificada é exatamente igual ao padrão de caractere especificado em “*PatternString*”.  
   
- @*DatePropertyName*= datetime('*DateString*')  
+ \@*DatePropertyName*= datetime('*DateString*')  
  Enumera todos os objetos em que o valor da propriedade de data especificada corresponde à data especificada em “*DateString*”. *DateString* deve seguir o formato aaaa-mm-dd hh:min:ss.mmm  
   
 |||  
@@ -107,11 +107,11 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
   
  As datas especificadas nesse formato podem ser avaliadas em relação a qualquer formato de data armazenado no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- is_null(@*PropertyName*)  
+ is_null(\@*PropertyName*)  
  Enumera todos os objetos em que a propriedade especificada tenha um valor NULL.  
   
  not(\<*PropertyExpression*>)  
- Nega o valor de avaliação de *PropertyExpression*, enumerando todos os objetos que não correspondem à condição especificada em *PropertyExpression*. Por exemplo, not(contains(@Name, 'xyz')) enumera todos os objetos que não têm a cadeia de caracteres xyz em seus nomes.  
+ Nega o valor de avaliação de *PropertyExpression*, enumerando todos os objetos que não correspondem à condição especificada em *PropertyExpression*. Por exemplo, not(contains(\@Name, 'xyz')) enumera todos os objetos que não têm a cadeia de caracteres xyz em seus nomes.  
   
 ## <a name="remarks"></a>Remarks  
  Expressões de consulta são cadeias de caracteres que enumeram os nós em uma hierarquia de modelos SMO. Cada nó tem uma expressão de filtro que especifica os critérios de determinação dos objetos desse nó que são enumerados. As expressões de consultas são modeladas na linguagem de expressão XPath. As expressões de consulta implementam um pequeno subconjunto de expressões com suporte em XPath e também possuem algumas expressões que não são encontradas em XPath. As expressões Xpath são cadeias de caracteres que especificam um conjunto de critérios usados para enumerar uma ou mais marcas em um documento XML. Para obter mais informações sobre XPath, consulte [W3C XPath Language](http://www.w3.org/TR/xpath20/).  

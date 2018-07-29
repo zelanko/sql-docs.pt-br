@@ -17,12 +17,12 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 285bdb7031d205cb30b0ee76560a9ee9b00f5fb4
-ms.sourcegitcommit: 6fe7b5e8818bd0d94fce693c560d63cc6883d76f
+ms.openlocfilehash: 36a582685e4c4e76e093763e4372d68ca93ec14b
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34758076"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085338"
 ---
 # <a name="examples-using-path-mode"></a>Exemplos: Usando modo PATH
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -128,7 +128,7 @@ GO
  `<Name>Bike Wash</Name>`  
   
 ## <a name="specifying-xpath-like-column-names"></a>Especificando nomes de colunas como XPath  
- Na consulta a seguir, o nome da coluna `ProductModelID` especificado começa com '@' e não contém uma barra ('/'). Portanto, um atributo do elemento <`row`> que tem o valor de coluna correspondente é criado no XML resultante.  
+ Na consulta a seguir, o nome da coluna `ProductModelID` especificado começa com '\@' e não contém uma barra ('/'). Portanto, um atributo do elemento <`row`> que tem o valor de coluna correspondente é criado no XML resultante.  
   
 ```  
 USE AdventureWorks2012;  

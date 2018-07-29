@@ -26,12 +26,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d36f230788699207b122cc849c32577e96ecb2fe
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: f56a1b254aeb487001915f05bb4e278e1ebd768e
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37420455"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39087918"
 ---
 # <a name="datetime-transact-sql"></a>datetime (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,11 +46,11 @@ Define uma data combinada com uma hora do dia que inclui frações de segundos e
 |Propriedade|Valor|  
 |---|---|
 |Sintaxe|**datetime**|  
-|Uso|DECLARE @MyDatetime **datetime**<br /><br /> CREATE TABLE Table1 ( Column1 **datetime** )|  
+|Uso|DECLARE \@MyDatetime **datetime**<br /><br /> CREATE TABLE Table1 ( Column1 **datetime** )|  
 |Formatos de literais de cadeia de caracteres padrão<br /><br /> (usado para cliente de nível inferior)|Não aplicável|  
 |Intervalo de datas|Janeiro 1, 1753, a dezembro 31, 9999|  
 |Intervalo de horas|00:00:00 a 23:59:59.997|  
-|Intervalo de deslocamento de fuso horário|Nenhum|  
+|Intervalo de deslocamento de fuso horário|None|  
 |Intervalos de elementos|AAAA são quatro dígitos de 1753 a 9999 que representam um ano.<br /><br /> MM são dois dígitos, variando de 01 a 12, que representam um mês do ano especificado.<br /><br /> DD são dois dígitos, variando de 01 a 31, dependendo do mês, que representam um dia do mês especificado.<br /><br /> hh são dois dígitos, variando de 00 a 23, que representam a hora.<br /><br /> mm são dois dígitos, variando de 00 a 59, que representam o minuto.<br /><br /> ss são dois dígitos, variando de 00 a 59, que representam o segundo.<br /><br /> n* vai de zero a três dígitos, variando de 0 a 999, representando as frações de segundo.|  
 |Comprimento de caracteres|19 posições no mínimo e 23 no máximo|  
 |Tamanho de armazenamento|8 bytes|  

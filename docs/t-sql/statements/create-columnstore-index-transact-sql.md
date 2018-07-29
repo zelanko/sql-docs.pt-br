@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 19d6758a6ce66af368aabb6cb5f81fb8e004c999
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 963c58a19ee5bf13fe956dcbefbf2f73114b1e96
+ms.sourcegitcommit: 9229fb9b37616e0b73e269d8b97c08845bc4b9f3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37787758"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39024242"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -147,7 +147,7 @@ COMPRESSION_DELAY = **0** | *delay* [ Minutes ]
 
    Para uma tabela baseada em disco, *delay* especifica o número mínimo de minutos que um rowgroup delta no estado CLOSED precisa permanecer no rowgroup delta antes que o SQL Server possa compactá-lo no rowgroup compactado. Como as tabelas baseadas em disco não controlam os tempos de inserção e atualização em linhas individuais, o SQL Server aplica o atraso aos rowgroups delta no estado CLOSED.  
    O padrão é 0 minuto.  
-   Para obter recomendações de quando usar COMPRESSION_DELAY, confira [Introdução ao Columnstore para análise operacional em tempo real](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md).  
+   Para obter recomendações de quando usar COMPRESSION_DELAY, confira [Introdução ao columnstore para análise operacional em tempo real](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md).  
   
 DATA_COMPRESSION = COLUMNSTORE | COLUMNSTORE_ARCHIVE  
    Aplica-se a: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
@@ -358,13 +358,13 @@ Se a tabela subjacente tiver uma coluna de um tipo de dados não compatível com
 
 Não é possível usar cursores nem gatilhos em uma tabela com um índice columnstore clusterizado. Essa restrição não se aplica a índices columnstore não clusterizados. É possível usar cursores e gatilhos em uma tabela com um índice columnstore não clusterizado.
 
-**Limitações específicas do SQL Server 2014**  
-Essas limitações aplicam-se somente ao SQL Server 2014. Nesta versão, foram introduzidos os índices columnstore clusterizados atualizáveis. Os índices columnstore não clusterizados ainda eram somente leitura.  
+**Limitações específicas do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**  
+Estas limitações se aplicam apenas ao [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. Nesta versão, foram introduzidos os índices columnstore clusterizados atualizáveis. Os índices columnstore não clusterizados ainda eram somente leitura.  
 
 -   Controle de alterações. Não é possível usar o controle de alterações com NCCI (índices columnstore não clusterizado) porque eles são somente leitura. Mas funciona para CCI (índices columnstore clusterizados).  
 -   Captura de dados de alterações. Não é possível usar a captura de dados de alterações em NCCI (índices columnstore não clusterizado) porque eles são somente leitura. Mas funciona para CCI (índices columnstore clusterizados).  
 -   Secundário legível. Não é possível acessar um CCI (índice columnstore clusterizado) de um secundário legível de um grupo de disponibilidade Always On legível.  É possível acessar um NCCI (índice columnstore não clusterizado) de um secundário legível.  
--   MARS (conjunto de resultados ativos múltiplos). O SQL Server 2014 usa o MARS para conexões somente leitura com tabelas que contenham um índice columnstore.    No entanto, o SQL Server 2014 não é compatível com o MARS para operações de DML (linguagem de manipulação de dados) simultâneas em uma tabela com um índice columnstore. Quando isso ocorre, o SQL Server encerra as conexões e anula as transações.  
+-   MARS (conjunto de resultados ativos múltiplos). O [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] usa o MARS para conexões somente leitura com tabelas que contenham um índice columnstore. No entanto, o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] não é compatível com o MARS para operações de DML (linguagem de manipulação de dados) simultâneas em uma tabela com um índice columnstore. Quando isso ocorre, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] encerra as conexões e anula as transações.  
   
  Para obter informações sobre os benefícios de desempenho e as limitações dos índices columnstore, confira [Visão geral de índices columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md).
   
@@ -383,7 +383,7 @@ Essas limitações aplicam-se somente ao SQL Server 2014. Nesta versão, foram i
 ### <a name="a-convert-a-heap-to-a-clustered-columnstore-index"></a>A. Converter um índice columnstore clusterizado  
  Este exemplo cria uma tabela como um heap e, depois, converte-o em um índice columnstore clusterizado chamado o cci_Simple. Isso altera o armazenamento da tabela inteira, de rowstore a columnstore.  
   
-```  
+```sql  
 CREATE TABLE SimpleTable(  
     ProductKey [int] NOT NULL,   
     OrderDateKey [int] NOT NULL,   
@@ -397,7 +397,7 @@ GO
 ### <a name="b-convert-a-clustered-index-to-a-clustered-columnstore-index-with-the-same-name"></a>B. Converta um índice clusterizado em um índice columnstore clusterizado com o mesmo nome.  
  Este exemplo cria uma tabela com um índice clusterizado e, em seguida, demonstra a sintaxe de conversão do índice clusterizado em índice columnstore clusterizado. Isso altera o armazenamento da tabela inteira, de rowstore a columnstore.  
   
-```  
+```sql  
 CREATE TABLE SimpleTable (  
     ProductKey [int] NOT NULL,   
     OrderDateKey [int] NOT NULL,   
@@ -418,8 +418,7 @@ GO
   
  No [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e no [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], não era possível criar um índice não clusterizado em um índice columnstore. Este exemplo mostra como nas versões anteriores era necessário remover os índices não clusterizados antes de criar o índice columnstore.  
   
-```  
-  
+```sql  
 --Create the table for use with this example.  
 CREATE TABLE SimpleTable (  
     ProductKey [int] NOT NULL,   
@@ -442,7 +441,6 @@ DROP INDEX SimpleTable.nc2_simple;
 --Convert the rowstore table to a columnstore index.  
 CREATE CLUSTERED COLUMNSTORE INDEX cci_simple ON SimpleTable;   
 GO  
-  
 ```  
   
 ### <a name="d-convert-a-large-fact-table-from-rowstore-to-columnstore"></a>D. Converter uma tabela de fatos grande do rowstore em columnstore  
@@ -452,7 +450,7 @@ GO
   
 1.  Primeiro, crie uma pequena tabela a ser usada neste exemplo.  
   
-    ```  
+    ```sql  
     --Create a rowstore table with a clustered index and a non-clustered index.  
     CREATE TABLE MyFactTable (  
         ProductKey [int] NOT NULL,  
@@ -470,7 +468,7 @@ GO
   
 2.  Remova todos os índices não clusterizados da tabela rowstore.  
   
-    ```  
+    ```sql  
     --Drop all non-clustered indexes  
     DROP INDEX my_index ON MyFactTable;  
     ```  
@@ -480,9 +478,9 @@ GO
     -   Faça isso somente se desejar especificar um novo nome para o índice quando ele for convertido em um índice columnstore clusterizado. Se você não remover o índice clusterizado, o novo índice columnstore clusterizado terá o mesmo nome.  
   
         > [!NOTE]  
-        >  Pode ser mais fácil lembrar o nome do índice se você usar seu próprio nome. Todos os índices clusterizados da rowstore usam o nome padrão que é 'ClusteredIndex_\<GUID>'.  
+        > Pode ser mais fácil lembrar o nome do índice se você usar seu próprio nome. Todos os índices clusterizados da rowstore usam o nome padrão que é 'ClusteredIndex_\<GUID>'.  
   
-    ```  
+    ```sql  
     --Process for dropping a clustered index.  
     --First, look up the name of the clustered rowstore index.  
     --Clustered rowstore indexes always use the DEFAULT name ‘ClusteredIndex_<GUID>’.  
@@ -497,7 +495,7 @@ GO
   
 4.  Converta a tabela rowstore em uma tabela columnstore com um índice columnstore clusterizado.  
   
-    ```  
+    ```sql  
     --Option 1: Convert to columnstore and name the new clustered columnstore index MyCCI.  
     CREATE CLUSTERED COLUMNSTORE INDEX MyCCI ON MyFactTable;  
   
@@ -522,7 +520,7 @@ GO
 ### <a name="e-convert-a-columnstore-table-to-a-rowstore-table-with-a-clustered-index"></a>E. Converter uma tabela columnstore em uma tabela rowstore com um índice clusterizado  
  Para converter uma tabela columnstore em uma tabela rowstore com um índice clusterizado, use a instrução CREATE INDEX com a opção DROP_EXISTING.  
   
-```  
+```sql  
 CREATE CLUSTERED INDEX ci_MyTable   
 ON MyFactTable  
 WITH ( DROP EXISTING = ON );  
@@ -531,21 +529,21 @@ WITH ( DROP EXISTING = ON );
 ### <a name="f-convert-a-columnstore-table-to-a-rowstore-heap"></a>F. Converter uma tabela columnstore em um heap rowstore  
  Para converter uma tabela columnstore em um heap rowstore, basta remover o índice columnstore clusterizado.  
   
-```  
+```sql  
 DROP INDEX MyCCI   
 ON MyFactTable;  
 ```  
   
 
 ### <a name="g-defragment-by-rebuilding-the-entire-clustered-columnstore-index"></a>G. Desfragmentar recompilando o índice columnstore clusterizado inteiro  
-   Aplica-se a: SQL Server 2014  
+   Aplica-se a: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
  Há duas maneiras de recriar o índice columnstore clusterizado completo. Você pode usar CREATE CLUSTERED COLUMNSTORE INDEX ou [ALTER INDEX &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-index-transact-sql.md) e a opção REBUILD. Ambos os métodos geram os mesmos resultados.  
   
 > [!NOTE]  
->  Começando com o SQL Server 2016, use ALTER INDEX REORGANIZE em vez de reconstruir com os métodos descritos neste exemplo.  
+> A partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], use `ALTER INDEX...REORGANIZE` em vez de reconstruir com os métodos descritos neste exemplo.  
   
-```  
+```sql  
 --Determine the Clustered Columnstore Index name of MyDimTable.  
 SELECT i.object_id, i.name, t.object_id, t.name   
 FROM sys.indexes i   
@@ -563,7 +561,6 @@ ALTER INDEX my_CCI
 ON MyFactTable  
 REBUILD PARTITION = ALL  
 WITH ( DROP_EXISTING = ON );  
-  
 ```  
   
 ##  <a name="nonclustered"></a> Exemplos de índices columnstore não clusterizados  
@@ -571,7 +568,7 @@ WITH ( DROP_EXISTING = ON );
 ### <a name="a-create-a-columnstore-index-as-a-secondary-index-on-a-rowstore-table"></a>A. Criar um índice columnstore como um índice secundário em uma tabela rowstore  
  Este exemplo cria um índice columnstore não clusterizado em uma tabela rowstore. Somente um índice columnstore pode ser criado nesta situação. O índice columnstore exige armazenamento extra, pois contém uma cópia dos dados na tabela rowstore. Este exemplo cria uma tabela simples e um índice clusterizado e, em seguida, demonstra a sintaxe de criação de um índice columnstore não clusterizado.  
   
-```  
+```sql  
 CREATE TABLE SimpleTable  
 (ProductKey [int] NOT NULL,   
 OrderDateKey [int] NOT NULL,   
@@ -589,7 +586,7 @@ GO
 ### <a name="b-create-a-simple-nonclustered-columnstore-index-using-all-options"></a>B. Criar um índice columnstore não clusterizado simples usando todas as opções  
  O exemplo a seguir demonstra a sintaxe de criação de um índice columnstore não clusterizado usando todas as opções.  
   
-```  
+```sql  
 CREATE NONCLUSTERED COLUMNSTORE INDEX csindx_simple  
 ON SimpleTable  
 (OrderDateKey, DueDateKey, ShipDateKey)  
@@ -604,7 +601,7 @@ GO
 ### <a name="c-create-a-nonclustered-columnstore-index-with-a-filtered-predicate"></a>C. Criar um índice columnstore não clusterizado com um predicado filtrado  
  O exemplo a seguir cria um índice columnstore não clusterizado filtrado na tabela Production.BillOfMaterials no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. O predicado de filtro pode incluir colunas que não sejam de chave no índice filtrado. O predicado deste exemplo seleciona apenas as linhas em que EndDate é não NULL.  
   
-```  
+```sql  
 IF EXISTS (SELECT name FROM sys.indexes  
     WHERE name = N'FIBillOfMaterialsWithEndDate'   
     AND object_id = OBJECT_ID(N'Production.BillOfMaterials'))  
@@ -614,7 +611,6 @@ GO
 CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"  
     ON Production.BillOfMaterials (ComponentID, StartDate)  
     WHERE EndDate IS NOT NULL;  
-  
 ```  
   
 ###  <a name="ncDML"></a> D. Alterar os dados em um índice columnstore não clusterizado  
@@ -624,7 +620,7 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
   
 -   Desabilitar ou descartar o índice columnstore. Depois, você pode atualizar os dados na tabela. Se você desabilitar o índice columnstore, poderá recriar o índice columnstore quando concluir a atualização dos dados. Por exemplo,  
   
-    ```  
+    ```sql  
     ALTER INDEX mycolumnstoreindex ON mytable DISABLE;  
     -- update mytable --  
     ALTER INDEX mycolumnstoreindex on mytable REBUILD  
@@ -645,7 +641,7 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
   
  Este exemplo cria a tabela xDimProduct como uma tabela rowstore com um índice clusterizado e, em seguida, usa CREATE CLUSTERED COLUMNSTORE INDEX para alterar a tabela de uma tabela rowstore para uma tabela columnstore.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 IF EXISTS (SELECT name FROM sys.tables  
@@ -670,7 +666,7 @@ WITH ( DROP_EXISTING = ON );
 ### <a name="b-rebuild-a-clustered-columnstore-index"></a>B. Recompilar um índice columnstore clusterizado  
  Com base no exemplo anterior, este exemplo usa CREATE CLUSTERED COLUMNSTORE INDEX para recompilar o índice columnstore clusterizado existente chamado cci_xDimProduct.  
   
-```  
+```sql  
 --Rebuild the existing clustered columnstore index.  
 CREATE CLUSTERED COLUMNSTORE INDEX cci_xDimProduct   
 ON xdimProduct   
@@ -684,7 +680,7 @@ WITH ( DROP_EXISTING = ON );
   
  Usando o índice columnstore clusterizado cci_xDimProduct do exemplo anterior, este exemplo descarta o índice columnstore clusterizado cci_xDimProduct e, em seguida, recria o índice columnstore clusterizado com o nome mycci_xDimProduct.  
   
-```  
+```sql  
 --For illustration purposes, drop the clustered columnstore index.   
 --The table continues to be distributed, but changes to a heap.  
 DROP INDEX cci_xdimProduct ON xDimProduct;  
@@ -698,20 +694,19 @@ WITH ( DROP_EXISTING = OFF );
 ### <a name="d-convert-a-columnstore-table-to-a-rowstore-table-with-a-clustered-index"></a>D. Converter uma tabela columnstore em uma tabela rowstore com um índice clusterizado  
  É possível que haja uma situação em você deseje remover um índice columnstore clusterizado e criar um índice clusterizado. Isso armazena a tabela no formato rowstore. Este exemplo converte uma tabela columnstore em uma tabela rowstore com um índice clusterizado com o mesmo nome. Nenhum dos dados é perdido. Todos os dados vão para a tabela rowstore e as colunas listadas tornam-se as colunas de chave no índice clusterizado.  
   
-```  
+```sql  
 --Drop the clustered columnstore index and create a clustered rowstore index.   
 --All of the columns are stored in the rowstore clustered index.   
 --The columns listed are the included columns in the index.  
 CREATE CLUSTERED INDEX cci_xDimProduct    
 ON xdimProduct (ProductKey, ProductAlternateKey, ProductSubcategoryKey, WeightUnitMeasureCode)  
 WITH ( DROP_EXISTING = ON);  
-  
 ```  
   
 ### <a name="e-convert-a-columnstore-table-back-to-a-rowstore-heap"></a>E. Converter uma tabela columnstore novamente em um heap rowstore  
  Use [DROP INDEX (SQL Server PDW)](http://msdn.microsoft.com/en-us/f59cab43-9f40-41b4-bfdb-d90e80e9bf32) para remover o índice columnstore clusterizado e converter a tabela em um heap rowstore. Este exemplo converte a tabela cci_xDimProduct em um heap rowstore. A tabela continua a ser distribuída, mas é armazenada como um heap.  
   
-```  
+```sql  
 --Drop the clustered columnstore index. The table continues to be distributed, but changes to a heap.  
 DROP INDEX cci_xdimProduct ON xdimProduct;  
 ```  

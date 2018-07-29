@@ -24,12 +24,12 @@ caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a37b39e8630257be25efde7b3d2a74c60f3e46c0
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 61529c64150bb28c595ade859f45453591526b51
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35334120"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39084578"
 ---
 # <a name="identifiers-ssis"></a>Identificadores (SSIS)
   Em expressões, identificadores são colunas e variáveis, que estão disponíveis para a operação. Expressões podem usar identificadores regulares e qualificados.  
@@ -41,7 +41,7 @@ ms.locfileid: "35334120"
   
 -   O primeiro caractere do nome deve ser uma letra como definido pelo Unicode Standard 2.0, ou um caractere de sublinhado (_).  
   
--   Os caracteres subsequentes podem ser letras ou números conforme definido no Unicode Standard 2.0 e os caracteres (_), @, $ e # .  
+-   Os caracteres subsequentes podem ser letras ou números conforme definido no Unicode Standard 2.0 e os caracteres (_), \@, $ e #.  
   
 > [!IMPORTANT]  
 >  Espaços inseridos e caracteres especiais, diferentes daqueles listados, não são válidos em identificadores regulares. Para usar espaços e caracteres especiais, você deve usar um identificador qualificado em vez de um identificador regular.  
@@ -89,15 +89,15 @@ ms.locfileid: "35334120"
 >  Se ambos os elementos na notação pontilhada estiverem entre colchetes, o avaliador de expressão interpretará o par como um único identificador, não como uma combinação origem-coluna.  
   
 ## <a name="variables-in-expressions"></a>Variáveis em expressões  
- Variáveis, quando referenciadas em expressões, devem incluir o prefixo @. Por exemplo, a variável **Contador** é referenciada usando @Counter. O caractere @ não faz parte do nome de variável; só identifica a variável para o avaliador de expressão. Se você construir expressões utilizando as caixas de diálogo que o [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer fornece, o caractere @ será automaticamente adicionado ao nome da variável. Ele não é válido para incluir espaços entre o caractere @ e o nome de variável.  
+ Variáveis, quando referenciadas em expressões, devem incluir o prefixo \@. Por exemplo, a variável **Counter** é referenciada usando \@Counter. O caractere \@ não faz parte do nome de variável; só identifica a variável para o avaliador de expressão. Se você construir expressões utilizando as caixas de diálogo que o [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer fornece, o caractere \@ será automaticamente adicionado ao nome da variável. Ele não é válido para incluir espaços entre o caractere \@ e o nome de variável.  
   
  Nomes de variável seguem as mesmas regras que esses para outros identificadores regulares:  
   
 -   O primeiro caractere do nome deve ser uma letra como definido pelo Unicode Standard 2.0, ou um caractere de sublinhado (_).  
   
--   Os caracteres subsequentes podem ser letras ou números conforme definido no Unicode Standard 2.0 e os caracteres (_), @, $ e # .  
+-   Os caracteres subsequentes podem ser letras ou números conforme definido no Unicode Standard 2.0 e os caracteres (_), \@, $ e #.  
   
- Se um nome de variável contiver caracteres diferente daqueles listados, a variável deverá ser colocada entre colchetes. Por exemplo, os nomes de variável com espaços devem ser colocados entre colchetes. O colchete de abertura segue o caractere @. Por exemplo, a variável **My Name** é referenciada como @ [My Name]. Ele não é válido para incluir espaços entre o nome de variável e os colchetes.  
+ Se um nome de variável contiver caracteres diferente daqueles listados, a variável deverá ser colocada entre colchetes. Por exemplo, os nomes de variável com espaços devem ser colocados entre colchetes. O colchete de abertura segue o caractere \@. Por exemplo, a variável **My Name** é referenciada como \@[My Name]. Ele não é válido para incluir espaços entre o nome de variável e os colchetes.  
   
 > [!NOTE]  
 >  Os nomes das variáveis do sistema e das variáveis definidas pelo usuário diferenciam maiúsculas de minúsculas.  
