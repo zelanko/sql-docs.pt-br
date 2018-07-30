@@ -1,0 +1,42 @@
+- name: Pesquisador de Objetos
+  href: object-explorer.md
+- name: Add Steps to a SQL Server Agent Master Job
+  href: add-steps-to-a-sql-server-agent-master-job.md
+- name: Gerenciar objetos usando o Pesquisador de Objetos
+  href: manage-objects-by-using-object-explorer.md
+- name: Usar relatórios personalizados com propriedades de nó do Pesquisador de Objetos
+  href: use-custom-reports-with-object-explorer-node-properties.md
+- name: Dependências de objeto
+  href: object-dependencies.md
+- name: Ocultar objetos do sistema no Pesquisador de Objetos
+  href: hide-system-objects-in-object-explorer.md
+- name: Painel Detalhes do Pesquisador de Objetos
+  href: object-explorer-details-pane.md
+- name: Abrir e configurar o Pesquisador de Objetos
+  href: open-and-configure-object-explorer.md
+- name: Conectar-se a uma instância do Pesquisador de Objetos
+  href: connect-to-an-instance-from-object-explorer.md
+- name: caixa de diálogo Nome Não Encontrado
+  href: name-not-found-dialog-box.md
+- name: Procurar por objetos (Pesquisador de Objetos)
+  href: browse-for-objects-object-explorer.md
+- name: Selecionar tipos de objeto (Pesquisador de Objetos)
+  href: select-object-types-object-explorer.md
+- name: Selecionar objetos (Pesquisador de Objetos)
+  href: select-objects-object-explorer.md
+- name: Opções (página Pesquisador de Objetos do SQL Server – Scripts)
+  href: options-sql-server-object-explorer-scripting-page.md
+- name: Configurações de Filtro (Pesquisador de Objetos e Gerenciador do Utilitário)
+  href: filter-settings-object-explorer-and-utility-explorer.md
+- name: Excluir Objetos
+  href: delete-objects.md
+- name: adicionar um relatório personalizado ao Management Studio
+  href: add-a-custom-report-to-management-studio.md
+- name: Relatórios personalizados no Management Studio
+  href: custom-reports-in-management-studio.md
+- name: Adicionar Objetos
+  href: add-objects.md
+- name: Opções (Pesquisador de Objetos – Comandos do SQL Server)
+  href: options-sql-server-object-explorer-commands.md
+- name: Cancelar supressão da execução de avisos de relatório personalizado
+  href: unsuppress-run-custom-report-warnings.md

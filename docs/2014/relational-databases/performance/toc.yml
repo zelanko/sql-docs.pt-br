@@ -1,0 +1,78 @@
+- name: Monitorar e ajustar o desempenho
+  href: monitor-and-tune-for-performance.md
+- name: Monitorar componentes do SQL Server
+  href: monitor-sql-server-components.md
+- name: Ferramentas para monitoramento e ajuste de desempenho
+  href: performance-monitoring-and-tuning-tools.md
+- name: Estimativa de cardinalidade
+  href: cardinality-estimation-sql-server.md
+- name: Estabelecer uma linha de base de desempenho
+  href: establish-a-performance-baseline.md
+- name: Isolar problemas de desempenho
+  href: isolate-performance-problems.md
+- name: Identificar afunilamentos
+  href: identify-bottlenecks.md
+- name: Monitoring Performance By Using the Query Store
+  href: monitoring-performance-by-using-the-query-store.md
+- name: Monitoramento de desempenho e atividade de servidor
+  href: server-performance-and-activity-monitoring.md
+  items:
+    - name: Iniciar o Monitor do Sistema (Windows)
+      href: start-system-monitor-windows.md
+    - name: Configurar um alerta de banco de dados do SQL Server (Windows)
+      href: set-up-a-sql-server-database-alert-windows.md
+    - name: Exibir o log de aplicativos do Windows (Windows)
+      href: view-the-windows-application-log-windows-10.md
+    - name: Exibir o log de erros do SQL Server (SQL Server Management Studio)
+      href: view-the-sql-server-error-log-sql-server-management-studio.md
+    - name: Salvar gráficos de deadlock (SQL Server Profiler)
+      href: save-deadlock-graphs-sql-server-profiler.md
+    - name: 'Abrir, exibir e imprimir um arquivo de deadlock (SQL Server Management Studio)'
+      href: open-view-and-print-a-deadlock-file-sql-server-management-studio.md
+    - name: Salvar eventos de Plano de Execução XML separadamente (SQL Server Profiler)
+      href: save-showplan-xml-events-separately-sql-server-profiler.md
+    - name: Salvar eventos de perfil de estatísticas do Plano de Execução XML separadamente (SQL Server Profiler)
+      href: save-showplan-xml-statistics-profile-events-separately-sql-server-profiler.md
+- name: Exibir e salvar planos de execução
+  href: display-and-save-execution-plans.md
+  items:
+    - name: Exibir o plano de execução estimado
+      href: display-the-estimated-execution-plan.md
+    - name: Exibir um plano de execução real
+      href: display-an-actual-execution-plan.md
+    - name: Salvar um plano de execução em formato XML
+      href: save-an-execution-plan-in-xml-format.md
+- name: Guias de plano
+  href: plan-guides.md
+  items:
+    - name: Criar um novo guia de plano
+      href: create-a-new-plan-guide.md
+    - name: Criar um guia de plano para consultas parametrizadas
+      href: create-a-plan-guide-for-parameterized-queries.md
+    - name: Especificar comportamento de parametrização de consulta usando guias de plano
+      href: specify-query-parameterization-behavior-by-using-plan-guides.md
+    - name: Aplicar um plano de consulta fixo a um guia de plano
+      href: apply-a-fixed-query-plan-to-a-plan-guide.md
+    - name: Anexar dicas de consulta para um guia de plano
+      href: attach-query-hints-to-a-plan-guide.md
+    - name: Exibir propriedades de guia de plano
+      href: view-plan-guide-properties.md
+    - name: Usar o SQL Server Profiler para criar e testar guias de plano
+      href: use-sql-server-profiler-to-create-and-test-plan-guides.md
+    - name: Validar guias de plano depois da atualização
+      href: validate-plan-guides-after-upgrade.md
+    - name: Excluir um guia de plano
+      href: delete-a-plan-guide.md
+    - name: Habilitar ou desabilitar um guia de plano
+      href: enable-or-disable-a-plan-guide.md
+- name: Database Engine Tuning Advisor
+  href: database-engine-tuning-advisor.md
+  items:
+    - name: Iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados
+      href: start-and-use-the-database-engine-tuning-advisor.md
+    - name: Reduzir a carga de ajuste do servidor de produção
+      href: reduce-the-production-server-tuning-load.md
+    - name: Considerações para usar servidores de teste
+      href: considerations-for-using-test-servers.md
+    - name: Exibir e trabalhar com a saída do Orientador de Otimização do Mecanismo de Banco de Dados
+      href: view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md

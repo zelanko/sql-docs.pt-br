@@ -1,0 +1,84 @@
+- name: Tabelas
+  href: tables.md
+  items:
+    - name: Criar tabelas (Mecanismo de Banco de Dados)
+      href: create-tables-database-engine.md
+    - name: Excluir tabelas (Mecanismo de Banco de Dados)
+      href: delete-tables-database-engine.md
+    - name: Duplicar tabelas
+      href: duplicate-tables.md
+    - name: Renomear tabelas (Mecanismo de Banco de Dados)
+      href: rename-tables-database-engine.md
+    - name: Exibir a definição da tabela
+      href: view-the-table-definition.md
+      items:
+        - name: Propriedades da tabela
+          href: table-properties-ssms.md
+        - name: Propriedades da coluna (página Geral)
+          href: column-properties-general-page.md
+    - name: Exibir as dependências de uma tabela
+      href: view-the-dependencies-of-a-table.md
+    - name: Adicionar colunas a uma tabela (Mecanismo de Banco de Dados)
+      href: add-columns-to-a-table-database-engine.md
+    - name: Excluir colunas de uma tabela
+      href: delete-columns-from-a-table.md
+    - name: Renomear colunas (Mecanismo de Banco de Dados)
+      href: rename-columns-database-engine.md
+    - name: Copiar colunas de uma tabela em outra (Mecanismo de Banco de Dados)
+      href: copy-columns-from-one-table-to-another-database-engine.md
+    - name: Modificar colunas (Mecanismo de Banco de Dados)
+      href: modify-columns-database-engine.md
+    - name: Alterar ordem de colunas em uma tabela
+      href: change-column-order-in-a-table.md
+    - name: Especificar colunas computadas em uma tabela
+      href: specify-computed-columns-in-a-table.md
+    - name: Especificar valores padrão para colunas
+      href: specify-default-values-for-columns.md
+    - name: Usar colunas esparsas
+      href: use-sparse-columns.md
+    - name: Usar conjuntos de colunas
+      href: use-column-sets.md
+    - name: Usar parâmetros com valor de tabela (Mecanismo de Banco de Dados)
+      href: use-table-valued-parameters-database-engine.md
+- name: Restrições de chave primária e chave estrangeira
+  href: primary-and-foreign-key-constraints.md
+  items:
+    - name: Criar chaves primárias
+      href: create-primary-keys.md
+    - name: Modificar chaves primárias
+      href: modify-primary-keys.md
+    - name: Excluir chaves primárias
+      href: delete-primary-keys.md
+    - name: Criar relações de chaves estrangeiras
+      href: create-foreign-key-relationships.md
+    - name: Modificar relações de chave estrangeira
+      href: modify-foreign-key-relationships.md
+    - name: Excluir relações de chaves estrangeiras
+      href: delete-foreign-key-relationships.md
+    - name: Exibir propriedades de chave estrangeira
+      href: view-foreign-key-properties.md
+    - name: Desabilitar restrições FOREIGN KEY para replicação
+      href: disable-foreign-key-constraints-for-replication.md
+    - name: Desabilitar restrições FOREIGN KEY com instruções INSERT e UPDATE
+      href: disable-foreign-key-constraints-with-insert-and-update-statements.md
+- name: Restrições exclusivas e restrições de verificação
+  href: unique-constraints-and-check-constraints.md
+  items:
+    - name: Criar restrições exclusivas
+      href: create-unique-constraints.md
+    - name: Modificar restrições exclusivas
+      href: modify-unique-constraints.md
+    - name: Excluir restrições exclusivas
+      href: delete-unique-constraints.md
+    - name: Criar restrições de verificação
+      href: create-check-constraints.md
+    - name: Modificar restrições de verificação
+      href: modify-check-constraints.md
+    - name: Excluir restrições de verificação
+      href: delete-check-constraints.md
+    - name: Desabilitar verificação de restrições para replicação
+      href: disable-check-constraints-for-replication.md
+    - name: Desabilitar restrições de verificação com instruções INSERT e UPDATE
+      href: disable-check-constraints-with-insert-and-update-statements.md
+- name: Propriedades da coluna de tabela (SQL Server Management Studio)
+  href: table-column-properties-sql-server-management-studio.md

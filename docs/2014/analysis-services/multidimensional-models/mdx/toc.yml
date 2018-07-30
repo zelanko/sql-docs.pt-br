@@ -1,0 +1,112 @@
+- name: Acesso a dados com MDX
+  href: multidimensional-model-data-access-analysis-services-multidimensional-data.md
+- name: Consultando dados multidimensionais com MDX
+  href: querying-multidimensional-data-with-mdx.md
+- name: Principais conceitos em MDX
+  href: ../key-concepts-in-mdx-analysis-services.md
+  items:
+    - name: autoexists
+      href: autoexists.md
+    - name: Contexto de cálculo
+      href: calculation-context.md
+    - name: Membros calculados em subseleções e subcubos
+      href: calculated-members-in-subselects-and-subcubes.md
+    - name: Espaço de cubo
+      href: cube-space.md
+    - name: Subseleções em consultas
+      href: subselects-in-queries.md
+    - name: Tuplas
+      href: tuples.md
+    - name: Totais visuais e totais não visuais
+      href: visual-totals-and-non-visual-totals.md
+    - name: 'Trabalhando com membros, tuplas e conjuntos (MDX)'
+      href: working-with-members-tuples-and-sets-mdx.md
+- name: Conceitos básicos de consulta MDX
+  href: mdx-query-fundamentals-analysis-services.md
+  items:
+    - name: A consulta básica de MDX
+      href: mdx-query-the-basic-query.md
+      items:
+        - name: Palavra-chave EXISTING
+          href: mdx-query-existing-keyword.md
+    - name: Restringindo a consulta com os eixos de consulta e slicer
+      href: mdx-query-and-slicer-axes-restricting-the-query.md
+      items:
+        - name: Especificando o conteúdo de um eixo de consulta
+          href: mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md
+        - name: Especificando o conteúdo de um eixo do slicer
+          href: mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md
+        - name: Usando eixos de consulta e slicer em um exemplo simples
+          href: mdx-query-and-slicer-axes-using-axes-in-a-simple-example.md
+    - name: Estabelecendo o contexto de cubo em uma consulta
+      href: establishing-cube-context-in-a-query-mdx.md
+- name: Criando subcubos em MDX
+  href: building-subcubes-in-mdx-mdx.md
+- name: Criando conjuntos nomeados em MDX
+  href: mdx-named-sets-building-named-sets.md
+  items:
+    - name: Criando conjuntos nomeados no escopo da consulta
+      href: mdx-named-sets-creating-query-scoped-named-sets.md
+    - name: Criando conjuntos nomeados no escopo da sessão
+      href: mdx-named-sets-creating-session-scoped-named-sets.md
+- name: Criando membros calculados em MDX
+  href: mdx-calculated-members-building-calculated-members.md
+  items:
+    - name: Criando membros calculados no escopo da consulta
+      href: mdx-calculated-members-query-scoped-calculated-members.md
+    - name: Criando membros calculados no escopo da sessão
+      href: mdx-calculated-members-session-scoped-calculated-members.md
+- name: Criando cálculos de célula em MDX
+  href: mdx-cell-calculations-build-cell-calculations.md
+  items:
+    - name: Criando cálculos de célula no escopo da consulta
+      href: mdx-cell-calculations-query-scoped-cell-calculations.md
+    - name: Criando células calculadas no escopo da sessão
+      href: mdx-cell-calculations-session-scoped-calculated-cells.md
+- name: Compilando medidas em MDX
+  href: mdx-building-measures.md
+- name: Criando e usando valores de propriedade
+  href: ../../creating-and-using-property-values-mdx.md
+  items:
+    - name: Usando propriedades do membro
+      href: mdx-member-properties.md
+      items:
+        - name: Propriedades intrínsecas do membro
+          href: mdx-member-properties-intrinsic-member-properties.md
+        - name: Propriedades do membro definidas pelo usuário
+          href: mdx-member-properties-user-defined-member-properties.md
+    - name: Usando propriedades da célula
+      href: mdx-cell-properties-using-cell-properties.md
+      items:
+        - name: Conteúdo de FORMAT_STRING
+          href: mdx-cell-properties-format-string-contents.md
+        - name: Conteúdo de FORE_COLOR e BACK_COLOR
+          href: mdx-cell-properties-fore-color-and-back-color-contents.md
+        - name: LANGUAGE e FORMAT_STRING em FORMATED_VALUE
+          href: mdx-cell-properties-formatted-value-property.md
+- name: Manipulando dados
+  href: mdx-data-manipulation-manipulating-data.md
+  items:
+    - name: Usando DRILLTHROUGH para recuperar a fonte de dados
+      href: mdx-data-manipulation-retrieve-source-data-using-drillthrough.md
+    - name: Trabalhando com a função RollupChildren
+      href: mdx-data-manipulation-rollupchildren-function.md
+    - name: Entendendo a ordem de passagem e a ordem de resolução
+      href: mdx-data-manipulation-understanding-pass-order-and-solve-order.md
+    - name: Modificando dados
+      href: mdx-data-modification-modifying-data.md
+    - name: Usando Cube Writebacks
+      href: mdx-data-modification-using-cube-writebacks.md
+    - name: Usando variáveis e parâmetros
+      href: using-variables-and-parameters-mdx.md
+- name: Conceitos básicos de script MDX
+  href: mdx-scripting-fundamentals-analysis-services.md
+  items:
+    - name: O script básico de MDX
+      href: the-basic-mdx-script-mdx.md
+    - name: Gerenciando escopo e contexto
+      href: managing-scope-and-context-mdx.md
+    - name: Tratamento de erros
+      href: error-handling-mdx.md
+    - name: Suporte para MDX
+      href: supported-mdx-mdx.md

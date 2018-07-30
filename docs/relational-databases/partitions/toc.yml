@@ -1,0 +1,10 @@
+- name: Visão geral
+  href: partitioned-tables-and-indexes.md
+- name: Criar
+  href: create-partitioned-tables-and-indexes.md
+- name: Modificar uma função de partição
+  href: modify-a-partition-function.md
+- name: Modificar um esquema de partição
+  href: modify-a-partition-scheme.md
+- name: Ajuda de F1 do Assistente para Gerenciar Partição
+  href: manage-partition-wizard-f1-help.md

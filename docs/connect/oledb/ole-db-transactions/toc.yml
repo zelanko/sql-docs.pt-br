@@ -1,0 +1,8 @@
+- name: Transactions
+  href: transactions.md
+- name: Níveis de isolamento (OLE DB)
+  href: isolation-levels-ole-db.md
+- name: Dando suporte a transações distribuídas
+  href: supporting-distributed-transactions.md
+- name: Dando suporte a transações locais
+  href: supporting-local-transactions.md

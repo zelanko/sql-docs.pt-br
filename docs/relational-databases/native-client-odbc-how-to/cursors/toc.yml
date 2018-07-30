@@ -1,0 +1,8 @@
+- name: Tópicos de instruções sobre o uso de cursores (ODBC)
+  href: using-cursors-how-to-topics-odbc.md
+- name: Buscar e atualizar conjuntos de linhas (ODBC)
+  href: fetch-and-update-rowsets-odbc.md
+- name: Usar cursores (ODBC)
+  href: use-cursors-odbc.md
+- name: Usar associação de conjunto de linhas (ODBC)
+  href: use-rowset-binding-odbc.md

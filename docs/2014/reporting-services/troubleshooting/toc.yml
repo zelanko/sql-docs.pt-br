@@ -1,0 +1,19 @@
+- name: Referência de Erros e Eventos
+  href: errors-and-events-reference-reporting-services.md
+- name: Causa e resolução de erros do Reporting Services
+  href: cause-and-resolution-of-reporting-services-errors.md
+  items:
+    - name: rsAccessedDenied - Erro do Reporting Services
+      href: rsaccesseddenied-reporting-services-error.md
+    - name: rsInternalError - Erro do Reporting Services
+      href: rsinternalerror-reporting-services-error.md
+    - name: rsModelGenerationError - Erro do Reporting Services
+      href: rsmodelgenerationerror-reporting-services-error.md
+    - name: rsProcessingError - Erro do Reporting Services
+      href: rsprocessingerror-reporting-services-error.md
+    - name: rsServerConfigurationError - Erro do Reporting Services
+      href: rsserverconfigurationerror-reporting-services-error.md
+    - name: rrRenderingError - Erro do Reporting Services
+      href: rrrenderingerror-reporting-services-error.md
+    - name: Serviço Servidor de Relatório do Windows (MSSQLServer) 107
+      href: report-server-windows-service-mssqlserver-107.md

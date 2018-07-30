@@ -1,0 +1,12 @@
+- name: Considerações de segurança do SQLXML 4.0
+  href: sqlxml-4-0-security-considerations.md
+- name: Considerações sobre a segurança de esquemas anotados (SQLXML 4.0)
+  href: annotated-schema-security-considerations-sqlxml-4-0.md
+- name: Considerações sobre segurança de carregamento em massa (SQLXML 4.0)
+  href: bulk-load-security-considerations-sqlxml-4-0.md
+- name: Principais considerações de segurança do SQLXML
+  href: core-sqlxml-security-considerations.md
+- name: Considerações de segurança de FOR XML (SQLXML 4.0)
+  href: for-xml-security-considerations-sqlxml-4-0.md
+- name: Considerações sobre segurança para diagramas de atualização (SQLXML 4.0)
+  href: updategram-security-considerations-sqlxml-4-0.md

@@ -1,0 +1,36 @@
+- name: Gatilhos DDL
+  href: ddl-triggers.md
+  items:
+    - name: Implementar gatilhos DDL
+      href: implement-ddl-triggers.md
+    - name: Obter informações sobre gatilhos DDL
+      href: get-information-about-ddl-triggers.md
+    - name: Usar a função EVENTDATA
+      href: use-the-eventdata-function.md
+    - name: Eventos DDL
+      href: ddl-events.md
+    - name: grupos de eventos DDL
+      href: ddl-event-groups.md
+- name: Gatilhos DML
+  href: dml-triggers.md
+  items:
+    - name: Criar gatilhos DML
+      href: create-dml-triggers.md
+    - name: Criar gatilhos CLR
+      href: create-clr-triggers.md
+    - name: Crie gatilhos DML para tratar várias linhas de dados
+      href: create-dml-triggers-to-handle-multiple-rows-of-data.md
+    - name: Criar gatilhos aninhados
+      href: create-nested-triggers.md
+    - name: Especificar o primeiro e o último gatilhos
+      href: specify-first-and-last-triggers.md
+    - name: Usar as tabelas inseridas e excluídas
+      href: use-the-inserted-and-deleted-tables.md
+    - name: Modificar ou renomear gatilhos DML
+      href: modify-or-rename-dml-triggers.md
+    - name: Obter informações sobre gatilhos DML
+      href: get-information-about-dml-triggers.md
+    - name: Excluir ou desabilitar gatilhos DML
+      href: delete-or-disable-dml-triggers.md
+    - name: Gerenciar a segurança dos gatilhos
+      href: manage-trigger-security.md

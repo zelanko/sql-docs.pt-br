@@ -1,0 +1,35 @@
+- name: Registrar servidores
+  href: register-servers.md
+  items:
+    - name: Registrar-se a um servidor conectado (SQL Server Management Studio)
+      href: register-a-connected-server-sql-server-management-studio.md
+    - name: Criar um novo servidor registrado (SQL Server Management Studio)
+      href: create-a-new-registered-server-sql-server-management-studio.md
+    - name: Exibir Servidores Registrados no SQL Server Management Studio
+      href: view-registered-servers-in-sql-server-management-studio.md
+    - name: Remover um Servidor Registrado (SQL Server Management Studio)
+      href: remove-a-registered-server-sql-server-management-studio.md
+    - name: Alterar um registro do servidor (SQL Server Management Studio)
+      href: change-a-server-s-registration-sql-server-management-studio.md
+    - name: Conectar-se a um servidor registrado (SQL Server Management Studio)
+      href: connect-to-a-registered-server-sql-server-management-studio.md
+    - name: Desconectar-se de um Servidor Registrado (SQL Server Management Studio)
+      href: disconnect-from-a-registered-server-sql-server-management-studio.md
+    - name: Mover um servidor registrado ou um grupo de Servidores Registrados (SQL Server Management Studio)
+      href: move-a-registered-server-or-registered-server-group.md
+    - name: Alterar o nome de um Servidor Registrado ou de um grupo de Servidores Registrados (SQL Server Management Studio)
+      href: change-the-name-of-registered-server-or-registered-server-group.md
+    - name: Criar ou editar um grupo de servidores (SQL Server Management Studio)
+      href: create-or-edit-a-server-group-sql-server-management-studio.md
+    - name: Remover um grupo de servidores (SQL Server Management Studio)
+      href: remove-a-server-group-sql-server-management-studio.md
+    - name: Exportar informações de servidor registrado (SQL Server Management Studio)
+      href: export-registered-server-information-sql-server-management-studio.md
+    - name: Importar informações de servidor registrado (SQL Server Management Studio)
+      href: import-registered-server-information-sql-server-management-studio.md
+    - name: Criar um servidor de gerenciamento central e um grupo de servidores (SQL Server Management Studio)
+      href: create-a-central-management-server-and-server-group.md
+    - name: Execute Statements Against Multiple Servers Simultaneously (SQL Server Management Studio)
+      href: execute-statements-against-multiple-servers-simultaneously.md
+    - name: Ajuda F1 dos Servidores Registrados
+      href: registered-servers-f1-help.md

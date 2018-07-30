@@ -1,0 +1,48 @@
+- name: Propriedade AcceptPause (classe SqlService)
+  href: acceptpause-property-sqlservice-class.md
+- name: Propriedade AcceptStop (classe SqlService)
+  href: acceptstop-property-sqlservice-class.md
+- name: Propriedade AdvancedProperties (classe SqlService)
+  href: advancedproperties-property-sqlservice-class.md
+- name: Propriedade BinaryPath (classe SqlService)
+  href: binarypath-property-sqlservice-class.md
+- name: Propriedade Clustered (classe SqlService)
+  href: clustered-property-sqlservice-class.md
+- name: Propriedade Dependencies (classe SqlService)
+  href: dependencies-property-sqlservice-class.md
+- name: Propriedade Description (classe SqlService)
+  href: description-property-sqlservice-class.md
+- name: Propriedade DisplayName (classe SqlService)
+  href: displayname-property-sqlservice-class.md
+- name: Propriedade ErrorControl (classe SqlService)
+  href: errorcontrol-property-sqlservice-class.md
+- name: Propriedade ExitCode (classe SqlService)
+  href: exitcode-property-sqlservice-class.md
+- name: Propriedade Hostname (classe SqlService)
+  href: hostname-property-sqlservice-class.md
+- name: Método PauseService (classe SqlService)
+  href: pauseservice-method-sqlservice-class.md
+- name: Classe ProcessId (classe SqlService)
+  href: processid-class-sqlservice-class.md
+- name: Método ResumeService (classe SqlService)
+  href: resumeservice-method-sqlservice-class.md
+- name: Propriedade ServiceName (classe SqlService)
+  href: servicename-property-sqlservice-class.md
+- name: Método SetServiceAccount (classe SqlService)
+  href: setserviceaccount-method-sqlservice-class.md
+- name: Método SetServiceAccountPassword (classe SqlService)
+  href: setserviceaccountpassword-method-sqlservice-class.md
+- name: Método SetStartMode (classe SqlService)
+  href: setstartmode-method-sqlservice-class.md
+- name: Classe SqlService
+  href: sqlservice-class.md
+- name: Propriedade SqlServiceType (classe SqlService)
+  href: sqlservicetype-property-sqlservice-class.md
+- name: Propriedade StartMode (classe SqlService)
+  href: startmode-property-sqlservice-class.md
+- name: Método StartService (classe SqlService)
+  href: startservice-method-sqlservice-class.md
+- name: Propriedade State (classe SqlService)
+  href: state-property-sqlservice-class.md
+- name: Método StoptService (classe SqlService)
+  href: stopservice-method-sqlservice-class.md

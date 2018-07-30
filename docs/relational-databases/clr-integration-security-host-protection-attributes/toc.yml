@@ -1,0 +1,12 @@
+- name: Atributos de proteção de host e programação da Integração CLR
+  href: host-protection-attributes-and-clr-integration-programming.md
+- name: Tipos desaprovados e membros em Microsoft.VisualBasic.dll
+  href: disallowed-types-and-members-in-microsoft-visualbasic-dll.md
+- name: Membros e tipos não permitidos em mscorlib.dll
+  href: disallowed-types-and-members-in-mscorlib-dll.md
+- name: Tipos e membros desaprovados no System.Core.dll
+  href: disallowed-types-and-members-in-system-core-dll.md
+- name: Tipos e membros não permitidos em System.Data.dll
+  href: disallowed-types-and-members-in-system-data-dll.md
+- name: Disallowed Types and Members In System.dll
+  href: disallowed-types-and-members-in-system-dll.md

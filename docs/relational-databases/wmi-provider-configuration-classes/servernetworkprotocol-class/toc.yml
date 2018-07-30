@@ -1,0 +1,22 @@
+- name: Propriedade Enabled (classe ServerNetworkProtocol)
+  href: enabled-property-servernetworkprotocol-class.md
+- name: Propriedade InstanceName (classe ServerNetworkProtocol)
+  href: instancename-property-servernetworkprotocol-class.md
+- name: Propriedade IpAddresses (classe ServerNetworkProtocol)
+  href: ipaddresses-property-servernetworkprotocol-class.md
+- name: Propriedade MultiIpConfigurationSupport (classe ServerNetworkProtocol)
+  href: multiipconfigurationsupport-property-servernetworkprotocol-class.md
+- name: Propriedade Properties (classe ServerNetworkProtocol)
+  href: properties-property-servernetworkprotocol-class.md
+- name: Propriedade ProtocolDisplayName (classe ServerNetworkProtocol)
+  href: protocoldisplayname-property-servernetworkprotocol-class.md
+- name: Propriedade ProtocolDLL (classe ServerNetworkProtocol)
+  href: protocoldll-property-servernetworkprotocol-class.md
+- name: Propriedade ProtocolName (classe ServerNetworkProtocol)
+  href: protocolname-property-servernetworkprotocol-class.md
+- name: Classe ServerNetworkProtocol
+  href: servernetworkprotocol-class.md
+- name: Método SetDisable (classe ServerNetworkProtocol)
+  href: setdisable-method-servernetworkprotocol-class.md
+- name: Método SetEnable (classe ServerNetworkProtocol)
+  href: setenable-method-servernetworkprotocol-class.md

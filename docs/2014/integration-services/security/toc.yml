@@ -1,0 +1,35 @@
+- name: Segurança
+  href: security-overview-integration-services.md
+- name: Redução de ameaças e vulnerabilidades
+  href: ../threat-and-vulnerability-mitigation-integration-services.md
+- name: Funções do Integration Services (Serviço do SSIS)
+  href: integration-services-roles-ssis-service.md
+  items:
+    - name: Referência da interface do usuário da caixa de diálogo Funções do Pacote
+      href: ../package-roles-dialog-box-ui-reference.md
+- name: Acesso ao serviço Integration Services
+  href: ../access-to-the-integration-services-service.md
+- name: Acesso aos arquivos usados por pacotes
+  href: ../access-to-files-used-by-packages.md
+- name: Controle de acesso de dados confidenciais em pacotes
+  href: access-control-for-sensitive-data-in-packages.md
+  items:
+    - name: Definir ou alterar o nível de proteção de pacotes
+      href: ../set-or-change-the-protection-level-of-packages.md
+    - name: Caixa de diálogo Nível de Proteção do Pacote e do Projeto
+      href: ../package-and-project-protection-level-dialog-box.md
+    - name: Senha do Pacote e do Projeto
+      href: ../package-and-project-password.md
+- name: Identificar a origem dos pacotes com assinaturas digitais
+  href: identify-the-source-of-packages-with-digital-signatures.md
+  items:
+    - name: Implementar uma política de assinatura por meio da configuração de um valor do Registro
+      href: ../implement-a-signing-policy-by-setting-a-registry-value.md
+    - name: Assinar um pacote por meio de um certificado digital
+      href: ../sign-a-package-by-using-a-digital-certificate.md
+    - name: Referência da interface do usuário da caixa de diálogo Assinatura Digital
+      href: ../digital-signing-dialog-box-ui-reference.md
+- name: Criar uma função definida pelo usuário
+  href: ../create-a-user-defined-role.md
+- name: Atribuir uma função de leitor e de gravador a um pacote
+  href: ../assign-a-reader-and-writer-role-to-a-package.md

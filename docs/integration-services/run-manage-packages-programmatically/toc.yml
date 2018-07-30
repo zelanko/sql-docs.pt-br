@@ -1,0 +1,18 @@
+- name: Executando e gerenciando pacotes programaticamente
+  href: running-and-managing-packages-programmatically.md
+- name: Compreendendo as diferenças entre execução local e remota
+  href: understanding-the-differences-between-local-and-remote-execution.md
+- name: Carregando e executando um pacote local programaticamente
+  href: loading-and-running-a-local-package-programmatically.md
+- name: Carregando e executando um pacote remoto programaticamente
+  href: loading-and-running-a-remote-package-programmatically.md
+- name: Carregando a saída de um pacote local
+  href: loading-the-output-of-a-local-package.md
+- name: Enumerando pacotes disponíveis programaticamente
+  href: enumerating-available-packages-programmatically.md
+- name: Gerenciando pacotes e pastas programaticamente
+  href: managing-packages-and-folders-programmatically.md
+- name: Gerenciando pacotes em execução programaticamente
+  href: managing-running-packages-programmatically.md
+- name: Gerenciando funções de pacote programaticamente (Serviço SSIS)
+  href: managing-package-roles-programmatically-ssis-service.md

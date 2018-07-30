@@ -1,0 +1,14 @@
+- name: Desenvolvendo uma tarefa personalizada
+  href: developing-a-custom-task.md
+- name: Criando uma tarefa personalizada
+  href: creating-a-custom-task.md
+- name: Codificando uma tarefa personalizada
+  href: coding-a-custom-task.md
+- name: Conectando a fontes de dados em uma tarefa personalizada
+  href: connecting-to-data-sources-in-a-custom-task.md
+- name: Gerando e definindo eventos em uma tarefa personalizada
+  href: raising-and-defining-events-in-a-custom-task.md
+- name: Adicionando suporte para depurando em uma tarefa personalizada
+  href: adding-support-for-debugging-in-a-custom-task.md
+- name: Desenvolvendo uma interface do usuário para uma tarefa personalizada
+  href: developing-a-user-interface-for-a-custom-task.md

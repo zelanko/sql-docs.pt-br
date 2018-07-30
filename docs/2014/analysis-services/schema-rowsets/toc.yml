@@ -1,0 +1,142 @@
+- name: Conjuntos de linhas de esquema do Analysis Services
+  href: analysis-services-schema-rowsets.md
+- name: XML for Analysis Schema Rowsets
+  href: xml/xml-for-analysis-schema-rowsets.md
+  items:
+    - name: Conjunto de linhas DISCOVER_CALC_DEPENDENCY
+      href: xml/discover-calc-dependency-rowset.md
+    - name: Conjunto de linhas DISCOVER_CONNECTIONS
+      href: xml/discover-connections-rowset.md
+    - name: Conjunto de linhas DISCOVER_COMMAND_OBJECTS
+      href: xml/discover-command-objects-rowset.md
+    - name: Conjunto de linhas DISCOVER_COMMANDS
+      href: xml/discover-commands-rowset.md
+    - name: Conjunto de linhas DISCOVER_CSDL_METADATA
+      href: xml/discover-csdl-metadata-rowset.md
+    - name: Conjunto de linhas DISCOVER_DATASOURCES
+      href: xml/discover-datasources-rowset.md
+    - name: Conjunto de linhas DISCOVER_DB_CONNECTIONS
+      href: xml/discover-db-connections-rowset.md
+    - name: Conjunto de linhas DISCOVER_DIMENSION_STAT
+      href: xml/discover-dimension-stat-rowset.md
+    - name: Conjunto de linhas DISCOVER_ENUMERATORS
+      href: xml/discover-enumerators-rowset.md
+    - name: Conjunto de linhas DISCOVER_JOBS
+      href: xml/discover-jobs-rowset.md
+    - name: Conjunto de linhas DISCOVER_KEYWORDS (XMLA)
+      href: xml/discover-keywords-rowset-xmla.md
+    - name: Conjunto de linhas DISCOVER_LITERALS
+      href: xml/discover-literals-rowset.md
+    - name: Conjunto de linhas DISCOVER_LOCATIONS
+      href: xml/discover-locations-rowset.md
+    - name: Conjunto de linhas DISCOVER_LOCKS
+      href: xml/discover-locks-rowset.md
+    - name: Conjunto de linhas DISCOVER_MEMORYGRANT
+      href: xml/discover-memorygrant-rowset.md
+    - name: Conjunto de linhas DISCOVER_MEMORYUSAGE
+      href: xml/discover-memoryusage-rowset.md
+    - name: Conjunto de linhas DISCOVER_OBJECT_ACTIVITY
+      href: xml/discover-object-activity-rowset.md
+    - name: Conjunto de linhas DISCOVER_OBJECT_MEMORY_USAGE
+      href: xml/discover-object-memory-usage-rowset.md
+    - name: Conjunto de linhas DISCOVER_PARTITION_DIMENSION_STAT
+      href: xml/discover-partition-dimension-stat-rowset.md
+    - name: Conjunto de linhas DISCOVER_PARTITION_STAT
+      href: xml/discover-partition-stat-rowset.md
+    - name: Conjunto de linhas DISCOVER_PERFORMANCE_COUNTERS
+      href: xml/discover-performance-counters-rowset.md
+    - name: Conjunto de linhas DISCOVER_PROPERTIES
+      href: xml/discover-properties-rowset.md
+    - name: Conjunto de linhas DISCOVER_SCHEMA_ROWSETS
+      href: xml/discover-schema-rowsets-rowset.md
+    - name: Conjunto de linhas DISCOVER_SESSIONS
+      href: xml/discover-sessions-rowset.md
+    - name: Conjunto de linhas DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS
+      href: xml/discover-storage-table-column-segments-rowset.md
+    - name: Conjunto de linhas DISCOVER_STORAGE_TABLE_COLUMNS
+      href: xml/discover-storage-table-columns-rowset.md
+    - name: Conjunto de linhas DISCOVER_STORAGE_TABLES
+      href: xml/discover-storage-tables-rowset.md
+    - name: Conjunto de linhas DISCOVER_TRACE_COLUMNS
+      href: xml/discover-trace-columns-rowset.md
+    - name: Conjunto de linhas DISCOVER_TRACE_DEFINITION_PROVIDERINFO
+      href: xml/discover-trace-definition-providerinfo-rowset.md
+    - name: Conjunto de linhas DISCOVER_TRACE_EVENT_CATEGORIES
+      href: xml/discover-trace-event-categories-rowset.md
+    - name: Conjunto de linhas DISCOVER_TRACES
+      href: xml/discover-traces-rowset.md
+    - name: Conjunto de linhas DISCOVER_TRANSACTIONS
+      href: xml/discover-transactions-rowset.md
+    - name: Conjunto de linhas DISCOVER_XEVENT_TRACE_DEFINITION
+      href: ../dev-guide/discover-xevent-trace-definition-rowset.md
+    - name: Conjunto de linhas DISCOVER_XML_METADATA
+      href: xml/discover-xml-metadata-rowset.md
+- name: Conjuntos de linhas do esquema OLE DB
+  href: ole-db/ole-db-schema-rowsets.md
+  items:
+    - name: Conjunto de linhas DBSCHEMA_CATALOGS
+      href: ole-db/dbschema-catalogs-rowset.md
+    - name: Conjunto de linhas de DBSCHEMA_COLUMNS
+      href: ole-db/dbschema-columns-rowset.md
+    - name: Conjunto de linhas DBSCHEMA_TABLES
+      href: ole-db/dbschema-tables-rowset.md
+    - name: Conjunto de linhas DBSCHEMA_PROVIDER_TYPES
+      href: ole-db/dbschema-provider-types-rowset.md
+- name: Conjuntos de linhas de esquema OLE DB para OLAP
+  href: ole-db-olap/ole-db-for-olap-schema-rowsets.md
+  items:
+    - name: Conjunto de linhas DISCOVER_INSTANCES
+      href: ole-db-olap/discover-instances-rowset.md
+    - name: Conjunto de linhas DISCOVER_KEYWORDS (OLE DB para OLAP)
+      href: ole-db-olap/discover-keywords-rowset-ole-db-for-olap.md
+    - name: Conjunto de linhas MDSCHEMA_ACTIONS
+      href: ole-db-olap/mdschema-actions-rowset.md
+    - name: Conjunto de linhas MDSCHEMA_CUBES
+      href: ole-db-olap/mdschema-cubes-rowset.md
+    - name: Conjunto de linhas MDSCHEMA_DIMENSIONS
+      href: ole-db-olap/mdschema-dimensions-rowset.md
+    - name: Conjunto de linhas MDSCHEMA_FUNCTIONS
+      href: ole-db-olap/mdschema-functions-rowset.md
+    - name: Conjunto de linhas MDSCHEMA_HIERARCHIES
+      href: ole-db-olap/mdschema-hierarchies-rowset.md
+    - name: Conjunto de linhas MDSCHEMA_INPUT_DATASOURCES
+      href: ole-db-olap/mdschema-input-datasources-rowset.md
+    - name: Conjunto de linhas MDSCHEMA_KPIS
+      href: ole-db-olap/mdschema-kpis-rowset.md
+    - name: Conjunto de linhas MDSCHEMA_LEVELS
+      href: ole-db-olap/mdschema-levels-rowset.md
+    - name: Conjunto de linhas MDSCHEMA_MEASUREGROUP_DIMENSIONS
+      href: ole-db-olap/mdschema-measuregroup-dimensions-rowset.md
+    - name: Conjunto de linhas MDSCHEMA_MEASURESGROUPS
+      href: ole-db-olap/mdschema-measuregroups-rowset.md
+    - name: Conjunto de linhas MDSCHEMA_MEASURES
+      href: ole-db-olap/mdschema-measures-rowset.md
+    - name: Conjunto de linhas MDSCHEMA_MEMBERS
+      href: ole-db-olap/mdschema-members-rowset.md
+    - name: Conjunto de linhas MDSCHEMA_PROPERTIES
+      href: ole-db-olap/mdschema-properties-rowset.md
+    - name: Conjunto de linhas MDSCHEMA_SETS
+      href: ole-db-olap/mdschema-sets-rowset.md
+- name: Conjuntos de linhas de esquema de mineração de dados
+  href: data-mining/data-mining-schema-rowsets.md
+  items:
+    - name: Conjunto de linhas de DMSCHEMA_MINING_COLUMNS
+      href: data-mining/dmschema-mining-columns-rowset.md
+    - name: Conjunto de linhas DMSCHEMA_MINING_FUNCTIONS
+      href: data-mining/dmschema-mining-functions-rowset.md
+    - name: Conjunto de linhas DMSCHEMA_MINING_MODEL_CONTENT
+      href: data-mining/dmschema-mining-model-content-rowset.md
+    - name: Conjunto de linhas DMSCHEMA_MINING_MODEL_CONTENT_PMML
+      href: data-mining/dmschema-mining-model-content-pmml-rowset.md
+    - name: Conjunto de linhas DMSCHEMA_MINING_MODEL_XML
+      href: data-mining/dmschema-mining-model-xml-rowset.md
+    - name: Conjunto de linhas DMSCHEMA_MINING_MODELS
+      href: data-mining/dmschema-mining-models-rowset.md
+    - name: Conjunto de linhas DMSCHEMA_MINING_SERVICE_PARAMETERS
+      href: data-mining/dmschema-mining-service-parameters-rowset.md
+    - name: Conjunto de linhas DMSCHEMA_MINING_SERVICES
+      href: data-mining/dmschema-mining-services-rowset.md
+    - name: Conjunto de linhas DMSCHEMA_MINING_STRUCTURE_COLUMNS
+      href: data-mining/dmschema-mining-structure-columns-rowset.md
+    - name: Conjunto de linhas DMSCHEMA_MINING_STRUCTURES
+      href: data-mining/dmschema-mining-structures-rowset.md

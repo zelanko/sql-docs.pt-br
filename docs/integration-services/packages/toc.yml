@@ -1,0 +1,17 @@
+- name: Implantar projetos e pacotes do Integration Services (SSIS)
+  href: deploy-integration-services-ssis-projects-and-packages.md
+- name: Implantação de pacote herdado (SSIS)
+  href: legacy-package-deployment-ssis.md
+- name: Executar pacotes do SSIS (Integration Services)
+  href: run-integration-services-ssis-packages.md
+  items:
+    - name: Utilitário de Execução de Pacotes (dtexecui)
+      href: execute-package-utility-dtexecui-ui-reference.md
+    - name: Utilitário dtexec
+      href: dtexec-utility.md
+    - name: Reiniciar pacotes por meio de pontos de verificação
+      href: restart-packages-by-using-checkpoints.md
+    - name: Trabalhos do SQL Server Agent para pacotes
+      href: sql-server-agent-jobs-for-packages.md
+    - name: Pacotes de balanceamento de carga em servidores remotos usando o SQL Server Agent
+      href: load-balancing-packages-on-remote-servers-by-using-sql-server-agent.md

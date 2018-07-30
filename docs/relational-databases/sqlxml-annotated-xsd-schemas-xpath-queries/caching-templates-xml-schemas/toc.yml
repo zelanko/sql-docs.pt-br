@@ -1,0 +1,8 @@
+- name: 'Armazenando modelos, XSL e esquemas em cache (SQLXML 4.0)'
+  href: caching-templates-xsl-and-schemas-sqlxml-4-0.md
+- name: Cache de esquemas (SQLXML 4.0)
+  href: schema-caching-sqlxml-4-0.md
+- name: Cache de modelos (SQLXML 4.0)
+  href: template-caching-sqlxml-4-0.md
+- name: Cache de XSL (SQLXML 4.0)
+  href: xsl-caching-sqlxml-4-0.md

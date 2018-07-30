@@ -1,0 +1,20 @@
+- name: Extending the Data Flow with the Script Component
+  href: extending-the-data-flow-with-the-script-component.md
+- name: Configurando o componente Script no Editor de Componentes de Script
+  href: configuring-the-script-component-in-the-script-component-editor.md
+- name: Codificando e depurando o componente Script
+  href: coding-and-debugging-the-script-component.md
+- name: Compreendendo o Component Object Model Script
+  href: understanding-the-script-component-object-model.md
+- name: Usando variáveis no componente Script
+  href: using-variables-in-the-script-component.md
+- name: Conectando-se a fontes de dados no componente de Script
+  href: connecting-to-data-sources-in-the-script-component.md
+- name: Gerando eventos no componente Script
+  href: raising-events-in-the-script-component.md
+- name: Registrando o componente Script
+  href: logging-in-the-script-component.md
+- name: Desenvolvendo tipos específicos de componentes Script
+  href: ../../extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md
+- name: Exemplos de componentes Script adicionais
+  href: ../../extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md
