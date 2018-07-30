@@ -39,12 +39,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b8b221c752e670d9894a1108e2dea8e01f564221
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 8965bcc4935e21d0f9c397630e9b5578646ce7d8
+ms.sourcegitcommit: 90a9a051fe625d7374e76cf6be5b031004336f5a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37788787"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39228332"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST e CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -488,7 +488,7 @@ SELECT CAST('<Name><FName>Carol</FName><LName>Elliot</LName></Name>'  AS XML)
 Consulte [Criar instâncias de dados XML](../../relational-databases/xml/create-instances-of-xml-data.md) para obter mais exemplos.
   
 ### <a name="g-using-cast-and-convert-with-datetime-data"></a>G. Usando CAST e CONVERT com dados datetime  
-Começando com valores GETDATE(), este exemplo exibe a data e a hora atuais, usa `CAST` para alterar a data e a hora atuais em um tipo de dados de caractere e, em seguida, usa `CONVERT` para exibir a data e a hora no formato `ISO 8901`.
+Começando com valores GETDATE(), este exemplo exibe a data e a hora atuais, usa `CAST` para alterar a data e a hora atuais em um tipo de dados de caractere e, em seguida, usa `CONVERT` para exibir a data e a hora no formato `ISO 8601`.
   
 ```sql
 SELECT   
