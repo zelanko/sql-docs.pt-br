@@ -1,0 +1,33 @@
+- name: Visão geral
+  href: data-collection.md
+- name: Gerenciar coleta de dados
+  href: manage-data-collection.md
+  items:
+    - name: Configurar o Data Warehouse de Gerenciamento (SQL Server Management Studio)
+      href: configure-the-management-data-warehouse-sql-server-management-studio.md
+    - name: Configurar propriedades de um coletor de dados
+      href: configure-properties-of-a-data-collector.md
+    - name: Habilitar ou desabilitar a coleta de dados
+      href: enable-or-disable-data-collection.md
+    - name: Iniciar ou interromper um conjunto de coleta
+      href: start-or-stop-a-collection-set.md
+    - name: Usar o SQL Server Profiler para criar um conjunto de coleta de Rastreamento do SQL (SQL Server Management Studio)
+      href: use-sql-server-profiler-to-create-a-sql-trace-collection-set.md
+    - name: Exibir logs de conjuntos de coleta (SQL Server Management Studio)
+      href: view-collection-set-logs-sql-server-management-studio.md
+    - name: Exibir ou alterar agendas de conjuntos de coleta (SQL Server Management Studio)
+      href: view-or-change-collection-set-schedules-sql-server-management-studio.md
+    - name: Exibir um relatório de conjuntos de coleta (SQL Server Management Studio)
+      href: view-a-collection-set-report-sql-server-management-studio.md
+    - name: Configurar parâmetros de coleta de dados (Transact-SQL)
+      href: configure-data-collection-parameters-transact-sql.md
+    - name: Criar um conjunto de coleta personalizado que usa o tipo de coletor de Consultas T-SQL genérico (Transact-SQL)
+      href: create-custom-collection-set-generic-t-sql-query-collector-type.md
+    - name: Adicionar um item de coleta a um conjunto de coletas (Transact-SQL)
+      href: add-a-collection-item-to-a-collection-set-transact-sql.md
+- name: Relatórios do conjuntos de coleta de dados do sistema
+  href: system-data-collection-set-reports.md
+- name: data warehouse de gerenciamento
+  href: management-data-warehouse.md
+- name: Segurança do coletor de dados
+  href: data-collector-security.md

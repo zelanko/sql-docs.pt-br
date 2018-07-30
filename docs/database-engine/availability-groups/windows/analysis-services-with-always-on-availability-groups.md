@@ -158,7 +158,7 @@ ms.locfileid: "34769102"
   
      Conclua a fonte de dados e feche o Assistente de Fonte de Dados.  
   
-6.  Adicione **MultiSubnetFailover=Yes** à cadeia de conexão para fornecer detecção mais rápida e conexão ao servidor ativo. Para obter mais informações sobre essa propriedade, consulte [SQL Server Native Client Support for High Availability, Disaster Recovery](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
+6.  Adicione **MultiSubnetFailover=Yes** à cadeia de conexão para fornecer detecção mais rápida e conexão ao servidor ativo. Para obter mais informações sobre essa propriedade, consulte [Suporte do SQL Server Native Client à alta disponibilidade e recuperação de desastre](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
   
      Esta propriedade não está visível na grade de propriedades. Para adicionar a propriedade, clique com o botão direito do mouse na fonte de dados e escolha **Exibir Código**. Adicione `MultiSubnetFailover=Yes` à cadeia de conexão.  
   
