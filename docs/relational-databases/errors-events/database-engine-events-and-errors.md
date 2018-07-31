@@ -13,12 +13,12 @@ caps.latest.revision: 20
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1338d01846de34a71b77da79e48fd4a0f52ac8b2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ac3d00cf51c5e01d3cb83ac4b3564f458a78b8c6
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37316596"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39088598"
 ---
 # <a name="database-engine-errors"></a>Erros do Mecanismo de Banco de Dados
 As tabelas contêm os números da mensagem de erro e a descrição, que é o texto da mensagem de erro da exibição sys.messages.message_id. 
@@ -49,7 +49,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   115 |   15  |   não  |   A cláusula FOR UPDATE é inválida para instruções que contêm operadores definidos.   |
 |   116 |   15  |   não  |   Somente uma expressão pode ser especificada na lista de seleção quando a subconsulta não é introduzida com EXISTS.    |
 |   117 |   15  |   não  |   O nome %S_MSG da '%.*ls' contém mais do que o número máximo de prefixos. O máximo é %d.   |
-|   119 |   15  |   não  |   É necessário passar o parâmetro número %d e os parâmetros subsequentes como '@name = value'. Após o formato '@name = value' ter sido usado, todos os parâmetros subsequentes devem ser passados no formato '@name = value'. |
+|   119 |   15  |   não  |   É necessário passar o parâmetro número %d e os parâmetros subsequentes como '\@name = value'. Após o formato '\@name = value' ter sido usado, todos os parâmetros subsequentes devem ser passados no formato '\@name = value'.  |
 |   120 |   15  |   não  |   A lista de seleção da instrução INSERT contém menos itens do que a lista de inserção. O número de valores SELECT deve corresponder ao número de colunas INSERT.    |
 |   121 |   15  |   não  |   A lista de seleção da instrução INSERT contém mais itens do que a lista de inserção. O número de valores SELECT deve corresponder ao número de colunas INSERT. |
 |   122 |   15  |   não  |   O opção de %ls só é permitida com sintaxe de %ls. |
@@ -767,7 +767,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   1451    |   16  |   não  |   As informações de espelhamento de banco de dados não foram encontradas na tabela do sistema.   |
 |   1452    |   16  |   não  |   O nome da instância do servidor parceiro deve ser diferente do das instâncias do servidor que gerenciam o banco de dados. Falha no comando ALTER DATABASE SET PARTNER.    |
 |   1453    |   17  |   Sim |   '%.*ls', o parceiro de espelhamento remoto do banco de dados '%.* ls', encontrou o erro %d, status %d, gravidade %d. O espelhamento de banco de dados foi suspenso. Resolva o erro no servidor remoto e continue o espelhamento, ou remova o espelhamento e restabeleça a instância do servidor espelho.  |
-|   1454    |   17  |   Sim |   O espelhamento de banco de dados será suspenso. Ao agir como parceiro de espelhamento de banco de dados '%.* ls', a instância do servidor '%.*ls' encontrou o erro %d, estado %d, gravidade %d. Os parceiros de espelhamento de banco de dados podem tentar se recuperar automaticamente do erro e continuar a sessão de espelhamento. Para obter mais informações, verifique se existem mensagens de erro adicionais no log de erros.   |
+|   1454    |   17  |   Sim |   O espelhamento de banco de dados será suspenso. Ao agir como parceiro de espelhamento de banco de dados '%.*ls', a instância do servidor '%.* ls' encontrou o erro %d, estado %d, gravidade %d. Os parceiros de espelhamento de banco de dados podem tentar se recuperar automaticamente do erro e continuar a sessão de espelhamento. Para obter mais informações, verifique se existem mensagens de erro adicionais no log de erros.   |
 |   1455    |   16  |   não  |   Não é possível forçar o serviço de espelhamento do banco de dados "%.*ls" porque este não está no estado correto para tornar-se o banco de dados principal. |
 |   1456    |   16  |   Sim |   Não foi possível enviar o comando ALTER DATABASE à instância do servidor remoto '%.*ls'. A configuração do espelhamento de banco de dados não foi alterada. Verifique se o servidor está conectado e tente novamente.   |
 |   [1457](mssqlserver-1457-database-engine-error.md)   |   23  |   Sim |   A sincronização do banco de dados espelho, '%.* ls', foi interrompida, deixando o banco de dados em um estado inconsistente. Falha no comando ALTER DATABASE. Verifique se o banco de dados principal, se disponível, está funcionando novamente e online e reconecte a instância do servidor espelho para permitir que o banco de dados espelho conclua a sincronização.   |
@@ -1053,10 +1053,10 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   2215    |   16  |   não  |   %sO valor do atributo '%ls' excede 4000 caracteres, o máximo permitido em documentos de esquemas XML   |
 |   2216    |   16  |   não  |   %sValor de XPath inválido em "%ls". |
 |   2217    |   16  |   não  |   %s'%ls' ou '%ls' esperado   |
-|   2218    |   16  |   não  |   %sNão há um atributo denominado '@%ls'    |
-|   2219    |   16  |   não  |   %sNão há um atributo denominado '@%ls' no tipo '%ls'. |
-|   2220    |   16  |   não  |   %sNão há um atributo denominado '@%ls:%ls'    |
-|   2221    |   16  |   não  |   %sNão há um atributo denominado '@%ls:%ls' no tipo '%ls'. |
+|   2218    |   16  |   não  |   %sNão há um atributo denominado '\@%ls'   |
+|   2219    |   16  |   não  |   %sNão há um atributo denominado '\@%ls' no tipo '%ls'.    |
+|   2220    |   16  |   não  |   %sNão há um atributo denominado '\@%ls:%ls'   |
+|   2221    |   16  |   não  |   %sNão há um atributo denominado '\@%ls:%ls' no tipo '%ls'.    |
 |   2222    |   16  |   não  |   %sCaractere de origem inválido 0x%02x encontrado em um identificador próximo a '%ls'.    |
 |   2223    |   16  |   não  |   %sErro de sintaxe próximo a '%ls', esperado um identificador.  |
 |   2225    |   16  |   não  |   %sUm literal de cadeia de caracteres era esperado |
@@ -1177,7 +1177,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   2369    |   16  |   não  |   %sNão é possível ter mais de um grupo/sequência/escolha/tudo dentro de uma restrição ou extensão. Local: '%ls'.   |
 |   2370    |   16  |   não  |   %sNenhum token é esperado no fim da expressão XQuery. Encontrado '%ls'. |
 |   2371    |   16  |   não  |   %s'%ls' só pode ser usado em um predicado ou seletor XPath   |
-|   2372    |   16  |   não  |   %sAtributo de metadados '@%ls:%ls' não pode ser usado com '%ls'  |
+|   2372    |   16  |   não  |   %sO atributo de metadados '\@%ls:%ls' não pode ser usado com '%ls' |
 |   2373    |   16  |   não  |   %s%ls não é suportado com XML construído |
 |   2374    |   16  |   não  |   %sUm nó ou conjunto de nós é obrigatório para %ls    |
 |   2375    |   16  |   não  |   %sA função de agregação '%ls' espera um argumento de sequência  |
@@ -2814,7 +2814,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   6334    |   16  |   não  |   Não foi possível criar o índice XML ou espacial no objeto '%.*ls' porque esse objeto não é uma tabela. Crie o índice na coluna da tabela base.  |
 |   6335    |   16  |   não  |   A instância de tipo de dados XML tem excesso de níveis de nós aninhados. O máximo permitido são %d níveis.  |
 |   6336    |   16  |   não  |   O tamanho máximo do índice primário da tabela '%.*ls' é de %d bytes. CREATE XML INDEX requer que esse tamanho se limite a %d bytes  |
-|   6337    |   16  |   não  |   '%.*ls' não é um nome de índice XML válido porque começa com o caractere '%c'. O nome do índice XML não deve começar com '#' ou '@'    |
+|   6337    |   16  |   não  |   '%.*ls' não é um nome de índice XML válido porque começa com o caractere '%c'. O nome do índice XML não deve começar com '#' ou '\@'   |
 |   6338    |   10  |   não  |   XML DTD foi eliminado de um ou mais fragmentos XML. Os subconjuntos externos, se existentes, foram ignorados.  |
 |   6339    |   16  |   não  |   A coleção especificada '%.*ls' não pode ser modificada porque ela é uma coleção de esquemas XML interna do SQL Server.    |
 |   6340    |   16  |   não  |   A coleção de esquemas Xml '%.*ls' referenciada pela variável de tabela '%.* ls' foi descartada ou alterada durante a execução do lote. Reexecute o lote.  |
@@ -3003,8 +3003,8 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   6826    |   16  |   não  |   Toda coluna IDREFS ou NMTOKENS em uma consulta FOR XML EXPLICIT deve aparecer em uma cláusula SELECT separada e as instâncias devem ser classificadas logo após o elemento ao qual pertencem. |
 |   6827    |   16  |   não  |   As consultas FOR XML EXPLICIT só permitem uma coluna XMLTEXT por marca. A coluna '%.*ls' declara outra coluna XMLTEXT que não é permitida.   |
 |   6828    |   16  |   não  |   A coluna '%.*ls' de XMLTEXT deve ser um tipo de dados de cadeia de caracteres ou XML.    |
-|   6829    |   16  |   não  |   Os modos FOR XML EXPLICIT e RAW atualmente não dão suporte a endereçamento de dados binários como URLs na coluna '%.*ls'. Remova a coluna ou use o modo BINARY BASE64, ou crie a URL diretamente usando a sintaxe 'dbobject/TABLE[@PK1="V1"]/@COLUMN'.    |
-|   6830    |   16  |   não  |   FOR XML AUTO não pôde encontrar a tabela que possui a coluna seguinte '%.*ls' para criar um endereço URL. Remova a coluna ou use o modo BINARY BASE64, ou crie a URL diretamente usando a sintaxe 'dbobject/TABLE[@PK1="V1"]/@COLUMN'.    |
+|   6829    |   16  |   não  |   Os modos FOR XML EXPLICIT e RAW atualmente não dão suporte a endereçamento de dados binários como URLs na coluna '%.*ls'. Remova a coluna ou use o modo BINARY BASE64, ou crie a URL diretamente usando a sintaxe 'dbobject/TABLE[\@PK1="V1"]/\@COLUMN'.  |
+|   6830    |   16  |   não  |   FOR XML AUTO não pôde encontrar a tabela que possui a coluna seguinte '%.*ls' para criar um endereço URL. Remova a coluna ou use o modo BINARY BASE64, ou crie a URL diretamente usando a sintaxe 'dbobject/TABLE[\@PK1="V1"]/\@COLUMN'.  |
 |   6831    |   16  |   não  |   FOR XML AUTO requer que as chaves primárias criem referências para '%.*ls'. Selecione as chaves primárias ou use BINARY BASE64 para obter dados binários no formato codificado se não existirem chaves primárias.  |
 |   6832    |   16  |   não  |   FOR XML AUTO não pode gerar um endereço URL para dados binários se uma chave primária também for binária. |
 |   6833    |   16  |   não  |   A ID de marca pai %d não está entre as marcas abertas. FOR XML EXPLICIT requer que as marcas pai sejam abertas primeiramente. Verifique a ordem do conjunto de resultados.    |
@@ -3771,7 +3771,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   8317    |   16  |   não  |   Não é possível consultar o valor '%ls' associado à chave de registro 'HKLM\%ls'. Os contadores de desempenho do SQL Server estão desabilitados. |
 |   8318    |   16  |   não  |   Ocorreu uma falha de alocação de memória virtual durante inicialização dos contadores de desempenho. Os contadores de desempenho do SQL Server estão desabilitados. |
 |   8319    |   16  |   não  |   O objeto do núcleo do Windows '%ls' já existe. Ele não pertence à conta de serviço do SQL Server. Os contadores de desempenho do SQL Server estão desabilitados. |
-|   8.320    |   10  |   não  |   @@REMSERVER será removido em uma versão futura do SQL Server. Evite usar esse recurso em novo trabalho de desenvolvimento e planeje modificar os aplicativos que utilizam o recurso atualmente. Use procedimentos armazenados de servidor vinculado e servidores vinculados em vez disso.    |
+|   8.320    |   10  |   não  |   \@\@REMSERVER será removido em uma versão futura do SQL Server. Evite usar esse recurso em novo trabalho de desenvolvimento e planeje modificar os aplicativos que utilizam o recurso atualmente. Use procedimentos armazenados de servidor vinculado e servidores vinculados em vez disso.  |
 |   8350    |   10  |   não  |   O uso das dicas NOLOCK ou READUNCOMMITTED na cláusula FROM de uma instrução UPDATE ou DELETE na tabela de destino da instrução ('%.*ls') foi preterido. Essas dicas não têm efeito neste local. A Microsoft recomenda a remoção dessas dicas da instrução. O suporte para essas dicas neste local será removido em uma versão futura do SQL Server. |
 |   8351    |   16  |   Sim |   Uma solicitação de controle de rastreamento não pôde ser processada porque parâmetros inválidos foram especificados durante o registro de eventos. Confirme se os parâmetros estão dentro de intervalos válidos.  |
 |   8352    |   16  |   Sim |   Não é possível encontrar o modelo de rastreamento solicitado: ID = %ls. |
@@ -4293,7 +4293,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   9516    |   16  |   não  |   XQuery: o nome ou uma das várias partes de um nome fornecidas a %S_MSG('%.*ls') está vazio. Nomes vazios não podem ser usados para identificar objetos, colunas ou variáveis no SQL.    |
 |   9517    |   16  |   não  |   XQuery: o nome ou uma das várias partes de um nome que começa com '%.*ls' fornecido a %S_MSG() não é um identificador SQL válido, é muito longo. O comprimento máximo é de %d, o comprimento real é de %d.  |
 |   9518    |   16  |   não  |   XQuery: o nome ou uma das várias partes de um nome que começa com '%.*ls' fornecidos a %S_MSG() não é um identificador SQL válido - contém caracteres inválidos. |
-|   9519    |   16  |   não  |   XQuery: o nome fornecido a sql:variable('%.*ls') não é um nome de variável SQL válido. Nomes de variáveis devem começar com o símbolo '@' seguido por, pelo menos, um caractere.  |
+|   9519    |   16  |   não  |   XQuery: o nome fornecido a sql:variable('%.*ls') não é um nome de variável SQL válido. Nomes de variáveis devem começar com o símbolo '\@' seguido por, pelo menos, um caractere. |
 |   9520    |   16  |   não  |   XQuery: '%.*ls' mencionado por sql:variable() não é um nome de função de sistema válido.   |
 |   9521    |   16  |   não  |   Erro ao processar tipo de dados XML. A instância de tipo de dados XML contém um valor xs:date ou xs:dateTime negativo.    |
 |   9522    |   16  |   não  |   O método de modificação XQuery não é permitido em conjuntos de colunas esparsas.  |
@@ -4497,11 +4497,11 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   9803    |   16  |   não  |   Dados inválidos para tipo "%ls".    |
 |   9804    |   16  |   não  |   Coluna ou parâmetro #%d: precisão de fração de segundo %d inválida especificada para o tipo de dados %ls. A precisão máxima de fração de segundo é %d. |
 |   9805    |   10  |   não  |   Aviso: a conversão de %ls em %ls causou uma perda de informações.    |
-|   9806    |   16  |   não  |   A função de data %.* ls não oferece suporte à datepart %.*ls. |
+|   9806    |   16  |   não  |   A função de data %.*ls não oferece suporte à datepart %.* ls. |
 |   9807    |   16  |   não  |   A cadeia de caracteres de entrada não segue o estilo %d. Altere essa cadeia de caracteres ou use um estilo diferente. |
 |   9808    |   16  |   não  |   Não há suporte para o formato de data YDM desta sessão ao converter esse formato de cadeia de caracteres em date, time, datetime2 ou datetimeoffset. Altere o formato de data da sessão ou forneça um estilo para a conversão explícita.   |
 |   9809    |   16  |   não  |   O estilo %d não é suportado para conversões de %s em %s.    |
-|   9810    |   16  |   não  |   A função de data %.* ls não oferece suporte à datepart %.*ls para o tipo de dados %s.    |
+|   9810    |   16  |   não  |   A função de data %.*ls não oferece suporte à datepart %.* ls para o tipo de dados %s.    |
 |   9811    |   16  |   não  |   Não foi possível recuperar as informações de fuso horário do sistema. |
 |   9812    |   16  |   não  |   O fuso horário fornecido para a função interna %.*ls é inválido. |
 |   9813    |   16  |   não  |   O fuso horário fornecido para a função interna %.*ls faria com que datetimeoffset estourasse o intervalo de datas válido na hora UTC ou local.   |
@@ -4558,7 +4558,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   9948    |   10  |   não  |   Aviso: caminho de catálogo de texto completo '%ls' inválido. Ele excede o limite de comprimento ou é um caminho relativo ou um diretório oculto. Não é possível anexar o catálogo de texto completo. |
 |   9949    |   10  |   não  |   Aviso: todas as populações de texto completo em andamento para o catálogo de texto completo '%ls' ('%d') no banco de dados '%ls' ('%d') foram pausadas. Código do motivo: %d. Erro: %ls. Se esta mensagem for exibida com frequência, consulte os Manuais Online para obter ajuda sobre ajuste de desempenho de indexação. |
 |   9950    |   10  |   não  |   Informação: a monitoração de integridade do catálogo de texto completo reportou uma falha do catálogo '%ls' ('%d') no banco de dados '%ls' ('%d'). Código do motivo: %d. Erro: %ls. O catálogo está corrompido e todas as populações em andamento serão interrompidas. Use a recriação de catálogo para se recuperar das falhas e iniciar a população a partir do zero.  |
-|   9951    |   10  |   não  |   Aviso: o banco de dados %.*ls não pode ser modificado durante a desanexação porque está no estado somente leitura, em espera ou desligado. O catálogo de texto completo não foi descartado e '@keepfulltextindexfile = false' será ignorado.   |
+|   9951    |   10  |   não  |   Aviso: o banco de dados %.*ls não pode ser modificado durante a desanexação porque está no estado somente leitura, em espera ou desligado. O catálogo de texto completo não foi descartado e '\@keepfulltextindexfile = false' será ignorado.  |
 |   9952    |   10  |   não  |   Informação: o controle de alterações automáticas de texto completo está desativado na tabela ou exibição indexada '%ls' (ID da tabela ou exibição indexada '%d', ID do banco de dados '%d') devido a um erro fatal de rastreamento. |
 |   9953    |   16  |   não  |   O caminho '%.*ls' tem atributos inválidos. Ele precisa ser um diretório. Ele não deve estar oculto, ser somente leitura ou estar em uma unidade removível. |
 |   9954    |   16  |   não  |   Falha do SQL Server ao comunicar-se com o serviço de inicialização do daemon de filtro (erro do Windows: %ls). O processo do daemon de filtro de texto completo falhou ao iniciar. A funcionalidade de pesquisa de texto completo não está disponível. |
@@ -4722,39 +4722,39 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   10331   |   16  |   não  |   Falha em ALTER ASSEMBLY porque o layout de serialização do tipo '%s' seria alterado como resultado de uma alteração no tipo '%s' no assembly atualizado. Os tipos persistentes não podem alterar o layout de serialização.  |
 |   10501   |   16  |   não  |   O tipo '%ls' no assembly '%ls' deriva de um tipo genérico que não tem suporte para um tipo CLR.   |
 |   [10502](mssqlserver-10502-database-engine-error.md) |   16  |   não  |   Não é possível criar o guia de plano '%.*ls' porque o tipo '%.* ls' fornecido não é permitido.  |
-|   10503   |   16  |   não  |   Não é possível criar o guia de plano '%.*ls' porque a instrução especificada por @stmt e @module_or_batch ou por @plan_handle e @statement_start_offset, corresponde ao guia de plano '%.* ls' existente no banco de dados. Descarte o guia de plano existente antes de criar o novo.   |
+|   10503   |   16  |   não  |   Não é possível criar o guia de plano '%.*ls' porque a instrução especificada por \@stmt e \@module_or_batch, ou por \@plan_handle e \@statement_start_offset, corresponde ao guia de plano existente '%.* ls' no banco de dados. Descarte o guia de plano existente antes de criar o novo.   |
 |   10504   |   16  |   não  |   A operação '%.*ls' não é permitida.   |
-|   10505   |   16  |   não  |   Não é possível criar o guia de plano '%.*ls' porque o parâmetro @hints está incorreto. Use N'OPTION ( <query_hint> [ ,...n ] )'.   |
-|   10506   |   16  |   não  |   Não é possível criar o guia de plano '%.*ls' porque o valor '%.* ls' fornecido para @module_or_batch não é um nome legal com duas partes. Use 'schema_name.object_name'. |
-|   [10507](mssqlserver-10507-database-engine-error.md) |   16  |   não  |   Não é possível criar o guia de plano '%.*ls' porque o parâmetro @stmt tem mais de uma instrução.   |
-|   10508   |   16  |   não  |   Não é possível criar o guia de plano '%.*ls' porque a instrução especificada por @stmt e @module_or_batch, ou por @plan_handle e @statement_start_offset, não corresponde a nenhuma instrução no módulo ou lote especificado. Modifique os valores para que correspondam a uma instrução no módulo ou lote.   |
+|   10505   |   16  |   não  |   Não é possível criar o guia de plano '%.*ls' porque o parâmetro \@hints está incorreto. Use N'OPTION ( <query_hint> [ ,...n ] )'.  |
+|   10506   |   16  |   não  |   Não é possível criar o guia de plano '%.*ls' porque o valor '%.* ls' fornecido para \@module_or_batch não é um nome legal com duas partes. Use 'schema_name.object_name'.    |
+|   [10507](mssqlserver-10507-database-engine-error.md) |   16  |   não  |   Não é possível criar o guia de plano '%.*ls' porque o parâmetro \@stmt tem mais de uma instrução.  |
+|   10508   |   16  |   não  |   Não é possível criar o guia de plano '%.*ls' porque a instrução especificada por \@stmt e \@module_or_batch, ou por \@plan_handle e \@statement_start_offset, não corresponde a nenhuma instrução no módulo ou lote especificado. Modifique os valores para que correspondam a uma instrução no módulo ou lote.   |
 |   [10509](mssqlserver-10509-database-engine-error.md) |   16  |   não  |   Não é possível '%ls' no guia de plano '%.*ls' porque ele não existe ou não tem permissão. Verifique o nome do guia de plano e o banco de dados da sessão atual e se você tem a permissão necessária.   |
-|   10510   |   16  |   não  |   Não é possível criar o guia de plano '%.*ls' porque a instrução especificada por @stmt ou @statement_start_offset contém um erro de sintaxe ou não está qualificada para uso em um guia de plano. Forneça uma única instrução Transact-SQL válida ou uma posição inicial válida da instrução no lote. Para obter uma posição inicial válida, consulte a coluna 'statement_start_offset' na função de gerenciamento dinâmico sys.dm_exec_query_stats.  |
+|   10510   |   16  |   não  |   Não é possível criar o guia de plano '%.*ls' porque a instrução especificada por \@stmt ou \@statement_start_offset contém um erro de sintaxe ou é ilegível para uso em um guia de plano. Forneça uma única instrução Transact-SQL válida ou uma posição inicial válida da instrução no lote. Para obter uma posição inicial válida, consulte a coluna 'statement_start_offset' na função de gerenciamento dinâmico sys.dm_exec_query_stats.    |
 |   10512   |   16  |   não  |   Não é possível criar um guia de plano '%.*ls' porque já existe outro com esse nome no banco de dados. Use um nome exclusivo.   |
-|   10513   |   16  |   não  |   Não é possível criar o guia de plano '%.*ls' porque o objeto '@module_or_batch' está criptografado. Considere ajustar a consulta usando outras técnicas, como índices e estatísticas.   |
+|   10513   |   16  |   não  |   Não é possível criar o guia de plano '%.*ls' porque o objeto '\@module_or_batch' está criptografado. Considere ajustar a consulta usando outras técnicas, como índices e estatísticas.  |
 |   10515   |   16  |   não  |   Não é possível %S_MSG %S_MSG '%.*ls' porque ele é mencionado pelo guia de plano '%.* ls'. Use sp_control_plan_guide para descartar primeiro o guia de plano. Grave a definição do guia de plano para uso futuro, se necessário. |
 |   10516   |   16  |   não  |   Não é possível criar o guia de plano '%.*ls' porque o módulo '%.* ls' não existe ou você não tem a permissão necessária.    |
-|   10517   |   16  |   não  |   Não é possível criar o guia de plano '%.*ls' porque @module_or_batch não pode ser compilado.  |
+|   10517   |   16  |   não  |   Não é possível criar o guia de plano '%.*ls' porque \@module_or_batch não pode ser compilado. |
 |   10518   |   16  |   não  |   Não é possível criar o guia de plano '%.*ls' porque você não tem a permissão necessária. Altere a permissão necessária do banco de dados. |
 |   [10519](mssqlserver-10519-database-engine-error.md) |   16  |   não  |   Não é possível executar sp_control_plan_guide por causa das permissões insuficientes para controlar o guia de plano '%.*ls'. Altere a permissão no objeto mencionado pelo guia de plano ou altere a permissão necessária do banco de dados. |
-|   [10520](mssqlserver-10520-database-engine-error.md) |   16  |   não  |   Não é possível criar o guia de plano '%.*ls' porque as dicas especificadas em @hints não podem ser aplicadas à instrução especificada por @stmt ou @statement_start_offset. Verifique se as dicas podem ser aplicadas à instrução.  |
-|   [10521](mssqlserver-10521-database-engine-error.md) |   16  |   não  |   Não é possível criar o guia de plano '%.*ls' porque @type foi especificado como '%ls' e um valor não NULL está especificado para o parâmetro '%ls'. Esse tipo requer um valor NULL para o parâmetro. Especifique um valor NULL para o parâmetro ou altere o tipo para um que permita um valor não NULL para o parâmetro.   |
-|   10522   |   16  |   não  |   Não é possível criar o guia de plano '%.*ls' porque @type foi especificado como '%ls' e o parâmetro '%ls' é NULL. Esse tipo requer um valor não NULL para o parâmetro. Especifique um valor não NULL para o parâmetro ou altere o tipo para um que permita um valor NULL para o parâmetro. |
-|   10523   |   16  |   não  |   Não é possível criar o guia de plano '%.*ls' porque @hints tem valor ilegal. @hints deve ser OPTION(PARAMETERIZATION FORCED) ou OPTION(PARAMETERIZATION SIMPLE) se @type for 'template'.    |
-|   10524   |   16  |   não  |   Não é possível gerar o modelo de consulta porque @querytext não contém uma consulta única válida.    |
-|   10525   |   10  |   não  |   Não é possível parametrizar @querytext. |
+|   [10520](mssqlserver-10520-database-engine-error.md) |   16  |   não  |   Não é possível criar o guia de plano '%.*ls' porque as dicas especificadas em \@hints não podem ser aplicadas à instrução especificada por \@stmt ou \@statement_start_offset. Verifique se as dicas podem ser aplicadas à instrução.   |
+|   [10521](mssqlserver-10521-database-engine-error.md) |   16  |   não  |   Não é possível criar o guia de plano '%.*ls' porque \@type foi especificado como '%ls' e um valor não NULL está especificado para o parâmetro '%ls'. Esse tipo requer um valor NULL para o parâmetro. Especifique um valor NULL para o parâmetro ou altere o tipo para um que permita um valor não NULL para o parâmetro.  |
+|   10522   |   16  |   não  |   Não é possível criar o guia de plano '%.*ls' porque \@type foi especificado como '%ls' e o parâmetro '%ls' é NULL. Esse tipo requer um valor não NULL para o parâmetro. Especifique um valor não NULL para o parâmetro ou altere o tipo para um que permita um valor NULL para o parâmetro.    |
+|   10523   |   16  |   não  |   Não é possível criar o guia de plano '%.*ls' porque \@hints tem valor ilegal. \@hints deve ser OPTION(PARAMETERIZATION FORCED) ou OPTION(PARAMETERIZATION SIMPLE) se \@type for 'template'. |
+|   10524   |   16  |   não  |   Não é possível gerar o modelo de consulta porque \@querytext não contém uma consulta única válida.   |
+|   10525   |   10  |   não  |   Não é possível parametrizar \@querytext.    |
 |   10526   |   16  |   não  |   O guia de plano '%.*ls' correspondeu à instrução após ser parametrizado automaticamente por parametrização FORCED ou SIMPLE, mas a dica RECOMPILE que ele contém foi ignorada. RECOMPILE não é suportado em instruções parametrizadas automaticamente. Considere descartar este guia de plano ou remover RECOMPILE dele.  |
 |   10527   |   16  |   não  |   Não é possível descartar %S_MSG '%.*ls' porque seu gatilho '%.* ls' é referenciado pelo guia de plano '%.*ls'. Use sp_control_plan_guide para descartar primeiro o guia de plano. Grave a definição do guia de plano para uso futuro, se necessário.  |
 |   10528   |   16  |   não  |   Não é possível criar o guia de plano '%.*ls' porque o objeto '%.* ls' é temporário.  |
 |   10529   |   16  |   não  |   Não é possível criar o guia de plano '%.*ls' porque seu nome é inválido. O nome do guia de plano não pode começar com um caractere '#'.    |
-|   10530   |   16  |   não  |   Não é possível criar o guia de plano '%.*ls' porque já existe um guia de plano '%.* ls' de @type 'template' em @stmt. |
-|   [10531](mssqlserver-10531-database-engine-error.md) |   16  |   não  |   Não é possível criar o guia de plano '%.*ls' porque a instrução especificada por @statement_start_offset não corresponde a nenhuma instrução no módulo ou no lote especificado. Considere a possibilidade de modificar @statement_start_offset para que corresponda a uma instrução do módulo ou lote.  |
+|   10530   |   16  |   não  |   Não é possível criar o guia de plano '%.*ls' porque já existe um guia de plano '%.* ls' de \@type 'template' em \@stmt.   |
+|   [10531](mssqlserver-10531-database-engine-error.md) |   16  |   não  |   Não é possível criar o guia de plano '%.*ls' porque a instrução especificada por \@statement_start_offset não corresponde a nenhuma instrução do módulo ou lote especificado. Considere a possibilidade de modificar \@statement_start_offset para que corresponda a uma instrução do módulo ou lote.    |
 |   [10532](mssqlserver-10532-database-engine-error.md) |   16  |   não  |   Não é possível criar o guia de plano '%.*ls' do cache porque o usuário não tem as permissões adequadas. Conceda a permissão VIEW SERVER STATE para o usuário que está criando o guia de plano.    |
-|   [10533](mssqlserver-10533-database-engine-error.md) |   16  |   não  |   Não é possível criar o guia de plano '%.*ls' porque o lote ou módulo especificado por @plan_handle não contém uma instrução qualificada para um guia de plano. Especifique outro valor para @plan_handle.  |
+|   [10533](mssqlserver-10533-database-engine-error.md) |   16  |   não  |   Não é possível criar o guia de plano '%.*ls' porque o lote ou módulo especificado por \@plan_handle não contém uma instrução que seja qualificada para um guia de plano. Especifique um valor diferente para \@plan_handle.    |
 |   [10534](mssqlserver-10534-database-engine-error.md) |   16  |   não  |   Não é possível criar o guia de plano '%.*ls' porque seu nome excede o número máximo de caracteres permitido (124). Especifique um nome com menos de 125 caracteres. |
-|   [10535](mssqlserver-10535-database-engine-error.md) |   16  |   não  |   Não é possível criar o guia de plano '%.*ls' porque o valor especificado para @params é inválido. Especifique o valor no formato <nome_parâmetro> <tipo_parâmetro> ou especifique NULL.  |
+|   [10535](mssqlserver-10535-database-engine-error.md) |   16  |   não  |   Não é possível criar o guia de plano '%.*ls' porque o valor especificado para \@params é inválido. Especifique o valor no formato <nome_parâmetro> <tipo_parâmetro> ou especifique NULL. |
 |   [10536](mssqlserver-10536-database-engine-error.md) |   16  |   não  |   Não é possível criar o guia de plano '%.*ls' porque não foi encontrado no cache de planos um plano que corresponda ao identificador de plano especificado. Especifique um identificador de plano em cache. Para obter uma lista de identificadores de plano em cache, consulte a exibição de gerenciamento dinâmico sys.dm_exec_query_stats.  |
-|   [10537](mssqlserver-10537-database-engine-error.md) |   16  |   não  |   Não é possível criar o guia de plano '%.*ls' porque o lote ou o módulo correspondente ao @plan_handle especificado contém mais de 1000 instruções qualificadas. Crie um guia de plano para cada instrução do lote ou módulo especificando um valor de statement_start_offset para cada instrução.    |
+|   [10537](mssqlserver-10537-database-engine-error.md) |   16  |   não  |   Não é possível criar o guia de plano '%.*ls' porque o lote ou módulo correspondente ao \@plan_handle especificado contém mais de 1000 instruções qualificadas. Crie um guia de plano para cada instrução do lote ou módulo especificando um valor de statement_start_offset para cada instrução.   |
 |   [10538](mssqlserver-10538-database-engine-error.md) |   16  |   não  |   Não é possível habilitar o guia de plano '%.*ls' porque o guia de plano habilitado '%.* ls' contém o mesmo escopo e valor de deslocamento inicial da instrução. Desabilite o guia de plano existente antes de habilitar o guia de plano especificado.   |
 |   [10539](mssqlserver-10539-database-engine-error.md) |   16  |   não  |   Não foi possível encontrar o guia de plano porque a ID do guia de plano especificada é NULL ou inválida ou você não tem permissão no objeto referenciado pelo guia de plano. Verifique se a ID do guia de plano é válida, se a sessão atual está definida com o contexto de banco de dados correto e se você tem a permissão ALTER DATABASE ou ALTER no objeto referenciado pelo guia de plano.  |
 |   10601   |   16  |   não  |   Não é possível criar o guia de plano '%.*ls' a partir do cache porque um plano de consulta não está disponível para a instrução com deslocamento inicial %d. Esse problema poderá ocorrer se a instrução depender de objetos do banco de dados que ainda não foram criados. Verifique se todos os objetos de banco de dados necessários existem e execute a instrução antes de criar o guia de plano. |
@@ -4798,7 +4798,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   10721   |   15  |   não  |   Uma cláusula OUTPUT INTO não é permitida em uma instrução INSERT, UPDATE, DELETE ou MERGE aninhada.    |
 |   10722   |   15  |   não  |   A cláusula WHERE CURRENT OF não é permitida em uma instrução INSERT, UPDATE, DELETE ou MERGE aninhada.  |
 |   10723   |   15  |   não  |   A palavra-chave DISTINCT não é permitida quando a cláusula FROM contém uma instrução INSERT, UPDATE, DELETE ou MERGE aninhada.  |
-|   10724   |   15  |   não  |   Em uma instrução MERGE, uma variável não pode ser definida para uma coluna e uma expressão na mesma atribuição da cláusula SET de uma ação UPDATE. Atribuições com a forma 'SET @variable = coluna = expressão' não são válidas na cláusula SET de uma ação UPDATE em uma instrução MERGE. Modifique a cláusula SET para especificar apenas as atribuições com a forma 'SET @variable = coluna' ou 'SET @variable = expressão'. |
+|   10724   |   15  |   não  |   Em uma instrução MERGE, uma variável não pode ser definida para uma coluna e uma expressão na mesma atribuição da cláusula SET de uma ação UPDATE. Atribuições com a forma 'SET \@variável = coluna = expressão' não são válidas na cláusula SET de uma ação UPDATE em uma instrução MERGE. Modifique a cláusula SET para especificar apenas as atribuições com a forma 'SET \@variável = coluna' ou 'SET \@variável = expressão'.  |
 |   10725   |   15  |   não  |   A dica FORCESEEK não é permitida para tabelas de destino das instruções INSERT, UPDATE ou DELETE.    |
 |   10726   |   15  |   não  |   Não é possível usar a opção VARYING em uma instrução DECLARE, CREATE AGGREGATE ou CREATE FUNCTION.  |
 |   10727   |   15  |   não  |   As agregações definidas pelo usuário não oferecem suporte aos parâmetros padrão.  |
@@ -5351,7 +5351,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   13402   |   10  |   não  |   A capacidade de inserir valores nulos (INSERT NULL) nas colunas TIMESTAMP será removida em uma versão futura do SQL Server. Evite usar esse recurso em novos trabalhos de desenvolvimento e planeje modificar os aplicativos que o utilizam. Use DEFAULT.   |
 |   13403   |   10  |   não  |   A capacidade de usar literais de cadeia de caracteres como aliases de coluna será removida em uma versão futura do SQL Server. Evite usar esse recurso em novos trabalhos de desenvolvimento e planeje modificar os aplicativos que o utilizam. Use a cláusula AS. |
 |   13404   |   10  |   não  |   A capacidade de usar '#' e '##' como o nome das tabelas temporárias e procedimentos armazenados será removida em uma versão futura do SQL Server. Evite usar esse recurso em novos trabalhos de desenvolvimento e planeje modificar os aplicativos que o utilizam.   |
-|   13405   |   10  |   não  |   A capacidade de usar '@' e os nomes que começam com '@@' como identificadores Transact-SQL será removida em uma versão futura do SQL Server. Evite usar esse recurso em novos trabalhos de desenvolvimento e planeje modificar os aplicativos que o utilizam.   |
+|   13405   |   10  |   não  |   A capacidade de usar '\@' e os nomes que começam com '\@\@' como identificadores Transact-SQL será removida em uma versão futura do SQL Server. Evite usar esse recurso em novos trabalhos de desenvolvimento e planeje modificar os aplicativos que o utilizam.    |
 |   13406   |   10  |   não  |   A capacidade de usar a palavra-chave DEFAULT como um valor padrão será removida em uma versão futura do SQL Server. Evite usar esse recurso em novos trabalhos de desenvolvimento e planeje modificar os aplicativos que o utilizam.   |
 |   13407   |   10  |   não  |   A dica FASTFIRSTROW será removida na próxima versão do SQL Server. Evite usar esse recurso em novos trabalhos de desenvolvimento e planeje modificar os aplicativos que o utilizam. Use OPTION (FAST n).  |
 |   13408   |   10  |   não  |   %l será removido na próxima versão do SQL Server. Evite usar esse recurso em novos trabalhos de desenvolvimento e planeje modificar os aplicativos que o utilizam. |
@@ -5371,17 +5371,17 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   14009   |   11  |   não  |   Não existem artigos para a publicação '%s'. |
 |   14010   |   16  |   não  |   O servidor remoto '%s' não está definido como servidor de assinatura. Verifique se o nome do servidor foi especificado e não um alias de rede. |
 |   14011   |   16  |   não  |   Não é possível marcar o servidor '%s' como assinante não SQL Server.  |
-|   14012   |   16  |   não  |   O valor do parâmetro @status deve ser 'active' ou 'inactive'.  |
+|   14012   |   16  |   não  |   O valor do parâmetro \@status deve ser 'active' ou 'inactive'. |
 |   14013   |   16  |   não  |   Esse banco de dados não está habilitado para publicação.   |
-|   14014   |   16  |   não  |   O método de sincronização (@sync_method) deve ser '[bcp] native', '[bcp] character', 'concurrent', 'concurrent_c', database snapshot' ou 'database snapshot character'.   |
-|   14015   |   16  |   não  |   A frequência de replicação (@repl_freq) deve ser 'continuous' ou 'snapshot'.   |
+|   14014   |   16  |   não  |   O método de sincronização (\@sync_method) deve ser '[bcp] native', '[bcp] character', 'concurrent', 'concurrent_c', database snapshot' ou 'database snapshot character'.  |
+|   14015   |   16  |   não  |   A frequência de replicação (\@repl_freq) deve ser 'continuous' ou 'snapshot'.  |
 |   14016   |   16  |   não  |   A publicação '%s' já existe.    |
-|   14017   |   16  |   não  |   Valor de parâmetro @restricted inválido. As opções válidas são 'true' ou 'false'.   |
+|   14017   |   16  |   não  |   O valor do parâmetro \@restricted é inválido. As opções válidas são 'true' ou 'false'.  |
 |   14018   |   16  |   não  |   Não foi possível criar a publicação.   |
-|   14019   |   16  |   não  |   O valor do parâmetro @operation deve ser add, drop ou alter.  |
+|   14019   |   16  |   não  |   O valor do parâmetro \@operation deve ser add, drop ou alter. |
 |   14020   |   16  |   não  |   Não foi possível obter a ID da coluna especificada. Falha na replicação do esquema. |
 |   14021   |   16  |   não  |   A coluna não foi adicionada corretamente ao artigo.  |
-|   14022   |   16  |   não  |   O valor do parâmetro @property deve ser 'description', 'sync_object', 'type', 'ins_cmd', 'del_cmd', 'upd_cmd', 'filter', 'dest_table', 'dest_object', 'creation_script', 'pre_creation_cmd', 'status', 'schema_option' ou 'destination_owner'.    |
+|   14022   |   16  |   não  |   O valor do parâmetro \@property deve ser 'description', 'sync_object', 'type', 'ins_cmd', 'del_cmd', 'upd_cmd', 'filter', 'dest_table', 'dest_object', 'creation_script', 'pre_creation_cmd', 'status', 'schema_option' ou 'destination_owner'.   |
 |   14023   |   16  |   não  |   O tipo deve ser '[indexed view ]logbased[ (manualview|manualfilter|manualboth)]', '[serializable ]proc exec' ou '(view|exibição indexada|proc|func|agregação|sinônimo) somente esquema'.    |
 |   14024   |   16  |   não  |   O valor da propriedade 'subscriber_provider' não pode ser NULL. |
 |   14025   |   10  |   não  |   Artigo atualizado com êxito.  |
@@ -5393,7 +5393,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   14031   |   16  |   não  |   As tabelas e exibições do usuário são os únicos objetos de sincronização válidos.   |
 |   14032   |   16  |   não  |   O valor do parâmetro %s não pode ser 'all'. Ele está reservado por procedimentos armazenados de replicação. |
 |   14033   |   16  |   não  |   Não foi possível alterar a frequência de replicação porque existem assinaturas ativas na publicação.   |
-|   14034   |   16  |   não  |   O nome da publicação (@publication) não pode ser a palavra-chave 'all'.    |
+|   14034   |   16  |   não  |   O nome da publicação (\@publication) não pode ser a palavra-chave 'all'.   |
 |   14035   |   16  |   não  |   A opção de replicação '%s' do banco de dados '%s' já foi definida como true.  |
 |   14036   |   16  |   não  |   Não foi possível habilitar o banco de dados para publicação.   |
 |   14037   |   16  |   não  |   A opção de replicação '%s'' do banco de dados '%s' foi definida como false. |
@@ -5411,7 +5411,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   14049   |   16  |   não  |   Os procedimentos armazenados para replicação são os únicos objetos que podem ser usados como filtro.    |
 |   14050   |   11  |   não  |   Nenhuma assinatura nesta publicação ou artigo.  |
 |   14051   |   16  |   não  |   O valor do parâmetro deve ser 'sync_type' ou 'dest_db'.   |
-|   14052   |   16  |   não  |   O valor do parâmetro @sync_type deve ser "automatic", "none", "replication support only", "initialize with backup" ou "initialize from lsn". |
+|   14052   |   16  |   não  |   O valor do parâmetro \@sync_type deve ser "automatic", "none", "replication support only", "initialize with backup" ou "initialize from lsn".    |
 |   14053   |   16  |   não  |   Não foi possível atualizar a assinatura no momento. |
 |   14054   |   10  |   não  |   Assinatura atualizada com êxito.  |
 |   14055   |   10  |   não  |   A assinatura não existe.    |
@@ -5420,10 +5420,10 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   14058   |   16  |   não  |   Não é possível criar a assinatura porque ela já existe no banco de dados de assinaturas. Somente uma assinatura para a mesma publicação é permitida em cada banco de dados de assinaturas. Descarte a assinatura e adicione-a novamente, se necessário. Se o problema persistir, os metadados de replicação poderão estar incorretos. Consulte os Manuais Online para obter informações sobre a solução do problema.   |
 |   14059   |   16  |   não  |   Não é possível criar artigos de exibição materializada para publicações com as propriedades allow_sync_tran, allow_queued_tran ou allow_dts. |
 |   14060   |   16  |   não  |   Os parâmetros do assinante que especificam propriedades do provedor devem ser NULL para assinantes do SQL Server.   |
-|   14061   |   16  |   não  |   O valor do parâmetro @pre_creation_cmd deve ser 'none', 'drop', 'delete' ou 'truncate'.  |
+|   14061   |   16  |   não  |   O valor do parâmetro \@pre_creation_cmd deve ser 'none', 'drop', 'delete' ou 'truncate'. |
 |   14062   |   10  |   não  |   Assinante descartado. |
 |   14063   |   11  |   não  |   O servidor remoto não existe ou não foi designado como um Assinante válido.  |
-|   14065   |   16  |   não  |   O valor do parâmetro @status deve ser 'initiated', 'active', 'inactive' ou 'subscribed'. |
+|   14065   |   16  |   não  |   O valor do parâmetro \@status deve ser 'initiated', 'active', 'inactive' ou 'subscribed'.    |
 |   14066   |   16  |   não  |   O status anterior deve ser 'active', 'inactive' ou 'subscribed'.  |
 |   14067   |   16  |   não  |   O valor do status é igual ao valor do status anterior.  |
 |   14068   |   16  |   não  |   Não foi possível alterar o status da assinatura do objeto. |
@@ -5440,12 +5440,12 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   14088   |   16  |   não  |   A tabela '%s' deve ter uma chave primária a ser publicada com o método baseado em transação.  |
 |   14089   |   16  |   não  |   O índice clusterizado na exibição materializada '%s' poderá não conter colunas anuláveis se precisar ser publicado com o método baseado em transação. |
 |   14090   |   16  |   não  |   Erro ao avaliar objeto de sincronização de artigo após descarte de coluna. A cláusula de filtro do artigo '%s' não deve fazer referência à coluna descartada.    |
-|   14091   |   16  |   não  |   O parâmetro @type passado para sp_helpreplicationdb deve ser 'pub' ou 'sub'.   |
+|   14091   |   16  |   não  |   O parâmetro \@type passado para sp_helpreplicationdb deve ser 'pub' ou 'sub'.  |
 |   14092   |   16  |   não  |   Não foi possível alterar o artigo porque ele tem uma assinatura.  |
 |   14093   |   16  |   não  |   Não é possível conceder ou revogar acesso diretamente na publicação '%s' porque ela usa a lista de acesso à publicação padrão. |
-|   14094   |   16  |   não  |   Não foi possível assinar o artigo '%s' porque o Assinante heterogêneo '%s' não oferece suporte ao valor 'truncate' do parâmetro @pre_creation_cmd.    |
-|   14095   |   16  |   não  |   O valor do parâmetro @sync_method não é válido. Não foi possível assinar a publicação '%s' porque o Assinante não SQL Server '%s' oferece suporte somente aos valores 'character', 'bcp character', 'concurrent_c' e 'database snapshot character' para o parâmetro @sync_method.   |
-|   14096   |   16  |   não  |   O caminho e o nome do script de criação de tabela devem ser especificados, se o valor do parâmetro @pre_creation_cmd for 'drop'.    |
+|   14094   |   16  |   não  |   Não foi possível assinar o artigo '%s' porque o Assinante heterogêneo '%s' não oferece suporte ao valor 'truncate' do parâmetro \@pre_creation_cmd.   |
+|   14095   |   16  |   não  |   O valor do parâmetro \@sync_method é inválido. Não foi possível assinar a publicação '%s' porque o Assinante '%s', que não é do SQL Server, oferece suporte somente aos valores 'character', 'bcp character', 'concurrent_c' e 'database snapshot character' para o parâmetro \@sync_method. |
+|   14096   |   16  |   não  |   O caminho e o nome do script de criação de tabela deverão ser especificados se o valor do parâmetro \@pre_creation_cmd for 'drop'.   |
 |   14097   |   16  |   não  |   O valor 'status' deve ser 'no column names', 'include column names', 'string literals', 'parameters', 'DTS horizontal partitions' ou 'no DTS horizontal partitions'.   |
 |   14098   |   16  |   não  |   Não é possível descartar o Publicador de Distribuição '%s'. O Publicador remoto está usando '%s' como Distribuidor. Desabilite a publicação no Publicador antes de tentar descartar essa relação.    |
 |   14099   |   16  |   não  |   O servidor '%s' já está definido como Distribuidor. Para reconfigurar o servidor como Distribuidor, você deve primeiro desinstalar o Distribuidor existente. Use o procedimento armazenado sp_dropdistributor ou use o Assistente para Desabilitar Publicação e Distribuição.    |
@@ -5455,11 +5455,11 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   14103   |   16  |   não  |   Valor "%s" inválido. Os valores válidos são "publisher", "subscriber" ou "both".  |
 |   14105   |   10  |   não  |   Propriedade do banco de dados de distribuição '%s' atualizada com êxito.  |
 |   14106   |   16  |   não  |   Os períodos de retenção da distribuição devem ser maiores ou iguais a 0.  |
-|   14107   |   10  |   não  |   O valor @max_distretention deve ser maior que o valor @min_distretention.  |
+|   14107   |   10  |   não  |   O valor de \@max_distretention deve ser maior que o valor de \@min_distretention.    |
 |   14108   |   10  |   não  |   Removidos %ld registros de histórico de %s.    |
-|   14109   |   10  |   não  |   O valor do parâmetro @security_mode deve ser 0 (Autenticação do SQL Server) ou 1 (Autenticação do Windows). |
-|   14110   |   16  |   não  |   Para artigos de procedimento armazenado, o valor do parâmetro @property deve ser 'description', 'dest_table', 'dest_object', 'creation_script', 'pre_creation_cmd', 'schema_option' ou 'destination_owner'.    |
-|   14111   |   16  |   não  |   O valor do parâmetro @pre_creation_cmd deve ser 'none' ou 'drop'. |
+|   14109   |   10  |   não  |   O valor do parâmetro \@security_mode deve ser 0 (Autenticação do SQL Server) ou 1 (Autenticação do Windows).    |
+|   14110   |   16  |   não  |   Para artigos de procedimento armazenado, o valor do parâmetro \@property deve ser 'description', 'dest_table', 'dest_object', 'creation_script', 'pre_creation_cmd', 'schema_option' ou 'destination_owner'.   |
+|   14111   |   16  |   não  |   O valor do parâmetro \@pre_creation_cmd deve ser 'none' ou 'drop'.    |
 |   14112   |   16  |   não  |   Esse procedimento só pode ser executado em artigos baseados em tabelas.   |
 |   14113   |   16  |   não  |   Não foi possível executar '%s'. Verifique '%s' no diretório de instalação.    |
 |   14114   |   16  |   não  |   O servidor '%s' não está configurado como Distribuidor. |
@@ -5469,20 +5469,20 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   14119   |   16  |   não  |   Não foi possível adicionar o banco de dados de distribuição '%s'. Esse banco de dados de distribuição já existe.    |
 |   14120   |   16  |   não  |   Não foi possível descartar o banco de dados de distribuição '%s'. O banco de dados do distribuidor está associado a um Publicador.    |
 |   14121   |   16  |   não  |   Não foi possível descartar o Distribuidor '%s'. Esse Distribuidor possui bancos de dados de distribuição associados.    |
-|   14122   |   16  |   não  |   O valor do parâmetro @article deve ser 'all' para publicações immediate_sync. |
-|   14123   |   16  |   não  |   Não há mais suporte para o valor 'manual' do parâmetro @sync_type da assinatura.    |
+|   14122   |   16  |   não  |   O valor do parâmetro \@article deve ser 'all' para publicações immediate_sync.    |
+|   14123   |   16  |   não  |   Não há mais suporte para o valor 'manual' do parâmetro \@sync_type da assinatura.   |
 |   14124   |   16  |   não  |   Uma publicação deve ter pelo menos um artigo para que uma assinatura possa ser criada nele.    |
 |   14126   |   16  |   não  |   Você não tem as permissões necessárias para concluir a operação. |
-|   14128   |   16  |   não  |   Valor de parâmetro @subscription_type inválido. As opções válidas são 'push' ou 'pull'. |
-|   14129   |   16  |   não  |   O valor do parâmetro @status deve ser NULL para sync_type 'automatic' ao adicionar assinaturas a uma publicação immediate_sync. |
+|   14128   |   16  |   não  |   Valor inválido para o parâmetro \@subscription_type. As opções válidas são 'push' ou 'pull'.    |
+|   14129   |   16  |   não  |   O valor do parâmetro \@status deve ser NULL para sync_type 'automatic' ao adicionar assinaturas a uma publicação immediate_sync.    |
 |   14135   |   16  |   não  |   Não existe nenhuma assinatura no Publicador '%s', banco de dados publicador '%s', publicação '%s'.  |
 |   14136   |   16  |   não  |   A palavra-chave 'all' é reservada para procedimentos armazenados de replicação. |
-|   14137   |   16  |   não  |   O valor do parâmetro @value deve ser 'true' ou 'false'.    |
+|   14137   |   16  |   não  |   O valor do parâmetro \@value deve ser 'true' ou 'false'.   |
 |   14138   |   16  |   não  |   Nome de opção '%s' inválido.   |
 |   14139   |   16  |   não  |   A tabela do sistema de replicação '%s' já existe.   |
 |   14143   |   16  |   não  |   Não é possível descartar o Publicador do Distribuidor '%s'. Existem Assinantes associados a ele no banco de dados de distribuição '%s'. |
 |   14144   |   16  |   não  |   Não é possível descartar o Assinante '%s'. Existem assinaturas para ele no banco de dados de publicação '%s'.   |
-|   14146   |   16  |   não  |   O parâmetro de artigo '@schema_option' não pode ser NULL.  |
+|   14146   |   16  |   não  |   O parâmetro '\@schema_option' do artigo não pode ser NULL. |
 |   14147   |   16  |   não  |   Não há mais suporte para publicações restritas.    |
 |   14148   |   16  |   não  |   Valor '%s' inválido. Os valores válidos são 'true' ou 'false'. |
 |   14149   |   10  |   não  |   Removidos %ld registros do histórico de replicação em %s segundos (%ld linhas/s).   |
@@ -5490,7 +5490,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   14151   |   18  |   Sim |   Replicação-%s: falha no agente %s. %s |
 |   14152   |   10  |   Sim |   Replicação-%s: agente %s agendado para tentar novamente. %s    |
 |   14153   |   10  |   não  |   Replicação-%s: aviso do agente %s. %s    |
-|   14154   |   16  |   não  |   O parâmetro Distributor deve ser '@heartbeat_interval'.    |
+|   14154   |   16  |   não  |   O parâmetro Distributor deve ser '\@heartbeat_interval'.   |
 |   14155   |   16  |   não  |   ID de artigo inválida especificada para geração de script de procedimento.   |
 |   14156   |   16  |   não  |   O procedimento armazenado personalizado que chama o formato para o comando %s especificado na definição do artigo não corresponde ao formato %s. |
 |   14157   |   10  |   Sim |   A assinatura criada pelo Assinante '%s' para a publicação '%s' expirou e foi descartada.   |
@@ -5516,7 +5516,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   14199   |   10  |   não  |   O trabalho '%s' especificado não foi criado para planos de manutenção. Verifique se o trabalho tem pelo menos uma etapa que chame xp_sqlmaint. |
 |   14200   |   16  |   não  |   '%s' especificado inválido.  |
 |   14201   |   10  |   não  |   0 (todas as etapas) .    |
-|   14202   |   10  |   não  |   antes ou depois de @active_start_time  |
+|   14202   |   10  |   não  |   antes ou após \@active_start_time |
 |   14203   |   10  |   não  |   sp_helplogins [excluindo grupos do Windows NT] |
 |   14204   |   10  |   não  |   0 (não ocioso), 1 (executando), 2 (aguardando thread), 3 (entre repetições), 4 (ocioso), 5 (suspenso), 7 (executando ações de conclusão|
 |   14205   |   10  |   não  |   (desconhecido)   |
@@ -5558,7 +5558,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   14241   |   10  |   não  |   Trabalho removido de %ld servidores.   |
 |   14242   |   16  |   não  |   Somente um administrador do sistema pode reatribuir a propriedade de um trabalho.    |
 |   14243   |   10  |   não  |   Trabalho '%s'' iniciado com êxito.  |
-|   14245   |   16  |   não  |   Especifique @name, @id ou @loginname das tarefas a serem excluídas.  |
+|   14245   |   16  |   não  |   Especifique \@name, \@id ou \@loginname para a(s) tarefa(s) a ser(em) excluída(s).   |
 |   14250   |   16  |   não  |   O %s especificado é muito longo. Ele não deve conter mais de %ld caracteres.  |
 |   14251   |   16  |   não  |   Não é possível especificar '%s' como o operador a ser notificado. |
 |   14252   |   16  |   não  |   Não é possível executar esta ação em um trabalho que não é de sua propriedade. |
@@ -5581,17 +5581,17 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   14270   |   16  |   não  |   O trabalho '%s' não está destinado atualmente ao servidor '%s'.  |
 |   14271   |   16  |   não  |   Um servidor de destino não pode ser nomeado '%s'.   |
 |   14272   |   16  |   não  |   O tipo e o nome do objeto devem ser fornecidos como um par. |
-|   14273   |   16  |   não  |   Você deve fornecer @job_id ou @job_name (e, opcionalmente, @schedule_name) ou @schedule_id.    |
+|   14273   |   16  |   não  |   Você deve fornecer \@job_id ou \@job_name (e, opcionalmente, \@schedule_name) ou \@schedule_id.    |
 |   14274   |   16  |   não  |   Não é possível adicionar, atualizar ou excluir um trabalho (ou suas etapas ou agendas) que tenha sido originado em um servidor MSX. |
 |   14275   |   16  |   não  |   O servidor de origem deve ser local ou MSX.   |
 |   14276   |   16  |   não  |   '%s' é uma categoria %s permanente e não pode ser excluída.  |
 |   14277   |   16  |   não  |   O script do comando não destrói todos os objetos que ele cria. Revise o script do comando. |
 |   14278   |   16  |   não  |   A agenda desse trabalho é inválida (razão: %s).  |
-|   14279   |   16  |   não  |   Forneça @job_name, @job_id ou @originating_server.    |
+|   14279   |   16  |   não  |   Forneça \@job_name, \@job_id ou \@originating_server. |
 |   14280   |   16  |   não  |   Forneça um nome de trabalho (e aspecto do trabalho) ou um ou mais parâmetros de filtro do trabalho.    |
-|   14281   |   10  |   não  |   Aviso: o parâmetro @new_owner_login_name não é necessário ao especificar uma ação 'DELETE'.    |
+|   14281   |   10  |   não  |   Aviso: o parâmetro \@new_owner_login_name não é necessário ao especificar uma ação 'DELETE'.   |
 |   14282   |   16  |   não  |   Forneça uma data (criada ou modificada pela última vez) e um comparador de dados ou nenhum parâmetro de data.    |
-|   14283   |   16  |   não  |   Forneça @target_server_groups ou @target_servers, ou ambos.   |
+|   14283   |   16  |   não  |   Forneça \@target_server_groups ou \@target_servers, ou ambos. |
 |   14284   |   16  |   não  |   Não é possível especificar uma ID de trabalho para um novo trabalho. Ela será atribuída pelo procedimento. |
 |   14285   |   16  |   não  |   Não é possível adicionar um trabalho local a uma categoria de trabalho multisservidor.   |
 |   14286   |   16  |   não  |   Não é possível adicionar um trabalho multisservidor a uma categoria de trabalho local.   |
@@ -5632,7 +5632,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   14367   |   16  |   não  |   Uma ou mais agendas não foram excluídas, pois estão sendo usadas por pelo menos um outro trabalho. Use "sp_detach_schedule" para remover agendas de um trabalho.  |
 |   14368   |   16  |   não  |   A agenda "%s" não foi excluída, pois está sendo usada por pelo menos um outro trabalho. Use "sp_detach_schedule" para remover agendas de um trabalho.  |
 |   14369   |   16  |   não  |   A ID da agenda "%s" é usada por mais de um trabalho. Especifique a job_id.  |
-|   14370   |   16  |   não  |   O @originating_server deve ser o nome do servidor local ou o do servidor mestre (MSX) para os trabalhos MSX em um servidor de destino (TSX). |
+|   14370   |   16  |   não  |   O \@originating_server deve ser o nome do servidor local ou o do servidor mestre (MSX) para os trabalhos MSX em um servidor de destino (TSX).    |
 |   14371   |   16  |   não  |   Existem duas ou mais agendas nomeadas "%s". Especifique %s em vez de %s para identificar exclusivamente a agenda. |
 |   14372   |   16  |   não  |   A agenda não foi excluída, pois está sendo usada por um ou mais trabalhos.  |
 |   14373   |   16  |   não  |   Forneça %s ou %s para identificar a agenda.    |
@@ -5640,7 +5640,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   14375   |   16  |   não  |   Mais de uma agenda nomeada "%s" está anexada ao trabalho "%s". Use "sp_update_schedule" para atualizar agendas.    |
 |   14376   |   16  |   não  |   Mais de uma agenda nomeada "%s" está anexada ao trabalho "%s". Use "sp_detach_schedule" para remover agendas de um trabalho. |
 |   14377   |   16  |   não  |   A agenda não foi anexada ao trabalho especificado. O proprietário da agenda e o do trabalho devem ser os mesmos ou a operação deve ser executada por um sysadmin. |
-|   14378   |   16  |   não  |   O sinalizador @sysadmin_only não tem mais suporte do SQLAgent e é mantido aqui somente por motivo de compatibilidade com versões anteriores.   |
+|   14378   |   16  |   não  |   O sinalizador \@sysadmin_only não tem mais suporte do SQLAgent e é mantido aqui somente por motivo de compatibilidade com versões anteriores  |
 |   14379   |   16  |   não  |   A chave estrangeira 'originating_server_id' da tabela '%s' não tem um valor correspondente na exibição 'dbo.sysoriginatingservers_view' referenciada.  |
 |   14380   |   16  |   não  |   O campo 'originating_server_id' na tabela sysoriginatingservers está sendo mencionado por sysjobs ou sysschedules. |
 |   14390   |   16  |   não  |   Somente os membros da função sysadmin podem especificar o parâmetro %s. |
@@ -5660,15 +5660,15 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   14415   |   16  |   não  |   O nome do usuário não pode ser nulo ao usar autenticação do SQL Server.  |
 |   14416   |   16  |   não  |   Esse procedimento armazenado deve ser executado em msdb.  |
 |   14417   |   16  |   não  |   Não é possível excluir o servidor monitor enquanto os bancos de dados estiverem participando do envio de logs. |
-|   14418   |   16  |   não  |   O @backup_file_name especificado não foi criado a partir do banco de dados '%s'. |
-|   14419   |   16  |   não  |   O @backup_file_name especificado não é um backup de banco de dados.   |
+|   14418   |   16  |   não  |   O \@backup_file_name especificado não foi criado a partir do banco de dados '%s'.    |
+|   14419   |   16  |   não  |   O \@backup_file_name especificado não é um backup de banco de dados.  |
 |   [14420](mssqlserver-14420-database-engine-error.md) |   16  |   Sim |   O banco de dados primário de envio de logs %s.%s tem um limite de backup de %d minutos e não executou uma operação de log de backup há %d minutos. Verifique as informações de monitoração de log do agente e de envio de logs.    |
 |   [14421](mssqlserver-14421-database-engine-error.md) |   16  |   Sim |   O banco de dados secundário de envio de logs %s.%s tem um limite de restauração de %d minutos e está fora de sincronização. Nenhuma restauração foi executada há %d minutos. A latência restaurada é de %d minutos. Verifique as informações de monitoração de log do agente e de envio de logs. |
-|   14422   |   16  |   não  |   Forneça @plan_id ou @plan_name.   |
+|   14422   |   16  |   não  |   Forneça \@plan_id ou \@plan_name. |
 |   14423   |   16  |   não  |   Outros bancos de dados estão inscritos nesse plano e devem ser removidos antes da exclusão do plano.   |
 |   14424   |   16  |   não  |   O banco de dados '%s' já está envolvido no envio de logs.  |
 |   14425   |   16  |   não  |   O banco de dados '%s' não parece estar envolvido no envio de logs. |
-|   14426   |   16  |   não  |   Monitor de envio de logs já definido. Chame sp_define_log_shipping_monitor com @delete_existing = 1.   |
+|   14426   |   16  |   não  |   Monitor de envio de logs já definido. Chame sp_define_log_shipping_monitor com \@delete_existing = 1.  |
 |   14427   |   16  |   não  |   Nome de usuário necessário para segurança do SQL Server.   |
 |   14428   |   16  |   não  |   Não foi possível remover o monitor porque ainda existem bancos de dados envolvidos no envio de logs. |
 |   14429   |   16  |   não  |   Ainda existem servidores secundários anexados a esse primário. |
@@ -5676,28 +5676,28 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   14440   |   16  |   não  |   Não foi possível definir o modo de usuário único. |
 |   14441   |   16  |   não  |   Alteração da função bem-sucedida.  |
 |   14442   |   16  |   não  |   Falha na alteração da função. |
-|   14450   |   16  |   não  |   O @backup_file_name especificado não foi retirado do banco de dados '%s'.   |
-|   14451   |   16  |   não  |   O @backup_file_name especificado não é um backup de banco de dados.   |
+|   14450   |   16  |   não  |   O \@backup_file_name especificado não foi obtido do banco de dados '%s'.  |
+|   14451   |   16  |   não  |   O \@backup_file_name especificado não é um backup de banco de dados.  |
 |   14500   |   16  |   não  |   Forneça uma ID de mensagem diferente de zero, severidade diferente de zero, condição de desempenho não nula ou namespace e consulta não nulos WMI.    |
 |   14501   |   16  |   não  |   Alerta ('%s') já definido nesta condição. |
-|   14502   |   16  |   não  |   O parâmetro @target_name deve ser fornecido ao especificar um @enum_type de 'TARGET'.  |
-|   14503   |   16  |   não  |   O parâmetro @target_name não deve ser fornecido ao especificar um @enum_type de 'ALL' ou 'ACTUAL'.   |
+|   14502   |   16  |   não  |   O parâmetro \@target_name deve ser fornecido ao especificar um \@enum_type de 'TARGET'.    |
+|   14503   |   16  |   não  |   O parâmetro \@target_name não deve ser fornecido ao especificar um \@enum_type 'ALL' de 'ALL' ou 'ACTUAL'. |
 |   14504   |   16  |   não  |   '%s' é o operador à prova de falhas. Você deve transformar outro operador no operador à prova de falhas antes de descartar '%s'.   |
 |   14505   |   16  |   não  |   Especifique um %s nulo ao fornecer uma condição de desempenho.   |
 |   14506   |   16  |   não  |   Não é possível definir alertas na ID de mensagem %ld.    |
 |   14507   |   16  |   não  |   Uma condição de desempenho deve ser formatada como: 'object_name|counter_name|instance_name|comparador(> ou < ou =)|valor numérico'.   |
-|   14508   |   16  |   não  |   Especificar ambos @wmi_namespace e @wmi_query. |
-|   14509   |   16  |   não  |   Especifique um %s válido ao fornecer um @wmi_namespace. |
-|   14510   |   16  |   não  |   Especifique um %s nulo ao fornecer um @wmi_namespace.  |
-|   14511   |   16  |   não  |   O @wmi_query não pôde ser executado no @wmi_namespace fornecido. Verifique se existe uma classe de evento selecionada na consulta no namespace e se a consulta tem a sintaxe correta.    |
-|   14512   |   16  |   não  |   Especifique um %s válido ao fornecer um @wmi_query. |
+|   14508   |   16  |   não  |   Especifique \@wmi_namespace e \@wmi_query.   |
+|   14509   |   16  |   não  |   Especifique um %s válido ao fornecer um \@wmi_namespace.    |
+|   14510   |   16  |   não  |   Especifique um %s nulo ao fornecer um \@wmi_namespace. |
+|   14511   |   16  |   não  |   \@wmi_query não pôde ser executada no \@wmi_namespace fornecido. Verifique se existe uma classe de evento selecionada na consulta no namespace e se a consulta tem a sintaxe correta.  |
+|   14512   |   16  |   não  |   Especifique um %s válido ao fornecer uma \@wmi_query.    |
 |   14513   |   10  |   não  |   Subsistema de consultas de análise    |
 |   14514   |   10  |   não  |   Subsistema de comandos de análise  |
-|   14515   |   16  |   não  |   Somente um membro da função do servidor sysadmin pode adicionar um trabalho para um proprietário diferente com @owner_login_name.   |
+|   14515   |   16  |   não  |   Somente um membro da função do servidor sysadmin pode adicionar um trabalho para um proprietário diferente com \@owner_login_name.  |
 |   14516   |   16  |   não  |   O proxy (%d) não é permitido para o subsistema "%s" e usuário "%s". Conceda permissão chamando sp_grant_proxy_to_subsystem ou sp_grant_login_to_proxy. |
 |   14517   |   16  |   não  |   Uma conta proxy não é permitida para um subsistema Transact-SQL.    |
 |   14518   |   16  |   não  |   Não é possível excluir proxy (%d). Ele é usado por pelo menos um jobstep. Primeiro altere esse proxy para todos os jobsteps. |
-|   14519   |   16  |   não  |   Somente um dos @login_name, @fixed_server_role, ou @msdb_role deve ser especificado. |
+|   14519   |   16  |   não  |   Somente um \@login_name, \@fixed_server_role ou \@msdb_role deve ser especificado.  |
 |   14520   |   16  |   não  |   %s não é um logon padrão válido do SQL Server, usuário do Windows NT, grupo do Windows NT ou função de banco de dados msdb.  |
 |   14521   |   16  |   não  |   %s não é uma função de servidor fixa válida do SQL Server, usuário do Windows NT ou grupo do Windows NT.   |
 |   14522   |   16  |   não  |   "%s" não é função válida de um banco de dados msdb, usuário do Windows NT ou grupo do Windows NT.    |
@@ -5750,18 +5750,18 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   14569   |   10  |   não  |   (crítico em termos de tempo) |
 |   14570   |   10  |   não  |   (Resultado do trabalho)   |
 |   14571   |   10  |   não  |   Nenhuma descrição disponível.   |
-|   14572   |   10  |   não  |   @freq_interval deve ser pelo menos 1 para um trabalho diário.  |
-|   14573   |   10  |   não  |   @freq_interval deve ser um bitmask de dia da semana válido [Domingo = 1 . Sábado = 64] para um trabalho semanal.  |
-|   14574   |   10  |   não  |   @freq_interval deve estar entre 1 e 31 para um trabalho mensal.  |
-|   14575   |   10  |   não  |   @freq_relative_interval deve ser um do 1º (0x1), 2º (0x2), 3º [0x4], 4º (0x8) ou Último (0x10).   |
-|   14576   |   10  |   não  |   @freq_interval deve estar entre 1 e 10 (1 = Domingo .. 7 = Sábado, 8 = Dia, 9 = Dia de Semana, 10 = Dia do Final de Semana) para um trabalho mensal.    |
-|   14577   |   10  |   não  |   @freq_recurrence_factor deve ser pelo menos 1. |
+|   14572   |   10  |   não  |   \@freq_interval deve ser pelo menos 1 para um trabalho diário. |
+|   14573   |   10  |   não  |   \@freq_interval deve ser um bitmask de dia da semana válido [Domingo = 1]. Sábado = 64] para um trabalho semanal. |
+|   14574   |   10  |   não  |   \@freq_interval deve estar entre 1 e 31 para um trabalho mensal. |
+|   14575   |   10  |   não  |   \@freq_relative_interval deve ser um do 1º (0x1), 2º (0x2), 3º [0x4], 4º (0x8) ou Último (0x10).  |
+|   14576   |   10  |   não  |   \@freq_interval deve estar entre 1 e 10 (1 = Domingo). 7 = Sábado, 8 = Dia, 9 = Dia de Semana, 10 = Dia do Final de Semana) para um trabalho mensal.   |
+|   14577   |   10  |   não  |   \@freq_recurrence_factor deve ser pelo menos 1.    |
 |   14578   |   10  |   não  |   É iniciado sempre que o uso da CPU permanece abaixo de %ld por cento por %ld segundos.   |
 |   14579   |   10  |   não  |   É iniciado automaticamente quando o SQLServerAgent é iniciado.    |
 |   14580   |   10  |   não  |   trabalho |
 |   14581   |   10  |   não  |   Subsistema do Leitor de Fila da Transação de Replicação  |
-|   14582   |   16  |   não  |   Somente um sysadmin pode especificar o parâmetro '@output_file_name' para um jobstep.    |
-|   14583   |   16  |   não  |   Somente um sysadmin pode especificar o parâmetro '@database_user_name'.    |
+|   14582   |   16  |   não  |   Somente um sysadmin pode especificar o parâmetro '\@output_file_name' para um jobstep.   |
+|   14583   |   16  |   não  |   Somente um sysadmin pode especificar um parâmetro '\@database_user_name'.   |
 |   14585   |   16  |   não  |   Somente o proprietário do pacote DTS '%s' ou um membro da função sysadmin pode reatribuir sua propriedade. |
 |   14586   |   16  |   não  |   Somente o proprietário do pacote DTS '%s' ou um membro da função sysadmin pode criar novas versões dele.  |
 |   14587   |   16  |   não  |   Somente o proprietário do pacote DTS '%s' ou um membro da função sysadmin pode descartá-lo ou descartar qualquer uma das suas versões. |
@@ -5787,32 +5787,32 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   14607   |   16  |   não  |   Nome de %s não é válido    |
 |   14608   |   16  |   não  |   O parâmetro %s ou %s precisa ser fornecido  |
 |   14609   |   16  |   não  |   O banco de dados de email para a associação do banco de dados do usuário não existe e, portanto, não pode ser atualizada.   |
-|   14610   |   16  |   não  |   O parâmetro @profile_name ou @description precisa ser especificado para atualização |
+|   14610   |   16  |   não  |   O parâmetro \@profile_name ou \@description precisa ser especificado para a atualização   |
 |   14611   |   16  |   não  |   O número de sequência da conta deve ser fornecido para atualização |
 |   14612   |   16  |   não  |   Cada entidade de segurança deve ter pelo menos um perfil padrão |
 |   14614   |   16  |   não  |   %s não é um mailserver_type válido   |
-|   14615   |   16  |   não  |   O parâmetro @username precisará ser fornecido, se a @password for fornecida.  |
+|   14615   |   16  |   não  |   O parâmetro \@username precisará ser fornecido se \@password for fornecida.    |
 |   14616   |   16  |   não  |   Não é possível recuperar a credencial recém-criada [%s] a partir do armazenamento de credenciais. |
 |   14617   |   16  |   não  |   Banco de dados de host de email especificado é inválido |
 |   14618   |   16  |   não  |   O parâmetro '%s' deve ser especificado. Esse parâmetro não pode ser NULL.    |
 |   14619   |   16  |   não  |   Erro recebido na conversa do Service Broker com o Database Mail. O Database Mail pode não estar disponível ou pode ter localizado um erro. Verifique o log de erros do Database Mail para obter informações.   |
 |   14620   |   16  |   não  |   A conversa do Service Broker com o Database Mail foi finalizada sem uma resposta do Database Mail. O Database Mail pode não estar disponível ou pode ter localizado um erro. Verifique o log de erros do Database Mail para obter mais informações. |
-|   14621   |   16  |   não  |   O parâmetro @attachmentencoding não oferece suporte ao valor "%s". A codificação do anexo deve ser "MIME".  |
-|   14622   |   16  |   não  |   O parâmetro @importance não oferece suporte ao valor "%s". A prioridade da mensagem deve ser LOW, NORMAL ou HIGH. |
-|   14623   |   16  |   não  |   O parâmetro @sensitivity não oferece suporte ao valor "%s". A confidencialidade da mensagem deve ser NORMAL, PERSONAL, PRIVATE ou CONFIDENTIAL. |
+|   14621   |   16  |   não  |   O parâmetro \@attachmentencoding não oferece suporte ao valor "%s". A codificação do anexo deve ser "MIME". |
+|   14622   |   16  |   não  |   O parâmetro \@importance não oferece suporte ao valor "%s". A prioridade da mensagem deve ser LOW, NORMAL ou HIGH.    |
+|   14623   |   16  |   não  |   O parâmetro \@sensitivity não oferece suporte ao valor "%s". A confidencialidade da mensagem deve ser NORMAL, PERSONAL, PRIVATE ou CONFIDENTIAL.    |
 |   14624   |   16  |   não  |   Pelo menos um dos seguintes parâmetros deve ser especificado. "%s".   |
-|   [14265](mssqlserver-14265-database-engine-error.md) |   16  |   não  |   O parâmetro @attach_query_result_as_file não pode ser 1 (true) quando nenhum valor está especificado para o parâmetro @query. É necessário especificar uma consulta para que os seus resultados sejam anexados.    |
-|   14626   |   16  |   não  |   O parâmetro @mailformat não oferece suporte ao valor "%s". O formato da mensagem deve ser TEXT ou HTML.    |
+|   [14265](mssqlserver-14265-database-engine-error.md) |   16  |   não  |   O parâmetro \@attach_query_result_as_file não pode ser 1 (true) quando nenhum valor está especificado para o parâmetro \@query. É necessário especificar uma consulta para que os seus resultados sejam anexados.  |
+|   14626   |   16  |   não  |   O parâmetro \@mailformat não oferece suporte ao valor "%s". O formato da mensagem deve ser TEXT ou HTML.   |
 |   14627   |   16  |   não  |   Erro %d recebido durante o envio de uma mensagem como parte da operação %s. O Database Mail pode não estar disponível ou pode ter localizado um erro. Verifique o log de erros do Database Mail para obter mais informações.    |
-|   14628   |   16  |   não  |   Formato do parâmetro @attachments incorreto. Os nomes de arquivos devem ser separados por ponto-e-vírgula ";". |
+|   14628   |   16  |   não  |   Formato do parâmetro \@attachments incorreto. Os nomes de arquivos devem ser separados por ponto-e-vírgula ";".    |
 |   14629   |   16  |   não  |   Não existe parâmetro de configuração denominado "%s", ou o valor fornecido não está com o tipo de dados correto.  |
 |   14630   |   16  |   não  |   O Database Mail não tem permissão para enviar arquivos com a extensão %s.    |
-|   14631   |   16  |   não  |   O usuário atual ('%s') não tem permissão para acessar o banco de dados especificado no parâmetro @execute_query_database ou não pode representar o usuário especificado no parâmetro @execute_query_as. Somente os membros da função de servidor fixa sysadmin e os membros da função de banco de dados fixa db_owner podem representar outro usuário. |
-|   14632   |   16  |   não  |   O nome de usuário %s especificado em @execute_query_as é inválido. Não existe usuário com esse nome.  |
-|   14633   |   16  |   não  |   O nome de banco de dados "%s" especificado em @execute_query_database é inválido. Não existe banco de dados com esse nome.  |
+|   14631   |   16  |   não  |   O usuário atual ('%s') não tem permissão para acessar o banco de dados especificado no parâmetro \@execute_query_database ou não pode representar o usuário especificado no parâmetro \@execute_query_as. Somente os membros da função de servidor fixa sysadmin e os membros da função de banco de dados fixa db_owner podem representar outro usuário.   |
+|   14632   |   16  |   não  |   O nome de usuário %s especificado em \@execute_query_as é inválido. Não existe usuário com esse nome. |
+|   14633   |   16  |   não  |   O nome do banco de dados "%s" especificado em \@execute_query_database é inválido. Não existe banco de dados com esse nome. |
 |   14634   |   10  |   não  |   Aviso: %s'    |
 |   14635   |   10  |   não  |   Email na fila.    |
-|   14636   |   16  |   não  |   Nenhum perfil global configurado. Especifique um nome de perfil no parâmetro @profile_name. |
+|   14636   |   16  |   não  |   Nenhum perfil global configurado. Especifique um nome de perfil no parâmetro \@profile_name.    |
 |   14637   |   10  |   não  |   Falha de ativação. |
 |   14638   |   10  |   não  |   Ativação bem-sucedida.  |
 |   14639   |   10  |   não  |   Fila de email iniciada pelo logon "%s".   |
@@ -5861,7 +5861,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   14684   |   16  |   não  |   Detectado o erro#: %d, Nível: %d, Estado: %d, no Procedimento: %s, Linha: %d, com a Mensagem: %s   |
 |   14685   |   16  |   não  |   Conjunto de coleta: '%s' não contém nenhum item de coleta, portanto iniciar o conjunto de coleta não terá nenhum efeito. |
 |   14686   |   16  |   não  |   Os parâmetros MDWInstance e MDWDatabase do repositório de configuração não podem ser nulos.   |
-|   14687   |   16  |   não  |   Valor inválido (%d) do parâmetro @cache_window. Os valores permitidos são: -1 (armazenar em cache todos os dados de carregamento de falhas de carregamentos anteriores), 0 (não armazenar em dados de carregamento), N (armazenar em cache dados de N falhas de carregamentos anteriores, onde N >= 1)   |
+|   14687   |   16  |   não  |   Valor inválido (%d) para o parâmetro \@cache_window. Os valores permitidos são: -1 (armazenar em cache todos os dados de carregamento de falhas de carregamentos anteriores), 0 (não armazenar em dados de carregamento), N (armazenar em cache dados de N falhas de carregamentos anteriores, onde N >= 1)  |
 |   14688   |   16  |   não  |   Um conjunto de coleta não pode ser iniciado quando o SQL Server Agent está parado. Inicie o SQL Server Agent. |
 |   14689   |   16  |   não  |   Um conjunto de coleta não poderá ser iniciado, se o data warehouse de gerenciamento não estiver configurado. Execute o script instmdw.sql para criar e configurar o data warehouse de gerenciamento. |
 |   14690   |   16  |   não  |   Não é possível executar este procedimento quando o coletor está habilitado. Desabilite o coletor e tente novamente.  |
@@ -5926,7 +5926,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   15036   |   16  |   não  |   Tipo de dados '%s' não existe ou você não tem permissão.    |
 |   15040   |   16  |   não  |   As mensagens de erro definidas pelo usuário devem ter uma ID maior que 50.000. |
 |   15041   |   16  |   não  |   As mensagens de erro definidas pelo usuário devem ter um nível de gravidade entre 1 e 25.    |
-|   15042   |   10  |   não  |   O parâmetro @with_log é ignorado para mensagens que não são da versão us_english.    |
+|   15042   |   10  |   não  |   O parâmetro \@with_log é ignorado para mensagens que não são da versão us_english.   |
 |   15043   |   16  |   não  |   É necessário especificar 'REPLACE' para substituir uma mensagem existente.    |
 |   15044   |   16  |   não  |   "%s" é um tipo de dispositivo de backup desconhecido. Use o tipo "disk" ou "tape".  |
 |   15045   |   16  |   não  |   O nome lógico não pode ser NULL.    |
@@ -6002,7 +6002,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   15137   |   16  |   não  |   Erro durante a execução de sp_xp_cmdshell_proxy_account. Motivos possíveis: conta fornecida inválida ou a credencial '%.*ls' não pôde ser criada. Código do erro: '%d'.    |
 |   15138   |   16  |   não  |   O principal de banco de dados possui um %S_MSG no banco de dados e não pode ser descartado.    |
 |   15141   |   16  |   não  |   A entidade do servidor possui um ou mais %S_MSG(s) e não pode ser descartada.  |
-|   15143   |   16  |   não  |   '%s' não é uma opção válida para o parâmetro @updateusage. Insira 'true' ou 'false'.  |
+|   15143   |   16  |   não  |   '%s' não é uma opção válida para o parâmetro \@updateusage. Insira 'true' ou 'false'. |
 |   15144   |   16  |   não  |   A função possui membros. Deve estar vazia para ser cancelada.    |
 |   15145   |   16  |   não  |   Falha na criação de um %S_MSG implícito. Razão: %S_MSG pode ter sido descartado ou seu nome já pode estar em uso. |
 |   15146   |   16  |   não  |   Deve ser fornecida uma senha de criptografia para criptografar a chave privada desse %S_MSG.  |
@@ -6025,7 +6025,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   15163   |   16  |   não  |   Valor de intervalo inválido. Intervalo válido está entre 1 e 7200 segundos. |
 |   15164   |   16  |   não  |   '%.*ls' não é um logon válido ou token de representação não pode ser emitido.   |
 |   15165   |   16  |   não  |   Não foi possível encontrar objeto '%ls' ou você não tem permissão.  |
-|   15166   |   10  |   não  |   Aviso: tipos de usuário criados por sp_addtype são contidos no esquema de dbo. Se especificado, o parâmetro @owner será ignorado.   |
+|   15166   |   10  |   não  |   Aviso: tipos de usuário criados por sp_addtype são contidos no esquema de dbo. Se especificado, o parâmetro \@owner será ignorado.  |
 |   15167   |   16  |   não  |   Não pode gerar o GUID.   |
 |   15168   |   16  |   não  |   Não é possível renomear a exibição '%s' e suas colunas e índices, pois é uma exibição gerada pelo sistema e criada para fins de otimização.   |
 |   15169   |   16  |   não  |   A opção de servidor "%ls" não está disponível nesta edição do SQL Server. |
@@ -6035,7 +6035,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   15173   |   16  |   não  |   Logon '%s' concedeu uma ou mais permissões. Revogue a(s) permissão(ões) antes de descartar o logon.   |
 |   15174   |   16  |   não  |   O logon '%s' possui um ou mais banco(s) de dados. Altere o proprietário do(s) seguinte(s) banco(s) de dados antes de descartar o logon. |
 |   15175   |   16  |   não  |   O logon '%s' já tem alias ou está mapeado para um usuário em um ou mais banco(s) de dados. Descarte o usuário ou alias antes de descartar o logon. |
-|   15176   |   16  |   não  |   O único valor válido @parameter é 'WITH_LOG'.  |
+|   15176   |   16  |   não  |   O único valor de \@parameter válido é 'WITH_LOG'. |
 |   15177   |   16  |   não  |   Uso: sp_dropmessage <msg number> [,<language> | 'ALL']    |
 |   15178   |   16  |   não  |   Não é possível descartar ou alterar uma mensagem com uma ID menor que 50.000. |
 |   15179   |   16  |   não  |   A mensagem número %u ou a versão do idioma especificado não existe. |
@@ -6068,14 +6068,14 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   15213   |   16  |   não  |   Aviso: o período de validade do certificado criado é inválido; a data de vencimento é anterior à data de início.   |
 |   15214   |   16  |   não  |   Aviso: o certificado criado está vencido.    |
 |   15215   |   16  |   não  |   Aviso: o certificado criado ainda não é válido; a data de início está no futuro. |
-|   15216   |   16  |   não  |   '%s' não é uma opção válida para o parâmetro @delfile.  |
+|   15216   |   16  |   não  |   '%s' não é uma opção válida para o parâmetro \@delfile. |
 |   15217   |   16  |   não  |   A propriedade não pode ser atualizada ou excluída. A propriedade '%.*ls' não existe para '%.* ls'. |
 |   15218   |   16  |   não  |   O objeto '%s' não é uma tabela. |
 |   15219   |   16  |   não  |   Não é possível alterar o proprietário de uma exibição indexada. |
 |   15222   |   16  |   não  |   A opção de logon remoto '%s' não é exclusiva. |
 |   15223   |   11  |   não  |   Erro: o parâmetro de entrada '%s' não pode ser nulo.  |
-|   15224   |   11  |   não  |   Erro: o valor do parâmetro @newname contém caracteres inválidos ou viola uma restrição básica (%s).   |
-|   15225   |   11  |   não  |   Nenhum item com o nome '%s' pôde ser encontrado no banco de dados atual '%s', dado que @itemtype foi entrado como '%s'.    |
+|   15224   |   11  |   não  |   Erro: o valor do parâmetro \@newname contém caracteres inválidos ou viola uma restrição básica (%s).  |
+|   15225   |   11  |   não  |   Não foi encontrado nenhum item com o nome '%s' no banco de dados atual '%s', dado que \@itemtype foi inserido como '%s'.   |
 |   15226   |   16  |   não  |   Não é possível criar tipos CLR a partir de um tipo de dados XML.   |
 |   15227   |   16  |   não  |   Não é possível renomear o banco de dados '%s'.    |
 |   15229   |   16  |   não  |   O argumento especificado para o parâmetro "%.*ls" do procedimento armazenado sp_db_vardecimal_storage_format não é válido. Os argumentos válidos são 'ON' ou 'OFF'.   |
@@ -6094,14 +6094,14 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   15244   |   16  |   não  |   Somente os membros da função sysadmin ou o proprietário do banco de dados podem definir as opções do banco de dados.   |
 |   15246   |   16  |   não  |   Não é possível despejar a chave privada do certificado '%s', pois a chave não pode ser encontrada.    |
 |   15247   |   16  |   não  |   O usuário não tem permissão para executar esta ação.   |
-|   15248   |   11  |   não  |   Ou o parâmetro @objname é ambíguo ou o @objtype (%s) reivindicado está errado.   |
-|   15249   |   11  |   não  |   Erro: @objtype '%s' explícito não foi reconhecido.  |
+|   15248   |   11  |   não  |   Ou o parâmetro \@objname é ambíguo ou o \@objtype (%s) reivindicado está errado. |
+|   15249   |   11  |   não  |   Erro: \@objtype '%s' explícito não foi reconhecido. |
 |   15250   |   16  |   não  |   O componente nome do banco de dados do qualificador do objeto deve ser o nome do banco de dados atual.   |
 |   15251   |   16  |   não  |   '%s' inválido especificado. Deve ser %s.  |
 |   15252   |   16  |   não  |   Deve ser fornecido o nome da tabela primária ou de chave estrangeira.    |
 |   15253   |   11  |   não  |   Erro de sintaxe ao analisar o identificador SQL '%s'.   |
 |   15254   |   16  |   não  |   Há outros usuários no banco de dados que não o proprietário do banco de dados ou o convidado. Descarte-os antes de remover o banco de dados. |
-|   15255   |   11  |   não  |   '%s' não é um valor válido para @autofix. O único valor válido é 'auto'. |
+|   15255   |   11  |   não  |   '%s' não é um valor válido para \@autofix. O único valor válido é 'auto'.    |
 |   15256   |   16  |   não  |   Uso: sp_certify_removable <dbname> [,'auto']  |
 |   15257   |   16  |   não  |   O banco de dados que você está tentando certificar não pode estar em uso ao mesmo tempo.  |
 |   15258   |   16  |   não  |   O banco de dados deve ser de propriedade de um membro da função sysadmin para ser removido.   |
@@ -6116,12 +6116,12 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   15267   |   16  |   não  |   Já existe um descritor de segurança com o nome '%s'.    |
 |   15268   |   10  |   Sim |   O modo de autenticação é %s.  |
 |   15269   |   16  |   não  |   O dispositivo de dados lógico '%s' não foi criado.   |
-|   15271   |   16  |   não  |   Valor de parâmetro @with_log inválido. Os valores válidos são 'true' ou 'false'.  |
+|   15271   |   16  |   não  |   O valor do parâmetro \@with_log é inválido. Os valores válidos são 'true' ou 'false'. |
 |   15272   |   10  |   não  |   A execução de %s '%.*s' não é confiável.    |
 |   15273   |   10  |   não  |   A chave de descriptografia está incorreta.    |
 |   15274   |   16  |   não  |   O acesso ao servidor remoto foi negado, pois no contexto de segurança atual ele não é confiável.  |
 |   15276   |   16  |   não  |   Não é possível provisionar senhas de chave mestra para bancos de dados do sistema. |
-|   15277   |   16  |   não  |   Os únicos valores @parameter_value válidos são 'true' ou 'false'.   |
+|   15277   |   16  |   não  |   Os únicos valores válidos para \@parameter_value são 'true' ou 'false'.  |
 |   15278   |   16  |   não  |   O logon '%s' já está mapeado para o usuário '%s' no banco de dados '%s'. |
 |   15279   |   16  |   não  |   É necessário adicionar a versão us_english dessa mensagem para adicionar a versão '%s'.    |
 |   15280   |   16  |   não  |   Todas as versões traduzidas dessa mensagem devem ser canceladas para que a versão us_english seja descartada.    |
@@ -6130,7 +6130,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   15283   |   16  |   não  |   O nome '%s' contém um número excessivo de caracteres. |
 |   15284   |   16  |   não  |   O principal de banco de dados concedeu ou negou permissões a objetos no banco de dados e não pode ser descartado.  |
 |   15285   |   16  |   não  |   Não é possível usar a palavra especial '%s' para um nome de dispositivo lógico. |
-|   15286   |   16  |   não  |   Finalizando esse procedimento. A @action '%s' não é reconhecida. Tente 'REPORT', 'UPDATE_ONE' ou 'AUTO_FIX'.    |
+|   15286   |   16  |   não  |   Finalizando esse procedimento. A \@action '%s' não é reconhecida. Tente 'REPORT', 'UPDATE_ONE' ou 'AUTO_FIX'.   |
 |   15287   |   16  |   não  |   Finalizando esse procedimento. '%s' é um valor proibido para o parâmetro nome de logon nesse procedimento.   |
 |   15288   |   10  |   não  |   Especifique um descriptografador para descriptografar uma chave.  |
 |   15289   |   16  |   não  |   Finalizando esse procedimento. Não pode haver uma transação aberta durante a execução.   |
@@ -6147,7 +6147,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   15302   |   11  |   não  |   Database_Name não deve se usado para qualificar owner.object do parâmetro nesse procedimento. |
 |   15303   |   11  |   não  |   O valor de configuração "user options" (%d) foi rejeitado, pois definiria opções incompatíveis.    |
 |   15304   |   16  |   não  |   O nível de gravidade da versão '%s' dessa mensagem deve ser igual ao nível de gravidade (%ld) da versão us_english.  |
-|   15305   |   16  |   não  |   O valor do parâmetro @TriggerType deve ser 'insert', 'update' ou 'delete'.   |
+|   15305   |   16  |   não  |   O valor do parâmetro \@TriggerType deve ser 'insert', 'update' ou 'delete'.  |
 |   15306   |   16  |   não  |   Não é possível alterar o nível de compatibilidade de bancos de dados replicados ou distribuídos.   |
 |   15307   |   16  |   não  |   Não foi possível alterar a opção de publicação de mesclagem porque o servidor não está configurado para replicação. |
 |   15309   |   16  |   não  |   Não é possível alterar o estado confiável do modelo ou do bancos de dados tempdb.    |
@@ -6174,7 +6174,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   15330   |   11  |   não  |   Não existem linhas correspondentes a serem relatadas.  |
 |   15331   |   11  |   não  |   O usuário '%s' não pode tomar a ação auto_fix devido a SID duplicado. |
 |   15332   |   10  |   não  |   A chave privada já está definida para este arquivo. Para alterá-la, cancele e crie novamente o certificado.   |
-|   15333   |   11  |   não  |   Erro: o @oldname qualificado faz referência a um banco de dados (%s) diferente do atual.   |
+|   15333   |   11  |   não  |   Erro: o \@oldname qualificado faz referência a um banco de dados (%s) diferente do atual.  |
 |   15334   |   10  |   não  |   O %S_MSG tem uma chave privada protegida por uma senha definida pelo usuário. Essa senha precisa ser fornecida para permitir o uso da chave privada. |
 |   15335   |   11  |   não  |   Erro: o novo nome '%s' já está sendo usado como um nome %s e causaria uma duplicidade que não é permitida.  |
 |   15336   |   16  |   não  |   Não é possível renomear o objeto '%s' porque ele participa de dependências impostas. |
@@ -6260,7 +6260,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   15427   |   16  |   não  |   É necessário especificar um nome de provedor para o produto desconhecido '%ls'. |
 |   15428   |   16  |   não  |   Não é possível especificar um provedor ou as propriedades para o produto '%ls'.  |
 |   15429   |   16  |   não  |   '%ls' é um nome de produto inválido.   |
-|   15431   |   16  |   não  |   Você deve especificar o parâmetro @rolename.   |
+|   15431   |   16  |   não  |   É necessário especificar o parâmetro \@rolename.  |
 |   15432   |   16  |   não  |   O procedimento armazenado '%s' só pode ser executado no nível ad hoc. |
 |   15433   |   16  |   não  |   O sid do parâmetro fornecido está sendo usado.   |
 |   15434   |   16  |   não  |   Não foi possível descartar o logon '%s' pois o usuário está conectado.   |
@@ -6819,8 +6819,8 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   18776   |   16  |   não  |   Erro ao aguardar o evento de acesso ao cache do artigo.  |
 |   18777   |   16  |   não  |   %s: erro ao inicializar componentes do MSMQ  |
 |   18778   |   16  |   não  |   %s: erro ao abrir o Microsoft Message Queue %s    |
-|   18780   |   16  |   não  |   Você especificou um valor para o parâmetro @dts_package_password. Você também deve especificar um valor para o parâmetro @dts_package_name.  |
-|   18781   |   16  |   não  |   O valor especificado para o parâmetro @backupdevicetype não é válido. O valor deve ser 'logical', 'disk' ou 'tape'.   |
+|   18780   |   16  |   não  |   Você especificou um valor para o parâmetro \@dts_package_password. Você também deve especificar um valor para o parâmetro \@dts_package_name.    |
+|   18781   |   16  |   não  |   O valor especificado para o parâmetro \@backupdevicetype é inválido. O valor deve ser 'logical', 'disk' ou 'tape'.  |
 |   18782   |   16  |   não  |   Não foi possível localizar informações de cabeçalho do backup do banco de dados '%s' no dispositivo de backup especificado. Especifique um dispositivo que contenha um backup do banco de dados Publicador.  |
 |   18783   |   16  |   não  |   O caminho do script de instalação da assinatura foi truncado, pois o caminho do diretório da pasta de instantâneo é muito longo. Reconfigure o Distribuidor para usar um caminho mais curto para este Publicador e repita a operação.  |
 |   18784   |   16  |   não  |   O caminho alternativo da pasta de instantâneo gerada pela replicação foi truncado. Reconfigure a publicação para usar um caminho alternativo mais curto para a pasta de instantâneo e repita a operação.  |
@@ -6971,7 +6971,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   20003   |   10  |   não  |   Não foi possível gerar apelido para '%s'.   |
 |   20004   |   10  |   não  |   A publicação '%s' tem a seguinte propriedade: '%s'. Os assinantes do SQL Server com versão anterior à '%s' devem ignorar essa configuração.  |
 |   20005   |   18  |   não  |   %ls: impossível converter parâmetro %ls: conversão resultante teria excesso de itens.  |
-|   20006   |   16  |   não  |   Não é possível fazer a alteração porque o artigo pode estar em uma publicação que tenha assinaturas anônimas ou de cliente. Defina @force_reinit_subscription como 1 para confirmar a reinicialização dessa assinatura. |
+|   20006   |   16  |   não  |   Não é possível fazer a alteração porque o artigo pode estar em uma publicação que tenha assinaturas anônimas ou de cliente. Defina \@force_reinit_subscription como 1 para confirmar a reinicialização dessa assinatura.    |
 |   20007   |   16  |   não  |   Não foi possível descartar com êxito as tabelas do sistema para replicação de mesclagem.  |
 |   20008   |   16  |   não  |   Não foi possível criar com êxito as tabelas do sistema para replicação de mesclagem.  |
 |   20009   |   16  |   não  |   Não foi possível adicionar o artigo '%s' à publicação '%s'.    |
@@ -6979,16 +6979,16 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   20011   |   16  |   não  |   Não é possível definir propriedades de publicação incompatíveis. A propriedade 'allow_anonymous' de uma publicação depende da propriedade 'immediate_sync'.   |
 |   20012   |   16  |   não  |   Tipo de assinatura '%s' não permitido na publicação '%s'.  |
 |   20013   |   16  |   não  |   Não é possível alterar a propriedade de publicação '%s' quando ela contém assinaturas. |
-|   20014   |   16  |   não  |   Valor @schema_option inválido.   |
+|   20014   |   16  |   não  |   Valor inválido para \@schema_option.  |
 |   20015   |   16  |   não  |   Não foi possível remover o diretório '%ls'. Verifique o contexto de segurança de xp_cmdshell e feche outros processos que possam estar acessando o diretório.  |
-|   20016   |   16  |   não  |   Valor @subscription_type inválido. Os valores válidos são 'pull' ou 'anonymous'.   |
+|   20016   |   16  |   não  |   Valor inválido para \@subscription_type. Os valores válidos são 'pull' ou 'anonymous'.  |
 |   20017   |   16  |   não  |   A assinatura não existe no Assinante.  |
-|   20018   |   16  |   não  |   O @optional_command_line é muito longo. Use um arquivo de definição de agente.   |
+|   20018   |   16  |   não  |   \@optional_command_line muito extensa. Use um arquivo de definição de agente.  |
 |   20019   |   16  |   não  |   Só será possível definir a opção '%s' do banco de dados de replicação se este for um banco de dados de publicação ou de distribuição. |
 |   20020   |   16  |   não  |   O resolvedor de artigo fornecido é inválido ou não existe. |
 |   20021   |   16  |   não  |   Não foi possível localizar a assinatura.    |
 |   20022   |   16  |   não  |   Este artigo possui agora configurações para desabilitar carregamentos e compensate_for_errors=true. Porém os assinantes locais e anônimos se comportarão como se compensate_for_errors=false.    |
-|   20023   |   16  |   não  |   Valor @subscriber_type inválido. As opções válidas são 'local', 'global' ou 'anonymous'.    |
+|   20023   |   16  |   não  |   Valor inválido para \@subscriber_type. As opções válidas são 'local', 'global' ou 'anonymous'.   |
 |   20024   |   16  |   não  |   A alt_snapshot_folder não pode ser igual ao diretório de trabalho.    |
 |   20025   |   16  |   não  |   O nome da publicação deve ser exclusivo. O nome de publicação '%s' especificado já foi usado. |
 |   20026   |   16  |   não  |   A publicação '%s' não existe.    |
@@ -7015,14 +7015,14 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   20049   |   16  |   não  |   O valor da prioridade não deve ser maior que 100.0. |
 |   20050   |   16  |   não  |   O período de retenção deve ser superior ou igual a 0, e não deve passar de 31 de dezembro de 9999. |
 |   20051   |   16  |   não  |   Assinante não registrado.   |
-|   20052   |   16  |   não  |   O valor do parâmetro @metatype deve ser nulo, 1, 2, 5 ou 6.  |
+|   20052   |   16  |   não  |   O valor do parâmetro \@metatype deve ser nulo, 1, 2, 5 ou 6. |
 |   20053   |   16  |   não  |   Um artigo com um valor %s diferente já existe para o objeto '%s'.    |
 |   20054   |   16  |   não  |   O banco de dados atual não está habilitado para publicação. |
 |   20055   |   16  |   não  |   Não é possível publicar a tabela '%s' para replicação de mesclagem porque ela tem uma coluna de carimbo de data/hora. |
 |   20056   |   16  |   não  |   Não é possível publicar a tabela '%s' novamente.   |
 |   20057   |   16  |   não  |   O nome de perfil '%s' já existe para o tipo de agente especificado.  |
-|   20058   |   16  |   não  |   O @agent_type deve ser 1 (Instantâneo), 2 (Leitor de Log), 3 (Distribuição) ou 4 (Mesclagem) |
-|   20059   |   16  |   não  |   O @profile_type deve ser 0 (Sistema) ou 1 (Personalizado)  |
+|   20058   |   16  |   não  |   O \@agent_type deve ser 1 (Instantâneo), 2 (Leitor de log), 3 (Distribuição) ou 4 (Mesclagem)    |
+|   20059   |   16  |   não  |   O \@profile_type deve ser 0 (Sistema) ou 1 (Personalizado) |
 |   20060   |   16  |   não  |   O nível de compatibilidade não pode ser menor que 60.  |
 |   20061   |   16  |   não  |   O nível de compatibilidade desse banco de dados deve ser definido como 70 ou superior para ser habilitado para publicação de mesclagem.    |
 |   20062   |   16  |   não  |   Não é permitido atualizar colunas com a propriedade rowguidcol.   |
@@ -7038,10 +7038,10 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   20073   |   16  |   não  |   Os artigos só podem ser adicionados ou alterados no Publicador. |
 |   20074   |   16  |   não  |   Somente um objeto de tabela pode ser publicado como um artigo de "tabela" para replicação de mesclagem.    |
 |   20075   |   16  |   não  |   O valor do parâmetro 'status' deve ser 'active' ou 'unsynced'. |
-|   20076   |   16  |   não  |   O valor do parâmetro @sync_mode deve ser 'native' ou 'character'. |
+|   20076   |   16  |   não  |   O valor do parâmetro \@sync_mode deve ser 'native' ou 'character'.    |
 |   20077   |   16  |   não  |   Problema ao gerar o apelido da réplica.    |
-|   20078   |   16  |   não  |   O valor do parâmetro @property deve ser um dos seguintes: 'sync_type', 'priority', 'description', 'subscriber_security_mode', 'subscriber_login', 'subscriber_password', 'publisher_security_mode', 'publisher_login', 'publisher_password', 'merge_job_login' ou 'merge_job_password'.  |
-|   20079   |   16  |   não  |   Valor de parâmetro @subscription_type inválido. As opções válidas são 'push', 'pull' ou 'both'.    |
+|   20078   |   16  |   não  |   O valor do parâmetro \@property deve ser um dos seguintes: 'sync_type', 'priority', 'description', 'subscriber_security_mode', 'subscriber_login', 'subscriber_password', 'publisher_security_mode', 'publisher_login', 'publisher_password', 'merge_job_login' ou 'merge_job_password'. |
+|   20079   |   16  |   não  |   Valor inválido para o parâmetro \@subscription_type. As opções válidas são 'push', 'pull' ou 'both'.   |
 |   20081   |   16  |   não  |   A propriedade da publicação '%s' não pode ser NULL.   |
 |   20084   |   16  |   não  |   Não é possível inscrever-se na assinatura da publicação '%.s' pelo banco de dados do assinante '%s'.   |
 |   20086   |   16  |   não  |   A publicação '%s' não oferece suporte ao tipo nosync por conter uma tabela que não possui uma coluna rowguidcol.   |
@@ -7066,7 +7066,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   20510   |   16  |   não  |   Assinaturas atualizáveis: não é possível atualizar colunas de identidade.   |
 |   20511   |   16  |   não  |   Assinaturas atualizáveis: não é possível atualizar colunas de carimbo de data/hora.  |
 |   20512   |   16  |   não  |   Assinaturas atualizáveis: revertendo a transação. |
-|   20513   |   16  |   não  |   O banco de dados '%s' não contém metadados de replicação para uma linha cuja ROWGUIDCOL corresponde ao valor especificado para o parâmetro @rowguid de sp_showrowreplicainfo. Verifique se o valor especificado para o parâmetro @rowguid está correto.  |
+|   20513   |   16  |   não  |   O banco de dados '%s' não contém metadados de replicação para uma linha cuja ROWGUIDCOL corresponde ao valor especificado para o parâmetro \@rowguid de sp_showrowreplicainfo. Verifique se o valor especificado para o parâmetro \@rowguid está correto.    |
 |   20514   |   10  |   não  |   Uma solicitação de validação de número de linhas foi enviada ao publicador heterogêneo %s para o artigo %s da publicação %s. Os resultados da validação serão publicados no histórico de distribuição. |
 |   20515   |   16  |   não  |   Assinaturas atualizáveis: as linhas do Publicador e do Assinante não correspondem. Execute o Distribution Agent para atualizar as linhas no assinante. |
 |   20516   |   16  |   não  |   Assinaturas atualizáveis: os dados replicados não são atualizáveis. |
@@ -7095,7 +7095,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   20540   |   10  |   não  |   Replicação: êxito do agente  |
 |   20541   |   10  |   não  |   Remove transações replicadas do banco de dados de distribuição. |
 |   20542   |   10  |   não  |   Detecta e remove assinaturas expiradas dos bancos de dados publicados. |
-|   20543   |   10  |   não  |   O parâmetro @rowcount_only deve ter o valor 0, 1 ou 2. 0=soma de verificação compatível com 7.0. 1=verificação somente do número de linhas. 2=nova funcionalidade de soma de verificação introduzida na versão 8.0.    |
+|   20543   |   10  |   não  |   O parâmetro \@rowcount_only deve ter o valor 0, 1 ou 2. 0=soma de verificação compatível com 7.0. 1=verificação somente do número de linhas. 2=nova funcionalidade de soma de verificação introduzida na versão 8.0.   |
 |   20545   |   10  |   não  |   Perfil do agente padrão   |
 |   20546   |   10  |   não  |   Perfil de agente com histórico detalhado.  |
 |   20547   |   10  |   não  |   Perfil do agente para registro em log do histórico detalhado. |
@@ -7155,8 +7155,8 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   20604   |   10  |   não  |   Você não tem permissões para executar agentes para assinaturas push. Especifique o parâmetro do agente 'SubscriptionType'.    |
 |   20605   |   10  |   não  |   Instantâneo da publicação existente invalidado. Execute o Snapshot Agent novamente para gerar um novo instantâneo.  |
 |   20606   |   10  |   não  |   Assinaturas reinicializadas.  |
-|   20607   |   10  |   não  |   Não é possível fazer a alteração porque um instantâneo já foi gerado. Defina @force_invalidate_snapshot como 1 para forçar a alteração e invalidar o instantâneo existente.   |
-|   20608   |   10  |   não  |   Não é possível fazer a alteração porque existem assinaturas ativas. Defina @force_reinit_subscription como 1 para forçar a alteração e reiniciar as assinaturas ativas.   |
+|   20607   |   10  |   não  |   Não é possível fazer a alteração porque um instantâneo já foi gerado. Defina \@force_invalidate_snapshot como 1 para forçar a alteração e invalidar o instantâneo existente.  |
+|   20608   |   10  |   não  |   Não é possível fazer a alteração porque existem assinaturas ativas. Defina \@force_reinit_subscription como 1 para forçar a alteração e reiniciar as assinaturas ativas.  |
 |   20609   |   16  |   não  |   Não é possível anexar o arquivo de assinatura '%s'. Verifique se ele é um arquivo de cópia de assinatura válido.  |
 |   20610   |   16  |   não  |   Não é possível executar '%s' quando o Log Reader Agent está replicando o banco de dados.  |
 |   20611   |   16  |   não  |   Não é possível adicionar o artigo. As publicações que permitem assinaturas que podem ser transformadas com o Data Transformation Services (DTS) podem incluir apenas tabelas e exibições indexadas que são publicadas como tabelas. |
@@ -7172,56 +7172,56 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   20621   |   11  |   não  |   Não é possível copiar um banco de dados de assinatura para um banco de dados existente.    |
 |   20622   |   11  |   não  |   A opção 'sincronizar com backup' do banco de dados de replicação não pode ser definida no banco de dados de publicação porque o banco de dados está no modo de Recuperação Simples.    |
 |   20623   |   11  |   não  |   Não é possível validar o artigo '%s', a menos que você tenha a permissão 'SELECT ALL' na tabela '%s'. |
-|   20624   |   16  |   não  |   O valor especificado para o parâmetro @login não é válido. O usuário '%s' não é um usuário no banco de dados '%s'. Adicione a conta do usuário ao banco de dados antes de tentar executar os procedimentos armazenados sp_grant_publication_access ou sp_revoke_publication_access.   |
+|   20624   |   16  |   não  |   O valor especificado para o parâmetro \@login é inválido. O usuário '%s' não é um usuário no banco de dados '%s'. Adicione a conta do usuário ao banco de dados antes de tentar executar os procedimentos armazenados sp_grant_publication_access ou sp_revoke_publication_access.  |
 |   20625   |   16  |   não  |   Não é possível criar a função de banco de dados PAL (lista de acesso à publicação) da replicação de mesclagem para a publicação '%s'. Essa função é usada pela replicação para controlar o acesso à publicação. Verifique se você tem permissões suficientes para criar funções no banco de dados da publicação.   |
-|   20626   |   16  |   não  |   O filtro '%s' já existe na publicação '%s'. Especifique um nome exclusivo para o parâmetro @filtername de sp_addmergefilter.   |
+|   20626   |   16  |   não  |   O filtro '%s' já existe na publicação '%s'. Especifique um nome exclusivo para o parâmetro \@filtername de sp_addmergefilter.  |
 |   20627   |   16  |   não  |   A ID da partição deve ser superior ou igual a 0.  |
 |   20628   |   16  |   não  |   Falha ao gerar instantâneo dinâmico.    |
 |   20629   |   16  |   não  |   Falha ao obter informações de ID da partição. |
-|   20630   |   16  |   não  |   Não é possível criar um trabalho de instantâneo particionado. Já existe um trabalho para a publicação '%ls' que utiliza os valores especificados para os parâmetros @suser_sname e/ou @host_name de sp_adddynamicsnapshot_job. Se o trabalho que já existe não estiver funcionando corretamente, use o sp_dropdynamicsnapshot_job para descartá-lo e criar um novo usando sp_adddynamicsnapshot_job.  |
+|   20630   |   16  |   não  |   Não é possível criar um trabalho de instantâneo particionado. Já existe um trabalho para a publicação '%ls' que utiliza os valores especificados para os parâmetros \@suser_sname e/ou \@host_name de sp_adddynamicsnapshot_job. Se o trabalho que já existe não estiver funcionando corretamente, use o sp_dropdynamicsnapshot_job para descartá-lo e criar um novo usando sp_adddynamicsnapshot_job.    |
 |   20631   |   16  |   não  |   Não é possível encontrar um local para gerar um instantâneo particionado. Verifique se há uma pasta de instantâneo válida para a publicação. Ela poderá ser a pasta padrão associada ao Distribuidor ou uma pasta alternativa associada à publicação.  |
 |   20632   |   16  |   não  |   Falha ao criar um trabalho de instantâneo dinâmico para gerar o instantâneo dinâmico.   |
 |   20633   |   16  |   não  |   Não é possível iniciar o trabalho de instantâneo particionado. Verifique se o SQL Server Agent está em execução no Distribuidor.  |
 |   20634   |   16  |   não  |   As principais informações sobre a publicação raiz não foram encontradas no republicador. |
 |   20635   |   16  |   não  |   Foi encontrada uma assinatura push para '%ls'. Não é possível adicionar um agente de assinatura pull para uma assinatura push.   |
 |   20636   |   16  |   não  |   Não é possível gerar os procedimentos armazenados de replicação de mesclagem para o artigo '%s'. Os procedimentos armazenados são gerados no Publicador quando o Snapshot Agent é executado ou quando uma ação de linguagem de definição de dados é executada; eles são gerados no Assinante quando o instantâneo é aplicado pelo Merge Agent. Verifique se os agentes têm as permissões adequadas para criar procedimentos e se os procedimentos ainda não existem.   |
-|   20637   |   10  |   não  |   A ordem do artigo, especificada no parâmetro @processing_order de sp_addmergearticle, não reflete as relações de chaves primária e estrangeira entre tabelas publicadas. O artigo '%s' faz referência a um ou mais artigos que serão criados posteriormente. Altere a propriedade processing_order usando sp_changemergearticle.  |
-|   20638   |   10  |   não  |   Os artigos da tabela de mesclagem não aceitam valores diferentes para os parâmetros @source_object e @destination_object de sp_addmergearticle. Não especifique um valor para @destination_object ou especifique o mesmo valor para ambos os parâmetros. |
+|   20637   |   10  |   não  |   A ordem do artigo, especificada no parâmetro \@processing_order de sp_addmergearticle, não reflete as relações de chaves primária e estrangeira entre as tabelas publicadas. O artigo '%s' faz referência a um ou mais artigos que serão criados posteriormente. Altere a propriedade processing_order usando sp_changemergearticle. |
+|   20638   |   10  |   não  |   Os artigos da tabela de mesclagem não aceitam valores diferentes para os parâmetros \@source_object e \@destination_object de sp_addmergearticle. Não especifique um valor para \@destination_object ou especifique o mesmo valor para ambos os parâmetros.  |
 |   20639   |   16  |   não  |   Não é possível habilitar a publicação para dar suporte a assinaturas não SQL Server porque a publicação está habilitada para assinaturas atualizáveis. Para dar suporte a assinaturas não SQL Server, descarte a publicação existente e crie uma nova com as propriedades allow_sync_tran e allow_queued_tran definidas como 'false'. |
 |   20640   |   16  |   não  |   Não é possível alterar habilitado para a propriedade de assinaturas heterogêneas enquanto houver assinaturas para a publicação.    |
 |   20641   |   16  |   não  |   Falha ao verificar se subset_filterclause possui uma função dinâmica.    |
-|   20642   |   16  |   não  |   Não é possível adicionar o artigo '%s' com uma ou mais funções dinâmicas à subset_filterclause '%s' para a publicação '%s' porque a publicação pode ter assinaturas ativas. Defina @force_reinit_subscription como 1 para adicionar o artigo e reiniciar todas as assinaturas ativas.   |
-|   20643   |   16  |   não  |   Não é possível alterar o valor de validate_subscriber_info para a publicação '%s', pois a publicação tem assinaturas ativas. Defina @force_reinit_subscription como 1 para alterar o valor e reiniciar todas as assinaturas ativas.   |
-|   20644   |   16  |   não  |   Valor inválido "%s" especificado para o parâmetro @identityrangemangementoption. Os valores válidos são "auto", "manual" ou "none". |
+|   20642   |   16  |   não  |   Não é possível adicionar o artigo '%s' com uma ou mais funções dinâmicas à subset_filterclause '%s' para a publicação '%s' porque a publicação pode ter assinaturas ativas. Defina \@force_reinit_subscription como 1 para adicionar o artigo e reiniciar todas as assinaturas ativas.  |
+|   20643   |   16  |   não  |   Não é possível alterar o valor de validate_subscriber_info para a publicação '%s', pois a publicação tem assinaturas ativas. Defina \@force_reinit_subscription como 1 para alterar o valor e reiniciar todas as assinaturas ativas.  |
+|   20644   |   16  |   não  |   Valor "%s" inválido especificado para o parâmetro \@identityrangemanagementoption. Os valores válidos são "auto", "manual" ou "none".    |
 |   20645   |   16  |   não  |   A propriedade "%s" não pode ser modificada para publicações habilitadas para assinaturas não SQL Server.    |
 |   20646   |   16  |   não  |   Publicações ponto a ponto não oferecem suporte a %s. Altere o valor do parâmetro '%s'.   |
 |   20647   |   16  |   não  |   Não é possível modificar a propriedade '%s'. A publicação é usada em uma topologia ponto a ponto que não permite que essa propriedade seja modificada após a publicação ser criada.    |
-|   20648   |   16  |   não  |   Já existe um artigo para a tabela "%s" com um valor diferente para a propriedade @delete_tracking. O valor deve ser igual para todas as publicações nas quais a tabela é publicada. Use os procedimentos armazenados sp_helpmergearticle e sp_changemergearticle para exibir e modificar a propriedade nos outros artigos.    |
+|   20648   |   16  |   não  |   Já existe um artigo para a tabela "%s" com um valor diferente para a propriedade \@delete_tracking. O valor deve ser igual para todas as publicações nas quais a tabela é publicada. Use os procedimentos armazenados sp_helpmergearticle e sp_changemergearticle para exibir e modificar a propriedade nos outros artigos.   |
 |   20649   |   16  |   não  |   Publicações habilitadas para assinaturas heterogêneas não oferecem suporte a %s. Altere o valor do parâmetro '%s'. |
-|   20650   |   16  |   não  |   Não é possível habilitar a replicação da DDL (linguagem de definição de dados) (um valor "true" para o parâmetro @replicate_ddl) para a publicação "%s". Isso ocorre porque o nível de compatibilidade da publicação é menor que 90RTM. Para novas publicações, no procedimento armazenado sp_addmergepublication, defina o parâmetro @publication_compatibility_level para 90RTM; para publicações existentes, use sp_changemergepublication.    |
+|   20650   |   16  |   não  |   Não é possível habilitar a replicação da DDL (linguagem de definição de dados) para a publicação "%s", ou seja, habilitar um valor "true" para o parâmetro \@replicate_ddl. Isso ocorre porque o nível de compatibilidade da publicação é menor que 90RTM. Para novas publicações, no procedimento armazenado sp_addmergepublication, defina o parâmetro \@publication_compatibility_level como 90RTM; para publicações existentes, use sp_changemergepublication.  |
 |   20651   |   16  |   não  |   Publicação "%s" "%s". Portanto, o nível de compatibilidade da publicação não pode ser definido como inferior a %d. Para definir o nível de compatibilidade como inferior, desabilite o recurso e chame o procedimento armazenado sp_changemergepublication para reduzir o nível de compatibilidade.    |
 |   20652   |   16  |   não  |   Os metadados necessários para a publicação '%s' não foram encontrados na tabela do sistema sysmergeschemachange. Execute o Snapshot Agent novamente.   |
 |   20653   |   16  |   não  |   Não é possível ter um trabalho de instantâneo dinâmico se os valores de dynamic_filter_login e dynamic_filter_hostname forem NULL.   |
 |   20654   |   16  |   não  |   Os instantâneos dinâmicos só são válidos para publicações de mesclagem.    |
 |   20655   |   16  |   não  |   O processo de instantâneo particionado não pode ser concluído. Não é possível recuperar o máximo de informações de carimbo de data/hora da tabela MSsnapshot_history no banco de dados de distribuição. Verifique se um instantâneo padrão está atualizado e disponível.    |
-|   20656   |   16  |   não  |   O parâmetro @subset_filterclause não pode fazer referência a uma coluna computada.  |
-|   20657   |   16  |   não  |   O valor do parâmetro @pub_identity_range deve ser um múltiplo do incremento para a coluna de identidade. O incremento para a tabela "%s" e para a coluna de identidade "%s" é %s.   |
-|   20658   |   16  |   não  |   O valor do parâmetro @identity_range deve ser um múltiplo do incremento para a coluna de identidade. O incremento para a tabela "%s" e para a coluna de identidade "%s" é %s.   |
+|   20656   |   16  |   não  |   O parâmetro \@subset_filterclause não pode fazer referência a uma coluna computada. |
+|   20657   |   16  |   não  |   O valor do parâmetro \@pub_identity_range deve ser um múltiplo do incremento para a coluna de identidade. O incremento para a tabela "%s" e para a coluna de identidade "%s" é %s.  |
+|   20658   |   16  |   não  |   O valor do parâmetro \@identity_range deve ser um múltiplo do incremento para a coluna de identidade. O incremento para a tabela "%s" e para a coluna de identidade "%s" é %s.  |
 |   20659   |   11  |   não  |   O valor de IDENT_CURRENT ("%s") é maior que o valor na coluna max_used da tabela do sistema MSmerge_identity_range.  |
-|   20660   |   16  |   não  |   O intervalo de republicação do republicador obtido do publicador não é grande o suficiente para alocar o @pub_identity_range especificado. |
-|   20661   |   16  |   não  |   O intervalo de republicação do republicador obtido do publicador não é grande o suficiente para alocar o @identity_range especificado. |
+|   20660   |   16  |   não  |   O intervalo de republicação do republicador obtido do publicador não é grande o suficiente para alocar o \@pub_identity_range especificado.    |
+|   20661   |   16  |   não  |   O intervalo de republicação do republicador obtido do publicador não é grande o suficiente para alocar o \@identity_range especificado.    |
 |   20662   |   16  |   não  |   O republicador não tem um intervalo de valores de identidade do Publicador original '%s' que possa atribuir aos Assinantes. Verifique se o republicador tem uma assinatura de servidor para a publicação no Publicador raiz e execute o Merge Agent para sincronizar com o Publicador raiz.   |
-|   20663   |   16  |   não  |   A entrada de alocação do intervalo de identidades do Publicador não foi encontrada na tabela do sistema MSmerge_identity_range. Verifique se o valor para a propriedade @identityrangemanagementoption é "auto".   |
+|   20663   |   16  |   não  |   A entrada de alocação do intervalo de identidades do Publicador não foi encontrada na tabela do sistema MSmerge_identity_range. Verifique se o valor da propriedade \@identityrangemanagementoption é "auto".  |
 |   20664   |   16  |   não  |   Um novo intervalo de valores de identidade não pode ser atribuído ao Publicador, pois os valores do tipo de dados da coluna de identidade foram todos usados. Altere o tipo de dados na coluna de identidade.    |
 |   20665   |   16  |   não  |   O republicador não tem um intervalo de valores de identidade do Publicador raiz que possa atribuir aos Assinantes. Execute o Merge Agent para sincronizar com o Publicador raiz. |
 |   20666   |   16  |   não  |   Não é possível atualizar o intervalo de identidades e/ou verificar restrição no Publicador. Verifique o seguinte: se o valor na coluna de identidade não atingiu o valor máximo para o tipo de dados na coluna identidade; e se o usuário que fez a última inserção tem os privilégios para descartar e recriar a restrição de verificação. |
 |   20667   |   16  |   não  |   Não é possível alocar um intervalo de identidades para o artigo "%s". O artigo não está habilitado para gerenciamento automático do intervalo de identidades. |
 |   20668   |   16  |   não  |   Não há intervalo disponível suficiente para alocar um novo intervalo para um assinante.    |
-|   20669   |   16  |   não  |   O objeto mencionado pelo @article ou @artid '%s' apresentado não foi encontrado.  |
+|   20669   |   16  |   não  |   O objeto de referência do \@article ou \@artid '%s' apresentado não foi encontrado.    |
 |   20670   |   16  |   não  |   Não é possível adicionar, descartar ou alterar a restrição de verificação do intervalo de identidades para a tabela %s. Essa restrição é usada pela replicação para gerenciamento automático do intervalo de identidades. Em geral, esse erro ocorre quando o usuário que fez a última inserção na tabela não tem permissão para fazer alterações de esquema na tabela. Se o erro ocorrer no Publicador, execute sp_adjustpublisheridentityrange; se ocorrer no Assinante, execute o Merge Agent.   |
 |   20671   |   16  |   não  |   Não é possível localizar a entrada de alocação de intervalo de identidades do Assinante na tabela MSmerge_identity_range. Reinicialize a assinatura.  |
-|   20672   |   16  |   não  |   Foi especificado um valor para o parâmetro @host_name, mas nenhum artigo na publicação utiliza HOST_NAME() para filtragem com parâmetros. |
-|   20673   |   16  |   não  |   Foi especificado um valor para o parâmetro @host_name, mas nenhum artigo na publicação utiliza SUSER_SNAME() para filtragem com parâmetros.   |
+|   20672   |   16  |   não  |   Foi especificado um valor para o parâmetro \@host_name, mas nenhum artigo na publicação utiliza HOST_NAME() para filtragem com parâmetros.    |
+|   20673   |   16  |   não  |   Foi especificado um valor para o parâmetro \@host_name, mas nenhum artigo na publicação utiliza SUSER_SNAME() para filtragem com parâmetros.  |
 |   20674   |   16  |   não  |   A publicação não usa filtragem dinâmica. |
 |   20675   |   16  |   não  |   Os valores do intervalo de identidades não podem ser NULL.   |
 |   20676   |   11  |   não  |   Não é possível atualizar o intervalo de identidades do Publicador para o artigo "%s". Execute o procedimento armazenado sp_adjustpublisheridentityrange para atualizar o intervalo de identidades.   |
@@ -7229,11 +7229,11 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   20678   |   11  |   não  |   Não é possível localizar o trabalho de instantâneo regular da publicação especificada '%s'. |
 |   20679   |   11  |   não  |   Não é possível executar o procedimento armazenado sp_adjustpublisheridentityrange no banco de dados atual, pois este é um republicador ou um Assinante. Para ajustar o intervalo de identidades em um republicador ou um Assinante, sincronize com o Publicador original.  |
 |   20680   |   16  |   não  |   Falha ao obter metadados para um lote de linhas. |
-|   20681   |   10  |   não  |   Não é possível especificar um valor 1, 2 ou 3 para o parâmetro @partition_options porque a publicação "%s" tem um nível de compatibilidade inferior a 90RTM. Use o procedimento armazenado sp_changemergepublication para definir publication_compatibility_level como 90RTM.  |
+|   20681   |   10  |   não  |   Não é possível especificar um valor 1, 2 ou 3 para o parâmetro \@partition_options porque a publicação "%s" tem um nível de compatibilidade inferior a 90RTM. Use o procedimento armazenado sp_changemergepublication para definir publication_compatibility_level como 90RTM. |
 |   20682   |   10  |   não  |   Falha na exclusão de linhas da tentativa de exclusão em lotes na tabela %s.  |
 |   20683   |   16  |   não  |   Falha na exclusão em lotes no artigo somente para download %s.    |
 |   20684   |   16  |   não  |   Foram excluídas mais linhas do que o esperado na tentativa de exclusão em lotes na tabela %s. Pare e reinicie o Merge Agent.    |
-|   20685   |   16  |   não  |   Não é possível descartar o filtro '%s'. O filtro especificado para o parâmetro @filtername não foi encontrado.   |
+|   20685   |   16  |   não  |   Não é possível descartar o filtro '%s'. O filtro especificado para o parâmetro \@filtername não foi encontrado.  |
 |   20686   |   16  |   não  |   O parâmetro '%s' não pode ser NULL nem estar vazio quando este procedimento é executado em um banco de dados '%s'. |
 |   20687   |   16  |   não  |   O parâmetro '%s' deve ser NULL quando este procedimento não é executado em um banco de dados '%s'.  |
 |   20688   |   16  |   não  |   A ID do token de rastreamento (%d) não foi encontrada para o Publicador %s, banco de dados %s, publicação %s. Use o procedimento armazenado sp_helptracertokens para recuperar a lista de IDs de token de rastreamento válidas.   |
@@ -7245,14 +7245,14 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   20694   |   16  |   não  |   Uma ou mais linhas a serem atualizadas para a tabela %s contêm alterações na coluna %s, que é usada em um ou mais filtros. A replicação de mesclagem não pode usar o processamento em lotes para essas alterações. Nenhuma ação é necessária, mas se essa condição ocorrer com frequência, verifique se os dados estão particionados da forma ideal. As atualizações em lotes podem melhorar o desempenho da replicação de mesclagem. |
 |   20695   |   16  |   não  |   Somente %ld de %ld linhas foram atualizadas no procedimento de atualização em lotes para a tabela %s; outras linhas não foram atualizadas porque foram excluídas. Nenhuma ação é necessária, mas, se essa condição ocorrer com frequência, determine se é possível evitar conflitos de atualização-exclusão. As atualizações em lotes podem ser úteis para o desempenho.  |
 |   20696   |   16  |   não  |   O objeto %s está marcado como fornecido pela Microsoft (ms_shipped). Ele não pode ser adicionado como um artigo para replicação de mesclagem.   |
-|   20697   |   16  |   não  |   Não é possível descartar o artigo %s da publicação %s. Nessa publicação, este é o único artigo que usa um filtro com parâmetros. O descarte desse artigo altera a publicação para uma publicação estática, o que requer a reinicialização de todos os Assinantes. Para descartar o artigo e reiniciar todas as assinaturas ativas, especifique o valor 1 para o parâmetro @force_reinit_subscription de sp_dropmergepublication. |
-|   20698   |   16  |   não  |   Não foi especificado um valor para o parâmetro @host_name, embora a publicação use HOST_NAME() para filtragem dinâmica.    |
-|   20699   |   16  |   não  |   Não foi especificado um valor para o parâmetro @suser_sname, embora a publicação use SUSER_SNAME() para filtragem dinâmica.    |
+|   20697   |   16  |   não  |   Não é possível descartar o artigo %s da publicação %s. Nessa publicação, este é o único artigo que usa um filtro com parâmetros. O descarte desse artigo altera a publicação para uma publicação estática, o que requer a reinicialização de todos os Assinantes. Para descartar o artigo e reiniciar todas as assinaturas ativas, especifique um valor 1 para o parâmetro \@force_reinit_subscription de sp_dropmergepublication.    |
+|   20698   |   16  |   não  |   Não foi especificado um valor para o parâmetro \@host_name, embora a publicação use HOST_NAME() para filtragem dinâmica.   |
+|   20699   |   16  |   não  |   Não foi especificado um valor para o parâmetro \@suser_sname, embora a publicação use SUSER_SNAME() para filtragem dinâmica.   |
 |   20701   |   16  |   não  |   O agendamento do trabalho de instantâneo dinâmico não pôde ser alterado no distribuidor.  |
 |   20702   |   16  |   não  |   O agendamento do trabalho de instantâneo dinâmico não pôde ser alterado devido a um ou mais erros.   |
 |   20703   |   16  |   não  |   Uma ou mais linhas inseridas na tabela '%s' estavam fora da partição, embora a tabela tenha sido publicada com 'partition_options' definidas como %d. |
 |   20704   |   16  |   não  |   O tipo de dados da coluna de identidade da tabela '%s' é tinyint, que não tem números suficientes disponíveis para o intervalo de identidade de mesclagem automática. Altere a coluna de identidade para que tenha um tipo de dados maior e adicione o artigo de mesclagem com gerenciamento de intervalo de identidades automáticas de mesclagem.   |
-|   20705   |   10  |   não  |   Não é possível definir @conflict_logging como 'both' porque a publicação '%s' tem um nível de compatibilidade inferior a 90. Defina o @publication_compatibility_level como '90RTM' ao criar a publicação ou use sp_changemergepublication para definir publication_compatibility_level como '90RTM'.  |
+|   20705   |   10  |   não  |   Não é possível definir \@conflict_logging como 'both' porque a publicação '%s' tem um nível de compatibilidade inferior a 90. Defina \@publication_compatibility_level como '90RTM' ao criar a publicação ou use sp_changemergepublication para definir publication_compatibility_level como '90RTM'.    |
 |   20706   |   10  |   não  |   Não foi possível localizar os números de identidade máx. ou mín. permitidos para a coluna de identidade do artigo em questão.   |
 |   20707   |   10  |   não  |   Falha ao publicar o artigo com identityrangemanagementoption definido como 'auto' devido a um ou mais erros.   |
 |   20708   |   10  |   não  |   Um artigo não pode fazer parte de um registro lógico quando tem um resolvedor de lógica comercial personalizado.  |
@@ -7269,15 +7269,15 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   20719   |   16  |   não  |   Falha em sp_changemergelogsettings ao atualizar configurações de log. Verifique os valores dos parâmetros.    |
 |   20720   |   16  |   não  |   Não existem configurações de log para o servidor de assinante '%s', banco de dados de assinante '%s', servidor Web '%s'.   |
 |   20721   |   16  |   não  |   Falha em sp_dropmergelogsettings ao remover configurações de log.  |
-|   20722   |   16  |   não  |   Falha em '%s'. O valor do parâmetro '%s' não é válido. Os valores válidos são @support_options [0 - 5], @log_severity [1 - 4], @log_file_size [2,000,000 - 999,000,000], @no_of_log_files [2 - 500], @upload_interval [0 - 40320], @delete_after_upload [0 - 1]. |
+|   20722   |   16  |   não  |   Falha em '%s'. O valor do parâmetro '%s' não é válido. Os valores válidos são \@support_options [0 a 5], \@log_severity [1 a 4], \@log_file_size [2.000.000 a 999.000.000], \@no_of_log_files [2 a 500], \@upload_interval [0 a 40320],\@@delete_after_upload [0 a 1].   |
 |   20723   |   16  |   não  |   A coluna computada "%s" só pode ser adicionada à publicação depois que seu objeto dependente "%s" for adicionado. |
 |   20724   |   16  |   não  |   Não é possível localizar uma linha de comando válida para o trabalho de instantâneo dinâmico com job_id '%s' para a publicação '%s'. |
 |   20725   |   16  |   não  |   Não é possível atualizar a localização do instantâneo dinâmico para o trabalho de instantâneo dinâmico com job_id '%s' na publicação '%s'.   |
 |   20726   |   16  |   não  |   Falha ao alterar a localização do instantâneo dinâmico em um ou mais trabalhos de instantâneo dinâmico para a publicação em questão.  |
-|   20727   |   16  |   não  |   Foi especificado um valor inválido para o parâmetro @subscription_type. Os valores válidos são 'push', 'pull', 'both', 'anonymous' ou 'all'. |
+|   20727   |   16  |   não  |   Foi especificado um valor inválido para o parâmetro \@subscription_type. Os valores válidos são 'push', 'pull', 'both', 'anonymous' ou 'all'.    |
 |   20728   |   16  |   não  |   Falha ao restaurar o valor de identidade máx. alocado para o artigo '%s' na publicação '%s'.    |
 |   20729   |   16  |   não  |   A alocação do valor de identidade máx. para o artigo '%s' na publicação '%s' não foi encontrado no distribuidor.   |
-|   20730   |   16  |   não  |   A definição de @upload_first como 'true' exige que a publicação esteja no publication_compatibility_level de '80RTM' ou superior. Use sp_changemergepublication para definir publication_compatibility_level como '80RTM' ou superior se desejar usar esse recurso.  |
+|   20730   |   16  |   não  |   A definição de \@upload_first como 'true' exige que a publicação esteja no publication_compatibility_level de '80RTM' ou superior. Use sp_changemergepublication para definir publication_compatibility_level como '80RTM' ou superior se desejar usar esse recurso. |
 |   20731   |   16  |   não  |   Esta edição do SQL Server não dá suporte a publicações. Descartando publicações existentes.   |
 |   20732   |   10  |   não  |   Aviso: os valores de alguns dos sinalizadores especificados na propriedade 'schema_option' não são compatíveis com o nível de compatibilidade da publicação. O valor modificado de schema_option '%s' será usado.    |
 |   20733   |   16  |   não  |   Uma ou mais linhas atualizadas na tabela '%s' estavam fora da partição, embora a tabela tenha sido publicada com 'partition_options' definidas como %d.  |
@@ -7325,7 +7325,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   21011   |   16  |   não  |   Assinaturas desativadas.  |
 |   21012   |   16  |   não  |   Não é possível alterar a propriedade 'allow_push' da publicação para "false". Existem assinaturas push na publicação. |
 |   21013   |   16  |   não  |   Não é possível alterar a propriedade 'allow_pull' da publicação para "false". Existem assinaturas pull na publicação. |
-|   21014   |   16  |   não  |   O valor do parâmetro @optname deve ser 'transactional' ou 'merge'.    |
+|   21014   |   16  |   não  |   O valor do parâmetro \@optname deve ser 'transactional' ou 'merge'.   |
 |   21015   |   16  |   não  |   A opção de replicação '%s' já foi definida como TRUE.   |
 |   21016   |   16  |   não  |   A opção de replicação '%s' já foi definida como FALSE.  |
 |   21017   |   16  |   não  |   Não é possível executar a operação de soma de verificação compatível com SQL Server 7.0 em um artigo de mesclagem com partição vertical ou horizontal. A validação do número de linhas e a operação de soma de verificação binária compatível com o SQL Server 2000 podem ser executadas nesse artigo.  |
@@ -7340,7 +7340,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   21026   |   16  |   não  |   Não é possível haver uma assinatura anônima em uma publicação que não tem um agente independente. |
 |   21027   |   16  |   não  |   '%s' procedimentos armazenados de replicação não estão instalados. É necessário reinstalar o SQL Server com Replicação.   |
 |   21028   |   16  |   não  |   Os componentes de replicação não estão instalados neste servidor. Execute a instalação do SQL Server novamente e selecione a opção para instalar a replicação.   |
-|   21029   |   16  |   não  |   Não é possível descartar uma entrada de assinatura push no assinante, a menos que @drop_push seja 'true'.    |
+|   21029   |   16  |   não  |   Não é possível descartar uma entrada de assinatura push no Assinante, a menos que \@drop_push seja 'true'.   |
 |   21030   |   16  |   não  |   Os nomes dos agentes de replicação do SQL Server não podem ser alterados.   |
 |   21031   |   16  |   não  |   'post_script' não tem suporte para artigos de procedimento armazenado.   |
 |   21032   |   16  |   não  |   Não foi possível assinar porque o Assinante não SQL Server '%s' não dá suporte ao modo de atualização 'sync tran'.    |
@@ -7355,7 +7355,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   21041   |   16  |   não  |   Não é permitido um Publicador de distribuição remota nesta versão do servidor.  |
 |   21042   |   16  |   não  |   A propriedade do Publicador de distribuição, 'distributor_password', não tem utilidade e não tem suporte para um Distribuidor em execução no Windows NT 4.0. |
 |   21043   |   16  |   não  |   Distribuidor não instalado.   |
-|   21044   |   16  |   não  |   Não é possível ignorar o Distribuidor remoto (@ignore_remote_distributor não pode ser 1) ao habilitar o banco de dados para publicação ou publicação de mesclagem.    |
+|   21044   |   16  |   não  |   Não é possível ignorar o Distribuidor remoto (\@ignore_remote_distributor não pode ser 1) ao habilitar o banco de dados para publicação ou publicação de mesclagem.   |
 |   21045   |   16  |   não  |   Não é possível desinstalar o Distribuidor porque existem bancos de dados habilitados para publicação ou publicação de mesclagem.    |
 |   21046   |   16  |   não  |   Não é possível alterar a propriedade do Publicador de distribuição 'distribution_db' porque o Publicador está usando o banco de dados de distribuição atual.   |
 |   21047   |   16  |   não  |   Não é possível descartar o Publicador de distribuição local porque existem Assinantes definidos. |
@@ -7403,8 +7403,8 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   21106   |   16  |   não  |   Esta edição do SQL Server não dá suporte a publicações.   |
 |   21107   |   16  |   não  |   '%ls' não é uma tabela ou exibição.   |
 |   21108   |   16  |   não  |   Esta edição do SQL Server não dá suporte a publicações transacionais. |
-|   21109   |   16  |   não  |   Os parâmetros @xact_seqno_start e @xact_seqno_end devem ser idênticos se @command_id for especificado. |
-|   21110   |   16  |   não  |   @xact_seqno_start e @publisher_database_id devem ser especificados se @command_id for especificado. |
+|   21109   |   16  |   não  |   Os parâmetros \@xact_seqno_start e \@xact_seqno_end devem ser idênticos se \@command_id estiver especificado.  |
+|   21110   |   16  |   não  |   \@xact_seqno_start e \@publisher_database_id devem ser especificados se \@command_id estiver especificado.  |
 |   21111   |   16  |   não  |   '%s' não é um parâmetro válido para o Snapshot Agent.   |
 |   21112   |   16  |   não  |   '%s' não é um parâmetro válido para o Log Reader Agent. |
 |   21113   |   16  |   não  |   '%s' não é um parâmetro válido para o Distribution Agent.   |
@@ -7435,14 +7435,14 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   21138   |   16  |   não  |   A propriedade 'offload_server' não pode ser a mesma do nome do Distribuidor.   |
 |   21139   |   16  |   não  |   Não foi possível determinar o nome do Assinante para execução distribuída do agente.    |
 |   21140   |   16  |   não  |   A execução do agente não pode ser distribuída para um Assinante que reside no mesmo servidor do Distribuidor.   |
-|   21141   |   16  |   não  |   O sinalizador @change_active pode não estar especificado para artigos com filtros ou exibições manuais. |
+|   21141   |   16  |   não  |   O sinalizador \@change_active pode não estar especificado para artigos com filtros ou exibições manuais.    |
 |   21142   |   16  |   não  |   O SQL Server '%s'' não pôde obter informações sobre associação de grupo do Windows para o logon '%s'. Verifique se a conta do Windows tem acesso ao domínio do logon.    |
 |   21143   |   16  |   não  |   Opção de esquema do procedimento armazenado personalizado inválida para um artigo de publicação de instantâneo.    |
 |   21144   |   16  |   não  |   Não é possível assinar a publicação do sync_type 'dump database' porque o Assinante possui assinaturas em outras publicações.    |
 |   21145   |   16  |   não  |   Não é possível assinar a publicação %s porque o Assinante possui uma assinatura em uma publicação do sync_type 'dump database'. |
-|   21146   |   16  |   não  |   @use_ftp não poderá ser 'true' enquanto @alt_snapshot_folder estiver NULL ou vazio. |
+|   21146   |   16  |   não  |   \@use_ftp não pode ser 'true' enquanto \@alt_snapshot_folder não for NULL ou vazio.   |
 |   21147   |   16  |   não  |   O banco de dados '%s' não está publicado para replicação de mesclagem.   |
-|   21148   |   16  |   não  |   @subscriber e @subscriberdb devem ser especificados simultaneamente com valores não nulos ou não devem ser especificados. |
+|   21148   |   16  |   não  |   \@subscriber e \@subscriberdb devem ser especificados simultaneamente com valores não nulos ou não devem ser especificados.   |
 |   21149   |   16  |   não  |   O banco de dados '%s' não está publicado para replicação transacional ou de instantâneo.   |
 |   21150   |   16  |   não  |   Não é possível determinar a pasta de instantâneo da assinatura especificada porque o Assinante especificado não é conhecido pelo Distribuidor.    |
 |   21151   |   16  |   não  |   Não há suporte para comandos pré e pós-instantâneo para uma publicação que pode dar suporte a Assinantes não SQL Server usando o bcp do modo de caractere como o método de sincronização.  |
@@ -7450,7 +7450,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   21153   |   16  |   não  |   Não é possível criar o artigo '%s'. Todos os artigos que fazem parte de uma publicação de sincronização simultânea devem usar procedimentos armazenados para aplicar alterações no Assinante.   |
 |   21154   |   16  |   não  |   Não é possível alterar o artigo '%s'. Todos os artigos que fazem parte de uma publicação de sincronização simultânea devem usar procedimentos armazenados para aplicar alterações no Assinante.   |
 |   21155   |   16  |   não  |   Não é possível alterar o artigo '%s'. Os artigos que fazem parte de uma publicação de sincronização simultânea não podem ter ins_cmd/del_cmd que exceda %d caracteres.   |
-|   21156   |   16  |   não  |   O valor do parâmetro @status deve ser 'initiated' ou 'active'.    |
+|   21156   |   16  |   não  |   O valor do parâmetro \@status deve ser 'initiated' ou 'active'.   |
 |   21157   |   16  |   não  |   A opção de compactação de instantâneo só pode ser habilitada para uma publicação que tenha uma pasta de geração de instantâneo alternativa definida.   |
 |   21158   |   16  |   não  |   Para habilitar uma publicação na Internet, a propriedade 'ftp_address' não deve ser nula.  |
 |   21159   |   16  |   não  |   Se uma publicação for habilitada para a Internet, a propriedade 'alt_snapshot_folder' não deverá ser vazia. |
@@ -7468,15 +7468,15 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   21171   |   16  |   não  |   Não foi possível localizar o pacote '%s' no msdb no servidor '%s'. |
 |   21172   |   16  |   não  |   A publicação deve estar no modo bcp 'character', 'concurrent_c' ou 'database snapshot character' para permitir DTS.   |
 |   21173   |   16  |   não  |   A publicação deve ser 'independent_agent type' para permitir DTS.    |
-|   21174   |   16  |   não  |   Como essa publicação permite assinaturas transformáveis usando DTS, ela requer procedimentos armazenados gerados automaticamente e comandos parametrizados que são definidos usando o valor padrão para o @status.   |
+|   21174   |   16  |   não  |   Como essa publicação aceita assinaturas transformáveis usando DTS, ela requer procedimentos armazenados gerados automaticamente e comandos parametrizados, que são definidos usando o valor padrão de \@status.  |
 |   21175   |   16  |   não  |   Não é possível alterar as propriedades do artigo ins_cmd, upd_cmd ou del_cmd porque a publicação permite o Data Transformation Services ou assinaturas atualizáveis.   |
 |   21176   |   16  |   não  |   Somente os membros da função de servidor fixa sysadmin, da função de banco de dados fixa db_owner ou o criador da assinatura podem alterar as propriedades da assinatura.    |
 |   21177   |   16  |   não  |   Não foi possível criar a lista de colunas por ser muito extensa. Crie a lista manualmente.  |
 |   21178   |   16  |   não  |   As propriedades do DTS (Data Transformation Services) não podem ser definidas porque a publicação não permite assinaturas de transformação usando o DTS. Para permitir assinaturas transformáveis, você deve descartar a publicação e, em seguida, recriá-la, especificando que assinaturas transformáveis são permitidas.   |
-|   21179   |   16  |   não  |   Valor de parâmetro @dts_package_location inválido. As opções válidas são 'Distribuidor' ou 'Assinante'. |
+|   21179   |   16  |   não  |   Valor inválido para o parâmetro \@dts_package_location. As opções válidas são 'Distribuidor' ou 'Assinante'.    |
 |   21180   |   16  |   não  |   Não é possível habilitar uma publicação que permite DTS para assinaturas atualizáveis.    |
-|   21181   |   16  |   não  |   @dts_package_name só pode ser definido para assinaturas push.   |
-|   21182   |   16  |   não  |   O parâmetro @agent_type deve ser 'distribution', 'merge' ou NULL.  |
+|   21181   |   16  |   não  |   \@dts_package_name só pode ser definido para assinaturas por push.  |
+|   21182   |   16  |   não  |   O parâmetro \@agent_type deve ser 'distribution', 'merge' ou NULL. |
 |   21183   |   16  |   não  |   Nome de propriedade '%s' inválido. |
 |   21184   |   16  |   não  |   Parâmetro %s incorreto: deve ser '%s', '%s' ou '%s'. |
 |   21185   |   16  |   não  |   A assinatura não foi inicializada ou não foi criada para operações no modo de failover.    |
@@ -7486,7 +7486,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   21189   |   16  |   não  |   A fila dessa assinatura com queue_id = '%s' não está vazia. Execute o Queue Reader Agent para verificar se a fila está vazia antes de configurar o modo de [queued] como [immediate]. |
 |   21190   |   10  |   não  |   Substituindo a verificação de fila do modo de configuração de [%s] para [%s].  |
 |   21192   |   16  |   não  |   A coluna MSrepl_tran_version é uma coluna predefinida usada para replicação e só pode ser do tipo de dados uniqueidentifier    |
-|   21193   |   16  |   não  |   @identity_range, @pub_identity_range ou @threshold não podem ser NULL quando @identityrangemanagementoption está definido como AUTO.  |
+|   21193   |   16  |   não  |   \@identity_range, \@pub_identity_range ou \@threshold não podem ser NULL quando \@identityrangemanagementoption está definido como AUTO.  |
 |   21194   |   16  |   não  |   Não é possível dar suporte ao gerenciamento de intervalo de identidade porque essa tabela não tem uma coluna de identidade.   |
 |   21195   |   16  |   não  |   Intervalo de identidade válido não disponível. Verifique o tipo de dados da coluna de identidade.    |
 |   21196   |   16  |   não  |   Falha na automação da identidade. |
@@ -7516,7 +7516,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   21220   |   16  |   não  |   Não é possível adicionar o artigo '%s' porque foi gerado um instantâneo para a publicação '%s'.  |
 |   21221   |   16  |   não  |   O objeto de origem especificado deverá ser um objeto da exibição se for pretendido como um artigo do tipo 'view schema only'.    |
 |   21222   |   16  |   não  |   As opções de esquema disponíveis para um procedimento, função, sinônimo ou artigo de esquema de agregação são: 0x00000001, 0x00000020, 0x00001000, 0x00002000, 0x00400000, 0x02000000, 0x08000000, 0x10000000, 0x20000000, 0x40000000 e 0x80000000.   |
-|   21223   |   16  |   não  |   O parâmetro @pre_creation_command para um artigo somente de esquema deve ser 'none' ou 'drop'.  |
+|   21223   |   16  |   não  |   O parâmetro \@pre_creation_command para um artigo somente de esquema deve ser 'none' ou 'drop'. |
 |   21224   |   16  |   não  |   '%s' não é uma propriedade válida para um artigo somente de esquema. |
 |   21225   |   16  |   não  |   A propriedade 'offload_server' não poderá ser NULL ou vazia se o agente de assinatura pull precisar ser habilitado para ativação remota.    |
 |   21226   |   16  |   não  |   O banco de dados '%s' não possui uma assinatura pull para a publicação especificada.   |
@@ -7546,7 +7546,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   21250   |   16  |   não  |   Não é possível excluir a coluna de chave primária '%s' de uma partição vertical.   |
 |   21251   |   16  |   não  |   Não foi possível remover o publicador '%s', o banco de dados publicador '%s' e a publicação '%s' da lista de parceiros de sincronização.   |
 |   21252   |   16  |   não  |   Não é válido remover o Publicador '%s', o banco de dados de publicação '%s' e a publicação '%s' padrão da lista de parceiros de sincronização   |
-|   21253   |   16  |   não  |   Não é possível definir o parâmetro '@add_to_active_directory' como TRUE porque o pacote do cliente Active Directory não está instalado corretamente na máquina onde o SQL Server está sendo executado.    |
+|   21253   |   16  |   não  |   Não é possível definir o parâmetro '\@add_to_active_directory' como TRUE porque o pacote do cliente do Active Directory não está instalado corretamente na máquina em que o SQL Server está sendo executado.   |
 |   21254   |   16  |   não  |   Não foi possível concluir a operação do Active Directory na publicação '%s' porque o pacote do cliente Active Directory não está instalado corretamente na máquina onde o SQL Server está sendo executado. |
 |   21255   |   16  |   não  |   A coluna '%s' já existe na tabela '%s'.   |
 |   21256   |   16  |   não  |   Uma coluna usada na cláusula de filtro '%s' não existe na tabela '%s' ou não pode ser excluída da partição atual.   |
@@ -7567,28 +7567,28 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   21272   |   16  |   não  |   Não é possível limpar os metadados da publicação '%s' porque outras publicações estão usando um ou mais artigos dessa publicação.   |
 |   21273   |   16  |   não  |   É necessário atualizar o Assinante para o SQL Server 2000 para criar assinaturas atualizáveis quando o Publicador for SQL Server 2000 ou superior.   |
 |   21274   |   16  |   não  |   Nome de publicação '%s' inválido.  |
-|   21275   |   16  |   não  |   Não é possível publicar a exibição associada a esquema '%ls'. O valor especificado para o parâmetro @type deve ser "indexed view schema only" (para replicação de instantâneo ou transacional) ou "indexed view logbased" (somente para replicação transacional). |
+|   21275   |   16  |   não  |   Não é possível publicar a exibição associada a esquema '%ls'. O valor especificado para o parâmetro \@type deve ser "indexed view schema only" (para replicação de instantâneo ou transacional) ou "indexed view logbased" (somente para replicação transacional).    |
 |   21276   |   16  |   não  |   O tipo deve ser 'table' ou ' (modo de exibição | exibição indexada | proc | func ) somente esquema'.    |
-|   21277   |   16  |   não  |   Não é possível publicar o objeto de origem '%ls. O valor especificado para o parâmetro @type ("indexed view schema only" ou "indexed view logbased") só pode ser usado para exibições indexadas. Especifique um valor de "view schema only" para o parâmetro @type ou modifique a exibição para ser um esquema associado a um índice clusterizado exclusivo.  |
-|   21278   |   16  |   não  |   Não é possível publicar o objeto de origem '%ls. O valor especificado para o parâmetro @type ("indexed view logbased") requer que a exibição seja um esquema associado a um índice clusterizado exclusivo. Especifique um valor de "view schema only" para o parâmetro @type ou modifique a exibição para ser um esquema associado a um índice clusterizado exclusivo.  |
+|   21277   |   16  |   não  |   Não é possível publicar o objeto de origem '%ls. O valor especificado para o parâmetro \@type ("indexed view schema only" ou "indexed view logbased") só pode ser usado para exibições indexadas. Especifique um valor de "view schema only" para o parâmetro \@type ou modifique a exibição para ser um esquema associado a um índice clusterizado exclusivo.    |
+|   21278   |   16  |   não  |   Não é possível publicar o objeto de origem '%ls. O valor especificado para o parâmetro \@type ("indexed view logbased") requer que a exibição seja um esquema associado a um índice clusterizado exclusivo. Especifique um valor de "view schema only" para o parâmetro \@type ou modifique a exibição para ser um esquema associado a um índice clusterizado exclusivo.    |
 |   21279   |   16  |   não  |   Não é possível alterar a propriedade 'schema_option' de um artigo de mesclagem após um instantâneo ser gerado para publicação. Para alterar a propriedade 'schema_option' desse artigo, a publicação de mesclagem correspondente deve se descartada e recriada.    |
 |   21280   |   16  |   não  |   O banco de dados do Assinante '%s' não pode assinar a publicação '%s' porque ela contém um ou mais artigos nos quais o mesmo banco de dados do Assinante assinou no nível de transação.    |
 |   21281   |   16  |   não  |   O banco de dados do Assinante '%s' não pode assinar a publicação '%s' porque ela contém um ou mais artigos nos quais o mesmo banco de dados do Assinante assinou no nível de mesclagem.  |
-|   21282   |   16  |   não  |   @identity_range, @pub_identity_range e @threshold deve ser NULL quando @identityrangemanagementoption é definido como 'none' ou 'manual'. |
+|   21282   |   16  |   não  |   \@identity_range, \@pub_identity_range e \@threshold devem ser NULL quando \@identityrangemanagementoption está definida como 'none' ou 'manual'. |
 |   21283   |   16  |   não  |   Não é possível excluir a coluna '%s' da tabela '%s' de uma partição vertical porque existe uma coluna computada que depende dela.   |
 |   21284   |   16  |   não  |   Falha ao descartar a coluna '%s' da tabela '%s'. |
 |   21285   |   16  |   não  |   Falha na adição da coluna '%s' à tabela '%s'.    |
 |   21286   |   16  |   não  |   A tabela de conflitos '%s' não existe. |
-|   21287   |   16  |   não  |   A @destination_folder especificada não é um caminho válido de uma pasta existente.    |
-|   21288   |   16  |   não  |   Não foi possível criar a estrutura de diretório de instantâneo na @destination_folder especificada. |
+|   21287   |   16  |   não  |   A \@destination_folder especificada não é um caminho válido de uma pasta existente.   |
+|   21288   |   16  |   não  |   Não foi possível criar a estrutura de diretório de instantâneo na \@destination_folder especificada.    |
 |   21289   |   16  |   não  |   Os arquivos de instantâneo não foram gerados ou foram limpos. |
 |   21290   |   16  |   não  |   O valor do intervalo de identidade fornecido excedeu o valor máximo permitido.   |
 |   21291   |   16  |   não  |   Os parâmetros de suporte automático à identidade especificados estão em conflito com as configurações em outro artigo.  |
 |   21292   |   16  |   não  |   Não é possível publicar o objeto '%s' duas vezes na mesma publicação.  |
 |   21293   |   10  |   não  |   Aviso: a adição de assinatura atualizável para o artigo '%s' pode provocar inconsistência de dados porque a tabela de origem já assinou em '%s'  |
-|   21294   |   16  |   não  |   Qualquer um dos @publisher (e @publisher_db) ou @subscriber (e @subscriber_db) deve ser especificado, mas ambos não podem ser especificados.  |
+|   21294   |   16  |   não  |   O \@publisher (e o \@publisher_db) ou \@subscriber (e o \@subscriber_db) devem ser especificados, mas não é possível especificar ambos.  |
 |   21295   |   16  |   não  |   A publicação '%s' não contém nenhum artigo que use gerenciamento de intervalo de identidade automática.    |
-|   21296   |   16  |   não  |   O parâmetro @resync_type deve ser 0, 1, 2.  |
+|   21296   |   16  |   não  |   O parâmetro \@resync_type deve ser 0, 1 ou 2. |
 |   21297   |   16  |   não  |   Tipo resync inválido. Nenhuma validação foi executada para essa assinatura.    |
 |   21298   |   16  |   não  |   Falha ao ressincronizar esta assinatura.  |
 |   21299   |   16  |   não  |   Expressão de validação da partição do Assinante '%s' inválida.    |
@@ -7613,7 +7613,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   21318   |   10  |   não  |   A tabela '%s' deve ter pelo menos uma coluna incluída na partição vertical.    |
 |   21319   |   16  |   não  |   Não foi possível localizar a linha de comando do Snapshot Agent para a publicação especificada. Verifique se há um trabalho de instantâneo regular válido no distribuidor.    |
 |   21320   |   16  |   não  |   A versão do Distribuidor não pode ser inferior à versão do Publicador.   |
-|   21321   |   16  |   não  |   O parâmetro @dynamic_snapshot_location não pode ser uma cadeia de caracteres vazia. |
+|   21321   |   16  |   não  |   O parâmetro \@dynamic_snapshot_location não pode ser uma cadeia de caracteres vazia.    |
 |   21322   |   16  |   não  |   Esta publicação registra os conflitos em ambas as réplicas. Assinantes pré-SQL Server 2005 não poderão usar essa configuração.  |
 |   21323   |   16  |   não  |   Um trabalho de instantâneo dinâmico só pode ser programado para uma publicação com filtragem dinâmica habilitada.  |
 |   21324   |   16  |   não  |   O Snapshot Agent deve ser adicionado à publicação especificada para que um trabalho de instantâneo dinâmico possa ser agendado.    |
@@ -7621,7 +7621,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   21326   |   16  |   não  |   Não foi possível localizar o trabalho de instantâneo dinâmico com um '%ls' de ''%ls' para a publicação especificada.    |
 |   21327   |   16  |   não  |   '%ls' não é um nome de trabalho de instantâneo dinâmico válido. |
 |   21328   |   16  |   não  |   O nome do trabalho de instantâneo dinâmico especificado '%ls' já está em uso. Tente a operação novamente com um nome de trabalho diferente. |
-|   21329   |   16  |   não  |   Somente um dos parâmetros, @dynamic_snapshot_jobid ou @dynamic_snapshot_jobname, pode ser especificado com um valor não padrão. |
+|   21329   |   16  |   não  |   Somente um dos parâmetros, \@dynamic_snapshot_jobid ou \@dynamic_snapshot_jobname, pode ser especificado com um valor não padrão.   |
 |   21330   |   16  |   não  |   Não é possível criar um subdiretório na pasta de instantâneo (%ls). Verifique se há espaço em disco suficiente e se a conta na qual o Snapshot Agent é executado tem permissões para criar um subdiretório na pasta de instantâneo.  |
 |   21331   |   16  |   não  |   Não é possível copiar o arquivo de script de usuário na pasta de instantâneo no Distribuidor (%ls). Verifique se há espaço em disco suficiente e se a conta na qual o Snapshot Agent é executado tem permissões para gravar na pasta de instantâneo e em seus subdiretórios.    |
 |   21332   |   16  |   não  |   Falha ao recuperar informações sobre a publicação: %ls. Verifique o nome novamente.   |
@@ -7629,12 +7629,12 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   21334   |   16  |   não  |   Não é possível inicializar assinatura baseada no Serviço de Enfileiramento de Mensagens porque a plataforma não é compatível com o Serviço de Enfileiramento de Mensagens %s   |
 |   21335   |   16  |   não  |   Aviso: a coluna '%s'' já existe na partição vertical.  |
 |   21336   |   16  |   não  |   Aviso: a coluna '%s' não existe na partição vertical.  |
-|   21337   |   16  |   não  |   Valor @subscriber_type inválido. As opções válidas são 'local' e 'global'. |
+|   21337   |   16  |   não  |   Valor inválido para \@subscriber_type. As opções válidas são 'local' e 'global'.    |
 |   21338   |   16  |   não  |   Não será possível executar sp_dropmergearticle, se a publicação possuir um Assinante que está sendo executado em uma versão do SQL Server 2000 ou anterior. Descarte e crie novamente a publicação sem o artigo '%s' ou defina o nível de compatibilidade da publicação '%s' como '90RTM' antes de chamar sp_dropmergearticle.    |
 |   21339   |   10  |   não  |   Aviso: a publicação usa um recurso que só tem suporte dos assinantes que executam o '%s' ou superior.  |
 |   21340   |   16  |   não  |   Não é possível aplicar script de usuário sob demanda à publicação de instantâneo.    |
-|   21341   |   16  |   não  |   @dynamic_snapshot_location não pode ser uma cadeia de caracteres não vazia enquanto @alt_snapshot_folder não estiver vazio ou nulo.   |
-|   21342   |   16  |   não  |   @dynamic_snapshot_location não pode ser uma cadeia de caracteres não vazia enquanto @use_ftp é 'true'.   |
+|   21341   |   16  |   não  |   \@dynamic_snapshot_location não pode ser uma cadeia de caracteres não vazia enquanto \@alt_snapshot_folder não estiver vazia ou nula. |
+|   21342   |   16  |   não  |   \@dynamic_snapshot_location não pode ser uma cadeia de caracteres não vazia enquanto \@use_ftp for 'true'. |
 |   21343   |   16  |   não  |   Não foi possível localizar o procedimento armazenado '%s'.   |
 |   21344   |   16  |   não  |   Valor inválido especificado para o parâmetro %ls.  |
 |   21345   |   16  |   não  |   Não é permitido excluir a última coluna da partição.  |
@@ -7653,28 +7653,28 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   21358   |   10  |   não  |   Aviso: somente os Assinantes que executam o SQL Server 2000 ou posterior podem sincronizar com a publicação '%s' porque existe pelo menos uma coluna de carimbo de data/hora em um de seus artigos.   |
 |   21359   |   10  |   não  |   Aviso: somente os Assinantes que executam o SQL Server 2000 ou posterior podem sincronizar com a publicação '%s' porque estão sendo usados intervalos de identidade automática.  |
 |   21360   |   10  |   não  |   Aviso: somente os Assinantes que executam o SQL Server 2000 ou posterior podem sincronizar com a publicação '%s' porque um novo artigo foi adicionado à publicação após a geração do seu instantâneo. |
-|   21361   |   16  |   não  |   O @agent_jobid especificado não é uma ID de trabalho válida para um trabalho do agente '%s'.  |
+|   21361   |   16  |   não  |   A \@agent_jobid especificada não é uma ID de trabalho válida para um trabalho do agente '%s'. |
 |   21362   |   16  |   não  |   O filtro de mesclagem '%s' não existe.   |
 |   21363   |   16  |   não  |   Falha ao adicionar a publicação '%s' ao Active Directory. %s  |
-|   21364   |   16  |   não  |   Não foi possível adicionar o artigo '%s' porque um instantâneo já foi gerado. Defina @force_invalidate_snapshot como 1 para forçar isso e invalidar o instantâneo existente. |
-|   21365   |   16  |   não  |   Não foi possível adicionar o artigo '%s' porque existem assinaturas ativas. Defina @force_reinit_subscription como 1 para forçar isso e reiniciar as assinaturas ativas. |
-|   21366   |   16  |   não  |   Não foi possível adicionar o filtro '%s' porque um instantâneo já foi gerado. Defina @force_invalidate_snapshot como 1 para forçar isso e invalidar o instantâneo existente.  |
-|   21367   |   16  |   não  |   Não foi possível adicionar o filtro '%s' porque existem assinaturas ativas. Defina @force_reinit_subscription como 1 para forçar isso e reiniciar as assinaturas ativas.  |
+|   21364   |   16  |   não  |   Não foi possível adicionar o artigo '%s' porque um instantâneo já foi gerado. Defina \@force_invalidate_snapshot como 1 para forçar a adição e invalidar o instantâneo existente.    |
+|   21365   |   16  |   não  |   Não foi possível adicionar o artigo '%s' porque existem assinaturas ativas. Defina \@force_reinit_subscription como 1 para forçar a adição e reiniciar as assinaturas ativas.    |
+|   21366   |   16  |   não  |   Não foi possível adicionar o filtro '%s' porque um instantâneo já foi gerado. Defina \@force_invalidate_snapshot como 1 para forçar a adição e invalidar o instantâneo existente. |
+|   21367   |   16  |   não  |   Não foi possível adicionar o filtro '%s' porque existem assinaturas ativas. Defina \@force_reinit_subscription como 1 para forçar a adição e reiniciar as assinaturas ativas. |
 |   21368   |   16  |   não  |   O nome do servidor de descarga especificado contém o caractere inválido '%s'.  |
 |   21369   |   16  |   não  |   Não foi possível remover a publicação '%s' do Active Directory.    |
 |   21370   |   16  |   não  |   A data de ressincronização especificada '%s' não é válida. |
 |   21371   |   10  |   não  |   Não foi possível propagar a alteração na publicação '%s' para o Active Directory. |
-|   21372   |   16  |   não  |   Não é possível descartar o filtro '%s' da publicação '%s' porque o instantâneo foi executado e essa publicação pode ter assinaturas ativas. Defina @force_reinit_subscription como 1 para reiniciar todas as assinaturas e descartar o filtro.    |
+|   21372   |   16  |   não  |   Não é possível descartar o filtro '%s' da publicação '%s' porque o instantâneo foi executado e essa publicação pode ter assinaturas ativas. Defina \@force_reinit_subscription como 1 para reiniciar todas as assinaturas e descartar o filtro.   |
 |   21373   |   11  |   não  |   Não foi possível abrir o banco de dados %s. Não foi possível atualizar as configurações de replicação e objetos do sistema. Se o banco de dados for usado para replicação, execute sp_vupgrade_replication no banco de dados [mestre] quando ele estiver disponível.    |
 |   21374   |   10  |   não  |   Atualizando configurações de distribuição e objetos do sistema no banco de dados %s.  |
 |   21375   |   10  |   não  |   Atualizando configurações de publicação e objetos do sistema no banco de dados %s.   |
 |   21376   |   11  |   não  |   Não foi possível abrir o banco de dados %s. Não foi possível atualizar as configurações de replicação e objetos do sistema. Se o banco de dados for usado para replicação, execute sp_vupgrade_replication no banco de dados [mestre] quando ele estiver disponível.    |
 |   21377   |   10  |   não  |   Atualizando configurações de assinatura e objetos do sistema no banco de dados %s.  |
 |   21378   |   16  |   não  |   Não foi possível abrir o banco de dados de distribuição %s por estar offline ou estar sendo recuperado. Não foi possível atualizar as configurações de replicação e objetos do sistema. Verifique se o banco de dados está disponível e execute sp_vupgrade_replication novamente.  |
-|   21379   |   16  |   não  |   Não é possível descartar o artigo '%s' da publicação '%s' porque já foi gerado um instantâneo. Defina @force_invalidate_snapshot como 1 para forçar isso e invalidar o instantâneo existente. |
-|   21380   |   16  |   não  |   Não é possível adicionar a coluna de carimbo de data/hora sem forçar a reinicialização. Defina @force_reinit_subscription como 1 para forçar a reinicialização.    |
-|   21381   |   16  |   não  |   Não é possível adicionar (descartar) a coluna à tabela '%s' porque a tabela pertence a publicações com uma assinatura atualizável ativa. Defina @force_reinit_subscription como 1 para forçar a reinicialização.    |
-|   21382   |   16  |   não  |   Não é possível descartar o filtro '%s' porque já foi gerado um instantâneo. Defina @force_invalidate_snapshot como 1 para forçar isso e invalidar o instantâneo existente.    |
+|   21379   |   16  |   não  |   Não é possível descartar o artigo '%s' da publicação '%s' porque já foi gerado um instantâneo. Defina \@force_invalidate_snapshot como 1 para forçar a adição e invalidar o instantâneo existente.    |
+|   21380   |   16  |   não  |   Não é possível adicionar a coluna de carimbo de data/hora sem forçar a reinicialização. Defina \@force_reinit_subscription como 1 para forçar a reinicialização.   |
+|   21381   |   16  |   não  |   Não é possível adicionar (descartar) a coluna à tabela '%s' porque a tabela pertence a publicações com uma assinatura atualizável ativa. Defina \@force_reinit_subscription como 1 para forçar a reinicialização.   |
+|   21382   |   16  |   não  |   Não é possível descartar o filtro '%s' porque já foi gerado um instantâneo. Defina \@force_invalidate_snapshot como 1 para forçar a adição e invalidar o instantâneo existente.   |
 |   21383   |   16  |   não  |   Não é possível habilitar uma publicação de mesclagem neste servidor porque o diretório de trabalho de seus Distribuidores não está usando um caminho UNC. |
 |   21384   |   16  |   não  |   A assinatura especificada não existe ou ainda não foi sincronizada. |
 |   21385   |   16  |   não  |   Falha no instantâneo ao processar a publicação '%s'. Possivelmente devido à atividade de alteração de esquema ativa ou à adição de novos artigos. |
@@ -7688,7 +7688,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   21393   |   16  |   não  |   Descartando o filtro de linha (%s) do artigo '%s' em '%s'. Emita novamente sp_articlefilter e sp_articleview para criar um filtro de linha.   |
 |   21394   |   16  |   não  |   Opção de esquema inválida especificada para a publicação que permite atualização de assinantes. É necessário definir a opção de esquema para incluir restrições DRI. |
 |   21395   |   10  |   não  |   Não é possível incluir essa coluna em uma publicação transacional porque a ID da coluna é maior que 255.    |
-|   21396   |   16  |   não  |   O valor especificado para o parâmetro @type de sp_addsubscriber ou para o parâmetro @subscriber_type de sp_addsubscription não é válido. Consulte os Manuais Online do SQL Server para obter uma lista de valores válidos.   |
+|   21396   |   16  |   não  |   O valor especificado para o parâmetro \@type de sp_addsubscriber ou para o parâmetro \@subscriber_type de sp_addsubscription é inválido. Consulte os Manuais Online do SQL Server para obter uma lista de valores válidos. |
 |   21397   |   16  |   não  |   As transações necessárias para a sincronização da assinatura nosync criada a partir do backup especificado não estão disponíveis no Distribuidor. Tente a operação novamente com um backup de banco de dados completo, diferencial ou de log mais atualizado.  |
 |   21398   |   16  |   não  |   Não foi possível concluir a configuração da assinatura no-sync no Distribuidor enquanto o agente de limpeza de distribuição estava sendo executado. A operação tem mais possibilidade de êxito quando o agente de limpeza de distribuição está temporariamente desabilitado. |
 |   21399   |   16  |   não  |   As transações necessárias para a sincronização da assinatura com o LSN (número de sequência de log) especificado não estão disponíveis no Distribuidor. Especifique um LSN mais alto. |
@@ -7699,8 +7699,8 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   21404   |   10  |   não  |   '%s' não é um valor válido para o parâmetro '%s'. O valor deve ser um inteiro positivo maior que 300 ou 0.   |
 |   21405   |   10  |   não  |   '%s' não é um valor válido para o parâmetro '%s'. O valor deve ser um inteiro maior ou igual a %d. |
 |   21406   |   10  |   não  |   '%s' não é um valor válido para o parâmetro '%s'. O valor deve ser 0 ou 1. |
-|   21407   |   16  |   não  |   Não é possível criar a assinatura. Se você especificar um valor de "initialize with backup" para o parâmetro @sync_type, deverá assinar todos os artigos na publicação especificando um valor "all" para o parâmetro @article.   |
-|   21408   |   16  |   não  |   Não é possível criar a assinatura. Você deve especificar um valor "Active" ou "Subscribed" para o parâmetro @status. Isso ocorre porque o valor especificado para o parâmetro @sync_type é "initialize with backup" ou "replication support only". |
+|   21407   |   16  |   não  |   Não é possível criar a assinatura. Se você especificar um valor "initialize with backup" para o parâmetro \@sync_type, deve assinar todos os artigos na publicação especificando um valor "all" para o parâmetro \@article. |
+|   21408   |   16  |   não  |   Não é possível criar a assinatura. Você deve especificar um valor "Active" ou "Subscribed" para o parâmetro \@status. Isso ocorre porque o valor especificado para o parâmetro \@sync_type é "initialize with backup" ou "replication support only".   |
 |   21409   |   16  |   não  |   Somente um dos parâmetros %s e %s pode ser definido.    |
 |   21410   |   16  |   não  |   Mensagem de inicialização do Snapshot Agent. |
 |   21411   |   16  |   não  |   Mensagem de inicialização do Distribution Agent. |
@@ -7715,13 +7715,13 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   21421   |   10  |   não  |   Não é possível descartar o artigo '%s' porque ele está sendo usado por outros artigos como um artigo de junção. |
 |   21422   |   16  |   não  |   Mensagem de inicialização do Queue Reader Agent. |
 |   21423   |   16  |   não  |   Ou a publicação '%s' não existe ou você não possui permissões suficientes para acessá-la. Verifique se a publicação existe e se a conta com a qual o Merge Agent se conecta ao Publicador está incluída na PAL (lista de acesso à publicação).  |
-|   21424   |   16  |   não  |   O parâmetro @publisher deve ser NULL para os publicadores do SQL Server.    |
-|   21425   |   16  |   não  |   O parâmetro @publisher não pode ser NULL para publicadores heterogêneos.  |
+|   21424   |   16  |   não  |   O parâmetro \@publisher deve ser NULL para os publicadores do SQL Server.   |
+|   21425   |   16  |   não  |   O parâmetro \@publisher não pode ser NULL para publicadores heterogêneos. |
 |   21426   |   16  |   não  |   Não existe qualquer assinatura de agente compartilhada para a publicação '%s' e o par de assinante/banco de dados de assinante '%s'/'%s'. |
 |   21450   |   16  |   não  |   Não foi possível atualizar a replicação %s para bancos de dados %s. Verifique se %s foi atualizado e execute %s novamente. |
 |   21451   |   16  |   não  |   A senha (%s) de logon %s %s (%s) foi alterada.    |
 |   21452   |   10  |   não  |   Aviso: o trabalho do agente %s foi implicitamente criado e será executado na Conta de Serviço do SQL Server Agent.  |
-|   21454   |   16  |   não  |   O procedimento interno sp_MStran_is_snapshot_required deverá ser executado no Distribuidor, se o parâmetro @run_at_distributor tiver um valor igual a 1. Se o problema persistir, contate os Serviços de Atendimento ao Cliente da Microsoft.  |
+|   21454   |   16  |   não  |   O procedimento interno sp_MStran_is_snapshot_required deverá ser executado no Distribuidor se o parâmetro \@run_at_distributor tiver um valor igual a 1. Se o problema persistir, contate os Serviços de Atendimento ao Cliente da Microsoft. |
 |   21456   |   16  |   não  |   O valor fornecido para o parâmetro %s não é válido.   |
 |   21460   |   16  |   não  |   A chave primária da tabela de origem "%s" inclui a coluna de carimbo de data/hora "%s". Não é possível criar o artigo para a publicação especificada porque ele permite Assinantes de atualização.   |
 |   21481   |   16  |   não  |   Não é possível criar assinaturas de replicação no banco de dados mestre. Escolha outro banco de dados para criar assinaturas.   |
@@ -7731,8 +7731,8 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   21486   |   16  |   não  |   Ocorreu um erro durante o registro em log das informações do histórico do token de rastreamento. O token de rastreamento não pôde ser postado. |
 |   21487   |   16  |   não  |   Ocorreu um erro durante a inserção do token de rastreamento no log. O token de rastreamento não pôde ser postado.    |
 |   21488   |   16  |   não  |   Não foram encontradas assinaturas ativas. A publicação deve ter assinaturas ativas para postar um token de rastreamento. |
-|   21489   |   16  |   não  |   Já existe um banco de dados '%s'. Se você pretende torná-lo seu banco de dados de distribuição, defina @existing_db = 1.   |
-|   21490   |   16  |   não  |   O valor especificado para o parâmetro %s de sp_mergearticlecolumn deve ser '%s'. Um valor 'true' é permitido somente quando este procedimento é chamado por outro procedimento de replicação. Defina o valor do parâmetro @schema_replication como 'false' ou não especifique um valor.   |
+|   21489   |   16  |   não  |   Já existe um banco de dados '%s'. Se você pretende torná-lo seu banco de dados de distribuição, defina \@existing_db = 1.  |
+|   21490   |   16  |   não  |   O valor especificado para o parâmetro %s de sp_mergearticlecolumn deve ser '%s'. Um valor 'true' é permitido somente quando este procedimento é chamado por outro procedimento de replicação. Defina o valor do parâmetro \@schema_replication como 'false' ou não especifique um valor.  |
 |   21499   |   16  |   não  |   Falha no procedimento %s ao %s o recurso %s. Erro no servidor = %d.   |
 |   21500   |   10  |   não  |   Foi especificado um tipo de assinatura inválido. Já existe uma assinatura na publicação '%s' do banco de dados com um tipo de assinatura diferente.   |
 |   21501   |   10  |   não  |   As informações de resolvedor fornecidas não especificam um nome de coluna válido a ser usado para resolução de conflitos por '%s'.  |
@@ -7758,17 +7758,17 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   21522   |   16  |   não  |   Este artigo não pode usar o recurso '%s' porque o nível de compatibilidade da publicação é menor que 90. Use sp_changemergepublication para definir publication_compatibility_level da publicação '%s' como '90RTM'.  |
 |   21523   |   16  |   não  |   Falha ao adicionar a coluna '%s' à tabela '%s'. Os artigos podem ter no máximo %d colunas, incluindo as que foram filtradas.   |
 |   21525   |   16  |   não  |   Uma réplica superficial deve ser anônima.    |
-|   21526   |   16  |   não  |   O artigo '%s' já pertence a uma assinatura com um valor diferente para a propriedade @lightweight.    |
+|   21526   |   16  |   não  |   O artigo '%s' já pertence a uma assinatura com um valor diferente para a propriedade \@lightweight.   |
 |   21527   |   16  |   não  |   A publicação '%s' não pode ser adicionada ao banco de dados '%s', pois já existe uma publicação com um nível de compatibilidade inferior. Todas as publicações de mesclagem em um banco de dados devem ter o mesmo nível de compatibilidade.  |
 |   21528   |   16  |   não  |   A publicação '%s' não pode ser adicionada ao banco de dados '%s', pois já existe uma publicação com um nível de compatibilidade superior. Todas as publicações de mesclagem em um banco de dados devem ter o mesmo nível de compatibilidade.  |
 |   21530   |   10  |   não  |   Falha na alteração do esquema durante a execução de um procedimento de replicação interno. Para obter a ação corretiva, consulte as outras mensagens de erro que acompanham esta mensagem.  |
 |   21531   |   10  |   não  |   O comando DDL (linguagem de definição de dados) não pode ser executado no Assinante. Os comandos DDL só podem ser executados no Publicador. Em uma hierarquia de republicação, os comandos DDL podem ser executados somente no Publicador raiz, não em qualquer um dos Assinantes de republicação.  |
 |   21532   |   10  |   não  |   Não é possível adicionar um gatilho de linguagem de definição de dados para replicar '%.*ls' eventos.   |
 |   21533   |   10  |   não  |   Não é possível inserir informações na tabela de controle de alteração de esquema sysmergeschemachange.   |
-|   21535   |   16  |   não  |   O artigo '%s' já foi publicado em outra publicação, e está definido para usar partições não sobrepostas com vários assinantes por partição (@partition_options = 2). Essa configuração não permite que o artigo seja incluído em mais de uma publicação.   |
+|   21535   |   16  |   não  |   O artigo '%s' já foi publicado em outra publicação e está definido para usar partições não sobrepostas com vários assinantes por partição (\@partition_options = 2). Essa configuração não permite que o artigo seja incluído em mais de uma publicação.  |
 |   21537   |   16  |   não  |   A coluna '%s'' na tabela '%s' está envolvida em uma relação de chave estrangeira com uma coluna na tabela '%s', mas não foi encontrada na cláusula de junção especificada. Uma relação de registro lógico entre essas tabelas deve incluir essa coluna. |
 |   21538   |   16  |   não  |   A tabela '%s' não pode ter a tabela '%s' como pai em uma relação de registro lógico, pois já tem uma tabela pai diferente. Uma relação de registro lógico permite apenas uma tabela pai para uma tabela filho determinada. |
-|   21539   |   16  |   não  |   Uma relação de registro lógico, especificada pelo parâmetro @filter_type, requer uma junção um-para-um ou um-para-muitos da tabela pai para a tabela filho. Altere o valor do parâmetro @filter_type ou defina o parâmetro @join_unique_key como 1.    |
+|   21539   |   16  |   não  |   Uma relação de registro lógico, especificada pelo parâmetro \@filter_type, requer uma junção um-para-um ou um-para-muitos da tabela pai para a tabela filho. Altere o valor do parâmetro \@filter_type ou defina o parâmetro \@join_unique_key como 1. |
 |   21540   |   16  |   não  |   Não é possível descartar uma coluna definida como tipo de dados uniqueidentifier com a propriedade rowguidcol, pois a replicação de mesclagem usa essa coluna para rastreamento. Para descartar a coluna, primeiro você deve descartar a tabela de todas as publicações e assinaturas. |
 |   21541   |   16  |   não  |   Não é possível concluir o comando ALTER TABLE. Não execute o comando 'ALTER TABLE table_name DISABLE TRIGGER ALL' em uma tabela publicada. Emita novamente várias instruções 'ALTER TABLE table_name DISABLE TRIGGER trigger_name' para desabilitar cada gatilho individualmente na tabela determinada.   |
 |   21542   |   16  |   não  |   Encontrado um erro no servidor %d durante a execução de <%s>.   |
@@ -7794,35 +7794,35 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   21575   |   16  |   não  |   O valor especificado para a propriedade filter_type não é válido. Os valores válidos são 1 (somente filtro de junção), 2 (somente relação de registro lógico) e 3 (filtro de junção e relação de registro lógico).    |
 |   21576   |   16  |   não  |   Não é possível adicionar uma relação de registro lógico entre as tabelas '%s' e '%s', pois a coluna de chave estrangeira '%s' na tabela '%s' permite valores NULL. Altere a coluna para desabilitar valores NULL.   |
 |   21578   |   16  |   não  |   Para usar partition_options de 2 (partições de não sobreposição com várias assinaturas por partição) ou 3 (partições de não sobreposição com uma assinatura por partição), a publicação '%s' deve estar habilitada para usar a funcionalidade de grupos de partição. Use sp_changemergepublication para definir 'use_partition_groups' como 'true'.   |
-|   21579   |   16  |   não  |   O artigo "%s" na publicação "%s" não se qualifica para a opção de partição especificada. Não é possível especificar um valor 2 ou 3 (partições não sobrepostas) para o parâmetro @partition_options, pois o artigo está envolvido em vários filtros de junção. Selecione um valor 0 ou 1 para o parâmetro @partition_options, ou descarte tudo menos um dos filtros de junção usando sp_dropmergefilter.   |
-|   21580   |   16  |   não  |   O artigo "%s" na publicação "%s" não se qualifica para a opção de partição especificada. Não é possível especificar um valor 2 ou 3 (partições não sobrepostas) para o parâmetro @partition_options, pois o artigo está envolvido em um filtro de linha e em um filtro de junção. Selecione um valor 0 ou 1 para o parâmetro @partition_options; descarte o filtro de junção usando sp_dropmergefilter; ou altere o filtro de linha usando sp_changemergepublication.   |
-|   21581   |   16  |   não  |   O artigo "%s" na publicação "%s" não se qualifica para a opção de partição especificada. Não é possível especificar um valor 2 ou 3 (partições não sobrepostas) para o parâmetro @partition_options, pois o artigo tem um filtro de junção com um valor 0 de join_unique_key. Selecione um valor 0 ou 1 para o parâmetro @partition_options ou use sp_changemergefilter para especificar um valor 1 para join_unique_key.    |
-|   21582   |   16  |   não  |   O artigo "%s" na publicação "%s" não se qualifica para a opção de partição especificada. Não é possível especificar um valor 2 ou 3 (partições não sobrepostas) para o parâmetro @partition_options porque o artigo tem uma relação de filtro de junção direta ou indireta com o artigo pai "%s". O artigo pai não usa o mesmo valor de partition_options. Use sp_changemergepublication para alterar o valor de um dos artigos.   |
+|   21579   |   16  |   não  |   O artigo "%s" na publicação "%s" não se qualifica para a opção de partição especificada. Não é possível especificar um valor 2 ou 3 (partições não sobrepostas) para o parâmetro \@partition_options, pois o artigo está envolvido em vários filtros de junção. Selecione um valor 0 ou 1 para o parâmetro \@partition_options, ou descarte tudo menos um dos filtros de junção usando sp_dropmergefilter. |
+|   21580   |   16  |   não  |   O artigo "%s" na publicação "%s" não se qualifica para a opção de partição especificada. Não é possível especificar um valor 2 ou 3 (partições não sobrepostas) para o parâmetro \@partition_options, pois o artigo está envolvido em um filtro de linha e em um filtro de junção. Selecione um valor 0 ou 1 para o parâmetro \@partition_options, descarte o filtro de junção usando sp_dropmergefilter ou altere o filtro de linha usando sp_changemergepublication. |
+|   21581   |   16  |   não  |   O artigo "%s" na publicação "%s" não se qualifica para a opção de partição especificada. Não é possível especificar um valor 2 ou 3 (partições não sobrepostas) para o parâmetro \@partition_options, pois o artigo tem um filtro de junção com um valor 0 para join_unique_key. Selecione um valor 0 ou 1 para o parâmetro \@partition_options ou use sp_changemergefilter para especificar um valor 1 para join_unique_key.  |
+|   21582   |   16  |   não  |   O artigo "%s" na publicação "%s" não se qualifica para a opção de partição especificada. Não é possível especificar um valor 2 ou 3 (partições não sobrepostas) para o parâmetro \@partition_options porque o artigo tem uma relação de filtro de junção direta ou indireta com o artigo pai "%s". O artigo pai não usa o mesmo valor de partition_options. Use sp_changemergepublication para alterar o valor de um dos artigos.  |
 |   21583   |   16  |   não  |   Não é possível atualizar a coluna no artigo '%s'. O artigo tem um valor 2 ou 3 (partições não sobrepostas) para a propriedade partition_options, e a coluna está envolvida em um filtro de linha e/ou em um filtro de junção. Nesta situação, a coluna não pode ser atualizada em um Assinante ou republicador; ela deve ser atualizada no Publicador de nível superior. |
 |   21584   |   16  |   não  |   Não é possível inserir a linha para o artigo '%s'. A linha não pertence à partição do Assinante e o artigo tem um valor 2 ou 3 (partições não sobrepostas) para a propriedade partition_options. As partições não sobrepostas não permitem inserções fora da partição.   |
 |   21585   |   16  |   não  |   Não é possível especificar a ordenação de artigos personalizada na publicação '%s' porque a publicação possui um nível de compatibilidade inferior a 90RTM. Use sp_changemergepublication para definir publication_compatibility_level como 90RTM.   |
 |   21597   |   16  |   não  |   O artigo inclui somente a coluna rowguidcol. Você deve publicar pelo menos uma outra coluna.    |
 |   21598   |   16  |   não  |   Não é permitida a modificação de gatilhos DDL criados pela replicação, pois eles são necessários para rastrear as alterações feitas no DDL.  |
-|   21599   |   16  |   não  |   Os parâmetros @article e @join_articlename não podem ter o mesmo valor. Especifique artigos diferentes para os dois parâmetros. Não são permitidas autojunções.  |
+|   21599   |   16  |   não  |   Os parâmetros \@article e \@join_articlename não podem ter o mesmo valor. Especifique artigos diferentes para os dois parâmetros. Não são permitidas autojunções.    |
 |   21600   |   16  |   não  |   Não é possível localizar o Publicador não SQL Server [%s]. Execute sp_helpdistpublishers para exibir uma lista de Publicadores disponíveis.    |
-|   21601   |   16  |   não  |   O valor do parâmetro @type deve ser 'logbased' para publicações Oracle.    |
+|   21601   |   16  |   não  |   O valor do parâmetro \@type deve ser 'logbased' para publicações Oracle.   |
 |   21603   |   16  |   não  |   A atualização do publicador Oracle '%s' por sp_refresh_heterogeneous_publisher não foi bem-sucedida. Os metadados do publicador Oracle foram retidos em seu estado de falha para ajudar a diagnosticar a causa da falha. Quando o problema tiver sido diagnosticado e resolvido, execute novamente sp_refresh_heterogeneous_publisher para concluir a atualização. |
 |   21604   |   16  |   não  |   O fornecedor do Publicador não SQL Server não é válido. Tente adicionar o Publicador novamente. Se o problema persistir, contate os Serviços de Atendimento ao Cliente da Microsoft. |
 |   21605   |   16  |   não  |   Os Publicadores não SQL Server devem ser configurados no contexto do banco de dados de distribuição. Execute sp_adddistpublisher no contexto do banco de dados de distribuição.  |
 |   21606   |   16  |   não  |   O parâmetro "%s" é somente para Publicadores não SQL Server. O valor desse parâmetro deve ser "%s" para um Publicador do SQL Server.  |
 |   21607   |   16  |   não  |   sp_refresh_heterogeneous_publisher não conseguiu obter informações do publicador para o publicador Oracle '%s'. sp_refresh_heterogeneous_publisher só pode ser chamado para atualizar publicadores Oracle atualmente definidos no distribuidor.   |
-|   21608   |   16  |   não  |   Não é possível usar um valor TRUE para o parâmetro @ignore_distributor. O valor deve ser FALSE para um Publicador não SQL Server.   |
+|   21608   |   16  |   não  |   Não é possível usar um valor TRUE para o parâmetro \@ignore_distributor. O valor deve ser FALSE para um Publicador não SQL Server.  |
 |   21609   |   16  |   não  |   As publicações não SQL Server não dão suporte a assinaturas atualizáveis. As propriedades allow_sync_tran e allow_queued_tran devem ser "false".   |
 |   21610   |   16  |   não  |   A tentativa malsucedida de sp_refresh_heterogeneous_publisher de atualizar o publicador '%s' não alterou nenhum metadado no publicador Oracle. Verifique se o publicador Oracle correto foi identificado e se os requisitos para atualização do publicador Oracle foram atendidos. |
 |   21611   |   16  |   não  |   Não é possível descartar o Publicador de distribuição "%s", pois ele possui publicações definidas. Primeiro descarte as publicações.   |
-|   21612   |   16  |   não  |   Para Publicadores não SQL Server, o valor do parâmetro @sync_method deve ser "character" ou "concurrent_c".   |
+|   21612   |   16  |   não  |   Para Publicadores não SQL Server, o valor do parâmetro \@sync_method deve ser "character" ou "concurrent_c".  |
 |   21613   |   16  |   não  |   Coluna de restrição '%s' não localizada na tabela '%s'. |
 |   21614   |   16  |   não  |   Coluna de índice '%s' não localizada na tabela '%s'.  |
 |   21615   |   16  |   não  |   Não é possível localizar as informações da tabela para o artigo %s. O cache do distribuidor local pode estar corrompido.    |
 |   21616   |   16  |   não  |   Não é possível localizar a coluna [%s] no artigo. Verifique se a coluna existe na tabela subjacente e se ela está incluída no artigo.  |
 |   21617   |   16  |   não  |   Não é possível executar o SQL*PLUS. Certifique-se de que há uma versão atual do código de cliente Oracle instalada no distribuidor. Para obter informações adicionais, consulte o Erro 21617 do SQL Server nos Manuais Online do SQL Server em Solução de problemas de Publicadores Oracle.    |
 |   21618   |   16  |   não  |   O Publicador '%s' não existe. Para exibir uma lista de Publicadores, use o procedimento armazenado sp_helpdistpublisher. |
-|   21619   |   16  |   não  |   Deve fornecer @SelectColumnList e @InsColumnList. |
+|   21619   |   16  |   não  |   Deve fornecer \@SelectColumnList e \@InsColumnList.   |
 |   21620   |   16  |   não  |   A versão do SQL*PLUS acessível através da variável de sistema Path não está atualizada o bastante para oferecer suporte à edição Oracle. Certifique-se de que há uma versão atual do código de cliente Oracle instalada no distribuidor. Para obter informações adicionais, consulte o Erro 21620 do SQL Server nos Manuais Online do SQL Server em Solução de problemas de Publicadores Oracle.    |
 |   21621   |   16  |   não  |   Não é possível criar o sinônimo público %s. Verifique se foi concedida a permissão CREATE SYNONYM ao usuário administrativo de replicação. |
 |   21622   |   16  |   não  |   Não é possível conceder a permissão SELECT no sinônimo público %s. Verifique se o usuário administrativo de replicação tem permissões suficientes. |
@@ -7836,13 +7836,13 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   21630   |   16  |   não  |   Não é possível determinar se a tabela '%s' ainda está sendo publicada. Contate os Serviços de Atendimento ao Cliente. |
 |   21631   |   16  |   não  |   Não é possível cancelar a publicação da tabela '%s'. Falha na chamada remota para o Publicador Oracle. Verifique se o logon de usuário administrativo de replicação pode se conectar ao Publicador Oracle usando o SQL*PLUS. Se a conexão for possível, mas o problema persistir, descarte e reconfigure a publicação Oracle. |
 |   21632   |   16  |   não  |   O parâmetro %s não é suportado para publicações não SQL Server. O valor especificado para esse parâmetro deve ser %s.   |
-|   21633   |   16  |   não  |   Não foi possível adicionar a publicação '%s' porque os Publicadores não SQL Server só dão suporte aos valores "character" ou "concurrent_c" do parâmetro @sync_method. |
+|   21633   |   16  |   não  |   Não foi possível adicionar a publicação '%s' porque os Publicadores não SQL Server só oferecem suporte aos valores "character" ou "concurrent_c" do parâmetro \@sync_method.    |
 |   21634   |   16  |   não  |   O parâmetro %s não dá suporte ao valor '%s' ao usar publicações não SQL Server. O valor deve ser %s.  |
 |   21635   |   16  |   não  |   Foi especificada uma combinação de opções de esquema não suportada. As publicações não SQL Server dão suporte apenas às seguintes opções de esquema: 0x01, 0x02, 0x10, 0x40, 0x80, 0x4000 e 0x8000.    |
 |   21637   |   16  |   não  |   %s é necessário para publicações heterogêneas.  |
-|   21638   |   16  |   não  |   Você especificou um valor '%s' para o parâmetro @repl_freq de sp_addpublication. Para publicações não SQL Server, isso requer um dos seguintes valores para o parâmetro @sync_method: %s.    |
-|   21639   |   16  |   não  |   Os publicadores heterogêneos não podem usar conexões confiáveis. Defina @trusted como false.    |
-|   21640   |   16  |   não  |   Os Publicadores não SQL Server não dão suporte ao valor 1 para o parâmetro @thirdparty_flag. Ao executar o procedimento armazenado sp_adddistpublisher, especifique um valor 0 para o parâmetro.  |
+|   21638   |   16  |   não  |   Você especificou um valor '%s' para o parâmetro \@repl_freq de sp_addpublication. Para publicações não SQL Server, isso requer um dos seguintes valores para o parâmetro \@sync_method: %s.  |
+|   21639   |   16  |   não  |   Os publicadores heterogêneos não podem usar conexões confiáveis. Defina \@trusted como false.   |
+|   21640   |   16  |   não  |   Os Publicadores não SQL Server não oferecem suporte ao valor 1 para o parâmetro \@thirdparty_flag. Ao executar o procedimento armazenado sp_adddistpublisher, especifique um valor 0 para o parâmetro. |
 |   21641   |   16  |   não  |   O parâmetro "%s" é somente para Publicadores não SQL Server. Ele deve ser NULL para Publicadores SQL Server.    |
 |   21642   |   16  |   não  |   Publicadores heterogêneos requerem um servidor vinculado. Já existe um servidor vinculado nomeado '%s'. Remova o servidor vinculado ou escolha um nome de publicador diferente.  |
 |   21643   |   16  |   não  |   O valor especificado para o parâmetro '%s' deve ser MSSQLSERVER, ORACLE ou ORACLE GATEWAY.  |
@@ -7851,7 +7851,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   21646   |   16  |   não  |   O servidor Oracle [%s] já está definido como Publicador [%s] no Distribuidor [%s].[%s]. Descarte o Publicador ou o sinônimo público [%s].   |
 |   21647   |   16  |   não  |   Não foi possível carregar o pacote de suporte do Publicador Oracle. Descarte o esquema do usuário administrativo de replicação e recrie-o. Verifique se ele tem as permissões documentadas.    |
 |   21649   |   16  |   não  |   Não pode alterar a propriedade '%s'. Os Publicadores não SQL Server não dão suporte a essa propriedade.    |
-|   21650   |   16  |   não  |   O valor especificado para @rowcount_only para o artigo '%s' não é 1. Para um artigo em uma publicação de um Publicador não SQL Server, 1 é a única configuração válida para esse parâmetro.  |
+|   21650   |   16  |   não  |   O valor especificado para \@rowcount_only para o artigo '%s' não é 1. Para um artigo em uma publicação de um Publicador não SQL Server, 1 é a única configuração válida para esse parâmetro. |
 |   21651   |   16  |   não  |   Falha ao executar a solicitação HREPL.%s para o Publicador Oracle '%s'. Verifique se o código de pacote Oracle está presente no Publicador e se a conta do usuário administrativo de replicação tem permissões suficientes.  |
 |   21653   |   16  |   não  |   O sistema de gerenciamento de bancos de dados (DBMS) %s %s não existe. Verifique o DBMS e as versões com suporte consultando msdb.dbo.MSdbms. |
 |   21654   |   16  |   não  |   O tipo de dados %s não existe. Verifique os tipos de dados e mapeamentos com suporte consultando msdb.dbo.sysdatatypemappings. |
@@ -7860,8 +7860,8 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   21657   |   16  |   não  |   O mapeamento de tipo de dados para %s já existe.    |
 |   21658   |   16  |   não  |   O mapeamento de tipo de dados não existe. Verifique a lista de mapeamentos consultando msdb.dbo.sysdatatypemappings. |
 |   21659   |   16  |   não  |   Não é possível executar este procedimento para um Publicador do SQL Server. O Publicador deve ser não SQL Server. |
-|   21660   |   16  |   não  |   O valor especificado para o parâmetro @full_or_fast no artigo '%s' deve ser 0, 1 ou 2.    |
-|   21661   |   16  |   não  |   O valor especificado para o parâmetro @shutdown_agent no artigo '%s' deve ser 0 ou 1.  |
+|   21660   |   16  |   não  |   O valor especificado para o parâmetro \@full_or_fast no artigo '%s' deve ser 0, 1 ou 2.   |
+|   21661   |   16  |   não  |   O valor especificado para o parâmetro \@shutdown_agent para o artigo '%s' deve ser 0 ou 1. |
 |   21662   |   16  |   não  |   O objeto de origem [%s].[%s] no Publicador não SQL Server não foi localizado ou não é suportado. Se o objeto existir, verifique se ele atende aos requisitos para ser publicado.  |
 |   21663   |   16  |   não  |   Não é possível localizar uma chave primária válida para a tabela de origem [%s].[%s]. Uma chave primária válida é necessária para publicar a tabela. Adicione ou corrija a definição de chave primária na tabela de origem.    |
 |   21664   |   16  |   não  |   O índice [%s] contém uma única coluna anulável. |
@@ -7889,7 +7889,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   21686   |   16  |   não  |   A operação "%s" não é válida. As operações válidas são "adicionar", "descartar" e "ajuda".    |
 |   21687   |   16  |   não  |   Os filtros de esquemas têm suporte somente dos Publicadores Oracle. O Publicador "%s" é um Publicador "%s".    |
 |   21688   |   16  |   não  |   O logon atual '%s' não consta na lista de acesso à publicação (PAL) de nenhuma publicação do Publicador '%s'. Use um logon que esteja na lista ou adicione esse logon à PAL.  |
-|   21689   |   16  |   não  |   Um valor @schema NULL é inválido para adicionar e descartar operações do filtro de esquemas.  |
+|   21689   |   16  |   não  |   Um valor NULL para \@schema é inválido ao adicionar e descartar operações do filtro de esquemas. |
 |   21690   |   10  |   não  |   O banco de dados de assinante não pode ser igual ao banco de dados de publicador quando o assinante é igual ao publicador   |
 |   21691   |   10  |   não  |   sp_mergesubscription_cleanup deve ser chamado no banco de dados de assinatura  |
 |   21692   |   16  |   não  |   Falha ao inserir no script os procedimentos armazenados do assinante para o artigo '%s' na publicação '%s'  |
@@ -7911,18 +7911,18 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   21711   |   16  |   não  |   Resolvedor de Conflitos Somente Carregamento do Microsoft SQL Server  |
 |   21712   |   16  |   não  |   Resolvedor de Procedimentos Armazenados do Microsoft SQLServer   |
 |   21715   |   16  |   não  |   Não é possível registrar o resolvedor de artigo %s. Isso pode ocorrer quando a conta na qual o SQL Server está sendo executado não tem acesso ao banco de dados de distribuição. Adicione a ID da classe e o nome do resolvedor personalizado manualmente à tabela MSmerge_articleresolver no banco de dados de distribuição.   |
-|   21717   |   16  |   não  |   O nome do resolvedor de artigo não pode ser uma cadeia de caracteres vazia ou NULL. Especifique um valor para o parâmetro @article_resolver. |
-|   21718   |   16  |   não  |   Para um resolvedor COM, o @resolver_clsid não pode ser uma cadeia de caracteres vazia ou NULL. Especifique um valor válido para @resolver_clsid.   |
-|   21719   |   10  |   não  |   O Assinante '%s':'%s' não foi marcado para reinicialização no Publicador porque a assinatura é anônima ou inválida. Verifique se foram especificados valores válidos para os parâmetros @subscriber e @subscriber_db de sp_reinitmergesubscription.   |
-|   21720   |   16  |   não  |   Não é possível localizar um trabalho que corresponda à ID ou nome especificado nos parâmetros @dynamic_snapshot_jobid ou @dynamic_snapshot_jobname. Verifique os valores especificados para esses parâmetros.   |
+|   21717   |   16  |   não  |   O nome do resolvedor de artigo não pode ser uma cadeia de caracteres vazia ou NULL. Especifique um valor válido para o parâmetro \@article_resolver.    |
+|   21718   |   16  |   não  |   Para um resolvedor COM, o \@resolver_clsid não pode ser uma cadeia de caracteres vazia ou NULL. Especifique um valor válido para \@resolver_clsid. |
+|   21719   |   10  |   não  |   O Assinante '%s':'%s' não foi marcado para reinicialização no Publicador porque a assinatura é anônima ou inválida. Verifique se foram especificados valores válidos para os parâmetros \@subscriber e \@subscriber_db de sp_reinitmergesubscription. |
+|   21720   |   16  |   não  |   Não é possível localizar um trabalho que corresponda à ID ou ao nome especificado nos parâmetros \@dynamic_snapshot_jobid ou \@dynamic_snapshot_jobname. Verifique os valores especificados para esses parâmetros. |
 |   21721   |   10  |   não  |   UserScripts |
 |   21722   |   16  |   não  |   Falha ao adicionar um gatilho estendido para replicar o evento '%.*ls'.    |
-|   21723   |   16  |   não  |   O valor especificado para o parâmetro @pubid do procedimento '%s' não é válido ou é NULL. Verifique se o Merge Agent está sendo executado corretamente. Reinicialize a assinatura, se o problema persistir. |
+|   21723   |   16  |   não  |   O valor especificado para o parâmetro \@pubid do procedimento '%s' é inválido ou NULL. Verifique se o Merge Agent está sendo executado corretamente. Reinicialize a assinatura, se o problema persistir.    |
 |   21724   |   10  |   não  |   Não é possível adicionar a chave estrangeira %s com a opção CASCADE porque a tabela %s está publicada. Adicione a cláusula NOT FOR REPLICATION à definição de chave estrangeira.  |
 |   21725   |   16  |   não  |   Não é possível alterar a exibição. Uma exibição indexada replicada como tabela não pode ser alterada para exibição não indexada. Descarte a exibição da publicação antes de tentar alterá-la.  |
 |   21727   |   14  |   não  |   Não é possível concluir a operação de replicação. A verificação de segurança para o usuário atual está apresentando falhas. Somente membros da função de servidor fixa sysadmin ou das funções de banco de dados fixa db_owner ou db_ddladmin podem executar essa operação.  |
 |   21728   |   16  |   não  |   O artigo poderá dar suporte à detecção de conflitos em nível de registro lógico somente se usar a resolução de conflitos de registro lógico. |
-|   21729   |   16  |   não  |   A propriedade @keep_partition_changes não pode ser definida como "true". Isso ocorre porque a propriedade @publication_compatibility_level é definida como 90RTM ou superior e a propriedade @use_partition_groups está definida como "true". Defina um nível de compatibilidade mais baixo ou defina a propriedade @use_partition_groups como "false".    |
+|   21729   |   16  |   não  |   A propriedade \@keep_partition_changes não pode ser definida como "true". Isso ocorre porque a propriedade \@publication_compatibility_level está definida como 90RTM ou superior, e a propriedade \@use_partition_groups está definida como "true". Defina um nível de compatibilidade mais baixo ou defina a propriedade \@use_partition_groups como "false".    |
 |   21730   |   16  |   não  |   A tabela '%s' não pode ser replicada porque contém a coluna Chave Primária imprecisa, recrie a tabela sem a cláusula 'persisted' e tente novamente.  |
 |   21731   |   16  |   não  |   Não é possível adicionar uma restrição ou um padrão sem um nome explícito, pois a tabela está incluída em uma publicação que replica eventos DDL. Especifique um nome exclusivo para a restrição e emita novamente a instrução DDL.    |
 |   21732   |   16  |   não  |   O uso de pacotes DTS (Data Transformation Services) na replicação requer uma senha diferente de NULL ou vazia. Especifique um valor válido para o parâmetro '%s'.   |
@@ -7938,7 +7938,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   21742   |   16  |   não  |   O nome do Publicador Oracle é '%s' e o nome do Assinante Oracle é '%s'. A publicação bidirecional Oracle requer que os nomes do Publicador e do Assinante Oracle sejam iguais.    |
 |   21743   |   16  |   não  |   Não é possível recuperar as informações do originador do assinante Oracle '%s'.   |
 |   21744   |   16  |   não  |   A publicação bidirecional Oracle requer que o parâmetro '%s' tenha um valor '%s'.    |
-|   21745   |   16  |   não  |   Não é possível gerar um procedimento ou exibição de filtro. Verifique se o valor especificado para o parâmetro @filter_clause de sp_addarticle pode ser adicionado à cláusula WHERE de uma instrução SELECT para produzir uma consulta válida.  |
+|   21745   |   16  |   não  |   Não é possível gerar um procedimento ou exibição de filtro. Verifique se o valor especificado para o parâmetro \@filter_clause de sp_addarticle pode ser adicionado à cláusula WHERE de uma instrução SELECT para produzir uma consulta válida. |
 |   21746   |   16  |   não  |   O comprimento de caracteres '%s' não deve exceder %d.   |
 |   21747   |   16  |   não  |   Não é possível estabelecer uma conexão com o Publicador Oracle '%s'. Verifique as informações de conexão e certifique-se de que é possível conectar ao Publicador através de uma ferramenta como o SQL*PLUS.    |
 |   21748   |   16  |   não  |   O artigo foi descartado no Distribuidor, mas as informações no Publicador '%s' não foram descartadas. Nenhuma ação é necessária. As informações serão apagadas, se o Publicador for descartado.    |
@@ -7946,26 +7946,26 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   21750   |   16  |   não  |   A tabela %s não possui uma chave primária necessária para replicação transacional. Crie uma chave primária na tabela.   |
 |   21751   |   16  |   não  |   Não é possível publicar a exibição %s como uma tabela porque ela não tem um índice clusterizado exclusivo. Publique-a como exibição ou adicione um índice clusterizado exclusivo.   |
 |   21752   |   16  |   não  |   O usuário atual %s não tem a permissão SELECT na tabela %s. O usuário deve ter a permissão SELECT para recuperar linhas no Assinante que tenham atualizações pendentes na fila.    |
-|   21753   |   16  |   não  |   A tabela %s, especificada no parâmetro @tablename de sp_getqueuedrows, não faz parte de nenhuma assinatura em fila inicializada ativa. Verifique se as assinaturas em fila são inicializadas adequadamente, executando o Snapshot Agent, o Distribution Agent e o Queue Reader Agent.   |
+|   21753   |   16  |   não  |   A tabela %s, especificada no parâmetro \@tablename de sp_getqueuedrows, não faz parte de nenhuma assinatura ativa iniciada em fila. Verifique se as assinaturas em fila são inicializadas adequadamente, executando o Snapshot Agent, o Distribution Agent e o Queue Reader Agent.  |
 |   21754   |   16  |   não  |   O processamento foi finalizado. O conjunto de resultados de sp_getqueuedrows é maior que 16.000, o tamanho máximo que o procedimento pode retornar. Execute o Queue Reader Agent para liberar a fila no Assinante antes de executar esse procedimento novamente.    |
 |   21755   |   16  |   não  |   Falha ao marcar '%s' como um objeto do sistema. |
 |   21756   |   16  |   não  |   Com base nas configurações do artigo, a tabela %s deve ter uma coluna de identidade, mas não tem. Verifique as configurações de artigo com sp_helparticle e altere-as, se necessário, com sp_changearticle.   |
-|   21757   |   16  |   não  |   A assinatura é somente leitura. A publicação com a qual essa assinatura é sincronizada permite atualizações no Assinante, mas um valor 'read-only' foi especificado para o parâmetro @update_mode de sp_addsubscription. Para permitir atualizações, você deve descartar e recriar a assinatura, especificando um valor diferente para @update_mode.    |
+|   21757   |   16  |   não  |   A assinatura é somente leitura. A publicação com a qual essa assinatura é sincronizada permite atualizações no Assinante, mas um valor 'read-only' foi especificado para o parâmetro \@update_mode de sp_addsubscription. Para permitir atualizações, você deve descartar e recriar a assinatura, especificando um valor diferente para \@update_mode.  |
 |   21758   |   16  |   não  |   Não é possível localizar uma ID do Queue Reader Agent para a assinatura no Publicador %s, banco de dados %s, publicação %s. A assinatura especificada para uma publicação de atualização do Assinante não foi inicializada. Execute o Snapshot Agent, o Distribution Agent e o Queue Reader Agent para inicializar a assinatura.    |
 |   21759   |   16  |   não  |   Não é possível adicionar a coluna '%s' à tabela '%s'. A tabela já contém o número máximo de colunas permitido para um artigo em uma publicação de mesclagem (246 colunas). |
 |   21760   |   11  |   não  |   Não é possível executar o script de replicação no banco de dados 'mestre'. A sessão atual será encerrada. O script deve ser executado no banco de dados de distribuição, e o banco de dados mestre não pode atuar como o banco de dados de distribuição.    |
 |   21761   |   20  |   não  |   Não é possível executar o script de replicação. A sessão atual será encerrada. Verifique os erros retornados pelo SQL Server durante a execução do script.  |
 |   21762   |   10  |   não  |   O banco de dados de distribuição '%s' tem um nível de compatibilidade %d, diferente do nível do banco de dados mestre. Os dois níveis de compatibilidade devem ser iguais; portanto o nível do banco de dados de distribuição está sendo alterado para %d. Essa mensagem é apenas informativa. Não é necessária nenhuma ação do usuário.   |
 |   21763   |   16  |   não  |   O Serviço de Enfileiramento de Mensagens não está sendo executado. Inicie esse serviço e tente a operação novamente. |
-|   21764   |   16  |   não  |   Não é possível criar a publicação. A especificação de um valor 'msmq' para o parâmetro @queue_type tem suporte apenas em plataformas Microsoft Windows NT. Especifique um valor 'sql' para esse parâmetro. |
+|   21764   |   16  |   não  |   Não é possível criar a publicação. A especificação de um valor 'msmq' para o parâmetro \@queue_type tem suporte apenas em plataformas Microsoft Windows NT. Especifique um valor 'sql' para esse parâmetro.    |
 |   21765   |   10  |   não  |   A coluna msrepl_tran_version foi predefinida e permite NULLs. Essa coluna será descartada e recriada para não permitir NULLs para assinantes de atualização. |
-|   21766   |   16  |   não  |   A tabela %s contém uma coluna de identidade marcada como Não para Replicação, mas o parâmetro @identitymanagementoption de sp_addarticle está definido como 'none'. Para dar suporte a assinaturas de atualização imediata, especifique um valor 'manual' ou 'auto' para @identitymanagementoption.    |
+|   21766   |   16  |   não  |   A tabela %s contém uma coluna de identidade marcada como Not For Replication, mas o parâmetro \@identitymanagementoption de sp_addarticle está definido como 'none'. Para oferecer suporte a assinaturas de atualização imediata, especifique um valor 'manual' ou 'auto' para \@identitymanagementoption.  |
 |   21767   |   10  |   não  |   Aviso: o parâmetro '%s' está obsoleto e só está disponível para compatibilidade com versões anteriores. Ele não estará disponível em versões futuras. Em vez desse parâmetro, use o parâmetro '%s'.  |
-|   21768   |   16  |   não  |   Ao executar sp_adddistributor para um Distribuidor remoto, você deve usar uma senha. A senha especificada para o parâmetro @password deve ser igual a quando o procedimento é executado no Publicador e no Distribuidor. |
+|   21768   |   16  |   não  |   Ao executar sp_adddistributor para um Distribuidor remoto, você deve usar uma senha. A senha especificada para o parâmetro \@password deve ser igual quando o procedimento é executado no Publicador e no Distribuidor.    |
 |   21769   |   10  |   não  |   Não há suporte para mapeamentos de tipos de dados personalizados. Você deve validar a exatidão do mapeamento. Se os mapeamentos não forem compatíveis, poderão ocorrer erros ao mover os dados do Publicador para o Assinante.  |
 |   21770   |   10  |   não  |   O mapeamento de tipo de dados de '%s' para '%s' não existe. Reveja o tipo, o comprimento, a precisão, a escala e a nulidade da origem e do destino dos dados. Consulte a tabela do sistema msdb.dbo.sysdatatypemappings para obter uma lista de mapeamentos com suporte.   |
 |   21771   |   16  |   não  |   %s não está dentro do intervalo suportado entre %d e %d.  |
-|   21772   |   16  |   não  |   A propriedade "%s" requer que os parâmetros @force_invalidate_snapshot e @force_reinit_subscription sejam definidos como "true".    |
+|   21772   |   16  |   não  |   A propriedade "%s" requer que os parâmetros \@force_invalidate_snapshot e \@force_reinit_subscription sejam definidos como "true".  |
 |   21773   |   10  |   não  |   O banco de dados de distribuição '%s' não pode ser aberto devido a arquivos inacessíveis. O banco de dados será descartado, mas as tarefas de limpeza do banco de dados de distribuição não ocorrerão. Verifique os logs de erros do banco de dados e do servidor para obter mais informações sobre o motivo pelo qual os arquivos do banco de dados não podem ser acessados. |
 |   21774   |   16  |   não  |   Este procedimento só tem suporte para Publicadores não SQL Server. O Publicador '%s', no qual o procedimento está sendo executado, é um Publicador do SQL Server.    |
 |   21775   |   16  |   não  |   Falha ao gerar bitmap de coluna para o artigo '%s'.  |
@@ -7977,7 +7977,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   21781   |   16  |   não  |   Não é possível recuperar metadados heterogêneos. Verifique as informações de conexão    |
 |   21782   |   16  |   não  |   Não é possível adicionar a coluna de chave primária '%s' ao artigo '%s'. Se o Publicador não for SQL Server, a chave primária poderá ter violado os limites de número e comprimento das colunas do SQL Server. Para obter mais informações, consulte os erros retornados por sp_addarticle. |
 |   21783   |   16  |   não  |   Não é possível adicionar gatilhos do Publicador e a tabela de log de artigos ao Publicador Oracle para o artigo '%s'. Verifique as informações de conexão e certifique-se de que é possível conectar ao Publicador através de uma ferramenta como o SQL*PLUS. Verifique se o esquema de usuário administrativo de replicação tem as permissões necessárias. |
-|   21784   |   16  |   não  |   Você deve especificar um valor não NULL para o parâmetro @rowfilter. |
+|   21784   |   16  |   não  |   Você deve especificar um valor não NULL para o parâmetro \@rowfilter.    |
 |   21785   |   16  |   não  |   Falha ao consultar os atributos Oracle XactSet Job para o publicador '%s'.  |
 |   21786   |   16  |   não  |   Falha ao atualizar Oracle XactSet Job para o publicador '%s'.   |
 |   21787   |   16  |   não  |   Falha ao consultar o sinalizador habilitado para envio em lote do Oracle Xact para o publicador '%s'.  |
@@ -7987,7 +7987,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   21791   |   16  |   não  |   A tabela '%s.%s' já aparece em uma publicação transacional no Publicador Oracle Gateway '%s'. Com o uso da opção Oracle Gateway, uma tabela publicada com replicação transacional só pode ser incluída em uma publicação. Para publicar essa tabela em mais de uma publicação, você deve reconfigurar o Publicador Oracle para usar a opção Oracle Complete.    |
 |   21792   |   16  |   não  |   A tabela '%s.%s' já aparece na publicação transacional '%s' no Publicador '%s'. A opção de publicação (padrão) Oracle Gateway permite que uma tabela seja incluída como um artigo em qualquer número de publicações de instantâneos, mas somente em uma publicação transacional. Para publicar uma tabela em mais de uma publicação transacional, use a opção de publicação Oracle Complete. Para alterar as opções de publicação, você deve descartar o Publicador e reconfigurá-lo.   |
 |   21793   |   16  |   não  |   Os Publicadores não SQL Server têm suporte somente nas edições Enterprise e Developer do SQL Server. A edição desta instância é %s.    |
-|   21794   |   16  |   não  |   O valor especificado para o parâmetro @propertyname não é válido. Use um dos seguintes valores: %s.  |
+|   21794   |   16  |   não  |   O valor especificado para o parâmetro \@propertyname é inválido. Use um dos seguintes valores: %s. |
 |   21795   |   16  |   não  |   O valor especificado para a propriedade %s não é válido. Use um dos seguintes valores: %s.  |
 |   21796   |   16  |   não  |   Deve ser atribuído um valor maior ou igual a 0 à propriedade "xactsetjobinterval".  |
 |   21797   |   16  |   não  |   Não é possível criar o trabalho do agente. '%s' deve ser um logon válido do Windows na forma: 'MACHINE\Login' ou 'DOMAIN\Login'. Consulte a documentação do '%s'.    |
@@ -7997,11 +7997,11 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   21801   |   16  |   não  |   Falha do procedimento armazenado sp_createagentparameter ao adicionar um ou mais parâmetros à tabela do sistema msdb.dbo.MSagentparameterlist. Verifique os erros retornados por sp_createagentparameter e os erros retornados pelo SQL Server durante a execução do sp_createagentparameter.    |
 |   21802   |   16  |   não  |   O processo de criação de perfil do agente não pode validar o valor de parâmetro do agente especificado. '%s' não é um valor válido para o parâmetro '%s'. O valor deve ser um inteiro menor ou igual a '%d'. Verifique se a replicação foi instalada corretamente.   |
 |   21803   |   16  |   não  |   Não é possível atualizar metadados do parâmetro do agente. A replicação não pôde inserir o parâmetro '%s' na tabela '%s'. Verifique se a replicação foi instalada corretamente. Verifique os erros retornados pelo SQL Server durante a execução de sp_createagentparameter.    |
-|   21804   |   16  |   não  |   O valor '%d' especificado para o parâmetro @agent_type de sp_getagentparameterlist não é válido. Especifique um valor válido de 1, 2, 3, 4 ou 9. |
+|   21804   |   16  |   não  |   O valor '%d' especificado para o parâmetro \@agent_type de sp_getagentparameterlist é inválido. Especifique um valor válido de 1, 2, 3, 4 ou 9.    |
 |   21805   |   16  |   não  |   O processo de criação de perfil do agente não pode validar o valor de parâmetro do agente especificado. '%s' não é um valor válido para o parâmetro '%s'. O valor deve ser um inteiro. Verifique se a replicação foi instalada corretamente e se sp_add_agent_parameter é invocado com um valor válido.    |
 |   21806   |   16  |   não  |   O processo de criação de perfil de agente não pode validar o valor do parâmetro de agente especificado: profile_id %d não existe ou não suporta o parâmetro %s. O valor deve ser um inteiro. Verifique se a replicação foi instalada corretamente e se sp_add_agent_parameter é invocado com um valor válido.    |
-|   21807   |   16  |   não  |   Para um Manipulador de Lógica de Negócios do .NET Assembly, o @resolver_clsid deve ser especificado como NULL.  |
-|   21808   |   16  |   não  |   Para um Manipulador de Lógica de Negócios do .NET Assembly, o @resolver_info deve conter o nome de classe em '%s' que implemente a interface Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule.  |
+|   21807   |   16  |   não  |   Para um Manipulador de Lógica de Negócios do .NET Assembly, o \@resolver_clsid deve ser especificado como NULL. |
+|   21808   |   16  |   não  |   Para um Manipulador de Lógica de Negócios do .NET Assembly, o \@resolver_info deve conter o nome de classe em '%s' que implemente a interface Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule. |
 |   21809   |   10  |   não  |   A replicação de DDL não foi habilitada para o banco de dados '%ls' porque seu nível de compatibilidade é inferior a 80.  |
 |   21810   |   16  |   não  |   A coluna de identidade só pode ser adicionada a uma tabela publicada com a cláusula 'Not For Replication'    |
 |   21811   |   16  |   não  |   Não é possível descartar a coluna '%s' porque ela está sendo usada pela replicação: ela é referenciada em um filtro ou uma exibição pelo artigo '%s'. Para descartar a coluna primeiro remova o filtro do artigo. |
@@ -8022,7 +8022,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   21826   |   16  |   não  |   A propriedade '%s' só é válida para assinaturas %s. Use '%s' para assinaturas %s.    |
 |   21827   |   16  |   não  |   Os parâmetros %s foram preteridos e não devem mais ser usados. Para obter mais informações, consulte a documentação do '%s'.  |
 |   21828   |   16  |   não  |   Conta proxy para jobstep_uid (%s) não encontrada.  |
-|   21830   |   16  |   não  |   Não é possível especificar schema_option 0x4 (identidade do script como identidade em vez do tipo de dados base) para o artigo '%s'. O valor especificado para o parâmetro @identityrangemanagementoption é NONE. Para replicar identidade como identidade, o valor deve ser MANUAL ou AUTO para publicações que não dão suporte a assinaturas de atualização em fila.   |
+|   21830   |   16  |   não  |   Não é possível especificar schema_option 0x4 (identidade do script como identidade em vez do tipo de dados base) para o artigo '%s'. O valor especificado para o parâmetro \@identityrangemanagementoption é NONE. Para replicar identidade como identidade, o valor deve ser MANUAL ou AUTO para publicações que não dão suporte a assinaturas de atualização em fila.  |
 |   21831   |   16  |   não  |   O %s já existe. Use '%s' para alterar quaisquer configurações/propriedades.  |
 |   21832   |   16  |   não  |   Somente os membros da função de servidor fixa sysadmin podem executar esta operação sem especificar %s.    |
 |   21833   |   16  |   não  |   Ocorreu um erro ao criar um evento de rastreamento no publicador Oracle '%s'. Não foi possível postar o evento de rastreamento.    |
@@ -8031,7 +8031,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   21836   |   16  |   não  |   O Distribution Agent deve ser executado em modo de fluxo de assinatura única antes de redefinir a assinatura xact_seqno.   |
 |   21837   |   16  |   não  |   Já existe um trabalho do agente de replicação (%s) relativo a esta assinatura.  |
 |   21838   |   16  |   não  |   Os parâmetros %s foram preteridos neste procedimento. Os valores devem ser especificados ao chamar '%s'.   |
-|   21839   |   16  |   não  |   O artigo '%s' não tem suporte para schema_option 0x20 ou 0x2000000000, pois contém uma coluna computada, restrição de verificação/padrão ou chave primária baseada na coluna de tipo CLR. Altere a configuração @schema_option e tente novamente.    |
+|   21839   |   16  |   não  |   O artigo '%s' não tem suporte para schema_option 0x20 ou 0x2000000000, pois contém uma coluna computada, restrição de verificação/padrão ou chave primária baseada na coluna de tipo CLR. Altere a configuração \@schema_option e tente novamente.   |
 |   21840   |   16  |   não  |   Não é possível adicionar a coluna computada com base em tipo CLR ou a restrição de verificação à tabela '%s' porque o artigo '%s' dá suporte a schema_option 0x20.  |
 |   21841   |   10  |   não  |   A replicação de DDL está forçando a reinicialização porque a publicação '%s' usa bcp de modo de caracteres, ou a coluna de carimbo de data/hora/identidade está sendo replicada como tipo base somente para o artigo '%s'.    |
 |   21842   |   16  |   não  |   %s só pode ser especificado/alterado para publicações heterogêneas quando %s está definido como %s.   |
@@ -8112,10 +8112,10 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   22519   |   16  |   não  |   Não é possível adicionar uma relação de registro lógico entre as tabelas "%s" e "%s", pois uma coluna do tipo text, image, ntext, xml, varchar(max), nvarchar(max) ou varbinary(max) foi referenciada na cláusula de junção.   |
 |   22520   |   10  |   não  |   Um tipo de filtragem do artigo foi alterado. Todas as alterações pendentes ou futuras feitas neste artigo por um Assinante em uma determinada partição não serão mais propagadas para os Assinantes de outras partições. Consulte mais detalhes na documentação. |
 |   22521   |   10  |   não  |   Não foi possível sincronizar a linha porque ela foi atualizada por um processo diferente fora da replicação.    |
-|   22522   |   16  |   não  |   O artigo '%s' não pode ser publicado porque está em outra publicação de mesclagem. Um artigo com valor 3 para o parâmetro @partition_options de sp_addmergearticle (partições não sobrepostas com uma única assinatura por partição) não pode ser incluído em várias publicações ou assinaturas nem pode ser republicado. Para incluir o artigo em várias publicações, use sp_changemergearticle para especificar um valor diferente para a propriedade partition_options do artigo existente.    |
-|   22523   |   16  |   não  |   Um artigo não pode usar @partition_options 2 ou 3 (partições não sobrepostas) e, ao mesmo tempo, fazer parte de uma relação de registro lógico. Verifique o artigo "%s".    |
-|   22524   |   16  |   não  |   O artigo '%s' está em outra publicação de mesclagem, com um valor diferente especificado para o parâmetro @partition_options de sp_addmergearticle. O valor especificado deve ser igual em todas as publicações de mesclagem. Especifique o mesmo valor do artigo existente ou altere o artigo existente usando sp_changemergearticle.  |
-|   22525   |   16  |   não  |   A publicação "%s" não pode permitir várias assinaturas por partição se contiver artigos usando @partition_options = 3.    |
+|   22522   |   16  |   não  |   O artigo '%s' não pode ser publicado porque está em outra publicação de mesclagem. Um artigo com valor 3 para o parâmetro \@partition_options de sp_addmergearticle (partições não sobrepostas com uma única assinatura por partição) não pode ser incluído em várias publicações ou assinaturas nem pode ser republicado. Para incluir o artigo em várias publicações, use sp_changemergearticle para especificar um valor diferente para a propriedade partition_options do artigo existente.   |
+|   22523   |   16  |   não  |   Um artigo não pode usar \@partition_options 2 ou 3 (partições que não se sobrepõem) e, ao mesmo tempo, fazer parte de uma relação de registro lógico. Verifique o artigo "%s".   |
+|   22524   |   16  |   não  |   O artigo '%s' está em outra publicação de mesclagem, com um valor diferente especificado para o parâmetro \@partition_options de sp_addmergearticle. O valor especificado deve ser igual em todas as publicações de mesclagem. Especifique o mesmo valor do artigo existente ou altere o artigo existente usando sp_changemergearticle. |
+|   22525   |   16  |   não  |   A publicação "%s" não pode permitir várias assinaturas por partição se contiver artigos usando \@partition_options = 3.   |
 |   22526   |   16  |   não  |   Foi especificado um valor inválido para %s. Os valores válidos são 0 (nenhum), 1 (partições aplicadas), 2 (partições que não se sobrepõem com várias assinaturas por partição) e 3 (partições que não se sobrepõem com uma única assinatura por partição).   |
 |   22527   |   16  |   não  |   Valor inválido especificado para %s. Os valores válidos são 'day', 'days', 'dd', 'year', 'years', 'yy', 'yyyy', 'month', 'months', 'mm', 'week', 'weeks', 'wk', 'hour', 'hours', 'hh', 'minute', 'minutes', 'mi'.  |
 |   22528   |   16  |   não  |   Não é possível usar uma unidade de período de retenção diferente de "days" para a publicação "%s", pois o nível de compatibilidade da publicação é inferior a 90. Use sp_changemergepublication para definir publication_compatibility_level como 90RTM.   |
@@ -8132,8 +8132,8 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   22539   |   16  |   não  |   O uso de parâmetros %s é inválido quando o parâmetro %s está definido como %s. |
 |   22540   |   16  |   não  |   Não é possível alterar a publicação "%s" para usar sync_mode de "caractere" porque ela contém uma ou mais relações de registro lógico.   |
 |   22541   |   16  |   não  |   Não é possível adicionar uma relação de registro lógico na publicação "%s" porque ela usa sync_mode de "caractere" e pode ter assinantes do SQL Server Compact Edition.    |
-|   22542   |   16  |   não  |   Valor inválido para a propriedade @subscriber_upload_options. Os valores válidos são 0 (permita cargas), 1 (desabilite cargas), 2 (desabilite cargas proíbem alterações de assinante) e 3 (disable_outofpartition_subscriber_changes). |
-|   22543   |   16  |   não  |   Quando a propriedade de publicação @allow_partition_realignment é definida como "false", a propriedade de artigo @subscriber_upload_options para todos os artigos da publicação deve ser definida para desabilitar uploads.   |
+|   22542   |   16  |   não  |   Valor inválido para a propriedade \@subscriber_upload_options. Os valores válidos são 0 (permita cargas), 1 (desabilite cargas), 2 (desabilite cargas proíbem alterações de assinante) e 3 (disable_outofpartition_subscriber_changes).    |
+|   22543   |   16  |   não  |   Quando a propriedade de publicação \@allow_partition_realignment é definida como "false", a propriedade de artigo \@subscriber_upload_options para todos os artigos da publicação deve ser definida para desabilitar carregamentos. |
 |   22544   |   10  |   não  |   Aviso: o procedimento sp_mergecleanupmetadata foi preterido. No SQL Server 2000 SP1 e posterior, o Merge Agent chama sp_mergemetadataretentioncleanup todas as vezes que é executado, dispensando a limpeza manual de metadados. Ignorando os parâmetros passados e chamando sp_mergemetadataretentioncleanup.   |
 |   22545   |   16  |   não  |   Não é possível adicionar uma relação de registro lógico na publicação "%s" porque ela permite sincronização da Web. |
 |   22546   |   16  |   não  |   Não é possível alterar a publicação "%s" para permitir sincronização da Web porque ela contém uma ou mais relações de registro lógico.   |
@@ -8142,8 +8142,8 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   22549   |   16  |   não  |   Já existe um Distribution Agent compartilhado (%s) para esta assinatura.  |
 |   22550   |   16  |   não  |   Não é possível descartar a coluna de identidade "%s" da partição vertical quando identityrangemanagementoption está definido como auto. |
 |   22551   |   16  |   não  |   O tipo "%s" é inválido. Os tipos válidos são"merge", "tran" e "both".  |
-|   22552   |   16  |   não  |   Um valor válido para o parâmetro "@resync_date_str" precisa ser fornecido quando "@resync_type" está definido como 2.    |
-|   22553   |   16  |   não  |   O parâmetro "@resync_type" está definido como "%d", mas essa assinatura nunca foi validada com êxito.    |
+|   22552   |   16  |   não  |   Um valor válido para o parâmetro "\@resync_date_str" precisa ser fornecido quando "\@resync_type" está definido como 2.  |
+|   22553   |   16  |   não  |   O parâmetro "\@resync_type" está definido como "%d", mas essa assinatura nunca foi validada com êxito.   |
 |   22554   |   16  |   não  |   Não é possível alterar a publicação "%s" para usar sync_mode de "caractere" porque ela usa uma unidade de período de retenção diferente de dia. Use sp_changemergepublication para definir a unidade de período de retenção como "dia".   |
 |   22555   |   16  |   não  |   Não é possível definir a unidade de período de retenção com um valor diferente de "dia" para a publicação "%s", pois ela usa sync_mode de "caractere" e pode ter assinantes do SQL Server Compact Edition. |
 |   22556   |   16  |   não  |   Valor inválido para a propriedade "%s". Os valores válidos são 1 e 0.  |
@@ -8168,7 +8168,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   22575   |   16  |   não  |   Quando a propriedade de artigo 'published_in_tran_pub' for definida como 'true', a propriedade de artigo 'upload_options' terá que ser definida de modo a desabilitar carregamentos. |
 |   22576   |   10  |   não  |   O valor de failover_mode inválido %d foi especificado para [%s].[%s].[%s], definindo como 0 [imediato].   |
 |   22577   |   16  |   não  |   Falha ao adicionar assinatura, pois o número permitido de %s assinaturas para o SQL Workgroup Edition Publisher '%s' seria excedido. O número máximo permitido é %d. |
-|   22578   |   16  |   não  |   Não é possível alterar a publicação "%s" para desabilitar use_partition_groups, pois ela contém uma ou mais relações de registro lógico. Quando são usadas relações de registro lógico, a publicação deve definir a propriedade @use_partition_groups como 'true'.    |
+|   22578   |   16  |   não  |   Não é possível alterar a publicação "%s" para desabilitar use_partition_groups, pois ela contém uma ou mais relações de registro lógico. Quando são usadas relações de registro lógico, a publicação deve definir a propriedade \@use_partition_groups como 'true'.   |
 |   22579   |   16  |   não  |   A assinatura na publicação '%s' não foi encontrada, mas existe um agente compartilhado. Para especificar uma assinatura em uma publicação replicada via agente compartilhado, especifique '%s' como nome da publicação.   |
 |   22580   |   16  |   não  |   Não é possível publicar o banco de dados '%s' porque ele está marcado como publicado em outro servidor. Antes de tentar publicá-lo, execute sp_replicationdboption, especificando um valor FALSE para 'publish' e 'merge publish'.    |
 |   22581   |   16  |   não  |   O artigo '%s' não pode ser adicionado à publicação '%s' nem modificado nela. Não há suporte para a replicação de colunas FILESTREAM para publicações que tenham um 'sync_mode' igual a 1 (modo de caractere). Especifique um 'sync_mode' igual a 0 (modo nativo) para a publicação usando sp_addmergepublication ou sp_changemergepublication, ou particione o artigo verticalmente para que a coluna FILESTREAM não seja replicada.    |
@@ -8186,7 +8186,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   22807   |   16  |   não  |   A propriedade de publicação '%s' não pode ser modificada porque a publicação ponto a ponto '%s' não está habilitada para detecção de conflitos. Para habilitar a publicação para detecção de conflitos, use sp_configure_peerconflictdetection. |
 |   22808   |   16  |   não  |   Não é possível executar o procedimento '%s'. A publicação '%s' deve ser habilitada para replicação ponto a ponto antes de você executar este procedimento. Para isso, use sp_changepublication.   |
 |   22809   |   10  |   não  |   A tabela de conflitos existente '%s' foi descartada.   |
-|   22810   |   16  |   não  |   O valor de parâmetro @action não é válido. Os valores válidos são 'enable' e 'disable'.  |
+|   22810   |   16  |   não  |   O valor do parâmetro \@action é inválido. Os valores válidos são 'enable' e 'disable'. |
 |   22811   |   16  |   não  |   O tempo limite da viagem de ida e volta deve ser maior que 0.  |
 |   22812   |   10  |   não  |   A viagem de ida e volta '%s' foi concluída com tempo limite: %d segundos.   |
 |   22813   |   10  |   não  |   A topologia contém versões de nó par que não oferecem suporte para a detecção de conflito. Para usar a detecção de conflito, verifique se todos os nós da topologia são do SQL Server 2008 ou de versões posteriores.    |
@@ -8204,7 +8204,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   22825   |   10  |   não  |   Um conflito inserção-inserção entre os itens par %d (entrada) e %d (no disco) foi detectado e resolvido. A inserção de entrada foi aplicada ao item par %d.   |
 |   22827   |   16  |   não  |   Alerta de detecção de conflito ponto a ponto   |
 |   22828   |   16  |   não  |   A publicação '%s' já estava %s para detecção de conflitos ponto a ponto.    |
-|   22829   |   16  |   não  |   Falha do comando %s. Os valores especificados para @ins_cmd, @del_cmd ou @upd_cmd não podem ser anexados ao nome de esquema %s dentro do limite de tamanho %d. |
+|   22829   |   16  |   não  |   Falha do comando %s. Os valores especificados para \@ins_cmd, \@del_cmd ou \@upd_cmd não podem ser anexados ao nome de esquema %s dentro do limite de tamanho %d.  |
 |   22830   |   16  |   não  |   Não foi possível atualizar os metadados que indicam que o banco de dados %s está habilitado para o Change Data Capture. A falha ocorreu durante a execução do comando '%s'. O erro retornado foi %d: "%s". Use a ação e o erro para determinar o motivo da falha e envie novamente a solicitação.    |
 |   22831   |   16  |   não  |   Não foi possível atualizar os metadados que indicam que o banco de dados %s não está habilitado para o Change Data Capture. A falha ocorreu durante a execução do comando '%s'. O erro retornado foi %d: "%s". Use a ação e o erro para determinar o motivo da falha e envie novamente a solicitação.    |
 |   22832   |   16  |   não  |   Não foi possível atualizar os metadados que indicam que a tabela %s está habilitada para o Change Data Capture. A falha ocorreu durante a execução do comando '%s'. O erro retornado foi %d: "%s". Use a ação e o erro para determinar o motivo da falha e envie novamente a solicitação.   |
@@ -8216,17 +8216,17 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   22838   |   16  |   não  |   Todas as colunas de um índice exclusivo CDC devem ser definidas como NOT NULL. O índice '%s' selecionado como índice exclusivo CDC para a tabela de origem '%s.%s' não atende a esse requisito. Defina todas as colunas do índice selecionado como NOT NULL ou selecione outro índice exclusivo como índice CDC e envie novamente a solicitação.  |
 |   22840   |   16  |   não  |   A solicitação de bloqueio de aplicativo '%s', necessária para modificar metadados do Change Data Capture, não foi concedida. O valor retornado da solicitação foi %d: -1 = tempo limite; -2 = cancelado; -3 = vítima de deadlock; -999 validação ou outro erro de chamada. Examine a causa do erro e envie novamente a solicitação.   |
 |   22841   |   16  |   não  |   Não foi possível atualizar os metadados do banco de dados '%s', que está habilitado para o Change Data Capture. A falha ocorreu durante a execução da ação '%s'. O erro retornado foi %d: "%s". Use a ação e o erro para determinar o motivo da falha e envie novamente a solicitação.    |
-|   22842   |   16  |   não  |   Falha na instrução ALTER TABLE SWITCH porque a tabela de destino particionada está habilitada para o Change Data Capture e não tem @allow_partition_switch definido como 1.    |
-|   22843   |   16  |   não  |   Falha na instrução ALTER TABLE SWITCH porque a tabela de origem particionada está habilitada para o Change Data Capture e não tem @allow_partition_switch definido como 1. |
+|   22842   |   16  |   não  |   Falha na instrução ALTER TABLE SWITCH porque a tabela de destino particionada está habilitada para a Captura de dados de alterações (CDA) e não tem \@allow_partition_switch definido como 1.   |
+|   22843   |   16  |   não  |   Falha na instrução ALTER TABLE SWITCH porque a tabela de origem particionada está habilitada para a Captura de dados de alterações e não tem \@allow_partition_switch definido como 1.    |
 |   22844   |   16  |   não  |   A opção '%s' deve ser 1 ou 0.  |
 |   22850   |   16  |   não  |   O valor de limite especificado para o processo de limpeza Change Data Capture deve ser maior que 0. Ao criar ou modificar o trabalho de limpeza, especifique um valor de limite positivo. Se este erro ocorrer mediante a execução do procedimento armazenado sys.sp_cdc_cleanup_change_table, redefina o valor de limite associado ao trabalho para um valor não negativo usando o procedimento armazenado sp_cdc_change_job.  |
 |   22851   |   16  |   não  |   Não foi possível atualizar cdc.change_tables para indicar uma alteração na marca d'água inferior do banco de dados %s.  |
 |   22852   |   10  |   não  |   Não foi possível excluir da tabela de alteração as entradas que ficaram obsoletas após uma alteração em uma ou mais marcas d'água inferiores para instâncias de captura do banco de dados %s. A falha ocorreu durante a execução do comando '%s'. O erro retornado foi %d: "%s". Use a ação e o erro para determinar o motivo da falha e envie novamente a solicitação.    |
 |   22853   |   10  |   não  |   Não foi possível excluir entradas obsoletas da tabela cdc.lsn_time_mapping do banco de dados %s. A falha ocorreu durante a execução do comando '%s'. O erro retornado foi %d: "%s". Use a ação e o erro para determinar o motivo da falha e envie novamente a solicitação.    |
 |   22854   |   16  |   não  |   Não é possível habilitar o Change Data Capture na tabela '%s' ou adicionar a coluna ColumnSet a ela, pois o CDC não oferece suporte a ColumnSet.  |
-|   22855   |   10  |   não  |   Aviso: o parâmetro @allow_partition_switch é definido como 1. Change Data Capture não rastreará as alterações introduzidas na tabela resultante de uma comutação de partição que causará inconsistências de dados quando as alterações forem consumidas. Consulte os manuais online para obter mais informações sobre o comportamento de comutação de partição durante o uso do Change Data Capture.   |
-|   22856   |   10  |   não  |   Aviso: o parâmetro @allow_partition_switch é definido como 0. ALTER TABLE ... A instrução SWITCH PARTITION não será permitida nesta tabela particionada. Consulte os manuais online para obter mais informações sobre o comportamento de comutação de partição durante o uso do Change Data Capture.  |
-|   22857   |   10  |   não  |   Aviso: o parâmetro @allow_partition_switch deve ser 1 para tabelas não particionadas. A configuração explícita do parâmetro como 0 foi ignorada. Consulte os manuais online para obter mais informações sobre o comportamento de comutação de partição durante o uso do Change Data Capture. |
+|   22855   |   10  |   não  |   Aviso: o parâmetro \@allow_partition_switch está definido como 1. Change Data Capture não rastreará as alterações introduzidas na tabela resultante de uma comutação de partição que causará inconsistências de dados quando as alterações forem consumidas. Consulte os manuais online para obter mais informações sobre o comportamento de comutação de partição durante o uso do Change Data Capture.  |
+|   22856   |   10  |   não  |   Aviso: o parâmetro \@allow_partition_switch está definido como 0. ALTER TABLE ... A instrução SWITCH PARTITION não será permitida nesta tabela particionada. Consulte os manuais online para obter mais informações sobre o comportamento de comutação de partição durante o uso do Change Data Capture. |
+|   22857   |   10  |   não  |   Aviso: o parâmetro \@allow_partition_switch deve ser 1 para tabelas não particionadas. A configuração explícita do parâmetro como 0 foi ignorada. Consulte os manuais online para obter mais informações sobre o comportamento de comutação de partição durante o uso do Change Data Capture.    |
 |   22858   |   16  |   não  |   Não é possível adicionar entradas à tabela de mapeamento de tempo de Change Data Capture LSN para refletir as alterações dml aplicadas às tabelas rastreadas. Consulte os erros anteriores na sessão atual para identificar a causa e corrigir quaisquer problemas associados.    |
 |   22859   |   16  |   não  |   A Verificação do Log não processou registros de log. Consulte os erros anteriores na sessão atual para identificar a causa e corrigir quaisquer problemas associados.   |
 |   22860   |   16  |   não  |   A verificação de log não processou registros de log de ddl. Consulte os erros anteriores na sessão atual para identificar a causa e corrigir quaisquer problemas associados.  |
@@ -8240,7 +8240,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   22904   |   16  |   não  |   O chamador não tem autorização para iniciar a ação solicitada. Privilégios DBO são necessários. |
 |   22905   |   10  |   não  |   O banco de dados '%s' já está habilitado para o Change Data Capture. Verifique se o contexto do banco de dados correto está definido e repita a operação. Para gerar relatórios sobre os bancos de dados habilitados para o Change Data Capture, consulte a coluna is_cdc_enabled na exibição do catálogo sys.databases.  |
 |   22906   |   16  |   não  |   Não é possível habilitar o banco de dados '%s' para o Change Data Capture porque um usuário do banco de dados com o nome 'cdc' ou um esquema com o nome 'cdc' já existe no banco de dados atual. Esses objetos são exigidos exclusivamente pelo Change Data Capture. Descarte ou renomeie o usuário ou esquema e repita a operação.   |
-|   22907   |   16  |   não  |   O parâmetro @role_name não pode ficar vazio. Especifique um valor para @role_name e repita a operação. Forneça nulo como o valor se nenhuma função tiver que ser usada para acesso a dados de alteração capturados. |
+|   22907   |   16  |   não  |   O parâmetro \@role_name não pode ficar vazio. Especifique um valor para \@role_name e repita a operação. Forneça nulo como o valor se nenhuma função tiver que ser usada para acesso a dados de alteração capturados.   |
 |   22908   |   16  |   não  |   Não foi possível criar os objetos do Change Data Capture no banco de dados '%s'. Consulte os erros anteriores na sessão atual para identificar a causa e corrigir quaisquer problemas associados.   |
 |   22909   |   16  |   não  |   Falha ao limpar a tabela cdc.lsn_time_mapping no banco de dados '%s' quando a última tabela do banco de dados habilitada para o Change Data Capture foi desabilitada. Consulte os erros anteriores na sessão atual para identificar a causa e corrigir quaisquer problemas associados. |
 |   22910   |   16  |   não  |   Falha na solicitação de limpeza do banco de dados '%s'. O banco de dados não está habilitado para o Change Data Capture.  |
@@ -8251,11 +8251,11 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   22918   |   16  |   não  |   Uma ou mais colunas da lista de colunas incluídas não eram colunas capturadas da tabela de alteração %s.   |
 |   22919   |   16  |   não  |   Uma ou mais colunas da lista de colunas que precisam de sinalizadores de atualização não eram colunas capturadas da tabela de alteração %s.   |
 |   22920   |   16  |   não  |   A instância de captura nomeada %s não existe para o banco de dados %s.   |
-|   22921   |   16  |   não  |   Não é possível gerar scripts para todas as instâncias de captura que o chamador está autorizado a acessar. Para gerar todos esses scripts, os parâmetros @column_list e @update_flag_list devem ser ambos nulos ou vazios.  |
+|   22921   |   16  |   não  |   Não é possível gerar scripts para todas as instâncias de captura que o chamador está autorizado a acessar. Para gerar todos esses scripts, os parâmetros \@column_list e \@update_flag_list devem ser ambos nulos ou vazios.’    |
 |   22923   |   16  |   não  |   Não foi possível calcular o novo ponto de extremidade baixo para o banco de dados '%s' da retenção %d. Consulte os erros anteriores na sessão atual para identificar a causa e corrigir quaisquer problemas associados.  |
 |   22924   |   16  |   não  |   Não foi possível limpar as tabelas de alteração para o banco de dados '%s'. Falha ao tentar limpar as tabelas de alteração de banco de dados com base no tempo de retenção atual. Consulte os erros anteriores na sessão atual para identificar a causa e corrigir quaisquer problemas associados. |
-|   22925   |   16  |   não  |   O número de colunas capturadas pela instância de captura '%s' excede o número máximo permitido: %d. Use o parâmetro @captured_columns_list para especificar um subconjunto de colunas com um número menor ou igual ao máximo permitido e envie novamente a solicitação. |
-|   22926   |   16  |   não  |   Não foi possível criar uma instância de captura porque o nome da instância de captura '%s' já existe no banco de dados atual. Especifique um nome exclusivo explícito para o parâmetro @capture_instance. |
+|   22925   |   16  |   não  |   O número de colunas capturadas pela instância de captura '%s' excede o número máximo permitido: %d. Use o parâmetro \@captured_columns_list para especificar um subconjunto de colunas com um número menor ou igual ao máximo permitido e envie novamente a solicitação.    |
+|   22926   |   16  |   não  |   Não foi possível criar uma instância de captura porque o nome da instância de captura '%s' já existe no banco de dados atual. Especifique um nome exclusivo explícito para o parâmetro \@capture_instance.    |
 |   22927   |   16  |   não  |   O nome da instância de captura '%s' excede o limite de 100 caracteres. Especifique um nome que atende à restrição de tamanho. |
 |   22928   |   16  |   não  |   O nome de índice '%s' não é um índice para a tabela '%s.%s'. Especifique um nome de índice válido para a tabela.    |
 |   22929   |   16  |   não  |   O índice '%s' deve ser uma chave primária ou um índice exclusivo para a tabela '%s.%s'. Especifique um índice que atenda, pelo menos, a um destes requisitos.    |
@@ -8263,11 +8263,11 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   22931   |   16  |   não  |   A tabela de origem '%s.%s' não existe no banco de dados atual. Verifique se o contexto do banco de dados correto está definido. Especifique um esquema e um nome de tabela válidos para o banco de dados.   |
 |   22932   |   16  |   não  |   O nome da instância de captura '%s' é inválido. Especifique um nome válido. Consulte o tópico 'Identificadores' nos manuais online do SQL Server quanto às regras de nome de objeto.  |
 |   22938   |   16  |   não  |   O nome da função '%s' é inválido. Especifique um nome válido. Consulte o tópico 'Identificadores' nos manuais online do SQL Server quanto às regras de nome de objeto.  |
-|   22939   |   16  |   não  |   O parâmetro @supports_net_changes está definido como 1, mas a tabela de origem não tem uma chave primária definida e nenhum índice exclusivo alternativo foi especificado. |
+|   22939   |   16  |   não  |   O parâmetro \@supports_net_changes está definido como 1, mas a tabela de origem não tem uma chave primária definida e nenhum índice exclusivo alternativo foi especificado.    |
 |   22940   |   16  |   não  |   Não foi possível remover as entradas de histórico DDL dos metadados do Change Data Capture para a instância de captura '%s' e tabela de origem '%s.%s'. Consulte os erros anteriores na sessão atual para identificar a causa e corrigir quaisquer problemas associados. |
 |   22941   |   16  |   não  |   Não foi possível recuperar as informações da coluna para o índice '%s' da tabela de origem '%s.%s'. Consulte os erros anteriores na sessão atual para identificar a causa e corrigir quaisquer problemas associados.    |
-|   22942   |   16  |   não  |   As colunas especificadas na lista de colunas capturadas não puderam ser mapeadas para colunas da tabela de origem '%s.%s'. Verifique se as colunas especificadas no parâmetro @captured_column_list estão delimitadas corretamente e correspondem às colunas da tabela de origem.    |
-|   22943   |   16  |   não  |   As colunas usadas para identificar exclusivamente uma linha para controle de alterações líquidas devem ser incluídas na lista de colunas capturadas. Adicione as colunas de chave primária da tabela de origem, ou as colunas definidas para o índice especificado no parâmetro @index_name, à lista de colunas capturadas e repita a operação.  |
+|   22942   |   16  |   não  |   As colunas especificadas na lista de colunas capturadas não puderam ser mapeadas para colunas da tabela de origem '%s.%s'. Verifique se as colunas especificadas no parâmetro \@captured_column_list estão delimitadas corretamente e correspondem às colunas da tabela de origem.   |
+|   22943   |   16  |   não  |   As colunas usadas para identificar exclusivamente uma linha para controle de alterações líquidas devem ser incluídas na lista de colunas capturadas. Adicione as colunas de chave primária da tabela de origem, ou as colunas definidas para o índice especificado no parâmetro \@index_name, à lista de colunas capturadas e repita a operação. |
 |   22944   |   16  |   não  |   Não foi possível criar a função de banco de dados especificada '%s' para conceder acesso à tabela de alteração '%s.%s'. Consulte os erros anteriores na sessão atual para identificar a causa e corrigir quaisquer problemas associados. |
 |   22945   |   16  |   não  |   Não foi possível adicionar as informações da coluna à tabela do sistema cdc.index_columns para o índice especificado para a tabela de origem '%s.%s. Consulte os erros anteriores na sessão atual para identificar a causa e corrigir quaisquer problemas associados.  |
 |   22946   |   16  |   não  |   Não foi possível adicionar as informações da coluna à tabela do sistema cdc.captured_columns para a tabela de origem '%s.%s'. Consulte os erros anteriores na sessão atual para identificar a causa e corrigir quaisquer problemas associados.  |
@@ -8293,9 +8293,9 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   22966   |   16  |   não  |   Não foi possível criar a tabela dbo.systranschemas no banco de dados '%s'. Consulte os erros anteriores na sessão atual para identificar a causa e corrigir quaisquer problemas associados.  |
 |   22967   |   16  |   não  |   Não foi possível criar um índice clusterizado para a tabela dbo.systranschemas no banco de dados '%s'. Consulte os erros anteriores na sessão atual para identificar a causa e corrigir quaisquer problemas associados.    |
 |   22968   |   16  |   não  |   Não foi possível criar o gatilho DDL '%s' ao habilitar o Change Data Capture para o banco de dados '%s'. Additional messages in the SQL Server error log and system event log may provide more detail.    |
-|   22970   |   16  |   não  |   O valor do parâmetro @maxscans especificado para o trabalho do Change Data Capture deve ser maior que 0. |
+|   22970   |   16  |   não  |   O valor do parâmetro \@maxscans especificado para o trabalho Captura de dados de alterações deve ser maior que 0.    |
 |   22971   |   16  |   não  |   Não foi possível alocar memória para o cache de histórico do Log Reader. Verifique se o SQL Server tem memória suficiente para todas as operações. Verifique as configurações física e virtual no servidor e examine o uso da memória para ver se outro aplicativo está consumindo memória excessivamente.  |
-|   22972   |   16  |   não  |   Ao chamar o procedimento armazenado [sys].sp_cdc_help_change_data capture, se @source_schema ou @source_name não for nulo e não estiver vazio, o outro parâmetro também não deverá ser nulo nem estar vazio.   |
+|   22972   |   16  |   não  |   Ao chamar o procedimento armazenado [sys].sp_cdc_help_change_data capture, se \@source_schema ou \@source_name não for nulo e não estiver vazio, o outro parâmetro também não deverá ser nulo nem estar vazio. |
 |   22973   |   16  |   não  |   O grupo de arquivos especificado '%s' não é um grupo de arquivos válido para o banco de dados '%s'. Especifique um grupo de arquivos existente válido ou crie o grupo de arquivos nomeado e repita a operação. |
 |   22974   |   16  |   não  |   Não é possível habilitar as tabelas contidas no esquema cdc para o Change Data Capture.   |
 |   22975   |   16  |   não  |   A tabela de origem '%s' contém um dos nomes de coluna reservados a seguir: __$start_lsn, __$end_lsn, __$seqval, __$operation e __$update_mask. Para habilitar o Change Data Capture para essa tabela, especifique uma lista de colunas capturadas e verifique se essas colunas foram excluídas da lista.    |
@@ -8313,16 +8313,16 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   22987   |   16  |   não  |   Falha na população do Change Data Capture ao gravar dados BLOB em uma ou mais colunas de objeto grandes. Verifique se o SQL Server tem memória suficiente para todas as operações. Verifique as configurações de memória física e virtual no servidor e examine o uso da memória para ver se outro aplicativo está consumindo memória em excesso.   |
 |   22988   |   16  |   não  |   Esta instância do SQL Server é %s. O Change Data Capture só está disponível nas edições Enterprise, Developer e Enterprise Evaluation.  |
 |   22989   |   16  |   não  |   Não foi possível habilitar o Change Data Capture para o banco de dados '%s'. Não há suporte para o Change Data Capture em bancos de dados do sistema ou em um banco de dados de distribuição.    |
-|   22990   |   16  |   não  |   O valor especificado para o parâmetro @pollinginterval não pode exceder 24 horas ou ser inferior a 0. Especifique um intervalo de sondagem (em segundos) que seja inferior ou igual a 24 horas (86.400 segundos).   |
-|   22991   |   16  |   não  |   O valor especificado para o parâmetro @maxtrans deve ser superior a 0. |
-|   22992   |   16  |   não  |   Não há suporte ao @job_type especificado. O valor especificado para o parâmetro @job_type deve ser N'capture' para indicar um trabalho de captura ou N'cleanup' para indicar um trabalho de limpeza.   |
+|   22990   |   16  |   não  |   O valor especificado para o parâmetro \@pollinginterval não pode exceder 24 horas ou ser inferior a 0. Especifique um intervalo de sondagem (em segundos) que seja inferior ou igual a 24 horas (86.400 segundos).  |
+|   22991   |   16  |   não  |   O valor especificado para o parâmetro \@maxtrans deve ser superior a 0.    |
+|   22992   |   16  |   não  |   Não há suporte para o \@job_type especificado, %s. O valor especificado para o parâmetro \@job_type deve ser N'capture' para indicar um trabalho de captura ou N'cleanup' para indicar um trabalho de limpeza. |
 |   22993   |   16  |   não  |   Não é possível encontrar a tabela de trabalhos do Change Data Capture que contém informações sobre o trabalho do banco de dados '%s' no banco de dados do sistema msdb." Execute o procedimento armazenado 'sys.sp_cdc_add_job' para criar o trabalho de limpeza ou captura CDC apropriado. O procedimento armazenado criará a tabela de trabalhos necessária.    |
 |   22994   |   16  |   não  |   O valor de retenção especificado para o processo de limpeza do Change Data Capture deve ser maior que 0 e menor que ou igual a 52594800. Ao criar ou modificar o trabalho de limpeza, especifique um valor de retenção (em minutos) dentro desse intervalo. Se esse erro ocorrer mediante a execução do procedimento armazenado sys.sp_cdc_cleanup_change_table, redefina o valor de retenção associado ao trabalho a um valor não negativo, menor que 52594800, usando o procedimento armazenado sp_cdc_change_job.  |
-|   22995   |   16  |   não  |   Não será possível especificar um valor para o parâmetro @retention quando o tipo de trabalho for 'capture'. Especifique NULL para o parâmetro ou omita o parâmetro na instrução.  |
-|   22996   |   16  |   não  |   Ao adicionar ou modificar o trabalho de limpeza de CDC @pollinginterval, @maxtrans, @maxscans e @continuous não podem ser atribuídos a valores não nulos.  |
+|   22995   |   16  |   não  |   Não é possível especificar um valor para o parâmetro \@retention quando o tipo de trabalho for 'capture'. Especifique NULL para o parâmetro ou omita o parâmetro na instrução. |
+|   22996   |   16  |   não  |   Ao adicionar ou modificar o trabalho de limpeza CDC, valores não nulos não poderão ser atribuídos a \@pollinginterval, \@maxtrans, \@maxscans e \@continuous.  |
 |   22997   |   16  |   não  |   O trabalho do Change Data Capture '%s' não existe na tabela do sistema 'msdb.dbo.cdc_jobs'. Use o procedimento armazenado 'sys.sp_cdc_add_job' para adicionar o trabalho do Change Data Capture.  |
-|   22998   |   16  |   não  |   O valor especificado para o parâmetro @continuous deve ser 0 ou 1.   |
-|   22999   |   16  |   não  |   O valor especificado para o parâmetro @pollinginterval deverá ser nulo ou 0 quando o procedimento armazenado 'sys.sp_cdc_scan' não estiver sendo executado no modo contínuo.   |
+|   22998   |   16  |   não  |   O valor especificado para o parâmetro \@continuous deve ser 0 ou 1.  |
+|   22999   |   16  |   não  |   O valor especificado para o parâmetro \@pollinginterval deve ser nulo ou 0 quando o procedimento armazenado 'sys.sp_cdc_scan' não estiver sendo executado no modo contínuo.  |
 |   &nbsp;  |   &nbsp;  |&nbsp;     |   &nbsp;  |
 
 ## <a name="errors-23000-to-25999"></a>Erros de 23.000 a 25.999
@@ -8413,14 +8413,14 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   23997   |   16  |   não  |   Erro do sistema {ErrorCode: %d}.  |
 |   23998   |   16  |   não  |   Memória insuficiente no sistema para processar a solicitação.   |
 |   23999   |   16  |   não  |   Erros não especificados.  |
-|   25002   |   16  |   não  |   O Publicador especificado não está habilitado como Publicador remoto neste Distribuidor. Verifique se o valor especificado para o parâmetro @publisher está correto e se o Publicador está habilitado como Publicador remoto no Distribuidor.   |
+|   25002   |   16  |   não  |   O Publicador especificado não está habilitado como Publicador remoto neste Distribuidor. Verifique se o valor especificado para o parâmetro \@publisher está correto e se o Publicador está habilitado como publicador remoto no Distribuidor.  |
 |   25003   |   16  |   não  |   Falha na atualização da tabela MSmerge_subscriptions do banco de dados de distribuição. Execute novamente o procedimento para atualizar o banco de dados de distribuição. |
 |   25005   |   16  |   não  |   Não é válido descartar a restrição padrão na coluna rowguid usada pela replicação de mesclagem.   |
 |   25006   |   16  |   não  |   Não é possível adicionar a nova coluna ao artigo '%s', pois ele tem mais de %d colunas replicadas.  |
 |   25007   |   16  |   não  |   Não é possível sincronizar a assinatura porque os esquemas do artigo no Publicador e o Assinante não correspondem. É provável que as alterações de esquema pendentes não tenham sido propagadas ainda no Assinante. Execute o Merge Agent novamente para propagar as alterações e sincronizar os dados.  |
 |   25008   |   16  |   não  |   Não foi possível gerar novamente as exibições da replicação de mesclagem após a operação de linguagem de definição de dados (DDL). |
 |   25009   |   16  |   não  |   Valor inválido '%s' especificado ao executar sp_changemergearticle no artigo '%s' para a propriedade 'identityrangemanagementoption'.    |
-|   25010   |   16  |   não  |   A restrição é usada pela replicação de mesclagem para gerenciamento de identidade e não pode ser descartada diretamente. Execute sp_changemergearticle @publication, @article, "identityrangemanagementoption", "none" para desabilitar o gerenciamento de identidade de mesclagem, o que também descartará a restrição.    |
+|   25010   |   16  |   não  |   A restrição é usada pela replicação de mesclagem para gerenciamento de identidade e não pode ser descartada diretamente. Execute sp_changemergearticle \@publication, \@article, "identityrangemanagementoption", "none" para desabilitar o gerenciamento de identidade de mesclagem, o que também descartará a restrição.  |
 |   25012   |   16  |   não  |   Não é possível adicionar uma coluna de identidade, pois a tabela é publicada para replicação de mesclagem.   |
 |   25013   |   16  |   não  |   Não é possível alterar a tabela porque ela foi publicada em uma ou mais publicações com publication_compatibility_level inferior a '90RTM'. Use sp_repladdcolumn ou sp_repldropcolumn.  |
 |   25014   |   16  |   não  |   sp_repladdcolumn não permite adicionar colunas de tipos de dados que são novos nesta versão.   |
@@ -8431,7 +8431,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   25019   |   16  |   não  |   A relação de registro lógico entre os artigos "%s" e "%s" não pode ser adicionada porque pelo menos um dos artigos possui uma restrição com uma ação CASCADE definida. |
 |   25020   |   16  |   não  |   O artigo não pode ser criado na tabela '%s' porque ele possui mais de %d colunas e o controle no nível de coluna está sendo usado. Reduza o número de colunas na tabela ou altere para controle no nível de linha.  |
 |   25021   |   16  |   não  |   Falha no procedimento armazenado de replicação sp_MSupdategenhistory ao atualizar a geração '%s'. Haverá uma nova tentativa de geração na próxima mesclagem. |
-|   25022   |   16  |   não  |   A opção de armazenamento de instantâneo (@snapshot_storage_option) deve ser 'file system' ou 'database'.    |
+|   25022   |   16  |   não  |   A opção de armazenamento de instantâneo (\@snapshot_storage_option) deve ser 'file system' ou 'database'.   |
 |   25023   |   16  |   não  |   Não é possível publicar os procedimentos armazenados, contendo parâmetros com valor de tabela, como artigos '[serializable] proc exec'. |
 |   25024   |   16  |   não  |   Uma opção de armazenamento de instantâneo 'banco de dados' é incompatível com o uso do modo de caractere bcp para geração de instantâneo. |
 |   25025   |   16  |   não  |   Não é possível adicionar uma coluna escassa ou um conjunto de colunas escassas, pois a tabela foi publicada para replicação de mesclagem. A replicação de mesclagem não oferece suporte a colunas esparsas.  |
@@ -8841,7 +8841,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   32025   |   16  |   não  |   O Servidor Primário %s, Banco de Dados %s tem bancos de dados secundários de envio de logs ativos no secundário. Descarte-os primeiro.    |
 |   32026   |   10  |   não  |   Alerta do servidor primário de envio de logs.  |
 |   32027   |   10  |   não  |   Alerta do servidor secundário de envio de logs.    |
-|   32028   |   16  |   não  |   Foi especificado um valor inválido = %d para o parâmetro @threshold_alert.    |
+|   32028   |   16  |   não  |   Valor inválido = %d especificado para o parâmetro \@threshold_alert.   |
 |   32029   |   10  |   não  |   Agente de backup de envio de logs [%s] verificou o arquivo de backup de log '%s.wrk' e mudou seu nome para '%s.trn'. Essa mensagem é apenas informativa. Não é necessária nenhuma ação do usuário. |
 |   32030   |   10  |   não  |   Não é possível consultar informações de monitoração de envio de logs para %s.%s primário a partir do servidor monitor %s.  |
 |   32031   |   10  |   não  |   Não é possível consultar informações de monitoração de envio de logs para %s.%s secundário a partir do servidor monitor %s.    |
@@ -8866,7 +8866,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   32050   |   16  |   não  |   Não é possível criar alertas nos bancos de dados do sistema, mestre, msdb, modelo ou tempdb.    |
 |   32051   |   10  |   não  |   Um privilégio de administrador do sistema é necessário para atualizar a tabela base. A tabela base não foi atualizada.    |
 |   32052   |   16  |   não  |   O parâmetro '%s' não pode ser nulo ou vazio. Especifique um valor para o parâmetro nomeado e repita a operação.    |
-|   32053   |   16  |   não  |   O nome do servidor, fornecido por '@@servername', é nulo no momento.    |
+|   32053   |   16  |   não  |   O nome do servidor, fornecido por '\@\@servername', é nulo no momento.  |
 |   32054   |   16  |   não  |   Erro ao estabelecer um link para o servidor de monitoramento remoto.    |
 |   32055   |   16  |   não  |   Erro ao configurar o servidor de monitoramento remoto.   |
 |   33001   |   16  |   não  |   Não é possível descartar a opção porque ela não está especificada em %S_MSG.   |
@@ -9039,13 +9039,13 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   35002   |   16  |   não  |   O tipo de servidor e o tipo de Grupo de Servidores pai não são iguais   |
 |   35003   |   16  |   não  |   Não é possível mover o nó para um de seus filhos |
 |   35004   |   16  |   não  |   Não foi possível localizar o grupo de servidores |
-|   35005   |   16  |   não  |   Um valor NULL inválido foi passado para @server_group_id.   |
-|   35006   |   16  |   não  |   Um valor NULL inválido foi passado para @server_id. |
+|   35005   |   16  |   não  |   Um valor NULL inválido foi passado para \@server_group_id.  |
+|   35006   |   16  |   não  |   Um valor NULL inválido foi passado para \@server_id.    |
 |   35007   |   16  |   não  |   Não foi possível localizar o servidor registrado compartilhado.    |
 |   35008   |   16  |   não  |   Não é possível excluir grupos de servidores compartilhados do sistema.  |
-|   35009   |   16  |   não  |   Um valor NULL inválido foi passado para @server_type.   |
-|   35010   |   16  |   não  |   Um valor %d inválido foi passado para o parâmetro @server_type.   |
-|   35011   |   16  |   não  |   O parâmetro @server_name não pode ser um nome relativo.   |
+|   35009   |   16  |   não  |   Um valor NULL inválido foi passado para \@server_type.  |
+|   35010   |   16  |   não  |   Um valor %d inválido foi passado para o parâmetro \@server_type.  |
+|   35011   |   16  |   não  |   O parâmetro \@server_name não pode ser um nome relativo.  |
 |   35012   |   16  |   não  |   Não é possível adicionar um servidor registrado compartilhado com o mesmo nome do Servidor de Configuração.   |
 |   [41030](mssqlserver-41030-database-engine-error.md) |       |       |   Falha ao abrir a subchave do Registro '%.*ls' do Windows Server Failover Clustering (código de erro %d).  A chave pai é a chave raiz do cluster.  O serviço WSFC não pode estar em execução ou não pode estar acessível em seu estado atual; do contrário, os argumentos especificados não serão válidos. Se o grupo de disponibilidade correspondente foi removido, esse erro será provável. Para obter informações sobre esse código de erro, consulte "Códigos de erro do sistema" na documentação do Windows Development. |
 |   [41301](mssqlserver-41301-database-engine-error.md) |       |       |   Uma transação anterior na qual a transação atual obteve uma dependência foi anulada, e a transação atual não pode mais ser confirmada.|    |
