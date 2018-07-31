@@ -15,21 +15,21 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: d2b5fa37e7cacb6ae29a260ceb6e57089b85e817
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: d4f514c391b51326ced8df9e45082af54ee1c8c2
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689819"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106032"
 ---
 # <a name="idbproperties-ole-db"></a>IDBProperties (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  A especificação OLE DB padrão permite que os provedores especifiquem VT_EMPTY para **DBPROPINFO::vValues**. No entanto, OLE DB Driver para OLE DB do SQL Server sempre retorna o VT_EMPTY ao chamar **idbproperties:: Getpropertyinfo** com **DBPROPSET_ROWSETALL** para recuperar as propriedades do conjunto de linhas.  
+  A especificação OLE DB padrão permite que os provedores especifiquem VT_EMPTY para **DBPROPINFO::vValues**. Entretanto, o Driver do OLE DB for SQL Server sempre retorna VT_EMPTY quando você chama **IDBProperties::GetPropertyInfo** com **DBPROPSET_ROWSETALL** para recuperar propriedades de conjuntos de linhas.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Interfaces &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md) 
   
   

@@ -14,21 +14,21 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e744d2e472e082cacb48a3e4f8c3a07a1f87bb03
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 8ea4fa2527fa39700647832bdd1a194389cb36e4
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309925"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982228"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pymssql"></a>Etapa 3: Prova de conceito da conexão ao SQL usando pymssql
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]
 
-Este exemplo deve ser considerado uma prova de conceito apenas.  O código de exemplo é simplificado para maior clareza e não representa necessariamente práticas recomendadas pela Microsoft.  
+Este exemplo deve ser considerado uma prova de conceito apenas.  O código de exemplo é simplificado por motivos de clareza e não representa necessariamente as melhores práticas recomendadas pela Microsoft.  
   
 ## <a name="step-1--connect"></a>Etapa 1: conectar-se  
   
-O [pymssql.connect](http://pymssql.org/en/latest/ref/pymssql.html) função é usada para se conectar ao banco de dados SQL.  
+O [pymssql](http://pymssql.org/en/latest/ref/pymssql.html) função é usada para se conectar ao banco de dados SQL.  
   
 ```python
     import pymssql  
@@ -38,7 +38,7 @@ O [pymssql.connect](http://pymssql.org/en/latest/ref/pymssql.html) função é u
   
 ## <a name="step-2--execute-query"></a>Etapa 2: Executar consulta  
   
-O [cursor.execute](http://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.execute) função pode ser usada para recuperar um conjunto de resultados de uma consulta no banco de dados SQL. Essencialmente, essa função aceita qualquer consulta e retorna um conjunto de resultados que pode ser iterado com o uso de [cursor.fetchone()](http://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.fetchone).  
+O [cursor](http://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.execute) função pode ser usada para recuperar um conjunto de resultados de uma consulta no banco de dados SQL. Essencialmente, essa função aceita qualquer consulta e retorna um conjunto de resultados que pode ser iterado com o uso de [fetchone ()](http://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.fetchone).  
   
   
 ```python
@@ -54,7 +54,7 @@ O [cursor.execute](http://pymssql.org/en/latest/ref/pymssql.html#pymssql.Cursor.
   
 ## <a name="step-3--insert-a-row"></a>Etapa 3: Inserir uma linha  
   
-Neste exemplo, você verá como executar um [inserir](../../../t-sql/statements/insert-transact-sql.md) instrução passar com segurança, os parâmetros que proteger seu aplicativo de [injeção SQL](../../../relational-databases/tables/primary-and-foreign-key-constraints.md) valor.    
+Neste exemplo, você verá como executar uma [inserir](../../../t-sql/statements/insert-transact-sql.md) instrução com segurança, passar parâmetros que protegem seu aplicativo contra [injeção de SQL](../../../relational-databases/tables/primary-and-foreign-key-constraints.md) valor.    
   
   
 ```python
@@ -90,4 +90,4 @@ Este exemplo de código demonstra o uso de transações em que você:
     
   ## <a name="next-steps"></a>Próximas etapas  
   
-Para obter mais informações, consulte o [Central de desenvolvedores de Python](https://azure.microsoft.com/en-us/develop/python/).
+Para obter mais informações, consulte o [Central de desenvolvedores do Python](https://azure.microsoft.com/develop/python/).

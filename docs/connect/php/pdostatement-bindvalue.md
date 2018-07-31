@@ -14,12 +14,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 70d02f3b7422e575d1ce5ae7bd02533c258ab8d1
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 099da725f1d8103499ea5a6a31f2cf2ca0538249
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308385"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983498"
 ---
 # <a name="pdostatementbindvalue"></a>PDOStatement::bindValue
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,11 +34,11 @@ bool PDOStatement::bindValue($parameter, $value[, $data_type]);
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
-$*parâmetro*: um identificador do parâmetro (misto). Para uma instrução que usa espaços reservados nomeados, use um nome de parâmetro (: name). Para uma instrução preparada usando a sintaxe de ponto de interrogação, é o índice baseado em 1 do parâmetro.
+$*parameter*: um identificador do parâmetro (misto). Para uma instrução que usa espaços reservados nomeados, um nome de parâmetro (:name). Para uma instrução preparada usando a sintaxe de ponto de interrogação, esse será o índice de base 1 do parâmetro.
   
-$*valor*: O valor (misto) para associar ao parâmetro.  
+$*value*: o valor (misto) a ser associado ao parâmetro.  
   
-$*data_type*: O tipo de dados opcional (inteiro) representado por uma constante PDO::PARAM_ *. O padrão é PDO::PARAM_STR.  
+$*data_type*: o tipo de dados (inteiro) opcional representado por uma constante PDO::PARAM_*. O padrão é PDO::PARAM_STR.  
   
 ## <a name="return-value"></a>Valor retornado  
 TRUE se for bem-sucedido; caso contrário, FALSE.  
@@ -80,7 +80,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 ```
 
 > [!NOTE]
-> É recomendável usar cadeias de caracteres como entradas ao associar valores para um [coluna decimal ou numeric](https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql) para garantir a precisão e a precisão, como PHP limitou a precisão para [números de ponto flutuante](http://php.net/manual/en/language.types.float.php). O mesmo se aplica a colunas bigint, especialmente quando os valores estiverem fora do intervalo de um [inteiro](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
+> É recomendável usar cadeias de caracteres como entradas ao associar os valores para um [coluna decimal ou numérica](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) para garantir a precisão e a precisão, como PHP limitou a precisão para [números de ponto flutuante](http://php.net/manual/en/language.types.float.php). O mesmo se aplica a colunas bigint, especialmente quando os valores estão fora do intervalo de um [inteiro](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
 
 ## <a name="example"></a>Exemplo  
 Este exemplo de código mostra como associar um valor decimal como um parâmetro de entrada.  
@@ -100,7 +100,7 @@ $stmt->bindValue(1, $input, PDO::PARAM_STR);
 $stmt->execute();
 ```
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [PDOStatement Class](../../connect/php/pdostatement-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

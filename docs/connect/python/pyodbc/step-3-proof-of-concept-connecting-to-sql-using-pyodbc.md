@@ -14,18 +14,18 @@ caps.latest.revision: 2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9914b8bd941eb3e6ddc64fb1a4e37b38335fa01f
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: a3fa70619208df8940ec10a1b5a0f46704ce9c43
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309745"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979972"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pyodbc"></a>Etapa 3: Prova de conceito da conexão ao SQL usando pyodbc
 
-Este exemplo deve ser considerado uma prova de conceito apenas.  O código de exemplo é simplificado para maior clareza e não representa necessariamente práticas recomendadas pela Microsoft.  
+Este exemplo deve ser considerado uma prova de conceito apenas.  O código de exemplo é simplificado por motivos de clareza e não representa necessariamente as melhores práticas recomendadas pela Microsoft.  
 
-**Execute o script de exemplo abaixo** criar um arquivo chamado test.py e adicionar cada trecho de código durante o processo. 
+**Execute o script de exemplo abaixo** crie um arquivo chamado test.py e adicione cada trecho de código conforme você avança. 
 
 ```
 > python test.py
@@ -51,7 +51,7 @@ cursor = cnxn.cursor()
   
 ## <a name="step-2--execute-query"></a>Etapa 2: Executar consulta  
   
-O cursor.executefunction pode ser usado para recuperar um conjunto de resultados de uma consulta no banco de dados SQL. Essencialmente, essa função aceita qualquer consulta e retorna um conjunto de resultados que pode ser iterado com o uso de cursor.fetchone()
+O cursor.executefunction pode ser usado para recuperar um conjunto de resultados de uma consulta no banco de dados SQL. Essencialmente, essa função aceita qualquer consulta e retorna um conjunto de resultados que pode ser iterado com o uso de fetchone)
   
   
 ```python
@@ -66,7 +66,7 @@ while row:
   
 ## <a name="step-3--insert-a-row"></a>Etapa 3: Inserir uma linha  
   
-Neste exemplo, você verá como executar um [inserir](../../../t-sql/statements/insert-transact-sql.md) instrução passar com segurança, os parâmetros que proteger seu aplicativo de [injeção SQL](../../../relational-databases/tables/primary-and-foreign-key-constraints.md) valor.    
+Neste exemplo, você verá como executar uma [inserir](../../../t-sql/statements/insert-transact-sql.md) instrução com segurança, passar parâmetros que protegem seu aplicativo contra [injeção de SQL](../../../relational-databases/tables/primary-and-foreign-key-constraints.md) valor.    
   
   
 ```python
@@ -82,4 +82,4 @@ while row:
   `      
   ## <a name="next-steps"></a>Próximas etapas  
   
-Para obter mais informações, consulte o [Central de desenvolvedores de Python](https://azure.microsoft.com/en-us/develop/python/).
+Para obter mais informações, consulte o [Central de desenvolvedores do Python](https://azure.microsoft.com/develop/python/).

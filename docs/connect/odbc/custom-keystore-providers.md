@@ -15,20 +15,20 @@ ms.author: v-chojas
 manager: craigg
 author: MightyPen
 ms.openlocfilehash: 0d3a3b25ca2ead96d23b0d367ab633d900951de8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32853261"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38047511"
 ---
-# <a name="custom-keystore-providers"></a>Provedores de armazenamento de chaves personalizado
+# <a name="custom-keystore-providers"></a>Provedores de repositório de chaves personalizado
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
 ## <a name="overview"></a>Visão geral
 
-O recurso de criptografia de coluna do SQL Server 2016 requer que o criptografado coluna chaves de criptografia (ECEKs) armazenados no servidor de ser recuperada pelo cliente e, em seguida, descriptografadas para chaves de criptografia de coluna (CEKs) para acessar os dados armazenados em colunas criptografadas. ECEKs são criptografadas por chaves mestras de coluna (CMKs) e a segurança de CMK é importante para a segurança de criptografia de coluna. Portanto, a CMK deve ser armazenada em um local seguro; a finalidade de um provedor de armazenamento de chaves de criptografia de coluna é fornecer uma interface para permitir que o driver ODBC acessar essas com segurança armazenado CMKs. Para usuários com seu próprio armazenamento seguro, a Interface de provedor de armazenamento de chaves personalizado fornece uma estrutura para a implementação de acesso para proteger o armazenamento de CMK para o driver ODBC, que pode ser usado para executar a CEK criptografia e descriptografia.
+O recurso de criptografia de coluna do SQL Server 2016 requer que o criptografados coluna chaves de criptografia (ECEKs) armazenados no servidor ser recuperada pelo cliente e, em seguida, descriptografadas para chaves de criptografia de coluna (CEKs) para acessar os dados armazenados em colunas criptografadas. ECEKs são criptografadas por chaves mestras de coluna (CMKs) e a segurança de CMK é importante para a segurança de criptografia de coluna. Portanto, a CMK deve ser armazenada em um local seguro; a finalidade de um provedor de repositório de chaves de criptografia de coluna é fornecer uma interface para permitir que o driver ODBC para acessá-los com segurança armazenados CMKs. Para usuários com seu próprio armazenamento seguro, a Interface do provedor de repositório de chaves personalizado fornece uma estrutura para a implementação de acesso para proteger o armazenamento de CMK para o driver ODBC, que pode ser usado para executar a descriptografia e criptografia de CEK.
 
-Cada provedor de keystore contém e gerencia um ou mais CMKs, que são identificados por caminhos principais - cadeias de caracteres de um formato definido pelo provedor. Isso, junto com o algoritmo de criptografia, e também uma cadeia de caracteres definida pelo provedor, pode ser usado para executar a criptografia de uma CEK e a descriptografia de um ECEK. O algoritmo, juntamente com o ECEK e o nome do provedor, são armazenadas nos metadados de criptografia do banco de dados; consulte [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) e [criar chave de criptografia de coluna](../../t-sql/statements/create-column-encryption-key-transact-sql.md) para obter mais informações. Assim, as duas operações fundamentais do gerenciamento de chaves são:
+Cada provedor de repositório de chaves contém e gerencia um ou mais CMKs, que são identificados por caminhos de chave - cadeias de caracteres de um formato definido pelo provedor. Isso, com o algoritmo de criptografia, e também uma cadeia de caracteres definido pelo provedor, pode ser usado para executar a criptografia de uma CEK e a descriptografia de um ECEK. O algoritmo, juntamente com o ECEK e o nome do provedor, são armazenados em metadados de criptografia do banco de dados. ver [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) e [CREATE COLUMN ENCRYPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md) para obter mais informações. Assim, as duas operações fundamentais de gerenciamento de chaves são:
 
 ```
 CEK = DecryptViaCEKeystoreProvider(CEKeystoreProvider_name, Key_path, Key_algorithm, ECEK)
@@ -38,13 +38,13 @@ CEK = DecryptViaCEKeystoreProvider(CEKeystoreProvider_name, Key_path, Key_algori
 ECEK = EncryptViaCEKeystoreProvider(CEKeyStoreProvider_name, Key_path, Key_algorithm, CEK)
 ```
 
-onde o `CEKeystoreProvider_name` é usado para identificar o provedor específico de repositório de chaves de criptografia do coluna (CEKeystoreProvider), e os outros argumentos são usados pelo CEKeystoreProvider para criptografar/descriptografar a CEK (E). O nome e caminho-chave são fornecidas pelos metadados CMK, enquanto o algoritmo e o valor ECEK são fornecidos pelos metadados CEK. Vários provedores de armazenamento de chaves podem estar presentes junto com o provedor (es) interna de padrão. Após executar uma operação que requer a CEK, o driver usa os metadados CMK para localizar o provedor de keystore apropriado por nome e executa sua operação de descriptografia, que pode ser expresso como:
+onde o `CEKeystoreProvider_name` é usado para identificar o provedor específico de repositório de chaves de criptografia do coluna (CEKeystoreProvider), e os outros argumentos são usados pelo CEKeystoreProvider para criptografar/descriptografar a CEK (E). O nome e caminho-chave são fornecidas pelos metadados CMK, enquanto o algoritmo e o valor ECEK são fornecidas pelos metadados CEK. Vários provedores de repositório de chaves podem estar presentes junto com os provedores internos de padrão. Após realizar uma operação que exige a CEK, o driver usa os metadados CMK para localizar o provedor de keystore apropriado por nome e executa sua operação de descriptografia, que pode ser expresso como:
 
 ```
 CEK = CEKeyStoreProvider_specific_decrypt(Key_path, Key_algorithm, ECEK)
 ```
 
-Embora o driver tem precisa criptografam CEKs, uma ferramenta de gerenciamento de chaves pode precisar fazer isso para implementar operações como criação de CMK e rotação. Isso requer que a operação inversa:
+Embora o driver tem não criptografam CEKs é necessário, uma ferramenta de gerenciamento de chaves talvez precise fazer isso para implementar operações como criação de CMK e rotação. Isso requer que a operação inversa:
 
 ```
 ECEK = CEKeyStoreProvider_specific_encrypt(Key_path, Key_algorithm, CEK)
@@ -52,11 +52,11 @@ ECEK = CEKeyStoreProvider_specific_encrypt(Key_path, Key_algorithm, CEK)
 
 ### <a name="cekeystoreprovider-interface"></a>Interface CEKeyStoreProvider
 
-Este documento descreve detalhadamente a interface CEKeyStoreProvider. Um provedor de armazenamento de chaves que implementa essa interface pode ser usado pelo Driver ODBC da Microsoft para SQL Server. Implementadores de CEKeyStoreProvider podem usar este guia para desenvolver provedores de armazenamento de chaves personalizado usados pelo driver.
+Este documento descreve detalhadamente a interface CEKeyStoreProvider. Um provedor de repositório de chaves que implementa essa interface pode ser usado pelo Microsoft ODBC Driver para SQL Server. Os implementadores de CEKeyStoreProvider podem usar este guia para desenvolver provedores de armazenamento de chaves personalizado utilizáveis pelo driver.
 
-Uma biblioteca do provedor de armazenamento de chaves ("biblioteca de provedor") é uma biblioteca de vínculo dinâmico que pode ser carregada pelo driver ODBC e contém um ou mais provedores de armazenamento de chaves. O símbolo `CEKeystoreProvider` devem ser exportadas por uma biblioteca de provedor e ser o endereço de uma matriz com terminação nula de ponteiros para `CEKeystoreProvider` estruturas, uma para cada provedor de armazenamento de chaves na biblioteca.
+Uma biblioteca do provedor de repositório de chaves ("biblioteca de provedor") é uma biblioteca de vínculo dinâmico que pode ser carregada pelo driver ODBC e contém um ou mais provedores de repositório de chaves. O símbolo `CEKeystoreProvider` deve ser exportado por uma biblioteca de provedor e seja o endereço de uma matriz terminada em nulo de ponteiros para `CEKeystoreProvider` estruturas, uma para cada provedor de repositório de chaves dentro da biblioteca.
 
-Um `CEKeystoreProvider` estrutura define os pontos de entrada de um provedor de armazenamento de chave única:
+Um `CEKeystoreProvider` estrutura define os pontos de entrada de um provedor de repositório de chaves único:
 
 ```
 typedef struct CEKeystoreProvider {
@@ -84,94 +84,94 @@ typedef struct CEKeystoreProvider {
 } CEKEYSTOREPROVIDER;
 ```
 
-|Nome do Campo|Description|
+|Nome do Campo|Descrição|
 |:--|:--|
-|`Name`|O nome do provedor de armazenamento de chaves. Ele não deve ser igual a outro provedor de keystore carregado anteriormente pelo driver ou nessa biblioteca. Terminação nula, ampla-cadeia de caracteres *.|
-|`Init`|Função de inicialização. Se uma função de inicialização não for necessária, este campo pode ser nulo.|
-|`Read`|Provedor de função de leitura. Pode ser nulo se não é necessário.|
-|`Write`|Função de gravação do provedor. Necessário se lido não é nulo. Pode ser nulo se não é necessário.|
-|`DecryptCEK`|Função de descriptografia ECEK. Essa função é o motivo para a existência de um provedor de armazenamento de chaves e não pode ser nula.|
-|`EncryptCEK`|Função de criptografia CEK. O driver não chama essa função, mas ele é fornecido para permitir o acesso programático a criação de ECEK por ferramentas de gerenciamento de chaves. Pode ser nulo se não é necessário.|
-|`Free`|Função de encerramento. Pode ser nulo se não é necessário.|
+|`Name`|O nome do provedor de repositório de chaves. Ele não deve ser o mesmo que qualquer outro provedor de repositório de chaves carregado anteriormente pelo driver ou presente nessa biblioteca. Terminada em nulo, largo-cadeia de caracteres *.|
+|`Init`|Função de inicialização. Se uma função de inicialização não for necessária, esse campo pode ser nulo.|
+|`Read`|Função read do provedor. Pode ser nulo se não é necessário.|
+|`Write`|Função de gravação do provedor. Obrigatório se a leitura não for nula. Pode ser nulo se não é necessário.|
+|`DecryptCEK`|Função de descriptografia do ECEK. Essa função é o motivo da existência de um provedor de repositório de chaves e não pode ser nula.|
+|`EncryptCEK`|Função de criptografia de CEK. O driver não chama essa função, mas ele é fornecido para permitir o acesso programático a criação de ECEK pelas ferramentas de gerenciamento de chaves. Pode ser nulo se não é necessário.|
+|`Free`|Função de terminação. Pode ser nulo se não é necessário.|
 
-Com a exceção gratuito, as funções nessa interface todos têm um par de parâmetros, **ctx** e **onError**. O primeiro identifica o contexto no qual a função é chamada, enquanto o segundo é usado para relatório de erros. Consulte [contextos](#context-association) e [tratamento de erros](#error-handling) abaixo para obter mais informações.
+Exceto gratuito, as funções nessa interface todos têm um par de parâmetros, **ctx** e **onError**. O primeiro identifica o contexto no qual a função é chamada, enquanto o segundo é usado para relatar erros. Ver [contextos](#context-association) e [tratamento de erros](#error-handling) abaixo para obter mais informações.
 
 ```
 int Init(CEKEYSTORECONTEXT *ctx, errFunc onError);
 ```
-Nome do espaço reservado para uma função de inicialização definido pelo provedor. O driver chama esta função uma vez, depois que um provedor foi carregado, mas antes da primeira vez que for necessário para executar a descriptografia ECEK ou Read()/Write() solicitações. Use esta função para executar qualquer inicialização necessárias. 
+Nome do espaço reservado para uma função de inicialização definidos pelo provedor. O driver chama essa função uma vez, depois que um provedor foi carregado, mas antes da primeira vez que ele precisa para executar a descriptografia ECEK ou Read()/Write() solicita. Use esta função para executar qualquer inicialização que ele precisa. 
 
-|Argumento|Description|
+|Argumento|Descrição|
 |:--|:--|
-|`ctx`|[Entrada] Contexto da operação.|
+|`ctx`|[Entrada] Contexto de operação.|
 |`onError`|[Entrada] Função de relatório de erros.|
-|`Return Value`|Retorne diferente de zero para indicar êxito ou zero para indicar falha.|
+|`Return Value`|Retorne diferente de zero para indicar êxito, ou zero para indicar falha.|
 
 ```
 int Read(CEKEYSTORECONTEXT *ctx, errFunc onError, void *data, unsigned int *len);
 ```
 
-Nome do espaço reservado para uma função definida pelo provedor de comunicação. O driver chama essa função quando o aplicativo solicita para ler dados de um (anteriormente gravados-para) provedor usando o atributo de conexão SQL_COPT_SS_CEKEYSTOREDATA, permitindo que o aplicativo leia dados arbitrários do provedor. Consulte [comunicação com provedores de armazenamento de chaves](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#communicating-with-keystore-providers) para obter mais informações.
+Nome do espaço reservado para uma função definida pelo provedor de comunicação. O driver chama essa função quando o aplicativo solicita para ler dados de um (anteriormente-gravados-to) provedor usando o atributo de conexão SQL_COPT_SS_CEKEYSTOREDATA, permitindo que o aplicativo ler dados arbitrários do provedor. Ver [comunicando-se com provedores de repositório de chaves](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#communicating-with-keystore-providers) para obter mais informações.
 
-|Argumento|Description|
+|Argumento|Descrição|
 |:--|:--|
-|`ctx`|[Entrada] Contexto da operação.|
+|`ctx`|[Entrada] Contexto de operação.|
 |`onError`|[Entrada] Função de relatório de erros.|
-|`data`|[Saída] Ponteiro para um buffer no qual o provedor grava os dados a serem lidos pelo aplicativo. Isso corresponde ao campo de dados da estrutura de CEKEYSTOREDATA.|
-|`len`|[Entrada/saída] Ponteiro para um valor de comprimento. na entrada, este é o comprimento máximo do buffer de dados e o provedor não deve gravar mais de * len bytes a ele. No retorno, o provedor deve atualizar * len com o número de bytes gravados.|
-|`Return Value`|Retorne diferente de zero para indicar êxito ou zero para indicar falha.|
+|`data`|[Saída] Ponteiro para um buffer no qual o provedor grava os dados a serem lidos pelo aplicativo. Isso corresponde ao campo de dados da estrutura CEKEYSTOREDATA.|
+|`len`|[Entrada/saída] Ponteiro para um valor de comprimento; Após a entrada, isso é o comprimento máximo do buffer de dados e o provedor não deverá gravar mais de * len bytes a ele. Após o retorno, o provedor deve atualizar * len com o número de bytes gravados.|
+|`Return Value`|Retorne diferente de zero para indicar êxito, ou zero para indicar falha.|
 
 ```
 int Write(CEKEYSTORECONTEXT *ctx, errFunc onError, void *data, unsigned int len);
 ```
-Nome do espaço reservado para uma função definida pelo provedor de comunicação. O driver chama esta função quando o aplicativo solicita a gravação de dados para um provedor usando o atributo de conexão SQL_COPT_SS_CEKEYSTOREDATA, permitindo que o aplicativo gravar dados arbitrários para o provedor. Consulte [comunicação com provedores de armazenamento de chaves](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#communicating-with-keystore-providers) para obter mais informações.
+Nome do espaço reservado para uma função definida pelo provedor de comunicação. O driver chama essa função quando o aplicativo solicita para gravar dados em um provedor usando o atributo de conexão SQL_COPT_SS_CEKEYSTOREDATA, permitindo que o aplicativo gravar dados arbitrários para o provedor. Ver [comunicando-se com provedores de repositório de chaves](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#communicating-with-keystore-providers) para obter mais informações.
 
-|Argumento|Description|
+|Argumento|Descrição|
 |:--|:--|
-|`ctx`|[Entrada] Contexto da operação.|
+|`ctx`|[Entrada] Contexto de operação.|
 |`onError`|[Entrada] Função de relatório de erros.|
-|`data`|[Entrada] Ponteiro para um buffer que contém os dados para o provedor de leitura. Isso corresponde ao campo de dados da estrutura de CEKEYSTOREDATA. O provedor não deve ler mais do que len bytes nesse buffer.|
+|`data`|[Entrada] Ponteiro para um buffer que contém os dados para o provedor de ler. Isso corresponde ao campo de dados da estrutura CEKEYSTOREDATA. O provedor não deve ler mais do que bytes de len nesse buffer.|
 |`len`|[Entrada] O número de bytes disponíveis nos dados. Isso corresponde ao campo dataSize da estrutura CEKEYSTOREDATA.|
-|`Return Value`|Retorne diferente de zero para indicar êxito ou zero para indicar falha.|
+|`Return Value`|Retorne diferente de zero para indicar êxito, ou zero para indicar falha.|
 
 ```
 int (*DecryptCEK)( CEKEYSTORECONTEXT *ctx, errFunc *onError, const wchar_t *keyPath, const wchar_t *alg, unsigned char *ecek, unsigned short ecekLen, unsigned char **cekOut, unsigned short *cekLen);
 ```
-Nome do espaço reservado para uma função de descriptografia ECEK definido pelo provedor. O driver chama esta função para descriptografar um ECEK criptografada por uma CMK associada a este provedor em uma CEK.
+Nome do espaço reservado para uma função definida pelo provedor de descriptografia de ECEK. O driver chama essa função para descriptografar um ECEK criptografado por uma CMK associada a este provedor em uma CEK.
 
-|Argumento|Description|
+|Argumento|Descrição|
 |:--|:--|
-|`ctx`|[Entrada] Contexto da operação.|
+|`ctx`|[Entrada] Contexto de operação.|
 |`onError`|[Entrada] Função de relatório de erros.|
-|`keyPath`|[Entrada] O valor de [KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md) atributo de metadados para CMK referenciado pelo ECEK determinado. Terminação nula ampla-cadeia de caracteres *. Isso serve para identificar uma CMK tratada por esse provedor.|
-|`alg`|[Entrada] O valor da [ALGORITMO](../../t-sql/statements/create-column-encryption-key-transact-sql.md) atributo de metadados para o ECEK determinado. Terminação nula ampla-cadeia de caracteres *. Isso serve para identificar o algoritmo de criptografia usado para criptografar o ECEK determinado.|
-|`ecek`|[Entrada] Ponteiro para o ECEK a serem descriptografados.|
+|`keyPath`|[Entrada] O valor de [KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md) atributo de metadados para a CMK referenciado pelo ECEK determinado. Terminada em nulo largo-cadeia de caracteres *. Isso serve para identificar uma CMK manipulada por esse provedor.|
+|`alg`|[Entrada] O valor da [ALGORITMO](../../t-sql/statements/create-column-encryption-key-transact-sql.md) atributo de metadados para o determinado ECEK. Terminada em nulo largo-cadeia de caracteres *. Isso serve para identificar o algoritmo de criptografia usado para criptografar o ECEK determinado.|
+|`ecek`|[Entrada] Ponteiro para o ECEK a ser descriptografado.|
 |`ecekLen`|[Entrada] Comprimento do ECEK.|
-|`cekOut`|[Saída] O provedor deverá alocar memória para o ECEK descriptografado e gravar seu endereço para o ponteiro apontado pelo cekOut. Deve ser possível liberar este bloco de memória usando o [LocalFree](https://msdn.microsoft.com/library/windows/desktop/aa366730(v=vs.85).aspx) (Windows) ou libere a função (Linux/Mac). Se nenhuma memória foi alocada devido a um erro ou de outra forma, o provedor deve definir * cekOut para um ponteiro nulo.|
-|`cekLen`|[Saída] O provedor deve gravar o endereço apontado pelo cekLen quanto o ECEK descriptografado que gravar em * * cekOut.|
-|`Return Value`|Retorne diferente de zero para indicar êxito ou zero para indicar falha.|
+|`cekOut`|[Saída] O provedor deverá alocar memória para o ECEK descriptografado e gravar seu endereço de ponteiro apontado por cekOut. Deve ser possível liberar este bloco de memória usando o [LocalFree](https://msdn.microsoft.com/library/windows/desktop/aa366730(v=vs.85).aspx) (Windows) ou libere a função (Linux/Mac). Se nenhuma memória foi alocada devido a um erro ou caso contrário, o provedor deverá definir * cekOut como um ponteiro nulo.|
+|`cekLen`|[Saída] O provedor deve gravar para o endereço apontado pelo cekLen quanto o ECEK descriptografado que ele foi escrito para * * cekOut.|
+|`Return Value`|Retorne diferente de zero para indicar êxito, ou zero para indicar falha.|
 
 ```
 int (*EncryptCEK)( CEKEYSTORECONTEXT *ctx, errFunc *onError, const wchar_t *keyPath, const wchar_t *alg, unsigned char *cek,unsigned short cekLen, unsigned char **ecekOut, unsigned short *ecekLen);
 ```
-Nome do espaço reservado para uma função definida pelo provedor de criptografia de CEK. O driver não chamar esta função nem expor sua funcionalidade por meio da interface ODBC, mas ele é fornecido para permitir o acesso programático a criação de ECEK por ferramentas de gerenciamento de chaves.
+Nome do espaço reservado para uma função definida pelo provedor de criptografia de CEK. O driver não chamar essa função nem expor sua funcionalidade por meio da interface do ODBC, mas ele é fornecido para permitir o acesso programático a criação de ECEK pelas ferramentas de gerenciamento de chaves.
 
-|Argumento|Description|
+|Argumento|Descrição|
 |:--|:--|
-|`ctx`|[Entrada] Contexto da operação.|
+|`ctx`|[Entrada] Contexto de operação.|
 |`onError`|[Entrada] Função de relatório de erros.|
-|`keyPath`|[Entrada] O valor de [KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md) atributo de metadados para CMK referenciado pelo ECEK determinado. Terminação nula ampla-cadeia de caracteres *. Isso serve para identificar uma CMK tratada por esse provedor.|
-|`alg`|[Entrada] O valor da [ALGORITMO](../../t-sql/statements/create-column-encryption-key-transact-sql.md) atributo de metadados para o ECEK determinado. Terminação nula ampla-cadeia de caracteres *. Isso serve para identificar o algoritmo de criptografia usado para criptografar o ECEK determinado.|
+|`keyPath`|[Entrada] O valor de [KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md) atributo de metadados para a CMK referenciado pelo ECEK determinado. Terminada em nulo largo-cadeia de caracteres *. Isso serve para identificar uma CMK manipulada por esse provedor.|
+|`alg`|[Entrada] O valor da [ALGORITMO](../../t-sql/statements/create-column-encryption-key-transact-sql.md) atributo de metadados para o determinado ECEK. Terminada em nulo largo-cadeia de caracteres *. Isso serve para identificar o algoritmo de criptografia usado para criptografar o ECEK determinado.|
 |`cek`|[Entrada] Ponteiro para a CEK sejam criptografados.|
 |`cekLen`|[Entrada] Comprimento da CEK.|
-|`ecekOut`|[Saída] O provedor deverá alocar memória para a CEK criptografada e gravar seu endereço para o ponteiro apontado pelo ecekOut. Deve ser possível liberar este bloco de memória usando o [LocalFree](https://msdn.microsoft.com/library/windows/desktop/aa366730(v=vs.85).aspx) (Windows) ou libere a função (Linux/Mac). Se nenhuma memória foi alocada devido a um erro ou de outra forma, o provedor deve definir * ecekOut para um ponteiro nulo.|
-|`ecekLen`|[Saída] O provedor deve gravar o endereço apontado pelo ecekLen o comprimento da CEK criptografada que gravar em * * ecekOut.|
-|`Return Value`|Retorne diferente de zero para indicar êxito ou zero para indicar falha.|
+|`ecekOut`|[Saída] O provedor deverá alocar memória para a CEK criptografada e gravar seu endereço de ponteiro apontado por ecekOut. Deve ser possível liberar este bloco de memória usando o [LocalFree](https://msdn.microsoft.com/library/windows/desktop/aa366730(v=vs.85).aspx) (Windows) ou libere a função (Linux/Mac). Se nenhuma memória foi alocada devido a um erro ou caso contrário, o provedor deverá definir * ecekOut como um ponteiro nulo.|
+|`ecekLen`|[Saída] O provedor deve gravar para o endereço apontado pelo ecekLen o comprimento da CEK criptografado que ele foi escrito para * * ecekOut.|
+|`Return Value`|Retorne diferente de zero para indicar êxito, ou zero para indicar falha.|
 
 ```
 void (*Free)();
 ```
-Nome do espaço reservado para uma função definida pelo provedor de encerramento. O driver pode chamar essa função no encerramento normal do processo.
+Nome do espaço reservado para uma função definida pelo provedor de encerramento. O driver pode chamar essa função após o término normal do processo.
 
 > [!NOTE]
 > *Cadeias de caracteres largos são caracteres de 2 bytes (UTF-16) devido a como o SQL Server armazena-os.*
@@ -179,21 +179,21 @@ Nome do espaço reservado para uma função definida pelo provedor de encerramen
 
 ### <a name="error-handling"></a>Tratamento de erros
 
-Poderão ocorrer erros durante o processamento do provedor, um mecanismo é fornecido para permitir que ele para relatar erros de volta para o driver em detalhes mais específicos do que um booliana êxito/falha. Muitas das funções tem um par de parâmetros, **ctx** e **onError**, que são usados em conjunto para essa finalidade, além do valor de retorno de êxito/falha.
+Poderão ocorrer erros durante o processamento de um provedor, um mecanismo é fornecido para permitir que ele para relatar erros de volta para o driver em detalhes mais específicos do que um booliano êxito/falha. Muitas das funções têm um par de parâmetros, **ctx** e **onError**, que são usados em conjunto para essa finalidade, além do valor de retorno de êxito/falha.
 
-O **ctx** parâmetro identifica o contexto no qual ocorre uma operação de provedor.
+O **ctx** parâmetro identifica o contexto no qual ocorre uma operação do provedor.
 
 O **onError** parâmetro aponta para uma função de relatório de erros, com o seguinte protótipo:
 
 `typedef void errFunc(CEKEYSTORECONTEXT *ctx, const wchar_t *msg, ...);`
 
-|Argumento|Description|
+|Argumento|Descrição|
 |:--|:--|
 |`ctx`|[Entrada] O contexto para relatar o erro.|
-|`msg`|[Entrada] A mensagem de erro para o relatório. Cadeia de caracteres largos terminada em nulo. Para permitir que informações com parâmetros esteja presente, essa cadeia de caracteres pode conter sequências de inserção de formatação do formulário aceitos pela [FormatMessage](https://msdn.microsoft.com/library/windows/desktop/ms679351(v=vs.85).aspx) função. Funcionalidade estendida pode ser especificada por esse parâmetro, conforme descrito abaixo.|
-|...|[Entrada] Parâmetros de variadic adicionais de acordo com especificadores de formato de mensagem, conforme apropriado.|
+|`msg`|[Entrada] A mensagem de erro para o relatório. Cadeia de caracteres larga terminada em nulo. Para permitir que as informações com parâmetros esteja presente, essa cadeia de caracteres pode conter as sequências de formatação de inserção no formato aceito pelo [FormatMessage](https://msdn.microsoft.com/library/windows/desktop/ms679351(v=vs.85).aspx) função. Funcionalidade estendida pode ser especificada por esse parâmetro, conforme descrito abaixo.|
+|...|[Entrada] Parâmetros adicionais variadic para caber especificadores de formato na mensagem, conforme apropriado.|
 
-Para relatar quando ocorre um erro, o provedor chamadas onError, fornecendo o parâmetro de contexto passada para a função de provedor, o driver e uma mensagem de erro com os parâmetros opcionais adicionais a serem formatados nele. O provedor pode chamar essa função várias vezes para enviar várias mensagens de erro consecutivamente na invocação de uma função de provedor. Por exemplo:
+Para relatar quando ocorreu um erro, o provedor chamadas onError, fornecendo o parâmetro de contexto passado para a função de provedor, o driver e uma mensagem de erro com parâmetros adicionais opcionais a serem formatados nele. O provedor pode chamar essa função várias vezes para enviar várias mensagens de erro consecutivamente na invocação de uma função de provedor. Por exemplo:
 
 ```
     if (!doSomething(...))
@@ -207,16 +207,16 @@ Para relatar quando ocorre um erro, o provedor chamadas onError, fornecendo o pa
 
 O `msg` parâmetro normalmente é uma cadeia de caracteres largos, mas extensões adicionais estão disponíveis:
 
-Usando um dos valores predefinidos especiais com a macro IDS_MSG, mensagens de erro genéricas já existente e em um formulário implementações localizado no driver podem ser utilizada. Por exemplo, se um provedor de falha ao alocar a memória, o `IDS_S1_001` mensagem "Falha de alocação de memória" pode ser usada:
+Usando um dos valores predefinidos especiais com a macro IDS_MSG, mensagens de erro genéricas já existentes e em um formulário implementações localizado no driver podem ser utilizada. Por exemplo, se um provedor falhar ao alocar memória, o `IDS_S1_001` mensagem "Falha de alocação de memória" pode ser usada:
 
 `onError(ctx, IDS_MSG(IDS_S1_001));`
 
-Para o erro a ser reconhecida pelo driver, a função de provedor deve retornar falha. Quando isso é executado no contexto de uma operação de ODBC, os erros lançados tornará acessíveis no identificador da conexão ou instrução por meio do mecanismo de diagnóstico de ODBC padrão (`SQLError`, `SQLGetDiagRec`, e `SQLGetDiagField`).
+Para o erro a ser reconhecido pelo driver, a função de provedor deve retornar a falha. Quando isso é executado no contexto de uma operação de ODBC, os erros lançados se tornará acessíveis no identificador de conexão ou instrução por meio do mecanismo de diagnóstico ODBC padrão (`SQLError`, `SQLGetDiagRec`, e `SQLGetDiagField`).
 
 
 ### <a name="context-association"></a>Associação de contexto
 
-O `CEKEYSTORECONTEXT` estrutura, além de fornecer contexto para o retorno de chamada do erro, também pode ser usada para determinar o contexto ODBC no qual uma operação de provedor é executada. Isso permite que um provedor associar dados a cada um desses contextos, por exemplo, para implementar a configuração por conexão. Para essa finalidade, a estrutura contém 3 ponteiros opacos correspondente para o contexto de ambiente, conexão e instrução:
+O `CEKEYSTORECONTEXT` estrutura, além de fornecer contexto para o retorno de chamada do erro, também pode ser usada para determinar o contexto ODBC, no qual uma operação de provedor é executada. Isso permite que um provedor associar dados a cada um desses contextos, por exemplo, para implementar a configuração por conexão. Para essa finalidade, a estrutura contém 3 ponteiros opacos correspondente ao contexto de ambiente, conexão e instrução:
 
 ```
 typedef struct CEKeystoreContext
@@ -226,20 +226,20 @@ void *dbcCtx;
 void *stmtCtx;
 } CEKEYSTORECONTEXT;
 ```
-|Campo|Description|
+|Campo|Descrição|
 |:--|:--|
 |`envCtx`|Contexto do ambiente.|
 |`dbcCtx`|Contexto de Conexão.|
 |`stmtCtx`|Contexto de instrução.|
 
-Cada um desses contextos é um valor opaco que, ao mesmo tempo em que não é o mesmo como o identificador de ODBC correspondente, pode ser usado como um identificador exclusivo para o identificador: se tratar *X* está associado ao valor de contexto *Y*, em seguida, Nenhum outros ambiente, conexão ou instrução identificadores que existem simultaneamente no mesmo momento que *X* terá um valor de contexto de *Y*, e não será associado a nenhum outro valor de contexto tratar *X*. Se a operação de provedor que está sendo feita não tem um contexto de identificador específico (por exemplo, chamadas de SQLSetConnectAttr para carregar e configurar provedores, em que não há nenhum identificador de instrução) correspondente valor de contexto na estrutura é nulo.
+Cada um desses contextos é um valor opaco que, ao mesmo tempo em que não o mesmo que o identificador de ODBC correspondente, pode ser usado como um identificador exclusivo para o identificador: se tratar *X* está associado com o valor de contexto *Y*, em seguida, Nenhum outros ambiente, conexão ou instrução alças que existe simultaneamente no mesmo tempo em que *X* terá um valor de contexto do *Y*, e não será associado a nenhum outro valor de contexto manipular *X*. Se a operação de provedor que está sendo feita não tiver um contexto de identificador em particular, (por exemplo, chamadas de SQLSetConnectAttr para carregar e configurar provedores, em que não há nenhum identificador de instrução) correspondente, o valor de contexto na estrutura é nulo.
 
 
 ## <a name="example"></a>Exemplo
 
-### <a name="keystore-provider"></a>Provedor de armazenamento de chaves
+### <a name="keystore-provider"></a>Provedor de repositório de chaves
 
-O código a seguir é um exemplo de uma implementação de provedor de armazenamento de chave mínimo.
+O código a seguir é um exemplo de uma implementação de provedor de repositório de chaves mínima.
 
 ```
 /* Custom Keystore Provider Example
@@ -364,7 +364,7 @@ CEKEYSTOREPROVIDER *CEKeystoreProvider[] = {
 
 ### <a name="odbc-application"></a>Aplicativo de ODBC
 
-O código a seguir é um aplicativo de demonstração que usa o provedor de armazenamento de chaves acima. Ao executá-lo, certifique-se de que a biblioteca do provedor está no mesmo diretório que o binário do aplicativo, e que especifica a cadeia de caracteres de conexão (ou especifica um DSN que contém) a `ColumnEncryption=Enabled` configuração.
+O código a seguir é um aplicativo de demonstração que usa o provedor de repositório de chaves acima. Ao executá-lo, certifique-se de que a biblioteca do provedor está no mesmo diretório que o binário do aplicativo, e que especifica a cadeia de caracteres de conexão (ou especifica um DSN que contém) o `ColumnEncryption=Enabled` configuração.
 
 ```
 /*
@@ -637,6 +637,6 @@ FoundProv:
 
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 
-[Use sempre criptografado com o Driver ODBC](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
+[Uso do Always Encrypted com o Driver ODBC](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)

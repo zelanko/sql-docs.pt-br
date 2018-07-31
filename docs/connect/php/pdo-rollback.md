@@ -1,5 +1,5 @@
 ---
-title: PDO::rollback | Microsoft Docs
+title: 'PDO:: Rollback | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d21e1d96c2b891ae02ca747b22f1a1a96066f385
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309015"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37975221"
 ---
 # <a name="pdorollback"></a>PDO::rollback
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,7 +43,7 @@ Consulte [PDO::beginTransaction](../../connect/php/pdo-begintransaction.md) para
   
 O suporte para PDO foi adicionado na versão 2.0 dos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Classe PDO](../../connect/php/pdo-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

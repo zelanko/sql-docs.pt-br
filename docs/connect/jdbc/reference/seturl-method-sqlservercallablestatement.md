@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 21c316b8293ce77ecd6c4e4719af9381dfc8cddc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32845721"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38066904"
 ---
 # <a name="seturl-method-sqlservercallablestatement"></a>Método setURL (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +42,7 @@ public void setURL(java.lang.String sCol,
 #### <a name="parameters"></a>Parâmetros  
  *sCol*  
   
- Um **cadeia de caracteres** que contém o nome do parâmetro.  
+ Uma **Cadeia de Caracteres** que contém o nome do parâmetro.  
   
  *u*  
   
@@ -52,9 +52,9 @@ public void setURL(java.lang.String sCol,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método setURL é especificado pelo método setURL na interface do CallableStatement.  
+ Esse método setURL é especificado pelo método setURL na interface java.sql.CallableStatement.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Membros SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Classe SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

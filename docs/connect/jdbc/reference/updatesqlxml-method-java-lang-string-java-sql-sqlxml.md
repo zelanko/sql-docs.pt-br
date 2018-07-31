@@ -1,5 +1,5 @@
 ---
-title: Método updateSQLXML (Java, Java.SQL. SQLXML) | Microsoft Docs
+title: Método updateSQLXML (java.lang.String, java.sql.SQLXML) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4678a6611e2f13624cb2cfefda15c37a8195e3aa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32849681"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039214"
 ---
 # <a name="updatesqlxml-method-javalangstring-javasqlsqlxml"></a>Método updateSQLXML (java.lang.String, java.sql.SQLXML)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +37,7 @@ public void updateSQLXML(java.lang.String columnLabel,
 #### <a name="parameters"></a>Parâmetros  
  *columnLabel*  
   
- Um **cadeia de caracteres** que indica o rótulo da coluna.  
+ Uma **Cadeia de Caracteres** que indica o rótulo de coluna.  
   
  *xmlObject*  
   
@@ -47,9 +47,9 @@ public void updateSQLXML(java.lang.String columnLabel,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método updateSQLXML é especificado pelo método updateSQLXML na interface Java.SQL. resultset.  
+ Esse método updateSQLXML é especificado pelo método updateSQLXML na interface do resultset.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Método updateSQLXML &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatesqlxml-method-sqlserverresultset.md)   
  [Membros de SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Classe SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

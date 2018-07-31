@@ -1,5 +1,5 @@
 ---
-title: Método (Java.IO. Reader, long) updateCharacterStream | Microsoft Docs
+title: Método (java.io.Reader, long) updateCharacterStream | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2558fb68bf5df52ed3e29ed45d7bf1e9c1385b0b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850791"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019585"
 ---
 # <a name="updatecharacterstream-method-int-javaioreader-long"></a>Método updateCharacterStream (int, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,13 +38,13 @@ public void updateCharacterStream(int columnIndex,
 #### <a name="parameters"></a>Parâmetros  
  *columnIndex*  
   
- Um **int** que indica o índice da coluna.  
+ Um **int** que indica o índice de coluna.  
   
  *x*  
   
  Um objeto do leitor.  
   
- *Comprimento*  
+ *length*  
   
  O comprimento do fluxo.  
   
@@ -52,15 +52,15 @@ public void updateCharacterStream(int columnIndex,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método updateCharacterStream é especificado pelo método updateCharacterStream na interface Java.SQL. resultset.  
+ Esse método updateCharacterStream é especificado pelo método updateCharacterStream na interface do resultset.  
   
- Esse método passa caracteres Unicode de um objeto do leitor de texto selecionado e de colunas binárias. Isto inclui todas as colunas de texto e colunas binary, varbinary, varbinary(max), image e XML, mas não colunas UDT.  
+ Este método passa caracteres Unicode de um objeto Reader para colunas de texto e binárias selecionadas. Isto inclui todas as colunas de texto e colunas binary, varbinary, varbinary(max), image e XML, mas não colunas UDT.  
   
- Se o comprimento do fluxo for diferente do especificado no *comprimento* parâmetro, o driver JDBC lançará uma exceção quando a linha for atualizada ou inserida.  
+ Se o comprimento do fluxo for diferente do especificado no parâmetro *length*, o driver JDBC lançará uma exceção quando a linha for atualizada ou inserida.  
   
- Se o comprimento do fluxo for desconhecido, o *comprimento* parâmetro pode ser definido como -1 para indicar que o driver deve aceitar o fluxo independentemente de seu tamanho. Com sqljdbc4.jar, é recomendável que você use o método do JDBC 4.0 [método updateCharacterStream &#40;int, Java.IO. Reader&#41; ](../../../connect/jdbc/reference/updatecharacterstream-method-int-java-io-reader.md) quando o aplicativo quiser atualizar a coluna de um fluxo cujo comprimento é desconhecido.  
+ Se o comprimento do fluxo for desconhecido, o parâmetro *length* poderá ser definido como -1 para indicar que o driver deve aceitar o fluxo independentemente do seu comprimento. Com sqljdbc4.jar, é recomendável usar o [Método updateCharacterStream &#40;int, java.io.Reader&#41;](../../../connect/jdbc/reference/updatecharacterstream-method-int-java-io-reader.md) do JDBC 4.0 quando o aplicativo quiser atualizar a coluna de um fluxo cujo comprimento é desconhecido.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Método updateCharacterStream &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatecharacterstream-method-sqlserverresultset.md)   
  [Membros de SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Classe SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d92dabbb9dda1091f3fc1c395da5183653989a01
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32849571"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37995948"
 ---
 # <a name="updatedouble-method-int-double"></a>Método updateDouble (int, double)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Atualiza a coluna designada com um **duplo** valor, considerando o índice da coluna.  
+  Atualiza a coluna designada com um valor **double**, considerando o índice da coluna.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,19 +42,19 @@ public void updateDouble(int index,
 #### <a name="parameters"></a>Parâmetros  
  *index*  
   
- Um **int** que indica o índice da coluna.  
+ Um **int** que indica o índice de coluna.  
   
  *x*  
   
- Um **duplo** valor.  
+ Um **duplas** valor.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método updateDouble é especificado pelo método updateDouble na interface Java.SQL. resultset.  
+ Esse método updateDouble é especificado pelo método updateDouble na interface do resultset.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Método updateDouble &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatedouble-method-sqlserverresultset.md)   
  [Membros de SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Classe SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

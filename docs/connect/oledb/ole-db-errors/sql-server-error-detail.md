@@ -1,5 +1,5 @@
 ---
-title: Detalhes de erro do SQL Server | Microsoft Docs
+title: Detalhes de erros do SQL Server | Microsoft Docs
 description: Detalhes de erros do SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
@@ -21,23 +21,23 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 8b69559a6c89f30c73245633aa67db90ce7cd78a
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 5273717ac646be50f03a360e2a3a9e5aafa7b054
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665576"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108728"
 ---
 # <a name="sql-server-error-detail"></a>Detalhes de erros do SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  O Driver OLE DB para SQL Server define a interface de erro específico do provedor [ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1). A interface retorna mais detalhes sobre um erro do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e é valiosa em caso de falha na execução de comandos ou em operações do conjunto de linhas.  
+  O Driver do OLE DB para SQL Server define a interface de erro específico do provedor [ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1). A interface retorna mais detalhes sobre um erro do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e é valiosa em caso de falha na execução de comandos ou em operações do conjunto de linhas.  
   
- Há duas maneiras de obter acesso a **ISQLServerErrorInfo** interface.  
+ Há dois modos de obter acesso à interface **ISQLServerErrorInfo**.  
   
- O consumidor pode chamar **ierrorrecords:: Getcustomererrorobject** para obter um **ISQLServerErrorInfo** ponteiro, conforme mostrado no exemplo de código a seguir. (Não é necessário obter **ISQLErrorInfo.**) Ambos **ISQLErrorInfo** e **ISQLServerErrorInfo** são objetos de erro OLE DB personalizados, com **ISQLServerErrorInfo** sendo a interface a ser usada para obter informações de erros de servidor, incluindo detalhes como números de linha e de nome de procedimento.  
+ O consumidor pode chamar **IErrorRecords::GetCustomerErrorObject** para obter um ponteiro **ISQLServerErrorInfo**, conforme mostrado no exemplo de código a seguir. (Não há necessidade de obter **ISQLErrorInfo**). **ISQLErrorInfo** e **ISQLServerErrorInfo** são objetos de erro personalizados do OLE DB, com **ISQLServerErrorInfo** sendo a interface a ser usada para obter informações de erros do servidor, incluindo detalhes como nome de procedimento e números de linha.  
   
 ```  
 // Get the SQL Server custom error object.  
@@ -46,23 +46,23 @@ if(FAILED(hr=pIErrorRecords->GetCustomErrorObject(
    (IUnknown**)&pISQLServerErrorErrorInfo)))  
 ```  
   
- Outra maneira de obter um **ISQLServerErrorInfo** ponteiro é chamar o **QueryInterface** método em uma já obtido **ISQLErrorInfo** ponteiro. Observe que, como **ISQLServerErrorInfo** contém um subconjunto das informações disponíveis de **ISQLErrorInfo**, faz sentido para ir diretamente para **ISQLServerErrorInfo** por meio de **GetCustomerErrorObject**.  
+ Outro modo de obter um ponteiro **ISQLServerErrorInfo** é chamar o método **QueryInterface** em um ponteiro **ISQLErrorInfo** já obtido. Observe que pelo fato de **ISQLServerErrorInfo** conter um superconjunto das informações disponíveis de **ISQLErrorInfo**, faz sentido passar diretamente para **ISQLServerErrorInfo** por meio de **GetCustomerErrorObject**.  
   
- O **ISQLServerErrorInfo** interface expõe uma função de membro, [isqlservererrorinfo:: Geterrorinfo](../../oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md). A função retorna um ponteiro para uma estrutura SSERRORINFO e um ponteiro para um buffer de cadeia de caracteres. Ambos os ponteiros de referenciam memória que o consumidor deverá desalocar usando o **IMalloc:: Free** método.  
+ A interface **ISQLServerErrorInfo** expõe uma função de membro, [ISQLServerErrorInfo::GetErrorInfo](../../oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db.md). A função retorna um ponteiro para uma estrutura SSERRORINFO e um ponteiro para um buffer de cadeia de caracteres. Ambos os ponteiros referenciam a memória que precisa ser desalocada pelo consumidor usando o método **IMalloc::Free**.  
   
  Os membros da estrutura SSERRORINFO são interpretados pelo consumidor como a seguir.  
   
-|Membro|Description|  
+|Membro|Descrição|  
 |------------|-----------------|  
-|*pwszMessage*|Mensagem de erro do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Idêntica à cadeia de caracteres retornada em **IErrorInfo:: GetDescription**.|  
+|*pwszMessage*|Mensagem de erro do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Idêntico à cadeia de caracteres retornada em **IErrorInfo::GetDescription**.|  
 |*pwszServer*|O nome da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para a sessão.|  
 |*pwszProcedure*|Se apropriado, o nome do procedimento no qual o erro foi originado. Uma cadeia de caracteres vazia caso contrário.|  
-|*lNative*|O número do erro nativo do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Idêntico ao valor retornado no *plNativeError* parâmetro **isqlerrorinfo:: Getsqlinfo**.|  
+|*lNative*|O número do erro nativo do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Idêntico ao valor retornado no parâmetro *plNativeError* de **ISQLErrorInfo::GetSQLInfo**.|  
 |*bState*|O estado de uma mensagem de erro do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |*bClass*|A severidade de uma mensagem de erro do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |*wLineNumber*|Quando aplicável, o número da linha de um procedimento armazenado no qual o erro ocorreu.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Erros](../../oledb/ole-db-errors/errors.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../../t-sql/language-elements/raiserror-transact-sql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Propriedades do navegador do SQL Server (guia serviço) | Microsoft Docs
+title: Propriedades do SQL Server Browser (guia Serviço) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6e8ba31710865718b18e4797daf4250867ebb799
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33068763"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37984416"
 ---
 # <a name="sql-server-browser-properties-service-tab"></a>Propriedades do Navegador do SQL Server (guia Serviço)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

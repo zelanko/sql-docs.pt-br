@@ -16,24 +16,24 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 1fb757655c6369964822cd473a50f9633feb2ab8
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 2627398879f7525ab8cd9182f2f1102500cfb5a5
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689839"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106202"
 ---
 # <a name="icommand-ole-db"></a>ICommand (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Este artigo aborda o comportamento de OLE DB que é específico do OLE DB do driver para SQL Server.  
+  Este artigo descreve o comportamento de OLE DB que é específico para o Driver do OLE DB para SQL Server.  
   
 ## <a name="icommandexecute"></a>ICommand::Execute  
- Inserir dados maiores do que o tamanho de uma coluna normalmente resulta em um erro. No entanto, existem situações em que S_OK será retornado, mas *dwStatus* será definido como DBSTATUS_S_TRUNCATED. Ele geralmente ocorre ao inserir dados com parâmetros, onde a coluna não é grande o suficiente para manter os dados, e **ICommandWithParameters:: SetParameterInfo** ainda não foi chamado.  
+ Inserir dados maiores do que o tamanho de uma coluna normalmente resulta em um erro. No entanto, existem situações em que S_OK será retornado, mas *dwStatus* será definido como DBSTATUS_S_TRUNCATED. Isso geralmente ocorre quando os dados são inseridos com parâmetros e a coluna não é grande o suficiente para armazenar os dados e **ICommandWithParameters::SetParameterInfo** não foi chamado.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Interfaces &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)
   
   

@@ -1,6 +1,6 @@
 ---
 title: Criando um conjunto de linhas com IOpenRowset | Microsoft Docs
-description: Criando um conjunto de linhas com IOpenRowset interface do Driver do OLE DB para SQL Server
+description: Criar um conjunto de linhas com IOpenRowset interface do Driver do OLE DB para SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,31 +19,31 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: dd1b48ee3ba9439f5a1cddbfed07196480265b74
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 53a9b42461fd9c7ba194af62f86d8670b8539ddf
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689059"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105942"
 ---
 # <a name="creating-a-rowset-with-iopenrowset"></a>Criando um conjunto de linhas com IOpenRowset
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  O Driver OLE DB para SQL Server oferece suporte a **IOpenRowset:: OPENROWSET** método com as seguintes restrições:  
+  O Driver do OLE DB para SQL Server dá suporte a **IOpenRowset:: OPENROWSET** método com as seguintes restrições:  
   
--   Uma tabela base ou exibição deve ser especificada em um banco de dados ID (DBID) estrutura que o *pTableID* parâmetro aponta para.  
+-   É necessário especificar uma exibição ou uma tabela base em uma estrutura DBID (ID de banco de dados) para a qual o parâmetro *pTableID* aponte.  
   
--   O DBID *eKind* membro deve indicar DBKIND_NAME.  
+-   O membro *eKind* de DBID precisa indicar DBKIND_NAME.  
   
--   O DBID *uName* membro deve especificar o nome de uma tabela base existente ou uma exibição como uma cadeia de caracteres Unicode.  
+-   O membro *uName* de DBID precisa especificar o nome de uma exibição ou uma tabela base existente como uma cadeia de caracteres Unicode.  
   
--   O *pIndexID* parâmetro **OpenRowset** deve ser NULL.  
+-   O parâmetro *pIndexID* de **OpenRowset** precisa ser NULL.  
   
- O conjunto de resultados de **IOpenRowset:: OPENROWSET** contém um único conjunto de linhas. Conjuntos de resultados que contêm um único conjunto de linhas podem ter suporte de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cursores. O suporte de cursor permite ao desenvolvedor usar mecanismos de simultaneidade do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ O conjunto de resultados de **IOpenRowset::OpenRowset** contém um único conjunto de linhas. Conjuntos de resultados que contêm um único conjunto de linhas podem ter suporte por meio de cursores [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O suporte de cursor permite ao desenvolvedor usar mecanismos de simultaneidade do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Conjuntos de linhas](../../oledb/ole-db-rowsets/rowsets.md)  
   
   

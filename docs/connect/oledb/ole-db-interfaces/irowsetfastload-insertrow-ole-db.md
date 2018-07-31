@@ -20,19 +20,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 59fde3a16ea1e79587150307da12d917fd7e9a82
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 3239fd370f5a79ad65fa02a044ce88dd22e6c7f9
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689189"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109398"
 ---
 # <a name="irowsetfastloadinsertrow-ole-db"></a>IRowsetFastLoad::InsertRow (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Adiciona uma linha ao conjunto de linhas de cópia em massa. Para obter exemplos, consulte [em massa dados usando IRowsetFastLoad &#40;OLE DB&#41; ](../../oledb/ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md) e [enviar dados BLOB ao SQL SERVER usando IROWSETFASTLOAD e ISEQUENTIALSTREAM &#40;OLE DB&#41;](../../oledb/ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md).  
+  Adiciona uma linha ao conjunto de linhas de cópia em massa. Para obter exemplos, consulte [em massa dados usando IRowsetFastLoad &#40;OLE DB&#41; ](../../oledb/ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md) e [enviar dados de BLOB para SQL SERVER usando IROWSETFASTLOAD e ISEQUENTIALSTREAM &#40;do OLE DB&#41;](../../oledb/ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -64,7 +64,7 @@ HRESULT InsertRow(
  MSOLEDBSQL não pôde alocar memória suficiente para concluir a solicitação.  
   
  E_UNEXPECTED  
- O método foi chamado em um conjunto de linhas de cópia em massa invalidado anteriormente pelo [IRowsetFastLoad:: Commit](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md) método.  
+ O método foi chamado em um conjunto de linhas de cópia em massa invalidado anteriormente pelo método [IRowsetFastLoad::Commit](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md).  
   
  DB_E_BADACCESSORHANDLE  
  O argumento *hAccessor* fornecido pelo consumidor era inválido.  
@@ -73,13 +73,13 @@ HRESULT InsertRow(
  O acessador especificado não era um acessador de linha ou não especificou a memória de propriedade do consumidor.  
   
 ## <a name="remarks"></a>Remarks  
- Erro ao converter dados do consumidor para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo de dados para uma coluna que faz com que um retorno E_FAIL do Driver OLE DB para SQL Server. Dados podem ser transmitidos para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em qualquer **InsertRow** método ou apenas no **confirmar** método. O aplicativo do consumidor pode chamar o método **InsertRow** muitas vezes com dados incorretos antes ser avisado de que há um erro de conversão de tipo de dados. Como o método **Commit** assegura que todos os dados sejam especificados corretamente pelo consumidor, ele pode usar o método **Commit** apropriadamente para validar os dados, conforme necessário.  
+ Um erro ao converter dados do consumidor no tipo de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para uma coluna gera um retorno E_FAIL do OLE DB Driver for SQL Server. Os dados podem ser transmitidos para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em qualquer método **InsertRow** ou apenas no método **Commit**. O aplicativo do consumidor pode chamar o método **InsertRow** muitas vezes com dados incorretos antes ser avisado de que há um erro de conversão de tipo de dados. Como o método **Commit** assegura que todos os dados sejam especificados corretamente pelo consumidor, ele pode usar o método **Commit** apropriadamente para validar os dados, conforme necessário.  
   
- O Driver OLE DB de conjuntos de cópia em massa do SQL Server são somente gravação. O Driver OLE DB para SQL Server não expõe nenhum método que permite consultas do consumidor do conjunto de linhas. Para encerrar o processamento, o consumidor pode liberar sua referência no [IRowsetFastLoad](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md) interface sem chamar o **confirmar** método. Não há nenhum recurso para acessar uma linha inserida pelo consumidor no conjunto de linhas e alterar seus valores ou para removê-la individualmente do conjunto de linhas.  
+ O Driver do OLE DB para conjuntos de linhas de cópia do SQL Server em massa são somente gravação. O Driver do OLE DB para SQL Server não expõe nenhum método que permite consultas do consumidor do conjunto de linhas. Para encerrar o processamento, o consumidor pode liberar sua referência na interface [IRowsetFastLoad](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md) sem chamar o método **Commit**. Não há nenhum recurso para acessar uma linha inserida pelo consumidor no conjunto de linhas e alterar seus valores ou para removê-la individualmente do conjunto de linhas.  
   
- As linhas copiadas em massa são formatadas no servidor para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O formato de linha é afetado por todas as opções que possam ter sido definidas para a conexão ou sessão, como ANSI_PADDING. Essa opção é ativada por padrão para qualquer conexão feita por meio do Driver OLE DB para SQL Server.  
+ As linhas copiadas em massa são formatadas no servidor para o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O formato de linha é afetado por todas as opções que possam ter sido definidas para a conexão ou sessão, como ANSI_PADDING. Essa opção é ativada por padrão para qualquer conexão feita por meio do Driver do OLE DB para SQL Server.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [IRowsetFastLoad &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md)  
   
   

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a7c09de18ede2c5230179f4ac4df68686d9d256c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852961"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039156"
 ---
 # <a name="understanding-isolation-levels"></a>Compreendendo os níveis de isolamento
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -51,19 +51,19 @@ ms.locfileid: "32852961"
 |---------------------|----------------|-------------------------|-------------|  
 |Leitura não confirmada|Sim|Sim|Sim|  
 |Leitura confirmada|não|Sim|Sim|  
-|Leitura repetida|não|Não|Sim|  
-|Instantâneo|não|Não|não|  
-|Serializável|não|Não|não|  
+|Leitura repetida|não|não|Sim|  
+|Instantâneo|não|não|não|  
+|Serializável|não|não|não|  
   
  As transações devem ser executadas em um nível de isolamento de pelo menos leitura repetível para impedir atualizações perdidas que podem ocorrer quando duas transações recuperam a mesma linha e, em seguida, atualizam a linha com base nos valores originalmente recuperados. Se as duas transações atualizarem as linhas usando uma única instrução UPDATE e não basearem a atualização nos valores previamente recuperados, as atualizações perdidas não poderão ocorrer no nível de isolamento padrão de leitura confirmada.  
   
- Para definir o nível de isolamento de uma transação, você pode usar o [setTransactionIsolation](../../connect/jdbc/reference/settransactionisolation-method-sqlserverconnection.md) método o [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) classe. Esse método aceita um **int** valor como seu argumento, que se baseia em uma das constantes de conexão como no exemplo a seguir:  
+ Para definir o nível de isolamento de uma transação, você pode usar o método [setTransactionIsolation](../../connect/jdbc/reference/settransactionisolation-method-sqlserverconnection.md) da classe [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). Esse método aceita um valor **int** como seu argumento, que tem como base uma das constantes de conexão como no exemplo a seguir:  
   
 ```  
 con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);  
 ```  
   
- Para usar o novo nível de isolamento de instantâneo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], você pode usar uma das constantes SQLServerConnection como no exemplo a seguir:  
+ Para usar o novo nível de isolamento de instantâneo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], você pode usar um das constantes SQLServerConnection como neste exemplo:  
   
 ```  
 con.setTransactionIsolation(SQLServerConnection.TRANSACTION_SNAPSHOT);  
@@ -75,9 +75,9 @@ con.setTransactionIsolation(SQLServerConnection.TRANSACTION_SNAPSHOT);
 con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED + 4094);  
 ```  
   
- Para obter mais informações sobre [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] níveis de isolamento, consulte "níveis de isolamento no [!INCLUDE[ssDE](../../includes/ssde_md.md)]" em [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Manuais Online.  
+ Para obter mais informações sobre os níveis de isolamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], veja "Níveis de isolamento no [!INCLUDE[ssDE](../../includes/ssde_md.md)]" nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Executando transações com o JDBC Driver](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)  
   
   

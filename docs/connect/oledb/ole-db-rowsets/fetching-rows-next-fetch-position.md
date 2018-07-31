@@ -1,6 +1,6 @@
 ---
 title: Próxima posição de busca | Microsoft Docs
-description: Obtendo linhas - próxima posição de busca
+description: Buscando linhas – próxima posição de fetch
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,21 +19,21 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 46e6e3b9898d6c1adbe4df4bdc2b33444b623df9
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: ec1149b615c64f2113afc007c0ea04e4c4665698
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35690109"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106102"
 ---
-# <a name="fetching-rows---next-fetch-position"></a>Obtendo linhas - próxima posição de busca
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="fetching-rows---next-fetch-position"></a>Buscando linhas – próxima posição de fetch
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  O Driver OLE DB para SQL Server mantém track da próxima posição de busca assim que uma sequência de chamadas para o **GetNextRows** método (sem ignora, as alterações de direção ou intervenção chamadas para o **FindNextRow** **Busca**, ou **RestartPosition** métodos) lê todo o conjunto de linhas sem ignorar ou repetir nenhuma linha. A próxima posição de busca é alterada chamando **GetNextRows**, **IRowset:: RestartPosition**, ou **IRowsetIndex**, ou chamando **FindNextRow** com um valor nulo *pBookmark* valor. Chamando **FindNextRow** com um nonnull *pBookmark* valor não afeta a próxima posição de busca.  
+  O OLE DB Driver for SQL Server controla a próxima posição de fetch, de forma que uma sequência de chamadas ao método **GetNextRows** (sem saltos, alterações de direção ou intervenção de chamadas aos métodos **FindNextRow**, **Seek** ou **RestartPosition**) leia todo o conjunto de linhas sem ignorar nem repetir nenhuma linha. A próxima posição de fetch é alterada chamando **IRowset::GetNextRows**, **IRowset::RestartPosition** ou **IRowsetIndex::Seek**, ou chamando **FindNextRow** com um valor de *pBookmark* nulo. A chamada de **FindNextRow** com um valor *pBookmark* não nulo não afeta a próxima posição de fetch.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Buscando linhas](../../oledb/ole-db-rowsets/fetching-rows.md)  
   
   

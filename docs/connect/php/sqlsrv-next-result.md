@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f0e793dd1a1726d32e44c892ee14326acb30ff48
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309435"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019604"
 ---
 # <a name="sqlsrvnextresult"></a>sqlsrv_next_result
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "35309435"
 Ativa o próximo resultado (conjunto de resultados, contagem de linhas ou parâmetro de saída) da instrução especificada.  
   
 > [!NOTE]  
-> O primeiro (ou único) resultado retornado por uma consulta em lotes ou procedimento armazenado está ativo sem uma chamada para **sqlsrv_next_result**.  
+> O primeiro (ou o único) resultado retornado por uma consulta em lotes ou procedimento armazenado está ativo sem uma chamada para **sqlsrv_next_result**.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -54,9 +54,9 @@ Se o próximo resultado tiver sido ativado com êxito, o valor booliano **true**
 O exemplo a seguir cria e executa um procedimento armazenado que insere uma análise do produto na tabela *Production.ProductReview* e depois seleciona todas as análises do produto especificado. Após a execução do procedimento armazenado, o primeiro resultado (o número de linhas afetadas pela consulta INSERT no procedimento armazenado) é consumido sem chamar **sqlsrv_next_result**. O próximo resultado (as linhas retornadas pela consulta SELECT no procedimento armazenado) é disponibilizado chamando **sqlsrv_next_result** e consumido usando [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md).  
   
 > [!NOTE]  
-> Chamar os procedimentos armazenados usando a sintaxe canônica é a prática recomendada. Para obter mais informações sobre a sintaxe canônica, consulte [chamando um procedimento armazenado](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md).  
+> Chamar os procedimentos armazenados usando a sintaxe canônica é a prática recomendada. Para obter mais informações sobre a sintaxe canônica, veja [Como chamar um procedimento armazenado](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md).  
   
-O exemplo supõe que SQL Server e o [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) banco de dados são instalados no computador local. Toda a saída será gravada no console quando o exemplo for executado da linha de comando.  
+O exemplo supõe que o SQL Server e o banco de dados [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) estejam instalados no computador local. Toda a saída será gravada no console quando o exemplo for executado da linha de comando.  
   
 ```  
 <?php  
@@ -187,9 +187,9 @@ Ao executar um procedimento armazenado que tenha parâmetros de saída, é recom
 O exemplo a seguir executa uma consulta em lotes que recupera informações de análise de produto de uma ID de produto especificada, insere uma análise e depois, novamente, recupera as informações de análise da ID de produto especificada. A análise do produto recém-inserida será incluída no conjunto de resultados final da consulta em lotes. O exemplo usa [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md) para ir de um resultado da consulta em lotes para o seguinte.  
   
 > [!NOTE]  
-> O primeiro (ou único) resultado retornado por uma consulta em lotes ou procedimento armazenado está ativo sem uma chamada para **sqlsrv_next_result**.  
+> O primeiro (ou o único) resultado retornado por uma consulta em lotes ou procedimento armazenado está ativo sem uma chamada para **sqlsrv_next_result**.  
   
-O exemplo usa o *Purchasing* analítico o [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) banco de dados e supõe que esse banco de dados esteja instalado no servidor. Toda a saída será gravada no console quando o exemplo for executado da linha de comando.  
+O exemplo usa a tabela *Purchasing.ProductReview* do banco de dados [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) e supõe que esse banco de dados esteja instalado no servidor. Toda a saída será gravada no console quando o exemplo for executado da linha de comando.  
   
 ```  
 <?php  
@@ -268,7 +268,7 @@ sqlsrv_close( $conn );
 ?>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Referência da API do driver SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [Sobre exemplos de código na documentação](../../connect/php/about-code-examples-in-the-documentation.md)

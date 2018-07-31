@@ -1,5 +1,5 @@
 ---
-title: PDOStatement::setFetchMode | Microsoft Docs
+title: 'Pdostatement:: Setfetchmode | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 11b8e027ba6dd51cb98fe6192c88218ef1f802cc
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308915"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37992828"
 ---
 # <a name="pdostatementsetfetchmode"></a>PDOStatement::setFetchMode
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,7 +34,7 @@ bool PDOStatement::setFetchMode( $mode );
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
-$*modo*: um ou mais parâmetros válidos para passar para [pdostatement:: Fetch](../../connect/php/pdostatement-fetch.md).  
+$*modo*: quaisquer parâmetros que sejam válidos para passar para [PDOStatement::fetch](../../connect/php/pdostatement-fetch.md).  
   
 ## <a name="return-value"></a>Valor retornado  
 true se for bem-sucedido; caso contrário, false.  
@@ -87,7 +87,7 @@ O suporte para PDO foi adicionado na versão 2.0 dos [!INCLUDE[ssDriverPHP](../.
 ?>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [PDOStatement Class](../../connect/php/pdostatement-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

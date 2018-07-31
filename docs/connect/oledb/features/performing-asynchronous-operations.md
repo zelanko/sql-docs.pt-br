@@ -23,55 +23,55 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 3ba220d754eb3ebc31a719cb840e93378438e09c
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: e42374d2d3abc982dc8c2d2defddf724ee72c9d1
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35612131"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108038"
 ---
 # <a name="performing-asynchronous-operations"></a>Executando operações assíncronas
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite que os aplicativos executem operações de banco de dados assíncronas. O processamento assíncrono permite que os métodos retornem imediatamente sem serem bloqueados no thread de chamada. Isto permite muito do poder e flexibilidade de multithreading, sem exigir que o desenvolvedor crie threads explicitamente ou controle a sincronização. Os aplicativos solicitam processamento assíncrono ao inicializar uma conexão de banco de dados ou ao inicializar o resultado da execução de um comando.  
   
 ## <a name="opening-and-closing-a-database-connection"></a>Abrindo e fechando uma conexão de banco de dados  
- Ao usar o Driver OLE DB para SQL Server, os aplicativos projetados para inicializar um objeto de fonte de dados de forma assíncrona podem definir o bit DBPROPVAL_ASYNCH_INITIALIZE na propriedade DBPROP_INIT_ASYNCH antes de chamar **IDBInitialize:: Initialize** . Quando essa propriedade for definida, o provedor retorna imediatamente da chamada para **inicializar** com S_OK, se a operação foi concluída imediatamente, ou com DB_S_ASYNCHRONOUS, se a inicialização estiver continuando assincronamente. Aplicativos podem consultar o **IDBAsynchStatus** ou [ISSAsynchStatus](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md) de interface no objeto de fonte de dados e, em seguida, chamar **idbasynchstatus:: getStatus** ou [ Issasynchstatus:: Waitforasynchcompletion](../../oledb/ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md) para obter o status da inicialização.  
+ Ao usar o OLE DB Driver for SQL Server, os aplicativos projetados para inicializar um objeto de fonte de dados de forma assíncrona podem definir o bit DBPROPVAL_ASYNCH_INITIALIZE na propriedade DBPROP_INIT_ASYNCH antes de chamar **IDBInitialize::Initialize**. Quando essa propriedade estiver definida, o provedor será retornado imediatamente da chamada a **Initialize** com S_OK, caso a operação seja concluída imediatamente, ou com DB_S_ASYNCHRONOUS, caso a inicialização continue de forma assíncrona. Os aplicativos podem consultar a interface **IDBAsynchStatus** ou [ISSAsynchStatus](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md) no objeto de fonte de dados e, em seguida, chamar **IDBAsynchStatus::GetStatus** ou [ISSAsynchStatus::WaitForAsynchCompletion](../../oledb/ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md) para obter o status da inicialização.  
   
- Além disso, a propriedade SSPROP_ISSAsynchStatus foi adicionada ao conjunto de propriedades DBPROPSET_SQLSERVERROWSET. Provedores que dão suporte a **ISSAsynchStatus** interface deve implementar essa propriedade com um valor de VARIANT_TRUE.  
+ Além disso, a propriedade SSPROP_ISSAsynchStatus foi adicionada ao conjunto de propriedades DBPROPSET_SQLSERVERROWSET. Os provedores que dão suporte à interface **ISSAsynchStatus** precisam implementar essa propriedade com um valor de VARIANT_TRUE.  
   
- **Idbasynchstatus:: Abort** ou [issasynchstatus:: Abort](../../oledb/ole-db-interfaces/issasynchstatus-abort-ole-db.md) pode ser chamado para cancelar o assíncrona **inicializar** chamar. O consumidor deve solicitar explicitamente a Inicialização Assíncrona da Fonte de Dados. Caso contrário, **IDBInitialize:: Initialize** não retorna até que o objeto de fonte de dados está completamente inicializado.  
+ **IDBAsynchStatus::Abort** ou [ISSAsynchStatus::Abort](../../oledb/ole-db-interfaces/issasynchstatus-abort-ole-db.md) pode ser chamado para cancelar a chamada assíncrona a **Initialize**. O consumidor deve solicitar explicitamente a Inicialização Assíncrona da Fonte de Dados. Caso contrário, **IDBInitialize::Initialize** não será retornado enquanto o objeto de fonte de dados não for completamente inicializado.  
   
 > [!NOTE]  
->  Objetos de fonte de dados usados para o pool de conexão não é possível chamar o **ISSAsynchStatus** interface em que o Driver OLE DB para SQL Server. O **ISSAsynchStatus** interface não é exposta para objetos de fonte de dados em pool.  
+>  Os objetos de fonte de dados usados para o pooling de conexão não podem chamar a interface **ISSAsynchStatus** no OLE DB Driver for SQL Server. A interface **ISSAsynchStatus** não é exposta para objetos da fonte de dados em pool.  
 >   
->  Se um aplicativo forçar explicitamente o uso do mecanismo de cursor, **IOpenRowset:: OPENROWSET** e **imultipleresults:: GetResult** não dará suporte a processamento assíncrono.  
+>  Se um aplicativo forçar explicitamente o uso do mecanismo de cursor, **IOpenRowset::OpenRowset** e **IMultipleResults::GetResult** não darão suporte ao processamento assíncrono.  
 >   
->  Além disso, a dll de proxy/stub de comunicação remota (no MDAC 2.8) não é possível chamar o **ISSAsynchStatus** interface do OLE DB Driver para SQL Server. O **ISSAsynchStatus** interface não é exposta por meio de comunicação remota.  
+>  Além disso, o proxy de comunicação remota/dll de stub (no MDAC 2.8) não pode chamar a interface **ISSAsynchStatus** no OLE DB Driver for SQL Server. A interface **ISSAsynchStatus** não é exposta por comunicação remota.  
 >   
->  Componentes de serviço não oferecem suporte a **ISSAsynchStatus**.  
+>  Os Componentes de Serviço não dão suporte a **ISSAsynchStatus**.  
   
 ## <a name="execution-and-rowset-initialization"></a>Execução e inicialização de conjunto de linhas  
- Os aplicativos projetados para abrir assincronamente o resultado da execução de um comando podem definir o bit DBPROPVAL_ASYNCH_INITIALIZE na propriedade DBPROP_ROWSET_ASYNCH. Ao definir esse bit antes de chamar **IDBInitialize:: Initialize**, **ICommand:: execute**, **IOpenRowset:: OPENROWSET** ou **IMultipleResults:: GetResult**, o *riid* argumento deve ser definido como IID_IDBAsynchStatus, IID_ISSAsynchStatus ou IID_IUnknown.  
+ Os aplicativos projetados para abrir assincronamente o resultado da execução de um comando podem definir o bit DBPROPVAL_ASYNCH_INITIALIZE na propriedade DBPROP_ROWSET_ASYNCH. Ao definir esse bit antes de chamar **IDBInitialize::Initialize**, **ICommand::Execute**, **IOpenRowset::OpenRowset** ou **IMultipleResults::GetResult**, o argumento *riid* precisa ser definido como IID_IDBAsynchStatus, IID_ISSAsynchStatus ou IID_IUnknown.  
   
- O método retornará imediatamente com S_OK se a inicialização de conjunto de linhas for concluída imediatamente, ou com DB_S_ASYNCHRONOUS se o conjunto de linhas continuar Inicializando assincronamente, com *ppRowset* definido como a interface solicitada do conjunto de linhas. O condutor do OLE DB para SQL Server, essa interface só pode ser **IDBAsynchStatus** ou **ISSAsynchStatus**. Até que o conjunto de linhas está totalmente inicializado, essa interface se comportará como se estivesse em um estado suspenso e chamar **QueryInterface** para interfaces diferentes de **IID_IDBAsynchStatus** ou **IID_ ISSAsynchStatus** poderá retornar E_NOINTERFACE. A menos que o consumidor solicite processamento assíncrono explicitamente, o conjunto de linhas é inicializado sincronamente. Todas as interfaces solicitadas estão disponíveis quando **idbasynchstaus:: getStatus** ou **issasynchstatus:: Waitforasynchcompletion** retorna com a indicação de que a operação assíncrona é concluída. Isto não significa necessariamente que todo o conjunto de linhas esteja preenchido, mas que está completo e totalmente funcional.  
+ O método será retornado imediatamente com S_OK se a inicialização do conjunto de linhas for concluída imediatamente, ou com DB_S_ASYNCHRONOUS se o conjunto de linhas continuar sendo inicializado de forma assíncrona, com *ppRowset* definido como a interface solicitada no conjunto de linhas. Para o Driver do OLE DB para SQL Server, essa interface só pode ser **IDBAsynchStatus** ou **ISSAsynchStatus**. Até o conjunto de linhas ser completamente inicializado, essa interface se comportará como se estivesse em um estado suspenso, e a chamada a **QueryInterface** para interfaces diferentes de **IID_IDBAsynchStatus** ou **IID_ISSAsynchStatus** poderá retornar E_NOINTERFACE. A menos que o consumidor solicite processamento assíncrono explicitamente, o conjunto de linhas é inicializado sincronamente. Todas as interfaces solicitadas estão disponíveis quando **IDBAsynchStaus::GetStatus** ou **ISSAsynchStatus::WaitForAsynchCompletion** é retornado com a indicação de que a operação assíncrona foi concluída. Isto não significa necessariamente que todo o conjunto de linhas esteja preenchido, mas que está completo e totalmente funcional.  
   
- Se o comando executado não retornar um conjunto de linhas, ainda retornará imediatamente com um objeto que oferece suporte a **IDBAsynchStatus**.  
+ Se o comando executado não retornar um conjunto de linhas, ele ainda será retornado imediatamente com um objeto que dá suporte a **IDBAsynchStatus**.  
   
  Se você precisar obter vários resultados da execução de comando assíncrona, deverá:  
   
 -   Definir o bit DBPROPVAL_ASYNCH_INITIALIZE da propriedade DBPROP_ROWSET_ASYNCH antes de executar o comando.  
   
--   Chamar **ICommand:: execute**e a solicitação **IMultipleResults**.  
+-   Chamar **ICommand::Execute** e solicitar **IMultipleResults**.  
   
- O **IDBAsynchStatus** e **ISSAsynchStatus** interfaces podem ser obtidas consultando várias interface resultados usando **QueryInterface**.  
+ Em seguida, as interfaces **IDBAsynchStatus** e **ISSAsynchStatus** podem ser obtidas consultando a interface de vários resultados usando **QueryInterface**.  
   
- Quando o comando tiver concluído a execução, **IMultipleResults** pode ser usada como normal, com uma exceção do caso síncrono: DB_S_ASYNCHRONOUS pode ser retornado, caso em que **IDBAsynchStatus** ou **ISSAsynchStatus** pode ser usado para determinar quando a operação é concluída.  
+ Quando o comando tiver concluído a execução, **IMultipleResults** poderá ser usado como normal, com uma exceção do caso síncrono: DB_S_ASYNCHRONOUS pode ser retornado; nesse caso, a interface **IDBAsynchStatus** ou **ISSAsynchStatus** pode ser usada para determinar quando a operação é concluída.  
   
 ## <a name="examples"></a>Exemplos  
- No exemplo a seguir, o aplicativo chama um método sem-bloqueio, executa algum outro processamento e retorna para processar os resultados. **Issasynchstatus:: Waitforasynchcompletion** espera no objeto de evento interno até que a operação de execução assíncrona seja concluída ou o período de tempo especificado por *dwMilisecTimeOut* é passado.  
+ No exemplo a seguir, o aplicativo chama um método sem-bloqueio, executa algum outro processamento e retorna para processar os resultados. **ISSAsynchStatus::WaitForAsynchCompletion** aguarda no objeto de evento interno até que a operação de execução assíncrona seja concluída ou que o tempo especificado por *dwMilisecTimeOut* tenha decorrido.  
   
 ```  
 // Set the DBPROPVAL_ASYNCH_INITIALIZE bit in the   
@@ -112,7 +112,7 @@ if (hr == DB_S_ASYNCHRONOUS)
 }  
 ```  
   
- **Issasynchstatus:: Waitforasynchcompletion** espera no objeto de evento interno até que a operação de execução assíncrona seja concluída ou o *dwMilisecTimeOut* valor é passado.  
+ **ISSAsynchStatus::WaitForAsynchCompletion** aguarda no objeto de evento interno até que a operação de execução assíncrona seja concluída ou o valor de *dwMilisecTimeOut* seja passado.  
   
  O exemplo a seguir mostra processamento assíncrono com vários conjuntos de resultados:  
   
@@ -192,8 +192,8 @@ if (hr == DB_S_ASYNCHRONOUS)
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Driver do OLE DB para recursos do SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Recursos do OLE DB Driver for SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md)   
  [Propriedades e comportamentos do conjunto de linhas](../../oledb/ole-db-rowsets/rowset-properties-and-behaviors.md)   
  [ISSAsynchStatus &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md)  
   

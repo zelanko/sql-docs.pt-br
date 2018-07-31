@@ -1,5 +1,5 @@
 ---
-title: Active Directory do Azure | Microsoft Docs
+title: O Azure Active Directory | Microsoft Docs
 ms.date: 07/13/2017
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,33 +10,33 @@ ms.topic: conceptual
 author: david-puglielli
 ms.author: v-dapugl
 manager: v-hakaka
-ms.openlocfilehash: 224fa4f0746c45f9651b4714593e28f719b4d1ab
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 71e6b3b4556621b6bc8a8a4c7996cfdb47a12849
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35306995"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979438"
 ---
-# <a name="connect-using-azure-active-directory-authentication"></a>Conecte-se usando a autenticação do Active Directory do Azure
+# <a name="connect-using-azure-active-directory-authentication"></a>Conectar usando a Autenticação do Azure Active Directory
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[Active Directory do Azure](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-whatis) (AD do Azure) é uma tecnologia de gerenciamento de ID de usuário central que funciona como uma alternativa para [autenticação do SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md). O AD do Azure permite conexões ao banco de dados SQL do Microsoft Azure e SQL Data Warehouse com identidades federadas no AD do Azure usando um nome de usuário e senha, autenticação integrada do Windows ou um token de acesso do AD do Azure; os drivers PHP para SQL Server oferecem suporte parcial para esses recursos.
+[O Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-whatis) (Azure AD) é uma tecnologia de gerenciamento de ID de usuário central que opera como uma alternativa ao [autenticação do SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md). O Azure AD permite conexões com o banco de dados SQL do Microsoft Azure e SQL Data Warehouse com identidades federadas no Azure AD usando um nome de usuário e senha, autenticação integrada do Windows ou um token de acesso do AD do Azure; os drivers PHP para SQL Server oferecem suporte parcial para esses recursos.
 
-Para usar o AD do Azure, use o **autenticação** palavra-chave. Os valores que **autenticação** pode levar no são explicadas na tabela a seguir.
+Para usar o Azure AD, use o **autenticação** palavra-chave. Os valores que **autenticação** pode levar diante são explicadas na tabela a seguir.
 
-|Palavra-chave|Valores|Description|
+|Palavra-chave|Valores|Descrição|
 |-|-|-|
-|**Autenticação**|Não definido (padrão)|Modo de autenticação determinado por outras palavras-chave. Para obter mais informações, consulte [Connection Options](../../connect/php/connection-options.md). |
+|**Autenticação**|Não configurado (padrão)|Modo de autenticação determinado por outras palavras-chave. Para obter mais informações, consulte [Connection Options](../../connect/php/connection-options.md). |
 ||`SqlPassword`|Autenticar diretamente a uma instância do SQL Server (que pode ser uma instância do Azure) usando um nome de usuário e senha. O nome de usuário e a senha devem ser passados para a cadeia de conexão usando o **UID** e **PWD** palavras-chave. |
 ||`ActiveDirectoryPassword`|Autenticar com uma identidade do Active Directory do Azure usando um nome de usuário e senha. O nome de usuário e a senha devem ser passados para a cadeia de conexão usando o **UID** e **PWD** palavras-chave. |
 
-O **autenticação** palavra-chave afeta as configurações de segurança de conexão. Se estiver definido na cadeia de conexão e, em seguida, por padrão o **Encrypt** palavra-chave é definida como true, para que o cliente solicita criptografia. Além disso, o certificado do servidor será validado independentemente da configuração de criptografia, a menos que **TrustServerCertificate** é definido como true. Isso é distinto do antigo e menos segura, método de logon, em que o certificado do servidor não é validado, a menos que solicitado especificamente criptografia na cadeia de conexão.
+O **autenticação** palavra-chave afeta as configurações de segurança de conexão. Se ele for definido na cadeia de conexão e, em seguida, por padrão o **Encrypt** palavra-chave é definido como true, para que o cliente solicita criptografia. Além disso, o certificado do servidor será validado, independentemente da configuração de criptografia, a menos que **TrustServerCertificate** é definido como true. Isso é diferenciado da antiga e menos segura, método de logon, em que o certificado do servidor não é validado, a menos que a criptografia é especificamente solicitada na cadeia de conexão.
 
-Antes de usar o AD do Azure com os drivers PHP para SQL Server no Windows, certifique-se de que você tenha instalado o [assistente Microsoft Online Services entrar](https://www.microsoft.com/download/details.aspx?id=41950) (não é necessário para Linux e MacOS).
+Antes de usar o Azure AD com os drivers PHP para SQL Server no Windows, certifique-se de que você instalou o [assistente Microsoft Online Services entrar](https://www.microsoft.com/download/details.aspx?id=41950) (não é necessário para Linux e MacOS).
 
 #### <a name="limitations"></a>Limitações
 
-No Windows, o driver ODBC subjacente oferece suporte a um valor mais para o **autenticação** palavra-chave, **ActiveDirectoryIntegrated**, mas os drivers PHP não oferece suporte a esse valor em qualquer plataforma e, portanto, também não dão suporte a autenticação baseada em token do AD do Azure.
+No Windows, o driver ODBC subjacente dá suporte a um valor mais para o **autenticação** palavra-chave **ActiveDirectoryIntegrated**, mas os drivers PHP não oferece suporte a esse valor em qualquer plataforma e, portanto, também Não há suporte para autenticação baseada em token do AD do Azure.
 
 ## <a name="example"></a>Exemplo
 
@@ -128,5 +128,5 @@ O exemplo a seguir faz o mesmo que acima com o driver PDO_SQLSRV.
 
     ?>
 ```
-## <a name="see-also"></a>Consulte também  
-[Usando o Azure Active Directory com o Driver ODBC](https://docs.microsoft.com/en-us/sql/connect/odbc/using-azure-active-directory)
+## <a name="see-also"></a>Consulte Também  
+[Usando o Azure Active Directory com o Driver ODBC](https://docs.microsoft.com/sql/connect/odbc/using-azure-active-directory)

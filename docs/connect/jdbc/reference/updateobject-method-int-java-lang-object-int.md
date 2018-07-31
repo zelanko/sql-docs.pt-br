@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1f690ba95d40a2e9e43881b0e1c82d497cd5e26d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32849871"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38036164"
 ---
 # <a name="updateobject-method-int-javalangobject-int"></a>Método updateObject (int, java.lang.Object, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Atualiza a coluna designada com um **objeto** considerando a escala e o índice da coluna de valor.  
+  Atualiza a coluna designada com um valor **Object**, dados a escala e o índice da coluna.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,11 +43,11 @@ public void updateObject(int index,
 #### <a name="parameters"></a>Parâmetros  
  *index*  
   
- Um **int** que indica o índice da coluna.  
+ Um **int** que indica o índice de coluna.  
   
  *obj*  
   
- Um **objeto** valor.  
+ Um valor **Object**.  
   
  *scale*  
   
@@ -56,7 +56,7 @@ public void updateObject(int index,
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Método updateObject &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateobject-method-sqlserverresultset.md)   
  [Membros de SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Classe SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

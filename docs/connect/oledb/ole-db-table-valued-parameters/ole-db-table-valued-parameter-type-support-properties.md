@@ -1,6 +1,6 @@
 ---
-title: Suporte de tipo de parâmetro com valor de tabela do OLE DB (Propriedades) | Microsoft Docs
-description: Suporte para tipo de parâmetro de DB Table-Valued OLE (Propriedades)
+title: Suporte ao tipo de parâmetro com valor de tabela do OLE DB (Propriedades) | Microsoft Docs
+description: Suporte ao tipo de parâmetro com valor de tabela do OLE DB (Propriedades)
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,22 +16,22 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: ea197e5411cb867221814817041f3fd6df7c8005
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 67d27b1b2441b481a696170013ece166bc58d778
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689569"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108758"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>Suporte ao tipo de parâmetro com valor de tabela de OLE DB (propriedades)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Este tópico fornece informações sobre propriedades e conjuntos de propriedades de OLE DB associados a objetos de conjunto de linhas de parâmetro com valor de tabela.  
   
 ## <a name="properties"></a>Propriedades  
- A seguir está uma lista de propriedades expostas por meio do método IRowsetInfo::GetPropeties em objetos de conjunto de linhas de parâmetro com valor de tabela. Observe que todas as propriedades de conjunto de linhas de parâmetro com valor de tabela são somente leitura. Portanto, tentar definir qualquer uma das propriedades por meio de IOpenRowset:: OPENROWSET ou ITableDefinitionWithConstraints::CreateTableWithConstraints métodos para seus valores padrão não resultará em um erro e nenhum objeto será criado.  
+ Veja a seguir a lista de propriedades expostas por meio do método IRowsetInfo::GetPropeties em objetos de conjunto de linhas do parâmetro com valor de tabela. Observe que todas as propriedades de conjunto de linhas de parâmetro com valor de tabela são somente leitura. Portanto, tentar definir qualquer uma das propriedades por meio de IOpenRowset:: OPENROWSET ou ITableDefinitionWithConstraints::CreateTableWithConstraints métodos para seus valores não padrão resultará em um erro e nenhum objeto será criado.  
   
  Não estão listadas propriedades não implementadas no objeto de conjunto de linhas de parâmetro com valor de tabela. Para obter uma lista completa de propriedades, consulte a documentação de OLE DB no Windows Data Access Components.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "35689569"
 |DBPROP_DELAYSTORAGEOBJECTS|VARIANT_FALSE|  
 |DBPROP_IAccessor<br /><br /> DBPROP_IColumnsInfo<br /><br /> DBPROP_IConvertType<br /><br /> DBPROP_IRowset<br /><br /> DBPROP_IRowsetInfo,<br /><br /> DBPROP_IColumnsRowset|VARIANT_TRUE|  
 |DBPROP_IConnectionPointContainer<br /><br /> DBPROP_IMultipleResults<br /><br /> DBPROP_IRowsetUpdate<br /><br /> DBPROP_IRowsetIdentity<br /><br /> DBPROP_IRowsetLocate<br /><br /> DBPROP_IRowsetScroll<br /><br /> DBPROP_IRowsetResynch|VARIANT_FALSE|  
-|DBPROP_IRowsetChange|VARIANT_TRUE<br /><br /> Observação: O objeto de conjunto de linhas de parâmetro com valor de tabela oferece suporte as interfaces IRowsetChange.<br /><br /> Um conjunto de linhas criado usando DBPROP_IRowsetChange igual a VARIANT_TRUE exibe comportamentos de modo de atualização imediatos.<br /><br /> No entanto, se colunas BLOB forem associadas como objetos ISequentialStream, o consumidor deverá mantê-los para o tempo de vida do objeto de conjunto de linhas do parâmetro com valor de tabela.|  
+|DBPROP_IRowsetChange|VARIANT_TRUE<br /><br /> Observação: o objeto de conjunto de linhas de parâmetro com valor de tabela dá suporte às interfaces IRowsetChange.<br /><br /> Um conjunto de linhas criado usando DBPROP_IRowsetChange igual a VARIANT_TRUE exibe comportamentos de modo de atualização imediatos.<br /><br /> Entretanto, se as colunas BLOB forem associadas como objetos ISequentialStream, o consumidor deverá mantê-las pelo tempo de vida do objeto de conjunto de linhas de parâmetro com valor de tabela.|  
 |DBPROP_ISupportErrorInfo|VARIANT_TRUE|  
 |DBPROP_ISequentialStream|VARIANT_TRUE|  
 |DBPROP_IMMOBILEROWS|VARIANT_TRUE|  
@@ -76,20 +76,20 @@ ms.locfileid: "35689569"
 |DBPROP_STRONGIDENTITY|VARIANT_TRUE|  
 |DBPROP_TRANSACTEDOBJECT|VARIANT_FALSE|  
 |DBPROP_UNIQUEROWS|VARIANT_FALSE|  
-|DBPROP_UPDATABILITY|DBPROPVAL_UP_CHANGE &#124; DBPROPVAL_UP_DELETE &#124; DBPROPVAL_UP_INSERT|  
+|DBPROP_UPDATABILITY|DBPROPVAL_UP_CHANGE &AMP;#124; DBPROPVAL_UP_DELETE &AMP;#124; DBPROPVAL_UP_INSERT|  
   
 ## <a name="property-sets"></a>Conjuntos de propriedades  
  A propriedade a seguir define parâmetros com valor de tabela de suporte.  
   
 ### <a name="dbpropsetsqlservercolumn"></a>DBPROPSET_SQLSERVERCOLUMN  
- Esta propriedade é usada pelo consumidor no processo de criação de um objeto de conjunto de linhas de parâmetro com valor de tabela usando ITableDefinitionWithConstraints::CreateTableWithConstraints para cada coluna através da estrutura DBCOLUMNDESC, se necessário.  
+ Essa propriedade é usada pelo consumidor no processo de criação de um objeto de conjunto de linhas de parâmetro com valor de tabela usando ITableDefinitionWithConstraints::CreateTableWithConstraints para cada coluna através da estrutura DBCOLUMNDESC, se necessário.  
   
 |ID da propriedade|Valor da propriedade|  
 |-----------------|--------------------|  
 |SSPROP_COL_COMPUTED|Leitura/gravação: leitura/gravação<br /><br /> Padrão: VARIANT_FALSE<br /><br /> Tipo: VT_BOOL<br /><br /> Descrição: quando definido como VARIANT_TRUE, indica que a coluna é uma coluna computada. VARIANT_FALSE indica que não é uma coluna computada.|  
   
 ### <a name="dbpropsetsqlserverparameter"></a>DBPROPSET_SQLSERVERPARAMETER  
- Essas propriedades são lidas pelo consumidor ao descobrir as informações de tipo de parâmetro com valor de tabela em chamadas para ISSCommandWithParamters::GetParameterProperties e definidas pelo consumidor ao definir propriedades específicas sobre o parâmetro com valor de tabela por meio de isscommandwithparameters::.  
+ Essas propriedades são lidas pelo consumidor ao descobrir as informações de tipo de parâmetro com valor de tabela em chamadas para ISSCommandWithParamters::GetParameterProperties e definidas pelo consumidor ao definir propriedades específicas sobre o parâmetro com valor de tabela por meio de isscommandwithparameters:: SetParameterProperties.  
   
  A tabela a seguir fornece descrições detalhadas destas propriedades.  
   
@@ -98,11 +98,11 @@ ms.locfileid: "35689569"
 |SSPROP_PARAM_TYPE_TYPENAME|Leitura/gravação: leitura/gravação<br /><br /> Padrão: VT_EMPTY<br /><br /> Tipo: VT_BSTR<br /><br /> Descrição: os consumidores usam esta propriedade para obter ou definir o nome do tipo de parâmetro com valor de tabela.<br /><br /> Esta propriedade também pode ser usada com tipos de dados CLR definidos pelo usuário.<br /><br /> Esta propriedade pode ser especificada opcionalmente para fornecer um nome de tipo de tabela para um parâmetro com valor de tabela (no caso de comando de sintaxe de chamada ODBC). Esta propriedade é necessária para consultas SQL parametrizadas ad hoc.|  
 |SSPROP_PARAM_TYPE_SCHEMANAME|Leitura/gravação: leitura/gravação<br /><br /> Padrão: VT_EMPTY<br /><br /> Tipo: VT_BSTR<br /><br /> Descrição: os consumidores usam esta propriedade para obter ou definir o nome de esquema do tipo de parâmetro com valor de tabela.<br /><br /> Esta propriedade também pode ser usada com tipos de dados CLR definidos pelo usuário.|  
 |SSPROP_PARAM_TYPE_CATALOGNAME|R/W: somente leitura<br /><br /> Padrão: VT_EMPTY<br /><br /> Tipo: VT_BSTR<br /><br /> Descrição: os consumidores usam esta propriedade para obter o nome de catálogo do tipo de parâmetro com valor de tabela.<br /><br /> Esta propriedade também pode ser usada com tipos de dados CLR definidos pelo usuário. É um erro definir esta propriedade; os tipos de tabela definidos pelo usuário precisam estar no mesmo banco de dados dos parâmetros com valor de tabela que os usam.|  
-|SSPROP_PARAM_TABLE_DEFAULT_COLUMNS|Leitura/gravação: leitura/gravação<br /><br /> Padrão: VT_EMPTY<br /><br /> Type: VT_UI2 &#124; VT_ARRAY<br /><br /> Descrição: os consumidores usam esta propriedade para especificar quais conjuntos de colunas no conjunto de linhas serão tratado como padrão. Nenhum valor será enviado para essas colunas. Ao buscar dados do objeto de conjunto de linhas de consumidor, o provedor não exige uma associação para essas colunas.<br /><br /> Cada elemento da matriz deve ser um ordinal de uma coluna no objeto de conjunto de linhas. Os ordinais inválidos resultarão em erros no momento de execução do comando.|  
-|SSPROP_PARAM_TABLE_COLUMN_ORDER|Leitura/gravação: leitura/gravação<br /><br /> Padrão: VT_EMPTY<br /><br /> Type: VT_UI2 &#124; VT_ARRAY<br /><br /> Descrição: esta propriedade é usada pelo consumidor para fornecer uma dica para o servidor indicando a ordem de classificação dos dados de coluna. O provedor não executa nenhuma validação e pressupõe que o consumidor está de acordo com a especificação fornecida. O servidor usa esta propriedade para executar otimizações.<br /><br /> As informações da ordem de cada coluna são representadas por um par de elementos na matriz. O primeiro elemento do par é o número da coluna. O segundo elemento do par será 1 para ordem crescente ou 2 para decrescente.|  
+|SSPROP_PARAM_TABLE_DEFAULT_COLUMNS|Leitura/gravação: leitura/gravação<br /><br /> Padrão: VT_EMPTY<br /><br /> Tipo: VT_UI2 &#124; VT_ARRAY<br /><br /> Descrição: os consumidores usam esta propriedade para especificar quais conjuntos de colunas no conjunto de linhas serão tratado como padrão. Nenhum valor será enviado para essas colunas. Ao buscar dados do objeto de conjunto de linhas de consumidor, o provedor não exige uma associação para essas colunas.<br /><br /> Cada elemento da matriz deve ser um ordinal de uma coluna no objeto de conjunto de linhas. Os ordinais inválidos resultarão em erros no momento de execução do comando.|  
+|SSPROP_PARAM_TABLE_COLUMN_ORDER|Leitura/gravação: leitura/gravação<br /><br /> Padrão: VT_EMPTY<br /><br /> Tipo: VT_UI2 &#124; VT_ARRAY<br /><br /> Descrição: esta propriedade é usada pelo consumidor para fornecer uma dica para o servidor indicando a ordem de classificação dos dados de coluna. O provedor não executa nenhuma validação e pressupõe que o consumidor está de acordo com a especificação fornecida. O servidor usa esta propriedade para executar otimizações.<br /><br /> As informações da ordem de cada coluna são representadas por um par de elementos na matriz. O primeiro elemento do par é o número da coluna. O segundo elemento do par será 1 para ordem crescente ou 2 para decrescente.|  
   
-## <a name="see-also"></a>Consulte também  
- [Suporte ao tipo de parâmetro com valor de tabela de banco de dados OLE](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Suporte para o tipo de parâmetro com valor de tabela do OLE DB](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md)   
  [Usar parâmetros com valor de tabela &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

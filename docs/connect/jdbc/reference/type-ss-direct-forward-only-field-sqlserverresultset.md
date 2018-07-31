@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b13a8c7002a8e9a3fd868f4c4c7fa3fbb052347d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32847721"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019964"
 ---
 # <a name="typessdirectforwardonly-field-sqlserverresultset"></a>Campo TYPE_SS_DIRECT_FORWARD_ONLY (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Usado para especificar um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] tipo de cursor de somente avanço, somente leitura.  
+  Usado para especificar um tipo de cursor somente de avanço rápido, somente leitura do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,9 +39,9 @@ public static final int TYPE_SS_DIRECT_FORWARD_ONLY
 ```  
   
 ## <a name="field-value"></a>Valor do campo  
- Um **int** valor de 2003.  
+ Uma **int** valor de 2003.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Membros de SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Classe SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

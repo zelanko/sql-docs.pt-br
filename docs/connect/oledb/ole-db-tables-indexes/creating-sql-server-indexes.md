@@ -20,51 +20,51 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 352cdcbe6c2f5697ad7864f8048474d7a19ed632
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 6d8f20b4d6b18e6e7c995e3957b51b20cb59d5b3
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689489"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107968"
 ---
 # <a name="creating-sql-server-indexes"></a>Criando índices do SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  O Driver OLE DB para SQL Server expõe o **iindexdefinition:: CreateIndex** função, permitindo que os consumidores definam novos índices em [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tabelas.  
+  O OLE DB Driver for SQL Server expõe a função **IIndexDefinition::CreateIndex**, permitindo que os consumidores definam novos índices em tabelas do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- O Driver OLE DB para SQL Server cria índices de tabela como índices ou restrições. O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] concede privilégios para criação de restrições ao proprietário da tabela, ao proprietário do banco de dados e aos membros de determinadas funções administrativas. Por padrão, apenas o proprietário da tabela pode criar um índice em uma tabela. Portanto, o sucesso ou fracasso de **CreateIndex** depende não apenas os direitos de acesso do usuário do aplicativo mas também no tipo de índice criado.  
+ O Driver do OLE DB para SQL Server cria índices de tabela como índices ou restrições. O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] concede privilégios para criação de restrições ao proprietário da tabela, ao proprietário do banco de dados e aos membros de determinadas funções administrativas. Por padrão, apenas o proprietário da tabela pode criar um índice em uma tabela. Portanto, o êxito ou a falha de **CreateIndex** depende não apenas dos direitos de acesso do usuário do aplicativo, mas também do tipo de índice criado.  
   
- Os consumidores especificam o nome da tabela como uma cadeia de caracteres Unicode no *pwszName* membro do *uName* união no *pTableID* parâmetro. O *eKind* membro *pTableID* deve ser DBKIND_NAME.  
+ Os consumidores especificam o nome da tabela como uma cadeia de caracteres Unicode no membro *pwszName* da união *uName* no parâmetro *pTableID*. O membro *eKind* de *pTableID* precisa ser DBKIND_NAME.  
   
- O *pIndexID* parâmetro pode ser NULL, e se for, o Driver OLE DB para SQL Server cria um nome exclusivo para o índice. O consumidor pode capturar o nome do índice especificando um ponteiro válido para um DBID no *ppIndexID* parâmetro.  
+ O parâmetro *pIndexID* pode ser NULL e, se for, o OLE DB Driver for SQL Server criará um nome exclusivo para o índice. O consumidor pode capturar o nome do índice especificando um ponteiro válido para um DBID no parâmetro *ppIndexID*.  
   
- O consumidor pode especificar o nome do índice como uma cadeia de caracteres Unicode no *pwszName* membro o *uName* união do *pIndexID* parâmetro. O *eKind* membro *pIndexID* deve ser DBKIND_NAME.  
+ O consumidor pode especificar o nome do índice como uma cadeia de caracteres Unicode no membro *pwszName* da união *uName* do parâmetro *pIndexID*. O membro *eKind* de *pIndexID* precisa ser DBKIND_NAME.  
   
- O consumidor especifica a coluna ou as colunas que participam do índice por nome. Para cada estrutura DBINDEXCOLUMNDESC usada em **CreateIndex**, o *eKind* membro o *pColumnID* deve ser DBKIND_NAME. O nome da coluna é especificado como uma cadeia de caracteres Unicode no *pwszName* membro do *uName* união no *pColumnID*.  
+ O consumidor especifica a coluna ou as colunas que participam do índice por nome. Para cada estrutura DBINDEXCOLUMNDESC usada em **CreateIndex**, o membro *eKind* da *pColumnID* precisa ser DBKIND_NAME. O nome da coluna é especificado como uma cadeia de caracteres Unicode no membro *pwszName* da união *uName* no *pColumnID*.  
   
- O Driver OLE DB para SQL Server e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] suporte ordem crescente em valores no índice. O Driver OLE DB para SQL Server retornará E_INVALIDARG se o consumidor especificar DBINDEX_COL_ORDER_DESC em qualquer estrutura DBINDEXCOLUMNDESC.  
+ O Driver do OLE DB para SQL Server e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] suporte ordem crescente de valores no índice. O OLE DB Driver for SQL Server retorna E_INVALIDARG se o consumidor especifica DBINDEX_COL_ORDER_DESC em qualquer estrutura DBINDEXCOLUMNDESC.  
   
- **CreateIndex** interpreta as propriedades do índice da seguinte maneira.  
+ **CreateIndex** interpreta as propriedades de índice, conforme mostrado a seguir.  
   
-|ID da propriedade|Description|  
+|ID da propriedade|Descrição|  
 |-----------------|-----------------|  
-|DBPROP_INDEX_AUTOUPDATE|Leitura/gravação: leitura/gravação<br /><br /> Padrão: nenhum<br /><br /> Descrição: O Driver OLE DB para SQL Server não oferece suporte a essa propriedade. Tenta definir a propriedade no **CreateIndex** fazer com que um valor de retorno de DB_S_ERRORSOCCURRED. O *dwStatus* membro da estrutura de propriedade indica DBPROPSTATUS_BADVALUE.|  
+|DBPROP_INDEX_AUTOUPDATE|Leitura/gravação: leitura/gravação<br /><br /> Padrão: nenhum<br /><br /> Descrição: O Driver OLE DB para SQL Server não oferece suporte a essa propriedade. As tentativas de definir a propriedade em **CreateIndex** geram um valor retornado DB_S_ERRORSOCCURRED. O membro *dwStatus* da estrutura de propriedade indica DBPROPSTATUS_BADVALUE.|  
 |DBPROP_INDEX_CLUSTERED|Leitura/gravação: leitura/gravação<br /><br /> Padrão: VARIANT_FALSE<br /><br /> Descrição: controla o clustering de índice.<br /><br /> VARIANT_TRUE: O Driver OLE DB para SQL Server tenta criar um índice clusterizado no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tabela. O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oferece suporte a no máximo um índice clusterizado em qualquer tabela.<br /><br /> VARIANT_FALSE: O Driver OLE DB para SQL Server tenta criar um índice não clusterizado no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tabela.|  
-|DBPROP_INDEX_FILLFACTOR|Leitura/gravação: leitura/gravação<br /><br /> Padrão: 0<br /><br /> Descrição: especifica a porcentagem de uma página de índice usada para armazenamento. Para obter mais informações, consulte [CREATE INDEX](../../../t-sql/statements/create-index-transact-sql.md).<br /><br /> O tipo da variante é VT_I4. O valor deve ser maior ou igual a 1 e menor ou igual a 100.|  
-|DBPROP_INDEX_INITIALIZE|Leitura/gravação: leitura/gravação<br /><br /> Padrão: nenhum<br /><br /> Descrição: O Driver OLE DB para SQL Server não oferece suporte a essa propriedade. Tenta definir a propriedade no **CreateIndex** fazer com que um valor de retorno de DB_S_ERRORSOCCURRED. O *dwStatus* membro da estrutura de propriedade indica DBPROPSTATUS_BADVALUE.|  
-|DBPROP_INDEX_NULLCOLLATION|Leitura/gravação: leitura/gravação<br /><br /> Padrão: nenhum<br /><br /> Descrição: O Driver OLE DB para SQL Server não oferece suporte a essa propriedade. Tenta definir a propriedade no **CreateIndex** fazer com que um valor de retorno de DB_S_ERRORSOCCURRED. O *dwStatus* membro da estrutura de propriedade indica DBPROPSTATUS_BADVALUE.|  
-|DBPROP_INDEX_NULLS|Leitura/gravação: leitura/gravação<br /><br /> Padrão: nenhum<br /><br /> Descrição: O Driver OLE DB para SQL Server não oferece suporte a essa propriedade. Tenta definir a propriedade no **CreateIndex** fazer com que um valor de retorno de DB_S_ERRORSOCCURRED. O *dwStatus* membro da estrutura de propriedade indica DBPROPSTATUS_BADVALUE.|  
+|DBPROP_INDEX_FILLFACTOR|Leitura/gravação: leitura/gravação<br /><br /> Padrão: 0<br /><br /> Descrição: especifica a porcentagem de uma página de índice usada para armazenamento. Para obter mais informações, confira [CREATE INDEX](../../../t-sql/statements/create-index-transact-sql.md).<br /><br /> O tipo da variante é VT_I4. O valor deve ser maior ou igual a 1 e menor ou igual a 100.|  
+|DBPROP_INDEX_INITIALIZE|Leitura/gravação: leitura/gravação<br /><br /> Padrão: nenhum<br /><br /> Descrição: O Driver OLE DB para SQL Server não oferece suporte a essa propriedade. As tentativas de definir a propriedade em **CreateIndex** geram um valor retornado DB_S_ERRORSOCCURRED. O membro *dwStatus* da estrutura de propriedade indica DBPROPSTATUS_BADVALUE.|  
+|DBPROP_INDEX_NULLCOLLATION|Leitura/gravação: leitura/gravação<br /><br /> Padrão: nenhum<br /><br /> Descrição: O Driver OLE DB para SQL Server não oferece suporte a essa propriedade. As tentativas de definir a propriedade em **CreateIndex** geram um valor retornado DB_S_ERRORSOCCURRED. O membro *dwStatus* da estrutura de propriedade indica DBPROPSTATUS_BADVALUE.|  
+|DBPROP_INDEX_NULLS|Leitura/gravação: leitura/gravação<br /><br /> Padrão: nenhum<br /><br /> Descrição: O Driver OLE DB para SQL Server não oferece suporte a essa propriedade. As tentativas de definir a propriedade em **CreateIndex** geram um valor retornado DB_S_ERRORSOCCURRED. O membro *dwStatus* da estrutura de propriedade indica DBPROPSTATUS_BADVALUE.|  
 |DBPROP_INDEX_PRIMARYKEY|Leitura/gravação: leitura/gravação<br /><br /> Padrão: VARIANT_FALSE Descrição: cria o índice como uma integridade referencial, restrição PRIMARY KEY.<br /><br /> VARIANT_TRUE: o índice é criado para dar suporte à restrição PRIMARY KEY da tabela. As colunas devem ser não nulas.<br /><br /> VARIANT_FALSE: o índice não é usado como uma restrição PRIMARY KEY para valores de linha na tabela.|  
-|DBPROP_INDEX_SORTBOOKMARKS|Leitura/gravação: leitura/gravação<br /><br /> Padrão: nenhum<br /><br /> Descrição: O Driver OLE DB para SQL Server não oferece suporte a essa propriedade. Tenta definir a propriedade no **CreateIndex** fazer com que um valor de retorno de DB_S_ERRORSOCCURRED. O *dwStatus* membro da estrutura de propriedade indica DBPROPSTATUS_BADVALUE.|  
-|DBPROP_INDEX_TEMPINDEX|Leitura/gravação: leitura/gravação<br /><br /> Padrão: nenhum<br /><br /> Descrição: O Driver OLE DB para SQL Server não oferece suporte a essa propriedade. Tenta definir a propriedade no **CreateIndex** fazer com que um valor de retorno de DB_S_ERRORSOCCURRED. O *dwStatus* membro da estrutura de propriedade indica DBPROPSTATUS_BADVALUE.|  
-|DBPROP_INDEX_TYPE|Leitura/gravação: leitura/gravação<br /><br /> Padrão: nenhum<br /><br /> Descrição: O Driver OLE DB para SQL Server não oferece suporte a essa propriedade. Tenta definir a propriedade no **CreateIndex** fazer com que um valor de retorno de DB_S_ERRORSOCCURRED. O *dwStatus* membro da estrutura de propriedade indica DBPROPSTATUS_BADVALUE.|  
+|DBPROP_INDEX_SORTBOOKMARKS|Leitura/gravação: leitura/gravação<br /><br /> Padrão: nenhum<br /><br /> Descrição: O Driver OLE DB para SQL Server não oferece suporte a essa propriedade. As tentativas de definir a propriedade em **CreateIndex** geram um valor retornado DB_S_ERRORSOCCURRED. O membro *dwStatus* da estrutura de propriedade indica DBPROPSTATUS_BADVALUE.|  
+|DBPROP_INDEX_TEMPINDEX|Leitura/gravação: leitura/gravação<br /><br /> Padrão: nenhum<br /><br /> Descrição: O Driver OLE DB para SQL Server não oferece suporte a essa propriedade. As tentativas de definir a propriedade em **CreateIndex** geram um valor retornado DB_S_ERRORSOCCURRED. O membro *dwStatus* da estrutura de propriedade indica DBPROPSTATUS_BADVALUE.|  
+|DBPROP_INDEX_TYPE|Leitura/gravação: leitura/gravação<br /><br /> Padrão: nenhum<br /><br /> Descrição: O Driver OLE DB para SQL Server não oferece suporte a essa propriedade. As tentativas de definir a propriedade em **CreateIndex** geram um valor retornado DB_S_ERRORSOCCURRED. O membro *dwStatus* da estrutura de propriedade indica DBPROPSTATUS_BADVALUE.|  
 |DBPROP_INDEX_UNIQUE|Leitura/gravação: leitura/gravação<br /><br /> Padrão: VARIANT_FALSE<br /><br /> Descrição: cria o índice como uma restrição UNIQUE na coluna ou nas colunas participantes.<br /><br /> VARIANT_TRUE: o índice é usado para restringir valores de linha na tabela de forma exclusiva.<br /><br /> VARIANT_FALSE: o índice não restringe valores de linha de forma exclusiva.|  
   
- No conjunto de propriedades específico do provedor DBPROPSET_SQLSERVERINDEX, o Driver OLE DB para SQL Server define a seguinte propriedade de informações de fonte de dados.  
+ No conjunto de propriedades específico do provedor DBPROPSET_SQLSERVERINDEX, o OLE DB Driver for SQL Server define as propriedades de informações da fonte de dados a seguir.  
   
-|ID da propriedade|Description|  
+|ID da propriedade|Descrição|  
 |-----------------|-----------------|  
 |SSPROP_INDEX_XML|Tipo: VT_BOOL (leitura/gravação)<br /><br /> Padrão: VARIANT_FALSE<br /><br /> Descrição: quando esta propriedade é especificada com um valor VARIANT_TRUE com IIndexDefinition::CreateIndex, ela resulta na criação de um índice xml principal correspondente à coluna que está sendo indexada. Se essa propriedade for VARIANT_TRUE, cIndexColumnDescs deverá ser 1, caso contrário, será um erro.|  
   
@@ -159,7 +159,7 @@ HRESULT CreatePrimaryKey
     }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tabelas e índices](../../oledb/ole-db-tables-indexes/tables-and-indexes.md)  
   
   

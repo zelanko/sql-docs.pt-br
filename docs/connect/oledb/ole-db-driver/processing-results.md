@@ -1,6 +1,6 @@
 ---
 title: Processando resultados | Microsoft Docs
-description: Processando resultados
+description: Processando os resultados
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,23 +19,23 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 0a07bdd4181e85bdbeeea7e3751613a860bc5754
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 3981b97be580f2cacbee04727eb21c4cfc2d1abf
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665346"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105812"
 ---
 # <a name="processing-results"></a>Processando resultados
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Caso um objeto de conjunto de linhas seja produzido pela execução de um comando ou pela geração direta de um objeto de conjunto de linhas no provedor, o consumidor precisa recuperar e acessar dados no conjunto de linhas.  
   
- Conjuntos de linhas são os objetos centrais que permitem que o Driver OLE DB para SQL Server para expor dados em formato tabular. Conceitualmente, um conjunto de linhas é um conjunto de linhas em que cada linha tem dados de coluna. Um objeto de conjunto de linhas expõe interfaces como **IRowset** (contém métodos para buscar linhas do conjunto de linhas em sequência), **IAccessor** (permite a definição de um grupo de associações de coluna que descreve a maneira como os dados de tabela são associados a variáveis de programa do consumidor), **IColumnsInfo** (fornece informações sobre colunas no conjunto de linhas), e **IRowsetInfo** (fornece informações sobre o conjunto de linhas).  
+ Conjuntos de linhas são os objetos centrais que permitem que o Driver do OLE DB para SQL Server para expor dados em formato tabular. Conceitualmente, um conjunto de linhas é um conjunto de linhas em que cada linha tem dados de coluna. Um objeto de conjunto de linhas expõe interfaces como **IRowset** (contém métodos para buscar linhas no conjunto sequencialmente), **IAccessor** (permite a definição de um grupo de associações de coluna que descrevem a forma como dados tabulares são associados a variáveis de programa do consumidor), **IColumnsInfo** (fornece informações sobre colunas no conjunto de linhas) e **IRowsetInfo** (fornece informações sobre o conjunto de linhas).  
   
- Um consumidor pode chamar o **IRowset:: GetData** método para recuperar uma linha de dados do conjunto de linhas em um buffer. Antes de **GetData** é chamado, o consumidor descreve o buffer usando um conjunto de estruturas DBBINDING. Cada associação descreve como uma coluna em um conjunto de linhas é armazenada em um buffer de consumidor e contém o seguinte:  
+ Um consumidor pode chamar o método **IRowset::GetData** para recuperar uma linha de dados do conjunto de linhas em um buffer. Antes de **GetData** ser chamado, o consumidor descreve o buffer usando um conjunto de estruturas DBBINDING. Cada associação descreve como uma coluna em um conjunto de linhas é armazenada em um buffer de consumidor e contém o seguinte:  
   
 -   Ordinal da coluna (ou parâmetro) a que a associação se aplica.  
   
@@ -47,10 +47,10 @@ ms.locfileid: "35665346"
   
  Ao obter os dados, o provedor usa informações de cada associação para determinar onde e como recuperar dados do buffer de consumidor. Ao definir dados no buffer de consumidor, o provedor usa informações de cada associação para determinar onde e como retornar dados no buffer.  
   
- Depois que as estruturas DBBINDING são especificadas, um acessador é criado (**IAccessor:: CreateAccessor**). Um acessador é uma coleção de associações, sendo usado para obter ou definir os dados no buffer de consumidor.  
+ Depois que as estruturas DBBINDING são especificadas, um acessador é criado (**IAccessor::CreateAccessor**). Um acessador é uma coleção de associações, sendo usado para obter ou definir os dados no buffer de consumidor.  
   
-## <a name="see-also"></a>Consulte também  
- [Criando um Driver do OLE DB para o aplicativo do SQL Server](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Criando um aplicativo do OLE DB Driver for SQL Server](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)   
  [Tópicos de instruções do OLE DB](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   
   

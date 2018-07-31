@@ -1,5 +1,5 @@
 ---
-title: Conectando ao SQL Server | Microsoft Docs
+title: Conexão ao SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,32 +18,32 @@ caps.latest.revision: 41
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8f49c0105f96f446c627f5ec1b5f47ee62b28558
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 878a88fac188f23f48c25fdc54fec7540a9b6771
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852501"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982308"
 ---
 # <a name="connecting-to-sql-server"></a>Conectar-se ao SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Este tópico discute como você pode criar uma conexão para um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] banco de dados.  
+Este tópico discute como você pode criar uma conexão com um banco de dados [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
   
 ## <a name="connection-properties"></a>Propriedades da conexão  
 
-Consulte [DSN e palavras-chave de cadeia de caracteres de Conexão e atributos](../../../connect/odbc/dsn-connection-string-attribute.md) para todas as palavras-chave de cadeia de caracteres de conexão e os atributos de suporte para Linux e Mac
+Ver [DSN e palavras-chave de cadeia de caracteres de Conexão e atributos](../../../connect/odbc/dsn-connection-string-attribute.md) para todas as palavras-chave de cadeia de caracteres de conexão e atributos que têm suportados no Linux e Mac
 
 > [!IMPORTANT]  
-> Ao se conectar a um banco de dados que use o espelhamento de banco de dados (tem um parceiro de failover), não especifique o nome do banco de dados na cadeia de conexão. Em vez disso, enviam um **usar** *database_name* comando para se conectar ao banco de dados antes de executar suas consultas.  
+> Ao se conectar a um banco de dados que use o espelhamento de banco de dados (tem um parceiro de failover), não especifique o nome do banco de dados na cadeia de conexão. Em vez disso, envie um comando **use** *database_name* para se conectar ao banco de dados antes de executar suas consultas.  
   
 O valor passado para o **Driver** palavra-chave pode ser um dos seguintes:  
   
 -   O nome usado quando você instalou o driver.
 
--   O caminho para a biblioteca do driver, que foi especificado no arquivo. ini de modelo usado para instalar o driver.  
+-   O caminho para a biblioteca de drivers, que foi especificada no arquivo .ini de modelo usado para instalar o driver.  
 
-Para criar um DSN, crie (se necessário) e edite o arquivo **~/.odbc.ini** (`.odbc.ini` em seu diretório base) para um DSN de usuário somente é acessível para o usuário atual, ou `/etc/odbc.ini` para um DSN de sistema (privilégios administrativos necessários.) Este é um arquivo de exemplo que mostra as entradas necessárias mínimas para um DSN:  
+Para criar um DSN, crie (se necessário) e edite o arquivo **~/.odbc.ini** (`.odbc.ini` em seu diretório base) para um DSN de usuário somente é acessível para o usuário atual, ou `/etc/odbc.ini` para um DSN de sistema (privilégios administrativos necessários.) Este é um arquivo de exemplo que mostra as entradas necessárias para um DSN:  
 
 ```  
 [MSSQLTest]  
@@ -56,31 +56,31 @@ Server = [protocol:]server[,port]
 #  
 ```  
 
-Opcionalmente, você pode especificar o protocolo e a porta para se conectar ao servidor. Por exemplo, **Server = tcp:***servername***, 12345**. Observe que é o único protocolo com suporte dos drivers de Linux e macOS `tcp`.
+Opcionalmente, você pode especificar o protocolo e a porta para se conectar ao servidor. Por exemplo, **Server = tcp:***nome_do_servidor***, 12345**. Observe que é o único protocolo com suporte pelos drivers de Linux e macOS `tcp`.
 
-Para se conectar a uma instância nomeada em uma porta estática, use <b>Server =</b>*servername*,**port_number**. Não há suporte para a conexão com uma porta dinâmica.  
+Para se conectar a uma instância nomeada em uma porta estática, use <b>Server=</b>*servername*,**port_number**. Não há suporte para se conectar a uma porta dinâmica.  
 
-Como alternativa, você pode adicionar as informações de DSN para um arquivo de modelo e execute o seguinte comando para adicionar ao `~/.odbc.ini` :
- - **odbcinst -i -s -f** *template_file*  
+Como alternativa, você pode adicionar as informações de DSN a um arquivo de modelo e executar o comando a seguir para adicioná-lo a `~/.odbc.ini`:
+ - **Odbcinst -i -s -f** *template_file*  
  
 Você pode verificar se o driver está funcionando usando `isql` testar a conexão, ou você pode usar este comando:
- - **master.INFORMATION_SCHEMA.TABLES BCP out OutFile.dat -S <server> - U <name> - P <password>**  
+ - **master.INFORMATION_SCHEMA.TABLES BCP out outfile -S <server> - U <name> - P <password>**  
 
 ## <a name="using-secure-sockets-layer-ssl"></a>Usando o protocolo SSL (Secure Sockets Layer)  
-Você pode usar o protocolo (SSL) para criptografar conexões para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]. SSL protege [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] nomes de usuário e senhas pela rede. O SSL também verifica a identidade do servidor para proteger contra ataques “man-in-the-middle” (MITM).  
+Você pode usar o protocolo SSL para criptografar conexões com o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]. O SSL protege nomes de usuário e senhas do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] na rede. O SSL também verifica a identidade do servidor para proteger contra ataques “man-in-the-middle” (MITM).  
 
 Habilitar a criptografia aumenta a segurança, mas reduz o desempenho.
 
-Para obter mais informações, consulte [criptografando conexões com o SQL Server](http://go.microsoft.com/fwlink/?LinkId=220900) e [usando criptografia sem validação](https://docs.microsoft.com/en-us/sql/relational-databases/native-client/features/using-encryption-without-validation).
+Para obter mais informações, consulte [criptografando conexões com o SQL Server](http://go.microsoft.com/fwlink/?LinkId=220900) e [usando criptografia sem validação](https://docs.microsoft.com/sql/relational-databases/native-client/features/using-encryption-without-validation).
 
 Independentemente das configurações para **Encrypt** e **TrustServerCertificate**, as credenciais de logon do servidor (nome de usuário e senha) sempre são criptografadas. A tabela a seguir mostra o efeito das configurações de **Encrypt** e **TrustServerCertificate** .  
 
-||**TrustServerCertificate=no**|**TrustServerCertificate=yes**|  
+||**TrustServerCertificate = não**|**TrustServerCertificate = yes**|  
 |-|-------------------------------------|------------------------------------|  
 |**Encrypt=no**|O certificado do servidor não é verificado.<br /><br />Os dados enviados entre cliente e servidor não são criptografados.|O certificado do servidor não é verificado.<br /><br />Os dados enviados entre cliente e servidor não são criptografados.|  
-|**Criptografar = Sim**|O certificado do servidor é verificado.<br /><br />Os dados enviados entre cliente e servidor são criptografados.<br /><br />O nome (ou endereço IP) em uma entidade CN (nome comum) ou assunto SAN (nome alternativo) em um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] certificado SSL deve corresponder exatamente, o servidor nome (ou endereço IP) especificado na cadeia de conexão.|O certificado do servidor não é verificado.<br /><br />Os dados enviados entre cliente e servidor são criptografados.|  
+|**Encrypt=yes**|O certificado do servidor é verificado.<br /><br />Os dados enviados entre cliente e servidor são criptografados.<br /><br />O nome (ou endereço IP) em um CN (nome comum) da entidade ou o SAN (nome alternativo da entidade) em um certificado SSL do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] deve corresponder exatamente ao nome do servidor (ou endereço IP) especificado na cadeia de conexão.|O certificado do servidor não é verificado.<br /><br />Os dados enviados entre cliente e servidor são criptografados.|  
 
-Por padrão, conexões criptografadas sempre verificam o certificado do servidor. No entanto, se você se conectar a um servidor que tenha um certificado autoassinado, adicione também a `TrustServerCertificate` opção para ignorar a verificação do certificado com a lista de autoridades de certificação confiáveis:  
+Por padrão, conexões criptografadas sempre verificam o certificado do servidor. No entanto, se você se conectar a um servidor que tenha um certificado autoassinado, também adicionar o `TrustServerCertificate` opção para ignorar a verificação do certificado em relação à lista de autoridades de certificação confiável:  
 
 ```  
 Driver={ODBC Driver 13 for SQL Server};Server=ServerNameHere;Encrypt=YES;TrustServerCertificate=YES  
@@ -103,8 +103,8 @@ O SSL usa a biblioteca OpenSSL. A tabela a seguir mostra as versões mínimas co
 |Ubuntu 16.10 |1.0.2|/etc/ssl/certs|
 |Ubuntu 16.04 |1.0.2|/etc/ssl/certs|
   
-Você também pode especificar criptografia na cadeia de conexão usando o `Encrypt` ao usar a opção **SQLDriverConnect** para se conectar.
+Você também pode especificar a criptografia na cadeia de conexão usando o `Encrypt` ao usar a opção **SQLDriverConnect** para se conectar.
 
-## <a name="see-also"></a>Consulte também  
-[Instalando o Microsoft ODBC Driver for SQL Server no Linux e macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)  
+## <a name="see-also"></a>Consulte Também  
+[Instalando o Microsoft ODBC Driver for SQL Server em Linux e macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)  
 [Diretrizes de programação](../../../connect/odbc/linux-mac/programming-guidelines.md)

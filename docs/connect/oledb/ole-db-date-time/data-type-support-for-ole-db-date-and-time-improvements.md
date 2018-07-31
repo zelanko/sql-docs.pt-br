@@ -1,6 +1,6 @@
 ---
-title: Suporte de tipo de dados de OLE DB data e hora melhorias | Microsoft Docs
-description: Suporte de tipo de dados para aprimoramentos de data e hora do OLE DB
+title: Suporte a tipos de dados para melhorias de data e hora do OLE DB | Microsoft Docs
+description: Suporte a tipos de dados para melhorias de data e hora do OLE DB
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -17,19 +17,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: ce5d32efa04e3402e9e454f2ab4c89cb6e1e5b69
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 79ecd277d962cc9e592d4b91eea985e55fb5c325
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666386"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109098"
 ---
-# <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Suporte de tipo de dados para aprimoramentos de hora e data do OLE DB
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Suporte a tipos de dados para melhorias de data e hora do OLE DB
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Este artigo fornece informações sobre o OLE DB (OLE DB Driver para SQL Server) tipos que oferecem suporte a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipos de dados de data/hora.  
+  Este artigo fornece informações sobre o OLE DB (OLE DB Driver para SQL Server) tipos que oferecem suporte [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipos de dados de data/hora.  
   
 ## <a name="data-type-mapping-in-rowsets-and-parameters"></a>Mapeamento de tipos de dados em conjuntos de linhas e parâmetros  
  O OLE DB fornece dois novos tipos de dados para dar suporte aos novos tipos de servidor: DBTYPE_DBTIME2 e DBTYPE_DBTIMESTAMPOFFSET. A seguinte tabela mostra o mapeamento de tipo do servidor completo:  
@@ -38,7 +38,7 @@ ms.locfileid: "35666386"
 |-----------------------------------------|----------------------|-----------|  
 |DATETIME|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
-|Data|DBTYPE_DBDATE|133 (OLEDB)|  
+|Data|DBTYPE_DBDATE|133 (oledb.h)|  
 |time|DBTYPE_DBTIME2|145 (msoledbsql.h)|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|146 (msoledbsql.h)|  
 |datetime2|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
@@ -65,7 +65,7 @@ ms.locfileid: "35666386"
  Uma cadeia de caracteres vazia não é um literal de data/hora válido e não representa um valor NULL. Uma tentativa de conversão de uma cadeia de caracteres vazia para um valor de data/hora resultará em erros com SQLState 22018 e a mensagem "Valor de caractere inválido para a especificação de difusão".  
   
 ## <a name="data-formats-data-structures"></a>Formatos de dados: estruturas de dados  
- Nas estruturas específicas do OLE DB descritas abaixo, OLE DB está de acordo com as seguintes restrições. Elas são extraídas do calendário gregoriano:  
+ Nas estruturas específicas do OLE DB descritas abaixo, o OLE DB obedece às restrições a seguir. Elas são extraídas do calendário gregoriano:  
   
 -   O intervalo de meses é de 1 a 12.  
   
@@ -75,11 +75,11 @@ ms.locfileid: "35666386"
   
 -   O intervalo de minutos é de 0 a 59.  
   
--   O intervalo de segundos é de 0 a 59. Isso permite até dois segundos intercalares para manter a sincronização com o tempo de sidereal.  
+-   O intervalo de segundos é de 0 a 59. Isso permite até dois segundos bissextos para manter a sincronização com a hora sideral.  
   
  Foram modificadas as implementações dos seguintes structs do OLE DB existentes para dar suporte aos novos tipos de data e hora do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Porém, as definições não foram alteradas.  
   
--   DBTYPE_DATE (É um tipo de automação DATE. Internamente, ela é representada como uma **duplo**... A parte inteira é o número de dias desde 30 de dezembro de 1899 e a parte fracionária é a fração de um dia. Este tipo tem uma exatidão de 1 segundo, portanto tem uma escala efetiva de 0.)  
+-   DBTYPE_DATE (É um tipo de automação DATE. Ele é representado internamente como um **double**. A parte inteira é o número de dias desde 30 de dezembro de 1899 e a parte fracionária é a fração de um dia. Este tipo tem uma exatidão de 1 segundo, portanto tem uma escala efetiva de 0.)  
   
 -   DBTYPE_DBDATE  
   
@@ -164,7 +164,7 @@ enum SQLVARENUM {
 };  
 ```  
   
- Migrando para o Driver do OLE DB para SQL Server de aplicativos que usam **sql_variant** e contam com precisão limitada de **datetime** precisa ser atualizado se o esquema subjacente for atualizado para usar **datetime2** em vez de **datetime**.  
+ Migrar para o Driver do OLE DB para SQL Server de aplicativos que usam **sql_variant** e contam com a precisão limitada do **datetime** terão que ser atualizadas se o esquema subjacente for atualizado para usar **datetime2** vez **datetime**.  
   
  Também foram estendidas as macros de acesso para SSVARIANT com a adição do seguinte:  
   
@@ -181,13 +181,13 @@ enum SQLVARENUM {
 |Tipo de dados OLE DB (*wType*)|Tipos de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Observações|  
 |----------------------------------|-----------------------------------------|-----------|  
 |DBTYPE_DBDATE|Data||  
-|DBTYPE_DBTIMESTAMP|**datetime2**(p)|O Driver OLE DB para SQL Server inspeciona os MEMBROS *bScale* membro para determinar a precisão de frações de segundo.|  
-|DBTYPE_DBTIME2|**tempo**(p)|O Driver OLE DB para SQL Server inspeciona os MEMBROS *bScale* membro para determinar a precisão de frações de segundo.|  
-|DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|O Driver OLE DB para SQL Server inspeciona os MEMBROS *bScale* membro para determinar a precisão de frações de segundo.|  
+|DBTYPE_DBTIMESTAMP|**datetime2**(p)|O Driver do OLE DB para SQL Server inspeciona os MEMBROS *bScale* membro para determinar a precisão de frações de segundo.|  
+|DBTYPE_DBTIME2|**time**(p)|O Driver do OLE DB para SQL Server inspeciona os MEMBROS *bScale* membro para determinar a precisão de frações de segundo.|  
+|DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|O Driver do OLE DB para SQL Server inspeciona os MEMBROS *bScale* membro para determinar a precisão de frações de segundo.|  
   
- Quando um aplicativo especifica DBTYPE_DBTIMESTAMP em *wType*, pode anular o mapeamento para **datetime2** fornecendo um nome de tipo em *pwszTypeName*. Se **datetime** for especificado, *bScale* deve ter 3. Se **smalldatetime** for especificado, *bScale* deve ser 0. Se *bScale* não é consistente com *wType* e *pwszTypeName*, DB_E_BADSCALE será retornado.  
+ Quando um aplicativo especificar DBTYPE_DBTIMESTAMP em *wType*, ele pode anular o mapeamento para **datetime2** fornecendo um nome de tipo em *pwszTypeName*. Se **datetime** for especificado, *bScale* deve ser 3. Se **smalldatetime** for especificado, *bScale* deve ser 0. Se *bScale* não é consistente com *wType* e *pwszTypeName*, DB_E_BADSCALE será retornado.  
   
-## <a name="see-also"></a>Consulte também  
- [Data e hora melhorias &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Melhorias de data e hora &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

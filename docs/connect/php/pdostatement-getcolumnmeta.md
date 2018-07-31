@@ -1,5 +1,5 @@
 ---
-title: PDOStatement::getColumnMeta | Microsoft Docs
+title: 'Pdostatement:: Getcolumnmeta | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8211a6a4cda4a5efa29b7379c24ba3fbbfa5458e
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308525"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983004"
 ---
 # <a name="pdostatementgetcolumnmeta"></a>PDOStatement::getColumnMeta
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,7 +34,7 @@ array PDOStatement::getColumnMeta ( $column );
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
-*$conn*: (inteiro) o número com base em zero da coluna cujos metadados você deseja recuperar.  
+*$conn*: (Inteiro) o número da coluna, com base em zero, cujos metadados que você deseja recuperar.  
   
 ## <a name="return-value"></a>Valor retornado  
 Uma matriz associativa (chave e valor) que contém os metadados da coluna. Consulte a seção de comentários para obter uma descrição dos campos na matriz.  
@@ -73,7 +73,7 @@ print $metadata['name'];
 ?>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [PDOStatement Class](../../connect/php/pdostatement-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

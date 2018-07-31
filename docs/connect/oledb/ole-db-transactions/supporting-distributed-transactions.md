@@ -1,5 +1,5 @@
 ---
-title: Dando suporte a transações distribuídas | Microsoft Docs
+title: Suporte a transações distribuídas | Microsoft Docs
 description: Transações distribuídas no Driver do OLE DB para SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
@@ -22,32 +22,32 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 469f72b416e1e262d2a775b1b49e14723a44b171
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: abd6cda6c01f46dd179c462b2d6038c09137de03
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35690299"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105982"
 ---
 # <a name="supporting-distributed-transactions"></a>Dando suporte a transações distribuídas
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver para consumidores do SQL Server pode usar o **itransactionjoin:: Jointransaction** método para participar de uma transação distribuída coordenada pelo coordenador de transações distribuídas da Microsoft (MS DTC).  
+  Os consumidores do OLE DB Driver for SQL Server podem usar o método **ITransactionJoin::JoinTransaction** para participar de uma transação distribuída coordenada pelo MS DTC (Coordenador de Transações Distribuídas da Microsoft).  
   
- O MS DTC expõe objetos COM que permitem que os clientes iniciem e participem de transações coordenadas através de várias conexões com vários repositórios de dados. Para iniciar uma transação, o Driver OLE DB para o consumidor do SQL Server usa o MS DTC **ITransactionDispenser** interface. O **BeginTransaction** membro **ITransactionDispenser** retorna uma referência em um objeto de transação distribuída. Essa referência é passada para o Driver OLE DB para SQL Server usando **JoinTransaction**.  
+ O MS DTC expõe objetos COM que permitem que os clientes iniciem e participem de transações coordenadas através de várias conexões com vários repositórios de dados. Para iniciar uma transação, o Driver OLE DB para o consumidor do SQL Server usa o MS DTC **ITransactionDispenser** interface. O membro **BeginTransaction** de **ITransactionDispenser** retorna uma referência a um objeto de transação distribuída. Essa referência é passada para o Driver do OLE DB para SQL Server usando **JoinTransaction**.  
   
- O MS DTC dá suporte à confirmação e à anulação assíncronas de transações distribuídas. Para a notificação de status de transação assíncrona, o consumidor implementa o **ITransactionOutcomeEvents** de interface e conecta a um objeto de transação do MS DTC.  
+ O MS DTC dá suporte à confirmação e à anulação assíncronas de transações distribuídas. Para obter a notificação do status da transação assíncrona, o consumidor implementa a interface **ITransactionOutcomeEvents** e a conecta a um objeto de transação do MS DTC.  
   
- Para transações distribuídas, o Driver OLE DB para SQL Server implementa **itransactionjoin:: Jointransaction** parâmetros da seguinte maneira.  
+ Para transações distribuídas, o OLE DB Driver for SQL Server implementa os parâmetros de **ITransactionJoin::JoinTransaction**, conforme indicado a seguir.  
   
-|Parâmetro|Description|  
+|Parâmetro|Descrição|  
 |---------------|-----------------|  
 |*punkTransactionCoord*|Um ponteiro para um objeto de transação do MS DTC.|  
-|*IsoLevel*|Ignorado pelo Driver OLE DB para SQL Server. O nível de isolamento para transações coordenadas pelo MS DTC é determinado quando o consumidor faz a aquisição de um objeto de transação do MS DTC.|  
-|*IsoFlags*|Deve ser 0. O Driver OLE DB para SQL Server retornará XACT_E_NOISORETAIN se qualquer outro valor é especificado pelo consumidor.|  
-|*POtherOptions*|Se não for nulo, o Driver OLE DB para SQL Server solicita o objeto de opções da interface. O Driver OLE DB para SQL Server retornará XACT_E_NOTIMEOUT se o objeto de opções *ulTimeout* membro não é zero. O Driver OLE DB para SQL Server ignora o valor da *szDescription* membro.|  
+|*IsoLevel*|Ignorado pelo Driver do OLE DB para SQL Server. O nível de isolamento para transações coordenadas pelo MS DTC é determinado quando o consumidor faz a aquisição de um objeto de transação do MS DTC.|  
+|*IsoFlags*|Deve ser 0. O Driver do OLE DB para SQL Server retornará XACT_E_NOISORETAIN se qualquer outro valor for especificado pelo consumidor.|  
+|*POtherOptions*|Se não for nulo, o Driver do OLE DB para SQL Server solicita o objeto de opções da interface. O Driver do OLE DB para SQL Server retornará XACT_E_NOTIMEOUT se o objeto de opções *ulTimeout* membro não é zero. O Driver do OLE DB para SQL Server ignora o valor da *szDescription* membro.|  
   
  Este exemplo coordena a transação usando o MS DTC.  
   
@@ -146,7 +146,7 @@ if (FAILED(pITransactionJoin->JoinTransaction(
 // Release any references and continue.  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Transações](../../oledb/ole-db-transactions/transactions.md)  
   
   

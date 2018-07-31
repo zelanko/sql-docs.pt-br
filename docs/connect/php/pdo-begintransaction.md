@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 48b5d1343a941904280c33f5a983be944c751f2f
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307965"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020884"
 ---
 # <a name="pdobegintransaction"></a>PDO::beginTransaction
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,7 +37,7 @@ bool PDO::beginTransaction();
 true se a chamada do método for bem-sucedida; caso contrário, false.  
   
 ## <a name="remarks"></a>Remarks  
-A transação iniciada com PDO:: BeginTransaction termina quando [PDO:: Commit](../../connect/php/pdo-commit.md) ou [PDO:: Rollback](../../connect/php/pdo-rollback.md) é chamado.  
+A transação começava com PDO::beginTransaction terminará quando [PDO::commit](../../connect/php/pdo-commit.md) ou [PDO::rollback](../../connect/php/pdo-rollback.md) era chamado.  
   
 PDO::beginTransaction não é afetado pelo valor de PDO::ATTR_AUTOCOMMIT (e não o afeta).  
   
@@ -63,7 +63,7 @@ O exemplo a seguir usa um banco de dados chamado Test e uma tabela chamada Table
 ?>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Classe PDO](../../connect/php/pdo-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

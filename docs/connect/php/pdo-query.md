@@ -1,5 +1,5 @@
 ---
-title: PDO::query | Microsoft Docs
+title: 'PDO:: Query | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c945bb5ab0a14b1c93b0c7f4fb16a72cd258bb14
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308265"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979740"
 ---
 # <a name="pdoquery"></a>PDO::query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,7 +36,7 @@ PDOStatement PDO::query ($statement[, $fetch_style);
 #### <a name="parameters"></a>Parâmetros  
 *$statement*: a instrução SQL que você quer executar.  
   
-*$fetch_style*: instruções adicionais sobre como executar a consulta. Para obter mais detalhes, consulte a seção Comentários. $*fetch_style* em PDO:: Query pode ser substituído por $*fetch_style* em PDO:: Fetch.  
+*$fetch_style*: as instruções opcionais sobre como executar a consulta. Para obter mais detalhes, consulte a seção Comentários. $*fetch_style* em PDO::query pode ser substituído por $*fetch_style* em PDO::fetch.  
   
 ## <a name="return-value"></a>Valor retornado  
 Se a chamada for bem-sucedida, o PDO::query retornará um objeto PDOStatement. Se a chamada falhar, PDO::query gerará um objeto PDOException ou retornará false, dependendo da configuração de PDO::ATTR_ERRMODE.  
@@ -45,16 +45,16 @@ Se a chamada for bem-sucedida, o PDO::query retornará um objeto PDOStatement. S
 PDOException.  
   
 ## <a name="remarks"></a>Remarks  
-Uma consulta executada com PDO:: Query pode executar uma instrução preparada ou diretamente, dependendo da configuração de PDO:: sqlsrv_attr_direct_query. Para obter mais informações, consulte [Execução de instrução direta e execução de instrução preparada no driver PDO_SQLSRV](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md).  
+Uma consulta executada com PDO::query pode executar uma instrução preparada ou de forma direta, dependendo da configuração de PDO::SQLSRV_ATTR_DIRECT_QUERY. Para obter mais informações, consulte [Execução de instrução direta e execução de instrução preparada no driver PDO_SQLSRV](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md).  
   
-PDO:: sqlsrv_attr_query_timeout também afeta o comportamento de PDO; Para obter mais informações, consulte [PDO:: setAttribute](../../connect/php/pdo-setattribute.md).  
+PDO::SQLSRV_ATTR_QUERY_TIMEOUT também afeta o comportamento de PDO::exec, veja [PDO::setAttribute](../../connect/php/pdo-setattribute.md).  
   
 Você pode especificar as seguintes opções para $*fetch_style*.  
   
-|style|Description|  
+|style|Descrição|  
 |---------|---------------|  
 |PDO::FETCH_COLUMN, *num*|Consultas de dados na coluna especificada. A primeira coluna na tabela é a coluna 0.|  
-|Fetch_class, '*classname*', matriz ( *arglist* )|Cria uma instância de uma classe e atribui nomes de coluna a propriedades da classe. Se o construtor de classe aceitar um ou mais parâmetros, você poderá passar também uma *arglist*.|  
+|PDO::FETCH_CLASS, '*classname*', array( *arglist* )|Cria uma instância de uma classe e atribui nomes de coluna a propriedades da classe. Se o construtor de classe aceitar um ou mais parâmetros, você poderá passar também uma *arglist*.|  
 |Fetch_class, '*classname*'|Atribui nomes de coluna a propriedades de uma classe existente.|  
   
 Chame PDOStatement::closeCursor para liberar os recursos de banco de dados associados ao objeto PDOStatement antes de chamar PDO::query novamente.  
@@ -121,7 +121,7 @@ $stmt = null;
 ?>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Classe PDO](../../connect/php/pdo-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

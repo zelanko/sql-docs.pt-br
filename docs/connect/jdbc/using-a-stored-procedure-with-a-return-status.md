@@ -1,5 +1,5 @@
 ---
-title: Usando um procedimento armazenado com um Status de retorno | Microsoft Docs
+title: Uso de um procedimento armazenado com um status de retorno | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,32 +15,32 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 29bb95c06d86ad4d6e45002da1429f6c7d5a5c9e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32853151"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38040594"
 ---
 # <a name="using-a-stored-procedure-with-a-return-status"></a>Usando um procedimento armazenado com um status de retorno
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Um [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] procedimento armazenado que você pode chamar é aquele que retorna um status ou um parâmetro de resultado. Em geral, isso é usado para indicar o êxito ou a falha do procedimento armazenado. O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fornece o [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) classe, que você pode usar para chamar esse tipo de procedimento armazenado e processar os dados que ele retorna.  
+  Um procedimento armazenado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] que você pode chamar é um que retorna um parâmetro de status ou resultado. Em geral, isso é usado para indicar o êxito ou a falha do procedimento armazenado. O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fornece a classe [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md), que pode ser usada para chamar esse tipo de procedimento armazenado e para processar os dados retornados.  
   
- Quando você chama esse tipo de procedimento armazenado usando o driver JDBC, você deve usar o `call` sequência de escape SQL em conjunto com o [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) método o [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) classe . A sintaxe para a `call` sequência de escape com um parâmetro de status de retorno é o seguinte:  
+ Ao chamar esse tipo de procedimento armazenado usando o driver JDBC, você deve usar a sequência de escape `call` do SQL em conjunto com o método [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) da classe [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). A sintaxe da sequência de escape `call` com um parâmetro de status de retorno é a seguinte:  
   
  `{[?=]call procedure-name[([parameter][,[parameter]]...)]}`  
   
 > [!NOTE]  
->  Para obter mais informações sobre sequências de escape SQL, consulte [usando sequências de Escape SQL](../../connect/jdbc/using-sql-escape-sequences.md).  
+>  Para obter mais informações sobre as sequências de escape SQL, consulte [usando sequências de Escape SQL](../../connect/jdbc/using-sql-escape-sequences.md).  
   
- Quando você cria o `call` sequência de escape, especifique o parâmetro de status de retorno usando o? (ponto de interrogação). Esse caractere age como um espaço reservado para o valor de parâmetro que retornará do procedimento armazenado. Para especificar um valor para um parâmetro de status de retorno, você deve especificar o tipo de dados do parâmetro usando o [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) método da classe SQLServerCallableStatement, antes de executar o procedimento armazenado.  
+ Ao construir a sequência de escape `call`, especifique o parâmetro de status de retorno usando o ? (ponto de interrogação). Esse caractere age como um espaço reservado para o valor de parâmetro que retornará do procedimento armazenado. Para especificar um valor para um parâmetro de status de retorno, é necessário especificar o tipo de dados do parâmetro usando o método [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) da classe SQLServerCallableStatement antes de executar o procedimento armazenado.  
   
 > [!NOTE]  
->  Ao usar o driver JDBC com um banco de dados do SQL Server, o valor especificado para o parâmetro de status de retorno no método registerOutParameter sempre será um inteiro, que pode ser especificada usando o tipo de dados Java.SQL.  
+>  Ao usar o driver JDBC com um banco de dados do SQL Server, o valor que você especificar para o parâmetro de status de retorno no método registerOutParameter será sempre um inteiro, condição que você pode especificar usando o tipo de dados java.sql.Types.INTEGER.  
   
- Além disso, quando você passar um valor para o método registerOutParameter para um parâmetro de status de retorno, você deve especificar não só o tipo de dados a ser usado para o parâmetro, mas o posicionamento ordinal do parâmetro na chamada de procedimento armazenado. No caso do parâmetro de status de retorno, a posição ordinal será sempre 1 porque ele é sempre o primeiro parâmetro na chamada para o procedimento armazenado. Embora a classe SQLServerCallableStatement oferece suporte para usar o nome do parâmetro para indicar o parâmetro específico, você pode usar somente o número de posição ordinal do parâmetro para parâmetros de status de retorno.  
+ Além disso, ao passar para o método registerOutParameter um valor para um parâmetro de status de retorno, você deve especificar não só o tipo de dados a ser usado para o parâmetro, mas também o posicionamento ordinal do parâmetro na chamada de procedimento armazenado. No caso do parâmetro de status de retorno, a posição ordinal será sempre 1 porque ele é sempre o primeiro parâmetro na chamada para o procedimento armazenado. Embora a classe SQLServerCallableStatement dê suporte ao uso do nome do parâmetro para indicar o parâmetro específico, você só pode usar o número de posição ordinal para parâmetros de status de retorno.  
   
- Por exemplo, crie o seguinte procedimento armazenado no [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] banco de dados de exemplo:  
+ Como exemplo, crie o seguinte procedimento armazenado no banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]:  
   
 ```  
 CREATE PROCEDURE CheckContactCity  
@@ -58,11 +58,11 @@ END
   
  Esse procedimento armazenado retorna o valor de status 1 ou 0, dependendo se a cidade especificada no parâmetro cityName se encontra ou não na tabela Person.Address.  
   
- No exemplo a seguir, uma conexão aberta para o [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] banco de dados de exemplo é passado para a função e o [executar](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) método é usado para chamar o procedimento armazenado CheckContactCity:  
+ No exemplo a seguir, uma conexão aberta com o banco de dados de amostra [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] é passada para a função, e o método [execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) é usado para chamar o procedimento armazenado CheckContactCity:  
   
  [!code[JDBC#UsingSprocWithReturnStatus1](../../connect/jdbc/codesnippet/Java/using-a-stored-procedure_1_1.java)]  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Usando instruções com procedimentos armazenados](../../connect/jdbc/using-statements-with-stored-procedures.md)  
   
   

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7795d237ab932ddb2cb7b1e45700f023ca939327
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308695"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019614"
 ---
 # <a name="pdostatementclosecursor"></a>PDOStatement::closeCursor
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,7 +37,7 @@ bool PDOStatement::closeCursor();
 true se bem-sucedido; caso contrário, false.  
   
 ## <a name="remarks"></a>Remarks  
-closeCursor tem efeito quando a opção de conexão MultipleActiveResultSets está definida como false.  Para obter mais informações sobre a opção de conexão MultipleActiveResultSets, consulte [como: desabilitar vários Active Resultsets (MARS)](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md).  
+closeCursor tem efeito quando a opção de conexão MultipleActiveResultSets está definida como false.  Para obter mais informações sobre a opção de conexão MultipleActiveResultSets, veja [Como desabilitar MARS (vários conjuntos de resultados ativos)](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md).  
   
 Em vez de chamar closeCursor, você pode apenas definir o identificador de instrução como nulo.  
   
@@ -68,7 +68,7 @@ print_r($result);
 ?>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [PDOStatement Class](../../connect/php/pdostatement-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

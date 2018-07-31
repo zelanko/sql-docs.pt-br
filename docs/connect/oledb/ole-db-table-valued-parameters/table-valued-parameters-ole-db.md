@@ -17,24 +17,24 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: df40f003355b7c98ec6b3b8996bf9c372faa4ad0
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 195c556c517d7954aca95cec9b54dd78adf51341
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689859"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108748"
 ---
 # <a name="table-valued-parameters-ole-db"></a>Parâmetros com valor de tabela (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Esta seção descreve o suporte para parâmetros com valor de tabela no Driver do OLE DB para SQL Server. Para obter informações adicionais, consulte [parâmetros com valor de tabela &#40;OLE DB Driver para SQL Server&#41;](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md). Para obter um exemplo, consulte [usar parâmetros &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md).  
+  Esta seção descreve o suporte para parâmetros com valor de tabela no Driver do OLE DB para SQL Server. Para obter informações gerais adicionais, consulte [parâmetros com valor de tabela &#40;Driver do OLE DB para SQL Server&#41;](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md). Para obter um exemplo, consulte [usar parâmetros &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md).  
   
 ## <a name="remarks"></a>Remarks  
- No momento, você pode enviar dados em várias linhas para o servidor como parâmetros para um procedimento com conjuntos de parâmetros (o parâmetro DBPARAMS em **ICommand:: execute**). Com conjuntos de parâmetros, todo elemento do conjunto tem que ser enviado ao servidor em uma solicitação RPC (chamada de procedimento remoto) separada. Os parâmetros com valor de tabela fornecem uma funcionalidade semelhante, mas interagem melhor com o servidor. Ele reduz o número de solicitações RPC e permite que as operações de conjunto com base no servidor.  
+ Atualmente, você pode enviar dados de várias linhas ao servidor como parâmetros para um procedimento com conjuntos de parâmetros (o parâmetro DBPARAMS em **ICommand::Execute**). Com conjuntos de parâmetros, todo elemento do conjunto tem que ser enviado ao servidor em uma solicitação RPC (chamada de procedimento remoto) separada. Os parâmetros com valor de tabela fornecem uma funcionalidade semelhante, mas interagem melhor com o servidor. Isso reduz o número de solicitações RPC e habilita operações baseadas em conjunto no servidor.  
   
- Parâmetros de valor de tabela têm suporte no Driver do OLE DB para SQL Server como banco de dados OLE **linhas** objetos. Qualquer **linhas** objeto pode ser fornecido pelo consumidor (ou seja, o aplicativo cliente usando o Driver do OLE DB para SQL Server) como um espaço reservado para parâmetros com valor de tabela. Os parâmetros com valor de tabela são tratados como os outros tipos de parâmetro do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O Driver OLE DB para SQL Server fornece criação, descoberta, especificação, associação e interfaces de esquema.  
+ Parâmetros com valor de tabela têm suporte no Driver do OLE DB para SQL Server como banco de dados OLE **conjunto de linhas** objetos. Qualquer objeto **Rowset** pode ser fornecido pelo consumidor (ou seja, o aplicativo cliente que usa o OLE DB Driver for SQL Server) como um espaço reservado para parâmetros com valor de tabela. Os parâmetros com valor de tabela são tratados como os outros tipos de parâmetro do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O Driver do OLE DB para SQL Server fornece criação, descoberta, especificação, associação e interfaces de esquema.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
@@ -50,12 +50,12 @@ ms.locfileid: "35689859"
   
 -   [Suporte ao tipo de parâmetro com valor de tabela OLE DB](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md)  
   
--   [Suporte ao tipo de parâmetro com valor de tabela de banco de dados OLE &#40;métodos&#41;](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-methods.md)  
+-   [Suporte ao tipo de parâmetro com valor de tabela OLE DB &#40;Métodos&#41;](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-methods.md)  
   
--   [Suporte ao tipo de parâmetro com valor de tabela de banco de dados OLE &#40;propriedades&#41;](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md)  
+-   [Suporte ao tipo de parâmetro com valor de tabela do OLE DB &#40;Propriedades&#41;](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Driver do OLE DB para programação do SQL Server](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Programação no OLE DB Driver for SQL Server](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)   
  [Usar parâmetros com valor de tabela &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

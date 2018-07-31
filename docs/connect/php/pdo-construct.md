@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e426530a16fbe6d9749b505723d3251e43f94aa7
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307735"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979699"
 ---
 # <a name="pdoconstruct"></a>PDO::__construct
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -40,7 +40,7 @@ PDO::__construct($dsn [,$username [,$password [,$driver_options ]]] )
   
 *$password*: opcional. Uma cadeia de caracteres que contém a senha do usuário. Para conectar usando a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , especifique a senha. Para conectar usando a Autenticação do Windows, especifique `""`.  
   
-*$driver_options*: opcional. Você pode especificar atributos do Gerenciador de Driver do PDO e [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] atributos específicos do driver – PDO:: sqlsrv_attr_encoding, PDO:: sqlsrv_attr_direct_query. Um atributo inválido não gerará uma exceção. Atributos inválidos geram exceções quando são especificados com [PDO::setAttribute](../../connect/php/pdo-setattribute.md).  
+*$driver_options*: opcional. Você pode especificar atributos do Gerenciador de Driver do PDO e atributos específicos do driver dos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] – PDO::SQLSRV_ATTR_ENCODING, PDO::SQLSRV_ATTR_DIRECT_QUERY. Um atributo inválido não gerará uma exceção. Atributos inválidos geram exceções quando são especificados com [PDO::setAttribute](../../connect/php/pdo-setattribute.md).  
   
 ## <a name="return-value"></a>Valor retornado  
 Retorna um objeto PDO. Se ocorrer uma falha, retornará um objeto PDOException.  
@@ -53,7 +53,7 @@ Você pode fechar um objeto de conexão definindo a instância como null.
   
 Após uma conexão, PDO:: ErrorCode exibirá 01000 em vez de 00000.  
   
-Se PDO::__construct falhar por algum motivo, uma exceção será lançada, mesmo se PDO:: attr_errmode for definido como PDO:: errmode_silent.  
+Se PDO::__construct falhar por algum motivo, uma exceção será gerada, mesmo se PDO::ATTR_ERRMODE for definido como PDO::ERRMODE_SILENT.  
   
 O suporte para PDO foi adicionado na versão 2.0 dos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
@@ -90,7 +90,7 @@ Este exemplo mostra como se conectar a um servidor, especificando o banco de dad
 ?>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Classe PDO](../../connect/php/pdo-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 670d9b8f4e708fac264b8520a6a1ee6f183181a5
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309005"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38006778"
 ---
 # <a name="sqlsrvnumrows"></a>sqlsrv_num_rows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,7 +43,7 @@ sqlsrv_num_rows( resource $stmt )
 **false** se houve um erro ao calcular o número de linhas. Caso contrário, representa o número de linhas no conjunto de resultados.  
   
 ## <a name="remarks"></a>Remarks  
-sqlsrv_num_rows requer um cliente, estático ou cursor de conjunto de chaves e retornará **false** se você usar um cursor de avanço ou dinâmico. (O padrão é um cursor de avanço.) Para obter mais informações sobre cursores, consulte [sqlsrv_query](../../connect/php/sqlsrv-query.md) e [tipos de Cursor &#40;Driver SQLSRV&#41;](../../connect/php/cursor-types-sqlsrv-driver.md).  
+sqlsrv_num_rows requer um cursor do lado do cliente, estático ou de conjunto de chaves e retornará **false** se você usar um cursor de avanço ou dinâmico. (O padrão é um cursor de avanço.) Para obter mais informações sobre os cursores, consulte [sqlsrv_query](../../connect/php/sqlsrv-query.md) e [Tipos de cursor &#40;Driver SQLSRV&#41;](../../connect/php/cursor-types-sqlsrv-driver.md).  
   
 ## <a name="example"></a>Exemplo  
   
@@ -96,6 +96,6 @@ echo "\nRow count for second result set = $row_count\n";
 ?>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Referência da API do driver SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
   

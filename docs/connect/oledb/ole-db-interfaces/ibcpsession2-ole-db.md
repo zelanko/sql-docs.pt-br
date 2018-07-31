@@ -16,21 +16,21 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: c29c1ce4312951625bb410063d5c0ce20af4852c
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 80ea9ad5c4e2d4f2726b659a1880451f24e2e5bf
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689029"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108178"
 ---
 # <a name="ibcpsession2-ole-db"></a>IBCPSession2 (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  A interface IBCPSession2 é uma extensão para IBCPSession que fornece uma função de membro que é uma alternativa ao chamar ibcpsession:: BCPColFmt para cada coluna.  IBCPSession2 herda IBCPSession e adiciona um novo método: [ibcpsession2:: Bcpsetbulkmode](../../oledb/ole-db-interfaces/ibcpsession2-bcpsetbulkmode.md).  
+  A interface IBCPSession2 é uma extensão IBCPSession que fornece uma função de membro que é uma alternativa à chamada ibcpsession:: BCPColFmt para cada coluna.  IBCPSession2 herda IBCPSession e adiciona um novo método: [IBCPSession2::BCPSetBulkMode](../../oledb/ole-db-interfaces/ibcpsession2-bcpsetbulkmode.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Interfaces &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)
   
   

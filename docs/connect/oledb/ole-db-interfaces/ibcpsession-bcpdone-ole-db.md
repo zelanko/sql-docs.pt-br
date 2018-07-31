@@ -20,15 +20,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: b840ab60ac59501d1a7e2c3908af36e9e9a31d38
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: abd24a45be060eaa091899d6ca499ece902c463c
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35690269"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106682"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -42,7 +42,7 @@ HRESULT BCPDone(void);
 ```  
   
 ## <a name="remarks"></a>Remarks  
- Nenhuma outra operação pode ser chamada no [IBCPSession](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md) interface depois de chamar o **BCPDone** método. A única possibilidade é chamar o [ibcpsession:: BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) método para iniciar uma nova operação de cópia em massa. Isso é semelhante a chamar o [IRowsetFastLoad:: Commit](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md) método.  
+ Nenhuma outra operação pode ser chamada na interface [IBCPSession](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md) após a chamada ao método **BCPDone**. A única possibilidade é chamar o método [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) para iniciar uma nova operação de cópia em massa. Isso é semelhante à chamada ao método [IRowsetFastLoad::Commit](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md).  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  S_OK  
@@ -70,7 +70,7 @@ insert into fltest values (4, 4, 0xFAD)
   
  Você pode usar BCP para adicionar estes dados novamente à tabela com o comando a seguir:  
   
- **BCP master... fltest em outfile.dat - n -T -S** *server*  
+ **bcp master..fltest em outfile.dat -n -T -S** *server*  
   
 ```cpp  
 #define DBINITCONSTANTS   // Defined to initialize constants in oledb.h  
@@ -467,7 +467,7 @@ void wmain() {
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
  [Executando operações de cópia em massa](../../oledb/features/performing-bulk-copy-operations.md)  
   

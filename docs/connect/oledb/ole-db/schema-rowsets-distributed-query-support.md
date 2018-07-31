@@ -1,6 +1,6 @@
 ---
-title: Suporte a consultas nos conjuntos de linhas de esquema distribuídas | Microsoft Docs
-description: Suporte a consultas nos conjuntos de linhas de esquema distribuídas
+title: Suporte a consultas em conjuntos de linhas de esquema distribuídas | Microsoft Docs
+description: Suporte à consulta distribuída no conjunto de linhas do esquema
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -21,21 +21,21 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: c996768d8b2c0aaf2c2f622add33ffdf5aab3e89
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: 085a4424272e4d620c4b36fe9ecf44894cb1a33f
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35611611"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105822"
 ---
-# <a name="schema-rowsets---distributed-query-support"></a>Conjuntos de linhas de esquema - suporte à consulta distribuída
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="schema-rowsets---distributed-query-support"></a>Conjuntos de linhas do esquema – suporte à consulta distribuída
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Para dar suporte a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consultas, o Driver OLE DB para SQL Server distribuídas **IDBSchemaRowset** interface retorna metadados em servidores vinculados.  
+  Para oferecer suporte a consultas distribuídas do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], a interface **IDBSchemaRowset** do OLE DB Driver for SQL Server retorna metadados em servidores vinculados.  
   
- Caso a propriedade SSPROP_QUOTEDCATALOGNAMES de DBPROPSET_SQLSERVERSESSION seja VARIANT_TRUE, um identificador citado pode ser especificado para o nome do catálogo (por exemplo "my.catalog"). Quando a restrição de saída do conjunto de linhas de esquema por catálogo, o Driver OLE DB para SQL Server reconhece um nome de duas partes que contém o servidor vinculado e nome do catálogo. Para os conjuntos de linhas de esquema na tabela a seguir, especificando um nome de catálogo de duas partes como *linked_server ***.*** catálogo* restringe a saída para o catálogo aplicável do servidor vinculado nomeado.  
+ Caso a propriedade SSPROP_QUOTEDCATALOGNAMES de DBPROPSET_SQLSERVERSESSION seja VARIANT_TRUE, um identificador citado pode ser especificado para o nome do catálogo (por exemplo "my.catalog"). Durante a restrição da saída do conjunto de linhas do esquema por catálogo, o OLE DB Driver for SQL Server reconhece um nome em duas partes que contém o servidor vinculado e o nome do catálogo. Para os conjuntos de linhas de esquema na tabela abaixo, especificar um nome de catálogo em duas partes como *linked_server ***.*** catalog* restringe a saída para o catálogo aplicável do servidor vinculado nomeado.  
   
 |Conjunto de linhas de esquema|Restrição de catálogo|  
 |-------------------|-------------------------|  
@@ -49,11 +49,11 @@ ms.locfileid: "35611611"
 |DBSCHEMA_TABLE_PRIVILEGES|TABLE_CATALOG|  
   
 > [!NOTE]  
->  Para restringir um conjunto de linhas de esquema em todos os catálogos de um servidor vinculado, use a sintaxe *linked_server* (onde o separador de ponto é parte da especificação do nome). Essa sintaxe é equivalente a especificar NULL para a restrição do nome do catálogo, além de ser usada quando o servidor vinculado indica uma fonte de dados que não oferece suporte a catálogos.  
+>  Para restringir um conjunto de linhas do esquema a todos os catálogos de um servidor vinculado, use a sintaxe *linked_server* (em que o separador do período faz parte da especificação do nome). Essa sintaxe é equivalente a especificar NULL para a restrição do nome do catálogo, além de ser usada quando o servidor vinculado indica uma fonte de dados que não oferece suporte a catálogos.  
   
- O Driver OLE DB para SQL Server define o conjunto de linhas do esquema LINKEDSERVERS, retornando uma lista de fontes de dados OLE DB registradas como servidores vinculados.  
+ O OLE DB Driver for SQL Server define o conjunto de linhas do esquema LINKEDSERVERS, retornando uma lista de fontes de dados OLE DB registradas como servidores vinculados.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Suporte ao conjunto de linhas de esquema &#40;OLE DB&#41;](../../oledb/ole-db/schema-rowset-support-ole-db.md)   
  [Conjunto de linhas LINKEDSERVERS &#40;OLE DB&#41;](../../oledb/ole-db/schema-rowsets-linkedservers-rowset.md)  
   

@@ -15,21 +15,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9a7316e5daa6fa27209a31a07ddf0ace84c191b0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852431"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37994800"
 ---
 # <a name="wrappers-and-interfaces"></a>Wrappers e interfaces
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] oferece suporte a interfaces que permitem a você criar um proxy de uma classe, além de wrappers que permitem acessar extensões para a API do JDBC que são específicas para o [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] por meio de uma interface de proxy.  
+  O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] é compatível com interfaces que permitem criar um proxy de uma classe, além de wrappers que permitem acessar extensões para a API do JDBC específicas do [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] por meio de uma interface de proxy.  
   
 ## <a name="wrappers"></a>Wrappers  
- O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] oferece suporte à interface Java.SQL. Essa interface fornece um mecanismo para acessar extensões para a API do JDBC que são específicos para o [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] por meio de uma interface de proxy.  
+ O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] dá suporte à interface java.sql.Wrapper. Essa interface fornece um mecanismo para acessar extensões para a API do JDBC que são específicas do [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] por meio de uma interface de proxy.  
   
- A interface Java.SQL define dois métodos: **isWrapperFor** e **unwrap**. O **isWrapperFor** método verifica se o objeto de entrada especificado implementa essa interface. O **unwrap** método retorna um objeto que implementa essa interface para permitir acesso a [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] métodos específicos.  
+ A interface de suportes define dois métodos: **isWrapperFor** e **unwrap**. O método **isWrapperFor** verifica se o objeto de entrada especificado implementa essa interface. O método **unwrap** retorna um objeto que implementa essa interface para permitir o acesso aos métodos específicos do [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].  
   
  **isWrapperFor** e **unwrap** métodos são expostos da seguinte maneira:  
   
@@ -58,9 +58,9 @@ ms.locfileid: "32852431"
 -   [Método unwrap &#40;SQLServerXADataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md)  
   
 ## <a name="interfaces"></a>Interfaces  
- A partir do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] JDBC Driver 3.0, as interfaces são disponibilizadas para um servidor de aplicativos acessar um método específico do driver da classe associada. O servidor de aplicativo pode encapsular a classe, criando um proxy, expondo a [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]-funcionalidade específica de uma interface. O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] oferece suporte a interfaces que têm o [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] métodos específicos e constantes para um servidor de aplicativos pode criar um proxy da classe.  
+ Começando com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] JDBC Driver 3.0, as interfaces são disponibilizadas para um servidor de aplicativos para acessar um método específico de driver usando a classe associada. O servidor de aplicativos pode encapsular a classe criando um proxy, expondo a funcionalidade específica do [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] de uma interface. O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] é compatível com interfaces que têm os métodos específicos e constantes do [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] para que um servidor de aplicativos possa criar um proxy da classe.  
   
- As interfaces derivam das interfaces Java padrão, você pode usar o mesmo objeto após o desencapsulamento para acessar a funcionalidade específica do driver ou genérico [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] funcionalidade.  
+ Como as interfaces derivam das interfaces Java padrão, você pode usar o mesmo objeto após o desencapsulamento para acessar a funcionalidade específica do driver ou a funcionalidade genérica do [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].  
   
  As seguintes interfaces são adicionadas:  
   
@@ -78,8 +78,8 @@ ms.locfileid: "32852431"
   
 ## <a name="example"></a>Exemplo  
   
-### <a name="description"></a>Description  
- Este exemplo demonstra como acessar um [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]-função específica de um objeto de fonte de dados. Essa classe de fonte de dados pode ter sido encapsulada por um servidor de aplicativos. Para acessar a função de específica do driver JDBC ou uma constante, você pode desencapsular a fonte de dados para uma interface ISQLServerDataSource e usar as funções declaradas na interface.  
+### <a name="description"></a>Descrição  
+ Esse exemplo demonstra como acessar uma função específica do [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] usando um objeto DataSource. Essa classe DataSource pode ter sido encapsulada por um servidor de aplicativos. Para acessar a função específica ou a constante do JDBC Driver, é possível desencapsular a fonte de dados em uma interface ISQLServerDataSource e usar as funções declaradas na interface.  
   
 ### <a name="code"></a>Código  
   
@@ -111,7 +111,7 @@ public class UnWrapTest {
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Noções básicas sobre os tipos de dados do JDBC Driver](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
   
   

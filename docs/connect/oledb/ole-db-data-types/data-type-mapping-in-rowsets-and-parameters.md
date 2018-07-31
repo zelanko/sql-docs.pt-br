@@ -1,6 +1,6 @@
 ---
 title: Mapeamento de tipo de dados em conjuntos de linhas e parâmetros | Microsoft Docs
-description: Mapeamento de tipo de dados em conjuntos de linhas e parâmetros
+description: Mapeamento de tipos de dados em conjuntos de linhas e parâmetros
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -25,19 +25,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 5814771fe9ea11adc0908d2791af4e1b4f7dd881
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: c9c6d56cdbbbcd9b35b09f405154497a5fa3bc8f
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666116"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108788"
 ---
 # <a name="data-type-mapping-in-rowsets-and-parameters"></a>Mapeamento de tipos de dados em conjuntos de linhas e parâmetros
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Em conjuntos de linhas e como valores de parâmetro, o Driver OLE DB para SQL Server representa [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dados usando o seguinte OLE DB definidos tipos de dados, relatados nas funções **icolumnsinfo:: Getcolumninfo** e  **ICommandWithParameters:: Getparameterinfo**.  
+  Em conjuntos de linhas e como valores de parâmetro, o OLE DB Driver for SQL Server representa dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando os tipos de dados do OLE DB definidos a seguir, relatados nas funções **IColumnsInfo::GetColumnInfo** e **ICommandWithParameters::GetParameterInfo**.  
   
 |Tipo de dados do SQL Server|Tipo de dados OLE DB|  
 |--------------------------|----------------------|  
@@ -49,7 +49,7 @@ ms.locfileid: "35666116"
 |**datetime2**|DBTYPE_DBTIME2|  
 |**decimal**|DBTYPE_NUMERIC|  
 |**float**|DBTYPE_R8|  
-|**image**|DBTYPE_BYTES|  
+|**imagem**|DBTYPE_BYTES|  
 |**int**|DBTYPE_I4|  
 |**money**|DBTYPE_CY|  
 |**nchar**|DBTYPE_WSTR|  
@@ -71,22 +71,22 @@ ms.locfileid: "35666116"
 |**varchar**|DBTYPE_STR|  
 |**XML**|DBTYPE_XML|  
   
- O Driver OLE DB para SQL Server dá suporte a conversões de dados solicitado pelo consumidor conforme mostrado na ilustração.  
+ O Driver do OLE DB para SQL Server dá suporte a conversões de dados solicitadas pelo consumidor, conforme mostrado na ilustração.  
   
- O **sql_variant** objetos podem conter dados de qualquer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de tipo de dados exceto texto, ntext, imagem, varchar (max), nvarchar (max), varbinary (max), xml, timestamp e Microsoft .NET Framework common language runtime (CLR) tipos definidos pelo usuário. Uma instância de dados sql_variant também não pode ter sql_variant como seu tipo de dados base subjacente. Por exemplo, a coluna pode conter **smallint** valores para algumas linhas, **float** valores para as outras linhas, e **char**/**nchar**valores no restante.  
+ Os objetos **sql_variant** podem armazenar qualquer tipo de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], exceto text, ntext, image, varchar(max), nvarchar(max), varbinary(max), xml, timestamp e os tipos CLR (Common Language Runtime) definidos pelo usuário do Microsoft .NET Framework. Uma instância de dados sql_variant também não pode ter sql_variant como seu tipo de dados base subjacente. Por exemplo, a coluna pode conter valores **smallint** em algumas linhas, valores **float** em outras linhas e valores **char**/**nchar** no restante.  
   
 > [!NOTE]  
->  O **sql_variant** tipo de dados é semelhante ao tipo de dados Variant em Microsoft Visual Basic® e ao DBTYPE_VARIANT, DBTYPE_SQLVARIANT no OLEDB.  
+>  O tipo de dados **sql_variant** é semelhante ao tipo de dados Variant no Microsoft Visual Basic® e ao DBTYPE_VARIANT, DBTYPE_SQLVARIANT no OLEDB.  
   
- Quando **sql_variant** dados são buscados como DBTYPE_VARIANT, eles são colocados em uma estrutura VARIANT no buffer. Mas os subtipos na estrutura VARIANT podem não ser mapeados para os subtipos definidos no **sql_variant** tipo de dados. O **sql_variant** dados, em seguida, devem ser buscados como DBTYPE_SQLVARIANT para que todos os subtipos sejam correspondidos.  
+ Quando dados **sql_variant** são buscados como DBTYPE_VARIANT, eles são colocados em uma estrutura VARIANT no buffer. Mas os subtipos na estrutura VARIANT podem não ser mapeados para os subtipos definidos no tipo de dados **sql_variant**. Os dados **sql_variant** precisam ser buscados como DBTYPE_SQLVARIANT para que todos os subtipos obtenham uma correspondência.  
   
 ## <a name="dbtypesqlvariant-data-type"></a>Tipo de dados DBTYPE_SQLVARIANT  
- Para dar suporte a **sql_variant** tipo de dados, o Driver OLE DB para SQL Server expõe um tipo de dados específico do provedor denominado DBTYPE_SQLVARIANT. Quando **sql_variant** dados são buscados como DBTYPE_SQLVARIANT, eles são armazenados em uma estrutura SSVARIANT específica do provedor. A estrutura SSVARIANT contém todos os subtipos que correspondem aos subtipos do **sql_variant** tipo de dados.  
+ Para dar suporte ao tipo de dados **sql_variant**, o OLE DB Driver for SQL Server expõe um tipo de dados específico do provedor chamado DBTYPE_SQLVARIANT. Quando dados **sql_variant** são buscados como DBTYPE_SQLVARIANT, eles são armazenados em uma estrutura SSVARIANT específica do provedor. A estrutura SSVARIANT contém todos os subtipos que correspondem aos subtipos do tipo de dados **sql_variant**.  
   
  A propriedade de sessão SSPROP_ALLOWNATIVEVARIANT também deve ser definida como TRUE.  
   
 ## <a name="provider-specific-property-sspropallownativevariant"></a>Propriedade específica de provedor SSPROP_ALLOWNATIVEVARIANT  
- Ao buscar dados, você pode especificar explicitamente que tipo de dados deveria ser retornado para uma coluna ou um parâmetro. **IColumnsInfo** também pode ser usado para obter as informações de coluna e usá-lo para fazer a associação. Quando **IColumnsInfo** é usado para obter informações de coluna para fins de associação, se a sessão SSPROP_ALLOWNATIVEVARIANT a propriedade é FALSE (valor padrão), DBTYPE_VARIANT será retornado para **sql_variant**colunas. Se a propriedade SSPROP_ALLOWNATIVEVARIANT for FALSE, não haverá suporte para DBTYPE_SQLVARIANT. Se a propriedade SSPROP_ALLOWNATIVEVARIANT for definida como TRUE, o tipo de coluna será retornado como DBTYPE_SQLVARIANT; nesse caso o buffer armazenará a estrutura SSVARIANT. Buscar **sql_variant** dados como DBTYPE_SQLVARIANT, a propriedade de sessão SSPROP_ALLOWNATIVEVARIANT deve ser definida como TRUE.  
+ Ao buscar dados, você pode especificar explicitamente que tipo de dados deveria ser retornado para uma coluna ou um parâmetro. **IColumnsInfo** também pode ser usado para obter informações sobre colunas e usá-las para fazer a associação. Quando **IColumnsInfo** é usado para obter informações sobre colunas para fins de associação, se a propriedade de sessão SSPROP_ALLOWNATIVEVARIANT for FALSE (valor padrão), DBTYPE_VARIANT será retornado para colunas **sql_variant**. Se a propriedade SSPROP_ALLOWNATIVEVARIANT for FALSE, não haverá suporte para DBTYPE_SQLVARIANT. Se a propriedade SSPROP_ALLOWNATIVEVARIANT for definida como TRUE, o tipo de coluna será retornado como DBTYPE_SQLVARIANT; nesse caso o buffer armazenará a estrutura SSVARIANT. No fetch de dados **sql_variant** como DBTYPE_SQLVARIANT, a propriedade de sessão SSPROP_ALLOWNATIVEVARIANT precisa ser definida como TRUE.  
   
  A propriedade SSPROP_ALLOWNATIVEVARIANT faz parte do conjunto de propriedades DBPROPSET_SQLSERVERSESSION específicas de provedor, sendo uma propriedade de sessão.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "35666116"
 |-|-|  
 |SSPROP_ALLOWNATIVEVARIANT|Tipo: VT_BOOL<br /><br /> Leitura/gravação: leitura/gravação<br /><br /> Padrão: VARIANT_FALSE<br /><br /> Descrição: Determina se os dados buscados são como DBTYPE_VARIANT ou DBTYPE_SQLVARIANT.<br /><br /> VARIANT_TRUE: o tipo de coluna é retornado como DBTYPE_SQLVARIANT e o buffer terá a estrutura SSVARIANT.<br /><br /> VARIANT_FALSE: o tipo de coluna é retornado como DBTYPE_VARIANT e o buffer terá a estrutura VARIANT.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tipos de dados &#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
   
   

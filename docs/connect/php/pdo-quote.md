@@ -1,5 +1,5 @@
 ---
-title: PDO::quote | Microsoft Docs
+title: Quote | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 29147b488ea6f66870db4355021d2cf76d48496b
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308175"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38064272"
 ---
 # <a name="pdoquote"></a>PDO::quote
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,7 +36,7 @@ string PDO::quote( $string[, $parameter_type ] )
 #### <a name="parameters"></a>Parâmetros  
 $*string*: a cadeia de caracteres a ser colocada entre aspas.  
   
-$*tipo_de_parâmetro*: um símbolo (inteiro) opcional que indica o tipo de dados.  O padrão é PDO::PARAM_STR.  
+$*parameter_type*: um símbolo opcional (inteiro) indicando o tipo de dados.  O padrão é PDO::PARAM_STR.  
   
 ## <a name="return-value"></a>Valor retornado  
 Uma cadeia de caracteres entre aspas que pode ser passada para uma instrução SQL, ou false em caso de falha.  
@@ -65,7 +65,7 @@ $stmt->execute(array($param, $param2));
 ?>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Classe PDO](../../connect/php/pdo-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

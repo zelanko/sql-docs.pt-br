@@ -20,47 +20,47 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: cacbe007e9bf0187648ad1fd95c8b6616fb8a300
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 3582b5566adc03ed8d4e7e35a71b32d18a1f4c41
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666076"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106092"
 ---
 # <a name="blobs-and-ole-objects"></a>BLOBs e objetos OLE
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  O Driver OLE DB para SQL Server expõe o **ISequentialStream** interface para dar suporte ao acesso do consumidor para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **ntext**, **texto**, **imagem** , **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, e tipos de dados de xml binários como BLOBs (objetos grandes). O **leitura** método **ISequentialStream** permite que o consumidor recupere muitos dados em partes gerenciáveis.  
+  O OLE DB Driver for SQL Server expõe a interface **ISequentialStream** para dar suporte ao acesso do consumidor aos tipos de dados **ntext**, **text**, **image**, **varchar(max)**, **nvarchar(max)** e **varbinary(max)** do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e xml como BLOBs (objetos binários grandes). O método **Read** em **ISequentialStream** permite que o consumidor recupere muitos dados em partes gerenciáveis.  
   
- Para obter um exemplo que demonstra esse recurso, consulte [do conjunto de dados grande &#40;OLE DB&#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md).  
+ Para obter um exemplo que demonstra este recurso, consulte [do conjunto de dados grandes &#40;OLE DB&#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md).  
   
- O Driver OLE DB para SQL Server pode usar um consumidor implementado **IStorage** interface quando o consumidor fornece o ponteiro de interface em um acessador associado para modificação de dados.  
+ O OLE DB Driver for SQL Server pode usar uma interface **IStorage** implementada pelo consumidor quando o consumidor fornece o ponteiro de interface em um acessador associado para modificação de dados.  
   
- Para tipos de dados de valor grande, o Driver OLE DB para SQL Server procura suposições de tamanho do tipo em **IRowset** e interfaces DDL. Colunas que tenham **varchar**, **nvarchar**, e **varbinary** tipos de dados e tamanho máximo definido como ilimitado serão representadas como ISLONG por meio de conjuntos de linhas de esquema e pelo interfaces que retornam tipos de dados de coluna.  
+ Para tipos de dados de valor grande, o OLE DB Driver for SQL Server verifica as suposições de tamanho de tipo em interfaces **IRowset** e DDL. As colunas que têm tipos de dados **varchar**, **nvarchar** e **varbinary** e o tamanho máximo definido como ilimitado serão representadas como ISLONG pelos conjuntos de linhas do esquema e pelas interfaces que retornam tipos de dados de coluna.  
   
- O Driver OLE DB para SQL Server expõe o **varchar (max)**, **varbinary (max)** e **nvarchar (max)** tipos como DBTYPE_STR, DBTYPE_BYTES e DBTYPE_WSTR, respectivamente.  
+ O OLE DB Driver for SQL Server expõe os tipos **varchar(max)**, **varbinary(max)** e **nvarchar(max)** como DBTYPE_STR, DBTYPE_BYTES e DBTYPE_WSTR, respectivamente.  
   
  Para trabalhar com esses tipos, um aplicativo tem as seguintes opções:  
   
--   Associar como o tipo (DBTYPE_STR, DBTYPE_BYTES, DBTYPE_WSTR). Se o buffer não é grande o suficiente ocorrerá truncamento, exatamente como para esses tipos em versões anteriores (embora valores maiores agora estão disponíveis).  
+-   Associar como o tipo (DBTYPE_STR, DBTYPE_BYTES, DBTYPE_WSTR). Se o buffer não for grande o suficiente, ocorrerá truncamento, exatamente como para esses tipos em versões anteriores (embora agora haja valores maiores disponíveis).  
   
 -   Associar como o tipo e também especificar DBTYPE_BYREF.  
   
 -   Associar como DBTYPE_IUNKNOWN e usar streaming.  
   
- Se associado a DBTYPE_IUNKNOWN, é usada a funcionalidade de fluxo ISequentialStream. O Driver OLE DB para SQL Server dá suporte à associação de parâmetros de saída como DBTYPE_IUNKNOWN para tipos de dados de valor grande. Isso é para dar suporte a cenários onde um procedimento armazenado retorna esses tipos de dados como valores de retorno, serão retornados como DBTYPE_IUNKNOWN para o cliente.  
+ Se associado a DBTYPE_IUNKNOWN, é usada a funcionalidade de fluxo ISequentialStream. O Driver do OLE DB para SQL Server dá suporte a parâmetros de saída de associação como DBTYPE_IUNKNOWN para tipos de dados de valor grande. Isso serve para dar suporte a cenários em que um procedimento armazenado retorna esses tipos de dados como valores de retorno, serão retornados como DBTYPE_IUNKNOWN para o cliente.  
   
 ## <a name="storage-object-limitations"></a>Limitações de objetos de armazenamento  
   
--   O Driver OLE DB para SQL Server pode dar suporte a apenas um objeto de armazenamento aberto único. As tentativas de abrir mais de um objeto de armazenamento (para obter uma referência em mais de um **ISequentialStream** ponteiro de interface) retornam DBSTATUS_E_CANTCREATE.  
+-   O Driver do OLE DB para SQL Server pode dar suporte a apenas um objeto único armazenamento aberto. As tentativas de abrir mais de um objeto de armazenamento (para obter uma referência em mais de um ponteiro da interface **ISequentialStream**) retornam DBSTATUS_E_CANTCREATE.  
   
--   No OLE DB Driver para SQL Server, o valor padrão da propriedade somente leitura DBPROP_BLOCKINGSTORAGEOBJECTS é VARIANT_TRUE. Portanto, se um objeto de armazenamento está ativo, alguns métodos (diferentes métodos em objetos de armazenamento) falharão com E_UNEXPECTED.  
+-   No OLE DB Driver for SQL Server, o valor padrão da propriedade somente leitura DBPROP_BLOCKINGSTORAGEOBJECTS é VARIANT_TRUE. Portanto, se um objeto de armazenamento estiver ativo, alguns métodos (diferentes dos métodos nos objetos de armazenamento) falharão com E_UNEXPECTED.  
   
--   O comprimento dos dados apresentados por um objeto de armazenamento implementado pelo consumidor deve ser feito conhecido para o Driver OLE DB para SQL Server quando o acessador de linha que faz referência ao objeto de armazenamento é criado. O consumidor deve associar um indicador de comprimento na estrutura DBBINDING usada para a criação do acessador.  
+-   O tamanho dos dados apresentados por um objeto de armazenamento implementado pelo consumidor precisa ser conhecido pelo OLE DB Driver for SQL Server quando o acessador de linha que referencia o objeto de armazenamento é criado. O consumidor deve associar um indicador de comprimento na estrutura DBBINDING usada para a criação do acessador.  
   
--   Se uma linha contiver mais de um valor único de dados grande e DBPROP_ACCESSORDER não for DBPROPVAL_AO_RANDOM, o consumidor deve usar um Driver OLE DB para SQL Server com suporte de cursor linhas para recuperar dados de linha ou processar todos os valores de dados grandes antes de recuperar outros valores de linha. Se DBPROP_ACCESSORDER for DBPROPVAL_AO_RANDOM, o Driver OLE DB para SQL Server armazena em cache todos os tipos de dados xml como objetos binários grandes (BLOBs) para que ele possa ser acessado em qualquer ordem.  
+-   Se uma linha contiver mais de um único valor de dados grande e DBPROP_ACCESSORDER não for DBPROPVAL_AO_RANDOM, o consumidor precisará usar um conjunto de linhas com suporte do cursor do OLE DB Driver for SQL Server para recuperar dados de linha ou processar todos os valores de dados grandes antes de recuperar outros valores de linha. Se DBPROP_ACCESSORDER for DBPROPVAL_AO_RANDOM, o OLE DB Driver for SQL Server armazenará em cache todos os tipos de dados xml como BLOBs (objetos binários grandes), de forma que possam ser acessados em qualquer ordem.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
@@ -70,8 +70,8 @@ ms.locfileid: "35666076"
   
 -   [Suporte de streaming para parâmetros de saída BLOB](../../oledb/ole-db-blobs/streaming-support-for-blob-output-parameters.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Driver do OLE DB para programação do SQL Server](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)        
+## <a name="see-also"></a>Consulte Também  
+ [Programação no OLE DB Driver for SQL Server](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)        
  [Usando tipos de valor grande](../../oledb/features/using-large-value-types.md)  
   
   

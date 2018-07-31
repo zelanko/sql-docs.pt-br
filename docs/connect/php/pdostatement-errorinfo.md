@@ -1,5 +1,5 @@
 ---
-title: PDOStatement::errorInfo | Microsoft Docs
+title: 'Pdostatement:: ErrorInfo | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b86f6c031427c4b50bf17a43e0989192865ba8f7
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308645"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38019554"
 ---
 # <a name="pdostatementerrorinfo"></a>PDOStatement::errorInfo
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -60,7 +60,7 @@ print_r ($stmt->errorInfo());
 ?>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [PDOStatement Class](../../connect/php/pdostatement-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

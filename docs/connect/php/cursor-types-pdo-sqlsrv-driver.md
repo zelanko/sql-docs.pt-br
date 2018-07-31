@@ -15,29 +15,29 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 72cf83b4c4903c7df0b6a857746937e848fccf80
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35306985"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38062353"
 ---
 # <a name="cursor-types-pdosqlsrv-driver"></a>Tipos de cursor (Driver PDO_SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-O driver PDO_SQLSRV permite criar conjuntos de resultados roláveis com um dos vários cursores.  
+O driver PDO_SQLSRV lhe permite criar conjuntos de resultados roláveis com um dos vários cursores.  
   
-Para obter informações sobre como especificar um cursor usando o driver PDO_SQLSRV e para obter exemplos de código, consulte [PDO](../../connect/php/pdo-prepare.md).  
+Para obter informações sobre como especificar um cursor usando o driver PDO_SQLSRV e para obter exemplos de código, consulte [PDO:: Prepare](../../connect/php/pdo-prepare.md).  
   
 ## <a name="pdosqlsrv-and-server-side-cursors"></a>PDO_SQLSRV e cursores do lado do servidor  
-Antes da versão 3.0 do [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], o driver PDO_SQLSRV permitido criar um conjunto de resultados com um cursor de somente avanço ou estático do lado do servidor. Começando na versão 3.0 do [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], o conjunto de chaves e cursores dinâmicos também estão disponíveis.  
+Antes da versão 3.0 do [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], o driver PDO_SQLSRV permitia que você criar um conjunto de resultados com um cursor de somente avanço ou estático do servidor. Começando na versão 3.0 do [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], conjunto de chaves e cursores dinâmicos também estão disponíveis.  
   
-Você pode indicar o tipo de cursor do lado do servidor usando o PDO:: Prepare ou pdostatement:: setAttribute para selecionar o tipo de cursor:  
+Você pode indicar o tipo de cursor do lado do servidor, usando PDO:: Prepare ou pdostatement:: setAttribute para selecionar um dos tipos de cursor:  
   
 -   PDO:: ATTR_CURSOR = &GT; PDO:: CURSOR_FWDONLY  
   
 -   PDO:: ATTR_CURSOR = &GT; PDO:: CURSOR_SCROLL  
   
-Você pode solicitar um cursor keyset ou dynamic especificando PDO:: attr_cursor = > PDO:: cursor_scroll e, em seguida, passe o valor apropriado para PDO:: sqlsrv_attr_cursor_scroll_type. Os valores possíveis que você pode passar para PDO:: sqlsrv_attr_cursor_scroll_type são:  
+Você pode solicitar um cursor keyset ou dynamic, especificando o PDO:: attr_cursor = > PDO:: cursor_scroll e, em seguida, passe o valor apropriado para PDO:: sqlsrv_attr_cursor_scroll_type. Os valores possíveis que você pode passar para PDO:: sqlsrv_attr_cursor_scroll_type são:  
   
 -   PDO::SQLSRV_CURSOR_BUFFERED  
   
@@ -48,15 +48,15 @@ Você pode solicitar um cursor keyset ou dynamic especificando PDO:: attr_cursor
 -   PDO::SQLSRV_CURSOR_STATIC  
   
 ## <a name="pdosqlsrv-and-client-side-cursors"></a>PDO_SQLSRV e cursores do lado do cliente  
-Cursores do lado do cliente foram adicionados na versão 3.0 do [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] que permite que você armazene um todo conjunto de resultados na memória. Uma vantagem é que a contagem de linhas está disponível depois que uma consulta é executada.  
+Cursores do lado do cliente foram adicionados na versão 3.0 do [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] que lhe permite armazenar em cache um conjunto na memória de resultados inteiro. Uma vantagem é que a contagem de linhas está disponível depois que uma consulta é executada.  
   
-Cursores do lado do cliente devem ser usados para conjuntos de resultados de pequeno a médio porte. Conjuntos de resultados grandes devem usar cursores do lado do servidor.  
+Cursores do lado do cliente devem ser usados para conjuntos de resultados pequeno a médio porte. Conjuntos de resultados grandes devem usar cursores do lado do servidor.  
   
-Uma consulta retornará false se o buffer não é grande o suficiente para manter um todo conjunto de resultados ao usar um cursor do lado do cliente. Você pode aumentar o tamanho do buffer até o limite de memória do PHP.  
+Uma consulta retornará false se o buffer não é grande o suficiente para manter um resultado inteiro definido ao usar um cursor do lado do cliente. Você pode aumentar o tamanho do buffer até o limite de memória do PHP.  
   
-Você pode configurar o tamanho do buffer que contém o conjunto de resultados com o atributo PDO::SQLSRV_ATTR_CLIENT_BUFFER_MAX_KB_SIZE do [PDO:: setAttribute](../../connect/php/pdo-setattribute.md) ou [pdostatement:: setAttribute](../../connect/php/pdostatement-setattribute.md). Você também pode definir o tamanho máximo do buffer no arquivo php.ini com pdo_sqlsrv.client_buffer_max_kb_size (por exemplo, pdo_sqlsrv.client_buffer_max_kb_size = 1024).  
+Você pode configurar o tamanho do buffer que contém o conjunto de resultados com o atributo PDO::SQLSRV_ATTR_CLIENT_BUFFER_MAX_KB_SIZE [PDO:: setAttribute](../../connect/php/pdo-setattribute.md) ou [pdostatement:: setAttribute](../../connect/php/pdostatement-setattribute.md). Você também pode definir o tamanho máximo do buffer no arquivo PHP. ini com pdo_sqlsrv.client_buffer_max_kb_size (por exemplo, pdo_sqlsrv.client_buffer_max_kb_size = 1024).  
   
-Indicar que você quer um cursor do lado do cliente usando o PDO:: Prepare ou pdostatement:: setAttribute e selecione o PDO:: attr_cursor = > PDO:: cursor_scroll tipo de cursor.  Você então especificar PDO:: sqlsrv_attr_cursor_scroll_type = > PDO::SQLSRV_CURSOR_BUFFERED.  
+Indicar que você deseja que um cursor do lado do cliente usando PDO:: Prepare ou pdostatement:: setAttribute e selecione o PDO:: attr_cursor = > PDO:: cursor_scroll tipo de cursor.  Você, em seguida, especificar PDO:: sqlsrv_attr_cursor_scroll_type = > PDO::SQLSRV_CURSOR_BUFFERED.  
   
 ```  
 <?php  
@@ -96,6 +96,6 @@ print_r($row);
 ?>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Especificando um tipo de cursor e selecionando linhas](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)  
   

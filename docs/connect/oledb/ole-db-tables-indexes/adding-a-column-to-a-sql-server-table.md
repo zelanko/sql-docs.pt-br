@@ -19,33 +19,33 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 3e68b78a72657648320f4948646e4685cfbad388
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 9c5aeac8ff4ddd8a445e0487caf894b34b539302
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35690289"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107268"
 ---
 # <a name="adding-a-column-to-a-sql-server-table"></a>Adicionando uma coluna a uma tabela do SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  O Driver OLE DB para SQL Server expõe o **itabledefinition:: addColumn** função. Isso permite aos consumidores adicionar uma coluna para um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tabela.  
+  O Driver do OLE DB para SQL Server expõe a **itabledefinition:: addColumn** função. Isso permite que os consumidores adicionem uma coluna a uma tabela do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Quando você adiciona uma coluna para uma [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de tabela, o Driver OLE DB para o consumidor do SQL Server é restringido da seguinte forma:  
+ Quando você adiciona uma coluna para um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] da tabela, o Driver do OLE DB de consumidor do SQL Server é restrito da seguinte maneira:  
   
 -   Caso DBPROP_COL_AUTOINCREMENT seja VARIANT_TRUE, DBPROP_COL_NULLABLE deve ser VARIANT_FALSE.  
   
--   Se a coluna é definida usando o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **timestamp** tipo de dados, DBPROP_COL_NULLABLE deve ser VARIANT_FALSE.  
+-   Caso a coluna seja definida usando o tipo de dados **timestamp** do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], DBPROP_COL_NULLABLE precisará ser VARIANT_FALSE.  
   
 -   Para qualquer outra definição de coluna, DBPROP_COL_NULLABLE deve ser VARIANT_TRUE.  
   
- Os consumidores especificam o nome da tabela como uma cadeia de caracteres Unicode no *pwszName* membro do *uName* união no *pTableID* parâmetro. O *eKind* membro *pTableID* deve ser DBKIND_NAME.  
+ Os consumidores especificam o nome da tabela como uma cadeia de caracteres Unicode no membro *pwszName* da união *uName* no parâmetro *pTableID*. O membro *eKind* de *pTableID* precisa ser DBKIND_NAME.  
   
- O nome da nova coluna é especificado como uma cadeia de caracteres Unicode no *pwszName* membro do *uName* união no *dbcid* membro do parâmetro DBCOLUMNDESC *pColumnDesc*. O *eKind* membro deve ser DBKIND_NAME.  
+ O nome da nova coluna é especificado como uma cadeia de caracteres Unicode no membro *pwszName* da união *uName* no membro *dbcid* do parâmetro *pColumnDesc* de DBCOLUMNDESC. O membro *eKind* precisa ser DBKIND_NAME.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tabelas e índices](../../oledb/ole-db-tables-indexes/tables-and-indexes.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-transact-sql.md)  
   

@@ -19,15 +19,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 248132d4afca731bb3715da83286a85dc6edc8ee
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: 0c944c0e64fadf8f51af10f0e297b8d3654decd4
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35611541"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109758"
 ---
 # <a name="stored-procedures"></a>Procedimentos armazenados
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -45,9 +45,9 @@ ms.locfileid: "35611541"
   
 -   [Executando procedimentos armazenados &#40;OLE DB&#41;](../../oledb/ole-db/stored-procedures-running.md)  
   
--   [Chamar um procedimento armazenado &#40;OLE DB&#41;](../../oledb/ole-db/stored-procedures-calling.md)  
+-   [Chamando um procedimento armazenado &#40;OLE DB&#41;](../../oledb/ole-db/stored-procedures-calling.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Programação no Driver do OLE DB para SQL Server](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

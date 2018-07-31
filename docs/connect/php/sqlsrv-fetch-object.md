@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f603c0357ad356dbf15278fe503e52ccdd8424ab
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309145"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991238"
 ---
 # <a name="sqlsrvfetchobject"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,11 +43,11 @@ sqlsrv_fetch_object( resource $stmt [, string $className [, array $ctorParams[, 
 #### <a name="parameters"></a>Parâmetros  
 *$stmt*: um recurso de instrução correspondente a uma instrução executada.  
   
-*$className* [opcional]: uma cadeia de caracteres especificando o nome da classe para criar uma instância. Se um valor para o parâmetro *$className* não for especificado, uma instância do PHP **stdClass** será criada.  
+*$className* [OPCIONAL]: uma cadeia de caracteres especificando o nome da classe para criar uma instância. Se um valor para o parâmetro *$className* não for especificado, uma instância do PHP **stdClass** será criada.  
   
-*$ctorParams* [opcional]: uma matriz que contém valores passados para o construtor da classe especificada com o *$className* parâmetro. Se o construtor da classe especificada aceitar valores de parâmetro, o parâmetro *$ctorParams* deverá ser usado ao chamar **sqlsrv_fetch_object**.  
+*$ctorParams* [OPCIONAL] uma matriz que contém valores passados para o construtor da classe especificada com o parâmetro *$className*. Se o construtor da classe especificada aceitar valores de parâmetro, o parâmetro *$ctorParams* deverá ser usado ao chamar **sqlsrv_fetch_object**.  
   
-*linha* [opcional]: um dos valores a seguir, especificando a linha a ser acessada em um conjunto de resultados que usa um cursor rolável. (Se *linha* for especificado, *$className* e *$ctorParams* deve ser especificado explicitamente, mesmo que você especifique null para *$className*e *$ctorParams*.)  
+*row* [OPCIONAL]: um dos valores a seguir, especificando a linha a ser acessada em um conjunto de resultados que use um cursor rolável. (Se *row* for especificado, *$className* e *$ctorParams* deverão ser especificados explicitamente, mesmo que você especifique null para *$className* e *$ctorParams*.)  
   
 -   SQLSRV_SCROLL_NEXT  
   
@@ -63,7 +63,7 @@ sqlsrv_fetch_object( resource $stmt [, string $className [, array $ctorParams[, 
   
 Para obter mais informações sobre esses valores, consulte [Especificando um tipo de cursor e selecionando linhas](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).  
   
-*deslocamento* [opcional]: usado com SQLSRV_SCROLL_ABSOLUTE e SQLSRV_SCROLL_RELATIVE para especificar a linha a ser recuperada. O primeiro registro no conjunto de resultados é 0.  
+*offset* [OPCIONAL]: usado com SQLSRV_SCROLL_ABSOLUTE e SQLSRV_SCROLL_RELATIVE para especificar a linha a ser recuperada. O primeiro registro no conjunto de resultados é 0.  
   
 ## <a name="return-value"></a>Valor retornado  
 Um objeto do PHP com propriedades que correspondem aos nomes de campo do conjunto de resultados. Os valores de propriedade são preenchidos com os valores de campo correspondentes do conjunto de resultados. Se a classe especificada com o parâmetro *$className* opcional não existir ou se não houver nenhum conjunto de resultados ativo associado à instrução especificada, **false** será retornado. Se não houver mais linhas para recuperar, **null** será retornado.  
@@ -93,7 +93,7 @@ Se os resultados retornados por essa consulta forem recuperados com **sqlsrv_fet
 `SELECT SCOPE_IDENTITY() AS PictureID`  
   
 ## <a name="example"></a>Exemplo  
-O exemplo a seguir recupera cada linha de um conjunto de resultados como um objeto do PHP. O exemplo supõe que o SQL Server e o [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) banco de dados são instalados no computador local. Toda a saída será gravada no console quando o exemplo for executado da linha de comando.  
+O exemplo a seguir recupera cada linha de um conjunto de resultados como um objeto do PHP. O exemplo supõe que o SQL Server e o banco de dados do [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) estejam instalados no computador local. Toda a saída será gravada no console quando o exemplo for executado da linha de comando.  
   
 ```  
 <?php  
@@ -132,7 +132,7 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="example"></a>Exemplo  
-O exemplo a seguir recupera cada linha de um conjunto de resultados como uma instância da classe *Product* definida no script. O exemplo recupera informações de produtos de *Purchasing. PurchaseOrderDetail* e *Production. Product* tabelas do banco de dados AdventureWorks para produtos que tenham uma data de vencimento ( *DueDate*) e uma quantidade em estoque (*StockQty*) menor que um valor especificado. O exemplo destaca algumas das regras que se aplicam ao especificar uma classe em uma chamada para **sqlsrv_fetch_object**:  
+O exemplo a seguir recupera cada linha de um conjunto de resultados como uma instância da classe *Product* definida no script. O exemplo recupera informações de produtos das tabelas *Purchasing.PurchaseOrderDetail* e *Production.Product* do banco de dados AdventureWorks para produtos que tenham uma data de vencimento especificada (*DueDate*) e uma quantidade em estoque (*StockQty*) menor que um valor especificado. O exemplo destaca algumas das regras que se aplicam ao especificar uma classe em uma chamada para **sqlsrv_fetch_object**:  
   
 -   A variável *$product* é uma instância da classe *Product* , pois "Product" foi especificado com o parâmetro *$className* e a classe *Product* existe.  
   
@@ -142,7 +142,7 @@ O exemplo a seguir recupera cada linha de um conjunto de resultados como uma ins
   
 -   A propriedade privada *UnitPrice* é preenchida com o valor do campo *UnitPrice* .  
   
-O exemplo supõe que SQL Server e o [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) banco de dados são instalados no computador local. Toda a saída será gravada no console quando o exemplo for executado da linha de comando.  
+O exemplo supõe que o SQL Server e o banco de dados [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) estejam instalados no computador local. Toda a saída será gravada no console quando o exemplo for executado da linha de comando.  
   
 ```  
 <?php  
@@ -245,7 +245,7 @@ Se os resultados retornados por essa consulta forem recuperados com **sqlsrv_fet
   
 `SELECT SCOPE_IDENTITY() AS PictureID`  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Recuperando dados](../../connect/php/retrieving-data.md)  
 
 [Sobre exemplos de código na documentação](../../connect/php/about-code-examples-in-the-documentation.md)  

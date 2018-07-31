@@ -1,6 +1,6 @@
 ---
-title: 'Buscar colunas usando IRow:: Getcolumns (ou IRow:: Open) e ISequentialStream | Microsoft Docs'
-description: 'Buscar colunas usando IRow:: Getcolumns (ou IRow:: Open) e ISequentialStream'
+title: Buscar colunas usando IRow::GetColumns (ou IRow::Open) e ISequentialStream | Microsoft Docs
+description: Buscar colunas usando IRow::GetColumns (ou IRow::Open) e ISequentialStream
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -18,19 +18,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 8eac2f4cd623ac488de6d1d16a40e71965b3193d
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: e51fb6d127657cddcdca3cde3d3d7d769088f53f
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666176"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107002"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>Buscar colunas usando IRow::GetColumns (ou IRow::Open) e ISequentialStream
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Dados grandes podem ser associados ou recuperados por meio de **ISequentialStream** interface. Para colunas associadas, o sinalizador de status DBSTATUS_S_TRUNCATED indica que os dados estão truncados.  
+  Os dados grandes podem ser associados ou recuperados por meio da interface **ISequentialStream**. Para colunas associadas, o sinalizador de status DBSTATUS_S_TRUNCATED indica que os dados estão truncados.  
   
 > [!IMPORTANT]  
 >  Quando possível, use a Autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se for necessário manter as credenciais, criptografe-as com a [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532)(em inglês).  
@@ -39,13 +39,13 @@ ms.locfileid: "35666176"
   
 1.  Estabeleça uma conexão com a fonte de dados.  
   
-2.  Execute o comando (neste exemplo, **icommandexecute:: execute** é chamado com IID_IRow).  
+2.  Execute o comando (neste exemplo, **ICommandExecute::Execute()** é chamado com IID_IRow).  
   
-3.  Buscar os dados de coluna usando **IRow:: Open** ou **IRow::GetColumns()**.  
+3.  Buscar os dados de coluna usando **IRow::Open()** ou **IRow::GetColumns()**.  
   
-    -   **IRow:: Open** pode ser usado para abrir um **ISequentialStream** na linha. Especifique DBGUID_STREAM para indicar que a coluna contém um fluxo de dados binários (**IStream** ou **ISequentialStream** pode ser usado para ler os dados da coluna).  
+    -   **IRow::Open()** pode ser usado para abrir uma **ISequentialStream** na linha. Especifique DBGUID_STREAM para indicar que uma coluna contém um fluxo de dados binários (**IStream** ou **ISequentialStream** que pode então ser usada para ler os dados da coluna).  
   
-    -   Se **IRow::GetColumns()** for usado, o **pData** da estrutura DBCOLUMNACCESS é definido para apontar para um objeto de fluxo.  
+    -   Se **IRow::GetColumns()** for usado, o elemento **pData** da estrutura DBCOLUMNACCESS será definido de forma a apontar para um objeto de fluxo.  
   
 4.  Use **ISequentialStream::Read()** repetidamente para ler o número especificado de bytes no buffer de consumidor.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "35666176"
   
  A primeira listagem de código ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) cria uma tabela usada pelo exemplo.  
   
- Compile com ole32.lib oleaut32.lib e execute a segunda listagem de código (C++). Este aplicativo se conecta ao padrão do seu computador [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instância. Em alguns sistemas operacionais Windows, será necessário alterar (localhost) ou (local) para o nome de sua instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para se conectar a uma instância nomeada, altere a cadeia de caracteres de conexão de L"(local)" para L"(local)\\\name", onde nome é a instância nomeada. Por padrão, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express é instalado em uma instância nomeada. Verifique se que a variável de ambiente INCLUDE inclui o diretório que contém msoledbsql.h.  
+ Compile com ole32.lib oleaut32.lib e execute a segunda listagem de códigos (C++). Esse aplicativo se conecta à instância padrão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] do computador. Em alguns sistemas operacionais Windows, será necessário alterar (localhost) ou (local) para o nome de sua instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para se conectar a uma instância nomeada, altere a cadeia de conexão de L"(local)" para L"(local)\\\name", em que name é a instância nomeada. Por padrão, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express é instalado em uma instância nomeada. Verifique se a variável de ambiente INCLUDE inclui o diretório que contém msoledbsql.h.  
   
  A terceira listagem de código ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) exclui a tabela usada pelo exemplo.  
   
@@ -677,7 +677,7 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'MyTable')
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tópicos de instruções do OLE DB](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   
   

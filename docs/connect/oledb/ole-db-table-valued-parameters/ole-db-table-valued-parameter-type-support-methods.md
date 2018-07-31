@@ -1,6 +1,6 @@
 ---
-title: Suporte de tipo de parâmetro com valor de tabela do OLE DB (métodos) | Microsoft Docs
-description: Suporte para tipo de parâmetro de DB Table-Valued OLE (métodos)
+title: Suporte ao tipo de parâmetro com valor de tabela OLE DB (Métodos) | Microsoft Docs
+description: Suporte ao tipo de parâmetro com valor de tabela OLE DB (Métodos)
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,15 +16,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 1f2b05fb6856544413ee2fb48251621880e94193
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: ae8245e57b35c644491f8d2e5332ab571996aed0
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35690329"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105512"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-methods"></a>Suporte ao tipo de parâmetro com valor de tabela OLE DB(Métodos)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -34,17 +34,17 @@ ms.locfileid: "35690329"
 |------------|-------------------------------------|  
 |ITableDefinitionWithConstraints::CreateTableWithConstraints|Usado quando você conhece as informações de tipo de parâmetro com valor de tabela e deseja criar uma instância de um objeto do conjunto de linhas de parâmetro com valor de tabela baseado na informações do tipo.<br /><br /> Para obter mais informações, consulte "Cenário estático" em [criação de conjunto de linhas de parâmetro com valor de tabela](../../oledb/ole-db-table-valued-parameters/table-valued-parameter-rowset-creation.md).|  
 |IOpenRowset::OpenRowset|Usado quando você não conhece as informações de tipo de um parâmetro com valor de tabela e deseja criar uma instância de um objeto do conjunto de linhas de parâmetro com valor de tabela em informações de metadados recuperadas do servidor.<br /><br /> Para obter mais informações, consulte "Cenário dinâmico" na [criação de conjunto de linhas de parâmetro com valor de tabela](../../oledb/ole-db-table-valued-parameters/table-valued-parameter-rowset-creation.md).|  
-|ISSCommandWithParameters::SetParameterInfo|Para especificar um parâmetro de comando do parâmetro com valor de tabela, o consumidor Especifica o tipo do parâmetro como "table" ou "DBTYPE_TABLE" no *pwszName* membro da estrutura DBPARAMBINDINFO. O *ulParamSize* é definido como ~ 0. Para obter mais informações, consulte "Especificação de parâmetros com valor de tabela" em [Executing Commands Containing Table-Valued parâmetros](../../oledb/ole-db-table-valued-parameters/executing-commands-containing-table-valued-parameters.md).|  
-|ISSCommandWithParameters::SetParameterProperties|Define as propriedades específicas dos parâmetros com valor de tabela, como nome do esquema, nome de tipo, ordem de coluna e colunas padrão.<br /><br /> O consumidor Especifica o ordinal do parâmetro no *iOrdinal* da estrutura SSPARAMPROPS. O conjunto de propriedades solicitado é DBPROPSET_SQLSERVERPARAMETER.|  
-|ISSCommandWithParameters::GetParameterInfo|Obtém os tipos de todos os parâmetros para um comando especificado.<br /><br /> Para parâmetros com valor de tabela, o *wType* campo na estrutura DBPARAMINFO terá o tipo DBTYPE_TABLE. O *ulParamSize* campo será definido como ~ 0 para indicar comprimento desconhecido.|  
-|ISSCommandWithParameters::GetParameterProperties|Obtém informações de tipo adicionais para parâmetros do tipo DBTYPE_TABLE.<br /><br /> O consumidor Especifica o ordinal do parâmetro no *iOrdinal* membro da estrutura SSPARAMPROPS. O consumidor pode solicitar qualquer uma das propriedades listadas em isscommandwithparameters:: no conjunto de propriedades DBPROPSET_SQLSERVERPARAMETER.<br /><br /> Como o consumidor não conhece o tipo de parâmetro com valor de tabela, o provedor deve definir o SSPROP_PARAM_TYPE_TYPENAME, SSPROP_PARAM_TYPE_SCHEMANAME e SSPROP_PARAM_TYPE_CATALOGNAME com seus valores corretos. As propriedades restantes, SSPROP_PARAM_TABLE_DEFAULT_COLUMNS e SSPROP_PARAM_TABLE_COLUMN_SORT_ORDER, terão seus valores padrão. Depois que o consumidor descobrir o nome do tipo de parâmetro com valor de tabela, ele usa IOpenRowset:: OPENROWSET para criar uma instância desse parâmetro com valor de tabela, especificando o nome do tipo de parâmetro com valor de tabela. Para obter mais informações, consulte [descoberta do tipo de parâmetro com valor de tabela](../../oledb/ole-db-table-valued-parameters/table-valued-parameter-type-discovery.md).|  
-|IRowsetInfo::GetProperties|Obtém propriedades de conjunto de linhas de parâmetro com valor de tabela. O consumidor pode usar essas propriedades para montar associações de maneira ideal.|  
+|ISSCommandWithParameters::SetParameterInfo|Para especificar um parâmetro de comando do parâmetro com valor de tabela, o consumidor especifica o tipo de parâmetro como "table" ou "DBTYPE_TABLE" no membro *pwszName* da estrutura DBPARAMBINDINFO. O *ulParamSize* é definido como ~ 0. Para obter mais informações, consulte "Especificação de parâmetro com valor de tabela" na [Executing Commands Containing Table-Valued parâmetros](../../oledb/ole-db-table-valued-parameters/executing-commands-containing-table-valued-parameters.md).|  
+|ISSCommandWithParameters::SetParameterProperties|Define as propriedades específicas dos parâmetros com valor de tabela, como nome do esquema, nome de tipo, ordem de coluna e colunas padrão.<br /><br /> O consumidor especifica o ordinal do parâmetro no *iOrdinal* da estrutura SSPARAMPROPS. O conjunto de propriedades solicitado é DBPROPSET_SQLSERVERPARAMETER.|  
+|ISSCommandWithParameters::GetParameterInfo|Obtém os tipos de todos os parâmetros para um comando especificado.<br /><br /> Para parâmetros com valor de tabela, o campo *wType* na estrutura DBPARAMINFO terá o tipo DBTYPE_TABLE. O campo *ulParamSize* será definido como ~ 0 para indicar comprimento desconhecido.|  
+|ISSCommandWithParameters::GetParameterProperties|Obtém informações de tipo adicionais para parâmetros do tipo DBTYPE_TABLE.<br /><br /> O consumidor especifica o ordinal do parâmetro no membro *iOrdinal* da estrutura SSPARAMPROPS. O consumidor pode solicitar qualquer uma das propriedades que são listadas na isscommandwithparameters:: SetParameterProperties no conjunto de propriedades DBPROPSET_SQLSERVERPARAMETER.<br /><br /> Como o consumidor não conhece o tipo de parâmetro com valor de tabela, o provedor deve definir o SSPROP_PARAM_TYPE_TYPENAME, SSPROP_PARAM_TYPE_SCHEMANAME e SSPROP_PARAM_TYPE_CATALOGNAME com seus valores corretos. As propriedades restantes, SSPROP_PARAM_TABLE_DEFAULT_COLUMNS e SSPROP_PARAM_TABLE_COLUMN_SORT_ORDER, terão seus valores padrão. Depois que o consumidor descobrir o nome do tipo de parâmetro com valor de tabela, ele usará IOpenRowset::OpenRowset para criar uma instância desse parâmetro com valor de tabela especificando o nome do tipo de parâmetro com valor de tabela. Para obter mais informações, consulte [descoberta do tipo de parâmetro com valor de tabela](../../oledb/ole-db-table-valued-parameters/table-valued-parameter-type-discovery.md).|  
+|Irowsetinfo:: GetProperties|Obtém propriedades de conjunto de linhas de parâmetro com valor de tabela. O consumidor pode usar essas propriedades para montar associações de maneira ideal.|  
 |IColumnsRowset::GetColumnsRowset|Recupera informações de metadados sobre uma tabela [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para parâmetros com valor de tabela, essa mesma interface fornece informações detalhadas de metadados sobre cada coluna, como o seguinte:<br /><br /> DBCOLUMN_FLAGS indica nulidade pelo bit de DBCOLUMNFLAGS_ISNULLABLE.<br /><br /> DBCOLUMN_ISUNIQUE indica se a coluna é uma coluna de identidade.<br /><br /> DBCOLUMN_COMPUTEMODE indica se a coluna é computada.|  
-|IAccessor::CreateAccessor|Para associar um objeto de conjunto de linhas de parâmetro com valor de tabela para um parâmetro de comando, crie um acessador com seu *wType* membro definido como DBTYPE_TABLE. A estrutura DBOBJECT conterá IID_IRowset ou qualquer outra interface de objeto do conjunto de linhas válido no *iid* membro. O restante dos campos é tratado de forma semelhante a DBTYPE_IUNKNOWN.|  
+|IAccessor:: CreateAccessor|Para associar um objeto de conjunto de linhas de parâmetro com valor de tabela a um parâmetro de comando, crie um acessador com seu membro *wType* definido como DBTYPE_TABLE. A estrutura DBOBJECT conterá IID_IRowset ou qualquer outra interface de objeto de conjunto de linhas válida no membro *iid*. O restante dos campos é tratado de forma semelhante a DBTYPE_IUNKNOWN.|  
   
-## <a name="see-also"></a>Consulte também  
- [Suporte ao tipo de parâmetro com valor de tabela de banco de dados OLE](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md)   
- [Criação de conjunto de linhas de parâmetro com valor de tabela](../../oledb/ole-db-table-valued-parameters/table-valued-parameter-rowset-creation.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Suporte para o tipo de parâmetro com valor de tabela do OLE DB](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md)   
+ [Criação do conjunto de linhas do parâmetro com valor de tabela](../../oledb/ole-db-table-valued-parameters/table-valued-parameter-rowset-creation.md)   
  [Usar parâmetros com valor de tabela &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

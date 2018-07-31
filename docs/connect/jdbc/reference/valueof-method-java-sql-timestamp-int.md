@@ -1,5 +1,5 @@
 ---
-title: Método valueOf (Java.SQL. timestamp, int) | Microsoft Docs
+title: Método valueOf (timestamp, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 290878fc0a3687a95fd6335eba4b6ed6e1c2fda2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32848881"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979178"
 ---
 # <a name="valueof-method-javasqltimestamp-int"></a>Método valueOf (java.sql.Timestamp, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Cria um **DateTimeOffset** objeto que representa um ponto no tempo em um deslocamento específico do GMT dados um valor de Java.SQL. timestamp e um valor que indica o deslocamento em minutos.  
+  Cria um objeto **DateTimeOffset** que representa um momento determinado em um deslocamento específico do GMT dados um valor java.sql.Timestamp e um valor indicando o deslocamento em minutos.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,10 +42,10 @@ public static DateTimeOffset valueOf(java.sql.Timestamp timestamp, int minutesOf
   
  O deslocamento em minutos.  
   
-## <a name="return-value"></a>Valor de retorno  
- Retorna um objeto DateTimeOffset que representa o ponto no tempo fornecido pelo objeto Java.SQL. timestamp no deslocamento especificado, em minutos, do GMT.  
+## <a name="return-value"></a>Valor retornado  
+ Retorna um objeto DateTimeOffset que representa o momento determinado fornecido pelo objeto timestamp no deslocamento especificado, minutos, de GMT.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Classe DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md)   
  [Membros DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-members.md)  
   

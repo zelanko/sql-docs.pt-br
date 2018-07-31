@@ -24,22 +24,22 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: e09154c595f2e008f29ef6bd690968388cbe062b
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: 0bdb0c998c10b0b33b6640877c918f7a40971043
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35611992"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108008"
 ---
 # <a name="changing-passwords-programmatically"></a>Alterando senhas programaticamente
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Antes do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], quando a senha de um usuário expirava, somente um administrador poderia redefini-la. Começando com [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], OLE DB Driver para SQL Server dá suporte a tratamento de expiração de senha programaticamente através do Driver do OLE DB e as alterações para o **logon do SQL Server** caixas de diálogo.  
+  Antes do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], quando a senha de um usuário expirava, somente um administrador poderia redefini-la. Começando com [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], Driver do OLE DB para SQL Server pode suportar manipulando a expiração de senha programaticamente por meio do Driver do OLE DB e, por meio de alterações para o **logon do SQL Server** caixas de diálogo.  
   
 > [!NOTE]  
->  Quando possível, solicite aos usuários que insiram suas credenciais em tempo de execução e que evitem armazená-las em um formato persistente. Se for necessário manter suas credenciais, criptografe-as usando o [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532). Para obter mais informações sobre o uso de senhas, consulte [senhas fortes](../../../relational-databases/security/strong-passwords.md).  
+>  Quando possível, solicite aos usuários que insiram suas credenciais em tempo de execução e que evitem armazená-las em um formato persistente. Caso precise persistir as credenciais, criptografe-as usando a [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532). Para obter mais informações sobre o uso de senhas, confira [Senhas fortes](../../../relational-databases/security/strong-passwords.md).  
   
 ## <a name="sql-server-login-error-codes"></a>Códigos de erro de logon do SQL Server  
  Quando não é possível estabelecer uma conexão devido a problemas de autenticação, um dos seguintes códigos de erro do SQL Server estará disponível para o aplicativo, de forma a auxiliar no diagnóstico e na recuperação.  
@@ -56,18 +56,18 @@ ms.locfileid: "35611992"
 |18487|Falha no logon do usuário '%.*ls'. Motivo: a senha da conta expirou.|  
 |18488|Falha no logon do usuário '%.*ls'. Motivo: a senha da conta deve ser alterada.|  
   
-## <a name="ole-db-driver-for-sql-server"></a>Driver do OLE DB para SQL Server  
- O Driver OLE DB para SQL Server dá suporte à expiração de senha que uma interface do usuário e programaticamente.  
+## <a name="ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server  
+ O Driver do OLE DB para SQL Server dá suporte à expiração de senha mesmo uma interface do usuário e programaticamente.  
   
 ### <a name="ole-db-user-interface-password-expiration"></a>Expiração de senha da interface do usuário OLE DB  
- O Driver OLE DB para SQL Server dá suporte à expiração de senha por meio de alterações feitas a **logon do SQL Server** caixas de diálogo. Se o valor de DBPROP_INIT_PROMPT for definido como DBPROMPT_NOPROMPT, a tentativa de conexão inicial irá falhar, caso a senha tenha expirado.  
+ O OLE DB Driver for SQL Server dá suporte à expiração de senha por meio de alterações feitas nas caixas de diálogo **Logon do SQL Server**. Se o valor de DBPROP_INIT_PROMPT for definido como DBPROMPT_NOPROMPT, a tentativa de conexão inicial irá falhar, caso a senha tenha expirado.  
   
- Se DBPROP_INIT_PROMPT tiver sido definida para qualquer outro valor, o usuário vê o **logon do SQL Server** caixa de diálogo, independentemente da senha tenha expirado ou não. O usuário pode clicar no **opções** botão e marque **alterar senha** para alterar a senha.  
+ Se DBPROP_INIT_PROMPT tiver sido definido com outro valor, o usuário verá a caixa de diálogo **Logon do SQL Server**, independentemente de a senha ter expirado ou não. O usuário pode clicar no botão **Opções** e marcar **Alterar Senha** para alterar a senha.  
   
- Se o usuário clica em Okey e a senha tiver expirado, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] solicita que o usuário insira e confirme uma nova senha usando o **alterar senha do SQL Server** caixa de diálogo.  
+ Se o usuário clicar em OK e a senha tiver expirado, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] solicitará que o usuário insira e confirme uma nova senha usando a caixa de diálogo **Alterar Senha do SQL Server**.  
   
 #### <a name="ole-db-prompt-behavior-and-locked-accounts"></a>Contas bloqueadas e comportamento do prompt do OLE DB  
- As tentativas de conexão podem falhar devido ao bloqueio da conta. Se isso ocorrer após a exibição do **logon do SQL Server** caixa de diálogo, a mensagem de erro de servidor é exibida para o usuário e a tentativa de conexão será anulada. Isso também pode ocorrer após a exibição do **alterar senha do SQL Server** caixa de diálogo se o usuário insere um valor incorreto para a senha antiga. Neste caso, a mesma mensagem de erro será exibida e a tentativa de conexão será anulada.  
+ As tentativas de conexão podem falhar devido ao bloqueio da conta. Se isso ocorrer após a exibição da caixa de diálogo **Logon do SQL Server**, a mensagem de erro do servidor será exibida para o usuário e a tentativa de conexão será anulada. Isso também poderá ocorrer após a exibição da caixa de diálogo **Alterar Senha do SQL Server** se o usuário inserir um valor incorreto para a senha antiga. Neste caso, a mesma mensagem de erro será exibida e a tentativa de conexão será anulada.  
   
 #### <a name="ole-db-connection-pooling-password-expiration-and-locked-accounts"></a>Contas bloqueadas, expiração de senha e pool de conexão do OLE DB  
  Uma conta pode ser bloqueada ou sua senha pode expirar enquanto a conexão ainda está ativa em um pool de conexão. O servidor verifica senhas expiradas e contas bloqueadas em duas ocasiões. A primeiro ao criar uma conexão pela primeira vez. A segunda ocasião é ao redefinir a conexão, quando ela é tirada do pool.  
@@ -75,7 +75,7 @@ ms.locfileid: "35611992"
  Quando a tentativa de redefinição falha, a conexão é removida do pool e um erro é retornado.  
   
 ### <a name="ole-db-programmatic-password-expiration"></a>Expiração de senha programática do OLE DB  
- O Driver OLE DB para SQL Server dá suporte à expiração de senha por meio da adição da propriedade SSPROP_AUTH_OLD_PASSWORD (tipo VT_BSTR) que foi adicionada ao conjunto de propriedades DBPROPSET_SQLSERVERDBINIT.  
+ O OLE DB Driver for SQL Server dá suporte à expiração de senha por meio da adição da propriedade SSPROP_AUTH_OLD_PASSWORD (tipo VT_BSTR) que foi adicionada ao conjunto de propriedades DBPROPSET_SQLSERVERDBINIT.  
   
  A propriedade "Password" existente referencia DBPROP_AUTH_PASSWORD e é usada para armazenar a nova senha.  
   
@@ -89,14 +89,14 @@ ms.locfileid: "35611992"
   
  Sempre que a propriedade "Old Password" é definida, o provedor supõe que está sendo feita uma tentativa de alterar a senha, a menos que a Autenticação do Windows também seja especificada; nesse caso, ela sempre terá precedência.  
   
- Se a autenticação do Windows for usada, especificar a senha antiga resulta em DB_E_ERRORSOCCURRED ou DB_S_ERRORSOCCURRED, dependendo se a senha antiga foi especificada como REQUIRED ou OPTIONAL respectivamente e o valor de status de dbpropstatus _ CONFLICTINGBADVALUE é retornado no *dwStatus*. Isso é detectado quando **IDBInitialize:: Initialize** é chamado.  
+ Se a Autenticação do Windows for usada, a especificação da senha antiga resultará em DB_E_ERRORSOCCURRED ou DB_S_ERRORSOCCURRED, dependendo de a senha antiga ter sido especificada como REQUIRED ou OPTIONAL, respectivamente, e o valor de status de DBPROPSTATUS_CONFLICTINGBADVALUE será retornado em *dwStatus*. Isto é detectado quando **IDBInitialize::Initialize** é chamado.  
   
  Se uma tentativa de alterar a senha falhar inesperadamente, o servidor retornará o código de erro 18468. Um erro OLEDB padrão é retornado da tentativa de conexão.  
   
  Para obter mais informações sobre o conjunto de propriedades DBPROPSET_SQLSERVERDBINIT, consulte [propriedades de inicialização e autorização](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md).  
 
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Recursos do Driver do OLE DB para SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md)  
   
   

@@ -17,40 +17,40 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 707db709188db15bc3627d65a2dba5a2bc516308
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852591"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38041397"
 ---
 # <a name="connecting-with-bcp"></a>Conectando com bcp
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-O [bcp](http://go.microsoft.com/fwlink/?LinkID=190626) utilitário está disponível na [!INCLUDE[msCoName](../../../includes/msconame_md.md)] o Driver ODBC para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] em Linux e macOS. Esta página documenta as diferenças da versão do Windows `bcp`.
+O utilitário [bcp](http://go.microsoft.com/fwlink/?LinkID=190626) está disponível no [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] em Linux e macOS. Esta página documenta as diferenças da versão do Windows do `bcp`.
   
 - O terminador de campo é um tab (“\t”).  
   
 - O terminador de linha é um newline (“\n”).  
   
-- Modo de caractere é o formato preferencial para `bcp` formatar arquivos e arquivos de dados que não contêm caracteres estendidos.  
+- O modo de caractere é o formato preferido para arquivos de formato `bcp` e de dados que não contenham caracteres estendidos.  
   
 > [!NOTE]  
-> Uma barra invertida '\\' em um argumento de linha de comando deve ser entre aspas ou ignorado. Por exemplo, para especificar uma nova linha como um terminador de linha personalizado, você deve usar um dos seguintes mecanismos:  
+> Uma barra invertida '\\' em um argumento de linha de comando deve ser colocada entre aspas ou usar caractere de escape. Por exemplo, para especificar uma nova linha como um terminador de linha personalizado, você deve usar um dos seguintes mecanismos:  
 >   
 > -   -r\\\n  
 > -   -r"\n"  
 > -   -r'\n'  
   
-A seguir está uma exemplo de invocação de comando `bcp` para copiar linhas da tabela para um arquivo de texto:  
+A seguir está um exemplo de invocação de comando `bcp` para copiar linhas da tabela para um arquivo de texto:  
   
 ```  
 bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.xxx  
 ```  
   
-## <a name="available-options"></a>Opções disponíveis
-Na versão atual, a seguinte sintaxe e opções estão disponíveis:  
+## <a name="available-options"></a>Opções Disponíveis
+Na versão atual, as seguintes sintaxes e opções estão disponíveis:  
 
-[*banco de dados ***.**]* esquema ***.*** tabela * **na** *data_file* | **out** *data_file*
+[*database***.**]* schema ***.*** table* **in** *data_file* | **out** *data_file*
 
 - -a *packet_size*  
 Especifica o número de bytes por pacote de rede enviado de e para o servidor.  
@@ -65,11 +65,11 @@ Usa um tipo de dados de caractere
 Especifica o banco de dados que deve ser conectado.  
   
 - -d  
-Faz com que o valor passado para o `bcp` opção -S deve ser interpretado como um nome de fonte de dados (DSN). Para obter mais informações, consulte "Sn Support in sqlcmd e bcp" em [conectando com sqlcmd](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md).  
+Faz com que o valor passado para a opção -S do `bcp` seja interpretada como um nome da fonte de dados (DSN). Para obter mais informações, consulte "Suporte para SN em sqlcmd e bcp" em [Como conectar-se com sqlcmd](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md).  
   
-- -e *error_file* Especifica o caminho completo de um arquivo de erro usado para armazenar as linhas que o `bcp` utilitário não puder transferir do arquivo para o banco de dados.  
+- -e *error_file* Especifica o caminho completo de um arquivo de erro usado para armazenar as linhas que o utilitário `bcp` não puder transferir do arquivo para o banco de dados.  
   
-- -e  
+- -E  
 Usa um valor ou valores de identidade no arquivo de dados importados para a coluna de identidade.  
   
 - -f *format_file*  
@@ -82,13 +82,13 @@ Especifica o número da primeira linha que deve ser exportada de uma tabela ou i
 Especifica que colunas vazias devem reter um valor nulo durante a operação, em vez de qualquer valor padrão nas colunas inseridas.  
   
 - -l  
-Especifica um tempo limite de logon. A opção – l Especifica o número de segundos antes que um logon para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] o tempo limite ao tentar conectar a um servidor. O tempo de limite de logon padrão é 15 segundos. O tempo limite de logon deve ser um número entre 0 e 65534. O `bcp` irá gerar uma mensagem de erro se o valor fornecido não for numérico ou não estiver nesse intervalo. Um valor de 0 especifica um tempo limite infinito.
+Especifica um tempo limite de logon. A opção –l especifica o número de segundos antes que um logon no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] expire quando você tentar se conectar a um servidor. O tempo de limite de logon padrão é 15 segundos. O tempo limite do logon deve ser um número entre 0 e 65534. O `bcp` irá gerar uma mensagem de erro se o valor fornecido não for numérico ou não estiver nesse intervalo. Um valor de 0 especifica um tempo limite infinito.
   
 - -L *last_row*  
 Especifica o número da última linha a ser exportada de uma tabela ou importada de um arquivo de dados.  
   
 - -m *max_errors*  
-Especifica o número máximo de erros de sintaxe que podem ocorrer antes do `bcp` operação foi cancelada.  
+Especifica o número máximo de erros de sintaxe que podem ocorrer antes da operação `bcp` ser cancelada.  
   
 - -n  
 Usa os tipos de dados nativos (do banco de dados) dos dados para realizar uma operação de cópia em massa.  
@@ -106,18 +106,18 @@ Especifica o terminador de linha.
 Especifica que dados de moeda, data e horário são copiados em massa no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] usando o formato regional definido para as configurações de localidade do computador cliente.  
   
 - -S *server*  
-Especifica o nome do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] instância a ser conectado, ou se -D for usado, um DSN.  
+Especifica o nome da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] instância a ser conectado, ou se -D for usado, um DSN.  
   
 - -t *field_terminator*  
 Especifica o terminador de campo.  
   
 - -T  
-Especifica que o `bcp` utilitário conectem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] com uma conexão confiável (segurança integrada).  
+Especifica que o utilitário `bcp` se conecta ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] com uma conexão confiável (segurança integrada).  
   
 - -U *login_id*  
 Especifica a ID de logon usada para conectar-se ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
   
-- -v  
+- -V  
 Informa o número de versão e copyright do utilitário `bcp`.  
   
 - -w  
@@ -125,8 +125,8 @@ Executa a operação de cópia em massa usando caracteres Unicode.
   
 Nesta versão, há suporte para caracteres Latin-1 e UTF-16.  
   
-## <a name="unavailable-options"></a>Opções indisponíveis
-Na versão atual, a seguinte sintaxe e opções não estão disponíveis:  
+## <a name="unavailable-options"></a>Opções Não Disponíveis
+Na versão atual, as seguintes sintaxes e opções não estão disponíveis:  
 
 - -c  
 Especifica a página de código dos dados no arquivo de dados.  
@@ -149,6 +149,6 @@ Usa tipos de dados de uma versão anterior do [!INCLUDE[ssNoVersion](../../../in
 - -X  
 Usado com as opções format e -f format_file, gera um arquivo em formato baseado em XML, em vez do arquivo em formato não XML padrão.  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 
 [Conectando com **sqlcmd**](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)  

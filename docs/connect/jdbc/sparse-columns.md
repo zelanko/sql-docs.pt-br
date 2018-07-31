@@ -15,24 +15,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e2aa31ce2f41c8308025fd2648f18caf7ad8e04c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851681"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38020972"
 ---
 # <a name="sparse-columns"></a>Colunas esparsas
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   Colunas esparsas são colunas comuns que têm um armazenamento otimizado para valores nulos. Elas reduzem os requisitos de espaço para valores nulos à custa de maior sobrecarga para recuperar valores não nulos. Considere o uso de colunas esparsas quando o espaço salvo for pelo menos de 20 a 40 por cento.  
   
- O [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] JDBC Driver 3.0 oferece suporte a colunas esparsas quando você se conectar a um [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] (ou posterior) server. Você pode usar [Getcolumns](../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md), [sqlserverdatabasemetadata. Getfunctioncolumns](../../connect/jdbc/reference/getfunctioncolumns-method-sqlserverdatabasemetadata.md), ou [sqlserverdatabasemetadata. Getprocedurecolumns](../../connect/jdbc/reference/getprocedurecolumns-method-sqlserverdatabasemetadata.md) para determinar qual coluna é esparsa e qual coluna é a coluna de conjunto de coluna.  
+ O JDBC Driver 3.0 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] dá suporte a colunas esparsas quando você se conecta a um servidor [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] (ou posterior). Você pode usar [SQLServerDatabaseMetaData.getColumns](../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md), [SQLServerDatabaseMetaData.getFunctionColumns](../../connect/jdbc/reference/getfunctioncolumns-method-sqlserverdatabasemetadata.md) ou [SQLServerDatabaseMetaData.getProcedureColumns](../../connect/jdbc/reference/getprocedurecolumns-method-sqlserverdatabasemetadata.md) para determinar qual coluna é esparsa e qual coluna é a coluna do conjunto de colunas.  
   
  Conjuntos de coluna são colunas computadas que retornam todas as colunas esparsas na forma de XML sem tipo. Considere o uso de conjuntos de colunas quando o número de colunas em uma tabela for grande ou maior que 1024, ou quando trabalhar nessas colunas esparsas individualmente for difícil. Um conjunto de colunas pode conter até 30.000 colunas.  
   
 ## <a name="example"></a>Exemplo  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Descrição  
  Este exemplo demonstra como detectar conjuntos de colunas. Ele também mostra como analisar a saída XML de um conjunto de colunas para obter os dados das colunas esparsas.  
   
  O primeiro código que lista o Transact-SQL a ser executado no servidor.  
@@ -189,7 +189,7 @@ public class SparseColumns {
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Melhorando o desempenho e a confiabilidade com o JDBC Driver](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)  
   
   

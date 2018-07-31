@@ -19,19 +19,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 717e9da58a28daccb6fdfab18f1c3423d9d310df
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: f04b6729f97efdacdc79b035eda9f43c6458d61d
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665156"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109338"
 ---
 # <a name="data-types-ole-db"></a>Tipos de dados (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Para executar [!INCLUDE[tsql](../../../includes/tsql-md.md)] instruções e processar os resultados usando o Driver OLE DB para SQL Server, você deve saber como o Driver OLE DB para SQL Server mapeia [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipos de dados para tipos de dados OLE DB ao associar parâmetros ou colunas em um conjunto de linhas e quando ele u SES o **ITableDefinition** interface para criar uma tabela no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Para executar instruções [!INCLUDE[tsql](../../../includes/tsql-md.md)] e processar os resultados usando o OLE DB Driver for SQL Server, você precisa saber como o OLE DB Driver for SQL Server mapeia tipos de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para tipos de dados do OLE DB quando associa parâmetros ou colunas em um conjunto de linhas e quando usa a interface **ITableDefinition** para criar uma tabela no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
@@ -41,7 +41,7 @@ ms.locfileid: "35665156"
   
 -   [Estrutura SSVARIANT](../../oledb/ole-db-data-types/ssvariant-structure.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Programação no Driver do OLE DB para SQL Server](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

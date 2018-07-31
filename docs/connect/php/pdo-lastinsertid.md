@@ -14,17 +14,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a04c7db3b146f3b4ee936ff2b98947222f5e471b
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 69792c6f6383cb75ae66fa279d343ede6977f99b
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308545"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38983368"
 ---
 # <a name="pdolastinsertid"></a>PDO::lastInsertId
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Retorna o identificador para a linha inserida mais recentemente em uma tabela no banco de dados. A tabela deve ter uma coluna IDENTITY NOT NULL. Se for fornecido um nome de sequência, `lastInsertId` retorna inserida mais recentemente o número de sequência para o nome da sequência fornecido (para obter mais informações sobre números de sequência, consulte [aqui](https://docs.microsoft.com/en-us/sql/relational-databases/sequence-numbers/sequence-numbers)).
+Retorna o identificador para a linha inserida mais recentemente em uma tabela no banco de dados. A tabela deve ter uma coluna IDENTITY NOT NULL. Se um nome de sequência for fornecido, `lastInsertId` retorna inserida mais recentemente o número de sequência para o nome da sequência fornecida (para obter mais informações sobre números de sequência, consulte [aqui](https://docs.microsoft.com/sql/relational-databases/sequence-numbers/sequence-numbers)).
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -34,18 +34,18 @@ string PDO::lastInsertId ([ $name = NULL ] );
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
-$*nome*: uma cadeia de caracteres opcional que permite que você especifique um nome de sequência. 
+$*name*: uma cadeia de caracteres opcional que permite especificar um nome de sequência. 
   
 ## <a name="return-value"></a>Valor retornado  
-Se nenhum nome de sequência for fornecido, uma cadeia de caracteres do identificador para a linha adicionada mais recentemente.
-Se um nome de sequência for fornecido, uma cadeia de caracteres do identificador para a sequência adicionada mais recentemente.
-Se a chamada de método falhar, cadeia de caracteres vazia é retornada.
+Se nenhum nome de sequência for fornecido, uma cadeia de caracteres do identificador para a linha é adicionada mais recentemente.
+Se um nome de sequência for fornecido, uma cadeia de caracteres do identificador para a sequência mais recentemente adicionado.
+Se a chamada de método falhar, a cadeia de caracteres vazia será retornada.
   
 ## <a name="remarks"></a>Remarks  
 O suporte para PDO foi adicionado na versão 2.0 dos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
 Entre as versões 2.0 e 4.3, o parâmetro opcional é um nome de tabela e o valor de retorno é a ID da linha mais recentemente adicionada à tabela fornecida.
-Começando com 5.0, o parâmetro opcional é considerado como um nome de sequência e o valor de retorno é a sequência adicionada mais recentemente para o nome da sequência fornecido.
-Se for fornecido um nome de tabela para versões 4.3, depois de `lastInsertId` retorna uma cadeia de caracteres vazia.
+A partir do 5.0, o parâmetro opcional é considerado como um nome de sequência e o valor de retorno é a sequência mais recentemente adicionada para o nome da sequência fornecida.
+Se for fornecido um nome de tabela para as versões após 4.3, `lastInsertId` retorna uma cadeia de caracteres vazia.
 Há suporte para sequências apenas no SQL Server 2012 e versões posteriores.
   
 ## <a name="example"></a>Exemplo  
@@ -143,7 +143,7 @@ try{
 ?>
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Classe PDO](../../connect/php/pdo-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

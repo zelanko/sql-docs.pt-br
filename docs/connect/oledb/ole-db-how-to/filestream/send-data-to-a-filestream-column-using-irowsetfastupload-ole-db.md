@@ -14,15 +14,15 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 070e8022ffc0840f88f7b8e5b0b03abcd2f13dc3
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: a708966a35ef6311cf6912a988bcf4822f53b6f3
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666186"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106552"
 ---
 # <a name="send-data-to-a-filestream-column-using-irowsetfastupload-ole-db"></a>Enviar dados para uma coluna FILESTREAM usando IRowsetFastUpload (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 
@@ -31,9 +31,9 @@ ms.locfileid: "35666186"
  Para obter mais informações sobre o recurso filestream, consulte [suporte a FILESTREAM](../../../oledb/features/filestream-support.md).  
   
 ## <a name="example"></a>Exemplo  
- Antes de compilar e executar esse exemplo, habilitar o suporte a FILESTREAM ([Enable and Configure FILESTREAM](../../../../relational-databases/blob/enable-and-configure-filestream.md)).  
+ Antes de compilar e executar esse exemplo, habilitar o suporte a FILESTREAM ([habilitar e configurar FILESTREAM](../../../../relational-databases/blob/enable-and-configure-filestream.md)).  
   
- Verifique se que a variável de ambiente INCLUDE inclui o diretório que contém msoledbsql.h.  
+ Verifique se a variável de ambiente INCLUDE inclui o diretório que contém msoledbsql.h.  
   
  O servidor deve ter o diretório C:\DBFsa; é onde o exemplo criará o banco de dados. Sua instância do [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] deve ter acesso de gravação neste local (por exemplo, faça logon como uma conta de sistema local).  
   

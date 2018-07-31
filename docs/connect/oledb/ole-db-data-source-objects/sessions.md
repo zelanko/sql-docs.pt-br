@@ -1,6 +1,6 @@
 ---
 title: Sessões | Microsoft Docs
-description: Sessões no Driver do OLE DB para SQL Server
+description: Sessões no OLE DB Driver for SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -17,27 +17,27 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 9bc74a5ee3fb461f641e55f3fdf9e9d540130f67
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: ecb43b33acd7c2e95cf9b1335ead2ec7a42939fa
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666166"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106822"
 ---
 # <a name="sessions"></a>Sessões
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Um Driver OLE DB para a sessão do SQL Server representa uma única conexão a uma instância de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Um Driver OLE DB para a sessão do SQL Server representa uma única conexão a uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- O Driver OLE DB para SQL Server requer que as sessões delimitem espaço de transação para uma fonte de dados. Todos os objetos de comando criados de um objeto de sessão específico participam da transação local ou distribuída do objeto de sessão.  
+ O Driver do OLE DB para SQL Server requer que as sessões delimitem espaço de transação para uma fonte de dados. Todos os objetos de comando criados de um objeto de sessão específico participam da transação local ou distribuída do objeto de sessão.  
   
  O primeiro objeto de sessão criado na fonte de dados inicializada recebe a conexão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] estabelecida na inicialização. Quando todas as referências nas interfaces do objeto de sessão são liberadas, a conexão com a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] torna-se disponível a outro objeto de sessão criado na fonte de dados.  
   
  Um objeto de sessão adicional criado na fonte de dados estabelece sua própria conexão com a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] conforme especificado pela fonte de dados. A conexão com a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é cancelada quando o aplicativo libera todas as referências aos objetos criados naquela sessão.  
   
- O exemplo a seguir demonstra como usar o Driver OLE DB para SQL Server para se conectar a um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] banco de dados:  
+ O exemplo a seguir demonstra como usar o Driver do OLE DB para SQL Server para se conectar a um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] banco de dados:  
   
 ```  
 int main()  
@@ -186,14 +186,14 @@ EXIT:
 }  
 ```  
   
- Conectar-se o Driver do OLE DB para objetos de sessão do SQL Server para uma instância de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pode gerar uma sobrecarga significativa para aplicativos que criam e liberam objetos de sessão. A sobrecarga pode ser minimizada ao gerenciar Driver OLE DB para objetos de sessão do SQL Server com eficiência. OLE DB Driver para aplicativos do SQL Server pode manter o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] conexão de um objeto de sessão ativo, mantendo uma referência pelo menos uma interface do objeto.  
+ A conexão de objetos de sessão do OLE DB Driver for SQL Server com uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pode gerar uma sobrecarga significativa nos aplicativos que criam e liberam continuamente objetos de sessão. A sobrecarga pode ser minimizada por meio do gerenciamento de Driver do OLE DB para objetos de sessão do SQL Server com eficiência. Os aplicativos do OLE DB Driver for SQL Server podem manter ativa a conexão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de um objeto de sessão, mantendo uma referência em, pelo menos, uma interface do objeto.  
   
- Por exemplo, manter um pool de referências a objeto de criação de comando mantém ativas as conexões a esses objetos de sessão no pool. Como objetos de sessão são necessários, o código de manutenção do pool transmite um válido **IDBCreateCommand** ponteiro de interface para o método de aplicativo que solicita a sessão. Quando o método do aplicativo não necessita mais da sessão, o método retorna o ponteiro de interface para o código de manutenção do pool em vez de liberar a referência do aplicativo ao objeto de criação de comando.  
+ Por exemplo, manter um pool de referências a objeto de criação de comando mantém ativas as conexões a esses objetos de sessão no pool. Como os objetos de sessão são necessários, o código de manutenção do pool passa um ponteiro de interface **IDBCreateCommand** válido para o método de aplicativo que solicita a sessão. Quando o método do aplicativo não necessita mais da sessão, o método retorna o ponteiro de interface para o código de manutenção do pool em vez de liberar a referência do aplicativo ao objeto de criação de comando.  
   
 > [!NOTE]  
->  No exemplo anterior, o **IDBCreateCommand** interface é usada como o **ICommand** interface implementa o **GetDBSession** método, o único método no escopo de conjunto de linhas ou de comando que permite que um objeto determinar a sessão na qual ele foi criado. Portanto, um objeto de comando, e somente um objeto de comando, permite que um aplicativo recupere um ponteiro de objeto de fonte de dados a partir do qual outras sessões são criadas.  
+>  No exemplo anterior, a interface **IDBCreateCommand** é usada porque a interface **ICommand** implementa o método **GetDBSession**, o único método no escopo do comando ou do conjunto de linhas que permite que um objeto determine a sessão na qual ele foi criado. Portanto, um objeto de comando, e somente um objeto de comando, permite que um aplicativo recupere um ponteiro de objeto de fonte de dados a partir do qual outras sessões são criadas.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Objetos de fonte de dados &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

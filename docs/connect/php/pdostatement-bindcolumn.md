@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b01f19dcb7b55da9c547d07d07784fe1730cdd66
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308445"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38006888"
 ---
 # <a name="pdostatementbindcolumn"></a>PDOStatement::bindColumn
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,15 +34,15 @@ bool PDOStatement::bindColumn($column, &$param[, $type[, $maxLen[, $driverdata ]
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
-$*coluna*: O número (misto) da coluna (índice de base 1) ou o nome da coluna no conjunto de resultados.  
+$*column*: o número da coluna (misto, índice baseado em 1) ou o nome da coluna no conjunto de resultados.  
   
-&$*param*: O nome (misto) da variável PHP à qual a coluna será associada.  
+&$*param*: o nome (misto) da variável PHP à qual a coluna será associada.  
   
-$*tipo*: O tipo de dados opcional do parâmetro, representado por uma constante PDO::PARAM_ *.  
+$*type*: o tipo de dados opcional do parâmetro, representando por uma constante PDO::PARAM_*.  
   
 $*maxLen*: inteiro opcional, não usado pelos Drivers da Microsoft para PHP para SQL Server.  
   
-$*driverdata*: mistos opcionais parâmetros para o driver. Por exemplo, você poderia especificar PDO::SQLSRV_ENCODING_UTF8 para associar a coluna a uma variável como uma cadeia de caracteres codificada em UTF-8.  
+$*driverdata*: um ou mais parâmetros mistos opcionais para o driver. Por exemplo, você poderia especificar PDO::SQLSRV_ENCODING_UTF8 para associar a coluna a uma variável como uma cadeia de caracteres codificada em UTF-8.  
   
 ## <a name="return-value"></a>Valor retornado  
 TRUE se bem-sucedido; caso contrário, FALSE.  
@@ -70,7 +70,7 @@ while ( $row = $stmt->fetch( PDO::FETCH_BOUND ) ){
 ?>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [PDOStatement Class](../../connect/php/pdostatement-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

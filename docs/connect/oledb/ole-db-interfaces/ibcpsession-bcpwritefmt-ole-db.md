@@ -1,6 +1,6 @@
 ---
 title: 'Ibcpsession:: Bcpwritefmt (OLE DB) | Microsoft Docs'
-description: 'Usando ibcpsession:: Bcpwritefmt para salvar os arquivos de formato em formato xml ou texto (OLE DB)'
+description: 'Usando ibcpsession:: Bcpwritefmt para salvar os arquivos de formato em formato de texto ou xml (OLE DB)'
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: f7ca4586cc14d98e8d5a714e314b2c1ee157ae15
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: fdf1bb0c38382c42d9c2a292fe3b901c3cf45e3c
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689409"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107808"
 ---
 # <a name="ibcpsessionbcpwritefmt-ole-db"></a>IBCPSession::BCPWriteFmt (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -43,11 +43,11 @@ HRESULT BCPWriteFmt(
 ```  
   
 ## <a name="remarks"></a>Remarks  
- O arquivo de formato especifica o formato de dados de um arquivo de dados criado por cópia em massa. Chamadas para o [ibcpsession:: BCPColumns](../../oledb/ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md) e [ibcpsession:: BCPColFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) métodos definem o formato do arquivo de dados. O método **BCPWriteFmt** salva essa definição no arquivo referenciado pelo argumento pwszFormatFile.  
+ O arquivo de formato especifica o formato de dados de um arquivo de dados criado por cópia em massa. As chamadas aos métodos [IBCPSession::BCPColumns](../../oledb/ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md) e [IBCPSession::BCPColFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) definem o formato do arquivo de dados. O método **BCPWriteFmt** salva essa definição no arquivo referenciado pelo argumento pwszFormatFile.  
   
- O método **BCPWriteFmt** pode salvar os arquivos de formato em xml ou formato de texto. Isso deve ser indicado usando o controle bcp_option_xml com o [ibcpsession:: Bcpcontrol](../../oledb/ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md) método.  
+ O método **BCPWriteFmt** pode salvar os arquivos de formato em xml ou formato de texto. Isso precisa ser indicado usando a opção de controle BCP_OPTION_XML com o método [IBCPSession::BCPControl](../../oledb/ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md).  
   
- Para carregar um arquivo de formato salvo, use o [ibcpsession:: Bcpreadfmt](../../oledb/ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md) método.  
+ Para carregar um arquivo de formato salvo, use o método [IBCPSession::BCPReadFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md).  
   
 ## <a name="arguments"></a>Argumentos  
  *pwszFormatFile*[in]  
@@ -58,15 +58,15 @@ HRESULT BCPWriteFmt(
  O método foi bem-sucedido.  
   
  E_FAIL  
- Ocorreu um erro específico do provedor; Para obter informações detalhadas, use o [ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) interface.  
+ Um erro específico do provedor ocorreu. Para obter informações detalhadas, use a interface [ISQLServerErrorInfo](http://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1).  
   
  E_OUTOFMEMORY  
  Erro de memória insuficiente.  
   
  E_UNEXPECTED  
- A chamada para o método era inesperada. Por exemplo, o [ibcpsession:: BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) método não foi chamado antes de chamar esse método.  
+ A chamada para o método era inesperada. Por exemplo, o método [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) não foi chamado antes desse método.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
  [Executando operações de cópia em massa](../../oledb/features/performing-bulk-copy-operations.md) 
   

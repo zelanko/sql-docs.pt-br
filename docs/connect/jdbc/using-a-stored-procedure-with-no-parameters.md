@@ -15,25 +15,25 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7db021b9d3fdf875c2c6074159b56d8e6cb0fd14
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851231"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37992918"
 ---
 # <a name="using-a-stored-procedure-with-no-parameters"></a>Usando um procedimento armazenado sem parâmetros
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  O tipo mais simples de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] procedimento armazenado que você pode chamar é aquele que não contém parâmetros e retorna um único conjunto de resultados. O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fornece o [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) classe, que você pode usar para chamar esse tipo de procedimento armazenado e processar os dados que ele retorna.  
+  O tipo mais simples de procedimento armazenado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] que é possível chamar é aquele que não contém parâmetros e retorna um único conjunto de resultados. O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fornece a classe [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), que pode ser usada para chamar esse tipo de procedimento armazenado e processar os dados retornados.  
   
- Quando você usa o driver JDBC para chamar um procedimento armazenado sem parâmetros, você deve usar o `call` sequência de escape do SQL. A sintaxe para a `call` sequência de escape sem parâmetros é da seguinte maneira:  
+ Ao usar o driver JDBC para chamar um procedimento armazenado sem parâmetros, você deve usar a sequência de escape SQL `call`. A sintaxe da sequência de escape `call` sem parâmetros é a seguinte:  
   
  `{call procedure-name}`  
   
 > [!NOTE]  
->  Para obter mais informações sobre sequências de escape SQL, consulte [usando sequências de Escape SQL](../../connect/jdbc/using-sql-escape-sequences.md).  
+>  Para obter mais informações sobre as sequências de escape SQL, consulte [usando sequências de Escape SQL](../../connect/jdbc/using-sql-escape-sequences.md).  
   
- Por exemplo, crie o seguinte procedimento armazenado no [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] banco de dados de exemplo:  
+ Como exemplo, crie o seguinte procedimento armazenado no banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]:  
   
 ```  
 CREATE PROCEDURE GetContactFormalNames   
@@ -46,7 +46,7 @@ END
   
  Esse procedimento armazenado retorna um único conjunto de resultados que contém uma coluna de dados, uma combinação do título, do nome e do sobrenome dos dez primeiros contatos presentes na tabela Person.Contact.  
   
- No exemplo a seguir, uma conexão aberta para o [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] banco de dados de exemplo é passado para a função e o [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) método é usado para chamar o procedimento armazenado GetContactFormalNames.  
+ No exemplo a seguir, uma conexão aberta com o banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] é passada para a função, e o método [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) é usado para chamar o procedimento armazenado GetContactFormalNames.  
   
 ```  
 public static void executeSprocNoParams(Connection con) {  
@@ -66,7 +66,7 @@ public static void executeSprocNoParams(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Usando instruções com procedimentos armazenados](../../connect/jdbc/using-statements-with-stored-procedures.md)  
   
   

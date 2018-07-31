@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 639ff09c2c739e99b974c1b4df7d4963b7959e94
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308985"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983016"
 ---
 # <a name="pdostatementfetchall"></a>PDOStatement::fetchAll
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,9 +36,9 @@ array PDOStatement::fetchAll([ $fetch_style[, $column_index ][, ctor_args]] );
 #### <a name="parameters"></a>Parâmetros  
 $*fetch_style*: um símbolo (inteiro) especificando o formato dos dados da linha. Consulte [PDOStatement::fetch](../../connect/php/pdostatement-fetch.md) para obter uma lista de valores. PDO::FETCH_COLUMN também é permitido. PDO::FETCH_BOTH é o padrão.  
   
-$*column_index*: um valor inteiro que representa a coluna a ser retornada se $*fetch_style* é PDO:: fetch_column. 0 é o padrão.  
+$*column_index*: um valor inteiro que representa a coluna a ser retornada se $*fetch_style* for PDO::FETCH_COLUMN. 0 é o padrão.  
   
-$*ctor_args*: uma matriz de parâmetros para um construtor de classe quando $*fetch_style* é fetch_class ou PDO:: fetch_obj.  
+$*ctor_args*: uma matriz de parâmetros para um construtor de classe quando $*fetch_style* é PDO::FETCH_CLASS ou PDO::FETCH_OBJ.  
   
 ## <a name="return-value"></a>Valor retornado  
 Uma matriz das linhas restantes do conjunto de resultados, ou false em caso de falha na chamada do método.  
@@ -87,7 +87,7 @@ O suporte para PDO foi adicionado na versão 2.0 dos [!INCLUDE[ssDriverPHP](../.
 ?>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [PDOStatement Class](../../connect/php/pdostatement-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

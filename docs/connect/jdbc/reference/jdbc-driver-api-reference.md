@@ -1,7 +1,7 @@
 ---
-title: Referência da API do JDBC Driver | Microsoft Docs
+title: Referência de API do JDBC Driver | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2018
+ms.date: 07/19/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,56 +14,82 @@ caps.latest.revision: 46
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2b9dc05cfa6e96fc3dd987095917a932883df4e2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 14e597d2788e57eb49903f52ebd40132ead9a35f
+ms.sourcegitcommit: c37da15581fb34250d426a8d661f6d0d64f9b54c
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843172"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39174903"
 ---
 # <a name="jdbc-driver-api-reference"></a>Referência de API do JDBC Driver
+
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  O [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] fornece uma API que pode ser usada em Java código de programação para se conectar a e interagir com um [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] banco de dados.  
-  
+O [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] fornece uma API que pode ser usada no código de programação Java para se conectar a um banco de dados do [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] e interagir com ele.
+
+
+
+### <a name="javadocio-website-is-primary"></a>Site JavaDoc.io é primário
+
+A documentação de referência de API do Microsoft JDBC está hospedada para sua exibição no site da JavaDoc.io. JavaDoc.io agora é nosso site primário para documentação de referência do JDBC. Nossa documentação de referência do JDBC em JavaDoc.io está disponível no seguinte link direto:
+
+- [https://javadoc.io/doc/com.microsoft.sqlserver/mssql-jdbc/](https://javadoc.io/doc/com.microsoft.sqlserver/mssql-jdbc/)
+
+JavaDoc.io tem nossa documentação de referência do JDBC começando com a versão 6.0.
+
+#### <a name="only-legacy-jdbc-documentation-is-here-on-docs"></a>Documentação do JDBC somente herdada está aqui no Docs
+
+A documentação de referência de API do JDBC aqui artigos sobre **https://docs.microsoft.com/sql/connect/jdbc/reference/** não estão mais sendo atualizadas quando as classes do JDBC são atualizadas para novas versões. No entanto, os artigos aqui contêm todos os a referência para versões do JDBC 4.1 e 4.2.
+
+Documentação de versão do JDBC 6.0 e algumas versões posteriores, também está aqui. Mas, para qualquer versão 6.0 ou posterior, use o site JavaDoc.io.
+
+
+
+### <a name="important-notes"></a>Observações importantes
+
 > [!NOTE]  
 >  Para obter informações conceituais sobre como usar o driver JDBC, consulte [visão geral do Driver JDBC](../../../connect/jdbc/overview-of-the-jdbc-driver.md).  
   
 > [!IMPORTANT]  
->  Para JDBC 4.1 e 4.2 suporte de conformidade, use o Microsoft JDBC Driver 4.2 (ou superior) para o SQL Server. As versões anteriores do Microsoft JDBC Drivers 4.1 e 4.0 não dão suporte aos novos métodos introduzidos com JDBC 4.1 ou 4.2.  
+>  Para obter o suporte de conformidade do JDBC 4.1 e 4.2, use o Microsoft JDBC Driver 4.2 (ou superior) for SQL Server. As versões anteriores do Microsoft JDBC Drivers 4.1 e 4.0 não dão suporte aos novos métodos introduzidos com JDBC 4.1 ou 4.2.  
 >   
->  Detalhes de API para conformidade JDBC 4.1 não estão nesta seção. Consulte [JDBC 4.1 conformidade para o Driver JDBC](../../../connect/jdbc/jdbc-4-1-compliance-for-the-jdbc-driver.md).  
+>  Detalhes de API para conformidade JDBC 4.1 não estão nesta seção. Confira [Conformidade do JDBC 4.1 com o JDBC Driver](../../../connect/jdbc/jdbc-4-1-compliance-for-the-jdbc-driver.md).  
 >   
->  Detalhes de API para conformidade JDBC 4.2 não estão nesta seção. Consulte [JDBC 4.2 conformidade para o Driver JDBC](../../../connect/jdbc/jdbc-4-2-compliance-for-the-jdbc-driver.md).  
+>  Detalhes de API para conformidade JDBC 4.2 não estão nesta seção. Confira [Conformidade do JDBC 4.2 com o JDBC Driver](../../../connect/jdbc/jdbc-4-2-compliance-for-the-jdbc-driver.md).  
 >   
->  Detalhes de API de cópia em massa, disponível a partir do Microsoft JDBC Driver 4.2 para SQL Server, não são encontrados nesta seção. Consulte [usando a cópia em massa com o Driver JDBC](../../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md).  
+>  Detalhes de API para a Cópia em Massa, disponíveis do Microsoft JDBC Driver 4.2 for SQL Server em diante, não são encontrados nesta seção. Confira [Usando a cópia em massa com o JDBC Driver](../../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md).  
 >   
->  Detalhes de API para sempre criptografado disponível iniciando com o Microsoft JDBC Driver 6.0 para SQL Server, não são encontrados nesta seção. Consulte [sempre criptografado referência de API para o Driver JDBC](../../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)  
+>  Detalhes de API para o Always Encrypted, disponíveis do Microsoft JDBC Driver 6.0 for SQL Server em diante, não são encontradas nesta seção. Confira [Referência de API do Always Encrypted para o JDBC Driver](../../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)  
 >   
->  Detalhes de API para parâmetros de Using Table-Valued, disponível a partir do Microsoft JDBC Driver 6.0 para SQL Server, não são encontrados nesta seção. Consulte [usando parâmetros com valor de tabela](../../../connect/jdbc/using-table-valued-parameters.md)  
+>  Detalhes de API para parâmetros de Using Table-Valued, disponível a partir do Microsoft JDBC Driver 6.0 para SQL Server, não são encontrados nesta seção. Confira [Usando parâmetros com valor de tabela](../../../connect/jdbc/using-table-valued-parameters.md)  
 >   
->  Microsoft JDBC Driver 6.4 dá suporte à compilação com JDK 7.0, 8.0 e 9.0.  
+>  O Microsoft JDBC Driver 6.4 dá suporte à compilação com o JDK 7.0, 8.0 e 9.0.  
 >   
->  6.2 do Microsoft JDBC Driver dá suporte à compilação com JDK 7.0 e 8.0.  
+>  O Microsoft JDBC Driver 6.2 dá suporte à compilação com o JDK 7.0 e 8.0.  
 >   
->  Microsoft JDBC Drivers 6.0 e compilação de suporte 4.2 com JDK 5.0, 6.0, 7.0 e 8.0.  
+>  Os Microsoft JDBC Drivers 6.0 e 4.2 dão suporte à compilação com o JDK 5.0, 6.0, 7.0 e 8.0.  
 >   
 >  Microsoft JDBC Driver 4.1 dá suporte à compilação com JDK 5.0, 6.0 e 7.0.  
 
+
+
 ## <a name="interfaces"></a>Interfaces  
   
-|Nome da interface|Description|  
+|Nome da interface|Descrição|  
 |--------------------|-----------------|  
 |[Interface ISQLServerCallableStatement](../../../connect/jdbc/reference/isqlservercallablestatement-interface.md)|Permite especificar o nome do procedimento armazenado para chamar juntamente com os parâmetros de entrada e saída.|  
-|[Interface ISQLServerConnection](../../../connect/jdbc/reference/isqlserverconnection-interface.md)|Representa uma conexão JDBC para um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] banco de dados.|  
-|[Classe SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)|Representa uma lista de propriedades específicas para se conectar a um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] banco de dados usando um [ISQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) objeto.|  
+|[Interface ISQLServerConnection](../../../connect/jdbc/reference/isqlserverconnection-interface.md)|Representa uma conexão JDBC com um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].|  
+|[Classe SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)|Representa uma lista de propriedades específicas da conexão com um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] usando um objeto [ISQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).|  
 |[ISQLServerPreparedStatement](../../../connect/jdbc/reference/isqlserverpreparedstatement-interface.md)|Representa a implementação básica da funcionalidade de instrução preparada JDBC.|  
 |[ISQLServerResultSet](../../../connect/jdbc/reference/isqlserverresultset-interface.md)|Representa um conjunto de resultados JDBC.|  
-|[ISQLServerStatement](../../../connect/jdbc/reference/isqlserverstatement-interface.md)|Representa a implementação básica da funcionalidade de instrução JDBC.|  
+|[ISQLServerStatement](../../../connect/jdbc/reference/isqlserverstatement-interface.md)|Representa a implementação básica da funcionalidade de instrução JDBC.|
+| &nbsp; | &nbsp; |
+
+
   
 ## <a name="classes"></a>Classes  
   
-|Nome de classe|Description|  
+|Nome de classe|Descrição|  
 |----------------|-----------------|  
 |[DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md)|Representa um objeto do tipo microsoft.sql.DateTimeOffset.|  
 |[SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-class.md)|Representa um BLOB (objeto binário grande).|  
@@ -72,9 +98,9 @@ ms.locfileid: "32843172"
 |[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)|Implementa ISQLServerConnectopn.|  
 |[SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)|Representa conexões de banco de dados físicas para gerentes de pool de conexões.|  
 |[SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)|Representa os metadados do banco de dados.|  
-|[SQLServerDataSource](../../../connect/jdbc/reference/isqlserverdatasource-interface.md)|Representa uma lista de propriedades específicas para se conectar a um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] banco de dados usando um [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) objeto.|  
+|[SQLServerDataSource](../../../connect/jdbc/reference/isqlserverdatasource-interface.md)|Representa uma lista de propriedades específicas da conexão com um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] usando um objeto [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).|  
 |[SQLServerDataSourceObjectFactory](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-class.md)|Representa um alocador de objeto para materializar fontes de dados da JNDI (Java Naming and Directory Interface).|  
-|[SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-class.md)|Representa o JDBC driver. Essa classe inclui métodos para se conectar a um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] banco de dados e para obter informações sobre o driver JDBC.|  
+|[SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-class.md)|Representa o JDBC driver. Essa classe inclui métodos para se conectar a um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] e para obter informações sobre o driver JDBC.|  
 |[SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)|Representa uma execução malsucedida ou incompleta de uma instrução SQL.|  
 |[Classe SQLServerNClob](../../../connect/jdbc/reference/sqlservernclob-class.md)|Representa um CLOB que usa o conjunto de caracteres nacional.|  
 |[SQLServerParameterMetaData](../../../connect/jdbc/reference/sqlserverparametermetadata-class.md)|Representa os metadados para parâmetros de instrução preparada.|  
@@ -86,10 +112,12 @@ ms.locfileid: "32843172"
 |[SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md)|Representa o ponto de verificação para o qual uma transação pode ser revertida.|  
 |[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)|Implementa ISQLServerStatement.|  
 |[SQLServerXAConnection](../../../connect/jdbc/reference/sqlserverxaconnection-class.md)|Representa conexões JDBC que podem participar de transações distribuídas (XA).|  
-|[SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md)|Representa uma fábrica para [SQLServerXAConnection](../../../connect/jdbc/reference/sqlserverxaconnection-class.md) objetos que são usados internamente.|  
-|[SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md)|Representa um XAResource XA para o gerenciamento de transações distribuídas.|  
-  
-## <a name="see-also"></a>Consulte também  
- [Visão geral do JDBC Driver](../../../connect/jdbc/overview-of-the-jdbc-driver.md)  
-  
-  
+|[SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md)|Representa um alocador para objetos [SQLServerXAConnection](../../../connect/jdbc/reference/sqlserverxaconnection-class.md) que é usado internamente.|  
+|[SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md)|Representa um XAResource para o gerenciamento de transações distribuídas XA.|
+| &nbsp; | &nbsp; |
+
+
+
+## <a name="see-also"></a>Consulte Também  
+ [Visão geral do JDBC Driver](../../../connect/jdbc/overview-of-the-jdbc-driver.md)
+

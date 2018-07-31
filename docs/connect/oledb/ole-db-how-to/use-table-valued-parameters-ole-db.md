@@ -14,15 +14,15 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: f0bb98891fbaff6bc0512d2adfeee6e2a19d412b
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 035ff9761df4b557bfc5d966c05a7be5e0e29d28
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666156"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109808"
 ---
 # <a name="use-table-valued-parameters-ole-db"></a>Usar Parâmetros com valor de tabela (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -36,9 +36,9 @@ ms.locfileid: "35666156"
   
 -   Usa propriedades de parâmetro personalizadas por meio de ISSCommandWithParameters.  
   
--   Mostra o tratamento de erros MSOLEDBSQL.  
+-   Mostra o tratamento de erro para erros MSOLEDBSQL.  
   
- Para obter mais informações sobre parâmetros com valor de tabela, consulte [parâmetros com valor de tabela &#40;OLE DB Driver para SQL Server&#41;](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md).  
+ Para obter mais informações sobre parâmetros com valor de tabela, consulte [parâmetros com valor de tabela &#40;Driver do OLE DB para SQL Server&#41;](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md).  
   
 ## <a name="example"></a>Exemplo  
  A primeira listagem de código ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) cria o banco de dados usado pelo exemplo.  
@@ -47,7 +47,7 @@ ms.locfileid: "35666156"
   
  Coloque a terceira listagem de código em um arquivo chamado OLEDBUtils.hpp.  
   
- Compile com ole32.lib oleaut32.lib e execute a quarta listagem de código (C++). Este aplicativo se conecta ao padrão do seu computador [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instância. Em alguns sistemas operacionais Windows, será necessário alterar (localhost) ou (local) para o nome de sua instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para se conectar a uma instância nomeada, altere a cadeia de caracteres de conexão de L"(local)" para L"(local)\\\name", onde nome é a instância nomeada. Por padrão, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express é instalado em uma instância nomeada. Verifique se que a variável de ambiente INCLUDE inclui o diretório que contém msoledbsql.h.  
+ Compile com ole32.lib oleaut32.lib e execute a quarta listagem de código (C++). Esse aplicativo se conecta à instância padrão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] do computador. Em alguns sistemas operacionais Windows, será necessário alterar (localhost) ou (local) para o nome de sua instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para se conectar a uma instância nomeada, altere a cadeia de conexão de L"(local)" para L"(local)\\\name", em que name é a instância nomeada. Por padrão, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express é instalado em uma instância nomeada. Verifique se a variável de ambiente INCLUDE inclui o diretório que contém msoledbsql.h.  
   
  A quinta listagem de código ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) cria o banco de dados usado pelo exemplo.  
   

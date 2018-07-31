@@ -21,12 +21,12 @@ caps.latest.revision: 52
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e3b376d9fb4333489bf841f04cfb2d429803c6f3
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 62789cd3b0ab8cea6d744addd35721746a443328
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309675"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38982288"
 ---
 # <a name="sqlsrvprepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,9 +43,9 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
 #### <a name="parameters"></a>Parâmetros  
 *$conn*: o recurso de conexão associado à instrução preparada.  
   
-*$tsql*: expressão Transact-SQL que corresponde à instrução criada.  
+*$tsql*: a expressão Transact-SQL que corresponde à instrução criada.  
   
-*$params* [opcional]: uma **matriz** de valores que correspondem aos parâmetros em uma consulta parametrizada. Cada elemento da matriz pode ser um dos seguintes:
+*$params* [OPCIONAL]: uma **matriz** de valores que correspondem a parâmetros em uma consulta parametrizada. Cada elemento da matriz pode ser um dos seguintes:
   
 -   Um valor literal.  
   
@@ -58,23 +58,23 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
     ```  
   
     > [!NOTE]  
-    > Variáveis passadas como parâmetros de consulta devem ser passadas por referência em vez de por valor. Por exemplo, passe `&$myVariable` em vez de `$myVariable`. Um aviso do PHP é gerado quando uma consulta com parâmetros por valor for executada.  
+    > Variáveis passadas como parâmetros de consulta devem ser passadas por referência em vez de por valor. Por exemplo, passe `&$myVariable` em vez de `$myVariable`. Um aviso do PHP será gerado quando uma consulta com parâmetros por valor for executada.  
   
     A tabela a seguir descreve os elementos dessa matriz:  
   
-    |Elemento|Description|  
+    |Elemento|Descrição|  
     |-----------|---------------|  
     |*&$value*|Um valor literal ou uma referência a uma variável do PHP.|  
-    |*$direction*[opcional]|Um dos seguintes **SQLSRV_PARAM _\***  constantes usadas para indicar a direção do parâmetro: **SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**. O valor padrão é **SQLSRV_PARAM_IN**.<br /><br />Para obter mais informações sobre constantes do PHP, consulte [constantes &#40;Drivers da Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
-    |*$phpType*[opcional]|Um **SQLSRV_PHPTYPE _\***  constante que especifica o tipo de dados do PHP do valor retornado.|  
-    |*$sqlType*[OPTIONAL]|Um **SQLSRV_SQLTYPE _\***  constante que especifica o tipo de dados do SQL Server do valor de entrada.|  
+    |*$direction*[opcional]|Uma das seguintes constantes **SQLSRV_PARAM_\*** usadas para indicar a direção do parâmetro: **SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**. O valor padrão é **SQLSRV_PARAM_IN**.<br /><br />Para obter mais informações sobre constantes do PHP, consulte [Constantes &#40;Drivers da Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
+    |*$phpType*[opcional]|Uma constante **SQLSRV_PHPTYPE _\*** que especifica o tipo de dados do PHP do valor retornado.|  
+    |*$sqlType*[opcional]|Uma constante **SQLSRV_SQLTYPE_\*** que especifica o tipo de dados do SQL Server do valor de entrada.|  
   
-*$options* [opcional]: uma matriz associativa que define as propriedades de consulta. A tabela a seguir lista as chaves com suporte e os valores correspondentes:  
+*$options* [OPCIONAL]: uma matriz associativa que define as propriedades da consulta. A tabela a seguir lista as chaves compatíveis e os valores correspondentes:  
   
-|Chave|Valores com suporte|Description|  
+|Chave|Valores com suporte|Descrição|  
 |-------|--------------------|---------------|  
-|QueryTimeout|Um valor inteiro positivo.|Define o tempo limite da consulta em segundos. Por padrão, o driver aguardará indefinidamente para obter os resultados.|  
-|SendStreamParamsAtExec|**true** ou **false**<br /><br />O valor padrão é **true**.|Configura o driver para enviar todos os dados de fluxo na execução (**true**), ou para enviar dados de fluxo em partes (**false**). Por padrão, o valor é definido como **true**. Para obter mais informações, consulte [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md).|  
+|QueryTimeout|Um valor inteiro positivo.|Define o tempo limite da consulta em segundos. Por padrão, o driver aguarda resultados indefinidamente.|  
+|SendStreamParamsAtExec|**true** ou **false**<br /><br />O valor padrão é **true**.|Configura o driver para enviar todos os dados de fluxo na execução **true** ou para enviar dados de fluxo em partes (**false**). Por padrão, o valor é definido como **true**. Para obter mais informações, consulte [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md).|  
 |Rolável|SQLSRV_CURSOR_FORWARD<br /><br />SQLSRV_CURSOR_STATIC<br /><br />SQLSRV_CURSOR_DYNAMIC<br /><br />SQLSRV_CURSOR_KEYSET<br /><br />SQLSRV_CURSOR_CLIENT_BUFFERED|Para obter mais informações sobre esses valores, consulte [Especificando um tipo de cursor e selecionando linhas](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).|  
   
 ## <a name="return-value"></a>Valor retornado  
@@ -85,12 +85,12 @@ Quando você prepara uma instrução que usa variáveis como parâmetros, as var
   
 A combinação de **sqlsrv_prepare** e **sqlsrv_execute** separa a preparação e a execução da instrução em duas chamadas de função e pode ser usada para executar consultas parametrizadas. Essa função é ideal para executar uma instrução várias vezes com valores de parâmetros diferentes para cada execução.  
   
-Para obter estratégias alternativas para gravar e ler grandes quantidades de informações, consulte [Batches of SQL Statements](../../odbc/reference/develop-app/batches-of-sql-statements.md) e [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md).  
+Para obter estratégias alternativas para gravar e ler grandes quantidades de informações, veja [Lotes de instruções SQL](../../odbc/reference/develop-app/batches-of-sql-statements.md) e [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
-Para obter mais informações, consulte [Como recuperar parâmetros de saída usando o driver SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).  
+Para obter mais informações, consulte [How to: Retrieve Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).  
   
 ## <a name="example"></a>Exemplo  
-O exemplo a seguir prepara e executa uma instrução. A instrução, quando executada (consulte [sqlsrv_execute](../../connect/php/sqlsrv-execute.md)), atualiza um campo no *Sales. SalesOrderDetail* tabela do banco de dados AdventureWorks. O exemplo supõe que SQL Server e o [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) banco de dados são instalados no computador local. Toda a saída será gravada no console quando o exemplo for executado da linha de comando.  
+O exemplo a seguir prepara e executa uma instrução. A instrução, quando executada (veja [sqlsrv_execute](../../connect/php/sqlsrv-execute.md)), atualiza um campo na tabela *Sales.SalesOrderDetail* do banco de dados AdventureWorks. O exemplo supõe que o SQL Server e o banco de dados [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) estejam instalados no computador local. Toda a saída será gravada no console quando o exemplo for executado da linha de comando.  
   
 ```  
 <?php  
@@ -137,7 +137,7 @@ sqlsrv_close($conn);
 ```  
   
 ## <a name="example"></a>Exemplo  
-O exemplo a seguir demonstra como preparar uma instrução e executá-la novamente com valores de parâmetros diferentes. O exemplo a seguir atualiza a coluna *OrderQty* da tabela *Sales.SalesOrderDetail* no banco de dados AdventureWorks. Depois que as atualizações forem concluídas, o banco de dados será consultado para verificar se as atualizações foram bem-sucedidas. O exemplo supõe que SQL Server e o [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) banco de dados são instalados no computador local. Toda a saída será gravada no console quando o exemplo for executado da linha de comando.  
+O exemplo a seguir demonstra como preparar uma instrução e executá-la novamente com valores de parâmetros diferentes. O exemplo a seguir atualiza a coluna *OrderQty* da tabela *Sales.SalesOrderDetail* no banco de dados AdventureWorks. Depois que as atualizações forem concluídas, o banco de dados será consultado para verificar se as atualizações foram bem-sucedidas. O exemplo supõe que o SQL Server e o banco de dados [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) estejam instalados no computador local. Toda a saída será gravada no console quando o exemplo for executado da linha de comando.  
   
 ```  
 <?php  
@@ -222,7 +222,7 @@ sqlsrv_close($conn);
 ```  
   
 > [!NOTE]
-> É recomendável usar cadeias de caracteres como entradas ao associar valores para um [coluna decimal ou numeric](https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql) para garantir a precisão e a precisão, como PHP limitou a precisão para [números de ponto flutuante](http://php.net/manual/en/language.types.float.php). O mesmo se aplica a colunas bigint, especialmente quando os valores estiverem fora do intervalo de um [inteiro](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
+> É recomendável usar cadeias de caracteres como entradas ao associar os valores para um [coluna decimal ou numérica](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) para garantir a precisão e a precisão, como PHP limitou a precisão para [números de ponto flutuante](http://php.net/manual/en/language.types.float.php). O mesmo se aplica a colunas bigint, especialmente quando os valores estão fora do intervalo de um [inteiro](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
 
 ## <a name="example"></a>Exemplo  
 Este exemplo de código mostra como associar um valor decimal como um parâmetro de entrada.  
@@ -249,7 +249,7 @@ sqlsrv_close($conn);
 ?>
 ```
 
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Referência da API do driver SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [Como executar consultas parametrizadas](../../connect/php/how-to-perform-parameterized-queries.md)

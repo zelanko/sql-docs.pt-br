@@ -19,21 +19,21 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 7da19bac472558efadd3671e5dbfe09b5962f30f
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 816d999978ff692e034bb65012cd8da46508ca8e
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666196"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106165"
 ---
 # <a name="getting-large-data"></a>Obtendo dados grandes
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Em geral, os consumidores devem isolar o código que cria um Driver OLE DB para o objeto de armazenamento do SQL Server de outro código que lida com dados que não são referenciados por meio de um **ISequentialStream** ponteiro de interface.  
+  Em geral, os consumidores devem isolar o código que cria um objeto de armazenamento do OLE DB Driver for SQL Server do código que manipula dados não referenciados por meio de um ponteiro de interface **ISequentialStream**.  
   
- Este artigo aborda a funcionalidade disponível com as seguintes funções:  
+ Este artigo refere-se à funcionalidade disponível com as seguintes funções:  
   
 -   IRowset:GetData  
   
@@ -41,9 +41,9 @@ ms.locfileid: "35666196"
   
 -   ICommand::Execute  
   
- O consumidor deverá buscar somente uma única linha de dados em uma chamada para o **GetNextRows** método quando a propriedade DBPROP_ACCESSORDER, no grupo de propriedades de conjunto de linhas é definida como DBPROPVAL_AO_SEQUENTIAL ou DBPROPVAL_AO_ SEQUENTIALSTORAGEOBJECTS. Isso ocorre porque os dados BLOB não é armazenada em buffer. Se o valor de DBPROP_ACCESSORDER for definido como DBPROPVAL_AO_RANDOM, o consumidor poderá buscar várias linhas de dados em **GetNextRows**.  
+ O consumidor deverá buscar somente uma única linha de dados em uma chamada ao método **GetNextRows** quando a propriedade DBPROP_ACCESSORDER, no grupo de propriedades do conjunto de linhas, for definida como DBPROPVAL_AO_SEQUENTIAL ou DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS. Isso ocorre porque não é armazenada em buffer dados de BLOB. Se o valor de DBPROP_ACCESSORDER for definido como DBPROPVAL_AO_RANDOM, o consumidor poderá buscar várias linhas de dados em **GetNextRows**.  
   
- O Driver OLE DB para SQL Server não recupera dados grandes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] até que o solicitado pelo consumidor. O consumidor deve associar todos os dados curtos em um acessador e usar um ou mais acessadores temporários para recuperar valores de dados grandes conforme necessário.  
+ O Driver do OLE DB para SQL Server não recupera dados grandes do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] até que o solicitado pelo consumidor. O consumidor deve associar todos os dados curtos em um acessador e usar um ou mais acessadores temporários para recuperar valores de dados grandes conforme necessário.  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo recupera um valor de dados grandes de uma única coluna:  
@@ -153,7 +153,7 @@ HRESULT GetUnboundData
     }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [BLOBs e objetos OLE](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)   
  [Usando tipos de valor grande](../../oledb/features/using-large-value-types.md)  
   

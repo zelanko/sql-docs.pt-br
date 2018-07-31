@@ -1,6 +1,6 @@
 ---
 title: Propriedades de informações da fonte de dados | Microsoft Docs
-description: Propriedades de informações de fonte de dados
+description: Propriedades de informações da fonte de dados
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -20,33 +20,33 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 80d39fd079654452a4d26484df7b9a12e903c714
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 0fd9afc87acfb4c39e406ea3deb0b5e9bd7e82d0
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665966"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108120"
 ---
 # <a name="data-source-information-properties"></a>Propriedades de informações da fonte de dados
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  No conjunto de propriedades específico do provedor DBPROPSET_SQLSERVERDATASOURCEINFO, o Driver OLE DB para SQL Server define as seguintes propriedades de informações de fonte de dados.  
+  No conjunto de propriedades específico do provedor DBPROPSET_SQLSERVERDATASOURCEINFO, o OLE DB Driver for SQL Server define as propriedades de informações da fonte de dados a seguir.  
   
-|ID da propriedade|Description|  
+|ID da propriedade|Descrição|  
 |-----------------|-----------------|  
 |SSPROP_COLUMNLEVELCOLLATION|Tipo: VT_BOOL<br /><br /> Leitura/gravação: leitura<br /><br /> Padrão: VARIANT_TRUE<br /><br /> Descrição: usado para determinar se há suporte para o agrupamento de coluna.<br /><br /> VARIANT_TRUE: há suporte ao agrupamento em nível de coluna.<br /><br /> VARIANT_FALSE: não há suporte para o agrupamento em nível de coluna.|  
 |SSPROP_UNICODELCID|Tipo: VT_I4 Leitura/gravação: leitura<br /><br /> Descrição: ID da localidade Unicode.<br /><br /> Esta é a localidade usada para classificação de dados Unicode.|  
 |SSPROP_UNICODECOMPARISONSTYLE|Tipo: VT_I4 Leitura/gravação: leitura<br /><br /> Descrição: estilo de comparação Unicode.<br /><br /> As opções de classificação usadas para a classificação de dados Unicode.|  
   
- No conjunto de propriedades específico do provedor DBPROPSET_SQLSERVERSTREAM, o Driver OLE DB para SQL Server define as seguintes propriedades adicionais.  
+ No conjunto de propriedades específico do provedor DBPROPSET_SQLSERVERSTREAM, o OLE DB Driver for SQL Server define a propriedade adicional a seguir.  
   
-|ID da propriedade|Description|  
+|ID da propriedade|Descrição|  
 |-----------------|-----------------|  
 |SSPROP_STREAM_XMLROOT|Tipo: VT_BSTR Leitura/gravação: leitura/gravação<br /><br /> Descrição: o resultado de uma consulta XML FOR pode não ser um documento bem formado. Quando essa propriedade for especificada, o resultado de um ' Selecionar... para XML' consulta é encapsulada na marca raiz fornecida por essa propriedade para retornar um documento XML bem formado. Se a consulta for executada no navegador, ela pode fazer o navegador exibir erros de analisador ao carregar o resultado. Para evitar o erro, o SQL ISAPI dá suporte à palavra-chave ROOT. Essa palavra-chave é mapeada para a propriedade SSPROP_STREAM_XMLROOT.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Objetos de fonte de dados &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

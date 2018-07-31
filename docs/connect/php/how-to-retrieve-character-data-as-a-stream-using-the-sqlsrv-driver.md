@@ -1,5 +1,5 @@
 ---
-title: Recuperar dados de caracteres como um fluxo usando o Driver SQLSRV | Microsoft Docs
+title: Recuperar dados de caractere como um fluxo usando o driver SQLSRV | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,25 +18,25 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a9099e0854b0030e79645399377d8f47dc90c85a
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307945"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38054064"
 ---
 # <a name="how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver"></a>Como recuperar dados de caractere como um fluxo usando o driver SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Recuperação de dados como um fluxo só está disponível no driver SQLSRV do [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]e não está disponível no driver PDO_SQLSRV.  
+A recuperação de dados como um fluxo só está disponível no driver SQLSRV dos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], e não está disponível no driver PDO_SQLSRV.  
   
 O driver SQLSRV aproveita os fluxos do PHP para recuperar grandes quantidades de dados do servidor. O exemplo neste tópico demonstra como recuperar dados de caractere como um fluxo.  
   
 ## <a name="example"></a>Exemplo  
-O exemplo a seguir recupera uma linha da tabela *Production.ProductReview* do banco de dados AdventureWorks. O *comentários* campo da linha retornada é recuperado como um fluxo e exibido usando o PHP [fpassthru](http://php.net/manual/function.fpassthru.php) função.  
+O exemplo a seguir recupera uma linha da tabela *Production.ProductReview* do banco de dados AdventureWorks. O campo *Comments* da linha retornada é recuperado como um fluxo e exibido usando a função [fpassthru](http://php.net/manual/function.fpassthru.php) do PHP.  
   
-A recuperação de dados como um fluxo é efetuada usando [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) e [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) com o tipo de retorno especificado como um fluxo de caractere. O tipo de retorno é especificado usando a constante **SQLSRV_PHPTYPE_STREAM**. Para obter informações sobre **sqlsrv** constantes, consulte [constantes &#40;Drivers da Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
+A recuperação de dados como um fluxo é efetuada usando [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md) e [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) com o tipo de retorno especificado como um fluxo de caractere. O tipo de retorno é especificado usando a constante **SQLSRV_PHPTYPE_STREAM**. Para obter informações sobre constantes **sqlsrv**, consulte [Constantes &#40;Drivers da Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
   
-O exemplo supõe que [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) banco de dados são instalados no computador local. Toda a saída será gravada no console quando o exemplo for executado da linha de comando.  
+O exemplo supõe que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e o banco de dados [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) estejam instalados no computador local. Toda a saída será gravada no console quando o exemplo for executado da linha de comando.  
   
 ```  
 <?php  
@@ -95,7 +95,7 @@ sqlsrv_close( $conn);
   
 Como nenhum tipo de retorno do PHP é especificado para os três primeiros campos, cada campo é retornado de acordo com seu tipo do PHP padrão. Para obter informações sobre os tipos de dados padrão do PHP, consulte [Default PHP Data Types](../../connect/php/default-php-data-types.md). Para obter informações sobre como especificar tipos de retorno do PHP, consulte [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Recuperando dados](../../connect/php/retrieving-data.md)
 
 [Recuperando dados como um fluxo usando o driver SQLSRV](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)

@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 14b23030980978a4d72d1b9afb405cb7e8cfd630
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309385"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991268"
 ---
 # <a name="sqlsrvfieldmetadata"></a>sqlsrv_field_metadata
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -45,14 +45,14 @@ sqlsrv_field_metadata( resource $stmt)
 ## <a name="return-value"></a>Valor retornado  
 Uma **matriz** de matrizes ou **false**. A matriz consiste em uma matriz para cada campo no conjunto de resultados. Cada submatriz tem chaves, conforme descrito na tabela a seguir. Se ocorrer um erro na recuperação de metadados do campo, será retornado **false** .  
   
-|Chave|Description|  
+|Chave|Descrição|  
 |-------|---------------|  
 |Nome|Nome da coluna correspondente ao campo.|  
 |Tipo|Valor numérico que corresponde a um tipo SQL.|  
 |Tamanho|Número de caracteres de campos do tipo character (char(n), varchar(n), nchar(n), nvarchar(n), XML). Número de bytes para campos do tipo binary (binary(n), varbinary(n), UDT). **NULL** para outros tipos de dados do SQL Server.|  
 |Precisão|A precisão dos tipos de precisão variável (real, numeric, decimal, datetime2, datetimeoffset e time). **NULL** para outros tipos de dados do SQL Server.|  
 |Escala|A escala dos tipos de escala variável (numeric, decimal, datetime2, datetimeoffset e time). **NULL** para outros tipos de dados do SQL Server.|  
-|Anulável|Um valor enumerado que indica se a coluna é anulável (**SQLSRV_NULLABLE_YES**), a coluna não é anulável (**SQLSRV_NULLABLE_NO**), ou se não se sabe se a coluna é anulável ( **SQLSRV_NULLABLE_UNKNOWN**).|  
+|Anulável|Um valor enumerado que indica se a coluna é anulável (**SQLSRV_NULLABLE_YES**), não anulável (**SQLSRV_NULLABLE_NO**) ou se não se sabe se a coluna é anulável (**SQLSRV_NULLABLE_UNKNOWN**).|  
   
 A tabela a seguir fornece mais informações sobre as chaves para cada submatriz (consulte a documentação do SQL Server para obter mais informações sobre esses tipos):  
   
@@ -94,7 +94,7 @@ A tabela a seguir fornece mais informações sobre as chaves para cada submatriz
 A chave Nullable pode ser yes ou no.  
   
 ## <a name="example"></a>Exemplo  
-O exemplo a seguir cria um recurso de instrução. Em seguida, recupera e exibe os metadados de campo. O exemplo supõe que SQL Server e o [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) banco de dados são instalados no computador local. Toda a saída será gravada no console quando o exemplo for executado da linha de comando.  
+O exemplo a seguir cria um recurso de instrução. Em seguida, recupera e exibe os metadados de campo. O exemplo supõe que o SQL Server e o banco de dados [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) estejam instalados no computador local. Toda a saída será gravada no console quando o exemplo for executado da linha de comando.  
   
 ```  
 <?php  
@@ -132,7 +132,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Referência da API do driver SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
 
 [Constantes &#40;Drivers da Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  

@@ -22,18 +22,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e097a5b89d708b3a91296c49c0c615f8955b96cb
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309045"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37979787"
 ---
 # <a name="sqlsrverrors"></a>sqlsrv_errors
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Retorna estendidas de erro e/ou informações de aviso sobre a última **sqlsrv** operação realizada.  
+Retorna informações estendidas sobre erros e/ou avisos da última operação do **sqlsrv** executada.  
   
-O **sqlsrv_errors** função pode retornar o erro e/ou informações de aviso chamada com um dos valores de parâmetros especificados na seção parâmetros abaixo.  
+A função **sqlsrv_errors** pode retornar informações sobre erros e/ou avisos se chamada com um dos valores de parâmetros especificado na seção Parâmetros abaixo.  
   
 Por padrão, os avisos gerados em uma chamada para qualquer função do **sqlsrv** são tratados como erros. Se ocorrer um aviso em uma chamada para uma função do **sqlsrv** , ela retornará false. No entanto, os avisos correspondentes aos valores de SQLSTATE 01000, 01001, 01003 e 01S02 nunca são tratados como erros.  
   
@@ -49,7 +49,7 @@ A linha de código a seguir restaura o comportamento padrão; os avisos são tra
 sqlsrv_configure("WarningsReturnAsErrors", 1);  
 ```  
   
-Independentemente da configuração, os avisos só podem ser recuperados chamando **sqlsrv_errors** com qualquer um de **SQLSRV_ERR_ALL** ou **SQLSRV_ERR_WARNINGS** (veja o valor do parâmetro Seção parâmetros abaixo para obter detalhes).  
+Independentemente da configuração, os avisos só podem ser recuperados chamando **sqlsrv_errors** com o valor de parâmetro **SQLSRV_ERR_ALL** ou **SQLSRV_ERR_WARNINGS** (consulte a seção Parâmetros abaixo para obter mais detalhes).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -59,9 +59,9 @@ sqlsrv_errors( [int $errorsAndOrWarnings] )
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
-*$errorsAndOrWarnings*[opcional]: uma constante predefinida. Esse parâmetro pode assumir um dos valores listados na tabela a seguir:  
+*$errorsAndOrWarnings*[OPCIONAL]: uma constante predefinida. Esse parâmetro pode assumir um dos valores listados na tabela a seguir:  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |---------|---------------|  
 |SQLSRV_ERR_ALL|Retorna erros e avisos gerados na última chamada da função **sqlsrv** .|  
 |SQLSRV_ERR_ERRORS|Retorna erros gerados na última chamada da função **sqlsrv** .|  
@@ -70,18 +70,18 @@ sqlsrv_errors( [int $errorsAndOrWarnings] )
 Se nenhum valor de parâmetro for fornecido, serão retornados os erros e avisos gerados pela última chamada para a função **sqlsrv** .  
   
 ## <a name="return-value"></a>Valor retornado  
-Uma **matriz** de matrizes ou **null**. Cada **matriz** em retornado **matriz** contém três pares chave-valor. A tabela a seguir lista cada função e sua descrição:  
+Uma **matriz** de matrizes ou **null**. Cada **matriz** na **matriz** retornada contém três pares chave-valor. A tabela a seguir lista cada função e sua descrição:  
   
-|Chave|Description|  
+|Chave|Descrição|  
 |-------|---------------|  
-|SQLSTATE|Para erros originados no driver ODBC, o SQLSTATE retornado pelo ODBC. Para obter informações sobre valores SQLSTATE para ODBC, consulte [códigos de erro de ODBC](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).<br /><br />Para erros originados nos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], um SQLSTATE IMSSP.<br /><br />Para avisos originados nos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], um SQLSTATE 01SSP.|  
+|SQLSTATE|Para erros originados no driver ODBC, o SQLSTATE retornado pelo ODBC. Para obter informações sobre valores de SQLSTATE para ODBC, consulte [Códigos de erro ODBC](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).<br /><br />Para erros originados nos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], um SQLSTATE IMSSP.<br /><br />Para avisos originados nos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], um SQLSTATE 01SSP.|  
 |código|Para erros originados no SQL Server, o código de erro nativo do SQL Server.<br /><br />Para erros originados no driver ODBC, o código de erro retornado pelo ODBC.<br /><br />Para erros originados nos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], o código de erro do [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] . Para obter mais informações, consulte [Handling Errors and Warnings](../../connect/php/handling-errors-and-warnings.md).|  
 |message|Uma descrição do erro.|  
   
 Os valores da matriz também podem ser acessados com as chaves numéricas 0, 1 e 2. Se nenhum erro ou aviso ocorrer, será retornado **null** .  
   
 ## <a name="example"></a>Exemplo  
-O exemplo a seguir exibe os erros que ocorrem durante a execução de uma instrução com falha. (A instrução falha porque **InvalidColumName** não é um nome de coluna válido na tabela especificada.) O exemplo supõe que SQL Server e o [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) banco de dados são instalados no computador local. Toda a saída será gravada no console quando o exemplo for executado da linha de comando.  
+O exemplo a seguir exibe os erros que ocorrem durante a execução de uma instrução com falha. (A instrução falha porque **InvalidColumName** não é um nome de coluna válido na tabela especificada.) O exemplo supõe que o SQL Server e o banco de dados [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) estejam instalados no computador local. Toda a saída será gravada no console quando o exemplo for executado da linha de comando.  
   
 ```  
 <?php  
@@ -120,7 +120,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Referência da API do driver SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [Sobre exemplos de código na documentação](../../connect/php/about-code-examples-in-the-documentation.md)  

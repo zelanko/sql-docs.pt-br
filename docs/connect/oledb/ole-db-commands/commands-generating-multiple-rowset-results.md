@@ -21,26 +21,26 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 8538fa8326dd5ad103d50d4745279c77ed580db4
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 579fae980b0f612aa1317407f797be9d1ff02ed3
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665508"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39109618"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>Comandos que geram resultados de vários conjuntos de linhas
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  O Driver OLE DB para SQL Server pode retornar vários conjuntos de linhas de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instruções. As instruções do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] retornam resultados de vários conjuntos de linhas nas seguintes condições:  
+  O Driver do OLE DB para SQL Server pode retornar vários conjuntos de linhas de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instruções. As instruções do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] retornam resultados de vários conjuntos de linhas nas seguintes condições:  
   
 -   Instruções SQL processadas em lotes são enviadas como um único comando.  
   
 -   Os procedimentos armazenados implementam um lote de instruções SQL.  
   
 ## <a name="batches"></a>Lotes  
- O Driver OLE DB para SQL Server reconhece o caractere de ponto e vírgula como delimitador de lote para instruções SQL:  
+ O Driver do OLE DB para SQL Server reconhece o caractere de ponto e vírgula como delimitador de lote para instruções SQL:  
   
 ```  
 WCHAR*       wSQLString = L"SELECT * FROM Categories; "  
@@ -56,7 +56,7 @@ WCHAR*       wSQLString = L"SELECT * FROM Categories; "
   
 -   [Usando IMultipleResults para processar vários conjuntos de resultados](../../oledb/ole-db-commands/using-imultipleresults-to-process-multiple-result-sets.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Comandos](../../oledb/ole-db-commands/commands.md)  
   
   

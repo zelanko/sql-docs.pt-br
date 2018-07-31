@@ -1,5 +1,5 @@
 ---
-title: 'Como: especificar tipos de dados do SQL Server usando o Driver SQLSRV | Microsoft Docs'
+title: Como especificar tipos de dados do SQL Server usando o Driver SQLSRV | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c9879edd7282beb2226593b70cab500fba4e09e4
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308085"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032970"
 ---
 # <a name="how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver"></a>Como especificar tipos de dados do SQL Server usando o Driver SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,7 +34,7 @@ Para especificar o tipo de dados do SQL Server, você deve usar a matriz opciona
 As etapas a seguir resumem como especificar o tipo de dados do SQL Server ao enviar dados para o servidor:  
   
 > [!NOTE]  
-> Se nenhum tipo de dados do SQL Server for especificado, os tipos padrão são usados. Para obter informações sobre os tipos de dados padrão do SQL Server, consulte [Default SQL Server Data Types](../../connect/php/default-sql-server-data-types.md).  
+> Se nenhum tipo de dados do SQL Server for especificado, serão usados os tipos padrão. Para obter informações sobre os tipos de dados padrão do SQL Server, consulte [Default SQL Server Data Types](../../connect/php/default-sql-server-data-types.md).  
   
 1.  Defina uma consulta Transact-SQL que insere ou atualiza dados. Use pontos de interrogação (?) como espaços reservados para valores de parâmetro na consulta.  
   
@@ -42,7 +42,7 @@ As etapas a seguir resumem como especificar o tipo de dados do SQL Server ao env
   
 3.  Crie a matriz *$params* a ser usada na preparação ou na execução da consulta. Observe que, ao especificar o tipo de dados do SQL Server, cada elemento da matriz *$params* também deve ser uma matriz.  
   
-4.  Especifique o tipo de dados do SQL Server desejado usando a **SQLSRV_SQLTYPE _\***  constante como o quarto parâmetro em cada submatriz do *$params* matriz. Para obter uma lista completa do **SQLSRV_SQLTYPE _\***  constantes, consulte a seção SQLTYPEs de [constantes &#40;Drivers da Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). Por exemplo, no código a seguir, *$changeDate*, *$rate*e *$payFrequency* são especificados respectivamente com os tipos do SQL Server **datetime**, **money**e **tinyint** na matriz *$params* . Como nenhum tipo do SQL Server é especificado para *$employeeId* , que é inicializado como um inteiro, é usado o tipo padrão do SQL Server **integer** .  
+4.  Especifique o tipo de dados do SQL Server desejado usando a constante **SQLSRV_SQLTYPE_\*** adequada como o quarto parâmetro em cada submatriz da matriz *$params*. Para obter uma lista completa das constantes **SQLSRV_SQLTYPE_\***, consulte a seção SQLTYPEs de [Constantes &#40;Drivers da Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). Por exemplo, no código a seguir, *$changeDate*, *$rate*e *$payFrequency* são especificados respectivamente com os tipos do SQL Server **datetime**, **money**e **tinyint** na matriz *$params* . Como nenhum tipo do SQL Server é especificado para *$employeeId* , que é inicializado como um inteiro, é usado o tipo padrão do SQL Server **integer** .  
   
     ```  
     $employeeId = 5;  
@@ -58,9 +58,9 @@ As etapas a seguir resumem como especificar o tipo de dados do SQL Server ao env
     ```  
   
 ## <a name="example"></a>Exemplo  
-O exemplo a seguir insere dados no *EmployeePayHistory* tabela do banco de dados AdventureWorks. Os tipos do SQL Server são especificados para os parâmetros *$changeDate*, *$rate*, e *$payFrequency* . O tipo padrão do SQL Server é usado para o parâmetro *$employeeId* . Para verificar se os dados foram inseridos com êxito, os mesmos dados são recuperados e exibidos.  
+O exemplo a seguir insere dados na tabela *HumanResources.EmployeePayHistory* do banco de dados do AdventureWorks. Os tipos do SQL Server são especificados para os parâmetros *$changeDate*, *$rate*, e *$payFrequency* . O tipo padrão do SQL Server é usado para o parâmetro *$employeeId* . Para verificar se os dados foram inseridos com êxito, os mesmos dados são recuperados e exibidos.  
   
-Este exemplo supõe que SQL Server e o [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) banco de dados são instalados no computador local. Toda a saída será gravada no console quando o exemplo for executado da linha de comando.  
+Este exemplo supõe que o SQL Server e o banco de dados [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) estejam instalados no computador local. Toda a saída será gravada no console quando o exemplo for executado da linha de comando.  
   
 ```  
 <?php  
@@ -138,7 +138,7 @@ sqlsrv_close($conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Recuperando dados](../../connect/php/retrieving-data.md)
 
 [Sobre exemplos de código na documentação](../../connect/php/about-code-examples-in-the-documentation.md)

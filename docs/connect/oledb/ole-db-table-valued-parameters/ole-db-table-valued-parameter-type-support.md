@@ -1,6 +1,6 @@
 ---
-title: Suporte ao tipo de parâmetro com valor de tabela de banco de dados OLE | Microsoft Docs
-description: Suporte para tipo de parâmetro de DB Table-Valued OLE
+title: Suporte ao tipo de parâmetro com valor de tabela do OLE DB | Microsoft Docs
+description: Suporte para o tipo de parâmetro com valor de tabela do OLE DB
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,22 +16,22 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: e82f8675bc154ddfc3ec6bd6821a8f25b90ca2ac
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 6491e8b81efbd70a69fdd7a7e7541b4262ede7dd
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35690119"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106982"
 ---
 # <a name="ole-db-table-valued-parameter-type-support"></a>Suporte ao tipo de parâmetro com valor de tabela OLE DB
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Este artigo descreve o suporte de tipo de OLE DB para parâmetros com valor de tabela.  
+  Este artigo descreve o suporte de tipos OLE DB em parâmetros com valor de tabela.  
   
 ## <a name="table-valued-parameter-rowset-object"></a>Objeto de conjunto de linhas de parâmetro com valor de tabela  
- É possível criar um objeto de conjunto de linhas especializado para parâmetros com valor de tabela. Você pode criar o objeto de conjunto de linhas de parâmetro com valor de tabela usando ITableDefinitionWithConstraints::CreateTableWithConstraints ou IOpenRowset:: OPENROWSET. Para fazer isso, defina o *eKind* membro o *pTableID* parâmetro como DBKIND_GUID_NAME e forneça o CLSID_ROWSET_INMEMORY como o *guid* membro. O nome do tipo de servidor para o parâmetro com valor de tabela deve ser especificado no *pwszName* membro *pTableID* ao usar IOpenRowset:: OPENROWSET. O objeto de conjunto de linhas de parâmetro com valor de tabela se comporta como um regular OLE DB Driver para o objeto do SQL Server.  
+ É possível criar um objeto de conjunto de linhas especializado para parâmetros com valor de tabela. Você pode criar o objeto de conjunto de linhas de parâmetro com valor de tabela usando ITableDefinitionWithConstraints::CreateTableWithConstraints ou IOpenRowset:: OPENROWSET. Para fazer isso, defina o membro *eKind* do parâmetro *pTableID* como DBKIND_GUID_NAME e forneça o CLSID_ROWSET_INMEMORY como o membro *guid*. O nome do tipo de servidor para o parâmetro com valor de tabela deve ser especificado na *pwszName* membro *pTableID* ao usar IOpenRowset:: OPENROWSET. O objeto de conjunto de linhas de parâmetro com valor de tabela se comporta como um regular Driver do OLE DB para o objeto do SQL Server.  
   
 ```  
 const GUID CLSID_ROWSET_TVP =   
@@ -57,17 +57,17 @@ CoType RowsetTVP
 #define DBTYPE_TABLE (143)  
 ```  
   
- DBTYPE_TABLE tem o mesmo formato de DBTYPE_IUNKNOWN. É um ponteiro para um objeto no buffer de dados. Para obter a especificação completa nas associações, o consumidor preenche o buffer DBOBJECT, com *iid* definido como uma das interfaces de objeto de conjunto de linhas (IID_IRowset). Se nenhum DBOBJECT for especificado nas associações, IID_IRowset será assumido.  
+ DBTYPE_TABLE tem o mesmo formato de DBTYPE_IUNKNOWN. Trata-se de um ponteiro para um objeto no buffer de dados. Para obter a especificação completa nas associações, o consumidor preenche o buffer DBOBJECT, com *iid* definido como uma das interfaces de objeto de conjunto de linhas (IID_IRowset). Se nenhum DBOBJECT for especificado nas associações, IID_IRowset será assumido.  
   
- Não há suporte para conversões para e de DBTYPE_TABLE para qualquer outro tipo. IConvertType::CanConvert retornará S_FALSE em conversão sem suporte para qualquer solicitação que não seja a conversão de DBTYPE_TABLE para. Isso supõe DBCONVERTFLAGS_PARAMETER no objeto de comando.  
+ Não há suporte para conversões bidirecionalmente em DBTYPE_TABLE em qualquer outro tipo. IConvertType::CanConvert retornará S_FALSE em uma conversão não compatível para qualquer solicitação que não seja a conversão de DBTYPE_TABLE em DBTYPE_TABLE. Isso supõe DBCONVERTFLAGS_PARAMETER no objeto Command.  
   
 ## <a name="methods"></a>Métodos  
- Para obter informações sobre métodos OLE DB que oferecem suporte a parâmetros com valor de tabela, consulte [suporte de tipo de parâmetro OLE DB Table-Valued &#40;métodos&#41;](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-methods.md).  
+ Para obter informações sobre métodos OLE DB que dão suporte a parâmetros com valor de tabela, consulte [OLE DB Table-Valued parâmetro de tipo de suporte &#40;métodos&#41;](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-methods.md).  
   
 ## <a name="properties"></a>Propriedades  
- Para obter informações sobre propriedades de OLE DB que oferecem suporte a parâmetros com valor de tabela, consulte [suporte de tipo de parâmetro OLE DB Table-Valued &#40;propriedades&#41;](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md).  
+ Para obter informações sobre as propriedades de OLE DB que dão suporte a parâmetros com valor de tabela, consulte [OLE DB Table-Valued parâmetro de tipo de suporte &#40;propriedades&#41;](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Parâmetros com valor de tabela &#40;OLE DB&#41;](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
  [Usar parâmetros com valor de tabela &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   

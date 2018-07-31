@@ -1,6 +1,6 @@
 ---
 title: Mapeamento de tipo de dados em ITableDefinition | Microsoft Docs
-description: Mapeamento de tipo de dados em ITableDefinition
+description: Mapeamento de tipos de dados em ITableDefinition
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -22,46 +22,46 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: d613fc7be394bbf16c86c5e217e3dfe83a4296a1
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 7dc27dcc7b59cb7b5d1d63d48e29d7411f9e318b
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666346"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107278"
 ---
 # <a name="data-type-mapping-in-itabledefinition"></a>Mapeamento do tipo de dados em ITableDefinition
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Ao criar tabelas usando o **itabledefinition:: CreateTable** função, o Driver OLE DB para o consumidor do SQL Server pode especificar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipos de dados no *pwszTypeName* membro das Matriz DBCOLUMNDESC passada. Se o consumidor Especifica o tipo de dados de uma coluna por nome, de tipo de dados OLE DB mapeamento, representado pelo *wType* membro da estrutura DBCOLUMNDESC, é ignorado.  
+  Ao criar tabelas usando a função **ITableDefinition::CreateTable**, o consumidor do OLE DB Driver for SQL Server pode especificar tipos de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no membro *pwszTypeName* da matriz DBCOLUMNDESC passada. Caso o consumidor especifique o tipo de dados de uma coluna por nome, o mapeamento do tipo de dados OLE DB, representado pelo membro *wType* da estrutura DBCOLUMNDESC, será ignorado.  
   
- Ao especificar novos tipos de dados de coluna com tipos de dados de OLE DB usando a estrutura DBCOLUMNDESC *wType* membro, o Driver OLE DB para SQL Server mapeia tipos de dados OLE DB da seguinte maneira.  
+ Ao especificar novos tipos de dados de coluna com tipos de dados OLE DB usando o membro *wType* da estrutura DBCOLUMNDESC, o OLE DB Driver for SQL Server mapeia os tipos de dados do OLE DB conforme mostrado a seguir.  
   
 |Tipo de dados OLE DB|SQL Server<br /><br /> tipo de dados|Informações adicionais|  
 |----------------------|------------------------------|----------------------------|  
 |DBTYPE_BOOL|**bit**||  
-|DBTYPE_BYTES|**binário**, **varbinary**, **imagem,** ou **varbinary (max)**|O Driver OLE DB para SQL Server inspeciona o *ulColumnSize* membro da estrutura DBCOLUMNDESC. Com base no valor e na versão da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instância, o Driver OLE DB para SQL Server mapeia o tipo para **imagem**.<br /><br /> Se o valor de *ulColumnSize* é menor do que o comprimento máximo de um **binário** coluna, tipo de dados, em seguida, o Driver OLE DB para SQL Server inspeciona o membro *rgPropertySets*membro. Caso DBPROP_COL_FIXEDLENGTH seja VARIANT_TRUE, o Driver OLE DB para SQL Server mapeia o tipo para **binário**. Se o valor da propriedade seja VARIANT_FALSE, o Driver OLE DB para SQL Server mapeia o tipo para **varbinary**. Em ambos os casos, o membro *ulColumnSize* membro determina a largura da coluna do SQL Server criada.|  
+|DBTYPE_BYTES|**binary**, **varbinary**, **image,** ou **varbinary(max)**|O Driver do OLE DB para SQL Server inspeciona as *ulColumnSize* membro da estrutura DBCOLUMNDESC. Com base no valor e na versão dos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] da instância, o Driver do OLE DB para SQL Server mapeia o tipo para **imagem**.<br /><br /> Caso o valor de *ulColumnSize* seja menor que o tamanho máximo de uma coluna de tipo de dados **binary**, o OLE DB Driver for SQL Server inspecionará o membro *rgPropertySets* de DBCOLUMNDESC. Caso DBPROP_COL_FIXEDLENGTH seja VARIANT_TRUE, o Driver do OLE DB para SQL Server mapeia o tipo para **binário**. Se o valor da propriedade seja VARIANT_FALSE, o Driver do OLE DB para SQL Server mapeia o tipo para **varbinary**. Em ambos os casos, o membro *ulColumnSize* de DBCOLUMNDESC determina a largura da coluna do SQL Server criada.|  
 |DBTYPE_CY|**money**||  
 |DBTYPE_DBTIMESTAMP|**datetime2**||  
 |DBTYPE_GUID|**uniqueidentifier**||  
 |DBTYPE_I2|**smallint**||  
 |DBTYPE_I4|**int**||  
 |DBTYPE_I8|**bigint**||
-|DBTYPE_NUMERIC|**numeric**|O Driver OLE DB para SQL Server inspeciona os MEMBROS *bPrecision* e *bScale* membros para determinar a precisão e escala para o **numérico** coluna.|  
+|DBTYPE_NUMERIC|**numeric**|O OLE DB Driver for SQL Server inspeciona os membros *bPrecision* e *bScale* de DBCOLUMDESC para determinar a precisão e a escala da coluna **numeric**.|  
 |DBTYPE_R4|**real**||  
 |DBTYPE_R8|**float**||  
-|DBTYPE_STR|**char**, **varchar**, **texto,** ou **varchar (max)**|O Driver OLE DB para SQL Server inspeciona o *ulColumnSize* membro da estrutura DBCOLUMNDESC. Com base no valor de versão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instância, o Driver OLE DB para SQL Server mapeia o tipo para **texto**.<br /><br /> Se o valor de *ulColumnSize* é menor do que o comprimento máximo de uma coluna de tipo de dados de caracteres multibyte e, em seguida, o Driver OLE DB para SQL Server inspeciona o membro *rgPropertySets* membro. Caso DBPROP_COL_FIXEDLENGTH seja VARIANT_TRUE, o Driver OLE DB para SQL Server mapeia o tipo para **char**. Se o valor da propriedade seja VARIANT_FALSE, o Driver OLE DB para SQL Server mapeia o tipo para **varchar**. Em ambos os casos, o membro *ulColumnSize* membro determina a largura do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] coluna criada.|  
-|DBTYPE_UDT|**UDT**|As informações a seguir são usadas em **DBCOLUMNDESC** estruturas por **itabledefinition:: CreateTable** quando colunas UDT são necessárias:<br /><br /> *pwSzTypeName* é ignorado.<br /><br /> *rgPropertySets* deve incluir um **DBPROPSET_SQLSERVERCOLUMN** propriedade definida conforme descrito na seção sobre **DBPROPSET_SQLSERVERCOLUMN**, na [Using User-Defined tipos ](../../oledb/features/using-user-defined-types.md).|  
+|DBTYPE_STR|**char**, **varchar**, **text** ou **varchar(max)**|O Driver do OLE DB para SQL Server inspeciona as *ulColumnSize* membro da estrutura DBCOLUMNDESC. Com base no valor de versão dos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] da instância, o Driver do OLE DB para SQL Server mapeia o tipo para **texto**.<br /><br /> Caso o valor de *ulColumnSize* seja menor que o tamanho máximo de uma coluna de tipo de dados de caractere multibyte, o OLE DB Driver for SQL Server inspecionará o membro *rgPropertySets* de DBCOLUMNDESC. Caso DBPROP_COL_FIXEDLENGTH seja VARIANT_TRUE, o Driver do OLE DB para SQL Server mapeia o tipo para **char**. Se o valor da propriedade seja VARIANT_FALSE, o Driver do OLE DB para SQL Server mapeia o tipo para **varchar**. Em ambos os casos, o membro *ulColumnSize* de DBCOLUMNDESC determina a largura da coluna do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] criada.|  
+|DBTYPE_UDT|**UDT**|As seguintes informações são usadas em estruturas **DBCOLUMNDESC** por **ITableDefinition::CreateTable** quando as colunas UDT são obrigatórias:<br /><br /> *pwSzTypeName* será ignorado.<br /><br /> *rgPropertySets* deve incluir uma **DBPROPSET_SQLSERVERCOLUMN** propriedade definida conforme descrito na seção sobre **DBPROPSET_SQLSERVERCOLUMN**, em [Using User-Defined tipos ](../../oledb/features/using-user-defined-types.md).|  
 |DBTYPE_UI1|**tinyint**||  
 |DBTYPE_VARIANT|**sql_variant**||
-|DBTYPE_WSTR|**nchar**, **nvarchar**, **ntext,** ou **nvarchar (max)**|O Driver OLE DB para SQL Server inspeciona o *ulColumnSize* membro da estrutura DBCOLUMNDESC. Com base no valor, o Driver OLE DB para SQL Server mapeia o tipo para **ntext**.<br /><br /> Se o valor de *ulColumnSize* é menor do que o comprimento máximo de uma coluna de tipo de dados de caractere Unicode e, em seguida, o Driver OLE DB para SQL Server inspeciona o membro *rgPropertySets* membro. Caso DBPROP_COL_FIXEDLENGTH seja VARIANT_TRUE, o Driver OLE DB para SQL Server mapeia o tipo para **nchar**. Se o valor da propriedade seja VARIANT_FALSE, o Driver OLE DB para SQL Server mapeia o tipo para **nvarchar**. Em ambos os casos, o membro *ulColumnSize* membro determina a largura do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] coluna criada.|  
+|DBTYPE_WSTR|**nchar**, **nvarchar**, **ntext** ou **nvarchar(max)**|O Driver do OLE DB para SQL Server inspeciona as *ulColumnSize* membro da estrutura DBCOLUMNDESC. Com base no valor, o Driver do OLE DB para SQL Server mapeia o tipo para **ntext**.<br /><br /> Caso o valor de *ulColumnSize* seja menor que o tamanho máximo de uma coluna de tipo de dados de caractere Unicode, o OLE DB Driver for SQL Server inspecionará o membro *rgPropertySets* de DBCOLUMNDESC. Caso DBPROP_COL_FIXEDLENGTH seja VARIANT_TRUE, o Driver do OLE DB para SQL Server mapeia o tipo para **nchar**. Se o valor da propriedade seja VARIANT_FALSE, o Driver do OLE DB para SQL Server mapeia o tipo para **nvarchar**. Em ambos os casos, o membro *ulColumnSize* de DBCOLUMNDESC determina a largura da coluna do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] criada.|  
 |DBTYPE_XML|**XML**||  
 
 > [!NOTE]  
->  Ao criar uma nova tabela, o Driver OLE DB para SQL Server mapeia apenas os OLE DB tipo enumeração valores de dados especificados na tabela anterior. Tentar criar uma tabela com uma coluna de qualquer outro tipo de dados OLE DB gera um erro.  
+>  Ao criar uma nova tabela, o OLE DB Driver for SQL Server mapeia apenas os valores de enumeração do tipo de dados OLE DB especificados na tabela anterior. Tentar criar uma tabela com uma coluna de qualquer outro tipo de dados OLE DB gera um erro.  
 
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tipos de dados &#40;OLE DB&#41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
   
   

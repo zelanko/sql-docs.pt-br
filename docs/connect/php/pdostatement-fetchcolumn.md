@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 20e79158a2b38dac6799e9affe7ac4bd656ff4f3
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308872"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983240"
 ---
 # <a name="pdostatementfetchcolumn"></a>PDOStatement::fetchColumn
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,7 +34,7 @@ string PDOStatement::fetchColumn ([ $column_number ] );
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
-$*Núm_col*: um inteiro opcional que indica o número de coluna com base em zero. O padrão é 0 (a primeira coluna na linha).  
+$*column_number*: um inteiro opcional que indica o número da coluna com base em zero. O padrão é 0 (a primeira coluna na linha).  
   
 ## <a name="return-value"></a>Valor retornado  
 Uma coluna ou false se não houver mais linhas.  
@@ -57,7 +57,7 @@ O suporte para PDO foi adicionado na versão 2.0 dos [!INCLUDE[ssDriverPHP](../.
 ?>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [PDOStatement Class](../../connect/php/pdostatement-class.md)
 
 [PDO](http://php.net/manual/book.pdo.php)  

@@ -1,5 +1,5 @@
 ---
-title: Perguntas frequentes (FAQ) para Linux ODBC e macOS | Microsoft Docs
+title: Perguntas frequentes para Linux e macOS ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,39 +15,39 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 17d25f6084e136736dbc4c8a8ff3cb019ce4692e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851501"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991368"
 ---
-# <a name="frequently-asked-questions-faq-for-odbc-linux-and-macos"></a>Perguntas frequentes (FAQ) para Linux ODBC e macOS
+# <a name="frequently-asked-questions-faq-for-odbc-linux-and-macos"></a>Perguntas frequentes para Linux e macOS ODBC
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-A seguir há respostas para perguntas sobre o Driver ODBC para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] em Linux e macOS.
+Veja a seguir respostas para perguntas sobre o driver ODBC para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] no Linux e no macOS.
   
 ## <a name="frequently-asked-questions"></a>Perguntas frequentes
 
-**Como os aplicativos ODBC existentes no Linux ou macOS funcionam com o driver?**  
-Você deve ser capaz de compilar e executar os aplicativos ODBC que você compilar e executar em Linux ou macOS usando outros drivers. 
+**Como os aplicativos ODBC existentes no Linux ou no macOS funcionam com o driver?**  
+Você deve ser capaz de compilar e executar os aplicativos ODBC que você vem compilando e executando no Linux ou no macOS usando outros drivers. 
   
-**Quais recursos do [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] essa versão do driver suporta?**
+**Com quais recursos do [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] essa versão do driver é compatível?**
 
-O driver ODBC no Linux e macOS dá suporte a todos os recursos de servidor no [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] exceto LocalDB. Para obter mais informações sobre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] recursos com suporte, consulte [diretrizes de programação](../../../connect/odbc/linux-mac/programming-guidelines.md).  
+O driver ODBC no Linux e no macOS dá suporte a todos os recursos de servidor no [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)], exceto LocalDB. Para obter mais informações sobre os recursos com suporte do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)], veja [Diretrizes de programação](../../../connect/odbc/linux-mac/programming-guidelines.md).  
   
-**O driver dá suporte à autenticação Kerberos?**  
-Sim. Se você tiver uma configuração de ambiente existente do Kerberos, você deve ser capaz de se conectar a servidores usando o `Trusted_Connection=Yes` DSN ou conexão opção de cadeia de caracteres. Para obter mais informações, consulte [usando a autenticação integrada](../../../connect/odbc/linux-mac/using-integrated-authentication.md).  
+**O driver é compatível com a autenticação Kerberos?**  
+Sim. Se você tiver uma configuração de ambiente existente do Kerberos, você deve ser capaz de se conectar a servidores usando o `Trusted_Connection=Yes` DSN ou conexão a opção de cadeia de caracteres. Para obter mais informações, consulte [Como usar autenticação integrada](../../../connect/odbc/linux-mac/using-integrated-authentication.md).  
   
 **Qual codificação Unicode um aplicativo deve usar?**  
 UTF-8 para dados SQL_CHAR e UTF-16 para dados SQL_WCHAR.  
 
-**Há exemplos ODBC que eu possa baixar e executar com o driver para experimentar ou avaliar?**
+**Há exemplos de ODBC que eu possa baixar e executar com o driver para experimentar ou avaliar?**
 
-Consulte [Use Existing MSDN C++ ODBC Samples for the ODBC Driver on Linux](http://blogs.msdn.com/b/sqlblog/archive/2012/01/26/use-existing-msdn-c-odbc-samples-for-microsoft-linux-odbc-driver.aspx) para obter um exemplo. Isso também é aplicável para o driver ODBC macOS. 
+Consulte [Use Existing MSDN C++ ODBC Samples for the ODBC Driver on Linux](http://blogs.msdn.com/b/sqlblog/archive/2012/01/26/use-existing-msdn-c-odbc-samples-for-microsoft-linux-odbc-driver.aspx) para obter um exemplo. Isso também é aplicável para o driver ODBC do macOS. 
 
-**O driver ODBC no Linux ou macOS Abrir fonte?**
+**É o driver ODBC no Linux ou macOS software livre?**
 
 Não, os drivers ODBC no Linux e macOS não são um produto de software livre.  
 
-## <a name="see-also"></a>Consulte também
-[Instalando o Microsoft ODBC Driver for SQL Server no Linux e macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+## <a name="see-also"></a>Consulte Também
+[Instalando o Microsoft ODBC Driver for SQL Server em Linux e macOS](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)

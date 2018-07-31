@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d6fe5c82561e32924c1a1792eda552caec522881
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309445"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38006448"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-php"></a>Etapa 3: prova de conceito da conexão ao SQL usando PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "35309445"
 ## <a name="step-1--connect"></a>Etapa 1: conectar-se  
   
   
-Isso **OpenConnection** função é chamada na parte superior de todas as funções que seguem.  
+Isso **OpenConnection** função é chamada na parte superior em todas as funções que seguem.  
   
   
 ```php 
@@ -51,7 +51,7 @@ Isso **OpenConnection** função é chamada na parte superior de todas as funç�
   
 ## <a name="step-2--execute-query"></a>Etapa 2: Executar consulta  
   
-O [sqlsrv_query()](http://php.net/manual/en/function.sqlsrv-query.php) função pode ser usada para recuperar um conjunto de resultados de uma consulta no banco de dados SQL. Essencialmente, essa função aceita qualquer consulta e o objeto de conexão e retorna um conjunto de resultados que pode ser iterado com o uso de [sqlsrv_fetch_array()](http://php.net/manual/en/function.sqlsrv-fetch-array.php).  
+O [sqlsrv_query ()](http://php.net/manual/en/function.sqlsrv-query.php) função pode ser usada para recuperar um conjunto de resultados de uma consulta no banco de dados SQL. Essencialmente, essa função aceita qualquer consulta e o objeto de conexão e retorna um conjunto de resultados que pode ser iterado com o uso de [sqlsrv_fetch_array ()](http://php.net/manual/en/function.sqlsrv-fetch-array.php).  
   
 ```php  
     function ReadData()  
@@ -83,7 +83,7 @@ O [sqlsrv_query()](http://php.net/manual/en/function.sqlsrv-query.php) função 
   
 ## <a name="step-3--insert-a-row"></a>Etapa 3: Inserir uma linha  
   
-Neste exemplo, você verá como executar um [inserir](../../t-sql/statements/insert-transact-sql.md) instrução passar com segurança, os parâmetros que proteger seu aplicativo de [injeção SQL](../../relational-databases/tables/primary-and-foreign-key-constraints.md) valor.    
+Neste exemplo, você verá como executar uma [inserir](../../t-sql/statements/insert-transact-sql.md) instrução com segurança, passar parâmetros que protegem seu aplicativo contra [injeção de SQL](../../relational-databases/tables/primary-and-foreign-key-constraints.md) valor.    
   
   
 ```php 
@@ -118,11 +118,11 @@ Neste exemplo, você verá como executar um [inserir](../../t-sql/statements/ins
   
 Este exemplo de código demonstra o uso de transações em que você:  
   
--Começar uma transação  
+-Inicia uma transação  
   
--Inserir uma linha de dados, atualizar a outra linha de dados  
+-Inserir uma linha de dados, atualizar outra linha de dados  
   
--Confirmar a transação se a inserção e atualização foi bem-sucedido e reverter a transação se uma delas não  
+-Confirmar sua transação se a inserção e atualização foram bem-sucedidas e reverter a transação se um deles não tiver sido  
   
   
 ```php 

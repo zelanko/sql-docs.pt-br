@@ -1,5 +1,5 @@
 ---
-title: Suporte de conjunto de linhas de esquema (OLE DB) | Microsoft Docs
+title: Suporte ao conjunto de linhas de esquema (OLE DB) | Microsoft Docs
 description: Suporte ao conjunto de linhas de esquema (OLE DB)
 ms.custom: ''
 ms.date: 06/12/2018
@@ -20,30 +20,30 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 1f78cbad6d328ba3e9a95a97a1eac4e3320b08de
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: a90779203502c8df145a1b25f628a7657d065edb
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35612071"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107072"
 ---
 # <a name="schema-rowset-support-ole-db"></a>Suporte a conjunto de linhas de esquema (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  O Driver OLE DB para SQL Server também oferece suporte a retorno de informações de esquema de um servidor vinculado ao processar [!INCLUDE[tsql](../../../includes/tsql-md.md)] consultas distribuídas.  
+  O OLE DB Driver for SQL Server também dá suporte ao retorno de informações de esquema de um servidor vinculado ao processar consultas distribuídas do [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
 > [!NOTE]  
->  Embora [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] suportar sinônimos, metadados de sinônimos não é retornado pelo Driver do OLE DB para SQL Server.  
+>  Embora [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dá suporte a sinônimos, metadados de sinônimos não é retornado pelo Driver do OLE DB para SQL Server.  
   
- As tabelas a seguir listam os conjuntos de linhas de esquema e as colunas de restrição com suporte pelo Driver OLE DB para SQL Server.  
+ As tabelas a seguir listam conjuntos de linhas de esquema e as colunas de restrição compatíveis com o OLE DB Driver for SQL Server.  
   
 |Conjunto de linhas de esquema|Colunas de restrição|  
 |-------------------|-------------------------|  
 |DBSCHEMA_CATALOGS|CATALOG_NAME|  
 |DBSCHEMA_COLUMN_PRIVILEGES|Todas as restrições são suportadas.<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME GRANTOR GRANTEE|  
-|DBSCHEMA_COLUMNS|Todas as restrições são suportadas.<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME<br /><br /> As colunas adicionais a seguir são específicas ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:<br /><br /> COLUMN_LCID, que é a ID de localidade do agrupamento. COLUMN_LCID tem o mesmo valor de um LCID do Windows.<br /><br /> COLUMN_COMPFLAGS define quais comparações são suportadas para o agrupamento. O formato de dados é o mesmo do DBPROB_FINDCOMPAREOPS.<br /><br /> COLUMN_SORTID, que é o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] estilo para o agrupamento de classificação.<br /><br /> COLUMN_TDSCOLLATION, que é o agrupamento do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para a coluna.<br /><br /> IS_COMPUTED, que é VARIANT_TRUE se a coluna for uma coluna computada e VARIANT_FALSE em caso contrário.|  
+|DBSCHEMA_COLUMNS|Todas as restrições são suportadas.<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME<br /><br /> As colunas adicionais a seguir são específicas ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:<br /><br /> COLUMN_LCID, que é a ID de localidade do agrupamento. COLUMN_LCID tem o mesmo valor de um LCID do Windows.<br /><br /> COLUMN_COMPFLAGS define quais comparações são suportadas para o agrupamento. O formato de dados é o mesmo do DBPROB_FINDCOMPAREOPS.<br /><br /> COLUMN_SORTID, que é o estilo de classificação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para o agrupamento.<br /><br /> COLUMN_TDSCOLLATION, que é o agrupamento do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para a coluna.<br /><br /> IS_COMPUTED, que é VARIANT_TRUE se a coluna for uma coluna computada e VARIANT_FALSE em caso contrário.|  
 |DBSCHEMA_FOREIGN_KEYS|Há suporte para todas as restrições.<br /><br /> PK_TABLE_CATALOG PK_TABLE_SCHEMA PK_TABLE_NAME FK_TABLE_CATALOG FK_TABLE_SCHEMA FK_TABLE_NAME|  
 |DBSCHEMA_INDEXES|As restrições 1, 2, 3 e 5 são suportadas.<br /><br /> TABLE_CATALOG TABLE_SCHEMA INDEX_NAME TABLE_NAME|  
 |DBSCHEMA_PRIMARY_KEYS|Há suporte para todas as restrições.<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME|  
@@ -58,12 +58,12 @@ ms.locfileid: "35612071"
 |DBSCHEMA_TABLES_INFO|Há suporte para todas as restrições.<br /><br /> TABLE_CATALOG TABLE_SCHEMA TABLE_NAME TABLE_TYPE|  
   
 ## <a name="in-this-section"></a>Nesta seção  
- [Suporte a consultas nos conjuntos de linhas de esquema distribuídas](../../oledb/ole-db/schema-rowsets-distributed-query-support.md)  
+ [Suporte à consulta distribuída no conjunto de linhas do esquema](../../oledb/ole-db/schema-rowsets-distributed-query-support.md)  
   
  [Conjunto de linhas LINKEDSERVERS &#40;OLE DB&#41;](../../oledb/ole-db/schema-rowsets-linkedservers-rowset.md)  
   
-## <a name="see-also"></a>Consulte também  
- [Driver do OLE DB para programação do SQL Server](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Programação no OLE DB Driver for SQL Server](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)   
  [Usando tipos definidos pelo usuário](../../oledb/features/using-user-defined-types.md)  
   
   

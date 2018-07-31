@@ -1,24 +1,23 @@
 ---
 title: SqlPackage.exe | Microsoft Docs
-ms.custom:
-- SSDT
+ms.prod: sql
+ms.technology: ssdt
 ms.date: 2018-06-27
-ms.prod: sql-non-specified
 ms.reviewer: alayu; sstein
 ms.suite: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 caps.latest.revision: 53
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: 4c206a60e0b494d4e060864eefcb50424d316938
-ms.sourcegitcommit: 0dff9dd43e80eee900eb92d25df9ca18397f3485
-ms.translationtype: HT
+ms.openlocfilehash: 15a34b5cc746368edb4f4dbe3e16720da77f9128
+ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37080074"
+ms.lasthandoff: 07/17/2018
+ms.locfileid: "39085408"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -137,7 +136,7 @@ Uma operação de publicação SqlPackage.exe atualiza o esquema de um banco de 
 |---|---|---|
 |**/p:**|AdditionalDeploymentContributorArguments=(STRING)|Especifica argumentos adicionais de colaborador de implantação para os colaboradores de implantação. Eles devem ser em formato de lista de valores delimitada por ponto e vírgula.|
 |**/p:**|AdditionalDeploymentContributors=(STRING)|Especifica colaboradores adicionais de implantação que devem ser executados quando o DACPAC é implantado. Ele deve ser em formato de lista delimitada por ponto e vírgula com os IDs ou nomes totalmente qualificados do colaborador de compilação.|
-|**/p:**|AllowDropBlocking Assemblies=(BOOLEAN)|Essa propriedade é usada pela implantação de SqlClr para descartar os assemblies com bloqueio como parte do plano de implantação. Por padrão, os assemblies de bloqueio/referência bloquearão uma atualização de assembly se o assembly de referência precisar ser descartado.|
+|**/p:**|AllowDropBlockingAssemblies=(BOOLEAN)|Essa propriedade é usada pela implantação de SqlClr para descartar os assemblies com bloqueio como parte do plano de implantação. Por padrão, os assemblies de bloqueio/referência bloquearão uma atualização de assembly se o assembly de referência precisar ser descartado.|
 |**/p:**|AllowIncompatiblePlatform=(BOOLEAN)|Especifica se a ação deve continuar apesar de plataformas do SQL Server potencialmente incompatíveis.|
 |**/p:**|AllowUnsafeRowLevelSecurityDataMovement=(BOOLEAN)|Não bloqueie a movimentação de dados em uma tabela que tenha Segurança em Nível de Linha se essa propriedade estiver definida como true. O padrão é false.|
 |**/p:**|BackupDatabaseBeforeChanges=(BOOLEAN)|Faz backups do banco de dados antes de implantar qualquer alteração.|
@@ -521,14 +520,14 @@ Uma ação de script do **SqlPackage.exe** cria um script de atualização incre
 |**/p:**|DoNotAlterReplicatedObjects = (BOOLIANO ' True')|Especifica se os objetos que forem replicados são identificados durante a verificação.
 |**/p:**|DoNotDropObjectType=(STRING)|Um tipo de objeto que não deve ser descartado quando DropObjectsNotInSource está definido como true. Os nomes de tipo de objeto válidos são Aggregates, ApplicationRoles, Assemblies, AsymmetricKeys, BrokerPriorities, Certificates, ColumnEncryptionKeys, ColumnMasterKeys, Contracts, DatabaseRoles, DatabaseTriggers, Defaults, ExtendedProperties, ExternalDataSources, ExternalFileFormats, ExternalTables, Filegroups, FileTables, FullTextCatalogs, FullTextStoplists, MessageTypes, PartitionFunctions, PartitionSchemes, Permissions, Queues, RemoteServiceBindings, RoleMembership, Rules, ScalarValuedFunctions, SearchPropertyLists, SecurityPolicies, Sequences, Services, Signatures, StoredProcedures, SymmetricKeys, Synonyms, Tables, TableValuedFunctions, UserDefinedDataTypes, UserDefinedTableTypes, ClrUserDefinedTypes, Users, Views, XmlSchemaCollections, Audits, Credentials, CryptographicProviders, DatabaseAuditSpecifications, DatabaseScopedCredentials, Endpoints, ErrorMessages, EventNotifications, EventSessions, LinkedServerLogins, LinkedServers, Logins, Routes, ServerAuditSpecifications, ServerRoleMembership, ServerRoles, ServerTriggers.
 |**/p:**|DoNotDropObjectTypes=(STRING)|Uma lista separada por ponto e vírgula de tipos de objeto que não devem ser removidos quando DropObjectsNotInSource é true. Os nomes de tipo de objeto válidos são Aggregates, ApplicationRoles, Assemblies, AsymmetricKeys, BrokerPriorities, Certificates, ColumnEncryptionKeys, ColumnMasterKeys, Contracts, DatabaseRoles, DatabaseTriggers, Defaults, ExtendedProperties, ExternalDataSources, ExternalFileFormats, ExternalTables, Filegroups, FileTables, FullTextCatalogs, FullTextStoplists, MessageTypes, PartitionFunctions, PartitionSchemes, Permissions, Queues, RemoteServiceBindings, RoleMembership, Rules, ScalarValuedFunctions, SearchPropertyLists, SecurityPolicies, Sequences, Services, Signatures, StoredProcedures, SymmetricKeys, Synonyms, Tables, TableValuedFunctions, UserDefinedDataTypes, UserDefinedTableTypes, ClrUserDefinedTypes, Users, Views, XmlSchemaCollections, Audits, Credentials, CryptographicProviders, DatabaseAuditSpecifications, DatabaseScopedCredentials, Endpoints, ErrorMessages, EventNotifications, EventSessions, LinkedServerLogins, LinkedServers, Logins, Routes, ServerAuditSpecifications, ServerRoleMembership, ServerRoles, ServerTriggers.
-|**/p:**|DropConstraintsNotInSource = (BOOLIANO ' True')|Especifica se as restrições que não existem no arquivo do instantâneo de banco de dados (.dacpac) serão removidas do banco de dados de destino quando você   em um banco de dados.|
-|**/p:**|DropDmlTriggersNotInSource = (BOOLIANO ' True')|Especifica se gatilhos DML que não existem no arquivo do instantâneo de banco de dados (.dacpac) serão removidos do banco de dados de destino quando você   em um banco de dados.|
+|**/p:**|DropConstraintsNotInSource = (BOOLIANO ' True')|Especifica se as restrições que não existem no arquivo do instantâneo de banco de dados (.dacpac) serão removidas do banco de dados de destino quando você em um banco de dados.|
+|**/p:**|DropDmlTriggersNotInSource = (BOOLIANO ' True')|Especifica se gatilhos DML que não existem no arquivo do instantâneo de banco de dados (.dacpac) serão removidos do banco de dados de destino quando você em um banco de dados.|
 |**/p:**|DropExtendedPropertiesNotInSource = (BOOLIANO ' True')|Especifica se as propriedades estendidas que não existem no arquivo de instantâneo do banco de dados (.dacpac) serão removidas do banco de dados de destino quando você publicar em um banco de dados.|
-|**/p:**|DropIndexesNotInSource = (BOOLIANO ' True')|Especifica se índices que não existem no arquivo do instantâneo de banco de dados (.dacpac) serão removidos do banco de dados de destino quando você   em um banco de dados.|
-|**/p:**|DropObjectsNotInSource=(BOOLEAN)|Especifica se objetos que não existem no arquivo do instantâneo de banco de dados (.dacpac) serão removidos do banco de dados de destino quando você   em um banco de dados. Esse valor prevalece sobre DropExtendedProperties.|
+|**/p:**|DropIndexesNotInSource = (BOOLIANO ' True')|Especifica se índices que não existem no arquivo do instantâneo de banco de dados (.dacpac) serão removidos do banco de dados de destino quando você em um banco de dados.|
+|**/p:**|DropObjectsNotInSource=(BOOLEAN)|Especifica se objetos que não existem no arquivo do instantâneo de banco de dados (.dacpac) serão removidos do banco de dados de destino quando você em um banco de dados. Esse valor prevalece sobre DropExtendedProperties.|
 |**/p:**|DropPermissionsNotInSource=(BOOLEAN)|Especifica se as permissões que não existem no arquivo do instantâneo de banco de dados (.dacpac) serão removidas do banco de dados de destino quando você publicar atualizações em um banco de dados.|
 |**/p:**|DropRoleMembersNotInSource=(BOOLEAN)|Especifica se os membros de função que não estão definidos no arquivo do instantâneo de banco de dados (.dacpac) serão removidos do banco de dados de destino quando você publicar atualizações em um banco de dados.|
-|**/p:**|DropStatisticsNotInSource = (BOOLIANO ' True')|Especifica se as estatísticas que não existem no arquivo de instantâneo do banco de dados (.dacpac) serão removidas do banco de dados de destino quando você   em um banco de dados.|
+|**/p:**|DropStatisticsNotInSource = (BOOLIANO ' True')|Especifica se as estatísticas que não existem no arquivo de instantâneo do banco de dados (.dacpac) serão removidas do banco de dados de destino quando você em um banco de dados.|
 |**/p:**|ExcludeObjectType=(STRING)|Um tipo de objeto que deve ser ignorado durante a implantação. Os nomes de tipo de objeto válidos são Agregações, ApplicationRoles, Assemblies, AsymmetricKeys, BrokerPriorities, Certificados, ColumnEncryptionKeys, ColumnMasterKeys, Contratos, DatabaseRoles, DatabaseTriggers, Padrões, ExtendedProperties, ExternalDataSources, ExternalFileFormats, ExternalTables, Grupos de arquivos, FileTables, FullTextCatalogs, FullTextStoplists, MessageTypes, PartitionFunctions, PartitionSchemes, Permissões, Filas, RemoteServiceBindings, RoleMembership, Regras, ScalarValuedFunctions, SearchPropertyLists, SecurityPolicies, Sequências, Serviços, Assinaturas, StoredProcedures, SymmetricKeys, Sinônimos, Tabelas, TableValuedFunctions, UserDefinedDataTypes, UserDefinedTableTypes, ClrUserDefinedTypes, Usuários, Exibições, XmlSchemaCollections, Auditorias, Credenciais, CryptographicProviders, DatabaseAuditSpecifications, DatabaseScopedCredentials, Pontos de extremidade, ErrorMessages, EventNotifications, EventSessions, LinkedServerLogins, LinkedServers, Logons, Rotas, ServerAuditSpecifications, ServerRoleMembership, ServerRoles, ServerTriggers.
 |**/p:**|ExcludeObjectTypes=(STRING)|Uma lista, delimitada por ponto e vírgula, de tipos de objetos que devem ser ignorados durante a implantação. Os nomes de tipo de objeto válidos são Aggregates, ApplicationRoles, Assemblies, AsymmetricKeys, BrokerPriorities, Certificates, ColumnEncryptionKeys, ColumnMasterKeys, Contracts, DatabaseRoles, DatabaseTriggers, Defaults, ExtendedProperties, ExternalDataSources, ExternalFileFormats, ExternalTables, Filegroups, FileTables, FullTextCatalogs, FullTextStoplists, MessageTypes, PartitionFunctions, PartitionSchemes, Permissions, Queues, RemoteServiceBindings, RoleMembership, Rules, ScalarValuedFunctions, SearchPropertyLists, SecurityPolicies, Sequences, Services, Signatures, StoredProcedures, SymmetricKeys, Synonyms, Tables, TableValuedFunctions, UserDefinedDataTypes, UserDefinedTableTypes, ClrUserDefinedTypes, Users, Views, XmlSchemaCollections, Audits, Credentials, CryptographicProviders, DatabaseAuditSpecifications, DatabaseScopedCredentials, Endpoints, ErrorMessages, EventNotifications, EventSessions, LinkedServerLogins, LinkedServers, Logins, Routes, ServerAuditSpecifications, ServerRoleMembership, ServerRoles, ServerTriggers.
 |**/p:**|GenerateSmartDefaults=(BOOLEAN)|Automaticamente fornece um valor padrão ao atualizar uma tabela que contém dados com uma coluna que não permite valores nulos.

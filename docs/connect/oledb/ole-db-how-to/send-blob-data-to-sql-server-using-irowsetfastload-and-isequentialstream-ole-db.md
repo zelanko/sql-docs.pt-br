@@ -14,15 +14,15 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: bcad0b5d9842380965e2dcc5634f563c4de6cfda
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: cefb12471433c34162f71249d4f84f7653707a02
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666126"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106832"
 ---
 # <a name="send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db"></a>Enviar dados BLOB ao SQL SERVER usando IROWSETFASTLOAD e ISEQUENTIALSTREAM (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -30,9 +30,9 @@ ms.locfileid: "35666126"
   
  Por padrão, este exemplo mostra como usar IRowsetFastLoad para enviar dados BLOB de comprimento variável por linha usando associações embutidas. Os dados BLOB embutidos devem se ajustar à memória disponível. Este método é executado melhor quando os dados BLOB têm menos de alguns megabytes, pois não há sobrecarga de fluxo adicional. Para dados com mais de alguns megabytes, principalmente dados que não estejam disponíveis em um bloco, o acesso de fluxo fornece desempenho melhor.  
   
- No código-fonte, quando você remover o comentário #define USE_ISEQSTREAM, o exemplo usará ISequentialStream. A implementação de fluxo é definida no exemplo e pode enviar qualquer tamanho de dados BLOB simplesmente alterando MAX_BLOB. Os dados de fluxo não têm que se ajustar à memória ou estar disponíveis em um bloco. Para chamar esse provedor, use IRowsetFastLoad::InsertRow. Passe um ponteiro usando IRowsetFastLoad::InsertRow para a implementação de fluxo no buffer de dados (deslocamento rgBinding.obValue) junto com a quantidade de dados disponível para leitura do fluxo. Alguns provedores talvez não tenham que saber o comprimento dos dados quando a associação ocorre. Nesse caso, o comprimento poderá ser omitido da associação.  
+ No código-fonte, quando você remover o comentário #define USE_ISEQSTREAM, o exemplo usará ISequentialStream. A implementação de fluxo é definida na amostra e pode enviar qualquer tamanho de dados BLOB simplesmente alterando MAX_BLOB. Os dados de fluxo não têm que se ajustar à memória ou estar disponíveis em um bloco. Para chamar esse provedor, use IRowsetFastLoad::InsertRow. Passe um ponteiro usando IRowsetFastLoad::InsertRow para a implementação de fluxo no buffer de dados (deslocamento rgBinding.obValue) junto com a quantidade de dados disponível para leitura do fluxo. Alguns provedores talvez não tenham que saber o comprimento dos dados quando a associação ocorre. Nesse caso, o comprimento poderá ser omitido da associação.  
   
- O exemplo não usa a interface de fluxo do provedor para gravar dados no provedor. Em vez disso, o exemplo passa um ponteiro ao objeto de fluxo que o provedor consumirá para ler os dados. Normalmente, os provedores Microsoft (SQLOLEDB, SQLNCLI e MSOLEDBSQL) lê dados em partes de 1024 bytes do objeto até que todos os dados foram processados. Nem SQLOLEDB nem SQLNCLI nem MSOLEDBSQL têm implementações completas para permitir ao consumidor gravar dados no objeto de fluxo do provedor. Somente dados de comprimento zero podem ser enviados pelo objeto de fluxo do provedor.  
+ O exemplo não usa a interface de fluxo do provedor para gravar dados no provedor. Em vez disso, o exemplo passa um ponteiro ao objeto de fluxo que o provedor consumirá para ler os dados. Normalmente, os provedores da Microsoft (SQLOLEDB, SQLNCLI e MSOLEDBSQL) lerão os dados em partes de 1.024 bytes do objeto até que todos os dados sejam processados. SQLOLEDB, SQLNCLI nem MSOLEDBSQL têm implementações completas para permitir ao consumidor gravar os dados no objeto de fluxo do provedor. Somente dados de comprimento zero podem ser enviados pelo objeto de fluxo do provedor.  
   
  O objeto ISequentialStream implementado pelo consumidor pode ser usado com dados de conjunto de linhas (IRowsetChange::InsertRow, IRowsetChange::SetData) e com parâmetros associando-se um parâmetro como DBTYPE_IUNKNOWN.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "35666126"
 ## <a name="example"></a>Exemplo  
  Execute a primeira listagem de código ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) para criar a tabela usada pelo aplicativo.  
   
- Compile com ole32.lib oleaut32.lib e execute a seguinte listagem de código C++. Este aplicativo se conecta ao padrão do seu computador [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instância. Em alguns sistemas operacionais Windows, será necessário alterar (localhost) ou (local) para o nome de sua instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para se conectar a uma instância nomeada, altere a cadeia de caracteres de conexão de L"(local)" para L"(local)\\\name", onde nome é a instância nomeada. Por padrão, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express é instalado em uma instância nomeada. Verifique se que a variável de ambiente INCLUDE inclui o diretório que contém msoledbsql.h.  
+ Compile com ole32.lib oleaut32.lib e execute a seguinte listagem de código C++. Esse aplicativo se conecta à instância padrão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] do computador. Em alguns sistemas operacionais Windows, será necessário alterar (localhost) ou (local) para o nome de sua instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para se conectar a uma instância nomeada, altere a cadeia de conexão de L"(local)" para L"(local)\\\name", em que name é a instância nomeada. Por padrão, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express é instalado em uma instância nomeada. Verifique se a variável de ambiente INCLUDE inclui o diretório que contém msoledbsql.h.  
   
  Execute a terceira listagem de código ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) para excluir a tabela usada pelo aplicativo.  
   

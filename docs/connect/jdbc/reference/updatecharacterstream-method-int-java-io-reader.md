@@ -1,5 +1,5 @@
 ---
-title: Método updateCharacterStream (int, Java.IO. Reader) | Microsoft Docs
+title: Método updateCharacterStream (int, java.io.Reader) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c24424c7c7f4183293871a39bb8eb04d72dacd05
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32848243"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37982558"
 ---
 # <a name="updatecharacterstream-method-int-javaioreader"></a>Método updateCharacterStream (int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +37,7 @@ public void updateCharacterStream(int columnIndex,
 #### <a name="parameters"></a>Parâmetros  
  *columnIndex*  
   
- Um **int** que indica o índice da coluna.  
+ Um **int** que indica o índice de coluna.  
   
  *x*  
   
@@ -47,13 +47,13 @@ public void updateCharacterStream(int columnIndex,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método updateCharacterStream é especificado pelo método updateCharacterStream na interface Java.SQL. resultset.  
+ Esse método updateCharacterStream é especificado pelo método updateCharacterStream na interface do resultset.  
   
- Esse método passa caracteres Unicode de um objeto do leitor de texto selecionado e de colunas binárias. Isso inclui todas as colunas de texto e **binário**, **varbinary**, **varbinary (max)**, **imagem**, e **xml**colunas, mas não **udt** colunas.  
+ Este método passa caracteres Unicode de um objeto Reader para colunas de texto e binárias selecionadas. Isto inclui todas as colunas de texto e colunas **binary**, **varbinary**, **varbinary(max)**, **image** e **xml**, mas não **udt**.  
   
  Usando esse método para o **imagem**, **texto**, e **ntext** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] tipos de dados podem afetar o desempenho.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Método updateCharacterStream &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatecharacterstream-method-sqlserverresultset.md)   
  [Membros de SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Classe SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

@@ -21,23 +21,23 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 009c6023dc1905ac724287790c1b26a4bfcf87d3
-ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
-ms.translationtype: MT
+ms.openlocfilehash: 20484bce71d0e776b4090f743c65e3a78d655a70
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/16/2018
-ms.locfileid: "35689899"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108808"
 ---
 # <a name="updating-data-in-rowsets"></a>Atualizando dados em conjuntos de linhas
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  O Driver OLE DB para SQL Server atualizações [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dados quando um consumidor atualiza um conjunto de linhas modificável que contém os dados. Um conjunto de linhas modificável é criado quando o consumidor solicita suporte para o **IRowsetChange** ou **IRowsetUpdate** interface.  
+  O OLE DB Driver for SQL Server atualiza dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] quando um consumidor atualiza um conjunto de linhas modificável que contém esses dados. Um conjunto de linhas modificável é criado quando o consumidor solicita suporte para a interface **IRowsetChange** ou **IRowsetUpdate**.  
   
- Todas as OLE DB Driver para uso de conjuntos de linhas modificável do SQL Server [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cursores para dar suporte ao conjunto de linhas. A propriedade do conjunto de linhas DBPROP_LOCKMODE altera o comportamento de controle da simultaneidade do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em cursores e determina o comportamento da busca de linhas do conjunto de linhas e da geração de erros de integridade de dados nos conjuntos de linhas atualizáveis.  
+ Todos os Driver do OLE DB para uso de conjuntos de linhas modificável do SQL Server [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cursores para dar suporte ao conjunto de linhas. A propriedade do conjunto de linhas DBPROP_LOCKMODE altera o comportamento de controle da simultaneidade do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em cursores e determina o comportamento da busca de linhas do conjunto de linhas e da geração de erros de integridade de dados nos conjuntos de linhas atualizáveis.  
   
- O Driver OLE DB para SQL Server dá suporte à sincronização de linhas antes ou após uma atualização.  
+ O Driver do OLE DB para SQL Server dá suporte à sincronização de linha antes ou após uma atualização.  
   
 > [!NOTE]  
 >  IRowChange::SetColumns está disponível para definir os valores de uma ou mais colunas nomeadas de um objeto de linha.  
@@ -48,7 +48,7 @@ ms.locfileid: "35689899"
   
 -   [Ressincronizando linhas](../../oledb/ole-db-rowsets/updating-data-in-rowsets-resynchronizing-rows.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Conjuntos de linhas](../../oledb/ole-db-rowsets/rowsets.md)  
   
   

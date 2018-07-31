@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4a2a2d041ba99ded7a8d611620ce288593b341a6
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307655"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38015783"
 ---
 # <a name="how-to-perform-transactions"></a>Como executar transações
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -65,7 +65,7 @@ As etapas para executar uma transação podem ser resumidas da seguinte forma:
   
 ## <a name="example"></a>Exemplo  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>Descrição  
 O exemplo a seguir executa várias consultas como parte de uma transação. Se todas as consultas forem bem-sucedidas, a transação será confirmada. Se uma das consultas falhar, a transação será revertida.  
   
 O exemplo tenta excluir uma ordem de venda da tabela *Sales.SalesOrderDetail* e ajustar os níveis de estoque de produto na tabela *Product.ProductInventory* para cada produto na ordem de venda. Essas consultas estão incluídas em uma transação porque todas as consultas devem ter êxito para que o banco de dados reflita com precisão o estado dos pedidos e a disponibilidade do produto.  
@@ -74,7 +74,7 @@ A primeira consulta no exemplo recupera identificações e quantidades de produt
   
 As consultas resultantes (exclusão da ordem de venda e atualização das quantidades de estoque do produto) são parte da transação.  
   
-O exemplo supõe que SQL Server e o [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) banco de dados são instalados no computador local. Toda a saída será gravada no console quando o exemplo for executado da linha de comando.  
+O exemplo supõe que o SQL Server e o banco de dados [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) estejam instalados no computador local. Toda a saída será gravada no console quando o exemplo for executado da linha de comando.  
   
 ### <a name="code"></a>Código  
   
@@ -154,12 +154,12 @@ function perform_trans_ops($conn, $orderId)
 ```  
   
 ### <a name="comments"></a>Comentários  
-Com a finalidade de nos concentrarmos no comportamento da transação, alguns tratamentos de erro recomendados não estão incluídos no exemplo anterior. Para um aplicativo de produção, é recomendável verificar qualquer chamada para um **sqlsrv** de função para erros e tratamento de acordo.
+Com a finalidade de nos concentrarmos no comportamento da transação, alguns tratamentos de erro recomendados não estão incluídos no exemplo anterior. Para um aplicativo de produção, é recomendável verificar qualquer chamada para um **sqlsrv** de função para erros e tratá-las adequadamente.
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Atualizando dados &#40;Drivers da Microsoft para PHP para SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
 
-[Transações (mecanismo de banco de dados)](https://msdn.microsoft.com/library/ms190612.aspx)
+[Transações (Mecanismo de Banco de Dados)](https://msdn.microsoft.com/library/ms190612.aspx)
 
 [Sobre exemplos de código na documentação](../../connect/php/about-code-examples-in-the-documentation.md)  
   

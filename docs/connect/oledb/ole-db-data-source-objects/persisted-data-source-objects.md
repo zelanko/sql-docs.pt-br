@@ -1,6 +1,6 @@
 ---
 title: Persistente de objetos de fonte de dados | Microsoft Docs
-description: Persistente de objetos de fonte de dados
+description: Objetos de fonte de dados persistidos
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,24 +19,24 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 551bae4aac968092b67f83232da5101c10623b31
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 174bd7985cacf33a1cb62988204d8b0cec99b89b
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665606"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106942"
 ---
 # <a name="persisted-data-source-objects"></a>Objetos persistidos da fonte de dados
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  O Driver OLE DB para SQL Server dá suporte a objetos de fonte de dados persistente com o **IPersistFile** interface.  
+  O Driver do OLE DB para SQL Server dá suporte a objetos de fonte de dados persistentes com o **IPersistFile** interface.  
   
 ## <a name="examples"></a>Exemplos  
- **A. Manter a inicialização da fonte de dados:**  
+ **A. Persistir inicialização de fonte de dados:**  
   
- Este exemplo mostra uma função que persiste as propriedades de inicialização de uma fonte de dados definindo um servidor, um banco de dados e o uso do Modo de Autenticação do Windows para conexão. O nome do servidor e o nome do banco de dados são recebidos no *pLocation* e *pDatasource* parâmetros da função.  
+ Este exemplo mostra uma função que persiste as propriedades de inicialização de uma fonte de dados definindo um servidor, um banco de dados e o uso do Modo de Autenticação do Windows para conexão. O nome do servidor e o nome do banco de dados são recebidos nos parâmetros *pLocation* e *pDatasource* da função.  
   
 ```  
 HRESULT SetAndSaveInitProps  
@@ -145,7 +145,7 @@ HRESULT SetAndSaveInitProps
     }  
 ```  
   
- **B. Use a inicialização da fonte de dados persistente:**  
+ **B. Usar a inicialização de fonte de dados persistida:**  
   
  Este exemplo usa um objeto de fonte de dados persistido com propriedades de inicialização adicionais que fornecem um logon e uma senha do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
@@ -233,9 +233,9 @@ HRESULT InitFromPersistedDS
     }  
 ```  
   
- O **IPersistFile:: Save** método pode ser chamado antes ou depois de chamar **IDBInitialize:: Initialize**. Chamar o método após um retorno bem-sucedido de **IDBInitialize:: Initialize** garante uma especificação de fonte de dados válido é persistente.  
+ O método **IPersistFile::Save** pode ser chamado antes ou depois de chamar **IDBInitialize::Initialize**. A chamada do método após um retorno bem-sucedido de **IDBInitialize::Initialize** garante que uma especificação de fonte de dados válida seja persistida.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Objetos de fonte de dados &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

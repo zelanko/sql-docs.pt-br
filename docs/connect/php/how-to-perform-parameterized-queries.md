@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c6095a83f4bb9982a929e0bb41e7269bc6e41935
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307565"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38032985"
 ---
 # <a name="how-to-perform-parameterized-queries"></a>Como executar consultas parametrizadas
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -35,13 +35,13 @@ As etapas para executar uma consulta parametrizada podem ser resumidas em quatro
   
 2.  Inicialize ou atualize as variáveis do PHP correspondentes aos espaços reservados na consulta Transact-SQL.  
   
-3.  Use variáveis PHP da etapa 2 para criar ou atualizar uma matriz de valores de parâmetro que correspondem aos espaços reservados de parâmetros na cadeia de caracteres Transact-SQL. Os valores de parâmetro na matriz devem ser na mesma ordem que os espaços reservados deve representá-los.
+3.  Use as variáveis do PHP da etapa 2 para criar ou atualizar uma matriz de valores de parâmetros que correspondem aos espaços reservados do parâmetro na cadeia de caracteres Transact-SQL. Os valores de parâmetro na matriz devem ser na mesma ordem que os espaços reservados significava para representá-los.
   
 4.  Execute a consulta:  
   
     -   Se você estiver usando o driver SQLSRV, use [sqlsrv_query](../../connect/php/sqlsrv-query.md) ou [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)/[sqlsrv_execute](../../connect/php/sqlsrv-execute.md).  
   
-    -   Se você estiver usando o driver PDO_SQLSRV, executar a consulta com [PDO](../../connect/php/pdo-prepare.md) e [Pdostatement](../../connect/php/pdostatement-execute.md). Os tópicos para [PDO::prepare](../../connect/php/pdo-prepare.md) e [PDOStatement::execute](../../connect/php/pdostatement-execute.md) têm exemplos de código.  
+    -   Se você estiver usando o driver PDO_SQLSRV, execute a consulta com [PDO::prepare](../../connect/php/pdo-prepare.md) e [PDOStatement::execute](../../connect/php/pdostatement-execute.md). Os tópicos para [PDO::prepare](../../connect/php/pdo-prepare.md) e [PDOStatement::execute](../../connect/php/pdostatement-execute.md) têm exemplos de código.  
   
 O restante deste tópico discute consultas parametrizadas usando o driver SQLSRV.  
   
@@ -53,7 +53,7 @@ O exemplo a seguir atualiza a quantidade de uma identificação de produto espec
   
 O exemplo, então, consulta o banco de dados para verificar se a quantidade foi atualizada corretamente. A identificação do produto é um parâmetro na consulta SELECT.  
   
-O exemplo supõe que SQL Server e o [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) banco de dados são instalados no computador local. Toda a saída será gravada no console quando o exemplo for executado da linha de comando.  
+O exemplo supõe que o SQL Server e o banco de dados [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) estejam instalados no computador local. Toda a saída será gravada no console quando o exemplo for executado da linha de comando.  
   
 ```  
 <?php  
@@ -117,9 +117,9 @@ sqlsrv_close( $conn);
 O exemplo anterior usa a função **sqlsrv_query** para executar consultas. Essa função é útil para executar consultas únicas, pois efetua a preparação e a execução da instrução. A combinação de **sqlsrv_prepare**/**sqlsrv_execute** é recomendada para executar novamente uma consulta com valores de parâmetros diferentes. Para ver um exemplo de nova execução de uma consulta com valores de parâmetros diferentes, consulte o exemplo a seguir.  
   
 ## <a name="example"></a>Exemplo  
-O exemplo a seguir demonstra a associação implícita de variáveis ao usar a função **sqlsrv_prepare** . O exemplo insere várias ordens de venda na tabela *Sales.SalesOrderDetail* . O *$params* matriz está associada à instrução (*$stmt*) quando **sqlsrv_prepare** é chamado. Antes de cada execução de uma consulta que insere uma nova ordem de venda na tabela, a matriz *$params* é atualizada com novos valores correspondentes aos detalhes da ordem de venda. A próxima execução da consulta usa os novos valores de parâmetro.  
+O exemplo a seguir demonstra a associação implícita de variáveis ao usar a função **sqlsrv_prepare** . O exemplo insere várias ordens de venda na tabela *Sales.SalesOrderDetail* . A matriz *$params* é associada à instrução *$stmt* quando **sqlsrv_prepare** é chamado. Antes de cada execução de uma consulta que insere uma nova ordem de venda na tabela, a matriz *$params* é atualizada com novos valores correspondentes aos detalhes da ordem de venda. A próxima execução da consulta usa os novos valores de parâmetro.  
   
-O exemplo supõe que SQL Server e o [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) banco de dados são instalados no computador local. Toda a saída será gravada no console quando o exemplo for executado da linha de comando.  
+O exemplo supõe que o SQL Server e o banco de dados [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) estejam instalados no computador local. Toda a saída será gravada no console quando o exemplo for executado da linha de comando.  
   
 ```  
 <?php  
@@ -191,7 +191,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Convertendo tipos de dados](../../connect/php/converting-data-types.md)
 
 [Considerações de segurança para os Drivers da Microsoft para PHP para SQL Server](../../connect/php/security-considerations-for-php-sql-driver.md)

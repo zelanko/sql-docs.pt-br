@@ -18,38 +18,38 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 8c653bc4f79e9f54b96fa86fc5c0b65756b23216
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 233c9e7e2aefbdae34f964e95dbeb7d10d55a63d
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666016"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105872"
 ---
 # <a name="conversions-ole-db"></a>Conversões (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Esta seção descreve como converter entre **datetime** e **datetimeoffset** valores. As conversões descritas nesta seção já são fornecidas pelo OLE DB ou são uma extensão consistente do OLE DB.  
+  Esta seção discute como converter entre **datetime** e **datetimeoffset** valores. As conversões descritas nesta seção já são fornecidas pelo OLE DB ou são uma extensão consistente do OLE DB.  
   
- O formato de literais e cadeias de caracteres para datas e horas no OLE DB geralmente segue a norma ISO e não depende da localidade do cliente. Uma exceção é DBTYPE_DATE, em que o padrão é Automação OLE. No entanto, como OLE DB Driver para SQL Server só converte entre tipos quando os dados são transmitidos para ou do cliente, não é possível para um aplicativo forçar o OLE DB Driver para SQL Server converter entre formatos DBTYPE_DATE e a cadeia de caracteres. Caso contrário, as cadeias de caracteres usam os formatos a seguir (texto entre colchetes indica um elemento opcional):  
+ O formato de literais e cadeias de caracteres para datas e horas no OLE DB geralmente segue a norma ISO e não depende da localidade do cliente. Uma exceção é DBTYPE_DATE, em que o padrão é Automação OLE. No entanto, porque o Driver do OLE DB para SQL Server só converte entre tipos quando os dados são transmitidos para ou do cliente, não é possível para um aplicativo forçar o Driver do OLE DB para SQL Server converter entre DBTYPE_DATE e cadeia de caracteres de formatos. Caso contrário, as cadeias de caracteres usam os formatos a seguir (texto entre colchetes indica um elemento opcional):  
   
--   O formato de **datetime** e **datetimeoffset** cadeias de caracteres é:  
+-   O formato do **datetime** e **datetimeoffset** cadeias de caracteres é:  
   
      *aaaa*-*mm*-*dd*[ *hh*:*mm*:*ss*[. *9999999*] [± *hh*:*mm*]]  
   
--   O formato de **tempo** cadeias de caracteres é:  
+-   O formato de cadeias de caracteres **time** é:  
   
      *hh*:*mm*:*ss*[.*9999999*]  
   
--   O formato de **data** cadeias de caracteres é:  
+-   O formato do **data** cadeias de caracteres é:  
   
-     *aaaa*-*mm*-*dd*  
+     *yyyy*-*mm*-*dd*  
   
 > [!NOTE]  
->  As versões anteriores do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client e SQLOLEDB implementavam conversões OLE, caso em que conversões padrão falhavam. O Driver OLE DB para SQL Server segue o mesmo comportamento que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Como resultado, algumas conversões executadas pelo Driver do OLE DB para SQL Server diferem da especificação OLE DB.  
+>  As versões anteriores do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client e SQLOLEDB implementavam conversões OLE, caso em que conversões padrão falhavam. O Driver do OLE DB para SQL Server segue o mesmo comportamento que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Como resultado, algumas conversões executadas pelo Driver do OLE DB para SQL Server diferem da especificação OLE DB.  
   
- As conversões de cadeias de caracteres permitem uma flexibilidade nos espaços em branco e na largura dos campos. Para obter mais informações, consulte a seção "Formatos de dados: cadeias e literais" [suporte de tipo de dados para aprimoramentos de hora e data do OLE DB](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md).  
+ As conversões de cadeias de caracteres permitem uma flexibilidade nos espaços em branco e na largura dos campos. Para obter mais informações, consulte a seção "Formatos de dados: cadeias de caracteres e literais" [suporte de tipo de dados para OLE DB aprimoramentos de data e hora](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md).  
   
  Seguem as regras de conversão gerais:  
   
@@ -71,12 +71,12 @@ ms.locfileid: "35666016"
   
 ## <a name="in-this-section"></a>Nesta seção  
  [Conversões executadas do cliente para o servidor](../../oledb/ole-db-date-time/conversions-performed-from-client-to-server.md)  
- Descreve conversões de data/hora executadas entre um aplicativo cliente escrito com o Driver do OLE DB para SQL Server e [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (ou posterior).  
+ Descreve as conversões de data/hora executadas entre um aplicativo cliente escrito com o OLE DB Driver for SQL Server e o [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (ou posterior).  
   
  [Conversões executadas do servidor para o cliente](../../oledb/ole-db-date-time/conversions-performed-from-server-to-client.md)  
- Descreve conversões de data/hora executadas entre [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (ou posterior) e um aplicativo cliente escrito com o Driver do OLE DB para SQL Server.  
+ Descreve as conversões de data/hora executadas entre o [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (ou posterior) e um aplicativo cliente escrito com o OLE DB Driver for SQL Server.  
   
-## <a name="see-also"></a>Consulte também  
- [Data e hora melhorias &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Melhorias de data e hora &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

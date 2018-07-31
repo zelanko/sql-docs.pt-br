@@ -1,6 +1,6 @@
 ---
 title: Tipos definidos pelo usuário CLR grandes | Microsoft Docs
-description: Tipos CLR grandes definidos pelo usuário no OLE DB Driver para SQL Server
+description: Tipos CLR grandes definidos pelo usuário no Driver do OLE DB para SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -16,15 +16,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: efb6e8f00859e98963dbf4f511899ef517c5f7c0
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: 4cf71fa76c4759364954c8cbff446957dd80c8aa
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35611701"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108058"
 ---
 # <a name="large-clr-user-defined-types"></a>Tipos de dados CLR grandes definidos pelo usuário
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -34,7 +34,7 @@ ms.locfileid: "35611701"
   
 ## <a name="use-cases"></a>Casos de uso   
   
- Para OLE DB, suporte a UDTs grandes inclui a capacidade de transmitir valores UDT para e do servidor usando a associação de ISequentialStream.  
+ Para o OLE DB, o suporte a UDTs grandes inclui a capacidade de transmitir valores UDT bidirecionalmente no servidor usando a associação ISequentialStream.  
   
  Os UDTs inferiores ou iguais a 8.000 bytes se comportarão como no SQL Server 2005. Para OLE DB, você ainda pode transmitir UDTs pequenos usando associação de ISequentialStream.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "35611701"
   
  Para aplicativos com código de acesso a dados existente, você pode explorar o comportamento de UDTs CLR no cliente recuperando UDTs através de APIs nativas e criando instâncias deles com C++ CLI interop em aplicativos de modo misto.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Recursos do Driver do OLE DB para SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md)    
   
   

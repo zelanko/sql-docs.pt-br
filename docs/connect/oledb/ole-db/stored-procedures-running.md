@@ -18,19 +18,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 9919fedbb999600e17c767a3206a587b99aec4da
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: b4abfa519b9f083ee90df466ec7db3bd5c7341a9
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35611881"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108958"
 ---
-# <a name="stored-procedures---running"></a>Procedimentos armazenados - em execução
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="stored-procedures---running"></a>Procedimentos armazenados – em execução
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Quando a execução de instruções, chamar um procedimento armazenado na fonte de dados (em vez de executar ou preparar uma instrução no aplicativo cliente diretamente) pode fornecer:  
+  Ao executar instruções, a chamada a um procedimento armazenado na fonte de dados (em vez de executar ou preparar uma instrução diretamente no aplicativo cliente) pode fornecer:  
   
 -   Maior desempenho.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "35611881"
   
 -   Maior funcionalidade.  
   
- O Driver OLE DB para SQL Server dá suporte a três dos mecanismos que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usam procedimentos armazenados para retornar dados:  
+ O Driver do OLE DB para SQL Server dá suporte a três dos mecanismos que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] procedimentos armazenados usam para retornar dados:  
   
 -   Toda instrução SELECT no procedimento gera um conjunto de resultados.  
   
@@ -52,13 +52,13 @@ ms.locfileid: "35611881"
   
  O aplicativo precisa ser capaz de tratar todas essas saídas provenientes dos procedimentos armazenados.  
   
- Provedores do OLE DB diferentes retornam parâmetros de saída e valores de retorno em horários diferentes durante o processamento de resultados. No caso do OLE DB Driver para SQL Server, os parâmetros de saída e códigos de retorno não são fornecidos até depois que o consumidor tiver recuperado ou cancelado os conjuntos de resultados retornados pelo procedimento armazenado. Os códigos de retorno e parâmetros de saída são retornados no último pacote TDS proveniente do servidor.  
+ Provedores do OLE DB diferentes retornam parâmetros de saída e valores de retorno em horários diferentes durante o processamento de resultados. No caso do OLE DB Driver for SQL Server, os parâmetros de saída e os códigos de retorno não serão fornecidos enquanto o consumidor não tiver recuperado ou cancelado os conjuntos de resultados retornados pelo procedimento armazenado. Os códigos de retorno e parâmetros de saída são retornados no último pacote TDS proveniente do servidor.  
   
  Os provedores usam a propriedade DBPROP_OUTPUTPARAMETERAVAILABILITY para informar o momento em que são retornados os parâmetros de saída e valores de retorno. Essa propriedade faz parte do conjunto de propriedades DBPROPSET_DATASOURCEINFO.  
   
- O Driver OLE DB para SQL Server define a propriedade DBPROP_OUTPUTPARAMETERAVAILABILITY como DBPROPVAL_OA_ATROWRELEASE para indicar que os códigos de retorno e parâmetros de saída não são retornados até que o conjunto de resultados é processado ou liberado.  
+ O OLE DB Driver for SQL Server define a propriedade DBPROP_OUTPUTPARAMETERAVAILABILITY como DBPROPVAL_OA_ATROWRELEASE para indicar que os códigos de retorno e parâmetros de saída não serão retornados enquanto o conjunto de resultados não for processado ou liberado.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados](../../oledb/ole-db/stored-procedures.md)  
   
   

@@ -1,6 +1,6 @@
 ---
 title: Buscar linhas em um conjunto de resultados (OLE DB) | Microsoft Docs
-description: Buscar linhas em um conjunto de resultados usando Driver OLE DB para SQL Server
+description: Buscar linhas em um conjunto de resultados usando Driver do OLE DB para SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,15 +16,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: b785d92f901f763eab809783cbb494c5f30f585d
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 7bd46f37b15fbc5fdd33a707a96c710d636ad3a7
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666336"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107638"
 ---
 # <a name="fetch-rows-from-a-result-set-ole-db"></a>Buscar linhas em um conjunto de resultados (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 
@@ -37,8 +37,8 @@ ms.locfileid: "35666336"
   
 ## <a name="example"></a>Exemplo  
   
-### <a name="description"></a>Description  
- Compile com ole32.lib oleaut32.lib e execute a seguinte listagem de código C++. Este aplicativo se conecta ao padrão do seu computador [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] instância. Em alguns sistemas operacionais Windows, será necessário alterar (localhost) ou (local) para o nome de sua instância do [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]. Para se conectar a uma instância nomeada, altere a cadeia de caracteres de conexão de L"(local)" para L"(local)\\\name", onde nome é a instância nomeada. Por padrão, o [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] Express é instalado em uma instância nomeada. Verifique se que a variável de ambiente INCLUDE inclui o diretório que contém msoledbsql.h.  
+### <a name="description"></a>Descrição  
+ Compile com ole32.lib oleaut32.lib e execute a seguinte listagem de código C++. Esse aplicativo se conecta à instância padrão do [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] do computador. Em alguns sistemas operacionais Windows, será necessário alterar (localhost) ou (local) para o nome de sua instância do [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]. Para se conectar a uma instância nomeada, altere a cadeia de conexão de L"(local)" para L"(local)\\\name", em que name é a instância nomeada. Por padrão, o [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] Express é instalado em uma instância nomeada. Verifique se a variável de ambiente INCLUDE inclui o diretório que contém msoledbsql.h.  
   
 ### <a name="code"></a>Código  
   
@@ -383,7 +383,7 @@ int ProcessResultSet() {
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
- [Tópicos de instruções de resultados de processamento &#40;OLE DB&#41;](../../../oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Tópicos de instruções sobre o processamento de resultados &#40;OLE DB&#41;](../../../oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
   

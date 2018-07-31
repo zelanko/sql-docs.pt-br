@@ -20,23 +20,23 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 27e50280df7bfe1bcbadcb76988d8962ebee1d77
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: a528171a6f58f9fc463cd161c7e5b2213794474a
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665926"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107192"
 ---
 # <a name="setting-large-data"></a>Definindo dados grandes
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Com o OLE DB para SQL Server, você pode definir dados BLOB transmitindo um ponteiro para um objeto de armazenamento do consumidor.  
+  Com o Driver do OLE DB para SQL Server, você pode definir os dados BLOB transmitindo um ponteiro para um objeto de armazenamento do consumidor.  
   
  O consumidor cria um objeto de armazenamento que contém os dados e transmite um ponteiro a este objeto de armazenamento para o provedor. Em seguida, o provedor lê dados do objeto de armazenamento do consumidor e grava-os na coluna de BLOB.  
   
- Para transmitir um ponteiro a seu próprio objeto de armazenamento, o consumidor cria um acessador que associa o valor da coluna de BLOB. O consumidor chama o **IRowsetChange:: SetData** ou **IRowsetChange:: Insertrow** método com o acessador que associa a coluna BLOB. Transmite um ponteiro a uma interface de armazenamento no objeto de armazenamento do consumidor.  
+ Para transmitir um ponteiro a seu próprio objeto de armazenamento, o consumidor cria um acessador que associa o valor da coluna de BLOB. Em seguida, o consumidor chama o método **IRowsetChange::SetData** ou **IRowsetChange::InsertRow** com o acessador que associa a coluna BLOB. Transmite um ponteiro a uma interface de armazenamento no objeto de armazenamento do consumidor.  
   
  Este tópico aborda a funcionalidade disponível nas funções a seguir:  
   
@@ -49,17 +49,17 @@ ms.locfileid: "35665926"
 ## <a name="how-to-set-large-data"></a>Como definir dados grandes  
  Para transmitir um ponteiro para seu próprio objeto de armazenamento, o consumidor cria um acessador que associa o valor da coluna BLOB e chama os métodos **IRowsetChange::SetData** ou **IRowsetChange::InsertRow** . Para definir dados de BLOB:  
   
-1.  Crie uma estrutura DBOBJECT que descreva como a coluna BLOB deve ser acessada. Definir o *Dwfrag* elemento da estrutura DBOBJECT como STGM_READ e defina o *iid* elemento como IID_ISequentialStream (a interface a ser exposta).  
+1.  Crie uma estrutura DBOBJECT que descreva como a coluna BLOB deve ser acessada. Defina o elemento *dwFlag* da estrutura DBOBJECT como STGM_READ e defina o elemento *iid* como IID_ISequentialStream (a interface a ser exposta).  
   
 2.  Defina as propriedades no grupo de propriedades DBPROPSET_ROWSET para que o conjunto de linhas seja atualizável.  
   
-3.  Crie um conjunto de associações (uma de cada coluna) usando uma matriz de estruturas DBBINDING. Definir o *wType* elemento na estrutura DBBINDING como DBTYPE_IUNKNOWN e o *pObject* elemento para apontar para a estrutura DBOBJECT que você criou.  
+3.  Crie um conjunto de associações (uma de cada coluna) usando uma matriz de estruturas DBBINDING. Defina o elemento *wType* na estrutura DBBINDING como DBTYPE_IUNKNOWN e o elemento *pObject* para que ele aponte para a estrutura DBOBJECT criada.  
   
 4.  Crie um acessador que usa as informações de associação na matriz de estruturas DBBINDINGS.  
   
 5.  Chame **GetNextRows** para buscar as linhas seguintes no conjunto de linhas. Chame **GetData** para ler os dados do conjunto de linhas.  
   
-6.  Criar um objeto de armazenamento que contém os dados (e também o indicador de comprimento) e, em seguida, chamar **IRowsetChange:: SetData** (ou **IRowsetChange:: Insertrow**) com o acessador que associa a coluna BLOB para definir os dados.  
+6.  Crie um objeto de armazenamento que contém os dados (e também o indicador de tamanho) e, em seguida, chame **IRowsetChange::SetData** (ou **IRowsetChange::InsertRow**) com o acessador que associa a coluna BLOB para definir os dados.  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo mostra como definir dados de BLOB. O exemplo cria uma tabela, adiciona um registro de exemplo, busca esse registro no conjunto de linhas e define o valor do campo de BLOB:  
@@ -725,7 +725,7 @@ Exit:
 } //end function  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [BLOBs e objetos OLE](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)   
  [Usando tipos de valor grande](../../oledb/features/using-large-value-types.md)  
   

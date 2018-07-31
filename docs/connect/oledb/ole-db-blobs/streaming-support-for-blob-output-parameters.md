@@ -1,5 +1,5 @@
 ---
-title: Suporte de streaming para BLOB parâmetros de saída | Microsoft Docs
+title: Suporte a streaming para o BLOB de parâmetros de saída | Microsoft Docs
 description: Suporte de streaming para parâmetros de saída BLOB
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,21 +16,21 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 7f53688497cba5fb5397a25b04a94731262ed1d5
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 92a9e7501d709b5509d5226a06cf1e08db05d555
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665166"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106862"
 ---
 # <a name="streaming-support-for-blob-output-parameters"></a>Suporte de transmissão a parâmetros de saída BLOB
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Este artigo contém um exemplo que mostra suporte para parâmetros de saída BLOB, que associa o BLOB de streaming parâmetros como ISequentialStreams de saída.  
+  Este artigo contém uma amostra que apresenta o suporte de streaming para parâmetros de saída BLOB, que associa parâmetros de saída BLOB como ISequentialStreams.  
   
- Você pode ser bloqueado em parâmetros de saída em IMultipleResults::GetResult, recebendo o valor de retorno DB_E_OBJECTOPEN. O chamador deve verificar para blob pendentes parâmetros e lê-los completamente ou liberá-los.  
+ Você pode ser bloqueado em parâmetros de saída em IMultipleResults::GetResult, recebendo o valor de retorno DB_E_OBJECTOPEN. O chamador deve verificar se há parâmetros de blob pendentes e lê-los por completo ou liberá-los.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -516,7 +516,7 @@ _Exit:
 }
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [BLOBs e objetos OLE](../../oledb/ole-db-blobs/blobs-and-ole-objects.md)  
   
   

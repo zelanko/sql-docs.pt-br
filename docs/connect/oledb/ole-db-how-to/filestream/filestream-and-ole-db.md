@@ -1,5 +1,5 @@
 ---
-title: FileStream e BD OLE | Microsoft Docs
+title: FileStream e OLE DB | Microsoft Docs
 description: Filestream e BD OLE
 ms.custom: ''
 ms.date: 06/14/2018
@@ -14,21 +14,21 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: d1377e456642db50e82d39edab1d0c772c353f21
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 49da691c5c05969549895952b9b841d238548101
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665636"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108948"
 ---
 # <a name="filestream-and-ole-db"></a>Filestream e BD OLE
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 
   Esta seção contém quatro exemplos que mostram como usar o Driver do OLE DB para SQL Server com o recurso filestream:  
   
--   [Ler uma coluna FILESTREAM para arquivo usando IBCPSession &#40;OLE DB&#41;](../../../oledb/ole-db-how-to/filestream/read-a-filestream-column-to-file-using-ibcpsession-ole-db.md)  
+-   [Ler uma coluna FILESTREAM para o arquivo usando IBCPSession &#40;OLE DB&#41;](../../../oledb/ole-db-how-to/filestream/read-a-filestream-column-to-file-using-ibcpsession-ole-db.md)  
   
 -   [Recuperar dados de uma coluna FILESTREAM usando ISequentialStream &#40;OLE DB&#41;](../../../oledb/ole-db-how-to/filestream/retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db.md)  
   

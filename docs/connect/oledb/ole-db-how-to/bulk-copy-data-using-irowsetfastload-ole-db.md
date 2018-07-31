@@ -1,6 +1,6 @@
 ---
 title: Usando IRowsetFastLoad (OLE DB) de dados de cópia em massa | Microsoft Docs
-description: Dados de cópia em massa em uma interface de usando IRowsetFastLoad de tabela do SQL Server do OLE DB Driver for SQL Server
+description: Dados de cópia em massa em uma interface de usando IRowsetFastLoad de tabela do SQL Server do Driver do OLE DB para SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,23 +19,23 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 915a9ba3bf4a9f9937d79cbb9449671ca09b3cb9
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 60141327793c4839110dfed05165102060de2d00
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665656"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39107718"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>Copiar dados em massa usando IRowsetFastLoad (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Este exemplo mostra o uso de IRowsetFastLoad para cópia em massa dos registros em uma tabela.  
   
- O consumidor notifica o Driver do OLE DB para SQL Server de sua necessidade de cópia em massa ao definir o Driver OLE DB para a propriedade de específicos de driver do SQL Server SSPROP_ENABLEFASTLOAD como VARIANT_TRUE. Com a propriedade definida na fonte de dados, o consumidor cria um Driver OLE DB para a sessão do SQL Server. A nova sessão permite que o consumidor acesse **IRowsetFastLoad**.  
+ O consumidor notifica o Driver do OLE DB para SQL Server de sua necessidade de cópia em massa ao definir o Driver OLE DB para a propriedade de específicos do driver do SQL Server SSPROP_ENABLEFASTLOAD como VARIANT_TRUE. Com a propriedade definida na fonte de dados, o consumidor cria um Driver do OLE DB para a sessão do SQL Server. A nova sessão permite o acesso do consumidor **IRowsetFastLoad**.  
   
- Está disponível um exemplo completo que ilustra o uso de **IRowsetFastLoad** para cópia em massa dos registros em uma tabela. Neste exemplo, são adicionados 10 registros à tabela **IRFLTable**. Você precisa criar a tabela **IRFLTable** no banco de dados.  
+ Uma amostra completa que ilustra o uso de **IRowsetFastLoad** para cópia em massa dos registros em uma tabela está disponível. Nesta amostra, são adicionados 10 registros à tabela **IRFLTable**. Você precisa criar a tabela **IRFLTable** no banco de dados.  
   
  Este exemplo exige o banco de dados de exemplo AdventureWorks, que pode ser baixado na home page de [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) (em inglês).  
   
@@ -46,24 +46,24 @@ ms.locfileid: "35665656"
   
 1.  Estabeleça uma conexão com a fonte de dados.  
   
-2.  Defina o Driver OLE DB para a propriedade de fonte de dados específica do driver do SQL Server SSPROP_ENABLEFASTLOAD como VARIANT_TRUE. Com essa propriedade definida como VARIANT_TRUE, a sessão recém-criada permite o acesso do consumidor para **IRowsetFastLoad**.  
+2.  Defina o Driver OLE DB para a propriedade de fonte de dados específica do driver do SQL Server SSPROP_ENABLEFASTLOAD como VARIANT_TRUE. Com essa propriedade definida como VARIANT_TRUE, a sessão recém-criada permite o acesso do consumidor a **IRowsetFastLoad**.  
   
 3.  Crie uma sessão solicitando a **IOpenRowset** interface.  
   
-4.  Chamar **IOpenRowset:: OPENROWSET** para abrir um conjunto de linhas que inclui todas as linhas da tabela (em que dados são a serem copiados usando a operação de cópia em massa).  
+4.  Chame **IOpenRowset::OpenRowset** para abrir um conjunto de linhas que inclui todas as linhas da tabela (na qual os dados devem ser copiados usando a operação de cópia em massa).  
   
 5.  Faça as associações necessárias e crie um acessador usando **IAccessor:: CreateAccessor**.  
   
 6.  Configure o buffer de memória do qual os dados serão copiados para a tabela.  
   
-7.  Chamar **IRowsetFastLoad:: Insertrow** para cópia em massa os dados na tabela.  
+7.  Chame **IRowsetFastLoad:: Insertrow** para cópia em massa os dados em tabela.  
   
 ## <a name="example"></a>Exemplo  
  Neste exemplo, são adicionados 10 registros à tabela IRFLTable. Você precisa criar a tabela IRFLTable no banco de dados. Este exemplo não tem suporte em IA64.  
   
  Execute a primeira listagem de código ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) para criar a tabela usada pelo aplicativo.  
   
- Compile com ole32.lib oleaut32.lib e execute a seguinte listagem de código C++. Este aplicativo se conecta ao padrão do seu computador [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instância. Em alguns sistemas operacionais Windows, será necessário alterar (localhost) ou (local) para o nome de sua instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para se conectar a uma instância nomeada, altere a cadeia de caracteres de conexão de L"(local)" para L"(local)\\\name", onde nome é a instância nomeada. Por padrão, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express é instalado em uma instância nomeada. Verifique se que a variável de ambiente INCLUDE inclui o diretório que contém msoledbsql.h.  
+ Compile com ole32.lib oleaut32.lib e execute a seguinte listagem de código C++. Esse aplicativo se conecta à instância padrão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] do computador. Em alguns sistemas operacionais Windows, será necessário alterar (localhost) ou (local) para o nome de sua instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para se conectar a uma instância nomeada, altere a cadeia de conexão de L"(local)" para L"(local)\\\name", em que name é a instância nomeada. Por padrão, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express é instalado em uma instância nomeada. Verifique se a variável de ambiente INCLUDE inclui o diretório que contém msoledbsql.h.  
   
  Execute a terceira listagem de código ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) para excluir a tabela usada pelo aplicativo.  
   

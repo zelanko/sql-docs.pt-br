@@ -17,12 +17,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e1d49ff27e0698f0c475f8150654b01bbaf1d283
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 21dab579da73cc8d5290d0b08d3448d76b5337cf
+ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307217"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38979568"
 ---
 # <a name="default-sql-server-data-types"></a>Tipos de dados do SQL Server padrão
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -44,7 +44,7 @@ Quando dados forem enviados para o servidor, os [!INCLUDE[ssDriverPHP](../../inc
 |Object|Sem suporte.|Sem suporte.|  
 |DateTime (1)|DATETIME|Sem suporte.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Constantes &#40;Drivers da Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 
 [Convertendo tipos de dados](../../connect/php/converting-data-types.md)
@@ -53,5 +53,5 @@ Quando dados forem enviados para o servidor, os [!INCLUDE[ssDriverPHP](../../inc
 
 [Tipos do PHP](http://php.net/manual/language.types.php)
 
-[Tipos de dados (Transact-SQL)](https://docs.microsoft.com/en-us/sql/t-sql/data-types/data-types-transact-sql)  
+[Tipos de dados (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/data-types/data-types-transact-sql)  
   

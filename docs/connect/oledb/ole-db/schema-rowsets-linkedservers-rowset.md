@@ -17,23 +17,23 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: ff4c35178b5cc047fb711821b332f43cf0094fc8
-ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.openlocfilehash: c6b1299005c0307f04f0f245f6e0ec6ee57b5063
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/14/2018
-ms.locfileid: "35611721"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39105762"
 ---
-# <a name="schema-rowsets---linkedservers-rowset"></a>Conjuntos de linhas de esquema - conjunto de linhas LINKEDSERVERS
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+# <a name="schema-rowsets---linkedservers-rowset"></a>Conjuntos de linhas do esquema – conjunto de linhas LINKEDSERVERS
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  O **LINKEDSERVERS** linhas enumera fontes de dados da organização que podem participar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consultas distribuídas.  
+  O conjunto de linhas **LINKEDSERVERS** enumera fontes de dados da organização que podem participar de consultas distribuídas do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  O conjunto de linhas **LINKEDSERVERS** contém as seguintes colunas.  
   
-|Nome da coluna|Indicador de tipo|Description|  
+|Nome da coluna|Indicador de tipo|Descrição|  
 |-----------------|--------------------|-----------------|  
 |SVR_NAME|DBTYPE_WSTR|Nome de um servidor vinculado.|  
 |SVR_PRODUCT|DBTYPE_WSTR|Fabricante ou outro nome que identifique o tipo de repositório de dados representado pelo nome do servidor vinculado.|  
@@ -44,7 +44,7 @@ ms.locfileid: "35611721"
   
  O conjunto de linhas é classificado em SRV_NAME, havendo suporte a uma única restrição em SRV_NAME.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Suporte ao conjunto de linhas de esquema &#40;OLE DB&#41;](../../oledb/ole-db/schema-rowset-support-ole-db.md)  
   
   

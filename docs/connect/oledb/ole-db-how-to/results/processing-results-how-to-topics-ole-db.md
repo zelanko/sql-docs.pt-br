@@ -1,6 +1,6 @@
 ---
-title: Processamento de tópicos de instruções de resultados (OLE DB) | Microsoft Docs
-description: Tópicos de instruções de processamento de resultados (OLE DB)
+title: Tópicos de instruções de resultados (OLE DB) de processamento | Microsoft Docs
+description: Tópicos de instruções sobre o processamento de resultados (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,15 +16,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 1792785286c07535925c81194972e65d2f55fb9a
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 61c759c37343b8c795e6b2f71449db664e8c3a63
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35666066"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108688"
 ---
 # <a name="processing-results-how-to-topics-ole-db"></a>Tópicos de instrução sobre processamento de resultados (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 
@@ -32,15 +32,15 @@ ms.locfileid: "35666066"
   
 ## <a name="in-this-section"></a>Nesta seção  
   
--   [Executar um procedimento armazenado &#40;usando a sintaxe de chamada ODBC&#41; e processar códigos de retorno e parâmetros de saída &#40;OLE DB&#41;](../../../oledb/ole-db-how-to/results/execute-stored-procedure-with-odbc-call-and-process-output.md)  
+-   [Executar um procedimento armazenado &#40;usando a sintaxe ODBC CALL&#41; e processar códigos de retorno e parâmetros de saída &#40;OLE DB&#41;](../../../oledb/ole-db-how-to/results/execute-stored-procedure-with-odbc-call-and-process-output.md)  
   
--   [Executar um procedimento armazenado &#40;usando a sintaxe RPC&#41; e processar códigos de retorno e parâmetros de saída &#40;OLE DB&#41;](../../../oledb/ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md)  
+-   [Executar um procedimento armazenado &#40;usando a sintaxe de RPC&#41; e processar códigos de retorno e parâmetros de saída &#40;OLE DB&#41;](../../../oledb/ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md)  
   
--   [Executar um código de retorno de função definida pelo usuário e o processo &#40;OLE DB&#41;](../../../oledb/ole-db-how-to/results/execute-a-user-defined-function-and-process-return-code-ole-db.md)  
+-   [Executar uma função definida pelo usuário e processar o código de retorno &#40;OLE DB&#41;](../../../oledb/ole-db-how-to/results/execute-a-user-defined-function-and-process-return-code-ole-db.md)  
   
 -   [Buscar linhas em um conjunto de resultados &#40;OLE DB&#41;](../../../oledb/ole-db-how-to/results/fetch-rows-from-a-result-set-ole-db.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Tópicos de instruções do OLE DB](../../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   
   

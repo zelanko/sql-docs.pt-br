@@ -1,5 +1,5 @@
 ---
-title: Configurar o tratamento de erros e aviso usando o Driver SQLSRV | Microsoft Docs
+title: Configurar o tratamento de erro e de avisos usando o driver SQLSRV | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -17,36 +17,36 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 50018e401c67bd0c1fe2cefef71659aeb560a132
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307405"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37999240"
 ---
 # <a name="how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver"></a>Como configurar o tratamento de erros e avisos usando o driver SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Este tópico descreve como configurar o driver SQLSRV para tratar erros e avisos.  
   
-Por padrão, o driver SQLSRV trata avisos como erros. uma chamada para um **sqlsrv** função que gera um erro ou um aviso retornará **false**. Para desabilitar esse comportamento, use o [sqlsrv_configure](../../connect/php/sqlsrv-configure.md) função. Quando a linha de código a seguir é incluída no início de um script, um **sqlsrv** função que gera apenas avisos (sem erros) não retornará **false**:  
+Por padrão, o driver SQLSRV trata avisos como erros; uma chamada para uma função **sqlsrv** que gere um erro ou um aviso retornará **false**. Para desabilitar esse comportamento, use a função [sqlsrv_configure](../../connect/php/sqlsrv-configure.md). Quando a seguinte linha de código for incluída no início de um script, uma função **sqlsrv** que gera apenas avisos (sem erros) não retornará **false**:  
   
 `sqlsrv_configure("WarningsReturnAsErrors", 0);`  
   
-A linha de código a seguir redefinirá o comportamento padrão (os avisos são tratados como erros):  
+A linha de código a seguir redefine o comportamento padrão (os avisos são tratados como erros):  
   
 `sqlsrv_configure("WarningsReturnAsErrors", 1);`  
   
 > [!NOTE]  
 > Os avisos correspondentes aos valores de SQLSTATE 01000, 01001, 01003 e 01S02 nunca são tratados como erros. Independentemente da configuração, uma função **sqlsrv** que gera apenas avisos que corresponderem a um desses estados não retornará **false**.  
   
-O valor de **WarningsReturnAsErrors** também pode ser definido no arquivo php.ini. Por exemplo, esta entrada no `[sqlsrv]` seção do arquivo ini desativa o comportamento padrão.  
+O valor de **WarningsReturnAsErrors** também pode ser definido no arquivo php.ini. Por exemplo, esta entrada na seção `[sqlsrv]` do arquivo php.ini desativará o comportamento padrão.  
   
 `sqlsrv.WarningsReturnAsErrors = 0`  
   
 Para obter informações sobre como recuperar informações de aviso e de erro, consulte [sqlsrv_errors](../../connect/php/sqlsrv-errors.md) e [How to: Handle Errors and Warnings](../../connect/php/how-to-handle-errors-and-warnings-using-the-sqlsrv-driver.md).  
   
 ## <a name="example"></a>Exemplo  
-O exemplo de código a seguir demonstra como desabilitar o comportamento de tratamento de erros padrão. O exemplo usa o comando PRINT do Transact-SQL para gerar um alerta. Para obter mais informações sobre o comando PRINT, consulte [PRINT (Transact-SQL)](../../t-sql/language-elements/print-transact-sql.md).  
+O exemplo de código a seguir demonstra como desabilitar o comportamento de tratamento de erros padrão. O exemplo usa o comando PRINT do Transact-SQL para gerar um alerta. Para obter mais informações sobre o comando PRINT, veja [PRINT (Transact-SQL)](../../t-sql/language-elements/print-transact-sql.md).  
   
 Primeiro, o exemplo demonstra o comportamento de tratamento de erros padrão executando uma consulta que gera um aviso. Esse aviso não é tratado como erro. Depois de alterar a configuração de tratamento de erros, a mesma consulta é executada. O aviso não é tratado como erro.  
   
@@ -101,10 +101,10 @@ sqlsrv_close($conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Registrando atividades em log](../../connect/php/logging-activity.md)
 
-[Programação de guia para os Drivers da Microsoft para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Guia de programação para os Drivers da Microsoft para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [Referência da API do driver SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
   

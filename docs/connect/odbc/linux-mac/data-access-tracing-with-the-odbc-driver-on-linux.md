@@ -1,5 +1,5 @@
 ---
-title: Rastreamento de acesso a dados com o Driver ODBC no Linux e macOS | Microsoft Docs
+title: Rastreamento de acesso a dados com o driver ODBC no Linux e no macOS | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 64a04e7c448161c22ca9a671e5fdbe706829bced
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851771"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37982181"
 ---
-# <a name="data-access-tracing-with-the-odbc-driver-on-linux-and-macos"></a>Rastreamento de acesso a dados com o Driver ODBC no Linux e macOS
+# <a name="data-access-tracing-with-the-odbc-driver-on-linux-and-macos"></a>Rastreamento de acesso a dados com o driver ODBC no Linux e no macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-O Gerenciador de Driver unixODBC no macOS e no Linux oferece suporte a rastreamento de entrada de chamada de API de ODBC e sair do Driver ODBC para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].
+O Gerenciador de Driver unixODBC no macOS e Linux dá suporte a rastreamento de entrada de chamadas de API do ODBC e sair do Driver ODBC para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].
 
 Para rastrear o comportamento do aplicativo ODBC, edite o `odbcinst.ini` do arquivo `[ODBC]` seção para definir os valores `Trace=Yes` e `TraceFile` para o caminho do arquivo que contém o rastreamento de saída; por exemplo:
 
@@ -36,11 +36,11 @@ Trace=Yes
 TraceFile=/home/myappuser/odbctrace.log
 ```  
 
-(Você também pode usar `/dev/stdout` ou qualquer outro nome de dispositivo para enviar o rastreamento de saída existe em vez de em um arquivo persistente.) Com as configurações acima, sempre que um aplicativo carrega o Gerenciador de Driver unixODBC ele registrará todas as chamadas de API de ODBC que ela executada no arquivo de saída.
+(Você também pode usar `/dev/stdout` ou qualquer outro nome de dispositivo para enviar a saída de lá, em vez de em um arquivo persistente de rastreamento.) Com as configurações acima, sempre que um aplicativo carrega o Gerenciador de Driver unixODBC ele registrará todas as chamadas de API ODBC que ela executada no arquivo de saída.
 
-Depois de concluir o rastreamento de seu aplicativo, remova `Trace=Yes` do `odbcinst.ini` para evitar a degradação de desempenho de rastreamento e verifique se todos os arquivos desnecessários do rastreamento são removidos.
+Depois de concluir o rastreamento do aplicativo, remova `Trace=Yes` do `odbcinst.ini` para evitar a penalidade de desempenho de rastreamento de arquivo e verifique se todos os arquivos desnecessários de rastreamento são removidos.
   
-O rastreamento se aplica a todos os aplicativos que usam o driver em `odbcinst.ini`. Para não rastrear todos os aplicativos (por exemplo, para evitar a divulgação de informações confidenciais por usuário), você pode rastrear uma instância de aplicativo individual, fornecendo o local de um particular `odbcinst.ini`, usando o `ODBCSYSINI` variável de ambiente. Por exemplo:  
+O rastreamento se aplica a todos os aplicativos que usam o driver no `odbcinst.ini`. Para não rastrear todos os aplicativos (por exemplo, para evitar a divulgação de informações confidenciais por usuário), você pode rastrear uma instância de aplicativo individual, fornecendo o local de um `odbcinst.ini` privado, usando a variável de ambiente `ODBCSYSINI`. Por exemplo:  
   
 ```  
 $ ODBCSYSINI=/home/myappuser myapp
@@ -48,11 +48,11 @@ $ ODBCSYSINI=/home/myappuser myapp
   
 Nesse caso, você pode adicionar `Trace=Yes` para o `[ODBC Driver 13 for SQL Server]` seção `/home/myappuser/odbcinst.ini`.
 
-## <a name="determining-which-odbcini-file-the-driver-is-using"></a>Determinando qual arquivo odbc.ini o Driver está usando
+## <a name="determining-which-odbcini-file-the-driver-is-using"></a>Determinando qual arquivo odbc.ini o driver está usando
 
-Os drivers ODBC do Linux e macOS não sabe qual `odbc.ini` está em uso ou o caminho para o `odbc.ini` arquivo. No entanto, obter informações sobre quais `odbc.ini` arquivo está em uso está disponível a partir de ferramentas unixODBC `odbc_config` e `odbcinst`e a documentação do Gerenciador de Driver unixODBC.  
+Os drivers ODBC do Linux e macOS não souber quais `odbc.ini` está em uso ou o caminho para o `odbc.ini` arquivo. No entanto, informações sobre quais `odbc.ini` arquivo está em uso está disponível das ferramentas unixODBC `odbc_config` e `odbcinst`e para a documentação do Gerenciador de Driver unixODBC.  
   
-Por exemplo, o comando a seguir imprime (entre outras informações) o local do sistema e usuário `odbc.ini` arquivos que contêm, respectivamente, os DSNs de sistema e usuário:
+Por exemplo, o comando a seguir imprime (entre outras informações) o local dos arquivos `odbc.ini` do sistema e do usuário que contêm, respectivamente, os DSNs do sistema e do usuário:
 
 ```
 $ odbcinst -j
@@ -68,9 +68,9 @@ SQLSETPOSIROW Size.: 8
 
 O [documentação do unixODBC](http://www.unixodbc.org/doc/UserManual/) explica as diferenças entre o usuário e DSNs do sistema. Em Resumo:  
 
-- DSNs do usuário---esses são os DSNs que só estão disponíveis para um usuário específico. Os usuários podem se conectar usando, adicionar, modificar e remover seus próprios DSNs do usuário. DSNs do usuário são armazenados em um arquivo no diretório base do usuário ou um subdiretório dele.
+- DSNs do usuário---esses são os DSNs que só estão disponíveis para um usuário específico. Os usuários podem conectar-se usando, adicionar, modificar e remover seus próprios DSNs do usuário. DSNs do usuário são armazenados em um arquivo no diretório base do usuário, ou em um subdiretório dele.
   
-- DSNs do sistema---esses DSNs estão disponíveis para cada usuário do sistema conectar-se usá-los, mas podem apenas ser adicionados, modificados e removidos por um administrador de sistema. Se um usuário tiver um DSN de usuário com o mesmo nome como um DSN de sistema, o DSN do usuário será usado em conexões por esse usuário.
+- DSNs de sistema---esses DSNs estão disponíveis para todos os usuários no sistema conectar-se de usá-los, mas podem apenas ser adicionados, modificados e removidos por um administrador de sistema. Se um usuário tiver um DSN de usuário com o mesmo nome como um DSN de sistema, o DSN de usuário será usado em conexões que o usuário.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 [Diretrizes de programação](../../../connect/odbc/linux-mac/programming-guidelines.md)

@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a91c3c3366a2f158b9ecf2f6e4b0d9341a60b2a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852121"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38016037"
 ---
 # <a name="updatesaredetected-method-sqlserverdatabasemetadata"></a>Método updatesAreDetected (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera se uma atualização de linha visível pode ser detectada chamando o [rowUpdated](../../../connect/jdbc/reference/rowupdated-method-sqlserverresultset.md) método o [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) classe.  
+  Recupera se a atualização de uma linha visível pode ser detectada ou não com a chamada do método [rowUpdated](../../../connect/jdbc/reference/rowupdated-method-sqlserverresultset.md) da classe [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,9 +39,9 @@ public boolean updatesAreDetected(int type)
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *type*  
+ *tipo*  
   
- Um **int** que indica o conjunto de resultados tipo, que pode ser um dos seguintes valores conforme definido em Java.SQL. ResultSet ou SQLServerResultSet:  
+ Um **int** que indica o tipo do conjunto de resultados, que pode ser um dos valores a seguir, conforme definido em java.sql.ResultSet ou SQLServerResultSet:  
   
 ## <a name="javasqlresultset-types"></a>Tipos java.sql.ResultSet  
  TYPE_FORWARD_ONLY  
@@ -61,8 +61,8 @@ public boolean updatesAreDetected(int type)
   
  TYPE_SS_SCROLL_DYNAMIC  
   
-## <a name="return-value"></a>Valor de retorno  
- **True** se a atualização de linha puder ser detectada. Caso contrário, **false**.  
+## <a name="return-value"></a>Valor retornado  
+ **True** se a atualização de linha pode ser detectada. Caso contrário, **false**.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -70,7 +70,7 @@ public boolean updatesAreDetected(int type)
 ## <a name="remarks"></a>Remarks  
  Esse método updatesAreDetected é especificado pelo método updatesAreDetected na interface DatabaseMetadata.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [Membros SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Classe SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

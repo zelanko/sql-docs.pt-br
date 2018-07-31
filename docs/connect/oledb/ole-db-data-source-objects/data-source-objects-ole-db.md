@@ -1,5 +1,5 @@
 ---
-title: Fonte de dados de objetos (OLE DB) | Microsoft Docs
+title: Objetos (OLE DB) da fonte de dados | Microsoft Docs
 description: Objetos de fonte de dados (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -22,27 +22,27 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: a69fbb260c594ad095872049b06b1f7084bfc29b
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 58007040bc4f96749172644b229dba4769929d66
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665646"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39106072"
 ---
 # <a name="data-source-objects-ole-db"></a>Objetos de fonte de dados (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver para SQL Server usa a termo fonte de dados para o conjunto de interfaces de OLE DB usado para estabelecer um link para um repositório de dados, como [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Criar uma instância do objeto de fonte de dados do provedor é a primeira tarefa de um Driver OLE DB para o consumidor do SQL Server.  
+  O OLE DB Driver for SQL Server usa o termo fonte de dados para o conjunto de interfaces OLE DB usadas para estabelecer um vínculo com um armazenamento de dados, como o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Criar uma instância do objeto de fonte de dados do provedor é a primeira tarefa de um Driver OLE DB para o consumidor do SQL Server.  
   
- Todo provedor do OLE DB declara um identificador de classe (CLSID) para si mesmo. O CLSID para o Driver OLE DB para SQL Server é o C/C++ GUID CLSID_MSOLEDBSQL (o símbolo MSOLEDBSQL_CLSID será resolvido para o correto progid no arquivo msoledbsql.h referenciado). Com o CLSID, o consumidor usa o OLE **CoCreateInstance** função para produzir uma instância do objeto de fonte de dados.  
+ Todo provedor do OLE DB declara um identificador de classe (CLSID) para si mesmo. O CLSID para o Driver do OLE DB para SQL Server é o C/C++ GUID CLSID_MSOLEDBSQL (o símbolo MSOLEDBSQL_CLSID será resolvido para o correto progid no arquivo msoledbsql.h que você faz referência). Com o CLSID, o consumidor usa a função **CoCreateInstance** do OLE para produzir uma instância do objeto de fonte de dados.  
   
- OLE DB Driver para SQL Server é um servidor em processo. Instâncias do Driver do OLE DB para objetos do SQL Server são criadas usando a macro CLSCTX_INPROC_SERVER para indicar o contexto executável.  
+ Driver do OLE DB para SQL Server é um servidor em processo. As instâncias dos objetos do OLE DB Driver for SQL Server são criadas usando a macro CLSCTX_INPROC_SERVER para indicar o contexto executável.  
   
- O Driver OLE DB para o objeto de fonte de dados do SQL Server expõe as interfaces de inicialização do OLE DB que permitem ao consumidor para se conectar ao existente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] bancos de dados.  
+ O objeto da fonte de dados do OLE DB Driver for SQL Server expõe as interfaces de inicialização do OLE DB que permitem ao consumidor se conectar aos bancos de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] existentes.  
   
- Cada conexão feita por meio do Driver OLE DB para SQL Server define estas opções automaticamente:  
+ Cada conexão feita por meio do Driver do OLE DB para SQL Server define estas opções automaticamente:  
   
 -   SET ANSI_WARNINGS ON  
   
@@ -56,7 +56,7 @@ ms.locfileid: "35665646"
   
 -   SET CONCAT_OF_NULL_YIELDS_NULL ON  
   
- Este exemplo usa a macro de identificador de classe para criar um Driver OLE DB para o objeto de fonte de dados do SQL Server e obtém uma referência ao seu **IDBInitialize** interface.  
+ Este exemplo usa a macro de identificador de classe para criar um objeto de fonte de dados do OLE DB Driver for SQL Server e obter uma referência à sua interface **IDBInitialize**.  
   
 ```  
 IDBInitialize*   pIDBInitialize;  
@@ -77,13 +77,13 @@ else
 }  
 ```  
   
- Com a criação bem-sucedida de uma instância de um Driver OLE DB para o objeto de fonte de dados do SQL Server, o aplicativo de consumidor pode continuar Inicializando a fonte de dados e Criando sessões. As sessões de OLE DB apresentam as interfaces que permitem acesso e manipulação de dados.  
+ Com a criação bem-sucedida de uma instância de um objeto de fonte de dados do OLE DB Driver for SQL Server, o aplicativo de consumidor pode continuar inicializando a fonte de dados e criando sessões. As sessões de OLE DB apresentam as interfaces que permitem acesso e manipulação de dados.  
   
- O Driver OLE DB para SQL Server torna sua primeira conexão com uma instância especificada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] como parte de uma inicialização de fonte de dados com êxito. A conexão é mantida como uma referência seja mantida em qualquer interface de inicialização de fonte de dados, ou até que o **IDBInitialize:: Uninitialize** método é chamado.  
+ O OLE DB Driver for SQL Server estabelece sua primeira conexão com uma instância especificada do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] como parte de uma inicialização de fonte de dados bem-sucedida. A conexão é mantida, desde que uma referência seja mantida em qualquer interface de inicialização de fonte de dados, ou até que o método **IDBInitialize::Uninitialize** seja chamado.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
--   [Propriedades da fonte de dados &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-properties-ole-db.md)  
+-   [Propriedades de fonte de dados &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-properties-ole-db.md)  
   
 -   [Propriedades de informações da fonte de dados](../../oledb/ole-db-data-source-objects/data-source-information-properties.md)  
   
@@ -95,7 +95,7 @@ else
   
 -   [Objetos persistidos da fonte de dados](../../oledb/ole-db-data-source-objects/persisted-data-source-objects.md)  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Programação no Driver do OLE DB para SQL Server](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

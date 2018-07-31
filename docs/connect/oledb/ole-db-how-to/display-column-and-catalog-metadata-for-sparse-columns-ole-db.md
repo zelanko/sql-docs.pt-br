@@ -1,5 +1,5 @@
 ---
-title: Coluna de exibição e os metadados de catálogo para colunas esparsas (OLE DB) | Microsoft Docs
+title: Exibir metadados de colunas e catálogos para colunas esparsas (OLE DB) | Microsoft Docs
 description: Exibir metadados de colunas e catálogos para colunas esparsas (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -14,24 +14,24 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 64446574a70cab878c9c95b833f0065ad4a846ad
-ms.sourcegitcommit: e1bc8c486680e6d6929c0f5885d97d013a537149
-ms.translationtype: MT
+ms.openlocfilehash: 7fff85eaf61d32f2e064a827e53349bd832e411c
+ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/15/2018
-ms.locfileid: "35665596"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39108988"
 ---
 # <a name="display-column-and-catalog-metadata-for-sparse-columns-ole-db"></a>Exibir metadados de colunas e catálogos para colunas esparsas (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Este exemplo compila uma tabela com três colunas: uma coluna esparsa, uma coluna que não é esparsa e uma coluna de conjunto de colunas. Em seguida, o exemplo exibe o sinalizador OLE DB mostrando os metadados da coluna e do catálogo paras as colunas que não são esparsas e para a coluna do conjunto de colunas.  
   
- Este exemplo funciona apenas no [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] ou posterior. Para obter mais informações sobre colunas esparsas, consulte [suporte a colunas esparsas no OLE DB Driver para SQL Server](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md).  
+ Este exemplo funciona apenas no [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] ou posterior. Para obter mais informações sobre colunas esparsas, consulte [suporte a colunas esparsas no Driver do OLE DB para SQL Server](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md).  
   
 ## <a name="example"></a>Exemplo  
- Verifique se que a variável de ambiente INCLUDE inclui o diretório que contém msoledbsql.h.  
+ Verifique se a variável de ambiente INCLUDE inclui o diretório que contém msoledbsql.h.  
   
 ```  
 #include <stddef.h>  

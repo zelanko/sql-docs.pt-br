@@ -1,5 +1,5 @@
 ---
-title: Recuperando dados | Microsoft Docs
+title: Recuperação de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 84acaf953419f9802a5bf900d27ffc9a550a673d
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309185"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983032"
 ---
 # <a name="retrieving-data"></a>Recuperando dados
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -52,10 +52,10 @@ O driver SQLSRV dos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] fo
   
 Se a sua consulta recuperar mais de um conjunto de resultados, você poderá continuar para o próximo conjunto de resultados com [sqlsrv_next_result](../../connect/php/sqlsrv-next-result.md).  
   
-Começando na versão 1.1 do [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], você pode usar [sqlsrv_has_rows](../../connect/php/sqlsrv-has-rows.md) para ver se um conjunto de resultados tem linhas.  
+Da versão 1.1 do [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] em diante, você pode usar [sqlsrv_has_rows](../../connect/php/sqlsrv-has-rows.md) para ver se um conjunto de resultados tem linhas.  
   
 ## <a name="pdosqlsrv-driver"></a>Driver PDO_SQLSRV  
-O driver PDO_SQLSRV do [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] fornece as seguintes opções para recuperar dados de um conjunto de resultados:  
+O driver PDO_SQLSRV dos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] fornece as seguintes opções para recuperar dados de um conjunto de resultados:  
   
 -   [PDOStatement::fetch](../../connect/php/pdostatement-fetch.md)  
   
@@ -73,7 +73,7 @@ Você pode ver quantas linhas estão em um conjunto de resultados se especificar
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Description|  
+|Tópico|Descrição|  
 |---------|---------------|  
 |[Recuperando dados como um fluxo](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)|Fornece uma visão geral de como transmitir dados do servidor e fornece links para casos de uso específicos.|  
 |[Usando parâmetros direcionais](../../connect/php/using-directional-parameters.md)|Descreve como usar parâmetros direcionais ao chamar um procedimento armazenado.|  
@@ -83,8 +83,8 @@ Você pode ver quantas linhas estão em um conjunto de resultados se especificar
 ## <a name="related-sections"></a>Seções relacionadas  
 [Como especificar tipos de dados do PHP](../../connect/php/how-to-specify-php-data-types.md)  
   
-## <a name="see-also"></a>Consulte também  
-[Programação de guia para os Drivers da Microsoft para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+## <a name="see-also"></a>Consulte Também  
+[Guia de programação para os Drivers da Microsoft para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [Recuperando dados](../../connect/php/retrieving-data.md)  
   

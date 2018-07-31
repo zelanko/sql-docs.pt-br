@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8398a169e12f597e7baec9fe42495c59b19d6903
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309071"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37983224"
 ---
 # <a name="sqlsrvconnect"></a>sqlsrv_connect
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,13 +42,13 @@ sqlsrv_connect( string $serverName [, array $connectionInfo])
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
-*$serverName*: uma cadeia de caracteres especificando o nome do servidor com o qual uma conexão está sendo estabelecida. Um nome de instância (por exemplo, "meuServidor\NomedaInstância") ou número de porta (por exemplo, "meuServidor, 1521") pode ser incluído como parte da cadeia de caracteres. Para obter uma descrição completa das opções disponíveis para esse parâmetro, consulte a palavra-chave do servidor na seção palavras-chave de cadeia de caracteres de Conexão do Driver ODBC do [usando Conexão String Keywords with SQL Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+*$serverName*: uma cadeia de caracteres especificando o nome do servidor com o qual uma conexão está sendo estabelecida. Um nome de instância (por exemplo, "meuServidor\NomedaInstância") ou número de porta (por exemplo, "meuServidor, 1521") pode ser incluído como parte da cadeia de caracteres. Para obter uma descrição completa das opções disponíveis para esse parâmetro, confira a palavra-chave Servidor na seção Palavras-chave da cadeia de conexão do Driver ODBC de [Usando palavras-chave da cadeia de conexão com o SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
 A partir da versão 3.0 dos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], você também pode especificar uma instância LocalDB com `"(localdb)\instancename"`. Para obter mais informações, consulte [suporte para o LocalDB](../../connect/php/php-driver-for-sql-server-support-for-localdb.md).  
   
-A partir da versão 3.0 dos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], também é possível especificar um nome de rede virtual para se conectar a um grupo de disponibilidade AlwaysOn. Para obter mais informações sobre [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] suporte para [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], consulte [suporte para alta disponibilidade, recuperação de desastres](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).  
+A partir da versão 3.0 dos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], também é possível especificar um nome de rede virtual para se conectar a um grupo de disponibilidade AlwaysOn. Para obter mais informações sobre [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] suporte para [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], consulte [dão suporte para alta disponibilidade, recuperação de desastres](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).  
   
-*$connectionInfo* [opcional]: uma associação **matriz** que contém atributos de conexão (por exemplo, **matriz**("Database" = > "AdventureWorks")). Consulte [Connection Options](../../connect/php/connection-options.md) para obter uma lista das chaves com suporte para a matriz.  
+*$connectionInfo* [OPCIONAL]: uma **matriz** associativa que contém atributos de conexão (por exemplo, **matriz**("Database" => "AdventureWorks")). Consulte [Connection Options](../../connect/php/connection-options.md) para obter uma lista das chaves com suporte para a matriz.  
   
 ## <a name="return-value"></a>Valor retornado  
 Um recurso de conexão PHP. Se uma conexão não puder ser criada e aberta com êxito, **false** será retornado.  
@@ -91,7 +91,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Referência da API do driver SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [Connecting to the Server](../../connect/php/connecting-to-the-server.md)

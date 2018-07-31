@@ -15,33 +15,33 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1b2797c9ce000d687550ee50c27fdc51524f86c6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32851361"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38060299"
 ---
 # <a name="working-with-result-sets"></a>Trabalhando com conjuntos de resultados
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Quando você trabalha com os dados contidos em um [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] banco de dados, um método de manipulação de dados é usar um conjunto de resultados. O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] suporta o uso de resultado define por meio de [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) objeto. Usando o objeto SQLServerResultSet, recuperar os dados retornados por uma instrução SQL ou procedimento armazenado, atualizar os dados conforme necessário e, em seguida, persisti-dados de volta para o banco de dados.  
+  Quando você trabalha com os dados contidos em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], um método de manipular os dados é usar um conjunto de resultados. O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] dá suporte ao uso de conjuntos de resultados por meio do objeto [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md). Usando o objeto SQLServerResultSet, você pode recuperar os dados retornados por uma instrução SQL ou um procedimento armazenado, atualizar os dados conforme necessário e, em seguida, persisti-los de volta para o banco de dados.  
   
  Além disso, o objeto SQLServerResultSet fornece métodos para navegar pelas respectivas linhas de dados, obter ou definir os dados que ele contém e estabelecer diversos níveis de sensibilidade a alterações no banco de dados subjacente.  
   
 > [!NOTE]  
 >  Para obter mais informações sobre como gerenciar conjuntos de resultados, inclusive sua sensibilidade a alterações, consulte [Gerenciando conjuntos de resultados com o Driver JDBC](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md).  
   
- Os tópicos nesta seção descrevem maneiras diferentes que você pode usar um conjunto de resultados para manipular os dados contidos em um [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] banco de dados.  
+ Os tópicos desta seção descrevem diversas maneiras de usar um conjunto de resultados para manipular os dados contidos em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Description|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
-|[Exemplo de recuperação de dados do conjunto de resultados](../../connect/jdbc/retrieving-result-set-data-sample.md)|Descreve como usar um conjunto de resultados para recuperar dados de um [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] de banco de dados e exibi-lo.|  
-|[Exemplo de modificação de dados do conjunto de resultados](../../connect/jdbc/modifying-result-set-data-sample.md)|Descreve como usar um conjunto de resultados para inserir, recuperar e modificar dados em um [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] banco de dados.|  
-|[Exemplo de armazenamento de dados do conjunto de resultados em cache](../../connect/jdbc/caching-result-set-data-sample.md)|Descreve como usar um conjunto de resultados para recuperar grandes quantidades de dados de um [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] banco de dados e para controlar como dados é armazenada em cache no cliente.|  
+|[Exemplo de recuperação de dados do conjunto de resultados](../../connect/jdbc/retrieving-result-set-data-sample.md)|Descreve como usar um conjunto de resultados para recuperar dados de um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e exibi-los.|  
+|[Exemplo de modificação de dados do conjunto de resultados](../../connect/jdbc/modifying-result-set-data-sample.md)|Descreve como usar um conjunto de resultados para inserir, recuperar e modificar dados de um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
+|[Exemplo de armazenamento de dados do conjunto de resultados em cache](../../connect/jdbc/caching-result-set-data-sample.md)|Descreve como usar um conjunto de resultados para recuperar grandes volumes de dados de um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e como controlar a maneira como esses dados são armazenados em cache no cliente.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Aplicativos de exemplo do JDBC Driver](../../connect/jdbc/sample-jdbc-driver-applications.md)  
   
   

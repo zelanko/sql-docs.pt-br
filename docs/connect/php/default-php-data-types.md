@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 432b09a03f9f0d7704ed50de92db64417b624ba8
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307695"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37981355"
 ---
 # <a name="default-php-data-types"></a>Tipos de dados padrão do PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,47 +37,47 @@ A tabela a seguir lista o tipo de dados do SQL Server (o tipo de dados que está
   
 |Tipo do SQL Server|Tipo padrão do PHP|Codificação padrão|  
 |-------------------|--------------------|--------------------|  
-|BIGINT|Cadeia de caracteres|caracteres de 8 bits<sup>1</sup>|  
+|BIGINT|Cadeia de caracteres|Caractere de 8 bits<sup>1</sup>|  
 |BINARY|Fluxo<sup>2</sup>|Binário<sup>3</sup>|  
-|bit|Integer|caracteres de 8 bits<sup>1</sup>|  
-|char|Cadeia de caracteres|caracteres de 8 bits<sup>1</sup>|  
+|bit|Integer|Caractere de 8 bits<sup>1</sup>|  
+|char|Cadeia de caracteres|Caractere de 8 bits<sup>1</sup>|  
 |date<sup>4</sup>|DATETIME|Não aplicável|  
-|DateTime<sup>4</sup>|DATETIME|Não aplicável|  
+|Data e hora<sup>4</sup>|DATETIME|Não aplicável|  
 |datetime2<sup>4</sup>|DATETIME|Não aplicável|  
 |datetimeoffset<sup>4</sup>|DATETIME|Não aplicável|  
-|Decimal|Cadeia de caracteres|caracteres de 8 bits<sup>1</sup>|  
-|FLOAT|float|caracteres de 8 bits<sup>1</sup>|  
+|Decimal|Cadeia de caracteres|Caractere de 8 bits<sup>1</sup>|  
+|FLOAT|float|Caractere de 8 bits<sup>1</sup>|  
 |geografia|Fluxo|Binário<sup>3</sup>|  
 |geometria|Fluxo|Binário<sup>3</sup>|  
 |imagem<sup>5</sup>|Fluxo<sup>2</sup>|Binário<sup>3</sup>|  
-|INT|Integer|caracteres de 8 bits<sup>1</sup>|  
-|money|Cadeia de caracteres|caracteres de 8 bits<sup>1</sup>|  
-|NCHAR|Cadeia de caracteres|caracteres de 8 bits<sup>1</sup>|  
-|NUMERIC|Cadeia de caracteres|caracteres de 8 bits<sup>1</sup>|  
-|NVARCHAR|Cadeia de caracteres|caracteres de 8 bits<sup>1</sup>|  
-|nvarchar(MAX)|Fluxo<sup>2</sup>|caracteres de 8 bits<sup>1</sup>|  
-|ntext<sup>6</sup>|Fluxo<sup>2</sup>|caracteres de 8 bits<sup>1</sup>|  
-|REAL|float|caracteres de 8 bits<sup>1</sup>|  
-|smalldatetime|DATETIME|caracteres de 8 bits<sup>1</sup>|  
-|SMALLINT|Integer|caracteres de 8 bits<sup>1</sup>|  
-|SMALLMONEY|Cadeia de caracteres|caracteres de 8 bits<sup>1</sup>|  
-|sql_variant<sup>7</sup>|Cadeia de caracteres|caracteres de 8 bits<sup>1</sup>|  
-|texto<sup>8</sup>|Fluxo<sup>2</sup>|caracteres de 8 bits<sup>1</sup>|  
+|INT|Integer|Caractere de 8 bits<sup>1</sup>|  
+|money|Cadeia de caracteres|Caractere de 8 bits<sup>1</sup>|  
+|NCHAR|Cadeia de caracteres|Caractere de 8 bits<sup>1</sup>|  
+|NUMERIC|Cadeia de caracteres|Caractere de 8 bits<sup>1</sup>|  
+|NVARCHAR|Cadeia de caracteres|Caractere de 8 bits<sup>1</sup>|  
+|nvarchar(MAX)|Fluxo<sup>2</sup>|Caractere de 8 bits<sup>1</sup>|  
+|ntext<sup>6</sup>|Fluxo<sup>2</sup>|Caractere de 8 bits<sup>1</sup>|  
+|REAL|float|Caractere de 8 bits<sup>1</sup>|  
+|smalldatetime|DATETIME|Caractere de 8 bits<sup>1</sup>|  
+|SMALLINT|Integer|Caractere de 8 bits<sup>1</sup>|  
+|SMALLMONEY|Cadeia de caracteres|Caractere de 8 bits<sup>1</sup>|  
+|sql_variant<sup>7</sup>|Cadeia de caracteres|Caractere de 8 bits<sup>1</sup>|  
+|texto<sup>8</sup>|Fluxo<sup>2</sup>|Caractere de 8 bits<sup>1</sup>|  
 |time<sup>4</sup>|DATETIME|Não aplicável|  
-|timestamp|Cadeia de caracteres|caracteres de 8 bits<sup>1</sup>|  
-|TINYINT|Integer|caracteres de 8 bits<sup>1</sup>|  
+|timestamp|Cadeia de caracteres|Caractere de 8 bits<sup>1</sup>|  
+|TINYINT|Integer|Caractere de 8 bits<sup>1</sup>|  
 |UDT|Fluxo<sup>2</sup>|Binário<sup>3</sup>|  
-|UNIQUEIDENTIFIER|Cadeia de caracteres<sup>9</sup>|caracteres de 8 bits<sup>1</sup>|  
+|UNIQUEIDENTIFIER|Cadeia de caracteres<sup>9</sup>|Caractere de 8 bits<sup>1</sup>|  
 |varbinary|Fluxo<sup>2</sup>|Binário<sup>3</sup>|  
 |varbinary(MAX)|Fluxo<sup>2</sup>|Binário<sup>3</sup>|  
-|varchar|Cadeia de caracteres|caracteres de 8 bits<sup>1</sup>|  
-|varchar(MAX)|Fluxo<sup>2</sup>|caracteres de 8 bits<sup>1</sup>|
-|xml|Fluxo<sup>2</sup>|caracteres de 8 bits<sup>1</sup>|  
+|varchar|Cadeia de caracteres|Caractere de 8 bits<sup>1</sup>|  
+|varchar(MAX)|Fluxo<sup>2</sup>|Caractere de 8 bits<sup>1</sup>|
+|xml|Fluxo<sup>2</sup>|Caractere de 8 bits<sup>1</sup>|  
   
 
-1.  Dados são retornados em caracteres de 8 bits conforme especificado na página de código da localidade do Windows definida no sistema. Todos os caracteres multibyte ou caracteres não mapeados nessa página de código são substituídos por um caractere de byte único ponto de interrogação (?).  
+1.  Os dados são retornados em caracteres de 8 bits conforme especificado na página de código da localidade do Windows definida no sistema. Todos os caracteres multibyte ou caracteres não mapeados nessa página de código são substituídos por um caractere de ponto de interrogação (?) de byte único.  
   
-2.  Se [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md) ou [sqlsrv_fetch_object](../../connect/php/sqlsrv-fetch-object.md) é usada para recuperar dados que tem o tipo PHP padrão de fluxo, os dados são retornados como uma cadeia de caracteres com a mesma codificação que o fluxo. Por exemplo, se um binário do SQL Server o tipo é recuperado usando **sqlsrv_fetch_array**, o padrão tipo de retorno é uma cadeia de caracteres binária.  
+2.  Se [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md) ou [sqlsrv_fetch_object](../../connect/php/sqlsrv-fetch-object.md) for usado para recuperar dados com o tipo PHP padrão de fluxo, os dados serão retornados como uma cadeia de caracteres com a mesma codificação que o fluxo. Por exemplo, se um tipo binário do SQL Server for recuperado usando **sqlsrv_fetch_array**, o tipo de retorno padrão será uma cadeia de caracteres binária.  
   
 3.  Os dados são retornados do servidor como um fluxo de bytes brutos, sem codificação ou conversão.  
 
@@ -87,7 +87,7 @@ A tabela a seguir lista o tipo de dados do SQL Server (o tipo de dados que está
 
 6. Esse é um tipo herdado que é mapeado para o tipo nvarchar(max).
 
-7.  Não há suporte para sql_variant parâmetros bidirecional ou de saída.
+7.  sql_variant não é suportado nos parâmetros bidirecional ou de saída.
 
 8.  Esse é um tipo herdado que é mapeado para o tipo varchar(max).  
   
@@ -97,7 +97,7 @@ A tabela a seguir lista o tipo de dados do SQL Server (o tipo de dados que está
  
  
 ## <a name="other-new-sql-server-2008-data-types-and-features"></a>Outros tipos de dados e recursos novos do SQL Server 2008  
-Tipos de dados que são novos no SQL Server 2008 e que existem fora das colunas (como parâmetros com valor de tabela) não há suporte para o [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. A tabela a seguir resume o suporte do PHP para os novos recursos do SQL Server 2008.  
+Os tipos de dados novos do SQL Server 2008 e que existem fora das colunas (como parâmetros com valor de tabela) não são compatíveis com o [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. A tabela a seguir resume o suporte do PHP para os novos recursos do SQL Server 2008.  
   
 |Recurso|Suporte do PHP|  
 |-----------|---------------|  
@@ -111,7 +111,7 @@ Tipos de dados que são novos no SQL Server 2008 e que existem fora das colunas 
   
 O suporte a tipo parcial significa que você não pode consultar programaticamente o tipo da coluna.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Constantes &#40;Drivers da Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 
 [Converting Data Types](../../connect/php/converting-data-types.md)

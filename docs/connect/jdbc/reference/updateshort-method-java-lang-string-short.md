@@ -1,5 +1,5 @@
 ---
-title: Método (Java, short) updateShort | Microsoft Docs
+title: Método (lang, short) updateShort | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cc6a4258b027cb529cbf448ae2512de9cae5931a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32849061"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38039169"
 ---
 # <a name="updateshort-method-javalangstring-short"></a>Método updateShort (java.lang.String, short)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Atualiza a coluna designada com um **curto** valor, considerando o nome da coluna.  
+  Atualiza a coluna designada com um valor **short**, considerando o nome da coluna.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,7 +42,7 @@ public void updateShort(java.lang.String columnName,
 #### <a name="parameters"></a>Parâmetros  
  *columnName*  
   
- Um **cadeia de caracteres** que contém o nome da coluna.  
+ Uma **Cadeia de Caracteres** que contém o nome da coluna.  
   
  *x*  
   
@@ -52,9 +52,9 @@ public void updateShort(java.lang.String columnName,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método updateShort é especificado pelo método updateShort na interface Java.SQL. resultset.  
+ Esse método updateShort é especificado pelo método updateShort na interface do resultset.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Método updateShort &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateshort-method-sqlserverresultset.md)   
  [Membros de SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Classe SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

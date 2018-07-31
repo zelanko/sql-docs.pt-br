@@ -1,5 +1,5 @@
 ---
-title: 'Etapa 2: Criar um banco de dados SQL pymssql desenvolvimento do Python | Microsoft Docs'
+title: 'Etapa 2: Criar um Banco de Dados SQL para o desenvolvimento Python pymssql | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d94c99d2f5e297b0e8798454d84a645fa589fbf4
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309775"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "37991178"
 ---
-# <a name="step-2-create-a-sql-database-for-pymssql-python-development"></a>Etapa 2: Criar um banco de dados SQL pymssql desenvolvimento do Python
+# <a name="step-2-create-a-sql-database-for-pymssql-python-development"></a>Etapa 2: Criar um Banco de Dados SQL para o desenvolvimento Python pymssql
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]
 
 [!INCLUDE[CreateDatabase](../../../includes/createdatabase.md)]
