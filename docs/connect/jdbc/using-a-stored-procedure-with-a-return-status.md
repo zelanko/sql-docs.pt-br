@@ -1,7 +1,7 @@
 ---
 title: Uso de um procedimento armazenado com um status de retorno | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 29bb95c06d86ad4d6e45002da1429f6c7d5a5c9e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: af02395791a678b822710db446971ed1a611bed6
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040594"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278987"
 ---
 # <a name="using-a-stored-procedure-with-a-return-status"></a>Usando um procedimento armazenado com um status de retorno
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "38040594"
   
  Como exemplo, crie o seguinte procedimento armazenado no banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]:  
   
-```  
+```sql
 CREATE PROCEDURE CheckContactCity  
    (@cityName CHAR(50))  
 AS  

@@ -1,7 +1,7 @@
 ---
 title: Usando sequências de Escape do SQL | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 60af5198eb78ad23bf8ad55a1dc24690b91130ab
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: c9a4e7854098fcc0e2cc161658cc772cbd40c80c
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37978654"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278587"
 ---
 # <a name="using-sql-escape-sequences"></a>Usando sequências de escape do SQL
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "37978654"
 ## <a name="like-wildcard-literals"></a>Literais do curinga LIKE  
  O driver JDBC é compatível com a sintaxe `{escape 'escape character'}` para uso de curingas da cláusula LIKE como literais. Por exemplo, o código a seguir retornará valores para col3, onde o valor de col2 começa literalmente com um sublinhado (e não seu uso de curinga).  
   
-```  
+```java
 ResultSet rst = stmt.executeQuery("SELECT col3 FROM test1 WHERE col2   
 LIKE '\\_%' {escape '\\'}");  
 ```  
@@ -63,13 +63,13 @@ LIKE '\\_%' {escape '\\'}");
 ## <a name="function-handling"></a>Manipulação de função  
  O driver JDBC dá suporte às sequências de escape de função em instruções SQL com a seguinte sintaxe:  
   
-```  
+```java
 {fn functionName}  
 ```  
   
  em que `functionName` é uma função compatível com o driver JDBC. Por exemplo:  
   
-```  
+```sql
 SELECT {fn UCASE(Name)} FROM Employee  
 ```  
   
@@ -85,7 +85,7 @@ SELECT {fn UCASE(Name)} FROM Employee
 ## <a name="date-and-time-literals"></a>Literais de data e hora  
  A sintaxe de escape para data, hora e literais de carimbo de data/hora é a seguinte:  
   
-```  
+```
 {literal-type 'value'}  
 ```  
   
@@ -99,7 +99,7 @@ SELECT {fn UCASE(Name)} FROM Employee
   
  Por exemplo:  
   
-```  
+```sql
 UPDATE Orders SET OpenDate={d '2005-01-31'}   
 WHERE OrderID=1025  
 ```  
@@ -109,7 +109,7 @@ WHERE OrderID=1025
   
  Um procedimento é um objeto executável armazenado no banco de dados. Em geral, é uma ou mais instruções SQL que foram pré-compiladas. A sintaxe da sequência de escape para chamar um procedimento armazenado é a seguinte:  
   
-```  
+```sql
 {[?=]call procedure-name[([parameter][,[parameter]]...)]}  
 ```  
   
@@ -120,13 +120,13 @@ WHERE OrderID=1025
 ## <a name="outer-joins"></a>Junções externas  
  O driver JDBC dá suporte à sintaxe de junção externa esquerda, direita e completa do SQL92. A sequência de escape de junções externas é a seguinte:  
   
-```  
+```sql
 {oj outer-join}  
 ```  
   
  onde outer-join é:  
   
-```  
+```sql
 table-reference {LEFT | RIGHT | FULL} OUTER JOIN    
 {table-reference | outer-join} ON search-condition  
 ```  
@@ -135,7 +135,7 @@ table-reference {LEFT | RIGHT | FULL} OUTER JOIN
   
  Por exemplo:  
   
-```  
+```sql
 SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status   
    FROM {oj Customers LEFT OUTER JOIN   
       Orders ON Customers.CustID=Orders.CustID}   
@@ -159,7 +159,7 @@ SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status
   
  A sintaxe de escape LIMIT é da seguinte maneira:  
   
-```  
+```sql
 LIMIT <rows> [OFFSET <row offset>]  
 ```  
   
