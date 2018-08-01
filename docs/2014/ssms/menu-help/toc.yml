@@ -1,0 +1,45 @@
+- name: Ajuda do menu do SQL Server Management Studio
+  href: sql-server-management-studio-menu-help.md
+- name: Abrir com (Novo Arquivo)
+  href: open-with-new-file.md
+- name: Salvar como
+  href: save-as.md
+- name: Salvar alterações
+  href: save-changes.md
+- name: Opções Avançadas de Salvamento
+  href: advanced-save-options.md
+- name: Caixa de diálogo Escolher Pastas de Pesquisa (Visual Studio)
+  href: choose-search-folders-dialog-box-visual-studio.md
+- name: Escolher itens da caixa de ferramenta (página Tarefas de Manutenção)
+  href: choose-toolbox-items-maintenance-tasks-page.md
+- name: Ferramentas Externas
+  href: external-tools.md
+- name: Personalizar (página Barras de Ferramentas)
+  href: customize-toolbars-page.md
+- name: Personalizar (página Comandos)
+  href: customize-commands-page.md
+- name: Ajuda de F1 das caixas de diálogo opções
+  href: options-dialog-boxes-f1-help.md
+  items:
+    - name: Opções (página Ambiente-Geral)
+      href: options-environment-general-page.md
+    - name: 'Opções (Ambiente: página Fontes e Cores)'
+      href: options-environment-fonts-and-colors-page.md
+    - name: Options (Environment/Keyboard Page)
+      href: options-environment-keyboard-page.md
+    - name: Opções (Ambiente/Ajuda/página Geral)
+      href: options-environment-help-general-page.md
+    - name: Opções (página Ambiente/Ajuda/Online)
+      href: options-environment-help-online-page.md
+    - name: Opções (página Designers/Designers de Tabela e Banco de Dados)
+      href: options-designers-table-and-database-designers-page.md
+    - name: Opções (página Designers/Planos de Manutenção)
+      href: options-designers-maintenance-plans-page.md
+    - name: Opções (Designers/ Analysis Services do Designers/Geral)
+      href: options-designers-analysis-services-designers-general.md
+- name: Caixa de diálogo Windows (Ajuda do Gerenciador de Documentos da Microsoft)
+  href: windows-dialog-box-microsoft-document-explorer-help.md
+- name: Sobre o SQL Server Management Studio
+  href: about-sql-server-management-studio.md
+- name: Ajuda F1 da janela Propriedades (Management Studio)
+  href: properties-window-f1-help-management-studio.md

@@ -1,0 +1,46 @@
+- name: Visão geral
+  href: security-center-for-sql-server-database-engine-and-azure-sql-database.md
+- name: Protegendo o SQL Server
+  href: securing-sql-server.md
+- name: Auditoria
+  href: ../../relational-databases/security/auditing/sql-server-audit-database-engine.md
+- name: Acesso de autenticação
+  href: ../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md
+- name: Criptografia
+  href: ../../relational-databases/security/encryption/sql-server-encryption.md
+- name: Protegendo a propriedade intelectual do seu SQL Server
+  href: protecting-your-sql-server-intellectual-property.md
+- name: Protegíveis
+  href: securables.md
+- name: Usuários de bancos de dados independentes - Tornando seu banco de dados portátil
+  href: contained-database-users-making-your-database-portable.md
+- name: Escolher um modo de autenticação
+  href: choose-an-authentication-mode.md
+- name: Configuração de visibilidade de metadados
+  href: metadata-visibility-configuration.md
+- name: Configuração da Área de Superfície
+  href: surface-area-configuration.md
+- name: Injeção SQL
+  href: sql-injection.md
+- name: Avaliação de Vulnerabilidades SQL
+  href: sql-vulnerability-assessment.md
+- name: Descoberta e classificação de dados SQL
+  href: sql-data-discovery-and-classification.md
+- name: Propriedade de banco de dados TRUSTWORTHY
+  href: trustworthy-database-property.md
+- name: Permissões
+  href: permissions-database-engine.md
+- name: Hierarquia de permissões
+  href: permissions-hierarchy-database-engine.md
+- name: Página Permissões ou Protegíveis
+  href: permissions-or-securables-page.md
+- name: Política de senha
+  href: password-policy.md
+- name: Senhas fortes
+  href: strong-passwords.md
+- name: Segurança em nível de linha
+  href: row-level-security.md
+- name: Mascaramento de dados dinâmicos
+  href: dynamic-data-masking.md
+- name: Certificados e chaves assimétricas do SQL Server
+  href: sql-server-certificates-and-asymmetric-keys.md

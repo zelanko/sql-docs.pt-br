@@ -1,0 +1,8 @@
+- name: Serviço do SSIS (Integration Services)
+  href: integration-services-service-ssis-service.md
+- name: Gerenciamento de pacotes (serviço SSIS)
+  href: package-management-ssis-service.md
+- name: Eventos registrados em log pelo serviço Integration Services Service
+  href: events-logged-by-the-integration-services-service.md
+- name: SSIS (Integration Services) em um cluster
+  href: integration-services-ssis-in-a-cluster.md

@@ -1,0 +1,44 @@
+- name: Instalar o módulo do PowerShell no SQL
+  href: download-sql-server-ps-module.md
+- name: Visão geral do SQL Server PowerShell
+  href: sql-server-powershell.md
+  items:
+    - name: SQL Server PowerShell Provider
+      href: sql-server-powershell-provider.md
+    - name: Expressões de consultas e nomes de recursos uniformes
+      href: query-expressions-and-uniform-resource-names.md
+- name: Como acessar objetos SQL Server
+  href: navigate-sql-server-powershell-paths.md
+- name: Como carregar os Assemblies SMO no Windows PowerShell
+  href: load-the-smo-assemblies-in-windows-powershell.md
+- name: Como executar o PowerShell no SSMS
+  href: run-windows-powershell-from-sql-server-management-studio.md
+- name: Como executar o PowerShell com o SQL Server Agent
+  href: run-windows-powershell-steps-in-sql-server-agent.md
+- name: Como gerenciar a autenticação
+  href: manage-authentication-in-database-engine-powershell.md
+- name: Como gerenciar a conclusão da guia
+  href: manage-tab-completion-sql-server-powershell.md
+- name: Trabalhar com caminhos do SQL Server PowerShell
+  href: work-with-sql-server-powershell-paths.md
+- name: Identificadores do SQL Server no PowerShell
+  href: sql-server-identifiers-in-powershell.md
+  items:
+    - name: Especificar instâncias no provedor do SQL Server PowerShell
+      href: specify-instances-in-the-sql-server-powershell-provider.md
+    - name: Codificar e decodificar identificadores do SQL Server
+      href: encode-and-decode-sql-server-identifiers.md
+    - name: Retirar identificadores do SQL Server
+      href: escape-sql-server-identifiers.md
+- name: Recursos
+  items:
+    - name: Artigos novos e atualizados
+      href: new-updated-powershell.md
+    - name: Termos de licença do PowerShell do SQL Server
+      href: sql-server-powershell-license-terms.md
+- name: Referência de cmdlet
+  items:
+    - name: Cmdlets do SqlServer
+      href: 'https://docs.microsoft.com/powershell/module/sqlserver/?toc=/sql/powershell/toc.json'
+    - name: Cmdlets do SQLPS
+      href: 'https://docs.microsoft.com/powershell/module/sqlps/?toc=/sql/powershell/toc.json'

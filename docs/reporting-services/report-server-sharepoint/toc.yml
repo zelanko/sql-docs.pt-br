@@ -1,0 +1,52 @@
+- name: Visão geral
+  href: reporting-services-report-server.md
+- name: Servidor de relatório (SharePoint)
+  href: reporting-services-report-server-sharepoint-mode.md
+  items:
+    - name: Serviço SharePoint e aplicativos de serviço
+      href: reporting-services-sharepoint-service-and-service-applications.md
+      items:
+        - name: Gerenciar um aplicativo de serviço do SharePoint no Reporting Services
+          href: manage-a-reporting-services-sharepoint-service-application.md
+        - name: Fazer backup e restaurar aplicativos de serviço SharePoint do Reporting Services
+          href: backup-and-restore-reporting-services-sharepoint-service-applications.md
+    - name: Cmdlets do PowerShell para o modo do SharePoint do Reporting Services
+      href: powershell-cmdlets-for-reporting-services-sharepoint-mode.md
+    - name: Configuração e administração (modo do SharePoint)
+      href: configuration-and-administration-of-a-report-server.md
+      items:
+        - name: Recursos da coleção de sites – Reporting Services
+          href: site-collection-features-reporting-services.md
+        - name: Recursos da coleção de sites – Servidor de relatório e Power View
+          href: site-collection-features-report-server-and-power-view.md
+        - name: Configurações e recursos de site – Reporting Services
+          href: site-settings-and-features-reporting-services.md
+        - name: Configurações e recursos de site – Sincronização de arquivos do servidor no SharePoint
+          href: activate-the-report-server-file-sync-feature-in-sharepoint-ca.md
+        - name: Adicionar os tipos de conteúdo do Reporting Services a uma biblioteca do SharePoint
+          href: add-reporting-services-content-types-to-a-sharepoint-library.md
+        - name: Relatórios em modo local vs. modo conectado no Visualizador de Relatórios
+          href: local-mode-vs-connected-mode-reports-in-the-report-viewer.md
+        - name: Carregar documentos em uma biblioteca do SharePoint
+          href: upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md
+        - name: Definir opções de processamento
+          href: set-processing-options-reporting-services-in-sharepoint-integrated-mode.md
+    - name: Web part do Visualizador de Relatórios em um site do SharePoint
+      href: report-viewer-web-part-sharepoint-site.md
+      items:
+        - name: Implantar a Web Part do Visualizador de Relatórios
+          href: deploy-report-viewer-web-part.md
+        - name: Adicionar a Web Part do Visualizador de Relatórios a uma página da Web
+          href: add-report-viewer-web-part-to-page.md
+        - name: Conectar-se à Web Part de filtro ou documentos
+          href: connect-filter-or-documents-web-part-sharepoint-integrated-mode.md
+        - name: Personalizar a web part do Visualizador de Relatórios
+          href: customize-the-report-viewer-web-part.md
+        - name: Configurações do site do SharePoint para a Web Part do Visualizador de Relatórios
+          href: report-viewer-web-part-sharepoint-site-settings.md
+- name: Alta disponibilidade
+  href: high-availability-reporting-services.md
+- name: Habilitar e desabilitar o RDL Sandboxing
+  href: enable-and-disable-rdl-sandboxing.md
+- name: Configurar o Reporting Services para usar um nome alternativo da entidade
+  href: configure-reporting-services-to-use-a-subject-alternative-name.md

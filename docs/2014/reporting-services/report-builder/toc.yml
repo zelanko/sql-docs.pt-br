@@ -1,0 +1,155 @@
+- name: 'Localizando, exibindo e gerenciando relatórios'
+  href: finding-viewing-and-managing-reports-report-builder-and-ssrs.md
+  items:
+    - name: Localizando e exibindo relatórios no Gerenciador de Relatórios
+      href: finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md
+    - name: Localizando e exibindo relatórios com um navegador
+      href: finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md
+    - name: Procurando relatórios e outros itens
+      href: searching-for-reports-and-other-items-report-builder-and-ssrs.md
+    - name: Usando Meus Relatórios
+      href: using-my-reports-report-builder-and-ssrs.md
+    - name: Visualizando relatórios no Construtor de Relatórios
+      href: previewing-reports-in-report-builder.md
+- name: Exportando relatórios
+  href: export-reports-report-builder-and-ssrs.md
+  items:
+    - name: Funcionalidade interativa para extensões de renderização de relatório diferentes
+      href: interactive-functionality-different-report-rendering-extensions.md
+    - name: Exportando para um arquivo CSV
+      href: exporting-to-a-csv-file-report-builder-and-ssrs.md
+    - name: Exportando para o Microsoft Excel
+      href: exporting-to-microsoft-excel-report-builder-and-ssrs.md
+    - name: Exportando para o Microsoft Word
+      href: exporting-to-microsoft-word-report-builder-and-ssrs.md
+    - name: Renderizando para HTML
+      href: rendering-to-html-report-builder-and-ssrs.md
+    - name: Exportando para um arquivo de imagem
+      href: exporting-to-an-image-file-report-builder-and-ssrs.md
+    - name: Exportando para um arquivo PDF
+      href: exporting-to-a-pdf-file-report-builder-and-ssrs.md
+    - name: Exportando para XML
+      href: exporting-to-xml-report-builder-and-ssrs.md
+    - name: Exportar um relatório como outro tipo de arquivo
+      href: ../export-a-report-as-another-file-type-report-builder-and-ssrs.md
+    - name: Gerando feeds de dados de relatórios
+      href: generating-data-feeds-from-reports-report-builder-and-ssrs.md
+    - name: Gerar feeds de dados de um relatório
+      href: generate-data-feeds-from-a-report-report-builder-and-ssrs.md
+    - name: Solução do problema de limitação de linhas do Excel
+      href: work-around-the-excel-2003-row-limitation.md
+- name: Imprimindo relatórios
+  href: print-reports-report-builder-and-ssrs.md
+  items:
+    - name: Imprimir relatórios em um navegador com o controle de impressão
+      href: print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md
+    - name: Imprimir relatórios de outros aplicativos
+      href: print-reports-from-other-applications-report-builder-and-ssrs.md
+    - name: Imprimir um relatório
+      href: print-a-report-report-builder-and-ssrs.md
+    - name: Imprimir um relatório (Reporting Services no modo do SharePoint)
+      href: print-a-report-reporting-services-in-sharepoint-mode.md
+- name: Salvando relatórios
+  href: saving-reports-report-builder.md
+  items:
+    - name: Salvar relatórios em um servidor de relatório
+      href: save-reports-to-a-report-server-report-builder.md
+    - name: Salvar um relatório em uma biblioteca do SharePoint
+      href: save-a-report-to-a-sharepoint-library-report-builder.md
+    - name: Salvar relatórios no computador
+      href: ../save-reports-to-your-computer-report-builder.md
+- name: Ajuda F1 do Construtor de Relatórios
+  href: report-builder-f1-help.md
+  items:
+    - name: 'Ajuda para caixas de diálogo, painéis e assistentes (F1)'
+      href: ../report-builder-help-for-dialog-boxes-panes-and-wizards.md
+    - name: Caixa de diálogo Propriedades de Ação
+      href: ../action-properties-dialog-box-report-builder-and-ssrs.md
+    - name: Caixas de diálogo Gráfico (Construtor de Relatórios e SSRS)
+      href: ../chart-dialog-boxes-report-builder-and-ssrs.md
+    - name: 'Caixa de diálogo Propriedades do Eixo, Opções de Eixo'
+      href: ../axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md
+    - name: 'Caixa de diálogo Propriedades do Título do Eixo, Geral'
+      href: ../axis-title-properties-dialog-box-general-report-builder-and-ssrs.md
+    - name: 'Caixa de diálogo Propriedades da Série Calculada, Geral (Construtor de Relatórios e SSRS)'
+      href: ../calculated-series-properties-dialog-box-general-report-builder-and-ssrs.md
+    - name: 'Caixa de diálogo Propriedades da Série Calculada, Marcadores'
+      href: ../calculated-series-properties-dialog-box-markers-report-builder-and-ssrs.md
+    - name: 'Página Filtros, caixas de diálogo de Gráficos'
+      href: ../filters-page-chart-dialog-boxes-report-builder-and-ssrs.md
+    - name: 'Caixa de diálogo Propriedades da Legenda, Geral'
+      href: ../legend-properties-dialog-box-general-report-builder-and-ssrs.md
+    - name: Caixa de diálogo Visibilidade da Coluna
+      href: ../column-visibility-dialog-box-report-builder.md
+    - name: Caixa de diálogo Converter CRI
+      href: convert-cri-dialog-box-report-builder.md
+    - name: Caixa de diálogo Seleção de Cubo
+      href: ../cube-selection-dialog-box-report-builder.md
+    - name: 'Caixa de diálogo Propriedades da Fonte de Dados, Credenciais'
+      href: ../data-source-properties-dialog-box-credentials-report-builder.md
+    - name: 'Caixa de diálogo Propriedades da Fonte de Dados, Geral'
+      href: ../data-source-properties-dialog-box-general-report-builder.md
+    - name: 'Caixa de diálogo Propriedades do Conjunto de Dados, Campos'
+      href: ../dataset-properties-dialog-box-fields-report-builder.md
+    - name: 'Caixa de diálogo Propriedades do Conjunto de Dados, Filtros'
+      href: ../dataset-properties-dialog-box-filters-report-builder.md
+    - name: 'Caixa de diálogo Propriedades do Conjunto de Dados, Opções'
+      href: ../report-data/dataset-properties-dialog-box-options-report-builder.md
+    - name: 'Caixa de diálogo Propriedades do Conjunto de Dados, Parâmetros'
+      href: ../dataset-properties-dialog-box-parameters-report-builder.md
+    - name: 'Caixa de diálogo Propriedades do Conjunto de Dados, Consulta'
+      href: ../report-data/dataset-properties-dialog-box-query-report-builder.md
+    - name: Caixa de diálogo Inserir Credenciais da Fonte de Dados
+      href: ../report-data/enter-data-source-credentials-dialog-box-report-builder.md
+    - name: Caixa de diálogo Expressão
+      href: ../expression-dialog-box-report-builder.md
+    - name: Caixa de diálogo Preenchimento
+      href: ../fill-dialog-box-report-builder-and-ssrs.md
+    - name: Painel Agrupamento
+      href: ../report-design/grouping-pane-report-builder.md
+    - name: 'Caixa de diálogo Propriedades da Imagem, Geral'
+      href: ../image-properties-dialog-box-general-report-builder-and-ssrs.md
+    - name: 'Caixa de diálogo Propriedades da Imagem, Tamanho'
+      href: ../image-properties-dialog-box-size-report-builder-and-ssrs.md
+    - name: 'Caixa de diálogo Propriedades do Espaço Reservado, Geral'
+      href: ../placeholder-properties-dialog-box-general-report-builder-and-ssrs.md
+    - name: Designers de Consulta
+      href: ../query-designers-report-builder.md
+      items:
+        - name: Interface de usuário do Designer de Consulta relacional
+          href: ../report-data/relational-query-designer-user-interface-report-builder.md
+        - name: Interface de usuário do Designer de Consulta baseado em texto
+          href: ../report-data/text-based-query-designer-user-interface-report-builder.md
+          items:
+            - name: Caixa de diálogo Definir Parâmetros de Consulta
+              href: ../define-query-parameters-dialog-box-report-builder.md
+        - name: Interface do usuário do Designer de Consulta MDX do Analysis Services
+          href: ../analysis-services-mdx-query-designer-user-interface-report-builder.md
+        - name: Interface de usuário do Designer de Consulta do Hyperion Essbase
+          href: ../hyperion-essbase-query-designer-user-interface-report-builder.md
+        - name: Designer de Consulta de Lista do SharePoint
+          href: ../report-data/sharepoint-list-query-designer-report-builder.md
+        - name: Interface do usuário do Designer de Consulta do SAP NetWeaver BI
+          href: ../sap-netweaver-bi-query-designer-user-interface-report-builder.md
+    - name: 'Caixa de diálogo Opções do Construtor de Relatórios, Configurações'
+      href: set-default-options-for-report-builder.md
+    - name: painel Dados do Relatório
+      href: ../report-data-pane-report-builder.md
+    - name: Caixa de diálogo Seções do Relatório
+      href: report-sections-dialog-box-report-builder.md
+    - name: Caixa de diálogo Logon do Reporting Services
+      href: reporting-services-login-dialog-box-report-builder.md
+    - name: 'Caixa de diálogo Propriedades do Relatório, Código'
+      href: ../report-properties-dialog-box-code-report-builder.md
+    - name: 'Caixa de diálogo Propriedades do Relatório, Configurar Página'
+      href: ../report-properties-dialog-box-page-setup-report-builder.md
+    - name: 'Caixa de diálogo Propriedades do Relatório, Referências'
+      href: ../report-properties-dialog-box-references-report-builder.md
+    - name: Caixa de diálogo Visibilidade da Linha
+      href: ../row-visibility-dialog-box-report-builder.md
+    - name: Caixa de diálogo Selecionar Cor
+      href: ../select-color-dialog-box-report-builder-and-ssrs.md
+    - name: 'Caixa de diálogo Propriedades da Caixa de Texto, Alinhamento'
+      href: ../text-box-properties-dialog-box-alignment-report-builder-and-ssrs.md
+    - name: Caixa de diálogo Alinhamento para texto e espaços reservados
+      href: ../alignment-dialog-box-for-text-and-placeholders-report-builder-and-ssrs.md

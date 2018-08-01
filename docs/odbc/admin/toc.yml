@@ -1,0 +1,12 @@
+- name: Administrador de Fonte de Dados ODBC
+  href: odbc-data-source-administrator.md
+- name: Exibir drivers
+  href: viewing-drivers.md
+- name: Gerenciar fontes de dados
+  href: managing-data-sources.md
+- name: Configurar opções de rastreamento
+  href: setting-tracing-options.md
+- name: Sobre drivers e fontes de dados
+  href: about-drivers-and-data-sources.md
+- name: Configurar opções de pool de conexões ODBC
+  href: setting-odbc-connection-pooling-options.md

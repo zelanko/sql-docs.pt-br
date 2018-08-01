@@ -1,0 +1,10 @@
+- name: Filestream e BD OLE
+  href: filestream-and-ole-db.md
+- name: Ler uma coluna FILESTREAM para o arquivo usando IBCPSession (OLE DB)
+  href: read-a-filestream-column-to-file-using-ibcpsession-ole-db.md
+- name: Recuperar dados de uma coluna FILESTREAM usando ISequentialStream (OLE DB)
+  href: retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db.md
+- name: Enviar dados para uma coluna FILESTREAM usando IRowsetFastUpload (OLE DB)
+  href: send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md
+- name: Enviar dados para FILESTREAM – ISequentialStream associado a ICommandText
+  href: send-data-to-filestream-isequentialstream-bound-to-icommandtext.md

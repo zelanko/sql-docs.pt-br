@@ -1,0 +1,30 @@
+- name: Desenvolvendo um componente de fluxo de dados personalizado
+  href: developing-a-custom-data-flow-component.md
+- name: Criando um componente de fluxo de dados personalizado
+  href: creating-a-custom-data-flow-component.md
+- name: Métodos de tempo de design de um componente de fluxo de dados
+  href: design-time-methods-of-a-data-flow-component.md
+- name: Métodos de tempo de execução de um componente de fluxo de dados
+  href: run-time-methods-of-a-data-flow-component.md
+- name: Plano de execução e alocação de buffer
+  href: execution-plan-and-buffer-allocation.md
+- name: Trabalhando com tipos de dados no fluxo de dados
+  href: working-with-data-types-in-the-data-flow.md
+- name: Validando um componente de fluxo de dados
+  href: validating-a-data-flow-component.md
+- name: Implementando metadados externos
+  href: implementing-external-metadata.md
+- name: Gerando e definindo eventos em um componente de fluxo de dados
+  href: raising-and-defining-events-in-a-data-flow-component.md
+- name: Registrando em log e definindo entradas de log em um componente de fluxo de dados
+  href: logging-and-defining-log-entries-in-a-data-flow-component.md
+- name: Usando saídas de erro em um componente de fluxo de dados
+  href: using-error-outputs-in-a-data-flow-component.md
+- name: Desenvolvendo uma interface do usuário para um componente de fluxo de dados
+  href: developing-a-user-interface-for-a-data-flow-component.md
+- name: Atualizando a versão de um componente de fluxo de dados
+  href: upgrading-the-version-of-a-data-flow-component.md
+- name: Subcategorias de artigos
+  items:
+    - name: Tipos de fluxo de dados
+      href: ../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md

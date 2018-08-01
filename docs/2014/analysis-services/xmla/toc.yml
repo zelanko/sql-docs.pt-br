@@ -1,0 +1,381 @@
+- name: Referência XMLA
+  href: xml-for-analysis-xmla-reference.md
+- name: Elementos XML (XMLA)
+  href: ../dev-guide/xml-elements-xmla.md
+- name: Cabeçalhos
+  href: xml-elements-headers/xml-elements-headers.md
+  items:
+    - name: Elemento BeginSession
+      href: xml-elements-headers/beginsession-element-xmla.md
+    - name: Elemento EndSession
+      href: xml-elements-headers/endsession-element-xmla.md
+    - name: Elemento Session
+      href: xml-elements-headers/session-element-xmla.md
+    - name: Elemento ProtocolCapabilities
+      href: xml-elements-headers/protocolcapabilities-element-xmla.md
+- name: Métodos
+  href: xml-elements-methods.md
+  items:
+    - name: Método Discover
+      href: xml-elements-methods-discover.md
+    - name: Método Execute
+      href: xml-elements-methods-execute.md
+- name: Commands
+  href: xml-elements-commands/xml-elements-commands.md
+  items:
+    - name: Elemento Alter
+      href: xml-elements-commands/alter-element-xmla.md
+    - name: Elemento Attach
+      href: xml-elements-commands/attach-element.md
+    - name: Elemento de backup
+      href: xml-elements-commands/backup-element-xmla.md
+    - name: Elemento Batch
+      href: xml-elements-commands/batch-element-xmla.md
+    - name: Elemento BeginTransaction
+      href: xml-elements-commands/begintransaction-element-xmla.md
+    - name: Elemento Cancel
+      href: xml-elements-commands/cancel-element-xmla.md
+    - name: Elemento ClearCache
+      href: xml-elements-commands/clearcache-element-xmla.md
+    - name: Elemento CommitTransaction
+      href: xml-elements-commands/committransaction-element-xmla.md
+    - name: Elemento Create
+      href: xml-elements-commands/create-element-xmla.md
+    - name: Elemento Delete
+      href: xml-elements-commands/delete-element-xmla.md
+    - name: Elemento DesignAggregations
+      href: xml-elements-commands/designaggregations-element-xmla.md
+    - name: Elemento Detach
+      href: xml-elements-commands/detach-element.md
+    - name: Elemento Drop
+      href: xml-elements-commands/drop-element-xmla.md
+    - name: Elemento Insert
+      href: xml-elements-commands/insert-element-xmla.md
+    - name: Elemento Lock
+      href: xml-elements-commands/lock-element-xmla.md
+    - name: Elemento MergePartitions
+      href: xml-elements-commands/mergepartitions-element-xmla.md
+    - name: Elemento NotifyTableChange
+      href: xml-elements-commands/notifytablechange-element-xmla.md
+    - name: Elemento Process
+      href: xml-elements-commands/process-element-xmla.md
+    - name: Elemento Restore
+      href: xml-elements-commands/restore-element-xmla.md
+    - name: Elemento RollbackTransaction
+      href: xml-elements-commands/rollbacktransaction-element-xmla.md
+    - name: Elemento Statement
+      href: xml-elements-commands/statement-element-xmla.md
+    - name: Elemento Subscribe
+      href: xml-elements-commands/subscribe-element-xmla.md
+    - name: Elemento Synchronize
+      href: xml-elements-commands/synchronize-element-xmla.md
+    - name: Elemento Unlock
+      href: xml-elements-commands/unlock-element-xmla.md
+    - name: Elemento Update
+      href: xml-elements-commands/update-element-xmla.md
+    - name: Elemento UpdateCells
+      href: xml-elements-commands/updatecells-element-xmla.md
+- name: Objetos
+  href: xml-elements-objects.md
+  items:
+    - name: Elemento DiscoverResponse
+      href: xml-elements-objects-discoverresponse.md
+    - name: Elemento ExecuteResponse
+      href: xml-elements-objects-executeresponse.md
+- name: Propriedades
+  href: xml-elements-properties/xml-elements-properties.md
+  items:
+    - name: Elemento AllowOverwrite
+      href: xml-elements-properties/allowoverwrite-element-xmla.md
+    - name: Elemento ApplyCompression
+      href: xml-elements-properties/applycompression-element-xmla.md
+    - name: Elemento Attribute
+      href: xml-elements-properties/attribute-element-xmla.md
+    - name: Elemento AttributeName
+      href: xml-elements-properties/attributename-element-xmla.md
+    - name: Elemento Attributes
+      href: xml-elements-properties/attributes-element-xmla.md
+    - name: Elemento Axes
+      href: xml-elements-properties/axes-element-xmla.md
+    - name: Elemento AxesInfo
+      href: xml-elements-properties/axesinfo-element-xmla.md
+    - name: Elemento Axis
+      href: xml-elements-properties/axis-element-xmla.md
+    - name: Elemento AxisInfo
+      href: xml-elements-properties/axisinfo-element-xmla.md
+    - name: Elemento BackupRemotePartitions
+      href: xml-elements-properties/backupremotepartitions-element-xmla.md
+    - name: Elemento Binding
+      href: xml-elements-properties/binding-element-xmla.md
+    - name: Elemento Bindings
+      href: xml-elements-properties/bindings-element-xmla.md
+    - name: Elemento CancelAssociated
+      href: xml-elements-properties/cancelassociated-element-xmla.md
+    - name: Elemento Capability
+      href: xml-elements-properties/capability-element-xmla.md
+    - name: Elemento Caption
+      href: xml-elements-properties/caption-element-xmla.md
+    - name: Elemento Cell
+      href: xml-elements-properties/cell-element-xmla.md
+    - name: Elemento Cell (MDDataSet)
+      href: xml-elements-properties/cell-element-mddataset-xmla.md
+    - name: Elemento CellData
+      href: xml-elements-properties/celldata-element-xmla.md
+    - name: Elemento CellInfo
+      href: xml-elements-properties/cellinfo-element-xmla.md
+    - name: Elemento CellOrdinal
+      href: xml-elements-properties/cellordinal-element-xmla.md
+    - name: Elemento Command
+      href: xml-elements-properties/command-element-xmla.md
+    - name: Elemento ConnectionID
+      href: xml-elements-properties/connectionid-element-xmla.md
+    - name: Elemento ConnectionString
+      href: xml-elements-properties/connectionstring-element-xmla.md
+    - name: Elemento CrossProduct
+      href: xml-elements-properties/crossproduct-element-xmla.md
+    - name: Elemento Cube
+      href: xml-elements-properties/cube-element-xmla.md
+    - name: Elemento Cube (OlapInfo)
+      href: xml-elements-properties/cube-element-olapinfo-xmla.md
+    - name: Elemento CubeID
+      href: xml-elements-properties/cubeid-element-xmla.md
+    - name: Elemento CubeInfo
+      href: xml-elements-properties/cubeinfo-element-xmla.md
+    - name: Elemento CubeName
+      href: xml-elements-properties/cubename-element-xmla.md
+    - name: Elemento CustomRollup
+      href: xml-elements-properties/customrollup-element-xmla.md
+    - name: Elemento CustomRollupProperties
+      href: xml-elements-properties/customrollupproperties-element-xmla.md
+    - name: Elemento Database
+      href: xml-elements-properties/database-element-xmla.md
+    - name: Elemento DatabaseID
+      href: xml-elements-properties/databaseid-element-xmla.md
+    - name: Elemento DatabaseName
+      href: xml-elements-properties/databasename-element-xmla.md
+    - name: Elemento DataSource
+      href: xml-elements-properties/datasource-element-xmla.md
+    - name: Elemento DataSourceID
+      href: xml-elements-properties/datasourceid-element-xmla.md
+    - name: Elemento DataSourceType
+      href: xml-elements-properties/datasourcetype-element-xmla.md
+    - name: Elemento DataSourceView
+      href: xml-elements-properties/datasourceview-element-xmla.md
+    - name: Elemento DbSchemaName
+      href: xml-elements-properties/dbschemaname-element-xmla.md
+    - name: Elemento DbStorageLocation
+      href: xml-elements-properties/dbstoragelocation-element.md
+    - name: Elemento DbTableName
+      href: xml-elements-properties/dbtablename-element-xmla.md
+    - name: Elemento DeleteWithDescendants
+      href: xml-elements-properties/deletewithdescendants-element-xmla.md
+    - name: Elemento Description
+      href: xml-elements-properties/description-element-xmla.md
+    - name: Elemento Dimension
+      href: xml-elements-properties/dimension-element-xmla.md
+    - name: Elemento DisplayInfo
+      href: xml-elements-properties/displayinfo-element-xmla.md
+    - name: Elemento Error
+      href: xml-elements-properties/error-element-xmla.md
+    - name: Elemento ErrorCode
+      href: xml-elements-properties/errorcode-element-xmla.md
+    - name: Elemento ErrorConfiguration
+      href: xml-elements-properties/errorconfiguration-element-xmla.md
+    - name: Elemento Exception
+      href: xml-elements-properties/exception-element-xmla.md
+    - name: Elemento File
+      href: xml-elements-properties/file-element-xmla.md
+    - name: Elemento Folder
+      href: xml-elements-properties/folder-element-xmla.md
+    - name: Elemento Folders
+      href: xml-elements-properties/folders-element-xmla.md
+    - name: Elemento HelpFile
+      href: xml-elements-properties/helpfile-element-xmla.md
+    - name: Elemento HierarchyInfo
+      href: xml-elements-properties/hierarchyinfo-element-xmla.md
+    - name: Elemento ID
+      href: xml-elements-properties/id-element-xmla.md
+    - name: Elemento Keys
+      href: xml-elements-properties/keys-element-xmla.md
+    - name: Elemento Key
+      href: xml-elements-properties/key-element-xmla.md
+    - name: Elemento Language
+      href: xml-elements-properties/language-element-xmla.md
+    - name: Elemento LastDataUpdate
+      href: xml-elements-properties/lastdataupdate-element-xmla.md
+    - name: Elemento LastSchemaUpdate
+      href: xml-elements-properties/lastschemaupdate-element-xmla.md
+    - name: Elemento LName
+      href: xml-elements-properties/lname-element-xmla.md
+    - name: Elemento LNum
+      href: xml-elements-properties/lnum-element-xmla.md
+    - name: Elemento Location
+      href: xml-elements-properties/location-element-xmla.md
+    - name: Elemento Locations
+      href: xml-elements-properties/locations-element-xmla.md
+    - name: Elemento Materialize
+      href: xml-elements-properties/materialize-element-xmla.md
+    - name: Elemento MeasureGroupID
+      href: xml-elements-properties/measuregroupid-element-xmla.md
+    - name: Elemento Member
+      href: xml-elements-properties/member-element-xmla.md
+    - name: Elemento Members
+      href: xml-elements-properties/members-element-xmla.md
+    - name: Elemento Message
+      href: xml-elements-properties/message-element-xmla.md
+    - name: Elemento Messages
+      href: xml-elements-properties/messages-element-xmla.md
+    - name: Elemento Mode
+      href: xml-elements-properties/mode-element-xmla.md
+    - name: Elemento MoveWithDescendants
+      href: xml-elements-properties/movewithdescendants-element-xmla.md
+    - name: Elemento Name
+      href: xml-elements-properties/name-element-xmla.md
+    - name: Elemento Name (Parâmetro)
+      href: xml-elements-properties/name-element-parameter-xmla.md
+    - name: Elemento New
+      href: xml-elements-properties/new-element-xmla.md
+    - name: Elemento Object
+      href: xml-elements-properties/object-element-xmla.md
+    - name: Elemento Object (Dimension)
+      href: xml-elements-properties/object-element-dimension-xmla.md
+    - name: Elemento ObjectDefinition
+      href: xml-elements-properties/objectdefinition-element-xmla.md
+    - name: Elemento OlapInfo
+      href: xml-elements-properties/olapinfo-element-xmla.md
+    - name: Elemento Optimization
+      href: xml-elements-properties/optimization-element-xmla.md
+    - name: Elemento Original
+      href: xml-elements-properties/original-element-xmla.md
+    - name: Parallel Element
+      href: xml-elements-properties/parallel-element-xmla.md
+    - name: Elemento Parameter
+      href: xml-elements-properties/parameter-element-xmla.md
+    - name: Elemento Parameters
+      href: xml-elements-properties/parameters-element-xmla.md
+    - name: Elemento ParentObject
+      href: xml-elements-properties/parentobject-element-xmla.md
+    - name: Elemento PartitionID
+      href: xml-elements-properties/partitionid-element-xmla.md
+    - name: Elemento Password
+      href: xml-elements-properties/password-element-xmla.md
+    - name: Elemento Properties
+      href: xml-elements-properties/properties-element-xmla.md
+    - name: Elemento PropertyList
+      href: xml-elements-properties/propertylist-element-xmla.md
+- name: Propriedades XMLA suportadas
+  href: xml-elements-properties/propertylist-element-supported-xmla-properties.md
+  items:
+    - name: Elemento Queries
+      href: xml-elements-properties/queries-element-xmla.md
+    - name: Elemento Query
+      href: xml-elements-properties/query-element-xmla.md
+    - name: Elemento ReadWriteMode
+      href: xml-elements-properties/readwritemode-element.md
+    - name: Elemento RequestType
+      href: xml-elements-properties/requesttype-element-xmla.md
+    - name: Elemento RestrictionList
+      href: xml-elements-properties/restrictionlist-element-xmla.md
+    - name: Elemento Restrictions
+      href: xml-elements-properties/restrictions-element-xmla.md
+    - name: Elemento Results
+      href: xml-elements-properties/results-element-xmla.md
+    - name: Elemento return
+      href: xml-elements-properties/return-element-xmla.md
+    - name: Elemento Role
+      href: xml-elements-properties/role-element-xmla.md
+    - name: Elemento Root
+      href: xml-elements-properties/root-element-xmla.md
+    - name: Elemento row
+      href: xml-elements-properties/row-element-xmla.md
+    - name: Elemento Security
+      href: xml-elements-properties/security-element-xmla.md
+    - name: Elemento SessionID
+      href: xml-elements-properties/sessionid-element-xmla.md
+    - name: Elemento SkippedLevels
+      href: xml-elements-properties/skippedlevels-element-xmla.md
+    - name: Elemento Source
+      href: xml-elements-properties/source-element-xmla.md
+    - name: Elemento Source (Error)
+      href: xml-elements-properties/source-element-error-xmla.md
+    - name: Elemento Source (Synchronize)
+      href: xml-elements-properties/source-element-synchronize-xmla.md
+    - name: Elemento Sources
+      href: xml-elements-properties/sources-element-xmla.md
+    - name: Elemento SPID
+      href: xml-elements-properties/spid-element-xmla.md
+    - name: Elemento Steps
+      href: xml-elements-properties/steps-element-xmla.md
+    - name: Elemento Storage
+      href: xml-elements-properties/storage-element-xmla.md
+    - name: Elemento SynchronizeSecurity
+      href: xml-elements-properties/synchronizesecurity-element-xmla.md
+    - name: Elemento TableNotification
+      href: xml-elements-properties/tablenotification-element-xmla.md
+    - name: Elemento TableNotifications
+      href: xml-elements-properties/tablenotifications-element-xmla.md
+    - name: Elemento Target
+      href: xml-elements-properties/target-element-xmla.md
+    - name: Elemento Time
+      href: xml-elements-properties/time-element-xmla.md
+    - name: Elemento Translation
+      href: xml-elements-properties/translation-element-xmla.md
+    - name: Elemento Translations
+      href: xml-elements-properties/translations-element-xmla.md
+    - name: Elemento Tuple
+      href: xml-elements-properties/tuple-element-xmla.md
+    - name: Elemento Tuples
+      href: xml-elements-properties/tuples-element-xmla.md
+    - name: Elemento Type
+      href: xml-elements-properties/type-element-xmla.md
+    - name: Elemento UName
+      href: xml-elements-properties/uname-element-xmla.md
+    - name: Elemento UnaryOperator
+      href: xml-elements-properties/unaryoperator-element-xmla.md
+    - name: Elemento Value
+      href: xml-elements-properties/value-element-xmla.md
+    - name: Elemento Value (Parâmetro)
+      href: xml-elements-properties/value-element-parameter-xmla.md
+    - name: Elemento Warning
+      href: xml-elements-properties/warning-element-xmla.md
+    - name: Elemento Where
+      href: xml-elements-properties/where-element-xmla.md
+    - name: Elemento WritebackTableCreation
+      href: xml-elements-properties/writebacktablecreation-element-xmla.md
+    - name: Elemento FolderPosition
+      href: xml-elements-properties/folderposition-element-xml.md
+    - name: Elemento DefaultDetailsPosition
+      href: xml-elements-properties/defaultdetailsposition-element-xml.md
+    - name: Elemento DisplayKeyPosition
+      href: xml-elements-properties/displaykeyposition-element-xml.md
+    - name: Elemento CommonIdentifierPosition
+      href: xml-elements-properties/commonidentifierposition-element-xml.md
+    - name: Elemento IsDefaultMeasure
+      href: xml-elements-properties/isdefaultmeasure-element-xml.md
+    - name: Elemento IsDefaultImage
+      href: xml-elements-properties/isdefaultimage-element-xml.md
+    - name: Elemento SortPropertiesPosition
+      href: xml-elements-properties/sortpropertiesposition-element-xml.md
+    - name: Elemento ContextualNameRule
+      href: xml-elements-properties/contextualnamerule-element-xml.md
+    - name: Elemento EditionId
+      href: xml-elements-properties/editionid-element.md
+    - name: Elemento ServerMode
+      href: xml-elements-properties/servermode-element.md
+    - name: Elemento ProductLabel
+      href: xml-elements-properties/productlabel-element.md
+- name: Tipos de dados XML
+  href: xml-data-types/xml-data-types-xmla.md
+  items:
+    - name: Tipo de dados EmptyResult
+      href: xml-data-types/emptyresult-data-type-xmla.md
+    - name: Tipo de dados EnumString
+      href: xml-data-types/enumstring-data-type-xmla.md
+    - name: Tipo de dados MDDataSet
+      href: xml-data-types/mddataset-data-type-xmla.md
+    - name: Tipo de dados Resultset
+      href: xml-data-types/resultset-data-type-xmla.md
+    - name: Tipo de dados Rowset
+      href: xml-data-types/rowset-data-type-xmla.md
+- name: Conformidade com XML for Analysis
+  href: xml-for-analysis-compliance-xmla.md

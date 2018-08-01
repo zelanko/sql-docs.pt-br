@@ -1,0 +1,8 @@
+- name: Ruby Driver para SQL Server
+  href: ruby-driver-for-sql-server.md
+- name: 'Etapa 1: Configurar o ambiente de desenvolvimento para o desenvolvimento Ruby'
+  href: step-1-configure-development-environment-for-ruby-development.md
+- name: 'Etapa 2: Criar um banco de dados SQL para o desenvolvimento Ruby'
+  href: step-2-create-a-sql-database-for-ruby-development.md
+- name: 'Etapa 3: Prova de conceito da conexão ao SQL usando Ruby'
+  href: step-3-proof-of-concept-connecting-to-sql-using-ruby.md

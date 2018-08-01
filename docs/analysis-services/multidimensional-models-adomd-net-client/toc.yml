@@ -1,0 +1,30 @@
+- name: Funcionalidade de cliente do ADOMD.NET
+  href: adomd-net-client-functionality.md
+- name: Programando o cliente no ADOMD.NET
+  href: adomd-net-client-programming.md
+- name: Conexões no ADOMD.NET – Estabelecer conexões seguras
+  href: connections-in-adomd-net-establishing-secure-connections.md
+- name: Conexões no ADOMD.NET – Realizar transações
+  href: connections-in-adomd-net-performing-transactions.md
+- name: Conexões no ADOMD.NET – Trabalhar com conexões e sessões
+  href: connections-in-adomd-net-working-with-connections-and-sessions.md
+- name: Conexões no ADOMD.NET
+  href: connections-in-adomd-net.md
+- name: Executando comandos em uma fonte de dados analíticos
+  href: executing-commands-against-an-analytical-data-source.md
+- name: Migrando do ADO MD para o ADOMD.NET
+  href: migrating-from-ado-md-to-adomd-net.md
+- name: Recuperando dados de uma fonte de dados analíticos
+  href: retrieving-data-from-an-analytical-data-source.md
+- name: Recuperando dados usando o AdomdDataReader
+  href: retrieving-data-using-the-adomddatareader.md
+- name: Recuperando dados usando CellSet
+  href: retrieving-data-using-the-cellset.md
+- name: Recuperando dados usando o XmlReader
+  href: retrieving-data-using-the-xmlreader.md
+- name: Recuperar metadados – Trabalhar com o modelo de objeto do ADOMD.NET
+  href: retrieving-metadata-working-with-adomd-net-object-model.md
+- name: Recuperar metadados – Trabalhar com conjuntos de linhas de esquema
+  href: retrieving-metadata-working-with-schema-rowsets.md
+- name: Retrieving Metadata from an Analytical Data Source
+  href: retrieving-metadata-from-an-analytical-data-source.md

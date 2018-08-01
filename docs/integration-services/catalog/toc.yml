@@ -1,0 +1,26 @@
+- name: Catálogo e servidor
+  href: integration-services-ssis-server-and-catalog.md
+- name: Catálogo do SSIS
+  href: ssis-catalog.md
+- name: Exibir a lista de pacotes no servidor SSIS
+  href: view-the-list-of-packages-on-the-integration-services-server.md
+- name: Referência do Transact-SQL do catálogo do SSIS
+  href: integration-services-ssis-catalog-transact-sql-reference.md
+- name: Caixas de diálogo do Catálogo do SSIS
+  items:
+    - name: Caixa de diálogo Procurar Todas as Entidades de Segurança
+      href: browse-all-principals-dialog-box.md
+    - name: Caixa de diálogo Configurar
+      href: configure-dialog-box.md
+    - name: Caixa de diálogo Propriedades da Pasta
+      href: folder-properties-dialog-box.md
+    - name: Caixa de diálogo Propriedades do Pacote
+      href: package-properties-dialog-box.md
+    - name: Caixa de diálogo Propriedades do Projeto
+      href: project-properties-dialog-box.md
+    - name: Caixa de diálogo Versões do Projeto
+      href: project-versions-dialog-box.md
+    - name: Caixa de diálogo Definir Valor do Parâmetro
+      href: set-parameter-value-dialog-box.md
+    - name: Caixa de diálogo Validar
+      href: validate-dialog-box.md

@@ -1,0 +1,22 @@
+- name: Criando aplicativos com o SQL Server Native Client
+  href: building-applications-with-sql-server-native-client.md
+- name: Componentes do SQL Server Native Client
+  href: components-of-sql-server-native-client.md
+- name: Conectando a um banco de dados SQL do Windows Azure usando o SQL Server Native Client
+  href: connecting-to-a-windows-azure-sql-database-using-sql-server-native-client.md
+- name: Função ConnectionValidSharedMemory na memória compartilhada dbmslpcn.dll
+  href: connectionvalidsharedmemory-function-in-dbmslpcn-dll-shared-memory.md
+- name: Instalando o SQL Server Native Client
+  href: installing-sql-server-native-client.md
+- name: Políticas de suporte do SQL Server Native Client
+  href: support-policies-for-sql-server-native-client.md
+- name: Atualizando um aplicativo no SQL Server 2005 Native Client
+  href: updating-an-application-from-sql-server-2005-native-client.md
+- name: Atualizando um aplicativo do MDAC para o SQL Server Native Client
+  href: updating-an-application-to-sql-server-native-client-from-mdac.md
+- name: Usando o ADO com SQL Server Native Client
+  href: using-ado-with-sql-server-native-client.md
+- name: Usando palavras-chave da cadeia de conexão com o SQL Server Native Client
+  href: using-connection-string-keywords-with-sql-server-native-client.md
+- name: Usando os arquivos de biblioteca e de cabeçalho do SQL Server Native Client
+  href: using-the-sql-server-native-client-header-and-library-files.md

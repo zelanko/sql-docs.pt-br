@@ -1,0 +1,79 @@
+- name: Visão geral
+  href: queries.md
+- name: SELECT
+  href: select-transact-sql.md
+  items:
+    - name: Cláusula SELECT
+      href: select-clause-transact-sql.md
+    - name: Exemplos de SELECT
+      href: select-examples-transact-sql.md
+    - name: Cláusula SELECT – FOR
+      href: select-for-clause-transact-sql.md
+    - name: SELECT – GROUP BY
+      href: select-group-by-transact-sql.md
+    - name: SELECT – HAVING
+      href: select-having-transact-sql.md
+    - name: Cláusula SELECT – INTO
+      href: select-into-clause-transact-sql.md
+    - name: Cláusula SELECT – ORDER BY
+      href: select-order-by-clause-transact-sql.md
+    - name: Cláusula SELECT – OVER
+      href: select-over-clause-transact-sql.md
+- name: FROM
+  href: from-transact-sql.md
+  items:
+    - name: FROM – usando PIVOT e UNPIVOT
+      href: from-using-pivot-and-unpivot.md
+- name: WHERE
+  href: where-transact-sql.md
+  items:
+    - name: MATCH
+      href: match-sql-graph.md
+- name: Dicas
+  href: hints-transact-sql.md
+  items:
+    - name: Dicas – Participar
+      href: hints-transact-sql-join.md
+    - name: Dicas – Consulta
+      href: hints-transact-sql-query.md
+    - name: Dicas – Tabela
+      href: hints-transact-sql-table.md
+- name: AT TIME ZONE
+  href: at-time-zone-transact-sql.md
+- name: 'Usando aliases (SQL Data Warehouse do Azure, Parallel Data Warehouse)'
+  href: aliasing-azure-sql-data-warehouse-parallel-data-warehouse.md
+- name: EXPLAIN
+  href: explain-transact-sql.md
+- name: Cláusula OPTION
+  href: option-clause-transact-sql.md
+- name: Cláusula OUTPUT
+  href: output-clause-transact-sql.md
+- name: Predicados
+  href: predicates.md
+  items:
+    - name: CONTAINS
+      href: contains-transact-sql.md
+    - name: FREETEXT
+      href: freetext-transact-sql.md
+    - name: IS NULL
+      href: is-null-transact-sql.md
+- name: PREDICT
+  href: predict-transact-sql.md
+- name: READTEXT
+  href: readtext-transact-sql.md
+- name: Critério de Pesquisa
+  href: search-condition-transact-sql.md
+- name: 'Subconsultas (SQL Data Warehouse do Azure, Parallel Data Warehouse)'
+  href: subqueries-azure-sql-data-warehouse-parallel-data-warehouse.md
+- name: Construtor de Valor de Tabela
+  href: table-value-constructor-transact-sql.md
+- name: INÍCIO
+  href: top-transact-sql.md
+- name: UPDATE
+  href: update-transact-sql.md
+- name: UPDATETEXT
+  href: updatetext-transact-sql.md
+- name: WITH common_table_expression
+  href: with-common-table-expression-transact-sql.md
+- name: WRITETEXT
+  href: writetext-transact-sql.md

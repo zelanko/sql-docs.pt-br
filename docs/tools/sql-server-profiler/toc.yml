@@ -1,0 +1,121 @@
+- name: Visão geral
+  href: sql-server-profiler.md
+- name: Executar o SQL Server Profiler
+  href: start-sql-server-profiler.md
+- name: Modelos e permissões do SQL Server Profiler
+  href: sql-server-profiler-templates-and-permissions.md
+  items:
+    - name: Modelos do SQL Server Profiler
+      href: sql-server-profiler-templates.md
+    - name: Criar um modelo de rastreamento
+      href: create-a-trace-template-sql-server-profiler.md
+    - name: Modificar modelos de rastreamento
+      href: modify-trace-templates.md
+    - name: Derivar um modelo de um rastreamento em execução
+      href: derive-a-template-from-a-running-trace-sql-server-profiler.md
+    - name: Derivar um modelo com base em um arquivo ou tabela de rastreamento
+      href: derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md
+    - name: Exportar um modelo de rastreamento
+      href: export-a-trace-template-sql-server-profiler.md
+    - name: Importar um modelo de rastreamento
+      href: import-a-trace-template-sql-server-profiler.md
+    - name: Permissões necessárias para executar o SQL Server Profiler
+      href: permissions-required-to-run-sql-server-profiler.md
+- name: Definir opções de rastreamento globais
+  href: set-global-trace-options-sql-server-profiler.md
+  items:
+    - name: Definir padrões de definição de rastreamento
+      href: set-trace-definition-defaults-sql-server-profiler.md
+    - name: Definir padrões de exibição de rastreamento
+      href: set-trace-display-defaults-sql-server-profiler.md
+- name: Criar um rastreamento
+  href: create-a-trace-sql-server-profiler.md
+  items:
+    - name: Criar um script Transact-SQL para executar um rastreamento
+      href: create-a-transact-sql-script-for-running-a-trace-sql-server-profiler.md
+- name: Iniciar um rastreamento
+  href: start-a-trace.md
+  items:
+    - name: Iniciar automaticamente um rastreamento após a conexão com um servidor
+      href: start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md
+- name: Localizar um valor ou uma coluna de dados durante um rastreamento
+  href: find-a-value-or-data-column-while-tracing-sql-server-profiler.md
+- name: Organizar colunas exibidas em um rastreamento
+  href: organize-columns-displayed-in-a-trace-sql-server-profiler.md
+- name: Extrair um script de um rastreamento
+  href: extract-a-script-from-a-trace-sql-server-profiler.md
+- name: Pausar um rastreamento
+  href: pause-a-trace-sql-server-profiler.md
+- name: Interromper um rastreamento
+  href: stop-a-trace-sql-server-profiler.md
+- name: Executar um rastreamento que está em pausa ou interrompido
+  href: run-a-trace-after-it-has-been-paused-or-stopped-sql-server-profiler.md
+- name: Limpar uma janela de rastreamento
+  href: clear-a-trace-window-sql-server-profiler.md
+- name: Fechar uma janela de rastreamento
+  href: close-a-trace-window-sql-server-profiler.md
+- name: Exibir e analisar rastreamentos com o SQL Server Profiler
+  href: view-and-analyze-traces-with-sql-server-profiler.md
+  items:
+    - name: Analisar deadlocks com o SQL Server Profiler
+      href: analyze-deadlocks-with-sql-server-profiler.md
+    - name: Analisar consultas com resultados do Plano de Execução no SQL Server Profiler
+      href: analyze-queries-with-showplan-results-in-sql-server-profiler.md
+- name: Correlacionar um rastreamento com os dados de log de desempenho do Windows
+  href: correlate-a-trace-with-windows-performance-log-data.md
+- name: Filtrar rastreamentos com o SQL Server Profiler
+  href: filter-traces-with-sql-server-profiler.md
+  items:
+    - name: Filtrar eventos em um rastreamento
+      href: filter-events-in-a-trace-sql-server-profiler.md
+    - name: Exibir informações de filtro
+      href: view-filter-information-sql-server-profiler.md
+    - name: Modificar um filtro
+      href: modify-a-filter-sql-server-profiler.md
+    - name: Filtrar eventos com base na hora de início do evento
+      href: filter-events-based-on-the-event-start-time-sql-server-profiler.md
+    - name: Filtrar eventos com base na hora de término do evento
+      href: filter-events-based-on-the-event-end-time-sql-server-profiler.md
+    - name: Filtrar SPIDs (IDs de processo do servidor de filtro) em um rastreamento
+      href: filter-server-process-ids-spids-in-a-trace-sql-server-profiler.md
+- name: Salvar rastreamentos e modelos de rastreamento
+  href: save-traces-and-trace-templates.md
+- name: Salvar resultados de rastreamento em um arquivo
+  href: save-trace-results-to-a-file-sql-server-profiler.md
+  items:
+    - name: Definir um tamanho do arquivo máximo para um arquivo de rastreamento
+      href: set-a-maximum-file-size-for-a-trace-file-sql-server-profiler.md
+    - name: Especificar eventos e colunas de dados para um rastreamento
+      href: specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md
+- name: Salvar resultados de rastreamento em uma tabela
+  href: save-trace-results-to-a-table-sql-server-profiler.md
+  items:
+    - name: Definir um tamanho máximo para uma tabela de rastreamento
+      href: set-a-maximum-table-size-for-a-trace-table-sql-server-profiler.md
+- name: Abrir um arquivo de rastreamento
+  href: open-a-trace-file-sql-server-profiler.md
+- name: Abrir uma tabela de rastreamento
+  href: open-a-trace-table-sql-server-profiler.md
+- name: Repetir rastreamentos
+  href: replay-traces.md
+  items:
+    - name: Replay Requirements
+      href: replay-requirements.md
+    - name: Opções de Repetição
+      href: replay-options-sql-server-profiler.md
+    - name: Considerações sobre repetição de rastreamentos
+      href: considerations-for-replaying-traces-sql-server-profiler.md
+    - name: Reproduzir uma tabela de rastreamento
+      href: replay-a-trace-table-sql-server-profiler.md
+    - name: Reproduzir um arquivo de rastreamento
+      href: replay-a-trace-file-sql-server-profiler.md
+    - name: Reproduzir um único evento de cada vez
+      href: replay-a-single-event-at-a-time-sql-server-profiler.md
+    - name: Reproduzir até um ponto de interrupção
+      href: replay-to-a-breakpoint-sql-server-profiler.md
+    - name: Reproduzir até um cursor
+      href: replay-to-a-cursor-sql-server-profiler.md
+    - name: Reproduzir um script Transact-SQL
+      href: replay-a-transact-sql-script-sql-server-profiler.md
+- name: Caixas de diálogo do SQL Server Profiler
+  href: sql-server-profiler-f1-help.md

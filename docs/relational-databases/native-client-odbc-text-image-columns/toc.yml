@@ -1,0 +1,8 @@
+- name: Gerenciando colunas de texto e imagem
+  href: managing-text-and-image-columns.md
+- name: Colunas de texto e imagem associadas vs. não associadas
+  href: bound-vs-unbound-text-and-image-columns.md
+- name: 'Dados em execução e colunas Text, ntext ou Image'
+  href: data-at-execution-and-text-ntext-or-image-columns.md
+- name: Modificações registradas vs. não registradas
+  href: logged-vs-unlogged-modifications.md

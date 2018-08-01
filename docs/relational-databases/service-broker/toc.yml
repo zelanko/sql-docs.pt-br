@@ -1,0 +1,8 @@
+- name: Visão geral
+  href: event-notifications.md
+- name: Implementar
+  href: implement-event-notifications.md
+- name: Configurar a segurança da caixa diálogo
+  href: configure-dialog-security-for-event-notifications.md
+- name: Obter informações
+  href: get-information-about-event-notifications.md

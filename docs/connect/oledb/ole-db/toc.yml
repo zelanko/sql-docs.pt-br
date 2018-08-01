@@ -1,0 +1,48 @@
+- name: Programação no OLE DB Driver for SQL Server
+  href: oledb-driver-for-sql-server-programming.md
+- name: Áreas específicas
+  items:
+    - name: Criar aplicativos do Driver do OLE DB para SQL Server +
+      href: ../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md
+    - name: Objetos de fonte de dados do OLE DB +
+      href: ../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md
+    - name: Comandos +
+      href: ../../oledb/ole-db-commands/commands.md
+    - name: Conjuntos de linhas +
+      href: ../../oledb/ole-db-rowsets/rowsets.md
+    - name: Blobs +
+      href: ../../oledb/ole-db-blobs/blobs-and-ole-objects.md
+    - name: Índices de tabelas +
+      href: ../../oledb/ole-db-tables-indexes/tables-and-indexes.md
+    - name: Tipos de dados +
+      href: ../../oledb/ole-db-data-types/data-types-ole-db.md
+    - name: Parâmetros com valor de tabela +
+      href: ../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md
+    - name: Data e hora +
+      href: ../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md
+    - name: Transações +
+      href: ../../oledb/ole-db-transactions/transactions.md
+    - name: Erros +
+      href: ../../oledb/ole-db-errors/errors.md
+    - name: Interfaces +
+      href: ../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md
+    - name: Instruções +
+      href: ../../oledb/ole-db-how-to/ole-db-how-to-topics.md
+- name: Tipos de dados CLR grandes definidos pelo usuário
+  href: large-clr-user-defined-types-ole-db.md
+- name: Suporte a conjunto de linhas de esquema
+  href: schema-rowset-support-ole-db.md
+- name: Conjuntos de linhas do esquema – suporte à consulta distribuída
+  href: schema-rowsets-distributed-query-support.md
+- name: Conjuntos de linhas do esquema – conjunto de linhas LINKEDSERVERS
+  href: schema-rowsets-linkedservers-rowset.md
+- name: SPNs (Nomes da Entidade de Serviço) em conexões de cliente
+  href: service-principal-names-spns-in-client-connections-ole-db.md
+- name: Suporte a colunas esparsas
+  href: sparse-columns-support-ole-db.md
+- name: Procedimentos armazenados – Chamando
+  href: stored-procedures-calling.md
+- name: Procedimentos armazenados – em execução
+  href: stored-procedures-running.md
+- name: Procedimentos armazenados
+  href: stored-procedures.md

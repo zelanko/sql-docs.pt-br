@@ -1,0 +1,28 @@
+- name: Classe ClientNetworkProtocol
+  href: clientnetworkprotocol-class.md
+- name: Método GetNextOrderValue (classe ClientNetworkProtocol)
+  href: getnextordervalue-method-clientnetworkprotocol-class.md
+- name: Propriedade NumberOfFlags (classe ClientNetworkProtocol)
+  href: numberofflags-property-clientnetworkprotocol-class.md
+- name: Propriedade NumberOfProps (classe ClientNetworkProtocol)
+  href: numberofprops-property-clientnetworkprotocol-class.md
+- name: Propriedade Properties (classe ClientNetworkProtocol)
+  href: properties-property-clientnetworkprotocol-class.md
+- name: Propriedade ProtocolDisplayName (classe ClientNetworkProtocol)
+  href: protocoldisplayname-property-clientnetworkprotocol-class.md
+- name: Propriedade ProtocolDLL (classe ClientNetworkProtocol)
+  href: protocoldll-property-clientnetworkprotocol-class.md
+- name: Propriedade ProtocolName (classe ClientNetworkProtocol)
+  href: protocolname-property-clientnetworkprotocol-class.md
+- name: Propriedade ProtocolOrder (classe ClientNetworkProtocol)
+  href: protocolorder-property-clientnetworkprotocol-class.md
+- name: Método SetDisable (classe ClientNetworkProtocol)
+  href: setdisable-method-clientnetworkprotocol-class.md
+- name: Método SetEnable (classe ClientNetworkProtocol)
+  href: setenable-method-clientnetworkprotocol-class.md
+- name: Método SetOrderValue (classe ClientNetworkProtocol)
+  href: setordervalue-method-clientnetworkprotocol-class.md
+- name: Método SetProtocolsOrder (classe ClientNetworkProtocol)
+  href: setprotocolsorder-method-clientnetworkprotocol-class.md
+- name: Propriedade SupportAlias (classe ClientNetworkProtocol)
+  href: supportalias-property-clientnetworkprotocol-class.md

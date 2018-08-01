@@ -1,0 +1,50 @@
+- name: Visão geral
+  href: language-reference.md
+- name: Artigos novos e atualizados
+  href: new-updated-t-sql.md
+- name: Tipos de dados
+  href: ../t-sql/data-types/data-types-transact-sql.md
+- name: Comandos de Console de Banco de Dados
+  href: ../t-sql/database-console-commands/database-console-commands.md
+- name: Funções
+  href: ../t-sql/functions/functions.md
+- name: Elementos de linguagem
+  href: ../t-sql/language-elements/language-elements-transact-sql.md
+- name: Consultas
+  href: ../t-sql/queries/queries.md
+- name: Instruções
+  href: ../t-sql/statements/statements.md
+- name: 'Tutorial: Gravando instruções Transact-SQL'
+  href: tutorial-writing-transact-sql-statements.md
+  items:
+    - name: 'Lição 1: Criando objetos de banco de dados'
+      href: lesson-1-creating-database-objects.md
+      items:
+        - name: Lição 1-1 – Criando um banco de dados
+          href: lesson-1-1-creating-a-database.md
+        - name: Lição 1–2 – criando uma tabela
+          href: lesson-1-2-creating-a-table.md
+        - name: 'Lição 1-3: Inserindo e atualizando dados em uma tabela (tutorial)'
+          href: lesson-1-3-inserting-and-updating-data-in-a-table.md
+        - name: Lição 1-4 – Lendo os dados de uma tabela
+          href: lesson-1-4-reading-the-data-in-a-table.md
+        - name: Lição 1-5 – resumo – criando objetos de banco de dados
+          href: lesson-1-5-summary-creating-database-objects.md
+    - name: 'Lição 2: Configurando permissões em objetos de banco de dados'
+      href: lesson-2-configuring-permissions-on-database-objects.md
+      items:
+        - name: 'Lição 2-1: criando um logon'
+          href: lesson-2-1-creating-a-login.md
+        - name: 'Lição 2-2: Concedendo acesso a um banco de dados'
+          href: lesson-2-2-granting-access-to-a-database.md
+        - name: 'Lição 2-3: Criando exibições e procedimentos armazenados'
+          href: lesson-2-3-creating-views-and-stored-procedures.md
+        - name: 'Lição 2-4: Concedendo acesso a um objeto de banco de dados'
+          href: lesson-2-4-granting-access-to-a-database-object.md
+        - name: Lição 2-5 – Resumo – Configurando permissões em objetos de banco de dados
+          href: lesson-2-5-summary-configuring-permissions-on-database-objects.md
+    - name: 'Lição 3: Excluindo objetos de banco de dados'
+      href: lesson-3-deleting-database-objects.md
+      items:
+        - name: Lição 3-1 – Excluindo objetos de banco de dados
+          href: lesson-3-1-deleting-database-objects.md

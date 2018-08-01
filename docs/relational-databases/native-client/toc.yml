@@ -1,0 +1,20 @@
+- name: Programação do SQL Server Native Client
+  href: sql-server-native-client-programming.md
+- name: Recursos +
+  href: ../../relational-databases/native-client/features/sql-server-native-client-features.md
+- name: Aplicativos +
+  href: ../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md
+- name: OLE DB +
+  href: ../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md
+- name: ODBC +
+  href: ../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md
+- name: Localizando mais informações sobre o SQL Server Native Client
+  href: finding-more-sql-server-native-client-information.md
+- name: Erro do SQL Server Native Client MSSQLSERVER_50000
+  href: sql-server-native-client-error-mssqlserver-50000.md
+- name: SQL Server Native Client
+  href: sql-server-native-client.md
+- name: Requisitos do sistema do SQL Server Native Client
+  href: system-requirements-for-sql-server-native-client.md
+- name: Quando usar o SQL Server Native Client
+  href: when-to-use-sql-server-native-client.md

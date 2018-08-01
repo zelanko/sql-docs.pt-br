@@ -1,0 +1,34 @@
+- name: Tópicos de instruções do OLE DB
+  href: ole-db-how-to-topics.md
+- name: Resultados +
+  href: ../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md
+- name: Filestream +
+  href: ../../relational-databases/native-client-ole-db-how-to/filestream/filestream-and-ole-db.md
+- name: Copiar dados em massa usando IRowsetFastLoad (OLE DB)
+  href: bulk-copy-data-using-irowsetfastload-ole-db.md
+- name: Alterar uma senha de usuário de Autenticação do SQL Server (OLE DB)
+  href: change-a-sql-server-authentication-user-password-ole-db.md
+- name: Exibir metadados de colunas e catálogos para colunas esparsas (OLE DB)
+  href: display-column-and-catalog-metadata-for-sparse-columns-ole-db.md
+- name: Enumerar fontes de dados OLE DB (OLE DB)
+  href: enumerate-ole-db-data-sources-ole-db.md
+- name: 'Buscar colunas usando IRow::GetColumns (OLE DB)'
+  href: fetch-columns-using-irow-getcolumns-ole-db.md
+- name: 'Buscar colunas usando IRow::GetColumns (ou IRow::Open) e ISequentialStream'
+  href: fetch-columns-using-irow-getcolumns-or-irow-open-and-isequentialstream.md
+- name: Autenticação integrada do Kerberos (BD OLE)
+  href: integrated-kerberos-authentication-ole-db.md
+- name: Obter um cursor FAST_FORWARD
+  href: obtain-a-fast-forward-cursor.md
+- name: Recuperar linhas usando indicadores (OLE DB)
+  href: retrieve-rows-using-bookmarks-ole-db.md
+- name: Enviar dados BLOB ao SQL SERVER usando IROWSETFASTLOAD e ISEQUENTIALSTREAM (OLE DB)
+  href: send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md
+- name: Definir dados grandes (OLE DB)
+  href: set-large-data-ole-db.md
+- name: Usar recursos avançados de data e hora (OLE DB)
+  href: use-enhanced-date-and-time-features-ole-db.md
+- name: Usar UDTs grandes do CLR (OLE DB)
+  href: use-large-clr-udts-ole-db.md
+- name: Usar Parâmetros com valor de tabela (OLE DB)
+  href: use-table-valued-parameters-ole-db.md

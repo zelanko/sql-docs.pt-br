@@ -1,0 +1,40 @@
+- name: Usando anotações em esquemas XSD (SQLXML 4.0)
+  href: using-annotations-in-xsd-schemas-sqlxml-4-0.md
+- name: 'Criando seções CDATA usando sql:use-cdata (SQLXML 4.0)'
+  href: creating-cdata-sections-using-sql-use-cdata-sqlxml-4-0.md
+- name: 'Criando elementos constantes usando sql:is-constant (SQLXML 4.0)'
+  href: creating-constant-elements-using-sql-is-constant-sqlxml-4-0.md
+- name: 'Criando atributos de tipo ID, IDREF e IDREFS válidos usando sql:prefix (SQLXML 4.0)'
+  href: creating-valid-id-idref-and-idrefs-type-attributes-using-sql-prefix-sqlxml-4-0.md
+- name: 'Coerções de tipo de dados e a anotação de sql:datatype (SQLXML 4.0)'
+  href: data-type-coercions-and-the-sql-datatype-annotation-sqlxml-4-0.md
+- name: Mapeamento padrão de atributos e elementos XSD para tabelas e colunas (SQLXML 4.0)
+  href: default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md
+- name: 'Excluir elementos de esquema do documento XML usando sql:mapped'
+  href: excluding-schema-elements-from-the-xml-document-using-sql-mapped.md
+- name: Mapeamento explícito de atributos e elementos XSD para tabelas e colunas
+  href: explicit-mapping-xsd-elements-and-attributes-to-tables-and-columns.md
+- name: 'Filtrando valores usando sql:limit-field e sql:limit-value (SQLXML 4.0)'
+  href: filtering-values-using-sql-limit-field-and-sql-limit-value-sqlxml-4-0.md
+- name: 'Ocultando elementos e atributos usando sql:hide'
+  href: hiding-elements-and-attributes-by-using-sql-hide.md
+- name: 'Identificando colunas de chave usando campos sql:key (SQLXML 4.0)'
+  href: identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md
+- name: Mapeando tipos de dados XSD para tipos de dados XPath (SQLXML 4.0)
+  href: mapping-xsd-data-types-to-xpath-data-types-sqlxml-4-0.md
+- name: 'Solicitando referências URL a dados BLOB usando sql:encode (SQLXML 4.0)'
+  href: requesting-url-references-to-blob-data-using-sql-encode-sqlxml-4-0.md
+- name: 'Recuperando dados não consumidos usando sql:overflow-field (SQLXML 4.0)'
+  href: retrieving-unconsumed-data-using-the-sql-overflow-field-sqlxml-4-0.md
+- name: Especificando um namespace de destino usando o atributo targetNamespace (SQLXML 4.0)
+  href: specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-4-0.md
+- name: 'Especificando a profundidade em relações recursivas usando sql:max-depth'
+  href: specifying-depth-in-recursive-relationships-by-using-sql-max-depth.md
+- name: 'Especificando relações usando sql:relationship (SQLXML 4.0)'
+  href: specifying-relationships-using-sql-relationship-sqlxml-4-0.md
+- name: 'Especificando o atributo sql:inverse em sql:relationship (SQLXML 4.0)'
+  href: specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md
+- name: 'Usando as anotações sql:identity e sql:guid'
+  href: using-the-sql-identity-and-sql-guid-annotations.md
+- name: Anotações XSD (SQLXML 4.0)
+  href: xsd-annotations-sqlxml-4-0.md

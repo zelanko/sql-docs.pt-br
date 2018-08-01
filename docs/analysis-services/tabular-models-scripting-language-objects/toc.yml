@@ -1,0 +1,16 @@
+- name: Referência TMSL – Objetos de tabela
+  href: tmsl-reference-tabular-objects.md
+- name: Objeto Database (TMSL)
+  href: database-object-tmsl.md
+- name: Objeto DataSources (TMSL)
+  href: datasources-object-tmsl.md
+- name: Objeto Model (TMSL)
+  href: model-object-tmsl.md
+- name: Objeto Partitions (TMSL)
+  href: partitions-object-tmsl.md
+- name: Objeto Relationships (TMSL)
+  href: relationships-object-tmsl.md
+- name: Objeto Roles (TMSL)
+  href: roles-object-tmsl.md
+- name: Objeto Tables (TMSL)
+  href: tables-object-tmsl.md

@@ -1,0 +1,12 @@
+- name: Suporte do SQLXML 4.0 do .NET Framework – Usando DiffGrams para modificar dados
+  href: sqlxml-4-0-net-framework-support-using-diffgrams-to-modify-data.md
+- name: Exemplos de DiffGram (SQLXML 4.0)
+  href: diffgram-examples-sqlxml-4-0.md
+- name: Executando um DiffGram usando o ADO (SQLXML 4.0)
+  href: executing-a-diffgram-by-using-ado-sqlxml-4-0.md
+- name: Executando um DiffGram usando as classes gerenciadas SQLXML
+  href: executing-a-diffgram-by-using-sqlxml-managed-classes.md
+- name: Diretrizes e limitações de DiffGrams no SQLXML
+  href: guidelines-and-limitations-of-diffgrams-in-sqlxml.md
+- name: Introdução a DiffGrams em SQLXML 4.0
+  href: introduction-to-diffgrams-in-sqlxml-4-0.md

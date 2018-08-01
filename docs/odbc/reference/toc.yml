@@ -1,0 +1,106 @@
+- name: Introdução ao ODBC
+  href: introduction-to-odbc.md
+- name: Instalação +
+  href: ../../odbc/reference/install/odbc-subkey.md
+- name: Desenvolver aplicativos +
+  href: ../../odbc/reference/develop-app/checking-feature-support-and-variability.md
+- name: Desenvolver drivers +
+  href: ../../odbc/reference/develop-driver/developing-an-odbc-driver.md
+- name: Sintaxe +
+  href: ../../odbc/reference/syntax/odbc-reference.md
+- name: Apêndices +
+  href: ../../odbc/reference/appendixes/odbc-appendixes.md
+- name: Referência do programador de ODBC
+  href: odbc-programmer-s-reference.md
+- name: Novidades no ODBC 3.8
+  href: what-s-new-in-odbc-3-8.md
+- name: Programa ODBC de exemplo
+  href: sample-odbc-program.md
+  items:
+    - name: Visão geral do ODBC
+      href: odbc-overview.md
+      items:
+        - name: Por que o ODBC foi criado?
+          href: why-was-odbc-created.md
+        - name: O que é o ODBC?
+          href: what-is-odbc.md
+        - name: ODBC e a CLI padrão
+          href: odbc-and-the-standard-cli.md
+    - name: Introdução ao SQL e ao ODBC
+      href: introduction-to-sql-and-odbc.md
+      items:
+        - name: SQL (Structured Query Language)
+          href: structured-query-language-sql.md
+          items:
+            - name: Processar uma instrução SQL
+              href: processing-a-sql-statement.md
+            - name: SQL inserido
+              href: embedded-sql.md
+              items:
+                - name: Exemplo de SQL inserido
+                  href: embedded-sql-example.md
+                - name: Compilar um programa SQL inserido
+                  href: compiling-an-embedded-sql-program.md
+                - name: SQL Estático
+                  href: static-sql.md
+                - name: SQL dinâmico
+                  href: dynamic-sql.md
+            - name: Módulos SQL
+              href: sql-modules.md
+            - name: Interfaces de nível de chamada
+              href: call-level-interfaces.md
+        - name: Arquitetura de acesso ao banco de dados
+          href: database-access-architecture.md
+          items:
+            - name: Acesso ao banco de dados de rede
+              href: network-database-access.md
+            - name: Arquiteturas de acesso ao banco de dados padrão
+              href: standard-database-access-architectures.md
+              items:
+                - name: Interface de programação padrão
+                  href: standard-programming-interface.md
+                - name: Protocolo de fluxo de dados padrão
+                  href: standard-data-stream-protocol.md
+                - name: Gateway padrão
+                  href: standard-gateway.md
+            - name: A solução ODBC
+              href: the-odbc-solution.md
+    - name: Arquitetura ODBC
+      href: odbc-architecture.md
+      items:
+        - name: Aplicativos
+          href: applications.md
+        - name: O Gerenciador de Driver
+          href: the-driver-manager.md
+        - name: Drivers
+          href: drivers.md
+          items:
+            - name: Tarefas de driver
+              href: driver-tasks.md
+            - name: Arquitetura do driver
+              href: driver-architecture.md
+              items:
+                - name: Drivers baseados em arquivo
+                  href: file-based-drivers.md
+                - name: Drivers baseados em DBMS
+                  href: dbms-based-drivers.md
+                - name: Exemplo de rede
+                  href: network-example.md
+                - name: Outras arquiteturas do driver
+                  href: other-driver-architectures.md
+        - name: Fontes de dados
+          href: data-sources.md
+          items:
+            - name: Tipos de fontes de dados
+              href: types-of-data-sources.md
+              items:
+                - name: Fontes de dados do computador
+                  href: machine-data-sources.md
+                - name: Fontes de dados do arquivo
+                  href: file-data-sources.md
+            - name: Usar fontes de dados
+              href: using-data-sources.md
+            - name: Exemplo de fonte de dados
+              href: data-source-example.md
+    - name: Informações de 64 bits do ODBC
+      href: odbc-64-bit-information.md

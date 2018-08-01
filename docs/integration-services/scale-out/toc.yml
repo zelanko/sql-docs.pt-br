@@ -1,0 +1,26 @@
+- name: Visão geral
+  href: integration-services-ssis-scale-out.md
+- name: Introdução ao SSIS Scale Out em um único computador
+  href: get-started-with-ssis-scale-out-onebox.md
+- name: 'Passo a passo: configurar a Expansão do Integration Services'
+  href: walkthrough-set-up-integration-services-scale-out.md
+- name: Executar pacotes em Expansão
+  href: run-packages-in-integration-services-ssis-scale-out.md
+- name: Adicionar um Trabalho do Scale Out com o Gerenciador do Scale Out
+  href: add-scale-out-worker.md
+- name: Mestre do Scale Out
+  href: integration-services-ssis-scale-out-master.md
+- name: Trabalho do Scale Out
+  href: integration-services-ssis-scale-out-worker.md
+- name: Gerenciador do Scale Out
+  href: integration-services-ssis-scale-out-manager.md
+- name: Alterar a conta para registro em log do Scale Out
+  href: change-logdb-account.md
+- name: Gerenciar os certificados para Scale Out
+  href: deal-with-certificates-in-ssis-scale-out.md
+- name: Alta disponibilidade para Scale Out
+  href: scale-out-support-for-high-availability.md
+- name: Alta disponibilidade via instância de cluster de failover do SQL Server
+  href: scale-out-failover-cluster-instance.md
+- name: Solução de problemas do Scale Out
+  href: troubleshooting-scale-out.md

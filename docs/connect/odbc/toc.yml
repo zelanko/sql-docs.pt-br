@@ -1,0 +1,24 @@
+- name: Microsoft ODBC Driver for SQL Server
+  href: microsoft-odbc-driver-for-sql-server.md
+- name: Linux e Mac +
+  href: linux-mac/system-requirements.md
+- name: Windows +
+  href: windows/microsoft-odbc-driver-for-sql-server-on-windows.md
+- name: Referência ODBC e detalhes +
+  href: ../../odbc/microsoft-open-database-connectivity-odbc.md
+- name: Baixar o driver ODBC para SQL Server
+  href: download-odbc-driver-for-sql-server.md
+- name: Guias de recursos
+  items:
+    - name: Provedores de repositório de chaves personalizado
+      href: custom-keystore-providers.md
+    - name: Atributos e palavras-chave da cadeia de conexão DSN
+      href: dsn-connection-string-attribute.md
+    - name: Como usar o Always Encrypted
+      href: using-always-encrypted-with-the-odbc-driver.md
+    - name: Como usar o Azure Active Directory
+      href: using-azure-active-directory.md
+    - name: Como usar a resolução IP de rede transparente
+      href: using-transparent-network-ip-resolution.md
+- name: Correções de bugs
+  href: bug-fixes.md

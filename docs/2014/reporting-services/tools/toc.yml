@@ -1,0 +1,247 @@
+- name: Ferramentas
+  href: reporting-services-tools.md
+- name: 'Tutorial: Como localizar e iniciar as ferramentas do Reporting Services'
+  href: tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md
+- name: Reporting Services no SQL Server Data Tools
+  href: reporting-services-in-sql-server-data-tools-ssdt.md
+  items:
+    - name: Criar relatórios com o Designer de Relatórios
+      href: design-reporting-services-paginated-reports-with-report-designer-ssrs.md
+      items:
+        - name: Adicionar um relatório novo ou existente a um projeto de relatório
+          href: add-a-new-or-existing-report-to-a-report-project-ssrs.md
+        - name: Importar relatórios do Microsoft Access
+          href: ../import-reports-from-microsoft-access-reporting-services.md
+          items:
+            - name: Recursos de relatórios do Access com suporte
+              href: ../supported-access-report-features-ssrs.md
+        - name: Ferramentas de design de consulta no Designer de Relatórios nas Ferramentas de Dados do SQL Server
+          href: ../report-data/query-design-tools-ssrs.md
+    - name: Deployment and Version Support in SQL Server Data Tools
+      href: deployment-and-version-support-in-sql-server-data-tools-ssrs.md
+    - name: Exemplos de URL para itens de relatório publicados em um servidor de relatório em modo de SharePoint (SSRS)
+      href: url-examples-for-items-on-a-report-server-sharepoint-mode.md
+    - name: Definir propriedades de implantação
+      href: set-deployment-properties-reporting-services.md
+    - name: Encaixar o painel de dados do relatório no Designer de Relatórios
+      href: dock-the-report-data-pane-in-report-designer-ssrs.md
+    - name: Ajuda do Assistente de Relatório
+      href: ../report-wizard-help.md
+      items:
+        - name: Bem-vindo ao Assistente de Relatório
+          href: ../welcome-to-the-report-wizard.md
+        - name: Selecionar a fonte de dados
+          href: ../select-the-data-source.md
+        - name: Projetar a consulta
+          href: ../design-the-query.md
+        - name: Construtor de Consultas
+          href: ../query-builder-report-wizard.md
+        - name: Selecionar o tipo de relatório
+          href: ../select-the-report-type.md
+        - name: Projetar a tabela
+          href: ../design-the-table-report-wizard.md
+        - name: Projetar a matriz
+          href: ../design-the-matrix.md
+        - name: Escolher o layout da tabela
+          href: ../choose-the-table-layout.md
+        - name: Escolher o estilo da tabela ou Escolher o estilo da matriz
+          href: ../choose-the-table-style-or-choose-the-matrix-style.md
+        - name: Escolher o local de implantação
+          href: ../choose-the-deployment-location.md
+        - name: Concluir o Assistente de Relatório
+          href: ../complete-the-report-wizard.md
+    - name: Ajuda F1 do Designer de Relatórios
+      href: report-designer-f1-help.md
+      items:
+        - name: Estrutura de Tópicos do Documento
+          href: document-outline.md
+        - name: Modo Design
+          href: design-view.md
+        - name: Modo Visualizar
+          href: preview-view.md
+        - name: Painel Agrupamento
+          href: grouping-pane.md
+        - name: caixa de diálogo Páginas de Propriedades do Projeto
+          href: project-property-pages-dialog-box.md
+        - name: Caixa de diálogo Adicionar Referência
+          href: ../add-reference-dialog-box.md
+        - name: Caixa de diálogo Visibilidade da Coluna
+          href: ../column-visibility-dialog-box.md
+        - name: Caixa de diálogo Excluir Grupo
+          href: ../delete-group-dialog-box.md
+        - name: Caixa de diálogo Excluir Colunas
+          href: ../delete-columns-dialog-box.md
+        - name: Caixa de diálogo Excluir Linhas
+          href: ../delete-rows-dialog-box.md
+        - name: Caixa de diálogo Logon do Reporting Services (SSRS)
+          href: reporting-services-login-dialog-box-ssrs.md
+        - name: Caixa de diálogo Visibilidade da Linha
+          href: ../row-visibility-dialog-box.md
+- name: Reporting Services no SQL Server Management Studio
+  href: reporting-services-in-sql-server-management-studio-ssrs.md
+  items:
+    - name: Definir propriedades do servidor de relatório
+      href: set-report-server-properties-management-studio.md
+    - name: Excluir um item
+      href: delete-an-item-management-studio.md
+    - name: Conectar-se a um servidor de relatório no Management Studio
+      href: connect-to-a-report-server-in-management-studio.md
+    - name: 'Servidor de Relatório na ajuda F1 do Management Studio '
+      href: report-server-in-management-studio-f1-help.md
+      items:
+        - name: Cancelar trabalhos do Servidor de Relatório
+          href: cancel-report-server-jobs-management-studio.md
+        - name: Excluir itens do catálogo
+          href: delete-catalog-items-management-studio.md
+        - name: Propriedades do Trabalho
+          href: job-properties-management-studio.md
+        - name: Nova Agenda Compartilhada
+          href: new-shared-schedule-management-studio.md
+        - name: Nova Função do Sistema
+          href: new-system-role-management-studio.md
+        - name: Nova função do usuário
+          href: new-user-role-management-studio.md
+        - name: Propriedades da Agenda (página Geral)
+          href: schedule-properties-general-page.md
+        - name: Propriedades da Agenda (página Relatórios)
+          href: schedule-properties-reports-page.md
+        - name: Propriedades do Servidor (página Geral)
+          href: report-server-properties-general-page.md
+        - name: Propriedades do Servidor (página Execução)
+          href: server-properties-execution-page.md
+        - name: Propriedades do Servidor (página Histórico)
+          href: server-properties-history-page.md
+        - name: Propriedades do Servidor (página Log)
+          href: server-properties-logging-page.md
+        - name: Propriedades do Servidor (página Segurança)
+          href: server-properties-security-page-reporting-services.md
+        - name: Propriedades do Servidor (página Avançado)
+          href: server-properties-advanced-page-reporting-services.md
+        - name: Propriedades de Função do Sistema
+          href: system-role-properties-management-studio.md
+        - name: Propriedades de Função do Usuário
+          href: user-role-properties-management-studio.md
+- name: Construtor de Relatórios
+  href: report-builder-authoring-environment-ssrs.md
+- name: Gerenciador de Relatórios (modo nativo do SSRS)
+  href: ../report-manager-ssrs-native-mode.md
+  items:
+    - name: Ajuda F1 do Gerenciador de Relatórios
+      href: ../report-manager-f1-help.md
+      items:
+        - name: Opção de Atualização do Cache
+          href: ../cache-refresh-options-report-manager.md
+        - name: 'Página Cache, Conjuntos de Dados Compartilhados'
+          href: ../caching-page-shared-datasets-report-manager.md
+        - name: Página Escolher Link
+          href: ../choose-link-page-report-manager.md
+        - name: Página Escolher Local do Item
+          href: ../choose-item-location-page-report-manager.md
+        - name: Página Relatórios de Clickthrough
+          href: ../clickthrough-reports-page-report-manager.md
+        - name: Página Conteúdo
+          href: ../contents-page-report-manager.md
+        - name: Página Criar Assinatura Controlada por Dados
+          href: ../create-data-driven-subscription-page-report-manager.md
+        - name: Página Seleção de Fonte de Dados
+          href: ../data-source-selection-page-report-manager.md
+        - name: Página Propriedades da Fonte de Dados
+          href: ../data-sources-properties-page-report-manager.md
+        - name: Página Itens Dependentes
+          href: ../dependent-items-page-report-manager.md
+        - name: Página Erro
+          href: ../error-page-report-manager.md
+        - name: Página Propriedades de Execução
+          href: ../processing-options-properties-page-report-manager.md
+        - name: 'Página Propriedades Gerais, Pastas'
+          href: ../general-properties-page-folders-report-manager.md
+        - name: 'Página Propriedades Gerais, Modelos'
+          href: ../general-properties-page-models-report-manager.md
+        - name: 'Página Propriedades Gerais, Partes do Relatório'
+          href: ../general-properties-page-report-parts-report-manager.md
+        - name: 'Página Propriedades Gerais, Relatórios'
+          href: ../general-properties-page-reports-report-manager.md
+        - name: 'Página Propriedades Gerais, Recursos'
+          href: ../general-properties-page-resources-report-manager.md
+        - name: 'Página Propriedades Gerais, fontes de dados compartilhadas'
+          href: ../general-properties-page-shared-data-sources-report-manager.md
+        - name: 'Página Propriedades Gerais, conjuntos de dados compartilhados'
+          href: ../general-properties-page-shared-datasets-report-manager.md
+        - name: Página de propriedades Opções de Instantâneo
+          href: ../snapshot-options-properties-page-report-manager.md
+        - name: Página Segurança de Item de Modelo
+          href: ../model-item-security-page-report-manager.md
+        - name: Página Mover Itens
+          href: ../move-items-page-report-manager.md
+        - name: Página Minhas Assinaturas
+          href: ../my-subscriptions-page-report-manager.md
+        - name: Página Nova Fonte de Dados
+          href: ../new-data-source-page-report-manager.md
+        - name: Página Nova Pasta
+          href: ../new-folder-page-report-manager.md
+        - name: Página Novo Relatório Vinculado
+          href: ../new-linked-report-page-report-manager.md
+        - name: Página Novo Modelo
+          href: ../new-model-page-report-manager.md
+        - name: 'Página Nova Atribuição de Função: Editar Atribuição de Função'
+          href: ../new-role-assignment-edit-role-assignment-page-report-manager.md
+        - name: 'Página Nova Agenda: Editar Agenda'
+          href: ../new-schedule-edit-schedule-page-report-manager.md
+        - name: Página Nova Assinatura ou Editar Assinatura
+          href: ../new-subscription-or-edit-subscription-page-report-manager.md
+        - name: 'Atribuições de nova função do sistema: página Editar Atribuições de função do sistema'
+          href: ../new-system-role-assignments-edit-system-role-assignments-page-report-manager.md
+        - name: Página Propriedades do Parâmetro
+          href: ../parameters-properties-page-report-manager.md
+        - name: Página Histórico de Relatórios
+          href: ../report-history-page-report-manager.md
+        - name: Página Pesquisa
+          href: ../search-page-report-manager.md
+        - name: Página Segurança (Configurações de Site)
+          href: ../security-page-site-settings-report-manager.md
+        - name: 'Página Propriedades de Segurança, Itens'
+          href: ../security-properties-page-items-report-manager.md
+        - name: Página Agendas
+          href: ../schedules-page-report-manager.md
+        - name: Página Seleção de Conjunto de Dados Compartilhado (Gerenciador de Relatórios)
+          href: ../shared-dataset-selection-page-report-manager.md
+        - name: Página Configurações de Site (Gerenciador de Relatórios)
+          href: ../site-settings-page-report-manager.md
+        - name: Página Assinaturas
+          href: ../subscriptions-page-report-manager.md
+        - name: Página Carregar Arquivo
+          href: ../upload-file-page-report-manager.md
+        - name: 'Página Exibir, Relatórios'
+          href: ../view-page-reports-report-manager.md
+        - name: 'Página Exibir, Recursos'
+          href: ../view-page-resources-report-manager.md
+    - name: Criar um modelo com o Gerenciador de Relatórios
+      href: ../create-a-model-using-report-manager.md
+    - name: Vincular um relatório a um modelo como um relatório de clickthrough
+      href: ../link-a-report-to-a-model-as-a-clickthrough-report.md
+    - name: Personalizar folhas de estilo para o Visualizador de HTML e o Gerenciador de Relatórios
+      href: ../customize-style-sheets-for-html-viewer-and-report-manager.md
+- name: Script e PowerShell com o Reporting Services
+  href: scripting-and-powershell-with-reporting-services.md
+  items:
+    - name: Gerar scripts com o utilitário rs.exe e o serviço Web
+      href: script-with-the-rs-exe-utility-and-the-web-service.md
+    - name: Formatar um arquivo de script do Reporting Services
+      href: format-a-reporting-services-script-file.md
+    - name: Executar um arquivo de script do Reporting Services
+      href: run-a-reporting-services-script-file.md
+    - name: Implantação de script e tarefas administrativas
+      href: script-deployment-and-administrative-tasks.md
+    - name: Script rs.exe do Reporting Services de exemplo para migrar conteúdo entre servidores de relatório
+      href: sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md
+    - name: Acessar o provedor WMI do Reporting Services
+      href: access-the-reporting-services-wmi-provider.md
+- name: Utilitários de prompt de comando do servidor de relatório
+  href: report-server-command-prompt-utilities-ssrs.md
+  items:
+    - name: Utilitário rskeymgmt
+      href: rskeymgmt-utility-ssrs.md
+    - name: Utilitário rsconfig
+      href: rsconfig-utility-ssrs.md
+    - name: RS.exe Utility (SSRS)
+      href: rs-exe-utility-ssrs.md

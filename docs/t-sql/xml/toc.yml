@@ -1,0 +1,32 @@
+- name: Visão geral
+  href: xml-transact-sql.md
+- name: xml_schema_namespace
+  href: xml-schema-namespace.md
+- name: WITH XMLNAMESPACES
+  href: with-xmlnamespaces.md
+- name: Linguagem de modificação de dados XML (XML DML)
+  href: xml-data-modification-language-xml-dml.md
+  items:
+    - name: inserir (XML DML)
+      href: insert-xml-dml.md
+    - name: excluir (XML DML)
+      href: delete-xml-dml.md
+    - name: substituir o valor de (XML DML)
+      href: replace-value-of-xml-dml.md
+- name: Métodos de tipo de dados xml
+  href: xml-data-type-methods.md
+  items:
+    - name: Método consulta() (Tipo de dados xml)
+      href: query-method-xml-data-type.md
+    - name: Método de valor() (Tipo de dados xml)
+      href: value-method-xml-data-type.md
+    - name: Método exista() (Tipo de dados xml)
+      href: exist-method-xml-data-type.md
+    - name: Método modifique() (Tipo de dados xml)
+      href: modify-method-xml-data-type.md
+    - name: Método de nós() (Tipo de dados xml)
+      href: nodes-method-xml-data-type.md
+    - name: Associando dados relacionais dentro de dados XML
+      href: binding-relational-data-inside-xml-data.md
+    - name: Diretrizes para usar métodos de tipo de dados xml
+      href: guidelines-for-using-xml-data-type-methods.md

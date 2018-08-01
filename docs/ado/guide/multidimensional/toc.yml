@@ -1,0 +1,12 @@
+- name: Conceitos básicos do ADO MD
+  href: ado-md-fundamentals.md
+- name: Usar o ADO com ADO MD
+  href: using-ado-with-ado-md.md
+- name: Visão geral de dados e esquemas multidimensionais
+  href: overview-of-multidimensional-schemas-and-data.md
+- name: Programar com o ADO MD
+  href: programming-with-ado-md.md
+- name: Manipular dados multidimensionais
+  href: working-with-multidimensional-data.md
+- name: ADO (Multidimensional) (ADO MD)
+  href: ado-multidimensional-ado-md.md

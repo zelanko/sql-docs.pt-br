@@ -1,0 +1,12 @@
+- name: Erros no provedor OLE DB do SQL Server Native Client
+  href: errors.md
+- name: Informações em interfaces de erro
+  href: information-in-error-interfaces.md
+- name: Recuperando informações de erro
+  href: retrieving-error-information.md
+- name: Códigos de retorno
+  href: return-codes.md
+- name: Detalhes de erros do SQL Server
+  href: sql-server-error-detail.md
+- name: Resultados da mensagem do SQL Server
+  href: sql-server-message-results.md

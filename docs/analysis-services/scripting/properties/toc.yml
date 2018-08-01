@@ -1,0 +1,506 @@
+- name: Elemento Access (ASSL)
+  href: access-element-assl.md
+- name: Elemento Account (ImpersonationInfo) (ASSL)
+  href: account-element-impersonationinfo-assl.md
+- name: Elemento AccountType (ASSL)
+  href: accounttype-element-assl.md
+- name: Elemento ActionID (ASSL)
+  href: actionid-element-assl.md
+- name: Elemento Administer (ASSL)
+  href: administer-element-assl.md
+- name: Elemento AggregateFunction (ASSL)
+  href: aggregatefunction-element-assl.md
+- name: Elemento AggregationDesignID (ASSL)
+  href: aggregationdesignid-element-assl.md
+- name: Elemento AggregationFunction (ASSL)
+  href: aggregationfunction-element-assl.md
+- name: Elemento AggregationID (ASSL)
+  href: aggregationid-element-assl.md
+- name: Elemento AggregationInstanceSource (ASSL)
+  href: aggregationinstancesource-element-assl.md
+- name: Elemento AggregationPrefix (ASSL)
+  href: aggregationprefix-element-assl.md
+- name: Elemento AggregationStorage (ASSL)
+  href: aggregationstorage-element-assl.md
+- name: Elemento AggregationType (ASSL)
+  href: aggregationtype-element-assl.md
+- name: Elemento AggregationUsage (ASSL)
+  href: aggregationusage-element-assl.md
+- name: Elemento Algorithm (ASSL)
+  href: algorithm-element-assl.md
+- name: Elemento Alias (ASSL)
+  href: alias-element-assl.md
+- name: Elemento AllMemberAggregationUsage (ASSL)
+  href: allmemberaggregationusage-element-assl.md
+- name: Elemento AllMemberName (ASSL)
+  href: allmembername-element-assl.md
+- name: Elemento AllowBrowsing (ASSL)
+  href: allowbrowsing-element-assl.md
+- name: Elemento AllowDrillThrough (ASSL)
+  href: allowdrillthrough-element-assl.md
+- name: Elemento AllowDuplicateNames (ASSL)
+  href: allowduplicatenames-element-assl.md
+- name: AllowedRowsExpression Element (ASSL)
+  href: allowedrowsexpression-element-assl.md
+- name: Elemento AllowedSet (ASSL)
+  href: allowedset-element-assl.md
+- name: Elemento Application (ASSL)
+  href: application-element-assl.md
+- name: Elemento AssociatedMeasureGroupID (ASSL)
+  href: associatedmeasuregroupid-element-assl.md
+- name: Elemento AttributeAllMemberName (ASSL)
+  href: attributeallmembername-element-assl.md
+- name: Elemento AttributeHierarchyDisplayFolder (ASSL)
+  href: attributehierarchydisplayfolder-element-assl.md
+- name: Elemento AttributeHierarchyEnabled (ASSL)
+  href: attributehierarchyenabled-element-assl.md
+- name: Elemento AttributeHierarchyOptimizedState (ASSL)
+  href: attributehierarchyoptimizedstate-element-assl.md
+- name: Elemento AttributeHierarchyOrdered (ASSL)
+  href: attributehierarchyordered-element-assl.md
+- name: Elemento AttributeHierarchyVisible (ASSL)
+  href: attributehierarchyvisible-element-assl.md
+- name: Elemento AttributeID (ASSL)
+  href: attributeid-element-assl.md
+- name: Elemento Audit (ASSL)
+  href: audit-element-assl.md
+- name: Elemento AutoRestart (ASSL)
+  href: autorestart-element-assl.md
+- name: Elemento BackColor (ASSL)
+  href: backcolor-element-assl.md
+- name: Elemento CacheMode (ASSL)
+  href: cachemode-element-assl.md
+- name: Elemento CalculationReference (ASSL)
+  href: calculationreference-element-assl.md
+- name: Elemento CalculationType (ASSL)
+  href: calculationtype-element-assl.md
+- name: Elemento CalendarEndDate (ASSL)
+  href: calendarenddate-element-assl.md
+- name: Elemento CalendarLanguage (ASSL)
+  href: calendarlanguage-element-assl.md
+- name: Elemento CalendarStartDate (ASSL)
+  href: calendarstartdate-element-assl.md
+- name: Elemento Caption (ASSL)
+  href: caption-element-assl.md
+- name: Elemento CaptionIsMdx (ASSL)
+  href: captionismdx-element-assl.md
+- name: Elemento Cardinality (ASSL)
+  href: cardinality-element-assl.md
+- name: Elemento CaseCubeDimensionID (ASSL)
+  href: casecubedimensionid-element-assl.md
+- name: Elemento ClassifiedColumnID (ASSL)
+  href: classifiedcolumnid-element-assl.md
+- name: Elemento Collation (ASSL)
+  href: collation-element-assl.md
+- name: Elemento CollectionCaption (ASSL)
+  href: collectioncaption-element-assl.md
+- name: Elemento ColumnID (ColumnBinding) (ASSL)
+  href: columnid-element-columnbinding-assl.md
+- name: Elemento ColumnID (EventColumn) (ASSL)
+  href: columnid-element-eventcolumn-assl.md
+- name: Elemento Condition (ASSL)
+  href: condition-element-assl.md
+- name: Elemento ConnectionString (ASSL)
+  href: connectionstring-element-assl.md
+- name: Elemento ConnectionStringSecurity (ASSL)
+  href: connectionstringsecurity-element-assl.md
+- name: Elemento Content (ASSL)
+  href: content-element-assl.md
+- name: Elemento CreatedTimestamp (ASSL)
+  href: createdtimestamp-element-assl.md
+- name: Elemento CubeDimensionID (ASSL)
+  href: cubedimensionid-element-assl.md
+- name: Elemento CubeID (ASSL)
+  href: cubeid-element-assl.md
+- name: Elemento CurrentStorageMode (ASSL)
+  href: currentstoragemode-element-assl.md
+- name: Elemento CurrentTimeMember (ASSL)
+  href: currenttimemember-element-assl.md
+- name: Elemento DataAggregation (ASSL)
+  href: dataaggregation-element-assl.md
+- name: Elemento DatabaseID (ASSL)
+  href: databaseid-element-assl.md
+- name: Elemento DataSize (ASSL)
+  href: datasize-element-assl.md
+- name: Elemento DataSourceID (ASSL)
+  href: datasourceid-element-assl.md
+- name: Elemento DataSourceImpersonationInfo (ASSL)
+  href: datasourceimpersonationinfo-element-assl.md
+- name: Elemento DataSourceViewID (ASSL)
+  href: datasourceviewid-element-assl.md
+- name: Elemento DataType (ASSL)
+  href: datatype-element-assl.md
+- name: Elemento DbSchemaName (ASSL)
+  href: dbschemaname-element-assl.md
+- name: Elemento DbTableName (ASSL)
+  href: dbtablename-element-assl.md
+- name: Elemento Default (ASSL)
+  href: default-element-assl.md
+- name: Elemento DefaultMeasure (ASSL)
+  href: defaultmeasure-element-assl.md
+- name: Elemento DefaultMember (ASSL)
+  href: defaultmember-element-assl.md
+- name: Elemento DefaultScript (ASSL)
+  href: defaultscript-element-assl.md
+- name: Elemento DefaultValue (ASSL)
+  href: defaultvalue-element-assl.md
+- name: Elemento DeniedSet (ASSL)
+  href: deniedset-element-assl.md
+- name: Elemento DependsOnDimensionID (ASSL)
+  href: dependsondimensionid-element-assl.md
+- name: Elemento Description (ASSL)
+  href: description-element-assl.md
+- name: Elemento DimensionID (ASSL)
+  href: dimensionid-element-assl.md
+- name: Elemento DiscretizationBucketCount (ASSL)
+  href: discretizationbucketcount-element-assl.md
+- name: Elemento DiscretizationMethod (ASSL)
+  href: discretizationmethod-element-assl.md
+- name: Elemento DisplayFlag (ASSL)
+  href: displayflag-element-assl.md
+- name: Elemento DisplayFolder (ASSL)
+  href: displayfolder-element-assl.md
+- name: Elemento Distribution (ASSL)
+  href: distribution-element-assl.md
+- name: Elemento Edition (ASSL)
+  href: edition-element-assl.md
+- name: Elemento Enabled (ASSL)
+  href: enabled-element-assl.md
+- name: Elemento EndOfData (ASSL)
+  href: endofdata-element-assl.md
+- name: Elemento EstimatedCount (ASSL)
+  href: estimatedcount-element-assl.md
+- name: Elemento EstimatedPerformanceGain (ASSL)
+  href: estimatedperformancegain-element-assl.md
+- name: Elemento EstimatedRows (ASSL)
+  href: estimatedrows-element-assl.md
+- name: Elemento EstimatedSize (ASSL)
+  href: estimatedsize-element-assl.md
+- name: Elemento EventID (ASSL)
+  href: eventid-element-assl.md
+- name: Elemento Expression (ASSL)
+  href: expression-element-assl.md
+- name: Elemento Filter (Binding) (ASSL)
+  href: filter-element-binding-assl.md
+- name: Elemento Filter (Trace) (ASSL)
+  href: filter-element-trace-assl.md
+- name: Elemento FirstDayOfWeek (ASSL)
+  href: firstdayofweek-element-assl.md
+- name: Elemento FiscalFirstDayOfMonth (ASSL)
+  href: fiscalfirstdayofmonth-element-assl.md
+- name: Elemento FiscalFirstMonth (ASSL)
+  href: fiscalfirstmonth-element-assl.md
+- name: Elemento FiscalYearName (ASSL)
+  href: fiscalyearname-element-assl.md
+- name: Elemento FoldingParameters (ASSL)
+  href: foldingparameters-element-assl.md
+- name: Elemento FontFlags (ASSL)
+  href: fontflags-element-assl.md
+- name: Elemento FontName (ASSL)
+  href: fontname-element-assl.md
+- name: Elemento FontSize (ASSL)
+  href: fontsize-element-assl.md
+- name: Elemento ForceRebuildInterval (ASSL)
+  href: forcerebuildinterval-element-assl.md
+- name: Elemento ForeColor (ASSL)
+  href: forecolor-element-assl.md
+- name: Elemento Format (ASSL)
+  href: format-element-assl.md
+- name: Elemento FormatString (ASSL)
+  href: formatstring-element-assl.md
+- name: Elemento Goal (ASSL)
+  href: goal-element-assl.md
+- name: Elemento GranularityAttributeID (ASSL)
+  href: granularityattributeid-element-assl.md
+- name: Elemento HideMemberIf (ASSL)
+  href: hidememberif-element-assl.md
+- name: Elemento HierarchyID (ASSL)
+  href: hierarchyid-element-assl.md
+- name: Elemento HierarchyUniqueNameStyle (ASSL)
+  href: hierarchyuniquenamestyle-element-assl.md
+- name: Elemento HoldoutActualSize
+  href: holdoutactualsize-element.md
+- name: Elemento HoldoutMaxCases
+  href: holdoutmaxcases-element.md
+- name: Elemento HoldoutMaxPercent
+  href: holdoutmaxpercent-element.md
+- name: Elemento HoldoutSeed
+  href: holdoutseed-element.md
+- name: Elemento ID (ASSL)
+  href: id-element-assl.md
+- name: Elemento IgnoreUnrelatedDimensions (ASSL)
+  href: ignoreunrelateddimensions-element-assl.md
+- name: Elemento ImpersonationInfo (ASSL)
+  href: impersonationinfo-element-assl.md
+- name: Elemento ImpersonationInfoSecurity (ASSL)
+  href: impersonationinfosecurity-element-assl.md
+- name: Elemento ImpersonationMode (ASSL)
+  href: impersonationmode-element-assl.md
+- name: Elemento InstanceSelection (ASSL)
+  href: instanceselection-element-assl.md
+- name: Elemento IntermediateCubeDimensionID (ASSL)
+  href: intermediatecubedimensionid-element-assl.md
+- name: Elemento IntermediateGranularityAttributeID (ASSL)
+  href: intermediategranularityattributeid-element-assl.md
+- name: Elemento InvalidXmlCharacters (ASSL)
+  href: invalidxmlcharacters-element-assl.md
+- name: Elemento Invocation (ASSL)
+  href: invocation-element-assl.md
+- name: Elemento IsAggregatable (ASSL)
+  href: isaggregatable-element-assl.md
+- name: Elemento IsKey (ASSL)
+  href: iskey-element-assl.md
+- name: Elemento Isolation (ASSL)
+  href: isolation-element-assl.md
+- name: Elemento KeyDuplicate (ASSL)
+  href: keyduplicate-element-assl.md
+- name: Elemento KeyErrorAction (ASSL)
+  href: keyerroraction-element-assl.md
+- name: Elemento KeyErrorLimit (ASSL)
+  href: keyerrorlimit-element-assl.md
+- name: Elemento KeyErrorLimitAction (ASSL)
+  href: keyerrorlimitaction-element-assl.md
+- name: Elemento KeyErrorLogFile (ASSL)
+  href: keyerrorlogfile-element-assl.md
+- name: Elemento KeyNotFound (ASSL)
+  href: keynotfound-element-assl.md
+- name: Elemento KeyUniquenessGuarantee (ASSL)
+  href: keyuniquenessguarantee-element-assl.md
+- name: Elemento KpiID (ASSL)
+  href: kpiid-element-assl.md
+- name: Elemento Language (ASSL)
+  href: language-element-assl.md
+- name: Elemento LastProcessed (ASSL)
+  href: lastprocessed-element-assl.md
+- name: Elemento LastSchemaUpdate (ASSL)
+  href: lastschemaupdate-element-assl.md
+- name: Elemento LastUpdate (ASSL)
+  href: lastupdate-element-assl.md
+- name: Elemento Latency (ASSL)
+  href: latency-element-assl.md
+- name: Elemento LogFileAppend (ASSL)
+  href: logfileappend-element-assl.md
+- name: Elemento LogFileName (ASSL)
+  href: logfilename-element-assl.md
+- name: Elemento LogFileRollover (ASSL)
+  href: logfilerollover-element-assl.md
+- name: Elemento LogFileSize (ASSL)
+  href: logfilesize-element-assl.md
+- name: Elemento ManagedProvider (ASSL)
+  href: managedprovider-element-assl.md
+- name: Elemento ManufacturingExtraMonthQuarter (ASSL)
+  href: manufacturingextramonthquarter-element-assl.md
+- name: Elemento ManufacturingFirstMonth (ASSL)
+  href: manufacturingfirstmonth-element-assl.md
+- name: Elemento ManufacturingFirstWeekOfMonth (ASSL)
+  href: manufacturingfirstweekofmonth-element-assl.md
+- name: Elemento MasterDatasourceID (ASSL)
+  href: masterdatasourceid-element-assl.md
+- name: Elemento Materialization (ASSL)
+  href: materialization-element-assl.md
+- name: Elemento MaxActiveConnections (ASSL)
+  href: maxactiveconnections-element-assl.md
+- name: Elemento MdxMissingMemberMode (ASSL)
+  href: mdxmissingmembermode-element-assl.md
+- name: Elemento MeasureExpression (ASSL)
+  href: measureexpression-element-assl.md
+- name: Elemento MeasureGroupID (ASSL)
+  href: measuregroupid-element-assl.md
+- name: Elemento MeasureID (ASSL)
+  href: measureid-element-assl.md
+- name: Elemento MeasureQualification (ASSL)
+  href: measurequalificaton-element-assl.md
+- name: Elemento MemberNamesUnique (ASSL)
+  href: membernamesunique-element-assl.md
+- name: Elemento MembersWithData (ASSL)
+  href: memberswithdata-element-assl.md
+- name: Elemento MembersWithDataCaption (ASSL)
+  href: memberswithdatacaption-element-assl.md
+- name: Elemento MemberUniqueNameStyle (ASSL)
+  href: memberuniquenamestyle-element-assl.md
+- name: Elemento MimeType (ASSL)
+  href: mimetype-element-assl.md
+- name: Elemento MiningModelID (ASSL)
+  href: miningmodelid-element-assl.md
+- name: Elemento Multiplicity (ASSL)
+  href: multiplicity-element-assl.md
+- name: Elemento Name (ASSL)
+  href: name-element-assl.md
+- name: Elemento NamingTemplate (ASSL)
+  href: namingtemplate-element-assl.md
+- name: Elemento NonEmptyBehavior (ASSL)
+  href: nonemptybehavior-element-assl.md
+- name: Elemento NotificationTechnique (ASSL)
+  href: notificationtechnique-element-assl.md
+- name: Elemento NullKeyConvertedToUnknown (ASSL)
+  href: nullkeyconvertedtounknown-element-assl.md
+- name: Elemento NullKeyNotAllowed (ASSL)
+  href: nullkeynotallowed-element-assl.md
+- name: NullProcessing Element (ASSL)
+  href: nullprocessing-element-assl.md
+- name: Elemento OnlineMode (ASSL)
+  href: onlinemode-element-assl.md
+- name: Elemento OptimizedState (ASSL)
+  href: optimizedstate-element-assl.md
+- name: Elemento Optionality (ASSL)
+  href: optionality-element-assl.md
+- name: Elemento OrderBy (ASSL)
+  href: orderby-element-assl.md
+- name: Elemento OrderByAttributeID (ASSL)
+  href: orderbyattributeid-element-assl.md
+- name: Elemento Ordinal (ASSL)
+  href: ordinal-element-assl.md
+- name: Elemento OverrideBehavior (ASSL)
+  href: overridebehavior-element-assl.md
+- name: Elemento PartitionID (ASSL)
+  href: partitionid-element-assl.md
+- name: Elemento Password (ASSL)
+  href: password-element-assl.md
+- name: Elemento Path (ASSL)
+  href: path-element-assl.md
+- name: Elemento PendingValue (ASSL)
+  href: pendingvalue-element-assl.md
+- name: Elemento PermissionSet (ASSL)
+  href: permissionset-element-assl.md
+- name: Elemento Persistence (ASSL)
+  href: persistence-element-assl.md
+- name: Elemento Process (ASSL)
+  href: process-element-assl.md
+- name: Elemento ProcessingMode (ASSL)
+  href: processingmode-element-assl.md
+- name: Elemento ProcessingPriority (ASSL)
+  href: processingpriority-element-assl.md
+- name: Elemento ProcessingQuery (ASSL)
+  href: processingquery-element-assl.md
+- name: Elemento ProductName (ASSL)
+  href: productname-element-assl.md
+- name: Properties (ASSL)
+  href: properties-assl.md
+- name: Elemento Query (ASSL)
+  href: query-element-assl.md
+- name: Elemento QueryDefinition (ASSL)
+  href: querydefinition-element-assl.md
+- name: Elemento Read (ASSL)
+  href: read-element-assl.md
+- name: Elemento ReadDefinition (ASSL)
+  href: readdefinition-element-assl.md
+- name: Elemento ReadSourceData (ASSL)
+  href: readsourcedata-element-assl.md
+- name: Elemento RefreshInterval (ASSL)
+  href: refreshinterval-element-assl.md
+- name: Elemento RefreshPolicy (ASSL)
+  href: refreshpolicy-element-assl.md
+- name: Elemento RelationshipType (ASSL)
+  href: relationshiptype-element-assl.md
+- name: Elemento RemoteDatasourceID (ASSL)
+  href: remotedatasourceid-element-assl.md
+- name: Elemento ReportingFirstMonth (ASSL)
+  href: reportingfirstmonth-element-assl.md
+- name: Elemento ReportingFirstWeekOfMonth (ASSL)
+  href: reportingfirstweekofmonth-element-assl.md
+- name: Elemento ReportingWeekToMonthPattern (ASSL)
+  href: reportingweektomonthpattern-element-assl.md
+- name: Elemento ReportServer (ASSL)
+  href: reportserver-element-assl.md
+- name: Elemento RequiresRestart (ASSL)
+  href: requiresrestart-element-assl.md
+- name: Elemento RoleID (ASSL)
+  href: roleid-element-assl.md
+- name: Elemento Root (ASSL)
+  href: root-element-assl.md
+- name: Elemento RootMemberIf (ASSL)
+  href: rootmemberif-element-assl.md
+- name: Elemento Schema (ASSL)
+  href: schema-element-assl.md
+- name: Elemento ScriptCacheProcessingMode (ASSL)
+  href: scriptcacheprocessingmode-element-assl.md
+- name: Elemento SilenceInterval (ASSL)
+  href: silenceinterval-element-assl.md
+- name: Elemento SilenceOverrideInterval (ASSL)
+  href: silenceoverrideinterval-element-assl.md
+- name: Elemento Slice (ASSL)
+  href: slice-element-assl.md
+- name: Elemento SolveOrder (ASSL)
+  href: solveorder-element-assl.md
+- name: Elemento Source (Associação) (ASSL)
+  href: source-element-binding-assl.md
+- name: Elemento Source (ComAssembly) (ASSL)
+  href: source-element-comassembly-assl.md
+- name: Elemento Source (Measure) (ASSL)
+  href: source-element-measure-assl.md
+- name: Elemento SourceAttributeID (ASSL)
+  href: sourceattributeid-element-assl.md
+- name: Elemento SourceColumnID (ASSL)
+  href: sourcecolumnid-element-assl.md
+- name: Elemento State (ASSL)
+  href: state-element-assl.md
+- name: Elemento Status (ASSL)
+  href: status-element-assl.md
+- name: Elemento StatusGraphic (ASSL)
+  href: statusgraphic-element-assl.md
+- name: Elemento StopTime (ASSL)
+  href: stoptime-element-assl.md
+- name: Elemento StorageEngineUsed (XMLA)
+  href: storageengineused-element-xmla.md
+- name: Elemento StorageLocation (ASSL)
+  href: storagelocation-element-assl.md
+- name: Elemento StorageMode (ASSL)
+  href: storagemode-element-assl.md
+- name: Elemento TableID (ASSL)
+  href: tableid-element-assl.md
+- name: Elemento Target (ASSL)
+  href: target-element-assl.md
+- name: Elemento TargetType (ASSL)
+  href: targettype-element-assl.md
+- name: Elemento Text (ASSL)
+  href: text-element-assl.md
+- name: Elemento Timeout (ASSL)
+  href: timeout-element-assl.md
+- name: Elemento Trend (ASSL)
+  href: trend-element-assl.md
+- name: Elemento TrendGraphic (ASSL)
+  href: trendgraphic-element-assl.md
+- name: Elemento Trimming (ASSL)
+  href: trimming-element-assl.md
+- name: Elemento Type (Ação) (ASSL)
+  href: type-element-action-assl.md
+- name: Elemento Type (Binding) (ASSL)
+  href: type-element-binding-assl.md
+- name: Elemento Type (ClrAssemblyFile) (ASSL)
+  href: type-element-clrassemblyfile-assl.md
+- name: Elemento Type (Dimension) (ASSL)
+  href: type-element-dimension-assl.md
+- name: Elemento Type (DimensionAttribute) (ASSL)
+  href: type-element-dimensionattribute-assl.md
+- name: Elemento Type (MeasureGroup) (ASSL)
+  href: type-element-measuregroup-assl.md
+- name: Elemento Type (MeasureGroupAttribute) (ASSL)
+  href: type-element-measuregroupattribute-assl.md
+- name: Elemento Type (MiningStructureColumn) (ASSL)
+  href: type-element-miningstructurecolumn-assl.md
+- name: Elemento Type (Partição) (ASSL)
+  href: type-element-partition-assl.md
+- name: Elemento Type (PerspectiveCalculation) (ASSL)
+  href: type-element-perspectivecalculation-assl.md
+- name: Elemento UnknownMember (ASSL)
+  href: unknownmember-element-assl.md
+- name: Elemento UnknownMemberName (ASSL)
+  href: unknownmembername-element-assl.md
+- name: Elemento Usage (DimensionAttribute) (ASSL)
+  href: usage-element-dimensionattribute-assl.md
+- name: Elemento Usage (MiningModelColumn) (ASSL)
+  href: usage-element-miningmodelcolumn-assl.md
+- name: Elemento Value (ASSL)
+  href: value-element-assl.md
+- name: Elemento Version (ASSL)
+  href: version-element-assl.md
+- name: Elemento Visibility (ASSL)
+  href: visibility-element-assl.md
+- name: Elemento Visible (ASSL)
+  href: visible-element-assl.md
+- name: Elemento VisualTotals (ASSL)
+  href: visualtotals-element-assl.md
+- name: Elemento Write (ASSL)
+  href: write-element-assl.md
+- name: Elemento WriteEnabled (ASSL)
+  href: writeenabled-element-assl.md

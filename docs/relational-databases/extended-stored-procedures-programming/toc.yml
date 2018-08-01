@@ -1,0 +1,20 @@
+- name: Procedimento armazenado estendido do mecanismo do banco de dados – Programação +
+  href: database-engine-extended-stored-procedures-programming.md
+- name: Adicionando um procedimento armazenado estendido ao SQL Server
+  href: adding-an-extended-stored-procedure-to-sql-server.md
+- name: Criando procedimentos armazenados estendidos
+  href: creating-extended-stored-procedures.md
+- name: Características de execução de procedimentos armazenados estendidos
+  href: execution-characteristics-of-extended-stored-procedures.md
+- name: Como funcionam os procedimentos armazenados estendidos
+  href: how-extended-stored-procedures-work.md
+- name: Consultando procedimentos armazenados estendidos no SQL Server
+  href: querying-extended-stored-procedures-installed-in-sql-server.md
+- name: Removendo um procedimento armazenado estendido do SQL Server
+  href: removing-an-extended-stored-procedure-from-sql-server.md
+- name: Enviando conjuntos de resultados ao Servidor (API do procedimento armazenado estendido)
+  href: sending-result-sets-to-the-server-extended-stored-procedure-api.md
+- name: Páginas de código do servidor e dados Unicode
+  href: unicode-data-and-server-code-pages.md
+- name: Descarregando uma DLL de procedimento armazenado estendido
+  href: unloading-an-extended-stored-procedure-dll.md

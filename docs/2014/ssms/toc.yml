@@ -1,0 +1,309 @@
+- name: SQL Server Management Studio
+  href: sql-server-management-studio-ssms.md
+  items:
+    - name: Usar o SQL Server Management Studio
+      href: ../database-engine/use-sql-server-management-studio.md
+    - name: O ambiente do SQL Server Management Studio
+      href: the-sql-server-management-studio-environment.md
+    - name: Elementos gerais da interface de usuário
+      href: general-user-interface-elements.md
+      items:
+        - name: caixa de diálogo Sobre
+          href: about-dialog-box.md
+        - name: Navegador da Web do SQL Server Management Studio
+          href: sql-server-management-studio-web-browser.md
+        - name: Caixa de diálogo Ferramentas Externas
+          href: external-tools-dialog-box.md
+        - name: caixa de diálogo Argumentos
+          href: arguments-dialog-box.md
+        - name: Arguments for External Tools
+          href: use-of-sql-server-features-and-capabilities-wwi-oltp.md
+        - name: Janela de Propriedades (Management Studio)
+          href: properties-window-management-studio.md
+        - name: Usar a Caixa de Ferramentas
+          href: use-the-toolbox.md
+    - name: Recursos do SQL Server Management Studio
+      href: ../database-engine/features-in-sql-server-management-studio.md
+    - name: Construir projetos de banco de dados usando o SQL Server Management Studio
+      href: build-database-projects-by-using-sql-server-management-studio.md
+    - name: Janelas de ferramentas no SQL Server Management Studio
+      href: tool-windows-in-sql-server-management-studio.md
+    - name: Compreender o gerenciamento de janelas do SQL Server Management Studio
+      href: understand-sql-server-management-studio-windows-management.md
+    - name: Gerenciar servidores com o SQL Server Management Studio
+      href: administer-servers-with-sql-server-management-studio.md
+    - name: Assistência ao usuário no SQL Server Management Studio
+      href: user-assistance-in-sql-server-management-studio.md
+    - name: Personalizar menus e teclas de atalho
+      href: customize-menus-and-shortcut-keys.md
+    - name: Páginas de propriedades no SQL Server Management Studio
+      href: property-pages-in-sql-server-management-studio.md
+    - name: Introdução ao SQL Server Management Studio para Business Intelligence
+      href: introduction-to-sql-server-management-studio-for-business-intelligence.md
+    - name: Adicionar uma ferramenta externa ao menu Ferramentas (SQL Server Management Studio)
+      href: add-an-external-tool-to-the-tools-menu-sql-server-management-studio.md
+    - name: Configurar auditoria de logon (SQL Server Management Studio)
+      href: configure-login-auditing-sql-server-management-studio.md
+    - name: Configurar o WMI para mostrar o status do servidor nas ferramentas do SQL Server
+      href: configure-wmi-to-show-server-status-in-sql-server-tools.md
+- name: Pesquisador de Objetos
+  href: object/object-explorer.md
+  items:
+    - name: Abrir e configurar o Pesquisador de Objetos
+      href: object/open-and-configure-object-explorer.md
+    - name: Ocultar objetos do sistema no Pesquisador de Objetos
+      href: object/hide-system-objects-in-object-explorer.md
+    - name: Opções (Pesquisador de Objetos/Comandos do SQL Server)
+      href: object/options-sql-server-object-explorer-commands.md
+    - name: Opções (página Pesquisador de Objetos/Scripts do SQL Server)
+      href: object/options-sql-server-object-explorer-scripting-page.md
+    - name: Conectar-se a uma instância do Pesquisador de Objetos
+      href: object/connect-to-an-instance-from-object-explorer.md
+    - name: Gerenciar objetos usando o Pesquisador de Objetos
+      href: object/manage-objects-by-using-object-explorer.md
+      items:
+        - name: Procurar por objetos (Pesquisador de Objetos)
+          href: object/browse-for-objects-object-explorer.md
+        - name: Excluir Objetos
+          href: object/delete-objects.md
+        - name: Dependências de objeto
+          href: object/object-dependencies.md
+        - name: Selecionar objetos (Pesquisador de Objetos)
+          href: object/select-objects-object-explorer.md
+        - name: Adicionar Objetos
+          href: object/add-objects.md
+        - name: Selecionar tipos de objeto (Pesquisador de Objetos)
+          href: object/select-object-types-object-explorer.md
+        - name: Configurações de Filtro (Pesquisador de Objetos e Gerenciador do Utilitário)
+          href: object/filter-settings-object-explorer-and-utility-explorer.md
+        - name: caixa de diálogo Nome Não Encontrado
+          href: object/name-not-found-dialog-box.md
+    - name: Painel Detalhes do Pesquisador de Objetos
+      href: object/object-explorer-details-pane.md
+- name: Relatórios personalizados no Management Studio
+  href: object/custom-reports-in-management-studio.md
+  items:
+    - name: adicionar um relatório personalizado ao Management Studio
+      href: object/add-a-custom-report-to-management-studio.md
+    - name: Cancelar supressão da execução de avisos de relatório personalizado
+      href: object/unsuppress-run-custom-report-warnings.md
+    - name: Usar relatórios personalizados com propriedades de nó do Pesquisador de Objetos
+      href: object/use-custom-reports-with-object-explorer-node-properties.md
+- name: Explorador de Modelos
+  href: template/template-explorer.md
+  items:
+    - name: Abrir um modelo
+      href: template/open-a-template.md
+    - name: Substituir Parâmetros do Modelo
+      href: template/replace-template-parameters.md
+- name: Gerenciador de Soluções
+  href: solution/solution-explorer.md
+  items:
+    - name: Soluções (SQL Server Management Studio)
+      href: solution/solutions-sql-server-management-studio.md
+    - name: Criar uma nova solução
+      href: solution/create-a-new-solution.md
+    - name: Abrir uma solução existente
+      href: solution/open-an-existing-solution.md
+    - name: Fechar uma solução
+      href: solution/close-a-solution.md
+    - name: Excluir uma solução
+      href: solution/delete-a-solution.md
+    - name: Copiar itens em uma solução
+      href: solution/copy-items-in-a-solution.md
+    - name: Remover ou excluir um item ou projeto
+      href: solution/remove-or-delete-an-item-or-project.md
+    - name: Mover itens em uma solução
+      href: solution/move-items-in-a-solution.md
+    - name: Renomear soluções e itens de projeto
+      href: solution/rename-solutions-and-project-items.md
+- name: Projetos (SQL Server Management Studio)
+  href: solution/projects-sql-server-management-studio.md
+  items:
+    - name: Criar um projeto
+      href: solution/create-a-project.md
+    - name: Adicionar um projeto existente a uma solução
+      href: solution/add-an-existing-project-to-a-solution.md
+    - name: Alterar o local padrão dos projetos
+      href: solution/change-the-default-location-for-projects.md
+    - name: Exibir propriedades do projeto
+      href: solution/view-project-properties.md
+    - name: Adicionar novos itens a um projeto
+      href: solution/add-new-items-to-a-project.md
+    - name: Adicionar itens existentes a um projeto
+      href: solution/add-existing-items-to-a-project.md
+    - name: Associar uma consulta a uma conexão em um projeto
+      href: solution/associate-a-query-with-a-connection-in-a-project.md
+    - name: Alterar a conexão associada a uma consulta
+      href: solution/change-the-connection-associated-with-a-query.md
+    - name: Exibir ou alterar as propriedades de uma conexão em um projeto
+      href: solution/view-or-change-the-properties-of-a-connection-in-a-project.md
+- name: Controle do código-fonte do Gerenciador de Soluções
+  href: ../database-engine/solution-explorer-source-control.md
+  items:
+    - name: Noções básicas de controle do código-fonte
+      href: ../database-engine/source-control-basics.md
+    - name: Alterar Controle do Código-Fonte
+      href: ../database-engine/change-source-control.md
+    - name: Definir opções de controle do código-fonte
+      href: ../database-engine/set-source-control-options.md
+    - name: Alterar conexões de controle do código-fonte
+      href: ../database-engine/change-source-control-connections.md
+    - name: Excluir arquivos do controle do código-fonte
+      href: ../database-engine/exclude-files-from-source-control.md
+    - name: Adicionar soluções e projetos ao controle do código-fonte
+      href: ../database-engine/add-solutions-and-projects-to-source-control.md
+    - name: Adicionar soluções ao controle do código-fonte
+      href: ../database-engine/add-solutions-to-source-control.md
+    - name: Adicionar projetos ao controle do código-fonte
+      href: ../database-engine/add-projects-to-source-control.md
+    - name: Abrir soluções e projetos no controle do código-fonte
+      href: ../database-engine/open-solutions-and-projects-from-source-control.md
+    - name: Abrir soluções no controle do código-fonte
+      href: ../database-engine/open-solutions-from-source-control.md
+    - name: Abrir projetos no controle do código-fonte
+      href: ../database-engine/open-projects-from-source-control.md
+    - name: Caixa de diálogo Obter (Controle de código fonte)
+      href: ../database-engine/get-dialog-box-source-control.md
+    - name: Fazer check-out de arquivos
+      href: ../database-engine/check-out-files.md
+    - name: Gerenciar check-outs
+      href: ../database-engine/manage-checkouts.md
+    - name: Desfazer check-outs
+      href: ../database-engine/undo-checkouts.md
+    - name: Fazer check-out automático de arquivos na edição
+      href: ../database-engine/automatically-check-out-files-upon-edit.md
+    - name: Fazer check-in de arquivos
+      href: ../database-engine/check-in-files.md
+    - name: Gerenciar check-ins
+      href: ../database-engine/manage-checkins.md
+    - name: Exibir uma lista de arquivos modificados
+      href: ../database-engine/view-a-list-of-modified-files.md
+    - name: Editar arquivos com check-in
+      href: ../database-engine/edit-checked-in-files.md
+    - name: Definir e recuperar informações de versão
+      href: ../database-engine/set-and-retrieve-version-information.md
+    - name: Exibir o histórico de arquivos
+      href: ../database-engine/view-file-history.md
+    - name: Exibir histórico de projetos
+      href: ../database-engine/view-project-history.md
+    - name: Exibir status de arquivos
+      href: ../database-engine/view-file-status.md
+    - name: Recuperar arquivos
+      href: ../database-engine/retrieve-files.md
+    - name: Especificar uma versão como a versão mais recente
+      href: ../database-engine/specify-a-version-as-the-latest-version.md
+    - name: Comparar arquivos
+      href: ../database-engine/compare-files.md
+    - name: Compartilhar arquivos
+      href: ../database-engine/share-files.md
+    - name: Criar histórico e relatórios de status
+      href: ../database-engine/create-history-and-status-reports.md
+- name: Arquivos que gerenciam soluções e projetos
+  href: solution/files-that-manage-solutions-and-projects.md
+  items:
+    - name: Gerenciar arquivos com codificação
+      href: solution/manage-files-with-encoding.md
+    - name: arquivos diversos
+      href: solution/miscellaneous-files.md
+- name: Ajuda F1 para conexões de servidor (SQL Server Management Studio)
+  href: f1-help/f1-help-for-server-connections-sql-server-management-studio.md
+  items:
+    - name: Conectar a qualquer componente do SQL Server a partir do SQL Server Management Studio
+      href: f1-help/connect-to-any-sql-server-component-from-sql-server-management-studio.md
+    - name: Conectar ao Servidor (Mecanismo de Banco de Dados)
+      href: f1-help/connect-to-server-database-engine.md
+      items:
+        - name: Conectar ao Servidor (página Logon) Mecanismo de Banco de Dados
+          href: f1-help/connect-to-server-login-page-database-engine.md
+        - name: Conectar ao Servidor (página Propriedades da Conexão) Mecanismo de Banco de Dados
+          href: f1-help/connect-to-server-connection-properties-page-database-engine.md
+    - name: Conectar ao servidor (Analysis Services)
+      href: ../database-engine/connect-to-server-analysis-services.md
+      items:
+        - name: Conectar ao Servidor (página Logon) Analysis Services
+          href: ../database-engine/connect-to-server-login-page-analysis-services.md
+        - name: Conectar ao servidor (página Propriedades da Conexão) Analysis Services
+          href: ../database-engine/connect-to-server-connection-properties-page-analysis-services.md
+    - name: Conectar ao servidor (Integration Services)
+      href: ../database-engine/connect-to-server-integration-services.md
+      items:
+        - name: Conectar-se ao Servidor (página Logon) Integration Services
+          href: ../database-engine/connect-to-server-login-page-integration-services.md
+        - name: Conectar ao Servidor (página Propriedades da Conexão) Integration Services
+          href: ../database-engine/connect-to-server-connection-properties-page-integration-services.md
+    - name: Conectar ao Servidor (Reporting Services)
+      href: ../database-engine/connect-to-server-reporting-services.md
+      items:
+        - name: Conectar ao Servidor (página Logon) Reporting Services
+          href: ../database-engine/connect-to-server-login-page-reporting-services.md
+        - name: Conectar ao Servidor (página Propriedades da Conexão) Reporting Services
+          href: ../database-engine/connect-to-server-connection-properties-page-reporting-services.md
+    - name: Conectar ao Servidor (página Parâmetros Adicionais de Conexão)
+      href: ../database-engine/connect-to-server-additional-connection-parameters-page.md
+    - name: Procurar Servidores (Servidores Locais)
+      href: ../database-engine/browse-for-servers-local-servers.md
+    - name: Procurar servidores (Servidores de Rede)
+      href: ../database-engine/browse-for-servers-network-servers.md
+    - name: caixa de diálogo Propriedades da conexão
+      href: ../database-engine/connection-properties-dialog-box.md
+    - name: Senha expirada
+      href: ../database-engine/password-expired.md
+    - name: Conectar ao Windows Azure Storage
+      href: ../database-engine/connect-to-windows-azure-storage.md
+- name: Visual Database Tools +
+  href: visual-db-tools/visual-database-tools.md
+- name: Ajuda do menu do SQL Server Management Studio +
+  href: menu-help/sql-server-management-studio-menu-help.md
+- name: SQL Server Agent +
+  href: agent/sql-server-agent.md
+- name: 'Tutorial: SQL Server Management Studio'
+  href: tutorials/tutorial-sql-server-management-studio.md
+  items:
+    - name: 'Lição 1: Navegação básica no SQL Server Management Studio'
+      href: tutorials/lesson-1-basic-navigation-in-sql-server-management-studio.md
+      items:
+        - name: Iniciar o SQL Server Management Studio
+          href: tutorials/lesson-1-1-start-sql-server-management-studio.md
+        - name: Conectar com os Servidores Registrados e o Pesquisador de Objetos
+          href: tutorials/lesson-1-2-connect-with-registered-servers-and-object-explorer.md
+        - name: Alterar o layout do ambiente
+          href: tutorials/lesson-1-3-change-the-environment-layout.md
+        - name: Exibir a Janela de Consulta
+          href: tutorials/lesson-1-4-display-the-query-window.md
+        - name: Exibir a página Detalhes do Pesquisador de Objetos
+          href: tutorials/lesson-1-5-show-the-object-explorer-details-page.md
+        - name: Selecionar o esquema de atalhos de teclado
+          href: tutorials/lesson-1-6-select-the-keyboard-shortcut-scheme.md
+        - name: Definir as opções de inicialização
+          href: tutorials/lesson-1-7-set-the-startup-options.md
+        - name: Restaurar a configuração padrão do SQL Server Management Studio
+          href: tutorials/lesson-1-8-restore-the-default-sql-server-management-studio-configuration.md
+        - name: 'Resumo: Navegação básica'
+          href: tutorials/lesson-1-9-summary-basic-navigation.md
+    - name: 'Lição 2: Gravando Transact-SQL'
+      href: tutorials/lesson-2-writing-transact-sql.md
+      items:
+        - name: Conectando com o Editor de Consultas
+          href: tutorials/lesson-2-1-connecting-with-query-editor.md
+        - name: Adicionando recuo
+          href: tutorials/lesson-2-2-adding-indentation.md
+        - name: Maximizando o Editor de Consultas
+          href: tutorials/lesson-2-3-maximizing-query-editor.md
+        - name: Usando comentários
+          href: tutorials/lesson-2-4-using-comments.md
+        - name: Outros modos de exibir a janela de código
+          href: tutorials/lesson-2-5-other-ways-of-viewing-the-code-window.md
+        - name: Gerar script de uma tabela
+          href: tutorials/lesson-2-6-script-a-table.md
+    - name: 'Lição 3: Trabalhando com modelos, soluções e projetos de script'
+      href: tutorials/lesson-3-working-with-templates-solutions-and-script-projects.md
+      items:
+        - name: Criar scripts usando modelos
+          href: tutorials/lesson-3-1-create-scripts-using-templates.md
+        - name: Criar modelos personalizados
+          href: tutorials/lesson-3-2-create-custom-templates.md
+        - name: Salvar scripts como projetos ou soluções
+          href: tutorials/lesson-3-3-save-scripts-as-projects-or-solutions.md
+        - name: 'Resumo: Soluções e Projetos de Script'
+          href: tutorials/lesson-3-4-summary-solutions-and-script-projects.md

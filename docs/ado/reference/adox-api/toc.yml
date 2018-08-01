@@ -1,0 +1,306 @@
+- name: Modelo de objeto ADOX
+  href: adox-object-model.md
+- name: Objetos ADOX
+  href: adox-objects.md
+  items:
+    - name: Objeto Catalog (ADOX)
+      href: catalog-object-adox.md
+      items:
+        - name: 'Propriedades, Métodos e Eventos do objeto Catalog'
+          href: catalog-object-properties-methods-and-events.md
+    - name: Objeto Column (ADOX)
+      href: column-object-adox.md
+      items:
+        - name: 'Propriedades, Métodos e Eventos do objeto Column'
+          href: column-object-properties-methods-and-events.md
+    - name: Objeto Group (ADOX)
+      href: group-object-adox.md
+      items:
+        - name: 'Propriedades, Métodos e Eventos do objeto Group'
+          href: group-object-properties-methods-and-events.md
+    - name: Objeto Index (ADOX)
+      href: index-object-adox.md
+      items:
+        - name: 'Propriedades, Métodos e Eventos do objeto Index'
+          href: index-object-properties-methods-and-events.md
+    - name: Objeto Key (ADOX)
+      href: key-object-adox.md
+      items:
+        - name: 'Propriedades, Métodos e Eventos do objeto Key'
+          href: key-object-properties-methods-and-events.md
+    - name: Objeto Procedure (ADOX)
+      href: procedure-object-adox.md
+      items:
+        - name: 'Propriedades, Métodos e Eventos do objeto Procedure'
+          href: procedure-object-properties-methods-and-events.md
+    - name: Objeto Property (ADOX)
+      href: property-object-adox.md
+      items:
+        - name: 'Propriedades, Métodos e Eventos do objeto Property ADOX'
+          href: adox-property-object-properties-methods-and-events.md
+    - name: Objeto Table (ADOX)
+      href: table-object-adox.md
+      items:
+        - name: 'Propriedades, Métodos e Eventos do objeto Table'
+          href: table-object-properties-methods-and-events.md
+    - name: Objeto User (ADOX)
+      href: user-object-adox.md
+      items:
+        - name: 'Propriedades, Métodos e Eventos do objeto User'
+          href: user-object-properties-methods-and-events.md
+    - name: Objeto View (ADOX)
+      href: view-object-adox.md
+      items:
+        - name: 'Propriedades, Métodos e Eventos do objeto View'
+          href: view-object-properties-methods-and-events.md
+- name: Coleções ADOX
+  href: adox-collections.md
+  items:
+    - name: Coleção Columns (ADOX)
+      href: columns-collection-adox.md
+      items:
+        - name: 'Propriedades, Métodos e Eventos da coleção Columns'
+          href: columns-collection-properties-methods-and-events.md
+    - name: Coleção Groups (ADOX)
+      href: groups-collection-adox.md
+      items:
+        - name: 'Propriedades, Métodos e Eventos da coleção Groups'
+          href: groups-collection-properties-methods-and-events.md
+    - name: Coleção Indexes (ADOX)
+      href: indexes-collection-adox.md
+      items:
+        - name: 'Propriedades, Métodos e Eventos da coleção Indexes'
+          href: indexes-collection-properties-methods-and-events.md
+    - name: Coleção Keys (ADOX)
+      href: keys-collection-adox.md
+      items:
+        - name: 'Propriedades, Métodos e Eventos da coleção Keys'
+          href: keys-collection-properties-methods-and-events.md
+    - name: Coleção Procedures (ADOX)
+      href: procedures-collection-adox.md
+      items:
+        - name: 'Propriedades, Métodos e Eventos da coleção Procedures'
+          href: procedures-collection-properties-methods-and-events.md
+    - name: Coleção Tables (ADOX)
+      href: tables-collection-adox.md
+      items:
+        - name: 'Propriedades, Métodos e Eventos da coleção Tables'
+          href: tables-collection-properties-methods-and-events.md
+    - name: Coleção Users (ADOX)
+      href: users-collection-adox.md
+      items:
+        - name: 'Propriedades, Métodos e Eventos da coleção Users'
+          href: users-collection-properties-methods-and-events.md
+    - name: Coleção Views (ADOX)
+      href: views-collection-adox.md
+      items:
+        - name: 'Propriedades, Métodos e Eventos da coleção Views'
+          href: views-collection-properties-methods-and-events.md
+- name: Propriedades ADOX
+  href: adox-properties.md
+  items:
+    - name: Propriedade ActiveConnection (ADOX)
+      href: activeconnection-property-adox.md
+    - name: Propriedade Attributes (ADOX)
+      href: attributes-property-adox.md
+    - name: Propriedade Clustered (ADOX)
+      href: clustered-property-adox.md
+    - name: Propriedade Command (ADOX)
+      href: command-property-adox.md
+    - name: Propriedade DateCreated (ADOX)
+      href: datecreated-property-adox.md
+    - name: Propriedade DateModified (ADOX)
+      href: datemodified-property-adox.md
+    - name: Propriedade DefinedSize (ADOX)
+      href: definedsize-property-adox.md
+    - name: Propriedade DeleteRule (ADOX)
+      href: deleterule-property-adox.md
+    - name: Propriedade IndexNulls (ADOX)
+      href: indexnulls-property-adox.md
+    - name: Propriedade Name (ADOX)
+      href: name-property-adox.md
+    - name: Propriedade NumericScale (ADOX)
+      href: numericscale-property-adox.md
+    - name: Propriedade ParentCatalog (ADOX)
+      href: parentcatalog-property-adox.md
+    - name: Propriedade Precision (ADOX)
+      href: precision-property-adox.md
+    - name: Propriedade PrimaryKey (ADOX)
+      href: primarykey-property-adox.md
+    - name: Propriedade RelatedColumn (ADOX)
+      href: relatedcolumn-property-adox.md
+    - name: Propriedade RelatedTable (ADOX)
+      href: relatedtable-property-adox.md
+    - name: Propriedade SortOrder (ADOX)
+      href: sortorder-property-adox.md
+    - name: Propriedade Type (Column) (ADOX)
+      href: type-property-column-adox.md
+    - name: Propriedade Type (Key) (ADOX)
+      href: type-property-key-adox.md
+    - name: Propriedade Type (Table) (ADOX)
+      href: type-property-table-adox.md
+    - name: Propriedade Unique (ADOX)
+      href: unique-property-adox.md
+    - name: Propriedade UpdateRule (ADOX)
+      href: updaterule-property-adox.md
+- name: Métodos do ADOX
+  href: adox-methods.md
+  items:
+    - name: Método Append (Colunas do ADOX)
+      href: append-method-adox-columns.md
+    - name: Método Append (Grupos do ADOX)
+      href: append-method-adox-groups.md
+    - name: Método Append (Índices do ADOX)
+      href: append-method-adox-indexes.md
+    - name: Método Append (Chaves do ADOX)
+      href: append-method-adox-keys.md
+    - name: Método Append (Procedimentos do ADOX)
+      href: append-method-adox-procedures.md
+    - name: Método Append (Tabelas do ADOX)
+      href: append-method-adox-tables.md
+    - name: Método Append (Usuários do ADOX)
+      href: append-method-adox-users.md
+    - name: Método Append (Exibições do ADOX)
+      href: append-method-adox-views.md
+    - name: Método ChangePassword (ADOX)
+      href: changepassword-method-adox.md
+    - name: Método Create (ADOX)
+      href: create-method-adox.md
+    - name: Método Delete (Coleções do ADOX)
+      href: delete-method-adox-collections.md
+    - name: Método GetObjectOwner (ADOX)
+      href: getobjectowner-method-adox.md
+    - name: Método GetPermissions (ADOX)
+      href: getpermissions-method-adox.md
+    - name: Método SetObjectOwner
+      href: setobjectowner-method.md
+    - name: Método SetPermissions (ADOX)
+      href: setpermissions-method-adox.md
+- name: Constantes enumeradas ADOX
+  href: adox-enumerated-constants.md
+  items:
+    - name: AllowNullsEnum
+      href: allownullsenum.md
+    - name: ActionEnum
+      href: actionenum.md
+    - name: SortOrderEnum
+      href: sortorderenum.md
+    - name: RightsEnum
+      href: rightsenum.md
+    - name: RuleEnum
+      href: ruleenum.md
+    - name: KeyTypeEnum
+      href: keytypeenum.md
+    - name: InheritTypeEnum
+      href: inherittypeenum.md
+    - name: ObjectTypeEnum
+      href: objecttypeenum.md
+    - name: ColumnAttributesEnum
+      href: columnattributesenum.md
+- name: Exemplos de código ADOX
+  href: adox-code-examples.md
+  items:
+    - name: Exemplos de código do ADOX no Microsoft Visual Basic
+      href: adox-code-examples-in-microsoft-visual-basic.md
+      items:
+        - name: Exemplo da propriedade Attributes (VB)
+          href: attributes-property-example-vb.md
+        - name: Exemplo da propriedade ActiveConnection de catálogo (VB)
+          href: catalog-activeconnection-property-example-vb.md
+        - name: Exemplo da propriedade Clustered (VB)
+          href: clustered-property-example-vb.md
+        - name: 'Exemplo da propriedade Name, Métodos Columns and Tables (VB)'
+          href: columns-and-tables-append-methods-name-property-example-vb.md
+        - name: Exemplo da propriedade Command e CommandText (VB)
+          href: command-and-commandtext-properties-example-vb.md
+        - name: 'Método Connection Close, Exemplo da propriedade Table Type (VB)'
+          href: connection-close-method-table-type-property-example-vb.md
+        - name: Criar um exemplo de método (VB)
+          href: create-method-example-vb.md
+        - name: Exemplo das propriedades DateCreated e DateModified (VB)
+          href: datecreated-and-datemodified-properties-example-vb.md
+        - name: Exemplo da propriedade DefinedSize (VB)
+          href: definedsize-property-example-vb.md
+        - name: Exemplo da propriedade DeleteRule (VB)
+          href: deleterule-property-example-vb.md
+        - name: Exemplo dos métodos GetObjectOwner e SetObjectOwner (VB)
+          href: getobjectowner-and-setobjectowner-methods-example-vb.md
+        - name: Exemplo dos métodos GetPermissions e SetPermissions (VB)
+          href: getpermissions-and-setpermissions-methods-example-vb.md
+        - name: 'Exemplo dos métodos Groups e Users Append, ChangePassword (VB)'
+          href: groups-and-users-append-changepassword-methods-example-vb.md
+        - name: Exemplo do método Indexes Append (VB)
+          href: indexes-append-method-example-vb.md
+        - name: Exemplo da propriedade IndexNulls (VB)
+          href: indexnulls-property-example-vb.md
+        - name: 'Exemplo das propriedades UpdateRule e RelatedTable, RelatedColumn, Key Type e do método Keys Append (VB)'
+          href: keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md
+        - name: 'Exemplo de código ADOX: NumericScale e exemplo de propriedades Precision (VB)'
+          href: adox-code-example-numericscale-and-precision-properties-example-vb.md
+        - name: 'Exemplo da propriedade Command, coleção Parameters (VB)'
+          href: parameters-collection-command-property-example-vb.md
+        - name: Exemplo da propriedade ParentCatalog (VB)
+          href: parentcatalog-property-example-vb.md
+        - name: Exemplos das propriedades PrimaryKey e Unique (VB)
+          href: primarykey-and-unique-properties-example-vb.md
+        - name: Exemplo do método Append de procedimentos (VB)
+          href: procedures-append-method-example-vb.md
+        - name: Exemplo do método Delete de procedimentos (VB)
+          href: procedures-delete-method-example-vb.md
+        - name: Exemplo do método Refresh de procedimentos (VB)
+          href: procedures-refresh-method-example-vb.md
+        - name: Exemplo da propriedade SortOrder (VB)
+          href: sortorder-property-example-vb.md
+        - name: Exemplo de coleções Views e Fields (VB)
+          href: views-and-fields-collections-example-vb.md
+        - name: Exemplo do método Append de exibições (VB)
+          href: views-append-method-example-vb.md
+        - name: 'Coleção Views, exemplo da propriedade CommandText (VB)'
+          href: views-collection-commandtext-property-example-vb.md
+        - name: Exemplo do método Delete de exibições (VB)
+          href: views-delete-method-example-vb.md
+        - name: Exemplo do método Refresh de exibições (VB)
+          href: views-refresh-method-example-vb.md
+    - name: Exemplos de código ADOX no Microsoft Visual C++
+      href: adox-code-examples-in-microsoft-visual-c.md
+      items:
+        - name: Exemplo da propriedade Attributes (VC++)
+          href: attributes-property-example-vc.md
+        - name: Exemplo da propriedade ActiveConnection de catálogo (VC++)
+          href: catalog-activeconnection-property-example-vc.md
+        - name: Exemplo da propriedade Clustered (VC++)
+          href: clustered-property-example-vc.md
+        - name: 'Exemplo da propriedade Name, métodos Columns and Tables Append (VC++)'
+          href: columns-and-tables-append-methods-name-property-example-vc.md
+        - name: Exemplo das propriedades Command e CommandText (VC++)
+          href: command-and-commandtext-properties-example-vc.md
+        - name: 'Método Connection Close, exemplo da propriedade Table Type (VC++)'
+          href: connection-close-method-table-type-property-example-vc.md
+        - name: Exemplo do método Create (VC++)
+          href: create-method-example-vc.md
+        - name: Exemplo das propriedades DateCreated e DateModified (VC++)
+          href: datecreated-and-datemodified-properties-example-vc.md
+        - name: Exemplo da propriedade DefinedSize (VC++)
+          href: definedsize-property-example-vc.md
+        - name: Exemplo da propriedade DeleteRule (VC++)
+          href: deleterule-property-example-vc.md
+        - name: Exemplo dos métodos GetObjectOwner e SetObjectOwner (VC++)
+          href: getobjectowner-and-setobjectowner-methods-example-vc.md
+        - name: Exemplo dos métodos GetPermissions e SetPermissions (VC++)
+          href: getpermissions-and-setpermissions-methods-example-vc.md
+        - name: 'Exemplo dos métodos Groups e Users Append, ChangePassword (VC++)'
+          href: groups-and-users-append-changepassword-methods-example-vc.md
+        - name: Exemplo do método Indexes Append (VC++)
+          href: indexes-append-method-example-vc.md
+        - name: Exemplo da propriedade IndexNulls (VC++)
+          href: indexnulls-property-example-vc.md
+        - name: 'Exemplo das propriedades UpdateRule e RelatedTable, RelatedColumn, Key Type e do método Keys Append (VC++)'
+          href: keys-append-method-key-type-relatedcolumn-relatedtable-example-vc.md
+        - name: Exemplo das propriedades NumericScale e Precision do objeto Column (VC++)
+          href: numericscale-and-precision-properties-of-the-column-object-example-vc.md
+        - name: 'Exemplos da propriedade Command, coleção Parameters (VC++)'
+          href: parameters-collection-command-property-example-vc.md
+        - name: Exemplo da propriedade ParentCatalog (VC++)
+          href: parentcatalog-property-example-vc.md
+        - name: Exemplos das propriedades PrimaryKey e Unique (VC++)
+          href: primarykey-and-unique-properties-example-vc.md

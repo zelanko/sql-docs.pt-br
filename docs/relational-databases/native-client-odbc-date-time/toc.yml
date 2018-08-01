@@ -1,0 +1,24 @@
+- name: Aprimoramentos de data e hora (ODBC)
+  href: date-and-time-improvements-odbc.md
+- name: Alterações de cópia em massa para tipos de data e hora aprimorados (OLE DB e ODBC)
+  href: bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md
+- name: Suporte a tipos de dados para aprimoramentos de data e hora do ODBC
+  href: data-type-support-for-odbc-date-and-time-improvements.md
+- name: Conversões
+  items:
+    - name: Conversões do tipo de dados datetime (ODBC)
+      href: datetime-data-type-conversions-odbc.md
+    - name: Conversões do tipo de dados datetime do C para SQL
+      href: datetime-data-type-conversions-from-c-to-sql.md
+    - name: Conversões do tipo de dados datetime do SQL para C
+      href: datetime-data-type-conversions-from-sql-to-c.md
+- name: Comportamento de tipos de data e hora aprimorados com versões anteriores do SQL Server (ODBC)
+  href: enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc.md
+- name: Metadados – Catálogo
+  href: metadata-catalog.md
+- name: Metadados – Parâmetro e resultado
+  href: metadata-parameter-and-result.md
+- name: Suporte à API ODBC para recursos avançados de data e hora
+  href: odbc-api-support-for-enhanced-date-and-time-features.md
+- name: Suporte a Sql_variant para tipos de data e hora
+  href: sql-variant-support-for-date-and-time-types.md
