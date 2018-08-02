@@ -19,12 +19,12 @@ caps.latest.revision: 35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0bbeaa627bc1183fa6bdcb72538887132a5ba2b3
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: cffaa400fa9e3727d1bcc7a569827573b70b10a9
+ms.sourcegitcommit: d457bb828eb46ee83f8ff5bdecfff09b26d7b154
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34768992"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39259741"
 ---
 # <a name="configure-read-only-access-on-an-availability-replica-sql-server"></a>Configurar o acesso somente leitura em uma réplica de disponibilidade (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -217,7 +217,7 @@ Set-SqlAvailabilityReplica -ConnectionModeInPrimaryRole "AllowAllConnections" `
  Se você tem gatilhos e trabalhos que podem falhar ao executar um banco de dados secundário não legível ou em um banco de dados secundário legível, você precisa executar o script dos gatilhos e dos trabalhos para verificar em uma réplica determinada se o banco de dados é primário ou secundário legível. Para obter estas informações, use a função [DATABASEPROPERTYEX](../../../t-sql/functions/databasepropertyex-transact-sql.md) para retornar a propriedade **Updatability** do banco de dados. Para identificar um banco de dados somente leitura, especifique READ_ONLY como o valor, da seguinte maneira:  
   
 ```  
-DATABASEPROPERTYEX([db name],’Updatability’) = N’READ_ONLY’  
+DATABASEPROPERTYEX([db name],’UpdateAbility’) = N’READ_ONLY’  
 ```  
   
  Para identificar um banco de dados leitura/gravação, especifique READ_WRITE como o valor.  

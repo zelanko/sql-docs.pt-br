@@ -1,7 +1,7 @@
 ---
 title: Monitorando o desempenho usando o Repositório de Consultas | Microsoft Docs
 ms.custom: ''
-ms.date: 10/26/2017
+ms.date: 07/23/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f30d87526729100a99336408778f2d2df4406475
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 932137c603db51693f90b2aa823232842e918e50
+ms.sourcegitcommit: 90a9a051fe625d7374e76cf6be5b031004336f5a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34332442"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39228432"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Monitorar o desempenho usando o Repositório de Consultas
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,6 +31,9 @@ ms.locfileid: "34332442"
   O recurso Repositório de Consultas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece informações sobre escolha e desempenho do plano de consulta. Ele simplifica a solução de problemas, ajudando você a identificar rapidamente diferenças de desempenho causadas por alterações nos planos de consulta. O Repositório de Consultas captura automaticamente um histórico das consultas, dos planos e das estatísticas de tempo de execução e os mantém para sua análise. Ele separa os dados por janelas por hora, permitindo que você veja os padrões de uso do banco de dados e entenda quando as alterações aos planos de consulta ocorreram no servidor. O repositório de consultas pode ser configurado usando a opção [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) . 
   
  Para obter informações sobre como operar o Repositório de Consultas no [!INCLUDE[ssSDS](../../includes/sssds-md.md)] do Azure, consulte [Operando o Repositório de Consultas no Banco de dados SQL do Azure](https://azure.microsoft.com/documentation/articles/sql-database-operate-query-store/).  
+ 
+> [!IMPORTANT]
+> Se você estiver usando o Repositório de Consultas para obter informações de carga de trabalho em tempo real no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], planeje instalar as correções de escalabilidade de desempenho na [KB 4340759](http://support.microsoft.com/help/4340759) assim que possível. 
   
 ##  <a name="Enabling"></a> Habilitando o Repositório de Consultas  
  O repositório de consultas não está ativo para novos bancos de dados por padrão.  
@@ -57,7 +60,10 @@ ALTER DATABASE AdventureWorks2012 SET QUERY_STORE = ON;
 Para obter mais opções de sintaxe relacionadas ao repositório de consultas, consulte [Opções ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
 > [!NOTE]  
->  Não é possível habilitar o repositório de consultas no banco de dados **mestre** ou **tempdb** .  
+> Não é possível habilitar o repositório de consultas no banco de dados **mestre** ou **tempdb** .  
+ 
+> [!IMPORTANT]
+> Para obter informações sobre como habilitar o Repositório de Consultas e mantê-lo ajustado a sua carga de trabalho, consulte [Melhor Prática do Repositório de Consultas](../../relational-databases/performance/best-practice-with-the-query-store.md#Configure).
  
 ## <a name="About"></a> Informações no Repositório de Consultas  
  Planos de execução para qualquer consulta específica no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] normalmente envolvem horas extras por vários motivos diferentes, como alterações de estatísticas, alterações de esquema, criação/exclusão de índices, etc. O cache de procedimento (no qual os planos de consulta em cache são armazenados) armazena apenas o plano de execução mais recente. Os planos também são removidos do cache do plano devido à pressão da memória. Como resultado, as regressões do desempenho de consulta causadas por alterações no plano de execução podem não ser triviais e podem ter resolução lenta.  
@@ -492,9 +498,9 @@ hist AS
         JOIN sys.query_store_plan p ON p.plan_id = rs.plan_id  
     WHERE  (rs.first_execution_time >= @history_start_time   
                AND rs.last_execution_time < @history_end_time)  
-        OR (rs.first_execution_time \<= @history_start_time   
+        OR (rs.first_execution_time <= @history_start_time   
                AND rs.last_execution_time > @history_start_time)  
-        OR (rs.first_execution_time \<= @history_end_time   
+        OR (rs.first_execution_time <= @history_end_time   
                AND rs.last_execution_time > @history_end_time)  
     GROUP BY p.query_id  
 ),  
@@ -509,9 +515,9 @@ recent AS
         JOIN sys.query_store_plan p ON p.plan_id = rs.plan_id  
     WHERE  (rs.first_execution_time >= @recent_start_time   
                AND rs.last_execution_time < @recent_end_time)  
-        OR (rs.first_execution_time \<= @recent_start_time   
+        OR (rs.first_execution_time <= @recent_start_time   
                AND rs.last_execution_time > @recent_start_time)  
-        OR (rs.first_execution_time \<= @recent_end_time   
+        OR (rs.first_execution_time <= @recent_end_time   
                AND rs.last_execution_time > @recent_end_time)  
     GROUP BY p.query_id  
 )  

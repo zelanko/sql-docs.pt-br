@@ -27,12 +27,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1ed791ca34a8a88ce9dd8b25d38740430ce18424
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 944a0ca328ca0835601bf1cb4b75e974da6a8e7a
+ms.sourcegitcommit: eb926c51b9caeccde1d60cfa92ddfb12067dc09e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38001668"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39240688"
 ---
 # <a name="data-compression"></a>Data Compression
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ Para tabelas e índices columnstore, qualquer tabela e índice columnstore sempr
 -   Use a compactação de dados **COLUMNSTORE_ARCHIVE** para compactar os dados de columnstore com a compactação de arquivamento.  
 -   Use a compactação de dados **COLUMNSTORE** para descompactar a compactação de arquivamento. Esses dados resultantes continuam a ser compactados com a compactação columnstore.  
   
-Para adicionar a compactação de arquivamento, use [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) ou [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) com a opção REBUILD e DATA COMPRESSION = COLUMNSTORE.  
+Para adicionar a compactação de arquivamento, use [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) ou [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) com a opção REBUILD e DATA COMPRESSION = COLUMNSTORE_ARCHIVE.  
   
 #### <a name="examples"></a>Exemplos:  
 ```  

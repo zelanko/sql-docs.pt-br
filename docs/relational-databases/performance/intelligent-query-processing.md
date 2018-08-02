@@ -2,7 +2,7 @@
 title: Processamento inteligente de consultas em bancos de dados Microsoft SQL | Microsoft Docs
 description: Recursos de processamento inteligente de consulta para melhorar o desempenho da consulta no SQL Server e no Banco de Dados SQL do Azure.
 ms.custom: ''
-ms.date: 07/23/2018
+ms.date: 07/25/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,12 +16,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2b3ca1aa0bf87fe08e65590ea506dad929455a90
-ms.sourcegitcommit: 84cc5ed00833279da3adbde9cb6133a4e788ed3f
+ms.openlocfilehash: 6f1b215e95b7cc911cd2815493eabbbd53a47424
+ms.sourcegitcommit: a162a8f02d66c13b32d0b6255b0b52fc80e2187e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39216817"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39250444"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Processamento inteligente de consultas em bancos de dados SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
@@ -48,6 +48,8 @@ Para saber mais, confira [Processamento de consultas adaptável em bancos de dad
 A compilação adiada de variável da tabela melhora a qualidade do plano e o desempenho geral para consultas que fazem referência a variáveis de tabela. Durante a otimização e compilação inicial, esse recurso propagará estimativas de cardinalidade com base nas contagens reais de linha de variável de tabela.  Essas informações de contagem de linha precisas serão ser usadas para otimizar operações de plano de downstream.
 
 Com a compilação adiada de variável de tabela, a compilação de uma instrução que faz referência a uma variável de tabela é adiada até a primeira execução real da instrução. Esse comportamento de compilação adiada é idêntico ao comportamento das tabelas temporárias, e essa alteração resulta no uso de cardinalidade real, em vez do palpite original de uma linha. Para habilitar a versão prévia da compilação adiada de variável de tabela no Banco de Dados SQL do Azure, habilite o nível de compatibilidade do banco de dados 150 para o banco de dados ao qual você está conectado ao executar a consulta.
+
+Para saber mais, veja [Compilação adiada de variável da tabela](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation ).
 
 ## <a name="approximate-query-processing"></a>Processamento de consulta aproximada
 O processamento de consulta aproximada é uma nova família de recursos projetados para fornecer agregações em grandes conjuntos de dados, nos quais a capacidade de resposta é mais importante do que a precisão absoluta.  Um exemplo pode ser o cálculo de um COUNT(DISTINCT()) entre 10 bilhões de linhas, para exibição em um painel.  Nesse caso, a precisão absoluto não é importante, mas a capacidade de resposta é essencial. A nova função de agregação APPROX_COUNT_DISTINCT retorna o número aproximado de valores não nulos exclusivos em um grupo.

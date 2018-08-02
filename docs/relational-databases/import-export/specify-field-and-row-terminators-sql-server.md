@@ -1,7 +1,7 @@
 ---
 title: Especificar terminadores de campo e linha (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2016
+ms.date: 07/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: import-export
@@ -22,12 +22,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9d0890d79f2277b5f1ea1676bed9f4c9b20e6590
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 42e23160b367d9e977de757acc3bd6883af43479
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32940251"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278669"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Especificar terminadores de campo e linha (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -98,13 +98,21 @@ ms.locfileid: "32940251"
 -   Para uma coluna longa de comprimento fixo cujo espaço é apenas parcialmente usado por várias linhas.  
   
      Nessa situação, especificar um terminador pode minimizar o espaço de armazenamento, permitindo que o campo seja tratado como um campo de comprimento variável.  
-  
+
+### <a name="specifying-n-as-a-row-terminator-for-bulk-export"></a>Como especificar o `\n` como um Terminador de Linha para Exportação em Massa
+
+Quando você especifica `\n` como um terminador de linha para exportação em massa ou usa implicitamente o terminador de linha padrão, o bcp retorna um retorno de carro/alimentação de linha (CRLF) como o terminador da linha. Se você quiser gerar somente um caractere de alimentação de linha (LF) como o terminador de linha, como normalmente ocorre em computadores Unix e Linux, use uma notação hexadecimal para especificar o terminador de linha de LF. Por exemplo:
+
+```cmd
+bcp -r '0x0A'
+```
+
 ### <a name="examples"></a>Exemplos  
  Este exemplo exporta os dados em massa da tabela `AdventureWorks.HumanResources.Department` para o arquivo de dados `Department-c-t.txt` usando o formato de caractere, com uma vírgula como terminador de campo e o caractere de nova linha (\n) como terminador de linha.  
   
  O comando **bcp** contém as opções a seguir.  
   
-|Opção|Description|  
+|Opção|Descrição|  
 |------------|-----------------|  
 |**-c**|Especifica que os campos de dados sejam carregados como dados de caracteres.|  
 |**-t** `,`|Especifica uma vírgula (,) como terminador de campo.|  
@@ -132,7 +140,7 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
      Os terminadores podem ser especificados para campos individuais em um arquivo de formato ou para o arquivo de dados inteiro usando os qualificadores mostrados na tabela a seguir.  
   
-    |Qualificador|Description|  
+    |Qualificador|Descrição|  
     |---------------|-----------------|  
     |FIELDTERMINATOR **='***field_terminator***'**|Especifica o terminador de campo a ser usado em arquivos de dados de caracteres e caracteres Unicode.<br /><br /> O padrão é \t (caractere de tabulação).|  
     |ROWTERMINATOR **='***row_terminator***'**|Especifica o terminador de linha a ser usado em arquivos de dados de caracteres e caracteres Unicode.<br /><br /> O padrão é \n (caractere de nova linha).|  
@@ -144,7 +152,14 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
      Para o provedor de conjunto de linhas em massa OPENROWSET, podem ser especificados terminadores somente no arquivo de formato (que é necessário, exceto para tipos de dados de objeto grande). Se um arquivo de dados de caracteres usar um terminador não padrão, ele deverá ser definido no arquivo de formato. Para obter mais informações, veja [Criar um arquivo de formato &#40;SQL Server&#41;](../../relational-databases/import-export/create-a-format-file-sql-server.md) e [Usar um arquivo de formato para importação de dados em massa &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md).  
   
      Para obter mais informações sobre a cláusula OPENROWSET BULK, veja [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md).  
-  
+
+### <a name="specifying-n-as-a-row-terminator-for-bulk-import"></a>Como especificar `\n` como um Terminador de Linha para Importação em Massa
+Quando você especifica `\n` como um terminador de linha para importação em massa ou usa implicitamente o terminador de linha padrão, o bcp e a instrução BULK INSERT esperam um retorno de carro/alimentação de linha (CRLF) como o terminador da linha. Se o seu arquivo de origem usar somente um caractere de alimentação de linha (LF) como o terminador de linha, como normalmente ocorre em arquivos gerados em computadores Unix e Linux, use uma notação hexadecimal para especificar o terminador de linha de LF. Por exemplo, em uma instrução BULK INSERT:
+
+```sql
+    ROWTERMINATOR = '0x0A'
+```
+ 
 ### <a name="examples"></a>Exemplos  
  Os exemplos nesta seção importam em massa dados de caracteres do arquivo de dados `Department-c-t.txt` criado no exemplo anterior na tabela `myDepartment` no banco de dados de exemplo [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] . Antes de executar os exemplos, é necessário criar essa tabela. Para criar essa tabela no esquema **dbo** , no Editor de Consultas [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , execute o seguinte código:  
   

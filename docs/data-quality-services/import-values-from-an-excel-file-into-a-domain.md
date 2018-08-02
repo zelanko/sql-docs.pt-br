@@ -48,7 +48,7 @@ ms.locfileid: "35310765"
 ####  <a name="Permissions"></a> Permissões  
  Você deve ter a função dqs_kb_editor ou dqs_administrator no banco de dados DQS_MAIN para importar valores de domínio de um arquivo do Excel.  
   
-##  <a name="Import"></a> Import values from an Excel file into a domain  
+##  <a name="Import"></a> Importar valores de um arquivo do Excel para um domínio  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Executar o aplicativo Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   

@@ -128,7 +128,7 @@ ms.locfileid: "37232426"
   
 -   Para o segundo filtro, você escolherá a dimensão Cliente, selecionará o atributo Gênero e selecionará “Feminino” na lista de valores de atributo.  
   
- Após a criação da estrutura de mineração, você pode modificar a definição dos dados de cubo e os critérios de filtro. Para obter mais informações, consulte [Filter the Source Cube for a Mining Structure](../filter-the-source-cube-for-a-mining-structure.md).  
+ Após a criação da estrutura de mineração, você pode modificar a definição dos dados de cubo e os critérios de filtro. Para obter mais informações, consulte [Filtrar o cubo de origem para uma estrutura de mineração](../filter-the-source-cube-for-a-mining-structure.md).  
   
  As guias **Estrutura de Mineração** e **Modelo de Mineração** fornecem uma opção para adicionar um filtro a uma estrutura de mineração existente, clicando em **Definir uma Fatia do Cubo**. A caixa de diálogo **Fatiar Cubo** ajuda-o a criar uma expressão de filtro MDX válida, escolhendo um valor nas listas suspensas.  
   

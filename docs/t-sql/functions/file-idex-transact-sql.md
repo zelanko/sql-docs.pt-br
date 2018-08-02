@@ -26,17 +26,17 @@ caps.latest.revision: 35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 54224c2b6f977f21764553ceddfb7e7be5fd10c7
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 05bb6bb4ec9a34abf7669514f2ed1c18fe83817e
+ms.sourcegitcommit: 90a9a051fe625d7374e76cf6be5b031004336f5a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37788357"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39228422"
 ---
 # <a name="fileidex-transact-sql"></a>FILE_IDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-Retorna o número de identificação (ID) de arquivo para o nome de arquivo lógico especificado de dados, log ou arquivo de texto completo no banco de dados atual.  
+Esta função retorna o número de identificação (ID) do arquivo para o nome lógico especificado de um dado, log ou arquivo de texto completo do banco de dados atual. 
   
 ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,22 +48,22 @@ FILE_IDEX ( file_name )
   
 ## <a name="arguments"></a>Argumentos  
  *file_name*  
- É uma expressão do tipo **sysname** que representa o nome do arquivo para o qual retornar a ID de arquivo.  
+Uma expressão do tipo **sysname** que retorna o valor da ID do arquivo “FILE_IDEX” para o nome do arquivo. 
   
 ## <a name="return-types"></a>Tipos de retorno  
- **int**  
+**int**  
   
- **NULL** em caso de erro  
+**NULL** em caso de erro  
   
 ## <a name="remarks"></a>Remarks  
- *file_name* corresponde ao nome de arquivo lógico exibido na coluna **name** nas exibições do catálogo [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) ou [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).  
+*file_name* corresponde ao nome de arquivo lógico exibido na coluna **name** nas exibições do catálogo [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) ou [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).  
   
- FILE_IDEX pode ser usado em uma lista de seleção, cláusula WHERE ou em qualquer local em que uma expressão for permitida. Para obter mais informações, veja [Expressões &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
+Use `FILE_IDEX` em uma lista SELECT, uma cláusula WHERE ou qualquer lugar com suporte ao uso de uma expressão. Para obter mais informações, veja [Expressões &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
   
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-retrieving-the-file-id-of-a-specified-file"></a>A. Recuperando a ID de um arquivo especificado  
-O exemplo a seguir retorna a ID de arquivo para o arquivo `AdventureWorks_Data`.  
+Este exemplo retorna a ID de arquivo para o arquivo `AdventureWorks_Data`.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -82,7 +82,7 @@ File ID
 ```  
   
 ### <a name="b-retrieving-the-file-id-when-the-file-name-is-not-known"></a>B. Recuperando a ID do arquivo quando o nome de arquivo não é conhecido  
-O exemplo a seguir retorna a ID do arquivo de log do `AdventureWorks` selecionando o nome de arquivo lógico na exibição do catálogo `sys.database_files`, em que o tipo de arquivo é igual a `1` (log).  
+Este exemplo retorna a ID de arquivo do arquivo de log `AdventureWorks`. O trecho de código Transact-SQL (T-SQL) seleciona o nome do arquivo lógico da exibição de catálogo `sys.database_files`, em que o tipo de arquivo é igual a `1` (log).  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -100,7 +100,7 @@ File ID
 ```  
   
 ### <a name="c-retrieving-the-file-id-of-a-full-text-catalog-file"></a>C. Recuperando a ID de um arquivo de catálogo de texto completo  
-O exemplo a seguir retorna a ID do arquivo de texto completo selecionando o nome de arquivo lógico na exibição do catálogo `sys.database_files`, em que o tipo de arquivo é igual a `4` (texto completo). Este exemplo retornará NULL se um catálogo de texto completo não existir.  
+Este exemplo retorna a ID de arquivo de um arquivo de texto completo. O trecho de código T-SQL seleciona o nome do arquivo lógico da exibição de catálogo `sys.database_files`, em que o tipo de arquivo é igual a `4` (texto completo). Este código retornará “NULL” se um catálogo de texto completo não existir.
   
 ```sql  
 SELECT FILE_IDEX((SELECT name FROM sys.master_files WHERE type = 4))  

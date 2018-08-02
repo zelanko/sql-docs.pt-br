@@ -17,17 +17,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 30a22bd9661ea6b5be5d33fad5a9ce03e4f3b1c1
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: ce8da96760e08b2388a8d3a65e0aa9abc67dd169
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981418"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39279177"
 ---
 # <a name="best-practice-with-the-query-store"></a>Melhor prática com o Repositório de Consultas
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  Este tópico descreve as práticas recomendadas para usar o Repositório de Consultas com sua carga de trabalho.  
+  Este artigo descreve as práticas recomendadas para usar o Repositório de Consultas com sua carga de trabalho.  
   
 ##  <a name="SSMS"></a> Use a versão mais recente do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] tem um conjunto de interfaces do usuário projetadas para configurar o Repositório de Consultas, bem como para consumir os dados sobre sua carga de trabalho coletados.  
@@ -45,7 +45,7 @@ Você pode usar o Repositório de Consultas em todos os bancos de dados sem prob
 
 ##  <a name="Configure"></a> Mantenha o Repositório de Consultas ajustado à sua carga de trabalho  
  Configure o Repositório de Consultas com base na sua carga de trabalho e nos requisitos para solução de problemas de desempenho.   
-Os parâmetros padrão são bons para um início rápido, mas você deve monitorar o comportamento do Repositório de Consultas ao longo do tempo e ajustar sua configuração adequadamente:  
+Os parâmetros padrão são bons o bastante para iniciar, mas você deve monitorar o comportamento do Repositório de Consultas ao longo do tempo e ajustar sua configuração adequadamente:  
   
  ![query-store-properties](../../relational-databases/performance/media/query-store-properties.png "query-store-properties")  
   
@@ -213,7 +213,7 @@ SET QUERY_STORE (OPERATION_MODE = READ_WRITE);
   
  Execute as etapas a seguir para ser proativo:  
   
--   Você pode evitar alterações silenciosas do modo de operação aplicando as práticas recomendadas. Se você assegurar que o tamanho do Repositório de Consultas esteja sempre abaixo do valor máximo permitido, isso reduzirá drasticamente a chance de ocorrer transição para o modo somente leitura. Ative a política com base no tamanho conforme descrito na seção [Configurar Repositório de Consultas](#Configure) , para que o Repositório de Consultas limpe automaticamente os dados quando o tamanho se aproximar do limite.  
+-   Você pode evitar alterações silenciosas do modo de operação aplicando as práticas recomendadas. Se você assegurar que o tamanho do Repositório de Consultas esteja sempre abaixo do valor máximo permitido, isso reduzirá drasticamente a chance de ocorrer transição para o modo somente leitura. Ative a política com base no tamanho conforme descrito na seção [Configurar Repositório de Consultas](#Configure), para que o Repositório de Consultas limpe automaticamente os dados quando o tamanho se aproximar do limite.  
   
 -   Para certificar-se de que os dados mais recentes sejam mantidos, configure a política com base em tempo para remover informações obsoletas regularmente.  
   
@@ -276,13 +276,13 @@ A tabela a seguir fornece as práticas recomendadas:
 |Exclua consultas menos relevantes quando o tamanho máximo for atingido.|Ative a política de limpeza com base em tamanho.|  
   
 ##  <a name="Parameterize"></a> Evite usar consultas não parametrizadas  
- O uso de consultas não parametrizadas, quando isso não é absolutamente necessário (por exemplo, em caso análise ad hoc), não é uma melhor prática.  Planos em cache não podem ser reutilizados, o que força o Otimizador de Consulta a compilar consultas para cada texto da consulta exclusivo. Para obter mais informações sobre este tópico, consulte [Diretrizes para uso da parametrização forçada](../../relational-databases/query-processing-architecture-guide.md#ForcedParamGuide).  
-  Além disso, o Repositório de Consultas pode rapidamente exceder a cota de tamanho devido a um número potencialmente grande de textos da consulta diferentes e, consequentemente, um grande número de planos de execução diferentes com forma semelhante.  
+O uso de consultas não parametrizadas, quando isso não é absolutamente necessário (por exemplo, em caso análise ad hoc), não é uma melhor prática.  Planos em cache não podem ser reutilizados, o que força o Otimizador de Consulta a compilar consultas para cada texto da consulta exclusivo. Para saber mais, veja [Diretrizes para uso da parametrização forçada](../../relational-databases/query-processing-architecture-guide.md#ForcedParamGuide).  
+Além disso, o Repositório de Consultas pode rapidamente exceder a cota de tamanho devido a um número potencialmente grande de textos da consulta diferentes e, consequentemente, um grande número de planos de execução diferentes com forma semelhante.  
 Como resultado, o desempenho da carga de trabalho será abaixo do ideal e o Repositório de Consultas poderá alternar para o modo somente leitura ou excluir dados constantemente, tentando acompanhar as consultas em entrada.  
   
- Considere a as opções a seguir:  
+Considere a as opções a seguir:  
 
-  -   Parametrize consultas quando aplicável, por exemplo, encapsule consultas dentro de um procedimento armazenado ou sp_executesql. Para obter mais informações sobre este tópico, consulte [Reutilização de parâmetros e plano de execução](../../relational-databases/query-processing-architecture-guide.md#PlanReuse).    
+-   Parametrize consultas quando aplicável, por exemplo, encapsule consultas dentro de um procedimento armazenado ou sp_executesql. Para saber mais, veja [Reutilização de parâmetros e plano de execução](../../relational-databases/query-processing-architecture-guide.md#PlanReuse).    
   
 -   Use a opção [**Otimizar para Cargas de Trabalho Ad Hoc**](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) se sua carga de trabalho contiver muitos lotes ad hoc de uso único com planos de consulta diferentes.  
   
@@ -297,11 +297,11 @@ Como resultado, o desempenho da carga de trabalho será abaixo do ideal e o Repo
 -   Defina o **Modo de Captura de Consulta** como AUTO para filtrar automaticamente, desconsiderando consultas ad hoc com consumo de recursos pequeno.  
   
 ##  <a name="Drop"></a> Evite um padrão de DROP e CREATE durante a manutenção de objetos recipientes para as consultas  
- O Repositório de Consultas associa a entrada da consulta com um objeto recipiente (procedimento armazenado, função e gatilho).  Ao recriar um objeto recipiente, uma nova entrada da consulta será gerada para o mesmo texto da consulta. Isso impedirá você de acompanhar estatísticas de desempenho para essa consulta ao longo do tempo e de usar o mecanismo de imposição de plano. Para evitar isso, use o processo `ALTER <object>` para alterar uma definição de objeto recipiente sempre que possível.  
+O Repositório de Consultas associa a entrada da consulta com um objeto recipiente (procedimento armazenado, função e gatilho).  Ao recriar um objeto recipiente, uma nova entrada da consulta será gerada para o mesmo texto da consulta. Isso impedirá você de acompanhar estatísticas de desempenho para essa consulta ao longo do tempo e de usar o mecanismo de imposição de plano. Para evitar isso, use o processo `ALTER <object>` para alterar uma definição de objeto recipiente sempre que possível.  
   
 ##  <a name="CheckForced"></a> Verifique o status de Planos Forçados regularmente  
 
- A imposição de plano é um mecanismo prático para corrigir o desempenho das consultas críticas e torná-las mais previsíveis. No entanto, assim como ocorre com as dicas de plano e guias de plano, impor um plano não é uma garantia de que ele será usado em execuções futuras. Normalmente, quando o esquema de banco de dados é alterado de forma que os objetos referenciados pelo plano de execução são alterados ou removidos, a imposição de plano passará a falhar. Nesse caso, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] voltará à recompilação de consultas, enquanto o motivo real da falha da imposição será exposto em [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). A consulta a seguir retorna informações sobre planos impostos:  
+A imposição de plano é um mecanismo prático para corrigir o desempenho das consultas críticas e torná-las mais previsíveis. No entanto, assim como ocorre com as dicas de plano e guias de plano, impor um plano não é uma garantia de que ele será usado em execuções futuras. Normalmente, quando o esquema de banco de dados é alterado de forma que os objetos referenciados pelo plano de execução são alterados ou removidos, a imposição de plano passará a falhar. Nesse caso, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] voltará à recompilação de consultas, enquanto o motivo real da falha da imposição será exposto em [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). A consulta a seguir retorna informações sobre planos impostos:  
   
 ```sql  
 USE [QueryStoreDB];  
@@ -314,7 +314,7 @@ JOIN sys.query_store_query AS q on p.query_id = q.query_id
 WHERE is_forced_plan = 1;  
 ```  
   
- Para obter uma lista completa dos motivos, consulte [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). Você também pode usar o XEvent **query_store_plan_forcing_failed** para acompanhar a solução de problemas de falhas de imposição de plano.  
+ Para obter uma lista completa dos motivos, consulte [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). Você também pode usar o XEvent **query_store_plan_forcing_failed** para acompanhar e solucionar problemas de falhas de imposição de plano.  
   
 ##  <a name="Renaming"></a> Evite renomear bancos de dados se você tiver consultas com Planos Forçados  
 
@@ -324,11 +324,14 @@ Se você renomear um banco de dados, a imposição de plano falhará, causando r
 
 ##  <a name="Recovery"></a> Use sinalizadores de rastreamento em servidores de missão crítica para melhorar a recuperação de desastre
  
-  Os sinalizadores de rastreamento global 7745 e 7752 podem ser usados para melhorar o desempenho do Repositório de Consultas durante cenários de recuperação de desastres e alta disponibilidade. Para obter mais informações, consulte [Sinalizadores de rastreamento](../..//t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
+Os sinalizadores de rastreamento global 7745 e 7752 podem ser usados para melhorar o desempenho do Repositório de Consultas durante cenários de recuperação de desastres e alta disponibilidade. Para obter mais informações, consulte [Sinalizadores de rastreamento](../..//t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
   
-  O sinalizador de rastreamento 7745 impedirá o comportamento padrão em que o Repositório de Consultas grava dados em disco antes que o SQL Server possa ser desligado.
+O sinalizador de rastreamento 7745 impedirá o comportamento padrão em que o Repositório de Consultas grava dados em disco antes que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possa ser desligado.
   
-  O sinalizador de rastreamento 7752 habilita o carregamento assíncrono do Repositório de Consultas e também permite que o SQL Server execute consultas antes que o Repositório de Consultas seja totalmente carregado. O comportamento padrão do Repositório de Consultas impede que consultas sejam executadas antes que o Repositório de Consultas tenha sido recuperado.
+O sinalizador de rastreamento 7752 habilita o carregamento assíncrono do Repositório de Consultas e também permite que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] execute consultas antes que o Repositório de Consultas seja totalmente carregado. O comportamento padrão do Repositório de Consultas impede que consultas sejam executadas antes que o Repositório de Consultas tenha sido recuperado.
+
+> [!IMPORTANT]
+> Se você estiver usando o Repositório de Consultas para obter informações de carga de trabalho em tempo real no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], planeje instalar as correções de escalabilidade de desempenho na [KB 4340759](http://support.microsoft.com/help/4340759) assim que possível. 
 
 ## <a name="see-also"></a>Consulte Também  
  [Exibições de Catálogo do Repositório de Consultas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   

@@ -1,7 +1,7 @@
 ---
 title: table (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 7/23/2017
+ms.date: 7/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -19,12 +19,12 @@ caps.latest.revision: 48
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 035060bb8c9b0f31d6f8712d0abf94b2cf1c2939
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 2e95b9e38ab4716ce244c8a1328a2f4d2437d769
+ms.sourcegitcommit: eb926c51b9caeccde1d60cfa92ddfb12067dc09e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37432235"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39240678"
 ---
 # <a name="table-transact-sql"></a>tabela (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -107,7 +107,6 @@ As consultas que modificam variáveis **table** não geram planos de execução 
   
 Não é possível criar índices explicitamente sobre variáveis **table** e nenhuma estatística é mantida sobre variáveis **table**. A partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], uma nova sintaxe foi introduzida, a qual permite que você crie determinados tipos de índice em linha com a definição da tabela.  Usando essa nova sintaxe, você pode criar índices em variáveis de **tabela** como parte da definição de tabela. Em alguns casos, o desempenho pode melhorar com o uso de tabelas temporárias em vez disso, que fornecem suporte de índice completo e estatísticas. Para saber mais sobre tabelas temporárias e criação de índice embutido, confira [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).
 
-
 Restrições CHECK, valores DEFAULT e colunas computadas na declaração de tipo **table** não podem chamar funções definidas pelo usuário.
   
 Não é oferecido suporte à operação de atribuição entre variáveis **table**.
@@ -115,6 +114,23 @@ Não é oferecido suporte à operação de atribuição entre variáveis **table
 Como as variáveis **table** têm escopo limitado e não fazem parte do banco de dados persistente, elas não são afetadas por reversões de transações.
   
 As variáveis de tabela não podem ser alteradas após a criação.
+
+## <a name="table-variable-deferred-compilation"></a>Compilação adiada de variável da tabela
+**A compilação adiada de variável da tabela** melhora a qualidade do plano e o desempenho geral para consultas que fazem referência a variáveis de tabela. Durante a otimização e a compilação do plano inicial, esse recurso propagará estimativas de cardinalidade com base nas contagens reais de linha de variável de tabela. Essas informações de contagem de linha precisas serão usadas para otimizar operações de plano de downstream.
+
+> [!NOTE]
+> A compilação adiada de variável de tabela é um recurso de visualização público do banco de dados SQL do Azure.  
+
+Com a compilação adiada de variável de tabela, a compilação de uma instrução que faz referência a uma variável de tabela é adiada até a primeira execução real da instrução. Esse comportamento de compilação adiada é idêntico ao comportamento das tabelas temporárias, e essa alteração resulta no uso de cardinalidade real, em vez do palpite original de uma linha. 
+
+Para habilitar a versão prévia da compilação adiada de variável de tabela, habilite o nível de compatibilidade do banco de dados 150 para o banco de dados ao qual você está conectado ao executar a consulta.
+
+A compilação adiada de variável da tabela **não** altera nenhuma característica das variáveis de tabela. Por exemplo, esse recurso não adiciona as estatísticas de coluna às variáveis de tabela.
+
+A compilação adiada de variável da tabela **não aumenta a frequência de recompilação**.  Em vez disso, ela alterna onde ocorre a compilação inicial. O plano armazenado em cache resultante é gerado com base na contagem da linha de variável da tabela de compilação adiada inicial. O plano armazenado em cache é reutilizado por consultas consecutivas até que o plano seja removido ou recompilado. 
+
+Se a contagem de linha de variável de tabela usada para a compilação de plano inicial representar um valor típico significativamente diferente de uma estimativa de contagem de linha fixa, as operações downstream serão beneficiadas.  Se a contagem de linha de variável de tabela variar consideravelmente entre as execuções, o desempenho pode não ser melhorado por esse recurso.
+
   
 ## <a name="examples"></a>Exemplos  
   
@@ -187,5 +203,3 @@ SELECT * FROM Sales.ufn_SalesByStore (602);
 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
 [Usar parâmetros com valor de tabela &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)  
 [Query Hints &#40;Transact-SQL&#41; [Dicas de consulta (Transact-SQL)]](../../t-sql/queries/hints-transact-sql-query.md)
-  
-  
