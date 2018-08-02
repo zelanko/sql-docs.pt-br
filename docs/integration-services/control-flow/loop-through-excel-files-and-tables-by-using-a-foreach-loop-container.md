@@ -76,7 +76,7 @@ ms.locfileid: "35401058"
   
 ## <a name="to-loop-through-excel-tables-by-using-the-foreach-adonet-schema-rowset-enumerator"></a>Para criar um loop através de tabelas do Excel usando o enumerador de Conjunto de Linhas de Esquema ADO.NET Foreach  
   
-1.  Crie um gerenciador de conexões ADO.NET que use o Provedor Microsoft ACE OLE DB para se conectar a uma pasta de trabalho do Excel. Na página Tudo da caixa de diálogo **Gerenciador de Conexões**, insira a versão do Excel, neste caso, Excel 12.0, como o valor da propriedade Propriedades Estendidas. Para obter mais informações, consulte [Add, Delete, or Share a Connection Manager in a Package](http://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655).  
+1.  Crie um gerenciador de conexões ADO.NET que use o Provedor Microsoft ACE OLE DB para se conectar a uma pasta de trabalho do Excel. Na página Tudo da caixa de diálogo **Gerenciador de Conexões**, insira a versão do Excel, neste caso, Excel 12.0, como o valor da propriedade Propriedades Estendidas. Para obter mais informações, consulte [adicionar, excluir ou compartilhar um Gerenciador de Conexão em um pacote](http://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655).  
   
 2.  Crie uma variável de cadeia que receberá o nome da tabela atual em cada iteração do loop.  
   

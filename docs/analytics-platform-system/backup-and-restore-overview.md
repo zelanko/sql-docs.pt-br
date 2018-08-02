@@ -11,7 +11,7 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 118b9ced12e01ac6655d85969bb61717f2b31e0b
 ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/19/2018
 ms.locfileid: "31544808"

@@ -13,7 +13,7 @@ ms.author: v-daveng
 manager: kenvh
 ms.openlocfilehash: 2f2f4bafe48018da5c6f634b272a540021fd4ca2
 ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
-ms.translationtype: MT
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/17/2018
 ms.locfileid: "34236027"

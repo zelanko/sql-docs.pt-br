@@ -42,7 +42,7 @@ ms.locfileid: "35311215"
 ####  <a name="Permissions"></a> Permissões  
  Você deve ter a função dqs_kb_editor ou dqs_administrator no banco de dados DQS_MAIN para exportar uma base de dados de conhecimento para um arquivo de dados .dqs.  
   
-##  <a name="Export"></a> Export a knowledge base to a .dqs file  
+##  <a name="Export"></a> Exportar uma base de dados de conhecimento para um arquivo .dqs  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Executar o aplicativo Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   

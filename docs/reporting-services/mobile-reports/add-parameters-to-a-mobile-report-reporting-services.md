@@ -1,7 +1,7 @@
 ---
 title: Adicionar parâmetros a um relatório móvel | Reporting Services | Microsoft Docs
 ms.custom: ''
-ms.date: 11/01/2016
+ms.date: 07/30/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.component: mobile-reports
@@ -15,19 +15,19 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6b0f444dbae81f05a28ff9cea6102d63aef317f6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1a854a49884c6a2f1bd93794a7854d30dc1e2d3d
+ms.sourcegitcommit: d4392c68eb5f15b175165cf03ef8253565323d68
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33018374"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39359603"
 ---
 # <a name="add-parameters-to-a-mobile-report--reporting-services"></a>Adicionar parâmetros a um relatório móvel | Reporting Services
 Você pode criar um relatório móvel do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] com parâmetros, para que você e os leitores do relatório possam filtrar seus relatórios. Um relatório com parâmetros também pode ser o destino de um [detalhamento de um relatório de origem](../../reporting-services/mobile-reports/add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls.md). 
 
-Para criar um relatório móvel com parâmetros, comece com um conjunto de dados compartilhado com, pelo menos, um parâmetro. Leia sobre [como criar parâmetros em um conjunto de dados compartilhado](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
+Para criar um relatório móvel com parâmetros, comece com um conjunto de dados compartilhado com, pelo menos, um parâmetro. Leia sobre [como criar parâmetros em um conjunto de dados compartilhado](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md). Os relatórios móveis não oferecem suporte a valores nulos para os parâmetros padrão, portanto, certifique-se de que os parâmetros têm valores padrão diferentes de nulo.
 
-Depois de adicionar parâmetros a um relatório móvel, você cria uma URL para [abrir o relatório com parâmetros de cadeia de consulta](../../reporting-services/mobile-reports/open-a-mobile-report-with-specific-query-string-parameters-reporting-services.md).
+Depois de adicionar parâmetros a um relatório móvel, você cria uma URL para [abrir o relatório com parâmetros de cadeia de consulta](../../reporting-services/mobile-reports/open-a-mobile-report-with-specific-query-string-parameters-reporting-services.md). 
 
 1. Na barra superior do portal da Web do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] , selecione **Novo** > **Relatório Móvel**.  
   

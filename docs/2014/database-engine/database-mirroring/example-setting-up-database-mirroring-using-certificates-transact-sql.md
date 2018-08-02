@@ -225,7 +225,7 @@ ms.locfileid: "37248866"
 > [!IMPORTANT]  
 >  Se tiver a intenção de executar em modo de alta segurança com failover automático, você deve repetir as mesmas etapas de configuração para configurar a testemunha para conexões de saída e de entrada. Quando uma testemunha está envolvida, a configuração de conexões de entrada e de saída requer a configuração de logons e usuários para a testemunha nos dois parceiros, e vice-versa.  
   
- Para obter mais informações, consulte [Allow a Database Mirroring Endpoint to Use Certificates for Inbound Connections &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-inbound-connections.md).  
+ Para obter mais informações, consulte [Permitir que um ponto de extremidade de espelhamento de banco de dados use certificados para conexões de entrada &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-inbound-connections.md).  
   
 ### <a name="creating-the-mirror-database"></a>Criando o banco de dados espelho  
  Para obter informações sobre como criar um banco de dados espelho, consulte [Preparar um banco de dados espelho para espelhamento &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md).  

@@ -31,12 +31,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f0f9fd16f4104e6e6d15aa4a5617f092a4c7e424
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 400b5f3a35546b84b3d1c7a3006e77c27bf447ff
+ms.sourcegitcommit: d4392c68eb5f15b175165cf03ef8253565323d68
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38036174"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39359593"
 ---
 # <a name="create-certificate-transact-sql"></a>CREATE CERTIFICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -158,7 +158,7 @@ CREATE CERTIFICATE certificate_name
  É a data na qual o certificado se torna válido. Se não especificada, START_DATE será definida com a data atual. START_DATE está na hora UTC e pode ser especificado em qualquer formato que possa ser convertido em uma data e hora.  
   
  EXPIRY_DATE ='*datetime*'  
- É a data na qual o certificado expira. Se não for especificada, EXPIRY_DATE será definida com uma data um ano após START_DATE. EXPIRY_DATE está na hora UTC e pode ser especificado em qualquer formato que possa ser convertido em uma data e hora. O Service Broker [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verifica a data de expiração. No entanto, a expiração não é imposta quando o certificado é usado para criptografia.  
+ É a data na qual o certificado expira. Se não for especificada, EXPIRY_DATE será definida com uma data um ano após START_DATE. EXPIRY_DATE está na hora UTC e pode ser especificado em qualquer formato que possa ser convertido em uma data e hora. O Service Broker [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verifica a data de expiração. O backup com criptografia usando certificados também verifica a data de validade e não permitirá que um novo backup seja criado com um certificado expirado, mas permitirá as restaurações com um certificado expirado. No entanto, a expiração não é imposta quando o certificado é usado para criptografia de banco de dados ou Always Encrypted.  
   
  ACTIVE FOR BEGIN_DIALOG = { **ON** | OFF }  
  Disponibiliza o certificado para o iniciador de uma conversa de caixa de diálogo do [!INCLUDE[ssSB](../../includes/sssb-md.md)]. O valor padrão é ON.  
