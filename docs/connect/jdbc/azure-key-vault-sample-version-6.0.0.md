@@ -1,5 +1,5 @@
 ---
-title: Cofre de chave do Azure versão exemplo 6.0.0 | Microsoft Docs
+title: Versão 6.0.0 do exemplo de Cofre de chaves do Azure | Microsoft Docs
 ms.custom: ''
 ms.date: 02/28/2018
 ms.prod: sql
@@ -14,20 +14,20 @@ caps.latest.revision: 1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 530d952126de09c46fffe7537e91be443f1bd4da
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: e7526276da62ea6f251944eca7b7ce4b1a03c2f6
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32828591"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278927"
 ---
-# <a name="azure-key-vault-sample-version-600"></a>Exemplo de Cofre de chaves do Azure versão 6.0.0
+# <a name="azure-key-vault-sample-version-600"></a>Versão de amostra do Azure Key Vault 6.0.0
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-##  <a name="sample-application-using-azure-key-vault-feature"></a>Aplicativo de exemplo usando o recurso de Cofre de chaves do Azure
-Este aplicativo é executável usando o Driver JDBC 6.0.0 e do Azure-Keyvault (versão 0.9.7), Adal4j (versão 1.3.0) e suas dependências.  As dependências subjacentes podem ser resolvidas adicionando essas bibliotecas no arquivo pom do projeto, conforme descrito [aqui](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md): 
+##  <a name="sample-application-using-azure-key-vault-feature"></a>Aplicativo de exemplo usando o recurso do Azure Key Vault
+Este aplicativo é executável usando o Driver JDBC 6.0.0 e o Azure-Keyvault (versão 0.9.7), Adal4j (versão 1.3.0) e suas dependências.  As dependências subjacentes podem ser resolvidas adicionando essas bibliotecas para o arquivo pom do projeto, conforme descrito [aqui](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md): 
 
-```xml
+```java
 import java.net.URISyntaxException;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -285,5 +285,5 @@ public class AE_AKV_Maven {
 
 ```
 
-## <a name="see-also"></a>Consulte também  
- [Exemplo de Cofre de chaves do Azure versão 6.2.2](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Versão de amostra do Azure Key Vault 6.2.2](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md)  

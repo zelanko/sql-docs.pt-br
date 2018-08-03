@@ -1,7 +1,7 @@
 ---
 title: Exemplo de fonte de dados | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,27 +14,27 @@ caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1a67bfc72422962f8510fc6486dc37451bfd7224
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: aeb5c252d40c7c9bd389d5d628c02ba124009130
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32831301"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278997"
 ---
 # <a name="data-source-sample"></a>Exemplo de fonte de dados
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   Este aplicativo de exemplo do [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] demonstra como se conectar a um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] usando um objeto de fonte de dados. Ele também demonstra como recuperar dados de um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] usando um procedimento armazenado.  
   
- O arquivo de código desse exemplo chama-se connectDS.java e pode ser encontrado neste local:  
+ O arquivo de código desta amostra chama-se ConnectDS.java e pode ser encontrado no seguinte local:  
   
  \<*diretório de instalação*> \sqljdbc_\<*versão*>\\<*idioma*> \samples\connections  
   
 ## <a name="requirements"></a>Requisitos  
- Para executar este aplicativo de exemplo, será necessário definir o classpath para incluir o arquivo sqljdbc.jar ou o arquivo sqljdbc4.jar. Se no classpath faltar uma entrada para sqljdbc.jar ou sqljdbc4.jar, o aplicativo de exemplo lançará a exceção comum "Class not found". Também será necessário o acesso ao banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]. Para obter mais informações sobre como definir o classpath, consulte [usando o Driver JDBC](../../../connect/jdbc/using-the-jdbc-driver.md).  
+ Para executar este aplicativo de exemplo, é necessário definir o classpath para incluir o arquivo mssql-jdbc.jar. Também será necessário ter acesso ao banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]. Para obter mais informações sobre como definir o classpath, consulte [usando o Driver JDBC](../../../connect/jdbc/using-the-jdbc-driver.md).  
   
 > [!NOTE]  
->  O [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] fornece os arquivos de biblioteca de classes sqljdbc.jar e sqljdbc4.jar a serem usados, dependendo das configurações preferenciais do JRE (Java Runtime Environment). Para obter mais informações sobre qual arquivo JAR escolher, consulte [requisitos do sistema para o Driver JDBC](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
+>  O [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] fornece os arquivos de biblioteca de classes mssql-jdbc a serem usados de acordo com suas configurações preferenciais do JRE (Java Runtime Environment). Para obter mais informações sobre qual arquivo JAR escolher, consulte [requisitos do sistema para o Driver JDBC](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
   
 ## <a name="example"></a>Exemplo  
  No exemplo a seguir, o código de exemplo define várias propriedades de conexão usando métodos setter do objeto [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) e, em seguida, chama o método [getConnection](../../../connect/jdbc/reference/getconnection-method-sqlserverdatasource.md) do objeto SQLServerDataSource para retornar um objeto [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).  
@@ -44,58 +44,47 @@ ms.locfileid: "32831301"
  Por fim, o exemplo usa o objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) retornado do método executeQuery para iterar pelos resultados retornados pelo procedimento armazenado.  
   
 ```java
-import java.sql.*;  
-import com.microsoft.sqlserver.jdbc.*;  
-  
-public class connectDS {  
-  
-   public static void main(String[] args) {  
-  
-      // Declare the JDBC objects.  
-      Connection con = null;  
-      CallableStatement cstmt = null;  
-      ResultSet rs = null;  
-  
-      try {  
-         // Establish the connection.   
-         SQLServerDataSource ds = new SQLServerDataSource();  
-         ds.setUser("UserName");  
-         ds.setPassword("*****");  
-         ds.setServerName("localhost");  
-         ds.setPortNumber(1433);   
-         ds.setDatabaseName("AdventureWorks");  
-         con = ds.getConnection();  
-  
-         // Execute a stored procedure that returns some data.  
-         cstmt = con.prepareCall("{call dbo.uspGetEmployeeManagers(?)}");  
-         cstmt.setInt(1, 50);  
-         rs = cstmt.executeQuery();  
-  
-         // Iterate through the data in the result set and display it.  
-         while (rs.next()) {  
-            System.out.println("EMPLOYEE: " + rs.getString("LastName") +   
-               ", " + rs.getString("FirstName"));  
-            System.out.println("MANAGER: " + rs.getString("ManagerLastName") +   
-               ", " + rs.getString("ManagerFirstName"));  
-            System.out.println();  
-         }  
-      }  
-  
-      // Handle any errors that may have occurred.  
-      catch (Exception e) {  
-         e.printStackTrace();  
-      }  
-      finally {  
-         if (rs != null) try { rs.close(); } catch(Exception e) {}  
-         if (cstmt != null) try { cstmt.close(); } catch(Exception e) {}  
-         if (con != null) try { con.close(); } catch(Exception e) {}  
-         System.exit(1);  
-      }  
-   }  
-}  
+import java.sql.CallableStatement;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import com.microsoft.sqlserver.jdbc.SQLServerDataSource;
+
+public class ConnectDS {
+
+    public static void main(String[] args) {
+
+        // Create datasource.
+        SQLServerDataSource ds = new SQLServerDataSource();
+        ds.setUser("<user>");
+        ds.setPassword("<password>");
+        ds.setServerName("<server>");
+        ds.setPortNumber(<port>);
+        ds.setDatabaseName("AdventureWorks");
+
+        try (Connection con = ds.getConnection(); 
+                CallableStatement cstmt = con.prepareCall("{call dbo.uspGetEmployeeManagers(?)}");) {
+            // Execute a stored procedure that returns some data.
+            cstmt.setInt(1, 50);
+            ResultSet rs = cstmt.executeQuery();
+
+            // Iterate through the data in the result set and display it.
+            while (rs.next()) {
+                System.out.println("EMPLOYEE: " + rs.getString("LastName") + ", " + rs.getString("FirstName"));
+                System.out.println("MANAGER: " + rs.getString("ManagerLastName") + ", " + rs.getString("ManagerFirstName"));
+                System.out.println();
+            }
+        }
+        // Handle any errors that may have occurred.
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Conectando e recuperando dados](../../../connect/jdbc/connecting-and-retrieving-data.md)  
   
   

@@ -103,6 +103,8 @@
           href: basic-data-types-sample.md
         - name: Exemplo de tipo de dados SQLXML
           href: sqlxml-data-type-sample.md
+        - name: Exemplo de tipos de dados espaciais
+          href: spatial-data-types-sample.md
     - name: Trabalhando com conjuntos de resultados
       href: working-with-result-sets.md
       items:
@@ -121,6 +123,8 @@
           href: reading-large-data-with-stored-procedures-sample.md
         - name: Atualizando exemplo de dados grande
           href: updating-large-data-sample.md
+    - name: Exemplo de classificação e descoberta de dados
+      href: data-discovery-classification-sample.md
 - name: Conformidade e legal para o Driver SQL JDBC
   href: compliance-and-legal-for-the-jdbc-sql-driver.md
   items:
@@ -163,6 +167,8 @@
           href: using-parameter-metadata.md
         - name: Usando tipos de dados básicos
           href: using-basic-data-types.md
+        - name: Usando tipos de dados espaciais
+          href: use-spatial-datatypes.md
         - name: Noções básicas sobre transações
           href: understanding-transactions.md
         - name: Trabalhando com uma conexão
@@ -241,6 +247,8 @@
           href: wrappers-and-interfaces.md
         - name: Usando cópia em massa com o JDBC Driver
           href: using-bulk-copy-with-the-jdbc-driver.md
+        - name: Usando a API de cópia em massa para a operação de inserção em lote
+          href: use-bulk-copy-api-batch-insert-operation.md
         - name: Usando um procedimento armazenado com parâmetros de saída
           href: using-a-stored-procedure-with-output-parameters.md
         - name: Executando operações em lote
@@ -257,3 +265,5 @@
           href: azure-key-vault-sample-version-6.0.0.md
         - name: Versão de amostra do Azure Key Vault 6.2.2
           href: azure-key-vault-sample-version-6.2.2.md
+        - name: Versão de amostra do Azure Key Vault 7.0.0
+          href: azure-key-vault-sample-version-7-0-0.md

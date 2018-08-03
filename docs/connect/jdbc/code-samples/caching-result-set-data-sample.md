@@ -1,7 +1,7 @@
 ---
-title: Exemplo de dados do conjunto de resultados em cache | Microsoft Docs
+title: Exemplo de dados de conjunto de resultados em cache | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,143 +14,124 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f5e76a7d66a2cba66774a27e5d0f0c155bfb92d7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 487033ade14c5f320b45baba8857c171b94032a4
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32833711"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278967"
 ---
 # <a name="caching-result-set-data-sample"></a>Exemplo de armazenamento de dados do conjunto de resultados em cache
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Isso [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] aplicativo de exemplo demonstra como recuperar um grande conjunto de dados de um banco de dados e, em seguida, controlar o número de linhas de dados que são armazenados em cache no cliente usando o [setFetchSize](../../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md) método o [ SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto.  
+  Este aplicativo de exemplo do [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] demonstra como recuperar um conjunto grande de dados de um banco de dados e, em seguida, controlar o número de linhas de dados armazenadas em cache no cliente, usando o método [setFetchSize](../../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md) do objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 > [!NOTE]  
->  Limitar o número de linhas armazenadas em cache no cliente é diferente de limitar o número total de linhas que um conjunto de resultados pode conter. Para controlar o número total de linhas que estão contidos em um conjunto de resultados, use o [setMaxRows](../../../connect/jdbc/reference/setmaxrows-method-sqlserverstatement.md) método do [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) objeto, que é herdado por ambos os [ SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) e [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) objetos.  
+>  Limitar o número de linhas armazenadas em cache no cliente é diferente de limitar o número total de linhas que um conjunto de resultados pode conter. Para controlar o número total de linhas contidas em um conjunto de resultados, use o método [setMaxRows](../../../connect/jdbc/reference/setmaxrows-method-sqlserverstatement.md) do objeto [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md), herdado pelos objetos [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) e [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md).  
   
- Para definir um limite no número de linhas armazenadas em cache no cliente, você primeiro deve usar um cursor do lado do servidor quando você cria um dos objetos de instrução declarando especificamente o tipo de cursor a ser usado ao criar o objeto de instrução. Por exemplo, o driver JDBC fornece o tipo de cursor TYPE_SS_SERVER_CURSOR_FORWARD_ONLY, que é um somente avanço, somente leitura cursor do lado do servidor para uso com [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] bancos de dados.  
+ Para definir um limite no número de linhas armazenadas em cache no cliente, primeiro use um cursor do lado do servidor ao criar um dos objetos Statement declarando especificamente o tipo de cursor a ser usado ao criar o objeto Statement. Por exemplo, o driver JDBC fornece o tipo de cursor TYPE_SS_SERVER_CURSOR_FORWARD_ONLY, que é um cursor somente de avanço rápido, somente leitura, do lado do servidor, para uso com bancos de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
   
 > [!NOTE]  
 >  Uma alternativa ao uso de tipo de cursor específico do SQL Server é usar a propriedade de cadeia de conexão selectMethod, definindo seu valor como "cursor". Para obter mais informações sobre os tipos de cursor com suporte pelo driver JDBC, consulte [Noções básicas sobre tipos de Cursor](../../../connect/jdbc/understanding-cursor-types.md).  
   
- Depois de executar a consulta contida no objeto de instrução e os dados são retornados ao cliente como resultado conjunto, você pode chamar o método setFetchSize para controlar a quantidade de dados é recuperado do banco de dados ao mesmo tempo. Por exemplo, se você tiver uma tabela com 100 linhas de dados e definir o tamanho da busca como 10, apenas 10 linhas de dados serão armazenadas em cache no cliente em qualquer momento determinado. Embora esse procedimento reduza a velocidade de processamento dos dados, ele tem a vantagem de usar menos memória no cliente, o que pode ser especialmente útil quando for necessário processar grandes quantidades de dados.  
+ Depois de executar a consulta no objeto Statement e os dados forem retornados ao cliente como um conjunto de resultados, você poderá chamar o método setFetchSize para controlar a quantidade de dados recuperados do banco de dados de uma só vez. Por exemplo, se você tiver uma tabela com 100 linhas de dados e definir o tamanho do fetch como 10, apenas 10 linhas de dados serão armazenadas em cache no cliente a qualquer momento. Embora esse procedimento reduza a velocidade de processamento dos dados, ele tem a vantagem de usar menos memória no cliente, o que pode ser especialmente útil quando for necessário processar grandes quantidades de dados.  
   
- O arquivo de código desse exemplo chama-se cacheRS.java e pode ser encontrado neste local:  
+ O arquivo de código desta amostra chama-se CacheRS.java e pode ser encontrado no seguinte local:  
   
  \<*diretório de instalação*> \sqljdbc_\<*versão*>\\<*idioma*> \samples\resultsets  
   
 ## <a name="requirements"></a>Requisitos  
- Para executar este aplicativo de exemplo, é necessário definir o classpath para incluir o arquivo sqljdbc.jar ou o arquivo sqljdbc4.jar. Se no classpath faltar uma entrada para sqljdbc.jar ou sqljdbc4.jar, o aplicativo de exemplo lançará a exceção comum "Class not found". Também será necessário o acesso ao banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]. Para obter mais informações sobre como definir o classpath, consulte [usando o Driver JDBC](../../../connect/jdbc/using-the-jdbc-driver.md).  
+ Para executar este aplicativo de exemplo, é necessário definir o classpath para incluir o arquivo mssql-jdbc.jar. Também será necessário ter acesso ao banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]. Para obter mais informações sobre como definir o classpath, consulte [usando o Driver JDBC](../../../connect/jdbc/using-the-jdbc-driver.md).  
   
 > [!NOTE]  
->  O [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] fornece os arquivos de biblioteca de classes sqljdbc.jar e sqljdbc4.jar a serem usados, dependendo das configurações preferenciais do JRE (Java Runtime Environment). Para obter mais informações sobre qual arquivo JAR escolher, consulte [requisitos do sistema para o Driver JDBC](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
+>  O [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] fornece os arquivos de biblioteca de classes mssql-jdbc a serem usados de acordo com suas configurações preferenciais do JRE (Java Runtime Environment). Para obter mais informações sobre qual arquivo JAR escolher, consulte [requisitos do sistema para o Driver JDBC](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
   
 ## <a name="example"></a>Exemplo  
- No exemplo a seguir, o código de exemplo faz uma conexão com o banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]. Em seguida, ele usa uma instrução SQL com o [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) objeto, especifica o tipo de cursor do lado do servidor e, em seguida, executa a instrução SQL e coloca os dados retornados em um objeto SQLServerResultSet.  
+ No exemplo a seguir, o código de exemplo faz uma conexão com o banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]. Em seguida, ele usa uma instrução SQL com o objeto [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md), especifica o tipo de cursor do lado do servidor e, depois, executa a instrução SQL e coloca os dados retornados em um objeto SQLServerResultSet.  
   
- Em seguida, o código de exemplo chama o método de timerTest personalizado, passando como argumentos o tamanho da busca para uso e o conjunto de resultados. O método timerTest, em seguida, define o tamanho da busca do resultado definido usando o método setFetchSize, define a hora de início do teste e itera por meio do conjunto de resultados com um `While` loop. Assim que o `While` loop é finalizado, o código define a hora de parada do teste e, em seguida, exibe o resultado do teste, incluindo o tamanho da busca, o número de linhas processadas, e o tempo necessário para executar o teste.  
+ A seguir, o código de exemplo chama o método timerTest personalizado, passando como argumentos o tamanho do fetch a ser usado e o conjunto de resultados. Em seguida, o método timerTest define o tamanho do fetch do conjunto de resultados usando o método setFetchSize, define a hora de início do teste e, depois, itera pelo conjunto de resultados com um loop `While`. Assim que o loop `While` é finalizado, o código define o tempo de parada do teste e, em seguida, exibe o resultado do teste, incluindo o tamanho do fetch, o número de linhas processadas e o tempo necessário para executar o teste.  
   
 ```java
-import java.sql.*;  
-import com.microsoft.sqlserver.jdbc.SQLServerResultSet;  
-  
-public class cacheRS {  
-  
-   public static void main(String[] args) {  
-  
-      // Create a variable for the connection string.  
-      String connectionUrl = "jdbc:sqlserver://localhost:1433;" +  
-            "databaseName=AdventureWorks;integratedSecurity=true;";  
-  
-      // Declare the JDBC objects.  
-      Connection con = null;  
-      Statement stmt = null;  
-      ResultSet rs = null;  
-  
-      try {  
-  
-         // Establish the connection.  
-         Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");  
-         con = DriverManager.getConnection(connectionUrl);  
-  
-         // Create and execute an SQL statement that returns a large  
-         // set of data and then display it.  
-         String SQL = "SELECT * FROM Sales.SalesOrderDetail;";  
-         stmt = con.createStatement(SQLServerResultSet.TYPE_SS_SERVER_CURSOR_FORWARD_ONLY, +  
-               SQLServerResultSet.CONCUR_READ_ONLY);  
-  
-         // Perform a fetch for every row in the result set.  
-         rs = stmt.executeQuery(SQL);  
-         timerTest(1, rs);  
-         rs.close();  
-  
-         // Perform a fetch for every tenth row in the result set.  
-         rs = stmt.executeQuery(SQL);  
-         timerTest(10, rs);  
-         rs.close();  
-  
-         // Perform a fetch for every 100th row in the result set.  
-         rs = stmt.executeQuery(SQL);  
-         timerTest(100, rs);  
-         rs.close();  
-  
-         // Perform a fetch for every 1000th row in the result set.  
-         rs = stmt.executeQuery(SQL);  
-         timerTest(1000, rs);  
-         rs.close();  
-  
-         // Perform a fetch for every 128th row (the default) in the result set.  
-         rs = stmt.executeQuery(SQL);  
-         timerTest(0, rs);  
-         rs.close();  
-      }  
-  
-      // Handle any errors that may have occurred.  
-      catch (Exception e) {  
-         e.printStackTrace();  
-      }  
-  
-      finally {  
-         if (rs != null) try { rs.close(); } catch(Exception e) {}  
-         if (stmt != null) try { stmt.close(); } catch(Exception e) {}  
-         if (con != null) try { con.close(); } catch(Exception e) {}  
-      }  
-   }  
-  
-   private static void timerTest(int fetchSize, ResultSet rs) {  
-      try {  
-  
-         // Declare the variables for tracking the row count and elapsed time.  
-         int rowCount = 0;  
-         long startTime = 0;  
-         long stopTime = 0;  
-         long runTime = 0;  
-  
-         // Set the fetch size then iterate through the result set to  
-         // cache the data locally.  
-         rs.setFetchSize(fetchSize);  
-         startTime = System.currentTimeMillis();  
-         while (rs.next()) {  
-            rowCount++;  
-         }  
-         stopTime = System.currentTimeMillis();  
-         runTime = stopTime - startTime;  
-  
-         // Display the results of the timer test.  
-         System.out.println("FETCH SIZE: " + rs.getFetchSize());  
-         System.out.println("ROWS PROCESSED: " + rowCount);  
-         System.out.println("TIME TO EXECUTE: " + runTime);  
-         System.out.println();  
-  
-      } catch (Exception e) {  
-         e.printStackTrace();  
-      }  
-   }  
-}  
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import com.microsoft.sqlserver.jdbc.SQLServerResultSet;
+
+public class CacheRS {
+
+    public static void main(String[] args) {
+
+        // Create a variable for the connection string.
+        String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=AdventureWorks;user=<user>;password=<password>";
+
+        try (Connection con = DriverManager.getConnection(connectionUrl);
+                Statement stmt = con.createStatement(SQLServerResultSet.TYPE_SS_SERVER_CURSOR_FORWARD_ONLY, SQLServerResultSet.CONCUR_READ_ONLY);) {
+
+            String SQL = "SELECT * FROM Sales.SalesOrderDetail;";
+
+            // Perform a fetch for every row in the result set.
+            ResultSet rs = stmt.executeQuery(SQL);
+            timerTest(1, rs);
+            rs.close();
+
+            // Perform a fetch for every tenth row in the result set.
+            rs = stmt.executeQuery(SQL);
+            timerTest(10, rs);
+            rs.close();
+
+            // Perform a fetch for every 100th row in the result set.
+            rs = stmt.executeQuery(SQL);
+            timerTest(100, rs);
+            rs.close();
+
+            // Perform a fetch for every 1000th row in the result set.
+            rs = stmt.executeQuery(SQL);
+            timerTest(1000, rs);
+            rs.close();
+
+            // Perform a fetch for every 128th row (the default) in the result set.
+            rs = stmt.executeQuery(SQL);
+            timerTest(0, rs);
+            rs.close();
+        }
+        // Handle any errors that may have occurred.
+        catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static void timerTest(int fetchSize,
+            ResultSet rs) throws SQLException {
+
+        // Declare the variables for tracking the row count and elapsed time.
+        int rowCount = 0;
+        long startTime = 0;
+        long stopTime = 0;
+        long runTime = 0;
+
+        // Set the fetch size then iterate through the result set to
+        // cache the data locally.
+        rs.setFetchSize(fetchSize);
+        startTime = System.currentTimeMillis();
+        while (rs.next()) {
+            rowCount++;
+        }
+        stopTime = System.currentTimeMillis();
+        runTime = stopTime - startTime;
+
+        // Display the results of the timer test.
+        System.out.println("FETCH SIZE: " + rs.getFetchSize());
+        System.out.println("ROWS PROCESSED: " + rowCount);
+        System.out.println("TIME TO EXECUTE: " + runTime);
+        System.out.println();
+    }
+}
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Trabalhando com conjuntos de resultados](../../../connect/jdbc/working-with-result-sets.md)  
   
   

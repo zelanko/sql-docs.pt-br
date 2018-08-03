@@ -34,12 +34,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f54b14989ac5df37bbb8ee386c783c9721a32206
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: MTE75
+ms.openlocfilehash: ac3587d85f772f2e1fd14d17e792be2fb0cdfe86
+ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37974275"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39310233"
 ---
 # <a name="bcp-utility"></a>Utilitário bcp
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "37974275"
 
  > Para obter informações detalhadas sobre como usar o bcp com o Azure SQL Data Warehouse, consulte [carregar dados com o bcp](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp).
 
-  O utilitário **bcp**( **b**ulk **c**opy**p**rogram) copia dados em massa entre uma instância do [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e um arquivo de dados em um formato especificado pelo usuário. O utilitário **bcp** pode ser usado para importar grande número de novas linhas para tabelas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou para exportar dados de tabelas para arquivos de dados. Exceto quando usado com a opção **queryout** , o utilitário não requer conhecimento de [!INCLUDE[tsql](../includes/tsql-md.md)]. Para importar dados para uma tabela, você deve usar um arquivo de formato criado para aquela tabela ou entender a estrutura da tabela e os tipos de dados válidos para suas colunas.  
+  O utilitário **bcp** (**b**ulk **c**opy **p**rogram) copia dados em massa entre uma instância do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e um arquivo de dados em um formato especificado pelo usuário. O utilitário **bcp** pode ser usado para importar grande número de novas linhas para tabelas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou para exportar dados de tabelas para arquivos de dados. Exceto quando usado com a opção **queryout** , o utilitário não requer conhecimento de [!INCLUDE[tsql](../includes/tsql-md.md)]. Para importar dados para uma tabela, você deve usar um arquivo de formato criado para aquela tabela ou entender a estrutura da tabela e os tipos de dados válidos para suas colunas.  
   
  ![Ícone de link do tópico](../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") Para obter as convenções de sintaxe usadas para a sintaxe de **bcp**, confira [Convenções de sintaxe Transact-SQL &#40;Transact-SQL&#41;](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
