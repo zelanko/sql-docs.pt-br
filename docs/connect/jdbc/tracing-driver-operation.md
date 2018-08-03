@@ -1,7 +1,7 @@
 ---
 title: Tracing Driver Operation | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 32eecd4a6667dd25d58aa9fe09d3382f5dbc374f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 493c53ac10dd51a19139dd451f13b1a3da6901fe
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37991968"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39279257"
 ---
 # <a name="tracing-driver-operation"></a>Operação de rastreamento de driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "37991968"
  As seções a seguir descrevem os níveis de log e as categorias que podem ser registradas em log, e fornecem informações sobre como habilitar rastreamento em seu aplicativo.  
   
 ## <a name="logging-levels"></a>Níveis de log  
- Toda mensagem de log que é criada tem um nível de log associado. O nível de registro em log determina a importância da mensagem de log, que é definida pela classe **Level** em java.util.logging. Habilitar log em um nível também habilita log em todos os níveis mais altos. Esta seção descreve os níveis de log para categorias de log públicas e categorias de log internas. Para obter mais informações sobre categorias de log, consulte a seção Categorias de log neste tópico.  
+ Toda mensagem de log que é criada tem um nível de log associado. O nível de registro em log determina a importância da mensagem de log, que é definida pela classe **Level** em java.util.logging. Habilitar log em um nível também habilita log em todos os níveis mais altos. Esta seção descreve os níveis de log para categorias de log públicas e categorias de log internas. Para saber mais sobre categorias de log, consulte a seção Categorias de log neste artigo.  
   
  A tabela a seguir descreve cada nível de log disponível para categorias de log públicas.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "37991968"
 |TDS.DATA|Registra mensagens que contêm a conversa no nível do protocolo TDS entre o driver e o SQL Server. O conteúdo detalhado de cada pacote TDS enviado e recebido é registrado em ASCII e hexadecimal. As credenciais de logon (nomes de usuários e senhas) não são registradas. Todos os outros dados são registrados.<br /><br /> Esta categoria cria mensagens muito detalhadas e detalhadas, e só poderá ser habilitada definindo o nível de registro como FINEST.|  
 |TDS.Channel|Esta categoria rastreia ações do canal de comunicação TCP com SQL Server. As mensagens registradas incluem abertura e fechamento de soquete, além de leituras e gravações. Elas também rastreiam mensagens relacionadas a estabelecer uma conexão de Protocolo SSL (SSL) com SQL Server.<br /><br /> Esta categoria só poderá ser habilitada definindo o nível de log como FINE, FINER ou FINEST.|  
 |TDS.Writer|Esta categoria rastreia gravações no canal de TDS. Observe que somente o comprimento das gravações é rastreado, não o conteúdo. Esta categoria também rastreia problemas quando um sinal de atenção é enviado ao servidor para cancelar a execução de uma instrução.<br /><br /> Esta categoria só poderá ser habilitada definindo o nível de log como FINEST.|  
-|TDS.Reader|Esta categoria rastreia determinadas operações de leitura do canal de TDS no nível FINEST. No nível FINEST, o rastreamento pode ser bastante detalhado. Nos níveis WARNING e SEVERE, esta categoria rastreia quando o driver recebe um protocolo TDS inválido do SQL Server antes de o driver fechar a conexão.<br /><br /> Esta categoria só poderá ser habilitada definindo o nível de log como FINER e FINEST.|  
+|TDS.Reader|Esta categoria rastreia determinadas operações de leitura do canal de TDS no nível FINEST. No nível FINEST, o rastreamento pode ser detalhado. Nos níveis WARNING e SEVERE, esta categoria rastreia quando o driver recebe um protocolo TDS inválido do SQL Server antes de o driver fechar a conexão.<br /><br /> Esta categoria só poderá ser habilitada definindo o nível de log como FINER e FINEST.|  
 |TDS.Command|Esta categoria rastreia transições de estado de baixo nível e outras informações associadas à execução de comandos TDS, como execuções de instrução [!INCLUDE[tsql](../../includes/tsql_md.md)], buscas do cursor ResultSet, confirmações e assim por diante.<br /><br /> Esta categoria só poderá ser habilitada definindo o nível de log como FINEST.|  
 |TDS.TOKEN|Esta categoria registra somente os tokens dentro dos pacotes TDS e é menos detalhada que a categoria TDS.DATA. Ela só poderá ser habilitada definindo o nível de log como FINEST.<br /><br /> No nível FINEST, esta categoria rastreia tokens de TDS à medida que eles são processados na resposta. No nível SEVERE, esta categoria rastreia quando um token de TDS inválido é encontrado.|  
 |SQLServerDatabaseMetaData|Registra mensagens em log na classe [SQLServerDatabaseMetaData](../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md). Os aplicativos podem definir o nível de log como FINE.|  
@@ -110,27 +110,27 @@ ms.locfileid: "37991968"
 ## <a name="enabling-tracing-programmatically"></a>Habilitando o rastreamento programaticamente  
  O rastreamento pode ser habilitado programaticamente criando um objeto Logger e indicando a categoria a ser registrada. Por exemplo, o código a seguir mostra como habilitar log para instruções SQL:  
   
-```  
+```java
 Logger logger = Logger.getLogger("com.microsoft.sqlserver.jdbc.Statement");  
 logger.setLevel(Level.FINER);  
 ```  
   
  Para desabilitar log no seu código, use o seguinte:  
   
-```  
+```java
 logger.setLevel(Level.OFF);  
 ```  
   
  Para registrar todas as categorias disponíveis, use o seguinte:  
   
-```  
+```java
 Logger logger = Logger.getLogger("com.microsoft.sqlserver.jdbc");  
 logger.setLevel(Level.FINE);  
 ```  
   
  Para desabilitar uma categoria específica de ser registrada, use o seguinte:  
   
-```  
+```java
 Logger logger = Logger.getLogger("com.microsoft.sqlserver.jdbc.Statement");  
 logger.setLevel(Level.OFF);  
 ```  

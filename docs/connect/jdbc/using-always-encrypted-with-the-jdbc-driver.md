@@ -1,7 +1,7 @@
 ---
 title: Usando o Always Encrypted com o JDBC driver | Microsoft Docs
 ms.custom: ''
-ms.date: 3/14/2018
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 64
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7c53479e3e94206645382e0c7b2d930a0b63075f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: fd5d3bb54c4587c177160cdf99f2f0dacc2bb086
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37982260"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39279277"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Como usar o Always Encrypted com o driver JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -55,7 +55,7 @@ O Microsoft JDBC Driver para SQL Server vem com os seguintes provedores de repos
 Para os provedores de repositório de chaves previamente registrado, você não precisa fazer nenhuma alteração de código do aplicativo para usar esses provedores, mas observe os seguintes itens:
 
 - Você (ou seu DBA) precisa verificar se o nome do provedor configurado nos metadados da chave mestra de coluna está correto e se o caminho da chave mestra de coluna está em conformidade com o formato do caminho da chave válido para determinado provedor. É recomendável configurar as chaves usando ferramentas como o SQL Server Management Studio, que gera automaticamente os nomes de provedor válidos e os caminhos de chaves ao emitir a instrução CREATE COLUMN MASTER KEY (Transact-SQL).
-- Certifique-se de que seu aplicativo pode acessar a chave no repositório de chaves. Essa tarefa pode envolver a concessão de acesso para o aplicativo à chave e/ou ao repositório de chaves, dependendo do repositório de chaves, ou a execução de outras etapas de configuração específicas do repositório de chaves. Por exemplo, para usar o SQLServerColumnEncryptionJavaKeyStoreProvider, você precisa fornecer o local e a senha do repositório de chaves nas propriedades da conexão. 
+- Garanta que seu aplicativo possa acessar a chave no repositório de chaves. Essa tarefa pode envolver a concessão de acesso para o aplicativo à chave e/ou ao repositório de chaves, dependendo do repositório de chaves, ou a execução de outras etapas de configuração específicas do repositório de chaves. Por exemplo, para usar o SQLServerColumnEncryptionJavaKeyStoreProvider, você precisa fornecer o local e a senha do repositório de chaves nas propriedades da conexão. 
 
 Todos esses provedores de repositório de chaves são descritos mais detalhadamente nas seções a seguir. Você só precisa implementar um provedor de repositório de chaves para usar o Always Encrypted.
 
@@ -64,7 +64,7 @@ O Azure Key Vault é uma opção conveniente para armazenar e gerenciar chaves m
 
 Para os exemplos nesta página, se você tiver criado um cofre de chaves do Azure com base em uma chave mestra de coluna e a chave de criptografia de coluna usando o SQL Server Management Studio, o script T-SQL para recriá-los pode parecer semelhante a este exemplo com seu próprio específico **KEY_ CAMINHO** e **ENCRYPTED_VALUE**:
 
-```
+```sql
 CREATE COLUMN MASTER KEY [MyCMK]
 WITH
 (
@@ -85,7 +85,7 @@ Para usar o Azure Key Vault, os aplicativos cliente precisam instanciar o SQLSer
 
 Aqui está um exemplo de inicializar SQLServerColumnEncryptionAzureKeyVaultProvider:  
 
-```
+```java
 SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider = new SQLServerColumnEncryptionAzureKeyVaultProvider(clientID, clientKey);
 ```
 
@@ -93,7 +93,7 @@ SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider = new SQLServerColumn
 
 Depois que o aplicativo cria uma instância de SQLServerColumnEncryptionAzureKeyVaultProvider, o aplicativo deve registrar a instância com o driver usando o método registercolumnencryptionkeystoreproviders (). É altamente recomendável que a instância é registrada usando o nome de pesquisa padrão, AZURE_KEY_VAULT, que pode ser obtido chamando a API SQLServerColumnEncryptionAzureKeyVaultProvider.getName(). Usando o nome padrão permitirá que você use ferramentas como o SQL Server Management Studio ou o PowerShell para provisionar e gerenciar chaves Always Encrypted (as ferramentas usam o nome padrão para gerar o objeto de metadados para a chave mestra de coluna). O exemplo a seguir mostra como registrar o provedor do Azure Key Vault. Para obter mais informações sobre o método registercolumnencryptionkeystoreproviders (), consulte [Always Encrypted referência da API para o Driver JDBC](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md).
 
-```
+```java
 Map<String, SQLServerColumnEncryptionKeyStoreProvider> keyStoreMap = new HashMap<String, SQLServerColumnEncryptionKeyStoreProvider>();
 keyStoreMap.put(akvProvider.getName(), akvProvider);
 SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
@@ -115,7 +115,7 @@ O nome da SQLServerColumnEncryptionCertificateStoreProvider é MSSQL_CERTIFICATE
 
 Para os exemplos nesta página, se você tiver criado um Store de certificado do Windows com base em uma chave mestra de coluna e a chave de criptografia de coluna usando o SQL Server Management Studio, o script T-SQL para recriá-los pode parecer semelhante a este exemplo com seu próprio específicas **KEY_PATH** e **ENCRYPTED_VALUE**:
 
-```
+```sql
 CREATE COLUMN MASTER KEY [MyCMK]
 WITH
 (
@@ -148,8 +148,8 @@ Há três propriedades de cadeia de caracteres de conexão que permitem que um a
 
 Aqui está um exemplo de fornecer essas credenciais na cadeia de conexão:
 
-```
-String connectionString = "jdbc:sqlserver://localhost;user=<user>;password=<password>;columnEncryptionSetting=Enabled;keyStoreAuthentication=JavaKeyStorePassword;keyStoreLocation=<path_to_the_keystore_file>;keyStoreSecret=<keystore_key_password>";
+```java
+String connectionUrl = "jdbc:sqlserver://<server>:<port>;user=<user>;password=<password>;columnEncryptionSetting=Enabled;keyStoreAuthentication=JavaKeyStorePassword;keyStoreLocation=<path_to_the_keystore_file>;keyStoreSecret=<keystore_key_password>";
 ```
 
 Você também pode obter ou definir essas configurações usando o objeto SQLServerDataSource. Para obter mais informações, consulte [Always Encrypted referência da API para o Driver JDBC](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md).
@@ -171,7 +171,7 @@ Aqui está um exemplo do mesmo usando um tipo de repositório PKCS12:
 keytool -genkeypair -keyalg RSA -alias AlwaysEncryptedKey -keystore keystore.pfx -storepass mypassword -validity 360 -keysize 2048 -storetype pkcs12 -keypass mypassword
 ```
 
-Se o repositório de chaves é do tipo PKCS12, o utilitário keytool não solicitará uma senha de chave e a senha da chave deve ser fornecido com a opção - keypass como o SQLServerColumnEncryptionJavaKeyStoreProvider exige que o repositório de chaves e a chave têm a mesma senha.
+Se o repositório de chaves é do tipo PKCS12, o utilitário keytool não solicita uma senha de chave e a senha da chave deve ser fornecido com a opção - keypass como o SQLServerColumnEncryptionJavaKeyStoreProvider exige que o repositório de chaves e a chave têm a mesma senha.
 
 Você também pode exportar um certificado do repositório de certificados do Windows no formato. pfx e usá-lo com o SQLServerColumnEncryptionJavaKeyStoreProvider. O certificado exportado também pode ser importado para a Store de chave Java como um tipo de repositório de chaves JKS.
 
@@ -179,7 +179,7 @@ Depois de criar a entrada keytool, crie os metadados da chave mestra de coluna n
 
 A sintaxe do T-SQL para criar a chave mestra de coluna é:
 
-```
+```sql
 CREATE COLUMN MASTER KEY [<CMK_name>]
 WITH
 (
@@ -190,7 +190,7 @@ WITH
 
 Para o 'AlwaysEncryptedKey' criada acima, a definição da chave mestra de coluna deverá ser:
 
-```
+```sql
 CREATE COLUMN MASTER KEY [MyCMK]
 WITH
 (
@@ -208,7 +208,7 @@ O SQL Server Management Studio ou qualquer outra ferramenta não pode ser usada 
 ### <a name="implementing-a-custom-column-master-key-store-provider"></a>Implementando um provedor personalizado de repositórios de chaves mestras de coluna
 Se você quiser armazenar chaves mestras de coluna em um repositório de chaves que não tem suporte em um provedor existente, será possível implementar um provedor personalizado estendendo a Classe SQLServerColumnEncryptionKeyStoreProvider e registrando o provedor usando o método SQLServerConnection.registerColumnEncryptionKeyStoreProviders().
 
-```
+```java
 public class MyCustomKeyStore extends SQLServerColumnEncryptionKeyStoreProvider{  
     private String name = "MY_CUSTOM_KEYSTORE";
 
@@ -236,7 +236,7 @@ public class MyCustomKeyStore extends SQLServerColumnEncryptionKeyStoreProvider{
 
 Registre o provedor:
 
-```
+```java
 SQLServerColumnEncryptionKeyStoreProvider storeProvider = new MyCustomKeyStore();
 Map<String, SQLServerColumnEncryptionKeyStoreProvider> keyStoreMap = new HashMap<String, SQLServerColumnEncryptionKeyStoreProvider>();
 keyStoreMap.put(storeProvider.getName(), storeProvider);
@@ -248,9 +248,12 @@ Ao acessar colunas criptografadas, o Microsoft JDBC Driver for SQL Server encont
 
 Caso você use um provedor de repositório de chaves personalizado, poderá ser necessário implementar suas próprias ferramentas de gerenciamento. Ao usar chaves armazenadas no Windows Store de certificado ou no Azure Key Vault, você pode usar ferramentas existentes, como o SQL Server Management Studio ou o PowerShell, gerenciar e provisionar as chaves. Ao usar chaves armazenadas em do Store de chave Java, você precisa provisionar chaves programaticamente. O exemplo a seguir ilustra o uso da classe SQLServerColumnEncryptionJavaKeyStoreProvider para criptografar a chave com uma chave armazenada na Store de chave do Java.
 
-```
-import java.sql.*;
-import javax.xml.bind.DatatypeConverter;
+```java
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
 import com.microsoft.sqlserver.jdbc.SQLServerColumnEncryptionJavaKeyStoreProvider;
 import com.microsoft.sqlserver.jdbc.SQLServerColumnEncryptionKeyStoreProvider;
 import com.microsoft.sqlserver.jdbc.SQLServerException;
@@ -258,8 +261,7 @@ import com.microsoft.sqlserver.jdbc.SQLServerException;
 /**
  * This program demonstrates how to create a column encryption key programmatically for the Java Key Store.
  */
-public class AlwaysEncrypted
-{
+public class AlwaysEncrypted {
     // Alias of the key stored in the keystore.
     private static String keyAlias = "<proide key alias>";
 
@@ -276,96 +278,64 @@ public class AlwaysEncrypted
     private static char[] keyStoreSecret = "********".toCharArray();
 
     /**
-     * Name of the encryption algorithm used to encrypt the value of
-     * the column encryption key. The algorithm for the system providers must be RSA_OAEP.
+     * Name of the encryption algorithm used to encrypt the value of the column encryption key. The algorithm for the system providers must be
+     * RSA_OAEP.
      */
     private static String algorithm = "RSA_OAEP";
 
-    public static void main(String[] args)
-    {
-        String connectionString = GetConnectionString();
-        try
-        {
-            // Note: if you are not using try-with-resources statements (as here),
-            // you must remember to call close() on any Connection, Statement,
-            // ResultSet objects that you create.
+    public static void main(String[] args) {
+        String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=<databaseName>;user=<user>;password=<password>;columnEncryptionSetting=Enabled;";
 
-            // Open a connection to the database.
-            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-            try (Connection sourceConnection = DriverManager.getConnection(connectionString))
-            {
-                // Instantiate the Java Key Store provider.
-                SQLServerColumnEncryptionKeyStoreProvider storeProvider =
-                        new SQLServerColumnEncryptionJavaKeyStoreProvider(
-                                keyStoreLocation,
-                                keyStoreSecret);
+        try (Connection connection = DriverManager.getConnection(connectionUrl);
+                Statement statement = connection.createStatement();) {
 
-                byte [] encryptedCEK=getEncryptedCEK(storeProvider);
+            // Instantiate the Java Key Store provider.
+            SQLServerColumnEncryptionKeyStoreProvider storeProvider = new SQLServerColumnEncryptionJavaKeyStoreProvider(keyStoreLocation,
+                    keyStoreSecret);
 
-                /**
-                 * Create column encryption key
-                 * For more details on the syntax, see:
-                 * https://docs.microsoft.com/sql/t-sql/statements/create-column-encryption-key-transact-sql
-                 * Encrypted column encryption key first needs to be converted into varbinary_literal from bytes, 
-                 * for which DatatypeConverter.printHexBinary is used
-                 */
-                String createCEKSQL = "CREATE COLUMN ENCRYPTION KEY "
-                        + columnEncryptionKey
-                        + " WITH VALUES ( "
-                        + " COLUMN_MASTER_KEY = "
-                        + columnMasterKeyName
-                        + " , ALGORITHM =  '"
-                        + algorithm
-                        + "' , ENCRYPTED_VALUE =  0x"
-                        + DatatypeConverter.printHexBinary(encryptedCEK)
-                        + " ) ";
+            byte[] encryptedCEK = getEncryptedCEK(storeProvider);
 
-                try (Statement cekStatement = sourceConnection.createStatement())
-                {
-                    cekStatement.executeUpdate(createCEKSQL);
-                    System.out.println("Column encryption key created with name : " + columnEncryptionKey);
-                }
-            }
+            /**
+             * Create column encryption key For more details on the syntax, see:
+             * https://docs.microsoft.com/sql/t-sql/statements/create-column-encryption-key-transact-sql Encrypted column encryption key first needs
+             * to be converted into varbinary_literal from bytes, for which byteArrayToHex() is used.
+             */
+            String createCEKSQL = "CREATE COLUMN ENCRYPTION KEY "
+                    + columnEncryptionKey
+                    + " WITH VALUES ( "
+                    + " COLUMN_MASTER_KEY = "
+                    + columnMasterKeyName
+                    + " , ALGORITHM =  '"
+                    + algorithm
+                    + "' , ENCRYPTED_VALUE =  0x"
+                    + byteArrayToHex(encryptedCEK)
+                    + " ) ";
+            statement.executeUpdate(createCEKSQL);
+            System.out.println("Column encryption key created with name : " + columnEncryptionKey);
         }
-        catch (Exception e)
-        {
-            // Handle any errors that may have occurred.
+        // Handle any errors that may have occurred.
+        catch (SQLException e) {
             e.printStackTrace();
         }
     }
 
-    // To avoid storing the sourceConnection String in your code,
-    // you can retrieve it from a configuration file.
-    private static String GetConnectionString()
-    {
-        // Create a variable for the connection string.
-        String connectionUrl = "jdbc:sqlserver://localhost:1433;" +
-                "databaseName=ae2;user=sa;password=********;";
-
-        return connectionUrl;
-    }
-
-    private static byte[] getEncryptedCEK(SQLServerColumnEncryptionKeyStoreProvider storeProvider) throws SQLServerException
-    {
-        /**
-         * Following arguments needed by SQLServerColumnEncryptionJavaKeyStoreProvider
-         * 1) keyStoreLocation :
-         *      Path where keystore is located, including the keystore file name.
-         * 2) keyStoreSecret :
-         *      Password of the keystore and the key.
-         */
+    private static byte[] getEncryptedCEK(SQLServerColumnEncryptionKeyStoreProvider storeProvider) throws SQLServerException {
         String plainTextKey = "You need to give your plain text";
 
         // plainTextKey has to be 32 bytes with current algorithm supported
         byte[] plainCEK = plainTextKey.getBytes();
 
         // This will give us encrypted column encryption key in bytes
-        byte[] encryptedCEK = storeProvider.encryptColumnEncryptionKey(
-                keyAlias,
-                algorithm,
-                plainCEK);
+        byte[] encryptedCEK = storeProvider.encryptColumnEncryptionKey(keyAlias, algorithm, plainCEK);
 
         return encryptedCEK;
+    }
+
+    public static String byteArrayToHex(byte[] a) {
+        StringBuilder sb = new StringBuilder(a.length * 2);
+        for (byte b : a)
+            sb.append(String.format("%02x", b).toUpperCase());
+        return sb.toString();
     }
 }
 ```
@@ -375,16 +345,17 @@ A maneira mais fácil para habilitar a criptografia de parâmetros e a descripto
 
 A cadeia de conexão a seguir está um exemplo de habilitar o Always Encrypted no driver JDBC:
 
-```
-String connectionString = "jdbc:sqlserver://localhost;user=<user>;password=<password>;databaseName=<database>;columnEncryptionSetting=Enabled;";
-SQLServerConnection connection = (SQLServerConnection) DriverManager.getConnection(connectionString);
+```java
+String connectionUrl = "jdbc:sqlserver://<server>:<port>;user=<user>;password=<password>;databaseName=<database>;columnEncryptionSetting=Enabled;";
+SQLServerConnection connection = (SQLServerConnection) DriverManager.getConnection(connectionUrl);
 ```
 
 O código a seguir está um exemplo equivalente usando o objeto SQLServerDataSource:
 
-```
+```java
 SQLServerDataSource ds = new SQLServerDataSource();
-ds.setServerName("localhost");
+ds.setServerName("<server>");
+ds.setPortNumber(<port>);
 ds.setUser("<user>");
 ds.setPassword("<password>");
 ds.setDatabaseName("<database>");
@@ -397,7 +368,7 @@ O Sempre Criptografado também pode ser habilitado para consultas individuais. P
 - O aplicativo pode acessar a chave mestra de coluna que protege as chaves de criptografia de coluna, o que criptografa as colunas de banco de dados consultadas. Para usar o provedor de Store de chave do Java, você precisa fornecer credenciais adicionais na cadeia de conexão. Para obter mais informações, consulte [provedor de Store de chave do Java usando](#using-java-key-store-provider).
 
 ### <a name="configuring-how-javasqltime-values-are-sent-to-the-server"></a>Configuração de como os valores de java.sql.Time são enviados ao servidor
-O **sendTimeAsDatetime** propriedade de conexão é usada para configurar como o valor Time será enviado ao servidor. Quando definido como false, o valor de hora é enviado como um tipo de hora do SQL Server. Quando definido como true, o valor é enviado como um tipo de data e hora de tempo. Se uma coluna de hora for criptografada, o **sendTimeAsDatetime** propriedade deve ser false, como colunas criptografadas não dão suporte a conversão de tempo para a data e hora. Observe também que essa propriedade é por padrão true, portanto, ao usar colunas criptografadas de tempo, você terá que defini-lo como false. Caso contrário, o driver lançará uma exceção. A partir da versão 6.0 do driver, a classe SQLServerConnection tem dois métodos para configurar o valor dessa propriedade por meio de programação:
+O **sendTimeAsDatetime** propriedade de conexão é usada para configurar como o valor Time será enviado ao servidor. Quando definido como false, o valor de hora é enviado como um tipo de hora do SQL Server. Quando definido como true, o valor é enviado como um tipo de data e hora de tempo. Se uma coluna de hora for criptografada, o **sendTimeAsDatetime** propriedade deve ser false, como colunas criptografadas não dão suporte a conversão de tempo para a data e hora. Observe também que essa propriedade é por padrão true, então ao usar colunas criptografadas de tempo você terá que defini-lo como false. Caso contrário, o driver lançará uma exceção. A partir da versão 6.0 do driver, a classe SQLServerConnection tem dois métodos para configurar o valor dessa propriedade por meio de programação:
  
 * setSendTimeAsDatetime public void (sendTimeAsDateTimeValue boolean)
 * public boolean getSendTimeAsDatetime()
@@ -414,7 +385,7 @@ Se o Sempre Criptografado não estiver habilitado, as consultas com parâmetros 
 
 A tabela abaixo resume o comportamento das consultas dependendo se Always Encrypted está habilitado ou não:
 
-|Característica da consulta | O Sempre Criptografado está habilitado e o aplicativo pode acessar as chaves e os metadados da chave|O Sempre Criptografado está habilitado e o aplicativo não pode acessar as chaves nem os metadados da chave | O Sempre Criptografado está desabilitado|
+|Característica da consulta | O Always Encrypted está habilitado e o aplicativo pode acessar as chaves e os metadados da chave|O Sempre Criptografado está habilitado e o aplicativo não pode acessar as chaves nem os metadados da chave | O Sempre Criptografado está desabilitado|
 |:---|:---|:---|:---|
 | Consultas com parâmetros que se destinam a colunas criptografadas. | Os valores de parâmetro são criptografados de modo transparente. | Erro | Erro|
 | Consultas que recuperam dados de colunas criptografadas sem parâmetros que se destinam a colunas criptografadas.| Os resultados das colunas criptografadas são descriptografados de modo transparente. O aplicativo recebe valores de texto não criptografado dos tipos de dados JDBC correspondentes aos tipos do SQL Server configurados para as colunas criptografadas. | Erro | Os resultados das colunas criptografadas não são descriptografados. O aplicativo recebe valores criptografados como matrizes de bytes (byte[]).
@@ -422,7 +393,7 @@ A tabela abaixo resume o comportamento das consultas dependendo se Always Encryp
 ### <a name="inserting-and-retrieving-encrypted-data-examples"></a>Inserir e recuperar dados criptografados exemplos 
 Os exemplos a seguir ilustram como recuperar e modificar dados em colunas criptografadas. Os exemplos pressupõem que a tabela de destino com o esquema a seguir e as colunas SSN e BirthDate criptografadas. Se você tiver configurado uma chave mestra de coluna chamada "MyCMK" e uma chave de criptografia de coluna chamada "MyCEK" (conforme descrito nas seções anteriores de provedores de repositório de chaves), você pode criar a tabela usando esse script:
 
-```
+```sql
 CREATE TABLE [dbo].[Patients]([PatientId] [int] IDENTITY(1,1),
  [SSN] [char](11) COLLATE Latin1_General_BIN2
  ENCRYPTED WITH (ENCRYPTION_TYPE = DETERMINISTIC,
@@ -442,58 +413,49 @@ Para cada exemplo de código Java, você precisará inserir o código específic
 
 Se você estiver usando um provedor de repositório de chaves do Azure Key Vault:
 
-```
+```java
     String clientID = "<Azure Application ID>";
     String clientKey = "<Azure Application API Key Password>";
     SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider = new SQLServerColumnEncryptionAzureKeyVaultProvider(clientID, clientKey);
     Map<String, SQLServerColumnEncryptionKeyStoreProvider> keyStoreMap = new HashMap<String, SQLServerColumnEncryptionKeyStoreProvider>();
     keyStoreMap.put(akvProvider.getName(), akvProvider);
     SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
-    String connectionString = "jdbc:sqlserver://localhost:1433;databaseName=Clinic;user=sa;password=******;columnEncryptionSetting=Enabled;";
+    String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=<databaseName>;user=<user>;password=<password>;columnEncryptionSetting=Enabled;";
 ```
 
 Se você estiver usando um provedor de repositório de chaves do Windows Store de certificado:
 
-```
-    String connectionString = "jdbc:sqlserver://localhost:1433;databaseName=Clinic;user=sa;password=******;columnEncryptionSetting=Enabled;";
+```java
+    String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=<databaseName>;user=<user>;password=<password>;columnEncryptionSetting=Enabled;";
 ```
 
 Se você estiver usando um provedor de repositório de chaves Java chave Store:
 
-```
-    String connectionString = "jdbc:sqlserver://localhost:1433;databaseName=Clinic;user=sa;password=******;columnEncryptionSetting=Enabled;keyStoreAuthentication=JavaKeyStorePassword;keyStoreLocation=<path to jks or pfx file>;keyStoreSecret=<keystore secret/password>";
+```java
+    String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=<databaseName>;user=<user>;password=<password>;columnEncryptionSetting=Enabled;keyStoreAuthentication=JavaKeyStorePassword;keyStoreLocation=<path to jks or pfx file>;keyStoreSecret=<keystore secret/password>";
 ```
 
 ### <a name="inserting-data-example"></a>Inserindo exemplo de dados
 Este exemplo insere uma linha na tabela Pacientes. Observe os seguintes itens:
 - Não há nada específico de criptografia no código de exemplo. O Microsoft JDBC Driver para SQL Server detecta automaticamente e criptografa os parâmetros que se destinam a colunas criptografadas. Esse comportamento torna a criptografia transparente para o aplicativo.
-- Os valores inseridos nas colunas de banco de dados, incluindo as colunas criptografadas, são passados como parâmetros usando SQLServerPreparedStatement. Embora o uso de parâmetros seja opcional ao enviar valores para colunas não criptografadas (mesmo que seja altamente recomendável, pois ajuda a prevenir a injeção de SQL), ele é necessário para valores que se destinam a colunas criptografadas. Se os valores inseridos nas colunas criptografadas foram passados como literais inseridos na instrução de consulta, a consulta falharia, pois o driver não seria capaz de determinar os valores em colunas criptografadas de destino e não criptografaria os valores. Como resultado, o servidor os rejeitaria como incompatíveis com as colunas criptografadas.
-- Todos os valores impressos pelo programa será em texto sem formatação, como o Microsoft JDBC Driver para SQL Server descriptografará de modo transparente os dados recuperados da colunas criptografadas.
-- Se você estiver fazendo uma pesquisa usando uma cláusula WHERE, o valor usado na cláusula WHERE precisa para ser passado como um parâmetro para que o driver de modo transparente pode criptografá-lo antes de enviá-la para o banco de dados. No exemplo a seguir, o SSN é passado como um parâmetro, mas o sobrenome é passado como um literal, como LastName não criptografada.
+- Os valores inseridos nas colunas de banco de dados, incluindo as colunas criptografadas, são passados como parâmetros usando SQLServerPreparedStatement. Embora o uso de parâmetros seja opcional ao enviar valores para colunas não criptografadas (mesmo que seja altamente recomendável, pois ajuda a prevenir a injeção de SQL), ele é necessário para valores que se destinam a colunas criptografadas. Se os valores inseridos nas colunas criptografadas foram passados como literais inseridos na instrução de consulta, a consulta falharia, pois o driver não seria capaz de determinar os valores em colunas criptografadas de destino e ele não criptografa os valores. Como resultado, o servidor os rejeitaria como incompatíveis com as colunas criptografadas.
+- Todos os valores impressos pelo programa estarão em texto não criptografado, já que o Microsoft JDBC Driver for SQL Server descriptografará de modo transparente os dados recuperados das colunas criptografadas.
+- Se você estiver fazendo uma pesquisa usando uma cláusula WHERE, o valor usado na cláusula WHERE precisa para ser passado como um parâmetro para que o driver de modo transparente pode criptografá-lo antes de enviá-la para o banco de dados. No exemplo a seguir, o SSN é passado como um parâmetro, mas o sobrenome é passado como um literal, como LastName não está criptografado.
 - O método de setter usado para o parâmetro se destina à coluna SSN é Setstring, que mapeia para o tipo de dados do SQL Server char/varchar. Se, para esse parâmetro, o método setter usado tiver sido setNString(), que mapeia para nchar/nvarchar, a consulta falhará, já que o Always Encrypted não é compatível com conversões de valores nchar/nvarchar criptografados em valores char/varchar criptografados.
 
-```
-try
-{
-    <Insert keystore-specific code here>
-
-    Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-    try (Connection sourceConnection = DriverManager.getConnection(connectionString))
-    {
-        String insertRecord="INSERT INTO [dbo].[Patients] VALUES (?, ?, ?, ?)";
-        try (PreparedStatement insertStatement = sourceConnection.prepareStatement(insertRecord))
-        {
-            insertStatement.setString(1, "795-73-9838");
-            insertStatement.setString(2, "Catherine");
-            insertStatement.setString(3, "Abel");
-            insertStatement.setDate(4, Date.valueOf("1996-09-10"));
-            insertStatement.executeUpdate();
-            System.out.println("1 record inserted.\n");
-        }
-    }
+```java
+// <Insert keystore-specific code here>
+try (Connection sourceConnection = DriverManager.getConnection(connectionUrl);
+        PreparedStatement insertStatement = sourceConnection.prepareStatement("INSERT INTO [dbo].[Patients] VALUES (?, ?, ?, ?)")) {
+    insertStatement.setString(1, "795-73-9838");
+    insertStatement.setString(2, "Catherine");
+    insertStatement.setString(3, "Abel");
+    insertStatement.setDate(4, Date.valueOf("1996-09-10"));
+    insertStatement.executeUpdate();
+    System.out.println("1 record inserted.\n");
 }
-catch (Exception e)
-{
+// Handle any errors that may have occurred.
+catch (SQLException e) {
     e.printStackTrace();
 }
 ```
@@ -506,33 +468,21 @@ O exemplo a seguir demonstra a filtragem de dados com base em valores criptograf
 > [!NOTE]
 > se as colunas forem criptografadas usando a criptografia determinística, as consultas poderão executar comparações de igualdade nelas. Para obter mais informações, veja [Seleção de criptografia determinística ou aleatória no Always Encrypted (Mecanismo de Banco de Dados)](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption).
 
-```
-try
-{
-    <Insert keystore-specific code here>
-
-    Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-    try (Connection sourceConnection = DriverManager.getConnection(connectionString))
-    {
-        String filterRecord="SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients] WHERE SSN = ?;";
-    
-        try (PreparedStatement selectStatement = sourceConnection.prepareStatement(filterRecord))
-        {
-            selectStatement.setString(1, "795-73-9838");
-            ResultSet rs = selectStatement.executeQuery();
-            while(rs.next())
-            {
-                System.out.println("SSN: " +rs.getString("SSN") +
-                    ", FirstName: " + rs.getString("FirstName") +
-                    ", LastName:"+ rs.getString("LastName")+
-                    ", Date of Birth: " + rs.getString("BirthDate"));
-            }
-        }
+```java
+// <Insert keystore-specific code here>
+try (Connection connection = DriverManager.getConnection(connectionUrl);
+        PreparedStatement selectStatement = connection
+                .prepareStatement("\"SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients] WHERE SSN = ?;\"");) {
+    selectStatement.setString(1, "795-73-9838");
+    ResultSet rs = selectStatement.executeQuery();
+    while (rs.next()) {
+        System.out.println("SSN: " + rs.getString("SSN") + ", FirstName: " + rs.getString("FirstName") + ", LastName:"
+                + rs.getString("LastName") + ", Date of Birth: " + rs.getString("BirthDate"));
     }
 }
-catch (Exception e)  
-{  
-    e.printStackTrace();  
+// Handle any errors that may have occurred.
+catch (SQLException e) {
+    e.printStackTrace();
 }
 ```
   
@@ -543,32 +493,20 @@ O exemplo a seguir ilustra como recuperar dados binários criptografados de colu
 - Como o Always Encrypted não está habilitado na cadeia de conexão, a consulta retornará valores criptografados de SSN e BirthDate como matrizes de bytes (o programa converte os valores em cadeias de caracteres).
 - Uma consulta que recupera dados de colunas criptografadas com o Sempre Criptografado desabilitado pode ter parâmetros, desde que nenhum dos parâmetros se destinem a uma coluna criptografada. A consulta a seguir filtra por LastName, que não é criptografado no banco de dados. Se a consulta filtrar por SSN ou BirthDate, a consulta falhará.
 
-```
-try
-{
-    String connectionString  = "jdbc:sqlserver://localhost:1433;" + "databaseName=Clinic;user=sa;password=******";
+```java
+try (Connection sourceConnection = DriverManager.getConnection(connectionUrl);
+        PreparedStatement selectStatement = sourceConnection
+                .prepareStatement("SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients] WHERE LastName = ?;");) {
 
-    Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-    try (Connection sourceConnection = DriverManager.getConnection(connectionString))
-    {
-        String filterRecord="SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo].[Patients] WHERE LastName = ?;";
-
-        try (PreparedStatement selectStatement = sourceConnection.prepareStatement(filterRecord))
-        {
-            selectStatement.setString(1, "Abel");
-            ResultSet rs = selectStatement.executeQuery();
-            while (rs.next())
-            {
-                System.out.println("SSN: " + rs.getString("SSN") +
-                    ", FirstName: " + rs.getString("FirstName") +
-                    ", LastName:"+ rs.getString("LastName") +
-                    ", Date of Birth: " + rs.getString("BirthDate"));
-            }
-        }
+    selectStatement.setString(1, "Abel");
+    ResultSet rs = selectStatement.executeQuery();
+    while (rs.next()) {
+        System.out.println("SSN: " + rs.getString("SSN") + ", FirstName: " + rs.getString("FirstName") + ", LastName:"
+                + rs.getString("LastName") + ", Date of Birth: " + rs.getString("BirthDate"));
     }
 }
-catch (Exception e)
-{
+// Handle any errors that may have occurred.
+catch (SQLException e) {
     e.printStackTrace();
 }
 ```
@@ -579,9 +517,9 @@ Esta seção descreve as categorias comuns de erros ao consultar colunas criptog
 ### <a name="unsupported-data-type-conversion-errors"></a>Erros de conversão de tipo de dados sem suporte
 O Always Encrypted dá suporte a algumas conversões de tipos de dados criptografados. Confira [Always Encrypted (Mecanismo de Banco de Dados)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) para obter a lista detalhada de conversões de tipo compatíveis. Isto é o que você pode fazer para evitar erros de conversão de tipo de dados. Certifique-se de que:
 
-- Você usa os métodos de setter apropriado quando passar valores para parâmetros que se destinam a colunas criptografadas. Certifique-se de que o tipo de dados do SQL Server do parâmetro é exatamente o mesmo que o tipo da coluna de destino ou uma conversão do tipo de dados do SQL Server do parâmetro para o tipo de destino da coluna é suportada. Métodos de API foram adicionados às classes SQLServerPreparedStatement e SQLServerCallableStatement SQLServerResultSet para passar parâmetros correspondentes aos tipos de dados específicos do SQL Server. Por exemplo, se uma coluna não é criptografada. você pode usar o método setTimestamp() para passar um parâmetro para um datetime2 ou para uma coluna de data e hora. Mas, quando uma coluna é criptografada, você terá que usar o método exato que representa o tipo da coluna no banco de dados. Por exemplo, use setTimestamp() para passar valores para uma coluna criptografada datetime2 e use setDateTime() para passar valores para uma coluna de datetime criptografados. Ver [Always Encrypted referência da API para o Driver JDBC](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md) para obter uma lista completa das novas APIs.
+- Você usa os métodos de setter apropriado quando passar valores para parâmetros que se destinam a colunas criptografadas. Certifique-se de que o tipo de dados do SQL Server do parâmetro é exatamente o mesmo que o tipo da coluna de destino ou uma conversão do tipo de dados do SQL Server do parâmetro para o tipo de destino da coluna é suportada. Métodos de API foram adicionados às classes SQLServerPreparedStatement e SQLServerCallableStatement SQLServerResultSet para passar parâmetros correspondentes aos tipos de dados específicos do SQL Server. Por exemplo, se uma coluna não é criptografada você pode usar o método setTimestamp() para passar um parâmetro para um datetime2 ou para uma coluna de data e hora. Mas, quando uma coluna é criptografada, você terá que usar o método exato que representa o tipo da coluna no banco de dados. Por exemplo, use setTimestamp() para passar valores para uma coluna criptografada datetime2 e use setDateTime() para passar valores para uma coluna de datetime criptografados. Ver [Always Encrypted referência da API para o Driver JDBC](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md) para obter uma lista completa das novas APIs.
 - a precisão e escala dos parâmetros que se destinam a colunas dos tipos de dados decimais e numéricos do SQL Server são iguais à precisão e escala configuradas para a coluna de destino. Métodos de API foram adicionados às classes SQLServerPreparedStatement e SQLServerCallableStatement SQLServerResultSet para aceitar a precisão e escala junto com os valores de dados para/as colunas de parâmetros que representam os tipos de dados decimais e numéricos. Ver [Always Encrypted referência da API para o Driver JDBC](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md) para obter uma lista completa das APIs de novos/sobrecarregado.  
-- precisão/escala de frações de parâmetros que se destinam a colunas datetime2, datetimeoffset ou tipos de dados do SQL Server de hora não é maior que a precisão ou escala de frações de segundos para a coluna de destino em consultas que modificam os valores da coluna de destino . Métodos de API foram adicionados às classes SQLServerPreparedStatement e SQLServerCallableStatement SQLServerResultSet para aceitar a precisão/escala de frações juntamente com os valores de dados para parâmetros que representam a esses tipos de dados. Para obter uma lista completa das APIs de novos/sobrecarregados, consulte [Always Encrypted referência da API para o Driver JDBC](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md).   
+- precisão/escala de frações de parâmetros que se destinam a colunas datetime2, datetimeoffset ou tipos de dados do SQL Server de hora não for maior que a precisão ou escala de frações de segundos para a coluna de destino em consultas que modificam os valores da coluna de destino . Métodos de API foram adicionados às classes SQLServerPreparedStatement e SQLServerCallableStatement SQLServerResultSet para aceitar a precisão/escala de frações juntamente com os valores de dados para parâmetros que representam a esses tipos de dados. Para obter uma lista completa das APIs de novos/sobrecarregados, consulte [Always Encrypted referência da API para o Driver JDBC](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md).   
 
 ### <a name="errors-due-to-incorrect-connection-properties"></a>Erros devido a propriedades de conexão incorretas
 Esta seção descreve como definir as configurações de conexão corretamente para usar dados de Always Encrypted. Porque os tipos de dados criptografados dá suporte a conversões limitadas, o **sendTimeAsDatetime** e **sendStringParametersAsUnicode** configurações de conexão precisam de configuração apropriada ao usar colunas criptografadas. Certifique-se de que: 
@@ -591,7 +529,7 @@ Esta seção descreve como definir as configurações de conexão corretamente p
 ### <a name="errors-due-to-passing-plaintext-instead-of-encrypted-values"></a>Erros devido à passagem de texto sem formatação em vez de valores criptografados
 Qualquer valor que se destina a uma coluna criptografada precisa ser criptografado no aplicativo. Uma tentativa de inserir/modificar ou de filtrar por um valor de texto não criptografado em uma coluna criptografada resultará em um erro semelhante a este:
 
-```
+```java
 com.microsoft.sqlserver.jdbc.SQLServerException: Operand type clash: varchar is incompatible with varchar(8000) encrypted with (encryption_type = 'DETERMINISTIC', encryption_algorithm_name = 'AEAD_AES_256_CBC_HMAC_SHA_256', column_encryption_key_name = 'MyCEK', column_encryption_key_database_name = 'ae') collation_name = 'SQL_Latin1_General_CP1_CI_AS'
 ```
 
@@ -599,12 +537,12 @@ Para evitar esses tipos de erros, garanta que:
 - Always Encrypted é habilitado para as consultas de aplicativo que se destinam a colunas criptografadas (na cadeia de conexão ou para uma consulta específica).
 - use as instruções preparadas e parâmetros para enviar dados direcionamento a colunas criptografadas. O exemplo a seguir mostra uma consulta filtrada incorretamente por um literal/constante em uma coluna criptografada (SSN), em vez de passar o literal para dentro como um parâmetro. Essa consulta falhará:
 
-```
+```java
 ResultSet rs = connection.createStatement().executeQuery("SELECT * FROM Customers WHERE SSN='795-73-9838'");
 ```
 
 ## <a name="force-encryption-on-input-parameters"></a>Forçar a criptografia em parâmetros de entrada
-O recurso de Forçar criptografia impõe a criptografia de um parâmetro ao usar o Always Encrypted. Se forçar criptografia for usado e o SQL Server informar o driver de que o parâmetro não precisa ser criptografado, a consulta que estiver o parâmetro falhará. Essa propriedade fornece proteção adicional contra ataques de segurança que envolvem um SQL Server comprometido fornecendo metadados de criptografia incorretos ao cliente, o que pode levar à divulgação de dados. Os métodos em classes SQLServerPreparedStatement e SQLServerCallableStatement e a atualização de conjunto *\* métodos na classe SQLServerResultSet são sobrecarregados para aceitar um argumento booliano para especificar a configuração de criptografia de força. Se o valor desse argumento for false, o driver não forçará a criptografia em parâmetros. Se Forçar criptografia for definida como true, a consulta de parâmetro só é enviado se a coluna de destino está criptografada e Always Encrypted estiver habilitado, a conexão ou a instrução. Usar esta propriedade fornece uma camada extra de segurança, garantindo que o driver não por engano envia dados para o SQL Server como texto sem formatação quando se espera que sejam criptografados.
+O recurso de Forçar criptografia impõe a criptografia de um parâmetro ao usar o Always Encrypted. Se forçar criptografia for usado e o SQL Server informar o driver de que o parâmetro não precisa ser criptografado, a consulta que estiver o parâmetro falhará. Essa propriedade fornece proteção adicional contra ataques de segurança que envolvem um SQL Server comprometido fornecendo metadados de criptografia incorretos ao cliente, o que pode levar à divulgação de dados. Os métodos em classes SQLServerPreparedStatement e SQLServerCallableStatement e a atualização de conjunto *\* métodos na classe SQLServerResultSet são sobrecarregados para aceitar um argumento booliano para especificar a configuração de criptografia de força. Se o valor desse argumento for false, o driver não força a criptografia em parâmetros. Se Forçar criptografia for definida como true, a consulta de parâmetro só é enviado se a coluna de destino está criptografada e Always Encrypted estiver habilitado, a conexão ou a instrução. Usar esta propriedade fornece uma camada extra de segurança, garantindo que o driver não por engano envia dados para o SQL Server como texto sem formatação que deve ser criptografado.
 
 Para obter mais informações sobre os métodos de SQLServerPreparedStatement e SQLServerCallableStatement são sobrecarregados com a configuração de criptografia de força, consulte [sempre criptografados referência da API para o Driver JDBC](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)  
 
@@ -635,33 +573,33 @@ As configurações de SQLServerStatementColumnEncryptionSetting não podem ser u
 
 No exemplo abaixo, Always Encrypted está desabilitado para a conexão de banco de dados. A consulta emitida pelo aplicativo tem um parâmetro que se destina à coluna LastName não criptografada. A consulta recupera dados das colunas SSN e BirthDate que são criptografadas. Nesse caso, a chamada a sys.sp_describe_parameter_encryption para recuperar os metadados de criptografia não é necessária. No entanto, a descriptografia dos resultados da consulta precisa ser habilitada para que o aplicativo possa receber valores de texto não criptografado das duas colunas criptografadas. A configuração SQLServerStatementColumnEncryptionSetting.ResultSet é usada para garantir que.
 
-```
+```java
 // Assumes the same table definition as in Section "Retrieving and modifying data in encrypted columns"
 // where only SSN and BirthDate columns are encrypted in the database.
-String connectionUrl = "jdbc:sqlserver://localhost;databaseName=ae;user=sa;password=******;"
+String connectionUrl = "jdbc:sqlserver://<server>:<port>;databaseName=<database>;user=<user>;password=<password>;" 
         + "keyStoreAuthentication=JavaKeyStorePassword;"
-        + "keyStoreLocation=" + keyStoreLocation + ";"
-        + "keyStoreSecret=******;";
-SQLServerConnection connection = (SQLServerConnection) DriverManager.getConnection(connectionString);
+        + "keyStoreLocation=<keyStoreLocation>" 
+        + "keyStoreSecret=<keyStoreSecret>;";
 
-String filterRecord="SELECT FirstName, LastName, SSN, BirthDate FROM " + tblName + " WHERE LastName = ?";
-PreparedStatement selectStatement = connection.prepareStatement(
-        filterRecord,
-        ResultSet.TYPE_FORWARD_ONLY,
-        ResultSet.CONCUR_READ_ONLY,
-        connection.getHoldability(),
-        SQLServerStatementColumnEncryptionSetting.ResultSetOnly);
-selectStatement.setString(1, "Abel");
-ResultSet rs = selectStatement.executeQuery();
-while(rs.next()) {
-    System.out.println("First name: " + rs.getString("FirstName"));
-    System.out.println("Last name: " + rs.getString("LastName"));
-    System.out.println("SSN: " + rs.getString("SSN"));
-    System.out.println("Date of Birth: " + rs.getDate("BirthDate"));
+String filterRecord = "SELECT FirstName, LastName, SSN, BirthDate FROM " + tableName + " WHERE LastName = ?";
+
+try (SQLServerConnection connection = (SQLServerConnection) DriverManager.getConnection(connectionUrl);
+        PreparedStatement selectStatement = connection.prepareStatement(filterRecord, ResultSet.TYPE_FORWARD_ONLY, ResultSet.CONCUR_READ_ONLY,
+                connection.getHoldability(), SQLServerStatementColumnEncryptionSetting.ResultSetOnly);) {
+
+    selectStatement.setString(1, "Abel");
+    ResultSet rs = selectStatement.executeQuery();
+    while (rs.next()) {
+        System.out.println("First name: " + rs.getString("FirstName"));
+        System.out.println("Last name: " + rs.getString("LastName"));
+        System.out.println("SSN: " + rs.getString("SSN"));
+        System.out.println("Date of Birth: " + rs.getDate("BirthDate"));
+    }
 }
-rs.close();
-selectStatement.close();
-connection.close();
+// Handle any errors that may have occurred.
+catch (SQLException e) {
+    e.printStackTrace();
+}
 ```
 
 ### <a name="column-encryption-key-caching"></a>Cache de chaves de criptografia de coluna
@@ -669,13 +607,13 @@ Para reduzir o número de chamadas a um repositório de chaves mestras de coluna
 
 Você pode configurar um valor time-to-live para as entradas de chave de criptografia de coluna no cache usando a API, setColumnEncryptionKeyCacheTtl(), na classe SQLServerConnection. O valor de tempo de vida padrão para as entradas de chave de criptografia de coluna no cache é duas horas. Para desativar o cache, use um valor de 0. Para definir qualquer valor time-to-live, use a seguinte API:
 
-```
+```java
 SQLServerConnection.setColumnEncryptionKeyCacheTtl (int columnEncryptionKeyCacheTTL, TimeUnit unit)
 ```
 
 Por exemplo, para definir um valor de tempo de vida de 10 minutos, use:
 
-```
+```java
 SQLServerConnection.setColumnEncryptionKeyCacheTtl (10, TimeUnit.MINUTES)
 ```
 

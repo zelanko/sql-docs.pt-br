@@ -1,7 +1,7 @@
 ---
 title: Usando o banco de dados de espelhamento (JDBC) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7528a85cd8e2eb258a89e6d7971ce0f80fa90258
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 686e62581e2c18b79f20a25be6c5cd0ec0bcb3f8
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38041423"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278668"
 ---
 # <a name="using-database-mirroring-jdbc"></a>Usando o espelhamento de banco de dados (JDBC)
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "38041423"
  Configurações alternativas de espelhamento de banco de dados oferecem diferentes níveis de desempenho e segurança de dados, e dão suporte a diversas formas de failover. Para obter mais informações, veja "Visão geral do espelhamento de banco de dados" nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
 ## <a name="programming-considerations"></a>Considerações sobre programação  
- Quando o servidor do banco de dados principal falhar, o aplicativo cliente receberá erros em resposta a chamadas API, o que indica que a conexão com o banco de dados foi interrompida. Quando isso acontece, todas as alterações não confirmadas feitas no banco de dados são perdidas e a transação atual é revertida. Nesse caso, o aplicativo deve fechar a conexão (ou liberar o objeto de fonte de dados) e tentar reabri-la. Ao ser estabelecida, a nova conexão é redirigida, de forma transparente, ao banco de dados espelho, que agora age como o servidor principal, sem que o cliente precise modificar a cadeia de conexão ou o objeto de fonte de dados.  
+ Quando o servidor do banco de dados principal falhar, o aplicativo cliente receberá erros em resposta a chamadas API, o que indica que a conexão com o banco de dados foi interrompida. Quando isso acontece, todas as alterações não confirmadas feitas no banco de dados são perdidas e a transação atual é revertida. Nesse caso, o aplicativo deve fechar a conexão (ou liberar o objeto de fonte de dados) e tentar reabri-la. Ao ser estabelecida, a nova conexão é redirecionada, de forma transparente, ao banco de dados espelho, que agora age como o servidor principal, sem que o cliente precise modificar a cadeia de conexão ou o objeto de fonte de dados.  
   
  Quando uma conexão é estabelecida inicialmente, o servidor principal envia a identidade de seu parceiro de failover ao cliente que será usado quando ocorrer um failover. Quando um aplicativo tenta estabelecer uma conexão inicial com um servidor principal falho, o cliente não sabe a identidade do parceiro de failover. Para que os clientes tenham a oportunidade de lidar com esse cenário, a propriedade de cadeia de conexão failoverPartner e, opcionalmente, o método de fonte de dados [setFailoverPartner](../../connect/jdbc/reference/setfailoverpartner-method-sqlserverdatasource.md) permitem ao cliente especificar a identidade do parceiro de failover por sua própria conta. A propriedade do cliente é usada apenas nesse cenário; se o servidor principal estiver disponível, ela não será usada.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "38041423"
   
  Se o servidor do parceiro de failover fornecido pelo cliente não se referir a um servidor que funciona como um parceiro de failover para o banco de dados especificado, e se o servidor/banco de dados referenciado estiver em uma disposição de espelhamento, a conexão será recusada pelo servidor. Embora a classe [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) forneça o método [getFailoverPartner](../../connect/jdbc/reference/getfailoverpartner-method-sqlserverdatasource.md), esse método só retorna o nome do parceiro de failover especificado na cadeia de conexão ou no método setFailoverPartner. Para recuperar o nome do parceiro de failover real que está em uso no momento, use a seguinte instrução [!INCLUDE[tsql](../../includes/tsql_md.md)]:  
   
-```  
+```sql
 SELECT m.mirroring_role_DESC, m.mirroring_state_DESC,  
 m.mirroring_partner_instance FROM sys.databases as db,  
 sys.database_mirroring AS m WHERE db.name = 'MirroringDBName'  
@@ -61,68 +61,52 @@ AND db.database_id = m.database_id
 ## <a name="example"></a>Exemplo  
  No exemplo a seguir, primeiro é feita uma tentativa de conectar ao servidor principal. Se isso falhar e uma exceção for lançada, será feita uma tentativa de conectar ao servidor espelho, que pode ter sido elevado a novo servidor principal. Observe o uso da propriedade failoverPartner na cadeia de conexão.  
   
-```  
-import java.sql.*;  
-  
-public class clientFailover {  
-  
-   public static void main(String[] args) {  
-  
-      // Create a variable for the connection string.  
-      String connectionUrl = "jdbc:sqlserver://serverA:1433;" +  
-         "databaseName=AdventureWorks;integratedSecurity=true;" +  
-         "failoverPartner=serverB";  
-  
-      // Declare the JDBC objects.  
-      Connection con = null;  
-      Statement stmt = null;  
-  
-      try {  
-         // Establish the connection to the principal server.  
-         Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");  
-         con = DriverManager.getConnection(connectionUrl);  
-         System.out.println("Connected to the principal server.");  
-  
-         // Note that if a failover of serverA occurs here, then an  
-         // exception will be thrown and the failover partner will  
-         // be used in the first catch block below.  
-  
-         // Create and execute an SQL statement that inserts some data.  
-         stmt = con.createStatement();  
-  
-         // Note that the following statement assumes that the   
-         // TestTable table has been created in the AdventureWorks  
-         // sample database.  
-         stmt.executeUpdate("INSERT INTO TestTable (Col2, Col3) VALUES ('a', 10)");  
-      }  
-  
-      // Handle any errors that may have occurred.  
-      catch (SQLException se) {  
-         try {  
-            // The connection to the principal server failed,  
-            // try the mirror server which may now be the new  
-            // principal server.  
-            System.out.println("Connection to principal server failed, " +  
-            "trying the mirror server.");  
-            con = DriverManager.getConnection(connectionUrl);  
-            System.out.println("Connected to the new principal server.");  
-            stmt = con.createStatement();  
-            stmt.executeUpdate("INSERT INTO TestTable (Col2, Col3) VALUES ('a', 10)");  
-         }  
-         catch (Exception e) {  
-            e.printStackTrace();  
-         }  
-      }  
-      catch (Exception e) {  
-         e.printStackTrace();  
-      }  
-      // Close the JDBC objects.  
-      finally {  
-         if (stmt != null) try { stmt.close(); } catch(Exception e) {}  
-         if (con != null) try { con.close(); } catch(Exception e) {}  
-      }  
-   }  
-}  
+```java
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class ClientFailover {
+    public static void main(String[] args) {
+
+        String connectionUrl = "jdbc:sqlserver://serverA:1433;" 
+                + "databaseName=AdventureWorks;integratedSecurity=true;" 
+                + "failoverPartner=serverB";
+
+        // Establish the connection to the principal server.
+        try (Connection con = DriverManager.getConnection(connectionUrl); 
+                Statement stmt = con.createStatement();) {
+            System.out.println("Connected to the principal server.");
+
+            // Note that if a failover of serverA occurs here, then an
+            // exception will be thrown and the failover partner will
+            // be used in the first catch block below.
+
+            // Execute a SQL statement that inserts some data.
+
+            // Note that the following statement assumes that the
+            // TestTable table has been created in the AdventureWorks
+            // sample database.
+            stmt.executeUpdate("INSERT INTO TestTable (Col2, Col3) VALUES ('a', 10)");
+        }
+        catch (SQLException se) {
+            System.out.println("Connection to principal server failed, " + "trying the mirror server.");
+            // The connection to the principal server failed,
+            // try the mirror server which may now be the new
+            // principal server.
+            try (Connection con = DriverManager.getConnection(connectionUrl); 
+                    Statement stmt = con.createStatement();) {
+                System.out.println("Connected to the new principal server.");
+                stmt.executeUpdate("INSERT INTO TestTable (Col2, Col3) VALUES ('a', 10)");
+            }
+            // Handle any errors that may have occurred.
+            catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
 ```  
   
 ## <a name="see-also"></a>Consulte Também  

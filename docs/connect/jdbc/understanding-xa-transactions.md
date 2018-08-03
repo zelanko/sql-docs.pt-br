@@ -1,7 +1,7 @@
 ---
 title: Noções básicas sobre transações XA | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 80
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a78fdb7edae90289d64d4c7fdf74ac3a12d4b115
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: e86cdc909ec6c7457094125df3965008a8849dbd
+ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040604"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39278597"
 ---
 # <a name="understanding-xa-transactions"></a>Compreendendo transações XA
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -43,13 +43,13 @@ ms.locfileid: "38040604"
 ## <a name="guidelines-and-limitations-when-using-xa-transactions"></a>Diretrizes e limitações ao usar transações XA  
  As diretrizes adicionais a seguir se aplicam a transações firmemente acopladas:  
   
--   Ao usar transações XA junto com o MS DTC, talvez você observe que a versão atual do MS DTC não oferece suporte ao comportamento de ramificações XA firmemente acopladas. Por exemplo, o MS DTC tem um mapeamento um-para-um entre uma ID de transação de ramificação XA (XID) e uma ID de transação do MS DTC, e as operações executadas por ramificações XA frouxamente acopladas são isoladas uma da outra.  
+-   Ao usar transações XA junto com o Coordenador de Transações Distribuídas (MS DTC), talvez você observe que a versão atual do MS DTC não oferece suporte ao comportamento de ramificações XA firmemente acopladas. Por exemplo, o MS DTC tem um mapeamento um-para-um entre uma ID de transação de ramificação XA (XID) e uma ID de transação do MS DTC, e as operações executadas por ramificações XA frouxamente acopladas são isoladas uma da outra.  
   
      O hotfix fornecido em [MSDTC e transações firmemente acopladas](http://support.microsoft.com/kb/938653) habilita o suporte a ramificações XA firmemente acopladas em que várias ramificações XA com a mesma ID de transação global (GTRID) são mapeadas para uma única ID de transação do MS DTC. Esse suporte permite que várias ramificações XA firmemente acopladas vejam as alterações uma da outra no gerenciador de recursos, como [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
 -   Um sinalizador [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) permite que os aplicativos usem as transações XA firmemente acopladas que têm IDs de transação de branch XA (BQUAL) diferentes, mas a mesma ID de transação global (GTRID) e ID de formato (FormatID). Para usar esse recurso, você deve definir a [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) no parâmetro de sinalizadores do método XAResource.start:  
   
-    ```  
+    ```java
     xaRes.start(xid, SQLServerXAResource.SSTRANSTIGHTLYCPLD);  
     ```  
   
@@ -96,7 +96,7 @@ ms.locfileid: "38040604"
   
 1.  Abra o diretório LOG do computador [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] que participará de transações distribuídas. Selecione e abra o arquivo "ERRORLOG" do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Procure a frase "Using 'SQLJDBC_XA.dll' version ..." no arquivo "ERRORLOG".  
   
-2.  Abra o diretório Binn do computador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] que participará de transações distribuídas. Selecione o assembly sqljdbc_xa.dll.  
+2.  Abra o diretório Binn do computador [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] que participará de transações distribuídas. Selecione o assembly sqljdbc_xa. dll.  
   
     -   No Windows Vista ou versão posterior: clique com o botão direito do mouse em sqljdbc_xa.dll e selecione Propriedades. Em seguida, clique na guia **Detalhes**. O campo **Versão do Arquivo** mostra a versão de sqljdbc_xa.dll que está instalada no momento na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
@@ -105,7 +105,7 @@ ms.locfileid: "38040604"
 ###  <a name="BKMK_ServerSide"></a> Configurando as definições de tempo limite do servidor para reversão automática de transações não preparadas  
   
 > [!WARNING]  
->  Essa opção do servidor é nova no Microsoft JDBC Driver 4.2 (e superiores) para SQL Server. Para obter o comportamento atualizado, verifique se o sqljdbc_xa.dll no servidor está atualizado. Para obter mais detalhes sobre como configurar o tempo limite no cliente, veja [XAResource.setTransactionTimeout()](http://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html).  
+>  Essa opção do servidor é nova no Microsoft JDBC Driver 4.2 (e superiores) para SQL Server. Para obter o comportamento atualizado, verifique se o sqljdbc_xa.dll no servidor está atualizado. Para saber mais sobre como configurar o tempo limite no cliente, veja [XAResource.setTransactionTimeout()](http://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html).  
   
  Há duas configurações de Registro (valores DWORD) para controlar o comportamento de tempo limite de transações distribuídas:  
   
@@ -153,7 +153,7 @@ ms.locfileid: "38040604"
 ### <a name="configuring-the-user-defined-roles"></a>Configurando as funções definidas pelo usuário  
  Para conceder permissões para um usuário específico participar de transações distribuídas com o driver JDBC, adicione o usuário à função SqlJDBCXAUser. Por exemplo, use o código [!INCLUDE[tsql](../../includes/tsql_md.md)] a seguir para adicionar um usuário nomeado 'shelby' (usuário com logon padrão do SQL chamado 'shelby') à função SqlJDBCXAUser:  
   
-```  
+```sql
 USE master  
 GO  
 EXEC sp_grantdbaccess 'shelby', 'shelby'  
@@ -165,7 +165,7 @@ EXEC sp_addrolemember [SqlJDBCXAUser], 'shelby'
   
 ## <a name="example"></a>Exemplo  
   
-```  
+```java
 import java.net.Inet4Address;  
 import java.sql.*;  
 import java.util.Random;  
