@@ -28,13 +28,13 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f176dec2a4eca0cc313bd010729b5ba267ce6323
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: bb0ca07aceed13e3da687716d8ccb02c17558bf6
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182082"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39549016"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>Usar o Assistente para Indexação de Texto Completo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -103,7 +103,7 @@ ms.locfileid: "33182082"
      Especifique o grupo de arquivos no qual criar o índice de texto completo.  
   
      e. Selecione um valor:  
-      |Valor|Description|  
+      |Valor|Descrição|  
       |-----------|-----------------|
       |**<default>**| Se a tabela ou exibição não for particionada, selecione para usar o mesmo grupo de arquivos da tabela ou exibição subjacente. Se a tabela ou a exibição for particionada, o grupo de arquivos primário será utilizado|
       |**PRIMARY**|Selecione para usar o grupo de arquivos primário para o novo índice de texto completo.|
@@ -117,7 +117,7 @@ ms.locfileid: "33182082"
   
      Selecione um destes valores:  
   
-   |Valor|Description|  
+   |Valor|Descrição|  
     |-----------|-----------------|  
     |**<system>**|Selecione para usar a lista de palavras irrelevantes do sistema no novo índice de texto completo. Esse é o padrão.|  
     |**<off>**|Selecione para desabilitar as listas de palavras irrelevantes para o novo índice de texto completo.|  

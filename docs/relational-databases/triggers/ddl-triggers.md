@@ -14,13 +14,13 @@ ms.assetid: 1a4a6564-9820-4a14-9305-2c0e9ea37454
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: da86c799085983f5d2bc73ba970893e9fbcc7385
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 4fc7d5df1d8e7d11e97512a31cda94fbf2687e6b
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37432385"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39539026"
 ---
 # <a name="ddl-triggers"></a>Gatilhos DDL
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,10 +38,10 @@ ms.locfileid: "37432385"
 >  Teste seus gatilhos DDL para determinar suas respostas aos procedimentos armazenados do sistema que são executados. Por exemplo, a instrução CREATE TYPE e o procedimento armazenado **sp_addtype** dispararão um gatilho DDL criado em um evento CREATE_TYPE.  
   
 ## <a name="types-of-ddl-triggers"></a>Tipos de gatilhos DDL  
- Gatilho DDL Transact-SQL  
+ ### <a name="transact-sql-ddl-trigger"></a>Gatilho DDL Transact-SQL  
  Um tipo especial de procedimento armazenado [!INCLUDE[tsql](../../includes/tsql-md.md)] que executa uma ou mais instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] em resposta a um evento com escopo de servidor ou de banco de dados. Por exemplo, um Gatilho DDL poderá ser disparado se uma instrução como ALTER SERVER CONFIGURATION for executada ou se uma tabela for excluída usando DROP TABLE.  
   
- Gatilho DDL CLR  
+ ### <a name="clr-ddl-trigger"></a>Gatilho DDL CLR  
  Em vez de executar um procedimento armazenado [!INCLUDE[tsql](../../includes/tsql-md.md)] , um gatilho CLR executa um ou mais métodos gravados em código gerenciado que são membros de um assembly criado no .NET Framework e carregado para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Os gatilhos DDL são disparados somente após a execução das instruções DDL que os dispararam. Os gatilhos DDL não podem ser usados como gatilhos INSTEAD OF. Os gatilhos DDL não são disparados em resposta a eventos que afetem tabelas temporárias locais ou globais e procedimentos armazenados.  

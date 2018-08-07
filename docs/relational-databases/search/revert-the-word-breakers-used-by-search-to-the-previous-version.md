@@ -15,13 +15,13 @@ caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1f09da24682c65d737e03685f936f85de62b6e2e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: a6d1b5ad744de6973b7a4cfcbfa41863a0c47f20
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182502"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39537836"
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>Reverter os separadores de palavras usados por pesquisa à versão anterior
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "33182502"
 |Indonésio|ind|1057|  
 |Islandês|isl|1039|  
 |Italiano|ita|1040|  
-|Kannada|kan|1099|  
+|canarim|kan|1099|  
 |Lituano|lth|1063|  
 |Letão|lvi|1062|  
 |Malaiala|mal|1100|  
@@ -219,8 +219,8 @@ ms.locfileid: "33182502"
 |---------------|------------------|-------------|  
 |CLSID anterior|7EFD3C7E-9E4B-4a93-9503-DECD74C0AC6D|483B0283-25DB-4c92-9C15-A65925CB95CE|  
 |Nome de arquivo anterior|NaturalLanguage6.dll|NaturalLanguage6.dll|  
-|CLSID atual|04b37e30-c9a9-4a7d-8f20-792fc87ddf71|Nenhum|  
-|Nome do arquivo atual|MSWB7.dll|Nenhum|  
+|CLSID atual|04b37e30-c9a9-4a7d-8f20-792fc87ddf71|None|  
+|Nome do arquivo atual|MSWB7.dll|None|  
   
  **Alemão (deu), LCID 1031**  
   
@@ -237,8 +237,8 @@ ms.locfileid: "33182502"
 |---------------|------------------|-------------|  
 |CLSID anterior|E1E8F15E-8BEC-45df-83BF-50FF84D0CAB5|3D5DF14F-649F-4cbc-853D-F18FEDE9CF5D|  
 |Nome de arquivo anterior|NaturalLanguage6.dll|NaturalLanguage6.dll|  
-|CLSID atual|04096682-6ece-4e9e-90c1-52d81f0422ed|Nenhum|  
-|Nome do arquivo atual|MsWb70011.dll|Nenhum|  
+|CLSID atual|04096682-6ece-4e9e-90c1-52d81f0422ed|None|  
+|Nome do arquivo atual|MsWb70011.dll|None|  
   
  **Holandês (nld), LCID 1043**  
   
@@ -353,8 +353,8 @@ ms.locfileid: "33182502"
 |---------------|------------------|-------------|  
 |CLSID anterior|CCA22CF4-59FE-11D1-BBFF-00C04FB97FDA|CEDC01C7-59FE-11D1-BBFF-00C04FB97FDA|  
 |Nome de arquivo anterior|Thawbrkr.dll|Thawbrkr.dll|  
-|CLSID atual|F70C0935-6E9F-4ef1-9F06-7876536DB900|Nenhum|  
-|Nome do arquivo atual|MsWb7001e.dll|Nenhum|  
+|CLSID atual|F70C0935-6E9F-4ef1-9F06-7876536DB900|None|  
+|Nome do arquivo atual|MsWb7001e.dll|None|  
   
  **Chinês tradicional (zh-hk), LCID 3076**  
   

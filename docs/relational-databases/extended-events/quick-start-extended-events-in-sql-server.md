@@ -14,13 +14,13 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 28dad124a7c4552418f103dc03d6893d5718632b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 2af8f48646f0cb99ffd2bd5bf6ac734dcaeecf52
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32941341"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39534906"
 ---
 # <a name="quick-start-extended-events-in-sql-server"></a>Início Rápido: Eventos estendidos no SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -427,7 +427,7 @@ Cenários específicos de sessões de evento destinadas à avaliação de bloque
 A tabela a seguir lista os termos usados para eventos estendidos e descreve seus significados.
 
 
-| Termo | Description |
+| Termo | Descrição |
 | :--- | :---------- |
 | sessão de evento | Um constructo centrado em torno de um ou mais eventos, além de itens de suporte como ações, são destinos. A instrução CREATE EVENT SESSION constrói cada sessão de evento. Você pode usar ALTER em uma sessão de evento para iniciá-la e interrompê-la quando desejar. <br/> <br/> Às vezes, uma sessão de evento é chamada de apenas uma *sessão*, quando o contexto esclarece que ela indica uma *sessão de evento*. <br/> <br/> Mais detalhes sobre as sessões de evento são descritos em: [Sessões de eventos estendidos do SQL Server](../../relational-databases/extended-events/sql-server-extended-events-sessions.md). |
 | event | Uma ocorrência específica no sistema que é inspecionada por uma sessão de eventos ativos. <br/> <br/> Por exemplo, o evento *sql_statement_completed* representa o momento em que se conclui qualquer instrução T-SQL. O evento pode relatar sua duração e outros dados. |

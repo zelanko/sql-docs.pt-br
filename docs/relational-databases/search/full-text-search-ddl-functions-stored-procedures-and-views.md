@@ -15,13 +15,13 @@ caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 74e711521668985119b0c3ab8f3921b4fcc7fdbf
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: f43294031ba3a3ae5ecc6490c400b40e4b912e8c
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38037854"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39546896"
 ---
 # <a name="full-text-search-ddl-functions-stored-procedures-and-views"></a>DDL, funções, procedimentos armazenados e exibições de pesquisa de texto completo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

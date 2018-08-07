@@ -17,13 +17,13 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 445ee6ce61017507756006fdc2f2b22359b2ec0d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 9d20946e721e4bff7c231466af55ac0c01a4140e
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32938881"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39541476"
 ---
 # <a name="extended-events-tools"></a>Ferramentas de eventos estendidos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "32938881"
 ## <a name="ddl-statements"></a>Instruções DDL  
  Use as instruções DDL a seguir para criar, alterar e remover uma sessão de Eventos Estendidos.  
   
-|Nome|Description|  
+|Nome|Descrição|  
 |----------|-----------------|  
 |[CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)|Cria um objeto de sessão de Evento Estendido que identifica a origem dos eventos, os destinos da sessão de evento e os parâmetros da sessão de evento.|  
 |[ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)|Inicia ou interrompe uma sessão de evento ou altera uma configuração de sessão de evento.|  
@@ -54,7 +54,7 @@ ms.locfileid: "32938881"
 ## <a name="catalog-views"></a>Exibições do catálogo  
  Use as exibições do catálogo a seguir para obter os metadados criados quando você cria uma sessão de evento.  
   
-|Nome|Description|  
+|Nome|Descrição|  
 |----------|-----------------|  
 |[sys.server_event_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-event-sessions-transact-sql.md)|Lista todas as definições de sessão de evento.|  
 |[sys.server_event_session_actions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-event-session-actions-transact-sql.md)|Retorna uma linha para cada ação em cada evento de uma sessão de eventos.|  
@@ -68,7 +68,7 @@ ms.locfileid: "32938881"
 > [!NOTE]  
 >  Estas exibições não contêm dados de sessão até que uma sessão seja iniciada.  
   
-|Nome|Description|  
+|Nome|Descrição|  
 |----------|-----------------|  
 |[sys.dm_os_dispatcher_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-dispatcher-pools-transact-sql.md)|Retorna informações sobre os pools de distribuidores da sessão.|  
 |[sys.dm_xe_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql.md)|Retorna uma linha para cada objeto exposto por um pacote de evento.|  
@@ -84,7 +84,7 @@ ms.locfileid: "32938881"
 ## <a name="system-tables"></a>Tabelas do sistema  
  Use as tabelas de sistema a seguir para obter informações sobre os equivalentes de Eventos Estendidos para classes e colunas de evento do Rastreamento do SQL.  
   
-|Nome|Description|  
+|Nome|Descrição|  
 |----------|-----------------|  
 |[trace_xe_event_map &#40;Transact-SQL&#41;](../../relational-databases/system-tables/extended-events-tables-trace-xe-event-map.md)|Contém uma linha para cada evento Eventos Estendidos mapeado para uma classe de evento do Rastreamento do SQL.|  
 |[trace_xe_action_map &#40;Transact-SQL&#41;](../../relational-databases/system-tables/extended-events-tables-trace-xe-action-map.md)|Contém uma linha para cada ação de Eventos Estendidos que é mapeada para uma ID de coluna do Rastreamento do SQL.|  

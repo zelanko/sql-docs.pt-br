@@ -18,13 +18,13 @@ caps.latest.revision: 10
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a2d98af4cf1b9fa152f445b4aea74fa0f34c4527
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: a030b74b36095892c6a623077fcd9ab41215dd72
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970671"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39558706"
 ---
 # <a name="sequence-properties-general-page"></a>Propriedades da Sequência (página Geral)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
