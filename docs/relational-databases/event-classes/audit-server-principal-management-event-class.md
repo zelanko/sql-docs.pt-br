@@ -15,13 +15,13 @@ caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f4704db7018e2fa643fc6ee8767a6b3f1561ebb7
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 744c2b1a352b931a1de3120024e788fdd80e40d9
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34327487"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39556358"
 ---
 # <a name="audit-server-principal-management-event-class"></a>Classe de evento Audit Server Principal Management
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -15,13 +15,13 @@ caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0778e11f9780569c2417c2cd843bc5e860250dc5
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 1d0882bb9a639f1b9e6ceb63076dcd7958e53493
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34331827"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39556406"
 ---
 # <a name="bitmap-warning-event-class"></a>classe de evento Bitmap Warning
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

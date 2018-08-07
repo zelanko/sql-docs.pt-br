@@ -15,13 +15,13 @@ caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fd4e9173655226d455c710942d1471ace51672e5
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 894fa3367e80ab42c04e8a2f5f9e632f45462aa2
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34332317"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39554956"
 ---
 # <a name="sqlstmtcompleted-event-class"></a>Classe de evento SQL:StmtCompleted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -15,13 +15,13 @@ caps.latest.revision: 18
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 885a6b5f77ac26b378458f919acfd1340f6baa2c
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 0b2382c5fe5ede68a39344b22f9179d6c3e9c37f
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34327427"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39552996"
 ---
 # <a name="sql-server-support-for-in-memory-oltp"></a>Suporte ao SQL Server para OLTP na memória
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

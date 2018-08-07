@@ -15,13 +15,13 @@ caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5e22e0faf5f362a5022c0aeb0382818269a151ce
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 69f2aa5fbe371d5b3f6828c3f57f5178db9557c8
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34332287"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39552296"
 ---
 # <a name="showplan-xml-for-query-compile-event-class"></a>classe de eventos Showplan XML For Query Compile
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

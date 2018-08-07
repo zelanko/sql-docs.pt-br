@@ -15,13 +15,13 @@ caps.latest.revision: 15
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f81ba5079859508a3806ec33e7d91030e2e787af
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: c8da6de6f7a26c0e4549cc75a5601dbbdad71ba3
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34324887"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39555426"
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>Criando procedimentos armazenados compilados nativamente
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

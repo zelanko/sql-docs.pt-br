@@ -19,13 +19,13 @@ caps.latest.revision: 27
 author: aliceku
 ms.author: aliceku
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: aa8adef85d2b1eb0513763174446837f41f158dd
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 5e5ebbec5b812be6fe5c74d2035f19c2d1c0cdd9
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35697477"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39546626"
 ---
 # <a name="encrypt-a-column-of-data"></a>Criptografar uma coluna de dados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ PASSWORD = '<some strong password>';
 ```  
 Sempre faça backup da chave mestra do seu banco de dados. Para obter mais informações sobre chaves mestras de banco de dados, consulte [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-master-key-transact-sql.md).
 
-#### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>Para criptografar uma coluna de dados usando uma criptografia simétrica simples  
+#### <a name="to-encrypt-a-column-of-data-using-symmetric-encryption-that-includes-an-authenticator"></a>Para criptografar uma coluna de dados usando a criptografia simétrica que inclui um autenticador  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
@@ -123,7 +123,7 @@ Sempre faça backup da chave mestra do seu banco de dados. Para obter mais infor
     GO  
     ```  
   
-#### <a name="to-encrypt-a-column-of-data-using-symmetric-encryption-that-includes-an-authenticator"></a>Para criptografar uma coluna de dados usando a criptografia simétrica que inclui um autenticador  
+#### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>Para criptografar uma coluna de dados usando uma criptografia simétrica simples  
   
 1.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   

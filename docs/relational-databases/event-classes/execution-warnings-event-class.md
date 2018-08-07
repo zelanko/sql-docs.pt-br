@@ -15,13 +15,13 @@ caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1e19226b93485e63f4e19c8357dfa69087b3e012
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: aa0592439a30eb271f8ece1c92392eaff9bf61b3
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34328137"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39552586"
 ---
 # <a name="execution-warnings-event-class"></a>classe de evento Execution Warnings
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

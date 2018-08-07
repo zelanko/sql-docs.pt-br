@@ -14,22 +14,24 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2cb8975c4eda311b93c7a26c1d83eecbbfa581f4
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 50e80b34becde8987a06f9293a39ba24e3639cd2
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37991644"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39454190"
 ---
 # <a name="sqlxml-interface"></a>Interface SQLXML
+
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  O driver JDBC fornece suporte para a API do JDBC 4.0, que apresenta a interface java.sql.SQLXML. A interface SQLXML define métodos para interagir com os dados XML e manipulá-los. O **SQLXML** tipo de dados é mapeado para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **xml** tipo de dados.  
+O driver JDBC fornece suporte para a API do JDBC 4.0, que apresenta a interface java.sql.SQLXML. A interface SQLXML define métodos para interagir com os dados XML e manipulá-los. O **SQLXML** tipo de dados é mapeado para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **xml** tipo de dados.  
   
- A interface SQLXML fornece métodos para acessar o valor XML como uma **cadeia de caracteres**, um **leitor** ou **gravador**, ou como um **Stream**. O valor XML também pode ser acessado por meio de uma **Fonte** ou definido como um **Resultado**, que é usado com APIs do Analisador de XML como DOM (Modelo de Objeto do Documento), SAX (API Simples para XML) e StAX (API de Fluxo para XML), assim como transformações XSLT e XPath.  
+A interface SQLXML fornece métodos para acessar o valor XML como uma **cadeia de caracteres**, um **leitor** ou **gravador**, ou como um **Stream**. O valor XML também pode ser acessado por meio de uma **Fonte** ou definido como um **Resultado**, que é usado com APIs do Analisador de XML como DOM (Modelo de Objeto do Documento), SAX (API Simples para XML) e StAX (API de Fluxo para XML), assim como transformações XSLT e XPath.  
   
 ## <a name="remarks"></a>Remarks  
- A tabela a seguir descreve os métodos definidos na interface SQLXML:  
+
+A tabela a seguir descreve os métodos definidos na interface SQLXML:  
   
 |Sintaxe de método|Descrição de método|  
 |-------------------|------------------------|  
@@ -43,15 +45,14 @@ ms.locfileid: "37991644"
 |[Estende o T T resultado setResult (classe\<T > resultClass)](http://go.microsoft.com/fwlink/?LinkId=131760)|Retorna um **resultado** para a configuração do **XML** valor especificado por este **SQLXML** objeto.<br /><br /> **Observação:** o método setResult é compatível com as seguintes origens: javax.xml.transform.dom.DOMResult, javax.xml.transform.sax.SAXResult, javax.xml.transform.stax.StaxResult e java.io.OutputStream.|  
 |[void setString(String value)](http://go.microsoft.com/fwlink/?LinkId=131762)|Define o valor XML designado por esse objeto SQLXML para a representação **String** especificada.|  
   
- Os aplicativos podem ler e gravar valores XML para ou de um objeto SQLXML apenas uma vez.  
+Os aplicativos podem ler e gravar valores XML para ou de um objeto SQLXML apenas uma vez.  
   
- Quando o método free() é chamado, um objeto SQLXML se torna inválido e não é nem legível nem gravável. Se o aplicativo tentar invocar um método naquele objeto SQLXML diferente do método free(), uma exceção será lançada.  
+Quando o método free() é chamado, um objeto SQLXML se torna inválido e não é nem legível nem gravável. Se o aplicativo tentar invocar um método naquele objeto SQLXML diferente do método free(), uma exceção será lançada.  
   
- O objeto SQLXML não fica legível nem gravável quando o aplicativo chama qualquer um dos seguintes métodos de getter: getSource, getCharacterStream, getBinaryStream e getString.  
+O objeto SQLXML não fica legível nem gravável quando o aplicativo chama qualquer um dos seguintes métodos de getter: getSource, getCharacterStream, getBinaryStream e getString.  
   
- O objeto SQLXML se torna nem legível nem gravável quando o aplicativo chama qualquer um dos seguintes métodos de setter: setResult, setCharacterStream, setBinaryStream e setString.  
+O objeto SQLXML se torna nem legível nem gravável quando o aplicativo chama qualquer um dos seguintes métodos de setter: setResult, setCharacterStream, setBinaryStream e setString.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Dando suporte a dados XML](../../connect/jdbc/supporting-xml-data.md)  
-  
-  
+
+[Dando suporte a dados XML](../../connect/jdbc/supporting-xml-data.md)  

@@ -1,7 +1,7 @@
 ---
 title: Opções de Conexão | Microsoft Docs
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ff7408af86aee324d63998ab8d0bce1f5dc0e616
-ms.sourcegitcommit: c37da15581fb34250d426a8d661f6d0d64f9b54c
+ms.openlocfilehash: 81dc9e66bee9411841a3ee421adb73840bb2b783
+ms.sourcegitcommit: f9d4f9c1815cff1689a68debdccff5e7ff97ccaf
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39174933"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39367638"
 ---
 # <a name="connection-options"></a>Opções de conexão
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -56,7 +56,7 @@ Este tópico lista as opções que são permitidas na matriz associativa (ao usa
 |TraceFile|Cadeia de caracteres|Especifica o caminho do arquivo usado para dados de rastreamento.|Nenhum valor definido.|  
 |TraceOn|1 ou **true** para habilitar o rastreamento.<br /><br />0 ou **false** para desabilitar o rastreamento.|Especifica se o rastreamento ODBC está habilitado (1 ou **true**) ou desabilitado (0 ou **false**) para a conexão que está sendo estabelecida.|**false** (0)|  
 |TransactionIsolation|O driver SQLSRV usa os seguintes valores:<br /><br />SQLSRV_TXN_READ_UNCOMMITTED<br /><br />SQLSRV_TXN_READ_COMMITTED<br /><br />SQLSRV_TXN_REPEATABLE_READ<br /><br />SQLSRV_TXN_SNAPSHOT<br /><br />SQLSRV_TXN_SERIALIZABLE<br /><br />O driver PDO_SQLSRV usa os seguintes valores:<br /><br />PDO::SQLSRV_TXN_READ_UNCOMMITTED<br /><br />PDO::SQLSRV_TXN_READ_COMMITTED<br /><br />PDO::SQLSRV_TXN_REPEATABLE_READ<br /><br />PDO::SQLSRV_TXN_SNAPSHOT<br /><br />PDO::SQLSRV_TXN_SERIALIZABLE|Especifica o nível de isolamento da transação.<br /><br />Para obter mais informações sobre o isolamento da transação, confira [SET TRANSACTION ISOLATION LEVEL](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md) na documentação do SQL Server.|SQLSRV_TXN_READ_COMMITTED<br /><br />ou em<br /><br />PDO::SQLSRV_TXN_READ_COMMITTED|  
-|transparentNetworkIPResolution|**Habilitado** ou **Desabilitado**|Afeta a sequência de conexão quando a primeira resolvida IP do nome do host não responde e há vários IPs associados com o nome do host.<br /><br />Ele interage com MultiSubnetFailover para fornecer sequências de conexão diferentes. Para obter mais informações, consulte [usando resolução de IP de rede transparente](https://docs.microsoft.com/sql/connect/odbc/using-transparent-network-ip-resolution).|Habilitado|
+|transparentNetworkIPResolution|**Habilitado** ou **Desabilitado**|Afeta a sequência de conexão quando a primeira resolvida IP do nome do host não responde e há vários IPs associados com o nome do host.<br /><br />Ele interage com MultiSubnetFailover para fornecer sequências de conexão diferentes. Para obter mais informações, consulte [resolução de IP de rede transparente](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md) ou [usando resolução de IP de rede transparente](https://docs.microsoft.com/sql/connect/odbc/using-transparent-network-ip-resolution).|Habilitado|
 |TrustServerCertificate|1 ou **true** para confiar no certificado.<br /><br />0 ou **false** para não confiar no certificado.|Especifica se o cliente deve confiar em um certificado do servidor autoassinado (1 ou **true**) ou rejeitá-lo (0 ou **false**).|**false** (0)|  
 |UID<br /><br />(sem suporte no driver PDO_SQLSRV)|Cadeia de caracteres|Especifica a ID de Usuário a ser usada ao se conectar com a Autenticação do SQL Server<sup>4</sup>.|Nenhum valor definido.|  
 |WSID|Cadeia de caracteres|Especifica o nome do computador para rastreamento.|Nenhum valor definido.|  
@@ -69,7 +69,7 @@ Este tópico lista as opções que são permitidas na matriz associativa (ao usa
 
 4. A instância do *UID* e *PWD* devem ser definidos ao se conectar com a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
 
-Muitas das chaves com suporte são atributos de cadeias de conexão do ODBC. Para obter informações sobre cadeias de conexão do ODBC, confira [Usando palavras-chave da cadeia de conexão com o SQL Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+Muitas das chaves com suporte são atributos de cadeias de conexão do ODBC. Para obter informações sobre cadeias de conexão do ODBC, confira [Usando palavras-chave da cadeia de conexão com o SQL Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).
 
 ## <a name="see-also"></a>Consulte Também  
 [Conectando-se ao servidor](../../connect/php/connecting-to-the-server.md)  

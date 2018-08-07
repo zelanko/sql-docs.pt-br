@@ -15,13 +15,13 @@ caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 801f05f051d6788d38a976aaa8dbcd2dcf4526b1
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: ec8a68a47c24b90d918ed95d394a3fbc458b230c
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34331267"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39555106"
 ---
 # <a name="dtctransaction-event-class"></a>classe de evento DTCTransaction
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

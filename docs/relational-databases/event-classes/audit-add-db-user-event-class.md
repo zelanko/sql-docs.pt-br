@@ -15,13 +15,13 @@ caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 272c75f1958c688441b621dfdd8ed92d4505ecf0
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: caffa0142df01418b9debdb2ea452037e3463e32
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34328307"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39555136"
 ---
 # <a name="audit-add-db-user-event-class"></a>Classe de evento Audit Add DB User
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -14,13 +14,13 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4ca667951d50ddf996d5ef5a46ee7d699681325c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 32d37930a8ceec8df41fce76c6a0f9f758ca9a84
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32973821"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39538136"
 ---
 # <a name="develop-using-always-encrypted-with-net-framework-data-provider"></a>Desenvolver usando o Always Encrypted com o Provedor de Dados .NET Framework
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -282,7 +282,7 @@ O processo para obter uma chave de criptografia de coluna:
 O Provedor de Dados do .NET Framework para SQL Server é fornecido com os provedores internos de repositórios de chaves mestras de coluna a seguir, que são pré-registrados com os nomes do provedor específico (usados para pesquisar o provedor).
 
 
-| Classe | Description | Nome (de pesquisa) do provedor |
+| Classe | Descrição | Nome (de pesquisa) do provedor |
 |:---|:---|:---|
 |Classe SqlColumnEncryptionCertificateStoreProvider| Um provedor do Repositório de Certificados do Windows. | MSSQL_CERTIFICATE_STORE |
 |[Classe SqlColumnEncryptionCngProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx) <br><br>**Observação:** esse provedor está disponível no .NET Framework 4.6.1 e versões posteriores. |Um provedor de um repositório de chaves que dá suporte à [API do CNG da Microsoft (Cryptography API: Next Generation)](https://msdn.microsoft.com/library/windows/desktop/aa376210.aspx). Normalmente, um repositório desse tipo é um módulo de segurança de hardware – um dispositivo físico que protege e gerencia chaves digitais e fornece processamento de criptografia.  | MSSQL_CNG_STORE|
@@ -552,7 +552,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 
 
-|Nome|Description|Introduzido na versão do .NET
+|Nome|Descrição|Introduzido na versão do .NET
 |:---|:---|:---
 |[Classe SqlColumnEncryptionCertificateStoreProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncertificatestoreprovider.aspx)|Um provedor de repositório de chaves para o Repositório de Certificados do Windows.|  4.6
 |[Classe SqlColumnEncryptionCngProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx)|Um provedor de repositório de chaves para o Microsoft CNG (Cryptography API: Next Generation).|  4.6.1

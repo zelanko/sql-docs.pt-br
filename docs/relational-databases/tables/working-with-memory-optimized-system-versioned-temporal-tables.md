@@ -14,13 +14,13 @@ caps.latest.revision: 12
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d339b84876fac50d01b602109f6c1b34f3567f97
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: b7ec25201dd89b50fd8117597fb1d9160ab334ec
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38023766"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39547466"
 ---
 # <a name="working-with-memory-optimized-system-versioned-temporal-tables"></a>Trabalho com tabelas temporais com controle da versão do sistema com otimização de memória
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

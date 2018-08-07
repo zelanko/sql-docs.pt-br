@@ -15,13 +15,13 @@ caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 68a53deded041d53b7cbab33320d09d94ea8a4b5
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: e3821438b010860a2e54f886d949ebc4124a3a7e
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34332237"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39557986"
 ---
 # <a name="oledb-provider-information-event-class"></a>classe de evento OLEDB Provider Information
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
