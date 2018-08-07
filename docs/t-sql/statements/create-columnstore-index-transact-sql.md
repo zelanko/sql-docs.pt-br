@@ -32,13 +32,13 @@ caps.latest.revision: 76
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 963c58a19ee5bf13fe956dcbefbf2f73114b1e96
-ms.sourcegitcommit: 9229fb9b37616e0b73e269d8b97c08845bc4b9f3
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 4a447806d32d0ac5d06c5db799f2002587981701
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39024242"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39452580"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -147,7 +147,7 @@ COMPRESSION_DELAY = **0** | *delay* [ Minutes ]
 
    Para uma tabela baseada em disco, *delay* especifica o número mínimo de minutos que um rowgroup delta no estado CLOSED precisa permanecer no rowgroup delta antes que o SQL Server possa compactá-lo no rowgroup compactado. Como as tabelas baseadas em disco não controlam os tempos de inserção e atualização em linhas individuais, o SQL Server aplica o atraso aos rowgroups delta no estado CLOSED.  
    O padrão é 0 minuto.  
-   Para obter recomendações de quando usar COMPRESSION_DELAY, confira [Introdução ao columnstore para análise operacional em tempo real](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md).  
+   Para obter recomendações de quando usar COMPRESSION_DELAY, confira [Introdução ao Columnstore para análise operacional em tempo real](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md).  
   
 DATA_COMPRESSION = COLUMNSTORE | COLUMNSTORE_ARCHIVE  
    Aplica-se a: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].

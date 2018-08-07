@@ -17,13 +17,13 @@ caps.latest.revision: 24
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7980cc5f02b5766ef30e06440cb6dfa30fdc5560
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: e693f27ef976afcc9fcb86ace9c16c114af90c70
+ms.sourcegitcommit: d9b7625322a2c7444ed25ca311d63fe70eb6fa0a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34768712"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39509195"
 ---
 # <a name="configure-flexible-automatic-failover-policy"></a>Configurar a política de failover automático flexível
 

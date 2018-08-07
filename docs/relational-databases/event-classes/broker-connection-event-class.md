@@ -15,13 +15,13 @@ caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 613809e454c0b11fa7c0b5afd6808e1cfe15dcbe
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 127ffdf471256b9167f53174554afcb0b282e47c
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34328217"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39533826"
 ---
 # <a name="brokerconnection-event-class"></a>classe de evento Broker:Connection
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

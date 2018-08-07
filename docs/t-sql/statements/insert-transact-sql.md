@@ -35,13 +35,13 @@ caps.latest.revision: 136
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e28bd156151f090a7c8ed3568eba4a72b7aab750
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 2a0170141b065c900280f75b82e58fb2de1eddcf
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37791717"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39455970"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

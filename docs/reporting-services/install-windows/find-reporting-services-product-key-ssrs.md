@@ -12,12 +12,13 @@ ms.topic: get-started-article
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0c150eab50024c6f49a3dc1d921d6bd271e49aca
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 7e4776dc60b997edc05699523e173d6adf72dd48
+ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38002908"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39400929"
 ---
 # <a name="how-to-find-the-product-key-for-sql-server-2017-reporting-services"></a>Como localizar a chave do produto (Product Key) para o SQL Server 2017 Reporting Services
 

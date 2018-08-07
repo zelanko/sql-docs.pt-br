@@ -1,7 +1,7 @@
 ---
 title: sqlsrv_query | Microsoft Docs
 ms.custom: ''
-ms.date: 05/22/2018
+ms.date: 08/01/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -21,12 +21,12 @@ caps.latest.revision: 46
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8f4ecf98769f064c6d25b1aa466d8e4fe27f5ab5
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 45a25840023772d835fd2bbfbadf2977bfa90107
+ms.sourcegitcommit: ef7f2540ba731cc6a648005f2773d759df5c6405
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979958"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39415515"
 ---
 # <a name="sqlsrvquery"></a>sqlsrv_query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -192,6 +192,63 @@ sqlsrv_close($conn);
 ?>
 ```
 
+## <a name="example"></a>Exemplo
+Este exemplo de código mostra como criar uma tabela de [sql_variant](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql) tipos e buscar os dados inseridos.
+
+```
+<?php
+$server = 'serverName';
+$dbName = 'databaseName';
+$uid = 'yourUserName';
+$pwd = 'yourPassword';
+
+$options = array("Database"=>$dbName, "UID"=>$uid, "PWD"=>$pwd);
+$conn = sqlsrv_connect($server, $options);
+if($conn === false) {
+    die(print_r(sqlsrv_errors(), true));
+}
+
+$tableName = 'testTable';
+$query = "CREATE TABLE $tableName ([c1_int] sql_variant, [c2_varchar] sql_variant)";
+
+$stmt = sqlsrv_query($conn, $query);
+if($stmt === false) {
+    die(print_r(sqlsrv_errors(), true));
+}
+sqlsrv_free_stmt($stmt);
+
+$query = "INSERT INTO [$tableName] (c1_int, c2_varchar) VALUES (1, 'test_data')";
+$stmt = sqlsrv_query($conn, $query);
+if($stmt === false) {
+    die(print_r(sqlsrv_errors(), true));
+}
+sqlsrv_free_stmt($stmt);
+
+$query = "SELECT * FROM $tableName";
+$stmt = sqlsrv_query($conn, $query);
+
+if(sqlsrv_fetch($stmt) === false) {
+    die(print_r(sqlsrv_errors(), true));
+}
+
+$col1 = sqlsrv_get_field($stmt, 0);
+echo "First field:  $col1 \n";
+
+$col2 = sqlsrv_get_field($stmt, 1);
+echo "Second field:  $col2 \n";
+
+sqlsrv_free_stmt($stmt);
+sqlsrv_close($conn);
+
+?>
+```
+
+A saída esperada seria:
+
+```
+First field:  1
+Second field:  test_data
+```
 
 ## <a name="see-also"></a>Consulte Também  
 [Referência da API do driver SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  

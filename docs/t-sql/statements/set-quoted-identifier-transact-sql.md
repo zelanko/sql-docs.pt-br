@@ -28,13 +28,13 @@ caps.latest.revision: 48
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ba68407344b9b5fe79d8230a9036b13dcb17eeae
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 6698e9638aa0231f09f45be04bbcdeddfcfdd6fa
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37784607"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39455701"
 ---
 # <a name="set-quotedidentifier-transact-sql"></a>SET QUOTED_IDENTIFIER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

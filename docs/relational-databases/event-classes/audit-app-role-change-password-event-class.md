@@ -15,13 +15,13 @@ caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9509a996802d936337ac13b8ade903a35ab7a3e6
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: fa0572b3f339ef4d9193c3e381d08e057adcc3a0
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34329457"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39534344"
 ---
 # <a name="audit-app-role-change-password-event-class"></a>Classe de evento Audit App Role Change Password
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

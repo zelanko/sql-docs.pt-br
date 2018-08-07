@@ -13,13 +13,13 @@ caps.latest.revision: 3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f5361e96eeb91aaf51d4f0949e3d01d078c6ee95
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 57cf381aa397a1edd2c86ce971f6711c2151090d
+ms.sourcegitcommit: d9b7625322a2c7444ed25ca311d63fe70eb6fa0a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34768692"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39509115"
 ---
 # <a name="cluster-dtc-for-sql-server-2016-availability-groups"></a>Cluster DTC para Grupos de Disponibilidade do SQL Server 2016
 

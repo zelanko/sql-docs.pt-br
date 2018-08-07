@@ -15,13 +15,13 @@ caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5e4a50497ba1c18c5c8ead401f48cac895a9c193
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 260bbfa7d86a24fb4815d759a7e82efaeb76a8f3
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34326267"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39532737"
 ---
 # <a name="existingconnection-event-class"></a>classe de evento ExistingConnection
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

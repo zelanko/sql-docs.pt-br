@@ -15,13 +15,13 @@ caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b52b6ccad5674ce69e427ff837d4cb1249b23e8c
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: b9d1f59a212c961481a79483a9d24165a7baac9a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34328847"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39534216"
 ---
 # <a name="audit-add-login-to-server-role-event-class"></a>Classe de evento Audit Add Login to Server Role
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -45,13 +45,13 @@ caps.latest.revision: 61
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3b51867d1cd4cd6a40342cc9a775ff11b12664e6
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: ada5cd545aa805d5f5ec95bcb21a9258011ea56e
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37787947"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39459930"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>Opções de arquivo e grupos de arquivos de ALTER DATABASE (Transact-SQL) 
 

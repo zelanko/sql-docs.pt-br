@@ -15,13 +15,13 @@ caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3ad4222d268ec7fc7f0cb78d144f330f1416f92c
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 989a322ee3e2d23d2bd6d883038157e1c6036c2f
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34331793"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39533626"
 ---
 # <a name="audit-change-database-owner-event-class"></a>Classe de evento Audit Change Database Owner
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

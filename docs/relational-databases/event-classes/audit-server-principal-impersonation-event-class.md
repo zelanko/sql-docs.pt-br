@@ -15,13 +15,13 @@ caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 54994b8c27919fed297a70573fc70eb0990d14ba
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 447c3f7e07911a1cea54131425bb790d64c2f8b7
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34331407"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39534483"
 ---
 # <a name="audit-server-principal-impersonation-event-class"></a>Classe de evento Audit Server Principal Impersonation
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

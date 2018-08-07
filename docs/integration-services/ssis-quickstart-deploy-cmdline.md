@@ -10,12 +10,12 @@ ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f1179443d8b86e23a51fdf2250f007914e27cf0b
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: b0327a7fb471299785d7899befabcbd9f228aa2e
+ms.sourcegitcommit: 575c9a20ca08f497ef7572d11f9c8604a6cde52e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35335860"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39482697"
 ---
 # <a name="deploy-an-ssis-project-from-the-command-prompt-with-isdeploymentwizardexe"></a>Implantar um projeto do SSIS por meio do prompt de comando com ISDeploymentWizard.exe
 Este guia de início rápido demonstra como implantar um projeto do SSIS por meio do prompt de comando executando o Assistente de Implantação do Integration Services, `ISDeploymentWizard.exe`.
@@ -47,7 +47,7 @@ Para implantar o projeto no Banco de Dados SQL do Azure, obtenha as informaçõe
 3. Na página **Visão geral** do banco de dados, examine o nome totalmente qualificado do servidor. Para ver a opção **Clique para copiar**, passe o mouse sobre o nome do servidor. 
 4. Se você esquecer suas informações de logon do servidor de Banco de Dados SQL do Azure, navegue até a página do servidor de Banco de Dados SQL para exibir o nome do administrador de servidor. Você pode redefinir a senha, se necessário.
 
-## <a name="authentication-methods-in-the-deployment-wizard"></a>Métodos de autenticação no Assistente de Implantação
+## <a name="wizard_auth"></a> Métodos de autenticação no Assistente de Implantação
 
 Se você estiver implantando em um SQL Server com o Assistente de Implantação, precisará usar a autenticação do Windows; não poderá usar a autenticação do SQL Server.
 

@@ -29,13 +29,13 @@ caps.latest.revision: 78
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 627e9a2bf7b7a70012d7e5d993535784bbb722fb
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 8af5ca1d58acd6f59c4e1b8c871e89e251e14c57
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37788187"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39452250"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

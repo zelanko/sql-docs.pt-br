@@ -18,17 +18,17 @@ caps.latest.revision: 25
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: a5298705230f13aca363cd266a274c807e4e09a1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 31d50f1fa8869cd3bff62f137a61a704518e588d
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216806"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39400779"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Tutorial: Criar um relatório de gráfico rápido offline (Construtor de Relatórios)
   Neste tutorial, você criará um gráfico de pizza usando um assistente e o modificará um pouco, apenas para ter uma ideia do que é possível. É possível executar este tutorial de duas formas. Os dois métodos têm o mesmo resultado: um gráfico de pizza semelhante ao da seguinte ilustração:  
   
- ! [Exibir "Meu primeiro gráfico de pizza" em execução] (.. /Media/RS-my1stpierunview.gif "" meu primeiro gráfico de pizza "em execução Exibir")  
+ ! [Exibir "Meu primeiro gráfico de pizza" em execução] (.. /Media/RS-my1stpierunview.gif "meu primeiro gráfico de pizza" no modo de exibição de execução")  
   
 ## <a name="prerequisites"></a>Prerequisites  
  Se você usa dados XML ou uma consulta [!INCLUDE[tsql](../../../includes/tsql-md.md)], precisa ter acesso ao Construtor de Relatórios da [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Você pode executar a versão autônoma ou a versão ClickOnce, disponível no Gerenciador de Relatórios ou em um site do SharePoint. Somente a primeira etapa, como abrir o Construtor de Relatórios, é diferente para versões do ClickOnce. Para obter mais informações, consulte [instalar, desinstalar e oferecer suporte ao construtor de relatórios](../install-uninstall-and-report-builder-support.md).  

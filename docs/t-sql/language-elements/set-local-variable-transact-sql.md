@@ -21,13 +21,13 @@ caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9961be2758ba85deefa53b1d376ce688317f1f55
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 25b0d6501dc1327b1f7cb20e9b1d2cfa15162ef5
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36257658"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39457510"
 ---
 # <a name="set-localvariable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

@@ -20,13 +20,13 @@ caps.latest.revision: 47
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 278d7906b10ce523acc619defccdf47e8efc4812
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: cddb5a151058557814b86dafba5e3cd13187fb04
+ms.sourcegitcommit: d9b7625322a2c7444ed25ca311d63fe70eb6fa0a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35312485"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39509095"
 ---
 # <a name="the-database-mirroring-endpoint-sql-server"></a>O ponto de extremidade de espelhamento de banco de dados (SQL Server)
 
