@@ -15,13 +15,13 @@ ms.assetid: ''
 author: joesackmsft
 ms.author: josack
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6f1b215e95b7cc911cd2815493eabbbd53a47424
-ms.sourcegitcommit: a162a8f02d66c13b32d0b6255b0b52fc80e2187e
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 20c453617ccef36166ca3b9fae62ee0430959e51
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39250444"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39562950"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Processamento inteligente de consultas em bancos de dados SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]

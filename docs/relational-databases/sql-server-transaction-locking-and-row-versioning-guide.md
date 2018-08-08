@@ -21,13 +21,13 @@ caps.latest.revision: 5
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c0993d9437044b1eba713e2ac7cd10b2ab5372b3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 50ae9731b974753b0a3fef174314ef5bbe3e03d5
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32973791"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563220"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Guia de Controle de Versão de Linha e Bloqueio de Transações
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -346,7 +346,7 @@ GO
   
  A tabela seguinte mostra os recursos que o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] pode bloquear.  
   
-|Recurso|Description|  
+|Recurso|Descrição|  
 |--------------|-----------------|  
 |RID|Um identificador de linha usado para bloquear uma única linha dentro de um heap.|  
 |KEY|Um bloqueio de linha dentro de um índice usado para proteger um intervalo de chaves em transações serializáveis.|  
@@ -368,7 +368,7 @@ GO
   
  A tabela a seguir mostra o recurso de modos de bloqueio que o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] utiliza.  
   
-|Modo de bloqueio|Description|  
+|Modo de bloqueio|Descrição|  
 |---------------|-----------------|  
 |Compartilhado (S)|Usado para operações de leitura que não alteram nem atualizam dados, como uma instrução `SELECT`.|  
 |Atualização (U)|Usado em recursos que podem ser atualizados. Evita uma forma comum de deadlock que ocorre quando várias sessões estão lendo, bloqueando e potencialmente atualizando recursos mais tarde.|  
@@ -403,7 +403,7 @@ GO
   
 <a name="lock_intent_table"></a> Os bloqueios intencionais incluem IS (tentativa compartilhada), IX (tentativa exclusiva) e SIX (compartilhados com tentativa exclusiva).  
   
-|Modo de bloqueio|Description|  
+|Modo de bloqueio|Descrição|  
 |---------------|-----------------|  
 |Intencional compartilhado (IS)|Protege bloqueios solicitados ou bloqueios compartilhados adquiridos em alguns (mas não todos) recursos mais baixos na hierarquia.|  
 |Intencional exclusivo (IX)|Protege os bloqueios solicitados ou bloqueios exclusivos adquiridos em alguns (mas não todos) recursos mais baixos na hierarquia. IX é um superconjunto de IS, e também protege solicitando bloqueios compartilhados em recursos de nível mais baixo.|  
@@ -467,7 +467,7 @@ GO
 -   A fila representa o modo de bloqueio que protege a entrada de índice.  
 -   O modo representa o modo de bloqueio combinado em uso. Os modos de bloqueio de intervalo de chave consistem de duas partes. A primeira representa o tipo de bloqueio utilizado para bloquear o intervalo de índice (Range*T*), e a segunda representa o tipo de bloqueio utilizado para bloquear uma chave específica (*K*). As duas partes são conectadas por um hífen (-), como Intervalo*T*-*K*.  
   
-    |Intervalo|Linha|Modo|Description|  
+    |Intervalo|Linha|Modo|Descrição|  
     |-----------|---------|----------|-----------------|  
     |RangeS|P|RangeS-S|Intervalo compartilhado, bloqueio de recurso compartilhado; exame de intervalo serializável.|  
     |RangeS|U|RangeS-U|Intervalo compartilhado, bloqueio de recurso compartilhado; exame de atualização serializável.|  
@@ -1500,7 +1500,7 @@ ALTER DATABASE AdventureWorks2016
   
  A tabela a seguir relaciona e descreve os estados da opção ALLOW_SNAPSHOT_ISOLATION. Usar a opção ALTER DATABASE com a opção ALLOW_SNAPSHOT_ISOLATION não bloqueará os usuários que estiverem acessando os dados do banco de dados no momento.  
   
-|Estado da estrutura de isolamento de instantâneo para banco de dados atual|Description|  
+|Estado da estrutura de isolamento de instantâneo para banco de dados atual|Descrição|  
 |----------------------------------------------------------------|-----------------|  
 |OFF|O suporte para as transações de isolamento de instantâneo não está ativado. Não é permitida nenhuma transação de isolamento de instantâneo.|  
 |PENDING_ON|O suporte para as transações de isolamento de instantâneo está em estado de transição (de OFF para ON). As transações abertas precisam ser concluídas.<br /><br /> Não é permitida nenhuma transação de isolamento de instantâneo.|  
