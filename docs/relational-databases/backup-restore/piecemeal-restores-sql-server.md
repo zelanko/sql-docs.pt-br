@@ -19,16 +19,16 @@ caps.latest.revision: 74
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2c0af1af6758a9520d36398dfd34dc56430dd392
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: de4ff47096b20847ab3eecffee1cbe734bf17cab
+ms.sourcegitcommit: ef7f2540ba731cc6a648005f2773d759df5c6405
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32923651"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39415435"
 ---
 # <a name="piecemeal-restores-sql-server"></a>Restaurações por etapas (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Este tópico é relevante apenas para os bancos de dados na edição Enterprise do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que contêm vários arquivos ou grupos de arquivos. No modelo simples, ele é relevante apenas para grupos de arquivos somente leitura.  
+  Este tópico é relevante para os bancos de dados na edição Enterprise do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (restauração online) ou na edição Standard (restauração offline) que contêm vários arquivos ou grupos de arquivos; no modelo simples, ele é relevante apenas para grupos de arquivos somente leitura.  
   
  Para obter informações sobre a restauração por etapas e as tabelas com otimização de memória, consulte [Restauração por etapas de bancos de dados com tabelas com otimização de memória](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md).  
   

@@ -26,12 +26,12 @@ caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9314c7ffa3a25aa9feb0e8632c68667a4662f86e
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: a29b8d92aecddb64020bd12dfd4be4559f8c4399
+ms.sourcegitcommit: 575c9a20ca08f497ef7572d11f9c8604a6cde52e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37356048"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39482677"
 ---
 # <a name="enhance-transactional-replication-performance"></a>Aprimorar o desempenho da replicação transacional
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -124,6 +124,36 @@ Um valor para esse parâmetro de agente pode ser especificado usando o **@subscr
 
 Para saber mais sobre como implementar fluxos de assinatura, confira [Navegando pela configuração subscriptionStream de replicação do SQL](https://blogs.msdn.microsoft.com/repltalk/2010/03/01/navigating-sql-replication-subscriptionstreams-setting).
   
+### <a name="blocking-monitor-thread"></a>Thread de monitor de bloqueio
+
+O Agente de Distribuição mantém um thread do monitor de bloqueio que detecta o bloqueio entre sessões. Se o thread do monitor de bloqueio detectar um bloqueio entre as sessões, o Agente de Distribuição alternará para usar uma sessão a fim de reaplicar o lote atual de comandos que não puderam ser aplicados anteriormente.
+
+O thread do monitor de bloqueio pode detectar o bloqueio entre sessões do Agente de Distribuição. No entanto, o thread do monitor de bloqueio não pode detectar o bloqueio nas seguintes situações:
+- Uma das sessões em que o bloqueio ocorre não é uma sessão do Agente de Distribuição.
+- Um deadlock de sessão congela as atividades do Agente de Distribuição.
+
+Nessa situação, o Agente de Distribuição coordena todas as sessões para serem confirmadas juntas assim que os comandos são executados. Ocorrerá um deadlock entre as sessões se as seguintes condições forem verdadeiras:
+
+- Ocorre um bloqueio entre as sessões do Agente de Distribuição e uma sessão que não é uma sessão do Agente de Distribuição.
+- O Agente de Distribuição está aguardando todas as sessões concluírem a execução de seus comandos antes que o Agente de Distribuição coordene todas as sessões para serem confirmadas juntas.
+
+Por exemplo, configure o parâmetro *SubscriptionStreams* como 8. A sessão 10 até a sessão 17 são sessões do Agente de Distribuição. A sessão 18 não é uma sessão do Agente de Distribuição. A sessão 10 está bloqueada pela sessão 18, e a sessão 18 está bloqueada pela sessão 11. Além disso, as sessões 10 e 11 da sessão devem ser confirmadas juntas. No entanto, o Agente de Distribuição não pode confirmar as sessões 10 e 11 juntas devido ao bloqueio. Portanto, o Agente de Distribuição não pode coordenar essas oito sessões para serem confirmadas juntas até que as sessões 10 e 11 concluam a execução dos seus comandos.
+
+Este exemplo resulta em um estado no qual nenhuma sessão está executando seus comandos. Quando o tempo especificado na propriedade **QueryTimeout** é atingido, o Agente de Distribuição cancela todas as sessões.
+
+> [!Note]
+> Por padrão, o valor da propriedade **QueryTimeout** é de 5 minutos.
+
+Você pode observar as seguintes tendências dos contadores de desempenho do Agente de Distribuição durante esse período de tempo limite de consulta: 
+
+- O valor do contador de desempenho **Dist: Delivered Cmds/sec** é sempre 0.
+- O valor do contador de desempenho **Dist: Delivered Trans/sec** é sempre 0.
+- O contador de desempenho **Dist: Delivery Latency** reporta um aumento no valor até que o deadlock do thread seja resolvido.
+
+O tópico "Agente de Distribuição de Replicação" nos Manuais Online do SQL Server contém a seguinte descrição do parâmetro *SubscriptionStreams*: "Se uma das conexões não for executada nem for confirmada, todas as conexões anularão o lote atual, e o agente usará um fluxo único para repetir os lotes com falha."
+
+O Agente de Distribuição usa uma sessão para repetir o lote que não pôde ser aplicado. Depois que o Agente de Distribuição aplicar com êxito o lote, ele retomará o uso de várias sessões sem reiniciar.
+
 #### <a name="commitbatchsize"></a>CommitBatchSize
 - Aumente o valor do parâmetro **-CommitBatchSize** para o Agente de Leitor de Log.  
   

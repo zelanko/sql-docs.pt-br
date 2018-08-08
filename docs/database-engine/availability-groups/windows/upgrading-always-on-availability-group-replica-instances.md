@@ -13,12 +13,12 @@ caps.latest.revision: 14
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f269692489e852e60cb30172738d8ff89ec95f53
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 9ed204382cf962e82fc6418a57343909515afaca
+ms.sourcegitcommit: 5e7f347b48b7d0400fb680645c28e781f2921141
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34770063"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39496705"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Atualizar instâncias de réplica do Grupo de Disponibilidade AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ Observe as diretrizes a seguir ao realizar atualizações de servidor para minim
   
 -   Não atualize a instância da réplica primária antes de fazer failover do AG para a instância atualizada com uma réplica secundária primeiro. Do contrário, os aplicativos cliente poderão passar por um longo tempo de inatividade durante a atualização na instância da réplica primária.  
   
--   Sempre faça failover do AG em uma instância da réplica secundária de confirmação síncrona. Se você fizer failover para uma instância de réplica secundária de confirmação assíncrona, os bancos de dados estarão vulneráveis a perda de dados e a movimentação dos dados será automaticamente suspensa até que você a retome manualmente.  
+-   Sempre faça failover do AG em uma instância da réplica secundária de confirmação síncrona. Se você fizer failover para uma instância de réplica secundária de confirmação assíncrona, os bancos de dados estarão vulneráveis a perda de dados e a movimentação de dados será automaticamente suspensa até que você a retome manualmente.  
   
 -   Não atualize a instância da réplica primária antes de atualizar qualquer outra instância da réplica secundária. Uma réplica primária atualizada não pode mais enviar logs para nenhuma réplica secundária cuja instância do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ainda não tenha sido atualizada para a mesma versão. Quando a movimentação dos dados para uma réplica secundária for suspensa, nenhum failover automático poderá ocorrer nessa réplica, e os bancos de dados de disponibilidade ficarão vulneráveis à perda de dados.  
   
@@ -134,7 +134,7 @@ Observe as diretrizes a seguir ao realizar atualizações de servidor para minim
   
 6.  Atualizar PRIMARY1  
   
-## <a name="upgrade-update-sql-server-instances-with-multiple-ags"></a>Atualizar instâncias do SQL Server com vários AGs  
+## <a name="upgrade-or-update-sql-server-instances-with-multiple-ags"></a>Atualizar instâncias do SQL Server com vários AGs  
  Se você estiver executando vários AGs com réplicas primárias em nós de servidor separados (uma configuração Ativo/Ativo), o caminho da atualização envolverá mais etapas de failover para preservar a alta disponibilidade no processo. Suponhamos que você esteja executando três AGs nos três nós de servidor, com todas as réplicas no modo de confirmação síncrona na tabela a seguir:  
   
 |AG|Node1|Node2|Node3|  
@@ -171,6 +171,63 @@ Observe as diretrizes a seguir ao realizar atualizações de servidor para minim
   
 > [!NOTE]  
 >  Em muitos casos, após a atualização sem interrupção, você executará o failback para a réplica primária original. 
+
+## <a name="rolling-upgrade-of-a-distributed-availability-group"></a>Atualização sem interrupção de um grupo de disponibilidade distribuído
+Para executar uma atualização sem interrupção de um grupo de disponibilidade distribuído, atualize primeiro todas as réplicas secundárias. Em seguida, faça failover do encaminhador e atualize a última instância restante do segundo grupo de disponibilidade. Depois que todas as réplicas tiverem sido atualizadas, faça failover do primário global e atualize a última instância restante do primeiro grupo de disponibilidade. É fornecido abaixo um diagrama detalhado com etapas. 
+
+ Com base na sua implementação, o caminho da atualização pode variar, bem como o tempo de inatividade experimentado pelos aplicativos cliente.  
+  
+> [!NOTE]  
+>  Em muitos casos, após a atualização sem interrupção, você executará o failback para as réplicas primárias originais. 
+
+### <a name="general-steps-to-upgrade-a-distributed-availability-group"></a>Etapas gerais para atualizar um grupo de disponibilidade distribuído
+1. Faça backup de todos os bancos de dados, incluindo os bancos de dados do sistema e os que participam do grupo de disponibilidade. 
+2. Atualize e reinicie todas as réplicas secundárias do segundo grupo de disponibilidade (o downstream). 
+3. Atualize e reinicie todas as réplicas secundárias do primeiro grupo de disponibilidade (o upstream). 
+4. Faça failover do encaminhador primário para uma réplica secundária atualizada do grupo de disponibilidade secundário.
+5. Aguarde a sincronização de dados. Os bancos de dados devem ser mostrados como sincronizados em todas as réplicas de confirmação síncrona, e o primário global deve ser sincronizado com o encaminhador.  
+6. Atualize e reinicie a última instância restante do grupo de disponibilidade secundário. 
+7. Faça failover do primário global para um secundário atualizado do primeiro grupo de disponibilidade.  
+8. Atualize a última instância restante do grupo de disponibilidade primário.
+9. Reinicie o servidor recém-atualizado. 
+10. (opcional) Execute failback de ambos os grupos de disponibilidade para suas réplicas primárias originais.  
+
+>[!IMPORTANT]
+>- Verifique a sincronização entre cada etapa. Antes de passar para a próxima etapa, confirme que suas réplicas de confirmação síncrona estão sincronizadas dentro do grupo de disponibilidade e que seu primário global está sincronizado com o encaminhador no grupo de disponibilidade distribuído. 
+>- **Recomendação**: sempre que você verificar a sincronização, atualize o nó do banco de dados e o nó do grupo de disponibilidade distribuído no SQL Server Management Studio. Depois de tudo for sincronizado, salve uma captura de tela dos estados de cada réplica. Isso ajudará você a manter o controle de qual etapa você está, a fornecer provas de que tudo estava funcionando corretamente antes da próxima etapa e a auxiliar na solução de problemas, se algo der errado. 
+
+
+### <a name="diagram-example-for-a-rolling-upgrade-of-a-distributed-availability-group"></a>Diagrama de exemplo de uma atualização sem interrupção de um grupo de disponibilidade distribuído
+
+| grupo de disponibilidade | Réplica primária | Réplica secundária|
+| :------ | :----------------------------- |  :------ |
+| AG1 | NODE1\SQLAG | NODE2\SQLAG|
+| AG2 | NODE3\SQLAG | NODE4\SQLAG|
+| Distributedag| AG1 (global) | AG2 (encaminhador) |
+| &nbsp; | &nbsp; | &nbsp; |
+
+![Exemplo de diagrama para o grupo de disponibilidade distribuído](media/upgrading-always-on-availability-group-replica-instances/rolling-upgrade-dag-diagram.png)
+
+
+As etapas para atualizar as instâncias neste diagrama: 
+
+1. Faça backup de todos os bancos de dados, incluindo os bancos de dados do sistema e os que participam do grupo de disponibilidade. 
+2. Atualize NODE4\SQLAG (secundário do AG2) e reinicie o servidor. 
+3. Atualize NODE2\SQLAG (secundário do AG1) e reinicie o servidor. 
+4. Faça failover do AG2 do NODE3\SQLAG ao NODE4\SQLAG. 
+5. Atualize o NODE3\SQLAG e reinicie o servidor. 
+6. Faça failover do AG1 do NODE1\SQLAG ao NODE2\SQLAG. 
+7. Atualize o NODE1\SQLAG e reinicie o servidor. 
+8. (opcional) Execute failback para as réplicas primárias originais.
+    1. Faça failover do AG2 do NODE4\SQLAG de volta para o NODE3\SQLAG.  
+    2. Faça failover do AG1 do NODE2\SQLAG de volta para o NODE1\SQLAG. 
+
+Se uma terceira réplica existisse em cada grupo de disponibilidade, ela seria atualizada antes de NODE3\SQLAG e de NODE1\SQLAG. 
+
+>[!IMPORTANT]
+>- Verifique a sincronização entre cada etapa. Antes de passar para a próxima etapa, confirme que suas réplicas de confirmação síncrona estão sincronizadas dentro do grupo de disponibilidade e que seu primário global está sincronizado com o encaminhador no grupo de disponibilidade distribuído. 
+>- Recomendação: sempre que você verificar a sincronização, atualize o nó do banco de dados e o nó do grupo de disponibilidade distribuído no SQL Server Management Studio. Após tudo ser sincronizado, tire uma captura de tela e salve-a. Isso ajudará você a manter o controle de qual etapa você está, a fornecer provas de que tudo estava funcionando corretamente antes da próxima etapa e a auxiliar na solução de problemas, se algo der errado. 
+
 
 ## <a name="special-steps-for-change-data-capture-or-replication"></a>Etapas especiais para replicação ou captura de dados de alteração
 

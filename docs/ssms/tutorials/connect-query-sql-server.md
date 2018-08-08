@@ -12,12 +12,12 @@ ms.reviewer: sstein
 manager: craigg
 ms.prod: sql
 ms.technology: ssms
-ms.openlocfilehash: 5ccc024b8589efa95af2503a8ea5bdba0c47147b
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: e487537bd5051d396e5f24243a33ded4aa38daf7
+ms.sourcegitcommit: f9d4f9c1815cff1689a68debdccff5e7ff97ccaf
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33988750"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39367658"
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>Tutorial: Conectar-se a uma instância do SQL Server e consultá-la usando o SQL Server Management Studio
 Este tutorial ensina a usar o SSMS (SQL Server Management Studio) para conectar-se à instância do SQL Server e executar alguns comandos T-SQL (Transact-SQL) básicos. O artigo demonstra como fazer o seguinte:
@@ -184,5 +184,11 @@ Você pode encontrar informações sobre as propriedades de conexão nos resulta
     > [!NOTE]
     > Esta ação altera apenas o servidor ao qual a janela de consulta está conectada, não o servidor ao qual o Pesquisador de Objetos está conectado. 
 
+## <a name="next-steps"></a>Próximas etapas
+O próximo artigo ensina a criar scripts de vários objetos dentro do SQL Server Management Studio. 
+
+Vá até o próximo artigo para saber mais:
+> [!div class="nextstepaction"]
+> [Próximas etapas](scripting-ssms.md)
 
 

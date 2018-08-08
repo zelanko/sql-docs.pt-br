@@ -27,13 +27,13 @@ caps.latest.revision: 45
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9609e8361e53a6d535c8d1cb0dc753a0542cfbb9
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: d14a95638b567c548e11646c8d2acdc834054cba
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37787307"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39459950"
 ---
 # <a name="set-implicittransactions-transact-sql"></a>SET IMPLICIT_TRANSACTIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,7 +61,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF }
   
  Quando OFF, cada uma das instruções T-SQL anteriores é delimitada por instruções BEGIN TRANSACTION e COMMIT TRANSACTION não vistas. Quando OFF, dizemos que o modo de transação é *autocommit*. Se seu código T-SQL visivelmente emite um BEGIN TRANSACTION, dizemos que é o modo de transação *explicit*.  
   
- Há vários ponto esclarecedores a entender:  
+ Há vários pontos esclarecedores para entender:  
   
 -   Quando o modo de transação é implícito, nenhuma BEGIN TRANSACTION não vista será emitido se @@trancount > 0. No entanto, qualquer instrução BEGIN TRANSACTION explícita ainda incrementará @@TRANCOUNT.  
   

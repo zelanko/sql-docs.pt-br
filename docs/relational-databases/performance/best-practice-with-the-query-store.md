@@ -16,13 +16,13 @@ caps.latest.revision: 24
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ce8da96760e08b2388a8d3a65e0aa9abc67dd169
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 9bc9c0f916a26a46d2bfc3aaed05ce8e4072f57a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39279177"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39549526"
 ---
 # <a name="best-practice-with-the-query-store"></a>Melhor prática com o Repositório de Consultas
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -153,7 +153,7 @@ Navegue até a subpasta do Repositório de Consultas sob o nó do banco de dados
   
  Ao identificar uma consulta com desempenho abaixo do ideal, sua ação dependerá da natureza do problema.  
   
--   Se a consulta foi executada com vários planos e o último plano é consideravelmente pior que o anterior, você pode usar o mecanismo de imposição de plano para forçar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a usar sempre o plano ideal para execuções futuras.  
+-   Se a consulta foi executada com vários planos e o último plano é consideravelmente pior que o anterior, é possível usar o mecanismo de imposição de plano para forçá-lo. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta forçar o plano no otimizador. Se a imposição do plano falhar, um XEvent será acionado e o otimizador será instruído a otimizar normalmente. 
   
      ![query-store-force-plan](../../relational-databases/performance/media/query-store-force-plan.png "query-store-force-plan")  
 
