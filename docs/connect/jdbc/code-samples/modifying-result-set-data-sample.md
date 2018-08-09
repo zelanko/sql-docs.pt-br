@@ -1,7 +1,7 @@
 ---
 title: Resultado de modificação do conjunto de dados de exemplo | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,37 +14,42 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b6d1a5b2952bbf2f628004c6884e8ce1bf3d7b95
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
-ms.translationtype: HT
+ms.openlocfilehash: f43960439d015bb9c23598d1182c13ced74347d2
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39278548"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39454340"
 ---
 # <a name="modifying-result-set-data-sample"></a>Exemplo de modificação de dados do conjunto de resultados
+
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Este aplicativo de exemplo do [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] demonstra como recuperar um conjunto de dados atualizável de um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]. Em seguida, usando métodos do objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md), ele insere, modifica e, por fim, exclui uma linha de dados do conjunto de dados.  
-  
- O arquivo de código desta amostra chama-se UpdateRS.java e pode ser encontrado no seguinte local:  
-  
- \<*diretório de instalação*> \sqljdbc_\<*versão*>\\<*idioma*> \samples\resultsets  
-  
-## <a name="requirements"></a>Requisitos  
- Para executar este aplicativo de exemplo, é necessário definir o classpath para incluir o arquivo mssql-jdbc.jar. Também será necessário ter acesso ao banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]. Para obter mais informações sobre como definir o classpath, consulte [usando o Driver JDBC](../../../connect/jdbc/using-the-jdbc-driver.md).  
-  
+Este aplicativo de exemplo do [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] demonstra como recuperar um conjunto de dados atualizável de um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]. Em seguida, usando métodos do objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md), ele insere, modifica e, por fim, exclui uma linha de dados do conjunto de dados.
+
+O arquivo de código desta amostra chama-se UpdateResultSet.java e pode ser encontrado no seguinte local:
+
+```bash
+\<installation directory>\sqljdbc_<version>\<language>\samples\resultsets
+```
+
+## <a name="requirements"></a>Requisitos
+
+Para executar este aplicativo de exemplo, é necessário definir o classpath para incluir o arquivo mssql-jdbc.jar. Também será necessário ter acesso ao banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]. Para obter mais informações sobre como definir o classpath, consulte [usando o Driver JDBC](../../../connect/jdbc/using-the-jdbc-driver.md).
+
 > [!NOTE]  
->  O [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] fornece os arquivos de biblioteca de classes mssql-jdbc a serem usados de acordo com suas configurações preferenciais do JRE (Java Runtime Environment). Para obter mais informações sobre qual arquivo JAR escolher, consulte [requisitos do sistema para o Driver JDBC](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).  
-  
-## <a name="example"></a>Exemplo  
- No exemplo a seguir, o código de exemplo faz uma conexão com o banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]. Em seguida, usando uma instrução SQL com o objeto [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md), ele executa a instrução SQL e coloca os dados retornados em um objeto SQLServerResultSet atualizável.  
-  
- Em seguida, o código de exemplo usa o método [moveToInsertRow](../../../connect/jdbc/reference/movetoinsertrow-method-sqlserverresultset.md) para mover o cursor do conjunto de resultados para a linha de inserção, usa uma série de métodos [updateString](../../../connect/jdbc/reference/updatestring-method-sqlserverresultset.md) para inserir dados na nova linha e, depois, chama o método [insertRow](../../../connect/jdbc/reference/insertrow-method-sqlserverresultset.md) para persistir a nova linha de dados novamente no banco de dados.  
-  
- Depois de inserir a nova linha de dados, o código de exemplo usa uma instrução SQL para recuperar a linha previamente inserida e usa a combinação de métodos updateString e [updateRow](../../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) para atualizar a linha de dados e novamente persisti-la de volta no banco de dados.  
-  
- Por fim, o código de exemplo recupera a linha de dados previamente atualizada e, em seguida, a exclui do banco de dados usando o método [deleteRow](../../../connect/jdbc/reference/deleterow-method-sqlserverresultset.md).  
-  
+> O [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] fornece os arquivos de biblioteca de classes mssql-jdbc a serem usados de acordo com suas configurações preferenciais do JRE (Java Runtime Environment). Para obter mais informações sobre qual arquivo JAR escolher, consulte [requisitos do sistema para o Driver JDBC](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).
+
+## <a name="example"></a>Exemplo
+
+No exemplo a seguir, o código de exemplo faz uma conexão com o banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)]. Em seguida, usando uma instrução SQL com o objeto [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md), ele executa a instrução SQL e coloca os dados retornados em um objeto SQLServerResultSet atualizável.
+
+Em seguida, o código de exemplo usa o método [moveToInsertRow](../../../connect/jdbc/reference/movetoinsertrow-method-sqlserverresultset.md) para mover o cursor do conjunto de resultados para a linha de inserção, usa uma série de métodos [updateString](../../../connect/jdbc/reference/updatestring-method-sqlserverresultset.md) para inserir dados na nova linha e, depois, chama o método [insertRow](../../../connect/jdbc/reference/insertrow-method-sqlserverresultset.md) para persistir a nova linha de dados novamente no banco de dados.
+
+Depois de inserir a nova linha de dados, o código de exemplo usa uma instrução SQL para recuperar a linha previamente inserida e usa a combinação de métodos updateString e [updateRow](../../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) para atualizar a linha de dados e novamente persisti-la de volta no banco de dados.
+
+Por fim, o código de exemplo recupera a linha de dados previamente atualizada e, em seguida, a exclui do banco de dados usando o método [deleteRow](../../../connect/jdbc/reference/deleterow-method-sqlserverresultset.md).
+
 ```java
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -52,7 +57,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class UpdateRS {
+public class UpdateResultSet {
 
     public static void main(String[] args) {
 
@@ -107,9 +112,9 @@ public class UpdateRS {
         }
     }
 }
-```  
-  
-## <a name="see-also"></a>Consulte Também  
- [Trabalhando com conjuntos de resultados](../../../connect/jdbc/working-with-result-sets.md)  
-  
-  
+
+```
+
+## <a name="see-also"></a>Consulte Também
+
+[Trabalhando com conjuntos de resultados](../../../connect/jdbc/code-samples/working-with-result-sets.md)

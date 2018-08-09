@@ -1,7 +1,7 @@
 ---
 title: 'PDO:: Prepare | Microsoft Docs'
 ms.custom: ''
-ms.date: 07/10/2017
+ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 717657cabc469488565985e3e37d111bb9d592b8
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 7ac27dbcc186eff263803da714032d532c95d3b4
+ms.sourcegitcommit: f9d4f9c1815cff1689a68debdccff5e7ff97ccaf
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37979761"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39367698"
 ---
 # <a name="pdoprepare"></a>PDO::prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -49,7 +49,7 @@ A tabela a seguir mostra os valores possíveis de *key_pair*.
 |Chave|Descrição|  
 |-------|---------------|  
 |PDO::ATTR_CURSOR|Especifica o comportamento do cursor. O padrão é PDO::CURSOR_FWDONLY. PDO::CURSOR_SCROLL é um cursor estático.<br /><br />Por exemplo, `array( PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY )`.<br /><br />Se você usar PDO::CURSOR_SCROLL, pode usar PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE, descrito abaixo.<br /><br />Veja [Tipos de cursor &#40;Driver PDO_SQLSRV&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md) para obter mais informações sobre conjuntos de resultados e cursores no driver PDO_SQLSRV.|  
-|PDO::ATTR_EMULATE_PREPARES|Quando PDO:: attr_emulate_prepares está habilitada, os espaços reservados em uma instrução preparada é substituído por parâmetros associados. Uma instrução SQL concluída com nenhum espaço reservado é enviada para o banco de dados em execução. <br /><br />PDO:: attr_emulate_prepares pode ser usado para ignorar algumas restrições no SQL Server. Por exemplo, SQL Server não dá suporte a parâmetros nomeados ou posicionais em algumas cláusulas de Transact-SQL. Além disso, o SQL Server tem um limite de 2100 parâmetros de associação.<br /><br />Você pode definir o atributo PDO:: attr_emulate_prepares como true. Por exemplo:<br /><br />`PDO::ATTR_EMULATE_PREPARES => true`<br /><br />Por padrão, esse atributo é definido como false.<br /><br />**Observação:** a segurança das consultas parametrizadas não é aplicada ao usar `PDO::ATTR_EMULATE_PREPARES => true`. Seu aplicativo deve garantir que os dados associados aos parâmetros não contenham código Transact-SQL mal-intencionado.<br /><br />**Limitações:**: porque os parâmetros não são associados usando o recurso de consulta parametrizada do banco de dados, não há suporte para parâmetros de saída e entrada_saída.|  
+|PDO::ATTR_EMULATE_PREPARES|Por padrão, esse atributo é false, que pode ser alterado por este `PDO::ATTR_EMULATE_PREPARES => true`. Ver [emular preparar](#emulate-prepare) para obter detalhes e exemplo.|
 |PDO::SQLSRV_ATTR_ENCODING|PDO::SQLSRV_ENCODING_UTF8 (padrão)<br /><br />PDO::SQLSRV_ENCODING_SYSTEM<br /><br />PDO::SQLSRV_ENCODING_BINARY|  
 |PDO::SQLSRV_ATTR_DIRECT_QUERY|Se for True, especifica a execução direta da consulta. False significa uma execução preparada da instrução. Para obter mais informações sobre PDO::SQLSRV_ATTR_DIRECT_QUERY, veja [Execução de instrução direta e execução de instrução preparada no driver PDO_SQLSRV](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md).|  
 |PDO::SQLSRV_ATTR_QUERY_TIMEOUT|Para obter mais informações, consulte [PDO::setAttribute](../../connect/php/pdo-setattribute.md).|  
@@ -97,7 +97,7 @@ print $stmt->rowCount();
 $stmt = null  
 ?>  
 ```  
-  
+
 ## <a name="example"></a>Exemplo  
 Este exemplo mostra como usar o método PDO::prepare com um cursor do lado do cliente. Para obter uma amostra exibindo um cursor do lado do servidor, veja [Tipos de cursor &#40;Driver PDO_SQLSRV&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).  
   
@@ -137,7 +137,96 @@ $row = $stmt->fetch( PDO::FETCH_NUM, PDO::FETCH_ORI_LAST );
 print_r($row);  
 ?>  
 ```  
-  
+
+<a name="emulate-prepare" />
+
+## <a name="example"></a>Exemplo 
+
+Este exemplo mostra como usar o método PDO::prepare com `PDO::ATTR_EMULATE_PREPARES` definido como true. 
+
+```
+<?php
+$serverName = "yourservername";
+$username = "yourusername";
+$password = "yourpassword";
+$database = "tempdb";
+$conn = new PDO("sqlsrv:server = $serverName; Database = $database", $username, $password);
+
+$pdo_options = array();
+$pdo_options[PDO::ATTR_EMULATE_PREPARES] = true;
+$pdo_options[PDO::SQLSRV_ATTR_ENCODING] = PDO::SQLSRV_ENCODING_UTF8;
+
+$stmt = $conn->prepare("CREATE TABLE TEST([id] [int] IDENTITY(1,1) NOT NULL, 
+                                          [name] nvarchar(max))", 
+                                          $pdo_options);
+$stmt->execute();
+
+$prefix = '가각';
+$name = '가각ácasa';
+$name2 = '가각sample2';
+
+$stmt = $conn->prepare("INSERT INTO TEST(name) VALUES(:p0)", $pdo_options);
+$stmt->execute(['p0' => $name]);
+unset($stmt);
+
+$stmt = $conn->prepare("SELECT * FROM TEST WHERE NAME LIKE :p0", $pdo_options);
+$stmt->execute(['p0' => "$prefix%"]);
+foreach ($stmt as $row) {
+    echo "\n" . 'FOUND: ' . $row['name'];
+}
+
+unset($stmt);
+unset($conn);
+?>
+```
+
+O driver PDO_SQLSRV internamente substitui todos os espaços reservados com os parâmetros que são associados pelas [PDOStatement::bindParam()](../../connect/php/pdostatement-bindparam.md). Portanto, uma cadeia de caracteres de consulta SQL com nenhum espaço reservado é enviada ao servidor. Considere este exemplo,
+
+```
+$statement = $PDO->prepare("INSERT into Customers (CustomerName, ContactName) VALUES (:cus_name, :con_name)");
+$statement->bindParam(:cus_name, "Cardinal");
+$statement->bindParam(:con_name, "Tom B. Erichsen");
+$statement->execute();
+```
+
+Com `PDO::ATTR_EMULATE_PREPARES` definido como false (o caso padrão), os dados enviados para o banco de dados são:
+
+```
+"INSERT into Customers (CustomerName, ContactName) VALUES (:cus_name, :con_name)"
+Information on :cus_name parameter
+Information on :con_name parameter
+```
+
+O servidor executará a consulta usando seu recurso de consulta parametrizada para parâmetros de associação. Por outro lado, com `PDO::ATTR_EMULATE_PREPARES` definido como true, a consulta enviada ao servidor é essencialmente:
+
+```
+"INSERT into Customers (CustomerName, ContactName) VALUES ('Cardinal', 'Tom B. Erichsen')"
+```
+
+Definindo `PDO::ATTR_EMULATE_PREPARES` para true pode ignorar algumas restrições no SQL Server. Por exemplo, SQL Server não dá suporte a parâmetros nomeados ou posicionais em algumas cláusulas de Transact-SQL. Além disso, o SQL Server tem um limite de 2100 parâmetros de associação.
+
+> [!NOTE]
+> Com emulate prepara-se definido como true, a segurança das consultas parametrizadas não estiver em vigor. Portanto, seu aplicativo deve garantir que os dados associados aos parâmetros não contenham código Transact-SQL mal-intencionado.
+
+### <a name="encoding"></a>Codificação
+
+Se o usuário deseja associar parâmetros com diferentes codificações (por exemplo, UTF-8 ou binária), usuário deve especificar claramente a codificação no script PHP.
+
+O driver PDO_SQLSRV primeiro verifica a codificação especificada na `PDO::bindParam()` (por exemplo, `$statement->bindParam(:cus_name, "Cardinal", PDO::PARAM_STR, 10, PDO::SQLSRV_ENCODING_UTF8)`). 
+
+Se não encontrado, o driver verificará se nenhuma codificação é definido em `PDO::prepare()` ou `PDOStatement::setAttribute()`. Caso contrário, o driver usará a codificação especificada na `PDO::__construct()` ou `PDO::setAttribute()`.
+
+### <a name="limitations"></a>Limitações
+
+Como você pode ver, a associação é feita internamente pelo driver. Uma consulta válida é enviada ao servidor para execução sem nenhum parâmetro. Em comparação com o caso comum, algumas limitações resultam quando o recurso de consulta com parâmetros não está em uso.
+
+- Ele não funciona para os parâmetros que são associados como `PDO::PARAM_INPUT_OUTPUT`.
+    - Quando o usuário especifica `PDO::PARAM_INPUT_OUTPUT` em `PDO::bindParam()`, uma exceção de PDO é lançada.
+- Ele não funciona para os parâmetros que são associados como parâmetros de saída.
+    - Quando o usuário cria uma instrução preparada com espaços reservados que servem para parâmetros de saída (ou seja, ter um sinal de igual imediatamente após um espaço reservado, como `SELECT ? = COUNT(*) FROM Table1`), uma exceção de PDO é lançada.
+    - Quando uma instrução preparada invoca um procedimento armazenado com um espaço reservado como argumento para um parâmetro de saída, nenhuma exceção é gerada porque o driver não pode detectar o parâmetro de saída. No entanto, a variável que o usuário fornece para o parâmetro de saída permanecerá inalterada.
+- Espaços reservados duplicados para um parâmetro codificado binário não funcionará
+
 ## <a name="see-also"></a>Consulte Também  
 [Classe PDO](../../connect/php/pdo-class.md)
 

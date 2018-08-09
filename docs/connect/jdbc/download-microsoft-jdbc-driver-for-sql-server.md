@@ -1,7 +1,7 @@
 ---
-title: Baixar o Microsoft JDBC Driver para SQL Server | Microsoft Docs
+title: Baixar o Driver do Microsoft JDBC para SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2018
+ms.date: 07/19/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,27 +14,28 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a113c8690b10c2d7e525acb4c762d44bdcba1001
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 8f354c557aaa44633f15640458138678ee18dfab
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32828711"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39459470"
 ---
 # <a name="download-microsoft-jdbc-driver-for-sql-server"></a>Baixe o Microsoft JDBC Driver para SQL Server
 
 ## <a name="using-the-jdbc-driver-with-maven-central"></a>Usando o Driver JDBC com o Maven Central
-O Driver JDBC pode ser adicionado a um projeto Maven adicionando-o como uma dependência no arquivo POM.xml com o código a seguir:
+O Driver JDBC pode ser adicionado a um projeto Maven adicionando-o como uma dependência no arquivo POM. XML com o código a seguir:
 
 ```xml
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>6.4.0.jre8</version>
+    <version>7.0.0.jre10</version>
 </dependency>
 ```  
 
-## <a name="available-downloads-of-jdbc-driver-for-sql-server"></a>Downloads disponíveis do Driver JDBC para SQL Server
+## <a name="available-downloads-of-jdbc-driver-for-sql-server"></a>Downloads disponíveis do JDBC Driver para SQL Server
+ * [Microsoft JDBC Driver 7.0 para SQL Server](http://go.microsoft.com/fwlink/?linkid=2005972) 
  * [Microsoft JDBC Driver 6.4 para SQL Server](http://go.microsoft.com/fwlink/?linkid=868290) 
  * [Microsoft JDBC Driver 6.2 para SQL Server](http://go.microsoft.com/fwlink/?linkid=852460) 
  * [Microsoft JDBC Driver 6.0 para SQL Server](http://go.microsoft.com/fwlink/?LinkId=245496) 
@@ -42,6 +43,6 @@ O Driver JDBC pode ser adicionado a um projeto Maven adicionando-o como uma depe
  * [Microsoft JDBC Driver 4.1 para SQL Server](http://go.microsoft.com/fwlink/?linkid=841533) 
   
 ## <a name="unsupported-drivers"></a>Drivers sem suporte  
-Versões de driver sem suporte não estão disponíveis para download aqui. Estamos aperfeiçoando continuamente o suporte à conectividade de Java. Como tal, é altamente recomendável que você trabalhe com a versão mais recente do Microsoft JDBC driver.  
+As versões de driver sem suporte não estão disponíveis para download aqui. Estamos aperfeiçoando continuamente o suporte à conectividade com Java. Como tal, é altamente recomendável que você trabalhe com a versão mais recente do Microsoft JDBC driver.  
   
   

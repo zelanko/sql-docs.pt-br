@@ -1,7 +1,7 @@
 ---
-title: Microsoft JDBC Driver para a matriz de suporte do SQL Server | Microsoft Docs
+title: Matriz de suporte do Microsoft JDBC Driver para SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2018
+ms.date: 07/19/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,12 +14,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1aceb8c6c7077236d8bf7dcf4794a894adc16030
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d0b19f437021f3a2398ac1a0dc694c4c52259621
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32832801"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39456400"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>Matriz de suporte do Microsoft JDBC Driver para SQL Server
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -27,23 +27,24 @@ ms.locfileid: "32832801"
   Esta página contém a matriz de suporte e a política de ciclo de vida de suporte para o Microsoft JDBC Driver para SQL Server.  
   
 ## <a name="microsoft-jdbc-driver-support-lifecycle-matrix-and-policy"></a>Matriz e política de suporte do Microsoft JDBC Driver  
- A política de ciclo de vida de suporte da Microsoft (MSL) fornece informações transparentes e previsíveis sobre o ciclo de vida de suporte dos produtos da Microsoft. Versões do driver JDBC 3.0, 4. x e 6. x têm cinco anos de suporte base a partir do driver a data de lançamento. O suporte base é definido no site do ciclo de vida de suporte da Microsoft.  
+ A política de ciclo de vida de suporte da Microsoft (MSL) fornece informações transparentes e previsíveis sobre o ciclo de vida de suporte dos produtos da Microsoft. As versões de driver JDBC 3.0, 4.x, 6.x e 7.x têm cinco anos de suporte base a partir da data de lançamento do driver. O suporte base é definido no site do ciclo de vida de suporte da Microsoft.  
   
  As opções de suporte personalizado e estendido não estão disponíveis para Microsoft JDBC Driver.  
     
  Os Microsoft JDBC Drivers a seguir têm suporte até a data de fim do suporte indicada.  
   
-|Nome do driver|Versão do pacote de driver|JAR(s) aplicável|Fim do suporte básico|
+|Nome do driver|Versão do pacote de driver|JAR(s) aplicável|Fim do suporte base|
 |-|-|-|-|  
-|Microsoft JDBC Driver 6.4 para SQL Server|6.4|mssql-jdbc-6.4.0.jre9.jar<br> mssql-jdbc-6.4.0.jre8.jar<br> mssql-jdbc-6.4.0.jre7.jar|22 de janeiro de 2023|    
-|Microsoft JDBC Driver 6.2 para SQL Server|6.2|mssql-jdbc-6.2.2.jre8.jar<br> mssql-jdbc-6.2.2.jre7.jar|30 de junho de 2022|    
+|Microsoft JDBC Driver 7.0 para SQL Server|7.0|mssql-jdbc-7.0.0.jre10.jar<br> mssql-jdbc-7.0.0.jre8.jar|31 de julho de 2023|  
+|Microsoft JDBC Driver 6.4 para SQL Server|6.4|mssql-jdbc-6.4.0.jre9.jar<br> mssql-jdbc-6.4.0.jre8.jar<br> mssql-jdbc-6.4.0.jre7.jar|27 de fevereiro de 2023|    
+|Microsoft JDBC Driver 6.2 para SQL Server|6.2|MSSQL-jdbc-6.2.2.jre8.jar<br> MSSQL-jdbc-6.2.2.jre7.jar|30 de junho de 2022|    
 |Microsoft JDBC Driver 6.0 para SQL Server|6.0|sqljdbc42.jar<br>sqljdbc41.jar|14 de julho de 2021|    
 |Microsoft JDBC Driver 4.2 para SQL Server|4.2|sqljdbc42.jar<br>sqljdbc41.jar|24 de agosto de 2020|  
 |Microsoft JDBC Driver 4.1 para SQL Server|4.1|sqljdbc41.jar|12 de dezembro de 2019|  
   
  Os Microsoft JDBC Drivers a seguir não têm mais suporte.  
  
-|Nome do driver|Versão do pacote de driver|Fim do suporte básico|  
+|Nome do driver|Versão do pacote de driver|Fim do suporte base|  
 |-|-|-|
 |Microsoft JDBC Driver 4.0 para SQL Server|4.0|6 de março de 2017|  
 |Microsoft SQL Server JDBC Driver 3.0|3.0|23 de abril de 2015|  
@@ -55,7 +56,7 @@ ms.locfileid: "32832801"
   
 ## <a name="sql-version-compatibility"></a>Compatibilidade com versões do SQL  
   
-|Versão do driver|SQL Server 2008|SQL Server 2008R2|SQL Server 2012|Azure SQL Database|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|SQL Azure gerenciados instância (Extended visualização particular)|  
+|Versão do driver|SQL Server 2008|SQL Server 2008R2|SQL Server 2012|Banco de dados SQL do Azure|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|(Extended visualização privada) de instância gerenciada SQL do Azure|  
 |-|-|-|-|-|-|-|-|-|-|
 |6.4|N|S|S|S|S|S|S|S|S|  
 |6.2|S|S|S|S|S|S|S|S|N|
@@ -64,28 +65,29 @@ ms.locfileid: "32832801"
 |4.2|S|S|S|S|S|S|S|N|N|
 |4.1|S|S|S|S|S|S|S|N|N|
 |4.0|S|S|S|S|S|S|S|N|N|
-|3.0|S|S|Y<sup>1</sup>|Y<sup>2</sup>|N|Y<sup>5</sup>|N|N|N|
-|2.0|Y<sup>3</sup>|Y<sup>3</sup>|N|N|N|N|N|N|N|
-|1.2|Y<sup>3</sup>|N|N|N|N|N|N|N|N|
+|3.0|S|S|S<sup>1</sup>|S<sup>2</sup>|N|S<sup>5</sup>|N|N|N|
+|2.0|S<sup>3</sup>|S<sup>3</sup>|N|N|N|N|N|N|N|
+|1.2|S<sup>3</sup>|N|N|N|N|N|N|N|N|
 |1.1|N|N|N|N|N|N|N|N|N|  
 |1.0|N|N|N|N|N|N|N|N|N|  
 |2000|N|N|N|N|N|N|N|N|N|  
   
- <sup>1</sup>Microsoft SQL Server JDBC Driver versão 3.0 pode conectar-se ao SQL Server 2012 como um cliente de nível inferior.  
+ <sup>1</sup>O Microsoft SQL Server JDBC Driver versão 3.0 pode conectar-se ao SQL Server 2012 como um cliente de nível inferior.  
   
- <sup>2</sup>suporte para o banco de dados do SQL Azure foi introduzido no driver 3.0 como um hotfix. Recomendamos que os clientes Banco de dados SQL do Azure usem a versão disponível mais recente do driver.  
+ <sup>2</sup>O suporte ao Banco de dados SQL do Azure foi introduzido no driver 3.0 como um hotfix. Recomendamos que os clientes Banco de dados SQL do Azure usem a versão disponível mais recente do driver.  
   
- <sup>3</sup>Microsoft SQL Server JDBC Driver versão 2.0 e Microsoft SQL Server 2005 JDBC Driver versão 1.2 podem se conectar ao SQL Server 2008 como um cliente de nível inferior. Quando são permitidas conversões de nível inferior, os aplicativos podem executar consultas e atualizações nos novos tipos de dados do SQL Server 2008, como time, date, datetime2, datetimeoffset e FILESTREAM. Para obter mais informações sobre como usar esses novos tipos de dados com o driver JDBC, consulte  [Working with SQL Server 2008 Date/Time Data Types using JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=145198) e  [Working with SQL Server 2008 FileStream using JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=145199). Para obter mais informações sobre a compatibilidade de nível inferior desses novos tipos de dados, consulte os tópicos  [Usando dados de data e hora](http://go.microsoft.com/fwlink/?LinkId=145211)e  [Suporte a FILESTREAM](http://go.microsoft.com/fwlink/?LinkId=145212) nos Manuais Online do Microsoft SQL Server.  
+ <sup>3</sup>O Microsoft SQL Server JDBC Driver versão 2.0 e o Microsoft SQL Server 2005 JDBC Driver versão 1.2 podem conectar-se ao SQL Server 2008 como um cliente de nível inferior. Quando são permitidas conversões de nível inferior, os aplicativos podem executar consultas e atualizações nos novos tipos de dados do SQL Server 2008, como time, date, datetime2, datetimeoffset e FILESTREAM. Para obter mais informações sobre como usar esses novos tipos de dados com o driver JDBC, consulte  [Working with SQL Server 2008 Date/Time Data Types using JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=145198) e  [Working with SQL Server 2008 FileStream using JDBC Driver](http://go.microsoft.com/fwlink/?LinkId=145199). Para obter mais informações sobre a compatibilidade de nível inferior desses novos tipos de dados, consulte os tópicos  [Usando dados de data e hora](http://go.microsoft.com/fwlink/?LinkId=145211)e  [Suporte a FILESTREAM](http://go.microsoft.com/fwlink/?LinkId=145212) nos Manuais Online do Microsoft SQL Server.  
   
- <sup>4</sup>suporte para conexões entre o Microsoft JDBC Driver e o Parallel Data Warehouse foi introduzido no Microsoft JDBC Driver 4.0 para SQL Server e Microsoft SQL Server 2008 R2 Parallel Data Warehouse Appliance atualização 3.  
+ <sup>4</sup>O suporte para conexões entre o Microsoft JDBC Driver e o Parallel Data Warehouse foi introduzido pela primeira vez no Microsoft JDBC Driver 4.0 para SQL Server e no Microsoft SQL Server 2008 R2 Parallel Data Warehouse Appliance Atualização 3.  
   
- <sup>5</sup>Microsoft SQL Server JDBC Driver versão 3.0 pode se conectar ao SQL Server 2014 como um cliente de nível inferior.  
+ <sup>5</sup>O Microsoft SQL Server JDBC Driver versão 3.0 pode conectar-se ao SQL Server 2014 como um cliente de nível inferior.  
   
 ## <a name="java-and-jdbc-specification-support"></a>Java e suporte à especificação JDBC  
   
 |Versão do driver JDBC|Versões do JRE|Versão da API do JDBC| 
 |-|-|-|  
-|6.4|1.7, 1.8, 1.9|4.1, 4.2, 4.3 (parcialmente)|  
+|7.0|1.8, 10|4.2, 4.3 (parcialmente)|  
+|6.4|1.7, 1.8, 9|4.1, 4.2, 4.3 (parcialmente)|  
 |6.2|1.7, 1.8|4.1, 4.2|  
 |6.1|1.7, 1.8|4.1, 4.2|  
 |6.0|1.7, 1.8|4.1, 4.2|  
