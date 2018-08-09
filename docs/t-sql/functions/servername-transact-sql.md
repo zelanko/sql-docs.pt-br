@@ -22,12 +22,12 @@ caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a0adbdba1c04ad4cc2e39f532ded83d3964a47ea
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 4335b063b5b8f734be6fe76bb0a1f43c3f7e8622
+ms.sourcegitcommit: 50144371c9ee924e5c0b4b9d3d4860f531c27426
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37787357"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39582182"
 ---
 # <a name="x40x40servername-transact-sql"></a>&#x40;&#x40;SERVERNAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,8 +57,8 @@ ms.locfileid: "37787357"
 |--------------|------------------------|  
 |Instância padrão|'*servername*'|  
 |Instância nomeada|'*servername*\\*instancename*'|  
-|instância clusterizada de failover – instância padrão|'*virtualservername*'|  
-|instância clusterizada de failover – instância nomeada|'*virtualservername*\\*instancename*'|  
+|instância de cluster de failover – instância padrão|'*network_name_for_fci_in_wsfc*'|  
+|instância de cluster de failover – instância nomeada|'*network_name_for_fci_in_wsfc*\\*instancename*'|  
   
  Embora a função @@SERVERNAME e a propriedade SERVERNAME da função SERVERPROPERTY possam retornar cadeias de caracteres com formatos semelhantes, as informações podem ser diferentes. Uma propriedade SERVERNAME relata automaticamente alterações no nome de rede do computador.  
   

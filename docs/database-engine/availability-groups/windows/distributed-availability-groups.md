@@ -15,12 +15,12 @@ caps.latest.revision: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cddd67d02c64d8be20bda88f00bc05153c366b45
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: c96db6aa66cae06f1f1b1ca4779c094fe1ef9164
+ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083727"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39400709"
 ---
 # <a name="distributed-availability-groups"></a>Grupos de disponibilidade distribuídos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ Para configurar um grupo de disponibilidade distribuído, consulte [Configurar g
 
 ## <a name="understand-distributed-availability-groups"></a>Noções básicas dos grupos de disponibilidade distribuídos
 
-Um grupo de disponibilidade distribuído é um tipo especial de grupo de disponibilidade que abrange dois grupos de disponibilidade separados. Os grupos de disponibilidade subjacentes são configurados em dois clusters WSFC (Clustering de Failover do Windows Server) diferentes. Os grupos de disponibilidade que fazem parte de um grupo de disponibilidade distribuído não precisam estar no mesmo local. Eles podem ser físicos, virtuais, locais, estar na nuvem pública ou em qualquer lugar que dá suporte a uma implantação de grupo de disponibilidade. Contanto que dois grupos de disponibilidade possam se comunicar, você pode configurar um grupo de disponibilidade distribuído com eles.
+Um grupo de disponibilidade distribuído é um tipo especial de grupo de disponibilidade que abrange dois grupos de disponibilidade separados. Os grupos de disponibilidade que fazem parte de um grupo de disponibilidade distribuído não precisam estar no mesmo local. Eles podem ser físicos, virtuais, locais, estar na nuvem pública ou em qualquer lugar compatível com uma implantação de grupo de disponibilidade. Isso inclui domínios e plataformas cruzados, por exemplo, entre um grupo de disponibilidade hospedado no Linux e outro hospedado no Windows. Contanto que dois grupos de disponibilidade possam se comunicar, você pode configurar um grupo de disponibilidade distribuído com eles.
 
 Um grupo de disponibilidade tradicional tem recursos configurados em um cluster WSFC. Um grupo de disponibilidade distribuído não configura nada no cluster WSFC. Tudo sobre ele é mantido no SQL Server. Para saber como exibir informações de um grupo de disponibilidade distribuído, consulte [Exibindo informações do grupo de disponibilidade distribuído](#viewing-distributed-availability-group-information). 
 

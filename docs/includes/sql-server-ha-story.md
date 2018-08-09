@@ -68,7 +68,7 @@ Por causa da diferença na pilha do cluster, algumas alterações precisam ser f
 
 * WSFC 
 * External
-* Nenhum
+* None
 
 Todos os grupos de disponibilidade que exigem disponibilidade devem usar um cluster subjacente, o que no caso do SQL Server 2017 significa um WSFC ou Pacemaker. Para grupos de disponibilidade com base no Windows Server que usam um WSFC subjacente, o tipo de cluster padrão é WSFC e não precisa ser definido. Para grupos de disponibilidade com base em Linux, ao criar o grupo de disponibilidade, o tipo de cluster deve ser definido como Externo. A integração com o Pacemaker é configurada depois que o grupo de disponibilidade for criado, enquanto em um WSFC isso é feito no momento da criação.
 
@@ -128,7 +128,7 @@ A lista a seguir destaca algumas diferenças de FCIs no Windows Server e no Linu
 * O nome comum usado pelas FCIs no Linux é definido no DNS e deve ser o mesmo que o recurso criado para a FCI.
 
 #### <a name="log-shipping"></a>Envio de logs
-Se os objetivos do ponto de recuperação e do tempo de recuperação forem mais flexíveis ou os bancos de dados não forem considerados altamente de missão crítica, o envio de logs será outro recurso de disponibilidade comprovado no SQL Server. Com base nos backups nativos do SQL Server, o processo de envio de logs automaticamente gera os backups de log de transações, os copia em uma ou mais instâncias conhecidas como uma espera passiva e aplica automaticamente os backups de log de transações a esse modo de espera. O envio de logs usa trabalhos do SQL Server Agent para automatizar o processo de backup, cópia e aplicação dos backups de log de transações. 
+Se os objetivos do ponto de recuperação e do tempo de recuperação forem mais flexíveis ou os bancos de dados não forem considerados altamente de missão crítica, o envio de logs será outro recurso de disponibilidade comprovado no SQL Server. Com base nos backups nativos do SQL Server, o processo de envio de logs automaticamente gera os backups de log de transações, copia-os em uma ou mais instâncias conhecidas como uma espera passiva e aplica automaticamente os backups de log de transações a esse modo de espera. O envio de logs usa trabalhos do SQL Server Agent para automatizar o processo de backup, cópia e aplicação dos backups de log de transações. 
 > [!IMPORTANT] 
 > No Linux, os trabalhos do SQL Server Agent não são incluídos como parte da instalação do SQL Server em si. Ele está disponível no pacote mssql-server-Agent, que também deve ser instalados para usar o envio de log.
 

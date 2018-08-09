@@ -32,13 +32,13 @@ caps.latest.revision: 159
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fe4ddf28ab00fa8fd60eec6beb14a4cbcacd01ad
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 16505ba07dcd1035ad260b68785eea763c050d1b
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37946990"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39560496"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opções ALTER DATABASE SET (Transact-SQL) 
 
@@ -1282,19 +1282,20 @@ SET
 
 <option_spec> ::=
 {  
-    <auto_option>   
-  | <change_tracking_option>   
-  | <cursor_option>   
-  | <db_encryption_option>  
-  | <db_update_option>   
-  | <db_user_access_option>   
-  | <delayed_durability_option>  
-  | <parameterization_option>  
-  | <query_store_options>  
-  | <snapshot_option>  
-  | <sql_option>   
-  | <target_recovery_time_option>   
-  | <termination>  
+    <auto_option>
+  | <automatic_tuning_option>
+  | <change_tracking_option>
+  | <cursor_option>
+  | <db_encryption_option>
+  | <db_update_option>
+  | <db_user_access_option>
+  | <delayed_durability_option>
+  | <parameterization_option>
+  | <query_store_options>
+  | <snapshot_option>
+  | <sql_option>
+  | <target_recovery_time_option>
+  | <termination>
   | <temporal_history_retention>
 }  
 ;  
@@ -1304,7 +1305,17 @@ SET
   | AUTO_SHRINK { ON | OFF } 
   | AUTO_UPDATE_STATISTICS { ON | OFF } 
   | AUTO_UPDATE_STATISTICS_ASYNC { ON | OFF }  
+}
+
+<automatic_tuning_option> ::=  
+{  AUTOMATIC_TUNING = { AUTO | INHERIT | CUSTOM } 
+  | AUTOMATIC_TUNING ( CREATE_INDEX = { DEFAULT | ON | OFF } )
+  | AUTOMATIC_TUNING ( DROP_INDEX = { DEFAULT | ON | OFF } )
+  | AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = { DEFAULT | ON | OFF } )
 }  
+
+ALTER DATABASE current SET AUTOMATIC_TUNING = AUTO | INHERIT | CUSTOM
+ALTER DATABASE current SET AUTOMATIC_TUNING (FORCE_LAST_GOOD_PLAN = ON, CREATE_INDEX = DEFAULT, DROP_INDEX = OFF)
 
 <change_tracking_option> ::=  
 {  
@@ -1473,7 +1484,36 @@ Definir essa opção como OFF não tem nenhum efeito, a menos que AUTO_UPDATE_ST
 O status dessa opção pode ser determinado examinando-se a coluna is_auto_update_stats_async_on na exibição do catálogo sys.databases.  
   
 Para obter mais informações que descrevem quando usar atualizações de estatísticas síncronas ou assíncronas, veja a seção que "Usando as opções de estatísticas em todo o banco de dados" em [Estatísticas](../../relational-databases/statistics/statistics.md).  
-  
+
+**\<automatic_tuning_option> ::=**  
+**Aplica-se a**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].  
+
+Habilita ou desabilita a opção de [ajuste automático](../../relational-databases/automatic-tuning/automatic-tuning.md) dos bancos de dados.
+
+AUTOMATIC_TUNING = { AUTO | INHERIT | CUSTOM } AUTO Configurar o valor de ajuste automático como AUTO aplicará a configuração padrão do Azure ao ajuste automático.
+INHERIT Ao usar o valor INHERIT, você herdará a configuração padrão do servidor pai. Isso será útil principalmente se você quiser personalizar a configuração de ajuste automático em um servidor pai e fazer com que todos os bancos de dados deste servidor herdem (INHERIT) essas configurações personalizadas. Observe que para a herança funcionar, as três opções de ajuste individuais, FORCE_LAST_GOOD_PLAN, CREATE_INDEX e DROP_INDEX, precisam ser configuradas como DEFAULT nos bancos de dados.
+CUSTOM Ao usar o valor CUSTOM, você precisará personalizar manualmente cada opção de configuração de ajuste automático disponível nos bancos de dados.
+
+Habilita ou desabilita a opção `CREATE_INDEX` de [ajuste automático](../../relational-databases/automatic-tuning/automatic-tuning.md) do gerenciamento de índices automático.
+
+CREATE_INDEX = { DEFAULT | ON | OFF } DEFAULT Herda as configurações padrão do servidor. Nesse caso, as opções de habilitar ou desabilitar os recursos individuais de ajuste automático são definidas no nível do servidor.
+ON Quando habilitado, os índices ausentes são gerados de forma automática em um banco de dados. Após a criação do índice, os ganhos de desempenho da carga de trabalho são verificados. Quando o índice criado não oferecer mais benefícios para o desempenho da carga de trabalho, será automaticamente revertido. Os índices criados automaticamente são sinalizados como gerados pelo sistema.
+OFF Não gera índices ausentes de modo automático no banco de dados.
+
+Habilita ou desabilita a opção `DROP_INDEX` de [ajuste automático](../../relational-databases/automatic-tuning/automatic-tuning.md) do gerenciamento de índices automático.
+
+DROP_INDEX = { DEFAULT | ON | OFF } DEFAULT Herda configurações padrão do servidor. Nesse caso, as opções de habilitar ou desabilitar os recursos individuais de ajuste automático são definidas no nível do servidor.
+ON Remove automaticamente os índices duplicados ou que não são mais úteis da carga de trabalho de desempenho. OFF Não remove índices ausentes de modo automático no banco de dados.
+
+Habilita ou desabilita a opção `FORCE_LAST_GOOD_PLAN` de [ajuste automático](../../relational-databases/automatic-tuning/automatic-tuning.md) da correção de plano automática.
+
+FORCE_LAST_GOOD_PLAN = { DEFAULT | ON | OFF }  
+DEFAULT Herda as configurações padrão do servidor. Nesse caso, as opções de habilitar ou desabilitar os recursos individuais de ajuste automático são definidas no nível do servidor.
+ON  
+O [!INCLUDE[ssde_md](../../includes/ssde_md.md)] força automaticamente o último plano sabidamente válido nas consultas [!INCLUDE[tsql_md](../../includes/tsql_md.md)] em que o novo plano SQL provoca regressões de desempenho. O [!INCLUDE[ssde_md](../../includes/ssde_md.md)] monitora continuamente o desempenho de consultas da consulta [!INCLUDE[tsql_md](../../includes/tsql_md.md)] com o plano forçado. Se não houver ganhos de desempenho, o [!INCLUDE[ssde_md](../../includes/ssde_md.md)] continuará usando o último plano válido conhecido. Se os ganhos de desempenho não forem detectados, o [!INCLUDE[ssde_md](../../includes/ssde_md.md)] produzirá um novo plano SQL. A instrução falhará se o repositório de consultas não estiver habilitado ou não estiver no modo de *Leitura-Gravação*.   
+OFF  
+O [!INCLUDE[ssde_md](../../includes/ssde_md.md)] relata possíveis regressões de desempenho de consulta causadas por alterações de plano SQL na exibição [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md). No entanto, essas recomendações não são aplicadas automaticamente. Usuário pode monitorar recomendações ativas e corrigir problemas identificados aplicando scripts [!INCLUDE[tsql_md](../../includes/tsql_md.md)] mostrados na exibição. Este é o valor padrão.
+
 **\<change_tracking_option> ::=**  
   
 Controla as opções de controle de alterações. É possível habilitar o controle de alterações, definir opções, alterar opções e desabilitar o controle de alterações. Para obter exemplos, confira a seção Exemplos mais adiante neste artigo.  
