@@ -20,5 +20,7 @@
       href: using-azure-active-directory.md
     - name: Como usar a resolução IP de rede transparente
       href: using-transparent-network-ip-resolution.md
+    - name: Classificação de dados
+      href: data-classification.md
 - name: Correções de bugs
   href: bug-fixes.md
