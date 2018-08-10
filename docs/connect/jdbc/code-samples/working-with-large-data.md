@@ -1,7 +1,7 @@
 ---
 title: Trabalhando com dados grandes | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,33 +14,34 @@ caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 126775f2b56bdf2cf1847334b0c8faad7cfcfafb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: e9269200560447593a50364a4b4801a8ec80f4ca
+ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32831361"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39455260"
 ---
 # <a name="working-with-large-data"></a>Trabalhando com dados grandes
+
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  O driver JDBC oferece suporte para buffer adaptável, que permite recuperar qualquer tipo de dados de valor grande sem a sobrecarga de cursores de servidor. Com buffer adaptável, o [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] recupera os resultados da execução de instrução da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] como o aplicativo precisa deles, e não tudo de uma vez. O driver também descarta os resultados assim que o aplicativo já não os pode acessar.  
+O driver JDBC oferece suporte para buffer adaptável, que permite recuperar qualquer tipo de dados de valor grande sem a sobrecarga de cursores de servidor. Com o buffer adaptável, o [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] recupera os resultados da execução da instrução por meio do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] à medida que o aplicativo precisa deles, em vez de todos de uma vez. O driver também descarta os resultados assim que o aplicativo já não os pode acessar.  
   
- No [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005_md.md)] JDBC Driver versão 1.2, o modo de buffer era "**completo**" por padrão. Se seu aplicativo não definiu a propriedade de conexão "responseBuffering" como "**adaptável**" nas propriedades de conexão ou usando o [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) método o [ SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) objeto, o driver deu suportada a leitura do resultado inteiro do servidor ao mesmo tempo. Para obter o comportamento de buffer adaptável, o aplicativo teve que definir a propriedade de conexão "responseBuffering" como "**adaptável**" explicitamente.  
+No [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssVersion2005](../../../includes/ssversion2005_md.md)] JDBC Driver versão 1.2, o modo de buffer era "**cheio**" por padrão. Se o aplicativo não definiu a propriedade de conexão "responseBuffering" como "**adaptável**" nas propriedades de conexão ou usando o método [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) do objeto [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md), isso significa que o driver deu suporte à leitura do resultado inteiro imediatamente do servidor. Para obter o comportamento de buffer adaptável, o aplicativo teve que definir a propriedade de conexão "responseBuffering" explicitamente como "**adaptável**".  
   
- O **adaptável** valor é o modo de buffer padrão e o driver JDBC armazena em buffer o mínimo possível de dados quando necessário. Para obter mais informações sobre como usar buffer adaptável, consulte [buffer adaptável usando](../../../connect/jdbc/using-adaptive-buffering.md).  
+O valor **adaptável** é o modo de buffer padrão, e o driver JDBC armazena em buffer o mínimo de dados possível quando necessário. Para obter mais informações sobre como usar buffer adaptável, consulte [Using Adaptive Buffering](../../../connect/jdbc/using-adaptive-buffering.md).  
   
- Os tópicos nesta seção descrevem maneiras diferentes que você pode usar para recuperar dados de valor grande de um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] banco de dados.  
+Os tópicos nesta seção descrevem maneiras diferentes de recuperar dados de valor grande de um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Description|  
-|-----------|-----------------|  
-|[Lendo exemplo de dados grande](../../../connect/jdbc/reading-large-data-sample.md)|Descreve como usar uma instrução SQL para recuperar dados de valor grande.|  
-|[Exemplo de leitura de dados grandes com procedimentos armazenados](../../../connect/jdbc/reading-large-data-with-stored-procedures-sample.md)|Descreve como recuperar um valor grande do parâmetro OUT do CallableStatement.|  
-|[Atualizando exemplo de dados grande](../../../connect/jdbc/updating-large-data-sample.md)|Descreve como atualizar dados de valor grande em um banco de dados.|  
+| Tópico                                                                                                                         | Descrição                                                              |
+| ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| [Lendo exemplo de dados grande](../../../connect/jdbc/code-samples/reading-large-data-sample.md)                                               | Descreve como usar uma instrução SQL para recuperar dados de valor grande.       |
+| [Exemplo de leitura de dados grandes com procedimentos armazenados](../../../connect/jdbc/code-samples/reading-large-data-with-stored-procedures-sample.md) | Descreve como recuperar um valor grande do parâmetro OUT do CallableStatement. |
+| [Atualizando exemplo de dados grande](../../../connect/jdbc/code-samples/updating-large-data-sample.md)                                             | Descreve como atualizar dados de valor grande em um banco de dados.                |
   
-## <a name="see-also"></a>Consulte também  
- [Aplicativos de exemplo do JDBC Driver](../../../connect/jdbc/sample-jdbc-driver-applications.md)  
-  
+## <a name="see-also"></a>Consulte Também
+
+[Aplicativos de exemplo do JDBC Driver](../../../connect/jdbc/code-samples/sample-jdbc-driver-applications.md)  
   
