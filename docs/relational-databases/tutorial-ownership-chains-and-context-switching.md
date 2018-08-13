@@ -21,12 +21,12 @@ caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 22aa54280e01854e44b8b3d64eefbd797eb98276
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0da331fb54c04939ab66372395454650fb93b8e2
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33011633"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008798"
 ---
 # <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ Cada bloco de código neste exemplo é explicado em linha. Para copiar o exemplo
 ## <a name="1-configure-the-environment"></a>1. Configure o ambiente  
 Use o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e o código a seguir para abrir o banco de dados `AdventureWorks2012` e use a instrução [!INCLUDE[tsql](../includes/tsql-md.md)] `CURRENT_USER` para verificar se o usuário dbo é exibido como o contexto.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT CURRENT_USER AS 'Current User Name';  
@@ -70,7 +70,7 @@ Para obter mais informações sobre a instrução CURRENT_USER, consulte [CURREN
   
 Use esse código como o usuário dbo para criar dois usuários no servidor e no banco de dados [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)].  
   
-```  
+```sql
 CREATE LOGIN TestManagerUser   
     WITH PASSWORD = '340$Uuxwp7Mcxo7Khx';  
 GO  
@@ -91,7 +91,7 @@ Para obter mais informações sobre a instrução CREATE USER, consulte [CREATE 
   
 Use o código a seguir para alterar a propriedade do esquema `Purchasing` para a conta `TestManagerUser` . Isso permite que a conta use todos os acessos da instrução DML (Linguagem de Manipulação de Dados) (como as permissões `SELECT` e `INSERT` ) nos objetos que ela contém. `TestManagerUser` também tem a capacidade de criar procedimentos armazenados.  
   
-```  
+```sql
 /* Change owner of the Purchasing Schema to TestManagerUser */  
 ALTER AUTHORIZATION   
    ON SCHEMA::Purchasing   
@@ -111,7 +111,7 @@ Para alternar o contexto dentro de um banco de dados, use a instrução EXECUTE 
   
 Use a instrução `EXECUTE AS` no código a seguir para alterar o contexto para `TestManagerUser` e criar um procedimento armazenado exibindo somente os dados requeridos por `TestEmployeeUser`. Para atender a esses requisitos, o procedimento armazenado aceita uma variável como número da ordem de compra e não exibe informações financeiras, e a cláusula WHERE limita os resultados a envios parciais.  
   
-```  
+```sql
 EXECUTE AS LOGIN = 'TestManagerUser'  
 GO  
 SELECT CURRENT_USER AS 'Current User Name';  
@@ -135,7 +135,7 @@ GO
   
 Atualmente `TestEmployeeUser` não tem acesso a qualquer objeto de banco de dados. O código a seguir (ainda no contexto `TestManagerUser` ) concede ao usuário da conta a capacidade de consultar informações na tabela base, pelo procedimento armazenado).  
   
-```  
+```sql
 GRANT EXECUTE  
    ON OBJECT::Purchasing.usp_ShowWaitingItems  
    TO TestEmployeeUser;  
@@ -144,7 +144,7 @@ GO
   
 O procedimento armazenado faz parte do esquema `Purchasing` , embora nenhum esquema tenha sido explicitamente especificado devido ao `TestManagerUser` ser atribuído por padrão ao esquema `Purchasing` . Você pode usar informações de catálogo de sistema para localizar objetos, como mostrado no código a seguir.  
   
-```  
+```sql
 SELECT a.name AS 'Schema'  
    , b.name AS 'Object Name'  
    , b.type AS 'Object Type'  
@@ -157,7 +157,7 @@ GO
   
 Com essa seção de exemplo concluída, o código muda o contexto de volta ao dbo usando a instrução `REVERT`.  
   
-```  
+```sql
 REVERT;  
 GO  
 ```  
@@ -167,7 +167,7 @@ Para obter mais informações sobre a instrução REVERT, consulte [REVERT &#40;
 ## <a name="3-access-data-through-the-stored-procedure"></a>3. Acesse dados pelo procedimento armazenado  
 `TestEmployeeUser` não tem permissões nos objetos de banco de dados [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] , a não ser um logon e os direitos atribuídos à função de banco de dados pública. O código a seguir retorna um erro quando `TestEmployeeUser` tentar acessar tabelas base.  
   
-```  
+```sql
 EXECUTE AS LOGIN = 'TestEmployeeUser'  
 GO  
 SELECT CURRENT_USER AS 'Current User Name';  
@@ -183,7 +183,7 @@ GO
   
 Como os objetos referenciados pelos procedimentos armazenados criados na última seção são de propriedade do `TestManagerUser` em virtude da propriedade de esquema `Purchasing` , `TestEmployeeUser` pode acessar as tabelas base pelo procedimento armazenado. O código a seguir, ainda usando o contexto `TestEmployeeUser` , passa a ordem de compra 952 como um parâmetro.  
   
-```  
+```sql
 EXEC Purchasing.usp_ShowWaitingItems 952  
 GO  
 ```  
@@ -191,7 +191,7 @@ GO
 ## <a name="4-reset-the-environment"></a>4. Redefina o ambiente  
 O código a seguir usa o comando `REVERT` para retornar o contexto da conta atual ao `dbo`e, em seguida, redefine o ambiente.  
   
-```  
+```sql
 REVERT;  
 GO  
 ALTER AUTHORIZATION   
@@ -215,7 +215,7 @@ Esta seção exibe o código de exemplo completo.
 > [!NOTE]  
 > Este código não inclui os dois erros previstos que demonstram a incapacidade de o `TestEmployeeUser` fazer a seleção a partir de tabelas base.  
   
-```  
+```sql
 /*   
 Script:       UserContextTutorial.sql  
 Author:       Microsoft  

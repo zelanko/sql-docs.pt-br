@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 8195661f681d3f0e694e040e2319efdfcd3803bc
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 4860d2b38d6a2da7c6204e4fa6224b5ef08619c7
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39553096"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008958"
 ---
 # <a name="principals-database-engine"></a>Entidades (Mecanismo de Banco de Dados)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,18 +47,18 @@ ms.locfileid: "39553096"
   
 ## <a name="sql-server-level-principals"></a>Entidades de segurança no nível do SQL Server  
   
--  Logon de autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]   
--  Logon de autenticação do Windows para um usuário do Windows  
--  Logon de autenticação do Windows para um grupo do Windows   
--  Logon de autenticação do Azure Active Directory para um usuário do AD
--  Logon de autenticação do Azure Active Directory para um grupo do AD
--  Função do servidor  
+- Logon de autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]   
+- Logon de autenticação do Windows para um usuário do Windows  
+- Logon de autenticação do Windows para um grupo do Windows   
+- Logon de autenticação do Azure Active Directory para um usuário do AD
+- Logon de autenticação do Azure Active Directory para um grupo do AD
+- Função do servidor  
   
- ## <a name="database-level-principals"></a>Entidades no nível do banco de dados  
+## <a name="database-level-principals"></a>Entidades no nível do banco de dados
   
--   Usuário de banco de dados (existem 11 tipos de usuários. Para obter mais informações, consulte [CREATE USER](../../../t-sql/statements/create-user-transact-sql.md).) 
--   Função de banco de dados  
--   Função de aplicativo  
+- Usuário de banco de dados (existem 11 tipos de usuários. Para obter mais informações, consulte [CREATE USER](../../../t-sql/statements/create-user-transact-sql.md).)
+- Função de banco de dados
+- Função de aplicativo
   
 ## <a name="sa-login"></a>Logon sa  
  O logon `sa` do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é uma entidade de segurança no nível do servidor. Por padrão, ele é criado quando uma instância é instalada. A partir do [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], o banco de dados padrão de sa é o mestre. Essa é uma alteração de comportamento de versões anteriores do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O logon `sa` é membro da função de banco de dados fixa `sysadmin`. O logon `sa` tem todas as permissões no servidor e não pode ser limitado. O logon `sa` não pode ser descartado, mas pode ser desabilitado para que ninguém possa usá-lo.
