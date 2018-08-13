@@ -28,13 +28,13 @@ caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 093ae84d27ac850b28e44a5f488bd909765605e0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 8a174f95ef4c6519c88002ca7393c0d5b1123e4a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180852"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39541566"
 ---
 # <a name="sysregisteredsearchproperties-transact-sql"></a>sys.registered_search_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,12 +43,12 @@ ms.locfileid: "33180852"
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**property_list_id**|**Int**|ID da lista de propriedades de pesquisa à qual esta propriedade pertence.|  
+|**property_list_id**|**int**|ID da lista de propriedades de pesquisa à qual esta propriedade pertence.|  
 |**property_set_guid**|**uniqueidentifier**|GUID (identificador global exclusivo) que identifica o conjunto de propriedades ao qual a propriedade de pesquisa pertence.|  
-|**property_int_id**|**Int**|Inteiro que identifica esta propriedade de pesquisa dentro do conjunto de propriedades. **property_int_id** é exclusivo dentro do conjunto de propriedades.|  
-|**property_name**|**nvarchar(64)**|Nome que identifica exclusivamente esta propriedade de pesquisa na lista de propriedades de pesquisa.<br /><br /> Observação: Para pesquisar em uma propriedade, especifique o nome da propriedade no [contém](../../t-sql/queries/contains-transact-sql.md) predicado.|  
+|**property_int_id**|**int**|Inteiro que identifica esta propriedade de pesquisa dentro do conjunto de propriedades. **property_int_id** é exclusivo dentro do conjunto de propriedades.|  
+|**property_name**|**nvarchar(64)**|Nome que identifica exclusivamente esta propriedade de pesquisa na lista de propriedades de pesquisa.<br /><br /> Observação: Para pesquisar em uma propriedade, especifique o nome da propriedade na [CONTAINS](../../t-sql/queries/contains-transact-sql.md) predicado.|  
 |**property_description**|**nvarchar(512)**|Descrição da propriedade.|  
-|**property_id**|**Int**|ID de propriedade interna da propriedade de pesquisa dentro da lista de propriedade de pesquisa identificada pelo **property_list_id** valor.<br /><br /> Quando uma determinada propriedade é adicionada a uma determinada lista de propriedades de pesquisa, o Mecanismo de Texto Completo registra a propriedade e atribui uma ID de propriedade interna que é específica àquela lista de propriedades a propriedade. A ID de propriedade interna, que é um inteiro, é exclusiva de uma determinada lista de propriedades de pesquisa. Se uma determinada propriedade for registrada para várias listas de propriedades de pesquisa, uma ID de propriedade interna diferente poderá ser atribuída para cada lista de propriedades de pesquisa.<br /><br /> Observação: A ID de propriedade interna é distinta do identificador de inteiro de propriedade que é especificado ao adicionar a propriedade à lista de propriedades de pesquisa. Para obter mais informações, veja [Pesquisar propriedades de documento com listas de propriedades de pesquisa](../../relational-databases/search/search-document-properties-with-search-property-lists.md).<br /><br /> Para exibir o conteúdo tudo relacionado à propriedade no índice de texto completo: <br />                  [sys.dm_fts_index_keywords_by_property &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)|  
+|**property_id**|**int**|ID de propriedade interna da propriedade de pesquisa dentro da lista de propriedade de pesquisa identificada pelo **property_list_id** valor.<br /><br /> Quando uma determinada propriedade é adicionada a uma determinada lista de propriedades de pesquisa, o Mecanismo de Texto Completo registra a propriedade e atribui uma ID de propriedade interna que é específica àquela lista de propriedades a propriedade. A ID de propriedade interna, que é um inteiro, é exclusiva de uma determinada lista de propriedades de pesquisa. Se uma determinada propriedade for registrada para várias listas de propriedades de pesquisa, uma ID de propriedade interna diferente poderá ser atribuída para cada lista de propriedades de pesquisa.<br /><br /> Observação: A ID de propriedade interna é distinta do identificador de inteiro de propriedade que é especificado ao adicionar a propriedade à lista de propriedades de pesquisa. Para obter mais informações, veja [Pesquisar propriedades de documento com listas de propriedades de pesquisa](../../relational-databases/search/search-document-properties-with-search-property-lists.md).<br /><br /> Para exibir conteúdo tudo relacionado à propriedade no índice de texto completo: <br />                  [sys.dm_fts_index_keywords_by_property &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)|  
   
 ## <a name="remarks"></a>Remarks  
  Para obter mais informações sobre listas de propriedades de pesquisa, veja [Pesquisar propriedades de documento com listas de propriedades de pesquisa](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  

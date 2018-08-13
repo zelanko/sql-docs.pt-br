@@ -23,18 +23,18 @@ caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7809bd218e1f7c8c81ee6c30a7ddcc514e2f085d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: d9a53856fc95d8564c6b08f4867bba0f8a9604b5
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33228021"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39535506"
 ---
 # <a name="changetrackingminvalidversion-transact-sql"></a>CHANGE_TRACKING_MIN_VALID_VERSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retorna a versão mínima do cliente é válido para usar na obtenção de informações controle de alterações da tabela especificada, quando você estiver usando o [CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md) função.  
+  Retorna a versão mínima no cliente que é válido para usar na obtenção de informações controle de alterações da tabela especificada, quando você estiver usando o [CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md) função.  
     
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,7 +53,7 @@ CHANGE_TRACKING_MIN_VALID_VERSION ( table_object_id )
  **bigint**  
   
 ## <a name="remarks"></a>Remarks  
- Use esta função para validar o valor do *last_sync_version* parâmetro para CHANGETABLE. Se *last_sync_version* é menor que o valor relatado por essa função, os resultados retornados de uma chamada posterior a CHANGETABLE talvez não seja válidos.  
+ Use esta função para validar o valor do *last_sync_version* parâmetro para CHANGETABLE. Se *last_sync_version* é menor que o valor relatado por essa função, os resultados retornados de uma chamada posterior a CHANGETABLE podem não ser válidos.  
   
  CHANGE_TRACKING_MIN_VALID_VERSION usa as seguintes informações para determinar o valor de retorno:  
   

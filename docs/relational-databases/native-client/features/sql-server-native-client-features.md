@@ -17,13 +17,13 @@ ms.assetid: 7bb32865-5afb-41ab-98b4-3fa545ee8953
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 12c021047650a7bfe24df6d354fa5fc545f2bfe5
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 439066cd1b1d738cbfda01213646aafce6553e44
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37416905"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39541096"
 ---
 # <a name="sql-server-native-client-features"></a>Recursos do SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "37416905"
  [Suporte a FILESTREAM](../../../relational-databases/native-client/features/filestream-support.md)  
  Discute [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] suporte Native Client para o recurso FILESTREAM aprimorado.  
   
- [Nome da entidade de serviço &#40;SPN&#41; suporte em conexões de cliente](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)  
+ [Suporte a SPN &#40;Nome da Entidade de Serviço&#41; em conexões de cliente](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)  
  Aborda como o suporte a SPNs (nomes da entidade de serviço) foi estendido para possibilitar autenticação mútua em todos os protocolos.  
   
  [Suporte a colunas esparsas no SQL Server Native Client](../../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md)  
@@ -93,7 +93,7 @@ ms.locfileid: "37416905"
  Discute uma alteração no comportamento apresentada no [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Se você fornecer um buffer de comprimento fixo ao associar um parâmetro de saída ou de resultado de coluna e se o **wchar** caractere gravado no buffer antes que o caractere de terminação é um ponto de código alternativo alto de um par substituto e se o próximo **wchar** caractere é um ponto de código alternativo baixo, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client não adicionará o ponto de código alternativo alto ao buffer.  
   
  [Suporte do SQL Server Native Client à alta disponibilidade e recuperação de desastre](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
- Discute como seu aplicativo pode ser configurado para aproveitar a recuperação de desastres de alta disponibilidade, recursos adicionados no [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
+ Aborda como seu aplicativo pode ser configurado para aproveitar os recursos de alta disponibilidade e de recuperação de desastre adicionados no [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
   
  [Acessar informações de diagnóstico nos logs de eventos estendidos](../../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md)  
  Discute os aprimoramentos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client e o rastreamento de dados que fornece acesso a informações de diagnóstico no buffer de anel e no log de XEvents.  

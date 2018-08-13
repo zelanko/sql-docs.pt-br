@@ -23,13 +23,13 @@ caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2492793fdfa677450e5fcc21a5f520f54bfe8aa0
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: e41365558907570414ffbed099883a13b0b9f58e
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464452"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39532906"
 ---
 # <a name="sysdmftsmemorypools-transact-sql"></a>sys.dm_fts_memory_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,16 +38,16 @@ ms.locfileid: "34464452"
    
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**pool_id**|**Int**|ID do pool de memória alocada.<br /><br /> 0 = Buffers pequenos<br /><br /> 1 = Buffers grandes|  
-|**buffer_size**|**Int**|Tamanho de cada buffer alocado no pool de memória.|  
-|**min_buffer_limit**|**Int**|Número mínimo de buffers permitido no pool de memória.|  
-|**max_buffer_limit**|**Int**|Número máximo de buffers permitido no pool de memória.|  
-|**buffer_count**|**Int**|Número atual de buffers de memória compartilhada no pool de memória.|  
+|**pool_id**|**int**|ID do pool de memória alocada.<br /><br /> 0 = Buffers pequenos<br /><br /> 1 = Buffers grandes|  
+|**buffer_size**|**int**|Tamanho de cada buffer alocado no pool de memória.|  
+|**min_buffer_limit**|**int**|Número mínimo de buffers permitido no pool de memória.|  
+|**max_buffer_limit**|**int**|Número máximo de buffers permitido no pool de memória.|  
+|**buffer_count**|**int**|Número atual de buffers de memória compartilhada no pool de memória.|  
   
 ## <a name="permissions"></a>Permissões  
 
-Em [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
-Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` no banco de dados.   
+Na [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
+Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` permissão no banco de dados.   
  
 ## <a name="physical-joins"></a>Junções físicas  
  ![Junções significativas dessa exibição de gerenciamento dinâmico](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-memory-pools-1.gif "junções significativas dessa exibição de gerenciamento dinâmico")  

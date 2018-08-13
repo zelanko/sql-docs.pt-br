@@ -24,13 +24,13 @@ caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 110528e8445703497beab5eb9339fb65d026d582
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 84a994759cf06b5ce3a0e41e6fa731a8477ce4ca
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33179852"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39561507"
 ---
 # <a name="sysforeignkeycolumns-transact-sql"></a>sys.foreign_key_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,12 +39,12 @@ ms.locfileid: "33179852"
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**constraint_object_id**|**Int**|ID da restrição FOREIGN KEY.|  
-|**constraint_column_id**|**Int**|ID da coluna ou conjunto de colunas, que compõem a chave estrangeira (*1.. n* onde n = número de colunas).|  
-|**parent_object_id**|**Int**|ID do pai da restrição, que é o objeto de referência.|  
-|**parent_column_id**|**Int**|ID da coluna pai, que é a coluna de referência.|  
-|**referenced_object_id**|**Int**|ID do objeto referenciado, que tem a chave candidata.|  
-|**referenced_column_id**|**Int**|ID da coluna referenciada (coluna da chave candidata).|  
+|**constraint_object_id**|**int**|ID da restrição FOREIGN KEY.|  
+|**constraint_column_id**|**int**|ID da coluna ou conjunto de colunas, que compõem a chave estrangeira (*1..n* onde n = número de colunas).|  
+|**parent_object_id**|**int**|ID do pai da restrição, que é o objeto de referência.|  
+|**parent_column_id**|**int**|ID da coluna pai, que é a coluna de referência.|  
+|**referenced_object_id**|**int**|ID do objeto referenciado, que tem a chave candidata.|  
+|**referenced_column_id**|**int**|ID da coluna referenciada (coluna da chave candidata).|  
   
 ## <a name="permissions"></a>Permissões  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

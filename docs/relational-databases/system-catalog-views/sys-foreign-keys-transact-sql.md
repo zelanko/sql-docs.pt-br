@@ -24,13 +24,13 @@ caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8a7f33be3e5bc933abe96aa6700a8ef94c7a2e83
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 58dcea9a85120f412aaba42786b6c95bbed8850e
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181162"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39557676"
 ---
 # <a name="sysforeignkeys-transact-sql"></a>sys.foreign_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,8 +40,8 @@ ms.locfileid: "33181162"
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**\<Colunas herdadas de sys. Objects >**||Para obter uma lista de colunas que essa exibição herda valores, consulte [sys. Objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
-|**referenced_object_id**|**Int**|ID do objeto referenciado.|  
-|**key_index_id**|**Int**|ID do índice de chave no objeto referenciado.|  
+|**referenced_object_id**|**int**|ID do objeto referenciado.|  
+|**key_index_id**|**int**|ID do índice de chave no objeto referenciado.|  
 |**is_disabled**|**bit**|A restrição FOREIGN KEY foi desabilitada.|  
 |**is_not_for_replication**|**bit**|A restrição FOREIGN KEY foi criada com o uso da opção NOT FOR REPLICATION.|  
 |**is_not_trusted**|**bit**|A restrição FOREIGN KEY não foi verificada pelo sistema.|  

@@ -24,13 +24,13 @@ caps.latest.revision: 23
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e0287d1c3a88281bb1b56a6d632e77beeeb7791f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: f036dfc2f64b230d5023118bfb55b812665e7f29
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38036379"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39550796"
 ---
 # <a name="syspartitionparameters-transact-sql"></a>sys.partition_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "38036379"
 |**parameter_id**|**int**|ID do parâmetro. É exclusiva dentro da função de partição, começando com 1.|  
 |**system_type_id**|**tinyint**|ID do tipo de sistema do parâmetro. Corresponde do **system_type_id** coluna da **Types** exibição do catálogo.|  
 |**max_length**|**smallint**|Comprimento máximo do parâmetro em bytes.|  
-|**precisão**|**tinyint**|Precisão do parâmetro se tiver base numérica; Caso contrário, 0.|  
+|**Precisão**|**tinyint**|Precisão do parâmetro se tiver base numérica; Caso contrário, 0.|  
 |**scale**|**tinyint**|Escala do parâmetro, se numérico; do contrário, 0.|  
 |**collation_name**|**sysname**|Nome do agrupamento do parâmetro, se for de caracteres; caso contrário, será NULL.|  
 |**user_type_id**|**int**|A ID do tipo É exclusiva no banco de dados. Para tipos de dados do sistema **user_type_id** = **system_type_id**.|  

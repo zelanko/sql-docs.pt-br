@@ -1,5 +1,5 @@
 ---
-title: . identity_columns (Transact-SQL) | Microsoft Docs
+title: sys. identity_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -24,24 +24,24 @@ caps.latest.revision: 44
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 39f9c557f65075d344a9f1fbec5b4a9ce5df207a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 7117374ced64a6ed130d84b70de3f1334d8d7ca7
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181572"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39543356"
 ---
 # <a name="sysidentitycolumns-transact-sql"></a>sys.identity_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Contém uma linha para cada coluna que seja do tipo identidade.  
   
- O **. identity_columns** exibição herda linhas do **Columns** exibição. O **. identity_columns** exibição retorna as colunas a **Columns** exibição, mais o **seed_value**, **increment_value**, **last_value**, e **is_not_for_replication** colunas. Para obter mais informações, veja [Exibições de catálogo e&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md).  
+ O **sys. identity_columns** herda linhas das **sys. Columns** modo de exibição. O **sys. identity_columns** retorna as colunas na **sys. Columns** modo de exibição, mais o **seed_value**, **increment_value**, **last_value**, e **is_not_for_replication** colunas. Para obter mais informações, veja [Exibições de catálogo e&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md).  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**\<colunas herdadas de sys. Columns >**||O **. identity_columns** exibição retorna todas as colunas de **Columns** exibição. Ela também retorna as colunas adicionais descritas abaixo. Para obter uma descrição das colunas que o **. identity_columns** exibição herda de **Columns**, consulte [Columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md).|  
+|**\<colunas herdadas de sys. Columns >**||O **sys. identity_columns** retorna todas as colunas na **sys. Columns** modo de exibição. Ela também retorna as colunas adicionais descritas abaixo. Para obter uma descrição das colunas que o **sys. identity_columns** exibição herda **sys. Columns**, consulte [sys. Columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md).|  
 |**seed_value**|**sql_variant**|Valor de semente para esta coluna de identidade. O tipo de dados do valor de semente é igual ao tipo de dados da própria coluna.|  
 |**increment_value**|**sql_variant**|Valor de incremento para esta coluna de identidade. O tipo de dados do valor de semente é igual ao tipo de dados da própria coluna.|  
 |**last_value**|**sql_variant**|Último valor gerado para esta coluna de identidade. O tipo de dados do valor de semente é igual ao tipo de dados da própria coluna.|  

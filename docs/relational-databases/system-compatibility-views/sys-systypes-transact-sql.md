@@ -25,13 +25,13 @@ caps.latest.revision: 50
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8526b0335d9d222cd0c28f4304566812905a07b7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 32f3ff7bb65822e0ce0c8e3e9192b88dd572c22b
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240845"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39537216"
 ---
 # <a name="syssystypes-transact-sql"></a>sys.systypes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,22 +47,22 @@ ms.locfileid: "33240845"
 |**tipoX**|**tinyint**|Tipo de armazenamento físico.|  
 |**status**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xusertype**|**smallint**|Tipo de usuário estendido. Estoura ou retorna NULL se o número de tipos de dados exceder 32.767.|  
-|**comprimento**|**smallint**|Comprimento físico do tipo de dados.|  
+|**Comprimento**|**smallint**|Comprimento físico do tipo de dados.|  
 |**xprec**|**tinyint**|Precisão interna, como usado pelo servidor. Não deve ser usada em consultas.|  
 |**xscale**|**tinyint**|Escala interna, como usada pelo servidor. Não deve ser usada em consultas.|  
-|**tdefault**|**Int**|ID do procedimento armazenado que contém verificações de integridade para este tipo de dados.|  
-|**domain**|**Int**|ID do procedimento armazenado que contém verificações de integridade para este tipo de dados.|  
-|**UID**|**smallint**|ID de esquema do proprietário do tipo.<br /><br /> Em bancos de dados atualizados de uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o ID de esquema é idêntico ao ID de usuário do proprietário.<br /><br /> **\*\* Importante \* \***  se você usar qualquer um dos seguintes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instruções DDL, você deve usar o [Types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) em vez do modo de exibição de catálogo **sys. systypes**.<br /><br /> ALTER AUTHORIZATION ON TYPE<br /><br /> CREATE TYPE<br /><br /> Excederá ou retornará NULL se o número de usuários e funções exceder 32.767.|  
+|**tdefault**|**int**|ID do procedimento armazenado que contém verificações de integridade para este tipo de dados.|  
+|**domain**|**int**|ID do procedimento armazenado que contém verificações de integridade para este tipo de dados.|  
+|**UID**|**smallint**|ID de esquema do proprietário do tipo.<br /><br /> Em bancos de dados atualizados de uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o ID de esquema é idêntico ao ID de usuário do proprietário.<br /><br /> **\*\* Importante \* \* ** se você usar qualquer um dos seguintes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instruções DDL, você deve usar o [Types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) exibição em vez de catálogo **sys. systypes**.<br /><br /> ALTER AUTHORIZATION ON TYPE<br /><br /> CREATE TYPE<br /><br /> Excederá ou retornará NULL se o número de usuários e funções exceder 32.767.|  
 |**reserved**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**collationid**|**Int**|Se baseado em caracteres, **collationid** é a id do agrupamento do banco de dados atual; caso contrário, será NULL.|  
+|**collationid**|**int**|Se baseados em caracteres, **collationid** é a id do agrupamento do banco de dados atual; caso contrário, ele será NULL.|  
 |**usertype**|**smallint**|ID de tipo do usuário. Estoura ou retorna NULL se o número de tipos de dados exceder 32.767.|  
 |**variable**|**bit**|Tipo de dados de comprimento variável.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|**allownulls**|**bit**|Indica a nulabilidade padrão para este tipo de dados. O valor padrão será substituído se a nulidade é especificada usando [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) ou [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).|  
+|**allownulls**|**bit**|Indica a nulabilidade padrão para este tipo de dados. Esse valor padrão será substituído se a nulidade é especificada usando [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) ou [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).|  
 |**type**|**tinyint**|Tipo de dados de armazenamento físico.|  
 |**printfmt**|**varchar(255)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**prec**|**smallint**|Nível de precisão para este tipo de dados.<br /><br /> -1 = **xml** ou tipos de valor grande.|  
 |**scale**|**tinyint**|Escala para esse tipo de dados, com base na precisão.<br /><br /> NULL = Tipo de dados é não numérico.|  
-|**Agrupamento**|**sysname**|Se baseado em caracteres, **agrupamento** é o agrupamento do banco de dados atual; caso contrário, será NULL.|  
+|**Agrupamento**|**sysname**|Se baseados em caracteres, **agrupamento** é o agrupamento do banco de dados atual; caso contrário, ele será NULL.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Exibições de compatibilidade &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   

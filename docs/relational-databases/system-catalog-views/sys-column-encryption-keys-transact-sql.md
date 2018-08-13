@@ -27,25 +27,25 @@ caps.latest.revision: 9
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c058236cf8a9c106c622c65d3bde244004531270
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 51f52b1445523d13996f596dfa723d033cd3bde9
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33178682"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39541456"
 ---
 # <a name="syscolumnencryptionkeys--transact-sql"></a>sys. column_encryption_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-xxx-md.md)]
 
-  Retorna informações sobre chaves de criptografia de coluna (CEKs) criado com o [criar chave de criptografia de coluna](../../t-sql/statements/create-column-encryption-key-transact-sql.md) instrução. Cada linha representa uma CEK.  
+  Retorna informações sobre chaves de criptografia de coluna (CEKs) criado com o [CREATE COLUMN ENCRYPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md) instrução. Cada linha representa uma CEK.  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|O nome da CMK.|  
 |**column_encryption_key_id**|**int**|ID da CEK.|  
 |**create_date**|**datetime**|Data em que a CEK foi criada.|  
-|**modify_date**|**datetime**|Data em que a CEK foi modificada pela última vez.|  
+|**modify_date**|**datetime**|Data em que a CEK foi modificado pela última vez.|  
   
 ## <a name="permissions"></a>Permissões  
  Requer o **VIEW ANY COLUMN ENCRYPTION KEY** permissão.  

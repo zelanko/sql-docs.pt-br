@@ -16,25 +16,25 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b8a13d1b87bc67e68f7a984f5ff213718413d222
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 64fa6c3b169d6d206b2357e7f80e9c4447138882
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37423915"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39554526"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>Buscar colunas usando IRow::GetColumns (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  O **IRow** interface permite acesso direto a colunas de uma única linha no conjunto de resultados. Portanto, **IRow** é uma maneira eficiente para recuperar colunas de um conjunto de resultados com uma linha.  
+  A interface **IRow** permite o acesso direto a colunas de uma única linha no conjunto de resultados. Portanto, **IRow** é um modo eficiente de recuperar colunas de um conjunto de resultados com uma linha.  
   
- Está disponível um exemplo de código que mostra como buscar uma única linha usando **IRow**. Nesse exemplo, uma coluna de cada vez é recuperada da linha. O exemplo mostra:  
+ Um exemplo de código que mostra como buscar uma única linha usando **IRow** está disponível. Nesse exemplo, uma coluna de cada vez é recuperada da linha. O exemplo mostra:  
   
 -   Como buscar um grupo de colunas (em sequência).  
   
--   Como acessar uma coluna duas vezes. Na primeira vez a largura da coluna real é obtida, e depois os dados reais são acessados. Na estrutura DBCOLUMNACCESS, se **pData** for NULL e **cbMaxLen** é 0, a chamada para **IRow**-**> GetColumns()** Retorna somente o comprimento de coluna real. Nesse caso, **IRow -> GetColumns()** pode ser chamado novamente na mesma coluna para recuperar os dados reais.  
+-   Como acessar uma coluna duas vezes. Na primeira vez a largura da coluna real é obtida, e depois os dados reais são acessados. Na estrutura DBCOLUMNACCESS, se **pData** for NULL e **cbMaxLen** for 0, a chamada a **IRow**-**>GetColumns()** retornará somente o tamanho de coluna real. Nesse caso, **IRow->GetColumns()** pode ser chamado novamente na mesma coluna para recuperar os dados reais.  
   
 > [!IMPORTANT]  
 >  Quando possível, use a Autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se for necessário manter as credenciais, criptografe-as com a [Win32 crypto API](http://go.microsoft.com/fwlink/?LinkId=64532)(em inglês).  
@@ -62,7 +62,7 @@ ms.locfileid: "37423915"
   
  A primeira listagem de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) cria uma tabela usada pelo exemplo.  
   
- Compile com ole32.lib oleaut32.lib e execute a segunda listagem de código (C++). Esse aplicativo se conecta ao padrão do seu computador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância. Em alguns sistemas operacionais Windows, será necessário alterar (localhost) ou (local) para o nome de sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para se conectar a uma instância nomeada, altere a cadeia de caracteres de conexão de L"(local)" para L"(local)\\\name", onde o nome é a instância nomeada. Por padrão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express é instalado em uma instância nomeada. Verifique se a variável de ambiente INCLUDE inclui o diretório que contém sqlncli.h.  
+ Compile com ole32.lib oleaut32.lib e execute a segunda listagem de código (C++). Esse aplicativo se conecta à instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do computador. Em alguns sistemas operacionais Windows, será necessário alterar (localhost) ou (local) para o nome de sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para se conectar a uma instância nomeada, altere a cadeia de conexão de L"(local)" para L"(local)\\\name", em que name é a instância nomeada. Por padrão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express é instalado em uma instância nomeada. Verifique se a variável de ambiente INCLUDE inclui o diretório que contém sqlncli.h.  
   
  A terceira listagem de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) exclui a tabela usada pelo exemplo.  
   

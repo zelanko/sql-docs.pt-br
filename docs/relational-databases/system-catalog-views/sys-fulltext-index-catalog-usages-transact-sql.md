@@ -24,13 +24,13 @@ caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 910ff654eb90e9c4b921b2c041fd3f2189a96ae6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 29770da7b5a9af753e5bf8ee5baf9f975d04fcfd
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33177339"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39558686"
 ---
 # <a name="sysfulltextindexcatalogusages-transact-sql"></a>sys.fulltext_index_catalog_usages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,9 +39,9 @@ ms.locfileid: "33177339"
  
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**Int**|ID da tabela indexada de texto completo. É exclusiva no banco de dados.|  
-|**index_id**|**Int**|ID do índice de texto completo.|  
-|**fulltext_catalog_id**|**Int**|ID do catálogo de texto completo.|  
+|**object_id**|**int**|ID da tabela indexada de texto completo. É exclusiva no banco de dados.|  
+|**index_id**|**int**|ID do índice de texto completo.|  
+|**fulltext_catalog_id**|**int**|ID do catálogo de texto completo.|  
   
 ## <a name="permissions"></a>Permissões  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  

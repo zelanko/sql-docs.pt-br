@@ -22,15 +22,15 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5de4117bd8c400d94cb1bdb5ac7c6dcc9ee109ec
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 402aeb932b8fff111e8c5058c66a91e99c27e5a3
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38061923"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39543866"
 ---
-# <a name="smo-programming-languages"></a>Linguagens de programação do SMO
+# <a name="smo-programming-languages"></a>Linguagens de programação de SMO
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   Esta seção descreve como programar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) no [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual c# .NET.

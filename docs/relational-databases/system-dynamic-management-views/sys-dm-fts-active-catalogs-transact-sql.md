@@ -1,5 +1,5 @@
 ---
-title: fts_active_catalogs (Transact-SQL) | Microsoft Docs
+title: DM fts_active_catalogs (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 564f66e6207ebc79b7545a77af8da8f156faf673
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: e54673cbbb85d359184a8a745f3f48d8456d2f53
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34463982"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39544196"
 ---
 # <a name="sysdmftsactivecatalogs-transact-sql"></a>sys.dm_fts_active_catalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,21 +42,21 @@ ms.locfileid: "34463982"
  
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**database_id**|**Int**|ID do banco de dados que contém o catálogo de texto completo ativo.|  
-|**catalog_id**|**Int**|ID do catálogo de texto completo ativo.|  
+|**database_id**|**int**|ID do banco de dados que contém o catálogo de texto completo ativo.|  
+|**catalog_id**|**int**|ID do catálogo de texto completo ativo.|  
 |**memory_address**|**varbinary(8)**|Endereço de buffers de memória alocado para a atividade de população relacionada a este catálogo de texto completo.|  
 |**name**|**nvarchar(128)**|Nome do catálogo de texto completo ativo.|  
 |**is_paused**|**bit**|Indica se a população do catálogo de texto completo ativo está em pausa.|  
-|**status**|**Int**|Estado atual do catálogo de texto completo. Um dos seguintes:<br /><br /> 0 = Inicializando<br /><br /> 1 = Pronto<br /><br /> 2 = Pausado<br /><br /> 3 = Erro temporário<br /><br /> 4 = Remontagem necessária<br /><br /> 5 = Desligado<br /><br /> 6 = Desativado para backup<br /><br /> 7 = O backup foi feito pelo catálogo<br /><br /> 8 = O catálogo está corrompido|  
+|**status**|**int**|Estado atual do catálogo de texto completo. Um dos seguintes:<br /><br /> 0 = Inicializando<br /><br /> 1 = Pronto<br /><br /> 2 = Pausado<br /><br /> 3 = Erro temporário<br /><br /> 4 = Remontagem necessária<br /><br /> 5 = Desligado<br /><br /> 6 = Desativado para backup<br /><br /> 7 = O backup foi feito pelo catálogo<br /><br /> 8 = O catálogo está corrompido|  
 |**status_description**|**nvarchar(120)**|Descrição do estado atual do catálogo de texto completo ativo.|  
-|**previous_status**|**Int**|Estado anterior do catálogo de texto completo. Um dos seguintes:<br /><br /> 0 = Inicializando<br /><br /> 1 = Pronto<br /><br /> 2 = Pausado<br /><br /> 3 = Erro temporário<br /><br /> 4 = Remontagem necessária<br /><br /> 5 = Desligado<br /><br /> 6 = Desativado para backup<br /><br /> 7 = O backup foi feito pelo catálogo<br /><br /> 8 = O catálogo está corrompido|  
+|**previous_status**|**int**|Estado anterior do catálogo de texto completo. Um dos seguintes:<br /><br /> 0 = Inicializando<br /><br /> 1 = Pronto<br /><br /> 2 = Pausado<br /><br /> 3 = Erro temporário<br /><br /> 4 = Remontagem necessária<br /><br /> 5 = Desligado<br /><br /> 6 = Desativado para backup<br /><br /> 7 = O backup foi feito pelo catálogo<br /><br /> 8 = O catálogo está corrompido|  
 |**previous_status_description**|**nvarchar(120)**|Descrição do estado anterior do catálogo de texto completo ativo.|  
-|**worker_count**|**Int**|Número de threads atualmente em execução neste catálogo de texto completo.|  
-|**active_fts_index_count**|**Int**|Número de índices de texto completo que estão sendo populados.|  
-|**auto_population_count**|**Int**|Número de tabelas com uma população automática em andamento para este catálogo de texto completo.|  
-|**manual_population_count**|**Int**|Número de tabelas com população manual em andamento para este catálogo de texto completo.|  
-|**full_incremental_population_count**|**Int**|Número de tabelas com um população completa ou incremental em andamento para este catálogo de texto completo.|  
-|**row_count_in_thousands**|**Int**|Número estimado de linhas (em milhares) em todos os índices de texto completo neste catálogo de texto completo.|  
+|**worker_count**|**int**|Número de threads atualmente em execução neste catálogo de texto completo.|  
+|**active_fts_index_count**|**int**|Número de índices de texto completo que estão sendo populados.|  
+|**auto_population_count**|**int**|Número de tabelas com uma população automática em andamento para este catálogo de texto completo.|  
+|**manual_population_count**|**int**|Número de tabelas com população manual em andamento para este catálogo de texto completo.|  
+|**full_incremental_population_count**|**int**|Número de tabelas com um população completa ou incremental em andamento para este catálogo de texto completo.|  
+|**row_count_in_thousands**|**int**|Número estimado de linhas (em milhares) em todos os índices de texto completo neste catálogo de texto completo.|  
 |**is_importing**|**bit**|Indica se o catálogo de texto completo está sendo importado:<br /><br /> 1 = O catálogo está sendo importado.<br /><br /> 2 = O catálogo não está sendo importado.|  
   
 ## <a name="remarks"></a>Remarks  
@@ -64,8 +64,8 @@ ms.locfileid: "34463982"
   
 ## <a name="permissions"></a>Permissões  
 
-Em [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
-Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` no banco de dados.   
+Na [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
+Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` permissão no banco de dados.   
    
 ## <a name="physical-joins"></a>Junções físicas  
  ![Junções significativas dessa exibição de gerenciamento dinâmico](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-active-catalogs-1.gif "junções significativas dessa exibição de gerenciamento dinâmico")  

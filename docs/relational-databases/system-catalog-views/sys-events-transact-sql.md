@@ -1,5 +1,5 @@
 ---
-title: Events (Transact-SQL) | Microsoft Docs
+title: sys. Events (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ caps.latest.revision: 38
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 95cc7112d42a0e2975d886dc8cfa58dc6d7193d3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 7621b5aba9bb67a07421339e1e72b29f06f4c5ff
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33179362"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39532727"
 ---
 # <a name="sysevents-transact-sql"></a>sys.events (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,11 +39,11 @@ ms.locfileid: "33179362"
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**Int**|ID do gatilho ou da notificação de eventos. Esse valor, junto com **tipo**, exclusivamente identifica a linha.|  
-|**type**|**Int**|Evento que faz o gatilho ser disparado.|  
+|**object_id**|**int**|ID do gatilho ou da notificação de eventos. Esse valor, junto com **tipo**, exclusivamente identifica a linha.|  
+|**type**|**int**|Evento que faz o gatilho ser disparado.|  
 |**type_desc**|**nvarchar(60)**|Descrição do evento que faz o gatilho ser disparado.|  
 |**is_trigger_event**|**bit**|1 = Evento de gatilho.<br /><br /> 0 = Evento de notificação.|  
-|**event_group_type**|**Int**|Grupo de eventos no qual o gatilho ou a notificação de eventos são criados, ou NULL quando não é criado em um grupo de eventos.|  
+|**event_group_type**|**int**|Grupo de eventos no qual o gatilho ou a notificação de eventos são criados, ou NULL quando não é criado em um grupo de eventos.|  
 |**event_group_type_desc**|**nvarchar(60)**|Descrição do grupo de eventos no qual o gatilho ou a notificação de eventos são criados, ou NULL quando não é criado em um grupo de eventos.|  
   
 ## <a name="see-also"></a>Consulte também  

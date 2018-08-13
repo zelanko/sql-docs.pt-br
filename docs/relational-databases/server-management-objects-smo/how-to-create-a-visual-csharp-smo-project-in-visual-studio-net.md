@@ -17,15 +17,15 @@ caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 25e06aa3493b10e5a282fc5a709605eae18cb5fd
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 63c461e734c4ecb4a53b06e73199002aff64b539
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37974186"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39555866"
 ---
-# <a name="how-to-create-a-visual-c-smo-project-in-visual-studio-net"></a>Como criar um projeto Visual c# SMO no Visual Studio .NET
+# <a name="how-to-create-a-visual-c-smo-project-in-visual-studio-net"></a>Como criar um projeto SMO do Visual C# no Visual Studio .NET
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   Esta seção descreve como criar um aplicativo de console SMO simples.  

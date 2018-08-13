@@ -24,13 +24,13 @@ caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c73042d6e85c0682a94b83833c5ba00bfffbf10d
-ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: f126c9f5787ae7381b793043fd9b129c6af6b8f5
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36262370"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39559096"
 ---
 # <a name="syscryptproperties-transact-sql"></a>sys.crypt_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "36262370"
 |**class**|**tinyint**|Identifica a classe na qual a propriedade existe.<br /><br /> 1 = Objeto ou coluna<br /> 5 = Assembly|  
 |**class_desc**|**nvarchar(60)**|Descrição da classe na qual a propriedade existe.<br /><br /> OBJECT_OR_COLUMN<br /> ASSEMBLY|  
 |**major_id**|**int**|ID na qual a propriedade existe, interpretada de acordo com a classe.|  
-|**Impressão digital**|**varbinary(32)**|Hash SHA-1 do certificado ou chave assimétrica usado.|  
+|**impressão digital**|**varbinary(32)**|Hash SHA-1 do certificado ou chave assimétrica usado.|  
 |**crypt_type**|**char(4)**|Tipo de criptografia.<br /><br /> SPVC = Criptografado pela chave privada de certificado<br /><br /> SPVA = Criptografado pela chave privada assimétrica<br /><br /> CPVC = Assinatura do contador pela chave privada de certificado<br /><br /> CPVA = Assinatura do contador pela chave assimétrica|  
 |**crypt_type_desc**|**nvarchar(60)**|Descrição do tipo de criptografia.<br /><br /> SIGNATURE BY CERTIFICATE<br /><br /> SIGNATURE BY ASYMMETRIC KEY<br /><br /> COUNTER SIGNATURE BY CERTIFICATE<br /><br /> COUNTER SIGNATURE BY ASYMMETRIC KEY|  
 |**crypt_property**|**varbinary(max)**|Bits assinados ou criptografados.|  

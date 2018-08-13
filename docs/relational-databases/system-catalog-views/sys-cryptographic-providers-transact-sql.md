@@ -24,13 +24,13 @@ caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 237b33dedddd3757864bdd91887e0899606340e2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 465540093a84a1c49426803469021aed5ac8e617
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33179392"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39540482"
 ---
 # <a name="syscryptographicproviders-transact-sql"></a>sys.cryptographic_providers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "33179392"
     
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**provider_id**|**Int**|Número de identificação do provedor criptográfico.|  
+|**provider_id**|**int**|Número de identificação do provedor criptográfico.|  
 |**name**|**sysname**|Nome do provedor criptográfico.|  
 |**guid**|**uniqueidentifier**|GUID de provedor exclusivo.|  
 |**version**|**nvarchar(50)**|Versão do provedor no formato '*aa.bb.cccc.dd*'.|  

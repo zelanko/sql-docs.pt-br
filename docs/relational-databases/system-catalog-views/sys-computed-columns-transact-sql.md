@@ -1,5 +1,5 @@
 ---
-title: . computed_columns (Transact-SQL) | Microsoft Docs
+title: sys. computed_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -24,22 +24,22 @@ caps.latest.revision: 48
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1140fca749d8f9564b6d413a6e03eb7f5f57fb7e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 9708eb66a90039a5098497863cbe54923e2651e2
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33178712"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39541426"
 ---
 # <a name="syscomputedcolumns-transact-sql"></a>sys.computed_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Contém uma linha para cada coluna localizada em **Columns** que é uma coluna computada.  
+  Contém uma linha para cada coluna localizada em **sys. Columns** que é uma coluna computada.  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**\<herdado colunas >**||O **. computed_columns** exibição retorna todas as colunas de **Columns** exibição. Ela também retorna as colunas adicionais descritas abaixo. Para obter uma descrição das colunas que o **. computed_columns** exibição herda de **Columns**, consulte [Columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md). O valor da **is_computed** coluna é sempre definida como 1 o **. computed_columns** exibição.|  
+|**\<herdado colunas >**||O **sys. computed_columns** retorna todas as colunas na **sys. Columns** modo de exibição. Ela também retorna as colunas adicionais descritas abaixo. Para obter uma descrição das colunas que o **sys. computed_columns** exibição herda **sys. Columns**, consulte [sys. Columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md). O valor da **is_computed** coluna é sempre definida como 1 na **sys. computed_columns** modo de exibição.|  
 |**Definição**|**nvarchar(max)**|Texto SQL que define essa coluna computada.|  
 |**uses_database_collation**|**bit**|1 = A definição de coluna depende do agrupamento padrão do banco de dados para a avaliação correta; caso contrário, será 0. Tal dependência impede a alteração do agrupamento padrão do banco de dados.|  
 |**is_persisted**|**bit**|A coluna computada é persistente.|  

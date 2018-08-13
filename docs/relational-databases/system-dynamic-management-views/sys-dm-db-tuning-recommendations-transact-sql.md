@@ -25,13 +25,13 @@ caps.latest.revision: 37
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: ff9639268b4b7db33cd36f0cb6dc9d0407379ade
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: f90bdf2966092f003e45b3bb6c8d80710875b59a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997898"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39554246"
 ---
 # <a name="sysdmdbtuningrecommendations-transact-sql"></a>sys.DM\_db\_ajuste\_recomendações (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "37997898"
 | **Reverter\_ação\_iniciado\_por** | **nvarchar(4000)** | `User` = Plano recomendado manualmente de usuário. <br /> `System` = O sistema automaticamente revertida recomendação. |
 | **Reverter\_ação\_iniciado\_tempo** | **datetime2** | Data em que a recomendação foi revertida. |
 | **score** | **int** | Estimado de valor/impacto dessa recomendação sobre o valor de 0 a 100 escala (quanto maior o melhor) |
-| **detalhes** | **nvarchar(max)** | Documento JSON que contém mais detalhes sobre a recomendação. Campos a seguir estão disponíveis:<br /><br />`planForceDetails`<br />-    `queryId` -consulta\_id da consulta regredida.<br />-    `regressedPlanId` -plan_id do plano regredido.<br />-   `regressedPlanExecutionCount` – O número de execuções da consulta com o plano regredido antes da regressão é detectado.<br />-    `regressedPlanAbortedCount` – O número de erros detectados durante a execução do plano retornado.<br />-    `regressedPlanCpuTimeAverage` -Tempo médio de CPU consumido pela consulta retornada antes que a regressão é detectada.<br />-    `regressedPlanCpuTimeStddev` -Desvio padrão de tempo de CPU consumido pela consulta retornada antes da regressão é detectado.<br />-    `recommendedPlanId` -plan_id do plano que deve ser forçado.<br />-   `recommendedPlanExecutionCount`– O número de execuções da consulta com o plano que deve ser forçado antes que a regressão é detectada.<br />-    `recommendedPlanAbortedCount` – O número de erros detectados durante a execução do plano que deve ser forçado.<br />-    `recommendedPlanCpuTimeAverage` -Tempo médio de CPU consumido pela consulta executada com o plano deve ser forçado (calculado antes que a regressão é detectada).<br />-    `recommendedPlanCpuTimeStddev` Desvio padrão de tempo de CPU consumido pela consulta retornada antes da regressão é detectado.<br /><br />`implementationDetails`<br />-  `method` -O método que deve ser usado para corrigir a regressão. Valor é sempre `TSql`.<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql_md.md)] script que deve ser executado para forçar o plano recomendado. |
+| **Detalhes** | **nvarchar(max)** | Documento JSON que contém mais detalhes sobre a recomendação. Campos a seguir estão disponíveis:<br /><br />`planForceDetails`<br />-    `queryId` -consulta\_id da consulta regredida.<br />-    `regressedPlanId` -plan_id do plano regredido.<br />-   `regressedPlanExecutionCount` – O número de execuções da consulta com o plano regredido antes da regressão é detectado.<br />-    `regressedPlanAbortedCount` – O número de erros detectados durante a execução do plano retornado.<br />-    `regressedPlanCpuTimeAverage` -Tempo médio de CPU consumido pela consulta retornada antes que a regressão é detectada.<br />-    `regressedPlanCpuTimeStddev` -Desvio padrão de tempo de CPU consumido pela consulta retornada antes da regressão é detectado.<br />-    `recommendedPlanId` -plan_id do plano que deve ser forçado.<br />-   `recommendedPlanExecutionCount`– O número de execuções da consulta com o plano que deve ser forçado antes que a regressão é detectada.<br />-    `recommendedPlanAbortedCount` – O número de erros detectados durante a execução do plano que deve ser forçado.<br />-    `recommendedPlanCpuTimeAverage` -Tempo médio de CPU consumido pela consulta executada com o plano deve ser forçado (calculado antes que a regressão é detectada).<br />-    `recommendedPlanCpuTimeStddev` Desvio padrão de tempo de CPU consumido pela consulta retornada antes da regressão é detectado.<br /><br />`implementationDetails`<br />-  `method` -O método que deve ser usado para corrigir a regressão. Valor é sempre `TSql`.<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql_md.md)] script que deve ser executado para forçar o plano recomendado. |
   
 ## <a name="remarks"></a>Remarks  
  Informações retornadas por `sys.dm_db_tuning_recommendations` é atualizada quando o mecanismo de banco de dados identifica potenciais regressão de desempenho de consulta e não é persistente. As recomendações são mantidas apenas até [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for reiniciado. Os administradores de banco de dados devem periodicamente gerar cópias de backup de recomendação de ajuste se quiserem mantê-lo após a reciclagem do servidor. 

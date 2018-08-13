@@ -24,25 +24,25 @@ caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 537e2656730c7659edd22ac68722bf43e892ad3d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 5eba5d17938d4bcfce27fb70476cad3e8974a1c0
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970647"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39543327"
 ---
 # <a name="requesting-url-references-to-blob-data-using-sqlencode-sqlxml-40"></a>Solicitando referências URL a dados BLOB usando sql:encode (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Em um esquema XSD anotado, quando um atributo (ou elemento) é mapeado para uma coluna BLOB no Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], os dados são retornados no formato codificado na base 64 no XML.  
   
- Se você quiser que uma referência aos dados (um URI) a ser retornado que pode ser usado posteriormente para recuperar os dados BLOB em um formato binário, especifique o **sql: encode** anotação. Você pode especificar **sql: encode** em um atributo ou elemento de tipo simples.  
+ Se você quiser que uma referência aos dados (um URI) a ser retornado que pode ser usado posteriormente para recuperar os dados BLOB em um formato binário, especifique o **sql: codificar** anotação. Você pode especificar **sql: codificar** em um atributo ou elemento de tipo simples.  
   
- Especifique o **sql: encode** anotação para indicar que uma URL para o campo deve ser retornada em vez do valor do campo. **SQL: encode** depende da chave primária para gerar uma seleção singleton na URL. A chave primária pode ser especificada usando o **SQL: Key-campos** anotação.  
+ Especifique o **sql: codificar** anotação para indicar que uma URL para o campo deve ser retornada em vez do valor do campo. **SQL: codificar** depende da chave primária para gerar uma seleção singleton na URL. A chave primária pode ser especificada usando o **SQL: Key-campos** anotação.  
   
- O **sql: encode** anotação pode ser atribuída a "url" ou o valor "padrão". Um valor "default" retorna dados codificados na base 64.  
+ O **sql: codificar** anotação pode ser atribuída a "url" ou o valor "default". Um valor "default" retorna dados codificados na base 64.  
   
- O **sql: encode** anotação não pode ser usada com **SQL: Use-cdata** ou a ID, IDREF, IDREFS, NMTOKEN ou NMTOKENS tipos de atributo. Ele não também pode ser usado com XSD **fixa** atributo.  
+ O **sql: codificar** anotação não pode ser usada com **SQL: Use-cdata** ou na ID, IDREF, IDREFS, NMTOKEN ou NMTOKENS tipos de atributo. Ele não também pode ser usado com XSD **corrigido** atributo.  
   
 > [!NOTE]  
 >  As colunas de tipo BLOB não podem ser usadas como parte de uma chave ou chave estrangeira.  
@@ -51,7 +51,7 @@ ms.locfileid: "32970647"
  Para criar exemplos de funcionamento usando os exemplos a seguir, é necessário atender a determinados requisitos. Para obter mais informações, consulte [requisitos para executar exemplos do SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-sqlencode-to-obtain-a-url-reference-to-blob-data"></a>A. Especificando sql:encode para obter uma referência URL aos dados BLOB  
- Neste exemplo, o esquema de mapeamento especifica **sql: encode** no **LargePhoto** atributo para recuperar a referência URI para uma foto de produto específico (em vez de recuperar os dados binários na Base 64 - formato codificado).  
+ Neste exemplo, o esquema de mapeamento especifica **sql: codificar** sobre o **LargePhoto** atributo para recuperar a referência URI para uma foto de produto específico (em vez de recuperar os dados binários na Base 64 - formato codificado).  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

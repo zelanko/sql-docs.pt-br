@@ -14,13 +14,13 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9b1a65aeafe125ee34fa00943758b6d7d663195c
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 2d6ecf2047b833c0ff58b330a3077e90902a7a20
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37410975"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39550026"
 ---
 # <a name="filestream-and-ole-db"></a>Filestream e BD OLE
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "37410975"
 
   Esta seção contém quatro exemplos que mostram como usar o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB com o recurso filestream:  
   
--   [Ler uma coluna FILESTREAM para arquivo usando IBCPSession &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/filestream/read-a-filestream-column-to-file-using-ibcpsession-ole-db.md)  
+-   [Ler uma coluna FILESTREAM para o arquivo usando IBCPSession &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/filestream/read-a-filestream-column-to-file-using-ibcpsession-ole-db.md)  
   
 -   [Recuperar dados de uma coluna FILESTREAM usando ISequentialStream &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/filestream/retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db.md)  
   

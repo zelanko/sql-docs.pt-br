@@ -23,18 +23,18 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: adf5f058b8eb39f4eecfd13d922ba723664a73a0
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: b78b7d54b5065496b587b6493e986b263d8919fd
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467762"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548946"
 ---
 # <a name="sysdmsqlreferencingentities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retorna uma linha para cada entidade do banco de dados atual que faz referência a outra entidade definida pelo usuário por nome. Uma dependência entre duas entidades é criada quando uma entidade, chamada de *entidade referenciada*, aparece por nome em uma expressão SQL persistente de outra entidade, denominada a *entidade de referência*. Por exemplo, se um UDT (tipo definido pelo usuário) for especificado como entidade referenciada, essa função retornará cada entidade definida pelo usuário que referencia aquele tipo pelo nome em sua definição. A função não retorna entidades em outros bancos de dados que podem fazer referência à entidade especificada. Essa função precisa ser executada no contexto do banco de dados mestre para retornar um gatilho DDL no nível do servidor como entidade de referência.  
+  Retorna uma linha para cada entidade do banco de dados atual que faz referência a outra entidade definida pelo usuário por nome. Uma dependência entre duas entidades é criada quando uma entidade, chamada a *entidade referenciada*, aparece por nome em uma expressão SQL persistente de outra entidade, chamada a *entidade de referência*. Por exemplo, se um UDT (tipo definido pelo usuário) for especificado como entidade referenciada, essa função retornará cada entidade definida pelo usuário que referencia aquele tipo pelo nome em sua definição. A função não retorna entidades em outros bancos de dados que podem fazer referência à entidade especificada. Essa função precisa ser executada no contexto do banco de dados mestre para retornar um gatilho DDL no nível do servidor como entidade de referência.  
   
  Você pode usar essa função de gerenciamento dinâmico para relatar os seguintes tipos de entidades do banco de dados atual que fazem referência à entidade especificada:  
   
@@ -69,12 +69,12 @@ sys.dm_sql_referencing_entities (
   
  *schema_name* é necessária, exceto quando a classe referenciada é a PARTITION_FUNCTION.  
   
- *schema_name.referenced_entity_name* é **nvarchar (517)**.  
+ *schema_name.referenced_entity_name* está **nvarchar(517)**.  
   
  *< Referenced_class >* :: = {objeto | TIPO | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION}  
  É a classe da entidade referenciada. Apenas uma classe pode ser especificada por instrução.  
   
- *< referenced_class >* é **nvarchar**(60).  
+ *< referenced_class >* está **nvarchar**(60).  
   
 ## <a name="table-returned"></a>Tabela retornada  
   
@@ -82,7 +82,7 @@ sys.dm_sql_referencing_entities (
 |-----------------|---------------|-----------------|  
 |referencing_schema_name|**sysname**|Esquema ao qual a entidade de referência pertence. Permite valor nulo.<br /><br /> NULL para nível de banco de dados e gatilhos DDL no nível do servidor.|  
 |referencing_entity_name|**sysname**|Nome da entidade de referência. Não permite valor nulo.|  
-|referencing_id|**Int**|ID da entidade de referência. Não permite valor nulo.|  
+|referencing_id|**int**|ID da entidade de referência. Não permite valor nulo.|  
 |referencing_class|**tinyint**|Classe da entidade de referência. Não permite valor nulo.<br /><br /> 1 = Objeto<br /><br /> 12 = Gatilho DDL no nível do banco de dados<br /><br /> 13 - Gatilho DDL no nível do servidor|  
 |referencing_class_desc|**nvarchar(60)**|Descrição da classe da entidade de referência.<br /><br /> OBJECT<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER|  
 |is_caller_dependent|**bit**|Indica que a resolução da ID da entidade referenciada ocorre em tempo de execução por depender do esquema do chamador.<br /><br /> 1 = A entidade de referência tem o potencial de fazer referência à entidade. No entanto, a resolução da ID da entidade referenciada depende do chamador e não pode ser determinada. Isso ocorre apenas com relação a referências não associadas a esquema em procedimento armazenado, procedimento armazenado estendido ou função definida pelo usuário chamados em uma instrução EXECUTE.<br /><br /> 0 = A entidade referenciada não é dependente do chamador.|  
@@ -122,7 +122,7 @@ sys.dm_sql_referencing_entities (
 |Coleção de esquemas XML|não|Sim|  
 |Função de partição|não|Sim|  
   
- \* Uma tabela é controlada como uma entidade de referência apenas quando ela faz referência a um [!INCLUDE[tsql](../../includes/tsql-md.md)] módulo, tipo definido pelo usuário ou coleção de esquemas XML na definição de coluna computada, restrição CHECK ou restrição padrão.  
+ \* Uma tabela é controlada como entidade de referência somente quando ela faz referência a um [!INCLUDE[tsql](../../includes/tsql-md.md)] módulo, tipo definido pelo usuário ou coleção de esquemas XML na definição de uma coluna computada, restrição CHECK ou restrição padrão.  
   
  ** Os procedimentos armazenados numerados com um valor inteiro maior que 1 não são controlados como entidade que faz referência nem como entidade referenciada.  
   
@@ -132,7 +132,7 @@ sys.dm_sql_referencing_entities (
   
 -   Requer a permissão CONTROL no objeto referenciado. Quando a entidade referenciada é uma função de partição, a permissão CONTROL é exigida no banco de dados.  
   
--   Requer permissão SELECT em sys.DM sql_referencing_entities. Por padrão, a permissão SELECT é concedida a público.  
+-   Requer permissão SELECT na DM sql_referencing_entities. Por padrão, a permissão SELECT é concedida a público.  
   
 ### <a name="includesssql14includessssql14-mdmd---includesscurrentincludessscurrent-mdmd"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] - [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
@@ -158,7 +158,7 @@ GO
 ```  
   
 ### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>B. Retornando as entidades que fazem referência a um determinado tipo  
- O exemplo a seguir retorna as entidades que referenciam o tipo de alias `dbo.Flag`. O conjunto de resultados mostra que dois procedimentos armazenados usam esse tipo. O `dbo.Flag` tipo também é usado na definição de várias colunas no `HumanResources.Employee` tabela; no entanto, porque o tipo não está na definição de uma coluna computada, restrição CHECK ou restrição padrão na tabela, nenhuma linha será retornada para o `HumanResources.Employee`tabela.  
+ O exemplo a seguir retorna as entidades que referenciam o tipo de alias `dbo.Flag`. O conjunto de resultados mostra que dois procedimentos armazenados usam esse tipo. O `dbo.Flag` tipo também é usado na definição de várias colunas de `HumanResources.Employee` tabela; no entanto, porque o tipo não for na definição de uma coluna computada, restrição CHECK ou restrição padrão na tabela, nenhuma linha será retornada para o `HumanResources.Employee`tabela.  
   
 ```sql  
 USE AdventureWorks2012;  

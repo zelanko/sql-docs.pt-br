@@ -2,7 +2,7 @@
 title: Quais são as novidades do SSMA para Access(AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 03/01/2018
+ms.date: 08/05/2018
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -16,12 +16,12 @@ caps.latest.revision: 37
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c8e124eeb7dbf1c2ac569af0b7ca95078fcf999c
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: eabb6b1364b36a84da8acd4f70fe82f962b31081
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985648"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39556586"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>Quais são as novidades do SSMA para Access (AccessToSQL)
 Este tópico lista SSMA para alterações de acesso em cada versão.  

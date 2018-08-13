@@ -18,13 +18,13 @@ ms.assetid: 09ec0c6c-0a44-4766-b9b7-5092f676ee54
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0bb783907259eeb5ba40ed90a71671887cab3a74
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 096aff783be598522569d0963679080971d776ed
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37418315"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39532966"
 ---
 # <a name="preparing-commands"></a>Preparando comandos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,17 +46,17 @@ ms.locfileid: "37418315"
   
  A criação de procedimento armazenado temporário é controlada pela propriedade de inicialização SSPROP_INIT_USEPROCFORPREP, específica do provedor OLE DB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Caso o valor de propriedade seja SSPROPVAL_USEPROCFORPREP_ON ou SSPROPVAL_USEPROCFORPREP_ON_DROP, o provedor OLE DB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client tenta criar um procedimento armazenado durante a preparação de um comando. A criação do procedimento armazenado tem êxito caso o usuário do aplicativo tenha permissões suficientes no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Para os consumidores que não costumam desconectar, a criação de procedimentos armazenados temporários pode exigir recursos significativos de **tempdb**, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] banco de dados do sistema no qual os objetos temporários são criados. Quando o valor SSPROP_INIT_USEPROCFORPREP é SSPROPVAL_USEPROCFORPREP_ ON, os procedimentos armazenados temporários criados pelo provedor de dados OLE DB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client só são descartados quando a sessão que criou o comando perde a conexão com a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Caso essa conexão seja a padrão criada na inicialização da fonte de dados, o procedimento armazenado temporário só é descartado quando a fonte de dados deixa de ser inicializada.  
+ Para clientes que não costumam se desconectar, a criação de procedimentos armazenados temporários pode exigir recursos significativos de **tempdb**, o banco de dados do sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], no qual os objetos temporários são criados. Quando o valor SSPROP_INIT_USEPROCFORPREP é SSPROPVAL_USEPROCFORPREP_ ON, os procedimentos armazenados temporários criados pelo provedor de dados OLE DB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client só são descartados quando a sessão que criou o comando perde a conexão com a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Caso essa conexão seja a padrão criada na inicialização da fonte de dados, o procedimento armazenado temporário só é descartado quando a fonte de dados deixa de ser inicializada.  
   
  Quando o valor de SSPROP_INIT_USEPROCFORPREP é SSPROPVAL_USEPROCFORPREP_ON_DROP, os procedimentos armazenados temporários do provedor OLE DB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client são descartados quando ocorre uma das seguintes condições:  
   
--   O consumidor usa **ICommandText:: SetCommandText** para indicar um novo comando.  
+-   O consumidor usa **ICommandText::SetCommandText** para indicar um novo comando.  
   
--   O consumidor usa **icommandprepare:: Unprepare** para indicar que deixou de exigir o texto do comando.  
+-   O consumidor usa **ICommandPrepare::Unprepare** para indicar que deixou de exigir o texto de comando.  
   
 -   O consumidor libera todas as referências ao objeto de comando que usa o procedimento armazenado temporário.  
   
- Um objeto de comando tem no máximo um procedimento armazenado temporário em **tempdb**. Qualquer procedimento armazenado temporário existente representa o texto de comando atual de um objeto de comando específico.  
+ Um objeto de comando tem, no máximo, um procedimento armazenado temporário em **tempdb**. Qualquer procedimento armazenado temporário existente representa o texto de comando atual de um objeto de comando específico.  
   
 ## <a name="see-also"></a>Consulte também  
  [Comandos](../../relational-databases/native-client-ole-db-commands/commands.md)  

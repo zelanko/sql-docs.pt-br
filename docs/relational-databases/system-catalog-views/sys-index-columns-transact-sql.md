@@ -1,5 +1,5 @@
 ---
-title: index_columns (Transact-SQL) | Microsoft Docs
+title: sys. index_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ caps.latest.revision: 47
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: eb87377beeff12c6071ace2f03fee14ba9d92bf5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 4d46709b314df0511faad3abc3dc9a80947264dd
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182262"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39533916"
 ---
 # <a name="sysindexcolumns-transact-sql"></a>sys.index_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,14 +39,14 @@ ms.locfileid: "33182262"
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**Int**|ID do objeto em que o índice está definido.|  
-|**index_id**|**Int**|ID do índice no qual a coluna está definida.|  
-|**index_column_id**|**Int**|ID da coluna de índice. **index_column_id** só é exclusivo dentro **index_id**.|  
-|**column_id**|**Int**|ID da coluna na **object_id**.<br /><br /> 0 = RID (Identificador de linha) em um índice não clusterizado.<br /><br /> **column_id** só é exclusivo dentro **object_id**.|  
+|**object_id**|**int**|ID do objeto em que o índice está definido.|  
+|**index_id**|**int**|ID do índice no qual a coluna está definida.|  
+|**index_column_id**|**int**|ID da coluna de índice. **index_column_id** só é exclusivo dentro **index_id**.|  
+|**column_id**|**int**|ID da coluna na **object_id**.<br /><br /> 0 = RID (Identificador de linha) em um índice não clusterizado.<br /><br /> **column_id** só é exclusivo dentro **object_id**.|  
 |**key_ordinal**|**tinyint**|Ordinal (com base em 1) dentro do conjunto de colunas chave.<br /><br /> 0 = Não é uma coluna de chave ou é um índice XML, índice columnstore ou índice espacial.<br /><br /> Observação: Um índice XML ou espacial não pode ser uma chave porque as colunas subjacentes não são comparáveis, que significa que seus valores não podem ser ordenados.|  
 |**partition_ordinal**|**tinyint**|Ordinal (com base em 1) dentro do conjunto de colunas de particionamento. Um índice columnstore clusterizado pode ter, no máximo, uma coluna de particionamento.<br /><br /> 0 = Não é uma coluna de particionamento.|  
 |**is_descending_key**|**bit**|1 = A coluna de chave do índice tem uma classificação decrescente.<br /><br /> 0 = A coluna de chave do índice tem uma classificação crescente, ou a coluna faz parte de um índice de hash.|  
-|**is_included_column**|**bit**|1 = A coluna é uma coluna não chave adicionada ao índice através da cláusula CREATE INDEX INCLUDE, ou a coluna faz parte de um índice columnstore.<br /><br /> 0 = A coluna não é uma coluna incluída.<br /><br /> Colunas adicionadas implicitamente porque fazem parte da chave de clustering não são listadas na **index_columns**.<br /><br /> Colunas adicionadas implicitamente porque são uma coluna de particionamento são retornadas como 0.|  
+|**is_included_column**|**bit**|1 = A coluna é uma coluna não chave adicionada ao índice através da cláusula CREATE INDEX INCLUDE, ou a coluna faz parte de um índice columnstore.<br /><br /> 0 = A coluna não é uma coluna incluída.<br /><br /> Colunas adicionadas implicitamente porque fazem parte da chave de clustering não estão listadas na **index_columns**.<br /><br /> Colunas adicionadas implicitamente porque são uma coluna de particionamento são retornadas como 0.|  
   
 ## <a name="permissions"></a>Permissões  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

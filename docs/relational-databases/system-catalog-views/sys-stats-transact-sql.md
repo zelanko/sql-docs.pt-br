@@ -1,5 +1,5 @@
 ---
-title: Stats (Transact-SQL) | Microsoft Docs
+title: sys. Stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/18/2017
 ms.prod: sql
@@ -24,26 +24,26 @@ caps.latest.revision: 41
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 414de01d62d6472dd2a1d4efea02d11605592319
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: c160609bdab32c2db33584429b7b2dd6074afb67
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221617"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39535267"
 ---
 # <a name="sysstats-transact-sql"></a>sys.stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Contém uma linha para cada objeto de estatística que existe para as tabelas, índices e exibições indexadas no banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cada índice terá uma linha de estatística correspondente com o mesmo nome e ID (**index_id** = **stats_id**), mas não cada linha de estatística tem um índice correspondente.  
+  Contém uma linha para cada objeto de estatística que existe para as tabelas, índices e exibições indexadas no banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Todos os índices terão uma linha de estatística correspondente com o mesmo nome e ID (**index_id** = **stats_id**), mas nem toda linha de estatística tem um índice correspondente.  
   
- O modo de exibição de catálogo [stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) fornece informações de estatísticas para cada coluna no banco de dados. Para obter mais informações sobre estatísticas, consulte [estatísticas](../../relational-databases/statistics/statistics.md).  
+ A exibição do catálogo [sys. stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) fornece informações de estatísticas para cada coluna no banco de dados. Para obter mais informações sobre estatísticas, consulte [Estatísticas](../../relational-databases/statistics/statistics.md).  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**Int**|ID do objeto ao qual essas estatísticas pertencem.|  
+|**object_id**|**int**|ID do objeto ao qual essas estatísticas pertencem.|  
 |**name**|**sysname**|Nome da estatística. É exclusiva no objeto.|  
-|**stats_id**|**Int**|ID da estatística. É exclusiva no objeto.<br /><br />Se as estatísticas corresponderem a um índice, o *stats_id* valor é igual a *index_id* valor o [sys. Indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) exibição do catálogo.|  
+|**stats_id**|**int**|ID da estatística. É exclusiva no objeto.<br /><br />Se as estatísticas corresponderem a um índice, o *stats_id* valor é igual a *index_id* valor na [sys. Indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) exibição do catálogo.|  
 |**auto_created**|**bit**|Indica se as estatísticas foram criadas automaticamente pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 0 = As estatísticas não foram criadas automaticamente pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 1 = As estatísticas foram criadas automaticamente pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**user_created**|**bit**|Indica se as estatísticas foram criadas automaticamente por um usuário.<br /><br /> 0 = As estatísticas não foram criadas por um usuário.<br /><br /> 1 = As estatísticas foram criadas por um usuário.|  
 |**no_recompute**|**bit**|Indica se as estatísticas foram criadas com o **NORECOMPUTE** opção.<br /><br /> 0 = as estatísticas não foram criadas com o **NORECOMPUTE** opção.<br /><br /> 1 = as estatísticas foram criadas com o **NORECOMPUTE** opção.|  
@@ -78,7 +78,7 @@ WHERE s.object_id = OBJECT_ID('HumanResources.Employee');
  [Consultando o catálogo de sistema do SQL Server perguntas Frequentes](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [Estatística](../../relational-databases/statistics/statistics.md)    
  [sys.dm_db_stats_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   
- [sys.dm_db_stats_histogram &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   
+ [DM db_stats_histogram &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)   
  [sys.stats_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)
  
 

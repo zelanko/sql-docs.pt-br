@@ -18,13 +18,13 @@ ms.assetid: dfdacc81-42fe-4f20-8969-bed1f743defe
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d8fd9e0cbb3ce90e40e53965000452d8a2dca1de
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 0f7e7437486c601bfc04a3ad7a173d0d42b19b37
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37419385"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39537226"
 ---
 # <a name="persisted-data-source-objects"></a>Objetos persistidos da fonte de dados
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,9 +33,9 @@ ms.locfileid: "37419385"
   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB do Native Client dá suporte a objetos de fonte de dados persistentes com o **IPersistFile** interface.  
   
 ## <a name="examples"></a>Exemplos  
- **A. Manter a inicialização da fonte de dados:**  
+ **A. Persistir inicialização de fonte de dados:**  
   
- Este exemplo mostra uma função que persiste as propriedades de inicialização de uma fonte de dados definindo um servidor, um banco de dados e o uso do Modo de Autenticação do Windows para conexão. O nome do servidor e o nome do banco de dados são recebidos na *pLocation* e *pDatasource* parâmetros da função.  
+ Este exemplo mostra uma função que persiste as propriedades de inicialização de uma fonte de dados definindo um servidor, um banco de dados e o uso do Modo de Autenticação do Windows para conexão. O nome do servidor e o nome do banco de dados são recebidos nos parâmetros *pLocation* e *pDatasource* da função.  
   
 ```  
 HRESULT SetAndSaveInitProps  
@@ -144,7 +144,7 @@ HRESULT SetAndSaveInitProps
     }  
 ```  
   
- **B. Use a inicialização da fonte de dados persistente:**  
+ **B. Usar a inicialização de fonte de dados persistida:**  
   
  Este exemplo usa um objeto de fonte de dados persistido com propriedades de inicialização adicionais que fornecem um logon e uma senha do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -232,7 +232,7 @@ HRESULT InitFromPersistedDS
     }  
 ```  
   
- O **IPersistFile:: Save** método pode ser chamado antes ou depois de chamar **IDBInitialize:: Initialize**. Chamar o método após um retorno bem-sucedido de **IDBInitialize:: Initialize** garante uma especificação de fonte de dados válida é persistida.  
+ O método **IPersistFile::Save** pode ser chamado antes ou depois de chamar **IDBInitialize::Initialize**. A chamada do método após um retorno bem-sucedido de **IDBInitialize::Initialize** garante que uma especificação de fonte de dados válida seja persistida.  
   
 ## <a name="see-also"></a>Consulte também  
  [Objetos de fonte de dados &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  

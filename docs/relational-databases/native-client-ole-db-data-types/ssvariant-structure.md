@@ -18,13 +18,13 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5d45c3b54eb6b5e09c00ea94cfef924b3c94fa70
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 6c15bfc29ae02e362ea1010ef67b0a99e4b05dc0
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37420475"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39551126"
 ---
 # <a name="ssvariant-structure"></a>Estrutura SSVARIANT
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,10 +32,10 @@ ms.locfileid: "37420475"
 
   O **SSVARIANT** estrutura, que é definida em SQLNCLI. h, corresponde a um valor DBTYPE_SQLVARIANT no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor Native Client OLEDB.  
   
- **SSVARIANT** é uma união distinta. Dependendo do valor do membro vt, o consumidor pode determinar qual membro deve ser lido. os valores VT correspondem aos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de dados. Portanto, o **SSVARIANT** estrutura pode conter qualquer tipo de SQL Server. Para obter mais informações sobre a estrutura de dados para tipos OLE DB padrão, consulte [indicadores de tipo](http://go.microsoft.com/fwlink/?LinkId=122171).  
+ **SSVARIANT** é uma união distinta. Dependendo do valor do membro vt, o consumidor pode determinar qual membro deve ser lido. Os valores vt correspondem aos tipos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Portanto, a estrutura **SSVARIANT** pode manter qualquer tipo do SQL Server. Para obter mais informações sobre a estrutura de dados para tipos OLE DB padrão, consulte [indicadores de tipo](http://go.microsoft.com/fwlink/?LinkId=122171).  
   
 ## <a name="remarks"></a>Remarks  
- Quando Datatypecompat==80 = = 80, várias **SSVARIANT** subtipos se tornam cadeias de caracteres. Por exemplo, os valores vt seguintes aparecerão na **SSVARIANT** como VT_SS_WVARSTRING:  
+ Quando DataTypeCompat==80, vários subtipos **SSVARIANT** se tornam cadeias de caracteres. Por exemplo, os seguintes valores vt serão exibidos em **SSVARIANT** como VT_SS_WVARSTRING:  
   
 -   VT_SS_DATETIMEOFFSET  
   
@@ -58,14 +58,14 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
   
  Para o conjunto completo de macros de acesso para cada membro do **SSVARIANT** estrutura, consulte o arquivo Hi.  
   
- A tabela a seguir descreve os membros dos **SSVARIANT** estrutura:  
+ A seguinte tabela descreve os membros da estrutura **SSVARIANT**:  
   
 |Membro|Indicador de tipo OLE DB|Tipo de dados OLE DB C|valor vt|Comentários|  
 |------------|---------------------------|------------------------|--------------|--------------|  
-|VT|SSVARTYPE|||Especifica o tipo de valor contido na **SSVARIANT** struct.|  
+|VT|SSVARTYPE|||Especifica o tipo de valor contido no struct **SSVARIANT**.|  
 |bTinyIntVal|DBTYPE_UI1|**BYTE**|**VT_SS_UI1**|Dá suporte a **tinyint** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados.|  
-|sShortIntVal|DBTYPE_I2|**CURTO**|**VT_SS_I2**|Dá suporte a **smallint** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados.|  
-|lIntVal|DBTYPE_I4|**LONGAS**|**VT_SS_I4**|Dá suporte a **int** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados.|  
+|sShortIntVal|DBTYPE_I2|**SHORT**|**VT_SS_I2**|Dá suporte a **smallint** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados.|  
+|lIntVal|DBTYPE_I4|**LONG**|**VT_SS_I4**|Dá suporte a **int** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados.|  
 |llBigIntVal|DBTYPE_I8|**LARGE_INTEGER**|**VT_SS_I8**|Dá suporte a **bigint** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados.|  
 |fltRealVal|DBTYPE_R4|**float**|**VT_SS_R4**|Dá suporte a **reais** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados.|  
 |dblFloatVal|DBTYPE_R8|**double**|**VT_SS_R8**|Dá suporte a **float** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados.|  
@@ -73,7 +73,7 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
 |fBitVal|DBTYPE_BOOL|**VARIANT_BOOL**|**VT_SS_BIT**|Dá suporte a **bits** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados.|  
 |rgbGuidVal|DBTYPE_GUID|**GUID**|**VT_SS_GUID**|Dá suporte a **uniqueidentifier** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados.|  
 |numNumericVal|DBTYPE_NUMERIC|**DB_NUMERIC**|**VT_SS_NUMERIC**|Dá suporte a **numéricos** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados.|  
-|dDateVal|DBTYPE_DATE|**DBDATE**|**VT_SS_DATE**|Dá suporte a **data** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados.|  
+|dDateVal|DBTYPE_DATE|**DBDATE**|**VT_SS_DATE**|Dá suporte ao tipo de dados **date**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |tsDateTimeVal|DBTYPE_DBTIMESTAMP|**DBTIMESTAMP**|**VT_SS_SMALLDATETIME VT_SS_DATETIME VT_SS_DATETIME2**|Dá suporte a **smalldatetime**, **datetime**, e **datetime2** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de dados.|  
 |Time2Val|DBTYPE_DBTIME2|**DBTIME2**|**VT_SS_TIME2**|Dá suporte a **tempo** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados.<br /><br /> Inclui os seguintes membros:<br /><br /> *tTime2Val* (**DBTIME2**)<br /><br /> *bScale* (**bytes**) Especifica a escala de *tTime2Val* valor.|  
 |DateTimeVal|DBTYPE_DBTIMESTAMP|**DBTIMESTAMP**|**VT_SS_DATETIME2**|Dá suporte a **datetime2** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados.<br /><br /> Inclui os seguintes membros:<br /><br /> *tsDataTimeVal* (DBTIMESTAMP)<br /><br /> *bScale* (**bytes**) Especifica a escala de *tsDataTimeVal* valor.|  

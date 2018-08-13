@@ -16,15 +16,15 @@ caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0eb7cf6d146324ac5e472ea58fca5743683479e1
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 7de5994267ef8d847bd114f06e168ea80aa58f85
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37425635"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39533216"
 ---
-# <a name="datetime-data-type-conversions-from-sql-to-c"></a>Data e hora conversões de tipo de dados do SQL para C
+# <a name="datetime-data-type-conversions-from-sql-to-c"></a>Conversões do tipo de dados datetime do SQL para C
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 

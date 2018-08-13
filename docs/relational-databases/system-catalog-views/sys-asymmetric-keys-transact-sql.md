@@ -24,13 +24,13 @@ caps.latest.revision: 35
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e9ca85339f648d7081c14157dc531e38447a682e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 094827a645440b2503adbc413042ec99de44adb2
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181822"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39553606"
 ---
 # <a name="sysasymmetrickeys-transact-sql"></a>sys.asymmetric_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,14 +40,14 @@ ms.locfileid: "33181822"
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome da chave. É exclusiva no banco de dados.|  
-|**principal_id**|**Int**|ID da entidade de banco de dados que possui a chave.|  
-|**asymmetric_key_id**|**Int**|ID da chave. É exclusiva no banco de dados.|  
+|**principal_id**|**int**|ID da entidade de banco de dados que possui a chave.|  
+|**asymmetric_key_id**|**int**|ID da chave. É exclusiva no banco de dados.|  
 |**pvt_key_encryption_type**|**char(2)**|Como a chave é criptografada.<br /><br /> NA = Não criptografada<br /><br /> MK = A chave é criptografada pela chave mestra<br /><br /> PW = A chave é criptografada por uma senha definida pelo usuário<br /><br /> SK = A chave é criptografada pela chave mestra de serviço.|  
 |**pvt_key_encryption_type_desc**|**nvarchar(60)**|Descrição de como a chave privada é criptografada.<br /><br /> NO_PRIVATE_KEY<br /><br /> ENCRYPTED_BY_MASTER_KEY<br /><br /> ENCRYPTED_BY_PASSWORD<br /><br /> ENCRYPTED_BY_SERVICE_MASTER_KEY|  
-|**Impressão digital**|**varbinary(32)**|Hash SHA-1 da chave. O hash é globalmente exclusivo.|  
-|**Algoritmo**|**char(2)**|Algoritmo usado com a chave.<br /><br /> 1R = RSA de 512 bits<br /><br /> 2R = RSA de 1024 bits<br /><br /> 3R = RSA de 2048 bits|  
+|**impressão digital**|**varbinary(32)**|Hash SHA-1 da chave. O hash é globalmente exclusivo.|  
+|**algoritmo**|**char(2)**|Algoritmo usado com a chave.<br /><br /> 1R = RSA de 512 bits<br /><br /> 2R = RSA de 1024 bits<br /><br /> 3R = RSA de 2048 bits|  
 |**algorithm_desc**|**nvarchar(60)**|Descrição do algoritmo usado com a chave.<br /><br /> RSA_512<br /><br /> RSA_1024<br /><br /> RSA_2048|  
-|**key_length**|**Int**|Comprimento de bit da chave.|  
+|**key_length**|**int**|Comprimento de bit da chave.|  
 |**sid**|**varbinary(85)**|SID de logon para essa chave. Para chaves de Gerenciamento de Chave Extensível, esse valor será NULL.|  
 |**string_sid**|**nvarchar(128)**|Representação de cadeia de caracteres do SID de logon da chave. Para chaves de Gerenciamento de Chave Extensível, esse valor será NULL.|  
 |**public_key**|**varbinary(max)**|Chave pública.|  

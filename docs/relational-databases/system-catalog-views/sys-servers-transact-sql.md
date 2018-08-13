@@ -24,13 +24,13 @@ caps.latest.revision: 53
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 17a270028d94974643c1993730e353cea30dd897
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 314c2f152080f91b2180fe89bc2ef24307cc90a5
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37969788"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548566"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "37969788"
 |**server_id**|**int**|ID local do servidor vinculado.|  
 |**name**|**sysname**|Quando **server_id** = 0, esse é o nome do servidor.<br /><br /> Quando **server_id** > 0, esse é o nome local do servidor vinculado.|  
 |**product**|**sysname**|Nome de produto do servidor vinculado. "SQL Server" indica que esta é outra instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**provedor**|**sysname**|Nome do provedor OLE DB para conectar o servidor vinculado.|  
+|**Provedor**|**sysname**|Nome do provedor OLE DB para conectar o servidor vinculado.|  
 |**data_source**|**nvarchar(4000)**|Propriedade de conexão da fonte de dados OLE DB.|  
 |**Local**|**nvarchar(4000)**|Propriedade de conexão local OLE DB. NULL se nenhum.|  
 |**provider_string**|**nvarchar(4000)**|Propriedade de conexão da cadeia de caracteres de provedor OLE DB.<br /><br /> É NULL, exceto se o chamador tiver a permissão ALTER ANY LINKED SERVER.|  

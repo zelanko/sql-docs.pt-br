@@ -22,13 +22,13 @@ caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5071d68cfe594b2b4266a5c83398ebdd5a9bfbea
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 4742d442cf410d936706d5a67b50e08732ad253c
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239766"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39545596"
 ---
 # <a name="spcolumnprivileges-transact-sql"></a>sp_column_privileges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,18 +49,18 @@ sp_column_privileges [ @table_name = ] 'table_name'
   
 ## <a name="arguments"></a>Argumentos  
  [ @table_name=] '*table_name*'  
- É a tabela usada para retornar informações do catálogo. *table_name* é **sysname**, sem padrão. Não há suporte para a correspondência de padrão curinga.  
+ É a tabela usada para retornar informações do catálogo. *table_name* está **sysname**, sem padrão. Não há suporte para a correspondência de padrão curinga.  
   
  [ @table_owner=] '*table_owner*'  
- É o proprietário da tabela usada para retornar informações do catálogo. *table_owner* é **sysname**, com um padrão NULL. Não há suporte para a correspondência de padrão curinga. Se *table_owner* não é especificado, serão aplicadas as regras de visibilidade de tabela padrão do sistema de gerenciamento de banco de dados subjacente (DBMS).  
+ É o proprietário da tabela usada para retornar informações do catálogo. *table_owner* está **sysname**, com um padrão NULL. Não há suporte para a correspondência de padrão curinga. Se *table_owner* não for especificado, as regras de visibilidade de tabela padrão do sistema de gerenciamento de banco de dados (DBMS) subjacente se aplicam.  
   
- Se o usuário atual possuir uma tabela com o nome especificado, as colunas dessa tabela serão retornadas. Se *table_owner* não for especificado e o usuário atual não possuir uma tabela com especificado *table_name*, sp_column privilégios procurará uma tabela com especificado *table_name* pertencente ao proprietário do banco de dados. Se ela existir, as colunas dessa tabela serão retornadas.  
+ Se o usuário atual possuir uma tabela com o nome especificado, as colunas dessa tabela serão retornadas. Se *table_owner* não for especificado e o usuário atual não possuir uma tabela com especificado *table_name*, procurará uma tabela com os privilégios de sp_column *table_name* pertencente ao proprietário do banco de dados. Se ela existir, as colunas dessa tabela serão retornadas.  
   
  [ @table_qualifier=] '*table_qualifier*'  
- É o nome do qualificador da tabela. *table_qualifier* é *sysname*, com um padrão NULL. Vários produtos DBMS dão suporte à nomenclatura de três partes para tabelas (*qualificador ***.*** proprietário ***.*** nome*). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna representa o nome do banco de dados. Em alguns produtos, representa o nome do servidor do ambiente de banco de dados da tabela.  
+ É o nome do qualificador da tabela. *table_qualifier* está *sysname*, com um padrão NULL. Vários produtos DBMS dão suporte à nomenclatura de três partes para tabelas (*qualificador ***.*** proprietário ***.*** nome*). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna representa o nome do banco de dados. Em alguns produtos, ele representa o nome do servidor do ambiente de banco de dados da tabela.  
   
  [ @column_name=] '*coluna*'  
- É uma única coluna usada quando somente uma coluna de informações do catálogo é obtida. *coluna* é **nvarchar (** 384 **)**, com um padrão NULL. Se *coluna* não é especificado, todas as colunas são retornadas. Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *coluna* representa o nome da coluna conforme listado na tabela sys. Columns. *coluna* pode incluir caracteres curinga usando padrões do DBMS subjacente de correspondência de curingas. Para obter a interoperabilidade máxima, o cliente de gateway deve pressupor correspondência apenas do padrão ISO (curingas com % e _).  
+ É uma única coluna usada quando somente uma coluna de informações do catálogo é obtida. *coluna* está **nvarchar (** 384 **)**, com um padrão NULL. Se *coluna* não é especificado, todas as colunas são retornadas. Na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *coluna* representa o nome da coluna conforme listado na tabela sys. Columns. *coluna* pode incluir caracteres curinga usando padrões do DBMS subjacente de correspondência de curinga. Para obter a interoperabilidade máxima, o cliente de gateway deve pressupor correspondência apenas do padrão ISO (curingas com % e _).  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  sp_column_privileges é equivalente a SQLColumnPrivileges no ODBC. Os resultados retornados são ordenados por TABLE_QUALIFIER, TABLE_OWNER, TABLE_NAME, COLUMN_NAME e PRIVILEGE.  

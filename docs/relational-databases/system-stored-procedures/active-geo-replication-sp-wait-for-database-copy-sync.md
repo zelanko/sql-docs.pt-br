@@ -1,5 +1,5 @@
 ---
-title: sp_wait_for_database_copy_sync (banco de dados do SQL Azure) | Microsoft Docs
+title: sp_wait_for_database_copy_sync (banco de dados SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: ''
@@ -23,18 +23,18 @@ caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6658ab7b1b68637978ca76ea709c4c0a23414d07
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: d1200ffc3a7bf643b55478297dc25e40b02a3dff
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237914"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39557336"
 ---
 # <a name="active-geo-replication---spwaitfordatabasecopysync"></a>Replicação geográfica ativa - sp_wait_for_database_copy_sync
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Este procedimento tem como escopo uma relação do [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] entre um banco de dados primário e um banco de dados secundário. Chamando o **sp_wait_for_database_copy_sync** faz com que o aplicativo espere até que todas as transações confirmadas sejam replicadas e reconhecidas pelo banco de dados secundário ativo. Executar **sp_wait_for_database_copy_sync** somente banco de dados primário.  
+  Este procedimento tem como escopo uma relação do [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] entre um banco de dados primário e um banco de dados secundário. Chamar o **sp_wait_for_database_copy_sync** faz com que o aplicativo espere até que todas as transações confirmadas sejam replicadas e reconhecidas pelo banco de dados secundário ativo. Execute **sp_wait_for_database_copy_sync** somente banco de dados primário.  
   
 ||  
 |-|  
@@ -69,10 +69,10 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
  Qualquer usuário no banco de dados primário pode chamar este procedimento armazenado do sistema. O logon deve ser um usuário nos bancos de dados primário e secundário ativo.  
   
 ## <a name="remarks"></a>Remarks  
- Todas as transações confirmadas antes de um **sp_wait_for_database_copy_sync** chamada são enviadas para o banco de dados secundário ativo.  
+ Todas as transações confirmadas antes de uma **sp_wait_for_database_copy_sync** chamada são enviadas para o banco de dados secundário ativo.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir invoca **sp_wait_for_database_copy_sync** para garantir que todas as transações são confirmadas ao banco de dados primário, db0, sejam enviados ao seu banco de dados secundário ativo em ubfyu5ssyt de servidor de destino.  
+ O exemplo a seguir invoca **sp_wait_for_database_copy_sync** para garantir que todas as transações são confirmadas no banco de dados primário, db0, sejam enviadas ao seu banco de dados secundário ativo em ubfyu5ssyt de servidor de destino.  
   
 ```  
 USE db0;  
@@ -82,7 +82,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [sys.DM continuous_copy_status &#40;banco de dados do SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)   
+ [sys.dm_continuous_copy_status &#40;banco de dados SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)   
  [Funções e exibições de gerenciamento dinâmico de replicação geográfica &#40;banco de dados SQL do Azure&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)  
   
   

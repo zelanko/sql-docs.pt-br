@@ -21,13 +21,13 @@ caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6ba44ff764f9adf8cc6b27f5ad298d8ebb5ad2c3
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: e79153cfafd08484b18f88c70efeab24ff9e5b00
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38031364"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39561586"
 ---
 # <a name="using-ado-to-execute-sqlxml-40-queries"></a>Usando o ADO para executar consultas do SQLXML 4.0
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -106,7 +106,7 @@ ms.locfileid: "38031364"
   
      Atualize qualquer outro valor se mencionado nas instruções específicas do exemplo que você está tentando recriar localmente em seu computador.  
   
-3.  Salve o arquivo e fechá-lo.  
+3.  Salve o arquivo e feche-o.  
   
 4.  Verifique se você criou outros arquivos, como modelos ou esquemas XML que são parte do exemplo que você está tentando recriar localmente em seu computador. Esses arquivos deveriam estar localizados no mesmo diretório onde você salvou o arquivo de script de teste (Sqlxml4test.vbs).  
   

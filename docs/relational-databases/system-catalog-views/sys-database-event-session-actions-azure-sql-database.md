@@ -1,5 +1,5 @@
 ---
-title: sys.database_event_session_actions (banco de dados do SQL Azure) | Microsoft Docs
+title: sys. database_event_session_actions (banco de dados SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,30 +17,30 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 92b6aa34b8419c493f6da4dfe3b946b988899034
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: a5f0a70cdf6f242b36c6cf9888d2bf9d0fc37d61
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182142"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39549946"
 ---
-# <a name="sysdatabaseeventsessionactions-azure-sql-database"></a>sys.database_event_session_actions (banco de dados do SQL Azure)
+# <a name="sysdatabaseeventsessionactions-azure-sql-database"></a>sys.database_event_session_actions (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Retorna uma linha para cada ação em cada evento de uma sessão de eventos.  
   
 ||  
 |-|  
-|**Aplica-se a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 e versões posteriores.|  
+|**Aplica-se ao**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 e versões posteriores.|  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|event_session_id|**Int**|A identificação da sessão de evento. Não permite valor nulo.|  
-|event_id|**Int**|A ID do evento. Essa ID é exclusiva de um objeto da sessão de evento. Não permite valor nulo.|  
+|event_session_id|**int**|A identificação da sessão de evento. Não permite valor nulo.|  
+|event_id|**int**|A ID do evento. Essa ID é exclusiva de um objeto da sessão de evento. Não permite valor nulo.|  
 |nome|**sysname**|O nome da ação. Permite valor nulo.|  
 |pacote|**sysname**|O nome do pacote de eventos que contém um evento. Permite valor nulo.|  
-|Módulo|**sysname**|O nome do módulo que contém o evento. Permite valor nulo.|  
+|módulo|**sysname**|O nome do módulo que contém o evento. Permite valor nulo.|  
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão VIEW DATABASE STATE no servidor.  

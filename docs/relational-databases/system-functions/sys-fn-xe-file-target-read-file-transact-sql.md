@@ -26,13 +26,13 @@ caps.latest.revision: 20
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f3836b2932d9856c59e1d511d53998df57856f08
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 9d21a49c24dd33ffebd00eae8e33ed9e4601706c
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239246"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39535706"
 ---
 # <a name="sysfnxefiletargetreadfile-transact-sql"></a>sys.fn_xe_file_target_read_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,22 +53,22 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
   
 ## <a name="arguments"></a>Argumentos  
  *path*  
- O caminho para os arquivos a serem lidos. *caminho* pode conter curingas e incluir o nome de um arquivo. *caminho* é **nvarchar (260)**. Não há nenhum padrão. No contexto do banco de dados do SQL Azure, esse valor é uma URL de HTTP para um arquivo no armazenamento do Azure.
+ O caminho para os arquivos a serem lidos. *caminho* pode conter curingas e incluir o nome de um arquivo. *caminho* está **nvarchar (260)**. Não há nenhum padrão. No contexto do banco de dados SQL, esse valor é uma URL de HTTP para um arquivo no armazenamento do Azure.
   
  *mdpath*  
- O caminho para o arquivo de metadados que corresponde ao arquivo ou arquivos especificados pelo *caminho* argumento. *mdpath* é **nvarchar (260)**. Não há nenhum padrão. Começando com o SQL Server 2016, esse parâmetro pode ser fornecido como nulo.
+ O caminho para o arquivo de metadados que corresponde ao arquivo ou arquivos especificados pelo *caminho* argumento. *mdpath* está **nvarchar (260)**. Não há nenhum padrão. Começando com o SQL Server 2016, esse parâmetro pode ser fornecido como nulo.
   
 > [!NOTE]  
->  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] não exige o *mdpath* parâmetro. No entanto, é mantido para compatibilidade com versões anteriores para arquivos de log gerados nas versões anteriores do SQL Server.  
+>  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] não requer o *mdpath* parâmetro. No entanto, é mantido para compatibilidade com versões anteriores para arquivos de log gerados nas versões anteriores do SQL Server.  
   
  *initial_file_name*  
- O primeiro arquivo leiam *caminho*. *initial_file_name* é **nvarchar (260)**. Não há nenhum padrão. Se **nulo** é especificado como argumento de todos os arquivos encontrados na *caminho* são lidos.  
+ O primeiro arquivo leiam *caminho*. *initial_file_name* está **nvarchar (260)**. Não há nenhum padrão. Se **nulo** é especificado como o argumento de todos os arquivos encontrados na *caminho* são lidos.  
   
 > [!NOTE]  
 >  *initial_file_name* e *initial_offset* são argumentos emparelhados. Se você especificar um valor um dos argumentos, deverá especificar um valor para o outro argumento.  
   
  *initial_offset*  
- Usado para especificar o último deslocamento lido anteriormente e o ignora todos os eventos até o deslocamento (inclusive). A enumeração de evento é iniciada após o deslocamento especificado. *initial_offset* é **bigint**. Se **nulo** é especificado como o argumento do arquivo inteiro será lido.  
+ Usado para especificar o último deslocamento lido anteriormente e o ignora todos os eventos até o deslocamento (inclusive). A enumeração de evento é iniciada após o deslocamento especificado. *initial_offset* está **bigint**. Se **nulo** é especificado como o argumento do arquivo inteiro será lido.  
   
 ## <a name="table-returned"></a>Tabela retornada  
   
@@ -84,7 +84,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 
   
 ## <a name="remarks"></a>Remarks  
- Ler resultados grandes define executando **fn_xe_file_target_read_file** em [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] pode resultar em um erro. Use o **resultados em arquivo** modo (**Ctrl + Shift + F**) para exportar grandes conjuntos de resultados para um arquivo e ler o arquivo em outra ferramenta em vez disso.  
+ Ler resultados grandes define executando **sys. fn_xe_file_target_read_file** em [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] pode resultar em um erro. Use o **resultados em arquivo** modo (**Ctrl + Shift + F**) para exportar grandes conjuntos de resultados para um arquivo e ler o arquivo em outra ferramenta em vez disso.  
   
 ## <a name="permissions"></a>Permissões  
  , é necessário ter permissão VIEW SERVER STATE no servidor.  

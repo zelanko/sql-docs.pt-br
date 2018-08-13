@@ -21,13 +21,13 @@ caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 281cbb68960ad96e1f9712e7ad38030c0a6a7934
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 90b98b23bff869b0fbf0498669d389a7d834a84d
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37426218"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39539676"
 ---
 # <a name="bcpgettypename"></a>bcp_gettypename
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -78,8 +78,8 @@ RETCODE bcp_gettypename (
 |**SQLTEXT**|Qualquer|**text**|  
 |**SQLBIGBINARY**|não|**binary**|  
 |**SQLBINARY**|não|**Binary**|  
-|**SQLBIGVARBINARY**|não|**Varbinary**|  
-|**SQLVARBINARY**|não|**Varbinary**|  
+|**SQLBIGVARBINARY**|não|**varbinary**|  
+|**SQLVARBINARY**|não|**varbinary**|  
 |**SQLIMAGE**|Qualquer|**Imagem**|  
 |**SQLINTN**|Qualquer|**int-null**|  
 |**SQLDATETIMN**|Qualquer|**datetime-null**|  
@@ -92,9 +92,9 @@ RETCODE bcp_gettypename (
 |**SQLAOPMAX**|Qualquer|**Max**|  
 |**SQLDATETIM4**|Qualquer|**smalldatetime**|  
 |**SQLMONEY4**|Qualquer|**Smallmoney**|  
-|**SQLFLT4**|Qualquer|**Real**|  
+|**SQLFLT4**|Qualquer|**real**|  
 |**SQLUNIQUEID**|Qualquer|**uniqueidentifier**|  
-|**SQLNCHAR**|não|**Nchar**|  
+|**SQLNCHAR**|não|**nchar**|  
 |**SQLNVARCHAR**|não|**Nvarchar**|  
 |**SQLNTEXT**|Qualquer|**Ntext**|  
 |**SQLVARIANT**|Qualquer|**sql_variant**|  

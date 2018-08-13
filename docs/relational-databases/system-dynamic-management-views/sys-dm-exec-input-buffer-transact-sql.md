@@ -1,5 +1,5 @@
 ---
-title: sys.DM exec_input_buffer (Transact-SQL) | Microsoft Docs
+title: DM exec_input_buffer (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/13/2017
 ms.prod: sql
@@ -23,18 +23,18 @@ caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: da708fb9606b5e5d52165680af8dff74a9201115
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 583a49e34b922e128ea7b55cf0c738789ca60a06
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464062"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39565050"
 ---
 # <a name="sysdmexecinputbuffer-transact-sql"></a>sys.dm_exec_input_buffer (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2014sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2014sp2-asdb-xxxx-xxx-md.md)]
 
-  Retorna informações sobre instruções enviadas a uma instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Retorna informações sobre instruções enviadas a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,7 +44,7 @@ sys.dm_exec_input_buffer ( session_id , request_id )
   
 ## <a name="arguments"></a>Argumentos  
 *session_id*  
-A id de sessão está executando o lote a ser pesquisado. *session_id* é **smallint**. *session_id* pode ser obtido dos seguintes objetos de gerenciamento dinâmico:  
+A id de sessão está executando o lote a ser pesquisado. *session_id* está **smallint**. *session_id* pode ser obtido dos seguintes objetos de gerenciamento dinâmico:  
   
 -   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   
@@ -53,23 +53,23 @@ A id de sessão está executando o lote a ser pesquisado. *session_id* é **smal
 -   [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)   
   
 *request_id*  
-Request_id de [exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md). *request_id* é **int**.  
+A request_id partir [. DM exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md). *request_id* está **int**.  
   
 ## <a name="table-returned"></a>Tabela retornada  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**event_type**|**nvarchar(256)**|O tipo de evento no buffer de entrada para determinado spid.|  
+|**event_type**|**nvarchar(256)**|O tipo de evento no buffer de entrada para o determinado spid.|  
 |**parameters**|**smallint**|Quaisquer parâmetros fornecidos para a instrução.|  
-|**event_info**|**nvarchar(max)**|O texto da instrução no buffer de entrada para determinado spid.|  
+|**event_info**|**nvarchar(max)**|O texto da instrução no buffer de entrada para o determinado spid.|  
   
 ## <a name="permissions"></a>Permissões  
- Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se o usuário tem permissão VIEW SERVER STATE, o usuário verá a execução de todas as sessões na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; caso contrário, o usuário verá apenas a sessão atual.  
+ Na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se o usuário tiver permissão VIEW SERVER STATE, o usuário verá sessões tudo em execução na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; caso contrário, o usuário verá apenas a sessão atual.  
   
- Em [!INCLUDE[ssSDS](../../includes/sssds-md.md)], se o usuário for o proprietário do banco de dados, o usuário verá a execução de todas as sessões no [!INCLUDE[ssSDS](../../includes/sssds-md.md)]; caso contrário, o usuário verá apenas a sessão atual.  
+ Na [!INCLUDE[ssSDS](../../includes/sssds-md.md)], se o usuário for o proprietário do banco de dados, o usuário verá sessões em execução tudo sobre o [!INCLUDE[ssSDS](../../includes/sssds-md.md)]; caso contrário, o usuário verá apenas a sessão atual.  
   
 ## <a name="remarks"></a>Remarks  
- Essa função de gerenciamento dinâmico pode ser usada em conjunto com Sys.DM exec_sessions ou sys.DM exec_requests fazendo **CROSS APPLY**.  
+ Essa função de gerenciamento dinâmico pode ser usada em conjunto com DM exec_sessions ou. DM exec_requests fazendo **CROSS APPLY**.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -81,7 +81,7 @@ SELECT * FROM sys.dm_exec_input_buffer (52, 0);
 GO
 ```  
   
-### <a name="b-using-cross-apply-to-additional-information"></a>B. Com o uso entre aplicam-se para obter informações adicionais  
+### <a name="b-using-cross-apply-to-additional-information"></a>B. Usando a cruzada aplicam-se para obter informações adicionais  
  O exemplo a seguir lista o buffer de entrada para sessões com a id de sessão maior que 50.  
   
 ```sql  

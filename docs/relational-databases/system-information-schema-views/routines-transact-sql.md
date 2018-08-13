@@ -22,13 +22,13 @@ caps.latest.revision: 50
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 00ec03e10cd41e964c9687f04478e05871de5b68
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 5053bb891d06888776e49613803d71a4273da30f
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240596"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548878"
 ---
 # <a name="routines-transact-sql"></a>ROUTINES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,10 +43,10 @@ ms.locfileid: "33240596"
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |SPECIFIC_CATALOG|**nvarchar(** 128 **)**|Nome específico do catálogo. Este nome é igual a ROUTINE_CATALOG.|  
-|SPECIFIC_SCHEMA|**nvarchar(** 128 **)**|Nome específico do esquema.<br /><br /> **\*\* Importante \* \***  não use exibições INFORMATION_SCHEMA para determinar o esquema de um objeto. O único modo seguro de localizar o esquema de um objeto é consultar a exibição de catálogo sys.objects.|  
+|SPECIFIC_SCHEMA|**nvarchar(** 128 **)**|Nome específico do esquema.<br /><br /> **\*\* Importante \* \* ** não use exibições INFORMATION_SCHEMA para determinar o esquema de um objeto. O único modo seguro de localizar o esquema de um objeto é consultar a exibição de catálogo sys.objects.|  
 |SPECIFIC_NAME|**nvarchar(** 128 **)**|Nome específico do catálogo. Este nome é igual a ROUTINE_NAME.|  
 |ROUTINE_CATALOG|**nvarchar(** 128 **)**|Nome de catálogo da função.|  
-|ROUTINE_SCHEMA|**nvarchar(** 128 **)**|Nome do esquema que contém esta função.<br /><br /> **\*\* Importante \* \***  não use exibições INFORMATION_SCHEMA para determinar o esquema de um objeto. O único modo seguro de localizar o esquema de um objeto é consultar a exibição de catálogo sys.objects.|  
+|ROUTINE_SCHEMA|**nvarchar(** 128 **)**|Nome do esquema que contém esta função.<br /><br /> **\*\* Importante \* \* ** não use exibições INFORMATION_SCHEMA para determinar o esquema de um objeto. O único modo seguro de localizar o esquema de um objeto é consultar a exibição de catálogo sys.objects.|  
 |ROUTINE_NAME|**nvarchar(** 128 **)**|Nome da função.|  
 |ROUTINE_TYPE|**nvarchar (** 20 **)**|Retorna PROCEDURE para procedimentos armazenados e FUNCTION para funções.|  
 |MODULE_CATALOG|**nvarchar(** 128 **)**|NULL. Reservado para uso futuro.|  
@@ -56,8 +56,8 @@ ms.locfileid: "33240596"
 |UDT_SCHEMA|**nvarchar(** 128 **)**|NULL. Reservado para uso futuro.|  
 |UDT_NAME|**nvarchar(** 128 **)**|NULL. Reservado para uso futuro.|  
 |DATA_TYPE|**nvarchar(** 128 **)**|Tipo de dado do valor de retorno da função. Retorna **tabela** se uma função com valor de tabela.|  
-|CHARACTER_MAXIMUM_LENGTH|**Int**|Comprimento máximo em caracteres se o tipo de retorno for um tipo de caractere.<br /><br /> -1 para **xml** e dados de tipo de valor grande.|  
-|CHARACTER_OCTET_LENGTH|**Int**|Comprimento máximo em bytes se o tipo de retorno for um tipo de caractere.<br /><br /> -1 para **xml** e dados de tipo de valor grande.|  
+|CHARACTER_MAXIMUM_LENGTH|**int**|Comprimento máximo em caracteres se o tipo de retorno for um tipo de caractere.<br /><br /> -1 para **xml** e dados de tipo de valor grande.|  
+|CHARACTER_OCTET_LENGTH|**int**|Comprimento máximo em bytes se o tipo de retorno for um tipo de caractere.<br /><br /> -1 para **xml** e dados de tipo de valor grande.|  
 |COLLATION_CATALOG|**nvarchar(** 128 **)**|Sempre retorna NULL.|  
 |COLLATION_SCHEMA|**nvarchar(** 128 **)**|Sempre retorna NULL.|  
 |COLLATION_NAME|**nvarchar(** 128 **)**|Nome do agrupamento do valor de retorno. Para tipos não caractere, retorna NULL.|  
@@ -67,7 +67,7 @@ ms.locfileid: "33240596"
 |NUMERIC_PRECISION|**smallint**|Precisão numérica do valor de retorno. Para os tipos não numéricos, retorna o NULL.|  
 |NUMERIC_PRECISION_RADIX|**smallint**|Precisão numérica da base do valor de retorno. Para tipos não numéricos, retorna NULL.|  
 |NUMERIC_SCALE|**smallint**|Escala do valor de retorno. Para tipos não numéricos, retorna NULL.|  
-|DATETIME_PRECISION|**smallint**|A precisão fracionária de segundos se o valor de retorno é do tipo **datetime**. Caso contrário, retorna NULL.|  
+|DATETIME_PRECISION|**smallint**|Precisão fracionária de um segundo, se o valor retornado é do tipo **datetime**. Caso contrário, retorna NULL.|  
 |INTERVAL_TYPE|**nvarchar (** 30 **)**|NULL. Reservado para uso futuro.|  
 |INTERVAL_PRECISION|**smallint**|NULL. Reservado para uso futuro.|  
 |TYPE_UDT_CATALOG|**nvarchar(** 128 **)**|NULL. Reservado para uso futuro.|  
@@ -79,7 +79,7 @@ ms.locfileid: "33240596"
 |MAXIMUM_CARDINALITY|**bigint**|NULL. Reservado para uso futuro.|  
 |DTD_IDENTIFIER|**nvarchar(** 128 **)**|NULL. Reservado para uso futuro.|  
 |ROUTINE_BODY|**nvarchar (** 30 **)**|Retorna o SQL para uma função [!INCLUDE[tsql](../../includes/tsql-md.md)] e EXTERNAL para uma função escrita externamente.<br /><br /> Funções sempre serão o SQL.|  
-|ROUTINE_DEFINITION|**nvarchar (** 4000 **)**|Retorna os primeiros 4000 caracteres do texto de definição da função ou procedimento armazenado, se a função ou procedimento armazenado não for criptografado. Caso contrário, retorna NULL.<br /><br /> Para garantir que você obtenha a definição completa, consulte o [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) função ou a coluna de definição no [sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) exibição do catálogo.|  
+|ROUTINE_DEFINITION|**nvarchar (** 4000 **)**|Retorna os primeiros 4000 caracteres do texto de definição da função ou procedimento armazenado, se a função ou procedimento armazenado não for criptografado. Caso contrário, retorna NULL.<br /><br /> Para garantir que você obtenha a definição completa, consulte o [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) função ou a coluna de definição na [sys. sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) exibição do catálogo.|  
 |EXTERNAL_NAME|**nvarchar(** 128 **)**|NULL. Reservado para uso futuro.|  
 |EXTERNAL_LANGUAGE|**nvarchar (** 30 **)**|NULL. Reservado para uso futuro.|  
 |PARAMETER_STYLE|**nvarchar (** 30 **)**|NULL. Reservado para uso futuro.|  

@@ -23,15 +23,15 @@ caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b81d9c0716a0bda54bdeab3c7d2b347a505e0ce2
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: d387f7c6183017799845aeb748aa0b54da57c7f3
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37409145"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39561256"
 ---
-# <a name="creating-a-driver-application---asynchronous-mode-and-sqlcancel"></a>Criando um aplicativo de Driver – modo assíncrono e SQLCancel
+# <a name="creating-a-driver-application---asynchronous-mode-and-sqlcancel"></a>Criar um aplicativo de driver – Modo assíncrono e SQLCancel
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 

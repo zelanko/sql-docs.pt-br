@@ -23,13 +23,13 @@ ms.assetid: 2f906fff-5ed9-4527-9fd3-9c0d27c3dff7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fe3a9ff4070761807066ac6f1e2c9ed752bb1db0
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 8127ca4f6f09a106d010fa1f65432799efa6e403
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37425595"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39565770"
 ---
 # <a name="working-with-query-notifications"></a>Trabalhando com notificações de consulta
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "37425595"
   
  As notificações de consulta permitem que você solicite uma notificação em um tempo limite especificado quando os dados subjacentes de uma consulta são alterados. A solicitação por notificação especifica as opções de notificação, que incluem o nome do serviço, o texto da mensagem e o valor do tempo limite do servidor. As notificações são entregues através de uma fila do Service Broker na qual os aplicativos podem sondar as notificações disponíveis.  
   
- A sintaxe da cadeia de caracteres de opções de notificações de consulta é:  
+ A sintaxe da cadeia de caracteres das opções de notificação de consulta é:  
   
  `service=<service-name>[;(local database=<database> | broker instance=<broker instance>)]`  
   
@@ -83,7 +83,7 @@ CREATE SERVICE myService ON QUEUE myQueue
 |----------|----------|-----------------|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|O número de segundos que a notificação de consulta permanece ativa.<br /><br /> O padrão é 432000 segundos (5 dias). O valor mínimo é 1 segundo e o valor máximo é 2^31-1 segundos.|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|O texto da mensagem da notificação. É definido pelo usuário e não tem um formato predefinido.<br /><br /> Por padrão, a cadeia de caracteres fica vazia. Você pode especificar uma mensagem que contenha entre 1-2000 caracteres.|  
-|SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|As opções de notificação de consulta. São especificadas em uma cadeia de caracteres com *nome*=*valor* sintaxe. O usuário é responsável por criar o serviço e ler as notificações da fila.<br /><br /> O padrão é uma cadeia de caracteres vazia.|  
+|SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|As opções de notificação de consulta. Elas são especificadas em uma cadeia de caracteres com a sintaxe *name*=*value*. O usuário é responsável por criar o serviço e ler as notificações da fila.<br /><br /> O padrão é uma cadeia de caracteres vazia.|  
   
  A assinatura de notificação é sempre confirmada, independentemente do fato de a instrução ter sido executada em uma transação de usuário ou em uma confirmação automática ou se a transação na qual a instrução foi executada tiver sido confirmada ou revertida. A notificação do servidor é acionada mediante uma das seguintes condições inválidas de notificação: alteração dos dados subjacentes ou do esquema ou quando o tempo limite expira; a que ocorrer primeiro. Os registros de notificação são excluídos assim que são disparados. Consequentemente, em caso de recebimento de notificações, o aplicativo deve realizar uma nova assinatura caso queira obter mais atualizações.  
   
@@ -93,7 +93,7 @@ CREATE SERVICE myService ON QUEUE myQueue
 WAITFOR (RECEIVE * FROM MyQueue);   // Where MyQueue is the queue name.   
 ```  
   
- Observe que SELECT * não excluir a entrada da fila, porém RECEIVE \* FROM exclui. Isso irá interromper um thread de servidor se a fila estiver vazia. Se houver entradas na fila durante o momento da chamada, elas serão retornadas imediatamente; caso contrário, a chamada aguardará até que seja feita a entrada na fila.  
+ Observe que SELECT * não exclui a entrada da Fila, ao contrário de RECEIVE \* FROM. Isso irá interromper um thread de servidor se a fila estiver vazia. Se houver entradas na fila durante o momento da chamada, elas serão retornadas imediatamente; caso contrário, a chamada aguardará até que seja feita a entrada na fila.  
   
 ```  
 RECEIVE * FROM MyQueue  
@@ -101,7 +101,7 @@ RECEIVE * FROM MyQueue
   
  Essa instrução retornará imediatamente um conjunto de resultados vazio se a fila estiver vazia; caso contrário, retornará todas as notificações da fila.  
   
- Se SSPROP_QP_NOTIFICATION_MSGTEXT e SSPROP_QP_NOTIFICATION_OPTIONS forem não nulos e não vazios, o cabeçalho do TDS para notificações de consulta que contém as três propriedades definidas acima é enviado ao servidor em cada execução do comando. Se algum deles for nulo (ou vazio), o cabeçalho não será enviado e DB_E_ERRORSOCCURRED será usado, (ou DB_S_ERRORSOCCURRED se as propriedades estiverem marcadas como opcionais), e o valor do status será definido como DBPROPSTATUS_BADVALUE. A validação é feita em Execute/Prepare. De maneira semelhante, db_s_errorsoccured será usado quando as propriedades de notificação de consulta são definidas para conexões com [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] versões anteriores [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. O valor de status nesse caso é DBPROPSTATUS_NOTSUPPORTED.  
+ Se SSPROP_QP_NOTIFICATION_MSGTEXT e SSPROP_QP_NOTIFICATION_OPTIONS forem não nulos e não vazios, o cabeçalho do TDS para notificações de consulta que contém as três propriedades definidas acima é enviado ao servidor em cada execução do comando. Se algum deles for nulo (ou vazio), o cabeçalho não será enviado e DB_E_ERRORSOCCURRED será usado, (ou DB_S_ERRORSOCCURRED se as propriedades estiverem marcadas como opcionais), e o valor do status será definido como DBPROPSTATUS_BADVALUE. A validação é feita em Execute/Prepare. De modo semelhante, DB_S_ERRORSOCCURED será acionado quando as propriedades de notificação da consulta forem definidas para conexões com versões do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anteriores a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. O valor de status nesse caso é DBPROPSTATUS_NOTSUPPORTED.  
   
  Iniciar uma assinatura não garante que as mensagens subsequentes sejam entregues com êxito. Além disso, nenhuma verificação é feita em relação à validade do nome de serviço especificado.  
   

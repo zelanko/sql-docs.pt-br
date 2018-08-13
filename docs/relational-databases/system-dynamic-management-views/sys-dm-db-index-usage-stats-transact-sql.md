@@ -23,13 +23,13 @@ caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3403150f88a11070c65de493c800d3c28312c74b
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: dea81e4b8e67fa5faa0ca81a60595dafdef2c4ad
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465142"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39533806"
 ---
 # <a name="sysdmdbindexusagestats-transact-sql"></a>sys.dm_db_index_usage_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,20 +39,20 @@ ms.locfileid: "34465142"
  No [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], as exibições de gerenciamento dinâmico não podem expor informações que afetarão a contenção do banco de dados ou informações sobre outros bancos de dados aos quais o usuário tem acesso. Para evitar a exposição dessas informações, cada linha que contém os dados que não pertencem ao locatário conectado será filtrada.  
   
 > [!NOTE]  
->  **sys.DM db_index_usage_stats** não retorna informações sobre índices com otimização de memória. Para obter informações sobre o uso de índice com otimização de memória, consulte [sys.DM db_xtp_index_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).  
+>  **DM db_index_usage_stats** não retorna informações sobre índices com otimização de memória. Para obter informações sobre o uso de índice com otimização de memória, consulte [sys.dm_db_xtp_index_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).  
   
 > [!NOTE]  
->  Para chamar esse modo de exibição de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use **sys.dm_pdw_nodes_db_index_usage_stats**.  
+>  Para esse modo de exibição de chamadas [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use **sys.dm_pdw_nodes_db_index_usage_stats**.  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**smallint**|ID do banco de dados no qual a tabela ou exibição é definida.|  
-|**object_id**|**Int**|ID da tabela ou exibição na qual o índice é definido.|  
-|**index_id**|**Int**|ID do índice.|  
+|**object_id**|**int**|ID da tabela ou exibição na qual o índice é definido.|  
+|**index_id**|**int**|ID do índice.|  
 |**user_seeks**|**bigint**|Número de buscas através de consultas de usuário.|  
 |**user_scans**|**bigint**|Número de exames através de consultas de usuário que não usou 'predicado de busca'.|  
 |**user_lookups**|**bigint**|Número de pesquisas de indicador através de consultas de usuário.|  
-|**user_updates**|**bigint**|Número de atualizações através de consultas de usuário. Isso inclui a inserção, exclusão e atualizações que representa o número de operações realizadas não reais linhas afetadas. Por exemplo, se você excluir 1000 linhas em uma instrução, essa contagem incrementos de 1|  
+|**user_updates**|**bigint**|Número de atualizações através de consultas de usuário. Isso inclui a inserção, exclusão e atualizações que representa o número de operações realizadas não reais linhas afetadas. Por exemplo, se você excluir 1000 linhas em uma instrução, essa contagem é incrementada em 1|  
 |**last_user_seek**|**datetime**|Hora da última busca de usuário.|  
 |**last_user_scan**|**datetime**|Hora do último exame de usuário.|  
 |**last_user_lookup**|**datetime**|Hora da última pesquisa de usuário.|  
@@ -65,22 +65,22 @@ ms.locfileid: "34465142"
 |**last_system_scan**|**datetime**|Hora do último exame do sistema.|  
 |**last_system_lookup**|**datetime**|Hora da última pesquisa do sistema.|  
 |**last_system_update**|**datetime**|Hora da última atualização do sistema.|  
-|pdw_node_id|**Int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
+|pdw_node_id|**int**|**Aplica-se ao**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
   
 ## <a name="remarks"></a>Remarks  
  Cada busca, exame, pesquisa ou atualização individual no índice especificado pela execução de uma consulta é contado como um uso desse índice e incrementa o contador correspondente nessa exibição. As informações são relatadas para operações causadas por consultas enviadas pelo usuário e operações causadas por consultas geradas internamente, como exames de coleta de estatísticas.  
   
- O **user_updates** contador indica o nível de manutenção no índice causado pelas inserir, atualizar ou excluir operações na tabela ou exibição subjacente. Você pode usar essa exibição para determinar quais índices são pouco usados por seus aplicativos. Também é possível usar a exibição para determinar quais índices estão incorrendo em sobrecarga de manutenção. Se desejar, você pode descartar índices que incorrem em sobrecarga de manutenção, mas são pouco usados para consultas ou não são usados.  
+ O **user_updates** contador indica o nível de manutenção no índice causado por inserir, atualizar ou excluir operações na tabela ou exibição subjacente. Você pode usar essa exibição para determinar quais índices são pouco usados por seus aplicativos. Também é possível usar a exibição para determinar quais índices estão incorrendo em sobrecarga de manutenção. Se desejar, você pode descartar índices que incorrem em sobrecarga de manutenção, mas são pouco usados para consultas ou não são usados.  
   
  Os contadores são inicializados para esvaziar sempre que o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER) é iniciado. Além disso, sempre que um banco de dados é desanexado ou desligado (por exemplo, porque AUTO_CLOSE está definido como ON), todas as linhas associadas a ele são removidas.  
   
- Quando um índice é usado, uma linha é adicionada à **sys.DM db_index_usage_stats** se uma linha ainda não existe para o índice. Quando a linha é adicionada, seus contadores são definidos como zero inicialmente.  
+ Quando um índice é usado, uma linha é adicionada à **DM db_index_usage_stats** se uma linha ainda não existir para o índice. Quando a linha é adicionada, seus contadores são definidos como zero inicialmente.  
   
- Durante a atualização para [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], ou [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], as entradas em sys.DM db_index_usage_stats são removidas. Começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], as entradas são mantidas como eram antes [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].  
+ Durante a atualização para [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], ou [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], entradas no DM db_index_usage_stats são removidas. Começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], as entradas são mantidas como eram antes [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].  
   
 ## <a name="permissions"></a>Permissões  
-Em [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
-Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` no banco de dados.  
+Na [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
+Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` permissão no banco de dados.  
   
 ## <a name="see-also"></a>Consulte também  
 

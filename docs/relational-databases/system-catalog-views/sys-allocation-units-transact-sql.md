@@ -24,13 +24,13 @@ caps.latest.revision: 44
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4fdaaf57b5883d85441b6abcc5e8b468b26e1726
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 1199e2cc93541af9a089eade6be4e9b5b13f0433
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180112"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39565740"
 ---
 # <a name="sysallocationunits-transact-sql"></a>sys.allocation_units (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "33180112"
 |Tipo|**tinyint**|Tipo de unidade de alocação:<br /><br /> 0 = Descartado<br /><br /> 1 = Dados em linha (todos os tipos de dados, exceto LOB)<br /><br /> 2 = dados de objeto grande (LOB) (**texto**, **ntext**, **imagem**, **xml**, tipos de valor grande e tipos CLR definidos pelo usuário)<br /><br /> 3 = Dados do estouro de linha|  
 |type_desc|**nvarchar(60)**|Descrição do tipo de unidade de alocação:<br /><br /> **DESCARTADO**<br /><br /> **IN_ROW_DATA**<br /><br /> **LOB_DATA**<br /><br /> **ROW_OVERFLOW_DATA**|  
 |container_id|**bigint**|ID do contêiner de armazenamento associado à unidade de alocação.<br /><br /> Se type = 1 ou 3, container_id = sys.partitions.hobt_id.<br /><br /> Se type for 2, container_id = sys.partitions.partition_id.<br /><br /> 0 = Unidade de alocação marcada para descarte diferido|  
-|data_space_id|**Int**|ID do grupo de arquivos no qual reside a unidade de alocação.|  
+|data_space_id|**int**|ID do grupo de arquivos no qual reside a unidade de alocação.|  
 |total_pages|**bigint**|Número total de páginas alocadas ou reservadas pela unidade de alocação.|  
 |used_pages|**bigint**|Número total de páginas realmente em uso.|  
 |data_pages|**bigint**|Número de páginas usadas que têm:<br /><br /> Dados em linha<br /><br /> Dados LOB<br /><br /> Dados do estouro de linha<br /><br /> <br /><br /> Observe que o valor retornado exclui páginas de índice internas e páginas de gerenciamento de alocação.|  

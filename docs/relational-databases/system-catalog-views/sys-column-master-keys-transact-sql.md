@@ -32,13 +32,13 @@ caps.latest.revision: 14
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7f961586da2bb4bd9a3169fe955d989557535ba7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 61b7c2eb43ec5d30dea98b7eda00f072f883793d
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181772"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39553006"
 ---
 # <a name="syscolumnmasterkeys-transact-sql"></a>sys.column_master_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -48,11 +48,11 @@ ms.locfileid: "33181772"
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|O nome da CMK.|  
-|**column_master_key_id**|**Int**|ID da chave mestra de coluna.|  
+|**column_master_key_id**|**int**|ID da chave mestra de coluna.|  
 |**create_date**|**datetime**|Data em que a chave mestra de coluna foi criada.|  
-|**modify_date**|**datetime**|Data em que a chave mestra de coluna foi modificada pela última vez.|  
-|**key_store_provider_name**|**sysname**|Nome do provedor de repositório de chave mestra de coluna que contém a CMK. Valores permitidos são:<br /><br /> MSSQL_CERTIFICATE_STORE – se o repositório de chave mestra de coluna é um repositório de certificados.<br /><br /> Um valor definido pelo usuário, se o repositório de chave mestra de coluna for de um tipo personalizado.|  
-|**key_path**|**nvarchar(4000)**|Um caminho de específicas do repositório de chave mestra de coluna da chave. O formato do caminho depende o tipo de repositório de chave mestra de coluna. Exemplo:<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> Para um repositório de chaves mestras de coluna personalizada, o desenvolvedor é responsável por definir que um caminho de chave é para o repositório de chaves mestras de coluna personalizada.|  
+|**modify_date**|**datetime**|Data em que a chave mestra de coluna foi modificado pela última vez.|  
+|**key_store_provider_name**|**sysname**|Nome do provedor para o repositório de chave mestra de coluna que contém a CMK. Os valores permitidos são:<br /><br /> MSSQL_CERTIFICATE_STORE – se o repositório de chave mestra de coluna for um certificado de Store.<br /><br /> Um valor definido pelo usuário, se o repositório de chave mestra de coluna for de um tipo personalizado.|  
+|**key_path**|**nvarchar(4000)**|Um caminho de store específicas de chave mestra de coluna da chave. O formato do caminho depende do tipo de repositório de chave mestra de coluna. Exemplo:<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> Para um repositório de chaves mestras de coluna personalizada, o desenvolvedor é responsável por definir um caminho de chave que é para o repositório de chave mestra de coluna personalizado.|  
   
 ## <a name="permissions"></a>Permissões  
  Requer o **VIEW ANY COLUMN MASTER KEY** permissão.  

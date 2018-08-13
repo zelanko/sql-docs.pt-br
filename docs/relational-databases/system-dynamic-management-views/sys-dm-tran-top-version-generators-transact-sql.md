@@ -23,21 +23,21 @@ caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: dad87c14f7b8f1af31b7a0245e3bbe0b634089c5
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 54b55bec3dd52a014286457770a40b51e0dd35c8
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467263"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39536006"
 ---
 # <a name="sysdmtrantopversiongenerators-transact-sql"></a>sys.dm_tran_top_version_generators (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Retorna uma tabela virtual para os objetos que estão produzindo a maioria das versões no repositório de versão. **sys.DM tran_top_version_generators** retorna os maiores 256 agregados tamanhos de registros são agrupados pelo **database_id** e **rowset_id**. **sys.DM tran_top_version_generators** recupera dados consultando a **dm_tran_version_store** tabela virtual. **sys.DM tran_top_version_generators** é uma exibição ineficiente para execução porque essa exibição consulta todo o armazenamento de versão e o armazenamento de versão pode ser muito grande. Recomendados que você use essa função para localizar os usuários que mais utilizam o armazenamento de versão.  
+  Retorna uma tabela virtual para os objetos que estão produzindo a maioria das versões no repositório de versão. **DM tran_top_version_generators** retorna os maiores 256 tamanhos de registros que são agrupados por agregados a **database_id** e **rowset_id**. **DM tran_top_version_generators** recupera dados consultando os **dm_tran_version_store** tabela virtual. **DM tran_top_version_generators** é uma exibição ineficiente para execução porque essa exibição consulta o repositório de versão e o armazenamento de versão pode ser muito grande. Recomendados que você use essa função para localizar os usuários que mais utilizam o armazenamento de versão.  
   
 > [!NOTE]  
->  Para chamar essa de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use o nome **sys.dm_pdw_nodes_tran_top_version_generators**.  
+>  Chamá-lo partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use o nome **sys.dm_pdw_nodes_tran_top_version_generators**.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,18 +50,18 @@ sys.dm_tran_top_version_generators
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**database_id**|**Int**|ID do banco de dados.|  
+|**database_id**|**int**|ID do banco de dados.|  
 |**rowset_id**|**bigint**|ID do conjunto de linhas.|  
-|**aggregated_record_length_in_bytes**|**Int**|Soma dos comprimentos de registro para cada **database_id** e **rowset_id pair** no repositório de versão.|  
-|**pdw_node_id**|**Int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
+|**aggregated_record_length_in_bytes**|**int**|Soma dos comprimentos de registro para cada **database_id** e **rowset_id pair** no repositório de versão.|  
+|**pdw_node_id**|**int**|**Aplica-se ao**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
   
 ## <a name="permissions"></a>Permissões
 
-Em [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
-Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` no banco de dados.   
+Na [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
+Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` permissão no banco de dados.   
 
 ## <a name="remarks"></a>Remarks  
- Porque **sys.DM tran_top_version_generators** talvez precise ler muitas páginas enquanto examina o repositório de versão, executando **sys.DM tran_top_version_generators** podem interferir no sistema desempenho.  
+ Porque **DM tran_top_version_generators** pode ter que ler muitas páginas enquanto examina o repositório de versão em execução **DM tran_top_version_generators** pode interferir com o sistema desempenho.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir usa um cenário de teste no qual quatro transações simultâneas, cada uma identificada por um XSN (número de sequência de transação), estão sendo executadas em um banco de dados no qual as opções ALLOW_SNAPSHOT_ISOLATION e READ_COMMITTED_SNAPSHOT estão definidas como ON. As seguintes transações estão sendo executadas:  
@@ -93,7 +93,7 @@ database_id rowset_id            aggregated_record_length_in_bytes
 9           72057594038386688    33  
 ```  
   
- A saída mostra que todas as versões são criadas por `database_id``9` e que geram as versões de duas tabelas.  
+ A saída mostra que todas as versões são criadas por `database_id``9` e que as versões de geram a partir de duas tabelas.  
   
 ## <a name="see-also"></a>Consulte também  
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   

@@ -1,5 +1,5 @@
 ---
-title: Exibições de catálogo do repositório de consulta (Transact-SQL) | Microsoft Docs
+title: Exibições do catálogo de Store de consulta (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2016
 ms.prod: sql
@@ -20,15 +20,15 @@ caps.latest.revision: 5
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 925bf4f70f1a7d32aa726620d360c36835f724e5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 8d4ac40f0d28e9986cb48f83c3fb69674f3801af
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33178772"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39554086"
 ---
-# <a name="query-store-catalog-views-transact-sql"></a>Exibições de catálogo do repositório de consulta (Transact-SQL)
+# <a name="query-store-catalog-views-transact-sql"></a>Exibições do catálogo de Store de consulta (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Esta seção contém as exibições de catálogo a seguir.  
@@ -52,7 +52,7 @@ ms.locfileid: "33178772"
 -   [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Procedimentos armazenados do repositório de consultas &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
- [Monitorar o desempenho com o Repositório de Consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
+ [Procedimentos armazenados do Repositório de Consultas &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
+ [Monitorando o desempenho com o repositório de consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
   
   

@@ -24,13 +24,13 @@ caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9671d5a411b12b2cdc7225f215a43c27d19de10c
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: c58ddc69315ad43f0b5266a723cde41b19222d93
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34463412"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548156"
 ---
 # <a name="sysdmftsfdhosts-transact-sql"></a>sys.dm_fts_fdhosts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,17 +40,17 @@ ms.locfileid: "34463412"
  
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**fdhost_id**|**Int**|ID do host daemon do filtro.|  
+|**fdhost_id**|**int**|ID do host daemon do filtro.|  
 |**fdhost_name**|**nvarchar(120)**|Nome de host daemon do filtro.|  
-|**fdhost_process_id**|**Int**|ID de processo do Windows do host daemon do filtro.|  
+|**fdhost_process_id**|**int**|ID de processo do Windows do host daemon do filtro.|  
 |**fdhost_type**|**nvarchar(120)**|Tipo de documento que está sendo processado pelo host daemon do filtro, um de:<br /><br /> Thread único<br /><br /> Multi-thread<br /><br /> Documento enorme|  
-|**max_thread**|**Int**|Número de máximo de threads no host daemon do filtro.|  
-|**batch_count**|**Int**|Número de lotes que estão sendo processados no host daemon do filtro.|  
+|**max_thread**|**int**|Número de máximo de threads no host daemon do filtro.|  
+|**batch_count**|**int**|Número de lotes que estão sendo processados no host daemon do filtro.|  
   
 ## <a name="permissions"></a>Permissões  
 
-Em [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
-Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` no banco de dados.   
+Na [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
+Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` permissão no banco de dados.   
 
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir retorna o nome do host daemon do filtro e seu número máximo de threads. Ele também monitora quantos lotes estão sendo processados no daemon do filtro. Essa informação pode ser usada para diagnosticar o desempenho.  

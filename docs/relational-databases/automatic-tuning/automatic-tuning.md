@@ -19,13 +19,13 @@ caps.latest.revision: ''
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 0e77a1d7e24fa2635b3e699672338e588c1f5c1c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: c6f0e6d58674be38b6394759c67c3ecd0758a615
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38023854"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39556466"
 ---
 # <a name="automatic-tuning"></a>Ajuste automático
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -106,8 +106,7 @@ Algumas colunas nessa exibição são descritas na lista a seguir:
  - Descrição que contém informações sobre por que [!INCLUDE[ssde_md](../../includes/ssde_md.md)] pensa que essa alteração de plano é uma regressão de desempenho potencial.
  - Data e hora quando a regressão potencial for detectada.
  - Pontuação dessa recomendação. 
- - Detalhes sobre os problemas, como ID do plano detectado, ID do plano regredido, o ID do plano que deve ser forçado para corrigir o problema, [!INCLUDE[tsql_md](../../includes/tsql_md.md)]
- script que possa ser aplicado para corrigir o problema, etc. Os detalhes estão armazenados [formato JSON](../../relational-databases/json/index.md).
+ - Detalhes sobre os problemas, como ID do plano detectado, ID do plano regredido, o ID do plano que deve ser forçado para corrigir o problema, [!INCLUDE[tsql_md](../../includes/tsql_md.md)] script que possa ser aplicada para corrigir o problema, etc. Os detalhes estão armazenados [formato JSON](../../relational-databases/json/index.md).
 
 Use a consulta a seguir para obter um script que corrige o problema e obter informações adicionais sobre a estimados obter:
 

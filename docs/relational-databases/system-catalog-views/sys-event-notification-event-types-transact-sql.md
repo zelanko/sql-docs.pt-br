@@ -24,13 +24,13 @@ caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f8399316e6342929214cd4ff8a387444f71d9438
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 1964856fb7a0a2233c8a7fd4721a7186dcf36d7c
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33177922"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39533386"
 ---
 # <a name="syseventnotificationeventtypes-transact-sql"></a>sys.event_notification_event_types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,9 +39,9 @@ ms.locfileid: "33177922"
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**type**|**Int**|Tipo de evento ou grupo de eventos que faz uma notificação de eventos ser acionada.|  
+|**type**|**int**|Tipo de evento ou grupo de eventos que faz uma notificação de eventos ser acionada.|  
 |**type_name**|**nvarchar(128)**|Nome de um evento ou grupo de eventos. Isso pode ser especificado na cláusula FOR de um [CREATE EVENT NOTIFICATION](../../t-sql/statements/create-event-notification-transact-sql.md) instrução.|  
-|**parent_type**|**Int**|Tipo de grupo de eventos que é o pai do evento ou grupo de eventos.|  
+|**parent_type**|**int**|Tipo de grupo de eventos que é o pai do evento ou grupo de eventos.|  
   
 ## <a name="permissions"></a>Permissões  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

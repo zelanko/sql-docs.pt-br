@@ -19,19 +19,19 @@ caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ed9df8c1c51143442b622e9aa14831ede809a1b6
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: c58147840fe81e24308299b034d6486d1e5eb009
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37415395"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39537556"
 ---
-# <a name="stored-procedures---running"></a>Procedimentos armazenados – execução
+# <a name="stored-procedures---running"></a>Procedimentos armazenados – em execução
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  Quando a execução de instruções, chamar um procedimento armazenado na fonte de dados (em vez de executar ou preparar uma instrução no aplicativo cliente diretamente) pode fornecer:  
+  Ao executar instruções, a chamada a um procedimento armazenado na fonte de dados (em vez de executar ou preparar uma instrução diretamente no aplicativo cliente) pode fornecer:  
   
 -   Maior desempenho.  
   

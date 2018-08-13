@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
 ms.custom: ''
-ms.date: 04/04/2018
+ms.date: 08/04/2018
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: de537c60f8adf2d4860e236421dd0457871ea025
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 757820680533cfa2eaff8403e2056f0a4d3b1a96
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37984798"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39556946"
 ---
 # <a name="wideworldimportersdw-database-catalog"></a>Catálogo de banco de dados WideWorldImportersDW
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
 Explicações sobre os esquemas, tabelas e procedimentos armazenados no banco de dados WideWorldImportersDW. 
 
 O banco de dados WideWorldImportersDW é usado para processamento analítico e de data warehouse. Os dados transacionais sobre vendas e compras são gerados no banco de dados de WideWorldImporters e carregados no banco de dados WideWorldImportersDW usando um **processo de ETL diário**.

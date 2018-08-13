@@ -1,5 +1,5 @@
 ---
-title: Certificates (Transact-SQL) | Microsoft Docs
+title: sys. Certificates (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f5aaf349d050b2b1b1d27ae3067f003186c8c6eb
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 35e026a66a0d170be49cfbf8d220e591a73a2f37
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180312"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39552656"
 ---
 # <a name="syscertificates-transact-sql"></a>sys.certificates (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,8 +40,8 @@ ms.locfileid: "33180312"
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome do certificado. É exclusiva no banco de dados.|  
-|**certificate_id**|**Int**|ID do certificado. É exclusiva no banco de dados.|  
-|**principal_id**|**Int**|ID do principal de banco de dados que é o proprietário deste certificado.|  
+|**certificate_id**|**int**|ID do certificado. É exclusiva no banco de dados.|  
+|**principal_id**|**int**|ID do principal de banco de dados que é o proprietário deste certificado.|  
 |**pvt_key_encryption_type**|**char(2)**|Como a chave privada é criptografada.<br /><br /> NA = Não há nenhuma chave privada para o certificado<br /><br /> MK = A chave privada é criptografada pela chave mestra<br /><br /> PW = A chave privada é criptografada por uma senha definida pelo usuário<br /><br /> SK = A chave privada é criptografada pela chave mestra de serviço|  
 |**pvt_key_encryption_type_desc**|**nvarchar(60)**|Descrição de como a chave privada é criptografada.<br /><br /> NO_PRIVATE_KEY<br /><br /> ENCRYPTED_BY_MASTER_KEY<br /><br /> ENCRYPTED_BY_PASSWORD<br /><br /> ENCRYPTED_BY_SERVICE_MASTER_KEY|  
 |**is_active_for_begin_dialog**|**bit**|Se for 1, este certificado é usado para iniciar caixas de diálogo de serviço criptografadas.|  
@@ -52,7 +52,7 @@ ms.locfileid: "33180312"
 |**subject**|**nvarchar(4000)**|Assunto deste certificado.|  
 |**expiry_date**|**datetime**|Quando o certificado expira.|  
 |**start_date**|**datetime**|Quando o certificado é validado.|  
-|**Impressão digital**|**varbinary(32)**|Hash SHA-1 do certificado. O hash SHA-1 é globalmente exclusivo.|  
+|**impressão digital**|**varbinary(32)**|Hash SHA-1 do certificado. O hash SHA-1 é globalmente exclusivo.|  
 |**attested_by**|**nvarchar(260)**|Somente para uso do sistema.|  
 |pvt_key_last_backup_date|**datetime**|A data e hora da última exportação da chave privada do certificado.|  
   

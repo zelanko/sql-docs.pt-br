@@ -23,27 +23,27 @@ caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8dace7d8dccee89fadac0ff88fe7d1400b28b023
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: cb086e85072bf3b8a4713a7b4fb81c82fcaa1b5c
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467662"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548506"
 ---
 # <a name="sysdmexectriggerstats-transact-sql"></a>sys.dm_exec_trigger_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retorna estatísticas de desempenho de agregação dos gatilhos em cache. A exibição contém uma linha por gatilho e o tempo de vida da linha equivale ao tempo de permanência do gatilho em cache. Quando um gatilho é removido do cache, a linha correspondente é eliminada desta exibição. Nesse momento, um evento de rastreamento de SQL de estatísticas de desempenho é gerado como **sys.DM exec_query_stats**.  
+  Retorna estatísticas de desempenho de agregação dos gatilhos em cache. A exibição contém uma linha por gatilho e o tempo de vida da linha equivale ao tempo de permanência do gatilho em cache. Quando um gatilho é removido do cache, a linha correspondente é eliminada desta exibição. Nesse momento, um evento de rastreamento do SQL de estatísticas de desempenho é gerado semelhante à **DM exec_query_stats**.  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**database_id**|**Int**|ID do banco de dados no qual o gatilho reside.|  
-|**object_id**|**Int**|Número de identificação de objeto do gatilho.|  
+|**database_id**|**int**|ID do banco de dados no qual o gatilho reside.|  
+|**object_id**|**int**|Número de identificação de objeto do gatilho.|  
 |**type**|**char(2)**|Tipo do objeto:<br /><br /> TA = Gatilho (CLR) de assembly<br /><br /> TR = Gatilho SQL|  
-|**type_desc**|**nvarchar(60)**|Descrição do tipo de objeto:<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
-|**sql_handle**|**varbinary(64)**|Isso pode ser usado para correlacionar com as consultas de **sys.DM exec_query_stats** que foram executadas a partir deste gatilho.|  
-|**plan_handle**|**varbinary(64)**|Identificador do plano na memória. Esse identificador é transitório e permanece constante somente enquanto o plano permanece no cache. Esse valor pode ser usado com o **exec_cached_plans** exibição de gerenciamento dinâmico.|  
+|**Type_desc**|**nvarchar(60)**|Descrição do tipo de objeto:<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
+|**sql_handle**|**varbinary(64)**|Isso pode ser usado para correlacionar com consultas no **DM exec_query_stats** que foram executadas a partir deste gatilho.|  
+|**plan_handle**|**varbinary(64)**|Identificador do plano na memória. Esse identificador é transitório e permanece constante somente enquanto o plano permanece no cache. Esse valor pode ser usado com o **DM exec_cached_plans** exibição de gerenciamento dinâmico.|  
 |**cached_time**|**datetime**|Hora em que o gatilho foi adicionado ao cache.|  
 |**last_execution_time**|**datetime**|Hora da última execução do gatilho.|  
 |**execution_count**|**bigint**|O número de vezes que o gatilho foi executado desde sua última compilação.|  
@@ -67,10 +67,10 @@ ms.locfileid: "34467662"
 |**last_elapsed_time**|**bigint**|Tempo decorrido, em microssegundos, da execução concluída mais recente deste gatilho.|  
 |**min_elapsed_time**|**bigint**|O tempo mínimo decorrido, em microssegundos, de qualquer execução concluída deste gatilho.|  
 |**max_elapsed_time**|**bigint**|O tempo máximo decorrido, em microssegundos, de qualquer execução concluída deste gatilho.| 
-|**total_spills**|**bigint**|O número total de páginas vazados pela execução deste gatilho desde sua compilação.<br /><br /> **Aplica-se a**: começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**last_spills**|**bigint**|O número de páginas vazadas a última vez em que o gatilho foi executado.<br /><br /> **Aplica-se a**: começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**min_spills**|**bigint**|O número mínimo de páginas que esse gatilho nunca tem vazadas durante uma única execução.<br /><br /> **Aplica-se a**: começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**max_spills**|**bigint**|O número máximo de páginas que esse gatilho nunca tem vazadas durante uma única execução.<br /><br /> **Aplica-se a**: começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**total_spills**|**bigint**|O número total de páginas despejadas pela execução deste gatilho desde sua compilação.<br /><br /> **Aplica-se ao**: começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**last_spills**|**bigint**|O número de páginas despejadas a última vez em que o gatilho foi executado.<br /><br /> **Aplica-se ao**: começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**min_spills**|**bigint**|O número mínimo de páginas que esse gatilho já foram liberados durante uma única execução.<br /><br /> **Aplica-se ao**: começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**max_spills**|**bigint**|O número máximo de páginas que esse gatilho já foram liberados durante uma única execução.<br /><br /> **Aplica-se ao**: começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
   
 ## <a name="remarks"></a>Remarks  
  No [!INCLUDE[ssSDS](../../includes/sssds-md.md)], as exibições de gerenciamento dinâmico não podem expor informações que afetarão a contenção do banco de dados ou informações sobre outros bancos de dados aos quais o usuário tem acesso. Para evitar a exposição dessas informações, cada linha que contém os dados que não pertencem ao locatário conectado será filtrada.  
@@ -79,8 +79,8 @@ As estatísticas na exibição são atualizadas quando uma consulta é concluíd
   
 ## <a name="permissions"></a>Permissões  
 
-Em [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
-Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` no banco de dados.   
+Na [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
+Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` permissão no banco de dados.   
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir retorna informações sobre os cinco principais gatilhos identificados por tempo médio decorrido.  

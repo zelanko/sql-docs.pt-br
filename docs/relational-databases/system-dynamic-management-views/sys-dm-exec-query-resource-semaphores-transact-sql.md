@@ -23,51 +23,51 @@ caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4eb917c4aded6443a6a7d09e6c62f71dfa416261
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: c1b2d08d519e6765a4ba00972d257432341407df
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34463872"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39544346"
 ---
 # <a name="sysdmexecqueryresourcesemaphores-transact-sql"></a>sys.dm_exec_query_resource_semaphores (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Retorna as informações sobre o status de semáforo do recurso de consulta atual no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **sys.DM exec_query_resource_semaphores** fornece o status da memória de execução de consulta geral e permite que você determine se o sistema pode acessar memória suficiente. Essa exibição complementa as informações de memória obtidas [sys.DM os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md) para fornecer uma visão completa de status de memória do servidor. **sys.DM exec_query_resource_semaphores** retorna uma linha para o sinal do recurso normal e outra linha para o sinal do recurso de consulta. Há dois requisitos para um sinal de consulta:  
+  Retorna as informações sobre o status de semáforo do recurso de consulta atual no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **DM exec_query_resource_semaphores** fornece o status de memória de execução de consulta geral e permite que você determine se o sistema pode acessar memória suficiente. Essa exibição complementa informações de memória obtidas [DM os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md) para fornecer uma visão completa de status de memória do servidor. **DM exec_query_resource_semaphores** retorna uma linha para o semáforo de recurso normal e outra linha para o sinal do recurso de consulta pequena. Há dois requisitos para um semáforo de consulta pequena:  
   
 -   A concessão de memória solicitada deve ser menor que 5 MB  
   
 -   O custo da consulta deve ser menor que 3 unidades de custo  
   
 > [!NOTE]  
->  Para chamar essa de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use o nome **sys.dm_pdw_nodes_exec_query_resource_semaphores**.  
+>  Chamá-lo partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use o nome **sys.dm_pdw_nodes_exec_query_resource_semaphores**.  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**resource_semaphore_id**|**smallint**|ID não exclusivo do sinal do recurso. 0 para o sinal do recurso normal e 1 para o sinal do recurso da consulta pequena.|  
 |**target_memory_kb**|**bigint**|Conceda o destino de uso em quilobytes.|  
 |**max_target_memory_kb**|**bigint**|Destino potencial máximo em quilobytes. NULL para o sinal do recurso da consulta pequena.|  
-|**total_memory_kb**|**bigint**|Memória usada pelo sinal do recurso em quilobytes. Se o sistema está sob pressão de memória ou se mínima forçada memória é concedida com frequência, esse valor pode ser maior do que o **target_memory_kb** ou **max_target_memory_kb** valores. A memória total é uma soma das memórias disponível e concedida.|  
+|**total_memory_kb**|**bigint**|Memória usada pelo sinal do recurso em quilobytes. Se o sistema estiver sob pressão de memória ou se mínima forçada a memória é concedida com frequência, esse valor pode ser maior do que o **target_memory_kb** ou **max_target_memory_kb** valores. A memória total é uma soma das memórias disponível e concedida.|  
 |**available_memory_kb**|**bigint**|Memória disponível para uma concessão nova em quilobytes.|  
 |**granted_memory_kb**|**bigint**|Total de memória concedida em quilobytes.|  
 |**used_memory_kb**|**bigint**|Parte fisicamente usada da memória concedida em quilobytes.|  
-|**grantee_count**|**Int**|Número de consultas ativas com concessões atendidas.|  
-|**waiter_count**|**Int**|Número de consultas que esperam as concessões serem atendidas.|  
+|**grantee_count**|**int**|Número de consultas ativas com concessões atendidas.|  
+|**waiter_count**|**int**|Número de consultas que esperam as concessões serem atendidas.|  
 |**timeout_error_count**|**bigint**|Número total de erros de tempo-limite desde a inicialização do servidor. NULL para o sinal do recurso da consulta pequena.|  
 |**forced_grant_count**|**bigint**|Número total de concessões de memória mínimas forçadas desde a inicialização do servidor. NULL para o sinal do recurso da consulta pequena.|  
-|**pool_id**|**Int**|ID do pool de recursos ao qual pertence este sinal do recurso.|  
-|**pdw_node_id**|**Int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
+|**pool_id**|**int**|ID do pool de recursos ao qual pertence este sinal do recurso.|  
+|**pdw_node_id**|**int**|**Aplica-se ao**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
   
 ## <a name="permissions"></a>Permissões  
 
-Em [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
-Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` no banco de dados.   
+Na [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
+Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` permissão no banco de dados.   
   
 ## <a name="remarks"></a>Remarks  
  As consultas que usam exibições de gerenciamento dinâmico com ORDER BY ou agregações podem aumentar o uso da memória e, dessa forma, contribuir para o problema que estão solucionando.  
   
- Use **sys.DM exec_query_resource_semaphores** para solução de problemas, mas não o inclua em aplicativos que utilizarão versões futuras do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Use **DM exec_query_resource_semaphores** para solução de problemas, mas não o inclua em aplicativos que utilizarão versões futuras do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  O recurso Administrador de Recursos permite que um administrador de banco de dados distribua recursos de servidor entre pools de recursos, até um máximo de 64 pools. No [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versões posteriores, cada pool se comporta como uma instância de servidor independente pequena e requer dois semáforos.  
   

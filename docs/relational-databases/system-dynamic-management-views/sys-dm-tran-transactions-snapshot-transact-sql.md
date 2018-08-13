@@ -23,13 +23,13 @@ caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7e862da4552d605993a5dde7913fe1bec5856603
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: bdf2bfdcd5f0f6963660b865053765351f224e31
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464312"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39555476"
 ---
 # <a name="sysdmtrantransactionssnapshot-transact-sql"></a>sys.dm_tran_transactions_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "34464312"
   
 -   Identificar modificações de dados ignoradas por uma transação de instantâneo particular. As modificações de dados de uma transação que está ativa quando um instantâneo de transação se inicia serão ignoradas por ele, mesmo depois de a transação ser confirmada.  
   
- Por exemplo, considere a seguinte saída de **tran_transactions_snapshot**:  
+ Por exemplo, considere a seguinte saída da **tran_transactions_snapshot**:  
   
 ```  
 transaction_sequence_num snapshot_id snapshot_sequence_num  
@@ -74,13 +74,13 @@ dm_tran_transactions_snapshot
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**transaction_sequence_num**|**bigint**|Número de sequência de transação (XSN) de um instantâneo de transação.|  
-|**snapshot_id**|**Int**|ID de instantâneo para cada instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] iniciada com leitura confirmada, usando controle de versão de linha. Este valor é usado para gerar uma exibição consistente transacional do banco de dados que oferece suporte para cada consulta sendo executada com leitura confirmada, usando controle de versão de linha.|  
+|**snapshot_id**|**int**|ID de instantâneo para cada instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] iniciada com leitura confirmada, usando controle de versão de linha. Este valor é usado para gerar uma exibição consistente transacional do banco de dados que oferece suporte para cada consulta sendo executada com leitura confirmada, usando controle de versão de linha.|  
 |**snapshot_sequence_num**|**bigint**|Número de sequência de transação de uma transação que estava ativa quando o instantâneo de transação começou.|  
   
 ## <a name="permissions"></a>Permissões
 
-Em [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
-Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` no banco de dados.   
+Na [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
+Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` permissão no banco de dados.   
   
 ## <a name="remarks"></a>Remarks  
  Quando uma transação de instantâneo começa, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] registra todas as transações ativas naquele momento. **tran_transactions_snapshot** reporta essas informações para todas as transações de instantâneo ativas.  

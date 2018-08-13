@@ -1,7 +1,7 @@
 ---
 title: Compartilhado do SQL Server Management Objects (SMO) - termos de licença | Microsoft Docs
 ms.custom: ''
-ms.date: 08/06/2017
+ms.date: 08/08/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -12,13 +12,13 @@ ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 944e1c1274dad8b359206c9d4f0ea0b5440ac762
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: da7a9a138a5fd027f3b89c5f4b1d5db219c7d5d0
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040424"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662238"
 ---
 # <a name="sql-server-shared-management-objects-smo-license-terms"></a>Termos de licença do Management Objects (SMO) compartilhado do SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -67,14 +67,13 @@ da Microsoft referentes a este software, salvo quando outros termos acompanharem
   * o código seja divulgado ou distribuído na forma de código-fonte ou
   * outras pessoas tenham o direito de modificá-lo.
 
-**3.    ESCOPO DA LICENÇA.** O software é licenciado, não vendido. A menos que a legislação aplicável lhe dê mais direitos, a Microsoft se reserva todos os outros direitos não expressamente concedidos neste contrato, seja por implicação, embargo ou de outra forma. Você pode usar o software somente da forma expressamente permitida neste contrato. Dessa forma, você deve concordar com as limitações técnicas no software que somente permitirão o seu uso de algumas formas. É vedado:
-* contornar as limitações técnicas do software;
-* aplicar engenharia reversa, descompilar ou desmontar o software, salvo e somente na medida em que essa atividade seja expressamente permitida pela legislação aplicável, não obstante a presente limitação;
-* fazer mais cópias do software do que o número especificado neste contrato ou permitido pela legislação aplicável, apesar dessa limitação;
-* publicar o software para que outras pessoas o copiem;
-* alugar, arrendar ou emprestar o software;
-* transferir o software ou este contrato a terceiros; ou
-* usar o software para serviços de hospedagem de software comerciais.
+
+**3. ESCOPO DA LICENÇA.** O software é licenciado, não vendido. A menos que a legislação aplicável lhe dê mais direitos, a Microsoft se reserva todos os outros direitos não expressamente concedidos neste contrato, seja por implicação, embargo ou de outra forma. Você pode usar o software somente da forma expressamente permitida neste contrato. Dessa forma, você deve concordar com as limitações técnicas no software que somente permitirão o seu uso de algumas formas. Você pode fazer qualquer uma das seguintes:
+
+- Contornar quaisquer limitações técnicas no software.
+- Fazer engenharia reversa, descompilar ou desmontar o software, exceto e somente na medida em que lei aplicável permitir expressamente, apesar dessa limitação.
+- Fazer mais cópias do software do que está especificado neste contrato ou permitido pela legislação aplicável, apesar desta limitação.
+- Compartilhar, publicar, alugar ou o software de concessão ou fornecer o software como uma solução autônoma hospedada para outros usuários.
 
 **4.    NOTIFICAÇÕES DE TERCEIROS.** O software pode incluir componentes de terceiros com avisos legais separados ou regidos por outros contratos, conforme pode ser descrito no arquivo ThirdPartyNotices que acompanha o software.  Mesmo se tais componentes forem regidos por outros contratos, os avisos de isenção e as limitações e exclusões de danos abaixo também se aplicam.
 
@@ -106,3 +105,7 @@ Essa limitação se aplica a
 * requerimentos judiciais ou extrajudiciais por violação de garantia ou condição, responsabilidade objetiva, negligência ou outro ato ilícito extracontratual na extensão permitida pela legislação aplicável.
 
 Ela também se aplica mesmo que a Microsoft soubesse ou devesse saber sobre a possibilidade de danos. A limitação ou exclusão acima poderá não ser aplicar a você, pois seu país pode não permitir a exclusão ou limitação por danos incidentais, consequencias ou outros.
+
+> [!NOTE]
+> Seção 3 foi atualizado em 8 de agosto de 2018.
+

@@ -23,13 +23,13 @@ caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a0174fbe566afa6eec5c6cb208dacfed00fcd735
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: f13f8e1edb78b969dd6303a6eca339fcb3946cd1
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467402"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39540756"
 ---
 # <a name="sysdmoswaitingtasks-transact-sql"></a>sys.dm_os_waiting_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,28 +37,28 @@ ms.locfileid: "34467402"
   Retorna informações sobre a fila de espera de tarefas que estão esperando algum recurso.  
   
 > [!NOTE]  
->  Para chamar essa de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use o nome **sys.dm_pdw_nodes_os_waiting_tasks**.  
+>  Chamá-lo partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use o nome **sys.dm_pdw_nodes_os_waiting_tasks**.  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**waiting_task_address**|**varbinary(8)**|Endereço da tarefa de espera.|  
 |**session_id**|**smallint**|ID da sessão associada à tarefa.|  
-|**exec_context_id**|**Int**|ID do contexto de execução associado à tarefa.|  
-|**wait_duration_ms**|**bigint**|Tempo de espera total para esse tipo, em milissegundos. Esse tempo é inclusivo do **signal_wait_time**.|  
+|**exec_context_id**|**int**|ID do contexto de execução associado à tarefa.|  
+|**wait_duration_ms**|**bigint**|Tempo de espera total para esse tipo, em milissegundos. Essa hora é inclusiva de **signal_wait_time**.|  
 |**wait_type**|**nvarchar(60)**|Nome do tipo de espera.|  
 |**resource_address**|**varbinary(8)**|Endereço do recurso pelo qual a tarefa está esperando.|  
 |**blocking_task_address**|**varbinary(8)**|Tarefa que está mantendo esse recurso atualmente|  
 |**blocking_session_id**|**smallint**|ID da sessão que está bloqueando a solicitação. Se esta coluna for NULL, a solicitação não estará bloqueada ou as informações da sessão de bloqueio não estarão disponíveis (ou não podem ser identificadas).<br /><br /> -2 = O recurso de bloqueio pertence a uma transação distribuída órfã.<br /><br /> -3 = O recurso de bloqueio pertence a uma transação de recuperação adiada.<br /><br /> -4 = A ID da sessão do proprietário da trava de bloqueio não pôde ser determinada devido a transições internas de estado da trava.|  
-|**blocking_exec_context_id**|**Int**|ID do contexto de execução da tarefa de bloqueio.|  
+|**blocking_exec_context_id**|**int**|ID do contexto de execução da tarefa de bloqueio.|  
 |**resource_description**|**nvarchar(3072)**|Descrição do recurso que está sendo consumido. Para obter mais informações, consulte a lista a seguir.|  
-|**pdw_node_id**|**Int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
+|**pdw_node_id**|**int**|**Aplica-se ao**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
   
 ## <a name="resourcedescription-column"></a>Coluna resource_description  
- A coluna resource_description tem os seguintes valores possíveis.  
+ A coluna do resource_description tem os seguintes valores possíveis.  
   
  **Proprietário do recurso de pool de threads:**  
   
--   id de ThreadPool = Agendador\<hex-address >  
+-   id do ThreadPool = Agendador\<hex-address >  
   
  **Proprietário do recurso de consulta paralela:**  
   
@@ -90,7 +90,7 @@ ms.locfileid: "34467402"
   
     -   Para um arquivo: Filelock fileid =\<arquivo-id > subresource =\<filelock-subresource > dbid =\<db-id >  
   
-    -   Para OBJECT: Objectlock lockPartition =\<lock-partition-id > objid =\<obj-id > subresource =\<objectlock-subresource > dbid =\<db-id >  
+    -   Para objeto: Objectlock lockPartition =\<lock-partition-id > objid =\<obj-id > subresource =\<objectlock-subresource > dbid =\<db-id >  
   
     -   Para PAGE: Pagelock fileid =\<arquivo-id > pageid =\<id da página > dbid =\<db-id > subresource =\<pagelock-subresource >  
   
@@ -140,18 +140,18 @@ ms.locfileid: "34467402"
   
 ## <a name="permissions"></a>Permissões
 
-Em [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
-Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` no banco de dados.   
+Na [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
+Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` permissão no banco de dados.   
  
 ## <a name="example"></a>Exemplo
-Este exemplo identificará as sessões bloqueadas.  Execute o [!INCLUDE[tsql](../../includes/tsql-md.md)] de consulta em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
+Este exemplo identificará as sessões bloqueadas.  Execute o [!INCLUDE[tsql](../../includes/tsql-md.md)] consultar em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
 ```sql
 SELECT * FROM sys.dm_os_waiting_tasks 
 WHERE blocking_session_id IS NOT NULL; 
 ``` 
   
 ## <a name="see-also"></a>Consulte também  
-  [Sistema operacional SQL Server relacionadas exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+  [Sistema operacional SQL Server relacionados exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 

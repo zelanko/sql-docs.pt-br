@@ -1,5 +1,5 @@
 ---
-title: all_columns (Transact-SQL) | Microsoft Docs
+title: sys.all_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ caps.latest.revision: 48
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3b8daabfa5975e52c6c3f13bdb6c4bd8f791e3ec
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: aecb0e276bff562dcafa072418c5f31c48fde3a4
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33182422"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39540500"
 ---
 # <a name="sysallcolumns-transact-sql"></a>sys.all_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,15 +39,15 @@ ms.locfileid: "33182422"
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|object_id|**Int**|ID do objeto ao qual esta coluna pertence.|  
+|object_id|**int**|ID do objeto ao qual esta coluna pertence.|  
 |nome|**sysname**|Nome da coluna. É exclusiva no objeto.|  
-|column_id|**Int**|ID da coluna. É exclusiva no objeto.<br /><br /> Os IDs de coluna podem não ser sequenciais.|  
+|column_id|**int**|ID da coluna. É exclusiva no objeto.<br /><br /> Os IDs de coluna podem não ser sequenciais.|  
 |system_type_id|**tinyint**|ID do tipo de sistema da coluna.|  
-|user_type_id|**Int**|ID do tipo da coluna, como definido pelo usuário.<br /><br /> Para retornar o nome do tipo, unir o [Types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) essa coluna de exibição do catálogo.|  
-|max_length|**smallint**|Comprimento máximo (em bytes) da coluna.<br /><br /> -1 = a coluna de tipo de dados é **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, ou **xml**.<br /><br /> Para **texto** colunas, o valor de max_length será 16 ou o valor definido por sp_tableoption 'text in row'.|  
+|user_type_id|**int**|ID do tipo da coluna, como definido pelo usuário.<br /><br /> Para retornar o nome do tipo, Junte-se para o [Types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) essa coluna de exibição do catálogo.|  
+|max_length|**smallint**|Comprimento máximo (em bytes) da coluna.<br /><br /> -1 = a coluna é do tipo de dados **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, ou **xml**.<br /><br /> Para **texto** colunas, o valor de max_length será 16 ou o valor definido por sp_tableoption 'text in row'.|  
 |precisão|**tinyint**|Precisão da coluna se tiver base numérica; Caso contrário, 0.|  
 |scale|**tinyint**|Escala da coluna com base numérica, caso contrário é 0.|  
-|collation_name|**sysname**|Nome do agrupamento da coluna com base em caractere; Caso contrário, nulo.|  
+|collation_name|**sysname**|Nome do agrupamento da coluna se baseados em caracteres; Caso contrário, nulo.|  
 |is_nullable|**bit**|1 = A coluna permite valor nulo.|  
 |is_ansi_padded|**bit**|1 = A coluna usa o comportamento ANSI_PADDING ON se for de caractere, binária, ou variante.<br /><br /> 0 = A coluna não é de caractere, binária nem variante.|  
 |is_rowguidcol|**bit**|1 = A coluna é uma ROWGUIDCOL declarada.|  
@@ -59,9 +59,9 @@ ms.locfileid: "33182422"
 |is_merge_published|**bit**|1 = A coluna é publicada por mesclagem.|  
 |is_dts_replicated|**bit**|1 = A coluna é replicada usando o [!INCLUDE[ssIS](../../includes/ssis-md.md)].|  
 |is_xml_document|**bit**|1 = O conteúdo é um documento XML completo.<br /><br /> 0 = O conteúdo é um fragmento de documento ou o tipo de dados da coluna não é XML.|  
-|xml_collection_id|**Int**|Diferente de zero se o tipo de dados da coluna é **xml** e o XML for digitado. O valor será o ID da coleção que contém o namespace do esquema XML de validação da coluna.<br /><br /> 0 não = nenhuma coleção de esquemas XML.|  
-|default_object_id|**Int**|ID do objeto padrão, independentemente de ser autônoma [sp_bindefault](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md), ou uma restrição padrão na linha, nível de coluna. A coluna parent_object_id de um objeto embutido padrão no nível da coluna é uma referência à própria tabela.<br /><br /> 0 = Sem padrão.|  
-|rule_object_id|**Int**|ID da regra autônoma associada à coluna usando sys.sp_bindrule.<br /><br /> 0 = Nenhuma regra autônoma.<br /><br /> Para restrições de verificação de nível de coluna, consulte [sys. CHECK_CONSTRAINTS &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md).|  
+|xml_collection_id|**int**|Diferente de zero se o tipo de dados da coluna é **xml** e o XML for digitado. O valor será o ID da coleção que contém o namespace do esquema XML de validação da coluna.<br /><br /> 0 não = nenhuma coleção de esquemas XML.|  
+|default_object_id|**int**|ID do objeto padrão, independentemente de ser autônoma [sp_bindefault](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md), ou uma restrição padrão na linha, o nível de coluna. A coluna parent_object_id de um objeto embutido padrão no nível da coluna é uma referência à própria tabela.<br /><br /> 0 = Sem padrão.|  
+|rule_object_id|**int**|ID da regra autônoma associada à coluna usando sys.sp_bindrule.<br /><br /> 0 = Nenhuma regra autônoma.<br /><br /> Para restrições de verificação de nível de coluna, consulte [sys. CHECK_CONSTRAINTS &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md).|  
 |is_sparse|bit|1 = A coluna é esparsa. Para obter mais informações, veja [Usar colunas esparsas](../../relational-databases/tables/use-sparse-columns.md).|  
 |is_column_set|bit|1 = A coluna é um conjunto de colunas. Para obter mais informações, veja [Usar conjuntos de colunas](../../relational-databases/tables/use-column-sets.md).|  
 |generated_always_type|**tinyint**|**Aplica-se a**: do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> O valor numérico que representa o tipo de coluna:<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = AS_ROW_START<br /><br /> 2 = AS_ROW_END|  
@@ -76,6 +76,6 @@ ms.locfileid: "33182422"
  [Consultando o catálogo de sistema do SQL Server perguntas Frequentes](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [sys.system_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-system-columns-transact-sql.md)   
- [. computed_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)  
+ [sys. computed_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)  
   
   

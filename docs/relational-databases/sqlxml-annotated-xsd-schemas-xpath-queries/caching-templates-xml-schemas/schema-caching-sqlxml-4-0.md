@@ -1,5 +1,5 @@
 ---
-title: Esquema de cache (SQLXML 4.0) | Microsoft Docs
+title: Cache de esquemas (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ebb2fd4b7e0b17f81f8e14f3bde60d56e3a60ff3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: f6b9e9a8a6d9406def9e2adc90e1ef7e9b8545a1
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32971073"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39559636"
 ---
 # <a name="schema-caching-sqlxml-40"></a>Cache de esquemas (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Com uma instalação lado a lado do XML para SQLXML 3.0, Microsoft SQLXML 2.0 e Microsoft SQL Server 2000 Web versão 1, você pode controlar explicitamente a cache de esquemas em todas as versões usando as seguintes chaves do registro:  
+  Com uma instalação lado a lado do XML para Microsoft SQL Server 2000 Web versão 1, o Microsoft SQLXML 2.0 e o SQLXML 3.0, você pode controlar explicitamente a cache de esquemas em todas as versões usando as seguintes chaves do registro:  
   
  Versão da Web 1:  
   
@@ -60,13 +60,13 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SQLXML3\SchemaCacheSize
   
  O tamanho do esquema é definido com base na memória disponível e no número de esquemas utilizados. O padrão **SchemaCacheSize** tamanho é 31. Se você definir **SchemaCacheSize** maior, mais memória é usada. Portando, você pode aumentar o tamanho do cache se o acesso ao esquema parecer lento ou diminuir o tamanho do cache se houver pouca memória.  
   
- Por motivos de desempenho, é recomendável que você defina **SchemaCacheSize** maior que o número de esquemas de mapeamento, você geralmente usa. Como aumenta o número de esquemas, se **SchemaCacheSize** é menor que o número de esquemas, degrada o desempenho.  
+ Por motivos de desempenho, é recomendável que você defina **SchemaCacheSize** maior do que o número de esquemas de mapeamento, você geralmente usa. À medida que aumenta o número de esquemas, se **SchemaCacheSize** é menor que o número de esquemas, degrada o desempenho.  
   
 > [!NOTE]  
 >  Durante o desenvolvimento, é recomendável não armazenar os esquemas em cache, pois as alterações dos esquemas não se refletem no cache por aproximadamente dois minutos.  
   
 ## <a name="see-also"></a>Consulte também  
- [Cache de modelo & #40; SQLXML 4.0 & #41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/template-caching-sqlxml-4-0.md)   
- [Cache de XSL & #40; SQLXML 4.0 & #41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/xsl-caching-sqlxml-4-0.md)  
+ [Cache de modelo &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/template-caching-sqlxml-4-0.md)   
+ [Cache de XSL &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/xsl-caching-sqlxml-4-0.md)  
   
   

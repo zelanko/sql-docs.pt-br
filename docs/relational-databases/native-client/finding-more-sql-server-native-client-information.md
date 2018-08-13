@@ -16,13 +16,13 @@ ms.assetid: 1bbe4ea4-dda4-47eb-aca1-ddcc3829a6f4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 06b8b102293ed8bea4af80650a4eaef67da0441b
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 7f81f8e336d0015bd5665c9c144b76289e3e8b93
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37416695"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548816"
 ---
 # <a name="finding-more-sql-server-native-client-information"></a>Localizando mais informações sobre o SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,10 +30,10 @@ ms.locfileid: "37416695"
 
   Para obter mais informações sobre o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client e outros tipos de programação de acesso a dados, consulte os seguintes recursos online:  
   
- [Data Access and Storage Developer Center](http://go.microsoft.com/fwlink?linkid=4173)  
+ [Central de Desenvolvedores de Armazenamento e Acesso a Dados](http://go.microsoft.com/fwlink?linkid=4173)  
  Este site fornece artigos técnicos, código de exemplo e outros recursos para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client e outras tecnologias de acesso a dados.  
   
- [Blog de acesso de dados](http://go.microsoft.com/fwlink/?LinkId=48617)  
+ [Blog de Acesso a Dados](http://go.microsoft.com/fwlink/?LinkId=48617)  
  Este site de blog fornece informações sobre tecnologias de acesso a dados e permite que você interaja diretamente com membros da equipe de produto.  
   
  [Windows Data Access Components](http://go.microsoft.com/fwlink/?LinkId=107907)  

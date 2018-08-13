@@ -20,13 +20,13 @@ caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8fa08dbdb74ae8fcf7aa61b5f35fa98249b40277
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: a685297ebdfaaff343e6e404864989baabc1109d
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32972821"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39560866"
 ---
 # <a name="client-side-xml-formatting-sqlxml-40"></a>Formatação XML do lado do cliente (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ SELECT FirstName, LastName
 FROM   Person.Contact  
 ```  
   
- O servidor executa a consulta e retorna um conjunto de linhas (que contém o nome e LastNamecolumns) para o cliente. A camada intermediária aplica as informações de FOR XML ao conjunto de linhas e retorna a formatação XML ao cliente.  
+ O servidor executa a consulta e retorna um conjunto de linhas (que contém o FirstName e LastNamecolumns) para o cliente. A camada intermediária aplica as informações de FOR XML ao conjunto de linhas e retorna a formatação XML ao cliente.  
   
  De maneira similar, quando você executa uma consulta XPath, o servidor retorna o conjunto de linhas ao cliente e a transformação FOR XML EXPLICIT é aplicada ao conjunto de linhas no cliente, gerando a formatação XML desejada.  
   
@@ -95,7 +95,7 @@ AS
 </ROOT>  
 ```  
   
- Porque o **client-side-xml** atributo é definido como 1 (true) no modelo, o procedimento armazenado é executado no servidor e o conjunto de linhas de duas colunas que é retornado pelo servidor é transformado em XML na camada intermediária e retornado ao o cliente. (Somente um resultado parcial é mostrado aqui.)  
+ Porque o **client-side-xml** atributo é definido como 1 (verdadeiro) no modelo, o procedimento armazenado é executado no servidor e o conjunto de linhas de duas colunas que é retornado pelo servidor é transformado em XML na camada intermediária e retornado ao o cliente. (Somente um resultado parcial é mostrado aqui.)  
   
 ```  
  <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -124,19 +124,19 @@ AS
      Você pode especificar a formatação do lado do cliente definindo essa propriedade das classes gerenciadas SQLXML como true.  
   
 ## <a name="enhanced-xml-template-support"></a>Suporte de modelo XML avançado  
- Começando com [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], o modelo XML no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] foi aprimorado com a adição do **client-side-xml** atributo. Se esse atributo for definido como true, XML será formatado no cliente. Observe que esse atributo do modelo é idêntico em funcionalidade à propriedade ClientSideXML específicas do provedor SQLXMLOLEDB.  
+ Começando com [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], o modelo XML no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] foi aprimorada com a adição da **client-side-xml** atributo. Se esse atributo for definido como true, XML será formatado no cliente. Observe que esse atributo de modelo é idêntico em funcionalidade à propriedade ClientSideXML específicas do provedor SQLXMLOLEDB.  
   
 > [!NOTE]  
->  Se você executar um modelo XML em um aplicativo ADO que esteja usando o provedor SQLXMLOLEDB e especificar tanto o **client-side-xml** atributo no modelo e o propriedade ClientSideXML, o valor especificado no provedor de modelo terá precedência.  
+>  Se você executa um modelo XML em um aplicativo ADO que esteja usando o provedor SQLXMLOLEDB e especificar tanto a **client-side-xml** atributo no modelo e o provedor de propriedade ClientSideXML, o valor especificado no modelo terá precedência.  
   
 ## <a name="see-also"></a>Consulte também  
- [Arquitetura de formatação de XML do lado do cliente e do servidor &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)   
- [PARA XML &#40;do SQL Server&#41;](../../../relational-databases/xml/for-xml-sql-server.md)   
- [Para obter considerações de segurança XML &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)   
+ [Arquitetura de formatação de XML do lado do cliente e servidor &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)   
+ [PARA XML &#40;SQL Server&#41;](../../../relational-databases/xml/for-xml-sql-server.md)   
+ [Para considerações de segurança XML &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)   
  [XML Data Type Support in SQLXML 4.0](../../../relational-databases/sqlxml/xml-data-type-support-in-sqlxml-4-0.md)   
  [Classes gerenciadas SQLXML](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)   
  [Formatação XML do lado do cliente vs. Formatação XML do lado do servidor &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/client-side-vs-server-side-xml-formatting-sqlxml-4-0.md)   
- [Objeto SqlXmlCommand & #40; Gerenciadas do SQLXML Classes & #41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmlcommand-object.md)   
+ [Objeto SqlXmlCommand &#40;Classes gerenciadas SQLXML&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmlcommand-object.md)   
  [Dados XML &#40;SQL Server&#41;](../../../relational-databases/xml/xml-data-sql-server.md)  
   
   

@@ -30,15 +30,15 @@ caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b054765ab3fe626d1eb8360691a56da17b3174c0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 96e3d9997269142fb26060287abf1b4e66e5c331
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38053824"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39561686"
 ---
-# <a name="sqlxml-40-net-framework-support---using-diffgrams-to-modify-data"></a>Suporte do SQLXML 4.0 do .NET Framework – usando DiffGrams para modificar dados
+# <a name="sqlxml-40-net-framework-support---using-diffgrams-to-modify-data"></a>Suporte do SQLXML 4.0 do .NET Framework – Usando DiffGrams para modificar dados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   O formato DiffGram foi introduzido na **DataSet** componente o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] do .NET Framework. No .NET Framework, você pode criar DiffGrams e usá-los para modificar dados em tabelas de um banco de dados Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   

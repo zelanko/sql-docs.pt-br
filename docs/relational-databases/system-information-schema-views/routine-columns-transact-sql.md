@@ -22,13 +22,13 @@ caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fc7e43784d336fcd5358b00ad5fc82b5c89e0c3b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: ca7c277ab96cfc12a44b6b650f5f28a1821c08b5
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239276"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39557656"
 ---
 # <a name="routinecolumns-transact-sql"></a>ROUTINE_COLUMNS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,27 +40,27 @@ ms.locfileid: "33239276"
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CATALOG**|**nvarchar(** 128 **)**|Catálogo ou nome de banco de dados da função com valor de tabela.|  
-|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|Nome do esquema que contém a função com valor de tabela.<br /><br /> **\*\* Importante \* \***  não use exibições INFORMATION_SCHEMA para determinar o esquema de um objeto. O único modo seguro de localizar o esquema de um objeto é consultar a exibição de catálogo sys.objects.|  
+|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|Nome do esquema que contém a função com valor de tabela.<br /><br /> **\*\* Importante \* \* ** não use exibições INFORMATION_SCHEMA para determinar o esquema de um objeto. O único modo seguro de localizar o esquema de um objeto é consultar a exibição de catálogo sys.objects.|  
 |**TABLE_NAME**|**nvarchar(** 128 **)**|Nome da função com valor de tabela.|  
 |**COLUMN_NAME**|**nvarchar(** 128 **)**|Nome da coluna.|  
-|**ORDINAL_POSITION**|**Int**|Número de identificação da coluna.|  
+|**ORDINAL_POSITION**|**int**|Número de identificação da coluna.|  
 |**COLUMN_DEFAULT**|**nvarchar (** 4000 **)**|Valor padrão da coluna.|  
 |**IS_NULLABLE**|**varchar (** 3 **)**|Se essa coluna permitir NULL, ela retornará YES. Caso contrário, retorna NO.|  
 |**DATA_TYPE**|**nvarchar(** 128 **)**|Tipo de dados fornecido pelo sistema.|  
-|**CHARACTER_MAXIMUM_LENGTH**|**Int**|Comprimento máximo, em caracteres, de dados binários, dados de caracteres e dados de texto e imagem.<br /><br /> -1 para **xml** e dados de tipo de valor grande. Caso contrário, retorna NULL. Para obter mais informações, veja [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).|  
-|**CHARACTER_OCTET_LENGTH**|**Int**|Comprimento máximo, em bytes, de dados binários, dados de caracteres e dados de texto e imagem.<br /><br /> -1 para **xml** e dados de tipo de valor grande. Caso contrário, retorna NULL.|  
+|**CHARACTER_MAXIMUM_LENGTH**|**int**|Comprimento máximo, em caracteres, de dados binários, dados de caracteres e dados de texto e imagem.<br /><br /> -1 para **xml** e dados de tipo de valor grande. Caso contrário, retorna NULL. Para obter mais informações, veja [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).|  
+|**CHARACTER_OCTET_LENGTH**|**int**|Comprimento máximo, em bytes, de dados binários, dados de caracteres e dados de texto e imagem.<br /><br /> -1 para **xml** e dados de tipo de valor grande. Caso contrário, retorna NULL.|  
 |**NUMERIC_PRECISION**|**tinyint**|Precisão de dados numéricos aproximados, dados numéricos exatos, dados de inteiro ou dados monetários. Caso contrário, retorna NULL.|  
 |**NUMERIC_PRECISION_RADIX**|**smallint**|Base de precisão de dados numéricos aproximados, dados numéricos exatos, dados de inteiro ou dados monetários. Caso contrário, retorna NULL.|  
 |**NUMERIC_SCALE**|**tinyint**|Escala de dados numéricos aproximados, dados numéricos exatos, dados de inteiro ou dados monetários. Caso contrário, retorna NULL.|  
 |**DATETIME_PRECISION**|**smallint**|Código de subtipo para **datetime** e ISO**inteiro** tipos de dados. Para outros tipos de dados, retorna NULL.|  
-|**CHARACTER_SET_CATALOG**|**varchar (** 6 **)**|Retorna **mestre**. Isso indica que o banco de dados no qual o conjunto de caracteres se a coluna de dados de caractere ou **texto** tipo de dados. Caso contrário, retorna NULL.|  
+|**CHARACTER_SET_CATALOG**|**varchar (** 6 **)**|Retorna **mestre**. Isso indica que o banco de dados no qual o conjunto de caracteres está localizado se a coluna de dados de caractere ou **texto** tipo de dados. Caso contrário, retorna NULL.|  
 |**CHARACTER_SET_SCHEMA**|**varchar (** 3 **)**|Sempre retorna NULL.|  
 |**CHARACTER_SET_NAME**|**nvarchar(** 128 **)**|Retorna o nome exclusivo para o conjunto de caracteres se essa coluna é dados de caractere ou **texto** tipo de dados. Caso contrário, retorna NULL.|  
 |**COLLATION_CATALOG**|**varchar (** 6 **)**|Sempre retorna NULL.|  
 |**COLLATION_SCHEMA**|**varchar (** 3 **)**|Sempre retorna NULL.|  
 |**COLLATION_NAME**|**nvarchar(** 128 **)**|Retorna o nome exclusivo para a ordem de classificação, se a coluna de dados de caractere ou **texto** tipo de dados. Caso contrário, retorna NULL.|  
 |**DOMAIN_CATALOG**|**nvarchar(** 128 **)**|Se a coluna for do tipo de dados de alias, essa coluna será o nome do banco de dados no qual foi criado o tipo de dados definido pelo usuário. Caso contrário, retorna NULL.|  
-|**DOMAIN_SCHEMA**|**nvarchar(** 128 **)**|Se a coluna for do tipo definido pelo usuário, essa coluna será o nome do esquema que contém o tipo de dados definido pelo usuário. Caso contrário, retorna NULL.<br /><br /> **\*\* Importante \* \***  não use exibições INFORMATION_SCHEMA para determinar o esquema de um objeto. O único modo seguro de localizar o esquema de um objeto é consultar a exibição de catálogo sys.objects.|  
+|**DOMAIN_SCHEMA**|**nvarchar(** 128 **)**|Se a coluna for do tipo definido pelo usuário, essa coluna será o nome do esquema que contém o tipo de dados definido pelo usuário. Caso contrário, retorna NULL.<br /><br /> **\*\* Importante \* \* ** não use exibições INFORMATION_SCHEMA para determinar o esquema de um objeto. O único modo seguro de localizar o esquema de um objeto é consultar a exibição de catálogo sys.objects.|  
 |**NOME_DO_DOMÍNIO**|**nvarchar(** 128 **)**|Se a coluna for do tipo de dados definido pelo usuário, essa coluna será o nome do tipo de dados definido pelo usuário. Caso contrário, retorna NULL.|  
   
 ## <a name="see-also"></a>Consulte também  

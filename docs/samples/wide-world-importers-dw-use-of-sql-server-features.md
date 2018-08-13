@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
 ms.custom: ''
-ms.date: 04/04/2018
+ms.date: 08/04/2018
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
@@ -12,16 +12,16 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7c3158def05148941105867f24205b199e6c6dba
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 9c4d9cc92bb9571bbda48f40f74b38bf8d918991
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38023549"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39532916"
 ---
 # <a name="wideworldimportersdw-use-of-sql-server-features-and-capabilities"></a>Uso de WideWorldImportersDW de recursos e recursos do SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
 WideWorldImportersDW foi projetado para demonstrar muitos dos principais recursos do SQL Server que são adequados para data warehousing e análise. O exemplo a seguir é uma lista de recursos do SQL Server, recursos e uma descrição de como eles são usados em WideWorldImportersDW.
 
 ## <a name="polybase"></a>PolyBase

@@ -24,13 +24,13 @@ caps.latest.revision: 24
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4309a55a8c0b631cd1e5f49d6601bfba30245178
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 6faaeea0bfc19594bd2131c4b40bdf270e4f6d8d
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180694"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39548386"
 ---
 # <a name="sysplanguides-transact-sql"></a>sys.plan_guides (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "33180694"
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**plan_guide_id**|**Int**|Identificador exclusivo do guia de plano no banco de dados.|  
+|**plan_guide_id**|**int**|Identificador exclusivo do guia de plano no banco de dados.|  
 |**name**|**sysname**|Nome do guia de plano.|  
 |**create_date**|**datetime**|Date e hora de criação do guia de plano.|  
 |**modify_date**|**Datetime**|Data da última modificação do guia de plano.|  
@@ -48,7 +48,7 @@ ms.locfileid: "33180694"
 |**scope_type**|**tinyint**|Identifica o escopo do guia de plano.<br /><br /> 1 = OBJECT<br /><br /> 2 = SQL<br /><br /> 3 = TEMPLATE|  
 |**scope_type_desc**|**nvarchar(60)**|Descrição do escopo do guia de plano.<br /><br /> OBJECT<br /><br /> SQL<br /><br /> TEMPLATE|  
 |**scope_object_id**|**Int**|object_id do objeto que definirá o escopo do guia de plano se o escopo for OBJECT.<br /><br /> NULL se o guia de plano não tiver nenhum escopo para OBJECT.|  
-|**scope_batch**|**nvarchar(max)**|Texto em lotes, se **scope_type** é SQL.<br /><br /> NULL se tipo de lote não for SQL.<br /><br /> Se for NULL e **scope_type** SQL, o valor de **query_text** se aplica.|  
+|**scope_batch**|**nvarchar(max)**|Texto em lotes, se **scope_type** é SQL.<br /><br /> NULL se tipo de lote não for SQL.<br /><br /> Se for NULL e **scope_type** é o valor do SQL **query_text** se aplica.|  
 |**parameters**|**nvarchar(max)**|A cadeia de caracteres que define a lista de parâmetros associada ao guia de plano.<br /><br /> NULL = Nenhuma lista de parâmetros está associada ao guia de plano.|  
 |**dicas**|**nvarchar(max)**|Dicas da cláusula OPTION associadas ao guia de plano.|  
   

@@ -25,13 +25,13 @@ caps.latest.revision: 54
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 97d14dc014827310706bdea8143e41a628a666d6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 836ef351d2af7e187420b680a90382fc504b9e89
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260852"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39563070"
 ---
 # <a name="sprename-transact-sql"></a>sp_rename (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,20 +53,20 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
   
 ## <a name="arguments"></a>Argumentos  
  [ @objname =] '*object_name*'  
- É o nome atual qualificado ou não qualificado do objeto do usuário ou do tipo de dados. Se o objeto a ser renomeado for uma coluna em uma tabela, *object_name* deve estar no formato *tabela* ou *schema.table.column*. Se o objeto a ser renomeado for um índice, *object_name* deve estar no formato *Table* ou *schema.table.index*. Se o objeto a ser renomeado for uma restrição, *object_name* deve estar no formato *schema.constraint*.  
+ É o nome atual qualificado ou não qualificado do objeto do usuário ou do tipo de dados. Se o objeto a ser renomeado for uma coluna em uma tabela *object_name* deve estar no formato *tabela* ou *schema.table.column*. Se o objeto a ser renomeado for um índice *object_name* deve estar no formato *index* ou *schema.table.index*. Se o objeto a ser renomeado for uma restrição *object_name* deve estar no formato *schema.constraint*.  
   
- As aspas serão necessárias apenas se um objeto qualificado estiver especificado. Se um nome completamente qualificado, incluindo um nome de banco de dados, for fornecido, o nome do banco de dados deverá ser o nome do banco de dados atual. *object_name* é **nvarchar(776)**, sem padrão.  
+ As aspas serão necessárias apenas se um objeto qualificado estiver especificado. Se um nome completamente qualificado, incluindo um nome de banco de dados, for fornecido, o nome do banco de dados deverá ser o nome do banco de dados atual. *object_name* está **nvarchar(776)**, sem padrão.  
   
- [ @newname =] '*novo_nome*'  
- É o novo nome do objeto especificado. *Novo_nome* deve ser um nome de parte única e devem seguir as regras para identificadores. *newname* é **sysname**, sem padrão.  
+ [ @newname =] '*new_name*'  
+ É o novo nome do objeto especificado. *new_name* deve ser um nome de uma parte e devem seguir as regras para identificadores. *newname* está **sysname**, sem padrão.  
   
 > [!NOTE]  
 >  Os nomes de gatilhos não podem começar com # ou ##.  
   
  [ @objtype =] '*object_type*'  
- É o tipo do objeto que está sendo renomeado. *object_type* é **varchar(13)**, com um padrão NULL, e pode ser um destes valores.  
+ É o tipo do objeto que está sendo renomeado. *object_type* está **varchar(13)**, com um padrão de NULL, e pode ser um destes valores.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |COLUMN|Uma coluna a ser renomeada.|  
 |DATABASE|Um banco de dados definido pelo usuário. Esse tipo de objeto é necessário quando um banco de dados é renomeado.|  
@@ -85,7 +85,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
   
  sp_rename pode ser usado para renomear índices XML primários e secundários.  
   
- Renomear um procedimento armazenado, função, exibição ou gatilho não alterará o nome do objeto correspondente na coluna de definição do [sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) exibição do catálogo ou obtido usando o [Object _ DEFINIÇÃO](../../t-sql/functions/object-definition-transact-sql.md) função interna. Portanto, é recomendável que sp_rename não seja usado para renomear esses tipos de objetos. Em vez disso, cancele e recrie o objeto com o nome novo.  
+ Renomear um procedimento armazenado, função, exibição ou gatilho não alterará o nome do objeto correspondente na coluna de definição dos [sys. sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) exibição de catálogo ou obtidos usando o [Object _ DEFINIÇÃO](../../t-sql/functions/object-definition-transact-sql.md) função interna. Portanto, é recomendável que sp_rename não seja usado para renomear esses tipos de objetos. Em vez disso, cancele e recrie o objeto com o nome novo.  
   
  A renomeação de um objeto, como uma tabela ou coluna, não renomeará automaticamente as referências a esse objeto. É necessário modificar manualmente todos os objetos que fazem referência ao objeto renomeado. Por exemplo, se você renomear uma coluna de tabela e aquela coluna for referenciada em um gatilho, será necessário modificar o gatilho para que ele reflita o nome novo da coluna. Use [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) para listar as dependências do objeto antes de renomeá-lo.  
   
@@ -105,7 +105,7 @@ GO
 ```  
   
 ### <a name="b-renaming-a-column"></a>B. Renomeando uma coluna  
- O exemplo a seguir renomeia o `TerritoryID` coluna o `SalesTerritory` tabela `TerrID`.  
+ O exemplo a seguir renomeia o `TerritoryID` coluna o `SalesTerritory` de tabela para `TerrID`.  
   
 ```  
 USE AdventureWorks2012;  

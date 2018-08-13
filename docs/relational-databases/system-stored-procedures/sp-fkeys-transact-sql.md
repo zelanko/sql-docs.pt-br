@@ -22,13 +22,13 @@ caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fdb582cf8e77e61d7723ea1c6ed2e854ef8f6940
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: fc012a7b05f2387756e25bfb86c93896d3f94190
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258618"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39536656"
 ---
 # <a name="spfkeys-transact-sql"></a>sp_fkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,29 +50,29 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
   
 ## <a name="arguments"></a>Argumentos  
  [ @pktable_name=] '*pktable_name*'  
- É o nome da tabela, com a chave primária, usada para retornar informações de catálogo. *pktable_name* é **sysname**, com um padrão NULL. Não há suporte para a correspondência de padrão curinga. Esse parâmetro ou o *fktable_name* parâmetro, ou ambos, devem ser fornecidos.  
+ É o nome da tabela, com a chave primária, usada para retornar informações de catálogo. *pktable_name* está **sysname**, com um padrão NULL. Não há suporte para a correspondência de padrão curinga. Esse parâmetro ou o *fktable_name* parâmetro, ou ambos, devem ser fornecidos.  
   
  [ @pktable_owner=] '*pktable_owner*'  
- É o nome do proprietário da tabela (com a chave primária) usado para retornar informações de catálogo. *pktable_owner* é **sysname**, com um padrão NULL. Não há suporte para a correspondência de padrão curinga. Se *pktable_owner* não for especificado, serão aplicadas as regras de visibilidade de tabela padrão do DBMS subjacente.  
+ É o nome do proprietário da tabela (com a chave primária) usada para retornar informações de catálogo. *pktable_owner* está **sysname**, com um padrão NULL. Não há suporte para a correspondência de padrão curinga. Se *pktable_owner* não for especificado, serão aplicadas as regras de visibilidade de tabela padrão do DBMS subjacente.  
   
  No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se o usuário atual possuir uma tabela com o nome especificado, as colunas dessa tabela serão retornadas. Se *pktable_owner* não for especificado e o usuário atual não possuir uma tabela com especificado *pktable_name*, o procedimento procurará uma tabela com especificado *pktable_name* pertencente ao proprietário do banco de dados. Se ela existir, as colunas dessa tabela serão retornadas.  
   
  [ @pktable_qualifier =] '*pktable_qualifier*'  
- É o nome do qualificador da tabela (com a chave primária). *pktable_qualifier* é sysname, com um padrão NULL. Vários produtos DBMS dão suporte à nomenclatura de três partes para tabelas (*qualificador*). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o qualificador representa o nome do banco de dados. Em alguns produtos, representa o nome do servidor do ambiente de banco de dados da tabela.  
+ É o nome do qualificador da tabela (com a chave primária). *pktable_qualifier* é sysname, com um padrão NULL. Vários produtos DBMS dão suporte à nomenclatura de três partes para tabelas (*qualificador*). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o qualificador representa o nome do banco de dados. Em alguns produtos, ele representa o nome do servidor do ambiente de banco de dados da tabela.  
   
  [ @fktable_name=] '*fktable_name*'  
  É o nome da tabela (com uma chave estrangeira) usada para retornar informações de catálogo. *fktable_name* é sysname, com um padrão NULL. Não há suporte para a correspondência de padrão curinga. Esse parâmetro ou o *pktable_name* parâmetro, ou ambos, devem ser fornecidos.  
   
  [ @fktable_owner =] '*fktable_owner*'  
- É o nome do proprietário da tabela (com uma chave estrangeira) usada para retornar informações de catálogo. *fktable_owner* é **sysname**, com um padrão NULL. Não há suporte para a correspondência de padrão curinga. Se *fktable_owner* não for especificado, serão aplicadas as regras de visibilidade de tabela padrão do DBMS subjacente.  
+ É o nome do proprietário da tabela (com uma chave estrangeira) usada para retornar informações de catálogo. *fktable_owner* está **sysname**, com um padrão NULL. Não há suporte para a correspondência de padrão curinga. Se *fktable_owner* não for especificado, serão aplicadas as regras de visibilidade de tabela padrão do DBMS subjacente.  
   
  No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se o usuário atual possuir uma tabela com o nome especificado, as colunas dessa tabela serão retornadas. Se *fktable_owner* não for especificado e o usuário atual não possuir uma tabela com especificado *fktable_name*, o procedimento procurará uma tabela com especificado *fktable_name* pertencente ao proprietário do banco de dados. Se ela existir, as colunas dessa tabela serão retornadas.  
   
  [ @fktable_qualifier=] '*fktable_qualifier*'  
- É o nome do qualificador da tabela (com uma chave estrangeira). *fktable_qualifier* é **sysname**, com um padrão NULL. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o qualificador representa o nome do banco de dados. Em alguns produtos, representa o nome do servidor do ambiente de banco de dados da tabela.  
+ É o nome do qualificador da tabela (com uma chave estrangeira). *fktable_qualifier* está **sysname**, com um padrão NULL. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o qualificador representa o nome do banco de dados. Em alguns produtos, ele representa o nome do servidor do ambiente de banco de dados da tabela.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- Nenhuma  
+ None  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -119,14 +119,14 @@ EXEC sp_fkeys @pktable_name = N'Department'
 ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- O exemplo a seguir recupera uma lista de chaves estrangeiras para a tabela `DimDate` no banco de dados `AdventureWorksPDW2012`. Nenhuma linha será retornada porque [!INCLUDE[ssDW](../../includes/ssdw-md.md)] não oferece suporte a chaves estrangeiras.  
+ O exemplo a seguir recupera uma lista de chaves estrangeiras para a tabela `DimDate` no banco de dados `AdventureWorksPDW2012`. Nenhuma linha é retornada porque [!INCLUDE[ssDW](../../includes/ssdw-md.md)] não oferece suporte a chaves estrangeiras.  
   
 ```sql  
 EXEC sp_fkeys @pktable_name = N'DimDate;  
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Procedimentos armazenados de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+ [Procedimentos armazenados do catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sp_pkeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-pkeys-transact-sql.md)  
   

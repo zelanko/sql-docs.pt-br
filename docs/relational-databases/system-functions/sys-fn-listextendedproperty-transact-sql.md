@@ -30,13 +30,13 @@ caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3484c32c00c5f94f084cd5c0e49837181054df40
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: d0480fcc7880febe136431ff50cb3405b8427c40
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238433"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39559716"
 ---
 # <a name="sysfnlistextendedproperty-transact-sql"></a>sys.fn_listextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,31 +63,31 @@ fn_listextendedproperty (
   
 ## <a name="arguments"></a>Argumentos  
  {padrão | '*property_name*' | NULL}  
- É o nome da propriedade. *Property_Name* é **sysname**. As entradas válidas são default, NULL ou um nome de propriedade.  
+ É o nome da propriedade. *Property_Name* está **sysname**. As entradas válidas são default, NULL ou um nome de propriedade.  
   
  {padrão | '*level0_object_type*' | NULL}  
- É o usuário ou tipo definido pelo usuário. *level0_object_type* é **varchar (128)**, com um padrão NULL. As entradas válidas são ASSEMBLY, CONTRACT, EVENT NOTIFICATION, FILEGROUP, MESSAGE TYPE, PARTITION FUNCTION, PARTITION SCHEME, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, TRIGGER, TYPE, USER e NULL.  
+ É o usuário ou tipo definido pelo usuário. *level0_object_type* está **varchar (128)**, com um padrão NULL. As entradas válidas são ASSEMBLY, CONTRACT, EVENT NOTIFICATION, FILEGROUP, MESSAGE TYPE, PARTITION FUNCTION, PARTITION SCHEME, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, TRIGGER, TYPE, USER e NULL.  
   
 > [!IMPORTANT]  
 >  USER e TYPE como tipos de nível 0 serão removidos em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esses recursos em novo trabalho de desenvolvimento e planeje modificar os aplicativos que os usam atualmente. Use SCHEMA como o tipo de nível 0 em vez de USER. Para TYPE, use SCHEMA como o tipo de nível 0 e TYPE como o tipo de nível 1.  
   
  {padrão | '*level0_object_name*' | NULL}  
- É o nome do tipo de objeto de nível 0 especificado. *level0_object_name* é **sysname** com um padrão NULL. As entradas válidas são default, NULL ou um nome de objeto.  
+ É o nome do tipo de objeto de nível 0 especificado. *level0_object_name* está **sysname** com um padrão NULL. As entradas válidas são default, NULL ou um nome de objeto.  
   
  {padrão | '*level1_object_type*' | NULL}  
- É o tipo de objeto de nível 1. *level1_object_type* é **varchar (128)** com um padrão NULL. As entradas válidas são AGGREGATE, DEFAULT, FUNCTION, LOGICAL FILE NAME, PROCEDURE, QUEUE, RULE, SYNONYM, TABLE, TYPE, VIEW, XML SCHEMA COLLECTION e NULL.  
+ É o tipo de objeto de nível 1. *level1_object_type* está **varchar (128)** com um padrão NULL. As entradas válidas são AGGREGATE, DEFAULT, FUNCTION, LOGICAL FILE NAME, PROCEDURE, QUEUE, RULE, SYNONYM, TABLE, TYPE, VIEW, XML SCHEMA COLLECTION e NULL.  
   
 > [!NOTE]  
 >  O padrão é mapeado para NULL e 'default' é mapeado para o tipo de objeto DEFAULT.  
   
  {padrão | '*level1_object_name*' | NULL}  
- É o nome do tipo de objeto de nível 1 especificado. *level1_object_name* é **sysname** com um padrão NULL. As entradas válidas são default, NULL ou um nome de objeto.  
+ É o nome do tipo de objeto de nível 1 especificado. *level1_object_name* está **sysname** com um padrão NULL. As entradas válidas são default, NULL ou um nome de objeto.  
   
  {padrão | '*level2_object_type*' | NULL}  
- É o tipo de objeto de nível 2. *level2_object_type* é **varchar (128)** com um padrão NULL. As entradas válidas são DEFAULT, default (mapeado para NULL) e NULL. As entradas válidas para *level2_object_type* são coluna, restrição, notificação de eventos, índice, parâmetro, TRIGGER e NULL.  
+ É o tipo de objeto de nível 2. *level2_object_type* está **varchar (128)** com um padrão NULL. As entradas válidas são DEFAULT, default (mapeado para NULL) e NULL. As entradas válidas para *level2_object_type* são a coluna, restrição, EVENT NOTIFICATION, INDEX, parâmetro, GATILHO e NULL.  
   
  {padrão | '*level2_object_name*' | NULL}  
- É o nome do tipo de objeto de nível 2 especificado. *level2_object_name* é **sysname** com um padrão NULL. As entradas válidas são default, NULL ou um nome de objeto.  
+ É o nome do tipo de objeto de nível 2 especificado. *level2_object_name* está **sysname** com um padrão NULL. As entradas válidas são default, NULL ou um nome de objeto.  
   
 ## <a name="tables-returned"></a>Tabelas retornadas  
  Este é o formato das tabelas retornadas por fn_listextendedproperty.  
@@ -102,13 +102,13 @@ fn_listextendedproperty (
  Se a tabela retornada estiver vazia, o objeto não terá propriedades estendidas ou o usuário não terá permissões para listar as propriedades estendidas do objeto. Ao retornar propriedades estendidas do próprio banco de dados, as colunas objtype e objname serão NULL.  
   
 ## <a name="remarks"></a>Remarks  
- Se o valor de *property_name* for NULL ou default, fn_listextendedproperty retornará todas as propriedades para o objeto especificado.  
+ Se o valor para *property_name* é NULL ou default, fn_listextendedproperty retornará todas as propriedades do objeto especificado.  
   
  Quando o tipo do objeto for especificado e o valor do nome do objeto correspondente for NULL ou default, fn_listextendedproperty retornará todas as propriedades estendidas de todos os objetos do tipo especificado.  
   
  Os objetos são diferenciados de acordo com níveis, em que nível 0 é o mais alto e nível 2 é o mais baixo. Se um objeto de nível inferior, nível 1 ou 2, um tipo e um nome forem especificados, o tipo e o nome do objeto pai deverão receber valores que não sejam NULL ou default. Caso contrário, a função retornará um conjunto de resultados vazio.  
   
- **objname** é fixo como Latin1_General_CI_AI. No entanto, você pode solucionar esse problema isso substituindo o agrupamento em comparação.  
+ **objname** é fixo como Latin1_General_CI_AI. No entanto, é possível solucionar isso substituindo o agrupamento na comparação.  
   
 ```  
 SELECT o.[object_id] AS 'table_id', o.[name] 'table_name',  
@@ -147,7 +147,7 @@ GO
  `(1 row(s) affected)`  
   
 ### <a name="b-displaying-extended-properties-on-all-columns-in-a-table"></a>B. Exibindo propriedades estendidas em todas as colunas de uma tabela  
- O exemplo a seguir lista as propriedades estendidas para colunas de `ScrapReason` tabela. Isto está contido no esquema `Production`.  
+ O exemplo a seguir lista as propriedades estendidas para colunas no `ScrapReason` tabela. Isto está contido no esquema `Production`.  
   
 ```  
 USE AdventureWorks2012;  

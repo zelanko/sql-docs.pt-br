@@ -22,18 +22,18 @@ caps.latest.revision: 60
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6b3effbe023b79ded3115eac3e62503d7a820993
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 20d86aae268c704b72310a3215756627d0662eb8
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263484"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39550516"
 ---
 # <a name="sphelp-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Relata informações sobre um objeto de banco de dados (qualquer objeto listado no **sysobjects** exibição de compatibilidade), um tipo de dados definido pelo usuário ou um tipo de dados.  
+  Relata informações sobre um objeto de banco de dados (qualquer objeto listado na **sys. sysobjects** exibição de compatibilidade), um tipo de dados definido pelo usuário ou um tipo de dados.  
   
  
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -47,35 +47,35 @@ sp_help [ [ @objname = ] 'name' ]
   
 ## <a name="arguments"></a>Argumentos  
  [ **@objname=**] **'***name***'**  
- É o nome de qualquer objeto, em **sysobjects** ou digite quaisquer dados definidos pelo usuário a **systypes** tabela. *nome* é **nvarchar (** 776 **)**, com um padrão NULL. Nomes de banco de dados não são aceitáveis.  Dois ou três nomes de parte devem ser delimitados, como 'Person.AddressType' ou [Person.AddressType].   
+ É o nome de qualquer objeto no **sysobjects** ou digite todos os dados definidos pelo usuário a **systypes** tabela. *nome da* está **nvarchar (** 776 **)**, com um padrão NULL. Nomes de banco de dados não são aceitáveis.  Dois ou três nomes de parte devem ser delimitados, como 'Person.AddressType' ou [Person.AddressType].   
    
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Os conjuntos de resultados retornados dependem se *nome* é especificado, quando ele é especificado e o objeto de banco de dados é.  
+ Os conjuntos de resultados retornados dependem *nome* é especificado, quando ele é especificado e o objeto de banco de dados é.  
   
-1.  Se **sp_help** é executado sem argumentos, as informações de resumo de objetos de todos os tipos existentes no banco de dados atual serão retornadas.  
+1.  Se **sp_help** é executado sem argumentos, as informações de resumo de objetos de todos os tipos que existem no banco de dados atual serão retornadas.  
   
     |Nome da coluna|Tipo de dados|Description|  
     |-----------------|---------------|-----------------|  
     |**Nome**|**nvarchar(** 128 **)**|Nome do objeto|  
     |**Proprietário**|**nvarchar(** 128 **)**|Proprietário do objeto (esta é a entidade de segurança do banco de dados que é a proprietária deste objeto. O padrão é o proprietário do esquema que contém o objeto.)|  
-    |**object_type**|**nvarchar (** 31 **)**|Tipo de objeto|  
+    |**Object_type**|**nvarchar (** 31 **)**|Tipo de objeto|  
   
-2.  Se *nome* é um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados ou tipo de dados definido pelo usuário, **sp_help** retorna o conjunto de resultados.  
+2.  Se *nome* é um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados ou tipo de dados definido pelo usuário **sp_help** retorna este conjunto de resultados.  
   
     |Nome da coluna|Tipo de dados|Description|  
     |-----------------|---------------|-----------------|  
-    |**type_name**|**nvarchar(** 128 **)**|Nome do tipo de dados.|  
+    |**Type_name**|**nvarchar(** 128 **)**|Nome do tipo de dados.|  
     |**Storage_type**|**nvarchar(** 128 **)**|Nome do tipo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
     |**Comprimento**|**smallint**|O comprimento físico do tipo de dados (em bytes).|  
-    |**prec**|**Int**|Precisão (número total de dígitos).|  
-    |**Escala**|**Int**|Número de dígitos à direita da casa decimal.|  
-    |**Anulável**|**varchar (** 35 **)**|Indica se valores NULL são permitidos: Sim ou Não.|  
-    |**default_name**|**nvarchar(** 128 **)**|Nome de uma associação padrão para esse tipo.<br /><br /> NULL = Nenhum padrão é associado.|  
-    |**rule_name**|**nvarchar(** 128 **)**|Nome de uma associação de regra para esse tipo.<br /><br /> NULL = Nenhum padrão é associado.|  
+    |**prec**|**int**|Precisão (número total de dígitos).|  
+    |**Escala**|**int**|Número de dígitos à direita da casa decimal.|  
+    |**Permite valor nulo**|**varchar (** 35 **)**|Indica se valores NULL são permitidos: Sim ou Não.|  
+    |**Default_name**|**nvarchar(** 128 **)**|Nome de uma associação padrão para esse tipo.<br /><br /> NULL = Nenhum padrão é associado.|  
+    |**Rule_name**|**nvarchar(** 128 **)**|Nome de uma associação de regra para esse tipo.<br /><br /> NULL = Nenhum padrão é associado.|  
     |**Agrupamento**|**sysname**|Agrupamento do tipo de dados. NULL para tipos de dados de não caracteres.|  
   
 3.  Se *nome* é qualquer objeto de banco de dados que não seja um tipo de dados **sp_help** retorna esse resultado conjuntos de resultados de conjunto e também adicionais, com base no tipo de objeto especificado.  
@@ -95,16 +95,16 @@ sp_help [ [ @objname = ] 'name' ]
   
         |Nome da coluna|Tipo de dados|Description|  
         |-----------------|---------------|-----------------|  
-        |**nome da coluna**|**nvarchar(** 128 **)**|Nome da coluna.|  
+        |**Nome da coluna**|**nvarchar(** 128 **)**|Nome da coluna.|  
         |**Tipo**|**nvarchar(** 128 **)**|Tipo de dados da coluna.|  
         |**Computado**|**varchar (** 35 **)**|Indica se os valores na coluna são computados: Sim ou Não.|  
-        |**Comprimento**|**Int**|Comprimento da coluna em bytes.<br /><br /> Observação: Se o tipo de dados de coluna é um tipo de valor grande (**varchar (max)**, **nvarchar (max)**, **varbinary (max)**, ou **xml**), o valor será Exibir como -1.|  
+        |**Comprimento**|**int**|Comprimento da coluna em bytes.<br /><br /> Observação: Se o tipo de dados é um tipo de valor grande (**varchar (max)**, **nvarchar (max)**, **varbinary (max)**, ou **xml**), o valor será Exibir como -1.|  
         |**prec**|**char (** 5 **)**|Precisão da coluna.|  
         |**Escala**|**char (** 5 **)**|Escala da coluna.|  
-        |**Anulável**|**varchar (** 35 **)**|Indica se valores NULL são permitidos na coluna: Sim ou Não.|  
+        |**Permite valor nulo**|**varchar (** 35 **)**|Indica se valores NULL são permitidos na coluna: Sim ou Não.|  
         |**TrimTrailingBlanks**|**varchar (** 35 **)**|Exclui os espaços em branco à direita. Retorna Sim ou Não.|  
         |**FixedLenNullInSource**|**varchar (** 35 **)**|Somente para compatibilidade com versões anteriores.|  
-        |**Agrupamento**|**sysname**|Agrupamento da coluna. NULL para tipos de dados não são de caractere.|  
+        |**Agrupamento**|**sysname**|Agrupamento da coluna. NULL para tipos de dados não caracteres.|  
   
     -   Conjunto de resultados adicionais retornado em colunas de identidade:  
   
@@ -113,7 +113,7 @@ sp_help [ [ @objname = ] 'name' ]
         |**Identidade**|**nvarchar(** 128 **)**|Nome da coluna cujo tipo de dados é declarado como identidade.|  
         |**Semente**|**numeric**|O valor inicial para a coluna de identidade.|  
         |**Incremento**|**numeric**|Incremento a ser usado para obter valores nesta coluna.|  
-        |**Não para replicação**|**Int**|A propriedade IDENTITY não é imposta quando um logon de replicação, como **sqlrepl**, insere dados na tabela:<br /><br /> 1 = True<br /><br /> 0 = False|  
+        |**Não para replicação**|**int**|A propriedade IDENTITY não é imposta quando um logon de replicação, como **sqlrepl**, insere dados na tabela:<br /><br /> 1 = True<br /><br /> 0 = False|  
   
     -   Conjunto de resultados adicionais retornado em colunas:  
   
@@ -132,7 +132,7 @@ sp_help [ [ @objname = ] 'name' ]
         |Nome da coluna|Tipo de dados|Description|  
         |-----------------|---------------|-----------------|  
         |**index_name**|**sysname**|Nome do índice.|  
-        |**index_description**|**varchar (** 210 **)**|Descrição do índice.|  
+        |**Index_description**|**varchar (** 210 **)**|Descrição do índice.|  
         |**index_keys**|**nvarchar (** 2078 **)**|Nomes de coluna nas quais o índice é criado. Retorna NULL para índices columnstore xVelocity de memória otimizada.|  
   
     -   Conjunto de resultados adicionais retornado em restrições:  
@@ -157,22 +157,22 @@ sp_help [ [ @objname = ] 'name' ]
   
         |Nome da coluna|Tipo de dados|Description|  
         |-----------------|---------------|-----------------|  
-        |**parameter_name**|**nvarchar(** 128 **)**|Nome de parâmetro de procedimento armazenado.|  
+        |**Parameter_name**|**nvarchar(** 128 **)**|Nome de parâmetro de procedimento armazenado.|  
         |**Tipo**|**nvarchar(** 128 **)**|Tipo de dados do parâmetro de procedimento armazenado.|  
         |**Comprimento**|**smallint**|Comprimento máximo de armazenamento físico, em bytes.|  
-        |**prec**|**Int**|Precisão ou número total de dígitos.|  
-        |**Escala**|**Int**|Número de dígitos à direita da vírgula decimal.|  
+        |**prec**|**int**|Precisão ou número total de dígitos.|  
+        |**Escala**|**int**|Número de dígitos à direita da vírgula decimal.|  
         |**Param_order**|**smallint**|Ordem do parâmetro.|  
   
 ## <a name="remarks"></a>Remarks  
- O **sp_help** procedimento procurará um objeto de banco de dados atual.  
+ O **sp_help** procedimento procurará um objeto no banco de dados atual somente.  
   
  Quando *nome* não for especificado, **sp_help** listas de nomes de objetos, proprietários e tipos de objeto para todos os objetos no banco de dados atual. **sp_helptrigger** fornece informações sobre gatilhos.  
   
  **sp_help** expõe apenas as colunas de índices; portanto, ele não expõe informações sobre índices XML ou índices espaciais.  
   
 ## <a name="permissions"></a>Permissões  
- Requer associação à função **pública** . O usuário deve ter pelo menos uma permissão *objname*. Para exibir as chaves de restrição de coluna, padrões ou regras, você deve ter a permissão VIEW DEFINITION na tabela.  
+ Requer associação à função **pública** . O usuário deve ter pelo menos uma permissão no *objname*. Para exibir as chaves de restrição de coluna, padrões ou regras, você deve ter a permissão VIEW DEFINITION na tabela.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -200,10 +200,10 @@ GO
  [Procedimentos armazenados do mecanismo de banco de dados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sp_helpindex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
  [sp_helprotect &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)   
- [sp_helpserver & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [sp_helptrigger &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
  [sp_helpuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sysobjects &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysobjects-transact-sql.md)  
+ [sys. sysobjects &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysobjects-transact-sql.md)  
   
   

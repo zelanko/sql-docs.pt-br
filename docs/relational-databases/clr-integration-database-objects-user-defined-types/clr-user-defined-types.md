@@ -35,16 +35,16 @@ caps.latest.revision: 67
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 71f1417b1fd54226be6d2bfe001e3e3f95b6ceff
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 7d78c002d25d5804230ce53be05d809489d26b77
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37353978"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008868"
 ---
 # <a name="clr-user-defined-types"></a>Tipos CLR definidos pelo usuário
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá a possibilidade para criar objetos de banco de dados programados em um assembly criado no CLR (Common Language Runtime) do .NET Framework. Os objetos do banco de dados que podem usufruir o modelo de programação avançado fornecido pelo CLR incluem gatilhos, procedimentos armazenados, funções, funções de agregação e tipos.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece a capacidade de criar objetos de banco de dados programados em um assembly criado no .NET Framework common language runtime (CLR). Os objetos do banco de dados que podem usufruir o modelo de programação avançado fornecido pelo CLR incluem gatilhos, procedimentos armazenados, funções, funções de agregação e tipos.  
   
 > [!NOTE]  
 >  Por padrão, a possibilidade de executar código do CLR está definida como OFF no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O CLR pode ser habilitado usando o **sp_configure** procedimento armazenado do sistema.  

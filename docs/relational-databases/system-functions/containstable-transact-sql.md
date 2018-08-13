@@ -37,20 +37,20 @@ caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6c1741644ab38afd4003265b659c06b4b9448e20
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 22cb21d78757b1d5166c2443a8cde7dd5aef0403
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238523"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39547596"
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retorna uma tabela de zero, uma ou mais linhas para as colunas que contêm um correspondências precisas ou difusas (menos preciso) para palavras e frases únicas, a proximidade de palavras em uma certa distância entre si ou correspondências ponderadas. CONTAINSTABLE é usado no [cláusula FROM](../../t-sql/queries/from-transact-sql.md) de um [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução SELECT e referenciado como se fosse um nome de tabela normal. Ele executa uma pesquisa de texto completo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em colunas indexadas de texto completo que contêm tipos de dados baseados em caracteres.  
+  Retorna uma tabela de zero, um ou mais linhas para as colunas que contêm um correspondências precisas ou difusas (menos preciso) para palavras e frases únicas, proximidade entre palavras dentro de uma determinada distância uma da outra, ou correspondências ponderadas. CONTAINSTABLE é usado na [cláusula FROM](../../t-sql/queries/from-transact-sql.md) de um [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução SELECT e referenciado como se fosse um nome de tabela comum. Ele executa uma pesquisa de texto completo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em colunas indexadas de texto completo que contêm tipos de dados baseados em caracteres.  
   
- CONTAINSTABLE é útil para os mesmos tipos de correspondências como o [predicado CONTAINS](../../t-sql/queries/contains-transact-sql.md) e usa as mesmas condições de pesquisa que contém.  
+ CONTAINSTABLE é útil para os mesmos tipos de correspondências que o [predicado CONTAINS](../../t-sql/queries/contains-transact-sql.md) e usa os mesmos critérios de pesquisa de CONTAINS.  
   
  Diferentemente de CONTAINS, as consultas que usam CONTAINSTABLE retornam um valor de classificação de relevância (RANK) e uma chave de texto completo (KEY) para cada linha.  Para obter informações sobre os formatos de pesquisas de texto completo compatíveis com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Consulta com a pesquisa de texto completo](../../relational-databases/search/query-with-full-text-search.md).  
   
@@ -119,7 +119,7 @@ CONTAINSTABLE
   
 ## <a name="arguments"></a>Argumentos  
  *table*  
- É o nome de uma tabela que foi indexada com texto completo. *tabela* pode ser um uma, duas, três ou nome de objeto de quatro partes do banco de dados. Durante a consulta a uma exibição, apenas uma tabela base indexada por texto completo pode ser envolvida.  
+ É o nome de uma tabela que foi indexada com texto completo. *tabela* pode ser um uma, duas, três ou nome de objeto de banco de dados de quatro partes. Durante a consulta a uma exibição, apenas uma tabela base indexada por texto completo pode ser envolvida.  
   
  *tabela* não é possível especificar um nome de servidor e não pode ser usado em consultas em servidores vinculados.  
   
@@ -130,29 +130,29 @@ CONTAINSTABLE
  Indica que várias colunas, separadas por uma vírgula, podem ser especificadas. *column_list* precisa ser colocada entre parênteses. A menos que *language_term* seja especificado, o idioma de todas as colunas da *column_list* precisará ser o mesmo.  
   
  \*  
- Especifica que todos os completo colunas indexadas de texto em *tabela* deve ser usado para procurar o critério de pesquisa especificado. A menos que *language_term* seja especificado, o idioma de todas as colunas da tabela precisará ser o mesmo.  
+ Especifica que todos os completo colunas indexadas de texto na *tabela* deve ser usado para procurar o critério de pesquisa especificado. A menos que *language_term* seja especificado, o idioma de todas as colunas da tabela precisará ser o mesmo.  
   
  LANGUAGE *language_term*  
- É o idioma cujos recursos serão usados para separação de palavras, lematização e dicionário de sinônimos e palavras de ruído (ou [palavra irrelevante](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) remoção como parte da consulta. Esse parâmetro é opcional e pode ser especificado como uma cadeia de caracteres, um inteiro ou um valor hexadecimal que corresponda ao LCID (identificador de localidade) de um idioma. Se *language_term* for especificado, o idioma que ele representa será aplicado a todos os elementos do critério de pesquisa. Se nenhum valor for especificado, o idioma de texto completo da coluna será usado.  
+ É o idioma cujos recursos serão usados para separação de palavras, lematização e dicionário de sinônimos e palavra de ruído (ou [palavra irrelevante](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) remoção como parte da consulta. Esse parâmetro é opcional e pode ser especificado como uma cadeia de caracteres, um inteiro ou um valor hexadecimal que corresponda ao LCID (identificador de localidade) de um idioma. Se *language_term* for especificado, o idioma que ele representa será aplicado a todos os elementos do critério de pesquisa. Se nenhum valor for especificado, o idioma de texto completo da coluna será usado.  
   
  Se documentos de idiomas diferentes forem armazenados em conjunto como BLOBs (objetos binários grandes) em uma única coluna, o LCID de um determinado documento determinará qual idioma será usado para indexar seu conteúdo. Ao consultar uma coluna desse tipo, especificar *LANGUAGE**language_term* pode aumentar a probabilidade de uma boa correspondência.  
   
- Quando especificado como uma cadeia de caracteres, *language_term* corresponde do **alias** valor de coluna no [sys. syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) exibição de compatibilidade.  A cadeia de caracteres precisa ser colocada entre aspas, como em '*language_term*'. Quando especificado como um inteiro, *language_term* é a LCID real que identifica o idioma. Quando especificado como um valor hexadecimal, *language_term* é 0x seguido pelo valor hexadecimal da LCID. O valor hexadecimal não deve exceder oito dígitos, inclusive zeros à esquerda.  
+ Quando especificado como uma cadeia de caracteres *language_term* corresponde à **alias** valor de coluna no [sys. syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) exibição de compatibilidade.  A cadeia de caracteres precisa ser colocada entre aspas, como em '*language_term*'. Quando especificado como um inteiro, *language_term* é a LCID real que identifica o idioma. Quando especificado como um valor hexadecimal, *language_term* é 0x seguido pelo valor hexadecimal da LCID. O valor hexadecimal não deve exceder oito dígitos, inclusive zeros à esquerda.  
   
  Se o valor estiver no formato DBCS (conjunto de caracteres de byte duplo), [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o converterá em Unicode.  
   
  Se o idioma especificado não for válido ou se não houver nenhum recurso instalado que corresponda ao idioma, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retornará um erro. Para usar os recursos de idioma neutro, especifique 0x0 como *language_term*.  
   
  *top_n_by_rank*  
- Especifica que somente o *n* correspondências mais bem classificadas, em ordem decrescente, são retornadas. Se aplica somente quando um valor inteiro, *n*, é especificado. Se *top_n_by_rank* for combinado com outros parâmetros, a consulta retornará menos linhas do que o número de linhas que corresponde de fato a todos os predicados. *top_n_by_rank* permite aumentar o desempenho da consulta chamando novamente apenas as ocorrências mais relevantes.  
+ Especifica que somente o *n* correspondências mais bem classificadas, em ordem decrescente, são retornadas. Aplica-se somente quando um valor de inteiro *n*, é especificado. Se *top_n_by_rank* for combinado com outros parâmetros, a consulta retornará menos linhas do que o número de linhas que corresponde de fato a todos os predicados. *top_n_by_rank* permite aumentar o desempenho da consulta chamando novamente apenas as ocorrências mais relevantes.  
   
  <contains_search_condition>  
- Especifica o texto a ser pesquisado em *column_name* e os critérios para uma correspondência. Para obter informações sobre critérios de pesquisa, consulte [contém &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md).  
+ Especifica o texto a ser pesquisado em *column_name* e os critérios para uma correspondência. Para obter informações sobre critérios de pesquisa, consulte [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md).  
   
 ## <a name="remarks"></a>Remarks  
  As funções e os predicados de texto completo trabalham em uma única tabela, que está implícita no predicado FROM. Para pesquisar em várias tabelas, use uma tabela unida na cláusula FROM para pesquisar em um conjunto de resultados que é o produto de duas ou mais tabelas.  
   
- A tabela retornada tem uma coluna denominada **chave** que contém valores de chave de texto completo. Cada tabela indexada de texto completo tem uma coluna cujos valores têm garantia de exclusividade e os valores retornados no **chave** coluna são os valores de chave de texto completo das linhas que correspondem aos critérios de seleção especificados de pesquisa contains condição. O **TableFulltextKeyColumn** propriedade, obtida da função OBJECTPROPERTYEX, fornece a identidade dessa coluna de chave exclusiva. Para obter a ID da coluna associada à chave de texto completo do índice de texto completo, use **fulltext_indexes**. Para obter mais informações, consulte [fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
+ A tabela retornada tem uma coluna denominada **chave** que contém os valores de chave de texto completo. Cada tabela indexada de texto completo tem uma coluna cujos valores têm garantia de ser exclusivo e os valores retornados na **chave** coluna são os valores de chave de texto completo das linhas que correspondem aos critérios de seleção especificados de pesquisa contains condição. O **TableFulltextKeyColumn** propriedade, obtida da função OBJECTPROPERTYEX, fornece a identidade dessa coluna de chave exclusiva. Para obter a ID da coluna associada com a chave de texto completo do índice de texto completo, use **fulltext_indexes**. Para obter mais informações, consulte [fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
   
  Para obter as linhas desejadas da tabela original, especifique uma junção com as linhas CONTAINSTABLE. O formulário típico da cláusula FROM de uma instrução SELECT que usa CONTAINSTABLE é:  
   
@@ -163,7 +163,7 @@ FROM table AS FT_TBL INNER JOIN
    ON FT_TBL.unique_key_column = KEY_TBL.[KEY];  
 ```  
   
- A tabela produzida por CONTAINSTABLE contém uma coluna chamada **classificação**. O **classificação** coluna é um valor (de 0 a 1000) para cada linha que indica como uma linha de correspondência com os critérios de seleção. Geralmente, esse valor de classificação é usado de uma destas maneiras na instrução SELECT:  
+ A tabela produzida por CONTAINSTABLE contém uma coluna chamada **classificação**. O **classificação** coluna é um valor (de 0 a 1000) para cada linha que indica o grau de uma linha de correspondência com os critérios de seleção. Geralmente, esse valor de classificação é usado de uma destas maneiras na instrução SELECT:  
   
 -   Na cláusula ORDER BY para retornar as linhas com classificação mais alta como as primeiras linhas da tabela.  
   
@@ -175,7 +175,7 @@ FROM table AS FT_TBL INNER JOIN
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-simple-example"></a>A. Exemplo simples  
- O exemplo a seguir cria e preenche uma tabela simples de duas colunas, listando as 3 regiões e as cores em seus sinalizadores. O TI cria e preenche um catálogo de texto completo e o índice na tabela. Em seguida, o **CONTAINSTABLE** sintaxe é demonstrada. Este exemplo demonstra como o valor de classificação aumenta superior quando o valor de pesquisa é atendido várias vezes. A última consulta, Tanzânia que contém verde e preto tem uma classificação mais alta que Itália que contêm apenas uma das cores consultadas.  
+ O exemplo a seguir cria e preenche uma tabela simples de duas colunas, listando os 3 condados e as cores em seus sinalizadores. A TI cria e popula um catálogo de texto completo e o índice na tabela. Em seguida, a **CONTAINSTABLE** sintaxe é demonstrado. Este exemplo demonstra como o valor de classificação aumenta mais alto quando o valor de pesquisa for atendido várias vezes. A última consulta, Tanzânia, que contém o verde e preto tem uma classificação mais alta que Itália que contêm apenas uma das cores consultadas.  
   
 ```  
 CREATE TABLE Flags (Country nvarchar(30) NOT NULL, FlagColors varchar(200));  
@@ -283,10 +283,10 @@ GO
 ```  
   
 > [!NOTE]  
->  O idioma *language_term* argumentis não é necessário para usar *top_n_by_rank.*  
+>  A LINGUAGEM *language_term* argumentis não é necessário para usar *top_n_by_rank.*  
   
 ## <a name="see-also"></a>Consulte também  
- [Limite resultados de pesquisa com RANK](../../relational-databases/search/limit-search-results-with-rank.md)   
+ [Limitar resultados da pesquisa com RANK](../../relational-databases/search/limit-search-results-with-rank.md)   
  [Consulta com pesquisa de texto completo](../../relational-databases/search/query-with-full-text-search.md)   
  [Criar consultas de pesquisa de texto completo &#40;Visual Database Tools&#41;](http://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
  [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)   

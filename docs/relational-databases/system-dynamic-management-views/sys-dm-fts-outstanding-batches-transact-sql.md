@@ -1,5 +1,5 @@
 ---
-title: sys.DM fts_outstanding_batches (Transact-SQL) | Microsoft Docs
+title: sys.dm_fts_outstanding_batches (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2017
 ms.prod: sql
@@ -24,13 +24,13 @@ caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2eb67cfc9ae23c9779efdfccb436157b9a14349f
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 2c214242445ed6769b44f060cb563db1296006c1
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464812"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39547536"
 ---
 # <a name="sysdmftsoutstandingbatches-transact-sql"></a>sys.dm_fts_outstanding_batches (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,24 +39,24 @@ ms.locfileid: "34464812"
   
   |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|database_id|**Int**|ID do banco de dados|  
-|catalog_id|**Int**|Identificação do catálogo de texto completo.|  
-|table_id|**Int**|ID da tabela que contém o índice de texto completo.|  
-|batch_id|**Int**|ID do Lote|  
+|database_id|**int**|ID do banco de dados|  
+|catalog_id|**int**|Identificação do catálogo de texto completo.|  
+|table_id|**int**|ID da tabela que contém o índice de texto completo.|  
+|batch_id|**int**|ID do Lote|  
 |memory_address|**varbinary(8)**|O endereço de memória do objeto do lote.|  
 |crawl_memory_address|**varbinary(8)**|Endereço de memória do objeto de rastreamento (objeto pai).|  
 |memregion_memory_address|**varbinary(8)**|Endereço de memória da região de memória da memória de compartilhamento de saída do host daemon do filtro (fdhost.exe).|  
-|hr_batch|**Int**|O código de erro mais recente do lote.|  
+|hr_batch|**int**|O código de erro mais recente do lote.|  
 |is_retry_batch|**bit**|Indica se este é um lote de repetição:<br /><br /> 0 = Não<br /><br /> 1 = Sim|  
-|retry_hints|**Int**|Tipo de repetição necessária para o lote:<br /><br /> 0 = Nenhuma repetição<br /><br /> 1 = Repetição de multi-thread<br /><br /> 2 = Repetição de thread único<br /><br /> 3 = Repetição de único e multi-thread<br /><br /> 5 = Repetição final de multi-thread<br /><br /> 6 = Repetição final de thread único<br /><br /> 7 = Repetição final de único e multi-thread|  
+|retry_hints|**int**|Tipo de repetição necessária para o lote:<br /><br /> 0 = Nenhuma repetição<br /><br /> 1 = Repetição de multi-thread<br /><br /> 2 = Repetição de thread único<br /><br /> 3 = Repetição de único e multi-thread<br /><br /> 5 = Repetição final de multi-thread<br /><br /> 6 = Repetição final de thread único<br /><br /> 7 = Repetição final de único e multi-thread|  
 |retry_hints_description|**nvarchar(120)**|Descrição do tipo de repetição necessária:<br /><br /> SEM REPETIÇÃO<br /><br /> REPETIÇÃO DE MULTI-THREAD<br /><br /> REPETIÇÃO DE THREAD ÚNICO<br /><br /> REPETIÇÃO DE ÚNICO E MULTI-THREAD<br /><br /> REPETIÇÃO FINAL DE MULTI-THREAD<br /><br /> REPETIÇÃO FINAL DE THREAD ÚNICO<br /><br /> REPETIÇÃO FINAL DE ÚNICO E MULTI-THREAD|  
 |doc_failed|**bigint**|Número de documentos do lote que falharam.|  
 |batch_timestamp|**timestamp**|O valor do carimbo de data/hora obtido quando o lote foi criado.|  
   
 ## <a name="permissions"></a>Permissões  
 
-Em [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
-Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` no banco de dados.   
+Na [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
+Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` permissão no banco de dados.   
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir localiza o número de lotes que está sendo processado para cada tabela na instância de servidor.  

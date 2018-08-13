@@ -23,13 +23,13 @@ caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fed35b861dfe919d4b7f49b11f98f205ea16b71b
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: c2c9ec20376173fa23c21c626458be35f12d1f02
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465002"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39533316"
 ---
 # <a name="sysdmexecbackgroundjobqueuestats-transact-sql"></a>sys.dm_exec_background_job_queue_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,30 +37,30 @@ ms.locfileid: "34465002"
   Retorna uma linha que fornece estatísticas de agregação para cada trabalho de processador de consulta enviada para execução assíncrona (em segundo plano).  
   
 > [!NOTE]  
->  Para chamar essa de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use o nome **sys.dm_pdw_nodes_exec_background_job_queue_stats**.  
+>  Chamá-lo partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use o nome **sys.dm_pdw_nodes_exec_background_job_queue_stats**.  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**queue_max_len**|**Int**|Comprimento máximo da fila.|  
-|**enqueued_count**|**Int**|Número de solicitações postadas à fila com êxito.|  
-|**started_count**|**Int**|Número de solicitações que iniciaram a execução.|  
-|**ended_count**|**Int**|Número de solicitações atendidas com êxito ou falha.|  
-|**failed_lock_count**|**Int**|Número de solicitações que falharam devido a contenção de bloqueios ou deadlock.|  
-|**failed_other_count**|**Int**|Número de solicitações que falharam devido a outras razões.|  
-|**failed_giveup_count**|**Int**|Número de solicitações que falharam porque o limite de novas tentativas foi atingido.|  
-|**enqueue_failed_full_count**|**Int**|Número de tentativas de enfileiramento que falharam devido a fila cheia.|  
-|**enqueue_failed_duplicate_count**|**Int**|Número de tentativas de enfileiramento duplicadas.|  
-|**elapsed_avg_ms**|**Int**|Tempo médio de solicitação decorrido, em milissegundos.|  
-|**elapsed_max_ms**|**Int**|Tempo decorrido da solicitação mais longa, em milissegundos.|  
-|**pdw_node_id**|**Int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
+|**queue_max_len**|**int**|Comprimento máximo da fila.|  
+|**enqueued_count**|**int**|Número de solicitações postadas à fila com êxito.|  
+|**started_count**|**int**|Número de solicitações que iniciaram a execução.|  
+|**ended_count**|**int**|Número de solicitações atendidas com êxito ou falha.|  
+|**failed_lock_count**|**int**|Número de solicitações que falharam devido a contenção de bloqueios ou deadlock.|  
+|**failed_other_count**|**int**|Número de solicitações que falharam devido a outras razões.|  
+|**failed_giveup_count**|**int**|Número de solicitações que falharam porque o limite de novas tentativas foi atingido.|  
+|**enqueue_failed_full_count**|**int**|Número de tentativas de enfileiramento que falharam devido a fila cheia.|  
+|**enqueue_failed_duplicate_count**|**int**|Número de tentativas de enfileiramento duplicadas.|  
+|**elapsed_avg_ms**|**int**|Tempo médio de solicitação decorrido, em milissegundos.|  
+|**elapsed_max_ms**|**int**|Tempo decorrido da solicitação mais longa, em milissegundos.|  
+|**pdw_node_id**|**int**|**Aplica-se ao**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
   
 ## <a name="remarks"></a>Remarks  
- Esta exibição só retorna informações para trabalhos de estatísticas de atualizações assíncronas. Para obter mais informações sobre atualização assíncrona de estatísticas, consulte [estatísticas](../../relational-databases/statistics/statistics.md).  
+ Esta exibição só retorna informações para trabalhos de estatísticas de atualizações assíncronas. Para obter mais informações sobre as estatísticas de atualização assíncrona, consulte [estatísticas](../../relational-databases/statistics/statistics.md).  
   
 ## <a name="permissions"></a>Permissões
 
-Em [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
-Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` no banco de dados.   
+Na [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
+Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` permissão no banco de dados.   
 
 ## <a name="examples"></a>Exemplos  
   

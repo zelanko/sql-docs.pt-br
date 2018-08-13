@@ -25,13 +25,13 @@ caps.latest.revision: 41
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 45a2efd58090fa6b319c092f433b45b8b9a50d41
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 5e291474c080374a0b0e92d6500610f16f73c818
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38061664"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39564910"
 ---
 # <a name="syssysobjects-transact-sql"></a>sys.sysobjects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "38061664"
 |nome|**sysname**|Nome do objeto|  
 |id|**int**|Número de identificação do objeto|  
 |xtype|**char(2)**|Tipo de objeto. Pode ser um dos seguintes tipos de objeto:<br /><br /> AF = Função de agregação (CLR)<br /><br /> C = Restrição CHECK<br /><br /> D = Padrão ou restrição DEFAULT<br /><br /> F = Restrição FOREIGN KEY<br /><br /> L = Log<br /><br /> FN = Função escalar<br /><br /> FS = Função escalar de assembly (CLR)<br /><br /> FT = Função avaliada por tabela de assembly (CLR)<br /><br /> IF = Função de tabela em linha<br /><br /> IT = tabela interna<br /><br /> P = Procedimento armazenado<br /><br /> PC = procedimento armazenado Assembly (CLR)<br /><br /> PK = Restrição PRIMARY KEY (o tipo é K)<br /><br /> RF = Procedimento armazenado de filtro de replicação<br /><br /> S = Tabela do sistema<br /><br /> SN = Sinônimo<br /><br /> SQ = Fila de serviço<br /><br /> TA = Gatilho DML de assembly (CLR)<br /><br /> TF = Função de tabela<br /><br /> TR = gatilho DML SQL<br /><br /> TT = Tipo de tabela<br /><br /> U = Tabela de usuário<br /><br /> UQ = Restrição UNIQUE (o tipo é K)<br /><br /> V = Exibição<br /><br /> X = Procedimento armazenado estendido|  
-|uid|**smallint**|ID de esquema do proprietário do objeto. Em bancos de dados atualizados de uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o ID de esquema é idêntico ao ID de usuário do proprietário. Excederá ou retornará NULL se o número de usuários e funções exceder 32.767.<br /><br /> **\*\* Importante \* \***  se você usar qualquer um dos seguintes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instruções DDL, você deve usar o [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) exibição em vez de sys. sysobjects do catálogo.<br /><br /> CRIAR &AMP;#124; ALTER &AMP;#124; DROP USER<br /><br /> CRIAR &AMP;#124; ALTER &AMP;#124; DROP ROLE<br /><br /> CRIAR &AMP;#124; ALTER &AMP;#124; DROP APPLICATION ROLE<br /><br /> CREATE SCHEMA<br /><br /> ALTER AUTHORIZATION ON OBJECT|  
+|uid|**smallint**|ID de esquema do proprietário do objeto. Em bancos de dados atualizados de uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o ID de esquema é idêntico ao ID de usuário do proprietário. Excederá ou retornará NULL se o número de usuários e funções exceder 32.767.<br /><br /> **\*\* Importante \* \* ** se você usar qualquer um dos seguintes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instruções DDL, você deve usar o [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) exibição em vez de sys. sysobjects do catálogo.<br /><br /> CRIAR &AMP;#124; ALTER &AMP;#124; DROP USER<br /><br /> CRIAR &AMP;#124; ALTER &AMP;#124; DROP ROLE<br /><br /> CRIAR &AMP;#124; ALTER &AMP;#124; DROP APPLICATION ROLE<br /><br /> CREATE SCHEMA<br /><br /> ALTER AUTHORIZATION ON OBJECT|  
 |info|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |status|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |base_schema_ver|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

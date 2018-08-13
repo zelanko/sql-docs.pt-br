@@ -22,13 +22,13 @@ caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4a6defefbc225d2f8301977d5826c74597eefb2c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 5519ade9d6ea17377304034e076d96e20af57409
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33244117"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39558096"
 ---
 # <a name="spfulltextpendingchanges-transact-sql"></a>sp_fulltext_pendingchanges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_fulltext_pendingchanges table_id
 |-----------------|---------------|-----------------|  
 |**Chave**|*|É o valor da chave de texto completo da tabela especificada.|  
 |**DocId**|**bigint**|É a coluna do identificador de documento (DocId) interno que corresponde ao valor da chave.|  
-|**Status**|**Int**|0 = a linha será removida do índice de texto completo.<br /><br /> 1 = a linha será indexada com texto completo.<br /><br /> 2 = a linha está atualizada.<br /><br /> -1 = a linha está em um estado de transição (em lotes, mas não confirmada) ou de erro.|  
+|**Status**|**int**|0 = a linha será removida do índice de texto completo.<br /><br /> 1 = a linha será indexada com texto completo.<br /><br /> 2 = a linha está atualizada.<br /><br /> -1 = a linha está em um estado de transição (em lotes, mas não confirmada) ou de erro.|  
 |**DocState**|**tinyint**|É um despejo bruto da coluna de status do mapa do identificador de documento (DocId) interno.|  
   
  <sup>* O tipo de dados para a chave é o mesmo como o tipo de dados da coluna de chave de texto completo na tabela base.</sup>  

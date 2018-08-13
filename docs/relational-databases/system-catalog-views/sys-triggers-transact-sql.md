@@ -24,28 +24,28 @@ caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7c176e5cdf68b5aa9516cd054a57f36c630b0c64
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: cb87bc58f99cc501bff8d8a04f503f2fb04f1e3b
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221777"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39547136"
 ---
 # <a name="systriggers-transact-sql"></a>sys.triggers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Contém uma linha para cada objeto que é um gatilho, com um tipo de TR ou TA. Os nomes dos gatilhos DML seguem o escopo do esquema e, portanto, são visíveis no **sys. Objects**. Os nomes dos gatilhos DDL seguem o escopo da entidade pai e são visíveis somente nessa exibição.  
+  Contém uma linha para cada objeto que é um gatilho, com um tipo de TR ou TA. Os nomes dos gatilhos DML são o escopo de esquema e, portanto, são visíveis na **sys. Objects**. Os nomes dos gatilhos DDL seguem o escopo da entidade pai e são visíveis somente nessa exibição.  
   
  O **parent_class** e **nome** colunas identificam exclusivamente o gatilho no banco de dados.  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome do gatilho. Os nomes dos gatilhos DML seguem o escopo do esquema. Os nomes dos gatilhos DDL seguem o escopo com respeito à entidade pai.|  
-|**object_id**|**Int**|Número de identificação do objeto. É exclusivo em um banco de dados.|  
+|**object_id**|**int**|Número de identificação do objeto. É exclusivo em um banco de dados.|  
 |**parent_class**|**tinyint**|Classe do pai do gatilho.<br /><br /> 0 = Banco de dados, para os gatilhos DDL.<br /><br /> 1 = Objeto ou coluna para os gatilhos DML.|  
 |**parent_class_desc**|**nvarchar(60)**|Descrição da classe pai do gatilho.<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN|  
-|**parent_id**|**Int**|ID da classe pai do gatilho, conforme segue:<br /><br /> 0 = Gatilhos gerados pelo banco de dados.<br /><br /> Gatilhos DML, este é o **object_id** da tabela ou exibição na qual o gatilho DML é definido.|  
+|**parent_id**|**int**|ID da classe pai do gatilho, conforme segue:<br /><br /> 0 = Gatilhos gerados pelo banco de dados.<br /><br /> Para gatilhos DML, esse é o **object_id** da tabela ou exibição na qual o gatilho DML é definido.|  
 |**type**|**char(2)**|Tipo de objeto:<br /><br /> TA = Gatilho (CLR) de assembly<br /><br /> TR = Gatilho SQL|  
 |**type_desc**|**nvarchar(60)**|Descrição do tipo de objeto.<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
 |**create_date**|**datetime**|A data em que o gatilho foi criado.|  

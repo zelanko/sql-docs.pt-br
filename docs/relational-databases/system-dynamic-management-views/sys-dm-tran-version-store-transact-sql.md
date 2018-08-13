@@ -1,5 +1,5 @@
 ---
-title: tran_version_store (Transact-SQL) | Microsoft Docs
+title: DM tran_version_store (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: sql
@@ -23,22 +23,22 @@ caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7de332c09b586b1c3a7feba4097a940ba9f29a83
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: bfb296c8224eb066c8e5f03f94436e05ce6cd4b4
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467622"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39561916"
 ---
 # <a name="sysdmtranversionstore-transact-sql"></a>sys.dm_tran_version_store (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retorna uma tabela virtual que exibe todos os registros de versão no repositório de versão. **tran_version_store** é ineficiente para execução porque ela consulta o repositório de versão e o armazenamento de versão pode ser muito grande.  
+  Retorna uma tabela virtual que exibe todos os registros de versão no repositório de versão. **DM tran_version_store** é ineficiente para execução porque ela consulta o repositório de versão e o armazenamento de versão pode ser muito grande.  
   
  Cada registro com controle de versão é armazenado como dados binários juntamente com algumas informações de rastreamento ou de status. Semelhante a registros em tabelas de banco de dados, os registros de armazenamento de versão são armazenados em páginas de 8.192 bytes. Se um registro exceder 8.192 bytes, ele será dividido em dois registros diferentes.  
   
- Porque o registro com controle de versão é armazenado como binário, não há nenhum problema com agrupamentos diferentes de bancos de dados diferentes. Use **tran_version_store** para localizar as versões anteriores das linhas em representação binária como existem no armazenamento de versão.  
+ Porque o registro com controle de versão é armazenado como binário, não há nenhum problema com agrupamentos diferentes de bancos de dados diferentes. Use **DM tran_version_store** para localizar as versões anteriores das linhas em representação binária como existem no repositório de versão.  
   
   
 ## <a name="syntax"></a>Sintaxe  
@@ -53,7 +53,7 @@ sys.dm_tran_version_store
 |-----------------|---------------|-----------------|  
 |**transaction_sequence_num**|**bigint**|Número de sequência da transação que gera a versão de registro.|  
 |**version_sequence_num**|**bigint**|Número de sequência da versão de registro. Este valor é exclusivo dentro da transação que gera a versão.|  
-|**database_id**|**Int**|ID do banco de dados do registro com controle de versão.|  
+|**database_id**|**int**|ID do banco de dados do registro com controle de versão.|  
 |**rowset_id**|**bigint**|ID do conjunto de linhas do registro.|  
 |**status**|**tinyint**|Indica se um registro com controle de versão foi dividido em dois registros. Se o valor for 0, o registro será armazenado em uma página. Se o valor for 1, o registro será dividido em dois registros armazenados em duas páginas diferentes.|  
 |**min_length_in_bytes**|**smallint**|Comprimento mínimo do registro em bytes.|  
@@ -64,8 +64,8 @@ sys.dm_tran_version_store
   
 ## <a name="permissions"></a>Permissões
 
-Em [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
-Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` no banco de dados.   
+Na [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
+Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` permissão no banco de dados.   
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir usa um cenário de teste no qual quatro transações simultâneas, cada uma identificada por um XSN (número de sequência de transação), estão sendo executadas em um banco de dados no qual as opções ALLOW_SNAPSHOT_ISOLATION e READ_COMMITTED_SNAPSHOT estão definidas como ON. As seguintes transações estão sendo executadas:  

@@ -22,13 +22,13 @@ caps.latest.revision: 11
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c96985d6bcc23427f67cdb8c6cb0fea360aba69a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: a156b1670a1e697104503c7a887ac3482642b9ae
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38041164"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39540816"
 ---
 # <a name="spexecute-transact-sql"></a>sp_execute (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -54,7 +54,7 @@ sp_execute handle OUTPUT
  Significa o uso de parâmetros adicionais. *bound_param* é um parâmetro obrigatório que chama valores de entrada de qualquer tipo de dados para significar parâmetros adicionais para o procedimento.  
   
 > [!NOTE]  
->  *bound_param* deve corresponder às declarações feitas pelo sp_prepare*params* de valor e pode ser na forma  *@name = value* ou *valor*.  
+>  *bound_param* deve corresponder às declarações feitas pelo sp_prepare*params* de valor e pode ser na forma * @name = value* ou *valor*.  
   
 ## <a name="see-also"></a>Consulte também  
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

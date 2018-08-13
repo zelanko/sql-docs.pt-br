@@ -1,9 +1,9 @@
 ---
 title: Criptografar conexões ao SQL Server no Linux | Microsoft Docs
 description: Este artigo descreve criptografando conexões com o SQL Server no Linux.
-author: tmullaney
+author: vin-yu
 ms.date: 01/30/2018
-ms.author: meetb
+ms.author: vinsonyu
 manager: craigg
 ms.topic: conceptual
 ms.prod: sql
@@ -14,12 +14,12 @@ ms.technology: linux
 ms.assetid: ''
 helpviewer_keywords:
 - Linux, encrypted connections
-ms.openlocfilehash: 574699c5cb3d1215e85af3f176812950dd4219da
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: b1ccab9ac575640434b33a970e0e676376ef4b4e
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085028"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40009028"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>Criptografar conexões ao SQL Server no Linux
 
@@ -32,7 +32,7 @@ Antes de começar, você precisa certificar-se de que seus certificados siga est
 - A hora atual do sistema deve ser posterior o válido de propriedade do certificado e antes do válido para a propriedade do certificado.
 - O certificado deve ser significativo para a autenticação do servidor. Isso requer que a propriedade de uso avançado de chave do certificado para especificar a autenticação do servidor (1.3.6.1.5.5.7.3.1).
 - O certificado deve ser criado usando a opção KeySpec de AT_KEYEXCHANGE. Normalmente, a propriedade de uso da chave do certificado (KEY_USAGE) também inclui codificação de chave (CERT_KEY_ENCIPHERMENT_KEY_USAGE).
-- A propriedade da entidade do certificado deve indicar que o nome comum (CN) é o mesmo como o nome do host ou nome de domínio totalmente qualificado (FQDN) do computador servidor. Observação: certificados curinga têm suporte. 
+- A propriedade da entidade do certificado deve indicar que o nome comum (CN) é o mesmo como o nome do host ou nome de domínio totalmente qualificado (FQDN) do computador servidor. Observação: certificados curinga têm suporte.
 
 ## <a name="overview"></a>Visão geral
 TLS é usado para criptografar conexões a partir de um aplicativo cliente para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Quando configurado corretamente, o TLS fornece privacidade e integridade dos dados para as comunicações entre o cliente e o servidor.  Conexões de TLS podem ser iniciada do cliente ou servidor iniciada. 

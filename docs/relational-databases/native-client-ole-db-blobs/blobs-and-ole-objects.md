@@ -19,19 +19,19 @@ ms.assetid: 767fa2f6-9cd2-436f-add5-e760bed29a58
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 80629d81a9212801e65e272f5790b0cc57a11103
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 2f1e1f961dd9ece3d69044e00dd9183920af0ba4
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37428735"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39535496"
 ---
 # <a name="blobs-and-ole-objects"></a>BLOBs e objetos OLE
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB do Native Client expõe a **ISequentialStream** interface para dar suporte ao acesso do consumidor a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ntext**, **texto**, **imagem**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, e os tipos de dados xml como binários BLOBs (objetos grandes ). O **leitura** método **ISequentialStream** permite que o consumidor recupere muitos dados em partes gerenciáveis.  
+  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB do Native Client expõe a **ISequentialStream** interface para dar suporte ao acesso do consumidor a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ntext**, **texto**, **imagem**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, e os tipos de dados xml como binários BLOBs (objetos grandes ). O método **Read** em **ISequentialStream** permite que o consumidor recupere muitos dados em partes gerenciáveis.  
   
  Para obter um exemplo que demonstra este recurso, consulte [do conjunto de dados grandes &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/set-large-data-ole-db.md).  
   
@@ -53,7 +53,7 @@ ms.locfileid: "37428735"
   
 ## <a name="storage-object-limitations"></a>Limitações de objetos de armazenamento  
   
--   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client pode dar suporte a apenas um objeto único armazenamento aberto. Tentativas de abrir mais de um objeto de armazenamento (para obter uma referência em mais de um **ISequentialStream** ponteiro de interface) retornam DBSTATUS_E_CANTCREATE.  
+-   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client pode dar suporte a apenas um objeto único armazenamento aberto. As tentativas de abrir mais de um objeto de armazenamento (para obter uma referência em mais de um ponteiro da interface **ISequentialStream**) retornam DBSTATUS_E_CANTCREATE.  
   
 -   No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client, o valor padrão da propriedade somente leitura DBPROP_BLOCKINGSTORAGEOBJECTS é VARIANT_TRUE. Isso indica que se um objeto de armazenamento está ativo, alguns métodos (diferentes daqueles nos objetos de armazenamento) falharão com E_UNEXPECTED.  
   

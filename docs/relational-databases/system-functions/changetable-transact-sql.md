@@ -1,5 +1,5 @@
 ---
-title: CHANGETABLE (Transact-SQL) | Microsoft Docs
+title: Função CHANGETABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -23,13 +23,13 @@ caps.latest.revision: 34
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8b0062a473b403a62f2805f28f84d5e0d9651dcb
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: e323ec0ac7328625da6aa47f8fc48e04af82be6a
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239896"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40009038"
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ ms.locfileid: "33239896"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
-  
+```sql
 CHANGETABLE (  
     { CHANGES table , last_sync_version  
     | VERSION table , <primary_key_values> } )  
@@ -52,7 +51,7 @@ CHANGETABLE (
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- ALTERAÇÕES *tabela* , *last_sync_version*  
+ As alterações *tabela* , *last_sync_version*  
  Retorna informações de controle de todas as alterações em uma tabela que ocorreu desde a versão que é especificada pelo *last_sync_version*.  
   
  *table*  
@@ -61,15 +60,15 @@ CHANGETABLE (
  *last_sync_version*  
  Quando obtém alterações, o aplicativo chamador deve especificar o ponto a partir do qual são necessárias alterações. last_sync_version especifica esse ponto. A função retorna informações de todas as linhas que foram alteradas desde essa versão. O aplicativo faz uma consulta para receber alterações com uma versão maior que last_sync_version.  
   
- Normalmente, antes de obter as alterações, o aplicativo chama **change_tracking_current_version ()** para obter a versão que será usada as próximas alterações de tempo são necessárias. Por isso, o aplicativo não precisa interpretar ou entender o valor real.  
+ Normalmente, antes que ele obtém as alterações, o aplicativo chamará **change_tracking_current_version ()** para obter a versão que será usada, as próximas alterações são necessárias. Por isso, o aplicativo não precisa interpretar ou entender o valor real.  
   
  Como last_sync_version é obtido pelo aplicativo chamador, o aplicativo tem que manter o valor. Se o aplicativo perder este valor, ele deverá reinicializar os dados.  
   
- *last_sync_version* é **bigint**. O valor deve ser escalar. Uma expressão causará um erro de sintaxe.  
+ *last_sync_version* está **bigint**. O valor deve ser escalar. Uma expressão causará um erro de sintaxe.  
   
  Se o valor for NULL, todas as alterações efetuadas serão retornadas.  
   
- *last_sync_version* devem ser validadas para garantir que ele não é muito antigo, pois algumas ou todas as informações de alteração podem ser apagadas backup de acordo com o período de retenção configurado para o banco de dados. Para obter mais informações, consulte [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41; ](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md) e [opções ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
+ *last_sync_version* devem ser validadas para garantir que ele não é muito antigo, porque algumas ou todas as informações de alteração podem ter sido limpos acordo com o período de retenção configurado para o banco de dados. Para obter mais informações, consulte [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41; ](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md) e [opções ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  VERSÃO *tabela*, {< primary_key_values >}  
  Retorna as informações de controle de alterações mais recentes de uma linha especificada. Os valores de chave primária devem identificar a linha. <primary_key_values> identifica as colunas de chave primária e especifica os valores. Os nomes de coluna de chave primária podem ser especificados em qualquer ordem.  
@@ -81,7 +80,7 @@ CHANGETABLE (
  Especifica o nome de coluna/colunas de chave primária. Podem ser especificados vários nomes de coluna em qualquer ordem.  
   
  *Value*  
- É o valor da chave primária. Se houver várias colunas de chave primária, os valores devem ser especificados na mesma ordem que as colunas apareçam no *column_name* lista.  
+ É o valor da chave primária. Se houver várias colunas de chave primária, os valores devem ser especificados na mesma ordem que as colunas aparecem na *column_name* lista.  
   
  [COMO] *table_alias* [(*column_alias* [,... *n* ])]  
  Fornece nomes para os resultados que são retornados por CHANGETABLE.  
@@ -104,10 +103,10 @@ CHANGETABLE (
 |-----------------|---------------|-----------------|  
 |SYS_CHANGE_VERSION|**bigint**|Valor de versão associado à última alteração efetuada na linha|  
 |SYS_CHANGE_CREATION_VERSION|**bigint**|Valores de versão associados à última operação de inserção.|  
-|SYS_CHANGE_OPERATION|**nchar(1)**|Especifica o tipo de alteração:<br /><br /> **U** = atualização<br /><br /> **Eu** = Insert<br /><br /> **D** = excluir|  
+|SYS_CHANGE_OPERATION|**nchar(1)**|Especifica o tipo de alteração:<br /><br /> **U** = atualização<br /><br /> **Eu** = inserir<br /><br /> **1!d** = excluir|  
 |SYS_CHANGE_COLUMNS|**varbinary(4100)**|Lista as colunas alteradas desde a last_sync_version (a linha de base). Observe que as colunas computadas nunca são listadas como alteradas.<br /><br /> O valor será NULL quando qualquer uma das condições a seguir for verdadeira:<br /><br /> O controle de alterações da coluna não está habilitado.<br /><br /> A operação é de inserção ou exclusão.<br /><br /> Todas as colunas de chave não primária foram atualizadas em uma operação. Este valor binário não deve ser interpretado diretamente. Em vez disso, para interpretá-lo, use [change_tracking_is_column_in_mask ()](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md).|  
 |SYS_CHANGE_CONTEXT|**varbinary(128)**|Alterar as informações de contexto que você pode opcionalmente especificar usando o [WITH](../../relational-databases/system-functions/with-change-tracking-context-transact-sql.md) cláusula como parte de uma instrução INSERT, UPDATE ou DELETE.|  
-|\<valor da coluna de chave primária >|Igual às colunas de tabela de usuário|Os valores de chave primária da tabela controlada. Esses valores identificam exclusivamente cada linha da tabela do usuário.|  
+|\<o valor de coluna de chave primária >|Igual às colunas de tabela de usuário|Os valores de chave primária da tabela controlada. Esses valores identificam exclusivamente cada linha da tabela do usuário.|  
   
 ### <a name="changetable-version"></a>CHANGETABLE VERSION  
  Quando VERSION é especificado, uma linha que tem as seguintes colunas é retornada.  
@@ -116,19 +115,19 @@ CHANGETABLE (
 |-----------------|---------------|-----------------|  
 |SYS_CHANGE_VERSION|**bigint**|Valor de versão de alteração atual associado à linha.<br /><br /> O valor será NULL se uma alteração não tiver sido efetuada por um período maior que o de retenção do controle de alterações ou se a linha não tiver sido alterada desde que o controle de alterações foi habilitado.|  
 |SYS_CHANGE_CONTEXT|**varbinary(128)**|Altere as informações de contexto que podem opcionalmente ser especificadas usando a cláusula WITH como parte de uma instrução INSERT, UPDATE ou DELETE.|  
-|\<valor da coluna de chave primária >|Igual às colunas de tabela de usuário|Os valores de chave primária da tabela controlada. Esses valores identificam exclusivamente cada linha da tabela do usuário.|  
+|\<o valor de coluna de chave primária >|Igual às colunas de tabela de usuário|Os valores de chave primária da tabela controlada. Esses valores identificam exclusivamente cada linha da tabela do usuário.|  
   
 ## <a name="remarks"></a>Remarks  
  Em geral, a função CHANGETABLE é usada na cláusula FROM de uma consulta como se fosse uma tabela.  
   
 ## <a name="changetablechanges"></a>CHANGETABLE(CHANGES...)  
- Para obter dados de linha para linhas novas ou modificadas, una o conjunto de resultados à tabela do usuário utilizando as colunas de chave primária. Somente uma linha é retornada para cada linha na tabela de usuário que tenha sido alterada, mesmo se houver várias alterações na mesma linha desde o *last_sync_version* valor.  
+ Para obter dados de linha para linhas novas ou modificadas, una o conjunto de resultados à tabela do usuário utilizando as colunas de chave primária. Somente uma linha é retornada para cada linha na tabela do usuário que foi alterada, mesmo se houve várias alterações na mesma linha desde o *last_sync_version* valor.  
   
  Alterações de coluna de chave primária nunca são marcadas como atualizações. Se um valor de chave primária for alterado, será considerado como excluído do valor antigo e inserido no valor novo.  
   
  Se você excluir uma linha e depois inserir uma linha que tenha a chave primária antiga, a alteração será vista como uma atualização em todas as colunas da linha.  
   
- Os valores retornados para as colunas SYS_CHANGE_OPERATION e SYS_CHANGE_COLUMNS são relativas a linha de base (last_sync_version) especificada. Por exemplo, se uma operação de inserção foi feita na versão 10 e uma operação de atualização na versão 15 e se a linha de base *last_sync_version* é 12, uma atualização será relatada. Se o *last_sync_version* valor é 8, uma inserção será relatada. SYS_CHANGE_COLUMNS nunca informará colunas computadas como tendo sido atualizadas.  
+ Os valores que são retornados para as colunas SYS_CHANGE_OPERATION e SYS_CHANGE_COLUMNS são em relação à linha de base (last_sync_version) especificada. Por exemplo, se uma operação de inserção tiver sido feita na versão 10 e uma operação de atualização na versão 15 e se a linha de base *last_sync_version* é 12, uma atualização será relatada. Se o *last_sync_version* valor é 8, uma inserção será relatada. SYS_CHANGE_COLUMNS nunca informará colunas computadas como tendo sido atualizadas.  
   
  Geralmente, todas as operações que inserem, atualizam ou excluem dados em tabelas de usuário são controladas, inclusive a instrução MERGE.  
   
@@ -148,7 +147,7 @@ CHANGETABLE (
  O valor de SYS_CHANGE_VERSION pode ser NULL se nenhuma alteração tiver sido efetuada por um período maior que o de retenção (por exemplo, a limpeza removeu a informação de alteração) ou se a linha não tiver sido alterada desde que o controle de alterações foi habilitado para a tabela.  
   
 ## <a name="permissions"></a>Permissões  
- Requer as seguintes permissões em uma tabela que é especificado pelo *tabela* valor para obter informações de controle de alterações:  
+ Requer as seguintes permissões em uma tabela que é especificado pela *tabela* valor para obter informações de controle de alterações:  
   
 -   Permissão SELECT nas colunas de chave primária  
   

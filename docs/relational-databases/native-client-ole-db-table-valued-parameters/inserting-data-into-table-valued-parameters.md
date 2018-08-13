@@ -16,25 +16,25 @@ caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: da365c8b6e087f75c15cd406bfffcb3512f728b6
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 14ad378ab6d4f80cf416e78ab8cd9bc89b62a32c
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37408015"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39532686"
 ---
 # <a name="inserting-data-into-table-valued-parameters"></a>Inserindo dados em parâmetros com valor de tabela
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider oferece suporte a dois modelos para o consumidor especificar dados para linhas de parâmetro com valor de tabela: um modelo de push e um modelo de pull. Um exemplo que demonstra o modelo de pull está disponível. ver [exemplos de programação de dados do SQL Server](http://msftdpprodsamples.codeplex.com/).  
+  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider oferece suporte a dois modelos para o consumidor especificar dados para linhas de parâmetro com valor de tabela: um modelo de push e um modelo de pull. Uma amostra que apresenta o modelo de pull está disponível; confira [Amostras de programação do SQL Server Data](http://msftdpprodsamples.codeplex.com/).  
   
 > [!NOTE]  
 >  Uma coluna de parâmetro com valor de tabela deve ter valores não padrão em todas as linhas ou valores padrão em todas as linhas. Não é possível ter valores padrão em algumas linhas, mas não em outras. Dessa forma, em associações de parâmetro com valor de tabela, os únicos valores de status permitidos para os dados da coluna do conjunto de linhas do parâmetro com valor de tabela são DBSTATUS_S_ISNULL e DBSTATUS_S_OK. DBSTATUS_S_DEFAULT resultará em falha e o valor de status associado será definido como DBSTATUS_E_BADSTATUS.  
   
 ## <a name="push-model-loads-all-table-valued-paremeter-data-in-memory"></a>Modelo de push (carrega todos os dados do parâmetro com valor de tabela na memória)  
- O modelo de push é semelhante ao uso de conjuntos de parâmetros (ou seja, o parâmetro DBPARAMS em ICommand:: execute). O modelo de push é usado somente se os objetos de conjunto de linhas de parâmetro com valor de tabela são usados sem uma implementação personalizada de interfaces IRowset. O modelo de push é recomendado quando o número de linhas no conjunto de linhas do parâmetro com valor de tabela é pequeno e não se espera que uma pressão excessiva de memória seja colocada no aplicativo. Esse modelo é mais simples do que o modelo de pull, pois não exige nenhuma outra funcionalidade do aplicativo do consumidor daquela que seja atualmente comum em aplicativos OLE DB típicos.  
+ O modelo de push é semelhante ao uso de conjuntos de parâmetro (ou seja, o parâmetro DBPARAMS em ICommand::Execute). O modelo de push só será usado se forem usados objetos de conjunto de linhas de parâmetro com valor de tabela sem uma implementação personalizada de interfaces IRowset. O modelo de push é recomendado quando o número de linhas no conjunto de linhas do parâmetro com valor de tabela é pequeno e não se espera que uma pressão excessiva de memória seja colocada no aplicativo. Esse modelo é mais simples do que o modelo de pull, pois não exige nenhuma outra funcionalidade do aplicativo do consumidor daquela que seja atualmente comum em aplicativos OLE DB típicos.  
   
  Espera-se que o consumidor forneça todos os dados de parâmetro com valor de tabela ao provedor antes de executar um comando. Para fornecer os dados, o consumidor popula um objeto do conjunto de linhas de parâmetro com valor de tabela para cada parâmetro com valor de tabela. O objeto do conjunto de linhas de parâmetro com valor de tabela expõe operações Insert, Set e Delete do conjunto de linhas, que o consumidor usará para manipular os dados de parâmetro com valor de tabela. O provedor buscará os dados do objeto do conjunto de linhas de parâmetro com valor de tabela em tempo de execução.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "37408015"
   
  O provedor OLE DB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client lerá uma ou mais linhas no momento a partir do qual o objeto do conjunto de linhas do consumidor dará suporte ao comportamento de streaming nos parâmetros com valor de tabela. Por exemplo, o usuário pode ter os dados do conjunto de linhas de parâmetro com valor de tabela no disco (não na memória) e pode implementar a funcionalidade para ler dados do disco em caso de exigência do provedor OLE DB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
- O consumidor comunicará seu formato de dados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider usando IAccessor:: CreateAccessor no objeto de conjunto de linhas de parâmetro com valor de tabela. Ao ler dados do buffer do consumidor, o provedor verifica se todas as colunas graváveis e não padrão estão disponíveis através de pelo menos um identificador do acessador e usa os identificadores correspondentes para ler dados das colunas. Para evitar ambiguidade, deve haver uma correspondência direta entre uma coluna de conjunto de linhas de parâmetro com valor de tabela e uma associação. Associações duplicadas para a mesma coluna resultarão em um erro. Além disso, cada acessador deve ter o *iOrdinal* membro na sequência do DBBindings. Haverá tantas chamadas para IRowset:: GetData como o número de acessadores por linha e a ordem das chamadas será baseada na ordem dos *iOrdinal* valor de valores mais baixos até mais alto.  
+ O consumidor comunicará seu formato de dados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider usando IAccessor:: CreateAccessor no objeto de conjunto de linhas de parâmetro com valor de tabela. Ao ler dados do buffer do consumidor, o provedor verifica se todas as colunas graváveis e não padrão estão disponíveis através de pelo menos um identificador do acessador e usa os identificadores correspondentes para ler dados das colunas. Para evitar ambiguidade, deve haver uma correspondência um-para-um entre uma coluna do conjunto de linhas de parâmetro com valor de tabela e uma associação. Associações duplicadas para a mesma coluna resultarão em um erro. Além disso, cada acessador deve ter o *iOrdinal* membro na sequência do DBBindings. Haverá mais chamadas a IRowset::GetData que o número de acessadores por linha, e a ordem das chamadas será baseada na ordem do valor de *iOrdinal*, dos valores mais baixos até os mais altos.  
   
  É esperado que o provedor implemente a maioria das interfaces exposta pelo objeto do conjunto de linhas de parâmetro com valor de tabela. O consumidor implementará um objeto de conjunto de linhas com interfaces mínimas (IRowset). Por causa de agregação cega, as interfaces obrigatórias restantes do objeto de conjunto de linhas serão implementadas pelo objeto do conjunto de linhas de parâmetro com valor de tabela.  
   

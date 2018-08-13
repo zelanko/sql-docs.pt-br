@@ -25,13 +25,13 @@ caps.latest.revision: 35
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9a19ff47d576a7a2ffe5a72f609a27d5c1214f70
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 561af4e645f757880a3b5319f437e21e9e97a526
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37993888"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39549176"
 ---
 # <a name="syssysdatabases-transact-sql"></a>sys.sysdatabases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "37993888"
 |**name**|**sysname**|Nome do banco de dados|  
 |**dbid**|**smallint**|ID do banco de dados|  
 |**sid**|**varbinary(85)**|ID de sistema do designer do banco de dados|  
-|**modo**|**smallint**|Usado internamente para bloquear um banco de dados enquanto ele é criado.|  
+|**Modo**|**smallint**|Usado internamente para bloquear um banco de dados enquanto ele é criado.|  
 |**status**|**int**|Bits de status, algumas das quais podem ser definidas usando [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) conforme observado:<br /><br /> 1 = **autoclose** (ALTER DATABASE)<br /><br /> 4 = **select em / bulkcopy** (ALTER DATABASE usando SET RECOVERY)<br /><br /> 8 = **trunc. log no ponto de verificação** (ALTER DATABASE usando SET RECOVERY)<br /><br /> 16 = **interrompida a detecção de página** (ALTER DATABASE)<br /><br /> 32 = **carregando**<br /><br /> 64 = **pré-recuperação**<br /><br /> 128 = **recovering**<br /><br /> 256 = **não recuperado**<br /><br /> 512 = **offline** (ALTER DATABASE)<br /><br /> 1024 = **somente leitura** (ALTER DATABASE)<br /><br /> 2048 = **uso apenas do dbo** (ALTER DATABASE usando SET RESTRICTED_USER)<br /><br /> 4096 = **único usuário** (ALTER DATABASE)<br /><br /> 32768 = **modo de emergência**<br /><br /> 65536 = **SOMA DE VERIFICAÇÃO** (ALTER DATABASE)<br /><br /> 4194304 = **autoshrink** (ALTER DATABASE)<br /><br /> 1073741824 = **desligar corretamente**<br /><br /> Vários bits podem ser ON ao mesmo tempo.|  
 |**status2**|**int**|16384 = **padrão ANSI null** (ALTER DATABASE)<br /><br /> 65536 = **concatenar nulo produz nulo** (ALTER DATABASE)<br /><br /> 131072 = **gatilhos recursivos** (ALTER DATABASE)<br /><br /> 1048576 = **padronizar para cursor local** (ALTER DATABASE)<br /><br /> 8388608 = **identificador entre aspas** (ALTER DATABASE)<br /><br /> 33554432 = **fechar cursor ao confirmar** (ALTER DATABASE)<br /><br /> 67108864 = **ANSI nulls** (ALTER DATABASE)<br /><br /> 268435456 = **ANSI warnings** (ALTER DATABASE)<br /><br /> 536870912 = **habilitado de texto completo** (definir utilizando **sp_fulltext_database**)|  
 |**crdate**|**datetime**|Data de criação|  

@@ -22,13 +22,13 @@ caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 484008523d109f8852cdef34911c52d8f081218f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 7c04b6daf385a80f82dc39e1b1891f737e7fb19a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246134"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39544636"
 ---
 # <a name="sprecompile-transact-sql"></a>sp_recompile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_recompile [ @objname = ] 'object'
   
 ## <a name="arguments"></a>Argumentos  
  [ @objname=] '*objeto*'  
- O nome qualificado ou não qualificado de um procedimento armazenado, gatilho, tabela, exibição ou função definida pelo usuário no banco de dados atual. *objeto* é **nvarchar(776)**, sem padrão. Se *objeto* é o nome de um gatilho de função definida pelo usuário, o procedimento armazenado, gatilho ou procedimento armazenado ou função será recompilado na próxima vez que ele é executado. Se *objeto* é o nome de uma tabela ou exibição, todos os procedimentos armazenados, gatilhos ou funções definidas pelo usuário que fazem referência a tabela ou exibição serão recompiladas na próxima vez que forem executados.  
+ O nome qualificado ou não qualificado de um procedimento armazenado, gatilho, tabela, exibição ou função definida pelo usuário no banco de dados atual. *objeto* está **nvarchar(776)**, sem padrão. Se *objeto* é o nome de um gatilho de função definida pelo usuário, o procedimento armazenado, gatilho ou procedimento armazenado ou função será recompilado na próxima vez que for executado. Se *objeto* é o nome de uma tabela ou exibição, todos os procedimentos armazenados, gatilhos ou funções definidas pelo usuário que referenciam a tabela ou exibição serão recompiladas na próxima vez que forem executados.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou um número diferente de zero (falha)  

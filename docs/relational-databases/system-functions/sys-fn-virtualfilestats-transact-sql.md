@@ -1,5 +1,5 @@
 ---
-title: fn_virtualfilestats (Transact-SQL) | Microsoft Docs
+title: sys. fn_virtualfilestats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/16/2016
 ms.prod: sql
@@ -25,18 +25,18 @@ caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 396eee771ece7036906d1ef8e09cc69c1ab2c1da
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 897c50ffd93d3d01f04b0f2c87497b3f2e3142b6
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238255"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39542886"
 ---
 # <a name="sysfnvirtualfilestats-transact-sql"></a>sys.fn_virtualfilestats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retorna estatísticas de E/S para arquivos de banco de dados, incluindo arquivos de log. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essas informações também estão disponíveis a partir de [sys.DM io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) exibição de gerenciamento dinâmico.  
+  Retorna estatísticas de E/S para arquivos de banco de dados, incluindo arquivos de log. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essas informações também estão disponíveis a partir de [DM io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) exibição de gerenciamento dinâmico.  
 
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,7 +52,7 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
  É a ID do banco de dados. *database_id* é **int**, sem padrão. Especifique NULL para retornar informações de todos os bancos de dados na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  *file_id* | NULL  
- É a ID do arquivo. *file_id* é **int**, sem padrão. Especifique NULL para retornar informações de todos os arquivos do banco de dados.  
+ É a ID do arquivo. *file_id* está **int**, sem padrão. Especifique NULL para retornar informações de todos os arquivos do banco de dados.  
   
 ## <a name="table-returned"></a>Tabela retornada  
   
@@ -69,10 +69,10 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 |**IoStallWriteMS**|**bigint**|Período de tempo total, em milissegundos, que os usuários esperaram pela conclusão das E/Ss de gravação no arquivo.|  
 |**IoStallMS**|**bigint**|Soma de **IoStallReadMS** e **IoStallWriteMS**.|  
 |**FileHandle**|**bigint**|Valor do identificador de arquivo.|  
-|**BytesOnDisk**|**bigint**|Tamanho do arquivo físico (contagem de bytes) em disco.<br /><br /> Para arquivos de banco de dados, este é o mesmo valor como **tamanho** na **sys. database_files**, mas é expresso em bytes em vez de páginas.<br /><br /> Para arquivos esparsos de instantâneo do banco de dados, este é o espaço que o sistema operacional está usando para o arquivo.|  
+|**BytesOnDisk**|**bigint**|Tamanho do arquivo físico (contagem de bytes) em disco.<br /><br /> Para arquivos de banco de dados, isso é o mesmo valor que **tamanho** na **sys. database_files**, mas é expresso em bytes em vez de páginas.<br /><br /> Para arquivos esparsos de instantâneo do banco de dados, este é o espaço que o sistema operacional está usando para o arquivo.|  
   
 ## <a name="remarks"></a>Remarks  
- **fn_virtualfilestats** é um função com valor de tabela que fornece informações estatísticas, como o número total de e/SS executada em um arquivo de sistema. Você pode usar essa função para ajudar a manter o controle do período de tempo que os usuários esperaram para ler ou gravar em um arquivo. A função também ajuda a identificar os arquivos que encontram grande quantidade de atividade de E/S.  
+ **fn_virtualfilestats** é um sistema de função com valor de tabela que fornece informações de estatísticas, como o número total de e/SS realizada em um arquivo. Você pode usar essa função para ajudar a manter o controle do período de tempo que os usuários esperaram para ler ou gravar em um arquivo. A função também ajuda a identificar os arquivos que encontram grande quantidade de atividade de E/S.  
   
 ## <a name="permissions"></a>Permissões  
  , é necessário ter permissão VIEW SERVER STATE no servidor.  
