@@ -20,15 +20,15 @@ caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5f4527068d0fd0f83987f5e145226c091a7913c0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 424691b34fdb393f23288ef11ae0d1b84a31b3c9
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38005809"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39550916"
 ---
-# <a name="annotation-interpretation---sqloverflow-field"></a>Interpretação de anotação – SQL: overflow-campo
+# <a name="annotation-interpretation---sqloverflow-field"></a>Interpretação de anotação – sql:overflow-field
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Em um esquema, você pode identificar uma coluna de estouro para receber todos os dados não consumidos do documento XML. Esta coluna é especificada no esquema usando o **SQL: overflow-campo** anotação. É possível ter várias colunas de estouro.  
   

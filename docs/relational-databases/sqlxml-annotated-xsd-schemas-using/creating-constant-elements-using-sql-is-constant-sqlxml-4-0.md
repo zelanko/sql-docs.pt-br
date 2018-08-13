@@ -23,13 +23,13 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 81ee34607d198e88eee397b9c9f254f2133d1b22
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 8bf343e639eb17b370729f22e45385ebfd53d7b0
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32969381"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39538426"
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>Criando elementos constantes usando sql:is-constant (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "32969381"
   
 -   Adicionar um elemento de nível superior ao documento XML. XML requer um único elemento de nível superior (elemento root) para o documento.  
   
--   Criar elementos de contêiner, como um  **\<pedidos >** elemento que encapsula todas as ordens.  
+-   Criar elementos de contêiner, como um  **\<pedidos >** elemento que envolva todos os pedidos.  
   
  O **sql: constante é** anotação pode ser adicionada a um  **\<complexType >** elemento.  
   
@@ -47,9 +47,9 @@ ms.locfileid: "32969381"
  Para criar exemplos de funcionamento usando os exemplos a seguir, é necessário atender a determinados requisitos. Para obter mais informações, consulte [requisitos para executar exemplos do SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-sqlis-constant-to-add-a-container-element"></a>A. Especificando sql:is-constant para adicionar um elemento do contêiner  
- Neste anotado no esquema XSD,  **\<CustomerOrders >** é definido como um elemento constante especificando o **sql: constante é** atributo com um valor de 1. Portanto,  **\<CustomerOrders >** não está mapeada para nenhuma tabela de banco de dados ou coluna. Esse elemento constante consiste de  **\<ordem >** elementos filho.  
+ Neste esquema XSD, anotado  **\<CustomerOrders >** é definido como um elemento constante especificando o **sql: constante é** atributo com um valor de 1. Portanto,  **\<CustomerOrders >** não está mapeado para nenhuma tabela de banco de dados ou coluna. Esse elemento constante consiste as  **\<ordem >** elementos filho.  
   
- Embora  **\<CustomerOrders >** não é mapeado para nenhuma tabela de banco de dados ou coluna, ele ainda aparece no XML resultante como um elemento de contêiner que contém o  **\<ordem >** elementos filho.  
+ Embora  **\<CustomerOrders >** não é mapeado para nenhuma tabela de banco de dados ou coluna, ele ainda aparece no XML resultante como um elemento de contêiner que contém o  **\<Order >** elementos filho.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

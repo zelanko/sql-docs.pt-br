@@ -1,5 +1,5 @@
 ---
-title: 'Criar válido ID-IDREF-IDREFS digite atributos - SQL: Prefix (SQLXML 4.0) | Microsoft Docs'
+title: 'Criar válido a ID de IDREF de IDREFS digite atributos - SQL: Prefix (SQLXML 4.0) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -27,19 +27,19 @@ caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 891182053b28673b8a7a16c484b591f4924f3842
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: d7d84cbb4d4ca2fc7646d794698fe7c10e8188c9
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32970421"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39547586"
 ---
 # <a name="creating-valid-id-idref-and-idrefs-type-attributes-using-sqlprefix-sqlxml-40"></a>Criando atributos de tipo ID, IDREF e IDREFS válidos usando sql:prefix (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Um atributo pode ser especificado como um atributo de tipo ID. Atributos especificados como IDREF ou IDREFS poderão, então, ser usados para fazer referência aos atributos de tipo ID, permitindo vínculos entre documentos.  
   
- ID, IDREF e IDREFS correspondem a relações do PK/FK (chave primária/estrangeira chave) no banco de dados, com algumas diferenças. Em um documento XML, os valores de atributos de tipo ID devem ser distintos. Se **CustomerID** e **OrderID** atributos são especificados como tipo ID em um documento XML, esses valores devem ser distintos. No entanto, em um banco de dados, as colunas CustomerID e OrderID podem ter os mesmos valores. (Por exemplo, CustomerID = 1 e OrderID = 1 são válidos no banco de dados.)  
+ ID, IDREF e IDREFS correspondem às relações do PK/FK (chave estrangeira/chave primária) no banco de dados, com algumas diferenças. Em um documento XML, os valores de atributos de tipo ID devem ser distintos. Se **CustomerID** e **OrderID** atributos são especificados como tipo ID em um documento XML, esses valores devem ser distintos. No entanto, em um banco de dados, as colunas CustomerID e OrderID podem ter os mesmos valores. (Por exemplo, CustomerID = 1 e OrderID = 1 são válidos no banco de dados.)  
   
  Para que os atributos ID, IDREF e IDREFS sejam válidos:  
   
@@ -49,7 +49,7 @@ ms.locfileid: "32970421"
   
 -   O valor de um atributo ID, IDREF e IDREFS deve ser um token nomeado. (Por exemplo, o valor inteiro 101 não pode ser um valor de ID.)  
   
--   Os atributos de tipo ID, IDREF e IDREFS não podem ser mapeados para colunas do tipo **texto**, **ntext**, ou **imagem** ou qualquer outro tipo de dados binários (por exemplo, **timestamp**).  
+-   Os atributos de tipo ID, IDREF e IDREFS não podem ser mapeados para colunas do tipo **texto**, **ntext**, ou **imagem** ou qualquer outro tipo de dados binários (por exemplo, **carimbo de hora**).  
   
  Se um documento XML contiver várias IDs, use o **SQL: prefix** anotação para garantir que os valores sejam exclusivos.  
   
@@ -59,9 +59,9 @@ ms.locfileid: "32970421"
  Para criar exemplos de funcionamento usando os exemplos a seguir, é necessário atender a determinados requisitos. Para obter mais informações, consulte [requisitos para executar exemplos do SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-id-and-idrefs-types"></a>A. Especificando os tipos ID e IDREFS  
- No esquema a seguir, o  **\<cliente >** elemento consiste de  **\<ordem >** elemento filho. O  **\<ordem >** elemento também tem um elemento filho, o  **\<OrderDetail >** elemento.  
+ No esquema a seguir, o  **\<cliente >** elemento consiste o  **\<Order >** elemento filho. O  **\<ordem >** elemento também tem um elemento filho, o  **\<OrderDetail >** elemento.  
   
- O **OrderIDList** atributo de  **\<cliente >** é um atributo de tipo IDREFS que se refere ao **OrderID** atributo do  **\< Ordem >** elemento.  
+ O **OrderIDList** atributo do  **\<cliente >** é um atributo de tipo IDREFS que se refere ao **OrderID** atributo do  **\< Ordem >** elemento.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

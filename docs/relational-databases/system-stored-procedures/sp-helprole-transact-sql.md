@@ -22,13 +22,13 @@ caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: cd4ea621669688065075a3ff3894bbce369a54a1
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 10d457eaf25531790df63d4128a3d77d4ed30fb9
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250262"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39538396"
 ---
 # <a name="sphelprole-transact-sql"></a>sp_helprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_helprole [ [ @rolename = ] 'role' ]
   
 ## <a name="arguments"></a>Argumentos  
  [  **@rolename =** ] **'***função***'**  
- É o nome de uma função do banco de dados atual. *função* é **sysname**, com um padrão NULL. *função* deve existir no banco de dados atual. Se *função* não é especificado, serão retornadas informações sobre todas as funções de banco de dados atual.  
+ É o nome de uma função do banco de dados atual. *função* está **sysname**, com um padrão NULL. *função* deve existir no banco de dados atual. Se *função* não é especificado, serão retornadas informações sobre todas as funções de banco de dados atual.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -56,11 +56,11 @@ sp_helprole [ [ @rolename = ] 'role' ]
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**RoleName**|**sysname**|Nome da função no banco de dados atual.|  
-|**RoleId**|**smallint**|ID do **RoleName**.|  
-|**IsAppRole**|**Int**|0 = **RoleName** não é uma função de aplicativo.<br /><br /> 1 = **RoleName** é uma função de aplicativo.|  
+|**RoleId**|**smallint**|ID da **RoleName**.|  
+|**IsAppRole**|**int**|0 = **RoleName** não é uma função de aplicativo.<br /><br /> 1 = **RoleName** é uma função de aplicativo.|  
   
 ## <a name="remarks"></a>Remarks  
- Para exibir as permissões associadas com a função, use **sp_helprotect**. Para exibir os membros de uma função de banco de dados, use **sp_helprolemember**.  
+ Para exibir as permissões associadas à função, use **sp_helprotect**. Para exibir os membros de uma função de banco de dados, use **sp_helprolemember**.  
   
 ## <a name="permissions"></a>Permissões  
  Requer associação à função **pública** .  

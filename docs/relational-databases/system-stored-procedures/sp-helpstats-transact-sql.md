@@ -22,13 +22,13 @@ caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: eda430dedf39538c27f85d0ea11ca59bbfdc5e20
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 42d35f6890a5bfc686274510ee7ed4328e2860c8
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251632"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39547556"
 ---
 # <a name="sphelpstats-transact-sql"></a>sp_helpstats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "33251632"
   Retorna informações de estatísticas sobre colunas e índices na tabela especificada.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)] Para obter informações sobre estatísticas, consulte o [Stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) e [stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) exibições do catálogo.  
+>  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)] Para obter informações sobre estatísticas, consulte o [sys. Stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md) e [sys. stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) exibições do catálogo.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,10 +50,10 @@ sp_helpstats[ @objname = ] 'object_name'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@objname=**] **'***object_name***'**  
- Especifica a tabela na qual fornecer informações de estatísticas. *object_name* é **nvarchar(520)** e não pode ser nulo. Um nome de uma ou duas partes pode ser especificado.  
+ Especifica a tabela na qual fornecer informações de estatísticas. *object_name* está **nvarchar(520)** e não pode ser nulo. Um nome de uma ou duas partes pode ser especificado.  
   
  [  **@results=**] **'***valor***'**  
- Especifica a extensão de informações a fornecer. As entradas válidas são **todos os** e **estatísticas**. **Todos os** lista estatísticas para todos os índices e também colunas que têm as estatísticas criadas; **Estatísticas** lista apenas estatísticas não associadas a um índice. *valor* é **nvarchar (5)** com um padrão de estatísticas.  
+ Especifica a extensão de informações a fornecer. As entradas válidas são **todos os** e **estatísticas**. **Todos os** lista estatísticas para todos os índices e também as colunas que têm as estatísticas criadas; **STATS** lista apenas estatísticas não associadas a um índice. *valor* está **nvarchar (5)** com um padrão de STATS.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  

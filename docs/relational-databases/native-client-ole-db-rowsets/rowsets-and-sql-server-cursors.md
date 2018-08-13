@@ -20,13 +20,13 @@ caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 248e8e523e5ad261c261c1eb47d6cc0f64ee58fa
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 95e1b7b3d92c74b7e2a57fc311cd7ccb407fa4fc
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37412164"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39551026"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>Conjuntos de linha e cursores do SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -75,13 +75,13 @@ ms.locfileid: "37412164"
 |DBPROP_BOOKMARKS ou DBPROP_LITERALBOOKMARKS|VARIANT_TRUE|Não é possível atualizar os dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no conjunto de linhas. O conjunto de linhas é sequencial, o que oferece suporte apenas ao roll-forward e à busca. Há suporte para o posicionamento de linha relativo. O texto do comando pode conter uma cláusula ORDER BY.|  
 |DBPROP_OWNUPDATEDELETE ou DBPROP_OWNINSERT ou DBPROP_OTHERUPDATEDELETE|VARIANT_TRUE|Não é possível atualizar os dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no conjunto de linhas. O conjunto de linhas oferece suporte à rolagem e à busca em qualquer direção. Há suporte para o posicionamento de linha relativo. O texto do comando pode conter uma cláusula ORDER BY.|  
 |DBPROP_OTHERINSERT|VARIANT_TRUE|Não é possível atualizar os dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no conjunto de linhas. O conjunto de linhas oferece suporte à rolagem e à busca em qualquer direção. Há suporte para o posicionamento de linha relativo. O texto do comando pode incluir uma cláusula ORDER BY caso haja um índice nas colunas referenciadas.<br /><br /> DBPROP_OTHERINSERT não pode ser VARIANT_TRUE caso o conjunto de linhas contenha indicadores. Tentar criar um conjunto de linhas com essa propriedade de visibilidade e indicadores causa um erro.|  
-|DBPROP_IRowsetLocate ou DBPROP_IRowsetScroll|VARIANT_TRUE|Não é possível atualizar os dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no conjunto de linhas. O conjunto de linhas oferece suporte à rolagem e à busca em qualquer direção. Indicadores e o posicionamento absoluto por meio de **IRowsetLocate** interface têm suporte no conjunto de linhas. O texto do comando pode conter uma cláusula ORDER BY.<br /><br /> DBPROP_IRowsetLocate e DBPROP_IRowsetScroll exigem marcadores no conjunto de linhas. Tentar criar um conjunto de linhas com indicadores e DBPROP_OTHERINSERT definidos como VARIANT_TRUE causa um erro.|  
+|DBPROP_IRowsetLocate ou DBPROP_IRowsetScroll|VARIANT_TRUE|Não é possível atualizar os dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no conjunto de linhas. O conjunto de linhas oferece suporte à rolagem e à busca em qualquer direção. Há suporte para indicadores e posicionamento absoluto por meio da interface **IRowsetLocate** no conjunto de linhas. O texto do comando pode conter uma cláusula ORDER BY.<br /><br /> DBPROP_IRowsetLocate e DBPROP_IRowsetScroll exigem marcadores no conjunto de linhas. Tentar criar um conjunto de linhas com indicadores e DBPROP_OTHERINSERT definidos como VARIANT_TRUE causa um erro.|  
 |DBPROP_IRowsetChange ou DBPROP_IRowsetUpdate|VARIANT_TRUE|É possível atualizar os dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por meio do conjunto de linhas. O conjunto de linhas é sequencial, o que oferece suporte apenas ao roll-forward e à busca. Há suporte para o posicionamento de linha relativo. Todos os comandos que oferecem suporte a cursores atualizáveis podem oferecer suporte a essas interfaces.|  
-|DBPROP_IRowsetLocate ou DBPROP_IRowsetScroll e DBPROP_IRowsetChange ou DBPROP_IRowsetUpdate|VARIANT_TRUE|É possível atualizar os dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por meio do conjunto de linhas. O conjunto de linhas oferece suporte à rolagem e à busca em qualquer direção. Indicadores e o posicionamento absoluto por meio **IRowsetLocate** têm suporte no conjunto de linhas. O texto do comando pode conter uma cláusula ORDER BY.|  
+|DBPROP_IRowsetLocate ou DBPROP_IRowsetScroll e DBPROP_IRowsetChange ou DBPROP_IRowsetUpdate|VARIANT_TRUE|É possível atualizar os dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por meio do conjunto de linhas. O conjunto de linhas oferece suporte à rolagem e à busca em qualquer direção. Há suporte para indicadores e posicionamento absoluto por meio de **IRowsetLocate** no conjunto de linhas. O texto do comando pode conter uma cláusula ORDER BY.|  
 |DBPROP_IMMOBILEROWS|VARIANT_FALSE|Não é possível atualizar os dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no conjunto de linhas. O conjunto de linhas oferece suporte apenas a roll-forward. Há suporte para o posicionamento de linha relativo. O texto do comando pode incluir uma cláusula ORDER BY caso haja um índice nas colunas referenciadas.<br /><br /> DBPROP_IMMOBILEROWS só está disponível em conjuntos de linhas capazes de mostrar linhas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inseridas por comandos em outras sessões ou por outros usuários. Tentar abrir um conjunto de linhas com a propriedade definida como VARIANT_FALSE em qualquer conjunto de linhas em que DBPROP_OTHERINSERT não pode ser VARIANT_TRUE causa um erro.|  
 |DBPROP_REMOVEDELETED|VARIANT_TRUE|Não é possível atualizar os dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no conjunto de linhas. O conjunto de linhas oferece suporte apenas a roll-forward. Há suporte para o posicionamento de linha relativo. O texto do comando pode conter uma cláusula ORDER BY, exceto quando restrito por outra propriedade.|  
   
- Um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conjunto de linhas do provedor OLE DB do Native Client tem suportado por um cursor de servidor pode ser facilmente criado em uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabela base ou exibição usando o **IOpenRowset:: OPENROWSET** método. Especifique a tabela ou exibição por nome, passando o conjunto de linhas necessário conjuntos de propriedades na *rgPropertySets* parâmetro.  
+ Um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conjunto de linhas do provedor OLE DB do Native Client tem suportado por um cursor de servidor pode ser facilmente criado em uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabela base ou exibição usando o **IOpenRowset:: OPENROWSET** método. Especifique a tabela ou a exibição por nome, passando os conjuntos de propriedades do conjunto de linhas necessários no parâmetro *rgPropertySets*.  
   
  O texto do comando que cria um conjunto de linhas é restringido quando o consumidor exige que haja suporte ao conjunto por um cursor de servidor. Mais especificamente, o texto do comando é restringido a uma única instrução SELECT que retorna um único resultado do conjunto de linhas ou um procedimento armazenado que implementa uma única instrução SELECT que retorna um único resultado do conjunto de linhas.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "37412164"
   
  Para usar um determinado tipo de modelo de cursor, localize a coluna correspondente ao modelo de cursor e encontre todas as propriedades do conjunto de linhas com o valor 'T' na coluna. Defina essas propriedades do conjunto de linhas como VARIANT_TRUE para usar o modelo de cursor específico. As propriedades do conjunto de linhas com '-' como um valor podem ser definidas como VARIANT_TRUE ou VARIANT_FALSE.  
   
-|Conjunto de linhas propriedades/modelos de cursor|Padrão<br /><br /> result<br /><br /> set<br /><br /> (RO)|Rápido<br /><br /> avanço<br /><br /> rápido<br /><br /> (RO)|Estático<br /><br /> (RO)|Keyset<br /><br /> por conjunto de chaves<br /><br /> (RO)|  
+|Propriedades do conjunto de linhas/modelos de cursor|Padrão<br /><br /> result<br /><br /> set<br /><br /> (RO)|Rápido<br /><br /> avanço<br /><br /> rápido<br /><br /> (RO)|Estático<br /><br /> (RO)|Keyset<br /><br /> por conjunto de chaves<br /><br /> (RO)|  
 |--------------------------------------|-------------------------------------------|--------------------------------------------|-----------------------|----------------------------------|  
 |DBPROP_SERVERCURSOR|F|T|T|T|  
 |DBPROP_DEFERRED|F|F|-|-|  
@@ -154,7 +154,7 @@ ms.locfileid: "37412164"
 ## <a name="sql-server-cursor-block-size"></a>Tamanho do bloco de cursor do SQL Server  
  Quando um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cursor dá suporte a uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conjunto de linhas de provedor OLE DB do Native Client, o número de elementos na linha de parâmetro de matriz de lidar com o **IRowset::** ou o **irowsetlocate:: Getrowsat**  métodos define o tamanho do bloco de cursor. As linhas apontadas pelos identificadores na matriz são os membros do bloco de cursor.  
   
- Para dar suporte a indicadores de conjuntos de linhas, os identificadores de linha recuperados usando o **irowsetlocate:: Getrowsbybookmark** método definir os membros do bloco de cursor.  
+ Para conjuntos de linhas que dão suporte a indicadores, os identificadores de linha recuperados usando o método **IRowsetLocate::GetRowsByBookmark** definem os membros do bloco de cursor.  
   
  Independentemente do método usado para preencher o conjunto de linhas e formar o bloco de cursor do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o bloco permanece ativo até que o próximo método de busca de linhas seja executado no conjunto.  
   

@@ -22,13 +22,13 @@ caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6c1a53e05eef89584526846c3f3d3c6324164a94
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 50cdd3f06007da369aab4055e385cb82fdf3b5b3
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38018400"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39542916"
 ---
 # <a name="spfulltextcolumn-transact-sql"></a>sp_fulltext_column (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -82,7 +82,7 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhum  
+ None  
   
 ## <a name="remarks"></a>Remarks  
  Se o índice de texto completo estiver ativo, qualquer população em andamento será interrompida. Além disso, se o controle de alterações estiver habilitado em uma tabela com um índice de texto completo ativo, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assegura que o índice seja atual. Por exemplo, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interrompe qualquer população atual na tabela, descarta o índice existente e inicia uma nova população.  

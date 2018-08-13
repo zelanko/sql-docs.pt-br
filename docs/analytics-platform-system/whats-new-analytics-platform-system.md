@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: b1eee6b3ca692c7935b061696b37842cda0f8326
-ms.sourcegitcommit: 1d81c645dd4fb2f0a6f090711719528995a34583
+ms.openlocfilehash: b4059d9460eec5cd69e6e8b4a2f2ac95af5b3d0e
+ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/30/2018
-ms.locfileid: "37137885"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39400639"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>O que há de novo no Analytics Platform System, um data warehouse MPP de escalabilidade horizontal
 Veja o que há de novo nas atualizações mais recentes do dispositivo para o Microsoft® Analytics Platform System (APS). Pontos de acesso é um dispositivo de escalabilidade horizontal no local que hospeda o MPP SQL Server Parallel Data Warehouse. 
@@ -25,7 +25,7 @@ Veja o que há de novo nas atualizações mais recentes do dispositivo para o Mi
 APS 2016 é um pré-requisito para atualizar para AU7. A seguir é novos no APS AU7:
 
 ### <a name="auto-create-and-auto-update-statistics"></a>Criação automática e a atualização automática de estatísticas
-APS AU7 cria e atualiza as estatísticas automaticamente, por padrão. Para atualizar as configurações de estatísticas, os administradores podem usar um novo item de menu do comutador de recurso nas [Configuration Manager](appliance-configuration.md#CMTasks). O [comutador de recurso](appliance-feature-switch.md) controla a auto-create, a atualização automática e o comportamento de atualização assíncrona de estatísticas. Você também pode atualizar as configurações de estatísticas com o [ALTER DATABASE (Parallel Data Warehouse)](/sql/t-sql/statements/alter-database-parallel-data-warehouse) instrução.
+APS AU7 cria e atualiza as estatísticas automaticamente, por padrão. Para atualizar as configurações de estatísticas, os administradores podem usar um novo item de menu do comutador de recurso nas [Configuration Manager](appliance-configuration.md#CMTasks). O [comutador de recurso](appliance-feature-switch.md) controla a auto-create, a atualização automática e o comportamento de atualização assíncrona de estatísticas. Você também pode atualizar as configurações de estatísticas com o [ALTER DATABASE (Parallel Data Warehouse)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw) instrução.
 
 ### <a name="t-sql"></a>T-SQL
 Selecione @var agora tem suporte. Para obter mais informações, consulte [Selecione variável local] (/ sql/t-sql/language-elements/select-local-variable-transact-sql) 

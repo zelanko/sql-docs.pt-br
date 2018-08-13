@@ -23,13 +23,13 @@ caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 16d750e07e8c61959e43fe15e1e3cfb47c8bf1c0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: ce5a2f5350a16024dcefbdd3e162212a60d98059
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261665"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39555676"
 ---
 # <a name="spgetapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
   
 ## <a name="arguments"></a>Argumentos  
  [ @Resource=] '*resource_name*'  
- É uma cadeia de caracteres especificando um nome que identifica o recurso de bloqueio. O aplicativo deve garantir que o nome do recurso seja exclusivo. O nome especificado é internamente transformado em hash para um valor que pode ser armazenado no gerenciador de bloqueio do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *resource_name* é **nvarchar (255)** sem nenhum padrão. Se uma cadeia de caracteres do recurso é maior do que **nvarchar (255)**, ele será truncado para **nvarchar (255)**.  
+ É uma cadeia de caracteres especificando um nome que identifica o recurso de bloqueio. O aplicativo deve garantir que o nome do recurso seja exclusivo. O nome especificado é internamente transformado em hash para um valor que pode ser armazenado no gerenciador de bloqueio do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *resource_name* está **nvarchar (255)** sem nenhum padrão. Se uma cadeia de caracteres do recurso for maior que **nvarchar (255)**, ele será truncado para **nvarchar (255)**.  
   
  *resource_name* é binário comparado e, portanto, diferencia maiusculas de minúsculas, independentemente das configurações de agrupamento do banco de dados atual.  
   
@@ -60,21 +60,21 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 >  Depois que um bloqueio de aplicativo for adquirido, somente os primeiros 32 caracteres poderão ser recuperados em texto não criptografado, o restante será em modo hash.  
   
  [ @LockMode=] '*lock_mode*'  
- É o modo de bloqueio a ser obtido para um recurso específico. *lock_mode* é **nvarchar(32)** e não tem valor padrão. O valor pode ser qualquer um dos seguintes: **compartilhado**, **atualização**, **IntentShared**, **IntentExclusive**, ou **exclusivo** .  
+ É o modo de bloqueio a ser obtido para um recurso específico. *lock_mode* é **nvarchar(32)** e não tem valor padrão. O valor pode ser qualquer um dos seguintes: **Shared**, **atualização**, **IntentShared**, **IntentExclusive**, ou **exclusivo** .  
   
  [ @LockOwner=] '*lock_owner*'  
- É o proprietário do bloqueio, que é o valor de *lock_owner* quando o bloqueio foi solicitado. *lock_owner* é **nvarchar(32)**. O valor pode ser **Transaction** (o padrão) ou **Session**. Quando o *lock_owner* valor é **transação**, por padrão ou explicitamente especificado, sp_getapplock deve ser executado de dentro de uma transação.  
+ É o proprietário do bloqueio, que é o valor de *lock_owner* quando o bloqueio foi solicitado. *lock_owner* é **nvarchar(32)**. O valor pode ser **Transaction** (o padrão) ou **Session**. Quando o *lock_owner* valor estiver **transação**, por padrão ou explicitamente especificado, sp_getapplock deve ser executado de dentro de uma transação.  
   
  [ @LockTimeout=] '*valor*'  
- É um valor de tempo limite de bloqueio em milissegundos. O valor padrão é o mesmo que o valor retornado pelo@LOCK_TIMEOUT. Para indicar que uma solicitação de bloqueio deve retornar um erro em vez de esperar pelo bloqueio quando não for possível conceder a solicitação imediatamente, especifique 0.  
+ É um valor de tempo limite de bloqueio em milissegundos. O valor padrão é o mesmo que o valor retornado por@LOCK_TIMEOUT. Para indicar que uma solicitação de bloqueio deve retornar um erro em vez de esperar pelo bloqueio quando não for possível conceder a solicitação imediatamente, especifique 0.  
   
  [ @DbPrincipal=] '*database_principal*'  
- É o usuário, função ou função de aplicativo que tem permissões para um objeto em um banco de dados. O chamador da função deve ser um membro do *database_principal*, dbo, ou a função fixa db_owner banco de dados para chamar a função com êxito. O padrão é público.  
+ É o usuário, função ou função de aplicativo que tem permissões para um objeto em um banco de dados. O chamador da função deve ser um membro da *database_principal*, dbo ou db_owner fixa a função de banco de dados para chamar a função com êxito. O padrão é público.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  \>= 0 (êxito) ou < 0 (falha)  
   
-|Value|Resultado|  
+|Valor|Resultado|  
 |-----------|------------|  
 |0|O bloqueio foi concedido com sucesso de forma síncrona.|  
 |1|O bloqueio foi concedido com sucesso após outros bloqueios incompatíveis terem sido liberados.|  

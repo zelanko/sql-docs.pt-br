@@ -22,13 +22,13 @@ caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: db7c4131c564dad86abe569862b364fbcc6c7288
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 9d2b4e51dc08ba897145d689d5ea6a918e3e7afb
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242253"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39559446"
 ---
 # <a name="sphelpconstraint-transact-sql"></a>sp_helpconstraint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ sp_helpconstraint [ @objname = ] 'table'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@objname=** ] **'***tabela***'**  
- É a tabela sobre a qual as informações de restrição são retornadas. A tabela especificada deve ser local ao banco de dados atual. *tabela* é **nvarchar(776)**, sem padrão.  
+ É a tabela sobre a qual as informações de restrição são retornadas. A tabela especificada deve ser local ao banco de dados atual. *tabela* está **nvarchar(776)**, sem padrão.  
   
  [  **@nomsg=**] **'***no_message***'**  
- É um parâmetro opcional que imprime o nome da tabela. *no_message* é **varchar(5)**, com um padrão de **msg**. **nomsg** suprime a impressão.  
+ É um parâmetro opcional que imprime o nome da tabela. *no_message* está **varchar(5)**, com um padrão de **msg**. **nomsg** suprime a impressão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -59,7 +59,7 @@ sp_helpconstraint [ @objname = ] 'table'
  **sp_helpconstraint** exibe uma coluna indexada decrescente se ela participou de chaves primárias. A coluna indexada de maneira decrescente será listada no conjunto de resultados com um sinal de menos (-) após seu nome. O padrão, uma coluna indexada de maneira crescente, será listada apenas por seu nome.  
   
 ## <a name="remarks"></a>Remarks  
- Executar **sp_help * tabela* relata todas as informações sobre a tabela especificada. Para ver as informações de restrição, use **sp_helpconstraint**.  
+ Executar **sp_help * * * tabela* relata todas as informações sobre a tabela especificada. Para ver apenas as informações de restrição, use **sp_helpconstraint**.  
   
 ## <a name="permissions"></a>Permissões  
  Requer associação à função **pública** .  

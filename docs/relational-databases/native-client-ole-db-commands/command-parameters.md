@@ -19,13 +19,13 @@ ms.assetid: 072ead49-ebaf-41eb-9a0f-613e9d990f26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 37bf1eaf79ad3a26e5a1e19108850af05d276538
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: 805af790d5a703f1fefca6173b119586b002bd95
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37414425"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39550766"
 ---
 # <a name="command-parameters"></a>Parâmetros de comando
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "37414425"
   
  Para melhorar o desempenho, reduzindo o tráfego de rede, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB do Native Client não deriva automaticamente informações de parâmetro, a menos que **ICommandWithParameters:: Getparameterinfo** ou  **Icommandprepare:: Prepare** é chamado antes de executar um comando. Isso significa que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client não automaticamente:  
   
--   Verifique a exatidão do tipo de dados especificado com **ICommandWithParameters:: SetParameterInfo**.  
+-   Verifique a exatidão do tipo de dados especificado com **ICommandWithParameters::SetParameterInfo**.  
   
 -   Mapeie do DBTYPE especificado nas informações de associação do acessador para o tipo de dados correto do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do parâmetro.  
   
@@ -47,16 +47,16 @@ ms.locfileid: "37414425"
   
  Para garantir que isso não aconteça, o aplicativo deve:  
   
--   Certifique-se de que *pwszDataSourceType* corresponde a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados para o parâmetro de caso de hard-coding **ICommandWithParameters:: SetParameterInfo**.  
+-   Garantir que *pwszDataSourceType* corresponda aos tipos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do parâmetro em caso de hard-coding de **ICommandWithParameters::SetParameterInfo**.  
   
 -   Garantir que o valor DBTYPE associado ao parâmetro seja do mesmo tipo do tipo de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do parâmetro em caso de hard-coding de um acessador.  
   
--   Codificar o aplicativo chamar **ICommandWithParameters:: Getparameterinfo** para que o provedor possa obter o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de dados dos parâmetros dinamicamente. Observe que isso causa uma viagem de ida e volta na rede adicional até o servidor.  
+-   Codifique o aplicativo para chamar **ICommandWithParameters::GetParameterInfo** de forma que o provedor possa obter os tipos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dos parâmetros dinamicamente. Observe que isso causa uma viagem de ida e volta na rede adicional até o servidor.  
   
 > [!NOTE]  
->  O provedor não dá suporte a chamar **ICommandWithParameters:: Getparameterinfo** para qualquer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instrução UPDATE ou DELETE que contém uma cláusula FROM; para qualquer instrução SQL, dependendo de uma subconsulta que contenha parâmetros; para instruções SQL que contém os marcadores de parâmetro em ambas as expressões de comparação, como, ou predicado; quantificado ou consultas em que um dos parâmetros é um parâmetro para uma função. Ao processar um lote de instruções SQL, o provedor também não suporta chamada **ICommandWithParameters:: Getparameterinfo** para marcadores de parâmetro nas instruções após a primeira instrução no lote. Comentários (/ * \*/) não são permitidos no [!INCLUDE[tsql](../../includes/tsql-md.md)] comando.  
+>  O provedor não dá suporte à chamada a **ICommandWithParameters::GetParameterInfo** em nenhuma instrução UPDATE ou DELETE do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que contenha uma cláusula FROM; em qualquer instrução SQL que dependa de uma subconsulta que contenha parâmetros; em instruções SQL que contenham marcadores de parâmetro em expressões de uma comparação, semelhança ou predicado quantificado; ou em consultas nas quais um dos parâmetros é um parâmetro de uma função. Ao processar um lote de instruções SQL, o provedor também não dá suporte à chamada a **ICommandWithParameters::GetParameterInfo** em marcadores de parâmetro nas instruções após a primeira instrução no lote. Não são permitidos comentários (/* \*/) no comando [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client dá suporte a parâmetros de entrada em comandos de instrução SQL. Em comandos de chamada de procedimento, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client dá suporte a parâmetros de entrada/saída, de entrada e saída. Os valores de parâmetro de saída são retornados para o aplicativo na execução (apenas se não houver nenhum conjunto de linhas retornado) ou quando todos os conjuntos de linhas retornados são esgotados pelo aplicativo. Para garantir que os valores retornados são válidos, use **IMultipleResults** para forçar o consumo de conjunto de linhas.  
+ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client dá suporte a parâmetros de entrada em comandos de instrução SQL. Em comandos de chamada de procedimento, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client dá suporte a parâmetros de entrada/saída, de entrada e saída. Os valores de parâmetro de saída são retornados para o aplicativo na execução (apenas se não houver nenhum conjunto de linhas retornado) ou quando todos os conjuntos de linhas retornados são esgotados pelo aplicativo. Para garantir a validade dos valores retornados, use **IMultipleResults** para forçar o consumo do conjunto de linhas.  
   
  Os nomes dos parâmetros de procedimento armazenado não precisam ser especificados em uma estrutura DBPARAMBINDINFO. Use NULL para o valor da *pwszName* membro para indicar que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client deve ignorar o nome do parâmetro e usar apenas o ordinal especificado no *rgParamOrdinals*membro de **ICommandWithParameters:: SetParameterInfo**. Caso o texto do comando contenha parâmetros nomeados e sem-nome, todos os parâmetros sem-nome devem ser especificados antes de qualquer parâmetro nomeado.  
   

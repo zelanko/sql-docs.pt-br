@@ -23,13 +23,13 @@ caps.latest.revision: 19
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fdea1704b8942191bf79cb9074715f61eb9a9e81
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 29f366517986620444e018a5348e623aa541b00a
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260429"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39560626"
 ---
 # <a name="sphelplanguage-transact-sql"></a>sp_helplanguage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_helplanguage [ [ @language = ] 'language' ]
   
 ## <a name="arguments"></a>Argumentos  
  [  **@language=** ] **'***idioma***'**  
- É o nome do idioma alternativo para o qual exibir informações. *idioma* é **sysname**, com um padrão NULL. Se *idioma* for especificado, serão retornadas informações sobre o idioma especificado. Se o idioma não for especificado, informações sobre todos os idiomas no **sys. syslanguages** exibição de compatibilidade é retornada.  
+ É o nome do idioma alternativo para o qual exibir informações. *linguagem* está **sysname**, com um padrão NULL. Se *linguagem* for especificado, serão retornadas informações sobre o idioma especificado. Se o idioma não for especificado, informações sobre todos os idiomas na **sys. syslanguages** exibição de compatibilidade é retornada.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -59,13 +59,13 @@ sp_helplanguage [ [ @language = ] 'language' ]
 |**langid**|**smallint**|Número de identificação do idioma.|  
 |**dateformat**|**nchar(3)**|Formato da data.|  
 |**DATEFIRST**|**tinyint**|Primeiro dia da semana: 1 para segunda-feira, 2 para terça-feira e assim por diante, até 7 para domingo.|  
-|**Atualizar**|**Int**|Versão da última atualização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para este idioma.|  
+|**Atualizar**|**int**|Versão da última atualização do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para este idioma.|  
 |**name**|**sysname**|Nome do idioma.|  
 |**alias**|**sysname**|Nome alternativo do idioma.|  
-|**Meses**|**nvarchar(372)**|Nomes de meses.|  
+|**meses**|**nvarchar(372)**|Nomes de meses.|  
 |**shortmonths**|**nvarchar(132)**|Nomes abreviados de meses.|  
 |**Dias**|**nvarchar(217)**|Nomes de dias.|  
-|**lcid**|**Int**|ID de localidade do Windows para o idioma.|  
+|**LCID**|**int**|ID de localidade do Windows para o idioma.|  
 |**msglangid**|**smallint**|ID do grupo de mensagens do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
 ## <a name="permissions"></a>Permissões  

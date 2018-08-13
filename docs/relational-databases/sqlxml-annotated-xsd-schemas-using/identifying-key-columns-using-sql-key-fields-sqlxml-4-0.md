@@ -26,24 +26,24 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a96060e6efaf0623cbc4c9fb738af3863f1010fe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 3e75779626c8769c609fa27f97b44562d3e9a8aa
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32971321"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39535556"
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>Identificando colunas de chave usando campos sql:key (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Quando uma consulta XPath é especificada em um esquema XSD, as informações de chave são necessárias, na maioria das vezes, para obter o aninhamento adequado no resultado. Especificando o **SQL: Key-campos** anotação é uma maneira de garantir que a hierarquia apropriada seja gerada.  
+  Quando uma consulta XPath é especificada em um esquema XSD, as informações de chave são necessárias, na maioria das vezes, para obter o aninhamento adequado no resultado. Especificando o **SQL: Key-campos** anotação é uma maneira de garantir que a hierarquia apropriada é gerada.  
   
 > [!NOTE]  
->  Para assegurar o aninhamento adequado, é recomendável que você especifique **SQL: Key-campos** para elementos que são mapeados para tabelas. O XML gerado é sensível à ordenação do conjunto de resultados subjacente. Se **SQL: Key-campos** não for especificado, o XML gerado não pode ser formado corretamente.  
+>  Para assegurar o aninhamento adequado, é recomendável que você especifique **SQL: Key-campos** para elementos que mapeiam para tabelas. O XML gerado é sensível à ordenação do conjunto de resultados subjacente. Se **SQL: Key-campos** não for especificado, o XML gerado poderá não ser formado corretamente.  
   
  O valor de **SQL: Key-campos** identifica as colunas que identificam exclusivamente as linhas na relação. Se mais de uma coluna for necessária para identificar uma linha de forma exclusiva, os valores de coluna serão delimitados por espaços.  
   
- Você deve usar o **SQL: Key-campos** anotação quando um elemento contém um  **\<SQL: Relationship >** que é definida entre o elemento e um elemento filho, mas não fornece a chave primária da tabela que é especificado no elemento pai.  
+ Você deve usar o **SQL: Key-campos** anotação quando um elemento contém uma  **\<SQL: Relationship >** que é definida entre o elemento e um elemento filho, mas não fornece a chave primária da tabela que é especificado no elemento pai.  
   
 ## <a name="examples"></a>Exemplos  
  Para criar exemplos de funcionamento usando os exemplos a seguir, é necessário atender a determinados requisitos. Para obter mais informações, consulte [requisitos para executar exemplos do SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
@@ -51,11 +51,11 @@ ms.locfileid: "32971321"
 ### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>A. Produzir o aninhamento adequado quando \<SQL: Relationship > não fornecer informações suficientes  
  Este exemplo mostra onde **SQL: Key-campos** deve ser especificado.  
   
- Considere o esquema a seguir. O esquema especifica uma hierarquia entre o  **\<ordem >** e  **\<cliente >** elementos no qual o  **\<ordem >** elemento é o pai e o  **\<cliente >** elemento é um filho.  
+ Considere o esquema a seguir. O esquema especifica uma hierarquia entre os  **\<ordem >** e  **\<cliente >** elementos nos quais o  **\<ordem >** elemento é o pai e o  **\<Customer >** elemento é um filho.  
   
- O  **\<SQL: Relationship >** marca é usada para especificar a relação pai-filho. Ela identifica CustomerID na tabela Sales.SalesOrderHeader como a chave pai que faz referência à chave filho CustomerID na tabela Sales.Customer. As informações fornecidas no  **\<SQL: Relationship >** não são suficientes para identificar exclusivamente as linhas na tabela pai (Sales. SalesOrderHeader). Portanto, sem o **SQL: Key-campos** anotação, a hierarquia gerada é imprecisa.  
+ O  **\<SQL: Relationship >** marca é usada para especificar a relação pai-filho. Ela identifica CustomerID na tabela Sales.SalesOrderHeader como a chave pai que faz referência à chave filho CustomerID na tabela Sales.Customer. As informações fornecidas  **\<SQL: Relationship >** não é suficiente para identificar exclusivamente linhas na tabela pai (Sales. SalesOrderHeader). Portanto, sem a **SQL: Key-campos** anotação, a hierarquia gerada é imprecisa.  
   
- Com **SQL: Key-campos** especificado em  **\<ordem >**, a anotação identifica exclusivamente as linhas no pai (tabela Sales. SalesOrderHeader) e seus elementos filhos aparecem abaixo seu pai.  
+ Com o **SQL: Key-campos** especificado na  **\<ordem >**, a anotação identifica exclusivamente as linhas no pai (tabela Sales. SalesOrderHeader) e seus elementos filhos aparecem abaixo seu pai.  
   
  Este é o esquema:  
   
@@ -132,7 +132,7 @@ ms.locfileid: "32971321"
 ```  
   
 ### <a name="b-specifying-sqlkey-fields-to-produce-proper-nesting-in-the-result"></a>B. Especificar sql:key-fields para produzir o aninhamento adequado no resultado  
- No esquema a seguir, há uma hierarquia especificada usando  **\<SQL: Relationship >**. O esquema ainda requer a especificação de **SQL: Key-campos** anotação para identificar exclusivamente os funcionários na tabela HumanResources. Employee.  
+ No esquema a seguir, nenhuma hierarquia é especificada usando  **\<SQL: Relationship >**. O esquema ainda requer que o **SQL: Key-campos** anotação para identificar exclusivamente os funcionários na tabela HumanResources. Employee.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

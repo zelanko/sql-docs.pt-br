@@ -22,13 +22,13 @@ caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8ebd317abcd9fec6ee6e116c0bbacc63bf547be5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 9f415c295a45e2505bfa30afb34b76dba1d423c5
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240626"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39555096"
 ---
 # <a name="spaddextendedproperty-transact-sql"></a>sp_addextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -59,13 +59,13 @@ sp_addextendedproperty
   
 ## <a name="arguments"></a>Argumentos  
  [ @name ] = {'*property_name*'}  
- É o nome da propriedade a ser adicionada. *Property_Name* é **sysname** e não pode ser NULL. Os nomes também podem incluir espaço em branco ou cadeias de caracteres não alfanuméricos e valores binários.  
+ É o nome da propriedade a ser adicionada. *Property_Name* está **sysname** e não pode ser NULL. Os nomes também podem incluir espaço em branco ou cadeias de caracteres não alfanuméricos e valores binários.  
   
  [ @value=] {'*valor*'}  
- É o valor a ser associado à propriedade. *valor* é **sql_variant**, com um padrão NULL. O tamanho de *value* não pode ser maior que 7.500 bytes.  
+ É o valor a ser associado à propriedade. *valor* está **sql_variant**, com um padrão NULL. O tamanho de *value* não pode ser maior que 7.500 bytes.  
   
  [ @level0type=] {'*level0_object_type*'}  
- É o tipo de objeto de nível 0. *level0_object_type* é **varchar (128)**, com um padrão NULL.  
+ É o tipo de objeto de nível 0. *level0_object_type* está **varchar (128)**, com um padrão NULL.  
   
  As entradas válidas são ASSEMBLY, CONTRACT, EVENT NOTIFICATION, FILEGROUP, MESSAGE TYPE, PARTITION FUNCTION, PARTITION SCHEME, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, USER, TRIGGER, TYPE, PLAN GUIDE e NULL.  
   
@@ -73,19 +73,19 @@ sp_addextendedproperty
 >  A capacidade de especificar USER como um tipo de nível 0 em uma propriedade estendida de um objeto de tipo de nível 1 será removida em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Em vez disso, use SCHEMA como o tipo nível 0. Por exemplo, ao definir uma propriedade estendida em uma tabela, especifique o esquema da tabela em vez de um nome de usuário. A capacidade de especificar TYPE como um tipo de nível 0 será removida em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para TYPE, use SCHEMA como o tipo de nível 0 e TYPE como o tipo de nível 1.  
   
  [ @level0name=] {'*level0_object_name*'}  
- É o nome do tipo de objeto de nível 0 especificado. *level0_object_name* é **sysname** com um padrão NULL.  
+ É o nome do tipo de objeto de nível 0 especificado. *level0_object_name* está **sysname** com um padrão NULL.  
   
  [ @level1type=] {'*level1_object_type*'}  
- É o tipo de objeto de nível 1. *level1_object_type* é **varchar (128)**, com um padrão NULL. As entradas válidas são AGGREGATE, DEFAULT, FUNCTION, LOGICAL FILE NAME, PROCEDURE, QUEUE, RULE, SYNONYM, TABLE, TABLE_TYPE, TYPE, VIEW, XML SCHEMA COLLECTION e NULL.  
+ É o tipo de objeto de nível 1. *level1_object_type* está **varchar (128)**, com um padrão NULL. As entradas válidas são AGGREGATE, DEFAULT, FUNCTION, LOGICAL FILE NAME, PROCEDURE, QUEUE, RULE, SYNONYM, TABLE, TABLE_TYPE, TYPE, VIEW, XML SCHEMA COLLECTION e NULL.  
   
  [ @level1name=] {'*level1_object_name*'}  
- É o nome do tipo de objeto de nível 1 especificado. *level1_object_name* é **sysname**, com um padrão NULL.  
+ É o nome do tipo de objeto de nível 1 especificado. *level1_object_name* está **sysname**, com um padrão NULL.  
   
  [ @level2type=] {'*level2_object_type*'}  
- É o tipo de objeto de nível 2. *level2_object_type* é **varchar (128)**, com um padrão NULL. As entradas válidas são COLUMN, CONSTRAINT, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER e NULL.  
+ É o tipo de objeto de nível 2. *level2_object_type* está **varchar (128)**, com um padrão NULL. As entradas válidas são COLUMN, CONSTRAINT, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER e NULL.  
   
  [ @level2name=] {'*level2_object_name*'}  
- É o nome do tipo de objeto de nível 2 especificado. *level2_object_name* é **sysname**, com um padrão NULL.  
+ É o nome do tipo de objeto de nível 2 especificado. *level2_object_name* está **sysname**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -99,13 +99,13 @@ sp_addextendedproperty
   
  Propriedades estendidas não são permitidas em objetos de sistema, objetos fora do escopo de um banco de dados definido pelo usuário ou objetos não listados em Argumentos como entradas válidas.  
   
- Propriedades estendidas não são permitidas em tabelas com otimização de memória.  
+ As propriedades estendidas não são permitidas em tabelas com otimização de memória.  
   
 ## <a name="replicating-extended-properties"></a>Replicando propriedades estendidas  
  As propriedades estendidas são replicadas apenas na sincronização inicial entre o Editor e o Assinante. Se você adicionar ou modificar uma propriedade estendida depois da sincronização inicial, a alteração não será replicada. Para obter mais informações sobre como replicar objetos de banco de dados, consulte [publicar dados e objetos de banco de dados](../../relational-databases/replication/publish/publish-data-and-database-objects.md).  
   
 ## <a name="schema-vs-user"></a>Esquema x  Usuário  
- Não recomendamos a especificação de USER como um tipo de nível 0 ao aplicar uma propriedade estendida a um objeto de banco de dados, pois poderá criar ambiguidade na resolução de nome. Por exemplo, suponha que o usuário Mary seja proprietário dois esquemas (Mary e MySchema) e esses esquemas contenham uma tabela chamada MyTable. Se Mary adicionar uma propriedade estendida à tabela MyTable e especifica  **@level0type = n'User'**,  **@level0name = Mary**, não ficará claro à qual tabela a propriedade estendida é aplicada. Para manter compatibilidade com versões anteriores, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aplicará a propriedade à tabela contida no esquema chamado Mary.  
+ Não recomendamos a especificação de USER como um tipo de nível 0 ao aplicar uma propriedade estendida a um objeto de banco de dados, pois poderá criar ambiguidade na resolução de nome. Por exemplo, suponha que o usuário Mary seja proprietário dois esquemas (Mary e MySchema) e esses esquemas contenham ambos uma tabela chamada MyTable. Se Mary adicionar uma propriedade estendida à tabela MyTable e especifica  **@level0type = n'User'**,  **@level0name = Mary**, não ficará claro à qual tabela a propriedade estendida é aplicada. Para manter compatibilidade com versões anteriores, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aplicará a propriedade à tabela contida no esquema chamado Mary.  
   
 ## <a name="permissions"></a>Permissões  
  Membros de db_owner e db_ddladmin banco de dados fixa podem adicionar propriedades estendidas a qualquer objeto com a seguinte exceção: db_ddladmin não pode adicionar propriedades ao próprio banco de dados ou a usuários ou funções.  

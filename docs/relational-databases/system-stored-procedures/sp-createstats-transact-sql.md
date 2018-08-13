@@ -22,22 +22,22 @@ caps.latest.revision: 47
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6c37e65276e14bc8687f9ffceb1f5a2a5f3ca655
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 75e05e36dfea3a36fa01d08ca79b22c3abb7e2c4
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239846"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39555156"
 ---
 # <a name="spcreatestats-transact-sql"></a>sp_createstats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Chamadas de [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) instrução para criar estatísticas de coluna única em colunas que não ainda a primeira coluna em um objeto de estatísticas. A criação de estatísticas de coluna única aumenta o número de histogramas, o que pode melhorar estimativas de cardinalidade, planos de consulta e desempenho de consulta. A primeira coluna de um objeto de estatísticas tem um histograma; outras colunas, não.  
+  Chamadas a [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) instrução para criar estatísticas de coluna única em colunas que ainda não são a primeira coluna em um objeto de estatísticas. A criação de estatísticas de coluna única aumenta o número de histogramas, o que pode melhorar estimativas de cardinalidade, planos de consulta e desempenho de consulta. A primeira coluna de um objeto de estatísticas tem um histograma; outras colunas, não.  
   
- sp_createstats é útil para aplicativos como o benckmark, quando os tempos de execução de consulta são críticos e não podem aguardar a geração de estatísticas de coluna única pelo otimizador de consulta. Na maioria dos casos, não é necessário usar sp_createstats; o otimizador de consultas gera estatísticas de coluna única conforme necessário para melhorar a consulta planos quando o **AUTO_CREATE_STATISTICS** opção está ativada.  
+ sp_createstats é útil para aplicativos como o benckmark, quando os tempos de execução de consulta são críticos e não podem aguardar a geração de estatísticas de coluna única pelo otimizador de consulta. Na maioria dos casos, não é necessário usar sp_createstats; o otimizador de consultas gera estatísticas de coluna única conforme necessário para melhorar a consulta de planos quando o **AUTO_CREATE_STATISTICS** opção está ativada.  
   
- Para obter mais informações sobre estatísticas, consulte [estatísticas](../../relational-databases/statistics/statistics.md). Para obter mais informações sobre como gerar estatísticas de coluna única, consulte o **AUTO_CREATE_STATISTICS** opção [opções ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
+ Para obter mais informações sobre estatísticas, consulte [Estatísticas](../../relational-databases/statistics/statistics.md). Para obter mais informações sobre como gerar estatísticas de coluna única, consulte o **AUTO_CREATE_STATISTICS** opção [opções ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,16 +54,16 @@ sp_createstats
   
 ## <a name="arguments"></a>Argumentos  
  [  **@indexonly=** ] **'indexonly'**  
- Cria estatísticas apenas em colunas que estão em um índice existente e não são a primeira coluna em qualquer definição de índice. **indexonly** é **char(9)**. O padrão é NO.  
+ Cria estatísticas apenas em colunas que estão em um índice existente e não são a primeira coluna em qualquer definição de índice. **indexonly** está **char(9)**. O padrão é NO.  
   
  [  **@fullscan=** ] **'fullscan'**  
- Usa o [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) instrução com o **FULLSCAN** opção. **FULLSCAN** é **char(9)**.  O padrão é NO.  
+ Usa o [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) instrução com o **FULLSCAN** opção. **FULLSCAN** está **char(9)**.  O padrão é NO.  
   
  [  **@norecompute=** ] **'norecompute'**  
- Usa o [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) instrução com o **NORECOMPUTE** opção. **NORECOMPUTE** é **char(12)**.  O padrão é NO.  
+ Usa o [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) instrução com o **NORECOMPUTE** opção. **NORECOMPUTE** está **char(12)**.  O padrão é NO.  
   
- [  **@incremental=** ] **'incremental'**  
- Usa o [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) instrução com o **INCREMENTAL = ON** opção. **Incremental** é **char(12)**.  O padrão é NO.  
+ [  **@incremental=** ] **"incremental"**  
+ Usa o [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) instrução com o **INCREMENTAL = ON** opção. **Incremental** está **char(12)**.  O padrão é NO.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -74,7 +74,7 @@ sp_createstats
 ## <a name="remarks"></a>Remarks  
  sp_createstats não cria nem atualiza estatísticas em colunas que são a primeira coluna em um objeto de estatísticas existente;  Isso inclui a primeira coluna de estatísticas criada para índices, colunas com estatísticas de coluna única geradas com a opção AUTO_CREATE_STATISTICS e a primeira coluna de estatísticas criadas com a instrução CREATE STATISTICS. sp_createstats não cria estatísticas nas primeiras colunas de índices desabilitados a menos que essa coluna é usada em outro índice habilitado. sp_createstats não cria estatísticas em tabelas com um índice clusterizado desabilitado.  
   
- Quando a tabela contém um conjunto de colunas, sp_createstats não cria estatísticas em colunas esparsas. Para obter mais informações sobre conjuntos de colunas e as colunas esparsas, consulte [usar conjuntos de colunas](../../relational-databases/tables/use-column-sets.md) e [usar colunas esparsas](../../relational-databases/tables/use-sparse-columns.md).  
+ Quando a tabela contém um conjunto de colunas, sp_createstats não cria estatísticas em colunas esparsas. Para obter mais informações sobre conjuntos de colunas esparsas, consulte [usar conjuntos de colunas](../../relational-databases/tables/use-column-sets.md) e [usar colunas esparsas](../../relational-databases/tables/use-sparse-columns.md).  
   
 ## <a name="permissions"></a>Permissões  
  Requer associação na função de banco de dados fixa db_owner.  

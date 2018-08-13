@@ -22,13 +22,13 @@ caps.latest.revision: 54
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bef1fdf427c6bc510e77f8df55f3281d5b5db6cd
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 4045f8abefd08019f3b61fc2705f05f1bfa37f37
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33263557"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39545576"
 ---
 # <a name="spsettriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,14 +48,14 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@triggername=** ] **'**[ *triggerschema ***.**] *nome_do_disparador * '**  
- É o nome do gatilho e do esquema ao qual ele pertence, se aplicável, cuja ordem será definida ou alterada. [*triggerschema ***.**]* nome_do_disparador * é **sysname**. Se o nome não corresponder a um disparador ou se o nome corresponder a um disparador INSTEAD OF, o procedimento retornará um erro. *triggerschema* não pode ser especificado para gatilhos DDL ou de logon.  
+ [  **@triggername=** ] **'**[ *triggerschema ***.**] *triggername * * * '**  
+ É o nome do gatilho e do esquema ao qual ele pertence, se aplicável, cuja ordem será definida ou alterada. [*triggerschema ***.**]* triggername * é **sysname**. Se o nome não corresponder a um disparador ou se o nome corresponder a um disparador INSTEAD OF, o procedimento retornará um erro. *triggerschema* não pode ser especificado para gatilhos DDL ou de logon.  
   
  [ **@order=** ] **'***value***'**  
- É a configuração da nova ordem do disparador. *valor* é **varchar (10)** e pode ser qualquer um dos valores a seguir.  
+ É a configuração da nova ordem do disparador. *valor* está **varchar(10)** e pode ser qualquer um dos valores a seguir.  
   
 > [!IMPORTANT]  
->  O **primeiro** e **último** gatilhos devem ser dois disparadores diferentes.  
+>  O **primeira** e **última** gatilhos devem ser dois disparadores diferentes.  
   
 |Valor|Description|  
 |-----------|-----------------|  
@@ -64,12 +64,12 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 |**Nenhuma**|O disparador é acionado em ordem indefinida.|  
   
  [  **@stmttype=** ] **'***statement_type***'**  
- Especifica a instrução SQL que aciona o gatilho. *statement_type* é **varchar (50)** e pode ser INSERT, UPDATE, DELETE, LOGON ou qualquer [!INCLUDE[tsql](../../includes/tsql-md.md)] evento de instrução listado na [eventos DDL](../../relational-databases/triggers/ddl-events.md). Os grupos de eventos não podem ser especificados.  
+ Especifica a instrução SQL que aciona o gatilho. *statement_type* está **varchar (50)** e pode ser INSERT, UPDATE, DELETE, LOGON ou qualquer [!INCLUDE[tsql](../../includes/tsql-md.md)] evento de instrução listado na [eventos DDL](../../relational-databases/triggers/ddl-events.md). Os grupos de eventos não podem ser especificados.  
   
- Um gatilho pode ser designado como o **primeiro** ou **último** disparador para um tipo de instrução somente depois que o disparador foi definido como um disparador para esse tipo de instrução. Por exemplo, acionar **TR1** pode ser designado como **primeiro** para inserção na tabela **T1** se **TR1** é definido como um disparador INSERT. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] retornará um erro se **TR1**, que foi definido somente como um gatilho de inserção está definido como um **primeiro**, ou **último**, gatilho de uma instrução UPDATE. Para obter mais informações, consulte a seção Comentários.  
+ Um gatilho pode ser designado como o **primeira** ou **última** gatilho para um tipo de instrução somente depois que o disparador foi definido como um gatilho para esse tipo de instrução. Por exemplo, disparar **TR1** pode ser designada **primeiro** para inserção na tabela **T1** se **TR1** é definido como um gatilho INSERT. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] retornará um erro se **TR1**, que foi definido somente como um gatilho de inserção está definido como um **primeiro**, ou **último**, gatilho para uma instrução UPDATE. Para obter mais informações, consulte a seção Comentários.  
   
  **@namespace=** { **'DATABASE'** | **'SERVER'** | NULL}  
- Quando *nome_do_disparador* é um gatilho DDL, **@namespace** Especifica se *nome_do_disparador* foi criado com escopo de banco de dados ou servidor. Se *nome_do_disparador* é um gatilho de logon, SERVER deve ser especificado. Para obter mais informações sobre o escopo do gatilho DDL, consulte [gatilhos DDL](../../relational-databases/triggers/ddl-triggers.md). Se não for especificado ou se NULL for especificado, *nome_do_disparador* é um gatilho DML.  
+ Quando *triggername* é um gatilho DDL, **@namespace** Especifica se *triggername* foi criado com escopo de banco de dados ou escopo do servidor. Se *triggername* é um gatilho de logon, servidor deve ser especificado. Para obter mais informações sobre o escopo do gatilho DDL, consulte [gatilhos DDL](../../relational-databases/triggers/ddl-triggers.md). Se não for especificado, ou se NULL for especificado, *triggername* é um gatilho DML.  
   
 ||  
 |-|  
@@ -81,14 +81,14 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 ## <a name="remarks"></a>Remarks  
   
 ## <a name="dml-triggers"></a>Gatilhos DML  
- Pode haver apenas um **primeiro** um **último** gatilho para cada instrução em uma única tabela.  
+ Pode haver apenas um **primeira** e uma **última** gatilho para cada instrução em uma única tabela.  
   
- Se um **primeiro** gatilho já está definido na tabela, banco de dados ou servidor, você não pode designar um novo disparador como **primeiro** para a mesma tabela, banco de dados ou servidor para o mesmo *statement_type* . Essa restrição se aplica também **último** gatilhos.  
+ Se um **primeira** gatilho já está definido na tabela, banco de dados ou servidor, você não pode designar um novo disparador como **primeiro** para a mesma tabela, banco de dados ou servidor para o mesmo *statement_type* . Essa restrição também se aplica **último** gatilhos.  
   
- A replicação gera automaticamente um primeiro disparador para qualquer tabela que esteja incluída em uma atualização imediata ou uma assinatura de atualização em fila. A replicação requer que seu disparador seja o primeiro disparador. A replicação gerará um erro se você tentar incluir uma tabela com um primeiro disparador em uma atualização imediata ou uma assinatura de atualização em fila. Se você tentar fazer com que um gatilho seja o primeiro depois que uma tabela for incluída em uma assinatura, **sp_settriggerorder** retornará um erro. Se você usar ALTER TRIGGER no disparador de replicação ou use **sp_settriggerorder** para alterar o disparador de replicação para um **último** ou **nenhum** gatilho, a assinatura faz não funcione corretamente.  
+ A replicação gera automaticamente um primeiro disparador para qualquer tabela que esteja incluída em uma atualização imediata ou uma assinatura de atualização em fila. A replicação requer que seu disparador seja o primeiro disparador. A replicação gerará um erro se você tentar incluir uma tabela com um primeiro disparador em uma atualização imediata ou uma assinatura de atualização em fila. Se você tentar fazer com que um gatilho seja o primeiro depois que uma tabela for incluída em uma assinatura, **sp_settriggerorder** retornará um erro. Se você usar ALTER TRIGGER no disparador de replicação ou usar **sp_settriggerorder** para alterar o disparador de replicação para uma **última** ou **None** faz do gatilho, a assinatura não funcione corretamente.  
   
 ## <a name="ddl-triggers"></a>Gatilhos DDL  
- Se um disparador DDL com escopo de banco de dados e um gatilho DDL com escopo no servidor existirem no mesmo evento, você pode especificar que ambos os disparadores podem ser um **primeiro** disparador ou uma **último** gatilho. Entretanto, disparadores com escopo no servidor sempre são acionados em primeiro lugar. Em geral, a ordem de execução de disparadores DDL que existem no mesmo evento é a seguinte:  
+ Se um disparador DDL com escopo de banco de dados e um gatilho DDL com escopo de servidor existirem no mesmo evento, você pode especificar que os gatilhos de ser um **primeira** gatilho ou uma **última** gatilho. Entretanto, disparadores com escopo no servidor sempre são acionados em primeiro lugar. Em geral, a ordem de execução de disparadores DDL que existem no mesmo evento é a seguinte:  
   
 1.  O disparador do nível de servidor marcado como **primeiro**.  
   
@@ -96,16 +96,16 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
   
 3.  O disparador do nível de servidor marcado como **último**.  
   
-4.  O disparador do nível de banco de dados marcado como **primeiro**.  
+4.  O disparador do nível de banco de dados marcado **primeiro**.  
   
 5.  Outros disparadores do nível do banco de dados.  
   
-6.  O disparador do nível de banco de dados marcado como **último**.  
+6.  O disparador do nível de banco de dados marcado **último**.  
   
 ## <a name="general-trigger-considerations"></a>Considerações gerais sobre gatilhos  
- Se uma instrução ALTER TRIGGER alterar um primeiro ou último gatilho, o **primeiro** ou **último** atributo originalmente definido no disparador será descartado e o valor é substituído por **nenhum**. O valor de ordem deve ser redefinido usando **sp_settriggerorder**.  
+ Se uma instrução ALTER TRIGGER alterar um primeiro ou último gatilho, o **primeira** ou **última** atributo originalmente definido no gatilho é descartado e o valor é substituído pelo **None**. O valor de ordem deve ser redefinido usando **sp_settriggerorder**.  
   
- Se o mesmo disparador deve ser designado como a ordem do primeira ou última para mais de um tipo de instrução, **sp_settriggerorder** deve ser executado para cada tipo de instrução. Além disso, o gatilho deve ser primeiro definido para um tipo de instrução antes de ser designado como o **primeiro** ou **último** disparador a ser acionado para esse tipo de instrução.  
+ Se o mesmo disparador deve ser designado como a ordem do primeira ou última para mais de um tipo de instrução, **sp_settriggerorder** deve ser executado para cada tipo de instrução. Além disso, o gatilho deve ser primeiramente definido para um tipo de instrução antes que ele pode ser designado como o **primeira** ou **última** gatilho seja acionado para esse tipo de instrução.  
   
 ## <a name="permissions"></a>Permissões  
  A definição da ordem de um disparador DDL com escopo no servidor (criado ON ALL SERVER) ou um disparador de logon requer permissão CONTROL SERVER.  

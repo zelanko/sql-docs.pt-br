@@ -22,18 +22,18 @@ caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 61c6c78c302266ce3a9e29c432e1a913c263d704
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
+ms.openlocfilehash: 6435e1b79907debc159b3ba39eb35980b783c791
+ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255084"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39566230"
 ---
 # <a name="sphelptrigger-transact-sql"></a>sp_helptrigger (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retorna o tipo ou os tipos de gatilhos DML definidos na tabela especificada para o banco de dados atual. sp_helptrigger não pode ser usado com gatilhos DDL. Consulta o [procedimentos armazenados do sistema](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) exibição do catálogo.  
+  Retorna o tipo ou os tipos de gatilhos DML definidos na tabela especificada para o banco de dados atual. sp_helptrigger não pode ser usado com gatilhos DDL. Consulta de [procedimentos armazenados do sistema](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) exibição do catálogo.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,12 +47,12 @@ sp_helptrigger [ @tabname = ] 'table'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@tabname=** ] **'***tabela***'**  
- É o nome da tabela do banco de dados atual para a qual as informações de gatilho devem ser retornadas. *tabela* é **nvarchar(776)**, sem padrão.  
+ É o nome da tabela do banco de dados atual para a qual as informações de gatilho devem ser retornadas. *tabela* está **nvarchar(776)**, sem padrão.  
   
  [  **@triggertype=** ] **'***tipo***'**  
- É o tipo de gatilho DML sobre o qual retornar informações. *tipo* é **char(6)**, com um padrão NULL, e pode ser um destes valores.  
+ É o tipo de gatilho DML sobre o qual retornar informações. *tipo de* está **char(6)**, com um padrão de NULL, e pode ser um destes valores.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**DELETE**|Retorna informações do gatilho DELETE.|  
 |**INSERT**|Retorna informações do gatilho INSERT.|  
@@ -68,11 +68,11 @@ sp_helptrigger [ @tabname = ] 'table'
 |-----------------|---------------|-----------------|  
 |**trigger_name**|**sysname**|Nome do gatilho.|  
 |**trigger_owner**|**sysname**|Nome do proprietário da tabela em que o gatilho é definido.|  
-|**isupdate**|**Int**|1 = Gatilho UPDATE<br /><br /> 0 = Não é um gatilho UPDATE|  
-|**isdelete**|**Int**|1 = Gatilho DELETE<br /><br /> 0 = Não é um gatilho DELETE|  
-|**propriedade IsInsert**|**Int**|1 = Gatilho INSERT<br /><br /> 0 = Não é um gatilho INSERT|  
-|**isafter**|**Int**|1 = Gatilho AFTER<br /><br /> 0 = Não é um gatilho AFTER|  
-|**isinsteadof**|**Int**|1 = Gatilho INSTEAD OF<br /><br /> 0 = Não é um gatilho INSTEAD OF|  
+|**isupdate**|**int**|1 = Gatilho UPDATE<br /><br /> 0 = Não é um gatilho UPDATE|  
+|**isdelete**|**int**|1 = Gatilho DELETE<br /><br /> 0 = Não é um gatilho DELETE|  
+|**propriedade IsInsert**|**int**|1 = Gatilho INSERT<br /><br /> 0 = Não é um gatilho INSERT|  
+|**isafter**|**int**|1 = Gatilho AFTER<br /><br /> 0 = Não é um gatilho AFTER|  
+|**isinsteadof**|**int**|1 = Gatilho INSTEAD OF<br /><br /> 0 = Não é um gatilho INSTEAD OF|  
 |**trigger_schema**|**sysname**|Nome do esquema ao qual o gatilho pertence.|  
   
 ## <a name="permissions"></a>Permissões  
