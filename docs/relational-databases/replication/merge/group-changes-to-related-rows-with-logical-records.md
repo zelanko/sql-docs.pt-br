@@ -47,7 +47,7 @@ ms.locfileid: "38035538"
   
  ![Três registros lógicos de tabela com valores](../../../relational-databases/replication/merge/media/logical-records-02.gif "Três registros lógicos de tabela com valores")  
   
- Definir uma relação de registro lógico entre artigos, consulte [Define a Logical Record Relationship Between Merge Table Articles](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md).  
+ Definir uma relação de registro lógico entre artigos, consulte [Definir uma relação de registro lógico entre artigos da tabela de mesclagem](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md).  
   
 ## <a name="benefits-of-logical-records"></a>Benefícios de registros lógicos  
  O recurso de registros lógicos tem dois benefícios primários:  

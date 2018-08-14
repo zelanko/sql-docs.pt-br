@@ -180,7 +180,7 @@ Se você desejar usar um tipo diferente de função de filtro para selecionar as
   
 ##  <a name="KnownIssues"></a> Solução de problemas do assistente  
  **O assistente do Stretch Database falhou.**  
- Se Stretch Database ainda tiver sido habilitado no nível do servidor, e você executar o assistente sem as permissões de administrador do sistema, o assistente falhará. Peça ao administrador do sistema para habilitar o Stretch Database na instância do servidor local e, depois, execute o assistente novamente. Para obter mais informações, consulte [Prerequisite: Permission to enable Stretch Database on the server](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer).  
+ Se Stretch Database ainda tiver sido habilitado no nível do servidor, e você executar o assistente sem as permissões de administrador do sistema, o assistente falhará. Peça ao administrador do sistema para habilitar o Stretch Database na instância do servidor local e, depois, execute o assistente novamente. Para obter mais informações, consulte [Pré-requisito: permissão para habilitar o Stretch Database no servidor](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer).  
   
 ## <a name="next-steps"></a>Próximas etapas  
  Habilite outras tabelas para o Stretch Database. Monitore a migração dos dados e gerencie os bancos de dados e tabelas habilitados para o Stretch.  
