@@ -68,7 +68,7 @@ ms.locfileid: "39551676"
   
 ###  <a name="Recommendations"></a> Recomendações  
   
--   Para visualizar a quantidade atual de espaço livre (não alocado) no banco de dados. Para obter mais informações, consulte [Display Data and Log Space Information for a Database](../../relational-databases/databases/display-data-and-log-space-information-for-a-database.md).  
+-   Para visualizar a quantidade atual de espaço livre (não alocado) no banco de dados. Para obter mais informações, consulte [Exibir dados e informações de espaço de log para um banco de dados](../../relational-databases/databases/display-data-and-log-space-information-for-a-database.md)  
   
 -   Considere as seguintes informações ao planejar reduzir um banco de dados:  
   
