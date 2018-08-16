@@ -27,12 +27,12 @@ caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6deb510f0f8f358a67963ac36cb149afe836e6bf
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 1d629b6dd1157c44e4a1bee1bbc944d48b4caff5
+ms.sourcegitcommit: c113001aff744ed17d215e391cae2005bb3d0f6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401488"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020640"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>Controle de acesso de dados confidenciais em pacotes
   Para proteger os dados em um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , você pode definir um nível de proteção que ajude a proteger apenas dados confidenciais ou todos os dados no pacote. Além disso, você pode criptografar esses dados com uma senha ou uma chave de usuário ou contar com o banco de dados para criptografar os dados. Além disso, o nível de proteção usado para um pacote não é necessariamente estático, mas altera todo o ciclo de vida do pacote. Defina sempre um nível de proteção durante um desenvolvimento e outro assim que implantar o pacote.  
@@ -98,7 +98,7 @@ ms.locfileid: "35401488"
   
 ### <a name="to-set-or-change-the-protection-level-of-a-package-in-sql-server-data-tools"></a>Para definir ou alterar o nível de proteção de um pacote nas Ferramentas de Dados do SQL Server  
   
-1.  Examine os valores disponíveis da propriedade **ProtectionLevel** no tópico [Definindo o nível de proteção de pacotes](#set_protection)e determine o valor apropriado do pacote.  
+1.  Examine os valores disponíveis para a propriedade **ProtectionLevel** na seção [Níveis de proteção](#protection-levels) e determine o valor apropriado do pacote.  
   
 2.  No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra o projeto do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que contém o pacote.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "35401488"
   
 ### <a name="to-set-or-change-the-protection-level-of-packages-at-the-command-prompt"></a>Para definir ou alterar o nível de proteção de pacotes no prompt de comando  
   
-1.  Examine os valores disponíveis para a propriedade **ProtectionLevel** na seção [Configurando o nível de proteção de pacotes](#set_protection) e determine o valor apropriado do pacote.  
+1.  Examine os valores disponíveis para a propriedade **ProtectionLevel** na seção [Níveis de proteção](#protection-levels) e determine o valor apropriado do pacote.  
   
 2.  Examine os mapeamentos para a opção **Encrypt** no tópico [dtutil Utility](../../integration-services/dtutil-utility.md)e determine o inteiro apropriado a ser usado como o valor da propriedade **ProtectionLevel** selecionada.  
   

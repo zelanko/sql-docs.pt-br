@@ -18,12 +18,12 @@ caps.latest.revision: 24
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8cd49e3ee7241a25531b6a2efcefe891b5993e8b
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 21316e480ddaa3ea7f96ffdf530ef61edbbda2c1
+ms.sourcegitcommit: ebb276e5f14a60059e58257e3350c3cbb30a1da5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771112"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39609675"
 ---
 # <a name="use-the-add-replica-to-availability-group-wizard-sql-server-management-studio"></a>Usar o Assistente para Adicionar Réplica ao Grupo de Disponibilidade (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ ms.locfileid: "34771112"
     |**Pontos de extremidade**|Use esta guia para verificar o ponto de extremidade de espelhamento de banco de dados existente, se houver, para cada nova réplica secundária. Se esse ponto de extremidade estiver ausente em uma instância de servidor cujas contas de serviço usam a Autenticação do Windows, o assistente tentará criar o ponto de extremidade automaticamente.<br /><br /> <br /><br /> Observação: se alguma instância de servidor estiver sendo executada em uma conta de usuário que não pertença a um domínio, você precisará fazer uma alteração manual na instância de servidor para que possa continuar as etapas do assistente. Para obter mais informações, consulte [Pré-requisitos](#Prerequisites)anteriormente neste tópico.|  
     |**Preferências de backup**|Use esta guia para especificar sua preferência de backup para o grupo de disponibilidade como um todo, se você deseja modificar a configuração atual, e para especificar suas prioridades de backup para as réplicas de disponibilidade individuais.|  
   
-6.  Se as réplicas selecionadas contiverem bancos de dados que têm uma chave mestra de banco de dados, insira as senhas das chaves mestras de banco de dados na página **Inserir senhas** . A coluna **Status** indica **Senha necessária** para os bancos de dados que têm uma chave mestra de banco de dados. Depois de inserir as senhas, clique em **Atualizar**. Se você tiver digitado as senhas corretamente, a coluna Status indicará **Senha inserida**.  
+6.  Se as réplicas selecionadas contiverem bancos de dados que têm uma chave mestra de banco de dados, insira as senhas das chaves mestras de banco de dados na coluna **Senha**. A coluna **Status** indica **Senha necessária** para os bancos de dados que têm uma chave mestra de banco de dados. **Próximo** fica esmaecido até que a senha correta seja inserida na coluna **Senha**. Depois de inserir as senhas, clique em **Atualizar**. Se você tiver digitado as senhas corretamente, a coluna Status indicará **Senha digitada** e a opção **Próximo** se tornará disponível.  
   
 7.  Na página **Selecionar Sincronização de Dados Inicial** , escolha como você deseja que seus novos bancos de dados secundários sejam criados e unidos ao grupo de disponibilidade. Escolha uma das seguintes opções:  
   

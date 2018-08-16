@@ -21,12 +21,12 @@ helpviewer_keywords:
 - Find SQL Server Instance
 - find instance name
 - find sql server instance name
-ms.openlocfilehash: cd5c874af32a5d5dda2bb67215d59bdffc45765c
-ms.sourcegitcommit: 90a9a051fe625d7374e76cf6be5b031004336f5a
+ms.openlocfilehash: a2a57d1e870695bcd2a19b609f966ae9ccde697e
+ms.sourcegitcommit: c113001aff744ed17d215e391cae2005bb3d0f6e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39228452"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40020670"
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>Tutorial: mais dicas e truques para usar o SSMS
 Este tutorial apresenta mais alguns truques para usar o SSMS (SQL Server Management Studio). Este artigo mostra como: 
@@ -189,7 +189,7 @@ O log de erros é um arquivo que contém detalhes sobre o que ocorre na sua inst
     ![Localizar o log de erros por consulta](media/ssms-tricks/finderrorlogquery.png)
 
 ### <a name="find-the-error-log-location-if-you-cant-connect-to-sql-server"></a>Localize o local do log de erros se você não conseguir se conectar ao SQL Server
-O caminho para o log de erros do SQL Server pode variar dependendo das suas definições de configuração. O caminho para o local do log de erros pode ser encontrado nos parâmetros de inicialização no SQL Server Configuration Manager. Siga as etapas abaixo para localizar o parâmetro de inicialização relevante que identifica o local do seu log de erros do SQL server. *O caminho pode variar do caminho indicado abaixo*. 
+O caminho para o log de erros do SQL Server pode variar dependendo das suas definições de configuração. O caminho para o local do log de erros pode ser encontrado nos parâmetros de inicialização no SQL Server Configuration Manager. Siga as etapas abaixo para localizar o parâmetro de inicialização relevante que identifica o local do seu log de erros do SQL Server. *O caminho pode variar do caminho indicado abaixo*. 
 
 1. Abra o SQL Server Configuration Manager. 
 2. Expanda **Serviços**.
@@ -210,7 +210,7 @@ O caminho para o log de erros do SQL Server pode variar dependendo das suas defi
 Você tem algumas opções para localizar o nome do SQL Server antes e depois de se conectar ao SQL Server.  
 
 ### <a name="before-you-connect-to-sql-server"></a>Antes de você se conectar ao SQL Server
-1. Siga as etapas para localizar o [Log de erros do SQL Server em disco](#finding-your-error-log-if-you-cannot-connect-to-sql). 
+1. Siga as etapas para localizar o [Log de erros do SQL Server em disco](#finding-your-error-log-if-you-cannot-connect-to-sql). O caminho pode ser diferente do caminho na imagem abaixo.
 2. Abra o arquivo errorlog.log no Bloco de Notas.  
 3. Pesquise o texto *O nome do servidor é*.
     

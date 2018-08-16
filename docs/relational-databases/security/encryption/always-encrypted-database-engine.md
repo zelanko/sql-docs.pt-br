@@ -19,12 +19,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 8a08eebbb0c5a68afea30fccf0e4f3240b3bbb8a
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 4ed0905805e3d7bed8841e29739f559bbbbdc9ac
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39558876"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662478"
 ---
 # <a name="always-encrypted-database-engine"></a>Sempre criptografados (mecanismo de banco de dados)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,6 +64,30 @@ O servidor calcula o conjunto de resultados e, para as colunas criptografadas in
 
 Para obter detalhes sobre como desenvolver aplicativos usando Always Encrypted com drivers cliente específicos, consulte [Always Encrypted (desenvolvimento do cliente)](../../../relational-databases/security/encryption/always-encrypted-client-development.md).
 
+## <a name="remarks"></a>Remarks
+
+A descriptografia ocorre por meio do cliente. Isso significa que algumas ações que ocorrem somente no servidor não funcionarão ao usar Always Encrypted. 
+
+Aqui está um exemplo de uma atualização que tenta mover dados de uma coluna criptografada para uma coluna não criptografada sem retornar um conjunto de resultados para o cliente: 
+
+```sql
+update dbo.Patients set testssn = SSN
+```
+
+Se o SSN for uma coluna criptografada usando Always Encryption, a instrução de atualização acima falhará com um erro semelhante a:
+
+```
+Msg 206, Level 16, State 2, Line 89
+Operand type clash: char(11) encrypted with (encryption_type = 'DETERMINISTIC', encryption_algorithm_name = 'AEAD_AES_256_CBC_HMAC_SHA_256', column_encryption_key_name = 'CEK_1', column_encryption_key_database_name = 'ssn') collation_name = 'Latin1_General_BIN2' is incompatible with char
+```
+
+Para atualizar com êxito a coluna, faça o seguinte:
+
+1. SELECIONE os dados fora da coluna SSN e armazene-os como um conjunto de resultados no aplicativo. Isso permitirá que o aplicativo (*driver* do cliente) descriptografe a coluna.
+2. INSIRA os dados do conjunto de resultados no SQL Server. 
+
+ >[!IMPORTANT]
+ > Nesse cenário, os dados serão descriptografados quando enviados de volta para o servidor porque a coluna de destino é um varchar regular que não aceita dados criptografados. 
   
 ## <a name="selecting--deterministic-or-randomized-encryption"></a>Seleção de criptografia determinística ou aleatória  
  O Mecanismo de Banco de dados nunca opera em dados de texto não criptografado armazenados em colunas criptografadas, mas ela ainda dá suporte a algumas consultas em dados criptografados, dependendo do tipo de criptografia para a coluna. O Sempre Criptografado dá suporte a dois tipos de criptografia: criptografia aleatória e criptografia determinística.  

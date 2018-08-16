@@ -25,12 +25,12 @@ caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fbb9a185ce502828824cd15109ca92cb9ea052e7
-ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+ms.openlocfilehash: 7b5b27ecc45f59de8948cf6ddf0b0153132b6a35
+ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36324430"
+ms.lasthandoff: 08/09/2018
+ms.locfileid: "40008898"
 ---
 # <a name="logging-in-to-sql-server"></a>Fazendo o logon no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "36324430"
 >  Se você selecionou um agrupamento que diferencia maiúsculas e minúsculas ao instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] também diferenciará maiúsculas e minúsculas.  
   
 ## <a name="format-for-specifying-the-name-of-sql-server"></a>Formate para especificar o nome de SQL Server  
- Ao se conectar a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] , especifique o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for a instância padrão (uma instância não nomeada), especifique o nome do computador onde o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está instalado, ou o endereço IP do computador. Se a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for uma instância nomeada (como SQLEXPRESS), especifique o nome do computador onde o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está instalado, ou o endereço IP do computador. Adicione uma barra e o nome da instância.  
+ Ao se conectar a uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)], especifique o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for a instância padrão (uma instância não nomeada), especifique o nome do computador onde o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está instalado, ou o endereço IP do computador. Se a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for uma instância nomeada (como SQLEXPRESS), especifique o nome do computador onde o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está instalado, ou o endereço IP do computador. Adicione uma barra e o nome da instância.  
   
  Os exemplos a seguir conectam a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executada em um computador denominado APPHOST. Ao especificar uma instância nomeada, os exemplos usam um nome de instância SQLEXPRESS.  
   
@@ -50,8 +50,8 @@ ms.locfileid: "36324430"
   
 |Tipo da instância|Entrada do nome de servidor|  
 |----------------------|-------------------------------|  
-|Conexão para uma instância padrão que usa o protocolo padrão. (Esta é a entrada indicada para uma instância padrão.)|APPHOST|  
-|Conexão a uma instância nomeada que usa o protocolo padrão. (Esta é a entrada indicada para uma instância nomeada.)|APPHOST\SQLEXPRESS|  
+|Conexão para uma instância padrão que usa o protocolo padrão.|APPHOST|  
+|Conexão a uma instância nomeada que usa o protocolo padrão. |APPHOST\SQLEXPRESS|  
 |Conexão para uma instância padrão no mesmo computador que usa um período para indicar que a instância está sendo executada no computador local.|para obter informações sobre a ferramenta de configuração e recursos adicionais.|  
 |Conexão a uma instância nomeada no mesmo computador usando um período para indicar que a instância está sendo executada no computador local.|.\SQLEXPRESS|  
 |Conexão a uma instância padrão no mesmo computador usando localhost para indicar que a instância está sendo executada no computador local.|localhost|  
@@ -62,8 +62,8 @@ ms.locfileid: "36324430"
 |Conexão a uma instância nomeada no mesmo computador que força uma conexão de memória compartilhada.|lpc:APPHOST\SQLEXPRESS|  
 |Conexão a uma instância padrão que escuta no endereço TCP 192.168.17.28 usando um endereço IP.|192.168.17.28|  
 |Conexão a uma instância nomeada que escuta no endereço TCP 192.168.17.28 usando um endereço IP.|192.168.17.28\SQLEXPRESS|  
-|Conexão a uma instância padrão que não está escutando na porta TCP padrão, especificando a porta que está sendo usada, neste caso, 2828. (Isto não será necessário se o [!INCLUDE[ssDE](../../includes/ssde-md.md)] estiver escutando na porta padrão (1433).)|APPHOST,2828|  
-|Conexão para uma instância nomeada em uma porta TCP designada, neste caso, 2828. (Isto costuma ser necessário quando o serviço de Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não está sendo executado no computador host.)|APPHOST,2828|  
+|Conexão a uma instância padrão que não está escutando na porta TCP padrão, especificando a porta que está sendo usada, neste caso, 2828. (Especificar um número da porta não será necessário se o [!INCLUDE[ssDE](../../includes/ssde-md.md)] estiver escutando na porta padrão (1433).)|APPHOST,2828|  
+|Conexão para uma instância nomeada em uma porta TCP designada, neste caso, 2828. (Especificar um número da porta poderá ser necessário quando o serviço de Navegador do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não estiver sendo executado no computador host.)|APPHOST,2828|  
 |Conexão a uma instância padrão que não está escutando na porta TCP padrão, especificando o endereço IP e a porta TCP que está sendo usada, neste caso, 2828.|192.168.17.28,2828|  
 |Conexão a uma instância nomeada, especificando o endereço IP e a porta TCP que está sendo usada, neste caso, 2828.|192.168.17.28\SQLEXPRESS,2828|  
 |Conectando à instância padrão através de nome, forçando uma conexão TCP.|tcp:APPHOST|  
@@ -96,6 +96,6 @@ WHERE session_id = @@SPID;
   
  [Usar o utilitário sqlcmd](../../relational-databases/scripting/sqlcmd-use-the-utility.md)  
   
- [criando um logon](../../t-sql/lesson-2-1-creating-a-login.md)  
+ [criando um logon](../../t-sql/lesson-2-configuring-permissions-on-database-objects.md)
   
   

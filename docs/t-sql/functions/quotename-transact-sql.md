@@ -26,12 +26,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 2f54fce498fb1782c09c8caa24c7459432115cec
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 9df60193005f6a83d6894a0718ba473f6b868d69
+ms.sourcegitcommit: ebb276e5f14a60059e58257e3350c3cbb30a1da5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39451580"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39609715"
 ---
 # <a name="quotename-transact-sql"></a>QUOTENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +51,7 @@ QUOTENAME ( 'character_string' [ , 'quote_character' ] )
  É uma cadeia de caracteres de dados de caracteres Unicode. *character_string* é **sysname** e está limitado a 128 caracteres. Entradas maiores que 128 caracteres retornam NULL.  
   
  '*quote_character*'  
- É uma cadeia de um caractere a ser usada como o delimitador. Podem ser aspas simples ( **'** ), colchete esquerdo ou direito ( **[]** ) ou aspas duplas ( **"** ). Se *quote_character* não for especificado, serão usados colchetes.  
+ É uma cadeia de um caractere a ser usada como o delimitador. É possível usar aspas simples (**'**), um colchete esquerdo ou direito (**[]**), aspas duplas (**"**), um parêntese esquerdo ou direito (**()**), um sinal de menor que ou maior que (**><**), uma chave esquerda ou direita (**{}**) ou um acento grave (**\`**). NULL será retornado se um caractere inaceitável for fornecido. Se *quote_character* não for especificado, serão usados colchetes.  
   
 ## <a name="return-types"></a>Tipos de retorno  
  **nvarchar(258)**  

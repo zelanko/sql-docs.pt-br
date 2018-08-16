@@ -21,12 +21,12 @@ caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 234996e85d88e9bed0313c2bf3abbf5f81eae65a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 71cc5f675917e0e99c9f5a9806b8e928626c84eb
+ms.sourcegitcommit: ebb276e5f14a60059e58257e3350c3cbb30a1da5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32865361"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39609665"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port"></a>Configurar um servidor para escutar em uma porta TCP específica
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,11 @@ Como a porta 1433 é o padrão conhecido para o [!INCLUDE[ssNoVersion](../../inc
   
      ![TCP_ports](../../database-engine/configure-windows/media/tcp-ports.png "TCP_ports")  
   
-4.  Na caixa de diálogo da área **Propriedades** de**IP***n*, na caixa **Porta TCP**, digite o número da porta em que esse endereço IP deve escutar e, em seguida, clique em **OK**.  
+4.  Na caixa de diálogo da área **Propriedades** de**IP***n*, na caixa **Porta TCP**, digite o número da porta em que esse endereço IP deve escutar e, em seguida, clique em **OK**. Várias portas podem ser especificadas ao separá-las por vírgulas.
+
+    > [!NOTE] 
+    > Se a configuração **Escutar tudo** na guia **Protocolo** for definida como "Sim", então apenas os valores **Porta TCP** e **Porta TCP dinâmica** sob a seção **IPAll** serão usados e as seções **IP***n* individuais serão ignoradas em sua totalidade. Se a configuração **Escutar tudo** for definida como "Não", então as configurações **Porta TCP** e **Porta TCP dinâmica** sob a seção **IPAll** serão ignoradas e as configurações **Porta TCP**, **Porta TCP dinâmica** e **Habilitado** nas seções **IP***n* individuais serão usadas.
+    > Cada seção **IP***n* tem uma configuração **Habilitado** com um valor padrão de "Não", o que faz com que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ignore esse endereço IP mesmo se ele tem uma porta definida.  
   
 5.  No painel de console, clique em **Serviços do SQL Server**.  
   

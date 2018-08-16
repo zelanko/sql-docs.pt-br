@@ -15,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 2bae9d48b20109e129eb159f5d3d9e3e6c0651e5
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 52ef9494ea2c0b4aeceab2faca8c6bce3107959e
+ms.sourcegitcommit: ebb276e5f14a60059e58257e3350c3cbb30a1da5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39564720"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39609725"
 ---
 # <a name="columnstore-indexes---design-guidance"></a>Índices columnstore – diretrizes de design
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -177,7 +177,7 @@ Essas tarefas são destinadas a criar e a manter índices columnstore.
 |Crie uma tabela como columnstore.|[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)|Começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], você pode criar a tabela como um índice columnstore clusterizado. Não é preciso criar primeiro uma tabela rowstore e convertê-la em columnstore.|  
 |Crie uma tabela de memória com um índice columnstore.|[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)|A partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], você pode criar uma tabela com otimização na memória com um índice columnstore. O índice columnstore também pode ser adicionado após a criação da tabela, usando a sintaxe ALTER TABLE ADD INDEX.|  
 |Converta uma tabela rowstore em columnstore.|[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)|Converta uma pilha ou árvore binária existente em columnstore. Exemplos mostram como lidar com os índices existentes e o nome do índice ao realizar essa conversão.|  
-|Converta uma tabela columnstore em rowstore.|[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)|Geralmente, isso não é necessário, mas pode haver ocasiões em que você precisa para realizar essa conversão. Exemplos mostram como converter um columnstore em uma pilha ou um índice clusterizado.|  
+|Converta uma tabela columnstore em rowstore.|[CREATE CLUSTERED INDEX &#40;Transact-SQL&#41; ou DROP INDEX](../../t-sql/statements/create-columnstore-index-transact-sql.md)|Geralmente, isso não é necessário, mas pode haver ocasiões em que você precisa para realizar essa conversão. Exemplos mostram como converter um columnstore em uma pilha ou um índice clusterizado.|  
 |Crie um índice columnstore em uma tabela rowstore.|[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)|Uma tabela rowstore pode ter um índice columnstore.  Começando com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], o índice columnstore pode ter uma condição filtrada. Exemplos mostram a sintaxe básica.|  
 |Crie índices de alto desempenho para análises operacionais.|[Introdução ao Columnstore para análise operacional em tempo real](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)|Descreve como criar índices de árvore B e columnstore complementares, para que as consultas OLTP usem índices de árvore B e as consultas de análise usem índices columnstore.|  
 |Crie índices columnstore de alto desempenho para data warehouse.|[Índices columnstore – data warehouse](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)|Descreve como usar índices de árvore B em tabelas columnstore para criar consultas de data warehouse de alto desempenho.|  
