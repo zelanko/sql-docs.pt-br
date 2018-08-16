@@ -1,5 +1,5 @@
 ---
-title: 'Lição 3: Usando o utilitário de Prompt de comando dta | Microsoft Docs'
+title: 'Lição 3: como usar o utilitário de Prompt de comando dta | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,14 +19,14 @@ caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 086a2051f5ef1900c90e55c2de21d365b24905d7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6fa260e1a20f13736b9df767508e4cf8a1b94de5
+ms.sourcegitcommit: 95093f8b4f3d02f8d55d415f03a241102a641cb3
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37978888"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39654231"
 ---
-# <a name="lesson-3-using-the-dta-command-prompt-utility"></a>Lição 3: Usando o utilitário de prompt de comando dta
+# <a name="lesson-3-using-the-dta-command-prompt-utility"></a>Lição 3: como usar o utilitário de prompt de comando dta
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 O utilitário de prompt de comando **dta** oferece funcionalidade além da fornecida pelo Orientador de Otimização do Mecanismo de Banco de Dados.  
   
@@ -40,14 +40,67 @@ Além disso, usando o esquema XML do Orientador de Otimização do Mecanismo de 
   
 A utilização da funcionalidade de entrada XML do Orientador de Otimização do Mecanismo de Banco de Dados ultrapassa o alcance desta lição.  
   
-Esta lição fornece uma introdução à sintaxe básica do utilitário de prompt de comando **dta** , como acessar a ajuda e à prática do ajuste de cargas de trabalho simples.  
+Essa tarefa descreve a inicialização do utilitário **dta** , a exibição da Ajuda e o uso do utilitário para ajustar uma carga de trabalho no prompt de comando. Ela usa a carga de trabalho MyScript.sql, criada para a prática [Ajustando uma carga de trabalho](lesson-2-using-database-engine-tuning-advisor.md#tuning-a-workload) da GUI (interface gráfica do usuário) do Orientador de Otimização do Mecanismo de Banco de Dados  
   
-Ela contém o seguinte tópico:  
+O tutorial usa o banco de dados de exemplo AdventureWorks2017. Por motivos de segurança, os bancos de dados de exemplo não são instalados por padrão. Para instalar os bancos de dados de exemplo, consulte [Instalando amostras e bancos de dados de exemplo do SQL Server](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).  
   
--   Iniciando o utilitário de prompt de comando **dta** e ajustando uma carga de trabalho  
+As tarefas a seguir descrevem a abertura de um prompt de comando, a inicialização do utilitário de prompt de comando **dta** , a exibição da Ajuda sobre a sintaxe e o ajuste de uma carga de trabalho simples, MyScript.sql, que você criou em [Ajustando uma carga de trabalho](../../tools/dta/lesson-1-1-tuning-a-workload.md).  
+
+## <a name="prerequisites"></a>Prerequisites 
+
+Para concluir este tutorial, você precisará do SQL Server Management Studio, bem como acesso a um servidor que executa o SQL Server e um banco de dados do AdventureWorks.
+
+- Instalar o [SQL Server 2017 Developer Edition.](https://www.microsoft.com/sql-server/sql-server-downloads)
+- Baixar o [Banco de dados de exemplo do AdventureWorks2017.](https://docs.microsoft.com/sql/samples/adventureworks-install-configure)
+
+
+Instruções para restaurar bancos de dados no SSMS são encontradas em [Como restaurar um banco de dados.](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017)
+
+  >[!NOTE]
+  > Este tutorial destina-se um usuário familiarizado com o uso do SQL Server Management Studio e as tarefas de administração de banco de dados básico. 
+
+## <a name="access-dta-command-prompt-utility-help-menu"></a>Menu de ajuda de utilitário de prompt de comando do acesso DTA
   
-## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
-[Iniciando o utilitário de prompt de comando dta e ajustando uma carga de trabalho](../../tools/dta/lesson-3-1-starting-the-dta-command-prompt-utility-and-tuning-a-workload.md)  
   
+1.  No menu **Iniciar** , aponte para **Todos os Programas**, aponte para **Acessórios**e clique em **Prompt de Comando**.  
   
+2.  No prompt de comando, digite o seguinte e pressione ENTER:  
   
+    ```  
+    dta -? | more  
+    ```  
+  
+    A parte `| more` desse comando é opcional. Porém, seu uso permite que você pesquise na sintaxe de ajuda do utilitário. Pressione ENTER para avançar o texto de ajuda pela linha ou pressione a SPACEBAR para avançar por página.  
+
+  ![Usando a ajuda com o utilitário DTA cmd](media/dta-tutorials/dta-cmd-help.png)
+
+## <a name="tune-simple-workload-using-the-dta-command-prompt-utility"></a>Ajustar a carga de trabalho simple usando o utilitário de prompt de comando DTA  
+
+
+  
+1.  No prompt de comando, navegue até o diretório em que você armazenou o arquivo MyScript.sql.  
+  
+2.  No prompt de comando, digite o seguinte e pressione ENTER para executar o comando e iniciar a sessão de ajuste (observe que o utilitário faz diferenciação de maiúsculas e minúsculas na análise de comandos):  
+  
+    ```  
+    dta -S YourServerName\YourSQLServerInstanceName -E -D AdventureWorks2012 -if MyScript.sql -s MySession2 -of MySession2OutputScript.sql -ox MySession2Output.xml -fa IDX_IV -fp NONE -fk NONE  
+    ```  
+  
+    onde `-S` especifica o nome de seu servidor e a instância [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em que o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] é instalado. A configuração `-E` especifica que você quer usar uma conexão confiável com a instância, o que é apropriado se você estiver se conectando com uma conta de domínio Windows. A configuração `-D` especifica o banco de dados que você quer ajustar, `-if` especifica o arquivo de carga de trabalho, `-s` especifica o nome de sessão, `-of` especifica o arquivo para o qual você deseja que a ferramenta escreva o script de recomendações [!INCLUDE[tsql](../../includes/tsql-md.md)] e `-ox` especifica o arquivo para o qual você deseja que a ferramenta escreva as recomendações no formato XML. As três últimas opções especificam opções de ajuste como segue: `-fa IDX_IV` especifica que o Orientador de Otimização do Mecanismo de Banco de Dados só deve considerar adicionar índices (clusterizado e não clusterizado) e exibições indexadas; `-fp NONE` especifica que nenhuma estratégia de partição deve ser considerada durante a análise; e `-fk NONE` especifica que nenhuma estrutura de design física existente no banco de dados deve ser mantida quando o Orientador de Otimização do Mecanismo de Banco de Dados faz suas recomendações.  
+
+  ![usando o CMD do DTA](media/dta-tutorials/dta-cmd.png)
+  
+3.  Depois que o Orientador de Otimização do Mecanismo de Banco de Dados termina de ajustar a carga de trabalho, exibe uma mensagem que indica que a sessão de ajuste foi concluída com êxito. Você pode exibir os resultados do ajuste, usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para abrir os arquivos MySession2OutputScript.sql e MySession2Output.xml. Como alternativa, você também pode abrir a sessão de ajuste MySession2 na GUI do Orientador de Otimização do Mecanismo de Banco de Dados e exibir suas recomendações e relatórios da mesma forma que fez em [Exibindo recomendações de ajuste](../../tools/dta/lesson-1-2-viewing-tuning-recommendations.md) e [Exibindo relatórios de ajuste](../../tools/dta/lesson-1-3-viewing-tuning-reports.md).  
+  
+ 
+## <a name="after-you-finish-this-tutorial"></a>Depois de você concluir este tutorial  
+Depois de você terminar as lições deste tutorial, recorra aos tópicos a seguir para obter mais informações sobre o Orientador de Otimização do Mecanismo de Banco de Dados:  
+  
+-   [Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/database-engine-tuning-advisor.md) para obter descrições sobre como executar tarefas com essa ferramenta. 
+-   [dta Utility](../../tools/dta/dta-utility.md) para obter material de referência sobre o utilitário de prompt de comando e o arquivo XML opcional que você pode usar para controlar a operação do utilitário.  
+  
+Para retornar ao início do tutorial, consulte [Tutorial: Orientador de Otimização do Mecanismo de Banco de Dados](../../tools/dta/tutorial-database-engine-tuning-advisor.md).  
+  
+## <a name="see-also"></a>Consulte Também  
+[Tutoriais do Mecanismo de Banco de Dados](../../relational-databases/database-engine-tutorials.md)  
+    

@@ -14,12 +14,12 @@ caps.latest.revision: 73
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e7d43fbc0488886915689565475dd5e69967c348
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: e5363b1135cb7e5d04201b2005bda9caf8ff8811
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39454040"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662278"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>Requisitos de sistema para o JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -78,31 +78,30 @@ ms.locfileid: "39454040"
 |---------|-----------------------------|----------------------|-----------------|   
 |mssql-jdbc-6.4.0.jre7.jar|4.1|7|Requer um Java Runtime Environment (JRE) 7.0. Usando o JRE 6.0 ou inferior lança uma exceção.<br /><br /> Novos recursos no 6.4 incluem: autenticação do Azure AD para o Linux, o método de entidade de segurança/senha para o Kerberos, a detecção automática de REALM no SPN para a autenticação de domínio cruzado, delegação restrita de Kerberos, o tempo limite da consulta, o tempo limite de soquete e preparada instrução lidar com a reutilização. |  
 |mssql-jdbc-6.4.0.jre8.jar|4.2|8|Requer um Java Runtime Environment (JRE) 8.0. Usando o JRE 7.0 ou inferior lança uma exceção.<br /><br /> Novos recursos no 6.4 incluem: autenticação do Azure AD para o Linux, o método de entidade de segurança/senha para o Kerberos, a detecção automática de REALM no SPN para a autenticação de domínio cruzado, delegação restrita de Kerberos, o tempo limite da consulta, o tempo limite de soquete e preparada instrução lidar com a reutilização. |    
-|mssql-jdbc-6.4.0.jre9.jar|4.3|9|Requer um JRE (Java Runtime Environment) 9.0. Usando o JRE 8.0 ou inferior lança uma exceção.<br /><br /> Novos recursos no 6.4 incluem: autenticação do Azure AD para o Linux, o método de entidade de segurança/senha para o Kerberos, a detecção automática de REALM no SPN para a autenticação de domínio cruzado, delegação restrita de Kerberos, o tempo limite da consulta, o tempo limite de soquete e preparada instrução lidar com a reutilização. |    
+|mssql-jdbc-6.4.0.jre9.jar|4.3|9|Requer um JRE (Java Runtime Environment) 9.0. Usando o JRE 8.0 ou inferior lança uma exceção.<br /><br /> Novos recursos no 6.4 incluem: autenticação do Azure AD para o Linux, o método de entidade de segurança/senha para o Kerberos, a detecção automática de REALM no SPN para a autenticação de domínio cruzado, delegação restrita de Kerberos, o tempo limite da consulta, o tempo limite de soquete e preparada instrução lidar com a reutilização. |
 
+O JDBC Driver 6.4 também está disponível no repositório Maven Central e podem ser adicionados a um projeto Maven adicionando o código a seguir no POM. XML 
 
-  O JDBC Driver 6.4 também está disponível no repositório Maven Central e podem ser adicionados a um projeto Maven adicionando o código a seguir no POM. XML 
-  
  ```xml
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
     <version>6.4.0.jre9</version>
 </dependency>
-```    
+```
 
 **Microsoft JDBC Driver 6.2 for SQL Server:**  
   
-  O JDBC Driver 6.2 inclui duas bibliotecas de classes JAR em cada pacote de instalação: **mssql-jdbc-6.2.1.jre7.jar**, e **mssql-jdbc-6.2.1.jre8.jar**. 
+  O JDBC Driver 6.2 inclui duas bibliotecas de classes JAR em cada pacote de instalação: **mssql-jdbc-6.2.2.jre7.jar** e **mssql-jdbc-6.2.2.jre8.jar**. 
   
- OJDBC Driver 6.2 foi desenvolvido para funcionar e ser compatível com todas as principais máquinas virtuais Java equivalentes às da Sun, mas foi testado somente com Sun JRE 5.0, 6.0, 7.0 e 8.0. 
+ OJDBC Driver 6.2 foi desenvolvido para funcionar e ser compatível com todas as principais máquinas virtuais Java equivalentes às da Sun, mas foi testado somente com Sun JRE 5.0, 6.0, 7.0 e 8.0.
   
  A seguir, um resumo do suporte fornecido pelos dois arquivos JAR incluídos com os Microsoft JDBC Drivers 6.0 e 4.2 para o SQL Server:  
   
 |JAR|Conformidade de versão do JDBC|Java versão recomendada|Descrição|  
-|---------|-----------------------------|----------------------|-----------------|   
-|MSSQL-jdbc-6.2.1.jre7.jar|4.1|7|Requer um Java Runtime Environment (JRE) 7.0. Usando o JRE 6.0 ou inferior lança uma exceção.<br /><br /> Os novos recursos no 6.2 incluem: autenticação do Azure AD para o Linux, o método de entidade de segurança/senha para o Kerberos, a detecção automática de REALM no SPN para a autenticação de domínio cruzado, delegação restrita de Kerberos, o tempo limite da consulta, o tempo limite de soquete e preparada instrução lidar com a reutilização. |  
-|MSSQL-jdbc-6.2.1.jre8.jar|4.2|8|Requer um Java Runtime Environment (JRE) 8.0. Usando o JRE 7.0 ou inferior lança uma exceção.<br /><br /> Os novos recursos no 6.2 incluem: autenticação do Azure AD para o Linux, o método de entidade de segurança/senha para o Kerberos, a detecção automática de REALM no SPN para a autenticação de domínio cruzado, delegação restrita de Kerberos, o tempo limite da consulta, o tempo limite de soquete e preparada reutilização do identificador de instrução|    
+|---------|-----------------------------|----------------------|-----------------|
+|MSSQL-jdbc-6.2.2.jre7.jar|4.1|7|Requer um Java Runtime Environment (JRE) 7.0. Usando o JRE 6.0 ou inferior lança uma exceção.<br /><br /> Os novos recursos no 6.2 incluem: autenticação do Azure AD para o Linux, o método de entidade de segurança/senha para o Kerberos, a detecção automática de REALM no SPN para a autenticação de domínio cruzado, delegação restrita de Kerberos, o tempo limite da consulta, o tempo limite de soquete e preparada instrução lidar com a reutilização. |  
+|MSSQL-jdbc-6.2.3.jre8.jar|4.2|8|Requer um Java Runtime Environment (JRE) 8.0. Usando o JRE 7.0 ou inferior lança uma exceção.<br /><br /> Os novos recursos no 6.2 incluem: autenticação do Azure AD para o Linux, o método de entidade de segurança/senha para o Kerberos, a detecção automática de REALM no SPN para a autenticação de domínio cruzado, delegação restrita de Kerberos, o tempo limite da consulta, o tempo limite de soquete e preparada reutilização do identificador de instrução|    
 
   O JDBC Driver 6.2 também está disponível no repositório Maven Central e podem ser adicionados a um projeto Maven adicionando o código a seguir no POM. XML 
   
@@ -110,7 +109,7 @@ ms.locfileid: "39454040"
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>6.2.1.jre8</version>
+    <version>6.2.2.jre8</version>
 </dependency>
 ```    
 

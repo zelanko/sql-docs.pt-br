@@ -14,12 +14,12 @@ caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f4bb058781139fd4a22fde87ddaab05a292499ca
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: eb11436fdfda8e2bb0744d866ece700259e11586
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38006849"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662248"
 ---
 # <a name="pdosetattribute"></a>PDO::setAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -51,12 +51,11 @@ Retorna true se for bem-sucedido; caso contrário, false.
 |PDO::ATTR_ORACLE_NULLS|PDO|Consulte a documentação do PDO.|Especifica como os valores nulos devem ser retornados.<br /><br />PDO::NULL_NATURAL não faz nenhuma conversão.<br /><br />PDO::NULL_EMPTY_STRING converte uma cadeia de caracteres vazia em nulo.<br /><br />PDO::NULL_TO_STRING converte nulo em uma cadeia de caracteres vazia.|  
 |PDO::ATTR_STATEMENT_CLASS|PDO|Consulte a documentação do PDO.|Define a classe de instrução que o usuário forneceu derivada de PDOStatement.<br /><br />Requer `array(string classname, array(mixed constructor_args))`.<br /><br />Veja a documentação do PDO para obter mais informações.|  
 |PDO::ATTR_STRINGIFY_FETCHES|PDO|true ou false|Converte valores numéricos em cadeias de caracteres ao recuperar dados.|  
-|PDO::SQLSRV_ATTR_CLIENT_BUFFER_MAX_KB_SIZE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|1 para o limite de memória do PHP.|Configura o tamanho do buffer que contém o conjunto de resultados.<br /><br />O padrão é 10.240 KB (10 MB).<br /><br />Para obter mais informações sobre as consultas que criam um cursor do lado do cliente, veja [Tipos de cursor &#40;Driver PDO_SQLSRV&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).|  
+|PDO::SQLSRV_ATTR_CLIENT_BUFFER_MAX_KB_SIZE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|1 para o limite de memória do PHP.|Define o tamanho do buffer que contém o conjunto de resultados ao usar um cursor do lado do cliente.<br /><br />O padrão é 10240 KB, se não for especificado no arquivo PHP. ini.<br /><br />Zero e números negativos não são permitidos.<br /><br />Para obter mais informações sobre as consultas que criam um cursor do lado do cliente, veja [Tipos de cursor &#40;Driver PDO_SQLSRV&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).|  
 |PDO::SQLSRV_ATTR_DIRECT_QUERY|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true<br /><br />false|Especifica a execução direta ou preparada da consulta. Para obter mais informações, consulte [Execução de instrução direta e execução de instrução preparada no driver PDO_SQLSRV](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md).|  
 |PDO::SQLSRV_ATTR_ENCODING|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|PDO::SQLSRV_ENCODING_UTF8<br /><br />PDO::SQLSRV_ENCODING_SYSTEM.|Define a codificação do conjunto de caracteres usada pelo driver para se comunicar com o servidor.<br /><br />Não há suporte para PDO::SQLSRV_ENCODING_BINARY.<br /><br />O padrão é PDO::SQLSRV_ENCODING_UTF8.|  
 |PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true ou false|Lida com buscas numéricas de colunas com tipos numéricos do SQL (bit, inteiro, smallint, tinyint, float ou real).<br /><br />Quando o sinalizador de opção de conexão ATTR_STRINGIFY_FETCHES está ativado, o valor de retorno é uma cadeia de caracteres, mesmo quando SQLSRV_ATTR_FETCHES_NUMERIC_TYPE estiver no.<br /><br />Quando o tipo PDO retornado na coluna de associação for PDO_PARAM_INT, o valor retornado de uma coluna de inteiro é um int, mesmo se SQLSRV_ATTR_FETCHES_NUMERIC_TYPE está desativado.|  
 |PDO::SQLSRV_ATTR_QUERY_TIMEOUT|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|inteiro|Define o tempo limite da consulta em segundos.<br /><br />O padrão é 0, o que significa que o driver aguardará resultados indefinidamente.<br /><br />Números negativos não são permitidos.|  
-|PDO::SQLSRV_CLIENT_BUFFER_MAX_SIZE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|inteiro|Define o tamanho do buffer de consulta.<br /><br />O padrão é 10240 KB, se não for especificado no arquivo PHP. ini.<br /><br />Zero e números negativos não são permitidos.<br /><br />Para obter mais informações sobre as consultas que criam um cursor do lado do cliente, veja [Tipos de cursor &#40;Driver PDO_SQLSRV&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).|  
   
 O PDO processa alguns atributos predefinidos e requer que o driver processe outros. Todos os atributos personalizados e opções de conexão são processados pelo driver. Um atributo sem suporte, opção de conexão ou valor sem suporte será relatado de acordo com a configuração de PDO::ATTR_ERRMODE.  
   

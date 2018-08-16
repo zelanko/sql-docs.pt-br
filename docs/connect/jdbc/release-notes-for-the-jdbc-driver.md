@@ -14,12 +14,12 @@ caps.latest.revision: 206
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1870693ad4c12a6f04cd3b01380b77de728c245c
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
-ms.translationtype: HT
+ms.openlocfilehash: 10f14eedb1a74f74cb1ee055a247a96671224ce0
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39454370"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662458"
 ---
 # <a name="release-notes-for-the-jdbc-driver"></a>Notas de versão do JDBC Driver
 
@@ -27,7 +27,7 @@ ms.locfileid: "39454370"
 
 ## <a name="updates-in-microsoft-jdbc-driver-70-for-sql-server"></a>Atualizações no Microsoft JDBC Driver 7.0 for SQL Server
 
-O Microsoft JDBC Driver 7.0 para SQL Server é totalmente compatível com a especificação de API do JDBC 4.2. Os jars no pacote 7.0 são nomeados de acordo com a compatibilidade de versão de Java. Por exemplo, o arquivo de mssql-jdbc-7.0.0.jre8.jar do pacote 7.0 deve ser usado com o Java 8.
+O Microsoft JDBC Driver 7.0 para SQL Server é totalmente compatível com a especificação de API do JDBC 4.2. Os jars no pacote 7.0 são nomeados de acordo com a compatibilidade de versão de Java. Por exemplo, o arquivo de mssql-jdbc-7.0.0.jre10.jar do pacote 7.0 deve ser usado com o Java 10.
 
 ### <a name="support-for-jdk-10"></a>Suporte para JDK 10
 
@@ -59,7 +59,7 @@ Microsoft JDBC Driver 7.0 para SQL Server apresenta a nova propriedade de conex�
 
 ### <a name="added-azure-key-vault-provider-constructors"></a>Construtores de provedor do Cofre de chaves do Azure adicionada
 
-O Microsoft JDBC Driver 7.0 para SQL Server apresenta novamente um construtor removido anteriormente, para `SQLServerColumnEncryptionAzureKeyVaultProvider`, quais autenticação permitidos usando um método personalizado implementado no `SQLServerKeyVaultAuthenticationCallback` para buscar um token de acesso.
+O Microsoft JDBC Driver 7.0 para SQL Server reintroduz um construtor removido anteriormente, para `SQLServerColumnEncryptionAzureKeyVaultProvider`, quais autenticação permitidos usando um método personalizado implementado no `SQLServerKeyVaultAuthenticationCallback` para buscar um token de acesso.
 
 Novos construtores têm o abaixo da definição:
 
@@ -80,11 +80,11 @@ public SQLServerColumnEncryptionAzureKeyVaultProvider(
 
 ### <a name="updated-adal4j-version-to-160"></a>Versão atualizada do ADAL4J para 1.6.0
 
-O Microsoft JDBC Driver 7.0 para o SQL Server tiver atualizado sua dependência do maven no azure-activedirectory-library-for-java (ADAL4J) para a versão 1.6.0. Para saber mais sobre dependências, veja [aqui](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)
+O Microsoft JDBC Driver 7.0 para o SQL Server tiver atualizado sua dependência do maven no azure-activedirectory-library-for-java (ADAL4J) para a versão 1.6.0. Saiba mais sobre [dependências](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
 
 ## <a name="updates-in-microsoft-jdbc-driver-64-for-sql-server"></a>Atualizações no Microsoft JDBC Driver 6.4 for SQL Server
 
-O Microsoft JDBC Driver 6.4 para SQL Server é totalmente compatível com as especificações do JDBC 4.1 e 4.2. Os jars no pacote de 6,4 são nomeados de acordo com a compatibilidade de versão de Java. Por exemplo, o arquivo mssql-jdbc-6.4.0.jre8.jar do pacote de 6,4 é recomendado a ser usado com o Java 8.
+O Microsoft JDBC Driver 6.4 para SQL Server é totalmente compatível com as especificações do JDBC 4.1 e 4.2. Os jars no pacote de 6,4 são nomeados de acordo com a compatibilidade de versão de Java. Por exemplo, o arquivo de mssql-jdbc-6.4.0.jre8.jar do pacote de 6,4 deve ser usado com o Java 8.
 
 ### <a name="support-for-jdk-9"></a>Suporte para JDK 9
 
@@ -134,10 +134,14 @@ O Driver JDBC atualizou sua dependência do maven no azure-activedirectory-libra
 
 ## <a name="updates-in-microsoft-jdbc-driver-62-for-sql-server"></a>Atualizações no Microsoft JDBC Driver 6.2 for SQL Server
 
-O Microsoft JDBC Driver 6.2 para SQL Server é totalmente compatível com as especificações do JDBC 4.1 e 4.2. Os jars no pacote 6.0 são nomeados de acordo com a compatibilidade de versão de Java. Por exemplo, o arquivo mssql-jdbc-6.2.1.jre8.jar do pacote 6.2 é recomendado a ser usado com o Java 8.
+O Microsoft JDBC Driver 6.2 para SQL Server é totalmente compatível com as especificações do JDBC 4.1 e 4.2. Os jars no pacote 6.2 são nomeados de acordo com a compatibilidade de versão de Java. Por exemplo, o arquivo mssql-jdbc-6.2.2.jre8.jar do pacote 6.2 é recomendado a ser usado com o Java 8.
 
 > [!NOTE]  
-> Um problema com o aperfeiçoamento de cache de metadados foi encontrado na RTW do 6.2 JDBC lançado em 29 de junho de 2017. A melhoria foi revertida e jars novo (versão 6.2.1) foram lançadas em 17 de julho de 2017 sobre os [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=852460), [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1), e [Central do Maven](http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.microsoft.sqlserver%22%20AND%20a%3A%22mssql-jdbc%22). Atualize seus projetos para usar o 6.2.1 jars de versão. Exiba [notas de versão](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1) para obter mais detalhes.
+> Um problema com o aperfeiçoamento de cache de metadados foi encontrado na RTW do 6.2 JDBC lançado em 29 de junho de 2017. A melhoria foi revertida e jars novo (versão 6.2.1) foram lançadas em 17 de julho de 2017. 
+>
+> Outro aprimoramento para atualizar a versão de biblioteca dependente do Azure Key Vault para 1.0.0 foi feito, e os jars novo (versão 6.2.2) foram lançadas em 19 de outubro de 2017.
+>
+> Baixar as atualizações mais recentes no JDBC Driver 6.2 na [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=852460), [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2), e [Central do Maven](http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.microsoft.sqlserver%22%20AND%20a%3A%22mssql-jdbc%22). Atualize seus projetos para usar o 6.2.2 jars de versão. Veja as notas de versão para [v6.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.1) e [v6.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v6.2.2) para obter mais detalhes.
 
 ### <a name="azure-active-directory-aad-support-for-linux"></a>Suporte do Azure Active Directory (AAD) para Linux
 

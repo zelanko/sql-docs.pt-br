@@ -14,70 +14,71 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 270ccbea5a7c12e8f7188cc4ad125e346a3eddd1
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
-ms.translationtype: MTE75
+ms.openlocfilehash: 74cc593c494c80492a96644f25fe4a7b6bc7a85e
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39278648"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662208"
 ---
 # <a name="understanding-isolation-levels"></a>Compreendendo os níveis de isolamento
+
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  As transações especificam um nível de isolamento que define o grau em que uma transação deve ser isolada contra modificações de recursos ou de dados feitas por outras transações. Os níveis de isolamento são descritos em termos de quais efeitos colaterais de simultaneidade são permitidos, como leituras sujas ou leituras fantasma.  
+As transações especificam um nível de isolamento que define o grau em que uma transação deve ser isolada contra modificações de recursos ou de dados feitas por outras transações. Os níveis de isolamento são descritos em termos de quais efeitos colaterais de simultaneidade são permitidos, como leituras sujas ou leituras fantasma.  
   
- Os níveis de isolamento da transação controlam o seguinte:  
+Os níveis de isolamento da transação controlam o seguinte:  
   
--   Se são feitos bloqueios quando os dados são lidos, e que tipo de bloqueio é solicitado.  
+- Se são feitos bloqueios quando os dados são lidos, e que tipo de bloqueio é solicitado.  
   
--   Por quanto tempo os bloqueios de leitura são mantidos.  
+- Por quanto tempo os bloqueios de leitura são mantidos.  
   
--   Se uma linha de referência de operação de leitura foi modificada por outra transação:  
+- Se uma linha de referência de operação de leitura foi modificada por outra transação:  
   
-    -   É bloqueada até que o bloqueio exclusivo na linha é liberado.  
+  - É bloqueada até que o bloqueio exclusivo na linha é liberado.  
   
-    -   Recupera a versão confirmada da linha que existia no momento em que a instrução ou transação foi iniciada.  
+  - Recupera a versão confirmada da linha que existia no momento em que a instrução ou transação foi iniciada.  
   
-    -   Lê a modificação de dados não confirmada.  
+  - Lê a modificação de dados não confirmada.  
+
+A escolha de um nível de isolamento de transação não afeta os bloqueios adquiridos para proteger as modificações de dados. Uma transação sempre obtém um bloqueio exclusivo em quaisquer dados que ela modifica e mantém esse bloqueio até que a transação seja concluída, seja qual for o nível de isolamento definido para essa transação. Para operações de leitura, níveis de isolamento da transação definem principalmente o nível de proteção dos efeitos das modificações feitas por outras transações.  
   
- A escolha de um nível de isolamento de transação não afeta os bloqueios adquiridos para proteger as modificações de dados. Uma transação sempre obtém um bloqueio exclusivo em quaisquer dados que ela modifica e mantém esse bloqueio até que a transação seja concluída, seja qual for o nível de isolamento definido para essa transação. Para operações de leitura, níveis de isolamento da transação definem principalmente o nível de proteção dos efeitos das modificações feitas por outras transações.  
-  
- Um nível de isolamento mais baixo aumenta a capacidade de muitos usuários acessarem os dados ao mesmo tempo, porém aumenta o número de efeitos de simultaneidade, como leituras sujas ou atualizações perdidas, que podem afetar os usuários. Por outro lado, um nível de isolamento mais alto reduz os tipos de efeitos de simultaneidade que os usuários podem encontrar, porém requer mais recursos do sistema e aumenta as chances de uma transação bloquear outra. Escolher o nível de isolamento apropriado depende de equilibrar os requisitos de integridade de dados do aplicativo em relação à sobrecarga de cada nível de isolamento. O nível de isolamento mais alto, serializável, garante que uma transação recuperará exatamente os mesmos dados toda vez que repetir uma operação de leitura, mas faz isto executando um nível de bloqueio que provavelmente causará impacto em outros usuários em sistemas multiusuários. O nível de isolamento mais baixo, leitura não confirmada, pode recuperar dados que foram modificados mas não confirmados por outras transações. Todos os efeitos colaterais da simultaneidade podem ocorrer na leitura não confirmada, mas não há nenhum bloqueio de leitura ou controle de versão, portanto, a sobrecarga é minimizada.  
-  
-## <a name="remarks"></a>Remarks  
+Um nível de isolamento mais baixo aumenta a capacidade de muitos usuários acessarem os dados ao mesmo tempo, porém aumenta o número de efeitos de simultaneidade, como leituras sujas ou atualizações perdidas, que podem afetar os usuários. Por outro lado, um nível de isolamento mais alto reduz os tipos de efeitos de simultaneidade que os usuários podem encontrar, porém requer mais recursos do sistema e aumenta as chances de uma transação bloquear outra. Escolher o nível de isolamento apropriado depende de equilibrar os requisitos de integridade de dados do aplicativo em relação à sobrecarga de cada nível de isolamento. O nível de isolamento mais alto, serializável, garante que uma transação recuperará exatamente os mesmos dados toda vez que repetir uma operação de leitura, mas faz isto executando um nível de bloqueio que provavelmente causará impacto em outros usuários em sistemas multiusuários. O nível de isolamento mais baixo, leitura não confirmada, pode recuperar dados que foram modificados mas não confirmados por outras transações. Todos os efeitos colaterais da simultaneidade podem ocorrer na leitura não confirmada, mas não há nenhum bloqueio de leitura ou controle de versão, portanto, a sobrecarga é minimizada.  
+
+## <a name="remarks"></a>Remarks
+
  A tabela a seguir mostra os efeitos colaterais da simultaneidade permitidos pelos diferentes níveis de isolamento.  
   
-|Nível de Isolamento|Leitura suja|Leitura não repetível|Fantasma|  
-|---------------------|----------------|-------------------------|-------------|  
-|Leitura não confirmada|Sim|Sim|Sim|  
-|Leitura confirmada|não|Sim|Sim|  
-|Leitura repetida|não|não|Sim|  
-|Instantâneo|não|não|não|  
-|Serializável|não|não|não|  
+| Nível de Isolamento  | Leitura suja | Leitura não repetível | Fantasma |
+| ---------------- | ---------- | ------------------- | ------- |
+| Leitura não confirmada | Sim        | Sim                 | Sim     |
+| Leitura confirmada   | não         | Sim                 | Sim     |
+| Leitura repetida  | não         | não                  | Sim     |
+| Instantâneo         | não         | não                  | não      |
+| Serializável     | não         | não                  | não      |
   
- As transações devem ser executadas em um nível de isolamento de pelo menos leitura repetível para impedir atualizações perdidas que podem ocorrer quando duas transações recuperam a mesma linha e, em seguida, atualizam a linha com base nos valores originalmente recuperados. Se as duas transações atualizarem as linhas usando uma única instrução UPDATE e não basearem a atualização nos valores previamente recuperados, as atualizações perdidas não poderão ocorrer no nível de isolamento padrão de leitura confirmada.  
-  
- Para definir o nível de isolamento de uma transação, você pode usar o método [setTransactionIsolation](../../connect/jdbc/reference/settransactionisolation-method-sqlserverconnection.md) da classe [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). Esse método aceita um valor **int** como seu argumento, que tem como base uma das constantes de conexão como no exemplo a seguir:  
-  
+As transações devem ser executadas em um nível de isolamento de pelo menos leitura repetível para impedir atualizações perdidas que podem ocorrer quando duas transações recuperam a mesma linha e, em seguida, atualizam a linha com base nos valores originalmente recuperados. Se as duas transações atualizarem as linhas usando uma única instrução UPDATE e não basearem a atualização nos valores previamente recuperados, as atualizações perdidas não poderão ocorrer no nível de isolamento padrão de leitura confirmada.  
+
+Para definir o nível de isolamento de uma transação, você pode usar o método [setTransactionIsolation](../../connect/jdbc/reference/settransactionisolation-method-sqlserverconnection.md) da classe [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). Esse método aceita um valor **int** como seu argumento, que tem como base uma das constantes de conexão como no exemplo a seguir:  
+
 ```java
 con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);  
-```  
-  
- Para usar o novo nível de isolamento de instantâneo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], você pode usar um das constantes SQLServerConnection:  
-  
+```
+
+Para usar o novo nível de isolamento de instantâneo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], você pode usar uma das constantes `SQLServerConnection`:  
+
 ```java
 con.setTransactionIsolation(SQLServerConnection.TRANSACTION_SNAPSHOT);  
-```  
-  
- ou pode usar:  
-  
+```
+
+ou pode usar:  
+
 ```java
 con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED + 4094);  
-```  
-  
- Para obter mais informações sobre os níveis de isolamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], veja "Níveis de isolamento no [!INCLUDE[ssDE](../../includes/ssde_md.md)]" nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
-  
-## <a name="see-also"></a>Consulte Também  
- [Executando transações com o JDBC Driver](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)  
-  
-  
+```
+
+Para obter mais informações sobre os níveis de isolamento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], veja "Níveis de isolamento no [!INCLUDE[ssDE](../../includes/ssde_md.md)]" nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+
+## <a name="see-also"></a>Consulte Também
+
+[Executando transações com o JDBC Driver](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)  

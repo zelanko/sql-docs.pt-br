@@ -14,12 +14,12 @@ caps.latest.revision: 64
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fd5d3bb54c4587c177160cdf99f2f0dacc2bb086
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.openlocfilehash: b0dc1141fd4f01fef3e49380cdd048faba105ed9
+ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39279277"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39662468"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Como usar o Always Encrypted com o driver JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -46,11 +46,11 @@ O Microsoft JDBC Driver para SQL Server se comunica com um repositório de chave
 ### <a name="using-built-in-column-master-key-store-providers"></a>Usando provedores internos de repositórios de chaves mestras de coluna
 O Microsoft JDBC Driver para SQL Server vem com os seguintes provedores de repositório de chave mestra de coluna interna. Alguns desses provedores são previamente registrados com os nomes de provedor específico (usados para pesquisar o provedor) e alguns exigem credenciais adicionais ou registro explícito.
 
-| Classe | Descrição | Nome (de pesquisa) do provedor |Pré-registrados?|
-|:---|:---|:---|:---|
-|**SQLServerColumnEncryptionAzureKeyVaultProvider**| Um provedor para um repositório de chaves para o Azure Key Vault.| AZURE_KEY_VAULT|não|
-|**SQLServerColumnEncryptionCertificateStoreProvider**| Um provedor para o Repositório de Certificados do Windows.|MSSQL_CERTIFICATE_STORE|Sim
-|**SQLServerColumnEncryptionJavaKeyStoreProvider**| Um provedor do repositório de chaves Java|MSSQL_JAVA_KEYSTORE|Sim|
+| Classe                                                 | Descrição                                        | Nome (de pesquisa) do provedor  | Pré-registrados? |
+| :---------------------------------------------------- | :------------------------------------------------- | :---------------------- | :----------------- |
+| **SQLServerColumnEncryptionAzureKeyVaultProvider**    | Um provedor para um repositório de chaves para o Azure Key Vault. | AZURE_KEY_VAULT         | não                 |
+| **SQLServerColumnEncryptionCertificateStoreProvider** | Um provedor para o Repositório de Certificados do Windows.      | MSSQL_CERTIFICATE_STORE | Sim                |
+| **SQLServerColumnEncryptionJavaKeyStoreProvider**     | Um provedor do repositório de chaves Java                   | MSSQL_JAVA_KEYSTORE     | Sim                |
 
 Para os provedores de repositório de chaves previamente registrado, você não precisa fazer nenhuma alteração de código do aplicativo para usar esses provedores, mas observe os seguintes itens:
 
@@ -368,7 +368,7 @@ O Sempre Criptografado também pode ser habilitado para consultas individuais. P
 - O aplicativo pode acessar a chave mestra de coluna que protege as chaves de criptografia de coluna, o que criptografa as colunas de banco de dados consultadas. Para usar o provedor de Store de chave do Java, você precisa fornecer credenciais adicionais na cadeia de conexão. Para obter mais informações, consulte [provedor de Store de chave do Java usando](#using-java-key-store-provider).
 
 ### <a name="configuring-how-javasqltime-values-are-sent-to-the-server"></a>Configuração de como os valores de java.sql.Time são enviados ao servidor
-O **sendTimeAsDatetime** propriedade de conexão é usada para configurar como o valor Time será enviado ao servidor. Quando definido como false, o valor de hora é enviado como um tipo de hora do SQL Server. Quando definido como true, o valor é enviado como um tipo de data e hora de tempo. Se uma coluna de hora for criptografada, o **sendTimeAsDatetime** propriedade deve ser false, como colunas criptografadas não dão suporte a conversão de tempo para a data e hora. Observe também que essa propriedade é por padrão true, então ao usar colunas criptografadas de tempo você terá que defini-lo como false. Caso contrário, o driver lançará uma exceção. A partir da versão 6.0 do driver, a classe SQLServerConnection tem dois métodos para configurar o valor dessa propriedade por meio de programação:
+A propriedade de conexão **sendTimeAsDatetime** é usada para configurar como o valor java.sql.Time é enviado para o servidor. Quando definido como false, o valor de hora é enviado como um tipo de hora do SQL Server. Quando definido como true, o valor é enviado como um tipo de data e hora de tempo. Se uma coluna de hora for criptografada, o **sendTimeAsDatetime** propriedade deve ser false, como colunas criptografadas não dão suporte a conversão de tempo para a data e hora. Observe também que essa propriedade é por padrão true, então ao usar colunas criptografadas de tempo você terá que defini-lo como false. Caso contrário, o driver lançará uma exceção. A partir da versão 6.0 do driver, a classe SQLServerConnection tem dois métodos para configurar o valor dessa propriedade por meio de programação:
  
 * setSendTimeAsDatetime public void (sendTimeAsDateTimeValue boolean)
 * public boolean getSendTimeAsDatetime()
@@ -385,12 +385,13 @@ Se o Sempre Criptografado não estiver habilitado, as consultas com parâmetros 
 
 A tabela abaixo resume o comportamento das consultas dependendo se Always Encrypted está habilitado ou não:
 
-|Característica da consulta | O Always Encrypted está habilitado e o aplicativo pode acessar as chaves e os metadados da chave|O Sempre Criptografado está habilitado e o aplicativo não pode acessar as chaves nem os metadados da chave | O Sempre Criptografado está desabilitado|
-|:---|:---|:---|:---|
-| Consultas com parâmetros que se destinam a colunas criptografadas. | Os valores de parâmetro são criptografados de modo transparente. | Erro | Erro|
-| Consultas que recuperam dados de colunas criptografadas sem parâmetros que se destinam a colunas criptografadas.| Os resultados das colunas criptografadas são descriptografados de modo transparente. O aplicativo recebe valores de texto não criptografado dos tipos de dados JDBC correspondentes aos tipos do SQL Server configurados para as colunas criptografadas. | Erro | Os resultados das colunas criptografadas não são descriptografados. O aplicativo recebe valores criptografados como matrizes de bytes (byte[]).
+| Característica da consulta                                                                           | O Always Encrypted está habilitado e o aplicativo pode acessar as chaves e os metadados da chave                                                                                                                        | O Sempre Criptografado está habilitado e o aplicativo não pode acessar as chaves nem os metadados da chave | O Sempre Criptografado está desabilitado                                                                                        |
+| :--------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :-------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------ |
+| Consultas com parâmetros que se destinam a colunas criptografadas.                                           | Os valores de parâmetro são criptografados de modo transparente.                                                                                                                                                           | Erro                                                                             | Erro                                                                                                               |
+| Consultas que recuperam dados de colunas criptografadas sem parâmetros que se destinam a colunas criptografadas. | Os resultados das colunas criptografadas são descriptografados de modo transparente. O aplicativo recebe valores de texto não criptografado dos tipos de dados JDBC correspondentes aos tipos do SQL Server configurados para as colunas criptografadas. | Erro                                                                             | Os resultados das colunas criptografadas não são descriptografados. O aplicativo recebe valores criptografados como matrizes de bytes (byte[]). |
 
-### <a name="inserting-and-retrieving-encrypted-data-examples"></a>Inserir e recuperar dados criptografados exemplos 
+### <a name="inserting-and-retrieving-encrypted-data-examples"></a>Inserir e recuperar dados criptografados exemplos
+
 Os exemplos a seguir ilustram como recuperar e modificar dados em colunas criptografadas. Os exemplos pressupõem que a tabela de destino com o esquema a seguir e as colunas SSN e BirthDate criptografadas. Se você tiver configurado uma chave mestra de coluna chamada "MyCMK" e uma chave de criptografia de coluna chamada "MyCEK" (conforme descrito nas seções anteriores de provedores de repositório de chaves), você pode criar a tabela usando esse script:
 
 ```sql
@@ -436,7 +437,9 @@ Se você estiver usando um provedor de repositório de chaves Java chave Store:
 ```
 
 ### <a name="inserting-data-example"></a>Inserindo exemplo de dados
+
 Este exemplo insere uma linha na tabela Pacientes. Observe os seguintes itens:
+
 - Não há nada específico de criptografia no código de exemplo. O Microsoft JDBC Driver para SQL Server detecta automaticamente e criptografa os parâmetros que se destinam a colunas criptografadas. Esse comportamento torna a criptografia transparente para o aplicativo.
 - Os valores inseridos nas colunas de banco de dados, incluindo as colunas criptografadas, são passados como parâmetros usando SQLServerPreparedStatement. Embora o uso de parâmetros seja opcional ao enviar valores para colunas não criptografadas (mesmo que seja altamente recomendável, pois ajuda a prevenir a injeção de SQL), ele é necessário para valores que se destinam a colunas criptografadas. Se os valores inseridos nas colunas criptografadas foram passados como literais inseridos na instrução de consulta, a consulta falharia, pois o driver não seria capaz de determinar os valores em colunas criptografadas de destino e ele não criptografa os valores. Como resultado, o servidor os rejeitaria como incompatíveis com as colunas criptografadas.
 - Todos os valores impressos pelo programa estarão em texto não criptografado, já que o Microsoft JDBC Driver for SQL Server descriptografará de modo transparente os dados recuperados das colunas criptografadas.
@@ -461,7 +464,9 @@ catch (SQLException e) {
 ```
 
 ### <a name="retrieving-plaintext-data-example"></a>Exemplo de recuperação de dados de texto não criptografado
+
 O exemplo a seguir demonstra a filtragem de dados com base em valores criptografados e a recuperação de dados de texto não criptografado de colunas criptografadas. Observe os seguintes itens:
+
 - O valor usado na cláusula WHERE a ser filtrado na coluna SSN precisa ser passado como um parâmetro para que Microsoft JDBC Driver for SQL Server possa criptografá-lo de modo transparente antes de enviá-lo ao banco de dados.
 - Todos os valores impressos pelo programa estarão em texto não criptografado, já que o Microsoft JDBC Driver for SQL Server descriptografará de modo transparente os dados recuperados das colunas SSN e BirthDate.
 
@@ -485,11 +490,13 @@ catch (SQLException e) {
     e.printStackTrace();
 }
 ```
-  
+
 ### <a name="retrieving-encrypted-data-example"></a>Exemplo de recuperação de dados criptografados
+
 Se o Always Encrypted não estiver habilitado, uma consulta ainda poderá recuperar dados de colunas criptografadas, desde que a consulta não tenha parâmetros que se destinam a colunas criptografadas.
 
 O exemplo a seguir ilustra como recuperar dados binários criptografados de colunas criptografadas. Observe os seguintes itens:
+
 - Como o Always Encrypted não está habilitado na cadeia de conexão, a consulta retornará valores criptografados de SSN e BirthDate como matrizes de bytes (o programa converte os valores em cadeias de caracteres).
 - Uma consulta que recupera dados de colunas criptografadas com o Sempre Criptografado desabilitado pode ter parâmetros, desde que nenhum dos parâmetros se destinem a uma coluna criptografada. A consulta a seguir filtra por LastName, que não é criptografado no banco de dados. Se a consulta filtrar por SSN ou BirthDate, a consulta falhará.
 
@@ -512,21 +519,26 @@ catch (SQLException e) {
 ```
 
 ### <a name="avoiding-common-problems-when-querying-encrypted-columns"></a>Evitando problemas comuns ao consultar colunas criptografadas
+
 Esta seção descreve as categorias comuns de erros ao consultar colunas criptografadas de aplicativos Java e algumas diretrizes sobre como evitá-las.
 
 ### <a name="unsupported-data-type-conversion-errors"></a>Erros de conversão de tipo de dados sem suporte
+
 O Always Encrypted dá suporte a algumas conversões de tipos de dados criptografados. Confira [Always Encrypted (Mecanismo de Banco de Dados)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) para obter a lista detalhada de conversões de tipo compatíveis. Isto é o que você pode fazer para evitar erros de conversão de tipo de dados. Certifique-se de que:
 
 - Você usa os métodos de setter apropriado quando passar valores para parâmetros que se destinam a colunas criptografadas. Certifique-se de que o tipo de dados do SQL Server do parâmetro é exatamente o mesmo que o tipo da coluna de destino ou uma conversão do tipo de dados do SQL Server do parâmetro para o tipo de destino da coluna é suportada. Métodos de API foram adicionados às classes SQLServerPreparedStatement e SQLServerCallableStatement SQLServerResultSet para passar parâmetros correspondentes aos tipos de dados específicos do SQL Server. Por exemplo, se uma coluna não é criptografada você pode usar o método setTimestamp() para passar um parâmetro para um datetime2 ou para uma coluna de data e hora. Mas, quando uma coluna é criptografada, você terá que usar o método exato que representa o tipo da coluna no banco de dados. Por exemplo, use setTimestamp() para passar valores para uma coluna criptografada datetime2 e use setDateTime() para passar valores para uma coluna de datetime criptografados. Ver [Always Encrypted referência da API para o Driver JDBC](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md) para obter uma lista completa das novas APIs.
 - a precisão e escala dos parâmetros que se destinam a colunas dos tipos de dados decimais e numéricos do SQL Server são iguais à precisão e escala configuradas para a coluna de destino. Métodos de API foram adicionados às classes SQLServerPreparedStatement e SQLServerCallableStatement SQLServerResultSet para aceitar a precisão e escala junto com os valores de dados para/as colunas de parâmetros que representam os tipos de dados decimais e numéricos. Ver [Always Encrypted referência da API para o Driver JDBC](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md) para obter uma lista completa das APIs de novos/sobrecarregado.  
-- precisão/escala de frações de parâmetros que se destinam a colunas datetime2, datetimeoffset ou tipos de dados do SQL Server de hora não for maior que a precisão ou escala de frações de segundos para a coluna de destino em consultas que modificam os valores da coluna de destino . Métodos de API foram adicionados às classes SQLServerPreparedStatement e SQLServerCallableStatement SQLServerResultSet para aceitar a precisão/escala de frações juntamente com os valores de dados para parâmetros que representam a esses tipos de dados. Para obter uma lista completa das APIs de novos/sobrecarregados, consulte [Always Encrypted referência da API para o Driver JDBC](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md).   
+- precisão/escala de frações de parâmetros que se destinam a colunas datetime2, datetimeoffset ou tipos de dados do SQL Server de hora não for maior que a precisão ou escala de frações de segundos para a coluna de destino em consultas que modificam os valores da coluna de destino . Métodos de API foram adicionados às classes SQLServerPreparedStatement e SQLServerCallableStatement SQLServerResultSet para aceitar a precisão/escala de frações juntamente com os valores de dados para parâmetros que representam a esses tipos de dados. Para obter uma lista completa das APIs de novos/sobrecarregados, consulte [Always Encrypted referência da API para o Driver JDBC](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md).
 
 ### <a name="errors-due-to-incorrect-connection-properties"></a>Erros devido a propriedades de conexão incorretas
-Esta seção descreve como definir as configurações de conexão corretamente para usar dados de Always Encrypted. Porque os tipos de dados criptografados dá suporte a conversões limitadas, o **sendTimeAsDatetime** e **sendStringParametersAsUnicode** configurações de conexão precisam de configuração apropriada ao usar colunas criptografadas. Certifique-se de que: 
+
+Esta seção descreve como definir as configurações de conexão corretamente para usar dados de Always Encrypted. Porque os tipos de dados criptografados dá suporte a conversões limitadas, o **sendTimeAsDatetime** e **sendStringParametersAsUnicode** configurações de conexão precisam de configuração apropriada ao usar colunas criptografadas. Certifique-se de que:
+
 - [sendTimeAsDatetime](setting-the-connection-properties.md) configuração de conexão é definida como false quando inserindo dados em colunas de tempo de criptografadas. Para obter mais informações, consulte [configurando como os valores time são enviados para o servidor](configuring-how-java-sql-time-values-are-sent-to-the-server.md).
 - [sendStringParametersAsUnicode](setting-the-connection-properties.md) configuração de conexão é definida como true (ou é deixado como o padrão) quando inserindo dados em char/varchar/varchar(max) a colunas criptografadas.
 
 ### <a name="errors-due-to-passing-plaintext-instead-of-encrypted-values"></a>Erros devido à passagem de texto sem formatação em vez de valores criptografados
+
 Qualquer valor que se destina a uma coluna criptografada precisa ser criptografado no aplicativo. Uma tentativa de inserir/modificar ou de filtrar por um valor de texto não criptografado em uma coluna criptografada resultará em um erro semelhante a este:
 
 ```java
@@ -534,6 +546,7 @@ com.microsoft.sqlserver.jdbc.SQLServerException: Operand type clash: varchar is 
 ```
 
 Para evitar esses tipos de erros, garanta que:
+
 - Always Encrypted é habilitado para as consultas de aplicativo que se destinam a colunas criptografadas (na cadeia de conexão ou para uma consulta específica).
 - use as instruções preparadas e parâmetros para enviar dados direcionamento a colunas criptografadas. O exemplo a seguir mostra uma consulta filtrada incorretamente por um literal/constante em uma coluna criptografada (SSN), em vez de passar o literal para dentro como um parâmetro. Essa consulta falhará:
 
@@ -542,29 +555,38 @@ ResultSet rs = connection.createStatement().executeQuery("SELECT * FROM Customer
 ```
 
 ## <a name="force-encryption-on-input-parameters"></a>Forçar a criptografia em parâmetros de entrada
+
 O recurso de Forçar criptografia impõe a criptografia de um parâmetro ao usar o Always Encrypted. Se forçar criptografia for usado e o SQL Server informar o driver de que o parâmetro não precisa ser criptografado, a consulta que estiver o parâmetro falhará. Essa propriedade fornece proteção adicional contra ataques de segurança que envolvem um SQL Server comprometido fornecendo metadados de criptografia incorretos ao cliente, o que pode levar à divulgação de dados. Os métodos em classes SQLServerPreparedStatement e SQLServerCallableStatement e a atualização de conjunto *\* métodos na classe SQLServerResultSet são sobrecarregados para aceitar um argumento booliano para especificar a configuração de criptografia de força. Se o valor desse argumento for false, o driver não força a criptografia em parâmetros. Se Forçar criptografia for definida como true, a consulta de parâmetro só é enviado se a coluna de destino está criptografada e Always Encrypted estiver habilitado, a conexão ou a instrução. Usar esta propriedade fornece uma camada extra de segurança, garantindo que o driver não por engano envia dados para o SQL Server como texto sem formatação que deve ser criptografado.
 
 Para obter mais informações sobre os métodos de SQLServerPreparedStatement e SQLServerCallableStatement são sobrecarregados com a configuração de criptografia de força, consulte [sempre criptografados referência da API para o Driver JDBC](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)  
 
 ## <a name="controlling-the-performance-impact-of-always-encrypted"></a>Controle do impacto sobre o desempenho do Always Encrypted
+
 Como o Always Encrypted é uma tecnologia de criptografia do lado do cliente, a maior parte da sobrecarga de desempenho é observada no lado do cliente, não no banco de dados. Além do custo das operações de criptografia e descriptografia, outras fontes de sobrecarga de desempenho no lado do cliente são:
+
 - Viagens de ida e volta adicionais ao banco de dados para recuperar metadados dos parâmetros de consulta.
 - Chamadas a um repositório de chaves mestras de coluna para acessar uma chave mestra de coluna.
 
 Esta seção descreve as otimizações de desempenho internas no Microsoft JDBC Driver for SQL Server e como você pode controlar o impacto dos dois fatores acima sobre o desempenho.
 
 ### <a name="controlling-round-trips-to-retrieve-metadata-for-query-parameters"></a>Controlando as viagens de ida e volta para recuperar metadados dos parâmetros de consulta
+
 Se o Always Encrypted estiver habilitado para uma conexão, por padrão, o driver chamará [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) para cada consulta parametrizada, passando a instrução de consulta (sem nenhum valor de parâmetro) para o SQL Server. O [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) analisa a instrução de consulta para descobrir se os parâmetros precisam ser criptografados e, se for o caso, para cada um, retornará as informações relacionadas à criptografia que permitirão ao driver criptografar os valores de parâmetro. Esse comportamento garante um alto nível de transparência para o aplicativo cliente. Desde que o aplicativo usa parâmetros para passar valores que se destinam a colunas criptografadas para o driver, o aplicativo (e o desenvolvedor do aplicativo) não precisam saber quais consultas acessam colunas criptografadas.
 
 ### <a name="setting-always-encrypted-at-the-query-level"></a>Configurando o Always Encrypted no nível da consulta
+
 Para controlar o impacto no desempenho da recuperação de metadados de criptografia para consultas parametrizadas, é possível habilitar o Always Encrypted para consultas individuais, em vez de configurá-lo para a conexão. Assim, você pode garantir que sys.sp_describe_parameter_encryption seja invocado apenas para consultas que você sabe que têm parâmetros que se destinam a colunas criptografadas. No entanto, observe que, ao fazer isso, você reduz a transparência da criptografia: se você alterar as propriedades de criptografia das colunas de banco de dados, poderá ser necessário alterar o código do aplicativo para alinhá-lo às alterações de esquema.
 
 Para controlar o comportamento de Always Encrypted de consultas individuais, você precisa configurar os objetos de instrução individual, passando um Enum, SQLServerStatementColumnEncryptionSetting, que especifica como os dados serão enviados e recebidos durante a leitura e gravação colunas criptografadas para essa instrução específica. Veja algumas diretrizes úteis:
+
 - Se a maioria das consultas que um aplicativo cliente enviar por uma conexão de banco de dados acessa colunas criptografadas, use estas diretrizes:
+
     - Defina a palavra-chave da cadeia de conexão **columnEncryptionSetting** como **Habilitada**.
     - Defina SQLServerStatementColumnEncryptionSetting.Disabled para consultas individuais que não acessam nenhuma coluna criptografada. Essa configuração desabilitará a chamada a sys.sp_describe_parameter_encryption, além de ser uma tentativa de descriptografar todos os valores no conjunto de resultados.
     - Defina SQLServerStatementColumnEncryptionSetting.ResultSet para consultas individuais que não têm parâmetros que exijam criptografia, mas que recuperam dados de colunas criptografadas. Essa configuração desabilitará a chamada a sys.sp_describe_parameter_encryption e a criptografia de parâmetros. A consulta poderá descriptografar os resultados das colunas de criptografia.
+
 - Se a maioria das consultas que um aplicativo cliente enviar por uma conexão de banco de dados não acessa colunas criptografadas, use estas diretrizes:
+
     - Defina a palavra-chave da cadeia de conexão **columnEncryptionSetting** como **Desabilitada**.
     - Defina SQLServerStatementColumnEncryptionSetting.Enabled para consultas individuais que têm parâmetros que precisam ser criptografados. Essa configuração habilitará a chamada a sys.sp_describe_parameter_encryption, além da descriptografia de todos os resultados de consulta recuperados de colunas criptografadas.
     - Defina SQLServerStatementColumnEncryptionSetting.ResultSet para consultas que não têm parâmetros que exijam criptografia, mas que recuperam dados de colunas criptografadas. Essa configuração desabilitará a chamada a sys.sp_describe_parameter_encryption e a criptografia de parâmetros. A consulta poderá descriptografar os resultados das colunas de criptografia.
@@ -603,6 +625,7 @@ catch (SQLException e) {
 ```
 
 ### <a name="column-encryption-key-caching"></a>Cache de chaves de criptografia de coluna
+
 Para reduzir o número de chamadas a um repositório de chaves mestras de coluna para descriptografar chaves de criptografia de coluna, o Microsoft JDBC Driver for SQL Server armazena em cache as chaves de criptografia de coluna de texto não criptografado na memória. Depois de receber o valor da chave de criptografia de coluna criptografado dos metadados do banco de dados, o driver primeiro tentará encontrar a chave de criptografia de coluna de texto não criptografado correspondente ao valor da chave criptografado. O driver chamará o repositório de chaves que contém a chave mestra de coluna apenas se não conseguir encontrar o valor da chave de criptografia de coluna criptografado no cache.
 
 Você pode configurar um valor time-to-live para as entradas de chave de criptografia de coluna no cache usando a API, setColumnEncryptionKeyCacheTtl(), na classe SQLServerConnection. O valor de tempo de vida padrão para as entradas de chave de criptografia de coluna no cache é duas horas. Para desativar o cache, use um valor de 0. Para definir qualquer valor time-to-live, use a seguinte API:
@@ -620,6 +643,7 @@ SQLServerConnection.setColumnEncryptionKeyCacheTtl (10, TimeUnit.MINUTES)
 Apenas dias, horas, minutos ou segundos têm suporte como a unidade de tempo.  
 
 ## <a name="copying-encrypted-data-using-sqlserverbulkcopy"></a>Copiando dados criptografados usando SQLServerBulkCopy
+
 Com SQLServerBulkCopy, você pode copiar dados que já estão criptografados e armazenados em uma tabela para outra tabela sem descriptografá-los. Para fazer isso:
 
 - Verifique se a configuração de criptografia da tabela de destino é idêntica à configuração da tabela de origem. Em particular, as duas tabelas devem ter as mesmas colunas criptografadas, e as colunas devem ser criptografadas usando os mesmos tipos de criptografia e as mesmas chaves de criptografia. Se qualquer coluna de destino for criptografada de modo diferente da coluna de origem correspondente, você não poderá descriptografar os dados na tabela de destino após a operação de cópia. Os dados serão corrompidos.
@@ -630,4 +654,5 @@ Com SQLServerBulkCopy, você pode copiar dados que já estão criptografados e a
 > Tenha cuidado ao especificar AllowEncryptedValueModifications, pois isso pode levar à corrupção de banco de dados, porque o Microsoft JDBC Driver for SQL Server não verifica se os dados estão realmente criptografados ou se estão criptografados corretamente usando o mesmo tipo de criptografia, algoritmo e chave que a coluna de destino.
 
 ## <a name="see-also"></a>Consulte Também
+
 [Always Encrypted (mecanismo de banco de dados)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)
