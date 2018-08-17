@@ -48,21 +48,21 @@ caps.latest.revision: 333
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2e9788b44bb2f95082914875b14a512f05d584b9
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 57afb99a77a80946ed650045ce40c1382fa06c3d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982058"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40184683"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>Requisitos de hardware e software para a instalação do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 O artigo lista os requisitos mínimos de hardware e software para instalação e execução do [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] no sistema operacional Windows. 
 
-O [!INCLUDE[sscurrent](../../includes/sssqlv14-md.md)] introduz o suporte para o [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] no Linux. Para obter mais informações, consulte [Requisitos de hardware e de software do [!INCLUDE[ssNoVersion](../../includes/ssNoVersion_md.md)] no Linux](../../linux/sql-server-linux-setup.md#system). 
+O [!INCLUDE[sscurrent](../../includes/sssqlv14-md.md)] introduz o suporte para o [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] no Linux. Para obter mais informações, consulte [Requisitos de hardware e de software do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no Linux](../../linux/sql-server-linux-setup.md#system). 
 
-> Este artigo aplica-se ao [!INCLUDE[ss2016](../../includes/sssql15-md.md)] e a versões posteriores. Para conteúdo relacionado a versões anteriores do SQL Server, consulte [Requisitos de Hardware e Software para instalar o SQL Server 2014](https://msdn.microsoft.com/library/ms143506(v=sql.120).aspx). 
+> Este artigo aplica-se ao [!INCLUDE[ss2016](../../includes/sssql15-md.md)] e a versões posteriores. Para conteúdo relacionado a versões anteriores do SQL Server, consulte [Requisitos de Hardware e Software para instalar o SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md). 
   
 **Experimente:**  
   
