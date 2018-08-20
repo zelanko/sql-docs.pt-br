@@ -20,12 +20,12 @@ caps.latest.revision: 47
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9364bacf4e9f601c8cce9d5dfe4cd550d4b7405e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 79469da3f919204e3ceb0d3e9a4b9968ba56ba02
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32931011"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175062"
 ---
 # <a name="database-mail"></a>Database Mail
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -114,7 +114,7 @@ ms.locfileid: "32931011"
   
  Você pode configurar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para enviar mensagens de email a operadores predefinidos, quando:  
   
--   Um alerta é disparado. Alertas podem ser configurados para que enviem notificação por email sobre eventos específicos ocorridos. Por exemplo, podem ser configurados alertas que notifiquem um operador sobre um evento de banco de dados em particular ou uma condição do sistema operacional que talvez necessite de ação imediata. Para obter mais informações sobre como configurar alertas, veja [Alertas](http://msdn.microsoft.com/library/3f57d0f0-4781-46ec-82cd-b751dc5affef).  
+-   Um alerta é disparado. Alertas podem ser configurados para que enviem notificação por email sobre eventos específicos ocorridos. Por exemplo, podem ser configurados alertas que notifiquem um operador sobre um evento de banco de dados em particular ou uma condição do sistema operacional que talvez necessite de ação imediata. Para obter mais informações sobre como configurar alertas, veja [Alertas](../../ssms/agent/alerts.md).  
   
 -   Uma tarefa agendada, como um backup de banco de dados ou evento de replicação, obtém êxito ou falha. Por exemplo, você pode usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent Mail para notificar operadores se ocorrer um erro durante o processamento do final de um mês.  
   

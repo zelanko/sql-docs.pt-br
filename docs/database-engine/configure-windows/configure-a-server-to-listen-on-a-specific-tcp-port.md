@@ -21,17 +21,17 @@ caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 71cc5f675917e0e99c9f5a9806b8e928626c84eb
-ms.sourcegitcommit: ebb276e5f14a60059e58257e3350c3cbb30a1da5
+ms.openlocfilehash: b78d6b459408aa36f2e219460e9346534c685c78
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39609665"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175069"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port"></a>Configurar um servidor para escutar em uma porta TCP específica
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Este tópico descreve como configurar uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] para escutar em uma porta fixa específica usando o SQL Server Configuration Manager. Se habilitada, a instância padrão do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] escutará na porta TCP 1433. As instâncias nomeadas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e do [!INCLUDE[ssEW](../../includes/ssew-md.md)] são configuradas para [portas dinâmicas](https://msdn.microsoft.com/library/dd981060). Isso significa que elas selecionam uma porta disponível quando o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é iniciado. Ao conectar-se a uma instância nomeada através de um firewall, configure o [!INCLUDE[ssDE](../../includes/ssde-md.md)] para escutar em uma porta específica, para que a porta adequada possa ser aberta no firewall.  
+  Este tópico descreve como configurar uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] para escutar em uma porta fixa específica usando o SQL Server Configuration Manager. Se habilitada, a instância padrão do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] escutará na porta TCP 1433. As instâncias nomeadas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] e do [!INCLUDE[ssEW](../../includes/ssew-md.md)] são configuradas para [portas dinâmicas](../../tools/configuration-manager/tcp-ip-properties-ip-addresses-tab.md). Isso significa que elas selecionam uma porta disponível quando o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é iniciado. Ao conectar-se a uma instância nomeada através de um firewall, configure o [!INCLUDE[ssDE](../../includes/ssde-md.md)] para escutar em uma porta específica, para que a porta adequada possa ser aberta no firewall.  
 
 Como a porta 1433 é o padrão conhecido para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], algumas organizações especificam que o número da porta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ser alterado para aumentar a segurança. Isso pode ser útil em alguns ambientes. No entanto, a arquitetura de TCP/IP permite um [verificador de porta](https://wikipedia.org/wiki/Port_scanner) para consultar as portas abertas e, portanto, a alteração do número da porta não é considerada uma medida de segurança robusta.
 

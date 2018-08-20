@@ -16,12 +16,12 @@ caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3e559147286aa4f5664c09c38a80a4e568eff175
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 61e97bf25b13f8edd225e7b57ede4cecd0a78e35
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35407948"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175061"
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>Passo a passo: publicar um Pacote SSIS como um modo SQL
   Este passo a passo fornece as etapas detalhadas para publicar um pacote SSIS como um modo SQL em um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -130,7 +130,7 @@ ms.locfileid: "35407948"
   
         1.  Especifique o esquema de banco de dados no qual você deseja que o modo de exibição seja criado (campo Esquema).  
   
-        2.  Especifique se os dados devem ser criptografados antes de enviá-los pela rede (campo Criptografar). Consulte o tópico [Usando criptografia sem validação](http://msdn.microsoft.com/library/ms131691.aspx) para obter mais detalhes sobre essa configuração e a configuração TrustServerCertificate.  
+        2.  Especifique se os dados devem ser criptografados antes de enviá-los pela rede (campo Criptografar). Consulte o tópico [Usando criptografia sem validação](../../relational-databases/native-client/features/using-encryption-without-validation.md) para obter mais detalhes sobre essa configuração e a configuração TrustServerCertificate.  
   
         3.  Especifique se um certificado do servidor autoassinado pode ser usado quando a configuração de criptografia está habilitada (campo**TrustServerCertificate** ).  
   
@@ -213,7 +213,7 @@ GO
   
  No tempo de execução, quando a exibição é executada, a consulta de servidor vinculado definida no modo de exibição inicia o pacote do SSIS especificado na consulta e recebe a saída do pacote como um conjunto de resultados de tabela.  
   
-1.  Antes de criar o modo de exibição, digite e execute a consulta a seguir na nova janela de consulta. OPENQUERY é uma função de conjunto de linhas com suporte pelo SQL Server. Ela executa a consulta passagem especificada no servidor vinculado especificado usando o provedor OLE DB associado ao servidor vinculado. OPENQUERY pode ser referenciada na cláusula FROM de uma consulta como se fosse um nome de tabela. Consulte [Documentação OPENQUERY na biblioteca MSDN](http://msdn.microsoft.com/library/ms188427.aspx) para obter mais informações.  
+1.  Antes de criar o modo de exibição, digite e execute a consulta a seguir na nova janela de consulta. OPENQUERY é uma função de conjunto de linhas com suporte pelo SQL Server. Ela executa a consulta passagem especificada no servidor vinculado especificado usando o provedor OLE DB associado ao servidor vinculado. OPENQUERY pode ser referenciada na cláusula FROM de uma consulta como se fosse um nome de tabela. Consulte [Documentação OPENQUERY na biblioteca MSDN](../../t-sql/functions/openquery-transact-sql.md) para obter mais informações.  
   
     ```sql
     SELECT * FROM OPENQUERY(SSISFeedServer,N'Folder=Eldorado;Project=SSISPackagePublishing;Package=Package.dtsx')   

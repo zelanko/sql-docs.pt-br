@@ -18,12 +18,12 @@ caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f3c407c01db1931459654794923a6f8aeb345e3c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6ee798510dd33a5df695c2be9f62b37bb7314341
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32868321"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175076"
 ---
 # <a name="scm-services---change-the-service-startup-account"></a>Serviços SCM – alterar a conta de inicialização do serviço
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,6 +74,6 @@ ms.locfileid: "32868321"
   
 ## <a name="see-also"></a>Consulte Também  
  [Iniciar, parar, pausar, retomar, reiniciar o mecanismo de banco de dados, o SQL Server Agent ou o serviço SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   
- [Configurar o WMI para mostrar o status do servidor nas ferramentas do SQL Server](http://msdn.microsoft.com/library/7e97197b-ed4d-40d1-9a52-9ab1d92401d7)  
+ [Configurar o WMI para mostrar o status do servidor nas ferramentas do SQL Server](../../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md)  
   
   

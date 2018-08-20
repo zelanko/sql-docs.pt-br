@@ -22,12 +22,12 @@ caps.latest.revision: 40
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d48fb1394319e9f6e43f59ecf35903b6cb1320f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f20f19ed92d7d8deff82daa130cc2d4e7275c441
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921372"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175058"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>Exibir ou alterar o modelo de recuperação de um banco de dados (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -138,13 +138,13 @@ ALTER DATABASE model SET RECOVERY FULL ;
   
 -   [Fazer backup de um log de transações &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
--   [Criar um trabalho](http://msdn.microsoft.com/library/b35af2b6-6594-40d1-9861-4d5dd906048c)  
+-   [Criar um trabalho](../../ssms/agent/create-a-job.md)  
   
--   [Desabilitar ou habilitar um trabalho](http://msdn.microsoft.com/library/5041261f-0c32-4d4a-8bee-59a6c16200dd)  
+-   [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)  
   
 ##  <a name="RelatedContent"></a> Conteúdo relacionado  
   
--   [Planos de manutenção de banco de dados](http://msdn.microsoft.com/library/ms187658.aspx) (nos Manuais Online do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] )  
+-   [Planos de manutenção de banco de dados](../maintenance-plans/maintenance-plans.md) (nos Manuais Online do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] )  
   
 ## <a name="see-also"></a>Consulte Também  
  [Modelos de recuperação &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)   

@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 828fa7cb8694117f8960dee36b03268bbae0c2a6
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 4d2156c3523e6dcc53c04ebf011406b715abe530
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39543066"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175049"
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>Configurar o Always Encrypted usando o SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -386,7 +386,7 @@ Para obter mais informações, consulte [Create and Store Column Master Keys (Al
 
 ## <a name="performing-dac-upgrade-operations-when-database-or-dacpac-uses-always-encrypted"></a>Executando operações de atualização de DAC quando o banco de dados ou o DACPAC usa o Always Encrypted
 
-As[operações de DAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) têm suporte em arquivos DACPAC e bancos de dados com esquemas contendo colunas criptografadas. Considerações especiais são aplicadas à operação de atualização de DAC. Consulte [Atualizar um aplicativo da camada de dados](../../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md) sobre como executar uma operação de atualização de DAC em várias ferramentas, incluindo o SSMS. 
+As[operações de DAC](../../data-tier-applications/data-tier-applications.md) têm suporte em arquivos DACPAC e bancos de dados com esquemas contendo colunas criptografadas. Considerações especiais são aplicadas à operação de atualização de DAC. Consulte [Atualizar um aplicativo da camada de dados](../../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md) sobre como executar uma operação de atualização de DAC em várias ferramentas, incluindo o SSMS. 
 
 Quando você atualiza um banco de dados usando um DACPAC e o DACPAC ou o banco de dados de destino tem colunas criptografadas, a operação de atualização disparará uma operação de criptografia de dados se todas as seguintes condições forem atendidas:
 - O banco de dados contém uma coluna com dados.
@@ -418,7 +418,7 @@ Para obter mais informações, consulte [Create and Store Column Master Keys (Al
 
 ## <a name="migrating-databases-with-encrypted-columns-using-bacpac"></a>Migrando bancos de dados com colunas criptografadas usando BACPAC
 
-Quando você exporta um banco de dados, todos os dados armazenados em colunas criptografadas são recuperados e colocados no [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) resultante (em formato criptografado). O BACPAC resultante também contém os metadados de chaves Always Encrypted.
+Quando você exporta um banco de dados, todos os dados armazenados em colunas criptografadas são recuperados e colocados no [BACPAC](../../data-tier-applications/data-tier-applications.md) resultante (em formato criptografado). O BACPAC resultante também contém os metadados de chaves Always Encrypted.
 
 Quando você importa o BACPAC em um banco de dados, os dados criptografados dele são carregados no banco de dados e os metadados de chave Always Encrypted são recriados.
 
