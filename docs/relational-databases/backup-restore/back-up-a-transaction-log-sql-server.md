@@ -18,12 +18,12 @@ caps.latest.revision: 49
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9ec58d3ab88003d1b0ff3fefae3196557043db0b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 51e618a3b81243883276193260b68848d8b2f9fe
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32922303"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175056"
 ---
 # <a name="back-up-a-transaction-log-sql-server"></a>Fazer backup de um log de transações (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "32922303"
 
 As permissões BACKUP DATABASE e BACKUP LOG necessárias são concedidas por padrão aos membros da função de servidor fixa **sysadmin** e às funções de banco de dados fixas **db_owner** e **db_backupoperator** .  
   
- Os problemas de propriedade e permissão no arquivo físico do dispositivo de backup podem interferir em uma operação de backup. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ser capaz de ler e gravar no dispositivo; a conta sob a qual o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executa deve ter permissões de gravação. No entanto, [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), que adiciona uma entrada para um dispositivo de backup nas tabelas do sistema, não verifica permissões de acesso a arquivos. Problemas de permissões no arquivo físico do dispositivo de backup poderão não ser tão claros até que você tente acessar o [recurso físico](https://msdn.microsoft.com/library/ms179313.aspx) quando tentar fazer backup ou uma restauração. Novamente, verifique as permissões antes de começar!
+ Os problemas de propriedade e permissão no arquivo físico do dispositivo de backup podem interferir em uma operação de backup. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ser capaz de ler e gravar no dispositivo; a conta sob a qual o serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executa deve ter permissões de gravação. No entanto, [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), que adiciona uma entrada para um dispositivo de backup nas tabelas do sistema, não verifica permissões de acesso a arquivos. Problemas de permissões no arquivo físico do dispositivo de backup poderão não ser tão claros até que você tente acessar o [recurso físico](backup-devices-sql-server.md) quando tentar fazer backup ou uma restauração. Novamente, verifique as permissões antes de começar!
   
   
 ## <a name="back-up-using-ssms"></a>Fazer backup usando SSMS  

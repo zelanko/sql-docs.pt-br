@@ -20,16 +20,16 @@ caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d0f728e6c4ae949573206c5a13a73879c7f7a304
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1a1a257f9ba24f18426f2f328dde0a061f9bed0c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32932551"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175072"
 ---
 # <a name="create-a-database-mail-profile"></a>Criar um perfil do Database Mail
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Use o **Assistente para Configuração do Database Mail** ou o [!INCLUDE[tsql](../../includes/tsql-md.md)] para criar perfis públicos e privados do Database Mail. Para obter mais informações sobre perfis de email, consulte [Perfil do Database Mail](https://msdn.microsoft.com/library/ms175100.aspx#Anchor_2).
+  Use o **Assistente para Configuração do Database Mail** ou o [!INCLUDE[tsql](../../includes/tsql-md.md)] para criar perfis públicos e privados do Database Mail. Para obter mais informações sobre perfis de email, consulte [Perfil do Database Mail](database-mail-configuration-objects.md).
   
 -   **Antes de começar:** [Pré-requisitos](#Prerequisites), , [Segurança](#Security)  
   

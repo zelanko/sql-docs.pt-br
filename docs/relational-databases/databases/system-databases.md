@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: fdd0df25763bec9f5bd2be7d1a36d260f6728605
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 135c0a8d7ec53f5fbb06e6e72777a64005c3a156
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39557816"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175063"
 ---
 # <a name="system-databases"></a>Bancos de dados do sistema
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "39557816"
 ## <a name="related-tasks"></a>Related Tasks  
  [Fazer backup e restaurar bancos de dados do sistema &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)  
   
- [Ocultar objetos do sistema no Pesquisador de Objetos](http://msdn.microsoft.com/library/c01d8804-838c-4f75-b78c-80e41e4fffdc)  
+ [Ocultar objetos do sistema no Pesquisador de Objetos](../../ssms/object/hide-system-objects-in-object-explorer.md)  
   
 ## <a name="related-content"></a>Conteúdo relacionado  
  [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
