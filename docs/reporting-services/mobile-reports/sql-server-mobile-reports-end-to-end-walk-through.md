@@ -15,12 +15,12 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5b6bdc2fb6be0a80639d5f396fa9bc24abfb8833
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 60ce71e2b7a1991b6ebf4b495907c74c1e59c939
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022683"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175047"
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Relatórios móveis do SQL Server: Passo a passo completo
 Realize a criação de relatórios móveis para qualquer tamanho de tela com o [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] no portal da Web do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , e exiba-os nos aplicativos móveis do Power BI.
@@ -70,7 +70,7 @@ Leia mais sobre as [fontes de dados compartilhadas no Reporting Services](../rep
    
 ## <a name="shared-dataset">Criar um conjunto de dados compartilhado</a>  
   
-Use uma ferramenta de cliente existente do [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] , como o Designer de Relatórios no [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)], para criar o conjunto de dados compartilhado.  Este passo a passo usa [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]. [Instale o Construtor de Relatórios](https://msdn.microsoft.com/library/ff519551.aspx)ou o inicie em seu portal na Web. Você criará três conjuntos de dados, um para: o valor do KPI, a tendência do KPI e outro com mais campos para o relatório móvel do Reporting Services.     
+Use uma ferramenta de cliente existente do [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] , como o Designer de Relatórios no [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)], para criar o conjunto de dados compartilhado.  Este passo a passo usa [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]. [Instale o Construtor de Relatórios](../install-windows/install-report-builder.md) ou o inicie no portal da Web. Você criará três conjuntos de dados, um para: o valor do KPI, a tendência do KPI e outro com mais campos para o relatório móvel do Reporting Services.     
   
 1. De seu portal da Web do [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] , clique em **Novo** > **Relatório Paginado** para começar [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)].  
   

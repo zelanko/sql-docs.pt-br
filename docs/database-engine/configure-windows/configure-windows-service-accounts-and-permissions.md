@@ -54,16 +54,16 @@ caps.latest.revision: 207
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c409047c510bb97c6e915140758a304e145747ad
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 7750a2cf088e25cb0a6ac689e99d2ea1398b5954
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981348"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175060"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Configurar contas de serviço e permissões do Windows
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > Para obter o conteúdo relacionado a versões anteriores do SQL Server, consulte [Configurar contas e permissões do serviço Windows](https://msdn.microsoft.com/library/ms143504(SQL.120).aspx).
+ > Para obter o conteúdo relacionado a versões anteriores do SQL Server, consulte [Configurar contas e permissões do serviço Windows](configure-windows-service-accounts-and-permissions.md).
 
 
   Cada serviço no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] representa um processo ou um conjunto de processos para gerenciar a autenticação das operações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com o Windows. Este tópico descreve a configuração padrão de serviços nesta versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e as opções de configuração de serviços [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que você pode definir durante e após a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Este tópico ajuda usuários avançados a entender os detalhes das contas de serviço.  
@@ -137,7 +137,7 @@ A tabela a seguir lista as contas de serviço padrão usadas pela instalação a
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent|[SERVIÇO DE REDE](#Network_Service)|[Conta Virtual](#VA_Desc)*|  
 |[!INCLUDE[ssAS](../../includes/ssas-md.md)]|[SERVIÇO DE REDE](#Network_Service)|[Conta Virtual](#VA_Desc)* **|  
 |[!INCLUDE[ssIS](../../includes/ssis-md.md)]|[SERVIÇO DE REDE](#Network_Service)|[Conta Virtual](#VA_Desc)*|  
-|[!INCLUDE[ssRS](../../includes/ssrs-md.md)]|[SERVIÇO DE REDE](#Network_Service)|[Conta Virtual](#VA_Desc)*|  
+|[!INCLUDE[ssRS](../../includes/ssrs.md)]|[SERVIÇO DE REDE](#Network_Service)|[Conta Virtual](#VA_Desc)*|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Controlador Distributed Replay|[SERVIÇO DE REDE](#Network_Service)|[Conta Virtual](#VA_Desc)*|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Cliente Distributed Replay|[SERVIÇO DE REDE](#Network_Service)|[Conta Virtual](#VA_Desc)*|  
 |Iniciador FD (Pesquisa de texto completo)|[SERVIÇO LOCAL](#Local_Service)|[Conta Virtual](#VA_Desc)|  
@@ -158,7 +158,7 @@ A tabela a seguir lista as contas de serviço padrão usadas pela instalação a
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent|Nenhum. Forneça uma conta de [usuário de domínio](#Domain_User) .|Forneça uma conta de [usuário de domínio](#Domain_User) .|  
 |[!INCLUDE[ssAS](../../includes/ssas-md.md)]|Nenhum. Forneça uma conta de [usuário de domínio](#Domain_User) .|Forneça uma conta de [usuário de domínio](#Domain_User) .|  
 |[!INCLUDE[ssIS](../../includes/ssis-md.md)]|[SERVIÇO DE REDE](#Network_Service)|[Conta Virtual](#VA_Desc)|  
-|[!INCLUDE[ssRS](../../includes/ssrs-md.md)]|[SERVIÇO DE REDE](#Network_Service)|[Conta Virtual](#VA_Desc)|  
+|[!INCLUDE[ssRS](../../includes/ssrs.md)]|[SERVIÇO DE REDE](#Network_Service)|[Conta Virtual](#VA_Desc)|  
 |Iniciador FD (Pesquisa de texto completo)|[SERVIÇO LOCAL](#Local_Service)|[Conta Virtual](#VA_Desc)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Navegador|[SERVIÇO LOCAL](#Local_Service)|[SERVIÇO LOCAL](#Local_Service)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gravador VSS|[SISTEMA LOCAL](#Local_System)|[SISTEMA LOCAL](#Local_System)|  
@@ -183,7 +183,7 @@ As contas de serviço gerenciado, as contas de serviço gerenciado de grupo e as
   
 -  <a name="GMSA"></a> **Contas de serviço gerenciado de grupo**  
   
-     Uma conta de serviço gerenciado de grupo é uma MSA para vários servidores. O Windows gerencia uma conta de serviço para os serviços executados em um grupo de servidores. O Active Directory atualiza automaticamente a senha da conta de serviço gerenciado de grupo sem reiniciar os serviços. Você pode configurar os serviços do SQL Server para usar uma entidade da conta de serviço gerenciado de grupo. A partir do SQL Server 2014, o SQL Server dá suporte a contas de serviço gerenciado de grupo no Windows Server 2012 R2 e posterior para instâncias autônomas, instâncias de cluster de failover e grupos de disponibilidade.  
+     Uma conta de serviço gerenciado de grupo é uma MSA para vários servidores. O Windows gerencia uma conta de serviço para os serviços executados em um grupo de servidores. O Active Directory atualiza automaticamente a senha da conta de serviço gerenciado de grupo sem reiniciar os serviços. Você pode configurar os serviços do SQL Server para usar uma entidade da conta de serviço gerenciado de grupo. Começando no SQL Server 2014, o SQL Server dá suporte a contas de serviço gerenciado de grupo para instâncias autônomas, e o SQL Server 2016 e posteriores a instâncias de cluster de failover e grupos de disponibilidade.  
   
     Para usar uma conta de serviço gerenciado de grupo para o SQL Server 2014 ou posterior, o sistema operacional precisa ser o Windows Server 2012 R2 ou posterior. Servidores com o Windows Server 2012 R2 requerem que o [KB 2998082](http://support.microsoft.com/kb/2998082) seja aplicado de forma que os serviços possam fazer logon sem interrupção imediatamente após uma alteração de senha.  
   
@@ -194,7 +194,7 @@ As contas de serviço gerenciado, as contas de serviço gerenciado de grupo e as
   
 -   <a name="VA_Desc"></a>**Virtual Accounts**  
   
-    As contas virtuais (começando com o Windows Server 2008 R2 e no Windows 7) são *contas locais gerenciadas* que fornecem os recursos a seguir para simplificar a administração do serviço. A conta virtual é autogerenciada e pode acessar a rede em um ambiente de domínio. Se o valor padrão for usado para as contas de serviço durante a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], será usada uma conta virtual que usa o nome da instância como o nome do serviço, no formato **NT SERVICE\\***\<SERVICENAME>*. Os serviços executados como contas virtuais acessam recursos de rede usando as credenciais da conta do computador no formato *<domain_name>*__\\__*<computer_name>*__$__.  Ao especificar uma conta virtual para iniciar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], deixe a senha em branco. Se a conta virtual não registra o SPN (Nome da Entidade de Serviço), registre-o manualmente. Para obter mais informações sobre como registrar um SPN manualmente, confira [Registro manual de SPN](https://msdn.microsoft.com/library/ms191153.aspx).  
+    As contas virtuais (começando com o Windows Server 2008 R2 e no Windows 7) são *contas locais gerenciadas* que fornecem os recursos a seguir para simplificar a administração do serviço. A conta virtual é autogerenciada e pode acessar a rede em um ambiente de domínio. Se o valor padrão for usado para as contas de serviço durante a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], será usada uma conta virtual que usa o nome da instância como o nome do serviço, no formato **NT SERVICE\\***\<SERVICENAME>*. Os serviços executados como contas virtuais acessam recursos de rede usando as credenciais da conta do computador no formato *<domain_name>*__\\__*<computer_name>*__$__.  Ao especificar uma conta virtual para iniciar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], deixe a senha em branco. Se a conta virtual não registra o SPN (Nome da Entidade de Serviço), registre-o manualmente. Para obter mais informações sobre como registrar um SPN manualmente, confira [Registro manual de SPN](register-a-service-principal-name-for-kerberos-connections.md).  
   
     > [!NOTE]  
     >  As contas virtuais não podem ser usadas para a Instância de Cluster de Failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] porque a conta virtual não teria o mesmo SID em cada nó do cluster.  
@@ -297,7 +297,7 @@ O[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] habilita o SID por servi�
 |**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:**<br /><br /> (Todos os direitos são concedidos ao SID por serviço. Instância padrão: **NT SERVICE\MSSQLSERVER**. Instância nomeada: **NT SERVICE\MSSQL$** InstanceName.)|**Fazer logon como um serviço** (SeServiceLogonRight)<br /><br /> **Substituir um token no nível de processo** (SeAssignPrimaryTokenPrivilege)<br /><br /> **Ignorar a verificação completa** (SeChangeNotifyPrivilege)<br /><br /> **Ajustar quotas de memória para um processo** (SeIncreaseQuotaPrivilege)<br /><br /> Permissão para iniciar o Gravador do SQL<br /><br /> Permissão para ler o serviço Log de Eventos<br /><br /> Permissão para ler o serviço Chamada de Procedimento Remoto|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent:** \*<br /><br /> (Todos os direitos são concedidos ao SID por serviço. Instância padrão: **NT Service\SQLSERVERAGENT**. Instância nomeada: **NT Service\SQLAGENT$***InstanceName*).|**Fazer logon como um serviço** (SeServiceLogonRight)<br /><br /> **Substituir um token no nível de processo** (SeAssignPrimaryTokenPrivilege)<br /><br /> **Ignorar a verificação completa** (SeChangeNotifyPrivilege)<br /><br /> **Ajustar quotas de memória para um processo** (SeIncreaseQuotaPrivilege)|  
 |**[!INCLUDE[ssAS](../../includes/ssas-md.md)]:**<br /><br /> (Todos os direitos são concedidos a um grupo local do Windows. Instância padrão: **SQLServerMSASUser$***ComputerName***$MSSQLSERVER**. Instância nomeada: **SQLServerMSASUser$***ComputerName***$***InstanceName*. Instância [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]: **SQLServerMSASUser$***ComputerName***$***PowerPivot*).|**Fazer logon como um serviço** (SeServiceLogonRight)<br /><br /> Somente tabular:<br /><br /> **Aumentar conjunto de trabalho de processo** (SeIncreaseWorkingSetPrivilege)<br /><br /> **Ajustar cotas de memória para um processo** (SeIncreaseQuotaSizePrivilege)<br /><br /> **Bloquear páginas na memória** (SeLockMemoryPrivilege): isso é necessário somente quando a paginação está totalmente desativada.<br /><br /> Somente para instalações de cluster de failover:<br /><br /> **Aumentar a prioridade de planejamento** (SeIncreaseBasePriorityPrivilege)|  
-|**[!INCLUDE[ssRS](../../includes/ssrs-md.md)]:**<br /><br /> (Todos os direitos são concedidos ao SID por serviço. Instância padrão: **NT SERVICE\ReportServer**. Instância nomeada: **NT SERVICE\\ReportServer$***InstanceName*).|**Fazer logon como um serviço** (SeServiceLogonRight)|  
+|**[!INCLUDE[ssRS](../../includes/ssrs.md)]:**<br /><br /> (Todos os direitos são concedidos ao SID por serviço. Instância padrão: **NT SERVICE\ReportServer**. Instância nomeada: **NT SERVICE\\ReportServer$***InstanceName*).|**Fazer logon como um serviço** (SeServiceLogonRight)|  
 |**[!INCLUDE[ssIS](../../includes/ssis-md.md)]:**<br /><br /> (Todos os direitos são concedidos ao SID por serviço. Instância padrão e instância nomeada: **NT SERVICE\MsDtsServer130**. O[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] não tem um processo separado para uma instância nomeada).|**Fazer logon como um serviço** (SeServiceLogonRight)<br /><br /> Permissão para gravar no log de eventos do aplicativo.<br /><br /> **Ignorar a verificação completa** (SeChangeNotifyPrivilege)<br /><br /> **Representar um cliente após autenticação** (SeImpersonatePrivilege)|  
 |**Pesquisa de texto completo:**<br /><br /> (Todos os direitos são concedidos ao SID por serviço. Instância padrão: **NT Service\MSSQLFDLauncher**. Instância nomeada: **NT Service\ MSSQLFDLauncher$***InstanceName*).|**Fazer logon como um serviço** (SeServiceLogonRight)<br /><br /> **Ajustar quotas de memória para um processo** (SeIncreaseQuotaPrivilege)<br /><br /> **Ignorar a verificação completa** (SeChangeNotifyPrivilege)|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Navegador:**<br /><br /> (Todos os direitos são concedidos a um grupo local do Windows. Instância padrão ou nomeada: **SQLServer2005SQLBrowserUser***$ComputerName*. O Navegador do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não tem um processo separado para uma instância nomeada.)|**Fazer logon como um serviço** (SeServiceLogonRight)|  

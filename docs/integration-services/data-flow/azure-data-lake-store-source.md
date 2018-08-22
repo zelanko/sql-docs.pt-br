@@ -1,7 +1,7 @@
 ---
 title: Origem do Azure Data Lake Store | Microsoft Docs
 ms.custom: ''
-ms.date: 03/02/2017
+ms.date: 08/16/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a8bcab4b05afd22e06951e31f3037075830fba22
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 3d179247f8d76a06c154ee2585a79ba6d1193554
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35409298"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40175053"
 ---
 # <a name="azure-data-lake-store-source"></a>Fonte do Azure Data Lake Store
   O componente de **Fonte do Azure Data Lake Store** permite que um pacote SSIS leia dados de um Azure Data Lake Store. Os formatos de arquivo com suporte são texto e Avro.
@@ -32,8 +32,8 @@ ms.locfileid: "35409298"
 >   [!NOTE]
 > Para garantir que o Gerenciador de conexões do Azure Data Lake Store e os componentes que o utilizam, isto é, a Fonte do Azure Data Lake Store e o Destino do Azure Data Lake Store, possam se conectar aos serviços, verifique se você baixou a versão mais recente do Azure Feature Pack [aqui](https://www.microsoft.com/download/details.aspx?id=49492). 
   
-## <a name="configure-the-azure-data-lake-store-source"></a>Configure o Fonte do Azure Data Lake Store
- 1. Para ver o editor doFonte do Azure Data Lake Store, arraste e solte **Fonte do Azure Data Lake Store** no designer de fluxo de dados e clique duas vezes nele para abrir o editor.  
+## <a name="configure-the-azure-data-lake-store-source"></a>Configure a Fonte do Azure Data Lake Store
+ 1. Para ver o editor da Fonte do Azure Data Lake Store, arraste e solte **Fonte do Azure Data Lake Store** no designer de fluxo de dados e clique duas vezes nela para abrir o editor.  
   
 2.  Para o campo **Gerenciador de conexões do Azure Data Lake Store** , especifique um Gerenciador de conexões do Azure Data Lake Store existente ou crie um novo referindo-se a um serviço do Azure Data Lake Store.  
   
@@ -44,3 +44,7 @@ ms.locfileid: "35409298"
         Se o formato de arquivo for texto, você deverá especificar o valor do **Caractere delimitador de coluna** . Além disso, selecione **Nomes de coluna na primeira linha de dados** se a primeira linha no arquivo contiver nomes de coluna.  
   
 3.  Depois de especificar as informações de conexão, alterne para a página **Colunas** para mapear colunas de origem para colunas de destino para o fluxo de dados do SSIS.   
+
+## <a name="text-qualifier"></a>Qualificador de texto
+
+A **Fonte do Azure Data Lake Store** não dá suporte a um qualificador de texto. Se você tiver que especificar um qualificador de texto para processar os arquivos corretamente, considere a possibilidade de baixar os arquivos em seu computador local e processá-los com a **Fonte de Arquivo Simples**. A Fonte de Arquivo Simples permite especificar um qualificador de texto. Para obter mais informações, confira [Fonte de Arquivo Simples](flat-file-source.md).

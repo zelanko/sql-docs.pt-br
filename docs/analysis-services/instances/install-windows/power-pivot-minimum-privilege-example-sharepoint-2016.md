@@ -1,5 +1,5 @@
 ---
-title: Power Pivot privilégios mínimos exemplo - SharePoint 2016 | Microsoft Docs
+title: Exemplo de privilégios mínimos Pivot - SharePoint 2016 de energia | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d57322b1aa0b0fa949bed2dcb093bbb6bea8e2e1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: eac736994b104ffbce855fa1ad6761d592fccad1
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016193"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393136"
 ---
 # <a name="power-pivot-minimum-privilege-example---sharepoint-2016"></a>Power Pivot privilégios mínimos exemplo - SharePoint 2016
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Este tópico descreve um exemplo da configuração do [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint 2016 com privilégios mínimos. A configuração utiliza uma conta diferente para cada um dos três componentes e cada conta tem o nível mínimo de privilégios.  
   
 ## <a name="summary-of-accounts"></a>Resumo de contas  
- [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint 2016 dá suporte ao uso da conta de serviço de rede para a conta de serviço do Analysis Services. A conta de serviço de rede não é um cenário com suporte com o SharePoint 2010. Para obter mais informações sobre contas de serviço, consulte [configurar contas de serviço do Windows e permissões](http://msdn.microsoft.com/library/ms143504.aspx) (http://msdn.microsoft.com/library/ms143504.aspx).  
+ [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint 2016 dá suporte ao uso da conta de serviço de rede para a conta de serviço do Analysis Services. A conta de serviço de rede não é um cenário com suporte com o SharePoint 2010. Para obter mais informações sobre contas de serviço, consulte [configurar contas de serviço do Windows e as permissões](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) (http://msdn.microsoft.com/library/ms143504.aspx).  
   
  A tabela a seguir resume as três contas usadas neste exemplo de uma configuração com privilégios mínimos.  
   
