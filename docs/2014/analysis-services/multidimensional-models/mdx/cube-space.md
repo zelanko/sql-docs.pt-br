@@ -14,12 +14,12 @@ caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 07011d823f4bede671c3ee4a465d27c413d04e9f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d0bcd66844f5eaacca291cd67e84e34b6222788c
+ms.sourcegitcommit: 01fccb8015644e75fd99fc5543d8216a1539f6ca
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37282182"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "40392445"
 ---
 # <a name="cube-space"></a>Espaço de cubo
   Espaço de cubo é o produto dos membros das hierarquias de atributo de um cubo com as medidas do cubo. Portanto, o espaço de cubo é determinado pelo produto combinatório de todos os membros de hierarquia de atributo no cubo e as medidas do cubo e define o tamanho máximo do cubo. É importante observar que esse espaço inclui todas as possíveis combinações de membros de hierarquia de atributo, inclusive combinações que poderiam ser consideradas impossíveis no mundo real, como combinações onde a cidade é Paris e os países são Inglaterra, Espanha, Japão, Índia ou qualquer outro.  
@@ -59,7 +59,7 @@ WHERE Measures.[Internet Sales Amount]
 > [!NOTE]  
 >  Note que 0 é usado para designar o eixo da coluna, que é a forma abreviada de eixo (0) – que é o eixo da coluna.  
   
- A consulta anterior somente retorna células para membros de cada hierarquia de atributo na consulta que existe um com o outro. A consulta anterior também pode ser escrita usando a nova * variante da função [* (Crossjoin) (MDX)](/sql/mdx/crossjoin-mdx) .  
+ A consulta anterior somente retorna células para membros de cada hierarquia de atributo na consulta que existe um com o outro. A consulta anterior também pode ser escrita usando a nova * variante dos [ \* (Crossjoin) (MDX)](/sql/mdx/crossjoin-mdx) função.  
   
 ```  
 SELECT   

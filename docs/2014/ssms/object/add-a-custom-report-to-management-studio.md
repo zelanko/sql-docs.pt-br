@@ -16,15 +16,15 @@ caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c66643e7a6f442207c87f531d1e01f9cd07af816
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1496e3abd0be957bdf0b0d2883dacec480fcec12
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37261852"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40393767"
 ---
 # <a name="add-a-custom-report-to-management-studio"></a>adicionar um relatório personalizado ao Management Studio
-  Esse tópico descreve como criar um relatório simples do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que é salvo como um arquivo .rdl e, em seguida, adicionar esse arquivo rdl ao [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] como um relatório personalizado. [!INCLUDE[ssRS](../../includes/ssrs-md.md)] pode criar um ampla variedade de relatórios sofisticados. Para criar um relatório com o uso desse tópico, o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] deve estar instalado no computador. Não é necessário instalar o [!INCLUDE[ssRS](../../includes/ssrs-md.md)] no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para executar um relatório personalizado com o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+  Esse tópico descreve como criar um relatório simples do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que é salvo como um arquivo .rdl e, em seguida, adicionar esse arquivo rdl ao [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] como um relatório personalizado. [!INCLUDE[ssRS](../../includes/ssrs.md)] pode criar um ampla variedade de relatórios sofisticados. Para criar um relatório com o uso desse tópico, o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] deve estar instalado no computador. Não é necessário instalar o [!INCLUDE[ssRS](../../includes/ssrs.md)] no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para executar um relatório personalizado com o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
  [Exemplos de relatórios](http://go.microsoft.com/fwlink/?LinkId=81792), inclusive relatórios padrão criados pela [!INCLUDE[msCoName](../../includes/msconame-md.md)], estão disponíveis para download. Esses exemplos podem ser modificados com o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   

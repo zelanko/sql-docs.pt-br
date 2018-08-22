@@ -19,12 +19,12 @@ caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 653369ef20b2febbf90c34e059c9105cdfeaafbf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 112fd1263b0dce321093a271964173e924c703d2
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37194871"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40393766"
 ---
 # <a name="deploying-a-delivery-extension"></a>Implantando uma extensão de entrega
   As extensões de entrega fornecem suas informações de configuração na forma de um arquivo de configuração XML. O arquivo XML é compatível com o esquema XML definido para extensões de entrega. As extensões de entrega oferecem infraestrutura para a definição e para a modificação do arquivo de configuração.  
@@ -91,7 +91,7 @@ ms.locfileid: "37194871"
     </CodeGroup>  
     ```  
   
-     A associação da URL é somente uma das condições de associação que você pode escolher para a sua extensão de entrega. Para obter mais informações sobre a segurança de acesso do código no [!INCLUDE[ssRS](../../../includes/ssrs-md.md)], consulte [Desenvolvimento seguro &#40;Reporting Services&#41;](../secure-development/secure-development-reporting-services.md)  
+     A associação da URL é somente uma das condições de associação que você pode escolher para a sua extensão de entrega. Para obter mais informações sobre a segurança de acesso do código no [!INCLUDE[ssRS](../../../includes/ssrs.md)], consulte [Desenvolvimento seguro &#40;Reporting Services&#41;](../secure-development/secure-development-reporting-services.md)  
   
 ## <a name="deploying-the-extension-to-report-manager"></a>Implantando a Extensão no Gerenciador de Relatórios  
  Se a sua extensão de entrega implementar a interface <xref:Microsoft.ReportingServices.Interfaces.ISubscriptionBaseUIUserControl>, a sua extensão de entrega poderá ser usada com a página de Assinatura do Gerenciador de Relatórios. Para disponibilizar a interface do usuário de assinatura, você precisa implantar a sua extensão no Gerenciador de Relatórios.  
@@ -138,7 +138,7 @@ ms.locfileid: "37194871"
     </CodeGroup>  
     ```  
   
-     A associação da URL é somente uma das condições de associação que você pode escolher para a sua extensão de entrega. Para obter mais informações sobre a segurança de acesso do código no [!INCLUDE[ssRS](../../../includes/ssrs-md.md)], consulte [Desenvolvimento seguro &#40;Reporting Services&#41;](../secure-development/secure-development-reporting-services.md)  
+     A associação da URL é somente uma das condições de associação que você pode escolher para a sua extensão de entrega. Para obter mais informações sobre a segurança de acesso do código no [!INCLUDE[ssRS](../../../includes/ssrs.md)], consulte [Desenvolvimento seguro &#40;Reporting Services&#41;](../secure-development/secure-development-reporting-services.md)  
   
 ## <a name="verifying-the-deployment"></a>Verificando a implantação  
  Você pode verificar se sua extensão de entrega foi implantada com êxito no servidor de relatório usando o método <xref:ReportService2010.ReportingService2010.ListExtensions%2A> do serviço Web. Você também pode abrir o Gerenciador de Relatórios e verificar se a sua extensão foi incluída na lista de extensões de entrega disponíveis para uma assinatura. Para obter mais informações sobre o Gerenciador de relatórios e assinaturas, consulte [assinaturas e entrega &#40;Reporting Services&#41;](../../subscriptions/subscriptions-and-delivery-reporting-services.md).  

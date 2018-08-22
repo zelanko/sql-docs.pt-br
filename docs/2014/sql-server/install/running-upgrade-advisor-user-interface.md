@@ -21,18 +21,18 @@ caps.latest.revision: 40
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2bc1151b2df35b7912d03519cdf7f659ba96af16
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 881075f22468cb384aa3c3b5a4677a6e0d70bdf7
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216586"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40393560"
 ---
 # <a name="running-upgrade-advisor-user-interface"></a>Executando o Supervisor de Atualização (Interface do usuário)
   Você pode executar o Supervisor de Atualização para analisar componentes locais ou remotos durante o planejamento da atualização. O Supervisor de Atualização gera um relatório para cada componente e instância que é analisado.  
   
 > [!IMPORTANT]  
->  Ele não analisa instâncias remotas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Para analisar uma instância do [!INCLUDE[ssRS](../../includes/ssrs-md.md)], o Supervisor de Atualização deve estar instalado no computador em que o [!INCLUDE[ssRS](../../includes/ssrs-md.md)] está instalado.  
+>  Ele não analisa instâncias remotas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Para analisar uma instância do [!INCLUDE[ssRS](../../includes/ssrs.md)], o Supervisor de Atualização deve estar instalado no computador em que o [!INCLUDE[ssRS](../../includes/ssrs.md)] está instalado.  
 >   
 >  Para analisar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Integration Services, você deve ter o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] instalado e [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] instalado no mesmo computador.  
   

@@ -30,12 +30,12 @@ caps.latest.revision: 89
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f9aff1bba090ec29cad3eef94453858e1f2b0029
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 63cd3c39d5c58d31eef427f309fe9d941903ad01
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189833"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40392676"
 ---
 # <a name="reporting-services-report-server"></a>Servidor de Relatório do Reporting Services
   Este tópico é uma visão geral do servidor de relatório [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , o componente central da instalação de um [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Ele consiste em um par de mecanismos de processamento mais uma coleção de extensões de propósitos especiais que manipulam autenticação, processamento de dados, renderização e operações de entrega. Um servidor de relatório do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] é executado em um destes dois modos de implantação: modo nativo ou modo do SharePoint. Consulte a seção [Comparação de recursos do SharePoint e do modo nativo](#bkmk_featuresupport) para obter uma comparação entre os recursos.  
@@ -119,7 +119,7 @@ ms.locfileid: "37189833"
  Desenvolvedores de terceiros podem criar extensões adicionais para substituir ou estender a capacidade de processamento do servidor de relatório. Para obter mais informações sobre as interfaces programáticas disponíveis para desenvolvedores de aplicativos, consulte a [Referência Técnica](../../2014/reporting-services/technical-reference-ssrs.md).  
   
 ###  <a name="bkmk_nativewithwebparts"></a> Modo nativo com Web Parts do SharePoint  
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornece duas Web Parts que você pode instalar e registrar em uma instância do [!INCLUDE[winSPServ](../includes/winspserv-md.md)] 2.0 ou posterior, ou [!INCLUDE[spPortalServ](../includes/spportalserv-md.md)] 2003 ou posterior. A partir de um site do SharePoint, você pode usar as Web Parts para localizar e exibir relatórios armazenados e processados em um servidor de relatório executado no modo nativo. Essas Web Parts foram introduzidas em versões anteriores do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornece duas Web Parts que você pode instalar e registrar em uma instância de [!INCLUDE[winSPServ](../includes/winspserv-md.md)] 2.0 ou posterior, ou o SharePoint Portal Server 2003 ou posterior. A partir de um site do SharePoint, você pode usar as Web Parts para localizar e exibir relatórios armazenados e processados em um servidor de relatório executado no modo nativo. Essas Web Parts foram introduzidas em versões anteriores do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
 ##  <a name="bkmk_sharepointmode"></a> Modo do SharePoint  
  No modo do SharePoint, um servidor de relatório deve ser executado em um farm de servidores do SharePoint. Os recursos de processamento, renderização e gerenciamento de servidor do relatório são representados por um servidor de aplicativo do SharePoint que executa o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint shared service e um ou mais [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] aplicativos de serviço. Um site do SharePoint fornece o acesso front-end ao conteúdo e às operações do servidor de relatório.  

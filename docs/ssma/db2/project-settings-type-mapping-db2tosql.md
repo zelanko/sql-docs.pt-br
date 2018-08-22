@@ -16,15 +16,15 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 4a7ea23403e1c020a717b3a6fa1e1b5bad06146a
-ms.sourcegitcommit: d9b7625322a2c7444ed25ca311d63fe70eb6fa0a
+ms.openlocfilehash: e38b7be06836dbbce868356fa9a4f9784c1f5219
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39509215"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40392231"
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a>Configurações do projeto (mapeamento de tipo) (DB2ToSQL)
-A página de mapeamento de tipo a **configurações do projeto** caixa de diálogo contém configurações que personalizam como SSMA converte tipos de dados do DB2 em [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipos de dados.  
+A página de mapeamento de tipo a **configurações do projeto** caixa de diálogo contém configurações que personalizam como SSMA converte tipos de dados do DB2 em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de dados.  
   
 A página mapeamento de tipo está disponível na **configurações do projeto** e **configurações do projeto padrão** caixas de diálogo.  
   
@@ -41,7 +41,7 @@ A tabela a seguir mostra a **mapeamento de tipo** opções da guia:
 O tipo de dados do DB2 mapeado.  
   
 **Tipo de destino**  
-O destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipo de dados para o tipo de dados do DB2 especificado.  
+O destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados para o tipo de dados do DB2 especificado.  
   
 Consulte as tabelas na próxima seção para o padrão do SSMA para DB2 mapeamentos de tipo.  
   
@@ -63,7 +63,7 @@ Do SSMA para DB2, você pode definir mapeamentos de tipo personalizado de argume
 ### <a name="default-argument-type-and-return-value-type-mapping"></a>Tipo de argumento padrão e mapeamento de tipo de valor de retorno  
 A tabela a seguir contém o mapeamento de tipo de dados padrão para argumentos e valores de retorno.  
   
-|DB2 Tipo de dados|Padrão [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipo de dados|  
+|DB2 Tipo de dados|Padrão [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados|  
 |-----------------|-------------------------------------------------------------------------|  
 |BFILE|varbinary(max)|  
 |binary_double|float [53]|  
@@ -119,7 +119,7 @@ A tabela a seguir contém o mapeamento de tipo de dados padrão para argumentos 
 ### <a name="default-column-type-mapping"></a>Mapeamento de tipo de coluna padrão  
 A tabela a seguir contém o mapeamento de tipo padrão para colunas.  
   
-|DB2 Tipo de dados|Padrão [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipo de dados|  
+|DB2 Tipo de dados|Padrão [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados|  
 |-----------------|-------------------------------------------------------------------------|  
 |BFILE|varbinary(max)|  
 |binary_double|float [53]|  
@@ -187,7 +187,7 @@ A tabela a seguir contém o mapeamento de tipo padrão para colunas.
 ### <a name="default-local-variable-type-mapping"></a>Mapeamento de tipo de variável Local padrão  
 A tabela a seguir contém o mapeamento de tipo padrão para variáveis locais.  
   
-|DB2 Tipo de dados|Padrão [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipo de dados|  
+|DB2 Tipo de dados|Padrão [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados|  
 |-----------------|-------------------------------------------------------------------------|  
 |BFILE|varbinary(max)|  
 |binary_double|float [53]|  

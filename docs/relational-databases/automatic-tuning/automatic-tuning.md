@@ -20,12 +20,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: c6f0e6d58674be38b6394759c67c3ecd0758a615
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: a710c1bd6731feaae662133ff8f18bbf9ac12976
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39556466"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40393558"
 ---
 # <a name="automatic-tuning"></a>Ajuste automático
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ Ajuste automático no [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] per
 
 ## <a name="why-automatic-tuning"></a>Por que o ajuste automático?
 
-Uma das principais tarefas de administração clássico do banco de dados está monitorando uma carga de trabalho, identificando críticos [!INCLUDE[tsql_md](../../includes/tsql_md.md)] consultas, índices que devem ser adicionados para melhorar o desempenho e raramente usado índices. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] Fornece informações detalhadas sobre as consultas e os índices que você precisa monitorar. No entanto, monitorar constantemente o banco de dados é uma tarefa difícil e entediante, especialmente ao lidar com muitos bancos de dados. Gerenciar um grande número de bancos de dados pode ser impossível de fazer com eficiência. Em vez de monitorar e ajustar seu banco de dados manualmente, você pode considerar delegar algumas do monitoramento e ajuste de ações a serem [!INCLUDE[ssde_md](../../includes/ssde_md.md)] usando o recurso de ajuste automático.
+Uma das principais tarefas de administração clássico do banco de dados está monitorando uma carga de trabalho, identificando críticos [!INCLUDE[tsql_md](../../includes/tsql-md.md)] consultas, índices que devem ser adicionados para melhorar o desempenho e raramente usado índices. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] Fornece informações detalhadas sobre as consultas e os índices que você precisa monitorar. No entanto, monitorar constantemente o banco de dados é uma tarefa difícil e entediante, especialmente ao lidar com muitos bancos de dados. Gerenciar um grande número de bancos de dados pode ser impossível de fazer com eficiência. Em vez de monitorar e ajustar seu banco de dados manualmente, você pode considerar delegar algumas do monitoramento e ajuste de ações a serem [!INCLUDE[ssde_md](../../includes/ssde_md.md)] usando o recurso de ajuste automático.
 
 ### <a name="how-does-automatic-tuning-works"></a>Como o ajuste automático funciona?
 
@@ -58,7 +58,7 @@ Correção automática de plano é um recurso de ajuste automático que identifi
 
 ### <a name="what-is-sql-plan-choice-regression"></a>O que é regressão da escolha do plano SQL?
 
-[!INCLUDE[ssdenoversion_md](../../includes/ssdenoversion_md.md)] podem usar diferentes planos SQL para executar o [!INCLUDE[tsql_md](../../includes/tsql_md.md)] consultas. Planos de consulta dependem de estatísticas, índices e outros fatores. O plano ideal que deve ser usado para executar algumas [!INCLUDE[tsql_md](../../includes/tsql_md.md)] consulta poderá ser alterada ao longo do tempo. Em alguns casos, o novo plano não pode ser melhor do que o anterior, e o novo plano pode causar uma regressão de desempenho.
+[!INCLUDE[ssdenoversion_md](../../includes/ssdenoversion_md.md)] podem usar diferentes planos SQL para executar o [!INCLUDE[tsql_md](../../includes/tsql-md.md)] consultas. Planos de consulta dependem de estatísticas, índices e outros fatores. O plano ideal que deve ser usado para executar algumas [!INCLUDE[tsql_md](../../includes/tsql-md.md)] consulta poderá ser alterada ao longo do tempo. Em alguns casos, o novo plano não pode ser melhor do que o anterior, e o novo plano pode causar uma regressão de desempenho.
 
  ![Regressão da escolha do plano SQL](media/plan-choice-regression.png "regressão da escolha do plano SQL") 
 
@@ -94,7 +94,7 @@ Planos forçados manualmente não devem ser forçados para sempre, pois o [!INCL
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece todas as exibições necessárias e procedimentos necessários para monitorar o desempenho e corrigir problemas no Query Store.
 
-No [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], você pode encontrar as regressões de escolha de plano usando exibições do sistema de Store de consulta. Na [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], o [!INCLUDE[ssde_md](../../includes/ssde_md.md)] detecta e mostra as regressões de escolha do plano potencial e as ações recomendadas que devem ser aplicadas na [DM db_tuning_recommendations &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) exibição. O modo de exibição mostra informações sobre o problema, a importância do problema e detalhes de como a consulta identificada, a ID do plano regredido, o ID do plano que foi usado como linha de base para comparação e o [!INCLUDE[tsql_md](../../includes/tsql_md.md)] instrução que pode ser executada para corrigir o problema.
+No [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], você pode encontrar as regressões de escolha de plano usando exibições do sistema de Store de consulta. Na [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], o [!INCLUDE[ssde_md](../../includes/ssde_md.md)] detecta e mostra as regressões de escolha do plano potencial e as ações recomendadas que devem ser aplicadas na [DM db_tuning_recommendations &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) exibição. O modo de exibição mostra informações sobre o problema, a importância do problema e detalhes de como a consulta identificada, a ID do plano regredido, o ID do plano que foi usado como linha de base para comparação e o [!INCLUDE[tsql_md](../../includes/tsql-md.md)] instrução que pode ser executada para corrigir o problema.
 
 | Tipo | descrição | DATETIME | score | detalhes | … |
 | --- | --- | --- | --- | --- | --- |
@@ -106,7 +106,7 @@ Algumas colunas nessa exibição são descritas na lista a seguir:
  - Descrição que contém informações sobre por que [!INCLUDE[ssde_md](../../includes/ssde_md.md)] pensa que essa alteração de plano é uma regressão de desempenho potencial.
  - Data e hora quando a regressão potencial for detectada.
  - Pontuação dessa recomendação. 
- - Detalhes sobre os problemas, como ID do plano detectado, ID do plano regredido, o ID do plano que deve ser forçado para corrigir o problema, [!INCLUDE[tsql_md](../../includes/tsql_md.md)] script que possa ser aplicada para corrigir o problema, etc. Os detalhes estão armazenados [formato JSON](../../relational-databases/json/index.md).
+ - Detalhes sobre os problemas, como ID do plano detectado, ID do plano regredido, o ID do plano que deve ser forçado para corrigir o problema, [!INCLUDE[tsql_md](../../includes/tsql-md.md)] script que possa ser aplicada para corrigir o problema, etc. Os detalhes estão armazenados [formato JSON](../../relational-databases/json/index.md).
 
 Use a consulta a seguir para obter um script que corrige o problema e obter informações adicionais sobre a estimados obter:
 
