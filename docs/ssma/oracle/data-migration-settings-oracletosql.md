@@ -13,12 +13,12 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 15a0727397346451e07f85556bd183df35d13796
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 9dd11d93fe40e65836f778191c025daba5a76d0d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983328"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393585"
 ---
 # <a name="data-migration-settings-oracletosql"></a>Configurações de migração de dados (OracleToSQL)
   
@@ -56,5 +56,5 @@ Há dois botões presentes sobre visualização.:
 -   **Cancelar:** clique em **Cancelar** para restaurar as configurações presentes antes que as alterações estavam sendo feitas.  
   
 ## <a name="see-also"></a>Consulte também  
-[Migração de dados Oracle para o SQL Server](http://msdn.microsoft.com/e23c5268-41ed-4e55-9fe7-a11376202a13)  
+[Migração de dados Oracle para o SQL Server](migrating-oracle-data-into-sql-server-oracletosql.md)  
   

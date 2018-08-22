@@ -22,12 +22,12 @@ caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 67e1476e8f0612796e3f31644aca192c2c25a90f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0e057b6c0178ca87803aede7d83c2054aac852f2
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258691"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393580"
 ---
 # <a name="spstopjob-transact-sql"></a>sp_stop_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,30 +50,30 @@ sp_stop_job
   
 ## <a name="arguments"></a>Argumentos  
  [  **@job_name =**] **'***job_name***'**  
- O nome do trabalho a ser interrompido. *job_name* é **sysname**, com um padrão NULL.  
+ O nome do trabalho a ser interrompido. *job_name* está **sysname**, com um padrão NULL.  
   
  [  **@job_id =**] *job_id*  
- O número de identificação do trabalho a ser interrompido. *job_id* é **uniqueidentifier**, com um padrão NULL.  
+ O número de identificação do trabalho a ser interrompido. *job_id* está **uniqueidentifier**, com um padrão NULL.  
   
  [  **@originating_server =**] **'***master_server***'**  
- O nome do servidor mestre. Se for especificado, todos os trabalhos multisservidor serão interrompidos. *master_server* é **nvarchar (128)**, com um padrão NULL. Especifique esse parâmetro somente ao chamar **sp_stop_job** em um servidor de destino.  
+ O nome do servidor mestre. Se for especificado, todos os trabalhos multisservidor serão interrompidos. *master_server* está **nvarchar (128)**, com um padrão NULL. Especifique esse parâmetro somente ao chamar **sp_stop_job** em um servidor de destino.  
   
 > [!NOTE]  
 >  Apenas um dos três primeiros parâmetros pode ser especificado.  
   
  [  **@server_name =**] **'***target_server***'**  
- O nome do servidor de destino específico no qual um trabalho multisservidor será interrompido. *target_server* é **nvarchar (128)**, com um padrão NULL. Especifique esse parâmetro somente ao chamar **sp_stop_job** em um servidor mestre para um trabalho multisservidor.  
+ O nome do servidor de destino específico no qual um trabalho multisservidor será interrompido. *target_server* está **nvarchar (128)**, com um padrão NULL. Especifique esse parâmetro somente ao chamar **sp_stop_job** em um servidor mestre para um trabalho multisservidor.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma  
+ None  
   
 ## <a name="remarks"></a>Remarks  
- **sp_stop_job** envia um sinal de encerramento para o banco de dados. Alguns processos podem ser interrompidos imediatamente e alguns devem atingir um ponto estável (ou um ponto de entrada para o caminho de código) antes de eles podem parar. Algumas instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] longas como BACKUP, RESTORE e alguns comandos DBCC podem levar muito tempo para terminar. Quando eles estão em execução, ele pode demorar um pouco antes do trabalho foi cancelado. A interrupção de um trabalho faz com que uma entrada "Trabalho Cancelado" seja registrada no histórico de trabalho.  
+ **sp_stop_job** envia um sinal de parada para o banco de dados. Alguns processos podem ser interrompidos imediatamente e alguns devem atingir um ponto estável (ou um ponto de entrada para o caminho do código) antes que eles possam interromper. Algumas instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] longas como BACKUP, RESTORE e alguns comandos DBCC podem levar muito tempo para terminar. Quando eles estiverem em execução, ele pode demorar um pouco antes do trabalho é cancelado. A interrupção de um trabalho faz com que uma entrada "Trabalho Cancelado" seja registrada no histórico de trabalho.  
   
- Se um trabalho está executando uma etapa do tipo **CmdExec** ou **PowerShell**, o processo está sendo executado (por exemplo, MyProgram.exe) será forçado a terminar prematuramente. O fim prematuro pode resultar em comportamento imprevisível, como arquivos em uso pelo processo serem mantidos abertos. Consequentemente, **sp_stop_job** deve ser usado somente em circunstâncias extremas se o trabalho contiver etapas do tipo **CmdExec** ou **PowerShell**.  
+ Se um trabalho estiver executando atualmente uma etapa do tipo **CmdExec** ou **PowerShell**, o processo em execução (por exemplo, MyProgram.exe) será forçado a terminar prematuramente. O fim prematuro pode resultar em comportamento imprevisível, como arquivos em uso pelo processo serem mantidos abertos. Consequentemente, **sp_stop_job** deve ser usado somente em circunstâncias extremas se o trabalho contiver etapas do tipo **CmdExec** ou **PowerShell**.  
   
 ## <a name="permissions"></a>Permissões  
  Por padrão, os membros da função de servidor fixa **sysadmin** podem executar este procedimento armazenado. Deve ser concedida a outros usuários uma das seguintes funções de banco de dados fixas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no banco de dados **msdb** :  
@@ -84,9 +84,9 @@ sp_stop_job
   
 -   **SQLAgentOperatorRole**  
   
- Para obter detalhes sobre as permissões dessas funções, consulte [Funções de banco de dados fixas do SQL Server Agent](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Para obter detalhes sobre as permissões dessas funções, consulte [Funções de banco de dados fixas do SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Membros de **SQLAgentUserRole** e **SQLAgentReaderRole** só podem parar trabalhos que possuem. Membros de **SQLAgentOperatorRole** pode interromper todos os trabalhos locais, incluindo os pertencentes a outros usuários. Membros de **sysadmin** podem parar todos os trabalhos locais e multisservidor.  
+ Os membros **SQLAgentUserRole** e **SQLAgentReaderRole** só podem parar trabalhos que possuem. Os membros **SQLAgentOperatorRole** pode interromper todos os trabalhos locais, incluindo aqueles que pertencem a outros usuários. Os membros **sysadmin** podem parar todos os trabalhos locais e multisservidor.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir para um trabalho denominado `Weekly Sales Data Backup`.  

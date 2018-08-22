@@ -22,12 +22,12 @@ caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 58fb415b74bf26880c1000e1f3122b5f6b86f2e4
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 9f640f88382653b5de1c70d1d9a22a8dbacbc283
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260792"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393120"
 ---
 # <a name="spstartjob-transact-sql"></a>sp_start_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,19 +51,19 @@ sp_start_job
   
 ## <a name="arguments"></a>Argumentos  
  [ **@job_name=** ] **'***job_name***'**  
- O nome do trabalho a ser iniciado. O *job_id* ou *job_name* devem ser especificados, mas não é possível especificar ambos. *job_name* é **sysname**, com um padrão NULL.  
+ O nome do trabalho a ser iniciado. Qualquer um dos *job_id* ou *job_name* deve ser especificado, mas não podem ser especificados. *job_name* está **sysname**, com um padrão NULL.  
   
  [ **@job_id=** ] *job_id*  
- O número de identificação do trabalho a ser iniciado. O *job_id* ou *job_name* devem ser especificados, mas não é possível especificar ambos. *job_id* é **uniqueidentifier**, com um padrão NULL.  
+ O número de identificação do trabalho a ser iniciado. Qualquer um dos *job_id* ou *job_name* deve ser especificado, mas não podem ser especificados. *job_id* está **uniqueidentifier**, com um padrão NULL.  
   
  [ **@error_flag=** ] *error_flag*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ **@server_name=** ] **'***server_name***'**  
- O servidor de destino no qual iniciar o trabalho. *server_name* é **nvarchar (128)**, com um padrão NULL. *server_name* deve ser um dos servidores de destino para o qual o trabalho atualmente está direcionado.  
+ O servidor de destino no qual iniciar o trabalho. *nome_do_servidor* está **nvarchar (128)**, com um padrão NULL. *server_name* deve ser um dos servidores de destino ao qual o trabalho atualmente está direcionado.  
   
  [  **@step_name=** ] **'***step_name***'**  
- O nome da etapa na qual a execução do trabalho será iniciada. Aplica-se apenas a trabalhos locais. *step_name* é **sysname**, com um padrão de NULL  
+ O nome da etapa na qual a execução do trabalho será iniciada. Aplica-se apenas a trabalhos locais. *step_name* está **sysname**, com um padrão de NULL  
   
  [ **@output_flag=** ] *output_flag*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -72,7 +72,7 @@ sp_start_job
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma  
+ None  
   
 ## <a name="remarks"></a>Remarks  
  Esse procedimento armazenado está no **msdb** banco de dados.  
@@ -86,9 +86,9 @@ sp_start_job
   
 -   **SQLAgentOperatorRole**  
   
- Para obter detalhes sobre as permissões dessas funções, consulte [Funções de banco de dados fixas do SQL Server Agent](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Para obter detalhes sobre as permissões dessas funções, consulte [Funções de banco de dados fixas do SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Membros de **SQLAgentUserRole** e **SQLAgentReaderRole** só pode iniciar trabalhos que possuem. Membros de **SQLAgentOperatorRole** pode iniciar todos os trabalhos locais, incluindo os pertencentes a outros usuários. Membros de **sysadmin** podem iniciar todos os trabalhos locais e multisservidor.  
+ Os membros **SQLAgentUserRole** e **SQLAgentReaderRole** só podem iniciar trabalhos que eles possuem. Os membros **SQLAgentOperatorRole** pode iniciar todos os trabalhos locais, incluindo aqueles que pertencem a outros usuários. Os membros **sysadmin** podem iniciar todos os trabalhos locais e multisservidor.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir inicia um trabalho denominado `Weekly Sales Data Backup`.  

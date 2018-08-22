@@ -1,6 +1,6 @@
 ---
-title: Instalar componentes de aprendizado de máquina do SQL Server sem acesso à internet | Microsoft Docs
-description: Offline ou desconectada R Machine Learning e Pytyon instalação na instância do SQL Server isolada.
+title: Instalar os componentes do R e Python sem acesso à internet de aprendizado de máquina do SQL Server | Microsoft Docs
+description: Offline ou desconectada Machine Learning R e Python instalação na instância do SQL Server isolada.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 08/02/2018
@@ -8,14 +8,14 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 56624d2a5fcc97035f434cb1ee1d4fdee4dedeba
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 94aa87c0ecad8be94498bf5571e6e4b7ed7e1af9
+ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39546255"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "40437646"
 ---
-# <a name="install-sql-server-machine-learning-r-and-python-features-on-computers-with-no-internet-access"></a>Instalar recursos de R e Python em computadores sem acesso à internet de aprendizado de máquina do SQL Server
+# <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>Instalar o R e Python de aprendizado em computadores sem acesso à internet de máquina do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Por padrão, instaladores de se conectar a sites de download da Microsoft para obter necessárias e os componentes atualizados para o aprendizado de máquina no SQL Server. Se as restrições de firewall impedirem que o instalador do alcance esses sites, você pode usar um dispositivo conectado à internet para baixar arquivos, transferir arquivos para um servidor offline e, em seguida, execute a instalação.

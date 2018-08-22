@@ -22,15 +22,15 @@ caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 4868bbe408b96c95a44c82516ce9bb6c9035397e
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 604fe25d0b08ddc997baf381adb4a967ed8e9462
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979598"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394198"
 ---
 # <a name="mapping-source-and-target-data-types-accesstosql"></a>Mapeamento de fonte e tipos de dados de destino (AccessToSQL)
-Os tipos de banco de dados do Access variam de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipos de banco de dados. Quando você converte objetos de banco de dados de acesso à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] objetos, você deve especificar como mapear tipos de dados do Access para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Você pode aceitar os mapeamentos de tipo de dados padrão, ou você pode personalizar os mapeamentos conforme mostrado nos procedimentos a seguir.  
+Os tipos de banco de dados do Access variam de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de banco de dados. Quando você converte objetos de banco de dados de acesso à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos, você deve especificar como mapear tipos de dados do Access para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você pode aceitar os mapeamentos de tipo de dados padrão, ou você pode personalizar os mapeamentos conforme mostrado nos procedimentos a seguir.  
   
 ## <a name="default-mappings"></a>Mapeamentos padrão  
 O SSMA tem um conjunto padrão de mapeamentos de tipo de dados. Para obter a lista de mapeamentos padrão, consulte [configurações do projeto (mapeamento de tipo)](http://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655).  
@@ -70,7 +70,7 @@ O procedimento a seguir mostra como mapear tipos de dados no projeto, no banco d
   
         Isso lhe permite personalizar o mapeamento de dados maiores e menores valores do mesmo tipo de dados.  
   
-    4.  Sob **tipo de destino**, selecione o destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipo de dados.  
+    4.  Sob **tipo de destino**, selecione o destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados.  
   
         Alguns tipos exigem um comprimento de tipo de dados de destino. Se for necessário, insira o comprimento de dados novo na **substituir por** caixa e, em seguida, clique em **Okey**.  
   
@@ -84,7 +84,7 @@ O procedimento a seguir mostra como mapear tipos de dados no projeto, no banco d
   
         Isso lhe permite personalizar o mapeamento de dados maiores e menores valores do mesmo tipo de dados.  
   
-    4.  Sob **tipo de destino**, selecione o destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipo de dados.  
+    4.  Sob **tipo de destino**, selecione o destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados.  
   
         Alguns tipos exigem um comprimento de tipo de dados de destino. Se for necessário, insira o comprimento de dados novo na **substituir por** caixa e, em seguida, clique em **Okey**.  
   
@@ -95,8 +95,8 @@ O procedimento a seguir mostra como mapear tipos de dados no projeto, no banco d
     2.  Clique em **Remover**.  
   
 ## <a name="next-steps"></a>Próximas etapas  
-A próxima etapa no processo de migração é [converter objetos de banco de dados do access para objetos do SQL Server](http://msdn.microsoft.com/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
+A próxima etapa no processo de migração é [converter objetos de banco de dados do access para objetos do SQL Server](converting-access-database-objects-accesstosql.md)  
   
 ## <a name="see-also"></a>Consulte também  
-[Migrando bancos de dados do Access para o SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[Migrando bancos de dados do Access para o SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

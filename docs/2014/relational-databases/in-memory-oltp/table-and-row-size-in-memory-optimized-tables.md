@@ -5,8 +5,7 @@ ms.date: 10/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
@@ -14,12 +13,12 @@ caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2a6d943e02529785fdef26baeee82b6d11ddd433
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ef26babe0f79bf3343c26748c560b6a7a41ba164
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37231086"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392906"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>Tamanho da tabela e da linha em tabelas com otimização de memória
   Uma tabela com otimização de memória consiste em uma coleção de linhas e índices que contêm ponteiros para linhas. Em uma tabela com otimização de memória, as linhas não podem ter mais de 8.060 bytes. Entender o tamanho de uma tabela com otimização de memória ajudará você a saber se o computador tem memória suficiente.  

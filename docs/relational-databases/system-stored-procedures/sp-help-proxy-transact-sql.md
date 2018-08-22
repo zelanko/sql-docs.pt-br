@@ -22,12 +22,12 @@ caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8a64cf35c51d4857b666798debb633828b6c66b8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0cfde22d702fa71b46ae4795beca42b8e7bd37d7
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259796"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392006"
 ---
 # <a name="sphelpproxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,17 +49,17 @@ sp_help_proxy
   
 ## <a name="arguments"></a>Argumentos  
  [ **@proxy_id** = ] *id*  
- O número de identificação de proxy do proxy para o qual listar informações. O *proxy_id* é **int**, com um padrão NULL. Ambos o *id* ou *proxy_name* pode ser especificado.  
+ O número de identificação de proxy do proxy para o qual listar informações. O *proxy_id* é **int**, com um padrão NULL. Ambos os *id* ou o *proxy_name* pode ser especificado.  
   
  [ **@proxy_name** =] **'***proxy_name***'**  
- O nome do proxy para o qual listar informações. O *proxy_name* é **sysname**, com um padrão NULL. Ambos o *id* ou *proxy_name* pode ser especificado.  
+ O nome do proxy para o qual listar informações. O *proxy_name* é **sysname**, com um padrão NULL. Ambos os *id* ou o *proxy_name* pode ser especificado.  
   
  [ **@subsystem_name** =] '*subsystem_name*'  
  O nome do subsistema para o qual listar proxies. O *subsystem_name* é **sysname**, com um padrão NULL. Quando *subsystem_name* for especificado, *nome* também deve ser especificado.  
   
  A tabela a seguir lista os valores padrão para cada subsistema.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |ActiveScripting|Script do ActiveX|  
 |CmdExec|Sistema Operacional (CmdExec)|  
@@ -67,14 +67,14 @@ sp_help_proxy
 |LogReader|Replication Agente de Leitor de Log|  
 |Distribuição|Agente de distribuição de replicação|  
 |Mesclagem|Replication Merge Agent|  
-|QueueReader|Replication Queue Reader Agent|  
+|QueueReader|Agente de Leitor de Fila de Replicação|  
 |ANALYSISQUERY|Comando do Analysis Services|  
 |ANALYSISCOMMAND|Consulta do Analysis Services|  
 |Dts|Execução do pacote SSIS|  
 |PowerShell|Scripts PowerShell|  
   
  [ **@name** =] '*nome*'  
- O nome de um login do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o qual listar proxies. O nome é **nvarchar (256)**, com um padrão NULL. Quando *nome* for especificado, *subsystem_name* também deve ser especificado.  
+ O nome de um login do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o qual listar proxies. O nome é **nvarchar(256)**, com um padrão NULL. Quando *nome* for especificado, *subsystem_name* também deve ser especificado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -83,14 +83,14 @@ sp_help_proxy
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**proxy_id**|**Int**|Número de identificação de proxy.|  
+|**proxy_id**|**int**|Número de identificação de proxy.|  
 |**name**|**sysname**|O nome do proxy.|  
 |**credential_identity**|**sysname**|O nome de domínio de Microsoft Windows e o nome de usuário para a credencial associada ao proxy.|  
-|**Habilitado**|**tinyint**|Se o proxy está habilitado. { **0** = não habilitado, **1** = habilitado}|  
+|**habilitado**|**tinyint**|Se esse proxy está habilitado. { **0** = não habilitado, **1** = habilitado}|  
 |**Descrição**|**nvarchar(1024)**|A descrição para esse proxy.|  
 |**user_sid**|**varbinary(85)**|A identificação de segurança do Windows do usuário do Windows para esse proxy.|  
-|**credential_id**|**Int**|O identificador para a credencial associada a esse proxy.|  
-|**credential_identity_exists**|**Int**|Especifica se credential_identity existe. {0 = não existe, 1 = existe}|  
+|**credential_id**|**int**|O identificador para a credencial associada a esse proxy.|  
+|**credential_identity_exists**|**int**|Especifica se credential_identity existe. {0 = não existe, 1 = existe}|  
   
 ## <a name="remarks"></a>Remarks  
  Quando nenhum parâmetro for fornecido, **sp_help_proxy** lista informações para todos os proxies na instância.  
@@ -100,10 +100,10 @@ sp_help_proxy
 ## <a name="permissions"></a>Permissões  
  Por padrão, os membros da função de servidor fixa **sysadmin** podem executar este procedimento armazenado. Deve ser concedida a outros usuários a função de banco de dados fixa **SQLAgentOperatorRole** no banco de dados **msdb** .  
   
- Para obter detalhes sobre **SQLAgentOperatorRole**, consulte [funções de banco de dados fixa do SQL Server Agent](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Para obter detalhes sobre **SQLAgentOperatorRole**, consulte [funções de banco de dados fixas do SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
 > [!NOTE]  
->  O **credential_identity** e **user_sid** colunas são retornadas apenas no conjunto de resultados quando os membros de **sysadmin** executar esse procedimento armazenado.  
+>  O **credential_identity** e **user_sid** colunas são retornadas apenas no conjunto de resultados quando os membros **sysadmin** executar esse procedimento armazenado.  
   
 ## <a name="examples"></a>Exemplos  
   

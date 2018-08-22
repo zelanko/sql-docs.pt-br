@@ -19,12 +19,12 @@ caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d3fa961c07b1a4fbf9d688d31b2451598e5c8ca2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dd03ce75d23d7cb98a8b1fcc8181fc6fcfa9523c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37187733"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395817"
 ---
 # <a name="windows-server-failover-clustering-wsfc-with-sql-server"></a>WSFC (Windows Server Failover Clustering) com o SQL Server
   Um *cluster WSFC (Windows Server Failover Clustering)* é um grupo de servidores independentes que funcionam em conjunto para aumentar a disponibilidade de aplicativos e serviços. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] tira proveito dos serviços e recursos do WSFC para oferecer suporte às instâncias de cluster de failover do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] e do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
@@ -65,7 +65,7 @@ ms.locfileid: "37187733"
  Quorum forçado  
  O processo para iniciar o cluster embora apenas uma minoria dos elementos que são necessários para o quorum esteja em comunicação.  
   
- Para obter mais informações, consulte: [Glossário de cluster de failover](http://msdn.microsoft.com/library/aa372869\(VS.85\).aspx)  
+ Para obter mais informações, consulte: [Glossário de cluster de failover](/previous-versions/windows/desktop/MsCS/server-cluster-glossary)  
   
 ##  <a name="Overview"></a> Visão geral do Windows Server Failover Clustering  
  O Windows Server Failover Clustering fornece recursos de infraestrutura que dão suporte aos cenários de alta disponibilidade e recuperação de desastres dos aplicativos de servidor hospedados, como o Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e o Microsoft Exchange. Se houver falha em um nó de cluster ou serviço, os serviços que foram hospedados naquele nó poderão ser transferidos automática ou manualmente para outro nó disponível em um processo conhecido como *failover*.  

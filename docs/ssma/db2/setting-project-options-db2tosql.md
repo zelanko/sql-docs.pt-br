@@ -16,24 +16,24 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 48c434d30623d7b293fc4fef0cb3d42a737b5a5b
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: e3974057f6b975a5c8abc7cc99f886360be15aa8
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34775982"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40392900"
 ---
-# <a name="setting-project-options-db2tosql"></a>Definindo opções de projeto (DB2ToSQL)
-Para cada projeto SSMA, você pode definir opções de nível de projeto. Essas opções especificam a conversão do objeto, o carregamento de objeto, configurações de migração de dados e a interface do usuário. Antes de converter objetos [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou migrar dados em [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], verifique se as opções de configuração são adequadas para o projeto.  
+# <a name="setting-project-options-db2tosql"></a>Definir opções do projeto (DB2ToSQL)
+Para cada projeto do SSMA, você pode definir opções de nível de projeto. Essas opções especificam a conversão do objeto, o carregamento do objeto, configurações de migração de dados e interface do usuário. Antes de converter objetos a serem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou migrar os dados em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], verifique se as opções de configuração são adequadas para o projeto.  
   
-O SSMA permite configurar as opções padrão para todos os projetos. Essas opções são aplicadas a qualquer novo projeto que você criar. Em seguida, você pode personalizar as opções para cada projeto.  
+O SSMA permite configurar opções padrão para todos os projetos. Essas opções são aplicadas a qualquer novo projeto criado por você. Em seguida, você pode personalizar as opções para cada projeto.  
   
 ## <a name="configuration-options-and-modes"></a>Modos e opções de configuração  
-O SSMA tem cinco conjuntos de configurações de projeto:  
+O SSMA tem cinco conjuntos de configurações do projeto:  
   
 -   Informações do projeto  
   
--   Geral (conversão, migração, o carregamento de objetos)  
+-   Geral (conversão ou migração, carregando objetos)  
   
 -   Synchronization  
   
@@ -51,7 +51,7 @@ Ele também tem quatro modos para definir essas configurações:
   
 -   Personalizar  
   
-O padrão é recomendado para a maioria dos usuários. O modo otimista mantém mais a sintaxe de DB2 atual e é mais fácil de ler. No entanto, a manter a sintaxe atual pode não ser precisa. Se a sintaxe do DB2 deve ser convertida ao equivalente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] sintaxe, o modo completo executa a conversão mais completa, mas o código resultante pode ser mais difícil de ler. No modo personalizado, você deve definir as opções.  
+O modo padrão é recomendado para a maioria dos usuários. O modo otimista mantém mais da sintaxe do DB2 atual e é mais fácil de ler. No entanto, a manter a sintaxe atual pode não ser precisa. Se a sintaxe do DB2 deve ser convertida ao equivalente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sintaxe, o modo completo executa a conversão mais completa, mas o código resultante pode ser mais difícil de ler. No modo personalizado, você deve definir as opções.  
   
 Para obter mais informações sobre as configurações e como as configurações são aplicadas em cada modo, consulte os tópicos a seguir:  
   
@@ -61,24 +61,24 @@ Para obter mais informações sobre as configurações e como as configurações
   
 -   [Configurações do projeto&#40;sincronização&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-synchronization-db2tosql.md)  
   
--   [Configurações do projeto &#40;GUI&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-gui-db2tosql.md)  
+-   [Configurações do projeto &#40;interface gráfica do usuário&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-gui-db2tosql.md)  
   
 -   [Configurações do projeto &#40;mapeamento de tipo&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-type-mapping-db2tosql.md)  
   
-## <a name="setting-project-options"></a>Definindo opções de projeto  
-Em SSMA, você pode configurar as configurações padrão para todos os projetos. Essas configurações são salvas no arquivo de configuração do SSMA e aplicadas a qualquer novo projeto que você criar.  
+## <a name="setting-project-options"></a>Definir opções do projeto  
+No SSMA, você pode configurar as configurações padrão para todos os projetos. Essas configurações são salvas no arquivo de configuração do SSMA e aplicadas a qualquer novo projeto criado por você.  
   
 **Para definir opções de projeto padrão**  
   
-1.  Sobre o **ferramentas** menu, clique em **configurações de projeto padrão**.  
+1.  Sobre o **ferramentas** menu, clique em **configurações do projeto padrão**.  
   
 2.  No **configurações de projeto padrão** caixa de diálogo, use um dos procedimentos a seguir:  
   
-    -   Selecione o tipo de projeto de migração para o qual as configurações são necessárias para ser exibido ou alterado de **versão de destino de migração** suspensa clique **geral** na parte inferior do painel esquerdo e selecione conversão ou migração.  
+    -   Selecione o tipo de projeto de migração para o qual as configurações são necessárias para ser exibida ou alterada de **versão de destino de migração** lista suspensa clique **geral** na parte inferior do painel esquerdo e, em seguida, selecione conversão ou Migração.  
   
-    -   Para selecionar um modo predefinido, no **modo** caixa de lista suspensa, selecione **padrão**, **Optimistic**, ou **completo**.  
+    -   Para selecionar um modo predefinido, nos **modo** caixa de lista suspensa, selecione **padrão**, **Optimistic**, ou **completo**.  
   
-    -   Para especificar configurações personalizadas, selecione ou insira as configurações da nova ou valores.  
+    -   Para especificar configurações personalizadas, selecione ou insira as novas configurações ou valores.  
   
 3.  Clique em **Okey** para salvar as configurações.  
   
@@ -86,23 +86,23 @@ Você também pode personalizar configurações para o projeto atual. Essas conf
   
 **Para personalizar as configurações para o projeto atual**  
   
-1.  Sobre o **ferramentas** menu, clique em **configurações de projeto**.  
+1.  Sobre o **ferramentas** menu, clique em **configurações do projeto**.  
   
-2.  No **configurações de projeto** caixa de diálogo, use um dos procedimentos a seguir:  
+2.  No **configurações do projeto** caixa de diálogo, use um dos procedimentos a seguir:  
   
-    -   Para selecionar um modo predefinido, no **modo** caixa de lista suspensa, selecione **padrão**, **Optimistic**, ou **completo**.  
+    -   Para selecionar um modo predefinido, nos **modo** caixa de lista suspensa, selecione **padrão**, **Optimistic**, ou **completo**.  
   
-    -   Para especificar um modo personalizado, no **modo** selecione **personalizado**e, em seguida, selecione as configurações apropriadas do projeto.  
+    -   Para especificar um modo personalizado, na **modo** caixa, selecione **personalizado**e, em seguida, selecione as configurações de projeto apropriado.  
   
 3.  Clique em **Okey** para salvar as configurações.  
   
 ## <a name="next-steps"></a>Próximas etapas  
 A próxima etapa da migração depende de suas necessidades de projeto:  
   
--   Para personalizar o mapeamento de tipos de dados de origem e de destino, consulte [mapeamento DB2 e tipos de dados do SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md).  
+-   Para personalizar o mapeamento de tipos de dados de origem e destino, consulte [DB2 de mapeamento e tipos de dados do SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md).  
   
--   Caso contrário, você pode converter as definições de objeto de banco de dados do DB2 em [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] definições de objeto. Para obter mais informações, consulte [convertendo esquemas de DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md).  
+-   Caso contrário, você pode converter as definições de objeto de banco de dados do DB2 em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definições de objeto. Para obter mais informações, consulte [converter esquemas do DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md).  
   
 ## <a name="see-also"></a>Consulte também  
-[Mapeando tipos de dados do SQL Server e de DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md)  
+[Mapeamento de DB2 e tipos de dados do SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md)  
   

@@ -5,7 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -24,23 +24,23 @@ caps.latest.revision: 45
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: caf89d0013d95a4fc27937e854eb7a5af28017ef
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 7789a1f591b95ec5442697c5bfa6c7d730ba4faf
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37424785"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395427"
 ---
 # <a name="using-user-defined-types"></a>Usando tipos definidos pelo usuário
-  O [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introduziu os UDTs (tipos definidos pelo usuário). Os UDTs estendem o sistema de tipos do SQL, permitindo armazenar objetos e estruturas de dados personalizados em um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] banco de dados. Os UDTs podem conter vários tipos de dados e ter comportamentos, o que os diferencia dos tipos de dados de alias tradicionais, que consistem em um único tipo de dado do sistema [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. UDTs são definidos usando quaisquer dos idiomas com suporte pelo .NET CRL (Common Language Runtime) que gera código verificável. Isso inclui Microsoft Visual c#<sup>®</sup> e o Visual Basic<sup>®</sup> .NET. Os dados são expostos como campos e propriedades de uma classe ou estrutura .NET e os comportamentos são definidos pelos métodos da classe ou estrutura.  
+  O [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introduziu os UDTs (tipos definidos pelo usuário). Os UDTs estendem o sistema de tipos SQL, permitindo que você armazene objetos e estruturas de dados personalizadas em um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Os UDTs podem conter vários tipos de dados e ter comportamentos, o que os diferencia dos tipos de dados de alias tradicionais, que consistem em um único tipo de dado do sistema [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. UDTs são definidos usando quaisquer dos idiomas com suporte pelo .NET CRL (Common Language Runtime) que gera código verificável. Isto inclui o Microsoft Visual C#<sup>®</sup> e Visual Basic<sup>®</sup> .NET. Os dados são expostos como campos e propriedades de uma classe ou estrutura .NET e os comportamentos são definidos pelos métodos da classe ou estrutura.  
   
- Um UDT pode ser usado como definição da coluna de uma tabela, como uma variável em uma [!INCLUDE[tsql](../../../includes/tsql-md.md)] lote, ou como um argumento de uma [!INCLUDE[tsql](../../../includes/tsql-md.md)] função ou procedimento armazenado.  
+ Um UDT pode ser usado como definição de coluna de uma tabela, como uma variável em um lote [!INCLUDE[tsql](../../../includes/tsql-md.md)], ou como um argumento de uma função [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou um procedimento armazenado.  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>Provedor OLE DB do SQL Server Native Client  
- O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client dá suporte a UDTs como tipos binários com informações de metadados, que lhe permite gerenciar UDTs como objetos. Colunas UDT são expostas como DBTYPE_UDT e seus metadados são expostos por meio da interface do OLE DB de núcleo **IColumnRowset**e a nova [ISSCommandWithParameters](../../native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md) interface.  
+ O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client dá suporte a UDTs como tipos binários com informações de metadados, que lhe permite gerenciar UDTs como objetos. As colunas UDT são expostas como DBTYPE_UDT e seus metadados são expostos pela interface principal do OLE DB **IColumnRowset** e pela nova interface [ISSCommandWithParameters](../../native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md).  
   
 > [!NOTE]  
->  O **irowsetfind:: Findnextrow** método não funciona com o tipo de dados UDT. DB_E_BADCOMPAREOP será retornado se o UDT for usado como um tipo de coluna de pesquisa.  
+>  O método **IRowsetFind::FindNextRow** não funciona com o tipo de dados UDT. DB_E_BADCOMPAREOP será retornado se o UDT for usado como um tipo de coluna de pesquisa.  
   
 ### <a name="data-bindings-and-coercions"></a>Coerções e associações de dados  
  A tabela a seguir descreve a associação e a coerção que ocorrem ao usar os tipos de dados listados com o UDT [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Colunas de UDT são expostas por meio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client como DBTYPE_UDT. Você pode obter metadados por meio dos conjuntos de linhas de esquema apropriados de forma que possa gerenciar seus próprios tipos definidos como objetos.  
@@ -53,18 +53,18 @@ ms.locfileid: "37424785"
 |DBTYPE_BSTR|Suporte para<sup>3,6</sup>|N/D<sup>2</sup>|Suporte para<sup>4</sup>|N/D<sup>2</sup>|  
 |DBTYPE_STR|Suporte para<sup>3,6</sup>|N/D<sup>2</sup>|Suporte para<sup>4,6</sup>|N/D<sup>2</sup>|  
 |DBTYPE_IUNKNOWN|Sem suporte|N/D<sup>2</sup>|Sem suporte|N/D<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_UI1 &AMP;#124; VT_ARRAY)|Suporte para<sup>6</sup>|N/D<sup>2</sup>|Suporte para<sup>4</sup>|N/D<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Suporte para<sup>6</sup>|N/D<sup>2</sup>|Suporte para<sup>4</sup>|N/D<sup>2</sup>|  
 |DBTYPE_VARIANT (VT_BSTR)|Suporte para<sup>3,6</sup>|N/D<sup>2</sup>|N/A|N/D<sup>2</sup>|  
   
- <sup>1</sup>se o tipo de um servidor diferente de DBTYPE_UDT for especificado com **ICommandWithParameters:: SetParameterInfo** e o tipo de acessador for DBTYPE_UDT, ocorrerá um erro quando a instrução é executada (DB_E_ERRORSOCCURRED; o status do parâmetro é DBSTATUS_E_BADACCESSOR). Caso contrário, os dados serão enviados para o servidor, mas ele retornará um erro indicando que não há conversão implícita do UDT para o tipo de dados do parâmetro.  
+ <sup>1</sup>Se um tipo de servidor diferente de DBTYPE_UDT for especificado com **ICommandWithParameters::SetParameterInfo** e o tipo de acessador for DBTYPE_UDT, ocorrerá um erro quando a instrução for executada (para DB_E_ERRORSOCCURRED, o status do parâmetro é DBSTATUS_E_BADACCESSOR). Caso contrário, os dados serão enviados para o servidor, mas ele retornará um erro indicando que não há conversão implícita do UDT para o tipo de dados do parâmetro.  
   
  <sup>2</sup>além do escopo deste tópico.  
   
- <sup>3</sup> ocorre conversão de dados de cadeia de caracteres hexadecimal para dados binários.  
+ <sup>3</sup> Ocorre a conversão de dados de cadeia de caracteres hexadecimal para dados binários.  
   
- <sup>4</sup> ocorre conversão de dados de dados binários em cadeia de caracteres hexadecimal.  
+ <sup>4</sup> Ocorre a conversão de dados binários para cadeia de caracteres hexadecimal.  
   
- <sup>5</sup>pode ocorrer validação no acessador momento da criação ou no momento da busca, o erro é DB_E_ERRORSOCCURRED, associando o status definido como DBBINDSTATUS_UNSUPPORTEDCONVERSION.  
+ <sup>5</sup>Pode ocorrer a validação no momento de criação do acessador ou, no momento do fetch, o erro é DB_E_ERRORSOCCURRED, o status de associação está definido como DBBINDSTATUS_UNSUPPORTEDCONVERSION.  
   
  <sup>6</sup>BY_REF pode ser usado.  
   
@@ -73,11 +73,11 @@ ms.locfileid: "37424785"
  DBTYPE_UDT pode ser convertido em DBTYPE_EMPTY e DBTYPE_NULL, porém DBTYPE_NULL e DBTYPE_EMPTY não podem ser convertidos em DBTYPE_UDT. Isso é consistente com DBTYPE_BYTES.  
   
 > [!NOTE]  
->  Uma nova interface é usada para lidar com UDTs como parâmetros, **ISSCommandWithParameters**, que herda do **ICommandWithParameters**. Os aplicativos devem usar esta interface para definir pelo menos o SSPROP_PARAM_UDT_NAME da propriedade DBPROPSET_SQLSERVERPARAMETER definida para os parâmetros de UDT. Se isso não for feito, **ICommand:: execute** retornará DB_E_ERRORSOCCURRED. Esta interface e conjunto de propriedades serão descritos posteriormente neste tópico.  
+>  Uma nova interface é usada para lidar com UDTs como parâmetros, **ISSCommandWithParameters**, herdada de **ICommandWithParameters**. Os aplicativos devem usar esta interface para definir pelo menos o SSPROP_PARAM_UDT_NAME da propriedade DBPROPSET_SQLSERVERPARAMETER definida para os parâmetros de UDT. Se isto não for feito, **ICommand::Execute** retornará DB_E_ERRORSOCCURRED. Esta interface e conjunto de propriedades serão descritos posteriormente neste tópico.  
   
- Se um tipo definido pelo usuário é inserido em uma coluna que não é grande o suficiente para conter todos os seus dados, **ICommand:: execute** retornará S_OK com status de DB_E_ERRORSOCCURRED.  
+ Se um tipo definido pelo usuário for inserido em uma coluna que não seja grande o suficiente para manter todos os dados, **ICommand::Execute** retornará S_OK com o status DB_E_ERRORSOCCURRED.  
   
- Conversões de dados fornecidas por serviços principais do OLE DB (**IDataConvert**) não são aplicáveis a DBTYPE_UDT. As demais associações não têm suporte.  
+ As conversões de dados fornecidas pelos serviços principais do OLE DB (**IDataConvert**) não são aplicáveis a DBTYPE_UDT. As demais associações não têm suporte.  
   
 ### <a name="ole-db-rowset-additions-and-changes"></a>Adições e alterações do conjunto de linhas do OLE DB  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client adiciona novos valores ou alterações a muitos dos principais conjuntos de linhas de esquema OLE DB.  
@@ -110,7 +110,7 @@ ms.locfileid: "37424785"
 |Nome da coluna|Tipo|Description|  
 |-----------------|----------|-----------------|  
 |ASSEMBLY_CATALOG|DBTYPE_WSTR|O nome de catálogo do assembly que contém o tipo.|  
-|ASSEMBLY_SCHEMA|DBTYPE_WSTR|O nome do esquema ou nome do proprietário do assembly que contém o tipo. Embora os assemblies tenham escopo por banco de dados e não por esquema, eles ainda têm um proprietário, o que é refletido aqui.|  
+|ASSEMBLY_SCHEMA|DBTYPE_WSTR|O nome do esquema ou nome do proprietário do assembly que contém o tipo. Embora os assemblies tenham escopo por banco de dados e não por esquema, eles ainda têm um proprietário, que é refletido aqui.|  
 |ASSEMBLY_ID|DBTYPE_UI4|A id do objeto do assembly.|  
 |REFERENCED_ASSEMBLY_ID|DBTYPE_UI4|A id do objeto do assembly referenciado.|  
   
@@ -174,10 +174,10 @@ ms.locfileid: "37424785"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client adiciona novos valores ou alterações a muitos dos principais que interfaces OLE DB.  
   
 #### <a name="the-isscommandwithparameters-interface"></a>A interface ISSCommandWithParameters  
- Para dar suporte a UDTs através do OLE DB, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client implementa várias alterações, incluindo a adição do **ISSCommandWithParameters** interface. Essa nova interface herda da interface OLE DB principal **ICommandWithParameters**. Além dos três métodos herdados de **ICommandWithParameters**; **GetParameterInfo**, **MapParameterNames**, e **SetParameterInfo**; **ISSCommandWithParameters** fornece o **GetParameterProperties** e **SetParameterProperties** métodos que são usados para lidar com o servidor específico tipos de dados.  
+ Para dar suporte a UDTs através do OLE DB, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client implementa várias alterações, incluindo a adição do **ISSCommandWithParameters** interface. Essa nova interface herda as propriedades da interface principal do OLE DB **ICommandWithParameters**. Além dos três métodos herdados de **ICommandWithParameters**; **GetParameterInfo**, **MapParameterNames**, e **SetParameterInfo**; **ISSCommandWithParameters** fornece o **GetParameterProperties** e **SetParameterProperties** métodos que são usados para lidar com o servidor específico tipos de dados.  
   
 > [!NOTE]  
->  O **ISSCommandWithParameters** interface também utiliza o SSPARAMPROPS a nova estrutura.  
+>  A interface **ISSCommandWithParameters** também usa a nova estrutura SSPARAMPROPS.  
   
 #### <a name="the-icolumnsrowset-interface"></a>A interface IColumnsRowset  
  Além de **ISSCommandWithParameters** interface, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client adiciona novos valores no conjunto de linhas retornado ao chamar o **IColumnsRowset:: Getcolumnrowset** método incluindo o seguinte.  

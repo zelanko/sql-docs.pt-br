@@ -1,8 +1,8 @@
 ---
-title: Executar uma avaliação de migração do SQL Server (Assistente de migração de dados) | Microsoft Docs
-description: Saiba como usar o Assistente de migração de dados para avaliar um SQL Server no local antes de migrar para outro SQL Server ou banco de dados do Azure SQL
+title: Avaliar uma empresa e consolidar relatórios de avaliação (SQL Server) | Microsoft Docs
+description: Saiba como usar o DMA para avaliar uma empresa e consolidar relatórios de avaliação antes de atualizar o SQL Server ou migrando para o banco de dados SQL.
 ms.custom: ''
-ms.date: 07/09/2018
+ms.date: 08/21/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -18,96 +18,228 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.openlocfilehash: 9a1e02c2db8f750b8beac70caf59cd7a0c509a25
-ms.sourcegitcommit: dcd29cd2d358bef95652db71f180d2a31ed5886b
+ms.openlocfilehash: 9f8deae9dc7f31eaa41c5e4261a2848648f60090
+ms.sourcegitcommit: 42455727824e2bfa0173d9752f4ae6839ee6031f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37934948"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "40393137"
 ---
-# <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Realizar uma avaliação de migração do SQL Server com o Assistente de migração de dados
+# <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Avaliar uma empresa e consolidar relatórios de avaliação com o DMA
 
-As instruções passo a passo a seguir o ajudam a executar sua primeira avaliação de migração para o local SQL Server, SQL Server em execução em uma VM do Azure, ou um banco de dados SQL Azure, usando o Assistente de migração de dados.
+As seguintes instruções passo a passo ajudam você a usar o Assistente de migração de dados para realizar uma avaliação de dimensionado com êxito para a atualização do SQL Server no local ou a execução do SQL Server em VMs do Azure ou para migrar para o banco de dados SQL.
 
-## <a name="create-an-assessment"></a>Criar uma avaliação
+## <a name="prerequisites"></a>Prerequisites
 
-1.  Selecione o **New** (+) ícone e, em seguida, selecione o **avaliação** tipo de projeto.
+- Designe um computador de ferramentas em sua rede do qual o DMA será iniciado. Certifique-se de que esse computador tenha conectividade com seus destinos do SQL Server.
+- Baixe e instale:
+    - [Assistente de migração de dados](https://www.microsoft.com/en-us/download/details.aspx?id=53595) v 3.6 ou posterior.
+    - [PowerShell](http://aka.ms/wmf5download) v 5.0 ou superior.
+    - [.NET framework](https://www.microsoft.com/download/details.aspx?id=30653) v4.5 ou superior.
+    - [SSMS](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms) 17.0 ou superior.
+    - [Power BI desktop](https://docs.microsoft.com/power-bi/desktop-get-the-desktop).
+- Baixe e extraia:
+    - O [modelo do Power BI DMA relatórios](https://msdnshared.blob.core.windows.net/media/2018/04/PowerBI-Reports1.zip).
+    - O [LoadWarehouse script](https://msdnshared.blob.core.windows.net/media/2018/03/LoadWarehouse.zip).
 
-2.  Defina o tipo de servidor de origem e destino.
+## <a name="loading-the-powershell-modules"></a>Carregando os módulos do PowerShell
+Salvar os módulos do PowerShell para o diretório de módulos do PowerShell permite que você chame os módulos sem a necessidade de carregar explicitamente-los antes do uso.
 
-    Se você estiver atualizando sua instância do SQL Server local para uma instância do SQL Server moderna no local ou ao SQL Server hospedado em uma VM do Azure, defina o tipo de servidor de origem e destino como **SQL Server**. Se você estiver migrando para o banco de dados SQL, em vez disso, defina o tipo de servidor de destino **banco de dados SQL**.
+Para carregar os módulos, execute as seguintes etapas:
+1. Navegue até C:\Program files\windowspowershell\modules. e, em seguida, crie uma pasta chamada **DataMigrationAssistant**.
+2. Abra o [módulos do PowerShell](https://msdnshared.blob.core.windows.net/media/2018/03/PowerShell-Modules.zip)e, em seguida, salvá-los para a pasta que você criou.
 
-3.  Clique em **Criar**.
+      ![Módulos do PowerShell](../dma/media//dma-assesssqlonprem/dma-powershell-modules.png)
 
-    ![Criar uma avaliação](../dma/media/NewAssessment.png)
+    Cada pasta contém o arquivo psm1 associados, conforme mostrado no gráfico a seguir:
 
-## <a name="choose-assessment-options"></a>Escolha as opções de avaliação
+   ![Arquivos de psm1 de módulos do PowerShell](../dma/media//dma-assesssqlonprem/dma-powershell-modules-psm1-files.png)
 
-1. Selecione a versão do SQL Server de destino que você planeja migrar para o.
+   > [!NOTE]
+   > A pasta e arquivo psm1 contém devem ter o mesmo nome.
 
-2. Selecione o tipo de relatório.
+   > [!IMPORTANT]
+   > Você talvez precise desbloquear os arquivos do PowerShell depois de salvá-los para o diretório do WindowsPowerShell para garantir que os módulos a serem carregados corretamente. Para desbloquear um arquivo do PowerShell, clique com botão direito no arquivo, selecione **propriedades**, selecione o **Unblock** caixa de texto e, em seguida, selecione **Okey**.
 
-   Quando você estiver avaliando sua instância do SQL Server de origem para a migração para o SQL Server no local ou ao SQL Server hospedado em destinos de VM do Azure, você pode escolher um ou ambos os seguintes tipos de relatório de avaliação:
+   ![Propriedades do arquivo psm1](../dma/media//dma-assesssqlonprem/dma-psm1-file-properties.png)
 
-    -   **Problemas de compatibilidade**
+    PowerShell agora deve carregar esses módulos automaticamente quando uma nova sessão do PowerShell é iniciado.
 
-    -   **Recomendação de novos recursos**
+## <a name="create-an-inventory-of-sql-servers"></a>Criar um inventário de servidores SQL
+Antes de executar o script do PowerShell para avaliar seus servidores SQL, você precisa criar um inventário dos SQL Servers que você deseja avaliar.
 
-    ![Selecione um tipo de relatório de avaliação para o destino do SQL Server](../dma/media/AssessmentTypes.png)
+Esse inventário pode estar em uma das duas formas:
+- Arquivo CSV do Excel
+- Tabela do SQL Server
 
-   Quando você estiver avaliando a instância do SQL Server de origem para migração para o banco de dados SQL, você pode escolher um ou ambos os seguintes tipos de relatório de avaliação:
+### <a name="if-using-a-csv-file"></a>Se usando um arquivo CSV
+Ao usar um arquivo csv para importar os dados, verifique se há apenas duas colunas de dados – **nome da instância** e **nome do banco de dados**, e que as colunas não tem linhas de cabeçalho.
+ 
+ ![conteúdo do arquivo CSV](../dma/media//dma-assesssqlonprem/dma-csv-file-contents.png)
 
-    -   **Verificar a compatibilidade do banco de dados**
+### <a name="if-using-sql-server-table"></a>Se usando a tabela do SQL Server
+Criar um banco de dados chamado **EstateInventory** e uma tabela chamada **DatabaseInventory**. A tabela que contém esses dados de inventário pode ter qualquer número de colunas, contanto que existam quatro colunas seguintes:
+- ServerName
+- InstanceName
+- DatabaseName
+- AssessmentFlag
+ 
+ ![Conteúdo da tabela do SQL Server](../dma/media//dma-assesssqlonprem/dma-sql-server-table-contents.png)
 
-    -   **Verificar paridade de recursos**
+Se esse banco de dados não estiver no computador de ferramentas, certifique-se de que o computador de ferramentas tem conectividade de rede para esta instância do SQL Server.
 
-    ![Selecione o tipo de relatório de avaliação para o destino de banco de dados SQL](../dma/media/AssessmentTypes_Azure.png)
+A vantagem de usar uma tabela do SQL Server em um arquivo CSV é que você pode usar a coluna do sinalizador de avaliação para controlar a instância / banco de dados que obtém selecionadas para avaliação, o que torna mais fácil separar as avaliações em partes menores.  Em seguida, você pode abranger várias avaliações (consulte a seção sobre como executar uma avaliação neste artigo), (consulte a seção sobre como executar uma avaliação neste artigo), que é mais fácil do que a manutenção de vários arquivos CSV.
 
-## <a name="add-databases-to-assess"></a>Adicionar bancos de dados para avaliar
+Tenha em mente que, dependendo do número de objetos e suas complexidades, uma avaliação pode levar um tempo muito longo (horas +), portanto, é recomendável separar a avaliação em partes gerenciáveis.
 
-1.  Selecione **adicionar fontes** para abrir o menu de atalho da conexão.
+## <a name="running-a-scaled-assessment"></a>Executar uma avaliação em escala
+Depois de carregar os módulos do PowerShell para o diretório de módulos e criar um inventário, você precisará executar uma avaliação em escala abrindo o PowerShell e executando a função dmaDataCollector.
+ 
+  ![listagens de função dmaDataCollector](../dma/media//dma-assesssqlonprem/dma-dmaDataCollector-function-listing.png)
 
-2.  Insira o nome de instância do SQL server, escolha o tipo de autenticação, defina as propriedades de conexão correta e, em seguida, selecione **Connect**.
+Os parâmetros associados à função dmaDataCollector são descritos na tabela a seguir.
 
-3.  Selecione os bancos de dados para avaliar e, em seguida, selecione **adicionar**.
+|Parâmetro  |Description
+|---------|---------|
+|**getServerListFrom** | Seu inventário. Os valores possíveis são **SqlServer** e **CSV**. |
+|**ServerName** | O nome da instância do SQL Server do inventário ao usar **SqlServer** na **getServerListFrom** parâmetro. |
+|**databaseName** | O banco de dados que hospeda a tabela de estoque. |
+|**AssessmentName** | O nome da avaliação de DMA. |
+|**TargetPlatform** | O tipo de destino de avaliação que você deseja executar.  Os valores possíveis são **AzureSQLDatabase**, **SQLServer2012**, **lt;sqlserver2014**, **SQLServer2016**,  **SQLServerLinux2017**, e **SQLServerWindows2017**. |
+|**AuthenticationMethod** | O método de autenticação para se conectar aos destinos do SQL Server que você deseja avaliar. Os valores possíveis são **SQLAuth** e **WindowsAuth**. |
+|**OutputLocation** | O diretório no qual armazenar o JSON de avaliação do arquivo de saída. Dependendo do número de bancos de dados que está sendo avaliado e o número de objetos nos bancos de dados, as avaliações podem levar um tempo muito longo. O arquivo será gravado depois de concluíram todas as avaliações. |
 
-    > [!NOTE] 
-    > Você pode remover vários bancos de dados, selecionando-os ao mesmo tempo mantendo pressionada a tecla Shift ou Ctrl e, em seguida, clicando em **remover fontes**. Você também pode adicionar bancos de dados de várias instâncias do SQL Server usando o **adicionar fontes** botão.
+Se houver um erro inesperado, a janela de comando que obtém iniciada por esse processo será encerrada.  Examine o log de erros para determinar o motivo da falha.
+ 
+  ![Local do log de erros](../dma/media//dma-assesssqlonprem/dma-error-log-file-location.png)
 
-4.  Clique em **próxima** para iniciar a avaliação.
+## <a name="consuming-the-assessment-json-file"></a>Consumindo o arquivo JSON de avaliação
 
-    ![Adicionar fontes e iniciar a avaliação](../dma/media/SelectDatabase.png)
+Após a avaliação, você agora está pronto para importar os dados no SQL Server para análise. Para consumir o arquivo JSON de avaliação, abra o PowerShell e execute a função dmaProcessor.
+ 
+  ![listagem de função dmaProcessor](../dma/media//dma-assesssqlonprem/dma-dmaProcessor-function-listing.png)
 
-## <a name="view-results"></a>Exibir resultados
+Os parâmetros associados à função dmaProcessor são descritos na tabela a seguir.
 
-A duração da avaliação depende do número de bancos de dados adicionados e o tamanho do esquema de cada banco de dados. Os resultados são exibidos para cada banco de dados assim que estiverem disponíveis.
+|Parâmetro  |Description
+|---------|---------|
+|**processTo**  | O local para o qual o arquivo JSON será processado. Os valores possíveis são **SQLServer** e **AzureSQLDatabase**. |
+|**ServerName** | A instância do SQL Server para o qual os dados serão processados.  Se você especificar **AzureSQLDatabase** para o **processTo** parâmetro, em seguida, inclua apenas o nome do SQL Server (não inclua. database.windows.net). Você será solicitado para dois logons durante o direcionamento para o banco de dados SQL Azure; a primeira é suas credenciais de locatário do Azure, enquanto o segundo é o logon de administrador para o servidor do SQL Azure. |
+|**CreateDMAReporting** | O banco de dados temporário criar para processar o arquivo JSON.  Se o banco de dados especificado já existe e você definir esse parâmetro para um, objetos não são criados.  Esse parâmetro é útil para a recriação de um único objeto que foi descartado. |
+|**CreateDataWarehouse** | Cria o data warehouse que será usado pelo relatório do Power BI. |
+|**databaseName** | O nome do banco de dados DMAReporting. |
+|**warehouseName** | O nome do banco de dados de depósito de dados. |
+|**jsonDirectory** | O diretório que contém o arquivo JSON de avaliação.  Se houver vários arquivos JSON no diretório, eles são processados individualmente. |
 
-1.  Selecione o banco de dados que foi concluída a avaliação e, em seguida, alternar entre **problemas de compatibilidade** e **recomendações de recurso** usando o seletor.
+A função dmaProcessor deve levar apenas alguns segundos para processar um único arquivo.
 
-2.  Examine os problemas de compatibilidade em todos os níveis de compatibilidade com suporte pela versão do SQL Server de destino que você selecionou na **opções** página.
+## <a name="loading-the-data-warehouse"></a>Carrega o data warehouse
+O dmaProcessor terminar de processar os arquivos de avaliação, após os dados serão carregados no banco de dados DMAReporting na tabela de dados do relatório. Neste ponto, você precisará carregar o data warehouse.
 
-Você pode examinar os problemas de compatibilidade, analisando o objeto afetado, seus detalhes e potencialmente uma correção para cada problema identificado em **alterações significativas**, **alterações de comportamento**, e  **Recursos preteridos**.
+1. Use o script de LoadWarehouse para preencher valores ausentes nas dimensões.
 
-![Exibir resultados da avaliação](../dma/media/ReviewResults.png)
+    O script irá pegar os dados da tabela de dados do relatório no banco de dados DMAReporting e carregá-lo para o warehouse.  Se houver erros durante esse processo de carregamento, eles são provavelmente resultado de entradas ausentes nas tabelas de dimensões.
 
-Da mesma forma, você pode examinar a recomendação de recurso entre **desempenho**, **armazenamento**, e **segurança** áreas.
+2. Carregar o data warehouse.
+ 
+      ![LoadWarehouse conteúdo carregado](../dma/media//dma-assesssqlonprem/dma-LoadWarehouse-loaded.png)
 
-Recomendações de recursos abrangem uma variedade de recursos, como o OLTP in-memory e Columnstore, Stretch Database, Always Encrypted, máscara de dados dinâmicos e Transparent Data Encryption.
+## <a name="set-your-database-owners"></a>Defina seus proprietários de banco de dados
+Embora não seja obrigatório, para obter mais valor dos relatórios, é recomendável que você defina os proprietários de banco de dados **dimDBOwner** da dimensão e, em seguida, atualize **DBOwnerKey** no  **FactAssessment** tabela.  Seguir esse processo permitirá que a divisão e filtragem de relatório do Power BI com base em proprietários de banco de dados específico.
 
-![Exibir recomendações de recurso](../dma/media/FeatureRecommendations.png)
+Você também pode usar o script LoadWarehouse para fornecer as instruções TSQL básicas para definir os proprietários de banco de dados.
 
-Para o banco de dados SQL Azure, as avaliações fornecem os problemas de bloqueio de migração e problemas de paridade de recurso. Examine os resultados para ambas as categorias, selecionando as opções específicas.
+  ![Proprietários de configuração LoadWarehouse](../dma/media//dma-assesssqlonprem/dma-LoadWarehouse-set-owners.png)
 
-- O **paridade de recursos do SQL Server** categoria fornece um conjunto abrangente de recomendações, abordagens alternativas disponíveis no Azure e etapas atenuantes. Ele ajuda você a planejar esse esforço em seus projetos de migração.
+## <a name="dma-reports"></a>Relatórios DMA
 
-  ![Exibir as informações de paridade de recursos do SQL Server](../dma/media/SQLFeatureParity.png)
+1. Abra o modelo de DMA relatórios Power BI no Power BI Desktop.
+2. Insira os detalhes do servidor que apontam para seus **DMAWarehouse** do banco de dados e, em seguida, selecione **carga**.
 
-- O **problemas de compatibilidade** categoria fornece recursos de parcialmente compatíveis ou não bloqueiam a migração do SQL Server bancos de dados local para bancos de dados SQL do Azure. Em seguida, ele fornece recomendações para ajudá-lo a resolver esses problemas.
+    > [!IMPORTANT]
+    > Não pressione Enter para aceitar os valores.
 
-  ![Problemas de compatibilidade do modo de exibição](../dma/media/CompatibilityIssues.png)
+      ![Modelo do Power BI DMA relatórios carregados](../dma/media//dma-assesssqlonprem/dma-reports-powerbi-template-loaded.png)
 
-## <a name="export-results"></a>Exportar resultados
+   Depois que o relatório tiver atualizado os dados a partir de **DMAWarehouse** banco de dados, você verá um relatório semelhante ao seguinte.
 
-Depois de concluir a avaliação a todos os bancos de dados, selecione **Exportar relatório** para exportar os resultados para um arquivo CSV ou um arquivo JSON. Em seguida, você pode analisar os dados em sua própria comodidade.
+   ![Modo de exibição de relatório DMAWarehouse](../dma/media//dma-assesssqlonprem/dma-DMAWarehouse-report.png)
 
-Você pode executar várias avaliações simultaneamente e exibir o estado das avaliações abrindo a **todas as avaliações** página.
+   > [!TIP]
+   > Se você não vir os dados que você esperava, tente alterar o indicador de Active Directory.  Para obter mais informações, consulte a seção de funcionalidade.
+
+## <a name="working-with-dma-reports"></a>Trabalhando com relatórios DMA
+Para trabalhar com um relatório DMA, use as segmentações para filtrar por:
+- Nome da Instância
+- Nome do Banco de Dados
+- Nome da equipe
+
+Você também pode usar indicadores para alternar o contexto de geração de relatórios entre:
+- Avaliações de nuvem
+- Avaliações de local
+
+  ![Indicadores de relatório DMA](../dma/media//dma-assesssqlonprem/dma-report-bookmarks.png)
+
+> [!NOTE]
+> Se você só pode executar uma avaliação do banco de dados SQL, somente os relatórios de nuvem são preenchidos. Por outro lado, se você só pode executar uma avaliação de locais, somente os relatórios de local são preenchidos. No entanto, se você executar o Azure e uma avaliação de local e, em seguida, carregar as duas avaliações em seu warehouse, você pode alternar entre os relatórios de nuvem e local, clicando em CTRL o ícone associado.
+
+## <a name="reports-visuals"></a>Elementos visuais de relatórios
+Os detalhes exibidos em relatórios do Power BI é mostrado nas seções a seguir.
+
+### <a name="readiness-"></a>% De preparação
+
+  ![Porcentagem de preparação de DMA](../dma/media//dma-assesssqlonprem/dma-readiness-percentage.png)
+
+Este visual é atualizado com base no contexto de seleção (tudo, de instância, banco de dados [múltiplos de]).
+
+### <a name="readiness-count"></a>Contagem de preparação
+
+  ![Contagem de preparação de DMA](../dma/media//dma-assesssqlonprem/dma-readiness-count.png)
+
+Este visual mostra a contagem de bancos de dados que está pronto para migrar a contagem de bancos de dados que ainda não estão prontos para migrar.
+
+### <a name="readiness-bucket"></a>Bucket de preparação
+
+  ![Bucket de preparação de DMA](../dma/media//dma-assesssqlonprem/dma-readiness-bucket.png)
+
+Este visual mostra uma divisão dos bancos de dados por buckets de preparação a seguir:
+- PRONTO PARA 100%
+- PRONTO PARA 99 75%
+- PRONTO PARA 50 A 75%
+- NÃO ESTÁ PRONTO
+
+### <a name="issues-word-cloud"></a>Nuvem de palavra de problemas
+ 
+  ![Problemas DMA WordCloud](../dma/media//dma-assesssqlonprem/dma-issues-word-cloud.png)
+
+Este visual mostra os problemas que estão ocorrendo no momento dentro no contexto de seleção (tudo, de instância, banco de dados [múltiplos de]). Quanto maior a palavra aparece na tela, maior o número de problemas nessa categoria. Focalizar o ponteiro do mouse sobre uma palavra mostra o número de problemas que ocorrem nessa categoria.
+
+### <a name="database-readiness"></a>Preparação do banco de dados
+
+  ![Relatório de preparação do banco de dados de DMA](../dma/media//dma-assesssqlonprem/dma-database-readiness-report.png)
+
+Esta seção é a parte principal do relatório, que mostra a preparação de uma instância de banco de dados. Este relatório tem uma hierarquia de busca detalhada de:
+- InstanceDatabase
+- ChangeCategory
+- Title
+- ObjectType
+- ImpactedObjectName
+
+ ![Análise de dados de relatório de preparação do banco de dados de DMA](../dma/media//dma-assesssqlonprem/dma-database-readiness-report-drilldown.png)
+
+Este relatório também serve como o ponto de filtro para criar o relatório de plano de correção.
+
+Para analisar o relatório de plano de correção, clique com botão direito em um ponto de dados nesse gráfico, aponte para **detalhamento**e, em seguida, selecione **planos de correção**.
+
+Essa tarefa filtra o relatório de plano de correção para o nível de hierarquia atual com base no ponto em que você selecionar a opção de detalhamento.
+
+  ![Preparação do banco de dados de DMA busca detalhada do relatório filtrada](../dma/media//dma-assesssqlonprem/dma-database-readiness-report-drilldown-filtered.png)
+
+  ![Relatório de plano de correção de DMA](../dma/media//dma-assesssqlonprem/dma-remediation-plan-report.png)
+
+Você também pode usar o relatório de plano de correção no plano de seu próprio para compilar uma solução personalizada usando os filtros na **filtros de visualizações** folha.
+ 
+  ![Opções de filtro de relatório plano de correção de DMA](../dma/media//dma-assesssqlonprem/dma-remediation-plan-report-filter-options.png)
+
+### <a name="script-disclaimer"></a>Isenção de responsabilidade de script
+*Não há suporte para os scripts de exemplo fornecidos neste artigo em qualquer serviço ou programa de suporte padrão da Microsoft. Todos os scripts são fornecidos como estão, sem garantias de qualquer tipo. Microsoft também se isenta de todas as garantias implícitas, sem limitação, qualquer implícitas de comercialização ou adequação a uma finalidade específica. Todos os riscos resultantes do uso ou do desempenho dos scripts de exemplo e documentação de responsabilidade do usuário. Em nenhuma hipótese Microsoft, seus autores ou qualquer pessoa else envolvidas na criação, produção ou entrega dos scripts será responsável por quaisquer danos (incluindo, sem limitação, danos por perda de lucros comerciais, interrupção dos negócios, perda de informações de negócios, ou outras perdas PECUNIÁRIAS) decorrente do uso ou da incapacidade de usar os scripts de exemplo ou a documentação, mesmo que a Microsoft tenha sido informada da possibilidade de tais danos.  Busca de permissão antes de relançando esses scripts em outros sites/repositórios/blogs.*

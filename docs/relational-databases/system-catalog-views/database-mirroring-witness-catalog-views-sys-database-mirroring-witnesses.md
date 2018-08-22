@@ -1,5 +1,5 @@
 ---
-title: database_mirroring_witnesses (Transact-SQL) | Microsoft Docs
+title: sys. database_mirroring_witnesses (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -26,19 +26,19 @@ caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8af11f0dd540cfa9b796dd94ab34f595b76dc71c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 4b421af3d513e68ff715581b5eed7e27d5e8dc52
+ms.sourcegitcommit: 489e29bce510fae6d826d5b6548eb9612fc2bd62
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180902"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394201"
 ---
-# <a name="database-mirroring-witness-catalog-views---sysdatabasemirroringwitnesses"></a>Exibições de catálogo de testemunha de espelhamento - banco de dados database_mirroring_witnesses
+# <a name="database-mirroring-witness-catalog-views---sysdatabasemirroringwitnesses"></a>Exibições do catálogo de testemunha de espelhamento - do banco de dados sys. database_mirroring_witnesses
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Contém uma linha para cada função testemunha desempenhada por um servidor em uma parceria de espelhamento de banco de dados. 
   
-  Em uma sessão de espelhamento de banco de dados, o failover automático requer um servidor testemunha. De modo ideal, a testemunha reside em um computador separado dos servidores principal e espelho. A testemunha não serve o banco de dados. Em vez disso, ela monitora o status dos servidores principal e espelho. Se o servidor principal falhar, a testemunha poderá iniciar o failover automático para o servidor testemunha. 
+  Em uma sessão de espelhamento de banco de dados, o failover automático requer um servidor testemunha. De modo ideal, a testemunha reside em um computador separado dos servidores principal e espelho. A testemunha não serve o banco de dados. Em vez disso, ela monitora o status dos servidores principal e espelho. Se o servidor principal falhar, a testemunha poderá iniciar o failover automático para o servidor espelho. 
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
@@ -47,13 +47,13 @@ ms.locfileid: "33180902"
 |**mirror_server_name**|**sysname**|Nome do servidor parceiro cuja cópia do banco de dados é, no momento, o banco de dados espelho.|  
 |**safety_level**|**tinyint**|Configuração de segurança de transação para atualizações no banco de dados espelho:<br /><br /> 0 = Estado desconhecido<br /><br /> 1 = Desativado (assíncrono)<br /><br /> 2 = Completo (síncrono)<br /><br /> Usar uma testemunha para um failover automático requer segurança de transação completa, que é o padrão.|  
 |**safety_level_desc**|**nvarchar(60)**|Descrição de garantia de segurança de atualizações no banco de dados espelho:<br /><br /> UNKNOWN<br /><br /> OFF<br /><br /> FULL|  
-|**safety_sequence_number**|**Int**|Atualizar o número de sequência para alterações **safety_level**.|  
-|**role_sequence_number**|**Int**|Atualize o número de sequência para mudanças para funções de principal/espelho desempenhadas pelos parceiros de espelhamento.|  
+|**safety_sequence_number**|**int**|Número de sequência para alterações de atualização **safety_level**.|  
+|**role_sequence_number**|**int**|Atualize o número de sequência para mudanças para funções de principal/espelho desempenhadas pelos parceiros de espelhamento.|  
 |**mirroring_guid**|**uniqueidentifier**|Identificador da parceria de espelhamento.|  
 |**family_guid**|**uniqueidentifier**|Identificador da família de backup para o banco de dados. Usado para detectar estados de restauração correspondentes.|  
 |**is_suspended**|**bit**|O espelhamento de banco de dados está suspenso.|  
-|**is_suspended_sequence_number**|**Int**|Número de sequência para configuração **is_suspended**.|  
-|**partner_sync_state**|**tinyint**|Estado de sincronização da sessão de espelhamento:<br /><br /> 5 = os parceiros estão sincronizados. Failover é potencialmente possível. Para obter informações sobre os requisitos para o failover, consulte [troca de função durante a um banco de dados de espelhamento sessão &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).<br /><br /> 6 = os parceiros não estão sincronizados. Failover impossível no momento.|  
+|**is_suspended_sequence_number**|**int**|Número de sequência para configuração **is_suspended**.|  
+|**partner_sync_state**|**tinyint**|Estado de sincronização da sessão de espelhamento:<br /><br /> 5 = os parceiros estão sincronizados. Failover é potencialmente possível. Para obter informações sobre os requisitos para failover, consulte [troca de função durante a um banco de dados de espelhamento de sessão &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).<br /><br /> 6 = os parceiros não estão sincronizados. Failover impossível no momento.|  
 |**partner_sync_state_desc**|**nvarchar(60)**|Descrição do estado de sincronização da sessão de espelhamento:<br /><br /> SYNCHRONIZED<br /><br /> UNSYNCHRONIZED|  
   
 ## <a name="permissions"></a>Permissões  

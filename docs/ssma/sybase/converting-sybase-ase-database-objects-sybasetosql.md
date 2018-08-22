@@ -18,18 +18,18 @@ caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 86adf372dfd590f0cac1d8ac872501fb12ab1e7b
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 0ab4bb272f83a16cf8f5be009424499bc4e054c4
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980658"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40393340"
 ---
 # <a name="converting-sap-ase-database-objects-sybasetosql"></a>Converter objetos de banco de dados do SAP ASE (SybaseToSQL)
-Depois de se conectar ao SAP Adaptive Server Enterprise (ASE), conectado ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL do Azure e defina o projeto e as opções de mapeamento de dados, você pode converter objetos de banco de dados do SAP Adaptive Server Enterprise (ASE) para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou banco de dados SQL do Azure objetos.  
+Depois de se conectar ao SAP Adaptive Server Enterprise (ASE), conectado ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL do Azure e defina o projeto e as opções de mapeamento de dados, você pode converter objetos de banco de dados do SAP Adaptive Server Enterprise (ASE) para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou banco de dados SQL do Azure objetos.  
   
 ## <a name="the-conversion-process"></a>O processo de conversão  
-Converter objetos de banco de dados usa as definições de objeto do ASE, converte-os em semelhante [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure objetos e, em seguida, carrega essas informações nos metadados SSMA. Não carrega as informações para a instância da [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou o SQL Azure. Em seguida, você pode exibir os objetos e suas propriedades usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou Gerenciador de metadados do SQL Azure.
+Converter objetos de banco de dados usa as definições de objeto do ASE, converte-os em semelhante [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure objetos e, em seguida, carrega essas informações nos metadados SSMA. Não carrega as informações para a instância da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o SQL Azure. Em seguida, você pode exibir os objetos e suas propriedades usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Gerenciador de metadados do SQL Azure.
   
 Durante a conversão, o SSMA imprime mensagens de saída para mensagens de erro e o painel de saída para o **Error List** painel. Use as informações de erro e de saída para determinar se é preciso modificar seus bancos de dados do ASE ou de seu processo de conversão para obter os resultados da conversão desejada.  
   
@@ -127,7 +127,7 @@ Para cada item que não pôde ser convertido, você deve determinar o que você 
   
 -   Você pode alterar o objeto de SAP ASE para remover ou revisar o código problemático. Para carregar o código atualizado no SSMA, você precisa atualizar os metadados. Para obter mais informações, consulte [conectar-se ao SAP ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md).  
   
--   Você pode excluir o objeto da migração. Na [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou o Gerenciador de metadados do SQL Azure e o Gerenciador de metadados do Sybase, desmarque a caixa de seleção próxima ao item antes de carregar os objetos em [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL do Azure e a migração de dados do SAP ASE.  
+-   Você pode excluir o objeto da migração. Na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o Gerenciador de metadados do SQL Azure e o Gerenciador de metadados do Sybase, desmarque a caixa de seleção próxima ao item antes de carregar os objetos em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL do Azure e a migração de dados do SAP ASE.  
   
 ## <a name="next-steps"></a>Próximas etapas  
 É a próxima etapa no processo de migração [Carregando objetos de banco de dados convertidos no SQL Server / SQL Azure (SybaseToSQL)](http://msdn.microsoft.com/4c59256f-99a8-4351-9559-a455813dbd06).  

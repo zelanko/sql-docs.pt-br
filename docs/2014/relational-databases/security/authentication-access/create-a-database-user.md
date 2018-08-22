@@ -26,12 +26,12 @@ caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: b71bfa8857cb754cbab2fa983dea96cb45ea4ae0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4b3ae73ca452d15504d59f02f4103f04fced28ec
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37299966"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392908"
 ---
 # <a name="create-a-database-user"></a>Criar um usuário de banco de dados
   Este tópico descreve como criar um usuário de banco de dados mapeado para um logon no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] por meio [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../../includes/tsql-md.md)]. O usuário de banco de dados é a identidade do logon quando é conectado a um banco de dados. O usuário de banco de dados pode usar o mesmo nome como o logon, mas isso não é requerido. Este tópico pressupõe que já exista um logon no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obter informações sobre como criar um logon, consulte [criar um logon](create-a-login.md).  
@@ -110,7 +110,7 @@ ms.locfileid: "37299966"
      Exiba ou especifique as propriedades estendidas do objeto. Cada propriedade estendida consiste em um par de nomes/valores de metadados associado ao objeto.  
   
      **Reticências (...)**  
-     Clique no botão de reticências **(…)** depois do **Valor** para abrir a caixa de diálogo **Valor da Propriedade Estendida** . Digite ou exiba o valor da propriedade estendida neste local maior. Para obter mais informações, consulte [Caixa de diálogo Valor da Propriedade Estendida](http://msdn.microsoft.com/library/ms189353.aspx).  
+     Clique no botão de reticências **(…)** depois do **Valor** para abrir a caixa de diálogo **Valor da Propriedade Estendida** . Digite ou exiba o valor da propriedade estendida neste local maior. Para obter mais informações, consulte [Caixa de diálogo Valor da Propriedade Estendida](../../databases/value-for-extended-property-dialog-box.md).  
   
      **Delete (excluir)**  
      Remove a propriedade estendida selecionada.  

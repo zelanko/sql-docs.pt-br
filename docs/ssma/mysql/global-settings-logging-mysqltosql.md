@@ -1,5 +1,5 @@
 ---
-title: Configurações globais (log) (MySQLToSQL) | Microsoft Docs
+title: Configurações globais (registro em log) (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,45 +16,45 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: ce835c2bab22a755fc2e4ac1693a9f42cc00210c
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 12f1dc140fca2376727f72c0e582686621775d4a
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34776102"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40393565"
 ---
-# <a name="global-settings-logging--mysqltosql"></a>Configurações globais (log) (MySQLToSQL)
-Use o **configurações globais** caixa de diálogo para especificar as configurações de log para o SSMA. Normalmente, altere essas configurações apenas ao trabalhar com o suporte ao produto.  
+# <a name="global-settings-logging--mysqltosql"></a>Configurações globais (registro em log) (MySQLToSQL)
+Use o **configurações globais** caixa de diálogo para especificar as configurações de registro em log para o SSMA. Normalmente, você alteraria essas configurações somente ao trabalhar com o suporte ao produto.  
   
-Para acessar essa caixa de diálogo, no **ferramentas** menu, selecione **configurações globais** e, em seguida, clique no **log** botão na parte inferior do painel esquerdo.  
+Para acessar essa caixa de diálogo, nos **ferramentas** menu, selecione **configurações globais** e, em seguida, clique no **log** botão na parte inferior do painel esquerdo.  
   
 ## <a name="options"></a>Opções  
 **Nível de mensagens**  
-As seguintes opções estão disponíveis em **nível mensagens**:  
+As seguintes opções estão disponíveis sob **nível de mensagens**:  
   
 |Opção|Description|  
 |----------|---------------|  
 |**[todas as categorias]**|Usado para definir o nível de log para todas as opções a seguir.|  
-|**Coletor**|Metadados sobre o esquema de origem de coleta e salva-o ao projeto.|  
-|**Conversor**|Converte a estruturas de objetos de banco de dados de origem, como tabelas e procedimentos armazenados, em correspondente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] estruturas.|  
-|**Migrator de dados**|Migra os dados do banco de dados de origem em [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
-|**Formatador**|Subcomponente do conversor que gera scripts para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] esquema.|  
-|**Interface gráfica do usuário**|Mensagens que aparecem quando você usar a ferramenta SSMA.|  
-|**Vinculador**|Resolve os identificadores SQL e fornece informações para outros componentes.|  
-|**Outro**|Todas as mensagens que não estão em qualquer outra categoria.|  
+|**Coletor**|Coleta metadados sobre o esquema de origem e salva-o ao projeto.|  
+|**Conversor**|Converte a estruturas de objetos de banco de dados de origem, como tabelas e procedimentos armazenados, em correspondente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estruturas.|  
+|**Migrator de dados**|Migra dados do banco de dados de origem em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**Formatador**|Subcomponente do conversor que gera scripts para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esquema.|  
+|**Interface gráfica do usuário**|Mensagens que aparecem quando você usa a ferramenta SSMA.|  
+|**Vinculador**|Resolve identificadores SQL e fornece informações para outros componentes.|  
+|**Outro**|Todas as mensagens que não estão em nenhuma outra categoria.|  
 |**Analisador**|Analisa o esquema de origem.|  
-|**Sincronizador**|Objetos de banco de dados da fonte de cargas [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
-|**TreeConverter**|Converte objetos em uma fonte de metadados em [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] metadados.|  
+|**Sincronizador**|Objetos de banco de dados da fonte de cargas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**TreeConverter**|Converte objetos nos metadados do código-fonte em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] metadados.|  
   
-Para cada opção em **mensagens nível**, configure um dos seguintes níveis de log para o SSMA:  
+Para cada opção sob **nível de mensagens**, configure um dos seguintes níveis de log para o SSMA:  
   
 |||  
 |-|-|  
-|**Erro fatal**|Grave somente mensagens de erro fatal no log.|  
+|**Erro fatal**|Grave apenas as mensagens de erro fatal no log.|  
 |**Erro**|Grave no log de erro e mensagens de erro fatal.|  
-|**Aviso**|Grave mensagens de erro fatal, de aviso e erro no log.|  
-|**informações de**|Gravação informativos, de aviso, erro e mensagens de erro fatal para o log.|  
-|**Depurador**|Grave todas as mensagens, incluindo mensagens, o log de depuração.|  
+|**Aviso**|Gravar mensagens de erro fatal, erro e aviso no log.|  
+|**Informações de**|Gravar no log informativo, aviso ou erro e mensagens de erro fatal.|  
+|**Depurador**|Gravar todas as mensagens, incluindo mensagens no log de depuração.|  
   
 **Caminho do arquivo de log**  
 O caminho do arquivo e o nome dos arquivos de log SSMA. Para especificar um nome diferente, clique no caminho atual e, em seguida, clique no botão Procurar (**...** ) botão.  
@@ -63,5 +63,5 @@ O caminho do arquivo e o nome dos arquivos de log SSMA. Para especificar um nome
 O tamanho máximo do arquivo de log em KB. O tamanho mínimo é de 10 KB. O tamanho padrão é 10240 KB.  
   
 **Número total de arquivos de log**  
-Quando um log ficar cheio, o SSMA renomear o arquivo de log e iniciar um novo. Usando essa configuração, especifique o número máximo de arquivos de log para manter. O mínimo é 2.  
+Quando um log ficar cheio, o SSMA renomear o arquivo de log e iniciar um novo. Ao usar essa configuração, especifique o número máximo de arquivos de log para manter. O mínimo é 2.  
   

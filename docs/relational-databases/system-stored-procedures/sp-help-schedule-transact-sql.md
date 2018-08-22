@@ -22,12 +22,12 @@ caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1803a5a2842d40700cc4b0f82c800cfbb6cc2e05
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: a77859fd5c113d9b40832c81472e62aaef05fcda
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261735"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393134"
 ---
 # <a name="sphelpschedule-transact-sql"></a>sp_help_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,16 +49,16 @@ sp_help_schedule
   
 ## <a name="arguments"></a>Argumentos  
  [  **@schedule_id =** ] *id*  
- O identificador da agenda a ser listado. *schedule_name* é **int**, sem padrão. O *schedule_id* ou *schedule_name* pode ser especificado.  
+ O identificador da agenda a ser listado. *schedule_name* está **int**, sem padrão. Qualquer um dos *schedule_id* ou *schedule_name* pode ser especificado.  
   
  [  **@schedule_name =** ] **'***schedule_name***'**  
- O nome da agenda a ser listada. *schedule_name* é **sysname**, sem padrão. O *schedule_id* ou *schedule_name* pode ser especificado.  
+ O nome da agenda a ser listada. *schedule_name* está **sysname**, sem padrão. Qualquer um dos *schedule_id* ou *schedule_name* pode ser especificado.  
   
  [ **@attached_schedules_only** = ] *attached_schedules_only* ]  
- Especifica se apenas agendas com um trabalho anexado devem ser mostradas. *attached_schedules_only* é **bit**, com um padrão de **0**. Quando *attached_schedules_only* é **0**, todas as agendas são mostradas. Quando *attached_schedules_only* é **1**, o conjunto de resultados contém apenas as agendas anexadas a um trabalho.  
+ Especifica se apenas agendas com um trabalho anexado devem ser mostradas. *attached_schedules_only* está **bit**, com um padrão de **0**. Quando *attached_schedules_only* é **0**, todas as agendas são mostradas. Quando *attached_schedules_only* é **1**, o conjunto de resultados contém apenas as agendas que estão anexadas a um trabalho.  
   
  [ **@include_description** =] *include_description*  
- Especifica se descrições devem ser incluídas no conjunto de resultados. *include_description* é **bit**, com um padrão de **0**. Quando *include_description* é **0**, o *schedule_description* coluna do conjunto de resultados contém um espaço reservado. Quando *include_description* é **1**, a descrição da agenda será incluída no conjunto de resultados.  
+ Especifica se descrições devem ser incluídas no conjunto de resultados. *include_description* está **bit**, com um padrão de **0**. Quando *include_description* é **0**, o *schedule_description* coluna do conjunto de resultados contém um espaço reservado. Quando *include_description* é **1**, a descrição da agenda será incluída no conjunto de resultados.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -68,23 +68,23 @@ sp_help_schedule
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**schedule_id**|**Int**|Número do identificador de agenda.|  
+|**schedule_id**|**int**|Número do identificador de agenda.|  
 |**schedule_uid**|**uniqueidentifier**|Identificador da agenda.|  
 |**schedule_name**|**sysname**|Nome da agenda.|  
-|**Habilitado**|**Int**|Se a agenda foi habilitada (**1**) ou não habilitado (**0**).|  
-|**freq_type**|**Int**|Valor que indica quando o trabalho a ser executado.<br /><br /> **1** = uma vez<br /><br /> **4** = diariamente<br /><br /> **8** = semanalmente<br /><br /> **16** = mensalmente<br /><br /> **32** = mensalmente, relativo a **freq_interval**<br /><br /> **64** = executar quando o serviço SQLServerAgent é iniciado.|  
-|**freq_interval**|**Int**|Dias em que o trabalho é executado. O valor depende do valor de **freq_type**. Para obter mais informações, consulte [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
-|**freq_subday_type**|**Int**|Unidades de **freq_subday_interval**. Para obter mais informações, consulte [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
-|**freq_subday_interval**|**Int**|Número de **freq_subday_type** períodos devem ocorrer entre cada execução do trabalho. Para obter mais informações, consulte [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
-|**freq_relative_interval**|**Int**|Ocorrência do trabalho de agendado a **freq_interval** em cada mês. Para obter mais informações, consulte [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
-|**freq_recurrence_factor**|**Int**|Número de meses entre a execução agendada do trabalho.|  
-|**active_start_date**|**Int**|Data em que a agenda foi ativada.|  
-|**active_end_date**|**Int**|Data de término da agenda.|  
-|**active_start_time**|**Int**|Hora do dia em que a agenda é iniciada.|  
-|**active_end_time**|**Int**|Hora do dia em que a agenda é encerrada.|  
+|**habilitado**|**int**|Se a agenda foi habilitada (**1**) ou não habilitado (**0**).|  
+|**freq_type**|**int**|Valor que indica quando o trabalho a ser executado.<br /><br /> **1** = uma vez<br /><br /> **4** = diariamente<br /><br /> **8** = semanalmente<br /><br /> **16** = mensalmente<br /><br /> **32** = mensalmente, relativo a **freq_interval**<br /><br /> **64** = executar quando o serviço SQLServerAgent é iniciado.|  
+|**freq_interval**|**int**|Dias quando o trabalho é executado. O valor depende do valor de **freq_type**. Para obter mais informações, consulte [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
+|**freq_subday_type**|**int**|Unidades para **freq_subday_interval**. Para obter mais informações, consulte [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
+|**freq_subday_interval**|**int**|Número de **freq_subday_type** períodos ocorrer entre cada execução do trabalho. Para obter mais informações, consulte [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
+|**freq_relative_interval**|**int**|Agendada a ocorrência do trabalho do **freq_interval** em cada mês. Para obter mais informações, consulte [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
+|**freq_recurrence_factor**|**int**|Número de meses entre a execução agendada do trabalho.|  
+|**active_start_date**|**int**|Data em que a agenda foi ativada.|  
+|**active_end_date**|**int**|Data de término da agenda.|  
+|**active_start_time**|**int**|Hora do dia em que a agenda é iniciada.|  
+|**active_end_time**|**int**|Hora do dia em que a agenda é encerrada.|  
 |**date_created**|**datetime**|Data em que a agenda foi criada.|  
 |**schedule_description**|**nvarchar(4000)**|Uma descrição em inglês da agenda (se solicitado).|  
-|**job_count**|**Int**|Retorna o número de trabalhos que referenciam essa agenda.|  
+|**job_count**|**int**|Retorna o número de trabalhos que referenciam essa agenda.|  
   
 ## <a name="remarks"></a>Remarks  
  Quando nenhum parâmetro for fornecido, **sp_help_schedule** lista informações para todas as agendas na instância.  
@@ -98,9 +98,9 @@ sp_help_schedule
   
 -   **SQLAgentOperatorRole**  
   
- Para obter detalhes sobre as permissões dessas funções, consulte [Funções de banco de dados fixas do SQL Server Agent](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Para obter detalhes sobre as permissões dessas funções, consulte [Funções de banco de dados fixas do SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Membros de **SQLAgentUserRole** só pode exibir as agendas que eles possuem.  
+ Os membros **SQLAgentUserRole** só podem exibir as agendas que eles possuem.  
   
 ## <a name="examples"></a>Exemplos  
   

@@ -45,12 +45,12 @@ caps.latest.revision: 40
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 812e23a1e3e3b8ca07f5c29415955cb9a688885f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0830bee31cf48de3903584fcb1d9941a6c97d6c8
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37171157"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392686"
 ---
 # <a name="getting-sql-server-assistance"></a>Obtendo assistência do SQL Server
   Existem três origens principais de informações da [!INCLUDE[msCoName](../includes/msconame-md.md)] sobre o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
@@ -68,7 +68,7 @@ ms.locfileid: "37171157"
   
  É possível acessar os Manuais Online das seguintes formas:  
   
--   Uma cópia dos Manuais Online do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] é publicada na Biblioteca MSDN e na Biblioteca do TechNet na Internet. Os tópicos nessas cópias dos Manuais Online do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] incluem comentários da comunidade, como informações adicionais e exemplos de código de outros clientes. Você pode exibir a cópia da biblioteca MSDN na [Manuais Online do SQL Server 2014](http://msdn.microsoft.com/library/ms130214\(v=sql.120\).aspx).  
+-   Uma cópia dos Manuais Online do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] é publicada na Biblioteca MSDN e na Biblioteca do TechNet na Internet. Os tópicos nessas cópias dos Manuais Online do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] incluem comentários da comunidade, como informações adicionais e exemplos de código de outros clientes. Você pode exibir a cópia da biblioteca MSDN na [Manuais Online do SQL Server 2014](../2014-toc/index.md).  
   
 -   Você pode usar o Gerenciador da Biblioteca de Ajuda para instalar Manuais Online do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em um computador local. Para obter mais informações, consulte [adicionar ou remover a documentação de produto do SQL Server](../2014-toc/books-online-for-sql-server-2014.md).  
   

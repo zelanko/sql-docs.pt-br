@@ -19,15 +19,15 @@ caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 4690c8db938d53dd290ce642a7fa4ae3884b2a29
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: a66311fcb2a02e5366fad180a648bcdce117dec8
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982558"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392023"
 ---
-# <a name="mapping-mysql-and-sql-server-data-types-mysqltosql"></a>Mapeamento de MySQL e tipos de dados do SQL Server (MySQLToSQL)
-Os tipos de banco de dados MySQL variam de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou tipos de banco de dados do SQL Azure. Quando você converte objetos de banco de dados MySQL para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou objetos do SQL Azure, você deve especificar como mapear tipos de dados do MySQL para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure. Você pode aceitar os mapeamentos de tipo de dados padrão, ou você pode personalizar os mapeamentos conforme mostrado nos procedimentos a seguir.  
+# <a name="mapping-mysql-and-sql-server-data-types-mysqltosql"></a>Mapear os tipos de dados do SQL Server e MySQL (MySQLToSQL)
+Os tipos de banco de dados MySQL variam de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou tipos de banco de dados do SQL Azure. Quando você converte objetos de banco de dados MySQL para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou objetos do SQL Azure, você deve especificar como mapear tipos de dados do MySQL para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. Você pode aceitar os mapeamentos de tipo de dados padrão, ou você pode personalizar os mapeamentos conforme mostrado nos procedimentos a seguir.  
   
 ## <a name="default-mappings"></a>Mapeamentos padrão  
 O SSMA tem um conjunto padrão de mapeamentos de tipo de dados. Para obter a lista de mapeamentos padrão, consulte [configurações do projeto &#40;mapeamento de tipo&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md).  
@@ -86,7 +86,7 @@ Quando você exibe o **mapeamento de tipo** guia no SSMA, o plano de fundo é co
     2.  Clique em **Remover**.  
   
 ## <a name="next-step"></a>Próxima etapa  
-A próxima etapa no processo de migração é para qualquer um dos [criar um relatório de avaliação](http://msdn.microsoft.com/2a56a003-3b0f-453a-963c-00c9e40933ec) ou [MySQL converter objetos de banco de dados à sintaxe do SQL Server ou SQL Azure](http://msdn.microsoft.com/ac21850b-fb32-4704-9985-5759b7c688c7). Se você criar um relatório, os objetos do MySQL são convertidos automaticamente durante a avaliação.  
+A próxima etapa no processo de migração é para qualquer um dos [criar um relatório de avaliação](assessing-mysql-databases-for-conversion-mysqltosql.md) ou [MySQL converter objetos de banco de dados à sintaxe do SQL Server ou SQL Azure](converting-mysql-databases-mysqltosql.md). Se você criar um relatório, os objetos do MySQL são convertidos automaticamente durante a avaliação.  
   
 ## <a name="see-also"></a>Consulte também  
 [Migrando MySQL bancos de dados para o SQL Server – BD SQL do Azure &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  

@@ -5,8 +5,7 @@ ms.date: 07/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 98
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1a1df515a5a88c94e52d376394905a819d361281
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bf1b1d02ac8e36795703d233feb152339bd775eb
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37316196"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392687"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>OLTP na memória (otimização na memória)
   Novo no [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], o [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] pode melhorar significativamente o desempenho do aplicativo de banco de dados OLTP. O [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] é um mecanismo de banco de dados com otimização de memória integrado ao mecanismo do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], otimizado para OLTP.  

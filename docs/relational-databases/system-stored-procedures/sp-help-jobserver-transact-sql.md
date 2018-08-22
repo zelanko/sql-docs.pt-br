@@ -22,12 +22,12 @@ caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5e1efcd128c2c77bcac729c7a529f9dc909457cc
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: fdaa9481c51188767834679031b6cdc9084f969d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256081"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392458"
 ---
 # <a name="sphelpjobserver-transact-sql"></a>sp_help_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,16 +48,16 @@ sp_help_jobserver
   
 ## <a name="arguments"></a>Argumentos  
  [ **@job_id=** ] *job_id*  
- O número de identificação do trabalho para o qual as informações devem ser retornadas. *job_id* é **uniqueidentifier**, com um padrão NULL.  
+ O número de identificação do trabalho para o qual as informações devem ser retornadas. *job_id* está **uniqueidentifier**, com um padrão NULL.  
   
  [ **@job_name=** ] **'***job_name***'**  
- O nome do trabalho cujas informações serão retornadas. *job_name* é **sysname**, com um padrão NULL.  
+ O nome do trabalho cujas informações serão retornadas. *job_name* está **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
->  O *job_id* ou *job_name* devem ser especificados, mas não é possível especificar ambos.  
+>  Qualquer um dos *job_id* ou *job_name* deve ser especificado, mas não podem ser especificados.  
   
  [ **@show_last_run_details=** ] *show_last_run_details*  
- Especifica se as informações da última execução fazem parte do conjunto de resultados. *show_last_run_details* é **tinyint**, com um padrão de **0**. **0** não inclui informações da última execução, e **1** does.  
+ Especifica se as informações da última execução fazem parte do conjunto de resultados. *show_last_run_details* está **tinyint**, com um padrão de **0**. **0** não inclui informações da última execução, e **1** faz.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -66,20 +66,20 @@ sp_help_jobserver
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**server_id**|**Int**|Número de identificação do servidor de destino.|  
+|**server_id**|**int**|Número de identificação do servidor de destino.|  
 |**server_name**|**nvarchar(30)**|Nome do computador do servidor de destino.|  
 |**enlist_date**|**datetime**|Data em que o servidor de destino foi inscrito no servidor mestre.|  
 |**last_poll_date**|**datetime**|Data em que o servidor de destino fez a última sondagem no servidor mestre.|  
   
- Se **sp_help_jobserver** é executada com *show_last_run_details* definida como **1**, o conjunto de resultados terá essas colunas adicionais.  
+ Se **sp_help_jobserver** é executada com *show_last_run_details* definido como **1**, o conjunto de resultados terá essas colunas adicionais.  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**last_run_date**|**Int**|Data em que a execução do trabalho foi iniciada pela última vez nesse servidor de destino.|  
-|**last_run_time**|**Int**|Hora em que a execução do trabalho foi iniciada pela última vez nesse servidor.|  
-|**last_run_duration**|**Int**|Duração do trabalho na última vez em que foi executado nesse servidor de destino (em segundos).|  
+|**last_run_date**|**int**|Data em que a execução do trabalho foi iniciada pela última vez nesse servidor de destino.|  
+|**last_run_time**|**int**|Hora em que a execução do trabalho foi iniciada pela última vez nesse servidor.|  
+|**last_run_duration**|**int**|Duração do trabalho na última vez em que foi executado nesse servidor de destino (em segundos).|  
 |**last_outcome_message**|**nvarchar(1024)**|Descreve o último resultado do trabalho.|  
-|**last_run_outcome**|**Int**|Resultado do trabalho na última vez em que foi executado neste servidor:<br /><br /> **0** = falha<br /><br /> **1** = foi bem-sucedida<br /><br /> **3** = cancelada<br /><br /> **5** = desconhecido|  
+|**last_run_outcome**|**int**|Resultado do trabalho na última vez em que foi executado neste servidor:<br /><br /> **0** = falha<br /><br /> **1** = foi bem-sucedida<br /><br /> **3** = cancelada<br /><br /> **5** = desconhecido|  
   
 ## <a name="permissions"></a>Permissões  
  Por padrão, os membros da função de servidor fixa **sysadmin** podem executar este procedimento armazenado. Deve ser concedida a outros usuários uma das seguintes funções de banco de dados fixas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no banco de dados **msdb** :  
@@ -90,9 +90,9 @@ sp_help_jobserver
   
 -   **SQLAgentOperatorRole**  
   
- Para obter detalhes sobre as permissões dessas funções, consulte [Funções de banco de dados fixas do SQL Server Agent](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Para obter detalhes sobre as permissões dessas funções, consulte [Funções de banco de dados fixas do SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Membros de **SQLAgentUserRole** só pode exibir informações para trabalhos que possuem.  
+ Os membros **SQLAgentUserRole** só pode exibir informações para trabalhos que possuem.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir retorna informações, incluindo as informações da última execução, sobre o trabalho `NightlyBackups`.  

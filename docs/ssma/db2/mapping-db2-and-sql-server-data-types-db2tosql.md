@@ -16,36 +16,36 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d354f1b9fb44e77dc840f74d5692c1149e70ab0e
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 618a2e11ffb60e36e289bf9e134c8633f28ce71c
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34775022"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40393562"
 ---
 # <a name="mapping-db2-and-sql-server-data-types-db2tosql"></a>Mapeamento de DB2 e tipos de dados do SQL Server (DB2ToSQL)
-Os tipos de banco de dados do DB2 variam de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipos de banco de dados. Ao converter objetos de banco de dados do DB2 para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] objetos, você deve especificar como mapear tipos de dados do DB2 para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Você pode aceitar os mapeamentos de tipo de dados padrão, ou você pode personalizar os mapeamentos conforme mostrado nas seções a seguir.  
+Os tipos de banco de dados do DB2 variam de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de banco de dados. Quando você converte objetos de banco de dados DB2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos, você deve especificar como mapear tipos de dados do DB2 para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você pode aceitar os mapeamentos de tipo de dados padrão, ou você pode personalizar os mapeamentos conforme mostrado nas seções a seguir.  
   
 ## <a name="default-mappings"></a>Mapeamentos padrão  
-O SSMA tem um conjunto de mapeamentos de tipo de dados padrão. Para obter a lista de mapeamentos padrão, consulte [configurações de projeto &#40;mapeamento de tipo&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-type-mapping-db2tosql.md).  
+O SSMA tem um conjunto padrão de mapeamentos de tipo de dados. Para obter a lista de mapeamentos padrão, consulte [configurações do projeto &#40;mapeamento de tipo&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-type-mapping-db2tosql.md).  
   
 ## <a name="type-mapping-inheritance"></a>Tipo de mapeamento de herança  
-Você pode personalizar mapeamentos de tipo no nível de projeto, nível de categoria de objeto (como todos os procedimentos armazenados) ou nível de objeto. As configurações são herdadas do nível mais alto, a menos que elas são substituídas em um nível inferior. Por exemplo, se você mapear **smallmoney** para **money** no nível de projeto, todos os objetos no projeto usará esse mapeamento, a menos que você personalize o mapeamento no nível do objeto ou categoria.  
+Você pode personalizar mapeamentos de tipo no nível do projeto, nível de categoria de objeto (como todos os procedimentos armazenados) ou nível de objeto. As configurações são herdadas do nível mais alto, a menos que eles sejam substituídos em um nível inferior. Por exemplo, se você mapear **smallmoney** à **money** no nível do projeto, todos os objetos no projeto usará esse mapeamento, a menos que você personalize o mapeamento no nível do objeto ou categoria.  
   
-Quando você exibe o **mapeamento de tipo** guia SSMA, o plano de fundo é codificadas por cor para mostrar os mapeamentos de tipo são herdados. O plano de fundo de um mapeamento de tipo é amarelo para qualquer mapeamento de tipo herdado e branco para qualquer mapeamento especificado no nível atual.  
+Quando você exibe o **mapeamento de tipo** guia no SSMA, o plano de fundo é codificadas por cores para mostrar quais mapeamentos de tipo são herdados. O plano de fundo de um mapeamento de tipo é amarelo para qualquer mapeamento de tipo herdado e, em branco para qualquer mapeamento especificado no nível atual.  
   
 ## <a name="customizing-data-type-mappings"></a>Personalizando mapeamentos de tipo de dados  
-O procedimento a seguir mostra como mapear tipos de dados no projeto, no banco de dados ou no nível de objeto:  
+O procedimento a seguir mostra como mapear tipos de dados no projeto, no banco de dados ou no nível do objeto:  
   
 **Para mapear tipos de dados**  
   
-1.  Para personalizar o mapeamento de tipo de dados para o projeto inteiro, abra o **configurações de projeto** caixa de diálogo:  
+1.  Para personalizar o mapeamento de tipo de dados para todo o projeto, abra o **configurações do projeto** caixa de diálogo:  
   
-    1.  Sobre o **ferramentas** menu, selecione **configurações de projeto**.  
+    1.  Sobre o **ferramentas** menu, selecione **configurações do projeto**.  
   
     2.  No painel esquerdo, selecione **mapeamento de tipo**.  
   
-        Os botões e o gráfico de mapeamento de tipo aparecem no painel direito.  
+        O gráfico de mapeamento de tipo e os botões aparecem no painel direito.  
   
     Ou, para personalizar o tipo de dados de mapeamento no banco de dados, tabela, exibição ou nível de procedimento armazenado, selecione o banco de dados, a categoria de objeto ou o objeto no Gerenciador de metadados do DB2:  
   
@@ -57,43 +57,43 @@ O procedimento a seguir mostra como mapear tipos de dados no projeto, no banco d
   
     1.  Clique em **Adicionar**.  
   
-    2.  Em **tipo de fonte**, selecione o tipo de dados do DB2 para mapear.  
+    2.  Sob **tipo de fonte**, selecione o tipo de dados do DB2 para mapear.  
   
-    3.  Se o tipo requer um comprimento, especifique o comprimento mínimo de dados para o mapeamento no **de** caixa e o comprimento máximo dos dados no **para** caixa.  
+    3.  Se o tipo requer um comprimento, especifique o comprimento mínimo de dados para o mapeamento na **de** caixa e o comprimento máximo de dados no **para** caixa.  
   
         Isso lhe permite personalizar o mapeamento de dados maiores e menores valores do mesmo tipo de dados.  
   
-    4.  Em **tipo de destino**, selecione o destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipo de dados.  
+    4.  Sob **tipo de destino**, selecione o destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados.  
   
-        Alguns tipos de exigem um comprimento de tipo de dados de destino. Se for necessário, insira o novo comprimento de dados no **substitua** caixa.  
+        Alguns tipos exigem um comprimento de tipo de dados de destino. Se for necessário, insira o comprimento de dados novo na **substitua** caixa.  
   
-    5.  [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
+    5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 3.  Para modificar um mapeamento de tipo de dados, faça o seguinte:  
   
     1.  Clique em **Editar**.  
   
-    2.  Em **tipo de fonte**, selecione o tipo de dados do DB2 para mapear.  
+    2.  Sob **tipo de fonte**, selecione o tipo de dados do DB2 para mapear.  
   
-    3.  Se o tipo requer um comprimento, especifique o comprimento mínimo de dados para o mapeamento no **de** caixa e o comprimento máximo dos dados no **para** caixa.  
+    3.  Se o tipo requer um comprimento, especifique o comprimento mínimo de dados para o mapeamento na **de** caixa e o comprimento máximo de dados no **para** caixa.  
   
         Isso lhe permite personalizar o mapeamento de dados maiores e menores valores do mesmo tipo de dados.  
   
-    4.  Em **tipo de destino**, selecione o destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipo de dados.  
+    4.  Sob **tipo de destino**, selecione o destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados.  
   
-        Alguns tipos de exigem um comprimento de tipo de dados de destino. Se for necessário, insira o novo comprimento de dados no **substitua** caixa e, em seguida, [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
+        Alguns tipos exigem um comprimento de tipo de dados de destino. Se for necessário, insira o comprimento de dados novo na **substitua** caixa e, em seguida, [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-4.  Para remover um mapeamento de tipo de dados personalizados, faça o seguinte:  
+4.  Para remover um mapeamento de tipo de dados personalizada, faça o seguinte:  
   
     1.  Selecione a linha na lista de mapeamento de tipo que contém o mapeamento de tipo de dados que deseja remover.  
   
     2.  Clique em **Remover**.  
   
-        Você não pode remover mapeamentos herdados. No entanto, os mapeamentos herdados são substituídos pelas mapeamentos personalizados em um objeto específico ou a categoria de objeto.  
+        Você não pode remover mapeamentos herdados. No entanto, mapeamentos herdados são substituídos pelas mapeamentos personalizados em uma categoria de objeto ou um objeto específico.  
   
 ## <a name="next-steps"></a>Próximas etapas  
-A próxima etapa no processo de migração é como [relatório de avaliação &#40;DB2ToSQL&#41; ](../../ssma/db2/assessment-report-db2tosql.md) ou [convertendo esquemas de DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md). Se você criar um relatório de avaliação, objetos do DB2 são convertidos automaticamente durante a avaliação.  
+A próxima etapa no processo de migração é para qualquer um dos [relatório de avaliação &#40;DB2ToSQL&#41; ](../../ssma/db2/assessment-report-db2tosql.md) ou [converter esquemas do DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md). Se você criar um relatório de avaliação, os objetos do DB2 são convertidos automaticamente durante a avaliação.  
   
 ## <a name="see-also"></a>Consulte também  
-[Bancos de dados DB2 migrando para o SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
+[Bancos de dados do DB2 migrando para o SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   

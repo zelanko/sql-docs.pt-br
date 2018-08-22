@@ -22,12 +22,12 @@ caps.latest.revision: 39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3e36396f911c7506660fd82c5540307e95023950
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7412bc6defa6d25520570e23556e77e8824c8a88
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262211"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392456"
 ---
 # <a name="spupdatejob-transact-sql"></a>sp_update_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,35 +62,35 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@job_id =**] *job_id*  
- O número de identificação do trabalho a ser atualizado. *job_id*é **uniqueidentifier**.  
+ O número de identificação do trabalho a ser atualizado. *job_id*está **uniqueidentifier**.  
   
  [  **@job_name =**] **'***job_name***'**  
- O nome do trabalho. *job_name*é **nvarchar (128)**.  
+ O nome do trabalho. *job_name*está **nvarchar (128)**.  
   
-> **Observação:** ou *job_id* ou *job_name* devem ser especificados, mas não podem ser especificados.  
+> **Observação:** ambos *job_id* ou *job_name* deve ser especificado, mas não podem ser especificados.  
   
- [  **@new_name =**] **'***novo_nome***'**  
- O novo nome do trabalho. *Novo_nome*é **nvarchar (128)**.  
+ [  **@new_name =**] **'***new_name***'**  
+ O novo nome do trabalho. *new_name*está **nvarchar (128)**.  
   
  [  **@enabled =**] *habilitado*  
- Especifica se o trabalho está habilitado (**1**) ou não habilitado (**0**). *habilitado*é **tinyint**.  
+ Especifica se o trabalho está habilitado (**1**) ou não habilitado (**0**). *habilitada*está **tinyint**.  
   
  [  **@description =**] **'***descrição***'**  
- A descrição do trabalho. *Descrição* é **nvarchar (512)**.  
+ A descrição do trabalho. *Descrição* está **nvarchar(512)**.  
   
  [  **@start_step_id =**] *step_id*  
- O número de identificação da primeira etapa a ser executada para o trabalho. *step_id*é **int**.  
+ O número de identificação da primeira etapa a ser executada para o trabalho. *step_id*está **int**.  
   
  [  **@category_name =**] **'***categoria***'**  
- ID da categoria do trabalho. *categoria de*é **nvarchar (128)**.  
+ ID da categoria do trabalho. *categoria*está **nvarchar (128)**.  
   
- [  **@owner_login_name =**] **'***login***'**  
- O nome do logon que é o proprietário do trabalho. *logon*é **nvarchar (128)** somente os membros do **sysadmin** função de servidor fixa pode alterar a propriedade do trabalho.  
+ [  **@owner_login_name =**] **'***logon***'**  
+ O nome do logon que é o proprietário do trabalho. *login*está **nvarchar (128)** somente os membros dos **sysadmin** função de servidor fixa pode alterar a propriedade do trabalho.  
   
  [  **@notify_level_eventlog =**] *eventlog_level*  
- Especifica quando colocar uma entrada no log de aplicativo do Microsoft Windows para este trabalho. *eventlog_level*é **int**, e pode ser um destes valores.  
+ Especifica quando colocar uma entrada no log de aplicativo do Microsoft Windows para este trabalho. *eventlog_level*está **int**, e pode ser um destes valores.  
   
-|Value|Descrição (ação)|  
+|Valor|Descrição (ação)|  
 |-----------|----------------------------|  
 |**0**|Never|  
 |**1**|Caso haja êxito|  
@@ -98,25 +98,25 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
 |**3**|Always|  
   
  [  **@notify_level_email =**] *email_level*  
- Especifica quando enviar um email após a conclusão deste trabalho. *email_level*é **int**. *email_level*usa os mesmos valores como *eventlog_level*.  
+ Especifica quando enviar um email após a conclusão deste trabalho. *email_level*está **int**. *email_level*usa os mesmos valores *eventlog_level*.  
   
  [  **@notify_level_netsend =**] *netsend_level*  
- Especifica quando enviar uma mensagem de rede após a conclusão deste trabalho. *netsend_level*é **int**. *netsend_level*usa os mesmos valores como *eventlog_level*.  
+ Especifica quando enviar uma mensagem de rede após a conclusão deste trabalho. *netsend_level*está **int**. *netsend_level*usa os mesmos valores *eventlog_level*.  
   
  [  **@notify_level_page =**] *page_level*  
- Especifica quando enviar uma página após a conclusão deste trabalho. *page_level*é **int**. *page_level*usa os mesmos valores como *eventlog_level*.  
+ Especifica quando enviar uma página após a conclusão deste trabalho. *page_level*está **int**. *page_level*usa os mesmos valores *eventlog_level*.  
   
  [  **@notify_email_operator_name =**] **'***operator_name***'**  
- O nome do operador para quem o email é enviado quando *email_level* for atingido. *nome_email* é **nvarchar (128)**.  
+ O nome do operador a quem o email é enviado quando *email_level* for atingido. *email_name* está **nvarchar (128)**.  
   
  [  **@notify_netsend_operator_name =**] **'***netsend_operator***'**  
- O nome do operador para o qual a mensagem de rede é enviada. *netsend_operator* é **nvarchar (128)**.  
+ O nome do operador para o qual a mensagem de rede é enviada. *netsend_operator* está **nvarchar (128)**.  
   
  [  **@notify_page_operator_name =**] **'***page_operator***'**  
- O nome do operador para o qual a página é enviada. *page_operator* é **nvarchar (128)**.  
+ O nome do operador para o qual a página é enviada. *page_operator* está **nvarchar (128)**.  
   
  [  **@delete_level =**] *delete_level*  
- Especifica quando excluir o trabalho. *delete_value*é **int**. *delete_level*usa os mesmos valores como *eventlog_level*.  
+ Especifica quando excluir o trabalho. *delete_value*está **int**. *delete_level*usa os mesmos valores *eventlog_level*.  
   
  [  **@automatic_post =**] *automatic_post*  
  Reservado.  
@@ -127,7 +127,7 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
 ## <a name="remarks"></a>Remarks  
  **sp_update_job** deve ser executado a partir de **msdb** banco de dados.  
   
- **sp_update_job** altera somente essas configurações para quais valores são fornecidos. Se um parâmetro for omitido, a configuração atual será retida.  
+ **sp_update_job** altera somente essas configurações para o qual parâmetro valores são fornecidos. Se um parâmetro for omitido, a configuração atual será retida.  
   
 ## <a name="permissions"></a>Permissões  
  Por padrão, os membros da função de servidor fixa **sysadmin** podem executar este procedimento armazenado. Deve ser concedida a outros usuários uma das seguintes funções de banco de dados fixas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no banco de dados **msdb** :  
@@ -138,9 +138,9 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
   
 -   **SQLAgentOperatorRole**  
   
- Para obter detalhes sobre as permissões dessas funções, consulte [Funções de banco de dados fixas do SQL Server Agent](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Para obter detalhes sobre as permissões dessas funções, consulte [Funções de banco de dados fixas do SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Somente membros da **sysadmin** pode usar esse procedimento armazenado para editar os atributos de trabalhos pertencentes a outros usuários.  
+ Somente os membros da **sysadmin** pode usar este procedimento armazenado para editar os atributos de trabalhos pertencentes a outros usuários.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir altera o nome, a descrição e o status habilitado do trabalho `NightlyBackups`.  

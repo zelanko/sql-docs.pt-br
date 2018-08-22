@@ -21,14 +21,14 @@ caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f685c51851962c720093ef3c387332ce8de87766
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: daf26b975bbcf150b481e3d2dedfea75cafaa4f5
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982508"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392921"
 ---
-# <a name="creating-script-files-mysqltosql"></a>Criar arquivos de Script (MySQLToSQL)
+# <a name="creating-script-files-mysqltosql"></a>Creating Script Files (MySQLToSQL)
 A primeira etapa antes de iniciar o aplicativo de console do SSMA é criar o arquivo de script e se for necessário criar o arquivo de valor da variável e o arquivo de conexão do servidor.  
   
 O arquivo de script pode ser dividido em três seções, sobre visualização..,:  
@@ -357,7 +357,7 @@ O arquivo de script contém uma sequência de comandos de fluxo de trabalho de m
   
 Por exemplo, uma migração de dados típicos de uma tabela específica em um banco de dados MySQL segue a hierarquia de: banco de dados -&gt; tabela.  
   
-Quando todos os comandos no arquivo de script são executados com êxito, o aplicativo de console do SSMA é encerrado e retorna o controle para o usuário. O conteúdo de um arquivo de script é mais ou menos estático com informações de variáveis contidas em uma [arquivos de valor da variável](http://msdn.microsoft.com/1dc56a7b-8e3a-4576-ad4f-47050bf7e28a) ou, em uma seção separada dentro do arquivo de script para valores de variáveis.  
+Quando todos os comandos no arquivo de script são executados com êxito, o aplicativo de console do SSMA é encerrado e retorna o controle para o usuário. O conteúdo de um arquivo de script é mais ou menos estático com informações de variáveis contidas em uma [arquivos de valor da variável](creating-variable-value-files-mysqltosql.md) ou, em uma seção separada dentro do arquivo de script para valores de variáveis.  
   
 **Exemplo:**  
   

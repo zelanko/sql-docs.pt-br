@@ -23,12 +23,12 @@ caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6cefec5de4c7bba8d2b184a202f5a21c4a25901c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e709e05834ed30701d2944547945ba439b8d418d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261605"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392454"
 ---
 # <a name="spsyscollectorcreatecollectionset-transact-sql"></a>sp_syscollector_create_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,41 +61,41 @@ sp_syscollector_create_collection_set
   
 ## <a name="arguments"></a>Argumentos  
  [  **@name =** ] '*nome*'  
- É o nome do conjunto de coleta. *nome* é **sysname** e não pode ser uma cadeia de caracteres vazia ou NULL.  
+ É o nome do conjunto de coleta. *nome da* está **sysname** e não pode ser uma cadeia de caracteres vazia ou nula.  
   
- *nome* devem ser exclusivos. Para obter uma lista dos nomes dos conjuntos de coleta atuais, consulte a exibição de sistema syscollector_collection_sets.  
+ *nome* deve ser exclusivo. Para obter uma lista dos nomes dos conjuntos de coleta atuais, consulte a exibição de sistema syscollector_collection_sets.  
   
  [  **@target =** ] '*destino*'  
- Reservado para uso futuro. *nome* é **nvarchar (128)** com um valor padrão de NULL.  
+ Reservado para uso futuro. *nome da* está **nvarchar (128)** com um valor padrão de NULL.  
   
  [  **@collection_mode =** ] *collection_mode*  
- Especifica a maneira pela qual os dados são coletados e armazenados. *collection_mode* é **smallint** e pode ter um dos seguintes valores:  
+ Especifica a maneira pela qual os dados são coletados e armazenados. *collection_mode* está **smallint** e pode ter um dos seguintes valores:  
   
  0 - Modo de cache. A coleta e o carregamento de dados estão em agendas separadas. Especifique o modo cache para a coleta contínua.  
   
  1 - Modo não armazenado em cache. A coleção e o carregamento de dados estão na mesma agenda. Especifique o modo não armazenado em cache para a coleta ad hoc ou de instantâneo.  
   
- O valor padrão para *collection_mode* é 0. Quando *collection_mode* é 0, *schedule_uid* ou *schedule_name* deve ser especificado.  
+ O valor padrão para *collection_mode* é 0. Quando *collection_mode* é 0, o *schedule_uid* ou *schedule_name* deve ser especificado.  
   
  [  **@days_until_expiration =** ] *days_until_expiration*  
- É o número de dias durante os quais os dados coletados são salvos no data warehouse de gerenciamento. *days_until_expiration* é **smallint** com um valor padrão de 730 (dois anos). *days_until_expiration* deve ser 0 ou um número inteiro positivo.  
+ É o número de dias durante os quais os dados coletados são salvos no data warehouse de gerenciamento. *days_until_expiration* está **smallint** com um valor padrão de 730 (dois anos). *days_until_expiration* deve ser 0 ou um número inteiro positivo.  
   
  [  **@proxy_id =** ] *proxy_id*  
- É o identificador exclusivo de uma conta proxy do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. *proxy_id* é **int** com um valor padrão de NULL. Se especificado, *proxy_name* deve ser NULL. Para obter *proxy_id*, consultar a tabela do sistema sysproxies. A função de banco de dados fixa dc_admin deve ter permissão para acessar o proxy. Para obter mais informações, consulte [criar um Proxy do SQL Server Agent](http://msdn.microsoft.com/library/142e0c55-a8b9-4669-be49-b9dc602d5988).  
+ É o identificador exclusivo de uma conta proxy do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. *proxy_id* está **int** com um valor padrão de NULL. Se especificado, *proxy_name* deve ser NULL. Para obter *proxy_id*, consultar a tabela de sistema sysproxies. A função de banco de dados fixa dc_admin deve ter permissão para acessar o proxy. Para obter mais informações, consulte [criar um Proxy do SQL Server Agent](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
  [  **@proxy_name =** ] '*proxy_name*'  
- É o nome da conta proxy. *proxy_name* é **sysname** com um valor padrão de NULL. Se especificado, *proxy_id* deve ser NULL. Para obter *proxy_name*, consultar a tabela do sistema sysproxies.  
+ É o nome da conta proxy. *proxy_name* está **sysname** com um valor padrão de NULL. Se especificado, *proxy_id* deve ser NULL. Para obter *proxy_name*, consultar a tabela de sistema sysproxies.  
   
  [  **@schedule_uid =** ] '*schedule_uid*'  
- É o GUID que aponta para uma agenda. *schedule_uid* é **uniqueidentifier** com um valor padrão de NULL. Se especificado, *schedule_name* deve ser NULL. Para obter *schedule_uid*, consultar a tabela de sistema sysschedules.  
+ É o GUID que aponta para uma agenda. *schedule_uid* está **uniqueidentifier** com um valor padrão de NULL. Se especificado, *schedule_name* deve ser NULL. Para obter *schedule_uid*, consultar a tabela de sistema sysschedules.  
   
  Quando *collection_mode* é definido como 0, *schedule_uid* ou *schedule_name* deve ser especificado. Quando *collection_mode* é definido como 1, *schedule_uid* ou *schedule_name* será ignorado se especificado.  
   
  [  **@schedule_name =** ] '*schedule_name*'  
- É o nome da agenda. *schedule_name* é **sysname** com um valor padrão de NULL. Se especificado, *schedule_uid* deve ser NULL. Para obter *schedule_name*, consultar a tabela de sistema sysschedules.  
+ É o nome da agenda. *schedule_name* está **sysname** com um valor padrão de NULL. Se especificado, *schedule_uid* deve ser NULL. Para obter *schedule_name*, consultar a tabela de sistema sysschedules.  
   
  [  **@logging_level =** ] *logging_level*  
- É o nível de registro em log. *logging_level* é **smallint** com um dos seguintes valores:  
+ É o nível de registro em log. *logging_level* está **smallint** com um dos seguintes valores:  
   
  0 - informações de execução de log e eventos [!INCLUDE[ssIS](../../includes/ssis-md.md)] que monitoram:  
   
@@ -118,13 +118,13 @@ sp_syscollector_create_collection_set
  O valor padrão para *logging_level* é 1.  
   
  [  **@description =** ] '*descrição*'  
- É a descrição do conjunto de coleta. *Descrição* é **nvarchar (4000)** com um valor padrão de NULL.  
+ É a descrição do conjunto de coleta. *Descrição* está **nvarchar (4000)** com um valor padrão de NULL.  
   
  [  **@collection_set_id =** ] *collection_set_id*  
- É o identificador local exclusivo do conjunto de coleta. *collection_set_id* é **int** com saída e é necessária.  
+ É o identificador local exclusivo do conjunto de coleta. *collection_set_id* está **int** com a saída e é necessária.  
   
  [  **@collection_set_uid =** ] '*collection_set_uid*'  
- É o GUID do conjunto de coleta. *collection_set_uid* é **uniqueidentifier** com OUTPUT com um valor padrão de NULL.  
+ É o GUID do conjunto de coleta. *collection_set_uid* está **uniqueidentifier** com OUTPUT com um valor padrão de NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -173,7 +173,7 @@ EXEC dbo.sp_syscollector_create_collection_set
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Coleta de dados](../../relational-databases/data-collection/data-collection.md)   
+ [Coleta de Dados](../../relational-databases/data-collection/data-collection.md)   
  [Criar um conjunto de coleta personalizado que usa o tipo de coletor de Consultas T-SQL genérico &#40;Transact-SQL&#41;](../../relational-databases/data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md)   
  [Procedimentos armazenados de coletor de dados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [syscollector_collection_sets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)  

@@ -14,14 +14,14 @@ caps.latest.revision: 33
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d8145f722068b6e160d6c1c801fdadeca2051f1b
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 337b45e5f441be3de009c7cc9a4d8115c6bbb17f
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37353088"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393135"
 ---
-# <a name="assemblies---implementing"></a>Assemblies – implementando
+# <a name="assemblies---implementing"></a>Assemblies – implementar
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Este tópico fornece informações sobre as seguintes áreas para ajudá-lo a implementar e trabalhar com assemblies no banco de dados:  
   
@@ -72,7 +72,7 @@ ms.locfileid: "37353088"
   
  **Para descartar um assembly usando o SQL Server Management Studio**  
   
--   [Excluir Objetos](http://msdn.microsoft.com/library/49541441-179c-40d3-ba0c-01bcae545984)  
+-   [Excluir Objetos](../../ssms/object/delete-objects.md)  
   
  Por padrão, todos os assemblies que são criados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estão desabilitados para execução. Você pode usar o **clr habilitado** opção do **sp_configure** sistema de procedimento armazenado para desabilitar ou habilitar a execução de todos os assemblies que são carregados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Desabilitar a execução de assemblies impede que funções CLR (Common Language Runtime), procedimentos armazenados, gatilhos, agregações e tipos definidos pelo usuário sejam executados e interrompe os que estão sendo executados no momento. A desabilitação da execução do assembly não desabilita a capacidade de criar, alterar ou descartar assemblies. Para obter mais informações, consulte [opção de configuração do servidor clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md).  
   

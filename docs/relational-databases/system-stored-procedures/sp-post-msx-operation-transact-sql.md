@@ -22,17 +22,17 @@ caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6f6d0dfc8c9a9925f7bf2fa84c4b9330b99c60c3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: a1524f9e3f20a774d32c491bc264f2c6c63e7b18
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261032"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393364"
 ---
 # <a name="sppostmsxoperation-transact-sql"></a>sp_post_msx_operation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Insere operações (linhas) do **sysdownloadlist** tabela do sistema para servidores de destino baixar e executar.  
+  Insere operações (linhas) a **sysdownloadlist** tabela do sistema para servidores de destino baixar e executar.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,43 +51,43 @@ sp_post_msx_operation
   
 ## <a name="arguments"></a>Argumentos  
  [  **@operation =**] **'***operação***'**  
- O tipo da operação postada. *operação*é **varchar(64)**, sem padrão. Operações válidas dependem *object_type*.  
+ O tipo da operação postada. *operação*está **varchar(64)**, sem padrão. Operações válidas dependem *object_type*.  
   
 |Tipo de objeto|Operação|  
 |-----------------|---------------|  
-|**JOB**|INSERT<br /><br /> UPDATE<br /><br /> DELETE<br /><br /> START<br /><br /> STOP|  
+|**JOB**|INSERT<br /><br /> UPDATE<br /><br /> Delete (excluir)<br /><br /> START<br /><br /> STOP|  
 |**SERVIDOR**|RE-ENLIST<br /><br /> DEFECT<br /><br /> SYNC-TIME<br /><br /> SET-POLL|  
-|**AGENDA**|INSERT<br /><br /> UPDATE<br /><br /> DELETE|  
+|**AGENDA**|INSERT<br /><br /> UPDATE<br /><br /> Delete (excluir)|  
   
  [  **@object_type =**] **'***objeto***'**  
- O tipo de objeto para o qual uma operação será postada. Os tipos válidos são **trabalho**, **servidor**, e **AGENDA**. *objeto* é **varchar(64)**, com um padrão de **trabalho**.  
+ O tipo de objeto para o qual uma operação será postada. Os tipos válidos são **trabalho**, **SERVER**, e **AGENDA**. *objeto* está **varchar(64)**, com um padrão de **trabalho**.  
   
  [  **@job_id =**] *job_id*  
- O número de identificação do trabalho ao qual a operação se aplica. *job_id* é **uniqueidentifier**, sem padrão. **0x00** indica todos os trabalhos. Se *objeto* é **servidor**, em seguida, *job_id*não é necessária.  
+ O número de identificação do trabalho ao qual a operação se aplica. *job_id* está **uniqueidentifier**, sem padrão. **0x00** indica todos os trabalhos. Se *objeto* é **SERVER**, em seguida, *job_id*não é necessária.  
   
  [  **@specific_target_server =**] **'***target_server***'**  
- O nome do servidor de destino ao qual a operação especificada se aplica. Se *job_id* for especificado, mas *target_server* não for especificado, as operações serão postadas para todos os servidores de trabalho do trabalho. *target_server* é **nvarchar (30)**, com um padrão NULL.  
+ O nome do servidor de destino ao qual a operação especificada se aplica. Se *job_id* for especificado, mas *target_server* não for especificado, as operações serão postadas para todos os servidores de trabalho do trabalho. *target_server* está **nvarchar (30)**, com um padrão NULL.  
   
  [  **@value =**] *valor*  
  O intervalo de sondagem, em segundos. *value* é **int**, com um padrão NULL. Especifique esse parâmetro somente se *operação* é **SET-POLL**.  
   
  [  **@schedule_uid=** ] *schedule_uid*  
- O identificador exclusivo da agenda à qual a operação se aplica. *schedule_uid* é **uniqueidentifier**, sem padrão.  
+ O identificador exclusivo da agenda à qual a operação se aplica. *schedule_uid* está **uniqueidentifier**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma  
+ None  
   
 ## <a name="remarks"></a>Remarks  
  **sp_post_msx_operation** deve ser executado a partir de **msdb** banco de dados.  
   
  **sp_post_msx_operation** sempre pode ser chamado com segurança porque ele primeiro determina se o servidor atual é um Microsoft SQL Server Agent multisservidor e, nesse caso, se *objeto*é um trabalho multisservidor.  
   
- Depois que uma operação foi postada, ele aparece no **sysdownloadlist** tabela. Depois que um trabalho for criado e postado, as alterações subsequentes desse trabalho também deverão ser comunicadas aos servidores de destino (TSX). Isto também é realizado usando a lista de carregamento.  
+ Depois que uma operação tiver sido publicada, ele aparece na **sysdownloadlist** tabela. Depois que um trabalho for criado e postado, as alterações subsequentes desse trabalho também deverão ser comunicadas aos servidores de destino (TSX). Isto também é realizado usando a lista de carregamento.  
   
- É altamente recomendável que a lista de carregamento seja gerenciada com o uso do SQL Server Management Studio. Para obter mais informações, consulte [exibir ou modificar trabalhos](http://msdn.microsoft.com/library/57f649b8-190c-4304-abd7-7ca5297deab7).  
+ É altamente recomendável que a lista de carregamento seja gerenciada com o uso do SQL Server Management Studio. Para obter mais informações, consulte [exibir ou modificar trabalhos](../../ssms/agent/view-or-modify-jobs.md).  
   
 ## <a name="permissions"></a>Permissões  
  Para executar esse procedimento armazenado, os usuários devem ter o **sysadmin** função de servidor fixa.  

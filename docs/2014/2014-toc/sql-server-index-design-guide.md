@@ -13,19 +13,19 @@ caps.latest.revision: 17
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: bd1bc616c3a897f0c7b3b3ea4fda256b240f75ab
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6e9f17e76dca1f5f3266908ed8f009161cf1d829
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155417"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392466"
 ---
 # Guia de criação de índice do SQL Server
   Os índices criados inadequadamente e a falta de índices são as principais fontes de gargalos do aplicativo de banco de dados. A criação eficiente de índices é muito importante para alcançar um bom desempenho de banco de dados e de aplicativo. Este guia de criação de índice do SQL Server contém informações e práticas recomendadas para ajudar você a criar índices efetivos para atender às necessidades de seu aplicativo.  
   
 **Aplica-se ao**: [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] por meio de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , a menos que indicado o contrário.  
   
- Este guia presume que o leitor tenha uma compreensão geral dos tipos de índices disponíveis no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obter uma descrição geral dos tipos de índices, consulte [Tipos de índice](http://msdn.microsoft.com/library/ms175049.aspx).  
+ Este guia presume que o leitor tenha uma compreensão geral dos tipos de índices disponíveis no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obter uma descrição geral dos tipos de índices, consulte [Tipos de índice](../relational-databases/indexes/indexes.md).  
   
 ##  <a name="Top"></a> Neste guia  
  [Noções básicas sobre o Design de índice](#Basics)  
@@ -171,7 +171,7 @@ ORDER BY RejectedQty DESC, ProductID ASC;
   
  O plano de execução a seguir, dessa consulta, mostra que o otimizador de consultas usou um operador SORT para retornar o conjunto de resultados na ordem especificada pela cláusula ORDER BY.  
   
- ![Plano de execução mostra uma classificação operador é usado. ] (media/indexsort1.gif "Plano de execução mostra uma classificação operador é usado.")  
+ ![Plano de execução mostra uma classificação operador é usado. ](media/indexsort1.gif "Plano de execução mostra uma classificação operador é usado.")  
   
  Se um índice for criado com colunas de chave correspondentes às da cláusula ORDER BY da consulta, o operador SORT poderá ser eliminado do plano de consulta, e este se tornará mais eficaz.  
   

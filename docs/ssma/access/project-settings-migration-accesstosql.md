@@ -19,61 +19,61 @@ caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8ee97b6e47a51a8ed2e8b69c0f4044d8e583e949
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 10346770784c94fe18357b5717e60f7e3f88a8c7
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34774472"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40392233"
 ---
-# <a name="project-settings-migration-accesstosql"></a>Configurações de projeto (migração) (AccessToSQL)
-As configurações de projeto de migração lhe permitem configurar como os dados são migrados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou do SQL Azure.  
+# <a name="project-settings-migration-accesstosql"></a>Configurações do projeto (migração) (AccessToSQL)
+As configurações de projeto de migração permitem que você configure como os dados são migrados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure.  
   
-O painel de migração está disponível na **configurações de projeto** e **configurações de projeto padrão** caixas de diálogo.  
+O painel de migração está disponível na **configurações do projeto** e **configurações do projeto padrão** caixas de diálogo.  
   
--   Use o **configurações de projeto** caixa de diálogo para definir opções de configuração para o projeto atual. Para acessar as configurações de migração no **ferramentas** menu, selecione **configurações de projeto**, clique em **geral** na parte inferior do painel esquerdo e, em seguida, clique **migração**.  
+-   Use o **configurações do projeto** caixa de diálogo para definir opções de configuração para o projeto atual. Para acessar as configurações de migração na **ferramentas** menu, selecione **configurações do projeto**, clique em **geral** na parte inferior do painel esquerdo e, em seguida, clique  **Migração**.  
   
--   Use o **configurações de projeto padrão** caixa de diálogo para definir opções de configuração para todos os projetos. Para acessar as configurações de migração no **ferramentas** menu, selecione **configurações de projeto padrão**, selecione o tipo de projeto em **versão de destino de migração** caixa de combinação do qual você deseja acessar as configurações, clique em **geral** na parte inferior do painel esquerdo e, em seguida, clique **migração**.  
+-   Use o **configurações de projeto padrão** caixa de diálogo para definir opções de configuração para todos os projetos. Para acessar as configurações de migração na **ferramentas** menu, selecione **configurações do projeto padrão**, selecione o tipo de projeto no **versão de destino de migração** caixa de combinação de que você para acessar as configurações, clique em **gerais** na parte inferior do painel esquerdo e, em seguida, clique **migração**.  
   
 ## <a name="options"></a>Opções  
 **Verificar restrições**  
-Especifica se o SSMA deve verificar restrições ao adicionar dados às tabelas.  
+Especifica se o SSMA deve verificar restrições quando ele adiciona dados às tabelas.  
   
--   **Modo padrão**: falso  
+-   **Modo padrão**: False  
   
 -   **Modo otimista**: True  
   
--   **Modo de inteira**: falso  
+-   **Modo de inteira**: False  
   
 **Acionadores**  
-Especifica se o SSMA deve ativar gatilhos de inserção quando ele adiciona dados a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tabelas.  
+Especifica se o SSMA deve ativar gatilhos de inserção quando ele adiciona dados a serem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabelas.  
   
--   **Modo padrão**: falso  
+-   **Modo padrão**: False  
   
 -   **Modo otimista**: True  
   
--   **Modo de inteira**: falso  
+-   **Modo de inteira**: False  
   
 **Manter identidade**  
-Especifica se o SSMA preserva valores de identidade de acesso quando ele adiciona dados a serem [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Se esse valor for False, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] atribui valores de identidade.  
+Especifica se o SSMA preserva os valores de identidade de acesso quando ele adiciona dados a serem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se esse valor for False, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] atribui valores de identidade.  
   
 -   **Modo padrão**: True  
   
 -   **Modo otimista**: True  
   
--   **Modo de inteira**: falso  
+-   **Modo de inteira**: False  
   
 **Manter nulos**  
-Especifica se o SSMA preserva valores nulos na fonte de dados quando ele adiciona dados a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], independentemente dos valores padrão que são especificados em [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+Especifica se o SSMA preserva valores nulos na fonte de dados quando ele adiciona dados a serem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], independentemente dos valores padrão que são especificados em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   **Modo padrão**: True  
   
--   **Modo otimista**: falso  
+-   **Modo otimista**: False  
   
 -   **Modo de inteira**: True  
   
 **Bloqueios de tabela**  
-Especifica se o SSMA bloqueia tabelas ao adicionar dados às tabelas durante a migração de dados. Se o valor for False, o SSMA usa bloqueios de linha.  
+Especifica se o SSMA bloqueia tabelas quando ele adiciona dados às tabelas durante a migração de dados. Se o valor for False, o SSMA usa bloqueios de linha.  
   
 -   **Modo padrão**: True  
   
@@ -81,14 +81,14 @@ Especifica se o SSMA bloqueia tabelas ao adicionar dados às tabelas durante a m
   
 -   **Modo de inteira**: True  
   
-**Substitua as datas sem suporte**  
-Especifica se o SSMA deve corrigir as datas de acesso mais antigas que o próximo [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] datetime data (01 de janeiro de 1753).  
+**Substituir datas sem suporte**  
+Especifica se o SSMA deve corrigir as datas de acesso anteriores ao mais antigo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data e hora data (01 de janeiro de 1753).  
   
--   Para manter os valores de data atual, selecione **não fazer nada**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] datas anteriores a 01 de janeiro de 1753 não aceita em uma coluna de data e hora. Se você usar datas mais antigas, você deve converter os valores de data e hora para valores de caractere.  
+-   Para manter os valores de data atual, selecione **não fazem nada**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não aceita datas antes de 01 de janeiro de 1753 em uma coluna de data e hora. Se você usar datas mais antigas, você deve converter os valores de data e hora para valores de caractere.  
   
--   Para converter datas anteriores a 01 de janeiro de 1753 como NULL, selecione **substituir com NULL**.  
+-   Para converter datas antes de 01 de janeiro de 1753 como NULL, selecione **substitua NULL**.  
   
--   Para substituir as datas anteriores a 01 de janeiro de 1753 com uma data com suporte, selecione **substitua mais próximo da data com suporte**. Se você selecionar esse valor, por padrão mais próximo com suporte de data será selecionada como 01 de janeiro de 1753.  
+-   Para substituir datas antes de 01 de janeiro de 1753 com uma data com suporte, selecione **substitua mais próximo da data com suporte**. Se você selecionar esse valor, por padrão mais próximo com suporte de data será selecionada como 01 de janeiro de 1753.  
   
 **Tamanho do lote**  
 Tamanho do lote usado durante a migração de dados. Uma transação é registrada após cada lote. Por padrão, o tamanho do lote para todos os esquemas é 10000.  

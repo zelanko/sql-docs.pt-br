@@ -22,12 +22,12 @@ caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f877431a45f475bee0adb303724b63b544c943bb
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7e47c28276cd555138c4360060186515cf6f5ecf
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248131"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392903"
 ---
 # <a name="spdeletejobstep-transact-sql"></a>sp_delete_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,21 +47,21 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
 ## <a name="arguments"></a>Argumentos  
  [ **@job_id=** ] *job_id*  
- O número de identificação do trabalho no qual a etapa será removida. *job_id*é **uniqueidentifier**, com um padrão NULL.  
+ O número de identificação do trabalho no qual a etapa será removida. *job_id*está **uniqueidentifier**, com um padrão NULL.  
   
  [ **@job_name=** ] **'***job_name***'**  
- O nome do trabalho no qual a etapa será removida. *job_name*é **sysname**, com um padrão NULL.  
+ O nome do trabalho no qual a etapa será removida. *job_name*está **sysname**, com um padrão NULL.  
   
-> **Observação:** ou *job_id* ou *job_name* deve ser especificado; não podem ser especificados.  
+> **Observação:** ambos *job_id* ou *job_name* deve ser especificado; não podem ser especificados.  
   
  [  **@step_id=** ] *step_id*  
- O número de identificação da etapa que está sendo removida. *step_id*é **int**, sem padrão.  
+ O número de identificação da etapa que está sendo removida. *step_id*está **int**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma  
+ None  
   
 ## <a name="remarks"></a>Remarks  
  A remoção de uma etapa de trabalho atualiza automaticamente as outras etapas de trabalho que fazem referência à etapa excluída.  
@@ -81,9 +81,9 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
 -   **SQLAgentOperatorRole**  
   
- Para obter detalhes sobre as permissões dessas funções, consulte [Funções de banco de dados fixas do SQL Server Agent](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Para obter detalhes sobre as permissões dessas funções, consulte [Funções de banco de dados fixas do SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Somente membros da **sysadmin** pode excluir uma etapa de trabalho que pertence a outro usuário.  
+ Somente os membros da **sysadmin** pode excluir uma etapa de trabalho que pertence a outro usuário.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir remove a etapa de trabalho `1` do trabalho `Weekly Sales Data Backup`.  
@@ -99,7 +99,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Exibir ou modificar trabalhos](http://msdn.microsoft.com/library/57f649b8-190c-4304-abd7-7ca5297deab7)   
+ [Exibir ou modificar trabalhos](../../ssms/agent/view-or-modify-jobs.md)   
  [sp_add_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
  [sp_update_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)   
  [sp_help_jobstep &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md)   

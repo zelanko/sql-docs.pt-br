@@ -16,15 +16,15 @@ caps.latest.revision: 19
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 9657dc521ea0130f0f322c423dad906d0759197a
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 7a892b34da2b631371f70f6f6beee0c8c6c321fb
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34776952"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392472"
 ---
-# <a name="creating-the-server-connection-files-oracletosql"></a>Criar os arquivos de Conexão de servidor (OracleToSQL)
-Informações do servidor podem ser especificadas na seção de servidores do arquivo de script ou em um arquivo de conexão de servidor separado. O parâmetro de linha de comando para o arquivo de conexão de servidor é, `-c <serverconnectionfile>`. Se a mesma id de servidor estiver presente no arquivo de script e no arquivo de conexão de servidor, a definição de servidor no arquivo de script é considerada.  
+# <a name="creating-the-server-connection-files-oracletosql"></a>Criar os arquivos de conexão de servidor (OracleToSQL)
+Informações do servidor podem ser especificadas na seção de servidores do arquivo de script ou em um arquivo de conexão de servidor separado. O parâmetro de linha de comando para o arquivo de conexão de servidor é, `-c <serverconnectionfile>`. Se a mesma id de servidor estiver presente no arquivo de script e no arquivo de conexão do servidor, a definição de servidor no arquivo de script é considerada.  
   
 **Exemplo: 1**  
   
@@ -106,8 +106,8 @@ Informações do servidor podem ser especificadas na seção de servidores do ar
 ```  
   
 ## <a name="next-step"></a>Próxima etapa  
-A próxima etapa no operando o console é [executando o Console SSMA &#40;OracleToSQL&#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)  
+É a próxima etapa no operando o console [executar o Console do SSMA &#40;OracleToSQL&#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)  
   
 ## <a name="see-also"></a>Consulte também  
-[Executar o console do SSMA](http://msdn.microsoft.com/en-us/7228ccba-c69f-4b4c-8664-01a2750183c5)  
+[Executar o console do SSMA](executing-the-ssma-console-oracletosql.md)  
   

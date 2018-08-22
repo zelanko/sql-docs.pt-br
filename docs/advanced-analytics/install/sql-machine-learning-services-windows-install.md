@@ -1,23 +1,23 @@
 ---
-title: Instalar o SQL Server 2017 serviços de Machine Learning (no banco de dados) no Windows | Microsoft Docs
+title: Instalar o SQL Server serviços de Machine Learning (no banco de dados) no Windows | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 08/15/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: b2c699a76d0a24bade258109fcee40e9e1f39a7d
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: 8297d57ad1a29778e23d2ce02198c426825abf02
+ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37093320"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "40437686"
 ---
-# <a name="install-sql-server-2017-machine-learning-services-in-database-on-windows"></a>Instalar o SQL Server 2017 serviços de Machine Learning (no banco de dados) no Windows 
+# <a name="install-sql-server-machine-learning-services-in-database-on-windows"></a>Instalar o SQL Server serviços de Machine Learning (no banco de dados) no Windows 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-O componente de serviços de Machine Learning do SQL Server adiciona no banco de dados análise preditiva, análise estatística, visualização e algoritmos de aprendizado de máquina. Bibliotecas de função estão disponíveis em R e Python e executar como script externo em uma instância do mecanismo de banco de dados. 
+Suporte de R e Python para análise no banco de dados a partir do SQL Server 2017, é fornecido em serviços do SQL Server Machine Learning, o sucessor do recurso do R Services introduzido no SQL Server 2016. Bibliotecas de função estão disponíveis em R e Python e executar como script externo em uma instância do mecanismo de banco de dados. 
 
 Este artigo explica como instalar o componente de aprendizado de máquina executando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assistente de instalação e seguir as instruções na tela.
 
@@ -79,7 +79,7 @@ Para instalações locais, você deve executar a Instalação como um administra
         > 
         > Não selecione a opção para **Machine Learning Server (autônomo)**. A opção de instalar o Machine Learning Server sob **recursos compartilhados** é destinado para uso em um computador separado.
 
-4. Sobre o **consentimento para instalar o R** página, selecione **Accept**. Este contrato de licença aborda o Microsoft R Open, que inclui uma distribuição de pacotes de base de R de software livre e ferramentas, junto com pacotes de R aprimorados e provedores de conectividade da equipe de desenvolvimento da Microsoft.
+4. Sobre o **consentimento para instalar o R** página, selecione **Accept**. Este contrato de licença aborda o Microsoft R Open, que inclui uma distribuição dos pacotes de base de R de código-fonte aberto e ferramentas, junto com pacotes de R aprimorados e provedores de conectividade da equipe de desenvolvimento da Microsoft.
 
 5. Sobre o **consentimento para instalar o Python** página, selecione **Accept**. O contrato de licença de software livre de Python também aborda o Anaconda e ferramentas relacionadas, além de algumas novas bibliotecas de Python da equipe de desenvolvimento da Microsoft.
      
@@ -98,13 +98,7 @@ Para instalações locais, você deve executar a Instalação como um administra
 
     Anote o local da pasta no caminho `..\Setup Bootstrap\Log` onde os arquivos de configuração são armazenados. Quando a instalação for concluída, você pode examinar os componentes instalados no arquivo de resumo.
 
-## <a name="restart-the-service"></a>Reinicie o serviço.
-
-Quando a instalação for concluída, reinicie o mecanismo de banco de dados antes de continuar para a próxima, permitindo a execução do script.
-
-Reiniciar o Nom automaticamente reinicia relacionado [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] service.
-
-Você pode reiniciar o serviço usando o botão direito do mouse **reinicie** comando para a instância no SSMS ou usando o **Services** painel no painel de controle ou usando [SQL Server Configuration Manager ](../../relational-databases/sql-server-configuration-manager.md).
+7. Após a instalação for concluída, se você for instruído a reiniciar o computador, faça isso agora. É importante ler a mensagem do Assistente de Instalação ao concluir a Instalação. Para obter mais informações, consulte [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
 
 ## <a name="bkmk_enableFeature"></a>Habilitar a execução do script externo
 
@@ -132,9 +126,13 @@ Você pode reiniciar o serviço usando o botão direito do mouse **reinicie** co
     
     Se você já tiver habilitado o recurso para a linguagem R, não execute reconfigurar uma segunda vez para o Python. A plataforma de extensibilidade subjacente dá suporte a ambas as linguagens.
 
-4. Reinicie o serviço SQL Server da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Reiniciar o serviço do SQL Server também automaticamente reinicia relacionado [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] service.
+## <a name="restart-the-service"></a>Reinicie o serviço.
 
-    Você pode reiniciar o serviço usando o botão direito do mouse **reinicie** comando para a instância no SSMS ou usando o **Services** painel no painel de controle ou usando [SQL Server Configuration Manager ](../../relational-databases/sql-server-configuration-manager.md).
+Quando a instalação for concluída, reinicie o mecanismo de banco de dados antes de continuar para a próxima, permitindo a execução do script.
+
+Reiniciar o serviço também automaticamente reinicia relacionado [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] service.
+
+Você pode reiniciar o serviço usando o botão direito do mouse **reinicie** comando para a instância no SSMS ou usando o **Services** painel no painel de controle ou usando [SQL Server Configuration Manager ](../../relational-databases/sql-server-configuration-manager.md).
 
 ## <a name="verify-installation"></a>Verifique a instalação
 
@@ -148,7 +146,7 @@ Use as etapas a seguir para verificar se todos os componentes usados para inicia
 
     O **run_value** agora deve ser definido como 1.
     
-2. Abra o **Services** painel ou o SQL Server Configuration Manager e verifique se **Launchpad do SQL Server service** está em execução. Você deve ter um serviço para cada instância do mecanismo de banco de dados que tem o R ou Python instalado. Se não estiver em execução, reinicie o serviço. Para obter mais informações, consulte [componentes para dar suporte à integração de Python](../python/new-components-in-sql-server-to-support-python-integration.md). 
+2. Abra o **Services** painel ou o SQL Server Configuration Manager e verifique se **Launchpad do SQL Server service** está em execução. Você deve ter um serviço para cada instância do mecanismo de banco de dados que tem o R ou Python instalado. Para obter mais informações, consulte [componentes para dar suporte à integração de Python](../python/new-components-in-sql-server-to-support-python-integration.md). 
    
 3. Se o Launchpad estiver em execução, você poderá executar scripts R e Python simples para verificar se os tempos de execução de scripts externos podem se comunicar com o SQL Server.
 
@@ -298,7 +296,7 @@ Se você estiver usando o Standard Edition e tiver o Resource Governor, você po
 
 ### <a name="install-additional-r-packages"></a>Instalar pacotes R adicionais
 
-As soluções de R que você cria para o SQL Server podem chamar funções básicas de R, funções do packes properietary instalado com o SQL Server e pacotes de R de terceiros compatíveis com a versão de software livre R instalado pelo SQL Server.
+As soluções de R que você cria para o SQL Server podem chamar funções básicas de R, funções de pacotes de proprietários instalados com o SQL Server e pacotes de R de terceiros compatível com a versão de software livre R instalado pelo SQL Server.
 
 Pacotes que você desejar usar do SQL Server deverão ser instalados na biblioteca padrão usada pela instância. Se você tiver uma instalação separada do R no computador, ou se você tiver instalado pacotes em bibliotecas do usuário, você não poderá usar os pacotes do T-SQL.
 

@@ -22,12 +22,12 @@ caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4851db832cd587d486d3094eb23e8d64ba4b4cc2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b195a9ffc18fc01d8498d981bcaaaf835446888f
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240215"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393586"
 ---
 # <a name="spaddjob-transact-sql"></a>sp_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,30 +60,30 @@ sp_add_job [ @job_name = ] 'job_name'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@job_name =** ] **'***job_name***'**  
- O nome do trabalho. O nome deve ser exclusivo e não pode conter a porcentagem (**%**) caracteres. *job_name*é **nvarchar (128)**, sem padrão.  
+ O nome do trabalho. O nome deve ser exclusivo e não pode conter a porcentagem (**%**) caracteres. *job_name*está **nvarchar (128)**, sem padrão.  
   
  [  **@enabled =** ] *habilitado*  
- Indica o status do trabalho adicionado. *habilitado*é **tinyint**, com um padrão de 1 (habilitado). Se **0**, o trabalho não está habilitado e não será executado de acordo com a sua agenda; no entanto, ele pode ser executado manualmente.  
+ Indica o status do trabalho adicionado. *habilitada*está **tinyint**, com um padrão de 1 (habilitado). Se **0**, o trabalho não está habilitado e não é executado de acordo com a sua agenda; no entanto, ele pode ser executado manualmente.  
   
  [  **@description =** ] **'***descrição***'**  
- A descrição do trabalho. *Descrição* é **nvarchar (512)**, com um padrão NULL. Se *descrição* for não omitido, será usada "Nenhuma descrição disponível".  
+ A descrição do trabalho. *Descrição* está **nvarchar(512)**, com um padrão NULL. Se *descrição* for não omitido, será usada "Nenhuma descrição disponível".  
   
  [  **@start_step_id =** ] *step_id*  
- O número de identificação da primeira etapa a ser executada para o trabalho. *step_id*é **int**, com um padrão de 1.  
+ O número de identificação da primeira etapa a ser executada para o trabalho. *step_id*está **int**, com um padrão de 1.  
   
  [  **@category_name =** ] **'***categoria***'**  
- A categoria do trabalho. *categoria de*é **sysname**, com um padrão NULL.  
+ A categoria do trabalho. *categoria*está **sysname**, com um padrão NULL.  
   
  [  **@category_id =** ] *category_id*  
- Um mecanismo independente de idioma para especificar uma categoria de trabalho. *category_id*é **int**, com um padrão NULL.  
+ Um mecanismo independente de idioma para especificar uma categoria de trabalho. *category_id*está **int**, com um padrão NULL.  
   
- [  **@owner_login_name =** ] **'***login***'**  
- O nome do logon que é o proprietário do trabalho. *logon*é **sysname**, com um padrão NULL, que é interpretado como o nome de logon atual. Somente membros do **sysadmin** função de servidor fixa pode definir ou alterar o valor de **@owner_login_name**. Se os usuários que não são membros do **sysadmin** função definir ou alterar o valor de **@owner_login_name**, ocorrerá falha na execução deste procedimento armazenado e um erro será retornado.  
+ [  **@owner_login_name =** ] **'***logon***'**  
+ O nome do logon que é o proprietário do trabalho. *login*está **sysname**, com um padrão NULL, que é interpretado como o nome de logon atual. Somente os membros dos **sysadmin** função de servidor fixa pode definir ou alterar o valor para **@owner_login_name**. Se os usuários que não são membros do **sysadmin** função definir ou alterar o valor de **@owner_login_name**, falha na execução deste procedimento armazenado e um erro será retornado.  
   
  [  **@notify_level_eventlog =** ] *eventlog_level*  
- Um valor que indica quando colocar uma entrada no log de aplicativo do Microsoft Windows para este trabalho. *eventlog_level*é **int**, e pode ser um destes valores.  
+ Um valor que indica quando colocar uma entrada no log de aplicativo do Microsoft Windows para este trabalho. *eventlog_level*está **int**, e pode ser um destes valores.  
   
-|Value|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**0**|Never|  
 |**1**|Caso haja êxito|  
@@ -91,49 +91,49 @@ sp_add_job [ @job_name = ] 'job_name'
 |**3**|Always|  
   
  [  **@notify_level_email =** ] *email_level*  
- Um valor que indica quando enviar um email após a conclusão deste trabalho. *email_level*é **int**, com um padrão de **0**, que indica nunca. *email_level*usa os mesmos valores como *eventlog_level*.  
+ Um valor que indica quando enviar um email após a conclusão deste trabalho. *email_level*está **int**, com um padrão de **0**, que indica nunca. *email_level*usa os mesmos valores *eventlog_level*.  
   
  [  **@notify_level_netsend =** ] *netsend_level*  
- Um valor que indica quando enviar uma mensagem da rede após a conclusão deste trabalho. *netsend_level*é **int**, com um padrão de **0**, que indica nunca. *netsend_level* usa os mesmos valores como *eventlog_level*.  
+ Um valor que indica quando enviar uma mensagem da rede após a conclusão deste trabalho. *netsend_level*está **int**, com um padrão de **0**, que indica nunca. *netsend_level* usa os mesmos valores *eventlog_level*.  
   
  [  **@notify_level_page =** ] *page_level*  
- Um valor que indica quando enviar uma página após a conclusão deste trabalho. *page_level*é **int**, com um padrão de **0**, que indica nunca. *page_level*usa os mesmos valores como *eventlog_level*.  
+ Um valor que indica quando enviar uma página após a conclusão deste trabalho. *page_level*está **int**, com um padrão de **0**, que indica nunca. *page_level*usa os mesmos valores *eventlog_level*.  
   
- [  **@notify_email_operator_name =** ] **'***nome_email***'**  
- O nome de email da pessoa para enviar email quando *email_level* for atingido. *nome_email* é **sysname**, com um padrão NULL.  
+ [  **@notify_email_operator_name =** ] **'***email_name***'**  
+ O nome de email da pessoa para enviar email quando *email_level* for atingido. *email_name* está **sysname**, com um padrão NULL.  
   
  [  **@notify_netsend_operator_name =** ] **'***netsend_name***'**  
- O nome do operador para quem a mensagem da rede será enviada após a conclusão deste trabalho. *netsend_name*é **sysname**, com um padrão NULL.  
+ O nome do operador para quem a mensagem da rede será enviada após a conclusão deste trabalho. *netsend_name*está **sysname**, com um padrão NULL.  
   
  [  **@notify_page_operator_name =** ] **'***page_name***'**  
- O nome da pessoa para quem uma mensagem de pager será enviada após a conclusão deste trabalho. *page_name*é **sysname**, com um padrão NULL.  
+ O nome da pessoa para quem uma mensagem de pager será enviada após a conclusão deste trabalho. *page_name*está **sysname**, com um padrão NULL.  
   
  [  **@delete_level =** ] *delete_level*  
- Um valor que indica quando excluir o trabalho. *delete_value*é **int**, com um padrão de 0, o que significa nunca. *delete_level*usa os mesmos valores como *eventlog_level*.  
+ Um valor que indica quando excluir o trabalho. *delete_value*está **int**, com um padrão de 0, o que significa nunca. *delete_level*usa os mesmos valores *eventlog_level*.  
   
 > [!NOTE]  
 >  Quando *delete_level* é **3**, o trabalho é executado apenas uma vez, independentemente de quaisquer agendas definidas para o trabalho. Além disso, se um trabalho excluir a si próprio, todo o histórico do trabalho também será excluído.  
   
- [  **@job_id =** ] *job_id * saída**  
+ [  **@job_id =** ] *job_id * * * saída**  
  O número de identificação atribuído ao trabalho caso ele seja criado com êxito. *job_id*é uma variável de saída do tipo **uniqueidentifier**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma  
+ None  
   
 ## <a name="remarks"></a>Remarks  
- **@originating_server** existe em **sp_add_job,** , mas não está listado em argumentos. **@originating_server** é reservado para uso interno.  
+ **@originating_server** existe no **sp_add_job,** , mas não está listado em argumentos. **@originating_server** é reservado para uso interno.  
   
- Depois de **sp_add_job** foi executado para adicionar um trabalho, **sp_add_jobstep** pode ser usado para adicionar etapas que executam as atividades para o trabalho. **sp_add_jobschedule** pode ser usado para criar a agenda que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent usará para executar o trabalho. Use **sp_add_jobserver** para definir o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância em que o trabalho é executado, e **sp_delete_jobserver** para remover o trabalho da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância.  
+ Após **sp_add_job** foi executado para adicionar um trabalho **sp_add_jobstep** pode ser usado para adicionar etapas que executam as atividades para o trabalho. **sp_add_jobschedule** pode ser usado para criar a agenda que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa o serviço de agente para executar o trabalho. Use **sp_add_jobserver** para definir o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância onde o trabalho é executado, e **sp_delete_jobserver** para remover o trabalho da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância.  
   
- Se o trabalho será executado em um ou mais servidores de destino em um ambiente multisservidor, use **sp_apply_job_to_targets** para definir servidores de destino ou grupos de servidores para o trabalho de destino. Para remover trabalhos de servidores de destino ou grupos de servidores de destino, use **sp_remove_job_from_targets**.  
+ Se o trabalho será executado em um ou mais servidores de destino em um ambiente multisservidor, use **sp_apply_job_to_targets** para definir os servidores de destino ou grupos de servidores para o trabalho de destino. Para remover trabalhos de servidores de destino ou grupos de servidores de destino, use **sp_remove_job_from_targets**.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] gerencia trabalhos de forma fácil e com representação gráfica. Além disso, ele é recomendado para criar e gerenciar a infraestrutura de trabalhos.  
   
 ## <a name="permissions"></a>Permissões  
- Para executar esse procedimento armazenado, os usuários devem ser um membro do **sysadmin** função de servidor fixa ou ter um dos seguintes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] funções de banco de dados, que residem no fixas Agent a **msdb** banco de dados:  
+ Para executar esse procedimento armazenado, os usuários devem ser um membro do **sysadmin** função de servidor fixa ou receber um dos seguintes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] funções de banco de dados, que residem em fixas Agent a **msdb** banco de dados:  
   
 -   **SQLAgentUserRole**  
   
@@ -141,9 +141,9 @@ sp_add_job [ @job_name = ] 'job_name'
   
 -   **SQLAgentOperatorRole**  
   
- Para obter informações sobre as permissões específicas que estão associados a cada um deles fixa funções de banco de dados, consulte [funções de banco de dados fixa do SQL Server Agent](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Para obter informações sobre as permissões específicas que estão associados a cada uma dessas fixo funções de banco de dados, consulte [funções de banco de dados fixas do SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Somente membros do **sysadmin** função de servidor fixa pode definir ou alterar o valor de **@owner_login_name**. Se os usuários que não são membros do **sysadmin** função definir ou alterar o valor de **@owner_login_name**, ocorrerá falha na execução deste procedimento armazenado e um erro será retornado.  
+ Somente os membros dos **sysadmin** função de servidor fixa pode definir ou alterar o valor para **@owner_login_name**. Se os usuários que não são membros do **sysadmin** função definir ou alterar o valor de **@owner_login_name**, falha na execução deste procedimento armazenado e um erro será retornado.  
   
 ## <a name="examples"></a>Exemplos  
   

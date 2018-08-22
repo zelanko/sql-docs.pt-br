@@ -14,19 +14,19 @@ caps.latest.revision: 13
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 358c88c0fef9c4ffaf7c7fc93458be1b1563d94e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0dbf7ee01520d139ce6b56912f6b35500ee35352
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37163797"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393578"
 ---
 # <a name="lesson-2-create-a-sql-server-credential"></a>Lesson 2: Create a SQL Server Credential
   **Credencial:** uma credencial do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] é um objeto usado para armazenar as informações de autenticação necessárias para se conectar a um recurso fora do SQL Server.  Aqui, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] processos de backup e restauração usam a credencial para se autenticar no serviço de armazenamento de Blob do Windows Azure. A Credencial armazena o nome da conta de armazenamento e os valores de **access key** da conta de armazenamento. Depois que a credencial for criada, ela deverá ser especificada na opção WITH CREDENTIAL ao emitir instruções BACKUP/RESTORE. Para obter mais informações sobre como exibir, copiar ou gerar novamente as **access keys**da conta de armazenamento, consulte [Chaves de acesso da conta de armazenamento](http://msdn.microsoft.com/library/windowsazure/hh531566.aspx).  
   
- Para obter informações gerais sobre credenciais, consulte [Credenciais](http://msdn.microsoft.com/library/ms161950.aspx).  
+ Para obter informações gerais sobre credenciais, consulte [credenciais](../relational-databases/security/authentication-access/credentials-database-engine.md).  
   
- Para obter informações sobre outros exemplos em que as credenciais são usadas, consulte [Criar um proxy do SQL Server Agent](http://msdn.microsoft.com/library/ms175834.aspx).  
+ Para obter informações sobre outros exemplos em que as credenciais são usadas, consulte [criar um Proxy do SQL Server Agent](../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
 > [!IMPORTANT]  
 >  Os requisitos para a criação de uma credencial do SQL Server descritos abaixo são específicos para processos de backup do SQL Server ([SQL Server Backup to URL](../relational-databases/backup-restore/sql-server-backup-to-url.md), e [SQL Server Managed Backup to Windows Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)). O SQL Server, ao acessar o armazenamento do Azure para gravar ou ler backups, usa o nome da conta de armazenamento e as informações da tecla de acesso.  Para obter mais informações sobre como criar credenciais para armazenar arquivos de banco de dados no armazenamento do Azure, consulte [lição 3: criar uma credencial do SQL Server](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  

@@ -19,34 +19,34 @@ caps.latest.revision: 16
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 0d910b3d32f9ff05571fd965d29ac3028cc43144
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 8afec0f77dcb47a4b201ddf86dfbde5d58ec1d20
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34774562"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40391999"
 ---
-# <a name="project-settings-conversion-accesstosql"></a>Configurações de projeto (conversão) (AccessToSQL)
-As configurações de projeto de conversão permitem que você configure como os objetos são convertidos de objetos de banco de dados do Access para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou objetos de banco de dados do SQL Azure.  
+# <a name="project-settings-conversion-accesstosql"></a>Configurações do projeto (conversão) (AccessToSQL)
+As configurações de conversão do projeto permitem que você configure como os objetos são convertidos de objetos de banco de dados do Access para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou objetos de banco de dados do SQL Azure.  
   
-O painel de conversão está disponível na **configurações de projeto** e **configurações de projeto padrão** caixas de diálogo.  
+O painel de conversão está disponível na **configurações do projeto** e **configurações do projeto padrão** caixas de diálogo.  
   
--   Use o **configurações de projeto** caixa de diálogo para definir opções de configuração para o projeto atual. Para acessar as configurações de conversão no **ferramentas** menu, selecione **configurações de projeto**, clique em **geral** na parte inferior do painel esquerdo e, em seguida, selecione **conversão**.  
+-   Use o **configurações do projeto** caixa de diálogo para definir opções de configuração para o projeto atual. Para acessar as configurações de conversão na **ferramentas** menu, selecione **configurações do projeto**, clique em **geral** na parte inferior do painel esquerdo e, em seguida, selecione  **Conversão**.  
   
--   Use o **configurações de projeto padrão** caixa de diálogo para definir opções de configuração para todos os projetos. Para acessar as configurações de conversão no **ferramentas** menu, selecione **configurações de projeto padrão**, selecione o tipo de projeto de migração para o qual as configurações são necessárias para ser exibido e alterado de **versão de destino de migração** lista suspensa, clique em **geral** na parte inferior do painel esquerdo e, em seguida, selecione **conversão**.  
+-   Use o **configurações de projeto padrão** caixa de diálogo para definir opções de configuração para todos os projetos. Para acessar as configurações de conversão na **ferramentas** menu, selecione **configurações do projeto padrão**, selecione o tipo de projeto de migração para o qual as configurações são necessárias para ser exibida / alterado de  **Versão de destino de migração** lista suspensa, clique em **gerais** na parte inferior do painel esquerdo e, em seguida, selecione **conversão**.  
   
 ## <a name="options"></a>Opções  
-**Adicionar a chave primária**  
-Cria uma nova chave primária no [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou tabela do SQL Azure se uma tabela não tem chave primária ou índice exclusivo.  
+**Adicione a chave primária**  
+Cria uma nova chave primária no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou tabela do SQL Azure se uma tabela do Access não tem nenhuma chave primária ou índice exclusivo.  
   
--   **Modo padrão**: falso  
+-   **Modo padrão**: False  
   
--   **Modo otimista**: falso  
+-   **Modo otimista**: False  
   
 -   **Modo de inteira**: True  
   
 Quando conectado ao SQL Azure, é por padrão True. **Adicionar colunas de carimbo de hora**  
-Especifica se o SSMA deve criar um valor de carimbo de hora se for necessário.  
+Especifica se o SSMA deve criar um valor de carimbo de hora, se for necessário.  
   
 -   **Modo padrão**: SSMA permitem decidir  
   
@@ -59,12 +59,12 @@ Inclui uma avaliação de dados no relatório de avaliação.
   
 -   **Modo padrão**: True  
   
--   **Modo otimista**: falso  
+-   **Modo otimista**: False  
   
 -   **Modo de inteira**: True  
   
-**Tipo de mensagem quando uma chave primária inclui colunas anuláveis**  
-Especifica o tipo de mensagem (aviso, erro ou nada) SSMA mostra no painel de saída ao encontrar chaves primárias com colunas anuláveis.  
+**Tipo de mensagem quando uma chave primária inclui colunas que permitem valor nulas**  
+Especifica o tipo de mensagem (aviso, erro ou nada) SSMA mostra no painel de saída quando ele encontra chaves primárias com colunas que permitem valor nulas.  
   
 -   **Modo padrão**: aviso  
   
@@ -72,7 +72,7 @@ Especifica o tipo de mensagem (aviso, erro ou nada) SSMA mostra no painel de sa�
   
 -   **Modo de inteira**: erro  
   
-**Tipo de mensagem quando colunas de chave estrangeira são de tamanhos diferentes**  
+**Tipo de mensagem quando as colunas de chave estrangeira são de tamanhos diferentes**  
 Especifica o tipo de mensagem (aviso, erro ou nada) SSMA mostra no painel de saída quando ele encontra uma chave estrangeira de texto incorreta.  
   
 -   **Modo padrão**: aviso  
@@ -81,8 +81,8 @@ Especifica o tipo de mensagem (aviso, erro ou nada) SSMA mostra no painel de sa�
   
 -   **Modo de inteira**: erro  
   
-**Tipo de mensagem quando colunas de memorando são indexadas**  
-Especifica o tipo de mensagem (aviso, erro ou nada) SSMA mostra no painel de saída quando encontrar um índice que contém um **memorando** coluna.  
+**Tipo de mensagem quando as colunas de memorando são indexadas**  
+Especifica o tipo de mensagem (aviso, erro ou nada) SSMA mostra no painel de saída quando ele encontra um índice que contém um **memorando** coluna.  
   
 -   **Modo padrão**: aviso  
   
@@ -91,29 +91,29 @@ Especifica o tipo de mensagem (aviso, erro ou nada) SSMA mostra no painel de sa�
 -   **Modo de inteira**: erro  
   
 **Avisar quando uma consulta complexa usa um caractere curinga (\&#42;)**  
-Exibe um aviso no painel de saída e a lista de erros quando um nome de coluna em uma instrução SELECT é um caractere curinga (*).  
+Exibe um aviso no painel de saída e lista de erros quando um nome de coluna em uma instrução SELECT é um caractere curinga (*).  
   
 -   **Modo padrão**: True  
   
--   **Modo otimista**: falso  
+-   **Modo otimista**: False  
   
 -   **Modo de inteira**: True  
   
 **Avisar quando o nome do identificador é alterado**  
-Exibe uma mensagem no relatório de avaliação e no painel de saída quando um nome de identificador de objeto é alterado por SSMA.  
+Exibe uma mensagem no relatório de avaliação e no painel de saída quando um nome de identificador de objeto é alterado pelo SSMA.  
   
 -   **Modo padrão**: True  
   
--   **Modo otimista**: falso  
+-   **Modo otimista**: False  
   
 -   **Modo de inteira**: True  
   
-**Avisar ao identificador serão ser colocado entre aspas**  
-Exibe uma mensagem no relatório de avaliação e no painel de saída quando um nome de identificador de objeto será cotado por SSMA. É necessário delimitar identificadores, quando o nome é uma palavra-chave ou contém caracteres especiais.  
+**Avisar quando o identificador será ser colocado entre aspas**  
+Exibe uma mensagem no relatório de avaliação e no painel de saída quando um nome de identificador de objeto será cotado por SSMA. Delimitar identificadores é necessário quando o nome é uma palavra-chave ou contém caracteres especiais.  
   
 -   **Modo padrão**: True  
   
--   **Modo otimista**: falso  
+-   **Modo otimista**: False  
   
 -   **Modo de inteira**: True  
   

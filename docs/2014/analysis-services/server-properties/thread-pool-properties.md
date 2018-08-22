@@ -21,12 +21,12 @@ caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f19468e128b6009a19acd2ace84c99dc2e0140d7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 92c1e8d4a1014e7af89e056fe43244a51fb9d9a9
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37303026"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394178"
 ---
 # <a name="thread-pool-properties"></a>Propriedades de pool de threads
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa multi-threading para várias operações, melhorando o desempenho global do servidor ao executar vários trabalhos em paralelo. Para gerenciar threads com mais eficiência, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa pools de threads para pré-alocar threads e facilitar a disponibilidade do thread para o próximo trabalho.  
@@ -279,9 +279,9 @@ ms.locfileid: "37303026"
 >  Para obter instruções sobre como configurar propriedades, consulte [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
 ## <a name="see-also"></a>Consulte também  
- [Sobre Processos e Threads](http://msdn.microsoft.com/library/windows/desktop/ms681917\(v=vs.85\).aspx)   
- [Vários processadores](http://msdn.microsoft.com/library/windows/desktop/ms684251\(v=vs.85\).aspx)   
- [Grupos de processador](http://msdn.microsoft.com/library/windows/desktop/dd405503\(v=vs.85\).aspx)   
+ [Sobre processos e Threads](/windows/desktop/ProcThread/about-processes-and-threads)   
+ [Vários processadores](/windows/desktop/ProcThread/multiple-processors)   
+ [Grupos de processador](/windows/desktop/ProcThread/processor-groups)   
  [Alterações de Pool de Thread do Analysis Services no SQL Server 2012](http://blogs.msdn.com/b/psssql/archive/2012/01/31/analysis-services-thread-pool-changes-in-sql-server-2012.aspx)   
  [Configurações do Analysis Services 2012 Configuration (Blog do Wordpress)](http://go.microsoft.com/fwlink/?LinkId=330387)   
  [Suporte a sistemas com mais de 64 processadores](http://msdn.microsoft.com/library/windows/hardware/gg463349.aspx)   

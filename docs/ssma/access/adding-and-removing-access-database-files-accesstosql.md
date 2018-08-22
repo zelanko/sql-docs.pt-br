@@ -35,24 +35,24 @@ caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f188e762ada8dd4f6da324af9e8ba6bfb8c28942
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: b624a8375f0726dc73b8b71af7a75d0756e52e60
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983358"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392473"
 ---
 # <a name="adding-and-removing-access-database-files-accesstosql"></a>Adicionando e removendo arquivos de banco de dados do Access (AccessToSQL)
-Para migrar dados do Access para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure, você deve adicionar um ou mais bancos de dados do Access para o projeto do SSMA. Esses bancos de dados devem ser Access 97 ou versões posteriores. Se você tiver bancos de dados de uma versão anterior de acesso, você deve converter os bancos de dados para uma versão mais recente. Você pode fazer isso abrindo e salvando os bancos de dados no Access 97 ou posterior antes de adicioná-los a SSMA.  
+Para migrar dados do Access para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, você deve adicionar um ou mais bancos de dados do Access para o projeto do SSMA. Esses bancos de dados devem ser Access 97 ou versões posteriores. Se você tiver bancos de dados de uma versão anterior de acesso, você deve converter os bancos de dados para uma versão mais recente. Você pode fazer isso abrindo e salvando os bancos de dados no Access 97 ou posterior antes de adicioná-los a SSMA.  
   
 ## <a name="what-happens-when-you-add-access-database-files"></a>O que acontece quando você adiciona arquivos de banco de dados de acesso?  
-Quando você adiciona um banco de dados a um projeto do SSMA, SSMA lê os metadados de banco de dados e, em seguida, adiciona esses metadados ao arquivo de projeto. Esses metadados descrevem o banco de dados e seus objetos. O SSMA usa os metadados quando ele converte objetos a serem [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou a sintaxe do SQL Azure, e quando ele migra dados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure. Você pode procurar esses metadados no Gerenciador de metadados de acesso e examine as propriedades dos objetos de banco de dados individuais.  
+Quando você adiciona um banco de dados a um projeto do SSMA, SSMA lê os metadados de banco de dados e, em seguida, adiciona esses metadados ao arquivo de projeto. Esses metadados descrevem o banco de dados e seus objetos. O SSMA usa os metadados quando ele converte objetos a serem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou a sintaxe do SQL Azure, e quando ele migra dados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. Você pode procurar esses metadados no Gerenciador de metadados de acesso e examine as propriedades dos objetos de banco de dados individuais.  
   
 > [!NOTE]  
-> Um banco de dados pode ser dividido em vários arquivos: um banco de dados de back-end que contém tabelas e bancos de dados front-end que contêm consultas, formulários, relatórios, macros, módulos e atalhos. Se você quiser migrar um banco de dados divisão [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure, adicione o banco de dados front-end para o SSMA.  
+> Um banco de dados pode ser dividido em vários arquivos: um banco de dados de back-end que contém tabelas e bancos de dados front-end que contêm consultas, formulários, relatórios, macros, módulos e atalhos. Se você quiser migrar um banco de dados divisão [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, adicione o banco de dados front-end para o SSMA.  
   
 ## <a name="permissions-that-are-required-by-ssma"></a>Permissões que são exigidas pelo SSMA  
-Para migrar um banco de dados do Access para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure, o grupo de usuários e o usuário administrador devem ter permissões de administrador. Para obter informações sobre como migrar bancos de dados com proteção do grupo de trabalho, consulte [Preparando bancos de dados de acesso para a migração](http://msdn.microsoft.com/9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114)  
+Para migrar um banco de dados do Access para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, o grupo de usuários e o usuário administrador devem ter permissões de administrador. Para obter informações sobre como migrar bancos de dados com proteção do grupo de trabalho, consulte [Preparando bancos de dados de acesso para a migração](preparing-access-databases-for-migration-accesstosql.md).  
   
 ## <a name="selecting-databases-to-add"></a>Selecionar bancos de dados para adicionar  
 Se você deseja adicionar um ou mais bancos de dados a um projeto do SSMA e os arquivos estão todos em um local conhecido, você pode adicionar os arquivos usando o procedimento a seguir.  
@@ -138,6 +138,6 @@ Você pode remover um banco de dados de um projeto seguindo estas etapas.
 É a próxima etapa no processo de migração [conectar-se ao SQL Server](http://msdn.microsoft.com/bb8c4bde-cfc2-4636-92ae-5dd24abe9536).  
   
 ## <a name="see-also"></a>Consulte também  
-[Migrando bancos de dados do Access para o SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
-[Criando e gerenciando projetos](http://msdn.microsoft.com/f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7)  
+[Migrando bancos de dados do Access para o SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
+[Criando e gerenciando projetos](creating-and-managing-projects-accesstosql.md)  
   

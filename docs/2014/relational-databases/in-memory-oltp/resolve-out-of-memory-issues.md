@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
@@ -14,12 +13,12 @@ caps.latest.revision: 15
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 2e866c2899ff4172e969cba97e4b10f1ce0fac3a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 566d202fcc38fd3bba6c75e40bb01062e760fd09
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37253978"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392007"
 ---
 # <a name="resolve-out-of-memory-issues"></a>Resolver problemas de memória insuficiente
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] usa mais memória e de maneiras diferentes que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. É possível que a quantidade de memória que você instalou e atribuiu para o [!INCLUDE[hek_2](../../includes/hek-2-md.md)] torne-se inadequada para suas necessidades de crescimento. Se for o caso, você pode ficar sem memória. Este tópico aborda como se recuperar de uma situação de OOM. Veja [Monitorar e solucionar problemas de uso da memória](monitor-and-troubleshoot-memory-usage.md) para obter diretrizes que podem ajudá-lo a evitar várias situações de OOM.  
@@ -80,7 +79,7 @@ ms.locfileid: "37253978"
 ###  <a name="bkmk_openDAC"></a> Abrir uma DAC (Conexão de Administrador Dedicada)  
  O Microsoft SQL Server fornece uma DAC (conexão de administrador dedicada). A DAC permite que um administrador acesse uma instância em execução do Mecanismo de Banco de Dados do SQL Server para resolver problemas no servidor, mesmo quando o servidor não está respondendo às conexões de outro cliente. A DAC está disponível com o utilitário do `sqlcmd` e o SQL Server Management Studio (SSMS).  
   
- Para obter orientação sobre como usar o `sqlcmd` e o DAC, veja [Usando uma conexão de administrador dedicada](http://msdn.microsoft.com/library/ms189595\(v=sql.100\).aspx/css). Para obter orientação sobre como usar o DAC por meio do SSMS, veja [Como usar a conexão de administrador dedicada com o SQL Server Management Studio](http://msdn.microsoft.com/library/ms178068.aspx).  
+ Para obter orientação sobre como usar o `sqlcmd` e o DAC, veja [Usando uma conexão de administrador dedicada](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md). Para obter orientação sobre como usar o DAC por meio do SSMS, veja [Como usar a conexão de administrador dedicada com o SQL Server Management Studio](http://msdn.microsoft.com/library/ms178068.aspx).  
   
 ###  <a name="bkmk_takeCorrectiveAction"></a> Realizar a ação corretiva  
  Para resolver a sua condição de OOM, você precisa ou liberar memória existente reduzindo o uso ou disponibilizar mais memória para as tabelas de memória.  

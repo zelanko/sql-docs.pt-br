@@ -16,26 +16,26 @@ caps.latest.revision: 11
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: cb77ed80d95b55abc99cb624ed3b7c4dd915c3f3
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 21775252d57184914d9c1d595ce5f8b67e8e4cbf
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34773542"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394408"
 ---
 # <a name="command-line-options-in-the-ssma-console-accesstosql"></a>Opções de linha de comando no Console do SSMA (AccessToSQL)
-Microsoft fornece um conjunto robusto de opções de linha de comando para executar e controlar as atividades do SSMA. As seções resultantes fornecem detalhes adicionais.  
+Microsoft fornece um conjunto robusto de opções de linha de comando para executar e controlar atividades do SSMA. Seções a seguir fornecem mais detalhes.  
   
 ## <a name="command-line-options-in-the-ssma-console"></a>Opções de linha de comando no Console do SSMA  
-Aqui descritos é o console de opções de comando.  
+Descritos aqui é o console de opções de comando.  
   
 Para fins desta seção, o termo 'option' também é conhecido como 'switch'.  
   
-Opções não diferenciam maiusculas de minúsculas e pode começar com o '**-**'ou'**/**' caracteres.  
+As opções não diferenciam maiusculas de minúsculas e pode começar com o '**-**'ou'**/**' caracteres.  
   
-Se forem especificadas opções, é obrigatório que você especifique os parâmetros de opção correspondentes.  
+Se as opções forem especificadas, é obrigatório que você especifique os parâmetros de opção correspondente.  
   
-Parâmetros de opção devem ser separados de caractere a opção por espaço em branco.  
+Parâmetros de opção devem ser separados do caractere opção por espaço em branco.  
   
 **Exemplos de sintaxe:**  
   
@@ -43,23 +43,23 @@ Parâmetros de opção devem ser separados de caractere a opção por espaço em
   
 `C:\> SSMAforAccessConsole.EXE -s “C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\AssessmentReportGenerationSample.xml” –v “C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\VariableValueFileSample.xml” –c “C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ServersConnectionFileSample.xml”`  
   
-Nomes de arquivo ou pasta contendo espaços devem ser especificados entre aspas duplas.  
+Nomes de arquivo ou pasta que contém espaços devem ser especificados entre aspas duplas.  
   
 A saída de mensagens de erro e entradas de linha de comando é armazenada em STDOUT ou em um arquivo especificado.  
   
 ### <a name="script-file-option-sscript"></a>Opção de arquivo de script: – s/script  
-Quando a opção é obrigatória, o caminho/nome de arquivo de script Especifica o script de sequências de comando a ser executado pelo SSMA.  
+Uma opção obrigatória, o caminho/nome de arquivo de script Especifica o script de sequências de comando a ser executado pelo SSMA.  
   
 **Exemplos de sintaxe:**  
   
 `C:\>SSMAforAccessConsole.EXE –s “C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml”`  
   
-### <a name="variable-value-file-option-vvariable"></a>Opção de arquivo de valor da variável: – v/variável  
-O arquivo de valor de variável consiste em variáveis usadas no arquivo de script. A opção é opcional. Se as variáveis não são declaradas no arquivo de variável e usadas no arquivo de script, o aplicativo gera um erro e termina a execução do console.  
+### <a name="variable-value-file-option-vvariable"></a>Opção de arquivo do valor da variável: – v/variável  
+O arquivo de valor da variável é composto de variáveis usadas no arquivo de script. A opção é opcional. Se as variáveis não são declaradas no arquivo de variável e usadas no arquivo de script, o aplicativo gera um erro e finaliza a execução do console.  
   
 **Exemplos de sintaxe:**  
   
--   Variáveis definidas em vários arquivos de valor da variável, talvez uma com um valor padrão e outra com um valor específico da instância quando aplicável. O último arquivo de variável especificado nos argumentos de linha de comando usa a preferência, caso haja uma eliminação de duplicação de variáveis:  
+-   Variáveis definidas em vários arquivos de valor da variável, talvez um com um valor padrão e outro com um valor específico da instância quando aplicável. O último arquivo de variável especificado nos argumentos de linha de comando leva a preferência, caso haja uma eliminação de duplicação de variáveis:  
   
     `C:\>SSMAforAccessConsole.EXE -s`  
   
@@ -67,14 +67,14 @@ O arquivo de valor de variável consiste em variáveis usadas no arquivo de scri
   
     `projects\global_variablevaluefile.xml –v “c:\migrationprojects\instance_variablevaluefile.xml”`  
   
-### <a name="server-connection-file-option-cserverconnection"></a>Opção de arquivo de conexão de servidor: – c/serverconnection  
-Esse arquivo contém informações de conexão de servidor para cada servidor. Cada definição de servidor é identificada por uma ID de servidor exclusivo. As IDs de servidor são referenciadas no arquivo de script de comandos relacionados à conexão.  
+### <a name="server-connection-file-option-cserverconnection"></a>Opção de arquivo de conexão do servidor: – c/serverconnection  
+Esse arquivo contém informações de conexão do servidor para cada servidor. Cada definição de servidor é identificada por uma ID de servidor única. As IDs do servidor são referenciadas no arquivo de script para os comandos relacionados à conexão.  
   
-Definição de servidor pode ser uma parte do arquivo de conexão de servidor e/ou o arquivo de script. Identificação do servidor de arquivo de script tem precedência sobre o arquivo de conexão de servidor, caso haja uma eliminação de duplicação de identificação do servidor.  
+Definição de servidor pode ser uma parte do arquivo de conexão do servidor e/ou o arquivo de script. Id do servidor no arquivo de script tem precedência sobre o arquivo de conexão de servidor, caso haja uma duplicação da id do servidor.  
   
 **Exemplos de sintaxe:**  
   
--   As IDs do servidor são usadas no arquivo de script. Eles são definidos em um arquivo de conexão de servidor separado. Esse arquivo usa as variáveis definidas no arquivo de valor da variável:  
+-   As IDs do servidor são usadas no arquivo de script. Eles são definidos em um arquivo de conexão de servidor separado. Este arquivo usa variáveis que são definidas no arquivo de valor da variável:  
   
     `C:\>SSMAforAccessConsole.EXE –s “C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml”  –v`  
   
@@ -106,7 +106,7 @@ Há duas opções disponíveis para xmloutput, ou seja:
     `C:\>SSMAforAccessConsole.EXE –s “C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml”  –xmloutput`  
   
 ### <a name="log-file-option-llog"></a>Opção de arquivo de log: – l/log  
-Todas as operações no aplicativo do Console SSMA são registradas em um arquivo de log, e a opção é opcional. Se um arquivo de log e o caminho for especificados na linha de comando, o log é gerado no local especificado. Caso contrário, ele obtém gerado em seu local padrão.  
+Todas as operações no aplicativo de Console SSMA são registradas em um arquivo de log, e a opção é opcional. Se um arquivo de log e seu caminho são especificados na linha de comando, o log é gerado no local especificado. Caso contrário, ele é gerado em seu local padrão.  
   
 **Exemplo de sintaxe:**  
   
@@ -114,7 +114,7 @@ Todas as operações no aplicativo do Console SSMA são registradas em um arquiv
   
 `“C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml”  –l c:\SsmaProjects\migration1.log`  
   
-### <a name="project-environment-folder-option-eprojectenvironment"></a>Opção de pasta de ambiente do projeto: – e/projectenvironment  
+### <a name="project-environment-folder-option-eprojectenvironment"></a>Opção de pasta de ambiente do projeto: projectenvironment / – e  
 Esta opção indica que a pasta de configurações do ambiente de projeto para o projeto atual do SSMA.  
   
 **Exemplo de sintaxe:**  
@@ -127,14 +127,14 @@ Esta opção indica que a pasta de configurações do ambiente de projeto para o
 |-|  
 ||  
   
-### <a name="secure-password-option-psecurepassword"></a>Opção de senha de segurança: – p/securepassword  
-Esta opção indica que a senha criptografada para conexões de servidor. Ele difere de todas as outras opções não executar qualquer script ou ajudá-lo em todas as atividades relacionadas à migração, mas ajuda a gerenciar a criptografia de senha para as conexões de servidor usada no projeto de migração.  
+### <a name="secure-password-option-psecurepassword"></a>Proteger a opção de senha: – p/securepassword  
+Esta opção indica que a senha criptografada para conexões de servidor. Ele difere de todas as outras opções em que ele não executar qualquer script ou Ajuda em todas as atividades relacionadas à migração, mas ajuda a gerenciar a criptografia de senha para as conexões de servidor usado no projeto de migração.  
   
-Você não pode inserir qualquer outra opção ou senha como o parâmetro de linha de comando. Caso contrário, isso resulta em erro. Para obter mais informações, consulte o [gerenciar senhas](http://msdn.microsoft.com/b099d0f9-dd37-4c87-8b6f-ed0177881ea4) seção.  
+Você não pode inserir qualquer outra opção ou senha como o parâmetro de linha de comando. Caso contrário, ele resulta em um erro. Para obter mais informações, consulte o [gerenciamento de senhas](managing-passwords-accesstosql.md) seção.  
   
 As subopções a seguir têm suporte para `–p/securepassword`:  
   
--   Para adicionar uma senha ou atualizar uma senha existente, o armazenamento protegido para uma ID especificada do servidor ou para todas as IDs de servidor definido no arquivo de conexão do servidor:  
+-   Para adicionar uma senha ou atualizar uma senha existente, para o armazenamento protegido para uma ID do servidor especificado ou para todas as IDs de servidor definido no arquivo de conexão do servidor:  
   
     `-p|-securepassword -a|add    {"<server_id>[, .n]"|all}``-c|-serverconnection <server-connection-file> [-v|variable <variable-value-file>]``[-o|overwrite]`  
   
@@ -152,32 +152,32 @@ As subopções a seguir têm suporte para `–p/securepassword`:
   
     `–p/securepassword –e/export {<server-id> [, …n] | all} <encrypted-password -file>`  
   
--   O criptografado-arquivo que foi exportado anteriormente é importado para o armazenamento protegido local usando a frase secreta especificada pelo usuário. Depois que o arquivo for descriptografado, ela será armazenada em um novo arquivo, que por sua vez, é criptografado no computador local.  
+-   O criptografado-arquivo que foi exportado anteriormente é importado para o armazenamento protegido local usando a frase secreta especificada pelo usuário. Depois que o arquivo é descriptografado, ela é armazenada em um novo arquivo, por sua vez, é criptografado no computador local.  
   
     `–p/securepassword –i/import {<server-id> [, …n] | all} <encrypted-password -file>`  
   
-    Várias IDs de servidor podem ser especificadas usando separadores de vírgula.  
+    Várias IDs do servidor pode ser especificadas usando os separadores de vírgula.  
   
 ### <a name="help-option-help"></a>Opção de Ajuda: –? /help  
-Exibe o resumo da sintaxe de opções do Console do SSMA:  
+Exibe o resumo de sintaxe de opções do Console do SSMA:  
   
 `C:\>SSMAforAccessConsole.EXE -?`  
   
-Para obter uma exibição tabular das opções de linha de comando do Console SSMA, consulte [apêndice a-1 &#40;AccessToSQL&#41;](../../ssma/access/appendix-1-accesstosql.md).  
+Para obter uma exibição tabular das opções de linha de comando de Console do SSMA, consulte [Apêndice – 1 &#40;AccessToSQL&#41;](../../ssma/access/appendix-1-accesstosql.md).  
   
-### <a name="securepassword-help-option-securepassword--help"></a>Opção SecurePassword ajuda: – securepassword-? /Help  
-Exibe o resumo da sintaxe de opções do Console do SSMA:  
+### <a name="securepassword-help-option-securepassword--help"></a>A opção de ajuda de SecurePassword: – securepassword-? /Help  
+Exibe o resumo de sintaxe de opções do Console do SSMA:  
   
 `C:\>SSMAforAccessConsole.EXE -securepassword -?`  
   
-Para obter uma exibição tabular das opções de linha de comando do Console SSMA, consulte [apêndice a-1 &#40;AccessToSQL&#41;](../../ssma/access/appendix-1-accesstosql.md)  
+Para obter uma exibição tabular das opções de linha de comando de Console do SSMA, consulte [Apêndice – 1 &#40;AccessToSQL&#41;](../../ssma/access/appendix-1-accesstosql.md)  
   
 ### <a name="next-steps"></a>Próximas etapas  
 A próxima etapa depende de seus requisitos de projeto:  
   
-1.  Para especificar uma senha ou a exportação / importação de senhas, consulte [gerenciar senhas &#40;AccessToSQL&#41;](../../ssma/access/managing-passwords-accesstosql.md).  
+1.  Para especificar uma senha ou a exportação / importação de senhas, consulte [gerenciamento de senhas &#40;AccessToSQL&#41;](../../ssma/access/managing-passwords-accesstosql.md).  
   
-2.  Para gerar relatórios, consulte [gerando relatórios &#40;AccessToSQL&#41;](../../ssma/access/generating-reports-accesstosql.md).  
+2.  Para gerar relatórios, consulte [geração de relatórios &#40;AccessToSQL&#41;](../../ssma/access/generating-reports-accesstosql.md).  
   
 3.  Para solucionar problemas no console, consulte [solução de problemas &#40;AccessToSQL&#41;](../../ssma/access/troubleshooting-accesstosql.md).  
   

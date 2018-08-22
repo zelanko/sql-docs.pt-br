@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
@@ -14,12 +13,12 @@ caps.latest.revision: 23
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ece469ea1140265ef70ecbd720bad350ca04905b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 118493cdd526a8c62add06ca78c803ebac6540c1
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37290863"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393775"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>Durabilidade de tabelas com otimização de memória
   [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] fornece a durabilidade completa para tabelas com otimização de memória. Quando uma transação que modificou uma tabela com otimização de memória é confirmada, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (como faz em tabelas baseadas em disco), garante que as alterações sejam permanentes (sobreviverão uma reinicialização do banco de dados), contanto que o armazenamento subjacente esteja disponível. Há dois principais componentes de durabilidade: log de transações e persistência das alterações de dados para armazenamento em disco.  

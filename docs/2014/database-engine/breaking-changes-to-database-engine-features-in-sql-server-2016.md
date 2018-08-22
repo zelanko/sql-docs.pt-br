@@ -17,12 +17,12 @@ caps.latest.revision: 143
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 64ca4f9c72739d9b5875e7adeec38e5a59f590fc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: db9392c92568442a17c4683b2c8a25a5487f59d4
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37254748"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40392463"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2014"></a>Alterações em recursos do Mecanismo de Banco de Dados que causam interrupção no SQL Server 2014
   Este tópico descreve as últimas alterações no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] e versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Essas alterações podem danificar aplicativos, scripts ou funcionalidades baseados em versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Talvez você tenha esses problemas ao atualizar. Para obter mais informações, consulte [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
@@ -57,13 +57,13 @@ ms.locfileid: "37254748"
 |Exibição|Description|  
 |----------|-----------------|  
 |sys.dm_exec_requests|As alterações de coluna de comando de `nvarchar(16)` para `nvarchar(32)`.|  
-|DM os_memory_cache_counters|As seguintes colunas foram renomeadas:<br /><br /> single_pages_kb agora é: <br />                          pages_kb<br /><br /> multi_pages_kb<br />                           Agora é: pages_in_use_kb|  
-|DM os_memory_cache_entries|A coluna pages_allocated_count coluna foi renomeada pages_kb.|  
-|DM os_memory_clerks|A coluna multi_pages_kb foi removido.<br /><br /> A coluna single_pages_kb coluna foi renomeada pages_kb.|  
+|sys.dm_os_memory_cache_counters|As seguintes colunas foram renomeadas:<br /><br /> single_pages_kb agora é: <br />                          pages_kb<br /><br /> multi_pages_kb<br />                           Agora é: pages_in_use_kb|  
+|sys.dm_os_memory_cache_entries|A coluna pages_allocated_count coluna foi renomeada pages_kb.|  
+|sys.dm_os_memory_clerks|A coluna multi_pages_kb foi removido.<br /><br /> A coluna single_pages_kb coluna foi renomeada pages_kb.|  
 |sys.dm_os_memory_nodes|As seguintes colunas foram renomeadas:<br /><br /> single_pages_kb agora é: <br />                            pages_kb<br /><br /> multi_pages_kb agora é: <br />                            foreign_committed_kb|  
-|DM os_memory_objects|As colunas a seguir foram renomeadas.<br /><br /> pages_allocated_count agora é:<br />                            pages_in_bytes<br /><br /> max_pages_allocated_count agora é: max_pages_in_bytes|  
+|sys.dm_os_memory_objects|As colunas a seguir foram renomeadas.<br /><br /> pages_allocated_count agora é:<br />                            pages_in_bytes<br /><br /> max_pages_allocated_count agora é: max_pages_in_bytes|  
 |sys.dm_os_sys_info|As seguintes colunas foram renomeadas:<br /><br /> physical_memory_in_bytes agora é: <br />                            physical_memory_kb<br /><br /> bpool_commit_target agora é: <br />                            committed_target_kb<br /><br /> Agora, bpool_visible é: <br />                            visible_target_kb<br /><br /> virtual_memory_in_bytes agora é: <br />                            virtual_memory_kb<br /><br /> bpool_commited agora é:<br />                            committed_kb|  
-|DM os_workers|A coluna de localidade foi removida.|  
+|sys.dm_os_workers|A coluna de localidade foi removida.|  
   
 ### <a name="catalog-views"></a>Exibições do catálogo  
   
@@ -266,7 +266,7 @@ ms.locfileid: "37254748"
 ||Tenha um certificado emitido para nome curto.<br /><br /> -Esta opção funciona para todos os aplicativos.|  
   
 ##  <a name="Yukon"></a> Alterações recentes no SQL Server 2005  
- Para obter uma lista das últimas alterações introduzidas no [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], consulte [alterações recentes em recursos do mecanismo de banco de dados no SQL Server 2005](http://msdn.microsoft.com/library/ms143179\(SQL.90\).aspx).  
+ Para obter uma lista das últimas alterações introduzidas no [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], consulte [alterações recentes em recursos do mecanismo de banco de dados no SQL Server 2005](breaking-changes-to-database-engine-features-in-sql-server-2016.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Recursos do mecanismo de banco de dados preteridos no SQL Server 2014](deprecated-database-engine-features-in-sql-server-2016.md)   

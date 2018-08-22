@@ -20,12 +20,12 @@ caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 4a94afc188ce7fe1ce758586a78e523908c49b1d
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 320bce2d4678781e56bb18a54e0e19d4877cc1d5
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980638"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393363"
 ---
 # <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>Introdução ao SSMA para Sybase Console (SybaseToSQL)
 Esta seção descreve o procedimento para iniciar e guia de Introdução o SSMA para Sybase aplicativo de console. Também são listados aqui são as convenções usadas em uma janela de saída do Console do SSMA típica.  
@@ -52,9 +52,9 @@ Depois que o console é iniciado com êxito em seu sistema Windows, você pode u
   
 Recursos adicionais:  
   
-1.  [Especifique uma senha](http://msdn.microsoft.com/9b6a70f9-6840-4140-a059-bb7bd7ccc67c) e importação/exportação-lo para outros computadores da janela.  
+1.  [Especifique uma senha](managing-passwords-sybasetosql.md) e importação/exportação-lo para outros computadores da janela.  
   
-2.  [Gerar relatórios](http://msdn.microsoft.com/19278f6a-6d58-4867-9d71-c6228040466e) exibir o xml detalhado relatórios para conversão/avaliação e migração de dados de saída. Você também pode gerar relatórios de erro detalhada para comandos de atualização e a sincronização.  
+2.  [Gerar relatórios](generating-reports-sybasetosql.md) exibir o xml detalhado relatórios para conversão/avaliação e migração de dados de saída. Você também pode gerar relatórios de erro detalhada para comandos de atualização e a sincronização.  
   
 ## <a name="ssma-console-output-conventions"></a>Convenções de saída do Console do SSMA  
 Após executar os comandos de script do SSMA e opções, o programa de console exibe os resultados e mensagens (informações de erro, etc.) para o usuário no console ou, se necessário, redireciona para um arquivo de saída xml. Cada tipo de mensagem na saída é representado por uma cor exclusiva. Por exemplo, a mensagem de texto cor branca indica comandos do arquivo de script; a cor verde representa um prompt para entrada do usuário e assim por diante.  

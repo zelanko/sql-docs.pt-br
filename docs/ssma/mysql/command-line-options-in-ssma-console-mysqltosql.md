@@ -26,12 +26,12 @@ caps.latest.revision: 12
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 83e8fddb94f2c2cdc51131417b589d7c8691a88d
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: beddb03c2d5806f9a3e3114346808d54379a9d74
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985588"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393577"
 ---
 # <a name="command-line-options-in-ssma-console-mysqltosql"></a>Opções de linha de comando no Console do SSMA (MySQLToSQL)
 Microsoft oferece opções de linha de comando um conjunto robusto para executar e controlar atividades do SSMA. Seções a seguir detalham os mesmos.  
@@ -136,7 +136,7 @@ Isso indica que a pasta de configurações do ambiente de projeto para o projeto
 ### <a name="secure-password-option-psecurepassword"></a>Opção de senha segura: – p/securepassword  
 Esta opção indica que a senha criptografada para conexões de servidor. Ele é diferente de todas as outras opções: a opção não executa qualquer script nem ajuda em todas as atividades relacionadas à migração, mas ajuda a gerenciar a criptografia de senha para as conexões de servidor usado no projeto de migração.  
   
-Você não pode inserir qualquer outra opção ou senha como o parâmetro de linha de comando. Caso contrário, ele resulta em um erro. Para obter mais informações, consulte o [gerenciamento de senhas](http://msdn.microsoft.com/4ffbc587-ea3f-49ad-bc42-a654f672325e) seção.  
+Você não pode inserir qualquer outra opção ou senha como o parâmetro de linha de comando. Caso contrário, ele resulta em um erro. Para obter mais informações, consulte o [gerenciamento de senhas](managing-passwords-mysqltosql.md) seção.  
   
 As seguintes opções subsistema têm suporte para `–p/securepassword`:  
   
