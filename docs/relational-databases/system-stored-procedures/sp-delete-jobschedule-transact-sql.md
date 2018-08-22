@@ -22,25 +22,25 @@ caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7909cb6689db9610cd9a9a24482f7ce21d98f060
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 456295211427b07e0f6bbda7069e3d645b31286a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245375"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395411"
 ---
 # <a name="spdeletejobschedule-transact-sql"></a>sp_delete_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Exclui uma agenda para um trabalho.  
   
- **sp_delete_jobschedule** é fornecida para compatibilidade com versões anteriores apenas.  
+ **sp_delete_jobschedule** é fornecido para compatibilidade com versões anteriores.  
   
   
 ## <a name="remarks"></a>Remarks  
  As agendas de trabalho podem ser gerenciadas independentemente dos trabalhos. Para remover uma agenda de um trabalho, use **sp_detach_schedule**. Para excluir uma agenda, use **sp_delete_schedule**.  
   
-> **Observação:****sp_delete_jobschedule** não oferece suporte a agendas que são anexadas a vários trabalhos. Se um script que chama **sp_delete_jobschedule** para remover uma agenda que é anexada a mais de um trabalho, o procedimento retornará um erro.  
+> **Observação:****sp_delete_jobschedule** não oferece suporte a agendas que estão anexadas a vários trabalhos.   Se um script que chama **sp_delete_jobschedule** para remover uma agenda que é anexada a mais de um trabalho, o procedimento retornará um erro.  
   
 ## <a name="permissions"></a>Permissões  
  Por padrão, os membros da função de servidor fixa **sysadmin** podem executar este procedimento armazenado. Deve ser concedida a outros usuários uma das seguintes funções de banco de dados fixas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no banco de dados **msdb** :  
@@ -51,16 +51,16 @@ ms.locfileid: "33245375"
   
 -   **SQLAgentOperatorRole**  
   
- Para obter detalhes sobre as permissões dessas funções, consulte [Funções de banco de dados fixas do SQL Server Agent](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Para obter detalhes sobre as permissões dessas funções, consulte [Funções de banco de dados fixas do SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Membros de **sysadmin** função pode excluir qualquer agenda de trabalho. Os usuários que não são membros do **sysadmin** função só pode excluir agendas de trabalho que eles possuem.  
+ Os membros de **sysadmin** função pode excluir qualquer agenda de trabalho. Os usuários que não são membros do **sysadmin** função só pode excluir agendas de trabalho que eles possuem.  
   
 ## <a name="see-also"></a>Consulte também  
  [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
  [sp_detach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)   
- [Exibir ou modificar trabalhos](http://msdn.microsoft.com/library/57f649b8-190c-4304-abd7-7ca5297deab7)   
+ [Exibir ou modificar trabalhos](../../ssms/agent/view-or-modify-jobs.md)   
  [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_help_jobschedule & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-help-jobschedule-transact-sql.md)   
+ [sp_help_jobschedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobschedule-transact-sql.md)   
  [sp_update_jobschedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-jobschedule-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

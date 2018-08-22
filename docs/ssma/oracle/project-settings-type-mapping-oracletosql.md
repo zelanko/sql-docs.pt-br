@@ -1,5 +1,5 @@
 ---
-title: Configurações (mapeamento de tipo) do projeto (OracleToSQL) | Microsoft Docs
+title: Configurações do projeto (mapeamento de tipo) (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,37 +13,37 @@ caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: e4b0e239c2dfe345ff17b82fa002550e44fb5b09
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 4a2893554d390040b3b52fd94282de92d522174e
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34778142"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40394795"
 ---
-# <a name="project-settings-type-mapping-oracletosql"></a>Configurações (mapeamento de tipo) do projeto (OracleToSQL)
-A página mapeamento de tipo do **configurações de projeto** caixa de diálogo contém configurações que personalizam como o SSMA converte tipos de dados Oracle em [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipos de dados.  
+# <a name="project-settings-type-mapping-oracletosql"></a>Configurações do projeto (mapeamento de tipo) (OracleToSQL)
+A página de mapeamento de tipo a **configurações do projeto** caixa de diálogo contém configurações que personalizam como SSMA converte tipos de dados Oracle em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de dados.  
   
-A mapeamento de tipo de página está disponível na **configurações de projeto** e **configurações de projeto padrão** caixas de diálogo.  
+A página mapeamento de tipo está disponível na **configurações do projeto** e **configurações do projeto padrão** caixas de diálogo.  
   
--   Para especificar configurações para todos os projetos futuros do SSMA, no **ferramentas** menu clique **configurações de projeto padrão**, selecione o tipo de projeto de migração para o qual as configurações são necessárias para ser exibido ou alterado de **versão de destino de migração** lista suspensa e, em seguida, clique em **mapeamento de tipo** na parte inferior do painel esquerdo.  
+-   Para especificar configurações para todos os projetos futuros do SSMA, na **ferramentas** menu, clique em **configurações do projeto padrão**, selecione o tipo de projeto de migração para o qual as configurações são necessárias para ser exibida ou alterada de **Versão de destino de migração** lista suspensa e, em seguida, clique em **mapeamento de tipo** na parte inferior do painel esquerdo.  
   
--   Para especificar as configurações para o projeto atual, no **ferramentas** menu clique **configurações de projeto**e, em seguida, clique em **mapeamento de tipo** na parte inferior do painel esquerdo.  
+-   Para especificar configurações para o projeto atual, nos **ferramentas** menu, clique em **configurações do projeto**e, em seguida, clique em **mapeamento de tipo** na parte inferior do painel esquerdo.  
   
 Para especificar configurações para o objeto atual ou a classe de objetos, use o **mapeamento de tipo** guia na janela principal do SSMA.  
   
 ## <a name="options"></a>Opções  
-A tabela a seguir mostra o **mapeamento de tipo** opções da guia:  
+A tabela a seguir mostra a **mapeamento de tipo** opções da guia:  
   
 **Tipo de Origem**  
 O tipo de dados Oracle mapeado.  
   
 **Tipo de destino**  
-O destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipo de dados para o tipo de dados especificado do Oracle.  
+O destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados para o tipo de dados Oracle especificado.  
   
 Consulte as tabelas na próxima seção para o padrão do SSMA para mapeamentos de tipo Oracle.  
   
 **Adicionar**  
-Clique para adicionar um tipo de dados para a lista de mapeamento.  
+Clique para adicionar um tipo de dados à lista de mapeamento.  
   
 **Editar**  
 Clique para editar o tipo de dados selecionado na lista de mapeamento.  
@@ -51,16 +51,16 @@ Clique para editar o tipo de dados selecionado na lista de mapeamento.
 **Remover**  
 Clique para remover o mapeamento de tipo de dados selecionado da lista de mapeamento.  
   
-**Redefinir para padrão**  
+**Restaurar Padrões**  
 Clique para redefinir a lista de mapeamento de tipo para os padrões do SSMA.  
   
 ## <a name="default-type-mappings"></a>Mapeamentos de tipo padrão  
-SSMA para Oracle, você pode definir mapeamentos de tipo personalizado para argumentos, colunas, variáveis locais e valores de retorno. O mapeamento padrão para argumentos e tipos de retorno é quase idêntico.  
+No SSMA para Oracle, você pode definir mapeamentos de tipo personalizado de argumentos, colunas, variáveis locais e valores de retorno. O mapeamento padrão para argumentos e tipos de retorno é quase idêntico.  
   
 ### <a name="default-argument-type-and-return-value-type-mapping"></a>Tipo de argumento padrão e mapeamento de tipo de valor de retorno  
 A tabela a seguir contém o mapeamento de tipo de dados padrão para argumentos e valores de retorno.  
   
-|Tipo de dados Oracle|Padrão [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipo de dados|  
+|Tipo de dados Oracle|Padrão [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados|  
 |--------------------|-------------------------------------------------------------------------|  
 |BFILE|varbinary(max)|  
 |binary_double|float [53]|  
@@ -84,8 +84,8 @@ A tabela a seguir contém o mapeamento de tipo de dados padrão para argumentos 
 |Long raw|varbinary(max)|  
 |Long raw [\*... 8000]<sup>*</sup>|varbinary[*]|  
 |Long raw [8001...\*]<sup>*</sup>|varbinary(max)|  
-|National char|nvarchar(max)|  
-|variável de caractere nacional|nvarchar(max)|  
+|char nacional|nvarchar(max)|  
+|National char variados|nvarchar(max)|  
 |caracteres nacionais|nvarchar(max)|  
 |variável de caracteres nacionais<sup>**</sup>|nvarchar(max)|  
 |variável de caracteres nacionais<sup>*</sup>|nvarchar(max)|  
@@ -102,12 +102,12 @@ A tabela a seguir contém o mapeamento de tipo de dados padrão para argumentos 
 |SMALLINT|SMALLINT|  
 |cadeia de caracteres|varchar(max)|  
 |timestamp|datetime2|  
-|carimbo de hora com o fuso horário local|datetimeoffset|  
-|carimbo de hora com o fuso horário|datetimeoffset|  
-|Urowid|UNIQUEIDENTIFIER|  
+|carimbo de hora com fuso horário local|datetimeoffset|  
+|carimbo de hora com fuso horário|datetimeoffset|  
+|urowid|UNIQUEIDENTIFIER|  
 |varchar|varchar(max)|  
 |VARCHAR2|varchar(max)|  
-|Tipo XML|xml|  
+|tipo XML|xml|  
   
 <sup>*</sup> Aplica-se para retornar o mapeamento de tipo de valor apenas.  
   
@@ -116,17 +116,17 @@ A tabela a seguir contém o mapeamento de tipo de dados padrão para argumentos 
 ### <a name="default-column-type-mapping"></a>Mapeamento de tipo de coluna padrão  
 A tabela a seguir contém o mapeamento de tipo padrão para colunas.  
   
-|Tipo de dados Oracle|Padrão [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipo de dados|  
+|Tipo de dados Oracle|Padrão [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados|  
 |--------------------|-------------------------------------------------------------------------|  
 |BFILE|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
 |blob|varbinary(max)|  
 |char|char|  
-|variável de char [*... \*]|varchar [*]|  
+|variando de char [*... \*]|varchar [*]|  
 |char [*... \*]|char [*]|  
 |character|char|  
-|variável de caractere [*... \*]|varchar [*]|  
+|a variável de caractere [*... \*]|varchar [*]|  
 |caracteres [*... \*]|char [*]|  
 |CLOB|varchar(max)|  
 |Data|datetime2[0]|  
@@ -147,14 +147,14 @@ A tabela a seguir contém o mapeamento de tipo padrão para colunas.
 |Long raw [*... 8000]|varbinary[*]|  
 |Long raw [8001... *]|varbinary(max)|  
 |Long varchar|varchar(max)|  
-|tempo [*... 8000]|varchar [*]|  
-|tempo [8001... *]|varchar(max)|  
-|National char|NCHAR|  
-|variável de caractere nacional [*... \*]|nvarchar [*]|  
+|Long [*... 8000]|varchar [*]|  
+|Long [8001... *]|varchar(max)|  
+|char nacional|NCHAR|  
+|National char variados [*... \*]|nvarchar [*]|  
 |National char [*... \*]|nchar [*]|  
 |caracteres nacionais|NCHAR|  
-|variável de caractere nacional [*... \*]|nvarchar [*]|  
-|caracteres nacionais [*... \*]|nchar [*]|  
+|a variável de caractere nacional [*... \*]|nvarchar [*]|  
+|caractere nacional [*... \*]|nchar [*]|  
 |NCHAR|NCHAR|  
 |nchar [*]|nchar [*]|  
 |NCLOB|nvarchar(max)|  
@@ -170,21 +170,21 @@ A tabela a seguir contém o mapeamento de tipo padrão para colunas.
 |RowId|UNIQUEIDENTIFIER|  
 |SMALLINT|SMALLINT|  
 |timestamp|datetime2|  
-|carimbo de hora com o fuso horário local|datetimeoffset|  
-|carimbo de hora com o fuso horário local [*... \*]|datetimeoffset[*]|  
-|carimbo de hora com o fuso horário|datetimeoffset|  
-|carimbo de hora com o fuso horário [*... \*]|datetimeoffset[*]|  
+|carimbo de hora com fuso horário local|datetimeoffset|  
+|carimbo de hora com fuso horário local [*... \*]|datetimeoffset[*]|  
+|carimbo de hora com fuso horário|datetimeoffset|  
+|carimbo de hora com fuso horário [*... \*]|datetimeoffset[*]|  
 |carimbo de hora [*... \*]|datetime2[*]|  
-|Urowid|UNIQUEIDENTIFIER|  
+|urowid|UNIQUEIDENTIFIER|  
 |urowid [*... \*]|UNIQUEIDENTIFIER|  
 |varchar [*... \*]|varchar [*]|  
 |VARCHAR2 [*... \*]|varchar [*]|  
-|Tipo XML|xml|  
+|tipo XML|xml|  
   
 ### <a name="default-local-variable-type-mapping"></a>Mapeamento de tipo de variável Local padrão  
 A tabela a seguir contém o mapeamento de tipo padrão para variáveis locais.  
   
-|Tipo de dados Oracle|Padrão [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipo de dados|  
+|Tipo de dados Oracle|Padrão [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados|  
 |--------------------|-------------------------------------------------------------------------|  
 |BFILE|varbinary(max)|  
 |binary_double|float [53]|  
@@ -193,13 +193,13 @@ A tabela a seguir contém o mapeamento de tipo padrão para variáveis locais.
 |Blob|varbinary(max)|  
 |Booliano|bit|  
 |Char|char|  
-|variável de char [*... 8000]|varchar [*]|  
-|variável de char [8001... *]|varchar(max)|  
+|variando de char [*... 8000]|varchar [*]|  
+|variando de char [8001... *]|varchar(max)|  
 |char [*... 8000]|char [*]|  
 |char [8001... *]|varchar(max)|  
 |Caractere|char|  
-|variável de caractere [*... 8000]|varchar [*]|  
-|variável de caractere [8001... *]|varchar(max)|  
+|a variável de caractere [*... 8000]|varchar [*]|  
+|a variável de caractere [8001... *]|varchar(max)|  
 |caracteres [*... 8000]|char [*]|  
 |caracteres [8001... *]|varchar(max)|  
 |CLOB|varchar(max)|  
@@ -221,16 +221,16 @@ A tabela a seguir contém o mapeamento de tipo padrão para variáveis locais.
 |Long raw|varbinary(max)|  
 |Long raw [*... 8000]|varbinary[*]|  
 |Long raw [8001... *]|varbinary(max)|  
-|National char|NCHAR|  
-|variável de caractere nacional [*... 4000]|nvarchar [*]|  
-|variável de caractere nacional [4001... *]|nvarchar(max)|  
+|char nacional|NCHAR|  
+|National char variados [*... 4000]|nvarchar [*]|  
+|National char variados [4001... *]|nvarchar(max)|  
 |National char [*... 4000]|nchar [*]|  
 |National char [4001... *]|nvarchar(max)|  
 |caracteres nacionais|NCHAR|  
-|caracteres nacionais [*... 4000]|nvarchar [*]|  
-|caracteres nacionais [4001... *]|nvarchar(max)|  
-|variável de caractere nacional [*... 4000]|nvarchar [*]|  
-|variável de caractere nacional [4001... *]|nvarchar(max)|  
+|caractere nacional [*... 4000]|nvarchar [*]|  
+|caractere nacional [4001... *]|nvarchar(max)|  
+|a variável de caractere nacional [*... 4000]|nvarchar [*]|  
+|a variável de caractere nacional [4001... *]|nvarchar(max)|  
 |Nchar|NCHAR|  
 |nchar [*... 4000]|nchar [*]|  
 |nchar [4001... *]|nvarchar(max)|  
@@ -255,19 +255,19 @@ A tabela a seguir contém o mapeamento de tipo padrão para variáveis locais.
 |cadeia de caracteres [*... 8000]|varchar [*]|  
 |cadeia de caracteres [8001... *]|varchar(max)|  
 |timestamp|datetime2|  
-|carimbo de hora com o fuso horário local|datetimeoffset|  
-|carimbo de hora com o fuso horário|datetimeoffset|  
-|carimbo de hora com o fuso horário local [*... \*]|datetimeoffset[*]|  
-|carimbo de hora com o fuso horário [*... \*]|datetimeoffset[*]|  
+|carimbo de hora com fuso horário local|datetimeoffset|  
+|carimbo de hora com fuso horário|datetimeoffset|  
+|carimbo de hora com fuso horário local [*... \*]|datetimeoffset[*]|  
+|carimbo de hora com fuso horário [*... \*]|datetimeoffset[*]|  
 |carimbo de hora [*... \*]|datetime2[*]|  
-|Urowid|UNIQUEIDENTIFIER|  
+|urowid|UNIQUEIDENTIFIER|  
 |urowid [*... \*]|UNIQUEIDENTIFIER|  
 |varchar [*... 8000]|varchar [*]|  
 |varchar [8001... *]|varchar(max)|  
 |VARCHAR2 [*... 8000]|varchar [*]|  
 |VARCHAR2 [8001... *]|varcha(max)|  
-|Tipo XML|xml|  
+|tipo XML|xml|  
   
 ## <a name="see-also"></a>Consulte também  
-[Referência da Interface de usuário &#40;OracleToSQL&#41;](../../ssma/oracle/user-interface-reference-oracletosql.md)  
+[Referência da Interface do usuário &#40;OracleToSQL&#41;](../../ssma/oracle/user-interface-reference-oracletosql.md)  
   

@@ -21,14 +21,14 @@ caps.latest.revision: 20
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: be87a57525fb154723443bd1984206b8c72f739e
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 7a67cd1b6678fec80397e8ac31358ae2c6b32e0a
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979489"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40395813"
 ---
-# <a name="working-with-ssma-projects-mysqltosql"></a>Trabalhando com projetos do SSMA (MySQLToSQL)
+# <a name="working-with-ssma-projects-mysqltosql"></a>Trabalhar com projetos do SSMA (MySQLToSQL)
 Para migrar bancos de dados MySQL para o SQL Server ou SQL Azure, você deve primeiro criar um projeto do SSMA. O projeto é um arquivo que contém as seguintes informações:  
   
 -   Metadados sobre os bancos de dados MySQL que você deseja migrar para o SQL Server ou SQL Azure.  
@@ -80,15 +80,15 @@ Para migrar dados de bancos de dados MySQL para o SQL Server ou SQL Azure, você
   
 3.  No **local** caixa, digite ou selecione uma pasta para o projeto.  
   
-4.  No **migração à** lista suspensa, selecione a versão de destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] usado para a migração. As opções disponíveis são:  
+4.  No **migração à** lista suspensa, selecione a versão de destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usado para a migração. As opções disponíveis são:  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
   
     -   Azure SQL DB  
   

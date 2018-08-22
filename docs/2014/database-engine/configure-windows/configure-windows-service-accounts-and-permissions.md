@@ -56,12 +56,12 @@ caps.latest.revision: 182
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4029c7a9b0296b3320342b90f064d0e8f3b3feb3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fd8ff6568129137f4e2167e514732a3b9af7ea8d
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37239876"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40395010"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Configurar contas de serviço e permissões do Windows
   Cada serviço no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] representa um processo ou um conjunto de processos para gerenciar a autenticação das operações do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com o Windows. Este tópico descreve a configuração padrão de serviços nesta versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e as opções de configuração de serviços [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que você pode definir durante e após a instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -184,7 +184,7 @@ ms.locfileid: "37239876"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent|[SERVIÇO DE REDE](#Network_Service)|[Conta virtual](#VA_Desc) <sup>*</sup>|  
 |[!INCLUDE[ssAS](../../includes/ssas-md.md)]|[SERVIÇO DE REDE](#Network_Service)|[Conta virtual](#VA_Desc) <sup>*</sup>|  
 |[!INCLUDE[ssIS](../../includes/ssis-md.md)]|[SERVIÇO DE REDE](#Network_Service)|[Conta virtual](#VA_Desc) <sup>*</sup>|  
-|[!INCLUDE[ssRS](../../includes/ssrs-md.md)]|[SERVIÇO DE REDE](#Network_Service)|[Conta virtual](#VA_Desc) <sup>*</sup>|  
+|[!INCLUDE[ssRS](../../includes/ssrs.md)]|[SERVIÇO DE REDE](#Network_Service)|[Conta virtual](#VA_Desc) <sup>*</sup>|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Controlador Distributed Replay|[SERVIÇO DE REDE](#Network_Service)|[Conta virtual](#VA_Desc) <sup>*</sup>|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Cliente Distributed Replay|[SERVIÇO DE REDE](#Network_Service)|[Conta virtual](#VA_Desc) <sup>*</sup>|  
 |Iniciador FD (Pesquisa de texto completo)|[SERVIÇO LOCAL](#Local_Service)|[Conta Virtual](#VA_Desc)|  
@@ -201,7 +201,7 @@ ms.locfileid: "37239876"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent|Nenhum. Forneça uma conta de [usuário de domínio](#Domain_User) .|Forneça uma conta de [usuário de domínio](#Domain_User) .|  
 |[!INCLUDE[ssAS](../../includes/ssas-md.md)]|Nenhum. Forneça uma conta de [usuário de domínio](#Domain_User) .|Forneça uma conta de [usuário de domínio](#Domain_User) .|  
 |[!INCLUDE[ssIS](../../includes/ssis-md.md)]|[SERVIÇO DE REDE](#Network_Service)|[Conta Virtual](#VA_Desc)|  
-|[!INCLUDE[ssRS](../../includes/ssrs-md.md)]|[SERVIÇO DE REDE](#Network_Service)|[Conta Virtual](#VA_Desc)|  
+|[!INCLUDE[ssRS](../../includes/ssrs.md)]|[SERVIÇO DE REDE](#Network_Service)|[Conta Virtual](#VA_Desc)|  
 |Iniciador FD (Pesquisa de texto completo)|[SERVIÇO LOCAL](#Local_Service)|[Conta Virtual](#VA_Desc)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Navegador|[SERVIÇO LOCAL](#Local_Service)|[SERVIÇO LOCAL](#Local_Service)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gravador VSS|[SISTEMA LOCAL](#Local_System)|[SISTEMA LOCAL](#Local_System)|  
@@ -330,7 +330,7 @@ ms.locfileid: "37239876"
 |**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:**<br /><br /> (Todos os direitos são concedidos ao SID por serviço. Instância padrão: **NT SERVICE\MSSQLSERVER**. Instância nomeada: **NT SERVICE\MSSQL$** InstanceName.)|**Fazer logon como um serviço** (SeServiceLogonRight)<br /><br /> **Substituir um token no nível de processo** (SeAssignPrimaryTokenPrivilege)<br /><br /> **Ignorar a verificação completa** (SeChangeNotifyPrivilege)<br /><br /> **Ajustar quotas de memória para um processo** (SeIncreaseQuotaPrivilege)<br /><br /> Permissão para iniciar o Gravador do SQL<br /><br /> Permissão para ler o serviço Log de Eventos<br /><br /> Permissão para ler o serviço Chamada de Procedimento Remoto|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agente:** <sup>1</sup><br /><br /> (Todos os direitos são concedidos ao SID por serviço. Instância padrão: **NT Service\SQLSERVERAGENT**. Instância nomeada: **NT Service\SQLAGENT$***InstanceName*).|**Fazer logon como um serviço** (SeServiceLogonRight)<br /><br /> **Substituir um token no nível de processo** (SeAssignPrimaryTokenPrivilege)<br /><br /> **Ignorar a verificação completa** (SeChangeNotifyPrivilege)<br /><br /> **Ajustar quotas de memória para um processo** (SeIncreaseQuotaPrivilege)|  
 |**[!INCLUDE[ssAS](../../includes/ssas-md.md)]:**<br /><br /> (Todos os direitos são concedidos a um grupo local do Windows. Instância padrão: **SQLServerMSASUser$***ComputerName***$MSSQLSERVER**. Instância nomeada: **SQLServerMSASUser$***ComputerName***$***InstanceName*. Instância [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]: **SQLServerMSASUser$***ComputerName***$***PowerPivot*).|**Fazer logon como um serviço** (SeServiceLogonRight)<br /><br /> Somente tabular:<br /><br /> **Aumentar conjunto de trabalho de processo** (SeIncreaseWorkingSetPrivilege)<br /><br /> **Ajustar cotas de memória para um processo** (SeIncreaseQuotaSizePrivilege)<br /><br /> **Bloquear páginas na memória** (SeLockMemoryPrivilege): isso é necessário somente quando a paginação está totalmente desativada.<br /><br /> Somente para instalações de cluster de failover:<br /><br /> **Aumentar a prioridade de planejamento** (SeIncreaseBasePriorityPrivilege)|  
-|**[!INCLUDE[ssRS](../../includes/ssrs-md.md)]:**<br /><br /> (Todos os direitos são concedidos ao SID por serviço. Instância padrão: **NT SERVICE\ReportServer**. Instância nomeada: **NT SERVICE\\$ * * * InstanceName*.)|**Fazer logon como um serviço** (SeServiceLogonRight)|  
+|**[!INCLUDE[ssRS](../../includes/ssrs.md)]:**<br /><br /> (Todos os direitos são concedidos ao SID por serviço. Instância padrão: **NT SERVICE\ReportServer**. Instância nomeada: **NT SERVICE\\$ * * * InstanceName*.)|**Fazer logon como um serviço** (SeServiceLogonRight)|  
 |**[!INCLUDE[ssIS](../../includes/ssis-md.md)]:**<br /><br /> (Todos os direitos são concedidos ao SID por serviço. Instância padrão e instância nomeada: **NT SERVICE\MsDtsServer120**. O[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] não tem um processo separado para uma instância nomeada).|**Fazer logon como um serviço** (SeServiceLogonRight)<br /><br /> Permissão para gravar no log de eventos do aplicativo.<br /><br /> **Ignorar a verificação completa** (SeChangeNotifyPrivilege)<br /><br /> **Representar um cliente após autenticação** (SeImpersonatePrivilege)|  
 |**Pesquisa de texto completo:**<br /><br /> (Todos os direitos são concedidos ao SID por serviço. Instância padrão: **NT Service\MSSQLFDLauncher**. Instância nomeada: **NT Service\ MSSQLFDLauncher$***InstanceName*).|**Fazer logon como um serviço** (SeServiceLogonRight)<br /><br /> **Ajustar quotas de memória para um processo** (SeIncreaseQuotaPrivilege)<br /><br /> **Ignorar a verificação completa** (SeChangeNotifyPrivilege)|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Navegador:**<br /><br /> (Todos os direitos são concedidos a um grupo local do Windows. Instância padrão ou nomeada: **SQLServer2005SQLBrowserUser***$ComputerName*. O Navegador do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não tem um processo separado para uma instância nomeada.)|**Fazer logon como um serviço** (SeServiceLogonRight)|  

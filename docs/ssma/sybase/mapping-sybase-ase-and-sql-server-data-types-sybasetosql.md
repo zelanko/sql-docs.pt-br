@@ -19,15 +19,15 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6400c9ef82a9e787cf818f21d06048c02b1d28f3
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 9efd87a25802bd5610393beb4de0728807ea827d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985318"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395020"
 ---
 # <a name="mapping-sybase-ase-and-sql-server-data-types-sybasetosql"></a>Mapear ASE Sybase e tipos de dados do SQL Server (SybaseToSQL)
-Os tipos de banco de dados do Sybase Adaptive Server Enterprise (ASE) variam de [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou tipos de banco de dados do SQL Azure. Quando você converte objetos de banco de dados ASE [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou objetos do SQL Azure, você deve especificar como mapear tipos de dados do ASE para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure. Você pode aceitar os mapeamentos de tipo de dados padrão, ou você pode personalizar os mapeamentos conforme mostrado nas seções a seguir.  
+Os tipos de banco de dados do Sybase Adaptive Server Enterprise (ASE) variam de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou tipos de banco de dados do SQL Azure. Quando você converte objetos de banco de dados ASE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou objetos do SQL Azure, você deve especificar como mapear tipos de dados do ASE para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. Você pode aceitar os mapeamentos de tipo de dados padrão, ou você pode personalizar os mapeamentos conforme mostrado nas seções a seguir.  
   
 ## <a name="default-mappings"></a>Mapeamentos padrão  
 O SSMA tem um conjunto padrão de mapeamentos de tipo de dados. Para obter a lista de mapeamentos padrão, consulte [configurações do projeto &#40;mapeamento de tipo&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-type-mapping-sybasetosql.md).  
@@ -66,7 +66,7 @@ O procedimento a seguir mostra como mapear tipos de dados no projeto, no banco d
   
         Isso lhe permite personalizar o mapeamento de dados maiores e menores valores do mesmo tipo de dados.  
   
-    4.  Sob **tipo de destino**, selecione o destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou tipo de dados do SQL Azure.  
+    4.  Sob **tipo de destino**, selecione o destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou tipo de dados do SQL Azure.  
   
         Alguns tipos exigem um comprimento de tipo de dados de destino. Se for necessário, insira o comprimento de dados novo na **substitua** caixa.  
   
@@ -82,7 +82,7 @@ O procedimento a seguir mostra como mapear tipos de dados no projeto, no banco d
   
         Isso lhe permite personalizar o mapeamento de dados maiores e menores valores do mesmo tipo de dados.  
   
-    4.  Sob **tipo de destino**, selecione o destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou tipo de dados do SQL Azure.  
+    4.  Sob **tipo de destino**, selecione o destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou tipo de dados do SQL Azure.  
   
         Alguns tipos exigem um comprimento de tipo de dados de destino. Se for necessário, insira o comprimento de dados novo na **substitua** caixa e, em seguida, clique em **Okey**.  
   
@@ -95,7 +95,7 @@ O procedimento a seguir mostra como mapear tipos de dados no projeto, no banco d
         Você não pode remover mapeamentos herdados. No entanto, mapeamentos herdados são substituídos pelas mapeamentos personalizados em uma categoria de objeto ou um objeto específico.  
   
 ## <a name="next-steps"></a>Próximas etapas  
-A próxima etapa no processo de migração é para qualquer um dos [criar um relatório de avaliação](http://msdn.microsoft.com/eb996b7c-1eef-4f73-b5e6-2fa6faf7336c) ou [objetos de banco de dados ASE do Sybase converter a sintaxe do SQL Server ou SQL Azure](http://msdn.microsoft.com/509cb65d-2f54-427a-83d7-37919cc4e3e3). Se você criar um relatório de avaliação, os objetos do Sybase ASE são convertidos automaticamente durante a avaliação.  
+A próxima etapa no processo de migração é para qualquer um dos [criar um relatório de avaliação](assessing-sybase-ase-database-objects-for-conversion-sybasetosql.md) ou [objetos de banco de dados ASE do Sybase converter a sintaxe do SQL Server ou SQL Azure](converting-sybase-ase-database-objects-sybasetosql.md). Se você criar um relatório de avaliação, os objetos do Sybase ASE são convertidos automaticamente durante a avaliação.  
   
 ## <a name="see-also"></a>Consulte também  
 [Migrando bancos de dados do Sybase ASE para o SQL Server – BD SQL do Azure &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  

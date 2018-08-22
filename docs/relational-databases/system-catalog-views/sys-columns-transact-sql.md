@@ -25,12 +25,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 5672a062fdab79cf7a903e5dfac2d1f369bd70de
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 88b5f3c402861bb06c854cf31bc411c1e12da079
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39550346"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40394378"
 ---
 # <a name="syscolumns-transact-sql"></a>sys.columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -85,8 +85,8 @@ ms.locfileid: "39550346"
 |encryption_algorithm_name|**sysname**|**Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Nome do algoritmo de criptografia.<br /><br /> AEAD_AES_256_CBC_HMAC_SHA_512 só tem suporte.|  
 |column_encryption_key_id|**int**|**Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> ID da CEK.|  
 |column_encryption_key_database_name|**sysname**|**Aplica-se a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDW_md](../../includes/sssds-md.md)].<br /><br /> O nome do banco de dados onde a chave de criptografia de coluna existe se for diferente do banco de dados da coluna. NULL se a chave existir no mesmo banco de dados da coluna.|  
-|is_hidden|**bit**|**Aplica-se a**: [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Indica se a coluna está oculta:<br /><br /> 0 = a coluna regular, não ocultos, visível<br /><br /> 1 = a coluna oculta|  
-|is_masked|**bit**|**Aplica-se a**: [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Indica se a coluna é mascarada por uma máscara de dados dinâmicos:<br /><br /> 0 = a coluna regular, com máscara não<br /><br /> 1 = coluna é mascarada|  
+|is_hidden|**bit**|**Aplica-se a**: [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Indica se a coluna está oculta:<br /><br /> 0 = a coluna regular, não ocultos, visível<br /><br /> 1 = a coluna oculta|  
+|is_masked|**bit**|**Aplica-se a**: [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Indica se a coluna é mascarada por uma máscara de dados dinâmicos:<br /><br /> 0 = a coluna regular, com máscara não<br /><br /> 1 = coluna é mascarada|  
 
 
  

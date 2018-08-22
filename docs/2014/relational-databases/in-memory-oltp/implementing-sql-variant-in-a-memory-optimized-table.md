@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f17f21df-959d-4e20-92f3-bd707d555a46
@@ -14,12 +13,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f9593683890822babc7a35e057c5edb70cfb4036
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c0535f31daa0cab3fbc4e2aa221a0f7e3209c87f
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37274762"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394597"
 ---
 # <a name="implementing-sqlvariant-in-a-memory-optimized-table"></a>Implementando SQL_VARIANT em uma tabela com otimização de memória
   Considere um exemplo de uma tabela com `SQL_VARIANT` coluna:  

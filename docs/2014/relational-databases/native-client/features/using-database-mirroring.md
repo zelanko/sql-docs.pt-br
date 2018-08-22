@@ -5,7 +5,7 @@ ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology: native-client  - "database-engine" - "docset-sql-devref"
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,12 +21,12 @@ caps.latest.revision: 55
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: df1bd5838df40add7438ef8a9020ce2a753f983f
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 8d3e206f913d13fe4ff030bec1a6024f8d4b339b
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37425705"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396025"
 ---
 # <a name="using-database-mirroring"></a>Usando o espelhamento de banco de dados
     
@@ -35,11 +35,11 @@ ms.locfileid: "37425705"
   
  O espelhamento de banco de dados, apresentado no [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], é uma solução que visa aumentar a disponibilidade do banco de dados e a redundância de dados. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client fornece suporte implícito para espelhamento de banco de dados, portanto, o desenvolvedor não precisa escrever nenhum código nem executar qualquer outra ação depois que ele foi configurado para o banco de dados.  
   
- Banco de dados de espelhamento, que é implementado em uma base por banco de dados, mantém uma cópia de um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] banco de dados de produção em um servidor em espera. Esse servidor é um servidor em espera ativa ou passiva, dependendo da configuração e do estado da sessão de espelhamento de banco de dados. Um servidor em espera ativa dá suporte ao failover rápido sem perda de transações confirmadas, e um servidor em espera passiva dá suporte ao serviço de imposição (com possível perda de dados).  
+ O espelhamento de banco de dados, que é implementado para cada banco de dados, mantém uma cópia de um banco de dados de produção do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em um servidor em espera. Esse servidor é um servidor em espera ativa ou passiva, dependendo da configuração e do estado da sessão de espelhamento de banco de dados. Um servidor em espera ativa dá suporte ao failover rápido sem perda de transações confirmadas, e um servidor em espera passiva dá suporte ao serviço de imposição (com possível perda de dados).  
   
- O banco de dados de produção é chamado de *banco de dados principal*, e a cópia em espera é chamada a *banco de dados espelho*. O banco de dados principal e o banco de dados espelho devem residir em instâncias separadas do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (instâncias de servidor), e eles devem residir em computadores separados se possível.  
+ O banco de dados de produção é chamado de *banco de dados principal*, e a cópia em espera é chamada de *banco de dados espelho*. O banco de dados principal e o banco de dados espelho precisam residir em instâncias separadas do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (instâncias do servidor) e, se possível, em computadores separados.  
   
- A instância de servidor de produção, chamada de *servidor principal*, se comunica com a instância de servidor em espera, chamado de *servidor espelho*. Os servidores principal e espelho atuam como parceiros dentro de um banco de dados de espelhamento *sessão*. Se o servidor principal falhar, o servidor espelho poderá transformar seu banco de dados no banco de dados principal por meio de um processo chamado *failover*. Por exemplo, Parceiro_A e Parceiro_B são dois servidores parceiros, com o banco de dados principal inicialmente no Parceiro_A como servidor principal e o banco de dados espelho residindo no Parceiro_B como o servidor espelho. Se o Parceiro_A ficar offline, o banco de dados no Parceiro_B pode fazer failover para se tornar o banco de dados principal atual. Quando o Parceiro_A ingressar novamente na sessão de espelhamento, ele se tornará o servidor espelho e seu banco de dados se tornará o banco de dados espelho.  
+ A instância do servidor de produção, chamado *servidor principal*, se comunica com a instância do servidor em espera, chamado *servidor espelho*. Os servidores principal e espelho atuam como parceiros dentro de uma *sessão* de espelhamento de banco de dados. Se o servidor principal falhar, o servidor espelho poderá transformar seu banco de dados no banco de dados principal por meio de um processo chamado *failover*. Por exemplo, Parceiro_A e Parceiro_B são dois servidores parceiros, com o banco de dados principal inicialmente no Parceiro_A como servidor principal e o banco de dados espelho residindo no Parceiro_B como o servidor espelho. Se o Parceiro_A ficar offline, o banco de dados no Parceiro_B pode fazer failover para se tornar o banco de dados principal atual. Quando o Parceiro_A ingressar novamente na sessão de espelhamento, ele se tornará o servidor espelho e seu banco de dados se tornará o banco de dados espelho.  
   
  Configurações alternativas de espelhamento de banco de dados oferecem diferentes níveis de desempenho e segurança de dados, e dão suporte a diversas formas de failover. Para obter mais informações, consulte [Espelhamento de banco de dados &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   

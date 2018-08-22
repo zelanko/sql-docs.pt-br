@@ -19,15 +19,15 @@ caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 758d450a9e47605a05cb411d532babfaefe109e1
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: c51bc4e86c14fa1f7f45818f8ca18f751c8cd892
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34779292"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395819"
 ---
 # <a name="creating-the-server-connection-files-sybasetosql"></a>Criar os arquivos de Conexão de servidor (SybaseToSQL)
-Informações do servidor podem ser especificadas na seção de servidores do arquivo de script ou em um arquivo de conexão de servidor separado. O parâmetro de linha de comando para o arquivo de conexão de servidor é, `-c <serverconnectionfile>`. Se a mesma id de servidor estiver presente no arquivo de script e no arquivo de conexão de servidor, a definição de servidor no arquivo de script é considerada.  
+Informações do servidor podem ser especificadas na seção de servidores do arquivo de script ou em um arquivo de conexão de servidor separado. O parâmetro de linha de comando para o arquivo de conexão de servidor é, `-c <serverconnectionfile>`. Se a mesma id de servidor estiver presente no arquivo de script e no arquivo de conexão do servidor, a definição de servidor no arquivo de script é considerada.  
   
 **Exemplo:**  
   
@@ -109,11 +109,11 @@ Informações do servidor podem ser especificadas na seção de servidores do ar
 ```  
   
 ## <a name="server-connection-file-validation"></a>Validação do arquivo de Conexão de servidor  
-O usuário facilmente possa validar o arquivo de conexão de servidor no arquivo de definição de esquema **S2SSConsoleScriptServersSchema.xsd** disponíveis na pasta 'Esquemas'.  
+O usuário pode validar com facilidade seu arquivo de conexão de servidor contra o arquivo de definição de esquema **S2SSConsoleScriptServersSchema.xsd** disponível na pasta "Esquemas".  
   
 ## <a name="next-step"></a>Próxima etapa  
-A próxima etapa no operando o console é [executando o Console SSMA &#40;SybaseToSQL&#41;](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)  
+É a próxima etapa no operando o console [executar o Console do SSMA &#40;SybaseToSQL&#41;](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)  
   
 ## <a name="see-also"></a>Consulte também  
-[Executar o console do SSMA](http://msdn.microsoft.com/en-us/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  
+[Executar o console do SSMA](executing-the-ssma-console-sybasetosql.md)  
   

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 294975b7-e7d1-491b-b66a-fdb1100d2acc
@@ -14,12 +13,12 @@ caps.latest.revision: 9
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e93ade38a2c90edba1551f1128571f0a7d5533aa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 532f764aea94c63b9ad4638eb7e80734c69f79c0
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37260802"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395014"
 ---
 # <a name="restore-and-recovery-of-memory-optimized-tables"></a>Restauração e recuperação de tabelas com otimização de memória
   O mecanismo básico para recuperar ou restaurar um banco de dados com tabelas com otimização de memória é semelhante a bancos de dados com apenas tabelas baseadas em disco. Mas, de modo diferente das tabelas baseadas em disco, as tabelas com otimização de memória devem ser carregadas na memória antes que o banco de dados seja disponibilizado para o acesso de usuários. Isso adiciona uma nova etapa na recuperação do banco de dados. As etapas modificadas na recuperação do banco de dados são alteradas como segue:  

@@ -22,17 +22,17 @@ caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c2d4284f32030339a5c60e211b911c5e7cd783b9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 3875cb5805478013ec5ddd6944174a522028b02d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257323"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396213"
 ---
 # <a name="spdeletejobsteplog-transact-sql"></a>sp_delete_jobsteplog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Remove todos os logs de etapa de trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent especificados com os argumentos. Use este procedimento armazenado para manter o **sysjobstepslogs** tabela o **msdb** banco de dados.  
+  Remove todos os logs de etapa de trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent especificados com os argumentos. Use este procedimento armazenado para manter o **sysjobstepslogs** na tabela a **msdb** banco de dados.  
   
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -49,23 +49,23 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 ## <a name="arguments"></a>Argumentos  
  [  **@job_id =**] **'***job_id***'**  
- O número de identificação do trabalho que contém o log de etapas do trabalho a ser removido. *job_id* é **int**, com um padrão NULL.  
+ O número de identificação do trabalho que contém o log de etapas do trabalho a ser removido. *job_id* está **int**, com um padrão NULL.  
   
  [  **@job_name =**] **'***job_name***'**  
- O nome do trabalho. *job_name* é **sysname**, com um padrão NULL.  
+ O nome do trabalho. *job_name* está **sysname**, com um padrão NULL.  
   
-> **Observação:** ou *job_id* ou *job_name* devem ser especificados, mas não é possível especificar ambos.  
+> **Observação:** ambos *job_id* ou *job_name* deve ser especificado, mas não podem ser especificados.  
   
  [  **@step_id =**] *step_id*  
- O número de identificação da etapa no trabalho para o qual o log da etapa de trabalho deve ser excluído. Se não estiver incluído, todos os logs de etapa de trabalho do trabalho são excluídos, a menos que **@older_than** ou **@larger_than** são especificados. *step_id* é **int**, com um padrão NULL.  
+ O número de identificação da etapa no trabalho para o qual o log da etapa de trabalho deve ser excluído. Se não estiver incluído, todos os logs de etapa de trabalho no trabalho são excluídos, a menos que **@older_than** ou **@larger_than** são especificados. *step_id* está **int**, com um padrão NULL.  
   
  [  **@step_name =**] **'***step_name***'**  
- O nome da etapa no trabalho para o qual o log da etapa de trabalho deve ser excluído. *step_name* é **sysname**, com um padrão NULL.  
+ O nome da etapa no trabalho para o qual o log da etapa de trabalho deve ser excluído. *step_name* está **sysname**, com um padrão NULL.  
   
-> **Observação:** ou *step_id* ou *step_name* podem ser especificados, mas não é possível especificar ambos.  
+> **Observação:** ambos *step_id* ou *step_name* pode ser especificado, mas não podem ser especificados.  
   
  [  **@older_than =**] **'***data***'**  
- A data e hora do log de etapa de trabalho mais antigo a ser mantido. Todos os logs de etapa de trabalho mais antigos do que essa data e hora são removidos. *data* é **datetime**, com um padrão NULL. Ambos **@older_than** e **@larger_than** pode ser especificado.  
+ A data e hora do log de etapa de trabalho mais antigo a ser mantido. Todos os logs de etapa de trabalho mais antigos do que essa data e hora são removidos. *data* está **datetime**, com um padrão NULL. Ambos **@older_than** e **@larger_than** pode ser especificado.  
   
  [  **@larger_than =**] **'***size_in_bytes***'**  
  O tamanho em bytes do maior log de etapa de trabalho a ser mantido. Todos os logs de etapa de trabalho maiores que esse serão removidos. Ambos **@larger_than** e **@older_than** pode ser especificado.  
@@ -74,12 +74,12 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma  
+ None  
   
 ## <a name="remarks"></a>Remarks  
  **sp_delete_jobsteplog** está no **msdb** banco de dados.  
   
- Se nenhum argumento exceto **@job_id** ou **@job_name** forem especificados, todos os logs de etapa de trabalho para o trabalho especificado serão excluídos.  
+ Se nenhum argumento, exceto **@job_id** ou **@job_name** forem especificados, todos os logs de etapa de trabalho para o trabalho especificado serão excluídos.  
   
 ## <a name="permissions"></a>Permissões  
  Por padrão, os membros da função de servidor fixa **sysadmin** podem executar este procedimento armazenado. Deve ser concedida a outros usuários uma das seguintes funções de banco de dados fixas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no banco de dados **msdb** :  
@@ -90,9 +90,9 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 -   **SQLAgentOperatorRole**  
   
- Para obter detalhes sobre as permissões dessas funções, consulte [Funções de banco de dados fixas do SQL Server Agent](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Para obter detalhes sobre as permissões dessas funções, consulte [Funções de banco de dados fixas do SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Somente membros da **sysadmin** pode excluir um log de etapa de trabalho que pertence a outro usuário.  
+ Somente os membros da **sysadmin** pode excluir um log de etapa de trabalho que pertence a outro usuário.  
   
 ## <a name="examples"></a>Exemplos  
   

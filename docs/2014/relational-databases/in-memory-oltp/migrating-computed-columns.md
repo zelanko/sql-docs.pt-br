@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 64a9eade-22c3-4a9d-ab50-956219e08df1
@@ -14,12 +13,12 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b63ecb4574e4a24886517efa2cb3bfd76d76420b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3e9b39283abf22dca32cfe8c0ea9c17a7310bbbe
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37324376"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394179"
 ---
 # <a name="migrating-computed-columns"></a>Criando colunas computadas
   As colunas computadas não têm suporte em tabelas com otimização de memória. No entanto, você pode simular uma coluna computada.  

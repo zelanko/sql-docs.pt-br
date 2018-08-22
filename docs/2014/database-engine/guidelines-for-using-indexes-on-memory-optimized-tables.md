@@ -5,8 +5,7 @@ ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ca4c8ea603df8b57cfb0bb603500ee1ffd74758
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 51c68f8d566948dd1fc1583ff36650366f50169b
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37263382"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394388"
 ---
 # <a name="guidelines-for-using-indexes-on-memory-optimized-tables"></a>Diretrizes para usar índices em tabelas com otimização de memória
   Os índices são usados para acessar dados com eficiência nas tabelas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Especificar os índices certos pode melhorar significativamente o desempenho da consulta. Considere, por exemplo, a consulta:  

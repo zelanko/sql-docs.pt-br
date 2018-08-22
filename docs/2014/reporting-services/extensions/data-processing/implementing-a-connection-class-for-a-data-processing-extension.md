@@ -19,21 +19,21 @@ caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9be8bc7507cad3a44b4330cc3c49a00abc1953e0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: aeb429ce455856c9438b0a45053edce7e0c1bdcf
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37309336"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40395614"
 ---
 # <a name="implementing-a-connection-class-for-a-data-processing-extension"></a>Implementando uma classe Connection para uma extensão de processamento de dados
   O objeto **Connection** representa uma conexão de banco de dados ou recurso semelhante e é o ponto de partida para usuários de uma extensão de processamento de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Ele representa as conexões com servidores de banco de dados, embora qualquer entidade com comportamento semelhante possa ser exposta como uma **Connection**.  
   
  Para implementar um objeto **Connection**, crie uma classe que implementa <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> e que, opcionalmente, implementa <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension>.  
   
- Em sua implementação, você deve garantir que uma conexão seja criada e aberta antes que comandos possam ser executados. Garanta que a sua implementação exija que os clientes abram e fechem conexões explicitamente, em vez de fazer com que ela abra e feche conexões de forma implícita para o cliente. Execute as suas verificações de segurança quando a conexão for obtida. A exigência de uma conexão existente para as outras classes da sua extensão de processamento de dados [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] garantirá que essas verificações de segurança sejam sempre executadas quando você estiver trabalhando com a sua fonte de dados.  
+ Em sua implementação, você deve garantir que uma conexão seja criada e aberta antes que comandos possam ser executados. Garanta que a sua implementação exija que os clientes abram e fechem conexões explicitamente, em vez de fazer com que ela abra e feche conexões de forma implícita para o cliente. Execute as suas verificações de segurança quando a conexão for obtida. A exigência de uma conexão existente para as outras classes da sua extensão de processamento de dados [!INCLUDE[ssRS](../../../includes/ssrs.md)] garantirá que essas verificações de segurança sejam sempre executadas quando você estiver trabalhando com a sua fonte de dados.  
   
- As propriedades da conexão desejada são representadas como uma cadeia de conexão. É altamente recomendável que as extensões de processamento de dados [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] deem suporte à propriedade <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection.ConnectionString%2A> usando o sistema de pares de nome/valor familiar definido por OLE DB.  
+ As propriedades da conexão desejada são representadas como uma cadeia de conexão. É altamente recomendável que as extensões de processamento de dados [!INCLUDE[ssRS](../../../includes/ssrs.md)] deem suporte à propriedade <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection.ConnectionString%2A> usando o sistema de pares de nome/valor familiar definido por OLE DB.  
   
 > [!NOTE]  
 >  Os objetos **Connection** costumam fazer uso intensivo de recursos para sua obtenção e, portanto, é recomendável considerar o pool de conexões ou outras técnicas para atenuar isso.  

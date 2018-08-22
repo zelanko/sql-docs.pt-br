@@ -22,12 +22,12 @@ caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 788afc8121948fa628cd9e0d2e1162464357dbc6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5c1ec7f73e6fefadb9e73ca8295afb858f6d1d6a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238346"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394385"
 ---
 # <a name="spattachschedule-transact-sql"></a>sp_attach_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,22 +48,22 @@ sp_attach_schedule
   
 ## <a name="arguments"></a>Argumentos  
  [ **@job_id=** ] *job_id*  
- O número de identificação do trabalho para o qual a agenda é adicionada. *job_id*é **uniqueidentifier**, com um padrão NULL.  
+ O número de identificação do trabalho para o qual a agenda é adicionada. *job_id*está **uniqueidentifier**, com um padrão NULL.  
   
  [  **@job_name =** ] **'***job_name***'**  
- O nome do trabalho ao qual a agenda é adicionada. *job_name*é **sysname**, com um padrão NULL.  
+ O nome do trabalho ao qual a agenda é adicionada. *job_name*está **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
->  O *job_id* ou *job_name* devem ser especificados, mas não é possível especificar ambos.  
+>  Qualquer um dos *job_id* ou *job_name* deve ser especificado, mas não podem ser especificados.  
   
  [  **@schedule_id =** ] *schedule_id*  
- O número de identificação da agenda a ser definida para o trabalho. *schedule_id*é **int**, com um padrão NULL.  
+ O número de identificação da agenda a ser definida para o trabalho. *schedule_id*está **int**, com um padrão NULL.  
   
  [  **@schedule_name =** ] **'***schedule_name***'**  
- O nome da agenda a ser definida para o trabalho. *schedule_name*é **sysname**, com um padrão NULL.  
+ O nome da agenda a ser definida para o trabalho. *schedule_name*está **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
->  O *schedule_id* ou *schedule_name* devem ser especificados, mas não é possível especificar ambos.  
+>  Qualquer um dos *schedule_id* ou *schedule_name* deve ser especificado, mas não podem ser especificados.  
   
 ## <a name="remarks"></a>Remarks  
  A agenda e o trabalho devem ter o mesmo proprietário.  
@@ -83,7 +83,7 @@ sp_attach_schedule
   
  Observe que o proprietário do trabalho pode anexar e desanexar o trabalho de uma agenda sem precisar ser também o proprietário da agenda. No entanto, uma agenda não pode ser excluída se a desanexação deixá-la sem trabalhos, a menos que o chamador seja o proprietário da agenda.  
   
- Para obter detalhes sobre as permissões dessas funções, consulte [Funções de banco de dados fixas do SQL Server Agent](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Para obter detalhes sobre as permissões dessas funções, consulte [Funções de banco de dados fixas do SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verifica se o usuário possui o trabalho e a agenda.  
   

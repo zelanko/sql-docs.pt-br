@@ -5,8 +5,7 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 14106cc9-816b-493a-bcb9-fe66a1cd4630
@@ -14,12 +13,12 @@ caps.latest.revision: 12
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6b18989012a733d39dca843f475ec23e99893d0c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 021bab292e56b9ead1164cd3933efa6c02eb7ee4
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37246887"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395640"
 ---
 # <a name="the-memory-optimized-filegroup"></a>O grupo de arquivos com otimização de memória
   Para criar tabelas com otimização de memória, você deve primeiro criar um grupo de arquivos com otimização de memória. O grupo de arquivos com otimização de memória retém um ou mais contêineres. Cada contêiner contém arquivos de dados ou arquivos delta, ou então ambos.  

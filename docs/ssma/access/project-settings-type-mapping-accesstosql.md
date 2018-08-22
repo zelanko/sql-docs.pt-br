@@ -23,15 +23,15 @@ caps.latest.revision: 16
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 0403c7074df0f81081cda167fe9bbf04626f2522
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 4f1d6ce53d09c120784505245ac903a6f3833920
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985738"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394807"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>Configurações do projeto (mapeamento de tipo) (AccessToSQL)
-As configurações de mapeamento de tipo de projeto permitem que você definir mapeamentos de tipo padrão para o projeto do SSMA. Você também pode especificar mapeamentos de tipo para objetos de banco de dados individuais. Para obter mais informações, consulte [tipos de dados de destino e origem do mapeamento](http://msdn.microsoft.com/b362a075-16e7-423f-b63f-e1e9f02844a9).  
+As configurações de mapeamento de tipo de projeto permitem que você definir mapeamentos de tipo padrão para o projeto do SSMA. Você também pode especificar mapeamentos de tipo para objetos de banco de dados individuais. Para obter mais informações, consulte [tipos de dados de destino e origem do mapeamento](mapping-source-and-target-data-types-accesstosql.md).  
   
 Mapeamento de tipo está disponível na **configurações do projeto** e **configurações do projeto padrão** caixas de diálogo:  
   
@@ -44,7 +44,7 @@ Mapeamento de tipo está disponível na **configurações do projeto** e **confi
 O tipo de dados do Access para mapear.  
   
 **Tipo de destino**  
-O destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou tipo de dados do SQL Azure para o tipo de dados de acesso especificado.  
+O destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou tipo de dados do SQL Azure para o tipo de dados de acesso especificado.  
   
 A tabela a seguir mostra o mapeamento padrão entre os tipos de dados de origem e destino.  
   
@@ -76,10 +76,10 @@ Clique para editar um tipo de dados na lista de mapeamento.
 **Remover**  
 Clique para remover o mapeamento de tipo de dados selecionado da lista de mapeamento.  
   
-**Redefinir para padrão**  
+**Restaurar Padrões**  
 Clique para redefinir todos os mapeamentos de tipo de dados para os padrões do SSMA.  
   
 ## <a name="see-also"></a>Consulte também  
-[Mapeamento de tipo de dados de destino e de origem](http://msdn.microsoft.com/b362a075-16e7-423f-b63f-e1e9f02844a9)  
+[Mapeamento de tipo de dados de destino e de origem](mapping-source-and-target-data-types-accesstosql.md)  
 [Reference(Access) de Interface do usuário](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

@@ -22,12 +22,12 @@ caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6165d86e2a086ef52e627451e613b021296082d9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: ff9c148455fd1e917b63ecae69a9bf977d69a280
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252944"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393997"
 ---
 # <a name="sphelpjobcount-transact-sql"></a>sp_help_jobcount (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ sp_help_jobcount
   
 ## <a name="arguments"></a>Argumentos  
  [  **@schedule_id=** ] *schedule_id*  
- O identificador da agenda a ser listado. *schedule_id* é **int**, sem padrão. O *schedule_id* ou *schedule_name* pode ser especificado.  
+ O identificador da agenda a ser listado. *schedule_id* está **int**, sem padrão. Qualquer um dos *schedule_id* ou *schedule_name* pode ser especificado.  
   
  [  **@schedule_name=** ] **'***schedule_name***'**  
- O nome da agenda a ser listada. *schedule_name* é **sysname**, sem padrão. O *schedule_id* ou *schedule_name* pode ser especificado.  
+ O nome da agenda a ser listada. *schedule_name* está **sysname**, sem padrão. Qualquer um dos *schedule_id* ou *schedule_name* pode ser especificado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -60,7 +60,7 @@ sp_help_jobcount
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**JobCount**|**Int**|Número de trabalhos para a agenda especificada.|  
+|**JobCount**|**int**|Número de trabalhos para a agenda especificada.|  
   
 ## <a name="remarks"></a>Remarks  
  Este procedimento lista o número de trabalhos anexados à agenda especificada.  
@@ -74,9 +74,9 @@ sp_help_jobcount
   
 -   **SQLAgentOperatorRole**  
   
- Para obter detalhes sobre as permissões dessas funções, consulte [Funções de banco de dados fixas do SQL Server Agent](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Para obter detalhes sobre as permissões dessas funções, consulte [Funções de banco de dados fixas do SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Somente membros da **sysadmin** pode exibir contagens de trabalhos pertencentes a outros usuários.  
+ Somente os membros da **sysadmin** pode exibir contagens de trabalhos pertencem a terceiros.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir lista o número de trabalhos anexados à agenda `NightlyJobs`.  

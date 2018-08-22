@@ -16,15 +16,15 @@ caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6d1bb94b040aee5ba1db6870edc71e3153a3c7a4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a5af0cf91842df82fbe4ef5d6147779619aaf717
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37165707"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395220"
 ---
 # <a name="task-12-adding-derived-column-transform-to-add-columns-required-by-mds"></a>Tarefa 12: Adicionando a Transformação Coluna Derivada para adicionar as colunas necessárias pelo MDS
-  Nesta tarefa, você adiciona a Transformação Coluna Derivada ao fluxo de dados. Você adiciona duas colunas derivadas, **ImportType** e **BatchTag**, para os registros passados a essa transformação. Você deve adicionar essas colunas antes de carregar os dados nas tabelas de preparo no MDS. Esses duas colunas são necessárias para as tabelas de preparo no MDS. Ver [tabelas de preparo de membros folha](http://msdn.microsoft.com/library/ee633854.aspx) para obter mais detalhes.  
+  Nesta tarefa, você adiciona a Transformação Coluna Derivada ao fluxo de dados. Você adiciona duas colunas derivadas, **ImportType** e **BatchTag**, para os registros passados a essa transformação. Você deve adicionar essas colunas antes de carregar os dados nas tabelas de preparo no MDS. Esses duas colunas são necessárias para as tabelas de preparo no MDS. Ver [tabelas de preparo de membros folha](../master-data-services/leaf-member-staging-table-master-data-services.md) para obter mais detalhes.  
   
 1.  Arrastar e soltar **transformação coluna derivada** de **comuns** seção os **caixa de ferramentas do SSIS** para o **de fluxo de dados** guia.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "37165707"
   
      ![Janela de variáveis do SSIS](../../2014/tutorials/media/et-addingdcttoaddcolumnsrequiredbymds-02.jpg "janela variáveis do SSIS")  
   
-7.  Tipo de **ImportType** para o **nome** e **2** para o **valor**. Você especifica o valor como 2 porque deseja adicionar novos membros a uma entidade no MDS. Para obter detalhes sobre esse parâmetro, consulte [tabela de preparo de membros folha](http://msdn.microsoft.com/library/ee633854.aspx).  
+7.  Tipo de **ImportType** para o **nome** e **2** para o **valor**. Você especifica o valor como 2 porque deseja adicionar novos membros a uma entidade no MDS. Para obter detalhes sobre esse parâmetro, consulte [tabela de preparo de membros folha](../master-data-services/leaf-member-staging-table-master-data-services.md).  
   
 8.  Clique em **Adicionar variável** botão da barra de ferramentas novamente.  
   

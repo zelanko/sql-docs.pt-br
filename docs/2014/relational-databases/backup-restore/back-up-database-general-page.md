@@ -15,12 +15,12 @@ caps.latest.revision: 59
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 025d5eac30815b6d9110dcca7214e7e88412a23d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8930abc8ead43bed31d53ed8e412d5d367b6051c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37290952"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395423"
 ---
 # <a name="back-up-database-general-page"></a>Backup do banco de dados (página Geral)
   Use a página **Geral** da caixa de diálogo **Backup de Banco de Dados** para exibir ou modificar as configurações de uma operação de backup de banco de dados.  
@@ -37,7 +37,7 @@ ms.locfileid: "37290952"
 -   [Criar um backup diferencial de banco de dados &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md)  
   
     > [!IMPORTANT]  
-    >  Você pode definir um plano de manutenção de banco de dados para criar backups de banco de dados. Para obter mais informações, consulte [Planos de manutenção do banco de dados](http://msdn.microsoft.com/library/ms187658.aspx) nos Manuais Online do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .  
+    >  Você pode definir um plano de manutenção de banco de dados para criar backups de banco de dados. Para obter mais informações, consulte [Planos de manutenção do banco de dados](../maintenance-plans/maintenance-plans.md) nos Manuais Online do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .  
   
  **Para criar um backup parcial**  
   

@@ -2,7 +2,7 @@
 title: Executar o Assistente de migração de dados da linha de comando (SQL Server) | Microsoft Docs
 description: Saiba como executar o Assistente de migração de dados da linha de comando para avaliar os bancos de dados do SQL Server para a migração
 ms.custom: ''
-ms.date: 09/01/2017
+ms.date: 08/18/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -18,12 +18,12 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.openlocfilehash: 6b364dc03d48cbc1c0487362712e10f7ab0b782e
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: b1435aa321d4bebbfd2747dbb634845eeeb6e137
+ms.sourcegitcommit: 61212c06b56953ce2e2627d35f7bd69cda786540
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37785457"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40395222"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>Executar o Assistente de migração de dados da linha de comando
 Com a versão 2.1 e posterior, quando você instala o Assistente de migração de dados, ele também instalará dmacmd.exe na *% ProgramFiles %\\Assistente de migração de dados da Microsoft\\*. Use dmacmd.exe para avaliar seus bancos de dados em um modo autônomo e o resultado para o arquivo CSV ou JSON de saída. Esse método é especialmente útil ao avaliar vários bancos de dados ou bancos de dados grandes. 
@@ -32,7 +32,7 @@ Com a versão 2.1 e posterior, quando você instala o Assistente de migração d
 > Dmacmd.exe dá suporte à execução apenas para avaliações. Não há suporte para migrações no momento.
 
 
-## <a name="command-line-arguments"></a>Argumentos de linha de comando
+## <a name="assessments-using-the-command-line-interface-cli"></a>Avaliações usando a Interface de linha de comando (CLI)
 
 ```
 DmaCmd.exe /AssessmentName="string"
@@ -42,7 +42,6 @@ DmaCmd.exe /AssessmentName="string"
 \[/AssessmentOverwriteResult\]
 /AssessmentResultJson="file"|/AssessmentResultCsv="file"
 ```
-
 
 |Argumento  |Description  | Obrigatório (S/N)
 |---------|---------|---------------|
@@ -58,15 +57,14 @@ DmaCmd.exe /AssessmentName="string"
 |`/AssessmentResultCsv`    | Caminho completo para o arquivo de resultado CSV   | S <br>(AssessmentResultJson ou AssessmentResultCsv é necessária)
 
 
-
-
-## <a name="examples"></a>Exemplos
+## <a name="examples-of-assessments-using-the-cli"></a>Exemplos de avaliações usando a CLI
 
 **Dmacmd.exe**
 
   `Dmacmd.exe /? or DmaCmd.exe /help`
 
 **Avaliação de banco de dados único usando regras de compatibilidade de autenticação e a execução do Windows**
+
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment"
@@ -75,8 +73,6 @@ Catalog=DatabaseName;***Integrated Security=true*"**
 ***/AssessmentEvaluateCompatibilityIssues*** /AssessmentOverwriteResult
 /AssessmentResultJson="C:\\temp\\Results\\AssessmentReport.json"
 ```
-
-
 
 **Avaliação de banco de dados único usando a recomendação de recurso de autenticação e a execução do SQL Server**
 
@@ -87,7 +83,6 @@ Catalog=DatabaseName;***User Id=myUsername;Password=myPassword;***"
 ***/AssessmentEvaluateRecommendations*** /AssessmentOverwriteResult
 /AssessmentResultCsv="C:\\temp\\Results\\AssessmentReport.csv"
 ```
-
 
 **Avaliação do banco de dados único para a plataforma de destino SQL Server 2012, salvar resultados em arquivo. JSON e. csv**
 
@@ -101,7 +96,6 @@ Catalog=DatabaseName;Integrated Security=true"
 ***/AssessmentResultCsv***="C:\\temp\\Results\\AssessmentReport.csv"
 ```
 
-
 **Avaliação de banco de dados de único para a plataforma de destino de banco de dados do SQL Azure, salvar resultados em arquivo. JSON e. csv**
 
 ```
@@ -114,7 +108,6 @@ Catalog=DatabaseName;Integrated Security=true"
 /AssessmentResultCsv="C:\\temp\\AssessmentReport.csv" 
 /AssessmentResultJson="C:\\temp\\AssessmentReport.json"
 ```
-
 
 **Avaliação de vários bancos de dados**
 
@@ -131,8 +124,116 @@ Catalog=DatabaseName3;Integrated Security=true"***
 /AssessmentResultJson="C:\\Results\\test2016.json"
 ```
 
+## <a name="azure-sql-database-sku-recommendations-using-the-cli"></a>Recomendações de SKU do banco de dados SQL do Azure usando a CLI
 
+```
+.\DmaCmd.exe /Action=SkuRecommendation
+/SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"
+/SkuRecommendationTsvOutputResultsFilePath="C:\TestOut\prices.tsv"
+/SkuRecommendationJsonOutputResultsFilePath="C:\TestOut\prices.json"
+/SkuRecommendationOutputResultsFilePath="C:\TestOut\prices.html"
+/SkuRecommendationCurrencyCode=USD
+/SkuRecommendationOfferName=MS-AZR-0044p
+/SkuRecommendationRegionName=UKWest
+/SkuRecommendationSubscriptionId=<Your Subscription Id>
+/AzureAuthenticationInteractiveAuthentication=true
+/AzureAuthenticationClientId=<Your AzureAuthenticationClientId>
+/AzureAuthenticationTenantId=<Your AzureAuthenticationTenantId>
+```
+
+```
+.\DmaCmd.exe /Action=SkuRecommendation
+/SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"
+/SkuRecommendationTsvOutputResultsFilePath="C:\TestOut\prices.tsv"
+/SkuRecommendationJsonOutputResultsFilePath="C:\TestOut\prices.json"
+/SkuRecommendationOutputResultsFilePath="C:\TestOut\prices.html"
+/SkuRecommendationPreventPriceRefresh=true 
+```
+
+|Argumento  |Description  | Obrigatório (S/N)
+|---------|---------|---------------|
+|`/Action=SkuRecommendation` | Executar avaliação de SKU usando a linha de comando DMA | S
+|`/SkuRecommendationInputDataFilePath`  | Caminho completo para o arquivo de contador de desempenho coletado do computador que hospeda seus bancos de dados |    S
+|`/SkuRecommendationTsvOutputResultsFilePath`   | Caminho completo para o arquivo de resultado TSV |    S <br>(O caminho do arquivo TSV ou JSON ou HTML é necessário)
+|`/SkuRecommendationJsonOutputResultsFilePath`  | Caminho completo para o arquivo de resultado JSON |   S <br>(O caminho do arquivo TSV ou JSON ou HTML é necessário)
+|`/SkuRecommendationHtmlResultsFilePath` |  Caminho completo para o arquivo de resultado HTML | S <br>(O caminho do arquivo TSV ou JSON ou HTML é necessário)
+|`/SkuRecommendationPreventPriceRefresh` |  Impede que o preço de atualização ocorra. Use se executando no modo offline. |    S <br>(Esse argumento é selecionado para preços estáticos ou todos os argumentos abaixo precisam ser selecionado para obter os preços mais recentes)
+|`/SkuRecommendationCurrencyCode` | A moeda na qual exibir os preços (por exemplo "US") | S <br>(Se você deseja obter os preços mais recentes)
+|`/SkuRecommendationOfferName` |    A oferta de nome (por exemplo "MS-AZR - 0003P"). Para obter mais informações, consulte o [detalhes da oferta do Microsoft Azure](https://azure.microsoft.com/support/legal/offer-details/) página. |   S <br>(Se você deseja obter os preços mais recentes)
+|`/SkuRecommendationRegionName` |   A região (por exemplo, nomeie "Oeste dos EUA") |   S <br>(Se você deseja obter os preços mais recentes)
+|`/SkuRecommendationSubscriptionId` | A ID da assinatura. |    S <br>(Se você deseja obter os preços mais recentes)
+|`/AzureAuthenticationTenantId` | O locatário de autenticação. |  S <br>(Se você deseja obter os preços mais recentes)
+|`/AzureAuthenticationClientId` | A ID do cliente do aplicativo AAD usado para autenticação. | S <br>(Se você deseja obter os preços mais recentes)
+|`/AzureAuthenticationInteractiveAuthentication`    | Defina como verdadeiro para a janela pop-up. |   S <br>(Se você deseja obter os preços mais recentes) <br>(Escolha uma das opções de 3 autenticação - opção 1)
+|`/AzureAuthenticationCertificateStoreLocation` | Definido como o repositório de certificados local (por exemplo "CurrentUser"). | S <br>(Se você deseja obter os preços mais recentes) <br>(Escolha uma das opções de 3 autenticação - opção 2)
+|`/AzureAuthenticationCertificateThumbprint`    | Definido como a impressão digital do certificado. | S <br>(Se você deseja obter os preços mais recentes) <br>(Escolha uma das opções de 3 autenticação - opção 2)
+|`/AzureAuthenticationToken` |  Defina como o token de certificado. | S <br>(Se você deseja obter os preços mais recentes) <br>(Escolha uma das opções de 3 autenticação - opção 3)
+
+## <a name="examples-of-sku-assessments-using-the-cli"></a>Exemplos de avaliações de SKU usando a CLI
+
+**Dmacmd.exe**
+
+  `Dmacmd.exe /? or DmaCmd.exe /help`
+
+**Recomendações de SKU do banco de dados SQL do Azure com a atualização de preço (get preços mais recentes) - autenticação interativa** 
+```
+.\DmaCmd.exe /Action=SkuRecommendation
+/SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"
+/SkuRecommendationTsvOutputResultsFilePath="C:\TestOut\prices.tsv"
+/SkuRecommendationJsonOutputResultsFilePath="C:\TestOut\prices.json"
+/SkuRecommendationOutputResultsFilePath="C:\TestOut\prices.html"
+/SkuRecommendationCurrencyCode=USD
+/SkuRecommendationOfferName=MS-AZR-0044p
+/SkuRecommendationRegionName=UKWest
+/SkuRecommendationSubscriptionId=<Your Subscription Id>
+/AzureAuthenticationClientId=<Your AzureAuthenticationClientId>
+/AzureAuthenticationTenantId=<Your AzureAuthenticationTenantId>
+/AzureAuthenticationInteractiveAuthentication=true 
+```
+
+**Recomendações de SKU do banco de dados SQL do Azure com a atualização de preço (get preços mais recentes) - autenticação de certificado**
+```
+.\DmaCmd.exe /Action=SkuRecommendation
+/SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"
+/SkuRecommendationTsvOutputResultsFilePath="C:\TestOut\prices.tsv"
+/SkuRecommendationJsonOutputResultsFilePath="C:\TestOut\prices.json"
+/SkuRecommendationOutputResultsFilePath="C:\TestOut\prices.html"
+/SkuRecommendationCurrencyCode=USD
+/SkuRecommendationOfferName=MS-AZR-0044p
+/SkuRecommendationRegionName=UKWest
+/SkuRecommendationSubscriptionId=<Your Subscription Id>
+/AzureAuthenticationClientId=<Your AzureAuthenticationClientId>
+/AzureAuthenticationTenantId=<Your AzureAuthenticationTenantId>
+/AzureAuthenticationCertificateStoreLocation=<Your Certificate Store Location>
+/AzureAuthenticationCertificateThumbprint=<Your Certificate Thumbprint>  
+```
+
+**O Token de recomendações de SKU do banco de dados SQL do Azure com a atualização de preço (get preços mais recentes) - autenticação**  
+```
+.\DmaCmd.exe /Action=SkuRecommendation
+/SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"
+/SkuRecommendationTsvOutputResultsFilePath="C:\TestOut\prices.tsv"
+/SkuRecommendationJsonOutputResultsFilePath="C:\TestOut\prices.json"
+/SkuRecommendationOutputResultsFilePath="C:\TestOut\prices.html"
+/SkuRecommendationCurrencyCode=USD
+/SkuRecommendationOfferName=MS-AZR-0044p
+/SkuRecommendationRegionName=UKWest
+/SkuRecommendationSubscriptionId=<Your Subscription Id>
+/AzureAuthenticationClientId=<Your AzureAuthenticationClientId>
+/AzureAuthenticationTenantId=<Your AzureAuthenticationTenantId>
+/AzureAuthenticationToken=<Your Authentication Token> 
+```
+
+**Recomendações de SKU do banco de dados SQL do Azure sem a atualização de preço (preços estática de uso)** 
+```
+.\DmaCmd.exe /Action=SkuRecommendation
+/SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"
+/SkuRecommendationTsvOutputResultsFilePath="C:\TestOut\prices.tsv"
+/SkuRecommendationJsonOutputResultsFilePath="C:\TestOut\prices.json"
+/SkuRecommendationOutputResultsFilePath="C:\TestOut\prices.html"
+/SkuRecommendationPreventPriceRefresh=true  
+```
 
 ## <a name="see-also"></a>Confira também
-
-[Download de Assistente de migração de dados](https://www.microsoft.com/download/details.aspx?id=53595)
+- [Assistente de migração de dados](https://aka.ms/get-dma) baixar.
+- O artigo [identificar a SKU certa de banco de dados de SQL do Azure para seu banco de dados local](https://aka.ms/dma-sku-recommend-sqldb).

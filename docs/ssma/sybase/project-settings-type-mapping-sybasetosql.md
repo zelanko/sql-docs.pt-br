@@ -1,5 +1,5 @@
 ---
-title: Configurações (mapeamento de tipo) do projeto (SybaseToSQL) | Microsoft Docs
+title: Configurações do projeto (mapeamento de tipo) (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,33 +16,33 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d0a2f1d6883afc093162e97fc30d39881655544e
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: b0c4e2743c4169bd7626ca66c9d9dba609facdaa
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34779442"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40395198"
 ---
-# <a name="project-settings-type-mapping-sybasetosql"></a>Configurações (mapeamento de tipo) do projeto (SybaseToSQL)
-A página mapeamento de tipo do **configurações de projeto** caixa de diálogo contém configurações que personalizam como o SSMA converte tipos de dados do Sybase Adaptive Server Enterprise (ASE) em [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipos de dados.  
+# <a name="project-settings-type-mapping-sybasetosql"></a>Configurações do projeto (mapeamento de tipo) (SybaseToSQL)
+A página de mapeamento de tipo de **configurações do projeto** caixa de diálogo contém configurações que personalizam como SSMA converte tipos de dados do Sybase Adaptive Server Enterprise (ASE) em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de dados.  
   
-A mapeamento de tipo de página está disponível na **configurações de projeto** e **configurações de projeto padrão** caixas de diálogo.  
+A página mapeamento de tipo está disponível na **configurações do projeto** e **configurações do projeto padrão** caixas de diálogo.  
   
--   Para especificar as configurações de mapeamento de tipo para todos os projetos futuros do SSMA, no **ferramentas** menu, selecione **configurações de projeto padrão**, selecione o tipo de projeto de migração para o qual as configurações são necessárias para ser exibido ou alterado de **versão de destino de migração** lista suspensa e, em seguida, selecione **mapeamento de tipo** na parte inferior do painel esquerdo.  
+-   Para especificar as configurações de mapeamento de tipo para todos os projetos futuros do SSMA, na **ferramentas** menu, selecione **configurações do projeto padrão**, selecione o tipo de projeto de migração para o qual as configurações são necessárias para ser exibido ou alterado de **versão de destino de migração** lista suspensa e, em seguida, selecione **mapeamento de tipo** na parte inferior do painel esquerdo.  
   
--   Para especificar as configurações para o projeto atual, no **ferramentas** menu, selecione **configurações de projeto**e, em seguida, selecione **mapeamento de tipo** na parte inferior do painel esquerdo.  
+-   Para especificar configurações para o projeto atual, nos **ferramentas** menu, selecione **configurações do projeto**e, em seguida, selecione **mapeamento de tipo** na parte inferior do painel esquerdo.  
   
 ## <a name="options"></a>Opções  
 **Tipo de Origem**  
 O tipo de dados ASE mapeado.  
   
 **Tipo de destino**  
-O destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipo de dados para o tipo de dados ASE especificado.  
+O destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados para o tipo de dados especificado do ASE.  
   
 Consulte a tabela na seção a seguir para o padrão do SSMA para Sybase mapeamento de tipo.  
   
 **Adicionar**  
-Clique para adicionar um tipo de dados para a lista de mapeamento.  
+Clique para adicionar um tipo de dados à lista de mapeamento.  
   
 **Editar**  
 Clique para editar o tipo de dados selecionado na lista de mapeamento.  
@@ -50,13 +50,13 @@ Clique para editar o tipo de dados selecionado na lista de mapeamento.
 **Remover**  
 Clique para remover o mapeamento de tipo de dados selecionado da lista de mapeamento.  
   
-**Redefinir para padrão**  
+**Restaurar Padrões**  
 Clique para redefinir a lista de mapeamento de tipo para os padrões do SSMA.  
   
 ## <a name="default-type-mapping"></a>Mapeamento de tipo padrão  
-A tabela a seguir contém o mapeamento de tipo padrão entre ASE e [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipos de dados.  
+A tabela a seguir contém o mapeamento de tipo padrão entre o ASE e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de dados.  
   
-|Tipo de dados ASE|Tipo de dados do SQL Server|  
+|Tipo de dados do ASE|Tipo de dados do SQL Server|  
 |-----------------|------------------------|  
 |**bigint**|**bigint**|  
 |**binary**|**binary**|  
@@ -65,14 +65,14 @@ A tabela a seguir contém o mapeamento de tipo padrão entre ASE e [!INCLUDE[ssN
 |**bit**|**bit**|  
 |**char**|**char**|  
 |**char varying**|**varchar**|  
-|**variável de char [\*... 8000]**|**varchar[\*]**|  
-|**variável de char [8001...\*]**|**varchar(max)**|  
+|**variando de char [\*... 8000]**|**varchar[\*]**|  
+|**variando de char [8001...\*]**|**varchar(max)**|  
 |**char [\*... 8000]**|**char[\*]**|  
 |**char[8001..\*;]**|**varchar(max)**|  
 |**character**|**char**|  
-|**variável de caractere**|**varchar**|  
-|**variável de caractere [\*... 8000]**|**varchar[\*]**|  
-|**variável de caractere [8001...\*]**|**varchar(max)**|  
+|**a variável de caractere**|**varchar**|  
+|**a variável de caractere [\*... 8000]**|**varchar[\*]**|  
+|**a variável de caractere [8001...\*]**|**varchar(max)**|  
 |**caracteres [\*... 8000]**|**char[\*]**|  
 |**caracteres [8001...\*]**|**varchar(max)**|  
 |**date**|**date**|  
@@ -86,31 +86,31 @@ A tabela a seguir contém o mapeamento de tipo padrão entre ASE e [!INCLUDE[ssN
 |**precisão dupla**|**float[53]**|  
 |**float**|**float[53]**|  
 |**float [\*... 15]**|**float[24]**|  
-|**float [16 …\*]**|**float[53]**|  
+|**float [16...\*]**|**float[53]**|  
 |**image**|**image**|  
 |**int**|**int**|  
 |**inteiro**|**int**|  
 |**longsysname**|**nvarchar[255]**|  
 |**money**|**money**|  
-|**National char**|**nchar**|  
+|**char nacional**|**nchar**|  
 |**National char [\*... 4000]**|**nchar[\*]**|  
-|**variável de caractere nacional**|**nvarchar**|  
-|**variável de caractere nacional [\*... 4000]**|**nvarchar[\*]**|  
-|**variável de caractere nacional [4001.\*]**|**nvarchar(max)**|  
-|**National char [4001.\*]**|**nvarchar(max)**|  
+|**National char variados**|**nvarchar**|  
+|**National char variados [\*... 4000]**|**nvarchar[\*]**|  
+|**National char variados [4001...\*]**|**nvarchar(max)**|  
+|**National char [4001...\*]**|**nvarchar(max)**|  
 |**caracteres nacionais**|**nchar**|  
-|**caracteres nacionais [\*... 4000]**|**nchar[\*]**|  
-|**caracteres nacionais [4001.\*]**|**nvarchar(max)**|  
-|**variável de caracteres nacionais**|**nvarchar**|  
-|**variável de caractere nacional [\*... 4000]**|**nvarchar[\*]**|  
-|**variável de caractere nacional [4001.\*]**|**nvarchar(max)**|  
+|**caractere nacional [\*... 4000]**|**nchar[\*]**|  
+|**caractere nacional [4001...\*]**|**nvarchar(max)**|  
+|**a variável de caracteres nacionais**|**nvarchar**|  
+|**a variável de caractere nacional [\*... 4000]**|**nvarchar[\*]**|  
+|**a variável de caractere nacional [4001...\*]**|**nvarchar(max)**|  
 |**varchar nacional**|**nvarchar**|  
-|**National varchar [\*... 4000]**|**nvarchar[\*]**|  
-|**National varchar [4001.\*]**|**nvarchar(max)**|  
+|**varchar nacional [\*... 4000]**|**nvarchar[\*]**|  
+|**varchar nacional [4001...\*]**|**nvarchar(max)**|  
 |**nchar**|**nchar**|  
 |**nchar variados**|**nvarchar**|  
 |**nchar variados [\*... 4000]**|**nvarchar[\*]**|  
-|**nchar variados [4001.\*]**|**nvarchar(max)**|  
+|**nchar variados [4001...\*]**|**nvarchar(max)**|  
 |**nchar [\*... 4000]**|**nchar[\*]**|  
 |**nchar[4001..\*]**|**nvarchar(max)**|  
 |**numeric**|**numeric**|  
@@ -131,18 +131,18 @@ A tabela a seguir contém o mapeamento de tipo padrão entre ASE e [!INCLUDE[ssN
 |**tinyint**|**tinyint**|  
 |**unichar**|**nchar**|  
 |**UNICHAR variados**|**nvarchar**|  
-|**variável UNICHAR [\*... 4000]**|**nvarchar[\*]**|  
-|**variável UNICHAR [4001.\*]**|**nvarchar(max)**|  
+|**variando UNICHAR [\*... 4000]**|**nvarchar[\*]**|  
+|**variando UNICHAR [4001...\*]**|**nvarchar(max)**|  
 |**unichar[\*..4000]**|**nchar[\*]**|  
 |**unichar[4001..\*]**|**nvarchar(max)**|  
 |**unitext**|**nvarchar(max)**|  
 |**univarchar**|**nvarchar**|  
 |**univarchar[\*..4000]**|**nvarchar[\*]**|  
 |**univarchar[4001..\*]**|**nvarchar(max)**|  
-|**bigint não assinado**|**numeric[20][0]**|  
-|**int não assinado**|**bigint**|  
+|**bigint sem sinal**|**numeric[20][0]**|  
+|**int sem sinal**|**bigint**|  
 |**smallint não assinado**|**int**|  
-|**tinyint não assinado**|**tinyint**|  
+|**tinyint sem sinal**|**tinyint**|  
 |**varbinary**|**varbinary**|  
 |**varbinary [\*... 8000]**|**varbinary[\*]**|  
 |**varbinary[8001..\*]**|**varbinary(max)**|  

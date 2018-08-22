@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f2528e74-2b1c-48cb-861b-c4e57b51ac35
@@ -14,12 +13,12 @@ caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ce9b8660fa52d2a09302b51b0f95e368071caa4d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9470064571a8e9ab7d63c7d07456552b8cfb4d88
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37228176"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395021"
 ---
 # <a name="implementing-the-or-operator-in-natively-compiled-stored-procedures"></a>Implementando o operador OR em procedimentos armazenados compilados de modo nativo
   Não há suporte para os operadores OR nos predicados de consulta em procedimentos armazenados compilados de modo nativo. Como também não há suporte para os operadores NOT nos predicados de consulta em procedimentos armazenados compilados de modo nativo, os efeitos dos operadores OR não podem ser simulados apenas através do uso de operadores lógicos equivalentes. No entanto, os efeitos de um operador OR podem ser simulados com variáveis de tabela com otimização de memória.  

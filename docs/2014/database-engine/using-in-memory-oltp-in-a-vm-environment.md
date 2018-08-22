@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 27ec7eb3-3a24-41db-aa65-2f206514c6f9
@@ -14,12 +13,12 @@ caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e048f54a3ba3824981c1561c7f2308571e72c450
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 44b495c59a52648052808eb1bc618b8d0ab89463
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37180313"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395018"
 ---
 # <a name="using-in-memory-oltp-in-a-vm-environment"></a>Usando OLTP na Memória em um Ambiente de VM
   A virtualização do servidor pode ajudá-lo a diminuir os custos operacionais e de capital com a TI, e atingir uma maior eficiência de TI com processos de provisionamento de aplicativo, manutenção, disponibilidade e backup/recuperação aprimorados. Com os avanços tecnológicos recentes, as cargas de trabalho de banco de dados complexas podem mais ser prontamente consolidadas usando a virtualização. Este tópico sobre as práticas recomendadas para usar o [!INCLUDE[hek_1](../includes/hek-1-md.md)] em um ambiente virtualizado.  

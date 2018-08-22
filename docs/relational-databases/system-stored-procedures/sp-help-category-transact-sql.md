@@ -22,12 +22,12 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3e131d1152c3deb2debf78a59686365b85953530
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: a84cde301cf3c3db39f8df1999b9e4c39416c324
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254878"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396221"
 ---
 # <a name="sphelpcategory-transact-sql"></a>sp_help_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,28 +48,28 @@ sp_help_category [ [ @class = ] 'class' ]
   
 ## <a name="arguments"></a>Argumentos  
  [  **@class=**] **'***classe***'**  
- A classe sobre a qual as informações são solicitadas. *classe* é **varchar(8)**, com um valor padrão de **trabalho**. *classe* pode ser um destes valores.  
+ A classe sobre a qual as informações são solicitadas. *classe* está **varchar(8)**, com um valor padrão de **trabalho**. *classe* pode ser um destes valores.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**JOB**|Fornece informações sobre uma categoria de trabalho.|  
 |**ALERTA**|Fornece informações sobre uma categoria de alerta.|  
 |**OPERADOR**|Fornece informações sobre uma categoria de operador.|  
   
  [  **@type=** ] **'***tipo***'**  
- O tipo de categoria para a qual as informações são solicitadas. *tipo* é **varchar(12)**, com um padrão NULL, e pode ser um destes valores.  
+ O tipo de categoria para a qual as informações são solicitadas. *tipo de* está **varchar(12)**, com um padrão de NULL, e pode ser um destes valores.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**LOCAL**|Categoria de trabalho local.|  
 |**MULTI-SERVER**|Categoria de trabalho multisservidor.|  
 |**NONE**|Categoria de uma classe diferente de **trabalho**.|  
   
  [ **@name=** ] **'***name***'**  
- O nome da categoria para a qual as informações são solicitadas. *nome* é **sysname**, com um padrão NULL.  
+ O nome da categoria para a qual as informações são solicitadas. *nome da* está **sysname**, com um padrão NULL.  
   
  [ **@suffix=** ] *suffix*  
- Especifica se o **category_type** coluna no conjunto de resultados é uma ID ou um nome. *sufixo* é **bit**, com um padrão de **0**. **1** mostra o **category_type** como um nome, e **0** mostra como uma ID.  
+ Especifica se o **category_type** coluna no conjunto de resultados é uma ID ou um nome. *sufixo* está **bit**, com um padrão de **0**. **1** mostra a **category_type** como um nome, e **0** mostra como uma ID.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -79,7 +79,7 @@ sp_help_category [ [ @class = ] 'class' ]
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**category_id**|**Int**|ID da categoria|  
+|**category_id**|**int**|ID da categoria|  
 |**category_type**|**tinyint**|Tipo de categoria:<br /><br /> **1** = Local<br /><br /> **2** = multisservidor<br /><br /> **3** = nenhum|  
 |**name**|**sysname**|Nome da categoria|  
   
@@ -87,7 +87,7 @@ sp_help_category [ [ @class = ] 'class' ]
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**category_id**|**Int**|ID da categoria|  
+|**category_id**|**int**|ID da categoria|  
 |**category_type**|**sysname**|Tipo de categoria. Um dos **LOCAL**, **MULTISSERVIDOR**, ou **NONE**|  
 |**name**|**sysname**|Nome da categoria|  
   
@@ -105,7 +105,7 @@ sp_help_category [ [ @class = ] 'class' ]
   
 -   **SQLAgentOperatorRole**  
   
- Para obter detalhes sobre as permissões dessas funções, consulte [Funções de banco de dados fixas do SQL Server Agent](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Para obter detalhes sobre as permissões dessas funções, consulte [Funções de banco de dados fixas do SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
 ## <a name="examples"></a>Exemplos  
   

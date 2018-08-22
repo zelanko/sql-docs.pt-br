@@ -22,17 +22,17 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0957fff641ef4306d66c3ee4a233062503008b9e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5f8ce4b84dc7fd8e049cc9fafd71995dfb09bca7
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261676"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395424"
 ---
 # <a name="sphelpjobsteplog-transact-sql"></a>sp_help_jobsteplog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Retorna metadados sobre um determinado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log de etapa de trabalho do Agent. **sp_help_jobsteplog** não retorna o log real.  
+  Retorna metadados sobre um determinado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log de etapa de trabalho do agente. **sp_help_jobsteplog** não retorna o log real.  
 
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -48,19 +48,19 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 ## <a name="arguments"></a>Argumentos  
  [  **@job_id =**] **'***job_id***'**  
- O número de identificação do trabalho para o qual as informações do log de etapas de trabalho serão retornadas. *job_id* é **int**, com um padrão NULL.  
+ O número de identificação do trabalho para o qual as informações do log de etapas de trabalho serão retornadas. *job_id* está **int**, com um padrão NULL.  
   
  [  **@job_name =**] **'***job_name***'**  
- O nome do trabalho. *job_name* é **sysname**, com um padrão NULL.  
+ O nome do trabalho. *job_name* está **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
->  O *job_id* ou *job_name* devem ser especificados, mas não é possível especificar ambos.  
+>  Qualquer um dos *job_id* ou *job_name* deve ser especificado, mas não podem ser especificados.  
   
  [  **@step_id =**] *step_id*  
- O número de identificação da etapa no trabalho. Se não for incluído, todas as etapas do trabalho serão incluídas. *step_id* é **int**, com um padrão NULL.  
+ O número de identificação da etapa no trabalho. Se não for incluído, todas as etapas do trabalho serão incluídas. *step_id* está **int**, com um padrão NULL.  
   
  [  **@step_name =**] **'***step_name***'**  
- O nome da etapa no trabalho. *step_name* é **sysname**, com um padrão NULL.  
+ O nome da etapa no trabalho. *step_name* está **sysname**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -71,7 +71,7 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|Identificador exclusivo do trabalho.|  
 |**job_name**|**sysname**|Nome do trabalho.|  
-|**step_id**|**Int**|Identificador da etapa no trabalho. Por exemplo, se a etapa é a primeira etapa no trabalho, seu *step_id* é 1.|  
+|**step_id**|**int**|Identificador da etapa no trabalho. Por exemplo, se a etapa é a primeira etapa no trabalho, sua *step_id* é 1.|  
 |**step_name**|**sysname**|Nome da etapa no trabalho.|  
 |**step_uid**|**uniqueidentifier**|Identificador exclusivo da etapa (gerado pelo sistema) no trabalho.|  
 |**date_created**|**datetime**|Data em que a etapa foi criada.|  
@@ -91,9 +91,9 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 -   **SQLAgentOperatorRole**  
   
- Para obter detalhes sobre as permissões dessas funções, consulte [Funções de banco de dados fixas do SQL Server Agent](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Para obter detalhes sobre as permissões dessas funções, consulte [Funções de banco de dados fixas do SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Membros de **SQLAgentUserRole** só pode exibir metadados de log de etapa de trabalho para etapas de trabalho que eles possuem.  
+ Os membros **SQLAgentUserRole** só podem exibir metadados do log de etapa de trabalho para etapas de trabalho que eles possuem.  
   
 ## <a name="examples"></a>Exemplos  
   

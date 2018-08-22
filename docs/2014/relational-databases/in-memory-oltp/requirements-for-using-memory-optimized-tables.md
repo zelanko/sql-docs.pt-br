@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 applies_to:
@@ -16,12 +15,12 @@ caps.latest.revision: 53
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f4b47ee3a3f4274ca94175060f10722fa45b6693
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 66edebe05c59ca8bcb0d755f3e6d530718cf1388
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37190386"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395426"
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>Requisitos para usar tabelas com otimização de memória
   Além de [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md), estes são os requisitos para usar o OLTP na memória:  
@@ -56,7 +55,7 @@ ms.locfileid: "37190386"
   
 -   Se você tentar excluir um lote grande de linhas enquanto há uma inserção ou atualização de carga de trabalho simultânea afetando o intervalo de linhas que você está tentando excluir, a exclusão poderá falhar. A solução alternativa é interromper a inserção ou atualização da carga de trabalho antes de fazer a exclusão. Como alternativa, você pode configurar a transação em transações menores, que seriam menos prováveis de serem corrompidas por uma carga de trabalho simultânea. Como com todas as operações de gravação em tabelas com otimização de memória, use a lógica de repetição ([Guidelines for Retry Logic para transações em tabelas com otimização de memória](../../database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)).  
   
--   Se você criar um ou vários bancos de dados com tabelas com otimização de memória, deverá habilitar a inicialização imediata de arquivo (conceda à conta de inicialização do serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o direito de usuário SE_MANAGE_VOLUME_NAME) para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Sem a inicialização imediata de arquivo, os arquivos de armazenamento com otimização de memória (arquivos delta e de dados) serão inicializados após a criação, que pode ter um impacto negativo no desempenho de sua carga de trabalho. Para obter mais informações sobre a inicialização imediata de arquivo, consulte [Inicialização de arquivo de banco de dados](http://msdn.microsoft.com/library/ms175935\(SQL.105\).aspx). Para obter informações sobre como habilitar a inicialização imediata de arquivo, consulte [Como e por que habilitar a inicialização imediata de arquivo](http://blogs.msdn.com/b/sql_pfe_blog/archive/2009/12/23/how-and-why-to-enable-instant-file-initialization.aspx).  
+-   Se você criar um ou vários bancos de dados com tabelas com otimização de memória, deverá habilitar a inicialização imediata de arquivo (conceda à conta de inicialização do serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o direito de usuário SE_MANAGE_VOLUME_NAME) para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Sem a inicialização imediata de arquivo, os arquivos de armazenamento com otimização de memória (arquivos delta e de dados) serão inicializados após a criação, que pode ter um impacto negativo no desempenho de sua carga de trabalho. Para obter mais informações sobre a inicialização imediata de arquivo, consulte [Inicialização de arquivo de banco de dados](../databases/database-instant-file-initialization.md). Para obter informações sobre como habilitar a inicialização imediata de arquivo, consulte [Como e por que habilitar a inicialização imediata de arquivo](http://blogs.msdn.com/b/sql_pfe_blog/archive/2009/12/23/how-and-why-to-enable-instant-file-initialization.aspx).  
   
 ## <a name="did-this-article-help-you-were-listening"></a>Este artigo foi útil para você? Estamos atentos  
  Quais são as informações que você está procurando? Você as localizou? Estamos atentos aos seus comentários para aprimorar o conteúdo. Envie seus comentários para [ sqlfeedback@microsoft.com ](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Requirements%20for%20Using%20Memory-Optimized%20Tables%20page).  

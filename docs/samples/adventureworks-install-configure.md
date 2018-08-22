@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 64fddcbfeee147b9588ade7ec20999ebe853edcf
-ms.sourcegitcommit: ad297e041f0b7c65aa0bf7f4be8073d204977d9b
+ms.openlocfilehash: 5b098d59bfbc30d5273e46ccef24b62fcb82dbf8
+ms.sourcegitcommit: b91c0a7e981749758bd38e47a530d4e7bf1c5dd9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/09/2018
-ms.locfileid: "37923618"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "40394573"
 ---
 # <a name="adventureworks-installation-and-configuration"></a>Configuração e instalação de AdventureWorks
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,8 +59,8 @@ Links diretos para as versões do Data Warehouse do AdventureWorks podem ser enc
 ## <a name="creation-scripts"></a>Scripts de criação
 Os scripts abaixo pode ser usado para criar todo banco de dados AdventureWorks, independentemente da versão. 
 
-- [Zip de Scripts do AdventureWorks OLTP](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorkDW-oltp-install-script.zip)
-- [Zip de Scripts do AdventureWorks DW](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorkDW-data-warehouse-install-script.zip)
+- [Zip de Scripts do AdventureWorks OLTP](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorks-oltp-install-script.zip)
+- [Zip de Scripts do AdventureWorks DW](https://github.com/Microsoft/sql-server-samples/releases/download/adventureworks/AdventureWorksDW-data-warehouse-install-script.zip)
 
 ## <a name="install-to-sql-server"></a>Instalar o SQL Server
 

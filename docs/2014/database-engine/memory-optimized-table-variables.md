@@ -5,8 +5,7 @@ ms.date: 07/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: bd102e95-53e2-4da6-9b8b-0e4f02d286d3
@@ -14,12 +13,12 @@ caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b1ec91cf243fbaa131ca85e7585e448ddb93f36f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c7f86328234ab251c50ab4ac68b02bd039b653da
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37157067"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396443"
 ---
 # <a name="memory-optimized-table-variables"></a>Variáveis de tabela com otimização de memória
   Além disso, para tabelas com otimização de memória (para acesso eficiente a dados) e nativamente compilado procedimentos armazenados (para processamento eficiente de consulta e execução de lógica de negócios) [!INCLUDE[hek_2](../includes/hek-2-md.md)] apresenta um terceiro tipo de objeto: o tipo de tabela com otimização de memória. Uma variável de tabela criada usando um tipo de tabela com otimização de memória é uma variável de tabela com otimização de memória.  

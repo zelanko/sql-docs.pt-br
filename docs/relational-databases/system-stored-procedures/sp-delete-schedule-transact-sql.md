@@ -22,12 +22,12 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 14fd520f5447092e5f82dc786696148f3dbe3bd3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0a531b3673320e3c1e521e68c511e21b7976d1af
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255940"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395409"
 ---
 # <a name="spdeleteschedule-transact-sql"></a>sp_delete_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,14 +46,14 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
   
 ## <a name="arguments"></a>Argumentos  
  [  **@schedule_id=** ] *schedule_id*  
- O número de identificação da agenda a ser excluída. *schedule_id* é **int**, com um padrão NULL.  
+ O número de identificação da agenda a ser excluída. *schedule_id* está **int**, com um padrão NULL.  
   
-> **Observação:** ou *schedule_id* ou *schedule_name* devem ser especificados, mas não é possível especificar ambos.  
+> **Observação:** ambos *schedule_id* ou *schedule_name* deve ser especificado, mas não podem ser especificados.  
   
  [  **@schedule_name=** ] **'***schedule_name***'**  
- O nome da agenda a ser excluída. *schedule_name* é **sysname**, com um padrão NULL.  
+ O nome da agenda a ser excluída. *schedule_name* está **sysname**, com um padrão NULL.  
   
-> **Observação:** ou *schedule_id* ou *schedule_name* devem ser especificados, mas não é possível especificar ambos.  
+> **Observação:** ambos *schedule_id* ou *schedule_name* deve ser especificado, mas não podem ser especificados.  
   
  [ **@force_delete** =] *force_delete*  
  Especifica se o procedimento deve falhar se a agenda estiver anexada a um trabalho. *Force_delete* é bit, com um padrão de **0**. Quando *force_delete* é **0**, o procedimento armazenado falhará se a agenda estiver anexada a um trabalho. Quando *force_delete* é **1**, a agenda será excluída, independentemente se a agenda estiver anexada a um trabalho.  
@@ -62,7 +62,7 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma  
+ None  
   
 ## <a name="remarks"></a>Remarks  
  Por padrão, uma agenda não poderá ser excluída se estiver anexada a um trabalho. Para excluir uma agenda que é anexada a um trabalho, especifique um valor de **1** para *force_delete*. A exclusão de uma agenda não para trabalhos que estejam atualmente em execução.  
@@ -78,9 +78,9 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
   
  Observe que o proprietário do trabalho pode anexar e desanexar o trabalho de uma agenda sem precisar ser também o proprietário da agenda. No entanto, uma agenda não pode ser excluída se a desanexação deixá-la sem trabalhos, a menos que o chamador seja o proprietário da agenda.  
   
- Para obter detalhes sobre as permissões dessas funções, consulte [Funções de banco de dados fixas do SQL Server Agent](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Para obter detalhes sobre as permissões dessas funções, consulte [Funções de banco de dados fixas do SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Somente membros do **sysadmin** função pode excluir uma agenda de trabalho que pertence a outro usuário.  
+ Somente os membros dos **sysadmin** função pode excluir uma agenda de trabalho que pertence a outro usuário.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -110,7 +110,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Implementar trabalhos](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)   
+ [Implementar trabalhos](../../ssms/agent/implement-jobs.md)   
  [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)  
   
   

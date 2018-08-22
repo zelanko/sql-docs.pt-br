@@ -1,6 +1,6 @@
 ---
 title: Exibições do sistema - Analytics Platform System Parallel Data Warehouse | Microsoft Docs
-description: Exibições de sistema para sistema de plataforma analítica (APS) SQL Server Parallel Data Warehouse (PDW).
+description: Exibições do sistema para análise Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -9,15 +9,15 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 35cf9252b43fd4ec52b81cd02fa1e7e777bdbe93
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: a34cf2aca18febea578da0dfd78b492f48842d29
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31539606"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395016"
 ---
-# <a name="system-views-for-analytics-platform-system-parallel-data-warehouse"></a>Exibições do sistema para análise de plataforma de sistema Parallel Data Warehouse
-Exibições de sistema para sistema de plataforma analítica (APS) SQL Server Parallel Data Warehouse (PDW).
+# <a name="system-views-for-analytics-platform-system-parallel-data-warehouse"></a>Exibições do sistema para o Analytics Platform System Parallel Data Warehouse
+Exibições do sistema para análise Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
 
 ## <a name="parallel-data-warehouse-catalog-views"></a>Exibições de catálogo do Parallel Data Warehouse
 * [sys.pdw_column_distribution_properties](http://msdn.microsoft.com/library/mt204022.aspx)
@@ -57,8 +57,8 @@ Exibições de sistema para sistema de plataforma analítica (APS) SQL Server Pa
 * [sys.dm_pdw_wait_stats](http://msdn.microsoft.com/library/mt203909.aspx)
 * [sys.dm_pdw_waits](http://msdn.microsoft.com/library/mt203909.aspx)
 
-## <a name="sql-server-dmvs-applicable-to-parallel-data-warehouse"></a>Aplicável a Parallel Data Warehouse do SQL Server DMVs
-As DMVs a seguir são aplicáveis ao Parallel Data Warehouse, mas deve ser executadas por meio da conexão para o **mestre** banco de dados.
+## <a name="sql-server-dmvs-applicable-to-parallel-data-warehouse"></a>DMVs do SQL Server aplicáveis ao Parallel Data Warehouse
+As DMVs a seguir são aplicáveis ao Parallel Data Warehouse, mas devem ser executadas conectando-se para o **mestre** banco de dados.
 
 * [sys.database_service_objectives](../relational-databases/system-catalog-views/sys-database-service-objectives-azure-sql-database.md)
 * [sys.dm_operation_status](../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)
@@ -130,17 +130,17 @@ As DMVs a seguir são aplicáveis ao Parallel Data Warehouse, mas deve ser execu
 * [sys.types](http://msdn.microsoft.com/library/ms188021.aspx)
 * [sys.views](http://msdn.microsoft.com/library/ms190334.aspx)
 
-## <a name="sql-server-dmvs-available-in-parallel-data-warehouse"></a>SQL Server DMVs disponíveis no Parallel Data Warehouse
-Parallel Data Warehouse expõe muitas das exibições de gerenciamento dinâmico do SQL Server (DMVs). Essas exibições, quando consultada no Parallel Data Warehouse, estão relatando o estado dos bancos de dados do SQL Server em execução nas distribuições.
+## <a name="sql-server-dmvs-available-in-parallel-data-warehouse"></a>DMVs do SQL Server disponíveis no Parallel Data Warehouse
+Parallel Data Warehouse expõe muitas das exibições de gerenciamento dinâmico (DMVs) do SQL Server. Essas exibições, quando consultada no Parallel Data Warehouse, estão comunicando o estado dos bancos de dados do SQL Server em execução nas distribuições.
 
-Cada um desses DMV tem uma coluna específica chamada pdw_node_id. Este é o identificador para o nó de computação. 
+Cada um desses DMV tem uma coluna específica, chamada pdw_node_id. Esse é o identificador de nó de computação. 
 
 > [!NOTE]
-> Para usar esses exibição, insira 'pdw_nodes_' nome, conforme mostrado na tabela a seguir.
+> Para usar esses exibição, insira "pdw_nodes _" no nome, conforme mostrado na tabela a seguir.
 > 
 > 
 
-| Nome DMV no Parallel Data Warehouse | Vincular ao tópico do SQL Server T-SQL |
+| Nome DMV no Parallel Data Warehouse | Link para o tópico de T-SQL do SQL Server |
 |:--- |:--- |
 | sys.dm_pdw_nodes_db_file_space_usage |[sys.dm_db_file_space_usage](http://msdn.microsoft.com/library/ms174412.aspx) |
 | sys.dm_pdw_nodes_db_index_usage_stats |[sys.dm_db_index_usage_stats](http://msdn.microsoft.com/library/ms188755.aspx) |
@@ -196,7 +196,7 @@ Cada um desses DMV tem uma coluna específica chamada pdw_node_id. Este é o ide
 | sys.dm_pdw_nodes_tran_commit_table |[sys.dm_tran_commit_table](../relational-databases/system-dynamic-management-views/change-tracking-sys-dm-tran-commit-table.md) |
 | sys.dm_pdw_nodes_tran_current_snapshot |[sys.dm_tran_current_snapshot](http://msdn.microsoft.com/library/ms184390.aspx) |
 | sys.dm_pdw_nodes_tran_current_transaction |[sys.dm_tran_current_transaction](../relational-databases/system-dynamic-management-views/sys-dm-tran-current-transaction-transact-sql.md) |
-| sys.dm_pdw_nodes_tran_database_transactions |[sys.DM tran_database_transactions](../relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md) |
+| sys.dm_pdw_nodes_tran_database_transactions |[sys.dm_tran_database_transactions](../relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md) |
 | sys.dm_pdw_nodes_tran_locks |[sys.dm_tran_locks](http://msdn.microsoft.com/library/ms190345.aspx) |
 | sys.dm_pdw_nodes_tran_session_transactions |[sys.dm_tran_session_transactions](http://msdn.microsoft.com/library/ms188739.aspx) |
 | sys.dm_pdw_nodes_tran_top_version_generators |[sys.dm_tran_top_version_generators](http://msdn.microsoft.com/library/ms188778.aspx) |
@@ -214,18 +214,18 @@ Cada um desses DMV tem uma coluna específica chamada pdw_node_id. Este é o ide
 * [sys.dm_exec_external_work](../relational-databases/system-dynamic-management-views/sys-dm-exec-external-work-transact-sql.md)
 
 ## <a name="sql-server-informationschema-views"></a>Exibições INFORMATION_SCHEMA do SQL Server
-* [CHECK_CONSTRAINTS](http://msdn.microsoft.com/library/ms189772.aspx)
-* [COLUMNS](http://msdn.microsoft.com/library/ms188348.aspx)
-* [PARAMETERS](http://msdn.microsoft.com/library/ms173796.aspx)
+* [CHECK_CONSTRAINTS](../relational-databases/system-information-schema-views/check-constraints-transact-sql.md)
+* [COLUMNS](../relational-databases/system-information-schema-views/columns-transact-sql.md)
+* [PARAMETERS](../relational-databases/system-information-schema-views/parameters-transact-sql.md)
 * [ROUTINES](../relational-databases/system-information-schema-views/routines-transact-sql.md)
 * [SCHEMATA](../relational-databases/system-information-schema-views/schemata-transact-sql.md)
-* [TABLES](http://msdn.microsoft.com/library/ms186224.aspx)
+* [TABLES](../relational-databases/system-information-schema-views/tables-transact-sql.md)
 * [VIEW_COLUMN_USAGE](../relational-databases/system-information-schema-views/view-column-usage-transact-sql.md)
 * [VIEW_TABLE_USAGE](../relational-databases/system-information-schema-views/view-table-usage-transact-sql.md)
-* [VIEWS](http://msdn.microsoft.com/library/ms181381.aspx)
+* [VIEWS](../relational-databases/system-information-schema-views/views-transact-sql.md)
 
 ## <a name="next-steps"></a>Próximas etapas
-Para obter informações de referência, consulte [elementos de linguagem T-SQL](tsql-language-elements.md) e [instruções T-SQL](tsql-statements.md).
+Para obter mais informações de referência, consulte [elementos de linguagem T-SQL](tsql-language-elements.md) e [instruções T-SQL](tsql-statements.md).
 
 <!--Image references-->
 

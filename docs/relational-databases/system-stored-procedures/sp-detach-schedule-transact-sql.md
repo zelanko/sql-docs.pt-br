@@ -22,12 +22,12 @@ caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: df165b840d0785fb87e7e5abeffc72ca660317cf
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 708dea0c3ba2c3abc9ca0827caa9f5c548c56902
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33245127"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394390"
 ---
 # <a name="spdetachschedule-transact-sql"></a>sp_detach_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,31 +48,31 @@ sp_detach_schedule
   
 ## <a name="arguments"></a>Argumentos  
  [ **@job_id=** ] *job_id*  
- O número de identificação do trabalho do qual remover a agenda. *job_id* é **uniqueidentifier**, com um padrão NULL.  
+ O número de identificação do trabalho do qual remover a agenda. *job_id* está **uniqueidentifier**, com um padrão NULL.  
   
  [ **@job_name=** ] **'***job_name***'**  
- O nome do trabalho do qual remover a agenda. *job_name* é **sysname**, com um padrão NULL.  
+ O nome do trabalho do qual remover a agenda. *job_name* está **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
->  O *job_id* ou *job_name* devem ser especificados, mas não é possível especificar ambos.  
+>  Qualquer um dos *job_id* ou *job_name* deve ser especificado, mas não podem ser especificados.  
   
  [  **@schedule_id=** ] *schedule_id*  
- O número de identificação da agenda a ser removida do trabalho. *schedule_id* é **int**, com um padrão NULL.  
+ O número de identificação da agenda a ser removida do trabalho. *schedule_id* está **int**, com um padrão NULL.  
   
  [  **@schedule_name=** ] **'***schedule_name***'**  
- O nome da agenda a ser removida do trabalho. *schedule_name* é **sysname**, com um padrão NULL.  
+ O nome da agenda a ser removida do trabalho. *schedule_name* está **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
->  O *schedule_id* ou *schedule_name* devem ser especificados, mas não é possível especificar ambos.  
+>  Qualquer um dos *schedule_id* ou *schedule_name* deve ser especificado, mas não podem ser especificados.  
   
  [ **@delete_unused_schedule=** ] *delete_unused_schedule*  
- Especifica se agendas de trabalho não usadas devem ser excluídas. *delete_unused_schedule* é **bit**, com um padrão de **0**, que significa que todas as agendas serão mantidas, mesmo se nenhum trabalho faz referência a eles. Se definido como **1**, as agendas de trabalho serão excluídas se nenhum trabalho faz referência a eles.  
+ Especifica se agendas de trabalho não usadas devem ser excluídas. *delete_unused_schedule* está **bit**, com um padrão de **0**, que significa que todas as agendas serão mantidas, mesmo se nenhum trabalho fizer referência a eles. Se definido como **1**, as agendas de trabalho serão excluídas se nenhum trabalho fizer referência a eles.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma  
+ None  
   
 ## <a name="permissions"></a>Permissões  
  Por padrão, os membros da função de servidor fixa **sysadmin** podem executar este procedimento armazenado. Deve ser concedida a outros usuários uma das seguintes funções de banco de dados fixas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent no banco de dados **msdb** :  
@@ -85,9 +85,9 @@ sp_detach_schedule
   
  Observe que o proprietário do trabalho pode anexar e desanexar o trabalho de uma agenda sem precisar ser também o proprietário da agenda. No entanto, uma agenda não pode ser excluída se a desanexação deixá-la sem trabalhos, a menos que o chamador seja o proprietário da agenda.  
   
- Para obter detalhes sobre as permissões dessas funções, consulte [Funções de banco de dados fixas do SQL Server Agent](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Para obter detalhes sobre as permissões dessas funções, consulte [Funções de banco de dados fixas do SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verifica se o usuário possui a agenda. Somente membros do **sysadmin** função de servidor fixa pode desanexar agendas de trabalhos pertencentes a outro usuário.  
+ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verifica se o usuário possui a agenda. Somente os membros dos **sysadmin** função de servidor fixa pode desanexar agendas de trabalhos pertencentes a outro usuário.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir remove uma associação entre uma agenda `'NightlyJobs'` e um trabalho `'BackupDatabase'`.  

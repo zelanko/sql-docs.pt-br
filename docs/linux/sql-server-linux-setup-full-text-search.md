@@ -12,18 +12,18 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
-ms.openlocfilehash: f9207a9ccee4917b8c2aa1e7731da4afe6e15658
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: a803770f1c94113f0035b811f3004f0af8ff1adc
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085838"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395200"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Instalar a pesquisa de texto completo do SQL Server no Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-As etapas a seguir instalam [pesquisa de texto completo do SQL Server](https://msdn.microsoft.com/library/ms142571.aspx) (**mssql-server-fts**) no Linux. Pesquisa de texto completo permite que você executar consultas de texto completo em dados baseados em caracteres nas tabelas do SQL Server. Para problemas conhecidos desta versão, consulte a [notas de versão](sql-server-linux-release-notes.md).
+As etapas a seguir instalam [pesquisa de texto completo do SQL Server](../relational-databases/search/full-text-search.md) (**mssql-server-fts**) no Linux. Pesquisa de texto completo permite que você executar consultas de texto completo em dados baseados em caracteres nas tabelas do SQL Server. Para problemas conhecidos desta versão, consulte a [notas de versão](sql-server-linux-release-notes.md).
 
 > [!NOTE]
 > Antes de instalar a pesquisa de texto completo do SQL Server, primeiro [instalar o SQL Server](sql-server-linux-setup.md#platforms). Isso configura as chaves e os repositórios que você usar ao instalar o **mssql-server-fts** pacote.

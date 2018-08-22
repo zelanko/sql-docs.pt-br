@@ -16,28 +16,28 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: ea3cf916d256e070ee7e0bdd20de81f3f4464e12
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 7f10a1fa9faf04e8f819acd7966f6ca6d03c57b5
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980548"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40395621"
 ---
 # <a name="working-with-ssma-projects-db2tosql"></a>Trabalhando com projetos do SSMA (DB2ToSQL)
-Migrar bancos de dados do DB2 para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], primeiro você cria um projeto do SSMA. O projeto é um arquivo que contém as seguintes informações:  
+Migrar bancos de dados do DB2 para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], primeiro você cria um projeto do SSMA. O projeto é um arquivo que contém as seguintes informações:  
   
--   Metadados sobre os bancos de dados do DB2 que você deseja migrar para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+-   Metadados sobre os bancos de dados do DB2 que você deseja migrar para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Metadados sobre a instância de destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] que receberá os objetos migrados e os dados.  
+-   Metadados sobre a instância de destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que receberá os objetos migrados e os dados.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] informações de conexão.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] informações de conexão.  
   
 -   Configurações do projeto.  
   
-Quando você abre um projeto, ele é desconectado do DB2 e [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Que permite que você trabalhe offline. Para obter informações sobre a reconectar-se ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], consulte [conectando ao SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md).  
+Quando você abre um projeto, ele é desconectado do DB2 e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Que permite que você trabalhe offline. Para obter informações sobre a reconectar-se ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [conectando ao SQL Server &#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md).  
   
 ## <a name="reviewing-default-project-settings"></a>Revisar as configurações padrão de projeto  
-O SSMA contém várias configurações para converter e carregar objetos de banco de dados, migração de dados e sincronizando SSMA com DB2 e [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. As configurações padrão são apropriadas para muitos usuários. No entanto, antes de criar um novo projeto SSMA, examine as configurações. Se você quiser, você pode alterar as configurações padrão que serão usadas para todos os seus projetos novos.  
+O SSMA contém várias configurações para converter e carregar objetos de banco de dados, migração de dados e sincronizando SSMA com DB2 e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. As configurações padrão são apropriadas para muitos usuários. No entanto, antes de criar um novo projeto SSMA, examine as configurações. Se você quiser, você pode alterar as configurações padrão que serão usadas para todos os seus projetos novos.  
   
 **Para examinar as configurações de projeto padrão**  
   
@@ -55,14 +55,14 @@ O SSMA contém várias configurações para converter e carregar objetos de banc
   
     -   Para obter informações sobre as configurações de objeto do sistema, consulte [configurações do projeto&#40;Carregando objetos de sistema&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-loading-system-objects-db2tosql.md).  
   
-    -   Para obter informações sobre as configurações de sincronização [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], consulte [configurações do projeto&#40;sincronização&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-synchronization-db2tosql.md).  
+    -   Para obter informações sobre as configurações de sincronização [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [configurações do projeto&#40;sincronização&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-synchronization-db2tosql.md).  
   
     -   Para obter informações sobre as configurações de interface gráfica do usuário, consulte [configurações do projeto &#40;GUI&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-gui-db2tosql.md).  
   
     -   Para obter informações sobre as configurações de mapeamento de tipo de dados, consulte [configurações do projeto &#40;mapeamento de tipo&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-type-mapping-db2tosql.md).  
   
 ## <a name="creating-new-projects"></a>Criação de novos projetos  
-Para migrar dados de bancos de dados do DB2 para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], você deve primeiro criar um projeto.  
+Para migrar dados de bancos de dados do DB2 para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você deve primeiro criar um projeto.  
   
 **Para criar um projeto**  
   
@@ -74,13 +74,13 @@ Para migrar dados de bancos de dados do DB2 para [!INCLUDE[ssNoVersion](../../in
   
 3.  No **local** caixa, digite ou selecione uma pasta para o projeto e, em seguida, clique em **Okey**.  
   
-4.  No **migração à** lista suspensa, selecione a versão de destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] usado para a migração. As opções disponíveis são:  
+4.  No **migração à** lista suspensa, selecione a versão de destino [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usado para a migração. As opções disponíveis são:  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
     -   Azure SQL DB  
   
@@ -107,7 +107,7 @@ Quando você salvar um projeto, o SSMA retém as configurações de projeto e, o
         O SSMA analisará os esquemas do DB2 e salvar os metadados para o arquivo de projeto.  
   
 ## <a name="opening-projects"></a>Abrindo projetos  
-Quando você abre um projeto, ele é desconectado do DB2 e do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Que permite que você trabalhe offline. Para atualizar os metadados, carregar objetos de banco de dados em [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Para migrar dados, você deve se reconectar ao DB2 e [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+Quando você abre um projeto, ele é desconectado do DB2 e do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Que permite que você trabalhe offline. Para atualizar os metadados, carregar objetos de banco de dados em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para migrar dados, você deve se reconectar ao DB2 e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 **Para abrir um projeto**  
   
@@ -119,7 +119,7 @@ Quando você abre um projeto, ele é desconectado do DB2 e do [!INCLUDE[ssNoVers
   
 2.  Reconectar-se ao DB2, sobre o **arquivo** menu, clique em **reconectar-se ao DB2**.  
   
-3.  Para se reconectar à [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]diante a **arquivo** menu, clique em **reconectar-se ao SQL Server**.  
+3.  Para se reconectar à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]diante a **arquivo** menu, clique em **reconectar-se ao SQL Server**.  
   
 ## <a name="next-step"></a>Próxima etapa  
 É a próxima etapa no processo de migração [conectar-se ao banco de dados DB2](http://msdn.microsoft.com/5eb5801d-f0c3-4127-97c0-0b1ef49f4844).  

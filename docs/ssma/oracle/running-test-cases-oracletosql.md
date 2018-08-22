@@ -13,15 +13,15 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 5368db04a4f5442620a8f347608bf5aded86703b
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 917f18c705c5cb0615cc5ac0b702f31372cf8a8a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982368"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395627"
 ---
 # <a name="running-test-cases-oracletosql"></a>Executar casos de teste (OracleToSQL)
-Quando o SSMA testador executa um caso de teste, ele executa os objetos selecionados para teste e cria um relatório sobre os resultados da verificação. Se os resultados são idênticos em ambas as plataformas, o teste foi bem-sucedido. A correspondência de objetos entre Oracle e [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] é determinado de acordo com as configurações de mapeamento de esquema para o projeto atual do SSMA.  
+Quando o SSMA testador executa um caso de teste, ele executa os objetos selecionados para teste e cria um relatório sobre os resultados da verificação. Se os resultados são idênticos em ambas as plataformas, o teste foi bem-sucedido. A correspondência de objetos entre Oracle e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é determinado de acordo com as configurações de mapeamento de esquema para o projeto atual do SSMA.  
   
 Um requisito necessário para um teste bem-sucedido é que todos os objetos do Oracle são convertidos e carregados no banco de dados de destino. Além disso, os dados da tabela devem ser migrados para que o conteúdo das tabelas nas duas plataformas sejam sincronizado.  
   
@@ -32,7 +32,7 @@ Para executar o caso de teste preparado:
   
 2.  No **conectar-se ao Oracle** caixa de diálogo, insira as informações de conexão e, em seguida, clique em **Connect**.  
   
-Quando o teste for concluído, o relatório de caso de teste é criado. Clique o **relatório** botão para exibir o [relatório de caso de teste](http://msdn.microsoft.com/8da14323-9dd6-4019-bf79-3e8b972a9bc0). O resultado do teste (relatório de casos de teste) é armazenado automaticamente na [repositório de resultados do teste](http://msdn.microsoft.com/f941cce4-d3e3-4aeb-a88a-4f101a97a9f4) para uso posterior.  
+Quando o teste for concluído, o relatório de caso de teste é criado. Clique o **relatório** botão para exibir o [relatório de caso de teste](viewing-test-case-reports-oracletosql.md). O resultado do teste (relatório de casos de teste) é armazenado automaticamente na [repositório de resultados do teste](using-test-repositories-oracletosql.md) para uso posterior.  
   
 ## <a name="test-case-execution-steps"></a>Etapas de execução do caso de teste  
   
@@ -55,14 +55,14 @@ Suponha que a tabela verificada é denominada USER_TABLE. Para essa tabela, os s
 |USER_TABLE$ NEW_ID|exibição|Identificação de linhas inseridas e alteradas.|  
 |USER_TABLE$ ANTIGO|exibição|Representação simplificada de linhas excluídas e substituídas.|  
   
-O seguinte objeto é criado no esquema da tabela verificado na [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+O seguinte objeto é criado no esquema da tabela verificado na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ||||  
 |-|-|-|  
 |Nome|Tipo|Description|  
 |USER_TABLE$ Trg|gatilho|Gatilho de auditoria de alterações na tabela verificada.|  
   
-E os seguintes objetos são criados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]no banco de dados ssmatesterdb.  
+E os seguintes objetos são criados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]no banco de dados ssmatesterdb.  
   
 ||||  
 |-|-|-|  

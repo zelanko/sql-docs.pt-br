@@ -20,12 +20,12 @@ caps.latest.revision: 126
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dac6134987f8a6d3964d919d1aff7688b74da7fe
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 02aa7277a06857f415143fd4497b0971773a03b6
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312306"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40393968"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>Recursos compatíveis com as edições do SQL Server 2014
   Esse tópico fornece detalhes dos recursos que têm suporte na diferentes edições do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
@@ -157,7 +157,7 @@ ms.locfileid: "37312306"
   
 |Nome do recurso|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o controle de alterações|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Controle de alterações|Sim|Sim|Sim|Sim|Sim|Sim|Sim|  
 |Replicação de mesclagem|Sim|Sim|Sim|Sim (somente assinante)|Sim (somente assinante)|Sim (somente assinante)|Sim (somente assinante)|  
 |Replicação transacional|Sim|Sim|Sim|Sim (somente assinante)|Sim (somente assinante)|Sim (somente assinante)|Sim (somente assinante)|  
 |Replicação de instantâneo|Sim|Sim|Sim|Sim (somente assinante)|Sim (somente assinante)|Sim (somente assinante)|Sim (somente assinante)|  
@@ -446,7 +446,7 @@ ms.locfileid: "37312306"
   
 |Nome do recurso|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)]|Sim|Sim|Sim|||||  
+|[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)]|Sim|Sim|Sim|||||  
 |Suplementos de mineração de dados para Excel e Visio 2010|Sim|Sim|Sim|||||  
 |[!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] 2010|Sim|Sim||||||  
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]|Sim|Sim||||||  

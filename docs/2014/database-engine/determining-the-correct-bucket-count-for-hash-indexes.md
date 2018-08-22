@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6d1ac280-87db-4bd8-ad43-54353647d8b5
@@ -14,12 +13,12 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5dbb50c928f066e595b48737da2cc2fc6b9f45eb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4a81a446b1635359853656305f0a8a5ee8ab3218
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37306139"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395818"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>Determinando o número de buckets correto para índices de hash não clusterizados
   Você deve especificar um valor para o `BUCKET_COUNT` parâmetro quando você cria a tabela com otimização de memória. Este tópico faz recomendações para determinar o valor apropriado para o parâmetro `BUCKET_COUNT`. Se você não puder determinar o número de buckets correto, use um índice não clusterizado.  Um valor incorreto de `BUCKET_COUNT`, especialmente muito baixo, pode afetar significativamente o desempenho da carga de trabalho, bem como o tempo de recuperação do banco de dados. É melhor superestimar o número de buckets.  

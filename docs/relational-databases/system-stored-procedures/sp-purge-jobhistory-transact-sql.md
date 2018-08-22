@@ -23,12 +23,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 9adf5bc1eada3a1fc2caa58db15fc4fc95ebd35b
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 1807fb797b7bd3d53f83cae60c4b876fcb91b74f
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39564060"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393979"
 ---
 # <a name="sppurgejobhistory-transact-sql"></a>sp_purge_jobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -74,7 +74,7 @@ sp_purge_jobhistory
   
  Outros usuários, incluindo os membros **SQLAgentUserRole** e os membros **SQLAgentReaderRole**, deve ser concedido explicitamente a permissão EXECUTE em **sp_purge_jobhistory**. Depois de receber a permissão EXECUTE nesse procedimento armazenado, esses usuários poderão limpar somente o histórico dos trabalhos que eles possuam.  
   
- O **SQLAgentUserRole**, **SQLAgentReaderRole**, e **SQLAgentOperatorRole** funções fixas de banco de dados estão no **msdb** banco de dados. Para obter detalhes sobre suas permissões, consulte [funções de banco de dados fixas do SQL Server Agent](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ O **SQLAgentUserRole**, **SQLAgentReaderRole**, e **SQLAgentOperatorRole** funções fixas de banco de dados estão no **msdb** banco de dados. Para obter detalhes sobre suas permissões, consulte [funções de banco de dados fixas do SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
 ## <a name="examples"></a>Exemplos  
   

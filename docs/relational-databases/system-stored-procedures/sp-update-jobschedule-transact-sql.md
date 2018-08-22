@@ -22,19 +22,19 @@ caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a87b927a80a634c6640837e328355ef34c67b295
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5b38499fce019f6f1f9b16ee489e413b1c0068a0
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253030"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395815"
 ---
 # <a name="spupdatejobschedule-transact-sql"></a>sp_update_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Altera as configurações de agenda para o trabalho especificado.  
   
- **sp_update_jobschedule** é fornecida para compatibilidade com versões anteriores apenas.  
+ **sp_update_jobschedule** é fornecido para compatibilidade com versões anteriores.  
   
 > [!IMPORTANT]  
 >  Para obter mais informações sobre a sintaxe usada em versões anteriores do Microsoft SQL Server, consulte o Microsoft SQL Server 2000 do Transact-SQL Referencefor *.*  
@@ -51,9 +51,9 @@ ms.locfileid: "33253030"
   
 -   **SQLAgentOperatorRole**  
   
- Para obter detalhes sobre as permissões dessas funções, consulte [Funções de banco de dados fixas do SQL Server Agent](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Para obter detalhes sobre as permissões dessas funções, consulte [Funções de banco de dados fixas do SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Somente membros da **sysadmin** pode usar este procedimento armazenado para atualizar agendas de trabalho pertencentes a outros usuários.  
+ Somente os membros da **sysadmin** pode usar esse procedimento armazenado para atualizar agendas de trabalho pertencentes a outros usuários.  
   
 ## <a name="see-also"></a>Consulte também  
  [Procedimentos armazenados do SQL Server Agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   

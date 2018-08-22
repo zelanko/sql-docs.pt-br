@@ -25,15 +25,15 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 69cd0046b2637a35280c9bb806d68492ec7d2d9b
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: f7c5c646fd4cf5fd5f5f4e3220dc71ce725dfc23
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39553106"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40394791"
 ---
 # <a name="syspartitionrangevalues-transact-sql"></a>sys.partition_range_values (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Contém uma linha para cada valor de limite de intervalo de uma função de partição do tipo R.  
   

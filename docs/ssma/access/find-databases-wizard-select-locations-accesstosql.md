@@ -18,17 +18,17 @@ caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 075c46589600ea31dc03bd4e4f5503ddb6fd1987
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 43efa0e2ed9f58f59fa8b77d74824e094f90edc9
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979478"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40394185"
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>Localizar o Assistente de bancos de dados (selecione os locais) (AccessToSQL)
 Na página Selecionar locais do assistente localizar bancos de dados, você pode inserir os parâmetros de pesquisa para localizar bancos de dados do Access.  
   
-Para abrir o assistente localizar bancos de dados, o **arquivo** menu, clique em **localizar bancos de dados**. Para obter mais informações sobre como usar essa caixa de diálogo, consulte [adicionando e removendo arquivos de banco de dados do Access](http://msdn.microsoft.com/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
+Para abrir o assistente localizar bancos de dados, o **arquivo** menu, clique em **localizar bancos de dados**. Para obter mais informações sobre como usar essa caixa de diálogo, consulte [adicionando e removendo arquivos de banco de dados do Access](adding-and-removing-access-database-files-accesstosql.md)  
   
 ## <a name="options"></a>Opções  
 **Procurar**  
@@ -65,6 +65,6 @@ Para localizar bancos de dados que correspondem a um critério de tamanho, selec
 Insira o nome de usuário completo do Windows do proprietário. Isso pode ser formatado como *domínio*\\*usuário*.  
   
 ## <a name="see-also"></a>Consulte também  
-[Adicionando e removendo arquivos de banco de dados do Access](http://msdn.microsoft.com/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
+[Adicionando e removendo arquivos de banco de dados do Access](adding-and-removing-access-database-files-accesstosql.md)  
 [Reference(Access) de Interface do usuário](http://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

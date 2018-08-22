@@ -16,27 +16,27 @@ caps.latest.revision: 11
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 7a16d5bb216a1ce1bc688971068debe3576434e1
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 6dc6a4e86435e2dffc7d681cedd78a3be6defa23
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34779304"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395219"
 ---
 # <a name="sql-server-migration-assistant-for-sybase-sybasetosql"></a>Assistente de migração do SQL Server para Sybase (SybaseToSQL)
-[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] SSMA (Migration Assistant) para Sybase Adaptive Server Enterprise (ASE) é uma ferramenta para migrar bancos de dados de ASE para [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005 ou [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008 ou [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012 ou [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014 ou [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016 ou [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2017 no Windows e Linux (visualização) ou [!INCLUDE[msCoName](../../includes/msconame_md.md)] banco de dados SQL do Azure. SSMA para Sybase converte objetos de banco de dados ASE para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] objetos de banco de dados, cria os objetos nos [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure, e, em seguida, migrar dados de ASE para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure.  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSMA (Migration Assistant) para Sybase Adaptive Server Enterprise (ASE) é uma ferramenta para migrar bancos de dados do ASE para [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 ou [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 ou [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 ou [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 ou [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 ou [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2017 no Windows e Linux (visualização) ou [!INCLUDE[msCoName](../../includes/msconame_md.md)] BD SQL do Azure. SSMA para Sybase converte objetos de banco de dados ASE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos de banco de dados, cria esses objetos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o SQL Azure, e migra os dados do ASE para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o SQL Azure.  
   
-Esta documentação apresenta SSMA para Sybase e fornece instruções passo a passo para migrar bancos de dados de ASE para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou SQL Azure e obter informações sobre problemas que podem ocorrer após a migração. Para obter mais informações, consulte os tópicos a seguir.  
+Esta documentação apresenta o SSMA para Sybase e fornece instruções passo a passo para migrar bancos de dados do ASE para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure e as informações sobre problemas que podem ocorrer após a migração. Para obter mais informações, consulte os tópicos a seguir.  
   
 ## <a name="contents"></a>Sumário  
   
 |Seção|Description|  
 |-----------|---------------|  
-|[Novidades do SSMA for Sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/what-s-new-in-ssma-for-sybase-sybasetosql.md)|Lista as alterações às versões do SSMA.|  
-|[Instalando o SSMA para Sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)|Contém tópicos que fornecem pré-requisitos e instruções para instalar o SSMA para Sybase cliente e os componentes necessários no computador que está executando [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] instância.|  
-|[Introdução ao SSMA for Sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)|Apresenta as opções de configuração, projetos e interface do usuário.|  
-|[Migrando bancos de dados Sybase ASE para o SQL Server - banco de dados SQL do Azure &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)|Fornece uma visão geral do processo de conversão e informações detalhadas sobre cada etapa do processo.|  
-|[Referência da Interface de usuário &#40;SybaseToSQL&#41;](../../ssma/sybase/user-interface-reference-sybasetosql.md)|Contém a documentação do SSMA para Sybase caixas de diálogo.|  
-|[Trabalhando com o SSMA para Sybase Console](http://msdn.microsoft.com/c465e477-c479-4aa8-918d-58bf30884789)|Contém a documentação sobre o aplicativo de Console SSMA.|  
+|[Quais são as novidades do SSMA para Sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/what-s-new-in-ssma-for-sybase-sybasetosql.md)|Lista as alterações para as versões SSMA.|  
+|[Instalar o SSMA para Sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)|Contém tópicos que fornecem os pré-requisitos e instruções para instalar o SSMA para Sybase cliente e os componentes necessários no computador que está sendo executado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância.|  
+|[Introdução ao SSMA para Sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)|Apresenta as opções de configuração, projetos e interface do usuário.|  
+|[Migrando bancos de dados do Sybase ASE para o SQL Server – BD SQL do Azure &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)|Fornece uma visão geral do processo de conversão e informações detalhadas sobre cada etapa do processo.|  
+|[Referência da Interface do usuário &#40;SybaseToSQL&#41;](../../ssma/sybase/user-interface-reference-sybasetosql.md)|Contém a documentação do SSMA para Sybase caixas de diálogo.|  
+|[Trabalhar com o SSMA para Sybase Console](working-with-ssma-for-sybase-console-sybasetosql.md)|Contém documentação sobre o aplicativo de Console do SSMA.|  
 |[Obtendo o SSMA para Sybase assistência](http://go.microsoft.com/fwlink/?LinkID=708538&clcid=0x409)|Fornece informações sobre como obter assistência adicional.|  
   

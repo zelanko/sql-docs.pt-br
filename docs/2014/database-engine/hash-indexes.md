@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f4bdc9c1-7922-4fac-8183-d11ec58fec4e
@@ -14,19 +13,19 @@ caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f2c2b4c055eea6aef2e7825ee6589c6611ceaf7a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 04cc9e0bea00d1eb2bc542a996ff4bc39e1009f2
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37295226"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395822"
 ---
 # <a name="hash-indexes"></a>Índices de hash
   Os índices são usados como pontos de entrada para tabelas com otimização de memória. A leitura das linhas de uma tabela requer um índice para localizar os dados na memória.  
   
  Um índice de hash consiste em uma coleção de buckets organizados em uma matriz. Uma função de hash mapeia chaves de índice para buckets correspondentes no índice de hash. A figura a seguir mostra três chaves de índice mapeadas para três buckets diferentes no índice de hash. Para fins ilustrativos, o nome da função de hash é f(x).  
   
- ![Chaves de índice mapeadas para buckets diferentes. ] (../../2014/database-engine/media/hekaton-tables-2.gif "Chaves de índice mapeadas para buckets diferentes.")  
+ ![Chaves de índice mapeadas para buckets diferentes. ](../../2014/database-engine/media/hekaton-tables-2.gif "Chaves de índice mapeadas para buckets diferentes.")  
   
  A função de hash usada para índices de hash tem as seguintes características:  
   
@@ -44,7 +43,7 @@ ms.locfileid: "37295226"
   
  A estrutura de índice de hash na memória consiste em uma matriz de ponteiros de memória. Cada bucket é mapeado para um deslocamento nesta matriz. Cada bucket na matriz aponta para a primeira linha desse bucket de hash. Cada linha no bucket aponta para a próxima linha, resultando em uma cadeia de linhas para cada bucket de hash, conforme ilustrado na figura a seguir.  
   
- ![A estrutura de índice de hash em memória. ] (../../2014/database-engine/media/hekaton-tables-3.gif "a estrutura de índice de hash em memória.")  
+ ![A estrutura de índice de hash em memória. ](../../2014/database-engine/media/hekaton-tables-3.gif "a estrutura de índice de hash em memória.")  
   
  A figura tem três buckets com linhas. O segundo bucket na parte superior contém as três linhas vermelhas. O quarto bucket contém uma única linha azul. O bucket inferior contém as duas linhas verdes. Essas versões podem ser diferentes e estarem na mesma linha.  
   

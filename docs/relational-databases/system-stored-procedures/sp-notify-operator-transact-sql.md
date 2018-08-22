@@ -22,12 +22,12 @@ caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b07c05c67f0b4e199ad096d8f2a5f12951e46178
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c99d4ca8eb182f8e4873acf97aec4ca5c101ce84
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261580"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396217"
 ---
 # <a name="spnotifyoperator-transact-sql"></a>sp_notify_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,27 +53,27 @@ sp_notify_operator
   
 ## <a name="arguments"></a>Argumentos  
  [  **@profile_name=** ] **'***profilename***'**  
- O nome do perfil do Database Mail a ser usado para enviar a mensagem. *ProfileName* é **nvarchar (128)**. Se *profilename* não for especificado, o perfil de email de banco de dados padrão será usado.  
+ O nome do perfil do Database Mail a ser usado para enviar a mensagem. *ProfileName* está **nvarchar (128)**. Se *profilename* não for especificado, o perfil de email de banco de dados padrão será usado.  
   
  [ **@id=** ] *id*  
- O identificador do operador para envio da mensagem. *ID* é **int**, com um padrão NULL. Um dos *id* ou *nome* deve ser especificado.  
+ O identificador do operador para envio da mensagem. *ID* está **int**, com um padrão NULL. Um dos *identificação* ou *nome* deve ser especificado.  
   
  [ **@name=** ] **'***name***'**  
- O nome do operador para o qual enviar a mensagem. *nome* é **nvarchar (128)**, com um padrão NULL. Um dos *id* ou *nome* deve ser especificado.  
+ O nome do operador para o qual enviar a mensagem. *nome da* está **nvarchar (128)**, com um padrão NULL. Um dos *identificação* ou *nome* deve ser especificado.  
   
-> **Observação:** um endereço de email deve ser definido para o operador antes de poder receber mensagens.  
+> **Observação:** um endereço de email deve ser definido para o operador que ele possa receber mensagens.  
   
  [  **@subject=** ] **'***assunto***'**  
- O assunto da mensagem de email. *entidade* é **nvarchar (256)** sem nenhum padrão.  
+ O assunto da mensagem de email. *Assunto* está **nvarchar(256)** sem nenhum padrão.  
   
  [  **@body=** ] **'***mensagem***'**  
- O corpo da mensagem de email. *mensagem* é **nvarchar (max)** sem nenhum padrão.  
+ O corpo da mensagem de email. *mensagem* está **nvarchar (max)** sem nenhum padrão.  
   
  [ **@file_attachments=** ] **'***attachment***'**  
- O nome de um arquivo a ser anexado à mensagem de email. *anexo* é **nvarchar (512)**, sem padrão.  
+ O nome de um arquivo a ser anexado à mensagem de email. *anexo* está **nvarchar(512)**, sem padrão.  
   
  [ **@mail_database=** ] **'***mail_host_database***'**  
- Especifica o nome do banco de dados host de email. *mail_host_database* é **nvarchar (128)**. Se nenhum *mail_host_database* for especificado, o **msdb** banco de dados é usado por padrão.  
+ Especifica o nome do banco de dados host de email. *mail_host_database* está **nvarchar (128)**. Se nenhum *mail_host_database* for especificado, o **msdb** banco de dados é usado por padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -92,7 +92,7 @@ sp_notify_operator
   
 -   **SQLAgentOperatorRole**  
   
- Para obter detalhes sobre as permissões dessas funções, consulte [Funções de banco de dados fixas do SQL Server Agent](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Para obter detalhes sobre as permissões dessas funções, consulte [Funções de banco de dados fixas do SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir envia um email de notificação ao operador `François Ajenstat` que usa o perfil do Database Mail `AdventureWorks Administrator` . O assunto do email é `Test Notification`. A mensagem de email contém a oração: "Este é um email de teste enviado pelo Database Mail".  
@@ -109,7 +109,7 @@ EXEC dbo.sp_notify_operator
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Confira também  
  [Procedimentos armazenados do SQL Server Agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_add_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
  [sp_help_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   

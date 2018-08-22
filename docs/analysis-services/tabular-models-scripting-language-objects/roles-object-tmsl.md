@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 375a0f62bbf482a7c033d235836ea64b78cb2da2
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 19da91838703adc4ae224a645e1f0a6e65fe032c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983868"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396026"
 ---
-# <a name="roles-object-tmsl"></a>Objeto roles (TMSL)
+# <a name="roles-object-tmsl"></a>Objeto Roles (TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Define uma função no modelo que especifica uma coleção de permissões. Associação de função consiste em princípios de segurança do Windows. Você pode definir filtros em uma função para restringir o acesso a objetos específicos.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "38983868"
                   e o administrador. Ver [funções e permissões &#40;Analysis Services&#41; ](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md) para obter informações sobre permissões de banco de dados.  
   
  membros  
- Membros consistem em um nome de membro e ID, onde o nome do membro é o alias ou nome amigável de um princípio de segurança do Windows, e a ID é o identificador de segurança. Ambos são especificadas na definição de função. Ver [componentes de SID](https://msdn.microsoft.com/library/windows/desktop/aa379597\(v=vs.85\).aspx) para obter detalhes sobre os identificadores.  
+ Membros consistem em um nome de membro e ID, onde o nome do membro é o alias ou nome amigável de um princípio de segurança do Windows, e a ID é o identificador de segurança. Ambos são especificadas na definição de função. Ver [componentes de SID](/windows/desktop/SecAuthZ/sid-components) para obter detalhes sobre os identificadores.  
   
  tablePermissions  
  Uma permissão de tabela é um objeto nomeado com permissões definidas por meio de uma expressão DAX. Essa propriedade é opcional, usado para aplicar um filtro de segurança.  

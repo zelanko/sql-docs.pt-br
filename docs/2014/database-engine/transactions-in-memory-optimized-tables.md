@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2cd07d26-a1f1-4034-8d6f-f196eed1b763
@@ -14,12 +13,12 @@ caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d4f3f8fcac44dc238440006eddaf44681f8cbaee
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3712e3b2e602bd403f4c1d312603577a4045a95a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37158867"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395820"
 ---
 # <a name="transactions-in-memory-optimized-tables"></a>Transações em tabelas com otimização de memória
   O controle de versão de linha em tabelas baseadas em disco (usando o isolamento SNAPSHOT ou READ_COMMITTED_SNAPSHOT) fornece um formulário de controle de simultaneidade otimista. Os leitores e gravadores não bloqueiam um ao outro. Com as tabelas com otimização de memória, gravadores não bloqueiam gravadores. Com o controle de versão de linha em tabelas baseadas em disco, uma transação bloqueia a linha e as transações simultâneas que tentassem atualizar a linha estariam bloqueadas. Não há bloqueio com tabelas com otimização de memória. Em vez disso, se duas transações tentassem atualizar a mesma linha, ocorreria um conflito de gravação/gravação (erro 41302).  
@@ -74,7 +73,7 @@ ms.locfileid: "37158867"
 ### <a name="transaction-lifetime"></a>Tempo de vida da transação  
  As falhas mencionadas na tabela anterior podem ocorrer em pontos diferentes durante a transação. A figura a seguir ilustra as fases de uma transação que acessa tabelas com otimização de memória.  
   
- ![Tempo de vida de uma transação. ] (../../2014/database-engine/media/hekaton-transactions.gif "Tempo de vida de uma transação.")  
+ ![Tempo de vida de uma transação. ](../../2014/database-engine/media/hekaton-transactions.gif "Tempo de vida de uma transação.")  
 Tempo de vida de uma transação que acessa tabelas com otimização de memória.  
   
 #### <a name="regular-processing"></a>Processamento regular  

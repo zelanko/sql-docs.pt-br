@@ -22,12 +22,12 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0fc94dd72bdb96516c6cd65f1e405951cbf8ff45
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2e95006d991f9a3c8380c2144c5744e2e798c34c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258790"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393995"
 ---
 # <a name="sphelpoperator-transact-sql"></a>sp_help_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +48,13 @@ sp_help_operator
   
 ## <a name="arguments"></a>Argumentos  
  [  **@operator_name=** ] **'***operator_name***'**  
- O nome do operador. *operator_name* é **sysname**. Se *operator_name* não é especificado, serão retornadas informações sobre todos os operadores.  
+ O nome do operador. *operator_name* está **sysname**. Se *operator_name* não é especificado, serão retornadas informações sobre todos os operadores.  
   
  [  **@operator_id=** ] *operator_id*  
- O número de identificação do operador para o qual as informações são solicitadas. *operator_id*é **int**, com um padrão NULL.  
+ O número de identificação do operador para o qual as informações são solicitadas. *operator_id*está **int**, com um padrão NULL.  
   
 > [!NOTE]  
->  O *operator_id* ou *operator_name* devem ser especificados, mas não é possível especificar ambos.  
+>  Qualquer um dos *operator_id* ou *operator_name* deve ser especificado, mas não podem ser especificados.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -63,25 +63,25 @@ sp_help_operator
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**id**|**Int**|Número de identificação do operador.|  
+|**id**|**int**|Número de identificação do operador.|  
 |**name**|**sysname**|Nome do operador.|  
-|**Habilitado**|**tinyint**|Operador está disponível para receber qualquer notificação:<br /><br /> **1** = Sim<br /><br /> **0** = Não|  
+|**habilitado**|**tinyint**|Operador está disponível para receber qualquer notificação:<br /><br /> **1** = Sim<br /><br /> **0** = Não|  
 |**email_address**|**nvarchar(100)**|Endereço de email do operador.|  
-|**last_email_date**|**Int**|Data em que o operador foi notificado pela última vez por email.|  
-|**last_email_time**|**Int**|Hora em que o operador foi notificado pela última vez por email.|  
+|**last_email_date**|**int**|Data em que o operador foi notificado pela última vez por email.|  
+|**last_email_time**|**int**|Hora em que o operador foi notificado pela última vez por email.|  
 |**pager_address**|**nvarchar(100)**|Endereço de pager do operador.|  
-|**last_pager_date**|**Int**|Data em que o operador foi notificado pela última vez por pager.|  
-|**last_pager_time**|**Int**|Hora em que o operador foi notificado pela última vez por pager.|  
-|**weekday_pager_start_time**|**Int**|O início do período durante o qual o operador está disponível para receber notificações de pager em um dia da semana.|  
-|**weekday_pager_end_time**|**Int**|O fim do período durante o qual o operador está disponível para receber notificações de pager em um dia da semana.|  
-|**saturday_pager_start_time**|**Int**|O início do período durante o qual o operador está disponível para receber notificações de pager aos sábados.|  
-|**saturday_pager_end_time**|**Int**|O fim do período durante o qual o operador está disponível para receber notificações de pager aos sábados.|  
-|**sunday_pager_start_time**|**Int**|O início do período durante o qual o operador está disponível para receber notificações de pager aos domingos.|  
-|**sunday_pager_end_time**|**Int**|O fim do período durante o qual o operador está disponível para receber notificações de pager aos domingos.|  
-|**pager_days**|**tinyint**|Um bitmask (**1** = domingo, **64** = sábado) de dias da semana indicando quando o operador está disponível para receber notificações por pager.|  
+|**last_pager_date**|**int**|Data em que o operador foi notificado pela última vez por pager.|  
+|**last_pager_time**|**int**|Hora em que o operador foi notificado pela última vez por pager.|  
+|**weekday_pager_start_time**|**int**|O início do período durante o qual o operador está disponível para receber notificações de pager em um dia da semana.|  
+|**weekday_pager_end_time**|**int**|O fim do período durante o qual o operador está disponível para receber notificações de pager em um dia da semana.|  
+|**saturday_pager_start_time**|**int**|O início do período durante o qual o operador está disponível para receber notificações de pager aos sábados.|  
+|**saturday_pager_end_time**|**int**|O fim do período durante o qual o operador está disponível para receber notificações de pager aos sábados.|  
+|**sunday_pager_start_time**|**int**|O início do período durante o qual o operador está disponível para receber notificações de pager aos domingos.|  
+|**sunday_pager_end_time**|**int**|O fim do período durante o qual o operador está disponível para receber notificações de pager aos domingos.|  
+|**pager_days**|**tinyint**|Uma máscara de bits (**1** = domingo, **64** = sábado) de dias da semana indicando quando o operador está disponível para receber notificações por pager.|  
 |**netsend_address**|**nvarchar(100)**|Endereço de operador para notificações pop-up de rede.|  
-|**last_netsend_date**|**Int**|Data em que o operador foi notificado pela última vez por pop-up de rede.|  
-|**last_netsend_time**|**Int**|Hora em que o operador foi notificado pela última vez por pop-up de rede.|  
+|**last_netsend_date**|**int**|Data em que o operador foi notificado pela última vez por pop-up de rede.|  
+|**last_netsend_time**|**int**|Hora em que o operador foi notificado pela última vez por pop-up de rede.|  
 |**category_name**|**sysname**|Nome da categoria de operador ao qual esse operador pertence.|  
   
 ## <a name="remarks"></a>Remarks  
@@ -96,7 +96,7 @@ sp_help_operator
   
 -   **SQLAgentOperatorRole**  
   
- Para obter detalhes sobre as permissões dessas funções, consulte [Funções de banco de dados fixas do SQL Server Agent](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Para obter detalhes sobre as permissões dessas funções, consulte [Funções de banco de dados fixas do SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir relata informações sobre o operador `François Ajenstat`.  
@@ -110,7 +110,7 @@ EXEC dbo.sp_help_operator
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Confira também  
  [sp_add_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
  [sp_delete_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
  [sp_update_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   

@@ -17,12 +17,12 @@ caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 095c9f205a98b5ac2ecd5a40ab66448ad9e21176
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6dabef37d796ca1279c1444cf6ecafce6973c86b
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37308862"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40395615"
 ---
 # <a name="administer-servers-with-sql-server-management-studio"></a>Gerenciar servidores com o SQL Server Management Studio
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] é um cliente administrativo rico e integrado, projetado para atender a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] requisitos de gerenciamento de servidor do administrador. No [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], as tarefas administrativas são realizadas com o Pesquisador de Objetos, que permite conectar-se a qualquer servidor da família [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e procurar conteúdo de forma gráfica. Um servidor pode ser uma instância do [!INCLUDE[ssDE](../includes/ssde-md.md)], do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ou do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
@@ -36,7 +36,7 @@ ms.locfileid: "37308862"
   
 -   Servidores registrados.  
   
--   Conectar-se a uma instância do [!INCLUDE[ssDE](../includes/ssde-md.md)], do [!INCLUDE[ssAS](../includes/ssas-md.md)], do [!INCLUDE[ssRS](../includes/ssrs-md.md)] ou do [!INCLUDE[ssIS](../includes/ssis-md.md)].  
+-   Conectar-se a uma instância do [!INCLUDE[ssDE](../includes/ssde-md.md)], do [!INCLUDE[ssAS](../includes/ssas-md.md)], do [!INCLUDE[ssRS](../includes/ssrs.md)] ou do [!INCLUDE[ssIS](../includes/ssis-md.md)].  
   
 -   Configurar propriedades de servidor.  
   

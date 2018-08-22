@@ -22,12 +22,12 @@ caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0ee7344ebe282a5cbf8baa61cfeb88175f6f235d
-ms.sourcegitcommit: 70882926439a63ab9d812809429c63040eb9a41b
+ms.openlocfilehash: c2bcb3132902669a6ea544b9962942ed3adadc4a
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36262310"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395413"
 ---
 # <a name="spaddjobserver-transact-sql"></a>sp_add_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,25 +46,25 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@job_id =** ] *job_id*  
- O número de identificação do trabalho. *job_id* é **uniqueidentifier**, com um padrão NULL.  
+ O número de identificação do trabalho. *job_id* está **uniqueidentifier**, com um padrão NULL.  
   
  [  **@job_name =** ] **'***job_name***'**  
- O nome do trabalho. *job_name* é **sysname**, com um padrão NULL.  
+ O nome do trabalho. *job_name* está **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
->  O *job_id* ou *job_name* devem ser especificados, mas não é possível especificar ambos.  
+>  Qualquer um dos *job_id* ou *job_name* deve ser especificado, mas não podem ser especificados.  
   
  [  **@server_name =** ] **'***server***'**  
- O nome do servidor no qual o trabalho será direcionado. *servidor* é **nvarchar (30)**, com um padrão n' (local) '. *servidor* podem ser **(LOCAL)** para um servidor local ou o nome de um servidor de destino existente.  
+ O nome do servidor no qual o trabalho será direcionado. *servidor* está **nvarchar (30)**, com um padrão n' (local) '. *servidor* pode ser **(LOCAL)** para um servidor local ou o nome de um servidor de destino existente.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhum  
+ None  
   
 ## <a name="remarks"></a>Remarks  
- **@automatic_post** existe em **sp_add_jobserver**, mas não está listado em argumentos. **@automatic_post** é reservado para uso interno.  
+ **@automatic_post** existe no **sp_add_jobserver**, mas não está listado em argumentos. **@automatic_post** é reservado para uso interno.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] gerencia trabalhos de forma fácil e com representação gráfica. Além disso, ele é recomendado para criar e gerenciar a infraestrutura de trabalhos.  
   
@@ -77,9 +77,9 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 -   **SQLAgentOperatorRole**  
   
- Para obter detalhes sobre as permissões dessas funções, consulte [Funções de banco de dados fixas do SQL Server Agent](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Para obter detalhes sobre as permissões dessas funções, consulte [Funções de banco de dados fixas do SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Somente membros do **sysadmin** pode executar a função de servidor fixa **sp_add_jobserver** para trabalhos que envolvam vários servidores.  
+ Somente os membros dos **sysadmin** pode executar a função de servidor fixa **sp_add_jobserver** para trabalhos que envolvam vários servidores.  
   
 ## <a name="examples"></a>Exemplos  
   

@@ -21,12 +21,12 @@ caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: aeddab237776e94c2d954d3019beac5b52726723
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d81eee206ee511c3004d4306a373e527a572901e
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37156257"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395214"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>Exibir ou alterar o modelo de recuperação de um banco de dados (SQL Server)
   Este tópico descreve como exibir ou alterar o modelo de recuperação de um banco de dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]. Um *modelo de recuperação* é uma propriedade de banco de dados que controla como as transações são registradas, se o log de transações exige (e permite) backup e que tipos de operações de restauração estão disponíveis. Existem três modelos de recuperação: simples, completo e bulk-logged. Geralmente, um banco de dados usa o modelo de recuperação completa ou o modelo de recuperação simples. É possível alternar para outro modelo de recuperação do banco de dados a qualquer momento. Os banco de dados **modelo** define o modelo de recuperação padrão de novos bancos de dados.  
@@ -161,7 +161,7 @@ ALTER DATABASE model SET RECOVERY FULL ;
   
 ##  <a name="RelatedContent"></a> Conteúdo relacionado  
   
--   [Planos de manutenção de banco de dados](http://msdn.microsoft.com/library/ms187658.aspx) (nos Manuais Online do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] )  
+-   [Planos de manutenção de banco de dados](../maintenance-plans/maintenance-plans.md) (nos Manuais Online do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] )  
   
 ## <a name="see-also"></a>Consulte também  
  [Modelos de recuperação &#40;SQL Server&#41;](recovery-models-sql-server.md)   

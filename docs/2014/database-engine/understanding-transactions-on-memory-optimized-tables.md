@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 06075248-705e-4563-9371-b64cd609793c
@@ -14,12 +13,12 @@ caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 11b6becc192fcb8257f2f4dc88965c95222d2d44
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 931eaa8ad51c277657c3a9f86402d4759ad0d671
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37249286"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40395207"
 ---
 # <a name="understanding-transactions-on-memory-optimized-tables"></a>Compreendendo transações em tabelas com otimização de memória
   As transações acessam as tabelas com otimização de memória usando um formulário de controle de simultaneidade otimista e de várias versões. Isso significa que há versões diferentes de dados. Cada transação opera sua própria versão do banco de dados consistente transacionalmente, independentemente de outras transações simultaneamente em execução. Além disso, as transações operam sob a suposição otimista de que não haverá conflitos com outras transações simultâneas. Isso evita a necessidade de usar bloqueios, mas exige que o sistema detecte conflitos e encerre uma das transações conflitantes. Conflitos podem ocorrer apenas em transações de gravação/gravação e em transações de leitura/gravação. Se houver um conflito de gravação/gravação, uma transação de gravação será encerrada.  

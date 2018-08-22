@@ -16,52 +16,52 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 624d546309a34ad4370ab8c3eadce4324832c19f
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: fcdcfc8d113bca42a9f042e8e6196d3de55b8e7e
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34779133"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40395195"
 ---
-# <a name="project-settings-synchronization-sybasetosql"></a>Configurações de projeto (sincronização) (SybaseToSQL)
-A página de sincronização do **configurações de projeto** caixa de diálogo contém configurações que personalizam como o SSMA carrega os objetos de banco de dados, como tabelas e procedimentos armazenados, em [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou do SQL Azure.  
+# <a name="project-settings-synchronization-sybasetosql"></a>Configurações do projeto (sincronização) (SybaseToSQL)
+A página de sincronização do **configurações do projeto** caixa de diálogo contém configurações que personalizam como SSMA carrega os objetos de banco de dados, como tabelas e procedimentos armazenados, em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure.  
   
 Você pode acessar duas páginas diferentes de sincronização que contêm as mesmas configurações:  
   
--   Se você deseja especificar configurações para todos os projetos futuros do SSMA, no **ferramentas** menu, selecione **configurações de projeto padrão**, selecione o tipo de projeto de migração para o qual as configurações são necessárias para ser exibido ou alterado de **versão de destino de migração** lista suspensa e, em seguida, selecione **sincronização** na parte inferior do painel esquerdo.  
+-   Se você deseja especificar configurações para todos os projetos futuros do SSMA, na **ferramentas** menu, selecione **configurações do projeto padrão**, selecione o tipo de projeto de migração para o qual as configurações são necessárias para ser exibida ou alterada partir **versão de destino de migração** lista suspensa e, em seguida, selecione **sincronização** na parte inferior do painel esquerdo.  
   
--   Para especificar as configurações para o projeto atual, no **ferramentas** menu, selecione **configurações de projeto**e, em seguida, selecione **sincronização** na parte inferior do painel esquerdo.  
+-   Para especificar configurações para o projeto atual, nos **ferramentas** menu, selecione **configurações do projeto**e, em seguida, selecione **sincronização** na parte inferior do painel esquerdo.  
   
 ## <a name="options"></a>Opções  
 **Tentativas**  
-Especifica o número de tentativas SSMA deve fazer ao carregar objetos em [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Objetos que não são carregados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] na tentativa atual será tentada novamente até que o SSMA atinge o número máximo de tentativas no processo de sincronização atual.  
+Especifica o número de tentativas SSMA deve fazer quando ele carregar objetos em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Objetos que não são carregados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na tentativa atual será tentada novamente até que o SSMA atinja o número máximo de tentativas no processo de sincronização atual.  
   
 ## <a name="synchronization-for-sql-server"></a>Sincronização para o SQL Server  
-**Atualizar o objeto local na alteração de objeto local e remoto**  
-Especifica se o SSMA deve substituir os metadados do objeto local com metadados de objeto remoto se alterar objetos locais e remotos.  
-Se você selecionar **de atualização do banco de dados**, SSMA carregar definições de banco de dados nos metadados quando a condição for atendida.  
+**Atualizar o objeto local na alteração de objeto local e remota**  
+Especifica se o SSMA deve substituir os metadados de objeto local com os metadados do objeto remoto se alterar os objetos locais e remotos.  
+Se você selecionar **Refresh do banco de dados**, SSMA carregará as definições de banco de dados nos metadados quando a condição for atendida.  
 Se você selecionar **gravar no banco de dados**, SSMA atualizará os objetos no banco de dados de acordo com o conteúdo de metadados do SSMA quando a condição for atendida.  
-Se você selecionar **ignorar**, SSMA não executará qualquer ação de atualização.   
+Se você selecionar **Skip**, SSMA não executará nenhuma ação de atualização.   
 Conjunto de opção padrão é **gravar no banco de dados.**  
   
 **Atualizar o objeto local na alteração de objeto local**  
-Especifica se o SSMA deve substituir os metadados do objeto local com metadados de objeto remoto se o objeto remoto for alterado.  
-Se você selecionar **de atualização do banco de dados**, SSMA carregar definições de banco de dados nos metadados quando a condição for atendida.  
+Especifica se o SSMA deve substituir os metadados de objeto local com os metadados do objeto remoto se o objeto remoto for alterado.  
+Se você selecionar **Refresh do banco de dados**, SSMA carregará as definições de banco de dados nos metadados quando a condição for atendida.  
 Se você selecionar **gravar no banco de dados**, SSMA atualizará o objeto no banco de dados de acordo com o conteúdo de metadados do SSMA quando a condição for atendida.  
-Se você selecionar **ignorar**, SSMA não executará qualquer ação de atualização.   
-Conjunto de opção padrão é **gravar no banco de dados**.  
+Se você selecionar **Skip**, SSMA não executará nenhuma ação de atualização.   
+É o conjunto de opções padrão **gravar no banco de dados**.  
   
 **Atualizar o objeto local na alteração do objeto remoto**  
-Especifica se o SSMA deve substituir os metadados do objeto local com metadados de objeto remoto se o objeto remoto for alterado.  
-Se você selecionar **de atualização do banco de dados**, SSMA carregar definições de banco de dados nos metadados quando a condição for atendida.  
+Especifica se o SSMA deve substituir os metadados de objeto local com os metadados do objeto remoto se o objeto remoto for alterado.  
+Se você selecionar **Refresh do banco de dados**, SSMA carregará as definições de banco de dados nos metadados quando a condição for atendida.  
 Se você selecionar **gravar no banco de dados**, SSMA atualizará o objeto no banco de dados de acordo com o conteúdo de metadados do SSMA quando a condição for atendida.  
-Se você selecionar **ignorar**, SSMA não executará qualquer ação de atualização.   
-Conjunto de opção padrão é **de atualização do banco de dados**.  
+Se você selecionar **Skip**, SSMA não executará nenhuma ação de atualização.   
+É o conjunto de opções padrão **Refresh do banco de dados**.  
   
-**Atualização quando os metadados de objeto local estão ausente**  
+**Atualizar quando os metadados de objeto local estão ausente**  
 Especifica se o SSMA deve criar metadados locais se existe um objeto no banco de dados de destino, mas não localmente.  
-Se você selecionar **de atualização do banco de dados**, SSMA seleciona a atualização da opção de banco de dados quando a condição for atendida.  
+Se você selecionar **Refresh do banco de dados**, SSMA seleciona a atualização da opção de banco de dados quando a condição for atendida.  
 Se você selecionar **gravar no banco de dados**, SSMA excluirá o objeto do banco de dados quando a condição for atendida.  
-Se você selecionar **ignorar**, SSMA não executará qualquer ação de atualização.   
-Conjunto de opção padrão é **de atualização do banco de dados**.  
+Se você selecionar **Skip**, SSMA não executará nenhuma ação de atualização.   
+É o conjunto de opções padrão **Refresh do banco de dados**.  
   

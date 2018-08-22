@@ -13,12 +13,12 @@ caps.latest.revision: 14
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ee9bf066e246dec2432b4a0874a3f3d99c7d2779
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d99796f219623e72fd42e0a9780ea0d2d9458250
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37264872"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393974"
 ---
 # <a name="sql-server-backup-to-url"></a>Backup do SQL Server para URL
   Este tópico apresenta os conceitos, os requisitos e os componentes necessários para usar o serviço de armazenamento de Blob do Windows Azure como um destino de backup. A funcionalidade de backup e restauração tem o mesmo efeito de DISK ou TAPE, com algumas diferenças. As diferenças, todas as exceções notáveis e alguns exemplos de código são incluídos neste tópico.  
@@ -86,9 +86,9 @@ ms.locfileid: "37264872"
   
  Para obter instruções passo a passo sobre como criar uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credencial, consulte [criar uma credencial](#credential) exemplo mais adiante neste tópico.  
   
- Para obter informações gerais sobre credenciais, consulte [Credenciais](http://msdn.microsoft.com/en-us/library/ms161950.aspx)  
+ Para obter informações gerais sobre credenciais, consulte [Credenciais](../security/authentication-access/credentials-database-engine.md)  
   
- Para obter informações sobre outros exemplos em que as credenciais são usadas, consulte [Criar um proxy do SQL Server Agent](http://msdn.microsoft.com/library/ms175834.aspx).  
+ Para obter informações sobre outros exemplos em que as credenciais são usadas, consulte [criar um Proxy do SQL Server Agent](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
 ###  <a name="limitations"></a> Limitações  
   

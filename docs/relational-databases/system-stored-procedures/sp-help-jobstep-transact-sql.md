@@ -22,12 +22,12 @@ caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a614a40001e21fadf708cb2079dbe45171cafe62
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7e610198b2a7c26ad11811157b52a066639592a8
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261765"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40393779"
 ---
 # <a name="sphelpjobstep-transact-sql"></a>sp_help_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,22 +48,22 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 ## <a name="arguments"></a>Argumentos  
  [  **@job_id =**] **'***job_id***'**  
- O número de identificação do trabalho para o qual as informações de trabalho devem ser retornadas. *job_id* é **uniqueidentifier**, com um padrão NULL.  
+ O número de identificação do trabalho para o qual as informações de trabalho devem ser retornadas. *job_id* está **uniqueidentifier**, com um padrão NULL.  
   
  [  **@job_name =**] **'***job_name***'**  
- O nome do trabalho. *job_name* é **sysname**, com um padrão NULL.  
+ O nome do trabalho. *job_name* está **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
->  O *job_id* ou *job_name* devem ser especificados, mas não é possível especificar ambos.  
+>  Qualquer um dos *job_id* ou *job_name* deve ser especificado, mas não podem ser especificados.  
   
  [  **@step_id =**] *step_id*  
- O número de identificação da etapa no trabalho. Se não for incluído, todas as etapas do trabalho serão incluídas. *step_id* é **int**, com um padrão NULL.  
+ O número de identificação da etapa no trabalho. Se não for incluído, todas as etapas do trabalho serão incluídas. *step_id* está **int**, com um padrão NULL.  
   
  [  **@step_name =**] **'***step_name***'**  
- O nome da etapa no trabalho. *step_name* é **sysname**, com um padrão NULL.  
+ O nome da etapa no trabalho. *step_name* está **sysname**, com um padrão NULL.  
   
  [  **@suffix =**] *sufixo*  
- Um sinalizador que indica se uma descrição de texto será anexada ao **sinalizadores** coluna na saída. *sufixo*é **bit**, com o padrão de **0**. Se *sufixo* é **1**, uma descrição será anexada.  
+ Um sinalizador que indica se uma descrição de texto será anexada à **sinalizadores** coluna na saída. *sufixo*está **bit**, com o padrão de **0**. Se *sufixo* é **1**, uma descrição será anexada.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -72,29 +72,29 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**step_id**|**Int**|Identificador exclusivo da etapa.|  
+|**step_id**|**int**|Identificador exclusivo da etapa.|  
 |**step_name**|**sysname**|Nome da etapa no trabalho.|  
 |**subsystem**|**nvarchar(40)**|Subsistema no qual o comando de etapa será executado.|  
 |**command**|**nvarchar(max)**|Comando executado na etapa.|  
-|**flags**|**Int**|Um bitmask de valores que controlam o comportamento da etapa.|  
-|**cmdexec_success_code**|**Int**|Para uma **CmdExec** etapa, este é o código de saída do processo de um comando bem sucedido.|  
+|**flags**|**int**|Um bitmask de valores que controlam o comportamento da etapa.|  
+|**cmdexec_success_code**|**int**|Para um **CmdExec** etapa, isso é o código de saída do processo de um comando bem sucedido.|  
 |**on_success_action**|**tinyint**|Ação a ser efetuada se a etapa tiver êxito:<br /><br /> **1** = sair do trabalho relatando êxito.<br /><br /> **2** = sair do trabalho relatando falha.<br /><br /> **3** = ir para a próxima etapa.<br /><br /> **4** = ir para a etapa.|  
-|**on_success_step_id**|**Int**|Se **on_success_action** for 4, isto indicará a próxima etapa a ser executada.|  
-|**on_fail_action**|**tinyint**|O que fazer se a etapa falhar. Os valores são os mesmos **on_success_action**.|  
-|**on_fail_step_id**|**Int**|Se **on_fail_action** for 4, isto indicará a próxima etapa a ser executada.|  
+|**on_success_step_id**|**int**|Se **on_success_action** for 4, isto indicará a próxima etapa a ser executada.|  
+|**on_fail_action**|**tinyint**|O que fazer se a etapa falhar. Valores são os mesmos **on_success_action**.|  
+|**on_fail_step_id**|**int**|Se **on_fail_action** for 4, isto indicará a próxima etapa a ser executada.|  
 |**server**|**sysname**|Reservado.|  
 |**database_name**|**sysname**|Para uma etapa [!INCLUDE[tsql](../../includes/tsql-md.md)], este é o banco de dados no qual o comando é executado.|  
 |**database_user_name**|**sysname**|Para uma etapa [!INCLUDE[tsql](../../includes/tsql-md.md)], este é o contexto de usuário do banco de dados no qual o comando é executado.|  
-|**retry_attempts**|**Int**|Número máximo de vezes que o comando deve ser repetido (se for malsucedido).|  
-|**retry_interval**|**Int**|Intervalo (em minutos) para quaisquer tentativas de repetição.|  
-|**os_run_priority**|**Int**|Reservado.|  
-|**output_file_name**|**nvarchar(200)**|Arquivo para o comando de saída deve ser gravada ([!INCLUDE[tsql](../../includes/tsql-md.md)], **CmdExec**, e **PowerShell** somente etapas).|  
-|**last_run_outcome**|**Int**|Resultado da etapa na última vez em que foi executada:<br /><br /> **0** = falha<br /><br /> **1** = foi bem-sucedida<br /><br /> **2** = repetir<br /><br /> **3** = cancelada<br /><br /> **5** = desconhecido|  
-|**last_run_duration**|**Int**|Duração (em segundos) da etapa na última vez em que foi executada.|  
-|**last_run_retries**|**Int**|Número de vezes que o comando foi repetido da última vez em que a etapa foi executada.|  
-|**last_run_date**|**Int**|Data em que a execução da etapa foi iniciada pela última vez.|  
-|**last_run_time**|**Int**|Hora em que a execução da etapa foi iniciada pela última vez.|  
-|**proxy_id**|**Int**|Proxy da etapa do trabalho.|  
+|**retry_attempts**|**int**|Número máximo de vezes que o comando deve ser repetido (se for malsucedido).|  
+|**retry_interval**|**int**|Intervalo (em minutos) para quaisquer tentativas de repetição.|  
+|**os_run_priority**|**int**|Reservado.|  
+|**output_file_name**|**nvarchar(200)**|Arquivo de saída para o qual comando deve ser gravada ([!INCLUDE[tsql](../../includes/tsql-md.md)], **CmdExec**, e **PowerShell** somente etapas).|  
+|**last_run_outcome**|**int**|Resultado da etapa na última vez em que foi executada:<br /><br /> **0** = falha<br /><br /> **1** = foi bem-sucedida<br /><br /> **2** = repetir<br /><br /> **3** = cancelada<br /><br /> **5** = desconhecido|  
+|**last_run_duration**|**int**|Duração (em segundos) da etapa na última vez em que foi executada.|  
+|**last_run_retries**|**int**|Número de vezes que o comando foi repetido da última vez em que a etapa foi executada.|  
+|**last_run_date**|**int**|Data em que a execução da etapa foi iniciada pela última vez.|  
+|**last_run_time**|**int**|Hora em que a execução da etapa foi iniciada pela última vez.|  
+|**proxy_id**|**int**|Proxy da etapa do trabalho.|  
   
 ## <a name="remarks"></a>Remarks  
  **sp_help_jobstep** está no **msdb** banco de dados.  
@@ -108,9 +108,9 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 -   **SQLAgentOperatorRole**  
   
- Para obter detalhes sobre as permissões dessas funções, consulte [Funções de banco de dados fixas do SQL Server Agent](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+ Para obter detalhes sobre as permissões dessas funções, consulte [Funções de banco de dados fixas do SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Membros de **SQLAgentUserRole** só pode exibir as etapas de trabalho para trabalhos que possuem.  
+ Os membros **SQLAgentUserRole** só podem exibir as etapas de trabalho para trabalhos que possuem.  
   
 ## <a name="examples"></a>Exemplos  
   

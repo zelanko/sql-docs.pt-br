@@ -25,12 +25,12 @@ caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 6f54e23ee744f34ce3da70e1fd2a469d70b9063a
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 2b2ca3145c4152db92be0e55a4484c09727eaadb
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983923"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396044"
 ---
 # <a name="connecting-to-azure-sql-db-accesstosql"></a>Conectar-se ao banco de dados SQL do Azure (AccessToSQL)
 Para migrar bancos de dados Access para o SQL Azure, você deve se conectar à instância de destino do SQL Azure. Quando você se conectar, o SSMA obtém metadados sobre todos os bancos de dados na instância do SQL Azure e exibe os metadados de banco de dados no Gerenciador de metadados do SQL Azure. O SSMA armazena informações sobre qual instância do SQL Azure você está conectado ao, mas não armazena as senhas.  
@@ -42,14 +42,14 @@ Metadados sobre a instância do SQL Azure não será sincronizado automaticament
 ## <a name="required-sql-azure-permissions"></a>Exigido do SQL Azure permissões  
 A conta que é usada para se conectar ao SQL Azure exige permissões diferentes, dependendo das ações que executa a conta:  
   
--   Para converter objetos de acesso para [!INCLUDE[tsql](../../includes/tsql_md.md)] scripts de sintaxe, para atualizar os metadados do SQL Azure ou para salvar a sintaxe a ser convertido, a conta deve ter permissão para fazer logon na instância do SQL Azure.  
+-   Para converter objetos de acesso para [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts de sintaxe, para atualizar os metadados do SQL Azure ou para salvar a sintaxe a ser convertido, a conta deve ter permissão para fazer logon na instância do SQL Azure.  
   
 -   Para carregar objetos de banco de dados no SQL Azure, o requisito mínimo de permissão é a associação à **db_owner** função de banco de dados no banco de dados de destino.  
   
 ## <a name="establishing-a-sql-azure-connection"></a>Estabelecendo um SQL Azure Conexão  
 Antes de converter objetos de banco de dados de acesso à sintaxe do SQL Azure, você deve estabelecer uma conexão à instância do SQL Azure em que você deseja migrar o banco de dados ou bancos de dados.  
   
-Quando você define as propriedades de conexão, você também especificar o banco de dados onde objetos e dados serão migrados. Você pode personalizar esse mapeamento no nível do esquema de acesso depois que você se conectar ao SQL Azure. Para obter mais informações, consulte [mapeamento de bancos de dados Access para esquemas SQL Server](http://msdn.microsoft.com/69bee937-7b2c-49ee-8866-7518c683fad4)  
+Quando você define as propriedades de conexão, você também especificar o banco de dados onde objetos e dados serão migrados. Você pode personalizar esse mapeamento no nível do esquema de acesso depois que você se conectar ao SQL Azure. Para obter mais informações, consulte [mapeamento de bancos de dados Access para esquemas SQL Server](mapping-source-and-target-databases-accesstosql.md)  
   
 > [!IMPORTANT]  
 > Antes de tentar se conectar ao SQL Azure, certifique-se de que a instância do SQL Azure está em execução e pode aceitar conexões.  
@@ -105,14 +105,14 @@ O procedimento para reconectar-se ao SQL Azure é o mesmo que o procedimento par
 ## <a name="next-step"></a>Próxima etapa  
 A próxima etapa da migração depende de suas necessidades de projeto:  
   
--   Para personalizar o mapeamento entre esquemas de acesso e bancos de dados do SQL Azure e esquemas, consulte [mapeamento de bancos de dados Access para esquemas SQL Server](http://msdn.microsoft.com/69bee937-7b2c-49ee-8866-7518c683fad4).  
+-   Para personalizar o mapeamento entre esquemas de acesso e bancos de dados do SQL Azure e esquemas, consulte [mapeamento de bancos de dados Access para esquemas SQL Server](mapping-source-and-target-databases-accesstosql.md).  
   
--   Para personalizar opções de configuração para os projetos, consulte [definir opções do projeto](http://msdn.microsoft.com/0a7304df-2f35-4453-96ef-7ac83dea1167).  
+-   Para personalizar opções de configuração para os projetos, consulte [definir opções do projeto](setting-conversion-and-migration-options-accesstosql.md).  
   
--   Para personalizar o mapeamento de tipos de dados de origem e destino, consulte [tipos de dados de destino e origem do mapeamento](http://msdn.microsoft.com/b362a075-16e7-423f-b63f-e1e9f02844a9).  
+-   Para personalizar o mapeamento de tipos de dados de origem e destino, consulte [tipos de dados de destino e origem do mapeamento](mapping-source-and-target-data-types-accesstosql.md).  
   
--   Se você não precisa executar qualquer uma dessas tarefas, você pode converter as definições de objeto de banco de dados do Access em definições de objeto do SQL Azure. Para obter mais informações, consulte [convertendo bancos de dados do Access](http://msdn.microsoft.com/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
+-   Se você não precisa executar qualquer uma dessas tarefas, você pode converter as definições de objeto de banco de dados do Access em definições de objeto do SQL Azure. Para obter mais informações, consulte [convertendo bancos de dados do Access](converting-access-database-objects-accesstosql.md)  
   
 ## <a name="see-also"></a>Consulte também  
-[Migrando bancos de dados do Access para o SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[Migrando bancos de dados do Access para o SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

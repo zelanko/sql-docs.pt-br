@@ -26,19 +26,19 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 4de77e7c9cce12c180fa5d8b798c97dee21d1f6f
-ms.sourcegitcommit: 9fb4b390aca4ff688a18a8d12e338ffd15d08a12
+ms.openlocfilehash: 673f1bffeea908da211cd5ff76bad9d96dabcded
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39164207"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396441"
 ---
 # <a name="sysdmosjobobject-azure-sql-database"></a>sys.dm_os_job_object (banco de dados SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
 Retorna uma única linha descrevendo a configuração do objeto de trabalho que gerencia o processo do SQL Server, bem como algumas estatísticas de consumo de recursos no nível do objeto de trabalho. Retorna um conjunto vazio se o SQL Server não está em execução em um objeto de trabalho. 
 
-Um objeto de trabalho é uma construção Windows que implementa a governança de recursos de CPU, memória e e/s no nível do sistema operacional. Para obter mais informações sobre objetos de trabalho, consulte [objetos de trabalho](https://msdn.microsoft.com/library/windows/desktop/ms684161.aspx). 
+Um objeto de trabalho é uma construção Windows que implementa a governança de recursos de CPU, memória e e/s no nível do sistema operacional. Para obter mais informações sobre objetos de trabalho, consulte [objetos de trabalho](/windows/desktop/ProcThread/job-objects). 
   
 |Colunas|Tipo de Dados|Description|  
 |-------------|---------------|-----------------|  

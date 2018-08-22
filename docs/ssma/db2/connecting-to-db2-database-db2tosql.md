@@ -16,15 +16,15 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 78ba615946600d082fd2533ecf81f7b2ba295196
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 2228a08c2985f4e683ff860cd77e68159a0ecd0a
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980359"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40396210"
 ---
 # <a name="connecting-to-db2-database-db2tosql"></a>Conectar-se ao banco de dados do DB2 (DB2ToSQL)
-Migrar bancos de dados do DB2 para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], você deve se conectar ao banco de dados DB2 que você deseja migrar. Quando você se conectar, o SSMA obtém metadados sobre todos os esquemas do DB2 e depois o exibe no painel Gerenciador de metadados do DB2. O SSMA armazena informações sobre o servidor de banco de dados, mas não armazena as senhas.  
+Migrar bancos de dados do DB2 para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você deve se conectar ao banco de dados DB2 que você deseja migrar. Quando você se conectar, o SSMA obtém metadados sobre todos os esquemas do DB2 e depois o exibe no painel Gerenciador de metadados do DB2. O SSMA armazena informações sobre o servidor de banco de dados, mas não armazena as senhas.  
   
 Sua conexão ao banco de dados permanece ativa até você fechar o projeto. Quando você reabrir o projeto, você deve se reconectar se você quiser que uma conexão ativa para o banco de dados.  
   
@@ -38,7 +38,7 @@ Autorização de usuário define a lista dos comandos e objetos que estão dispo
 -   Acesso a dados para migração de dados requer DATAACCESS  
   
 ## <a name="establishing-a-connection-to-db2"></a>Estabelecer uma Conexão para o DB2  
-Quando você se conectar a um banco de dados, o SSMA lê os metadados do banco de dados e, em seguida, adiciona esses metadados ao arquivo de projeto. Esses metadados são usados pelo SSMA quando ele converte objetos a serem [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] sintaxe, e quando ele migra dados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Você pode procurar esses metadados no painel Gerenciador de metadados do DB2 e examine as propriedades dos objetos de banco de dados individuais.  
+Quando você se conectar a um banco de dados, o SSMA lê os metadados do banco de dados e, em seguida, adiciona esses metadados ao arquivo de projeto. Esses metadados são usados pelo SSMA quando ele converte objetos a serem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sintaxe, e quando ele migra dados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você pode procurar esses metadados no painel Gerenciador de metadados do DB2 e examine as propriedades dos objetos de banco de dados individuais.  
   
 > [!IMPORTANT]  
 > Antes de tentar se conectar, certifique-se de que o servidor de banco de dados está em execução e pode aceitar conexões.  
@@ -84,7 +84,7 @@ Quando você se conectar a um banco de dados, o SSMA lê os metadados do banco d
     Para obter mais informações, consulte [conectar-se ao Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md).  
   
 ## <a name="reconnecting-to-db2"></a>Reconectar-se ao DB2  
-Sua conexão com o servidor de banco de dados permanece ativa até você fechar o projeto. Quando você reabrir o projeto, você deve se reconectar se você quiser que uma conexão ativa para o banco de dados. Você pode trabalhar offline até que você deseja atualizar os metadados, carregar objetos de banco de dados em [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], e migrar dados.  
+Sua conexão com o servidor de banco de dados permanece ativa até você fechar o projeto. Quando você reabrir o projeto, você deve se reconectar se você quiser que uma conexão ativa para o banco de dados. Você pode trabalhar offline até que você deseja atualizar os metadados, carregar objetos de banco de dados em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], e migrar dados.  
   
 ## <a name="refreshing-db2-metadata"></a>Atualizar metadados do DB2  
 Metadados sobre o banco de dados do DB2 não é atualizado automaticamente. Os metadados no Gerenciador de metadados do DB2 são um instantâneo dos metadados quando conectado pela primeira vez ou a última vez que você atualizou metadados manualmente. Você pode atualizar manualmente os metadados para todos os esquemas, um único esquema ou objetos de banco de dados individuais.  
@@ -109,7 +109,7 @@ Metadados sobre o banco de dados do DB2 não é atualizado automaticamente. Os m
   
     Para exibir as definições de codificação de cores, clique o **legenda** botão.  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok_md.md)]  
+5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="next-step"></a>Próxima etapa  
   

@@ -14,18 +14,18 @@ caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ec782dab7b86b17f06a22bebf2e8549a08a55085
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 69e0fe6394d2690b3694cd212bf4b475eda3128d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200336"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396045"
 ---
 # <a name="example-of-a-minimum-privilege-configuration-for-powerpivot-for-sharepoint-2013"></a>Exemplo de uma configuração de privilégios mínimos para o PowerPivot para SharePoint 2013
   Este tópico descreve um exemplo da configuração do PowerPivot para SharePoint 2013 com privilégios mínimos. A configuração utiliza uma conta diferente para cada um dos três componentes e cada conta tem o nível mínimo de privilégios.  
   
 ## <a name="summary-of-accounts"></a>Resumo de contas  
- O PowerPivot para SharePoint 2013 dá suporte ao uso da conta de serviço de rede para a conta de serviço do Analysis Services. A conta de serviço de rede não é um cenário com suporte com o SharePoint 2010. Para obter mais informações sobre contas de serviço, consulte [configurar contas de serviço do Windows e as permissões](http://msdn.microsoft.com/library/ms143504.aspx) (http://msdn.microsoft.com/library/ms143504.aspx).  
+ O PowerPivot para SharePoint 2013 dá suporte ao uso da conta de serviço de rede para a conta de serviço do Analysis Services. A conta de serviço de rede não é um cenário com suporte com o SharePoint 2010. Para obter mais informações sobre contas de serviço, consulte [configurar contas de serviço do Windows e as permissões](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) (http://msdn.microsoft.com/library/ms143504.aspx).  
   
  A tabela a seguir resume as três contas usadas neste exemplo de uma configuração com privilégios mínimos.  
   

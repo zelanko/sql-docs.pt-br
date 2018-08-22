@@ -21,14 +21,14 @@ caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f1d9e2c090c6470cb23849ae35ad5b950b1e246b
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 99ab3ab7debd5542f57d9008ae83baf1deb0e2c6
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979888"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40396236"
 ---
-# <a name="creating-script-files-sybasetosql"></a>Criar arquivos de Script (SybaseToSQL)
+# <a name="creating-script-files-sybasetosql"></a>Criar arquivos de script (SybaseToSQL)
 A primeira etapa antes de iniciar o aplicativo de console do SSMA é criar o arquivo de script e se for necessário criar o arquivo de valor da variável e o arquivo de conexão do servidor.  
   
 O arquivo de script pode ser dividido em três seções, sobre visualização..,:  
@@ -357,7 +357,7 @@ O arquivo de script contém uma sequência de comandos de fluxo de trabalho de m
   
 Por exemplo, uma migração de dados típicos de uma tabela específica em um banco de dados do Sybase segue a hierarquia de: banco de dados -&gt;esquema -&gt;tabela.  
   
-Quando todos os comandos no arquivo de script são executados com êxito, o aplicativo de console do SSMA é encerrado e retorna o controle para o usuário. O conteúdo de um arquivo de script é mais ou menos estático com informações de variáveis contidas em uma [arquivos de valor da variável](http://msdn.microsoft.com/395be464-4b19-44f7-91e5-b8876d6743dc) ou, em uma seção separada dentro do arquivo de script para valores de variáveis.  
+Quando todos os comandos no arquivo de script são executados com êxito, o aplicativo de console do SSMA é encerrado e retorna o controle para o usuário. O conteúdo de um arquivo de script é mais ou menos estático com informações de variáveis contidas em uma [arquivos de valor da variável](creating-variable-value-files-sybasetosql.md) ou, em uma seção separada dentro do arquivo de script para valores de variáveis.  
   
 **Exemplo:**  
   
