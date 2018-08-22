@@ -1,10 +1,18 @@
+items:
 - name: Integração CLR e transações
   href: clr-integration-and-transactions.md
-- name: Acessando a transação atual
-  href: accessing-the-current-transaction.md
-- name: Vidas úteis de transação
-  href: transaction-lifetimes.md
-- name: Promoção de transações
-  href: transaction-promotion.md
-- name: Usando System.Transactions
-  href: using-system-transactions.md
+  items:
+  - name: Promoção de transações
+    href: transaction-promotion.md
+  - name: Acessando a transação atual
+    href: accessing-the-current-transaction.md
+  - name: Usando System.Transactions
+    href: using-system-transactions.md
+  - name: Vidas úteis de transação
+    href: transaction-lifetimes.md
+ms.openlocfilehash: 9b1ab961e418d434c732e909a329fadaf4f376c2
+ms.sourcegitcommit: b91c0a7e981749758bd38e47a530d4e7bf1c5dd9
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "40427296"

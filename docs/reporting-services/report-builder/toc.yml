@@ -1,84 +1,87 @@
+items:
 - name: Visão geral
   href: report-builder-in-sql-server-2016.md
 - name: Iniciar o Construtor de Relatórios
   href: start-report-builder.md
   items:
-    - name: Definir opções padrão para o Construtor de Relatórios
-      href: set-default-options-for-report-builder.md
+  - name: Definir opções padrão para o Construtor de Relatórios
+    href: set-default-options-for-report-builder.md
 - name: 'Tutorial: Criar um relatório de gráfico rápido offline'
   href: tutorial-create-a-quick-chart-report-offline-report-builder.md
 - name: Exibição do design de relatório
   href: report-design-view-report-builder.md
   items:
-    - name: Visualizando relatórios no Construtor de Relatórios
-      href: previewing-reports-in-report-builder.md
+  - name: Visualizando relatórios no Construtor de Relatórios
+    href: previewing-reports-in-report-builder.md
 - name: Exibição do design de conjunto de dados compartilhado
   href: shared-dataset-design-view-report-builder.md
 - name: Atalhos de teclado
   href: keyboard-shortcuts-report-builder.md
-- name: 'Localizando, exibindo e gerenciando relatórios'
+- name: Localizando, exibindo e gerenciando relatórios
   href: finding-viewing-and-managing-reports-report-builder-and-ssrs.md
   items:
-    - name: Localizando e exibindo relatórios no Portal da Web
-      href: finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md
-    - name: Localizando e exibindo relatórios com um navegador
-      href: finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md
-    - name: Procurando relatórios e outros itens
-      href: searching-for-reports-and-other-items-report-builder-and-ssrs.md
-    - name: Usando Meus Relatórios
-      href: using-my-reports-report-builder-and-ssrs.md
-    - name: Caixa de diálogo Logon do Reporting Services
-      href: reporting-services-login-dialog-box-report-builder.md
-    - name: Caixa de diálogo Seções do Relatório
-      href: report-sections-dialog-box-report-builder.md
-    - name: Caixa de diálogo Converter CRI
-      href: convert-cri-dialog-box-report-builder.md
+  - name: Localizando e exibindo relatórios no Portal da Web
+    href: finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md
+  - name: Localizando e exibindo relatórios com um navegador
+    href: finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md
+  - name: Procurando relatórios e outros itens
+    href: searching-for-reports-and-other-items-report-builder-and-ssrs.md
+  - name: Usando Meus Relatórios
+    href: using-my-reports-report-builder-and-ssrs.md
+  - name: Caixa de diálogo Converter CRI
+    href: convert-cri-dialog-box-report-builder.md
 - name: Ocultar um item (Construtor de Relatórios e SSRS)
   href: hide-an-item-report-builder-and-ssrs.md
 - name: Exportar relatórios
   href: export-reports-report-builder-and-ssrs.md
   items:
-    - name: Funcionalidade interativa para extensões de renderização de relatório diferentes
-      href: interactive-functionality-different-report-rendering-extensions.md
-    - name: Exportando para um arquivo CSV
-      href: exporting-to-a-csv-file-report-builder-and-ssrs.md
-    - name: Exportando para o Microsoft Excel
-      href: exporting-to-microsoft-excel-report-builder-and-ssrs.md
-    - name: Exportando para o Microsoft Word
-      href: exporting-to-microsoft-word-report-builder-and-ssrs.md
-    - name: Renderizando para HTML
-      href: rendering-to-html-report-builder-and-ssrs.md
-    - name: Exportando para um arquivo de imagem
-      href: exporting-to-an-image-file-report-builder-and-ssrs.md
-    - name: Exportando para um arquivo PDF
-      href: exporting-to-a-pdf-file-report-builder-and-ssrs.md
-    - name: Exportando para XML
-      href: exporting-to-xml-report-builder-and-ssrs.md
-    - name: Gerando feeds de dados de relatórios
-      href: generating-data-feeds-from-reports-report-builder-and-ssrs.md
-    - name: Gerar feeds de dados de um relatório
-      href: generate-data-feeds-from-a-report-report-builder-and-ssrs.md
-    - name: Work Around the Excel 2003 Row Limitation
-      href: work-around-the-excel-2003-row-limitation.md
+  - name: Funcionalidade interativa para extensões de renderização de relatório diferentes
+    href: interactive-functionality-different-report-rendering-extensions.md
+  - name: Exportando para um arquivo CSV
+    href: exporting-to-a-csv-file-report-builder-and-ssrs.md
+  - name: Exportando para o Microsoft Excel
+    href: exporting-to-microsoft-excel-report-builder-and-ssrs.md
+  - name: Exportando para o Microsoft Word
+    href: exporting-to-microsoft-word-report-builder-and-ssrs.md
+  - name: Renderizando para HTML
+    href: rendering-to-html-report-builder-and-ssrs.md
+  - name: Exportando para um arquivo de imagem
+    href: exporting-to-an-image-file-report-builder-and-ssrs.md
+  - name: Exportando para um arquivo PDF
+    href: exporting-to-a-pdf-file-report-builder-and-ssrs.md
+  - name: Exportando para XML
+    href: exporting-to-xml-report-builder-and-ssrs.md
+  - name: Gerando feeds de dados de relatórios
+    href: generating-data-feeds-from-reports-report-builder-and-ssrs.md
+  - name: Gerar feeds de dados de um relatório
+    href: generate-data-feeds-from-a-report-report-builder-and-ssrs.md
+  - name: Work Around the Excel 2003 Row Limitation
+    href: work-around-the-excel-2003-row-limitation.md
 - name: Imprimir relatórios
   href: print-reports-report-builder-and-ssrs.md
   items:
-    - name: Imprimir relatórios em um navegador com o controle de impressão
-      href: print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md
-    - name: Imprimir relatórios de outros aplicativos
-      href: print-reports-from-other-applications-report-builder-and-ssrs.md
-    - name: Imprimir um relatório
-      href: print-a-report-report-builder-and-ssrs.md
-    - name: Imprimir um relatório (Reporting Services no modo do SharePoint)
-      href: print-a-report-reporting-services-in-sharepoint-mode.md
+  - name: Imprimir relatórios em um navegador com o controle de impressão
+    href: print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md
+  - name: Imprimir relatórios de outros aplicativos
+    href: print-reports-from-other-applications-report-builder-and-ssrs.md
+  - name: Imprimir um relatório
+    href: print-a-report-report-builder-and-ssrs.md
+  - name: Imprimir um relatório (Reporting Services no modo do SharePoint)
+    href: print-a-report-reporting-services-in-sharepoint-mode.md
 - name: Salvando relatórios
   href: saving-reports-report-builder.md
   items:
-    - name: Salvar relatórios em um servidor de relatório
-      href: save-reports-to-a-report-server-report-builder.md
-    - name: Salvar um relatório em uma biblioteca do SharePoint
-      href: save-a-report-to-a-sharepoint-library-report-builder.md
+  - name: Salvar relatórios em um servidor de relatório
+    href: save-reports-to-a-report-server-report-builder.md
+  - name: Salvar um relatório em uma biblioteca do SharePoint
+    href: save-a-report-to-a-sharepoint-library-report-builder.md
 - name: Segurança
   href: security-report-builder.md
 - name: Glossário (Construtor de Relatórios)
   href: glossary-report-builder.md
+ms.openlocfilehash: 0d2bd1b356f4f5dac7b4040658da5107d1b0b3f7
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40427356"
