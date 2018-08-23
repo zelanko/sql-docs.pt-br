@@ -15,12 +15,12 @@ caps.latest.revision: 4
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 1e067f6a03b839f9de233bc71eccbf6631bb599f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e98809ab3981cc1af2482ef518be3ddfc639a574
+ms.sourcegitcommit: 320958d0f55b6974abf46f8a04f7a020ff86a0ae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38047118"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "40405371"
 ---
 # <a name="troubleshoot-reporting-services-report-rendering-issues"></a>Solucionar problemas de renderização de relatório do Reporting Services
 Após a combinação dos dados do relatório e das informações de layout, o relatório compilado é enviado a um renderizador de relatório. Por exemplo, quando você visualiza um relatório localmente, está usando o renderizador HTML para exibir o relatório compilado. Use este tópico para ajudar a solucionar problemas específicos da renderização de relatório.   
@@ -78,5 +78,5 @@ Quando a fonte de dados estiver configurada para uma tipo de conexão do tipo Sh
   
   
 
-[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
+[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
