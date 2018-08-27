@@ -1,145 +1,150 @@
+items:
 - name: Visão geral
   href: data-quality-services.md
-- name: Artigos novos e atualizados
-  href: new-updated-data-quality-services.md
 - name: Conceito e recursos
   items:
-    - name: Introdução ao Data Quality Services
-      href: introduction-to-data-quality-services.md
-    - name: Conceitos do Data Quality Services
-      href: data-quality-services-concepts.md
-    - name: Recursos e tarefas do Data Quality Services
-      href: data-quality-services-features-and-tasks.md
+  - name: Introdução ao Data Quality Services
+    href: introduction-to-data-quality-services.md
+  - name: Conceitos do Data Quality Services
+    href: data-quality-services-concepts.md
+  - name: Recursos e tarefas do Data Quality Services
+    href: data-quality-services-features-and-tasks.md
 - name: Instalar
   href: ../data-quality-services/install-windows/install-data-quality-services.md
 - name: Aplicativo cliente Data Quality
   href: data-quality-client-application.md
   items:
-    - name: Executar o aplicativo do cliente do Data Quality
-      href: run-the-data-quality-client-application.md
-    - name: Tela inicial do Cliente Data Quality
-      href: data-quality-client-home-screen.md
+  - name: Executar o aplicativo do cliente do Data Quality
+    href: run-the-data-quality-client-application.md
+  - name: Tela inicial do Cliente Data Quality
+    href: data-quality-client-home-screen.md
 - name: Bases de Dados de Conhecimento DQS e domínios
   href: dqs-knowledge-bases-and-domains.md
   items:
-    - name: Criando uma base de dados de conhecimento
-      href: building-a-knowledge-base.md
-      items:
-        - name: Criar uma base de dados de conhecimento
-          href: create-a-knowledge-base.md
-        - name: Abrir uma base de dados de conhecimento
-          href: open-a-knowledge-base.md
-        - name: Gerenciar uma base de dados de conhecimento
-          href: manage-a-knowledge-base.md
-        - name: Adicionando conhecimento a uma base de dados de conhecimento
-          href: adding-knowledge-to-a-knowledge-base.md
-        - name: Executar a descoberta da base de dados de conhecimento
-          href: perform-knowledge-discovery.md
-    - name: Importando e exportando conhecimento
-      href: importing-and-exporting-knowledge.md
-      items:
-        - name: Exportar um domínio para um arquivo .dqs
-          href: export-a-domain-to-a-dqs-file.md
-        - name: Importar um domínio de um arquivo .dqs
-          href: import-a-domain-from-a-dqs-file.md
-        - name: Exportar uma base de dados de conhecimento para um arquivo .dqs
-          href: export-a-knowledge-base-to-a-dqs-file.md
-        - name: Importar uma base de dados de conhecimento de um arquivo .dqs
-          href: import-a-knowledge-base-from-a-dqs-file.md
-        - name: Importar valores de um arquivo do Excel para um domínio
-          href: import-values-from-an-excel-file-into-a-domain.md
-        - name: Importar domínios de um arquivo do Excel na descoberta da base de dados de conhecimento
-          href: import-domains-from-an-excel-file-in-knowledge-discovery.md
-        - name: Importar valores de projeto de limpeza para um domínio
-          href: import-cleansing-project-values-into-a-domain.md
-    - name: Gerenciando um domínio
-      href: managing-a-domain.md
-      items:
-        - name: Criar um domínio
-          href: create-a-domain.md
-        - name: 'Gerenciamento de domínio: lista de domínios'
-          href: domain-management-domain-list.md
-        - name: Definir propriedades do domínio
-          href: set-domain-properties.md
-        - name: Criar um domínio vinculado
-          href: create-a-linked-domain.md
-        - name: Alterar valores de domínio
-          href: change-domain-values.md
-        - name: Criar uma regra de domínio
-          href: create-a-domain-rule.md
-        - name: Criar relações baseadas em termos
-          href: create-term-based-relations.md
-        - name: Usar o verificador ortográfico DQS
-          href: use-the-dqs-speller.md
-        - name: O SQL Server com suporte e tipos de dados do SSIS para domínios do DQS
-          href: supported-sql-server-and-ssis-data-types-for-dqs-domains.md
-    - name: Gerenciando um domínio composto
-      href: managing-a-composite-domain.md
-      items:
-        - name: Criar um domínio composto
-          href: create-a-composite-domain.md
-        - name: Criar uma regra de domínio cruzado
-          href: create-a-cross-domain-rule.md
-        - name: Usar relações de valor em um domínio composto
-          href: use-value-relations-in-a-composite-domain.md
-    - name: Usando a base de dados de conhecimento padrão do DQS
-      href: using-the-dqs-default-knowledge-base.md
+  - name: Criando uma base de dados de conhecimento
+    href: building-a-knowledge-base.md
+    items:
+    - name: Criar uma base de dados de conhecimento
+      href: create-a-knowledge-base.md
+    - name: Abrir uma base de dados de conhecimento
+      href: open-a-knowledge-base.md
+    - name: Gerenciar uma base de dados de conhecimento
+      href: manage-a-knowledge-base.md
+    - name: Adicionando conhecimento a uma base de dados de conhecimento
+      href: adding-knowledge-to-a-knowledge-base.md
+    - name: Executar a descoberta da base de dados de conhecimento
+      href: perform-knowledge-discovery.md
+  - name: Importando e exportando conhecimento
+    href: importing-and-exporting-knowledge.md
+    items:
+    - name: Exportar um domínio para um arquivo .dqs
+      href: export-a-domain-to-a-dqs-file.md
+    - name: Importar um domínio de um arquivo .dqs
+      href: import-a-domain-from-a-dqs-file.md
+    - name: Exportar uma base de dados de conhecimento para um arquivo .dqs
+      href: export-a-knowledge-base-to-a-dqs-file.md
+    - name: Importar uma base de dados de conhecimento de um arquivo .dqs
+      href: import-a-knowledge-base-from-a-dqs-file.md
+    - name: Importar valores de um arquivo do Excel para um domínio
+      href: import-values-from-an-excel-file-into-a-domain.md
+    - name: Importar domínios de um arquivo do Excel na descoberta da base de dados de conhecimento
+      href: import-domains-from-an-excel-file-in-knowledge-discovery.md
+    - name: Importar valores de projeto de limpeza para um domínio
+      href: import-cleansing-project-values-into-a-domain.md
+  - name: Gerenciando um domínio
+    href: managing-a-domain.md
+    items:
+    - name: Criar um domínio
+      href: create-a-domain.md
+    - name: 'Gerenciamento de domínio: lista de domínios'
+      href: domain-management-domain-list.md
+    - name: Definir propriedades do domínio
+      href: set-domain-properties.md
+    - name: Criar um domínio vinculado
+      href: create-a-linked-domain.md
+    - name: Alterar valores de domínio
+      href: change-domain-values.md
+    - name: Criar uma regra de domínio
+      href: create-a-domain-rule.md
+    - name: Criar relações baseadas em termos
+      href: create-term-based-relations.md
+    - name: Usar o verificador ortográfico DQS
+      href: use-the-dqs-speller.md
+    - name: O SQL Server com suporte e tipos de dados do SSIS para domínios do DQS
+      href: supported-sql-server-and-ssis-data-types-for-dqs-domains.md
+  - name: Gerenciando um domínio composto
+    href: managing-a-composite-domain.md
+    items:
+    - name: Criar um domínio composto
+      href: create-a-composite-domain.md
+    - name: Criar uma regra de domínio cruzado
+      href: create-a-cross-domain-rule.md
+    - name: Usar relações de valor em um domínio composto
+      href: use-value-relations-in-a-composite-domain.md
+  - name: Usando a base de dados de conhecimento padrão do DQS
+    href: using-the-dqs-default-knowledge-base.md
 - name: Projetos de qualidade de dados
   href: data-quality-projects-dqs.md
   items:
-    - name: Criar um projeto de qualidade de dados
-      href: create-a-data-quality-project.md
-    - name: 'Abrir, desbloquear, renomear e excluir um projeto do Data Quality'
-      href: open-unlock-rename-and-delete-a-data-quality-project.md
-    - name: Abrir projetos do Integration Services no cliente Data Quality
-      href: open-integration-services-projects-in-data-quality-client.md
-- name: Data Cleansing
+  - name: Criar um projeto de qualidade de dados
+    href: create-a-data-quality-project.md
+  - name: Abrir, desbloquear, renomear e excluir um projeto do Data Quality
+    href: open-unlock-rename-and-delete-a-data-quality-project.md
+  - name: Abrir projetos do Integration Services no cliente Data Quality
+    href: open-integration-services-projects-in-data-quality-client.md
+- name: Limpeza de Dados
   href: data-cleansing.md
   items:
-    - name: Limpar dados usando o conhecimento do DQS (interno)
-      href: cleanse-data-using-dqs-internal-knowledge.md
-    - name: Limpar dados em um domínio composto
-      href: cleanse-data-in-a-composite-domain.md
+  - name: Limpar dados usando o conhecimento do DQS (interno)
+    href: cleanse-data-using-dqs-internal-knowledge.md
+  - name: Limpar dados em um domínio composto
+    href: cleanse-data-in-a-composite-domain.md
 - name: Correspondência de dados
   href: data-matching.md
   items:
-    - name: Criar uma política de correspondência
-      href: create-a-matching-policy.md
-    - name: Executar um projeto de correspondência
-      href: run-a-matching-project.md
+  - name: Criar uma política de correspondência
+    href: create-a-matching-policy.md
+  - name: Executar um projeto de correspondência
+    href: run-a-matching-project.md
 - name: Serviços de Dados de Referência no DQS
   href: reference-data-services-in-dqs.md
   items:
-    - name: Configurar DQS para usar dados de referência
-      href: configure-dqs-to-use-reference-data.md
-    - name: Anexar domínio ou domínio composto para dados de referência
-      href: attach-domain-or-composite-domain-to-reference-data.md
-    - name: Limpar dados usando o conhecimento (externo) dos dados de referência
-      href: cleanse-data-using-reference-data-external-knowledge.md
+  - name: Configurar DQS para usar dados de referência
+    href: configure-dqs-to-use-reference-data.md
+  - name: Anexar domínio ou domínio composto para dados de referência
+    href: attach-domain-or-composite-domain-to-reference-data.md
+  - name: Limpar dados usando o conhecimento (externo) dos dados de referência
+    href: cleanse-data-using-reference-data-external-knowledge.md
 - name: Perfil de dados e notificações no DQS
   href: data-profiling-and-notifications-in-dqs.md
-- name: administração do dqs
+- name: Administração do DQS
   href: dqs-administration.md
   items:
-    - name: Monitorar atividade do DQS
-      href: monitor-dqs-activities.md
-    - name: Configurar valores de limite para limpeza e correspondência
-      href: configure-threshold-values-for-cleansing-and-matching.md
-    - name: Habilitar ou desabilitar notificações de criação de perfil no DQS
-      href: enable-or-disable-profiling-notifications-in-dqs.md
-    - name: Gerenciar arquivos de log do DQS
-      href: manage-dqs-log-files.md
-      items:
-        - name: Configurar níveis de severidade para arquivos de log do DQS
-          href: configure-severity-levels-for-dqs-log-files.md
-        - name: Definir configurações avançadas para arquivos de log do DQS
-          href: configure-advanced-settings-for-dqs-log-files.md
-    - name: Gerenciar bancos de dados do DQS
-      href: manage-dqs-databases.md
-      items:
-        - name: Fazendo backup e restaurando banco de dados do DQS
-          href: backing-up-and-restoring-dqs-databases.md
-        - name: Desanexando e anexando bancos de dados do DQS
-          href: detaching-and-attaching-dqs-databases.md
+  - name: Monitorar atividade do DQS
+    href: monitor-dqs-activities.md
+  - name: Configurar valores de limite para limpeza e correspondência
+    href: configure-threshold-values-for-cleansing-and-matching.md
+  - name: Habilitar ou desabilitar notificações de criação de perfil no DQS
+    href: enable-or-disable-profiling-notifications-in-dqs.md
+  - name: Gerenciar arquivos de log do DQS
+    href: manage-dqs-log-files.md
+    items:
+    - name: Configurar níveis de severidade para arquivos de log do DQS
+      href: configure-severity-levels-for-dqs-log-files.md
+    - name: Definir configurações avançadas para arquivos de log do DQS
+      href: configure-advanced-settings-for-dqs-log-files.md
+  - name: Gerenciar bancos de dados do DQS
+    href: manage-dqs-databases.md
+    items:
+    - name: Fazendo backup e restaurando banco de dados do DQS
+      href: backing-up-and-restoring-dqs-databases.md
+    - name: Desanexando e anexando bancos de dados do DQS
+      href: detaching-and-attaching-dqs-databases.md
 - name: Segurança do DQS
   href: dqs-security.md
+ms.openlocfilehash: 535f033948c7f49f2c3df8beb059290437b5e249
+ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42899716"

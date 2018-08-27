@@ -123,15 +123,15 @@ ms.locfileid: "37216886"
 ## <a name="other-resources"></a>Outros recursos  
  Você pode encontrar mais informações sobre as linguagens XSD (XML Schema Definition), XPath (XML Path) e XSLT (Linguagem XSL Transformations) nos seguintes sites:  
   
--   Esquema XML parte 0: Primer, W3C (recomendaçãohttp://www.w3.org/TR/xmlschema-0/)  
+-   Esquema XML parte 0: Primer, W3C recomendação (http://www.w3.org/TR/xmlschema-0/)  
   
 -   XML Schema Part 1: Estruturas, o W3C recomendação (http://www.w3.org/TR/xmlschema-1/)  
   
--   Esquema XML parte 2: Datatypes, W3C (recomendaçãohttp://www.w3.org/TR/xmlschema-2/)  
+-   Esquema XML parte 2: Datatypes, W3C recomendação (http://www.w3.org/TR/xmlschema-2/)  
   
 -   XML Path Language (XPath) (http://www.w3.org/TR/xpath)  
   
--   XSL (de transformações (XSLT)http://www.w3.org/TR/xslt)  
+-   XSL (de transformações (XSLT) (http://www.w3.org/TR/xslt)  
   
 ## <a name="see-also"></a>Consulte também  
  [Anotado considerações de segurança do esquema &#40;SQLXML 4.0&#41;](../../sqlxml-annotated-xsd-schemas-xpath-queries/security/annotated-schema-security-considerations-sqlxml-4-0.md)   
