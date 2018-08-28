@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1cf2e30ab5da5906beef8a73e8d04c6be014aae9
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 361457778678c8edc08df87091174d0c5b65d31f
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985308"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775349"
 ---
 # <a name="create-a-multiserver-environment"></a>Criar um ambiente multisservidor
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -38,10 +38,10 @@ A administração multisservidor requer a configuração de um servidor mestre (
   
 Por padrão, a criptografia SSL completa e a validação de certificado são habilitadas para conexões entre servidores mestres e servidores de destino. Para obter mais informações, veja [Definir opções de criptografia em servidores de destino](../../ssms/agent/set-encryption-options-on-target-servers.md).  
   
-Se você tiver um número grande de servidores de destino, evite definir seu servidor mestre em um servidor de produção que tenha requisitos de desempenho significantes de outra funcionalidade do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , porque o tráfego do servidor de destino pode reduzir o desempenho em seu servidor de produção. Se também encaminhar eventos a um servidor mestre dedicado, você poderá centralizar a administração em um servidor. Para obter mais informações, consulte [Gerenciar eventos](../../ssms/agent/manage-events.md).  
+Se você tiver um número grande de servidores de destino, evite definir seu servidor mestre em um servidor de produção que tenha requisitos de desempenho significantes de outra funcionalidade do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , porque o tráfego do servidor de destino pode reduzir o desempenho em seu servidor de produção. Se também encaminhar eventos a um servidor mestre dedicado, você poderá centralizar a administração em um servidor. Para obter mais informações, consulte [Gerenciar eventos](../../ssms/agent/manage-events.md).  
   
 > [!NOTE]  
-> Para usar processamento de trabalhos multisservidor, a conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent deve ser membro da função **TargetServersRole** do banco de dados **msdb** no servidor mestre. O Assistente de Servidor Mestre adiciona automaticamente a conta de serviço a essa função como parte do processo de inscrição  
+> Para usar processamento de trabalhos multisservidor, a conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent deve ser membro da função **TargetServersRole** do banco de dados **msdb** no servidor mestre. O Assistente de Servidor Mestre adiciona automaticamente a conta de serviço a essa função como parte do processo de inscrição  
   
 ## <a name="considerations-for-multiserver-environments"></a>Considerações para ambientes multisservidor  
   

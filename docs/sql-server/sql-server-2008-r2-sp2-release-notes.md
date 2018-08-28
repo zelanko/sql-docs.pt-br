@@ -16,12 +16,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: a6918f65a2330062165b8b39b4dd930187122867
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: d57f8ffc3d6fb9d1bd85bfa96f4ba431dd7fb114
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36926247"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775687"
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>SQL Server 2008 R2 SP2 Release Notes
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ Modo de exibição de gerenciamento dinâmico (DMV) adicionado **sys.dm_db_stats
 ## <a name="20-before-you-install"></a>2.0 Antes da instalação  
 Para saber mais sobre como instalar atualizações do [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] , veja a [Documentação de serviços do SQL Server 2008 R2](http://msdn.microsoft.com/library/dd638062(SQL.105).aspx).  
   
-Para obter informações gerais sobre como iniciar e instalar o SQL Server 2008 R2, consulte o Leiame do SQL Server 2008 R2. O documento Leiame está disponível na mídia de instalação. Você também pode encontrar mais informações em [Manuais Online do SQL Server](http://msdn.microsoft.com/library/ms130214.aspx) e nos [Fóruns do SQL Server](http://social.msdn.microsoft.com/Forums/category/sqlserver/).  
+Para obter informações gerais sobre como iniciar e instalar o SQL Server 2008 R2, consulte o Leiame do SQL Server 2008 R2. O documento Leiame está disponível na mídia de instalação. Você também pode encontrar mais informações em [Manuais Online do SQL Server](sql-server-technical-documentation.md) e nos [Fóruns do SQL Server](http://social.msdn.microsoft.com/Forums/category/sqlserver/).  
   
 ### <a name="21-choose-the-correct-file-to-download-and-install"></a>2.1 Escolha o arquivo correto para baixar e instalar  
 Use a tabela a seguir para determinar qual arquivo baixar e instalar. Verifique se você tem os requisitos de sistema corretos antes de instalar o service pack. Os requisitos de sistemas são fornecidos nas páginas de download vinculadas na tabela.  

@@ -13,12 +13,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: e3d71bc8ebf7ddcc0d0fcd725b74567834bd4d00
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 888cfce4963b7ed118aa2cb20fbe97da65508734
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38023324"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775002"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>Notas de versão do SQL Server 2012 Service Pack
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ Os services packs estão disponíveis somente online, não em uma mídia de inst
 - **Novo DMF para substituir o DBCC INPUTBUFFER** – Uma nova Função de gerenciamento dinâmico sys.dm_input_buffer que usa o session_id como parâmetro é introduzida para substituir DBCC INPUTBUFFER
 - **Aprimoramento de XEvents para falha na leitura de roteamento para um Grupo de disponibilidade** – No momento, o XEvent read_only_rout_fail só será acionado se houver uma lista de roteamento presente, mas nenhum dos servidores na lista de roteamento estará disponível para conexões. Essa melhoria inclui informações adicionais para ajudar a solucionar problemas e também é expandida nos pontos de código em que o XEvent é acionado. 
 - **Melhoria no tratamento do Service Broker com o failover do grupo de disponibilidade** – No momento, quando o Service Broker é habilitado em Banco de dados do gruo de disponibilidade, durante um failover do grupo de disponibilidade, todas as conexões do Service Broker originadas na Réplica Primária são deixadas abertas. A melhoria fecha todas essas conexões abertas durante um failover do grupo de disponibilidade.
-- **Particionamento do soft-NUMA automático** – com o SQL 2014 SP2, o particionamento [Soft-NUMA](https://msdn.microsoft.com/library/ms345357(SQL.120).aspx) automático é introduzido quando o sinalizador de rastreamento 8079 é habilitado no nível do servidor. Quando o Sinalizador de rastreamento 8079 é habilitado durante a inicialização, o SQL Server 2014 SP2 interroga o layout de hardware e configura automaticamente o soft-NUMA em sistemas que reportam oito ou mais CPUs por nó NUMA. O comportamento do soft-NUMa automático tem reconhecimento de hyperthread (HT/processador lógico). O particionamento e a criação de nós adicionais dimensiona o processamento em segundo plano aumentando o número de ouvintes, o dimensionamento e os recursos de rede e de criptografia. É recomendável testar primeiro o desempenho da carga de trabalho com o soft-NUMA automático antes que ele seja ATIVADO na produção.
+- **Particionamento do soft-NUMA automático** – com o SQL 2014 SP2, o particionamento [Soft-NUMA](../database-engine/configure-windows/soft-numa-sql-server.md) automático é introduzido quando o sinalizador de rastreamento 8079 é habilitado no nível do servidor. Quando o Sinalizador de rastreamento 8079 é habilitado durante a inicialização, o SQL Server 2014 SP2 interroga o layout de hardware e configura automaticamente o soft-NUMA em sistemas que reportam oito ou mais CPUs por nó NUMA. O comportamento do soft-NUMa automático tem reconhecimento de hyperthread (HT/processador lógico). O particionamento e a criação de nós adicionais dimensiona o processamento em segundo plano aumentando o número de ouvintes, o dimensionamento e os recursos de rede e de criptografia. É recomendável testar primeiro o desempenho da carga de trabalho com o soft-NUMA automático antes que ele seja ATIVADO na produção.
 
 ## <a name="service-pack-3-release-notes"></a>Notas de versão do Service Pack 3
 
@@ -104,7 +104,7 @@ Use a tabela a seguir para determinar qual arquivo baixar e instalar. Verifique 
 
 |Se a versão instalada atual for...|E você quiser...|Baixar e instalar...|  
 |---|---|---|  
-|**Instalações de 32-bits:**|||  
+|**Instalações de&32; bits:**|||  
 |Uma versão de 32 bits de qualquer edição do SQL Server 2012|Atualizar para a versão de 32 bits do SQL Server 2012 SP1|SQLServer2012SP1-KB2674319-x86-ENU.exe [aqui](http://go.microsoft.com/fwlink/p/?LinkID=268158)|  
 |Uma versão de 32 Bits do SQL Server 2012 RTM Express|Atualizar para a versão de 32 bits do SQL Server 2012 Express SP1|SQLServer2012SP1-KB2674319-x86-ENU.exe [aqui](http://go.microsoft.com/fwlink/p/?LinkID=268158)|  
 |Uma versão de 32 bits de somente ferramentas do cliente e de gerenciamento para SQL Server 2012 (incluindo SQL Server 2012 Management Studio)|Atualizar as ferramentas do cliente e de gerenciamento para a versão de 32 bits do SQL Server 2012 SP1|SQLManagementStudio_x86_ENU.exe [aqui](http://go.microsoft.com/fwlink/p/?LinkID=267905)|  
@@ -115,7 +115,7 @@ Use a tabela a seguir para determinar qual arquivo baixar e instalar. Verifique 
 |Nenhuma instalação de 32 bits do SQL Server 2012 Management Studio|Instalar a versão de 32 bits do SQL Server 2012 Management Studio incluindo SP1|SQLManagementStudio_x86_ENU.exe [aqui](http://go.microsoft.com/fwlink/p/?LinkId=267905)|  
 |Nenhuma versão de 32 Bits do SQL Server 2012 RTM Express|Instalar a versão de 32 bits do SQL Server 2012 Express incluindo SP1|SQLEXPR32_x86_ENU.exe [aqui](http://go.microsoft.com/fwlink/p/?LinkId=267905)|  
 |Uma instalação de 32 bits do **SQL Server 2008** ou do **SQL Server 2008 R2**|**Atualização in-loco** para a versão de 32 bits do SQL Server 2012 com SP1|SQLServer2012SP1-FullSlipstream-x86-ENU.exe **e** SQLServer2012SP1-FullSlipstream-x86-ENU.box [aqui](http://go.microsoft.com/fwlink/p/?LinkID=268158)|  
-|**Instalações de 64-bits:**|||  
+|**Instalações de&64; bits:**|||  
 |Uma versão de 64 bits de qualquer edição do SQL Server 2012|Atualizar para a versão de 64 bits do SQL Server 2012 SP1|SQLServer2012SP1-KB2674319-x64-ENU.exe [aqui](http://go.microsoft.com/fwlink/p/?LinkID=268158)|  
 |Uma versão de 64 Bits do SQL Server 2012 RTM Express|Atualizar para a versão de 64 bits do SQL Server 2012 SP1|SQLServer2012SP1-KB2674319-x64-ENU.exe [aqui](http://go.microsoft.com/fwlink/p/?LinkID=268158)|  
 |Uma versão de 64 bits com somente o cliente e as ferramentas de gerenciamento para SQL Server 2012 SQL (incluindo SQL Server 2012 Management Studio)|Atualizar o cliente e as ferramentas de gerenciamento para a versão de 64 bits do SQL Server 2012 SP1|SQLManagementStudio_x64_ENU.exe [aqui](http://go.microsoft.com/fwlink/p/?LinkID=267905)|  
@@ -133,7 +133,7 @@ Para obter uma lista completa de bugs e problemas conhecidos corrigidos neste se
 ### <a name="reinstalling--instances-of-sql-server-failover-cluster-fails-if-you-use-the-same-ip-address"></a>A reinstalação de instâncias do Cluster de Failover do SQL Server falha qando o mesmo endereço IP é usado  
 **Problema:** se você especificar um endereço IP incorreto durante uma instalação da instância do cluster de failover do SQL Server, a instalação falhará. Depois que você desinstalar a instância com falha, e se tentar reinstalar a instância do cluster de failover do SQL Server com o mesmo nome de instância e o endereço de IP correto, a instalação falhará. A falha ocorre devido ao grupo de recursos duplicado por trás da instalação anterior.  
   
-**Solução alternativa:** para resolver esse problema, use um nome de instância diferente durante a reinstalação, ou exclua manualmente o grupo de recursos antes de reinstalar. Para obter mais informações, consulte [Adicionar ou remover nós em um cluster de failover do SQL Server](http://msdn.microsoft.com/library/ms191545). 
+**Solução alternativa:** para resolver esse problema, use um nome de instância diferente durante a reinstalação, ou exclua manualmente o grupo de recursos antes de reinstalar. Para obter mais informações, consulte [Adicionar ou remover nós em um cluster de failover do SQL Server](failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md). 
   
 ### <a name="analysis-services-and-powerpivot"></a>Analysis Services e PowerPivot  
   

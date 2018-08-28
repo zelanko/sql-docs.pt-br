@@ -24,12 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e972f506f9b805d0cca28e0dfe3340e2ee28cd57
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 2c8c8340bf5501b1bdf33137be16a03044775d6e
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979708"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775927"
 ---
 # <a name="create-and-attach-schedules-to-jobs"></a>Criar e anexar agendas para trabalhos
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "38979708"
 > [!IMPORTANT]  
 > No momento, na [Instância Gerenciada do Banco de Dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), a maioria dos recursos do SQL Server Agent é compatível, mas não todos. Consulte [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) (Diferenças entre o T-SQL da Instância Gerenciada do Banco de Dados SQL do Azure e o SQL Server) para obter detalhes.
 
-Agendar trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent significa definir as condições que fazem com que o trabalho comece a ser executado sem interação com o usuário. Você pode agendar um trabalho para execução automática criando uma nova agenda para ele ou anexando uma agenda existente para o trabalho.  
+Agendar trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent significa definir as condições que fazem com que o trabalho comece a ser executado sem interação com o usuário. Você pode agendar um trabalho para execução automática criando uma nova agenda para ele ou anexando uma agenda existente para o trabalho.  
   
 Há dois modos de criar um agenda:  
   
@@ -49,7 +49,7 @@ Após a criação de uma agenda, você pode anexá-la a vários objetos, mesmo q
   
 Uma agenda pode se basear na hora ou em um evento. Por exemplo, você pode agendar um trabalho para execução nos seguintes horários:  
   
--   Sempre que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent for iniciado.  
+-   Sempre que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent for iniciado.  
   
 -   Sempre que a utilização de CPU do computador estiver em um nível definido como ocioso.  
   
@@ -60,7 +60,7 @@ Uma agenda pode se basear na hora ou em um evento. Por exemplo, você pode agend
 Como alternativa às agendas de trabalho, também é possível criar um alerta que responda a um evento executando um trabalho.  
   
 > [!NOTE]  
-> Só uma instância do trabalho pode ser executada de cada vez. Se você tentar executar um trabalho manualmente enquanto ele estiver sendo executado como agendado, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent recusará a solicitação.  
+> Só uma instância do trabalho pode ser executada de cada vez. Se você tentar executar um trabalho manualmente enquanto ele estiver sendo executado como agendado, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent recusará a solicitação.  
   
 Para impedir a execução de um trabalho agendado, siga um destes procedimentos:  
   
@@ -70,7 +70,7 @@ Para impedir a execução de um trabalho agendado, siga um destes procedimentos:
   
 -   Desanexe a agenda do trabalho.  
   
--   Pare o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.  
+-   Pare o serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 -   Exclua a agenda.  
   
@@ -86,22 +86,22 @@ Quando você está anexando uma agenda a um trabalho, deve examinar a data de in
 Você pode alterar a data de início de agenda após anexá-la a um trabalho.  
   
 ## <a name="cpu-idle-schedules"></a>Agendas de ociosidade de CPU  
-Para maximizar os recursos da CPU, você pode definir uma condição de ociosidade de CPU para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] O Agent usa a configuração de condição de ociosidade de CPU para determinar o melhor momento para executar trabalhos. Por exemplo, você pode agendar um trabalho para recriar índices durante o tempo ocioso de CPU e períodos de produção lentos.  
+Para maximizar os recursos da CPU, você pode definir uma condição de ociosidade de CPU para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent usa a configuração de condição de ociosidade de CPU para determinar o melhor momento para executar trabalhos. Por exemplo, você pode agendar um trabalho para recriar índices durante o tempo ocioso de CPU e períodos de produção lentos.  
   
-Antes de definir trabalhos para execução durante o tempo ocioso de CPU, determine a carga na CPU durante o processamento normal. Para tanto, use o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler_md.md)] ou o Monitor de Desempenho para monitorar o tráfego de servidor e coletar estatísticas. Assim, você poderá usar as informações recolhidas para definir a porcentagem e a duração do tempo ocioso de CPU.  
+Antes de definir trabalhos para execução durante o tempo ocioso de CPU, determine a carga na CPU durante o processamento normal. Para tanto, use o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ou o Monitor de Desempenho para monitorar o tráfego de servidor e coletar estatísticas. Assim, você poderá usar as informações recolhidas para definir a porcentagem e a duração do tempo ocioso de CPU.  
   
-Defina a condição de ociosidade de CPU na forma de uma porcentagem abaixo da qual deve permanecer o uso de CPU por um tempo especificado. Em seguida, defina o intervalo de tempo. Quando o uso de CPU se encontrar abaixo da porcentagem especificada pelo intervalo de tempo especificado, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent iniciará todos os trabalhos que têm uma agenda de tempo ocioso de CPU. Para obter mais informações sobre como usar o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler_md.md)] ou o Monitor de Desempenho para monitorar o uso de CPU, consulte [Monitoramento do uso de CPU](http://msdn.microsoft.com/2a02a3b6-07b2-4ad0-8a24-670414d19812).  
+Defina a condição de ociosidade de CPU na forma de uma porcentagem abaixo da qual deve permanecer o uso de CPU por um tempo especificado. Em seguida, defina o intervalo de tempo. Quando o uso de CPU se encontrar abaixo da porcentagem especificada pelo intervalo de tempo especificado, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent iniciará todos os trabalhos que têm uma agenda de tempo ocioso de CPU. Para obter mais informações sobre como usar o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ou o Monitor de Desempenho para monitorar o uso de CPU, consulte [Monitoramento do uso de CPU](../../relational-databases/performance-monitor/monitor-cpu-usage.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
 |||  
 |-|-|  
 |**Descrição**|**Tópico**|  
-|Descreve como criar uma agenda para um trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.|[Create a Schedule](../../ssms/agent/create-a-schedule.md)|  
-|Descreve como agendar um trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.|[Agendar um trabalho](../../ssms/agent/schedule-a-job.md)|  
+|Descreve como criar uma agenda para um trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Create a Schedule](../../ssms/agent/create-a-schedule.md)|  
+|Descreve como agendar um trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|[Agendar um trabalho](../../ssms/agent/schedule-a-job.md)|  
 |Explica como definir a condição de ociosidade de CPU para seu servidor.|[Definir o momento e a duração de ociosidade da CPU &#40;SQL Server Management Studio&#41;](../../ssms/agent/set-cpu-idle-time-and-duration-sql-server-management-studio.md)|  
   
 ## <a name="see-also"></a>Consulte Também  
-[sp_help_jobschedule](http://msdn.microsoft.com/2cded902-9272-4667-ac4b-a4f95a9f008e)  
-[sysjobschedules](http://msdn.microsoft.com/ccdafec7-2a9b-4356-bffb-1caa3a12db59)  
+[sp_help_jobschedule](../../relational-databases/system-stored-procedures/sp-help-jobschedule-transact-sql.md)  
+[sysjobschedules](../../relational-databases/system-tables/dbo-sysjobschedules-transact-sql.md)  
   

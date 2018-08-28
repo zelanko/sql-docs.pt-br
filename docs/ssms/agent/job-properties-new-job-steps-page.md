@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8beaff6457919ea892715dbd527b8cb17ef9cef2
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4d51e053e6ac4518743a737000baf926ccfd5adc
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37987818"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774748"
 ---
 # <a name="job-properties---new-job-steps-page"></a>Propriedades do trabalho – Novo trabalho (página Etapas)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "37987818"
 > [!IMPORTANT]  
 > No momento, na [Instância Gerenciada do Banco de Dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), a maioria dos recursos do SQL Server Agent é compatível, mas não todos. Consulte [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) (Diferenças entre o T-SQL da Instância Gerenciada do Banco de Dados SQL do Azure e o SQL Server) para obter detalhes.
 
-Use essa página para exibir e organizar etapas de trabalho para um trabalho do [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.  
+Use essa página para exibir e organizar etapas de trabalho para um trabalho do [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 ## <a name="options"></a>Opções  
 **Lista de etapas de trabalho**  
@@ -41,7 +41,7 @@ Lista as etapas de trabalho para esse trabalho.
 Move o trabalho uma etapa para cima ou abaixo na lista.  
   
 **Iniciar etapa**  
-Selecione a etapa a ser iniciada com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent quando o trabalho começar.  
+Selecione a etapa a ser iniciada com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent quando o trabalho começar.  
   
 **Nova**  
 Crie uma etapa de trabalho nova abaixo da etapa de trabalho selecionada.  

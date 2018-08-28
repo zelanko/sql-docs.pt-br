@@ -18,12 +18,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ecdcf360a7aad1b9468367cc706849d4da2f90c0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e3d3c8c92a78dd0548c115b9bdfa3baed3a396df
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33053593"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775686"
 ---
 # <a name="query-properties-visual-database-tools"></a>Propriedades de consulta (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ Essas propriedades aparecem na janela Propriedades quando você tiver uma consul
 Expanda para mostrar o **Nome** da propriedade.  
   
 **Nome**  
-Mostra o nome da consulta atual. Não pode ser alterado no [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)].  
+Mostra o nome da consulta atual. Não pode ser alterado no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 **Database Name**  
 Mostra o nome da fonte de dados para a tabela selecionada.  
@@ -60,7 +60,7 @@ Para uma consulta de MAKE TABLE, digite o novo nome de tabela. Para criar uma ta
 Especifique se a consulta filtrará duplicatas no conjunto de resultados. Essa opção é útil quando você estiver usando apenas algumas das colunas da tabela, ou tabelas, e essas colunas possam conter valores duplicados ou, quando o processo de junção de duas ou mais tabelas produz linhas duplicadas no conjunto de resultados. Escolhendo essa opção é equivalente para inserir a palavra DISTINCT na instrução no painel SQL.  
   
 **Extensão GROUP BY**  
-Especifique quais as opções adicionais de consultas com base nas consultas de agregação estão disponíveis. (Aplica-se somente ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].)  
+Especifique quais as opções adicionais de consultas com base nas consultas de agregação estão disponíveis. (Aplica-se somente ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
   
 **Todas as Colunas de Saída**  
 Especifique que todas as colunas de todas as tabelas na consulta atual estarão no conjunto de resultados. Escolhendo essa opção é equivalente para especificar um asterisco (*) em lugar de nomes de coluna individual depois da palavra-chave SELECT na instrução SQL.  
@@ -69,7 +69,7 @@ Especifique que todas as colunas de todas as tabelas na consulta atual estarão 
 Mostra parâmetros de consulta. Para editar os parâmetros, clique na propriedade e, em seguida, clique nas reticências **(…)** à direita da propriedade. (Aplica-se apenas ao OLE DB genérico.)  
   
 **Comentário SQL**  
-Mostra uma descrição das instruções SQL. Para ver a descrição inteira ou editá-la, clique na descrição e então clique nas reticências **(…)** à direita da propriedade. Os comentários podem incluir informações como quem usa a consulta e quando são usadas. (Aplica-se apenas aos bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 7.0 ou posteriores.)  
+Mostra uma descrição das instruções SQL. Para ver a descrição inteira ou editá-la, clique na descrição e então clique nas reticências **(…)** à direita da propriedade. Os comentários podem incluir informações como quem usa a consulta e quando são usadas. (Aplica-se apenas aos bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 ou posteriores.)  
   
 **Categoria Especificação Top**  
 Expanda para mostrar as propriedades **Top**, **Percent**, **Expression**e **With Ties** .  
@@ -77,16 +77,16 @@ Expanda para mostrar as propriedades **Top**, **Percent**, **Expression**e **Wit
 **(Top)**  
 Especifique que a consulta incluirá uma cláusula TOP, que retorna apenas as primeiras linhas *n* ou primeiro percentual *n* de linhas no conjunto de resultados. O padrão é que a consulta retorne as primeiras 10 linhas no conjunto de resultados.  
   
-Use essa caixa para alterar o número de linhas para retornar ou especificar uma porcentagem diferente. (Aplica-se apenas para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou posterior.)  
+Use essa caixa para alterar o número de linhas para retornar ou especificar uma porcentagem diferente. (Aplica-se apenas para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou posterior.)  
   
 **Expression**  
-Especifique o número ou porcentagem de linhas que a consulta retornará. Se você definir **Percentual** como Sim, esse número será a porcentagem de linhas que a consulta retornará; se você definir **Percentual** como Não, ele representará o número de linhas a serem retornadas. (Aplica-se apenas para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] versão 7.0 ou posterior.)  
+Especifique o número ou porcentagem de linhas que a consulta retornará. Se você definir **Percentual** como Sim, esse número será a porcentagem de linhas que a consulta retornará; se você definir **Percentual** como Não, ele representará o número de linhas a serem retornadas. (Aplica-se apenas para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versão 7.0 ou posterior.)  
   
 **Percent**  
-Especifique que a consulta retornará apenas os primeiros porcentuais de linhas *n* no conjunto de resultados. (Aplica-se apenas para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] versão 7.0 ou posterior.)  
+Especifique que a consulta retornará apenas os primeiros porcentuais de linhas *n* no conjunto de resultados. (Aplica-se apenas para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versão 7.0 ou posterior.)  
   
 **With Ties**  
-Especifique que a exibição incluirá uma cláusula WITH TIES. O WITH TIES é útil se uma exibição incluir uma cláusula ORDER BY e uma cláusula TOP com base em porcentagem. Se essa opção for determinada, e se a porcentagem de corte se encontrar no meio de um conjunto de linhas com valores idênticos na cláusula ORDER BY, a exibição será estendida para incluir todas as respectivas linhas. (Aplica-se apenas para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] versão 7.0 ou posterior.)  
+Especifique que a exibição incluirá uma cláusula WITH TIES. O WITH TIES é útil se uma exibição incluir uma cláusula ORDER BY e uma cláusula TOP com base em porcentagem. Se essa opção for determinada, e se a porcentagem de corte se encontrar no meio de um conjunto de linhas com valores idênticos na cláusula ORDER BY, a exibição será estendida para incluir todas as respectivas linhas. (Aplica-se apenas para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versão 7.0 ou posterior.)  
   
 ## <a name="see-also"></a>Consulte Também  
 [Consultar com parâmetros &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-parameters-visual-database-tools.md)  

@@ -28,12 +28,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bc18be0111569885414ab861a8b7f978e1bd128c
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 27ac7d69367739e074a7d5c94ced4cdd9325097d
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985678"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775921"
 ---
 # <a name="alerts"></a>Alertas
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "38985678"
 > [!IMPORTANT]  
 > No momento, na [Instância Gerenciada do Banco de Dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), a maioria dos recursos do SQL Server Agent é compatível, mas não todos. Consulte [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) (Diferenças entre o T-SQL da Instância Gerenciada do Banco de Dados SQL do Azure e o SQL Server) para obter detalhes.
 
-Eventos são gerados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e inseridos no log de aplicativos do [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] O Agent lê o log de aplicativos e compara os eventos gravados ali com os alertas que você definiu. Quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent encontra uma correspondência, ele dispara um alerta, que é uma resposta automatizada a um evento. Além de monitorar eventos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent também pode monitorar condições de desempenho e eventos do Windows Management Instrumentation (WMI).  
+Eventos são gerados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e inseridos no log de aplicativos do [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent lê o log de aplicativos e compara os eventos gravados ali com os alertas que você definiu. Quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent encontra uma correspondência, ele dispara um alerta, que é uma resposta automatizada a um evento. Além de monitorar eventos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent também pode monitorar condições de desempenho e eventos do Windows Management Instrumentation (WMI).  
   
 Para definir um alerta, especifique:  
   
@@ -49,17 +49,17 @@ Para definir um alerta, especifique:
   
 -   O evento ou condição de desempenho que aciona o alerta.  
   
--   A ação a ser tomada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent em resposta ao evento ou condição de desempenho.  
+-   A ação a ser tomada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent em resposta ao evento ou condição de desempenho.  
   
 ## <a name="naming-an-alert"></a>Nomeando um alerta  
-Todo alerta deve ter um nome. Os nomes de alerta devem ser exclusivos dentro da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e não podem ultrapassar **128** caracteres.  
+Todo alerta deve ter um nome. Os nomes de alerta devem ser exclusivos dentro da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e não podem ultrapassar **128** caracteres.  
   
 ## <a name="selecting-an-event-type"></a>Selecionando um tipo de evento  
 Um alerta responde a um evento de tipo específico. Alertas respondem aos seguintes tipos de evento:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] eventos  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eventos  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] condições de desempenho  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] condições de desempenho  
   
 -   Eventos do WMI  
   
@@ -70,22 +70,22 @@ O tipo do evento determina os parâmetros utilizados para especificar o evento p
   
 -   **Número do erro**  
   
-    [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] O Agent dispara um alerta quando ocorre um erro específico. Por exemplo, você pode especificar o número de erro 2571 como resposta a tentativas não autorizadas de invocar DBCC (Database Console Commands).  
+    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent dispara um alerta quando ocorre um erro específico. Por exemplo, você pode especificar o número de erro 2571 como resposta a tentativas não autorizadas de invocar DBCC (Database Console Commands).  
   
 -   **Nível de severidade**  
   
-    [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] O Agent dispara um alerta quando ocorre qualquer erro de uma severidade específica. Por exemplo, você pode especificar um nível de severidade 15 como resposta a erros de sintaxe em instruções Transact-SQL.  
+    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent dispara um alerta quando ocorre qualquer erro de uma severidade específica. Por exemplo, você pode especificar um nível de severidade 15 como resposta a erros de sintaxe em instruções Transact-SQL.  
   
 -   **Banco de dados**  
   
-    [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] O Agent só dispara um alerta quando o evento ocorre em um banco de dados específico. Esta opção pode ser aplicada em conjunto com o número de erro ou o nível de severidade. Por exemplo, se uma instância contiver um banco de dados utilizado para produção e outro utilizado para relatórios, você poderá definir um alerta como resposta a erros de sintaxe apenas do banco de dados de produção.  
+    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent só dispara um alerta quando o evento ocorre em um banco de dados específico. Esta opção pode ser aplicada em conjunto com o número de erro ou o nível de severidade. Por exemplo, se uma instância contiver um banco de dados utilizado para produção e outro utilizado para relatórios, você poderá definir um alerta como resposta a erros de sintaxe apenas do banco de dados de produção.  
   
 -   **Texto do evento**  
   
-    [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] O Agent dispara um alerta quando o evento especificado contém uma determinada cadeia de caracteres de texto em sua mensagem. Por exemplo, você pode definir um alerta como resposta a mensagens contendo o nome de uma tabela ou restrição em particular.  
+    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent dispara um alerta quando o evento especificado contém uma determinada cadeia de caracteres de texto em sua mensagem. Por exemplo, você pode definir um alerta como resposta a mensagens contendo o nome de uma tabela ou restrição em particular.  
   
 ## <a name="selecting-a-performance-condition"></a>Selecionando uma condição de desempenho  
-É possível especificar que um alerta ocorra em resposta a uma condição de desempenho em particular. Neste caso, especifique o contador de desempenho a monitorar, o limite do alerta e o comportamento que o contador deve ter face ao alerta. Para definir uma condição de desempenho, é necessário definir os seguintes itens na página [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Geral **da caixa de diálogo** Novo Alerta **ou** Propriedades do Alerta **do** Agent:  
+É possível especificar que um alerta ocorra em resposta a uma condição de desempenho em particular. Neste caso, especifique o contador de desempenho a monitorar, o limite do alerta e o comportamento que o contador deve ter face ao alerta. Para definir uma condição de desempenho, é necessário definir os seguintes itens na página [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Geral **da caixa de diálogo** Novo Alerta **ou** Propriedades do Alerta **do** Agent:  
   
 -   **Objeto**  
   
@@ -97,7 +97,7 @@ O tipo do evento determina os parâmetros utilizados para especificar o evento p
   
 -   **Instância**  
   
-    A instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] define a instância específica (se houver) do atributo a ser monitorado.  
+    A instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] define a instância específica (se houver) do atributo a ser monitorado.  
   
 -   **Alertar se o contador** e **Valor**  
   
@@ -109,15 +109,15 @@ O tipo do evento determina os parâmetros utilizados para especificar o evento p
     > Os dados de desempenho são amostrados periodicamente, o que pode levar a uma pequena demora (alguns segundos) entre o limite a ser atingido e a ocorrência do alerta de desempenho.  
   
 ## <a name="selecting-a-wmi-event"></a>Selecionando um evento do WMI  
-É possível especificar que um alerta ocorra em resposta a um evento do WMI em particular. Para selecionar um evento WMI, é necessário definir os seguintes itens na página [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Geral **da caixa de diálogo** Novo Alerta **ou** Propriedades do Alerta **do** Agent:  
+É possível especificar que um alerta ocorra em resposta a um evento do WMI em particular. Para selecionar um evento WMI, é necessário definir os seguintes itens na página [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Geral **da caixa de diálogo** Novo Alerta **ou** Propriedades do Alerta **do** Agent:  
   
 -   **Namespace**  
   
-    [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] O Agent se registra como um cliente do WMI no namespace do WMI que é fornecido para consulta de eventos.  
+    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent se registra como um cliente do WMI no namespace do WMI que é fornecido para consulta de eventos.  
   
 -   **Consulta**  
   
-    [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] O Agent usa a instrução WQL da Instrumentação de Gerenciamento do Windows fornecida para identificar o evento específico.  
+    [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent usa a instrução WQL da Instrumentação de Gerenciamento do Windows fornecida para identificar o evento específico.  
   
 Encontram-se, a seguir, os links para tarefas comuns:  
   

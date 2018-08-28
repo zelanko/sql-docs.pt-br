@@ -18,19 +18,19 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ae60933dc5f0614bd5a123b4ca61563b3c393a5a
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: c08c4c10b613f39e428a24d37e0e6f4e94e0148c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984988"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774381"
 ---
 # <a name="indexes---keys-dialog-box-visual-database-tools"></a>Caixa de diálogo Índices – Chaves (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Use essa caixa de diálogo para criar ou modificar índices, chaves primárias e chaves exclusivas. Para acessar essa caixa de diálogo, abra a definição da tabela com o índice ou chave; clique com o botão direito do mouse na grade de definição da tabela e depois clique em **Índices/Chaves**.  
   
 > [!NOTE]  
-> Se a tabela for publicada para replicação, você precisará fazer alterações no esquema usando a instrução Transact-SQL [ALTER TABLE](http://msdn.microsoft.com/f1745145-182d-4301-a334-18f799d361d1) ou o SMO (SQL Server Management Objects). Ao fazer alterações no esquema com o Criador de Tabelas ou com o Criador do Diagrama de Banco de Dados, ele tenta descartar e recriar a tabela. Não é possível descartar objetos publicados, portanto, haverá falha na alteração de esquema.  
+> Se a tabela for publicada para replicação, você precisará fazer alterações no esquema usando a instrução Transact-SQL [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) ou o SMO (SQL Server Management Objects). Ao fazer alterações no esquema com o Criador de Tabelas ou com o Criador do Diagrama de Banco de Dados, ele tenta descartar e recriar a tabela. Não é possível descartar objetos publicados, portanto, haverá falha na alteração de esquema.  
   
 ## <a name="options"></a>Opções  
 **Índice ou Chave Exclusiva/Primária Selecionada**  
@@ -67,7 +67,7 @@ Fornece um local para a descrição da chave ou do índice. Para redigir uma des
 Quando expandida, mostra as informações para **Criar como Clusterizado**.  
   
 **Criar como Clusterizado**  
-Faça com que a chave ou índice fiquem clusterizados. Somente um índice clusterizado é permitido em uma tabela. Os dados de uma tabela são armazenados na ordem do índice clusterizado. Para obter mais informações, consulte [Criar índices clusterizados](http://msdn.microsoft.com/47148383-c2c7-4f08-a9e4-7016bf2d1d13) e [Criar índices não clusterizados](http://msdn.microsoft.com/9402029a-1227-46c4-93aa-c2122eb1b943).  
+Faça com que a chave ou índice fiquem clusterizados. Somente um índice clusterizado é permitido em uma tabela. Os dados de uma tabela são armazenados na ordem do índice clusterizado. Para obter mais informações, consulte [Criar índices clusterizados](../../relational-databases/indexes/create-clustered-indexes.md) e [Criar índices não clusterizados](../../relational-databases/indexes/create-nonclustered-indexes.md).  
   
 **Especificação de Espaço de Dados**  
 Quando expandida, mostra informações de **(Tipo de Espaço de Dados)**, **Grupo de arquivos ou Nome de esquema de partição**e **Lista de Colunas da Partição**.  
@@ -97,9 +97,9 @@ Indica se o mesmo percentual de espaço vazio (preenchimento) especificado em **
 **Ignorar Chaves Duplicadas**  
 Especifica o que acontece quando uma linha é inserida durante uma operação de inserção em massa, cujo valor de chave é igual a um valor de chave existente. Se você escolher:  
   
--   **Sim** [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] emitirá um aviso, ignorará a norma de linha de entrada e tentará inserir as linhas restantes.  
+-   **Sim** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] emitirá um aviso, ignorará a norma de linha de entrada e tentará inserir as linhas restantes.  
   
--   **Não** [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] emitirá uma mensagem de erro e reverterá toda a operação de inserção em massa.  
+-   **Não** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] emitirá uma mensagem de erro e reverterá toda a operação de inserção em massa.  
   
 **Colunas Incluídas**  
 Exibe uma lista com os nomes de todas as colunas, separada por vírgulas, que compõem a chave de índice. As colunas de subchaves só podem ser especificadas para índices não clusterizados. Essa propriedade é oculta aos índices XML.  

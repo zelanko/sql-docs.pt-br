@@ -18,12 +18,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 037dce27c8c237b28a5575de76d0f9adb36a4054
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0227077885117994437fc6f2d9bb4aa712706d70
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33046423"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775214"
 ---
 # <a name="options-sql-server-object-explorer---scripting-page"></a>Opções (página Pesquisador de Objetos do SQL Server – Scripts)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +45,7 @@ Especifique opções de script selecionando as configurações disponíveis na l
   
 ### <a name="general-scripting-options"></a>Opções de script gerais  
 **Delimitar instruções individuais**  
-Separa instruções [!INCLUDE[tsql](../../includes/tsql_md.md)] individuais usando um separador de lote. Para alterar o separador de lote padrão para o **Editor de Consultas**, selecione **Ferramentas**/**Opções**/**Execução de Consulta**/**SQL Server**/**Geral**/**Separador de lote**. O padrão é Falso. Para obter mais informações, consulte [GO (Transact-SQL)](https://msdn.microsoft.com/b2ca6791-3a07-4209-ba8e-2248a92dd738).  
+Separa instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] individuais usando um separador de lote. Para alterar o separador de lote padrão para o **Editor de Consultas**, selecione **Ferramentas**/**Opções**/**Execução de Consulta**/**SQL Server**/**Geral**/**Separador de lote**. O padrão é Falso. Para obter mais informações, consulte [GO (Transact-SQL)](https://msdn.microsoft.com/b2ca6791-3a07-4209-ba8e-2248a92dd738).  
   
 **Incluir cabeçalhos descritivos**  
 Adiciona comentários descritivos ao script separando o script em seções para cada objeto. O padrão é True. Para obter mais informações, consulte [/*...*/ (Comment) (Transact-SQL)](https://msdn.microsoft.com/4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c).  
@@ -70,7 +70,7 @@ Adiciona a instrução USE DATABASE ao script para criar objetos do banco de dad
 Gera um script para objetos adicionais que são necessários quando o script para o objeto selecionado é executado. O padrão é Falso.  
   
 **Qualificar nomes de objetos do esquema**  
-Qualifica nomes de objeto com o esquema de objeto. O padrão é Falso. Para obter mais informações, consulte [Criar um esquema de banco de dados](https://msdn.microsoft.com/ed2a5522-f4d2-4111-95a4-d3e1e5081739).  
+Qualifica nomes de objeto com o esquema de objeto. O padrão é Falso. Para obter mais informações, consulte [Criar um esquema de banco de dados](../../relational-databases/security/authentication-access/create-a-database-schema.md).  
 
 **Opções de compactação de dados de script** inclui opções de compactação de dados no script. O padrão é Falso.
 
@@ -81,7 +81,7 @@ Inclui propriedades estendidas no script se o objeto possui propriedades estendi
 Inclui o proprietário no script gerado. O padrão é Falso.  
   
 **Permissões de script**  
-Inclui permissões em objetos de banco de dados do script. O padrão é True. Para obter mais informações, consulte [Permissões](https://msdn.microsoft.com/f28e3dea-24e6-4a81-877b-02ec4c7e36b9).  
+Inclui permissões em objetos de banco de dados do script. O padrão é True. Para obter mais informações, consulte [Permissões](../../relational-databases/security/permissions-database-engine.md).  
   
 ### <a name="tableview-options"></a>Opções de tabela/exibição  
 As opções a seguir são válidas somente para scripts de tabelas ou exibições.  
@@ -93,7 +93,7 @@ Converte tipos de dados definidos pelo usuário em tipos de base a partir dos qu
 Adiciona a instrução SET ANSI_PADDING antes e depois de cada instrução CREATE TABLE. O padrão é True. Para obter mais informações, veja [SET ANSI_PADDING (Transact-SQL)](https://msdn.microsoft.com/92bd29a3-9beb-410e-b7e0-7bc1dc1ae6d0).  
   
 **Incluir agrupamento**  
-Inclui agrupamento na definição de coluna. O padrão é True. Para obter mais informações, consulte [Suporte a agrupamentos e Unicode](https://msdn.microsoft.com/92d34f48-fa2b-47c5-89d3-a4c39b0f39eb).  
+Inclui agrupamento na definição de coluna. O padrão é True. Para obter mais informações, consulte [Suporte a agrupamentos e Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 **Incluir propriedade IDENTITY**  
 Inclui definições para semente IDENTITY e incremento IDENTITY. O padrão é True. Para obter mais informações, consulte [IDENTITY (Property) (Transact-SQL)](https://msdn.microsoft.com/8429134f-c821-4033-a07c-f782a48d501c).  
@@ -105,7 +105,7 @@ Adiciona o nome de esquema a referências de tabela para restrições FOREIGN KE
 Inclui as chamadas dos procedimentos armazenados associados **sp_bindefault** e **sp_bindrule** . O padrão é True. Para obter mais informações, consulte [sp_bindefault (Transact-SQL)](https://msdn.microsoft.com/3da70c10-68d0-4c16-94a5-9e84c4a520f6) e [sp_bindrule (Transact-SQL)](https://msdn.microsoft.com/2606073e-c52f-498d-a923-5026b9d97e67).  
   
 **Restrições de script CHECK**  
-Adiciona [Restrições CHECK](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e) ao script. O padrão é True.  
+Adiciona [Restrições CHECK](../../relational-databases/tables/unique-constraints-and-check-constraints.md) ao script. O padrão é True.  
   
 **Padrões de script**  
 Inclui valores padrão de coluna no script. O padrão é Falso. Para obter mais informações, veja [CREATE DEFAULT (Transact-SQL)](https://msdn.microsoft.com/08475db4-7d90-486a-814c-01a99d783d41).  
@@ -114,7 +114,7 @@ Inclui valores padrão de coluna no script. O padrão é Falso. Para obter mais 
 Especifica o grupo de arquivos na cláusula ON para definições de tabela. O padrão é Falso. Para obter mais informações, veja [CREATE TABLE (Transact-SQL)](https://msdn.microsoft.com/1e068443-b9ea-486a-804f-ce7b6e048e8b).  
   
 **Chaves estrangeiras do script**  
-Inclui [Restrições FOREIGN KEY](https://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd) no script. O padrão é Falso.  
+Inclui [Restrições FOREIGN KEY](../../relational-databases/tables/primary-and-foreign-key-constraints.md) no script. O padrão é Falso.  
   
 **Índices de texto completo do script**  
 Inclui índices de texto completo no script. O padrão é Falso. Para obter mais informações, veja [CREATE FULLTEXT INDEX (Transact-SQL)](https://msdn.microsoft.com/8b80390f-5f8b-4e66-9bcc-cabd653c19fd).  
@@ -126,7 +126,7 @@ Inclui índices clusterizados, não clusterizados e XML no script. O padrão é 
 Inclui esquemas de partição de tabela no script. O padrão é Falso. Para obter mais informações, veja [CREATE PARTITION SCHEME (Transact-SQL)](https://msdn.microsoft.com/5b21c53a-b4f4-4988-89a2-801f512126e4).  
   
 **Chaves primárias de script**  
-Inclui [Restrições de chave primária e estrangeira](https://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd) no script. O padrão é True.  
+Inclui [Restrições de chave primária e estrangeira](../../relational-databases/tables/primary-and-foreign-key-constraints.md) no script. O padrão é True.  
   
 **Estatísticas de script**  
 Inclui estatísticas definidas pelo usuário no script. O padrão é Falso. Para obter mais informações, veja [CREATE STATISTICS (Transact-SQL)](https://msdn.microsoft.com/b23e2f6b-076c-4e6d-9281-764bdb616ad2).  
@@ -135,7 +135,7 @@ Inclui estatísticas definidas pelo usuário no script. O padrão é Falso. Para
 Inclui gatilhos no script. O padrão é Falso. Para obter mais informações, veja [CREATE TRIGGER (Transact-SQL)](https://msdn.microsoft.com/edeced03-decd-44c3-8c74-2c02f801d3e7).  
   
 **Chaves exclusivas do script**  
-Inclui [Restrições exclusivas e restrições de verificação](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e) no script. O padrão é Falso.  
+Inclui [Restrições exclusivas e restrições de verificação](../../relational-databases/tables/unique-constraints-and-check-constraints.md) no script. O padrão é Falso.  
   
 **Colunas de exibição de script**  
 Declara colunas de exibição em cabeçalhos de exibição. O padrão é Falso. Para obter mais informações, veja [CREATE VIEW (Transact-SQL)](https://msdn.microsoft.com/aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9).  
@@ -152,7 +152,7 @@ Inclui nomes de restrições geradas pelo sistema para forçar a integridade ref
 **Script para tipo de mecanismo de banco de dados** Scripts gerados serão direcionados para o [Tipo do mecanismo de banco de dados](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.databaseenginetype.aspx) especificado.
 
 **Script para a versão do servidor**  
-Scripts gerados serão direcionados para a versão especificada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Recursos que são novos no [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] não podem ter seu script executado em versões anteriores. Alguns scripts criados para o [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] não podem ser executados em servidores que estão executando uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]ou em um banco de dados que tem uma [configuração de nível de compatibilidade do banco de dados](https://msdn.microsoft.com/ca5fd220-d5ea-4182-8950-55d4101a86f6)anterior.  
+Scripts gerados serão direcionados para a versão especificada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Recursos que são novos no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] não podem ter seu script executado em versões anteriores. Alguns scripts criados para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] não podem ser executados em servidores que estão executando uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou em um banco de dados que tem uma [configuração de nível de compatibilidade do banco de dados](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)anterior.  
 
 ## <a name="see-also"></a>Confira também  
 [Gerar scripts (SQL Server Management Studio)](https://msdn.microsoft.com/9711c617-3c68-4e5a-aea3-befc64d51524)  

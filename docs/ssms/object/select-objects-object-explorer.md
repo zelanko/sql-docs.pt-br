@@ -17,12 +17,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 57d472c063bd4b2cf697186323942842f8d037c0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cbff0ee5307e9f0d6d7e53a740c950c869dc93c5
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33041873"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775924"
 ---
 # <a name="select-objects-object-explorer"></a>Selecionar objetos (Pesquisador de Objetos)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ Use a caixa de diálogo **Selecionar Objetos** para adicionar um objeto a uma li
   
 ## <a name="options"></a>Opções  
 **Selecionar esses tipos de objeto**  
-Exibe uma lista dos tipos aos quais pertencem os objetos a ser selecionados. Os tipos incluem entidades de segurança e protegíveis no nível do [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e do banco de dados. Essa caixa é preenchida com as seleções feitas na caixa de diálogo **Selecionar Tipos de Objeto** , acessada do botão **Tipo de Objetos** .  
+Exibe uma lista dos tipos aos quais pertencem os objetos a ser selecionados. Os tipos incluem entidades de segurança e protegíveis no nível do [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e do banco de dados. Essa caixa é preenchida com as seleções feitas na caixa de diálogo **Selecionar Tipos de Objeto** , acessada do botão **Tipo de Objetos** .  
   
 **Digite os nomes de objeto a selecionar**  
 Digite uma lista separada por ponto-e-vírgula com os nomes dos objetos a ser selecionados. Os objetos a serem selecionados devem ser de um tipo listado na caixa **Selecionar esses tipos de objeto** . Os objetos podem ser selecionados de uma lista acessada clicando no botão **Procurar** .  

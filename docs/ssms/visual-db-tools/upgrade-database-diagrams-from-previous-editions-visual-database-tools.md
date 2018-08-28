@@ -23,16 +23,16 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 637a674bcbbc22e0a10ac2e49c7ea0c875b85c44
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 60450ac29e788921557a76bde211775fecbc4734
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38052974"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775681"
 ---
 # <a name="upgrade-database-diagrams-from-previous-editions-visual-database-tools"></a>Atualizar diagramas de banco de dados de edições anteriores (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Os diagramas de bancos de dados criados em edições anteriores dos bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] são atualizados automaticamente quando a diagramação do banco de dados for configurada no [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)]. Para obter mais etapas de configuração de diagramação, consulte [Configurar o Designer de Diagramas de Banco de Dados (Visual Database Tools)](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md).  
+Os diagramas de bancos de dados criados em edições anteriores dos bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são atualizados automaticamente quando a diagramação do banco de dados for configurada no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obter mais etapas de configuração de diagramação, consulte [Configurar o Designer de Diagramas de Banco de Dados (Visual Database Tools)](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md).  
   
 ### <a name="to-upgrade-legacy-database-diagrams"></a>Para atualizar diagramas de banco de dados herdados  
   

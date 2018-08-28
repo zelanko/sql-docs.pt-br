@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ba89c1f12638f4a9ed4698d82dca0f97d3d931a0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 771869ddfa25e6b19fe0545e638a7b305441e2fa
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37987828"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775562"
 ---
 # <a name="job-step-properties---new-job-step-advanced-page"></a>Propriedades da etapa de trabalho – Nova etapa de trabalho (página Avançado)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,20 +31,20 @@ ms.locfileid: "37987828"
 > [!IMPORTANT]  
 > No momento, na [Instância Gerenciada do Banco de Dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), a maioria dos recursos do SQL Server Agent é compatível, mas não todos. Consulte [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) (Diferenças entre o T-SQL da Instância Gerenciada do Banco de Dados SQL do Azure e o SQL Server) para obter detalhes.
 
-Use esta página para exibir e alterar as propriedades de uma etapa de trabalho do [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.  
+Use esta página para exibir e alterar as propriedades de uma etapa de trabalho do [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 ## <a name="options"></a>Opções  
 **Ação ao obter êxito**  
-Define a ação que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent executará se a etapa de trabalho obtiver êxito.  
+Define a ação que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent executará se a etapa de trabalho obtiver êxito.  
   
 **Tentativas de repetição**  
-Define o número de vezes que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent tentará repetir uma etapa de trabalho que apresentou falha.  
+Define o número de vezes que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent tentará repetir uma etapa de trabalho que apresentou falha.  
   
 **Intervalo de repetição (minutos)**  
-Define o tempo que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent esperará entre as tentativas de repetição.  
+Define o tempo que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent esperará entre as tentativas de repetição.  
   
 **Ação ao falhar**  
-Define a ação que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent executará se a etapa de trabalho apresentar falha.  
+Define a ação que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent executará se a etapa de trabalho apresentar falha.  
   
 ## <a name="options-for-transact-sql-job-steps"></a>Opções para etapas de trabalho Transact-SQL  
 **Arquivo de saída**  
@@ -54,7 +54,7 @@ Define o arquivo a usar para saída da etapa de trabalho. Essa opção só está
 Procura o arquivo a usar para saída da etapa de trabalho.  
   
 **Exibir**  
-No [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)], esse botão está desabilitado para exibir os arquivos de saída. Em vez disso, use o Bloco de Notas para exibir arquivos de saída de etapa de trabalho.  
+No [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], esse botão está desabilitado para exibir os arquivos de saída. Em vez disso, use o Bloco de Notas para exibir arquivos de saída de etapa de trabalho.  
   
 **Anexar saída ao arquivo existente**  
 Anexa a saída aos conteúdos existentes no arquivo. Caso contrário, os conteúdos anteriores do arquivo serão substituídos a cada vez que a etapa de trabalho for executada.  
@@ -82,7 +82,7 @@ Define o arquivo a usar para saída da etapa de trabalho.
 Procura o arquivo a usar para saída da etapa de trabalho.  
   
 **Exibir**  
-No [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)], esse botão está desabilitado para exibir os arquivos de saída. Em vez disso, use o Bloco de Notas para exibir arquivos de saída de etapa de trabalho.  
+No [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], esse botão está desabilitado para exibir os arquivos de saída. Em vez disso, use o Bloco de Notas para exibir arquivos de saída de etapa de trabalho.  
   
 **Anexar saída ao arquivo existente**  
 Anexa a saída da etapa de trabalho aos conteúdos anteriores do arquivo a cada vez que é executada.  
@@ -107,7 +107,7 @@ Define o arquivo a usar para saída da etapa de trabalho.
 Procura o arquivo a usar para saída da etapa de trabalho.  
   
 **Exibir**  
-No [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)], esse botão está desabilitado para exibir os arquivos de saída. Em vez disso, use o Bloco de Notas para exibir arquivos de saída de etapa de trabalho.  
+No [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], esse botão está desabilitado para exibir os arquivos de saída. Em vez disso, use o Bloco de Notas para exibir arquivos de saída de etapa de trabalho.  
   
 **Anexar saída ao arquivo existente**  
 Anexa a saída da etapa de trabalho aos conteúdos anteriores do arquivo a cada vez que é executada.  
@@ -139,7 +139,7 @@ Define o arquivo a usar para saída da etapa de trabalho. Essa opção só está
 Procura o arquivo a usar para saída da etapa de trabalho.  
   
 **Exibição**  
-No [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)], esse botão está desabilitado para exibir os arquivos de saída. Em vez disso, use o Bloco de Notas para exibir arquivos de saída de etapa de trabalho.  
+No [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], esse botão está desabilitado para exibir os arquivos de saída. Em vez disso, use o Bloco de Notas para exibir arquivos de saída de etapa de trabalho.  
   
 **Anexar saída ao arquivo existente**  
 Anexa a saída aos conteúdos existentes no arquivo. Caso contrário, os conteúdos anteriores do arquivo serão substituídos a cada vez que a etapa de trabalho for executada.  

@@ -16,12 +16,12 @@ ms.assetid: 84012320-5a7b-45b0-8feb-325bf0e21324
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 38748bfc0ff21b9920ba554e6d7e0e89d5020e95
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: bc6b8d884857ef39716e1a5b0e05fc1a148252fd
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997318"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775573"
 ---
 # <a name="failover-cluster-troubleshooting"></a>Diagnóstico e solução de problemas do cluster de failover
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ O Clustering de Failover vem com uma proteção interna para evitar o tempo de i
   
      A recuperação de uma falha do sistema operacional dessa maneira pode ser demorada. Se a falha do sistema operacional puder ser recuperada facilmente, evite usar esta técnica.  
   
-     Para obter mais informações, consulte [Criar um novo cluster de failover do SQL Server &#40;Instalação&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md) e [Como se recuperar de falhas no cluster de failover no cenário 2](https://msdn.microsoft.com/library/ms181075\(v=sql.105\).aspx).  
+     Para obter mais informações, consulte [Criar um novo cluster de failover do SQL Server &#40;Instalação&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md) e [Como se recuperar de falhas no cluster de failover no cenário 2](recover-from-failover-cluster-instance-failure.md).  
   
 ## <a name="resolving-common-problems"></a>Resolvendo problemas comuns  
  A lista a seguir descreve problemas de uso comum e explica como resolvê-los.  

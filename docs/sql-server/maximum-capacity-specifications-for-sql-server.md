@@ -24,16 +24,16 @@ caps.latest.revision: 88
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4007806d8db8c22b6f6e1ac1d1969db026bb6912
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: 185353af9af9e65ec67e932b4b7da30238f9915f
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36833374"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775018"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Especificações de capacidade máxima do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > Para conteúdo relacionado a versões anteriores do SQL Server, consulte [Especificações de capacidade máxima do SQL Server](https://msdn.microsoft.com/en-US/library/ms143432(SQL.120).aspx).
+ > Para conteúdo relacionado a versões anteriores do SQL Server, consulte [Especificações de capacidade máxima do SQL Server](maximum-capacity-specifications-for-sql-server.md).
 
   As tabelas a seguir especificam os tamanhos e números máximos de vários objetos definidos nos componentes do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para navegar até a tabela de uma tecnologia do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , clique no respectivo link:  
   
@@ -123,7 +123,7 @@ ms.locfileid: "36833374"
 |Arquivos de log por banco de dados||1|  
 |Volumes por computador||3|  
   
- *O número máximo de instâncias gerenciadas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] com suporte do Utilitário do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pode variar com base na configuração de hardware do servidor. Para obter informações de introdução, consulte [Recursos e tarefas do utilitário do SQL Server](https://msdn.microsoft.com/library/ee210548.aspx). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não está disponível em todas as edições do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](https://msdn.microsoft.com/library/cc645993.aspx).    
+ *O número máximo de instâncias gerenciadas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] com suporte do Utilitário do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pode variar com base na configuração de hardware do servidor. Para obter informações de introdução, consulte [Recursos e tarefas do utilitário do SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não está disponível em todas as edições do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], consulte [Recursos com suporte nas edições do SQL Server 2016](https://msdn.microsoft.com/library/cc645993.aspx).    
   
 ##  <a name="DAC"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Objetos de aplicativo da camada de dados  
  Tamanhos e números máximos de vários objetos que foram testados nos DAC (aplicativos de camada de dados) do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  

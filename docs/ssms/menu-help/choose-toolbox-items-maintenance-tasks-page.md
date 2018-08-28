@@ -20,12 +20,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c9126d758d0b51948072a924da34a5f8674ce2f7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a7b168a0164ac2acc212344e898d04c07913ae29
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33041833"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42774491"
 ---
 # <a name="choose-toolbox-items-maintenance-tasks-page"></a>Escolher itens da caixa de ferramenta (página Tarefas de Manutenção)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ Esta guia da caixa de diálogo **Personalizar Caixa de Ferramentas** exibe uma l
 A guia **Tarefas de Manutenção** inclui as colunas de informações a seguir.  
   
 **Nome**  
-Exibe os nomes dos componentes disponíveis. Cada nome é precedido por uma caixa de seleção. Se selecionada, a caixa de seleção indica que o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] localizou uma entrada para o componente no Registro de seu computador. O componente já é exibido na guia ativa **Caixa de Ferramentas** ou será adicionado a ela quando você clicar em **OK**. Se estiver desmarcada, a caixa de seleção indicará que o componente não é exibido no momento na **Caixa de Ferramentas**ou que será removido da **Caixa de Ferramentas** quando você clicar em **OK**.  
+Exibe os nomes dos componentes disponíveis. Cada nome é precedido por uma caixa de seleção. Se selecionada, a caixa de seleção indica que o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] localizou uma entrada para o componente no Registro de seu computador. O componente já é exibido na guia ativa **Caixa de Ferramentas** ou será adicionado a ela quando você clicar em **OK**. Se estiver desmarcada, a caixa de seleção indicará que o componente não é exibido no momento na **Caixa de Ferramentas**ou que será removido da **Caixa de Ferramentas** quando você clicar em **OK**.  
   
 **Caminho**  
 Exibe o caminho completo até o componente. Para identificar os componentes padrão fornecidos com o produto, classifique essa coluna e, depois, localize os que estão armazenados no caminho de instalação do [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio.  

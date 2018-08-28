@@ -22,12 +22,12 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8e90ba79e8677cd0f61a60f5132a6d4ed827e6c1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e0999bcc6594de503ef1f0d9494ff6a9bb35ad89
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33048483"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775932"
 ---
 # <a name="create-and-update-database-tables"></a>Criar e atualizar tabelas de banco de dados
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,7 +60,7 @@ O Designer de Tabela é uma ferramenta visual na qual é possível projetar e vi
 
 ## <a name="see-also"></a>Consulte Também
 
-[Tabelas](http://msdn.microsoft.com/82d7819c-b801-4309-a849-baa63083e83f)  
+[Tabelas](../../relational-databases/tables/tables.md)  
 [Propriedades da tabela &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/table-properties-visual-database-tools.md)  
 [Propriedades da coluna](column-properties-visual-database-tools.md)  
 [Adicionar colunas a uma tabela](../../relational-databases/tables/add-columns-to-a-table-database-engine.md)  

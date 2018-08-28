@@ -18,12 +18,12 @@ caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e77e2f11cef4859412c0805d6dd1e082274b82ac
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 567b2bf3e75de80ca32ec22f4efb8b353bda173c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34772232"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774856"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>Renomear uma instância do cluster de failover do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,9 +73,9 @@ ms.locfileid: "34772232"
   
 -   Corrija o servidor mestre (MSX) e os nomes de instância de servidores de destino (TSX) quando os nomes dos computadores e da rede de cluster forem renomeados. Para obter mais informações, consulte os tópicos a seguir:  
   
-    -   [Remover vários servidores de destino de um servidor mestre](http://msdn.microsoft.com/library/61a3713b-403a-4806-bfc4-66db72ca1156)  
+    -   [Remover vários servidores de destino de um servidor mestre](../../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)  
   
-    -   [Criar um ambiente multisservidor](http://msdn.microsoft.com/library/edc2b60d-15da-40a1-8ba3-f1d473366ee6)  
+    -   [Criar um ambiente multisservidor](../../../ssms/agent/create-a-multiserver-environment.md)  
   
 -   Reconfigure o envio de logs para que o nome de servidor atualizado seja usado para fazer backup e restaurar logs. Para obter mais informações, consulte os tópicos a seguir:  
   
@@ -83,7 +83,7 @@ ms.locfileid: "34772232"
   
     -   [Remover envio de log &#40;SQL Server&#41;](../../../database-engine/log-shipping/remove-log-shipping-sql-server.md)  
   
--   Atualize o Jobsteps que depende do nome do servidor. Para obter mais informações, consulte [Gerenciar etapas de trabalho](http://msdn.microsoft.com/library/51352afc-a0a4-428b-8985-f9e58bb57c31).  
+-   Atualize o Jobsteps que depende do nome do servidor. Para obter mais informações, consulte [Gerenciar etapas de trabalho](../../../ssms/agent/manage-job-steps.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Renomear um computador que hospeda uma instância autônoma do SQL Server](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)  

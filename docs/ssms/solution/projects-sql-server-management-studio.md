@@ -15,19 +15,19 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f2329d95d6f93ad639d85ce85f3d1f35752eaef0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 60f0a9ef2b0d1345d7f1ef7605a861e9283f8c18
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33045023"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775210"
 ---
 # <a name="projects-sql-server-management-studio"></a>Projetos (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Um projeto do [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] é uma coleção de scripts e arquivos logicamente relacionados que podem ser salvos em conjunto para administração e desenvolvimento de bancos de dados.  
+Um projeto do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] é uma coleção de scripts e arquivos logicamente relacionados que podem ser salvos em conjunto para administração e desenvolvimento de bancos de dados.  
   
 ## <a name="script-project-overview"></a>Visão geral de projeto de script  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] são exibidos no componente Gerenciador de Soluções do [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]. Um projeto de script pode conter zero ou mais arquivos de projeto. Você pode adicionar um projeto a uma solução ou combinar mais de um projeto em uma solução.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são exibidos no componente Gerenciador de Soluções do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Um projeto de script pode conter zero ou mais arquivos de projeto. Você pode adicionar um projeto a uma solução ou combinar mais de um projeto em uma solução.  
   
 Projetos podem incluir o seguinte:  
   
@@ -42,11 +42,11 @@ Projetos podem incluir o seguinte:
 Projetos também podem ser integrados em um sistema de controle do código-fonte.  
   
 ## <a name="connecting-to-an-instance-of-sql-server-from-a-script-project"></a>Conectando a uma instância do SQL Server de um projeto de script  
-Um projeto de script pode conter conexões com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Você pode se conectar a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] em um projeto clicando na conexão. Isso abrirá uma janela do Script SQL conectada à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] definida na conexão selecionada. Se você abrir um script MDX ou do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] com uma conexão que use autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , será solicitado a colocar a senha usando a caixa de diálogo **Conectar ao SQL Server** depois que o Editor tiver sido aberto e o script carregado.  
+Um projeto de script pode conter conexões com uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você pode se conectar a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um projeto clicando na conexão. Isso abrirá uma janela do Script SQL conectada à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definida na conexão selecionada. Se você abrir um script MDX ou do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com uma conexão que use autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , será solicitado a colocar a senha usando a caixa de diálogo **Conectar ao SQL Server** depois que o Editor tiver sido aberto e o script carregado.  
   
 A conexão será fechada depois que a janela correspondente for fechada.  
   
-Para modificar informações sobre uma conexão, use a janela de propriedades no [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)].  
+Para modificar informações sobre uma conexão, use a janela de propriedades no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 ## <a name="project-tasks"></a>Tarefas do projeto  
   

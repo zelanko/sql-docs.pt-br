@@ -17,16 +17,16 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e2b7a760a15c8ea953e87b8ff9ab550212c29cd7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c28c04376a010c3329dcd1df28e716229cab8f27
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043163"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42776048"
 ---
 # <a name="create-a-new-solution"></a>Criar uma nova solução
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Quando você cria um projeto, o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] cria uma solução para contê-lo. Você só pode abrir uma solução de cada vez. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] não permite a criação de pastas dentro de projetos. Para organizar seu trabalho, crie vários projetos.  
+Quando você cria um projeto, o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] cria uma solução para contê-lo. Você só pode abrir uma solução de cada vez. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] não permite a criação de pastas dentro de projetos. Para organizar seu trabalho, crie vários projetos.  
   
 Para acessar o Gerenciador de Soluções, clique em **Gerenciador de Soluções** no menu **Exibir** .  
   

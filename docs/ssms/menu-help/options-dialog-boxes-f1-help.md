@@ -18,16 +18,16 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 74dc369cb88d644f02a6db142fbf3e320fe15e8a
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: fac8561bcc2fb119918937b00e91c48afc3749fa
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979848"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42775344"
 ---
 # <a name="options-dialog-boxes-f1-help"></a>Ajuda de F1 das caixas de diálogo opções
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Esta seção contém a ajuda de F1 para as caixas de diálogo disponíveis quando se clica em **Opções** no menu **Ferramentas** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
+Esta seção contém a ajuda de F1 para as caixas de diálogo disponíveis quando se clica em **Opções** no menu **Ferramentas** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 [Opções &#40;Designers – Designers do Analysis Services – Geral&#41;](../../ssms/menu-help/options-designers-analysis-services-designers-general.md)  
   

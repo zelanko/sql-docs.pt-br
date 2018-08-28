@@ -17,16 +17,16 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 601439745dffa9c8902aa448cb8ce42c23ed867d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 445c56c70edc8f045ede5efdf921ba34c0ffa291
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33042593"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42774631"
 ---
 # <a name="options-environment---help---online-page"></a>Opções (Ambiente – Ajuda – página Online)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-A caixa de diálogo **Opções** permite especificar as fontes de Ajuda a serem usadas para as pesquisas do [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], incluindo a ajuda de F1. No menu **Ferramentas** , clique em **Opções**, expanda a pasta **Ambiente** , selecione **Ajuda**e, então, clique em **Online**. Se a página **Online** não aparecer na lista, marque a caixa de seleção **Exibir todas as configurações** , na caixa de diálogo **Opções** .  
+A caixa de diálogo **Opções** permite especificar as fontes de Ajuda a serem usadas para as pesquisas do [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], incluindo a ajuda de F1. No menu **Ferramentas** , clique em **Opções**, expanda a pasta **Ambiente** , selecione **Ajuda**e, então, clique em **Online**. Se a página **Online** não aparecer na lista, marque a caixa de seleção **Exibir todas as configurações** , na caixa de diálogo **Opções** .  
   
 **Ao carregar o conteúdo da Ajuda**  
 Define a ordem em que as fontes de Ajuda são usadas para ajuda de F1 e especifica quais fontes de Ajuda serão usadas.  

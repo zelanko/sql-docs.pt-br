@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d284bd4cd7dc81ebf1e5915854613b41680033b6
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 3a9b661c2f4529ed3e6731dc5c38d05953ec43f6
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38030994"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42774147"
 ---
 # <a name="job-step-properties---new-job-step-general-page"></a>Propriedades da etapa de trabalho – Nova etapa de trabalho (página Geral)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,9 +31,9 @@ ms.locfileid: "38030994"
 > [!IMPORTANT]  
 > No momento, na [Instância Gerenciada do Banco de Dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), a maioria dos recursos do SQL Server Agent é compatível, mas não todos. Consulte [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) (Diferenças entre o T-SQL da Instância Gerenciada do Banco de Dados SQL do Azure e o SQL Server) para obter detalhes.
 
-Use esta página para exibir e alterar as propriedades de uma etapa de trabalho do [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent ou para definir uma nova etapa de trabalho.  
+Use esta página para exibir e alterar as propriedades de uma etapa de trabalho do [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ou para definir uma nova etapa de trabalho.  
   
-Para navegar até essa página, no Pesquisador de Objetos do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] , expanda o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent, clique com o botão direito do mouse em **Trabalhos**, clique em **Novos Trabalhos**, selecione a página **Etapas** e clique em **Novo**. Você também pode navegar até essa página. Para isso, clique com o botão direito do mouse em um trabalho no Pesquisador de Objetos, clique em **Propriedades**, selecione a página **Etapas** e clique em **Novo**, **Inserir**ou **Editar**.  
+Para navegar até essa página, no Pesquisador de Objetos do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , expanda o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, clique com o botão direito do mouse em **Trabalhos**, clique em **Novos Trabalhos**, selecione a página **Etapas** e clique em **Novo**. Você também pode navegar até essa página. Para isso, clique com o botão direito do mouse em um trabalho no Pesquisador de Objetos, clique em **Propriedades**, selecione a página **Etapas** e clique em **Novo**, **Inserir**ou **Editar**.  
   
 ## <a name="options"></a>Opções  
 **Nome da etapa**  
@@ -70,7 +70,7 @@ Verifique a sintaxe do comando.
 ## <a name="options-for-activex-script-job-steps"></a>Opções para etapas de trabalho ActiveX Script  
   
 > [!IMPORTANT]  
-> O subsistema de script do ActiveX será removido do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent em uma futura versão do [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam.  
+> O subsistema de script do ActiveX será removido do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent em uma futura versão do [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam.  
   
 **VBScript**  
 Especifique o [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Basic Scripting Edition como a linguagem para a etapa de trabalho.  
@@ -213,7 +213,7 @@ Cole o conteúdo da área de transferência.
 ## <a name="options-for-integration-services-package-execution-job-steps"></a>Opções para etapas de trabalho de execução de pacotes de Integration Services  
   
 ### <a name="general-tab"></a>Guia Geral  
-Especifique onde o pacote [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] ([!INCLUDE[ssIS](../../includes/ssis_md.md)]) está localizado e qual o método de autenticação a ser usado. As seguintes opções estão disponíveis quando você seleciona essa guia.  
+Especifique onde o pacote [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis_md.md)]) está localizado e qual o método de autenticação a ser usado. As seguintes opções estão disponíveis quando você seleciona essa guia.  
   
 **Origem do pacote**  
 Especifique onde o pacote [!INCLUDE[ssIS](../../includes/ssis_md.md)] está armazenado. Escolha uma destas opções:  
@@ -228,19 +228,19 @@ Especifique onde o pacote [!INCLUDE[ssIS](../../includes/ssis_md.md)] está arma
 Digite o nome do servidor em que o pacote [!INCLUDE[ssIS](../../includes/ssis_md.md)] está armazenado. Essa opção só está disponível quando **SQL Server** ou **Repositório de Pacotes SSIS** está especificado para **Origem do Pacote**.  
   
 **Usar Autenticação do Windows**  
-Logons para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] usam a autenticação do [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows.  
+Logons para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usam a autenticação do [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows.  
   
 **Usar Autenticação do SQL Server**  
-Logons para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] usam a autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . Se este método de autenticação for selecionado, digite o **Nome de usuário** e a **Senha**apropriados.  
+Logons para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usam a autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se este método de autenticação for selecionado, digite o **Nome de usuário** e a **Senha**apropriados.  
   
 > [!IMPORTANT]  
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] A autenticação é fornecida para fins de compatibilidade com versões anteriores. Para maior segurança, use a autenticação do Windows, se possível.  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] A autenticação é fornecida para fins de compatibilidade com versões anteriores. Para maior segurança, use a autenticação do Windows, se possível.  
   
 **Pacote**  
 Digite o local do pacote.  
   
 > [!IMPORTANT]  
-> Para pacotes [!INCLUDE[ssIS](../../includes/ssis_md.md)] protegidos por senha, clique na guia **Configurações** para digitar a senha na caixa de diálogo **Senha do Pacote** . Caso contrário, o trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent que executa o pacote protegido por senha falhará.  
+> Para pacotes [!INCLUDE[ssIS](../../includes/ssis_md.md)] protegidos por senha, clique na guia **Configurações** para digitar a senha na caixa de diálogo **Senha do Pacote** . Caso contrário, o trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent que executa o pacote protegido por senha falhará.  
   
 ### <a name="configurations-tab"></a>Guia Configurações  
 Especifique as opções de configuração para o pacote [!INCLUDE[ssIS](../../includes/ssis_md.md)] . As seguintes opções estão disponíveis quando essa guia é selecionada.  
@@ -379,6 +379,6 @@ Digite as opções de linha de comando a usar para o pacote.
   
 ## <a name="see-also"></a>Consulte Também  
 [Gerenciar etapas de trabalho](../../ssms/agent/manage-job-steps.md)  
-[Trabalhos do SQL Server Agent para pacotes](http://msdn.microsoft.com/en-us/ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31)  
-[Administrando agentes de replicação](http://msdn.microsoft.com/en-us/f27186b8-b1b2-4da0-8b2b-91f632c2ab7e)  
+[Trabalhos do SQL Server Agent para pacotes](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)  
+[Administrando agentes de replicação](../../relational-databases/replication/agents/replication-agent-administration.md)  
   

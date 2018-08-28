@@ -18,26 +18,26 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 68f0894a8b02d730d71684dcfb5e5a3e2861c7ec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 761d807f6b2490cdd456d03f935d2293a5a7cbb3
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33040353"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42774630"
 ---
 # <a name="general-user-interface-elements"></a>Elementos gerais da interface de usuário
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-O **Editor**, a janela **Propriedades** e a **Caixa de Ferramentas** são alguns dos elementos básicos do [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)].  
+O **Editor**, a janela **Propriedades** e a **Caixa de Ferramentas** são alguns dos elementos básicos do [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="in-this-section"></a>Nesta seção  
 [Caixa de diálogo Sobre](../ssms/about-dialog-box.md)  
-Descreve a caixa de diálogo que fornece informações sobre o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] e sobre o computador em que ele está sendo executado.  
+Descreve a caixa de diálogo que fornece informações sobre o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e sobre o computador em que ele está sendo executado.  
   
 [Navegador da Web do SQL Server Management Studio](../ssms/sql-server-management-studio-web-browser.md)  
-Descreve como o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] hospeda um navegador da Web em uma janela de documentos.  
+Descreve como o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] hospeda um navegador da Web em uma janela de documentos.  
   
 [Caixa de diálogo Ferramentas Externas](../ssms/external-tools-dialog-box.md)  
-Permite que você adicione ferramentas que não fazem parte do **ao menu** Ferramentas [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)].  
+Permite que você adicione ferramentas que não fazem parte do **ao menu** Ferramentas [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 [Janela Propriedades &#40;Management Studio&#41;](../ssms/properties-window-management-studio.md)  
 Permite que você exiba propriedades e eventos de objetos selecionados localizados em editores e designers. Também permite a edição e exibição das propriedades de arquivos, projetos e soluções. Algumas propriedades podem ser editadas na janela Propriedades.  

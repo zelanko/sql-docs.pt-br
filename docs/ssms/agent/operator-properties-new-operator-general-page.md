@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5c85048f2e5fb02fd060d3c813b1b4cdbc23d637
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 7f235ae1b47a40bc8f4318cf9f953be670ab1e95
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38035871"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774749"
 ---
 # <a name="operator-properties---new-operator-general-page"></a>Propriedades do operador – Novo operador (página Geral)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "38035871"
 > [!IMPORTANT]  
 > No momento, na [Instância Gerenciada do Banco de Dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), a maioria dos recursos do SQL Server Agent é compatível, mas não todos. Consulte [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) (Diferenças entre o T-SQL da Instância Gerenciada do Banco de Dados SQL do Azure e o SQL Server) para obter detalhes.
 
-Use esta página para exibir e modificar as propriedades gerais de operadores do [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.  
+Use esta página para exibir e modificar as propriedades gerais de operadores do [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 ## <a name="options"></a>Opções  
 **Nome**  
@@ -56,10 +56,10 @@ Marca as horas em que o pager está ativo.
 Selecione os dias em que o pager está ativo.  
   
 **Início do dia útil**  
-Selecione a hora do dia depois da qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent envia mensagens ao pager.  
+Selecione a hora do dia depois da qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent envia mensagens ao pager.  
   
 **Término do dia útil**  
-Selecione a hora do dia depois da qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent para de enviar mensagens ao pager.  
+Selecione a hora do dia depois da qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para de enviar mensagens ao pager.  
   
 ## <a name="see-also"></a>Consulte Também  
 [Operadores](../../ssms/agent/operators.md)  

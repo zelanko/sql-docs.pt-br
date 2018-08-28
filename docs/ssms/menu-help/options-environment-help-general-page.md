@@ -17,23 +17,23 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dfc7a585b40acca4658174b403207ad8480abf46
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7684bccbeb7151730cdfdd541ecf02850f24c377
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33042633"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774995"
 ---
 # <a name="options-environment---help---general-page"></a>Opções (Ambiente – Ajuda – página Geral)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Use a caixa de diálogo **Opções** para escolher conjuntos de documentação e decidir se serão exibidos tópicos internamente no [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] ou externamente em uma janela separada. Para acessar essa caixa de diálogo, clique em **Opções** no menu **Ferramentas** , expanda a **Ajuda** no nó **Ambiente** e clique em **Geral**.  
+Use a caixa de diálogo **Opções** para escolher conjuntos de documentação e decidir se serão exibidos tópicos internamente no [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou externamente em uma janela separada. Para acessar essa caixa de diálogo, clique em **Opções** no menu **Ferramentas** , expanda a **Ajuda** no nó **Ambiente** e clique em **Geral**.  
   
 > [!NOTE]  
 > Alterações feitas às opções nesta página não entram em vigor enquanto o ambiente não é reiniciado.  
   
 ## <a name="settings"></a>Configurações  
 **Exibir Ajuda usando**  
-Especifica como a Ajuda é exibida. Selecione o **Visualizador de Ajuda Externo** na lista suspensa para exibir tópicos em uma janela flutuante externa. Selecione o **Visualizador de Ajuda Integrado** para exibir tópicos da Ajuda em uma janela do navegador da Web encaixada no [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)].  
+Especifica como a Ajuda é exibida. Selecione o **Visualizador de Ajuda Externo** na lista suspensa para exibir tópicos em uma janela flutuante externa. Selecione o **Visualizador de Ajuda Integrado** para exibir tópicos da Ajuda em uma janela do navegador da Web encaixada no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 **Resultados da pesquisa por página**  
 Especifica o número de tópicos exibidos em uma página de **Resultados da pesquisa** .  
