@@ -40,12 +40,12 @@ caps.latest.revision: 84
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a0b300bc3f204af062eac1e151933659216dd921
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 610c566e97a700ee47f48aedd99874c9ac719064
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37993948"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406472"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>Gerenciar metadados ao disponibilizar um banco de dados em outro servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -167,7 +167,7 @@ ms.locfileid: "37993948"
   
  **Para criar um alerta do WMI usando o SQL Server Management Studio**  
   
--   [Criar um alerta de eventos WMI](http://msdn.microsoft.com/library/b8c46db6-408b-484e-98f0-a8af3e7ec763)  
+-   [Criar um alerta de eventos WMI](../../ssms/agent/create-a-wmi-event-alert.md)  
   
 ### <a name="how-event-notifications-work-for-a-mirrored-database"></a>Como notificações de eventos funcionam para um banco de dados espelho  
  A entrega de notificações de eventos entre bancos de dados envolvendo um banco de dados espelho é remota, por definição, porque o banco de dados espelho pode efetuar failover. [!INCLUDE[ssSB](../../includes/sssb-md.md)] fornece suporte especial para bancos de dados espelhados na forma de *rotas espelhadas*. Uma rota espelhada tem dois endereços: um para a instância do servidor principal e um para a instância do servidor espelho.  
@@ -214,11 +214,11 @@ ms.locfileid: "37993948"
   
 -   O logon usado pelo trabalho  
   
-     Para criar ou executar trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, é necessário primeiro adicionar todos os logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exigidos pelo trabalho à instância do servidor de destino. Para obter mais informações, veja [Configurar um usuário para criar e gerenciar trabalhos do SQL Server Agent](http://msdn.microsoft.com/library/67897e3e-b7d0-43dd-a2e2-2840ec4dd1ef).  
+     Para criar ou executar trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, é necessário primeiro adicionar todos os logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exigidos pelo trabalho à instância do servidor de destino. Para obter mais informações, veja [Configurar um usuário para criar e gerenciar trabalhos do SQL Server Agent](../../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md).  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent  
   
-     A conta de inicialização do serviço define a conta do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows na qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent é executado, bem como suas permissões de rede. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent é executado como uma conta de usuário especificada. O contexto do serviço do Agent afeta as configurações do trabalho e seu ambiente de execução. A conta deve ter acesso aos recursos, como compartilhamentos de rede, exigidos pelo trabalho. Para obter informações sobre como selecionar e modificar a conta de inicialização de serviço, veja [Selecionar uma conta para o serviço SQL Server Agent](http://msdn.microsoft.com/library/fe658e32-9e6b-4147-a189-7adc3bd28fe7).  
+     A conta de inicialização do serviço define a conta do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows na qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent é executado, bem como suas permissões de rede. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent é executado como uma conta de usuário especificada. O contexto do serviço do Agent afeta as configurações do trabalho e seu ambiente de execução. A conta deve ter acesso aos recursos, como compartilhamentos de rede, exigidos pelo trabalho. Para obter informações sobre como selecionar e modificar a conta de inicialização de serviço, veja [Selecionar uma conta para o serviço SQL Server Agent](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md).  
   
      Para operar corretamente, a conta de inicialização do serviço deve ser configurada para ter o domínio, o sistema de arquivos e as permissões do Registro corretos. Além disso, um trabalho pode precisar de um recurso de rede compartilhado que deve ser configurado para a conta de serviço. Para obter informações, veja [Configurar contas de serviço e permissões do Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
@@ -229,35 +229,35 @@ ms.locfileid: "37993948"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent  
   
-     Um proxy do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent define o contexto de segurança de uma etapa de trabalho especificada. Para que um trabalho seja executado na instância do servidor de destino, todos os proxies requeridos por ele devem ser recriados manualmente naquela instância. Para obter mais informações, veja [Criar um Proxy do SQL Server Agent](http://msdn.microsoft.com/library/142e0c55-a8b9-4669-be49-b9dc602d5988) e [Solucionar problemas de trabalhos multisservidor que usam proxies](http://msdn.microsoft.com/library/fc579bd3-010c-4f72-8b5c-d0cc18a1f280).  
+     Um proxy do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent define o contexto de segurança de uma etapa de trabalho especificada. Para que um trabalho seja executado na instância do servidor de destino, todos os proxies requeridos por ele devem ser recriados manualmente naquela instância. Para obter mais informações, veja [Criar um Proxy do SQL Server Agent](../../ssms/agent/create-a-sql-server-agent-proxy.md) e [Solucionar problemas de trabalhos multisservidor que usam proxies](../../ssms/agent/troubleshoot-multiserver-jobs-that-use-proxies.md).  
   
  Para obter mais informações, consulte também:  
   
--   [Implementar trabalhos](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)  
+-   [Implementar trabalhos](../../ssms/agent/implement-jobs.md)  
   
 -   [Administração de logons e trabalhos após a troca de funções &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md) (para o espelhamento de banco de dados)  
   
 -   [Configurar contas de serviço e permissões do Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) (quando você instala uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
   
--   [Configurar o SQL Server Agent](http://msdn.microsoft.com/library/2e361a62-9e92-4fcd-80d7-d6960f127900) (quando você instala uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
+-   [Configurar o SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md) (quando você instala uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
   
--   [Implementar a segurança do SQL Server Agent](http://msdn.microsoft.com/library/d770d35c-c8de-4e00-9a85-7d03f45a0f0d)  
+-   [Implementar a segurança do SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md)  
   
  **Para exibir trabalhos existentes e suas propriedades**  
   
--   [Monitorar Atividade do Trabalho](http://msdn.microsoft.com/library/71cb432b-631d-4b8b-9965-e731b3d8266d)  
+-   [Monitorar Atividade do Trabalho](../../ssms/agent/monitor-job-activity.md)  
   
 -   [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)  
   
--   [Exibir informações de etapas de trabalho](http://msdn.microsoft.com/library/e3f06492-dc86-4e06-b186-ea58aff6d591)  
+-   [Exibir informações de etapas de trabalho](../../ssms/agent/view-job-step-information.md)  
   
 -   [dbo.sysjobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)  
   
  **Para criar um trabalho**  
   
--   [Criar um trabalho](http://msdn.microsoft.com/library/b35af2b6-6594-40d1-9861-4d5dd906048c)  
+-   [Criar um trabalho](../../ssms/agent/create-a-job.md)  
   
--   [Criar um trabalho](http://msdn.microsoft.com/library/b35af2b6-6594-40d1-9861-4d5dd906048c)  
+-   [Criar um trabalho](../../ssms/agent/create-a-job.md)  
   
 #### <a name="best-practices-for-using-a-script-to-re-create-a-job"></a>Práticas recomendadas para usar um script para recriar um trabalho  
  Recomendamos iniciar gerando o script de um trabalho simples, recriando o trabalho no outro serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent e executando-o para ver se ele funciona conforme pretendido. Isso permite identificar incompatibilidades e tentar resolvê-las. Se um trabalho com script não funcionar conforme pretendido no novo ambiente, é recomendável criar um trabalho equivalente que funcione corretamente naquele ambiente.  

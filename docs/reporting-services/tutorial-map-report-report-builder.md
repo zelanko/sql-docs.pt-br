@@ -17,15 +17,15 @@ caps.latest.revision: 18
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0ab84785d74c876e67784d1781f0503a1771be18
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: c08fd8749f2d5756192aa2e05a5b01a3a0ff7dce
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985128"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40409979"
 ---
 # <a name="tutorial-map-report-report-builder"></a>Tutorial: Relatório de mapa (construtor de relatórios)
-Neste tutorial do [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] , você aprenderá sobre os recursos de mapa que podem ser usados para exibir dados em uma tela de fundo geográfica de um relatório paginado do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . 
+Neste tutorial do [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] , você aprenderá sobre os recursos de mapa que podem ser usados para exibir dados em uma tela de fundo geográfica de um relatório paginado do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . 
   
 Os mapas se baseiam em dados espaciais que geralmente consistem em pontos, linhas e polígonos. Por exemplo, um polígono pode representar a estrutura de tópicos de um município, uma linha pode representar uma estrada e um ponto pode representar o local de uma cidade. Cada tipo de dados espaciais é exibido em uma camada do mapa separada como um conjunto de elementos de mapa.  
   

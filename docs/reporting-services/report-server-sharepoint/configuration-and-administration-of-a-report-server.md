@@ -1,7 +1,7 @@
 ---
 title: Configuração e administração de um servidor de relatório (SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/24/2018
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-server-sharepoint
@@ -13,12 +13,12 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 7959539dde52351bc9679b9b4629e2d1a4105562
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: c84d2843e967c9fd825f84635b9f7f25a6a8b380
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38049134"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40410445"
 ---
 # <a name="configuration-and-administration-of-a-sql-server-reporting-services-ssrs-report-server"></a>Configuração e administração de um servidor de relatório do SSRS (SQL Server Reporting Services)
 
@@ -63,6 +63,4 @@ Use as seguintes seções para ajudá-lo a entender conceitos, cenários de impl
   
 -   [Definir opções de processamento &#40;Reporting Services no modo integrado do SharePoint&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)  
   
- Para obter informações mais gerais sobre o Reporting Services, consulte [Reporting Services](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md) nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter informações sobre outros componentes, ferramentas e recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consulte os [Manuais Online do SQL Server.](../../sql-server/sql-server-technical-documentation.md)  
-
 Ainda tem dúvidas? [Experimente perguntar no fórum do Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

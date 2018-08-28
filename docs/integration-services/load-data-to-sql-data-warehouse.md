@@ -14,18 +14,18 @@ ms.date: 08/09/2018
 ms.author: douglasl
 author: douglaslMS
 manager: craigg-msft
-ms.openlocfilehash: 7d4be381230a4f78a0f0ca4849f2251b3d575ded
-ms.sourcegitcommit: c113001aff744ed17d215e391cae2005bb3d0f6e
+ms.openlocfilehash: fb379c9d4200bc116d5db76c531856d7f9faf935
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020650"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40409344"
 ---
 # <a name="load-data-into-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>Carregar dados no SQL Data Warehouse do Azure com o SSIS (SQL Server Integration Services)
 
 Criar um pacote do SSIS (SQL Server Integration Services) para carregar dados no [SQL Data Warehouse do Azure](/azure/sql-data-warehouse/index). Opcionalmente, você pode reestruturar, transformar e limpar os dados conforme eles passam pelo fluxo de dados do SSIS.
 
-Este artigo mostra como executar as seguintes ações.
+Este artigo mostra como fazer o seguinte:
 
 * Criar um projeto do Integration Services no Visual Studio.
 * Criar um pacote do SSIS que carrega dados da fonte para o destino.
@@ -33,7 +33,7 @@ Este artigo mostra como executar as seguintes ações.
 
 ## <a name="basic-concepts"></a>Conceitos básicos
 
-O pacote é a unidade básica de trabalho no SSIS. Os pacotes relacionados são agrupados em projetos. Você cria projetos e elabora pacotes no Visual Studio com o SQL Server Data Tools. O processo de design é um processo visual em que você arrasta e solta componentes da Caixa de ferramentas na superfície de design, conecta-os e define as respectivas propriedades. Depois de concluir o pacote, você poderá executá-lo e, opcionalmente, implantá-lo no SQL Server para gerenciamento, monitoramento e segurança mais abrangentes.
+O pacote é a unidade básica de trabalho no SSIS. Os pacotes relacionados são agrupados em projetos. Você cria projetos e elabora pacotes no Visual Studio com o SQL Server Data Tools. O processo de design é um processo visual em que você arrasta e solta componentes da Caixa de ferramentas na superfície de design, conecta-os e define as respectivas propriedades. Depois de concluir seu pacote, você poderá executá-lo e, opcionalmente, implantá-lo no SQL Server ou no Banco de Dados SQL para realizar gerenciamento, monitoramento e segurança abrangentes.
 
 Uma introdução detalhada ao SSIS está além do escopo deste artigo. Para saber mais, leia os seguintes artigos:
 
@@ -114,7 +114,7 @@ Como atalho, é possível usar o Assistente de Importação e Exportação do SQ
 
 Para continuar o tutorial com essa opção, você precisa do seguinte:
 
-1. **De dados de exemplo**. Este tutorial usa dados de exemplo armazenados no SQL Server, no banco de dados de exemplo AdventureWorks, como os dados de origem a serem carregados no SQL Data Warehouse. Para obter o banco de dados de exemplo do AdventureWorks, consulte [Bancos de dados de exemplo do AdventureWorks][AdventureWorks 2014 Sample Databases].
+1. **De dados de exemplo**. Este tutorial usa dados de exemplo armazenados no SQL Server, no banco de dados de exemplo AdventureWorks, como os dados de origem a serem carregados no SQL Data Warehouse. Para obter o banco de dados de exemplo AdventureWorks, confira [Bancos de dados de exemplo AdventureWorks][AdventureWorks 2014 Sample Databases].
 
 2. **De uma regra de firewall**. Você precisa criar uma regra de firewall no SQL Data Warehouse com o endereço IP do seu computador local antes de carregar dados no SQL Data Warehouse.
 
@@ -196,7 +196,7 @@ Para continuar o tutorial com essa opção, você precisa do seguinte:
 8. No **Editor de Destino ADO.NET**, selecione a guia **Mapeamentos** para ver como as colunas da fonte são mapeadas para as colunas do destino.
    
     ![][13]
-9. Clique em **OK** para terminar a configuração da fonte de dados.
+9. Clique em **OK** para concluir a configuração do destino.
 
 ## <a name="run-the-package-to-load-the-data"></a>Executar o pacote para carregar os dados
 Execute o pacote clicando no botão **Iniciar** na barra de ferramentas ou selecionando uma das opções **Executar** do menu **Depurar**.

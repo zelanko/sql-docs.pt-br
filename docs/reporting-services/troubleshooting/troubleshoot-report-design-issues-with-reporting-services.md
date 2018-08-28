@@ -15,12 +15,12 @@ caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 3e81a3b98bbfe6507c768e541ac0fc613d28d52e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8269b227a144f8e600ca885adaf5b80f2a521e19
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38055831"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40409449"
 ---
 # <a name="troubleshoot-report-design-issues-with-reporting-services"></a>Solucionar problemas de Design de Relatório com o Reporting Services
 Os problemas de design de relatórios podem ocorrer quando você cria o layout do relatório na exibição Design em um aplicativo de criação de relatório. Use este tópico para ajudar a solucionar esses problemas.   
@@ -66,5 +66,5 @@ Para agrupar várias regiões de dados ou itens de relatório, coloque-os no mes
   
   
 
-[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
+[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 

@@ -23,12 +23,12 @@ caps.latest.revision: 63
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 16b02c1a56bc91064d88a0d0e7c72ce0fc4662d4
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: fa9658e7c918eb7e648f294a89dd7bdcc823e303
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401608"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40409343"
 ---
 # <a name="creating-an-asynchronous-transformation-with-the-script-component"></a>Criando uma transformação assíncrona com o componente Script
   Você usa um componente de transformação no fluxo de dados de um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para modificar e analisar dados à medida que eles passam da origem ao destino. Uma transformação com saídas síncronas processa cada linha de entrada que passa pelo componente. Uma transformação com saídas assíncronas pode aguardar para concluir seu processamento depois de receber todas as linhas de entrada ou ela pode gerar algumas linhas antes de receber todas as linhas de entrada. Esse tópico discute uma transformação assíncrona. Se o processamento exigir uma transformação síncrona, consulte [Criando uma transformação síncrona com o componente Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md). Para obter mais informações sobre as diferenças entre componentes síncronos e assíncronos, consulte [Compreendendo as transformações síncronas e assíncronas](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md).  
@@ -46,7 +46,7 @@ ms.locfileid: "35401608"
  Para selecionar a linguagem de script que será usada pelo componente Script, defina a propriedade **ScriptLanguage** na página **Script** da caixa de diálogo **Editor de Transformação Scripts**.  
   
 > [!NOTE]  
->  Para definir a linguagem de scripts padrão para o componente Script, use a opção **Linguagem de scripts** na página **Geral** da caixa de diálogo **Opções**. Para obter mais informações, consulte [General Page](https://msdn.microsoft.com/library/ms189436(v=sql.110).aspx).  
+>  Para definir a linguagem de scripts padrão para o componente Script, use a opção **Linguagem de scripts** na página **Geral** da caixa de diálogo **Opções**. Para obter mais informações, consulte [General Page](../general-page-of-integration-services-designers-options.md).  
   
  Um componente de transformação de fluxo de dados tem uma entrada e dá suporte a uma ou mais saídas. A configuração da entrada e das saídas do componente é uma das etapas que devem ser concluídas no modo de design de metadados, usando o **Editor de Transformação Scripts**, antes de escrever o script personalizado.  
   

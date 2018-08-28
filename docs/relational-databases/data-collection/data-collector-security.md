@@ -17,19 +17,19 @@ caps.latest.revision: 32
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7983692ff403f5d6330e3c4fc2169ee35d813125
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 34298ca95d57673ff8dd60af5a133f7106fa3834
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33145467"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40410430"
 ---
 # <a name="data-collector-security"></a>Segurança do coletor de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   O coletor de dados usa o modelo de segurança baseado em função implementado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Esse modelo permite que o administrador do banco de dados execute várias tarefas de coletor de dados em um contexto de segurança que tem apenas as permissões exigidas para executar a tarefa. Essa abordagem também é usada para operações que envolvem tabelas internas que só podem ser acessadas usando um procedimento armazenado ou exibição. Nenhuma permissão é concedida a tabelas internas. Em vez disso, as permissões são verificadas no usuário do procedimento armazenado ou na exibição usada para acessar a tabela.  
   
 > [!IMPORTANT]  
->  Outro aspecto fundamental desse modelo de segurança são as permissões concêntricas. Nas permissões concêntricas, funções mais privilegiadas herdam as permissões de funções menos privilegiadas nos objetos (incluindo alertas, operadores, tarefas, agendas e proxy). Para obter mais informações, consulte [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
+>  Outro aspecto fundamental desse modelo de segurança são as permissões concêntricas. Nas permissões concêntricas, funções mais privilegiadas herdam as permissões de funções menos privilegiadas nos objetos (incluindo alertas, operadores, tarefas, agendas e proxy). Para obter mais informações, consulte [SQL Server Agent Fixed Database Roles](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
  As próximas seções descrevem a segurança da coleta de dados em geral, assim como as funções que você deve conceder aos usuários para que eles possam configurar e usar o coletor de dados e executar tarefas associadas ao data warehouse de gerenciamento.  
   
@@ -149,6 +149,6 @@ ms.locfileid: "33145467"
  Membros da função **mdw_reader** têm acesso de Leitura ao data warehouse de gerenciamento. Como o objetivo dessa função é dar suporte à solução de problemas fornecendo acesso a dados históricos, os membros dessa função não podem exibir outros elementos do esquema do data warehouse de gerenciamento.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Implementar a segurança do SQL Server Agent](http://msdn.microsoft.com/library/d770d35c-c8de-4e00-9a85-7d03f45a0f0d)  
+ [Implementar a segurança do SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md)  
   
   

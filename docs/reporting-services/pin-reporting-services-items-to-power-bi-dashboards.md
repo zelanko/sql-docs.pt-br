@@ -21,12 +21,12 @@ caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: caf018aab189a27901effcdc95204881b5b903b9
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 4065422e0be3f8570e91cc05d6c5cd2c86af24ec
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980318"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40406467"
 ---
 # <a name="pin-reporting-services-items-to-power-bi-dashboards"></a>Fixar itens do Reporting Services nos dashboards do Power BI
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] permite que os usuários fixem itens de relatório do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] da barra de ferramentas do visualizador de relatórios em um painel do [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] como um novo bloco.   Para fixar, o administrador precisa primeiro integrar o servidor de relatório ao Azure Active Directory e ao [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  
@@ -41,7 +41,7 @@ ms.locfileid: "38980318"
   
      ![ssRS_Report_PowerBI](../reporting-services/media/ssrs-report-powerbi.png)  
   
--   Fixe por meio do visualizador de relatórios do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], por exemplo, `http://myserver/Reports`.  Não é possível fixar do [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)], do designer de relatórios no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], nem de uma url do servidor de relatório.  Por exemplo, `http://myserver/ReportServer`.  
+-   Fixe por meio do visualizador de relatórios do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], por exemplo, `http://myserver/Reports`.  Não é possível fixar do [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)], do designer de relatórios no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], nem de uma url do servidor de relatório.  Por exemplo, `http://myserver/ReportServer`.  
   
 -   Seu navegador precisa ser configurado para permitir pop-ups do site do servidor de relatório.  
   

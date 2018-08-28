@@ -19,12 +19,12 @@ caps.latest.revision: 7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5320b4313a2871a92f8480d3dac5869130e5acf7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 76cb168d9e5bfd65cadd01a657132c79d5f02a06
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32942251"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406469"
 ---
 # <a name="maintenance-plan-servers"></a>Plano de manutenção (Servidores)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,8 +34,8 @@ ms.locfileid: "32942251"
   
 ## <a name="see-also"></a>Consulte Também  
  [Planos de manutenção](../../relational-databases/maintenance-plans/maintenance-plans.md)   
- [Criar um ambiente multisservidor](http://msdn.microsoft.com/library/edc2b60d-15da-40a1-8ba3-f1d473366ee6)   
- [Criar um servidor mestre](http://msdn.microsoft.com/library/05739a73-1fdf-4d9d-92a6-70f328380322)   
- [Criar um servidor de destino](http://msdn.microsoft.com/library/13aabe2d-67fe-4c67-8d49-2928dd705b7a)  
+ [Criar um ambiente multisservidor](../../ssms/agent/create-a-multiserver-environment.md)   
+ [Criar um servidor mestre](../../ssms/agent/make-a-master-server.md)   
+ [Criar um servidor de destino](../../ssms/agent/make-a-target-server.md)  
   
   

@@ -17,12 +17,12 @@ caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5e3a7c929dd3335c5200efc3d4009ba05053f84a
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 3be991897702d63aa505c3c18b4a86fed5f9840c
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35403118"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40410949"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>Monitorar a execução de pacotes e outras operações
   Você pode monitorar execuções de pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , validações de projeto e outras operações usando uma ou mais das ferramentas a seguir. Algumas ferramentas, como toques de dados, estão disponíveis somente para os projetos que são implantados no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -184,7 +184,7 @@ ms.locfileid: "35403118"
 > [!NOTE]  
 >  Quando você adicionar relatórios personalizados ao nó do **SSISDB** , no nó **Bancos de Dados** , o prefixo do SSISDB não será necessário.  
   
- Para obter instruções sobre como criar e adicionar um relatório personalizado, consulte [Adicionar um relatório personalizado ao Management Studio](http://msdn.microsoft.com/library/3cf8d726-0a90-4f80-98d0-352a2a59be0f).  
+ Para obter instruções sobre como criar e adicionar um relatório personalizado, consulte [Adicionar um relatório personalizado ao Management Studio](../../ssms/object/add-a-custom-report-to-management-studio.md).  
 
 ## <a name="view-reports-for-the-integration-services-server"></a>Exibir relatórios do servidor do Integration Services
   Na versão atual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], os relatórios padrão estão disponíveis no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para ajudar a monitorar projetos do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , que foram implantados no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  Para saber mais sobre os relatórios, consulte [Relatórios do servidor do Integration Services](#reports).  

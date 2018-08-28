@@ -17,19 +17,19 @@ caps.latest.revision: 57
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: d737e132369afdfe6d45d72d4c769e3970786bd5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 756aa4f5a4b03ffea76d907e8e2205428b565065
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33031463"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40412687"
 ---
 # <a name="reporting-services-in-sql-server-management-studio-ssrs"></a>Reporting Services no SQL Server Management Studio (SSRS)
   Os administradores de servidor de relatório podem usar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para:  
   
 -   Habilitar recursos, definir padrões de servidor e gerenciar trabalhos em execução.  
   
--   Exibir e criar relatórios personalizados. No Pesquisador de Objetos, muitos nós exibem um conjunto de relatórios padrão instalados com o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Você deve ter permissões de administrador. O esquema de um relatório personalizado deve corresponder ao esquema dos relatórios instalados. Para obter mais informações, consulte [Relatórios personalizados no Management Studio](http://msdn.microsoft.com/library/1ba3f758-f39b-4f5f-91ca-516cedc78979) e [Localizar a versão do esquema de definição de relatório &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
+-   Exibir e criar relatórios personalizados. No Pesquisador de Objetos, muitos nós exibem um conjunto de relatórios padrão instalados com o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Você deve ter permissões de administrador. O esquema de um relatório personalizado deve corresponder ao esquema dos relatórios instalados. Para obter mais informações, consulte [Relatórios personalizados no Management Studio](../../ssms/object/custom-reports-in-management-studio.md) e [Localizar a versão do esquema de definição de relatório &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
   
  Os autores de relatório podem usar o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para:  
   

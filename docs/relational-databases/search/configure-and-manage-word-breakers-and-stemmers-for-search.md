@@ -25,13 +25,13 @@ caps.latest.revision: 89
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: c8b06eb2cfa065bcd578a58b15c6f18a5ad5fe16
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2818cdfd511316698d34acc19ce7b0f948e06480
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39545356"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43093148"
 ---
 # <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>Configurar e gerenciar separadores de palavras e lematizadores de pesquisa
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -96,7 +96,7 @@ SELECT 'language_id' AS "LCID" FROM sys.fulltext_index_columns;
 Para obter opções adicionais e mais informações, consulte [sys.fulltext_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md).
 
 ##  <a name="tshoot"></a> Solucionar problemas de erros de tempo limite na separação de palavras  
- Um erro de tempo limite na separação de palavras pode ocorrer em diversas situações. ou informações sobre estas situações e o que fazer em cada uma delas, consulte [MSSQLSERVER_30053](https://msdn.microsoft.com/library/cc879279.aspx).
+ Um erro de tempo limite na separação de palavras pode ocorrer em diversas situações. ou informações sobre estas situações e o que fazer em cada uma delas, consulte [MSSQLSERVER_30053](../errors-events/mssqlserver-30053-database-engine-error.md).
 
 ### <a name="info-about-the-mssqlserver30053-error"></a>Informações sobre o erro MSSQLSERVER_30053
   

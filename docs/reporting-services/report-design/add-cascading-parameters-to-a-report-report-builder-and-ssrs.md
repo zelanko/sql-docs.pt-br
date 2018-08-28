@@ -1,7 +1,7 @@
 ---
 title: Adicionar parâmetros em cascata a um relatório (Construtor de Relatórios e SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -15,12 +15,12 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 77c4ede074611b60c33777d64b8ff5308fc343f1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 980f17539e4230d5064ad9cc6d7cfc387b7dad84
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33021553"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40412696"
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>Adicionar parâmetros em cascata a um relatório (Construtor de Relatórios e SSRS)
   Os parâmetros em cascata fornecem um modo de gerenciar grandes volumes de dados de relatório. É possível definir um conjunto de parâmetros relacionados de forma que a lista de valores de um parâmetro dependa do valor escolhido em outro parâmetro. Por exemplo, o primeiro parâmetro é independente e pode apresentar uma lista de categorias de produtos. Quando o usuário seleciona uma categoria, o segundo parâmetro é dependente do valor do primeiro parâmetro. Seus valores são atualizados com uma lista de subcategorias dentro da categoria escolhida. Quando o usuário exibe o relatório, os valores dos dois parâmetros de categoria e subcategoria são usados para filtrar dados do relatório.  
@@ -48,7 +48,7 @@ ms.locfileid: "33021553"
   
     1.  Uma lista de campos de fonte de dados. Por exemplo, em uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] , a instrução SELECT especifica uma lista de nomes de colunas do banco de dados de uma determinada tabela ou exibição.  
   
-    2.  Um parâmetro de consulta para cada parâmetro em cascata. Um parâmetro de consulta limita os dados recuperados da fonte de dados especificando determinados valores a serem incluídos ou excluídos da consulta. Normalmente, parâmetros de consulta ocorrem em uma cláusula de restrição na consulta. Por exemplo, em uma instrução SELECT do [!INCLUDE[tsql](../../includes/tsql-md.md)] , os parâmetros de consulta ocorrem na cláusula WHERE. Para obter mais informações, consulte "Filtering Rows by Using WHERE and HAVING" na documentação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nos [Manuais Online do SQL Server](http://go.microsoft.com/fwlink/?linkid=120955).  
+    2.  Um parâmetro de consulta para cada parâmetro em cascata. Um parâmetro de consulta limita os dados recuperados da fonte de dados especificando determinados valores a serem incluídos ou excluídos da consulta. Normalmente, parâmetros de consulta ocorrem em uma cláusula de restrição na consulta. Por exemplo, em uma instrução SELECT do [!INCLUDE[tsql](../../includes/tsql-md.md)] , os parâmetros de consulta ocorrem na cláusula WHERE.  
   
 6.  Clique em **Executar** (**!**). Depois que você incluir parâmetros de consulta e executar a consulta, os parâmetros do relatório que correspondem aos parâmetros da consulta serão criados automaticamente.  
   

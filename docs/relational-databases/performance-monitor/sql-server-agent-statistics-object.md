@@ -19,12 +19,12 @@ caps.latest.revision: 17
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fe30b9faca81825b140259996af1fc6b0fedc2fe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3da81b9f7683aec5bbbe5e2e6562128a3c66d702
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32950551"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40409337"
 ---
 # <a name="sql-server-agent-statistics-object"></a>SQL Server Agent, objeto Statistics
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,12 +32,12 @@ ms.locfileid: "32950551"
   
  A tabela abaixo lista os contadores de **SQLAgent:Statistics** .  
   
-|Nome|Description|  
+|Nome|Descrição|  
 |----------|-----------------|  
 |**SQL Server reiniciado**|O número de vezes em que o Microsoft SQL Server foi reiniciado com êxito pelo SQL Server Agent desde a última vez em que este foi iniciado.|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Usar objetos de desempenho](http://msdn.microsoft.com/library/830b843a-6b2a-4620-a51b-98358e9fc54b)   
+ [Usar objetos de desempenho](../../ssms/agent/use-performance-objects.md)   
  [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

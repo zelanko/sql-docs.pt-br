@@ -15,13 +15,13 @@ caps.latest.revision: 31
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 042d7aa32742f0cddf18963a7a50ac1cc2dc9ec6
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 881a2a42a8140502ca0d50765339a8c1cd0194c0
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39558266"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43098552"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>Suporte ao SQL Server Management Studio para OLTP na memória
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "39558266"
   
 2.  Para substituir os parâmetros de modelo, clique em **Especificar Valores para Parâmetros de Modelo** no menu **Consulta** .  
   
-     Para obter mais informações sobre como usar modelos, veja [Explorador de Modelos](http://msdn.microsoft.com/library/b9ee55c5-bb44-4f76-90ac-792d8d83b4c8).  
+     Para obter mais informações sobre como usar modelos, veja [Explorador de Modelos](../../ssms/template/template-explorer.md).  
   
 3.  No **Pesquisador de Objetos**, as tabelas serão ordenadas primeiro por tabelas com base em disco seguidas por tabelas com otimização de memória. Use os **Detalhes do Pesquisador de Objetos** para ver todas as tabelas ordenadas por nome.  
   

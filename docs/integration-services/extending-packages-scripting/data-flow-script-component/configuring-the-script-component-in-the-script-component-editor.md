@@ -24,12 +24,12 @@ caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a7bbfd0f9a5572d29451d9a7c18bc3c61aa9613c
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: bc398c3ab6675234fd48987e2f3fd45cb1a1a4c9
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329350"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40411742"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>Configurando o componente Script no Editor de Componentes de Script
   Antes de escrever um código personalizado no componente Script, primeiro selecione o tipo de componente de fluxo de dados que deseja criar – origem, transformação ou destino – e, em seguida, configure os metadados e as propriedades do componente no **Editor de Transformação Scripts**.  
@@ -37,7 +37,7 @@ ms.locfileid: "35329350"
 ## <a name="selecting-the-type-of-component-to-create"></a>Selecionando o tipo de componente a ser criado  
  Quando você adiciona um componente Script ao painel Fluxo de Dados do Designer do [!INCLUDE[ssIS](../../../includes/ssis-md.md)], a caixa de diálogo **Selecionar Tipo de Componente Script** é exibida. Pré-configure o componente como uma origem, transformação ou destino. Depois de fazer essa seleção inicial, continue configurando o componente no **Editor de Transformação Scripts**.  
   
- Para definir a linguagem de script padrão para o componente Script, use a opção **Linguagem de scripts** na página **Geral** da caixa de diálogo **Opções**. Para obter mais informações, consulte [General Page](https://msdn.microsoft.com/library/ms189436(v=sql.110).aspx).  
+ Para definir a linguagem de script padrão para o componente Script, use a opção **Linguagem de scripts** na página **Geral** da caixa de diálogo **Opções**. Para obter mais informações, consulte [General Page](../../general-page-of-integration-services-designers-options.md).  
   
 ## <a name="understanding-the-two-design-time-modes"></a>Compreendendo os dois modos de tempo de design  
  No [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer, o componente Script tem dois modos: modo de design de metadados e modo de design de código.  

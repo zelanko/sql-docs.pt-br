@@ -17,12 +17,12 @@ caps.latest.revision: 11
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f618cba40081adfe9b38d8a8f89043a627cf5a40
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: be4b3f5d1be443d83cda98e063a0fd1adcb61926
+ms.sourcegitcommit: 61212c06b56953ce2e2627d35f7bd69cda786540
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769802"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40409356"
 ---
 # <a name="some-synchronous-replicas-are-not-synchronized"></a>Algumas réplicas síncronas não são sincronizadas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "34769802"
 >  Para esta versão do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], as informações sobre as possíveis causas e soluções estão localizadas em [Algumas réplicas síncronas não estão sincronizadas](http://go.microsoft.com/fwlink/p/?LinkId=220853) no Wiki do TechNet.  
   
 ## <a name="possible-causes"></a>Causas possíveis  
- Neste grupo de disponibilidade, pelo menos uma réplica síncrona não está sincronizada no momento. O estado de sincronização de réplica pode ser SYNCHONIZING ou NOT SYNCHRONIZING.  
+ Neste grupo de disponibilidade, pelo menos uma réplica síncrona não está sincronizada no momento. O estado de sincronização da réplica pode ser SYNCHRONIZING ou NOT SYNCHRONIZING.  
   
 ## <a name="possible-solution"></a>Solução possível  
  Use o estado da política de réplica de disponibilidade para localizar a réplica de disponibilidade com o estado de sincronização incorreto e, depois, resolva o problema na réplica de disponibilidade.  

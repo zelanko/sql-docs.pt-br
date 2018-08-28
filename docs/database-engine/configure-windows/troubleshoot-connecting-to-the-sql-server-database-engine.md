@@ -17,12 +17,12 @@ caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fda5188298c2cae3b56bdb4119ae1bbc96679a2f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 634672a3f769029549727c571c011ae5e4b03aef
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32870801"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40409984"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>Solucionar problemas na conexão com o Mecanismo de Banco de Dados do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ Conectar ao SQL Server usando TCP/IP requer que o Windows possa estabelecer a co
 ## <a name="testing-a-local-connection"></a>Testando uma conexão local
 
 Antes de solucionar um problema de conexão de outro computador, primeiro teste a capacidade de conectar-se de um aplicativo cliente instalado no computador que executa o SQL Server. (Isso evitará problemas de firewall.) Esse procedimento usa o SQL Server Management Studio. Se você não tiver o Management Studio instalado, consulte [Baixar o SSMS (SQL Server Management Studio)](../../ssms/download-sql-server-management-studio-ssms.md). (Se você não conseguir instalar o Management Studio, poderá testar a conexão usando o utilitário `sqlcmd.exe` que é instalado com o Mecanismo de Banco de Dados. Para saber mais sobre o `sqlcmd.exe`, consulte o [Utilitário sqlcmd](../../tools/sqlcmd-utility.md).)
-1.  Faça logon no computador em que o SQL Server está instalado usando um logon com permissão para acessar o SQL Server. (Durante a instalação, o SQL Server requer que pelo menos um logon seja especificado como Administrador do SQL Server. Se você não conhece um administrador, consulte [Conectar-se ao SQL Server quando os Administradores do Sistema estiverem bloqueados](http://msdn.microsoft.com/library/dd207004.aspx).)
+1.  Faça logon no computador em que o SQL Server está instalado usando um logon com permissão para acessar o SQL Server. (Durante a instalação, o SQL Server requer que pelo menos um logon seja especificado como Administrador do SQL Server. Se você não conhece um administrador, consulte [Conectar-se ao SQL Server quando os Administradores do Sistema estiverem bloqueados](connect-to-sql-server-when-system-administrators-are-locked-out.md).)
 2.   Na página inicial, digite **SQL Server Management Studio**ou, em versões mais antigas do Windows, no menu Iniciar, aponte para **Todos os Programas**, **Microsoft SQL Server**e clique em **SQL Server Management Studio**.
 3.  Na caixa de diálogo **Conectar ao Servidor** , na caixa de tipo **Servidor** , selecione **Mecanismo de Banco de Dados**. Na caixa **Autenticação** , selecione **Autenticação do Windows**. Na caixa **Nome do servidor** , digite uma das seguintes opções:
 
@@ -107,7 +107,7 @@ Antes de solucionar um problema de conexão de outro computador, primeiro teste 
 Se você receber um erro neste ponto, deverá resolvê-lo antes de continuar. Há muitas possibilidades que podem representar um problema. Seu logon pode não estar autorizado a se conectar. O banco de dados padrão pode estar ausente.
 
 >    [!NOTE] 
->    Algumas mensagens de erro passadas para o cliente intencionalmente não fornecem informações suficientes para solucionar o problema. Esse é um recurso de segurança para evitar o fornecimento de informações sobre o SQL Server a um invasor. Para exibir as informações completas sobre o erro, examine o log de erros do SQL Server. Os detalhes são fornecidos abaixo. Se você estiver recebendo o erro **18456 Logon falhou para usuário**, o tópico dos Manuais Online [MSSQLSERVER_18456](http://msdn.microsoft.com/library/cc645917) contém informações adicionais sobre códigos de erro. E o blog de Aaron Bertrand tem uma lista abrangente dos códigos de erro em [Solucionando o erro 18456](http://www2.sqlblog.com/blogs/aaron_bertrand/archive/2011/01/14/sql-server-v-next-denali-additional-states-for-error-18456.aspx). Você pode exibir o log de erros com o SSMS (se puder se conectar), na seção Gerenciamento do Pesquisador de Objetos. Caso contrário, você pode exibir o log de erros com o programa do Bloco de Notas do Windows. O local padrão varia de acordo com a versão e pode ser alterado durante a instalação. O local padrão do [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] é `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`.  
+>    Algumas mensagens de erro passadas para o cliente intencionalmente não fornecem informações suficientes para solucionar o problema. Esse é um recurso de segurança para evitar o fornecimento de informações sobre o SQL Server a um invasor. Para exibir as informações completas sobre o erro, examine o log de erros do SQL Server. Os detalhes são fornecidos abaixo. Se você estiver recebendo o erro **18456 Logon falhou para usuário**, o tópico dos Manuais Online [MSSQLSERVER_18456](../../relational-databases/errors-events/mssqlserver-18456-database-engine-error.md) contém informações adicionais sobre códigos de erro. E o blog de Aaron Bertrand tem uma lista abrangente dos códigos de erro em [Solucionando o erro 18456](http://www2.sqlblog.com/blogs/aaron_bertrand/archive/2011/01/14/sql-server-v-next-denali-additional-states-for-error-18456.aspx). Você pode exibir o log de erros com o SSMS (se puder se conectar), na seção Gerenciamento do Pesquisador de Objetos. Caso contrário, você pode exibir o log de erros com o programa do Bloco de Notas do Windows. O local padrão varia de acordo com a versão e pode ser alterado durante a instalação. O local padrão do [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] é `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`.  
 
 4.   Se você puder se conectar usando memória compartilhada, teste a conexão usando TCP. Você pode forçar uma conexão TCP especificando **tcp:** antes do nome. Por exemplo:
 
@@ -123,7 +123,7 @@ Se você puder se conectar à memória compartilhada, mas não ao TCP, você dev
 ## <a name="opening-a-port-in-the-firewall"></a>Abrindo uma porta no Firewall
 
 Desde vários anos atrás, com o Windows XP Service Pack 2, o Firewall do Windows está ativado e bloqueia conexões de outro computador. Para se conectar usando TCP/IP de outro computador, no computador do SQL Server, que você deve configurar o firewall para permitir conexões para a porta TCP usada pelo Mecanismo de Banco de Dados. Como mencionamos anteriormente, a instância padrão geralmente escuta na porta TCP 1433. Se você tiver instâncias nomeadas ou se alterou o padrão, a porta TCP [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] poderá estar escutando em outra porta. Consulte a seção inicial sobre como coletar informações para determinar a porta.  
-Se você estiver se conectando a uma instância nomeada ou uma porta diferente da porta TCP 1433, também deverá abrir a porta 1434 UDP para o serviço de Navegador do SQL Server. Para obter instruções passo a passo para configurar o Firewall do Windows, consulte [Configurar um Firewall do Windows para acesso ao Mecanismo de Banco de Dados](https://msdn.microsoft.com/library/ms175043).
+Se você estiver se conectando a uma instância nomeada ou uma porta diferente da porta TCP 1433, também deverá abrir a porta 1434 UDP para o serviço de Navegador do SQL Server. Para obter instruções passo a passo para configurar o Firewall do Windows, consulte [Configurar um Firewall do Windows para acesso ao Mecanismo de Banco de Dados](configure-a-windows-firewall-for-database-engine-access.md).
 
 ## <a name="testing-the-connection"></a>Testando a conexão
 

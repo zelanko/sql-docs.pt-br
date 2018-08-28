@@ -16,12 +16,12 @@ caps.latest.revision: 26
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f423496dca0ce8cb3269b3b2de4d97615c78af06
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 774307434a3d005a64a64e69b3f7786c98ecbdc9
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33145437"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405750"
 ---
 # <a name="create-custom-collection-set---generic-t-sql-query-collector-type"></a>Criar conjunto de coleta personalizado – Tipo de coletor de consultas T-SQL genérico
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "33145437"
   
     -   CollectorSchedule_Every_6h  
   
-     Se você não desejar usar uma das agendas fornecidas, poderá criar uma nova agenda e usá-la no conjunto de coleta. Para obter mais informações, veja [Criar e anexar agendamentos a trabalhos](http://msdn.microsoft.com/library/079c2984-0052-4a37-a2b8-4ece56e6b6b5).  
+     Se você não desejar usar uma das agendas fornecidas, poderá criar uma nova agenda e usá-la no conjunto de coleta. Para obter mais informações, veja [Criar e anexar agendamentos a trabalhos](../../ssms/agent/create-and-attach-schedules-to-jobs.md).  
   
 ### <a name="define-and-create-a-collection-item"></a>Definir e criar um item de coleta  
   
@@ -166,7 +166,7 @@ GO
   
 ## <a name="see-also"></a>Consulte Também  
  [Procedimentos armazenados de coletor de dados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [Gerenciar Agendas](http://msdn.microsoft.com/library/f56c0736-dccc-41d2-afcf-71344aff143a)   
+ [Gerenciar Agendas](../../ssms/agent/manage-schedules.md)   
  [Iniciar ou parar um conjunto de coleta](../../relational-databases/data-collection/start-or-stop-a-collection-set.md)  
   
   

@@ -22,13 +22,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.reviewer: carlrab
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 4188b32bca78e0cf6d0fb8335cfa16f8bc504b77
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2591c5c37bd0d37b7591eb6dee629d92fcd5fb3c
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39562200"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43083649"
 ---
 # <a name="tempdb-database"></a>Banco de dados tempdb
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

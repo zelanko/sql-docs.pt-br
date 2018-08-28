@@ -15,12 +15,12 @@ caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 152507403574ae4c699a3aa30a2376c0ed6b2af2
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 106d85def85002e9cb917cf3cc9be7ac55c57ee4
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38002920"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405868"
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Gráficos de mapa de árvore e explosão solar no Reporting Services
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -115,7 +115,7 @@ Em um gráfico de explosão solar, a hierarquia é representada por uma série d
   
   
 ##  <a name="bkmk_sample_data"></a> Dados de exemplo do AdventureWorks  
- Esta seção inclui uma consulta de exemplo e as etapas básicas para criação de uma fonte de dados e um conjunto de dados no [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]. Se o relatório já contiver uma fonte de dados e um conjunto de dados, ignore esta seção.  
+ Esta seção inclui uma consulta de exemplo e as etapas básicas para criação de uma fonte de dados e um conjunto de dados no [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. Se o relatório já contiver uma fonte de dados e um conjunto de dados, ignore esta seção.  
   
  A consulta retorna dados de detalhes de ordem de venda do AdventureWorks, com região de vendas, categoria de produto, subcategoria de produto e dados do motivo das vendas.  
   

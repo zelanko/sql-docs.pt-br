@@ -27,16 +27,16 @@ caps.latest.revision: 58
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 97a03d0cbb0108a4a7cdba27dd0394446a3bb556
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: b16ce62f2a955e8b8f3cede71722c746dc0601fa
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983058"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406142"
 ---
 # <a name="sql-server-configuration-manager"></a>SQL Server Configuration Manager
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > Para ver conteúdo relacionado a versões anteriores do SQL Server, consulte [SQL Server Configuration Manager](https://msdn.microsoft.com/library/ms174212(SQL.120).aspx).
+ > Para ver conteúdo relacionado a versões anteriores do SQL Server, consulte [SQL Server Configuration Manager](sql-server-configuration-manager.md).
 
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager é uma ferramenta para gerenciar os serviços associados ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], configurar os protocolos de rede usados pelo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]e para gerenciar a configuração de conectividade de rede de computadores cliente do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] O Configuration Manager é um snap-in do [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console que está disponível no menu Iniciar ou pode ser adicionado a qualquer outra exibição do Console de Gerenciamento do [!INCLUDE[msCoName](../includes/msconame-md.md)] . O Console de Gerenciamento do [!INCLUDE[msCoName](../includes/msconame-md.md)] (**mmc.exe**) usa o arquivo **SQLServerManager\<versão>.msc** (como **SQLServerManager13.msc** para [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]) para abrir o Configuration Manager. Aqui estão os caminhos para as últimas quatro versões Windows instaladas na unidade C.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "38983058"
 > -   **Windows 8**:  
 >          Para abrir o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager, no botão **Pesquisar**, em **Aplicativos**, digite **SQLServerManager\<versão>.msc**, como **SQLServerManager13.msc** e pressione **Enter**.  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] O Configuration Manager e o SQL Server Management Studio usam o WMI (Instrumentação de Gerenciamento do Windows) para exibir e modificar algumas das propriedades de servidor. O WMI fornece uma forma unificada para fazer interface com as chamadas de API que gerenciam as operações de registro solicitadas pelas ferramentas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e para fornecer um controle e manipulação melhorados sobre os serviços selecionados de SQL do componente de snap-in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager. Para obter informações sobre como configurar permissões relacionadas ao WMI, veja [Configurar o WMI para mostrar o status do servidor nas ferramentas do SQL Server](http://msdn.microsoft.com/library/7e97197b-ed4d-40d1-9a52-9ab1d92401d7).  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] O Configuration Manager e o SQL Server Management Studio usam o WMI (Instrumentação de Gerenciamento do Windows) para exibir e modificar algumas das propriedades de servidor. O WMI fornece uma forma unificada para fazer interface com as chamadas de API que gerenciam as operações de registro solicitadas pelas ferramentas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e para fornecer um controle e manipulação melhorados sobre os serviços selecionados de SQL do componente de snap-in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager. Para obter informações sobre como configurar permissões relacionadas ao WMI, veja [Configurar o WMI para mostrar o status do servidor nas ferramentas do SQL Server](../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md).  
   
  Para iniciar, interromper, pausar, retomar ou configurar os serviços em outro computador usando o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager, veja [Conectar-se a um outro computador &#40;SQL Server Configuration Manager&#41;](../database-engine/configure-windows/scm-services-connect-to-another-computer.md).  
   

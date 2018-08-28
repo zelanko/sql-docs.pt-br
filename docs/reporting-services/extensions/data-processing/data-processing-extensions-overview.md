@@ -19,26 +19,26 @@ caps.latest.revision: 39
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 06f2f1115fe1e4f7aaeafe69ab73a6734fe8d6fb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d9baa94d3f791ba8c058efe6074d561f121428fd
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33017803"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40409336"
 ---
 # <a name="data-processing-extensions-overview"></a>Visão geral das extensões de processamento de dados
   As extensões de processamento de dados do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] permitem que você se conecte a uma fonte de dados e recupere dados. Eles também servem como uma ponte entre uma fonte de dados e um conjunto de dados. As extensões de processamento de dados do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] são modeladas de acordo com um subconjunto das interfaces do provedor de dados do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   
  A tabela a seguir lista as extensões de processamento de dados incluídas no [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
-|Extensão de processamento de dados|Description|  
+|Extensão de processamento de dados|Descrição|  
 |-------------------------------|-----------------|  
 |Extensão de processamento de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Usa o Provedor de Dados .NET Framework para SQL Server para se conectar e recuperar dados do [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)].|  
 |Extensão de processamento de dados para OLE DB|Usa o Provedor de Dados .NET Framework para OLE DB. Com essa extensão, o servidor de relatório pode consultar qualquer fonte de dados que tenha um provedor OLE DB.|  
 |Extensão de processamento de dados para Oracle|Usa o Provedor de Dados .NET Framework para Oracle. Com essa extensão, o servidor de relatório pode acessar fontes de dados Oracle por meio do software de conectividade de cliente Oracle.|  
 |Extensão de processamento de dados para ODBC|Usa o Provedor de Dados .NET Framework para ODBC. Com essa extensão, o servidor de relatório pode acessar dados em qualquer banco de dados para qual exista um driver ODBC.|  
   
- Você pode usar a API [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] de processamento de dados para adicionar processamento de dados ao seu servidor de relatório.  
+ Você pode usar a API [!INCLUDE[ssRS](../../../includes/ssrs.md)] de processamento de dados para adicionar processamento de dados ao seu servidor de relatório.  
   
 > [!NOTE]  
 >  O [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] tem suporte interno para provedores de dados no [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Se você já implementou um provedor de dados completo, não precisará implementar uma extensão de processamento de dados do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Entretanto, você deve considerar a extensão do seu provedor de dados para incluir funcionalidade específica para o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2005, que inclui credenciais de conexão seguros e agregações do lado de servidor.  

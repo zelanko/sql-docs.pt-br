@@ -18,12 +18,12 @@ caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 92c20aa9e6cdd5d7747093583b2230299702df85
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 30d264f29716d954e0b627e1b3ce14c34de86660
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32951891"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40412539"
 ---
 # <a name="check-disk-input-output-subsystem-for-read-retry-problems"></a>Verificar o subsistema de entrada e saída de disco para problemas de repetição de leitura
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "32951891"
 -   Contate o fabricante do disco para obter as mais recentes atualizações de driver.  
   
 ## <a name="for-more-information"></a>Para obter mais informações  
- [MSSQLSERVER_825](http://msdn.microsoft.com/library/f69f8214-5af1-4769-878b-117ad6eaff52)  
+ [MSSQLSERVER_825](../errors-events/mssqlserver-825-database-engine-error.md)  
   
  [Fundamentos de E/S do SQL Server, Capítulo 2](http://go.microsoft.com/fwlink/?linkid=69370)  
   

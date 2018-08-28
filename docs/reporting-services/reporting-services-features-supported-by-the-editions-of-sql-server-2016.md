@@ -15,12 +15,12 @@ caps.latest.revision: 3
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: a37aefe9a63703ec5426dc3e2d4b73346bd70fbb
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 7785f0ad361b88931123f2dd9eb229064a9ca953
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983118"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40406573"
 ---
 # <a name="reporting-services-features-supported-by-the-editions-of-sql-server-2016"></a>Recursos do Reporting Services com suporte nas edições do SQL Server 2016
 
@@ -96,13 +96,13 @@ Para navegar até a tabela de uma tecnologia do SQL Server, clique no respectivo
   
 |Nome da ferramenta|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Desenvolvedor|  
 |---------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
-|[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)] (.rdl e .rds)|Sim|Sim|||||Sim|  
-|[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long-md.md)] (.rsmobile)|Sim||||||Sim|  
+|[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] (.rdl e .rds)|Sim|Sim|||||Sim|  
+|[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] (.rsmobile)|Sim||||||Sim|  
 |Aplicativos do Power BI para dispositivos móveis (iOS, Windows 10, Android) (.rsmobile)|Sim||||||Sim|  
   
 > [!NOTE]  
 > 1.  A tabela acima identifica as edições do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] necessárias para habilitar essas ferramentas cliente; no entanto, essas ferramentas podem acessar os dados hospedados em qualquer edição do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
-> 2.  [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long-md.md)] é o único ponto de criação de relatórios móveis. Conecte-se a um servidor do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para acessar fontes de dados e criar relatórios. Em seguida, publique-os no servidor do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para que outras pessoas da organização possam acessá-los, no servidor ou em dispositivos móveis. Você também pode usar o [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long-md.md)] autônomo com fontes de dados locais  
+> 2.  [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] é o único ponto de criação de relatórios móveis. Conecte-se a um servidor do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para acessar fontes de dados e criar relatórios. Em seguida, publique-os no servidor do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para que outras pessoas da organização possam acessá-los, no servidor ou em dispositivos móveis. Você também pode usar o [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] autônomo com fontes de dados locais  
 > 3.  Se estiver usando o  [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] local, o [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] na nuvem ou ambos como sua solução de entrega de relatórios, você precisará apenas de um aplicativo móvel para acessar painéis e relatórios móveis em dispositivos móveis. Os aplicativos [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] estão disponíveis para download nas lojas de aplicativos do Windows, iOS ou Android.  
 
 ## <a name="next-steps"></a>Próximas etapas

@@ -18,12 +18,12 @@ caps.latest.revision: 10
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c05923ff7be5c1264f5801c1190c7297ea793b55
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c68d67c538bb27eddd84ee7b254fd1beec8f22ed
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32948391"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406026"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Criar um plano de manutenção (Superfície de Design do Plano de Manutenção)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ ms.locfileid: "32948391"
      Exibe a caixa de diálogo **Relatório e Registro em Log** . Consulte abaixo para obter mais informações sobre essa caixa de diálogo.  
   
      **Servidores**  
-     Exiba a caixa de diálogo **Servidores** , que é usada para selecionar os servidores em que serão executadas as tarefas do subplano. Essa opção só está habilitada em servidores mestre em ambientes multisservidor. Para obter mais informações, consulte [Criar um ambiente multisservidor](http://msdn.microsoft.com/library/edc2b60d-15da-40a1-8ba3-f1d473366ee6) e [Plano de manutenção &#40;Servers&#41;](../../relational-databases/maintenance-plans/maintenance-plan-servers.md).  
+     Exiba a caixa de diálogo **Servidores** , que é usada para selecionar os servidores em que serão executadas as tarefas do subplano. Essa opção só está habilitada em servidores mestre em ambientes multisservidor. Para obter mais informações, consulte [Criar um ambiente multisservidor](../../ssms/agent/create-a-multiserver-environment.md) e [Plano de manutenção &#40;Servers&#41;](../../relational-databases/maintenance-plans/maintenance-plan-servers.md).  
   
      **Nome**  
      Exibe o nome do plano de manutenção. Para planos de manutenção novos, o nome é especificado em uma caixa de diálogo antes que o designer de plano de manutenção seja aberto. Para renomear um plano de manutenção, clique com o botão direito do mouse no plano no Pesquisador de Objetos e clique em **Renomear**.  

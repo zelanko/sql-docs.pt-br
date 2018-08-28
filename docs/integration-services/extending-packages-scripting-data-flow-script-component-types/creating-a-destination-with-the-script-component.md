@@ -23,12 +23,12 @@ caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2fe44ad4d9c80e97f6bc94e08c66af9d7f312fa5
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: a6fadd30e1db32354c52fcef92b249765948c667
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401548"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40410429"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>Criando um destino com o componente Script
   Você usa um componente de destino no fluxo de dados de um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para salvar dados recebidos de fontes upstream e transformações em uma fonte de dados. Em geral, o componente de destino se conecta à fonte de dados através de um gerenciador de conexões existente.  
@@ -48,7 +48,7 @@ ms.locfileid: "35401548"
  Para selecionar a linguagem de script que será usada pelo destino Script, defina a propriedade **ScriptLanguage** na página **Script** da caixa de diálogo **Editor de Transformação Scripts**.  
   
 > [!NOTE]  
->  Para definir a linguagem de scripts padrão para o componente Script, use a opção **Linguagem de scripts** na página **Geral** da caixa de diálogo **Opções**. Para obter mais informações, consulte [General Page](https://msdn.microsoft.com/library/ms189436(v=sql.110).aspx).  
+>  Para definir a linguagem de scripts padrão para o componente Script, use a opção **Linguagem de scripts** na página **Geral** da caixa de diálogo **Opções**. Para obter mais informações, consulte [General Page](../general-page-of-integration-services-designers-options.md).  
   
  Um componente de destino de fluxo de dados tem uma entrada e nenhuma saída. A configuração da entrada do componente é uma das etapas que devem ser concluídas no modo de design de metadados, usando o **Editor de Transformação Scripts**, antes de escrever o script personalizado.  
   

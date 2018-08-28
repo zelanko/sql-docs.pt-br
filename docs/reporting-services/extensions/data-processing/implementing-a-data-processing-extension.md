@@ -22,12 +22,12 @@ caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: e4aaea407128642cb8ce9e8696eac0236cd60379
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5f1a83936f219fb95e03554383f6374b9f696f47
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33015633"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40415792"
 ---
 # <a name="implementing-a-data-processing-extension"></a>Implementando uma extensão de processamento de dados
   As extensões de processamento de dados do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] permitem que você se conecte a uma fonte de dados e recupere dados. Eles também servem como uma ponte entre uma fonte de dados e um conjunto de dados. As extensões de processamento de dados do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] são modeladas de acordo com um subconjunto das interfaces do provedor de dados do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
@@ -59,9 +59,6 @@ ms.locfileid: "33015633"
   
  [Depurar o código de extensão de processamento de dados](../../../reporting-services/extensions/data-processing/debugging-data-processing-extension-code.md)  
  Descreve como depurar código em suas extensões de processamento de dados.  
-  
- [Remover uma extensão de processamento de dados](../../../reporting-services/extensions/data-processing/removing-a-data-processing-extension.md)  
- Descreve como remover uma extensão de processamento de dados de um servidor de relatório ou do Designer de Relatórios.  
   
  Para obter uma amostra de uma extensão de processamento de dados totalmente implementada, consulte [Amostras de produto do SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=177889).  
   

@@ -19,12 +19,12 @@ caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 21835671518515b1efe02698a0f01f4dcd051179
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4746f6d8cdc836f98d8f2d33369e65af2d111a81
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32951811"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40410955"
 ---
 # <a name="sql-server-agent-jobsteps-object"></a>SQL Server Agent, objeto JobSteps
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "32951811"
   
  A tabela abaixo contém os contadores de **SQLAgent:JobSteps** .  
   
-|Nome|Description|  
+|Nome|Descrição|  
 |----------|-----------------|  
 |**Etapas ativas**|Este contador informa o número de etapas de trabalho atualmente em execução.|  
 |**Etapas em fila**|Este contador informa o número de etapas de trabalho que estão prontas para execução pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, mas que ainda não foram iniciadas.|  
@@ -40,7 +40,7 @@ ms.locfileid: "32951811"
   
  Cada contador no objeto contém as seguintes instâncias:  
   
-|Instância|Description|  
+|Instância|Descrição|  
 |--------------|-----------------|  
 |**_Total**|Informações de todas as etapas de trabalho.|  
 |**ActiveScripting**|Informações de etapas de trabalho que usam o subsistema **ActiveScripting** .|  
@@ -57,8 +57,8 @@ ms.locfileid: "32951811"
 |**TSQL**|Informações de etapas de trabalho que executam [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
   
 ## <a name="see-also"></a>Consulte Também  
- [Gerenciar etapas de trabalho](http://msdn.microsoft.com/library/51352afc-a0a4-428b-8985-f9e58bb57c31)   
- [Usar objetos de desempenho](http://msdn.microsoft.com/library/830b843a-6b2a-4620-a51b-98358e9fc54b)   
+ [Gerenciar etapas de trabalho](../../ssms/agent/manage-job-steps.md)   
+ [Usar objetos de desempenho](../../ssms/agent/use-performance-objects.md)   
  [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

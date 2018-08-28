@@ -24,12 +24,12 @@ caps.latest.revision: 48
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4fea89d75e74db8f14eeedf692bf50c37469239f
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 4e000a327c0994addeb27199024958f522001fdf
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34585558"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40415778"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>Habilitar conexões criptografadas com o Mecanismo de Banco de Dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ ms.locfileid: "34585558"
 ### <a name="wildcard-certificates"></a>Certificados curinga  
 A partir do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client dão suporte a certificados curinga. Outros clientes podem não dar suporte a certificados curinga. Para obter mais informações, consulte a documentação do cliente. O certificado curinga não pode ser selecionado usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. Para usar um certificado curinga, é necessário editar a chave do Registro `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQLServer\SuperSocketNetLib` e inserir a impressão digital do certificado, sem espaços, no valor **Certificado**.  
 > [!WARNING]  
-> [!INCLUDE[ssnoteregistry_md](../../includes/ssnoteregistry_md.md)]  
+> [!INCLUDE[ssnoteregistry_md](../../includes/ssnoteregistry-md.md)]  
 
 <a name="client-request-encrypt-connect-23h"/>
 ##  <a name="ConfigureClientConnections"></a> Para configurar o cliente para solicitar conexões criptografadas  

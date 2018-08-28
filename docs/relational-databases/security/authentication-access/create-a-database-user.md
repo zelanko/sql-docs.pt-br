@@ -27,13 +27,13 @@ caps.latest.revision: 31
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 7d1df8ab9434915e891cdb98c86bc26bdf9b4b38
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 72d889e8be30c90a61627379d53ca41156fe0a27
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39535187"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43096984"
 ---
 # <a name="create-a-database-user"></a>Criar um usuário de banco de dados
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -139,7 +139,7 @@ ms.locfileid: "39535187"
      Exiba ou especifique as propriedades estendidas do objeto. Cada propriedade estendida consiste em um par de nomes/valores de metadados associado ao objeto.  
   
      **Reticências (...)**  
-     Clique no botão de reticências **(…)** depois do **Valor** para abrir a caixa de diálogo **Valor da Propriedade Estendida** . Digite ou exiba o valor da propriedade estendida neste local maior. Para obter mais informações, consulte [Caixa de diálogo Valor da Propriedade Estendida](http://msdn.microsoft.com/library/ms189353.aspx).  
+     Clique no botão de reticências **(…)** depois do **Valor** para abrir a caixa de diálogo **Valor da Propriedade Estendida** . Digite ou exiba o valor da propriedade estendida neste local maior. Para obter mais informações, consulte [Caixa de diálogo Valor da Propriedade Estendida](../../databases/value-for-extended-property-dialog-box.md).  
   
      **Delete (excluir)**  
      Remove a propriedade estendida selecionada.  

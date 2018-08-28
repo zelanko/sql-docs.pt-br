@@ -17,16 +17,16 @@ caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f8818331ee958d1a8458d057015c1f79e787af8a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a141439653310878c9650a980dff2fc5ec189ead
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33036393"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40411737"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Tutorial: Adicionar um minigráfico ao relatório (Construtor de Relatórios)
 
-Neste tutorial do [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)], você cria uma tabela básica com um minigráfico em um relatório paginado do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .   
+Neste tutorial do [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)], você cria uma tabela básica com um minigráfico em um relatório paginado do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .   
   
 Minigráficos e barras de dados são gráficos pequenos e simples que transmitem muitas informações em um espaço pequeno, geralmente em tabelas e matrizes dos relatórios do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . A ilustração a seguir mostra um relatório semelhante ao que você criará.  
   

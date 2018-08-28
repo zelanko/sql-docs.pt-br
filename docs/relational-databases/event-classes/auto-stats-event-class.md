@@ -1,5 +1,26 @@
-título: "Auto Stats Event Class | Microsoft Docs" ms.custom: "" ms.date: "03/14/2017" ms.prod: sql ms.reviewer: "" ms.suite: "sql" ms.technology: supportability ms.tgt_pltfrm: "" ms.topic: conceptual helpviewer_keywords: 
-  - "Auto Stats event class" ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e caps.latest.revision: 34 author: "stevestein" ms.author: "sstein" manager: craigg
+---
+title: Classe de evento Auto Stats | Microsoft Docs
+ms.custom: ''
+ms.date: 03/14/2017
+ms.prod: sql
+ms.reviewer: ''
+ms.suite: sql
+ms.technology: supportability
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+helpviewer_keywords:
+- Auto Stats event class
+ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e
+caps.latest.revision: 34
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 24ab2577ca22083c298b6f5b5099aee2a96b59c2
+ms.sourcegitcommit: 01fccb8015644e75fd99fc5543d8216a1539f6ca
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "40409330"
 ---
 # <a name="auto-stats-event-class"></a>Classe de evento Auto Stats
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

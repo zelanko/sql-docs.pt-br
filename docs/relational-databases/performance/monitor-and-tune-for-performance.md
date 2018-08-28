@@ -32,13 +32,13 @@ caps.latest.revision: 35
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 61dcf1b12a4bcf782f00a2a40f3d9336e67db7d3
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2eae51e85474763dc20282c800e855172beae5ea
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39538836"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43073989"
 ---
 # <a name="monitor-and-tune-for-performance"></a>Monitorar e ajustar o desempenho
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ Mudanças nas condições resultam em alterações no desempenho. Em suas avalia
 |[Melhor prática com o Repositório de Consultas](../../relational-databases/performance/best-practice-with-the-query-store.md)|Recomendações sobre como usar o Repositório de Consultas.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Administração automatizada em toda a empresa](http://msdn.microsoft.com/library/44d8365b-42bd-4955-b5b2-74a8a9f4a75f)   
+ [Administração automatizada em toda a empresa](../../ssms/agent/automated-administration-across-an-enterprise.md)   
  [Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/database-engine-tuning-advisor.md)   
  [Monitorar o uso de recursos &#40;Monitor do Sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  

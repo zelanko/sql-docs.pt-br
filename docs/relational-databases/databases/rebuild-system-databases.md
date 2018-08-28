@@ -21,12 +21,12 @@ caps.latest.revision: 39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5bc4b141721417b3097dc9142e2f47404021f159
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4ae2466902ae6cd60a69687b33aab38fc6a72fd5
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32932932"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40412684"
 ---
 # <a name="rebuild-system-databases"></a>Recriar bancos de dados do sistema
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -106,7 +106,7 @@ ms.locfileid: "32932932"
   
      **Setup /QUIET /ACTION=REBUILDDATABASE /INSTANCENAME=InstanceName /SQLSYSADMINACCOUNTS=accounts [ /SAPWD= StrongPassword ] [ /SQLCOLLATION=CollationName]**  
   
-    |Nome do parâmetro|Description|  
+    |Nome do parâmetro|Descrição|  
     |--------------------|-----------------|  
     |/QUIET ou /Q|Especifica que a Instalação é executada sem nenhuma interface do usuário.|  
     |/ACTION=REBUILDDATABASE|Especifica que Instalação recria os bancos de dados do sistema.|  
@@ -168,7 +168,7 @@ ms.locfileid: "32932932"
 > [!WARNING]  
 >  A recriação do banco de dados **msdb** com o script **instmsdb** eliminará todas as informações armazenadas em **msdb** , tais como trabalhos, alerta, operadores, planos de manutenção, histórico de backup, configurações de Gerenciamento Baseado em Políticas, Database Mail, Data Warehouse de desempenho, etc.  
   
-1.  Pare todos os serviços que estejam se conectando ao [!INCLUDE[ssDE](../../includes/ssde-md.md)], inclusive o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, [!INCLUDE[ssRS](../../includes/ssrs-md.md)], [!INCLUDE[ssIS](../../includes/ssis-md.md)], e todos os aplicativos que estejam usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como um repositório de dados.  
+1.  Pare todos os serviços que estejam se conectando ao [!INCLUDE[ssDE](../../includes/ssde-md.md)], inclusive o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, [!INCLUDE[ssRS](../../includes/ssrs.md)], [!INCLUDE[ssIS](../../includes/ssis-md.md)], e todos os aplicativos que estejam usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como um repositório de dados.  
   
 2.  Inicie o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a partir da linha de comando usando o comando: `NET START MSSQLSERVER /T3608`  
   

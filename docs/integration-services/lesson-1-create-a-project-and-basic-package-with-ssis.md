@@ -15,16 +15,16 @@ ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ead61697c2db5bc574699ac460584225564e5774
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: c042f48873cec072e5aac7d48509244975e4ce2d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332700"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40415780"
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>Lição 1: Criar um projeto e pacote básico com o SSIS
 
- > Para obter o conteúdo relacionado a versões anteriores do SQL Server, consulte [Lição 1: criar o projeto e pacote básico](https://msdn.microsoft.com/library/ms170419(SQL.120).aspx).
+ > Para obter o conteúdo relacionado a versões anteriores do SQL Server, consulte [Lição 1: criar o projeto e pacote básico](lesson-1-create-a-project-and-basic-package-with-ssis.md).
 
 Nessa lição, você criará um pacote ETL simples que extrai dados de uma fonte exclusiva de arquivo simples, transforma os dados usando dois componentes de transformação pesquisa e grava esses dados na tabela de fatos **FactCurrency** no **AdventureWorksDW2012**. Como parte dessa lição, você irá aprender como criar novos pacotes, adicionar e configurar fonte de dados, e conexões de destino, e trabalhar com novos fluxos de controle e componentes de fluxo.  
   
@@ -61,10 +61,10 @@ O destino final dos dados de origem é a tabela de fatos **FactCurrency** no **A
   
 |Nome da coluna|Tipo de dados|Tabela de pesquisa|Coluna de Pesquisa|  
 |---------------|-------------|----------------|-----------------|  
-|AverageRate|FLOAT|Nenhum|Nenhum|  
+|AverageRate|FLOAT|None|None|  
 |CurrencyKey|int (FK)|DimCurrency|CurrencyKey (PK)|  
 |DateKey|int (FK)|DimDate|DateKey (PK)|  
-|EndOfDayRate|FLOAT|Nenhum|Nenhum|  
+|EndOfDayRate|FLOAT|None|None|  
   
 ### <a name="mapping-source-data-to-be-compatible-with-the-destination"></a>Mapeando fontes de dados compatíveis com o destino  
 Uma análise dos formatos de dados de origem e destino indicam que as pesquisas serão necessárias para os valores **CurrencyKey** e **DateKey** . As transformações que executarão essas pesquisas obterão os valores **CurrencyKey** e **DateKey** usando as chaves alternativas das tabelas de dimensões **DimCurrency** e **DimDate** .  
@@ -81,9 +81,9 @@ Esta lição contém as seguintes tarefas:
   
 -   [Etapa 1: Criando um novo projeto do Integration Services](../integration-services/lesson-1-1-creating-a-new-integration-services-project.md)  
   
--   [Etapa 2: adicionando e configurando um gerenciador de conexões de arquivo simples](../integration-services/lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
+-   [Etapa 2: Adicionando e configurando um gerenciador de conexões de arquivo simples](../integration-services/lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   
--   [Etapa 3: adicionando e configurando um gerenciador de conexões OLE DB](../integration-services/lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
+-   [Etapa 3: Adicionando e configurando um gerenciador de conexões OLE DB](../integration-services/lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
 -   [Etapa 4: Adicionando uma tarefa de fluxo de dados ao pacote](../integration-services/lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   

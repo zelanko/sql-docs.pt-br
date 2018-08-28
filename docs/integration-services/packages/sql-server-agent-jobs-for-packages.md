@@ -19,12 +19,12 @@ caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bac74e291dbaddb45662610abfb0681d1b144ae9
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 454daed366316554c181249414dd899d5d02c836
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35405148"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40412535"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>Trabalhos do SQL Server Agent para pacotes
   Você pode automatizar e agendar a execução de pacotes do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Você pode agendar pacotes que são implantados no servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e está armazenado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o Armazenamento de Pacotes [!INCLUDE[ssIS](../../includes/ssis-md.md)] e o sistema de arquivos.  
@@ -121,7 +121,7 @@ ms.locfileid: "35405148"
   
 6.  Selecione **Pacote do Integration Services** para o tipo de etapa do trabalho.  
   
-7.  Na lista **Executar como** , selecione **Conta de Serviço do SQL Server Agent** ou selecione uma conta proxy com as credenciais que a etapa de trabalho usará. Para obter informações sobre como criar uma conta proxy, consulte [Create a SQL Server Agent Proxy](http://msdn.microsoft.com/library/142e0c55-a8b9-4669-be49-b9dc602d5988).  
+7.  Na lista **Executar como** , selecione **Conta de Serviço do SQL Server Agent** ou selecione uma conta proxy com as credenciais que a etapa de trabalho usará. Para obter informações sobre como criar uma conta proxy, consulte [Create a SQL Server Agent Proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
      Usar uma conta proxy em vez de uma **Conta de Serviço do SQL Server Agent** pode resolver problemas comuns que podem ocorrer ao executar um pacote usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Para obter mais informações sobre esses problemas, consulte o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Artigo da Base de Dados de Conhecimento, [Um pacote SSIS não é executado quando você chama o pacote do SSIS a partir de uma etapa de trabalho do SQL Server Agent](http://support.microsoft.com/kb/918760).  
   
@@ -188,7 +188,7 @@ ms.locfileid: "35405148"
     >   
     >  O ambiente de servidor que contém a variável não está selecionado na caixa de listagem na guia **Configuração** .  
   
-10. Para criar uma agenda para uma etapa de trabalho, clique em **Agendas** no painel **Selecionar uma Página** . Para obter informações sobre como configurar uma agenda, consulte [Schedule a Job](http://msdn.microsoft.com/library/f626390a-a3df-4970-b7a7-a0529e4a109c).  
+10. Para criar uma agenda para uma etapa de trabalho, clique em **Agendas** no painel **Selecionar uma Página** . Para obter informações sobre como configurar uma agenda, consulte [Schedule a Job](../../ssms/agent/schedule-a-job.md).  
   
     > [!TIP]  
     >  Ao nomear a agenda, use um nome que seja exclusivo e descritivo para que você possa distinguir mais facilmente a agenda de outras agendas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  

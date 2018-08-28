@@ -16,12 +16,12 @@ caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 19844b1f626177e2a49144963f2f185565a86213
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: ce4f1a241959fcac09f6d8a41dad5a561e981ba3
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769912"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40412682"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services com grupos de disponibilidade AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ ms.locfileid: "34769912"
   
 -   **Modo do SharePoint:** Use as páginas de configuração do SharePoint dentro das bibliotecas de documentos para relatórios que já estão publicados em um servidor do SharePoint.  
   
--   **Design de relatórios:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion-md.md)] ou [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] quando você está criando novos relatórios. Consulte a seção 'Design de relatórios' neste tópico ou em mais informações.  
+-   **Design de relatórios:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] ou [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] quando você está criando novos relatórios. Consulte a seção 'Design de relatórios' neste tópico ou em mais informações.  
   
  **Recursos adicionais:**  
   
@@ -112,11 +112,11 @@ ms.locfileid: "34769912"
  Ao usar uma réplica secundária somente leitura como uma fonte de dados do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , é importante verificar se a latência de atualização de dados atende as necessidades dos usuários de relatório.  
   
 ##  <a name="bkmk_reportdesign"></a> Design de relatório e grupos de disponibilidade  
- Ao criar relatórios no [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion-md.md)] ou um projeto de relatório no [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], um usuário poderá configurar uma cadeia de conexão da fonte de dados de relatório para conter novas propriedades de conexão fornecidas pelo [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. O suporte para as novas propriedades de conexão depende de onde o usuário visualiza o relatório.  
+ Ao criar relatórios no [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] ou um projeto de relatório no [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], um usuário poderá configurar uma cadeia de conexão da fonte de dados de relatório para conter novas propriedades de conexão fornecidas pelo [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. O suporte para as novas propriedades de conexão depende de onde o usuário visualiza o relatório.  
   
--   **Visualização local:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion-md.md)] e o [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] usam o .NET Framework 4.0 e dão suporte às propriedades de cadeia de conexão do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .  
+-   **Visualização local:** [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)] e o [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] usam o .NET Framework 4.0 e dão suporte às propriedades de cadeia de conexão do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .  
   
--   **Visualização de modo remoto ou de servidor:** se, depois de publicar relatórios no servidor de relatório ou usar a visualização no [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion-md.md)], você vir um erro semelhante ao mostrado a seguir, isso será uma indicação de que você está visualizando relatórios no servidor de relatório e no Hotfix do .NET Framework 3.5 SP1 porque o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] não foi instalado no servidor de relatório.  
+-   **Visualização de modo remoto ou de servidor:** se, depois de publicar relatórios no servidor de relatório ou usar a visualização no [!INCLUDE[ssRBnoversion](../../../includes/ssrbnoversion.md)], você vir um erro semelhante ao mostrado a seguir, isso será uma indicação de que você está visualizando relatórios no servidor de relatório e no Hotfix do .NET Framework 3.5 SP1 porque o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] não foi instalado no servidor de relatório.  
   
 > **Mensagem de erro:** "Palavra-chave sem suporte 'applicationintent'"  
   
