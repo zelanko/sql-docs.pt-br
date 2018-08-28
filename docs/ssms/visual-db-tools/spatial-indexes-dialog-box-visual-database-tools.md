@@ -17,18 +17,18 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ef9e1bc117338fe66816b32634c188730caf4244
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: fd0d50155ff76ef5860913e071fc35350fb71f88
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981868"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776562"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>Caixa de diálogo Índices Espaciais (Ferramentas de Banco de Dados Visual)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Use a caixa de diálogo **Índices Espaciais** em colunas de tipo de dados de **geometria** ou **geografia** (*colunas espaciais*), que não podem ser indexadas usando a caixa de diálogo **Índice/Chaves** . Cada coluna espacial pode ter mais de um índice espacial, mas eles devem ser criados um de cada vez.  
   
-Para obter informações sobre restrições de criação de índices espaciais, consulte [Visão geral de índices espaciais](http://msdn.microsoft.com/b1ae7b78-182a-459e-ab28-f743e43f8293).  
+Para obter informações sobre restrições de criação de índices espaciais, consulte [Visão geral de índices espaciais](../../relational-databases/spatial/spatial-indexes-overview.md).  
   
 ## <a name="options"></a>Opções  
 **Índice Espacial Selecionado**  
@@ -122,5 +122,5 @@ Especifica se as novas estatísticas deverão ser recalculadas quando o índice 
 Especifica se o bloqueio de linha é permitido no índice. A permissão ou não dos bloqueios de linha afeta o desempenho do banco de dados.  
   
 ## <a name="see-also"></a>Consulte Também  
-[Visão geral de índices espaciais](http://msdn.microsoft.com/b1ae7b78-182a-459e-ab28-f743e43f8293)  
+[Visão geral de índices espaciais](../../relational-databases/spatial/spatial-indexes-overview.md)  
   

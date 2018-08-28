@@ -18,20 +18,20 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 275fb31571f9f57df40eb146b80b76e0c7dfd95b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7e42c55f9a6f1239ad035d12d6ac3c0a76049765
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33041353"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42776165"
 ---
 # <a name="change-the-default-location-for-projects"></a>Alterar o local padrão dos projetos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-O local padrão de arquivos e projetos é a pasta de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] Projects dentro da pasta Meus Documentos.  
+O local padrão de arquivos e projetos é a pasta de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Projects dentro da pasta Meus Documentos.  
   
 ### <a name="to-change-the-default-location-for-projects"></a>Para alterar o local padrão dos projetos  
   
-1.  Altere o local padrão abrindo ou salvando um arquivo ou projeto de outro local. [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] armazena o local do projeto previamente aberto e o utiliza na próxima vez que um projeto é aberto ou salvo.  
+1.  Altere o local padrão abrindo ou salvando um arquivo ou projeto de outro local. [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] armazena o local do projeto previamente aberto e o utiliza na próxima vez que um projeto é aberto ou salvo.  
   
 ## <a name="see-also"></a>Consulte Também  
 [Gerenciador de Soluções](../../ssms/solution/solution-explorer.md)  

@@ -21,16 +21,16 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5c74d4bd3ccb6770acfdadcbb6cf266890233e91
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 491efcd61e5143439ed9cd22d510f978af062c63
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981798"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42775789"
 ---
 # <a name="column-properties-visual-database-tools"></a>Propriedades de Coluna (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Existem dois conjuntos de propriedades para colunas: um conjunto completo que pode ser visualizado na guia **Propriedades da Coluna** no Designer de Tabela (disponível somente para bancos de dados do [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ) e um subconjunto que pode ser visualizado na janela Propriedades usando o Gerenciador de Servidores.  
+Existem dois conjuntos de propriedades para colunas: um conjunto completo que pode ser visualizado na guia **Propriedades da Coluna** no Designer de Tabela (disponível somente para bancos de dados do [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) e um subconjunto que pode ser visualizado na janela Propriedades usando o Gerenciador de Servidores.  
   
 > [!NOTE]  
 > As propriedades desse tópico são classificadas por categoria e não em ordem alfabética.  
@@ -42,7 +42,7 @@ Existem dois conjuntos de propriedades para colunas: um conjunto completo que po
 Essas propriedades aparecem na janela Propriedades quando você seleciona a coluna em Gerenciador de Servidores.  
   
 > [!NOTE]  
-> Essas propriedades, acessadas usando-se o Gerenciador de Servidores, são somente leitura. Para editar as propriedades da coluna para bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , selecione a coluna no Designer de Tabela. Essas propriedades são descritas mais adiante neste tópico.  
+> Essas propriedades, acessadas usando-se o Gerenciador de Servidores, são somente leitura. Para editar as propriedades da coluna para bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , selecione a coluna no Designer de Tabela. Essas propriedades são descritas mais adiante neste tópico.  
   
 **Categoria de identidade**  
 Expande para mostrar o **Nome** e propriedades de **Banco de dados** .  
@@ -60,13 +60,13 @@ Expande para mostrar as propriedades restantes.
 Mostra o tipo de dados da coluna selecionada. Para obter mais informações, consulte [Tipos de dados (Transact-SQL)](http://msdn.microsoft.com/a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4).  
   
 **Incremento de Identidade**  
-Mostra o incremento a ser adicionado à **Semente de Identidade** para cada linha seguinte da coluna de identidade. (Aplica-se somente ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].)  
+Mostra o incremento a ser adicionado à **Semente de Identidade** para cada linha seguinte da coluna de identidade. (Aplica-se somente ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
   
 **Semente de Identidade**  
-Mostra o valor da semente atribuído à primeira linha da tabela para a coluna de identidade. (Aplica-se somente ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].)  
+Mostra o valor da semente atribuído à primeira linha da tabela para a coluna de identidade. (Aplica-se somente ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
   
 **É Identidade**  
-Mostra se a coluna selecionada é a coluna de identidade para a tabela. (Aplica-se somente ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].)  
+Mostra se a coluna selecionada é a coluna de identidade para a tabela. (Aplica-se somente ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
   
 **Comprimento**  
 Mostra o número de caracteres permitido para tipos de dados com base em caractere.  
@@ -84,7 +84,7 @@ Mostra o número máximo de dígitos que podem aparecer à direita do ponto deci
 Para acessar essas propriedades, no Gerenciador de Servidores, clique com o botão direito do mouse na tabela à qual a coluna pertence, escolha **Abrir Definição de Tabela**e selecione a linha na grade de tabela em Designer de Tabela.  
   
 > [!NOTE]  
-> Essas propriedades só se aplicam a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+> Essas propriedades só se aplicam a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 **Categoria Geral**  
 Expande para mostrar **Nome**, **Permitir Nulos**, **Tipo de Dados**, **Valor Padrão ou Associação**, **Comprimento**, **Precisão**e **Escala**.  
@@ -185,11 +185,11 @@ Indica se os valores de identidade originais são preservados durante a replica�
 Mostra se essa coluna é replicada em outro local.  
   
 **É RowGuid**  
-Indica se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] usa a coluna como ROWGUID. Esse valor pode ser definido como **Sim** somente para uma coluna com o tipo de dados **uniqueidentifier**. Para editar essa propriedade, clique em seu valor, expanda a lista suspensa e escolha outro valor.  
+Indica se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa a coluna como ROWGUID. Esse valor pode ser definido como **Sim** somente para uma coluna com o tipo de dados **uniqueidentifier**. Para editar essa propriedade, clique em seu valor, expanda a lista suspensa e escolha outro valor.  
   
 **Tamanho**  
 Mostra o tamanho em bytes permitido pelo tipo de dados de coluna. Por exemplo, um tipo de dados **nchar** pode ter um comprimento de 10 (número de caracteres), mas teria um tamanho de 20 para conjuntos de caracteres de Unicode.  
   
 > [!NOTE]  
-> O comprimento de um tipo de dados **varchar(max)** varia para cada linha. sp_help retorna (-1) como o comprimento de colunas **varchar(max)** . [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] exibe -1 como o tamanho de coluna.  
+> O comprimento de um tipo de dados **varchar(max)** varia para cada linha. sp_help retorna (-1) como o comprimento de colunas **varchar(max)** . [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] exibe -1 como o tamanho de coluna.  
   

@@ -19,12 +19,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a81fc1d6a60bc4bbb1d9ef2f67c3f5c32f60dc7c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c6d7190bb75167f55a8cf5c741d46f7f0134f5bb
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33054963"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776178"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Passo a passo: Adicionando e alterando um diagrama de banco de dados
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ Este passo a passo ilustra como criar e modificar um diagrama de banco de dados 
 ## <a name="prerequisites"></a>Prerequisites  
 Para concluir este passo a passo, você precisará de:  
   
--   Acesso ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] com o banco de dados de exemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject_md.md)]  
+-   Acesso ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com o banco de dados de exemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]  
   
 -   Uma conta com privilégios **dbo** de proprietário de banco de dados  
   
@@ -46,7 +46,7 @@ Para concluir este passo a passo, você precisará de:
   
 1.  No menu **Exibir** , clique em **Pesquisador de Objetos**.  
   
-2.  Abra o nó Bancos de dados e abra o nó do [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject_md.md)] .  
+2.  Abra o nó Bancos de dados e abra o nó do [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 3.  Clique com o botão direito do mouse no nó Diagramas de Banco de Dados e escolha **Novo Diagrama de Banco de Dados**.  
   
@@ -217,7 +217,7 @@ Esse é um diagrama básico somente com duas tabelas existentes e duas tabelas n
 [Configurar o Designer de Diagramas de Banco de Dados &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)  
 [Adicionar tabelas a diagramas &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-tables-to-diagrams-visual-database-tools.md)  
 [Criar relações entre tabelas em um diagrama &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-relationships-between-tables-on-a-diagram-visual-database-tools.md)  
-[Criar índices XML](http://msdn.microsoft.com/en-us/6ecac598-355d-4408-baf7-1b2e8d4cf7c1)  
+[Criar índices XML](../../relational-databases/xml/create-xml-indexes.md)  
 [Copiar uma imagem de um diagrama de banco de dados na área de transferência &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools.md)  
 [Trabalhar com layout de diagrama &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-diagram-layout-visual-database-tools.md)  
   

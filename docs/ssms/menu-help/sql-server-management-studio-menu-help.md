@@ -18,16 +18,16 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 984c38131f47c47a7670430d283a0b521dcc0faa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9f18e4f5113958850a90fc7f8ac185bb41f107c0
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33041404"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42776168"
 ---
 # <a name="sql-server-management-studio-menu-help"></a>Ajuda do menu do SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Essa seção contém Ajuda F1 para as caixas de diálogo e páginas disponíveis na barra de menus do [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)].  
+Essa seção contém Ajuda F1 para as caixas de diálogo e páginas disponíveis na barra de menus do [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 [Sobre o SQL Server Management Studio](../../ssms/menu-help/about-sql-server-management-studio.md)  
   

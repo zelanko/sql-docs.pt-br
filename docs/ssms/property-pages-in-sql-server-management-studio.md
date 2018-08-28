@@ -17,20 +17,20 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 350043c219ea1a35d681da8bd4718a54376430f7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d18cc0c4c6ef5e13f5a26100d139af14954cfe7a
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33042793"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42776551"
 ---
 # <a name="property-pages-in-sql-server-management-studio"></a>Páginas de propriedades no SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-As caixas de diálogo de página de propriedades no [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] usam um formato comum que exibe informações com categorias que podem ser expandidas e recolhidas. Os campos mostrados dependem da propriedade em particular. As propriedades mostradas em cinza são somente leitura. Os botões Categorizado e Alfabético estão na parte superior de cada página de propriedades.  
+As caixas de diálogo de página de propriedades no [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] usam um formato comum que exibe informações com categorias que podem ser expandidas e recolhidas. Os campos mostrados dependem da propriedade em particular. As propriedades mostradas em cinza são somente leitura. Os botões Categorizado e Alfabético estão na parte superior de cada página de propriedades.  
   
-A tabela a seguir descreve os elementos comuns das caixas de diálogo das páginas de propriedades do [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] .  
+A tabela a seguir descreve os elementos comuns das caixas de diálogo das páginas de propriedades do [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] .  
   
-|Elemento|Description|  
+|Elemento|Descrição|  
 |-----------|---------------|  
 |**Categorizado**|Relaciona todas as propriedades e valores de propriedade do objeto selecionado, classificado por categoria. Em uma exibição por categoria, você pode recolher uma categoria para reduzir o número de propriedades visíveis. Quando você expande ou recolhe uma categoria, você vê um sinal de mais (+) ou menos (-) à esquerda do nome da categoria. As categorias são listadas em ordem alfabética.|  
 |**Alfabético**|Relaciona todas as propriedades e valores de propriedade do objeto selecionado, classificado por ordem alfabética.|  

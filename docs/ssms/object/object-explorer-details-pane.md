@@ -23,24 +23,24 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eb6cb14124589796e0e1a8e31f437b4eb7d6c383
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: f75fac8ec104d32b84383b4303c3a9d3de1d53b8
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984008"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776564"
 ---
 # <a name="object-explorer-details-pane"></a>Painel Detalhes do Pesquisador de Objetos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Detalhes do Pesquisador de Objetos, um componente do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], fornece uma exibição tabular de todos os objetos no servidor e apresenta uma interface de usuário para gerenciá-los. Os recursos do Pesquisador de Objetos variam ligeiramente, dependendo do tipo de servidor, mas normalmente incluem recursos de desenvolvimento de bancos de dados e recursos de gerenciamento para todos os tipos de servidor.  
+Detalhes do Pesquisador de Objetos, um componente do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], fornece uma exibição tabular de todos os objetos no servidor e apresenta uma interface de usuário para gerenciá-los. Os recursos do Pesquisador de Objetos variam ligeiramente, dependendo do tipo de servidor, mas normalmente incluem recursos de desenvolvimento de bancos de dados e recursos de gerenciamento para todos os tipos de servidor.  
   
-Por padrão, o painel Detalhes do Pesquisador de Objetos está visível no [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] . Se não for possível ver o Pesquisador de Objetos, no menu **Exibir** , clique em **Detalhes do Pesquisador de Objetos** ou pressione **F7**.  
+Por padrão, o painel Detalhes do Pesquisador de Objetos está visível no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . Se não for possível ver o Pesquisador de Objetos, no menu **Exibir** , clique em **Detalhes do Pesquisador de Objetos** ou pressione **F7**.  
   
 > [!NOTE]  
-> [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] exibe datas formatadas com as Opções Regionais e de Idiomas do Microsoft Windows em vigor quando o [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] foi iniciado. Reinicie o [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] para refletir as configurações mais novas.  
+> [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] exibe datas formatadas com as Opções Regionais e de Idiomas do Microsoft Windows em vigor quando o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] foi iniciado. Reinicie o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para refletir as configurações mais novas.  
   
 ## <a name="object-explorer-details"></a>Detalhes do Pesquisador de Objetos  
-Detalhes do Pesquisador de Objetos pode ser usado para navegar por pastas e objetos em sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . Em sistemas operacionais de 32 bits, o Pesquisador de Objetos pode exibir apenas 64.000 objetos. Deve ser selecionado um ícone para acessar objetos adicionais.  
+Detalhes do Pesquisador de Objetos pode ser usado para navegar por pastas e objetos em sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Em sistemas operacionais de 32 bits, o Pesquisador de Objetos pode exibir apenas 64.000 objetos. Deve ser selecionado um ícone para acessar objetos adicionais.  
   
 Detalhes do Pesquisador de Objetos inclui uma barra de ferramentas que contém os ícones descritos na tabela a seguir. Os ícones estão disponíveis apenas quando apropriado.  
   
@@ -55,13 +55,13 @@ Detalhes do Pesquisador de Objetos inclui uma barra de ferramentas que contém o
 |**Pesquisa**|Fornece uma área para inserir um termo de pesquisa para objetos de banco de dados específicos.|  
   
 ### <a name="column-header-selections"></a>Seleções de cabeçalho de coluna  
-Detalhes do Pesquisador de Objetos possui colunas selecionáveis. Você pode clicar com o botão direito do mouse em qualquer cabeçalho de coluna e pode verificar os itens que deseja exibir. Suas seleções serão persistentes entre os diferentes objetos pelos quais você navega. As seleções de cada usuário são preservadas quando você sai do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]e o reinicia.  
+Detalhes do Pesquisador de Objetos possui colunas selecionáveis. Você pode clicar com o botão direito do mouse em qualquer cabeçalho de coluna e pode verificar os itens que deseja exibir. Suas seleções serão persistentes entre os diferentes objetos pelos quais você navega. As seleções de cada usuário são preservadas quando você sai do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]e o reinicia.  
   
 > [!CAUTION]  
 > A exibição de todas as colunas de alguns tipos de objeto (por exemplo, Bancos de Dados) pode tornar a renderização de vídeo um pouco mais lenta para grandes conjuntos de objetos.  
   
 ### <a name="sorting"></a>Classificação  
-Clique uma vez em um cabeçalho de coluna para classificar por essa coluna. Clique novamente no mesmo cabeçalho para classificar a coluna na ordem inversa. As seleções de classificação são mantidas para cada usuário em objetos e pastas e ao reiniciar o [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] .  
+Clique uma vez em um cabeçalho de coluna para classificar por essa coluna. Clique novamente no mesmo cabeçalho para classificar a coluna na ordem inversa. As seleções de classificação são mantidas para cada usuário em objetos e pastas e ao reiniciar o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] .  
   
 ### <a name="filtering"></a>Filtragem  
 Determinadas listas de objetos exibidos em Detalhes do Pesquisador de Objetos podem ser filtradas usando o ícone **Filtro** na barra de ferramentas Detalhes do Pesquisador de Objetos. O ícone será habilitado quando a filtragem for possível.  
@@ -93,7 +93,7 @@ Detalhes do Pesquisador de Objetos dá suporte à seleção de vários objetos. 
 ## <a name="sql-server-object-search"></a>Pesquisa de objetos do SQL Server  
 Curingas  
   
--   Há suporte para os caracteres curinga padrão. Por exemplo, uma pesquisa por **dm_os%counters** retorna dm_os_memory_cache_counters e dm_os_performance_counters. Para obter mais informações, consulte [Como pesquisar com curingas](http://msdn.microsoft.com/449600f8-cc87-4b3f-878a-59c158a88a40).  
+-   Há suporte para os caracteres curinga padrão. Por exemplo, uma pesquisa por **dm_os%counters** retorna dm_os_memory_cache_counters e dm_os_performance_counters. Para obter mais informações, consulte [Como pesquisar com curingas](../../relational-databases/scripting/search-text-with-wildcards.md).  
   
 Escopo de pesquisa  
   

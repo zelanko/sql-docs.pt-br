@@ -18,21 +18,21 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6218358bced6d36056b33ce82720d53cbc32bdab
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 26d1e4734ae01e751a17c3a088c3e1a5e0f7af7e
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982488"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42775802"
 ---
 # <a name="options-environment---keyboard-page"></a>Opções (página Ambiente – Teclado)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-A caixa de diálogo **Opções** lhe permite personalizar o esquema de teclado no [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. Use essa opção para escolher um esquema de teclado. Para acessar essa página, clique em **Opções** no menu **Ferramentas** , selecione a pasta **Ambiente** e, então, clique em **Teclado**.  
+A caixa de diálogo **Opções** lhe permite personalizar o esquema de teclado no [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Use essa opção para escolher um esquema de teclado. Para acessar essa página, clique em **Opções** no menu **Ferramentas** , selecione a pasta **Ambiente** e, então, clique em **Teclado**.  
   
-A lista suspensa **Esquema de teclado** fornece as coleções disponíveis de teclas de atalho. Para carregar um esquema específico, selecione-o na lista. Quando estiver pronto para sair da caixa de diálogo **Opções** , clique em **OK**. Seu esquema selecionado será carregado no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
+A lista suspensa **Esquema de teclado** fornece as coleções disponíveis de teclas de atalho. Para carregar um esquema específico, selecione-o na lista. Quando estiver pronto para sair da caixa de diálogo **Opções** , clique em **OK**. Seu esquema selecionado será carregado no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 **Standard**  
-O esquema Padrão é o padrão no [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e se assemelha muito às teclas de atalho do [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio.  
+O esquema Padrão é o padrão no [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e se assemelha muito às teclas de atalho do [!INCLUDE[msCoName](../../includes/msconame_md.md)] Visual Studio.  
   
 Use a grade **Atalhos de consulta** para associar um procedimento armazenado a um atalho do teclado.  
   
@@ -42,5 +42,5 @@ A combinação de teclado pressionada para executar o procedimento armazenado.
 **Procedimento armazenado**  
 O procedimento armazenado é executado ao se pressionar o atalho do teclado.  
   
-Para uma lista de teclas de atalho do teclado em cada esquema, consulte [Atalhos de teclado do SQL Server Management Studio](http://msdn.microsoft.com/98baaac4-0727-4ce4-8bfe-c63793ae69b8).  
+Para uma lista de teclas de atalho do teclado em cada esquema, consulte [Atalhos de teclado do SQL Server Management Studio](../sql-server-management-studio-keyboard-shortcuts.md).  
   

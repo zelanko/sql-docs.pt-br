@@ -20,12 +20,12 @@ caps.latest.revision: 77
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0890c77c50af48ce34cdcb21cf7784ae69616a52
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 89eb39275b25147ca062c7b4e05ac3f4fae78967
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34772032"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776565"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>Criar um novo cluster de failover do SQL Server (instalação)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -125,7 +125,7 @@ ms.locfileid: "34772032"
   
 10. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] executa mais um conjunto de regras baseadas nos recursos selecionados para validar a configuração.  
   
-11. Na página Configuração da Instância, especifique se deseja instalar uma instância padrão ou uma instância nomeada. Para obter mais informações, consulte [Instance Configuration](http://msdn.microsoft.com/library/5bf822fc-6dec-4806-a153-e200af28e9a5).  
+11. Na página Configuração da Instância, especifique se deseja instalar uma instância padrão ou uma instância nomeada. Para obter mais informações, consulte [Instance Configuration](../../install/instance-configuration.md).  
   
      **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Nome da Rede** — Especifique um nome de rede para o novo cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Esse é nome usado para identificar a instância de cluster de failover na rede.  
   

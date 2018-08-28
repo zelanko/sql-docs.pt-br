@@ -19,16 +19,16 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 96e5484ed59b0852f0099602b5a4e3ff359d1b6f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 95fd70beb5892cdffae5f2223deb1eace2ca8705
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33042383"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42776050"
 ---
 # <a name="remove-or-delete-an-item-or-project"></a>Remover ou excluir um item ou projeto
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Os itens de projeto do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] são consultas, conexões e arquivos diversos. Você pode remover consultas de projeto e arquivos diversos de sua solução sem apagar os arquivos do armazenamento. Remova um projeto ou item quando não for útil na solução atual, mas que você deseja incluí-lo em outra solução.  
+Os itens de projeto do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] são consultas, conexões e arquivos diversos. Você pode remover consultas de projeto e arquivos diversos de sua solução sem apagar os arquivos do armazenamento. Remova um projeto ou item quando não for útil na solução atual, mas que você deseja incluí-lo em outra solução.  
   
 ### <a name="to-remove-a-project-item"></a>Para remover um item de projeto  
   
@@ -48,7 +48,7 @@ Um item removido continua existindo no sistema de arquivos. Desta forma, você p
   
 3.  Na caixa de diálogo de confirmação, clique em **OK**para remover o projeto da solução.  
   
-Você pode excluir um projeto permanentemente, mas primeiro é necessário remover qualquer referência ao projeto das soluções do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] e depois usar o [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Explorer para excluir os arquivos associados permanentemente do armazenamento.  
+Você pode excluir um projeto permanentemente, mas primeiro é necessário remover qualquer referência ao projeto das soluções do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e depois usar o [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Explorer para excluir os arquivos associados permanentemente do armazenamento.  
   
 #### <a name="to-delete-a-project"></a>Para excluir um projeto  
   

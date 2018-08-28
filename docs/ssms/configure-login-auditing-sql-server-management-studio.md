@@ -19,16 +19,16 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f2adb4b06480baf0411f8564a2de4815624cf470
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 341344db9bd0e33d044ab9746bc89c8a7d648837
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33040053"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42776304"
 ---
 # <a name="configure-login-auditing-sql-server-management-studio"></a>Configurar auditoria de logon (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Este tópico descreve como configurar a auditoria de logon no [!INCLUDE[ssCurrent](../includes/sscurrent_md.md)] para monitorar atividade de logon do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion_md.md)]. A auditoria de logon pode ser configurada de modo a gravar registros no log de erros ao ocorrerem os eventos abaixo.  
+Este tópico descreve como configurar a auditoria de logon no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] para monitorar atividade de logon do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion_md.md)]. A auditoria de logon pode ser configurada de modo a gravar registros no log de erros ao ocorrerem os eventos abaixo.  
   
 -   Logons com falha  
   
@@ -36,13 +36,13 @@ Este tópico descreve como configurar a auditoria de logon no [!INCLUDE[ssCurren
   
 -   Logons com falha e bem sucedidos  
   
-Você deve reinicializar o [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] para que esta opção entre em vigor.  
+Você deve reinicializar o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para que esta opção entre em vigor.  
   
 ## <a name="SSMSProcedure"></a>Usando o SQL Server Management Studio  
   
 #### <a name="to-configure-login-auditing"></a>Para configurar a auditoria de logon  
   
-1.  No [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)], conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion_md.md)] com o Pesquisador de Objetos.  
+1.  No [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], conecte-se a uma instância do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion_md.md)] com o Pesquisador de Objetos.  
   
 2.  No Pesquisador de Objetos, clique com o botão direito do mouse no nome do servidor e clique em **Propriedades**.  
   

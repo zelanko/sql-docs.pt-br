@@ -19,12 +19,12 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1947ca3301de74d1837633047a86dcf4460bfdaa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aa285718d089457b70543fbd4d060c3a51ab3c9f
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33043793"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776072"
 ---
 # <a name="open-with-new-file"></a>Abrir com (Novo Arquivo)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,11 +44,11 @@ Clique neste botão para adicionar um programa à lista sob **Selecionar um prog
 Para remover um programa, selecione o programa e, depois, clique em **Remover**.  
   
 **Definir como Padrão**  
-Para especificar um editor padrão (e opções de codificação de linguagem, se aplicável) para o tipo de arquivo selecionado, escolha um programa da lista sob **Selecionar um programa para abrir** e, depois, clique em **Definir como Padrão**. Na próxima vez em que você abrir esse tipo de arquivo no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], o documento será aberto no novo editor padrão.  
+Para especificar um editor padrão (e opções de codificação de linguagem, se aplicável) para o tipo de arquivo selecionado, escolha um programa da lista sob **Selecionar um programa para abrir** e, depois, clique em **Definir como Padrão**. Na próxima vez em que você abrir esse tipo de arquivo no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o documento será aberto no novo editor padrão.  
   
 > [!NOTE]  
 > Na lista de programas sob **Selecionar um programa para abrir**, o nome do editor padrão para o tipo de arquivo selecionado é seguido por **(Padrão)**.  
   
 ## <a name="see-also"></a>Consulte Também  
-[Como associar extensões de arquivo a um Editor de Códigos](http://msdn.microsoft.com/en-us/193630f4-93de-4950-8f36-68702531f925)  
+[Como associar extensões de arquivo a um Editor de Códigos](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  
   
