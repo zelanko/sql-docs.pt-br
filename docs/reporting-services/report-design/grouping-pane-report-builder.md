@@ -1,7 +1,7 @@
 ---
 title: Painel Agrupamento (Construtor de Relatórios) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/07/2017
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -19,12 +19,12 @@ caps.latest.revision: 16
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b2c7dcafacac12207e98931cf12f5b6e59bc8536
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c9fc7f5f5caab253bf0a38aa17d9d7db0d878fd1
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33024563"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40405623"
 ---
 # <a name="grouping-pane-report-builder"></a>Painel Agrupamento (Construtor de Relatórios)
   O painel Agrupamento exibe os grupos de linhas e de colunas referentes à região de dados Tablix selecionada no momento. O painel Agrupamento não está disponível para as regiões de dados Gráfico e Medidor. O painel Agrupamento contém os painéis Grupos de Linhas e Grupos de Colunas. Ele tem dois modos: padrão e Avançado. O modo padrão exibe uma exibição hierárquica dos membros dinâmicos dos grupos de linhas e de colunas. O modo Avançado exibe os membros dinâmicos e estáticos dos grupos de linhas e de colunas. Um grupo é um conjunto nomeado de dados de um conjunto de dados de relatório exibido em uma região de dados. Os grupos são organizados em hierarquias que incluem membros estáticos e dinâmicos. Para obter mais informações, consulte [Compreendendo grupos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  
@@ -84,7 +84,6 @@ ms.locfileid: "33024563"
 -   **(Estático)** Indica um membro estático sem uma célula de cabeçalho, conhecido como estático oculto.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Ajuda do Construtor de Relatórios para caixas de diálogo, painéis e assistentes](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)   
  [Filtrar, agrupar e classificar dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Tabelas, matrizes e listas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   

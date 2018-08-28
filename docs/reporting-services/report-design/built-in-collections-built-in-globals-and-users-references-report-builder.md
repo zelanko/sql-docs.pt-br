@@ -1,7 +1,7 @@
 ---
 title: Referências de globais internas e referências de usuários (Construtor de Relatórios e SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -15,12 +15,12 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 55074e9c10cbe8b5afb3e94533c37befb892416a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8f5e0a3a9876af054da4e868ec809609effc117c
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022063"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40405381"
 ---
 # <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>Referências de globais internas e referências de usuários (Construtor de Relatórios)
   A coleção de campos internos que inclui as coleções **Globals** e **User** representa valores globais fornecidos pelo Reporting Services quando um relatório é processado. A coleção de **Globals** fornece valores, como o nome do relatório, a hora em que o seu processamento foi iniciado e os números das páginas atuais para o cabeçalho ou o rodapé do relatório. A coleção de **User** fornece o identificador de usuário e configurações de idioma. Esses valores podem ser usados em expressões para filtrar resultados em um relatório.  
@@ -49,7 +49,7 @@ ms.locfileid: "33022063"
 ### <a name="renderformat"></a>RenderFormat  
  A tabela a seguir descreve os membros de **RenderFormat**.  
   
-|Membro|Tipo|Description|  
+|Membro|Tipo|Descrição|  
 |------------|----------|-----------------|  
 |Nome|**String**|O nome do renderizador conforme registrado no arquivo de configuração RSReportServer.<br /><br /> Disponível durante partes específicas do ciclo de processamento/renderização do relatório.|  
 |IsInteractive|**Booliano**|Se a solicitação de renderização atual usa um formato de renderização interativo.|  
@@ -81,9 +81,7 @@ ms.locfileid: "33022063"
 |----------------|--------------|---------------------|  
 |**Idioma**|**Cadeia de caracteres**|O idioma do usuário que está executando o relatório. Por exemplo, `en-US`.|  
 |**UserID**|**String**|A ID do usuário que está executando o relatório. Se a Autenticação do Windows estiver sendo usada, esse valor será a conta de domínio do usuário atual. O valor é determinado pela extensão de segurança do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que pode usar a Autenticação do Windows ou a autenticação personalizada.|  
-  
- Para obter mais informações sobre como oferecer suporte a diversos idiomas em um relatório, consulte "Solution Design Considerations for Multi-Lingual or Global Deployments" (Considerações sobre design de solução para implantações globais ou em vários idiomas) na documentação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nos [Manuais Online do SQL Server](http://go.microsoft.com/fwlink/?LinkId=120955).  
-  
+ 
 ### <a name="using-locale-settings"></a>Usando configurações de localidade  
  É possível usar expressões para se fazer referência a configurações de localidade em um computador cliente por meio do valor de **User.Language** para determinar como um relatório é exibido para o usuário. Por exemplo, você pode criar um relatório que usa uma expressão de consulta diferente baseada no valor da localidade. A consulta pode se alterada para recuperar informações localizadas de uma coluna diferente dependendo do idioma retornado. Também é possível usar uma expressão nas configurações do idioma do relatório ou de itens de relatório baseados nessa variável.  
   

@@ -23,16 +23,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 0480ac34db87ee4dca4675998946c60e28667586
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: f8ff9ce3660da3c2586eee9c7f71d905a4730457
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39559236"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405620"
 ---
 # <a name="execute-a-stored-procedure"></a>Executar um procedimento armazenado
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
- > Para ver o conteúdo relacionado a versões anteriores do SQL Server, consulte [Executar um procedimento armazenado](https://msdn.microsoft.com/library/ms189915(SQL.120).aspx).
+ > Para ver o conteúdo relacionado a versões anteriores do SQL Server, consulte [Executar um procedimento armazenado](execute-a-stored-procedure.md).
 
   Este tópico descreve como executar um procedimento armazenado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   

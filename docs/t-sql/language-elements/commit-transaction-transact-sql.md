@@ -33,15 +33,15 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 65e2a3aab16232dfefdb6429c690da2712ab4b5e
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 160cbd30e83395fef3d21954782512e449dbea44
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39453273"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405259"
 ---
 # <a name="commit-transaction-transact-sql"></a>COMMIT TRANSACTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Marca o término de uma transação implícita ou explícita bem-sucedida. Se @@TRANCOUNT for 1, COMMIT TRANSACTION fará com que todas as modificações de dados executadas desde o início da transação sejam uma parte permanente do banco de dados, liberará os recursos mantidos pela transação e decrementará @@TRANCOUNT para 0. Se @@TRANCOUNT for maior que 1, COMMIT TRANSACTION decrementará @@TRANCOUNT somente em 1 e a transação permanecerá ativa.  
   

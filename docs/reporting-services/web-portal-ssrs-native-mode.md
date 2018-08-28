@@ -15,12 +15,12 @@ caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 0c88c0e5710a85b8e29e3d0852ac608f5cfca30d
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: cd0de35d2bf5b18e1ccb9cdeadd8198f522c4135
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38018061"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40405264"
 ---
 # <a name="web-portal-ssrs-native-mode"></a>Portal da Web (Modo Nativo do SSRS)
 
@@ -61,7 +61,7 @@ Você pode usar o portal da Web para navegar pelas pastas do servidor de relató
 
 O portal da Web é usado apenas para um servidor de relatório executado no modo nativo. Ele não possui suporte para um servidor de relatório configurado no modo integrado do SharePoint.
 
-Alguns recursos do portal da Web só estão disponíveis em edições específicas do [!INCLUDE[ssNoVersion](../includes/ssnoversion.md)]. Para obter mais informações, consulte [Recursos do Reporting Services compatíveis com as Edições do SQL Server 2016](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).
+Alguns recursos do portal da Web só estão disponíveis em edições específicas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Recursos do Reporting Services compatíveis com as Edições do SQL Server 2016](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).
 
 Em uma nova instalação, somente os administradores locais têm permissões suficientes para trabalhar com o conteúdo e as configurações. Para conceder permissões a outros usuários, o administrador local deve criar atribuições de função que fornecem acesso ao servidor de relatório. As páginas de aplicativo e as tarefas que um usuário pode acessar posteriormente dependem das atribuições de função do usuário em questão. Para obter mais informações, consulte [Conceder acesso ao usuário a um servidor de relatório](security/grant-user-access-to-a-report-server-report-manager.md)
 

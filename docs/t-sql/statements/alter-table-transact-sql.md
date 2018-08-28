@@ -63,12 +63,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: f6855a5f92cd6f8b25d3a7ea9ecf4f4d05e7a015
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: b3d3f48fedf04980a8dff9acad2f381e5cbfcd0f
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452740"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405610"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -630,13 +630,13 @@ Especifica que uma ou mais definições de coluna, definições de coluna comput
 > Sem o uso de uma instrução ALTER TABLE, as instruções CREATE INDEX, DROP INDEX e ALTER INDEX não têm suporte para índices em tabelas com otimização de memória. 
   
 PERIOD FOR SYSTEM_TIME ( system_start_time_column_name, system_end_time_column_name )  
-**Aplica-se a**: [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Aplica-se a**: [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Especifica os nomes das colunas que o sistema usará para registrar o período para o qual um registro é válido. Você pode especificar colunas existentes ou criar novas colunas como parte do argumento ADD PERIOD FOR SYSTEM_TIME. As colunas devem ter o datatype de datetime2 e ser definidas como NOT NULL. Se uma coluna de período for definida como NULL, um erro será gerado. Você pode definir [column_constraint &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-table-column-constraint-transact-sql.md) e/ou [Especificar Valores Padrão para Colunas](../../relational-databases/tables/specify-default-values-for-columns.md) para as colunas system_start_time e system_end_time. Consulte o Exemplo A nos exemplos de [Controle de versão do sistema](#system_versioning) abaixo demonstrando o uso de um valor padrão para a coluna system_end_time.  
   
  Use esse argumento junto com o argumento SET SYSTEM_VERSIONING para habilitar o controle de versão do sistema em uma tabela existente. Para obter mais informações, veja [Tabelas temporais](../../relational-databases/tables/temporal-tables.md) e [Introdução às tabelas temporais no Banco de Dados SQL do Azure](https://azure.microsoft.com/documentation/articles/sql-database-temporal-tables/).  
   
- Do [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)] em diante, os usuários poderão marcar uma ou ambas as colunas de período com o sinalizador **HIDDEN** para implicitamente ocultar essas colunas, de modo que **SELECT \* FROM***\<table>* não retorne um valor para essas colunas. Por padrão, as colunas de período não ficam ocultas. Para serem usadas, colunas ocultas devem ser explicitamente incluídas em todas as consultas que fazem referência direta à tabela temporal.  
+ Do [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] em diante, os usuários poderão marcar uma ou ambas as colunas de período com o sinalizador **HIDDEN** para implicitamente ocultar essas colunas, de modo que **SELECT \* FROM***\<table>* não retorne um valor para essas colunas. Por padrão, as colunas de período não ficam ocultas. Para serem usadas, colunas ocultas devem ser explicitamente incluídas em todas as consultas que fazem referência direta à tabela temporal.  
   
 DROP  
 Especifica que uma ou mais definições de coluna, definições de coluna computada ou restrições de tabela são removidas, ou remover a especificação das colunas que o sistema usará para controle de versão do sistema.  

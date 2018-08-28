@@ -36,12 +36,12 @@ caps.latest.revision: 56
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bbc182e6fc9298a262fe4efb9560fb5c0cc67109
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 61c911806f15dd6472299ff0f1f2531bddf3b0c6
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32957431"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405501"
 ---
 # <a name="use-sql-server-objects"></a>Usar objetos do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "32957431"
 ##  <a name="SQLServerAgentPOs"></a> Objetos de desempenho do SQL Server Agent  
  A seguinte tabela lista os objetos de desempenho oferecidos para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent:  
   
-|Objeto de desempenho|Description|  
+|Objeto de desempenho|Descrição|  
 |------------------------|-----------------|  
 |[SQLAgent:Alerts](../../relational-databases/performance-monitor/sql-server-agent-alerts-object.md)|Fornece informações sobre alertas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|  
 |[SQLAgent:Jobs](../../relational-databases/performance-monitor/sql-server-agent-jobs-object.md)|Fornece informações sobre trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|  
@@ -87,7 +87,7 @@ ms.locfileid: "32957431"
 ##  <a name="ServiceBrokerPOs"></a> Objetos de desempenho do Service Broker  
  A tabela a seguir lista os objetos de desempenho oferecidos para o [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
   
-|Objeto de desempenho|Description|  
+|Objeto de desempenho|Descrição|  
 |------------------------|-----------------|  
 |[SQLServer:Broker Activation](../../relational-databases/performance-monitor/sql-server-broker-activation-object.md)|Fornece informações sobre tarefas ativadas pelo [!INCLUDE[ssSB](../../includes/sssb-md.md)].|  
 |[SQLServer:Broker Statistics](../../relational-databases/performance-monitor/sql-server-broker-statistics-object.md)|Fornece informações gerais sobre o [!INCLUDE[ssSB](../../includes/sssb-md.md)] .|  
@@ -96,7 +96,7 @@ ms.locfileid: "32957431"
 ##  <a name="SQLServerPOs"></a> Objetos de desempenho do SQL Server  
  A tabela a seguir descreve objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-|Objeto de desempenho|Description|  
+|Objeto de desempenho|Descrição|  
 |------------------------|-----------------|  
 |[SQLServer:Métodos de Acesso](../../relational-databases/performance-monitor/sql-server-access-methods-object.md)|Pesquisa e mede a alocação de objetos de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por exemplo, o número de pesquisas de índice ou número de páginas alocadas para índices e dados).|  
 |[SQLServer:Backup Device](../../relational-databases/performance-monitor/sql-server-backup-device-object.md)|Fornece informações sobre dispositivos de backup usados para operações de backup e restauração, como a taxa de transferência do dispositivo backup.|  
@@ -135,7 +135,7 @@ ms.locfileid: "32957431"
 ##  <a name="SQLServerReplicationPOs"></a> Objetos de desempenho de replicação do SQL Server  
  A seguinte tabela lista os objetos de desempenho fornecidos para replicação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
-|Objeto de desempenho|Description|  
+|Objeto de desempenho|Descrição|  
 |------------------------|-----------------|  
 |**SQLServer:Replication Agents**<br /><br /> **SQLServer:Replication Snapshot**<br /><br /> **SQLServer:Replication Logreader**<br /><br /> **SQLServer:Replication Dist.**<br /><br /> **SQLServer:Replication Merge**<br /><br /> Para obter mais informações, consulte [Monitoring Replication with System Monitor](../../relational-databases/replication/monitor/monitoring-replication-with-system-monitor.md).|Fornece informações sobre a atividade do agente de replicação.|  
   
@@ -146,7 +146,7 @@ ms.locfileid: "32957431"
  O uso dos objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] depende de permissões do Windows, exceto no caso de **SQLAgent:Alerts**. Os usuários devem ser membros da função de servidor fixa **sysadmin** para poderem usar **SQLAgent:Alerts**.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Usar objetos de desempenho](http://msdn.microsoft.com/library/830b843a-6b2a-4620-a51b-98358e9fc54b)   
+ [Usar objetos de desempenho](../../ssms/agent/use-performance-objects.md)   
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)  
   
   

@@ -29,15 +29,15 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 3e8d62851d7adda1f4b6c7f28d465ab5d126068d
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 9bfc6d785c1cae40da1c6d90306543f77ed0bc4e
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39453140"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405145"
 ---
 # <a name="rollback-transaction-transact-sql"></a>ROLLBACK TRANSACTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Reverte uma transação explícita ou implícita ao começo da transação ou a um ponto de salvamento dentro da transação. Você pode usar ROLLBACK TRANSACTION para apagar todas as modificações de dados feitas desde o começo da transação ou até um ponto de salvamento. Ela também libera recursos mantidos pela transação.  
   

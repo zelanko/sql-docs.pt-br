@@ -20,12 +20,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 15143529b02c1cd51219073bdb953231bbbcc42f
-ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
+ms.openlocfilehash: d214a7cbc835bb9fa3401ea3268027547cd752f3
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40008888"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405494"
 ---
 # <a name="memory-management-architecture-guide"></a>guia de arquitetura de gerenciamento de memória
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "40008888"
 ## <a name="windows-virtual-memory-manager"></a>Gerenciador de Memória Virtual do Windows  
 As regiões confirmadas de espaço de endereço são mapeadas para a memória física disponível pelo VMM (Gerenciador de Memória Virtual) do Windows.  
   
-Para obter mais informações sobre a quantidade de memória física compatível com sistemas operacionais diferentes, consulte a documentação do Windows sobre os [Limites de memória para versões do Windows](http://msdn.microsoft.com/library/windows/desktop/aa366778(v=vs.85).aspx).  
+Para obter mais informações sobre a quantidade de memória física compatível com sistemas operacionais diferentes, consulte a documentação do Windows sobre os [Limites de memória para versões do Windows](/windows/desktop/Memory/memory-limits-for-windows-releases).  
   
 Os sistemas de memória virtual permitem exceder o uso da memória física, de modo que a taxa entre memória física e virtual pode exceder 1:1. Como resultado, programas maiores podem ser executados em computadores com várias configurações de memória física. No entanto, usar significativamente mais memória virtual do que a média combinada de conjuntos de trabalho de todos os processos pode provocar desempenho inadequado. 
 

@@ -19,12 +19,12 @@ caps.latest.revision: 33
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0655653463bc48ad0de71799f2e521f10e5c13b7
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 7c8bb8f52eac86a0439185b77cb175d990d659a5
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769022"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40405611"
 ---
 # <a name="configure-availability-group-for-distributed-transactions"></a>Configurar um grupo de disponibilidade para transações distribuídas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,13 +40,13 @@ Para garantir as transações distribuídas, o grupo de disponibilidade deve ser
 
 Em uma transação distribuída, aplicativos cliente funcionam com o MS DTC (Coordenador de Transações Distribuídas da Microsoft) ou DTC para garantir a consistência transacional entre várias fontes de dados. O DTC é um serviço disponível em sistemas operacionais com suporte baseados no Windows Server. Para uma transação distribuída, o DTC é o *coordenador de transações*. Normalmente, uma instância do SQL Server é o *gerenciador de recursos*. Quando um banco de dados está em um grupo de disponibilidade, cada banco de dados precisa ser seu próprio gerenciador de recursos. 
 
-O [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] não impede transações distribuídas para bancos de dados em um grupo de disponibilidade – mesmo quando o grupo de disponibilidade não está configurado para transações distribuídas. No entanto, quando um grupo de disponibilidade não está configurado para transações distribuídas, o failover pode não ser bem-sucedido em algumas situações. Especificamente, a instância do [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] da nova réplica primária pode não conseguir obter o resultado da transação do DTC. Para permitir que a instância do [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] obtenha o resultado de transações incertas do DTC após o failover, configure o grupo de disponibilidade para transações distribuídas. 
+O [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] não impede transações distribuídas para bancos de dados em um grupo de disponibilidade – mesmo quando o grupo de disponibilidade não está configurado para transações distribuídas. No entanto, quando um grupo de disponibilidade não está configurado para transações distribuídas, o failover pode não ser bem-sucedido em algumas situações. Especificamente, a instância do [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] da nova réplica primária pode não conseguir obter o resultado da transação do DTC. Para permitir que a instância do [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] obtenha o resultado de transações incertas do DTC após o failover, configure o grupo de disponibilidade para transações distribuídas. 
 
 ## <a name="prerequisites"></a>Prerequisites
 
 Antes de configurar um grupo de disponibilidade para dar suporte a transações distribuídas, você deve atender aos seguintes pré-requisitos:
 
-* Todas as instâncias do [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] que fazem parte da transação distribuída devem ser o [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] ou posterior.
+* Todas as instâncias do [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] que fazem parte da transação distribuída devem ser o [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] ou posterior.
 
 * Os grupos de disponibilidade devem estar em execuçaõ no Windows Server 2016 ou Windows Server 2012 R2. Para o Windows Server 2012 R2, é necessário instalar a atualização na KB3090973 disponível em [https://support.microsoft.com/en-us/kb/3090973](https://support.microsoft.com/en-us/kb/3090973).  
 
@@ -94,7 +94,7 @@ ALTER AVAILABILITY GROUP MyaAG
 
 ## <a name="a-namedisttrandistributed-transactions---technical-concepts"></a><a name="distTran"/>Transações distribuídas – conceitos técnicos
 
-Uma transação distribuída abrange dois ou mais bancos de dados. Assim como o gerenciador de transação, o DTC coordena as transações entre as instâncias do SQL Server e outras fontes de dados. Cada instância do mecanismo de banco de dados do [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] pode funcionar como um gerenciador de recursos. Quando um grupo de disponibilidade é configurado com `DTC_SUPPORT = PER_DB`, os bancos de dados podem funcionar como gerenciadores de recursos. Para obter mais informações, consulte a documentação do MS DTC.
+Uma transação distribuída abrange dois ou mais bancos de dados. Assim como o gerenciador de transação, o DTC coordena as transações entre as instâncias do SQL Server e outras fontes de dados. Cada instância do mecanismo de banco de dados do [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] pode funcionar como um gerenciador de recursos. Quando um grupo de disponibilidade é configurado com `DTC_SUPPORT = PER_DB`, os bancos de dados podem funcionar como gerenciadores de recursos. Para obter mais informações, consulte a documentação do MS DTC.
 
 Uma transação com dois ou mais bancos de dados em uma única instância do mecanismo de banco de dados é, de fato, uma transação distribuída. A instância gerencia a transação distribuída internamente. Para o usuário, ela opera como uma transação local. O [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] promove todas as transações entre bancos de dados para o DTC quando os bancos de dados estão em um grupo de disponibilidade configurado com `DTC_SUPPORT = PER_DB` – mesmo em uma única instância do SQL Server. 
 
@@ -123,16 +123,16 @@ A lista a seguir explica como o aplicativo funciona com o DTC para concluir as t
 
 Cada entidade que faz parte de uma transação distribuída é chamada de gerenciador de recursos. Exemplos de gerenciadores de recursos incluem:
 
-* Uma instância [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)]. 
+* Uma instância [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)]. 
 * Um banco de dados em um grupo de disponibilidade que foi configurado para transações distribuídas.
 * Serviço DTC – também pode ser um gerenciador de transação.
 * Outras fontes de dados. 
 
-Para fazer parte de transações distribuídas, uma instância do [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] se inscreve com um DTC. Normalmente, a instância do [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] se inscreve com o DTC no servidor local. Cada instância do [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] cria um gerenciador de recursos com um RMID (identificador de gerenciador de recursos) exclusivo e registra-o no DTC. Na configuração padrão, todos os bancos de dados de uma instância do [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] usam o mesmo RMID. 
+Para fazer parte de transações distribuídas, uma instância do [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] se inscreve com um DTC. Normalmente, a instância do [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] se inscreve com o DTC no servidor local. Cada instância do [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] cria um gerenciador de recursos com um RMID (identificador de gerenciador de recursos) exclusivo e registra-o no DTC. Na configuração padrão, todos os bancos de dados de uma instância do [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] usam o mesmo RMID. 
 
-Quando um banco de dados está em um grupo de disponibilidade, a cópia de leitura/gravação do banco de dados – ou da réplica primária – pode ser movida para outra instância do [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)]. Para dar suporte a transações distribuídas durante essa movimentação, cada banco de dados deve agir como um gerenciador de recursos separado e ter um RMID exclusivo. Quando um grupo de disponibilidade tem `DTC_SUPPORT = PER_DB`, o [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] cria um gerenciador de recursos para cada banco de dados e registra-o no DTC usando um RMID exclusivo. Nessa configuração, o banco de dados é um gerenciador de recursos das transações do DTC.
+Quando um banco de dados está em um grupo de disponibilidade, a cópia de leitura/gravação do banco de dados – ou da réplica primária – pode ser movida para outra instância do [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)]. Para dar suporte a transações distribuídas durante essa movimentação, cada banco de dados deve agir como um gerenciador de recursos separado e ter um RMID exclusivo. Quando um grupo de disponibilidade tem `DTC_SUPPORT = PER_DB`, o [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] cria um gerenciador de recursos para cada banco de dados e registra-o no DTC usando um RMID exclusivo. Nessa configuração, o banco de dados é um gerenciador de recursos das transações do DTC.
 
-Para obter mais detalhes sobre transações distribuídas no [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)], consulte [Transações distribuídas](#distTran)
+Para obter mais detalhes sobre transações distribuídas no [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)], consulte [Transações distribuídas](#distTran)
 
 ## <a name="manage-unresolved-transactions"></a>Gerenciar transações não resolvidas
 
@@ -142,9 +142,9 @@ O resultado das transações ativas que existem durante a alteração do RMID n�
 * Adicione ou remova um banco de dados de um grupo de disponibilidade. 
 * Remova um grupo de disponibilidade.
 
-Nos casos anteriores, se a réplica primária fizer failover para uma nova instância do [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)], a instância tentará contatar o DTC para identificar o resultado da transação. O DTC não pode retornar o resultado porque o RMID usado pelo banco de dados para obter o resultado de transações incertas durante a recuperação não foi inscrito antes. Portanto, o banco de dados entra no estado SUSPECT.
+Nos casos anteriores, se a réplica primária fizer failover para uma nova instância do [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)], a instância tentará contatar o DTC para identificar o resultado da transação. O DTC não pode retornar o resultado porque o RMID usado pelo banco de dados para obter o resultado de transações incertas durante a recuperação não foi inscrito antes. Portanto, o banco de dados entra no estado SUSPECT.
 
-O novo log de erros do [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] tem uma entrada semelhante ao seguinte exemplo:
+O novo log de erros do [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] tem uma entrada semelhante ao seguinte exemplo:
 
 ```
 Microsoft Distributed Transaction Coordinator (MS DTC) 
@@ -158,7 +158,7 @@ SQL Server detected a DTC/KTM in-doubt transaction with UOW
 following the guideline for Troubleshooting DTC Transactions.
 ```
 
-O exemplo anterior mostra que o DTC não pôde inscrever novamente o banco de dados da nova réplica primária na transação criada após o failover. A instância do [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] não pode determinar o resultado da transação distribuída e, portanto, marca o banco de dados como suspeito. A transação é marcada como uma UOW (unidade de trabalho) e referenciada por um GUID. Para recuperar o banco de dados, confirme ou reverta a transação manualmente. 
+O exemplo anterior mostra que o DTC não pôde inscrever novamente o banco de dados da nova réplica primária na transação criada após o failover. A instância do [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] não pode determinar o resultado da transação distribuída e, portanto, marca o banco de dados como suspeito. A transação é marcada como uma UOW (unidade de trabalho) e referenciada por um GUID. Para recuperar o banco de dados, confirme ou reverta a transação manualmente. 
 
 >[!WARNING]
 >Ao confirmar ou reverter uma transação manualmente, isso poderá afetar um aplicativo. Verifique se a ação de confirmação ou reversão é consistente com seus requisitos de aplicativo. 

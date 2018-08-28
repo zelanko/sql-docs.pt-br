@@ -17,15 +17,15 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e2b42df295abda51349793a4db8697ab03cb3cd4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c77179704548ef164d61dae18bb311704247768c
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33036953"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405263"
 ---
 # <a name="tutorial-introducing-expressions"></a>Tutorial: Apresentando expressões
-Neste tutorial do [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] , você usa expressões com funções e operadores comuns para criar relatórios paginados do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] avançados e flexíveis. 
+Neste tutorial do [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] , você usa expressões com funções e operadores comuns para criar relatórios paginados do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] avançados e flexíveis. 
 
 Você escreverá expressões que concatenam valores de nome, pesquisará valores em um conjunto de dados separado, exibirá diferentes cores com base em valores de campo e assim por diante.  
   

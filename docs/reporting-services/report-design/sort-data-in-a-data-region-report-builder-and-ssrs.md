@@ -1,7 +1,7 @@
 ---
 title: Classificar dados em uma região de dados (Construtor de Relatórios e SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/03/2017
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -15,12 +15,12 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 642d8f6d08c21daa478bbc159b2fe71461ba0391
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: df797c994e76d7dd816cd041d3b59cb9d14af052
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33026993"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40405272"
 ---
 # <a name="sort-data-in-a-data-region-report-builder-and-ssrs"></a>Classificar dados em uma região de dados (Construtor de Relatórios e SSRS)
   Para alterar a ordem de classificação dos dados em uma região quando um relatório for executado pela primeira vez, defina a expressão de classificação na região de dados ou no grupo. Por padrão, a expressão de classificação de um grupo é definida automaticamente como o mesmo valor da expressão do grupo.  
@@ -131,7 +131,6 @@ ms.locfileid: "33026993"
  Para obter mais informações sobre como os dados são agrupados em um medidor, consulte [Medidores &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Ajuda do Construtor de Relatórios para caixas de diálogo, painéis e assistentes](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)   
  [Gráficos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Formatando rótulos dos eixos de um gráfico &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Especificar cores consistentes em gráficos com várias formas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md)  

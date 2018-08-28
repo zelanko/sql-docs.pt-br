@@ -23,12 +23,12 @@ caps.latest.revision: 44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6a2c7f7713bf003837b5808d10e52a9a6c251f2e
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 04725560e4a39903a9f0a9e1ca580443cdb7504e
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782587"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405740"
 ---
 # <a name="columnproperty-transact-sql"></a>COLUMNPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ Para o argumento *id*, o argumento *propriedade* especifica o tipo de informaç�
 |**IsCursorType**|O parâmetro de procedimento é do tipo CURSOR.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = entrada inválida.|  
 |**IsDeterministic**|A coluna é determinística. Essa propriedade só se aplica a colunas computadas e colunas de exibição.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = entrada inválida. Não é uma coluna computada nem uma coluna de exibição.|  
 |**IsFulltextIndexed**|A coluna está registrada para indexação de texto completo.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = entrada inválida.|  
-|**IsHidden**|O valor da coluna é gerado pelo sistema. Corresponde a **sys.columns.is_hidden**|**Aplica-se a**: do [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0: não oculto<br /><br /> 1: oculto|  
+|**IsHidden**|O valor da coluna é gerado pelo sistema. Corresponde a **sys.columns.is_hidden**|**Aplica-se a**: do [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 0: não oculto<br /><br /> 1: oculto|  
 |**IsIdentity**|A coluna usa a propriedade IDENTITY.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = entrada inválida.|  
 |**IsIdNotForRepl**|A coluna verifica a configuração de IDENTITY_INSERT.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = entrada inválida.|  
 |**IsIndexable**|A coluna pode ser indexada.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL = entrada inválida.|  

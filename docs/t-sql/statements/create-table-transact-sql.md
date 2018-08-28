@@ -50,12 +50,12 @@ caps.latest.revision: 256
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d3164cec2ddeca0e5fe2c84fc915bd66ee0832bc
-ms.sourcegitcommit: 84cc5ed00833279da3adbde9cb6133a4e788ed3f
+ms.openlocfilehash: d70a8a17b0a168787da8f0894e2a8c681bd40b8d
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39216927"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40405146"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -543,7 +543,7 @@ Especifica a criação de um índice na tabela. Isso pode ser um índice cluster
   
  [ FILESTREAM_ON { *filestream_filegroup_name* | *partition_scheme_name* | "NULL" } ]  
    
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion.md)].
+**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
  Especifica a colocação de dados FILESTREAM para a tabela quando um índice clusterizado é criado. A cláusula FILESTREAM_ON permite mover os dados FILESTREAM para outro grupo de arquivos ou esquema de partição FILESTREAM.  
   
@@ -606,7 +606,7 @@ Especifica a criação de um índice na tabela. Isso pode ser um índice cluster
   
  FILESTREAM  
    
-**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion.md)].
+**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
  Válido somente para colunas **varbinary(max)**. Especifica o armazenamento FILESTREAM para dados de BLOB **varbinary(max)**.  
   
@@ -757,7 +757,7 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
   
  O padrão é 0 minuto.  
   
- Para obter recomendações sobre quando usar COMPRESSION_DELAY, veja [Introdução ao columnstore para análise operacional em tempo real](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)  
+ Para obter recomendações sobre quando usar COMPRESSION_DELAY, veja [Introdução ao Columnstore para análise operacional em tempo real](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)  
   
  \< table_option> :: = especifica uma ou mais opções de tabela.  
   

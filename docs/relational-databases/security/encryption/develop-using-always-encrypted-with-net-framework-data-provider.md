@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 32d37930a8ceec8df41fce76c6a0f9f758ca9a84
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 107a0ff4075d2071052657e7d38d71650c07fbf5
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39538136"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405491"
 ---
 # <a name="develop-using-always-encrypted-with-net-framework-data-provider"></a>Desenvolver usando o Always Encrypted com o Provedor de Dados .NET Framework
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ CREATE TABLE [dbo].[Patients]([PatientId] [int] IDENTITY(1,1),
 Este exemplo insere uma linha na tabela Pacientes. Observe o seguinte:
 - Não há nada específico de criptografia no código de exemplo. O Provedor de Dados do .NET Framework para SQL Server detecta automaticamente e criptografa os parâmetros *paramSSN* e *paramBirthdate* que se destinam a colunas criptografadas. Isso torna a criptografia transparente para o aplicativo. 
 - Os valores inseridos nas colunas de banco de dados, incluindo as colunas criptografadas, são passados como objetos [SqlParameter](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx) . Embora o uso de **SqlParameter** seja opcional ao enviar valores para colunas não criptografadas (mesmo que seja altamente recomendável, pois ajuda a prevenir a injeção de SQL), ele é necessário para valores que se destinam a colunas criptografadas. Se os valores inseridos nas colunas SSN ou BirthDate fossem passados como literais inseridos na instrução da consulta, a consulta falharia, pois o Provedor de Dados do .NET Framework para SQL Server não conseguiria determinar os valores nas colunas criptografadas de destino e, portanto, não criptografaria os valores. Como resultado, o servidor os rejeitaria como incompatíveis com as colunas criptografadas.
-- O tipo de dados do parâmetro que se destina à coluna SSN é definido como uma cadeia de caracteres ANSI (não Unicode), que é mapeada para o tipo de dados char/varchar do SQL Server. Se o tipo do parâmetro fosse definido como uma cadeia de caracteres Unicode (String), que é mapeada para nchar/nvarchar, a consulta falharia, já que o Sempre Criptografado não dá suporte a conversões de valores nchar/nvarchar criptografados em valores char/varchar criptografados. Veja [Mapeamentos de tipos de dados do SQL Server](https://msdn.microsoft.com/library/cc716729.aspx) para obter informações sobre os mapeamentos de tipos de dados.
+- O tipo de dados do parâmetro que se destina à coluna SSN é definido como uma cadeia de caracteres ANSI (não Unicode), que é mapeada para o tipo de dados char/varchar do SQL Server. Se o tipo do parâmetro fosse definido como uma cadeia de caracteres Unicode (String), que é mapeada para nchar/nvarchar, a consulta falharia, já que o Sempre Criptografado não dá suporte a conversões de valores nchar/nvarchar criptografados em valores char/varchar criptografados. Veja [Mapeamentos de tipos de dados do SQL Server](/dotnet/framework/data/adonet/sql-server-data-type-mappings) para obter informações sobre os mapeamentos de tipos de dados.
 - O tipo de dados do parâmetro inserido na coluna BirthDate é configurado explicitamente para o tipo de dados do SQL Server de destino usando a [Propriedade SqlParameter.SqlDbType](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.sqldbtype.aspx), em vez de se basear no mapeamento implícito dos tipos do .NET para os tipos de dados do SQL Server aplicados ao usar a [Propriedade SqlParameter.DbType](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.dbtype.aspx). Por padrão, a [Estrutura DateTime](https://msdn.microsoft.com/library/system.datetime.aspx) é mapeada para o tipo de dados datetime do SQL Server. Como o tipo de dados da coluna BirthDate é data e o Sempre Criptografado não dá suporte a uma conversão de valores de datetime criptografados em valores de data criptografados, o uso do mapeamento padrão resultará em um erro. 
 
 ```

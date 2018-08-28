@@ -11,13 +11,14 @@ ms.topic: conceptual
 ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 author: MashaMSFT
 ms.author: mathoma
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: e5970629622e5f1e219bcdb80ec31341c12d585e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 46b231d5402bef7b9a092278dfd5b0f809411c1e
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37206006"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405147"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>Escolher um método de upgrade do mecanismo de banco de dados
 
@@ -79,7 +80,7 @@ ms.locfileid: "37206006"
  Depois de migrar os bancos de dados do usuário, direcione novos usuários para a nova instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando um entre vários métodos possíveis (por exemplo, renomear o servidor, usar uma entrada de DNS, modificar cadeias de conexão).  A nova abordagem de instalação reduz o risco e o tempo de inatividade em comparação com uma atualização in-loco e facilita as atualizações de hardware e sistema operacional em conjunto com a atualização para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  Se você já tiver uma solução de HA (alta disponibilidade) em vigor ou outro ambiente com várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vá para [Atualização sem interrupção](#RollingUpgrade). Se você não tiver uma solução de alta disponibilidade, considere configurar o [Espelhamento de Banco de Dados](http://msdn.microsoft.com/library/ms190941.aspx) temporariamente para minimizar o tempo de inatividade e facilitar a atualização ou aproveitar essa oportunidade para configurar um [Grupo de Disponibilidade AlwaysOn](http://msdn.microsoft.com/library/hh510260.aspx) como uma solução de HA permanente.  
+>  Se você já tiver uma solução de HA (alta disponibilidade) em vigor ou outro ambiente com várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vá para [Atualização sem interrupção](#RollingUpgrade). Se você não tiver uma solução de alta disponibilidade, considere configurar o [Espelhamento de Banco de Dados](../database-mirroring/setting-up-database-mirroring-sql-server.md) temporariamente para minimizar o tempo de inatividade e facilitar a atualização ou aproveitar essa oportunidade para configurar um [Grupo de Disponibilidade AlwaysOn](http://msdn.microsoft.com/library/hh510260.aspx) como uma solução de HA permanente.  
   
  Por exemplo, você pode usar essa abordagem para atualizar:  
   

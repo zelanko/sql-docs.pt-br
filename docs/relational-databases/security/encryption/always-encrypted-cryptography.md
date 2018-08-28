@@ -15,12 +15,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 8919be74352e38cd1065cf8834fea930fcaef90a
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 243a098b6da484f3a78b4a2f743b1095a89f6991
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39546636"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405499"
 ---
 # <a name="always-encrypted-cryptography"></a>Criptografia Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "39546636"
 ## <a name="keys-key-stores-and-key-encryption-algorithms"></a>Chaves, repositórios de chaves e algoritmos de criptografia de chave  
  O Sempre Criptografado usa dois tipos de chave: chaves mestras de coluna e chaves de criptografia de coluna.  
   
- Uma CMK (chave mestra de coluna) é uma chave que criptografa uma chave (isto é, uma chave usada para criptografar outras chaves) que está sempre no controle do cliente e é armazenada em um repositório de chaves externo. Um driver de cliente habilitado para Always Encrypted interage com o repositório de chaves por meio de um provedor de repositório CMK, que pode fazer parte da biblioteca de drivers (um provedor do sistema/ [!INCLUDE[msCoName](../../../includes/msconame-md.md)]) ou parte do aplicativo cliente (um provedor personalizado). Atualmente, as bibliotecas de drivers de cliente incluem provedores de repositório de chaves [!INCLUDE[msCoName](../../../includes/msconame-md.md)] para [Repositório de Certificados do Windows](https://msdn.microsoft.com/library/windows/desktop/aa388160) e HSMs (módulos de segurança de hardware).  (Para obter a lista atual de provedores, veja [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md).) Um desenvolvedor de aplicativos pode fornecer um provedor personalizado para um repositório arbitrário.  
+ Uma CMK (chave mestra de coluna) é uma chave que criptografa uma chave (isto é, uma chave usada para criptografar outras chaves) que está sempre no controle do cliente e é armazenada em um repositório de chaves externo. Um driver de cliente habilitado para Always Encrypted interage com o repositório de chaves por meio de um provedor de repositório CMK, que pode fazer parte da biblioteca de drivers (um provedor do sistema/ [!INCLUDE[msCoName](../../../includes/msconame-md.md)]) ou parte do aplicativo cliente (um provedor personalizado). Atualmente, as bibliotecas de drivers de cliente incluem provedores de repositório de chaves [!INCLUDE[msCoName](../../../includes/msconame-md.md)] para [Repositório de Certificados do Windows](/windows/desktop/SecCrypto/using-certificate-stores) e HSMs (módulos de segurança de hardware).  (Para obter a lista atual de provedores, veja [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md).) Um desenvolvedor de aplicativos pode fornecer um provedor personalizado para um repositório arbitrário.  
   
  Uma CEK (chave de criptografia de coluna) é uma criptografia de conteúdo (isto é, uma chave usada para proteger dados) protegida por uma CMK.  
   

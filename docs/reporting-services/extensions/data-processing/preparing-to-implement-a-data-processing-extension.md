@@ -20,15 +20,15 @@ caps.latest.revision: 36
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 457524a8fb05069961a80ccebbe719261b616bd9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 05b2a471086e49bf6bf4acb73543144af79f76fb
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33016413"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40405488"
 ---
 # <a name="preparing-to-implement-a-data-processing-extension"></a>Preparando para implementar uma extensão de processamento de dados
-  Antes de implementar a extensão de processamento de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], você deve definir as interfaces a serem implementadas. Talvez você deseje fornecer implementações específicas à extensão de todo o conjunto de interfaces ou simplesmente pode desejar concentrar a implementação em um subconjunto, como as interfaces <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> e <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand>, nas quais os clientes poderão interagir principalmente com um conjunto de resultados como um objeto **DataReader** e usarão a extensão de processamento de dados do [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] como uma ponte entre o conjunto de resultados e a fonte de dados.  
+  Antes de implementar a extensão de processamento de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], você deve definir as interfaces a serem implementadas. Talvez você deseje fornecer implementações específicas à extensão de todo o conjunto de interfaces ou simplesmente pode desejar concentrar a implementação em um subconjunto, como as interfaces <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> e <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand>, nas quais os clientes poderão interagir principalmente com um conjunto de resultados como um objeto **DataReader** e usarão a extensão de processamento de dados do [!INCLUDE[ssRS](../../../includes/ssrs.md)] como uma ponte entre o conjunto de resultados e a fonte de dados.  
   
  Você pode implementar extensões de processamento de dados em um de dois modos:  
   
@@ -71,12 +71,12 @@ ms.locfileid: "33016413"
 ## <a name="available-extension-interfaces"></a>Interfaces de extensão disponíveis  
  A tabela a seguir descreve as interfaces disponíveis e se implementação é obrigatória ou opcional.  
   
-|Interface|Description|Implementação|  
+|Interface|Descrição|Implementação|  
 |---------------|-----------------|--------------------|  
 |IDbConnection|Representa uma sessão exclusiva com uma fonte de dados. No caso de um sistema de banco de dados cliente/servidor, a sessão pode ser equivalente a uma conexão de rede com o servidor.|Obrigatório|  
-|IDbConnectionExtension|Representa propriedades de conexão adicionais que podem ser implementadas através de extensões de processamento de dados do [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] relativas a segurança e a autenticação.|Opcional|  
+|IDbConnectionExtension|Representa propriedades de conexão adicionais que podem ser implementadas através de extensões de processamento de dados do [!INCLUDE[ssRS](../../../includes/ssrs.md)] relativas a segurança e a autenticação.|Opcional|  
 |IDbTransaction|Representa uma transação local.|Obrigatório|  
-|IDbTransactionExtension|Representa propriedades de transação adicionais que podem ser implementadas através de extensões de processamento de dados do [!INCLUDE[ssRS](../../../includes/ssrs-md.md)].|Opcional|  
+|IDbTransactionExtension|Representa propriedades de transação adicionais que podem ser implementadas através de extensões de processamento de dados do [!INCLUDE[ssRS](../../../includes/ssrs.md)].|Opcional|  
 |IDbCommand|Representa uma consulta ou um comando usado durante a conexão a uma fonte de dados.|Obrigatório|  
 |IDbCommandAnalysis|Representa informações de comando adicionais para a análise de uma consulta e para o retorno de uma lista de nomes de parâmetro usados na consulta.|Opcional|  
 |IDataParameter|Representa um parâmetro ou par de nome/valor passado a um comando ou a uma consulta.|Obrigatório|  

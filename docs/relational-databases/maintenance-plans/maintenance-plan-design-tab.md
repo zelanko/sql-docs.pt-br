@@ -20,12 +20,12 @@ caps.latest.revision: 27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2459b8508cc7b69225b21aef96148978897d3ff7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6f069527720dd29cf9491f9a42b6b0acfab66f28
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32945711"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405374"
 ---
 # <a name="maintenance-plan-design-tab"></a>Plano de manutenção (Guia Design)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "32945711"
  Exiba a caixa de diálogo **Relatório e Registro em Log** , usada para gerenciar os relatórios relacionados com a atividade do plano de manutenção e para configurar o log ao servidor local ou remoto.  
   
  **Servidores**  
- Exiba a caixa de diálogo **Servidores** , que é usada para selecionar os servidores em que serão executadas as tarefas do subplano. Essa opção só está habilitada em servidores mestre em ambientes multisservidor. Para obter mais informações, veja [Criar um ambiente multisservidor](http://msdn.microsoft.com/library/edc2b60d-15da-40a1-8ba3-f1d473366ee6).  
+ Exiba a caixa de diálogo **Servidores** , que é usada para selecionar os servidores em que serão executadas as tarefas do subplano. Essa opção só está habilitada em servidores mestre em ambientes multisservidor. Para obter mais informações, veja [Criar um ambiente multisservidor](../../ssms/agent/create-a-multiserver-environment.md).  
   
  **Nome**  
  Exibe o nome do plano de manutenção. Para planos de manutenção novos, o nome é especificado em uma caixa de diálogo antes que o designer de plano de manutenção seja aberto. Para renomear um plano de manutenção, clique com o botão direito do mouse no plano no Pesquisador de Objetos e clique em **Renomear**.  
