@@ -25,7 +25,7 @@ manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 4209bf6b0ffbeef97e65b6c70896055d38c7478d
 ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 08/06/2018
 ms.locfileid: "39537946"
@@ -53,11 +53,11 @@ ms.locfileid: "39537946"
 ## <a name="other-resources"></a>Outros recursos  
  Você pode encontrar mais informações sobre as linguagens XSD (XML Schema Definition), XPath (XML Path) e XSLT (Linguagem XSL Transformations) nos seguintes sites:  
   
--   Esquema XML parte 0: Primer, W3C (recomendaçãohttp://www.w3.org/TR/xmlschema-0/)  
+-   Esquema XML parte 0: Primer, W3C recomendação (http://www.w3.org/TR/xmlschema-0/)  
   
 -   XML Schema Part 1: Estruturas, o W3C recomendação (http://www.w3.org/TR/xmlschema-1/)  
   
--   Esquema XML parte 2: Datatypes, W3C (recomendaçãohttp://www.w3.org/TR/xmlschema-2/)  
+-   Esquema XML parte 2: Datatypes, W3C recomendação (http://www.w3.org/TR/xmlschema-2/)  
   
 -   XML Path Language (XPath) (http://www.w3.org/TR/xpath)  
   

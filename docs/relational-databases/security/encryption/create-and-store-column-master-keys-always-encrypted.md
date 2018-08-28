@@ -14,13 +14,13 @@ caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 3c14fc0032b2b7bf6c36ce6f8cd592e82603265d
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 54e46ce9630ed8ae84a5998946f36d05544df34c
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39549826"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43073737"
 ---
 # <a name="create-and-store-column-master-keys-always-encrypted"></a>Criar e armazenar chaves mestras de coluna (Always Encrypted)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -168,7 +168,7 @@ Uma chave mestra de coluna do Sempre Criptografado pode ser armazenada em um rep
 
 Para disponibilizar um HSM para aplicativos em determinado computador, um KSP (Provedor de Armazenamento de Chaves), que implementa o CNG, deve ser instalado e configurado no computador. Um driver de cliente do Sempre Criptografado (um provedor de repositórios de chaves mestras de coluna no driver), usa o KSP para criptografar e descriptografar as chaves de criptografia de coluna, protegidas com a chave mestra de coluna armazenada no repositório de chaves.
 
-O Windows inclui o Provedor de Armazenamento de Chaves do Software Microsoft – um KSP baseado em software, que pode ser usado para fins de teste. Veja [CNG Key Storage Providers](https://msdn.microsoft.com/library/windows/desktop/bb931355.aspx)(Provedores de Armazenamento de Chaves do CNG).
+O Windows inclui o Provedor de Armazenamento de Chaves do Software Microsoft – um KSP baseado em software, que pode ser usado para fins de teste. Veja [CNG Key Storage Providers](/windows/desktop/SecCertEnroll/cng-key-storage-providers)(Provedores de Armazenamento de Chaves do CNG).
 
 ### <a name="creating-column-master-keys-in-a-key-store-using-cngksp"></a>Criando chaves mestras de coluna em um repositório de chaves usando o CNG/KSP
 

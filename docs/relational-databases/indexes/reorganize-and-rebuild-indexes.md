@@ -34,19 +34,19 @@ caps.latest.revision: 70
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 67c5b75e86ca504f0dfde749902da6f2f1a7dd98
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 67dac44e6d59e89e1d05f9e0f9a81bb1dd944fac
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39539126"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43058973"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>Reorganizar e recriar índices
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 > [!NOTE]
-> Para ver o conteúdo relacionado a versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], veja [Reorganizar e recompilar índices](https://msdn.microsoft.com/library/ms189858(SQL.120).aspx).
+> Para ver o conteúdo relacionado a versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], veja [Reorganizar e recompilar índices](reorganize-and-rebuild-indexes.md).
 
 Este tópico descreve como reorganizar ou recompilar índice fragmentado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. O [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] modifica os índices automaticamente sempre que são realizadas operações de entrada, atualização ou exclusão nos dados subjacentes. No decorrer do tempo, essas modificações podem fazer com que as informações do índice sejam dispersadas pelo banco de dados (fragmentadas). A fragmentação ocorre quando os índices têm páginas nas quais a ordem lógica, com base no valor de chave, não corresponde à ordem física do arquivo de dados. Os índices com fragmentação pesada podem degradar o desempenho da consulta e causar lentidão de resposta do aplicativo, especialmente nas operações de exame.  
   

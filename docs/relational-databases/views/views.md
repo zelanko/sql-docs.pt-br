@@ -16,16 +16,16 @@ caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: e4d6f376e98a032ad9f0680f92624562fdc35176
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: da65ed637e2a359c4d4d783d98177089b5384e71
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39566250"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43069238"
 ---
 # <a name="views"></a>exibições
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
   Uma exibição é uma tabela virtual cujos conteúdos são definidos por uma consulta. Como uma tabela, uma exibição consiste em um conjunto de colunas nomeadas e linhas de dados. Exceto se indexada, uma exibição não existe como um conjunto armazenado de valores de dados em um banco de dados. As linhas e colunas dos dados vêm de tabelas referidas em consultas que definem a exibição e são produzidas, dinamicamente, quando a exibição é referenciada.  
   
  Uma exibição atua como um filtro nas tabelas subjacentes na exibição. A consulta que define a exibição pode ser de uma ou mais tabelas ou de outras exibições dos bancos de dados atuais ou outros. As consultas distribuídas podem também ser usadas para definir as exibições que usam os dados de diversas fontes heterogêneas. Isso é útil, por exemplo, se você deseja combinar dados estruturados de forma semelhante de diferentes servidores, cada um dos quais armazena dados para uma região diferente de sua organização.  

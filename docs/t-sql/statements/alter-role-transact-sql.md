@@ -25,16 +25,16 @@ caps.latest.revision: 64
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 84ba7cea614adc50ad3f3d94aa978fa3fa0deb2a
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 621a49f9cc30b254390c50c00d3879912900fc58
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39453670"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43058956"
 ---
 # <a name="alter-role-transact-sql"></a>ALTER ROLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Adiciona membros a uma função de banco de dados ou remove membros dela, ou altera o nome de uma função de banco de dados definida pelo usuário.  
   
@@ -124,7 +124,7 @@ Além disso, para alterar a associação em uma função de banco de dados fixa,
 ### <a name="a-change-the-name-of-a-database-role"></a>A. Alterar o nome de uma função de banco de dados  
  **APLICA-SE A:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando pelo 2008), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
- O exemplo a seguir altera o nome da função `buyers` para `purchasing`. [!INCLUDE[AdWorks-example](../../includes/adworks-example-md.md)]  
+ O exemplo a seguir altera o nome da função `buyers` para `purchasing`.   Este exemplo pode ser executado no banco de dados de exemplo [AdventureWorks](http://msftdbprodsamples.codeplex.com/).
   
 ```sql  
 ALTER ROLE buyers WITH NAME = purchasing;  
@@ -133,7 +133,7 @@ ALTER ROLE buyers WITH NAME = purchasing;
 ### <a name="b-add-or-remove-role-members"></a>B. Adicionar ou remover membros da função  
  **APLICA-SE A:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando pelo 2012), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
- Esse exemplo cria uma função de banco de dados chamada `Sales`. Ele adiciona um usuário de banco de dados chamado Carlos à associação e, em seguida, mostra como remover o membro Carlos. [!INCLUDE[AdWorks-example](../../includes/adworks-example-md.md)]  
+ Esse exemplo cria uma função de banco de dados chamada `Sales`. Ele adiciona um usuário de banco de dados chamado Carlos à associação e, em seguida, mostra como remover o membro Carlos.   Este exemplo pode ser executado no banco de dados de exemplo [AdventureWorks](http://msftdbprodsamples.codeplex.com/).
   
 ```sql  
 CREATE ROLE Sales;  
