@@ -25,13 +25,13 @@ caps.latest.revision: 27
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 9216f9babb03814fb7f644add94f20db7bcc4439
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 229544e74b8a4c8f541c547f185bb6a954f44807
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39556906"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43097793"
 ---
 # <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ fn_get_audit_file ( file_pattern,
     
     Esse argumento deve incluir um caminho (letra de unidade ou compartilhamento de rede) e um nome de arquivo, podendo conter um caractere curinga. Um único asterisco (*) pode ser usado para coletar vários arquivos de um conjunto de arquivos de auditoria. Por exemplo:  
   
-    -   **\<caminho >\\ \* ** - coletar todos os arquivos de auditoria no local especificado.  
+    -   **\<caminho >\\ \***  - coletar todos os arquivos de auditoria no local especificado.  
   
     -   **\<caminho > \LoginsAudit_{GUID}** - coletar todos os arquivos que têm o nome especificado e o par GUID de auditoria.  
   
@@ -66,7 +66,7 @@ fn_get_audit_file ( file_pattern,
  
     Esse argumento é usado para especificar uma URL de blob (incluindo o ponto de extremidade de armazenamento e o contêiner). Embora ele não oferece suporte a um caractere curinga, você pode usar um prefixo de nome de arquivo parcial (blob) (em vez do nome de blob completo) para coletar vários arquivos (blobs) que começam com esse prefixo. Por exemplo:
  
-      - **\<Storage_endpoint\>/\<contêiner\>/\<ServerName\>/\<DatabaseName\> / ** -coleta todos os arquivos de auditoria (blobs) do banco de dados específico.    
+      - **\<Storage_endpoint\>/\<contêiner\>/\<ServerName\>/\<DatabaseName\> /**  -coleta todos os arquivos de auditoria (blobs) do banco de dados específico.    
       
       - **\<Storage_endpoint\>/\<contêiner\>/\<ServerName\>/\<DatabaseName\> / \< AuditName\>/\<CreationDate\>/\<FileName\>. xel** -coleta um arquivo de auditoria específicos (blob).
   

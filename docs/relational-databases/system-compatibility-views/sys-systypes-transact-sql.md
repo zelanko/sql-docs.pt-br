@@ -25,13 +25,13 @@ caps.latest.revision: 50
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 32f3ff7bb65822e0ce0c8e3e9192b88dd572c22b
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: edcf376f9127ec1d9b874c24e0a11f67f7e334ff
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39537216"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43074143"
 ---
 # <a name="syssystypes-transact-sql"></a>sys.systypes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "39537216"
 |**xscale**|**tinyint**|Escala interna, como usada pelo servidor. Não deve ser usada em consultas.|  
 |**tdefault**|**int**|ID do procedimento armazenado que contém verificações de integridade para este tipo de dados.|  
 |**domain**|**int**|ID do procedimento armazenado que contém verificações de integridade para este tipo de dados.|  
-|**UID**|**smallint**|ID de esquema do proprietário do tipo.<br /><br /> Em bancos de dados atualizados de uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o ID de esquema é idêntico ao ID de usuário do proprietário.<br /><br /> **\*\* Importante \* \* ** se você usar qualquer um dos seguintes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instruções DDL, você deve usar o [Types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) exibição em vez de catálogo **sys. systypes**.<br /><br /> ALTER AUTHORIZATION ON TYPE<br /><br /> CREATE TYPE<br /><br /> Excederá ou retornará NULL se o número de usuários e funções exceder 32.767.|  
+|**UID**|**smallint**|ID de esquema do proprietário do tipo.<br /><br /> Em bancos de dados atualizados de uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o ID de esquema é idêntico ao ID de usuário do proprietário.<br /><br /> **\*\* Importante \* \***  se você usar qualquer um dos seguintes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instruções DDL, você deve usar o [Types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) exibição em vez de catálogo **sys. systypes**.<br /><br /> ALTER AUTHORIZATION ON TYPE<br /><br /> CREATE TYPE<br /><br /> Excederá ou retornará NULL se o número de usuários e funções exceder 32.767.|  
 |**reserved**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**collationid**|**int**|Se baseados em caracteres, **collationid** é a id do agrupamento do banco de dados atual; caso contrário, ele será NULL.|  
 |**usertype**|**smallint**|ID de tipo do usuário. Estoura ou retorna NULL se o número de tipos de dados exceder 32.767.|  

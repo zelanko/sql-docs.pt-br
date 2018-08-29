@@ -2,7 +2,7 @@
 title: Atualização do SQL Server para SQL Server ou SQL Server em VMs do Azure usando o Assistente de migração de dados local | Microsoft Docs
 description: Saiba como usar o Assistente de migração de dados para atualizar um SQL Server no local para uma versão posterior do SQL Server ou ao SQL Server em VMs do Azure
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/29/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: ''
 caps.latest.revision: ''
 author: HJToland3
-ms.author: jtoland
+ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 8a68205fe742f386241ab0653afce5b274077cbd
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 2638b536cc97f53e62daf578d1249a2a62987e62
+ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37946950"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43152787"
 ---
 # <a name="upgrade-on-premises-sql-server-to-sql-server-or-sql-server-on-azure-vms-using-the-data-migration-assistant"></a>Atualizar o local SQL Server para SQL Server ou SQL Server em VMs do Azure usando o Assistente de migração de dados
 
