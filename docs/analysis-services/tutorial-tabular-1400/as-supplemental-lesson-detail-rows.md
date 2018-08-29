@@ -1,6 +1,6 @@
 ---
 title: 'A lição suplementar tutorial do Analysis Services: linhas de detalhes | Microsoft Docs'
-ms.date: 05/08/2018
+ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0518cdd7707c5973bfd055af997a75c9b67d7479
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 28c5124508cedca026d262e34257bf48518580fb
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38017789"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43078649"
 ---
-# <a name="supplemental-lesson---detail-rows"></a>Lição suplementar - linhas de detalhes
+# <a name="supplemental-lesson---detail-rows"></a>Lição suplementar – Linhas de detalhes
 
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 

@@ -18,17 +18,16 @@ helpviewer_keywords:
 - INFORMATION_SCHEMA.TABLE_CONSTRAINTS view
 - TABLE_CONSTRAINTS view
 ms.assetid: 687f3284-2849-4853-8a5c-fc936deceae0
-caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 2e8c70375844c5cf4dde291f18a685526747b8a8
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 9684a420cb3761ae8a68a5b991423bf0c3db51d8
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39542516"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43064228"
 ---
 # <a name="tableconstraints-transact-sql"></a>TABLE_CONSTRAINTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,10 +39,10 @@ ms.locfileid: "39542516"
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**CONSTRAINT_CATALOG**|**nvarchar(** 128 **)**|Qualificador da restrição.|  
-|**CONSTRAINT_SCHEMA**|**nvarchar(** 128 **)**|Nome do esquema que contém a restrição.<br /><br /> **\*\* Importante \* \* ** não use exibições INFORMATION_SCHEMA para determinar o esquema de um objeto. O único modo seguro de localizar o esquema de um objeto é consultar a exibição de catálogo sys.objects.|  
+|**CONSTRAINT_SCHEMA**|**nvarchar(** 128 **)**|Nome do esquema que contém a restrição.<br /><br /> **\*\* Importante \* \***  não use exibições INFORMATION_SCHEMA para determinar o esquema de um objeto. O único modo seguro de localizar o esquema de um objeto é consultar a exibição de catálogo sys.objects.|  
 |**CONSTRAINT_NAME**|**sysname**|Nome da restrição.|  
 |**TABLE_CATALOG**|**nvarchar(** 128 **)**|Qualificador da tabela.|  
-|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|Nome do esquema que contém a tabela.<br /><br /> **\*\* Importante \* \* ** não use exibições INFORMATION_SCHEMA para determinar o esquema de um objeto. O único modo seguro de localizar o esquema de um objeto é consultar a exibição de catálogo sys.objects.|  
+|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|Nome do esquema que contém a tabela.<br /><br /> **\*\* Importante \* \***  não use exibições INFORMATION_SCHEMA para determinar o esquema de um objeto. O único modo seguro de localizar o esquema de um objeto é consultar a exibição de catálogo sys.objects.|  
 |**TABLE_NAME**|**sysname**|Nome da tabela.|  
 |**CONSTRAINT_TYPE**|**varchar (** 11 **)**|Tipo de restrição:<br /><br /> CHECK<br /><br /> UNIQUE<br /><br /> PRIMARY KEY<br /><br /> FOREIGN KEY|  
 |**IS_DEFERRABLE**|**varchar (** 2 **)**|Especifica se a verificação de restrição é adiável. Sempre retorna NO.|  

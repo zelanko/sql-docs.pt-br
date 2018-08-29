@@ -19,13 +19,13 @@ ms.assetid: 16008eec-eddf-4d10-ae99-29db26ed6372
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 7064658e57f07eff4c06c245079c9a868a91c277
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: c7c6d35168b466f5eb8b49d30ed1b1a79e103f62
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39546386"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43066699"
 ---
 # <a name="using-connection-string-keywords-with-sql-server-native-client"></a>Usando palavras-chave da cadeia de conexão com o SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

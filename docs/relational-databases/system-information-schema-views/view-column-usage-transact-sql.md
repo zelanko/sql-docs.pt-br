@@ -18,17 +18,16 @@ helpviewer_keywords:
 - INFORMATION_SCHEMA.VIEW_COLUMN_USAGE view
 - VIEW_COLUMN_USAGE view
 ms.assetid: fc0b3608-a7e8-4532-8215-32235d6670f1
-caps.latest.revision: 38
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 886d8a3c27311833ddf34a3e58beb24bcee9ffdd
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 941e325bcf1dba22390744741a12eb49f5c8a97f
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39534386"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43064039"
 ---
 # <a name="viewcolumnusage-transact-sql"></a>VIEW_COLUMN_USAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,10 +39,10 @@ ms.locfileid: "39534386"
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**VIEW_CATALOG**|**nvarchar(** 128 **)**|Qualificador de exibição.|  
-|**VIEW_SCHEMA**|**nvarchar(** 128 **)**|Nome do esquema que contém a exibição.<br /><br /> **\*\* Importante \* \* ** não use exibições INFORMATION_SCHEMA para determinar o esquema de um objeto. O único modo seguro de localizar o esquema de um objeto é consultar a exibição de catálogo sys.objects.|  
+|**VIEW_SCHEMA**|**nvarchar(** 128 **)**|Nome do esquema que contém a exibição.<br /><br /> **\*\* Importante \* \***  não use exibições INFORMATION_SCHEMA para determinar o esquema de um objeto. O único modo seguro de localizar o esquema de um objeto é consultar a exibição de catálogo sys.objects.|  
 |**VIEW_NAME**|**sysname**|Nome da exibição.|  
 |**TABLE_CATALOG**|**nvarchar(** 128 **)**|Qualificador da tabela.|  
-|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|Nome do esquema que contém a tabela.<br /><br /> **\*\* Importante \* \* ** não use exibições INFORMATION_SCHEMA para determinar o esquema de um objeto. O único modo seguro de localizar o esquema de um objeto é consultar a exibição de catálogo sys.objects.|  
+|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|Nome do esquema que contém a tabela.<br /><br /> **\*\* Importante \* \***  não use exibições INFORMATION_SCHEMA para determinar o esquema de um objeto. O único modo seguro de localizar o esquema de um objeto é consultar a exibição de catálogo sys.objects.|  
 |**TABLE_NAME**|**sysname**|Tabela base.|  
 |**COLUMN_NAME**|**sysname**|Nome da coluna.|  
   

@@ -18,17 +18,16 @@ helpviewer_keywords:
 - PARAMETERS view
 - INFORMATION_SCHEMA.PARAMETERS view
 ms.assetid: 06ded0ca-7d21-4400-864a-b801e855b257
-caps.latest.revision: 35
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 62156897510a969bc0ed99de56b59ae3251067e1
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 9289f3db5d046d3922340c33e79ef02c266b39d4
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39564800"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43062319"
 ---
 # <a name="parameters-transact-sql"></a>PARAMETERS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "39564800"
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**SPECIFIC_CATALOG**|**nvarchar(** 128 **)**|Nome do catálogo da rotina para a qual este é um parâmetro.|  
-|**SPECIFIC_SCHEMA**|**nvarchar(** 128 **)**|Nome do esquema da rotina para a qual este é um parâmetro.<br /><br /> **\*\* Importante \* \* ** não use exibições INFORMATION_SCHEMA para determinar o esquema de um objeto. O único modo seguro de localizar o esquema de um objeto é consultar a exibição de catálogo sys.objects.|  
+|**SPECIFIC_SCHEMA**|**nvarchar(** 128 **)**|Nome do esquema da rotina para a qual este é um parâmetro.<br /><br /> **\*\* Importante \* \***  não use exibições INFORMATION_SCHEMA para determinar o esquema de um objeto. O único modo seguro de localizar o esquema de um objeto é consultar a exibição de catálogo sys.objects.|  
 |**SPECIFIC_NAME**|**nvarchar(** 128 **)**|Nome da rotina para a qual este é um parâmetro.|  
 |**ORDINAL_POSITION**|**int**|A posição ordinal do parâmetro começando em 1. Para o valor de retorno de uma função, este é um 0.|  
 |**PARAMETER_MODE**|**nvarchar (** 10 **)**|Retorna IN no caso de um parâmetro de entrada, OUT no caso de um parâmetro de saída e INOUT no caso de um parâmetro de entrada/saída.|  

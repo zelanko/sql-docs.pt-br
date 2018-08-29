@@ -18,17 +18,16 @@ helpviewer_keywords:
 - DOMAINS view
 - INFORMATION_SCHEMA.DOMAINS view
 ms.assetid: f0b734d5-816f-4b10-a60c-615931b515c2
-caps.latest.revision: 44
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 10100f54381573bfc3000eb7c31e108aee9829ab
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 8e93a4bd265782f4942034b3483f8e045790f5f0
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39554036"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43063876"
 ---
 # <a name="domains-transact-sql"></a>DOMAINS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "39554036"
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**DOMAIN_CATALOG**|**nvarchar(** 128 **)**|Banco de dados no qual o tipo de dados de alias existe.|  
-|**DOMAIN_SCHEMA**|**nvarchar(** 128 **)**|Nome do esquema que contém o tipo de dados de alias.<br /><br /> **\*\* Importante \* \* ** não use exibições INFORMATION_SCHEMA para determinar o esquema de um tipo de dados. O único modo seguro para localizar o esquema de um tipo é usar a função TYPEPROPERTY.|  
+|**DOMAIN_SCHEMA**|**nvarchar(** 128 **)**|Nome do esquema que contém o tipo de dados de alias.<br /><br /> **\*\* Importante \* \***  não use exibições INFORMATION_SCHEMA para determinar o esquema de um tipo de dados. O único modo seguro para localizar o esquema de um tipo é usar a função TYPEPROPERTY.|  
 |**NOME_DO_DOMÍNIO**|**sysname**|Tipo de dados de alias.|  
 |**DATA_TYPE**|**sysname**|Tipo de dados fornecido pelo sistema.|  
 |**CHARACTER_MAXIMUM_LENGTH**|**int**|Comprimento máximo, em caracteres, de dados binários, dados de caracteres e dados de texto e imagem.<br /><br /> -1 para **xml** e dados de tipo de valor grande. Caso contrário, será retornado NULL. Para obter mais informações, veja [Tipos de dados &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).|  
