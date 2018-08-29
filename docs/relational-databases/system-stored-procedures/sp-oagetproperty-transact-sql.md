@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_OAGetProperty
 ms.assetid: 240eeeb9-6d8b-4930-b912-1d273ca0ab38
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 31b9620e58029285d020371b261dc78cff55b078
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 348dd55dc3e2744c86b4b49b14a88fa95d186b6b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260682"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023025"
 ---
 # <a name="spoagetproperty-transact-sql"></a>sp_OAGetProperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,14 +57,14 @@ sp_OAGetProperty objecttoken , propertyname
   
  Se a propriedade retorna um objeto OLE, *propertyvalue* deve ser uma variável local de tipo de dados **int**. Um token de objeto é armazenado na variável local e pode ser usado com outros procedimentos armazenados de automação OLE.  
   
- Se a propriedade retorna um único valor, especifique uma variável local para *propertyvalue*, que retorna a propriedade de valor na variável local; ou não especifique *propertyvalue*, que retorna o valor da propriedade ao cliente como um conjunto de resultados de uma só coluna e linha.  
+ Se a propriedade retornar um único valor, especifique uma variável local para *propertyvalue*, que retorna a propriedade de valor na variável local; ou não especificar *propertyvalue*, que retorna o valor da propriedade para o cliente como um conjunto de resultados de coluna única e uma linha.  
   
- Quando a propriedade retorna uma matriz, se *propertyvalue* for especificado, ele será definido como NULL.  
+ Quando a propriedade retorna uma matriz, se *propertyvalue* for especificado, ele é definido como NULL.  
   
  Se *propertyvalue* for especificado, mas a propriedade não retorna um valor, ocorrerá um erro. Se a propriedade retornar uma matriz com mais de duas dimensões, ocorrerá um erro.  
   
  *index*  
- É um parâmetro de índice. Se especificado, *índice* deve ser um valor do tipo de dados apropriado.  
+ É um parâmetro de índice. Se especificado, *índice* deve ser um valor de tipo de dados apropriado.  
   
  Algumas propriedades têm parâmetros. Estas propriedades são chamadas de propriedades indexadas e os parâmetros são chamados de parâmetros de índice. Uma propriedade pode ter vários parâmetros de índice.  
   
@@ -74,7 +74,7 @@ sp_OAGetProperty objecttoken , propertyname
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou um número diferente de zero (falha) que é o valor inteiro do HRESULT retornado pelo objeto de Automação OLE.  
   
- Para obter mais informações sobre códigos de retorno HRESULT, consulte [OLE Automation códigos de retorno e informações de erro](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
+ Para obter mais informações sobre códigos de retorno HRESULT, consulte [OLE automação códigos de retorno e informações de erro](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Se a propriedade retornar uma matriz com uma ou duas dimensões, a matriz será retornada ao cliente como um conjunto de resultados:  
@@ -83,13 +83,13 @@ sp_OAGetProperty objecttoken , propertyname
   
 -   Uma matriz bidimensional é retornada ao cliente como um conjunto de resultados com tantas colunas quanto houver elementos na primeira dimensão da matriz e com tantas linhas quanto houver elementos na segunda dimensão da matriz. Em outras palavras, a matriz é retornada como (colunas, linhas).  
   
- Quando o valor de retorno de uma propriedade ou valor de retorno do método for uma matriz, **sp_OAGetProperty** ou **sp_OAMethod** retorna um conjunto de resultados para o cliente. (Os parâmetros de saída de método não podem ser matrizes.) Esses procedimentos examinam todos os valores de dados na matriz para determinar os tipos de dados apropriados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e os tamanhos dos dados a serem usados para cada coluna no conjunto de resultados. Para uma coluna específica, esses procedimentos usam o tipo de dados e o tamanho necessários para representar todos os valores de dados nesta coluna.  
+ Quando o valor de retorno de uma propriedade ou valor de retorno de método é uma matriz **sp_OAGetProperty** ou **sp_OAMethod** retorna um conjunto de resultados para o cliente. (Os parâmetros de saída de método não podem ser matrizes.) Esses procedimentos examinam todos os valores de dados na matriz para determinar os tipos de dados apropriados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e os tamanhos dos dados a serem usados para cada coluna no conjunto de resultados. Para uma coluna específica, esses procedimentos usam o tipo de dados e o tamanho necessários para representar todos os valores de dados nesta coluna.  
   
  Quando todos os valores de dados em uma coluna compartilharem o mesmo tipo de dados, esse tipo de dados será usado para a coluna inteira. Quando os valores de dados em uma coluna forem de tipos de dados diferentes, o tipo de dados da coluna inteira será escolhido com base no quadro a seguir.  
   
-||int|float|money|datetime|varchar|nvarchar|  
+||INT|FLOAT|money|DATETIME|varchar|NVARCHAR|  
 |------|---------|-----------|-----------|--------------|-------------|--------------|  
-|**Int**|**Int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
+|**int**|**int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**float**|**float**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**money**|**money**|**money**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**datetime**|**varchar**|**varchar**|**varchar**|**datetime**|**varchar**|**nvarchar**|  
@@ -97,7 +97,7 @@ sp_OAGetProperty objecttoken , propertyname
 |**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|  
   
 ## <a name="remarks"></a>Remarks  
- Você também pode usar **sp_OAMethod** para obter um valor de propriedade.  
+ Você também pode usar **sp_OAMethod** para obter um valor da propriedade.  
   
 ## <a name="permissions"></a>Permissões  
  Exige associação à função de servidor fixa **sysadmin** .  
@@ -105,7 +105,7 @@ sp_OAGetProperty objecttoken , propertyname
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-using-a-local-variable"></a>A. Usando uma variável local  
- O exemplo a seguir obtém o `HostName` propriedade (de criado anteriormente **SQLServer** objeto) e o armazena em uma variável local.  
+ O exemplo a seguir obtém a `HostName` propriedade (da criado anteriormente **SQLServer** objeto) e o armazena em uma variável local.  
   
 ```  
 DECLARE @property varchar(255);  
@@ -119,7 +119,7 @@ PRINT @property;
 ```  
   
 ### <a name="b-using-a-result-set"></a>B. Usando um conjunto de resultados  
- O exemplo a seguir obtém o `HostName` propriedade (de criado anteriormente **SQLServer** objeto) e retorna ao cliente como um conjunto de resultados.  
+ O exemplo a seguir obtém a `HostName` propriedade (da criado anteriormente **SQLServer** objeto) e retorna-o para o cliente como um conjunto de resultados.  
   
 ```  
 EXEC @hr = sp_OAGetProperty @object, 'HostName';  

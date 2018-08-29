@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helpfilegroup
 ms.assetid: 619716b5-95dc-4538-82ae-4b90b9da8ebc
 caps.latest.revision: 35
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 61e297999776254e85372c4b6ce25927396fdff6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 085425bd8d50c31fb894268ebce416c23c285b6b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260782"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028014"
 ---
 # <a name="sphelpfilegroup-transact-sql"></a>sp_helpfilegroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
   
 ## <a name="arguments"></a>Argumentos  
  [  **@filegroupname =** ] **'***nome***'**  
- É o nome lógico de qualquer grupo de arquivos no banco de dados atual. *nome* é **sysname**, com um padrão NULL. Se *nome* não for especificado, todos os grupos de arquivos no banco de dados atual são listados e somente o primeiro conjunto de resultados mostrado na seção de conjuntos de resultados é exibido.  
+ É o nome lógico de qualquer grupo de arquivos no banco de dados atual. *nome da* está **sysname**, com um padrão NULL. Se *nome* não for especificado, todos os grupos de arquivos no banco de dados atual são listados e somente o primeiro conjunto de resultados mostrado na seção conjuntos de resultados é exibido.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -56,7 +56,7 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
 |-----------------|---------------|-----------------|  
 |**groupname**|**sysname**|Nome do grupo de arquivos.|  
 |**groupid**|**smallint**|Identificador de grupo de arquivos numérico.|  
-|**filecount**|**Int**|Número de arquivos no grupo de arquivos.|  
+|**filecount**|**int**|Número de arquivos no grupo de arquivos.|  
   
  Se *nome* é uma linha para cada arquivo no grupo de arquivos especificado, será retornada.  
   
@@ -66,8 +66,8 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
 |**fileid**|**smallint**|Identificador de arquivos numérico.|  
 |**filename**|**nchar(260)**|O nome  físico do arquivo que inclui o caminho de diretório.|  
 |**size**|**nvarchar(15)**|Tamanho do arquivo em kilobytes.|  
-|**MaxSize**|**nvarchar(15)**|Tamanho máximo do arquivo.<br /><br /> É o tamanho máximo até o qual o arquivo pode crescer. Um valor UNLIMITED neste campo indica que o arquivo cresce até o disco ficar cheio.|  
-|**growth**|**nvarchar(15)**|Incremento de crescimento do arquivo. Isso indica a quantidade de espaço adicionada ao arquivo sempre que novo espaço é necessário.<br /><br /> 0 = Arquivo tem um tamanho fixo e não crescerá.|  
+|**tamanho máximo**|**nvarchar(15)**|Tamanho máximo do arquivo.<br /><br /> É o tamanho máximo até o qual o arquivo pode crescer. Um valor UNLIMITED neste campo indica que o arquivo cresce até o disco ficar cheio.|  
+|**growth**|**nvarchar(15)**|Incremento de crescimento do arquivo. Isso indica a quantidade de espaço adicionada ao arquivo sempre que um novo espaço é necessário.<br /><br /> 0 = Arquivo tem um tamanho fixo e não crescerá.|  
   
 ## <a name="permissions"></a>Permissões  
  Requer associação à função **pública** .  

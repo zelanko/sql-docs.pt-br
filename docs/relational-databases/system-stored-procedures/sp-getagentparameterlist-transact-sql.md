@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_getagentparameterlist
 ms.assetid: 50d3d3c1-b9a1-417c-bad4-674089c9c60d
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3eb58b1f831c1eaec76189b55c8758b0aa6485f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6d313f0445183366735e9c1fe2b65a8eb823fcc3
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994113"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021236"
 ---
 # <a name="spgetagentparameterlist-transact-sql"></a>sp_getagentparameterlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,9 +46,9 @@ sp_getagentparameterlist [ @agent_type = ] 'agent_type'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@agent_type =** ] **'***agent_type***'**  
- É o agente de replicação para o qual o parâmetro está sendo adicionado. *agent_type* é **int**, e pode ser um destes valores:  
+ É o agente de replicação para o qual o parâmetro está sendo adicionado. *agent_type* está **int**, e pode ser um destes valores:  
   
-|Value|Agente|  
+|Valor|Agente|  
 |-----------|-----------|  
 |**1**|Instantâneo|  
 |**2**|Log Reader|  
@@ -62,7 +62,7 @@ sp_getagentparameterlist [ @agent_type = ] 'agent_type'
 ## <a name="remarks"></a>Remarks  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** pode executar a função de servidor fixa **sp_getagentparameter**.  
+ Somente os membros dos **sysadmin** pode executar a função de servidor fixa **sp_getagentparameter**.  
   
 ## <a name="see-also"></a>Consulte também  
  [sp_add_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   

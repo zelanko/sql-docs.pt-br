@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_ivindexhasnullcols
 ms.assetid: ed2cde63-37e1-43cf-b6ba-3b6114a0f797
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4431ae915c43d6ceb96200c3ebbf6aa976dd4ff3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a7ca9be2e67f49a2881171dcfb4e0a99a6672bd6
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32995053"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023726"
 ---
 # <a name="spivindexhasnullcols-transact-sql"></a>sp_ivindexhasnullcols (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,13 +47,13 @@ sp_ivindexhasnullcols [ @viewname = ] 'view_name'
   
 ## <a name="arguments"></a>Argumentos  
  [ **@viewname**=] **'***view_name***'**  
- É o nome da exibição a ser verificada. *view_name* é **sysname**, sem padrão.  
+ É o nome da exibição a ser verificada. *view_name* está **sysname**, sem padrão.  
   
  [ **@fhasnullcols**=] *field_has_null_columns* saída  
- É o sinalizador que indica se o índice de exibição tem colunas que permitem NULL. *view_name* é **sysname**, sem padrão. Retorna um valor de **1** se o índice de exibição tem colunas que permitem NULL. Retorna um valor de **0** se o modo de exibição não contém colunas que permitem valores nulos.  
+ É o sinalizador que indica se o índice de exibição tem colunas que permitem NULL. *view_name* está **sysname**, sem padrão. Retorna um valor de **1** se o índice de exibição tem colunas que permitem NULL. Retorna um valor de **0** se o modo de exibição não contiver colunas que permitem valores nulos.  
   
 > [!NOTE]  
->  Se o próprio procedimento armazenado retorna um código de retorno **1**, o que significa que a execução do procedimento armazenado teve uma falha, esse valor é **0** e deve ser ignorado.  
+>  Se o próprio procedimento armazenado retorna um código de retorno **1**, que significa que a execução do procedimento armazenado teve uma falha, esse valor é **0** e deve ser ignorado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -64,7 +64,7 @@ sp_ivindexhasnullcols [ @viewname = ] 'view_name'
  Por padrão, são criados artigos de exibição indexada em uma publicação como tabelas nos Assinantes No entanto, quando a coluna indexada permite valores NULL, a exibição indexada é criada como uma exibição indexada no Assinante em vez de em uma tabela. Executando esse procedimento armazenado ele pode alertar o usuário quanto à existência ou não desse problema com a exibição indexada atual.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função de servidor fixa ou **db_owner** pode executar a função de banco de dados fixa **sp_ivindexhasnullcols**.  
+ Somente os membros dos **sysadmin** função de servidor fixa ou o **db_owner** banco de dados fixa podem executar **sp_ivindexhasnullcols**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

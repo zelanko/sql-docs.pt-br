@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_changedistributor_property
 ms.assetid: 04f503a1-307c-4de0-bac6-e6e97d5b6940
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b44507077740162e2d07f9066a13c4eb14fabfa1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ecdecaef950761b59b1e55dfaf0224a8f442f3ed
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32987741"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43018352"
 ---
 # <a name="spchangedistributorproperty-transact-sql"></a>sp_changedistributor_property (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,15 +47,15 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
   
 ## <a name="arguments"></a>Argumentos  
  [  **@property=**] **'***propriedade***'**  
- É a propriedade para um determinado Distribuidor. *propriedade* é **sysname**, e pode ser um destes valores.  
+ É a propriedade para um determinado Distribuidor. *propriedade* está **sysname**, e pode ser um destes valores.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**heartbeat_interval**|Número máximo de minutos que um agente pode executar sem registrar uma mensagem de progresso.|  
-|NULL (padrão)|Disponíveis *propriedade* valores são impressas.|  
+|NULL (padrão)|Todos disponíveis *propriedade* valores são impressos.|  
   
  [  **@value=**] **'***valor***'**  
- É o valor da propriedade do Distribuidor. *valor* é **varchar (255)**, com um padrão NULL.  
+ É o valor da propriedade do Distribuidor. *valor* está **varchar(255)**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -67,7 +67,7 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
  [!code-sql[HowTo#sp_changedistributor_property](../../relational-databases/replication/codesnippet/tsql/sp-changedistributor-pro_1.sql)]  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** pode executar a função de servidor fixa **sp_changedistributor_property**.  
+ Somente os membros dos **sysadmin** pode executar a função de servidor fixa **sp_changedistributor_property**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Exibir e modificar propriedades de Publicador e Distribuidor](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   

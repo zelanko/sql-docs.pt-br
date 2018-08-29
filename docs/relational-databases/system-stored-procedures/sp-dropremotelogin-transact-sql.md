@@ -18,16 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_dropremotelogin
 ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
-caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 4565f5a3005a556d24777a220ff020816f01a346
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 89633f39028047e4caf4bb2dd8db0f4ce022c96c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256582"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026493"
 ---
 # <a name="spdropremotelogin-transact-sql"></a>sp_dropremotelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +33,7 @@ ms.locfileid: "33256582"
   Remove um logon remoto mapeado para um logon local usado ao executar procedimentos armazenados remotos em um servidor local que executa o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] Use servidores vinculados e procedimentos armazenados do servidor vinculado.  
+>  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] Em vez disso, use servidores vinculados e procedimentos armazenados do servidor vinculado.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,28 +48,28 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@remoteserver =** ] **'***remoteserver***'**  
- É o nome do servidor remoto mapeado para o logon remoto que será removido. *remoteserver* é **sysname**, sem padrão. *remoteserver* já deve existir.  
+ É o nome do servidor remoto mapeado para o logon remoto que será removido. *remoteserver* está **sysname**, sem padrão. *remoteserver* já deve existir.  
   
- [  **@loginame =** ] **'***login***'**  
+ [  **@loginame =** ] **'***logon***'**  
  É o nome do logon opcional no servidor local que está associado ao servidor remoto. *login* é **sysname**, com um padrão de NULL. *logon* já deve existir se especificado.  
   
  [  **@remotename =** ] **'***remote_name***'**  
- É o nome opcional do logon remoto mapeado para *login* durante o logon do servidor remoto. *remote_name* é **sysname**, com um padrão NULL.  
+ É o nome opcional do logon remoto mapeado para *login* durante o logon do servidor remoto. *remote_name* está **sysname**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
 ## <a name="remarks"></a>Remarks  
- Se apenas *remoteserver* for especificado, todos os logons remotos para o servidor remoto são removidos do servidor local. Se *login* também é especificados, remotos todos os logons de *remoteserver* mapeados para esse logon local são removidos do servidor local. Se *remote_name* também for especificado, somente o logon remoto para o usuário remoto de *remoteserver* é removido do servidor local.  
+ Se apenas *remoteserver* for especificado, todos os logons remotos para o servidor remoto são removidos do servidor local. Se *login* também for especificados, remotos todos os logons do *remoteserver* logon local mapeado para específicos que são removidos do servidor local. Se *remote_name* também for especificado, somente o logon remoto para o usuário remoto do *remoteserver* é removido do servidor local.  
   
- Para adicionar usuários do servidor local, use **sp_addlogin**. Para remover os usuários do servidor local, use **sp_droplogin**.  
+ Para adicionar os usuários do servidor local, use **sp_addlogin**. Para remover os usuários do servidor local, use **sp_droplogin**.  
   
  Logons remotos são necessários apenas quando você usa versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versão 7.0 e versões subsequentes usam logons de servidor vinculado. Use **sp_addlinkedsrvlogin** e **sp_droplinkedsrvlogin** para adicionar e remover logons de servidor vinculado.  
   
  **sp_dropremotelogin** não pode ser executado em uma transação definida pelo usuário.  
   
 ## <a name="permissions"></a>Permissões  
- Requer a participação no **sysadmin** ou **securityadmin** funções de servidor fixas.  
+ Requer associação na **sysadmin** ou **securityadmin** funções de servidor fixas.  
   
 ## <a name="examples"></a>Exemplos  
   

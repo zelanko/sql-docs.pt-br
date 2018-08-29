@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_estimate_data_compression_savings
 ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 25798372f2b949446b746164665dbfe6752443d7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 1271953cc69e8302c2a36088fcea1bca3588a01e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260579"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027535"
 ---
 # <a name="spestimatedatacompressionsavings-transact-sql"></a>sp_estimate_data_compression_savings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,21 +62,21 @@ sp_estimate_data_compression_savings
   
 ## <a name="arguments"></a>Argumentos  
  [ @schema_name=] '*schema_name*'  
- É o nome do esquema de banco de dados que contém a tabela ou a exibição indexada. *schema_name* é **sysname**. Se *schema_name* for NULL, será usado o esquema padrão do usuário atual.  
+ É o nome do esquema de banco de dados que contém a tabela ou a exibição indexada. *schema_name* está **sysname**. Se *schema_name* for NULL, o esquema padrão do usuário atual é usado.  
   
  [ @object_name=] '*object_name*'  
  É o nome da tabela ou exibição indexada em que o índice está. *object_name* é **sysname**.  
   
  [ @index_id=] '*index_id*'  
- É a ID do índice. *index_id* é **int**, e pode ser um dos seguintes valores: o número de identificação de um índice, NULL ou 0 se *object_id* for um heap. Para retornar informações de todos os índices de uma tabela base ou exibição, especifique NULL. Se você especificar NULL, você também deverá especificar NULL para *número_da_partição*.  
+ É a ID do índice. *index_id* está **int**, e pode ser um dos seguintes valores: o número de identificação de um índice, NULL ou 0 se *object_id* é um heap. Para retornar informações de todos os índices de uma tabela base ou exibição, especifique NULL. Se você especificar NULL, você também deverá especificar NULL para *partition_number*.  
   
  [ @partition_number=] '*número_da_partição*'  
- É o número da partição no objeto. *número_da_partição* é **int**, e pode ser um dos seguintes valores: o número de partição de um índice ou heap, NULL ou 1 para um heap ou índice não particionado.  
+ É o número da partição no objeto. *partition_number* está **int**, e pode ser um dos seguintes valores: o número de partição de um índice ou heap, NULL ou 1 para um heap ou índice não particionado.  
   
  Para especificar a partição, você também pode especificar o [$partition](../../t-sql/functions/partition-transact-sql.md) função. Para retornar informações de todas as partições do objeto proprietário, especifique NULL.  
   
  [ @data_compression=] '*data_compression*'  
- É o tipo de compactação a ser avaliado. *data_compression* pode ser um dos seguintes valores: NONE, linha ou página.  
+ É o tipo de compactação a ser avaliado. *data_compression* pode ser um dos seguintes valores: NONE, ROW ou PAGE.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -88,8 +88,8 @@ sp_estimate_data_compression_savings
 |-----------------|---------------|-----------------|  
 |object_name|**sysname**|Nome da tabela ou exibição indexada.|  
 |schema_name|**sysname**|Esquema da tabela ou exibição indexada.|  
-|index_id|**Int**|ID de um índice.<br /><br /> 0 = Heap<br /><br /> 1 = Índice clusterizado<br /><br /> > 1 = Índice não clusterizado|  
-|partition_number|**Int**|Número da partição. Retorna 1 para uma tabela ou índice não particionado.|  
+|index_id|**int**|ID de um índice.<br /><br /> 0 = Heap<br /><br /> 1 = Índice clusterizado<br /><br /> > 1 = Índice não clusterizado|  
+|partition_number|**int**|Número da partição. Retorna 1 para uma tabela ou índice não particionado.|  
 |size_with_current_compression_setting (KB)|**bigint**|Tamanho da tabela, índice ou partição solicitada como existe atualmente.|  
 |size_with_requested_compression_setting (KB)|**bigint**|Tamanho estimado da tabela, índice ou partição que usa a configuração da compactação solicitada e, se aplicável, o fator de preenchimento existente, supondo que não há nenhuma fragmentação.|  
 |sample_size_with_current_compression_setting (KB)|**bigint**|Tamanho do exemplo com a definição de compactação atual. Isso inclui qualquer fragmentação.|  

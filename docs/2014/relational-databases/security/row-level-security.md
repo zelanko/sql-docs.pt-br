@@ -15,16 +15,15 @@ helpviewer_keywords:
 - security [SQL Server], predicate based access control
 - predicate based security
 ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
-caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: eefc0764be46d8356dc1ac8e04b8025bf6119afd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 344497fea67a2bfdadf66095056ac9e909d945a2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37311268"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43017479"
 ---
 # <a name="row-level-security"></a>Segurança em nível de linha
   Segurança em nível de linha permite aos clientes controlar o acesso às linhas em uma tabela de banco de dados com base nas características do usuário executando uma consulta (por exemplo, associação a grupo ou contexto de execução). Segurança em nível de linha agora está disponível no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016. Consulte [Segurança em nível de linha](https://msdn.microsoft.com/library/dn765131.aspx) na documentação atual para obter a descrição atual desse recurso.  

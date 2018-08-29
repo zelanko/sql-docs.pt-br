@@ -20,20 +20,20 @@ helpviewer_keywords:
 - sp_replshowcmds
 ms.assetid: 199f5a74-e08e-4d02-a33c-b8ab0db20f44
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 74526c46a3758829a89c71d41c071070ec907d5f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4572fb1e09be2064fda17860ac64beb495783177
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32998683"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023425"
 ---
 # <a name="spreplshowcmds-transact-sql"></a>sp_replshowcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Retorna os comandos para transações marcadas para replicação em formato legível. **sp_replshowcmds** podem ser executados somente quando as conexões de cliente (incluindo a conexão atual) não estão lendo transações replicadas do log. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
+  Retorna os comandos para transações marcadas para replicação em formato legível. **sp_replshowcmds** pode ser executado apenas quando as conexões de cliente (incluindo a conexão atual) não estão lendo transações replicadas do log. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,7 +46,7 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
   
 ## <a name="arguments"></a>Argumentos  
  [ **@maxtrans** =] *maxtrans*  
- É o número de transações sobre as quais retornar informações. *maxtrans* é **int**, com um padrão de **1**, que especifica o número máximo de transações de replicação pendentes para o qual **sp_replshowcmds** Retorna informações.  
+ É o número de transações sobre as quais retornar informações. *maxtrans* está **int**, com um padrão de **1**, que especifica o número máximo de transações pendentes de replicação para o qual **sp_replshowcmds** Retorna informações.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  **sp_replshowcmds** é um procedimento de diagnóstico que retorna informações sobre o banco de dados de publicação do qual ele é executado.  
@@ -54,26 +54,26 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**xact_seqno**|**binary(10)**|Número de sequência do comando.|  
-|**originator_id**|**Int**|ID do originador do comando, sempre **0**.|  
-|**publisher_database_id**|**Int**|ID do banco de dados publicador, sempre **0**.|  
-|**article_id**|**Int**|ID do artigo.|  
-|**type**|**Int**|Tipo de comando.|  
+|**originator_id**|**int**|ID do originador do comando, sempre **0**.|  
+|**publisher_database_id**|**int**|ID do banco de dados publicador, sempre **0**.|  
+|**article_id**|**int**|ID do artigo.|  
+|**type**|**int**|Tipo de comando.|  
 |**command**|**nvarchar(1024)**|Comando [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
   
 ## <a name="remarks"></a>Remarks  
  **sp_replshowcmds** é usado em replicação transacional.  
   
- Usando **sp_replshowcmds**, você pode exibir transações atualmente não distribuídas (aquelas transações restantes no log de transações que não foram enviadas ao distribuidor).  
+ Usando o **sp_replshowcmds**, você pode exibir transações atualmente não distribuídas (aquelas transações permanecem no log de transações que não foram enviadas ao distribuidor).  
   
  Clientes que executam **sp_replshowcmds** e **sp_replcmds** dentro do mesmo banco de dados recebem erro 18752.  
   
- Para evitar esse erro, o primeiro cliente deve ser desconectado ou a função do cliente como o leitor de log deve ser liberada, executando **sp_replflush**. Depois que todos os clientes foram desconectados do log reader **sp_replshowcmds** podem ser executados com êxito.  
+ Para evitar esse erro, o primeiro cliente deve ser desconectado ou a função do cliente como o leitor de log deve ser liberada, executando **sp_replflush**. Depois que todos os clientes foram desconectados do log reader **sp_replshowcmds** pode ser executado com êxito.  
   
 > [!NOTE]  
 >  **sp_replshowcmds** deve ser executado apenas para solucionar problemas de replicação.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função de servidor fixa ou **db_owner** pode executar a função de banco de dados fixa **sp_replshowcmds**.  
+ Somente os membros dos **sysadmin** função de servidor fixa ou o **db_owner** banco de dados fixa podem executar **sp_replshowcmds**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Mensagens de erro](../../relational-databases/native-client-odbc-error-messages/error-messages.md)   

@@ -22,16 +22,15 @@ helpviewer_keywords:
 - sys.sp_cdc_disable_db
 - change data capture [SQL Server], disabling databases
 ms.assetid: 420fb99e-e60f-445b-b568-da96471f1e8f
-caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: cd6a97984889be0c7a9e8b9d9aca0a0eaf4a4a2a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 4b9b2c437c356b5e956f5658d76064930cb6887a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255814"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023221"
 ---
 # <a name="sysspcdcdisabledb-transact-sql"></a>sys.sp_cdc_disable_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,10 +51,10 @@ sys.sp_cdc_disable_db
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma  
+ None  
   
 ## <a name="remarks"></a>Remarks  
- **sp_cdc_disable_db** desabilita o change data capture para todas as tabelas no banco de dados atualmente habilitado. Todos os objetos do sistema relacionados à captura de dados de alteração, como tabelas de alteração, trabalhos, procedimentos armazenados e funções, serão descartados. O **is_cdc_enabled** coluna para a entrada do banco de dados no [sys. Databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) exibição do catálogo é definida como 0.  
+ **sp_cdc_disable_db** desabilita o change data capture para todas as tabelas no banco de dados habilitada no momento. Todos os objetos do sistema relacionados à captura de dados de alteração, como tabelas de alteração, trabalhos, procedimentos armazenados e funções, serão descartados. O **is_cdc_enabled** coluna para a entrada de banco de dados na [sys. Databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) exibição do catálogo é definida como 0.  
   
 > [!NOTE]  
 >  Se houver muitas instâncias de captura definidas para o banco de dados quando o Change Data Capture for desabilitado, uma transação demorada poderá provocar falha na execução do sys.sp_cdc_disable_db. Esse problema pode ser evitado desabilitando as instâncias de captura individuais usando sys.sp_cdc_disable_table antes de executar sys.sp_cdc_disable_db.  

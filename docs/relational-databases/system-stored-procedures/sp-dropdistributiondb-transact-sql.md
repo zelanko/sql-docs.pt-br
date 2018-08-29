@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_dropdistributiondb
 ms.assetid: b6dd1846-2259-4d29-93af-a70a5d25a0c5
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5b7dacdf22808f4bc3a4192a7adebafdd66eeb3d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6cf4ab210cfd94cfc2f35ec6adadb47fb47a184f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32989271"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038138"
 ---
 # <a name="spdropdistributiondb-transact-sql"></a>sp_dropdistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_dropdistributiondb [ @database= ] 'database'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@database=**] **'***banco de dados***'**  
- É o banco de dados a ser removido. *banco de dados* é **sysname**, sem padrão.  
+ É o banco de dados a ser removido. *banco de dados* está **sysname**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -64,7 +64,7 @@ sp_dropdistributiondb [ @database= ] 'database'
  [!code-sql[HowTo#sp_DropDistPub](../../relational-databases/replication/codesnippet/tsql/sp-dropdistributiondb-tr_1.sql)]  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** pode executar a função de servidor fixa **sp_dropdistributiondb**.  
+ Somente os membros dos **sysadmin** pode executar a função de servidor fixa **sp_dropdistributiondb**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Desabilitar a publicação e a distribuição](../../relational-databases/replication/disable-publishing-and-distribution.md)   

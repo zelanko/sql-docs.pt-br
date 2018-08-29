@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helpserver
 ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aa1a9a5841f5b43a6dea6f0650a7686f499b4965
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5252f299a0d542fe2f91f75d658ff63aec980712
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258588"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038629"
 ---
 # <a name="sphelpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,15 +47,15 @@ sp_helpserver [ [ @server = ] 'server' ]
   
 ## <a name="arguments"></a>Argumentos  
  [  **@server =** ] **'***server***'**  
- É o servidor sobre o qual as informações são relatadas. Quando *servidor* não for especificado, relatórios sobre todos os servidores em **Master.sys**. *servidor* é **sysname**, com um padrão NULL.  
+ É o servidor sobre o qual as informações são relatadas. Quando *server* não for especificado, relatórios sobre todos os servidores no **Servers**. *servidor* está **sysname**, com um padrão NULL.  
   
  [  **@optname =** ] **'***opção***'**  
- É a opção que descreve o servidor. *opção* é **varchar (** 35 **)**, com um padrão NULL, e deve ser um destes valores.  
+ É a opção que descreve o servidor. *opção* está **varchar (** 35 **)**, com um padrão de NULL, e deve ser um destes valores.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**compatível com agrupamento**|Afeta a execução da consulta distribuída nos servidores vinculados. Se esta opção for definida como verdadeira,|  
-|**Acesso a dados**|Habilita e desabilita um servidor vinculado para o acesso às consultas distribuídas.|  
+|**acesso a dados**|Habilita e desabilita um servidor vinculado para o acesso às consultas distribuídas.|  
 |**dist**|Distribuidor.|  
 |**dpub**|Editor remoto para este Distribuidor.|  
 |**validação de esquema lenta**|Ignora a verificação de esquema de tabelas remotas no início da consulta.|  
@@ -67,7 +67,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**usar agrupamento remoto**|Usa o agrupamento de uma coluna remota em vez do servidor local.|  
   
  [  **@show_topology =** ] **'***show_topology***'**  
- É a relação do servidor especificado com outros servidores. *show_topology* é **varchar (** 1 **)**, com um padrão NULL. Se *show_topology* não é igual a **t** ou for NULL, **sp_helpserver** retornará as colunas listadas na seção de conjuntos de resultados. Se *show_topology* é igual a **t**, além das colunas listadas nos conjuntos de resultados, **sp_helpserver** também retorna **topx** e **topy** informações.  
+ É a relação do servidor especificado com outros servidores. *show_topology* está **varchar (** 1 **)**, com um padrão NULL. Se *show_topology* não é igual a **t** ou for NULL, **sp_helpserver** retornará as colunas listadas na seção conjuntos de resultados. Se *show_topology* é igual a **t**, além das colunas listadas nos conjuntos de resultados, **sp_helpserver** também retorna **topx** e **topy** informações.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha).  
@@ -81,8 +81,8 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**status**|**varchar (** 70 **)**|Status do servidor.|  
 |**id**|**char (** 4 **)**|Número de identificação do servidor.|  
 |**collation_name**|**sysname**|Agrupamento do servidor.|  
-|**connect_timeout**|**Int**|O valor do tempo limite para conexão com um servidor vinculado.|  
-|**query_timeout**|**Int**|O valor do tempo limite para as consultas em servidor vinculado.|  
+|**connect_timeout**|**int**|O valor do tempo limite para conexão com um servidor vinculado.|  
+|**query_timeout**|**int**|O valor do tempo limite para as consultas em servidor vinculado.|  
   
 ## <a name="remarks"></a>Remarks  
  Um servidor pode ter mais de um status.  

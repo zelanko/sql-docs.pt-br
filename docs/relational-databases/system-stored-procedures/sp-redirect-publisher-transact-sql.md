@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_redirect_publisher
 ms.assetid: af45e2b2-57fb-4bcd-a58b-e61401fb3b26
 caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e8df59d709ef04d94626ac2ab6a3ba268d63ab76
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8085bbdea45ba9d537f110fb4979d29b8b72d04f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32999903"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022226"
 ---
 # <a name="spredirectpublisher-transact-sql"></a>sp_redirect_publisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -49,27 +49,27 @@ sp_redirect_publisher
   
 ## <a name="arguments"></a>Argumentos  
  [ **@original_publisher** =] **'***original_publisher***'**  
- O nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que publicou originalmente o banco de dados. *original_publisher* é **sysname**, sem padrão.  
+ O nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que publicou originalmente o banco de dados. *original_publisher* está **sysname**, sem padrão.  
   
  [ **@publisher_db** =] **'***publisher_db***'**  
- O nome do banco de dados que está sendo publicado. *publisher_db* é **sysname**, sem padrão.  
+ O nome do banco de dados que está sendo publicado. *publisher_db* está **sysname**, sem padrão.  
   
  [ **@redirected_publisher** =] **'***redirected_publisher***'**  
- O nome do ouvinte do grupo de disponibilidade associado ao grupo de disponibilidade que será o novo publicador. *redirected_publisher* é **sysname**, sem padrão. Quando o ouvinte do grupo de disponibilidade estiver configurado para a porta não padrão, especifique o número da porta junto com o nome do ouvinte, por exemplo, `'Listenername,51433'`  
+ O nome do ouvinte do grupo de disponibilidade associado ao grupo de disponibilidade que será o novo publicador. *redirected_publisher* está **sysname**, sem padrão. Quando o ouvinte do grupo de disponibilidade estiver configurado para a porta não padrão, especifique o número da porta junto com o nome do ouvinte, por exemplo, `'Listenername,51433'`  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma  
+ None  
   
 ## <a name="remarks"></a>Remarks  
- **sp_redirect_publisher** é usado para permitir que um publicador de replicação a ser redirecionado para a réplica primária atual de um grupo de disponibilidade AlwaysOn associando o par publicador/banco de dados com o ouvinte do grupo de disponibilidade. Executar **sp_redirect_publisher** depois que o ouvinte do AG foi configurado para o grupo de disponibilidade que contém o banco de dados publicado.  
+ **sp_redirect_publisher** é usado para permitir que um publicador de replicação seja redirecionado para a réplica primária atual de um grupo de disponibilidade AlwaysOn associando o par publicador/banco de dados com o ouvinte do grupo de disponibilidade. Execute **sp_redirect_publisher** depois que o ouvinte do AG for configurado para o grupo de disponibilidade que contém o banco de dados publicado.  
   
- Se o banco de dados de publicação no publicador original for removido de um grupo de disponibilidade na réplica primária, execute **sp_redirect_publisher** sem especificar um valor para o *@redirected_publisher* parâmetro para remover o redirecionamento para o par publicador/banco de dados. Para obter mais informações sobre o redirecionamento do publicador, consulte [mantendo um banco de dados de publicação AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md).  
+ Se o banco de dados de publicação no publicador original for removido de um grupo de disponibilidade na réplica primária, execute **sp_redirect_publisher** sem especificar um valor para o *@redirected_publisher* parâmetro a remover o redirecionamento para o par publicador/banco de dados. Para obter mais informações sobre como redirecionar o publicador quando, consulte [mantendo um banco de dados de publicação AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md).  
   
 ## <a name="permissions"></a>Permissões  
- Chamador deve ser um membro do **sysadmin** função de servidor fixa, o **db_owner** função fixa de banco de dados para o banco de dados de distribuição ou um membro de uma lista de acesso da publicação para uma publicação definida associado com o banco de dados do publicador.  
+ Chamador deve ser um membro do **sysadmin** função de servidor fixa, o **db_owner** função fixa de banco de dados para o banco de dados de distribuição ou membro de uma lista de acesso da publicação para uma publicação definida associado com o banco de dados do publicador.  
   
 ## <a name="see-also"></a>Consulte também  
  [Procedimentos armazenados de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   

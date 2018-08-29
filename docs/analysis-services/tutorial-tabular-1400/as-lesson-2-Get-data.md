@@ -1,6 +1,6 @@
 ---
 title: 'Lição 2 do tutorial de serviços de análise: obter dados | Microsoft Docs'
-ms.date: 05/08/2018
+ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9adeebfbd3c49761adb816a7d28472a61ffca5cc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ad1f5bc8fb59be05f10d476ccb3a66ea1c1747b9
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38007197"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43062207"
 ---
 # <a name="get-data"></a>Obter dados
 
@@ -22,7 +22,7 @@ ms.locfileid: "38007197"
 
 Nesta lição, você deve usar **obter dados** para se conectar ao banco de dados de amostra AdventureWorksDW, selecionar dados, visualizar e filtrar e, em seguida, importar para seu espaço de trabalho do modelo.  
   
-Ao usar obter dados, você pode importar dados de uma ampla variedade de fontes. Dados também podem ser consultados usando uma expressão de fórmula Power Query M ou um [expressão de consulta SQL nativa](../tabular-models/ssas-import-query.md).
+Nos bastidores, obter dados é o Power Query, que fornece um vasto conjunto de ferramentas para conectar-se ao e reformatar dados para análise e modelagem. Para obter mais informações, consulte [documentação do Power Query](https://docs.microsoft.com/power-query/). 
 
 > [!NOTE]
 > Tarefas e as imagens neste tutorial mostram como se conectar a um banco de dados AdventureWorksDW2014 em um servidor de local. Em alguns casos, um banco de dados do AdventureWorksDW no Azure SQL Data Warehouse pode mostrar diferentes objetos. No entanto, eles são basicamente os mesmos.

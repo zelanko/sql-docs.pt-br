@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_reinitpullsubscription
 ms.assetid: 7d9abe49-ce92-47f3-82c9-aea749518c91
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c1f044d6ae29565326b130e248e4e0e770ab8e60
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1ed19307a7a79856b808ade07338e2e8d595fdf4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32997073"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43018249"
 ---
 # <a name="spreinitpullsubscription-transact-sql"></a>sp_reinitpullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,14 +47,14 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publisher=**] **'***publicador***'**  
- É o nome do Publicador. *publicador* é **sysname**, sem padrão.  
+ [  **@publisher=**] **'***publisher***'**  
+ É o nome do Publicador. *Publisher* está **sysname**, sem padrão.  
   
  [  **@publisher_db=**] **'***publisher_db***'**  
- É o nome do banco de dados Publicador. *publisher_db* é **sysname**, sem padrão.  
+ É o nome do banco de dados Publicador. *publisher_db* está **sysname**, sem padrão.  
   
  [  **@publication=**] **'***publicação***'**  
- É o nome da publicação. *publicação* é **sysname**, com um padrão de all, que marca todas as assinaturas para reinicialização.  
+ É o nome da publicação. *publicação* está **sysname**, com um padrão de all, que marca todas as assinaturas para reinicialização.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -66,15 +66,15 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
   
  **sp_reinitpullsubscription** pode ser chamado do assinante para reinicializar a assinatura, durante a próxima execução do Distribution Agent.  
   
- Assinaturas para publicações criadas com um valor de **false** para **@immediate_sync** não podem ser reiniciadas no assinante.  
+ Assinaturas para publicações criadas com um valor de **falsos** para **@immediate_sync** não podem ser reiniciadas no assinante.  
   
- Você pode reinicializar uma assinatura pull executando **sp_reinitpullsubscription** no assinante ou **sp_reinitsubscription** no publicador.  
+ Você pode reinicializar uma assinatura pull executando qualquer um dos **sp_reinitpullsubscription** no assinante ou **sp_reinitsubscription** no publicador.  
   
 ## <a name="example"></a>Exemplo  
  [!code-sql[HowTo#sp_reinitpullsub](../../relational-databases/replication/codesnippet/tsql/sp-reinitpullsubscriptio_1.sql)]  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função de servidor fixa ou **db_owner** pode executar a função de banco de dados fixa **sp_reinitpullsubscription**.  
+ Somente os membros dos **sysadmin** função de servidor fixa ou o **db_owner** banco de dados fixa podem executar **sp_reinitpullsubscription**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Reinicializar uma assinatura](../../relational-databases/replication/reinitialize-a-subscription.md)   

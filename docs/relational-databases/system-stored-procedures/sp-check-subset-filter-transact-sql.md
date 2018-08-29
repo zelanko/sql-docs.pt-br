@@ -25,15 +25,15 @@ helpviewer_keywords:
 - sp_check_subset_filter
 ms.assetid: 525cfcfc-f317-478d-ba84-72e62285f160
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 29eb4ae1b96c8f9a116b221282ea4b293059b2c4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 33964ac01b09fe9a67a194fe62f37f34eb50d4cd
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32989951"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038726"
 ---
 # <a name="spchecksubsetfilter-transact-sql"></a>sp_check_subset_filter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,20 +53,20 @@ sp_check_subset_filter [ @filtered_table = ] 'filtered_table'
   
 ## <a name="arguments"></a>Argumentos  
  [ **@filtered_table**=] **'***filtered_table***'**  
- É o nome de uma tabela filtrada. *filtered_table* é **nvarchar (400)**, sem padrão.  
+ É o nome de uma tabela filtrada. *filtered_table* está **nvarchar (400)**, sem padrão.  
   
  [ **@subset_filterclause** =] **'***subset_filterclause***'**  
- É a cláusula de filtro que está sendo testada. *subset_filterclause* é **nvarchar (1000)**, sem padrão.  
+ É a cláusula de filtro que está sendo testada. *subset_filterclause* está **nvarchar (1000)**, sem padrão.  
   
  [ **@has_dynamic_filters**=] *has_dynamic_filters*  
- Especifica se a cláusula de filtro é um filtro de linha com parâmetros. *has_dynamic_filters* é **bit**, com um padrão de NULL e é um parâmetro de saída. Retorna um valor de **1** quando a cláusula de filtro é um filtro de linha com parâmetros.  
+ Especifica se a cláusula de filtro é um filtro de linha com parâmetros. *has_dynamic_filters* está **bit**, com um padrão de NULL e é um parâmetro de saída. Retorna um valor de **1** quando a cláusula de filtro é um filtro de linha com parâmetros.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**can_use_partition_groups**|**bit**|É se a publicação está qualificada para usar partições pré-computadas; onde **1** significa que partições pré-calculadas podem ser usadas, e **0** significa que eles não podem ser usados.|  
-|**has_dynamic_filters**|**bit**|Se a cláusula de filtro fornecida inclui pelo menos um filtro de linha com parâmetros. onde **1** significa que um filtro de linha com parâmetros é usado, e **0** significa que tal função não é usada.|  
+|**can_use_partition_groups**|**bit**|É se a publicação se qualifica para usar partições pré-computadas; em que **1** significa que as partições pré-calculadas podem ser usadas, e **0** significa que eles não podem ser usados.|  
+|**has_dynamic_filters**|**bit**|Se a cláusula de filtro fornecida inclui pelo menos um filtro de linha com parâmetros; em que **1** significa que um filtro de linha com parâmetros é usado, e **0** significa que tal função não é usada.|  
 |**dynamic_filters_function_list**|**nvarchar(500)**|Lista de funções na cláusula de filtro que filtra dinamicamente um artigo, onde cada função é separada por um ponto e vírgula.|  
 |**uses_host_name**|**bit**|Se o [HOST_NAME ()](../../t-sql/functions/host-name-transact-sql.md) função é usada na cláusula de filtro, onde **1** significa que essa função está presente.|  
 |**uses_suser_sname**|**bit**|Se o [suser_sname ()](../../t-sql/functions/suser-sname-transact-sql.md) função é usada na cláusula de filtro, onde **1** significa que essa função está presente.|  
@@ -80,7 +80,7 @@ sp_check_subset_filter [ @filtered_table = ] 'filtered_table'
  **sp_check_subset_filter** pode ser executado em qualquer tabela, mesmo se a tabela não for publicada. Esse procedimento armazenado pode ser usado para verificar uma cláusula de filtro antes de definir um artigo filtrado.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função de servidor fixa ou **db_owner** pode executar a função de banco de dados fixa **sp_check_subset_filter**.  
+ Somente os membros dos **sysadmin** função de servidor fixa ou **db_owner** banco de dados fixa podem executar **sp_check_subset_filter**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Otimizar o desempenho de filtro parametrizado com partições pré-computadas](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)  

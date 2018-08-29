@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_validatemergesubscription
 ms.assetid: d73ad03c-e5b3-4606-a0ee-7d75e12762a6
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2533df98905501a9253769200a56fb66a27a56d8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4d124c472a02f0a30cf73bb9597ebf934304e4a4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32999423"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023275"
 ---
 # <a name="spvalidatemergesubscription-transact-sql"></a>sp_validatemergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,16 +49,16 @@ sp_validatemergesubscription [@publication=] 'publication'
   
 ## <a name="arguments"></a>Argumentos  
  [**@publication=**] **'***publicação***'**  
- É o nome da publicação. *publicação* é **sysname**, sem padrão.  
+ É o nome da publicação. *publicação* está **sysname**, sem padrão.  
   
  [  **@subscriber=** ] **'***assinante***'**  
- É o nome do Assinante. *assinante* é **sysname**, sem padrão.  
+ É o nome do Assinante. *assinante* está **sysname**, sem padrão.  
   
  [  **@subscriber_db=** ] **'***subscriber_db***'**  
- É o nome do banco de dados de assinatura. *subscriber_db* é **sysname**, sem padrão.  
+ É o nome do banco de dados de assinatura. *subscriber_db* está **sysname**, sem padrão.  
   
  [  **@level=** ] *nível*  
- É o tipo de validação a ser executado. *nível de* é **tinyint**, sem padrão. O nível pode ser um destes valores:  
+ É o tipo de validação a ser executado. *nível* está **tinyint**, sem padrão. O nível pode ser um destes valores:  
   
 |Valor de nível|Description|  
 |-----------------|-----------------|  
@@ -73,7 +73,7 @@ sp_validatemergesubscription [@publication=] 'publication'
  **sp_validatemergesubscription** é usado em replicação de mesclagem.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função de servidor fixa ou **db_owner** pode executar a função de banco de dados fixa **sp_validatemergesubscription**.  
+ Somente os membros dos **sysadmin** função de servidor fixa ou o **db_owner** banco de dados fixa podem executar **sp_validatemergesubscription**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Procedimentos armazenados de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   

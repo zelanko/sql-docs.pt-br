@@ -21,15 +21,15 @@ helpviewer_keywords:
 - sys.server_event_notifications catalog view
 ms.assetid: 1a83a044-3130-4551-95ca-162525846ff5
 caps.latest.revision: 36
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7736946316131a6760d7bd9d9f2ab7b258b560ed
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 91e033b5931f00761cb79e208287c784cf3ecd5e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222117"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026517"
 ---
 # <a name="sysservereventnotifications-transact-sql"></a>sys.server_event_notifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,16 +39,16 @@ ms.locfileid: "33222117"
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome da notificação de eventos do servidor. É exclusivo em todas as notificações de eventos no nível do servidor.|  
-|**object_id**|**Int**|Número de identificação do objeto. É exclusivo dentro do **mestre** banco de dados.|  
+|**object_id**|**int**|Número de identificação do objeto. É exclusivo dentro de **mestre** banco de dados.|  
 |**parent_class**|**tinyint**|Classe do pai. Sempre é 100 = Servidor.|  
 |**parent_class_desc**|**nvarchar(60)**|Descrição de classe do pai. Sempre é SERVER.|  
-|**parent_id**|**Int**|Sempre é 0.|  
+|**parent_id**|**int**|Sempre é 0.|  
 |**create_date**|**datetime**|Data de criação.|  
 |**modify_date**|**datetime**|Data em que o objeto foi modificado pela última vez com o uso de uma instrução ALTER.|  
 |**service_name**|**nvarchar(256)**|Nome do serviço de destino para o qual a notificação é enviada.|  
 |**broker_instance**|**nvarchar(128)**|O agente de serviço no qual o serviço de destino nomeado está definido.|  
 |**creator_sid**|**varbinary(85)**|SID do logon que está executando a instrução que cria a notificação de eventos. NULL se WITH FAN_IN não estiver especificado na definição de notificação de eventos.|  
-|**principal_id**|**Int**|ID da entidade do servidor à qual isto pertence.|  
+|**principal_id**|**int**|ID da entidade do servidor à qual isto pertence.|  
   
 ## <a name="permissions"></a>Permissões  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

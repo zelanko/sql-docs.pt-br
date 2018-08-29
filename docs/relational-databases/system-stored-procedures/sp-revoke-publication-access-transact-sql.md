@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_revoke_publication_access
 ms.assetid: 84ed9e77-991f-4fa5-a21f-7c6bfec1b3e3
-caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 3b3dc5b01c23ca0bf504c92845f2083d1f640d5e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4db18f8ac085e3b01748dcc45e33300a6141f6d5
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996223"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036588"
 ---
 # <a name="sprevokepublicationaccess-transact-sql"></a>sp_revoke_publication_access (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +45,10 @@ sp_revoke_publication_access [ @publication = ] 'publication' , [ @login = ] 'lo
   
 ## <a name="arguments"></a>Argumentos  
  [  **@publication=**] **'***publicação***'**  
- É o nome da publicação a ser acessada. *publicação* é **sysname**, sem padrão.  
+ É o nome da publicação a ser acessada. *publicação* está **sysname**, sem padrão.  
   
- [  **@login=**] **'***login***'**  
- É a ID do logon. *logon* é **sysname**, sem padrão.  
+ [  **@login=**] **'***logon***'**  
+ É a ID do logon. *login* está **sysname**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -60,7 +59,7 @@ sp_revoke_publication_access [ @publication = ] 'publication' , [ @login = ] 'lo
  **sp_revoke_publication_access** pode ser chamado repetidamente.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função de servidor fixa ou **db_owner** pode executar a função de banco de dados fixa **sp_revoke_publication_access**.  
+ Somente os membros dos **sysadmin** função de servidor fixa ou o **db_owner** banco de dados fixa podem executar **sp_revoke_publication_access**.  
   
 ## <a name="see-also"></a>Consulte também  
  [sp_grant_publication_access &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)   

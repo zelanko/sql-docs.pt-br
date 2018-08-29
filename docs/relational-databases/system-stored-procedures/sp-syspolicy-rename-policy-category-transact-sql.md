@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_syspolicy_rename_policy_category
 ms.assetid: 8a9c4a3a-91e8-435e-b721-e0293c92be3e
-caps.latest.revision: 7
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c65326dd66c2c1efdcb8c4aaa989522b33acda21
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: a005fcbdc93035578b395fb82da57acbab4ee3e3
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259299"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022775"
 ---
 # <a name="spsyspolicyrenamepolicycategory-transact-sql"></a>sp_syspolicy_rename_policy_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,13 +45,13 @@ sp_syspolicy_rename_policy_category { [ @name = ] 'name' | [ @policy_category_id
   
 ## <a name="arguments"></a>Argumentos  
  [  **@name =** ] **'***nome***'**  
- É o nome da categoria de política que você deseja renomear. *nome* é **sysname**e deve ser especificado se *policy_category_id* é NULL.  
+ É o nome da categoria de política que você deseja renomear. *nome da* está **sysname**e deve ser especificado se *policy_category_id* é NULL.  
   
  [  **@policy_category_id=** ] *policy_category_id*  
- É o identificador da categoria de política que você deseja renomear. *policy_category_id* é **int**e deve ser especificado se *nome* é NULL.  
+ É o identificador da categoria de política que você deseja renomear. *policy_category_id* está **int**e deve ser especificado se *nome* é NULL.  
   
  [ **@new_name=** ] **'***new_name***'**  
- É o novo nome para a categoria de política. *Novo_nome* é **sysname**e é necessário. Não pode ser NULL ou uma cadeia de caracteres vazia.  
+ É o novo nome para a categoria de política. *new_name* está **sysname**e é necessária. Não pode ser NULL ou uma cadeia de caracteres vazia.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -66,7 +65,7 @@ sp_syspolicy_rename_policy_category { [ @name = ] 'name' | [ @policy_category_id
  Requer a associação à função de banco de dados fixa PolicyAdministratorRole.  
   
 > [!IMPORTANT]  
->  Possível elevação de credenciais: os usuários na função PolicyAdministratorRole podem criar gatilhos de servidor e agendar execuções de políticas que possam afetar a operação da instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Por exemplo, os usuários da função PolicyAdministratorRole podem criar uma política que impeça a criação da maioria dos objetos no [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Devido a essa possível elevação de credenciais, a função PolicyAdministratorRole deve ser concedida somente a usuários que sejam confiáveis com controle da configuração do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+>  Possível elevação de credenciais: os usuários na função PolicyAdministratorRole podem criar gatilhos de servidor e agendar execuções de políticas que possam afetar a operação da instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Por exemplo, os usuários da função PolicyAdministratorRole podem criar uma política que impeça a criação da maioria dos objetos no [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Devido a essa possível elevação de credenciais, a função PolicyAdministratorRole deve ser concedida somente para usuários que sejam confiáveis no controle da configuração do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo seguinte renomeia uma categoria de política chamada 'Test Category 1' para 'Test Category 2'.  

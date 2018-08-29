@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_log_shipping_primary_secondary
 ms.assetid: 23b3e100-5318-410e-b8f3-51c89b2dd777
-caps.latest.revision: 19
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0598d778953e96e8247c8011c5e41cbc03380bba
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 2ddbd6c115bcb620b3aaadd22d2293c681dc0c3a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33240696"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022620"
 ---
 # <a name="spaddlogshippingprimarysecondary-transact-sql"></a>sp_add_log_shipping_primary_secondary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,25 +47,25 @@ sp_add_log_shipping_primary_secondary
   
 ## <a name="arguments"></a>Argumentos  
  [ **@primary_database** =] '*primary_database*'  
- É o nome do banco de dados do servidor primário. *primary_database* é **sysname**, sem padrão.  
+ É o nome do banco de dados do servidor primário. *primary_database* está **sysname**, sem padrão.  
   
  [ **@secondary_server** =] '*secondary_server*',  
- É o nome do servidor secundário. *secondary_server* é **sysname**, sem padrão.  
+ É o nome do servidor secundário. *secondary_server* está **sysname**, sem padrão.  
   
  [ **@secondary_database** =] '*secondary_database*'  
- É o nome do banco de dados secundário. *secondary_database* é **sysname**, sem padrão.  
+ É o nome do banco de dados secundário. *secondary_database* está **sysname**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhum  
+ None  
   
 ## <a name="remarks"></a>Remarks  
  **sp_add_log_shipping_primary_secondary** deve ser executado a partir de **mestre** banco de dados no servidor primário.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função fixa de servidor pode executar esse procedimento.  
+ Somente os membros dos **sysadmin** função de servidor fixa pode executar esse procedimento.  
   
 ## <a name="examples"></a>Exemplos  
  Este exemplo ilustra o uso **sp_add_log_shipping_primary_secondary** para adicionar uma entrada para o banco de dados secundário **LogShipAdventureWorks** para o servidor secundário FLATIRON.  

@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helpdb
 ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
 caps.latest.revision: 37
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7961664bce12a2f1b73e8ca90c6cca11e1075d27
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 09dc7e451e5122600b0ea32222f6fa913c2716f8
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255130"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027700"
 ---
 # <a name="sphelpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
   
 ## <a name="arguments"></a>Argumentos  
  [ **@dbname=** ] **'***name***'**  
- É o nome do banco de dados cujas informações são reportadas. *nome* é **sysname**, sem padrão. Se *nome* não for especificado, **sp_helpdb** relatórios em todos os bancos de dados de **sys. Databases** exibição do catálogo.  
+ É o nome do banco de dados cujas informações são reportadas. *nome da* está **sysname**, sem padrão. Se *nome* não for especificado, **sp_helpdb** relatórios em todos os bancos de dados a **sys. Databases** exibição do catálogo.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -55,8 +55,8 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome do banco de dados.|  
-|**db_size**|**nvarchar(13)**|Tamanho total do banco de dados.|  
-|**proprietário**|**sysname**|Proprietário do banco de dados como **sa**.|  
+|**tamanho de BD**|**nvarchar(13)**|Tamanho total do banco de dados.|  
+|**Proprietário**|**sysname**|Banco de dados proprietário, como **sa**.|  
 |**dbid**|**smallint**|ID do banco de dados.|  
 |**created**|**nvarchar(11)**|A data em que o banco de dados foi criado.|  
 |**status**|**nvarchar(600)**|Lista de valores separados por vírgula de opções de banco de dados que estão atualmente definidas no banco de dados.<br /><br /> As opções avaliadas como boolianas serão listadas apenas se estiverem habilitadas. Opções não Boolianas são listadas com seus valores correspondentes na forma de *option_name*=*valor*.<br /><br /> Para obter mais informações, veja [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
@@ -71,17 +71,17 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |**filename**|**nchar(260)**|Nome do arquivo do -sistema operacional (nome do arquivo físico).|  
 |**filegroup**|**nvarchar(128)**|Grupo de arquivos ao qual o arquivo pertence.<br /><br /> NULL = ele é um arquivo de log. Ele nunca faz parte de um grupo de arquivos.|  
 |**size**|**nvarchar(18)**|Tamanho do arquivo em megabytes.|  
-|**MaxSize**|**nvarchar(18)**|Tamanho máximo até o qual o arquivo pode crescer. Um valor UNLIMITED neste campo indica que o arquivo cresce até o disco ficar cheio.|  
+|**tamanho máximo**|**nvarchar(18)**|Tamanho máximo até o qual o arquivo pode crescer. Um valor UNLIMITED neste campo indica que o arquivo cresce até o disco ficar cheio.|  
 |**growth**|**nvarchar(18)**|Incremento de crescimento do arquivo. Indica a quantidade de espaço adicionada ao arquivo sempre que um novo espaço for necessário.|  
-|**Uso**|**varchar (9)**|Uso do arquivo Para um arquivo de dados, o valor é **'dados'** e para o arquivo de log é o valor **'log apenas'**.|  
+|**Uso**|**varchar(9)**|Uso do arquivo Para um arquivo de dados, o valor será **'dados'** e para o arquivo de log é o valor **'log apenas'**.|  
   
 ## <a name="remarks"></a>Remarks  
- O **status** relatórios quais opções foram definidas como ON no banco de dados do conjunto de colunas no resultado. Todas as opções de banco de dados não são relatadas pelo **status** coluna. Para ver uma lista completa das configurações de opção de banco de dados atual, use o **sys. Databases** exibição do catálogo.  
+ O **status** quais opções foram definidas como ON no banco de dados de relatórios do conjunto de colunas no resultado. Todas as opções de banco de dados não são informadas por meio de **status** coluna. Para ver uma lista completa das configurações de opção de banco de dados atual, use o **sys. Databases** exibição do catálogo.  
   
 ## <a name="permissions"></a>Permissões  
- Quando um banco de dados for especificado, associação a **pública** função no banco de dados é necessária. Quando nenhum banco de dados é especificado, associação a **pública** função no **mestre** banco de dados é necessário.  
+ Quando um banco de dados é especificado, associação à **pública** função no banco de dados é necessária. Quando nenhum banco de dados for especificado, associação a **pública** função no **mestre** banco de dados é necessário.  
   
- Se um banco de dados não pode ser acessado, **sp_helpdb** exibe informações de 15622 e o máximo de mensagem de erro sobre o banco de dados possível.  
+ Se um banco de dados não pode ser acessado, **sp_helpdb** exibe informações de 15622 e de mensagem de erro sobre o banco de dados quanto possível.  
   
 ## <a name="examples"></a>Exemplos  
   

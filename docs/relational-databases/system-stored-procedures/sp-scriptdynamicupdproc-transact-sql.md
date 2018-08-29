@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_scriptdynamicupdproc
 ms.assetid: b4c18863-ed92-4aa2-a04f-7ed832fc9e07
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 707a4262c6d4ae31596d01c0194c7bc438af26ee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9158cc2bfb9a482a126a199fb7cbec801007ebe5
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32998915"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034664"
 ---
 # <a name="spscriptdynamicupdproc-transact-sql"></a>sp_scriptdynamicupdproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,19 +46,19 @@ sp_scriptdynamicupdproc [ @artid =] artid
   
 ## <a name="arguments"></a>Argumentos  
  [  **@artid=**] *artid*  
- É a ID do artigo. *artid* é **int**, sem padrão.  
+ É a ID do artigo. *artid* está **int**, sem padrão.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Retorna um conjunto de resultados que consiste em um único **nvarchar (4000)** coluna. O conjunto de resultados forma a instrução completa CREATE PROCEDURE usada para criar o procedimento armazenado personalizado.  
+ Retorna um conjunto de resultados que consiste em uma única **nvarchar (4000)** coluna. O conjunto de resultados forma a instrução completa CREATE PROCEDURE usada para criar o procedimento armazenado personalizado.  
   
 ## <a name="remarks"></a>Remarks  
  **sp_scriptdynamicupdproc** é usado em replicação transacional. A lógica de script MCALL padrão inclui todas as colunas da instrução UPDATE e usa um bitmap para determinar as colunas alteradas. Se uma coluna não foi alterada, será redefinida como ela mesma, o que geralmente não causa problemas. Se a coluna for indexada, ocorrerá processamento extra. A abordagem dinâmica só inclui as colunas que foram alteradas, o que fornece uma cadeia de caracteres UPDATE otimizada. Porém, processamento extra incorre em tempo de execução, quando a instrução UPDATE dinâmica é criada. Recomendamos que você teste as abordagens dinâmica e estática e depois escolha a melhor solução.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função de servidor fixa ou **db_owner** pode executar a função de banco de dados fixa **sp_scriptdynamicupdproc**.  
+ Somente os membros dos **sysadmin** função de servidor fixa ou **db_owner** banco de dados fixa podem executar **sp_scriptdynamicupdproc**.  
   
 ## <a name="examples"></a>Exemplos  
- Este exemplo cria um artigo (com *artid* definida como **1**) no **autores** tabela o **pubs** banco de dados e especifica que a atualização instrução é o procedimento personalizado para executar:  
+ Este exemplo cria um artigo (com *artid* definido como **1**) na **autores** na tabela a **pubs** de banco de dados e especifica que a atualização instrução é o procedimento personalizado a ser executado:  
   
 ```  
 'MCALL sp_mupd_authors'  

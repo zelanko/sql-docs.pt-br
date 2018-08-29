@@ -1,5 +1,5 @@
 ---
-title: sp_dropextendedproperty (Transact-SQL) | Microsoft Docs
+title: procedimento sp_addextendedproperty (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_dropextendedproperty
 ms.assetid: 4851865a-86ca-4823-991a-182dd1934075
 caps.latest.revision: 45
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 750b1df6bff427c2e5c4931ad3007a66ddbb1917
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 9652fbb73cb3efc8d2ddd562593e2c2b457ab0e2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258425"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023181"
 ---
 # <a name="spdropextendedproperty-transact-sql"></a>sp_dropextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,10 +56,10 @@ sp_dropextendedproperty
   
 ## <a name="arguments"></a>Argumentos  
  [ @name=] {'*property_name*'}  
- É o nome da propriedade a ser removida. *Property_Name* é **sysname** e não pode ser NULL.  
+ É o nome da propriedade a ser removida. *Property_Name* está **sysname** e não pode ser NULL.  
   
  [ @level0type=] {'*level0_object_type*'}  
- É o nome do tipo de objeto de nível 0 especificado. *level0_object_type* é **varchar (128)**, com um padrão NULL.  
+ É o nome do tipo de objeto de nível 0 especificado. *level0_object_type* está **varchar (128)**, com um padrão NULL.  
   
  As entradas válidas são ASSEMBLY, CONTRACT, EVENT NOTIFICATION, FILEGROUP, MESSAGE TYPE, PARTITION FUNCTION, PARTITION SCHEME, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, USER, TRIGGER, TYPE e NULL.  
   
@@ -67,19 +67,19 @@ sp_dropextendedproperty
 >  USER e TYPE como tipos de nível 0 serão removidos em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esses recursos em novo trabalho de desenvolvimento e planeje modificar os aplicativos que os usam atualmente. Use SCHEMA como o tipo de nível 0 em vez de USER. Para TYPE, use SCHEMA como o tipo de nível 0 e TYPE como o tipo de nível 1.  
   
  [ @level0name=] {'*level0_object_name*'}  
- É o nome do tipo de objeto de nível 0 especificado. *level0_object_name* é **sysname** com um padrão NULL.  
+ É o nome do tipo de objeto de nível 0 especificado. *level0_object_name* está **sysname** com um padrão NULL.  
   
  [ @level1type=] {'*level1_object_type*'}  
- É o tipo de objeto de nível 1. *level1_object_type* é **varchar (128)** com um padrão NULL. As entradas válidas são AGGREGATE, DEFAULT, FUNCTION, LOGICAL FILE NAME, PROCEDURE, QUEUE, RULE, SYNONYM, TABLE, TABLE_TYPE, TYPE, VIEW, XML SCHEMA COLLECTION e NULL.  
+ É o tipo de objeto de nível 1. *level1_object_type* está **varchar (128)** com um padrão NULL. As entradas válidas são AGGREGATE, DEFAULT, FUNCTION, LOGICAL FILE NAME, PROCEDURE, QUEUE, RULE, SYNONYM, TABLE, TABLE_TYPE, TYPE, VIEW, XML SCHEMA COLLECTION e NULL.  
   
  [ @level1name=] {'*level1_object_name*'}  
- É o nome do tipo de objeto de nível 1 especificado. *level1_object_name* é **sysname** com um padrão NULL.  
+ É o nome do tipo de objeto de nível 1 especificado. *level1_object_name* está **sysname** com um padrão NULL.  
   
  [ @level2type=] {'*level2_object_type*'}  
- É o tipo de objeto de nível 2. *level2_object_type* é **varchar (128)** com um padrão NULL. As entradas válidas são COLUMN, CONSTRAINT, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER e NULL.  
+ É o tipo de objeto de nível 2. *level2_object_type* está **varchar (128)** com um padrão NULL. As entradas válidas são COLUMN, CONSTRAINT, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER e NULL.  
   
  [ @level2name=] {'*level2_object_name*'}  
- É o nome do tipo de objeto de nível 2 especificado. *level2_object_name* é **sysname** com um padrão NULL.  
+ É o nome do tipo de objeto de nível 2 especificado. *level2_object_name* está **sysname** com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -87,7 +87,7 @@ sp_dropextendedproperty
 ## <a name="remarks"></a>Remarks  
  Com o propósito de especificar as propriedades estendidas, os objetos em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são classificados em três níveis: 0, 1 e 2. O nível 0 é o mais alto e é definido como objetos que estão contidos no escopo do banco de dados. Os objetos de nível 1 estão contidos em um esquema ou escopo de usuário e os objetos de nível 2 estão contidos pelos objetos de nível 1. As propriedades estendidas podem ser definidas para os objetos em qualquer um desses níveis. As referências a um objeto de um nível precisam ser qualificadas com os tipos e os nomes de todos os objetos de nível.  
   
- Dado um válido *property_name*, se todos os nomes e tipos de objeto forem nulos e a propriedade existir no banco de dados atual, essa propriedade será excluída. Veja o exemplo B a seguir, após este tópico.  
+ Dado um válido *property_name*, se todos os tipos de objeto e os nomes forem nulos e a propriedade existir no banco de dados atual, essa propriedade será excluída. Veja o exemplo B a seguir, após este tópico.  
   
 ## <a name="permissions"></a>Permissões  
  Os membros das funções de banco de dados fixa db_owner e db_ddladmin podem descartar propriedades estendidas de qualquer objeto com a seguinte exceção: db_ddladmin não pode adicionar propriedades ao banco de dados em si ou a usuários ou funções.  

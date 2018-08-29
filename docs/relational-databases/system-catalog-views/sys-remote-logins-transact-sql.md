@@ -20,16 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.remote_logins catalog view
 ms.assetid: 38477e91-d084-4df7-b1de-b930c5580189
-caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: df40db329851fbe931cb96f5b1aac99905d705c4
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7f4c403c86373043cd98ebec8121c696c384be4d
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33179502"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023974"
 ---
 # <a name="sysremotelogins-transact-sql"></a>sys.remote_logins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,9 +37,9 @@ ms.locfileid: "33179502"
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**server_id**|**Int**|ID do servidor em **sys**. Esse nome é fornecido pela conexão no servidor "remoto".|  
+|**server_id**|**int**|ID do servidor no **Servers**. Esse nome é fornecido pela conexão no servidor "remoto".|  
 |**remote_name**|**sysname**|Nome de logon que a conexão fornecerá para ser mapeada. Se for NULL, será usado o nome de logon que é especificado na conexão.|  
-|**local_principal_id**|**Int**|ID da entidade do servidor para quem o logon é mapeado. Se for 0, o logon remoto será mapeado para o logon com o mesmo nome.|  
+|**local_principal_id**|**int**|ID da entidade do servidor para quem o logon é mapeado. Se for 0, o logon remoto será mapeado para o logon com o mesmo nome.|  
 |**modify_date**|**datetime**|Data em que o logon vinculado foi alterado pela última vez.|  
   
 ## <a name="permissions"></a>Permissões  

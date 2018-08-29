@@ -22,16 +22,15 @@ helpviewer_keywords:
 - sys.sp_cdc_help_change_data_capture
 - sp_cdc_help_change_data_capture
 ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
-caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b1fd52d38d96f83c6be7c0a327fca797f934a466
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f29ac764c9d948d435765abd3d11d260cbd0d59c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263212"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027242"
 ---
 # <a name="sysspcdchelpchangedatacapture-transact-sql"></a>sys.sp_cdc_help_change_data_capture (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,18 +50,18 @@ sys.sp_cdc_help_change_data_capture
   
 ## <a name="arguments"></a>Argumentos  
  [ @source_schema =] '*source_schema*'  
- É o nome do esquema ao qual a tabela de origem pertence. *source_schema* é **sysname**, com um padrão NULL. Quando *source_schema* for especificado, *source_name* também deve ser especificado.  
+ É o nome do esquema ao qual a tabela de origem pertence. *source_schema* está **sysname**, com um padrão NULL. Quando *source_schema* for especificado, *source_name* também deve ser especificado.  
   
- Se não nulo, *source_schema* deve existir no banco de dados atual.  
+ Se não for nulo, *source_schema* deve existir no banco de dados atual.  
   
- Se *source_schema* não for nulo, *source_name* também deve ser não-nulo.  
+ Se *source_schema* não for nulo, *source_name* também deve ser não nulo.  
   
  [ @source_name =] '*source_name*'  
- É o nome da tabela de origem. *source_name* é **sysname**, com um padrão NULL. Quando *source_name* for especificado, *source_schema* também deve ser especificado.  
+ É o nome da tabela de origem. *source_name* está **sysname**, com um padrão NULL. Quando *source_name* for especificado, *source_schema* também deve ser especificado.  
   
- Se não nulo, *source_name* deve existir no banco de dados atual.  
+ Se não for nulo, *source_name* deve existir no banco de dados atual.  
   
- Se *source_name* não for nulo, *source_schema* também deve ser não-nulo.  
+ Se *source_name* não for nulo, *source_schema* também deve ser não nulo.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -74,8 +73,8 @@ sys.sp_cdc_help_change_data_capture
 |source_schema|**sysname**|Nome do esquema de tabela de origem.|  
 |source_table|**sysname**|Nome da tabela de origem.|  
 |capture_instance|**sysname**|Nome da instância de captura.|  
-|object_id|**Int**|ID da tabela de alteração associada à tabela de origem.|  
-|source_object_id|**Int**|ID da tabela de origem.|  
+|object_id|**int**|ID da tabela de alteração associada à tabela de origem.|  
+|source_object_id|**int**|ID da tabela de origem.|  
 |start_lsn|**binary(10)**|LSN (Número de Sequência de Log) representando o ponto de extremidade inferior para consulta da tabela de alteração.<br /><br /> NULL = o ponto de extremidade inferior não foi definido.|  
 |end_lsn|**binary(10)**|LSN representando o ponto de extremidade superior para consulta da tabela de alteração. No [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], esta coluna é sempre NULL.|  
 |supports_net_changes|**bit**|O suporte à alteração de rede está habilitado.|  
@@ -88,7 +87,7 @@ sys.sp_cdc_help_change_data_capture
 |captured_column_list|**nvarchar(max)**|Lista de colunas de origem capturadas.|  
   
 ## <a name="remarks"></a>Remarks  
- Quando ambos *source_schema* e *source_name* padrão como NULL ou são definidos explicitamente como NULL, esse procedimento armazenado retorna informações para todo o banco de dados de instâncias de captura que o chamador tem selecionar acesso. Quando *source_schema* e *source_name* são não NULL, somente informações sobre a tabela habilitada nomeada específica serão retornadas.  
+ Quando ambos *source_schema* e *source_name* padronizados como NULL ou são definidas explicitamente o NULL, esse procedimento armazenado retorna informações para todas as do banco de dados de instâncias de captura que o chamador tem selecionar acesso. Quando *source_schema* e *source_name* são não NULL, apenas informações sobre a tabela habilitada nomeada específica serão retornadas.  
   
 ## <a name="permissions"></a>Permissões  
  Quando *source_schema* e *source_name* forem nulos, a autorização do chamador determinará quais tabelas habilitadas serão incluídas no conjunto de resultados. Os chamadores devem ter a permissão SELECT em todas as colunas capturadas da instância de captura e também a associação em todas as funções associadas definidas para as informações sobre a tabela a serem incluídas. Os membros da função de banco de dados db_owner podem exibir informações sobre todas as instâncias de captura definidas. Quando informações para uma tabela habilitada específica são solicitadas, os mesmos critérios de associação e de SELECT são aplicados para a tabela nomeada.  

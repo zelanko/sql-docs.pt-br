@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_addlinkedsrvlogin
 ms.assetid: eb69f303-1adf-4602-b6ab-f62e028ed9f6
-caps.latest.revision: 41
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ce75eed42db1d03848b5ba905ce972b829596870
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 6f9afac01a491031a31a8fc96022d391bdb75659
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239476"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43035991"
 ---
 # <a name="spaddlinkedsrvlogin-transact-sql"></a>sp_addlinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,21 +48,21 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
   
 ## <a name="arguments"></a>Argumentos  
  [ @rmtsrvname **=** ] **'***rmtsrvname***'**  
- É o nome do servidor vinculado ao qual o mapeamento de logon se aplica. *rmtsrvname* é **sysname**, sem padrão.  
+ É o nome do servidor vinculado ao qual o mapeamento de logon se aplica. *rmtsrvname* está **sysname**, sem padrão.  
   
  [ @useself **=** ] **'** TRUE **'** | 'FALSE' | 'NULL'  
- Determina se conectem a *rmtsrvname* representar logons locais ou enviando explicitamente um logon e senha. O tipo de dados é **varchar (** 8 **)**, com um padrão de TRUE.  
+ Determina se é necessário se conectar ao *rmtsrvname* pela representação de logons locais ou envio explícito de um logon e senha. O tipo de dados é **varchar (** 8 **)**, com um padrão de TRUE.  
   
- Um valor TRUE Especifica que os logons usam suas próprias credenciais para se conectar ao *rmtsrvname*, com o *rmtuser* e *rmtpassword* argumentos que está sendo ignorados. FALSE Especifica que o *rmtuser* e *rmtpassword* argumentos são usados para se conectar ao *rmtsrvname* especificado *locallogin* . Se *rmtuser* e *rmtpassword* também está definido como NULL, nenhum logon ou a senha é usado para se conectar ao servidor vinculado.  
+ Um valor TRUE Especifica que os logons usam suas próprias credenciais para se conectar ao *rmtsrvname*, com o *rmtuser* e *rmtpassword* argumentos que está sendo ignorados. FALSE Especifica que o *rmtuser* e *rmtpassword* argumentos são usados para se conectar ao *rmtsrvname* especificado *locallogin* . Se *rmtuser* e *rmtpassword* também estiver definido como NULL, nenhum logon ou a senha será usada para se conectar ao servidor vinculado.  
   
  [ @locallogin **=** ] **'***locallogin***'**  
- É um logon no servidor local. *locallogin* é **sysname**, com um padrão NULL. NULL Especifica que esta entrada se aplica a todos os logons locais que se conectam ao *rmtsrvname*. Se não for NULL, *locallogin* pode ser um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon ou um logon do Windows. O logon do Windows deve ter acesso ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diretamente ou por meio de sua associação em um grupo do Windows com acesso.  
+ É um logon no servidor local. *locallogin* está **sysname**, com um padrão NULL. NULL Especifica que esta entrada se aplica a todos os logons locais que se conectam ao *rmtsrvname*. Se não for NULL, *locallogin* pode ser um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon ou um logon do Windows. O logon do Windows deve ter acesso ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diretamente ou por meio de sua associação em um grupo do Windows com acesso.  
   
  [ @rmtuser **=** ] **'***rmtuser***'**  
- É o logon remoto usado para se conectar ao *rmtsrvname* quando @useself é FALSE. Quando o servidor remoto é uma instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que não usa autenticação do Windows, *rmtuser* é um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon. *rmtuser* é **sysname**, com um padrão NULL.  
+ É o logon remoto usado para se conectar ao *rmtsrvname* quando @useself é FALSE. Quando o servidor remoto é uma instância de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usa a autenticação do Windows, *rmtuser* é um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon. *rmtuser* está **sysname**, com um padrão NULL.  
   
  [ @rmtpassword **=** ] **'***rmtpassword***'**  
- É a senha associada *rmtuser*. *rmtpassword* é **sysname**, com um padrão NULL.  
+ É a senha associada *rmtuser*. *rmtpassword* está **sysname**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -74,7 +73,7 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
 > [!NOTE]  
 >  Para criar os melhores planos de consulta quando você estiver usando uma tabela em um servidor vinculado, o processador de consulta deverá ter estatísticas de distribuição de dados do servidor vinculado. Usuários que limitaram permissões em qualquer coluna da tabela podem não ter permissões suficientes para obter todas as estatísticas úteis e podem receber um plano de consulta menos eficiente e de baixo desempenho. Se o servidor vinculado for uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], para obter todas as estatísticas disponíveis, o usuário deverá ser proprietário da tabela ou membro da função de servidor fixa sysadmin, da função de banco de dados fixa db_owner ou da função de banco de dados fixa db_ddladmin no servidor vinculado. O SQL Server 2012 SP1 altera as restrições de permissão para obter estatísticas e permite que usuários com permissão SELECT acessem as estatísticas disponíveis através de DBCC SHOW_STATISTICS. Para obter mais informações, consulte a seção de permissões de [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md).  
   
- O mapeamento padrão entre todos os logons no servidor local e os logons remotos no servidor vinculado é criado automaticamente com a execução de sp_addlinkedserver. O mapeamento padrão declara que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa as credenciais do usuário do logon local ao se conectar ao servidor vinculado em nome do logon. Isso é equivalente a executar sp_addlinkedsrvlogin com @useself definida como **true** para o servidor vinculado, sem especificar um nome de usuário local. Use sp_addlinkedsrvlogin somente para alterar o mapeamento padrão ou adicionar novos mapeamentos para logons locais específicos. Para excluir o mapeamento padrão ou qualquer outro mapeamento, use sp_droplinkedsrvlogin.  
+ O mapeamento padrão entre todos os logons no servidor local e os logons remotos no servidor vinculado é criado automaticamente com a execução de sp_addlinkedserver. O mapeamento padrão declara que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa as credenciais do usuário do logon local ao se conectar ao servidor vinculado em nome do logon. Isso é equivalente a executar sp_addlinkedsrvlogin com @useself definido como **verdadeiro** para o servidor vinculado, sem especificar um nome de usuário local. Use sp_addlinkedsrvlogin somente para alterar o mapeamento padrão ou adicionar novos mapeamentos para logons locais específicos. Para excluir o mapeamento padrão ou qualquer outro mapeamento, use sp_droplinkedsrvlogin.  
   
  Em vez de usar sp_addlinkedsrvlogin para criar um mapeamento de logon predeterminado, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode usar automaticamente as credenciais de segurança do Windows (nome de logon e senha do Windows) de um usuário que emite a consulta para se conectar a um servidor vinculado quando todas as condições a seguir existirem:  
   

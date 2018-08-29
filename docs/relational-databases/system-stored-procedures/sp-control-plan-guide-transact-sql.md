@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_control_plan_guide
 ms.assetid: c96d43d5-6507-4d66-b3f5-f44c0617cb5c
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9f7514e07f4a363072dc527827a858becab8dc0d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: dd0be5eaefe85082de07b9d815e836016407ee00
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238373"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038416"
 ---
 # <a name="spcontrolplanguide-transact-sql"></a>sp_control_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,13 +62,13 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
  Descarta o guia de plano especificado por *plan_guide_name*. Após um guia de plano ser descartado, as execuções futuras de uma consulta anteriormente equivalente ao guia de plano não serão influenciadas pelo guia de plano.  
   
  DROP ALL  
- Descarta todos os guias de plano no banco de dados atual. **N' * plan_guide_name* não pode ser especificado quando DROP ALL é especificado.  
+ Descarta todos os guias de plano no banco de dados atual. **N' * * * plan_guide_name* não pode ser especificado quando DROP ALL é especificado.  
   
  DISABLE  
  Desabilita o guia de plano especificado por *plan_guide_name*. Após um guia de plano ser desabilitado, as execuções futuras de uma consulta anteriormente equivalente ao guia de plano não serão influenciadas pelo guia de plano.  
   
  DISABLE ALL  
- Desabilita todos os guias de plano no banco de dados atual. **N' * plan_guide_name* não pode ser especificado quando DISABLE ALL é especificado.  
+ Desabilita todos os guias de plano no banco de dados atual. **N' * * * plan_guide_name* não pode ser especificado quando DISABLE ALL é especificado.  
   
  ENABLE  
  Permite que o guia de plano especificado por *plan_guide_name*. Um guia de plano pode ser vinculado a uma consulta elegível após ser habilitado. Por padrão, os guias de plano são habilitados no momento de sua criação.  
@@ -81,7 +81,7 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
   
  A desabilitação de um guia de plano desabilitado ou a habilitação de um guia de plano habilitado não tem nenhum efeito e ocorre sem erro.  
   
- Guias de planos não estão disponíveis em todas as edições do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Edições e recursos com suporte no SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). No entanto, você pode executar **sp_control_plan_guide** com a opção DROP ou DROP ALL em qualquer edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Os guias de planos não estão disponíveis em todas as edições do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Edições e recursos com suporte no SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). No entanto, você pode executar **sp_control_plan_guide** com a opção DROP ou DROP ALL em qualquer edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="permissions"></a>Permissões  
  Para executar **sp_control_plan_guide** em um guia de plano do tipo OBJECT (criado especificando  **@type ='** objeto **'** ) requer a permissão ALTER no objeto que é referenciado pelo guia de plano. Todos os outros guias de plano requerem permissão ALTER DATABASE.  

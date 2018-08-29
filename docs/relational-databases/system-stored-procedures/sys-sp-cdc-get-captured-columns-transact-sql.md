@@ -22,16 +22,15 @@ helpviewer_keywords:
 - sp_cdc_get_captured_columns
 - change data capture [SQL Server], querying metadata
 ms.assetid: d9e680be-ab9b-4e0c-b63a-90658f241df8
-caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b131dce10e231bc0ee479ff0157a614bcfb2d6f4
-ms.sourcegitcommit: fc3cd23685c6b9b6972d6a7bab2cc2fc5ebab5f2
+ms.openlocfilehash: a53411c8be883f65f511473415dfc0226b21dcf2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "34550577"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024141"
 ---
 # <a name="sysspcdcgetcapturedcolumns-transact-sql"></a>sys.sp_cdc_get_captured_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,9 +49,9 @@ sys.sp_cdc_get_captured_columns
   
 ## <a name="arguments"></a>Argumentos  
  [ @capture_instance =] '*capture_instance*'  
- É o nome da instância de captura associada à tabela de origem. *capture_instance* é **sysname** e não pode ser NULL.  
+ É o nome da instância de captura associada à tabela de origem. *capture_instance* está **sysname** e não pode ser NULL.  
   
- Para gerar relatórios sobre as instâncias de captura para a tabela, execute o [sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md) procedimento armazenado.  
+ Para gerar relatórios sobre as instâncias de captura para a tabela, execute as [sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md) procedimento armazenado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -65,17 +64,17 @@ sys.sp_cdc_get_captured_columns
 |source_table|**sysname**|Nome da tabela de origem.|  
 |capture_instance|**sysname**|Nome da instância de captura.|  
 |column_name|**sysname**|Nome da coluna de origem capturada.|  
-|column_id|**Int**|ID da coluna na tabela de origem.|  
-|column_ordinal|**Int**|Posição da coluna na tabela de origem.|  
+|column_id|**int**|ID da coluna na tabela de origem.|  
+|column_ordinal|**int**|Posição da coluna na tabela de origem.|  
 |data_type|**sysname**|Tipo de dados da coluna.|  
-|character_maximum_length|**Int**|Comprimento de máximo de caractere da coluna com base em caractere, caso contrário é NULL.|  
+|character_maximum_length|**int**|Comprimento de máximo de caractere da coluna com base em caractere, caso contrário é NULL.|  
 |NUMERIC_PRECISION|**tinyint**|Precisão da coluna com base numérica, caso contrário é NULL.|  
 |numeric_precision_radix|**smallint**|Precisão base da coluna com base numérica, caso contrário é NULL.|  
-|numeric_scale|**Int**|Escala coluna com base numérica, caso contrário é NULL.|  
+|numeric_scale|**int**|Escala coluna com base numérica, caso contrário é NULL.|  
 |datetime_precision|**smallint**|Precisão da coluna com base em data e hora, caso contrário é NULL.|  
   
 ## <a name="remarks"></a>Remarks  
- Use sys. sp_cdc_get_captured_columns para obter informações de coluna sobre as colunas capturadas retornadas ao consultar as funções de consulta da instância de captura [CDC. fn_cdc_get_all_changes_ < instância_de_captura >](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) ou [CDC. fn_cdc_get_net_changes_ < capture_instance >](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md). Os nomes de coluna, ID e posição permanecem constantes durante a duração da instância de captura. Somente o tipo de dados de coluna é alterado quando o tipo de dados da coluna de origem subjacente na tabela controlada é alterado. Colunas que são adicionadas ou removidas de uma tabela de origem não têm impacto sobre as colunas capturadas de instâncias de captura existente.  
+ Use sys. sp_cdc_get_captured_columns para obter informações de coluna sobre as colunas capturadas retornadas ao consultar as funções de consulta de instância de captura [CDC. fn_cdc_get_all_changes < capture_instance >](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) ou [CDC. fn_cdc_get_net_changes < capture_instance >](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md). Os nomes de coluna, ID e posição permanecem constantes durante a duração da instância de captura. Somente o tipo de dados de coluna é alterado quando o tipo de dados da coluna de origem subjacente na tabela controlada é alterado. As colunas que são adicionadas ou descartadas de uma tabela de origem não têm impacto sobre as colunas capturadas de instâncias de captura existente.  
   
  Use [sp_cdc_get_ddl_history](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md) para obter informações sobre a definição de dados instruções DDL (linguagem) aplicadas a uma tabela de origem. Qualquer mudança de DDL que modificou a estrutura de uma coluna de origem localizada é retornada no conjunto de resultados.  
   

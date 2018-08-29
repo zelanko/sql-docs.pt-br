@@ -21,36 +21,36 @@ helpviewer_keywords:
 - sys.server_audit_specification_details catalog view
 ms.assetid: 792724dc-402e-4b17-9f2c-029d910bf88e
 caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 349af9085b5ac0076d6fd5a97f2b440cec8c731b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: fe7eb914e4ccdf3142a7177710a204474d118d59
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33219647"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020113"
 ---
 # <a name="sysserverauditspecificationdetails-transact-sql"></a>sys.server_audit_specification_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Contém informações sobre os detalhes (ações) de especificação de auditoria de servidor em uma auditoria do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma instância de servidor. Para obter mais informações, veja [Auditoria do SQL Server &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md). Para obter uma lista de todos os audit_action_id e seus nomes, consultar [sys.DM audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md).  
+  Contém informações sobre os detalhes (ações) de especificação de auditoria de servidor em uma auditoria do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma instância de servidor. Para obter mais informações, veja [Auditoria do SQL Server &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md). Para obter uma lista de todos os audit_action_id e seus nomes, consultar [DM audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md).  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|server_specification_id|**Int**|ID da especificação do servidor de auditoria|  
-|audit_action_id|**Int**|ID da ação de auditoria|  
+|server_specification_id|**int**|ID da especificação do servidor de auditoria|  
+|audit_action_id|**int**|ID da ação de auditoria|  
 |audit_action_name|**sysname**|Nome do grupo ou nome da ação de auditoria|  
 |class|**tinyint**|Reservado|  
 |class_desc|**nvarchar(60)**|Reservado|  
-|major_id|**Int**|Reservado|  
-|minor_id|**Int**|Reservado|  
-|audited_principal_id|**Int**|Reservado|  
+|major_id|**int**|Reservado|  
+|minor_id|**int**|Reservado|  
+|audited_principal_id|**int**|Reservado|  
 |audited_result|**nvarchar(60)**|Resultado auditado:<br /><br /> - SUCCESS AND FAILURE<br /><br /> - SUCCESS<br /><br /> - FAILURE|  
 |is_group|**bit**|Se o objeto auditado é um grupo:<br /><br /> 0 – Não é um grupo<br /><br /> 1 – Grupo|  
   
 ## <a name="permissions"></a>Permissões  
- Entidades com o **ALTER ANY SERVER AUDIT** ou **VIEW ANY DEFINITION** permissão têm acesso a esta exibição do catálogo. Além disso, a entidade de segurança não deve ser negada **VIEW ANY DEFINITION** permissão.  
+ Entidades de segurança com o **ALTER ANY SERVER AUDIT** ou **VIEW ANY DEFINITION** permissão têm acesso a esta exibição do catálogo. Além disso, a entidade de segurança não deve ser negada **VIEW ANY DEFINITION** permissão.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

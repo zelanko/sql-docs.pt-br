@@ -19,20 +19,20 @@ helpviewer_keywords:
 - sp_cursorclose
 ms.assetid: d9b7b44d-cdff-456e-97df-7031a3b9beb6
 caps.latest.revision: 7
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bb3db5049ff370a9dccad98dd7e90efb2e346f0f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b1556ebbfd0f5e01cfccae734036122360e68944
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237122"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022002"
 ---
 # <a name="spcursorclose-transact-sql"></a>sp_cursorclose (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Fecha e desaloca o cursor, como também libera todos os recursos associados; ou seja, descarta a tabela temporária usada para oferecer suporte a KEYSET ou STATIC **cursor**. sp_cursorclose é invocado pela especificação de ID = 9 em um pacote de protocolo TDS de dados tabulares.  
+  Fecha e desaloca o cursor, como também libera todos os recursos associados; ou seja, descarta a tabela temporária usada para dar suporte a KEYSET ou STATIC **cursor**. sp_cursorclose é invocado pela especificação de ID = 9 em um pacote do protocolo TDS.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,13 +45,13 @@ sp_cursorclose cursor
   
 ## <a name="arguments"></a>Argumentos  
  *cursor*  
- É um cursor *tratar* valor gerado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e retornado pelo procedimento sp_cursoropen. *cursor* é um parâmetro obrigatório que chama uma **int** valor de entrada.  
+ É um cursor *manipular* valor gerado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e retornados pelo procedimento sp_cursoropen. *cursor* é um parâmetro obrigatório que chama uma **int** valor de entrada.  
   
 > [!NOTE]  
 >  Um valor de entrada -1 será aplicado a todos os cursores na conexão atual.  
   
 ## <a name="remarks"></a>Remarks  
- *cursor* retornará a mensagem de erro se o procedimento foi executado após o cursor for fechado ou se um identificador inválido for especificado.  
+ *cursor* retornará mensagens de erro se o procedimento foi executado após o cursor for fechado ou se um identificador inválido for especificado.  
   
  O status RPC indica êxito ou falha geral.  
   

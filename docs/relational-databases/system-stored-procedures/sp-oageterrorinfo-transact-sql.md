@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_OAGetErrorInfo
 ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
 caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b272cbcc6fc8221dede3b4a1274032926910186a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5bbb9231b96b26ee8c2a7cd23eef5c58a612e863
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260099"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036053"
 ---
 # <a name="spoageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,19 +49,19 @@ sp_OAGetErrorInfo [ objecttoken ]
   
 ## <a name="arguments"></a>Argumentos  
  *objecttoken*  
- É o token de objeto de um objeto OLE que foi criado anteriormente usando **sp_OACreate** ou é nulo. Se *objecttoken* for especificado, serão retornadas informações de erro para esse objeto. Se o NULL for especificado, serão retornadas as informações de erro para o lote inteiro.  
+ É o token de objeto de um objeto OLE que foi criado anteriormente usando **sp_OACreate** ou é NULL. Se *objecttoken* é especificado, serão retornadas informações de erro para esse objeto. Se o NULL for especificado, serão retornadas as informações de erro para o lote inteiro.  
   
- *origem* **saída**  
- É a origem das informações de erro. Se especificado, ele deve ser um local **char**, **nchar**, **varchar**, ou **nvarchar** variável. O valor de retorno é truncado para se ajustar à variável local se necessário.  
+ *código-fonte* **saída**  
+ É a origem das informações de erro. Se for especificado, ele deve ser um local **char**, **nchar**, **varchar**, ou **nvarchar** variável. O valor de retorno é truncado para se ajustar à variável local se necessário.  
   
  *Descrição* **saída**  
- É a descrição do erro. Se especificado, ele deve ser um local **char**, **nchar**, **varchar**, ou **nvarchar** variável. O valor de retorno é truncado para se ajustar à variável local se necessário.  
+ É a descrição do erro. Se for especificado, ele deve ser um local **char**, **nchar**, **varchar**, ou **nvarchar** variável. O valor de retorno é truncado para se ajustar à variável local se necessário.  
   
- *arquivo de Ajuda* **saída**  
- É o arquivo de ajuda para o objeto OLE. Se especificado, ele deve ser um local **char**, **nchar**, **varchar**, ou **nvarchar** variável. O valor de retorno é truncado para se ajustar à variável local se necessário.  
+ *HelpFile* **saída**  
+ É o arquivo de ajuda para o objeto OLE. Se for especificado, ele deve ser um local **char**, **nchar**, **varchar**, ou **nvarchar** variável. O valor de retorno é truncado para se ajustar à variável local se necessário.  
   
  *helpid* **saída**  
- É a ID de contexto do arquivo de ajuda. Se especificado, ele deve ser um local **int** variável.  
+ É a ID de contexto do arquivo de ajuda. Se for especificado, ele deve ser um local **int** variável.  
   
 > [!NOTE]  
 >  Os parâmetros deste procedimento armazenado são especificados por posição, não por nome.  
@@ -69,21 +69,21 @@ sp_OAGetErrorInfo [ objecttoken ]
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou um número diferente de zero (falha) que é o valor inteiro do HRESULT retornado pelo objeto de Automação OLE.  
   
- Para obter mais informações sobre códigos de retorno HRESULT, consulte [OLE Automation códigos de retorno e informações de erro](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
+ Para obter mais informações sobre códigos de retorno HRESULT, consulte [OLE automação códigos de retorno e informações de erro](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Se nenhum parâmetro de saída for especificado, as informações de erro serão retornadas ao cliente como um conjunto de resultados.  
   
 |Nomes de coluna|Tipo de dados|Description|  
 |------------------|---------------|-----------------|  
-|**Erro**|**binary (4)**|Representação binária do número do erro.|  
+|**Erro**|**binary(4)**|Representação binária do número do erro.|  
 |**Origem**|**nvarchar(nn)**|A origem do erro.|  
 |**Descrição**|**nvarchar(nn)**|Descrição do erro.|  
 |**Arquivo de ajuda**|**nvarchar(nn)**|Arquivo de ajuda para a origem.|  
-|**HelpID**|**Int**|ID de contexto de ajuda do arquivo de origem da Ajuda.|  
+|**HelpID**|**int**|ID de contexto de ajuda do arquivo de origem da Ajuda.|  
   
 ## <a name="remarks"></a>Remarks  
- Procedimento armazenado de cada chamada para uma automação OLE (exceto **sp_OAGetErrorInfo**) redefine as informações de erro; portanto, **sp_OAGetErrorInfo** obtém informações de erro somente para o OLE mais recente Chamada de procedimento armazenados de automação. Observe que, como **sp_OAGetErrorInfo** não redefine as informações de erro, ele pode ser chamado várias vezes para obter as mesmas informações de erro.  
+ Procedimento armazenado de cada chamada para uma automação OLE (exceto **sp_OAGetErrorInfo**) redefine as informações de erro; portanto, **sp_OAGetErrorInfo** obtém informações de erro somente para o OLE mais recente Chamada de procedimento armazenado de automação. Observe que, como **sp_OAGetErrorInfo** não redefine as informações de erro, ele pode ser chamado várias vezes para obter as mesmas informações de erro.  
   
  A tabela a seguir lista os erros de Automação OLE e suas causas comuns.  
   
@@ -97,7 +97,7 @@ sp_OAGetErrorInfo [ objecttoken ]
 |**Incompatibilidade de (tipos 0x80020005)**|O tipo de dados de uma variável local [!INCLUDE[tsql](../../includes/tsql-md.md)] usado para armazenar um valor de propriedade retornado ou um valor de retorno do método não correspondeu ao tipo de dados [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] do valor de retorno da propriedade ou do método. Ou, o valor de retorno de uma propriedade ou de um método foi solicitado, mas não é retornado.|  
 |**Tipo de dados ou valor do parâmetro 'context' de sp_OACreate é inválido (0x8004275B)**|O valor do parâmetro de contexto deveria ser: 1, 4 ou 5.|  
   
- Para obter mais informações sobre como processar códigos de retorno HRESULT, consulte [OLE Automation códigos de retorno e informações de erro](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
+ Para obter mais informações sobre como processar códigos de retorno HRESULT, consulte [OLE automação códigos de retorno e informações de erro](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
 ## <a name="permissions"></a>Permissões  
  Exige associação à função de servidor fixa **sysadmin** .  

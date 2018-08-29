@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_showrowreplicainfo
 ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: be0fcfb203c6f9e5fc72909930433926675c64f0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d9b56608d6ba26760a0a6da5e841f6ce38848774
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33003153"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028175"
 ---
 # <a name="spshowrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,16 +49,16 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
   
 ## <a name="arguments"></a>Argumentos  
  [ **@ownername**=] **'***ownername***'**  
- É o nome do proprietário da tabela. *ownername* é **sysname**, com um padrão NULL. Esse parâmetro é útil para diferenciar tabelas se um banco de dados contiver várias tabelas com o mesmo nome, mas cada tabela tiver um proprietário diferente.  
+ É o nome do proprietário da tabela. *ownername* está **sysname**, com um padrão NULL. Esse parâmetro é útil para diferenciar tabelas se um banco de dados contiver várias tabelas com o mesmo nome, mas cada tabela tiver um proprietário diferente.  
   
  [  **@tablename =**] **'***tablename***'**  
- É o nome da tabela que contém a linha para a qual as informações são retornadas. *TableName* é **sysname**, com um padrão NULL.  
+ É o nome da tabela que contém a linha para a qual as informações são retornadas. *TableName* está **sysname**, com um padrão NULL.  
   
  [  **@rowguid =**] *rowguid*  
- É o identificador exclusivo da linha. *ROWGUID* é **uniqueidentifier**, sem padrão.  
+ É o identificador exclusivo da linha. *ROWGUID* está **uniqueidentifier**, sem padrão.  
   
  [ **@show**=] **'***Mostrar***'**  
- Determina a quantidade de informações a serem retornadas no conjunto de resultados. *Mostrar* é **nvarchar (20)** com um padrão de ambos. Se **linha**, somente informações de versão de linha são retornadas. Se **colunas**, somente informações de versão de coluna são retornadas. Se **ambos**, linhas e as informações de coluna são retornadas.  
+ Determina a quantidade de informações a serem retornadas no conjunto de resultados. *Mostrar* está **nvarchar (20)** com um padrão de ambos. Se **linha**, somente informações de versão de linha são retornadas. Se **colunas**, somente informações de versão de coluna são retornadas. Se **ambos**, linhas e de informações da coluna são retornadas.  
   
 ## <a name="result-sets-for-row-information"></a>Conjuntos de resultado para informações de linha  
   
@@ -67,9 +67,9 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |**server_name**|**sysname**|Nome do servidor que hospeda o banco de dados que fez a entrada da versão de linha.|  
 |**DB_NAME**|**sysname**|Nome do banco de dados que fez essa entrada.|  
 |**db_nickname**|**binary(6)**|Apelido do banco de dados que fez essa entrada.|  
-|**version**|**Int**|Versão da entrada.|  
-|**current_state**|**nvarchar(9)**|Retorna informações sobre o estado atual da linha.<br /><br /> **y** -dados de linha representam o estado atual da linha.<br /><br /> **n** -dados de linha não representam o estado atual da linha.<br /><br /> **\<n / a >** : não aplicável.<br /><br /> **\<desconhecido >** -não é possível determinar o estado atual.|  
-|**rowversion_table**|**nchar(17)**|Indica se as versões de linha são armazenadas no [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) tabela ou o [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) tabela.|  
+|**version**|**int**|Versão da entrada.|  
+|**current_state**|**nvarchar(9)**|Retorna informações sobre o estado atual da linha.<br /><br /> **y** -dados de linha representam o estado atual da linha.<br /><br /> **n** -dados de linha não representam o estado atual da linha.<br /><br /> **\<n/a >** – não aplicável.<br /><br /> **\<desconhecido >** -não é possível determinar o estado atual.|  
+|**rowversion_table**|**nchar(17)**|Indica se as versões de linha são armazenadas do [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) tabela ou o [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) tabela.|  
 |**comment**|**nvarchar(255)**|Informações adicionais sobre essa entrada de versão de linha. Geralmente, esse campo fica vazio.|  
   
 ## <a name="result-sets-for-column-information"></a>Conjuntos de resultado para informações de coluna  
@@ -79,18 +79,18 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |**server_name**|**sysname**|Nome do servidor que hospeda o banco de dados que fez a entrada da versão da coluna.|  
 |**DB_NAME**|**sysname**|Nome do banco de dados que fez essa entrada.|  
 |**db_nickname**|**binary(6)**|Apelido do banco de dados que fez essa entrada.|  
-|**version**|**Int**|Versão da entrada.|  
+|**version**|**int**|Versão da entrada.|  
 |**colName**|**sysname**|Nome da coluna de artigo que a entrada de versão da coluna representa.|  
 |**comment**|**nvarchar(255)**|Informações adicionais sobre essa entrada de versão de coluna. Geralmente, esse campo fica vazio.|  
   
 ## <a name="result-set-for-both"></a>Conjunto de resultados para ambas  
- Se o valor **ambos** é escolhido para *Mostrar*, linha e coluna conjuntos de resultados será retornado.  
+ Se o valor **ambos** é escolhido para *Mostrar*, linha e coluna de conjuntos de resultados será retornado.  
   
 ## <a name="remarks"></a>Remarks  
  **sp_showrowreplicainfo** é usado em replicação de mesclagem.  
   
 ## <a name="permissions"></a>Permissões  
- **sp_showrowreplicainfo** só pode ser executado por membros do **db_owner** função de banco de dados fixa no banco de dados de publicação ou por membros da lista de acesso à publicação (PAL) no banco de dados de publicação.  
+ **sp_showrowreplicainfo** só pode ser executado por membros dos **db_owner** função de banco de dados fixa do banco de dados de publicação ou por membros da lista de acesso de publicação (PAL) o banco de dados de publicação.  
   
 ## <a name="see-also"></a>Consulte também  
  [Detectar e resolver conflitos de replicação de mesclagem](../../relational-databases/replication/merge/advanced-merge-replication-resolve-merge-replication-conflicts.md)   

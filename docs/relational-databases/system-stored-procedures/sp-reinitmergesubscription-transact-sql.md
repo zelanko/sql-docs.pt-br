@@ -20,20 +20,20 @@ helpviewer_keywords:
 - sp_reinitmergesubscription
 ms.assetid: 249a4048-e885-48e0-a92a-6577f59de751
 caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: be5906700c4a1ced7b6977923bfa5d63e4678401
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cdc3c0e9444b3f17f9b9fb1195354fb9181f07cb
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32998253"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43017962"
 ---
 # <a name="spreinitmergesubscription-transact-sql"></a>sp_reinitmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Marca uma assinatura de mesclagem para reinicialização na próxima execução do Agente de Mesclagem. Esse procedimento armazenado é executado no publicador do banco de dados de publicação.  
+  Marca uma assinatura de mesclagem para reinicialização na próxima execução do Agente de Mesclagem. Esse procedimento armazenado é executado no publicador no banco de dados de publicação.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,16 +49,16 @@ sp_reinitmergesubscription [ [ @publication = ] 'publication'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@publication =** ] **'***publicação***'**  
- É o nome da publicação. *publicação* é **sysname**, com um padrão de **todos os**.  
+ É o nome da publicação. *publicação* está **sysname**, com um padrão de **todos os**.  
   
  [  **@subscriber =** ] **'***assinante***'**  
- É o nome do Assinante. *assinante* é **sysname**, com um padrão de **todos os**.  
+ É o nome do Assinante. *assinante* está **sysname**, com um padrão de **todos os**.  
   
  [  **@subscriber_db =** ] **'***subscriber_db***'**  
- É o nome do banco de dados do Assinante. *subscriber_db* é **sysname**, com um padrão de **todos os**.  
+ É o nome do banco de dados do Assinante. *subscriber_db* está **sysname**, com um padrão de **todos os**.  
   
  [  **@upload_first =** ] **'***upload_first***'**  
- Especifica se as alterações no Assinante são carregadas antes da assinatura ser reinicializada. *upload_first* é **nvarchar (5)**, com um padrão de FALSE. Se **true**, as alterações são carregadas antes que a assinatura seja reiniciada. Se **false**, as alterações não são carregadas.  
+ Especifica se as alterações no Assinante são carregadas antes da assinatura ser reinicializada. *upload_first* está **nvarchar (5)**, com um padrão de FALSE. Se **verdadeira**, as alterações são carregadas antes que a assinatura seja reiniciada. Se **falsos**, as alterações não são carregadas.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -66,7 +66,7 @@ sp_reinitmergesubscription [ [ @publication = ] 'publication'
 ## <a name="remarks"></a>Remarks  
  **sp_reinitmergesubscription** é usado em replicação de mesclagem.  
   
- **sp_reinitmergesubscription** pode ser chamado do publicador para reinicializar assinaturas de mesclagem. Recomendamos reexecutar o Agente de Instantâneo também.  
+ **sp_reinitmergesubscription** pode ser chamado do publicador ao reinicializar assinaturas de mesclagem. Recomendamos reexecutar o Agente de Instantâneo também.  
   
  Se você adicionar, descartar ou alterar um filtro com parâmetros, as alterações pendentes no Assinante não poderão ser carregadas no Publicador durante a reinicialização. Para carregar alterações pendentes, sincronize todas as assinaturas antes de alterar o filtro.  
   
@@ -77,7 +77,7 @@ sp_reinitmergesubscription [ [ @publication = ] 'publication'
  [!code-sql[HowTo#sp_reinitmergepushsubwithupload](../../relational-databases/replication/codesnippet/tsql/sp-reinitmergesubscripti_2.sql)]  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função de servidor fixa ou **db_owner** pode executar a função de banco de dados fixa **sp_reinitmergesubscription**.  
+ Somente os membros dos **sysadmin** função de servidor fixa ou o **db_owner** banco de dados fixa podem executar **sp_reinitmergesubscription**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Reinicializar as assinaturas](../../relational-databases/replication/reinitialize-subscriptions.md)   

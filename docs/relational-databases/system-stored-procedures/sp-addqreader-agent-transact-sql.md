@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addqreader_agent
 ms.assetid: dc9f591a-e67e-4ba8-bf47-defd5eda0822
-caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d89800f8eeaa7c960b636f93555009cbc87c028f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d3e67683fe75f555b58acf09cb2b1bee939d7151
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32990661"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034707"
 ---
 # <a name="spaddqreaderagent-transact-sql"></a>sp_addqreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,16 +48,16 @@ sp_addqreader_agent [ @job_login = ] 'job_login'
   
 ## <a name="arguments"></a>Argumentos  
  [ **@job_login**=] **'***job_login***'**  
- É o logon da conta do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows na qual o agente é executado. *job_login* é **nvarchar (257)**, sem padrão. Essa conta do Windows sempre é usada para conexões de agente com o Distribuidor.  
+ É o logon da conta do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows na qual o agente é executado. *job_login* está **nvarchar(257)**, sem padrão. Essa conta do Windows sempre é usada para conexões de agente com o Distribuidor.  
   
  [ **@job_password**=] **'***job_password***'**  
- É a senha da conta do Windows na qual o agente é executado. *job_password* é **sysname**, sem padrão.  
+ É a senha da conta do Windows na qual o agente é executado. *job_password* está **sysname**, sem padrão.  
   
 > [!IMPORTANT]  
 >  Não armazene informações de autenticação em arquivos de script. Para melhor segurança, nomes de logon e senhas devem ser fornecidos em tempo de execução.  
   
  [ **@job_name**=] **'***job_name***'**  
- É o nome de um trabalho de agente existente. *job_name* é **sysname**, com um valor padrão de NULL. Esse parâmetro só é especificado quando o agente é criado usando um trabalho existente em vez de um trabalho recém-criado (o padrão).  
+ É o nome de um trabalho de agente existente. *job_name* está **sysname**, com um valor padrão de NULL. Esse parâmetro só é especificado quando o agente é criado usando um trabalho existente em vez de um trabalho recém-criado (o padrão).  
   
  [  **@frompublisher=** ] *frompublisher*  
  Especifica se o procedimento está sendo executado no publicador. *frompublisher* é bit, com um valor padrão de **0**. Um valor de **1** significa que o procedimento está sendo executado no publicador do banco de dados de publicação.  
@@ -69,12 +68,12 @@ sp_addqreader_agent [ @job_login = ] 'job_login'
 ## <a name="remarks"></a>Remarks  
  **sp_addqreader_agent** é usado em replicação transacional.  
   
- **sp_addqreader_agent** deve ser executado pelo menos uma vez em um distribuidor que dá suporte à atualização enfileirada após [sp_adddistributiondb](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md) mas antes [sp_addpublication](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md).  
+ **sp_addqreader_agent** deve ser executado pelo menos uma vez em um distribuidor que dá suporte à atualização enfileirada após [sp_adddistributiondb](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md) , mas antes [sp_addpublication](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md).  
   
- O trabalho do Queue Reader Agent é removido quando você executar [sp_dropdistributiondb](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md).  
+ O trabalho do Queue Reader Agent é removido quando você executa [sp_dropdistributiondb](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md).  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** pode executar a função de servidor fixa **sp_addqreader_agent**.  
+ Somente os membros dos **sysadmin** pode executar a função de servidor fixa **sp_addqreader_agent**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Habilitar atualização de assinaturas para publicações transacionais](../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)   

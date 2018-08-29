@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_droplinkedsrvlogin
 ms.assetid: 75a4a040-72d5-4d29-8304-de0aa481ad4b
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2e33633f7ac76fd58db3fba0da141d426de14e97
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 6e85ed0511ea1986bc19f46903513dfd8a5bc2c1
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254393"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021007"
 ---
 # <a name="spdroplinkedsrvlogin-transact-sql"></a>sp_droplinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,20 +46,20 @@ sp_droplinkedsrvlogin [ @rmtsrvname= ] 'rmtsrvname' ,
   
 ## <a name="arguments"></a>Argumentos  
  [  **@rmtsrvname =** ] **'***rmtsrvname***'**  
- É o nome de um servidor vinculado que a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mapeamento de logon se aplica. *rmtsrvname* é **sysname**, sem padrão. *rmtsrvname* já deve existir.  
+ É o nome de um servidor vinculado que a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mapeamento de logon se aplica. *rmtsrvname* está **sysname**, sem padrão. *rmtsrvname* já deve existir.  
   
  [  **@locallogin =** ] **'***locallogin***'**  
- É o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon no servidor local que tem um mapeamento para o servidor vinculado *rmtsrvname*. *locallogin* é **sysname**, sem padrão. Um mapeamento para *locallogin* para *rmtsrvname* já deve existir. Se for NULL, o mapeamento padrão criado pelo **sp_addlinkedserver**, que mapeia todos os logons no servidor local para logons no servidor vinculado, é excluído.  
+ É o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login no servidor local que tem um mapeamento para o servidor vinculado *rmtsrvname*. *locallogin* está **sysname**, sem padrão. Um mapeamento para *locallogin* à *rmtsrvname* já deve existir. Se for NULL, o mapeamento padrão criado pelo **sp_addlinkedserver**, que mapeia todos os logons no servidor local para os logons no servidor vinculado, é excluído.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
 ## <a name="remarks"></a>Remarks  
- Quando o mapeamento existente para um logon é excluído, o servidor local usa o mapeamento padrão criado pelo **sp_addlinkedserver** quando ele se conecta ao servidor vinculado em nome de logon. Para alterar o mapeamento padrão, use **sp_addlinkedsrvlogin**.  
+ Quando o mapeamento existente para um logon é excluído, o servidor local usa o mapeamento padrão criado pelo **sp_addlinkedserver** quando ele se conecta ao servidor vinculado em nome daquele logon. Para alterar o mapeamento padrão, use **sp_addlinkedsrvlogin**.  
   
- Se o mapeamento padrão também é excluído, apenas os logons que tenham recebidos explicitamente um mapeamento de logon para o servidor vinculado, usando **sp_addlinkedsrvlogin**, pode acessar o servidor vinculado.  
+ Se o mapeamento padrão também é excluído, apenas os logons que explicitamente receberam um mapeamento de logon para o servidor vinculado, usando **sp_addlinkedsrvlogin**, pode acessar o servidor vinculado.  
   
- **sp_droplinkedsrvlogin** não pode ser executado em uma transação definida pelo usuário.  
+ **sp_droplinkedsrvlogin** não pode ser executado de dentro de uma transação definida pelo usuário.  
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão ALTER ANY LOGIN no servidor.  

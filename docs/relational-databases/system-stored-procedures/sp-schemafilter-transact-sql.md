@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_schemafilter
 ms.assetid: 199e869b-2cd2-44ee-b2ee-69edb06a1bc4
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ce33fa1ffb73f3ba663eb9ec7fedf0e13d5ec8e7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4da23d87736d7ad9af4c00c5f4704e9cbbdd5160
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32997513"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027030"
 ---
 # <a name="spschemafilter-transact-sql"></a>sp_schemafilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,16 +47,16 @@ sp_schemafilter [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [**@publisher** =] **'***publicador***'**  
- É o nome do não[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *publicador* é **sysname**, sem padrão.  
+ [**@publisher** =] **'***publisher***'**  
+ É o nome de não[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, sem padrão.  
   
  [**@schema** =] **'***esquema***'**  
- É o nome do esquema. *esquema* é **sysname**, com um valor padrão de NULL.  
+ É o nome do esquema. *esquema* está **sysname**, com um valor padrão de NULL.  
   
  [**@operation** =] **'***operação***'**  
- É a ação a ser executada neste esquema. *operação* é **nvarchar (4)**, e pode ser um dos valores a seguir.  
+ É a ação a ser executada neste esquema. *operação* está **nvarchar(4)**, e pode ser um dos valores a seguir.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**add**|Adiciona o esquema especificado à lista de esquemas não qualificados para publicação.|  
 |**drop**|Descarta o esquema especificado na lista de esquemas não qualificados para publicação.|  
@@ -75,7 +75,7 @@ sp_schemafilter [ @publisher = ] 'publisher'
  **sp_schemafilter** só deve ser usado para Publicadores heterogêneos.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** pode executar a função de servidor fixa no distribuidor **sp_schemafilter**.  
+ Somente os membros dos **sysadmin** função de servidor fixa no distribuidor pode executar **sp_schemafilter**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Procedimentos armazenados de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

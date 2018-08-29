@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpmergedeleteconflictrows
 ms.assetid: 222be651-5690-4341-9dfb-f9ec1d80c970
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a624b6ef69048375b671112f138d3f2ed7477604
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e8bb0cf7dfa6b5eb44a7d30320f1beb0f90fbca7
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32997093"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025654"
 ---
 # <a name="sphelpmergedeleteconflictrows-transact-sql"></a>sp_helpmergedeleteconflictrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,13 +49,13 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
   
 ## <a name="arguments"></a>Argumentos  
  [  **@publication=**] **'***publicação***'**  
- É o nome da publicação. *publicação* é **sysname**, com um padrão de **%**. Se a publicação for especificada, serão retornados todos os conflitos qualificados pela publicação.  
+ É o nome da publicação. *publicação* está **sysname**, com um padrão de **%**. Se a publicação for especificada, serão retornados todos os conflitos qualificados pela publicação.  
   
  [  **@source_object=**] **'***source_object***'**  
- É o nome do objeto de origem. *source_object* é **nvarchar (386)**, com um padrão NULL.  
+ É o nome do objeto de origem. *source_object* está **nvarchar(386)**, com um padrão NULL.  
   
- [  **@publisher=**] **'***publicador***'**  
- É o nome do publicador. *publicador* é **sysname**, com um padrão NULL.  
+ [  **@publisher=**] **'***publisher***'**  
+ É o nome do publicador. *publisher* é **sysname**, com um padrão NULL.  
   
  [  **@publisher_db=**] **'***publisher_db***'**  
  É o nome do banco de dados publicador. *publisher_db* é **sysname**, com um padrão NULL.  
@@ -66,7 +66,7 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
 |-----------------|---------------|-----------------|  
 |**source_object**|**nvarchar(386)**|Objeto de origem para o conflito de exclusão.|  
 |**ROWGUID**|**uniqueidentifier**|Identificador de linha para o conflito de exclusão.|  
-|**conflict_type**|**Int**|Código que indica tipo de conflito:<br /><br /> **1** = UpdateConflict: conflito é detectado no nível de linha.<br /><br /> **2** = ColumnUpdateConflict: conflito detectado no nível de coluna.<br /><br /> **3** = UpdateDeleteWinsConflict: exclusão ganha o conflito.<br /><br /> **4** = UpdateWinsDeleteConflict: O rowguid excluído que perde o conflito é registrado nessa tabela.<br /><br /> **5** = UploadInsertFailed: inserção do assinante não puderam ser aplicada no publicador.<br /><br /> **6** = DownloadInsertFailed: a inserção do publicador não pôde ser aplicada no assinante.<br /><br /> **7** = UploadDeleteFailed: exclusão no assinante não pôde ser carregada no publicador.<br /><br /> **8** = DownloadDeleteFailed: exclusão no publicador não pôde ser baixada no assinante.<br /><br /> **9** = UploadUpdateFailed: atualização do assinante não puderam ser aplicada no publicador.<br /><br /> **10** = DownloadUpdateFailed: atualização do publicador não pôde ser aplicada ao assinante.|  
+|**conflict_type**|**int**|Código que indica tipo de conflito:<br /><br /> **1** = UpdateConflict: conflito é detectado no nível de linha.<br /><br /> **2** = ColumnUpdateConflict: conflito detectado no nível de coluna.<br /><br /> **3** = UpdateDeleteWinsConflict: exclusão ganha o conflito.<br /><br /> **4** = UpdateWinsDeleteConflict: O rowguid excluído que perde o conflito é registrado nessa tabela.<br /><br /> **5** = UploadInsertFailed: a inserção do assinante não pôde ser aplicada no publicador.<br /><br /> **6** = DownloadInsertFailed: a inserção do publicador não pôde ser aplicada no assinante.<br /><br /> **7** = UploadDeleteFailed: a exclusão no assinante não pôde ser carregada no publicador.<br /><br /> **8** = DownloadDeleteFailed: a exclusão no publicador não pôde ser baixada no assinante.<br /><br /> **9** = UploadUpdateFailed: atualização do assinante não puderam ser aplicada no publicador.<br /><br /> **10** = DownloadUpdateFailed: atualização do publicador não pôde ser aplicada ao assinante.|  
 |**reason_code**|**Int**|Código de erro que pode ser sensível ao contexto.|  
 |**reason_text**|**varchar(720)**|Descrição de erro que pode ser sensível ao contexto.|  
 |**origin_datasource**|**varchar(255)**|Origem do conflito.|  
@@ -80,7 +80,7 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
  **sp_helpmergedeleteconflictrows** é usado em replicação de mesclagem.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função fixa de servidor e o **db_owner** pode executar a função de banco de dados fixa **sp_helpmergedeleteconflictrows**.  
+ Somente os membros dos **sysadmin** função de servidor fixa e a **db_owner** banco de dados fixa podem executar **sp_helpmergedeleteconflictrows**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_replmonitorhelpmergesessiondetail
 ms.assetid: 805c92fc-3169-410c-984d-f37e063b791d
 caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3d76b4c7001f946ad01836c36982d81f90df397c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f3f7c7a2ac9ea4230ca286dce90eda3d48458d41
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32999033"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027722"
 ---
 # <a name="spreplmonitorhelpmergesessiondetail-transact-sql"></a>sp_replmonitorhelpmergesessiondetail (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,25 +46,25 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
   
 ## <a name="arguments"></a>Argumentos  
  [ **@session_id** =] *session_id*  
- Especifica uma sessão de agente. *session_id* é **int** sem nenhum padrão.  
+ Especifica uma sessão de agente. *session_id* está **int** sem nenhum padrão.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**PhaseID**|**Int**|É a fase da sessão de sincronização que pode ser uma das seguintes:<br /><br /> **0** = inicialização ou linha de resumo<br /><br /> **1** = carregar<br /><br /> **2** = baixar|  
+|**PhaseID**|**int**|É a fase da sessão de sincronização que pode ser uma das seguintes:<br /><br /> **0** = inicialização ou linha de resumo<br /><br /> **1** = carregamento<br /><br /> **2** = download|  
 |**ArticleName**|**sysname**|É o nome do artigo que está sendo sincronizado. **ArticleName** também contém informações resumidas de linhas no conjunto de resultados que não representam detalhes do artigo.|  
 |**PercentComplete**|**decimal**|Indica a porcentagem do total de alterações aplicada a uma linha de detalhe de um determinado artigo em sessões atualmente em execução ou com falha.|  
 |**RelativeCost**|**decimal**|Indica o tempo gasto para sincronizar o artigo como uma porcentagem do tempo de sincronização total para a sessão.|  
-|**Duration**|**Int**|Duração da sessão do agente.|  
-|**Insere**|**Int**|Número de inserções em uma sessão.|  
-|**Updates**|**Int**|Número de atualizações em uma sessão.|  
-|**Deletes**|**Int**|Número de exclusões em uma sessão.|  
-|**Conflicts**|**Int**|Número de conflitos ocorrido em uma sessão.|  
-|**Identificação de erro**|**Int**|ID de um erro de sessão.|  
-|**SeqNo**|**Int**|Ordem das sessões no conjunto de resultados.|  
-|**RowType**|**Int**|Indica que tipo de informação que cada linha no conjunto de resultados representa.<br /><br /> **0** = inicialização<br /><br /> **1** = resumo de carregamento<br /><br /> **2** = detalhes de carregamento do artigo<br /><br /> **3** = resumo de download<br /><br /> **4** = detalhes de download do artigo|  
-|**SchemaChanges**|**Int**|Número de alterações de esquema em uma sessão.|  
+|**Duration**|**int**|Duração da sessão do agente.|  
+|**Insere**|**int**|Número de inserções em uma sessão.|  
+|**Updates**|**int**|Número de atualizações em uma sessão.|  
+|**Deletes**|**int**|Número de exclusões em uma sessão.|  
+|**Conflicts**|**int**|Número de conflitos ocorrido em uma sessão.|  
+|**Identificação de erro**|**int**|ID de um erro de sessão.|  
+|**SeqNo**|**int**|Ordem das sessões no conjunto de resultados.|  
+|**RowType**|**int**|Indica que tipo de informação que cada linha no conjunto de resultados representa.<br /><br /> **0** = inicialização<br /><br /> **1** = resumo de carregamento<br /><br /> **2** = detalhes do carregamento do artigo<br /><br /> **3** = resumo de download<br /><br /> **4** = detalhes de download do artigo|  
+|**SchemaChanges**|**int**|Número de alterações de esquema em uma sessão.|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -75,7 +75,7 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
  Quando executado no assinante, **sp_replmonitorhelpmergesessiondetail** só retorna informações detalhadas sobre as últimas 5 sessões do Merge Agent.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **db_owner** ou **replmonitor** pode executar a função de banco de dados fixa do banco de dados de distribuição no distribuidor ou no banco de dados de assinatura no assinante **SP _ replmonitorhelpmergesessiondetail**.  
+ Somente os membros dos **db_owner** ou **replmonitor** banco de dados fixa no banco de dados de distribuição no distribuidor ou no banco de dados de assinatura no assinante podem executar **SP _ replmonitorhelpmergesessiondetail**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Monitorar programaticamente a replicação](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  

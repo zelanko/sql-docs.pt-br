@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sp_MSchange_merge_agent_properties
 ms.assetid: f775fa0f-28c7-4863-89ce-7bcfa1ab8b5e
 caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c0a56df34ca780de662d11d826af1b3b88e847e6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 375d4799f4345fa354c6d6731ec3b98ca3db571f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33000063"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019964"
 ---
 # <a name="spmschangemergeagentproperties-transact-sql"></a>sp_MSchange_merge_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,30 +49,30 @@ sp_MSchange_merge_agent_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@publisher** =] **'***publicador***'**  
- É o nome do Publicador. *publicador* é **sysname**, sem padrão.  
+ [ **@publisher** =] **'***publisher***'**  
+ É o nome do Publicador. *Publisher* está **sysname**, sem padrão.  
   
  [  **@publisher_db=** ] **'***publisher_db***'**  
- É o nome do banco de dados de publicação. *publisher_db* é **sysname**, sem padrão.  
+ É o nome do banco de dados de publicação. *publisher_db* está **sysname**, sem padrão.  
   
  [  **@publication =** ] **'***publicação***'**  
- É o nome da publicação. *publicação* é **sysname**, sem padrão.  
+ É o nome da publicação. *publicação* está **sysname**, sem padrão.  
   
  [  **@subscriber=** ] **'***assinante***'**  
- É o nome do Assinante. *assinante* é **sysname**, sem padrão.  
+ É o nome do Assinante. *assinante* está **sysname**, sem padrão.  
   
  [  **@subscriber_db=** ] **'***subscriber_db***'**  
- É o nome do banco de dados de assinatura. *subscriber_db* é **sysname**, sem padrão.  
+ É o nome do banco de dados de assinatura. *subscriber_db* está **sysname**, sem padrão.  
   
  [  **@property =** ] **'***propriedade***'**  
- É a propriedade da publicação a ser alterada. *propriedade* é **sysname**, sem padrão.  
+ É a propriedade da publicação a ser alterada. *propriedade* está **sysname**, sem padrão.  
   
  [  **@value =** ] **'***valor***'**  
- É o novo valor da propriedade. *valor* é **nvarchar (524)**, com um padrão NULL.  
+ É o novo valor da propriedade. *valor* está **nvarchar(524)**, com um padrão NULL.  
   
  Essa tabela descreve as propriedades do trabalho de Agente de Mesclagem que podem ser alteradas e restrições nos valores dessas propriedades.  
   
-|Propriedade|Value|Description|  
+|Propriedade|Valor|Description|  
 |--------------|-----------|-----------------|  
 |**Descrição**||Uma descrição breve da assinatura.|  
 |**merge_job_login**||Logon para a conta do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows na qual o agente é executado.|  
@@ -95,10 +95,10 @@ sp_MSchange_merge_agent_properties [ @publisher = ] 'publisher'
 ## <a name="remarks"></a>Remarks  
  **sp_MSchange_merge_agent_properties** é usado em replicação de mesclagem.  
   
- Quando o publicador é executado em uma instância do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou versão posterior, você deve usar [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md) para alterar as propriedades de um trabalho do agente de mesclagem que sincroniza uma assinatura push executa no distribuidor.  
+ Quando o publicador é executado em uma instância do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou versão posterior, você deve usar [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md) para alterar as propriedades de um trabalho do agente de mesclagem que sincroniza uma assinatura push executada no distribuidor.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** pode executar a função de servidor fixa no distribuidor **sp_MSchange_merge_agent_properties**.  
+ Somente os membros dos **sysadmin** função de servidor fixa no distribuidor pode executar **sp_MSchange_merge_agent_properties**.  
   
 ## <a name="see-also"></a>Consulte também  
  [sp_addmergepushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)   

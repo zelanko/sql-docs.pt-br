@@ -19,20 +19,20 @@ helpviewer_keywords:
 - sp_prepexecrpc
 ms.assetid: 35d686f2-ef31-4eaa-baa9-9cef5d6c87c2
 caps.latest.revision: 5
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 536932ef57cc8bb042979dd2332552f34713743d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: ab11cbca7177408ed94e79967ab55bad9fbc50b1
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250261"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027950"
 ---
 # <a name="spprepexecrpc-transact-sql"></a>sp_prepexecrpc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Prepara e executa uma chamada de procedimento armazenado parametrizada que foi especificada com um identificador de RPC. sp_prepexecrpc é invocado por ID = 14 em um pacote de protocolo TDS de dados tabulares.  
+  Prepara e executa uma chamada de procedimento armazenado parametrizada que foi especificada com um identificador de RPC. sp_prepexecrpc é invocado por ID = 14 em um pacote do protocolo TDS.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,7 +46,7 @@ sp_prepexecrpc handle OUTPUT, RPCCall
   
 ## <a name="arguments"></a>Argumentos  
  *Identificador*  
- É o identificador preparado gerado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *tratar* é um parâmetro obrigatório com um **int** valor de retorno.  
+ É o identificador preparado gerado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *manipular* é um parâmetro obrigatório com um **int** valor de retorno.  
   
  *RPCCall*  
  Define a chamada de procedimento armazenado que usa a sintaxe canônica ODBC. *RPCCall* é um parâmetro obrigatório que chama uma **ntext** valor de cadeia de caracteres de entrada.  

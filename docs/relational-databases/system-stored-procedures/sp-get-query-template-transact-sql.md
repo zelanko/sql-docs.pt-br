@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_get_query_template
 ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3fac47c5b84894f681ffc9c6729dd526f9e8488c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e2d96ffa9a2375905246a515601c77afdc50d231
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253502"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027742"
 ---
 # <a name="spgetquerytemplate-transact-sql"></a>sp_get_query_template (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,20 +48,20 @@ sp_get_query_template
   
 ## <a name="arguments"></a>Argumentos  
  '*query_text*'  
- É a consulta para a qual a versão com parâmetros será gerada. '*query_text*' devem ser colocados entre aspas simples e ser precedido pelo especificador Unicode N. N'*query_text*' é o valor atribuído para o @querytext parâmetro. Isso é do tipo **nvarchar (max)**.  
+ É a consulta para a qual a versão com parâmetros será gerada. '*query_text*' deve ser colocado entre aspas simples e ser precedido pelo especificador Unicode N. N'*query_text*' é o valor atribuído para o @querytext parâmetro. Isso é do tipo **nvarchar (max)**.  
   
  @templatetext  
- É um parâmetro de saída do tipo **nvarchar (max)**, fornecido como indicado, para receber o formulário parametrizado de *query_text* como uma cadeia de caracteres literal.  
+ É um parâmetro de saída do tipo **nvarchar (max)**, fornecido como indicado, para receber o formulário parametrizado da *query_text* como um literal de cadeia de caracteres.  
   
  @parameters  
- É um parâmetro de saída do tipo **nvarchar (max)**, fornecido como indicado, para receber um literal de cadeia de caracteres dos parâmetro nomes e tipos de dados que foram parametrizados em @templatetext.  
+ É um parâmetro de saída do tipo **nvarchar (max)**, fornecido como indicado, para receber um literal de cadeia de caracteres dos tipos de dados e nomes de parâmetro que foram parametrizados em @templatetext.  
   
 ## <a name="remarks"></a>Remarks  
  sp_get_query_template retorna um erro quando ocorre o seguinte:  
   
 -   Não parametriza valores literais constantes no *query_text*.  
   
--   *query_text* for NULL, não uma cadeia de caracteres Unicode, sintaticamente não válida ou não pode ser compilado.  
+-   *query_text* for NULL, não uma cadeia de caracteres Unicode, sintaticamente não válida ou não pode ser compilada.  
   
  Se sp_get_query_template retornar um erro, ele não modifica os valores de @templatetext e @parameters parâmetros de saída.  
   

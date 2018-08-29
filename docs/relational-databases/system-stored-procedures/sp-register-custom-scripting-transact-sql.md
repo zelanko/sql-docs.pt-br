@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_register_custom_scripting
 ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c2220495d256e1f38aecd5cd64c8d43a88c8f25f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 738139cae553dff72dc04b8761b578da692482a4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33000173"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036879"
 ---
 # <a name="spregistercustomscripting-transact-sql"></a>sp_register_custom_scripting (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,9 +49,9 @@ sp_register_custom_scripting [ @type  = ] 'type'
   
 ## <a name="arguments"></a>Argumentos  
  [ **@type** =] **'***tipo***'**  
- É o tipo de procedimento armazenado personalizado ou script que está sendo registrado. *tipo* é **varchar (16)**, sem padrão e pode ser um dos valores a seguir.  
+ É o tipo de procedimento armazenado personalizado ou script que está sendo registrado. *tipo de* está **varchar(16)**, sem padrão e pode ser um dos valores a seguir.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**insert**|Procedimento armazenado personalizado registrado é executado quando uma instrução INSERT é replicada.|  
 |**Atualização**|Procedimento armazenado personalizado registrado é executado quando uma instrução UPDATE é replicada.|  
@@ -59,18 +59,18 @@ sp_register_custom_scripting [ @type  = ] 'type'
 |**custom_script**|O script é executado ao término do gatilho DDL (Data Definition Language).|  
   
  [ **@value**=] **'***valor***'**  
- Nome de um procedimento armazenado ou nome e caminho completamente qualificado para o arquivo script [!INCLUDE[tsql](../../includes/tsql-md.md)] que está sendo registrado. *valor* é **nvarchar (1024)**, sem padrão.  
+ Nome de um procedimento armazenado ou nome e caminho completamente qualificado para o arquivo script [!INCLUDE[tsql](../../includes/tsql-md.md)] que está sendo registrado. *valor* está **nvarchar(1024)**, sem padrão.  
   
 > [!NOTE]  
->  Especificando NULL para *valor*parâmetro irá cancelar o registro de um script registrado anteriormente, o que é o mesmo que executar [sp_unregister_custom_scripting](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md).  
+>  Especificação de NULL para *valor*parâmetro irá cancelar o registro de um script registrado anteriormente, o que é o mesmo que executar [sp_unregister_custom_scripting](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md).  
   
  Quando o valor de *tipo* é **custom_script**, o nome e caminho completo de um [!INCLUDE[tsql](../../includes/tsql-md.md)] arquivo de script é esperado. Caso contrário, *valor* deve ser o nome de um procedimento armazenado registrado.  
   
  [ **@publication**=] **'***publicação***'**  
- Nome da publicação para a qual o procedimento armazenado personalizado ou script está sendo registrado. *publicação* é **sysname**, com um padrão de **nulo**.  
+ Nome da publicação para a qual o procedimento armazenado personalizado ou script está sendo registrado. *publicação* está **sysname**, com um padrão de **nulo**.  
   
  [ **@article**=] **'***artigo***'**  
- Nome do artigo para o qual o procedimento armazenado personalizado ou script está sendo registrado. *artigo* é **sysname**, com um padrão de **nulo**.  
+ Nome do artigo para o qual o procedimento armazenado personalizado ou script está sendo registrado. *artigo* está **sysname**, com um padrão de **nulo**.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -78,10 +78,10 @@ sp_register_custom_scripting [ @type  = ] 'type'
 ## <a name="remarks"></a>Remarks  
  **sp_register_custom_scripting** é usado em replicação de instantâneo e transacional.  
   
- Esse procedimento armazenado deve ser executado antes de efetuar uma alteração de esquema em uma  tabela replicada. Para obter mais informações sobre como usar esse procedimento armazenado, consulte [regenerar os procedimentos transacionais personalizados para refletir as alterações de esquema](../../relational-databases/replication/transactional/transactional-articles-regenerate-to-reflect-schema-changes.md).  
+ Esse procedimento armazenado deve ser executado antes de efetuar uma alteração de esquema em uma  tabela replicada. Para obter mais informações sobre como usar esse procedimento armazenado, consulte [regenerar os procedimentos transacionais personalizados para refletir alterações de esquema](../../relational-databases/replication/transactional/transactional-articles-regenerate-to-reflect-schema-changes.md).  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função fixa de servidor a **db_owner** função de banco de dados fixa ou **db_ddladmin** pode executar a função de banco de dados fixa **SP _ register_custom_scripting**.  
+ Somente os membros dos **sysadmin** função de servidor fixa, o **db_owner** função de banco de dados fixa ou o **db_ddladmin** pode executar a função de banco de dados fixa **SP _ register_custom_scripting**.  
   
 ## <a name="see-also"></a>Consulte também  
  [sp_unregister_custom_scripting &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md)  

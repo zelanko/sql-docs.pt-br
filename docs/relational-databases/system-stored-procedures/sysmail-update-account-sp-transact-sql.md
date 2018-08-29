@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_update_account_sp
 ms.assetid: ba2fdccc-5ed4-40ef-a479-79497b4d61aa
-caps.latest.revision: 51
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: ad64d1d455a4419c66949ba0196f9a9557a8ae52
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 3aa7b018044aca4dec144e2be66bfba68cef5597
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262178"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021829"
 ---
 # <a name="sysmailupdateaccountsp-transact-sql"></a>sysmail_update_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,40 +57,40 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
   
 ## <a name="arguments"></a>Argumentos  
  [ **@account_id** = ] *account_id*  
- A ID da conta a ser atualizada. *account_id* é **int**, com um padrão NULL. Pelo menos uma das *account_id* ou *account_name* deve ser especificado. Se ambos forem especificados, o procedimento alterará o nome da conta.  
+ A ID da conta a ser atualizada. *account_id* está **int**, com um padrão NULL. Pelo menos um dos *account_id* ou *account_name* deve ser especificado. Se ambos forem especificados, o procedimento alterará o nome da conta.  
   
  [ **@account_name** = ] **'***account_name***'**  
- O nome da conta a ser atualizada. *account_name* é **sysname**, com um padrão NULL. Pelo menos uma das *account_id* ou *account_name* deve ser especificado. Se ambos forem especificados, o procedimento alterará o nome da conta.  
+ O nome da conta a ser atualizada. *account_name* está **sysname**, com um padrão NULL. Pelo menos um dos *account_id* ou *account_name* deve ser especificado. Se ambos forem especificados, o procedimento alterará o nome da conta.  
   
  [ **@email_address** =] **'***email_address***'**  
- O novo endereço de email a partir do qual a mensagem será enviada. Esse endereço deve ser um endereço de email na Internet. O nome do servidor no endereço é o servidor que o Database Mail usa para enviar email dessa conta. *endereço de email* é **nvarchar (128)**, com um padrão NULL.  
+ O novo endereço de email a partir do qual a mensagem será enviada. Esse endereço deve ser um endereço de email na Internet. O nome do servidor no endereço é o servidor que o Database Mail usa para enviar email dessa conta. *email_address* está **nvarchar (128)**, com um padrão NULL.  
   
  [ **@display_name** =] **'***display_name***'**  
- O novo nome para exibição a ser usado em mensagens de email enviadas por essa conta. *display_name* é **nvarchar (128)**, sem padrão.  
+ O novo nome para exibição a ser usado em mensagens de email enviadas por essa conta. *display_name* está **nvarchar (128)**, sem padrão.  
   
  [ **@replyto_address** = ] **'***replyto_address***'**  
- O novo endereço a ser usado no cabeçalho Responder das mensagens de email desta conta. *replyto_address* é **nvarchar (128)**, sem padrão.  
+ O novo endereço a ser usado no cabeçalho Responder das mensagens de email desta conta. *replyto_address* está **nvarchar (128)**, sem padrão.  
   
  [ **@description** =] **'***descrição***'**  
- A nova descrição da conta. *Descrição* é **nvarchar (256)**, com um padrão NULL.  
+ A nova descrição da conta. *Descrição* está **nvarchar(256)**, com um padrão NULL.  
   
  [ **@mailserver_name** = ] **'***server_name***'**  
- O novo nome do servidor de email SMTP a ser usado para essa conta. O computador que executa o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ser capaz de resolver o *nome_do_servidor* para um endereço IP. *server_name* é **sysname**, sem padrão.  
+ O novo nome do servidor de email SMTP a ser usado para essa conta. O computador que executa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ser capaz de resolver o *server_name* para um endereço IP. *nome_do_servidor* está **sysname**, sem padrão.  
   
  [ **@mailserver_type** = ] **'***server_type***'**  
- O novo tipo do servidor de email. *server_type* é **sysname**, sem padrão. Apenas um valor de **'SMTP'** tem suporte.  
+ O novo tipo do servidor de email. *server_type* está **sysname**, sem padrão. Apenas um valor de **'SMTP'** tem suporte.  
   
  [ **@port** =] *port_number*  
- O novo número da porta do servidor de email. *port_number* é **int**, sem padrão.  
+ O novo número da porta do servidor de email. *port_number* está **int**, sem padrão.  
   
- [ **@timeout** =] **'***tempo limite***'**  
- Parâmetro de tempo limite para SmtpClient.Send de uma única mensagem de email. *Tempo limite* é **int** em segundos, sem padrão.  
+ [ **@timeout** =] **'***timeout***'**  
+ Parâmetro de tempo limite para SmtpClient.Send de uma única mensagem de email. *Tempo limite* está **int** em segundos, sem padrão.  
   
  [ **@username** =] **'***username***'**  
- O novo nome do usuário a ser usado para fazer logon no servidor de email. *Nome de usuário* é **sysname**, sem padrão.  
+ O novo nome do usuário a ser usado para fazer logon no servidor de email. *Nome de usuário* está **sysname**, sem padrão.  
   
  [ **@password** =] **'***senha***'**  
- A nova senha a ser usado para fazer logon no servidor de email. *senha* é **sysname**, sem padrão.  
+ A nova senha para usar para fazer logon no servidor de email. *senha* está **sysname**, sem padrão.  
   
  [ **@use_default_credentials** =] use_default_credentials  
  Especifica se o email deve ser enviado ao servidor SMTP com as credenciais do serviço [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **use_default_credentials** é bit, sem padrão. Quando este parâmetro for 1, o Database Mail usará as credenciais do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Quando esse parâmetro é 0, o Database Mail usa o **@username** e **@password** para autenticação no servidor SMTP. Se **@username** e **@password** forem NULL, ele usará a autenticação anônima. Consulte o administrador de SMTP antes de especificar este parâmetro.  
@@ -105,7 +104,7 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
 ## <a name="remarks"></a>Remarks  
  Quando o nome e a identificação da conta são especificados, o procedimento armazenado altera o nome da conta além de atualizar as informações da conta. A alteração do nome da conta pode ser útil para corrigir erros que existam nela.  
   
- O procedimento armazenado **sysmail_update_account_sp** está no **msdb** banco de dados e pertence a **dbo** esquema. O procedimento deve ser executado com um nome de três partes se o banco de dados atual não é **msdb**.  
+ O procedimento armazenado **sysmail_update_account_sp** está no **msdb** banco de dados e é de propriedade de **dbo** esquema. O procedimento deve ser executado com um nome de três partes se o banco de dados atual não for **msdb**.  
   
 ## <a name="permissions"></a>Permissões  
  Exige associação à função de servidor fixa **sysadmin** .  

@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpmergearticlecolumn
 ms.assetid: 651c017b-9e9a-48f2-a0bd-6fc896eab334
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eea23a02bca21cdb714c3437bdcbb3c5ea10042f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 82240c6d24f6387e8d1a9e6e105e8fdc9e0ee9e2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994633"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025235"
 ---
 # <a name="sphelpmergearticlecolumn-transact-sql"></a>sp_helpmergearticlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_helpmergearticlecolumn [ @publication = ] 'publication' ]
  É o nome da publicação. *publicação* é **sysname**, sem padrão.  
   
  [  **@article=**] **'***artigo***'**  
- É o nome de uma tabela ou exibição que é o artigo para recuperar informações. *artigo* é **sysname**, sem padrão.  
+ É o nome de uma tabela ou exibição que é o artigo do qual recuperar informações. *artigo* é **sysname**, sem padrão.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -67,7 +67,7 @@ sp_helpmergearticlecolumn [ @publication = ] 'publication' ]
  **sp_helpmergearticlecolumn** é usado em replicação de mesclagem.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **replmonitor** função de banco de dados fixa no banco de dados de distribuição ou a lista de acesso da publicação para a publicação pode executar **sp_helpmergearticlecolumn**.  
+ Somente os membros dos **replmonitor** função de banco de dados fixa no banco de dados de distribuição ou a lista de acesso à publicação para a publicação pode executar **sp_helpmergearticlecolumn**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

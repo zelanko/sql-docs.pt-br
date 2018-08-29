@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_lookupcustomresolver
 ms.assetid: 356a7b8a-ae53-4fb5-86ee-fcfddbf23ddd
 caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 65770490b7a04efed2a4d7e70a2863fe45d5d453
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6d2e70f21cd9b0cc15a0b895a7e52b88a885edf0
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32998443"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020095"
 ---
 # <a name="splookupcustomresolver-transact-sql"></a>sp_lookupcustomresolver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,22 +51,22 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@article_resolver =** ] **'***article_resolver***'**  
- Especifica o nome da lógica comercial personalizada cujo registro está sendo cancelado. *article_resolver* é **nvarchar (255)**, sem padrão. Se a lógica corporativa que está sendo removida for um componente COM, então esse parâmetro será o nome amigável do componente. Se a lógica corporativa for um assembly [!INCLUDE[msCoName](../../includes/msconame-md.md)].NET Framework, esse parâmetro será o nome do assembly.  
+ Especifica o nome da lógica comercial personalizada cujo registro está sendo cancelado. *article_resolver* está **nvarchar (255)**, sem padrão. Se a lógica corporativa que está sendo removida for um componente COM, então esse parâmetro será o nome amigável do componente. Se a lógica corporativa for um assembly [!INCLUDE[msCoName](../../includes/msconame-md.md)].NET Framework, esse parâmetro será o nome do assembly.  
   
  [ **@resolver_clsid**=] **'***resolver_clsid***'** saída  
- É o valor CLSID do objeto COM associado ao nome da lógica de negócios personalizada especificada no *article_resolver* parâmetro. *resolver_clsid* é **nvarchar (50)**, com um padrão NULL.  
+ É o valor CLSID do objeto COM associado ao nome da lógica comercial personalizada especificada na *article_resolver* parâmetro. *resolver_clsid* está **nvarchar (50)**, com um padrão NULL.  
   
  [  **@is_dotnet_assembly=** ] **'***is_dotnet_assembly***'** saída  
- Especifica o tipo da lógica comercial personalizada que está sendo registrada. *is_dotnet_assembly* é **bit**, com um padrão de 0. **1** indica que a lógica de negócios personalizada que está sendo registrada é um manipulador de lógica de negócios Assembly. **0** indica que é um componente COM.  
+ Especifica o tipo da lógica comercial personalizada que está sendo registrada. *is_dotnet_assembly* está **bit**, com um padrão de 0. **1** indica que a lógica de negócios personalizada que está sendo registrada é um manipulador de lógica de negócios Assembly; **0** indica que ele é um componente COM.  
   
  [  **@dotnet_assembly_name=** ] **'***dotnet_assembly_name***'** saída  
- É o nome do assembly que implementa o manipulador de lógica de negócios. *dotnet_assembly_name* é **nvarchar (255)**, com um valor padrão de NULL.  
+ É o nome do assembly que implementa o manipulador de lógica de negócios. *dotnet_assembly_name* está **nvarchar (255)**, com um valor padrão de NULL.  
   
  [  **@dotnet_class_name=** ] **'***dotnet_class_name***'** saída  
- É o nome da classe que substitui <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> para implementar o manipulador de lógica de negócios. *dotnet_class_name* é **nvarchar (255)**, com um valor padrão de NULL.  
+ É o nome da classe que substitui <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> para implementar o manipulador de lógica de negócios. *dotnet_class_name* está **nvarchar (255)**, com um valor padrão de NULL.  
   
- [  **@publisher=** ] **'***publicador***'**  
- É o nome do Publicador. *publicador* é **sysname**, com um valor padrão de NULL. Use este parâmetro quando o procedimento armazenado não é chamado do Publicador. Se não for especificado, será assumido que o servidor local é o Publicador.  
+ [  **@publisher=** ] **'***publisher***'**  
+ É o nome do Publicador. *Publisher* está **sysname**, com um valor padrão de NULL. Use este parâmetro quando o procedimento armazenado não é chamado do Publicador. Se não for especificado, será assumido que o servidor local é o Publicador.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -74,12 +74,12 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
 ## <a name="remarks"></a>Remarks  
  **sp_lookupcustomresolver** é usado em replicação de mesclagem.  
   
- **sp_lookupcustomresolver** retorna um valor nulo para *resolver_clsid* quando o componente não está registrado na distribuição e um valor de "00000000-0000-0000-0000-000000000000" quando o registro pertence a um Assembly do .NET framework registrado como um manipulador de lógica de negócios.  
+ **sp_lookupcustomresolver** retorna um valor NULL para *resolver_clsid* quando o componente não está registrado na distribuição e um valor de "00000000-0000-0000-0000-000000000000" quando o registro pertence a um Assembly do .NET framework registrado como um manipulador de lógica de negócios.  
   
- **sp_lookupcustomresolver** é chamado pelo [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) e [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) para validar especificado *article_resolver*.  
+ **sp_lookupcustomresolver** é chamado pela [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) e [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) validar especificado *article_resolver*.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **db_owner** função de banco de dados fixa no banco de dados de publicação pode executar **sp_lookupcustomresolver**.  
+ Somente os membros dos **db_owner** função de banco de dados fixa do banco de dados de publicação pode executar **sp_lookupcustomresolver**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   

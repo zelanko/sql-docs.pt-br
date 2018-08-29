@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergepartition
 ms.assetid: 02a5f46b-e5ff-4932-a3ff-7f0fd82d0981
-caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c8fde5c3b05a29e173e823141d4d34c06860518e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6087f6ee00305eae2ccbef0aef496377f2c9a57e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32988551"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026467"
 ---
 # <a name="spaddmergepartition-transact-sql"></a>sp_addmergepartition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +47,13 @@ sp_addmergepartition [ @publication = ] 'publication'
   
 ## <a name="arguments"></a>Argumentos  
  [ **@publication**=] **'***publicação***'**  
- É a publicação de mesclagem na qual a partição está sendo criada. *publicação* é **sysname**, sem padrão. Se *suser_sname* for especificado, o valor de *hostname* deve ser NULL.  
+ É a publicação de mesclagem na qual a partição está sendo criada. *publicação* está **sysname**, sem padrão. Se *suser_sname* for especificado, o valor de *nome do host* deve ser NULL.  
   
  [ **@suser_sname**=] **'***suser_sname***'**  
- É o valor usado ao criar a partição para uma assinatura filtrada pelo valor da [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) função no assinante. *suser_sname* é **sysname**, sem padrão.  
+ É o valor usado ao criar a partição para uma assinatura filtrada pelo valor de [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) função no assinante. *suser_sname* está **sysname**, sem padrão.  
   
  [ **@host_name**=] **'***host_name***'**  
- É o valor usado ao criar a partição para uma assinatura filtrada pelo valor da [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) função no assinante. *HOST_NAME* é **sysname**, sem padrão.  
+ É o valor usado ao criar a partição para uma assinatura filtrada pelo valor de [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) função no assinante. *HOST_NAME* está **sysname**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -66,10 +65,10 @@ sp_addmergepartition [ @publication = ] 'publication'
  [!code-sql[HowTo#sp_MergeDynamicPubPlusPartition](../../relational-databases/replication/codesnippet/tsql/sp-addmergepartition-tra_1.sql)]  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função de servidor fixa ou **db_owner** pode executar a função de banco de dados fixa **sp_addmergepartition**.  
+ Somente os membros dos **sysadmin** função de servidor fixa ou **db_owner** banco de dados fixa podem executar **sp_addmergepartition**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Criar um instantâneo para uma publicação de mesclagem com filtros com parâmetros](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)   
- [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
+ [Filtros de linha com parâmetros](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   

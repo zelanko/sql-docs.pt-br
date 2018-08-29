@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpmergepartition
 ms.assetid: 184188cc-f519-445d-97ce-aae38f1eb550
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 21f209b61786b07bac4a9941073d3e75b282b846
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6ef6a1192ac2216ff335a98709520f10610cb373
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996073"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027924"
 ---
 # <a name="sphelpmergepartition-transact-sql"></a>sp_helpmergepartition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,16 +48,16 @@ sp_helpmergepartition [ @publication= ] 'publication'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@publication=** ] **'***publicação***'**  
- É o nome da publicação. *publicação* é **sysname**, sem padrão.  
+ É o nome da publicação. *publicação* está **sysname**, sem padrão.  
   
  [  **@suser_sname=** ] **'***suser_sname***'**  
- É o valor de SUSER_SNAME usado para definir uma partição. *suser_sname* é **sysname**, com um valor padrão de NULL. Forneça esse parâmetro para limitar o conjunto de resultados só a partições onde SUSER_SNAME resolve para o valor fornecido.  
+ É o valor de SUSER_SNAME usado para definir uma partição. *suser_sname* está **sysname**, com um valor padrão de NULL. Forneça esse parâmetro para limitar o conjunto de resultados só a partições onde SUSER_SNAME resolve para o valor fornecido.  
   
 > [!NOTE]  
 >  Quando *suser_sname* for fornecido, *host_name* deve ser NULL  
   
  [  **@host_name=** ] **'***host_name***'**  
- É o valor de HOST_NAME usado para definir uma partição. *HOST_NAME* é **sysname**, com um valor padrão de NULL. Forneça esse parâmetro para limitar o conjunto de resultados só a partições onde HOST_NAME resolve para o valor fornecido.  
+ É o valor de HOST_NAME usado para definir uma partição. *HOST_NAME* está **sysname**, com um valor padrão de NULL. Forneça esse parâmetro para limitar o conjunto de resultados só a partições onde HOST_NAME resolve para o valor fornecido.  
   
 > [!NOTE]  
 >  Quando *suser_sname* for fornecido, *host_name* deve ser NULL  
@@ -66,9 +66,9 @@ sp_helpmergepartition [ @publication= ] 'publication'
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**Partição**|**Int**|Identifica a partição do Assinante.|  
-|**HOST_NAME**|**sysname**|Valor usado ao criar a partição para uma assinatura filtrada pelo valor da [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) função no assinante.|  
-|**suser_sname**|**sysname**|Valor usado ao criar a partição para uma assinatura filtrada pelo valor da [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) função no assinante.|  
+|**partição**|**int**|Identifica a partição do Assinante.|  
+|**HOST_NAME**|**sysname**|Valor usado ao criar a partição para uma assinatura filtrada pelo valor de [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) função no assinante.|  
+|**suser_sname**|**sysname**|Valor usado ao criar a partição para uma assinatura filtrada pelo valor de [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) função no assinante.|  
 |**dynamic_snapshot_location**|**nvarchar(255)**|Local do instantâneo de dados filtrado para a partição do Assinante.|  
 |**date_refreshed**|**datetime**|Último data em que o trabalho de instantâneo foi executado para gerar o instantâneo de dados filtrado para a partição.|  
 |**dynamic_snapshot_jobid**|**uniqueidentifier**|Identifica o trabalho que cria o instantâneo de dados filtrado para uma partição.|  
@@ -80,7 +80,7 @@ sp_helpmergepartition [ @publication= ] 'publication'
  **sp_helpmergepartition** é usado em replicação de mesclagem.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função fixa de servidor e o **db_owner** pode executar a função de banco de dados fixa **sp_helpmergepartition**.  
+ Somente os membros dos **sysadmin** função de servidor fixa e a **db_owner** banco de dados fixa podem executar **sp_helpmergepartition**.  
   
 ## <a name="see-also"></a>Consulte também  
  [sp_addmergepartition &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md)   

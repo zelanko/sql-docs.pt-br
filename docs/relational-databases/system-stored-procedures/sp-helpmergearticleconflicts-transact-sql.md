@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpmergearticleconflicts
 ms.assetid: 4678a2b9-9a5f-4193-a20d-2e11fc896c3a
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d533e2cf1aad3d7ee0b9610e010b42baabf054ae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9fb4fe8ff1dadebe5f2bb2a7af5209c2e761e0af
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32995163"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037299"
 ---
 # <a name="sphelpmergearticleconflicts-transact-sql"></a>sp_helpmergearticleconflicts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,8 +50,8 @@ sp_helpmergearticleconflicts [ [ @publication = ] 'publication' ]
  [  **@publication=**] **'***publicação***'**  
  É o nome da publicação de mesclagem. *publicação* é **sysname**, com um padrão de **%**, que retorna todos os artigos no banco de dados que tem conflitos.  
   
- [  **@publisher=**] **'***publicador***'**  
- É o nome do publicador. *publicador* é **sysname**, com um padrão NULL.  
+ [  **@publisher=**] **'***publisher***'**  
+ É o nome do publicador. *publisher* é **sysname**, com um padrão NULL.  
   
  [  **@publisher_db=**] **'***publisher_db***'**  
  É o nome do banco de dados publicador. *publisher_db* é **sysname**, com um padrão NULL.  
@@ -65,9 +65,9 @@ sp_helpmergearticleconflicts [ [ @publication = ] 'publication' ]
 |**source_object**|**nvarchar(386)**|Nome do objeto de origem.|  
 |**conflict_table**|**nvarchar(258)**|Nome da tabela que armazena os conflitos de entrada ou atualização.|  
 |**guidcolname**|**sysname**|Nome do RowGuidCol para o objeto de origem.|  
-|**centralized_conflicts**|**Int**|Se os registros de conflito são armazenados no Publicador determinado.|  
+|**centralized_conflicts**|**int**|Se os registros de conflito são armazenados no Publicador determinado.|  
   
- Se o artigo tiver somente conflitos excluídos e não **conflict_table** linhas, o nome do **conflict_table** no resultado do conjunto é NULL.  
+ Se o artigo tiver somente conflitos excluídos e nenhuma **conflict_table** linhas, o nome da **conflict_table** no resultado do conjunto é NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -76,7 +76,7 @@ sp_helpmergearticleconflicts [ [ @publication = ] 'publication' ]
  **sp_helpmergearticleconflicts** é usado em replicação de mesclagem.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função fixa de servidor e o **db_owner** pode executar a função de banco de dados fixa **sp_helpmergearticleconflicts**.  
+ Somente os membros dos **sysadmin** função de servidor fixa e a **db_owner** banco de dados fixa podem executar **sp_helpmergearticleconflicts**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

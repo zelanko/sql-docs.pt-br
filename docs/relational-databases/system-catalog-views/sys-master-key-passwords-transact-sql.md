@@ -21,27 +21,27 @@ helpviewer_keywords:
 - sys.master_key_passwords catalog view
 ms.assetid: b8e18cff-a9e6-4386-98ce-1cd855506e03
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e5753296ea9c8b5fb90b92d1c612b4966e89b6db
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 8a0aa45dc4ee0e54e7880837e289b2331b5ff11e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181442"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43017716"
 ---
 # <a name="sysmasterkeypasswords-transact-sql"></a>sys.master_key_passwords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Retorna uma linha para cada senha de chave mestra de banco de dados adicionada usando o **sp_control_dbmasterkey_password** procedimento armazenado. As senhas que são usadas para proteger as chaves mestras são armazenadas no armazenamento de credenciais. O nome da credencial segue este formato: ##DBMKEY_<database_family_guid>_<random_password_guid>##. A senha é armazenada como o segredo de credencial. Para cada senha adicionada usando **sp_control_dbmasterkey_password**, há uma linha em **Credentials**.  
+  Retorna uma linha para cada senha de chave mestra de banco de dados adicionada usando o **sp_control_dbmasterkey_password** procedimento armazenado. As senhas que são usadas para proteger as chaves mestras são armazenadas no armazenamento de credenciais. O nome da credencial segue este formato: ##DBMKEY_<database_family_guid>_<random_password_guid>##. A senha é armazenada como o segredo de credencial. Para cada senha adicionada usando **sp_control_dbmasterkey_password**, há uma linha na **sys. Credentials**.  
   
- Cada linha nessa exibição mostra uma **credential_id** e **family_guid** de um banco de dados que a chave mestra do que é protegida por senha associada a essa credencial. Uma junção com **Credentials** no **credential_id** retornará campos úteis, como o **create_date** e o nome da credencial.  
+ Cada linha nessa exibição mostra uma **credential_id** e o **family_guid** de um banco de dados que a chave mestra que é protegida por senha associada a essa credencial. Uma junção com **sys. Credentials** sobre o **credential_id** retornará campos úteis, como o **create_date** e o nome da credencial.  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**credential_id**|**Int**|A ID da credencial à qual a senha pertence. Essa ID é exclusiva na instância de servidor.|  
-|**family_guid**|**uniqueidentifier**|ID exclusiva do banco de dados original na criação. Esse GUID permanece o mesmo depois que o banco de dados é restaurado ou anexado, mesmo que o nome de banco de dados seja alterado.<br /><br /> Se a descriptografia automática feita pela chave mestra de serviço falhar, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa o **family_guid** para identificar as credenciais que podem conter a senha usada para proteger a chave mestra de banco de dados.|  
+|**credential_id**|**int**|A ID da credencial à qual a senha pertence. Essa ID é exclusiva na instância de servidor.|  
+|**family_guid**|**uniqueidentifier**|ID exclusiva do banco de dados original na criação. Esse GUID permanece o mesmo depois que o banco de dados é restaurado ou anexado, mesmo que o nome de banco de dados seja alterado.<br /><br /> Se a descriptografia automática pela chave mestra de serviço falhar, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa o **family_guid** para identificar as credenciais que podem conter a senha usada para proteger a chave mestra de banco de dados.|  
   
 ## <a name="permissions"></a>Permissões  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpdatatypemap
 ms.assetid: 800c9c65-723e-4961-a63d-327987f129f0
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f19860d48b00b5eb9276c62ec46f18e2f5842c81
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ff316e5f4d39954f95d54c0ab164e64c425b053e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32999213"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021615"
 ---
 # <a name="sphelpdatatypemap-transact-sql"></a>sp_helpdatatypemap (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,23 +52,23 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
   
 ## <a name="arguments"></a>Argumentos  
  [ **@source_dbms**=] **'***source_dbms***'**  
- É o nome do DBMS no qual os tipos de dados são mapeados. *source_dbms* é **sysname**, e pode ser um dos valores a seguir.  
+ É o nome do DBMS no qual os tipos de dados são mapeados. *source_dbms* está **sysname**, e pode ser um dos valores a seguir.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|A origem é um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ORACLE**|A origem é um banco de dados Oracle.|  
   
  [ **@source_version**=] **'***source_version***'**  
- É a versão de produto do DBMS de origem. *source_version*é **varchar (10)**, e se não for especificado, o tipo de dados mapeamentos para todas as versões da fonte de DBMS são retornados. Habilita o conjunto de resultados a ser filtrado pela versão de fonte do DBMS.  
+ É a versão de produto do DBMS de origem. *source_version*está **varchar(10)**, e se não for especificado, o tipo de dados mapeamentos de todas as versões de origem DBMS serão retornados. Habilita o conjunto de resultados a ser filtrado pela versão de fonte do DBMS.  
   
  [ **@source_type**=] **'***source_type***'**  
- É o tipo de dados listado no DBMS de origem. *source_type* é **sysname**, e se não for especificado, mapeamentos de todos os tipos de dados no DBMS de origem serão retornados. Habilita o conjunto de resultados a ser filtrado pelo tipo de dados no DBMS de origem.  
+ É o tipo de dados listado no DBMS de origem. *source_type* está **sysname**, e se não for especificado, mapeamentos de todos os tipos de dados no DBMS de origem serão retornados. Habilita o conjunto de resultados a ser filtrado pelo tipo de dados no DBMS de origem.  
   
  [ **@destination_dbms** =] **'***destination_dbms***'**  
- O nome do DBMS de destino. *destination_dbms* é **sysname**, e pode ser um dos valores a seguir.  
+ O nome do DBMS de destino. *destination_dbms* está **sysname**, e pode ser um dos valores a seguir.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|O destino é um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ORACLE**|O destino é um banco de dados Oracle.|  
@@ -76,13 +76,13 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 |**SYBASE**|O destino é um banco de dados Sybase.|  
   
  [ **@destination_version**=] **'***destination_version***'**  
- É a versão de produto do DBMS de destino. *destination_version*é **varchar (10)**, e se não for especificado, mapeamentos de todas as versões do DBMS de destino serão retornados. Habilita o conjunto de resultados a ser filtrado pela versão de destino do DBMS.  
+ É a versão de produto do DBMS de destino. *destination_version*está **varchar(10)**, e se não for especificado, mapeamentos de todas as versões do DBMS de destino serão retornados. Habilita o conjunto de resultados a ser filtrado pela versão de destino do DBMS.  
   
  [ **@destination_type**=] **'***destination_type***'**  
- É o tipo de dados listado no DBMS de destino. *destination_type*é **sysname**, e se não for especificado, mapeamentos de todos os tipos de dados no DBMS de destino serão retornados. Habilita o conjunto de resultados a ser filtrado pelo tipo de dados no DBMS de destino.  
+ É o tipo de dados listado no DBMS de destino. *destination_type*está **sysname**, e se não for especificado, mapeamentos de todos os tipos de dados no DBMS de destino serão retornados. Habilita o conjunto de resultados a ser filtrado pelo tipo de dados no DBMS de destino.  
   
  [ **@defaults_only**=] *defaults_only*  
- Especifica se os mapeamentos de tipos de dados padrão são retornados. *defaults_only* é **bit**, com um padrão de **0**. **1** significa que somente os dados padrão mapeamentos de tipo são retornados. **0** significa que o padrão e quaisquer dados definidos pelo usuário mapeamentos de tipo são retornados.  
+ Especifica se os mapeamentos de tipos de dados padrão são retornados. *defaults_only* está **bit**, com um padrão de **0**. **1** significa que somente os dados padrão mapeamentos de tipo são retornados. **0** significa que o padrão e todos os dados definidos pelo usuário mapeamentos de tipo são retornados.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -99,12 +99,12 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="remarks"></a>Remarks  
- **sp_helpdatatypemap** define mapeamentos de tipo de dados de editores não SQL Server e do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicadores não[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes.  
+ **sp_helpdatatypemap** define mapeamentos de tipo de dados de Publicadores não SQL Server e do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editores não -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes.  
   
- Quando não há suporte para a combinação especificada de origem e destino DBMS, **sp_helpdatatypemap** retorna um conjunto de resultados vazio.  
+ Quando não há suporte para a combinação especificada de origem e o DBMS de destino, **sp_helpdatatypemap** retorna um conjunto de resultados vazio.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** a função de servidor fixa no distribuidor ou membros do **db_owner** função de banco de dados fixa no banco de dados de distribuição pode executar **sp_helpdatatypemap**.  
+ Somente os membros dos **sysadmin** função de servidor fixa no distribuidor ou membros da **db_owner** banco de dados fixa no banco de dados de distribuição podem executar **sp_helpdatatypemap**.  
   
 ## <a name="see-also"></a>Consulte também  
  [sp_getdefaultdatatypemapping &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)   

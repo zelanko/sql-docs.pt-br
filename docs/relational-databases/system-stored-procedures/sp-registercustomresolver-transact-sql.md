@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_registercustomresolver
 ms.assetid: 6d2b0472-0e1f-4005-833c-735d1940fe93
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 56bc885e9c149b736bee5f5662816fdb90a144eb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d891a458c6f150a72d5c04393825e49b5a0dabe2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32998953"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027143"
 ---
 # <a name="spregistercustomresolver-transact-sql"></a>sp_registercustomresolver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,19 +50,19 @@ sp_registercustomresolver [ @article_resolver = ] 'article_resolver'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@article_resolver =** ] **'***article_resolver***'**  
- Especifica o nome amigável da lógica comercial personalizada que está sendo registrada. *article_resolver* é **nvarchar (255)**, sem padrão.  
+ Especifica o nome amigável da lógica comercial personalizada que está sendo registrada. *article_resolver* está **nvarchar (255)**, sem padrão.  
   
  [  **@resolver_clsid=** ] **'***resolver_clsid***'**  
  Especifica o valor CLSID do objeto COM que está sendo registrado. Lógica de negócios personalizada *resolver_clsid* é **nvarchar (50)**, com um padrão NULL. Esse parâmetro deve ser definido para um CLSID válido ou definido como NULL ao registrar um assembly de manipulador de lógica de negócios.  
   
  [  **@is_dotnet_assembly=** ] **'***is_dotnet_assembly***'**  
- Especifica o tipo da lógica comercial personalizada que está sendo registrada. *is_dotnet_assembly* é **nvarchar (50)**, com um padrão de FALSE. **True** indica que a lógica de negócios personalizada que está sendo registrada é um manipulador de lógica de negócios Assembly. **false** indica que é um componente COM.  
+ Especifica o tipo da lógica comercial personalizada que está sendo registrada. *is_dotnet_assembly* está **nvarchar (50)**, com um padrão de FALSE. **True** indica que a lógica de negócios personalizada que está sendo registrada é um manipulador de lógica de negócios Assembly; **falsos** indica que ele é um componente COM.  
   
  [  **@dotnet_assembly_name=** ] **'***dotnet_assembly_name***'**  
- É o nome do assembly que implementa o manipulador de lógica de negócios. *dotnet_assembly_name* é **nvarchar (255)**, com um valor padrão de NULL. É necessário especificar o caminho completo para o assembly se ele não estiver implantado no mesmo diretório que o executável Agente de Mesclagem, no mesmo diretório que o aplicativo que é iniciado de forma síncrona o Agente de Mesclagem ou no GAC (cache de assembly global).  
+ É o nome do assembly que implementa o manipulador de lógica de negócios. *dotnet_assembly_name* está **nvarchar (255)**, com um valor padrão de NULL. É necessário especificar o caminho completo para o assembly se ele não estiver implantado no mesmo diretório que o executável Agente de Mesclagem, no mesmo diretório que o aplicativo que é iniciado de forma síncrona o Agente de Mesclagem ou no GAC (cache de assembly global).  
   
  [  **@dotnet_class_name=** ] **'***dotnet_class_name***'**  
- É o nome da classe que substitui <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> para implementar o manipulador de lógica de negócios. O nome deve ser especificado no formato **NomeDaClasse**. *dotnet_class_name* é **nvarchar (255)**, com um valor padrão de NULL.  
+ É o nome da classe que substitui <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> para implementar o manipulador de lógica de negócios. O nome deve ser especificado no formato **ClassName**. *dotnet_class_name* está **nvarchar (255)**, com um valor padrão de NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -71,7 +71,7 @@ sp_registercustomresolver [ @article_resolver = ] 'article_resolver'
  **sp_registercustomresolver** é usado em replicação de mesclagem.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função de servidor fixa ou **db_owner** pode executar a função de banco de dados fixa **sp_registercustomresolver**.  
+ Somente os membros dos **sysadmin** função de servidor fixa ou **db_owner** banco de dados fixa podem executar **sp_registercustomresolver**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Implementar um manipulador de lógica de negócios para um artigo de mesclagem](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   

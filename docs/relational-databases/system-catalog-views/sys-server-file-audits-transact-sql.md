@@ -21,15 +21,15 @@ helpviewer_keywords:
 - sys.server_file_audits catalog view
 ms.assetid: 553288a0-be57-4d79-ae53-b7cbd065e127
 caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f4e10ec5dc755f1a8487aecd40b620eb0a3eefe8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: d0ac050160e62718a87a5dfa920471861eaadcfd
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33222097"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43035926"
 ---
 # <a name="sysserverfileaudits-transact-sql"></a>sys.server_file_audits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,28 +38,28 @@ ms.locfileid: "33222097"
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|audit_id|**Int**|ID da auditoria.|  
+|audit_id|**int**|ID da auditoria.|  
 |nome|**sysname**|Nome da auditoria.|  
 |audit_guid|**uniqueidentifier**|GUID da auditoria.|  
 |create_date|**datetime**|Data UTC quando a auditoria do arquivo foi criada.|  
 |modify_date|**datatime**|Data em UTC quando a auditoria do arquivo foi modificada pela última vez.|  
-|principal_id|**Int**|ID do proprietário da auditoria conforme registrado no servidor.|  
+|principal_id|**int**|ID do proprietário da auditoria conforme registrado no servidor.|  
 |Tipo|**char(2)**|Tipo de auditoria:<br /><br /> 0 = log de eventos de Segurança do NT<br /><br /> 1 = log de eventos de Aplicativos do NT<br /><br /> 2= arquivo no sistema de arquivos|  
 |type_desc|**nvarchar(60)**|Descrição do tipo da auditoria.|  
 |on_failure|**tinyint**|Condição Ao falhar:<br /><br /> 0 = Continuar<br /><br /> 1 = Encerrar a instância de servidor<br /><br /> 2 = Operação com falha|  
 |on_failure_desc|**nvarchar(60)**|Ao Falhar ao escrever uma entrada de ação:<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL OPERATION|  
 |is_state_enabled|**tinyint**|0 = Desabilitado<br /><br /> 1 = Habilitado|  
-|queue_delay|**Int**|Tempo máximo sugerido, em milissegundos, para espera antes de gravar no disco. Se for 0, a auditoria garantirá uma gravação para que o evento possa continuar.|  
+|queue_delay|**int**|Tempo máximo sugerido, em milissegundos, para espera antes de gravar no disco. Se for 0, a auditoria garantirá uma gravação para que o evento possa continuar.|  
 |predicate|**nvarchar(8000)**|Expressão de predicado que é aplicada ao evento.|  
 |max_file_size|**bigint**|Tamanho máximo, em megabytes, da auditoria:<br /><br /> 0 = Ilimitado/Não aplicável ao tipo de auditoria selecionada.|  
-|max_rollover_files|**Int**|Número máximo de arquivos a serem usados com a opção de substituição.|  
-|max_files|**Int**|Número máximo de arquivos a serem usados sem a opção de substituição.|  
-|reserved_disk_space|**Int**|Quantidade de espaço em disco a ser reservada por arquivo.|  
+|max_rollover_files|**int**|Número máximo de arquivos a serem usados com a opção de substituição.|  
+|max_files|**int**|Número máximo de arquivos a serem usados sem a opção de substituição.|  
+|reserved_disk_space|**int**|Quantidade de espaço em disco a ser reservada por arquivo.|  
 |log_file_path|**nvarchar(260)**|Caminho onde a auditoria está localizada. Caminho de arquivo para auditoria de arquivo, caminho de log de aplicativo para auditoria de log de aplicativo.|  
 |log_file_name|**nvarchar(260)**|Nome de base do arquivo de log fornecido em CREATE AUDIT DDL. Um número incremental é adicionado ao arquivo base_log_name como um sufixo para criar o nome de arquivo de log.|  
   
 ## <a name="permissions"></a>Permissões  
- Entidades com o **ALTER ANY SERVER AUDIT** ou **VIEW ANY DEFINITION** permissão têm acesso a esta exibição do catálogo. Além disso, a entidade de segurança não deve ser negada **VIEW ANY DEFINITION** permissão.  
+ Entidades de segurança com o **ALTER ANY SERVER AUDIT** ou **VIEW ANY DEFINITION** permissão têm acesso a esta exibição do catálogo. Além disso, a entidade de segurança não deve ser negada **VIEW ANY DEFINITION** permissão.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

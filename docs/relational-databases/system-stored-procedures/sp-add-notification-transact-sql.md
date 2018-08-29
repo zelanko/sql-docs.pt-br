@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_notification
 ms.assetid: 0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd
-caps.latest.revision: 33
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a79b98fb3f44f3c69e7b4108502a3e6ea14e5c09
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: d17936912a9adca46ddf64724401432c7ef9d43f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238403"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038286"
 ---
 # <a name="spaddnotification-transact-sql"></a>sp_add_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,15 +45,15 @@ sp_add_notification [ @alert_name = ] 'alert' ,
   
 ## <a name="arguments"></a>Argumentos  
  [  **@alert_name=** ] **'***alerta***'**  
- O alerta para esta notificação. *alerta* é **sysname**, sem padrão.  
+ O alerta para esta notificação. *alerta* está **sysname**, sem padrão.  
   
  [  **@operator_name=** ] **'***operador***'**  
- O operador a ser notificado quando o alerta ocorrer. *operador* é **sysname**, sem padrão.  
+ O operador a ser notificado quando o alerta ocorrer. *operador* está **sysname**, sem padrão.  
   
  [  **@notification_method=** ] *notification_method*  
- O método através do qual o operador é notificado. *notification_method* é **tinyint**, sem padrão. *notification_method* pode ser um ou mais desses valores combinados com um **OR** operador lógico.  
+ O método através do qual o operador é notificado. *notification_method* está **tinyint**, sem padrão. *notification_method* pode ser um ou mais desses valores combinados com um **OR** operador lógico.  
   
-|Value|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**1**|Email|  
 |**2**|Pager|  
@@ -64,7 +63,7 @@ sp_add_notification [ @alert_name = ] 'alert' ,
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma  
+ None  
   
 ## <a name="remarks"></a>Remarks  
  **sp_add_notification** deve ser executado a partir de **msdb** banco de dados.  
@@ -76,12 +75,12 @@ sp_add_notification [ @alert_name = ] 'alert' ,
  Se ocorrer uma falha ao enviar uma mensagem de email ou uma notificação de pager, a falha será relatada no log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** pode executar a função de servidor fixa **sp_add_notification**.  
+ Somente os membros dos **sysadmin** pode executar a função de servidor fixa **sp_add_notification**.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir adiciona uma notificação de email para o alerta especificado (`Test Alert`).  
   
-> **Observação:** Este exemplo supõe que `Test Alert` já existe e se `François Ajenstat` é um nome de operador válido.  
+> **Observação:** Este exemplo supõe que `Test Alert` já existe e que `François Ajenstat` é um nome de operador válido.  
   
 ```  
 USE msdb ;  
@@ -94,7 +93,7 @@ EXEC dbo.sp_add_notification
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Confira também  
  [sp_delete_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
  [sp_help_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md)   
  [sp_update_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   

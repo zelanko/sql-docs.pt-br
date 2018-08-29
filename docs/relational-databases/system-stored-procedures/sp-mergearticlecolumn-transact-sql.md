@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_mergearticlecolumn
 ms.assetid: b4f2b888-e094-4759-a472-d893638995eb
 caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e426586be6229cb62e36d8fdcab13663785240b5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 50886bd5bd4ab34852362e678a2f8c2f4a2fc459
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32999553"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023924"
 ---
 # <a name="spmergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,36 +52,36 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@publication =**] **'***publicação***'**  
- É o nome da publicação. *publicação* é **sysname**, sem padrão.  
+ É o nome da publicação. *publicação* está **sysname**, sem padrão.  
   
  [  **@article =**] **'***artigo***'**  
- É o nome do artigo na publicação. *artigo* é **sysname**, sem padrão.  
+ É o nome do artigo na publicação. *artigo* está **sysname**, sem padrão.  
   
  [  **@column =**] **'***coluna***'**  
- Identifica as colunas nas quais criar a partição vertical. *coluna* é **sysname**, com um padrão NULL. Se NULL e `@operation = N'add'`, todas as colunas da tabela de origem serão adicionadas ao artigo por padrão. *coluna* não pode ser NULL quando *operação* é definido como **drop**. Para excluir colunas de um artigo, execute **sp_mergearticlecolumn** e especifique *coluna* e `@operation = N'drop'` para cada coluna a ser removida especificado *artigo*.  
+ Identifica as colunas nas quais criar a partição vertical. *coluna* está **sysname**, com um padrão NULL. Se NULL e `@operation = N'add'`, todas as colunas da tabela de origem serão adicionadas ao artigo por padrão. *coluna* não pode ser NULL quando *operação* é definido como **drop**. Para excluir colunas de um artigo, execute **sp_mergearticlecolumn** e especifique *coluna* e `@operation = N'drop'` para cada coluna a ser removido especificado *artigo*.  
   
  [  **@operation =**] **'***operação***'**  
- É o status da replicação. *operação* é **nvarchar (4)**, com um padrão de ADD. **Adicionar** marca a coluna para replicação. **Descartar** limpa a coluna.  
+ É o status da replicação. *operação* está **nvarchar(4)**, com um padrão de ADD. **Adicionar** marca a coluna para replicação. **Descartar** limpa a coluna.  
   
  [  **@schema_replication=**] **'***schema_replication***'**  
- Especifica que uma alteração no esquema será propagada quando Agente de Mesclagem for executado. *schema_replication* é **nvarchar (5)**, com um padrão de FALSE.  
+ Especifica que uma alteração no esquema será propagada quando Agente de Mesclagem for executado. *schema_replication* está **nvarchar (5)**, com um padrão de FALSE.  
   
 > [!NOTE]  
->  Somente **FALSE** há suporte para *schema_replication*.  
+>  Somente **falsos** tem suporte para *schema_replication*.  
   
  [  **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
  Habilita ou desabilita a capacidade de ter um instantâneo invalidado. *force_invalidate_snapshot* é um **bit**, com um padrão de **0**.  
   
  **0** Especifica que as alterações no artigo de mesclagem não fará com que o instantâneo seja inválido.  
   
- **1** Especifica que as alterações no artigo de mesclagem podem invalidar o instantâneo, e se esse for o caso, um valor de **1** dá permissão para a ocorrência do novo instantâneo.  
+ **1** Especifica que as alterações no artigo de mesclagem podem invalidar o instantâneo ser inválido, e se esse for o caso, um valor de **1** dá permissão para a ocorrência do novo instantâneo.  
   
- [* *@force_reinit_subscription =] * force_reinit_subscription*  
- Habilita ou desabilita a capacidade de fazer com que a assinatura seja reinicializada. *force_reinit_subscription* é um bit com um padrão de **0**.  
+ [* *@force_reinit_subscription =] * * * force_reinit_subscription*  
+ Habilita ou desabilita a capacidade de fazer com que a assinatura seja reinicializada. *force_reinit_subscription* é um pouco com um padrão de **0**.  
   
- **0** Especifica que as alterações no artigo de mesclagem não fará com que a assinatura ser reiniciada.  
+ **0** Especifica que as alterações no artigo de mesclagem não fará com que a assinatura seja reiniciada.  
   
- **1** Especifica que as alterações no artigo de mesclagem podem invalidar a assinatura ser reiniciada, e se esse for o caso, um valor de **1** dá permissão para que ocorra a reinicialização da assinatura.  
+ **1** Especifica que as alterações no artigo de mesclagem podem invalidar a assinatura seja reiniciada e se esse for o caso, um valor de **1** dá permissão para que ocorra a reinicialização da assinatura.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -99,11 +99,11 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
  [!code-sql[HowTo#sp_AddMergeArticle](../../relational-databases/replication/codesnippet/tsql/sp-mergearticlecolumn-tr_1.sql)]  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função de servidor fixa ou **db_owner** pode executar a função de banco de dados fixa **sp_mergearticlecolumn**.  
+ Somente os membros dos **sysadmin** função de servidor fixa ou **db_owner** banco de dados fixa podem executar **sp_mergearticlecolumn**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Define and Modify a Join Filter Between Merge Articles](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
- [Definir e modificar um filtro de linha parametrizado para um artigo de mesclagem](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
+ [Definir e modificar um filtro de linha com parâmetros para um artigo de mesclagem](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
  [Filtrar os dados publicados](../../relational-databases/replication/publish/filter-published-data.md)   
  [Procedimentos armazenados de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

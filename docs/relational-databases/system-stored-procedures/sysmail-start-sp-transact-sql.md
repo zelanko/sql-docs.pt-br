@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sysmail_start_sp
 ms.assetid: 25fd7bb6-cfdd-463f-bea8-c6fcb805d3f5
 caps.latest.revision: 32
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9513e95d52aed4ee7fb525504dfb112092e1807d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2fa805836387ae94cca2cba189eb4a9a9b20d8a3
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255006"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024175"
 ---
 # <a name="sysmailstartsp-transact-sql"></a>sysmail_start_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,16 +44,16 @@ sysmail_start_sp
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- Nenhuma  
+ None  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma  
+ None  
   
 ## <a name="remarks"></a>Remarks  
- O Database Mail não está habilitado ou instalado na[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalação. Use o Assistente para Configuração do Database Mail para habilitar e instalar objetos do Database Mail.  
+ O Database Mail não está habilitado ou instalado após[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalação. Use o Assistente para Configuração do Database Mail para habilitar e instalar objetos do Database Mail.  
   
  Esse procedimento armazenado está no **msdb** banco de dados. Esse procedimento armazenado inicia a fila do Database Mail que contém solicitações de mensagens de saída e habilita a ativação do [!INCLUDE[ssSB](../../includes/sssb-md.md)] para o programa externo.  
   
@@ -63,7 +63,7 @@ sysmail_start_sp
 >  Este procedimento armazenado inicia apenas as filas do Database Mail. Esse procedimento armazenado não ativa a entrega de mensagens do [!INCLUDE[ssSB](../../includes/sssb-md.md)] no banco de dados.  
   
 ## <a name="permissions"></a>Permissões  
- Permissões de execução para esse procedimento usam como padrão membros do **sysadmin** função de servidor fixa.  
+ Permissões de execução para esse procedimento usam como padrão os membros de **sysadmin** função de servidor fixa.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir mostra a partir do Database Mail a **msdb** banco de dados. O exemplo supõe que o Database Mail foi habilitado.  

@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_log_shipping_monitor_secondary
 ms.assetid: 3ac091ea-c9a8-4c05-a0b6-1ccf4e001339
-caps.latest.revision: 22
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f6e667981bd9fb3ba0f67e260da05a7b92d324d5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 598f988483e3bef6ffe784f7be18145ebf1a89e5
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247355"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028000"
 ---
 # <a name="sphelplogshippingmonitorsecondary-transact-sql"></a>sp_help_log_shipping_monitor_secondary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,17 +47,17 @@ sp_help_log_shipping_monitor_secondary
   
 ## <a name="arguments"></a>Argumentos  
  [  **@secondary_server =** ] '*secondary_server*'  
- É o nome do servidor secundário. *secondary_server* é **sysname**, sem padrão.  
+ É o nome do servidor secundário. *secondary_server* está **sysname**, sem padrão.  
   
  [  **@secondary_database =** ] '*secondary_database*'  
- É o nome do banco de dados secundário. *secondary_database* é **sysname**, sem padrão.  
+ É o nome do banco de dados secundário. *secondary_database* está **sysname**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Coluna|Description|  
+|coluna|Description|  
 |------------|-----------------|  
 |**secondary_server**|O nome da instância secundária do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] na configuração de envio de logs.|  
 |**secondary_database**|Nome do banco de dados secundário na configuração de envio de logs.|  
@@ -80,10 +79,10 @@ sp_help_log_shipping_monitor_secondary
  **sp_help_log_shipping_monitor_secondary** deve ser executado a partir de **mestre** banco de dados no servidor monitor.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função fixa de servidor pode executar esse procedimento.  
+ Somente os membros dos **sysadmin** função de servidor fixa pode executar esse procedimento.  
   
-## <a name="see-also"></a>Consulte também  
- [Sobre o envio de logs & #40; SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+## <a name="see-also"></a>Confira também  
+ [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

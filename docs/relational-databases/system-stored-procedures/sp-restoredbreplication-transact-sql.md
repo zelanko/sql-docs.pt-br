@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_restoredbreplication
 ms.assetid: a2c5ee32-e6d9-46e9-8031-8ff13c20acf7
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ea73a77c47b4579cda2e97dcea77a8f6516157c1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 21cdf75f248890bcf6fd18f53f4797cbebae36a2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996983"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022315"
 ---
 # <a name="sprestoredbreplication-transact-sql"></a>sp_restoredbreplication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,10 +49,10 @@ sp_restoredbreplication [ @srv_orig = ] 'original_server_name'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@srv_orig =** ] **'***original_server_name***'**  
- O nome do servidor onde o backup foi criado. *original_server_name* é **sysname**, sem padrão.  
+ O nome do servidor onde o backup foi criado. *original_server_name* está **sysname**, sem padrão.  
   
  [  **@db_orig =** ] **'***original_database_name***'**  
- O nome do banco de dados cujo backup foi efetuado. *original_database_name* é **sysname**, sem padrão.  
+ O nome do banco de dados cujo backup foi efetuado. *original_database_name* está **sysname**, sem padrão.  
   
  [  **@keep_replication =** ] *keep_replication*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -67,7 +67,7 @@ sp_restoredbreplication [ @srv_orig = ] 'original_server_name'
  **sp_restoredbreplication** é usado em todos os tipos de replicação.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** ou **dbcreator** função de servidor fixa ou **dbo** esquema de banco de dados pode executar **sp_restoredbreplication**.  
+ Somente os membros dos **sysadmin** ou **dbcreator** função de servidor fixa ou o **dbo** esquema de banco de dados pode executar **sp_restoredbreplication**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Procedimentos armazenados de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sp_changemergesubscription
 ms.assetid: fd820f35-c189-4e2d-884d-b60c1c469f58
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2426efe2b47c5bdd6fbf952202d70dbc4fc5e365
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 82fcd86e9b80c2492da938000a0510d52583dc55
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32991503"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43018052"
 ---
 # <a name="spchangemergesubscription-transact-sql"></a>sp_changemergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,21 +49,21 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
   
 ## <a name="arguments"></a>Argumentos  
  [  **@publication=**] **'***publicação***'**  
- É o nome da publicação a ser alterada. *publicação* é **sysname**, com um padrão NULL. A publicação já deve existir e ser adequada às regras para identificadores.  
+ É o nome da publicação a ser alterada. *publicação* está **sysname**, com um padrão NULL. A publicação já deve existir e ser adequada às regras para identificadores.  
   
  [  **@subscriber=**] **'***assinante***'**  
- É o nome do Assinante. *assinante* é **sysname**, com um padrão NULL.  
+ É o nome do Assinante. *assinante* está **sysname**, com um padrão NULL.  
   
  [  **@subscriber_db=**] **'***subscriber_db***'**  
- É o nome do banco de dados de assinatura. *subscriber_db*é **sysname**, com um padrão NULL.  
+ É o nome do banco de dados de assinatura. *subscriber_db*está **sysname**, com um padrão NULL.  
   
  [  **@property=**] **'***propriedade***'**  
- É a propriedade a ser alterada para a publicação determinada. *propriedade* é **sysname**, e pode ser um dos valores na tabela.  
+ É a propriedade a ser alterada para a publicação determinada. *propriedade* está **sysname**, e pode ser um dos valores na tabela.  
   
  [  **@value=**] **'***valor***'**  
- É o novo valor especificado *propriedade*. *valor* é **nvarchar (255)**, e pode ser um dos valores na tabela.  
+ É o novo valor especificado *propriedade*. *valor* está **nvarchar (255)**, e pode ser um dos valores na tabela.  
   
-|Propriedade|Value|Description|  
+|Propriedade|Valor|Description|  
 |--------------|-----------|-----------------|  
 |**Descrição**||Descrição da assinatura de mesclagem.|  
 |**priority**||É a prioridade da assinatura. A prioridade é usada pelo resolvedor padrão para escolher um vencedor quando são detectados conflitos.|  
@@ -78,7 +78,7 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 |**subscriber_login**||Nome de logon no Assinante.|  
 |**subscriber_password**||Senha forte para o logon de Assinante fornecido.|  
 |**sync_type**|**Automático**|Esquema e dados iniciais de tabelas publicadas são transferidos ao Assinante primeiro.|  
-||**Nenhum**|O Assinante já tem o esquema e os dados iniciais para as tabelas publicadas; tabelas de sistema e dados são sempre transferidos.|  
+||**None**|O Assinante já tem o esquema e os dados iniciais para as tabelas publicadas; tabelas de sistema e dados são sempre transferidos.|  
 |**use_interactive_resolver**|**true**|Permite resolver conflitos interativamente para todos os artigos que permitem resolução interativa.|  
 ||**false**|Conflitos são resolvidos automaticamente usando um resolvedor padrão ou resolvedor personalizado.|  
 |NULL (padrão)|NULL (padrão)||  
@@ -92,7 +92,7 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
  Depois de alterar o logon ou a senha de um agente, você deve parar e reiniciar o agente antes que as alterações entrem em vigor.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função de servidor fixa ou **db_owner** pode executar a função de banco de dados fixa **sp_changemergesubscription**.  
+ Somente os membros dos **sysadmin** função de servidor fixa ou **db_owner** banco de dados fixa podem executar **sp_changemergesubscription**.  
   
 ## <a name="see-also"></a>Consulte também  
  [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   

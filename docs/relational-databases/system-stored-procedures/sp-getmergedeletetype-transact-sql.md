@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_getmergedeletetype
 ms.assetid: 64450e4d-844d-4176-874e-f3845536f7d2
 caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 04437ebf7d33c81a847fe8f17ca74a0cb68b4279
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 96258cb01e49c3d0b3fc2b83960e7d4aff6b64a1
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994073"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027753"
 ---
 # <a name="spgetmergedeletetype-transact-sql"></a>sp_getmergedeletetype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,15 +46,15 @@ sp_getmergedeletetype [ @source_object = ] 'source_object', [ @rowguid =] 'rowgu
   
 ## <a name="arguments"></a>Argumentos  
  [  **@source_object =**] **'***source_object***'**  
- É o nome do objeto de origem. *source_object* é **nvarchar (386)**, sem padrão.  
+ É o nome do objeto de origem. *source_object* está **nvarchar(386)**, sem padrão.  
   
  [  **@rowguid=**] **'***rowguid***'**  
- É o identificador de linha do tipo de exclusão. *ROWGUID* é **uniqueidentifier**, sem padrão.  
+ É o identificador de linha do tipo de exclusão. *ROWGUID* está **uniqueidentifier**, sem padrão.  
   
  [  **@delete_type=**] *delete_type* **saída**  
- É o código que indica o tipo de exclusão. *delete_type* é **int**, sem padrão. *delete_type* também é um parâmetro de saída, e pode ser um destes valores.  
+ É o código que indica o tipo de exclusão. *delete_type* está **int**, sem padrão. *delete_type* também é um parâmetro de saída, e pode ser um destes valores.  
   
-|Value|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**1**|Exclusão de usuário|  
 |**5**|Exclusão parcial|  
@@ -64,7 +64,7 @@ sp_getmergedeletetype [ @source_object = ] 'source_object', [ @rowguid =] 'rowgu
  **sp_getmergedeletetype** é usado em replicação de mesclagem.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função de servidor fixa ou **db_owner** pode executar a função de banco de dados fixa **sp_getmergedeletetype**.  
+ Somente os membros dos **sysadmin** função de servidor fixa ou o **db_owner** banco de dados fixa podem executar **sp_getmergedeletetype**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

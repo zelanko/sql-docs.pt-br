@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_replsetoriginator
 ms.assetid: 030e5226-0585-439f-b8cd-36f48367d86d
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 680fdf8c36c87549de43825ffd2a7aa5c8fba0f1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1bfba001bb6890c4a15975c78aee7818f02835b0
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996133"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026815"
 ---
 # <a name="spreplsetoriginator-transact-sql"></a>sp_replsetoriginator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ sp_replsetoriginator [ @server_name= ] 'server_name'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@server_name=**] **'***nome_do_servidor***'**  
- É o nome do servidor onde a transação está sendo aplicada. *originating_server* é **sysname**, sem padrão.  
+ É o nome do servidor onde a transação está sendo aplicada. *originating_server* está **sysname**, sem padrão.  
   
  [  **@database_name=**] **'***database_name***'**  
- É o nome do banco de dados onde a transação está sendo aplicada. *originating_db* é **sysname**, sem padrão.  
+ É o nome do banco de dados onde a transação está sendo aplicada. *originating_db* está **sysname**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -59,7 +59,7 @@ sp_replsetoriginator [ @server_name= ] 'server_name'
  **sp_replsetoriginator** é executada pelo Distribution Agent para registrar a origem das transações aplicada pela replicação. Essa informação é usada para invocar detecção de loopback para assinaturas transacionais bidirecionais que têm a propriedade de loopback definida.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** a função de servidor fixa no publicador, membros do **db_owner** função de banco de dados fixa no banco de dados de publicação ou usuários na lista de acesso da publicação (PAL) pode executar **sp_replsetoriginator**.  
+ Somente os membros da **sysadmin** função de servidor fixa no publicador, os membros a **db_owner** banco de dados fixa no banco de dados de publicação ou usuários na lista de acesso da publicação (PAL) podem executar **sp_replsetoriginator**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

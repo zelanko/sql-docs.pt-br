@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpmergeconflictrows
 ms.assetid: 131395a5-cb18-4795-a7ae-fa09d8ff347f
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 60759dfe84d22e919cf14d6fb33454b2d11bae49
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 60908f84ed6465028ca92a46b97bb6fce4541ac1
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32998943"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038758"
 ---
 # <a name="sphelpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,19 +50,19 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
   
 ## <a name="arguments"></a>Argumentos  
  [  **@publication=**] **'***publicação***'**  
- É o nome da publicação. *publicação* é **sysname**, com um padrão de **%**. Se a publicação for especificada, serão retornados todos os conflitos qualificados pela publicação. Por exemplo, se o **MSmerge_conflict_Customers** tabela tem linhas de conflito para o **WA** e **CA** publicações, passando um nome de publicação **autoridade de certificação**  recuperará os conflitos que pertencem ao **CA** publicação.  
+ É o nome da publicação. *publicação* está **sysname**, com um padrão de **%**. Se a publicação for especificada, serão retornados todos os conflitos qualificados pela publicação. Por exemplo, se o **MSmerge_conflict_Customers** tabela tem linhas de conflito para o **WA** e o **autoridade de certificação** publicações, passando um nome de publicação **autoridade de certificação**  recuperará os conflitos que pertencem à **autoridade de certificação** publicação.  
   
  [  **@conflict_table=**] **'***conflict_table***'**  
- É o nome da tabela de conflito. *conflict_table* é **sysname**, sem padrão. Em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores, as tabelas de conflitos são nomeadas usando nomes de formato com **msmerge_conflict _* publicação *_* artigo *, com uma tabela para cada publicação artigo.  
+ É o nome da tabela de conflito. *conflict_table* está **sysname**, sem padrão. Na [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e em versões posteriores, tabelas de conflitos são nomeadas usando nomes de formato com **msmerge_conflict _* publicação *_* artigo * * *, com uma tabela para cada publicado artigo.  
   
- [  **@publisher=**] **'***publicador***'**  
- É o nome do Publicador. *publicador* é **sysname**, com um padrão NULL.  
+ [  **@publisher=**] **'***publisher***'**  
+ É o nome do Publicador. *Publisher* está **sysname**, com um padrão NULL.  
   
  [  **@publisher_db=**] **'***publisher_db***'**  
  É o nome do banco de dados publicador. *publisher_db* é **sysname**, com um padrão NULL.  
   
  [  **@logical_record_conflicts=** ] *logical_record_conflicts*  
- Indica se o conjunto de resultados contém informações sobre conflitos de registro lógico. *logical_record_conflicts* é **int**, com um valor padrão de 0. **1** significa que as informações de conflitos de registro lógico são retornadas.  
+ Indica se o conjunto de resultados contém informações sobre conflitos de registro lógico. *logical_record_conflicts* está **int**, com um valor padrão de 0. **1** significa que as informações de conflitos de registro lógico são retornadas.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  **sp_helpmergeconflictrows** retorna um conjunto de resultados consistindo da estrutura da tabela base e essas colunas adicionais.  
@@ -70,8 +70,8 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**origin_datasource**|**varchar(255)**|Origem do conflito.|  
-|**conflict_type**|**Int**|Código que indica o tipo de conflito:<br /><br /> **1** = conflito de atualização: O conflito é detectado no nível de linha.<br /><br /> **2** = conflito de atualização de coluna: O conflito é detectado no nível de coluna.<br /><br /> **3** = conflito de atualização exclusão Wins: A exclusão ganha o conflito.<br /><br /> **4** = conflito de exclusão vence atualização: O rowguid excluído que perde o conflito é registrado nessa tabela.<br /><br /> **5** = carregar Falha na inserção: A inserção do assinante não puderam ser aplicada no publicador.<br /><br /> **6** = baixar Falha na inserção: A inserção do publicador não pôde ser aplicada no assinante.<br /><br /> **7** = carregar Falha na exclusão: A exclusão no assinante não pôde ser carregada no publicador.<br /><br /> **8** = baixar Falha na exclusão: não foi possível baixar a exclusão no publicador ao assinante.<br /><br /> **9** = carregar Falha na atualização: A atualização do assinante não puderam ser aplicada no publicador.<br /><br /> **10** = baixar Falha na atualização: A atualização do publicador não pôde ser aplicada ao assinante.<br /><br /> **12** = lógico registro atualização vence exclusão: O registro lógico excluído que perde o conflito é registrado nessa tabela.<br /><br /> **13** = lógico registro conflito inserção de atualização: inserir em um registro lógico conflita com uma atualização.<br /><br /> **14** = lógico registro Wins atualização conflito de exclusão: O registro lógico atualizado que perde o conflito é registrado nessa tabela.|  
-|**reason_code**|**Int**|Código de erro que pode ser sensível ao contexto.|  
+|**conflict_type**|**int**|Código que indica o tipo de conflito:<br /><br /> **1** = conflito de atualização: O conflito é detectado no nível de linha.<br /><br /> **2** = conflito de atualização de coluna: O conflito é detectado no nível de coluna.<br /><br /> **3** = conflito de atualização exclusão Wins: A exclusão ganha o conflito.<br /><br /> **4** = conflito de exclusão vence atualização: O rowguid excluído que perde o conflito é registrado nessa tabela.<br /><br /> **5** = carregar Falha na inserção: A inserção do assinante não puderam ser aplicada no publicador.<br /><br /> **6** = baixar Falha na inserção: A inserção do publicador não pôde ser aplicada no assinante.<br /><br /> **7** = carregar Falha na exclusão: A exclusão no assinante não pôde ser carregada no publicador.<br /><br /> **8** = baixar Falha na exclusão: A exclusão no publicador não pôde ser baixada no assinante.<br /><br /> **9** = carregar Falha na atualização: A atualização do assinante não puderam ser aplicada no publicador.<br /><br /> **10** = baixar Falha na atualização: A atualização do publicador não pôde ser aplicada ao assinante.<br /><br /> **12** = lógico registro atualização vence exclusão: O registro lógico excluído que perde o conflito é registrado nessa tabela.<br /><br /> **13** = lógico registro conflito de inserção de atualização: inserção em um registro lógico conflita com uma atualização.<br /><br /> **14** = lógico registro Wins atualização conflito de exclusão: O registro lógico atualizado que perde o conflito é registrado nessa tabela.|  
+|**reason_code**|**int**|Código de erro que pode ser sensível ao contexto.|  
 |**reason_text**|**varchar(720)**|Descrição de erro que pode ser sensível ao contexto.|  
 |**pubid**|**uniqueidentifier**|Identificador da publicação.|  
 |**MSrepl_create_time**|**datetime**|Hora em que as informações de conflitos foram adicionadas.|  
@@ -83,10 +83,10 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
  **sp_helpmergeconflictrows** é usado em replicação de mesclagem.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função fixa de servidor a **db_owner** fixo de função de banco de dados e o **replmonitor** no banco de dados de distribuição podem executar **sp_helpmergeconflictrows**.  
+ Somente os membros dos **sysadmin** função de servidor fixa, o **db_owner** função de banco de dados fixa e a **replmonitor** no banco de dados de distribuição podem executar **sp_helpmergeconflictrows**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Exibir informações de conflito para publicações de mesclagem &#40;programação Transact-SQL de replicação&#41;](../../relational-databases/replication/view-conflict-information-for-merge-publications.md)   
+ [Exibir informações sobre conflitos para publicações de mesclagem &#40;programação de Transact-SQL de replicação&#41;](../../relational-databases/replication/view-conflict-information-for-merge-publications.md)   
  [Procedimentos armazenados de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

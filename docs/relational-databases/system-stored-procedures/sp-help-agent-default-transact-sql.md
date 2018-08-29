@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_help_agent_default
 ms.assetid: 7ba55e39-05dd-43c7-b5da-b268ed8426dd
 caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9ea2d817e869f7ff66ddf70243e01b2f334fb14b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a835b1bafa037e249450118cb08f3d886bb6283b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994653"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43017812"
 ---
 # <a name="sphelpagentdefault-transact-sql"></a>sp_help_agent_default (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,13 +46,13 @@ sp_help_agent_default [ @profile_id= ] profile_id OUTPUT
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@profile_id=**] *profile_id * saída**  
- É a ID da configuração padrão do tipo de agente. *profile_id* é **int**, sem padrão. *profile_id* também é um parâmetro de saída e retorna a ID da configuração padrão para o tipo de agente.  
+ [  **@profile_id=**] *profile_id * * * saída**  
+ É a ID da configuração padrão do tipo de agente. *profile_id* está **int**, sem padrão. *profile_id* também é um parâmetro de saída e retorna a ID da configuração padrão para o tipo de agente.  
   
  [  **@agent_type=**] **'***agent_type***'**  
- É o tipo de agente. *agent_type* é **int**, sem padrão e pode ser um destes valores.  
+ É o tipo de agente. *agent_type* está **int**, sem padrão e pode ser um destes valores.  
   
-|Value|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**1**|Snapshot Agent.|  
 |**2**|Log Reader Agent.|  
@@ -67,7 +67,7 @@ sp_help_agent_default [ @profile_id= ] profile_id OUTPUT
  **sp_help_agent_default** é usado em todos os tipos de replicação.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função de servidor fixa ou **replmonitor** pode executar a função de banco de dados fixa **sp_help_agent_default**.  
+ Somente os membros dos **sysadmin** função de servidor fixa ou o **replmonitor** banco de dados fixa podem executar **sp_help_agent_default**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

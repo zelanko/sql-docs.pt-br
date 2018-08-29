@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_removedbreplication
 ms.assetid: cb98d571-d1eb-467b-91f7-a6e091009672
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aee6f832fda56d69e064ef49c669ab2d945c5140
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dbeda476ae204ce33c44dd858f90e19a677e74e4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32998000"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026572"
 ---
 # <a name="spremovedbreplication-transact-sql"></a>sp_removedbreplication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,12 +53,12 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
  É o nome do banco de dados. *dbname* é **sysname**, com um valor padrão de NULL. Quando for NULL, o banco de dados atual será usado.  
   
  [ **@type** =] *tipo*  
- É o tipo de replicação para a qual os objetos de banco de dados estão sendo removidos. *tipo* é **nvarchar (5)** e pode ser um dos valores a seguir.  
+ É o tipo de replicação para a qual os objetos de banco de dados estão sendo removidos. *tipo de* está **nvarchar (5)** e pode ser um dos valores a seguir.  
   
 |||  
 |-|-|  
 |**tran**|Remove objetos de publicação de replicação transacional.|  
-|**Mesclagem**|Remove objetos de publicação de replicação de mesclagem.|  
+|**mesclagem**|Remove objetos de publicação de replicação de mesclagem.|  
 |**ambos** (padrão)|Remove todos os objetos de publicação de replicação.|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -69,13 +69,13 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
   
  **sp_removedbreplication** é útil ao restaurar um banco de dados replicado que não tem nenhum objeto de replicação a ser restaurado.  
   
- **sp_removedbreplication** não pode ser usado em um banco de dados está marcado como somente leitura.  
+ **sp_removedbreplication** não pode ser usado em relação a um banco de dados está marcado como somente leitura.  
   
 ## <a name="example"></a>Exemplo  
  [!code-sql[HowTo#sp_removedbreplication](../../relational-databases/replication/codesnippet/tsql/sp-removedbreplication-t_1.sql)]  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** pode executar a função de servidor fixa **sp_removedbreplication**.  
+ Somente os membros dos **sysadmin** pode executar a função de servidor fixa **sp_removedbreplication**.  
   
 ## <a name="example"></a>Exemplo  
   

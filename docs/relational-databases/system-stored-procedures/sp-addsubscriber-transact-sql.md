@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addsubscriber
 ms.assetid: b8a584ea-2a26-4936-965b-b84f026e39c0
-caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a78d29cfa36616e1d440295d5ed089d9489ecd31
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 12fd46f0437354429fde60e81e6eaf33e668e948
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32993033"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020019"
 ---
 # <a name="spaddsubscriber-transact-sql"></a>sp_addsubscriber (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,26 +68,26 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@subscriber=**] **'***assinante***'**  
- É o nome do servidor a ser adicionado como um Assinante válido à publicação neste servidor. *assinante* é **sysname**, sem padrão.  
+ É o nome do servidor a ser adicionado como um Assinante válido à publicação neste servidor. *assinante* está **sysname**, sem padrão.  
   
  [  **@type=**] *tipo*  
- É o tipo de assinante. *tipo* é **tinyint**, e pode ser um destes valores.  
+ É o tipo de assinante. *tipo de* está **tinyint**, e pode ser um destes valores.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
-|**0** (padrão)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assinante|  
+|**0** (padrão)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinante|  
 |**1**|Servidor de fontes de dados ODBC|  
 |**2**|Banco de dados [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet |  
 |**3**|Provedor OLE DB|  
   
- [  **@login=**] **'***login***'**  
+ [  **@login=**] **'***logon***'**  
  É a ID do logon para a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *login* é **sysname**, com um padrão de NULL.  
   
 > [!NOTE]  
 >  Esse parâmetro foi preterido e é mantido para compatibilidade com versões anteriores de scripts. A propriedade agora é especificada em uma base por assinatura ao executar [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Quando um valor é especificado, ele é usado como padrão na criação de assinaturas neste Assinante e uma mensagem de aviso é retornada.  
   
  [  **@password=**] **'***senha***'**  
- É a senha para a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *senha* é **nvarchar (524)**, com um padrão NULL.  
+ É a senha para a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *senha* está **nvarchar(524)**, com um padrão NULL.  
   
 > [!IMPORTANT]  
 >  Não use uma senha em branco. Use uma senha forte.  
@@ -115,9 +114,9 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 >  Quando um valor é especificado, ele é usado como padrão na criação de assinaturas neste Assinante e uma mensagem de aviso é retornada.  
   
  [  **@frequency_type=**] *frequency_type*  
- É a frequência de agendamento do agente de replicação. *frequency_type* é **int**, e pode ser um destes valores.  
+ É a frequência de agendamento do agente de replicação. *frequency_type* está **int**, e pode ser um destes valores.  
   
-|Value|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**1**|Uma vez|  
 |**2**|Sob Demanda|  
@@ -132,15 +131,15 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 >  Esse parâmetro foi preterido e é mantido para compatibilidade com versões anteriores de scripts. A propriedade agora é especificada em uma base por assinatura ao executar [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Quando um valor é especificado, ele é usado como padrão na criação de assinaturas neste Assinante e uma mensagem de aviso é retornada.  
   
  [**@frequency_interval=** ] *frequency_interval*  
- O valor aplicado à frequência definida *frequency_type*. *frequency_interval* é **int**, com um padrão de 1.  
+ O valor aplicado à frequência definida *frequency_type*. *frequency_interval* está **int**, com um padrão de 1.  
   
 > [!NOTE]  
 >  Esse parâmetro foi preterido e é mantido para compatibilidade com versões anteriores de scripts. A propriedade agora é especificada em uma base por assinatura ao executar [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Quando um valor é especificado, ele é usado como padrão na criação de assinaturas neste Assinante e uma mensagem de aviso é retornada.  
   
  [  **@frequency_relative_interval=**] *frequency_relative_interval*  
- É a data do agente de replicação. Esse parâmetro é usado quando *frequency_type* é definido como **32** (mensal relativo). *frequency_relative_interval* é **int**, e pode ser um destes valores.  
+ É a data do agente de replicação. Esse parâmetro é usado quando *frequency_type* é definido como **32** (mensal relativo). *frequency_relative_interval* está **int**, e pode ser um destes valores.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**1** (padrão)|First|  
 |**2**|Segundo|  
@@ -152,15 +151,15 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 >  Esse parâmetro foi preterido e é mantido para compatibilidade com versões anteriores de scripts. A propriedade agora é especificada em uma base por assinatura ao executar [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Quando um valor é especificado, ele é usado como padrão na criação de assinaturas neste Assinante e uma mensagem de aviso é retornada.  
   
  [  **@frequency_recurrence_factor=**] *frequency_recurrence_factor*  
- É o fator de recorrência usado por *frequency_type*. *frequency_recurrence_factor* é **int**, com um padrão de **0**.  
+ É o fator de recorrência usado pelo *frequency_type*. *frequency_recurrence_factor* está **int**, com um padrão de **0**.  
   
 > [!NOTE]  
 >  Esse parâmetro foi preterido e é mantido para compatibilidade com versões anteriores de scripts. A propriedade agora é especificada em uma base por assinatura ao executar [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Quando um valor é especificado, ele é usado como padrão na criação de assinaturas neste Assinante e uma mensagem de aviso é retornada.  
   
  [  **@frequency_subday=**] *frequency_subday*  
- É a frequência de reagendamento durante o período definido. *frequency_subday* é **int**, e pode ser um destes valores.  
+ É a frequência de reagendamento durante o período definido. *frequency_subday* está **int**, e pode ser um destes valores.  
   
-|Value|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**1**|Uma vez|  
 |**2**|Segundo|  
@@ -171,52 +170,52 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 >  Esse parâmetro foi preterido e é mantido para compatibilidade com versões anteriores de scripts. A propriedade agora é especificada em uma base por assinatura ao executar [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Quando um valor é especificado, ele é usado como padrão na criação de assinaturas neste Assinante e uma mensagem de aviso é retornada.  
   
  [  **@frequency_subday_interval=**] *frequency_subday_interval*  
- É o intervalo de *frequency_subday*. *frequency_subday_interval* é **int**, com um padrão de **5**.  
+ É o intervalo de *frequency_subday*. *frequency_subday_interval* está **int**, com um padrão de **5**.  
   
 > [!NOTE]  
 >  Esse parâmetro foi preterido e é mantido para compatibilidade com versões anteriores de scripts. A propriedade agora é especificada em uma base por assinatura ao executar [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Quando um valor é especificado, ele é usado como padrão na criação de assinaturas neste Assinante e uma mensagem de aviso é retornada.  
   
  [  **@active_start_time_of_day=**] *active_start_time_of_day*  
- É a hora do dia do primeiro agendamento do agente de replicação, formatada como HHMMSS. *active_start_time_of_day* é **int**, com um padrão de **0**.  
+ É a hora do dia do primeiro agendamento do agente de replicação, formatada como HHMMSS. *active_start_time_of_day* está **int**, com um padrão de **0**.  
   
 > [!NOTE]  
 >  Esse parâmetro foi preterido e é mantido para compatibilidade com versões anteriores de scripts. A propriedade agora é especificada em uma base por assinatura ao executar [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Quando um valor é especificado, ele é usado como padrão na criação de assinaturas neste Assinante e uma mensagem de aviso é retornada.  
   
  [  **@active_end_time_of_day=**] *active_end_time_of_day*  
- É a hora do dia do último agendamento do agente de replicação, formatada como HHMMSS. *active_end_time_of_day*é **int**, com um padrão de 235959, o que significa 11:59:59 P.M. medida em um relógio de 24 horas.  
+ É a hora do dia do último agendamento do agente de replicação, formatada como HHMMSS. *active_end_time_of_day*está **int**, com um padrão de 235959, que significa que 11:59:59 P.M. medida em um relógio de 24 horas.  
   
 > [!NOTE]  
 >  Esse parâmetro foi preterido e é mantido para compatibilidade com versões anteriores de scripts. A propriedade agora é especificada em uma base por assinatura ao executar [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Quando um valor é especificado, ele é usado como padrão na criação de assinaturas neste Assinante e uma mensagem de aviso é retornada.  
   
  [  **@active_start_date=**] *active_start_date*  
- É a data do primeiro agendamento do agente de replicação, formatada como AAAAMMDD. *active_start_date* é **int**, com um padrão de 0.  
+ É a data do primeiro agendamento do agente de replicação, formatada como AAAAMMDD. *active_start_date* está **int**, com um padrão de 0.  
   
 > [!NOTE]  
 >  Esse parâmetro foi preterido e é mantido para compatibilidade com versões anteriores de scripts. A propriedade agora é especificada em uma base por assinatura ao executar [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Quando um valor é especificado, ele é usado como padrão na criação de assinaturas neste Assinante e uma mensagem de aviso é retornada.  
   
  [  **@active_end_date=**] *active_end_date*  
- É a data do último agendamento do agente de replicação, formatada como AAAAMMDD. *active_end_date* é **int**, com um padrão de 99991231, que significa 31 de dezembro de 9999.  
+ É a data do último agendamento do agente de replicação, formatada como AAAAMMDD. *active_end_date* está **int**, com um padrão de 99991231, que significa 31 de dezembro de 9999.  
   
 > [!NOTE]  
 >  Esse parâmetro foi preterido e é mantido para compatibilidade com versões anteriores de scripts. A propriedade agora é especificada em uma base por assinatura ao executar [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Quando um valor é especificado, ele é usado como padrão na criação de assinaturas neste Assinante e uma mensagem de aviso é retornada.  
   
  [  **@description=**] **'***descrição***'**  
- É uma descrição de texto do Assinante. *Descrição* é **nvarchar (255)**, com um padrão NULL.  
+ É uma descrição de texto do Assinante. *Descrição* está **nvarchar (255)**, com um padrão NULL.  
   
  [  **@security_mode=**] *security_mode*  
- É o modo de segurança implementado. *security_mode* é **int**, com um padrão de 1. **0** especifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação. **1** Especifica autenticação do Windows.  
+ É o modo de segurança implementado. *security_mode* está **int**, com um padrão de 1. **0** especifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação. **1** Especifica a autenticação do Windows.  
   
 > [!NOTE]  
 >  Esse parâmetro foi preterido e é mantido para compatibilidade com versões anteriores de scripts. A propriedade agora é especificada em uma base por assinatura ao executar [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Quando um valor é especificado, ele é usado como padrão na criação de assinaturas neste Assinante e uma mensagem de aviso é retornada.  
   
  [  **@encrypted_password=**] *encrypted_password*  
- Esse parâmetro foi preterido e é fornecido para compatibilidade com versões anteriores somente configuração *encrypted_password* para qualquer valor mas **0** resultará em erro.  
+ Esse parâmetro foi preterido e é fornecido para compatibilidade com versões anteriores, somente configuração *encrypted_password* a qualquer valor, mas **0** resultará em erro.  
   
- [ **@publisher**=] **'***publicador***'**  
- Especifica um Publicador que não é do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *publicador* é **sysname**, com um padrão NULL.  
+ [ **@publisher**=] **'***publisher***'**  
+ Especifica um Publicador que não é do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *Publisher* está **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
->  *publicador* não deve ser usado durante a publicação de um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
+>  *Publisher* não deve ser usado durante a publicação de um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -226,14 +225,14 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
   
  **sp_addsubscriber** não é necessário quando o assinante só tiver assinaturas anônimas para publicações de mesclagem.  
   
- **sp_addsubscriber** grava o [MSsubscriber_info](../../relational-databases/system-tables/mssubscriber-info-transact-sql.md) tabela o **distribuição** banco de dados.  
+ **sp_addsubscriber** grava a [MSsubscriber_info](../../relational-databases/system-tables/mssubscriber-info-transact-sql.md) na tabela do **distribuição** banco de dados.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** pode executar a função de servidor fixa **sp_addsubscriber**.  
+ Somente os membros dos **sysadmin** pode executar a função de servidor fixa **sp_addsubscriber**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
- [Criar uma assinatura pull](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [sp_changesubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
  [sp_dropsubscriber &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
  [sp_helpsubscriberinfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)  

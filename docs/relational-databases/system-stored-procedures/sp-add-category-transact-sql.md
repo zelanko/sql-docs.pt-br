@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_category
 ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
-caps.latest.revision: 29
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d6f98fd4dbccc6b47297c8b0ebb2073dd23d35c6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c884d126356f4347616370ce9cd8b8eb41089fc0
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238906"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021920"
 ---
 # <a name="spaddcategory-transact-sql"></a>sp_add_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,37 +47,37 @@ sp_add_category
   
 ## <a name="arguments"></a>Argumentos  
  [  **@class =** ] **'***classe***'**  
- O classe da categoria a ser adicionada. *classe* é **varchar(8)** com um valor padrão de trabalho, e pode ser um destes valores.  
+ O classe da categoria a ser adicionada. *classe* está **varchar(8)** com um valor padrão de trabalho, e pode ser um destes valores.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |JOB|Adiciona uma categoria de trabalho.|  
 |ALERT|Adiciona uma categoria de alerta.|  
 |OPERATOR|Adiciona uma categoria de operador.|  
   
  [  **@type =** ] **'***tipo***'**  
- O tipo de categoria a ser adicionado. *tipo* é **varchar(12)**, com um valor padrão de **LOCAL**, e pode ser um destes valores.  
+ O tipo de categoria a ser adicionado. *tipo de* está **varchar(12)**, com um valor padrão de **LOCAL**, e pode ser um destes valores.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |LOCAL|Uma categoria de trabalho local.|  
 |VÁRIOS SERVIDORES|Uma categoria de trabalho multisservidor.|  
 |Nenhuma|Uma categoria para uma classe diferente de JOB **.**|  
   
  [  **@name =** ] **'***nome***'**  
- O nome da categoria a ser adicionada. O nome deve ser exclusivo na classe especificada. *nome* é **sysname**, sem padrão.  
+ O nome da categoria a ser adicionada. O nome deve ser exclusivo na classe especificada. *nome da* está **sysname**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma  
+ None  
   
 ## <a name="remarks"></a>Remarks  
  **sp_add_category** deve ser executado a partir de **msdb** banco de dados.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** pode executar a função de servidor fixa **sp_add_category**.  
+ Somente os membros dos **sysadmin** pode executar a função de servidor fixa **sp_add_category**.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir cria uma categoria de trabalho local denominada `AdminJobs`.  
@@ -98,7 +97,7 @@ GO
  [sp_delete_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
  [sp_help_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
  [sp_update_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   
- [dbo.sysjobs & #40; Transact-SQL & #41;](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)   
+ [dbo.sysjobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)   
  [dbo.sysjobservers &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

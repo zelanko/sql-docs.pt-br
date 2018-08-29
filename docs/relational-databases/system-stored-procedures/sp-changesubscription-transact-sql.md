@@ -22,15 +22,15 @@ helpviewer_keywords:
 - sp_changesubscription
 ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
 caps.latest.revision: 40
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 47ce4c99261b7b7fd5ee7b3af4636d5ced5cf4f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 64a34ed640dc9efac57d948475071690ed266d2e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32991823"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023327"
 ---
 # <a name="spchangesubscription-transact-sql"></a>sp_changesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,24 +57,24 @@ sp_changesubscription [ @publication = ] 'publication'
   
 ## <a name="arguments"></a>Argumentos  
  [ **@publication**=] **'***publicação***'**  
- É o nome da publicação a ser alterada. *publicação*é **sysname**, sem padrão  
+ É o nome da publicação a ser alterada. *publicação*está **sysname**, sem padrão  
   
  [ **@article** =] **'***artigo***'**  
- É o nome do artigo a ser alterado. *artigo* é **sysname**, sem padrão.  
+ É o nome do artigo a ser alterado. *artigo* está **sysname**, sem padrão.  
   
  [ **@subscriber** =] **'***assinante***'**  
- É o nome do Assinante. *assinante* é **sysname**, sem padrão.  
+ É o nome do Assinante. *assinante* está **sysname**, sem padrão.  
   
  [ **@destination_db** =] **'***destination_db***'**  
- É o nome do banco de dados de assinatura. *destination_db* é **sysname**, sem padrão.  
+ É o nome do banco de dados de assinatura. *destination_db* está **sysname**, sem padrão.  
   
  [  **@property=**] **'***propriedade***'**  
- É a propriedade a ser alterada para a assinatura determinado. *propriedade* é **nvarchar (30)**, e pode ser um dos valores na tabela.  
+ É a propriedade a ser alterada para a assinatura determinado. *propriedade* está **nvarchar (30)**, e pode ser um dos valores na tabela.  
   
  [  **@value=**] **'***valor***'**  
- É o novo valor especificado *propriedade*. *valor* é **nvarchar (4000)**, e pode ser um dos valores na tabela.  
+ É o novo valor especificado *propriedade*. *valor* está **nvarchar (4000)**, e pode ser um dos valores na tabela.  
   
-|Propriedade|Value|Description|  
+|Propriedade|Valor|Description|  
 |--------------|-----------|-----------------|  
 |**distrib_job_login**||Logon para a conta do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows na qual o agente é executado.|  
 |**distrib_job_password**||Senha para a conta do Windows na qual o agente é executado.|  
@@ -87,16 +87,16 @@ sp_changesubscription [ @publication = ] 'publication'
 ||**0**|Use Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao se conectar ao Assinante.|  
 |**subscriber_provider**||PROGID (identificador programático) exclusivo com o qual o provedor OLE DB para fonte de dados não [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é registrado. *Essa propriedade só é válida para não -* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *assinantes.*|  
 |**subscriber_providerstring**||Cadeia de conexão específica de provedor OLE DB que identifica a fonte de dados. *Essa propriedade só é válida para não -* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *assinantes.*|  
-|**fluxos de assinatura**||É o número de conexões permitido por Agente de Distribuição para aplicar lotes de alterações em paralelo a um Assinante. Um intervalo de valores de **1** para **64** há suporte para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editores. Essa propriedade deve ser **0** para não -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes, Publicadores Oracle ou assinaturas ponto a ponto.|  
+|**fluxos de assinatura**||É o número de conexões permitido por Agente de Distribuição para aplicar lotes de alterações em paralelo a um Assinante. Um intervalo de valores de **1** à **64** há suporte para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicadores. Esta propriedade deve ser **0** para não -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes, Publicadores Oracle ou assinaturas ponto a ponto.|  
 |**subscriber_type**|**1**|Servidor de fontes de dados ODBC|  
 ||**3**|Provedor OLE DB|  
-|**memory_optimized**|**bit**|Indica que a assinatura oferece suporte a tabelas com otimização de memória. *memory_optimized* é **bit**, onde 1 é igual a true (a assinatura dá suporte a tabelas com otimização de memória).|  
+|**memory_optimized**|**bit**|Indica que a assinatura dá suporte a tabelas com otimização de memória. *memory_optimized* está **bit**, onde 1 é igual a true (a assinatura dá suporte a tabelas com otimização de memória).|  
   
- [  **@publisher =** ] **'***publicador***'**  
- Especifica um Publicador que não é do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *publicador* é **sysname**, com um padrão NULL.  
+ [  **@publisher =** ] **'***publisher***'**  
+ Especifica um Publicador que não é do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *Publisher* está **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
->  *publicador* não deve ser especificado para um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
+>  *Publisher* não deve ser especificado para um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -109,7 +109,7 @@ sp_changesubscription [ @publication = ] 'publication'
  Depois de alterar o logon ou a senha de um agente, você deve parar e reiniciar o agente antes que as alterações entrem em vigor.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função de servidor fixa ou **db_owner** pode executar a função de banco de dados fixa **sp_changesubscription**.  
+ Somente os membros dos **sysadmin** função de servidor fixa ou **db_owner** banco de dados fixa podem executar **sp_changesubscription**.  
   
 ## <a name="see-also"></a>Consulte também  
  [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   

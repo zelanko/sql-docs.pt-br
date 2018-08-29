@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helpdbfixedrole
 ms.assetid: ad87e9a0-b901-4e37-9950-aa517d680fc3
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2a1ca726e6770fd4a36e34651a83c55ab1e5475b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 387ea35ed6e2c6be10eb738e0c53f26bbbbf60da
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252767"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022088"
 ---
 # <a name="sphelpdbfixedrole-transact-sql"></a>sp_helpdbfixedrole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
   
 ## <a name="arguments"></a>Argumentos  
  [  **@rolename =** ] **'***função***'**  
- É o nome de uma função de banco de dados fixa. *função* é **sysname**, com um padrão NULL. Se *função* for especificado, serão retornadas somente as informações sobre essa função; caso contrário, uma lista e descrição de todas as funções de banco de dados fixa é retornado.  
+ É o nome de uma função de banco de dados fixa. *função* está **sysname**, com um padrão NULL. Se *função* é especificado, apenas as informações sobre essa função são retornadas; caso contrário, uma lista e descrição de todas as funções de banco de dados fixa será retornado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -55,7 +55,7 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**DbFixedRole**|**sysname**|Nome da função de banco de dados fixa.|  
-|**Descrição**|**nvarchar (70)**|Descrição do **DbFixedRole.**|  
+|**Descrição**|**nvarchar(70)**|Descrição do **DbFixedRole.**|  
   
 ## <a name="remarks"></a>Remarks  
  As funções de banco de dados fixas, conforme mostrado na tabela a seguir, são definidas no nível de banco de dados e possuem permissões para executar atividades administrativas específicas no nível de banco de dados. As funções de banco de dados fixas não podem ser adicionadas ou removidas. As permissões concedidas a uma função de banco de dados fixa não podem ser alteradas.  
@@ -97,7 +97,7 @@ GO
  [Procedimentos de segurança armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
  [sp_dbfixedrolepermission &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql.md)   
- [sp_droprolemember & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
+ [sp_droprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
  [sp_helprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
  [sp_helprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

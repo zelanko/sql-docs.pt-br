@@ -19,21 +19,20 @@ f1_keywords:
 helpviewer_keywords:
 - sp_change_agent_parameter
 ms.assetid: f1fbecc7-e64f-405c-8067-6b38c1f3c0a0
-caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d01a06f119a0c1d7669f0c811e8bee03e5eeb912
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 764bce06a3efe9d4ae2c4fbae1fa2cac6305c3bf
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32992523"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027371"
 ---
 # <a name="spchangeagentparameter-transact-sql"></a>sp_change_agent_parameter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Altera um parâmetro de um perfil de agente de replicação armazenado no [MSagent_parameters](../../relational-databases/system-tables/msagent-parameters-transact-sql.md) tabela do sistema. Esse procedimento armazenado é executado no Distribuidor, onde o agente está sendo executado, ou em qualquer banco de dados.  
+  Altera um parâmetro de um perfil de agente de replicação armazenado na [MSagent_parameters](../../relational-databases/system-tables/msagent-parameters-transact-sql.md) tabela do sistema. Esse procedimento armazenado é executado no Distribuidor, onde o agente está sendo executado, ou em qualquer banco de dados.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,15 +45,15 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 ## <a name="arguments"></a>Argumentos  
  [  **@profile_id=**] *profile_id*,  
- É a ID do perfil. *profile_id* é **int**, sem padrão.  
+ É a ID do perfil. *profile_id* está **int**, sem padrão.  
   
  [  **@parameter_name=**] **'***parameter_name***'**  
- É o nome do parâmetro. *parameter_name* é **sysname**, sem padrão. Para perfis de sistema, os parâmetros que podem ser alterados dependem do tipo de agente. Para descobrir que tipo de agente isso *profile_id* representa, localize o *profile_id* coluna o **Msagent_profiles** da tabela e observe o *agent_type*  valor.  
+ É o nome do parâmetro. *parameter_name* está **sysname**, sem padrão. Para perfis de sistema, os parâmetros que podem ser alterados dependem do tipo de agente. Para descobrir que tipo de agente isso *profile_id* representa, localize a *profile_id* coluna no **Msagent_profiles** da tabela e observe o *agent_type*  valor.  
   
 > [!NOTE]  
 >  Se um parâmetro tiver suporte para um determinado *agent_type*, mas não foi definido no perfil do agente, um erro será retornado. Para adicionar um parâmetro a um perfil de agente, você deve executar [sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md).  
   
- Para um agente de instantâneo (*agent_type*=**1**), se definido no perfil, as propriedades a seguir podem ser alteradas:  
+ Para um Snapshot Agent (*agent_type*=**1**), se definido no perfil, as propriedades a seguir podem ser alteradas:  
   
 -   **70Subscribers**  
   
@@ -72,7 +71,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **OutputVerboseLevel**  
   
--   **Tamanho do pacote**  
+-   **PacketSize**  
   
 -   **QueryTimeout**  
   
@@ -86,13 +85,13 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **LoginTimeout**  
   
--   **Intervalo de mensagem**  
+-   **MessageInterval**  
   
 -   **Saída**  
   
 -   **OutputVerboseLevel**  
   
--   **Tamanho do pacote**  
+-   **PacketSize**  
   
 -   **PollingInterval**  
   
@@ -122,13 +121,13 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **MaxDeliveredTransactions**  
   
--   **Intervalo de mensagem**  
+-   **MessageInterval**  
   
 -   **Saída**  
   
 -   **OutputVerboseLevel**  
   
--   **Tamanho do pacote**  
+-   **PacketSize**  
   
 -   **PollingInterval**  
   
@@ -194,7 +193,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **OutputVerboseLevel**  
   
--   **Tamanho do pacote**  
+-   **PacketSize**  
   
 -   **ParallelUploadDownload**  
   
@@ -248,10 +247,10 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **SQLQueueMode**  
   
- Para ver quais parâmetros foram definidos para um determinado perfil, execute **sp_help_agent_profile** e observe o *profile_name* associados a *profile_id*. Com as *profile_id*, em seguida execute **sp_help_agent_parameters** usando *profile_id* para ver os parâmetros associados ao perfil. Parâmetros podem ser adicionados a um perfil executando [sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md).  
+ Para ver quais parâmetros foram definidos para um determinado perfil, execute **sp_help_agent_profile** e observe o *profile_name* associado com o *profile_id*. Com os devidos *profile_id*, em seguida execute **sp_help_agent_parameters** usá-la *profile_id* para ver os parâmetros associados ao perfil. Parâmetros podem ser adicionados a um perfil executando [sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md).  
   
  [  **@parameter_value=**] **'***parameter_value***'**  
- É o novo valor do parâmetro. *parameter_value* é **nvarchar (255)**, sem padrão.  
+ É o novo valor do parâmetro. *parameter_value* está **nvarchar (255)**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -260,7 +259,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
  **sp_change_agent_parameter** é usado em todos os tipos de replicação.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** pode executar a função de servidor fixa **sp_change_agent_parameter**.  
+ Somente os membros dos **sysadmin** pode executar a função de servidor fixa **sp_change_agent_parameter**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Perfis do agente de replicação](../../relational-databases/replication/agents/replication-agent-profiles.md)   

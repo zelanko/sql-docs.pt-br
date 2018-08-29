@@ -20,16 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.column_store_dictionaries catalog view
 ms.assetid: 56efd563-2f72-4caf-94e3-8a182385c173
-caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5a68d3d0b898b3acbccccb2a0e87c467692dccbe
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 95b69733ba755500e98eac062c535d7a17c552b6
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181622"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026271"
 ---
 # <a name="syscolumnstoredictionaries-transact-sql"></a>sys.column_store_dictionaries (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,17 +38,17 @@ ms.locfileid: "33181622"
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**hobt_id**|**bigint**|A ID do heap ou o índice de árvore B (hobt) para a tabela que tem seu índice columnstore.|  
-|**column_id**|**Int**|ID da coluna columnstore começando com 1. A primeira coluna tem ID = 1, a segunda coluna tem ID = 2, etc.|  
-|**dictionary_id**|**Int**|Pode haver dois tipos de dicionários, global e locais, associados um segmento de coluna. Um dictionary_id 0 representa o dicionário global que é compartilhado entre todos os segmentos de colunas (uma para cada grupo de linhas) para essa coluna.|  
-|**version**|**Int**|Versão de formato do dicionário.|  
-|**type**|**Int**|Tipo de dicionário:<br /><br /> 1 – hash dicionário contendo **int** valores<br /><br /> 2 – Não usado<br /><br /> 3 – Dicionário de hash que contém valores de cadeia de caracteres<br /><br /> 4 – hash de dicionário contendo **float** valores<br /><br /> Para obter mais informações sobre dicionários, consulte [guia de índices Columnstore](~/relational-databases/indexes/columnstore-indexes-overview.md).|  
-|**last_id**|**Int**|A última ID de dados no dicionário.|  
+|**column_id**|**int**|ID da coluna columnstore começando com 1. A primeira coluna tem a ID = 1, a segunda coluna tem a ID = 2, etc.|  
+|**dictionary_id**|**int**|Pode haver dois tipos de dicionários, globais e locais, associados um segmento de coluna. Um dictionary_id 0 representa o dicionário global que é compartilhado entre todos os segmentos de coluna (uma para cada grupo de linhas) para essa coluna.|  
+|**version**|**int**|Versão de formato do dicionário.|  
+|**type**|**int**|Tipo de dicionário:<br /><br /> 1 – hash dicionário que contém **int** valores<br /><br /> 2 – Não usado<br /><br /> 3 – Dicionário de hash que contém valores de cadeia de caracteres<br /><br /> 4 – hash de dicionário que contém **float** valores<br /><br /> Para obter mais informações sobre dicionários, consulte [guia de índices Columnstore](~/relational-databases/indexes/columnstore-indexes-overview.md).|  
+|**last_id**|**int**|A última ID de dados no dicionário.|  
 |**entry_count**|**bigint**|Número de entradas no dicionário.|  
 |**on_disc_size**|**bigint**|Tamanho do dicionário em bytes.|  
 |**partition_id**|**bigint**|Indica a ID da partição. É exclusivo em um banco de dados.|  
   
 ## <a name="permissions"></a>Permissões  
- Todas as colunas requerem no mínimo a permissão VIEW DEFINITION na tabela. As colunas a seguir retornam nulo a menos que o usuário também tenha **selecione** permissão: last_id, entry_count, data_ptr.  
+ Todas as colunas requerem no mínimo a permissão VIEW DEFINITION na tabela. As colunas a seguir retornam nulo, a menos que o usuário também tenha **selecionar** permissão: last_id, entry_count, data_ptr.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

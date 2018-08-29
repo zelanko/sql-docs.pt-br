@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sp_replcounters
 ms.assetid: fe585b1f-edda-421f-81d6-8a03a3a535d2
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5cc67b000b231146c9544ea7ef1bc1e2a3b6b667
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 314f7f24ededf85927205f0615af39138898c795
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32997083"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027133"
 ---
 # <a name="spreplcounters-transact-sql"></a>sp_replcounters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,9 +47,9 @@ sp_replcounters
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**Banco de dados**|**sysname**|Nome do banco de dados.|  
-|**Transações replicadas**|**Int**|Número de transações no log esperando serem entregues ao banco de dados de distribuição.|  
-|**Taxa de replicação trans/s**|**float**|Número médio de transações por segundo entregue ao banco de dados de distribuição.|  
+|**Backup de banco de dados**|**sysname**|Nome do banco de dados.|  
+|**Transações replicadas**|**int**|Número de transações no log esperando serem entregues ao banco de dados de distribuição.|  
+|**Taxa de replicação trans/seg**|**float**|Número médio de transações por segundo entregue ao banco de dados de distribuição.|  
 |**Latência de replicação**|**float**|Tempo médio, em segundos, de permanência das transações no log antes de serem distribuídas.|  
 |**Replbeginlsn**|**binary(10)**|LSN (número de sequência de log) do ponto atual de truncamento no log.|  
 |**Replnextlsn**|**binary(10)**|LSN do próximo registro de confirmação que aguarda entrega ao banco de dados de distribuição.|  
@@ -58,7 +58,7 @@ sp_replcounters
  **sp_replcounters** é usado em replicação transacional.  
   
 ## <a name="permissions"></a>Permissões  
- Requer a participação no **db_owner** função de banco de dados fixa ou **sysadmin** função de servidor fixa.  
+ Requer associação na **db_owner** função de banco de dados fixa ou **sysadmin** função de servidor fixa.  
   
 ## <a name="see-also"></a>Consulte também  
  [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   

@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_article_validation
 ms.assetid: 44e7abcd-778c-4728-a03e-7e7e78d3ce22
-caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8eabbaf95392de7e5389fdd54f8724045682ec2a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2670bd674589cf67acac91100d4419365de66da2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32991563"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037748"
 ---
 # <a name="sparticlevalidation-transact-sql"></a>sp_article_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,43 +52,43 @@ sp_article_validation [ @publication = ] 'publication'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@publication=**] **'***publicação***'**  
- É o nome da publicação na qual o artigo existe. *publicação* é **sysname**, sem padrão.  
+ É o nome da publicação na qual o artigo existe. *publicação* está **sysname**, sem padrão.  
   
  [  **@article=**] **'***artigo***'**  
- É o nome do artigo a ser validado. *artigo* é **sysname**, sem padrão.  
+ É o nome do artigo a ser validado. *artigo* está **sysname**, sem padrão.  
   
  [  **@rowcount_only=**] *type_of_check_requested*  
- Especifica se apenas a contagem de linhas da tabela é retornada. *type_of_check_requested* é **smallint**, com um padrão de **1**.  
+ Especifica se apenas a contagem de linhas da tabela é retornada. *type_of_check_requested* está **smallint**, com um padrão de **1**.  
   
- Se **0**, executar um número de linhas e um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] soma de verificação compatível com 7.0.  
+ Se **0**, execute um número de linhas e uma [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] soma de verificação compatível com 7.0.  
   
- Se **1**, executar uma verificação de número de linhas apenas.  
+ Se **1**, executar apenas uma verificação de número de linhas.  
   
  Se **2**, executar uma soma de verificação do número de linhas e binário.  
   
  [  **@full_or_fast=**] *full_or_fast*  
- É o método usado para calcular a contagem de linhas. *full_or_fast* é **tinyint**, e pode ser um destes valores.  
+ É o método usado para calcular a contagem de linhas. *full_or_fast* está **tinyint**, e pode ser um destes valores.  
   
 |**Value**|**Descrição**|  
 |---------------|---------------------|  
 |**0**|Executa a contagem completa usando COUNT(*).|  
-|**1**|Executa uma contagem rápida de **sysindexes**. Contagem de linhas em **sysindexes** é mais rápido que a contagem de linhas na tabela atual. No entanto, **sysindexes** é atualizado com lentidão, e o número de linhas pode não ser preciso.|  
+|**1**|Executa uma contagem rápida de **sysindexes**. Contagem de linhas em **sysindexes** é mais rápido do que contar linhas na tabela atual. No entanto, **sysindexes** é atualizado com lentidão, e o número de linhas pode não ser preciso.|  
 |**2** (padrão)|Executa uma contagem rápida condicional tentando primeiro o método rápido. Se o método rápido mostrar diferenças, reverterá ao método completo. Se *expected_rowcount* for NULL e o procedimento armazenado estiver sendo usado para obter o valor, um COUNT(*) completo sempre será usado.|  
   
  [  **@shutdown_agent=**] *shutdown_agent*  
- Especifica se o Distribution Agent deve ou não ser desligado imediatamente após a conclusão da validação. *shutdown_agent* é **bit**, com um padrão de **0**. Se **0**, o agente de distribuição não é desligado. Se **1**, o Distribution Agent desligará após o artigo é validado.  
+ Especifica se o Distribution Agent deve ou não ser desligado imediatamente após a conclusão da validação. *shutdown_agent* está **bit**, com um padrão de **0**. Se **0**, o agente de distribuição não é desligado. Se **1**, o Distribution Agent desligará após o artigo é validado.  
   
  [  **@subscription_level=**] *subscription_level*  
- Especifica se a validação deve ou não ser escolhida por um conjunto de assinantes. *subscription_level* é **bit**, com um padrão de **0**. Se **0**, a validação é aplicada a todos os assinantes. Se **1**, a validação é aplicada apenas a um subconjunto de assinantes especificado por chamadas para **sp_marksubscriptionvalidation** na transação aberta atual.  
+ Especifica se a validação deve ou não ser escolhida por um conjunto de assinantes. *subscription_level* está **bit**, com um padrão de **0**. Se **0**, validação é aplicada a todos os assinantes. Se **1**, validação é aplicada somente a um subconjunto de assinantes especificado por chamadas para **sp_marksubscriptionvalidation** na transação aberta atual.  
   
  [  **@reserved=**] *reservado*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ **@publisher**=] **'***publicador***'**  
- Especifica um não[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *publicador* é **sysname**, com um padrão NULL.  
+ [ **@publisher**=] **'***publisher***'**  
+ Especifica um não[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
->  *publicador* não deve ser usado quando a solicitação de validação em um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
+>  *Publisher* não deve ser usado ao solicitar uma validação em um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

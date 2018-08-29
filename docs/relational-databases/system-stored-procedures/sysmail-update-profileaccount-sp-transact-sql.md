@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_update_profileaccount_sp
 ms.assetid: 92ca7488-29db-414e-8e36-08b0a8f542bb
-caps.latest.revision: 41
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: ee2f44070644e305163e6a7ae38eea9a81ba9fa1
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b81459e3c11c2ce17b133359074a921ddc1e1b66
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260902"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037416"
 ---
 # <a name="sysmailupdateprofileaccountsp-transact-sql"></a>sysmail_update_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,25 +47,25 @@ sysmail_update_profileaccount_sp  { [ @profile_id = ] profile_id
   
 ## <a name="arguments"></a>Argumentos  
  [ **@profile_id** =] *profile_id*  
- A ID do perfil a ser atualizado. *profile_id* é **int**, com um padrão NULL. Ambos os *profile_id* ou o *profile_name* deve ser especificado.  
+ A ID do perfil a ser atualizado. *profile_id* está **int**, com um padrão NULL. Ambos os *profile_id* ou o *profile_name* deve ser especificado.  
   
  [ **@profile_name** =] **'***profile_name***'**  
- O nome do perfil a ser atualizado. *profile_name* é **sysname**, com um padrão NULL. Ambos os *profile_id* ou o *profile_name* deve ser especificado.  
+ O nome do perfil a ser atualizado. *profile_name* está **sysname**, com um padrão NULL. Ambos os *profile_id* ou o *profile_name* deve ser especificado.  
   
  [ **@account_id** = ] *account_id*  
- A ID da conta a ser atualizada. *account_id* é **int**, com um padrão NULL. Ambos o *account_id* ou *account_name* deve ser especificado.  
+ A ID da conta a ser atualizada. *account_id* está **int**, com um padrão NULL. Ambos os *account_id* ou o *account_name* deve ser especificado.  
   
  [ **@account_name** = ] **'***account_name***'**  
- O nome da conta a ser atualizada. *account_name* é **sysname**, com um padrão NULL. Ambos o *account_id* ou *account_name* deve ser especificado.  
+ O nome da conta a ser atualizada. *account_name* está **sysname**, com um padrão NULL. Ambos os *account_id* ou o *account_name* deve ser especificado.  
   
  [ **@sequence_number** =] *sequence_number*  
- O novo número de sequência da conta. *sequence_number* é **int**, sem padrão. O número de sequência determina a ordem na qual as contas são usadas no perfil.  
+ O novo número de sequência da conta. *sequence_number* está **int**, sem padrão. O número de sequência determina a ordem na qual as contas são usadas no perfil.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma  
+ None  
   
 ## <a name="remarks"></a>Remarks  
  Retorna um erro se a conta especificada não estiver associada ao perfil especificado.  
@@ -75,13 +74,13 @@ sysmail_update_profileaccount_sp  { [ @profile_id = ] profile_id
   
  Se existir mais de uma conta com o mesmo número de sequência, o Database Mail utilizará apenas uma delas para uma dada mensagem de email. Nesse caso, o Database Mail não pode garantir qual das contas será usada para o número de sequência em questão nem que a mesma conta seja usada em todas as mensagens.  
   
- O procedimento armazenado **sysmail_update_profileaccount_sp** está no **msdb** banco de dados e pertence a **dbo** esquema. O procedimento deve ser executado com um nome de três partes se o banco de dados atual não é **msdb**.  
+ O procedimento armazenado **sysmail_update_profileaccount_sp** está no **msdb** banco de dados e é de propriedade de **dbo** esquema. O procedimento deve ser executado com um nome de três partes se o banco de dados atual não for **msdb**.  
   
 ## <a name="permissions"></a>Permissões  
- Permissões de execução para esse procedimento usam como padrão membros do **sysadmin** função de servidor fixa.  
+ Permissões de execução para esse procedimento usam como padrão os membros de **sysadmin** função de servidor fixa.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir altera o número de sequência da conta `Admin-BackupServer` dentro do perfil `AdventureWorks Administrator` no **msdb** banco de dados. Depois de executar este código, o número de sequência da conta será `3`, indicando que ela será tentada no caso das duas primeiras contas falharem.  
+ O exemplo a seguir altera o número de sequência da conta `Admin-BackupServer` dentro do perfil `AdventureWorks Administrator` na **msdb** banco de dados. Depois de executar este código, o número de sequência da conta será `3`, indicando que ela será tentada no caso das duas primeiras contas falharem.  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_profileaccount_sp  

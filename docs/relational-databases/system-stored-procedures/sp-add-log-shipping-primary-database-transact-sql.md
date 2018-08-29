@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_log_shipping_primary_database
 ms.assetid: 69531611-113f-46b5-81a6-7bf496d0353c
-caps.latest.revision: 35
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 39627cca65071d2f08fe990c63d6e3ce836ce3b0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b73ec62b6b0abc8ab8334efdc5f26c5bd2748605
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240026"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034734"
 ---
 # <a name="spaddlogshippingprimarydatabase-transact-sql"></a>sp_add_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,29 +60,29 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
   
 ## <a name="arguments"></a>Argumentos  
  [  **@database=** ] '*banco de dados*'  
- É o nome do banco de dados primário de envio de logs. *banco de dados* é **sysname**, sem padrão, e não pode ser NULL.  
+ É o nome do banco de dados primário de envio de logs. *banco de dados* está **sysname**, sem padrão, e não pode ser NULL.  
   
  [  **@backup_directory=** ] '*backup_directory*'  
- É o caminho para a pasta de backup no servidor primário. *backup_directory* é **nvarchar (500)**, sem padrão, e não pode ser NULL.  
+ É o caminho para a pasta de backup no servidor primário. *backup_directory* está **nvarchar(500)**, sem padrão, e não pode ser NULL.  
   
  [  **@backup_share=** ] '*backup_share*'  
- É o caminho da rede para o diretório de backup no servidor primário. *backup_share* é **nvarchar (500)**, sem padrão, e não pode ser NULL.  
+ É o caminho da rede para o diretório de backup no servidor primário. *backup_share* está **nvarchar(500)**, sem padrão, e não pode ser NULL.  
   
  [  **@backup_job_name=** ] '*backup_job_name*'  
- É o nome do trabalho do SQL Server Agent no servidor primário que copia o backup na pasta de backup. *backup_job_name* é **sysname** e não pode ser NULL.  
+ É o nome do trabalho do SQL Server Agent no servidor primário que copia o backup na pasta de backup. *backup_job_name* está **sysname** e não pode ser NULL.  
   
  [  **@backup_retention_period=** ] *backup_retention_period*  
- É o período de tempo, em minutos, para reter o arquivo de backup de logs no diretório de backup no servidor primário. *backup_retention_period* é **int**, sem padrão, e não pode ser NULL.  
+ É o período de tempo, em minutos, para reter o arquivo de backup de logs no diretório de backup no servidor primário. *backup_retention_period* está **int**, sem padrão, e não pode ser NULL.  
   
  [  **@monitor_server=** ] '*monitor_server*'  
- É o nome do servidor monitor. *Monitor_server* é **sysname**, sem padrão, e não pode ser NULL.  
+ É o nome do servidor monitor. *Monitor_server* está **sysname**, sem padrão, e não pode ser NULL.  
   
  [  **@monitor_server_security_mode=** ] *monitor_server_security_mode*  
  O modo de segurança usado para conexão ao servidor monitor.  
   
  1 = Autenticação do Windows.  
   
- 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação. *monitor_server_security_mode* é **bit** e não pode ser NULL.  
+ 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação. *monitor_server_security_mode* está **bit** e não pode ser NULL.  
   
  [ **@monitor_server_login=** ] '*monitor_server_login*'  
  É o nome de usuário da conta usada para acessar o servidor monitor.  
@@ -92,22 +91,22 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
  Senha da conta usada para acessar o servidor monitor.  
   
  [  **@backup_threshold=** ] *backup_threshold*  
- É o período de tempo, em minutos, após o último backup antes de um *threshold_alert* erro será gerado. *backup_threshold* é **int**, com um padrão de 60 minutos.  
+ É o período de tempo, em minutos, após o último backup antes de uma *threshold_alert* erro será gerado. *backup_threshold* está **int**, com um padrão de 60 minutos.  
   
  [  **@threshold_alert=** ] *threshold_alert*  
- É o alerta a ser gerado quando o limite do backup for excedido. *threshold_alert* é **int**, com um padrão de 14.420.  
+ É o alerta a ser gerado quando o limite do backup for excedido. *alerta de limite* está **int**, com um padrão de 14.420.  
   
  [  **@threshold_alert_enabled=** ] *threshold_alert_enabled*  
- Especifica se um alerta será gerado quando *backup_threshold* for excedido. O valor zero (0), o padrão, significa que o alerta está desabilitado e não será aumentado. *threshold_alert_enabled* é **bit**.  
+ Especifica se um alerta será gerado quando *backup_threshold* for excedido. O valor zero (0), o padrão, significa que o alerta está desabilitado e não será aumentado. *threshold_alert_enabled* está **bit**.  
   
  [  **@history_retention_period=** ] *history_retention_period*  
- É a duração de tempo em minutos na qual o histórico será retido. *history_retention_period* é **int**, com um padrão NULL. Se nenhum valor for especificado, será usado o valor 14.420.  
+ É a duração de tempo em minutos na qual o histórico será retido. *history_retention_period* está **int**, com um padrão NULL. Se nenhum valor for especificado, será usado o valor 14.420.  
   
  [  **@backup_job_id=** ] *backup_job_id* saída  
- A ID de trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent associada ao trabalho de backup no servidor primário. *backup_job_id* é **uniqueidentifier** e não pode ser NULL.  
+ A ID de trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent associada ao trabalho de backup no servidor primário. *backup_job_id* está **uniqueidentifier** e não pode ser NULL.  
   
  [  **@primary_id=** ] *primary_id* saída  
- A ID do banco de dados primário para a configuração de envio de log. *primary_id* é **uniqueidentifier** e não pode ser NULL.  
+ A ID do banco de dados primário para a configuração de envio de log. *primary_id* está **uniqueidentifier** e não pode ser NULL.  
   
  [ **@backup_compression**=] *backup_compression_option*  
  Especifica se uma configuração de envio de log usa [compactação de backup](../../relational-databases/backup-restore/backup-compression-sql-server.md). Este parâmetro é suportado somente no [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (ou em uma versão posterior).  
@@ -122,7 +121,7 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma  
+ None  
   
 ## <a name="remarks"></a>Remarks  
  **sp_add_log_shipping_primary_database** deve ser executado a partir de **mestre** banco de dados no servidor primário. Esse procedimento armazenado executa as seguintes funções:  
@@ -131,14 +130,14 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
   
 2.  Cria um trabalho de backup para o banco de dados primário que está desabilitado.  
   
-3.  Define a ID do trabalho de backup no **log_shipping_primary_databases** entrada para a ID do trabalho do trabalho de backup.  
+3.  Define a ID do trabalho de backup na **log_shipping_primary_databases** entrada para a ID do trabalho de backup.  
   
 4.  Adiciona um registro de monitor local na tabela **log_shipping_monitor_primary** no servidor primário usando os argumentos fornecidos.  
   
-5.  Se o servidor monitor for diferente do servidor primário, adiciona um registro de monitor em **log_shipping_monitor_primary** no monitor de servidor usando os argumentos fornecidos.  
+5.  Se o servidor monitor for diferente do servidor primário, adiciona um registro de monitor em **log_shipping_monitor_primary** no monitor do servidor usando os argumentos fornecidos.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função fixa de servidor pode executar esse procedimento.  
+ Somente os membros dos **sysadmin** função de servidor fixa pode executar esse procedimento.  
   
 ## <a name="examples"></a>Exemplos  
  Este exemplo adiciona o banco de dados [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] como banco de dados primário em uma configuração de envio de log.  
@@ -167,7 +166,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Sobre o envio de logs & #40; SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

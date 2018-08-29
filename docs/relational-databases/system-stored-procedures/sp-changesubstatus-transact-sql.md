@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_changesubstatus
 ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 94c26330636d4e13fe84a2776a72315a418d3d96
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 269b2eab987560b2c043c887d7a90c2c4ddc1a95
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32993463"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019433"
 ---
 # <a name="spchangesubstatus-transact-sql"></a>sp_changesubstatus (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,39 +73,39 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 ## <a name="arguments"></a>Argumentos  
  [  **@publication=**] **'***publicação***'**  
- É o nome da publicação. *publicação* é **sysname**, com um padrão de **%**. Se *publicação* não for especificado, todas as publicações são afetadas.  
+ É o nome da publicação. *publicação* está **sysname**, com um padrão de **%**. Se *publicação* não for especificado, todas as publicações são afetadas.  
   
  [  **@article=**] **'***artigo***'**  
- É o nome do artigo. Deve ser exclusivo para a publicação. *artigo* é **sysname**, com um padrão de **%**. Se *artigo* não for especificado, todos os artigos são afetados.  
+ É o nome do artigo. Deve ser exclusivo para a publicação. *artigo* está **sysname**, com um padrão de **%**. Se *artigo* não for especificado, todos os artigos são afetados.  
   
  [  **@subscriber=**] **'***assinante***'**  
- É o nome do Assinante do qual alterar o status. *assinante* é **sysname**, com um padrão de **%**. Se *assinante* não for especificado, status é alterado para todos os assinantes para o artigo especificado.  
+ É o nome do Assinante do qual alterar o status. *assinante* está **sysname**, com um padrão de **%**. Se *assinante* não for especificado, status é alterado para todos os assinantes para o artigo especificado.  
   
  [  **@status =**] **'***status***'**  
- É o status da assinatura no **syssubscriptions** tabela. *status* é **sysname**, sem padrão e pode ser um destes valores.  
+ É o status da assinatura do **syssubscriptions** tabela. *status* está **sysname**, sem padrão e pode ser um destes valores.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
-|**Ativo**|O Assinante está sincronizado e recebendo dados.|  
-|**Inativo**|Entrada de assinante existe sem uma assinatura.|  
+|**Active Directory**|O Assinante está sincronizado e recebendo dados.|  
+|**inativo**|Entrada de assinante existe sem uma assinatura.|  
 |**assinado**|O Assinante está solicitando dados, mas ainda não está sincronizado.|  
   
  [  **@previous_status=**] **'***previous_status***'**  
- É o status anterior da assinatura. *previous_status* é **sysname**, com um padrão NULL. Esse parâmetro permite que você altere qualquer assinatura atualmente com esse status, permitindo que as funções de grupo em um conjunto específico de assinaturas (por exemplo, definindo ativa todas as assinaturas de volta para **inscrito**).  
+ É o status anterior da assinatura. *previous_status* está **sysname**, com um padrão NULL. Esse parâmetro permite que você altere qualquer assinatura atualmente com esse status, permitindo assim que as funções de grupo em um conjunto específico de assinaturas (por exemplo, definindo todos os assinantes ativos de volta para as assinaturas **inscrito**).  
   
  [  **@destination_db=**] **'***destination_db***'**  
- É o nome do banco de dados de destino. *destination_db* é **sysname**, com um padrão de **%**.  
+ É o nome do banco de dados de destino. *destination_db* está **sysname**, com um padrão de **%**.  
   
  [  **@frequency_type=**] *frequency_type*  
- É a frequência de agendamento da tarefa de distribuição. *frequency_type* é **int**, com um padrão NULL.  
+ É a frequência de agendamento da tarefa de distribuição. *frequency_type* está **int**, com um padrão NULL.  
   
  [  **@frequency_interval=**] *frequency_interval*  
- É o valor a ser aplicado à frequência definida *frequency_type*. *frequency_interval* é **int**, com um padrão NULL.  
+ É o valor a ser aplicado à frequência definida *frequency_type*. *frequency_interval* está **int**, com um padrão NULL.  
   
  [  **@frequency_relative_interval=**] *frequency_relative_interval*  
- É a data da tarefa de distribuição. Esse parâmetro é usado quando *frequency_type* é definido como 32 (mensal relativo). *frequency_relative_interval* é **int**, e pode ser um destes valores.  
+ É a data da tarefa de distribuição. Esse parâmetro é usado quando *frequency_type* é definido como 32 (mensal relativo). *frequency_relative_interval* está **int**, e pode ser um destes valores.  
   
-|Value|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**1**|First|  
 |**2**|Segundo|  
@@ -115,12 +115,12 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 |NULL (padrão)||  
   
  [  **@frequency_recurrence_factor=**] *frequency_recurrence_factor*  
- É o fator de recorrência usado por *frequency_type*. *frequency_recurrence_factor* é **int**, com um padrão NULL.  
+ É o fator de recorrência usado pelo *frequency_type*. *frequency_recurrence_factor* está **int**, com um padrão NULL.  
   
  [  **@frequency_subday=**] *frequency_subday*  
- É a frequência, em minutos, de reagendamento durante o período definido. *frequency_subday* é **int**, e pode ser um destes valores.  
+ É a frequência, em minutos, de reagendamento durante o período definido. *frequency_subday* está **int**, e pode ser um destes valores.  
   
-|Value|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**1**|Uma vez|  
 |**2**|Segundo|  
@@ -129,25 +129,25 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 |NULL (padrão)||  
   
  [  **@frequency_subday_interval=**] *frequency_subday_interval*  
- É o intervalo de *frequency_subday*. *frequency_subday_interval* é **int**, com um padrão NULL.  
+ É o intervalo de *frequency_subday*. *frequency_subday_interval* está **int**, com um padrão NULL.  
   
  [  **@active_start_time_of_day=**] *active_start_time_of_day*  
- É a hora do dia do primeiro agendamento da tarefa de distribuição, formatada como HHMMSS. *active_start_time_of_day* é **int**, com um padrão NULL.  
+ É a hora do dia do primeiro agendamento da tarefa de distribuição, formatada como HHMMSS. *active_start_time_of_day* está **int**, com um padrão NULL.  
   
  [  **@active_end_time_of_day=**] *active_end_time_of_day*  
- É a hora do dia do último agendamento da tarefa de distribuição, formatada como HHMMSS. *active_end_time_of_day* é **int**, com um padrão NULL.  
+ É a hora do dia do último agendamento da tarefa de distribuição, formatada como HHMMSS. *active_end_time_of_day* está **int**, com um padrão NULL.  
   
  [  **@active_start_date=**] *active_start_date*  
- É a data do primeiro agendamento da tarefa de distribuição, formatada como AAAAMMDD. *active_start_date* é **int**, com um padrão NULL.  
+ É a data do primeiro agendamento da tarefa de distribuição, formatada como AAAAMMDD. *active_start_date* está **int**, com um padrão NULL.  
   
  [  **@active_end_date=**] *active_end_date*  
- É a data do último agendamento da tarefa de distribuição, formatada como AAAAMMDD. *active_end_date* é **int**, com um padrão NULL.  
+ É a data do último agendamento da tarefa de distribuição, formatada como AAAAMMDD. *active_end_date* está **int**, com um padrão NULL.  
   
  [  **@optional_command_line=**] **'***optional_command_line***'**  
- É um prompt de comando opcional. *optional_command_line* é **nvarchar (4000)**, com um padrão NULL.  
+ É um prompt de comando opcional. *optional_command_line* está **nvarchar (4000)**, com um padrão NULL.  
   
  [  **@distribution_jobid=**] *distribution_jobid*  
- É a ID de trabalho do Distribution Agent no Distribuidor para a assinatura, ao alterar o status da assinatura de inativo para ativo. Em outros casos, não é definida. Se mais de um Distribution Agent estiver envolvido em uma única chamada para esse procedimento armazenado, o resultado não será definido. *distribution_jobid* é **binário (16)**, com um padrão NULL.  
+ É a ID de trabalho do Distribution Agent no Distribuidor para a assinatura, ao alterar o status da assinatura de inativo para ativo. Em outros casos, não é definida. Se mais de um Distribution Agent estiver envolvido em uma única chamada para esse procedimento armazenado, o resultado não será definido. *distribution_jobid* está **binário (16)**, com um padrão NULL.  
   
  [  **@from_auto_sync=**] *from_auto_sync*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -157,17 +157,17 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
  [  **@offloadagent=** ] *remote_agent_activation*  
  > [!NOTE]  
->  A ativação do agente remoto foi preterida e não tem mais suporte. Esse parâmetro tem suporte somente para manter a compatibilidade com versões anteriores de scripts. Configuração *remote_agent_activation* para um valor diferente de **0** gera um erro.  
+>  A ativação do agente remoto foi preterida e não tem mais suporte. Esse parâmetro tem suporte somente para manter a compatibilidade com versões anteriores de scripts. Definindo *remote_agent_activation* com um valor diferente de **0** gera um erro.  
   
  [  **@offloadserver=** ] **'***remote_agent_server_name***'**  
  > [!NOTE]  
->  A ativação do agente remoto foi preterida e não tem mais suporte. Esse parâmetro tem suporte somente para manter a compatibilidade com versões anteriores de scripts. Configuração *remote_agent_server_name* como qualquer valor não NULL gerará um erro.  
+>  A ativação do agente remoto foi preterida e não tem mais suporte. Esse parâmetro tem suporte somente para manter a compatibilidade com versões anteriores de scripts. Definindo *remote_agent_server_name* como qualquer valor não NULL gera um erro.  
   
  [ **@dts_package_name**=] **'***dts_package_name***'**  
  Especifica o nome do pacote DTS (Data Transformation Services). *dts_package_name* é um **sysname**, com um padrão NULL. Por exemplo, para um pacote denominado **DTSPub_Package** você especificaria `@dts_package_name = N'DTSPub_Package'`.  
   
  [ **@dts_package_password**=] **'***dts_package_password***'**  
- Especifica a senha no pacote. *dts_package_password* é **sysname** com um padrão NULL, que especifica que a propriedade de senha deve ser alterada.  
+ Especifica a senha no pacote. *dts_package_password* está **sysname** com um padrão de NULL, que especifica que a propriedade de senha deve ser deixado inalterado.  
   
 > [!NOTE]  
 >  Um pacote DTS deve ter uma senha.  
@@ -179,13 +179,13 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [  **@distribution_job_name=** ] **'***distribution_job_name***'**  
- É o nome do trabalho de distribuição. *distribution_job_name* é **sysname**, com um padrão NULL.  
+ É o nome do trabalho de distribuição. *distribution_job_name* está **sysname**, com um padrão NULL.  
   
- [ **@publisher**=] **'***publicador***'**  
- Especifica um não[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *publicador* é **sysname**, com um padrão NULL.  
+ [ **@publisher**=] **'***publisher***'**  
+ Especifica um não[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
->  *publicador* não deve ser usado ao alterar as propriedades de artigo em uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
+>  *Publisher* não deve ser usado ao alterar as propriedades do artigo em uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -193,10 +193,10 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 ## <a name="remarks"></a>Remarks  
  **sp_changesubstatus** é usado em replicação de instantâneo e replicação transacional.  
   
- **sp_changesubstatus** altera o status do assinante no **syssubscriptions** tabela com o status alterado. Se necessário, ele atualiza o status do artigo no **sysarticles** tabela para indicar ativo ou inativo. Se necessário, ele define o sinalizador de replicação ativado ou desativado **sysobjects** tabela para a tabela replicada.  
+ **sp_changesubstatus** altera o status do assinante em de **syssubscriptions** tabela com o status alterado. Se necessário, ele atualiza o status do artigo na **sysarticles** tabela para indicar ativo ou inativo. Se necessário, ele define o sinalizador de replicação ativado ou desativado na **sysobjects** tabela para a tabela replicada.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função fixa de servidor **db_owner** função fixa de banco de dados ou o criador da assinatura pode executar **sp_changesubstatus**.  
+ Somente os membros dos **sysadmin** função de servidor fixa **db_owner** função fixa de banco de dados ou o criador da assinatura pode executar **sp_changesubstatus**.  
   
 ## <a name="see-also"></a>Consulte também  
  [sp_addsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   

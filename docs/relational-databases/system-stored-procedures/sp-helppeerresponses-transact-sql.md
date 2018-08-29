@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helppeerresponses
 ms.assetid: e55789d1-43fb-4a37-9e5e-60ccef122a5d
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3f8b5a1c02066ee6f39513eb6e36fca4a6bce714
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4488ece6abf924700f173c6753fec679d6967758
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32995143"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024676"
 ---
 # <a name="sphelppeerresponses-transact-sql"></a>sp_helppeerresponses (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,13 +46,13 @@ sp_helppeerresponses [ @request_id = ] request_id
   
 ## <a name="arguments"></a>Argumentos  
  [ **@request_id**=] *request_id*  
- É a ID de uma solicitação de status específica. *request_id* é **int**, sem padrão.  
+ É a ID de uma solicitação de status específica. *request_id* está **int**, sem padrão.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**request_id**|**Int**|ID da solicitação de status.|  
+|**request_id**|**int**|ID da solicitação de status.|  
 |**ponto a ponto**|**sysname**|O nome do nível correspondente que gerou a resposta.|  
 |**peer_db**|**sysname**|O nome do banco de dados no nível que gerou a resposta.|  
 |**received_date**|**datetime**|A data e a hora em que o solicitante recebeu a resposta do par que a enviou.|  
@@ -66,7 +66,7 @@ sp_helppeerresponses [ @request_id = ] request_id
  **sp_helppeerresponses** procedimento é usado ao restaurar um banco de dados publicado em uma topologia ponto a ponto.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função de servidor fixa ou **db_owner** pode executar a função de banco de dados fixa **sp_helppeerresponses**.  
+ Somente os membros dos **sysadmin** função de servidor fixa ou o **db_owner** banco de dados fixa podem executar **sp_helppeerresponses**.  
   
 ## <a name="see-also"></a>Consulte também  
  [sp_deletepeerrequesthistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   

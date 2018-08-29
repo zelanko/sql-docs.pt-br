@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helprolemember
 ms.assetid: 42797510-aa5d-4564-85ac-27418419af9c
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fbe422aff07694ee7358f3be9906890d795f46b7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c7e59f3c4b97beaa700fab07a66d60ddb447dcd6
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254350"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022216"
 ---
 # <a name="sphelprolemember-transact-sql"></a>sp_helprolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_helprolemember [ [ @rolename = ] 'role' ]
   
 ## <a name="arguments"></a>Argumentos  
  [  **@rolename =** ] **'** *função* **'**  
- É o nome de uma função do banco de dados atual. *função* é **sysname**, com um padrão NULL. *função* deve existir no banco de dados atual. Se *função* não for especificado, todas as funções que contêm pelo menos um membro do banco de dados atual serão retornadas.  
+ É o nome de uma função do banco de dados atual. *função* está **sysname**, com um padrão NULL. *função* deve existir no banco de dados atual. Se *função* não for especificado, todas as funções que contêm pelo menos um membro do banco de dados atual serão retornadas.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -59,7 +59,7 @@ sp_helprolemember [ [ @rolename = ] 'role' ]
 |**MemberSID**|**varbinary(85)**|Identificador de segurança do **MemberName.**|  
   
 ## <a name="remarks"></a>Remarks  
- Se o banco de dados contiver funções aninhadas, **MemberName** pode ser o nome de uma função. **sp_helprolemember** não mostra a associação obtida através das funções aninhadas. Por exemplo, se User1 for um membro da Role1, e a Role1 for um membro da Role2, `EXEC sp_helprolemember 'Role2'` retornará a Role1, mas não os membros da Role1 (User1 neste exemplo). Para retornar associações aninhadas, você deve executar **sp_helprolemember** repetidamente para cada função aninhada.  
+ Se o banco de dados contiver funções aninhadas, **MemberName** pode ser o nome de uma função. **sp_helprolemember** mostra a associação obtida através das funções aninhadas. Por exemplo, se User1 for um membro da Role1, e a Role1 for um membro da Role2, `EXEC sp_helprolemember 'Role2'` retornará a Role1, mas não os membros da Role1 (User1 neste exemplo). Para retornar associações aninhadas, você deve executar **sp_helprolemember** repetidamente para cada função aninhada.  
   
  Use **sp_helpsrvrolemember** para exibir os membros de uma função de servidor fixa.  
   
@@ -78,7 +78,7 @@ EXEC sp_helprolemember 'Sales';
 ## <a name="see-also"></a>Consulte também  
  [Procedimentos de segurança armazenados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
- [sp_droprolemember & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
+ [sp_droprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
  [sp_helprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
  [sp_helpsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

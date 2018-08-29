@@ -19,16 +19,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_grant_publication_access
 ms.assetid: 17993952-def6-4a16-b1c1-323ec42967f8
-caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c6739cd65e016e08773831d0bc87e46ac27ae1f6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 681e62cea3b5bf9a22cedd1ab1803737b2080642
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994193"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023934"
 ---
 # <a name="spgrantpublicationaccess-transact-sql"></a>sp_grant_publication_access (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +47,7 @@ sp_grant_publication_access [ @publication = ] 'publication', [ @login = ] 'logi
  [ **@publication**=] **'***publicação***'**  
  É o nome da publicação a ser acessada. **'***publicação***'** é **sysname**, sem padrão.  
   
- [ **@login**=] **'***login***'**  
+ [ **@login**=] **'***logon***'**  
  É a ID do logon. **'***login***'** é **sysname**, sem padrão.  
   
  [  **@reserved =**] **'***reservado***'**  
@@ -64,7 +62,7 @@ sp_grant_publication_access [ @publication = ] 'publication', [ @login = ] 'logi
  Esse procedimento armazenado pode ser chamado repetidamente.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função de servidor fixa ou **db_owner** pode executar a função de banco de dados fixa **sp_grant_publication_access**.  
+ Somente os membros dos **sysadmin** função de servidor fixa ou o **db_owner** banco de dados fixa podem executar **sp_grant_publication_access**.  
   
 ## <a name="see-also"></a>Consulte também  
  [sp_help_publication_access &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql.md)   

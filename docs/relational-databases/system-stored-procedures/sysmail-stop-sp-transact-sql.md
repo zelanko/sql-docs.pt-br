@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_stop_sp
 ms.assetid: 045ee36f-5bf0-4626-b5ee-e84db06ce16f
-caps.latest.revision: 28
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8f304337470d0117b6f44d03bf7e459c6b9f51d5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0d52e7f18373303673afc3e5ef67aeb91e094360
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257778"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021130"
 ---
 # <a name="sysmailstopsp-transact-sql"></a>sysmail_stop_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ sysmail_stop_sp
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- Nenhuma  
+ None  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -59,13 +58,13 @@ sysmail_stop_sp
  Para iniciar o Database Mail, use **sysmail_start_sp**. Observe que **sp_send_dbmail** ainda aceita email quando o [!INCLUDE[ssSB](../../includes/sssb-md.md)] objetos são interrompidos.  
   
 > [!NOTE]  
->  Este procedimento armazenado para apenas as filas do Database Mail. Este procedimento armazenado não desativa a entrega de mensagens do [!INCLUDE[ssSB](../../includes/sssb-md.md)] no banco de dados. Este procedimento armazenado não desabilita os procedimentos armazenados estendidos do Database Mail para reduzir a área da superfície. Para desabilitar os procedimentos armazenados estendidos, consulte o [opção Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) do **sp_configure** procedimento armazenado do sistema.  
+>  Este procedimento armazenado para apenas as filas do Database Mail. Este procedimento armazenado não desativa a entrega de mensagens do [!INCLUDE[ssSB](../../includes/sssb-md.md)] no banco de dados. Este procedimento armazenado não desabilita os procedimentos armazenados estendidos do Database Mail para reduzir a área da superfície. Para desabilitar os procedimentos armazenados estendidos, consulte o [opção Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) da **sp_configure** procedimento armazenado do sistema.  
   
 ## <a name="permissions"></a>Permissões  
- Permissões de execução para esse procedimento usam como padrão membros do **sysadmin** função de servidor fixa.  
+ Permissões de execução para esse procedimento usam como padrão os membros de **sysadmin** função de servidor fixa.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir mostra a parada do Database Mail a **msdb** banco de dados. O exemplo supõe que o Database Mail foi habilitado.  
+ O exemplo a seguir mostra a parada do Database Mail na **msdb** banco de dados. O exemplo supõe que o Database Mail foi habilitado.  
   
 ```  
 USE msdb ;  

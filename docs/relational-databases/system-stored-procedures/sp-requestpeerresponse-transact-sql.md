@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_requestpeerresponse
 ms.assetid: cbe13c22-4d7d-4a36-b194-7a13ce68ef27
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 83f5cfcac2f109b88fc63ab96942d7682bdb2a90
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b722bac6727e6d64bb0c2c475ca900ea78c8fc1d
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32998203"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024368"
 ---
 # <a name="sprequestpeerresponse-transact-sql"></a>sp_requestpeerresponse (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +48,13 @@ sp_requestpeerresponse [ @publication = ] 'publication'
   
 ## <a name="arguments"></a>Argumentos  
  [ **@publication**=] **'***publicação***'**  
- É o nome da publicação em uma topologia ponto a ponto para a qual o status está sendo verificado. *publicação* é **sysname**, sem padrão.  
+ É o nome da publicação em uma topologia ponto a ponto para a qual o status está sendo verificado. *publicação* está **sysname**, sem padrão.  
   
  [ **@description**=] **'***descrição***'**  
- Informações definidas pelo usuário que podem ser usadas para identificar solicitações de status individuais. *Descrição* é **nvarchar (4000)**, com um padrão NULL.  
+ Informações definidas pelo usuário que podem ser usadas para identificar solicitações de status individuais. *Descrição* está **nvarchar (4000)**, com um padrão NULL.  
   
  [ **@request_id** =] *request_id*  
- Retorna a ID da nova solicitação. *request_id* é **int** e é um parâmetro de saída. Esse valor pode ser usado ao executar [sp_helppeerresponses &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md) para exibir todas as respostas a uma solicitação de status.  
+ Retorna a ID da nova solicitação. *request_id* está **int** e é um parâmetro de saída. Esse valor pode ser usado ao executar [sp_helppeerresponses &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md) para exibir todas as respostas a uma solicitação de status.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -67,7 +67,7 @@ sp_requestpeerresponse [ @publication = ] 'publication'
  **sp_requestpeerresponse** não pode ser executado em uma transação definida pelo usuário.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função de servidor fixa ou **db_owner** pode executar a função de banco de dados fixa **sp_requestpeerresponse**.  
+ Somente os membros dos **sysadmin** função de servidor fixa ou o **db_owner** banco de dados fixa podem executar **sp_requestpeerresponse**.  
   
 ## <a name="see-also"></a>Consulte também  
  [sp_deletepeerrequesthistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   

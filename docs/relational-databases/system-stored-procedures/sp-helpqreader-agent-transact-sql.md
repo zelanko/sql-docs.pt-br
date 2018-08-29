@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpqreader_agent
 ms.assetid: 8e74e1aa-e95b-4183-8017-bf123439b08d
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: be49f8a6303096487ef2c36593280fcc72e38a91
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d240d66768ee4b812542f959108ebea6baec4d9a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32995943"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022704"
 ---
 # <a name="sphelpqreaderagent-transact-sql"></a>sp_helpqreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,10 +52,10 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**id**|**Int**|ID do agente.|  
+|**id**|**int**|ID do agente.|  
 |**name**|**nvarchar(100)**|O nome do agente.|  
 |**job_id**|**uniqueidentifier**|ID exclusiva do trabalho de agente.|  
-|**job_login**|**nvarchar(512)**|É a conta do Windows sob a qual o Distribution agent é executado, que é retornada no formato *domínio*\\*nome de usuário*.|  
+|**job_login**|**nvarchar(512)**|É a conta de Windows na qual o Distribution agent é executado, que é retornada no formato *domínio*\\*username*.|  
 |**job_password**|**sysname**|Por motivos de segurança, um valor de **\* \* \* \* \* \* \* \* \* \*** é sempre retornado.|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -65,7 +65,7 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
  **sp_helpqreader_agent** é usado em replicação transacional.  
   
 ## <a name="permissions"></a>Permissões  
- Quando o valor de *frompublisher* é **1**, somente os membros do **sysadmin** a função de servidor fixa no publicador ou membros do **db_owner**função de banco de dados fixa no banco de dados de publicação pode executar **sp_helpqreader_agent**. Caso contrário, somente os membros do **sysadmin** a função de servidor fixa no distribuidor ou membros do **db_owner** função de banco de dados fixa no banco de dados de distribuição pode executar **sp_helpqreader_ agente**.  
+ Quando o valor de *frompublisher* é **1**, somente os membros dos **sysadmin** função de servidor fixa no publicador ou membros do **db_owner**função de banco de dados fixa do banco de dados de publicação pode executar **sp_helpqreader_agent**. Caso contrário, somente os membros dos **sysadmin** função de servidor fixa no distribuidor ou membros da **db_owner** banco de dados fixa no banco de dados de distribuição podem executar **sp_helpqreader_ agente**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Habilitar atualização de assinaturas para publicações transacionais](../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  

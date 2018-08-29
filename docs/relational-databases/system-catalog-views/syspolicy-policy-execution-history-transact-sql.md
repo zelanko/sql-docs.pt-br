@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - syspolicy_policy_execution_history view
 ms.assetid: b13c44a7-6d49-4d50-abe1-e657fc52bb05
-caps.latest.revision: 23
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c5d21894663f8ad36a44e825a1b0e8ced4966ee8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7db5a20395ec6e0e41d70d6b2dbb04dee991a0c1
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220317"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021390"
 ---
 # <a name="syspolicypolicyexecutionhistory-transact-sql"></a>syspolicy_policy_execution_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "33220317"
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |history_id|**bigint**|Identificador deste registro. Cada registro indica uma política e uma vez que ela foi iniciada.|  
-|policy_id|**Int**|Identificador da política.|  
+|policy_id|**int**|Identificador da política.|  
 |start_date|**datetime**|Data e hora em que esta política tentou executar.|  
 |end_date|**datetime**|Hora em que esta política parou de executar.|  
 |result|**bit**|Êxito ou falha da política. 0 = Falha, 1 = Êxito.|  
@@ -45,7 +44,7 @@ ms.locfileid: "33220317"
 |exception|**nvarchar(max)**|Descrição da exceção, se houver.|  
   
 ## <a name="remarks"></a>Remarks  
- O [syspolicy_policy_execution_history_details](../../relational-databases/system-catalog-views/syspolicy-policy-execution-history-details-transact-sql.md) exibição contém os detalhes relacionados sobre os destinos da política e as expressões de condição testadas.  
+ O [syspolicy_policy_execution_history_details](../../relational-databases/system-catalog-views/syspolicy-policy-execution-history-details-transact-sql.md) exibição contém detalhes relacionados sobre os destinos da política e as expressões de condição testadas.  
   
 ## <a name="permissions"></a>Permissões  
  Requer a associação à função PolicyAdministratorRole no banco de dados msdb.  

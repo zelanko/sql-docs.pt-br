@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helprotect
 ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
 caps.latest.revision: 24
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6ec420b58bf179d607326164a56ce8c257ba6725
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 716398a738b6ac9de991917ec056ed432c9a59a9
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260369"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036119"
 ---
 # <a name="sphelprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "33260369"
   Retorna um relatório que tem informações sobre permissões para um objeto ou permissões de instrução, no banco de dados atual.  
   
 > [!IMPORTANT]  
->  **sp_helprotect** não retorna informações sobre protegíveis que foram introduzidos no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Use [database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) e [fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) em vez disso.  
+>  **sp_helprotect** não retorna informações sobre protegíveis que foram introduzidos no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Use [sys. database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) e [fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) em vez disso.  
   
  Não lista as permissões que sempre são atribuídas às funções de servidor fixas ou funções de banco de dados fixas. Não inclui os logons ou os usuários que recebem permissões com base em sua associação em uma função.  
   
@@ -53,18 +53,18 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
   
 ## <a name="arguments"></a>Argumentos  
  [  **@name =** ] **'***object_statement***'**  
- É o nome do objeto no banco de dados atual ou uma instrução, que tem as permissões a serem relatadas. *object_statement* é **nvarchar(776)**, com um padrão NULL, que retorna todas as permissões de objeto e a instrução. Se o valor for um objeto (tabela, exibição, procedimento armazenado ou procedimento armazenado estendido), ele deverá ser um objeto válido no banco de dados atual. O nome do objeto pode incluir um qualificador de proprietário no formato *proprietário ***.*** objeto*.  
+ É o nome do objeto no banco de dados atual ou uma instrução, que tem as permissões a serem relatadas. *object_statement* está **nvarchar(776)**, com um padrão NULL, que retorna todas as permissões de objeto e a instrução. Se o valor for um objeto (tabela, exibição, procedimento armazenado ou procedimento armazenado estendido), ele deverá ser um objeto válido no banco de dados atual. O nome do objeto pode incluir um qualificador de proprietário no formato *proprietário ***.*** objeto*.  
   
  Se *object_statement* é uma instrução, ele pode ser uma instrução CREATE.  
   
  [  **@username =** ] **'***security_account***'**  
- É o nome da entidade de segurança para a qual são retornadas permissões. *security_account* é **sysname**, com um padrão NULL, que retorna todos os objetos de banco de dados atual. *security_account* deve existir no banco de dados atual.  
+ É o nome da entidade de segurança para a qual são retornadas permissões. *security_account* está **sysname**, com um padrão NULL, que retorna todos os objetos de banco de dados atual. *security_account* deve existir no banco de dados atual.  
   
  [  **@grantorname =** ] **'***concessor***'**  
- É o nome da entidade de segurança que concedeu permissões. *o concessor* é **sysname**, com um padrão NULL, que retorna todas as informações de permissões concedidas por qualquer entidade no banco de dados.  
+ É o nome da entidade de segurança que concedeu permissões. *concessor* está **sysname**, com um padrão NULL, que retorna todas as informações de permissões concedidas por qualquer entidade de segurança no banco de dados.  
   
  [  **@permissionarea =** ] **'***tipo***'**  
- É uma cadeia de caracteres que indica se deseja exibir permissões de objeto (cadeia de caracteres **o**), permissões de instrução (cadeia de caracteres **s**), ou ambos (**os**). *tipo* é **varchar (10)**, com um padrão de **os**. *tipo* pode ser qualquer combinação de **o** e **s**, com ou sem vírgulas ou espaços entre **o** e **s**.  
+ É uma cadeia de caracteres que indica se deve exibir permissões de objeto (cadeia de caracteres **s**), permissões de instrução (cadeia de caracteres **s**), ou ambos (**SO**). *tipo de* está **varchar(10)**, com um padrão de **SO**. *tipo de* pode ser qualquer combinação de **s** e **s**, com ou sem vírgulas ou espaços entre **s** e **s**.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  

@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_browsesnapshotfolder
 ms.assetid: 0872edf2-4038-4bc1-a68d-05ebfad434d2
-caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 90371326d42ab34fcf5d20b92d5a19f479ab1b6b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f399ac4baf1191ec4bc554e1921519300f315744
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32989761"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43017353"
 ---
 # <a name="spbrowsesnapshotfolder-transact-sql"></a>sp_browsesnapshotfolder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +47,13 @@ sp_browsesnapshotfolder [@publication= ] 'publication'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@publication=**] **'***publicação***'**  
- É o nome da publicação que contém o artigo. *publicação* é **sysname**, sem padrão.  
+ É o nome da publicação que contém o artigo. *publicação* está **sysname**, sem padrão.  
   
  [  **@subscriber=**] **'***assinante***'**  
- É o nome do Assinante. *assinante* é **sysname**, com um padrão NULL.  
+ É o nome do Assinante. *assinante* está **sysname**, com um padrão NULL.  
   
  [  **@subscriber_db=**] **'***subscriber_db***'**  
- É o nome do banco de dados de assinatura. *subscriber_db* é **sysname**, com um padrão NULL.  
+ É o nome do banco de dados de assinatura. *subscriber_db* está **sysname**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -68,12 +67,12 @@ sp_browsesnapshotfolder [@publication= ] 'publication'
 ## <a name="remarks"></a>Remarks  
  **sp_browsesnapshotfolder** é usado em replicação de instantâneo e replicação transacional.  
   
- Se o *assinante* e *subscriber_db* campos forem NULL, o procedimento armazenado retorna a pasta de instantâneo do instantâneo mais recente, ele pode encontrar para a publicação. Se o *assinante* e *subscriber_db* campos forem especificados, o procedimento armazenado retorna a pasta de instantâneo para a assinatura especificada. Se um instantâneo não tiver sido gerado para a publicação, um conjunto de resultados vazio será retornado.  
+ Se o *assinante* e *subscriber_db* campos ficarem como NULL, o procedimento armazenado retorna a pasta do instantâneo mais recente, ele pode encontrar para a publicação de instantâneo. Se o *assinante* e *subscriber_db* campos forem especificados, o procedimento armazenado retorna a pasta de instantâneo para a assinatura especificada. Se um instantâneo não tiver sido gerado para a publicação, um conjunto de resultados vazio será retornado.  
   
  Se a publicação for definida para gerar arquivos de instantâneo no diretório de trabalho do Publicador e na pasta de instantâneo do Publicador, o conjunto de resultados conterá duas linhas. A primeira linha contém a pasta de instantâneo da publicação e a segunda linha contém o diretório de trabalho do publicador. **sp_browsesnapshotfolder** é útil para determinar o diretório onde os arquivos de instantâneo são gerados.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função de servidor fixa ou **db_owner** pode executar a função de banco de dados fixa **sp_browsesnapshotfolder**.  
+ Somente os membros dos **sysadmin** função de servidor fixa ou **db_owner** banco de dados fixa podem executar **sp_browsesnapshotfolder**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

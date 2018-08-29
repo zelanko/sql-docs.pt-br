@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_OACreate
 ms.assetid: eb84c0f1-26dd-48f9-9368-13ee4a30a27c
 caps.latest.revision: 32
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2c7f4598f309549a34cc9dbc39b0ba1a964160bc
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 02a05fb8b97c1ae74682b442c45ca54552052236
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263494"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019445"
 ---
 # <a name="spoacreate-transact-sql"></a>sp_OACreate (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,14 +47,14 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
  *ProgID*  
  É o identificador programático (ProgID) do objeto OLE a ser criado. Essa cadeia de caracteres descreve a classe do objeto OLE e tem o formato: **'***OLEComponent***. ***Objeto***'**  
   
- *OLEComponent* é o nome do componente de servidor de automação OLE, e *objeto* é o nome do objeto OLE. O objeto OLE especificado deve ser válido e deve oferecer suporte a **IDispatch** interface.  
+ *OLEComponent* é o nome do componente do servidor de automação OLE, e *objeto* é o nome do objeto OLE. O objeto OLE especificado deve ser válido e deve oferecer suporte a **IDispatch** interface.  
   
- Por exemplo, SQLDMO. SQL Server é o ProgID do SQL-DMO **SQLServer** objeto. SQL-DMO tem um nome de componente de SQLDMO, o **SQLServer** objeto é válido e (como o SQL-DMO todos os objetos de) o **SQLServer** objeto oferece suporte a **IDispatch**.  
+ Por exemplo, SQLDMO. SQL Server é o ProgID do SQL-DMO **SQLServer** objeto. SQL-DMO tem um nome de componente de SQLDMO, o **SQLServer** objeto é válido e (como o SQL-DMO todos os objetos) a **SQLServer** objeto dá suporte à **IDispatch**.  
   
  *clsid*  
  É o CLSID (identificador de classe) do objeto OLE a ser criado. Essa cadeia de caracteres descreve a classe do objeto OLE e tem o formato: **' {***nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn***}'**. O objeto OLE especificado deve ser válido e deve oferecer suporte a **IDispatch** interface.  
   
- Por exemplo, {00026BA1-0000-0000-C000-000000000046} é o CLSID do SQL-DMO **SQLServer** objeto.  
+ Por exemplo, {00026ba1-0000-0000-C000-000000000046} é o CLSID do SQL-DMO **SQLServer** objeto.  
   
  *objecttoken* **saída**  
  É o token de objeto retornado, e deve ser uma variável local de tipo de dados **int**. Esse token de objeto identifica o objeto OLE criado e é usado em chamadas aos procedimentos armazenados de Automação OLE.  
@@ -64,13 +64,13 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
  **1** = somente no servidor OLE em processo (. dll).  
   
- **4** = local (.exe) OLE servidor apenas.  
+ **4** = local (.exe) OLE somente do servidor.  
   
- **5** = em andamento e local no servidor OLE permitido  
+ **5** = server OLE em processo e local permitido  
   
  Se não for especificado, o valor padrão é **5**. Esse valor é passado como o *dwClsContext* parâmetro da chamada para **CoCreateInstance**.  
   
- Se um servidor OLE em processo for permitido (usando um valor de contexto de **1** ou **5** ou não especificando um valor de contexto), ele tem acesso à memória e outros recursos pertencentes ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Um servidor OLE em processo pode danificar a memória ou os recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e causar resultados imprevisíveis, como uma violação de acesso do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Se um servidor OLE em processo é permitido (usando o valor de contexto de **1** ou **5** ou não especificando um valor de contexto), ele tem acesso à memória e outros recursos pertencentes ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Um servidor OLE em processo pode danificar a memória ou os recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e causar resultados imprevisíveis, como uma violação de acesso do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Quando você especifica um valor de contexto de **4**, um servidor OLE local não tem acesso a qualquer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recursos e ele não podem danificar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] memória ou recursos.  
   
@@ -80,10 +80,10 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou um número diferente de zero (falha) que é o valor inteiro do HRESULT retornado pelo objeto de Automação OLE.  
   
- Para obter mais informações sobre códigos de retorno HRESULT, consulte [OLE Automation códigos de retorno e informações de erro](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
+ Para obter mais informações sobre códigos de retorno HRESULT, consulte [OLE automação códigos de retorno e informações de erro](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
 ## <a name="remarks"></a>Remarks  
- Se procedimentos de automação OLE estão habilitados, uma chamada para **sp_OACreate** iniciará o ambiente de execução compartilhado de automação OLE. Para obter mais informações sobre como habilitar a automação OLE, consulte [Ole Automation procedimentos Server Configuration Option](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md).  
+ Se procedimentos de automação OLE forem habilitados, uma chamada para **sp_OACreate** iniciará o ambiente de execução compartilhado de automação OLE. Para obter mais informações sobre como habilitar a automação OLE, consulte [Ole automação procedimentos Server Configuration Option](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md).  
   
  O OLE objeto criado é destruído automaticamente no término do lote de instrução [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   

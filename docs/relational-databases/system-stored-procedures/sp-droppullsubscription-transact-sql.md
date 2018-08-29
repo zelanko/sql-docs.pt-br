@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_droppullsubscription
 ms.assetid: 7352d94a-f8f2-42ea-aaf1-d08c3b5a0e76
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f87d5298d9f67c349a71faf8cff95b2ac23304d0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 73c7f78803805c03acef7e0c7055c60eab2b1924
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32989672"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021109"
 ---
 # <a name="spdroppullsubscription-transact-sql"></a>sp_droppullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,14 +48,14 @@ sp_droppullsubscription [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publisher=** ] **'***publicador***'**  
- É o nome do servidor remoto. *publicador* é **sysname**, sem padrão. Se **todos os**, a assinatura será descartada em todos os publicadores.  
+ [  **@publisher=** ] **'***publisher***'**  
+ É o nome do servidor remoto. *Publisher* está **sysname**, sem padrão. Se **todos os**, a assinatura será descartada em todos os publicadores.  
   
  [  **@publisher_db=** ] **'***publisher_db***'**  
- É o nome do banco de dados Publicador. *publisher_db* é **sysname**, sem padrão. **todos os** significa que todos os bancos de dados do publicador.  
+ É o nome do banco de dados Publicador. *publisher_db* está **sysname**, sem padrão. **todos os** significa que todos os bancos de dados do publicador.  
   
  [  **@publication=** ] **'***publicação***'**  
- É o nome da publicação. *publicação* é **sysname**, sem padrão. Se **todos os**, a assinatura será descartada em todas as publicações.  
+ É o nome da publicação. *publicação* está **sysname**, sem padrão. Se **todos os**, a assinatura será descartada em todas as publicações.  
   
  [  **@reserved=** ] *reservado*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -66,13 +66,13 @@ sp_droppullsubscription [ @publisher= ] 'publisher'
 ## <a name="remarks"></a>Remarks  
  **sp_droppullsubscription** é usado em replicação de instantâneo e replicação transacional.  
   
- **sp_droppullsubscription** exclui a linha correspondente a [MSreplication_subscriptions &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) tabela e o Distributor Agent correspondente no assinante. Se nenhuma linha for deixada em [MSreplication_subscriptions &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md), descarta a tabela.  
+ **sp_droppullsubscription** exclui a linha correspondente a [MSreplication_subscriptions &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) tabela e o Distributor Agent correspondente no assinante. Se nenhuma linha for deixada em [MSreplication_subscriptions &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md), ele descarta a tabela.  
   
 ## <a name="example"></a>Exemplo  
  [!code-sql[HowTo#sp_droptranpullsubscription](../../relational-databases/replication/codesnippet/tsql/sp-droppullsubscription-_1.sql)]  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** pode executar a função de servidor fixa ou o usuário que criou a assinatura pull **sp_droppullsubscription**. O **db_owner** função fixa de banco de dados só é possível executar **sp_droppullsubscription** se o usuário que criou a assinatura pull pertence a essa função.  
+ Somente os membros dos **sysadmin** pode executar a função de servidor fixa ou o usuário que criou a assinatura pull **sp_droppullsubscription**. O **db_owner** função de banco de dados fixa só é capaz de executar **sp_droppullsubscription** se o usuário que criou a assinatura pull pertence a essa função.  
   
 ## <a name="see-also"></a>Consulte também  
  [Excluir uma assinatura Pull](../../relational-databases/replication/delete-a-pull-subscription.md)   

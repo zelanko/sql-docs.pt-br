@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_log_shipping_secondary_primary
 ms.assetid: bfbbbee2-c255-4a59-a963-47d6e980a8e2
-caps.latest.revision: 19
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0f4f5ef8c72155b83595f04c92cdeb2c1cf16a34
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 40e4e8e4ab9603648abe6f92ae99a287755390a8
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239206"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019936"
 ---
 # <a name="spaddlogshippingsecondaryprimary-transact-sql"></a>sp_add_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,28 +58,28 @@ sp_add_log_shipping_secondary_primary
   
 ## <a name="arguments"></a>Argumentos  
  [ **@primary_server** =] '*primary_server*'  
- O nome da instância primária do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] na configuração de envio de logs. *primary_server* é **sysname** e não pode ser NULL.  
+ O nome da instância primária do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] na configuração de envio de logs. *primary_server* está **sysname** e não pode ser NULL.  
   
  [ **@primary_database** =] '*primary_database*'  
- É o nome do banco de dados do servidor primário. *primary_database* é **sysname**, sem padrão.  
+ É o nome do banco de dados do servidor primário. *primary_database* está **sysname**, sem padrão.  
   
  [ **@backup_source_directory** =] '*backup_source_directory*'  
- O diretório onde os arquivos de backup de log de transações do servidor primário são armazenados. *backup_source_directory* é **nvarchar (500)** e não pode ser NULL.  
+ O diretório onde os arquivos de backup de log de transações do servidor primário são armazenados. *backup_source_directory* está **nvarchar(500)** e não pode ser NULL.  
   
  [ **@backup_destination_directory** =] '*backup_destination_directory*'  
- O diretório no servidor secundário onde arquivos de backup são copiados. *backup_destination_directory* é **nvarchar (500)** e não pode ser NULL.  
+ O diretório no servidor secundário onde arquivos de backup são copiados. *backup_destination_directory* está **nvarchar(500)** e não pode ser NULL.  
   
  [ **@copy_job_name** =] '*copy_job_name*'  
- O nome a ser usado para o trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent que está sendo criado para copiar backups do log de transações no servidor secundário. *copy_job_name* é **sysname** e não pode ser NULL.  
+ O nome a ser usado para o trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent que está sendo criado para copiar backups do log de transações no servidor secundário. *copy_job_name* está **sysname** e não pode ser NULL.  
   
  [ **@restore_job_name** =] '*restore_job_name*'  
- É o nome do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabalho do agente no servidor secundário que restaura os backups de banco de dados secundário. *restore_job_name* é **sysname** e não pode ser NULL.  
+ É o nome da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabalho do agente no servidor secundário que restaura os backups de banco de dados secundário. *restore_job_name* está **sysname** e não pode ser NULL.  
   
  [ **@file_retention_period** =] '*file_retention_period*'  
- O período de tempo, em minutos, em que um arquivo de backup é mantido no servidor secundário no caminho especificado pelo @backup_destination_directory parâmetro antes de serem excluídos. *history_retention_period* é **int**, com um padrão NULL. Se nenhum valor for especificado, será usado o valor 14.420.  
+ O período de tempo, em minutos, em que um arquivo de backup é mantido no servidor secundário no caminho especificado pelo @backup_destination_directory parâmetro antes de serem excluídos. *history_retention_period* está **int**, com um padrão NULL. Se nenhum valor for especificado, será usado o valor 14.420.  
   
  [ **@monitor_server** =] '*monitor_server*'  
- É o nome do servidor monitor. *Monitor_server* é **sysname**, sem padrão, e não pode ser NULL.  
+ É o nome do servidor monitor. *Monitor_server* está **sysname**, sem padrão, e não pode ser NULL.  
   
  [ **@monitor_server_security_mode** =] '*monitor_server_security_mode*'  
  O modo de segurança usado para conexão ao servidor monitor.  
@@ -89,7 +88,7 @@ sp_add_log_shipping_secondary_primary
   
  0 = Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- *monitor_server_security_mode* é **bit** e não pode ser NULL.  
+ *monitor_server_security_mode* está **bit** e não pode ser NULL.  
   
  [ **@monitor_server_login** = ] '*monitor_server_login*'  
  É o nome de usuário da conta usada para acessar o servidor monitor.  
@@ -98,19 +97,19 @@ sp_add_log_shipping_secondary_primary
  Senha da conta usada para acessar o servidor monitor.  
   
  [ **@copy_job_id** =] '*copy_job_id*' saída  
- A ID associada ao trabalho de cópia no servidor secundário. *copy_job_id* é **uniqueidentifier** e não pode ser NULL.  
+ A ID associada ao trabalho de cópia no servidor secundário. *copy_job_id* está **uniqueidentifier** e não pode ser NULL.  
   
  [ **@restore_job_id** =] '*restore_job_id*' saída  
- A ID associada ao trabalho de restauração no servidor secundário. *restore_job_id* é **uniqueidentifier** e não pode ser NULL.  
+ A ID associada ao trabalho de restauração no servidor secundário. *restore_job_id* está **uniqueidentifier** e não pode ser NULL.  
   
  [ **@secondary_id** =] '*secondary_id*' saída  
- ID de servidor secundário na configuração de envio de logs. *secondary_id* é **uniqueidentifier** e não pode ser NULL.  
+ ID de servidor secundário na configuração de envio de logs. *secondary_id* está **uniqueidentifier** e não pode ser NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma  
+ None  
   
 ## <a name="remarks"></a>Remarks  
  **sp_add_log_shipping_secondary_primary** deve ser executado a partir de **mestre** banco de dados no servidor secundário. Esse procedimento armazenado faz o seguinte:  
@@ -119,21 +118,21 @@ sp_add_log_shipping_secondary_primary
   
 2.  Faz o seguinte:  
   
-    1.  Adiciona uma entrada para a ID secundária em **log_shipping_secondary** usando os argumentos fornecidos.  
+    1.  Adiciona uma entrada para a ID secundária na **log_shipping_secondary** usando os argumentos fornecidos.  
   
     2.  Cria um trabalho de cópia para a ID secundária que é desabilitada.  
   
-    3.  Define a ID do trabalho de cópia de **log_shipping_secondary** entrada para a ID do trabalho do trabalho de cópia.  
+    3.  Define a ID do trabalho de cópia na **log_shipping_secondary** entrada para a ID do trabalho de cópia.  
   
     4.  Cria um trabalho de restauração para a ID secundária que é desabilitada.  
   
-    5.  Definir a ID do trabalho de restauração no **log_shipping_secondary** entrada para a ID do trabalho do trabalho de restauração.  
+    5.  Definir a ID do trabalho de restauração na **log_shipping_secondary** entrada para a ID do trabalho o trabalho de restauração.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função fixa de servidor pode executar esse procedimento.  
+ Somente os membros dos **sysadmin** função de servidor fixa pode executar esse procedimento.  
   
 ## <a name="examples"></a>Exemplos  
- Este exemplo ilustra o uso de **sp_add_log_shipping_secondary_primary** procedimento armazenado para configurar informações para o banco de dados primário [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] no servidor secundário.  
+ Este exemplo ilustra o uso de **sp_add_log_shipping_secondary_primary** procedimento armazenado para configurar as informações para o banco de dados primário [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] no servidor secundário.  
   
 ```  
 EXEC master.dbo.sp_add_log_shipping_secondary_primary   
@@ -153,7 +152,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Sobre o envio de logs & #40; SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

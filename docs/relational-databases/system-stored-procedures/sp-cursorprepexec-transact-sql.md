@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_cursorprepexec
 ms.assetid: 8094fa90-35b5-4cf4-8012-0570cb2ba1e6
 caps.latest.revision: 9
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 378a389780e8af6ed966c4e0757352b16fbc0dd1
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 175971e37ad9977af11bbf76e4753b525943a982
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240376"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021414"
 ---
 # <a name="spcursorprepexec-transact-sql"></a>sp_cursorprepexec (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
   
 ## <a name="arguments"></a>Argumentos  
  *identificador preparado*  
- É um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gerado preparado *tratar* identificador. *identificador preparado* é obrigatório e retorna **int**.  
+ É um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gerado preparado *manipular* identificador. *identificador preparado* é obrigatório e retorna **int**.  
   
  *cursor*  
  É o identificador de cursor gerado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *cursor* é um parâmetro obrigatório que deve ser fornecido em todos os procedimentos subsequentes que atuam nesse cursor, por exemplo, sp_cursorfetch.  
@@ -55,25 +55,25 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
  Identifica instruções parametrizadas. O *params* definição de variáveis é substituída para marcadores de parâmetro na instrução. *params* é um parâmetro obrigatório que chama uma **ntext**, **nchar**, ou **nvarchar** valor de entrada.  
   
 > [!NOTE]  
->  Use um **ntext** cadeia de caracteres como entrada quando *stmt* é parametrizado e o *scrollopt* valor PARAMETERIZED_STMT é ON.  
+>  Use uma **ntext** cadeia de caracteres como a entrada de valor quando *stmt* é parametrizado e o *scrollopt* valor PARAMETERIZED_STMT for ON.  
   
  *instrução*  
- Define o conjunto de resultados do cursor. O *instrução* parâmetro é obrigatório e chama um **ntext**, **nchar** ou **nvarchar** valor de entrada.  
+ Define o conjunto de resultados do cursor. O *instrução* parâmetro é obrigatório e chamadas para um **ntext**, **nchar** ou **nvarchar** valor de entrada.  
   
 > [!NOTE]  
->  As regras para especificar o valor stmt são iguais às de sp_cursoropen, com exceção de que o *stmt* tipo de dados de cadeia de caracteres deve ser **ntext**.  
+>  As regras para especificar o valor stmt são as mesmas de sp_cursoropen, com exceção de que o *stmt* tipo de dados de cadeia de caracteres deve ser **ntext**.  
   
  *Opções*  
- Um parâmetro opcional que retorna uma descrição das colunas do conjunto de resultados de cursor. *Opções de* exige o seguinte **int** valor de entrada.  
+ Um parâmetro opcional que retorna uma descrição das colunas do conjunto de resultados de cursor. *as opções* exige o seguinte **int** valor de entrada.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
  *scrollopt*  
  Opção de rolagem. *scrollopt* é um parâmetro opcional que requer um dos seguintes **int** valores de entrada.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -95,7 +95,7 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
  *ccopt*  
  Opção de controle de simultaneidade. *ccopt* é um parâmetro opcional que requer um dos seguintes **int** valores de entrada.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS (anteriormente conhecido como LOCKCC)|  
@@ -109,14 +109,14 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
 |0x40000|OPTIMISTIC_ACCEPTABLE|  
 |0x80000|OPTIMISITC_ACCEPTABLE|  
   
- Assim como acontece com *scrollpt*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode atribuir um valor diferente de solicitado.  
+ Assim como acontece com *scrollpt*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode atribuir um valor diferente daquele que foi solicitado.  
   
  *número de linhas*  
  É um parâmetro opcional que significa o número de linhas de buffer de busca a ser usado com AUTO_FETCH. O padrão é 20 linhas. *número de linhas* tem um comportamento diferente quando atribuído como um valor de entrada versus um valor de retorno.  
   
 |Como valor de entrada|Como valor de retorno|  
 |--------------------|---------------------|  
-|Quando AUTO_FETCH é especificado com cursores FAST_FORWARD *rowcount* representa o número de linhas a serem colocadas no buffer de busca.|Representa o número de linhas no conjunto de resultados. Quando o *scrollopt* valor AUTO_FETCH é especificado, *rowcount* retorna o número de linhas buscadas no buffer de busca.|  
+|Quando AUTO_FETCH é especificado com cursores FAST_FORWARD *rowcount* representa o número de linhas a serem colocadas no buffer de busca.|Representa o número de linhas no conjunto de resultados. Quando o *scrollopt* valor AUTO_FETCH é especificado, *rowcount* retorna o número de linhas que foram buscadas no buffer de busca.|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  Se *params* retorna um valor nulo, em seguida, a instrução não é parametrizada.  

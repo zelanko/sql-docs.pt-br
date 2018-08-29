@@ -20,16 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_cdc_stop_job
 ms.assetid: 421fc21c-c7a4-407c-8b31-359273b68c63
-caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8f9ac01b53e3d7823fb00e68d49f9a4905ddac96
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 22372eb9bbd32018e93cd8cd2230741656685987
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255729"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026480"
 ---
 # <a name="sysspcdcstopjob-transact-sql"></a>sys.sp_cdc_stop_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,14 +45,14 @@ sys.sp_cdc_stop_job [ [ @job_type = ] 'job_type' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [[  **@job_type=** ] **' * job_type*']  
- Tipo de trabalho a adicionar. *job_type* é **nvarchar (20)** com um padrão de **capturar**. As entradas válidas são **capturar** e **limpeza**.  
+ [[  **@job_type=** ] **' * * * job_type*']  
+ Tipo de trabalho a adicionar. *job_type* está **nvarchar (20)** com um padrão de **capturar**. As entradas válidas são **capturar** e **limpeza**.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma  
+ None  
   
 ## <a name="remarks"></a>Remarks  
  sys.sp_cdc_stop_job pode ser usado por um administrador para interromper explicitamente o trabalho de captura ou de limpeza.  

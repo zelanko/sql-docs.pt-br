@@ -19,20 +19,20 @@ helpviewer_keywords:
 - sp_prepexec
 ms.assetid: f9141850-a62b-43bf-8e46-b2f92b75ca56
 caps.latest.revision: 6
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ca8dd4639c4c2382ef17c4de89eee6fde1fdf9b9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 863aa34286ba6ed55f27a32bd1862c5f7e5896ec
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250000"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025215"
 ---
 # <a name="spprepexec-transact-sql"></a>sp_prepexec (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Prepara e executa uma parametrizadas [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução. o sp_prepexec combina as funções de sp_prepare e sp_execute. Isso é invocado por ID = 13 em um pacote TDS.  
+  Prepara e executa um parametrizada [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução. o sp_prepexec combina as funções de sp_prepare e sp_execute. Isso é invocado por ID = 13 em um pacote TDS.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,13 +46,13 @@ sp_prepexec handle OUTPUT, params , stmt
   
 ## <a name="arguments"></a>Argumentos  
  *Identificador*  
- É o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-gerado *tratar* identificador. *tratar* é um parâmetro obrigatório com um **int** valor de retorno.  
+ É o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-gerado *manipular* identificador. *manipular* é um parâmetro obrigatório com um **int** valor de retorno.  
   
  *params*  
  Identifica instruções parametrizadas. O *params* definição de variáveis é substituída para marcadores de parâmetro na instrução. *params* é um parâmetro obrigatório que chama uma **ntext**, **nchar**, ou **nvarchar** valor de entrada. Insira um valor NULL se a instrução não for parametrizada.  
   
  *stmt*  
- Define o conjunto de resultados do cursor. O *stmt* parâmetro é obrigatório e chama um **ntext**, **nchar** ou **nvarchar** valor de entrada.  
+ Define o conjunto de resultados do cursor. O *stmt* parâmetro é obrigatório e chamadas para um **ntext**, **nchar** ou **nvarchar** valor de entrada.  
   
  *bound_param*  
  Significa o uso opcional de parâmetros adicionais. *bound_param* chama um valor de entrada de qualquer tipo de dados para designar os parâmetros adicionais em uso.  

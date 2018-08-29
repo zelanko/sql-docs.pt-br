@@ -1,5 +1,5 @@
 ---
-title: sys. database_audit_specifications (Transact-SQL) | Microsoft Docs
+title: database_audit_specifications (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -21,17 +21,17 @@ helpviewer_keywords:
 - sys.database_audit_specifications catalog view
 ms.assetid: bf80e5c6-0588-4eb7-86ff-aa7c73461335
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 91195df8c736b15429d4ac7e339ff19217c91bfd
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 9581acdf727d46157925010c47f92cea00862d8b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181642"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027294"
 ---
-# <a name="sysdatabaseauditspecifications-transact-sql"></a>sys. database_audit_specifications (Transact-SQL)
+# <a name="sysdatabaseauditspecifications-transact-sql"></a>database_audit_specifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contém informações sobre as especificações de auditoria do banco de dados de uma auditoria do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em uma instância de servidor. Para obter mais informações, veja [Auditoria do SQL Server &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
@@ -39,7 +39,7 @@ ms.locfileid: "33181642"
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |Nome|**sysname**|Nome da especificação de auditoria.|  
-|database_specification_id|**Int**|ID da especificação do banco de dados.|  
+|database_specification_id|**int**|ID da especificação do banco de dados.|  
 |create_date|**datetime**|Data de criação da especificação de auditoria.|  
 |modified_date|**datetime**|Data da última alteração feita na especificação de auditoria.|  
 |is_state_enabled|**bit**|Estado da especificação de auditoria:<br /><br /> 0 – DESABILITADA<br /><br /> 1 – HABILITADA|  
@@ -49,7 +49,7 @@ ms.locfileid: "33181642"
  Se o banco de dados estiver no modo somente leitura, o recurso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit não poderá adicionar Especificações de Auditoria de Banco de Dados.  
   
 ## <a name="permissions"></a>Permissões  
- Entidades com o **ALTER ANY DATABASE AUDIT** ou **VIEW DEFINITION** permissões, a função dbo e os membros da função de banco de dados fixa db_owners têm acesso a esta exibição do catálogo. Além disso, a entidade de segurança não deve ser negada **VIEW DEFINITION** permissão.  
+ Entidades de segurança com o **ALTER ANY DATABASE AUDIT** ou **VIEW DEFINITION** permissões, a função dbo e os membros da função de banco de dados fixa db_owners têm acesso a essa exibição de catálogo. Além disso, a entidade de segurança não deve ser negada **VIEW DEFINITION** permissão.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]. Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   

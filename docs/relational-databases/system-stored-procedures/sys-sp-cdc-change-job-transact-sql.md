@@ -20,21 +20,20 @@ dev_langs:
 helpviewer_keywords:
 - sp_cdc_change_job
 ms.assetid: ea918888-0fc5-4cc1-b301-26b2a9fbb20d
-caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ca1b4bf87be7b0b102bb139aad650dfa16e5c3a1
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7603f20095fa09bfcd574aeea1bcad5ca357cd40
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260812"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43018062"
 ---
 # <a name="sysspcdcchangejob-transact-sql"></a>sys.sp_cdc_change_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Modifica a configuração de um trabalho de captura ou limpeza do Change Data Capture no banco de dados atual. Para exibir a configuração atual de um trabalho, consulte o [cdc_jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md) tabela ou use [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md).  
+  Modifica a configuração de um trabalho de captura ou limpeza do Change Data Capture no banco de dados atual. Para exibir a configuração atual de um trabalho, consulte o [cdc_jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md) de tabela, ou use [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md).  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,59 +52,59 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
   
 ## <a name="arguments"></a>Argumentos  
  [  **@job_type=** ] **'***job_type***'**  
- Tipo de trabalho a ser modificado. *job_type* é **nvarchar (20)** com um padrão de 'capture'. As entradas válidas são 'capture' e 'cleanup'.  
+ Tipo de trabalho a ser modificado. *job_type* está **nvarchar (20)** com um padrão de 'capture'. As entradas válidas são 'capture' e 'cleanup'.  
   
- [ **@maxtrans** ] **= * max_trans*  
- O número máximo de transações a processar em cada ciclo de exame. *max_trans* é **int** com um padrão NULL, que indica nenhuma alteração para esse parâmetro. Se especificado, o valor deve ser um inteiro positivo.  
+ [ **@maxtrans** ] **= * * * max_trans*  
+ O número máximo de transações a processar em cada ciclo de exame. *max_trans* está **int** com um padrão NULL, que indica nenhuma alteração para esse parâmetro. Se especificado, o valor deve ser um inteiro positivo.  
   
  *max_trans* é válido somente para trabalhos de captura.  
   
- [ **@maxscans** ] **= * max_scans*  
- O número máximo de ciclos de exame a executar para extrair todas as linhas do log. *max_scans* é **int** com um padrão NULL, que indica nenhuma alteração para esse parâmetro.  
+ [ **@maxscans** ] **= * * * max_scans*  
+ O número máximo de ciclos de exame a executar para extrair todas as linhas do log. *max_scans* está **int** com um padrão NULL, que indica nenhuma alteração para esse parâmetro.  
   
  *max_scan* é válido somente para trabalhos de captura.  
   
- [ **@continuous** ] **= * contínua*  
- Indica se o trabalho de captura deve ser executado continuamente (1) ou apenas uma vez (0). *contínua* é **bit** com um padrão NULL, que indica nenhuma alteração para esse parâmetro.  
+ [ **@continuous** ] **= * * * contínua*  
+ Indica se o trabalho de captura deve ser executado continuamente (1) ou apenas uma vez (0). *contínua* está **bit** com um padrão NULL, que indica nenhuma alteração para esse parâmetro.  
   
- Quando *contínua* = 1, o [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md) trabalho examina o log e processa até (*max_trans* \* *max_scans*) transações. Ele espera, em seguida, o número de segundos especificado em *intervalo_de_sondagem* antes de começar a próxima verificação de log.  
+ Quando *contínua* = 1, o [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md) trabalho examina o log e processa até (*max_trans* \* *max_scans*) transações. Ele, em seguida, aguardará o número de segundos especificado no *polling_interval* antes de iniciar a próxima verificação de log.  
   
- Quando *contínua* = 0, o **sp_cdc_scan** executa trabalho até *max_scans* verificações do log, processando até *max_trans* transações durante cada verificação e, em seguida, sai.  
+ Quando *contínua* = 0, o **sp_cdc_scan** trabalho é executado até *max_scans* verificações do log, processando até *max_trans* transações durante cada verificação e, em seguida, sai.  
   
  Se **@continuous** é alterado de 1 para 0, **@pollinginterval** é definida automaticamente como 0. Um valor especificado para **@pollinginterval** diferente de 0 é ignorado.  
   
- Se **@continuous** for omitido ou explicitamente definido como NULL e **@pollinginterval** é definida explicitamente como um valor maior que 0, **@continuous** automaticamente definido como 1.  
+ Se **@continuous** for omitido ou explicitamente definido como NULL e **@pollinginterval** é explicitamente definido como um valor maior que 0, **@continuous** é automaticamente definido como 1.  
   
  *contínua* é válido somente para trabalhos de captura.  
   
- [ **@pollinginterval** ] **= * intervalo_de_sondagem*  
- Número de segundos entre ciclos de exame de log. *intervalo_de_sondagem* é **bigint** com um padrão NULL, que indica nenhuma alteração para esse parâmetro.  
+ [ **@pollinginterval** ] **= * * * polling_interval*  
+ Número de segundos entre ciclos de exame de log. *polling_interval* está **bigint** com um padrão NULL, que indica nenhuma alteração para esse parâmetro.  
   
- *intervalo_de_sondagem* é válido somente para captura trabalhos quando *contínua* é definido como 1.  
+ *polling_interval* é válido somente para captura de trabalhos quando *contínua* é definido como 1.  
   
- [ **@retention** ] **= * retenção*  
- O número de minutos que as linhas de alteração devem ser retidas em tabelas de alteração. *retenção* é **bigint** com um padrão NULL, que indica nenhuma alteração para esse parâmetro. O valor máximo é 52494800 (100 anos). Se especificado, o valor deve ser um inteiro positivo.  
+ [ **@retention** ] **= * * * retenção*  
+ O número de minutos que as linhas de alteração devem ser retidas em tabelas de alteração. *retenção* está **bigint** com um padrão NULL, que indica nenhuma alteração para esse parâmetro. O valor máximo é 52494800 (100 anos). Se especificado, o valor deve ser um inteiro positivo.  
   
  *retenção* é válido somente para trabalhos de limpeza.  
   
  [  **@threshold=** ] **'***excluir limite***'**  
- O número máximo de entradas de exclusão que podem ser excluídas por meio de uma única instrução na limpeza. *Excluir limite* é **bigint** com um padrão NULL, que indica nenhuma alteração para esse parâmetro. *Excluir limite* é válido somente para trabalhos de limpeza.  
+ O número máximo de entradas de exclusão que podem ser excluídas por meio de uma única instrução na limpeza. *excluir o limite* está **bigint** com um padrão NULL, que indica nenhuma alteração para esse parâmetro. *Excluir limite* é válido somente para trabalhos de limpeza.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma  
+ None  
   
 ## <a name="remarks"></a>Remarks  
- Se um parâmetro for omitido, o valor associado no [cdc_jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md) tabela não é atualizada. Um conjunto de parâmetros definido explicitamente como NULL é tratado como se o parâmetro tivesse sido omitido.  
+ Se um parâmetro for omitido, o valor associado na [cdc_jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md) tabela não é atualizada. Um conjunto de parâmetros definido explicitamente como NULL é tratado como se o parâmetro tivesse sido omitido.  
   
  Especificar um parâmetro que é inválido para o tipo de trabalho fará a instrução falhar.  
   
- As alterações a um trabalho não entram em vigor até que o trabalho é interrompido usando [sp_cdc_stop_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-stop-job-transact-sql.md) e reiniciado usando [sp_cdc_start_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-start-job-transact-sql.md).  
+ As alterações a um trabalho não terão efeito até que o trabalho seja interrompido por meio [sp_cdc_stop_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-stop-job-transact-sql.md) e reiniciado usando [sp_cdc_start_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-start-job-transact-sql.md).  
   
 ## <a name="permissions"></a>Permissões  
- Requer a participação no **db_owner** função fixa de banco de dados.  
+ Requer associação na **db_owner** função fixa de banco de dados.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -137,6 +136,6 @@ GO
 ## <a name="see-also"></a>Consulte também  
  [cdc_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
  [sys.sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
- [sys. sp_cdc_add_job & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)  
+ [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)  
   
   

@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_syspolicy_unsubscribe_from_policy_category
 ms.assetid: 47abab63-e605-40e8-a54e-2241e2e01afd
-caps.latest.revision: 7
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 0c448584efd1921b7e88a84f17d2f53bb0596944
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 1bad5bdd2dafa962689d3952b649388f20620722
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33243915"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025245"
 ---
 # <a name="spsyspolicyunsubscribefrompolicycategory-transact-sql"></a>sp_syspolicy_unsubscribe_from_policy_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,9 +44,9 @@ sp_syspolicy_unsubscribe_from_policy_category [ @policy_category = ] 'policy_cat
   
 ## <a name="arguments"></a>Argumentos  
  [  **@policy_category=** ] **'***policy_category***'**  
- É o nome da assinatura de categoria de política que você deseja excluir. *policy_category* é **sysname**e é necessário.  
+ É o nome da assinatura de categoria de política que você deseja excluir. *policy_category* está **sysname**e é necessária.  
   
- Para obter valores *policy_category*, consultar o syspolicy_policy_categories do sistema.  
+ Para obter valores para *policy_category*, consulte a exibição do sistema syspolicy_policy_categories.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

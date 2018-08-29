@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_column_privileges_ex
 ms.assetid: 98cb6e58-4007-40fc-b048-449fb2e7e6be
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 36e3f3c95614fda36c12309c1252b76cdc2da208
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: fd437b794b803af4a083c43f440aa4bd26a7a494
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238836"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038069"
 ---
 # <a name="spcolumnprivilegesex-transact-sql"></a>sp_column_privileges_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,33 +49,33 @@ sp_column_privileges_ex [ @table_server = ] 'table_server'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@table_server =** ] **'***table_server***'**  
- É o nome do servidor vinculado para o qual as informações devem ser retornadas. *table_server* é **sysname**, sem padrão.  
+ É o nome do servidor vinculado para o qual as informações devem ser retornadas. *table_server* está **sysname**, sem padrão.  
   
  [  **@table_name =** ] **'***table_name***'**  
- É o nome da tabela que contém a coluna especificada. *table_name* é **sysname**, com um padrão NULL.  
+ É o nome da tabela que contém a coluna especificada. *table_name* está **sysname**, com um padrão NULL.  
   
  [  **@table_schema =** ] **'***table_schema***'**  
- É o esquema de tabela. *table_schema* é **sysname**, com um padrão NULL.  
+ É o esquema de tabela. *table_schema* está **sysname**, com um padrão NULL.  
   
  [  **@table_catalog =** ] **'***table_catalog***'**  
- É o nome do banco de dados em que o especificado *table_name* reside. *table_catalog* é **sysname**, com um padrão NULL.  
+ É o nome do banco de dados em que a especificada *table_name* reside. *table_catalog* está **sysname**, com um padrão NULL.  
   
  [  **@column_name =** ] **'***column_name***'**  
- É o nome da coluna para a qual fornecer informações de privilégio. *nome da coluna* é **sysname**, com um padrão de NULL (tudo comum).  
+ É o nome da coluna para a qual fornecer informações de privilégio. *column_name* está **sysname**, com um padrão de NULL (tudo comum).  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  A tabela a seguir mostra as colunas do conjunto de resultados. Os resultados retornados são ordenados por **TABLE_QUALIFIER**, **TABLE_OWNER**, **TABLE_NAME**, **COLUMN_NAME**, e  **PRIVILÉGIO**.  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|Nome do qualificador de tabela. Vários produtos DBMS dão suporte à nomenclatura de três partes para tabelas (*qualificador ***.*** proprietário ***.*** nome*). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna representa o nome do banco de dados. Em alguns produtos, representa o nome do servidor do ambiente de banco de dados da tabela. Esse campo pode ser NULL.|  
-|**TABLE_SCHEM**|**sysname**|Nome do proprietário de tabela. Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta coluna representa o nome do usuário de banco de dados que criou a tabela. Esse campo sempre retorna um valor.|  
+|**TABLE_CAT**|**sysname**|Nome do qualificador de tabela. Vários produtos DBMS dão suporte à nomenclatura de três partes para tabelas (*qualificador ***.*** proprietário ***.*** nome*). No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna representa o nome do banco de dados. Em alguns produtos, ele representa o nome do servidor do ambiente de banco de dados da tabela. Esse campo pode ser NULL.|  
+|**TABLE_SCHEM**|**sysname**|Nome do proprietário de tabela. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta coluna representa o nome do usuário de banco de dados que criou a tabela. Esse campo sempre retorna um valor.|  
 |**TABLE_NAME**|**sysname**|Nome da tabela. Esse campo sempre retorna um valor.|  
 |**COLUMN_NAME**|**sysname**|Nome da coluna para cada coluna do **TABLE_NAME** retornado. Esse campo sempre retorna um valor.|  
-|**CONCESSOR**|**sysname**|Nome de usuário de banco de dados que concedeu permissões neste **COLUMN_NAME** para listado **usuário autorizado**. Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna é sempre o mesmo que o **TABLE_OWNER**. Esse campo sempre retorna um valor.<br /><br /> O **CONCESSOR** coluna pode ser o proprietário do banco de dados (**TABLE_OWNER**) ou alguém para quem o proprietário do banco de dados concedeu permissões usando a cláusula WITH GRANT OPTION na instrução GRANT.|  
+|**CONCESSOR**|**sysname**|Nome de usuário de banco de dados que concedeu permissões neste **COLUMN_NAME** para listado **usuário autorizado**. Na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna é sempre igual a **TABLE_OWNER**. Esse campo sempre retorna um valor.<br /><br /> O **CONCESSOR** coluna pode ser o proprietário do banco de dados (**TABLE_OWNER**) ou alguém para quem o proprietário do banco de dados concedeu permissões usando a cláusula WITH GRANT OPTION na instrução GRANT.|  
 |**USUÁRIO AUTORIZADO**|**sysname**|Nome de usuário de banco de dados que concedeu permissões neste **COLUMN_NAME** por listado **CONCESSOR**. Esse campo sempre retorna um valor.|  
-|**PRIVILÉGIO**|**varchar(** 32 **)**|Uma das permissões de coluna disponíveis. As permissões de coluna podem ter um dos seguintes valores (ou outros valores que tenham suporte na fonte de dados quando a implementação é definida):<br /><br /> Selecione = **usuário autorizado** pode recuperar dados para as colunas.<br /><br /> INSERT = **usuário autorizado** pode fornecer dados para esta coluna quando novas linhas são inseridas (pelo **usuário autorizado**) na tabela.<br /><br /> UPDATE = **usuário autorizado** pode modificar dados existentes na coluna.<br /><br /> REFERÊNCIAS = **usuário autorizado** pode fazer referência a uma coluna em uma tabela estrangeira em uma relação de chave estrangeira/de chave primária. As relações de chave primária/chave estrangeira são definidas com restrições de tabela.|  
-|**IS_GRANTABLE**|**varchar (** 3 **)**|Indica se o **usuário autorizado** tem permissão para conceder permissões a outros usuários (também conhecidos como permissão "concessão com concessão"). Pode ser YES, NO ou NULL. Um desconhecido ou NULL, o valor refere-se a uma fonte de dados onde "concessão com concessão" não é aplicável.|  
+|**PRIVILÉGIO**|**varchar(** 32 **)**|Uma das permissões de coluna disponíveis. As permissões de coluna podem ter um dos seguintes valores (ou outros valores que tenham suporte na fonte de dados quando a implementação é definida):<br /><br /> Selecione = **ao usuário autorizado** pode recuperar dados para as colunas.<br /><br /> INSERT = **ao usuário autorizado** pode fornecer dados para esta coluna quando novas linhas são inseridas (pelo **usuário autorizado**) na tabela.<br /><br /> UPDATE = **ao usuário autorizado** pode modificar dados existentes na coluna.<br /><br /> REFERÊNCIAS = **ao usuário autorizado** pode fazer referência a uma coluna em uma tabela estrangeira em uma relação de chave estrangeira/chave primária. As relações de chave primária/chave estrangeira são definidas com restrições de tabela.|  
+|**IS_GRANTABLE**|**varchar (** 3 **)**|Indica se o **ao usuário autorizado** tem permissão para conceder permissões a outros usuários (também conhecidos como permissão "concessão com concessão"). Pode ser YES, NO ou NULL. Um desconhecido ou NULL, o valor se refere a uma fonte de dados em que "concessão com concessão" não é aplicável.|  
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão SELECT no esquema.  

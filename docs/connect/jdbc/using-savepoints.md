@@ -14,18 +14,18 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 125c15caac95f152c6f5009b1a794bd0fb625a2c
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
-ms.translationtype: HT
+ms.openlocfilehash: 9b2eb246686e69c6c890b069b400662515dc71cd
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661858"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785240"
 ---
 # <a name="using-savepoints"></a>Usando pontos de salvamento
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Os pontos de salvamento oferecem um mecanismo para reverter partes de transações. Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], você pode criar um ponto de salvamento usando a instrução savepoint_name SAVE TRANSACTION. Posteriormente, você executa uma instrução ROLLBACK TRANSACTION nome_do_ponto_de_salvamento para reverter ao ponto de salvamento em vez de reverter ao início da transação.
+Os pontos de salvamento oferecem um mecanismo para reverter partes de transações. Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você pode criar um ponto de salvamento usando a instrução savepoint_name SAVE TRANSACTION. Posteriormente, você executa uma instrução ROLLBACK TRANSACTION nome_do_ponto_de_salvamento para reverter ao ponto de salvamento em vez de reverter ao início da transação.
 
 Os pontos de salvamento são úteis em situações onde erros são improváveis. O uso de um ponto de salvamento para reverter parte de uma transação na ocorrência de um erro não frequente pode ser mais eficiente do que testar cada transação para verificar se uma atualização é válida antes de fazer a atualização. As atualizações e reversões são operações caras, portanto, pontos de salvamento só serão eficientes se a probabilidade de encontrar o erro for baixa e o custo de verificar a validade de uma atualização com antecedência for relativamente alto.
 

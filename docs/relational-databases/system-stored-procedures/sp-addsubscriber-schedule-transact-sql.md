@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addsubscriber_schedule
 ms.assetid: a6225033-5c3b-452f-ae52-79890a3590ed
-caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2c5d170d9060f232f2dbf6f5761a3c5ea51495fb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 47f15ca86c8b0a8059ff42daa6c0cb5a806a037d
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32991573"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43035526"
 ---
 # <a name="spaddsubscriberschedule-transact-sql"></a>sp_addsubscriber_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,20 +57,20 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@subscriber =** ] **'***assinante***'**  
- É o nome do Assinante. *assinante* é **sysname**. O nome do Assinante deve ser exclusivo no banco de dados, não deve existir e não deve ser NULL.  
+ É o nome do Assinante. *assinante* está **sysname**. O nome do Assinante deve ser exclusivo no banco de dados, não deve existir e não deve ser NULL.  
   
  [  **@agent_type =** ] *agent_type*  
- É o tipo de agente. *agent_type* é **smallint**, e pode ser um destes valores.  
+ É o tipo de agente. *agent_type* está **smallint**, e pode ser um destes valores.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**0** (padrão)|Agente de Distribuição|  
-|**1**|Agente de Mesclagem|  
+|**1**|Merge Agent|  
   
  [  **@frequency_type =** ] *frequency_type*  
- É a frequência de agendamento do Agente de Distribuição. *frequency_type* é **int**, e pode ser um destes valores.  
+ É a frequência de agendamento do Agente de Distribuição. *frequency_type* está **int**, e pode ser um destes valores.  
   
-|Value|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**1**|Uma vez|  
 |**2**|Sob Demanda|  
@@ -83,12 +82,12 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 |**128**|Recorrente|  
   
  [  **@frequency_interval =** ] *frequency_interval*  
- É o valor a ser aplicado à frequência definida *frequency_type*. *frequency_interval* é **int**, com um padrão de **1**.  
+ É o valor a ser aplicado à frequência definida *frequency_type*. *frequency_interval* está **int**, com um padrão de **1**.  
   
  [  **@frequency_relative_interval =** ] *frequency_relative_interval*  
- É a data do Distribution Agent. Esse parâmetro é usado quando *frequency_type* é definido como **32** (mensal relativo). *frequency_relative_interval* é **int**, e pode ser um destes valores.  
+ É a data do Distribution Agent. Esse parâmetro é usado quando *frequency_type* é definido como **32** (mensal relativo). *frequency_relative_interval* está **int**, e pode ser um destes valores.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**1** (padrão)|First|  
 |**2**|Segundo|  
@@ -97,12 +96,12 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 |**16**|Last|  
   
  [  **@frequency_recurrence_factor =** ] *frequency_recurrence_factor*  
- É o fator de recorrência usado por *frequency_type*. *frequency_recurrence_factor* é **int**, com um padrão de **0**.  
+ É o fator de recorrência usado pelo *frequency_type*. *frequency_recurrence_factor* está **int**, com um padrão de **0**.  
   
  [  **@frequency_subday =** ] *frequency_subday*  
- É a frequência de reagendamento durante o período definido. *frequency_subday* é **int**, e pode ser um destes valores.  
+ É a frequência de reagendamento durante o período definido. *frequency_subday* está **int**, e pode ser um destes valores.  
   
-|Value|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**1**|Uma vez|  
 |**2**|Segundo|  
@@ -110,25 +109,25 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 |**8**|Hora|  
   
  [  **@frequency_subday_interval =** ] *frequency_subday_interval*  
- É o intervalo de *frequency_subday*. *frequency_subday_interval* é **int**, com um padrão de **5**.  
+ É o intervalo de *frequency_subday*. *frequency_subday_interval* está **int**, com um padrão de **5**.  
   
  [  **@active_start_time_of_day =** ] *active_start_time_of_day*  
- É a hora do dia do primeiro agendamento do Agente de Distribuição, formatada como HHMMSS. *active_start_time_of_day* é **int**, com um padrão de **0**.  
+ É a hora do dia do primeiro agendamento do Agente de Distribuição, formatada como HHMMSS. *active_start_time_of_day* está **int**, com um padrão de **0**.  
   
  [  **@active_end_time_of_day =** ] *active_end_time_of_day*  
- É a hora do dia do último agendamento do Agente de Distribuição, formatada como HHMMSS. *active_end_time_of_day*é **int**, com um padrão de 235959, o que significa 11:59:59 P.M. medida em um relógio de 24 horas.  
+ É a hora do dia do último agendamento do Agente de Distribuição, formatada como HHMMSS. *active_end_time_of_day*está **int**, com um padrão de 235959, que significa que 11:59:59 P.M. medida em um relógio de 24 horas.  
   
  [  **@active_start_date =** ] *active_start_date*  
- É a data do primeiro agendamento do Agente de Distribuição, formatada como AAAAMMDD. *active_start_date* é **int**, com um padrão de **0**.  
+ É a data do primeiro agendamento do Agente de Distribuição, formatada como AAAAMMDD. *active_start_date* está **int**, com um padrão de **0**.  
   
  [  **@active_end_date =** ] *active_end_date*  
- É a data do último agendamento do Agente de Distribuição, formatada como AAAAMMDD. *active_end_date* é **int**, com um padrão de 99991231, que significa 31 de dezembro de 9999.  
+ É a data do último agendamento do Agente de Distribuição, formatada como AAAAMMDD. *active_end_date* está **int**, com um padrão de 99991231, que significa 31 de dezembro de 9999.  
   
- [  **@publisher =** ] **'***publicador***'**  
- Especifica um não[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *publicador* é **sysname**, com um padrão NULL.  
+ [  **@publisher =** ] **'***publisher***'**  
+ Especifica um não[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
->  *publicador* não deve ser especificado para um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
+>  *Publisher* não deve ser especificado para um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -137,7 +136,7 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
  **sp_addsubscriber_schedule** é usado em replicação de instantâneo, replicação transacional e replicação de mesclagem.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** pode executar a função de servidor fixa **sp_addsubscriber_schedule**.  
+ Somente os membros dos **sysadmin** pode executar a função de servidor fixa **sp_subscriber_schedule**.  
   
 ## <a name="see-also"></a>Consulte também  
  [sp_changesubscriber_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-schedule-transact-sql.md)   

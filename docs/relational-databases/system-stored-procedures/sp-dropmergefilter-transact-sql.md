@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_dropmergefilter
 ms.assetid: 798586d7-05f3-4a5e-bea8-a34b7b52d0fd
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e44ef9e0fe6dec28143a1d017da37732491d4441
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 72df83ad770e380136a954f6f8abaf9726bee650
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32990061"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036078"
 ---
 # <a name="spdropmergefilter-transact-sql"></a>sp_dropmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,27 +48,27 @@ sp_dropmergefilter [ @publication= ] 'publication', [ @article= ] 'article'     
   
 ## <a name="arguments"></a>Argumentos  
  [  **@publication=**] **'***publicação***'**  
- É o nome da publicação. *publicação* é **sysname**, sem padrão.  
+ É o nome da publicação. *publicação* está **sysname**, sem padrão.  
   
  [  **@article=**] **'***artigo***'**  
- É o nome do artigo. *artigo* é **sysname**, sem padrão.  
+ É o nome do artigo. *artigo* está **sysname**, sem padrão.  
   
  [  **@filtername=**] **'***filtername***'**  
- É o nome do filtro a ser removido. *FilterName* é **sysname**, sem padrão.  
+ É o nome do filtro a ser removido. *FilterName* está **sysname**, sem padrão.  
   
  [  **@force_invalidate_snapshot=** ] *force_invalidate_snapshot*  
  Habilita ou desabilita a capacidade de ter um instantâneo invalidado. *force_invalidate_snapshot* é um **bit**, com um padrão **0**.  
   
  **0** Especifica que as alterações no artigo de mesclagem fazem com que o instantâneo seja inválido.  
   
- **1** significa que as alterações no artigo de mesclagem pode invalidar o instantâneo seja inválido. Se esse for o caso, um valor de **1** dá permissão para a ocorrência do novo instantâneo.  
+ **1** significa que as alterações no artigo de mesclagem pode invalidar o instantâneo ser inválido. Se esse for o caso, um valor de **1** dá permissão para a ocorrência do novo instantâneo.  
   
  [ **@force_reinit_subscription**=] *force_reinit_subscription*  
  Habilita ou desabilita a capacidade de marcar uma assinatura como não válida. *force_reinit_subscription* é um **bit**, com um padrão **0**.  
   
- **0** Especifica que as alterações no filtro de artigo de mesclagem fazem com que as assinaturas inválido.  
+ **0** Especifica que as alterações no filtro de artigo de mesclagem não invalidam as assinaturas sejam inválidos.  
   
- **1** significa que as alterações para o filtro de artigo de mesclagem faz com que as assinaturas inválido.  
+ **1** significa que as alterações para o filtro de artigo de mesclagem faz com que as assinaturas sejam inválidos.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -77,7 +77,7 @@ sp_dropmergefilter [ @publication= ] 'publication', [ @article= ] 'article'     
  **sp_dropmergefilter** é usado em replicação de mesclagem.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função de servidor fixa ou **db_owner** pode executar a função de banco de dados fixa **sp_dropmergefilter**.  
+ Somente os membros dos **sysadmin** função de servidor fixa ou o **db_owner** banco de dados fixa podem executar **sp_dropmergefilter**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Alterar propriedades da publicação e do artigo](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   

@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_syspolicy_set_log_on_success
 ms.assetid: 6b33383b-5949-488a-a911-59299a270f46
-caps.latest.revision: 8
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: f4a5673eaea6d0bd77467274641b0c5dd10a55aa
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 3a24dbe06ef91bb46b5fb81dbd3cc59709a767e8
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255266"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025057"
 ---
 # <a name="spsyspolicysetlogonsuccess-transact-sql"></a>sp_syspolicy_set_log_on_success (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ sp_syspolicy_set_log_on_success [ @value = ] value
   
 ## <a name="arguments"></a>Argumentos  
  [  **@value=** ] *valor*  
- Determina se as avaliações de política com êxito serão registradas em log. *valor* é **sqlvariant**, e pode ser um dos seguintes valores:  
+ Determina se as avaliações de política com êxito serão registradas em log. *valor* está **sqlvariant**, e pode ser um dos seguintes valores:  
   
 -   0 ou 'false' = As avaliações de política com êxito não são registradas em log.  
   
@@ -58,12 +57,12 @@ sp_syspolicy_set_log_on_success [ @value = ] value
 ## <a name="remarks"></a>Remarks  
  Você deve executar sp_syspolicy_set_log_on_success no contexto do banco de dados de sistema msdb.  
   
- Quando *valor* é definido como 0 ou 'falso', somente falha serão registradas as avaliações de política.  
+ Quando *valor* for definido como 0 ou 'false', somente falha serão registradas as avaliações de política.  
   
 ## <a name="permissions"></a>Permissões  
  Requer a associação à função de banco de dados fixa PolicyAdministratorRole.  
   
-> **IMPORTANTE:** Possível elevação de credenciais: os usuários na função PolicyAdministratorRole podem criar gatilhos de servidor e agendar execuções de políticas que possam afetar a operação da instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Por exemplo, os usuários da função PolicyAdministratorRole podem criar uma política que impeça a criação da maioria dos objetos no [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Devido a essa possível elevação de credenciais, a função PolicyAdministratorRole deve ser concedida somente a usuários que sejam confiáveis com controle da configuração do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+> **IMPORTANTE:** Possível elevação de credenciais: os usuários na função PolicyAdministratorRole podem criar gatilhos de servidor e agendar execuções de políticas que possam afetar a operação da instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Por exemplo, os usuários da função PolicyAdministratorRole podem criar uma política que impeça a criação da maioria dos objetos no [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Devido a essa possível elevação de credenciais, a função PolicyAdministratorRole deve ser concedida somente para usuários que sejam confiáveis no controle da configuração do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir habilita o log de avaliações de política com êxito.  

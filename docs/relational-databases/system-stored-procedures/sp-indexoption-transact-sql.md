@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_indexoption
 ms.assetid: 75f836be-d322-4a53-a45d-25bee6b42a52
 caps.latest.revision: 43
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6bc44ee2cbce8c96b314172a2bb856a9c3346e2a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 07e18340d595a133311a05fc1a788aee92233053
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260722"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036413"
 ---
 # <a name="spindexoption-transact-sql"></a>sp_indexoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,12 +52,12 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@IndexNamePattern=**] **'***table_or_index_name***'**  
- É o nome qualificado ou não qualificado de uma tabela ou índice definido pelo usuário. *table_or_index_name* é **nvarchar(1035)**, sem padrão. As aspas são necessárias somente se um nome de índice ou tabela qualificado for especificado. Se um nome de tabela totalmente qualificado, incluindo um nome de banco de dados, for fornecido, o nome de banco de dados deve ser o nome do banco de dados atual. Se um nome de tabela for especificado sem-índice, o valor de opção especificado será definido para todos os índices nessa tabela e para a própria tabela se não houver um índice clusterizado.  
+ É o nome qualificado ou não qualificado de uma tabela ou índice definido pelo usuário. *table_or_index_name* está **nvarchar(1035)**, sem padrão. As aspas são necessárias somente se um nome de índice ou tabela qualificado for especificado. Se um nome de tabela totalmente qualificado, incluindo um nome de banco de dados, for fornecido, o nome de banco de dados deve ser o nome do banco de dados atual. Se um nome de tabela for especificado sem-índice, o valor de opção especificado será definido para todos os índices nessa tabela e para a própria tabela se não houver um índice clusterizado.  
   
  [  **@OptionName =**] **'***option_name***'**  
- É um nome de opção de índice. *option_name* é **varchar (35)**, sem padrão. *option_name* pode ter um dos valores a seguir.  
+ É um nome de opção de índice. *option_name* está **varchar(35)**, sem padrão. *option_name* pode ter um dos valores a seguir.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**AllowRowLocks**|No caso de TRUE, são permitidos bloqueios de linha ao acessar o índice. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando os bloqueios de linha são usados. No caso de FALSE, não são usados bloqueios de linha. O padrão é TRUE.|  
 |**AllowPageLocks**|No caso de TRUE, são permitidos bloqueios de página ao acessar o índice. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando os bloqueios de página são usados. No caso de FALSE, não são usados bloqueios de página. O padrão é TRUE.|  
@@ -65,7 +65,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 |**DisAllowPageLocks**|No caso de TRUE, não são usados bloqueios de página. No caso de FALSE, são permitidos bloqueios de página ao acessar o índice. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina quando os bloqueios de página são usados.|  
   
  [  **@OptionValue =**] **'***valor***'**  
- Especifica se o *option_name* configuração estiver habilitada (TRUE, ON, Sim ou 1) ou desabilitado (FALSE, OFF, não ou 0). *valor* é **varchar(12)**, sem padrão.  
+ Especifica se o *option_name* configuração está habilitada (TRUE, ON, Sim ou 1) ou desabilitado (FALSE, OFF, não ou 0). *valor* está **varchar(12)**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou superior a 0 (falha)  
@@ -73,7 +73,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ## <a name="remarks"></a>Remarks  
  Não é oferecido suporte a índices XML. Se um índice XML for especificado, ou um nome de tabela for especificado sem nome de índice e a tabela tiver um índice XML, haverá falha na instrução. Para definir essas opções, use [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) em vez disso.  
   
- Para exibir a linha atual e a página de propriedades de bloqueio, use [INDEXPROPERTY](../../t-sql/functions/indexproperty-transact-sql.md) ou [sys. Indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) exibição do catálogo.  
+ Para exibir a linha atual e a página de propriedades de bloqueio, use [INDEXPROPERTY](../../t-sql/functions/indexproperty-transact-sql.md) ou o [sys. Indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) exibição do catálogo.  
   
 -   Linha, página e bloqueios de nível de tabela são permitidos ao acessar o índice quando **AllowRowLocks** = TRUE ou **DisAllowRowLocks** = FALSE, e **AllowPageLocks** = TRUE ou  **DisAllowPageLocks** = FALSE. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] escolhe o bloqueio apropriado e pode escalar o bloqueio de uma linha ou página para um bloqueio de tabela.  
   
@@ -85,7 +85,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
   
 -   Quando **AllowPageLocks** opção é definida como TRUE ou **DisAllowPageLocks** é definido como FALSE, a configuração é aplicada ao heap e quaisquer índices não clusterizados associados.  
   
--   Quando **AllowPageLocks** opção for definida como FALSE ou **DisAllowPageLocks** é definida como TRUE, a configuração será totalmente aplicada os índices não clusterizados. Ou seja, nenhum bloqueio de página é permitido nos índices não clusterizados. No heap, somente os bloqueios compartilhados (S, shared), de atualização (U, update) e exclusivos (X, exclusive) de página não são permitidos. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] ainda pode adquirir um bloqueio de página intencional (IS, IU ou IX) para fins internos.  
+-   Quando **AllowPageLocks** opção for definida como FALSE ou **DisAllowPageLocks** é definido como TRUE, a configuração será totalmente aplicada os índices não clusterizados. Ou seja, nenhum bloqueio de página é permitido nos índices não clusterizados. No heap, somente os bloqueios compartilhados (S, shared), de atualização (U, update) e exclusivos (X, exclusive) de página não são permitidos. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] ainda pode adquirir um bloqueio de página intencional (IS, IU ou IX) para fins internos.  
   
 ## <a name="permissions"></a>Permissões  
  Exige a permissão ALTER na tabela.  
@@ -125,7 +125,7 @@ GO
 ```  
   
 ### <a name="c-setting-an-option-on-a-table-with-no-clustered-index"></a>C. Definindo uma opção em uma tabela sem índice clusterizado  
- O exemplo a seguir não permite bloqueios de página em uma tabela sem índice clusterizado (um heap). O `sys.indexes` exibição do catálogo é consultada antes e após o `sp_indexoption` procedimento é executado para mostrar os resultados da instrução.  
+ O exemplo a seguir não permite bloqueios de página em uma tabela sem índice clusterizado (um heap). O `sys.indexes` exibição de catálogo é consultada antes e depois o `sp_indexoption` procedimento é executado para mostrar os resultados da instrução.  
   
 ```sql  
 USE AdventureWorks2012;  

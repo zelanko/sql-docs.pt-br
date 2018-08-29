@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_scriptpublicationcustomprocs
 ms.assetid: b06102d5-4284-4834-b126-bc0baea49be5
 caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7e3cad96acad0e5e08d92a70cd795a6022be26f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 15c841becf856af68e37273349cdb7b3fe578fdf
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32997393"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026855"
 ---
 # <a name="spscriptpublicationcustomprocs-transact-sql"></a>sp_scriptpublicationcustomprocs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,18 +46,18 @@ sp_scriptpublicationcustomprocs [ @publication = ] 'publication_name'
   
 ## <a name="arguments"></a>Argumentos  
  [ **@publication**=] **'***publication_name***'**  
- É o nome da publicação. *publication_name* é **sysname** sem nenhum padrão.  
+ É o nome da publicação. *publication_name* está **sysname** sem nenhum padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Retorna um conjunto de resultados que consiste em um único **nvarchar (4000)** coluna. O conjunto de resultados forma a instrução completa CREATE PROCEDURE necessária para criar o procedimento armazenado personalizado.  
+ Retorna um conjunto de resultados que consiste em uma única **nvarchar (4000)** coluna. O conjunto de resultados forma a instrução completa CREATE PROCEDURE necessária para criar o procedimento armazenado personalizado.  
   
 ## <a name="remarks"></a>Remarks  
  Não são gerados scripts de procedimentos personalizados para artigos sem a opção de geração automática de esquema de procedimento personalizado (0x2).  
   
- Os procedimentos a seguir são usados pelo **sp_scriptpublicationcustomprocs** para criar procedimentos no assinante e não devem ser executados diretamente:  
+ Os procedimentos a seguir são usados pelo **sp_scriptpublicationcustomprocs** para criar procedimentos no assinante e não deve ser executado diretamente:  
   
  **sp_script_reconciliation_delproc**  
   
@@ -84,7 +84,7 @@ sp_scriptpublicationcustomprocs [ @publication = ] 'publication_name'
  **sp_scriptxupdproc**  
   
 ## <a name="permissions"></a>Permissões  
- Execute a permissão é concedida a **pública**; uma verificação de segurança procedural é executada dentro do procedimento armazenado para restringir o acesso a membros do **sysadmin** função de servidor fixa e **DB _ proprietário** função de banco de dados fixa no banco de dados atual.  
+ Executar permissão é concedida a **pública**; uma verificação de segurança procedural é executada dentro do procedimento armazenado para restringir o acesso a membros da **sysadmin** função de servidor fixa e **DB _ proprietário** função de banco de dados fixa no banco de dados atual.  
   
 ## <a name="see-also"></a>Consulte também  
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

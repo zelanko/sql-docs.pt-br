@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_log_shipping_primary_database
 ms.assetid: cb1d5d00-2805-4d47-bd04-545232067345
-caps.latest.revision: 22
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 76a1b1ac129d33866984eb7a0f428149e4e299a2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 302cdeb85ad475354d26a988580283db57415a40
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258711"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023572"
 ---
 # <a name="spdeletelogshippingprimarydatabase-transact-sql"></a>sp_delete_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,20 +45,20 @@ sp_delete_log_shipping_primary_database
   
 ## <a name="arguments"></a>Argumentos  
  [  **@database =** ] '*banco de dados*'  
- É o nome do banco de dados primário de envio de logs. *banco de dados* é **sysname**, sem padrão, e não pode ser NULL.  
+ É o nome do banco de dados primário de envio de logs. *banco de dados* está **sysname**, sem padrão, e não pode ser NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma.  
+ Nenhum.  
   
 ## <a name="remarks"></a>Remarks  
  **sp_delete_log_shipping_primary_database** deve ser executado a partir de **mestre** banco de dados no servidor primário. Esse procedimento armazenado faz o seguinte:  
   
 1.  Exclui o trabalho de backup do banco de dados primário especificado.  
   
-2.  Remove o registro de monitor local em **log_shipping_monitor_primary** no servidor primário.  
+2.  Remove o registro de monitor local na **log_shipping_monitor_primary** no servidor primário.  
   
 3.  Remove entradas correspondentes em **log_shipping_monitor_history_detail** e **log_shipping_monitor_error_detail**.  
   
@@ -67,12 +66,12 @@ sp_delete_log_shipping_primary_database
   
 5.  Remove entradas correspondentes em **log_shipping_monitor_history_detail** e **log_shipping_monitor_error_detail** no servidor monitor.  
   
-6.  Remove a entrada em **log_shipping_primary_databases** para este banco de dados primário.  
+6.  Remove a entrada em **log_shipping_primary_databases** para esse banco de dados primário.  
   
 7.  Chamadas **sp_delete_log_shipping_alert_job** no servidor monitor.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função fixa de servidor pode executar esse procedimento.  
+ Somente os membros dos **sysadmin** função de servidor fixa pode executar esse procedimento.  
   
 ## <a name="examples"></a>Exemplos  
  Este exemplo ilustra o uso **sp_delete_log_shipping_primary_database** para excluir o banco de dados primário **AdventureWorks2012**.  
@@ -83,7 +82,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Sobre o envio de logs & #40; SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

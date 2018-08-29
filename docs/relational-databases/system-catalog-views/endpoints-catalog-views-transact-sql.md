@@ -1,5 +1,5 @@
 ---
-title: (Transact-SQL) de exibições do catálogo de pontos de extremidade | Microsoft Docs
+title: Catálogo de pontos de extremidade de exibições (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -16,16 +16,15 @@ helpviewer_keywords:
 - endpoints [SQL Server], catalog views
 - catalog views [SQL Server], endpoints
 ms.assetid: 557bc2f2-135c-4e96-be5a-dfbdfd2ec932
-caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1b644285d73113c385738655e0b6607e065360de
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2bb594ecec2940ec8c42841fc7b76632c497fa36
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33177619"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037857"
 ---
 # <a name="endpoints-catalog-views-transact-sql"></a>exibições do catálogo de pontos de extremidade (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

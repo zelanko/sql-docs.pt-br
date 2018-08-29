@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_control_dbmasterkey_password
 ms.assetid: 63979a87-42a2-446e-8e43-30481faaf3ca
-caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a9894a10965affbd65406276445f6c84f05ce76e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 6a468fc35805dc51bd76a51021fab82f66c8fc25
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239226"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037529"
 ---
 # <a name="spcontroldbmasterkeypassword-transact-sql"></a>sp_control_dbmasterkey_password (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,16 +45,16 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
   
 ## <a name="arguments"></a>Argumentos  
  @db_name= N'*database_name*'  
- Especifica o nome do banco de dados associado a essa credencial. Não pode ser um banco de dados do sistema. *Database_Name* é **nvarchar**.  
+ Especifica o nome do banco de dados associado a essa credencial. Não pode ser um banco de dados do sistema. *Database_Name* está **nvarchar**.  
   
  @password= N'*senha*'  
- Especifica a senha da chave mestra. *senha* é **nvarchar**.  
+ Especifica a senha da chave mestra. *senha* está **nvarchar**.  
   
  @action= N'add'  
- Especifica que uma credencial para o banco de dados especificado será adicionada ao armazenamento de credenciais. A credencial conterá a senha da chave mestra de banco de dados. O valor passado para @action é **nvarchar**.  
+ Especifica que uma credencial para o banco de dados especificado será adicionada ao armazenamento de credenciais. A credencial conterá a senha da chave mestra de banco de dados. O valor passado para @action está **nvarchar**.  
   
  @action= N'drop'  
- Especifica que uma credencial para o banco de dados especificado será descartada do armazenamento de credenciais. O valor passado para @action é **nvarchar**.  
+ Especifica que uma credencial para o banco de dados especificado será descartada do armazenamento de credenciais. O valor passado para @action está **nvarchar**.  
   
 ## <a name="remarks"></a>Remarks  
  Quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precisa de uma chave mestra de banco de dados para descriptografar ou criptografar uma chave, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta descriptografar a chave mestra de serviço da instância. Se a descriptografia falhar, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pesquisará o repositório de credenciais em busca das credenciais de chave mestra que têm o mesmo GUID de família do banco de dados cuja chave mestra é necessária. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta descriptografar a chave mestra de banco de dados com cada credencial compatível até que a descriptografia obtenha êxito ou não haja mais credenciais.  
@@ -63,7 +62,7 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
 > [!CAUTION]  
 >  Não habilite a descriptografia de failover de um banco de dados que deva permanecer inacessível o sa e outros principais de servidor altamente privilegiados. É possível configurar um banco de dados de forma que sua hierarquia fundamental não possa ser descriptografada pela chave mestra de serviço. Essa opção tem suporte como uma defesa para bancos de dados contendo informações criptografadas que não devem estar acessíveis ao sa ou outros principais de servidor altamente privilegiados. A criação de uma credencial de chave mestra para esse banco de dados remove a defesa, permitindo que o sa e outros principais de servidor altamente privilegiados descriptografem o banco de dados.  
   
- As credenciais criadas pelo uso de sp_control_dbmasterkey_password são visíveis no [master_key_passwords](../../relational-databases/system-catalog-views/sys-master-key-passwords-transact-sql.md) exibição do catálogo. Os nomes das credenciais que são criadas para chaves mestras de banco de dados têm o seguinte formato: `##DBMKEY_<database_family_guid>_<random_password_guid>##`. A senha é armazenada como o segredo de credencial. Para cada senha adicionada ao repositório de credenciais há uma linha em sys.credentials.  
+ As credenciais que são criadas pelo uso de sp_control_dbmasterkey_password são visíveis na [master_key_passwords](../../relational-databases/system-catalog-views/sys-master-key-passwords-transact-sql.md) exibição do catálogo. Os nomes das credenciais que são criadas para chaves mestras de banco de dados têm o seguinte formato: `##DBMKEY_<database_family_guid>_<random_password_guid>##`. A senha é armazenada como o segredo de credencial. Para cada senha adicionada ao repositório de credenciais há uma linha em sys.credentials.  
   
  Não é possível usar sp_control_dbmasterkey_password ao criar uma credencial para os seguintes bancos de dados do sistema: mestre, modelo, msdbou tempdb.  
   
@@ -79,7 +78,7 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
 > [!NOTE]  
 >  Quando você estiver usando a credencial que foi adicionada com o uso de sp_control_dbmasterkey_password para abrir a chave mestra do banco de dados, essa chave será criptografada novamente pela chave mestra de serviço. Se o banco de dados estiver no modo somente leitura, a operação de nova criptografia falhará e a chave mestra de banco de dados permanecerá não criptografada. Para o acesso subsequente à chave mestra de banco de dados, você deve usar a instrução OPEN MASTER KEY e uma senha. Para evitar o uso de uma senha, crie a credencial antes de mover o banco de dados para o modo somente leitura.  
   
- **Possível problema de compatibilidade com versões anteriores:** no momento, o procedimento armazenado não verifica se existe uma chave mestra. Isso é permitido para compatibilidade com versões anteriores, mas exibe um aviso. Este comportamento é preterido. Em uma versão futura, a chave mestra deve existir e a senha usada no procedimento armazenado **sp_control_dbmasterkey_password** deve ser a mesma senha usada para criptografar a chave mestra de banco de dados.  
+ **Possível problema de compatibilidade com versões anteriores:** no momento, o procedimento armazenado não verifica se existe uma chave mestra. Isso é permitido para compatibilidade com versões anteriores, mas exibe um aviso. Este comportamento é preterido. Em uma versão futura, a chave mestra deve existir e a senha usada no procedimento armazenado **sp_control_dbmasterkey_password** deve ser a mesma senha como uma das senhas usadas para criptografar a chave mestra de banco de dados.  
   
 ## <a name="permissions"></a>Permissões  
  Exige a permissão CONTROL no banco de dados.  
@@ -87,7 +86,7 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-creating-a-credential-for-the-adventureworks2012-master-key"></a>A. Criando uma credencial para a chave mestra AdventureWorks2012  
- O exemplo a seguir cria uma credencial para a chave mestra de banco de dados `AdventureWorks2012` e salva a senha de chave mestra como segredo na credencial. Como todos os parâmetros que são passados para `sp_control_dbmasterkey_password` devem ser do tipo de dados **nvarchar**, as cadeias de caracteres de texto são convertidas com o operador de conversão `N`.  
+ O exemplo a seguir cria uma credencial para a chave mestra de banco de dados `AdventureWorks2012` e salva a senha de chave mestra como segredo na credencial. Porque todos os parâmetros que são passados para `sp_control_dbmasterkey_password` deve ser do tipo de dados **nvarchar**, as cadeias de caracteres de texto são convertidas com o operador de conversão `N`.  
   
 ```  
 EXEC sp_control_dbmasterkey_password @db_name = N'AdventureWorks2012',   

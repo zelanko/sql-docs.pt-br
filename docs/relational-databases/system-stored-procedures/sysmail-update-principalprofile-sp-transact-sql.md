@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sysmail_update_principalprofile_sp
 ms.assetid: 9fe96e9a-4758-4e4a-baee-3e1217c4426c
 caps.latest.revision: 46
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a86fc4775ee1096d72451ace855bb19a1094c3c5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e4e6a55660f3b5a4acc17147de269271fd2c2b1f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260569"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022764"
 ---
 # <a name="sysmailupdateprincipalprofilesp-transact-sql"></a>sysmail_update_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,42 +47,42 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
   
 ## <a name="arguments"></a>Argumentos  
  [ **@principal_id** = ] *principal_id*  
- A ID do usuário de banco de dados ou da função no **msdb** banco de dados para associação a ser alterada. *principal_id* é **int**, com um padrão NULL. O *principal_id* ou *principal_name* deve ser especificado.  
+ A ID do usuário de banco de dados ou função na **msdb** banco de dados para associação a ser alterada. *principal_id* está **int**, com um padrão NULL. Qualquer um dos *principal_id* ou *principal_name* deve ser especificado.  
   
  [ **@principal_name** =] **'***principal_name***'**  
- O nome do usuário de banco de dados ou da função no **msdb** banco de dados para a associação atualizar. *principal_name* é **sysname**, com um padrão NULL. O *principal_id* ou *principal_name* pode ser especificado.  
+ O nome do usuário de banco de dados ou função na **msdb** banco de dados para associação a ser excluída. *principal_name* está **sysname**, com um padrão NULL. Qualquer um dos *principal_id* ou *principal_name* pode ser especificado.  
   
  [ **@profile_id** =] *profile_id*  
- A ID do perfil da associação a ser alterada. *profile_id* é **int**, com um padrão NULL. O *profile_id* ou *profile_name* deve ser especificado.  
+ A ID do perfil da associação a ser alterada. *profile_id* está **int**, com um padrão NULL. Qualquer um dos *profile_id* ou *profile_name* deve ser especificado.  
   
  [ **@profile_name** =] **'***profile_name***'**  
- O nome do perfil da associação a ser alterada. *profile_name* é **sysname**, com um padrão NULL. O *profile_id* ou *profile_name* deve ser especificado.  
+ O nome do perfil da associação a ser alterada. *profile_name* está **sysname**, com um padrão NULL. Qualquer um dos *profile_id* ou *profile_name* deve ser especificado.  
   
  [ **@is_default** = ] **'***is_default***'**  
- Se este é o perfil padrão para o usuário do banco de dados. Um usuário de banco de dados pode ter somente um perfil padrão. *is_default* é **bit**, sem padrão.  
+ Se este é o perfil padrão para o usuário do banco de dados. Um usuário de banco de dados pode ter somente um perfil padrão. *is_default* está **bit**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma  
+ None  
   
 ## <a name="remarks"></a>Remarks  
  Este procedimento armazenado será alterado se o perfil especificado for o padrão para o usuário do banco de dados. Um usuário de banco de dados pode ter somente um perfil privado padrão.  
   
- Quando o nome da entidade para a associação é **pública** ou a id da entidade para a associação é **0**, esse procedimento armazenado alterará o perfil público. Pode haver somente um perfil público padrão.  
+ Quando o nome da entidade para a associação está **pública** ou a id da entidade para a associação é **0**, esse procedimento armazenado alterará o perfil público. Pode haver somente um perfil público padrão.  
   
- Quando **@is_default** é '**1**' e a entidade de segurança está associada a mais de um perfil, o perfil especificado torna-se o perfil padrão para a entidade de segurança. O perfil que anteriormente era o padrão ainda estará associado à entidade, mas não mais será o perfil padrão.  
+ Quando **@is_default** é '**1**' e a entidade está associada a mais de um perfil, o perfil especificado torna-se o perfil padrão para a entidade de segurança. O perfil que anteriormente era o padrão ainda estará associado à entidade, mas não mais será o perfil padrão.  
   
- O procedimento armazenado **sysmail_update_principalprofile_sp** está no **msdb** banco de dados e pertence a **dbo** esquema. O procedimento deve ser executado com um nome de três partes se o banco de dados atual não é **msdb**.  
+ O procedimento armazenado **sysmail_update_principalprofile_sp** está no **msdb** banco de dados e é de propriedade de **dbo** esquema. O procedimento deve ser executado com um nome de três partes se o banco de dados atual não for **msdb**.  
   
 ## <a name="permissions"></a>Permissões  
- Permissões de execução para esse procedimento usam como padrão membros do **sysadmin** função de servidor fixa.  
+ Permissões de execução para esse procedimento usam como padrão os membros de **sysadmin** função de servidor fixa.  
   
 ## <a name="examples"></a>Exemplos  
  **A. Definindo um perfil para ser o perfil público padrão para um banco de dados**  
   
- O exemplo a seguir define o perfil `General Use Profile` para ser o perfil público padrão para os usuários a **msdb** banco de dados.  
+ O exemplo a seguir define o perfil `General Use Profile` ser o perfil público do padrão para usuários em de **msdb** banco de dados.  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_principalprofile_sp  
@@ -91,9 +91,9 @@ EXECUTE msdb.dbo.sysmail_update_principalprofile_sp
     @is_default = '1';  
 ```  
   
- **B. Definindo um perfil para ser o perfil privado padrão para um usuário**  
+ **B. Definindo um perfil para ser o perfil privado do padrão para um usuário**  
   
- O exemplo a seguir define o perfil `AdventureWorks Administrator` para ser o perfil padrão para a entidade de segurança `ApplicationUser` no **msdb** banco de dados. O perfil já deve estar associado à entidade. O perfil que anteriormente era o padrão ainda estará associado à entidade, mas não mais será o perfil padrão.  
+ O exemplo a seguir define o perfil `AdventureWorks Administrator` ser o perfil padrão para a entidade de segurança `ApplicationUser` na **msdb** banco de dados. O perfil já deve estar associado à entidade. O perfil que anteriormente era o padrão ainda estará associado à entidade, mas não mais será o perfil padrão.  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_principalprofile_sp  

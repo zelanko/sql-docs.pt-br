@@ -22,16 +22,15 @@ helpviewer_keywords:
 - sp_cdc_get_ddl_history
 - sys.sp_cdc_get_ddl_history
 ms.assetid: 4dee5e2e-d7e5-4fea-8037-a4c05c969b3a
-caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2cafbdcab4ad480493181cc7b2f6b160e34ea681
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2a5b652807c0392e7c55c51173aa1aeecbae4dba
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252625"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036354"
 ---
 # <a name="sysspcdcgetddlhistory-transact-sql"></a>sys.sp_cdc_get_ddl_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sys.sp_cdc_get_ddl_history [ @capture_instance = ] 'capture_instance'
   
 ## <a name="arguments"></a>Argumentos  
  [ @capture_instance =] '*capture_instance*'  
- É o nome da instância de captura associada à tabela de origem. *capture_instance* é **sysname** e não pode ser NULL.  
+ É o nome da instância de captura associada à tabela de origem. *capture_instance* está **sysname** e não pode ser NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -67,7 +66,7 @@ sys.sp_cdc_get_ddl_history [ @capture_instance = ] 'capture_instance'
 |ddl_time|**datetime**|Hora associada à alteração de DDL.|  
   
 ## <a name="remarks"></a>Remarks  
- Modificações de DDL para a tabela de origem que alteram a estrutura de coluna de tabela de origem, como adicionar ou descartar uma coluna ou alterar o tipo de dados de uma coluna existente, são mantidas no [ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) tabela. Essas mudanças podem ser informadas usando este procedimento armazenado. Entradas em cdc.ddl_history são realizadas no momento em que o processo de captura lê a transação de DDL no log.  
+ As modificações de DDL da tabela de origem que alteram a estrutura de coluna de tabela de origem, como adicionar ou descartar uma coluna ou alterar o tipo de dados de uma coluna existente, são mantidas na [ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) tabela. Essas mudanças podem ser informadas usando este procedimento armazenado. Entradas em cdc.ddl_history são realizadas no momento em que o processo de captura lê a transação de DDL no log.  
   
 ## <a name="permissions"></a>Permissões  
  Requer associação à função de banco de dados fixa db_owner, para retornar linhas de todas as instâncias de captura no banco de dados. Para todos os outros usuários, requer a permissão SELECT em todas as colunas capturadas na tabela de origem e, se uma função associada para a instância de captura tiver sido definida, faça associação nessa função de banco de dados.  

@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changearticlecolumndatatype
 ms.assetid: 0db80e08-fb77-4d0c-aa41-455b13ffa9b4
-caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 04da16aadb8caf05ee28882c11658e81bf5bbfe7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 017131fd7bda406fdee178d8e36ab5443c487d4d
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32989641"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026622"
 ---
 # <a name="spchangearticlecolumndatatype-transact-sql"></a>sp_changearticlecolumndatatype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,25 +55,25 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@publication=** ] **'***publicação***'**  
- É o nome da publicação Oracle. *publicação* é **sysname**, sem padrão.  
+ É o nome da publicação Oracle. *publicação* está **sysname**, sem padrão.  
   
  [  **@article =** ] **'***artigo***'**  
- É o nome do artigo. *artigo* é **sysname**, sem padrão.  
+ É o nome do artigo. *artigo* está **sysname**, sem padrão.  
   
  [ **@column**=] **'***coluna***'**  
- É o nome da coluna da qual alterar o mapeamento de tipos de dados. *coluna* é **sysname**, sem padrão.  
+ É o nome da coluna da qual alterar o mapeamento de tipos de dados. *coluna* está **sysname**, sem padrão.  
   
  [ **@type** =] **'***tipo***'**  
- É o nome do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados na coluna de destino. *tipo* é **sysname**, com um padrão NULL.  
+ É o nome da [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de dados na coluna de destino. *tipo de* está **sysname**, com um padrão NULL.  
   
  [ **@length** =] *comprimento*  
- É o comprimento do tipo de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na coluna de destino. *comprimento* é **bigint**, com um padrão NULL.  
+ É o comprimento do tipo de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na coluna de destino. *comprimento* está **bigint**, com um padrão NULL.  
   
  [ **@precision**=] *precisão*  
- É a precisão do tipo de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na coluna de destino. *precisão* é **bigint**, com um padrão NULL.  
+ É a precisão do tipo de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] na coluna de destino. *precisão* está **bigint**, com um padrão NULL.  
   
- [ **@publisher**=] **'***publicador***'**  
- Especifica um publicador que não é do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *publicador* é **sysname**, com um padrão NULL.  
+ [ **@publisher**=] **'***publisher***'**  
+ Especifica um publicador que não é do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *Publisher* está **sysname**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -82,12 +81,12 @@ sp_changearticlecolumndatatype [ @publication= ] 'publication'
 ## <a name="remarks"></a>Remarks  
  **Sp_changearticlecolumndatatype** é usada para substituir os mapeamentos de tipo de dados padrão entre tipos com suporte do publicador (Oracle e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). Para exibir esses mapeamentos de tipo de dados padrão, execute [sp_getdefaultdatatypemapping](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md).  
   
- **sp_changearticlecolumndatatype** só tem suporte para editores Oracle. A execução desse procedimento armazenado em uma publicação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resulta em um erro.  
+ **sp_changearticlecolumndatatype** só tem suporte para Publicadores Oracle. A execução desse procedimento armazenado em uma publicação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resulta em um erro.  
   
- **sp_changearticlecolumndatatype** deve ser executado para cada mapeamento de coluna do artigo deve ser alterado.  
+ **sp_changearticlecolumndatatype** deve ser executado para cada mapeamento de coluna do artigo que deve ser alterado.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função de servidor fixa ou **db_owner** pode executar a função de banco de dados fixa **sp_changearticlecolumndatatype**.  
+ Somente os membros dos **sysadmin** função de servidor fixa ou **db_owner** banco de dados fixa podem executar **sp_changearticlecolumndatatype**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Alterar propriedades da publicação e do artigo](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   

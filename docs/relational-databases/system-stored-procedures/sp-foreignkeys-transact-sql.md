@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_foreignkeys
 ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
 caps.latest.revision: 39
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cf14d0f424a81b7e990d33d5dc596676e12505ad
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: bd49a4fd7f1c172c2f46d686cef941d19add2dad
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261835"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020655"
 ---
 # <a name="spforeignkeys-transact-sql"></a>sp_foreignkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,28 +51,28 @@ sp_foreignkeys [ @table_server = ] 'table_server'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@table_server =** ] **'***table_server***'**  
- É o nome do servidor vinculado para o qual as informações de tabela devem ser retornadas. *table_server* é **sysname**, sem padrão.  
+ É o nome do servidor vinculado para o qual as informações de tabela devem ser retornadas. *table_server* está **sysname**, sem padrão.  
   
  [  **@pktab_name =** ] **'***pktab_name***'**  
- É o nome da tabela com uma chave primária. *pktab_name* é **sysname**, com um padrão NULL.  
+ É o nome da tabela com uma chave primária. *pktab_name* está **sysname**, com um padrão NULL.  
   
  [  **@pktab_schema =** ] **'***pktab_schema***'**  
- É o nome do esquema com uma chave primária. *pktab_schema*é **sysname**, com um padrão NULL. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ele contém o nome do proprietário.  
+ É o nome do esquema com uma chave primária. *pktab_schema*está **sysname**, com um padrão NULL. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ele contém o nome do proprietário.  
   
  [  **@pktab_catalog =** ] **'***pktab_catalog***'**  
- É o nome do catálogo com uma chave primária. *pktab_catalog*é **sysname**, com um padrão NULL. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ele contém o nome do banco de dados.  
+ É o nome do catálogo com uma chave primária. *pktab_catalog*está **sysname**, com um padrão NULL. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ele contém o nome do banco de dados.  
   
  [  **@fktab_name =** ] **'***fktab_name***'**  
- É o nome do proprietário da tabela com uma chave estrangeira. *fktab_name*é **sysname**, com um padrão NULL.  
+ É o nome do proprietário da tabela com uma chave estrangeira. *fktab_name*está **sysname**, com um padrão NULL.  
   
  [  **@fktab_schema =** ] **'***fktab_schema***'**  
- É o nome do esquema com uma chave estrangeira. *fktab_schema*é **sysname**, com um padrão NULL.  
+ É o nome do esquema com uma chave estrangeira. *fktab_schema*está **sysname**, com um padrão NULL.  
   
  [  **@fktab_catalog =** ] **'***fktab_catalog***'**  
- É o nome do catálogo com uma chave estrangeira. *fktab_catalog*é **sysname**, com um padrão NULL.  
+ É o nome do catálogo com uma chave estrangeira. *fktab_catalog*está **sysname**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- Nenhuma  
+ None  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Vários produtos DBMS dão suporte à nomenclatura de três partes para tabelas (*catálogo ***.*** esquema ***.*** tabela*), que é representado no conjunto de resultados.  
@@ -92,12 +92,12 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 |**DELETE_RULE**|**smallint**|Ação aplicada à chave estrangeira quando a operação SQL é uma exclusão. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorna 0, 1 ou 2 para estas colunas:<br /><br /> 0=CASCADE altera para chave estrangeira.<br /><br /> 1=NO ACTION altera se a chave estrangeira estiver presente.<br /><br /> 2=SET_NULL define a chave estrangeira como NULL.|  
 |**COLUNAS FK_NAME**|**sysname**|Identificador de chave estrangeira. Será NULL se não for aplicável à fonte de dados. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorna o nome da restrição de FOREIGN KEY.|  
 |**PK_NAME**|**sysname**|Identificador da chave primária. Será NULL se não for aplicável à fonte de dados. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorna o nome da restrição de PRIMARY KEY.|  
-|**ADIAMENTO**|**smallint**|Indica se a verificação de restrição é adiável.|  
+|**CAPACIDADE DE ADIAMENTO**|**smallint**|Indica se a verificação de restrição é adiável.|  
   
  No conjunto de resultados, as colunas FK_NAME e PK_NAME sempre retornam NULL.  
   
 ## <a name="remarks"></a>Remarks  
- **sp_foreignkeys** consulta o conjunto de linhas FOREIGN_KEYS o **IDBSchemaRowset** interface do provedor OLE DB que corresponde à *table_server*. O *table_name*, *table_schema*, *table_catalog*, e *coluna* parâmetros são passados para essa interface para restringir as linhas retornado.  
+ **sp_foreignkeys** consulta o conjunto de linhas FOREIGN_KEYS dos **IDBSchemaRowset** interface do provedor OLE DB que corresponde à *table_server*. O *table_name*, *table_schema*, *table_catalog*, e *coluna* parâmetros são passados para essa interface para restringir as linhas retornado.  
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão SELECT no esquema.  
@@ -115,7 +115,7 @@ EXEC sp_foreignkeys @table_server = N'Seattle1',
  [sp_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
  [sp_column_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
  [sp_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   
- [sp_linkedservers & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
+ [sp_linkedservers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
  [sp_primarykeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-primarykeys-transact-sql.md)   
  [sp_tables_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
  [sp_table_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   

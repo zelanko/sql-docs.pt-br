@@ -31,15 +31,15 @@ helpviewer_keywords:
 - sp_check_dynamic_filters
 ms.assetid: dd7760db-a3a5-460f-bd97-b8d436015e19
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 248a5234a0620ce18122723db7bce88c61201758
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6f63c62f5aa36fe85b38922c68d5daf90f919642
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32990041"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023436"
 ---
 # <a name="spcheckdynamicfilters-transact-sql"></a>sp_check_dynamic_filters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,14 +57,14 @@ sp_check_dynamic_filters [ @publication = ] 'publication'
   
 ## <a name="arguments"></a>Argumentos  
  [ **@publication**=] **'***publicação***'**  
- É o nome da publicação. *publicação* é **sysname**, sem padrão.  
+ É o nome da publicação. *publicação* está **sysname**, sem padrão.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**can_use_partition_groups**|**bit**|É se a publicação está qualificada para usar partições pré-computadas; onde **1** significa que partições pré-calculadas podem ser usadas, e **0** significa que eles não podem ser usados.|  
-|**has_dynamic_filters**|**bit**|É se o filtro de pelo menos uma linha com parâmetros foi definido na publicação; onde **1** significa que existem um ou mais filtros de linha com parâmetros, e **0** significa que não existem filtros dinâmicos.|  
+|**can_use_partition_groups**|**bit**|É se a publicação se qualifica para usar partições pré-computadas; em que **1** significa que as partições pré-calculadas podem ser usadas, e **0** significa que eles não podem ser usados.|  
+|**has_dynamic_filters**|**bit**|É se o filtro de pelo menos uma linha com parâmetros foi definido na publicação; em que **1** significa que existem um ou mais filtros de linha com parâmetros, e **0** significa que não existem filtros dinâmicos.|  
 |**dynamic_filters_function_list**|**nvarchar(500)**|Lista de funções usada para filtrar artigos em uma publicação, onde cada função está separada por um ponto-e-vírgula.|  
 |**validate_subscriber_info**|**nvarchar(500)**|Lista de funções usada para filtrar artigos em uma publicação, onde cada função está separada por um sinal de adição (+).|  
 |**uses_host_name**|**bit**|Se o [HOST_NAME ()](../../t-sql/functions/host-name-transact-sql.md) função é usada em filtros de linha com parâmetros, onde **1** significa que essa função é usada para filtragem dinâmica.|  
@@ -76,12 +76,12 @@ sp_check_dynamic_filters [ @publication = ] 'publication'
 ## <a name="remarks"></a>Remarks  
  **sp_check_dynamic_filters** é usado em replicação de mesclagem.  
   
- Se uma publicação tiver sido definida para usar partições pré-computadas, **sp_check_dynamic_filters** verifica violações de restrições de partições pré-calculadas. Se alguma for encontrada, um erro será retornado. Para obter mais informações, consulte [Optimize Parameterized Filter Performance with Precomputed Partitions](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md) (Otimizar o desempenho do filtro parametrizado com partições pré-computadas).  
+ Se uma publicação tiver sido definida para usar partições pré-computadas **sp_check_dynamic_filters** verifica se há quaisquer violações de restrições de partições pré-calculadas. Se alguma for encontrada, um erro será retornado. Para obter mais informações, consulte [Optimize Parameterized Filter Performance with Precomputed Partitions](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md) (Otimizar o desempenho do filtro parametrizado com partições pré-computadas).  
   
  Se uma publicação foi definida como tendo filtros de linha com parâmetros, mas nenhum filtro de linha com parâmetros for encontrado, será retornado um erro.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função de servidor fixa ou **db_owner** pode executar a função de banco de dados fixa **sp_check_dynamic_filters**.  
+ Somente os membros dos **sysadmin** função de servidor fixa ou **db_owner** banco de dados fixa podem executar **sp_check_dynamic_filters**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Gerenciar partições para uma publicação de mesclagem com filtros com parâmetros](../../relational-databases/replication/publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)   

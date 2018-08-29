@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_help_peerconflictdetection
 ms.assetid: 59e04107-5eaa-44a1-beb6-ac4f2dbbcb28
 caps.latest.revision: 13
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 10490c69dd5d278d7d298dc8ebd4b10ff8106be9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 01ab569de510b115e0c2643192254366d5b41ebb
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994673"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43021057"
 ---
 # <a name="sphelppeerconflictdetection-transact-sql"></a>sp_help_peerconflictdetection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ sp_help_peerconflictdetection [ @publication = ] 'publication'
   
 ## <a name="arguments"></a>Argumentos  
  [ @publication=] '*publicação*'  
- É o nome da publicação para a qual retornar informações. *publicação* é **sysname**, sem padrão.  
+ É o nome da publicação para a qual retornar informações. *publicação* está **sysname**, sem padrão.  
   
  [ @timeout=] *tempo limite*  
- Especifica o tempo, em segundos, depois do qual o procedimento irá acusar tempo limite enquanto aguarda uma resposta de cada nó na topologia. Se houver um Assinante somente leitura na topologia, a especificação de um valor de tempo limite não será válida. Assinantes somente leitura nunca responderão a uma chamada desse procedimento. *tempo limite* é **int**, com um padrão de 60.  
+ Especifica o tempo, em segundos, depois do qual o procedimento irá acusar tempo limite enquanto aguarda uma resposta de cada nó na topologia. Se houver um Assinante somente leitura na topologia, a especificação de um valor de tempo limite não será válida. Assinantes somente leitura nunca responderão a uma chamada desse procedimento. *tempo limite* está **int**, com um padrão de 60.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  sp_help_peerconflictdetection retorna três conjuntos de resultados. Estes resultados são documentados nos seguintes tópicos:  
@@ -72,7 +72,7 @@ sp_help_peerconflictdetection [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>Consulte também  
  [Detecção de conflitos na replicação ponto a ponto](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)   
- [Replicação transacional ponto a ponto](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
+ [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
  [Procedimentos armazenados de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

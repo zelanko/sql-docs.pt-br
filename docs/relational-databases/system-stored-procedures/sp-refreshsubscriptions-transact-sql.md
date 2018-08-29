@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_refreshsubscriptions
 ms.assetid: 6cb9b1ce-1ce7-43ab-9451-201f79ed1ffa
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fb85456e42a3dfbef482e4260095f5496885328d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d7029d3013ce3a9dd0bfe173261f7dbd4eef3fad
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32995383"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027960"
 ---
 # <a name="sprefreshsubscriptions-transact-sql"></a>sp_refreshsubscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,21 +46,21 @@ sp_refreshsubscriptions [ @publication = ] 'publication'
   
 ## <a name="arguments"></a>Argumentos  
  [ **@publication** =] **'***publicação***'**  
- É a publicação para a qual atualizar assinaturas. *publicação* é **sysname**, sem padrão.  
+ É a publicação para a qual atualizar assinaturas. *publicação* está **sysname**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma  
+ None  
   
 ## <a name="remarks"></a>Remarks  
  **sp_refreshsubscriptions** é usado em instantâneo, transacional e replicação de mesclagem.  
   
- **sp_refreshsubscriptions** é chamado pelo **sp_addarticle** para uma publicação de atualização imediata.  
+ **sp_refreshsubscriptions** é chamado pela **sp_addarticle** para uma publicação de atualização imediata.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função de servidor fixa ou **db_owner** pode executar a função de banco de dados fixa **sp_refreshsubscriptions**.  
+ Somente os membros dos **sysadmin** função de servidor fixa ou o **db_owner** banco de dados fixa podem executar **sp_refreshsubscriptions**.  
   
 ## <a name="see-also"></a>Consulte também  
  [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   

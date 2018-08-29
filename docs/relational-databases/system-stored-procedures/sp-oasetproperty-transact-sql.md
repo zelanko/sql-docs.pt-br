@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_OASetProperty
 ms.assetid: 0fe7d554-6b67-4d55-9d3e-4096802c47f8
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7aeadb381a7bb5c55d9a26e5e0e8b9e148f7b120
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 689549b2741e4b334f664cf7662204702686a93f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258608"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43023736"
 ---
 # <a name="spoasetproperty-transact-sql"></a>sp_OASetProperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_OASetProperty objecttoken , propertyname , newvalue [ , index... ]
   
 ## <a name="arguments"></a>Argumentos  
  *objecttoken*  
- É o token de objeto de um objeto OLE que foi criado anteriormente pela **sp_OACreate**.  
+ É o token de objeto de um objeto OLE que foi criado anteriormente por **sp_OACreate**.  
   
  *propertyname*  
  É o nome de propriedade do objeto OLE a ser definido como um novo valor.  
@@ -54,7 +54,7 @@ sp_OASetProperty objecttoken , propertyname , newvalue [ , index... ]
  É o novo valor da propriedade, que deve ser do tipo de dados apropriado.  
   
  *index*  
- É um parâmetro de índice. Se especificado, *índice* deve ser um valor do tipo de dados apropriado.  
+ É um parâmetro de índice. Se especificado, *índice* deve ser um valor de tipo de dados apropriado.  
   
  Algumas propriedades têm parâmetros. Estas propriedades são chamadas de propriedades indexadas e os parâmetros são chamados de parâmetros de índice. Uma propriedade pode ter vários parâmetros de índice.  
   
@@ -64,13 +64,13 @@ sp_OASetProperty objecttoken , propertyname , newvalue [ , index... ]
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou um número diferente de zero (falha) que é o valor inteiro do HRESULT retornado pelo objeto de Automação OLE.  
   
- Para obter mais informações sobre códigos de retorno HRESULT, consulte [OLE Automation códigos de retorno e informações de erro](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
+ Para obter mais informações sobre códigos de retorno HRESULT, consulte [OLE automação códigos de retorno e informações de erro](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
 ## <a name="permissions"></a>Permissões  
  Exige associação à função de servidor fixa **sysadmin** .  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir define o `HostName` propriedade (de criado anteriormente **SQLServer** objeto) para um novo valor.  
+ O exemplo a seguir define o `HostName` propriedade (da criado anteriormente **SQLServer** objeto) para um novo valor.  
   
 ```  
 EXEC @hr = sp_OASetProperty @object, 'HostName', 'Gizmo';  

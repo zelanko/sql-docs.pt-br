@@ -26,15 +26,15 @@ helpviewer_keywords:
 - sp_check_join_filter
 ms.assetid: e9699d59-c8c9-45f6-a561-f7f95084a540
 caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 83e25f05600cb1a9319b865c4f7e0340e139dec5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 73c1941e4aeec64d388f93dc6d6e026c08011786
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32991103"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43025688"
 ---
 # <a name="spcheckjoinfilter-transact-sql"></a>sp_check_join_filter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,20 +54,20 @@ sp_check_join_filter [ @filtered_table = ] 'filtered_table'
   
 ## <a name="arguments"></a>Argumentos  
  [ **@filtered_table**=] **'***filtered_table***'**  
- É o nome de uma tabela filtrada. *filtered_table* é **nvarchar (400)**, sem padrão.  
+ É o nome de uma tabela filtrada. *filtered_table* está **nvarchar (400)**, sem padrão.  
   
  [ **@join_table**=] **'***join_table***'**  
- É o nome de uma tabela que é adicionada à *filtered_table*. *join_table* é **nvarchar (400)**, sem padrão.  
+ É o nome de uma tabela que é adicionada à *filtered_table*. *join_table* está **nvarchar (400)**, sem padrão.  
   
  [ **@join_filterclause** =] **'***join_filterclause***'**  
- É a cláusula do filtro de junção que está sendo testado. *join_filterclause* é **nvarchar (1000)**, sem padrão.  
+ É a cláusula do filtro de junção que está sendo testado. *join_filterclause* está **nvarchar (1000)**, sem padrão.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**can_use_partition_groups**|**bit**|É se a publicação está qualificada para as partições pré-calculadas; onde **1** significa que partições pré-computadas podem ser usadas, e **0** significa que eles não podem ser usados.|  
-|**has_dynamic_filters**|**bit**|Se a cláusula de filtro fornecida inclui pelo menos uma função de filtragem com parâmetros; onde **1** significa que uma função de filtragem com parâmetros é usada, e **0** significa que tal função não é usada.|  
+|**can_use_partition_groups**|**bit**|É se a publicação se qualifica para partições pré-computadas; em que **1** significa que partições pré-computadas podem ser usadas, e **0** significa que eles não podem ser usados.|  
+|**has_dynamic_filters**|**bit**|É se a cláusula de filtro fornecida inclui pelo menos uma função de filtragem com parâmetros; em que **1** significa que uma função de filtragem com parâmetros é usada, e **0** significa que tal função não é usada.|  
 |**dynamic_filters_function_list**|**nvarchar(500)**|Lista de funções na cláusula de filtro que define um filtro com parâmetros para um artigo, onde cada função é separada por um ponto-e-vírgula.|  
 |**uses_host_name**|**bit**|Se o [HOST_NAME ()](../../t-sql/functions/host-name-transact-sql.md) função é usada na cláusula de filtro, onde **1** significa que essa função está presente.|  
 |**uses_suser_sname**|**bit**|Se o [suser_sname ()](../../t-sql/functions/suser-sname-transact-sql.md) função é usada na cláusula de filtro, onde **1** significa que essa função está presente.|  
@@ -78,10 +78,10 @@ sp_check_join_filter [ @filtered_table = ] 'filtered_table'
 ## <a name="remarks"></a>Remarks  
  **sp_check_join_filter** é usado em replicação de mesclagem.  
   
- **sp_check_join_filter** pode ser executado em todas as tabelas relacionadas, mesmo se eles não forem publicados. Esse procedimento armazenado pode ser usado para verificar um filtro de junção antes de definir um filtro de junção entre os dois artigos.  
+ **sp_check_join_filter** pode ser executado em qualquer tabela relacionada, mesmo se eles não forem publicados. Esse procedimento armazenado pode ser usado para verificar um filtro de junção antes de definir um filtro de junção entre os dois artigos.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função de servidor fixa ou **db_owner** pode executar a função de banco de dados fixa **sp_check_join_filter**.  
+ Somente os membros dos **sysadmin** função de servidor fixa ou **db_owner** banco de dados fixa podem executar **sp_check_join_filter**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Procedimentos armazenados de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpmergesubscription
 ms.assetid: da564112-f769-4e67-9251-5699823e8c86
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cb5387d011b3987262415e3a88b5fd8bc65a8e2f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 37939073edaef5c8647cd173a83dfb05e63ae3cd
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33002913"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43019765"
 ---
 # <a name="sphelpmergesubscription-transact-sql"></a>sp_helpmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,45 +52,45 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
   
 ## <a name="arguments"></a>Argumentos  
  [  **@publication=**] **'***publicação***'**  
- É o nome da publicação. *publicação* é **sysname**, com um padrão de **%**. A publicação já deve existir e estar de acordo com as regras para identificadores. Se for NULL ou **%**, serão retornadas informações sobre todas as publicações de mesclagem e assinaturas no banco de dados atual.  
+ É o nome da publicação. *publicação* está **sysname**, com um padrão de **%**. A publicação já deve existir e obedecer às regras para identificadores. Se for NULL ou **%**, serão retornadas informações sobre todas as publicações de mesclagem e assinaturas no banco de dados atual.  
   
  [  **@subscriber=**] **'***assinante***'**  
- É o nome do Assinante. *assinante* é **sysname**, com um padrão de **%**. Se for NULL ou %, informações sobre todas as assinaturas da publicação determinada serão retornadas.  
+ É o nome do Assinante. *assinante* está **sysname**, com um padrão de **%**. Se for NULL ou %, informações sobre todas as assinaturas da publicação determinada serão retornadas.  
   
  [  **@subscriber_db=**] **'***subscriber_db***'**  
- É o nome do banco de dados de assinatura. *subscriber_db*é **sysname**, com um padrão de **%**, que retorna informações sobre todos os bancos de dados de assinatura.  
+ É o nome do banco de dados de assinatura. *subscriber_db*está **sysname**, com um padrão de **%**, que retorna informações sobre todos os bancos de dados de assinatura.  
   
- [  **@publisher=**] **'***publicador***'**  
- É o nome do Publicador. O Publicador deve ser um servidor válido. *publicador*é **sysname**, com um padrão de **%**, que retorna informações sobre todos os publicadores.  
+ [  **@publisher=**] **'***publisher***'**  
+ É o nome do Publicador. O Publicador deve ser um servidor válido. *Publisher*está **sysname**, com um padrão de **%**, que retorna informações sobre todos os publicadores.  
   
  [  **@publisher_db=**] **'***publisher_db***'**  
- É o nome do banco de dados Publicador. *publisher_db*é **sysname**, com um padrão de **%**, que retorna informações sobre todos os bancos de dados do publicador.  
+ É o nome do banco de dados Publicador. *publisher_db*está **sysname**, com um padrão de **%**, que retorna informações sobre todos os bancos de dados do publicador.  
   
  [  **@subscription_type=**] **'***subscription_type***'**  
- É o tipo de assinatura. *subscription_type*é **nvarchar (15)**, e pode ser um destes valores.  
+ É o tipo de assinatura. *subscription_type*está **nvarchar(15)**, e pode ser um destes valores.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
-|**push** (padrão)|Assinatura push.|  
+|**envio por push** (padrão)|Assinatura push.|  
 |**Pull**|Assinatura Pull|  
 |**ambos**|Assinaturas push e pull|  
   
  [  **@found=**] **'***encontrado***' saída**  
- É um sinalizador para indicar linhas de retorno. *encontrado*é **int** e um parâmetro de saída, com um padrão NULL. **1** indica que a publicação foi localizada. **0** indica a publicação não foi encontrada.  
+ É um sinalizador para indicar linhas de retorno. *encontrado*está **int** e um parâmetro de saída, com um padrão NULL. **1** indica que a publicação foi localizada. **0** indica a publicação não foi encontrada.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**subscription_name**|**sysname**|O nome da assinatura.|  
-|**Publicação**|**sysname**|Nome da publicação.|  
+|**publicação**|**sysname**|Nome da publicação.|  
 |**publisher**|**sysname**|Nome do Publicador.|  
 |**publisher_db**|**sysname**|Nome do banco de dados publicador.|  
 |**Assinante**|**sysname**|Nome do Assinante.|  
 |**subscriber_db**|**sysname**|Nome do banco de dados de assinatura.|  
-|**status**|**Int**|Status da assinatura:<br /><br /> **0** = todos os trabalhos estão esperando para iniciar<br /><br /> **1** = um ou mais trabalhos estão iniciando<br /><br /> **2** = todos os trabalhos foram executados com êxito<br /><br /> **3** = pelo menos um trabalho está em execução<br /><br /> **4** = todos os trabalhos estão agendados e ociosos<br /><br /> **5** = pelo menos um trabalho está tentando executar após uma falha anterior<br /><br /> **6** = pelo menos um trabalho falhou em executar com êxito|  
-|**subscriber_type**|**Int**|O tipo de Assinante.|  
-|**subscription_type**|**Int**|O tipo de assinatura:<br /><br /> **0** = push<br /><br /> **1** = pull<br /><br /> **2** = ambos|  
+|**status**|**int**|Status da assinatura:<br /><br /> **0** = todos os trabalhos estão esperando para iniciar<br /><br /> **1** = um ou mais trabalhos estão iniciando<br /><br /> **2** = todos os trabalhos foram executados com êxito<br /><br /> **3** = pelo menos um trabalho está em execução<br /><br /> **4** = todos os trabalhos estão agendados e ociosos<br /><br /> **5** = pelo menos um trabalho está tentando executar após uma falha anterior<br /><br /> **6** = pelo menos um trabalho falhou em executar com êxito|  
+|**subscriber_type**|**int**|O tipo de Assinante.|  
+|**subscription_type**|**int**|O tipo de assinatura:<br /><br /> **0** = push<br /><br /> **1** = pull<br /><br /> **2** = ambos|  
 |**priority**|**float(8)**|Número que indica a prioridade da assinatura.|  
 |**sync_type**|**tinyint**|Tipo de sincronização da Assinatura.|  
 |**Descrição**|**nvarchar(255)**|Descrição breve da assinatura de mesclagem.|  
@@ -98,9 +98,9 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 |**full_publication**|**tinyint**|Se a assinatura é para uma publicação completa ou filtrada.|  
 |**offload_enabled**|**bit**|Especifica se execução de descarga de um agente de replicação foi definida para executar no Assinante. Se for NULL, a execução será executada no Publicador.|  
 |**offload_server**|**sysname**|Nome do servidor para onde o agente está executando.|  
-|**use_interactive_resolver**|**Int**|Retorna se o resolvedor interativo é usado ou não durante a reconciliação. Se **0**, o resolvedor interativo não é usado.|  
-|**Nome do host**|**sysname**|Valor fornecido quando uma assinatura é filtrada pelo valor da [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) função.|  
-|**subscriber_security_mode**|**smallint**|É o modo de segurança no assinante, onde **1** significa autenticação do Windows e **0** significa [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação.|  
+|**use_interactive_resolver**|**int**|Retorna se o resolvedor interativo é usado ou não durante a reconciliação. Se **0**, o resolvedor interativo não é usado.|  
+|**nome do host**|**sysname**|Valor fornecido quando uma assinatura é filtrada pelo valor de [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) função.|  
+|**subscriber_security_mode**|**smallint**|É o modo de segurança no assinante, onde **1** significa que a autenticação do Windows, e **0** significa [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação.|  
 |**subscriber_login**|**sysname**|É o nome de logon no Assinante.|  
 |**subscriber_password**|**sysname**|A senha do Assinante atual nunca é retornada. O resultado é mascarado por um "**\*\*\*\*\*\***" cadeia de caracteres.|  
   
@@ -113,7 +113,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
  Para assinaturas anônimas, o *subscription_type*valor é sempre **1** (pull). No entanto, você deve executar [sp_helpmergepullsubscription](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md) no assinante para obter informações sobre assinaturas anônimas.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função de servidor fixa, o **db_owner** função fixa de banco de dados ou a lista de acesso da publicação para a publicação para o qual a assinatura pertence pode executar **SP _ helpmergesubscription**.  
+ Somente os membros dos **sysadmin** função de servidor fixa, o **db_owner** função fixa de banco de dados ou a lista de acesso à publicação da publicação à qual a assinatura pertence pode executar **SP _ helpmergesubscription**.  
   
 ## <a name="see-also"></a>Consulte também  
  [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   

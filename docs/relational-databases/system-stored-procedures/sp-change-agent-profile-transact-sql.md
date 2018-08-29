@@ -20,20 +20,20 @@ helpviewer_keywords:
 - sp_change_agent_profile
 ms.assetid: e73acf8d-0be8-4197-ba11-fe798d0e2820
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 66d4bb93d94492b572b9653c0be6a458f38565b1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 441877f6212af070da39b828e5aaaae40e6a3ed7
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32988931"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43035178"
 ---
 # <a name="spchangeagentprofile-transact-sql"></a>sp_change_agent_profile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Altera um parâmetro de um perfil de agente de replicação armazenado no [MSagent_profiles &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) tabela. Esse procedimento armazenado é executado no Distribuidor em qualquer banco de dados.  
+  Altera um parâmetro de um perfil de agente de replicação armazenado na [MSagent_profiles &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) tabela. Esse procedimento armazenado é executado no Distribuidor em qualquer banco de dados.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,13 +48,13 @@ sp_change_agent_profile [ @profile_id = ] profile_id
   
 ## <a name="arguments"></a>Argumentos  
  [  **@profile_id=** ] *profile_id*  
- É a ID do perfil. *profile_id* é **int**, sem padrão.  
+ É a ID do perfil. *profile_id* está **int**, sem padrão.  
   
  [  **@property=** ] **'***propriedade***'**  
- É o nome da propriedade. *propriedade* é **sysname**, sem padrão.  
+ É o nome da propriedade. *propriedade* está **sysname**, sem padrão.  
   
  [ **@value=** ] **'***value***'**  
- É o novo valor da propriedade. *valor* é **nvarchar (3000)**, sem padrão.  
+ É o novo valor da propriedade. *valor* está **nvarchar(3000)**, sem padrão.  
   
  Essa tabela descreve as propriedades de perfil que podem ser alteradas.  
   
@@ -69,7 +69,7 @@ sp_change_agent_profile [ @profile_id = ] profile_id
  **sp_change_agent_profile** é usado em todos os tipos de replicação.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** pode executar a função de servidor fixa **sp_change_agent_profile**.  
+ Somente os membros dos **sysadmin** pode executar a função de servidor fixa **sp_change_agent_profile**.  
   
 ## <a name="see-also"></a>Consulte também  
  [sp_add_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   

@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpreplicationoption
 ms.assetid: ef988dbc-dd0b-4132-80ab-81eebec1cffe
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 462d7532b3f5eefe7d933cd4801ee45cfc028d04
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8cefbf375ec5e952f2c3c69d7cc0b934c9f5757b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994973"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43020431"
 ---
 # <a name="sphelpreplicationoption-transact-sql"></a>sp_helpreplicationoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,24 +46,24 @@ sp_helpreplicationoption [ [ @optname =] 'option_name' ]
   
 ## <a name="arguments"></a>Argumentos  
  [  **@optname =**] **'***option_name***'**  
- É o nome da opção de replicação que deve ser consultada. *option_name* é **sysname**, com um padrão NULL.  
+ É o nome da opção de replicação que deve ser consultada. *option_name* está **sysname**, com um padrão NULL.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Transacional**|Um conjunto de resultados é retornado quando replicação transacional é habilitada.|  
-|**Mesclagem**|Um conjunto de resultados é retornado quando replicação de mesclagem é habilitada.|  
+|**mesclagem**|Um conjunto de resultados é retornado quando replicação de mesclagem é habilitada.|  
 |NULL (padrão)|Um conjunto de resultados não é retornado.|  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**optname**|**sysname**|Nome da opção de replicação e pode ser um dos seguintes:<br /><br /> **Transacional**<br /><br /> **Mesclagem**|  
+|**optname**|**sysname**|Nome da opção de replicação e pode ser um dos seguintes:<br /><br /> **Transacional**<br /><br /> **mesclagem**|  
 |**value**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**versão_principal**|**Int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**versão_secundária**|**Int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**Revisão**|**Int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**install_failures**|**Int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**versão_principal**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**versão_secundária**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**revisão**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**install_failures**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

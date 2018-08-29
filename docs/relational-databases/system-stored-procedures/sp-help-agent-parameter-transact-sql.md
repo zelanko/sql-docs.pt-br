@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_help_agent_parameter
 ms.assetid: 8fb4a9c3-19af-4a34-8004-572729ba3d15
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9176a2b583cc3cb4212a51f898ecbbe3d2685cc9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bb9d2e6ed445ddc9df876a5cee759cf928fe823a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994383"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038889"
 ---
 # <a name="sphelpagentparameter-transact-sql"></a>sp_help_agent_parameter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,13 +46,13 @@ sp_help_agent_parameter [ [ @profile_id = ] profile_id ]
   
 ## <a name="arguments"></a>Argumentos  
  [  **@profile_id=**] *profile_id*  
- É a ID do perfil a partir de [MSagent_parameters &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msagent-parameters-transact-sql.md) tabela. *profile_id* é **int**, com um padrão de **-1**, que retorna todos os parâmetros.  
+ É a ID do perfil a partir de [MSagent_parameters &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msagent-parameters-transact-sql.md) tabela. *profile_id* está **int**, com um padrão de **-1**, que retorna todos os parâmetros.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**profile_id**|**Int**|ID do perfil do agente.|  
+|**profile_id**|**int**|ID do perfil do agente.|  
 |**parameter_name**|**sysname**|Nome do parâmetro.|  
 |**value**|**nvarchar(255)**|Valor do parâmetro.|  
   
@@ -63,7 +63,7 @@ sp_help_agent_parameter [ [ @profile_id = ] profile_id ]
  **sp_help_agent_parameter** é usado em todos os tipos de replicação.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função de servidor fixa ou **replmonitor** pode executar a função de banco de dados fixa **sp_help_agent_parameter**.  
+ Somente os membros dos **sysadmin** função de servidor fixa ou o **replmonitor** banco de dados fixa podem executar **sp_help_agent_parameter**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Trabalhar com perfis do Agente de Replicação](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   

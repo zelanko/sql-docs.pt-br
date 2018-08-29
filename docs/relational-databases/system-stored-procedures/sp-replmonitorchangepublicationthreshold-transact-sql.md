@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_replmonitorchangepublicationthreshold
 ms.assetid: 2c3615d8-4a1a-4162-b096-97aefe6ddc16
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bfc9b3ad0f67fa462db098a44603cc9cb1a4d586
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d7d8b21453e2622eb80e5eba69d3688649f0a350
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33001663"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036504"
 ---
 # <a name="spreplmonitorchangepublicationthreshold-transact-sql"></a>sp_replmonitorchangepublicationthreshold (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,29 +53,29 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@publisher** =] **'***publicador***'**  
- É o nome do Publicador. *publicador* é **sysname**, sem padrão.  
+ [ **@publisher** =] **'***publisher***'**  
+ É o nome do Publicador. *Publisher* está **sysname**, sem padrão.  
   
  [ **@publisher_db** =] **'***publisher_db***'**  
- É o nome do banco de dados publicado. *publisher_db* é **sysname**, sem padrão.  
+ É o nome do banco de dados publicado. *publisher_db* está **sysname**, sem padrão.  
   
  [ **@publication** =] **'***publicação***'**  
- É o nome da publicação para a qual os atributos de limite de monitoramento estão sendo alterados. *publicação* é **sysname**, sem padrão.  
+ É o nome da publicação para a qual os atributos de limite de monitoramento estão sendo alterados. *publicação* está **sysname**, sem padrão.  
   
  [ **@publication_type** =] *publication_type*  
- Se o tipo de publicação. *publication_type* é **int**, e pode ser um destes valores.  
+ Se o tipo de publicação. *publication_type* está **int**, e pode ser um destes valores.  
   
-|Value|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**0**|Publicação transacional.|  
 |**1**|Publicação de instantâneo.|  
 |**2**|Publicação de mesclagem.|  
-|NULL (padrão)|Replicação tenta determinar o tipo de publicação.|  
+|NULL (padrão)|A replicação tenta determinar o tipo de publicação.|  
   
  [ **@metric_id** =] *metric_id*  
- É a ID da métrica de limite da publicação que está sendo alterada. *metric_id* é **int**, com um valor padrão de NULL e pode ser um destes valores.  
+ É a ID da métrica de limite da publicação que está sendo alterada. *metric_id* está **int**, com um valor padrão de NULL e pode ser um destes valores.  
   
-|Value|Nome da métrica|  
+|Valor|Nome da métrica|  
 |-----------|-----------------|  
 |**1**|**expiration** - monitora a expiração iminente de assinaturas para publicações transacionais.|  
 |**2**|**latency** - monitora o desempenho de assinaturas para publicações transacionais.|  
@@ -88,16 +88,16 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
  Você deve especificar *metric_id* ou *thresholdmetricname*. Se *thresholdmetricname* for especificado, então *metric_id* deve ser NULL.  
   
  [ **@thresholdmetricname** =] **'***thresholdmetricname***'**  
- É o nome da métrica de limite da publicação que está sendo alterada. *thresholdmetricname* é **sysname**, com um valor padrão de NULL. Você deve especificar *thresholdmetricname* ou *metric_id*. Se *metric_id* for especificado, então *thresholdmetricname* deve ser NULL.  
+ É o nome da métrica de limite da publicação que está sendo alterada. *thresholdmetricname* está **sysname**, com um valor padrão de NULL. Você deve especificar *thresholdmetricname* ou *metric_id*. Se *metric_id* for especificado, então *thresholdmetricname* deve ser NULL.  
   
  [ **@value** =] *valor*  
- É o novo valor da métrica de limite de publicação. *valor* é **int**, com um valor padrão de NULL. Se **nulo**, em seguida, o valor da métrica não é atualizado.  
+ É o novo valor da métrica de limite de publicação. *valor* está **int**, com um valor padrão de NULL. Se **nulo**, o valor da métrica não será atualizado.  
   
  [ **@shouldalert** =] *shouldalert*  
- Será se um alerta for gerado quando a métrica de limite de publicação for atingida. *shouldalert* é **bit**, com um padrão NULL. Um valor de **1** significa que um alerta é gerado e um valor de **0** significa que um alerta não é gerado.  
+ Será se um alerta for gerado quando a métrica de limite de publicação for atingida. *shouldalert* está **bit**, com um padrão NULL. Um valor de **1** significa que um alerta é gerado e um valor de **0** significa que um alerta não é gerado.  
   
  [ **@mode** =] *modo*  
- Será se a métrica de limite de publicação estiver habilitada. *modo* é **tinyint**, com um padrão de **1**. Um valor de **1** significa que o monitoramento dessa métrica está habilitada e um valor de **2** significa que o monitoramento dessa métrica está desabilitado.  
+ Será se a métrica de limite de publicação estiver habilitada. *modo* está **tinyint**, com um padrão de **1**. Um valor de **1** significa que o monitoramento dessa métrica está habilitada e um valor de **2** significa que o monitoramento dessa métrica está desabilitado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -106,7 +106,7 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
  **sp_replmonitorchangepublicationthreshold** é usado com todos os tipos de replicação.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **db_owner** ou **replmonitor** função de banco de dados fixa no banco de dados de distribuição pode executar **sp_replmonitorchangepublicationthreshold**.  
+ Somente os membros dos **db_owner** ou **replmonitor** banco de dados fixa no banco de dados de distribuição podem executar **sp_replmonitorchangepublicationthreshold**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Monitorar programaticamente a replicação](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  

@@ -18,16 +18,15 @@ helpviewer_keywords:
 - INFORMATION_SCHEMA.KEY_COLUMN_USAGE view
 - KEY_COLUMN_USAGE view
 ms.assetid: ec1e18c2-63a1-4d2b-ba9a-c13857403782
-caps.latest.revision: 32
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c120549e950fe204c86c0e00562c2b2506196770
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 40906461927c21d557588841d9a853368db525a2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233706"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037916"
 ---
 # <a name="keycolumnusage-transact-sql"></a>KEY_COLUMN_USAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "33233706"
 |**TABLE_SCHEMA**|**nvarchar(** 128 **)**|Nome do esquema que contém a tabela.<br /><br /> **\*\* Importante \* \***  não use exibições INFORMATION_SCHEMA para determinar o esquema de um objeto. O único modo seguro de localizar o esquema de um objeto é consultar a exibição de catálogo sys.objects.|  
 |**TABLE_NAME**|**nvarchar(** 128 **)**|Nome da tabela.|  
 |**COLUMN_NAME**|**nvarchar(** 128 **)**|Nome da coluna.|  
-|**ORDINAL_POSITION**|**Int**|Posição ordinal na coluna.|  
+|**ORDINAL_POSITION**|**int**|Posição ordinal na coluna.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Exibições do sistema &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   

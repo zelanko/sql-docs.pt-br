@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_indexes
 ms.assetid: 25469e72-9d95-463f-912a-193471c8f5e2
 caps.latest.revision: 38
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 95940aac67d5f525503721246025ff25bbfc7e1c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 3185e5b5fe0af7db68fd8bb91dfdf568bb14d354
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259986"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034723"
 ---
 # <a name="spindexes-transact-sql"></a>sp_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,24 +50,24 @@ sp_indexes [ @table_server = ] 'table_server'
   
 ## <a name="arguments"></a>Argumentos  
  [ @table_server=] '*table_server*'  
- É o nome de um servidor vinculado que executa o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o qual as informações da tabela estão sendo solicitadas. *table_server* é **sysname**, sem padrão.  
+ É o nome de um servidor vinculado que executa o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para o qual as informações da tabela estão sendo solicitadas. *table_server* está **sysname**, sem padrão.  
   
  [ @table_name=] '*table_name*'  
- É o nome da tabela remota para a qual as informações de índice devem ser fornecidas. *table_name* é **sysname**, com um padrão NULL. Se NULL, todas as tabelas no banco de dados especificado serão retornadas.  
+ É o nome da tabela remota para a qual as informações de índice devem ser fornecidas. *table_name* está **sysname**, com um padrão NULL. Se NULL, todas as tabelas no banco de dados especificado serão retornadas.  
   
  [ @table_schema=] '*table_schema*'  
- Especifica o esquema de tabela. No ambiente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], isso corresponde ao proprietário de tabela. *table_schema* é **sysname**, com um padrão NULL.  
+ Especifica o esquema de tabela. No ambiente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], isso corresponde ao proprietário de tabela. *table_schema* está **sysname**, com um padrão NULL.  
   
  [ @table_catalog=] '*table_db*'  
- É o nome do banco de dados no qual *table_name* reside. *table_db* é **sysname**, com um padrão NULL. Se for NULL, *table_db* padrão **mestre**.  
+ É o nome do banco de dados no qual *table_name* reside. *table_db* está **sysname**, com um padrão NULL. Se for NULL, *table_db* assume como padrão **mestre**.  
   
  [ @index_name=] '*index_name*'  
- É o nome do índice para o qual as informações estão sendo solicitadas. *índice* é **sysname**, com um padrão NULL.  
+ É o nome do índice para o qual as informações estão sendo solicitadas. *índice* está **sysname**, com um padrão NULL.  
   
  [ @is_unique=] '*is_unique*'  
- É o tipo de índice para o qual as informações devem ser retornadas. *is_unique* é **bit**, com um padrão NULL, e pode ser um dos valores a seguir.  
+ É o tipo de índice para o qual as informações devem ser retornadas. *is_unique* está **bit**, com um padrão de NULL, e pode ser um dos valores a seguir.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |1|Retorna informações sobre índices exclusivos.|  
 |0|Retorna informações sobre índices que não são exclusivos.|  
@@ -81,14 +81,14 @@ sp_indexes [ @table_server = ] 'table_server'
 |TABLE_SCHEM|**sysname**|Esquema da tabela.|  
 |TABLE_NAME|**sysname**|Nome da tabela remota.|  
 |NON_UNIQUE|**smallint**|Se o índice é exclusivo ou não exclusivo:<br /><br /> 0 = Exclusivo<br /><br /> 1 = Não exclusivo|  
-|INDEX_QUALIFER|**sysname**|Nome do proprietário do índice. Alguns produtos DBMS permitem que outros usuários, que não o proprietário da tabela, criam índices. Em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna é sempre o mesmo que **TABLE_NAME**.|  
+|INDEX_QUALIFER|**sysname**|Nome do proprietário do índice. Alguns produtos DBMS permitem que outros usuários, que não o proprietário da tabela, criam índices. Na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], essa coluna é sempre o mesmo que **TABLE_NAME**.|  
 |INDEX_NAME|**sysname**|Nome do índice.|  
 |TYPE|**smallint**|Tipo de índice:<br /><br /> 0 = Estatísticas de uma tabela<br /><br /> 1 = Clusterizado<br /><br /> 2 = Com hash<br /><br /> 3 = outros|  
-|ORDINAL_POSITION|**Int**|Posição ordinal da coluna no índice. A primeira coluna no índice é 1. Esta coluna sempre retorna um valor.|  
+|ORDINAL_POSITION|**int**|Posição ordinal da coluna no índice. A primeira coluna no índice é 1. Esta coluna sempre retorna um valor.|  
 |COLUMN_NAME|**sysname**|É o nome correspondente da coluna para cada coluna do TABLE_NAME retornado.|  
 |ASC_OR_DESC|**varchar**|É a ordem usada no agrupamento:<br /><br /> A = Crescente<br /><br /> D = Decrescente<br /><br /> NULL = Não aplicável<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sempre retorna A.|  
-|CARDINALITY|**Int**|É o número de linhas na tabela ou valores exclusivos no índice.|  
-|PAGES|**Int**|É o número de páginas para armazenar o índice ou a tabela.|  
+|CARDINALITY|**int**|É o número de linhas na tabela ou valores exclusivos no índice.|  
+|PAGES|**int**|É o número de páginas para armazenar o índice ou a tabela.|  
 |FILTER_CONDITION|**nvarchar (** 4000 **)**|O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não retorna um valor.|  
   
 ## <a name="permissions"></a>Permissões  
@@ -105,11 +105,11 @@ EXEC sp_indexes @table_server = 'Seattle1',
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Procedimentos armazenados de consultas de Distributed &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
+ [Distribuído procedimentos armazenados de consultas &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
  [sp_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
  [sp_column_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
  [sp_foreignkeys &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-foreignkeys-transact-sql.md)   
- [sp_linkedservers & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
+ [sp_linkedservers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-linkedservers-transact-sql.md)   
  [sp_tables_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tables-ex-transact-sql.md)   
  [sp_table_privileges &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-privileges-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

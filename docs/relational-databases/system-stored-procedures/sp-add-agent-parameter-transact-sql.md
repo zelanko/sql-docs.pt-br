@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_add_agent_parameter
 ms.assetid: 055f4765-0574-47c3-bf7d-6ef6e9bd8b34
-caps.latest.revision: 32
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: efcfb48b6c39bc65c3e281baea01d8f4fe3fd1ed
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b3947425e84734fcdd5920cac5b097426e252cb3
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32990111"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026744"
 ---
 # <a name="spaddagentparameter-transact-sql"></a>sp_add_agent_parameter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,33 +47,33 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
   
 ## <a name="arguments"></a>Argumentos  
  [  **@profile_id=** ] *profile_id*  
- É a ID do perfil do **MSagent_profiles** tabela o **msdb** banco de dados. *profile_id* é **int**, sem padrão.  
+ É a ID do perfil dos **MSagent_profiles** na tabela a **msdb** banco de dados. *profile_id* está **int**, sem padrão.  
   
- Para descobrir que tipo de agente isso *profile_id* representa, localize o *profile_id* no [MSagent_profiles &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) da tabela e observe o *agent_type* valor do campo. Os valores são os seguintes:  
+ Para descobrir que tipo de agente isso *profile_id* representa, localize a *profile_id* no [MSagent_profiles &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) tabela e, em seguida, observe o *agent_type* valor do campo. Os valores são os seguintes:  
   
-|Value|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**1**|Snapshot Agent|  
 |**2**|Agente de Leitor de Log|  
 |**3**|Agente de Distribuição|  
-|**4**|Agente de Mesclagem|  
+|**4**|Merge Agent|  
 |**9**|Queue Reader Agent|  
   
  [  **@parameter_name=** ] **'***parameter_name***'**  
- É o nome do parâmetro. *parameter_name* é **sysname**, sem padrão. Para obter uma lista de parâmetros já definida em perfis de sistema, consulte [perfis de agente de replicação](../../relational-databases/replication/agents/replication-agent-profiles.md). Para uma lista completa de parâmetros válidos para cada agente, consulte os seguintes tópicos:  
+ É o nome do parâmetro. *parameter_name* está **sysname**, sem padrão. Para obter uma lista de parâmetros já definidos nos perfis de sistema, consulte [perfis de agente de replicação](../../relational-databases/replication/agents/replication-agent-profiles.md). Para uma lista completa de parâmetros válidos para cada agente, consulte os seguintes tópicos:  
   
--   [Agente de Instantâneo de Replicação](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+-   [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
 -   [Agente do Leitor de Log de Replicação](../../relational-databases/replication/agents/replication-log-reader-agent.md)  
   
--   [Agente de Distribuição de Replicação](../../relational-databases/replication/agents/replication-distribution-agent.md)  
+-   [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)  
   
 -   [Agente de Mesclagem de Replicação](../../relational-databases/replication/agents/replication-merge-agent.md)  
   
--   [Replication Queue Reader Agent](../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
+-   [Agente de Leitor de Fila de Replicação](../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
   
  [  **@parameter_value=**] **'***parameter_value***'**  
- É o valor a ser atribuído ao parâmetro. *parameter_value* é **nvarchar (255)**, sem padrão.  
+ É o valor a ser atribuído ao parâmetro. *parameter_value* está **nvarchar (255)**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -83,7 +82,7 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
  **sp_add_agent_parameter** é usado em replicação de instantâneo, replicação transacional e replicação de mesclagem.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** pode executar a função de servidor fixa **sp_add_agent_parameter**.  
+ Somente os membros dos **sysadmin** pode executar a função de servidor fixa **sp_add_agent_parameter**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Trabalhar com perfis do Agente de Replicação](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   

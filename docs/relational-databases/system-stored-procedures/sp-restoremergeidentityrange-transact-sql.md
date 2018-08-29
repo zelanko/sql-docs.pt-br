@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_restoremergeidentityrange
 ms.assetid: 7923e422-2748-40c0-b5a8-6410c48d5b70
 caps.latest.revision: 12
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b8be3de617713868a755dbab55e4ac4674dfd07a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 55fa550c0dab2d0e03681e0dfa75bc91e676f5d8
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32997671"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038311"
 ---
 # <a name="sprestoremergeidentityrange-transact-sql"></a>sp_restoremergeidentityrange (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,21 +47,21 @@ sp_restoremergeidentityrange [ [ @publication = ] 'publication' ]
   
 ## <a name="arguments"></a>Argumentos  
  [ **@publication** =] **'***publicação***'**  
- É o nome da publicação. *publicação* é **sysname**, com o valor padrão de **todos os**. Quando especificado, somente intervalos de identidade para aquela publicação são restaurados.  
+ É o nome da publicação. *publicação* está **sysname**, com o valor padrão de **todos os**. Quando especificado, somente intervalos de identidade para aquela publicação são restaurados.  
   
  [ **@article** =] **'***artigo***'**  
- É o nome do artigo. *artigo* é **sysname**, com um valor padrão de **todos os**. Quando especificado, somente intervalos de identidade para aquele artigo são restaurados.  
+ É o nome do artigo. *artigo* está **sysname**, com um valor padrão de **todos os**. Quando especificado, somente intervalos de identidade para aquele artigo são restaurados.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="remarks"></a>Remarks  
- **sp_restoremergeidentityrange** é usado com a replicação de mesclagem.  
+ **sp_restoremergeidentityrange** é usado com replicação de mesclagem.  
   
- **sp_restoremergeidentityrange** obtém informações de alocação de intervalo de identidade máximo do distribuidor e atualiza os valores de **max_used** coluna de [MSmerge_identity_range_allocations &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msmerge-identity-range-allocations-transact-sql.md) para os artigos que usam gerenciamento de intervalo de identidade automática.  
+ **sp_restoremergeidentityrange** obtém informações de alocação de intervalo de identidade máximo do distribuidor e atualiza valores de **max_used** coluna de [MSmerge_identity_range_allocations &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msmerge-identity-range-allocations-transact-sql.md) para os artigos que usam gerenciamento de intervalo de identidade automática.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função de servidor fixa ou **db_owner** pode executar a função de banco de dados fixa **sp_restoremergeidentityrange**.  
+ Somente os membros dos **sysadmin** função de servidor fixa ou **db_owner** banco de dados fixa podem executar **sp_restoremergeidentityrange**.  
   
 ## <a name="see-also"></a>Consulte também  
  [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   

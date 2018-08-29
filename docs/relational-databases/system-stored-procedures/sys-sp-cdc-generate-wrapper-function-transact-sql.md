@@ -21,21 +21,20 @@ helpviewer_keywords:
 - sys.sp_cdc_generate_wrapper_function
 - sp_cdc_generate_wrapper_function
 ms.assetid: 85bc086d-8a4e-4949-a23b-bf53044b925c
-caps.latest.revision: 11
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0f8f81b97ad6b1c1bf09ee33bd460aab01872327
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e6ddf84aa517b7f7e21e605264e1efa7ca1977d5
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259256"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022936"
 ---
 # <a name="sysspcdcgeneratewrapperfunction-transact-sql"></a>sys.sp_cdc_generate_wrapper_function (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Gera scripts para criar funções de wrapper para as funções de consulta de captura de dados de alteração disponíveis no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A API suportada nos wrappers gerados permite que o intervalo de consulta a ser especificado como um intervalo de data e hora. Isso torna a função adequada para uso em vários aplicativos de warehousing, incluindo aqueles que são desenvolvidas pela [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tecnologia para determinar carga incremental de captura de designers de pacotes que estão usando dados de alteração.  
+  Gera scripts para criar funções de wrapper para as funções de consulta de captura de dados de alteração disponíveis no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A API suportada nos wrappers gerados permite que o intervalo de consulta a ser especificado como um intervalo de data e hora. Isso torna a função adequada para uso em vários aplicativos de warehousing, incluindo aqueles que são desenvolvidas pela [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tecnologia para determinar carga incremental de captura de criadores de pacotes que estão usando dados de alteração.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -56,16 +55,16 @@ sys.sp_cdc_generate_wrapper_function
   
 ## <a name="arguments"></a>Argumentos  
  [ @capture_instance=] '*capture_instance*'  
- É a instância de captura para a qual os scripts serão gerados. *capture_instance* é **sysname** e tem um valor padrão de NULL. Se um valor for omitido ou explicitamente definido como NULL, serão gerados scripts de wrapper para todas as instâncias de captura.  
+ É a instância de captura para a qual os scripts serão gerados. *capture_instance* está **sysname** e tem um valor padrão de NULL. Se um valor for omitido ou explicitamente definido como NULL, serão gerados scripts de wrapper para todas as instâncias de captura.  
   
  [ @closed_high_end_point=] *high_end_pt_flag*  
- É o bit de sinalizador que indica se as alterações que têm um horário de confirmação igual ao ponto de extremidade alto serão incluídas dentro do intervalo de extração pelo procedimento gerado. *high_end_pt_flag* é **bit** e tem um valor padrão de 1, o que indica que o ponto de extremidade deve ser incluído. Um valor de 0 indica que todas as horas de confirmação serão estritamente anteriores ao ponto de extremidade alto.  
+ É o bit de sinalizador que indica se as alterações que têm um horário de confirmação igual ao ponto de extremidade alto serão incluídas dentro do intervalo de extração pelo procedimento gerado. *high_end_pt_flag* está **bit** e tem um valor padrão de 1, que indica que o ponto de extremidade deve ser incluído. Um valor de 0 indica que todas as horas de confirmação serão estritamente anteriores ao ponto de extremidade alto.  
   
  [ @column_list=] '*column_list*'  
- É uma lista de colunas capturadas a serem incluídas no conjunto de resultados, que é retornado pela função de wrapper. *column_list* é **nvarchar (max)** e tem um valor padrão de NULL. Quando NULL for especificado, todas as colunas capturadas serão incluídas.  
+ É uma lista de colunas capturadas a serem incluídas no conjunto de resultados, que é retornado pela função de wrapper. *column_list* está **nvarchar (max)** e tem um valor padrão de NULL. Quando NULL for especificado, todas as colunas capturadas serão incluídas.  
   
  [ @update_flag_list=] '*update_flag_list*'  
- É a lista de colunas incluídas para as quais um sinalizador de atualização é incluído no conjunto de resultados retornado pela função wrapper. *update_flag_list* é **nvarchar (max)** e tem um valor padrão de NULL. Quando NULL for especificado, nenhum sinalizador de atualização será incluído.  
+ É a lista de colunas incluídas para as quais um sinalizador de atualização é incluído no conjunto de resultados retornado pela função wrapper. *update_flag_list* está **nvarchar (max)** e tem um valor padrão de NULL. Quando NULL for especificado, nenhum sinalizador de atualização será incluído.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -110,6 +109,6 @@ DEALLOCATE #hfunctions;
   
 ## <a name="see-also"></a>Consulte também  
  [Procedimentos armazenados de captura de dados de alterações &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   
- [O Change Data Capture &#40;SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md)  
+ [Change Data Capture &#40;SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md)  
   
   

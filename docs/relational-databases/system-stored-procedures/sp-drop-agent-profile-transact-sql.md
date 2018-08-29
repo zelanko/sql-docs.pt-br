@@ -20,20 +20,20 @@ helpviewer_keywords:
 - sp_drop_agent_profile
 ms.assetid: b884f9ef-ae89-4cbc-a917-532c3ff6ed41
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5a032bc56eb0c7213a22438743fddb8d61b3a2a3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b8f83bae6ee7d3d46b8befd1dafb06d41c200a05
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32988322"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43038036"
 ---
 # <a name="spdropagentprofile-transact-sql"></a>sp_drop_agent_profile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Remove um perfil a partir de **MSagent_profiles** tabela. Esse procedimento armazenado é executado no Distribuidor em qualquer banco de dados.  
+  Descarta um perfil a partir de **MSagent_profiles** tabela. Esse procedimento armazenado é executado no Distribuidor em qualquer banco de dados.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,7 +46,7 @@ sp_drop_agent_profile [ @profile_id = ] profile_id
   
 ## <a name="arguments"></a>Argumentos  
  [  **@profile_id=**] *profile_id*  
- É a ID do perfil a ser removido. *profile_id* é **int**, sem padrão.  
+ É a ID do perfil a ser removido. *profile_id* está **int**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -54,10 +54,10 @@ sp_drop_agent_profile [ @profile_id = ] profile_id
 ## <a name="remarks"></a>Remarks  
  **sp_drop_agent_profile** é usado em todos os tipos de replicação.  
   
- Os parâmetros do perfil determinado também são removidos do **MSagent_parameters** tabela.  
+ Os parâmetros do perfil determinado também são descartados do **MSagent_parameters** tabela.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** pode executar a função de servidor fixa **sp_drop_agent_profile**.  
+ Somente os membros dos **sysadmin** pode executar a função de servidor fixa **sp_drop_agent_profile**.  
   
 ## <a name="see-also"></a>Consulte também  
  [sp_add_agent_profile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   

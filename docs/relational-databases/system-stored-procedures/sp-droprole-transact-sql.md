@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_droprole
 ms.assetid: 889ee074-00f8-40a9-bddb-d7d3ef0cbc19
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 39ef6031494b8e5bd4718c26d7635be4f916517e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: cdc97dbb75487300d228a53b7550f4687abf8a0f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263401"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024706"
 ---
 # <a name="spdroprole-transact-sql"></a>sp_droprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "33263401"
   Remove uma função de banco de dados do banco de dados atual.  
   
 > [!IMPORTANT]  
->  Em [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], **sp_droprole** foi substituída pela instrução DROP ROLE. **sp_droprole** é incluído somente para compatibilidade com versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e podem não ter suporte em uma versão futura.  
+>  Na [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], **sp_droprole** foi substituída pela instrução DROP ROLE. **sp_droprole** está incluído somente para compatibilidade com versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e podem não ter suporte em uma versão futura.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -56,9 +56,9 @@ sp_droprole [ @rolename= ] 'role'
 ## <a name="remarks"></a>Remarks  
  Somente as funções de banco de dados podem ser removidas usando **sp_droprole**.  
   
- Uma função de banco de dados com membros existentes não pode ser removida. Todos os membros de uma função de banco de dados devem ser removidos antes que ela possa ser removida. Para remover os usuários de uma função, use **sp_droprolemember**. Se todos os usuários ainda são membros da função de **sp_droprole** exibirá esses membros.  
+ Uma função de banco de dados com membros existentes não pode ser removida. Todos os membros de uma função de banco de dados devem ser removidos antes que ela possa ser removida. Para remover os usuários de uma função, use **sp_droprolemember**. Se todos os usuários ainda são membros da função, **sp_droprole** exibirá esses membros.  
   
- Funções fixas e **pública** função não pode ser removida.  
+ Funções fixas e as **pública** função não pode ser removida.  
   
  Uma função não poderá ser removida se possuir qualquer protegível. Antes de descartar uma função de aplicativo que possui itens protegíveis, é necessário transferir a propriedade dos itens protegíveis primeiro ou descartá-los. Use ALTER AUTHORIZATION para alterar o proprietário de objetos que não devem ser removidos.  
   

@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_dropmergesubscription
 ms.assetid: 34244ae6-bd98-4a6a-bbd3-85f50edfcdc0
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d0fb4d9bcd2f72db252380fe3ee0d914645255b9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d639b189f1b271f6563c32090992c376113ccfa2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32990221"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43027209"
 ---
 # <a name="spdropmergesubscription-transact-sql"></a>sp_dropmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,30 +51,30 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
   
 ## <a name="arguments"></a>Argumentos  
  [  **@publication=** ] **'***publicação***'**  
- É o nome da publicação. *publicação* é **sysname**, com um padrão NULL. A publicação já deve existir e estar de acordo com as regras para identificadores.  
+ É o nome da publicação. *publicação* está **sysname**, com um padrão NULL. A publicação já deve existir e obedecer às regras para identificadores.  
   
  [  **@subscriber=**] **'***assinante***'**  
- É o nome do Assinante. *assinante* é **sysname**, com um padrão NULL.  
+ É o nome do Assinante. *assinante* está **sysname**, com um padrão NULL.  
   
  [  **@subscriber_db=** ] **'***subscriber_db***'**  
- É o nome do banco de dados de assinatura. *subscription_database*é **sysname**, com um padrão NULL.  
+ É o nome do banco de dados de assinatura. *subscription_database*está **sysname**, com um padrão NULL.  
   
  [  **@subscription_type=** ] **'***subscription_type***'**  
- É o tipo de assinatura. *subscription_type*é **nvarchar (15)**, e pode ser um destes valores.  
+ É o tipo de assinatura. *subscription_type*está **nvarchar(15)**, e pode ser um destes valores.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Todos os**|Assinaturas push, pull e anônimas|  
 |**Anônimo**|Assinatura anônima.|  
-|**Enviar por push**|Assinatura push.|  
+|**envio por push**|Assinatura push.|  
 |**Pull**|Assinatura pull.|  
 |**ambos** (padrão)|Assinaturas push e pull.|  
   
  [  **@ignore_distributor =** ] *ignore_distributor*  
- Indica se esse procedimento armazenado será executado sem se conectar ao Distribuidor. *ignore_distributor* é **bit**, com um padrão de **0**. Esse parâmetro pode ser usado para descartar uma assinatura sem tarefas de limpeza no Distribuidor. Também é útil, se for necessário reinstalar o Distribuidor.  
+ Indica se esse procedimento armazenado será executado sem se conectar ao Distribuidor. *ignore_distributor* está **bit**, com um padrão de **0**. Esse parâmetro pode ser usado para descartar uma assinatura sem tarefas de limpeza no Distribuidor. Também é útil, se for necessário reinstalar o Distribuidor.  
   
  [  **@reserved=** ] *reservado*  
- É reservado para uso futuro. *reservado* é **bit**, com um padrão de **0**.  
+ É reservado para uso futuro. *reservado* está **bit**, com um padrão de **0**.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -86,7 +86,7 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
  [!code-sql[HowTo#sp_dropmergesubscription](../../relational-databases/replication/codesnippet/tsql/sp-dropmergesubscription_1.sql)]  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função de servidor fixa ou **db_owner** pode executar a função de banco de dados fixa **sp_dropmergesubscription**.  
+ Somente os membros dos **sysadmin** função de servidor fixa ou o **db_owner** banco de dados fixa podem executar **sp_dropmergesubscription**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Excluir uma assinatura Push](../../relational-databases/replication/delete-a-push-subscription.md)   

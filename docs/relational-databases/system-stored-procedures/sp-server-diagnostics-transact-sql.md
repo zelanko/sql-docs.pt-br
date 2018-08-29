@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_server_diagnostics
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 181b5ba51d87db43392af280d8fc4178da54dcc4
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 4896d26edb0aeb186f8408dff2ccf31d1aedcfe8
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263295"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028165"
 ---
 # <a name="spserverdiagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
  [ **@repeat_interval** =] **'***repeat_interval_in_seconds***'**  
  Indica o intervalo de tempo no qual o procedimento armazenado será executado repetidamente para enviar informações de integridade.  
   
- *repeat_interval_in_seconds* é **int** com o padrão de 0. Os valores de parâmetros válidos são 0 ou qualquer valor igual ou superior a 5. O procedimento armazenado deve ser executado por pelo menos 5 segundos para retornar dados completos. O valor mínimo de execução do procedimento armazenado no modo de repetição é de 5 segundos.  
+ *repeat_interval_in_seconds* está **int** com o padrão de 0. Os valores de parâmetros válidos são 0 ou qualquer valor igual ou superior a 5. O procedimento armazenado deve ser executado por pelo menos 5 segundos para retornar dados completos. O valor mínimo de execução do procedimento armazenado no modo de repetição é de 5 segundos.  
   
  Se esse parâmetro não for especificado ou se o valor especificado for 0, o procedimento armazenado retornará dados uma vez e depois será encerrado.  
   
@@ -62,26 +62,26 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ## <a name="result-sets"></a>Conjuntos de resultados  
 **sp_server_diagnostics** retorna as informações a seguir  
   
-|Coluna|Data type|Description|  
+|coluna|Data type|Description|  
 |------------|---------------|-----------------|  
 |**creation_time**|**datetime**|Indica o carimbo de data/hora de criação de linha. Cada linha em um único conjunto de linhas tem o mesmo carimbo de data/hora.|  
-|**component_type**|**sysname**|Indica se a linha contém informações para a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância de nível de componente ou para um grupo de disponibilidade AlwaysOn:<br /><br /> instância<br /><br /> AlwaysOn: AvailabilityGroup|  
+|**component_type**|**sysname**|Indica se a linha contém informações para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nível de componente ou para um grupo de disponibilidade Always On da instância:<br /><br /> instância<br /><br /> AlwaysOn: AvailabilityGroup|  
 |**component_name**|**sysname**|Indica o nome de componente ou o nome do grupo de disponibilidade:<br /><br /> sistema<br /><br /> recurso<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> eventos<br /><br /> *\<nome do grupo de disponibilidade >*|  
-|**state**|**Int**|Indica o status de integridade do componente:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
-|**state_desc**|**sysname**|Descreve a coluna de estado. Descrições que correspondem aos valores na coluna de estado são:<br /><br /> 0: desconhecido<br /><br /> 1: limpa<br /><br /> 2: aviso<br /><br /> 3: erro|  
+|**state**|**int**|Indica o status de integridade do componente:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
+|**state_desc**|**sysname**|Descreve a coluna de estado. Descrições que correspondem aos valores na coluna de estado são:<br /><br /> 0: desconhecido<br /><br /> 1: limpar<br /><br /> 2: aviso<br /><br /> 3: erro|  
 |**data**|**varchar (max)**|Especifica dados que são específicos do componente.|  
   
  Aqui estão as descrições dos cinco componentes:  
   
--   **sistema**: coleta dados de uma perspectiva de sistema em spinlocks, condições de processamento severas, tarefas não produzidas, falhas de página e uso da CPU. Essas informações produzem uma recomendação de estado de integridade geral.  
+-   **sistema**: coleta dados de uma perspectiva do sistema em spinlocks, condições de processamento severas, tarefas não produzidas, falhas de página e uso da CPU. Essas informações produzem uma recomendação de estado de integridade geral.  
   
--   **recurso**: coleta dados de uma perspectiva de recursos nas páginas de memória física e virtual, pools de buffers, cache e outros objetos de memória. Essas informações produz uma recomendação de estado de integridade geral.  
+-   **recurso**: coleta dados de uma perspectiva de recurso na memória física e virtual, pools de buffers, páginas, cache e outros objetos de memória. Essas informações produz uma recomendação de estado de integridade geral.  
   
--   **processamento de consulta**: coleta dados de uma perspectiva de processamento de consulta nos threads de trabalho, tarefas, aguarde tipos, sessões intensivas de CPU e tarefas de bloqueio. Essas informações produz uma recomendação de estado de integridade geral.  
+-   **query_processing**: coleta dados de uma perspectiva de processamento de consulta nos threads de trabalho, tarefas, esperar tipos, sessões intensivas de CPU e tarefas de bloqueio. Essas informações produz uma recomendação de estado de integridade geral.  
   
 -   **io_subsystem**: coleta dados sobre e/s. Além dos dados de diagnóstico, esse componente produz um estado de integridade limpo ou de integridade de aviso somente para um subsistema de IO.  
   
--   **eventos**: coleta dados e superfícies por meio do procedimento armazenado nos erros e eventos interessantes registrados pelo servidor, incluindo detalhes sobre exceções de buffer de anel, eventos sobre o agente de memória da memória, monitor do Agendador de buffer de anel pool de buffer, spinlocks, segurança e conectividade. Eventos sempre mostrarão 0 como o estado.  
+-   **eventos**: coleta dados e superfícies por meio do procedimento armazenado nos erros e eventos interessantes registrados pelo servidor, incluindo detalhes sobre exceções de buffer de anel, eventos sobre o agente de memória, da memória, monitor do Agendador de buffer de anel pool de buffer, spinlocks, segurança e conectividade. Eventos sempre mostrarão 0 como o estado.  
   
 -   **\<nome do grupo de disponibilidade >**: coleta dados para o grupo de disponibilidade especificado (se component_type = "sempre em: AvailabilityGroup").  
   
@@ -101,7 +101,7 @@ A tabela a seguir mapeia os componentes para seus estados de integridade associa
 O (x) em cada linha representa estados de integridade válida para o componente. Por exemplo, io_subsystem mostrará como clean ou warning. Não mostrará os estados de erro.  
  
 > [!NOTE]
-> Execução do procedimento sp_server_diagnostics é implementada em um thread preemptivo com prioridade alta.
+> Execução do procedimento de sp_server_diagnostics interno é implementada em um thread preemptive com prioridade alta.
   
 ## <a name="permissions"></a>Permissões  
 , é necessário ter permissão VIEW SERVER STATE no servidor.  

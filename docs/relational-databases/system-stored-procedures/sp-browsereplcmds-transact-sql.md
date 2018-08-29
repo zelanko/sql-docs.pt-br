@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_browsereplcmds
 ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
-caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 19c4c3b162d882f3d7a31701ad2cc838fcaaed74
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 744f28362bcb64d0d4e294e464cbd94c26f13d60
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32991293"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036550"
 ---
 # <a name="spbrowsereplcmds-transact-sql"></a>sp_browsereplcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,28 +52,28 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
   
 ## <a name="arguments"></a>Argumentos  
  [  **@xact_seqno_start =**] **'***xact_seqno_start***'**  
- Especifica o número de sequência exato de valor mais baixo a ser retornado. *xact_seqno_start* é **nchar (22)**, com um padrão de 0x00000000000000000000.  
+ Especifica o número de sequência exato de valor mais baixo a ser retornado. *xact_seqno_start* está **nchar (22)**, com um padrão de 0x00000000000000000000.  
   
  [  **@xact_seqno_end =**] **'***xact_seqno_end***'**  
- Especifica o número de sequência exato mais alto a ser retornado. *xact_seqno_end* é **nchar (22)**, com um padrão de 0xFFFFFFFFFFFFFFFFFFFF.  
+ Especifica o número de sequência exato mais alto a ser retornado. *xact_seqno_end* está **nchar (22)**, com um padrão de 0xFFFFFFFFFFFFFFFFFFFF.  
   
  [  **@originator_id =**] **'***originator_id***'**  
- Especifica se comandos com especificado *originator_id* são retornados. *originator_id* é **int**, com um padrão NULL.  
+ Especifica se comandos com a especificada *originator_id* são retornados. *originator_id* está **int**, com um padrão NULL.  
   
  [  **@publisher_database_id =**] **'***publisher_database_id***'**  
- Especifica se comandos com especificado *publisher_database_id* são retornados. *publisher_database_id* é **int**, com um padrão NULL.  
+ Especifica se comandos com a especificada *publisher_database_id* são retornados. *publisher_database_id* está **int**, com um padrão NULL.  
   
  [  **@article_id =**] **'***article_id***'**  
- Especifica se comandos com especificado *article_id* são retornados. *article_id* é **int**, com um padrão NULL.  
+ Especifica se comandos com a especificada *article_id* são retornados. *article_id* está **int**, com um padrão NULL.  
   
  [  **@command_id =**] *command_id*  
- É o local do comando na [MSrepl_commands &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msrepl-commands-transact-sql.md) a ser decodificado. *command_id* é **int**, com um padrão NULL. Se especificado, todos os outros parâmetros devem ser especificados também, e *xact_seqno_start*devem ser idênticos aos *xact_seqno_end*.  
+ É o local do comando na [MSrepl_commands &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msrepl-commands-transact-sql.md) a ser decodificado. *command_id* está **int**, com um padrão NULL. Se for especificado, todos os outros parâmetros Além disso, devem ser especificados e *xact_seqno_start*deve ser idêntico ao *xact_seqno_end*.  
   
  [  **@agent_id =**] *agent_id*  
- Especifica que apenas comandos para um agente de replicação específico são retornados. *agent_id* é **int**, com um valor padrão de NULL.  
+ Especifica que apenas comandos para um agente de replicação específico são retornados. *agent_id* está **int**, com um valor padrão de NULL.  
   
  [  **@compatibility_level =**] *compatibility_level*  
- É a versão do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no qual o *compatibility_level* é **int**, com um valor padrão de 9000000.  
+ É a versão do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no qual o *compatibility_level* está **int**, com um valor padrão de 9000000.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -86,15 +85,15 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 |**xact_seqno**|**varbinary(16)**|Número de sequência do comando.|  
 |**originator_srvname**|**sysname**|Servidor onde a transação originou.|  
 |**originator_db**|**sysname**|Banco de dados onde a transação originou.|  
-|**article_id**|**Int**|ID do artigo.|  
-|**type**|**Int**|Tipo de comando.|  
+|**article_id**|**int**|ID do artigo.|  
+|**type**|**int**|Tipo de comando.|  
 |**partial_command**|**bit**|Indica se esse é um comando parcial ou não.|  
-|**hashKey**|**Int**|Somente para uso interno.|  
-|**originator_publication_id**|**Int**|ID da publicação de origem da transação.|  
-|**originator_db_version**|**Int**|Versão do banco de dados onde a transação originou.|  
+|**hashKey**|**int**|Somente para uso interno.|  
+|**originator_publication_id**|**int**|ID da publicação de origem da transação.|  
+|**originator_db_version**|**int**|Versão do banco de dados onde a transação originou.|  
 |**originator_lsn**|**varbinary(16)**|Identifica o LSN (número de sequência de log) para o comando na publicação de origem. Usado em replicação transacional ponto a ponto.|  
 |**command**|**nvarchar(1024)**|Comando [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
-|**command_id**|**Int**|ID do comando na [MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md).|  
+|**command_id**|**int**|ID do comando em [MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md).|  
   
  Comandos longos podem ser divididos em várias linhas nos conjuntos de resultados.  
   
@@ -102,7 +101,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
  **sp_browsereplcmds** é usado em replicação transacional.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** fixo de função de servidor ou os membros do **db_owner** ou **replmonitor** funções de banco de dados fixa no banco de dados de distribuição podem executar **sp_browsereplcmds**.  
+ Somente os membros dos **sysadmin** fixo de função de servidor ou os membros da **db_owner** ou **replmonitor** funções de banco de dados fixa no banco de dados de distribuição podem executar **sp_browsereplcmds**.  
   
 ## <a name="see-also"></a>Consulte também  
  [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   

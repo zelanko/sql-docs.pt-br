@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_audit_write
 ms.assetid: 4c523848-1ce6-49ad-92b3-e0e90f24f1c2
-caps.latest.revision: 9
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 84b7ea14b205b2642c8c67c24793310ca8245832
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 9e52313f827d49200e58910d4fa577d39d91567f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239296"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43037888"
 ---
 # <a name="spauditwrite-transact-sql"></a>sp_audit_write (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +47,13 @@ sp_audit_write [ @user_defined_event_id =  ] user_defined_event_id ,
   
 ## <a name="arguments"></a>Argumentos  
  **@user_defined_event_id**  
- Um parâmetro definido pelo usuário e registrado no **user_defined_event_id** coluna do log de auditoria. *@user_defined_event_id* é o tipo **smallint**.  
+ Um parâmetro definido pelo usuário e registrado na **user_defined_event_id** coluna do log de auditoria. *@user_defined_event_id* é o tipo **smallint**.  
   
  **@succeeded**  
- Um parâmetro passado por usuário para indicar se o evento teve êxito ou não. Isso aparece na coluna Êxito do log de auditoria. *@succeeded* é **bit**.  
+ Um parâmetro passado por usuário para indicar se o evento teve êxito ou não. Isso aparece na coluna Êxito do log de auditoria. *@succeeded* está **bit**.  
   
  **@user_defined_information**  
- É o texto definido pelo usuário e registrado na coluna user_defined_event_id do log de auditoria. *@user_defined_information* é **nvarchar (4000)**.  
+ É o texto definido pelo usuário e registrado na coluna user_defined_event_id do log de auditoria. *@user_defined_information* está **nvarchar (4000)**.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -62,10 +61,10 @@ sp_audit_write [ @user_defined_event_id =  ] user_defined_event_id ,
  As falhas são provocadas por parâmetros de entrada incorretos ou erros de gravação no log de auditoria de destino.  
   
 ## <a name="remarks"></a>Remarks  
- Quando o **USER_DEFINED_AUDIT_GROUP** é adicionada a uma especificação de auditoria de servidor ou uma especificação de auditoria de banco de dados, o evento disparado por **sp_audit_write** serão incluídos no log de auditoria.  
+ Quando o **USER_DEFINED_AUDIT_GROUP** é adicionado a uma especificação de auditoria de servidor ou uma especificação de auditoria de banco de dados, o evento acionado por **sp_audit_write** serão incluídos no log de auditoria.  
   
 ## <a name="permissions"></a>Permissões  
- Requer a participação no **pública** função de banco de dados.  
+ Requer associação na **pública** função de banco de dados.  
   
 ## <a name="examples"></a>Exemplos  
   

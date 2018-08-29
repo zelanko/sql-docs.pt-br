@@ -19,20 +19,20 @@ helpviewer_keywords:
 - sp_cursoroption
 ms.assetid: 88fc1dba-f4cb-47c0-92c2-bf398f4a382e
 caps.latest.revision: 8
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b404bdb0b96883df1b1e39b9190285b4795aeaa4
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5b3bb6500d4d1bc29859c428820d28ec48d6aa72
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240036"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026551"
 ---
 # <a name="spcursoroption-transact-sql"></a>sp_cursoroption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Define opções de cursor ou retorna informações de cursor criadas pelo procedimento armazenado sp_cursoropen. sp_cursoroption é invocado pela especificação de ID = 8 em um pacote de protocolo TDS de dados tabulares.  
+  Define opções de cursor ou retorna informações de cursor criadas pelo procedimento armazenado sp_cursoropen. sp_cursoroption é invocado pela especificação de ID = 8 em um pacote do protocolo TDS.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,25 +45,25 @@ sp_cursoroption cursor, code, value
   
 ## <a name="arguments"></a>Argumentos  
  *cursor*  
- É um *tratar* valor que é gerado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e retornado pelo procedimento armazenado sp_cursoropen. *cursor* requer um **int** valor para a execução de entrada.  
+ É um *manipular* valor que é gerado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e retornados pelo procedimento armazenado sp_cursoropen. *cursor* exige um **int** valor para a execução de entrada.  
   
  *Código*  
  Usado para estipular vários fatores dos valores de retorno de cursor. *código* requer um dos seguintes **int** valores de entrada:  
   
-|Value|Nome|Description|  
+|Valor|Nome|Description|  
 |-----------|----------|-----------------|  
-|0x0001|TEXTPTR_ONLY|Retorna o ponteiro de texto, e não os dados reais, para certos textos designados ou colunas de imagem.<br /><br /> TEXTPTR_ONLY permite usar ponteiros de texto a ser usado como *identificadores* para objetos blob que podem ser recuperados seletivamente ou atualizados usando [!INCLUDE[tsql](../../includes/tsql-md.md)] ou instalações DBLIB (por exemplo, [!INCLUDE[tsql](../../includes/tsql-md.md)] READTEXT ou DBLIB DBWRITETEXT).<br /><br /> Se um valor "0" for atribuído, todas as colunas de texto e imagem na lista selecionada retornarão ponteiros de texto, em vez de dados.|  
-|0x0002|CURSOR_NAME|Atribui o nome especificado no *valor* até o cursor. Isso, por sua vez, permite ao ODBC usar [!INCLUDE[tsql](../../includes/tsql-md.md)] posicionado instruções UPDATE/DELETE em cursores abertos via sp_cursoropen.<br /><br /> É possível especificar a cadeia de caracteres como qualquer tipo de dados de caractere ou Unicode.<br /><br /> Como [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções UPDATE/DELETE posicionadas operam, por padrão, na primeira linha em um cursor fat, sp_cursor SETPOSITION deve ser usado para posicionar o cursor antes de emitir a instrução UPDATE/DELETE posicionada.|  
+|0x0001|TEXTPTR_ONLY|Retorna o ponteiro de texto, e não os dados reais, para certos textos designados ou colunas de imagem.<br /><br /> TEXTPTR_ONLY permite usar ponteiros de texto a ser usado como *alças* aos objetos de blob que posteriormente podem ser recuperados seletivamente ou atualizados usando [!INCLUDE[tsql](../../includes/tsql-md.md)] ou instalações DBLIB (por exemplo, [!INCLUDE[tsql](../../includes/tsql-md.md)] READTEXT ou DBLIB DBWRITETEXT).<br /><br /> Se um valor "0" for atribuído, todas as colunas de texto e imagem na lista selecionada retornarão ponteiros de texto, em vez de dados.|  
+|0x0002|CURSOR_NAME|Atribui o nome especificado na *valor* até o cursor. Isso, por sua vez, permite ao ODBC usar [!INCLUDE[tsql](../../includes/tsql-md.md)] posicionado instruções UPDATE/DELETE em cursores abertos via sp_cursoropen.<br /><br /> É possível especificar a cadeia de caracteres como qualquer tipo de dados de caractere ou Unicode.<br /><br /> Uma vez que [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções UPDATE/DELETE posicionadas operam, por padrão, na primeira linha em um cursor fat, sp_cursor SETPOSITION deve ser usado para posicionar o cursor antes da emissão da instrução UPDATE/DELETE posicionada.|  
 |0x0003|TEXTDATA|Retorna os dados reais, não o ponteiro de texto, para certas colunas de texto ou imagem em buscas subsequentes (isto é, desfaz o efeito de TEXTPTR_ONLY).<br /><br /> Se TEXTDATA for habilitado para uma coluna específica, a linha será buscada novamente ou atualizada e poderá ser definida outra vez como TEXTPTR_ONLY. Assim como ocorre com TEXTPTR_ONLY, o parâmetro de valor é um inteiro que especifica o número da coluna e um valor de zero retorna todas as colunas de texto ou imagem.|  
 |0x0004|SCROLLOPT|Opção de rolagem. Consulte "Valores de códigos retornados" posteriormente neste tópico para obter informações adicionais.|  
 |0x0005|CCOPT|Opção de controle de simultaneidade. Consulte "Valores de códigos retornados" posteriormente neste tópico para obter informações adicionais.|  
-|0x0006|ROWCOUNT|O número de linhas atualmente no conjunto de resultados.<br /><br /> Observação: O número de linhas pode ter mudado desde o valor retornado por sp_cursoropen se população assíncrona estiver sendo usada. O valor –1 será retornado se o número de linhas for desconhecido.|  
+|0x0006|ROWCOUNT|O número de linhas atualmente no conjunto de resultados.<br /><br /> Observação: O número de linhas pode ter alterado desde o valor retornado por sp_cursoropen se população assíncrona estiver sendo usada. O valor –1 será retornado se o número de linhas for desconhecido.|  
   
  *value*  
  Designa o valor retornado por *código*. *valor* é um parâmetro obrigatório que chama um 0x0001, 0x0002 ou 0x0003 *código* valor de entrada.  
   
 > [!NOTE]  
->  Um *código* valor 2 é um tipo de dados de cadeia de caracteres. Qualquer outro *código* valor de entrada ou retornadas por *valor* é um inteiro.  
+>  Um *código* valor 2 é um tipo de dados de cadeia de caracteres. Qualquer outro *código* valor de entrada ou retornado por *valor* é um inteiro.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  O *valor* parâmetro pode retornar um dos seguintes *código* valores.  

@@ -18,16 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_enum_login_for_proxy
 ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
-caps.latest.revision: 18
-author: stevestein
-ms.author: sstein
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: f3c4751f3d9dfaa60110f7e859bc8157de2c9246
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7faec16e49bb2776babb126a5f4d314889b70c2b
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249928"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43036268"
 ---
 # <a name="spenumloginforproxy-transact-sql"></a>sp_enum_login_for_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +46,13 @@ sp_enum_login_for_proxy
   
 ## <a name="arguments"></a>Argumentos  
  [ **@name**=] '*nome*'  
- O nome de um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] principal, o logon, a função de servidor ou **msdb** função de banco de dados para listar proxies. O nome é **nvarchar (256)**, com um padrão NULL.  
+ O nome de um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entidade de segurança, logon, função de servidor, ou **msdb** função de banco de dados para listar proxies. O nome é **nvarchar(256)**, com um padrão NULL.  
   
  [ **@proxy_id**= ] *id*  
- O número de identificação de proxy do proxy para o qual listar informações. O *proxy_id* é **int**, com um padrão NULL. Ambos o *id* ou *proxy_name* pode ser especificado.  
+ O número de identificação de proxy do proxy para o qual listar informações. O *proxy_id* é **int**, com um padrão NULL. Ambos os *id* ou o *proxy_name* pode ser especificado.  
   
  [ **@proxy_name**= ] **'***proxy_name***'**  
- O nome do proxy para o qual listar informações. O *proxy_name* é **sysname**, com um padrão NULL. Ambos o *id* ou *proxy_name* pode ser especificado.  
+ O nome do proxy para o qual listar informações. O *proxy_name* é **sysname**, com um padrão NULL. Ambos os *id* ou o *proxy_name* pode ser especificado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -63,22 +61,22 @@ sp_enum_login_for_proxy
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**proxy_id**|**Int**|Número de identificação de proxy.|  
+|**proxy_id**|**int**|Número de identificação de proxy.|  
 |**proxy_name**|**sysname**|O nome do proxy.|  
 |**name**|**sysname**|Nome da entidade de segurança da associação.|  
-|**flags**|**Int**|Tipo da entidade de segurança.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon<br /><br /> **1** = função de sistema fixa<br /><br /> **2** = função de banco de dados em **msdb**|  
+|**flags**|**int**|Tipo da entidade de segurança.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon<br /><br /> **1** = função de sistema fixa<br /><br /> **2** = função de banco de dados em **msdb**|  
   
 ## <a name="remarks"></a>Remarks  
- Quando nenhum parâmetro for fornecido, **sp_enum_login_for_proxy** lista informações sobre todos os logons na instância para cada proxy.  
+ Quando nenhum parâmetro for fornecido, **sp_enum_login_for_proxy** lista informações sobre todos os logons na instância para todo proxy.  
   
- Quando um id de proxy ou nome de proxy é fornecido, **sp_enum_login_for_proxy** lista logons que têm acesso ao proxy. Quando é fornecido um nome de logon, **sp_enum_login_for_proxy** lista os proxies que o logon tenha acessem.  
+ Quando uma id de proxy ou nome de proxy é fornecido, **sp_enum_login_for_proxy** lista logons que têm acesso ao proxy. Quando um nome de logon é fornecido, **sp_enum_login_for_proxy** listas os proxies que o logon tem acessem ao.  
   
  Quando informações de proxy e um nome de logon são fornecidos, o conjunto de resultados retornará uma linha se o logon especificado tiver acesso ao proxy especificado.  
   
  Esse procedimento armazenado está localizado em **msdb**.  
   
 ## <a name="permissions"></a>Permissões  
- Permissões de execução para esse procedimento usam como padrão membros do **sysadmin** função de servidor fixa.  
+ Permissões de execução para esse procedimento usam como padrão os membros de **sysadmin** função de servidor fixa.  
   
 ## <a name="examples"></a>Exemplos  
   

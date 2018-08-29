@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpdistributor
 ms.assetid: 37b0983e-3b69-4f0f-977e-20efce0a0b97
 caps.latest.revision: 32
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e634d01d6bf241d6d626fb6c28038aa6175b2468
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d0b7e22c946626c10d08781e00886083d0991d01
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33003133"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43022575"
 ---
 # <a name="sphelpdistributor-transact-sql"></a>sp_helpdistributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,52 +61,52 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
  É o nome do distribuidor. O distribuidor é **sysname**, com um padrão de **%**, que é o único valor que retorna um conjunto de resultados.  
   
  [  **@distribdb=**] **'***distribdb***'** saída  
- É o nome do banco de dados de distribuição. *distribdb* é **sysname**, com um padrão de **%**, que é o único valor que retorna um conjunto de resultados.  
+ É o nome do banco de dados de distribuição. *distribdb* está **sysname**, com um padrão de **%**, que é o único valor que retorna um conjunto de resultados.  
   
  [  **@directory=**] **'***diretório***'** saída  
- É o diretório de trabalho. *diretório* é **nvarchar (255)**, com um padrão de **%**, que é o único valor que retorna um conjunto de resultados.  
+ É o diretório de trabalho. *diretório* está **nvarchar (255)**, com um padrão de **%**, que é o único valor que retorna um conjunto de resultados.  
   
  [  **@account=**] **'***conta***' saída**  
- É a conta de usuário do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. *conta*é **nvarchar (255)**, com um padrão de **%**, que é o único valor que retorna um conjunto de resultados.  
+ É a conta de usuário do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. *conta*está **nvarchar (255)**, com um padrão de **%**, que é o único valor que retorna um conjunto de resultados.  
   
- [  **@min_distretention=**] *min_distretention * saída**  
- É o período mínimo de retenção da distribuição, em horas. *min_distretention* é **int**, com um padrão de **-1**.  
+ [  **@min_distretention=**] *min_distretention * * * saída**  
+ É o período mínimo de retenção da distribuição, em horas. *min_distretention* está **int**, com um padrão de **-1**.  
   
- [  **@max_distretention=**] *max_distretention * saída**  
- É o período máximo de retenção da distribuição, em horas. *max_distretention* é **int**, com um padrão de **-1**.  
+ [  **@max_distretention=**] *max_distretention * * * saída**  
+ É o período máximo de retenção da distribuição, em horas. *max_distretention* está **int**, com um padrão de **-1**.  
   
- [  **@history_retention=**] *history_retention * saída**  
- É o período de retenção do histórico, em horas. *history_retention* é **int**, com um padrão de **-1**.  
+ [  **@history_retention=**] *history_retention * * * saída**  
+ É o período de retenção do histórico, em horas. *history_retention* está **int**, com um padrão de **-1**.  
   
  [  **@history_cleanupagent=**] **'***history_cleanupagent***' saída**  
- É o nome do agente de limpeza do histórico. *history_cleanupagent* é **nvarchar (100)**, com um padrão de **%**, que é o único valor que retorna um conjunto de resultados.  
+ É o nome do agente de limpeza do histórico. *history_cleanupagent* está **nvarchar(100)**, com um padrão de **%**, que é o único valor que retorna um conjunto de resultados.  
   
  [  **@distrib_cleanupagent =**] **'***distrib_cleanupagent***' saída**  
- É o nome do trabalho do agente de limpeza da distribuição. *distrib_cleanupagent* é **nvarchar (100)**, com um padrão de **%**, que é o único valor que retorna um conjunto de resultados.  
+ É o nome do trabalho do agente de limpeza da distribuição. *distrib_cleanupagent* está **nvarchar(100)**, com um padrão de **%**, que é o único valor que retorna um conjunto de resultados.  
   
- [  **@publisher=**] **'***publicador***'**  
- É o nome do Publicador. *publicador* é **sysname**, com um padrão NULL.  
+ [  **@publisher=**] **'***publisher***'**  
+ É o nome do Publicador. *Publisher* está **sysname**, com um padrão NULL.  
   
  [  **@local=**] **'***local***'**  
- Especifica se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve obter valores de servidor local. *local* é **nvarchar (5)**, com um padrão NULL.  
+ Especifica se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve obter valores de servidor local. *local* está **nvarchar (5)**, com um padrão NULL.  
   
  [  **@rpcsrvname=**] **'***rpcsrvname***' saída**  
- É o nome do servidor que envia chamadas de procedimento remoto. *rpcsrvname* é **sysname**, com um padrão de **%**, que é o único valor que retorna um conjunto de resultados.  
+ É o nome do servidor que envia chamadas de procedimento remoto. *rpcsrvname* está **sysname**, com um padrão de **%**, que é o único valor que retorna um conjunto de resultados.  
   
  [ **@publisher_type**=] **'***publisher_type***' saída**  
- É o tipo do Publicador. *publisher_type* é **sysname**, com um padrão de **%**, que é o único valor que retorna um conjunto de resultados.  
+ É o tipo do Publicador. *publisher_type* está **sysname**, com um padrão de **%**, que é o único valor que retorna um conjunto de resultados.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**Distribuidor**|**sysname**|Nome do Distribuidor.|  
-|**Banco de dados de distribuição**|**sysname**|Nome do banco de dados de distribuição.|  
+|**distribuidor**|**sysname**|Nome do Distribuidor.|  
+|**banco de dados de distribuição**|**sysname**|Nome do banco de dados de distribuição.|  
 |**Diretório**|**nvarchar(255)**|Nome do diretório de trabalho.|  
-|**Conta**|**nvarchar(255)**|Nome da conta de usuário do Windows|  
-|**retenção de distrib min**|**Int**|Período mínimo de retenção de distribuição.|  
-|**retenção de distrib max**|**Int**|Período máximo de retenção de distribuição.|  
-|**retenção de histórico**|**Int**|Período de retenção do histórico|  
+|**conta**|**nvarchar(255)**|Nome da conta de usuário do Windows|  
+|**retenção de distrib min**|**int**|Período mínimo de retenção de distribuição.|  
+|**retenção de distrib max**|**int**|Período máximo de retenção de distribuição.|  
+|**retenção de histórico**|**int**|Período de retenção do histórico|  
 |**Agente de limpeza de histórico**|**nvarchar(100)**|Nome do agente de limpeza do histórico.|  
 |**Agente de limpeza de distribuição**|**nvarchar(100)**|Nome do agente de limpeza da Distribuição.|  
 |**nome do servidor RPC**|**sysname**|Nome do Distribuidor local ou remoto.|  
@@ -122,7 +122,7 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
  Se um ou mais parâmetros de saída são especificados durante a execução **sp_helpdistributor**, todos os parâmetros de saída definidos como NULL terão valores atribuídos na saída e nenhum conjunto de resultados será retornado. Se nenhum parâmetro de saída for especificado, um conjunto de resultados será retornado.  
   
 ## <a name="permissions"></a>Permissões  
- O seguinte conjunto de resultados colunas ou parâmetros de saída são retornados aos membros do **sysadmin** a função de servidor fixa no publicador e o **db_owner** função de banco de dados fixa no banco de dados de publicação:  
+ O seguinte conjunto de resultados colunas ou parâmetros de saída são retornados aos membros do **sysadmin** função de servidor fixa no publicador e o **db_owner** função de banco de dados fixa do banco de dados de publicação:  
   
 |Coluna de conjunto de resultados|Parâmetro de saída|  
 |-----------------------|----------------------|  

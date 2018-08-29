@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_help_agent_profile
 ms.assetid: 5637b671-4aa3-497e-9a1c-c99798a1afb4
 caps.latest.revision: 19
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 724cec30c6790fb7bc8e56b7fd6fe7cc273fe301
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 551122d7e31d33f50c6c1c4e4f48f76716eaa7d5
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32995303"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024061"
 ---
 # <a name="sphelpagentprofile-transact-sql"></a>sp_help_agent_profile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,27 +47,27 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
   
 ## <a name="arguments"></a>Argumentos  
  [  **@agent_type=**] *agent_type*  
- É o tipo de agente. *agent_type* é **int**, com um padrão de **0**, e pode ser um destes valores.  
+ É o tipo de agente. *agent_type* está **int**, com um padrão de **0**, e pode ser um destes valores.  
   
-|Value|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**1**|Snapshot Agent|  
 |**2**|Agente de Leitor de Log|  
 |**3**|Agente de Distribuição|  
-|**4**|Agente de Mesclagem|  
+|**4**|Merge Agent|  
 |**9**|Queue Reader Agent|  
   
  [  **@profile_id=**] *profile_id*  
- É a ID do perfil a ser exibido. *profile_id* é **int**, com um padrão de **-1**, que retorna todos os perfis do **MSagent_profiles** tabela.  
+ É a ID do perfil a ser exibido. *profile_id* está **int**, com um padrão de **-1**, que retorna todos os perfis de **MSagent_profiles** tabela.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**profile_id**|**Int**|A ID do perfil.|  
+|**profile_id**|**int**|A ID do perfil.|  
 |**profile_name**|**sysname**|Exclusivo para o tipo de agente.|  
-|**agent_type**|**Int**|**1** = o agente de instantâneo<br /><br /> **2** = o log Reader Agent<br /><br /> **3** = o agente de distribuição<br /><br /> **4** = o agente de mesclagem<br /><br /> **9** = queue Reader Agent|  
-|**Tipo**|**Int**|**0** = sistema<br /><br /> **1** = personalizado|  
+|**agent_type**|**int**|**1** = o agente de instantâneo<br /><br /> **2** = log Reader Agent<br /><br /> **3** = o agente de distribuição<br /><br /> **4** = o agente de mesclagem<br /><br /> **9** = queue Reader Agent|  
+|**Tipo**|**int**|**0** = sistema<br /><br /> **1** = personalizado|  
 |**Descrição**|**varchar(3000)**|Descrição do perfil.|  
 |**def_profile**|**bit**|Especifica se este perfil será o padrão para esse tipo de agente.|  
   
@@ -78,7 +78,7 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
  **sp_help_agent_profile** é usado em todos os tipos de replicação.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função de servidor fixa ou **replmonitor** pode executar a função de banco de dados fixa **sp_help_agent_profile**.  
+ Somente os membros dos **sysadmin** função de servidor fixa ou o **replmonitor** banco de dados fixa podem executar **sp_help_agent_profile**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Trabalhar com perfis do Agente de Replicação](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
