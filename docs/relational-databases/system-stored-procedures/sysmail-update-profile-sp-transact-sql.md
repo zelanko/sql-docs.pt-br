@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_update_profile_sp
 ms.assetid: eaedf7ce-a8d5-4ab9-99e0-d77d5be19e90
-caps.latest.revision: 29
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a1b6d810355590ddc69c0b57fa0fc3e24e461696
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c4cbd14af00e8a2c4858c611b051cc0bc03a1993
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259646"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030638"
 ---
 # <a name="sysmailupdateprofilesp-transact-sql"></a>sysmail_update_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,13 +45,13 @@ sysmail_update_profile_sp [ [ @profile_id = ] profile_id , ] [ [ @profile_name =
   
 ## <a name="arguments"></a>Argumentos  
  [ **@profile_id** =] *profile_id*  
- A id de perfil para atualizar. *profile_id* é **int**, com um padrão NULL. Pelo menos uma das *profile_id* ou *profile_name* deve ser especificado. Se ambos forem especificados, o procedimento alterará o nome do perfil.  
+ A id de perfil a ser atualizada. *profile_id* está **int**, com um padrão NULL. Pelo menos um dos *profile_id* ou *profile_name* deve ser especificado. Se ambos forem especificados, o procedimento alterará o nome do perfil.  
   
  [ **@profile_name** =] **'***profile_name***'**  
- O nome do perfil a ser atualizado ou o novo nome para o perfil. *profile_name* é **sysname**, com um padrão NULL. Pelo menos uma das *profile_id* ou *profile_name* deve ser especificado. Se ambos forem especificados, o procedimento alterará o nome do perfil.  
+ O nome do perfil a ser atualizado ou o novo nome para o perfil. *profile_name* está **sysname**, com um padrão NULL. Pelo menos um dos *profile_id* ou *profile_name* deve ser especificado. Se ambos forem especificados, o procedimento alterará o nome do perfil.  
   
  [ **@description** =] **'***descrição***'**  
- A nova descrição do perfil. *Descrição* é **nvarchar (256)**, com um padrão NULL.  
+ A nova descrição do perfil. *Descrição* está **nvarchar(256)**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -60,15 +59,15 @@ sysmail_update_profile_sp [ [ @profile_id = ] profile_id , ] [ [ @profile_name =
 ## <a name="remarks"></a>Remarks  
  Quando a ID de perfil e o nome de perfil são especificados, o procedimento altera o nome do perfil para o nome fornecido e atualiza a descrição para o perfil. Quando somente um desses argumentos é fornecido, o procedimento atualiza a descrição para o perfil.  
   
- O procedimento armazenado **sysmail_update_profile_sp** está no **msdb** banco de dados e pertence a **dbo** esquema. O procedimento deve ser executado com um nome de três partes se o banco de dados atual não é **msdb**.  
+ O procedimento armazenado **sysmail_update_profile_sp** está no **msdb** banco de dados e é de propriedade de **dbo** esquema. O procedimento deve ser executado com um nome de três partes se o banco de dados atual não for **msdb**.  
   
 ## <a name="permissions"></a>Permissões  
- Permissões de execução para esse procedimento usam como padrão membros do **sysadmin** função de servidor fixa.  
+ Permissões de execução para esse procedimento usam como padrão os membros de **sysadmin** função de servidor fixa.  
   
 ## <a name="examples"></a>Exemplos  
  **A. Alterando a descrição de um perfil**  
   
- O exemplo a seguir altera a descrição para o perfil chamado `AdventureWorks Administrator` no **msdb** banco de dados.  
+ O exemplo a seguir altera a descrição para o perfil nomeado `AdventureWorks Administrator` no **msdb** banco de dados.  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_profile_sp  
@@ -76,7 +75,7 @@ EXECUTE msdb.dbo.sysmail_update_profile_sp
     ,@description = 'Administrative mail profile.';  
 ```  
   
- **B. Alterando o nome e a descrição de um perfil**  
+ **B. Alterando o nome e descrição de um perfil**  
   
  O exemplo a seguir altera o nome e a descrição do perfil com a ID de perfil `750`.  
   

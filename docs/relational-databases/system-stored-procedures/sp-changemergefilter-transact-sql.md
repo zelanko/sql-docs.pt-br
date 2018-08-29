@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_changemergefilter
 ms.assetid: e08fdfdd-d242-4e85-817b-9f7a224fe567
 caps.latest.revision: 31
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 332cb7bd6d4afa477064bd014e36dc2e5b6e8aa7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c700ffbcee68cd3557dd5e5a170e8cbba59a0f50
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32992903"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032999"
 ---
 # <a name="spchangemergefilter-transact-sql"></a>sp_changemergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,23 +52,23 @@ sp_changemergefilter [ @publication= ] 'publication'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@publication=** ] **'***publicação***'**  
- É o nome da publicação. *publicação* é **sysname**, sem padrão.  
+ É o nome da publicação. *publicação* está **sysname**, sem padrão.  
   
  [  **@article=** ] **'***artigo***'**  
- É o nome do artigo. *artigo* é **sysname**, sem padrão.  
+ É o nome do artigo. *artigo* está **sysname**, sem padrão.  
   
  [  **@filtername=** ] **'***filtername***'**  
- É o nome atual do filtro. *FilterName* é **sysname**, sem padrão.  
+ É o nome atual do filtro. *FilterName* está **sysname**, sem padrão.  
   
  [  **@property=** ] **'***propriedade***'**  
- É o nome da propriedade a ser alterada. *propriedade* é **sysname**, sem padrão.  
+ É o nome da propriedade a ser alterada. *propriedade* está **sysname**, sem padrão.  
   
  [  **@value=**] **'***valor***'**  
- É o novo valor da propriedade especificada. *valor*é **nvarchar (1000)**, sem padrão.  
+ É o novo valor da propriedade especificada. *valor*está **nvarchar (1000)**, sem padrão.  
   
  Essa tabela descreve as propriedades de artigos e os valores dessas propriedades.  
   
-|Propriedade|Value|Description|  
+|Propriedade|Valor|Description|  
 |--------------|-----------|-----------------|  
 |**filter_type**|**1**|Filtro de junção.<br /><br /> Essa opção é requerida para suporte a Assinantes [!INCLUDE[ssEW](../../includes/ssew-md.md)].|  
 ||**2**|Relação de registro lógico.|  
@@ -84,12 +84,12 @@ sp_changemergefilter [ @publication= ] 'publication'
   
  **0** Especifica que as alterações no artigo de mesclagem fazem com que o instantâneo seja inválido. Se o procedimento armazenado detectar que a alteração requer um novo instantâneo, ocorrerá um erro e nenhuma alteração será feita.  
   
- **1** significa que as alterações no artigo de mesclagem podem invalidar o instantâneo inválido, e se houver assinaturas existentes que exigem um novo instantâneo, dará permissão para o instantâneo existente seja marcado como obsoleto e um novo instantâneo seja gerado.  
+ **1** significa que as alterações no artigo de mesclagem podem invalidar o instantâneo ser inválida e se houver assinaturas existentes que exigem um novo instantâneo, dará permissão para o instantâneo existente seja marcado como obsoleto e um novo instantâneo seja gerado.  
   
  [  **@force_reinit_subscription =** ] *force_reinit_subscription*  
  Confirma que a ação tomada por esse procedimento armazenado pode exigir que as assinaturas existentes sejam reinicializadas. *force_reinit_subscription* é um **bit** com um padrão de **0**.  
   
- **0** Especifica que as alterações no artigo de mesclagem fazem com que a assinatura ser reiniciada. Se o procedimento armazenado detectar que a alteração irá requerer assinaturas existentes para ser reiniciada, ocorrerá um erro e nenhuma alteração será feita.  
+ **0** Especifica que as alterações no artigo de mesclagem fazem com que a assinatura seja reiniciada. Se o procedimento armazenado detectar que a alteração irá requerer assinaturas existentes para ser reiniciada, ocorrerá um erro e nenhuma alteração será feita.  
   
  **1** significa que as alterações no artigo de mesclagem fará com que as assinaturas existentes sejam reinicializadas e dá permissão para que ocorra a reinicialização da assinatura.  
   
@@ -99,12 +99,12 @@ sp_changemergefilter [ @publication= ] 'publication'
 ## <a name="remarks"></a>Remarks  
  **sp_changemergefilter** é usado em replicação de mesclagem.  
   
- A alteração do filtro em um artigo de mesclagem requer que o instantâneo, se existir, seja recriado. Isso é feito definindo o **@force_invalidate_snapshot** para **1**. Além disso, se houver assinaturas para este artigo, elas deverão ser reiniciadas. Isso é feito definindo o **@force_reinit_subscription** para **1**.  
+ A alteração do filtro em um artigo de mesclagem requer que o instantâneo, se existir, seja recriado. Isso é feito definindo a **@force_invalidate_snapshot** à **1**. Além disso, se houver assinaturas para este artigo, elas deverão ser reiniciadas. Isso é feito definindo a **@force_reinit_subscription** à **1**.  
   
  Para usar registros lógicos, a publicação e os artigos devem atender a vários requisitos. Para obter mais informações, consulte [Agrupar alterações a linhas relacionadas com registros lógicos](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função de servidor fixa ou **db_owner** pode executar a função de banco de dados fixa **sp_changemergefilter**.  
+ Somente os membros dos **sysadmin** função de servidor fixa ou **db_owner** banco de dados fixa podem executar **sp_changemergefilter**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Alterar propriedades da publicação e do artigo](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   

@@ -22,16 +22,15 @@ helpviewer_keywords:
 - change data capture [SQL Server], enabling databases
 - sp_cdc_enable_db
 ms.assetid: 176d83b3-493d-43cd-800e-aa123c3bdf17
-caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 03a2ffce46b6789e32cccc361760f2aea842adb7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0f8c68e5366d8cd55475621ff4985c48a47ed4ae
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255765"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030280"
 ---
 # <a name="sysspcdcenabledb-transact-sql"></a>sys.sp_cdc_enable_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,12 +53,12 @@ sys.sp_cdc_enable_db
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma  
+ None  
   
 ## <a name="remarks"></a>Remarks  
  Não é possível habilitar o Change data capture [bancos de dados do sistema](../../relational-databases/databases/system-databases.md) ou bancos de dados de distribuição.  
   
- O sys.sp_cdc_enable_db cria os objetos do Change Data Capture que têm escopo em todo o banco de dados, inclusive tabelas de metadados e gatilhos DDL. Ele também cria o esquema cdc e o usuário de banco de dados de cdc e define a coluna is_cdc_enabled para a entrada do banco de dados no [sys. Databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) exibição 1 do catálogo.  
+ O sys.sp_cdc_enable_db cria os objetos do Change Data Capture que têm escopo em todo o banco de dados, inclusive tabelas de metadados e gatilhos DDL. Ele também cria o esquema cdc e usuário de banco de dados cdc e define a coluna is_cdc_enabled para a entrada de banco de dados na [sys. Databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) exibição como 1 do catálogo.  
   
 ## <a name="permissions"></a>Permissões  
  Requer associação na função de servidor fixa sysadmin.  

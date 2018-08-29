@@ -15,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - data space catalog views [SQL Server]
 ms.assetid: ab95e6f8-51dc-4018-9d19-cc0a6de893a5
-caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 351cf5d69c6e232894161990c78c851c8943f06f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 42df8af2851673a208f87bc3e74d44c40770552d
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33175403"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029617"
 ---
 # <a name="data-spaces-transact-sql"></a>Espaços de dados (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

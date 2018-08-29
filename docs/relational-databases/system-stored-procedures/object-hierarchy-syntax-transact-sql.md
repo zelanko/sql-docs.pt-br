@@ -15,21 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - objects [SQL Server], hierarchy syntax
 ms.assetid: 7ed8df86-9fd2-4e09-96bc-5381fec85f65
-caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: e7b3df2aad780cabe33855374cc5b6372366eeaf
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 979d67b930d95817c0c27f671885c9b5fd9fb0d4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238047"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032534"
 ---
 # <a name="object-hierarchy-syntax-transact-sql"></a>Sintaxe da hierarquia de objetos (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  O *propertyname* parâmetro de sp_OAGetProperty e sp_OASetProperty e *methodname* parâmetro de sp_OAMethod dá suporte a uma sintaxe de hierarquia de objeto que é semelhante ao de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Quando essa sintaxe especial for usada, esses parâmetros têm o seguinte formato geral.  
+  O *propertyname* parâmetro de sp_OAGetProperty e sp_OASetProperty e o *methodname* parâmetro de sp_OAMethod dá suporte a uma sintaxe de hierarquia de objeto que é semelhante do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Quando essa sintaxe especial for usada, esses parâmetros têm o seguinte formato geral.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,7 +39,7 @@ ms.locfileid: "33238047"
   
 ## <a name="arguments"></a>Argumentos  
  *TraversedObject*  
- É um objeto OLE na hierarquia sob o *objecttoken* especificado no procedimento armazenado. Use a sintaxe do [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] para especificar uma série de coleções, propriedades de objeto e métodos que retornam objetos. Cada especificador de objeto na série deve ser separado por um ponto (.).  
+ É um objeto OLE na hierarquia sob a *objecttoken* especificado no procedimento armazenado. Use a sintaxe do [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] para especificar uma série de coleções, propriedades de objeto e métodos que retornam objetos. Cada especificador de objeto na série deve ser separado por um ponto (.).  
   
  Um item na série pode ser o nome de uma coleção. Use esta sintaxe para especificar uma coleção:  
   
@@ -49,9 +48,9 @@ ms.locfileid: "33238047"
  As aspas duplas (") são necessárias. O [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] não há suporte para a sintaxe de ponto de exclamação (!) para coleções.  
   
  *PropertyOrMethod*  
- É o nome de uma propriedade ou método de *TraversedObject*.  
+ É o nome de uma propriedade ou método as *TraversedObject*.  
   
- Para especificar todos os parâmetros de método ou índice usando parâmetros sp_OAGetProperty, sp_OASetProperty ou sp_OAMethod (incluindo suporte para parâmetros de saída sp_OAMethod), use a seguinte sintaxe:  
+ Para especificar todos os parâmetros de método ou índice usando os parâmetros de sp_OAGetProperty, sp_OASetProperty ou sp_OAMethod (incluindo suporte para parâmetros de saída sp_OAMethod), use a seguinte sintaxe:  
   
  *PropertyOrMethod*  
   
@@ -62,18 +61,18 @@ ms.locfileid: "33238047"
  As aspas duplas (") são necessárias. Todos os parâmetros nomeados deverão ser especificados depois que todos os parâmetros posicionais forem especificados.  
   
 ## <a name="remarks"></a>Remarks  
- Se *TraversedObject* não for especificado, *PropertyOrMethod* é necessário.  
+ Se *TraversedObject* não for especificado, *PropertyOrMethod* é necessária.  
   
- Se *PropertyOrMethod* não for especificado, o *TraversedObject* é retornado como um parâmetro de saída de token de objeto do procedimento armazenado de automação OLE. Se *PropertyOrMethod* for especificado, a propriedade ou método do *TraversedObject* é chamado, e o valor da propriedade ou o valor de retorno do método é retornado como um parâmetro de saída de automação OLE procedimento armazenado.  
+ Se *PropertyOrMethod* não for especificado, o *TraversedObject* é retornado como um parâmetro de saída de token de objeto do procedimento armazenado de automação OLE. Se *PropertyOrMethod* for especificado, a propriedade ou método da *TraversedObject* é chamado, e o valor da propriedade ou o valor retornado do método é retornado como um parâmetro de saída de automação OLE procedimento armazenado.  
   
- Se qualquer item no *TraversedObject* lista não retorna um objeto OLE, um erro será gerado.  
+ Se qualquer item na *TraversedObject* lista não retorna um objeto OLE, ocorrerá um erro.  
   
  Para obter mais informações sobre a sintaxe de objeto OLE do [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], consulte a documentação do [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
   
  Para obter mais informações sobre códigos de retorno HRESULT, consulte [sp_OACreate &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-oacreate-transact-sql.md).  
   
 ## <a name="examples"></a>Exemplos  
- Os seguintes são exemplos de sintaxe de hierarquia de objeto que usam um objeto SQL-DMO SQLServer.  
+ A seguir estão exemplos de sintaxe da hierarquia de objeto que usam um objeto SQL-DMO SQLServer.  
   
 ```  
 -- Get the AdventureWorks2012 Person.Address Table object.  

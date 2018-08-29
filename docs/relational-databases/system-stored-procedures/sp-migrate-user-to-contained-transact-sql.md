@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_migrate_user_to_contained
 ms.assetid: b3a49ff6-46ad-4ee7-b6fe-7e54213dc33e
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 606898bf92ff727cd3d48f49f7f352cf06e8f9fe
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: da98251792db96d766f63183715bd39f0a394406
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257831"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031929"
 ---
 # <a name="spmigrateusertocontained-transact-sql"></a>sp_migrate_user_to_contained (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,19 +47,19 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
   
 ## <a name="arguments"></a>Argumentos  
  [ **@username =** ] **N'***usuário***'**  
- Nome de um usuário do banco de dados independente atual que é mapeado para um logon autenticado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O valor é **sysname**, com um padrão de **nulo**.  
+ Nome de um usuário do banco de dados independente atual que é mapeado para um logon autenticado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O valor será **sysname**, com um padrão de **nulo**.  
   
  [ **@rename =** ] **N'***copy_login_name***'** | **N'***keep_name***'**  
  Quando um usuário de banco de dados com base em um logon tem um nome de usuário diferente do nome de logon, use *keep_name* para manter o nome de usuário de banco de dados durante a migração. Use *copy_login_name* para criar o novo usuário de banco de dados independente com o nome de logon, em vez do usuário. Quando um usuário de banco de dados baseado em um logon tem o mesmo nome de usuário do nome de logon, as duas opções criam o usuário do banco de dados independente, sem alterar o nome.  
   
  [ **@disablelogin =** ] **N'***disable_login***'** | **N'***do_not_disable_login***'**  
- *disable_login* desabilita o logon no banco de dados mestre. Para se conectar quando o logon é desabilitado, a conexão deve fornecer o nome de banco de dados independente como o **catálogo inicial** como parte da cadeia de conexão.  
+ *disable_login* desabilita o logon no banco de dados mestre. Para se conectar quando o logon está desabilitado, a conexão deve fornecer o nome de banco de dados independente como o **catálogo inicial** como parte da cadeia de conexão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
 ## <a name="remarks"></a>Remarks  
- **sp_migrate_user_to_contained** cria o usuário de banco de dados independente com senha, independentemente das propriedades ou permissões de logon. Por exemplo, o procedimento pode ter êxito se o logon está desabilitado ou se o usuário é negado a **conectar** permissão para o banco de dados.  
+ **sp_migrate_user_to_contained** cria o usuário de banco de dados independente com senha, independentemente das propriedades ou permissões de logon. Por exemplo, o procedimento possa ser bem-sucedida se o logon está desabilitado ou se o usuário é negado a **CONNECT** permissão para o banco de dados.  
   
  **sp_migrate_user_to_contained** tem as seguintes restrições.  
   
@@ -67,16 +67,16 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
   
 -   Usuários internos, como dbo e guest, não podem ser convertidos.  
   
--   O usuário não pode ser especificado o **EXECUTE AS** cláusula de um procedimento armazenado assinado.  
+-   O usuário não pode ser especificado a **EXECUTE AS** cláusula de um procedimento armazenado assinado.  
   
 -   O usuário não pode possuir um procedimento armazenado que inclui o **EXECUTE AS OWNER** cláusula.  
   
 -   **sp_migrate_user_to_contained** não pode ser usado em um banco de dados do sistema.  
   
 ## <a name="security"></a>Segurança  
- Ao migrar usuários, tenha cuidado para não desabilitar ou excluir todos os logons de administrador da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se todos os logons forem excluídos, consulte [conectar-se ao SQL Server ao sistema administradores são bloqueados](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md).  
+ Ao migrar usuários, tenha cuidado para não desabilitar ou excluir todos os logons de administrador da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se todos os logons forem excluídos, consulte [conectar-se ao SQL Server ao sistema os administradores são bloqueados](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md).  
   
- Se o **BUILTIN\Administrators** logon estiver presente, os administradores podem se conectar iniciando o aplicativo com o **executar como administrador** opção.  
+ Se o **BUILTIN\Administradores** logon estiver presente, os administradores podem se conectar iniciando a seu aplicativo usando o **executar como administrador** opção.  
   
 ### <a name="permissions"></a>Permissões  
  Requer a permissão **CONTROL SERVER** .  

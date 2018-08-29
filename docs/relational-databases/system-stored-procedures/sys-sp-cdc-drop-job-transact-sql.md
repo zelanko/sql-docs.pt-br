@@ -20,16 +20,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_cdc_drop_job
 ms.assetid: e8265846-8051-4848-b28e-fac27c10bdeb
-caps.latest.revision: 16
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3c9f5df44d98e28dcd261a01002451a206f6fee5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 36ffc0bbc703489140829dea8da594927219234f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252137"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031596"
 ---
 # <a name="sysspcdcdropjob-transact-sql"></a>sys.sp_cdc_drop_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sys.sp_cdc_drop_job [ [ @job_type = ] 'job_type' ]
   
 ## <a name="arguments"></a>Argumentos  
  [ @job_type **=** ] '*job_type*'  
- Tipo de trabalho a ser removido. *job_type* é **nvarchar (20)** e não pode ser NULL. As entradas válidas são 'capture' e 'cleanup'.  
+ Tipo de trabalho a ser removido. *job_type* está **nvarchar (20)** e não pode ser NULL. As entradas válidas são 'capture' e 'cleanup'.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -73,6 +72,6 @@ EXEC sys.sp_cdc_drop_job @job_type = N'cleanup';
 ## <a name="see-also"></a>Consulte também  
  [cdc_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
  [sp_cdc_disable_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md)   
- [sys. sp_cdc_add_job & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)  
+ [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)  
   
   

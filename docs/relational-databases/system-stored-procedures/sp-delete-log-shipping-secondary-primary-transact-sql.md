@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_log_shipping_secondary_primary
 ms.assetid: 507fc744-73d9-4cb7-8d2a-bcff88841c6a
-caps.latest.revision: 17
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ceff759315f5536bfd86589c6a12400583d37423
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 53bc06a2a2ccb7b4f4a05c6e24521fd851114995
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242398"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031770"
 ---
 # <a name="spdeletelogshippingsecondaryprimary-transact-sql"></a>sp_delete_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,31 +46,31 @@ sp_delete_log_shipping_secondary_primary
   
 ## <a name="arguments"></a>Argumentos  
  [ **@primary_server** =] '*primary_server*'  
- O nome da instância primária do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] na configuração de envio de logs. *primary_server* é **sysname** e não pode ser NULL.  
+ O nome da instância primária do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] na configuração de envio de logs. *primary_server* está **sysname** e não pode ser NULL.  
   
  [ **@primary_database** =] '*primary_database*'  
- É o nome do banco de dados do servidor primário. *primary_database* é **sysname**, sem padrão.  
+ É o nome do banco de dados do servidor primário. *primary_database* está **sysname**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma.  
+ Nenhum.  
   
 ## <a name="remarks"></a>Remarks  
  **sp_delete_log_shipping_secondary_primary** deve ser executado a partir de **mestre** banco de dados no servidor secundário. Esse procedimento armazenado faz o seguinte:  
   
 1.  Exclui os trabalhos de cópia e restauração da ID secundária.  
   
-2.  Exclui a entrada em **log_shipping_secondary**.  
+2.  Exclui a entrada na **log_shipping_secondary**.  
   
 3.  Chamadas **sp_delete_log_shipping_alert_job** no servidor monitor.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função fixa de servidor pode executar esse procedimento.  
+ Somente os membros dos **sysadmin** função de servidor fixa pode executar esse procedimento.  
   
 ## <a name="see-also"></a>Consulte também  
- [Sobre o envio de logs & #40; SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sp_helplogreader_agent
 ms.assetid: ff837209-e2b3-481a-a48f-8530bfe53d97
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bafe93763e2814b67f7455d2a4918193c5a1c40b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ef9fd50728a4bc9ebf661b2dbb22ad8ca4e9f4ad
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32995353"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031817"
 ---
 # <a name="sphelplogreaderagent-transact-sql"></a>sp_helplogreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,20 +43,20 @@ sp_helplogreader_agent [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@publisher**=] **'***publicador***'**  
- É o nome do Publicador. *publicador* é **sysname**, com um padrão NULL.  
+ [ **@publisher**=] **'***publisher***'**  
+ É o nome do Publicador. *Publisher* está **sysname**, com um padrão NULL.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**id**|**Int**|ID do agente.|  
+|**id**|**int**|ID do agente.|  
 |**name**|**nvarchar(100)**|O nome do agente.|  
 |**publisher_security_mode**|**smallint**|O modo de segurança usado pelo agente ao se conectar ao Publicador que pode ser um dos seguintes:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação<br /><br /> **1** = autenticação do Windows.|  
 |**publisher_login**|**sysname**|Logon usado na conexão com o Publicador.|  
-|**publisher_password**|**nvarchar (524)**|Por motivos de segurança, um valor de **\* \* \* \* \* \* \* \* \* \*** é sempre retornado.|  
+|**publisher_password**|**nvarchar(524)**|Por motivos de segurança, um valor de **\* \* \* \* \* \* \* \* \* \*** é sempre retornado.|  
 |**job_id**|**uniqueidentifier**|ID exclusiva do trabalho de agente.|  
-|**job_login**|**nvarchar(512)**|É a conta do Windows sob a qual o Log Reader Agent é executado, que é retornada no formato *domínio*\\*nome de usuário*.|  
+|**job_login**|**nvarchar(512)**|É a conta Windows na qual o Log Reader Agent é executado, o que é retornada no formato *domínio*\\*username*.|  
 |**job_password**|**sysname**|Por motivos de segurança, um valor de **\* \* \* \* \* \* \* \* \* \*** é sempre retornado.|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -66,7 +66,7 @@ sp_helplogreader_agent [ [ @publisher = ] 'publisher' ]
  **sp_helplogreader_agent** é usado em replicação transacional.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** a função de servidor fixa no publicador ou membros do **db_owner** função de banco de dados fixa no banco de dados de publicação pode executar **sp_helplogreader_agent**.  
+ Somente os membros dos **sysadmin** função de servidor fixa no publicador ou membros da **db_owner** banco de dados fixa do banco de dados de publicação podem executar **sp_helplogreader_agent**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Exibir e modificar configurações de segurança de replicação](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   

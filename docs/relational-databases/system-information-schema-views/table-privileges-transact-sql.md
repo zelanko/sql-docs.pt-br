@@ -18,17 +18,16 @@ helpviewer_keywords:
 - INFORMATION_SCHEMA.TABLE_PRIVILEGES view
 - TABLE_PRIVILEGES view
 ms.assetid: 70269d26-b085-4a98-8a9f-b4742c2848bd
-caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 0eb4bc6b4b81e6c03334d966c181ffc3b1e4e391
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 5b082fe97699f76add7973e35cee7cd266202995
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39544576"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43067659"
 ---
 # <a name="tableprivileges-transact-sql"></a>TABLE_PRIVILEGES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "39544576"
 |**CONCESSOR**|**nvarchar(** 128 **)**|Concessor do privilégio.|  
 |**USUÁRIO AUTORIZADO**|**nvarchar(** 128 **)**|Beneficiado do privilégio.|  
 |**TABLE_CATALOG**|**nvarchar(** 128 **)**|Qualificador da tabela.|  
-|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|Nome do esquema que contém a tabela.<br /><br /> **\*\* Importante \* \* ** não use exibições INFORMATION_SCHEMA para determinar o esquema de um objeto. O único modo seguro de localizar o esquema de um objeto é consultar a exibição de catálogo sys.objects.|  
+|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|Nome do esquema que contém a tabela.<br /><br /> **\*\* Importante \* \***  não use exibições INFORMATION_SCHEMA para determinar o esquema de um objeto. O único modo seguro de localizar o esquema de um objeto é consultar a exibição de catálogo sys.objects.|  
 |**TABLE_NAME**|**sysname**|Nome da tabela.|  
 |**PRIVILEGE_TYPE**|**varchar (** 10 **)**|Tipo de privilégio.|  
 |**IS_GRANTABLE**|**varchar (** 3 **)**|Especifica se o beneficiado pode conceder permissões a outros.|  

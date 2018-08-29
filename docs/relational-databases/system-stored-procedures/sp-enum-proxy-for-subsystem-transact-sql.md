@@ -18,16 +18,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_enum_proxy_for_subsystems
 ms.assetid: 580cc3be-1068-4a96-8d15-78ca3a5bb719
-caps.latest.revision: 27
-author: stevestein
-ms.author: sstein
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: b524d44236cb9c5a070b460a3f3a0d0736b16aca
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 53ab72a592ca0d99bf9e19d68a886de8c1e091db
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251914"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030852"
 ---
 # <a name="spenumproxyforsubsystem-transact-sql"></a>sp_enum_proxy_for_subsystem (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,10 +47,10 @@ sp_enum_proxy_for_subsystem
   
 ## <a name="arguments"></a>Argumentos  
  [ **@proxy_id** =] *proxy_id*  
- O número de identificação do proxy para o qual as informações serão listadas. O *proxy_id* é **int**, com um padrão NULL. Ambos o *id* ou *proxy_name* pode ser especificado.  
+ O número de identificação do proxy para o qual as informações serão listadas. O *proxy_id* é **int**, com um padrão NULL. Ambos os *id* ou o *proxy_name* pode ser especificado.  
   
  [ **@proxy_name** =] **'***proxy_name***'**  
- O nome do proxy para o qual listar informações. O *proxy_name* é **sysname**, com um padrão NULL. Ambos o *id* ou *proxy_name* pode ser especificado.  
+ O nome do proxy para o qual listar informações. O *proxy_name* é **sysname**, com um padrão NULL. Ambos os *id* ou o *proxy_name* pode ser especificado.  
   
  [ **@subsystem_id** =] *subsystem_id*  
  O número de identificação do subsistema para o qual as informações serão listadas. O *subsystem_id* é **int**, com um padrão NULL. Ambos os *subsystem_id* ou o *subsystem_name* pode ser especificado.  
@@ -67,22 +65,22 @@ sp_enum_proxy_for_subsystem
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**subsystem_id**|**Int**|Número de identificação do subsistema.|  
+|**subsystem_id**|**int**|Número de identificação do subsistema.|  
 |**subsystem_name**|**sysname**|O nome do subsistema.|  
-|**proxy_id**|**Int**|Número de identificação de proxy.|  
+|**proxy_id**|**int**|Número de identificação de proxy.|  
 |**proxy_name**|**sysname**|O nome do proxy.|  
   
 ## <a name="remarks"></a>Remarks  
- Quando nenhum parâmetro for fornecido, **sp_enum_proxy_for_subsystem** lista informações sobre todos os proxies na instância para todo subsistema.  
+ Quando nenhum parâmetro for fornecido, **sp_enum_proxy_for_subsystem** lista informações sobre todos os proxies na instância para cada subsistema.  
   
- Quando um id de proxy ou nome de proxy é fornecido, **sp_enum_proxy_for_subsystem** subsistemas de listas que o proxy tem acessem. Quando um id de subsistema ou nome de subsistema é fornecido, **sp_enum_proxy_for_subsystem** lista os proxies que têm acesso a esse subsistema.  
+ Quando uma id de proxy ou nome de proxy é fornecido, **sp_enum_proxy_for_subsystem** lista os subsistemas proxy tem acessem. Quando uma id de subsistema ou nome de subsistema é fornecido, **sp_enum_proxy_for_subsystem** lista os proxies que têm acesso a esse subsistema.  
   
  Quando informações de proxy e informações de subsistema são fornecidas, o conjunto de resultados retornará uma linha se o proxy especificado tiver acesso ao subsistema especificado.  
   
  Esse procedimento armazenado está localizado em **msdb**.  
   
 ## <a name="permissions"></a>Permissões  
- Permissões de execução para esse procedimento usam como padrão membros do **sysadmin** função de servidor fixa.  
+ Permissões de execução para esse procedimento usam como padrão os membros de **sysadmin** função de servidor fixa.  
   
 ## <a name="examples"></a>Exemplos  
   

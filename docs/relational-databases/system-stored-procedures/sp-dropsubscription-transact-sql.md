@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_dropsubscription
 ms.assetid: 7551f345-5510-4684-ab53-f9057249d13a
 caps.latest.revision: 23
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d6477b090fd3a98626b79a6db83cea729b4dec07
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0dc8bba63c8b1ffef6e1c24810c9457e1e9b5242
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32993753"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029108"
 ---
 # <a name="spdropsubscription-transact-sql"></a>sp_dropsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,16 +51,16 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
   
 ## <a name="arguments"></a>Argumentos  
  [  **@publication=** ] **'***publicação***'**  
- É o nome da publicação associada. *publicação* é **sysname**, com um padrão NULL. Se **todos os**, todas as assinaturas para todas as publicações do assinante especificado serão canceladas. *publicação* é um parâmetro obrigatório.  
+ É o nome da publicação associada. *publicação* está **sysname**, com um padrão NULL. Se **todos os**, todas as assinaturas para todas as publicações do assinante especificado serão canceladas. *publicação* é um parâmetro obrigatório.  
   
  [  **@article=** ] **'***artigo***'**  
- É o nome do artigo. *artigo* é **sysname**, com um valor padrão de NULL. Se **todos os**, especificado de assinaturas para todos os artigos para cada publicação e o assinante serão descartadas. Use **todos os** para publicações que permitem imediatas de atualização.  
+ É o nome do artigo. *artigo* está **sysname**, com um valor padrão de NULL. Se **todos os**, especificado de assinaturas para todos os artigos para cada publicação e no assinante serão descartadas. Use **todos os** para publicações que permitem imediatas de atualização.  
   
  [  **@subscriber=** ] **' * **assinar*r**' * *  
- É o nome do Assinante que terá suas assinaturas removidas. *assinante* é **sysname**, sem padrão. Se **todos os**, todas as assinaturas para todos os assinantes serão descartadas.  
+ É o nome do Assinante que terá suas assinaturas removidas. *assinante* está **sysname**, sem padrão. Se **todos os**, todas as assinaturas para todos os assinantes serão descartadas.  
   
  [  **@destination_db=** ] **'***destination_db***'**  
- É o nome do banco de dados de destino. *destination_db* é **sysname**, com um padrão NULL. Se for NULL, todas as assinaturas daquele Assinante serão descartadas.  
+ É o nome do banco de dados de destino. *destination_db* está **sysname**, com um padrão NULL. Se for NULL, todas as assinaturas daquele Assinante serão descartadas.  
   
  [  **@ignore_distributor =** ] *ignore_distributor*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -80,7 +80,7 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
  [!code-sql[HowTo#sp_droptransubscription](../../relational-databases/replication/codesnippet/tsql/sp-dropsubscription-tran_1.sql)]  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função de servidor fixa, o **db_owner** pode executar a função de banco de dados fixa ou o usuário que criou a assinatura **sp_dropsubscription**.  
+ Somente os membros dos **sysadmin** função de servidor fixa, o **db_owner** função fixa de banco de dados ou o usuário que criou a assinatura pode executar **sp_dropsubscription**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Excluir uma assinatura Push](../../relational-databases/replication/delete-a-push-subscription.md)   

@@ -1,5 +1,5 @@
 ---
-title: Configurations (Transact-SQL) | Microsoft Docs
+title: sys. Configurations (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - sys.configurations catalog view
 ms.assetid: c4709ed1-bf88-4458-9e98-8e9b78150441
 caps.latest.revision: 36
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 25de8a6eb70c79551caca8188c4f67a786e62172
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 4f006cdbe3fa99f206af97dcae5edf97a6a86be0
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181712"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030555"
 ---
 # <a name="sysconfigurations-transact-sql"></a>sys.configurations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "33181712"
   Contém uma linha para cada valor de opção de configuração em todo o servidor no sistema.  
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**configuration_id**|**Int**|Identificação exclusivo do valor de configuração.|  
+|**configuration_id**|**int**|Identificação exclusivo do valor de configuração.|  
 |**name**|**nvarchar(35)**|O nome da opção de configuração.|  
 |**value**|**sql_variant**|Valor configurado dessa opção.|  
 |**minimum**|**sql_variant**|Valor mínimo para a opção de configuração.|  
@@ -47,10 +47,10 @@ ms.locfileid: "33181712"
 |**is_dynamic**|**bit**|1 = A variável é implementada quando a instrução RECONFIGURE é executada.|  
 |**is_advanced**|**bit**|1 = a variável é exibida somente quando o **Mostrar advancedoption** está definido.|  
   
- Para obter uma lista de todas as opções de configuração de servidor, consulte [opções de configuração de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
+ Para obter uma lista de todas as opções de configuração de servidor, consulte [opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
 > [!NOTE]  
->  Opções de configuração de nível de banco de dados, consulte [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). Para configurar o NUMA, consulte [Soft-NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md).  
+>  Para opções de configuração de nível de banco de dados, consulte [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). Para configurar o Soft-NUMA, consulte [Soft-NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md).  
   
 ## <a name="permissions"></a>Permissões  
  Requer associação à função **pública** . Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

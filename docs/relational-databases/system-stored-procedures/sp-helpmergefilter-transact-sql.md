@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpmergefilter
 ms.assetid: f133a094-0009-4771-b93b-e86a5c01e40b
 caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6e35fe61b91fb503b87ba0a0195e77ad7ea0de50
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 327e47c5dbb48b7944a8389c2fd56ccec96b8668
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996033"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030812"
 ---
 # <a name="sphelpmergefilter-transact-sql"></a>sp_helpmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,23 +48,23 @@ sp_helpmergefilter [ @publication= ] 'publication'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@publication=**] **'***publicação***'**  
- É o nome da publicação. *publicação* é **sysname**, sem padrão.  
+ É o nome da publicação. *publicação* está **sysname**, sem padrão.  
   
  [  **@article=**] **'***artigo***'**  
- É o nome do artigo. *artigo* é **sysname**, com um padrão de **%**, que retorna os nomes de todos os artigos.  
+ É o nome do artigo. *artigo* está **sysname**, com um padrão de **%**, que retorna os nomes de todos os artigos.  
   
  [  **@filtername=**] **'***filtername***'**  
- É o nome do filtro sobre o qual retornar informações. *FilterName* é **sysname**, com um padrão de **%**, que retorna informações sobre todos os filtros definidos no artigo ou publicação.  
+ É o nome do filtro sobre o qual retornar informações. *FilterName* está **sysname**, com um padrão de **%**, que retorna informações sobre todos os filtros definidos em um artigo ou publicação.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**join_filterid**|**Int**|ID do filtro de junção.|  
+|**join_filterid**|**int**|ID do filtro de junção.|  
 |**FilterName**|**sysname**|Nome do filtro.|  
-|**nome do artigo de junção**|**sysname**|Nome do artigo de junção.|  
+|**nome do artigo**|**sysname**|Nome do artigo de junção.|  
 |**join_filterclause**|**nvarchar(2000)**|Cláusula de filtro que qualifica a junção.|  
-|**join_unique_key**|**Int**|Se a junção está em uma chave exclusiva.|  
+|**join_unique_key**|**int**|Se a junção está em uma chave exclusiva.|  
 |**proprietário da tabela base**|**sysname**|Nome do proprietário da tabela base.|  
 |**nome da tabela base**|**sysname**|Nome da tabela base.|  
 |**proprietário da tabela de junção**|**sysname**|Nome do proprietário da tabela que é adicionada à tabela base.|  
@@ -79,7 +79,7 @@ sp_helpmergefilter [ @publication= ] 'publication'
  **sp_helpmergefilter** é usado em replicação de mesclagem.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função fixa de servidor e o **db_owner** pode executar a função de banco de dados fixa **sp_helpmergefilter**.  
+ Somente os membros dos **sysadmin** função de servidor fixa e a **db_owner** banco de dados fixa podem executar **sp_helpmergefilter**.  
   
 ## <a name="see-also"></a>Consulte também  
  [sp_addmergefilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: spatial_indexes (Transact-SQL) | Microsoft Docs
+title: sys. spatial_indexes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,15 +21,15 @@ helpviewer_keywords:
 - sys.spatial_indexes catalog view
 ms.assetid: 40e967d5-2e8d-45af-bf5e-5251493cf7cb
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 39b12f5bfd0a3227120a9f38950e5265e8b262dd
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 3b3a8337b40a3d6a6ff397775301f3e2d7aa4103
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220277"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031301"
 ---
 # <a name="sysspatialindexes-transact-sql"></a>sys.spatial_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_create_plan_guide_from_handle
 ms.assetid: 02cfb76f-a0f9-4b42-a880-1c3e7d64fe41
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c57ad0976f2079fb1f5129b1cea59817157af01a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 78d466a6860eb145c409f32735c812f17a051e44
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239376"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032966"
 ---
 # <a name="spcreateplanguidefromhandle-transact-sql"></a>sp_create_plan_guide_from_handle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,15 +47,15 @@ sp_create_plan_guide_from_handle [ @name = ] N'plan_guide_name'
   
 ## <a name="arguments"></a>Argumentos  
  [ @name =] N'*plan_guide_name*'  
- É o nome da guia de plano. Os nomes de guia de plano têm escopo no banco de dados atual. *plan_guide_name* devem estar de acordo com as regras de [identificadores](../../relational-databases/databases/database-identifiers.md) e não pode começar com o sinal de número (#). O comprimento máximo de *plan_guide_name* é 124 caracteres.  
+ É o nome da guia de plano. Os nomes de guia de plano têm escopo no banco de dados atual. *plan_guide_name* deve estar em conformidade com as regras para [identificadores](../../relational-databases/databases/database-identifiers.md) e não pode começar com o sinal de número (#). O comprimento máximo de *plan_guide_name* é de 124 caracteres.  
   
  [ @plan_handle =] *plan_handle*  
- Identifica um lote no cache de plano. *plan_handle* é **varbinary(64)**. *plan_handle* pode ser obtido o [sys.DM exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) exibição de gerenciamento dinâmico.  
+ Identifica um lote no cache de plano. *plan_handle* está **varbinary(64)**. *plan_handle* pode ser obtido de [DM exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) exibição de gerenciamento dinâmico.  
   
  [ @statement_start_offset =] { *statement_start_offset* | NULL}]  
- Identifica a posição inicial da instrução no lote especificado *plan_handle*. *statement_start_offset* é **int**, com um padrão NULL.  
+ Identifica a posição inicial da instrução no lote do especificado *plan_handle*. *statement_start_offset* está **int**, com um padrão NULL.  
   
- O deslocamento da instrução corresponde à coluna statement_start_offset no [sys.DM exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) exibição de gerenciamento dinâmico.  
+ O deslocamento da instrução corresponde à coluna statement_start_offset na [DM exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) exibição de gerenciamento dinâmico.  
   
  Quando NULL é especificado ou um deslocamento de instrução não é especificado, um guia de plano é criado para cada instrução no lote usando o plano de consulta do identificador de plano especificado. Os guias de plano resultantes são equivalentes aos que usam a dica de consulta USE PLAN para forçar o uso de um determinado plano.  
   
@@ -63,7 +63,7 @@ sp_create_plan_guide_from_handle [ @name = ] N'plan_guide_name'
  Um guia de plano não pode ser criado para todos os tipos de instrução. Se um guia de plano não puder ser criado para uma instrução no lote, o procedimento armazenado ignorará a instrução e avançará para a próxima instrução do lote. Caso uma instrução ocorra várias vezes no mesmo lote, o plano da última ocorrência será habilitado, e os planos anteriores da instrução serão desabilitados. Se nenhuma instrução do lote puder ser usada em um guia de plano, o erro 10532 será gerado e a instrução falhará. Recomendamos sempre que você obtenha o identificador de plano na exibição de gerenciamento dinâmico sys.dm_exec_query_stats para ajudar a evitar a possibilidade de ocorrência desse erro.  
   
 > [!IMPORTANT]  
->  sp_create_plan_guide_from_handle cria guias de plano com base em planos à medida que eles vão aparecendo no cache do plano. Isso significa que o texto do lote, as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] e o Plano de execução XML são obtidos caractere por caractere (incluindo qualquer valor literal enviado à consulta) do cache do plano no guia de plano resultante. Essas cadeias de caracteres de texto podem conter informações confidenciais armazenadas nos metadados do banco de dados. Os usuários com permissões apropriadas podem exibir essas informações por meio do catálogo sys. plan_guides e a **propriedades do guia de plano** da caixa de diálogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para garantir que as informações confidenciais não sejam divulgadas em um guia de plano, recomendamos revisar os guias criados no cache do plano.  
+>  sp_create_plan_guide_from_handle cria guias de plano com base em planos à medida que eles vão aparecendo no cache do plano. Isso significa que o texto do lote, as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] e o Plano de execução XML são obtidos caractere por caractere (incluindo qualquer valor literal enviado à consulta) do cache do plano no guia de plano resultante. Essas cadeias de caracteres de texto podem conter informações confidenciais armazenadas nos metadados do banco de dados. Os usuários com permissões apropriadas podem exibir essas informações por meio da exibição de catálogo plan_guides e a **propriedades do guia de plano** da caixa de diálogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para garantir que as informações confidenciais não sejam divulgadas em um guia de plano, recomendamos revisar os guias criados no cache do plano.  
   
 ## <a name="creating-plan-guides-for-multiple-statements-within-a-query-plan"></a>Criando guias de plano para várias instruções em um plano de consulta  
  Assim como sp_create_plan_guide, sp_create_plan_guide_from_handle remove o plano de consulta do lote ou módulo de destino do cache do plano. Isso é feito para assegurar que todos os usuários comecem a usar o novo guia de plano. Ao criar um guia de plano para várias instruções em um único plano de consulta, você pode adiar a remoção do plano do cache criando todos os guias de plano em uma transação explícita. Esse método permite que o plano permaneça no cache até que a transação seja concluída e um guia de plano para cada instrução especificada seja criado. Consulte o Exemplo B.  
@@ -131,7 +131,7 @@ GO
  [Guias de plano](../../relational-databases/performance/plan-guides.md)   
  [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
- [sys.DM exec_text_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)   
+ [DM exec_text_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)   
  [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  
   
   

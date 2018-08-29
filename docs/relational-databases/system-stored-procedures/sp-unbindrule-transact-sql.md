@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_unbindrule
 ms.assetid: f54ee155-c3c9-4f1a-952e-632a8339f0cc
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: be14a4885cea481edda6ba7465ac2c5aa969ec1b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: d7a014b00a5fba5192e3bd9227f88968980dfd89
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257432"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028919"
 ---
 # <a name="spunbindrule-transact-sql"></a>sp_unbindrule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "33257432"
   Desvincula uma regra de uma coluna ou de um tipo de dados de alias no banco de dados atual.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] É recomendável criar definições padrão usando a palavra-chave DEFAULT no [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) ou [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) instruções em vez disso.  
+>  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] É recomendável criar definições padrão usando a palavra-chave DEFAULT na [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) ou [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) instruções em vez disso.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,13 +49,13 @@ sp_unbindrule [ @objname = ] 'object_name'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@objname=** ] **'***object_name***'**  
- É o nome da tabela e da coluna ou o tipo de dados do alias do qual a regra é desassociada. *object_name* é **nvarchar(776)**, sem padrão. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta resolver identificadores de duas partes primeiro para nomes das colunas e, em seguida, para tipos de dados do alias. Ao desvincular uma regra de um tipo de dados de alias, as colunas do tipo de dados que tiverem a mesma regra também serão desvinculadas. As colunas desse tipo de dados com regras vinculadas diretamente não serão afetadas.  
+ É o nome da tabela e da coluna ou o tipo de dados do alias do qual a regra é desassociada. *object_name* está **nvarchar(776)**, sem padrão. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta resolver identificadores de duas partes primeiro para nomes das colunas e, em seguida, para tipos de dados do alias. Ao desvincular uma regra de um tipo de dados de alias, as colunas do tipo de dados que tiverem a mesma regra também serão desvinculadas. As colunas desse tipo de dados com regras vinculadas diretamente não serão afetadas.  
   
 > [!NOTE]  
 >  *object_name* pode conter colchetes **[]** como caracteres de identificador delimitados. Para obter mais informações, consulte [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
  [  **@futureonly=** ] **'***futureonly_flag***'**  
- É usado apenas ao desvincular uma regra de um tipo de dados de alias. *futureonly_flag* é **varchar(15)**, com um padrão NULL. Quando *futureonly_flag* é **futureonly**, as colunas existentes desse tipo de dados não perdem a regra especificada.  
+ É usado apenas ao desvincular uma regra de um tipo de dados de alias. *futureonly_flag* está **varchar(15)**, com um padrão NULL. Quando *futureonly_flag* é **futureonly**, as colunas existentes desse tipo de dados não perdem a regra especificada.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -63,9 +63,9 @@ sp_unbindrule [ @objname = ] 'object_name'
 ## <a name="remarks"></a>Remarks  
  Para exibir o texto de uma regra, execute **sp_helptext** com o nome da regra como o parâmetro.  
   
- Quando uma regra é desvinculada, as informações sobre a associação são removidas do **Columns** tabela se a regra foi associada de uma coluna e o **Types** se a regra foi associada a um tipo de dados de alias de tabela.  
+ Quando uma regra é desvinculada, as informações sobre a associação são removidas do **sys. Columns** tabela se a regra foi associada de uma coluna e o **Types** se a regra foi associada a um tipo de dados de alias de tabela.  
   
- Quando uma regra é desvinculada de um tipo de dados de alias, ela também é desvinculada das colunas com esse tipo de dados de alias. A regra ainda pode ser associada a colunas cujos tipos de dados tenham sido alterados posteriormente pela cláusula ALTER COLUMN de uma instrução ALTER TABLE, desvincular especificamente a regra dessas colunas usando **sp_unbindrule** e especificando o nome da coluna.  
+ Quando uma regra é desvinculada de um tipo de dados de alias, ela também é desvinculada das colunas com esse tipo de dados de alias. A regra também ainda pode ser associada a colunas cujos tipos de dados tenham sido alterados posteriormente pela cláusula ALTER COLUMN de uma instrução ALTER TABLE, desvincular especificamente a regra dessas colunas, usando **sp_unbindrule** e especificando o nome da coluna.  
   
 ## <a name="permissions"></a>Permissões  
  Para desvincular uma regra de uma coluna de tabela, é necessário ter a permissão ALTER na tabela. Para desvincular uma regra de um tipo de dados de alias, é necessário ter a permissão CONTROL no tipo ou a permissão ALTER no esquema ao qual o tipo pertence.  
@@ -94,7 +94,7 @@ EXEC sp_unbindrule 'ssn', 'futureonly';
 ```  
   
 ### <a name="d-using-delimited-identifiers"></a>D. Usando identificadores delimitados  
- O exemplo a seguir mostra o uso de identificadores delimitados no *object_name* parâmetro.  
+ O exemplo a seguir mostra o uso de identificadores delimitados na *object_name* parâmetro.  
   
 ```  
 CREATE TABLE [t.4] (c1 int); -- Notice the period as part of the table   

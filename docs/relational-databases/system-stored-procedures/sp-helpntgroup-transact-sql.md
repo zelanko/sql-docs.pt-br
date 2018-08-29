@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helpntgroup
 ms.assetid: 02b4f7c1-480a-436c-8bae-7a2488be45d2
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d47be90ed518d818dfc731121215935f30bf9a1f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f049e76dc7d31331c0939c9d24809f8752ea9f7c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33247807"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032588"
 ---
 # <a name="sphelpntgroup-transact-sql"></a>sp_helpntgroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_helpntgroup [ [ @ntname= ] 'name' ]
   
 ## <a name="arguments"></a>Argumentos  
  [  **@ntname =** ] **'***nome***'**  
- É o nome do grupo do Windows. *nome* é **sysname**, com um padrão NULL. *nome* deve ser um grupo do Windows válido com acesso ao banco de dados atual. Se *nome* não for especificado, todos os grupos do Windows com acesso ao banco de dados atual são incluídos na saída.  
+ É o nome do grupo do Windows. *nome da* está **sysname**, com um padrão NULL. *nome* deve ser um grupo do Windows válido com acesso ao banco de dados atual. Se *nome* não for especificado, todos os grupos do Windows com acesso ao banco de dados atual são incluídos na saída.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -57,10 +57,10 @@ sp_helpntgroup [ [ @ntname= ] 'name' ]
 |**NTGroupName**|**sysname**|Nome do grupo do Windows.|  
 |**NTGroupId**|**smallint**|Identificador de grupo (ID).|  
 |**SID**|**varbinary(85)**|O identificador de segurança (SID) do **NTGroupName**.|  
-|**HasDbAccess**|**Int**|1 = grupo do Windows tem permissão para acessar o banco de dados.|  
+|**HasDbAccess**|**int**|1 = grupo do Windows tem permissão para acessar o banco de dados.|  
   
 ## <a name="remarks"></a>Remarks  
- Para ver uma lista da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] funções no banco de dados atual, use **sp_helprole**.  
+ Para ver uma lista da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] funções de banco de dados atual, use **sp_helprole**.  
   
 ## <a name="permissions"></a>Permissões  
  Requer associação à função **pública** .  

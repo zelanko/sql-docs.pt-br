@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_vupgrade_replication
 ms.assetid: d2c0ed66-07d1-4adc-82e5-a654376879bc
 caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c12d5f2b9ffbbf2d3d1d3ce11b76e32a3f3ed12f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1f95cf47caaa3c5fd6c361647389031f97b98185
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33002663"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031099"
 ---
 # <a name="spvupgradereplication-transact-sql"></a>sp_vupgrade_replication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,14 +49,14 @@ sp_vupgrade_replication [ [@login=] 'login' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@login=**] **'***login***'**  
- É o logon do administrador do sistema a ser usado ao criar novos objetos do sistema no banco de dados de Distribuição. *login* é **sysname**, com um padrão de NULL. Esse parâmetro não será necessário se *security_mode* é definido como **1**, que é a autenticação do Windows.  
+ [  **@login=**] **'***logon***'**  
+ É o logon do administrador do sistema a ser usado ao criar novos objetos do sistema no banco de dados de Distribuição. *login* é **sysname**, com um padrão de NULL. Esse parâmetro não é necessário se *security_mode* é definido como **1**, que é a autenticação do Windows.  
   
 > [!NOTE]  
 >  Esse parâmetro é ignorado quando você está atualizando para o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores.  
   
  [  **@password=**] **'***senha***'**  
- É a senha do administrador do sistema a ser usada ao criar novos objetos do sistema no banco de dados de Distribuição. *senha* é **sysname**, com um padrão de **'** (cadeia de caracteres vazia). Esse parâmetro não será necessário se *security_mode* é definido como **1**, que é a autenticação do Windows.  
+ É a senha do administrador do sistema a ser usada ao criar novos objetos do sistema no banco de dados de Distribuição. *senha* está **sysname**, com um padrão de **'** (cadeia de caracteres vazia). Esse parâmetro não é necessário se *security_mode* é definido como **1**, que é a autenticação do Windows.  
   
 > [!NOTE]  
 >  Esse parâmetro é ignorado quando você estiver atualizando para o SQL [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores.  
@@ -70,7 +70,7 @@ sp_vupgrade_replication [ [@login=] 'login' ]
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [  **@security_mode=**] **'***security_mode***'**  
- É o modo de segurança do logon a ser usado ao criar novos objetos do sistema no banco de dados de Distribuição. *security_mode* é **bit** com um valor padrão de **0**. Se **0**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação será usada. Se **1**, a autenticação do Windows será usada.  
+ É o modo de segurança do logon a ser usado ao criar novos objetos do sistema no banco de dados de Distribuição. *security_mode* está **bit** com um valor padrão de **0**. Se **0**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação será usada. Se **1**, autenticação do Windows será usada.  
   
 > [!NOTE]  
 >  Esse parâmetro é ignorado quando você está atualizando para o [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versões posteriores.  
@@ -79,10 +79,10 @@ sp_vupgrade_replication [ [@login=] 'login' ]
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="remarks"></a>Remarks  
- **sp_vupgrade_replication** é usada ao atualizar todos os tipos de replicação.  
+ **sp_vupgrade_replication** é usado ao atualizar todos os tipos de replicação.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** pode executar a função de servidor fixa **sp_vupgrade_replication**.  
+ Somente os membros dos **sysadmin** pode executar a função de servidor fixa **sp_vupgrade_replication**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Procedimentos armazenados de replicação &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   

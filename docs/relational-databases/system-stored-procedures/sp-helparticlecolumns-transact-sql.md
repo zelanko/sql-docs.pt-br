@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helparticlecolumns
 ms.assetid: 9ea55df3-2e99-4683-88ad-bde718288bc7
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3b5f5e70a599df333a4d00083929108f9a7172d9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6847491bbf8cbf517478ab6cb620f158577ca3e3
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32995853"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034318"
 ---
 # <a name="sphelparticlecolumns-transact-sql"></a>sp_helparticlecolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,16 +48,16 @@ sp_helparticlecolumns [ @publication = ] 'publication'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@publication =**] **'***publicação***'**  
- É o nome da publicação que contém o artigo. *publicação* é **sysname**, sem padrão.  
+ É o nome da publicação que contém o artigo. *publicação* está **sysname**, sem padrão.  
   
  [  **@article=**] **'***artigo***'**  
- É o nome do artigo que tem suas colunas retornadas. *artigo* é **sysname**, sem padrão.  
+ É o nome do artigo que tem suas colunas retornadas. *artigo* está **sysname**, sem padrão.  
   
- [ **@publisher**=] **'***publicador***'**  
- Especifica um não[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *publicador* é **sysname**, com um padrão NULL.  
+ [ **@publisher**=] **'***publisher***'**  
+ Especifica um não[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
->  *publicador* não deve ser especificado quando o artigo solicitado é publicado por um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
+>  *Publisher* não deve ser especificado quando o artigo solicitado é publicado por um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (colunas que não são publicadas) ou **1** (colunas que são publicadas)  
@@ -66,11 +66,11 @@ sp_helparticlecolumns [ @publication = ] 'publication'
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**id da coluna**|**Int**|Identificador para a coluna.|  
+|**id da coluna**|**int**|Identificador para a coluna.|  
 |**column**|**sysname**|Nome da coluna.|  
 |**Publicado**|**bit**|Se a coluna for publicada:<br /><br /> **0** = Não<br /><br /> **1** = Sim|  
 |**tipo de publicador**|**sysname**|Tipo de dados da coluna no Publicador.|  
-|**Tipo de assinante**|**sysname**|Tipo de dados da coluna no Assinante.|  
+|**tipo de assinante**|**sysname**|Tipo de dados da coluna no Assinante.|  
   
 ## <a name="remarks"></a>Remarks  
  **sp_helparticlecolumns** é usado em replicação de instantâneo e transacional.  
@@ -78,7 +78,7 @@ sp_helparticlecolumns [ @publication = ] 'publication'
  **sp_helparticlecolumns** é útil para verificar uma partição vertical.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função de servidor fixa, o **db_owner** função fixa de banco de dados ou a lista de acesso da publicação para a publicação atual pode executar **sp_helparticlecolumns**.  
+ Somente os membros dos **sysadmin** função de servidor fixa, o **db_owner** função fixa de banco de dados ou a lista de acesso à publicação para a publicação atual pode executar **sp_helparticlecolumns**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Definir e modificar um filtro de coluna](../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)   

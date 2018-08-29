@@ -20,20 +20,20 @@ helpviewer_keywords:
 - sp_copysnapshot
 ms.assetid: a012a32f-6f26-45bf-8046-b51cd7fec455
 caps.latest.revision: 20
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d21d69faf204e2d6c26f7af2d5fac1bc2e9371eb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4cecb47009788605b0840be74b720cf064db0ba5
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32988041"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029877"
 ---
 # <a name="spcopysnapshot-transact-sql"></a>sp_copysnapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Copia a pasta de instantâneo da publicação especificada na pasta listada no **@destination_folder**. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador. Esse procedimento armazenado é útil para copiar um instantâneo em mídia removível, como CD-ROM.  
+  Copia a pasta de instantâneo da publicação especificada para a pasta listada na **@destination_folder**. Esse procedimento armazenado é executado no Publicador, no banco de dados publicador. Esse procedimento armazenado é útil para copiar um instantâneo em mídia removível, como CD-ROM.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,10 +48,10 @@ sp_copysnapshot [ @publication = ] 'publication', [ @destination_folder = ] 'des
   
 ## <a name="arguments"></a>Argumentos  
  [  **@publication=**] **'***publicação***'**  
- É o nome da publicação cujo conteúdo de instantâneo deve ser copiado. *publicação* é **sysname**, sem padrão.  
+ É o nome da publicação cujo conteúdo de instantâneo deve ser copiado. *publicação* está **sysname**, sem padrão.  
   
  [  **@destination_folder=**] **'***destination_folder***'**  
- É o nome da pasta onde o conteúdo do instantâneo da publicação devem ser copiados. *destination_folder*é **nvarchar (255)**, sem padrão. O *destination_folder* pode ser um local alternativo, como em outro servidor, em uma unidade de rede ou mídia removível (como CD-ROMs ou discos removíveis).  
+ É o nome da pasta onde o conteúdo do instantâneo de publicação devem ser copiados. *destination_folder*está **nvarchar (255)**, sem padrão. O *destination_folder* pode ser um local alternativo, como em outro servidor, em uma unidade de rede ou mídia removível (como CD-ROMs ou discos removíveis).  
   
  [  **@subscriber=**] **'***assinante***'**  
  É o nome do Assinante. *assinante* é sysname, com um padrão NULL.  
@@ -63,10 +63,10 @@ sp_copysnapshot [ @publication = ] 'publication', [ @destination_folder = ] 'des
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="remarks"></a>Remarks  
- **sp_copysnapshot** é usado em todos os tipos de replicação. Os assinantes que executam [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versão 7.0 e anteriores não é possível usar o local de instantâneo alternativo.  
+ **sp_copysnapshot** é usado em todos os tipos de replicação. Os assinantes que executam [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versão 7.0 e anteriores não é possível usar o local de instantâneo alternativa.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função de servidor fixa ou **db_owner** pode executar a função de banco de dados fixa **sp_copysnapshot**.  
+ Somente os membros dos **sysadmin** função de servidor fixa ou **db_owner** banco de dados fixa podem executar **sp_copysnapshot**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Locais da pasta de instantâneos alternativos](../../relational-databases/replication/alternate-snapshot-folder-locations.md)   

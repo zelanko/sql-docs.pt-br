@@ -20,20 +20,20 @@ helpviewer_keywords:
 - sp_mergesubscription_cleanup
 ms.assetid: bfad414f-2bda-4bf5-9507-56a1e743dfc4
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: adf9d388beb4d86aef7745890292a312c9273389
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3135d0576d09efc2fa00804ab47a2e1a7836dd07
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32995463"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031198"
 ---
 # <a name="spmergesubscriptioncleanup-transact-sql"></a>sp_mergesubscription_cleanup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Remove metadados, como gatilhos e entradas, **sysmergesubscriptions** e **sysmergearticles** depois que a assinatura push de mesclagem especificada for removida no publicador. Esse procedimento armazenado é executado no assinante no banco de dados de assinatura.  
+  Remove metadados, como gatilhos e entradas, em **sysmergesubscriptions** e **sysmergearticles** depois que a assinatura push de mesclagem especificada for removida no publicador. Esse procedimento armazenado é executado no assinante no banco de dados de assinatura.  
   
 > [!NOTE]  
 >  Para uma assinatura pull, os metadados são removidos quando [sp_dropmergepullsubscription &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md) é executado.  
@@ -50,14 +50,14 @@ sp_mergesubscription_cleanup [ @publisher =] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publisher =**] **'***publicador***'**  
- É o nome do Publicador. *publicador* é **sysname**, sem padrão.  
+ [  **@publisher =**] **'***publisher***'**  
+ É o nome do Publicador. *Publisher* está **sysname**, sem padrão.  
   
  [  **@publisher_db =**] **'***publisher_db***'**  
- É o nome do banco de dados Publicador. *publisher_db* é **sysname**, sem padrão.  
+ É o nome do banco de dados Publicador. *publisher_db* está **sysname**, sem padrão.  
   
  [  **@publication =**] **'***publicação***'**  
- É o nome da publicação. *publicação* é **sysname**, sem padrão.  
+ É o nome da publicação. *publicação* está **sysname**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -66,7 +66,7 @@ sp_mergesubscription_cleanup [ @publisher =] 'publisher'
  **sp_mergesubscription_cleanup** é usado em replicação de mesclagem.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função de servidor fixa ou **db_owner** pode executar a função de banco de dados fixa **sp_mergesubscription_cleanup**.  
+ Somente os membros dos **sysadmin** função de servidor fixa ou o **db_owner** banco de dados fixa podem executar **sp_mergesubscription_cleanup**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Excluir uma assinatura Push](../../relational-databases/replication/delete-a-push-subscription.md)   

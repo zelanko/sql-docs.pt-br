@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_articlefilter
 ms.assetid: 4c3fee32-a43f-4757-a029-30aef4696afb
-caps.latest.revision: 33
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1ec7582f644a3701ef209c2ad3d4774e1aefdfb5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9a562613e5c22d50b3aec0c338ac09b2cad7355e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32992534"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032599"
 ---
 # <a name="sparticlefilter-transact-sql"></a>sp_articlefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,36 +51,36 @@ sp_articlefilter [ @publication = ] 'publication'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@publication=**] **'***publicação***'**  
- É o nome da publicação que contém o artigo. *publicação* é **sysname**, sem padrão.  
+ É o nome da publicação que contém o artigo. *publicação* está **sysname**, sem padrão.  
   
  [  **@article=**] **'***artigo***'**  
- É o nome do artigo. *artigo* é **sysname**, sem padrão.  
+ É o nome do artigo. *artigo* está **sysname**, sem padrão.  
   
  [  **@filter_name=**] **'***filter_name***'**  
- É o nome do procedimento armazenado de filtro a ser criado a partir de *filter_name*. *filter_name* é **nvarchar (386)**, com um padrão NULL. Você deve especificar um nome exclusivo para o filtro de artigo.  
+ É o nome do procedimento armazenado de filtro a ser criado a partir de *filter_name*. *filter_name* está **nvarchar(386)**, com um padrão NULL. Você deve especificar um nome exclusivo para o filtro de artigo.  
   
  [  **@filter_clause=**] **'***filter_clause***'**  
- É uma cláusula de restrição (WHERE) que define um filtro horizontal. Ao inserir a cláusula de restrição, omita a palavra-chave onde. *filter_clause* é **ntext**, com um padrão NULL.  
+ É uma cláusula de restrição (WHERE) que define um filtro horizontal. Ao inserir a cláusula de restrição, omita a palavra-chave onde. *filter_clause* está **ntext**, com um padrão NULL.  
   
  [  **@force_invalidate_snapshot =** ] *force_invalidate_snapshot*  
  Confirma que a ação tomada por esse procedimento armazenado pode invalidar um instantâneo existente. *force_invalidate_snapshot* é um **bit**, com um padrão de **0**.  
   
  **0** Especifica que as alterações no artigo fazem com que o instantâneo seja inválido. Se o procedimento armazenado detectar que a alteração requer um novo instantâneo, ocorrerá um erro e nenhuma alteração será feita.  
   
- **1** Especifica que as alterações no artigo podem invalidar o instantâneo inválido e se houver assinaturas existentes que exigem um novo instantâneo, dará permissão para que o instantâneo existente seja marcado como obsoleto e um novo instantâneo seja gerado.  
+ **1** Especifica que as alterações no artigo podem invalidar o instantâneo ser inválida e se houver assinaturas existentes que exigem um novo instantâneo, dará permissão para o instantâneo existente seja marcado como obsoleto e um novo instantâneo seja gerado.  
   
  [  **@force_reinit_subscription =** ] *force_reinit_subscription*  
  Confirma que a ação tomada por esse procedimento armazenado pode exigir que as assinaturas existentes sejam reinicializadas. *force_reinit_subscription* é um **bit**, com um padrão de **0**.  
   
- **0** Especifica que as alterações no artigo fazem com que a necessidade das assinaturas sejam reinicializadas. Se o procedimento armazenado detectar que a alteração irá requerer assinaturas sejam reiniciadas, ocorrerá um erro e nenhuma alteração é feita.  
+ **0** Especifica que as alterações no artigo não causa uma necessidade das assinaturas sejam reinicializadas. Se o procedimento armazenado detectar que a alteração irá requerer assinaturas sejam reiniciadas, ocorrerá um erro e nenhuma alteração é feita.  
   
  **1** Especifica que as alterações no artigo faz com que as assinaturas existentes sejam reinicializadas e dá permissão para que ocorra a reinicialização da assinatura.  
   
- [  **@publisher=** ] **'***publicador***'**  
- Especifica um não[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *publicador* é **sysname**, com um padrão NULL.  
+ [  **@publisher=** ] **'***publisher***'**  
+ Especifica um não[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
->  *publicador* não deve ser usado com um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
+>  *Publisher* não deve ser usado com um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -89,11 +88,11 @@ sp_articlefilter [ @publication = ] 'publication'
 ## <a name="remarks"></a>Remarks  
  **sp_articlefilter** é usado em replicação de instantâneo e replicação transacional.  
   
- Executar **sp_articlefilter** para um artigo com assinaturas existentes requer que as assinaturas sejam reinicializadas.  
+ Executando **sp_articlefilter** para um artigo com as assinaturas existentes requer que as assinaturas sejam reinicializadas.  
   
- **sp_articlefilter** cria o filtro, insere a ID do procedimento armazenado de filtro a **filtro** coluna o [sysarticles &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md) tabela e, em seguida, Insere o texto da cláusula de restrição de **filter_clause** coluna.  
+ **sp_articlefilter** cria o filtro, insere a ID do procedimento armazenado de filtro na **filtro** coluna o [sysarticles &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md) tabela e, em seguida, Insere o texto da cláusula de restrição na **filter_clause** coluna.  
   
- Para criar um artigo com um filtro horizontal, execute [sp_addarticle &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) sem nenhum *filtro* parâmetro. Executar **sp_articlefilter**, fornecendo todos os parâmetros incluindo *filter_clause*e, em seguida, execute [sp_articleview &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md), fornecer todos os parâmetros incluindo idênticas *filter_clause*. Se o filtro já existe e se o **tipo** na **sysarticles** é **1** (artigo com base em log), o filtro anterior será excluído e um novo filtro é criado.  
+ Para criar um artigo com um filtro horizontal, execute [sp_addarticle &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) sem nenhum *filtro* parâmetro. Execute **sp_articlefilter**, fornecendo todos os parâmetros incluindo *filter_clause*e, em seguida, execute [sp_articleview &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md), fornecendo todos os parâmetros incluindo idênticas *filter_clause*. Se o filtro já existe e se o **tipo** na **sysarticles** está **1** (artigo com base em log), o filtro anterior será excluído e um novo filtro é criado.  
   
  Se *filter_name* e *filter_clause* não forem fornecidos, o filtro anterior será excluído e a ID do filtro é definida como **0**.  
   
@@ -101,7 +100,7 @@ sp_articlefilter [ @publication = ] 'publication'
  [!code-sql[HowTo#sp_AddTranArticle](../../relational-databases/replication/codesnippet/tsql/sp-articlefilter-transac_1.sql)]  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função de servidor fixa ou **db_owner** pode executar a função de banco de dados fixa **sp_articlefilter**.  
+ Somente os membros dos **sysadmin** função de servidor fixa ou **db_owner** banco de dados fixa podem executar **sp_articlefilter**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   

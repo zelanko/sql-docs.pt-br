@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_catalogs
 ms.assetid: ebb29ee2-be65-4e09-9c53-e3c6d12633e1
-caps.latest.revision: 18
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 360cc30c65068ffe2b3b6b38eab57cc7b9fe1f91
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: d4a5f266872a8e16932fb2fd52c06636ecdcb54e
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33239366"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030103"
 ---
 # <a name="spcatalogs-transact-sql"></a>sp_catalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,13 +44,13 @@ sp_catalogs [ @server_name = ] 'linked_svr'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@server_name =**] **'***linked_svr***'**  
- É o nome de um servidor vinculado. *linked_svr* é **sysname**, sem padrão.  
+ É o nome de um servidor vinculado. *linked_svr* está **sysname**, sem padrão.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**catalog_name**|**nvarchar(** 128 **)**|Nome do catálogo.|  
+|**Catalog_name**|**nvarchar(** 128 **)**|Nome do catálogo.|  
 |**Descrição**|**nvarchar (** 4000 **)**|Descrição do catálogo.|  
   
 ## <a name="permissions"></a>Permissões  

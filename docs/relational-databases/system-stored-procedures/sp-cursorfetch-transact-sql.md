@@ -19,20 +19,20 @@ helpviewer_keywords:
 - sp_cursorfetch
 ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
 caps.latest.revision: 10
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9bbffe757b6b9c76bc1eb0b95e883f3d4d30b461
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 830e298365f3414c57f4419b8f0f9309ba908607
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240236"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034649"
 ---
 # <a name="spcursorfetch-transact-sql"></a>sp_cursorfetch (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Busca um buffer de uma ou mais linhas no banco de dados. O grupo de linhas nesse buffer é chamado do cursor *buffer de busca*. sp_cursorfetch é invocado pela especificação de ID = 7 em um pacote de protocolo TDS de dados tabulares.  
+  Busca um buffer de uma ou mais linhas no banco de dados. O grupo de linhas nesse buffer é chamado do cursor *buffer de busca*. sp_cursorfetch é invocado pela especificação de ID = 7 em um pacote do protocolo TDS.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,19 +46,19 @@ sp_cursorfetch cursor
   
 ## <a name="arguments"></a>Argumentos  
  *cursor*  
- É um *tratar* valor gerado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e retornado por sp_cursoropen. *cursor* é um parâmetro obrigatório que chama uma **int** valor de entrada. Para obter mais informações, consulte a seção Comentários, mais adiante neste tópico.  
+ É um *manipular* valor gerado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e retornado por sp_cursoropen. *cursor* é um parâmetro obrigatório que chama uma **int** valor de entrada. Para obter mais informações, consulte a seção Comentários, mais adiante neste tópico.  
   
  *fetchType*  
- Especifica o buffer de cursor a ser buscado. *fetchType* é um parâmetro opcional que requer um dos seguintes valores de entrada de número inteiro.  
+ Especifica o buffer de cursor a ser buscado. *fetchType* é um parâmetro opcional que requer um dos seguintes valores de entrada de inteiro.  
   
-|Value|Nome|Description|  
+|Valor|Nome|Description|  
 |-----------|----------|-----------------|  
 |0x0001|FIRST|Busca o primeiro buffer de *nrows* linhas. Se *nrows* é igual a 0, o cursor é posicionado antes do conjunto de resultados e nenhuma linha será retornada.|  
 |0x0002|NEXT|Busca o próximo buffer de *nrows* linhas.|  
-|0x0004|PREV|Busca o buffer anterior de *nrows* linhas.<br /><br /> Observação: Usar PREV para um cursor FORWARD_ONLY retorna uma mensagem de erro, pois FORWARD_ONLY oferece suporte apenas à rolagem em uma única direção.|  
-|0x0008|LAST|Busca o último buffer de *nrows* linhas. Se *nrows* é igual a 0, o cursor é posicionado após o conjunto de resultados e nenhuma linha será retornada.<br /><br /> Observação: O uso de LAST para um cursor FORWARD_ONLY retorna uma mensagem de erro, pois FORWARD_ONLY oferece suporte apenas à rolagem em uma única direção.|  
-|0x10|ABSOLUTE|Busca um buffer de *nrows* linhas começando com o *rownum* linha.<br /><br /> Observação: O uso de ABSOLUTE para um cursor dinâmico ou um cursor FORWARD_ONLY retorna uma mensagem de erro pois FORWARD_ONLY oferece suporte apenas à rolagem em uma única direção.|  
-|0x20|RELATIVE|Busca o buffer de *nrows* linhas começando com a linha que é especificada como sendo o *rownum* valor das linhas da primeira linha no bloco atual. Nesse caso *rownum* pode ser um número negativo.<br /><br /> Observação: O uso de RELATIVE para um cursor FORWARD_ONLY retorna uma mensagem de erro pois FORWARD_ONLY oferece suporte apenas à rolagem em uma direção.|  
+|0x0004|PREV|Busca o buffer anterior de *nrows* linhas.<br /><br /> Observação: O uso de PREV para um cursor FORWARD_ONLY retorna uma mensagem de erro, pois FORWARD_ONLY oferece suporte apenas à rolagem em uma única direção.|  
+|0x0008|LAST|Busca o último buffer de *nrows* linhas. Se *nrows* for igual a 0, o cursor é posicionado após o conjunto de resultados e nenhuma linha será retornada.<br /><br /> Observação: Uso de LAST para um cursor FORWARD_ONLY retorna uma mensagem de erro, pois FORWARD_ONLY oferece suporte apenas à rolagem em uma única direção.|  
+|0x10|ABSOLUTE|Busca um buffer de *nrows* linhas começando com o *rownum* linha.<br /><br /> Observação: O uso de ABSOLUTE para um cursor DYNAMIC ou forward_only retorna uma mensagem de erro, pois FORWARD_ONLY oferece suporte apenas à rolagem em uma única direção.|  
+|0x20|RELATIVE|Busca o buffer de *nrows* linhas começando com a linha que é especificada como sendo o *rownum* valor de linhas da primeira linha no bloco atual. Nesse caso *rownum* pode ser um número negativo.<br /><br /> Observação: O uso de RELATIVE para um cursor FORWARD_ONLY retorna uma mensagem de erro, pois FORWARD_ONLY oferece suporte apenas à rolagem em uma única direção.|  
 |0x80|REFRESH|Torna a encher o buffer a partir de tabelas subjacentes.|  
 |0x100|INFO|Recupera informações sobre o cursor. Essas informações são retornadas usando o *rownum* e *nrows* parâmetros. Portanto, quando INFO é especificado, *rownum* e *nrows* se tornam parâmetros de saída.|  
 |0x200|PREV_NOADJUST|É usado como PREV. Porém, se a parte superior do conjunto de resultados for encontrada prematuramente, os resultados poderão variar.|  
@@ -73,10 +73,10 @@ sp_cursorfetch cursor
  É um parâmetro opcional que é usado para especificar a posição de linha para o ABSOLUTE e INFO *fetchtype* valores usando somente valores inteiros para entrada ou saída ou ambos. *rowNum* serve como o deslocamento da linha para o *fetchtype* valor relativo de bit. *rowNum* é ignorado para todos os outros valores. Para obter mais informações, consulte a seção Comentários, mais adiante neste tópico.  
   
  *nrows*  
- É um parâmetro opcional usado para especificar o número de linhas a serem buscadas. Se *nrows* não for especificado, o valor padrão é 20 linhas. Para definir a posição sem retornar dados, especifique um valor de 0. Quando *nrows* é aplicada para o *fetchtype* consulta INFO, ele retorna o número total de linhas na consulta.  
+ É um parâmetro opcional usado para especificar o número de linhas a serem buscadas. Se *nrows* não for especificado, o valor padrão é 20 linhas. Para definir a posição sem retornar dados, especifique um valor de 0. Quando *nrows* é aplicado para o *fetchtype* consulta INFO, ele retorna o número total de linhas nessa consulta.  
   
 > [!NOTE]  
->  *nrows* é ignorada pela atualização *fetchtype* valor de bit.  
+>  *nrows* é ignorado pela atualização *fetchtype* valor de bit.  
 >   
 >  Para obter mais informações, consulte a seção Comentários, mais adiante neste tópico.  
   
@@ -93,7 +93,7 @@ sp_cursorfetch cursor
 |Se posicionado após o conjunto de resultados|-1|  
 |Para cursores KEYSET e STATIC|O número de linha absoluto da posição atual no conjunto de resultados|  
 |Para cursores DYNAMIC|1|  
-|Para ABSOLUTE|-1 retorna a última linha de um conjunto.<br /><br /> -2 retorna da segunda à última linha de um conjunto, e assim por diante.<br /><br /> Observação: Se mais de uma linha for solicitada a ser buscada neste caso, as duas últimas linhas do conjunto de resultados são retornadas.|  
+|Para ABSOLUTE|-1 retorna a última linha de um conjunto.<br /><br /> -2 retorna da segunda à última linha de um conjunto, e assim por diante.<br /><br /> Observação: Se mais de uma linha é solicitada a ser buscada neste caso, as duas últimas linhas do conjunto de resultados serão retornadas.|  
   
 |*\<nrows >*|Definir como|  
 |-----------------|------------|  
@@ -107,7 +107,7 @@ sp_cursorfetch cursor
  Antes de haver qualquer operação de busca, a posição padrão de um cursor é antes da primeira linha do conjunto de resultados.  
   
 ## <a name="fetchtype-parameter"></a>Parâmetro fetchtype  
- Com exceção de SKIP_UPD_CNCY, o *fetchtype* valores são mutuamente exclusivos.  
+ Com exceção de SKIP_UPD_CNCY, os *fetchtype* valores são mutuamente exclusivos.  
   
  Quando SKIP_UPDT_CNCY é especificado, os valores da coluna de carimbo de data/hora não são gravados na tabela de conjuntos de chaves quando uma linha é buscada ou atualizada. Se a linha de conjunto de chaves estiver sendo atualizada, os valores das colunas de carimbo de data/hora permanecerão como o valor anterior. Se a linha de conjunto de linhas estiver sendo inserida, os valores das colunas de carimbo de data/hora serão indefinidos.  
   
@@ -118,27 +118,27 @@ sp_cursorfetch cursor
  Se uma operação de busca falhar porque a posição do cursor solicitado está além do conjunto de resultados, a posição do cursor será definida para logo após a última linha. Se uma operação de busca falhar porque a posição do cursor solicitado está antes do conjunto de resultados, a posição do cursor será definida para antes da primeira linha.  
   
 ## <a name="rownum-parameter"></a>Parâmetro rownum  
- Quando você usa *rownum*, o buffer será preenchido a partir da linha especificada.  
+ Quando você usa *rownum*, o buffer é preenchido a partir da linha especificada.  
   
- O *fetchtype* valor ABSOLUTO refere-se à posição de *rownum* em todo o resultado definido. Um número negativo com ABSOLUTE especifica que a operação conta linhas a partir do final do conjunto de resultados.  
+ O *fetchtype* valor ABSOLUTO se refere à posição do *rownum* dentro o resultado inteiro definida. Um número negativo com ABSOLUTE especifica que a operação conta linhas a partir do final do conjunto de resultados.  
   
- O *fetchtype* valor RELATIVE refere-se à posição de *rownum* em relação à posição do cursor no início do buffer atual. Um número negativo com RELATIVE especifica que o cursor retroceda a partir da posição atual.  
+ O *fetchtype* RELATIVE refere-se à posição do valor de *rownum* em relação à posição do cursor no início do buffer atual. Um número negativo com RELATIVE especifica que o cursor retroceda a partir da posição atual.  
   
 ## <a name="nrows-parameter"></a>Parâmetro nrows  
  O *fetchtype* valores REFRESH e INFO ignoram esse parâmetro.  
   
- Quando você especifica um *fetchtype* valor First com um *nrow* valor de 0, o cursor é posicionado antes do conjunto de resultados que não tem nenhuma linha no buffer de busca.  
+ Quando você especifica um *fetchtype* o valor do primeiro que tem um *funções nrow* valor 0, o cursor é posicionado antes do conjunto de resultados que não tem nenhuma linha no buffer de busca.  
   
- Quando você especifica um *fetchtype* valor do último que tem um *nrow* valor de 0, o cursor é posicionado após o conjunto de resultados que não tem nenhuma linha no buffer de busca atual.  
+ Quando você especifica um *fetchtype* o valor do último que tem um *funções nrow* valor 0, o cursor é posicionado após o conjunto de resultados que não tem nenhuma linha no buffer de busca atual.  
   
- Para o *fetchtype* valores de NEXT, PREV, ABSOLUTO, relativo e PREV_NOADJUST, um *nrow* valor 0 não é válido.  
+ Para o *fetchtype* valores de Avançar, PREV, ABSOLUTE, RELATIVE e PREV_NOADJUST, um *funções nrow* valor 0 não é válido.  
   
 ## <a name="rpc-considerations"></a>Considerações sobre RPC:  
  O status de retorno RPC indica se o parâmetro de tamanho de conjunto de chaves é final ou não, ou seja, se a tabela de conjuntos de chaves ou temporária está sendo populada de forma assíncrona.  
   
  O parâmetro de status RPC é definido como um dos valores mostrados na tabela a seguir.  
   
-|Value|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |0|Procedimento executado com êxito.|  
 |0x0001|Falha no procedimento.|  
@@ -147,7 +147,7 @@ sp_cursorfetch cursor
   
  As linhas são retornadas como um conjunto de resultados comum, ou seja, formato de coluna (0x2a), linhas (0xd1), seguidas de Done (0xfd). Tokens de metadados são enviados no mesmo formato que o especificado para sp_cursoropen, ou seja, 0x81, 0xa5 e 0xa4 para usuários do SQL Server 7.0, e assim por diante. Os indicadores de status de linha são enviados como colunas ocultas, semelhante ao modo BROWSE, ao final de cada linha com o nome de coluna rowstat e o tipo de dados INT4. Essa coluna rowstat tem um dos valores mostrados na tabela a seguir.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |0x0001|FETCH_SUCCEEDED|  
 |0x0002|FETCH_MISSING|  

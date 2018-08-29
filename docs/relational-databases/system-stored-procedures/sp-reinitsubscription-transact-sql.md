@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_reinitsubscription
 ms.assetid: d56ae218-6128-4ff9-b06c-749914505c7b
 caps.latest.revision: 32
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 233448ed17ee55bb2d2c1c2b0a906191c73d4cf6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1ebb5a03977d6c01eba57061142e589b5946f7f0
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33000683"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030543"
 ---
 # <a name="spreinitsubscription-transact-sql"></a>sp_reinitsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,31 +53,31 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
   
 ## <a name="arguments"></a>Argumentos  
  [  **@publication=**] **'***publicação***'**  
- É o nome da publicação. *publicação* é **sysname**, com um padrão de all.  
+ É o nome da publicação. *publicação* está **sysname**, com um padrão de all.  
   
  [  **@article=**] **'***artigo***'**  
- É o nome do artigo. *artigo* é **sysname**, com um padrão de all. Para uma publicação de atualização imediata, *artigo* devem ser **todos os**; caso contrário, o procedimento armazenado ignora a publicação e relata um erro.  
+ É o nome do artigo. *artigo* está **sysname**, com um padrão de all. Para uma publicação de atualização imediata, *artigo* deve ser **todos os**; caso contrário, o procedimento armazenado ignora a publicação e relata um erro.  
   
  [  **@subscriber=**] **'***assinante***'**  
- É o nome do Assinante. *assinante* é **sysname**, sem padrão.  
+ É o nome do Assinante. *assinante* está **sysname**, sem padrão.  
   
  [  **@destination_db=**] **'***destination_db***'**  
- É o nome do banco de dados de destino. *destination_db* é **sysname**, com um padrão de all.  
+ É o nome do banco de dados de destino. *destination_db* está **sysname**, com um padrão de all.  
   
  [  **@for_schema_change=**] **'***for_schema_change***'**  
- Indica se a reinicialização ocorre como resultado de uma alteração de esquema no banco de dados de publicação. *for_schema_change* é **bit**, com um padrão de 0. Se **0**, assinaturas ativas para publicações que permitem atualização imediata serão reativadas quando toda a publicação e não apenas alguns de seus artigos sejam reinicializados. Isso significa que a reinicialização está ocorrendo como resultado de alterações de esquema. Se **1**, assinaturas ativas não serão reativadas até que o Snapshot Agent é executado.  
+ Indica se a reinicialização ocorre como resultado de uma alteração de esquema no banco de dados de publicação. *for_schema_change* está **bit**, com um padrão de 0. Se **0**, assinaturas ativas para publicações que permitem atualização imediata serão reativadas desde que a publicação inteira e não apenas alguns de seus artigos sejam reinicializados. Isso significa que a reinicialização está ocorrendo como resultado de alterações de esquema. Se **1**, assinaturas ativas não serão reativadas até que o Snapshot Agent é executado.  
   
- [  **@publisher=** ] **'***publicador***'**  
- Especifica um publicador que não é do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *publicador* é **sysname**, com um padrão NULL.  
+ [  **@publisher=** ] **'***publisher***'**  
+ Especifica um publicador que não é do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *Publisher* está **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
->  *publicador* não deve ser usado para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] editores.  
+>  *Publisher* não deve ser usada para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publicadores.  
   
  [  **@ignore_distributor_failure=** ] *ignore_distributor_failure*  
- Permite a reinicialização mesmo que o Distribuidor não exista ou esteja offline. *ignore_distributor_failure* é **bit**, com um padrão de 0. Se **0**, reinicialização falhará se o distribuidor não existe ou está offline.  
+ Permite a reinicialização mesmo que o Distribuidor não exista ou esteja offline. *ignore_distributor_failure* está **bit**, com um padrão de 0. Se **0**, reinicialização falhará se o distribuidor não existe ou está offline.  
   
  [  **@invalidate_snapshot=** ] *invalidate_snapshot*  
- Invalida o instantâneo da publicação existente. *invalidate_snapshot* é **bit**, com um padrão de 0. Se **1**, um novo instantâneo é gerado para a publicação.  
+ Invalida o instantâneo da publicação existente. *invalidate_snapshot* está **bit**, com um padrão de 0. Se **1**, um novo instantâneo é gerado para a publicação.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -89,7 +89,7 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
   
  Para assinaturas onde o instantâneo inicial é aplicado automaticamente e onde a publicação não permite assinaturas atualizáveis, o Agente de Instantâneo deve ser executado depois que esse procedimento armazenado é executado para que o esquema e os arquivos de programa de cópia em massa sejam preparados e o Agente de Distribuição possa então sincronizar novamente as assinaturas.  
   
- Para assinaturas onde o instantâneo inicial é aplicado automaticamente e onde a publicação permite assinaturas atualizáveis, o Agente de Distribuição sincroniza novamente as assinaturas usando o esquema e os arquivos de programa de cópia em massa mais recentes anteriormente criados pelo Agente de Instantâneo. O agente de distribuição sincroniza novamente as assinaturas imediatamente depois que o usuário executa **sp_reinitsubscription**, se o agente de distribuição não estiver ocupado; caso contrário, sincronização pode ocorrer depois de (intervalo de mensagem especificado pelo parâmetro de prompt de comando do agente de distribuição: **MessageInterval**).  
+ Para assinaturas onde o instantâneo inicial é aplicado automaticamente e onde a publicação permite assinaturas atualizáveis, o Agente de Distribuição sincroniza novamente as assinaturas usando o esquema e os arquivos de programa de cópia em massa mais recentes anteriormente criados pelo Agente de Instantâneo. O agente de distribuição sincroniza novamente as assinaturas imediatamente depois que o usuário executa **sp_reinitsubscription**, se o agente de distribuição não estiver ocupado; caso contrário, sincronização pode ocorrer depois do (intervalo de mensagem especificado pelo parâmetro de prompt de comando do agente de distribuição: **MessageInterval**).  
   
  **sp_reinitsubscription** não tem nenhum efeito em assinaturas onde o instantâneo inicial é aplicado manualmente.  
   
@@ -105,7 +105,7 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
  [!code-sql[HowTo#sp_reinittranpushsub](../../relational-databases/replication/codesnippet/tsql/sp-reinitsubscription-tr_1.sql)]  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função de servidor fixa, membros do **db_owner** função fixa de banco de dados ou o criador da assinatura pode executar **sp_reinitsubscription** .  
+ Somente os membros dos **sysadmin** função de servidor fixa, membros da **db_owner** função fixa de banco de dados ou o criador da assinatura pode executar **sp_reinitsubscription** .  
   
 ## <a name="see-also"></a>Consulte também  
  [Reinicializar uma assinatura](../../relational-databases/replication/reinitialize-a-subscription.md)   

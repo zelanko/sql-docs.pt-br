@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sp_dropmergearticle
 ms.assetid: 5ef1fbf7-c03d-4488-9ab2-64aae296fa4f
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: adcb52b18b12c61f8ea0154d668e000c9ca47020
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 87a999b49b7239531b7aa374c1695226af3df1a0
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32991274"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028965"
 ---
 # <a name="spdropmergearticle-transact-sql"></a>sp_dropmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,30 +50,30 @@ sp_dropmergearticle [ @publication= ] 'publication'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@publication=**] **'***publicação***'**  
- É o nome da publicação da qual remover um artigo. *publicação*é **sysname**, sem padrão.  
+ É o nome da publicação da qual remover um artigo. *publicação*está **sysname**, sem padrão.  
   
  [  **@article=**] **'***artigo***'**  
- É o nome do artigo a ser removido da publicação determinada. *artigo*é **sysname**, sem padrão. Se **todos os**, todos os artigos existentes na publicação de mesclagem especificada serão removidos. Mesmo se *artigo* é **todos os**, a publicação ainda deverá ser descartada separadamente do artigo.  
+ É o nome do artigo a ser removido da publicação determinada. *artigo*está **sysname**, sem padrão. Se **todos os**, todos os artigos existentes na publicação de mesclagem especificada serão removidos. Mesmo se *artigo* é **todos os**, a publicação ainda deverá ser descartada separadamente do artigo.  
   
  [  **@ignore_distributor=**] *ignore_distributor*  
- Indica se esse procedimento armazenado será executado sem se conectar ao Distribuidor. *ignore_distributor* é **bit**, com um padrão de **0**.  
+ Indica se esse procedimento armazenado será executado sem se conectar ao Distribuidor. *ignore_distributor* está **bit**, com um padrão de **0**.  
   
  [  **@reserved=**] *reservado*  
- É reservado para uso futuro. *reservado* é **nvarchar (20)**, com um padrão NULL.  
+ É reservado para uso futuro. *reservado* está **nvarchar (20)**, com um padrão NULL.  
   
  [  **@force_invalidate_snapshot=**] *force_invalidate_snapshot*  
  Habilita ou desabilita a capacidade de ter um instantâneo invalidado. *force_invalidate_snapshot* é um **bit**, com um padrão **0**.  
   
  **0** Especifica que as alterações no artigo de mesclagem fazem com que o instantâneo seja inválido.  
   
- **1** significa que as alterações no artigo de mesclagem pode invalidar o instantâneo inválido, e se esse for o caso, um valor de **1** dá permissão para a ocorrência do novo instantâneo.  
+ **1** significa que as alterações no artigo de mesclagem pode invalidar o instantâneo ser inválido, e se esse for o caso, um valor de **1** dá permissão para a ocorrência do novo instantâneo.  
   
  [  **@force_reinit_subscription =** ] *force_reinit_subscription*  
  Confirma que a remoção do artigo exige que as assinaturas existentes sejam reinicializadas. *force_reinit_subscription* é um **bit**, com um padrão de **0**.  
   
- **0** Especifica que o descarte do artigo não causa a assinatura ser reiniciada.  
+ **0** Especifica que o descarte do artigo não causa a reinicialização da assinatura.  
   
- **1** significa que o descarte o artigo faz com que as assinaturas existentes sejam reinicializadas e dá permissão para que ocorra a reinicialização da assinatura.  
+ **1** significa que o descarte o artigo faz com que as assinaturas existentes sejam reinicializadas e dá permissão para a reinicialização da assinatura ocorra.  
   
  [  **@ignore_merge_metadata=** ] *ignore_merge_metadata*  
  Somente para uso interno.  
@@ -82,12 +82,12 @@ sp_dropmergearticle [ @publication= ] 'publication'
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="remarks"></a>Remarks  
- **sp_dropmergearticle** é usado em replicação de mesclagem. Para obter mais informações sobre como descartar artigos, consulte [adicionar e descartar artigos de publicações existentes](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
+ **sp_dropmergearticle** é usado em replicação de mesclagem. Para obter mais informações sobre como descartar artigos, consulte [adicionar e remover artigos de publicações existentes](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
- Executar **sp_dropmergearticle** descartar um artigo de uma publicação não remove o objeto do banco de dados de publicação ou o objeto correspondente do banco de dados de assinatura. Use `DROP <object>` para remover esses objetos manualmente, se necessário.  
+ Executando **sp_dropmergearticle** descartar um artigo de uma publicação não remove o objeto de banco de dados de publicação ou o objeto correspondente do banco de dados de assinatura. Use `DROP <object>` para remover esses objetos manualmente, se necessário.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função de servidor fixa ou **db_owner** pode executar a função de banco de dados fixa **sp_dropmergearticle**.  
+ Somente os membros dos **sysadmin** função de servidor fixa ou o **db_owner** banco de dados fixa podem executar **sp_dropmergearticle**.  
   
 ## <a name="example"></a>Exemplo  
   

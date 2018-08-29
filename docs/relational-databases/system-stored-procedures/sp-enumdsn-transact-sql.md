@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_enumdsn
 ms.assetid: 171cbc7d-7406-4cb0-8602-9405243bfd1d
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 90d5e3c361471777952378cccfafb9f5b4f479fc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 30aa77cb33e5d55bef6b110e020116467536eaff
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32993443"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031068"
 ---
 # <a name="spenumdsn-transact-sql"></a>sp_enumdsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_enumdsn
 |-----------------|---------------|-----------------|  
 |**Nome da fonte de dados**|**sysname**|Nome da fonte de dados.|  
 |**Descrição**|**varchar(255)**|Descrição da fonte de dados|  
-|**Tipo**|**Int**|Tipo da fonte de dados.<br /><br /> **1** = DSN ODBC<br /><br /> **3** = fonte de dados OLE DB|  
+|**Tipo**|**int**|Tipo da fonte de dados.<br /><br /> **1** = DSN ODBC<br /><br /> **3** = fonte de dados OLE DB|  
 |**Nome do provedor**|**varchar(255)**|Nome do provedor OLE DB. O valor é NULL para ODBC DSN.|  
   
 ## <a name="remarks"></a>Remarks  
@@ -62,7 +62,7 @@ sp_enumdsn
  Por exemplo, se o servidor estiver em execução no contexto de usuário de conta do sistema, os DSNs (nomes das fontes de dados) retornados serão todos DSNs do sistema associados à conta do sistema. Se o servidor estiver em execução em uma conta de usuário particular, somente os DSNs definidos para aquela conta particular daquele usuário serão retornados.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** pode executar a função de servidor fixa **sp_enumdsn**.  
+ Somente os membros dos **sysadmin** pode executar a função de servidor fixa **sp_enumdsn**.  
   
 ## <a name="see-also"></a>Consulte também  
  [sp_dsninfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dsninfo-transact-sql.md)   

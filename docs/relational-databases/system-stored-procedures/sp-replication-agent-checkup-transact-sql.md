@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replication_agent_checkup
 ms.assetid: 50357c2e-71aa-4e13-9e2e-0977a3655cc9
-caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8fcb953c182dd6f4e9726a45a6fbf10efd8584cc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 927bd9990148112c05874f6589a7c0a33ac21f43
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32995623"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028211"
 ---
 # <a name="spreplicationagentcheckup-transact-sql"></a>sp_replication_agent_checkup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ sp_replication_agent_checkup [ [ @heartbeat_interval = ] heartbeat_interval ]
   
 ## <a name="arguments"></a>Argumentos  
  [ **@heartbeat_interval** =] **'***heartbeat_interval***'**  
- É o número máximo de minutos que um agente pode continuar sem registrar uma mensagem de progresso. *heartbeat_interval* é **int**, com um padrão de 10 minutos.  
+ É o número máximo de minutos que um agente pode continuar sem registrar uma mensagem de progresso. *heartbeat_interval* está **int**, com um padrão de 10 minutos.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **sp_replication_agent_checkup** gera erro 14151 para cada agente detectado como suspeito. Também registra uma mensagem de histórico de falha sobre os agentes.  
@@ -55,7 +54,7 @@ sp_replication_agent_checkup [ [ @heartbeat_interval = ] heartbeat_interval ]
  **sp_replication_agent_checkup** é usado em replicação de instantâneo, replicação transacional e replicação de mesclagem.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** pode executar a função de servidor fixa **sp_replication_agent_checkup**.  
+ Somente os membros dos **sysadmin** pode executar a função de servidor fixa **sp_replication_agent_checkup**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

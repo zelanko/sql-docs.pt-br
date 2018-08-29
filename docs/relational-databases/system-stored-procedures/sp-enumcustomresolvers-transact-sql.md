@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_enumcustomresolvers
 ms.assetid: 81bd0d3a-48dc-42b1-b662-c630f61fc630
 caps.latest.revision: 22
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eb49ae55f4bde2304713f4fd336076585a987904
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4f0b23d39e365a27cc2734e7e051e431055a21f2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32993153"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032439"
 ---
 # <a name="spenumcustomresolvers-transact-sql"></a>sp_enumcustomresolvers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_enumcustomresolvers [ [ @distributor =] 'distributor']
   
 ## <a name="arguments"></a>Argumentos  
  [  **@distributor =**] **'***distribuidor***'**  
- É o nome do Distribuidor em que o resolvedor personalizado está localizado. *distribuidor* é **sysname**, com um padrão NULL. *Esse parâmetro é preterido e será removido em uma versão futura.*  
+ É o nome do Distribuidor em que o resolvedor personalizado está localizado. *distribuidor* está **sysname**, com um padrão NULL. *Esse parâmetro é preterido e será removido em uma versão futura.*  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -65,7 +65,7 @@ sp_enumcustomresolvers [ [ @distributor =] 'distributor']
  **sp_enumcustomresolvers** é usado em replicação de mesclagem.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função fixa de servidor e o **db_owner** pode executar a função de banco de dados fixa **sp_enumcustomresolvers**.  
+ Somente os membros dos **sysadmin** função de servidor fixa e a **db_owner** banco de dados fixa podem executar **sp_enumcustomresolvers**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Implementar um manipulador de lógica de negócios para um artigo de mesclagem](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   

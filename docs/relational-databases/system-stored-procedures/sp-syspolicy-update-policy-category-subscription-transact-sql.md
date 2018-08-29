@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_syspolicy_update_policy_category_subscription
 ms.assetid: d0769566-8f5c-4c8a-84d3-ee17ea6e0cb4
-caps.latest.revision: 9
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 46ca3100a203d3afc9e3b618d4264629ddf1ce58
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2d285728aafbfedc3c194ab65351a90d1daba019
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261022"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033278"
 ---
 # <a name="spsyspolicyupdatepolicycategorysubscription-transact-sql"></a>sp_syspolicy_update_policy_category_subscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,18 +47,18 @@ sp_syspolicy_update_policy_category_subscription [ @policy_category_subscription
   
 ## <a name="arguments"></a>Argumentos  
  [  **@policy_category_subscription_id=** ] *policy_category_subscription_id*  
- É o identificador da assinatura da categoria de política que você deseja atualizar. *policy_category_subscription_id* é **int**e é necessário.  
+ É o identificador da assinatura da categoria de política que você deseja atualizar. *policy_category_subscription_id* está **int**e é necessária.  
   
  [ **@target_type=** ] **'** target_type **'**  
- É o tipo de destino da assinatura da categoria. *target_type* é **sysname**, com um padrão NULL.  
+ É o tipo de destino da assinatura da categoria. *target_type* está **sysname**, com um padrão NULL.  
   
  Se você especificar *target_type*, o valor deve ser definido como 'DATABASE'.  
   
  [  **@target_object=** ] **'** target_object **'**  
- É o nome do banco de dados que assinará a categoria de política. *target_object* é **sysname**, com um padrão NULL.  
+ É o nome do banco de dados que assinará a categoria de política. *target_object* está **sysname**, com um padrão NULL.  
   
  [  **@policy_category=** ] **'** policy_category **'**  
- É o nome da categoria de política que você deseja que o banco de dados assine. *policy_category* é **sysname**, com um padrão NULL.  
+ É o nome da categoria de política que você deseja que o banco de dados assine. *policy_category* está **sysname**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -67,7 +66,7 @@ sp_syspolicy_update_policy_category_subscription [ @policy_category_subscription
 ## <a name="remarks"></a>Remarks  
  Você deve executar sp_syspolicy_update_policy_category_subscription no contexto do banco de dados de sistema msdb.  
   
- Para obter valores *policy_category_subscription_id* e *policy_category*, você pode usar a consulta a seguir:  
+ Para obter valores para *policy_category_subscription_id* e para *policy_category*, você pode usar a consulta a seguir:  
   
 ```  
 SELECT a.policy_category_subscription_id, a.target_type, a.target_object  
@@ -81,7 +80,7 @@ ON a.policy_category_id = b.policy_category_id;
  Requer a associação à função de banco de dados fixa PolicyAdministratorRole.  
   
 > [!IMPORTANT]  
->  Possível elevação de credenciais: os usuários na função PolicyAdministratorRole podem criar gatilhos de servidor e agendar execuções de políticas que possam afetar a operação da instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Por exemplo, os usuários da função PolicyAdministratorRole podem criar uma política que impeça a criação da maioria dos objetos no [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Devido a essa possível elevação de credenciais, a função PolicyAdministratorRole deve ser concedida somente a usuários que sejam confiáveis com controle da configuração do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+>  Possível elevação de credenciais: os usuários na função PolicyAdministratorRole podem criar gatilhos de servidor e agendar execuções de políticas que possam afetar a operação da instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Por exemplo, os usuários da função PolicyAdministratorRole podem criar uma política que impeça a criação da maioria dos objetos no [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Devido a essa possível elevação de credenciais, a função PolicyAdministratorRole deve ser concedida somente para usuários que sejam confiáveis no controle da configuração do [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir atualiza uma assinatura de categoria de política existente de forma que o banco de dados do AdventureWorks2012 assina a categoria de política 'Finance’.  

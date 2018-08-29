@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpdistributor_properties
 ms.assetid: ee267724-3244-49eb-84c9-f38dbefdd639
 caps.latest.revision: 14
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0f839d230097300eb08c0042854ed00f3b4dd951
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5e9d7ab6a6ddb7bd2be819c4a688dce87a1f5945
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32994463"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032375"
 ---
 # <a name="sphelpdistributorproperties-transact-sql"></a>sp_helpdistributor_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_helpdistributor_properties
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**heartbeat_interval**|**Int**|O número máximo de minutos que um agente pode prosseguir sem registrar uma mensagem de progresso.|  
+|**heartbeat_interval**|**int**|O número máximo de minutos que um agente pode prosseguir sem registrar uma mensagem de progresso.|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -57,7 +57,7 @@ sp_helpdistributor_properties
  **sp_helpdistributor_properties** é usado com todos os tipos de replicação.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função de servidor fixa, membros do **db_owner** ou **replmonitor** função de banco de dados fixa no banco de dados de distribuição e os usuários a lista de acesso à publicação (PAL) para uma publicação que usa esse distribuidor pode executar **sp_helpdistributor_properties**.  
+ Somente os membros dos **sysadmin** função de servidor fixa, membros da **db_owner** ou **replmonitor** função de banco de dados fixa no banco de dados de distribuição e os usuários no lista de acesso à publicação (PAL) para uma publicação que usa esse distribuidor pode executar **sp_helpdistributor_properties**.  
   
 ## <a name="see-also"></a>Consulte também  
  [sp_changedistributor_property &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)  

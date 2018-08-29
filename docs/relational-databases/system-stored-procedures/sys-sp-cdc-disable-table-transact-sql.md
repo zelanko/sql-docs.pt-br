@@ -22,16 +22,15 @@ helpviewer_keywords:
 - sys.sp_cdc_disable_table
 - change data capture [SQL Server], disabling tables
 ms.assetid: da2156c0-504e-4d76-b9a0-4448becf9bda
-caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 16356cc8a5d427a9432ac8c753b1e51d915337d4
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 9450d80191ac611004cc39528820f49949232823
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255920"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028324"
 ---
 # <a name="sysspcdcdisabletable-transact-sql"></a>sys.sp_cdc_disable_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,31 +51,31 @@ sys.sp_cdc_disable_table
   
 ## <a name="arguments"></a>Argumentos  
  [  **@source_schema=** ] **'***source_schema***'**  
- É o nome do esquema no qual a tabela de origem está contida. *source_schema* é **sysname**, sem padrão, e não pode ser NULL.  
+ É o nome do esquema no qual a tabela de origem está contida. *source_schema* está **sysname**, sem padrão, e não pode ser NULL.  
   
  *source_schema* deve existir no banco de dados atual.  
   
  [  **@source_name=** ] **'***source_name***'**  
- É o nome da tabela de origem da qual desabilitar a captura de dados de alteração. *source_name* é **sysname**, sem padrão, e não pode ser NULL.  
+ É o nome da tabela de origem da qual desabilitar a captura de dados de alteração. *source_name* está **sysname**, sem padrão, e não pode ser NULL.  
   
  *source_name* deve existir no banco de dados atual.  
   
- [  **@capture_instance=** ] **'***capture_instance***'** | **'** todas as **'**  
- É o nome da instância de captura a ser desabilitada na tabela de origem especificada. *capture_instance* é **sysname** e não pode ser NULL.  
+ [  **@capture_instance=** ] **'***capture_instance***'** | **'** todos os **'**  
+ É o nome da instância de captura a ser desabilitada na tabela de origem especificada. *capture_instance* está **sysname** e não pode ser NULL.  
   
- Quando 'all' for especificada, todas as instâncias de captura definidas para *source_name* estão desabilitados.  
+ Quando 'all'é especificado, todas as instâncias de captura definidas para *source_name* estão desabilitados.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma  
+ None  
   
 ## <a name="remarks"></a>Remarks  
- **sp_cdc_disable_table** descarta a captura de dados de alteração alterar tabela e funções do sistema associadas à instância de captura e a tabela de origem especificada. Exclui qualquer linha associada à instância de captura especificada do tabelas de sistema do change data capture e define o **is_tracked_by_cdc** coluna para a entrada da tabela no [sys. Tables](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md) exibição do catálogo como 0.  
+ **sp_cdc_disable_table** descartes do change data capture alterar tabela e funções do sistema associadas com a instância de captura e a tabela de origem especificada. Exclui qualquer linha associada com a instância de captura especificada da tabelas de sistema do change data capture e define o **is_tracked_by_cdc** coluna para a entrada de tabela na [sys. Tables](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md) exibição do catálogo como 0.  
   
 ## <a name="permissions"></a>Permissões  
- Requer a participação no **db_owner** função fixa de banco de dados.  
+ Requer associação na **db_owner** função fixa de banco de dados.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir desabilita a captura de dados de alteração na tabela `HumanResources.Employee`.  

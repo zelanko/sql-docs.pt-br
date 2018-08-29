@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_changeqreader_agent
 ms.assetid: d3fe79c5-31ef-4565-bf38-b476b5fb16f7
 caps.latest.revision: 21
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 033d33a282c7359895aba95c0e8f9d4d03e02c90
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 82b799ed8fab4a782a89f15dab779020d63a28f4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32988171"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034591"
 ---
 # <a name="spchangeqreaderagent-transact-sql"></a>sp_changeqreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,10 +48,10 @@ sp_changeqreader_agent [ [ @job_login = ] 'job_login' ]
   
 ## <a name="arguments"></a>Argumentos  
  [ **@job_login**=] **'***job_login***'**  
- É o logon da conta do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows na qual o agente é executado. *job_login* é **nvarchar (257)**, com um padrão NULL.  
+ É o logon da conta do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows na qual o agente é executado. *job_login* está **nvarchar(257)**, com um padrão NULL.  
   
  [ **@job_password**=] **'***job_password***'**  
- É a senha da conta do Windows na qual o agente é executado. *job_password* é **sysname**, com um padrão NULL.  
+ É a senha da conta do Windows na qual o agente é executado. *job_password* está **sysname**, com um padrão NULL.  
   
  [  **@frompublisher=** ] *frompublisher*  
  Especifica se o procedimento está sendo executado no Publicador. *frompublisher* é bit, com um valor padrão de **0**. Um valor de **1** significa que o procedimento está sendo executado no publicador do banco de dados de publicação.  
@@ -67,7 +67,7 @@ sp_changeqreader_agent [ [ @job_login = ] 'job_login' ]
  Depois de alterar o logon ou a senha de um agente, você deve parar e reiniciar o agente antes que as alterações entrem em vigor.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** pode executar a função de servidor fixa **sp_changeqreader_agent**.  
+ Somente os membros dos **sysadmin** pode executar a função de servidor fixa **sp_changeqreader_agent**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Exibir e modificar configurações de segurança de replicação](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   

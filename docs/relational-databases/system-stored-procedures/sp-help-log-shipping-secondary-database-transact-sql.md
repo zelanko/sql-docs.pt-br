@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_log_shipping_secondary_database
 ms.assetid: 11ce42ca-d3f1-44c8-9cac-214ca8896b9a
-caps.latest.revision: 28
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0e2a943234d835d1f78cf57c096fd8492849bfa0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: bfdfd891065f0a0fa4cf30376fdaa0c55c5e10a0
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259596"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033622"
 ---
 # <a name="sphelplogshippingsecondarydatabase-transact-sql"></a>sp_help_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,10 +48,10 @@ sp_help_log_shipping_secondary_database
   
 ## <a name="arguments"></a>Argumentos  
  [  **@secondary_database =** ] '*secondary_database*'  
- É o nome do banco de dados secundário. *secondary_database* é **sysname**, sem padrão.  
+ É o nome do banco de dados secundário. *secondary_database* está **sysname**, sem padrão.  
   
  [  **@secondary_id =** ] '*secondary_id*'  
- ID de servidor secundário na configuração de envio de logs. *secondary_id* é **uniqueidentifier** e não pode ser NULL.  
+ ID de servidor secundário na configuração de envio de logs. *secondary_id* está **uniqueidentifier** e não pode ser NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -92,16 +91,16 @@ sp_help_log_shipping_secondary_database
 |**last_restored_latency**|Período em minutos decorrido entre o momento de criação do backup de log no primário e o momento em que ele foi restaurado no secundário.<br /><br /> O valor inicial é NULL.|  
   
 ## <a name="remarks"></a>Remarks  
- Se você incluir o *secondary_database* parâmetro, o conjunto de resultados conterá informações sobre o banco de dados secundário; se você incluir o *secondary_id* parâmetro, o conjunto de resultados conterá informações sobre todos os bancos de dados secundários associados àquela identificação secundária.  
+ Se você incluir a *secondary_database* parâmetro, o conjunto de resultados conterá informações sobre o banco de dados secundário; se você incluir a *secondary_id* parâmetro, o conjunto de resultados conterá informações sobre todos os bancos de dados secundários associados àquela identificação secundária.  
   
  **sp_help_log_shipping_secondary_database** deve ser executado a partir de **mestre** banco de dados no servidor secundário.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função fixa de servidor pode executar esse procedimento.  
+ Somente os membros dos **sysadmin** função de servidor fixa pode executar esse procedimento.  
   
 ## <a name="see-also"></a>Consulte também  
  [sp_help_log_shipping_secondary_primary &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql.md)   
- [Sobre o envio de logs & #40; SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

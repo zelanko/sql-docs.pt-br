@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_helpreplfailovermode
 ms.assetid: d1090e42-6840-4bf6-9aa9-327fd8987ec2
 caps.latest.revision: 30
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8d54500307b05a5aa6c9cfeca4e55ff92b3062b6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b350ac28a53dbdb544f3dde0b3493cd40436bca3
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32995733"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031358"
 ---
 # <a name="sphelpreplfailovermode-transact-sql"></a>sp_helpreplfailovermode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,14 +49,14 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publisher=**] **'***publicador***'**  
- É o nome do Publicador que está participando da atualização desse Assinante. *publicador* é **sysname**, sem padrão. O Publicador já deve estar configurado para publicação.  
+ [  **@publisher=**] **'***publisher***'**  
+ É o nome do Publicador que está participando da atualização desse Assinante. *Publisher* está **sysname**, sem padrão. O Publicador já deve estar configurado para publicação.  
   
  [  **@publisher_db =**] **'***publisher_db***'**  
- É o nome do banco de dados de publicação. *publisher_db* é **sysname**, sem padrão.  
+ É o nome do banco de dados de publicação. *publisher_db* está **sysname**, sem padrão.  
   
  [  **@publication=**] **'***publicação***'**  
- É o nome da publicação que está participando da atualização desse Assinante. *publicação*é **sysname**, sem padrão.  
+ É o nome da publicação que está participando da atualização desse Assinante. *publicação*está **sysname**, sem padrão.  
   
  [  **@failover_mode_id=**] **'***failover_mode_id***' saída**  
  Retorna o valor inteiro do modo de failover e é um **saída** parâmetro. *failover_mode_id* é um **tinyint** com um padrão de **0**. Ele retorna **0** para atualização imediata e **1** de atualização enfileirada.  
@@ -64,19 +64,19 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
  [**@failover_mode=**] **'***failover_mode***' saída**  
  Retorna o modo no qual são feitas modificações de dados no Assinante. *failover_mode* é um **nvarchar (10)** com um padrão NULL. É um **saída** parâmetro.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**Imediata**|Atualização imediata: as atualizações feitas no Assinante são imediatamente propagadas no Publicador, usando 2PC (protocolo de confirmação de duas fases).|  
-|**Em fila**|Atualização enfileirada: atualizações feitas no Assinante são armazenadas em uma fila.|  
+|**em fila**|Atualização enfileirada: atualizações feitas no Assinante são armazenadas em uma fila.|  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="remarks"></a>Remarks  
- **sp_helpreplfailovermode** é usado em replicação de instantâneo ou replicação transacional, para que as assinaturas são habilitadas para atualização imediata com atualização enfileirada como failover, em caso de falha.  
+ **sp_helpreplfailovermode** é usado em replicação de instantâneo ou replicação transacional para quais assinaturas são habilitadas para atualização imediata com atualização enfileirada como failover, em caso de falha.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função de servidor fixa ou **db_owner** pode executar a função de banco de dados fixa **sp_helpreplfailovermode**.  
+ Somente os membros dos **sysadmin** função de servidor fixa ou o **db_owner** banco de dados fixa podem executar **sp_helpreplfailovermode**.  
   
 ## <a name="see-also"></a>Consulte também  
  [sp_setreplfailovermode &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)  

@@ -19,20 +19,20 @@ helpviewer_keywords:
 - sp_dropmessage
 ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
 caps.latest.revision: 32
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3bac74ff66a266fd0987dc869145c70287232c09
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 216f5e9ffca4865cb9a2deddbe38097099d74f9c
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246911"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032979"
 ---
 # <a name="spdropmessage-transact-sql"></a>sp_dropmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Descarta uma mensagem de erro definida pelo usuário especificada de uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Mensagens definidas pelo usuário podem ser exibidas usando o **messages** exibição do catálogo.  
+  Descarta uma mensagem de erro definida pelo usuário especificada de uma instância do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Mensagens definidas pelo usuário podem ser exibidas usando o **sys. messages** exibição do catálogo.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,19 +46,19 @@ sp_dropmessage [ @msgnum = ] message_number
   
 ## <a name="arguments"></a>Argumentos  
  [  **@msgnum =** ] *message_number*  
- É o número da mensagem a ser descartada. *message_number* deve ser uma mensagem definida pelo usuário que tenha um número maior que 50000. *message_number* é **int**, com um padrão NULL.  
+ É o número da mensagem a ser descartada. *message_number* deve ser uma mensagem definida pelo usuário que tem um número maior que 50000. *message_number* está **int**, com um padrão NULL.  
   
  [  **@lang =** ] **'***idioma***'**  
- É o idioma da mensagem a ser descartada. Se **todos os** for especificado, todas as versões de idioma do *message_number* são descartados. *idioma* é **sysname**, com um padrão NULL.  
+ É o idioma da mensagem a ser descartada. Se **todos os** for especificado, todas as versões de idioma do *message_number* são descartados. *linguagem* está **sysname**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma.  
+ Nenhum.  
   
 ## <a name="permissions"></a>Permissões  
- Requer a participação no **sysadmin** e **serveradmin** funções de servidor fixas.  
+ Requer associação na **sysadmin** e **serveradmin** funções de servidor fixas.  
   
 ## <a name="remarks"></a>Remarks  
  A menos que **todos os** é especificado para *idioma*localizado todas as versões de uma mensagem devem ser descartadas antes de descartar a versão em inglês dos EUA.  
@@ -66,7 +66,7 @@ sp_dropmessage [ @msgnum = ] message_number
 ## <a name="examples"></a>Exemplos  
   
 ### <a name="a-dropping-a-user-defined-message"></a>A. Descartando uma mensagem definida pelo usuário  
- O exemplo a seguir descarta uma mensagem definida pelo usuário, número `50001`, de **messages**.  
+ O exemplo a seguir descarta uma mensagem definida pelo usuário, o número `50001`, da **sys. messages**.  
   
 ```  
 USE master;  

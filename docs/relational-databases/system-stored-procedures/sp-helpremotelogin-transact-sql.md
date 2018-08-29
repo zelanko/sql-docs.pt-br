@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_helpremotelogin
 ms.assetid: 93f50869-2627-4642-899f-8f626f8833f4
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 60fe6f30365e63394f80b481fe155b26caa4061b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e0dc7cdc8e647adf1d8ea5e4e2903509c16a2f62
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249438"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033369"
 ---
 # <a name="sphelpremotelogin-transact-sql"></a>sp_helpremotelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,10 +49,10 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
   
 ## <a name="arguments"></a>Argumentos  
  [ @remoteserver **=** ] **'***remoteserver***'**  
- É o servidor remoto sobre o qual as informações de logon remoto são retornadas. *remoteserver* é **sysname**, com um padrão NULL. Se *remoteserver* não é especificado, serão retornadas informações sobre todos os servidores remotos definidos no servidor local.  
+ É o servidor remoto sobre o qual as informações de logon remoto são retornadas. *remoteserver* está **sysname**, com um padrão NULL. Se *remoteserver* não é especificado, serão retornadas informações sobre todos os servidores remotos definidos no servidor local.  
   
  [ @remotename **=** ] **'***remote_name***'**  
- É um logon remoto específico no servidor remoto. *remote_name* é **sysname**, com um padrão NULL. Se *remote_name* não for especificado, as informações sobre todos os usuários remotos definidas para *remoteserver* é retornado.  
+ É um logon remoto específico no servidor remoto. *remote_name* está **sysname**, com um padrão NULL. Se *remote_name* não for especificado, informações sobre todos os usuários remotos definidos para *remoteserver* é retornado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
@@ -91,7 +91,7 @@ EXEC sp_helpremotelogin;
 ## <a name="see-also"></a>Consulte também  
  [sp_addremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)   
  [sp_dropremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md)   
- [sp_helpserver & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [sp_remoteoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-remoteoption-transact-sql.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

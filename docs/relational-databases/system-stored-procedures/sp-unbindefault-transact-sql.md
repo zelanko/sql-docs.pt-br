@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_unbindefault
 ms.assetid: c96a6c5e-f3ca-4c1e-b64b-0d8ef6986af8
 caps.latest.revision: 38
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 80453657de70133f269b35387813389ecb7cff0a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 51d6461bf5ad23cc39853a86054652bb8d20b63a
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262314"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031918"
 ---
 # <a name="spunbindefault-transact-sql"></a>sp_unbindefault (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "33262314"
   Desvincula, ou remove, um padrão de uma coluna ou de um tipo de dados de alias no banco de dados atual.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] É recomendável criar definições padrão usando a palavra-chave DEFAULT no [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) ou [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) instruções em vez disso.  
+>  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] É recomendável criar definições padrão usando a palavra-chave DEFAULT na [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) ou [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) instruções em vez disso.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,7 +49,7 @@ sp_unbindefault [ @objname = ] 'object_name'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@objname=** ] **'***object_name***'**  
- É o nome da tabela e da coluna ou o tipo de dados do alias do qual o padrão deve ser desassociado. *object_name* é **nvarchar(776)**, sem padrão. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta resolver identificadores de duas partes primeiro para nomes das colunas e, em seguida, para tipos de dados do alias.  
+ É o nome da tabela e da coluna ou o tipo de dados do alias do qual o padrão deve ser desassociado. *object_name* está **nvarchar(776)**, sem padrão. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta resolver identificadores de duas partes primeiro para nomes das colunas e, em seguida, para tipos de dados do alias.  
   
  Ao desvincular um padrão de um tipo de dados de alias, as colunas desse tipo de dados que tiverem o mesmo padrão também serão desvinculadas. As colunas desse tipo de dados com padrões vinculados diretamente não serão afetadas.  
   
@@ -57,7 +57,7 @@ sp_unbindefault [ @objname = ] 'object_name'
 >  *object_name* pode conter colchetes **[]** como caracteres de identificador delimitados. Para obter mais informações, consulte [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
  [  **@futureonly=** ] **'***futureonly_flag***'**  
- É usado apenas ao desvincular um padrão de um tipo de dados de alias. *futureonly_flag* é **varchar(15)**, com um padrão NULL. Quando *futureonly_flag* é **futureonly**, as colunas existentes do tipo de dados não perdem o padrão especificado.  
+ É usado apenas ao desvincular um padrão de um tipo de dados de alias. *futureonly_flag* está **varchar(15)**, com um padrão NULL. Quando *futureonly_flag* é **futureonly**, as colunas existentes do tipo de dados não perdem o padrão especificado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  

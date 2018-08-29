@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_change_log_shipping_primary_database
 ms.assetid: 8c9dce6b-d2a3-4ca7-a832-8f59a5adb214
-caps.latest.revision: 27
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0fd020ff499dfb230478434e70cee94edb45ba92
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b064cf2e2005a495f077682404fb7569f683d245
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238776"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033459"
 ---
 # <a name="spchangelogshippingprimarydatabase-transact-sql"></a>sp_change_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,16 +55,16 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@database =** ] '*banco de dados*'  
- É o nome do banco de dados do servidor primário. *primary_database* é **sysname**, sem padrão.  
+ É o nome do banco de dados do servidor primário. *primary_database* está **sysname**, sem padrão.  
   
  [  **@backup_directory =** ] '*backup_directory*'  
- É o caminho para a pasta de backup no servidor primário. *backup_directory* é **nvarchar (500)**, sem padrão, e não pode ser NULL.  
+ É o caminho para a pasta de backup no servidor primário. *backup_directory* está **nvarchar(500)**, sem padrão, e não pode ser NULL.  
   
  [  **@backup_share =** ] '*backup_share*'  
- É o caminho da rede para o diretório de backup no servidor primário. *backup_share* é **nvarchar (500)**, sem padrão, e não pode ser NULL.  
+ É o caminho da rede para o diretório de backup no servidor primário. *backup_share* está **nvarchar(500)**, sem padrão, e não pode ser NULL.  
   
  [  **@backup_retention_period =** ] '*backup_retention_period*'  
- É o período de tempo, em minutos, para reter o arquivo de backup de logs no diretório de backup no servidor primário. *backup_retention_period* é **int**, sem padrão, e não pode ser NULL.  
+ É o período de tempo, em minutos, para reter o arquivo de backup de logs no diretório de backup no servidor primário. *backup_retention_period* está **int**, sem padrão, e não pode ser NULL.  
   
  [  **@monitor_server_security_mode =** ] '*monitor_server_security_mode*'  
  O modo de segurança usado para conexão ao servidor monitor.  
@@ -74,7 +73,7 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
   
  0 = Autenticação do SQL Server.  
   
- *monitor_server_security_mode* é **bit** e não pode ser NULL.  
+ *monitor_server_security_mode* está **bit** e não pode ser NULL.  
   
  [  **@monitor_server_login =** ] '*monitor_server_login*'  
  É o nome de usuário da conta usada para acessar o servidor monitor.  
@@ -83,10 +82,10 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
  Senha da conta usada para acessar o servidor monitor.  
   
  [  **@backup_threshold =** ] '*backup_threshold*'  
- É o período de tempo, em minutos, após o último backup antes de um *threshold_alert* erro será gerado. *backup_threshold* é **int**, com um padrão de 60 minutos.  
+ É o período de tempo, em minutos, após o último backup antes de uma *threshold_alert* erro será gerado. *backup_threshold* está **int**, com um padrão de 60 minutos.  
   
  [  **@threshold_alert =** ] '*threshold_alert*'  
- O alerta a ser emitido quando o limite do backup for excedido. *threshold_alert* é **int** e não pode ser NULL.  
+ O alerta a ser emitido quando o limite do backup for excedido. *alerta de limite* está **int** e não pode ser NULL.  
   
  [  **@threshold_alert_enabled =** ] '*threshold_alert_enabled*'  
  Especifica se um alerta é gerado quando *backup_threshold* for excedido.  
@@ -95,10 +94,10 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
   
  0 = desabilitado.  
   
- *threshold_alert_enabled* é **bit** e não pode ser NULL.  
+ *threshold_alert_enabled* está **bit** e não pode ser NULL.  
   
  [  **@history_retention_period =** ] '*history_retention_period*'  
- É o período em minutos no qual o histórico é retido. *history_retention_period* é **int**. O valor 14420 será usado se nenhum valor for especificado.  
+ É o período em minutos no qual o histórico é retido. *history_retention_period* está **int**. O valor 14420 será usado se nenhum valor for especificado.  
   
  [ **@backup_compression**=] *backup_compression_option*  
  Especifica se uma configuração de envio de log usa [compactação de backup](../../relational-databases/backup-restore/backup-compression-sql-server.md). Este parâmetro é suportado somente no [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (ou em uma versão posterior).  
@@ -113,22 +112,22 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma  
+ None  
   
 ## <a name="remarks"></a>Remarks  
  **sp_change_log_shipping_primary_database** deve ser executado a partir de **mestre** banco de dados no servidor primário. Esse procedimento armazenado faz o seguinte:  
   
-1.  Altera as configurações de **log_shipping_primary_database** registrar, se necessário.  
+1.  Altera as configurações na **log_shipping_primary_database** gravar, se necessário.  
   
-2.  Altera o registro local em **log_shipping_monitor_primary** no servidor primário usando os argumentos fornecidos, se necessário.  
+2.  Altera o registro local na **log_shipping_monitor_primary** no servidor primário usando os argumentos fornecidos, se necessário.  
   
-3.  Se o servidor monitor for diferente do servidor primário, altera o registro em **log_shipping_monitor_primary** no monitor de servidor usando os argumentos fornecidos, se necessário.  
+3.  Se o servidor monitor for diferente do servidor primário, altera o registro em **log_shipping_monitor_primary** no monitor do servidor usando os argumentos fornecidos, se necessário.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função fixa de servidor pode executar esse procedimento.  
+ Somente os membros dos **sysadmin** função de servidor fixa pode executar esse procedimento.  
   
 ## <a name="examples"></a>Exemplos  
- Este exemplo ilustra o uso de **sp_change_log_shipping_primary_database** para atualizar as configurações associadas ao banco de dados primário [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+ Este exemplo ilustra o uso de **sp_change_log_shipping_primary_database** para atualizar as configurações associadas com o banco de dados primário [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```  
 EXEC master.dbo.sp_change_log_shipping_primary_database   
@@ -145,7 +144,7 @@ EXEC master.dbo.sp_change_log_shipping_primary_database
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Sobre o envio de logs & #40; SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [log_shipping_primary_databases &#40;Transact-SQL&#41;](../../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)  
   

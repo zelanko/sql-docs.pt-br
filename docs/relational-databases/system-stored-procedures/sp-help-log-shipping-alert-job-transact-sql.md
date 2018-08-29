@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_log_shipping_alert_job
 ms.assetid: 4d4b4577-c393-4961-b2d3-b56e980b787b
-caps.latest.revision: 20
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bc50fac70f531643cb39f584426e245fd0c232b8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 59245cd3df3054fd8143bc4bf9f8a893b19852a5
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33241135"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43032898"
 ---
 # <a name="sphelplogshippingalertjob-transact-sql"></a>sp_help_log_shipping_alert_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,22 +44,22 @@ sp_help_log_shipping_alert_job
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- Nenhuma  
+ None  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Este procedimento armazenado retorna o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ID do trabalho do agente de trabalho de alerta de envio de logs. Caso não exista nenhum trabalho de alerta de envio de logs, ele retornará um conjunto de resultados vazio.  
+ Este procedimento armazenado retorna o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ID de trabalho do agente de trabalho de alerta de envio de logs. Caso não exista nenhum trabalho de alerta de envio de logs, ele retornará um conjunto de resultados vazio.  
   
 ## <a name="remarks"></a>Remarks  
  **sp_help_log_shipping_alert_job** deve ser executado a partir de **mestre** banco de dados no servidor monitor.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função fixa de servidor pode executar esse procedimento.  
+ Somente os membros dos **sysadmin** função de servidor fixa pode executar esse procedimento.  
   
 ## <a name="see-also"></a>Consulte também  
- [Sobre o envio de logs & #40; SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

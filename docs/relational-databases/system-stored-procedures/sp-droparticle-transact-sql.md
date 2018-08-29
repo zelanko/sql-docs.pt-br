@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_droparticle
 ms.assetid: 09fec594-53f4-48a5-8edb-c50731c7adb2
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a05199bb255a3ae4050f2bca7a6d2f4352d5533a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cc5a59df61730eba41316454c58afc3695689bd9
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32990861"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033288"
 ---
 # <a name="spdroparticle-transact-sql"></a>sp_droparticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,10 +51,10 @@ sp_droparticle [ @publication= ] 'publication'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@publication=**] **'***publicação***'**  
- É o nome da publicação que contém o artigo a ser removido. *publicação* é **sysname**, sem padrão.  
+ É o nome da publicação que contém o artigo a ser removido. *publicação* está **sysname**, sem padrão.  
   
  [  **@article=**] **'***artigo***'**  
- É o nome do artigo a ser removido. *artigo* é **sysname**, sem padrão.  
+ É o nome do artigo a ser removido. *artigo* está **sysname**, sem padrão.  
   
  [  **@ignore_distributor =**] *ignore_distributor*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -64,13 +64,13 @@ sp_droparticle [ @publication= ] 'publication'
   
  **0** Especifica que as alterações no artigo fazem com que o instantâneo seja inválido. Se o procedimento armazenado detectar que a alteração requer um novo instantâneo, ocorrerá um erro e nenhuma alteração será feita.  
   
- **1** Especifica que as alterações no artigo podem invalidar o instantâneo inválido e se houver assinaturas existentes que exigem um novo instantâneo, dará permissão para que o instantâneo existente seja marcado como obsoleto e um novo instantâneo seja gerado.  
+ **1** Especifica que as alterações no artigo podem invalidar o instantâneo ser inválida e se houver assinaturas existentes que exigem um novo instantâneo, dará permissão para o instantâneo existente seja marcado como obsoleto e um novo instantâneo seja gerado.  
   
- [ **@publisher**=] **'***publicador***'**  
- Especifica um não[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *publicador* é **sysname**, com um padrão NULL.  
+ [ **@publisher**=] **'***publisher***'**  
+ Especifica um não[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador. *Publisher* está **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
->  *publicador* não deve ser usado ao alterar as propriedades de artigo em uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
+>  *Publisher* não deve ser usado ao alterar as propriedades do artigo em uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
   
  [ **@from_drop_publication**=] *from_drop_publication*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -81,15 +81,15 @@ sp_droparticle [ @publication= ] 'publication'
 ## <a name="remarks"></a>Remarks  
  **sp_droparticle** é usado em replicação de instantâneo e transacional.  
   
- Para artigos filtrados horizontalmente, **sp_droparticle** verifica o **tipo** coluna do artigo no [sysarticles &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md) tabela Determine se uma exibição ou filtro também deve ser descartado. Se uma exibição ou filtro foram gerados automaticamente, serão descartados com o artigo. Se foram criados manualmente, não serão descartados.  
+ Para artigos filtrados horizontalmente, **sp_droparticle** verifica as **tipo** coluna do artigo na [sysarticles &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md) tabela Determine se uma exibição ou filtro também deve ser descartado. Se uma exibição ou filtro foram gerados automaticamente, serão descartados com o artigo. Se foram criados manualmente, não serão descartados.  
   
- Executar **sp_droparticle** descartar um artigo de uma publicação não remove o objeto do banco de dados de publicação ou o objeto correspondente do banco de dados de assinatura. Use `DROP <object>` para remover esses objetos manualmente, se necessário.  
+ Executando **sp_droparticle** descartar um artigo de uma publicação não remove o objeto de banco de dados de publicação ou o objeto correspondente do banco de dados de assinatura. Use `DROP <object>` para remover esses objetos manualmente, se necessário.  
   
 ## <a name="example"></a>Exemplo  
  [!code-sql[HowTo#sp_droparticle](../../relational-databases/replication/codesnippet/tsql/sp-droparticle-transact-_1.sql)]  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função de servidor fixa ou **db_owner** pode executar a função de banco de dados fixa **sp_droparticle**.  
+ Somente os membros dos **sysadmin** função de servidor fixa ou **db_owner** banco de dados fixa podem executar **sp_droparticle**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Excluir um artigo](../../relational-databases/replication/publish/delete-an-article.md)   

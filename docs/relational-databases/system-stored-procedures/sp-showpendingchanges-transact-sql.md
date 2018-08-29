@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_showpendingchanges
 ms.assetid: 8013a792-639d-4550-b262-e65d30f9d291
 caps.latest.revision: 17
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2b59856ba83d3118a9246bb5cd93a8d63e7745f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 229136548d40e985869bd1f01685cb0c3dad6f4f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33000733"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030697"
 ---
 # <a name="spshowpendingchanges-transact-sql"></a>sp_showpendingchanges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,16 +52,16 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
   
 ## <a name="arguments"></a>Argumentos  
  [ @destination_server **=** ] **'***destination_server***'**  
- É o nome do servidor onde as alterações replicadas são aplicadas. *destination_server* é **sysname**, com o valor padrão de NULL.  
+ É o nome do servidor onde as alterações replicadas são aplicadas. *destination_server* está **sysname**, com o valor padrão de NULL.  
   
  [ @publication **=** ] **'***publicação***'**  
- É o nome da publicação. *publicação* é **sysname**, com um valor padrão de NULL. Quando *publicação* for especificado, resultados são limitados somente para a publicação especificada.  
+ É o nome da publicação. *publicação* está **sysname**, com um valor padrão de NULL. Quando *publicação* for especificado, os resultados são limitados somente para a publicação especificada.  
   
  [ @article **=** ] **'***artigo***'**  
- É o nome do artigo. *artigo* é **sysname**, com um valor padrão de NULL. Quando *artigo* for especificado, resultados são limitados somente para o artigo especificado.  
+ É o nome do artigo. *artigo* está **sysname**, com um valor padrão de NULL. Quando *artigo* for especificado, os resultados são limitados somente para o artigo especificado.  
   
  [ @show_rows **=** ] *show_rows*  
- Especifica se o conjunto de resultados contém informações mais específicas sobre alterações pendentes, com um valor padrão de **0**. Se um valor de **1** for especificado, o conjunto de resultados contém as colunas is_delete e rowguid.  
+ Especifica se o conjunto de resultados contém informações mais específicas sobre alterações pendentes, com um valor padrão de **0**. Se o valor de **1** for especificado, o conjunto de resultados conterá as colunas is_delete e rowguid.  
   
 ## <a name="result-set"></a>Conjunto de resultados  
   
@@ -72,8 +72,8 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
 |destination_db_name|**sysname**|O nome do banco de dados para o qual as alterações estão sendo replicadas.|  
 |is_dest_subscriber|**bit**|Indica que as alterações estão sendo replicadas para um Assinante. Um valor de **1** indica que as alterações estão sendo replicadas para um assinante. **0** significa que as alterações estão sendo replicadas para um publicador.|  
 |article_name|**sysname**|O nome do artigo para a tabela onde as alterações foram originadas.|  
-|pending_deletes|**Int**|O número de exclusões esperando para serem replicadas.|  
-|pending_ins_and_upd|**Int**|O número de inserções e atualizações esperando para serem replicadas.|  
+|pending_deletes|**int**|O número de exclusões esperando para serem replicadas.|  
+|pending_ins_and_upd|**int**|O número de inserções e atualizações esperando para serem replicadas.|  
 |is_delete|**bit**|Indica se a alteração pendente é uma exclusão. Um valor de **1** indica que a alteração é uma exclusão. Requer um valor de **1** para @show_rows.|  
 |rowguid|**uniqueidentifier**|A GUID que identifica a linha que foi alterada. Requer um valor de **1** para @show_rows.|  
   

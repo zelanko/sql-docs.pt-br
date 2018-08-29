@@ -20,20 +20,20 @@ helpviewer_keywords:
 - sp_setreplfailovermode
 ms.assetid: ca98a4c3-bea4-4130-88d7-79e0fd1e85f6
 caps.latest.revision: 25
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a6e61491e5764bd6bf5d4f3727532d5bd6790c7d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eff9cf8dea592fdf711634e29ba4b175f18c9f22
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32998333"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028345"
 ---
 # <a name="spsetreplfailovermode-transact-sql"></a>sp_setreplfailovermode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Permite definir o modo de operação de failover para assinaturas habilitadas para atualização imediata com atualização enfileirada como failover. Esse procedimento armazenado é executado no assinante no banco de dados de assinatura. Para obter mais informações sobre modos de failover, consulte [assinaturas atualizáveis para replicação transacional](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).  
+  Permite definir o modo de operação de failover para assinaturas habilitadas para atualização imediata com atualização enfileirada como failover. Esse procedimento armazenado é executado no assinante, no banco de dados de assinatura. Para obter mais informações sobre modos de failover, consulte [assinaturas atualizáveis para replicação transacional](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,22 +49,22 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publisher=**] **'***publicador***'**  
- É o nome da publicação. *publicação* é **sysname**, sem padrão. A publicação já deve existir.  
+ [  **@publisher=**] **'***publisher***'**  
+ É o nome da publicação. *publicação* está **sysname**, sem padrão. A publicação já deve existir.  
   
  [  **@publisher_db =**] **'***publisher_db***'**  
- É o nome do banco de dados de publicação. *publisher_db* é **sysname**, sem padrão.  
+ É o nome do banco de dados de publicação. *publisher_db* está **sysname**, sem padrão.  
   
  [  **@publication=**] **'***publicação***'**  
- É o nome da publicação. *publicação*é **sysname**, sem padrão.  
+ É o nome da publicação. *publicação*está **sysname**, sem padrão.  
   
  [**@failover_mode=**] **'***failover_mode***'**  
- É o modo de failover da assinatura. *failover_mode* é **nvarchar (10)** e pode ser um destes valores.  
+ É o modo de failover da assinatura. *failover_mode* está **nvarchar (10)** e pode ser um destes valores.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**imediata** ou **sincronização**|Modificações de dados feitas no Assinante são copiadas em massa para o Publicador à medida que ocorrem.|  
-|**Em fila**|As modificações de dados são armazenadas em um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fila.|  
+|**em fila**|As modificações de dados são armazenadas em uma [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fila.|  
   
 > [!NOTE]  
 >  O Serviço de Enfileiramento de Mensagens da [!INCLUDE[msCoName](../../includes/msconame-md.md)] foi preterido e não tem mais suporte.  
@@ -76,10 +76,10 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="remarks"></a>Remarks  
- **sp_setreplfailovermode** é usado em replicação de instantâneo ou replicação transacional para quais assinaturas estão ativadas, ou para atualização em fila com failover para atualização imediata ou atualização imediata com failover para na fila a atualização.  
+ **sp_setreplfailovermode** é usado em replicação de instantâneo ou replicação transacional para quais assinaturas são ativadas, tanto para atualização em fila com failover para atualização imediata ou atualização imediata com failover enfileiradas Atualizando.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função de servidor fixa ou **db_owner** pode executar a função de banco de dados fixa **sp_setreplfailovermode**.  
+ Somente os membros dos **sysadmin** função de servidor fixa ou **db_owner** banco de dados fixa podem executar **sp_setreplfailovermode**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Alternar entre modos de atualização para uma assinatura transacional atualizável](../../relational-databases/replication/administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md)   

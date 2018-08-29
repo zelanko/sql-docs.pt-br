@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_syspolicy_add_policy_category_subscription
 ms.assetid: 4284f550-9a3f-4726-8181-15e407fbf08f
-caps.latest.revision: 8
-author: stevestein
-ms.author: sstein
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 5c3e5f4079a75fca4112da1185a941b3a77e6b85
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 6006c4cbcbd33b4881faf4399cee082a4891ceda
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253115"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030907"
 ---
 # <a name="spsyspolicyaddpolicycategorysubscription-transact-sql"></a>sp_syspolicy_add_policy_category_subscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,18 +47,18 @@ sp_syspolicy_add_policy_category_subscription [ @target_type = ] 'target_type'
   
 ## <a name="arguments"></a>Argumentos  
  [ **@target_type=** ] **'***target_type***'**  
- É o tipo de destino da assinatura da categoria. *target_type* é **sysname**, é necessário e deve ser definido como 'DATABASE'.  
+ É o tipo de destino da assinatura da categoria. *target_type* está **sysname**, é necessário e deve ser definida como 'DATABASE'.  
   
  [  **@target_object=** ] **'***target_object***'**  
- É o nome do banco de dados que assinará a categoria. *target_object* é **sysname**e é necessário.  
+ É o nome do banco de dados que assinará a categoria. *target_object* está **sysname**e é necessária.  
   
  [  **@policy_category=** ] **'***policy_category***'**  
- É o nome da categoria de política para assinar. *policy_category* é **sysname**e é necessário.  
+ É o nome da categoria de política para inscrever-se. *policy_category* está **sysname**e é necessária.  
   
- Para obter valores *policy_category*, consultar o syspolicy_policy_categories do sistema.  
+ Para obter valores para *policy_category*, consulte a exibição do sistema syspolicy_policy_categories.  
   
  [  **@policy_category_subscription_id=** ] *policy_category_subscription_id*  
- É o identificador da assinatura da categoria. *policy_category_subscription_id* é **int**e é retornada como OUTPUT.  
+ É o identificador da assinatura da categoria. *policy_category_subscription_id* está **int**e é retornada como OUTPUT.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

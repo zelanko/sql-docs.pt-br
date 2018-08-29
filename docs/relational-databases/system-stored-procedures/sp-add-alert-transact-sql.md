@@ -18,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_alert
 ms.assetid: d9b41853-e22d-4813-a79f-57efb4511f09
-caps.latest.revision: 40
-author: stevestein
-ms.author: sstein
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dd9e96ece5a5b8a3dc39c6246e0f2201bbffab1d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e727c63007942f2dd6d110860deb182b04ab1db1
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240636"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43034076"
 ---
 # <a name="spaddalert-transact-sql"></a>sp_add_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,22 +58,22 @@ sp_add_alert [ @name = ] 'name'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@name =** ] **'***nome***'**  
- O nome do alerta. O nome é exibido na mensagem de email ou de pager enviada em resposta ao alerta. Ele deve ser exclusivo e pode conter a porcentagem (**%**) caracteres. *nome* é **sysname**, sem padrão.  
+ O nome do alerta. O nome é exibido na mensagem de email ou de pager enviada em resposta ao alerta. Ele deve ser exclusivo e pode conter a porcentagem (**%**) caracteres. *nome da* está **sysname**, sem padrão.  
   
  [  **@message_id =** ] *message_id*  
- O número de erro da mensagem que define o alerta. (Normalmente corresponde a um número de erro no **sysmessages** tabela.) *message_id* é **int**, com um padrão de **0**. Se *severidade* é usado para definir o alerta, *message_id* devem ser **0** ou nulo.  
+ O número de erro da mensagem que define o alerta. (Normalmente corresponde a um número de erro no **sysmessages** tabela.) *message_id* é **int**, com um padrão de **0**. Se *gravidade* é usado para definir o alerta *message_id* deve ser **0** ou nulo.  
   
 > [!NOTE]  
->  Somente **sysmessages** erros gravados no log de aplicativo do Microsoft Windows podem causar um alerta seja enviado.  
+>  Somente **sysmessages** erros gravados no log de aplicativo do Microsoft Windows podem fazer com que um alerta seja enviado.  
   
- [  **@severity =** ] *severidade*  
- O nível de gravidade (de **1** por meio de **25**) que define o alerta. Qualquer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mensagem armazenada no **sysmessages** tabela enviada para o [!INCLUDE[msCoName](../../includes/msconame-md.md)] log de aplicativo do Windows com a severidade indicada faz com que o alerta seja enviado. *severidade* é **int**, com um padrão de 0. Se *message_id* é usado para definir o alerta, *severidade* devem ser **0**.  
+ [  **@severity =** ] *gravidade*  
+ O nível de gravidade (de **1** por meio **25**) que define o alerta. Qualquer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mensagem armazenada em de **sysmessages** tabela enviada para o [!INCLUDE[msCoName](../../includes/msconame-md.md)] log de aplicativo do Windows com a severidade indicada fará com que o alerta seja enviado. *gravidade* está **int**, com um padrão de 0. Se *message_id* é usado para definir o alerta *gravidade* deve ser **0**.  
   
  [  **@enabled =** ] *habilitado*  
- Indica o status atual do alerta. *habilitado* é **tinyint**, com um padrão de 1 (habilitado). Se **0**, o alerta não está habilitado e não será acionado.  
+ Indica o status atual do alerta. *habilitada* está **tinyint**, com um padrão de 1 (habilitado). Se **0**, o alerta não está habilitado e não será acionado.  
   
  [  **@delay_between_responses =** ] *delay_between_responses*  
- O período de espera, em segundos, entre respostas ao alerta. *delay_between_responses*é **int**, com um padrão de **0**, que significa que não haverá nenhuma espera entre as respostas (cada ocorrência do alerta gera uma resposta). A resposta pode acontecer de uma destas maneiras ou de ambas:  
+ O período de espera, em segundos, entre respostas ao alerta. *delay_between_responses*está **int**, com um padrão de **0**, que significa que não haverá nenhuma espera entre as respostas (cada ocorrência do alerta gera uma resposta). A resposta pode acontecer de uma destas maneiras ou de ambas:  
   
 -   Uma ou mais notificações enviadas por email ou pager.  
   
@@ -83,41 +82,41 @@ sp_add_alert [ @name = ] 'name'
  Ao definir esse valor, é possível evitar, por exemplo, que mensagens de email não desejadas sejam enviadas quando um alerta ocorre repetidamente em um curto período.  
   
  [  **@notification_message =** ] **'***notification_message***'**  
- É uma mensagem adicional opcional enviada ao operador como parte do email, **net send**, ou uma notificação de pager. *notification_message* é **nvarchar (512)**, com um padrão NULL. Especificando *notification_message* é útil para adicionar observações especiais como procedimentos corretivos.  
+ É uma mensagem adicional opcional enviada ao operador como parte de email, **net send**, ou notificação de pager. *notification_message* está **nvarchar(512)**, com um padrão NULL. Especificando *notification_message* é útil para adicionar observações especiais como procedimentos corretivos.  
   
  [  **@include_event_description_in =** ] *include_event_description_in*  
- Define se a descrição do erro do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ser incluída como parte da mensagem de notificação. *include_event_description_in*é **tinyint**, com um padrão de **5** (email e **net send**) e pode ter um ou mais desses valores combinados com um **Ou** operador lógico.  
+ Define se a descrição do erro do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ser incluída como parte da mensagem de notificação. *include_event_description_in*está **tinyint**, com um padrão de **5** (email e **net send**) e pode ter um ou mais desses valores combinados com um **Ou** operador lógico.  
   
 > [!IMPORTANT]  
 >  As opções Pager e **net send** serão removidas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent em uma versão futura do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esses recursos em novo trabalho de desenvolvimento e planeje modificar os aplicativos que os usam atualmente.  
   
-|Value|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
-|**0**|Nenhuma|  
+|**0**|None|  
 |**1**|Email|  
 |**2**|Pager|  
 |**4**|**net send**|  
   
  [  **@database_name =** ] **'***banco de dados***'**  
- O banco de dados no qual o erro deve ocorrer para que o alerta seja acionado. Se *banco de dados*não for fornecido, o alerta será acionado independentemente de onde o erro ocorreu. *banco de dados* é **sysname**. Os nomes entre colchetes ([ ]) não são permitidos. O valor padrão é NULL.  
+ O banco de dados no qual o erro deve ocorrer para que o alerta seja acionado. Se *banco de dados*não for fornecido, o alerta será acionado independentemente de onde o erro ocorreu. *banco de dados* está **sysname**. Os nomes entre colchetes ([ ]) não são permitidos. O valor padrão é NULL.  
   
  [  **@event_description_keyword =** ] **'***event_description_keyword_pattern***'**  
- A sequência de caracteres que a descrição do erro do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ter. Os caracteres correspondentes ao padrão da expressão LIKE do [!INCLUDE[tsql](../../includes/tsql-md.md)] podem ser usados. *event_description_keyword_pattern* é **nvarchar (100)**, com um padrão NULL. Esse parâmetro é útil para filtrar nomes de objeto (por exemplo, **% customer_table %**).  
+ A sequência de caracteres que a descrição do erro do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ter. Os caracteres correspondentes ao padrão da expressão LIKE do [!INCLUDE[tsql](../../includes/tsql-md.md)] podem ser usados. *event_description_keyword_pattern* está **nvarchar(100)**, com um padrão NULL. Esse parâmetro é útil para filtrar nomes de objeto (por exemplo, **% customer_table %**).  
   
  [  **@job_id =** ] *job_id*  
- O número de identificação do trabalho a ser executado em resposta a esse alerta. *job_id* é **uniqueidentifier**, com um padrão NULL.  
+ O número de identificação do trabalho a ser executado em resposta a esse alerta. *job_id* está **uniqueidentifier**, com um padrão NULL.  
   
  [  **@job_name =** ] **'***job_name***'**  
- O nome do trabalho a ser executado em resposta a esse alerta. *job_name*é **sysname**, com um padrão NULL.  
+ O nome do trabalho a ser executado em resposta a esse alerta. *job_name*está **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
->  O *job_id* ou *job_name* devem ser especificados, mas não é possível especificar ambos.  
+>  Qualquer um dos *job_id* ou *job_name* deve ser especificado, mas não podem ser especificados.  
   
  [  **@raise_snmp_trap =** ] *raise_snmp_trap*  
- Não implementado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versão 7.0. *raise_snmp_trap* é **tinyint**, com um padrão de 0.  
+ Não implementado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versão 7.0. *raise_snmp_trap* está **tinyint**, com um padrão de 0.  
   
  [  **@performance_condition =** ] **'***performance_condition***'**  
- É um valor expressado no formato '*itemcomparatorvalue*'. *performance_condition* é **nvarchar (512)** com um padrão NULL e consiste nestes elementos.  
+ É um valor expressado no formato '*itemcomparatorvalue*'. *performance_condition* está **nvarchar(512)** com um padrão de NULL e consiste nestes elementos.  
   
 |Elemento Format|Description|  
 |--------------------|-----------------|  
@@ -126,30 +125,30 @@ sp_add_alert [ @name = ] 'name'
 |*Value*|Valor numérico do contador|  
   
  [  **@category_name =** ] **'***categoria***'**  
- O nome da categoria do alerta. *categoria de* é **sysname**, com um padrão NULL.  
+ O nome da categoria do alerta. *categoria* está **sysname**, com um padrão NULL.  
   
  [ **@wmi_namespace**=] **'***wmi_namespace***'**  
- O namespace WMI para consulta de eventos. *wmi_namespace* é **sysname**, com um padrão NULL. Somente namespaces no servidor local possuem suporte.  
+ O namespace WMI para consulta de eventos. *wmi_namespace* está **sysname**, com um padrão NULL. Somente namespaces no servidor local possuem suporte.  
   
  [ **@wmi_query**= ] **'***wmi_query***'**  
- A consulta que especifica o evento WMI do alerta. *wmi_query* é **nvarchar (512)**, com um padrão NULL.  
+ A consulta que especifica o evento WMI do alerta. *wmi_query* está **nvarchar(512)**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma  
+ None  
   
 ## <a name="remarks"></a>Remarks  
  **sp_add_alert** deve ser executado a partir de **msdb** banco de dados.  
   
  Essas são as circunstâncias sob as quais erros/mensagens gerados pelos aplicativos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são enviados ao log de aplicativos do Windows e, assim, podem gerar alertas:  
   
--   Severidade 19 ou superior **messages** erros  
+-   Severidade 19 ou superior **sys. messages** erros  
   
 -   Qualquer instrução RAISERROR é invocada com a sintaxe WITH LOG  
   
--   Qualquer **messages** erro modificado ou criado usando **sp_altermessage**  
+-   Qualquer **sys. messages** erro modificado ou criado usando **sp_altermessage**  
   
 -   Qualquer evento registrado usando **xp_logevent**  
   

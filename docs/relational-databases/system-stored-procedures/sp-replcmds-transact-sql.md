@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_replcmds
 ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
 caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3690b3eaad187b341e4ad31fae1068aa56e45b05
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 614b9ec8f418461ce8b42fcad09cd8729fba94d7
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33001423"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43033551"
 ---
 # <a name="spreplcmds-transact-sql"></a>sp_replcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,31 +49,31 @@ sp_replcmds [ @maxtrans = ] maxtrans
   
 ## <a name="arguments"></a>Argumentos  
  [  **@maxtrans=**] *maxtrans*  
- É o número de transações para retornar informações sobre. *maxtrans* é **int**, com um padrão de **1**, que especifica a próxima transação à espera de distribuição.  
+ É o número de transações para retornar informações sobre. *maxtrans* está **int**, com um padrão de **1**, que especifica a próxima transação à espera de distribuição.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**id do artigo**|**Int**|A ID do artigo.|  
+|**id do artigo**|**int**|A ID do artigo.|  
 |**partial_command**|**bit**|Indica se este é um comando parcial ou não.|  
 |**command**|**varbinary(1024)**|O valor do comando.|  
 |**Xactid**|**binary(10)**|ID da transação.|  
 |**xact_seqno**|**varbinary(16)**|O número de sequência da transação.|  
-|**publication_id**|**Int**|A ID da publicação.|  
-|**command_id**|**Int**|ID do comando na [MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md).|  
-|**command_type**|**Int**|Tipo de comando.|  
+|**publication_id**|**int**|A ID da publicação.|  
+|**command_id**|**int**|ID do comando em [MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md).|  
+|**command_type**|**int**|Tipo de comando.|  
 |**originator_srvname**|**sysname**|Servidor onde a transação originou.|  
 |**originator_db**|**sysname**|Banco de dados onde a transação originou.|  
-|**pkHash**|**Int**|Somente para uso interno.|  
-|**originator_publication_id**|**Int**|ID da publicação de origem da transação.|  
-|**originator_db_version**|**Int**|Versão do banco de dados onde a transação originou.|  
+|**pkHash**|**int**|Somente para uso interno.|  
+|**originator_publication_id**|**int**|ID da publicação de origem da transação.|  
+|**originator_db_version**|**int**|Versão do banco de dados onde a transação originou.|  
 |**originator_lsn**|**varbinary(16)**|Identifica o LSN (número de sequência de log) para o comando na publicação de origem.|  
   
 ## <a name="remarks"></a>Remarks  
  **sp_replcmds** é usado pelo processo do leitor de log na replicação transacional.  
   
- Replicação trata o primeiro cliente que executa o **sp_replcmds** dentro de um determinado banco de dados como o leitor de log.  
+ A replicação trata o primeiro cliente que executa **sp_replcmds** dentro de um determinado banco de dados como o leitor de log.  
   
  Esse procedimento pode gerar comandos para tabelas qualificadas pelo proprietário ou pode não qualificar o nome da tabela (o padrão). A adição de nomes das tabelas qualificados permite a replicação de dados de tabelas de propriedade de um usuário específico em um banco de dados para tabelas de propriedade do mesmo usuário em outro banco de dados.  
   
@@ -82,10 +82,10 @@ sp_replcmds [ @maxtrans = ] maxtrans
   
  Os clientes que tentam executar **sp_replcmds** dentro do mesmo banco de dados recebem erro 18752 até que o primeiro cliente se desconecta. Depois que o primeiro cliente se desconecta, outro cliente pode executar **sp_replcmds**, e se torna o novo leitor de log.  
   
- Um aviso mensagem 18759 será adicionada para ambos os [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log de erros e o [!INCLUDE[msCoName](../../includes/msconame-md.md)] do log de aplicativo do Windows se **sp_replcmds** não consegue replicar um comando de texto como o ponteiro de texto não foi recuperar na mesma transação.  
+ Um aviso mensagem 18759 será adicionada a ambos os [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log de erros e o [!INCLUDE[msCoName](../../includes/msconame-md.md)] do log de aplicativo do Windows se **sp_replcmds** não consegue replicar um comando de texto porque o ponteiro de texto não foi recuperados na mesma transação.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função de servidor fixa ou **db_owner** pode executar a função de banco de dados fixa **sp_replcmds**.  
+ Somente os membros dos **sysadmin** função de servidor fixa ou o **db_owner** banco de dados fixa podem executar **sp_replcmds**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Mensagens de erro](../../relational-databases/native-client-odbc-error-messages/error-messages.md)   

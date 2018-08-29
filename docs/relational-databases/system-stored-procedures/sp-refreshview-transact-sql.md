@@ -19,15 +19,15 @@ helpviewer_keywords:
 - sp_refreshview
 ms.assetid: 9ce1d07c-ee66-4a83-8c73-cd2cc104dd08
 caps.latest.revision: 26
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f9871a4ce62ce2916a1cd27c3ca8735de28cfa1b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: ed5f50b9b95f2f156632fb14c2cd471ef010bcac
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249428"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031474"
 ---
 # <a name="sprefreshview-transact-sql"></a>sp_refreshview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,13 +45,13 @@ sp_refreshview [ @viewname = ] 'viewname'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@viewname=** ] **'***viewname***'**  
- É o nome da exibição. *viewname* é **nvarchar**, sem padrão. *viewname* pode ser um identificador de várias partes, mas só pode fazer referência a exibições no banco de dados atual.  
+ É o nome da exibição. *viewname* está **nvarchar**, sem padrão. *viewname* pode ser um identificador de várias partes, mas só pode se referir a exibições no banco de dados atual.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou um número diferente de zero (falha)  
   
 ## <a name="remarks"></a>Remarks  
- Se um modo de exibição não for criado com schemabinding, **sp_refreshview** devem ser executados quando alterações são feitas nos objetos subjacentes à exibição que afetam a definição da exibição. Caso contrário, a exibição poderá gerar resultados inesperados quando consultada.  
+ Se um modo de exibição não for criado com schemabinding, **sp_refreshview** deve ser executado quando forem feitas alterações aos objetos subjacentes à exibição que afetam a definição da exibição. Caso contrário, a exibição poderá gerar resultados inesperados quando consultada.  
   
 ## <a name="permissions"></a>Permissões  
  Requer permissão ALTER na exibição e permissão REFERENCES em tipos definidos pelo usuário de common language runtime (CLR) e coleções de esquema XML referenciadas por colunas de exibição.  

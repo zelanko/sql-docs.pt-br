@@ -1,5 +1,5 @@
 ---
-title: Distributed procedimentos armazenados de consultas (Transact-SQL) | Microsoft Docs
+title: Distribuído procedimentos armazenados de consultas (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,16 +16,15 @@ helpviewer_keywords:
 - system stored procedures [SQL Server], distributed queries
 - distributed queries [SQL Server], stored procedures
 ms.assetid: 0fbf2846-885e-4de2-b552-f6453c3ca136
-caps.latest.revision: 15
-author: edmacauley
-ms.author: edmaca
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5fe30603627276fc0d8c43b59634f67d049d9643
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: d70636377a5a5913d8b9c6c8944725820f3d58c4
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237564"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030628"
 ---
 # <a name="distributed-queries-stored-procedures-transact-sql"></a>Procedimentos armazenados de consultas distribuídas (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

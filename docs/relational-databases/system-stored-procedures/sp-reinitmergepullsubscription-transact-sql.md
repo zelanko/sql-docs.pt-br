@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_reinitmergepullsubscription
 ms.assetid: 48464bc9-60aa-4886-b526-163f010102b8
 caps.latest.revision: 32
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 20c701adf431f550f107a9cef08f1a3e49a9d611
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 54245be4b829b4dc6bffe59d79c93d63576338f6
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32996943"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43031188"
 ---
 # <a name="spreinitmergepullsubscription-transact-sql"></a>sp_reinitmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,17 +48,17 @@ sp_reinitmergepullsubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@publisher** =] **'***publicador***'**  
- É o nome do Publicador. *publicador* é **sysname**, com um padrão de ALL.  
+ [ **@publisher** =] **'***publisher***'**  
+ É o nome do Publicador. *Publisher* está **sysname**, com um padrão de ALL.  
   
  [ **@publisher_db** =] **'***publisher_db***'**  
- É o nome do banco de dados Publicador. *publisher_db* é **sysname**, com um padrão de ALL.  
+ É o nome do banco de dados Publicador. *publisher_db* está **sysname**, com um padrão de ALL.  
   
  [ **@publication** =] **'***publicação***'**  
- É o nome da publicação. *publicação* é **sysname**, com um padrão de ALL.  
+ É o nome da publicação. *publicação* está **sysname**, com um padrão de ALL.  
   
  [ **@upload_first** =] **'***upload_first***'**  
- Especifica se as alterações no Assinante são carregadas antes da assinatura ser reinicializada. *upload_first* é **nvarchar (5)**, com um padrão de FALSE. Se **true**, as alterações são carregadas antes que a assinatura seja reiniciada. Se **false**, as alterações não são carregadas.  
+ Especifica se as alterações no Assinante são carregadas antes da assinatura ser reinicializada. *upload_first* está **nvarchar (5)**, com um padrão de FALSE. Se **verdadeira**, as alterações são carregadas antes que a assinatura seja reiniciada. Se **falsos**, as alterações não são carregadas.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -75,7 +75,7 @@ sp_reinitmergepullsubscription [ [ @publisher = ] 'publisher' ]
  [!code-sql[HowTo#sp_reinitmergepullsubwithupload](../../relational-databases/replication/codesnippet/tsql/sp-reinitmergepullsubscr_2.sql)]  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função de servidor fixa ou **db_owner** pode executar a função de banco de dados fixa **sp_reinitmergepullsubscription**.  
+ Somente os membros dos **sysadmin** função de servidor fixa ou o **db_owner** banco de dados fixa podem executar **sp_reinitmergepullsubscription**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Reinicializar uma assinatura](../../relational-databases/replication/reinitialize-a-subscription.md)   

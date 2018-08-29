@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_changedistributiondb
 ms.assetid: 66f73185-ea9e-43f9-86ed-9dd933cee2f6
 caps.latest.revision: 28
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 79a09738a497dd2398005494189e4af83d99075c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4056a3cc6e8dada73358a896dbe8925b09363166
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32988281"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029572"
 ---
 # <a name="spchangedistributiondb-transact-sql"></a>sp_changedistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,20 +48,20 @@ sp_changedistributiondb [ @database= ] 'database'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@database=**] **'***banco de dados***'**  
- É o nome do banco de dados de distribuição. *banco de dados* é **sysname**, sem padrão.  
+ É o nome do banco de dados de distribuição. *banco de dados* está **sysname**, sem padrão.  
   
  [  **@property=**] **'***propriedade***'**  
- É a propriedade a ser alterada para o banco de dados determinado. *propriedade* é **sysname**, e pode ser um destes valores.  
+ É a propriedade a ser alterada para o banco de dados determinado. *propriedade* está **sysname**, e pode ser um destes valores.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**history_retention**|Período de retenção da tabela de histórico.|  
 |**max_distretention**|Período máximo de retenção de distribuição.|  
 |**min_distretention**|Período mínimo de retenção de distribuição.|  
-|NULL (padrão)|Disponíveis *propriedade* valores são impressas.|  
+|NULL (padrão)|Todos disponíveis *propriedade* valores são impressos.|  
   
  [  **@value=**] **'***valor***'**  
- É o novo valor da propriedade especificada. *valor* é **nvarchar (255)**, com um padrão NULL.  
+ É o novo valor da propriedade especificada. *valor* está **nvarchar (255)**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -73,7 +73,7 @@ sp_changedistributiondb [ @database= ] 'database'
  [!code-sql[HowTo#sp_changedistributiondb](../../relational-databases/replication/codesnippet/tsql/sp-changedistributiondb-_1.sql)]  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** pode executar a função de servidor fixa **sp_changedistributiondb**.  
+ Somente os membros dos **sysadmin** pode executar a função de servidor fixa **sp_changedistributiondb**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Exibir e modificar propriedades de Publicador e Distribuidor](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   

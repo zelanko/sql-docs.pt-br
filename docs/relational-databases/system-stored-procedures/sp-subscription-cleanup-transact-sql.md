@@ -20,20 +20,20 @@ helpviewer_keywords:
 - sp_subscription_cleanup
 ms.assetid: bdc8aaa0-ff2d-40c2-84b2-4ba513ced279
 caps.latest.revision: 29
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e17866eb6119d91a1859cc5fea70e49d8bae094c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0963089d011326c00cc0604b9f7455a5246d74ed
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32997143"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028676"
 ---
 # <a name="spsubscriptioncleanup-transact-sql"></a>sp_subscription_cleanup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Remove metadados quando uma assinatura é descartada em um Assinante. Para uma assinatura de transação de sincronização, inclui também gatilhos de atualização imediata. Esse procedimento armazenado é executado no assinante no banco de dados de assinatura.  
+  Remove metadados quando uma assinatura é descartada em um Assinante. Para uma assinatura de transação de sincronização, inclui também gatilhos de atualização imediata. Esse procedimento armazenado é executado no assinante, no banco de dados de assinatura.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,14 +48,14 @@ sp_subscription_cleanup [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@publisher=**] **'***publicador***'**  
- É o nome do Publicador. *publicador* é **sysname**, sem padrão.  
+ [  **@publisher=**] **'***publisher***'**  
+ É o nome do Publicador. *Publisher* está **sysname**, sem padrão.  
   
  [  **@publisher_db=**] **'***publisher_db***'**  
- É o nome do banco de dados Publicador. *publisher_db* é **sysname**, sem padrão.  
+ É o nome do banco de dados Publicador. *publisher_db* está **sysname**, sem padrão.  
   
  [  **@publication=**] **'***publicação***'**  
- É o nome da publicação. *publicação* é **sysname**, com um padrão NULL. Se for NULL, assinaturas que usam uma publicação de agente compartilhada no banco de dados de publicação serão excluídas.  
+ É o nome da publicação. *publicação* está **sysname**, com um padrão NULL. Se for NULL, assinaturas que usam uma publicação de agente compartilhada no banco de dados de publicação serão excluídas.  
   
  [  **@reserved=**] **'***reservado***'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -67,7 +67,7 @@ sp_subscription_cleanup [ @publisher = ] 'publisher'
  **sp_subscription_cleanup** é usado em replicação transacional e de instantâneo.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função de servidor fixa ou **db_owner** pode executar a função de banco de dados fixa **sp_subscription_cleanup**.  
+ Somente os membros dos **sysadmin** função de servidor fixa ou o **db_owner** banco de dados fixa podem executar **sp_subscription_cleanup**.  
   
 ## <a name="see-also"></a>Consulte também  
  [sp_expired_subscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-expired-subscription-cleanup-transact-sql.md)   

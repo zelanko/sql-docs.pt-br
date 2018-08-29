@@ -19,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changereplicationserverpasswords
 ms.assetid: 9333da96-3a1c-4adb-9a74-5dac9ce596df
-caps.latest.revision: 27
-author: edmacauley
-ms.author: edmaca
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 7c27142aa0e628e7041202429ae6bbaee0b87a1f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4ae1883006db7eaffe1e10ffcee2c36619f66c73
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32989691"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029957"
 ---
 # <a name="spchangereplicationserverpasswords-transact-sql"></a>sp_changereplicationserverpasswords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,27 +48,27 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
   
 ## <a name="arguments"></a>Argumentos  
  [ **@login_type** =] *login_type*  
- É o tipo de autenticação para as credenciais fornecidas. *login_type* é **tinyint**, sem padrão.  
+ É o tipo de autenticação para as credenciais fornecidas. *login_type* está **tinyint**, sem padrão.  
   
  **1** = autenticação integrada do Windows  
   
  **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticação  
   
- [ **@login** =] **'***login***'**  
- É o nome da conta do Windows ou do logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo alterado. *logon* é **nvarchar (257)**, sem padrão  
+ [ **@login** =] **'***logon***'**  
+ É o nome da conta do Windows ou do logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está sendo alterado. *login* está **nvarchar(257)**, sem padrão  
   
  [ **@password** =] **'***senha***'**  
- É a nova senha a ser armazenado especificado *logon*. *senha* é **sysname**, sem padrão.  
+ É a nova senha a ser armazenado especificado *login*. *senha* está **sysname**, sem padrão.  
   
 > [!NOTE]  
 >  Depois de alterar a senha de replicação de um agente, você deve parar e reiniciar cada agente que a usa para que a alteração entre em vigor para aquele agente.  
   
  [ **@server** =] **'***server***'**  
- É a conexão de servidor para a qual a senha armazenada está sendo alterada. *servidor* é **sysname**, e pode ser um destes valores:  
+ É a conexão de servidor para a qual a senha armazenada está sendo alterada. *servidor* está **sysname**, e pode ser um destes valores:  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
-|**Distribuidor**|Todas as conexões do agente com o Distribuidor.|  
+|**distribuidor**|Todas as conexões do agente com o Distribuidor.|  
 |**publisher**|Todas as conexões do agente com o Publicador.|  
 |**Assinante**|Todas as conexões do agente com o Assinante.|  
 |**%** (padrão)|Todas as conexões do agente com todos os servidores em uma topologia de replicação.|  
@@ -81,7 +80,7 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
  **sp_changereplicationserverpasswords** é usado com todos os tipos de replicação.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** pode executar a função de servidor fixa **sp_changereplicationserverpasswords**.  
+ Somente os membros dos **sysadmin** pode executar a função de servidor fixa **sp_changereplicationserverpasswords**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Exibir e modificar configurações de segurança de replicação](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  

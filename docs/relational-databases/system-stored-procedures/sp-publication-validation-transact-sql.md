@@ -20,15 +20,15 @@ helpviewer_keywords:
 - sp_publication_validation
 ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f893c6a42d16c9d36d2a28a2c77c80bc62fa56bb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 878d8bc69813664d29a09e58daa7e6f7e4b8db76
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33000563"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43030530"
 ---
 # <a name="sppublicationvalidation-transact-sql"></a>sp_publication_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,35 +49,35 @@ sp_publication_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [**@publication=**] **' * publicação '*  
- É o nome da publicação. *publicação* é **sysname**, sem padrão.  
+ [**@publication=**] **' * * * publicação '*  
+ É o nome da publicação. *publicação* está **sysname**, sem padrão.  
   
  [**@rowcount_only=**] *rowcount_only*  
- Especifica se apenas a contagem de linhas da tabela deve ser retornada. *rowcount_only* é **smallint** e pode ser um dos valores a seguir.  
+ Especifica se apenas a contagem de linhas da tabela deve ser retornada. *rowcount_only* está **smallint** e pode ser um dos valores a seguir.  
   
-|Value|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
-|**0**|Execute uma soma de verificação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 compatível.<br /><br /> Observação: Quando um artigo é filtrado horizontalmente, uma operação de contagem de linhas é executada em vez de uma operação de soma de verificação.|  
+|**0**|Execute uma soma de verificação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 compatível.<br /><br /> Observação: Quando um artigo for filtrado horizontalmente, uma operação de contagem de linhas é executada em vez de uma operação de soma de verificação.|  
 |**1** (padrão)|Só execute uma verificação de número de linhas.|  
-|**2**|Execute uma verificação de número de linhas e soma de verificação binária.<br /><br /> Observação: Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versão 7.0 assinantes, somente uma validação de número de linhas é executada.|  
+|**2**|Execute uma verificação de número de linhas e soma de verificação binária.<br /><br /> Observação: Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assinantes versão 7.0, só uma validação de número de linhas é executada.|  
   
  [**@full_or_fast=**] *full_or_fast*  
- É o método usado para calcular a contagem de linhas. *full_or_fast* é **tinyint** e pode ser um dos valores a seguir.  
+ É o método usado para calcular a contagem de linhas. *full_or_fast* está **tinyint** e pode ser um dos valores a seguir.  
   
-|Value|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**0**|Efetua contagem completa usando COUNT (*).|  
-|**1**|Efetua contagem rápida de **sysindexes**. Contagem de linhas em [sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) é muito mais rápido do que contar linhas na tabela atual. No entanto, como [sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) lentamente é atualizado, o número de linhas pode não ser preciso.|  
+|**1**|Efetua contagem rápida de **sysindexes**. Contagem de linhas em [sys. sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) é muito mais rápido do que contar linhas na tabela atual. No entanto, porque [sys. sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) é lentamente atualizado, o número de linhas pode não ser preciso.|  
 |**2** (padrão)|Efetua contagem rápida condicional tentando primeiro o método rápido. Se o método rápido mostrar diferenças, reverterá ao método completo. Se *expected_rowcount* for NULL e o procedimento armazenado estiver sendo usado para obter o valor, um COUNT(*) completo sempre será usado.|  
   
  [  **@shutdown_agent=**] *shutdown_agent*  
- Especifica se o Agente de Distribuição deve ou não ser desligado imediatamente após a conclusão da validação. *shutdown_agent* é **bit**, com um padrão de **0**. Se **0**, o agente de replicação não é desligado. Se **1**, o agente de replicação desligará após o último artigo é validado.  
+ Especifica se o Agente de Distribuição deve ou não ser desligado imediatamente após a conclusão da validação. *shutdown_agent* está **bit**, com um padrão de **0**. Se **0**, o agente de replicação não desligará. Se **1**, o agente de replicação desligará após o último artigo é validado.  
   
- [ **@publisher** =] **'***publicador***'**  
- Especifica um Publicador que não é do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *publicador* é **sysname**, com um padrão NULL.  
+ [ **@publisher** =] **'***publisher***'**  
+ Especifica um Publicador que não é do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *Publisher* está **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
->  *publicador* não deve ser usado quando a solicitação de validação em um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
+>  *Publisher* não deve ser usado ao solicitar uma validação em um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -90,7 +90,7 @@ sp_publication_validation [ @publication = ] 'publication'
  Se seu aplicativo tiver assinantes de atualização imediata **sp_publication_validation** poderá detectar erros falsos. **sp_publication_validation** primeiro calcula o número de linhas ou a soma de verificação no publicador e, em seguida, no assinante. Como o gatilho de atualização imediata pode propagar e atualizar do Assinante para o Publicador após a conclusão do número de linhas ou da soma de verificação no Publicador, mas antes que o número de linhas ou a soma de verificação estejam concluídos no Assinante, os valores podem alterar. Para garantir que os valores no Assinante e no Publicador não sejam alterados durante a validação de uma publicação, pare o serviço MS DTC (Coordenador de Transações Distribuídas da Microsoft) no Publicador durante a validação.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função de servidor fixa ou **db_owner** pode executar a função de banco de dados fixa **sp_publication_validation**.  
+ Somente os membros dos **sysadmin** função de servidor fixa ou o **db_owner** banco de dados fixa podem executar **sp_publication_validation**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Validar dados no assinante](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
