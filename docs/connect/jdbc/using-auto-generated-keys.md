@@ -14,12 +14,12 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a253f000a31b939308b17e408f177ce721ef76c0
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: f39566af4b5fce341e37f991cfb1a67507dd0c7a
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661628"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786216"
 ---
 # <a name="using-auto-generated-keys"></a>Usando chaves geradas automaticamente
 
@@ -27,7 +27,7 @@ ms.locfileid: "39661628"
 
 O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] dá suporte às APIs opcionais do JDBC 3.0 para recuperar identificadores de linha gerados automaticamente. O principal valor deste recurso é fornecer um modo de disponibilizar valores de IDENTITY para um aplicativo que esteja atualizando uma tabela de banco de dados sem precisar de uma consulta e de uma segunda viagem de ida e volta ao servidor.
 
-Como o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] não é compatível com pseudocolunas para identificadores, as atualizações que precisam usar o recurso de chave gerada automaticamente devem operar em uma tabela que contém uma coluna IDENTITY. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] permite somente uma única coluna IDENTITY por tabela. O conjunto de resultados retornado pelo método [getGeneratedKeys](../../connect/jdbc/reference/getgeneratedkeys-method-sqlserverstatement.md) da classe [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) só terá uma coluna, com o nome de coluna retornado GENERATED_KEYS. Se forem solicitadas chaves geradas em uma tabela que não tenha uma coluna de IDENTITY, o driver JDBC retornará um conjunto de resultados nulo.
+Como o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não é compatível com pseudocolunas para identificadores, as atualizações que precisam usar o recurso de chave gerada automaticamente devem operar em uma tabela que contém uma coluna IDENTITY. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite somente uma única coluna IDENTITY por tabela. O conjunto de resultados retornado pelo método [getGeneratedKeys](../../connect/jdbc/reference/getgeneratedkeys-method-sqlserverstatement.md) da classe [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) só terá uma coluna, com o nome de coluna retornado GENERATED_KEYS. Se forem solicitadas chaves geradas em uma tabela que não tenha uma coluna de IDENTITY, o driver JDBC retornará um conjunto de resultados nulo.
 
 Como exemplo, crie a seguinte tabela no banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]:
 

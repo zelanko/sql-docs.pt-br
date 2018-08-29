@@ -16,18 +16,18 @@ caps.latest.revision: 69
 author: v-makouz
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 3b5969a723b230139b9466f75569375f97a0d7b0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6ef479b95e62c2f489b06905b33318a877a60ad5
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37946900"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786399"
 ---
 # <a name="list-of-bugs-fixed"></a>Lista de bugs corrigidos
 
-Esta página contém uma lista dos bugs corrigidos em cada versão, começando com [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
+Esta página contém uma lista dos bugs corrigidos em cada versão, começando com [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-172-for-includessnoversionincludesssnoversionmdmd"></a>Correções de bug no [!INCLUDE[msCoName](../../includes/msconame_md.md)] 17.2 do Driver ODBC para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
+### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-172-for-includessnoversionincludesssnoversion-mdmd"></a>Correções de bug no [!INCLUDE[msCoName](../../includes/msconame_md.md)] 17.2 do Driver ODBC para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 - Corrigido uma mensagem de erro sobre a autenticação do Active Directory do Azure
 - Detecção de codifica fixa quando variáveis de ambiente da localidade são definidas de forma diferente
@@ -40,7 +40,7 @@ Esta página contém uma lista dos bugs corrigidos em cada versão, começando c
 - Corrigido um problema de cache ao usar a autenticação ADAL em Windows
 - Corrigido um problema que foi o bloqueio e substituir o rastreamento registra em log no Windows
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-171-for-includessnoversionincludesssnoversionmdmd"></a>Correções de bug no [!INCLUDE[msCoName](../../includes/msconame_md.md)] 17.1 do Driver ODBC para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
+### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-171-for-includessnoversionincludesssnoversion-mdmd"></a>Correções de bug no [!INCLUDE[msCoName](../../includes/msconame_md.md)] 17.1 do Driver ODBC para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 - Corrigido o atraso de 1 segundo ao chamar SQLFreeHandle com o MARS ativado e o atributo de conexão "Encrypt = yes"
 - Corrigida uma falha de erro 22003 em SQLGetData quando o tamanho do buffer passado é menor, então os dados que estão sendo recuperados (Windows)
@@ -50,7 +50,7 @@ Esta página contém uma lista dos bugs corrigidos em cada versão, começando c
 - Corrigido um aviso no instalador do MacOS
 - Corrigido o envio estado incorreto para o SQL Server durante a tentativa de recuperação de sessão quando a resiliência de Conexão e o Pooling de Conexão os dois estiverem habilitados, fazendo com que a sessão a ser descartado pelo servidor
 
-### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversionmdmd"></a>Correções de bug no [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
+### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversion-mdmd"></a>Correções de bug no [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 - Corrigido um bug em que ao usar a autenticação Kerberos, a inserção em massa poderá falhar com o erro "acesso negado"
 - Solução alternativa removida para um bug de unixODBC presente na versão abaixo 2.3.1 (driver duplicado os tamanhos de determinados buffers passados para unixODBC)

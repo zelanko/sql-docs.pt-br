@@ -14,18 +14,18 @@ caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e17da2ae58d76268ec962c007b0fd81b5fc06d60
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: 08f1f202ded4c9e0053cfc6c315b87c6f4616eee
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662398"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786768"
 ---
 # <a name="using-multiple-result-sets"></a>Usando vários conjuntos de resultados
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Ao trabalhar com o SQL embutido ou procedimentos armazenados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] que retornam mais de um conjunto de resultados, o [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fornece o método [getResultSet](../../connect/jdbc/reference/getresultset-method-sqlserverstatement.md) na classe [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) para recuperar cada conjunto de dados retornado. Além disso, ao executar uma instrução que retorna mais de um conjunto de resultados, você pode usar o método [execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) da classe SQLServerStatement, pois ele retornará um valor **booliano** que indica se o valor retornado é um conjunto de resultados ou uma contagem de atualização.
+Ao trabalhar com o SQL embutido ou procedimentos armazenados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que retornam mais de um conjunto de resultados, o [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fornece o método [getResultSet](../../connect/jdbc/reference/getresultset-method-sqlserverstatement.md) na classe [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) para recuperar cada conjunto de dados retornado. Além disso, ao executar uma instrução que retorna mais de um conjunto de resultados, você pode usar o método [execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) da classe SQLServerStatement, pois ele retornará um valor **booliano** que indica se o valor retornado é um conjunto de resultados ou uma contagem de atualização.
 
 Se o método execute retorna **true**, isso significa que a instrução executada retornou um ou mais conjuntos de resultados. Você pode acessar o primeiro conjunto de resultados chamando o método getResultSet. Para determinar se mais conjuntos de resultados estão disponíveis, você pode chamar o método [getMoreResults](../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md), que retornará um valor **booliano** de **true** se mais conjuntos de resultados estiverem disponíveis. Se mais conjuntos de resultados estiverem disponíveis, você poderá chamar o método getResultSet novamente para acessá-los, continuando o processo até que todos os conjuntos de resultados tenham sido processados. Se o método getMoreResults retornar **falsos**, há nenhum mais conjuntos de resultados ao processo.
 

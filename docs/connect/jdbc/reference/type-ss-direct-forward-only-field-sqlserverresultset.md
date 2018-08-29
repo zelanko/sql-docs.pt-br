@@ -19,17 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b13a8c7002a8e9a3fd868f4c4c7fa3fbb052347d
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: dca6cf294892ad7234f765dd11d5c77237add40a
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38019964"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786943"
 ---
 # <a name="typessdirectforwardonly-field-sqlserverresultset"></a>Campo TYPE_SS_DIRECT_FORWARD_ONLY (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Usado para especificar um tipo de cursor somente de avanço rápido, somente leitura do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
+  Usado para especificar um tipo de cursor somente de avanço rápido, somente leitura do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="syntax"></a>Sintaxe  
   

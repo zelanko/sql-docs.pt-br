@@ -13,22 +13,22 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 438802c4645ff3acdc1bed42af22e4e32786e1d0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: f408cb1f6cb82610cfa74a4d59a3ce15e4307e64
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37992908"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786594"
 ---
 # <a name="support-for-localdb"></a>Suporte ao LocalDB
 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-O LocalDB é uma versão leve do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] que está disponível desde [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]. Este tópico descreve como conectar-se a um banco de dados em uma instância do LocalDB.
+O LocalDB é uma versão leve do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está disponível desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Este tópico descreve como conectar-se a um banco de dados em uma instância do LocalDB.
 
 ## <a name="remarks"></a>Remarks
 
-Para obter mais informações sobre o LocalDB, inclusive como instalá-lo e configurar sua instância de LocalDB, consulte o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tópico dos Manuais Online sobre [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] Express LocalDB.
+Para obter mais informações sobre o LocalDB, inclusive como instalá-lo e configurar sua instância de LocalDB, consulte o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tópico dos Manuais Online sobre [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Express LocalDB.
 
 Em suma, o LocalDB permite:
 

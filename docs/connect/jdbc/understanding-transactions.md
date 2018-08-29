@@ -14,12 +14,12 @@ caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 20ec695090a164fb0cb5509833db78bd6b38fe69
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
-ms.translationtype: HT
+ms.openlocfilehash: b6d923bce43ad2f9ed3fd0a7d33d456910125768
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662108"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786589"
 ---
 # <a name="understanding-transactions"></a>Noções básicas sobre transações
 
@@ -43,7 +43,7 @@ O exemplo a seguir realiza uma transação local que consiste em duas instruçõ
 
 Uma transação distribuída atualiza dados em dois ou mais bancos de dados em rede, mantendo as propriedades atômicas, consistentes, isoladas e duráveis (ACID) importantes do processamento de transações. O suporte a transações distribuídas foi acrescentado à API do JDBC na especificação da API opcional do JDBC 2.0. O gerenciamento de transações distribuídas normalmente é executado de forma automática pelo gerenciador de transações Java Transaction Service (JTS) em um ambiente de servidor de aplicativos Java EE. Entretanto, o [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] oferece suporte a transações distribuídas em qualquer gerenciador de transações compatível com a API de transação Java (JTA).
 
-O driver JDBC integra-se perfeitamente com o [!INCLUDE[msCoName](../../includes/msconame_md.md)] Coordenador de Transações Distribuídas (MS DTC) para proporcionar um verdadeiro suporte de transação distribuída com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. O MS DTC é um recurso de transação distribuída fornecido pela [!INCLUDE[msCoName](../../includes/msconame_md.md)] para sistemas [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows. O MS DTC usa a tecnologia de processamento de transações comprovada da [!INCLUDE[msCoName](../../includes/msconame_md.md)] para oferecer suporte a recursos XA como, por exemplo, o protocolo completo de confirmação distribuída de duas fases e a recuperação de transações distribuídas.
+O driver JDBC integra-se perfeitamente com o [!INCLUDE[msCoName](../../includes/msconame_md.md)] Coordenador de Transações Distribuídas (MS DTC) para proporcionar um verdadeiro suporte de transação distribuída com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O MS DTC é um recurso de transação distribuída fornecido pela [!INCLUDE[msCoName](../../includes/msconame_md.md)] para sistemas [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows. O MS DTC usa a tecnologia de processamento de transações comprovada da [!INCLUDE[msCoName](../../includes/msconame_md.md)] para oferecer suporte a recursos XA como, por exemplo, o protocolo completo de confirmação distribuída de duas fases e a recuperação de transações distribuídas.
 
 Para obter mais informações sobre como usar transações distribuídas, consulte [Noções básicas sobre transações de XA](../../connect/jdbc/understanding-xa-transactions.md).
 

@@ -14,12 +14,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ca0f63442af44bdce4b8c3b18af0beab1cd8a9ee
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.openlocfilehash: a717bcf2a5c7b0c0b80bece12b77871573414a31
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39278707"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42786209"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Acessar informações de diagnóstico nos logs de eventos estendidos
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -43,7 +43,7 @@ com.microsoft.sqlserver.jdbc.traceactivity = on
   
  Para obter mais informações, veja [Rastreamento de operação do driver](../../connect/jdbc/tracing-driver-operation.md). Esse sinalizador de rastreamento é usado com os agentes de objeto do JDBC correspondentes para decidir se haverá ou não o rastreamento e envio de ActivityId no JDBC driver. Além disso, para atualizar o arquivo Logging.Properties, o agente com.microsoft.sqlserver.jdbc precisa ser habilitado para FINER ou posterior. Caso você deseje enviar ActivityId ao servidor para solicitações feitas por determinada classe, o agente da classe correspondente precisará ser habilitado para FINER ou FINEST. Por exemplo, se a classe SQLServerStatement habilita o agente com.microsoft.sqlserver.jdbc.SQLServerStatement.  
   
- A seguinte amostra usa o [!INCLUDE[tsql](../../includes/tsql_md.md)] para iniciar uma sessão de eventos estendidos que será armazenada em um buffer de anéis e gravará a ID de atividade enviada de um cliente no RPC e em operações em lote:  
+ A seguinte amostra usa o [!INCLUDE[tsql](../../includes/tsql-md.md)] para iniciar uma sessão de eventos estendidos que será armazenada em um buffer de anéis e gravará a ID de atividade enviada de um cliente no RPC e em operações em lote:  
   
 ```sql
 create event session MySession on server  

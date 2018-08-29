@@ -14,22 +14,22 @@ caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0164fdcfebdf0fb92aac1f37820495ad8e591a41
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
-ms.translationtype: HT
+ms.openlocfilehash: 615ffd21ab333a312bd14dd92348146130a6e231
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662198"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786935"
 ---
 # <a name="understanding-data-type-conversions"></a>Entendendo conversões de tipo de dados
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Para facilitar a conversão de tipos de dados da linguagem de programação Java em tipos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], o [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fornece conversões de tipo de dados, conforme exigido pela especificação de JDBC. Para garantir flexibilidade, todos os tipos são conversíveis para e de **objeto**, **cadeia de caracteres**, e **byte []** tipos de dados.
+Para facilitar a conversão de tipos de dados da linguagem de programação Java em tipos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fornece conversões de tipo de dados, conforme exigido pela especificação de JDBC. Para garantir flexibilidade, todos os tipos são conversíveis para e de **objeto**, **cadeia de caracteres**, e **byte []** tipos de dados.
 
 ## <a name="getter-method-conversions"></a>Conversões de método getter
 
-Com base nos tipos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], o gráfico seguinte contém o mapa de conversão do driver JDBC para os métodos get\<Type>() da classe [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) e as conversões com suporte para os métodos get\<Type> da classe [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md).
+Com base nos tipos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o gráfico seguinte contém o mapa de conversão do driver JDBC para os métodos get\<Type>() da classe [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) e as conversões com suporte para os métodos get\<Type> da classe [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md).
 
 ![JDBCGetterConversions](../../connect/jdbc/media/jdbcgetterconversions.gif "JDBCGetterConversions")
 
@@ -59,7 +59,7 @@ Há três categorias de conversões que têm suporte pelos métodos updater do d
 
 Quando updateString for chamado em um **binário**, **varbinary**, **varbinary (max)**, ou **imagem** tipo de dados de coluna, ele trata o valor de cadeia de caracteres como um valor de cadeia de caracteres hexadecimal.
 
-Quando o tipo de dados da coluna do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] for **XML**, o valor de dados deverá ser um **XML** válido. Ao chamar métodos updateBlob, updateBinaryStream ou updateBytes, o valor de dados deve ser a representação de cadeia de caracteres hexadecimal dos caracteres XML. Por exemplo:
+Quando o tipo de dados da coluna do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for **XML**, o valor de dados deverá ser um **XML** válido. Ao chamar métodos updateBlob, updateBinaryStream ou updateBytes, o valor de dados deve ser a representação de cadeia de caracteres hexadecimal dos caracteres XML. Por exemplo:
 
 ```xml
 <hello>world</hello> = 0x3C68656C6C6F3E776F726C643C2F68656C6C6F3E
@@ -81,13 +81,13 @@ Há duas categorias de conversões que têm suporte pelos métodos setter do dri
 
 - **Sem perda (x)**: conversões para casos numéricos em que o tipo setter é o mesmo ou menor do que o tipo de servidor subjacente. Por exemplo, ao chamar setBigDecimal em uma coluna **decimal** do servidor subjacente, nenhuma conversão é necessária. Para casos de numérico para caractere, o tipo de dados Java **numeric** é convertido para uma **String**. Por exemplo, chamar setDouble com um valor de "53" em uma coluna de varchar (50) gera um valor de caractere "53" na coluna de destino.
 
-- **Convertido (y)**: as conversões de um Java **numérico** tipo para um servidor subjacente **numérico** tipo que for menor. Esta conversão é normal e segue as convenções de conversão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. A precisão sempre é truncada (nunca arredondada) e o estouro lança um erro de conversão sem suporte. Por exemplo, usar updateDecimal com um valor de "1.9999" em uma coluna de inteiro subjacente resulta em um "1" na coluna de destino; mas se for passado "3000000000", o driver lançará um erro.
+- **Convertido (y)**: as conversões de um Java **numérico** tipo para um servidor subjacente **numérico** tipo que for menor. Esta conversão é normal e segue as convenções de conversão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A precisão sempre é truncada (nunca arredondada) e o estouro lança um erro de conversão sem suporte. Por exemplo, usar updateDecimal com um valor de "1.9999" em uma coluna de inteiro subjacente resulta em um "1" na coluna de destino; mas se for passado "3000000000", o driver lançará um erro.
 
-- **Dependente de dados (z)**: as conversões de um Java **cadeia de caracteres** tipo subjacente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] depende do tipo de dados das seguintes condições: O driver envia a **cadeia de caracteres** valor para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] executa conversões, se necessário. Se a sendStringParametersAsUnicode for definida como true e o tipo de dados subjacente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] for **imagem**, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] não permitirá converter **nvarchar** em **imagem** e gerará um SQLServerException. Se sendStringParametersAsUnicode for definido como false e o tipo de dados subjacente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] for  **a imagem**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] permitirá a conversão de **varchar** em **imagem** e não gerará uma exceção.
+- **Dependente de dados (z)**: as conversões de um Java **cadeia de caracteres** tipo subjacente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] depende do tipo de dados das seguintes condições: O driver envia a **cadeia de caracteres** valor para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executa conversões, se necessário. Se a sendStringParametersAsUnicode for definida como true e o tipo de dados subjacente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for **imagem**, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não permitirá converter **nvarchar** em **imagem** e gerará um SQLServerException. Se sendStringParametersAsUnicode for definido como false e o tipo de dados subjacente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for  **a imagem**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permitirá a conversão de **varchar** em **imagem** e não gerará uma exceção.
 
-O [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] realiza as conversões e passa os erros de volta para o driver JDBC quando há problemas.
+O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] realiza as conversões e passa os erros de volta para o driver JDBC quando há problemas.
 
-Quando o tipo de dados da coluna do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] for **XML**, o valor de dados deverá ser um **XML** válido. Ao chamar métodos updateBlob, updateBinaryStream ou updateBytes, o valor de dados deve ser a representação de cadeia de caracteres hexadecimal dos caracteres XML. Por exemplo:
+Quando o tipo de dados da coluna do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for **XML**, o valor de dados deverá ser um **XML** válido. Ao chamar métodos updateBlob, updateBinaryStream ou updateBytes, o valor de dados deve ser a representação de cadeia de caracteres hexadecimal dos caracteres XML. Por exemplo:
 
 ```xml
 <hello>world</hello> = 0x3C68656C6C6F3E776F726C643C2F68656C6C6F3E
@@ -110,13 +110,13 @@ Há três categorias de conversões que têm suporte pelos métodos setObject do
 
 - **Sem perda (x)**: conversões para casos numéricos em que o tipo setter é o mesmo ou menor do que o tipo de servidor subjacente. Por exemplo, ao chamar setBigDecimal em uma coluna **decimal** do servidor subjacente, nenhuma conversão é necessária. Para casos de numérico para caractere, o tipo de dados Java **numeric** é convertido para uma **String**. Por exemplo, chamar setDouble com um valor de "53" em uma coluna de varchar (50) gerará um valor de caractere "53" na coluna de destino.
 
-- **Convertido (y)**: as conversões de um Java **numérico** tipo para um servidor subjacente **numérico** tipo que for menor. Esta conversão é normal e segue as convenções de conversão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. A precisão sempre é truncada — nunca arredondada — e o estouro lança um erro de conversão sem suporte. Por exemplo, usar updateDecimal com um valor de "1.9999" em uma coluna de inteiro subjacente resulta em um "1" na coluna de destino; mas se for passado "3000000000", o driver lançará um erro.
+- **Convertido (y)**: as conversões de um Java **numérico** tipo para um servidor subjacente **numérico** tipo que for menor. Esta conversão é normal e segue as convenções de conversão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A precisão sempre é truncada — nunca arredondada — e o estouro lança um erro de conversão sem suporte. Por exemplo, usar updateDecimal com um valor de "1.9999" em uma coluna de inteiro subjacente resulta em um "1" na coluna de destino; mas se for passado "3000000000", o driver lançará um erro.
 
-- **Dependente de dados (z)**: as conversões de um Java **cadeia de caracteres** tipo subjacente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] depende do tipo de dados das seguintes condições: O driver envia a **cadeia de caracteres** valor para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] executa conversões, se necessário. Se a propriedade de conexão sendStringParametersAsUnicode for definida como true e o tipo de dados subjacente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] for **imagem**, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] não permitirá converter **nvarchar** em **imagem** e gerará um SQLServerException. Se sendStringParametersAsUnicode for definido como false e o tipo de dados subjacente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] for  **a imagem**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] permitirá a conversão de **varchar** em **imagem** e não gerará uma exceção.
+- **Dependente de dados (z)**: as conversões de um Java **cadeia de caracteres** tipo subjacente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] depende do tipo de dados das seguintes condições: O driver envia a **cadeia de caracteres** valor para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executa conversões, se necessário. Se a propriedade de conexão sendStringParametersAsUnicode for definida como true e o tipo de dados subjacente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for **imagem**, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não permitirá converter **nvarchar** em **imagem** e gerará um SQLServerException. Se sendStringParametersAsUnicode for definido como false e o tipo de dados subjacente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for  **a imagem**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permitirá a conversão de **varchar** em **imagem** e não gerará uma exceção.
 
-O [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] realiza o conjunto de conversões em massa e passa os erros de volta para o driver JDBC quando há problemas. Conversões do lado do cliente são a exceção e são executadas somente no caso de **data**, **tempo**, **timestamp**, **booliano**e  **Cadeia de caracteres** valores.
+O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] realiza o conjunto de conversões em massa e passa os erros de volta para o driver JDBC quando há problemas. Conversões do lado do cliente são a exceção e são executadas somente no caso de **data**, **tempo**, **timestamp**, **booliano**e  **Cadeia de caracteres** valores.
 
-Quando o tipo de dados da coluna do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] for **XML**, o valor de dados deverá ser um **XML** válido. Ao chamar os métodos setObject (byte [], SQLXML), setObject (inputStream, SQLXML) ou setObject (Blob, SQLXML), o valor de dados deverá ser a representação hexadecimal da cadeia dos caracteres XML. Por exemplo:
+Quando o tipo de dados da coluna do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for **XML**, o valor de dados deverá ser um **XML** válido. Ao chamar os métodos setObject (byte [], SQLXML), setObject (inputStream, SQLXML) ou setObject (Blob, SQLXML), o valor de dados deverá ser a representação hexadecimal da cadeia dos caracteres XML. Por exemplo:
 
 ```xml
 <hello>world</hello> = 0x3C68656C6C6F3E776F726C643C2F68656C6C6F3E

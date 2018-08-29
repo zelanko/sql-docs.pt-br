@@ -34,13 +34,13 @@ ms.assetid: 40075914-6385-4692-b4a5-62fe44ae6cb6
 author: shkale-msft
 ms.author: shkale
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 1a8bd2df095f771866ca8cb96e25dfb1e4612b6a
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 4d96d23761ecaa1a31bdf9530b1d4277adc4182b
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39455400"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43105907"
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT – GROUP BY – Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -108,19 +108,20 @@ A coluna precisa aparecer na cláusula FROM da instrução SELECT, mas não prec
   
 As seguintes instruções são permitidas:  
   
-    ```  
-    SELECT ColumnA, ColumnB FROM T GROUP BY ColumnA, ColumnB;  
-    SELECT ColumnA + ColumnB FROM T GROUP BY ColumnA, ColumnB;  
-    SELECT ColumnA + ColumnB FROM T GROUP BY ColumnA + ColumnB;  
-    SELECT ColumnA + ColumnB + constant FROM T GROUP BY ColumnA, ColumnB;  
-    ```  
+```sql  
+SELECT ColumnA, ColumnB FROM T GROUP BY ColumnA, ColumnB;  
+SELECT ColumnA + ColumnB FROM T GROUP BY ColumnA, ColumnB;  
+SELECT ColumnA + ColumnB FROM T GROUP BY ColumnA + ColumnB;  
+SELECT ColumnA + ColumnB + constant FROM T GROUP BY ColumnA, ColumnB;  
+```  
   
 As seguintes instruções não são permitidas:  
   
-    ```  
-    SELECT ColumnA, ColumnB FROM T GROUP BY ColumnA + ColumnB;  
-    SELECT ColumnA + constant + ColumnB FROM T GROUP BY ColumnA + ColumnB;  
-    ```  
+```sql  
+SELECT ColumnA, ColumnB FROM T GROUP BY ColumnA + ColumnB;  
+SELECT ColumnA + constant + ColumnB FROM T GROUP BY ColumnA + ColumnB;  
+```  
+
 A expressão de coluna não pode conter:
 
 - Um alias de coluna definido na lista de SELECT. Ela pode usar um alias de coluna para uma tabela derivada definida na cláusula FROM.
@@ -135,7 +136,7 @@ Agrupa os resultados da instrução SELECT de acordo com os valores em uma lista
 
 Por exemplo, essa consulta cria a tabela Vendas com as colunas País, Região e Vendas. Ela insere quatro linhas e duas da linhas têm valores correspondentes para País e Região.  
 
-```
+```sql
 CREATE TABLE Sales ( Country varchar(50), Region varchar(50), Sales int );
 
 INSERT INTO sales VALUES (N'Canada', N'Alberta', 100);
@@ -154,7 +155,7 @@ A tabela Vendas contém estas linhas:
 
 Essa próxima consulta agrupa País e Região e retorna a soma de agregação para cada combinação de valores.  
  
-``` 
+```sql 
 SELECT Country, Region, SUM(sales) AS TotalSales
 FROM Sales
 GROUP BY Country, Region;
@@ -183,7 +184,7 @@ Por exemplo, `GROUP BY ROLLUP (col1, col2, col3, col4)` cria grupos para cada co
 
 Usando a tabela do exemplo anterior, esse código executa uma operação de GROUP BY ROLLUP em vez de um GROUP BY simples.
 
-```
+```sql
 SELECT Country, Region, SUM(Sales) AS TotalSales
 FROM Sales
 GROUP BY ROLLUP (Country, Region);
@@ -206,7 +207,7 @@ GROUP BY CUBE cria grupos para todas as combinações de colunas possíveis. GRO
 
 Usando a tabela dos exemplos anteriores, esse código executa uma operação de GROUP BY CUBE em País e em Região. 
 
-```
+```sql
 SELECT Country, Region, SUM(Sales) AS TotalSales
 FROM Sales
 GROUP BY CUBE (Country, Region);
@@ -234,7 +235,7 @@ Por exemplo, `GROUP BY ROLLUP (Country, Region)` e `GROUP BY GROUPING SETS ( ROL
 
 Quando conjuntos de GROUPING SETS têm dois ou mais elementos, os resultados são uma união dos elementos. Este exemplo retorna a união dos resultados de ROLLUP e CUBE para País e Região.
 
-```
+```sql
 SELECT Country, Region, SUM(Sales) AS TotalSales
 FROM Sales
 GROUP BY GROUPING SETS ( ROLLUP (Country, Region), CUBE (Country, Region) );
@@ -242,15 +243,14 @@ GROUP BY GROUPING SETS ( ROLLUP (Country, Region), CUBE (Country, Region) );
 
 Os resultados são iguais, pois essa consulta retorna uma união de duas instruções GROUP BY.
 
-```
+```sql
 SELECT Country, Region, SUM(Sales) AS TotalSales
 FROM Sales
 GROUP BY ROLLUP (Country, Region)
 UNION ALL
 SELECT Country, Region, SUM(Sales) AS TotalSales
 FROM Sales
-GROUP BY CUBE (Country, Region)
-;
+GROUP BY CUBE (Country, Region);
 ```
 
 O SQL não consolida grupos duplicados gerados por uma lista de GROUPING SETS. Por exemplo, em `GROUP BY ( (), CUBE (Country, Region) )`, ambos os elementos retornarão uma linha para o total geral e ambas as linhas serão listadas nos resultados. 
@@ -258,7 +258,7 @@ O SQL não consolida grupos duplicados gerados por uma lista de GROUPING SETS. P
  ### <a name="group-by-"></a>GROUP BY ()  
 Especifica o grupo vazio que gera o total geral. Isso é útil como um dos elementos de um GROUPING SET. Por exemplo, esta instrução fornece o total de vendas para cada país e, em seguida, o total geral para todos os países.
 
-```
+```sql
 SELECT Country, SUM(Sales) AS TotalSales
 FROM Sales
 GROUP BY GROUPING SETS ( Country, () );
@@ -363,7 +363,7 @@ A cláusula GROUP BY é compatível com todos os recursos de GROUP BY incluídos
 ### <a name="a-use-a-simple-group-by-clause"></a>A. Usar uma cláusula GROUP BY simples  
  O exemplo a seguir recupera o total para cada tabela `SalesOrderID` da tabela `SalesOrderDetail`. Este exemplo usa o AdventureWorks.  
   
-```  
+```sql  
 SELECT SalesOrderID, SUM(LineTotal) AS SubTotal  
 FROM Sales.SalesOrderDetail AS sod  
 GROUP BY SalesOrderID  
@@ -373,7 +373,7 @@ ORDER BY SalesOrderID;
 ### <a name="b-use-a-group-by-clause-with-multiple-tables"></a>B. Usar uma cláusula GROUP BY com várias tabelas  
  O exemplo a seguir recupera o número de funcionários de cada `City` da tabela `Address` unida à tabela `EmployeeAddress`. Este exemplo usa o AdventureWorks. 
   
-```  
+```sql  
 SELECT a.City, COUNT(bea.AddressID) EmployeeCount  
 FROM Person.BusinessEntityAddress AS bea   
     INNER JOIN Person.Address AS a  
@@ -385,7 +385,7 @@ ORDER BY a.City;
 ### <a name="c-use-a-group-by-clause-with-an-expression"></a>C. Usar uma cláusula GROUP BY com uma expressão  
  O exemplo a seguir recupera as vendas totais durante cada ano usando a função `DATEPART`. A mesma expressão deve estar presente na lista `SELECT` e na cláusula `GROUP BY`.  
   
-```  
+```sql  
 SELECT DATEPART(yyyy,OrderDate) AS N'Year'  
     ,SUM(TotalDue) AS N'Total Order Amount'  
 FROM Sales.SalesOrderHeader  
@@ -396,7 +396,7 @@ ORDER BY DATEPART(yyyy,OrderDate);
 ### <a name="d-use-a-group-by-clause-with-a-having-clause"></a>D. Usar uma cláusula GROUP BY com uma cláusula HAVING  
  O exemplo a seguir usa a cláusula `HAVING` para especificar quais dos grupos gerados na cláusula `GROUP BY` devem ser incluídos no conjunto de resultados.  
   
-```  
+```sql  
 SELECT DATEPART(yyyy,OrderDate) AS N'Year'  
     ,SUM(TotalDue) AS N'Total Order Amount'  
 FROM Sales.SalesOrderHeader  
@@ -410,7 +410,7 @@ ORDER BY DATEPART(yyyy,OrderDate);
 ### <a name="e-basic-use-of-the-group-by-clause"></a>E. Uso básico da cláusula GROUP BY  
  O exemplo a seguir localiza a quantidade total de todas as vendas em cada dia. Uma linha que contém a soma de todas as vendas é retornada para cada dia.  
   
-```  
+```sql  
 -- Uses AdventureWorksDW  
   
 SELECT OrderDateKey, SUM(SalesAmount) AS TotalSales FROM FactInternetSales  
@@ -420,7 +420,7 @@ GROUP BY OrderDateKey ORDER BY OrderDateKey;
 ### <a name="f-basic-use-of-the-distributedagg-hint"></a>F. Uso básico da dica de DISTRIBUTED_AGG  
  Este exemplo usa a dica de consulta DISTRIBUTED_AGG para forçar o dispositivo a embaralhar a tabela na coluna `CustomerKey` antes de executar a agregação.  
   
-```  
+```sql  
 -- Uses AdventureWorksDW  
   
 SELECT CustomerKey, SUM(SalesAmount) AS sas  
@@ -432,7 +432,7 @@ ORDER BY CustomerKey DESC;
 ### <a name="g-syntax-variations-for-group-by"></a>G. Variações de sintaxe para GROUP BY  
  Quando a lista de seleção não tem nenhuma agregação, cada coluna na lista de seleção precisa ser incluída na lista GROUP BY. As colunas computadas na lista de seleção podem ser listadas, mas não são obrigatórias na lista GROUP BY. Estes são exemplos de instruções SELECT sintaticamente válidas:  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT LastName, FirstName FROM DimCustomer GROUP BY LastName, FirstName;  
@@ -445,7 +445,7 @@ SELECT SalesAmount FROM FactInternetSales GROUP BY SalesAmount, SalesAmount*1.10
 ### <a name="h-using-a-group-by-with-multiple-group-by-expressions"></a>H. Usando um GROUP BY com várias expressões GROUP BY  
  O exemplo a seguir agrupa os resultados usando vários critérios de `GROUP BY`. Se dentro de cada grupo `OrderDateKey` houver subgrupos que possam ser diferenciados pela `DueDateKey`, um novo agrupamento será definido para o conjunto de resultados.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT OrderDateKey, DueDateKey, SUM(SalesAmount) AS TotalSales   
@@ -457,7 +457,7 @@ ORDER BY OrderDateKey;
 ### <a name="i-using-a-group-by-clause-with-a-having-clause"></a>I. Usando uma cláusula GROUP BY com uma cláusula HAVING  
  O exemplo a seguir usa a cláusula `HAVING` para especificar os grupos gerados na cláusula `GROUP BY` que devem ser incluídos no conjunto de resultados. Somente os grupos com datas de pedido de 2004 ou posteriores serão incluídos nos resultados.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT OrderDateKey, SUM(SalesAmount) AS TotalSales   

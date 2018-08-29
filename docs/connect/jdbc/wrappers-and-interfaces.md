@@ -14,12 +14,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 58276b03877423afe86f9c68841656b00ce0a8c6
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: ad3412a5d296a7d243d6b73b6275c613da5c962b
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39457780"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784848"
 ---
 # <a name="wrappers-and-interfaces"></a>Wrappers e interfaces
 
@@ -61,7 +61,7 @@ A interface de suportes define dois métodos: **isWrapperFor** e **unwrap**. O m
 
 ## <a name="interfaces"></a>Interfaces
 
-Começando com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] JDBC Driver 3.0, as interfaces são disponibilizadas para um servidor de aplicativos para acessar um método específico de driver usando a classe associada. O servidor de aplicativos pode encapsular a classe criando um proxy, expondo a funcionalidade específica do [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] de uma interface. O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] é compatível com interfaces que têm os métodos específicos e constantes do [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] para que um servidor de aplicativos possa criar um proxy da classe.
+Começando com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] JDBC Driver 3.0, as interfaces são disponibilizadas para um servidor de aplicativos para acessar um método específico de driver usando a classe associada. O servidor de aplicativos pode encapsular a classe criando um proxy, expondo a funcionalidade específica do [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] de uma interface. O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] é compatível com interfaces que têm os métodos específicos e constantes do [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] para que um servidor de aplicativos possa criar um proxy da classe.
 
 Como as interfaces derivam das interfaces Java padrão, você pode usar o mesmo objeto após o desencapsulamento para acessar a funcionalidade específica do driver ou a funcionalidade genérica do [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)].
 

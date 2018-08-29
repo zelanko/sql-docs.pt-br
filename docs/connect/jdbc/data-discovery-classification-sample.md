@@ -13,18 +13,18 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8c3f420269314667729836d0f6f536935ebe6ec5
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 395663802627a0dfac8f9fa314fe2a0fe51f8be7
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39467774"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786945"
 ---
 # <a name="sql-data-discovery-and-classification"></a>Descoberta e classificação de dados SQL
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Isso [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] aplicativo de exemplo demonstra como usar métodos de getter de conjunto de resultados para recuperar [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 'SQL descoberta e classificação de informações de dados' das tabelas contendo essas informações.
+Isso [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] aplicativo de exemplo demonstra como usar métodos de getter de conjunto de resultados para recuperar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 'SQL descoberta e classificação de informações de dados' das tabelas contendo essas informações.
   
 O arquivo de código para este exemplo é chamado DataDiscoveryAndClassification.java e ele pode ser encontrado no seguinte local:  
 

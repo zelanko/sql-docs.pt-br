@@ -1,7 +1,7 @@
 ---
 title: O que há de novo no Assistente de migração de dados (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/09/2018
+ms.date: 08/28/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,17 +15,25 @@ helpviewer_keywords:
 ms.assetid: ''
 caps.latest.revision: ''
 author: HJToland3
-ms.author: jtoland
+ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 620590f03bf429dbc1633a1f78bb921def5fd585
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 188c19f173e8c53995d84a74ecc04d1cac9eae92
+ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982148"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43118324"
 ---
-# <a name="whats-new-in-data-migration-assistant"></a>O que há de novo no Assistente de migração de dados
-Este tópico lista as adições em cada versão de DMA Data Migration Assistant ().
+# <a name="whats-new-in-data-migration-assistant"></a>Novidades do Assistente de Migração de Dados
+Este artigo lista as adições em cada versão de DMA Data Migration Assistant ().
+
+## <a name="dma-v40"></a>O DMA v4.0
+A versão de v 4.0 de DMA apresenta o recurso de recomendações de SKU de banco de dados SQL do Azure, que permite que os usuários identifiquem o mínimo recomendado de SKU de banco de dados SQL do Azure com base nos contadores de desempenho coletados dos computadores de seus bancos de dados de hospedagem. Esse recurso fornece recomendações relacionadas ao preço da camada, nível de computação e tamanho máximo de dados, bem como o custo estimado por mês. Ele também oferece a capacidade de provisionar todos os seus bancos de dados do Azure em massa.
+
+> [!NOTE]
+> Essa funcionalidade está atualmente ser disponibilizado somente por meio da Interface de linha de comando (CLI). Suporte para esse recurso por meio da interface do usuário DMA está planejado para entrega posteriormente neste ano.
+
+Para obter mais detalhes, consulte o artigo [identificar a SKU certa de banco de dados de SQL do Azure para seu banco de dados local](dma-sku-recommend-sql-db.md).
 
 ## <a name="dma-v36"></a>V3.6 DMA
 A versão de v3.6 do DMA apresenta "Correção automática" para os objetos de esquema que são afetados pelos bloqueadores de migração mais comuns.
@@ -64,7 +72,7 @@ Se o arquivo de backup físico estiver em um computador que executa:
 > Detalhes sobre como usar o comando '/mnt' ou um compartilhamento de 'samba' está além do escopo deste artigo.
 
 ### <a name="migrating-windows-logins"></a>Migrando logons do Windows
-Enquanto a migração de logons do Active Directory (AD) é oficialmente suportada pelo SQL Server 2017 no Linux, ele requer configuração adicional para funcionar com êxito. Consulte o tópico [autenticação do Active Directory com o SQL Server no Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-authentication) para obter informações detalhadas sobre como configurar logons do Active Directory no SQL Server 2017 no Linux. Depois de executar a configuração necessária, a instalação for concluída e você pode migrar logons do Active Directory como de costume. A autenticação SQL padrão funciona como esperado sem nenhuma configuração adicional.
+Enquanto a migração de logons do Active Directory (AD) é oficialmente suportada pelo SQL Server 2017 no Linux, ele requer configuração adicional para funcionar com êxito. Consulte o artigo [autenticação do Active Directory com o SQL Server no Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-authentication) para obter informações detalhadas sobre como configurar logons do Active Directory no SQL Server 2017 no Linux. Depois de executar a configuração necessária, a instalação for concluída e você pode migrar logons do Active Directory como de costume. A autenticação SQL padrão funciona como esperado sem nenhuma configuração adicional.
 
 ## <a name="dma-v32"></a>A versão 3.2 DMA
 A versão 3.2 de DMA inclui as seguintes adições:
@@ -86,20 +94,20 @@ A versão v 3.0 de DMA estende a avaliação do banco de dados SQL do Azure para
 
 ## <a name="dma-v21"></a>O DMA v2.1
 A versão de v2.1 do DMA inclui as seguintes adições:
-- Suporte de linha de comando para executar avaliações em um modo autônomo, o que ajuda a executar avaliações em grande escala. Para obter mais detalhes, consulte o tópico [executar Assistente de migração dados da linha de comando](dma-commandline.md).
+- Suporte de linha de comando para executar avaliações em um modo autônomo, o que ajuda a executar avaliações em grande escala. Para obter mais detalhes, consulte o artigo [executar Assistente de migração dados da linha de comando](dma-commandline.md).
 - Melhorias de desempenho quando os usuários iniciem e feche o DMA.
-- A capacidade de configurar o tempo limite de conexão do SQL. Para obter mais detalhes, consulte o tópico [definições de configuração para o Assistente de migração de dados](dma-configurationsettings.md).
+- A capacidade de configurar o tempo limite de conexão do SQL. Para obter mais detalhes, consulte o artigo [definições de configuração para o Assistente de migração de dados](dma-configurationsettings.md).
 
 ## <a name="dma-v20"></a>V 2.0 DMA
 A versão de v2.0 do DMA inclui recomendações de recurso de banco de dados Stretch aprimoradas para fornecer tabelas priorizadas adequadas que maximizar a economia de armazenamento.
 
 ## <a name="dma-v10"></a>O DMA v1.0
 O lançamento da versão 1.0 de DMA é a versão inicial, e ele fornece para:
-- Descoberta de problemas que podem afetar uma atualização para uma versão local do SQL Server. Qualquer descobertas são descritas como problemas de compatibilidade, e eles são categorizados nas seguintes áreas:
+- Descoberta de problemas que podem afetar uma atualização para uma versão local do SQL Server. Qualquer descobertas são descritas como problemas de compatibilidade e categorizados nas seguintes áreas:
     - Alterações significativas
     - Alterações de comportamento
     - Recursos preteridos
-- Descoberta de novos recursos na plataforma do SQL Server de destino que o banco de dados pode se beneficiar de uma atualização. Qualquer descobertas são descritas como recomendações de recurso, e eles são categorizados nas seguintes áreas:
+- Descoberta de novos recursos na plataforma do SQL Server de destino que o banco de dados pode se beneficiar de uma atualização. Qualquer descobertas são descritas como recomendações de recurso e categorizados nas seguintes áreas:
     - Desempenho
     - Segurança
     - Armazenamento

@@ -14,18 +14,18 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e7bea017a9fd36dc0e910fc2dfff69df10aabbde
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 0261dc230cd255057a893ba41306bb9e836f85fd
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39453070"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786602"
 ---
 # <a name="retrieving-result-set-data-sample"></a>Exemplo de recuperação de dados do conjunto de resultados
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-Este aplicativo de exemplo [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] demonstra como recuperar um conjunto de dados em um banco de dados [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] e, em seguida, exibi-los.
+Este aplicativo de exemplo [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] demonstra como recuperar um conjunto de dados em um banco de dados [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e, em seguida, exibi-los.
 
 O arquivo de código desta amostra chama-se RetrieveResultSet.java e pode ser encontrado no seguinte local:
 

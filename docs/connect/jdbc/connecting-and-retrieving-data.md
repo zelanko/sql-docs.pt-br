@@ -14,31 +14,31 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d6171d4f25efff9f3a09da21bf0ffafefb66cee4
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 674903bc9e2b8818609def5006dfc7351266a89f
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39453130"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784690"
 ---
 # <a name="connecting-and-retrieving-data"></a>Conectando e recuperando dados
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Quando você trabalha com o [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], há dois métodos principais para estabelecer uma conexão com um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Um é definir as propriedades de conexão na URL de conexão e, em seguida, chamar o método getConnection da classe DriverManager para retornar um objeto [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md).  
+Quando você trabalha com o [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], há dois métodos principais para estabelecer uma conexão com um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Um é definir as propriedades de conexão na URL de conexão e, em seguida, chamar o método getConnection da classe DriverManager para retornar um objeto [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md).  
   
 > [!NOTE]  
 > Para obter uma lista de propriedades de conexão com suporte pelo driver JDBC, consulte [definindo as propriedades de Conexão](../../connect/jdbc/setting-the-connection-properties.md).  
   
 O segundo método envolve definir as propriedades de conexão usando métodos setter da classe [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) e, em seguida, chamar o método [getConnection](../../connect/jdbc/reference/getconnection-method-sqlserverdatasource.md) para retornar um objeto SQLServerConnection.  
   
-Os tópicos nesta seção descrevem os modos diferentes nos quais você pode se conectar a um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e também demonstram técnicas diferentes para recuperar dados.  
+Os tópicos nesta seção descrevem os modos diferentes nos quais você pode se conectar a um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e também demonstram técnicas diferentes para recuperar dados.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
 | Tópico                                                                | Descrição                                                                                                                                                   |
 | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Exemplo de URL de conexão](../../connect/jdbc/connection-url-sample.md) | Descreve como usar uma URL de conexão para se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e usar uma instrução SQL para recuperar dados. |
+| [Exemplo de URL de conexão](../../connect/jdbc/connection-url-sample.md) | Descreve como usar uma URL de conexão para se conectar ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e usar uma instrução SQL para recuperar dados. |
 | [Exemplo de fonte de dados](../../connect/jdbc/data-source-sample.md)       | Descreve como usar uma fonte de dados para se conectar ao SQL Server e, em seguida, usar um procedimento armazenado para recuperar dados.                                                 |
   
 ## <a name="see-also"></a>Consulte Também

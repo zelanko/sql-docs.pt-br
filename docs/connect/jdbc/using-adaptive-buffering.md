@@ -14,26 +14,26 @@ caps.latest.revision: 53
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 819a1a2a3a5203d8f706cba5a2daad2d83e835cf
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: d0a4d3409d9d87bfaca810405e542130a90a471b
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661768"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786403"
 ---
 # <a name="using-adaptive-buffering"></a>Usando buffer adaptável
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-O buffer adaptável é criado para recuperar qualquer tipo de dados de valor grande sem a sobrecarga de cursores de servidor. Aplicativos podem usar o recurso de utilização de buffer adaptável com todas as versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] compatíveis com o driver.
+O buffer adaptável é criado para recuperar qualquer tipo de dados de valor grande sem a sobrecarga de cursores de servidor. Aplicativos podem usar o recurso de utilização de buffer adaptável com todas as versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compatíveis com o driver.
 
-Normalmente, quando o [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] executa uma consulta, o driver recupera todos os resultados do servidor na memória do aplicativo. Embora esta abordagem minimize o consumo de recursos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], ela pode lançar um OutOfMemoryError no aplicativo de JDBC para as consultas que geram resultados muito grandes.
+Normalmente, quando o [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] executa uma consulta, o driver recupera todos os resultados do servidor na memória do aplicativo. Embora esta abordagem minimize o consumo de recursos no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ela pode lançar um OutOfMemoryError no aplicativo de JDBC para as consultas que geram resultados muito grandes.
 
-Para permitir que aplicativos administrem resultados muito grandes, o [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fornece um buffer adaptável. Com buffer adaptável, o driver recupera os resultados da execução da instrução do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] à medida que o aplicativo precisa deles, em vez de todos de uma vez. O driver também descarta os resultados assim que o aplicativo já não os pode acessar. Veja a seguir alguns exemplos em que o buffer adaptável pode ser útil:
+Para permitir que aplicativos administrem resultados muito grandes, o [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fornece um buffer adaptável. Com buffer adaptável, o driver recupera os resultados da execução da instrução do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à medida que o aplicativo precisa deles, em vez de todos de uma vez. O driver também descarta os resultados assim que o aplicativo já não os pode acessar. Veja a seguir alguns exemplos em que o buffer adaptável pode ser útil:
 
 - **A consulta produz um conjunto de resultados muito grande:** o aplicativo pode executar uma instrução SELECT que produz mais linhas do que o aplicativo pode armazenar na memória. Em versões anteriores, o aplicativo precisava usar um cursor de servidor para evitar um OutOfMemoryError. O buffer adaptável permite fazer uma passagem somente avanço somente leitura de um conjunto de resultados arbitrariamente grande sem exigir um cursor de servidor.
 
-- **A consulta gera colunas muito grandes** [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) **colunas ou** [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) **os valores de parâmetro:** O aplicativo pode recuperar um valor único (coluna ou parâmetro OUT) que é muito grande para caber inteiramente na memória do aplicativo. Buffer adaptável permite que o aplicativo cliente recupere esse valor como um fluxo, usando o getAsciiStream, o getBinaryStream ou os métodos getCharacterStream. O aplicativo recupera o valor do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] à medida que o lê o fluxo.
+- **A consulta gera colunas muito grandes** [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) **colunas ou** [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) **os valores de parâmetro:** O aplicativo pode recuperar um valor único (coluna ou parâmetro OUT) que é muito grande para caber inteiramente na memória do aplicativo. Buffer adaptável permite que o aplicativo cliente recupere esse valor como um fluxo, usando o getAsciiStream, o getBinaryStream ou os métodos getCharacterStream. O aplicativo recupera o valor do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à medida que o lê o fluxo.
 
 > [!NOTE]  
 > Com buffer adaptável, o JDBC Driver armazena em buffer somente a quantidade de dados que precisa. O driver não fornece nenhum método público para controlar ou limitar o tamanho do buffer.
@@ -56,7 +56,7 @@ Porém, com o driver JDBC versão 2.0, os aplicativos podem usar o método [isWr
 
 ## <a name="retrieving-large-data-with-adaptive-buffering"></a>Recuperando dados grandes com buffer adaptável
 
-Quando valores grandes são lidos uma vez usando os métodos get\<Type>Stream e as colunas ResultSet e os parâmetros CallableStatement OUT são acessados na ordem retornada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], o buffer adaptável minimiza o uso de memória do aplicativo ao processar os resultados. Ao usar buffer adaptável:
+Quando valores grandes são lidos uma vez usando os métodos get\<Type>Stream e as colunas ResultSet e os parâmetros CallableStatement OUT são acessados na ordem retornada pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o buffer adaptável minimiza o uso de memória do aplicativo ao processar os resultados. Ao usar buffer adaptável:
 
 - Os métodos get\<Type>Stream definidos nas classes [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) e [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) retornam fluxos somente leitura por padrão, embora os fluxos possam ser reiniciados se estiver marcado pelo aplicativo. Se o aplicativo desejar `reset` o fluxo, primeiro precisará chamar o método `mark` naquele fluxo.
 
@@ -83,7 +83,7 @@ Os desenvolvedores devem seguir estas diretrizes importantes para minimizar o us
 
 - Há alguns casos em que usar **selectMethod = cursor** em vez de **responseBuffering = adaptive** seria mais benéfico, por exemplo:
 
-  - Se seu aplicativo processa um somente de avanço, somente leitura conjunto de resultados lentamente, como ler cada linha depois de alguma entrada do usuário, usando **selectMethod = cursor** em vez de **responseBuffering = adaptive** talvez ajudar a reduzir o uso de recursos por [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].
+  - Se seu aplicativo processa um somente de avanço, somente leitura conjunto de resultados lentamente, como ler cada linha depois de alguma entrada do usuário, usando **selectMethod = cursor** em vez de **responseBuffering = adaptive** talvez ajudar a reduzir o uso de recursos por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
   - Se o aplicativo processar dois ou mais conjuntos de resultados somente avanço e somente leitura ao mesmo tempo na mesma conexão, usar **selectMethod=cursor** em vez de **responseBuffering=adaptive** poderá ajudar a reduzir a memória exigida pelo driver para processar esses conjuntos de resultados.
 

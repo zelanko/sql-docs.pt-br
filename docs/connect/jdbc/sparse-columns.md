@@ -14,12 +14,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 51310c2848526942e23152b9c02a4ad914118392
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: c582cfcd744d009cae0c966c4640f7406c200246
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39459550"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787132"
 ---
 # <a name="sparse-columns"></a>Colunas esparsas
 
@@ -27,7 +27,7 @@ ms.locfileid: "39459550"
 
 Colunas esparsas são colunas comuns que têm um armazenamento otimizado para valores nulos. Elas reduzem os requisitos de espaço para valores nulos à custa de maior sobrecarga para recuperar valores não nulos. Considere o uso de colunas esparsas quando o espaço salvo for pelo menos de 20 a 40 por cento.
 
-O JDBC Driver 3.0 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] dá suporte a colunas esparsas quando você se conecta a um servidor [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] (ou posterior). Você pode usar [SQLServerDatabaseMetaData.getColumns](../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md), [SQLServerDatabaseMetaData.getFunctionColumns](../../connect/jdbc/reference/getfunctioncolumns-method-sqlserverdatabasemetadata.md) ou [SQLServerDatabaseMetaData.getProcedureColumns](../../connect/jdbc/reference/getprocedurecolumns-method-sqlserverdatabasemetadata.md) para determinar qual coluna é esparsa e qual coluna é a coluna do conjunto de colunas.
+O JDBC Driver 3.0 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte a colunas esparsas quando você se conecta a um servidor [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] (ou posterior). Você pode usar [SQLServerDatabaseMetaData.getColumns](../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md), [SQLServerDatabaseMetaData.getFunctionColumns](../../connect/jdbc/reference/getfunctioncolumns-method-sqlserverdatabasemetadata.md) ou [SQLServerDatabaseMetaData.getProcedureColumns](../../connect/jdbc/reference/getprocedurecolumns-method-sqlserverdatabasemetadata.md) para determinar qual coluna é esparsa e qual coluna é a coluna do conjunto de colunas.
 
 O arquivo de código desta amostra chama-se SparseColumns.java e pode ser encontrado no seguinte local:  
 

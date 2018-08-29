@@ -34,17 +34,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: e0bf785a4e7738b569a72cc4e30c7e94cbe233ac
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 80ada2fdcdcb4f8515515e2205e57b4b008a1a08
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39456050"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42786617"
 ---
 # <a name="bcp-utility"></a>Utilitário bcp
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
- > Para obter o conteúdo relacionado a versões anteriores do SQL Server, confira [Utilitário bcp](https://msdn.microsoft.com/en-US/library/ms162802(SQL.120).aspx).
+ > Para obter o conteúdo relacionado a versões anteriores do SQL Server, confira [Utilitário bcp](bcp-utility.md).
 
  > Para obter a versão mais recente do utilitário bcp, consulte [14.0 de utilitários de linha de comando do Microsoft para SQL Server ](http://go.microsoft.com/fwlink/?LinkID=825643)
 

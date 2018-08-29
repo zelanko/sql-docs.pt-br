@@ -1,6 +1,6 @@
 ---
 title: Tutorial do Analysis Services da Adventure Works (1400) | Microsoft Docs
-ms.date: 05/08/2018
+ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 28aa401eb037fecadca17ededf041ab82a4bc498
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 7abd968db3aacbb71ed238e3f6ae6b857c8b1d99
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38042444"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43084709"
 ---
-# <a name="tabular-modeling-1400-compatibility-level"></a>Modelagem tabular (nível de compatibilidade 1400)
+# <a name="tabular-modeling-1400-compatibility-level"></a>Modelagem Tabular (nível de compatibilidade 1400)
 
 [!INCLUDE[ssas-appliesto-sql2017-later-aas](../../includes/ssas-appliesto-sql2017-later-aas.md)]
 

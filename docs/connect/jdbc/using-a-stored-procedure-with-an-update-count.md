@@ -14,18 +14,18 @@ caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cebd655a20c49525585cb414cfd7409745391bdc
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
-ms.translationtype: HT
+ms.openlocfilehash: d00ebf37c52e1b5dc88f4afe758aec7c8af287d1
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662118"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785028"
 ---
 # <a name="using-a-stored-procedure-with-an-update-count"></a>Usando um procedimento armazenado com uma contagem de atualização
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Para modificar dados em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] usando um procedimento armazenado, o [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fornece a classe [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md). Usando a classe SQLServerCallableStatement, você pode chamar procedimentos armazenados que modificam dados que estão no banco de dados e retornam uma contagem do número de linhas afetadas, também chamada de contagem de atualização.
+Para modificar dados em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando um procedimento armazenado, o [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fornece a classe [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md). Usando a classe SQLServerCallableStatement, você pode chamar procedimentos armazenados que modificam dados que estão no banco de dados e retornam uma contagem do número de linhas afetadas, também chamada de contagem de atualização.
 
 Depois de definir a chamada para o procedimento armazenado usando a classe SQLServerCallableStatement, chame o procedimento armazenado usando o método [execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) ou o método [executeUpdate](../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md). O método executeUpdate retornará um valor **int** que contém o número de linhas afetadas pelo procedimento armazenado, mas o método execute não o retornará. Se você usa o método execute e quer obter a contagem do número de linhas afetadas, chame o método [getUpdateCount](../../connect/jdbc/reference/getupdatecount-method-sqlserverstatement.md) depois de executar o procedimento armazenado.
 

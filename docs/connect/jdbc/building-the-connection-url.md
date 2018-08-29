@@ -14,12 +14,12 @@ caps.latest.revision: 53
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 31cc897383c7ffc8a11bc74a1881b12313da68f4
-ms.sourcegitcommit: 6fa72c52c6d2256c5539cc16c407e1ea2eee9c95
+ms.openlocfilehash: ec8254c61cabff08ae788327ee2e5449ed68ec7f
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39278817"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786598"
 ---
 # <a name="building-the-connection-url"></a>Construindo a URL de conexão
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "39278817"
 > [!NOTE]  
 >  Embora o exemplo anterior utilize um nome de usuário e uma senha na cadeia de conexão, você deve usar a segurança integrada, que é mais segura. Para obter mais informações, confira a seção [Conectando-se com a autenticação integrada](#Connectingintegrated) mais adiante neste tópico.  
   
- A seguinte cadeia de conexão mostra um exemplo de como se conectar a um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] usando a autenticação integrada e o Kerberos em um aplicativo que esteja em execução em qualquer sistema operacional compatível com o [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]:  
+ A seguinte cadeia de conexão mostra um exemplo de como se conectar a um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando a autenticação integrada e o Kerberos em um aplicativo que esteja em execução em qualquer sistema operacional compatível com o [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]:  
   
 ```java
 jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationScheme=JavaKerberos  
@@ -77,7 +77,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
  `jdbc:sqlserver://localhost;databaseName=AdventureWorks;integratedSecurity=true;applicationName=MyApp;`  
   
 ## <a name="named-and-multiple-sql-server-instances"></a>Instâncias nomeadas e várias instâncias do SQL Server  
- O [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] permite a instalação de várias instâncias de banco de dados por servidor. Cada instância é identificada por um nome específico. Para se conectar a uma instância nomeada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], especifique o número da porta da instância nomeada (preferencial) ou o nome da instância como uma propriedade URL do JDBC ou uma propriedade **datasource**. Se nenhuma propriedade de nome de instância ou número de porta for especificada, será criada uma conexão com a instância padrão. Consulte os exemplos a seguir:  
+ O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite a instalação de várias instâncias de banco de dados por servidor. Cada instância é identificada por um nome específico. Para se conectar a uma instância nomeada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], especifique o número da porta da instância nomeada (preferencial) ou o nome da instância como uma propriedade URL do JDBC ou uma propriedade **datasource**. Se nenhuma propriedade de nome de instância ou número de porta for especificada, será criada uma conexão com a instância padrão. Consulte os exemplos a seguir:  
   
  Para usar um número de porta, faça o seguinte:  
   

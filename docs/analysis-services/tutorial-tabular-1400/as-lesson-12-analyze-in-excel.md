@@ -1,6 +1,6 @@
 ---
 title: 'Lição 12 do tutorial de serviços de análise: analisar no Excel | Microsoft Docs'
-ms.date: 05/08/2018
+ms.date: 08/27/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d215045f87ed780a4adc97f9ae4fed9ac7e6991a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4b4531183c890e43158f2d9c0f9f4b18f5d303be
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38015991"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43084449"
 ---
 # <a name="analyze-in-excel"></a>Analisar no Excel
 

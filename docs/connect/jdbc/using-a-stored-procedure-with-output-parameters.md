@@ -14,18 +14,18 @@ caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e2556a8d637b78dbc0c0ab9c8740d1e63f156e3b
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: a463bcd89bd2b38b6f0c6ec316039bc28c49d4f3
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662168"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784853"
 ---
 # <a name="using-a-stored-procedure-with-output-parameters"></a>Usando um procedimento armazenado com parâmetros de saída
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Um procedimento armazenado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] que pode ser chamado é aquele que retorna um ou mais parâmetros OUT, que são parâmetros usados pelo procedimento armazenado para retornar os dados ao aplicativo de chamada. O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fornece a classe [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md), que pode ser usada para chamar esse tipo de procedimento armazenado e processar os dados retornados.
+Um procedimento armazenado do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que pode ser chamado é aquele que retorna um ou mais parâmetros OUT, que são parâmetros usados pelo procedimento armazenado para retornar os dados ao aplicativo de chamada. O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fornece a classe [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md), que pode ser usada para chamar esse tipo de procedimento armazenado e processar os dados retornados.
 
 Ao chamar esse tipo de procedimento armazenado usando o driver JDBC, você precisa usar a sequência de escape `call` do SQL junto com o método [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) da classe [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). A sintaxe da sequência de escape `call` com parâmetros OUT é a seguinte:
 
@@ -36,12 +36,12 @@ Ao chamar esse tipo de procedimento armazenado usando o driver JDBC, você preci
 
 Ao construir a sequência de escape `call`, especifique os parâmetros OUT usando o caractere ? (ponto de interrogação). Esse caractere age como um espaço reservado para os valores de parâmetros que retornarão do procedimento armazenado. Para especificar um valor para um parâmetro OUT, especifique o tipo de dados de cada parâmetro usando o método [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) da classe SQLServerCallableStatement antes de executar o procedimento armazenado.
 
-O valor especificado para o parâmetro OUT no método registerOutParameter precisa ser um dos tipos de dados do JDBC contidos em java.sql.Types que, por sua vez, é mapeado para um dos tipos de dados nativos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Para obter mais informações sobre o JDBC e [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipos de dados, consulte [Noções básicas sobre os tipos de dados do JDBC Driver](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md).
+O valor especificado para o parâmetro OUT no método registerOutParameter precisa ser um dos tipos de dados do JDBC contidos em java.sql.Types que, por sua vez, é mapeado para um dos tipos de dados nativos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações sobre o JDBC e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de dados, consulte [Noções básicas sobre os tipos de dados do JDBC Driver](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md).
 
 Ao passar para o método registerOutParameter um valor para um parâmetro OUT, especifique não só o tipo de dados a ser usado para o parâmetro, mas também o posicionamento ordinal do parâmetro ou o nome do parâmetro no procedimento armazenado. Por exemplo, se o procedimento armazenado contiver um único parâmetro OUT, seu valor ordinal será 1; se o procedimento armazenado contiver dois parâmetros, o primeiro valor ordinal será 1 e o segundo valor ordinal será 2.
 
 > [!NOTE]  
-> O driver JDBC não dá suporte ao uso dos tipos de dados CURSOR, SQLVARIANT, TABLE e TIMESTAMP do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] como parâmetros OUT.
+> O driver JDBC não dá suporte ao uso dos tipos de dados CURSOR, SQLVARIANT, TABLE e TIMESTAMP do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como parâmetros OUT.
 
 Como exemplo, crie o seguinte procedimento armazenado no banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)]:
 
