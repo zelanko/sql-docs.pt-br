@@ -14,18 +14,18 @@ caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9a2dc9e6e5ce3baa3bdaa878c37bb47a77d02a54
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: f73997cddc48a26843217625eb47b9e82bd85217
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39451522"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42783978"
 ---
 # <a name="reading-large-data-sample"></a>Lendo exemplo de dados grande
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-Este aplicativo de exemplo do [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] demonstra como recuperar um valor grande de coluna única de um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] usando o método [getCharacterStream](../../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md).
+Este aplicativo de exemplo do [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] demonstra como recuperar um valor grande de coluna única de um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando o método [getCharacterStream](../../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md).
 
 O arquivo de código desta amostra chama-se ReadLargeData.java e pode ser encontrado no seguinte local:
 

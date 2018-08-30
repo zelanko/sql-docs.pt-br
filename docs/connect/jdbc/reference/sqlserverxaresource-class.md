@@ -14,23 +14,23 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 46281eca1f326f39a0e8aff7e167214152a839e5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: e7a40dc7a3f55a9c331f15783a4349e3ffbed269
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32847789"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784147"
 ---
 # <a name="sqlserverxaresource-class"></a>Classe SQLServerXAResource
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Representa um XAResource XA para o gerenciamento de transações distribuídas.  
+  Representa um XAResource para o gerenciamento de transações distribuídas XA.  
   
  **Pacote:** com.microsoft.sqlserver.jdbc  
   
  **Estende:** java.lang.Object  
   
- **Implementa:** javax  
+ Implementa:** javax.transaction.xa.XAResource  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,10 +40,10 @@ public class SQLServerXAResource
 ```  
   
 ## <a name="remarks"></a>Remarks  
- Transações XA são implementadas no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] usando [!INCLUDE[msCoName](../../../includes/msconame_md.md)] Gerenciador de transações distribuídas (DTC). A classe SQLServerXAResource faz chamadas para um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] estendido dll denominada sqljdbc_xa.dll, que interage com o DTC. As chamadas XA que são recebidas pelo SQLServerXAResource (XA_START, XA_END, XA_PREPARE e assim por diante) são mapeadas para as chamadas correspondentes às funções do DTC.  
+ As transações XA são implementadas no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando o [!INCLUDE[msCoName](../../../includes/msconame_md.md)] DTC (Gerenciador de Transações Distribuídas). A classe [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]faz chamadas a uma dll estendida do  denominada sqljdbc_xa.dll, que faz interface com o DTC. As chamadas XA que são recebidas pela  (XA_START, XA_END, XA_PREPARE e assim por diante) são mapeadas para as chamadas correspondentes às funções do DTC.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Membros SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-members.md)   
- [Referência da API do Driver JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
+ [Referência de API do JDBC Driver](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   
   

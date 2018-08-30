@@ -15,12 +15,12 @@ caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9cd3bb6f733b9d9cac1dc3973e65199c9357bbbb
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a4a07cb8f8c5c3043ee307b7b7653846cc2d4e6e
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38054714"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42784693"
 ---
 # <a name="known-issues-in-this-version-of-the-driver"></a>Problemas conhecidos nesta versão do driver
 
@@ -30,7 +30,7 @@ Este artigo contém uma lista de problemas conhecidos com o Microsoft ODBC Drive
 
 Problemas adicionais serão postados no [blog da equipe do driver ODBC da Microsoft](http://blogs.msdn.com/b/sqlnativeclient/).  
 
-- Windows, Linux e macOS convertem caracteres da PUA (Área de Uso Particular) ou EUDC (Caracteres Definidos pelo Usuário Final ) de maneira diferente. Conversões executadas no servidor no [!INCLUDE[tsql](../../../includes/tsql_md.md)] usam a biblioteca de conversão do Windows. Conversões no driver usam as bibliotecas de conversão do Windows, Linux ou macOS. Cada biblioteca pode produzir resultados diferentes ao executar as conversões. Para obter mais informações, consulte [End-User-Defined and Private Use Area Characters](http://msdn.microsoft.com/library/dd317802.aspx).
+- Windows, Linux e macOS convertem caracteres da PUA (Área de Uso Particular) ou EUDC (Caracteres Definidos pelo Usuário Final ) de maneira diferente. Conversões executadas no servidor no [!INCLUDE[tsql](../../../includes/tsql-md.md)] usam a biblioteca de conversão do Windows. Conversões no driver usam as bibliotecas de conversão do Windows, Linux ou macOS. Cada biblioteca pode produzir resultados diferentes ao executar as conversões. Para obter mais informações, consulte [End-User-Defined and Private Use Area Characters](/windows/desktop/Intl/end-user-defined-characters).
 
 - Se o cliente a codificação UTF-8, o Gerenciador de driver não corretamente sempre converter de UTF-8 em UTF-16. Atualmente, a corrupção de dados ocorre quando um ou mais caracteres na cadeia de caracteres não são caracteres de UTF-8 válidos. Caracteres ASCII são mapeados corretamente. O gerenciador de driver tentará fazer essa conversão ao chamar as versões SQLCHAR da API do ODBC (por exemplo, SQLDriverConnectA). O gerenciador de driver não tentará fazer essa conversão ao chamar as versões SQLWCHAR da API do ODBC (por exemplo, SQLDriverConnectW).  
 

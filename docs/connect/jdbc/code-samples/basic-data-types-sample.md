@@ -14,18 +14,18 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 04511587586fc2faef1471a9e6a8d1629fe62c78
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
+ms.openlocfilehash: bec8d747e193f54b1f706a911f3a78a3442e81b4
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662408"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787124"
 ---
 # <a name="basic-data-types-sample"></a>Exemplo de tipos de dados básicos
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-Este aplicativo de exemplo do [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] demonstra como usar métodos de getter de conjunto de resultados para recuperar valores de tipos de dados básicos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)], além de como usar métodos de atualização de conjunto de resultados para atualizar esses valores.  
+Este aplicativo de exemplo do [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] demonstra como usar métodos de getter de conjunto de resultados para recuperar valores de tipos de dados básicos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], além de como usar métodos de atualização de conjunto de resultados para atualizar esses valores.  
   
 O arquivo de código desta amostra chama-se BasicDataTypes.java e pode ser encontrado no seguinte local:  
 

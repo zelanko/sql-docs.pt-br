@@ -1,5 +1,5 @@
 ---
-title: Requisitos do sistema para os Drivers da Microsoft para PHP para SQL Server | Microsoft Docs
+title: Requisitos do sistema para os Microsoft Drivers for PHP for SQL Server
 ms.custom: ''
 ms.date: 03/23/2018
 ms.prod: sql
@@ -16,12 +16,12 @@ caps.latest.revision: 93
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9cfb813b857557a3a30bd89d9c96346ee261bc89
-ms.sourcegitcommit: c37da15581fb34250d426a8d661f6d0d64f9b54c
+ms.openlocfilehash: 1941388b2bd7b0bb21e0da5a55876166c378c01e
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39174943"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784854"
 ---
 # <a name="system-requirements-for-the-microsoft-drivers-for-php-for-sql-server"></a>Requisitos do sistema para os Microsoft Drivers for PHP for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -67,7 +67,7 @@ Se você estiver baixando a versão do Windows do driver em uma versão de 64 bi
 |ODBC Driver 13  | | | |S| | |
 |ODBC Driver 11  |S|S|S|S|S|S|
 
-Se você estiver usando o driver SQLSRV, [sqlsrv_client_info](../../connect/php/sqlsrv-client-info.md) retorna informações sobre qual versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Microsoft ODBC Driver for SQL Server está sendo usado pelo [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Se estiver usando o driver PDO_SQLSRV, use [PDO::getAttribute](../../connect/php/pdo-getattribute.md) para descobrir a versão.  
+Se você estiver usando o driver SQLSRV, [sqlsrv_client_info](../../connect/php/sqlsrv-client-info.md) retorna informações sobre qual versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Microsoft ODBC Driver for SQL Server está sendo usado pelo [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Se estiver usando o driver PDO_SQLSRV, use [PDO::getAttribute](../../connect/php/pdo-getattribute.md) para descobrir a versão.  
 
 ## <a name="sql-server"></a>SQL Server
 

@@ -14,17 +14,17 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 948c11c97bc9d155f3890f4d11aac54cd0ae4735
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 0de878aa647d3d0f337c0882ec055d252da0041a
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308165"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787320"
 ---
 # <a name="pdo-class"></a>Classe PDO
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-A classe PDO contém métodos que permitem que seu aplicativo PHP se conecte a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
+A classe PDO contém métodos que permitem que seu aplicativo PHP se conecte a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -66,14 +66,14 @@ A classe PDO contém os seguintes métodos:
   
 O suporte para PDO foi adicionado na versão 2.0 dos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [PDO_SQLSRV Driver Reference](../../connect/php/pdo-sqlsrv-driver-reference.md)
 
-[Visão geral dos Drivers da Microsoft para PHP para SQL Server](../../connect/php/overview-of-the-php-sql-driver.md)
+[Visão geral dos Microsoft Drivers for PHP for SQL Server](../../connect/php/overview-of-the-php-sql-driver.md)
 
 [Constantes &#40;Drivers da Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 
-[Programação de guia para os Drivers da Microsoft para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Guia de programação para os Drivers da Microsoft para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [Guia de Introdução com os Drivers da Microsoft para PHP para SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
 

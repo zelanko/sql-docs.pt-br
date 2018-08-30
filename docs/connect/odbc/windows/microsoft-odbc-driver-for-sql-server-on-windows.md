@@ -14,17 +14,17 @@ caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e5d818e4ce5c267432e6e456e11720f546ebaa19
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 08d1c94854e4d073d4cb26a3e2e320a0d93c08f1
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38047434"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786601"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server-on-windows"></a>Microsoft ODBC Driver for SQL Server no Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-O Microsoft ODBC Drivers for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] são os drivers ODBC independentes que fornecem uma interface de programação de aplicativo (API) implementando as interfaces ODBC padrão para a Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].
+O Microsoft ODBC Drivers for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] são os drivers ODBC independentes que fornecem uma interface de programação de aplicativo (API) implementando as interfaces ODBC padrão para a Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
 O Microsoft ODBC Driver for SQL Server pode ser usado para criar novos aplicativos. Você também pode atualizar seus aplicativos mais antigos que usam um driver ODBC mais antigo no momento. O ODBC Driver for SQL Server dá suporte a conexões para o Banco de Dados SQL do Azure, o SQL Data Warehouse do Azure, SQL Server 2017, SQL Server 2016, SQL Server 2014, SQL Server 2012, SQL Server 2008 R2, SQL Server 2008 e SQL Server 2005.  
 
@@ -38,7 +38,7 @@ O Microsoft ODBC Driver for SQL Server pode ser usado para criar novos aplicativ
 | Microsoft ODBC Driver 11 para SQL Server | <ul><li>Pool de conexões com reconhecimento de driver</li><li>Resiliência da conexão</li><li>Execução assíncrona (Método de Sondagem)</li></ul> |    
 
 ## <a name="documentation"></a>Documentação  
-Esta documentação para o Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] inclui:  
+Esta documentação para o Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] inclui:  
   
 -   [Notas de Versão](../../../connect/odbc/windows/release-notes.md)  
 -   [Recursos do Microsoft ODBC Driver for SQL Server no Windows](../../../connect/odbc/windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md)  

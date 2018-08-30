@@ -14,17 +14,17 @@ caps.latest.revision: 73
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e5363b1135cb7e5d04201b2005bda9caf8ff8811
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
-ms.translationtype: HT
+ms.openlocfilehash: 377afbebe029add867a2d02cb02a38421dc8d1f2
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39662278"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785033"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>Requisitos de sistema para o JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Para acessar dados de um [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] ou de um [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] usando o [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], você deve ter os seguintes componentes instalados no computador:
+  Para acessar dados de um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou de um [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] usando o [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], você deve ter os seguintes componentes instalados no computador:
 
 - [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] ([baixar](download-microsoft-jdbc-driver-for-sql-server.md))
 - Java Runtime Environment
@@ -44,7 +44,7 @@ ms.locfileid: "39662278"
   
 **Microsoft JDBC Driver 7.0 para SQL Server:**  
 
-  O JDBC Driver 7.0 inclui duas bibliotecas de classes JAR em cada pacote de instalação: **mssql-jdbc-7.0.0.jre8.jar**, e **mssql-jdbc-7.0.0.jre10.jar**.
+  O JDBC Driver 7.0 inclui duas bibliotecas de classes JAR em cada pacote de instalação: **mssql-jdbc-7.0.0.jre8.jar** e **mssql-jdbc-7.0.0.jre10.jar**.
 
   O JDBC Driver 7.0 foi desenvolvido para funcionar e ser compatível com todas as principais máquinas virtuais Java equivalentes às da Sun, mas foi testado somente com Sun JRE 8.0 e 10.0.
   
@@ -68,7 +68,7 @@ ms.locfileid: "39662278"
   
 **Microsoft JDBC Driver 6.4 for SQL Server:**  
 
-  O JDBC Driver 6.4 inclui três bibliotecas de classes JAR em cada pacote de instalação: **mssql-jdbc-6.4.0.jre7.jar**, **mssql-jdbc-6.4.0.jre8.jar**, e **mssql-jdbc-6.4.0.jre9.jar** .
+  O JDBC Driver 6.4 inclui duas bibliotecas de classes JAR em cada pacote de instalação: **mssql-jdbc-6.4.0.jre7.jar** e **mssql-jdbc-6.4.0.jre8.jar**.
 
   OJDBC Driver 6.4 foi desenvolvido para funcionar e ser compatível com todas as principais máquinas virtuais Java equivalentes às da Sun, mas foi testado somente com Sun JRE 7.0, 8.0 e 9.0.
   
@@ -149,9 +149,9 @@ O JDBC Driver 6.4 também está disponível no repositório Maven Central e pode
  O driver JDBC foi desenvolvido para funcionar em qualquer sistema operacional que ofereça suporte ao uso de uma JVM (Máquina Virtual Java). Porém, só os sistemas operacionais Sun Solaris, SUSE Linux e Windows foram testados oficialmente.  
   
 ## <a name="supported-languages"></a>Idiomas com suporte  
- O driver JDBC dá suporte a todos os agrupamentos de coluna do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Para obter mais informações sobre os agrupamentos com suporte pelo driver JDBC, consulte [recursos internacionais do JDBC Driver](../../connect/jdbc/international-features-of-the-jdbc-driver.md).  
+ O driver JDBC dá suporte a todos os agrupamentos de coluna do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações sobre os agrupamentos com suporte pelo driver JDBC, consulte [recursos internacionais do JDBC Driver](../../connect/jdbc/international-features-of-the-jdbc-driver.md).  
   
- Para obter mais informações sobre agrupamentos, consulte "Trabalhando com agrupamentos" nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+ Para obter mais informações sobre agrupamentos, consulte "Trabalhando com agrupamentos" nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Consulte Também  
  [Visão geral do JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

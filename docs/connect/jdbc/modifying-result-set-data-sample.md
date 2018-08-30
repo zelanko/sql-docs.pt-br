@@ -14,18 +14,18 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0d5714d97f6c7762fa1cfebf0480cb7e669255d9
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: af7c20d6540cb5db098bc8f08c33930355253be2
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39453980"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784500"
 ---
 # <a name="modifying-result-set-data-sample"></a>Exemplo de modificação de dados do conjunto de resultados
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Este aplicativo de exemplo do [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] demonstra como recuperar um conjunto de dados atualizável de um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Em seguida, usando métodos do objeto [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md), ele insere, modifica e, por fim, exclui uma linha de dados do conjunto de dados.
+Este aplicativo de exemplo do [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] demonstra como recuperar um conjunto de dados atualizável de um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Em seguida, usando métodos do objeto [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md), ele insere, modifica e, por fim, exclui uma linha de dados do conjunto de dados.
 
 O arquivo de código desta amostra chama-se UpdateResultSet.java e pode ser encontrado no seguinte local:
 

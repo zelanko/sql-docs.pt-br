@@ -12,16 +12,16 @@ ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: ad3408d0419e408809b151114d83a09d976505fa
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: f559ff4169cda9d7740efc48499153332cb6de33
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39109388"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43026365"
 ---
-# <a name="using-the-output-clause-with-ole-db-in-ole-db-driver-for-sql-server"></a>Usando a cláusula OUTPUT com o OLE DB no OLE DB Driver for SQL Server
+# <a name="using-the-output-clause-with-ole-db-in-ole-db-driver-for-sql-server"></a>Usar a cláusula OUTPUT com o OLE DB no OLE DB Driver for SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]

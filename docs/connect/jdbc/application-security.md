@@ -1,5 +1,5 @@
 ---
-title: Segurança do aplicativo | Microsoft Docs
+title: Segurança de aplicativo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,20 +14,20 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8226badb1031792badc1601cd12c2a0e2f13c9bd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 4132dfdc915f45f67b267a197dbfeef2004eb36f
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32827761"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784145"
 ---
 # <a name="application-security"></a>Segurança do aplicativo
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Quando você usa o [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], é importante tomar precauções para garantir a segurança do seu aplicativo. As seções a seguir fornecem informações referentes a etapas que você pode realizar para ajudar a proteger seu aplicativo.  
+  Ao usar o [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], é importante tomar precauções para garantir a segurança de seu aplicativo. As seções a seguir fornecem informações referentes a etapas que você pode realizar para ajudar a proteger seu aplicativo.  
   
 ## <a name="using-java-policy-permissions"></a>Usando permissões de política de Java  
- Quando você usa o [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], é importante especificar as permissões de política de Java exigidas pelo driver JDBC. O Java Runtime Environment (JRE) fornece um modelo de segurança extensivo que você pode usar em tempo de execução para determinar se um thread tem acesso a um recurso. Os arquivos de política de Segurança podem controlar este acesso. Os próprios arquivos de política são gerenciados pelo implantador e pelo sysadmin para o contêiner, mas as permissões listadas neste tópico são as que afetam o funcionamento do driver JDBC.  
+ Ao usar o [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], é importante especificar as permissões de política de Java exigidas pelo driver JDBC. O Java Runtime Environment (JRE) fornece um modelo de segurança extensivo que você pode usar em tempo de execução para determinar se um thread tem acesso a um recurso. Os arquivos de política de Segurança podem controlar este acesso. Os próprios arquivos de política são gerenciados pelo implantador e pelo sysadmin para o contêiner, mas as permissões listadas neste tópico são as que afetam o funcionamento do driver JDBC.  
   
  Uma permissão típica no arquivo de política se parece com o seguinte.  
   
@@ -63,11 +63,11 @@ permission java.net.SocketPermission "*", "listen, connect, accept";
 >  O código "file:/install_dir/lib/-" refere-se ao diretório de instalação do driver JDBC.  
   
 ## <a name="protecting-server-communication"></a>Protegendo a comunicação do servidor  
- Quando você usa o driver JDBC para se comunicar com um [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] banco de dados, você pode proteger o canal de comunicação usando o protocolo IPSEC (Internet Security) ou SSL Secure Sockets Layer (); ou você pode usar ambos.  
+ Ao usar o driver JDBC para se comunicar com um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você pode proteger o canal de comunicação usando o Protocolo IPSEC (Internet Protocol Security) ou o Protocolo SSL (Secure Sockets Layer); ou pode usar ambos.  
   
  O suporte ao SSL pode ser usado para fornecer um nível adicional de proteção além do IPSEC. Para obter mais informações sobre como usar SSL, consulte [usando a criptografia SSL](../../connect/jdbc/using-ssl-encryption.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Protegendo aplicativos do JDBC Driver](../../connect/jdbc/securing-jdbc-driver-applications.md)  
   
   

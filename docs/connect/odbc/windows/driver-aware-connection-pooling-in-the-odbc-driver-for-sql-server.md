@@ -14,20 +14,20 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f3cc9428f84db56675dbf58c977078fa4dcca6ae
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: b5bbe5489392ec9fbce5e55e1ad72d90416b5242
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38060004"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784860"
 ---
 # <a name="driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server"></a>Pooling de conexão com reconhecimento de driver no driver ODBC para SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-  O Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] dá suporte para [Pool de Conexões com Reconhecimento de Driver](http://msdn.microsoft.com/library/hh405031(VS.85).aspx). Este tópico descreve os aprimoramentos feitos no pool de conexões com reconhecimento de driver no Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] no Windows:  
+  O Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dá suporte para [Pool de Conexões com Reconhecimento de Driver](http://msdn.microsoft.com/library/hh405031(VS.85).aspx). Este tópico descreve os aprimoramentos feitos no pool de conexões com reconhecimento de driver no Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no Windows:  
   
 -   Independentemente das propriedades de conexão, as conexões que usam `SQLDriverConnect` entram em um pool separado das conexões que usam `SQLConnect`.
-- Ao usar a Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] e o pool de conexões com reconhecimento de driver, o driver não usa o contexto de segurança do usuário do Windows do thread atual para separar as conexões no pool. Ou seja, se as conexões forem equivalentes em seus parâmetros para cenários de representação do Windows com Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] e se estiverem usando as mesmas credenciais de Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] para se conectar ao back-end, diferentes usuários do Windows poderão potencialmente usar o mesmo pool de conexões. Ao usar a Autenticação do Windows e o pool de conexões com reconhecimento de driver, o driver usa o contexto de segurança do usuário do Windows para separar as conexões no pool. Ou seja, para cenários de representação do Windows, diferentes usuários do Windows não compartilharão conexões mesmo se elas usarem os mesmos parâmetros.
+- Ao usar a Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e o pool de conexões com reconhecimento de driver, o driver não usa o contexto de segurança do usuário do Windows do thread atual para separar as conexões no pool. Ou seja, se as conexões forem equivalentes em seus parâmetros para cenários de representação do Windows com Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e se estiverem usando as mesmas credenciais de Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para se conectar ao back-end, diferentes usuários do Windows poderão potencialmente usar o mesmo pool de conexões. Ao usar a Autenticação do Windows e o pool de conexões com reconhecimento de driver, o driver usa o contexto de segurança do usuário do Windows para separar as conexões no pool. Ou seja, para cenários de representação do Windows, diferentes usuários do Windows não compartilharão conexões mesmo se elas usarem os mesmos parâmetros.
 - Ao usar o Azure Active Directory e o pooling de conexão de reconhecimento de driver, o driver também usa o valor de autenticação para determinar a associação no pool de conexão.
   
 -   O pool de conexões com reconhecimento de driver impede que uma conexão inválida seja retornada do pool.  
@@ -46,7 +46,7 @@ Se uma das IDs de atributo de conexão ou palavras-chave de cadeia de conexão a
   
 -   Se houver uma diferença em qualquer uma das palavras-chave de conexão a seguir entre a cadeia de conexão e uma cadeia de conexão em pool, uma conexão em pool não será usada.  
   
-    |Palavra-chave|Driver ODBC 13|Driver ODBC 11|
+    |Palavra-chave|ODBC Driver 13|ODBC Driver 11|
     |-|-|-|
     |`Address`|Sim|Sim|
     |`AnsiNPW`|Sim|Sim|
@@ -71,7 +71,7 @@ Se uma das IDs de atributo de conexão ou palavras-chave de cadeia de conexão a
     
 - Se houver uma diferença em qualquer um dos atributos de conexão a seguir entre a cadeia de conexão e uma cadeia de conexão em pool, uma conexão em pool não será usada.  
   
-    |attribute|Driver ODBC 13|Driver ODBC 11|  
+    |attribute|ODBC Driver 13|ODBC Driver 11|  
     |-|-|-|  
     |`SQL_ATTR_CURRENT_CATALOG`|Sim|Sim|
     |`SQL_ATTR_PACKET_SIZE`|Sim|Sim|
@@ -97,7 +97,7 @@ Se uma das IDs de atributo de conexão ou palavras-chave de cadeia de conexão a
   
      Essas palavras-chave de conexão não são consideradas quando o Gerenciador de Driver tenta corresponder a conexão a uma conexão no pool. (Mesmo se você alterar um desses parâmetros, uma conexão existente poderá ser reutilizada. O driver redefinirá as opções conforme a necessidade.) Esses atributos podem ser redefinidos no lado do cliente sem fazer uma chamada de rede extra.  
   
-    |Palavra-chave|Driver ODBC 13|Driver ODBC 11|  
+    |Palavra-chave|ODBC Driver 13|ODBC Driver 11|  
     |-|-|-|  
     |`AutoTranslate`|Sim|Sim|
     |`Description`|Sim|Sim|
@@ -111,7 +111,7 @@ Se uma das IDs de atributo de conexão ou palavras-chave de cadeia de conexão a
   
      Se você alterar um dos atributos de conexão a seguir, uma conexão existente poderá ser reutilizada.  O driver redefinirá o valor conforme a necessidade. O driver pode redefinir esses atributos no lado do cliente sem fazer uma chamada de rede extra.  
   
-    |attribute|Driver ODBC 13|Driver ODBC 11|  
+    |attribute|ODBC Driver 13|ODBC Driver 11|  
     |-|-|-|  
     |Todos os atributos de instrução|Sim|Sim|
     |`SQL_ATTR_AUTOCOMMIT`|Sim|Sim|

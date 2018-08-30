@@ -16,17 +16,17 @@ caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 707db709188db15bc3627d65a2dba5a2bc516308
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 626f2144d29ba15d162e35c40ebc9b5b9317fded
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38041397"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784505"
 ---
 # <a name="connecting-with-bcp"></a>Conectando com bcp
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-O utilitário [bcp](http://go.microsoft.com/fwlink/?LinkID=190626) está disponível no [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] em Linux e macOS. Esta página documenta as diferenças da versão do Windows do `bcp`.
+O utilitário [bcp](http://go.microsoft.com/fwlink/?LinkID=190626) está disponível no [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em Linux e macOS. Esta página documenta as diferenças da versão do Windows do `bcp`.
   
 - O terminador de campo é um tab (“\t”).  
   
@@ -82,7 +82,7 @@ Especifica o número da primeira linha que deve ser exportada de uma tabela ou i
 Especifica que colunas vazias devem reter um valor nulo durante a operação, em vez de qualquer valor padrão nas colunas inseridas.  
   
 - -l  
-Especifica um tempo limite de logon. A opção –l especifica o número de segundos antes que um logon no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] expire quando você tentar se conectar a um servidor. O tempo de limite de logon padrão é 15 segundos. O tempo limite do logon deve ser um número entre 0 e 65534. O `bcp` irá gerar uma mensagem de erro se o valor fornecido não for numérico ou não estiver nesse intervalo. Um valor de 0 especifica um tempo limite infinito.
+Especifica um tempo limite de logon. A opção –l especifica o número de segundos antes que um logon no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] expire quando você tentar se conectar a um servidor. O tempo de limite de logon padrão é 15 segundos. O tempo limite do logon deve ser um número entre 0 e 65534. O `bcp` irá gerar uma mensagem de erro se o valor fornecido não for numérico ou não estiver nesse intervalo. Um valor de 0 especifica um tempo limite infinito.
   
 - -L *last_row*  
 Especifica o número da última linha a ser exportada de uma tabela ou importada de um arquivo de dados.  
@@ -97,25 +97,25 @@ Usa os tipos de dados nativos (do banco de dados) dos dados para realizar uma op
 Especifica a senha para a ID de logon.  
   
 - -Q  
-Executa a instrução SET QUOTED_IDENTIFIERS ON na conexão entre o utilitário `bcp` e uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
+Executa a instrução SET QUOTED_IDENTIFIERS ON na conexão entre o utilitário `bcp` e uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 - -r *row_terminator*  
 Especifica o terminador de linha.  
   
 - -r  
-Especifica que dados de moeda, data e horário são copiados em massa no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] usando o formato regional definido para as configurações de localidade do computador cliente.  
+Especifica que dados de moeda, data e horário são copiados em massa no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando o formato regional definido para as configurações de localidade do computador cliente.  
   
 - -S *server*  
-Especifica o nome da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] instância a ser conectado, ou se -D for usado, um DSN.  
+Especifica o nome da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instância a ser conectado, ou se -D for usado, um DSN.  
   
 - -t *field_terminator*  
 Especifica o terminador de campo.  
   
 - -T  
-Especifica que o utilitário `bcp` se conecta ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] com uma conexão confiável (segurança integrada).  
+Especifica que o utilitário `bcp` se conecta ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] com uma conexão confiável (segurança integrada).  
   
 - -U *login_id*  
-Especifica a ID de logon usada para conectar-se ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
+Especifica a ID de logon usada para conectar-se ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 - -V  
 Informa o número de versão e copyright do utilitário `bcp`.  
@@ -144,7 +144,7 @@ Usa os tipos de dados nativos (do banco de dados) dos dados para dados de não c
 Especifica o nome de um arquivo que recebe a saída redirecionada do prompt de comando.  
   
 - -V (80 | 90 | 100)  
-Usa tipos de dados de uma versão anterior do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
+Usa tipos de dados de uma versão anterior do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 - -X  
 Usado com as opções format e -f format_file, gera um arquivo em formato baseado em XML, em vez do arquivo em formato não XML padrão.  

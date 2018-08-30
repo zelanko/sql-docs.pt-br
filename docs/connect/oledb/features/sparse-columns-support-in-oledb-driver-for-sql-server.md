@@ -15,14 +15,14 @@ helpviewer_keywords:
 - sparse columns, OLE DB Driver for SQL Server
 - sparse columns, OLE DB
 author: pmasl
-ms.author: Pedro.Lopes
+ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: b17aee151630795f2cbee9c679058c748fbf31df
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 1b2e03ba16922f4130203dd897612a418e456f5f
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39106962"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43029755"
 ---
 # <a name="sparse-columns-support-in-ole-db-driver-for-sql-server"></a>Suporte a colunas esparsas no OLE DB Driver for SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

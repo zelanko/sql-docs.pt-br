@@ -19,12 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 83662d032d762eb4109576ab2f2aa253aaabb6fa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: c6f9ccb8e9a479d026430dece3ec1fed9bc8c33e
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32845501"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784328"
 ---
 # <a name="sqlserverblob-class"></a>Classe SQLServerBlob
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "32845501"
   
  **Estende:** java.lang.Object  
   
- **Implementa:** Java.SQL. BLOB, Java.IO. Serializable  
+ Implementa:** java.sql.Blob, java.io.Serializable  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,10 +45,10 @@ public class SQLServerBlob
 ```  
   
 ## <a name="remarks"></a>Remarks  
- Um BLOB é armazenado no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] como um tipo de dados de imagem.  
+ Um BLOB é armazenado no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] como um tipo de dados IMAGE.  
   
-## <a name="see-also"></a>Consulte também  
- [Membros SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-members.md)   
- [Referência da API do Driver JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Membros de SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-members.md)   
+ [Referência de API do JDBC Driver](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   
   
