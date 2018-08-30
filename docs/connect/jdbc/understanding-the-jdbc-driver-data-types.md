@@ -14,20 +14,20 @@ caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 594e5770335779e0555d0ba9911923e487d5db53
-ms.sourcegitcommit: 2f9cafc1d7a3773a121bdb78a095018c8b7c149f
-ms.translationtype: HT
+ms.openlocfilehash: 98fc3495571a434b21d2e58c55c125f049469663
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39661658"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786959"
 ---
 # <a name="understanding-the-jdbc-driver-data-types"></a>Entendendo os tipos de dados do JDBC Driver
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] dá suporte ao uso de tipos de dados básicos e avançados do JDBC em um aplicativo Java que usa o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] como seu banco de dados.  
+O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] dá suporte ao uso de tipos de dados básicos e avançados do JDBC em um aplicativo Java que usa o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como seu banco de dados.  
   
-O sistema de tipos do JDBC atua como mediador da conversão entre tipos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e tipos e objetos da linguagem Java. Os tipos JDBC são modelados nos tipos SQL-92 e SQL-99. O driver JDBC segue a especificação de JDBC e é criado para fornecer o equilíbrio certo entre previsibilidade e flexibilidade.  
+O sistema de tipos do JDBC atua como mediador da conversão entre tipos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e tipos e objetos da linguagem Java. Os tipos JDBC são modelados nos tipos SQL-92 e SQL-99. O driver JDBC segue a especificação de JDBC e é criado para fornecer o equilíbrio certo entre previsibilidade e flexibilidade.  
   
 Os tópicos nesta seção descrevem como usar os tipos de dados básicos e avançados e como tipos de dados podem ser convertidos em outros tipos de dados.  
   

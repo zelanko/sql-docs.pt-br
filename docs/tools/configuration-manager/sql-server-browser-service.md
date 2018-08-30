@@ -21,13 +21,14 @@ ms.assetid: 3cc00d3a-487c-4cd9-a155-655f02485fa0
 caps.latest.revision: 61
 author: stevestein
 ms.author: sstein
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: e60d4a23373ecd3ecb92540de4f8e6893482990a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 98f690178bedda265e785cce233e26cb4f6c1240
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33074103"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42784510"
 ---
 # <a name="sql-server-browser-service"></a>SQL Server Browser Service
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
