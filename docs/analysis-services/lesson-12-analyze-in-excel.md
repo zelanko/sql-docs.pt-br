@@ -1,6 +1,6 @@
 ---
-title: 'Lição 13: Analisar no Excel | Microsoft Docs'
-ms.date: 05/08/2018
+title: 'Lição 12: Analisar no Excel | Microsoft Docs'
+ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a59a91b86da12dc9df4b9d3ce2b65ef456439627
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: c42a45ec20edbde61a2f1b7c5b026f3467cd2371
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37971668"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42795645"
 ---
-# <a name="lesson-12-analyze-in-excel"></a>Lição 12: Analisar no Excel
+# <a name="lesson-12-analyze-in-excel"></a>Lição 12: analisar no Excel
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 Nesta lição, você usará o analisar no recurso do Excel no SSDT para abrir o Microsoft Excel, criar automaticamente uma conexão de fonte de dados no espaço de trabalho do modelo e adicionar automaticamente uma tabela dinâmica à planilha. O recurso Analisar no Excel foi criado para fornecer um modo rápido e fácil de testar a eficácia do design de modelos antes da sua implantação. Você não executará análises de dados nesta lição. Esta lição visa familiarizar você, o autor modelo, com as ferramentas a serem usadas para testar seu design modelo. Ao contrário de usar o analisar no recurso do Excel, o que é destinado para autores de modelos, os usuários finais usarão aplicativos cliente de relatório como Excel ou Power BI para conectar e procurar dados de modelo de implantados.  

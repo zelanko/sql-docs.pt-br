@@ -1,1 +1,1 @@
-**APLICA-SE A:**![sim](media/yes.png)SQL Server 2016 Analysis Services![não](media/no.png)Azure Analysis Services
+**Aplica-se a:** ![yes](media/yes.png)SQL Server 2016 Analysis Services ![nenhum](media/no.png)Azure Analysis Services

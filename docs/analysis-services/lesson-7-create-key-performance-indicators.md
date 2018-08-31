@@ -1,6 +1,6 @@
 ---
-title: 'Lição 8: Criar indicadores chave de desempenho | Microsoft Docs'
-ms.date: 05/08/2018
+title: 'Lição 7: Criar indicadores chave de desempenho | Microsoft Docs'
+ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: multidimensional-models
@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6e56d4a533caaf95077eb06fabb5fd0bc0c42b07
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ecfedbbc4b7e606f1589f2b5415c5355bb0d95e1
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38033404"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42790097"
 ---
-# <a name="lesson-7-create-key-performance-indicators"></a>Lição 7: Criar indicadores chave de desempenho
+# <a name="lesson-7-create-key-performance-indicators"></a>Lição 7: criar indicadores chave de desempenho
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 Nesta lição, você criará KPIs (indicadores chave de desempenho). Os KPIs são usados para medir o desempenho de um valor, definido por uma medida *Base* , em relação a um valor de *Destino* , também definido por uma medida ou um valor absoluto. Nos aplicativos cliente de relatório, os KPIs podem proporcionar aos profissionais comerciais um modo rápido e fácil de entender um resumo de êxito comercial ou identificar tendências. Para obter mais informações, consulte [KPIs](../analysis-services/tabular-models/kpis-ssas-tabular.md).  

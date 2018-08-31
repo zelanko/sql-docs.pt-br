@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: cffbc00b5b3a3c1c8ab01e14319f3267e323022a
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 6b34de3c71629a1563bf0d480306680dc6253748
+ms.sourcegitcommit: 320958d0f55b6974abf46f8a04f7a020ff86a0ae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395203"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42703619"
 ---
 # <a name="lesson-3-explore-and-visualize-the-data"></a>Lição 3: Explorar e visualizar os dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -63,7 +63,7 @@ No conjunto de dados original, os identificadores de táxi e os registros de cor
 
 Para criar o gráfico, use [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram), uma das funções avançadas do R fornecidas no [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler). Esta etapa plota um histograma com base em dados de um [!INCLUDE[tsql](../../includes/tsql-md.md)] consulta. Você pode encapsular essa função em um procedimento armazenado, **PlotHistogram**.
 
-1. Na [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], no Pesquisador de objetos, clique com botão direito a **TaxiNYC_Sample** banco de dados, expanda **programabilidade**e, em seguida, expanda **Stored Procedures** para exibir o procedimentos criados na lição 2.
+1. Na [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], no Pesquisador de objetos, clique com botão direito a **NYCTaxi_Sample** banco de dados, expanda **programabilidade**e, em seguida, expanda **Stored Procedures** para exibir o procedimentos criados na lição 2.
 
 2. Clique com botão direito **PlotHistogram** e selecione **modificar** para exibir o código-fonte. Você pode executar este procedimento para chamar **rxHistogram** nos dados contidos na coluna da tabela nyctaxi_sample oblíquo.
 
@@ -126,7 +126,9 @@ O procedimento armazenado retorna a imagem como um fluxo de dados varbinary, que
     > [!NOTE]
     > Opções de comando para bcp diferenciam maiusculas de minúsculas.
   
-3.  Se a conexão for bem-sucedida, será solicitado que você insira mais informações sobre o formato de arquivo gráfico. Pressione ENTER em cada prompt para aceitar os padrões, exceto para essas alterações:
+3.  Se a conexão for bem-sucedida, será solicitado que você insira mais informações sobre o formato de arquivo gráfico. 
+
+   Pressione ENTER em cada prompt para aceitar os padrões, exceto para essas alterações:
     
     -   Em **comprimento do prefixo de plotagem do campo**, digite 0
   

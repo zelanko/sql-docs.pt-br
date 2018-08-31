@@ -1,24 +1,24 @@
 ---
-title: Baixar dados de demonstração de táxi de NYC e os scripts de R incorporado (aprendizado de máquina do SQL Server) | Microsoft Docs
-description: Instruções para baixar dados de exemplo de táxi de Nova York e criação de um banco de dados. Dados são usados nos tutoriais do SQL Server que mostra como incorporar o R em procedimentos armazenados do SQL Server e funções T-SQL.
+title: Baixe dados de demonstração de táxi de NYC e scripts para embedded R e Python (aprendizado de máquina do SQL Server) | Microsoft Docs
+description: Instruções para baixar dados de exemplo de táxi de Nova York e criação de um banco de dados. Dados são usados nos tutoriais do SQL Server que mostra como inserir o R e Python no SQL Server procedimentos armazenados e funções T-SQL.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/15/2018
+ms.date: 08/22/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: aca4450bdc152449fd30e974305d14a4ccbf77c5
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 6d5030287e7ad526816f89fd23b13fedae070c56
+ms.sourcegitcommit: 320958d0f55b6974abf46f8a04f7a020ff86a0ae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40396218"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42703599"
 ---
-# <a name="load-nyc-taxi-demo-data-for-sql-server-tutorials"></a>Carregar dados de táxi de Nova York de demonstração de tutoriais do SQL Server
+# <a name="nyc-taxi-demo-data-for-sql-server"></a>Dados de demonstração de táxi de Nova York para o SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Este artigo prepara o sistema para tutoriais sobre como usar o R para análise no banco de dados no SQL Server.
+Este artigo prepara o sistema para tutoriais sobre como usar o R e Python para análise no banco de dados no SQL Server.
 
 Neste exercício, você baixará os dados de exemplo, um script do PowerShell para preparar o ambiente e [!INCLUDE[tsql](../../includes/tsql-md.md)] usados em vários tutoriais de arquivos de script. Quando tiver terminado, uma **NYCTaxi_Sample** banco de dados está disponível em sua instância local, fornecendo dados de demonstração para o aprendizado prático. 
 
@@ -30,9 +30,9 @@ Você precisará de uma conexão de internet, o PowerShell e direitos administra
 
 1.  Abra um console de comando do Windows PowerShell.
   
-    Use a opção **Executar como Administrador**se os privilégios administrativos forem necessários para criar o diretório de destino ou para gravar arquivos no destino especificado.
+    Use o **executar como administrador** opção de criar o diretório de destino ou para gravar arquivos para o destino especificado.
   
-2.  Execute os comandos do PowerShell a seguir, alterando o valor do parâmetro *DestDir* para um diretório local.  O padrão que usamos aqui é **TempRSQL**.
+2.  Execute os comandos do PowerShell a seguir, alterando o valor do parâmetro *DestDir* para um diretório local. O padrão que usamos aqui é **TempRSQL**.
   
     ```ps
     $source = ‘https://raw.githubusercontent.com/Azure/Azure-MachineLearning-DataScience/master/Misc/RSQL/Download_Scripts_SQL_Walkthrough.ps1’  
@@ -45,7 +45,7 @@ Você precisará de uma conexão de internet, o PowerShell e direitos administra
     Se a pasta especificada em *DestDir* não existir, ela será criada pelo script do PowerShell.
   
     > [!TIP]
-    > Se você receber um erro, poderá definir temporariamente a política de execução de scripts do PowerShell como **irrestrito** apenas para este passo a passo, usando o argumento Bypass e incluindo as alterações no escopo da sessão atual.
+    > Se você receber um erro, você pode definir temporariamente a política de execução de scripts do PowerShell para **irrestrito** somente para este passo a passo usando o argumento Bypass e as alterações à sessão atual de escopo.
     >   
     >````
     > Set\-ExecutionPolicy Bypass \-Scope Process
@@ -54,7 +54,7 @@ Você precisará de uma conexão de internet, o PowerShell e direitos administra
   
     Dependendo da conexão com a Internet, o download poderá demorar um pouco.
   
-3.  Quando todos os arquivos forem baixados, o script do PowerShell será aberto na pasta especificada por  *DestDir*. No prompt de comando do PowerShell, execute o comando a seguir e examine os arquivos baixados.
+3.  Quando todos os arquivos tiverem sido baixados, o script do PowerShell é aberto para o *DestDir* pasta. No prompt de comando do PowerShell, execute o comando a seguir e examine os arquivos baixados.
   
     ```
     ls
@@ -93,7 +93,7 @@ Você será solicitado a inserir as informações a seguir:
 
 - Instância de servidor em que [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] foi instalado. Em uma instância padrão, isso pode ser tão simple quanto o nome do computador.
 
-- Nome do banco de dados. Para este tutorial, os scripts presumem `TaxiNYC_Sample`.
+- Nome do banco de dados. Para este tutorial, os scripts presumem `NYCTaxi_Sample`.
 
 - Nome de usuário e senha do usuário. Insira um logon de banco de dados do SQL Server para obter esses valores. Como alternativa, se você tiver modificado o script para aceitar uma identidade confiável do Windows, pressione Enter para deixar esses valores em branco. Sua identidade de Windows é usada em que a conexão.
 

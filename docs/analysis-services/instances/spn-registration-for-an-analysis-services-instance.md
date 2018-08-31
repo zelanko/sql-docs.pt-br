@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c08495fb3a6486f58462562be120ea1d4cd7f8ad
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 9e55a9a6d7a432a145477bb4af92a0225d92c623
+ms.sourcegitcommit: 320958d0f55b6974abf46f8a04f7a020ff86a0ae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019473"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42703579"
 ---
-# <a name="spn-registration-for-an-analysis-services-instance"></a>Registro de SPN de uma instância do Analysis Services
+# <a name="spn-registration-for-an-analysis-services-instance"></a>SPN registration for an Analysis Services instance
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Um nome de entidade de serviço (SPN) identifica exclusivamente uma instância de serviço em um domínio do Active Directory quando a autenticação Kerberos é usada para autenticar identidades de cliente e de serviço mutuamente. Um SPN é associado à conta de logon na qual a instância do serviço é executada.  
   
@@ -93,7 +93,7 @@ Setspn -s MSOLAPSvc.3/AW-SRV01.AdventureWorks.com AW-SRV01
   
  **Exemplo de sintaxe para uma instância nomeada em execução como NT Service\MSOLAP$\<-nome da instância >**  
   
- Esse exemplo mostra a sintaxe **setspn** para uma instância nomeada executada na conta virtual padrão. Nesse exemplo, o nome do host do computador é **AW-SRV02** e o nome da instância é **AW-FINANCE**. Novamente, é a conta do computador especificada para o SPN, em vez da conta virtual **NT Service\MSOLAP$**\<nome da instância >.  
+ Esse exemplo mostra a sintaxe **setspn** para uma instância nomeada executada na conta virtual padrão. Nesse exemplo, o nome do host do computador é **AW-SRV02** e o nome da instância é **AW-FINANCE**. Novamente, é a conta do computador especificado para o SPN, em vez da conta virtual **NT Service\MSOLAP$**\<nome da instância >.  
   
 ```  
 Setspn -s MSOLAPSvc.3/AW-SRV02.AdventureWorks.com:AW-FINANCE AW-SRV02  
@@ -109,11 +109,11 @@ Setspn -s MSOLAPSvc.3/AW-SRV02.AdventureWorks.com:AW-FINANCE AW-SRV02
  Esse exemplo mostra a sintaxe **setspn** para a instância padrão do Analysis Services executada na conta do usuário de domínio, **SSAS-Service**, no domínio AdventureWorks.  
   
 ```  
-Setspn –s msolapsvc.3\AW-SRV01.Adventureworks.com AdventureWorks\SSAS-Service  
+Setspn –s msolapsvc.3/AW-SRV01.Adventureworks.com AdventureWorks\SSAS-Service  
 ```  
   
 > [!TIP]  
->  Verifique se o SPN foi criado para o servidor do Analysis Services executando `Setspn -L <domain account>` ou `Setspn -L <machinename>`, dependendo de como o SPN foi registrado. Você deve ver MSOLAPSVC.3/\<nome_do_host > na lista.  
+>  Verifique se o SPN foi criado para o servidor do Analysis Services executando `Setspn -L <domain account>` ou `Setspn -L <machinename>`, dependendo de como o SPN foi registrado. Você deve ver msolapsvc.3/<hostname\<hostname > na lista.  
   
 ##  <a name="bkmk_builtin"></a> Registro de SPN de uma conta interna  
  Embora essa prática não seja recomendada, instalações antigas do Analysis Services são muitas vezes configuradas para serem executadas em contas internas como Network Service, Local Service ou Local System.  
@@ -165,14 +165,14 @@ Setspn –s msolapsvc.3/<virtualname.FQDN > <domain user account>
 ## <a name="see-also"></a>Consulte também  
  [Autenticação e delegação de identidade do Microsoft BI](http://go.microsoft.com/fwlink/?LinkID=286576)   
  [Autenticação mútua usando Kerberos](http://go.microsoft.com/fwlink/?LinkId=299283)   
- [Como configurar o SQL Server 2008 Analysis Services e o SQL Server 2005 Analysis Services para usar a autenticação Kerberos](http://support.microsoft.com/kb/917409)   
- [Sintaxe SetSPN (Setspn.exe) de SPNs (nomes de entidade de serviço)](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
+ [Como configurar o SQL Server 2008 Analysis Services e SQL Server 2005 Analysis Services para usar a autenticação Kerberos](http://support.microsoft.com/kb/917409)   
+ [Sintaxe de SetSPN (SPNs) (Setspn.exe) de nomes de entidade de serviço](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
  [Que SPN eu utilizo e como ele é colocado lá?](http://social.technet.microsoft.com/wiki/contents/articles/717.service-principal-names-spns-setspn-syntax-setspn-exe.aspx)   
  [SetSPN](http://technet.microsoft.com/library/cc731241\(WS.10\).aspx)   
  [Guia passo a passo de contas de serviço](http://technet.microsoft.com/library/dd548356\(WS.10\).aspx)   
- [Configurar contas de serviço do Windows e permissões](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
- [Como usar os SPNs quando você configura aplicativos Web hospedados em Serviços de Informações da Internet](http://support.microsoft.com/kb/929650)   
- [o que há de novo em contas de serviço](http://technet.microsoft.com/library/dd367859\(WS.10\).aspx)   
+ [Configurar contas de serviço e permissões do Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
+ [Como usar os SPNs quando você configura aplicativos Web hospedados nos serviços de informações da Internet](http://support.microsoft.com/kb/929650)   
+ [o que há de novo nas contas de serviço](http://technet.microsoft.com/library/dd367859\(WS.10\).aspx)   
  [Configurar a autenticação Kerberos para produtos do SharePoint 2010 (white paper)](http://technet.microsoft.com/library/ff829837.aspx)  
   
   

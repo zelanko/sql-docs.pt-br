@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: e781ee8330400a7b6e40ed249ce072cc8f9f83e6
-ms.sourcegitcommit: c37da15581fb34250d426a8d661f6d0d64f9b54c
+ms.openlocfilehash: c2a209f782b264ac7e69514c9aa4cc840534258c
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39174793"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42795655"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>Atualizar os componentes do machine learning (R e Python) em instâncias do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -163,7 +163,7 @@ OutputDataSet <- data.frame(Name, Version);'
 WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 ```
 
-Para SQL Server 2016 R Services associado ao Machine Learning Server 9.3, pacote de R Base deve ser 3.4.1, RevoScaleR deve ser 9.3 e você também deve ter o MicrosoftML 9.3. 
+Para SQL Server 2016 R Services associado ao Machine Learning Server 9.3, pacote de R Base deve ser 3.4.3, RevoScaleR deve ser 9.3 e você também deve ter o MicrosoftML 9.3. 
 
 Se você adicionou os modelos previamente treinados, os modelos são incorporados na biblioteca do MicrosoftML e você pode chamá-los por meio de funções do MicrosoftML. Para obter mais informações, consulte [exemplos de R para o MicrosoftML](https://docs.microsoft.com/machine-learning-server/r/sample-microsoftml).
 
