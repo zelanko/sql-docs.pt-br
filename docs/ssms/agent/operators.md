@@ -29,12 +29,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2ddf3e46378c8db62de8c2e04ba5674bf28c6ce2
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 1d4233dae5b3ac669c50132a1589efe024009956
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980428"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42773913"
 ---
 # <a name="operators"></a>Operadores
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "38980428"
 > [!IMPORTANT]  
 > No momento, na [Instância Gerenciada do Banco de Dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), a maioria dos recursos do SQL Server Agent é compatível, mas não todos. Consulte [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) (Diferenças entre o T-SQL da Instância Gerenciada do Banco de Dados SQL do Azure e o SQL Server) para obter detalhes.
 
-Operadores são aliases de pessoas ou grupos que podem receber notificações eletrônicas sobre a conclusão de trabalhos ou emissões de alertas. O serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent dá suporte à notificação de administradores através de operadores. Os operadores habilitam a notificação e o monitoramento de recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.  
+Operadores são aliases de pessoas ou grupos que podem receber notificações eletrônicas sobre a conclusão de trabalhos ou emissões de alertas. O serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dá suporte à notificação de administradores através de operadores. Os operadores habilitam a notificação e o monitoramento de recursos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 ## <a name="operator-attributes-and-concepts"></a>Atributos e conceitos do operador  
 Os atributos primários de um operador são:  
@@ -52,13 +52,13 @@ Os atributos primários de um operador são:
 -   Informações de contato  
   
 ### <a name="naming-an-operator"></a>Nomeando um operador  
-Todo operador deve ter um nome. Os nomes de operador devem ser exclusivos dentro da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e não podem ultrapassar **128** caracteres.  
+Todo operador deve ter um nome. Os nomes de operador devem ser exclusivos dentro da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e não podem ultrapassar **128** caracteres.  
   
 ### <a name="contact-information"></a>Informações de contato  
 As informações de contato de um operador definem como ele é notificado. Os operadores podem ser notificados por email, pager ou através do comando **net send** :  
   
 > [!IMPORTANT]  
-> As opções Pager e **net send** serão removidas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent em uma versão futura do [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Evite usar esses recursos em novo trabalho de desenvolvimento e planeje modificar os aplicativos que os usam atualmente.  
+> As opções Pager e **net send** serão removidas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent em uma versão futura do [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esses recursos em novo trabalho de desenvolvimento e planeje modificar os aplicativos que os usam atualmente.  
   
 -   **Notificação por email**  
   
@@ -80,7 +80,7 @@ As informações de contato de um operador definem como ele é notificado. Os op
   
         Esse software é de propriedade dos provedores de serviços de pager. O software atua como um cliente de email que, periodicamente, processa sua caixa de entrada, interpretando todas ou parte das informações de endereço de email como número de pager ou correspondendo o nome do email a um número de pager em uma tabela de conversão.  
   
-        Se todos os operadores compartilharem um provedor de pager, você poderá usar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] para especificar qualquer formatação de email especial necessária ao sistema de pager-para-email. A formatação especial pode ser um prefixo ou um sufixo e estar contida nas seguintes linhas do email:  
+        Se todos os operadores compartilharem um provedor de pager, você poderá usar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para especificar qualquer formatação de email especial necessária ao sistema de pager-para-email. A formatação especial pode ser um prefixo ou um sufixo e estar contida nas seguintes linhas do email:  
   
         **Assunto:**  
   
@@ -96,7 +96,7 @@ As informações de contato de um operador definem como ele é notificado. Os op
     Envia uma mensagem ao operador por meio do comando **net send** . Para **net send**, especifique o destinatário (computador ou usuário) de uma mensagem da rede.  
   
     > [!NOTE]  
-    > O comando **net send** usa o Microsoft Windows Messenger. Para enviar alertas com êxito, esse serviço deve estar em execução em ambos os computadores, no computador em que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] está sendo executado e no computador utilizado pelo operador.  
+    > O comando **net send** usa o Microsoft Windows Messenger. Para enviar alertas com êxito, esse serviço deve estar em execução em ambos os computadores, no computador em que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está sendo executado e no computador utilizado pelo operador.  
   
 ## <a name="alerting-and-fail-safe-operators"></a>Alertas e operadores à prova de falhas  
 Você pode escolher quais operadores serão notificados em resposta a um alerta. Por exemplo, você pode atribuir responsabilidades rotativas para a notificação de operadores agendando alertas. Por exemplo, o Indivíduo A é notificado sobre alertas que ocorrem às segundas, quartas ou sextas e o Indivíduo B, sobre alertas ocorridos às terças, quintas ou sábados.  
@@ -109,7 +109,7 @@ O operador à prova de falhas é notificado quando:
   
     São motivos de falha em alcançar operadores primários endereços de pager incorretos e operadores fora de serviço.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] O Agent não consegue acessar as tabelas do sistema no banco de dados **msdb** .  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent não consegue acessar as tabelas do sistema no banco de dados **msdb** .  
   
     A tabela do sistema **sysnotifications** especifica as responsabilidades de operador para os alertas.  
   
@@ -133,5 +133,5 @@ O operador à prova de falhas é um recurso de segurança. Não é possível exc
 |Tarefas relacionadas à atribuição de alertas|[Atribuir alertas a um operador](../../ssms/agent/assign-alerts-to-an-operator.md)<br /><br />[Definir a resposta a um alerta &#40;SQL Server Management Studio&#41;](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br />[sp_add_notification (Transact-SQL)](http://msdn.microsoft.com/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)<br /><br />[Atribuir alertas a um operador](../../ssms/agent/assign-alerts-to-an-operator.md)|  
   
 ## <a name="see-also"></a>Consulte Também  
-[Database Mail](http://msdn.microsoft.com/9e4563dd-4799-4b32-a78a-048ea44a44c1)  
+[Database Mail](../../relational-databases/database-mail/database-mail.md)  
   

@@ -17,16 +17,16 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8cc97cf0c6c6c332e6c6476e1152ba2c30db3802
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 31f3a7f0efa120cae62d2390d2d4bf5b571ee6f0
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981309"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774018"
 ---
 # <a name="the-sql-server-management-studio-environment"></a>O ambiente do SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] fornece um ambiente rico para o gerenciamento e desenvolvimento de consultas no [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)].  
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] fornece um ambiente rico para o gerenciamento e desenvolvimento de consultas no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ## <a name="in-this-section"></a>Nesta seção  
 [Elementos gerais da interface do usuário](../ssms/general-user-interface-elements.md)  
@@ -36,5 +36,5 @@ Resume os recursos gerais da interface do usuário, como o Gerenciador de Soluç
 Introduz o Gerenciador de Soluções, que proporciona a você uma exibição organizada de seus projetos e arquivos, além de acesso imediato aos comandos para gerenciamento deles.  
   
 [Controle do código-fonte do Gerenciador de Soluções](https://msdn.microsoft.com/library/ms173879.aspx)  
-Descreve como o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] se integra a produtos de controle do código-fonte.  
+Descreve como o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] se integra a produtos de controle do código-fonte.  
   

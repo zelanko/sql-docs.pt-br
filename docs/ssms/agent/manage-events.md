@@ -24,12 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f1758496774b1b0d60257416e7b9133d313b671d
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: a2035ca0780e873f5d3cee8d9b649faa4f6ee8a9
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981898"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42774140"
 ---
 # <a name="manage-events"></a>Gerenciar eventos
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,14 +37,14 @@ ms.locfileid: "38981898"
 > [!IMPORTANT]  
 > No momento, na [Instância Gerenciada do Banco de Dados SQL do Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), a maioria dos recursos do SQL Server Agent é compatível, mas não todos. Consulte [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) (Diferenças entre o T-SQL da Instância Gerenciada do Banco de Dados SQL do Azure e o SQL Server) para obter detalhes.
 
-É possível encaminhar a um instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] todas as mensagens de evento que atendam ou excedam um nível de severidade de erro específico. A isso chamamos *encaminhamento de evento*. O servidor de encaminhamento é um servidor dedicado que também pode ser um servidor mestre. Você pode usar o encaminhamento de eventos para centralizar o gerenciamento de alertas para um grupo de servidores, reduzindo, assim, a carga de trabalho em servidores de intensa utilização.  
+É possível encaminhar a um instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] todas as mensagens de evento que atendam ou excedam um nível de severidade de erro específico. A isso chamamos *encaminhamento de evento*. O servidor de encaminhamento é um servidor dedicado que também pode ser um servidor mestre. Você pode usar o encaminhamento de eventos para centralizar o gerenciamento de alertas para um grupo de servidores, reduzindo, assim, a carga de trabalho em servidores de intensa utilização.  
   
 Quando um servidor recebe eventos para um grupo de outros servidores, esse servidor é chamado de *servidor de gerenciamento de alertas*. Em um ambiente multisservidor, o servidor mestre é designado como servidor de gerenciamento de alertas.  
   
 ## <a name="advantages-of-using-an-alerts-management-server"></a>Vantagens de usar um servidor de gerenciamento de alertas  
 São vantagens de se configurar um servidor de gerenciamento de alertas:  
   
--   **Centralização**. Controle centralizado e exibição consolidada dos eventos de várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] são possíveis a partir de um único servidor.  
+-   **Centralização**. Controle centralizado e exibição consolidada dos eventos de várias instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são possíveis a partir de um único servidor.  
   
 -   **Escalabilidade**. Vários servidores físicos podem ser administrados como um mesmo servidor lógico. É possível adicionar ou remover servidores desse grupo de servidores físicos, conforme a necessidade.  
   
@@ -68,15 +68,15 @@ Ao configurar um servidor de gerenciamento de alertas, siga estas diretrizes:
   
 -   Planeje cuidadosamente o tráfego de rede envolvido na configuração de muitos servidores compartilhando o mesmo servidor de gerenciamento de alertas. Se houver congestionamento, reduza o número de servidores que usam o servidor de gerenciamento de alertas em questão.  
   
-    Os servidores registrados no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] constituem a lista de servidores disponíveis para eleição como servidor de encaminhamento de alerta.  
+    Os servidores registrados no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] constituem a lista de servidores disponíveis para eleição como servidor de encaminhamento de alerta.  
   
--   Defina alertas na instância local do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] que requeira uma resposta específica a servidor, em vez de encaminhar os alertas ao servidor de gerenciamento de alertas.  
+-   Defina alertas na instância local do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que requeira uma resposta específica a servidor, em vez de encaminhar os alertas ao servidor de gerenciamento de alertas.  
   
     O servidor de gerenciamento de alertas exibe todos os servidores do quais recebe encaminhamentos como um todo lógico. Por exemplo, um servidor de gerenciamento de alertas responde do mesmo modo a um evento 605 tanto de um servidor A, quanto de um servidor B.  
   
--   Configurado o seu sistema de alertas, verifique periodicamente o log de aplicativos do Microsoft Windows quanto a eventos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.  
+-   Configurado o seu sistema de alertas, verifique periodicamente o log de aplicativos do Microsoft Windows quanto a eventos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
-    As condições de falha encontradas pelo mecanismo de alerta são gravadas no log de aplicativos do Windows local, com nome de origem "SQL Server Agent." Por exemplo, se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent não puder enviar uma notificação por email, conforme está definido, será registrado um evento no log de aplicativos.  
+    As condições de falha encontradas pelo mecanismo de alerta são gravadas no log de aplicativos do Windows local, com nome de origem "SQL Server Agent." Por exemplo, se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent não puder enviar uma notificação por email, conforme está definido, será registrado um evento no log de aplicativos.  
   
 Se um alerta definido localmente estiver inativo e ocorrer um evento que o dispararia, este será encaminhado ao servidor de gerenciamento de alertas (caso satisfaça a condição de encaminhamento de alerta). Esse encaminhamento permite a desativação e a ativação de substituições locais (alertas definidos localmente que também estão definidos no servidor de gerenciamento de alertas), conforme a necessidade, pelo usuário no site local. Você também pode solicitar que os eventos sempre sejam encaminhados, mesmo quando eles também são manipulados por alertas locais.  
   

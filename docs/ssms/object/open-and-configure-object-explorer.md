@@ -15,19 +15,19 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 06ca866e29f6499224bdaa03ce723ac13befd6ae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 03a98a1e29f251663c962795fac0e64382526ff9
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33041793"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42774017"
 ---
 # <a name="open-and-configure-object-explorer"></a>Abrir e configurar o Pesquisador de Objetos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Abra o Pesquisador de Objetos usando o menu **Exibir** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. Configure as opções do Pesquisador de Objetos usando **Opções** no menu **Ferramentas** .  
+Abra o Pesquisador de Objetos usando o menu **Exibir** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Configure as opções do Pesquisador de Objetos usando **Opções** no menu **Ferramentas** .  
   
 ## <a name="viewing-object-explorer"></a>Exibindo o Pesquisador de Objetos  
-O Pesquisador de Objetos fica visível no [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] por padrão. Se você não puder ver o Pesquisador de Objetos, no menu **Exibir** , clique em **Pesquisador de Objetos**.  
+O Pesquisador de Objetos fica visível no [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] por padrão. Se você não puder ver o Pesquisador de Objetos, no menu **Exibir** , clique em **Pesquisador de Objetos**.  
   
 ## <a name="configuring-object-explorer-options"></a>Configurando as opções do Pesquisador de Objetos  
 Para definir as configurações do Pesquisador de Objetos, no menu **Ferramentas** , clique em **Opções**e em **Pesquisador de Objetos do SQL Server**.  

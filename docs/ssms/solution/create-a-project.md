@@ -20,12 +20,12 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 617e0bb42882883a51f5da0bb22ae59eb18dae88
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 7b9549bfce672b3ddf5c67ddb8a6a4968e87a5b7
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38064643"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "42773902"
 ---
 # <a name="create-a-project"></a>Criar um projeto
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ Você pode criar um ou mais projetos dentro de uma solução existente.
     Na caixa **Modelos** , selecione um modelo. Uma breve descrição do modelo de projeto selecionado aparece abaixo da caixa **Modelos** .  
   
     **Nome**  
-    Digite o nome do projeto de script que deseja criar. Também é criada uma pasta com o mesmo nome do projeto no local exibido no campo **Local** . Para alguns projetos, o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] cria fonte e outros arquivos de suporte e os adiciona à pasta de projeto nova.  
+    Digite o nome do projeto de script que deseja criar. Também é criada uma pasta com o mesmo nome do projeto no local exibido no campo **Local** . Para alguns projetos, o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] cria fonte e outros arquivos de suporte e os adiciona à pasta de projeto nova.  
   
     > [!NOTE]  
     > Para alguns tipos de projeto, a caixa de texto **Nome** fica indisponível, pois especificar o local define o nome. Por exemplo, aplicativos e serviços Web estão localizados em um servidor Web e extraem seus nomes de diretórios virtuais especificados nesse servidor.  
@@ -100,7 +100,7 @@ Você pode criar um ou mais projetos dentro de uma solução existente.
   
 4.  Clique em **OK**.  
   
-Você pode definir um nome para o projeto de script, mas os nomes de pastas são definidos pelo [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] e não podem ser alterados. Você pode configurar a unidade e a especificação do caminho do conjunto comum de pastas usando a caixa de diálogo **Adicionar Novo Projeto** . No **Gerenciador de Soluções**, clique com o botão direito do mouse no ícone da solução e clique em **Adicionar**. O local padrão para pastas de projeto de script é: C:\Documents and Settings\\*username*\My Documents\SQL Server Management Studio\Projects\\.  
+Você pode definir um nome para o projeto de script, mas os nomes de pastas são definidos pelo [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e não podem ser alterados. Você pode configurar a unidade e a especificação do caminho do conjunto comum de pastas usando a caixa de diálogo **Adicionar Novo Projeto** . No **Gerenciador de Soluções**, clique com o botão direito do mouse no ícone da solução e clique em **Adicionar**. O local padrão para pastas de projeto de script é: C:\Documents and Settings\\*username*\My Documents\SQL Server Management Studio\Projects\\.  
   
 ## <a name="see-also"></a>Consulte Também  
 [Gerenciador de Soluções](../../ssms/solution/solution-explorer.md)  
