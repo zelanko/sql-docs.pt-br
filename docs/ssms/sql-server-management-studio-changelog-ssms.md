@@ -15,12 +15,12 @@ caps.latest.revision: 72
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dc20fa7c10d8922587801e6936c568e4363a207b
-ms.sourcegitcommit: dc9d656a1cdc73fa6333359480e638a7435102de
+ms.openlocfilehash: 0c45c55f72b6c864087a0df2d45d9da0ef3cfce1
+ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36957719"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42899496"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ Este artigo fornece detalhes sobre atualizações, aprimoramentos e correções 
 
 
 Número de build: 14.0.17277.0<br>
-Data do lançamento: 26 de junho de 2018
+Data de lançamento: 26 de junho de 2018
 
 
 ### <a name="whats-new"></a>Novidades
@@ -104,7 +104,7 @@ Baixe versões anteriores do SSMS clicando nos links de título nas seções a s
 Número de build: 14.0.17254.0<br>
 Data do lançamento: 09 de maio de 2018
 
-[Chinês (República Popular da China)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x804) | [Chinês (Taiwan)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x40a)
+[Chinês (Simplificado)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x804) | [Chinês (Tradicional)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=873126&clcid=0x40a)
 
 
 ### <a name="whats-new"></a>Novidades
@@ -174,7 +174,7 @@ Algumas caixas de diálogo exibem um erro de edição inválida ao trabalhar com
 Número de build: 14.0.17230.0<br>
 Data do lançamento: 20 de março de 2018
 
-[Chinês (República Popular da China)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x804) | [Chinês (Taiwan)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x40a)
+[Chinês (Simplificado)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x804) | [Chinês (Tradicional)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x40a)
 
 ### <a name="whats-new"></a>Novidades
 
@@ -257,7 +257,7 @@ Database Mail:
 ## <a name="downloadssdtmediadownloadpng-ssms-175httpsgomicrosoftcomfwlinklinkid867670"></a>![download](../ssdt/media/download.png) [SSMS 17.5](https://go.microsoft.com/fwlink/?linkid=867670)
 Já disponível | Número de build: 14.0.17224.0
 
-[Chinês (República Popular da China)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x804) | [Chinês (Taiwan)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x40a)
+[Chinês (Simplificado)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x804) | [Chinês (Tradicional)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=867670&clcid=0x40a)
 
 ### <a name="whats-new"></a>Novidades
 
@@ -322,7 +322,7 @@ Classificação de dados:
 ## <a name="downloadssdtmediadownloadpng-ssms-174httpsgomicrosoftcomfwlinklinkid864329"></a>![baixar](../ssdt/media/download.png) [SSMS 17.4](https://go.microsoft.com/fwlink/?linkid=864329)
 Geralmente disponível| Número de build: 14.0.17213.0
 
-[Chinês (República Popular da China)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x804) | [Chinês (Taiwan)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x40a)
+[Chinês (Simplificado)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x804) | [Chinês (Tradicional)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=864329&clcid=0x40a)
 
 
 ### <a name="whats-new"></a>Novidades
@@ -418,7 +418,7 @@ Repositório de Consultas:
 ## <a name="downloadssdtmediadownloadpng-ssms-173httpsgomicrosoftcomfwlinklinkid858904"></a>![baixar](../ssdt/media/download.png) [SSMS 17.3](https://go.microsoft.com/fwlink/?linkid=858904)
 Geralmente disponível| Número de build: 14.0.17199.0
 
-[Chinês (República Popular da China)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x804) | [Chinês (Taiwan)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x40a)
+[Chinês (Simplificado)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x804) | [Chinês (Tradicional)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x40a)
 
 
 ### <a name="enhancements"></a>Aprimoramentos
@@ -512,7 +512,7 @@ Geralmente disponível| Número de build: 14.0.17199.0
 ## <a name="downloadssdtmediadownloadpng-ssms-172httpsgomicrosoftcomfwlinklinkid854085"></a>![baixar](../ssdt/media/download.png) [SSMS 17.2](https://go.microsoft.com/fwlink/?linkid=854085)
 Disponibilidade geral | Número de build: 14.0.17177.0
 
-[Chinês (República Popular da China)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x804) | [Chinês (Taiwan)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x40a)
+[Chinês (Simplificado)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x804) | [Chinês (Tradicional)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x40a)
 
 ### <a name="enhancements"></a>Aprimoramentos
 
@@ -642,7 +642,7 @@ The connection is broken and recovery is not possible. The client driver attempt
 ## <a name="downloadssdtmediadownloadpng-ssms-171httpsgomicrosoftcomfwlinklinkid849819"></a>![baixar](../ssdt/media/download.png) [SSMS 17.1](https://go.microsoft.com/fwlink/?linkid=849819)
 Disponibilidade geral | Número de build: 14.0.17119.0
 
-[Chinês (República Popular da China)](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x804) | [Chinês (Taiwan)](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x40a)
+[Chinês (Simplificado)](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x804) | [Chinês (Tradicional)](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=849819&clcid=0x40a)
 
 ### <a name="enhancements"></a>Aprimoramentos
 
@@ -669,7 +669,7 @@ Disponibilidade geral | Número de build: 14.0.17119.0
 ## <a name="downloadssdtmediadownloadpng-ssms-170httpgomicrosoftcomfwlinklinkid847722"></a>![baixar](../ssdt/media/download.png) [SSMS 17.0](http://go.microsoft.com/fwlink/?LinkID=847722)
 Disponibilidade geral | Número de build: 14.0.17099.0
 
-[Chinês (República Popular da China)](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x804) | [Chinês (Taiwan)](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x40a)
+[Chinês (Simplificado)](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x804) | [Chinês (Tradicional)](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=847722&clcid=0x40a)
 
 ### <a name="enhancements"></a>Aprimoramentos 
 
@@ -836,7 +836,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 ## <a name="downloadssdtmediadownloadpng-ssms-1653httpgomicrosoftcomfwlinklinkid840946"></a>![baixar](../ssdt/media/download.png) [SSMS 16.5.3](http://go.microsoft.com/fwlink/?LinkID=840946)
 Disponibilidade geral | Número de build: 13.0.16106.4
 
-[Chinês (República Popular da China)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x804) | [Chinês (Taiwan)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40a)
+[Chinês (Simplificado)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x804) | [Chinês (Tradicional)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=840946&clcid=0x40a)
 
 Os seguintes problemas foram corrigidos nesta versão:
 
@@ -879,7 +879,7 @@ Disponibilidade geral | Número de build: 13.0.16100.1
 Disponibilidade geral | Número de build: 13.0.16000.28
 
 
-[Chinês (República Popular da China)](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x804) | [Chinês (Taiwan)](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x40a)
+[Chinês (Simplificado)](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x804) | [Chinês (Tradicional)](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=832812&clcid=0x40a)
 
 * Corrigido um problema em que uma falha pode ocorrer quando um banco de dados com o nome da tabela que contém ";:" foi clicado.
 * Corrigido um problema em que as alterações feitas na página de modelo na janela Propriedades do Banco de Dados Tabulares AS utilizariam scripts da definição original. 
@@ -905,7 +905,7 @@ Disponibilidade geral | Número de build: 13.0.16000.28
 ## <a name="downloadssdtmediadownloadpng-ssms-1641-september-2016httpgomicrosoftcomfwlinklinkid828615"></a>![baixar](../ssdt/media/download.png) [SSMS 16.4.1 (setembro de 2016)](http://go.microsoft.com/fwlink/?LinkID=828615)
 Disponibilidade geral | Número de versão: 13.0.15900.1
 
-[Chinês (República Popular da China)](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x804) | [Chinês (Taiwan)](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x40a)
+[Chinês (Simplificado)](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x804) | [Chinês (Tradicional)](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=828615&clcid=0x40a)
 
 *  Foi corrigido um problema no qual ocorria falha durante a tentativa de ALTERAR/Modificar um procedimento armazenado:  
 [Item nº 3103831 do Microsoft Connect](https://connect.microsoft.com/SQLServer/feedback/details/3103831)
@@ -970,7 +970,7 @@ Disponibilidade geral | Número de versão: 13.0.15900.1
 Disponibilidade geral | Número de versão: 13.0.15700.28
 
 
-[Chinês (República Popular da China)](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x804) | [Chinês (Taiwan)](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x40a)
+[Chinês (Simplificado)](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x804) | [Chinês (Tradicional)](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=824938&clcid=0x40a)
 
 * Versões mensais do SSMS agora são sinalizadas numericamente.
 
@@ -1027,7 +1027,7 @@ Disponibilidade geral | Número de versão: 13.0.15700.28
 ## <a name="downloadssdtmediadownloadpng-ssms-july-2016-hotfix-updatehttpgomicrosoftcomfwlinklinkid822301"></a>![baixar](../ssdt/media/download.png) [atualização de hotfix de julho de 2016 do SSMS](http://go.microsoft.com/fwlink/?LinkID=822301)
 Disponibilidade geral | Número de versão: 13.0.15600.2
 
-[Chinês (República Popular da China)](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x804) | [Chinês (Taiwan)](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x40a)
+[Chinês (Simplificado)](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x804) | [Chinês (Tradicional)](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=822301&clcid=0x40a)
 
 * **Correção de bug no SSMS para habilitar os itens de menu de atalho ausentes**.  
 *Solicitações vinculadas de bugs dos clientes:*  
@@ -1097,7 +1097,7 @@ Disponibilidade geral | Número de versão: 13.0.15500.91
 ## <a name="downloadssdtmediadownloadpng-ssms-june-2016httpgomicrosoftcomfwlinklinkid799832"></a>![baixar](../ssdt/media/download.png) [SSMS de junho de 2016](http://go.microsoft.com/fwlink/?LinkID=799832)
 Disponibilidade geral | Número de versão: 13.0.15000.23
 
-[Chinês (República Popular da China)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x804) | [Chinês (Taiwan)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40a)
+[Chinês (Simplificado)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x804) | [Chinês (Tradicional)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=799832&clcid=0x40a)
 
 * O SSMS tem disponibilidade geral a partir da versão de junho de 2016.
 

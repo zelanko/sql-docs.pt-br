@@ -44,12 +44,12 @@ caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 006dde8f0c41ffe266c34ec5cbbf112473a49b4b
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: f77719ef5ea1dafa149a00a73ec470162b769f2d
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087188"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "42776176"
 ---
 # <a name="database-project-settings"></a>Configurações de projeto de banco de dados
 Você usa as configurações de projeto de banco de dados para controlar aspectos do seu banco de dados, depuração e configurações de compilação. Essas configurações caem nas seguintes categorias.  
@@ -108,7 +108,7 @@ As configurações da tabela a seguir aplicam-se a todas as configurações dest
 A Verificação Estendida Transact-SQL é um recurso do sistema de projetos de banco de dados que permite aos desenvolvedores enviar o projeto de banco de dados ao Serviço do Compilador Transact-SQL durante a compilação a fim de validar o código em relação ao analisador e interpretador do Mecanismo do SQL Server.  
   
 ### <a name="transact-sql-compiler-service"></a>Serviço do Compilador Transact-SQL  
-O Serviço do Compilador Transact-SQL é um componente baseado no Mecanismo de Banco de Dados do Microsoft SQL Server 2012. Esse serviço pode validar a sintaxe e a semântica das instruções DDL com a mesma fidelidade que um Mecanismo de Banco de Dados do Microsoft SQL Server 2012. E significa que o Serviço do Compilador não tem suporte para a sintaxe ou recursos que foram substituídos no Microsoft SQL Server 2012. Para obter mais informações sobre recursos substituídos, consulte [Funcionalidade do Mecanismo de Banco de Dados descontinuada no SQL Server 2012](http://msdn.microsoft.com/en-us/library/ms144262%28v=sql.110%29.aspx).  
+O Serviço do Compilador Transact-SQL é um componente baseado no Mecanismo de Banco de Dados do Microsoft SQL Server 2012. Esse serviço pode validar a sintaxe e a semântica das instruções DDL com a mesma fidelidade que um Mecanismo de Banco de Dados do Microsoft SQL Server 2012. E significa que o Serviço do Compilador não tem suporte para a sintaxe ou recursos que foram substituídos no Microsoft SQL Server 2012. Para obter mais informações sobre recursos preteridos, veja [Funcionalidade do Mecanismo de Banco de Dados Descontinuada no SQL Server 2012](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md).  
   
 Para validar o projeto de banco de dados, o Serviço do Compilador cria um banco de dados parcialmente independente e simula a execução das instruções DDL em relação àquele banco de dados. Para obter mais informações, consulte [Bancos de dados parcialmente independentes](http://msdn.microsoft.com/en-us/library/ff929071%28v=SQL.110%29.aspx).  
   
