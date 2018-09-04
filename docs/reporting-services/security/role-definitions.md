@@ -1,14 +1,10 @@
 ---
 title: Definições de função | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: security
-ms.reviewer: ''
+ms.technology: security
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - roles [Reporting Services], creating
@@ -16,16 +12,14 @@ helpviewer_keywords:
 - security [Reporting Services], role definitions
 - role-based security [Reporting Services], role definitions
 ms.assetid: d1b8dbf0-4462-402e-92dd-0e4835002b6e
-caps.latest.revision: 44
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: da412b8111447506dce76b2c5d88569faec1b26a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 006d109559a8232664c4f83f651048a3077212f1
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33030343"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43279856"
 ---
 # <a name="role-definitions"></a>Definições de função
   No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], uma *definição de**função* é uma coleção nomeada de tarefas que definem as operações disponíveis em um servidor de relatório. As definições de função fornecem as regras usadas pelo servidor de relatório para impor a segurança. Quando um usuário tenta executar uma tarefa, como publicar um relatório, o servidor de relatório verifica a atribuição de função de relatório do usuário para determinar se a tarefa está incluída em sua definição de função. Se a tarefa estiver incluída na definição de função, a solicitação será enviada.  
@@ -39,7 +33,7 @@ ms.locfileid: "33030343"
 ## <a name="predefined-roles"></a>Funções predefinidas  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inclui funções predefinidas que correspondem a níveis diferentes de interação com o usuário. A seguinte lista contém as funções predefinidas que você pode usar:  
   
--   Gerenciador de Conteúdo, Editor, Navegador, Construtor de Relatórios e Meus Relatórios são definições de função de nível de item que você pode usar ao criar atribuições de função para acessar conteúdo de servidor de relatório.  
+-   Gerenciador de Conteúdo, Publicador, Navegador, Construtor de Relatórios e Meus Relatórios são definições de função de nível de item que você pode usar ao criar atribuições de função para acessar conteúdo de servidor de relatório.  
   
 -   Administrador de Sistema e Usuário do Sistema são definições de função em nível de sistema que você pode usar para autorizar o acesso a operações de site.  
   

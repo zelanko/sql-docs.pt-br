@@ -19,16 +19,16 @@ caps.latest.revision: 63
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9a9f8f115dd24f27f1c140677775ba9e29dd7468
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 3fbeaf60a67386aff9a286b80dd4f1a60b98b7a5
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982888"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348477"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Criar um backup completo de banco de dados (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
- > Para o SQL Server 2014, acesse [Criar um backup completo de banco de dados (SQL Server)](https://msdn.microsoft.com/library/ms187510(SQL.120).aspx).
+ > Para o SQL Server 2014, acesse [Criar um backup completo de banco de dados (SQL Server)](create-a-full-database-backup-sql-server.md).
 
   Este tópico descreve como criar um backup de banco de dados completo no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../includes/tsql-md.md)]ou PowerShell.  
   

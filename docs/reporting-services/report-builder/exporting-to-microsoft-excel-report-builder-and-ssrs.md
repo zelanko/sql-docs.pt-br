@@ -1,26 +1,20 @@
 ---
 title: Exportando para o Microsoft Excel (Construtor de Relatórios e SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 01/09/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-builder
-ms.reviewer: ''
+ms.technology: report-builder
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
-caps.latest.revision: 28
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 2985d8337cfbbb33b867de3f84f307bea4a6a67b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ad451fd016345ec541782f4ac4aed85dd3974799
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022383"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43275651"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Exporting to Microsoft Excel (Report Builder and SSRS)
   A extensão da renderização do Excel [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] gera um relatório paginado do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para o formato [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] (.xslx). Com a extensão de renderização do Excel, a largura de colunas em Excel reflete com maior precisão a largura de colunas em relatórios.  
@@ -178,7 +172,7 @@ ms.locfileid: "33022383"
 |Máximo de colunas por planilha|256|16.384|  
 |Máximo de linhas por planilha|65.536|1.048.576|  
 |Número de cores permitido em uma planilha|56 (paleta)<br /><br /> Se mais de 56 cores forem utilizadas no relatório, a extensão de renderização corresponderá à cor necessária de uma das 56 cores já disponíveis na paleta personalizada.|Aproximadamente 16 milhões (cor de 24 bits)|  
-|Arquivos compactados em ZIP|Nenhum|compactação em ZIP|  
+|Arquivos compactados em ZIP|None|compactação em ZIP|  
 |Família de fontes padrão|Arial|Calibri|  
 |Tamanho da fonte padrão|10pt|11pt|  
 |Altura de linha padrão|12,75 pt|15 pt|  
@@ -215,7 +209,7 @@ ms.locfileid: "33022383"
 |-------------------------------|-----------------|  
 |Criado|Data e hora da execução do relatório como um valor ISO de data/hora.|  
 |Autor|Autor do Relatório|  
-|Description|Descrição do Relatório|  
+|Descrição|Descrição do Relatório|  
 |LastSaved|Data e hora da execução do relatório como um valor ISO de data/hora.|  
   
 ##  <a name="PageHeadersFooters"></a> Cabeçalhos e rodapés de página  

@@ -1,24 +1,19 @@
 ---
 title: Criando uma identidade visual para o portal da Web | Microsoft Docs
-ms.custom: ''
 ms.date: 11/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: reporting-services
-ms.reviewer: ''
+ms.technology: reporting-services
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 6f4893d2044676078d102cbd776de03815b8354e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 94c54a646ca954f8b55bf359a0b86b0850d19e02
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37968840"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43271748"
 ---
 # <a name="branding-the-web-portal"></a>Identidade visual do portal da Web
 

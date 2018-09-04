@@ -1,14 +1,10 @@
 ---
 title: Monitorar assinaturas do Reporting Services | Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: subscriptions
-ms.reviewer: ''
+ms.technology: subscriptions
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], inactive
@@ -17,16 +13,14 @@ helpviewer_keywords:
 - status information [Reporting Services]
 - inactive subscriptions [Reporting Services]
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
-caps.latest.revision: 36
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 1b81bf16cc4f9352da7b0a4c37cac91dd73f5eff
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a8f95bd3da2aefb0fc98388231641d94b3442311
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33035733"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43282628"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Monitorar assinaturas do Reporting Services
   Você pode monitorar assinaturas [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] da interface do usuário, do Windows PowerShell ou arquivos de log. As opções disponíveis para monitoramento dependem de qual modo de servidor de relatório está em execução.  
@@ -50,7 +44,7 @@ ms.locfileid: "33035733"
   
  A tabela a seguir descreve os possíveis valores para a coluna **Status** .  
   
-|Status|Description|  
+|Status|Descrição|  
 |------------|-----------------|  
 |Nova assinatura|Aparece quando você cria a assinatura.|  
 |Inativa|Aparece quando uma assinatura não pode ser processada. Para obter mais informações, consulte "Gerenciando assinaturas inativas" posteriormente neste tópico.|  

@@ -1,29 +1,23 @@
 ---
 title: Arquivo de configuração RSReportDesigner | Microsoft Docs
-ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], configuration file
 - RSReportDesigner configuration file
 ms.assetid: fdcc9c58-3bad-45b3-ba8e-c7816d64f14c
-caps.latest.revision: 47
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 45a1ca0907f5572f8409503fcb7227bcc8a08a62
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e73cebccd25798f067bc807d01c3c110b8084e4d
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33026773"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43280993"
 ---
 # <a name="rsreportdesigner-configuration-file"></a>arquivo de configuração RSReportDesigner
   O arquivo RSReportDesigner.config armazena configurações sobre as extensões de renderização e processamento de dados disponíveis no Designer de Relatórios. Informações de extensão de processamento de dados são armazenadas no elemento **Data** . Informações de extensão de renderização são armazenadas no elemento **Render** . O elemento **Designer** enumera os construtores de consulta usados no Designer de Relatórios.  
@@ -59,7 +53,7 @@ ms.locfileid: "33026773"
   
 ## <a name="configuration-settings"></a>Definições de configuração  
   
-|Configuração|Description|  
+|Configuração|Descrição|  
 |-------------|-----------------|  
 |**SecureConnectionLevel**|Especifica o grau de segurança da conexão de serviço Web. Os valores válidos variam de 0 a 3, sendo que 0 é o menos seguro. Para obter mais informações, consulte [Usando métodos seguros do serviço Web](../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md).|  
 |**InstanceName**|Um identificador para o servidor de visualização prévia. Não modifique esse valor.|  

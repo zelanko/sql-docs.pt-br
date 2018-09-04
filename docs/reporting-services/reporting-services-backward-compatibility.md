@@ -1,31 +1,25 @@
 ---
 title: Compatibilidade com versões anteriores | Reporting Services | Microsoft Docs
-ms.custom: ''
 ms.date: 09/12/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: reporting-services
-ms.reviewer: ''
+ms.technology: reporting-services
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, backward compatibility
 - SSRS, backward compatibility
 - SQL Server Reporting Services, backward compatibility
 - backward compatibility [Reporting Services]
 ms.assetid: 675b0e0e-cfee-4790-9675-80fc3ea6d30f
-caps.latest.revision: 44
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 447bf776d24143cb14423987234d8f898de5a193
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 9bd38164b3c1702f92534dc678cb8156eb6adf00
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40409452"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43269366"
 ---
 #  <a name="reporting-services-backward-compatibility"></a>Compatibilidade com versões anteriores do Reporting Services
 Saiba mais sobre as alterações no comportamento do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Isso abrange recursos que não estão mais disponíveis ou que estão agendados para serem removidos em uma versão posterior.

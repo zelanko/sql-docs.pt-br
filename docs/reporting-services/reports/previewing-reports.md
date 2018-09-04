@@ -1,14 +1,10 @@
 ---
 title: Visualizando relatórios | Microsoft Docs
-ms.custom: ''
 ms.date: 05/05/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: reports
-ms.reviewer: ''
+ms.technology: reports
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], previewing reports
@@ -16,16 +12,14 @@ helpviewer_keywords:
 - printing previews
 - test servers [Reporting Services]
 ms.assetid: 85117f6c-828e-45c9-810f-e700d9bfba67
-caps.latest.revision: 44
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 2cdd46a01c2151a828d58f851e3a4bdcb02e7483
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2b8f7e37dac17f6d5ab59c12e59bc6967c08a565
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028723"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43274618"
 ---
 # <a name="previewing-reports"></a>Visualizando relatórios
   Ao criar um relatório do     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , convém vê-lo antes da publicação em um ambiente de produção. Há várias formas de se fazer isso: você pode alternar para o modo de Visualização no Designer de Relatórios, usar a janela de visualização do Designer de Relatórios e publicar o relatório em um servidor de relatórios em um ambiente de teste.  

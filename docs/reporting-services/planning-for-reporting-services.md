@@ -1,26 +1,20 @@
 ---
 title: Planejando para o Reporting Services | Microsoft Docs
-ms.custom: ''
 ms.date: 09/12/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: reporting-services
-ms.reviewer: ''
+ms.technology: reporting-services
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4dde9d4d-e4fa-4bbe-91b0-0bcb0dc7dde7
-caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 63f6cce007ec4586a31e9acd7b170c7c826e708f
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 948c847f28c9984a392807cefbb554496d786e5a
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38985148"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43276456"
 ---
 # <a name="planning-for-reporting-services"></a>Planejamento para o Reporting Services
   Use estes tópicos para entender melhor o [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Aprenda a instalar e configurar o ambiente do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para melhor atender às suas necessidades.  

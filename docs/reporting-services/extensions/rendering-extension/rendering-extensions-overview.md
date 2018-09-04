@@ -1,14 +1,10 @@
 ---
 title: Visão geral das extensões de renderização | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: extensions
-ms.reviewer: ''
+ms.technology: extensions
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -16,16 +12,14 @@ helpviewer_keywords:
 - formats [Reporting Services], rendering extensions
 - rendering extensions [Reporting Services], about extensions
 ms.assetid: 909356a0-4709-43e5-b597-33bd9bb22882
-caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: e8ba9ec6f9e6e629a7f6019c362824363e546583
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1c7a7f9791681621d5e1f6666cd8457a5a6441d0
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33016403"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43270677"
 ---
 # <a name="rendering-extensions-overview"></a>Visão geral das extensões de renderização
   Uma extensão de renderização é um componente ou um módulo de um servidor de relatório que transforma dados de relatório e informações de layout para um formato específico do dispositivo. O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] inclui sete extensões de renderização: HTML, Excel, Word, CSV ou Texto, XML, Imagem e PDF. Você pode criar extensões de renderização adicionais para gerar relatórios em outros formatos.  
@@ -35,7 +29,7 @@ ms.locfileid: "33016403"
   
  A tabela a seguir descreve as extensões de renderização incluídas no [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
-|Nome da Extensão|Description|  
+|Nome da Extensão|Descrição|  
 |--------------------|-----------------|  
 |**XML**|Renderiza um relatório em XML. O relatório é aberto em um navegador. Transformações adicionais aplicadas a esta saída XML podem ser uma forma econômica de evitar o desenvolvimento de sua própria extensão de renderização.|  
 |**CSV**|Renderiza um relatório em um formato delimitado por vírgula. O relatório é aberto em uma ferramenta de visualização associada a formatos de arquivo CSV.|  

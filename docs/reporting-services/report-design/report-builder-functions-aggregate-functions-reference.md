@@ -1,26 +1,20 @@
 ---
 title: Referência de funções de agregação (Construtor de Relatórios e SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 931cd60d3a2e1691dcb6f9d2c58976ec242d2d68
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e396de825687166c9d110c375e3c77e392e1fd89
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028333"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43275585"
 ---
 # <a name="report-builder-functions---aggregate-functions-reference"></a>Funções do Construtor de Relatórios – Referência de funções de agregação
   Para incluir valores agregados no relatório, é possível usar funções de agregação internas em expressões. A função de agregação padrão para campos numéricos é SUM. É possível editar a expressão e usar uma função de agregação interna diferente ou especificar outro escopo. O escopo identifica qual conjunto de dados deve ser usado no cálculo.  
@@ -180,7 +174,7 @@ ms.locfileid: "33028333"
 ##  <a name="TestingforScope"></a> Testando para escopo  
  A função interna a seguir testa o contexto atual de um item de relatório para verificar se ele é membro de um escopo específico.  
   
-|Função|Description|  
+|Função|Descrição|  
 |--------------|-----------------|  
 |[InScope](../../reporting-services/report-design/report-builder-functions-inscope-function.md)|Indica se a instância atual de um item está dentro do escopo especificado.|  
   
@@ -189,7 +183,7 @@ ms.locfileid: "33028333"
 ##  <a name="RetrievingRecursiveLevel"></a> Recuperando nível recursivo  
  A função interna a seguir recupera o nível atual quando uma hierarquia recursiva é processada. Use o resultado dessa função com a propriedade **Padding** em uma caixa de texto para controlar o nível de recuo de uma hierarquia visual para um grupo recursivo. Para obter mais informações, consulte [Criar grupos de hierarquias recursivas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
   
-|Função|Description|  
+|Função|Descrição|  
 |--------------|-----------------|  
 |[Nível](../../reporting-services/report-design/report-builder-functions-level-function.md)|Retorna o nível atual de profundidade em uma hierarquia recursiva.|  
   

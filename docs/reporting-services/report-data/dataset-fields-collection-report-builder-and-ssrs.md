@@ -1,26 +1,20 @@
 ---
 title: Coleção de campos de conjuntos de dados (Construtor de Relatórios e SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-data
-ms.reviewer: ''
+ms.technology: report-data
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
-caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: d7b5f9f4e9dba9018455eec10d552cdb9afc54e5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d0986f432f2d94bcc81bdf2112ebe19c589767ae
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33023003"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43273598"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>Coleção de campos de conjuntos de dados (Construtor de Relatórios e SSRS)
   Os campos de um conjunto de dados representam os dados de uma conexão de dados. Um campo pode representar dados numéricos ou não numéricos. Os exemplos incluem valores de vendas, vendas totais, nomes de clientes, identificadores de banco de dados, URLs, imagens, dados espaciais e endereços de email. Na superfície de design, os campos aparecem como expressões em itens de relatório, como caixas de texto, tabelas e gráficos.  
@@ -96,7 +90,7 @@ ms.locfileid: "33023003"
   
      Por exemplo, os tipos de dados que o processador de relatório usa para os tipos de data e hora novos introduzidos no [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] são mostrados na tabela a seguir:  
   
-    |Tipo de dados SQL|Tipo de dados CLR|Description|  
+    |Tipo de dados SQL|Tipo de dados CLR|Descrição|  
     |-------------------|-------------------|-----------------|  
     |**Date**|**DateTime**|Somente data|  
     |**Time**|**TimeSpan**|Somente hora|  

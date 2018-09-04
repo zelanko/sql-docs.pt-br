@@ -1,30 +1,24 @@
 ---
 title: Funções predefinidas | Microsoft Docs
-ms.custom: ''
 ms.date: 10/22/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: security
-ms.reviewer: ''
+ms.technology: security
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - security [Reporting Services], defaults
 - default security
 - role-based security [Reporting Services], defaults
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
-caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 59deac2a0b2e20d94fad6dc46f6d70a76ee884ef
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 480578f2454ed6410038800194336fc3cb831b65
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028553"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43282428"
 ---
 # <a name="role-definitions---predefined-roles"></a>Definições de função – funções predefinidas
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é instalado com funções predefinidas que você pode usar para conceder acesso a operações de servidor de relatório. Cada função predefinida descreve uma coleção de tarefas relacionadas. Você pode atribuir grupos e contas do usuário a funções predefinidas para fornecer acesso imediato a operações de servidor de relatório.  
@@ -44,7 +38,7 @@ ms.locfileid: "33028553"
   
  A tabela a seguir descreve as funções predefinidas, o escopo e como esses itens são usados.  
   
-|Função predefinida|Escopo|Description|  
+|Função predefinida|Escopo|Descrição|  
 |---------------------|-----------|-----------------|  
 |[Função Gerenciador de Conteúdo](#bkmk_content)|Item|Inclui todas as tarefas de nível de item. Os usuários atribuídos a essa função têm permissão total para gerenciar o conteúdo do servidor de relatório, podendo inclusive conceder permissões para outros usuários e definir a estrutura de pastas para armazenar relatórios e outros itens.|  
 |[Função Publicador](#bkmk_publisher)|Item|Os usuários atribuídos a essa função podem adicionar itens a um servidor de relatório, podendo inclusive criar e gerenciar pastas que contêm esses itens.|  
@@ -62,7 +56,7 @@ ms.locfileid: "33028553"
 ### <a name="content-manager-tasks"></a>Tarefas do Gerenciador de Conteúdo  
  A tabela a seguir relaciona as tarefas incluídas na função **Gerenciador de Conteúdo** .  
   
-|Tarefa|Description|  
+|Tarefa|Descrição|  
 |----------|-----------------|  
 |Relatórios de consumo|Lê definições de relatório.|  
 |Criar relatórios vinculados|Criar relatórios vinculados com base em um relatório não vinculado.|  
@@ -99,7 +93,7 @@ ms.locfileid: "33028553"
 ### <a name="publisher-tasks"></a>Tarefas da função Publisher  
  A tabela a seguir lista as tarefas que são incluídas na função **Publicador** .  
   
-|Tarefa|Description|  
+|Tarefa|Descrição|  
 |----------|-----------------|  
 |Criar relatórios vinculados|Criar relatórios vinculados e publicá-los em uma pasta do servidor de relatório.|  
 |Gerenciar fontes de dados|Criar e excluir itens de fontes de dados compartilhadas, exibir e modificar propriedades de fontes de dados e conteúdos.|  
@@ -121,7 +115,7 @@ ms.locfileid: "33028553"
 ### <a name="browser-tasks"></a>Tarefas de Navegador  
  A tabela a seguir descreve as tarefas incluídas na definição de função **Navegador** .  
   
-|Tarefa|Description|  
+|Tarefa|Descrição|  
 |----------|-----------------|  
 |Exibir relatórios|Executar um relatório e exibir as propriedades do relatório.|  
 |Exibir recursos|Exibir recursos e propriedades de recurso.|  
@@ -140,7 +134,7 @@ ms.locfileid: "33028553"
 ### <a name="report-builder-tasks"></a>Tarefas do Construtor de Relatórios  
  A tabela a seguir descreve as tarefas que estão incluídas na definição da função **Construtor de Relatórios** .  
   
-|Tarefa|Description|  
+|Tarefa|Descrição|  
 |----------|-----------------|  
 |Relatórios de consumo|Lê definições de relatório.|  
 |Exibir relatórios|Executar um relatório e exibir as propriedades do relatório.|  
@@ -162,7 +156,7 @@ ms.locfileid: "33028553"
 ### <a name="my-reports-tasks"></a>Tarefas de Meus Relatórios  
  A tabela a seguir lista as tarefas que são incluídas na função **Meus Relatórios** .  
   
-|Tarefa|Description|  
+|Tarefa|Descrição|  
 |----------|-----------------|  
 |Criar relatórios vinculados|Criar relatórios vinculados que são baseados em relatórios armazenados na pasta Meus Relatórios do usuário.|  
 |Gerenciar pastas|Criar, exibir e excluir pastas, e exibir e modificar propriedades de pasta.|  
@@ -190,7 +184,7 @@ ms.locfileid: "33028553"
 ### <a name="system-administrator-tasks"></a>Tarefas de Administrador do Sistema  
  A tabela a seguir lista as tarefas que são incluídas na função **Administrador do Sistema** .  
   
-|Tarefa|Description|  
+|Tarefa|Descrição|  
 |----------|-----------------|  
 |Executar definições de relatório|Iniciar a execução da definição de relatório sem publicá-la em um servidor de relatório.|  
 |Gerenciar trabalhos|Exibir e cancelar trabalhos que estão em execução. Para obter mais informações, consulte [Gerenciar um processo em execução](../../reporting-services/subscriptions/manage-a-running-process.md).|  
@@ -206,7 +200,7 @@ ms.locfileid: "33028553"
   
 ### <a name="system-user-tasks"></a>Tarefas Usuário do Sistema  
   
-|Tarefa|Description|  
+|Tarefa|Descrição|  
 |----------|-----------------|  
 |Executar definições de relatório|Execute um relatório sem publicá-lo em um servidor de relatório.|  
 |Exibir propriedades do servidor de relatório|Exiba as propriedades aplicáveis ao servidor de relatório, como o nome do aplicativo, se a opção Meus Relatórios está habilitada e os padrões de histórico do relatório.<br /><br /> Se você remover essa tarefa da função **Usuário do Sistema** , a página Configurações de Site não estará disponível. Além disso, o título do aplicativo não é exibido na parte superior de cada página. Por padrão, o título para Gerenciador de Relatórios é "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]."|  

@@ -1,26 +1,20 @@
 ---
 title: Funcionalidade interativa – extensões de renderização de relatório diferentes | Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-builder
-ms.reviewer: ''
+ms.technology: report-builder
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f0bd1c4c-e8b5-467f-b5a1-541f19c7e3e2
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: ba78a5b3c2d5058723eef41a2c6ca1b98c13160b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 837086489e52f4f34513aecd68403ce1c78047f1
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33020953"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43272448"
 ---
 # <a name="interactive-functionality---different-report-rendering-extensions"></a>Funcionalidade interativa – extensões de renderização de relatório diferentes
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece recursos para interagir com um relatório paginado no tempo de execução. Nem todos os formatos de renderização de relatório dão suporte a uma gama completa de recursos interativos. Use a tabela a seguir para entender como cada recurso interativo funciona em formatos específicos.  

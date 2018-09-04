@@ -1,14 +1,10 @@
 ---
 title: Método BackupEncryptionKey (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: wmi-provider-library-reference
-ms.reviewer: ''
+ms.technology: wmi-provider-library-reference
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - BackupEncryptionKey Method (WMI MSReportServer_ConfigurationSetting Class)
@@ -18,16 +14,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - BackupEncryptionKey method
 ms.assetid: da1d5dae-2517-448e-96fb-5379c93222ea
-caps.latest.revision: 21
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 9937fc97ac8fdedc7c6a1f18626e738565a660b7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eb8ab2dbd86aef1b3b71d447a5b1ef21c2fd9894
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33029863"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43267267"
 ---
 # <a name="configurationsetting-method---backupencryptionkey"></a>Método de ConfigurationSetting – BackupEncryptionKey
   Efetua backup da chave de criptografia da instância do servidor de relatório especificada. A chave de criptografia é armazenada criptografada com uma senha.  

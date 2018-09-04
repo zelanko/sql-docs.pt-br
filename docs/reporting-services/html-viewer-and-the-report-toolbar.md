@@ -3,27 +3,21 @@ title: Visualizador de HTML e a barra de ferramentas de relatório | Microsoft D
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: reporting-services
-ms.reviewer: ''
+ms.technology: reporting-services
 ms.suite: pro-bi
-ms.custom: ''
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - HTML Viewer [Reporting Services]
 - report toolbar [Reporting Services]
 ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
-caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 00353fa42e692ef0a4e25d279a0ea5def83a067c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f53e3459a1a52884995575dd0e19c6b237875a76
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33017893"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43269473"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>Visualizador de HTML e a barra de ferramentas de relatório
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornece um Visualizador de HTML que é usado para exibir relatórios sob demanda à medida que são solicitados no servidor de relatório. O Visualizador de HTML fornece uma estrutura para exibir relatórios em HTML. Ele inclui uma barra de ferramentas de relatório, uma seção de parâmetros, uma seção de credenciais e um mapa do documento. A barra de ferramentas de relatório no Visualizador de HTML inclui recursos que você pode usar para trabalhar com seu relatório, incluindo opções de exportação para que seja possível exibir seu relatório em formatos diferentes de HTML. A seção de parâmetros e o mapa do documento aparecem somente quando você abre relatórios configurados para usar parâmetros e um controle do mapa do documento.  
@@ -59,7 +53,7 @@ ms.locfileid: "33017893"
   
  Os formatos de exportação a seguir são incluídos em uma instalação de servidor de relatório padrão. A lista de formatos de exportação disponíveis pode conter itens diferentes dos listados aqui.  
   
-|Formato de exportação|Description|  
+|Formato de exportação|Descrição|  
 |-------------------|-----------------|  
 |XML|Exiba um relatório em sintaxe XML. Relatórios exibidos em XML são abertos em uma nova janela do navegador.|  
 |CSV|Exiba um relatório em um formato delimitado por vírgula. O relatório é aberto em um aplicativo associado ao tipo de arquivo CSV.|  

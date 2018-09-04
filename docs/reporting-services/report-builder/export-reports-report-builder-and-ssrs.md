@@ -1,28 +1,22 @@
 ---
 title: Exportar relatórios (Construtor de Relatórios e SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-builder
-ms.reviewer: ''
+ms.technology: report-builder
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10437"
 ms.assetid: a2bab8c1-505d-4da3-b1db-ea0ae13b2336
-caps.latest.revision: 23
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 9c4b6d1ac7e16cc7260667ffc786b68a5f2d9a18
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 035452208fbd27c3669239f9177136d71051d854
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022403"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43268125"
 ---
 # <a name="export-reports-report-builder-and-ssrs"></a>Exportar relatórios (Construtor de Relatórios e SSRS)
 
@@ -119,7 +113,7 @@ ms.locfileid: "33022403"
 ##  <a name="ExportFormats"></a> Formatos para os quais você pode exportar enquanto exibe relatórios  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece extensões de renderização que renderizam relatórios em formatos diferentes. Você deve otimizar o design de relatório para seu formato de arquivo escolhido.  A tabela a seguir lista os formatos para osquais você pode exportar da interface do usuário.  Há formatos adicionais que podem ser usados com assinaturas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou caso você esteja exportando do acesso à URL.  Consulte a seção [Outros modos de exportar relatórios](#OtherWaysExportingReports)neste tópico.  
   
-|Formato|Tipos de extensão de renderização|Description|  
+|Formato|Tipos de extensão de renderização|Descrição|  
 |------------|------------------------------|-----------------|  
 |Arquivo do Acrobat (PDF)|Quebra de página não flexível|A extensão de renderização PDF renderiza um relatório para os arquivos que podem ser abertos no Adobe Acrobat e em outros visualizadores em PDF de terceiros que dão suporte ao PDF 1.3. Embora o PDF 1.3 seja compatível com o Adobe Acrobat 4.0 e posterior, o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dá suporte ao para o Adobe Acrobat 6 ou posterior. A extensão de renderização não requer que o software Adobe renderize o relatório. Porém, os visualizadores de PDF, como o Adobe Acrobat, são necessários para exibir ou imprimir um relatório em formato PDF.<br /><br /> Para obter mais informações, consulte [Exportando para um arquivo PDF](../../reporting-services/report-builder/exporting-to-a-pdf-file-report-builder-and-ssrs.md).|  
 |Atom|data|A extensão de renderização do Atom gera feeds de dados compatíveis com o Atom a partir de relatórios. Os feeds de dados são legíveis e intercambiáveis com aplicativos como o Power Pivot ou o Power BI, que pode consumir feeds de dados em conformidade com Atom.<br /><br /> A saída é documento de serviço Atom que lista os feeds de dados disponíveis a partir de um relatório. É criado pelo menos um feed de dados para cada região no relatório. Dependendo do tipo de região de dados e dos dados que a região de dados exibe, vários feeds de dados poderão ser gerados.<br /><br /> Para obter mais informações, consulte [Gerando feeds de dados com base em relatórios](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).|  

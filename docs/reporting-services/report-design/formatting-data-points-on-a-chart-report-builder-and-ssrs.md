@@ -1,29 +1,23 @@
 ---
 title: Formatar pontos de dados em um gráfico (Construtor de Relatórios e SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10248"
 - sql13.rtp.rptdesigner.serieslabelproperties.general.f1
 ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: f99265199740d65002f061c9f7c8ce612bf312d5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b2d7d53489a89c5cb7f4790f437e5e61e5892048
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028143"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43269666"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>Formatando pontos de dados em um gráfico (Construtor de Relatórios e SSRS)
 Em um relatório paginado do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , um ponto de dados é a menor entidade individual no gráfico. Em gráficos sem-forma, os pontos de dados são representados de acordo com seu tipo de gráfico. Por exemplo, uma série de linhas consiste em um ou mais pontos de dados conectados. Em gráficos com forma, os pontos de dados são representados por fatias individuais ou segmentos acrescidos a todo o gráfico. Por exemplo, em um gráfico de pizza, cada pedaço é um ponto de dados. Para obter mais informações, consulte [Tipos de gráficos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md).  
@@ -63,19 +57,19 @@ Em um relatório paginado do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversi
 ## <a name="adding-keywords-for-data-point-labels-tooltips-and-legend-text"></a>Adicionando palavras-chave a rótulos de ponto de dados, dicas de ferramenta e texto de legenda  
  É possível usar palavras-chave específicas do gráfico, diferenciando maiúsculas de minúsculas, para representar um item existente no gráfico. Essas palavras-chave só são aplicáveis a dicas de ferramenta, texto de legenda personalizado e propriedades de rótulo de ponto de dados. Em muitos casos, uma palavra-chave de gráfico tem uma expressão simples equivalente, mas a palavra-chave é mais rápida e mais fácil de digitar. A seguir, uma lista de palavras-chave de gráfico.  
   
-|Palavra-chave de gráfico|Description|Aplicável ao tipo de gráfico|Exemplo de uma expressão simples equivalente|  
+|Palavra-chave de gráfico|Descrição|Aplicável ao tipo de gráfico|Exemplo de uma expressão simples equivalente|  
 |-------------------|-----------------|------------------------------|------------------------------------------------|  
 |#VALY|Valor Y do ponto de dados.|Todos|`=Fields!MyDataField.Value`|  
-|#VALY2|Valor Y número 2 do ponto de dados.|Intervalo, bolha|Nenhum|  
-|#VALY3|Valor Y número 3 do ponto de dados.|Ações, velas|Nenhum|  
-|#VALY4|Valor Y número 4 do ponto de dados.|Ações, velas|Nenhum|  
-|#SERIESNAME|Nome da série.|Todos|Nenhum|  
-|#LABEL|Rótulo do ponto de dados.|Todos|Nenhum|  
+|#VALY2|Valor Y número 2 do ponto de dados.|Intervalo, bolha|None|  
+|#VALY3|Valor Y número 3 do ponto de dados.|Ações, velas|None|  
+|#VALY4|Valor Y número 4 do ponto de dados.|Ações, velas|None|  
+|#SERIESNAME|Nome da série.|Todos|None|  
+|#LABEL|Rótulo do ponto de dados.|Todos|None|  
 |#AXISLABEL|Rótulo do ponto de dados de eixo.|Forma|`=Fields!MyDataField.Value`|  
-|#INDEX|Índice do ponto de dados.|Todos|Nenhum|  
+|#INDEX|Índice do ponto de dados.|Todos|None|  
 |#PERCENT|Porcentagem do valor Y do ponto de dados.|Todos|`=FormatPercent(Fields!MyDataField.Value/Sum(Fields!MyDataField.Value, "MyDataSet"),2)`|  
 |#TOTAL|Total de todos os valores Y na série.|Todos|`=Sum(Fields!MyDataField.Value)`|  
-|#LEGENDTEXT|O texto correspondente ao texto do item de legenda.|Todos|Nenhum|  
+|#LEGENDTEXT|O texto correspondente ao texto do item de legenda.|Todos|None|  
 |#AVG|Média de todos os valores Y na série.|Todos|`=Avg(Fields!MyDataField.Value)`|  
 |#MIN|Mínimo de todos os valores Y na série.|Todos|`=Min(Fields!MyDataField.Value)`|  
 |#MAX|Máximo de todos os valores Y na série.|Todos|`=Max(Fields!MyDataField.Value)`|  

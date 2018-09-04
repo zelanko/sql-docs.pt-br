@@ -1,14 +1,10 @@
 ---
 title: Propriedade de ConfigurationSetting – WindowsServiceIdentityActual | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: wmi-provider-library-reference
-ms.reviewer: ''
+ms.technology: wmi-provider-library-reference
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - WindowsServiceIdentityActual
@@ -18,16 +14,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - WindowsServiceIdentityActual property
 ms.assetid: 08289240-098d-4ad1-b165-227699747ba4
-caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: e2836a87e4fa0f0e43b10ae24809216ab6c7ed61
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 060ed8629de6edfc7672a782ccee9b0dc27eac71
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33031313"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43271461"
 ---
 # <a name="configurationsetting-property---windowsserviceidentityactual"></a>Propriedade de ConfigurationSetting – WindowsServiceIdentityActual
   A identidade sob a qual o serviço do Windows do servidor de relatório está sendo executado. Somente leitura.  

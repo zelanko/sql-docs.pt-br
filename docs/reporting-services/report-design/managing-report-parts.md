@@ -1,26 +1,20 @@
 ---
 title: Gerenciando partes de relatório | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 4209c0fd93e8a0c9a2702971e114a4cbb7cfaadd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5ebfe30b11c7d4aea0d98557b2457577f1c8632d
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33024513"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43273718"
 ---
 # <a name="managing-report-parts"></a>Gerenciando partes de relatório
   Partes de relatório podem ser reutilizadas em relatórios paginados por vários usuários e em vários relatórios. Os usuários podem pesquisar partes de relatório no servidor e adicioná-las a um relatório.  Também podem ser informados de atualizações para a parte de relatório no servidor e republicar novas versões de uma parte de relatório. Essas ações de criação de relatório podem ser afetadas e controladas pelas permissões de segurança dos serviços de relatório.  Este tópico revisa as propriedades de parte de relatório e o comportamento depois que elas estão no servidor.  
@@ -54,10 +48,10 @@ ms.locfileid: "33024513"
   
  (*) indica que isso é novo para esta versão.  
   
-|Propriedade|Description|Parte de relatório<br /><br /> Critérios de pesquisa de galeria|  
+|Propriedade|Descrição|Parte de relatório<br /><br /> Critérios de pesquisa de galeria|  
 |--------------|-----------------|---------------------------------------------|  
 |Nome|Esse é um dos critérios pelos quais um usuário pode pesquisar na Galeria de Partes de Relatório.|Sim|  
-|Description|Você deve organizar os nomes de partes de relatório de uma maneira que facilite para os usuários a localização na galeria. Por exemplo, você pode pesquisar pela descrição iniciando com "Vendas>>" para procurar as partes de relatório que envolvem dados e apresentações relacionadas a vendas.|Sim|  
+|Descrição|Você deve organizar os nomes de partes de relatório de uma maneira que facilite para os usuários a localização na galeria. Por exemplo, você pode pesquisar pela descrição iniciando com "Vendas>>" para procurar as partes de relatório que envolvem dados e apresentações relacionadas a vendas.|Sim|  
 |CreatedBy|A ID do usuário que adicionou originalmente a parte de relatório ao banco de dados do servidor de relatório. O formato exato depende do método de autenticação. Por exemplo, alguns métodos de autenticação mostrarão o domínio\nome de usuário completo nos campos CreatedBy e ModifiedBy.|Sim|  
 |CreationDate|As data em que a parte de relatório foi criada originalmente.<br /><br /> Esse é um dos critérios pelos quais um usuário pode pesquisar na Galeria de Partes de Relatório.|Sim|  
 |ModifiedBy|ModifiedBy é a ID do usuário que modificou por último a parte do relatório.|Sim|  

@@ -1,23 +1,18 @@
 ---
 title: Criar um banco de dados de servidor de relatório (Gerenciador de Configurações do SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 8cee752f2168929723dae86cd0da774cb02518bd
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 56e28b53911bb2364f3bceb5c09f5bb8009efd3e
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983578"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43269548"
 ---
 # <a name="create-a-report-server-database"></a>Criar um banco de dados do servidor de relatório
 

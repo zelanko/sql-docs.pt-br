@@ -1,14 +1,10 @@
 ---
 title: Formatando rótulos dos eixos em um gráfico (Construtor de Relatórios e SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.axisproperties.majortickmarks.f1
@@ -28,16 +24,14 @@ f1_keywords:
 helpviewer_keywords:
 - "10140"
 ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 326bc2a7516d7401fe3af763237b0f5f0c7a1170
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d7b18f14d4a21b1515438715d24378a8e272a317
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33027973"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43273363"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>Formatando rótulos dos eixos de um gráfico (Construtor de Relatórios e SSRS)
   Os tipos de gráficos baseados em coordenadas (colunas, barras, áreas, pontos, linhas e intervalo) possuem dois eixos usados para categorizar e exibir relações de dados. Diferentes tipos de formatação são aplicados a cada eixo.  
@@ -63,7 +57,7 @@ ms.locfileid: "33027973"
   
  A escala do eixo é associada por um valor mínimo e máximo que define o intervalo de dados a serem exibidos ao longo do eixo. O gráfico calcula o valor mínimo e máximo ao longo de cada eixo com base nos valores no conjunto de resultados. No eixo de valor, a escala é sempre determinada pelo número menor e maior no campo de valor. No eixo de categoria, os tipos de valor mínimo e máximo são determinados de acordo com o tipo de campo de categoria. Qualquer campo em um conjunto de dados pode ser categorizado em um dos três tipos de campo de categoria. A tabela a seguir ilustra esses três tipos de campos de categoria.  
   
-|Tipo de campo de categoria|Description|Exemplo|  
+|Tipo de campo de categoria|Descrição|Exemplo|  
 |-------------------------|-----------------|-------------|  
 |Numérico|As categorias são plotadas em ordem numérica ao longo do eixo x.|Um relatório de vendas pelo número de identificação do funcionário exibe os números de identificação dos funcionários ao longo do eixo x.|  
 |Data/hora|As categorias são plotadas em ordem cronológica ao longo do eixo x.|Um relatório de vendas mensal exibe datas formatadas ao longo do eixo x.|  

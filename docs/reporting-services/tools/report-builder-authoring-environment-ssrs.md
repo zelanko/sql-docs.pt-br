@@ -1,26 +1,20 @@
 ---
 title: Ambiente de criação do Construtor de Relatórios (SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: tools
-ms.reviewer: ''
+ms.technology: tools
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 32be8fcc-e87d-4c45-a644-dff45776a981
-caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: ea2db3668b6be4f71aa5e7d8f325f3032e203e50
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: e63b56c62ce5f50d377236f56c4535f389a8519b
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40405258"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43274628"
 ---
 # <a name="report-builder-authoring-environment-ssrs"></a>Ambiente de criação do Construtor de Relatórios (SSRS)
   O Construtor de Relatórios [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] é um ambiente de criação autônomo para a criação de relatórios paginados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fora do Visual Studio. Quando você cria um relatório, especifica onde obter os dados, que dados obter e como exibir os dados. Ao executar o relatório, o processador de relatório obtém todas as informações especificadas, recupera os dados e os combina ao layout de relatório para gerar o relatório. Você pode instalá-lo do portal da Web [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou do Centro de Download da Microsoft.  

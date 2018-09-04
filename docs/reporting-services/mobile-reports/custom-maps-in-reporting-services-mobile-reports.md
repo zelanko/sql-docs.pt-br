@@ -1,31 +1,25 @@
 ---
 title: Mapas personalizados em relatórios móveis do Reporting Services | Microsoft Docs
-ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: mobile-reports
-ms.reviewer: ''
+ms.technology: mobile-reports
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 59a4ebad-587a-4770-afcd-c69216b8afd9
-caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: ea22c2ea60a681accc747e9426fbecb4aad7b515
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 404f6d888794be50fb0ec153fb291d06ce641a93
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33018513"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43272960"
 ---
 # <a name="custom-maps-in-reporting-services-mobile-reports"></a>Mapas personalizados nos relatórios móveis do Reporting Services
-Os mapas geográficos no Editor de Relatórios Móveis do SQL Server são definidos em um formato conhecido como *ESRI shapefiles*.  
+Os mapas geográficos no Publicador de Relatórios Móveis do SQL Server são definidos em um formato conhecido como *ESRI shapefiles*.  
   
-Criado inicialmente por uma empresa privada, esse é agora um formato semiaberto amplamente usado em grande parte dos aplicativos GIS. De acordo com esse formato, o Editor de Relatórios Móveis exige que dois arquivos sejam fornecidos ao definir um mapa:  
+Criado inicialmente por uma empresa privada, esse é agora um formato semiaberto amplamente usado em grande parte dos aplicativos GIS. De acordo com esse formato, o Publicador de Relatórios Móveis exige que dois arquivos sejam fornecidos ao definir um mapa:  
   
 - Um arquivo .SHP para geometrias de forma  
 - Um arquivo .DBF para metadados  
@@ -59,7 +53,7 @@ Muitos shapefiles existentes podem ser baixados da Web, de sites como estes:
   
 ### <a name="see-also"></a>Confira também  
 - [Mapas nos relatórios móveis do Reporting Services](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)  
-- [Criar e publicar relatórios móveis com o Editor de Relatórios Móveis do SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)   
+- [Criar e publicar relatórios móveis com o Publicador de Relatórios Móveis do SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)   
   
   
   

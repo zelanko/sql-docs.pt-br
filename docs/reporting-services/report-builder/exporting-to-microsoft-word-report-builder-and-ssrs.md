@@ -1,26 +1,20 @@
 ---
 title: Exportando para o Microsoft Word (Construtor de Relatórios e SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-builder
-ms.reviewer: ''
+ms.technology: report-builder
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
-caps.latest.revision: 23
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 73c41c24d4572c6bc91ec0a8728be590344787df
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7caedeed8680e6a4f3ef57c70bdac340cba2082e
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022313"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43270868"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exporting to Microsoft Word (Report Builder and SSRS)
 
@@ -58,7 +52,7 @@ ms.locfileid: "33022313"
 ##  <a name="DocumentProperties"></a> Propriedades do documento  
  O processador do Word grava os seguintes metadados no arquivo DOCX.  
   
-|Propriedades do Elemento de Relatório|Description|  
+|Propriedades do Elemento de Relatório|Descrição|  
 |-------------------------------|-----------------|  
 |Título do Relatório (título do relatório)|Título|  
 |Autor do Relatório|Autor|  

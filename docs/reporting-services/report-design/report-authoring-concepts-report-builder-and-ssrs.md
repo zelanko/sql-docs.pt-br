@@ -1,29 +1,23 @@
 ---
 title: Conceitos de criação de relatórios (Construtor de Relatórios e SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - concepts
 - terminology
 ms.assetid: 99311b36-5dc5-4039-ac93-4d2826701327
-caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: dc5b25917026b3747f8b1da49410a3c5f18e08b4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8b04181c8605dff46e0f744f6445bd61847b1b2c
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33023603"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43274333"
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>Conceitos de criação de relatórios (Construtor de Relatórios e SSRS)
   Esta seção define brevemente alguns dos principais conceitos usados para descrever relatórios paginados na documentação do Construtor de Relatórios e do Designer de Relatórios. Para obter definições de palavras ou de termos específicos, consulte o [Glossário &#40;Construtor de Relatórios&#41;](../../reporting-services/report-builder/glossary-report-builder.md).  

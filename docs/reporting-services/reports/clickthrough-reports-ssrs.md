@@ -1,30 +1,24 @@
 ---
 title: Relatórios de clickthrough (SSRS) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: reports
-ms.reviewer: ''
+ms.technology: reports
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - clickthrough reports
 - customizing clickthrough reports
 - clickthrough reports, customizing
 ms.assetid: cf2c396e-b0c6-41f9-8c45-ddc8406f7e85
-caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 31de83c5602d9f80083b452adeaf7241514bccab
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b189884596de702dba1735c29b7bab376cfe447b
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028703"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43271930"
 ---
 # <a name="clickthrough-reports-ssrs"></a>Relatórios de clickthrough (SSRS)
   Um relatório de clickthrough fornece informações detalhadas sobre os dados contidos no relatório principal. Um relatório de clickthrough é exibido quando o usuário clica nos dados interativos que aparecem no relatório principal. Esses relatórios são gerados automaticamente pelo servidor de relatórios. Você, como designer de modelo, determina o que é exibido nos relatórios de clickthrough definindo as propriedades **DefaultDetailAttribute** e **DefaultAggregateAttribute** que você atribui a uma entidade no modelo de relatório.  
@@ -38,12 +32,12 @@ ms.locfileid: "33028703"
 #### <a name="single-instance-templates"></a>Modelos de uma instância  
  Um modelo de uma instância exibe todos os atributos da entidade de destino e todos os atributos de agregação padrão especificados para as entidades relacionadas que tenham uma relação um para muitos a partir da entidade de destino. Um modelo de uma instância parece semelhante à imagem a seguir.  
   
- ![Um relatório de clickthrough muitos-para-um.] (../../reporting-services/reports/media/manytooneclickthrough.gif "Um relatório de clickthrough muitos-para-um.")  
+ ![Um relatório de clickthrough muitos-para-um.](../../reporting-services/reports/media/manytooneclickthrough.gif "Um relatório de clickthrough muitos-para-um.")  
   
 #### <a name="multiple-instance-templates"></a>Modelos de várias instâncias  
  Um modelo de várias instâncias exibe somente os atributos de detalhes padrão da entidade de destino e todos os atributos de agregação padrão especificados para as entidades relacionadas que tenham uma relação um para muitos a partir da entidade de destino. Um modelo de várias instâncias parece semelhante à imagem a seguir.  
   
- ![Um relatório de clickthrough muitos-para-um.] (../../reporting-services/reports/media/onetomanyclickthrough.gif "Um relatório de clickthrough muitos-para-um.")  
+ ![Um relatório de clickthrough muitos-para-um.](../../reporting-services/reports/media/onetomanyclickthrough.gif "Um relatório de clickthrough muitos-para-um.")  
   
 ## <a name="customizing-clickthrough-reports"></a>personalizando relatórios de clickthrough  
  Em vez de usar os modelos padrão gerados pelo servidor de relatórios, você pode criar um relatório no Construtor de Relatórios e usá-lo como um relatório de clickthrough personalizado. Em seguida, você pode vincular seu relatório ao modelo como um relatório detalhado no Gerenciador de Relatórios.  

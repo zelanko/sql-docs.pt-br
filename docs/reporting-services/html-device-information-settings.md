@@ -3,27 +3,21 @@ title: Configurações de informações do dispositivo HTML | Microsoft Docs
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: reporting-services
-ms.reviewer: ''
+ms.technology: reporting-services
 ms.suite: pro-bi
-ms.custom: ''
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - HTML [Reporting Services], rendering
 - device information settings [Reporting Services], HTML rendering
 ms.assetid: f505f478-dd6d-444a-957c-34f7cfb98911
-caps.latest.revision: 49
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 730d9d0e1c000eea0b066805fdd1b3eaaa22f1dd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b50d541226e42eb89d70efc650d2baf3765219a0
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33017083"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43265336"
 ---
 # <a name="html-device-information-settings"></a>Configurações de informações do dispositivo HTML
 A tabela a seguir lista as configurações de informações de dispositivos para renderização no formato HTML.  

@@ -1,14 +1,10 @@
 ---
 title: Variar a exibição de polígono, linha e ponto por regras e dados analíticos | Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10538"
@@ -21,16 +17,14 @@ f1_keywords:
 - "10536"
 - sql13.rtp.rptdesigner.maplinelayerproperties.widthrules.f1
 ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
-caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 3e78b0319639852d8bb4cac5be3f3b2157ac0703
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 12f65c737b17c62c925a1b129a2d527ac849aeaf
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33027453"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43278835"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data"></a>Vary Polygon, Line, and Point Display by Rules and Analytical Data
   As opções de exibição para polígonos, linhas e pontos em uma camada do mapa são controladas pela definição de opções para a camada, estabelecendo regras para os elementos do mapa na camada ou substituindo opções para elementos de mapas inseridos específicos em uma camada.  
@@ -126,7 +120,7 @@ ms.locfileid: "33027453"
   
  As tabelas a seguir mostram exemplos de formatos diferentes que você pode usar.  
   
-|Palavra-chave e formato|Description|Exemplo do que é exibido como texto na legenda|  
+|Palavra-chave e formato|Descrição|Exemplo do que é exibido como texto na legenda|  
 |------------------------|-----------------|---------------------------------------------------|  
 |`#FROMVALUE {C0}`|Exibe a moeda do valor total sem casas decimais|$ 400|  
 |`#FROMVALUE {C2}`|Exibe a moeda do valor total com até duas casas decimais.|$ 400,55|  

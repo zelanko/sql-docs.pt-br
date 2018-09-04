@@ -1,14 +1,10 @@
 ---
 title: Propriedades do item de servidor de relatório | Microsoft Docs
-ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.component: report-server-web-service
-ms.reviewer: ''
+ms.technology: report-server-web-service
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -18,16 +14,14 @@ helpviewer_keywords:
 - report items [Reporting Services], properties
 - items [Reporting Services], properties
 ms.assetid: 21edec6d-9897-48fb-8c75-182305b1dbdb
-caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 2b3ba4bdc49c822d059ec86b4cb8064877af0d90
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 346fefd3cbbeb1e0422401ef22a4ce32106348a2
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33027003"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43267632"
 ---
 # <a name="reporting-services-properties---report-server-item-properties"></a>Propriedades do Reporting Services – propriedades do item de servidor de relatório
   As propriedades de item são propriedades específicas de itens do banco de dados do servidor de relatório. Tais itens incluem relatórios, relatórios vinculados, pastas, recursos, modelos e fontes de dados.  
@@ -37,7 +31,7 @@ ms.locfileid: "33027003"
 ## <a name="item-properties"></a>Propriedades do item  
  As propriedades a seguir se aplicam a todos os itens do banco de dados do servidor de relatório.  
   
-|Propriedade|Description|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |**CreatedBy**|O nome do usuário que originalmente adicionou o item ao banco de dados do servidor de relatório.|  
 |**CreationDate**|A data e a hora em que o item foi adicionado ao banco de dados do servidor de relatório.|  
@@ -55,14 +49,14 @@ ms.locfileid: "33027003"
 ## <a name="folder-properties"></a>Pasta Propriedades  
  Além das propriedades do item previamente listadas, a propriedade a seguir se aplica a pastas do banco de dados do servidor de relatório.  
   
-|Propriedade|Description|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |**Reserved**|Um valor retornado pelo método <xref:ReportService2010.ReportingService2010.GetProperties%2A> para pastas reservadas pelo servidor de relatório. As pastas reservadas incluem Usuários, Meus Relatórios e /. As pastas reservadas não podem ser modificadas ou removidas.|  
   
 ## <a name="report-properties"></a>Propriedades de relatório  
  Além das propriedades do item previamente listadas, as propriedades a seguir se aplicam a relatórios do banco de dados do servidor de relatório.  
   
-|Propriedade|Description|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |**Idioma**|O idioma usado em um relatório. O valor é um código de idioma definido na especificação RFC1766 do IETF. A primeira parte é uma designação de dois caracteres do idioma básico. A segunda parte é separada por um hífen e indica a variação ou o dialeto do idioma. Se um valor não for especificado no elemento **Style** associado ao elemento **Body** na definição de relatório, o valor padrão será o idioma do servidor de relatório.|  
 |**ReportProcessingTimeout**|O tempo limite, em segundos, para um relatório individual. Se esse valor for definido, o servidor de relatórios tentará interromper o processamento de um relatório quando o tempo especificado tiver decorrido. Os valores válidos são de **-1** até **2**,**147**,**483**,**647**. Se o valor for **-1**, o relatório não atingirá o tempo limite durante o processamento. Se o valor for **null**, o valor da propriedade do sistema **ReportProcessingTimeout** será usado para o tempo limite de processamento do relatório. O valor padrão é **null**. Para obter mais informações, consulte [Propriedades de sistema do servidor de relatório](../../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md).|  
@@ -76,7 +70,7 @@ ms.locfileid: "33027003"
 ## <a name="resource-properties"></a>Propriedades de recurso  
  Além das propriedades do item previamente listadas, a propriedade a seguir se aplica a recursos do banco de dados do servidor de relatório.  
   
-|Propriedade|Description|  
+|Propriedade|Descrição|  
 |--------------|-----------------|  
 |**MimeType**|O tipo MIME de um recurso no banco de dados do servidor de relatório.|  
   

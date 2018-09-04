@@ -1,33 +1,27 @@
 ---
 title: Configurações de informações de dispositivos para extensões de renderização (Reporting Services) | Microsoft Docs
-ms.custom: ''
 ms.date: 09/15/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: reporting-services
-ms.reviewer: ''
+ms.technology: reporting-services
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 947b0ee1-bb35-4b4e-9527-dc501566e7d1
-caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: ea4aec909a5d65582ae59b507c3948e4484b3e49
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 00b14f80b7e6cc316fb5857b44140bd30cc92765
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33015973"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43268146"
 ---
 # <a name="device-information-settings-for-rendering-extensions-reporting-services"></a>Configurações de informações de dispositivos para extensões de renderização (Reporting Services)
   No [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], as configurações de informações de dispositivo são usadas para passar parâmetros de renderização para uma extensão de renderização. Cada extensão de renderização aceita um conjunto específico de configurações.  
   
 ## <a name="in-this-section"></a>Nesta seção  
   
-|Tópico|Description|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Configurações de informações do dispositivo ATOM](../reporting-services/atom-device-information-settings.md)|Descreve as configurações de informações de dispositivo associadas à saída de renderização compatível com o Atom.|  
 |[Configurações das informações do dispositivo CSV](../reporting-services/csv-device-information-settings.md)|Descreve as configurações de informações de dispositivo associadas à saída de renderização de CSV.|  

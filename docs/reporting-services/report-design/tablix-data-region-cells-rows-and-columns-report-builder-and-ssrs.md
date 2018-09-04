@@ -1,14 +1,10 @@
 ---
 title: Células, linhas e colunas da região de dados Tablix (Construtor de Relatórios) e SSRS | Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-design
-ms.reviewer: ''
+ms.technology: report-design
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10058"
@@ -16,16 +12,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.deletecolumns.f1
 - sql13.rtp.rptdesigner.deleterows.f1
 ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
-ms.openlocfilehash: 8eb51a0c7240f1eff35ecc754d3a6b1d6fdc1000
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c8ec3075444b0885cb6e6ea5b52c2f2fe6b60941
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028663"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43281341"
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Células, linhas e colunas da região de dados Tablix (Construtor de Relatórios) e SSRS
   Para controlar como as linhas e colunas de uma região de dados tablix exibem dados em um relatório paginado [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , você deve compreender como especificá-las para dados detalhados, dados de grupo, além de rótulos e totais. Em muitos casos, é possível usar as estruturas padrão em uma tabela, matriz ou lista para exibir os dados. Para obter mais informações, consulte [Tabelas &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md), [Matrizes](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md) ou [Listas](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
@@ -43,7 +37,7 @@ ms.locfileid: "33028663"
 ### <a name="row-and-column-handles"></a>Identificadores de linha e de coluna  
  Quando você seleciona uma região de dados tablix, gráficos indicadores de linha e de coluna apontam o propósito de cada uma delas. Os identificadores mostram as linhas e as colunas que estão dentro ou fora de um grupo. A tabela a seguir mostra várias exibições de identificadores.  
   
-|Ícone|Description|  
+|Ícone|Descrição|  
 |----------|-----------------|  
 |![Identificador de linha com três linhas paralelas para a linha de detalhes](../../reporting-services/report-design/media/rs-icontablix-detailsrow.gif "Identificador de linha com três linhas paralelas para a linha de detalhes")|Apenas o grupo detalhado na hierarquia do grupo de linhas|  
 |![Identificador de linha com linha de detalhes e um grupo externo](../../reporting-services/report-design/media/rs-icontablix-groupwithdetails.gif "Identificador de linha com linha de detalhes e um grupo externo")|Um grupo externo e o grupo detalhado filho|  

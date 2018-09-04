@@ -17,12 +17,12 @@ caps.latest.revision: 46
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 39bc4afa05f9f72fcf2ec08cdfd85e65fa8bce04
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2d5e99d7bfd140af1e26217118211da98a167a93
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33145597"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348171"
 ---
 # <a name="data-collection"></a>Coleta de Dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -115,12 +115,12 @@ ms.locfileid: "33145597"
   
 ## <a name="things-you-can-do"></a>O que você pode fazer  
   
-|Description|Tópico|  
+|Descrição|Tópico|  
 |----------------------|-----------|  
 |Gerencie diferentes aspectos da coleta de dados; por exemplo, habilitar ou desabilitar a coleta de dados, alterar a configuração de um conjunto de coleta ou exibir dados no data warehouse de gerenciamento.|[Gerenciar coleta de dados](../../relational-databases/data-collection/manage-data-collection.md)|  
 |Use esses relatórios para obter informações para monitorar a capacidade de sistema e solucionar problemas de desempenho do sistema.|[Relatórios do conjunto de coleta de dados do sistema](../../relational-databases/data-collection/system-data-collection-set-reports.md)|  
 |Use o Data Warehouse de Gerenciamento para coletar dados de um servidor que seja o destino da coleta de dados.|[Data warehouse de gerenciamento](../../relational-databases/data-collection/management-data-warehouse.md)| 
-|Explore os recursos de rastreamento do lado do servidor do SQL Server Profiler para exportar uma definição de rastreamento que pode ser usada para criar um conjunto de coleta que usa o tipo de coletor de Rastreamento do SQL Genérico| [Usar o SQL Server Profiler para criar um Conjunto de Coleta do Rastreamento do SQL (SQL Server Management Studio)](https://msdn.microsoft.com/library/cc645955(v=sql.130).aspx)
+|Explore os recursos de rastreamento do lado do servidor do SQL Server Profiler para exportar uma definição de rastreamento que pode ser usada para criar um conjunto de coleta que usa o tipo de coletor de Rastreamento do SQL Genérico| [Usar o SQL Server Profiler para criar um Conjunto de Coleta do Rastreamento do SQL (SQL Server Management Studio)](use-sql-server-profiler-to-create-a-sql-trace-collection-set.md)
   
   
 

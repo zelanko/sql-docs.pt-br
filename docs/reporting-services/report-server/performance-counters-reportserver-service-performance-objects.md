@@ -1,28 +1,22 @@
 ---
 title: Contadores de desempenho – serviço ReportServer, objetos de desempenho | Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: report-server
-ms.reviewer: ''
+ms.technology: report-server
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Server service, performance counters
 ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
-caps.latest.revision: 21
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 3a83e69235c79a255d1ba238b6acc24f873d5e51
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 22afdbbbd970f7362644b69a55b2e63e7dd59c34
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33027713"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43266816"
 ---
 # <a name="performance-counters---reportserver-service--performance-objects"></a>Contadores de desempenho – serviço ReportServer, objetos de desempenho
   Este tópico descreve contadores de desempenho para os objetos de desempenho **ReportServer:Service** e **ReportServerSharePoint:Service** que fazem parte de uma implantação do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] .  
@@ -55,7 +49,7 @@ ms.locfileid: "33027713"
 (get-counter -listset "ReportServer:Service").paths  
 ```  
   
-|Contador|Description|  
+|Contador|Descrição|  
 |-------------|-----------------|  
 |**Active connections**|O número de conexões atualmente ativas no servidor.|  
 |**Bytes Received Total**|O número de bytes recebidos pelo servidor. Esse contador calcula o total de bytes brutos recebidos pelo Gerenciador de Relatórios e pelo servidor de relatório.|  
@@ -88,14 +82,14 @@ ms.locfileid: "33027713"
 (get-counter -listset "ReportServerSharePoint:Service").paths  
 ```  
   
-|Contador|Description|  
+|Contador|Descrição|  
 |-------------|-----------------|  
 |**Memory Pressure State**||  
 |**Memory Shrink Amount**||  
 |**Memory Shrink Notifications/Sec**||  
   
 ##  <a name="bkmk_powershell"></a> Use cmdlets do PowerShell para retornar listas  
- ![Conteúdo relacionado ao PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Conteúdo relacionado ao PowerShell") O seguinte script do Windows PowerShell retornará a lista de contadores de desempenho para o CounterSetName "ReportServerSharePoint:Service":  
+ ![Conteúdo relacionado ao PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Conteúdo relacionado ao PowerShell") O seguinte script do Windows PowerShell retornará a lista de contadores de desempenho para o CounterSetName “ReportServerSharePoint:Service”:  
   
 ```  
 (get-counter -listset "ReportServerSharePoint:Service").paths  

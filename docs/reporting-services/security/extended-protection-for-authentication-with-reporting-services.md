@@ -1,26 +1,20 @@
 ---
 title: Proteção Estendida para Autenticação com o Reporting Services | Microsoft Docs
-ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: security
-ms.reviewer: ''
+ms.technology: security
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
-caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 6abe1579a0b54f701ed648746b4a5fc5ae597b08
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 49827ffcafca3131554ec806afa61e49ad03dd58
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33028303"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43281362"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Proteção Estendida para Autenticação com o Reporting Services
 
@@ -117,7 +111,7 @@ O SSRS dá suporte e impõe a proteção estendida que foi habilitada no sistema
 ###  <a name="ConfigurationSettings"></a> Parâmetros de configuração para a proteção estendida dos serviços de relatórios  
  A tabela a seguir fornece informações sobre os parâmetros de configuração que aparecem no **rsreportserver.config** para proteção estendida.  
   
-|Configuração|Description|  
+|Configuração|Descrição|  
 |-------------|-----------------|  
 |**RSWindowsExtendedProtectionLevel**|Especifica o grau de imposição da proteção estendida. Os valores válidos são:<br /><br /> **Off**: padrão. Especifica que não há nenhuma verificação de associação de canal nem de associação de serviço.<br /><br /> **Allow** dá suporte à proteção estendida mas não a exige.  Especifica:<br /><br /> - A proteção estendida será imposta para aplicativos clientes executados em sistemas operacionais que dão suporte à proteção estendida. A maneira como a proteção é imposta é determinada pela configuração **RsWindowsExtendedProtectionScenario**<br /><br /> - A autenticação será permitida para aplicativos executados em sistemas operacionais que não dão suporte à proteção estendida.<br /><br /> **Require** especifica:<br /><br /> - A proteção estendida será imposta para aplicativos clientes executados em sistemas operacionais que dão suporte à proteção estendida.<br /><br /> A autenticação **não** será permitida para aplicativos executados em sistemas operacionais que não dão suporte para proteção estendida.|  
 |**RsWindowsExtendedProtectionScenario**|Especifica que formas de proteção estendida serão validadas: Associação de Canal, Associação de Serviço ou ambas. Os valores válidos são:<br /><br /> **Proxy**: padrão. Especifica:<br /><br /> - A autenticação Windows NTLM, Kerberos e Negotiate quando um token de associação de canal estiver presente.<br /><br /> -A Associação de Serviço é imposta.<br /><br /> **Any** especifica:<br /><br /> - A autenticação Windows NTLM, Kerberos e Negotiate e uma associação de canal não são obrigatórias.<br /><br /> -A Associação de Serviço é imposta.<br /><br /> **Direct** especifica:<br /><br /> - A autenticação Windows NTLM, Kerberos e Negotiate quando um CBT estiver presente, uma conexão SSL com o serviço atual estiver presente e quando o CBT da conexão SSL corresponder ao CBT do token NTLM, Kerberos ou Negotiate.<br /><br /> - A Associação de Serviço não é imposta.<br /><br /> <br /><br /> Observação: a configuração **RsWindowsExtendedProtectionScenario** será ignorada se **RsWindowsExtendedProtectionLevel** for definido como **OFF**.|  
@@ -149,7 +143,7 @@ O SSRS dá suporte e impõe a proteção estendida que foi habilitada no sistema
 ### <a name="hosts-collection-sources"></a>Fontes de coleta de hosts.  
  A tabela a seguir lista as possíveis fontes da lista de Hosts.  
   
-|Tipo da fonte.|Description|  
+|Tipo da fonte.|Descrição|  
 |--------------------|-----------------|  
 |ComputerNameDnsDomain|O nome do domínio DNS atribuído ao computador local. Se o computador local for um nó de um cluster, será usado o nome de domínio DNS do servidor virtual de cluster.|  
 |ComputerNameDnsFullyQualified|O nome DNS totalmente qualificado que identifica exclusivamente o computador local. Esse nome é uma combinação do nome de host do DNS e o nome de domínio do DNS, usando o formato *HostName*.*DomainName*. Se o computador local for um nó de um cluster, será usado o nome do DNS totalmente qualificado do servidor virtual de cluster.|  

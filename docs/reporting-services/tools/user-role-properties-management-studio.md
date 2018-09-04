@@ -1,28 +1,22 @@
 ---
 title: Propriedades de Função de Usuário (Management Studio) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: tools
-ms.reviewer: ''
+ms.technology: tools
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.reportserver.userroleproperties.f1
 ms.assetid: c8b22236-a8b1-4e15-b1ff-4e1909b602d3
-caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 5c000e40c7ec5633a24d7edb018a028774ca20a8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 528569dce74c3439d60404e87580e657ef3fdb81
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33030723"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43279842"
 ---
 # <a name="user-role-properties-management-studio"></a>Propriedades de Função do Usuário (Management Studio)
   Use essa página para exibir quais tarefas são incluídas em uma definição de função de nível de item. Essa página também pode ser usada para alterar a lista de tarefas ou modificar uma descrição de função.  

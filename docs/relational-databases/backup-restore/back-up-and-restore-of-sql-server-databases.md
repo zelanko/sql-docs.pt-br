@@ -26,12 +26,12 @@ caps.latest.revision: 91
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 273f04bfc6a75abb2e14da9031cbfeb17c6674c0
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 64793249bab1d862d401e0c8b8d2d78a8392edbc
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40412540"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348146"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Fazer backup e restaurar bancos de dados do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ dispositivo de**backup**
 -   Restrições de recursos, como hardware, pessoal, espaço para armazenagem de mídia de backup, a segurança física da mídia armazenada, e assim por diante.  
 
 ### <a name="impact-of-the-recovery-model-on-backup-and-restore"></a>Impacto do modelo de recuperação no backup e na restauração  
- As operações de backup e restauração ocorrem dentro do contexto de um modelo de recuperação. Um modelo de recuperação é uma propriedade de banco de dados que controla a forma de gerenciamento do log de transações. Além disso, o modelo de recuperação de um banco de dados determina para quais tipos de backups e cenários de restauração o banco de dados oferece suporte. Geralmente, um banco de dados usa o modelo de recuperação simples ou o modelo de recuperação completa. O modelo de recuperação completa pode ser suplementado alternando para o modelo de recuperação bulk-logged antes das operações em massa. Para obter uma introdução a esses modelos de recuperação e como eles afetam o gerenciamento do log de transações, consulte [O log de transação (SQL Server)](https://msdn.microsoft.com/library/ms190925(SQL.130).aspx)  
+ As operações de backup e restauração ocorrem dentro do contexto de um modelo de recuperação. Um modelo de recuperação é uma propriedade de banco de dados que controla a forma de gerenciamento do log de transações. Além disso, o modelo de recuperação de um banco de dados determina para quais tipos de backups e cenários de restauração o banco de dados oferece suporte. Geralmente, um banco de dados usa o modelo de recuperação simples ou o modelo de recuperação completa. O modelo de recuperação completa pode ser suplementado alternando para o modelo de recuperação bulk-logged antes das operações em massa. Para obter uma introdução a esses modelos de recuperação e como eles afetam o gerenciamento do log de transações, consulte [O log de transação (SQL Server)](../logs/the-transaction-log-sql-server.md)  
   
  A melhor escolha do modelo de recuperação para o banco de dados depende de seus requisitos empresariais. Para evitar gerenciamento de log de transações e simplificar o backup e a restauração, use o modelo de recuperação simples. Para minimizar exposição à perda de trabalho, às custas de uma sobrecarga administrativa, use o modelo de recuperação completa. Para obter informações sobre o efeito dos modelos de recuperação sobre o backup e a restauração, consulte [Visão geral do backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md).  
   

@@ -1,30 +1,24 @@
 ---
 title: Usar a segurança interna no Windows SharePoint Services para itens de servidor de relatório | Microsoft Docs
-ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: security
-ms.reviewer: ''
+ms.technology: security
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
 - SharePoint integration [Reporting Services], permissions
 - security [Reporting Services], SharePoint integrated mode
 ms.assetid: 9577e88d-c22b-4934-936f-e0f1400cedf5
-caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 5155c5689a4c7a51f2d392e8560a2c87dbf44fdd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f6733d9db27ce01e7fcc063e1f6affa13be7b276
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33033223"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43280179"
 ---
 # <a name="use-built-in-security-in-windows-sharepoint-services-for-report-server-items"></a>Usar a segurança interna no Windows SharePoint Services para itens do servidor de relatório
   O SharePoint fornece recursos de segurança interna que você pode usar para acessar itens do servidor de relatório nos sites e bibliotecas do SharePoint. Se você já tiver atribuído permissões de site e de lista aos usuários, esses mesmos usuários terão acesso a itens e operações do servidor de relatórios assim que você configurar a integração entre o SharePoint e um servidor de relatório.  
@@ -32,7 +26,7 @@ ms.locfileid: "33033223"
 ## <a name="securable-items"></a>Itens protegíveis  
  As permissões definidas no site ou na biblioteca podem ser usadas para conceder acesso a itens do servidor de relatórios. Entretanto, se você quiser proteger itens individuais, pode definir permissões nos seguintes tipos de conteúdo:  
   
-|Tipo de arquivo|Description|  
+|Tipo de arquivo|Descrição|  
 |---------------|-----------------|  
 |.rdl|Um arquivo de definição de relatório que define o layout do relatório e os comandos usados para recuperar dados. Uma definição de relatório usa informações de conexão da fontes de dados para recuperar dados quando o relatório é processado. Se a definição do relatório determinar um relatório ad hoc criado no Construtor de Relatórios, o relatório fará par com um arquivo de modelo de relatório (.smdl) que define o escopo na exploração de dados do relatório renderizado.|  
 |.smdl|Um arquivo de modelo de relatório que descreve estruturas de dados e como elas se relacionam. Ele é usado para criar e executar relatórios do Construtor de Relatórios.|  
