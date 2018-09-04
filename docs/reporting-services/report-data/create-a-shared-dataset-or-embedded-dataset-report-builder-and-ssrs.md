@@ -15,17 +15,19 @@ caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 15bf16dc24c14855356083093d386a2c0a6b78af
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c7815346582774bf53034aa368ea6459fe7fcd75
+ms.sourcegitcommit: 7064d7ea091ead7ba4916660c79b352ba4a911a1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022673"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42432579"
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>Criar um conjunto de dados compartilhado ou um conjunto de dados inserido (Construtor de Relatórios e SSRS)
 Os conjuntos de dados inseridos são para uso em um único relatório do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . Os conjuntos de dados compartilhados em um servidor de relatório podem ser usados por vários relatórios, móveis e paginados. Para criar um conjunto de dados, é necessária uma fonte de dados inserida ou compartilhada.  
   
- Use o **Construtor de Relatórios** para executar as seguintes tarefas:  
+## <a name="report-builder-tasks"></a>Tarefas do Construtor de Relatórios
+
+Use o Construtor de Relatórios para executar as seguintes tarefas:  
   
 1.  Crie um conjunto de dados compartilhado no modo de exibição Design de Conjunto de Dados. Os conjuntos de dados compartilhados devem usar fontes de dados compartilhadas publicadas.  
   
@@ -33,7 +35,9 @@ Os conjuntos de dados inseridos são para uso em um único relatório do [!INCLU
   
 3.   Salve o conjunto de dados diretamente no servidor de relatório ou no site do SharePoint.  
   
- Use o **Designer de Relatórios** no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para as seguintes tarefas:  
+## <a name="report-designer-tasks"></a>Tarefas do Designer de Relatórios
+
+Use o Designer de Relatórios no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para as seguintes tarefas:  
   
 1.  Crie um conjunto de dados compartilhado no Gerenciador de Soluções. Conjuntos de dados compartilhados devem usar fontes de dados da pasta Fontes de Dados Compartilhadas no Gerenciador de Soluções.  
   
@@ -46,7 +50,7 @@ Os conjuntos de dados inseridos são para uso em um único relatório do [!INCLU
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## <a name="to-open-report-builder-and-create-a-shared-dataset"></a>Para abrir o Construtor de Relatórios e criar um conjunto de dados compartilhado  
+## <a name="to-create-a-shared-dataset-in-report-builder"></a>Para criar um conjunto de dados compartilhado no Construtor de Relatórios
   
 1.  Abra o Construtor de Relatórios. O **Painel de novo relatório ou conjunto de dados** abre, como mostrado na figura seguinte:  
   

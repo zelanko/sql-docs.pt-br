@@ -17,12 +17,12 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 736159b9928eb3eb28665302140c72f8c8f4b382
-ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
+ms.openlocfilehash: b9c5d6a80e03ddf55fd463cac0c74486135884dd
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39400899"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40411749"
 ---
 # <a name="install-reporting-services-2016-at-the-command-prompt"></a>Instalar o Reporting Services 2016 no prompt de comando
 
@@ -56,7 +56,7 @@ Setup.exe /q /IACCEPTSQLSERVERLICENSETERMS /ACTION="install" /ERRORREPORTING=1 /
 ##  <a name="bkmk_sharepoint_mode"></a> Reporting Services no modo SharePoint  
   
 ### <a name="rsshpinstallmode-sharepoint-mode"></a>RSSHPINSTALLMODE (modo do SharePoint)  
- A configuração de entrada para instalar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no modo do SharePoint é **/RSSHPINSTALLMODE**. A configuração de entrada tem uma opção: SharePointFilesOnlyMode. A opção instala todos os arquivos necessários para o modo do SharePoint. Entretanto, é necessário fazer a configuração após a instalação. As etapas de configuração adicional são concluídas usando a Administração Central do SharePoint. Para saber mais, confira [Instalar o primeiro servidor de relatório no modo do SharePoint](http://msdn.microsoft.com/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538).  
+ A configuração de entrada para instalar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no modo do SharePoint é **/RSSHPINSTALLMODE**. A configuração de entrada tem uma opção: SharePointFilesOnlyMode. A opção instala todos os arquivos necessários para o modo do SharePoint. Entretanto, é necessário fazer a configuração após a instalação. As etapas de configuração adicional são concluídas usando a Administração Central do SharePoint. Para saber mais, confira [Instalar o primeiro servidor de relatório no modo do SharePoint](install-the-first-report-server-in-sharepoint-mode.md).  
   
 ### <a name="examples-of-sharepoint-mode-installation"></a>Exemplos de instalação do modo do SharePoint  
  O exemplo a seguir instala o serviço de mecanismo de banco de dados do SQL Server e o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no modo do SharePoint, bem como o suplemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para o SharePoint (RS_SHPWFE).  

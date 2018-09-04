@@ -14,12 +14,12 @@ caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: ffe4d95cd82864445ce3a8223c18664b65641f10
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 7b94aa017c8e1fcfd46d86b254424c29d1c987c9
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980348"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40410957"
 ---
 # <a name="add-an-additional-report-server-to-a-farm-ssrs-scale-out"></a>Adicionar um servidor de relatório a um farm (expansão SSRS)
 
@@ -66,7 +66,7 @@ ms.locfileid: "38980348"
 |Etapa|Descrição e link|  
 |----------|--------------------------|  
 |Adicione um servidor do SharePoint a um farm.|Você precisará instalar o SharePoint para implantar outro aplicativo do Reporting Services.<br/><br/>Para o SharePoint 2013, consulte [Adicionar o SharePoint Server a um farm no SharePoint Server 2013](https://technet.microsoft.com/library/cc261752(v=office.15).aspx).<br/><br/>Para o SharePoint 2016, consulte [Adicionar o SharePoint Server a um farm no SharePoint Server 2016](https://technet.microsoft.com/library/cc261752(v=office.16).aspx).|  
-|Instalar e configurar o modo do SharePoint do Reporting Services.|Execute a instalação do SQL Server. Para obter mais informações sobre a instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] do modo do SharePoint, veja [Instalar o Primeiro Servidor de Relatório no Modo do SharePoint](http://msdn.microsoft.com/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)<br /><br /> Se o servidor for usado somente como um servidor de aplicativos e não como um WFE, você não precisará selecionar o **Suplemento do Reporting Services para produtos do SharePoint**.<br /><br /> 1) Na página **Função de instalação** , selecione **Instalação de recurso do SQL Server**<br /><br /> 2) Na página **Seleção de Recursos** , selecione **Reporting Services - SharePoint**<br /><br /> 3) Na página **Configuração do Reporting Services**  , verifique se a opção **Instalar somente** está marcada para o **Modo do SharePoint do Reporting Services**.|  
+|Instalar e configurar o modo do SharePoint do Reporting Services.|Execute a instalação do SQL Server. Para obter mais informações sobre a instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] do modo do SharePoint, veja [Instalar o primeiro servidor de relatório no modo do SharePoint](install-the-first-report-server-in-sharepoint-mode.md)<br /><br /> Se o servidor for usado somente como um servidor de aplicativos e não como um WFE, você não precisará selecionar o **Suplemento do Reporting Services para produtos do SharePoint**.<br /><br /> 1) Na página **Função de instalação** , selecione **Instalação de recurso do SQL Server**<br /><br /> 2) Na página **Seleção de Recursos** , selecione **Reporting Services - SharePoint**<br /><br /> 3) Na página **Configuração do Reporting Services**  , verifique se a opção **Instalar somente** está marcada para o **Modo do SharePoint do Reporting Services**.|  
 |Verifique se o Reporting Services está funcionando.|1) Na Administração Central do SharePoint, clique em **Gerenciar servidores neste farm** no grupo **Configurações do Sistema** .<br /><br /> 2) Verifique o serviço **SQL Server Reporting Services Service**.<br /><br />Para obter mais informações, consulte [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md).|  
   
 ##  <a name="bkmk_additional"></a> Configuração adicional  

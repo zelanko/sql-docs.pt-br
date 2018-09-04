@@ -13,12 +13,12 @@ ms.topic: get-started-article
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 8f5ff80e5eb44133c98fffdce779733636ef0a5f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d8a8ee44c055d9679656ec5cf15b23096dc8c257
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38053344"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40411738"
 ---
 # <a name="reporting-services-report-server"></a>Servidor de relatório do Reporting Services
 
@@ -85,7 +85,7 @@ Um servidor de relatório do Reporting Services é executado em um destes dois m
   
 ### <a name="native-mode-with-sharepoint-web-parts"></a>Modo nativo com Web Parts do SharePoint
 
- O Reporting Services fornece duas web parts que podem ser instaladas e registradas em uma instância do [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 2.0 ou posterior ou [!INCLUDE[spPortalServ](../../includes/spportalserv-md.md)] 2003 ou posterior. Em um site do SharePoint, você pode usar as web parts para localizar e exibir relatórios armazenados e processados em um servidor de relatório executado no modo nativo. Essas web parts foram introduzidas em versões anteriores do Reporting Services.  
+ O Reporting Services fornece duas web parts que podem ser instaladas e registradas em uma instância do [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 2.0 ou posterior, ou Servidor do Portal do SharePoint 2003 ou posterior. Em um site do SharePoint, você pode usar as web parts para localizar e exibir relatórios armazenados e processados em um servidor de relatório executado no modo nativo. Essas web parts foram introduzidas em versões anteriores do Reporting Services.  
   
 ## <a name="sharepoint-mode"></a>SharePoint
 

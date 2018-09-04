@@ -44,12 +44,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7caf240c4f1fa6d0641b91db7061d50752941b6b
-ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
+ms.openlocfilehash: 37bf91db051a3f3a8369ecefea68288139181075
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40008938"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40412561"
 ---
 # <a name="restore-statements-transact-sql"></a>Instruções RESTORE (Transact-SQL)
 Restaura backups do banco de dados SQL feitos usando o comando BACKUP. 
@@ -72,8 +72,8 @@ Na linha a seguir, clique em qualquer nome de produto de seu interesse. O clique
 >   <th> &nbsp; </th>
 > </tr>
 > <tr>
->   <th><strong><em>* SQL Server*</em></strong></th>
->   <th><a href="restore-statements-transact-sql.md?view=azuresqldb-mi-current">Instância Gerenciada do<br />Banco de Dados SQL</a></th>
+>   <th><strong><em>* SQL Server *<br />&nbsp;</em></strong></th>
+>   <th><a href="restore-statements-transact-sql.md?view=azuresqldb-mi-current">Banco de Dados SQL<br />Banco de Dados SQL</a></th>
 >   <th><a href="restore-statements-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
 > </tr>
 > </table>
@@ -725,7 +725,7 @@ RESTORE DATABASE Sales
 > </tr>
 > <tr>
 >   <th><a href="restore-statements-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><strong><em>* Instância Gerenciada do<br />Banco de Dados SQL</th>
+>   <th><strong><em>* Banco de Dados SQL<br />Instância Gerenciada *</em></strong></th>
 >   <th><a href="restore-statements-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
 > </tr>
 > </table>
@@ -734,7 +734,7 @@ RESTORE DATABASE Sales
 
 # <a name="azure-sql-database-managed-instance"></a>Instância Gerenciada do Banco de Dados SQL do Azure
 
-Esse comando permite restaurar um banco de dados inteiro de um backup de banco de dados completo (uma restauração completa).
+Esse comando permite restaurar um banco de dados inteiro de um backup de banco de dados completo (uma restauração completa) da conta do Armazenamento de Blobs do Azure.
 
 Para outros comandos RESTORE com suporte, consulte:
 - [RESTORE FILELISTONLY (Transact-SQL)](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)  
@@ -763,7 +763,7 @@ Especifica o banco de dados de destino.
   
 FROM URL
 
-Especifica a URL a ser usada para a operação de restauração. O formato da URL é usado para restaurar os backups do serviço de armazenamento do Microsoft Azure. 
+Especifica um ou mais dispositivos de backup colocados em URLs que serão usados para a operação de restauração. O formato da URL é usado para restaurar os backups do serviço de armazenamento do Microsoft Azure. 
 
 > [!IMPORTANT]  
 > Para fazer uma restauração de vários dispositivos ao restaurar de uma URL, é necessário usar os tokens SAS (Assinatura de Acesso Compartilhado). Para obter exemplos sobre como criar uma Assinatura de Acesso Compartilhado, consulte [Backup do SQL Server em uma URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) e [Simplificando a criação de credenciais do SQL com tokens SAS (Assinatura de Acesso Compartilhado) no Armazenamento do Azure com o PowerShell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
@@ -773,7 +773,7 @@ Especifica a URL a ser usada para a operação de restauração. O formato da UR
  
 ## <a name="general-remarks"></a>Comentários gerais
 
-Para uma restauração assíncrona, a restauração continuará mesmo se a conexão de cliente for interrompida. Se sua conexão for interrompida, será possível marcar a exibição [sys.dm_operation_status](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) para o status de uma operação de restauração (bem como para o banco de dados CREATE e DROP). 
+A operação RESTORE é assíncrona: a restauração continua mesmo se a conexão de cliente é interrompida. Se sua conexão for interrompida, será possível marcar a exibição [sys.dm_operation_status](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) para o status de uma operação de restauração (bem como para o banco de dados CREATE e DROP). 
 
 As opções de banco de dados a seguir são definidas/substituídas e não podem ser alteradas posteriormente:
 
@@ -806,6 +806,7 @@ As permissões RESTORE são concedidas a funções nas quais as informações de
 ##  <a name="examples"></a> Exemplos  
 Os exemplos a seguir restauram um backup de banco de dados somente de cópia por meio da URL, incluindo a criação de uma credencial.  
   
+###  <a name="restore-mi-database"></a> A. Restaure o banco de dados de três dispositivos de backup.   
 ```sql
 
 -- Create credential
@@ -819,16 +820,14 @@ FROM URL = N'https://mibackups.blob.core.windows.net/wide-world-importers/00-Wid
 URL = N'https://mibackups.blob.core.windows.net/wide-world-importers/01-WideWorldImporters-Standard.bak',
 URL = N'https://mibackups.blob.core.windows.net/wide-world-importers/02-WideWorldImporters-Standard.bak',
 URL = N'https://mibackups.blob.core.windows.net/wide-world-importers/03-WideWorldImporters-Standard.bak'
-
---The following error is shown if the database already exists:
+```
+O erro a seguir é mostrado se o banco de dados já existe:
+```
 Msg 1801, Level 16, State 1, Line 9
 Database 'WideWorldImportersStandard' already exists. Choose a different database name.
-
--- An example with variables:
-DECLARE @db_name sysname = 'WideWorldImportersStandard';
-DECLARE @url nvarchar(400) = N'https://mibackups.blob.core.windows.net/wide-world-importers/WideWorldImporters-Standard.bak';
-RESTORE DATABASE @db_name
-FROM URL = @url
+```
+###  <a name="restore-mi-database-variables"></a> B. Restaure o banco de dados especificado por meio da variável.  
+– Um exemplo com as variáveis: DECLARE @db_name sysname = 'WideWorldImportersStandard'; DECLARE @url nvarchar(400) = N'https://mibackups.blob.core.windows.net/wide-world-importers/WideWorldImporters-Standard.bak'; RESTORE DATABASE @db_name FROM URL = @url
 ```  
 
 ::: moniker-end
@@ -843,23 +842,23 @@ FROM URL = @url
 > </tr>
 > <tr>
 >   <th><a href="restore-statements-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="restore-statements-transact-sql.md?view=azuresqldb-mi-current">Instância Gerenciada do<br />Banco de Dados SQL</a></th>
->   <th><strong><em>* SQL Parallel<br />Data Warehouse*</em></strong></th>
+>   <th><a href="restore-statements-transact-sql.md?view=azuresqldb-mi-current">SQL Database<br />Managed Instance</a></th>
+>   <th><strong><em>* SQL Parallel<br />Data Warehouse *</em></strong></th>
 > </tr>
 > </table>
 
 &nbsp;
 
-# <a name="sql-parallel-data-warehouse"></a>SQL Parallel Data Warehouse
+# SQL Parallel Data Warehouse
 
 
-Restaura um banco de dados de usuário do [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] por meio de um backup de banco de dados em um dispositivo do [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. O banco de dados é restaurado por meio de um backup que foi criado anteriormente pelo comando [!INCLUDE[ssPDW](../../includes/sspdw-md.md)][BACKUP DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/backup-transact-sql.md). Use as operações de backup e restauração para criar um plano de recuperação de desastre ou mover bancos de dados de um dispositivo para outro.  
+Restores a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] user database from a database backup to a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] appliance. The database is restored from a backup that was previously created by the [!INCLUDE[ssPDW](../../includes/sspdw-md.md)][BACKUP DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/backup-transact-sql.md) command. Use the backup and restore operations to build a disaster recovery plan, or to move databases from one appliance to another.  
   
 > [!NOTE]  
->  A restauração do mestre inclui a restauração das informações de logon do dispositivo. Para restaurar um mestre, use a página [Restaurar o banco de dados mestre &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-the-master-database-transact-sql.md) da ferramenta **Configuration Manager**. Um administrador com acesso ao nó de Controle pode executar essa operação.  
-Para obter mais informações sobre backups de banco de dados do [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], confira "Backup e restauração" no [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
+>  Restoring master includes restoring appliance login information. To restore master, use the [Restore the master Database &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-the-master-database-transact-sql.md) page in the **Configuration Manager** tool. An administrator with access to the Control node can perform this operation.  
+For more information about [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] database backups, see "Backup and Restore" in the [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
-## <a name="syntax"></a>Sintaxe  
+## Syntax  
   
 ```sql  
   

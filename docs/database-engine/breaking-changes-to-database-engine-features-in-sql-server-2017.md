@@ -20,12 +20,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 9cbf4da7a23d100c9ab332f90224db2df1edc1d5
-ms.sourcegitcommit: d9b7625322a2c7444ed25ca311d63fe70eb6fa0a
+ms.openlocfilehash: d0477ddabf1a2691ef444e99dc7ca662a05abb1b
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39509025"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40406132"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-includesssqlv14-mdincludessssqlv14-mdmd"></a>Alterações interruptivas em recursos do Mecanismo de Banco de Dados no [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +44,11 @@ ms.locfileid: "39509025"
 
 -   [Alterações recentes em recursos do Mecanismo de Banco de Dados no SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)  
   
--   [Alterações recentes em recursos do Mecanismo de Banco de Dados no SQL Server 2014](https://msdn.microsoft.com/library/ms143179\(v=sql.120\))  
+-   [Alterações recentes em recursos do Mecanismo de Banco de Dados no SQL Server 2014](breaking-changes-to-database-engine-features-in-sql-server-2016.md))  
   
--   [Alterações recentes em recursos do Mecanismo de Banco de Dados no SQL Server 2012](https://msdn.microsoft.com/library/ms143179\(v=sql.110\))  
+-   [Alterações recentes em recursos do Mecanismo de Banco de Dados no SQL Server 2012](breaking-changes-to-database-engine-features-in-sql-server-2016.md))  
   
--   [Alterações recentes em recursos do Mecanismo de Banco de Dados no SQL Server 2008](https://msdn.microsoft.com/library/ms143179\(v=sql.100\))  
+-   [Alterações recentes em recursos do Mecanismo de Banco de Dados no SQL Server 2008](breaking-changes-to-database-engine-features-in-sql-server-2016.md))  
   
 ## <a name="see-also"></a>Consulte Também  
  [Recursos do Mecanismo de Banco de Dados preteridos no SQL Server 2016](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   

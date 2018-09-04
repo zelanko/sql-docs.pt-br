@@ -1,14 +1,14 @@
 ---
 title: Implantar pacotes com o SSIS | Microsoft Docs
 ms.custom: ''
-ms.date: 11/16/2016
+ms.date: 08/20/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: integration-services
 ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: quickstart
 helpviewer_keywords:
 - deployment tutorial [Integration Services]
 - deploying packages [Integration Services]
@@ -24,12 +24,12 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9f7abdad422347e140e230eac9b7f19a78d5ba47
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: f7f28ae86cab01c86aa7360618b080ec4ff124e2
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35328260"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43028810"
 ---
 # <a name="deploy-packages-with-ssis"></a>Implantar pacotes com o SSIS
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornece ferramentas que facilitam a implantação de pacotes em outro computador. As ferramentas de implantação também gerenciam qualquer dependência, como configurações e arquivos que o pacote precisa. Neste tutorial, você aprenderá a usar essas ferramentas para instalar pacotes e suas dependências em um computador de destino.    
@@ -45,37 +45,49 @@ Você copiará o pacote de implantação no computador de destino e executará o
 Por fim, você executará os pacotes no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] usando o Utilitário do Pacote de Execução.    
     
 O objetivo deste tutorial é simular a complexidade dos problemas reais de implantação que você poderá encontrar. Porém, se não for possível implantar os pacotes em um computador diferente, você ainda poderá executar este tutorial instalando os pacotes no banco de dados msdb em uma instância local do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]e depois executar os pacotes do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] na mesma instância.    
-    
-## <a name="what-you-will-learn"></a>O que você aprenderá    
+
+**Tempo estimado para concluir este tutorial:** 2 horas
+
+## <a name="what-you-learn"></a>O que você aprenderá    
 O melhor modo de se familiarizar com as novas ferramentas, controles e recursos disponíveis no [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] é utilizando-os. Este tutorial guia você através das etapas para criar um projeto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e adicionar pacotes e outros arquivos necessários ao projeto. Após a conclusão do projeto, você criará um grupo de implantação, copiará o grupo para o computador de destino e instalará os pacotes no computador de destino.    
     
-## <a name="requirements"></a>Requisitos    
+## <a name="prerequisites"></a>Prerequisites    
 Este tutorial destina-se a usuários que já estão familiarizados com as operações básicas do sistema de arquivos, mas que tiveram pouca exposição aos novos recursos disponíveis no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Para entender melhor os conceitos básicos do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que serão usados neste tutorial, talvez seja útil concluir primeiro este tutorial do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] : [SSIS: Como criar um pacote ETL](../integration-services/ssis-how-to-create-an-etl-package.md).    
     
-**Computador de origem.** O computador no qual você criará o pacote de implantação **deve ter os seguintes componentes instalados:**
-- SQL Server  
-- Dados de exemplo, pacotes concluídos, configurações e um Leiame. Esses arquivos são instalados juntos, se você baixar os [Bancos de dados de exemplo do Adventure Works 2014](https://msftdbprodsamples.codeplex.com/releases/view/125550).     
-> **Observação!** Verifique se que você tem permissão para criar e remover tabelas no AdventureWorks ou outros dados que você usa.         
+### <a name="on-the-source-computer"></a>No computador de origem
+
+O computador no qual você criará o pacote de implantação **deverá ter os seguintes componentes instalados:**
+
+- SQL Server. (Baixe uma edição do desenvolvedor ou de avaliação gratuita do SQL Server de [Downloads do SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads).)
+
+- Dados de exemplo, pacotes concluídos, configurações e um Leiame. Para baixar os dados de exemplo e os pacotes de lição como um arquivo zip, veja os [Arquivos de Tutorial do SQL Server Integration Services](https://www.microsoft.com/download/details.aspx?id=56827). A maioria dos arquivos no arquivo Zip é somente leitura a fim de impedir alterações acidentais. Para gravar algo em um arquivo ou alterá-lo, talvez você precise desligar o atributo somente leitura nas propriedades do arquivo.
+
+-   O banco de dados de exemplo **AdventureWorks2014**. Para baixar o banco de dados **AdventureWorks2014**, baixe `AdventureWorks2014.bak` em [Bancos de dados de exemplo do AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) e restaure o backup.  
+
+-   Você deve ter permissão para criar tabelas no banco de dados do AdventureWorks e para removê-las dele.
     
 -   [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).    
     
-**Computador de destino.** O computador no qual você implanta os pacotes **deve ter os seguintes componentes instalados:**    
+### <a name="on-the-destination-computer"></a>No computador de destino
+
+O computador no qual você implanta os pacotes **deve ter os seguintes componentes instalados:**    
     
-- SQL Server
-- Dados de exemplo, pacotes concluídos, configurações e um Leiame. Esses arquivos são instalados juntos, se você baixar os [Bancos de dados de exemplo do Adventure Works 2014](https://msftdbprodsamples.codeplex.com/releases/view/125550). 
+- SQL Server. (Baixe uma edição do desenvolvedor ou de avaliação gratuita do SQL Server de [Downloads do SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads).)
+
+- Dados de exemplo, pacotes concluídos, configurações e um Leiame. Para baixar os dados de exemplo e os pacotes de lição como um arquivo zip, veja os [Arquivos de Tutorial do SQL Server Integration Services](https://www.microsoft.com/download/details.aspx?id=56827). A maioria dos arquivos no arquivo Zip é somente leitura a fim de impedir alterações acidentais. Para gravar algo em um arquivo ou alterá-lo, talvez você precise desligar o atributo somente leitura nas propriedades do arquivo.
+
+-   O banco de dados de exemplo **AdventureWorks2014**. Para baixar o banco de dados **AdventureWorks2014**, baixe `AdventureWorks2014.bak` em [Bancos de dados de exemplo do AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) e restaure o backup.  
     
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).    
     
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].    
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Para instalar o SSIS, veja [Instalar o Integration Services](install-windows/install-integration-services.md).
     
--   Você deve ter permissão para criar e remover tabelas no AdventureWorks e para executar pacotes no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].    
+-   Você deve ter permissão para criar tabelas no banco de dados do AdventureWorks e para removê-las dele, bem como para executar pacotes do SSIS no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].    
     
--   Você deve ter permissão de leitura e gravação na tabela sysssispackages no banco de dados do sistema msdb do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .    
+-   Você deve ter permissão de leitura e gravação na tabela `sysssispackages` no banco de dados do sistema `msdb` do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].    
     
 Se você planeja implantar pacotes no mesmo computador em que criará o grupo de implantação, esse computador deverá atender aos requisitos dos computadores de origem e de destino.    
-    
-**Tempo estimado para concluir este tutorial:** 2 horas    
-    
+        
 ## <a name="lessons-in-this-tutorial"></a>Lições neste tutorial    
 [Lição 1: Preparando-se para criar o pacote de implantação](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)    
 Nesta lição, você irá se preparar para implantar uma solução ETL criando um novo projeto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] e adicionando os pacotes e outros arquivos necessários ao projeto.    

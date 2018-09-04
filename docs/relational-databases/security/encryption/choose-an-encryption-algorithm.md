@@ -1,7 +1,7 @@
 ---
 title: Escolha um algoritmo de criptografia | Microsoft Docs
 ms.custom: ''
-ms.date: 01/08/2016
+ms.date: 08/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -18,13 +18,13 @@ ms.assetid: 8227028c-a9c9-489d-bd27-fbf8242634ae
 author: aliceku
 ms.author: aliceku
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 5056f8097b9fc96448f5a281a5a67d7d047389b3
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: e96d3dd33c71172c10f5fcd99dbc7690286586c1
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39549596"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43096554"
 ---
 # <a name="choose-an-encryption-algorithm"></a>Escolher um algoritmo de criptografia
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,11 +41,13 @@ ms.locfileid: "39549596"
   
 -   As chaves extensas geralmente produzem uma criptografia mais segura que as chaves mais curtas.  
   
--   A criptografia assimétrica é mais fraca que a criptografia simétrica, que usa o mesmo comprimento de chave mas é relativamente lenta.  
+-   A criptografia assimétrica é mais lenta que a criptografia simétrica.  
   
 -   Codificações em bloco com chaves extensas são mais seguras que codificações em fluxo.  
   
 -   Senhas longas e complexas são mais seguras que senhas curtas.  
+
+-   A criptografia simétrica é geralmente recomendada quando a chave é armazenada somente localmente, enquanto a criptografia assimétrica é recomendada quando chaves precisam ser compartilhadas pela rede.
   
 -   Se você estiver criptografando muitos dados, deve criptografá-los usando uma chave simétrica e criptografar a chave simétrica com uma chave assimétrica.  
   

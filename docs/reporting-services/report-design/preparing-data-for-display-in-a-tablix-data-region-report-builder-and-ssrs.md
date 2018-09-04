@@ -1,7 +1,7 @@
 ---
 title: Preparando dados para exibição em uma região de dados Tablix (Construtor de Relatórios e SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-design
@@ -15,12 +15,12 @@ caps.latest.revision: 5
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e6b8f3672b21a43c87eb1dec7008593a93f3b850
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0106cac1213e9037008bc9c89b0ef501457c6446
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33023963"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40406581"
 ---
 # <a name="preparing-data-for-display-in-a-tablix-data-region-report-builder-and-ssrs"></a>Preparando dados para exibição em uma região de dados Tablix (Construtor de Relatórios e SSRS)
   Uma região de dados tablix exibe dados de um conjunto de dados. É possível exibir todos os dados recuperados do conjunto de dados ou criar filtros para exibir apenas um subconjunto dos dados. Você também pode adicionar expressões condicionais para preencher valores nulos ou modificar a consulta de um conjunto de dados para incluir colunas que identificam a ordem de classificação de uma coluna existente.  
@@ -37,7 +37,7 @@ ms.locfileid: "33023963"
 =IIF(Fields!Size.Value IS NOTHING,"Null",Fields!Size.Value)  
 ```  
   
- Para obter mais informações sobre como eliminar nulos dos dados antes de recuperá-los por meio de uma fonte de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com o uso de consultas do [!INCLUDE[tsql](../../includes/tsql-md.md)] , consulte "Valores nulos" e "Valores nulos e junções" na documentação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nos [Manuais Online do SQL Server](http://go.microsoft.com/fwlink/?linkid=120955).  
+ Para obter mais informações sobre como eliminar nulos nos dados antes de recuperar dados de uma fonte de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando consultas [!INCLUDE[tsql](../../includes/tsql-md.md)], veja [NULL e UNKNOWN (Transact-SQL)](../../t-sql/language-elements/null-and-unknown-transact-sql.md).  
   
 ## <a name="handling-null-field-names"></a>Tratando nomes de campo nulos  
  Não há problemas em testar valores nulos em uma expressão contanto que o próprio campo esteja no conjunto de resultados da consulta. Usando código personalizado, é possível testar se o próprio campo está presente nos campos da coleção retornados da fonte de dados em tempo de execução. Para obter mais informações, consulte [Referências de coleções de campos de conjuntos de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md).  

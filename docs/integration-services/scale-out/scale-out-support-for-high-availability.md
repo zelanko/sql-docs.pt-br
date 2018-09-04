@@ -14,12 +14,12 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 3af4b868e42a1f327af5ee8616fe5629e0e2a485
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 3ab8635837723b99a559bffcd546ff99d27fe283
+ms.sourcegitcommit: e2a19dfac1b581237ef694071fbace4768bb6bf4
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35411798"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "40410420"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Suporte do Scale Out para alta disponibilidade
 
@@ -109,6 +109,9 @@ No SQL Server primário, execute o procedimento armazenado `[catalog].[update_ma
 ## <a name="9-add-the-scale-out-workers"></a>9. Adicionar os Trabalhos do Scale Out
 
 Agora, você pode adicionar Trabalhos do Scale Out com a ajuda do [Gerenciador do Integration Services Scale Out](integration-services-ssis-scale-out-manager.md). Insira `[SQL Server Availability Group Listener DNS name],[Port]` na página de conexão.
+
+# <a name="upgrade-scale-out-in-high-availability-environment"></a>Atualizar o Scale Out em um ambiente de alta disponibilidade
+Para atualizar o Scale Out em um ambiente de alta disponibilidade, execute as [etapas de atualização do Always On para catálogo do SSIS](../catalog/ssis-catalog.md#Upgrade), atualize o Mestre do Scale Out e Trabalho do Scale Out em cada máquina e recrie a função do cluster de failover do Windows Server na etapa 7 acima com a nova versão do serviço Mestre do Scale Out.
 
 ## <a name="next-steps"></a>Próximas etapas
 Para saber mais, veja os tópicos a seguir:

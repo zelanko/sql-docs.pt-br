@@ -14,12 +14,12 @@ caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: c816df2aca01dd17d2c5d5e613f86995ccdda092
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 3790b44568d0f39c67f6a24db742fec6d7b7cf94
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981738"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40409459"
 ---
 # <a name="add-an-additional-reporting-services-web-front-end-to-a-farm"></a>Adicionar um front-end da Web do Reporting Services a um farm
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] O modo SharePoint inclui componentes necessários para servidores de aplicativos e WFE (servidores de front-end da Web). Este tópico aborda a instalação de componentes do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] necessárias para um servidor de WFE, inclusive as páginas de aplicativo usadas por recursos do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] como assinaturas, alertas de dados e [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]. A instalação primária do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] necessária para um WFE é instalar o suplemento do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para produtos do SharePoint 2016.  
@@ -54,7 +54,7 @@ ms.locfileid: "38981738"
 |Etapa|Descrição e link|  
 |----------|--------------------------|  
 |Adicione um servidor do SharePoint a um farm.|Você precisará instalar o SharePoint para implantar outro aplicativo do Reporting Services.<br/><br/>Para o SharePoint 2013, consulte [Adicionar o SharePoint Server a um farm no SharePoint Server 2013](https://technet.microsoft.com/library/cc261752(v=office.15).aspx).<br/><br/>Para o SharePoint 2016, consulte [Adicionar o SharePoint Server a um farm no SharePoint Server 2016](https://technet.microsoft.com/library/cc261752(v=office.16).aspx).|  
-|Instale o suplemento SQL Server Reporting Services para produtos do SharePoint 2016.|Há vários métodos para instalar o suplemento. As etapas a seguir usam o assistente de instalação do SQL Server. Para obter mais informações sobre como instalar o suplemento, consulte [Instalar ou desinstalar o suplemento Reporting Services para SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)<br /><br /> 1) Execute a instalação do SQL Server.<br /><br /> 2) Na página **Função de instalação** , selecione **Instalação de recurso do SQL Server**<br /><br /> 3) Na página **Seleção de Recursos** , selecione **Suplemento do Reporting Services para produtos SharePoint**<br /><br /> 4) Clique em **Avançar** nas próximas várias páginas para concluir as opções de instalação.<br /><br/>Para saber mais sobre a instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consulte [Instalar o primeiro servidor de relatório no modo do SharePoint](http://msdn.microsoft.com/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)|  
+|Instale o suplemento SQL Server Reporting Services para produtos do SharePoint 2016.|Há vários métodos para instalar o suplemento. As etapas a seguir usam o assistente de instalação do SQL Server. Para obter mais informações sobre como instalar o suplemento, consulte [Instalar ou desinstalar o suplemento Reporting Services para SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)<br /><br /> 1) Execute a instalação do SQL Server.<br /><br /> 2) Na página **Função de instalação** , selecione **Instalação de recurso do SQL Server**<br /><br /> 3) Na página **Seleção de Recursos** , selecione **Suplemento do Reporting Services para produtos SharePoint**<br /><br /> 4) Clique em **Avançar** nas próximas várias páginas para concluir as opções de instalação.<br /><br/>Para obter mais informações sobre a instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], veja [Instalar o primeiro servidor de relatório no modo do SharePoint](install-the-first-report-server-in-sharepoint-mode.md)|  
 |Verifique se o novo servidor está operacional.|1) Na Administração Central do SharePoint, clique em **Gerenciar servidores neste farm** no grupo **Configurações do Sistema** .<br /><br /> 2) Verifique se o novo servidor está na lista.|  
 |Atualize sua solução de NLB.|Se apropriado, atualize seu ambiente de hardware ou software NLB para incluir o novo servidor.|  
 

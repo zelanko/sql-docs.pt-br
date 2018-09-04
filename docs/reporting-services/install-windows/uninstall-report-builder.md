@@ -14,18 +14,18 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e4cdf1a8b5c690e8f4ac25ddf28843dc36a5b63e
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 72a6b25840fe897d2fa15c3ced283e6968893ec4
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35322785"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40411739"
 ---
 # <a name="uninstall-report-builder"></a>Desinstalar o Construtor de Relatórios
 
 É possível desinstalar a versão autônoma do Construtor de Relatórios no painel de controle ou na linha de comando.
 
-A desinstalação do Construtor de Relatórios a partir da linha de comando usa a sintaxe idêntica à sintaxe usada para instalar o Construtor de Relatórios, exceto pelo uso da opção /x em vez da opção /i. As linhas de comando de desinstalação também podem incluir a opção /quiet e outras opções padrão. Se o pacote do Windows Installer do Construtor de Relatórios (ReportBuilder3_x86.msi) tiver sido removido, não será possível usar a linha de comando para desinstalar facilmente o Construtor de Relatórios. Para saber mais sobre como você pode remover o Construtor de Relatórios usando sua GUID, consulte a documentação do programa msiexec em [Opções de Linha de Comando](https://msdn.microsoft.com/library/windows/desktop/aa367988.aspx).  
+A desinstalação do Construtor de Relatórios a partir da linha de comando usa a sintaxe idêntica à sintaxe usada para instalar o Construtor de Relatórios, exceto pelo uso da opção /x em vez da opção /i. As linhas de comando de desinstalação também podem incluir a opção /quiet e outras opções padrão. Se o pacote do Windows Installer do Construtor de Relatórios (ReportBuilder3_x86.msi) tiver sido removido, não será possível usar a linha de comando para desinstalar facilmente o Construtor de Relatórios. Para saber mais sobre como você pode remover o Construtor de Relatórios usando sua GUID, consulte a documentação do programa msiexec em [Opções de Linha de Comando](/windows/desktop/Msi/command-line-options).  
 
 Se as pastas usadas pelo Construtor de Relatórios incluírem arquivos personalizados, as pastas e os arquivos serão preservados quando o Construtor de Relatórios for removido. Apenas os arquivos do Construtor de Relatórios serão removidos.  
 

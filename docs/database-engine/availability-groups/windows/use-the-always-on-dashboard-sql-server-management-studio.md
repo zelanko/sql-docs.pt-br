@@ -1,7 +1,7 @@
 ---
-title: Usar o painel do grupo de disponibilidade AlwaysOn (SQL Server Management Studio) | Microsoft Docs
+title: Usar o painel do grupo de disponibilidade Always On (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/30/2017
+ms.date: 08/09/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -18,59 +18,48 @@ caps.latest.revision: 30
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f4512fb251a34eaeb53bfdc18bb3bec98473f0cf
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 19772eb3ac64f060288a82353fa4d2ea705d9880
+ms.sourcegitcommit: b91c0a7e981749758bd38e47a530d4e7bf1c5dd9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34770552"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "40406569"
 ---
-# <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Usar o painel do grupo de disponibilidade AlwaysOn (SQL Server Management Studio)
+# <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Usar o painel do grupo de disponibilidade Always On (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Os administradores de banco de dados usam o painel do grupo de disponibilidade AlwaysOn para obter uma visão rápida da integridade de um grupo de disponibilidade e de suas réplicas de disponibilidade e seus bancos de dados no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Alguns dos usos típicos do painel do grupo de disponibilidade são:  
+  Os administradores de banco de dados usam o painel do grupo de disponibilidade Always On para obter uma visão rápida da integridade de um grupo de disponibilidade e de suas réplicas de disponibilidade e seus bancos de dados no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Alguns dos usos típicos do painel do grupo de disponibilidade são:  
   
--   Escolhendo uma réplica para um failover manual.  
-  
+-   Escolhendo uma réplica para um failover manual.    
 -   Estimando a perda de dados se você forçar um failover.  
-  
--   Avaliando o desempenho da sincronização de dados.  
-  
--   Avaliando o impacto do desempenho de uma réplica secundária de confirmação síncrona  
-  
- O painel fornece estados e indicadores chave de desempenho do grupo de disponibilidade, que permitem tomar decisões operacionais sobre alta disponibilidade usando os tipos de informações a seguir.  
-  
--   Estado de acúmulo da réplica  
-  
--   Modo e estado da sincronização  
-  
--   Perda de dados estimada  
-  
--   Tempo de recuperação estimado (refazer recuperação do atraso)  
-  
--   Detalhes da réplica de banco de dados  
-  
--   Modo e estado da sincronização  
-  
+-   Avaliando o desempenho da sincronização de dados.   
+-   Avaliando o impacto do desempenho de uma réplica secundária de confirmação síncrona 
+  -  O painel fornece estados e indicadores chave de desempenho do grupo de disponibilidade, que permitem tomar decisões operacionais sobre alta disponibilidade usando os tipos de informações a seguir.  
+-   Estado de acúmulo da réplica    
+-   Modo e estado da sincronização   
+-   Perda de dados estimada    
+-   Tempo de recuperação estimado (refazer recuperação do atraso)    
+-   Detalhes da réplica de banco de dados    
+-   Modo e estado da sincronização    
 -   Tempo para restauração do log  
   
-##  <a name="BeforeYouBegin"></a> Antes de começar  
+##  <a name="before-you-begin"></a>Antes de começar  
   
-###  <a name="Prerequisites"></a> Pré-requisitos  
+### <a name="prerequisites"></a>Prerequisites  
  Conecte-se à instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (instância de servidor) que hospeda a réplica primária ou secundária de um grupo de disponibilidade.  
   
-###  <a name="Security"></a> Segurança  
+### <a name="security"></a>Segurança  
   
-####  <a name="Permissions"></a> Permissões  
+#### <a name="permissions"></a>Permissões  
  Requer as permissões CONNECT, VIEW SERVER STATE e VIEW ANY DEFINITION.  
   
-##  <a name="SSMSProcedure"></a> Para iniciar o Painel AlwaysOn  
+##  <a name="to-start-the-always-on-dashboard"></a>Para iniciar o painel Always On  
   
 1.  No Pesquisador de Objetos, conecte à instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] na qual você deseja executar o Painel AlwaysOn.  
   
 2.  Expanda o nó **Alta Disponibilidade AlwaysOn** , clique com o botão direito do mouse em **Grupos de Disponibilidade** e clique em **Mostrar Painel**.  
   
-###  <a name="DashboardOptions"></a> Para alterar as opções do Painel AlwaysOn  
+###  <a name="change-always-on-dashboard-options"></a>Alterar as opções do Painel Always On  
  Você pode usar a caixa de diálogo [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]**Opções** para configurar o comportamento do Painel AlwaysOn do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para atualização e habilitação automática de uma política de AlwaysOn definida automaticamente.  
   
 1.  No menu **Ferramentas** , clique em **Opções**.  
@@ -79,7 +68,7 @@ ms.locfileid: "34770552"
   
 3.  Para habilitar uma política definida pelo usuário, selecione **Habilitar política AlwaysOn definida pelo usuário**.  
   
-##  <a name="AvGroupsView"></a> Resumo do grupo de disponibilidade  
+##  <a name="availability-group-summary"></a>Resumo do grupo de disponibilidade  
  A tela de grupo de disponibilidade exibe uma linha de resumo para cada grupo de disponibilidade para o qual a instância de servidor conectada hospeda uma réplica. Esse painel exibe as seguintes colunas.  
   
  **Nome do Grupo de Disponibilidade**  
@@ -183,16 +172,11 @@ O painel **Réplica de Disponibilidade** exibe as seguintes colunas:
  **Estado Operacional**  
  Indica o estado operacional atual da réplica secundária. Esse valor é ocultado por padrão. Os valores possíveis são:  
   
- **0**. Failover pendente  
-  
- **1**. Pendente  
-  
- **2**. Online  
-  
- **3**. Offline  
-  
- **4**. Falhou  
-  
+ **0**. Failover pendente    
+ **1**. Pendente    
+ **2**. Online    
+ **3**. Offline   
+ **4**. Falhou    
  **5**. Com falha, sem quorum  
   
  **NULL**. A réplica não é local  
@@ -209,17 +193,13 @@ O painel **Réplica de Disponibilidade** exibe as seguintes colunas:
 > [!NOTE]  
 >  Para obter informações sobre contadores de desempenho para réplicas de disponibilidade, veja [SQL Server, Réplica de Disponibilidade](../../../relational-databases/performance-monitor/sql-server-availability-replica.md).  
   
-##  <a name="AvDbDetails"></a> Para agrupar informações do grupo de disponibilidade  
+##  <a name="group-by-availability-group-information"></a>Agrupar por informações do grupo de disponibilidade  
  Para agrupar as informações, clique em **Agrupar por**e selecione uma das opções a seguir:  
   
--   **Réplicas de disponibilidade**  
-  
--   **Bancos de dados de disponibilidade**  
-  
+-   **Réplicas de disponibilidade**    
+-   **Bancos de dados de disponibilidade** 
 -   **Synchronization state**  
-  
--   **Prontidão de failover**  
-  
+-   **Prontidão de failover**   
 -   **Problemas**  
   
  O painel que exibe as informações agrupadas exibe as seguintes colunas:  
@@ -233,27 +213,22 @@ O painel **Réplica de Disponibilidade** exibe as seguintes colunas:
  **Estado da Sincronização**  
  Indica se um banco de dados de disponibilidade está sincronizado no momento com a réplica primária. Esse valor é mostrado por padrão. Os possíveis estados de sincronização são:  
   
--   **Não sincronizando**.  
-  
-    -   Para uma função primária, indica que o banco de dados não está pronto para sincronizar seu log de transações com os bancos de dados secundários correspondentes.  
-  
+-   **Não sincronizando**:  
+-   
+    -   Para uma função primária, indica que o banco de dados não está pronto para sincronizar seu log de transações com os bancos de dados secundários correspondentes.   
     -   Para um banco de dados secundário, indica que o banco de dados não iniciou a sincronização de log devido a um problema de conexão, está sendo suspenso ou está passando por estados de transição durante a inicialização ou uma troca de função.  
   
--   **Sincronizando**.  
+-   **Sincronizando**:
+-   
+     Em uma réplica primária:   
+    - Em um banco de dados primário, indica que este banco de dados está pronto para aceitar uma solicitação de exame de um banco de dados secundário.  
+    - Em uma réplica secundária, indica que há movimentação de dados ativa em andamento para este banco de dados secundário. 
   
-     Em uma réplica primária:  
   
-    -   Para um banco de dados primário, indica que este banco de dados está pronto para aceitar uma solicitação de exame de um banco de dados secundário.  
+-   **Sincronizado**: 
   
-    -   Em uma réplica secundária, indica que há movimentação de dados ativa em andamento para este banco de dados secundário.  
-  
-     Em uma réplica secundária, indica que há movimentação de dados ativa em andamento para esta réplica.  
-  
--   **Sincronizado**.  
-  
-     Para um banco de dados primário, indica se pelo menos um banco de dados secundário é sincronizado.  
-  
-     Para um banco de dados secundário, indica se o banco de dados está sincronizado com o banco de dados primário correspondente.  
+    - Para um banco de dados primário, indica se pelo menos um banco de dados secundário é sincronizado.
+    - Para um banco de dados secundário, indica se o banco de dados está sincronizado com o banco de dados primário correspondente.  
   
 -   **Revertendo**.  
   
@@ -272,15 +247,13 @@ O painel **Réplica de Disponibilidade** exibe as seguintes colunas:
  **Failover Readiness**  
  Indica em qual réplica de disponibilidade pode ser feito failover com ou sem perda de dados potencial. Essa coluna é mostrada por padrão. Os valores possíveis são:  
   
--   **Perda de Dados**  
-  
+-   **Perda de Dados**   
 -   **Sem Perda de Dados**  
   
  **Problemas**  
  Lista o nome do problema. Essa coluna é mostrada por padrão. Os valores possíveis são:  
   
--   **Avisos**. Clique para exibir os problemas de limites e avisos.  
-  
+-   **Avisos**. Clique para exibir os problemas de limites e avisos.   
 -   **Crítico**. Clique para exibir os problemas críticos.  
   
  Para obter uma lista de todos os problemas da política AlwaysOn, veja [Políticas do AlwaysOn para problemas operacionais com grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md).  
@@ -307,7 +280,7 @@ O painel **Réplica de Disponibilidade** exibe as seguintes colunas:
  Indica a taxa em KB por segundo na qual estão sendo enviados registros de log à réplica secundária. Esse valor é ocultado por padrão.  
   
  **Tamanho da Fila de Restauração (KB)**  
- Indica a quantidade de registros de log nos arquivos de log da réplica secundária que ainda não foram refeitos. Esse valor é ocultado por padrão.  
+ Indica o número de registros de log nos arquivos de log da réplica secundária que ainda não foram refeitos. Esse valor é ocultado por padrão.  
   
  **Taxa de Restauração (KB/segundo)**  
  Indica a taxa em KB por segundo na qual os registros de log estão sendo refeitos. Esse valor é ocultado por padrão.  
@@ -353,8 +326,16 @@ O painel **Réplica de Disponibilidade** exibe as seguintes colunas:
   
  **Hora da Última Operação de Refazer**  
  Indica a hora em que o último registro de log que foi refeito no banco de dados secundário. Esse valor é ocultado por padrão.  
-  
-##  <a name="RelatedTasks"></a> Tarefas relacionadas  
+ 
+
+## <a name="always-on-availability-group-latency-reports"></a>Relatórios de latência do grupo de disponibilidade Always On
+O relatório de latência do grupo de disponibilidade é uma ferramenta interna ao painel de controle de grupo de disponibilidade e está disponível em relatórios do [SQL Server Management Studio versão 17.4](../../../ssms/download-sql-server-management-studio-ssms.md). Esse recurso fornece um relatório fácil de entender que detalha o tempo gasto durante as várias fases do processo de transporte de log. Isso fornece uma maneira de restringir a causa potencial de latência durante o processo de sincronização. 
+
+O SQL Agent executa a coleta de dados e deve ser habilitado na réplica primária e pelo menos em uma das réplicas secundárias. Veja o relatório clicando com o botão direito do mouse no grupo de disponibilidade > Relatórios > Relatórios padrão no **Pesquisador de Objetos** do SQL Server Management Studio.  
+
+Para obter mais informações, veja [Relatórios de latência do grupo de disponibilidade Always On](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-always-on-availability-group-latency-reports/).
+
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [Usar as políticas AlwaysOn para exibir a integridade de um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   

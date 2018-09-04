@@ -1,7 +1,7 @@
 ---
 title: Always Encrypted (desenvolvimento do cliente) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/29/2016
+ms.date: 08/21/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -14,13 +14,13 @@ ms.assetid: 9595eb66-284c-4474-828f-8961a05ce989
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 3f2d372307528366248c5830626aee2b8fd14816
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 887603c4da7eb9a582d8068a98690116dc14128c
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39547146"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43076463"
 ---
 # <a name="always-encrypted-client-development"></a>Always Encrypted (desenvolvimento de cliente)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,9 +31,11 @@ Para obter detalhes sobre como desenvolver aplicativos que usam bancos de dados 
 
 - [Usando o Always Encrypted com o Provedor de Dados .NET Framework para SQL Server](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
 - [Use Always Encrypted com o Driver JDBC](../../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)
-- [Como usar Always Encrypted com o driver ODBC do Windows](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
+- [Uso do Always Encrypted com o Driver ODBC](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
+- [Como usar o Always Encrypted com drivers PHP](../../../connect/php/using-always-encrypted-php-drivers.md)
 
-
+> [!NOTE]
+> O Always Encrypted não é compatível atualmente com o [.NET Core](https://docs.microsoft.com/dotnet/core/).
 
 ## <a name="see-also"></a>Consulte Também
 

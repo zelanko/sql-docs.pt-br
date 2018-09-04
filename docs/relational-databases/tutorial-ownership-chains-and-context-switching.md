@@ -7,10 +7,8 @@ ms.prod_service: database-engine
 ms.component: tutorial
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.technology: ''
+ms.topic: quickstart
 applies_to:
 - SQL Server 2016
 helpviewer_keywords:
@@ -18,49 +16,52 @@ helpviewer_keywords:
 - ownership chains [SQL Server]
 ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 caps.latest.revision: 16
-author: rothja
-ms.author: jroth
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0da331fb54c04939ab66372395454650fb93b8e2
-ms.sourcegitcommit: dceecfeaa596ade894d965e8e6a74d5aa9258112
+ms.openlocfilehash: fc70ec0b789ba0873b4e843b77132ec14bf4d7aa
+ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40008798"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43024459"
 ---
 # <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Este tutorial usa um cenário para ilustrar os conceitos de segurança do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] envolvendo cadeias de propriedade e alternância de contexto de usuário.  
   
 > [!NOTE]  
-> Para executar o código nesse tutorial será necessário ter a segurança do Modo Misto configurada e o banco de dados [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] instalado. Para obter mais informações sobre a segurança de Modo Misto, consulte [Escolher um modo de autenticação](../relational-databases/security/choose-an-authentication-mode.md).  
+> Para executar o código nesse tutorial será necessário ter a segurança do Modo Misto configurada e o banco de dados AdventureWorks2017 instalado. Para obter mais informações sobre a segurança de Modo Misto, consulte [Escolher um modo de autenticação](../relational-databases/security/choose-an-authentication-mode.md).  
   
 ## <a name="scenario"></a>Cenário  
-Neste cenário, dois usuários precisam de contas para acessar dados de ordem de compra armazenados no banco de dados [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] . Os requisitos são os seguintes:  
+Neste cenário, dois usuários precisam de contas para acessar dados de ordem de compra armazenados no banco de dados AdventureWorks2017. Os requisitos são os seguintes:  
   
 -   A primeira conta (TestManagerUser) deve estar habilitada para que você veja todos os detalhes em cada ordem de compra.  
-  
 -   A segunda conta (TestEmployeeUser) deve estar habilitada para ver o número da ordem de compra, a data do pedido, a data de envio, os números de ID do produto e os itens solicitados e recebidos por ordem de compra, por número de ordem de compra, para itens cujos envios parciais foram recebidos.  
-  
--   Todas as outras contas devem reter suas permissões atuais.  
-  
+-   Todas as outras contas devem reter suas permissões atuais.   
 Para atender aos requisitos deste cenário, o exemplo é dividido em quatro partes que demonstram os conceitos de cadeia de propriedade e alternância de contexto:  
   
-1.  Configurando o ambiente.  
-  
-2.  Criando um procedimento armazenado para acessar dados por ordem de compra.  
-  
+1.  Configurando o ambiente.   
+2.  Criando um procedimento armazenado para acessar dados por ordem de compra.   
 3.  Acessando os dados pelo procedimento armazenado.  
-  
 4.  Redefinindo o ambiente.  
   
-Cada bloco de código neste exemplo é explicado em linha. Para copiar o exemplo completo, consulte [Exemplo completo](#CompleteExample) no fim deste tutorial.  
+Cada bloco de código neste exemplo é explicado em linha. Para copiar o exemplo completo, consulte [Exemplo completo](#CompleteExample) no fim deste tutorial.
+
+## <a name="prerequisites"></a>Prerequisites
+Para concluir este tutorial, você precisará do SQL Server Management Studio, bem como acesso a um servidor que executa o SQL Server e um banco de dados do AdventureWorks.
+
+- Instalar o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Instalar o [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+- Baixe o [Bancos de dados de exemplo do AdventureWorks2017](https://docs.microsoft.com/sql/samples/adventureworks-install-configure).
+
+Para obter instruções sobre como restaurar um banco de dados no SQL Server Management Studio, veja [Restaurar um banco de dados](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms).   
   
 ## <a name="1-configure-the-environment"></a>1. Configure o ambiente  
-Use o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e o código a seguir para abrir o banco de dados `AdventureWorks2012` e use a instrução [!INCLUDE[tsql](../includes/tsql-md.md)] `CURRENT_USER` para verificar se o usuário dbo é exibido como o contexto.  
+Use o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] e o código a seguir para abrir o banco de dados `AdventureWorks2017` e use a instrução [!INCLUDE[tsql](../includes/tsql-md.md)] `CURRENT_USER` para verificar se o usuário dbo é exibido como o contexto.  
   
 ```sql
-USE AdventureWorks2012;  
+USE AdventureWorks2017;  
 GO  
 SELECT CURRENT_USER AS 'Current User Name';  
 GO  
@@ -68,7 +69,7 @@ GO
   
 Para obter mais informações sobre a instrução CURRENT_USER, consulte [CURRENT_USER &#40;Transact-SQL&#41;](../t-sql/functions/current-user-transact-sql.md).  
   
-Use esse código como o usuário dbo para criar dois usuários no servidor e no banco de dados [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)].  
+Use este código como o usuário dbo para criar dois usuários no servidor e no banco de dados AdventureWorks2017.  
   
 ```sql
 CREATE LOGIN TestManagerUser   
@@ -180,6 +181,12 @@ SELECT *
 FROM Purchasing.PurchaseOrderDetail;  
 GO  
 ```  
+
+O erro que é retornado:
+```
+Msg 229, Level 14, State 5, Line 6
+The SELECT permission was denied on the object 'PurchaseOrderHeader', database 'AdventureWorks2017', schema 'Purchasing'.
+```
   
 Como os objetos referenciados pelos procedimentos armazenados criados na última seção são de propriedade do `TestManagerUser` em virtude da propriedade de esquema `Purchasing` , `TestEmployeeUser` pode acessar as tabelas base pelo procedimento armazenado. O código a seguir, ainda usando o contexto `TestEmployeeUser` , passa a ordem de compra 952 como um parâmetro.  
   
@@ -223,7 +230,7 @@ Last Updated: Books Online
 Conditions:   Execute as DBO or sysadmin in the AdventureWorks database  
 Section 1:    Configure the Environment   
 */  
-USE AdventureWorks2012;  
+USE AdventureWorks2017;  
 GO  
 SELECT CURRENT_USER AS 'Current User Name';  
 GO  

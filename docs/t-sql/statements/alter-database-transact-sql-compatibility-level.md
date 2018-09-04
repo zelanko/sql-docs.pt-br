@@ -27,13 +27,13 @@ caps.latest.revision: 89
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: edf54224fddb5fce7eafdc978d05535264aa29d0
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 2c57b2d89689207885f621e6619b4771a4a217fe
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452670"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43099372"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Nível de compatibilidade de ALTER DATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -148,7 +148,7 @@ Da perspectiva do aplicativo, a meta é ainda deve ser atualizar para o último 
 > A funcionalidade descontinuada introduzida em uma versão específica do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não é protegida pelo nível de compatibilidade. Refere-se à funcionalidade removida do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].
 > 
 > Por exemplo, a dica `FASTFIRSTROW` foi descontinuada no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e substituída pela dica `OPTION (FAST n )`. A definição do nível de compatibilidade do banco de dados como 110 não restaurará a dica descontinuada.
-> Para obter mais informações sobre a funcionalidade descontinuada, consulte [Funcionalidade descontinuada do Mecanismo de Banco de Dados no SQL Server 2016](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md), [Funcionalidade descontinuada do Mecanismo de Banco de Dados no SQL Server 2014](http://msdn.microsoft.com/library/ms144262(v=sql.120)), [Funcionalidade descontinuada do Mecanismo de Banco de Dados no SQL Server 2012](http://msdn.microsoft.com/library/ms144262(v=sql.110)) e [Funcionalidade descontinuada do Mecanismo de Banco de Dados no SQL Server 2008](http://msdn.microsoft.com/library/ms144262(v=sql.100)).
+> Para obter mais informações sobre a funcionalidade descontinuada, consulte [Funcionalidade descontinuada do Mecanismo de Banco de Dados no SQL Server 2016](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md), [Funcionalidade descontinuada do Mecanismo de Banco de Dados no SQL Server 2014](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)), [Funcionalidade descontinuada do Mecanismo de Banco de Dados no SQL Server 2012](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)) e [Funcionalidade descontinuada do Mecanismo de Banco de Dados no SQL Server 2008](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)).
 
 > [!IMPORTANT]
 > As alterações recentes introduzidas em determinada versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **podem** não estar protegidas pelo nível de compatibilidade. Refere-se às alterações de comportamento entre versões do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Geralmente, o comportamento do [!INCLUDE[tsql](../../includes/tsql-md.md)] é protegido pelo nível de compatibilidade. No entanto, os objetos do sistema alterados ou removidos **não** são protegidos pelo nível de compatibilidade.
@@ -159,7 +159,7 @@ Da perspectiva do aplicativo, a meta é ainda deve ser atualizar para o último 
 > -  Alterações de nomes de coluna em objetos do sistema. No [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], a coluna *single_pages_kb* no sys.dm_os_sys_info foi renomeada para *pages_kb*. Seja qual for o nível de compatibilidade, a consulta `SELECT single_pages_kb FROM sys.dm_os_sys_info` gerará o erro 207 (Nome de coluna inválido).
 > -  Objetos do sistema removidos. No [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], o `sp_dboption` foi removido. Seja qual for o nível de compatibilidade, a instrução `EXEC sp_dboption 'AdventureWorks2016CTP3', 'autoshrink', 'FALSE';` gerará o erro 2812 (Não foi possível encontrar o procedimento armazenado 'sp_dboption').
 >
-> Para obter mais informações sobre alterações recentes, consulte [Alterações recentes em recursos do Mecanismo de Banco de Dados no SQL Server 2017](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md), [Alterações recentes em recursos do Mecanismo de Banco de Dados no SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md), [Alterações recentes em recursos do Mecanismo de Banco de Dados no SQL Server 2014](http://msdn.microsoft.com/library/ms143179(v=sql.120)), [Alterações recentes em recursos do Mecanismo de Banco de Dados no SQL Server 2012](http://msdn.microsoft.com/library/ms143179(v=sql.110)) e [Alterações recentes em recursos do Mecanismo de Banco de Dados no SQL Server 2008](http://msdn.microsoft.com/library/ms143179(v=sql.100)).
+> Para obter mais informações sobre alterações recentes, consulte [Alterações recentes em recursos do Mecanismo de Banco de Dados no SQL Server 2017](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md), [Alterações recentes em recursos do Mecanismo de Banco de Dados no SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md), [Alterações recentes em recursos do Mecanismo de Banco de Dados no SQL Server 2014](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)), [Alterações recentes em recursos do Mecanismo de Banco de Dados no SQL Server 2012](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)) e [Alterações recentes em recursos do Mecanismo de Banco de Dados no SQL Server 2008](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)).
   
 ## <a name="best-practices-for-upgrading-database-compatibility-level"></a>Melhores práticas para atualizar o nível de compatibilidade do banco de dados 
 Para obter o fluxo de trabalho recomendado para atualizar o nível de compatibilidade, consulte [Alterar o modo de compatibilidade do banco de dados e usar o Repositório de Consultas](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md).  

@@ -17,12 +17,12 @@ caps.latest.revision: 16
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 2f7eecd7b6b98f03e75abea03370dff14524333f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 75567e7c1dfd0ca78adaf283d09c7c6a0019c706
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33022483"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40405150"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>Conjuntos de dados inseridos e compartilhados de relatório (Construtor de Relatórios e SSRS)
   Um conjunto de dados especifica os dados que você pode usar a partir de uma conexão de dados. Um conjunto de dados é baseado em uma conexão de dados que foi salva no relatório como uma fonte de dados inserida ou uma referência a uma fonte de dados compartilhada em um servidor de relatório. O conjunto de dados inclui uma consulta que especifica um conjunto de campos. Ao arrastar esses campos para a superfície de design, você cria expressões que avaliam os dados reais quando o relatório é executado.  
@@ -129,7 +129,7 @@ ms.locfileid: "33022483"
   
  A diferença entre as fontes de dados inseridas e compartilhadas está em como elas são criadas, armazenadas e gerenciadas. A tabela seguinte resume as diferenças entre fontes de dados inseridas e compartilhadas:  
   
-|Description|Inserida<br /><br /> fonte de dados|Compartilhado<br /><br /> fonte de dados|  
+|Descrição|Inserida<br /><br /> fonte de dados|Compartilhado<br /><br /> fonte de dados|  
 |-----------------|------------------------------|----------------------------|  
 |A conexão de dados é inserida na definição do relatório.|![Disponível](../../reporting-services/report-data/media/greencheck.gif "Disponível")||  
 |O ponteiro para a conexão de dados no servidor de relatório é inserido na definição do relatório.||![Disponível](../../reporting-services/report-data/media/greencheck.gif "Disponível")|  
@@ -181,7 +181,7 @@ ms.locfileid: "33022483"
  Você não pode agrupar dados em um conjunto de dados. Para agregar dados em um conjunto de dados, você pode editar o comando de consulta para calcular agregações antes de os dados serem recuperados para um relatório. Eles são conhecidos como *agregações do servidor*. Em expressões, para identificar estes valores como agregações pré-calculadas, use a função de agregação. Para obter mais informações, consulte [Função Aggregate &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-function.md).  
   
 ##  <a name="Parameters"></a> Usando parâmetros e conjuntos de dados  
- Para uma consulta de banco de dados inserido que contém variáveis de consulta, parâmetros de consulta e os parâmetros de relatório correspondentes são automaticamente criados. Quando o relatório é executado, o valor do parâmetro do relatório é vinculado ao parâmetro de consulta do conjunto de dados. Dessa maneira, o comando de consulta que é executado na fonte de dados externa inclui os valores que são especificados para parâmetros de relatório. Os parâmetros de relatório permitem que um usuário escolha os dados que deseja ver no relatório. Veja como os parâmetros de consulta e de relatório são vinculados na página [Caixa de diálogo Propriedades de Banco de Dados, Parâmetros &#40;Construtor de Relatórios&#41;](http://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda).  
+ Para uma consulta de banco de dados inserido que contém variáveis de consulta, parâmetros de consulta e os parâmetros de relatório correspondentes são automaticamente criados. Quando o relatório é executado, o valor do parâmetro do relatório é vinculado ao parâmetro de consulta do conjunto de dados. Dessa maneira, o comando de consulta que é executado na fonte de dados externa inclui os valores que são especificados para parâmetros de relatório. Os parâmetros de relatório permitem que um usuário escolha os dados que deseja ver no relatório. Veja como os parâmetros de consulta e de relatório são vinculados na página Caixa de diálogo Propriedades de Banco de Dados, Parâmetros.  
   
  Para um conjunto de dados compartilhado, os parâmetros de consulta fazem parte da definição de conjunto de dados compartilhada que pode ser gerenciada no servidor de relatório independentemente de um relatório. A lista seguinte descreve o suporte para valores de parâmetros de consulta:  
   
@@ -193,7 +193,7 @@ ms.locfileid: "33022483"
   
 -   Não pode incluir referências à coleção de Parâmetros interna, que representa os parâmetros de relatório.  
   
- Para configurar os valores do parâmetro de consulta para um conjunto de dados compartilhado, no modo de design de conjunto de dados, navegue e abra um conjunto de dados compartilhado do servidor de relatório e defina as opções na página [Caixa de diálogo Propriedades de Conjunto de Dados, Parâmetros &#40;Construtor de Relatórios&#41;](http://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda). Para obter mais informações, consulte [Criar um conjunto de dados compartilhado ou um conjunto de dados inserido &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
+ Para configurar os valores do parâmetro de consulta para um conjunto de dados compartilhado, no modo de design de conjunto de dados, navegue e abra um conjunto de dados compartilhado do servidor de relatório e defina as opções na página Caixa de diálogo Propriedades de Conjunto de Dados, Parâmetros. Para obter mais informações, consulte [Criar um conjunto de dados compartilhado ou um conjunto de dados inserido &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  
   
  Para algumas fontes de dados multidimensionais, como o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], o designer de consultas gráficas permite especificar filtros de consulta e selecionar uma opção para criar um parâmetro de consulta correspondente. Quando você seleciona a opção de parâmetro, a extensão de dados automaticamente cria um conjunto de dados de relatório separado para fornecer valores disponíveis em uma lista suspensa para aquele parâmetro. Por padrão, esses conjuntos de dados ocultos não são exibidos no painel de Dados do Relatório.  
   
@@ -222,7 +222,7 @@ ms.locfileid: "33022483"
  Durante o processamento do relatório, quando a consulta a um conjunto de dados é executada, o conjunto de resultados pode não conter nenhuma linha. No relatório renderizado, uma região de dados vinculada a um conjunto de dados vazio é exibida como uma região de dados vazia. É possível especificar um texto a ser exibido no relatório renderizado em lugar da região de dados vazia. Também é possível especificar uma mensagem para sub-relatórios quando as consultas a todos os conjuntos de dados não produzem nenhum dado em tempo de execução. Para obter mais informações, consulte [Definir uma mensagem Nenhum Dado para uma região de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md).  
   
 ##  <a name="Options"></a> Definindo opções do conjunto de dados  
- Para fontes de dados que oferecem suporte a dados internacionais, você deve ajustar as propriedades para um conjunto de dados que afetam a ordem de classificação, as propriedades de caracteres internacionais e a diferenciação de maiúsculas e minúsculas. Entre essas propriedades estão maiúsculas e minúsculas, tipo kana, largura, acentuação e agrupamento. Para obter mais informações, consulte “Considerações internacionais para aplicativos de banco de dados e aplicativos do Mecanismo de Banco de Dados” e “Trabalhando com agrupamentos” nos [manuais Online do SQL Server](http://go.microsoft.com/fwlink/?linkid=98335). Para obter mais informações sobre como definir essas propriedades, consulte [Caixa de diálogo Propriedades do Conjunto de Dados, Opções &#40;Construtor de Relatórios&#41;](../../reporting-services/report-data/dataset-properties-dialog-box-options-report-builder.md).  
+ Para fontes de dados que oferecem suporte a dados internacionais, você deve ajustar as propriedades para um conjunto de dados que afetam a ordem de classificação, as propriedades de caracteres internacionais e a diferenciação de maiúsculas e minúsculas. Entre essas propriedades estão maiúsculas e minúsculas, tipo kana, largura, acentuação e agrupamento. Para obter mais informações sobre como definir essas propriedades, consulte [Caixa de diálogo Propriedades do Conjunto de Dados, Opções &#40;Construtor de Relatórios&#41;](../../reporting-services/report-data/dataset-properties-dialog-box-options-report-builder.md).  
   
 ## <a name="see-also"></a>Consulte Também  
  [Coleção de campos de conjuntos de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   

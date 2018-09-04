@@ -25,12 +25,12 @@ caps.latest.revision: 78
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3544a4530c1650d02952c750d82bb9d51e2d6d50
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eabd43020196d312bb954f95e019b720b388410b
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32870231"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40410954"
 ---
 # <a name="server-memory-server-configuration-options"></a>Opções Server Memory de configuração do servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,8 @@ Para desabilitar a opção **Bloquear Páginas na Memória** do [!INCLUDE[ssNoVe
 A configuração dessa opção não afeta o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [gerenciamento de memória dinâmica](../../relational-databases/memory-management-architecture-guide.md#dynamic-memory-management), permitindo que você expanda ou reduza mediante a solicitação de outros administradores de memória. Ao usar o direito de usuário *Bloquear Páginas na Memória*, é recomendável definir um limite superior para a opção **max server memory**, conforme [detalhado acima](#max_server_memory).
 
 > [!IMPORTANT]
-> Essa opção só deverá ser configurada quando necessário, ou seja, se houver sinais de que o processo sqlservr está sendo paginado. Nesse caso, o erro 17890 será reportado no log de erros, que se assemelha ao exemplo abaixo: `A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.` A partir do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], o [sinalizador de rastreamento 845](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) não é necessário para que a Standard Edition use Páginas Bloqueadas. 
+> Essa opção só deverá ser configurada quando necessário, ou seja, se houver sinais de que o processo sqlservr está sendo paginado. Neste caso, o erro 17890 será reportado no log de erros, que se assemelha ao exemplo abaixo: `A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`
+> A partir do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], o [sinalizador de rastreamento 845](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) não é necessário para que a Standard Edition use páginas bloqueadas. 
   
 ### <a name="to-enable-lock-pages-in-memory"></a>Habilitar a opção Bloquear Páginas na Memória  
 Para habilitar a opção Bloquear Páginas na Memória:  
@@ -122,7 +123,7 @@ Para habilitar a opção Bloquear Páginas na Memória:
  É possível alterar essas configurações sem reinicializar as instâncias, para que você possa testar facilmente para encontrar as melhores configurações para seu padrão de uso.  
   
 ## <a name="providing-the-maximum-amount-of-memory-to-sql-server"></a>Fornecendo a quantidade máxima de memória para o SQL Server  
-A memória pode ser configurada até o limite de espaço do endereço virtual do processo em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Limites de memória para as versões do Windows e do Windows Server](http://msdn.microsoft.com/library/windows/desktop/aa366778(v=vs.85).aspx#physical_memory_limits_windows_server_2016).
+A memória pode ser configurada até o limite de espaço do endereço virtual do processo em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [Limites de memória para as versões do Windows e do Windows Server](/windows/desktop/Memory/memory-limits-for-windows-releases#physical_memory_limits_windows_server_2016).
   
 ## <a name="examples"></a>Exemplos  
   
@@ -168,5 +169,5 @@ FROM sys.dm_os_process_memory;
  [Edições e recursos com suporte do SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md#Cross-BoxScaleLimits)   
  [Edições e recursos com suporte do SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits)   
  [Edições e recursos compatíveis do SQL Server 2017 no Linux](../../linux/sql-server-linux-editions-and-components-2017.md#Cross-BoxScaleLimits)   
- [Limites de memória para as versões do Windows e do Windows Server](http://msdn.microsoft.com/library/windows/desktop/aa366778(v=vs.85).aspx)
+ [Limites de memória para as versões do Windows e do Windows Server](/windows/desktop/Memory/memory-limits-for-windows-releases)
  

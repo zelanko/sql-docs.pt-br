@@ -13,12 +13,12 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 3023b3d2847e206aa5646a14aa8a5ee5eff68a9c
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 31393f359faccf940178fd1d1a6b9d2e60d4b9e5
+ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35331250"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43082463"
 ---
 # <a name="integration-services-scale-out-manager"></a>Gerenciador do Integration Services Scale Out
 
@@ -38,13 +38,13 @@ No Pesquisador de Objetos, clique com o botão direito do mouse em **SSISDB** e 
 > [!NOTE]
 > Recomendamos executar o SSMS como administrador, pois algumas operações de gerenciamento do Scale Out, como a adição de um Trabalho do Scale Out, exigem privilégio administrativo.
 
-### <a name="2-open-scale-out-manager-by-running-ismanagerexe"></a>2. Abrir o Gerenciador do Scale Out executando ISManager.exe
+### <a name="2-open-scale-out-manager-by-running-managementtoolexe"></a>2. Abrir o Gerenciador do Scale Out executando ManagementTool.exe
 
-Localize `ISManager.exe` em `%SystemDrive%\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\Management`. Clique com o botão direito do mouse em **ISManager.exe** e selecione **Executar como administrador**. 
+Localize `ManagementTool.exe` em `%SystemDrive%\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\Management`. Clique com o botão direito do mouse em **ManagementTool.exe** e selecione **Executar como administrador**. 
 
 Depois de abrir o Gerenciador do Scale Out, insira o nome da instância do SQL Server do Mestre do Scale Out e conecte-se a ela para gerenciar seu ambiente do Scale Out.
 
-![Conexão do Portal](media/portal-connect.PNG)
+![Conexão do Portal](media/portal-connect-new.png)
 
 ## <a name="tasks-available-in-scale-out-manager"></a>Tarefas disponíveis no Gerenciador do Scale Out
 No Gerenciador do Scale Out, você pode fazer o seguinte:
@@ -52,42 +52,42 @@ No Gerenciador do Scale Out, você pode fazer o seguinte:
 ### <a name="enable-scale-out"></a>Habilitar Scale Out
 Depois de se conectar ao SQL Server, se o Scale Out não estiver habilitado, você poderá selecionar **Habilitar** para habilitá-lo.
 
-![Portal Habilitar o Scale Out](media/portal-enable-scale-out.PNG) 
+![Portal Habilitar o Scale Out](media/portal-enable-scale-out-new.PNG) 
 
 ### <a name="view-scale-out-master-status"></a>Exibir status do Mestre do Scale Out
 O status do Mestre do Scale Out será mostrado na página **Painel**.
 
-![Painel do Portal](media/portal-dashboard.PNG)
+![Painel do Portal](media/portal-dashboard-new.PNG)
 
 ### <a name="view-scale-out-worker-status"></a>Exibir o status do Trabalho do Scale Out
 O status do Trabalho do Scale Out é mostrado na página **Gerenciador do Trabalho**. Selecione cada trabalho para ver o status individual.
 
-![Portal Gerenciador do Trabalho](media/portal-worker-manager.PNG)
+![Portal Gerenciador do Trabalho](media/portal-worker-manager-new.PNG)
 
 ### <a name="add-a-scale-out-worker"></a>Adicionar um Trabalho do Scale Out
 Para adicionar um Trabalho do Scale Out, selecione **+** na parte inferior da lista do Trabalho do Scale Out. 
 
 Insira o nome do computador do Trabalho do Scale Out que você deseja adicionar e clique em **Validar**. O Gerenciador do Scale Out verifica se o usuário atual tem acesso aos repositórios de certificados nos computadores do Mestre do Scale Out e do Trabalho do Scale Out
 
-![Conectar Trabalho](media/connect-worker.PNG)
+![Conectar Trabalho](media/connect-worker-new.PNG)
 
 Se a validação for bem-sucedida, o Gerenciador do Scale Out tentará ler o arquivo de configuração do servidor de trabalho e obter a impressão digital do certificado do trabalho. Para obter mais informações, consulte [Trabalho do Scale Out](integration-services-ssis-scale-out-worker.md). Se o Gerenciador do Scale Out não puder ler o arquivo de configuração de serviço do trabalho, há duas maneiras alternativas de fornecer o certificado de trabalho. 
 
-1.  Você pode inserir a impressão digital do certificado de trabalho diretamente.
+- Você pode inserir a impressão digital do certificado de trabalho diretamente.
 
-    ![Certificado do trabalho 1](media/portal-cert1.PNG)
+    ![Certificado do trabalho 1](media/portal-cert1-new.PNG)
 
-2.  Ou fornecer o arquivo de certificado. 
+- Ou fornecer o arquivo de certificado.
 
-    ![Certificado do trabalho 2](media/portal-cert2.PNG)
+    ![Certificado do trabalho 2](media/portal-cert2-new.PNG)
 
 Depois de coletar as informações, o Gerenciador do Scale Out descreverá as ações a serem executadas. Normalmente, essas ações incluem a instalação do certificado, atualização do arquivo de configuração de serviço do trabalho e reinicialização do serviço do trabalho.
 
-![Portal Adicionar Confirmação 1](media/portal-add-confirm1.PNG)
+![Portal Adicionar Confirmação 1](media/portal-add-confirm1-new.PNG)
 
-Caso o certificado de trabalho não esteja acessível, você precisará atualizá-lo manualmente e reiniciar o serviço do trabalho.
+Caso a configuração de trabalho não esteja acessível, você precisará atualizá-lo manualmente e reiniciar o serviço do trabalho.
 
-![Portal Adicionar Confirmação 2](media/portal-add-confirm2.PNG)
+![Portal Adicionar Confirmação 2](media/portal-add-confirm2-new.PNG)
 
 Marque a caixa de seleção **Confirmar** e, em seguida, selecione **OK** para começar a adicionar um Trabalho do Scale Out.
 
@@ -100,7 +100,7 @@ Para habilitar ou desabilitar um Trabalho do Scale Out, selecione o Trabalho do 
 ## <a name="edit-a-scale-out-worker-description"></a>Editar a descrição de um Trabalho do Scale Out
 Para editar a descrição de um Trabalho do Scale Out, selecione o Trabalho do Scale Out e, em seguida, selecione **Editar**. Depois de terminar de editar a descrição, selecione **Salvar**.
 
-![Portal Salvar o Trabalho](media/portal-save-worker.PNG)
+![Portal Salvar o Trabalho](media/portal-save-worker-new.PNG)
 
 ## <a name="next-steps"></a>Próximas etapas
 Para saber mais, veja os tópicos a seguir:

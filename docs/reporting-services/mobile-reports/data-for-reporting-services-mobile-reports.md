@@ -15,12 +15,12 @@ caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b505c769fc86dd62b738a54c20c98adafd69db60
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f645d72cfc751aa302c7a4e4f4e13284b4197106
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33018263"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40405614"
 ---
 # <a name="data-for-reporting-services-mobile-reports"></a>Dados para relatórios móveis do Reporting Services
 O modelo de dados do [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] é simples. Os dados são importados para o [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] como uma coleção de conjuntos de dados. Relacionamentos formais entre conjuntos de dados não são necessários. As pesquisas de um conjunto de dados para outro funcionam desde que seus valores de chave correspondam. Agregações de data/hora são manipuladas pelo tempo de execução do relatório móvel e corresponderão entre diferente conjuntos de dados, mesmo que a granularidade de dados de data/hora seja diferente entre os conjuntos de dados.   
@@ -29,7 +29,7 @@ Você pode importar dados de dois tipos de fontes:
   
 * **Arquivos do Excel locais**: selecione um documento do Excel e escolha as planilhas a serem importadas. Após a importação, os dados são armazenados na definição de relatório móvel. Para atualizar os dados do arquivo original do Excel, use o comando **Atualizar Dados** no canto superior direito da guia [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] **Data** tab. Leia mais sobre como [preparar dados do Excel para relatórios móveis do SSRS](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md).  
   
-* **Conjuntos de dados compartilhados do [!INCLUDE[PRODUCT_NAME](../../includes/server-product-name.md)]**: navegue pela lista de conjuntos de dados publicados no servidor e selecione aqueles que você deseja adicionar ao relatório móvel. Relatórios móveis baseados em dados de servidor sempre permanecem conectados aos conjuntos de dados do servidor original e refletem o estado mais recente dos dados no servidor. Veja uma [lista de fontes de dados com suporte](https://msdn.microsoft.com/library/ms159219.aspx).   
+* **Conjuntos de dados compartilhados do Publicador de Relatórios Móveis do Microsoft SQL Server**: navegue pela lista de conjuntos de dados publicados no servidor e selecione aqueles que você deseja adicionar ao relatório móvel. Relatórios móveis baseados em dados de servidor sempre permanecem conectados aos conjuntos de dados do servidor original e refletem o estado mais recente dos dados no servidor. Veja uma [lista de fontes de dados com suporte](../report-data/data-sources-supported-by-reporting-services-ssrs.md).   
   
   Leia mais sobre [obter dados de conjuntos de dados no compartilhados no Publicador de Relatórios Móveis](../../reporting-services/mobile-reports/get-data-from-shared-datasets-in-reporting-services-mobile-reports.md).  
   
@@ -37,7 +37,7 @@ Depois de importar os dados para o [!INCLUDE[PRODUCT_NAME](../../includes/ss-mob
   
 ## <a name="connect-mobile-report-elements-to-data"></a>Conectar elementos de relatório móvel a dados ##  
   
-Cada elemento [!INCLUDE[PRODUCT_NAME](../../includes/short-product-name.md)] contém uma ou mais configurações de dados. Por exemplo, o elemento Medidor Radial contém duas configurações de dados: valor principal e o valor de comparação. Cada uma dessas configurações aponta para exatamente um campo (coluna) em um conjunto de dados específico.   
+Cada elemento do Publicador de Relatórios Móveis do SQL Server contém uma ou mais configurações de dados. Por exemplo, o elemento Medidor Radial contém duas configurações de dados: valor principal e o valor de comparação. Cada uma dessas configurações aponta para exatamente um campo (coluna) em um conjunto de dados específico.   
   
 O tempo de execução do relatório móvel fornece valores agregados para o medidor, com base nas seleções do usuário. Observe que o valor de comparação da mesma instância do Medidor Radial pode ser associado a um campo de um conjunto de dados diferente.   
   

@@ -1,7 +1,7 @@
 ---
 title: Atualizar um banco de dados do servidor de relatório | Microsoft Docs
 ms.custom: ''
-ms.date: 05/30/2017
+ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.reviewer: ''
@@ -18,18 +18,18 @@ caps.latest.revision: 44
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 4a15d4ee21977d16ed3f8b0a49d12b4c9e88cbd2
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 9997e0c0d68d01721a33924f8d7b1e7842a9a21a
+ms.sourcegitcommit: 9cd01df88a8ceff9f514c112342950e03892b12c
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35322605"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40405149"
 ---
 # <a name="upgrade-a-report-server-database"></a>Atualizar um banco de dados do servidor de relatório
 
 O banco de dados do servidor de relatório fornece armazenamento para uma ou mais instâncias do servidor de relatório. Como o esquema do banco de dados do servidor de relatório pode ser alterado a cada versão nova do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], é necessário que a versão do banco de dados corresponda à versão da instância do servidor de relatório que você está usando. Na maioria dos casos, um banco de dados do servidor de relatório pode ser atualizado automaticamente sem ação específica de sua parte.  
   
- **Modo nativo:** no modo nativo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , o banco de dados do servidor de relatório é realmente composto de dois bancos de dados que têm os nomes padrão de “ReportServer e ReportServerTempDB.”  
+ **Modo nativo**: no modo nativo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], o banco de dados do servidor de relatório é realmente composto de dois bancos de dados que têm os nomes padrão de ReportServer e ReportServerTempDB.  
   
  **Modo do SharePoint:** no modo do SharePoint do SQL Server 2016 Reporting Services, o banco de dados do servidor de relatório é, na verdade, uma coleção de bancos de dados que foi criada para cada instância do aplicativo do serviço [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
 
@@ -73,8 +73,7 @@ O banco de dados do servidor de relatório fornece armazenamento para uma ou mai
 ## <a name="next-steps"></a>Próximas etapas
 
 [Gerenciador de Configurações do Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
-[Criar um banco de dados do servidor de relatório](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
-[Assistente para Alterar Banco de Dados](http://msdn.microsoft.com/library/1a2e8d18-5997-482f-a9c1-87d99f7407b8)   
+[Criar um banco de dados do servidor de relatório](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)  
 [Atualizar e migrar o Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 [Migrar uma instalação do Reporting Services](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
 

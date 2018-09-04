@@ -15,12 +15,12 @@ caps.latest.revision: 4
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 3503952eb791c4423826626b98e8f8feb2bce0c7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 961f4e01d9a3a027f7b6cf065103a8076feac52b
+ms.sourcegitcommit: 7064d7ea091ead7ba4916660c79b352ba4a911a1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38066664"
+ms.lasthandoff: 08/22/2018
+ms.locfileid: "42432507"
 ---
 # <a name="troubleshoot-data-retrieval-issues-with-reporting-services-reports"></a>Solucionar problemas de recuperação de dados com relatórios do Reporting Services
 A primeira etapa durante o processamento do relatório é recuperar seus dados para cada conjunto de dados executando a consulta de conjunto de dados. Quando você visualiza um relatório localmente, as conexões de fonte de dados e credenciais precisam usar permissões suficientes para recuperar os dados para o computador. Quando você executa um relatório no servidor de relatório, as conexões de fonte de dados e credenciais precisam usar permissões suficientes para recuperar os dados nesse servidor. Use este tópico para ajudar a solucionar problemas sobre a recuperação de dados do relatório.   
@@ -47,7 +47,7 @@ Para fontes de dados com credenciais solicitadas ou especificadas na cadeia de c
 Verifique se a senha não inclui caracteres especiais. Se não for possível alterar a senha, trabalhe com o administrador do banco de dados para armazenar as credenciais apropriadas localmente e no servidor como parte de um DSN (nome da fonte de dados) do sistema ODBC. Para obter mais informações, consulte "OdbcConnection.ConnectionString" na documentação do .NET Framework SDK no MSDN.   
   
 > [!NOTE]  
->Não é recomendável a inclusão de informações de logon, como senhas, na cadeia de conexão. O Designer de Relatórios fornece uma página **Credenciais** na caixa de diálogo [Propriedades da Fonte de Dados](~/reporting-services/report-data/enter-data-source-credentials-dialog-box-report-builder.md) ou [Propriedades da Fonte de Dados Compartilhada](~/reporting-services/report-data/enter-data-source-credentials-dialog-box-report-builder.md) que você pode usar para inserir credenciais. Essas credenciais são armazenadas com segurança no computador de criação do relatório.  
+>Não é recomendável a inclusão de informações de logon, como senhas, na cadeia de conexão. O Designer de Relatórios fornece uma página **Credenciais** na caixa de diálogo **Propriedades da Fonte de Dados** ou **Propriedades da Fonte de Dados Compartilhada** que você pode usar para inserir credenciais. Essas credenciais são armazenadas com segurança no computador de criação do relatório.  
   
 ## <a name="why-do-i-see-no-data-when-i-run-my-query-in-the-query-designer"></a>Por que não vejo dados quando executo minha consulta no designer de consulta?  
 Quando você criar um conjunto de dados, a coleção de campos desse conjunto de dados aparecerá no painel de dados do relatório. Às vezes, a coleção de campos do conjunto de dados não aparece conforme o esperado.   
@@ -71,7 +71,7 @@ Para popular a coleção de campos do conjunto de dados, siga este procedimento:
   
   
 
-[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
+[!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
 
 

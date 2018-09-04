@@ -15,12 +15,12 @@ caps.latest.revision: 13
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 14a58546faa866cb4508ce6481cf04bdf02a3618
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 7bd57d6e3d853ca38731f54c3de949618155105b
+ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34321117"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40409333"
 ---
 # <a name="mssqlserver5243"></a>MSSQLSERVER_5243
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,21 @@ ms.locfileid: "34321117"
 O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] detectou uma inconsistência estrutural em uma estrutura do mecanismo de armazenamento na memória.  
   
 ## <a name="user-action"></a>Ação do usuário  
-[!INCLUDE[dbccBoilerPlate](../../includes/dbccboilerplate-md.md)]  
+Procure falhas de hardware. Execute o diagnóstico de hardware e corrija quaisquer problemas. Examine também os logs do sistema Windows e do aplicativo, além do log de erros do SQL Server, para verificar se o erro ocorreu em decorrência de falha de hardware. Corrija quaisquer problemas relacionados a hardware existentes nos logs.
+
+Se você tiver problemas contínuos de danos aos dados, tente alternar diferentes componentes de hardware para isolar o problema. Verifique se o sistema não está com a gravação em cache habilitada no controlador de disco. Se você suspeitar que a gravação em cache seja o problema, contate o fornecedor do hardware.
+
+Finalmente, pode ser útil mudar para um sistema de hardware novo. Essa mudança pode incluir a reformatação de unidades de disco e a reinstalação do sistema operacional.
+
+Restaure do backup. Se o problema não estiver relacionado ao hardware e um backup limpo conhecido estiver disponível, restaure o banco de dados do backup.
+
+Execute DBCC CHECKDB Se nenhum backup limpo estiver disponível, execute DBCC CHECKDB sem a cláusula REPAIR para determinar a extensão do dano. DBCC CHECKDB recomendará uma cláusula REPAIR para ser usada. Execute DBCC CHECKDB com a cláusula REPAIR apropriada para reparar o dano.
+
+> **não há suporte para a marca de alerta!**
+>  **não há suporte para a marca de alerta!**
+>  **não há suporte para a marca de alerta!**
+
+Se a execução de DBCC CHECKDB com uma das cláusulas REPAIR não corrigir o problema, contate seu provedor de suporte.
   
 ## <a name="see-also"></a>Consulte Também  
 [DBCC CHECKDB &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  

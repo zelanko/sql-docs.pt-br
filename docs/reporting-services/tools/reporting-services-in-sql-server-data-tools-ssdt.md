@@ -17,12 +17,12 @@ caps.latest.revision: 76
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: dd93ead640b1e99ff1a3776cf0379c45aa9aff08
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: de8e4632223d81f8e49e78fee7ef14fb9983a268
+ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33037193"
+ms.lasthandoff: 08/16/2018
+ms.locfileid: "40409457"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services no SQL Server Data Tools (SSDT)
 
@@ -286,7 +286,7 @@ ms.locfileid: "33037193"
   
 -   Controlar janelas e modos no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]:  
   
-    |Description|Combinação de teclas|  
+    |Descrição|Combinação de teclas|  
     |-----------------|---------------------|  
     |Compilar o projeto selecionado|CTRL+SHIFT+B|  
     |Exibir a janela Propriedades|F4|  
@@ -296,7 +296,7 @@ ms.locfileid: "33037193"
   
 -   Controlar itens na superfície de design de relatório:  
   
-    |Description|Combinação de teclas|  
+    |Descrição|Combinação de teclas|  
     |-----------------|---------------------|  
     |Mover o foco de um item de relatório para outro item de relatório|TAB|  
     |Mover o item de relatório selecionado|Teclas de direção|  
@@ -313,7 +313,7 @@ ms.locfileid: "33037193"
 ## <a name="next-steps"></a>Próximas etapas
 
 [Baixar o SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)
-[Gerenciador de Soluções](http://msdn.microsoft.com/library/0df09843-0d4f-4925-bc6c-99265035a0c1)   
+[Gerenciador de Soluções](../../ssms/solution/solution-explorer.md)   
 [Relatórios do Reporting Services](../../reporting-services/reports/reporting-services-reports-ssrs.md)   
 [Linguagem RDL](../../reporting-services/reports/report-definition-language-ssrs.md)   
 [Implantação e suporte de versão no SQL Server Data Tools](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  

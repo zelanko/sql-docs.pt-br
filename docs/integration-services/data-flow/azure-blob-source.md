@@ -1,7 +1,7 @@
 ---
 title: Origem de Blobs do Azure | Microsoft Docs
 ms.custom: ''
-ms.date: 07/25/2016
+ms.date: 08/20/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1225f006f4a5e2e804b2d0afded32788c8e32f17
-ms.sourcegitcommit: 89983916c39b1c3ecf340de6a4febb2ed33129e4
+ms.openlocfilehash: 5404b7bc7e7543f85890816973fdbd0c1e39022f
+ms.sourcegitcommit: 61212c06b56953ce2e2627d35f7bd69cda786540
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "36964348"
+ms.lasthandoff: 08/20/2018
+ms.locfileid: "40410956"
 ---
 # <a name="azure-blob-source"></a>Fonte de Blobs do Azure
   O componente de **Fonte de Blobs do Azure** permite que um pacote SSIS leia dados de um blob do Azure. Os formatos de arquivo com suporte são: CSV e AVRO.
@@ -39,7 +39,9 @@ ms.locfileid: "36964348"
   
 4.  Para o campo **Formato de arquivo de blob**, selecione o formato de blob que você deseja usar, **Texto** ou **Avro**.  
   
-5.  Se o formato de arquivo for **Texto**, você deverá especificar o valor do **Caractere delimitador de coluna**. Além disso, selecione **Nomes de coluna na primeira linha de dados** se a primeira linha no arquivo contiver nomes de coluna.
+5.  Se o formato de arquivo for **Texto**, você deverá especificar o valor do **Caractere delimitador de coluna**. (O uso de múltiplos caracteres delimitadores não é compatível.)
+
+    Além disso, selecione **Nomes de coluna na primeira linha de dados** se a primeira linha no arquivo contiver nomes de coluna.
 
 6.  Se o arquivo estiver compactado, selecione **Descompactar o arquivo**.
 
