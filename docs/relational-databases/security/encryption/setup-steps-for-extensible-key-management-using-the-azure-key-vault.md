@@ -1,7 +1,7 @@
 ---
 title: Gerenciamento extensível de chaves do TDE do SQL Server usando o Azure Key Vault – Etapas de Configuração | Microsoft Docs
 ms.custom: ''
-ms.date: 06/11/2018
+ms.date: 08/24/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -17,12 +17,12 @@ caps.latest.revision: 34
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: e4b0ffd4d01aaf17d00c17390e4074653225efb7
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 4f8581201f9303c87a848a7456849efa7a09396a
+ms.sourcegitcommit: 0ab652fd02039a014c9661f3c5ccf4281cfb025b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702977"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925986"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>Gerenciamento extensível de chaves do TDE do SQL Server usando o Azure Key Vault – Etapas de Configuração
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -153,14 +153,14 @@ Versão do SQL Server  |Link de instalação redistribuível
     Nesse caso, vamos usar a entidade de serviço do Azure Active Directory criada na Parte I para autorizar a instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
     > [!IMPORTANT]  
-    >  A entidade de serviço do Azure Active Directory deve ter pelo menos as permissões `get`, `list`, `wrapKey`e `unwrapKey` para o cofre de chaves.  
+    >  A entidade de serviço do Azure Active Directory deve ter, pelo menos, as permissões `get`, `wrapKey` e `unwrapKey` para o cofre de chaves.  
   
      Conforme mostrado abaixo, use a **ID do Cliente** da Parte I para o parâmetro `ServicePrincipalName` . O `Set-AzureRmKeyVaultAccessPolicy` será executado silenciosamente sem saída se for executado com êxito.  
   
     ```powershell  
     Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoDevKeyVault'`  
       -ServicePrincipalName EF5C8E09-4D2A-4A76-9998-D93440D8115D `  
-      -PermissionsToKeys get, list, wrapKey, unwrapKey  
+      -PermissionsToKeys get, wrapKey, unwrapKey  
     ```  
   
      Chamar o cmdlet `Get-AzureRmKeyVault` para confirmar as permissões. Na saída da instrução em 'Políticas de Acesso', você verá o nome do aplicativo AAD listado como outro locatário que tem acesso a este cofre de chaves.  

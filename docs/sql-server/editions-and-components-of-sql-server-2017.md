@@ -37,12 +37,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2ae24a68e74b5c349c5c7a3ed732d8260064a31c
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: cfd0cb735888be8e5869ed8f13cd66a981da375d
+ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40184678"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42780757"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>Edições e recursos com suporte do SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -297,12 +297,12 @@ A Developer edition continua a dar suporte a apenas um cliente para o [SQL Serve
   
 |Recurso|Enterprise|Standard|Web|Express with Advanced Services|Express 
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|Integração básica do R|Sim|Sim|Sim|Sim|não|   
-|Integração avançada do R|Sim|não|não|não|não| 
+|Integração básica do R <sup>1</sup>|Sim|Sim|Sim|Sim|não|   
+|Integração avançada do R <sup>2</sup>|Sim|não|não|não|não| 
 |Integração Básica do Python|Sim|Sim|Sim|Sim|não|
 |Integração Avançada do Python|Sim|não|não|não|não| 
 |Servidor do Machine Learning (Autônomo)|Sim|não|não|não|não|   
-|Nó de computação do Polybase|Sim|Sim <sup>1</sup>|Sim <sup>1</sup>|Sim <sup>1</sup>|Sim <sup>1</sup> | 
+|Nó de computação do Polybase|Sim|Sim <sup>3</sup>|Sim <sup>3</sup>|Sim <sup>3</sup>|Sim <sup>3</sup> | 
 |Nó de cabeçalho do Polybase|Sim|não|não|não|não| 
 |JSON|Sim|Sim|Sim|Sim|Sim|   
 |Repositório de Consultas|Sim|Sim|Sim|Sim|Sim|   
@@ -322,7 +322,12 @@ A Developer edition continua a dar suporte a apenas um cliente para o [SQL Serve
 |Gráfico|Sim|Sim|Sim|Sim|Sim|  
 
 
-<sup>1</sup> Expansão com vários nós de computação requer um nó de cabeçalho.
+<sup>1</sup> A integração básica é limitada a dois núcleos e conjuntos de dados na memória. 
+
+<sup>2</sup> A integração avançada pode utilizar todos os núcleos disponíveis para processamento paralelo de conjuntos de dados em qualquer tamanho sujeito aos limites de hardware. 
+
+<sup>3</sup> A expansão com vários nós de computação requer um nó de cabeçalho.
+
 
 ## <a name="IS"></a> Integration Services
 
