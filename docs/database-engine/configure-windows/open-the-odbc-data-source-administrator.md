@@ -17,12 +17,12 @@ caps.latest.revision: 16
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cd3fe488c2ae6bff1b94a11996bc67a88fd72691
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 447f57e753c243958904d6f5c6c380ed157c222e
+ms.sourcegitcommit: ca5430ff8e3f20b5571d092c81b1fb4c950ee285
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32863981"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43381214"
 ---
 # <a name="open-the-odbc-data-source-administrator"></a>Abrir o Administrador de Fonte de Dados ODBC
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "32863981"
 
 #### <a name="to-open-the-odbc-data-source-administrator-in-windows-10"></a>Para abrir o Administrador de Fonte de Dados ODBC no Windows 10   
 
-1.  Na página **Iniciar** , digite **Fontes de Dados ODBC**. O *Aplicativo para Destop de Fontes de Dados ODBC* deve aparecer como uma opção. 
+1.  Na página **Iniciar** , digite **Fontes de Dados ODBC**. O *Aplicativo para área de trabalho de fontes de dados ODBC* deve aparecer como uma opção. 
 
   
 #### <a name="to-open-the-odbc-data-source-administrator-in-windows-7"></a>Para abrir o Administrador de Fonte de Dados ODBC no Windows 7  
