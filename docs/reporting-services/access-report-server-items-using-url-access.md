@@ -1,29 +1,23 @@
 ---
 title: Acessar itens do Servidor de Relatório usando o acesso à URL | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: reporting-services
-ms.reviewer: ''
+ms.technology: reporting-services
 ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - referencing URL items for report server access
 - URL access [Reporting Services], report servers
 ms.assetid: a58b4ca6-129d-45e9-95c7-e9169fe5bba4
-caps.latest.revision: 40
 author: markingmyname
 ms.author: maghan
-manager: kfile
-ms.openlocfilehash: edd381205ea4cb5f8ae3709543d4c6a50e8933df
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 48b0df64244d5428b019625647d312448277d5bc
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33016243"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43275113"
 ---
 # <a name="access-report-server-items-using-url-access"></a>Acessar itens do Servidor de Relatório usando o acesso à URL
   Este tópico descreve como acessar itens de catálogo de diferentes tipos em um banco de dados do servidor de relatório ou em um site do SharePoint usando *rs:Command*=*Value*. Não é necessário adicionar de fato essa cadeia de caracteres de parâmetro. Se você omiti-la, o servidor de relatório avaliará o tipo de item e selecionará o valor de parâmetro apropriado automaticamente. No entanto, usar a cadeia de caracteres *rs:Command*=*Value* na URL melhora o desempenho do servidor de relatórios.  
@@ -34,7 +28,7 @@ ms.locfileid: "33016243"
  Para exibir um relatório no navegador, use o parâmetro *rs:Command*=*Render* . Por exemplo:  
   
  - **Nativo** `http://myrshost/reportserver?/Sales/YearlySalesByCategory&rs:Command=Render`  
- - **SharePoint** `http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales/YearlySalesByCategory&rs:Command=Render`  
+ - **SharePoint** `http://myspsite/subsite/_vti_bin/reportserver? http://myspsite/subsite/Sales/YearlySalesByCategory&rs:Command=Render`  
   
 > [!TIP]  
 >  É importante que a URL inclua a sintaxe do proxy `_vti_bin` para rotear a solicitação através do SharePoint e do proxy HTTP [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . O proxy adiciona qualquer contexto à solicitação HTTP, o contexto necessário para garantir a execução adequada do relatório para servidores de relatório no modo do SharePoint.  
@@ -44,14 +38,14 @@ ms.locfileid: "33016243"
   
  **Nativo** `http://myrshost/reportserver?/Sales/StorePicture&rs:Command=GetResourceContents`  
   
- **SharePoint** `http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales/StorePicture.jpg&rs:Command=GetResourceContents`  
+ **SharePoint** `http://myspsite/subsite/_vti_bin/reportserver? http://myspsite/subsite/Sales/StorePicture.jpg&rs:Command=GetResourceContents`  
   
 ## <a name="access-a-data-source"></a>Acessar uma fonte de dados  
  Para acessar uma fonte de dados, use o parâmetro *rs:Command*=*GetDataSourceContents* . Se houver suporte para XML, a definição da fonte de dados será exibida se você for um usuário autenticado com a permissão **Ler Conteúdo** na fonte de dados. Por exemplo:  
   
  **Nativo** `http://myrshost/reportserver?/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents`  
   
- **SharePoint** `http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents`  
+ **SharePoint** `http://myspsite/subsite/_vti_bin/reportserver? http://myspsite/subsite/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents`  
   
  A estrutura XML pode ter uma aparência semelhante a esta:  
   
@@ -74,7 +68,7 @@ ms.locfileid: "33016243"
   
  **Nativo** `http://myrshost/reportserver?/Sales&rs:Command=GetChildren`  
   
- **SharePoint** `http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales&rs:Command=GetChildren`  
+ **SharePoint** `http://myspsite/subsite/_vti_bin/reportserver? http://myspsite/subsite/Sales&rs:Command=GetChildren`  
   
  A interface do usuário que você vê é semelhante ao modo de procura do diretório usado pelo [!INCLUDE[msCoName](../includes/msconame-md.md)] IIS (Servidor de Informações da Internet). O número de versão, inclusive o número de compilação, do servidor de relatório também é exibido embaixo da listagem de pastas.  
   
