@@ -12,12 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 55fc722a3205984fbb48f2a2c0945ebf4ff117b8
-ms.sourcegitcommit: e2a19dfac1b581237ef694071fbace4768bb6bf4
+ms.openlocfilehash: bcc1b86da4da46575279b373d288800e5ea6a35c
+ms.sourcegitcommit: ca5430ff8e3f20b5571d092c81b1fb4c950ee285
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40392901"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43381174"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Notas de versão do SQL Server 2017 no Linux
 
@@ -47,6 +47,7 @@ A tabela a seguir lista o histórico de lançamento do SQL Server 2017.
 
 | Versão               | Versão       | Data de liberação |
 |-----------------------|---------------|--------------|
+| [CU10](#CU10)         | 14.0.3037.1   | 2018-08-27   |
 | [CU9 GDR2](#CU9-GDR2) | 14.0.3035.2   | 2018-08-18   |
 | [GDR2](#GDR2)         | 14.0.2002.14  | 2018-08-18   |
 | [CU9](#CU9)           | 14.0.3030.27  | 2018-07-18   |
@@ -71,6 +72,20 @@ Se você estiver atualizando os pacotes existentes do SQL Server, execute o coma
 - [Instalar o pacote de pesquisa de texto completo](sql-server-linux-setup-full-text-search.md)
 - [Instalar o SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 - [Habilitar o SQL Server Agent](sql-server-linux-setup-sql-agent.md)
+
+## <a id="CU10"></a> CU10 (agosto de 2018)
+
+Esta é a versão de atualização cumulativa 10 (CU10) do SQL Server 2017. A versão do mecanismo do SQL Server para esta versão é 14.0.3037.1. Para obter informações sobre as correções e aprimoramentos nesta versão, consulte [ https://support.microsoft.com/en-us/help/4342123 ](https://support.microsoft.com/en-us/help/4342123).
+
+### <a name="package-details"></a>Detalhes do pacote
+
+Para instalações de pacote manual ou off-line, você pode baixar os pacotes Debian e RPM com as informações na tabela a seguir:
+
+| Pacote | Versão do pacote | Downloads |
+|-----|-----|-----|
+| Pacote RPM do Red Hat | 14.0.3037.1-2 | [Pacote RPM do mecanismo](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3037.1-2.x86_64.rpm)</br>[Pacote de alta disponibilidade RPM](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3037.1-2.x86_64.rpm)</br>[Pacote de RPM de pesquisa de texto completo](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3037.1-2.x86_64.rpm)</br>[Pacote do SSIS](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| Pacote RPM SLES | 14.0.3037.1-2 | [pacote de RPM do mecanismo de MSSQL-server](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3037.1-2.x86_64.rpm)</br>[Pacote de alta disponibilidade RPM](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3037.1-2.x86_64.rpm)</br>[Pacote de RPM de pesquisa de texto completo](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3037.1-2.x86_64.rpm) | 
+| Pacote Debian do Ubuntu 16.04 | 14.0.3037.1-2 | [Pacote Debian do mecanismo](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3037.1-2_amd64.deb)</br>[Pacote de alta disponibilidade de Debian](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3037.1-2_amd64.deb)</br>[Pacote Debian de pesquisa de texto completo](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3037.1-2_amd64.deb)<br/>[Pacote do SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
 ## <a id="CU9-GDR2"></a> CU9-GDR2 (agosto de 2018)
 

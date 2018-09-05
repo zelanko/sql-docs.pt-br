@@ -15,17 +15,17 @@ dev_langs:
 ms.assetid: 46615017-c4f2-4586-91d9-4d66b5311ae9
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: b461f0f1c9f6d3d3696e544ec479faca4138e1ed
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 697349ab6cc5e3c232ee6feb55cf564220a9ea9a
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43017790"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348487"
 ---
 # <a name="spdropalias-transact-sql"></a>sp_dropalias (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  **sp_dropalias** foi removido para [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Para obter a sintaxe, consulte [sp_dropalias (Transact-SQL)](https://msdn.microsoft.com/library/ms177513\(v=sql.105\).aspx) na documentação anterior.  
+  **sp_dropalias** foi removido para [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Para obter a sintaxe, consulte [sp_dropalias (Transact-SQL)](sp-dropalias-transact-sql.md) na documentação anterior.  
   
 ## <a name="syntax"></a>Sintaxe  
   

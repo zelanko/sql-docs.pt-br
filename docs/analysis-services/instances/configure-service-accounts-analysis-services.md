@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f6df764389cc81f187dbbdddce364266442e628c
-ms.sourcegitcommit: 7f2a62a73b73e0727a6d8387ab7ce7d943e1615a
+ms.openlocfilehash: eb4fc34f5f3d86900111301c133e7339b4684e0a
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39130602"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348335"
 ---
 # <a name="configure-service-accounts-analysis-services"></a>Configurar contas de serviço (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "39130602"
  O único membro do grupo é o SID por serviço. Ao lado dele fica a conta de logon. O nome da conta de logon é apenas uma ilustração, a fim de fornecer contexto para o SID por serviço. Se você alterar posteriormente a conta de logon e retornar a esta página, observará que o grupo de segurança e o SID por serviço não serão alterados, mas o rótulo da conta de logon será diferente.  
   
 ##  <a name="bkmk_winpriv"></a> Privilégios do Windows atribuídos à conta de serviço do Analysis Services  
- O Analysis Services precisa de permissões do sistema operacional para iniciar o serviço e para solicitar recursos do sistema. Os requisitos variam de acordo com o modo do servidor e se a instância está agrupada. Se não estiver familiarizado com os privilégios do Windows, consulte [Privilégios](http://msdn.microsoft.com/library/windows/desktop/aa379306\(v=vs.85\).aspx) e [Constantes de privilégio (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb530716\(v=vs.85\).aspx) para obter detalhes.  
+ O Analysis Services precisa de permissões do sistema operacional para iniciar o serviço e para solicitar recursos do sistema. Os requisitos variam de acordo com o modo do servidor e se a instância está agrupada. Se não estiver familiarizado com os privilégios do Windows, consulte [Privilégios](http://msdn.microsoft.com/library/windows/desktop/aa379306\(v=vs.85\).aspx) e [Constantes de privilégio (Windows)](/windows/desktop/SecAuthZ/privilege-constants) para obter detalhes.  
   
  Todas as instâncias do Analysis Services exigem o privilégio **Fazer logon como um serviço** (SeServiceLogonRight). A Instalação do SQL Server atribui o privilégio a você na conta de serviço especificada durante a instalação. Para servidores executados nos modos multidimensional e mineração de dados, esse é o único privilégio do Windows exigido pela conta de serviço do Analysis Services para instalações autônomas de servidores, bem como é o único privilégio que a Instalação configura para o Analysis Services. Para instâncias em cluster e de tabela, privilégios adicionais do Windows devem ser adicionados manualmente.  
   
@@ -147,8 +147,8 @@ ms.locfileid: "39130602"
  [Configurar contas de serviço e permissões do Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
  [Conta de serviço do SQL Server e o SID por serviço (Blog)](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
  [SQL Server usa um SID de serviço para fornecer isolamento de serviço (artigo do KB)](http://support.microsoft.com/kb/2620201)   
- [Token de acesso (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa374909\(v=vs.85\).aspx)   
- [Identificadores de segurança (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa379571\(v=vs.85\).aspx)   
+ [Token de acesso (MSDN)](/windows/desktop/SecAuthZ/access-tokens)   
+ [Identificadores de segurança (MSDN)](/windows/desktop/SecAuthZ/security-identifiers)   
  [Token de acesso (Wikipedia)](http://en.wikipedia.org/wiki/Access_token)   
  [Listas de controle de acesso (Wikipedia)](http://en.wikipedia.org/wiki/Access_control_list)  
   

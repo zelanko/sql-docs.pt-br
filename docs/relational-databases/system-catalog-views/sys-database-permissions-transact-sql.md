@@ -24,12 +24,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de5020aa262de57eb63849e3aac51a9d8f571a40
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: a1bf31190d1dbdcac8506d2306b6cd6ecbd259ac
+ms.sourcegitcommit: c86335a432e109322d718a13c37ff4b948c39d2d
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43084774"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43193042"
 ---
 # <a name="sysdatabasepermissions-transact-sql"></a>sys.database_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "43084774"
 |**class**|**tinyint**|Identifica a classe na qual a permissão existe.<br /><br /> 0 = Banco de dados<br />1 = objeto ou coluna<br />3 = Esquema<br />4 = Entidade do Banco de Dados<br />5 = assembly - **aplica-se ao**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />6 = Tipo<br />10 = coleção de esquemas XML - <br />                      **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />15 = tipo de mensagem - **aplica-se ao**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />16 = contrato de serviço - **aplica-se ao**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />17 = Service - **aplica-se ao**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />18 = associação de serviço remoto - **aplica-se ao**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />19 = rota - **aplica-se ao**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />23 = catálogo de texto completo - **aplica-se ao**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />24 = chave simétrica - **aplica-se ao**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />25 = certificate - **aplica-se ao**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />26 = chave assimétrica - **aplica-se ao**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] por meio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |**class_desc**|**nvarchar(60)**|Descrição de classe na qual a permissão existe.<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN<br /><br /> SCHEMA<br /><br /> DATABASE_PRINCIPAL<br /><br /> ASSEMBLY<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> MESSAGE_TYPE<br /><br /> SERVICE_CONTRACT<br /><br /> SERVICE<br /><br /> REMOTE_SERVICE_BINDING<br /><br /> ROUTE<br /><br /> FULLTEXT_CATALOG<br /><br /> SYMMETRIC_KEYS<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC_KEY|  
 |**major_id**|**int**|ID na qual a permissão existe, interpretada de acordo com a classe. Normalmente, o **major_id** é simplesmente o tipo de ID que se aplica a classe representa. <br /><br /> 0 = o banco de dados <br /><br /> > 0 = IDs de objeto para objetos de usuário <br /><br /> \<0 = IDs de objeto para objetos do sistema |  
-|**minor_id**|**int**|Secundário – ID na qual a permissão existe, interpretada de acordo com a classe. Muitas vezes, o **major_id** for zero, porque não há nenhum subcategoria disponíveis para a classe do objeto. Caso contrário, ele é a ID de coluna de uma tabela.|  
+|**minor_id**|**int**|Secundário – ID na qual a permissão existe, interpretada de acordo com a classe. Muitas vezes, o **minor_id** for zero, porque não há nenhum subcategoria disponíveis para a classe do objeto. Caso contrário, ele é a ID de coluna de uma tabela.|  
 |**grantee_principal_id**|**int**|ID do principal de banco de dados para a qual as permissões são concedidas.|  
 |**grantor_principal_id**|**int**|ID do principal de banco de dados do concessor dessas permissões.|  
 |**type**|**char(4)**|Tipo de permissão de banco de dados. Para obter uma lista de tipos de permissão, consulte a próxima tabela.|  

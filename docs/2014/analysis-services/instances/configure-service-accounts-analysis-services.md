@@ -19,12 +19,12 @@ caps.latest.revision: 52
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 19512299b7eacf0e768ef2a53bd867f05d5cc6d3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 12c58fcc3e844e820dbea02e93b52854dc25f05f
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37206536"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348357"
 ---
 # <a name="configure-service-accounts-analysis-services"></a>Configurar contas de serviço (Analysis Services)
   O provisionamento de conta de todo o produto é documentado em [Configurar contas de serviço e permissões do Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md), um tópico que fornece informações abrangentes da conta de serviço para todos os serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , incluindo o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Consulte-o para obter informações sobre tipos de contas válidos, privilégios do Windows atribuídos por configuração, permissões do sistema de arquivo, permissões de registro e muito mais.  
@@ -60,7 +60,7 @@ ms.locfileid: "37206536"
  O único membro do grupo é o SID por serviço. Ao lado dele fica a conta de logon. O nome da conta de logon é apenas uma ilustração, a fim de fornecer contexto para o SID por serviço. Se você alterar posteriormente a conta de logon e retornar a esta página, observará que o grupo de segurança e o SID por serviço não serão alterados, mas o rótulo da conta de logon será diferente.  
   
 ##  <a name="bkmk_winpriv"></a> Privilégios do Windows atribuídos à conta de serviço do Analysis Services  
- O Analysis Services precisa de permissões do sistema operacional para iniciar o serviço e para solicitar recursos do sistema. Os requisitos variam de acordo com o modo do servidor e se a instância está agrupada. Se não estiver familiarizado com os privilégios do Windows, consulte [Privilégios](http://msdn.microsoft.com/library/windows/desktop/aa379306\(v=vs.85\).aspx) e [Constantes de privilégio (Windows)](http://msdn.microsoft.com/library/windows/desktop/bb530716\(v=vs.85\).aspx) para obter detalhes.  
+ O Analysis Services precisa de permissões do sistema operacional para iniciar o serviço e para solicitar recursos do sistema. Os requisitos variam de acordo com o modo do servidor e se a instância está agrupada. Se não estiver familiarizado com os privilégios do Windows, consulte [Privilégios](http://msdn.microsoft.com/library/windows/desktop/aa379306\(v=vs.85\).aspx) e [Constantes de privilégio (Windows)](/windows/desktop/SecAuthZ/privilege-constants) para obter detalhes.  
   
  Todas as instâncias do Analysis Services exigem o privilégio **Fazer logon como um serviço** (SeServiceLogonRight). A Instalação do SQL Server atribui o privilégio a você na conta de serviço especificada durante a instalação. Para servidores executados nos modos multidimensional e mineração de dados, esse é o único privilégio do Windows exigido pela conta de serviço do Analysis Services para instalações autônomas de servidores, bem como é o único privilégio que a Instalação configura para o Analysis Services. Para instâncias em cluster e de tabela, privilégios adicionais do Windows devem ser adicionados manualmente.  
   
@@ -156,8 +156,8 @@ ms.locfileid: "37206536"
  [Configurar contas de serviço e permissões do Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
  [Conta de serviço do SQL Server e o SID por serviço (Blog)](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
  [SQL Server usa um SID de serviço para fornecer isolamento de serviço (artigo do KB)](http://support.microsoft.com/kb/2620201)   
- [Token de acesso (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa374909\(v=vs.85\).aspx)   
- [Identificadores de segurança (MSDN)](http://msdn.microsoft.com/library/windows/desktop/aa379571\(v=vs.85\).aspx)   
+ [Token de acesso (MSDN)](/windows/desktop/SecAuthZ/access-tokens)   
+ [Identificadores de segurança (MSDN)](/windows/desktop/SecAuthZ/security-identifiers)   
  [Token de acesso (Wikipedia)](http://en.wikipedia.org/wiki/Access_token)   
  [Listas de controle de acesso (Wikipedia)](http://en.wikipedia.org/wiki/Access_control_list)  
   

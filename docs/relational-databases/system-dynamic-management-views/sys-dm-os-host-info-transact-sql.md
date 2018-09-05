@@ -23,12 +23,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3f0fc76b5ffd86d351c9199acc0b227ed1fd4b96
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 853067176f9b779d86e52e9199674adf6e6e99c5
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43087582"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348527"
 ---
 # <a name="sysdmoshostinfo-transact-sql"></a>sys.dm_os_host_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ Retorna uma linha que exibe informações de versão do sistema operacional.
 |-----------------|---------------|-----------------|  
 |**host_platform** |**nvarchar(256)** |O tipo de sistema operacional: Windows ou Linux |
 |**host_distribution** |**nvarchar(256)** |Descrição do sistema operacional. |
-|**host_release**|**nvarchar(256)**|Versão do sistema operacional [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows (número da versão). Para obter uma lista de valores e descrições, consulte [versão do sistema operacional (Windows)](http://msdn.microsoft.com/library/ms724832\(VS.85\).aspx). <br> Para o Linux, retorna uma cadeia de caracteres vazia. |  
+|**host_release**|**nvarchar(256)**|Versão do sistema operacional [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows (número da versão). Para obter uma lista de valores e descrições, consulte [versão do sistema operacional (Windows)](/windows/desktop/SysInfo/operating-system-version). <br> Para o Linux, retorna uma cadeia de caracteres vazia. |  
 |**host_service_pack_level**|**nvarchar(256)**|Nível de service pack do sistema operacional Windows. <br> Para o Linux, retorna uma cadeia de caracteres vazia. |  
 |**host_sku**|**int**|ID da SKU (Stock Keeping Unit, unidade de manutenção de estoque) do Windows. Para obter uma lista de IDs e descrições, consulte [função GetProductInfo](http://msdn.microsoft.com/library/ms724358.aspx). Permite valor nulo. <br> Para o Linux, retorna NULL. |  
 |**os_language_version**|**int**|LCID (locale identifier, ID de localidade) do sistema operacional. Para obter uma lista de valores LCID e descrições, consulte [IDs de localidade atribuídas pela Microsoft](http://go.microsoft.com/fwlink/?LinkId=208080). Não pode ser nulo.|  

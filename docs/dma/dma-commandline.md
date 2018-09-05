@@ -18,12 +18,12 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 4d4e178247f80cc9b953f093a401b25dfd13e73e
-ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
+ms.openlocfilehash: 3143389d32e1cefcb925bde1b5a92ba2e83fb9fc
+ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 08/29/2018
-ms.locfileid: "43152697"
+ms.locfileid: "43240204"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>Executar o Assistente de migração de dados da linha de comando
 Com a versão 2.1 e posterior, quando você instala o Assistente de migração de dados, ele também instalará dmacmd.exe na *% ProgramFiles %\\Assistente de migração de dados da Microsoft\\*. Use dmacmd.exe para avaliar seus bancos de dados em um modo autônomo e o resultado para o arquivo CSV ou JSON de saída. Esse método é especialmente útil ao avaliar vários bancos de dados ou bancos de dados grandes. 
@@ -125,6 +125,9 @@ Catalog=DatabaseName3;Integrated Security=true"***
 ```
 
 ## <a name="azure-sql-database-sku-recommendations-using-the-cli"></a>Recomendações de SKU do banco de dados SQL do Azure usando a CLI
+
+> [!IMPORTANT]
+> Recomendações de SKU para o banco de dados SQL estão disponíveis atualmente para migrações do SQL Server 2016 ou posterior.
 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation

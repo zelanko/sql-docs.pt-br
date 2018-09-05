@@ -16,12 +16,12 @@ caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dd81f459f09b06e0be06d53658b98b929eff5d6e
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 3e77095ab55527bd2c541eb2bdbe207bb03656f8
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392020"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348426"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Determinando se uma tabela ou um procedimento armazenado deve ser movido para o OLTP na memória
   O coletor de desempenho da transação no [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ajuda você a avaliar se o OLTP na Memória melhorará o desempenho de seu aplicativo de banco de dados. O relatório de análise de desempenho da transação também indica quanto trabalho você deverá executar para habilitar o OLTP na Memória no seu aplicativo. Depois de identificar uma tabela baseada em disco a ser transportada para o OLTP in-memory, você poderá usar o [Orientador de Otimização da Memória](memory-optimization-advisor.md)para ajudar na migração da tabela. De maneira semelhante, o [Native Compilation Advisor](native-compilation-advisor.md) o ajudará a transportar um procedimento armazenado para um procedimento armazenado compilado nativamente.  
@@ -126,7 +126,7 @@ ms.locfileid: "40392020"
   
  Um coletor de dados pode ser configurado em um SQL Server 2012 ou versão posterior do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- É necessário um proxy do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent estabelecido com a credencial correta para que o coletor de dados carregue os dados em um banco de dados do Data Warehouse de Gerenciamento em uma instância que seja diferente de onde as transações serão analisadas. Para habilitar um proxy do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, primeiramente é preciso estabelecer uma credencial com um logon habilitado para domínio. O logon habilitado para domínio deve ser um membro do grupo `mdw_admin` do banco de dados do Data Warehouse de Gerenciamento. Ver [como: criar uma credencial (SQL Server Management Studio)](http://msdn.microsoft.com/library/ms190703\(v=sql.105\).aspx) para obter informações sobre como criar uma credencial.  
+ É necessário um proxy do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent estabelecido com a credencial correta para que o coletor de dados carregue os dados em um banco de dados do Data Warehouse de Gerenciamento em uma instância que seja diferente de onde as transações serão analisadas. Para habilitar um proxy do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent, primeiramente é preciso estabelecer uma credencial com um logon habilitado para domínio. O logon habilitado para domínio deve ser um membro do grupo `mdw_admin` do banco de dados do Data Warehouse de Gerenciamento. Ver [como: criar uma credencial (SQL Server Management Studio)](../security/authentication-access/create-a-credential.md) para obter informações sobre como criar uma credencial.  
   
  Para configurar a coleta de dados para carregar um banco de dados do Data Warehouse de Gerenciamento em outra instância,  
   

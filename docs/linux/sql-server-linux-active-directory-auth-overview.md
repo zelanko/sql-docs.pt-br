@@ -13,12 +13,12 @@ ms.custom: sql-linux
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 9d55275269ee09daf933521330b093a8d98411fd
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: c1d6116509a87fae2e91307f06f527910c204510
+ms.sourcegitcommit: ca5430ff8e3f20b5571d092c81b1fb4c950ee285
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087108"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43381164"
 ---
 # <a name="active-directory-authentication-for-sql-server-on-linux"></a>Autenticação do Active Directory para o SQL Server no Linux
 
@@ -52,7 +52,6 @@ Os detalhes de como configurar a autenticação do AD são fornecidos no tutoria
 ## <a name="known-issues"></a>Problemas conhecidos
 
 - Neste momento, o único método de autenticação com suporte para o ponto de extremidade de espelhamento de banco de dados é o certificado. Método de autenticação do WINDOWS será habilitado em uma versão futura.
-- Ferramentas de AD de terceiros, como o Centrify, Powerbroker, e Vintela não têm suporte.
 
 ## <a name="next-steps"></a>Próximas etapas
 

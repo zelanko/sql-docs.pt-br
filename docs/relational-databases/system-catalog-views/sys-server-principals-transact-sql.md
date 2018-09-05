@@ -24,12 +24,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dc9531e174c95f43d93f0b041094af842c2487a4
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 9c8a7aeb998b9a79faa644a3d371bb5f4f98c8f5
+ms.sourcegitcommit: 82bb56269faf3fb5dd1420418e32a0a6476780cc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43106256"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43694689"
 ---
 # <a name="sysserverprincipals-transact-sql"></a>sys.server_principals (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "43106256"
 |**default_language_name**|**sysname**|Linguagem padrão deste principal.|  
 |**credential_id**|**int**|ID de uma credencial associada a este principal. Se nenhuma credencial for associada a este principal, credential_id será NULL.|  
 |**owning_principal_id**|**int**|O **principal_id** do proprietário de uma função de servidor. NULL se a entidade não for uma função de servidor.|  
-|**is_fixed_role**|**bit**|Retornará 1 se a entidade for uma das de funções de servidor fixas. Para obter mais informações, veja [Funções de nível de servidor](../../relational-databases/security/authentication-access/server-level-roles.md).|  
+|**is_fixed_role**|**bit**|Retornará 1 se a entidade de segurança é uma das funções de servidor interno com permissões fixas. Para obter mais informações, veja [Funções de nível de servidor](../../relational-databases/security/authentication-access/server-level-roles.md).|  
   
 ## <a name="permissions"></a>Permissões  
  Qualquer logon pode ver seu próprio nome de logon, os logons do sistema e as funções de servidor fixas. Ver outros logons requer ALTER ANY LOGIN ou uma permissão no logon. Ver funções de servidor definidas pelo usuário requer ALTER ANY SERVER ROLE ou associação na função.  
@@ -61,7 +61,7 @@ ms.locfileid: "43106256"
  A consulta a seguir lista as permissões concedidas ou negadas explicitamente a entidades de segurança do servidor.  
   
 > [!IMPORTANT]  
->  As permissões de funções de servidor fixas não aparecem em sys.server_permissions. Portanto, entidades de segurança do servidor podem ter permissões adicionais não listadas aqui.  
+>  As permissões de funções de servidor fixas (diferente de público) não aparecem em sys. server_permissions. Portanto, entidades de segurança do servidor podem ter permissões adicionais não listadas aqui.  
   
 ```  
 SELECT pr.principal_id, pr.name, pr.type_desc,   

@@ -18,12 +18,12 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 415de36195960c1a2fa60d3e5dd68168682028e0
-ms.sourcegitcommit: fb269accc3786715c78f8b6e2ec38783a6eb63e9
+ms.openlocfilehash: 84601b6a556df64d3708fd749af06be8e753048d
+ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 08/29/2018
-ms.locfileid: "43152827"
+ms.locfileid: "43240144"
 ---
 # <a name="identify-the-right-azure-sql-database-sku-for-your-on-premises-database"></a>Identificar a SKU certa de banco de dados de SQL do Azure para seu banco de dados local
 
@@ -33,6 +33,9 @@ Este artigo se concentra principalmente no recurso de recomendações de SKU de 
 
 > [!NOTE] 
 > Essa funcionalidade está disponível atualmente apenas por meio de Interface de linha de comando (CLI). Suporte para esse recurso por meio da interface do usuário DMA será adicionado em uma versão futura.
+
+> [!IMPORTANT]
+> Recomendações de SKU para o banco de dados SQL estão disponíveis atualmente para migrações do SQL Server 2016 ou posterior.
 
 As instruções a seguir o ajudarão a determinar as recomendações de SKU de banco de dados SQL do Azure e provisionar bancos de dados associados para o Azure, usando o Assistente de migração de dados.
 
@@ -58,7 +61,7 @@ Você não precisa executar essa tarefa para cada banco de dados individualmente
     - **OutputFilePath**: O caminho do arquivo de saída para salvar os contadores coletados.
     - **CollectionTimeInSeconds**: A quantidade de tempo durante o qual você deseja coletar dados do contador de desempenho.
       Capture os contadores de desempenho para pelo menos de 40 minutos obter uma recomendação significativa. Quanto maior a duração da captura, mais precisos a recomendação será.
-    - **DbConnectionString**: cadeia de caracteres de Conexão a apontando para o banco de dados mestre, hospedado no computador do qual você está coletando dados de contador de desempenho.
+    - **DbConnectionString**: cadeia de caracteres de Conexão a apontando para o banco de dados mestre, hospedado no computador do qual você está coletando dados do contador de desempenho.
      
     Aqui está uma invocação de exemplo:
 
@@ -144,7 +147,7 @@ Segue uma descrição de cada coluna.
 - **ExclusionReasons** -esse valor estará em branco se uma camada é recomendada. Para cada camada que não é recomendada, nós fornecemos os motivos por que ele não foi recebido.
 - **AppliedRules** -uma notação curta das regras que foram aplicadas.
 
-Observe que o valor recomendado é o SKU mínimo necessário para suas consultas para execução no Azure com uma taxa de sucesso semelhante a seus bancos de dados local. Por exemplo, se a SKU de mínima recomendada é S4 para a camada standard, em seguida, escolha S3 ou abaixo será fazer com que consultas atingir o tempo limite ou não ser executada.
+O valor recomendado é o SKU mínimo necessário para suas consultas para execução no Azure com uma taxa de sucesso semelhante a seus bancos de dados local. Por exemplo, se a SKU de mínima recomendada é S4 para a camada standard, em seguida, escolha S3 ou abaixo será fazer com que consultas atingir o tempo limite ou não ser executada.
 
 O arquivo HTML contém essas informações em um formato gráfico. Você pode usar o arquivo HTML para inserir informações de assinatura do Azure, escolha o tipo de preço, computação nível e o tamanho máximo de dados para seus bancos de dados e gerar um script para provisionar seus bancos de dados. Esse script pode ser executado usando o PowerShell.
 

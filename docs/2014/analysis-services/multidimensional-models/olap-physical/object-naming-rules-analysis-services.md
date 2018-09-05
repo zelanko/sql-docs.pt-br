@@ -17,12 +17,12 @@ caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c59c295c627c311aaec574ecd04b153004c3c926
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b28929d0d09e9cf0d05631ed3b95da30b95dc4ab
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202076"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348387"
 ---
 # <a name="object-naming-rules-analysis-services"></a>Regras de nomenclatura de objeto (Analysis Services)
   Este tópico descreve as convenções de nomenclatura de objeto, bem como as palavras e os caracteres reservados que não podem ser usados em nomes de objetos, códigos ou scripts no [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -73,7 +73,7 @@ ms.locfileid: "37202076"
   
 |Object|Caracteres inválidos|  
 |------------|------------------------|  
-|`Server`|Ao nomear um objeto de servidor, siga as convenções de nomenclatura de servidor do Windows. Para obter detalhes, consulte [Convenções de nomenclatura (Windows)](http://msdn.microsoft.com/library/windows/desktop/ms682856\(v=vs.85\).aspx) .|  
+|`Server`|Ao nomear um objeto de servidor, siga as convenções de nomenclatura de servidor do Windows. Ver [convenções de nomenclatura (Windows)](/windows/desktop/DNS/naming-conventions) para obter detalhes.|  
 |`DataSource`|: / \ * &#124; ? "[()] {} <>|  
 |`Level` ou `Attribute`|para obter informações sobre a ferramenta de configuração e recursos adicionais. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] {} \< >|  
 |`Dimension` ou `Hierarchy`|para obter informações sobre a ferramenta de configuração e recursos adicionais. , ; ' ` : / \ * &#124; ? " & % $ ! + = [()] {} \<, >|  

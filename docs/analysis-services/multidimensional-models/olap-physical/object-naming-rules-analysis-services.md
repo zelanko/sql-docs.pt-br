@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0200c7bedb0d0dd7dd990ef8cbe9ed2114978b8d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: b10662d32952565ccf7b30a6615470d2557749f3
+ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025623"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43348637"
 ---
 # <a name="object-naming-rules-analysis-services"></a>Regras de nomenclatura de objeto (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -64,13 +64,13 @@ ms.locfileid: "34025623"
   
  A tabela a seguir lista caracteres inválidos para objetos específicos.  
   
-|Objeto|Caracteres inválidos|  
+|Object|Caracteres inválidos|  
 |------------|------------------------|  
-|**Servidor**|Ao nomear um objeto de servidor, siga as convenções de nomenclatura de servidor do Windows. Para obter detalhes, consulte [Convenções de nomenclatura (Windows)](http://msdn.microsoft.com/library/windows/desktop/ms682856\(v=vs.85\).aspx) .|  
+|**Servidor**|Ao nomear um objeto de servidor, siga as convenções de nomenclatura de servidor do Windows. Ver [convenções de nomenclatura (Windows)](/windows/desktop/DNS/naming-conventions) para obter detalhes.|  
 |**DataSource**|: / \ * &#124; ? "[()] {} <>|  
-|**Level** ou **Attribute**|. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] {} < >|  
-|**Dimension** ou **Hierarchy**|. , ; ' ` : / \ * &#124; ? " & % $ ! + = [()] {} \<, >|  
-|Todos os outros objetos|. , ; ' ` : / \ * &#124; ? " & % $ ! + = [()] {} < >|  
+|**Level** ou **Attribute**|para obter informações sobre a ferramenta de configuração e recursos adicionais. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] {} < >|  
+|**Dimension** ou **Hierarchy**|para obter informações sobre a ferramenta de configuração e recursos adicionais. , ; ' ` : / \ * &#124; ? " & % $ ! + = [()] {} \<, >|  
+|Todos os outros objetos|para obter informações sobre a ferramenta de configuração e recursos adicionais. , ; ' ` : / \ * &#124; ? " & % $ ! + = [()] {} < >|  
   
  **Exceções: Quando caracteres reservados são permitidos**  
   

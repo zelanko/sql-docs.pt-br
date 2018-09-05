@@ -12,12 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
-ms.openlocfilehash: 8cc1010f2492054a467abfc53e859d39a86e1c78
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 6e779e3bd3958f440234bdc5f078d52088803a78
+ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086698"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43240062"
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>Migrar um banco de dados do SQL Server do Windows para Linux usando o backup e restauração
 
@@ -164,6 +164,44 @@ Para restaurar o backup do banco de dados, você pode usar o **RESTAURAR banco d
    ```
 
    Você deve receber uma mensagem que o banco de dados é restaurado com êxito.
+
+   `RESTORE DATABASE` pode retornar um erro semelhante ao seguinte exemplo:
+
+   ```bash
+   File 'YourDB_Product' cannot be restored to 'Z:\Microsoft SQL Server\MSSQL11.GLOBAL\MSSQL\Data\YourDB\YourDB_Product.ndf'. Use WITH MOVE to identify a valid location for the file.
+   Msg 5133, Level 16, State 1, Server servername, Line 1
+   Directory lookup for the file "Z:\Microsoft SQL Server\MSSQL11.GLOBAL\MSSQL\Data\YourDB\YourDB_Product.ndf" failed with the operating system error 2(The system cannot find the file specified.).
+   ```
+   
+   Nesse caso, o banco de dados contém arquivos secundários. Se esses arquivos não forem especificados na `MOVE` cláusula de `RESTORE DATABASE`, o procedimento de restauração tentará criá-los no mesmo caminho que o servidor original. 
+
+   Você pode listar todos os arquivos incluídos no backup:
+   ```sql
+   RESTORE FILELISTONLY FROM DISK = '/var/opt/mssql/backup/YourDB.bak'
+   GO
+   ```
+   Você deve obter uma lista como a mostrada abaixo (listando apenas as primeiras duas colunas):
+   ```sql
+   LogicalName         PhysicalName                                                                 ..............
+   ----------------------------------------------------------------------------------------------------------------------
+   YourDB              Z:\Microsoft SQL Server\MSSQL11.GLOBAL\MSSQL\Data\YourDB\YourDB.mdf          ..............
+   YourDB_Product      Z:\Microsoft SQL Server\MSSQL11.GLOBAL\MSSQL\Data\YourDB\YourDB_Product.ndf  ..............
+   YourDB_Customer     Z:\Microsoft SQL Server\MSSQL11.GLOBAL\MSSQL\Data\YourDB\YourDB_Customer.ndf ..............
+   YourDB_log          Z:\Microsoft SQL Server\MSSQL11.GLOBAL\MSSQL\Data\YourDB\YourDB_Log.ldf      ..............
+   ```
+   
+   Você pode usar esta lista para criar `MOVE` cláusulas para os arquivos adicionais. Neste exemplo, o `RESTORE DATABASE` é:
+
+   ```sql
+   RESTORE DATABASE YourDB
+   FROM DISK = '/var/opt/mssql/backup/YourDB.bak'
+   WITH MOVE 'YourDB' TO '/var/opt/mssql/data/YourDB.mdf',
+   MOVE 'YourDB_Product' TO '/var/opt/mssql/data/YourDB_Product.ndf',
+   MOVE 'YourDB_Customer' TO '/var/opt/mssql/data/YourDB_Customer.ndf',
+   MOVE 'YourDB_Log' TO '/var/opt/mssql/data/YourDB_Log.ldf'
+   GO
+   ```
+
 
 1. Verifique se a restauração, listando todos os bancos de dados no servidor. O banco de dados restaurado deve ser listado.
 
