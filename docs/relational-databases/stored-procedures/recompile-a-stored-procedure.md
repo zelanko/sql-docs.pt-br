@@ -58,7 +58,7 @@ ms.locfileid: "43090666"
 ###  <a name="Security"></a> Segurança  
   
 ####  <a name="Permissions"></a> Permissões  
-**WITH RECOMPILE** Opção   
+ Opção**WITH RECOMPILE**   
  Se a opção for usada quando a definição de procedimento for criada, serão necessárias as permissões CREATE PROCEDURE no banco de dados e ALTER no esquema no qual o procedimento está sendo criado.  
   
  Se essa opção for usada em uma instrução EXECUTE, as permissões de EXECUTE serão necessárias no procedimento. As permissões não são necessárias na instrução EXECUTE em si, mas permissões de execução são necessárias no procedimento referenciado na instrução EXECUTE. Para obter mais informações, veja [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md).  
@@ -66,7 +66,7 @@ ms.locfileid: "43090666"
  Dica de consulta **RECOMPILE**  
  Esse recurso é usado quando o procedimento é criado e a dica é incluída em instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] no procedimento. Portanto, isso requer a permissão CREATE PROCEDURE no banco de dados e a permissão ALTER no esquema no qual o procedimento está sendo criado.  
   
- Procedimento armazenado do sistema **sp_recompile**   
+ Procedimento armazenado do sistema**sp_recompile**   
  Exige a permissão ALTER no procedimento especificado.  
   
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
