@@ -41,12 +41,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b8d694b0afadd7504b60bd7bcc06df3151e42735
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: a7e684df914684b48f9742aee5d67d6769973cb3
+ms.sourcegitcommit: aac654706b21f70962c7311f3b193000113d00d7
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40405613"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43321246"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -63,24 +63,10 @@ Na linha a seguir, clique em qualquer nome de produto de seu interesse. O clique
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><strong><em>* SQL Server *<br />&nbsp;</em></strong></th>
->   <th><a href="create-database-transact-sql.md?view=azuresqldb-current">Banco de Dados SQL<br />Banco de Dados SQL</a></th>
->   <th><a href="create-database-transact-sql.md?view=azuresqldb-mi-current">Banco de Dados SQL<br />Banco de Dados SQL</a></th>
->   <th><a href="create-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
->   <th><a href="create-database-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
-> </tr>
-> </table>
+> |||||
+> |-|-|-|-| 
+> |**_\*SQL Server\*_** | [Banco de Dados SQL<br />servidor lógico](create-database-transact-sql.md?view=azuresqldb-current) | [Banco de Dados SQL<br />Instância Gerenciada](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [SQL Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) | 
 
-&nbsp;
 
 # <a name="sql-server"></a>SQL Server
 
@@ -471,7 +457,7 @@ CREATE DATABASE database_snapshot_name
   
  Para obter mais informações, consulte "Instantâneos do banco de dados" na seção Comentários.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O backup do [banco de dados mestre](../../relational-databases/databases/master-database.md) deve ser feito sempre que um banco de dados de usuário é criado, modificado ou descartado.  
   
  A instrução CREATE DATABASE deve ser executada em modo de confirmação automática (o modo padrão de gerenciamento de transações) e não é permitida em uma transação explícita ou implícita.  
@@ -1092,7 +1078,7 @@ O nome do servidor [!INCLUDE[ssSDS](../../includes/sssds-md.md)] onde o banco de
 
 O nome do banco de dados que deve ser copiado.  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
  
 Os bancos de dados no [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] tem várias configurações padrão que são definidas quando o banco de dados é criado. Para obter mais informações sobre essas configurações padrão, veja a lista de valores em [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).  
   
@@ -1212,7 +1198,7 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = 
   WITH CATALOG_COLLATION = DATABASE_DEFAULT 
 ```
   
-## <a name="see-also"></a>Confira também  
+## <a name="see-also"></a>Consulte também  
 
 -  [sys.dm_database_copies &#40;Banco de Dados SQL do Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)
 
@@ -1268,7 +1254,7 @@ Especifica o agrupamento padrão do banco de dados. O nome do agrupamento pode s
   
 Para obter mais informações sobre os nomes de agrupamento do Windows e do SQL, [COLLATE (Transact-SQL)](http://msdn.microsoft.com/library/ms184391.aspx).  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
  
 Os bancos de dados no [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] tem várias configurações padrão que são definidas quando o banco de dados é criado. Para obter mais informações sobre essas configurações padrão, veja a lista de valores em [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).  
   
@@ -1298,7 +1284,7 @@ Para criar um banco de dados, um logon deve ser um dos seguintes:
 CREATE DATABASE TestDB1;  
 ```  
   
-## <a name="see-also"></a>Confira também  
+## <a name="see-also"></a>Consulte também  
 
 Confira [ALTER DATABASE](alter-database-transact-sql.md?&tabs=sqldbmi) 
 

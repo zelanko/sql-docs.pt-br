@@ -2,25 +2,18 @@
 title: Propriedades do servidor (página Avançado) – Reporting Services | Microsoft Docs
 author: markingmyname
 ms.author: maghan
-manager: kfile
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.component: tools
+ms.technology: tools
 ms.suite: reporting-services
 ms.topic: conceptual
-ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
-caps.latest.revision: 18
-ms.custom: ''
-ms.reviewer: ''
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.date: 08/16/2018
-ms.openlocfilehash: 2f1fe16e169fa26d0fec402a5b52306bc80e460a
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: c0fef28c07244e220aab90873dd80226f9a3cddd
+ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40406575"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43266261"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>Propriedades do Servidor (página Avançado) - Reporting Services
 
@@ -89,12 +82,12 @@ O valor do tempo limite de processamento do relatório padrão, em segundos, par
 O número máximo de instantâneos que são armazenados para um relatório. Os valores válidos são de **-1** até **2**,**147**,**483**,**647**. Se o valor for **-1**, não haverá limite de instantâneo.  
 
 **EnableIntegratedSecurity**  
-Determina se a segurança integrada do Windows tem suporte para conexões de fonte de dados de relatório. O padrão é **True**. Os valores válidos são os seguintes:
+Determina se a segurança integrada do Windows tem suporte para conexões de fontes de dados de relatório. O padrão é **True**. Os valores válidos são os seguintes:
 
 |Valores|Descrição|
 |---------|---------|
 |**Verdadeiro**|A segurança integrada do Windows está habilitada.|
-|**Falso**|A segurança integrada do Windows não está habilitada. Fontes de dados de relatório configuradas para usar a segurança integrada do Windows não serão executadas.|
+|**Falso**|A segurança integrada do Windows não está habilitada. As fontes de dados de relatório configuradas para usar a segurança integrada do Windows não serão executadas.|
 
 **EnableLoadReportDefinition**  
 Selecione essa opção para especificar se os usuários podem realizar uma execução de relatório não planejada de um relatório do Construtor de Relatórios. A definição dessa opção determina o valor da propriedade **EnableLoadReportDefinition** no servidor de relatórios.  
@@ -139,15 +132,15 @@ Especifica o número de segundos antes que o tempo limite de uma sessão de edi�
 
 **OfficeOnlineDiscoveryURL** ***(somente Servidor de Relatórios do Power BI)*** Defina o endereço da sua instância de servidor do Office Online para exibir pastas de trabalho do Excel.
 
-**RequireIntune** Defina esta opção para exigir o Intune para acessar os relatórios de sua organização por meio do aplicativo móvel do Power BI. *O padrão é False.*
+**RequireIntune** Requer o Intune para acessar os relatórios da sua organização por meio do aplicativo móvel do Power BI. *O padrão é False.*
 
 **ScheduleRefreshTimeoutMinutes** ***(somente Servidor de Relatórios do Power BI)*** Defina o tempo limite para a atualização agendada. *O padrão é 120.*
 
-**ShowDownloadMenu** Defina esta opção para habilitar o menu de download de ferramentas do cliente. *O padrão é true.*
+**ShowDownloadMenu** Habilita o menu de download das ferramentas de cliente. *O padrão é true.*
 
 **TimeInitialDelaySeconds** Defina o quanto você deseja que o tempo inicial seja atrasado, em segundos. *O padrão é 60.*
 
-**TrustedFileFormat** Defina todos os formatos de arquivo externo que podem ser salvos. *O padrão é jpg, jpeg, jpe, wav, bmp, pdf, img, gif, json, mp4, web e png.*
+**TrustedFileFormat** Defina todos os formatos de arquivo externos abertos no navegador no site de portal do Reporting Services. Formatos de arquivo externos não listados solicitam download da opção no navegador. Os valores padrão são jpg, jpeg, jpe, wav, bmp, pdf, img, gif, json, mp4, web e png.
 
 **EnablePowerBIReportExportData** ***(somente Servidor de Relatório do Power BI)***  
 Habilite a exportação de dados do Servidor de Relatórios do Power BI dos visuais do Power BI. Os valores são True ou False.  O padrão é True.  
