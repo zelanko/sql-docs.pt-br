@@ -7,7 +7,7 @@ items:
     href: r/sql-server-r-services.md
   - name: Servidor autônomo
     href: r/r-server-standalone.md
-  - name: Novidades
+  - name: What's New
     href: what-s-new-in-sql-server-machine-learning-services.md
 - name: Instalar
   items:
@@ -19,19 +19,21 @@ items:
     href: install/sql-machine-learning-standalone-windows-install.md
   - name: Modelos previamente treinados
     href: install/sql-pretrained-models-install.md
-  - name: Instalação de prompt de comando
-    href: install/sql-ml-component-commandline-install.md
   - name: Instalação offline (sem Internet)
     href: install/sql-ml-component-install-without-internet-access.md
     items:
     - name: Downloads de CAB (configuração offline)
       href: install/sql-ml-cab-downloads.md
+  - name: Instalação de prompt de comando
+    href: install/sql-ml-component-commandline-install.md
   - name: Atualizar R e Python
     href: r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md
   - name: Configurar ferramentas R
     href: r/set-up-a-data-science-client.md
   - name: Configurar ferramentas Python
     href: python/setup-python-client-tools-sql.md
+  - name: Configurar um servidor virtual
+    href: r/installing-sql-server-r-services-on-an-azure-virtual-machine.md
 - name: Guias de início rápido
   items:
   - name: R
@@ -147,28 +149,13 @@ items:
 - name: Soluções
   href: tutorials/data-science-scenarios-and-solution-templates.md
 - name: Conceitos
-  href: architecture-overview-machine-learning.md
   items:
-  - name: R
-    href: r/architecture-overview-sql-server-r.md
-    items:
-    - name: Interoperabilidade de R
-      href: r/r-interoperability-in-sql-server.md
-    - name: Componentes compatíveis com a integração de R
-      href: r/new-components-in-sql-server-to-support-r.md
-    - name: Segurança para R
-      href: r/security-overview-sql-server-r.md
-  - name: Python
-    href: python/architecture-overview-sql-server-python.md
-    items:
-    - name: Python nos Serviços de Machine Learning
-      href: python/sql-server-python-services.md
-    - name: Interoperabilidade do Python
-      href: python/python-interoperability.md
-    - name: Componentes para dar suporte a Python
-      href: python/new-components-in-sql-server-to-support-python-integration.md
-    - name: Segurança do Python
-      href: python/security-overview-sql-server-python-services.md
+  - name: Estrutura de extensibilidade
+    href: concepts/extensibility-framework.md
+  - name: Extensão R
+    href: concepts/extension-r.md
+  - name: Extensão Python
+    href: concepts/extension-python.md
 - name: Instruções
   href: r/sql-server-machine-learning-tasks.md
   items:
@@ -236,18 +223,26 @@ items:
       href: r/performance-case-study-r-services.md
     - name: Usar funções de criação de perfil de código de R
       href: r/using-r-code-profiling-functions.md
+  - name: Segurança
+    items:
+    - name: Considerações sobre segurança para o tempo de execução de R no SQL Server
+      href: r/security-considerations-for-the-r-runtime-in-sql-server.md
+    - name: Segurança para R
+      href: r/security-overview-sql-server-r.md
+    - name: Segurança do Python
+      href: python/security-overview-sql-server-python-services.md
+    - name: Conta de serviço do SQL Server Launchpad
+      href: general/sql-server-launchpad-service-account.md
+    - name: Modificar SQLRUserGroup
+      href: r/modify-the-user-account-pool-for-sql-server-r-services.md
+    - name: Adicionar SQLRUserGroup como um usuário de banco de dados
+      href: r/add-sqlrusergroup-to-database.md
   - name: Administração
     items:
     - name: Configurar e gerenciar o R
       href: r/configuration-sql-server-r-services.md
     - name: Opções de configuração avançadas para Serviços de Machine Learning
       href: r/configure-and-manage-advanced-analytics-extensions.md
-    - name: Considerações sobre segurança para o tempo de execução de R no SQL Server
-      href: r/security-considerations-for-the-r-runtime-in-sql-server.md
-    - name: Modificar o pool de contas de usuário para os Serviços de Machine Learning do SQL Server
-      href: r/modify-the-user-account-pool-for-sql-server-r-services.md
-    - name: Adicionar SQLRUserGroup como um usuário de banco de dados
-      href: r/add-sqlrusergroup-to-database.md
     - name: Implantar e consumir modelos usando serviços Web
       href: operationalization-with-mrsdeploy.md
     - name: Gerenciar e monitorar soluções
@@ -287,8 +282,6 @@ items:
     href: known-issues-for-sql-server-machine-learning-services.md
   - name: Notas de versão
     href: https://docs.microsoft.com/sql/sql-server/sql-server-2017-release-notes
-  - name: Configurar uma máquina virtual
-    href: r/installing-sql-server-r-services-on-an-azure-virtual-machine.md
   - name: Solução de problemas
     href: machine-learning-troubleshooting-faq.md
     items:
@@ -314,9 +307,9 @@ items:
       href: https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver
     - name: Machine Learning Server
       href: https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR
-ms.openlocfilehash: 33275daaa46f1e85f30e28bab34bcbcd84e81d38
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: 586fef64334a24e58825de6f3dd9e3073541dd7c
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118073"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43888862"
