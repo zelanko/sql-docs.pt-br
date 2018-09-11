@@ -1,5 +1,5 @@
 ---
-title: Método getTimestamp (Java, java.util.Calendar) | Microsoft Docs
+title: Método getTimestamp (java.lang.String, java.util.Calendar) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9d9ddd1eb04d53db86d882c4b09659ff9cb8ae27
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: cff62d2115540d3e7644cdca65dd912fc7621234
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32838811"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787323"
 ---
 # <a name="gettimestamp-method-javalangstring-javautilcalendar"></a>Método getTimestamp (java.lang.String, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera o valor do parâmetro designado como um objeto Java.SQL. timestamp na linguagem de programação Java, considerando o nome do parâmetro, usando um objeto de calendário.  
+  Recupera o valor do parâmetro designado como um objeto java.sql.Timestamp na linguagem de programação Java, considerando o nome do parâmetro, usando um objeto Calendar.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,7 +48,7 @@ public java.sql.Timestamp getTimestamp(java.lang.String name,
   
  Um objeto de calendário.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  Um objeto de carimbo de hora.  
   
 ## <a name="exceptions"></a>Exceções  
@@ -57,10 +57,10 @@ public java.sql.Timestamp getTimestamp(java.lang.String name,
 ## <a name="remarks"></a>Remarks  
  Esse método getTimestamp é especificado pelo método getTimestamp na interface do CallableStatement.  
   
- Este método retorna valores apenas das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] **datetime** e **smalldatetime** colunas.  
+ Esse método só retorna valores das colunas **datetime** e **smalldatetime** do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Consulte também  
- [Método getTimestamp &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettimestamp-method-sqlservercallablestatement.md)   
+## <a name="see-also"></a>Consulte Também  
+ [getTimestamp Method &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettimestamp-method-sqlservercallablestatement.md)   
  [Membros SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Classe SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

@@ -19,12 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6361c9c4ab6498ec0d99f1abfa3a42fb567e4510
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: b33a87da5c9eec050d1f729e45deaae6310abc1d
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32830301"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42783817"
 ---
 # <a name="getcatalogterm-method-sqlserverdatabasemetadata"></a>Método getCatalogTerm (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,8 +38,8 @@ ms.locfileid: "32830301"
 public java.lang.String getCatalogTerm()  
 ```  
   
-## <a name="return-value"></a>Valor de retorno  
- Um **cadeia de caracteres** que contém o termo do catálogo.  
+## <a name="return-value"></a>Valor retornado  
+ Uma **String** que contém o termo do catálogo.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -47,9 +47,9 @@ public java.lang.String getCatalogTerm()
 ## <a name="remarks"></a>Remarks  
  Esse método getCatalogTerm é especificado pelo método getCatalogTerm na interface DatabaseMetadata.  
   
- Ao usar o [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] com um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] banco de dados, esse método retornará o termo "database".  
+ Quando o [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] é usado com um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], este método retorna o termo "database".  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [Membros SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Classe SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

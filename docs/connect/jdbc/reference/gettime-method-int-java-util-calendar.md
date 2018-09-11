@@ -19,17 +19,17 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d0e01aa8c9bb2f0f7e4f7ea38e9bcdda4dd128b9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 3e4d2e4419d31bcb56329d0b971c07d203ebeae9
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32838091"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784502"
 ---
 # <a name="gettime-method-int-javautilcalendar"></a>Método getTime (int, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera o valor do parâmetro designado como um objeto Java.SQL. time na linguagem de programação Java, considerando o índice do parâmetro, usando o objeto de calendário fornecido.  
+  Recupera o valor do parâmetro designado como um objeto java.sql.Time na linguagem de programação Java, considerando o índice do parâmetro, usando o objeto Calendar fornecido.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,18 +48,18 @@ public java.sql.Time getTime(int index,
   
  Um objeto de calendário.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  Um objeto de tempo.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método getTime é especificado pelo método getTime na interface do CallableStatement.  
+ Esse método getTime é especificado pelo método getTime na interface java.sql.CallableStatement.  
   
- Consulte o gráfico intitulado "Conversões de método Getter" em [conversões de tipo de dados de Conhecimento](../../../connect/jdbc/understanding-data-type-conversions.md) para ver quais [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] tipos de dados podem ser recuperados com esse método.  
+ Consulte o gráfico intitulado "Conversões de método Getter" em [Noções básicas sobre conversões de tipo de dados](../../../connect/jdbc/understanding-data-type-conversions.md) para ver quais [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipos de dados podem ser recuperados com esse método.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Método getTime &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettime-method-sqlservercallablestatement.md)   
  [Membros SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Classe SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  

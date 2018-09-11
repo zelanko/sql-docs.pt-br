@@ -19,12 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 83dc2762c52a8564755355199faa59b1eb25991e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 661e8a31ad3fc240c1e8e51f03f2e4132e96fdc7
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32841511"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785880"
 ---
 # <a name="setapplicationname-method-sqlserverdatasource"></a>Método setApplicationName (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,14 +39,14 @@ public void setApplicationName(java.lang.String applicationName)
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *ApplicationName*  
+ *applicationName*  
   
- Um **cadeia de caracteres** que contém o nome do aplicativo.  
+ Uma **String** que contém o nome do aplicativo.  
   
 ## <a name="remarks"></a>Remarks  
- O nome do aplicativo é usado para identificar o aplicativo específico em várias [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] de criação de perfil e as ferramentas de log. Se o nome do aplicativo não for definido, o método getApplicationName retorna a cadeia de caracteres não localizada "[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]".  
+ O nome do aplicativo é usado para identificar o aplicativo específico em várias ferramentas de criação de perfil e log do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se o nome do aplicativo não for definido, o método getApplicationName retornará a cadeia de caracteres não localizada "[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]".  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Membros de SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [Classe SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

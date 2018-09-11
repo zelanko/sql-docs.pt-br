@@ -14,21 +14,21 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9106cd417574d1e29d974236544116e2e0530fb0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 498554dc92e9ec8e52a36227412b9e74f28c40ba
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843131"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787134"
 ---
 # <a name="isqlserverdatasource-interface"></a>Interface ISQLServerDataSource
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Uma fábrica para criar conexões com a fonte de dados representadas pelo objeto. Essa interface foi adicionada ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] JDBC Driver 3.0.  
+  Uma fábrica para criar conexões com a fonte de dados representadas pelo objeto. Essa interface foi adicionada ao [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0.  
   
  **Pacote:** com.microsoft.sqlserver.jdbc  
   
- **Estende:** Java.SQL. commondatasource  
+ **Estende:** java.sql.CommonDataSource  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,9 +38,9 @@ public interface ISQLServerDataSource
 ```  
   
 ## <a name="remarks"></a>Remarks  
- Essa interface é implementada por [classe SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md).  
+ Essa interface é implementada pelo [classe SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md).  
   
- Essa interface expõe os seguintes [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-métodos específicos:  
+ Essa interface expõe os seguintes métodos específicos do [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]:  
   
 |Método|Para obter mais informações, consulte|  
 |------------|-------------------------------|  
@@ -95,7 +95,7 @@ public interface ISQLServerDataSource
 |public void setWorkstationID(String)|[setWorkstationID](../../../connect/jdbc/reference/setworkstationid-method-sqlserverdatasource.md)|  
 |public void setXopenStates(boolean)|[setXopenStates](../../../connect/jdbc/reference/setxopenstates-method-sqlserverdatasource.md)|  
   
-## <a name="see-also"></a>Consulte também  
- [Referência da API do Driver JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
+## <a name="see-also"></a>Consulte Também  
+ [Referência de API do JDBC Driver](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   
   

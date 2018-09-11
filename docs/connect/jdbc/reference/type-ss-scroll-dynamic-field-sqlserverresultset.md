@@ -19,17 +19,17 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d324e5e1cdf3ef2f2dd409f2624a2c243bce07e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 2975fa2696422f6b1acf8b2382a9c42ab6c5cac8
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32848221"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786947"
 ---
 # <a name="typessscrolldynamic-field-sqlserverresultset"></a>Campo TYPE_SS_SCROLL_DYNAMIC (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Usado para especificar um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] tipo de cursor dinâmico.  
+  Usado para especificar um tipo de cursor dinâmico do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,9 +39,9 @@ public static final int TYPE_SS_SCROLL_DYNAMIC
 ```  
   
 ## <a name="field-value"></a>Valor do campo  
- Um **int** valor 1006.  
+ Uma **int** valor 1006.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Membros de SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Classe SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

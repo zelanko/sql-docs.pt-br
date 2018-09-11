@@ -19,17 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8cc0ad913aec89782beeba1e962d329df2302574
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 020c8982879a02c8c4d3803b0902654c6d6a227f
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839181"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785881"
 ---
 # <a name="getshort-method-int"></a>Método getShort (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera o valor do parâmetro designado como um **curto** em considerando o índice do parâmetro de linguagem de programação Java.  
+  Recupera o valor do parâmetro designado como um **short** na linguagem de programação Java, considerando o índice do parâmetro.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,7 +43,7 @@ public short getShort(int index)
   
  Um **int** que indica o índice do parâmetro.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  Um **curto** valor.  
   
 ## <a name="exceptions"></a>Exceções  
@@ -52,9 +52,9 @@ public short getShort(int index)
 ## <a name="remarks"></a>Remarks  
  Esse método getShort é especificado pelo método getShort na interface do CallableStatement.  
   
- Esse método tem suporte somente em [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] tipos de dados que podem retornar com segurança um valor inteiro como **smallint**, **tinyint**, e **bit**. Seu uso em quaisquer outros tipos de dados fará com que uma exceção seja lançada.  
+ Esse método só é compatível com os tipos de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que podem retornar com segurança um valor inteiro, como **smallint**, **tinyint** e **bit**. Seu uso em quaisquer outros tipos de dados fará com que uma exceção seja lançada.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Método getShort &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getshort-method-sqlservercallablestatement.md)   
  [Membros SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Classe SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  

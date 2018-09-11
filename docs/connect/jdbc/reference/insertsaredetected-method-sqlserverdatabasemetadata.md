@@ -19,17 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a4883b1e6baece15e5ef01ddbefc6d4eb5143cb8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 0a9db62fe63e075733b6829dad11f51ec97996c3
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32840571"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785413"
 ---
 # <a name="insertsaredetected-method-sqlserverdatabasemetadata"></a>Método insertsAreDetected (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera se uma inserção de linha visível pode ser detectada chamando o método [rowInserted](../../../connect/jdbc/reference/rowinserted-method-sqlserverresultset.md) método o [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) classe.  
+  Recupera se a inserção de uma linha visível pode ser detectada ou não com a chamada do método [rowInserted](../../../connect/jdbc/reference/rowinserted-method-sqlserverresultset.md) da classe [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,7 +39,7 @@ public boolean insertsAreDetected(int type)
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *type*  
+ *tipo*  
   
  Um inteiro que indica o tipo do conjunto de resultados, que pode ser um dos valores a seguir, conforme definido em java.sql.ResultSet ou SQLServerResultSet:  
   
@@ -61,8 +61,8 @@ public boolean insertsAreDetected(int type)
   
  TYPE_SS_SCROLL_DYNAMIC  
   
-## <a name="return-value"></a>Valor de retorno  
- **True** se a inserção de linha puder ser detectada. Caso contrário, **false**.  
+## <a name="return-value"></a>Valor retornado  
+ **True** se a inserção de linha pode ser detectada. Caso contrário, **false**.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -71,9 +71,9 @@ public boolean insertsAreDetected(int type)
  Esse método insertsAreDetected é especificado pelo método insertsAreDetected na interface DatabaseMetadata.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] não detecta linhas inseridas para qualquer tipo de cursor.  
+>  O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não detecta linhas inseridas para qualquer tipo de cursor.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [Membros SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Classe SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

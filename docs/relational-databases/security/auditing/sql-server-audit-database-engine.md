@@ -113,7 +113,7 @@ ms.locfileid: "43022845"
   
 4.  Leia os eventos de auditoria usando o recurso **Visualizador de Eventos**do Windows, o **Visualizador do Arquivo de Log**ou a função fn_get_audit_file.  
   
- Para obter mais informações, consulte [Create a Server Audit and Server Audit Specification](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md) e [Create a Server Audit and Database Audit Specification](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md).  
+ Para obter mais informações, consulte [Criar uma auditoria de servidor e uma especificação de auditoria de servidor](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md) e [Criar uma especificação de auditoria de banco de dados e de servidor](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md).  
   
 ## <a name="considerations"></a>Considerações  
  No caso de falha durante o início da auditoria, o servidor não será iniciado. Nesse caso, é possível iniciar o servidor usando a opção **–f** na linha de comando.  

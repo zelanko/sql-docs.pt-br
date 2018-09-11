@@ -19,17 +19,17 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e2dca7a3c3cb2f6ac80fd9901c05e03135a42dc4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 9ac959d60bb84fe4d63d2da80665c00c0783c4bf
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32842861"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787783"
 ---
 # <a name="setintegratedsecurity-method-sqlserverdatasource"></a>Método setIntegratedSecurity (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Define uma **booliano** valor que indica se a propriedade integratedSecurity está habilitada.  
+  Define um valor **booliano** que indica se a propriedade integratedSecurity está habilitada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,17 +41,17 @@ public void setIntegratedSecurity(boolean enable)
 #### <a name="parameters"></a>Parâmetros  
  *enable*  
   
- **True** se integratedSecurity estiver habilitada. Caso contrário, **false**.  
+ **True** se integratedSecurity está habilitada. Caso contrário, **false**.  
   
 ## <a name="remarks"></a>Remarks  
- Definido como "**true**" para indicar que as credenciais do Windows serão usadas por [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] para autenticar o usuário do aplicativo. Se "**true**", o [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] procurará no cache de credencial do computador local as credenciais que já foram fornecidas no logon do computador ou na rede. Se "**false**", o nome de usuário e a senha devem ser fornecidos.  
+ Defina como "**true**" para indicar que as credenciais do Windows serão usadas pelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para autenticar o usuário do aplicativo. Se "**true**", o [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] pesquisará no cache de credenciais do computador local as credenciais que já foram fornecidas quando foi feito logon no computador ou na rede. Se "**false**", o nome de usuário e a senha deverão ser fornecidos.  
   
 > [!NOTE]  
->  Essa propriedade só é suportada em [!INCLUDE[msCoName](../../../includes/msconame_md.md)] sistemas operacionais Windows.  
+>  Essa propriedade só é compatível nos sistemas operacionais [!INCLUDE[msCoName](../../../includes/msconame_md.md)] Windows.  
   
- Para obter mais informações sobre como usar a autenticação integrada, consulte [criar a URL de Conexão](../../../connect/jdbc/building-the-connection-url.md).  
+ Para obter mais informações sobre como usar a autenticação integrada, consulte [construindo a URL de Conexão](../../../connect/jdbc/building-the-connection-url.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Membros de SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [Classe SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

@@ -19,12 +19,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 722fd20c9210b14cb503ab3a0189815fa3cc83dd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 449af2fc385e569c8a08051f155f704108153f84
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32841621"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42783974"
 ---
 # <a name="getversioncolumns-method-sqlserverdatabasemetadata"></a>Método getVersionColumns (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,18 +43,18 @@ public java.sql.ResultSet getVersionColumns(java.lang.String catalog,
 #### <a name="parameters"></a>Parâmetros  
  *catalog*  
   
- Um **cadeia de caracteres** que contém o nome do catálogo.  
+ Uma **String** que contém o nome do catálogo.  
   
  *schema*  
   
- Um **cadeia de caracteres** que contém o padrão de nome de esquema.  
+ Uma **String** que contém o padrão de nome do esquema.  
   
  *table*  
   
- Um **cadeia de caracteres** que contém o nome da tabela.  
+ Uma **String** que contém o nome da tabela.  
   
-## <a name="return-value"></a>Valor de retorno  
- Um [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto.  
+## <a name="return-value"></a>Valor retornado  
+ Um objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -64,22 +64,22 @@ public java.sql.ResultSet getVersionColumns(java.lang.String catalog,
   
  O conjunto de resultados retornado pelo método getVersionColumns conterá as seguintes informações:  
   
-|Nome|Tipo|Description|  
+|Nome|Tipo|Descrição|  
 |----------|----------|-----------------|  
 |SCOPE|**short**|Não há suporte do JDBC Driver.|  
 |COLUMN_NAME|**String**|O nome da coluna.|  
 |DATA_TYPE|**short**|O tipo de dados SQL de java.sql.Types.|  
 |TYPE_NAME|**String**|O nome do tipo de dados.|  
-|COLUMN_SIZE|**Int**|A precisão da coluna.|  
-|BUFFER_LENGTH|**Int**|O comprimento da coluna em bytes.|  
+|COLUMN_SIZE|**int**|A precisão da coluna.|  
+|BUFFER_LENGTH|**int**|O comprimento da coluna em bytes.|  
 |DECIMAL_DIGITS|**short**|A escala da coluna.|  
 |PSEUDO_COLUMN|**short**|Indica se a coluna é uma pseudocoluna. Pode ser um dos seguintes valores:<br /><br /> versionColumnUnknown (0)<br /><br /> versionColumnNotPseudo (1)<br /><br /> versionColumnPseudo (2)|  
   
 > [!NOTE]  
->  Para obter mais informações sobre os dados retornados pelo método getVersionColumns, consulte "sp_datatype_info (Transact-SQL)" em [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Manuais Online.  
+>  Para saber mais sobre os dados retornados pelo método getVersionColumns, consulte "sp_datatype_info (Transact-SQL)" nos Manuais Online do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra como usar o método getVersionColumns para retornar informações sobre as colunas que são atualizados automaticamente na tabela Person. Contact o [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] banco de dados de exemplo.  
+ O exemplo a seguir demonstra como usar o método getVersionColumns para retornar informações sobre as colunas atualizadas automaticamente na tabela Person.Contact do banco de dados de exemplo do [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)].  
   
 ```  
 public static void executeGetVersionColumns(Connection con) {  
@@ -104,7 +104,7 @@ public static void executeGetVersionColumns(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [Membros SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Classe SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

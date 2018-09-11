@@ -1,5 +1,5 @@
 ---
-title: parâmetro de método (Java) getDate | Microsoft Docs
+title: parâmetro de método (lang) getDate | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,12 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 004e82182e71cb1f37f466cc89e86eb0a0399ba9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: c767fecf4a803566e26ef8239a58666d00033e51
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32834151"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786938"
 ---
 # <a name="getdate-method-javalangstring"></a>Método getDate (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,18 +43,18 @@ public java.sql.Date getDate(java.lang.String sCol)
   
  Uma **String** que contém o nome do parâmetro.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  Um objeto de data.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método getDate é especificado pelo método na interface do CallableStatement getDate.  
+ Esse método getDate é especificado pelo método getDate na interface java.sql.CallableStatement.  
   
- Esse método retorna uma parte de data válida de um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] **datetime** ou **smalldatetime** tipo de dados, com a parte de hora definida como a linha de base de tempo de Java de 00:00 (meia-noite).  
+ Esse método retorna uma parte de data válida de um tipo de dados **datetime** ou **smalldatetime** do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], com a parte de hora definida como a linha de base de hora do Java de 00:00 (meia-noite).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Método getDate &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getdate-method-sqlservercallablestatement.md)   
  [Membros SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Classe SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  

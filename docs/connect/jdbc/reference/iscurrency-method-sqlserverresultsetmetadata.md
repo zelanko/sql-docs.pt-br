@@ -19,12 +19,12 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 885e7a8f8f1e32822530b4afa414415e2b667db6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 442fe1d519820651f6a22fa601642092d87669dc
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839551"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785414"
 ---
 # <a name="iscurrency-method-sqlserverresultsetmetadata"></a>Método isCurrency (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,22 +41,22 @@ public boolean isCurrency(int column)
 #### <a name="parameters"></a>Parâmetros  
  *column*  
   
- Um **int** que indica o índice da coluna.  
+ Um **int** que indica o índice de coluna.  
   
-## <a name="return-value"></a>Valor de retorno  
- **True** se a coluna for um valor monetário. Caso contrário, **false**.  
+## <a name="return-value"></a>Valor retornado  
+ **True** se a coluna é um valor monetário. Caso contrário, **false**.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método isCurrency é especificado pelo método isCurrency na interface Java.SQL. resultsetmetadata.  
+ Esse método isCurrency é especificado pelo método isCurrency na interface resultsetmetadata.  
   
- Esse método retornará **true** somente com [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] tipos de dados money e smallmoney.  
+ Esse método retornará **true** somente com tipos de dados money e smallmoney do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Consulte também  
- [Métodos SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   
- [Membros de SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-members.md)   
+## <a name="see-also"></a>Consulte Também  
+ [SQLServerResultSetMetaData Methods](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   
+ [Membros SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-members.md)   
  [Classe SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md)  
   
   

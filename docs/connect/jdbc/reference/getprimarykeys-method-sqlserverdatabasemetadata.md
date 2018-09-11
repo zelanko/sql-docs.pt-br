@@ -19,12 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 15e8882067a67ec5d276e23c7cb3d2ea3684bf38
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 80ea0345ffa8e608c3e67ab90b0ad108cde143d4
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32837441"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786408"
 ---
 # <a name="getprimarykeys-method-sqlserverdatabasemetadata"></a>Método getPrimaryKeys (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,20 +41,20 @@ public java.sql.ResultSet getPrimaryKeys(java.lang.String cat,
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *CAT*  
+ *cat*  
   
- Um **cadeia de caracteres** que contém o nome do catálogo.  
+ Uma **String** que contém o nome do catálogo.  
   
  *schema*  
   
- Um **cadeia de caracteres** que contém o nome do esquema.  
+ Uma **String** que contém o nome do esquema.  
   
  *table*  
   
- Um **cadeia de caracteres** que contém o nome da tabela.  
+ Uma **String** que contém o nome da tabela.  
   
-## <a name="return-value"></a>Valor de retorno  
- Um [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto.  
+## <a name="return-value"></a>Valor retornado  
+ Um objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -64,7 +64,7 @@ public java.sql.ResultSet getPrimaryKeys(java.lang.String cat,
   
  O conjunto de resultados retornado pelo método getPrimaryKeys conterá as seguintes informações:  
   
-|Nome|Tipo|Description|  
+|Nome|Tipo|Descrição|  
 |----------|----------|-----------------|  
 |TABLE_CAT|Cadeia de caracteres|O nome do banco de dados no qual a tabela especificada reside.|  
 |TABLE_SCHEM|Cadeia de caracteres|O esquema da tabela.|  
@@ -74,10 +74,10 @@ public java.sql.ResultSet getPrimaryKeys(java.lang.String cat,
 |PK_NAME|Cadeia de caracteres|O nome da chave primária.|  
   
 > [!NOTE]  
->  Para obter mais informações sobre os dados retornados pelo método getPrimaryKeys, consulte "sp_pkeys (Transact-SQL)" em [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Manuais Online.  
+>  Para saber mais sobre os dados retornadas pelo método getPrimaryKeys, consulte "sp_pkeys (Transact-SQL)" nos Manuais Online do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra como usar o método getPrimaryKeys para retornar informações sobre as chaves primárias da tabela Person. Contact no [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] banco de dados de exemplo.  
+ O exemplo a seguir demonstra como usar o método getPrimaryKeys para retornar informações sobre as chaves primárias da tabela Person.Contact no banco de dados de exemplo do [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)].  
   
 ```  
 public static void executeGetPrimaryKeys(Connection con) {  
@@ -102,7 +102,7 @@ public static void executeGetPrimaryKeys(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [Membros SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Classe SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

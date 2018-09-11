@@ -19,12 +19,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 52e96e79dd6e7e9b51824608e161be5648796d01
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 28d1c4ef8b1c5ae0422fd140cd16a318843f6a22
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32836211"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785403"
 ---
 # <a name="getexportedkeys-method-sqlserverdatabasemetadata"></a>Método getExportedKeys (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,20 +41,20 @@ public java.sql.ResultSet getExportedKeys(java.lang.String cat,
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *CAT*  
+ *cat*  
   
- Um **cadeia de caracteres** que contém o nome do catálogo.  
+ Uma **String** que contém o nome do catálogo.  
   
  *schema*  
   
- Um **cadeia de caracteres** que contém o nome do esquema.  
+ Uma **String** que contém o nome do esquema.  
   
  *table*  
   
- Um **cadeia de caracteres** que contém o nome da tabela.  
+ Uma **String** que contém o nome da tabela.  
   
-## <a name="return-value"></a>Valor de retorno  
- Um [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto.  
+## <a name="return-value"></a>Valor retornado  
+ Um objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -64,7 +64,7 @@ public java.sql.ResultSet getExportedKeys(java.lang.String cat,
   
  O conjunto de resultados retornado pelo método getExportedKeys conterá as seguintes informações:  
   
-|Nome|Tipo|Description|  
+|Nome|Tipo|Descrição|  
 |----------|----------|-----------------|  
 |PKTABLE_CAT|**String**|O nome do catálogo que contém a tabela de chaves primárias.|  
 |PKTABLE_SCHEM|**String**|O nome do esquema da tabela de chaves primárias.|  
@@ -82,10 +82,10 @@ public java.sql.ResultSet getExportedKeys(java.lang.String cat,
 |DEFERRABILITY|**short**|Indica se a avaliação da restrição de chave estrangeira poderá ser adiada até uma confirmação. Pode ser um dos seguintes valores:<br /><br /> importedKeyInitiallyDeferred (5)<br /><br /> importedKeyInitiallyImmediate (6)<br /><br /> importedKeyNotDeferrable (7)|  
   
 > [!NOTE]  
->  Para obter mais informações sobre os dados retornados pelo método getExportedKeys, consulte "sp_fkeys (Transact-SQL)" em [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Manuais Online.  
+>  Para saber mais sobre os dados retornados pelo método getExportedKeys, consulte "sp_fkeys (Transact-SQL)" nos Manuais Online do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra como usar o método getExportedKeys para retornar informações sobre todas as chaves estrangeiras que referenciam as chaves primárias da tabela Person. Contact no [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] banco de dados de exemplo.  
+ O exemplo a seguir demonstra como usar o método getExportedKeys para retornar informações sobre todas as chaves estrangeiras que fazem referência às chaves primárias da tabela Person.Contact do banco de dados de exemplo do [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)].  
   
 ```  
 public static void executeGetExportedKeys(Connection con) {  
@@ -110,7 +110,7 @@ public static void executeGetExportedKeys(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [Membros SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Classe SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

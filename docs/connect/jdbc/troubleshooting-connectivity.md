@@ -14,40 +14,40 @@ caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5f7f46aa17ca8fba97c4c17d6efdfee8358448a5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: dc0b307790452c1eeb347b4482a13c3f57ec05a6
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32852037"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787327"
 ---
 # <a name="troubleshooting-connectivity"></a>Solucionando problemas de conectividade
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] requer que o TCP/IP esteja instalado e em execução para se comunicar com seu [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] banco de dados. Você pode usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] do Configuration Manager para verificar quais protocolos de biblioteca de rede estão instalados.  
+  O [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] exige que o TCP/IP esteja instalado e em execução para se comunicar com o banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você pode usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager para verificar quais protocolos de biblioteca de rede estão instalados.  
   
- Uma tentativa de conexão de banco de dados pode falhar por muitas razões. Eles podem incluir o seguinte:  
+ Uma tentativa de conexão de banco de dados pode falhar por muitas razões. Podem incluir o seguinte:  
   
--   TCP/IP não está habilitado para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], ou o servidor ou número de porta especificado está incorreto. Verifique [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] está escutando com TCP/IP no servidor especificado e porta. Isto poderia ser relatado com uma exceção semelhante a: "O logon falhou. A conexão TCP/IP ao host falhou". Isso pode ser uma das seguintes situações:  
+-   O TCP/IP não está habilitado para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou o servidor ou número da porta especificados estão incorretos. Verifique se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está escutando com TCP/IP no servidor e na porta especificados. Isto poderia ser relatado com uma exceção semelhante a: "O logon falhou. A conexão TCP/IP ao host falhou". Isso pode ser uma das seguintes situações:  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] está instalado, mas TCP/IP não tiver sido instalado como um protocolo de rede para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Network Utility da [!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)], ou o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Gerenciador de configuração de [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] e posterior.  
+    -   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] foi instalado, mas o TCP/IP não foi instalado como um protocolo de rede do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Network Utility da [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] ou o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e posterior.  
   
-    -   TCP/IP é instalado como um [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] protocolo, mas ele não está escutando na porta especificada na URL de conexão JDBC. A porta padrão é 1433, mas [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] pode ser configurado durante a instalação do produto para escutar em qualquer porta. Verifique se [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] está escutando na porta 1433. Ou, se a porta foi alterada, verifique se a porta especificada na URL de conexão do JDBC corresponde à porta alterada. Para obter mais informações sobre URLs de conexão JDBC, consulte [criar a URL de Conexão](../../connect/jdbc/building-the-connection-url.md).  
+    -   O TCP/IP foi instalado como um protocolo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas não está escutando na porta especificada na URL de conexão JDBC. A porta padrão é 1433, mas o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode ser configurado durante a instalação do produto para escutar em qualquer porta. Verifique se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está escutando na porta 1433. Ou, se a porta foi alterada, verifique se a porta especificada na URL de conexão do JDBC corresponde à porta alterada. Para obter mais informações sobre URLs de conexão do JDBC, consulte [construindo a URL de Conexão](../../connect/jdbc/building-the-connection-url.md).  
   
-    -   O endereço do computador que está especificado na conexão do JDBC URL não faz referência a um servidor onde [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] é instalado e iniciado.  
+    -   O endereço do computador que é especificado na URL de conexão do JDBC não se refere a um servidor em que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está instalado e é iniciado.  
   
-    -   A operação de rede de TCP/IP entre o cliente e o servidor que executa o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] não está funcionando. Você pode verificar a conectividade TCP/IP para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] usando telnet. Por exemplo, no prompt de comando, digite `telnet 192.168.0.0 1433` onde 192.168.0.0 é o endereço do computador que está executando [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e 1433 é a porta que ele está escutando. Se você receber uma mensagem informando que "O Telnet não pode se conectar", o TCP/IP não está escutando naquela porta para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] conexões. Use o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Network Utility da [!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)], ou o [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Gerenciador de configuração de [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] e posterior para ter certeza de que [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] está configurado para usar TCP/IP na porta 1433.  
+    -   A operação de rede de TCP/IP entre o cliente e o servidor que executa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não está funcionando. Você pode verificar a conectividade de TCP/IP com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando telnet. Por exemplo, no prompt de comando, digite `telnet 192.168.0.0 1433`, em que 192.168.0.0 é o endereço do computador que está executando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e 1433 é a porta na qual ele está escutando. Se você receber uma mensagem dizendo que "O Telnet não pode se conectar", isso significa que o TCP/IP não está escutando naquela porta para conexões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Network Utility da [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] ou o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e posterior para ter certeza de que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seja configurado para usar o TCP/IP na porta 1433.  
   
     -   A porta que é usada pelo servidor não foi aberta no firewall. Isto inclui a porta que é usada pelo servidor ou, opcionalmente, a porta associada com uma instância nomeada do servidor.  
   
--   O nome do banco de dados especificado está incorreto. Certifique-se de que você está fazendo logon em um existente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] banco de dados.  
+-   O nome do banco de dados especificado está incorreto. Verifique se você está fazendo logon em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existente.  
   
 -   O nome de usuário ou senha está incorreta. Verifique se você tem os valores corretos.  
   
--   Quando você usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] autenticação, o JDBC driver exige que [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] é instalado com [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] autenticação, que não é o padrão. Certifique-se de que essa opção estiver incluída quando você instalar ou configurar sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+-   Quando você usa autenticação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o JDBC Driver exige que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seja instalado com autenticação [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], que não é o padrão. Verifique se esta opção estará incluída quando você instalar ou configurar sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Consulte também  
- [Diagnosticar problemas com o Driver JDBC](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Diagnosticando problemas com o JDBC Driver](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)   
  [Conectando ao SQL Server com o JDBC Driver](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
   
   

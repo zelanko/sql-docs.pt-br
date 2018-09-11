@@ -19,17 +19,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 30a04c2c4094f8265a829b6b130b1e7423d154f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 29b2c2033c705858577ac759b34b53fa2f9395c7
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32841921"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784847"
 ---
 # <a name="setinstancename-method-sqlserverdatasource"></a>Método setInstanceName (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Conjuntos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] nome da instância.  
+  Define o nome da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,11 +39,11 @@ public void setInstanceName(java.lang.String instanceName)
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *InstanceName*  
+ *instanceName*  
   
  Um **cadeia de caracteres** que contém o nome da instância.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Membros de SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [Classe SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

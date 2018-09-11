@@ -14,29 +14,29 @@ caps.latest.revision: 48
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 98894a9fc311f115eb0b7a9d3ccf9583b2037631
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: b449e27f5313eb17fa180b02021240b3bd9f49b1
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32830531"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784672"
 ---
 # <a name="finding-additional-jdbc-driver-information"></a>Localizando informações adicionais sobre o JDBC Driver
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Para obter mais informações sobre o [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] e [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] desenvolvimento em geral, consulte os seguintes recursos online:  
+  Para saber mais sobre o [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] e o desenvolvimento do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em geral, consulte os seguintes recursos online:  
   
 ## <a name="remarks"></a>Remarks  
   
-|Recurso|Description|  
+|Recurso|Descrição|  
 |--------------|-----------------|  
-|[Driver JDBC para o repositório do GitHub do SQL Server](https://github.com/microsoft/mssql-jdbc)|Esse repositório contém o código-fonte para o Driver JDBC para SQL Server. Use esse site para problemas de arquivo e contribuir diretamente para o driver.|
-|[Data Access and Storage Developer Center](http://go.microsoft.com/fwlink?linkid=4173)|Este site oferece documentação, artigos técnicos, código de exemplo e outros recursos para todas as tecnologias de acesso a dados em [!INCLUDE[msCoName](../../includes/msconame_md.md)].|  
-|[Fórum de acesso de dados do SQL Server](http://go.microsoft.com/fwlink/?LinkId=70651)|Este site serve como um Fórum da comunidade para acesso a dados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] usando [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Native Client, OLE DB, ODBC, ADO, MDAC, JDBC ou SOAP/HTTP.|  
+|[Driver JDBC para o repositório de GitHub do SQL Server](https://github.com/microsoft/mssql-jdbc)|Esse repositório contém o código-fonte para o JDBC Driver para SQL Server. Use este site aos problemas de arquivo e contribuir diretamente com o driver.|
+|[Central de Desenvolvedores de Armazenamento e Acesso a Dados](http://go.microsoft.com/fwlink?linkid=4173)|Este site fornece documentação, artigos técnicos, código de exemplo e outros recursos para todas as tecnologias de acesso a dados na [!INCLUDE[msCoName](../../includes/msconame_md.md)].|  
+|[SQL Server Data Access Forum](http://go.microsoft.com/fwlink/?LinkId=70651)|Este site serve como um fórum da comunidade para acesso a dados para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, OLE DB, ODBC, ADO, MDAC, JDBC ou SOAP/HTTP.|  
 |[Blog do JDBC](http://go.microsoft.com/fwlink/?LinkId=124746)|Este blog é usado para fornecer informações sobre o [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] e permite interagir diretamente com membros da equipe de produto do driver JDBC.|  
 |[Microsoft Connect](http://go.microsoft.com/fwlink/?LinkID=116905)|Este site permite procurar problemas de driver enviados por clientes e permite enviar o seu próprio.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Visão geral do JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

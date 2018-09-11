@@ -19,17 +19,17 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 40772acf845f318dac20e779565cf474c539c483
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d7955ad0d658af50f972f8bd76c5b96a2a78be18
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32830401"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785882"
 ---
 # <a name="getcolumntypename-method-sqlserverresultsetmetadata"></a>Método getColumnTypeName (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera o nome de tipo específico de banco de dados da coluna designada.  
+  Recupera o nome de tipo específico do banco de dados da coluna designada.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,21 +41,21 @@ public java.lang.String getColumnTypeName(int column)
 #### <a name="parameters"></a>Parâmetros  
  *column*  
   
- Um **int** que indica o índice da coluna.  
+ Um **int** que indica o índice de coluna.  
   
-## <a name="return-value"></a>Valor de retorno  
- Um **cadeia de caracteres** que contém o nome do servidor para a coluna.  
+## <a name="return-value"></a>Valor retornado  
+ Uma **String** que contém o nome do servidor para a coluna.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método getColumnTypeName é especificado pelo método getColumnTypeName na interface Java.SQL. resultsetmetadata.  
+ Esse método getColumnTypeName é especificado pelo método getColumnTypeName na interface resultsetmetadata.  
   
- [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] O JDBC Driver 3.0 possui alterações de comportamento na coluna TYPE_NAME. Consulte [Getcolumns](../../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md) para obter mais informações.  
+ O [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 tem alterações de comportamento na coluna TYPE_NAME. Consulte [SQLServerDatabaseMetaData.getColumns](../../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md) para saber mais.  
   
-## <a name="see-also"></a>Consulte também  
- [Membros de SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-members.md)   
+## <a name="see-also"></a>Consulte Também  
+ [Membros SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-members.md)   
  [Classe SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md)  
   
   

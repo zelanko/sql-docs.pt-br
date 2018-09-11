@@ -19,17 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b5402a16946770f9167c8d3aef17cedf916f11c5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 893d0015b7e60b65e3d160651f2760bf64f37d30
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32834811"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787318"
 ---
-# <a name="getdate-method-javalangstring-javautilcalendar-sqlserverresultset"></a>Método getDate (Java, java.util.Calendar) (SQLServerResultSet)
+# <a name="getdate-method-javalangstring-javautilcalendar-sqlserverresultset"></a>Método getDate (java.lang.String, java.util.Calendar) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera o valor do nome da coluna designada na linha atual deste [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto como um objeto Java.SQL em Java linguagem de programação, usando o objeto de calendário fornecido.  
+  Recupera o valor do nome da coluna designada na linha atual do objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) como um objeto java.sql.Date na linguagem de programação Java usando o objeto Calendar fornecido.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,26 +40,26 @@ public java.sql.Date getDate(java.lang.String colName,
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *ColName*  
+ *colName*  
   
- Um **cadeia de caracteres** que contém o nome da coluna.  
+ Uma **Cadeia de Caracteres** que contém o nome da coluna.  
   
  *CAL*  
   
  Um objeto de calendário.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  Um objeto de data.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método getDate é especificado pelo método na interface Java.SQL. ResultSet getDate.  
+ Esse método getDate é especificado pelo método getDate na interface do resultset.  
   
- Esse método retorna uma parte de data válida de um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] tipo de dados datetime ou smalldatetime, com a parte de hora definida como a linha de base de tempo de Java de 00:00 (meia-noite) no fuso horário do calendário fornecido.  
+ Esse método retorna uma parte de data válida de um tipo de dados datetime ou smalldatetime do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], com a parte de hora definida como a linha de base da hora do Java de 00:00 (meia-noite) no fuso horário do Calendário fornecido.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Método getDate &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getdate-method-sqlserverresultset.md)   
  [Membros de SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Classe SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

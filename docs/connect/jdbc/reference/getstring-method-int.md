@@ -19,17 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6f21b98752effb5fafbc7f87307f639b35697eda
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 229454b3b5acc15441e8954ad3bc9f3cbfe0d1d8
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839121"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786948"
 ---
 # <a name="getstring-method-int"></a>Método getString (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera o valor do parâmetro designado como um **cadeia de caracteres** em considerando o índice do parâmetro de linguagem de programação Java.  
+  Recupera o valor do parâmetro designado como uma **String** na linguagem de programação Java, considerando o índice do parâmetro.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,8 +43,8 @@ public java.lang.String getString(int index)
   
  Um **int** que indica o índice do parâmetro.  
   
-## <a name="return-value"></a>Valor de retorno  
- Um **cadeia de caracteres** valor.  
+## <a name="return-value"></a>Valor retornado  
+ Um valor de **String**.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -52,13 +52,13 @@ public java.lang.String getString(int index)
 ## <a name="remarks"></a>Remarks  
  Esse método getString é especificado pelo método getString na interface do CallableStatement.  
   
- Todas as colunas na [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] pode ser retornado como uma cadeia de caracteres. Isso significa que uma representação da cadeia de caracteres de todos os tipos baseados em número e em caractere, e uma representação da cadeia de caracteres hexadecimais de colunas binárias, como binary, varbinary, varbinary(max), image, timestamp e uniqueidentifier, podem ser retornadas.  
+ Todas as colunas no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] podem ser retornadas como uma cadeia de caracteres. Isso significa que uma representação da cadeia de caracteres de todos os tipos baseados em número e em caractere, e uma representação da cadeia de caracteres hexadecimais de colunas binárias, como binary, varbinary, varbinary(max), image, timestamp e uniqueidentifier, podem ser retornadas.  
   
  Os tipos que diferenciam locais, como money, smallmoney, datetime, smalldatetime, float, real, decimal e numeric, retornarão o formato toString() canônico para o valor subjacente do tipo.  
   
  Os tipos definidos pelo usuário são retornados como valores de cadeia de caracteres hexadecimais.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Método getString &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getstring-method-sqlservercallablestatement.md)   
  [Membros SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Classe SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  

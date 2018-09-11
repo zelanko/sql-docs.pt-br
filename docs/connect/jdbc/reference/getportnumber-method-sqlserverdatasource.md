@@ -19,17 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 61ac4328c0a1da1229e568de52cc2d2c89cec437
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 7ed56e9a1ece100cc5a8900a2a810bd52b8ab3be
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32836751"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785564"
 ---
 # <a name="getportnumber-method-sqlserverdatasource"></a>Método getPortNumber (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Retorna o número da porta atual que é usado para se comunicar com [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
+  Retorna o número da porta atual usada para se comunicar com o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,16 +38,16 @@ ms.locfileid: "32836751"
 public int getPortNumber()  
 ```  
   
-## <a name="return-value"></a>Valor de retorno  
- Um **int** valor que contém o número da porta atual.  
+## <a name="return-value"></a>Valor retornado  
+ Um valor **int** que contém o número da porta atual.  
   
 ## <a name="remarks"></a>Remarks  
- O número da porta é o número da porta TCP/IP que é usado ao abrir uma conexão de soquete para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]. Se a propriedade portNumber não estiver definida, o método getPortNumber retornará o valor padrão de 1433.  
+ O número da porta é o número da porta TCP/IP usada ao abrir uma conexão de soquete com o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se a propriedade portNumber não estiver definida, o método getPortNumber retornará o valor padrão de 1433.  
   
 > [!NOTE]  
->  O [setPortNumber](../../../connect/jdbc/reference/setportnumber-method-sqlserverdatasource.md) método não faz qualquer intervalo de verificação no valor da porta transmitido. Você pode transmitir números de porta que não são válidos, como 99999, sem disparar um erro.  
+>  O [setPortNumber](../../../connect/jdbc/reference/setportnumber-method-sqlserverdatasource.md) método não faz qualquer intervalo de verificação no valor da porta transmitido. Você pode transmitir números que não são válidos, como 99999, sem acionar a um erro.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Membros de SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [Classe SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

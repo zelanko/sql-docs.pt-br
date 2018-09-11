@@ -19,12 +19,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8876c49e809cf1bd941937c294d6122bb3c7d3f3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 06b89ccbb7884b7f4d3af6aeeedde3d4f25d9ae5
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32833731"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786402"
 ---
 # <a name="getcrossreference-method-sqlserverdatabasemetadata"></a>Método getCrossReference (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,30 +46,30 @@ public java.sql.ResultSet getCrossReference(java.lang.String cat1,
 #### <a name="parameters"></a>Parâmetros  
  *gato1*  
   
- Um **cadeia de caracteres** que contém o nome do catálogo da tabela que contém a chave primária.  
+ Uma **String** que contém o nome de catálogo da tabela que contém a chave primária.  
   
  *schem1*  
   
- Um **cadeia de caracteres** que contém o nome do esquema da tabela que contém a chave primária.  
+ Uma **String** que contém o nome de esquema da tabela que contém a chave primária.  
   
- *Guia1*  
+ *tab1*  
   
- Um **cadeia de caracteres** que contém o nome da tabela que contém a chave primária da tabela.  
+ Uma **String** que contém o nome de tabela da tabela que contém a chave primária.  
   
  *Cat2*  
   
- Um **cadeia de caracteres** que contém o nome do catálogo da tabela que contém a chave estrangeira.  
+ Uma **String** que contém o nome de catálogo da tabela que contém a chave estrangeira.  
   
  *schem2*  
   
- Um **cadeia de caracteres** que contém o nome do esquema da tabela que contém a chave estrangeira.  
+ Uma **String** que contém o nome de esquema da tabela que contém a chave estrangeira.  
   
  *tab2*  
   
- Um **cadeia de caracteres** que contém o nome da tabela que contém a chave estrangeira da tabela.  
+ Uma **String** que contém o nome de tabela da tabela que contém a chave estrangeira.  
   
-## <a name="return-value"></a>Valor de retorno  
- Um [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto.  
+## <a name="return-value"></a>Valor retornado  
+ Um objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -79,7 +79,7 @@ public java.sql.ResultSet getCrossReference(java.lang.String cat1,
   
  O conjunto de resultados retornado pelo método getCrossReference conterá as seguintes informações:  
   
-|Nome|Tipo|Description|  
+|Nome|Tipo|Descrição|  
 |----------|----------|-----------------|  
 |PKTABLE_CAT|**String**|O nome do catálogo que contém a tabela de chaves primárias.|  
 |PKTABLE_SCHEM|**String**|O nome do esquema da tabela de chaves primárias.|  
@@ -97,10 +97,10 @@ public java.sql.ResultSet getCrossReference(java.lang.String cat1,
 |DEFERRABILITY|**short**|Indica se a avaliação da restrição de chave estrangeira poderá ser adiada até uma confirmação. Pode ser um dos seguintes valores:<br /><br /> importedKeyInitiallyDeferred (5)<br /><br /> importedKeyInitiallyImmediate (6)<br /><br /> importedKeyNotDeferrable (7)|  
   
 > [!NOTE]  
->  Para obter mais informações sobre os dados retornados pelo método getCrossReference, consulte "sp_fkeys (Transact-SQL)" em [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Manuais Online.  
+>  Para saber mais sobre os dados retornados pelo método getCrossReference, consulte "sp_fkeys (Transact-SQL)" nos Manuais Online do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra como usar o método getCrossReference para retornar informações sobre a relação de chave primária e estrangeira entre as tabelas Person. Contact e HumanResources. Employee no [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] banco de dados de exemplo.  
+ O exemplo a seguir demonstra como usar o método getCrossReference para retornar informações sobre a relação de chave primária e estrangeira entre as tabelas Person.Contact e HumanResources.Employee no banco de dados de exemplo [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)].  
   
 ```  
 public static void executeGetCrossReference(Connection con) {  
@@ -125,7 +125,7 @@ public static void executeGetCrossReference(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [Membros SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Classe SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

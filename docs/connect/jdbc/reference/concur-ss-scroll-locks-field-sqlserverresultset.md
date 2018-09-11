@@ -19,17 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3965327a41cacb25e76346b82128fb583aaf83b7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 04915501bf8e4618b35c8019779af5e60cda8057
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32828001"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787146"
 ---
 # <a name="concurssscrolllocks-field-sqlserverresultset"></a>Campo CONCUR_SS_SCROLL_LOCKS (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Usado para especificar um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] tipo de simultaneidade otimista com bloqueios de leitura/gravação.  
+  Usado para especificar um tipo de simultaneidade otimista de leitura/gravação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] com bloqueios de linha.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,9 +39,9 @@ public static final int CONCUR_SS_SCROLL_LOCKS
 ```  
   
 ## <a name="field-value"></a>Valor do campo  
- Um **int** valor de 1009.  
+ Uma **int** valor de 1009.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Membros de SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Classe SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

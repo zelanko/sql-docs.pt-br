@@ -1,5 +1,5 @@
 ---
-title: Método setCharacterStream (int, Java.IO. Reader) | Microsoft Docs
+title: Método setCharacterStream (int, java.io.Reader) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,20 +14,20 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7fa0e3edcc88e105f631105fb6d3735c6baa6348
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 4a0c8554e85a3341a79c80b1b4e6c6c050cfcda1
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843451"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785407"
 ---
 # <a name="setcharacterstream-method-int-javaioreader"></a>Método setCharacterStream (int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Define o parâmetro designado como o objeto Java.IO. Reader especificado.  
+  Define o parâmetro designado como o objeto java.io.Reader especificado.  
   
 > [!NOTE]  
->  Este recurso foi introduzido com o [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] JDBC Driver versão 2.0.  
+>  Esse recurso foi introduzido no [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver versão 2.0.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,17 +42,17 @@ public final void setCharacterStream(int parameterIndex,
   
  Um **int** que indica o número do parâmetro.  
   
- *Leitor*  
+ *reader*  
   
- O objeto Java.IO. Reader que contém os dados Unicode.  
+ O objeto java.io.Reader que contém os dados Unicode.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método setCharacterStream é especificado pelo método setCharacterStream na interface PreparedStatement.  
+ Esse método setCharacterStream é especificado pelo método setCharacterStream na interface do PreparedStatement.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Método setCharacterStream &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setcharacterstream-method-sqlserverpreparedstatement.md)   
  [Membros de SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)  
   

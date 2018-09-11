@@ -19,17 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c016a97d3e1494b046377d1ce6cd481385e8516b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 406881e33395f0071f06a16df4e789c70ab95e0a
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32834161"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786038"
 ---
 # <a name="getdefaulttransactionisolation-method-sqlserverdatabasemetadata"></a>Método getDefaultTransactionIsolation (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera o nível de isolamento de transação padrão para este banco de dados.  
+  Recupera o nível de isolamento de transação padrão do banco de dados em questão.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,8 +38,8 @@ ms.locfileid: "32834161"
 public int getDefaultTransactionIsolation()  
 ```  
   
-## <a name="return-value"></a>Valor de retorno  
- Um **int** que indica o nível de isolamento de transação padrão.  
+## <a name="return-value"></a>Valor retornado  
+ Um **int** que indica o nível de isolamento da transação padrão.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -47,9 +47,9 @@ public int getDefaultTransactionIsolation()
 ## <a name="remarks"></a>Remarks  
  Esse método getDefaultTransactionIsolation é especificado pelo método getDefaultTransactionIsolation na interface DatabaseMetadata.  
   
- Ao usar o [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] com um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] banco de dados, este método retorna um valor de TRANSACTION_READ_COMMITTED, ou o **int** valor 2.  
+ Quando você usa o [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] com um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], este método retorna um valor de TRANSACTION_READ_COMMITTED ou o valor **int** 2.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [Membros SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Classe SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

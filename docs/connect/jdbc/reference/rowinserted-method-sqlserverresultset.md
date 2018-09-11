@@ -1,5 +1,5 @@
 ---
-title: Método (SQLServerResultSet) rowInserted | Microsoft Docs
+title: Método rowInserted (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,14 +19,14 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ca82265b8fde94c29495c529928087a20ddc5544
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 5b11d932eab77c0987d605b6914666e58d1d3b06
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32842021"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42785227"
 ---
-# <a name="rowinserted-method-sqlserverresultset"></a>rowInserted método (SQLServerResultSet)
+# <a name="rowinserted-method-sqlserverresultset"></a>Método rowInserted (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   Recupera se a linha atual teve uma inserção.  
@@ -38,21 +38,21 @@ ms.locfileid: "32842021"
 public boolean rowInserted()  
 ```  
   
-## <a name="return-value"></a>Valor de retorno  
- **True** se uma linha teve uma inserção e as inserções são detectadas. Caso contrário, **false**.  
+## <a name="return-value"></a>Valor retornado  
+ **True** se uma linha teve uma inserção e inserções forem detectadas. Caso contrário, **false**.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método rowUpdated é especificado pelo método rowUpdated na interface Java.SQL. resultset.  
+ Esse método rowUpdated é especificado pelo método rowUpdated na interface do resultset.  
   
- O valor retornado depende se isso [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto detectar inserções visíveis.  
+ O valor que é retornado dependerá da capacidade do objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) de detectar inserções visíveis.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] não detecta linhas inseridas para qualquer tipo de cursor.  
+>  O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] não detecta linhas inseridas para qualquer tipo de cursor.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Membros de SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Classe SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

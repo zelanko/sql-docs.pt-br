@@ -19,17 +19,17 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cef7b37818e5bc7bf46c7181a3816edd5bbad860
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 68595a385022f9bd42ccc8e925068e1d1e0ed1d3
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32836861"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42786214"
 ---
 # <a name="getindexinfo-method-sqlserverdatabasemetadata"></a>Método getIndexInfo (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera uma descrição dos índices e estatísticas para a tabela especificada.  
+  Recupera uma descrição de índices e estatísticas da tabela fornecida.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,28 +43,28 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *CAT*  
+ *cat*  
   
- Um **cadeia de caracteres** que contém o nome do catálogo.  
+ Uma **String** que contém o nome do catálogo.  
   
  *schema*  
   
- Um **cadeia de caracteres** que contém o nome do esquema.  
+ Uma **String** que contém o nome do esquema.  
   
  *table*  
   
- Um **cadeia de caracteres** que contém o nome da tabela.  
+ Uma **String** que contém o nome da tabela.  
   
- *Exclusivo*  
+ *unique*  
   
- **True** se apenas índices de valores exclusivos forem retornados. **False** se todos os índices são retornados.  
+ **True** se apenas índices valores exclusivos serão retornados. **False** se todos os índices são retornados.  
   
- *aproximado*  
+ *approximate*  
   
- **True** se os resultados refletirem valores aproximados ou desatualizados. **False** se os resultados forem precisos.  
+ **True** se os resultados refletem os valores aproximados ou desatualizados. **False** se os resultados são precisos.  
   
-## <a name="return-value"></a>Valor de retorno  
- Um [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto.  
+## <a name="return-value"></a>Valor retornado  
+ Um objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -74,7 +74,7 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
   
  O conjunto de resultados retornado pelo método getIndexInfo conterá as seguintes informações:  
   
-|Nome|Tipo|Description|  
+|Nome|Tipo|Descrição|  
 |----------|----------|-----------------|  
 |TABLE_CAT|**String**|O nome do banco de dados no qual a tabela especificada reside.|  
 |TABLE_SCHEM|**String**|O esquema da tabela.|  
@@ -85,16 +85,16 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
 |TYPE|**short**|O tipo do índice. Pode ser um dos seguintes valores:<br /><br /> tableIndexStatistic (0)<br /><br /> tableIndexClustered (1)<br /><br /> tableIndexHashed (2)<br /><br /> tableIndexOther (3)|  
 |ORDINAL_POSITION|**short**|A posição ordinal da coluna no índice. A primeira coluna no índice é 1.|  
 |COLUMN_NAME|**String**|O nome da coluna.|  
-|ASC_OR_DESC|**String**|A ordem usada no agrupamento do índice. Pode ser um dos seguintes valores:<br /><br /> A (crescente)<br /><br /> D (decrescente)<br /><br /> NULL (não aplicável)<br /><br /> **Observação:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] sempre retorna "A".  |  
-|CARDINALITY|**Int**|O número de linhas na tabela ou os valores exclusivos no índice.|  
-|PAGES|**Int**|O número de páginas usadas para armazenar o índice ou a tabela.|  
-|FILTER_CONDITION|**String**|A condição do filtro.<br /><br /> **Observação:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] sempre retorna null.  |  
+|ASC_OR_DESC|**String**|A ordem usada no agrupamento do índice. Pode ser um dos seguintes valores:<br /><br /> A (crescente)<br /><br /> D (decrescente)<br /><br /> NULL (não aplicável)<br /><br /> **Observação:** o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sempre retorna "A".|  
+|CARDINALITY|**int**|O número de linhas na tabela ou os valores exclusivos no índice.|  
+|PAGES|**int**|O número de páginas usadas para armazenar o índice ou a tabela.|  
+|FILTER_CONDITION|**String**|A condição do filtro.<br /><br /> **Observação:** o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sempre retorna nulo.|  
   
 > [!NOTE]  
->  Para obter mais informações sobre os dados retornados pelo método getIndexInfo, consulte "sp_indexes (Transact-SQL)" em [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Manuais Online.  
+>  Para saber mais sobre os dados retornados pelo método getIndexInfo, consulte "sp_indexes (Transact-SQL)" nos Manuais Online do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir demonstra como usar o método getIndexInfo para retornar informações sobre os índices e estatísticas da tabela Person. Contact no [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] banco de dados de exemplo.  
+ O exemplo a seguir demonstra como usar o método getIndexInfo para retornar informações sobre os índices e as estatísticas da tabela Person.Contact no banco de dados de exemplo do [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)].  
   
 ```  
 public static void executeGetIndexInfo(Connection con) {  
@@ -119,7 +119,7 @@ public static void executeGetIndexInfo(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [Membros SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Classe SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

@@ -19,12 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 17d20197426efa622efb0be8c8a58b7bfcd9adc7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 74d4cc4cc5f1f9032fce0b8e73c66cd01043bb86
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32841111"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784144"
 ---
 # <a name="isdefinitelywritable-method-sqlserverresultsetmetadata"></a>Método isDefinitelyWritable (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,23 +41,23 @@ public boolean isDefinitelyWritable(int column)
 #### <a name="parameters"></a>Parâmetros  
  *column*  
   
- Um **int** que indica o índice da coluna.  
+ Um **int** que indica o índice de coluna.  
   
-## <a name="return-value"></a>Valor de retorno  
- **True** se a gravação de coluna definitivamente terá sucesso. Caso contrário, **false**.  
+## <a name="return-value"></a>Valor retornado  
+ **True** se a gravação de coluna terá sucesso definitivamente. Caso contrário, **false**.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método isDefinitelyWritable é especificado pelo método isDefinitelyWritable na interface Java.SQL. resultsetmetadata.  
+ Esse método isDefinitelyWritable é especificado pelo método isDefinitelyWritable na interface resultsetmetadata.  
   
 > [!NOTE]  
->  Ao usar o [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] com um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] banco de dados, esse método sempre retornará false.  
+>  Quando o [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] é usado com um banco de dados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], este método sempre retorna false.  
   
-## <a name="see-also"></a>Consulte também  
- [Métodos SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   
- [Membros de SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-members.md)   
+## <a name="see-also"></a>Consulte Também  
+ [SQLServerResultSetMetaData Methods](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   
+ [Membros SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-members.md)   
  [Classe SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md)  
   
   

@@ -19,12 +19,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2a247a542516c9579a31be0e8a0ad8e3401f36e8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 5fd0cfcf85edcab84d6488dd733f72fdbebfe8b6
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32840511"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42784503"
 ---
 # <a name="geturl-method-sqlserverdatabasemetadata"></a>Método getURL (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,24 +38,24 @@ ms.locfileid: "32840511"
 public java.lang.String getURL()  
 ```  
   
-## <a name="return-value"></a>Valor de retorno  
- Um **cadeia de caracteres** que contém a URL.  
+## <a name="return-value"></a>Valor retornado  
+ Uma **String** que contém a URL.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método getURL é especificado pelo método getURL na interface DatabaseMetadata.  
+ Esse método getURL é especificado pelo método getURL na interface java.sql.DatabaseMetaData.  
   
- Ao usar o [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] com um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] banco de dados, este método retorna um **cadeia de caracteres** valor que contém as seguintes informações:  
+ Durante o uso do [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] com um banco de dados [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], esse método retorna um valor **String** que contém as seguintes informações:  
   
 -   Um valor de URL "jdbc:sqlserver://"  
   
--   Propriedades de conexão opcionais, como **serverName**, **instanceName**, e **portNumber**  
+-   Propriedades de conexão opcionais, como **nome_do_servidor**, **instanceName**, e **portNumber**  
   
--   Outras propriedades de conexão definidas pelo usuário e a conexão de todas as propriedades com o driver não vazios ou nulos valores padrão, exceto **userName**, **senha**, e **integratedSecurity**.  
+-   As outras propriedades de conexão são definidas pelo usuário e todas as propriedades de conexão com valores padrão de driver não vazios ou não nulos, exceto **userName**, **password** e **integratedSecurity**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [Membros SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Classe SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

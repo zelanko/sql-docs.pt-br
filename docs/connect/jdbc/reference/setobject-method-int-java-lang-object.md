@@ -19,12 +19,12 @@ caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0103dfd14dd8a51263945d0048a7b6c7cb550157
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: cac0013c8867bce46dc9fd8ebbae9d0b0c487259
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32844961"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42783976"
 ---
 # <a name="setobject-method-int-javalangobject"></a>Método setObject (int, java.lang.Object)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,25 +52,25 @@ public final void setObject(int index,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método setObject é especificado pelo método setObject na interface PreparedStatement.  
+ Esse método setObject é especificado pelo método setObject na interface do PreparedStatement.  
   
- Antes de chamar esse método setObject, o aplicativo pode definir o parâmetro especificado usando um dos seguintes métodos:  
+ Antes de chamar o método setObject, o aplicativo pode definir o parâmetro especificado usando um dos métodos a seguir:  
   
--   O conjunto\<tipo > métodos da classe SQLServerPreparedStatement ou da classe SQLServerCallableStatement  
+-   Os métodos set\<Type> da classe SQLServerPreparedStatement e da classe SQLServerCallableStatement  
   
--   Os métodos de setNull da classe SQLServerPreparedStatement ou da classe SQLServerCallableStatement  
+-   Os métodos setNull da classe SQLServerPreparedStatement e da classe SQLServerCallableStatement  
   
 -   O [registerOutParameter](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) método da classe SQLServerCallableStatement  
   
- Em todos os casos, o tipo do parâmetro é definido automaticamente. Se o aplicativo chama esse método setObject com um valor obj NULL, o driver pressupõe que o tipo do parâmetro é aquele que é definido pelo método chamado anteriormente.  
+ Em todos os casos, o tipo do parâmetro é definido automaticamente. Se o aplicativo chamar o método setObject com um valor obj NULL, o driver suporá que o tipo do parâmetro é definido pelo método chamado anteriormente.  
   
- Se o valor obj for NULL e nenhuma informação de tipo para esse parâmetro pode ser determinada, esse método setObject converte o parâmetro especificado em um CHAR antes de enviá-la para o banco de dados.  
+ Se o valor obj for NULL e nenhuma informação de tipo para esse parâmetro puder ser determinada, o método setObject converterá o parâmetro especificado em um CHAR antes de enviá-lo ao banco de dados.  
   
- Começando com [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] JDBC Driver 3.0, o comportamento desse método é modificado pelo **sendTimeAsDatetime** propriedade de conexão ([definindo as propriedades de Conexão](../../../connect/jdbc/setting-the-connection-properties.md)) e [ Setsendtimeasdatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md).  
+ Começando com [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0, o comportamento desse método é modificado pela **sendTimeAsDatetime** propriedade de conexão ([definindo as propriedades de Conexão](../../../connect/jdbc/setting-the-connection-properties.md)) e [ Setsendtimeasdatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md).  
   
- Para obter mais informações, consulte [Java.SQL. time configurando como os valores são enviados para o servidor](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md).  
+ Para obter mais informações, consulte [time configurando como os valores são enviados para o servidor](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Método setObject &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md)   
  [Membros de SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [Classe SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
