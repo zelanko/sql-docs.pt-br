@@ -3,17 +3,18 @@ layout: HubPage
 hide_bc: true
 title: Documentação do Microsoft SQL | Microsoft Docs
 description: Aprenda sobre o SQL
+ms.date: 09/01/2018
 author: craigg-msft
 ms.author: craigg
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: install
-ms.openlocfilehash: 48562de9521387f6d40a31828fba7e508171c79a
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 20861197abd978fc6598d9290fffa5b0059f8153
+ms.sourcegitcommit: a083e9d59e2014a06cda9138b7e17c17ecab90e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43031172"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44343121"
 ---
 <div id="main" class="v2">
     <div class="container">
