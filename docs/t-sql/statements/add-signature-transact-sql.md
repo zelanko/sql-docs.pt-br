@@ -1,13 +1,8 @@
 ---
 title: ADD SIGNATURE (Transact-SQL) | Microsoft Docs
-ms.custom: ''
 ms.date: 05/15/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ADD SIGNATURE
@@ -20,16 +15,15 @@ helpviewer_keywords:
 - signatures [SQL Server]
 - digital signatures [SQL Server]
 ms.assetid: 64d8b682-6ec1-4e5b-8aee-3ba11e72d21f
-caps.latest.revision: 50
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 227a0215b4d5438ce10229e0a3e8398312f7ca1c
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 6a1c422dd7ae2c190f844b70c5a780c0390f86e7
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37788437"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43812282"
 ---
 # <a name="add-signature-transact-sql"></a>ADD SIGNATURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

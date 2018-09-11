@@ -27,19 +27,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 1d7c5b5165b3e67956750203d31904a539469125
-ms.sourcegitcommit: 7064d7ea091ead7ba4916660c79b352ba4a911a1
+ms.openlocfilehash: a38b641435f24ec07157b650877a5ac107948f75
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42441429"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171718"
 ---
 # <a name="restore-statements---verifyonly-transact-sql"></a>Instruções RESTORE – VERIFYONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
 
   Verifica o backup, mas não o restaura, e verifica se o conjunto de backup está completo e se todo o backup pode ser lido. Porém, RESTORE VERIFYONLY não tenta verificar a estrutura dos dados contida nos volumes de backup. No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], RESTORE VERIFYONLY foi aprimorado para executar uma verificação adicional nos dados a fim de aumentar a probabilidade de detecção de erros. A meta é estar o mais próximo de uma operação de restauração real. Para obter mais informações, consulte Comentários.  
-  
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
 
  Se o backup for válido, o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] retornará uma mensagem de êxito.  
   
