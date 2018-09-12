@@ -25,12 +25,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d42c55b62530a47332e4868c3080f3f21be9be8d
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 59972833705c4d8ab7c054a1a7aac8d6ee9824f8
+ms.sourcegitcommit: df3923e007527ce79e2d05821b62d77ee06fd655
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43085549"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44375699"
 ---
 # <a name="sysdmdbindexphysicalstats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -116,7 +116,7 @@ sys.dm_db_index_physical_stats (
 |compressed_page_count|**bigint**|O número total de páginas compactadas.<br /><br /> Para heaps, as páginas alocadas recentemente não são compactadas com PAGE. Um heap é compactado com PAGE em duas condições especiais: quando os dados são importados em massa ou quando um heap é reconstruído. Operações DML típicas que causam alocações de página não terão compactação PAGE. Reconstrua um heap quando o valor compressed_page_count aumentar ultrapassando o limite desejado.<br /><br /> Para tabelas que têm um índice clusterizado, o valor compressed_page_count indica a eficiência da compactação PAGE.|  
 |hobt_id|BIGINT|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Somente índices columnstore, essa é a ID para um conjunto de linhas que rastreia dados de columnstore interno para uma partição. Os conjuntos de linhas são armazenadas como dados heaps ou binário árvores. Eles têm a mesma ID de índice que o índice de columnstore do pai. Para obter mais informações, consulte [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md).<br /><br /> NULO se|  
 |column_store_delete_buffer_state|TINYINT|**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = DRENAGEM<br /><br /> 3 = LIBERANDO<br /><br /> 4 = DESATIVANDO<br /><br /> 5 = PRONTO|  
-|column_store_delete_buff_state_desc||**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> NOT_APPLICABLE – o índice pai não é um índice columnstore.<br /><br /> Abra – Excluidores e scanners de usá-lo.<br /><br /> DRENAGEM – Excluidores são drenagem mas scanners ainda usá-lo.<br /><br /> LIBERANDO – buffer é fechada e linhas no buffer de estão sendo gravadas no bitmap de exclusão.<br /><br /> DESATIVANDO – linhas no buffer de exclusão fechado ter sido escritos para o bitmap de exclusão, mas o buffer não foi truncado porque os scanners ainda estão usando. Novo scanners não precisam usar o buffer obsoletos porque o buffer aberto é suficiente.<br /><br /> PRONTO – esse buffer de exclusão está pronto para uso.|  
+|column_store_delete_buff_state_desc||**Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] até a [versão atual](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> NÃO é válido-o índice de pai não é um índice columnstore.<br /><br /> Abra – Excluidores e scanners de usá-lo.<br /><br /> DRENAGEM – Excluidores são drenagem mas scanners ainda usá-lo.<br /><br /> LIBERANDO – buffer é fechada e linhas no buffer de estão sendo gravadas no bitmap de exclusão.<br /><br /> DESATIVANDO – linhas no buffer de exclusão fechado ter sido escritos para o bitmap de exclusão, mas o buffer não foi truncado porque os scanners ainda estão usando. Novo scanners não precisam usar o buffer obsoletos porque o buffer aberto é suficiente.<br /><br /> PRONTO – esse buffer de exclusão está pronto para uso.|  
   
 ## <a name="remarks"></a>Remarks  
  A função de gerenciamento dinâmico sys.dm_db_index_physical_stats substitui a instrução DBCC SHOWCONTIG.  

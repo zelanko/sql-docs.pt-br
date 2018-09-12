@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -25,12 +24,12 @@ caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 05b266a67aaff2a381e181ca85290c45af177225
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7be770bfbcde0f21197d3edfbe3a5c69bebec816
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37221086"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889912"
 ---
 # <a name="xml-schema-collections-sql-server"></a>Coleções de esquema XML (SQL Server)
   Conforme descrito no tópico [xml &#40;Transact-SQL&#41;](/sql/t-sql/xml/xml-transact-sql), o SQL Server fornece armazenamento nativo de dados XML por meio de `xml` tipo de dados. Opcionalmente, você pode associar esquemas XSD com uma variável ou uma coluna de `xml` tipo por meio de uma coleção de esquemas XML. A coleção de esquema XML armazena os esquemas XML importados e, em seguida, é usada para fazer o seguinte:  

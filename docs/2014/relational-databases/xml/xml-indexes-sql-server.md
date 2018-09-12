@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -37,12 +36,12 @@ caps.latest.revision: 58
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6842ef037bd8543a569449282886b9f943b8114f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fc49d265969735e375b579b2f819ebbe1648bd8b
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37152077"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889632"
 ---
 # <a name="xml-indexes-sql-server"></a>Índices XML (SQL Server)
   Índices XML podem ser criados em `xml` colunas de tipo de dados. Eles indexam todas as marcas, valores e caminhos através das instâncias XML na coluna e se beneficiam do desempenho das consultas. Seu aplicativo pode se beneficiar de um índice XML nas seguintes situações:  

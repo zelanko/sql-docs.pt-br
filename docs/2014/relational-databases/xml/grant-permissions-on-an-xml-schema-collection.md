@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f8c467de25ce8b8aac74c659b6109c3969f9f0d9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d671ed96e769e40809489ee99dc4e551b52f0d8a
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37276112"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889603"
 ---
 # <a name="grant-permissions-on-an-xml-schema-collection"></a>Conceder permissões em uma coleção de esquemas XML
   É possível conceder permissões para criar uma coleção de esquema XML e também permissões em um objeto da coleção de esquemas XML.  

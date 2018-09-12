@@ -1,7 +1,7 @@
 ---
 title: Agente de instantâneo de replicação | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 09/07/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
@@ -19,12 +19,12 @@ caps.latest.revision: 40
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1fce4a187ffb9887cf56d2ef621cb753ededc833
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 699fc162d167bf22695d6eb1d7e5b1ede5704d12
+ms.sourcegitcommit: 8008ea52e25e65baae236631b48ddfc33014a5e0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37190166"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44311686"
 ---
 # <a name="replication-snapshot-agent"></a>Replication Snapshot Agent
   O Replication Snapshot Agent é um arquivo executável que prepara arquivos de instantâneo contendo esquema e dados de tabelas publicadas e objetos do banco de dados, armazena os arquivos na pasta de instantâneo e registra trabalhos de sincronização no banco de dados de distribuição.  
@@ -62,7 +62,8 @@ ms.locfileid: "37190166"
 [-MaxNetworkOptimization [0|1]]  
 [-Outputoutput_path_and_file_name]  
 [-OutputVerboseLevel [0|1|2] ]  
-[-PacketSizepacket_size]  
+[-PacketSizepacket_size]
+[-PrefetchTables [0|1] ]  
 [-ProfileNameprofile_name]  
 [-PublisherDBpublisher_database]  
 [-PublisherDeadlockPriority [-1|0|1] ]  
@@ -194,6 +195,14 @@ ms.locfileid: "37190166"
 |**0**|Somente mensagens de erro são impressas.|  
 |**1** (padrão)|Todas as mensagens de relatório de progresso são impressas (padrão).|  
 |**2**|Todas as mensagens de erro e mensagens de relatório de progresso são impressas, o que é útil na depuração.|  
+
+ **-PrefetchTables** [ **0**| **1**]  
+ Parâmetro opcional que especifica se os objetos de tabela serão pré-buscada e armazenados em cache.  O comportamento padrão é executar a pré-busca de determinadas propriedades de tabela usando o componente SMO com base em um cálculo interno.  Esse parâmetro pode ser útil em cenários em que o SMO pré-busca operação leva considerável mais para ser executado. Se esse parâmetro não for usado, essa decisão é tomada em tempo de execução com base na porcentagem de tabelas que são adicionadas como artigos na publicação.  
+  
+|Valor OutputVerboseLevel|Description|  
+|------------------------------|-----------------|  
+|**0**|Chamada ao método de pré-busca do componente do SMO é desativada.|  
+|**1**|Agente de instantâneo irá chamar o método de pré-busca para armazenar em cache algumas propriedades de tabela usando o SMO|  
   
  **-PacketSize** *packet_size*  
  É o tamanho de pacote (em bytes) usado pelo Snapshot Agent na conexão com o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. O valor padrão é 8192 bytes.  

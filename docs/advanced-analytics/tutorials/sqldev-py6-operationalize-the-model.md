@@ -1,5 +1,5 @@
 ---
-title: Etapa 6 colocar o modelo de Python usando o SQL Server | Microsoft Docs
+title: Etapa 6 Operacionalizar o modelo de Python usando o SQL Server | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,52 +7,52 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: aedd6beeb720c24a6960950abc6a29c1bf89a5fa
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1af856e020228850a9311c5c4fa823d58908b57e
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31203468"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43888952"
 ---
-# <a name="step-6-operationalize-the-python-model-using-sql-server"></a>Etapa 6: Colocar o modelo de Python usando o SQL Server
+# <a name="step-6-operationalize-the-python-model-using-sql-server"></a>Etapa 6: Operacionalizar o modelo de Python usando o SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Este artigo faz parte de um tutorial, [análise Python no banco de dados para desenvolvedores em SQL](sqldev-in-database-python-for-sql-developers.md). 
+Este artigo faz parte de um tutorial [análise de Python no banco de dados para desenvolvedores do SQL](sqldev-in-database-python-for-sql-developers.md). 
 
 Nesta etapa, você aprenderá a *operacionalizar* os modelos treinados e salvo na etapa anterior.
 
-Nesse cenário, operacionalização significa Implantando o modelo para produção para pontuação. A integração com o SQL Server torna isso muito fácil, porque você pode inserir o código Python em um procedimento armazenado. Para obter as previsões do modelo com base em novas entradas, basta chamar o procedimento armazenado a partir de um aplicativo e passa novos dados.
+Nesse cenário, a operacionalização significa implantar o modelo em produção para pontuação. A integração com o SQL Server torna isso muito fácil, porque você pode incorporar código Python em um procedimento armazenado. Para obter previsões do modelo com base em novas entradas, basta chamar o procedimento armazenado de um aplicativo e passar os novos dados.
 
-Esta lição demonstra dois métodos para criar previsões com base em um modelo de Python: pontuação e linha por linha de pontuação do lote.
+Esta lição demonstra dois métodos para criar previsões com base em um modelo de Python: pontuação e a linha por linha de pontuação do lote.
 
-- **A pontuação do lote:** para fornecer várias linhas de dados de entrada, passe uma consulta SELECT como um argumento para o procedimento armazenado. O resultado é uma tabela de observações correspondente aos casos de entrada.
-- **Pontuação individuais:** passar um conjunto de valores de parâmetros individuais como entrada.  O procedimento armazenado retorna uma única linha ou valor.
+- **Pontuação do lote:** para fornecer várias linhas de dados de entrada, passe uma consulta SELECT como um argumento para o procedimento armazenado. O resultado é uma tabela de observações correspondente aos casos de entrada.
+- **Pontuação individual:** transmitir um conjunto de valores de parâmetro individuais como entrada.  O procedimento armazenado retorna uma única linha ou valor.
 
-Todo o código Python necessário para a pontuação é fornecido como parte dos procedimentos armazenados.
+Todo o código de Python necessário para a pontuação é fornecido como parte dos procedimentos armazenados.
 
-| Nome do procedimento armazenado | Lote ou único | Origem de modelo|
+| Nome do procedimento armazenado | Lote ou single | Fonte do modelo|
 |----|----|----|
 |PredictTipRxPy|lote| modelo de revoscalepy|
-|PredictTipSciKitPy|lote |scikit-Saiba modelo|
+|PredictTipSciKitPy|lote |scikit-aprender modelo|
 |PredictTipSingleModeRxPy|única linha| modelo de revoscalepy|
-|PredictTipSingleModeSciKitPy|única linha| scikit-Saiba modelo|
+|PredictTipSingleModeSciKitPy|única linha| scikit-aprender modelo|
 
-## <a name="batch-scoring"></a>A pontuação do lote
+## <a name="batch-scoring"></a>Pontuação do lote
 
-Os primeiros dois procedimentos armazenados ilustram a sintaxe básica para quebra automática de uma chamada de previsão Python em um procedimento armazenado. Ambos os procedimentos armazenados exigem uma tabela de dados como entradas.
+Os primeiros dois procedimentos armazenados ilustram a sintaxe básica para encapsular uma chamada de previsão de Python em um procedimento armazenado. Ambos os procedimentos armazenados exigem uma tabela de dados como entradas.
 
 - O nome do modelo exato para usar é fornecido como parâmetro de entrada para o procedimento armazenado. O procedimento armazenado carrega o modelo serializado da tabela de banco de dados `nyc_taxi_models`.table, usando a instrução SELECT no procedimento armazenado.
-- O modelo serializado é armazenado na variável Python `mod` para processamento adicional usando Python.
-- Os novos casos que precisam ser classificados são obtidos de [!INCLUDE[tsql](../../includes/tsql-md.md)] consulta especificada no `@input_data_1`. Conforme os dados da consulta são lidos, as linhas são salvas no quadro de dados padrão, `InputDataSet`.
-- Ambos os procedimento armazenado usar funções de `sklearn` para calcular uma métrica de exatidão, AUC (área sob a curva). Métricas de precisão, como AUC só podem ser geradas se você fornecer também o rótulo de destino (o _Oblíquo_ coluna). Previsões não é necessário o rótulo de destino (variável `y`), mas não o cálculo de métricas de precisão.
+- O modelo serializado é armazenado na variável Python `mod` para processamento adicional usando o Python.
+- Os novos casos que precisam ser pontuados são obtidos a partir de [!INCLUDE[tsql](../../includes/tsql-md.md)] consulta especificada no `@input_data_1`. Conforme os dados da consulta são lidos, as linhas são salvas no quadro de dados padrão, `InputDataSet`.
+- Ambos os procedimento armazenado usar funções de `sklearn` para calcular uma métrica de precisão, AUC (área sob a curva). Métricas de precisão, como AUC só podem ser geradas se você fornecer também o rótulo de destino (o _tipped_ coluna). Previsões não é necessário o rótulo de destino (variável `y`), mas não o cálculo de métricas de precisão.
 
-    Portanto, se você não tem rótulos de destino para os dados a ser pontuado, você pode modificar o procedimento armazenado para remover os cálculos AUC e retornar apenas as probabilidades de dica de recursos (variável `X` no procedimento armazenado).
+    Portanto, se você não tem rótulos de destino para os dados a serem pontuados, você pode modificar o procedimento armazenado para remover os cálculos de AUC e retornar apenas as probabilidades de dica de recursos (variável `X` no procedimento armazenado).
 
 ### <a name="predicttipscikitpy"></a>PredictTipSciKitPy
 
-O procedimento armazenado deve já foram criado para você. Se você não encontrar a ele, execute as seguintes instruções T-SQL para criar os procedimentos armazenados.
+Deve o procedimento armazenado já ter sido criado para você. Se você não encontrar a ele, execute as seguintes instruções de T-SQL para criar os procedimentos armazenados.
 
-Este procedimento armazenado exige um modelo baseado no scikit-Saiba o pacote, pois ela usa funções específicas a esse pacote:
+Este procedimento armazenado exige um modelo baseado no scikit-Saiba o pacote, pois ela usa funções específicas para que o pacote:
 
 + O quadro de dados que contém entradas é passado para o `predict_proba` função do modelo de regressão logística, `mod`. O `predict_proba` função (`probArray = mod.predict_proba(X)`) retorna um **float** que representa a probabilidade de que você terá uma dica (de qualquer valor).
 
@@ -96,10 +96,10 @@ GO
 
 ### <a name="predicttiprxpy"></a>PredictTipRxPy
 
-Esse procedimento armazenado usa as mesmas entradas e cria o mesmo tipo de pontuações que o procedimento anterior, mas usa funções a partir de **revoscalepy** pacote fornecido com o aprendizado de máquina do SQL Server.
+Esse procedimento armazenado usa as mesmas entradas e cria o mesmo tipo de pontuações que o procedimento armazenado anterior, mas usa funções a partir de **revoscalepy** pacote fornecido com o aprendizado de máquina do SQL Server.
 
 > [!NOTE] 
-> O código para esse procedimento armazenado alterou ligeiramente entre versões anteriores de lançamento e a versão RTM, para refletir as alterações no pacote de revoscalepy. Consulte o [alterações](#changes) tabela para obter detalhes.
+> O código para esse procedimento armazenado mudou um pouco entre as versões anteriores do lançamento e a versão RTM, para refletir as alterações ao pacote revoscalepy. Consulte a [alterações](#changes) tabela para obter detalhes.
 
 ```SQL
 CREATE PROCEDURE [dbo].[PredictTipRxPy] (@model varchar(50), @inquery nvarchar(max))
@@ -137,14 +137,14 @@ END
 GO
 ```
 
-## <a name="run-batch-scoring-using-a-select-query"></a>Execute a pontuação do lote usando uma consulta SELECT
+## <a name="run-batch-scoring-using-a-select-query"></a>Executar a pontuação de lote usando uma consulta SELECT
 
 Os procedimentos armazenados **PredictTipSciKitPy** e **PredictTipRxPy** exigem dois parâmetros de entrada: 
 
 - A consulta que recupera os dados de pontuação
 - O nome de um modelo treinado
 
-Ao passar os argumentos para o procedimento armazenado, você pode selecionar um modelo específico ou alterar os dados usados para pontuação.
+Ao passar esses argumentos para o procedimento armazenado, você pode selecionar um modelo específico ou alterar os dados usados para pontuação.
 
 1. Para usar o **scikit-Saiba** do modelo de pontuação, chame o procedimento armazenado **PredictTipSciKitPy**, passando o nome do modelo e a cadeia de caracteres de consulta como entradas.
 
@@ -157,9 +157,9 @@ Ao passar os argumentos para o procedimento armazenado, você pode selecionar um
     EXEC [dbo].[PredictTipSciKitPy] 'SciKit_model', @query_string;
     ```
 
-    O procedimento armazenado retorna as probabilidades previstas para cada viagem que foi passada como parte da consulta de entrada. 
+    O procedimento armazenado retorna as probabilidades previstas para cada corrida que foi passada como parte da consulta de entrada. 
     
-    Se você estiver usando o SSMS (SQL Server Management Studio) para executar consultas, as probabilidades aparecerá como uma tabela no **resultados** painel. O **mensagens** painel produz a métrica de exatidão (AUC ou área na curva) com um valor de aproximadamente 0.56.
+    Se você estiver usando o SSMS (SQL Server Management Studio) para a execução de consultas, as probabilidades serão exibido como uma tabela na **resultados** painel. O **mensagens** painel produz a métrica de precisão (área sob a curva ou AUC) com um valor de aproximadamente 0.56.
 
 2. Para usar o **revoscalepy** do modelo de pontuação, chame o procedimento armazenado **PredictTipRxPy**, passando o nome do modelo e a cadeia de caracteres de consulta como entradas.
 
@@ -167,23 +167,23 @@ Ao passar os argumentos para o procedimento armazenado, você pode selecionar um
     EXEC [dbo].[PredictTipRxPy] 'revoscalepy_model', @query_string;
     ```
 
-## <a name="single-row-scoring"></a>Pontuação de única linha
+## <a name="single-row-scoring"></a>Uma única linha de pontuação
 
-Às vezes, em vez de pontuação em lote, talvez você queira passar um único caso, obtendo valores de um aplicativo e retornar um único resultado com base nesses valores. Por exemplo, você pode configurar um Excel planilha, aplicativo web ou relatório para chamar o procedimento armazenado e passe a ele insere digitado ou selecionado por usuários.
+Às vezes, em vez de pontuação em lote, você talvez queira passar em um único caso, obtendo valores de um aplicativo e retornar um único resultado com base nesses valores. Por exemplo, você pode configurar um Excel planilha, aplicativo web ou relatório para chamar o procedimento armazenado e passe para ele entradas digitadas ou selecionadas por usuários.
 
-Nesta seção, você aprenderá como criar previsões únicas chamando dois procedimentos armazenados:
+Nesta seção, você aprenderá a criar previsões únicas chamando dois procedimentos armazenados:
 
-+ [PredictTipSingleModeSciKitPy](#PredictTipSingleModeSciKitPy) se destina a pontuação de única linha usando o scikit-aprender o modelo.
-+ [PredictTipSingleModeRxPy](#PredictTipSingleModeRxPy) se destina a pontuação de única linha usando o modelo revoscalepy.
-+ Se você ainda não tiver um modelo treinado ainda, retornar ao [etapa 5](sqldev-py5-train-and-save-a-model-using-t-sql.md)!
++ [PredictTipSingleModeSciKitPy](#PredictTipSingleModeSciKitPy) foi projetado para uma única linha de pontuação usando o scikit-aprender o modelo.
++ [PredictTipSingleModeRxPy](#PredictTipSingleModeRxPy) foi projetado para uma única linha de pontuação usando o modelo revoscalepy.
++ Se você ainda não tiver um modelo treinado ainda, retorne ao [etapa 5](sqldev-py5-train-and-save-a-model-using-t-sql.md)!
 
-Execute os dois modelos como entrada uma série de valores únicos, como contagem de passageiro, distância de viagem e assim por diante. Uma função com valor de tabela, `fnEngineerFeatures`, é usado para converter valores de latitude e longitude de entradas para um novo recurso, direcionar distância. [Lição 4](sqldev-py4-create-data-features-using-t-sql.md) contém uma descrição dessa função com valor de tabela.
+Take ambos os modelos como entrada uma série de valores únicos, como contagem de passageiros, distância da corrida e assim por diante. Uma função com valor de tabela, `fnEngineerFeatures`, é usado para converter valores de latitude e longitude de entradas para um novo recurso, a distância direta. [Lição 4](sqldev-py4-create-data-features-using-t-sql.md) contém uma descrição dessa função com valor de tabela.
 
-Ambos os procedimentos armazenados criar uma pontuação com base no modelo de Python.
+Ambos os procedimentos armazenados criam uma pontuação com base no modelo de Python.
 
 > [!NOTE]
 > 
-> É importante que você forneça todos os recursos de entrada necessários pelo modelo Python quando você chamar o procedimento armazenado de um aplicativo externo. Para evitar erros, talvez seja necessário converter os dados de entrada para um tipo de dados do Python, além de validação de tipo de dados e comprimento de dados.
+> É importante que você forneça todos os recursos de entrada exigidos pelo modelo Python quando você chama o procedimento armazenado de um aplicativo externo. Para evitar erros, talvez você precise converter os dados de entrada para um tipo de dados do Python, além de validação do tipo e comprimento de dados.
 
 ### <a name="predicttipsinglemodescikitpy"></a>PredictTipSingleModeSciKitPy
 
@@ -319,7 +319,7 @@ GO
 
 ### <a name="generate-scores-from-models"></a>Gerar pontuações de modelos
 
-Depois que os procedimentos armazenados foram criados, é fácil de gerar uma pontuação com base em um modelo. Basta abrir uma nova **consulta** janela e digite ou cole parâmetros para cada uma das colunas de recursos. As sete necessários são valores para essas colunas de recurso, em ordem:
+Depois que os procedimentos armazenados foram criados, é fácil gerar uma pontuação com base em qualquer um dos modelos. Basta abrir uma nova **consulta** janela e digite ou cole parâmetros para cada uma das colunas de recursos. As sete necessários são de valores para essas colunas de recurso, na ordem:
     
 + *passenger_count*
 + *trip_distance* v*trip_time_in_secs*
@@ -340,29 +340,29 @@ Depois que os procedimentos armazenados foram criados, é fácil de gerar uma po
     EXEC [dbo].[PredictTipSingleModeSciKitPy] 'linear_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
-A saída de ambos os procedimentos é uma probabilidade de uma dica que está sendo paga para a viagem táxi com os parâmetros especificados ou recursos.
+A saída de ambos os procedimentos é uma probabilidade de uma dica que está sendo paga para a viagem de táxi com os parâmetros especificados ou recursos.
 
 ### <a name="changes"></a> Alterações
 
-Esta seção lista as alterações no código usado neste tutorial. Essas alterações foram feitas para refletir a versão mais recente **revoscalepy** versão. Para obter ajuda da API, consulte [Python função referência da biblioteca](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference).
+Esta seção lista as alterações no código usado neste tutorial. Essas alterações foram feitas para refletir a versão mais recente **revoscalepy** versão. Para obter ajuda da API, consulte [referência de biblioteca de função de Python](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference).
 
 | Alterar detalhes | Observações|
 | ----|----|
-| excluído `import pandas` em todas as amostras| pandas agora carregados por padrão|
+| excluído `import pandas` em todas as amostras| pandas agora é carregados por padrão|
 | função `rx_predict_ex` alterado para `rx_predict`| As versões RTM e pré-lançamento exigem `rx_predict_ex`|
 | função `rx_logit_ex` alterado para `rx_logit`| As versões RTM e pré-lançamento exigem `rx_logit_ex`|
 | ` probList.append(probArray._results["tipped_Pred"])` alterado para `prob_list = prob_array["tipped_Pred"].values`| atualizações à API|
 
-Se você instalou os serviços de Python usando uma versão de pré-lançamento do SQL Server 2017, recomendamos que você atualize. Você também pode atualizar apenas os componentes de Python e R usando a versão mais recente do servidor de aprendizado de máquina. Para obter mais informações, consulte [usando a associação para atualizar uma instância do SQL Server](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+Se você instalou os serviços de Python usando uma versão de pré-lançamento do SQL Server 2017, é recomendável que você atualize. Você também pode atualizar apenas os componentes de Python e R usando a versão mais recente do Machine Learning Server. Para obter mais informações, consulte [usando a ligação para atualizar uma instância do SQL Server](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
 
 ## <a name="conclusions"></a>Conclusões
 
-Neste tutorial, você aprendeu como trabalhar com o código Python incorporado em procedimentos armazenados. A integração com [!INCLUDE[tsql](../../includes/tsql-md.md)] torna mais fácil implantar Python modelos para previsão e incorporar o treinamento do modelo como parte de um fluxo de trabalho de dados corporativos.
+Neste tutorial, você aprendeu como trabalhar com o código Python inserido em procedimentos armazenados. A integração com o [!INCLUDE[tsql](../../includes/tsql-md.md)] torna muito mais fácil para implantar modelos em Python para previsão e incorporar a reciclagem de modelos como parte de um fluxo de trabalho de dados empresariais.
 
 ## <a name="previous-step"></a>Etapa anterior
 
 [Etapa 5: Treinar e salvar um modelo de Python](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
 
-[Serviços de aprendizado de máquina com Python](../python/sql-server-python-services.md)
+[Extensão do Python no SQL Server](../concepts/extension-python.md)

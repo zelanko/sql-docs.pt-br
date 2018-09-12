@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -17,14 +16,14 @@ caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8fc7d2cc8b8b9c0cf3e598e9531d85aefc02d961
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d58abb6fe742648af351da4f6f2586bdbdd3d29a
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37301626"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43820212"
 ---
-# <a name="options-environment-general-page"></a>Opções (página ambiente – geral)
+# <a name="options-environment-general-page"></a>Opções (página Ambiente-Geral)
   Use a caixa de diálogo **Opções** para configurar ações de inicialização do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], opções gerais de gerenciamento de janelas e outras configurações gerais. No menu **Ferramentas** , clique em **Opções**, expanda a pasta **Ambiente** e clique em **Geral**.  
   
 ## <a name="uielement-list"></a>Lista de elementos de interface do usuário  

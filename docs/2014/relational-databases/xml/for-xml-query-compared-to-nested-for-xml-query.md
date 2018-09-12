@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: afd288c2d0dcd6285a69ed74653a7f14519d354d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dc4a61e60e171c18812361f2b7f99cbed758f7f6
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216976"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43888392"
 ---
 # <a name="for-xml-query-compared-to-nested-for-xml-query"></a>Consulta FOR XML comparada com consulta FOR XML aninhada
   Este tópico compara uma consulta FOR XML de nível único com uma consulta FOR XML aninhada. Um dos benefícios do uso de consultas FOR XML aninhadas é que é possível especificar uma combinação de XML centrado em atributo e em elemento para resultados da consulta. O exemplo demonstra isso.  

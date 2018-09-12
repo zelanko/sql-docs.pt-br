@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,12 +21,12 @@ caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d20d074f30f15acaec3065bc45ecd4ac92da8f4d
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: af76d679f2d1c6ae9be7ef3f9a94150f34e8a505
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083159"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43890152"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>Usar resultados de FOR XML no código do aplicativo
   Usando cláusulas FOR XML com consultas SQL, é possível recuperar e até converter resultados de consultas como dados XML. Essa funcionalidade permite fazer o seguinte quando os resultados da consulta FOR XML podem ser usados no código do aplicativo XML:  
@@ -143,7 +142,7 @@ ms.locfileid: "39083159"
  Os resultados da página HTML gerada exibidos são semelhantes à seguinte saída de exemplo:  
   
 ##### <a name="server-side-processing"></a>Processamento no lado do servidor  
- Página gerada \@ 11/3/2006 3:36:02 PM  
+ Page Generated \@ 3/11/2006 3:36:02 PM  
   
  Cadeia de Conexão = Provedor=SQLOLEDB;Fonte de Dados=MyServer;Catálogo Inicial=AdventureWorks;Segurança Integrada=SSPI;  
   

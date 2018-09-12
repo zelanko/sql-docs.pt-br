@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5684e2f5e75d37dfbcce3a2a19ed49d63ead6032
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7d9ee3580f51a866fd7a39a094c5149bc8834420
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37198356"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43820582"
 ---
 # <a name="summarize-query-results-visual-database-tools"></a>Resumir resultados da consulta (Visual Database Tools)
   Quando você cria consultas de agregação, certos princípios lógicos se aplicam. Por exemplo, você não pode exibir o conteúdo de linhas individuais em uma consulta resumida. O Designer de Consulta e Exibição o ajuda a seguir esses princípios segundo a maneira como o [painel de Diagrama](visual-database-tools.md) e o [painel Critérios](criteria-pane-visual-database-tools.md) se comportam.  

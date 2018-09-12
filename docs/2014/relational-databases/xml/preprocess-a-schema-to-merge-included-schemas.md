@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -23,12 +22,12 @@ caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3f5a572c5c486ccf03edbb5442f5de2cb723bae4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f97cb2b7887da1ed6f15f4edb46572cf1730065e
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37157747"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889372"
 ---
 # <a name="preprocess-a-schema-to-merge-included-schemas"></a>Pré-processar um esquema para mesclar esquemas incluídos
   O elemento **include** do W3C XSD dá suporte à modularidade de esquema na qual um esquema XML pode ser particionado em mais de um arquivo físico. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Atualmente, não dá suporte a esse elemento. Esquemas XML que incluem esse elemento serão rejeitados pelo servidor.  

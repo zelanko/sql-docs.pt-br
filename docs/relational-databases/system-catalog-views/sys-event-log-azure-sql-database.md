@@ -6,9 +6,7 @@ ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
 ms.service: sql-database
-ms.component: system-catalog-views
-ms.suite: sql
-ms.technology: system-objects
+ms.component: ''
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -26,12 +24,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 7091aa6596fd66260ae43d39f0f19e5770b6dcdf
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 5e6433496d1807317cfa2591dc453d6115f2a7cc
+ms.sourcegitcommit: bab5f52b76ac53d0885683b7c39a808a41d93cfe
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43030136"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44089957"
 ---
 # <a name="syseventlog-azure-sql-database"></a>sys.event_log (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]

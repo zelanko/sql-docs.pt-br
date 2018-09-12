@@ -1,7 +1,7 @@
 ---
 title: sys.servers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/10/2016
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: system-catalog-views
@@ -25,25 +25,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: e8c70890bf8571621cd82aaab7e3d2796eb3bb0e
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: f192a8ba5a7ae18287c13c8c58c6a54f27d14778
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43038809"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171748"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Contém uma linha para cada servidor vinculado ou remoto registrado e uma linha para o servidor local que tenha **server_id** = 0.  
 
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]  
-  
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|ID local do servidor vinculado.|  
-|**name**|**sysname**|Quando **server_id** = 0, esse é o nome do servidor.<br /><br /> Quando **server_id** > 0, esse é o nome local do servidor vinculado.|  
-|**product**|**sysname**|Nome de produto do servidor vinculado. "SQL Server" indica que esta é outra instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**name**|**sysname**|Quando **server_id** = 0, o valor retornado é o nome do servidor.<br /><br /> Quando **server_id** > 0, o valor retornado é o nome local do servidor vinculado.|  
+|**product**|**sysname**|Nome de produto do servidor vinculado. Um valor de "SQL Server" indica a outra instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**Provedor**|**sysname**|Nome do provedor OLE DB para conectar o servidor vinculado.|  
 |**data_source**|**nvarchar(4000)**|Propriedade de conexão da fonte de dados OLE DB.|  
 |**Local**|**nvarchar(4000)**|Propriedade de conexão local OLE DB. NULL se nenhum.|  
@@ -72,13 +70,12 @@ ms.locfileid: "43038809"
   
  As permissões não são necessárias para exibir o servidor local (**server_id** = 0).  
   
- Quando você cria um servidor vinculado ou remoto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cria um mapeamento de logon padrão para o **público** função de servidor. Isso significa que, por padrão, todos os logons podem enxergar todos os servidores remotos e vinculados. Para restringir a visibilidade para esses servidores, remover o mapeamento de logon padrão, executando [sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md) e especificando NULL para o *locallogin* parâmetro.  
+ Quando você cria um servidor vinculado ou remoto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cria um mapeamento de logon padrão para o **público** função de servidor. Mapeamento de logon padrão significa que todos os logons podem exibir todos os servidores remotos e vinculados. Para restringir a visibilidade para esses servidores, remover o mapeamento de logon padrão, executando [sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md) e especificando NULL para o *locallogin* parâmetro.  
   
- Se o mapeamento padrão de logon for excluído, só usuários que foram adicionados explicitamente como um logon vinculado ou um logon remoto pode enxergar os servidores remotos e vinculados para os quais eles têm um logon. Para exibir todos os servidores vinculados e remotos, depois que o mapeamento de logon padrão for excluído requer as seguintes permissões:  
+ Se o mapeamento padrão de logon for excluído, só usuários que foram adicionados explicitamente como um logon vinculado ou um logon remoto pode enxergar os servidores remotos e vinculados para os quais eles têm um logon.  As seguintes permissões são necessárias para exibir todos os servidores remotos e vinculados após o mapeamento de logon padrão:  
   
--   ALTER ANY LINKED SERVER ou ALTER ANY LOGIN ON SERVER  
-  
--   Associação a **setupadmin** ou **sysadmin** funções de servidor fixas  
+- `ALTER ANY LINKED SERVER` ou `ALTER ANY LOGIN ON SERVER`  
+- Associação a **setupadmin** ou **sysadmin** funções de servidor fixas  
   
 ## <a name="see-also"></a>Consulte também  
  [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

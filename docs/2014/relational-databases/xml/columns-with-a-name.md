@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,28 +15,28 @@ caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fa867d399d11b65be61617a51991d6cc2dd2a8f2
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: d3966ec508c7b9b4858c3982b28a5f634ce7b426
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083218"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889282"
 ---
 # <a name="columns-with-a-name"></a>Colunas com um nome
   As seguintes são as condições específicas nas quais colunas de conjunto de linhas com um nome são mapeadas, diferenciando maiúsculas e minúsculas, para o XML resultante:  
   
--   O nome da coluna começa com um sinal de arroba (\@).  
+-   O nome da coluna começa com uma arroba (\@).  
   
--   O nome da coluna não começa com um sinal de arroba (\@).  
+-   O nome da coluna não começa com uma arroba (\@).  
   
--   O nome da coluna não começa com um sinal de arroba\@ e contém uma barra (/).  
+-   O nome da coluna não começa com uma arroba \@ e contém uma barra (/).  
   
 -   Várias colunas compartilham o mesmo prefixo.  
   
 -   Uma coluna tem um nome diferente.  
   
-## <a name="column-name-starts-with-an-at-sign-"></a>Nome da coluna começa com um sinal de arroba (\@)  
- Se o nome da coluna começa com um sinal de arroba (\@) e não contiver uma barra (/), um atributo da <`row`> elemento que tem o valor da coluna correspondente é criado. Por exemplo, a consulta a seguir retorna duas colunas (\@PmId, Name) conjunto de linhas. No XML resultante, um atributo **PmId** é adicionado ao elemento <`row`> correspondente e um valor de ProductModelID é atribuído a ele.  
+## <a name="column-name-starts-with-an-at-sign-"></a>O nome da coluna começa com uma arroba (\@)  
+ Se o nome da coluna começa com um sinal de arroba (\@) e não contiver uma barra (/), um atributo da <`row`> elemento que tem o valor da coluna correspondente é criado. Por exemplo, a consulta a seguir retorna um conjunto de linhas de duas colunas (\@PmId, Name). No XML resultante, um atributo **PmId** é adicionado ao elemento <`row`> correspondente e um valor de ProductModelID é atribuído a ele.  
   
 ```  
   
@@ -69,7 +68,7 @@ FOR XML PATH
 go  
 ```  
   
-## <a name="column-name-does-not-start-with-an-at-sign-"></a>Nome da coluna não começa com um sinal de arroba (\@)  
+## <a name="column-name-does-not-start-with-an-at-sign-"></a>O nome da coluna não começa com uma arroba (\@)  
  Se o nome da coluna não começa com um sinal de arroba (\@), não é um dos testes de nó XPath e não contiver uma barra (/), um elemento XML que é um subelemento do elemento linha, <`row`> por padrão, é criado.  
   
  A consulta a seguir especifica o nome da coluna, o resultado. Portanto um filho do elemento <`result`> é adicionado ao elemento <`row`>.  
@@ -116,8 +115,8 @@ go
 </row>  
 ```  
   
-## <a name="column-name-does-not-start-with-an-at-sign--and-contains-a-slash-mark-"></a>Nome da coluna não começa com um sinal de arroba (\@) e contém uma barra (/)  
- Se o nome da coluna não começa com um sinal de arroba (\@), mas contém uma barra (/), o nome da coluna indicará uma hierarquia XML. Por exemplo, se o nome da coluna for “Name1/Name2/Name3.../Name***n*** ”, cada Name***i*** representará um nome do elemento que está aninhado no elemento da linha atual (para i=1) ou que está sob o elemento que tem o nome Name***i-1***. Se Name***n*** começa com '\@', ele é mapeado para um atributo de nome***n-1*** elemento.  
+## <a name="column-name-does-not-start-with-an-at-sign--and-contains-a-slash-mark-"></a>O nome da coluna não começa com uma arroba \@ e contém uma barra (/)  
+ Se o nome da coluna não começar com uma arroba (\@), mas contiver uma barra (/), o nome da coluna indicará uma hierarquia XML. Por exemplo, se o nome da coluna for “Name1/Name2/Name3.../Name***n*** ”, cada Name***i*** representará um nome do elemento que está aninhado no elemento da linha atual (para i=1) ou que está sob o elemento que tem o nome Name***i-1***. Se Name***n*** começar com "\@", ele será mapeado para um atributo de elemento Name ***n-1***.  
   
  Por exemplo, a consulta a seguir retorna a ID e o nome de um funcionário que são representados como um elemento complexo EmpName que contém um Nome, Segundo nome e Sobrenome.  
   

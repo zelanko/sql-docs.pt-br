@@ -1,7 +1,7 @@
 ---
 title: sp_dropserver (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: system-stored-procedures
@@ -23,36 +23,33 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: faf0d79f399a714e4402d59c662df12021eb34f2
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 1aa8b62529bee6c5035161a9d7964c5f2f8ec5c7
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43031899"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171698"
 ---
 # <a name="spdropserver-transact-sql"></a>sp_dropserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Remove um servidor da lista de servidores remotos e vinculados conhecidos na instância local do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
-
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+ ![Ícone de link](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
-  
+```sql  
 sp_dropserver [ @server = ] 'server'   
      [ , [ @droplogins = ] { 'droplogins' | NULL} ]  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@server =** ] **'***server***'**  
+ *server*  
  É o servidor a ser removido. *server* é **sysname**, sem padrão. *servidor* deve existir.  
   
- [  **@droplogins =** ] **'droplogins'** | NULL  
- Indica que relacionados a logons de servidor remoto e vinculado para *server* também devem ser removidas se **droplogins** for especificado. **@droplogins** está **char(10)**, com um padrão NULL.  
+ *droplogins*  
+ Indica que relacionados a logons de servidor remoto e vinculado para *server* também devem ser removidas se **droplogins** for especificado. **`@droplogins`** está **char(10)**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  

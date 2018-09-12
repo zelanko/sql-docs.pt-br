@@ -22,12 +22,12 @@ caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 72dabd38cbb974ead8a231b4da9569dee9441284
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 03e3a5a0497a1d2da15124287d557f6e27bc3e7e
+ms.sourcegitcommit: df3923e007527ce79e2d05821b62d77ee06fd655
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467902"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44375679"
 ---
 # <a name="sysdmoslatchstats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,20 +35,20 @@ ms.locfileid: "34467902"
   Retorna as informações sobre todas as esperas de trava organizadas por classe.  
   
 > [!NOTE]  
->  Para chamar essa de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use o nome **sys.dm_pdw_nodes_os_latch_stats**.  
+>  Chamá-lo partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use o nome **sys.dm_pdw_nodes_os_latch_stats**.  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |latch_class|**nvarchar(120)**|Nome da classe da trava.|  
 |waiting_requests_count|**bigint**|Número de esperas em travas nessa classe. O contador é incrementado no início de uma espera de trava.|  
-|wait_time_ms|**bigint**|Tempo de espera total, em milissegundos, nas travas dessa classe.<br /><br /> **Observação:** esta coluna é atualizada a cada cinco minutos durante uma espera de trava e no final de uma espera de trava.|  
+|wait_time_ms|**bigint**|Tempo de espera total, em milissegundos, nas travas dessa classe.<br /><br /> **Observação:** esta coluna é atualizada a cada cinco minutos, durante uma espera de trava e no final de uma espera de trava.|  
 |max_wait_time_ms|**bigint**|Tempo máximo durante qual um objeto de memória esperou essa trava. Se o valor for exageradamente alto, pode indicar um deadlock interno.|  
-|pdw_node_id|**Int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
+|pdw_node_id|**int**|**Aplica-se ao**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
   
 ## <a name="permissions"></a>Permissões  
 
-Em [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
-Em [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` no banco de dados.   
+Na [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
+Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` permissão no banco de dados.   
   
 ## <a name="remarks"></a>Remarks  
  sys.dm_os_latch_stats pode ser usado para identificar a origem de uma contenção de travamento, examinando os números e os tempos de espera relativos para as diferentes classes de trava. Em algumas situações, talvez seja possível resolver ou reduzir contenção de trava. Entretanto, pode haver situações em que seja necessário contatar o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Serviço de Atendimento ao Cliente.  
@@ -105,7 +105,7 @@ GO
 |BACKUP_MANAGER_DIFFERENTIAL|Usada para sincronizar operações de backup diferencial com DBCC.|  
 |BACKUP_OPERATION|Usada para a sincronização da estrutura de dados interna dentro de uma operação de backup, tal como banco de dados, log ou backup de arquivo.|  
 |BACKUP_FILE_HANDLE|Usada para sincronizar operações de abertura de arquivos durante uma operação de restauração.|  
-|BUFFER|Usada para sincronizar o acesso a curto prazo a páginas de banco de dados. Uma trava de buffer é necessária antes de ler ou modificar qualquer página de banco de dados. A contenção da trava de buffer pode indicar vários problemas, inclusive hotpages e E/S lentas.<br /><br /> Essa classe de trava abrange todos os possíveis usos de travas de página. sys.DM os_wait_stats faz a diferença entre as esperas de trava de página causadas pelas operações de e/s e de leitura e gravação na página.|  
+|BUFFER|Usada para sincronizar o acesso a curto prazo a páginas de banco de dados. Uma trava de buffer é necessária antes de ler ou modificar qualquer página de banco de dados. A contenção da trava de buffer pode indicar vários problemas, inclusive hotpages e E/S lentas.<br /><br /> Essa classe de trava abrange todos os possíveis usos de travas de página. DM os_wait_stats faz a diferença entre as esperas de trava de página são causadas pelas operações de e/s e de leitura e gravação na página.|  
 |BUFFER_POOL_GROW|Usada para a sincronização do gerenciador de buffer interno durante as operações de geração de pools de buffers.|  
 |DATABASE_CHECKPOINT|Usada para serializar pontos de verificação dentro de um banco de dados.|  
 |CLR_PROCEDURE_HASHTABLE|Somente para uso interno.|  
@@ -126,7 +126,7 @@ GO
 |FCB|Usada para sincronizar o acesso ao bloco de controle de arquivo.|  
 |FCB_REPLICA|Somente para uso interno.|  
 |FGCB_ALLOC|Use para sincronizar o acesso às informações de alocação round robin em um grupo de arquivos.|  
-|FGCB_ADD_REMOVE|Use para sincronizar o acesso a grupos de arquivos para as operações de arquivo ADD e DROP.|  
+|FGCB_ADD_REMOVE|Use para sincronizar o acesso a grupos de arquivos para adicionar, remover, expandir e reduzir operações de arquivo.|  
 |FILEGROUP_MANAGER|Somente para uso interno.|  
 |FILE_MANAGER|Somente para uso interno.|  
 |FILESTREAM_FCB|Somente para uso interno.|  
@@ -169,7 +169,7 @@ GO
 |SERVICE_BROKER_MAP_MANAGER|Somente para uso interno.|  
 |SERVICE_BROKER_HOST_NAME|Somente para uso interno.|  
 |SERVICE_BROKER_READ_CACHE|Somente para uso interno.|  
-|SERVICE_BROKER_WAITFOR_MANAGER| Usado para sincronizar um mapa de nível de instância de filas de serviço. Existe uma fila por tupla de ID, versão do banco de dados e ID de fila do banco de dados. A contenção em travas dessa classe pode ocorrer quando o número de conexões é: em um WAITFOR(RECEIVE) espera estado. chamando WAITFOR(RECEIVE); excedendo o tempo limite de WAITFOR; recebendo uma mensagem. Confirmar ou reverter a transação que contém o WAITFOR(RECEIVE); Você pode reduzir a contenção, reduzindo o número de threads em um estado de espera WAITFOR(RECEIVE). |  
+|SERVICE_BROKER_WAITFOR_MANAGER| Usado para sincronizar um mapa de nível de instância de filas de espera. Existe uma fila por tupla de ID, a versão do banco de dados e a ID de fila do banco de dados. A contenção em travas dessa classe pode ocorrer quando o número de conexões é: em um WAITFOR(RECEIVE) aguardar o estado; chamar WAITFOR(RECEIVE); tempo limite WAITFOR; recebendo uma mensagem. Confirmar ou reverter a transação que contém o WAITFOR(RECEIVE); Você pode reduzir a contenção, reduzindo o número de threads em um estado de espera WAITFOR(RECEIVE). |  
 |SERVICE_BROKER_WAITFOR_TRANSACTION_DATA|Somente para uso interno.|  
 |SERVICE_BROKER_TRANSMISSION_TRANSACTION_DATA|Somente para uso interno.|  
 |SERVICE_BROKER_TRANSPORT|Somente para uso interno.|  
@@ -202,7 +202,7 @@ GO
  
  [DBCC SQLPERF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)   
  
- [Sistema operacional SQL Server relacionadas exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+ [Sistema operacional SQL Server relacionados exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 
