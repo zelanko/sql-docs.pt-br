@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 26
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d03ee36c46ba0fb4e4c026c61d94c1b4ee29befc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c0e97f33382a5d61c6b8941fd51fbd23c5d1ed21
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202036"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43817292"
 ---
 # <a name="new-or-edit-server-registration-general-tab-reporting-services"></a>Novo registro ou editar registro de servidor (guia Geral) (Reporting Services)
   Use essa guia para especificar opções ao registrar uma instância do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  

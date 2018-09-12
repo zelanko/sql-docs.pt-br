@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fd21eb41730ad1d214361bee779fef375b8c75ac
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: edc7089dbb763fffff299eced7f5d962eb340b90
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37284602"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43807332"
 ---
 # <a name="arguments-dialog-box"></a>caixa de diálogo Argumentos
   A caixa de diálogo **Argumentos** especifica argumentos novos ou existentes para uma ferramenta. Essa caixa de diálogo é exibida quando você inicia uma ferramenta externa que tem a opção **Solicitar argumentos** selecionada na caixa de diálogo **Ferramentas Externas** .  

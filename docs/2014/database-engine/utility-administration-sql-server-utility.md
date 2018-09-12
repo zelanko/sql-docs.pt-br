@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3e5a00c3-8905-40f0-9ddc-d924df9c2f0d
@@ -14,12 +13,12 @@ caps.latest.revision: 5
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3dcd50c691d4ca9373010c5e26ef97771c49e7a7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 96c81c4f6913c4e355ca368ae67f04c1c5fde12b
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37271602"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43815272"
 ---
 # <a name="utility-administration-sql-server-utility"></a>Administração do Utilitário (Utilitário do SQL Server)
   Use as guias de Administração do Utilitário para gerenciar configurações de políticas, segurança e data warehouse para um [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility. Para obter mais informações sobre os conceitos do Utilitário do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , veja [Recursos e tarefas do Utilitário do SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md).  

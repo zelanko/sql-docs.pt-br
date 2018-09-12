@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c23214b2ce0fccf5b96934cab3b4561d224ff677
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: aa43bd29d20b7ddedd7c5968f5b4341e11713541
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37246166"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43810552"
 ---
 # <a name="use-tokens-in-job-steps"></a>Usar tokens em etapas de trabalho
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent permite usar tokens em scripts de etapas de trabalho [!INCLUDE[tsql](../../includes/tsql-md.md)] . O uso de tokens para escrever suas etapas de trabalho oferece a mesma flexibilidade fornecida por variáveis ao escrever programas de software. Quando você insere um token em um script de etapa de trabalho, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent o substitui em tempo de execução, antes de o trabalho ser executado pelo subsistema [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
@@ -33,7 +32,7 @@ ms.locfileid: "37246166"
 > [!IMPORTANT]  
 >  A partir do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1, a sintaxe de token de etapa de trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent mudou. Por consequência, uma macro de fuga agora deve acompanhar todos os tokens utilizados em etapas de trabalho ou elas falharão. O uso de macros de escape e a atualização das etapas de trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent que utilizam tokens são descritos nas seções "Compreendendo o uso de tokens", "Tokens e macros do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent" e "Atualizando etapas de trabalho para usar macros" a seguir. Além disso, a sintaxe do [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] , que usava colchetes para chamar tokens de etapa de trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent (por exemplo, "`[DATE]`"), também mudou. Agora, deve-se colocar os nomes de token entre parênteses e um sinal de cifrão (`$`) no início da sintaxe do token. Por exemplo:  
 >   
->  `$(ESCAPE_` *nome da macro* `(DATE))`  
+>  `$(ESCAPE_` *Nome da macro* `(DATE))`  
   
 ## <a name="understanding-using-tokens"></a>Noções básicas sobre o uso de tokens  
   

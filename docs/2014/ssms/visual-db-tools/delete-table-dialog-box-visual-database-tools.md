@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3c18d15d29de88ab882854f5a8a08514e1876e8f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a3fc1596fe9c7c73515d2c08e324df1201fd746e
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37282402"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43820112"
 ---
 # <a name="delete-table-dialog-box-visual-database-tools"></a>Caixa de diálogo Excluir Tabela (Visual Database Tools)
   Essa caixa de diálogo lhe permite especificar a tabela da qual os registros devem ser excluídos. Essa caixa de diálogo será exibida se mais de uma tabela for exibida no painel Diagrama quando o tipo de consulta for alterado em uma consulta DELETE.  

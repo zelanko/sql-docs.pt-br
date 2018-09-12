@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -23,12 +22,12 @@ caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a8702521d385b6036825190ed5652bf395997160
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2ffcff965e3a8ab7896f7bd0dcce8faa1bbc9774
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37241796"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43817502"
 ---
 # <a name="template-explorer"></a>Explorador de Modelos
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece uma variedade de modelos. Modelos são arquivos boilerplate que contêm scripts SQL que ajudam você a criar objetos em um banco de dados. A primeira vez que o explorador de modelos é aberto, uma cópia dos modelos é colocada na pasta do usuário C:\Users, em AppData\Roaming\Microsoft\SQL Server Management Studio\120\Templates.  
@@ -42,7 +41,7 @@ ms.locfileid: "37241796"
   
  Crie modelos personalizados para tarefas executadas com frequência. Organize seus scripts personalizados nas pastas existentes ou crie uma nova estrutura de pastas.  
   
- O editor de consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] também oferece suporte a trechos de códigos que podem ser inseridos em locais específicos em um script clicando com o botão direito do mouse nesse local.  
+ O editor de consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] também oferece suporte a snippets de códigos que podem ser inseridos em locais específicos em um script clicando com o botão direito do mouse nesse local.  
   
 ## <a name="related-tasks"></a>Related Tasks  
  Use os tópicos a seguir como introdução rápida a modelos  

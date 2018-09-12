@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 24
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3e705b2b62631e0d6747c5112c0efc66f3bfddf6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 065f8d2d32d8ad16fe955ba8e36c7e65926bec95
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37165287"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43808282"
 ---
 # <a name="edit-checked-in-files"></a>Editar arquivos com check-in
   Você normalmente deve fazer o check-out de arquivos com controle do código-fonte antes de poder editá-los. Entretanto, é possível configurar o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para que você possa modificar arquivos que não fizeram check-out. Ao fazer isso, suas alterações são mantidas na memória até os arquivos serem salvos. Você será solicitado a fazer check–out do arquivo no controle do código-fonte.  

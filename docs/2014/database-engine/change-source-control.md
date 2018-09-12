@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 19
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 825cdbb6f25afb31d49e8150c19790385bc1cf14
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 676d87266ecb64d52a97ed1ee27c01a4cffa1fb1
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312296"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43812092"
 ---
 # <a name="change-source-control"></a>Alterar Controle do Código-Fonte
   Cria e gerencia as conexões e associações que vinculam uma solução ou projeto salvo localmente com uma pasta do banco de dados de controle do código fonte.  
@@ -35,7 +34,7 @@ ms.locfileid: "37312296"
 >  Esta caixa de diálogo também está disponível clicando com o botão direito do mouse no item no Gerenciador de Soluções.  
   
 ## <a name="options"></a>Opções  
- **Associar**  
+ **associar**  
  Associe itens selecionados com um local de servidor de controle do código fonte especificado. Por exemplo, você pode usar esse botão para associar à última pasta de servidor de controle do código fonte conhecida e ao banco de dados. Se uma pasta de servidor ou banco de dados recente não puder ser localizada, você será solicitado a especificar outra.  
   
  **Procurar**  
@@ -84,7 +83,7 @@ ms.locfileid: "37312296"
 |Unknown (desconhecido)|O status do item sob controle do código fonte ainda não foi determinado.|  
 |Não Controlado|O item não foi colocado sob controle do código fonte.|  
   
- **Desassociar**  
+ **desassociar**  
  Exiba a caixa de diálogo **Controle do Código Fonte** para permitir que você remova itens selecionados do controle do código fonte e desassocie permanentemente os itens de suas pastas atuais.  
   
 ## <a name="see-also"></a>Consulte também  

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f5f47c2a-38ea-40f8-9767-9bc138d14453
@@ -14,12 +13,12 @@ caps.latest.revision: 8
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 81b35d1af874c97bf2e61e9c1234d7ad7876e229
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d059ac17d901ca7eec0bf451ba7babaecce607a8
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328136"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43815742"
 ---
 # <a name="troubleshoot-the-sql-server-utility"></a>Solucionar problemas do Utilitário do SQL Server
   A solução de problemas do Utilitário do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pode incluir a resolução de uma operação malsucedida de inscrição de uma instância do SQL Server com um UCP, a solução de problemas de falha na coleta de dados que resultam em ícones cinzas na exibição da lista de instâncias gerenciadas em um UCP, a redução de gargalos de desempenho ou a resolução de problemas de integridade de recursos. Para obter mais informações sobre como eliminar problemas de integridade de recursos identificados por um [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] UCP, consulte [solucionar problemas de integridade de recursos do SQL Server &#40;utilitário do SQL Server&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md).  

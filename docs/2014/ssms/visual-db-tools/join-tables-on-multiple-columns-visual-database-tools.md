@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e0b8807ad4a8b2cbcadc0ecaa30db2db105ed482
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: eca98d6c541aff433f5a90cd0c730e5cdc0af3e0
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218686"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43812262"
 ---
 # <a name="join-tables-on-multiple-columns-visual-database-tools"></a>Unir tabelas em várias colunas (Visual Database Tools)
   Você pode unir tabelas em várias colunas. Quer dizer, você poderá criar uma consulta que corresponde às linhas de duas tabelas apenas se elas satisfizerem várias condições. Se o banco de dados contiver uma relação, que corresponda a várias colunas de chave estrangeira, em uma tabela para uma chave primária de multicolunas na outra tabela, você poderá usar esta relação para criar uma junção de multicolunas. Para obter detalhes, consulte [Unir tabelas automaticamente &#40;Visual Database Tools&#41;](visual-database-tools.md).  

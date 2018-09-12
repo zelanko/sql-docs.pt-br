@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e0f67935fd46e27ad107221de96d8816e056e421
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 90a94189b138cb61f7ae542ec755ab7d148d2852
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37294076"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43818082"
 ---
 # <a name="options-environment-help-general-page"></a>Opções (página ambiente – ajuda – geral)
   Use a caixa de diálogo **Opções** para escolher conjuntos de documentação e decidir se serão exibidos tópicos internamente no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou externamente em uma janela separada. Para acessar essa caixa de diálogo, clique em **Opções** no menu **Ferramentas** , expanda a **Ajuda** no nó **Ambiente** e clique em **Geral**.  

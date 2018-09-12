@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,12 +21,12 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ca61b3ffe2196b282e5da06e1c508928e3529e81
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c4ca2da0f658db385e3dcc23a2384f4dc7afc859
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37159657"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43807412"
 ---
 # <a name="query-with-joins-visual-database-tools"></a>Consultar com junções (Visual Database Tools)
   Um resultado de consulta pode incluir dados de várias tabelas ou objetos com valor de tabela. Para combinar dados de vários objetos com valor de tabela, você usa a operação JOIN do SQL.  

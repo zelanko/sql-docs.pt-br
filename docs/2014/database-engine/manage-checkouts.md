@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 20
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a64e2346479c95327c3f183331cc7971481521b1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f2f1d25a1344f395779d084c659fc7a4579f098c
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37320706"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43813038"
 ---
 # <a name="manage-checkouts"></a>Gerenciar check-outs
   Depois que um arquivo é adicionado ao controle do código-fonte, faça check-out do arquivo antes de você fazer modificações nele. Ao fazer o check-out de um arquivo com controle do código-fonte, o provedor de controle do código-fonte cria uma cópia da versão mais recente em seu disco local e remove o atributo somente leitura do arquivo. Em algumas circunstâncias, você pode precisar editar um arquivo sem fazer check-out do mesmo. Para obter mais informações sobre como editar um arquivo sem fazer check-out do arquivo, consulte [editar arquivos de Checked-In](../../2014/database-engine/edit-checked-in-files.md).  

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -22,12 +21,12 @@ caps.latest.revision: 6
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4761049c87ee75e4b0bc6dc4511200f0b607d287
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 54b12c13823acf51b5004eb43ee18ab8e1705135
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37178433"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43815902"
 ---
 # <a name="deployed-data-tier-application-details-sql-server-utility"></a>Detalhes do aplicativo da camada de dados implantado (Utilitário do SQL Server)
   As informações da exibição Aplicativos da Camada de Dados Implantados do Gerenciador do Utilitário fornecem dados de utilização para aplicativos da camada de dados individuais, o histórico de utilização da CPU, detalhes de utilização do armazenamento em nível de arquivo e a capacidade de exibir e atualizar limites de políticas. Os limites de políticas podem ser controlados no nível de aplicativo da camada de dados para utilização da CPU e para arquivos de log e arquivos de dados do banco de dados. Você também pode exibir detalhes de propriedades de aplicativos da camada de dados individuais.  

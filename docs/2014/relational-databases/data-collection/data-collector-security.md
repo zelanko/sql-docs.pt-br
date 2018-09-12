@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 31
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: df296ef140f92e8a035e85d3123b0f1426e6288a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 710f31e492d251347d7be2cb46f917bc04421138
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37235276"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43816612"
 ---
 # <a name="data-collector-security"></a>Segurança do coletor de dados
   O coletor de dados usa o modelo de segurança baseado em função implementado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Esse modelo permite que o administrador do banco de dados execute várias tarefas de coletor de dados em um contexto de segurança que tem apenas as permissões exigidas para executar a tarefa. Essa abordagem também é usada para operações que envolvem tabelas internas que só podem ser acessadas usando um procedimento armazenado ou exibição. Nenhuma permissão é concedida a tabelas internas. Em vez disso, as permissões são verificadas no usuário do procedimento armazenado ou na exibição usada para acessar a tabela.  

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 13882e276ab5c963da665cbcf1f1a70148a0bd4e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1187749503315c5b4f2cf11eeee2f6bae8ff3c5f
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37317446"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43819952"
 ---
 # <a name="about-sql-server-management-studio"></a>Sobre o SQL Server Management Studio
   Use esta caixa de diálogo para exibir ou copiar informações sobre sua instalação do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. As edições do Evaluation listam o número de dias que restam até que o produto expire.  

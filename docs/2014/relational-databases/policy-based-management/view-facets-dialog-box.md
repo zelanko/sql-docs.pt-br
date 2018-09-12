@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 14
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7299af1da6bd0a1e77a52163d514d8fc48a44f90
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 72114fd010743a73c7c07d46d669969ed70ac680
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37184223"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43811392"
 ---
 # <a name="view-facets-dialog-box"></a>Caixa de diálogo Exibir Facetas
   Use esta caixa de diálogo para exibir as propriedades de uma faceta de Gerenciamento Baseado em Políticas. As propriedades de uma faceta são definidas quando ela é criada e não podem ser alteradas com o uso desta caixa de diálogo.  

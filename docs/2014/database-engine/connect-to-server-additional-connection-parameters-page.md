@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 11
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 670d2e23467d80ee1a183ad3f5c5aae46ce64067
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 238a558f7b11c122012c2bfbe9538fa803fa8444
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37283932"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43816252"
 ---
 # <a name="connect-to-server-additional-connection-parameters-page"></a>Conectar ao Servidor (página Parâmetros Adicionais de Conexão)
   A caixa de diálogo **Conectar a** do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] apresenta os valores de cadeia de conexão mais comuns como opções. Use a página **Parâmetros Adicionais de Conexão** para acrescentar mais parâmetros de conexão à cadeia de conexões.  

@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 18
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a50e63ecd929581f9ae9c185c714fd21dc171c6b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 49f6c58a56f1ea702da8ece6d21462ee192e969a
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37225856"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43811312"
 ---
 # <a name="connect-to-server-connection-properties-page-analysis-services"></a>Conectar ao servidor (página Propriedades da Conexão) Analysis Services
   Use esta guia para exibir ou especificar opções ao se conectar com o [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ou ao registrar o [!INCLUDE[ssAS](../includes/ssas-md.md)] nos **Servidores Registrados**. **Conectar** e **Opções** são exibidas apenas nessa caixa de diálogo durante a conexão. **Testar** e **Salvar** só aparecem nesta caixa de diálogo durante o registro no [!INCLUDE[ssAS](../includes/ssas-md.md)].  

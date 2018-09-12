@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f322ed88e8e9bdf6eea23799e533f124165f1bb5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 207a5df2cc4641819eb2b06ddb0fe1aec6d4d984
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37236046"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43815622"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>Caixa de diálogo Índices Espaciais (Ferramentas de Banco de Dados Visual)
   Use a caixa de diálogo **Índices Espaciais** em colunas de tipo de dados de **geometria** ou **geografia** (*colunas espaciais*), que não podem ser indexadas usando a caixa de diálogo **Índice/Chaves** . Cada coluna espacial pode ter mais de um índice espacial, mas eles devem ser criados um de cada vez.  
@@ -113,7 +112,7 @@ ms.locfileid: "37236046"
  **Bloqueios de página permitidos**  
  Especifica se o bloqueio de página é permitido no índice. A permissão ou não dos bloqueios de página afeta o desempenho do banco de dados.  
   
- **Recalcular****estatísticas  **  
+ **Recalcular****estatísticas**   
  Especifica se as novas estatísticas deverão ser recalculadas quando o índice for criado. Ao se recalcular estatísticas retarda-se a criação dos índices, mas em geral melhora-se o desempenho da consulta.  
   
  **Bloqueios de Linha Permitidos**  

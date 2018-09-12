@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 23
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8374df1a73b68636ea22586dc44eea42ed8d89c4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 28d2dc6931f32b95bb318732a146b53d7bac5201
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37314326"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43807213"
 ---
 # <a name="create-history-and-status-reports"></a>Criar histórico e relatórios de status
   Você pode criar um relatório no histórico ou status atual de arquivos na solução carregada no momento. Também é possível visualizar o relatório e depois enviá-lo para uma impressora, um arquivo ou para a Área de Transferência. Estes relatórios não são gerados pelo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Em vez disso, o [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe gera o relatório.  

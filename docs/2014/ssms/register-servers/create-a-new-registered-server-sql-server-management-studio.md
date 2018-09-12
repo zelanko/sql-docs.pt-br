@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -19,12 +18,12 @@ caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ba895e7c6bd490278147fb6656b8c5856c02f57c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1d8d70b56c5820563e8a9d875be99d9dbb5fe0af
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37299566"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43815062"
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>Criar um novo servidor registrado (SQL Server Management Studio)
   Este tópico descreve como salvar as informações de conexão para os servidores que você acessa com frequência, registrando o servidor no componente Servidores Registrados do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Um servidor pode ser registrado antes de conectar ou ao conectar o Pesquisador de Objetos. Há uma opção de menu especial para registrar as instâncias de servidor no computador local.  

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -23,12 +22,12 @@ caps.latest.revision: 22
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0dde0359b67d34e712b76e53a855efaafc29b5b0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 52fdedc502bc2d8c53a01b0bc69d8a3168957b97
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37265216"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43820262"
 ---
 # <a name="set-and-retrieve-version-information"></a>Definir e recuperar informações de versão
   As informações de versão incluem o histórico e o status atual de um arquivo com controle do código-fonte. Para todo arquivo com controle do código-fonte, o [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe mantém um histórico abrangente, de forma que você pode localizar a evolução de um ou mais arquivos com o passar do tempo. Você também pode usar essas informações para recuperar uma cópia local de qualquer versão do arquivo ou comparar duas versões de arquivos.  

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -17,14 +16,14 @@ caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 77d81f3bb0e0d923bdf9fd8bd6a8ae88c14afa60
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 845ac7c15cdda81ac77853c7642f002e679c22cd
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37168255"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43812802"
 ---
-# <a name="indexes-and-keys-dialog-box-visual-database-tools"></a>Índices e a caixa de diálogo de chaves (Visual Database Tools)
+# <a name="indexes-and-keys-dialog-box-visual-database-tools"></a>Caixa de diálogo Índices e Chaves (Visual Database Tools)
   Use essa caixa de diálogo para criar ou modificar índices, chaves primárias e chaves exclusivas. Para acessar essa caixa de diálogo, abra a definição da tabela com o índice ou chave; clique com o botão direito do mouse na grade de definição da tabela e depois clique em **Índices/Chaves**.  
   
 > [!NOTE]  

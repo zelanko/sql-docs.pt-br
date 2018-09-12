@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 22
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fabcfd609f5463cea9012ee779a41b87cf143f2a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 982795a23e2fc45a3c15feaa2d81a433f0c281bd
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224136"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43819092"
 ---
 # <a name="password-expired"></a>Senha Expirada
   Aparece quando você se conecta a um servidor com o [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] usando autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e a senha fornecida está correta, mas já expirou. Também aparece quando você se conecta a um servidor com uma nova conta que foi criada usando a opção **O usuário deve alterar a senha no próximo logon** . Use a caixa de diálogo **Senha Expirada** para alterar a senha para esse logon de autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  

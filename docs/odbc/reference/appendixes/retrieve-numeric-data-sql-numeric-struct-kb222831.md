@@ -1,42 +1,38 @@
 ---
 title: Recuperar dados numéricos com SQL_NUMERIC_STRUCT | Microsoft Docs
-description: C/C++ usando o ODBC recupera o tipo de dados numérico do SQL Server usando SQL_NUMERIC_STRUCT, relacionados a SQL_C_NUMERIC.
-documentationCenter: ''
+description: C/C++ usando o ODBC recupera o tipo de dados numéricos do SQL Server usando SQL_NUMERIC_STRUCT, relacionados a SQL_C_NUMERIC.
 authors: MightyPen
 manager: craigg
 editor: ''
 ms.prod: sql
-ms.prod_service: connectivity
-ms.suite: sql
-ms.technology: dbe-data-tier-apps
+ms.technology: ''
 ms.devlang: C++
 ms.topic: conceptual
 ms.custom: ''
-ms.tgt_pltfrm: NA
 ms.date: 07/13/2017
 ms.author: genemi
-ms.openlocfilehash: 57bd5ffbe1adb9c0ecbefda8d99434767ed6c3e0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7a8a4d4272ad15b0ba045f5a683dc009711ee0e8
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32913221"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43809822"
 ---
-# <a name="retrieve-numeric-data-with-sqlnumericstruct"></a>Recuperar dados numéricos com SQL\_NUMÉRICO\_STRUCT
+# <a name="retrieve-numeric-data-with-sqlnumericstruct"></a>Recuperar dados numéricos com SQL\_numéricos\_STRUCT
 
-Este artigo descreve como recuperar dados numéricos do driver ODBC do SQL Server em uma estrutura numérica. Ele também descreve como obter os valores corretos usando precisão específica e os valores de escala.
+Este artigo descreve como recuperar dados numéricos do driver ODBC do SQL Server em uma estrutura numérica. Ele também descreve como obter os valores corretos usando precisão específica e dimensiona os valores.
 
-Esse tipo de dados permite que os aplicativos lidar diretamente com dados numéricos. Uma solução alternativa para o ano de 2003, ODBC 3.0 introduziu um novo tipo de dados do ODBC C, identificado por **SQL\_C\_NUMÉRICO**. Esse tipo de dados ainda é relevante a partir de 2017.
+Esse tipo de dados permite que os aplicativos manipular diretamente os dados numéricos. Em todo o ano de 2003, o ODBC 3.0 introduziu um novo tipo de dados ODBC C, identificado por **SQL\_C\_NUMÉRICO**. Esse tipo de dados ainda é relevante a partir de 2017.
 
-O buffer de C que será usado tem a definição de tipo de **SQL\_NUMÉRICO\_STRUCT**. Essa estrutura tem campos para armazenar a precisão, escala, logon e o valor dos dados numéricos. O valor em si é armazenado como um inteiro dimensionado com o início de byte menos significativo na posição mais à esquerda. 
+O buffer de C que é usado tem a definição de tipo de **SQL\_NUMÉRICO\_STRUCT**. Essa estrutura tem campos para armazenar a precisão, escala, entrada e valor dos dados numéricos. O valor em si é armazenado como um inteiro dimensionado com o início de byte menos significativo na posição mais à esquerda. 
 
-O artigo [tipos de dados C](c-data-types.md) fornece mais informações sobre o formato e o uso do SQL\_NUMÉRICO\_STRUCT. Geralmente o [Apêndice D](appendix-d-data-types.md) de referência do programador de ODBC 3.0 aborda os tipos de dados.
-
-
-## <a name="sqlnumericstruct-overview"></a>SQL\_NUMÉRICO\_visão geral da estrutura
+O artigo [tipos de dados C](c-data-types.md) fornece mais informações sobre o formato e o uso do SQL\_NUMÉRICO\_STRUCT. Geralmente, o [Apêndice D](appendix-d-data-types.md) de referência do programador de ODBC 3.0 aborda os tipos de dados.
 
 
-O SQL\_NUMÉRICO\_STRUCT é definido no arquivo de cabeçalho sqlext da seguinte maneira:
+## <a name="sqlnumericstruct-overview"></a>SQL\_numéricos\_visão geral STRUCT
+
+
+O SQL\_numéricos\_STRUCT é definido no arquivo de cabeçalho SqlTypes da seguinte maneira:
 
 
 ``` C
@@ -51,11 +47,11 @@ typedef struct tagSQL_NUMERIC_STRUCT
 ```
 
             
-Os campos de precisão e escala da estrutura numérica nunca são usados para entrada de um aplicativo, apenas para a saída de driver para o aplicativo.
+Os campos de precisão e escala da estrutura numérica nunca são usados para entrada de um aplicativo, somente para saída do driver para o aplicativo.
 
-O driver usa a precisão padrão (definido pelo driver) e a escala padrão (0) sempre que retornar dados para o aplicativo. A menos que o aplicativo especifica valores de precisão e escala, o driver assume o padrão e trunca a parte decimal dos dados numéricos.
+O driver usa a precisão padrão (definido pelo driver) e a escala padrão (0) sempre que retornar dados para o aplicativo. A menos que o aplicativo especifica valores para a precisão e escala, o driver pressupõe que o padrão e trunca a parte decimal dos dados numéricos.
 
-## <a name="sqlnumericstruct-code-sample"></a>SQL\_NUMÉRICO\_exemplo de código de estrutura
+## <a name="sqlnumericstruct-code-sample"></a>SQL\_numéricos\_exemplo de código STRUCT
 
 Este exemplo de código mostra como para:
 
@@ -64,9 +60,9 @@ Este exemplo de código mostra como para:
 - Recupere os valores corretos. 
 
 > [!Note]
-> QUALQUER USO QUE VOCÊ O CÓDIGO FORNECIDO NESTE ARTIGO É DE SUA RESPONSABILIDADE. 
+> QUALQUER USO POR VOCÊ SOBRE O CÓDIGO FORNECIDO NESTE ARTIGO É DE SUA RESPONSABILIDADE. 
 >
-> A Microsoft fornece estes exemplos de código "como está" sem garantias de qualquer tipo, expressas ou implícitas, incluindo, mas não limitado a garantias implícitas de comercialização e/ou adequação a uma finalidade específica.
+> A Microsoft fornece estes exemplos de código "como está" sem garantias de qualquer tipo, expressas ou implícitas, incluindo, mas não se limitando às garantias implícitas de comercialização e/ou adequação a uma finalidade específica.
 
 ``` C
 #include <stdio.h>
@@ -231,17 +227,17 @@ while((retcode =SQLFetch(hstmt1)) != SQL_NO_DATA)
 ```
 
 
-Na estrutura de numérico, o campo de valor é uma matriz de caracteres de 16 elementos. Por exemplo, 25.212 é dimensionada 25212 e a escala é 3. Em formato hexadecimal esse número deve ser c 627.
+Na estrutura de numérico, o campo de val é uma matriz de caracteres de 16 elementos. Por exemplo, 25.212 é dimensionado para 25212 e a escala é 3. Em formato hexadecimal, esse número seria c 627.
 
 O driver retorna os seguintes itens:
 
-- O caractere equivalente de 7C, que é ' |' (redirecionar) no primeiro elemento da matriz de caracteres.
-- O equivalente de 62, que é 'b' o segundo elemento.
-- O restante dos elementos da matriz contêm zeros, portanto, o buffer contém ' | b \ 0 '.
+- O caractere equivalente do 7c, que é ' |' (redirecionar) no primeiro elemento da matriz de caracteres.
+- O equivalente de 62, que é 'b' no segundo elemento.
+- O restante dos elementos da matriz contém zeros, portanto, o buffer contém ' | b \ 0 '.
 
-Agora, o desafio é construir o inteiro dimensionado sem essa matriz de cadeia de caracteres. Cada caractere na cadeia de caracteres corresponde a dois dígitos hexadecimais, digamos que menos significativo (LSD) e mais significativos dígitos (MSD). O valor inteiro em escala pode ser gerado multiplicando cada dígito (LSD & MSD) com um múltiplo de 16, começando com 1.
+Agora, o desafio é construir o inteiro dimensionado fora dessa matriz de cadeia de caracteres. Cada caractere na cadeia de caracteres corresponde a dois dígitos hexadecimais, digamos que dígitos menos significativos (LSD) e o dígito mais significativo (MSD). O valor de inteiro dimensionado poderia ser gerado, multiplicando cada dígito (LSD & MSD) com um múltiplo de 16, começando com 1.
 
-Código que implementa a conversão de modo endian pequeno para o inteiro em escala. É responsabilidade do desenvolvedor do aplicativo para implementar essa funcionalidade. O exemplo de código a seguir é apenas uma das maneiras possíveis.
+Código que implementa a conversão de modo endian pouco inteiro dimensionado. É responsabilidade do desenvolvedor de aplicativos para implementar essa funcionalidade. O exemplo de código a seguir é apenas uma das muitas maneiras possíveis.
 
 
 ``` C
@@ -270,7 +266,7 @@ long strtohextoval()
 ### <a name="applies-to-versions"></a>Se aplica a versões
 
 
-As informações anteriores sobre SQL\_NUMÉRICO\_STRUCT se aplica às seguintes versões do produto:
+As informações anteriores sobre o SQL\_numéricos\_STRUCT se aplica às seguintes versões do produto:
 
 - Microsoft ODBC Driver para Microsoft SQL Server 3.7
 - Microsoft Data Access Components 2.1
@@ -279,10 +275,10 @@ As informações anteriores sobre SQL\_NUMÉRICO\_STRUCT se aplica às seguintes
 - Microsoft Data Access Components 2.7
 
 
-## <a name="sqlcnumeric-overview"></a>SQL\_C\_visão geral NUMÉRICO
+## <a name="sqlcnumeric-overview"></a>SQL\_C\_visão geral de NUMÉRICO
 
 
-O programa de exemplo a seguir ilustra o uso do SQL\_C\_NUMÉRICO, inserindo 123,45 em uma tabela. Na tabela, a coluna é definida como um numérico ou um decimal com precisão 5 e 2 da escala.
+O programa de exemplo a seguir ilustra o uso do SQL\_C\_NUMÉRICO, inserindo 123,45 em uma tabela. Na tabela, a coluna é definida como um numérico ou um decimal com precisão 5 e escala de 2.
 
 O driver ODBC que você usa para executar este programa deve dar suporte à funcionalidade de ODBC 3.0.
 

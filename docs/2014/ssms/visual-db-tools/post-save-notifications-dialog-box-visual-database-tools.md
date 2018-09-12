@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 274bf22ef6d5c22f840074a7e510ad5aff084d34
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b10056debcba87b7f2a87118e865c97870ef81c5
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37214376"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43811902"
 ---
 # <a name="post-save-notifications-dialog-box-visual-database-tools"></a>Caixa de diálogo Notificações Pós-salvamento (Visual Database Tools)
   Essa caixa de diálogo aparece quando ocorrem erros durante tentativa de salvar alterações em tabela. Essa caixa de diálogo lista os objetos salvos com êxito no banco de dados, os objetos que não foram salvos e os erros encontrados.  

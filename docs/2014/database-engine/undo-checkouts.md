@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 22
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c726f47ecb042b8d4ba87e972d14f8e384f7a88a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 273f7c1ccb5a9e55864df27939ff39e7f04787d5
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37289492"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43811542"
 ---
 # <a name="undo-checkouts"></a>Desfazer check-outs
   Você pode usar o comando **Desfazer check-out** para cancelar um check-out existente. Isso é particularmente útil quando você tiver modificado e salvado um arquivo, e depois precisar reverter as alterações.  

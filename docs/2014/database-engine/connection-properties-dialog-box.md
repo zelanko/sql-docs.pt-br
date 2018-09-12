@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 23
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 339bbe1ec75abc3c3d384aeab5080270b4d5f3fb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a8c0f373d8327dd2b4a3f810264fa71925c5b533
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37163357"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43810972"
 ---
 # <a name="connection-properties-dialog-box"></a>caixa de diálogo Propriedades da conexão
   Use essa caixa de diálogo para exibir as propriedades da conexão atual. Essa caixa de diálogo está disponível quando você clica em **Exibir propriedades da conexão** em várias caixas de diálogo do Pesquisador de Objetos. As propriedades exibidas nessa página são somente leitura.  

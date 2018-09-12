@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a786d6abb774a461739268d2a0484007f8453bda
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1fedafa4b53de69e584a9378ba79848f6d6e4036
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210396"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43808672"
 ---
 # <a name="save-queries-visual-database-tools"></a>Salvar consultas (Visual Database Tools)
   Salva sua consulta quando você quiser trabalhar com ela mais tarde. Observe que a execução da consulta não salva as alterações.  

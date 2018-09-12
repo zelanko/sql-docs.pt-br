@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 60b7be9d34172c0236ce09ddf0407c1eedc6cce1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6e7951c41e11500d047a47782c006dc35f409605
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37274602"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43817282"
 ---
 # <a name="f1-help-for-server-connections-sql-server-management-studio"></a>Ajuda F1 para conexões de servidor (SQL Server Management Studio)
   Essa seção contém a Ajuda F1 para as páginas da caixa de diálogo **Conectar ao Servidor** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

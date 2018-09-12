@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +18,12 @@ caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 020353b8f54c07eb95f2a72cdea31e73d5d23631
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c8729cbeb075f31cd2b37a72aa97009f155eadd2
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37226496"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43806962"
 ---
 # <a name="associate-a-query-with-a-connection-in-a-project"></a>Associar uma consulta a uma conexão em um projeto
   Se uma consulta for criada sem uma conexão, ou se uma consulta for movida de um projeto para outro, ela não será associada a uma conexão no projeto atual.  

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +18,12 @@ caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3aab933508cfa3499e1d2089df3a2a47c12fa0ba
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3286783f5f239727fe67c248c6967cdd0f3e07d8
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37291886"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43815052"
 ---
 # <a name="rename-a-database-diagram-visual-database-tools"></a>Renomear um diagrama de banco de dados (Visual Database Tools)
   Você pode renomear um diagrama de banco de dados no Pesquisador de Objetos. Requer a permissão ALTER no banco de dados.  

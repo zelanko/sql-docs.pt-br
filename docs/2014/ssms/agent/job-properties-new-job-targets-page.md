@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,14 +15,14 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0f2f7014b9e347d12989900856d6e23ffb4e6a51
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ac98ea43f3ad261477abdcc0a0307c58a019daa4
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218526"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43811732"
 ---
-# <a name="job-properties-new-job-targets-page"></a>Propriedades do trabalho: Novo trabalho (página destinos)
+# <a name="job-properties-new-job-targets-page"></a>Propriedades do trabalho: novo trabalho (página Destinos)
   Use essa página para gerenciar os servidores de destino para o trabalho.  
   
 ## <a name="options"></a>Opções  

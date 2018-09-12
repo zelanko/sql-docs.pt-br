@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,12 +18,12 @@ caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 763d65d35ee880a5b86bf1f2efd49c4ad258f642
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 95dc931830021b21e5645932d975bb1d1fb10505
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185723"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43810742"
 ---
 # <a name="work-with-tables-in-database-diagram-visual-database-tools"></a>Trabalhar com tabelas no diagrama de banco de dados (Visual Database Tools)
   Você pode modificar e criar tabelas de banco de dados no Designer de Tabelas ou no Designer de Banco de Dados.  

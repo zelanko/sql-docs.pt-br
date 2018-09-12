@@ -19,17 +19,17 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d4350bb6f3d6213548b298b45052ca009e8f99cd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: d7067b0a96fdde31afdd8d4a4f67c757346385b5
+ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32836791"
+ms.lasthandoff: 08/14/2018
+ms.locfileid: "42787131"
 ---
 # <a name="getpacketsize-method-sqlserverdatasource"></a>Método getPacketSize (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Retorna o tamanho de pacote de rede atual usado para se comunicar com [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)], especificado em bytes.  
+  Retorna o tamanho do pacote de rede atual usado para se comunicar com o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], especificado em bytes.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,13 +38,13 @@ ms.locfileid: "32836791"
 public int getPacketSize()  
 ```  
   
-## <a name="return-value"></a>Valor de retorno  
- Um **int** valor que contém o tamanho de pacote de rede atual.  
+## <a name="return-value"></a>Valor retornado  
+ Um valor **int** que contém o tamanho do pacote de rede atual.  
   
 ## <a name="remarks"></a>Remarks  
- Se a propriedade packetSize não for definida, o método getPacketSize retorna o valor padrão de 8000.  
+ Se a propriedade packetSize não for definida, o método getPacketSize retornará o valor padrão de 8000.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Membros de SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [Classe SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

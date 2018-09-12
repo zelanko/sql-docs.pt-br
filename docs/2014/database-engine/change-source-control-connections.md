@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 22
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3d158c2a0981b6174bcb83948b10bacd1a97d1f6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cacfeef1468a0aec47ecd8e0b27a432bb689d1ef
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37188943"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43812982"
 ---
 # <a name="change-source-control-connections"></a>Alterar conexões de controle do código-fonte
   A primeira vez que você adiciona ou abre uma solução de controle do código-fonte, seu provedor cria uma associação entre a pasta raiz do diretório da solução local e a pasta do servidor correspondente.  

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 44dd1dfb1b4fbf542beca3d72c1be86771b87950
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bdebb718e8f0b92185332ddd15bba68b452237f8
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153657"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43812182"
 ---
 # <a name="modify-queries-visual-database-tools"></a>Modificar consultas (Visual Database Tools)
   Abra uma consulta para modificá-la no Designer de Consulta e Exibição.  

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8e55e77bc228e362182cc13598c92a07f2dcf54b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 767ae2639d42d046fc372f004afa6e9c2945f02d
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37206356"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43810872"
 ---
 # <a name="data-type-change-required-dialog-box-visual-database-tools"></a>Caixa de diálogo Alteração Necessária no Tipo de Dados (Visual Database Tools)
   É exibida quando se altera o tipo de dados, comprimento, escala, precisão ou agrupamento de uma coluna que integra uma relação.  

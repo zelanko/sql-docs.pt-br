@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d50f6bb85aa013ece08c2c7ce12c9b1c7f05a731
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b4658d8bc6ec0733673f9cc4087e44da962c7733
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155717"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43820252"
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>Caixa de diálogo Escolher Pastas de Pesquisa (Visual Studio)
   Permite agrupar, salvar e revisar seus próprios conjuntos nomeados de pastas de pesquisa e especificar a ordem na qual eles serão pesquisados. Para exibir essa caixa de diálogo, selecione o botão **Procurar (...)** , ao lado da lista suspensa **Examinar** , na janela Localizar em Arquivos ou Substituir em Arquivos, Localizar e Substituir.  

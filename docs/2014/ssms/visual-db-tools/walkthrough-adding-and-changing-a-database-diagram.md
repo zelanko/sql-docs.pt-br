@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,12 +17,12 @@ caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9d3ac48037a5a61bd70179927b3c6de0eba90c9c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f30616dd6f9ee51b929a98740a3d4c4ed320d7bb
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37244016"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43808002"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Passo a passo: Adicionando e alterando um diagrama de banco de dados
   Este passo a passo ilustra como criar e modificar um diagrama de banco de dados e fazer alterações no banco de dados por meio do componente de diagramas de banco de dados. Você verá como adicionar tabelas a diagramas, criar relações entre tabelas, criar restrições e índices em colunas, e alterar o nível das informações exibidas em cada tabela.  
@@ -105,7 +104,7 @@ ms.locfileid: "37244016"
   
      A caixa de diálogo **Restrições de Verificação** será exibida.  
   
-2.   Clique em **Adicionar**.  
+2.  Clique em **Adicionar**.  
   
      Uma nova restrição aparece na lista **Restrição de Verificação Selecionada** , com o nome padrão `CK_Table1`.  
   
@@ -149,7 +148,7 @@ ms.locfileid: "37244016"
   
      A caixa de diálogo **Índices/Chaves** é exibida.  
   
-2.   Clique em **Adicionar**.  
+2.  Clique em **Adicionar**.  
   
      Um novo índice é exibido na lista **Índice ou Chave Exclusiva/Primária Selecionada** , com um nome padrão similar a `IX_Table1`.  
   

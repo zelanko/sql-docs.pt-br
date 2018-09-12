@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cfc50a240f38aaa923467f54ed3b2ca6b7a59e0d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 12f9f586c9c25a648b57188979017a6e29e5a5c4
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278332"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43813642"
 ---
 # <a name="show-diagram-properties-visual-database-tools"></a>Exibir propriedades do diagrama (Visual Database Tools)
   Você pode exibir as propriedades de um diagrama de banco de dados na janela Propriedades.  

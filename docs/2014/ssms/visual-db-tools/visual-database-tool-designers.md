@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -24,12 +23,12 @@ caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: afd7f3ca3f39d2c416eeb0e4f05b9dac28a99b8f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 49ea9b305a1713a3c225cb3f4edb8505238cdc36
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37269852"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43814522"
 ---
 # <a name="visual-database-tool-designers"></a>Designers do Visual Database Tool
   O Visual Database Tools é uma combinação de ferramentas de design que podem ser usadas para trabalhar com uma fonte de dados. Você pode usá-lo para criar consultas, criar ou modificar uma estrutura de banco de dados ou atualizar dados. As ferramentas são o Designer de Diagrama de Banco de Dados, o Designer de Tabelas e os Designers de Consulta e Exibição.  

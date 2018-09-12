@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0801125baa517090863a84c89623aa166e6055d7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 71f2dd8b59f20ebbd1d94824805c4bc309888cb8
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37241886"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43818772"
 ---
 # <a name="sql-syntax-errors-encountered-dialog-box-visual-database-tools"></a>Caixa de diálogo Erros de Sintaxe SQL Encontrados (Visual Database Tools)
   Essa caixa de diálogo o notifica que o designer não pode analisar a instrução SQL no painel SQL.  

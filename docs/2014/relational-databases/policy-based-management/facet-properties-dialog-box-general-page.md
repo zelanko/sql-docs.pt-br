@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -16,12 +15,12 @@ caps.latest.revision: 20
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 430fe415d75377e46be292461c22e46ae65791c5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 036a631c2324c16561981d0998066fb66e9a054c
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37329376"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43818252"
 ---
 # <a name="facet-properties-dialog-box-general-page"></a>Caixa de diálogo Propriedades de Faceta, página Geral
   Use esta caixa de diálogo para exibir as propriedades de uma faceta de Gerenciamento Baseado em Políticas. Cada faceta pode ser se aplicada a um ou mais tipos de destino. Por exemplo: servidor, banco de dados ou tabela. Use esta página para exibir os tipos de destino relacionados a essa faceta. As propriedades de uma faceta são definidas quando ela é criada e não podem ser alteradas com o uso desta página.  

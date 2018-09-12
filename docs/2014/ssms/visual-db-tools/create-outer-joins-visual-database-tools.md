@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,12 +16,12 @@ caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ef4e658ffd8af66ec8b3ad7e43eba8dade79bf85
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f827436a29b0f1a821ea3e707d498f13e41dd2e6
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37306866"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43818312"
 ---
 # <a name="create-outer-joins-visual-database-tools"></a>Criar junções externas (Visual Database Tools)
   Por padrão, o [Designer de Consulta e Exibição](visual-database-tools.md) cria uma junção interna entre tabelas. As junções internas eliminam as linhas que não correspondem a uma linha da outra tabela. Entretanto, as junções externas retornam todas as linhas de pelo menos uma das tabelas ou exibições mencionadas na cláusula FROM, contanto que essas linhas atendam algum critério de pesquisa WHERE ou HAVING. Se você quiser incluir linhas de dados no conjunto de resultados que não tenha uma correspondência na tabela unida, será possível criar uma junção externa.  

@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -26,12 +25,12 @@ caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c4776214176aca7990863491f68f06e934400e02
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b0e08dfcd8c87ece10ee8a741a9f0ba1737b5423
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37315106"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43807593"
 ---
 # <a name="use-the-query-and-view-designer-with-international-data-visual-database-tools"></a>Usar o Designer de Consulta e Exibição com dados internacionais (Visual Database Tools)
   Você pode usar o [Designer de Consulta e Exibição](visual-database-tools.md) com dados de qualquer idioma e em qualquer versão do sistema operacional Windows. As diretrizes a seguir mostram as diferenças existentes e fornecem informações sobre como gerenciar dados em aplicativos internacionais.  

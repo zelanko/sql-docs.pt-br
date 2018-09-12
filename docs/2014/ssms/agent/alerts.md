@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -26,12 +25,12 @@ caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c1e27e777741fa159a5d0afee7e200af27b1833e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5233e3bcb0ce6b03c754819ead74eef7f014a3d0
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37330857"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43818502"
 ---
 # <a name="alerts"></a>Alertas
   Eventos são gerados pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e inseridos no log de aplicativos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O Agent lê o log de aplicativos e compara os eventos gravados ali com os alertas que você definiu. Quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent encontra uma correspondência, ele dispara um alerta, que é uma resposta automatizada a um evento. Além de monitorar eventos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent também pode monitorar condições de desempenho e eventos do Windows Management Instrumentation (WMI).  

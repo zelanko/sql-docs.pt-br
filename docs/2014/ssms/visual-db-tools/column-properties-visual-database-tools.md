@@ -5,8 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-cross-instance
+ms.technology: ''
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1aed3d78cbc0f9ef44c15310e2ae9085226c3413
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b0d778299c253eb1ef8282c1621ae2948d17e491
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37236176"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43816232"
 ---
 # <a name="column-properties-visual-database-tools"></a>Propriedades de Coluna (Visual Database Tools)
   Existem dois conjuntos de propriedades para colunas: um conjunto completo que pode ser visualizado na guia **Propriedades da Coluna** no Designer de Tabela (disponível somente para bancos de dados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) e um subconjunto que pode ser visualizado na janela Propriedades usando o Gerenciador de Servidores.  
