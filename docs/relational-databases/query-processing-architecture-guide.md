@@ -21,12 +21,12 @@ caps.latest.revision: 5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: dbb28640bd0fe4dd6f4d609cfba14260c712a6b0
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 35c0d964596afc1c072e4cdf191f84b9b9b978bf
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087558"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564202"
 ---
 # <a name="query-processing-architecture-guide"></a>Guia da Arquitetura de Processamento de Consultas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -1023,7 +1023,7 @@ Para melhorar o desempenho das consultas que acessam uma grande quantidade de da
 * Usar um servidor com processadores rápidos e o máximo possível de núcleos de processador, para se beneficiar da capacidade de processamento de consultas paralelas.
 * Verificar se o servidor tem largura de banda suficiente do controlador de E/S. 
 * Criar um índice clusterizado em todas as tabelas particionadas grandes para beneficiar-se de otimizações de exames da árvore B.
-* Seguir as práticas recomendadas no documento [The Data Loading Performance Guide](http://msdn.microsoft.com/en-us/library/dd425070.aspx)(Guia de Desempenho de Carregamento de Dados) quando estiver carregando dados em massa em tabelas particionadas.
+* Seguir as práticas recomendadas no documento [The Data Loading Performance Guide](http://msdn.microsoft.com/library/dd425070.aspx)(Guia de Desempenho de Carregamento de Dados) quando estiver carregando dados em massa em tabelas particionadas.
 
 ### <a name="example"></a>Exemplo
 

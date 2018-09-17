@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9d3ca27df3ccd68df1b5b3e10c67d7550742d236
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: bcf0521ad8d6f32bd9c351c0f5f212c12dfebd57
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43274735"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564182"
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>Arquivo de configuração RsReportServer.config
 O arquivo [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** armazena configurações que são usadas pelo serviço Web Servidor de Relatórios e pelo processamento em segundo plano. Todos os aplicativos do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] são executados dentro de um único processo que lê as configurações armazenadas no arquivo RSReportServer.config. Os servidores de relatório nos modos nativo e SharePoint usam o RSReportServer.config, porém os dois modos não usam todas as mesmas configurações do arquivo de configuração. A versão do modo do SharePoint do arquivo é menor, pois muitas das configurações do modo do SharePoint são armazenadas nos bancos de dados de configuração do SharePoint, em vez de no arquivo. Este tópico descreve o arquivo de configuração padrão instalado para o modo Nativo e o modo do SharePoint e algumas das configurações e comportamentos importantes controlados pelo arquivo de configuração.  
@@ -237,7 +237,7 @@ Para obter mais informações sobre como editar o arquivo, consulte [Modificar u
 |**ExcludedRenderFormats**, **RenderingExtension**|Estas configurações são usadas para excluir intencionalmente formatos de exportação que não funcionam bem com a entrega de compartilhamento de arquivos. Estes formatos normalmente são usados para relatórios interativos, visualização ou para pré-carregar o cache de relatório. Eles não produzem arquivos de aplicativo que podem ser exibidos facilmente a partir de um aplicativo de desktop.<br /><br /> HTMLOWC<br /><br /> RGDI<br /><br /> Nulo|  
   
 ####  <a name="bkmk_email_extension"></a> Configurações de extensão de email do servidor de relatório  
- O email do servidor de relatório usa um dispositivo de rede SMTP para enviar relatórios a endereços de email. Esta extensão de entrega deve ser configurada antes de ser usada. Para saber mais, confira [Configurar um servidor de relatório para entrega de email (Gerenciador de Configurações do SSRS)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83) e [Entrega de email no Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
+ O email do servidor de relatório usa um dispositivo de rede SMTP para enviar relatórios a endereços de email. Esta extensão de entrega deve ser configurada antes de ser usada. Para saber mais, confira [Configurar um servidor de relatório para entrega de email (Gerenciador de Configurações do SSRS)](http://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83) e [Entrega de email no Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
   
 |Configuração|Descrição|  
 |-------------|-----------------|  

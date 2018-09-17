@@ -22,12 +22,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ecbe8b1fb2540eff9334e7c68a7b5a8872decb2b
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 4171e4b8636759c3df4ebfa0dc5eb0ee7f90c31c
+ms.sourcegitcommit: a41bad24d0619753471d3c79f4e57b051914836f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43084649"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44499322"
 ---
 # <a name="sortintempdb-option-for-indexes"></a>Opção SORT_IN_TEMPDB para índices
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,19 +60,19 @@ ms.locfileid: "43084649"
   
  Se SORT_IN_TEMPDB for definido como OFF, o espaço livre em disco disponível no grupo de arquivos de destino deve ser praticamente do tamanho do índice final. Durante a primeira fase, as execuções de classificação são criadas e requerem praticamente a mesma quantidade de espaço do índice final. Durante a segunda fase, cada extensão de execução de classificação é liberada depois de ser processada. Isto significa que as extensões de execução de classificação são liberadas aproximadamente a mesma taxa de aquisição das extensões para manter as páginas do índice final; portanto, os requisitos de espaço geral não excedem muito o tamanho do índice final. Um efeito colateral disto é que se a quantidade de espaço livre for muito perto do tamanho do índice final, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] geralmente vai reutilizar as extensões de execução de classificação muito depressa depois que forem liberadas. Como as extensões de execução de classificação são liberadas de forma um pouco aleatória, isto reduz a continuidade das extensões do índice neste cenário. Se SORT_IN_TEMPDB for definido como OFF, a continuidade das extensões do índice é melhorada se houver espaço livre suficiente disponível no grupo de arquivos de destino, que as extensões do índice podem ser alocadas de um pool contíguo, em vez das extensões de corrida de classificação recentemente desalocadas.  
   
- Quando você criar um índice não clusterizado, você deve ter disponível, como espaço livre:  
+Quando você criar um índice não clusterizado, você deve ter disponível, como espaço livre:  
   
 -   Se SORT_IN_TEMPDB for definido como ON, deve haver espaço livre suficiente em **tempdb** para armazenar as execuções de classificação, e espaço livre suficiente no grupo de arquivos de destino para armazenar a estrutura final do índice. As execuções de classificação contêm as linhas de folha do índice.  
   
 -   Se SORT_IN_TEMPDB for definido como OFF, o espaço livre no grupo de arquivos de destino deve ser grande o suficiente para armazenar a estrutura final do índice. A continuidade da extensão do índice pode ser melhorada se houver mais espaço livre disponível.  
   
- Quando você criar um índice clusterizado em uma tabela que não tem índices não clusterizado, você deverá ter disponível como espaço livre:  
+Quando você criar um índice clusterizado em uma tabela que não tem índices não clusterizado, você deverá ter disponível como espaço livre:  
   
 -   Se SORT_IN_TEMPDB for definido como ON, deverá haver espaço livre suficiente em **tempdb** para armazenar as execuções de classificação. Isso inclui as linhas de dados da tabela. Deve haver espaço livre suficiente no grupo de arquivos de destino para armazenar a estrutura final do índice. Isso inclui as linhas de dados da tabela e o índice árvore B. Você pode precisar ajustar a estimativa de fatores, como ter um tamanho grande de chave ou um fator de preenchimento com um valor baixo.  
   
 -   Se SORT_IN_TEMPDB for definido como OFF, o espaço livre no grupo de arquivos de destino deverá ser grande o suficiente para armazenar a tabela final. Isso inclui a estrutura do índice. A continuidade da tabela e da extensão do índice poderá ser melhorada se houver mais espaço livre disponível.  
   
- Quando você criar um índice clusterizado em uma tabela que tem índices não clusterizado, você deverá ter disponível como espaço livre:  
+Quando você criar um índice clusterizado em uma tabela que tem índices não clusterizado, você deverá ter disponível como espaço livre:  
   
 -   Se SORT_IN_TEMPDB for definido como ON, deve haver espaço livre suficiente em **tempdb** para armazenar a coleção de execuções de classificação para o maior índice, normalmente o índice clusterizado, e espaço livre suficiente no grupo de arquivos de destino para armazenar as estruturas finais de todos os índices. Isso inclui o índice clusterizado que contém as linhas de dados da tabela.  
   

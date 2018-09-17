@@ -23,12 +23,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 070e3ee283862b79833981f1eb4e9933c83c0707
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: d466d64a2b5fe7425a86732970a6f7cf18e69bbe
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43063966"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563564"
 ---
 # <a name="collation-functions---collationproperty-transact-sql"></a>Funções de agrupamento – COLLATIONPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,8 +52,8 @@ A propriedade Collation. O argumento *property* tem um tipo de dados **varchar (
   
 |Nome da propriedade|Descrição|  
 |---|---|
-|**CodePage**|Página de código de não Unicode do agrupamento. Veja o [Apêndice G: Tabelas de mapeamento do DBCS/Unicode](https://msdn.microsoft.com/en-us/library/cc194886.aspx) e o [Apêndice H: Páginas de código](https://msdn.microsoft.com/en-us/library/cc195051.aspx) para converter esses valores e ver seus mapeamentos de caracteres.|  
-|**LCID**|Windows LCID do agrupamento. Veja a [Estrutura de LCID](https://msdn.microsoft.com/en-us/library/cc233968.aspx) para converter esses valores (você precisará converter **varbinary** primeiro).|  
+|**CodePage**|Página de código de não Unicode do agrupamento. Veja o [Apêndice G: Tabelas de mapeamento do DBCS/Unicode](https://msdn.microsoft.com/library/cc194886.aspx) e o [Apêndice H: Páginas de código](https://msdn.microsoft.com/library/cc195051.aspx) para converter esses valores e ver seus mapeamentos de caracteres.|  
+|**LCID**|Windows LCID do agrupamento. Veja a [Estrutura de LCID](https://msdn.microsoft.com/library/cc233968.aspx) para converter esses valores (você precisará converter **varbinary** primeiro).|  
 |**ComparisonStyle**|Estilo de comparação do agrupamento do Windows. Retorna 0 para todos os agrupamentos binários, tanto (\_BIN) quanto (\_BIN2), bem como quando todas as propriedades diferenciam maiúsculas e minúsculas. Valores de bitmask:<br /><br /> Ignorar maiúsculas e minúsculas: 1<br /><br /> Ignorar acento: 2<br /><br /> Ignorar Kana: 65536<br /><br /> Ignorar largura: 131072<br /><br /> Observação: a opção \_VSS (seletor sensível à variação) não é representada nesse valor, embora afete o comportamento da comparação.|  
 |**Versão**|A versão do agrupamento, derivada do campo de versão de ID do agrupamento. Retorna um valor inteiro entre 0 e 3.<br /><br /> Agrupamentos com "140" no nome retornam 3.<br /><br /> Agrupamentos com "100" no nome retornam 2.<br /><br /> Agrupamentos com "90" no nome retornam 1.<br /><br /> Todos os outros agrupamentos retornam 0.|  
   

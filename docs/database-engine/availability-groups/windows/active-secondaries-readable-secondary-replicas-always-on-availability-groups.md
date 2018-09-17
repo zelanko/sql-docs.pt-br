@@ -20,12 +20,12 @@ caps.latest.revision: 80
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d5197fb00840296dc4ef05b478d0dd3f0cd37c46
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 972b7bffab1ff6b4bf0710078d5c64a299ffe793
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34770052"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564133"
 ---
 # <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>Secundárias ativas: réplicas secundárias legíveis (Grupos de Disponibilidade AlwaysOn)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "34770052"
   
 -   As cargas de trabalho somente leitura para tabelas baseadas em disco usam o controle de versão de linha para remover a contenção de bloqueio nos bancos de dados secundários. Todas as consultas executadas nos bancos de dados secundários são mapeadas automaticamente para o nível de transação de isolamento de instantâneo, até mesmo quando outros níveis de isolamento de transação são definidos explicitamente. Além disso, todas as dicas de bloqueio são ignoradas. Isso elimina a contenção do leitor/gravador.  
   
--   As cargas de trabalho somente leitura para tabelas duráveis com otimização de memória acessam os dados exatamente da mesma forma que são acessadas no banco de dados primário, usando procedimentos armazenados nativos ou interoperabilidade de SQL com as mesmas restrições de nível de isolamento da transação (veja [Níveis de isolamento no mecanismo de banco de dados](http://msdn.microsoft.com/en-us/8ac7780b-5147-420b-a539-4eb556e908a7)). A carga de trabalho de relatório ou as consultas somente leitura que são executadas na réplica primária podem ser executadas na réplica secundária sem exigir nenhuma alteração. Da mesma maneira, uma carga de trabalho de relatório ou as consultas somente leitura que são executadas em uma réplica secundária podem ser executadas na réplica primária sem exigir nenhuma alteração.  De maneira semelhante a tabelas baseadas em disco, todas as consultas executadas nos bancos de dados secundários são mapeadas automaticamente para o nível de transação de isolamento de instantâneo, até mesmo quando outros níveis de isolamento de transação são definidos explicitamente.  
+-   As cargas de trabalho somente leitura para tabelas duráveis com otimização de memória acessam os dados exatamente da mesma forma que são acessadas no banco de dados primário, usando procedimentos armazenados nativos ou interoperabilidade de SQL com as mesmas restrições de nível de isolamento da transação (veja [Níveis de isolamento no mecanismo de banco de dados](http://msdn.microsoft.com/8ac7780b-5147-420b-a539-4eb556e908a7)). A carga de trabalho de relatório ou as consultas somente leitura que são executadas na réplica primária podem ser executadas na réplica secundária sem exigir nenhuma alteração. Da mesma maneira, uma carga de trabalho de relatório ou as consultas somente leitura que são executadas em uma réplica secundária podem ser executadas na réplica primária sem exigir nenhuma alteração.  De maneira semelhante a tabelas baseadas em disco, todas as consultas executadas nos bancos de dados secundários são mapeadas automaticamente para o nível de transação de isolamento de instantâneo, até mesmo quando outros níveis de isolamento de transação são definidos explicitamente.  
   
 -   As operações DML são permitidas em variáveis de tabela para os tipos baseados em disco e em tabela com otimização de memória na réplica secundária.  
   

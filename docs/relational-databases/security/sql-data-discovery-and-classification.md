@@ -13,12 +13,12 @@ ms.date: 02/13/2018
 ms.author: giladm
 author: giladm
 manager: shaik
-ms.openlocfilehash: b929409e034fb3305ed147ac912580d9e75ab1e4
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 95fcaa2334c0d7909b1b03583c3d8cab5ea707ab
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084629"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563832"
 ---
 # <a name="sql-data-discovery-and-classification"></a>Descoberta e classificação de dados SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ Os metadados de classificação para *Tipos de informação* e *Rótulos de conf
 * sys_information_type_name
 * sys_sensitivity_label_name
 
-Os metadados podem ser acessados usando a exibição do catálogo das Propriedades estendidas [sys.extended_properties](https://docs.microsoft.com/en-us/sql/relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties).
+Os metadados podem ser acessados usando a exibição do catálogo das Propriedades estendidas [sys.extended_properties](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties).
 
 O exemplo de código a seguir retorna todas as colunas classificadas com suas classificações correspondentes:
 
@@ -150,8 +150,8 @@ Para o Banco de Dados SQL do Azure, confira [Descoberta e Classificação de Dad
 
 Considere proteger suas colunas confidenciais aplicando mecanismos de segurança no nível da coluna:
 
-* [Máscara de Dados Dinâmicos](https://docs.microsoft.com/en-us/sql/relational-databases/security/dynamic-data-masking) para ofuscar as colunas confidenciais em uso.
-* [Always Encrypted](https://docs.microsoft.com/en-us/sql/relational-databases/security/encryption/always-encrypted-database-engine) para criptografar as colunas confidenciais em repouso.
+* [Máscara de Dados Dinâmicos](https://docs.microsoft.com/sql/relational-databases/security/dynamic-data-masking) para ofuscar as colunas confidenciais em uso.
+* [Always Encrypted](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-database-engine) para criptografar as colunas confidenciais em repouso.
 
 <!--Anchors-->
 [SQL Data Discovery & Classification overview]: #subheading-1

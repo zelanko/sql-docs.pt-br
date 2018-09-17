@@ -15,12 +15,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 38963e1953e707597ec98530687904c347b49582
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 5be615c1f0e672bcd706380ae9adafa9bcbccded
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43073519"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563812"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>Tabelas temporais com controle da versão do sistema com tabelas com otimização de memória
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "43073519"
   
 -   A tabela de histórico para a tabela com controle da versão do sistema com otimização de memória deve ter base em disco, independentemente de ter sido criada pelo usuário final ou o sistema.  
   
--   Consultas que afetam apenas a tabela atual (na memória) podem ser usadas em [módulos T-SQL compilados nativamente](https://msdn.microsoft.com/en-us/library/dn133184.aspx). Não há suporte para consultas temporais usando a cláusula FOR SYSTEM TIME em módulos compilados nativamente. O uso da cláusula FOR SYSTEM TIME com tabelas com otimização de memória em consultas ad hoc e módulos não nativos tem suporte.  
+-   Consultas que afetam apenas a tabela atual (na memória) podem ser usadas em [módulos T-SQL compilados nativamente](https://msdn.microsoft.com/library/dn133184.aspx). Não há suporte para consultas temporais usando a cláusula FOR SYSTEM TIME em módulos compilados nativamente. O uso da cláusula FOR SYSTEM TIME com tabelas com otimização de memória em consultas ad hoc e módulos não nativos tem suporte.  
   
 -   Quando **SYSTEM_VERSIONING = ON**, uma tabela interna de preparo com otimização de memória é criada automaticamente para aceitar as alterações de versão do sistema mais recentes resultantes de operações de atualização e exclusão na tabela atual com otimização de memória.  
   
