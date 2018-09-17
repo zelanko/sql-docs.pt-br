@@ -14,12 +14,12 @@ caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ab996710a0c88d004b36f7bed1e6304a494bc9eb
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: b20a2432ae509923b2befd240a66de04c50502c4
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085068"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564122"
 ---
 # <a name="how-to-write-a-sql-server-unit-test-that-runs-within-the-scope-of-a-single-transaction"></a>Como: Gravar um teste de unidade do SQL Server executado no escopo de uma única transação
 Você pode modificar os teste de unidade para execução no escopo de uma única transação. Se você usar essa abordagem, poderá reverter todas as alterações decretadas pelo teste após seu término. Os procedimentos a seguir descreve como:  
@@ -60,7 +60,7 @@ Para alguns procedimentos deste tópico, o serviço Coordenador de Transações 
     Para saber mais sobre como ROLLBACK TRANSACTION funciona com procedimentos armazenados e gatilhos, consulte esta página no site da Microsoft: [ROLLBACK TRANSACTION (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkID=115927).  
   
 ## <a name="to-create-a-transaction-for-a-single-test-method"></a>Para criar uma transação para um único método de teste  
-Neste exemplo, você está usando uma transação de ambiente com o tipo [System.Transactions.TransactionScope](https://docs.microsoft.com/dotnet/api/system.transactions.transactionscope). Por padrão, as conexões de execução e privilegiadas não usarão a transação de ambiente, porque as conexões foram criadas antes que o método seja executado. A SqlConnection tem um método [System.Data.SqlClient.SqlConnection.EnlistTransaction](https://docs.microsoft.com/en-us/dotnet/api/system.data.sqlclient.sqlconnection.enlisttransaction), que associa uma conexão ativa a uma transação. Quando uma transação de ambiente é criada, ela é registrada como a transação atual, e você pode acessá-la através da propriedade [System.Transactions.Transaction.Current](https://docs.microsoft.com/dotnet/api/system.transactions.transaction.current). Neste exemplo, a transação é revertida quando a transação de ambiente é descartada. Para confirmar qualquer alteração feita durante a execução do teste de unidade, você deve chamar o método [System.Transactions.TransactionScope.Complete](https://docs.microsoft.com/dotnet/api/system.transactions.transactionscope.complete).  
+Neste exemplo, você está usando uma transação de ambiente com o tipo [System.Transactions.TransactionScope](https://docs.microsoft.com/dotnet/api/system.transactions.transactionscope). Por padrão, as conexões de execução e privilegiadas não usarão a transação de ambiente, porque as conexões foram criadas antes que o método seja executado. A SqlConnection tem um método [System.Data.SqlClient.SqlConnection.EnlistTransaction](https://docs.microsoft.com/dotnet/api/system.data.sqlclient.sqlconnection.enlisttransaction), que associa uma conexão ativa a uma transação. Quando uma transação de ambiente é criada, ela é registrada como a transação atual, e você pode acessá-la através da propriedade [System.Transactions.Transaction.Current](https://docs.microsoft.com/dotnet/api/system.transactions.transaction.current). Neste exemplo, a transação é revertida quando a transação de ambiente é descartada. Para confirmar qualquer alteração feita durante a execução do teste de unidade, você deve chamar o método [System.Transactions.TransactionScope.Complete](https://docs.microsoft.com/dotnet/api/system.transactions.transactionscope.complete).  
   
 #### <a name="to-create-a-transaction-for-a-single-test-method"></a>Para criar uma transação para um único método de teste  
   

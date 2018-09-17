@@ -31,12 +31,12 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b7b38d931ef80cfdbd93abab2241b3fd8def8b6b
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: dd9936b3b100ffc4509369a49cff767094152c97
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085938"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564012"
 ---
 # <a name="transact-sql-editor-options"></a>Opções do Editor do Transact-SQL
 Este tópico contém informações sobre algumas das opções do Editor Transact-SQL. Para definir essas opções, navegue até a caixa de diálogo **Opção** pelo menu **Ferramentas\Opções**.  
@@ -57,7 +57,7 @@ Este tópico contém informações sobre algumas das opções do Editor Transact
 |**SET NOEXEC**|Quando estiver **ON**, informa ao Microsoft® SQL Server™ para compilar cada lote de instruções Transact-SQL, mas não executá-las. Quando estiver **OFF**, informará ao Microsoft® SQL Server™ para executar todos os lotes após a compilação. Para saber mais, confira [SET NOEXEC](http://go.microsoft.com/fwlink/?LinkId=238770).|  
 |**SET PARSEONLY**|Verifica a sintaxe de cada instrução Transact-SQL e retorna as mensagens de erro sem compilar ou executar a instrução. Para obter mais informações, consulte [SET PARSEONLY](http://go.microsoft.com/fwlink/?LinkId=238734)|  
 |**SET CONCAT_NULL_YIELDS_NULL**|Controla se os resultados da concatenação são tratados como valores de cadeia de caracteres nulas ou vazias. Para saber mais, confira [SET CONCAT_NULL_YIELDS_NULL](http://go.microsoft.com/fwlink/?LinkId=238733).|  
-|**SET ARITHABORT**|Encerra uma consulta quando ocorre estouro ou erro de divisão por zero durante a execução da consulta. Para saber mais, confira [SET ARITHABORT](http://msdn.microsoft.com/en-us/library/aa259212(v=SQL.80).aspx).|  
+|**SET ARITHABORT**|Encerra uma consulta quando ocorre estouro ou erro de divisão por zero durante a execução da consulta. Para saber mais, confira [SET ARITHABORT](http://msdn.microsoft.com/library/aa259212(v=SQL.80).aspx).|  
 |**SET SHOWPLAN_TEXT**|Faz com que o Microsoft® SQL Server™ não execute instruções Transact-SQL. Em vez disso, o SQL Server retorna informações detalhadas sobre como as instruções são executadas. Para saber mais, confira [SET SHOWPLAN_TEXT](http://go.microsoft.com/fwlink/?LinkID=238737).|  
 |**SET STATISTICS TIME**|Exibe o número de milissegundos necessários para analisar, compilar e executar cada instrução.|  
 |**SET STATISTICS IO**|Faz com que o Microsoft® SQL Server™ exiba informações referentes à quantidade de atividade em disco gerada pelas instruções Transact-SQL.|  

@@ -14,12 +14,12 @@ caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fc94964bdb6c0f18eb6fc935e12efef3ff0cece2
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 6670a8710700a168ac134e18e74e781c897c7621
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085758"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45564132"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>Usando MSDeploy com o provedor do dbSqlPackage
 O **DbSqlPackage** é um provedor do **MSDeploy** que permite interagir com bancos de dados do SQL Server/SQL Azure. O **DbSqlPackage** dá suporte às seguintes ações:  
@@ -32,7 +32,7 @@ O **DbSqlPackage** é um provedor do **MSDeploy** que permite interagir com banc
   
 -   **Script**: cria um script Transact\-SQL equivalente ao script executado pela ação Publish.  
   
-Para saber mais sobre DACFx, consulte a documentação da API gerenciada DACFx [http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.aspx](http://msdn.microsoft.com/en-us/library/microsoft.sqlserver.dac.aspx) ou [SqlPackage.exe](../tools/sqlpackage.md) (ferramenta de linha de comando do DACFx).  
+Para saber mais sobre DACFx, consulte a documentação da API gerenciada DACFx [http://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx](http://msdn.microsoft.com/library/microsoft.sqlserver.dac.aspx) ou [SqlPackage.exe](../tools/sqlpackage.md) (ferramenta de linha de comando do DACFx).  
   
 > [!IMPORTANT]  
 > O recurso de provedor dbSqlPackage será removido na próxima versão principal do Visual Studio. Para obter informações sobre como fazer a publicação do banco de dados com a Implantação da Web, consulte o [provedor dbDacFx para obter a publicação de banco de dados Incremental](http://www.iis.net/learn/publish/using-web-deploy/dbdacfx-provider-for-incremental-database-publishing).  

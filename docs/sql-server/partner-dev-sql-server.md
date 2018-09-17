@@ -10,12 +10,12 @@ ms.prod_service: database-engine
 ms.author: mikeray
 author: MikeRayMSFT
 manager: craigg
-ms.openlocfilehash: e03d3d32ec15ed5ec195f1cfc6e1759bdc2d02c9
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 2e994b13fdd3ebf159d51bf38b52c9ad5b5e082d
+ms.sourcegitcommit: a41bad24d0619753471d3c79f4e57b051914836f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43024515"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44499302"
 ---
 # <a name="sql-server-development-partners"></a>Parceiros de desenvolvimento do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,10 @@ Para saber mais sobre alguns dos nossos outros parceiros, consulte [Parceiros pa
 <!--Datasheet Links-->
 
 <!--Marketplace Links -->
-<!----Not available[idera_marketplace]:https://azure.microsoft.com/en-us/marketplace/--> [click2cloud_marketplace]:https://marketplace.visualstudio.com/items?itemName=Click2CloudInc.Click2CloudDockerExtensionforVisualStudio 
+
+<!----Not available[idera_marketplace]:https://azure.microsoft.com/en-us/marketplace/ -->
+
+[click2cloud_marketplace]:https://marketplace.visualstudio.com/items?itemName=Click2CloudInc.Click2CloudDockerExtensionforVisualStudio 
 
 <!--Press links-->
 <!--[idera_press]:-->

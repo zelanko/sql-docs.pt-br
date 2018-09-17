@@ -14,12 +14,12 @@ caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a7997f7b2acf88ea358c9ddd42df5cca073a8f28
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 9f641380e18dbcb042e36704627e1e39e2f9a4e7
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087118"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563643"
 ---
 # <a name="how-to-create-a-test-project-for-sql-server-database-unit-testing"></a>Como: Criar um projeto de teste para testes de unidade de banco de dados do SQL Server
 Antes de gravar testes de unidade que avaliem objetos de banco de dados, você deve primeiro criar um projeto de teste. O projeto contém testes de unidade do SQL Server, mas pode conter também outros tipos de teste.  
@@ -32,7 +32,7 @@ Você pode colocar todos os testes de unidade do SQL Server de um projeto de ban
 |Os diferentes testes de unidade do SQL Server precisam acessar conexões de banco de dados diferentes para a execução ou a validação do teste?|Em caso afirmativo, você precisará de mais de um projeto de teste. Não é possível especificar mais de uma conexão de banco de dados para a execução do teste. No entanto, você pode especificar uma conexão de banco de dados diferente para a validação do teste.|  
 |Você deseja implantar projetos de banco de dados diferentes para testes de unidade diferentes?|Em caso afirmativo, você precisará de mais de um projeto de teste. Um projeto de teste somente pode implantar um único projeto de banco de dados.|  
   
-Para saber mais, confira [Como configurar a execução do teste de unidade do SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md). Como alternativa à criação de vários projetos de teste, você também pode fornecer sua própria implementação [DatabaseTestService](https://msdn.microsoft.com/en-us/library/microsoft.data.schema.unittesting.databasetestservice.aspx) Microsoft.Data.Schema.UnitTesting.DatabaseTestService.  
+Para saber mais, confira [Como configurar a execução do teste de unidade do SQL Server](../ssdt/how-to-configure-sql-server-unit-test-execution.md). Como alternativa à criação de vários projetos de teste, você também pode fornecer sua própria implementação [DatabaseTestService](https://msdn.microsoft.com/library/microsoft.data.schema.unittesting.databasetestservice.aspx) Microsoft.Data.Schema.UnitTesting.DatabaseTestService.  
   
 Existem três opções para adicionar um projeto de teste a uma solução que contém um projeto de banco de dados:  
   
