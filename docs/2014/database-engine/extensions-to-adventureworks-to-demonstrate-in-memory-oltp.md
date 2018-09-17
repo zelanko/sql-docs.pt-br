@@ -36,7 +36,7 @@ ms.locfileid: "40396029"
   
 -   [Pré-requisitos](#Prerequisites) para instalar o exemplo e executar a carga de trabalho de demonstração  
   
--   Instruções para [Installing the In-Memory OLTP sample based on AdventureWorks](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)  
+-   Instruções para [Instalando a amostra OLTP In-Memory com base no AdventureWorks](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)  
   
 -   [Descrição das tabelas e procedimentos de exemplo](#Descriptionofthesampletablesandprocedures) – isso inclui descrições das tabelas e dos procedimentos adicionados ao AdventureWorks pelo exemplo [!INCLUDE[hek_2](../includes/hek-2-md.md)] , bem como considerações para migrar algumas das tabelas originais do AdventureWorks para otimização de memória  
   
