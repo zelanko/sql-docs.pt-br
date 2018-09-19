@@ -24,12 +24,12 @@ ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: 93bb9dd2e67879368522886013772196e08dc17e
-ms.sourcegitcommit: 2f07d285824a8982c279f3816b220e61a2d91b06
+ms.openlocfilehash: a8f595c79a36581bb5a2ff1ce94591134fb546dd
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37095308"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563624"
 ---
 # <a name="sysserverresourcestats-azure-sql-database"></a>sys.server_resource_stats (banco de dados SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ O **sys.server_resource_stats** exibição tem definições diferentes dependend
 |----------------------------|---------------|-----------------|  
 |start_time|**datetime2**|Hora UTC que indica o início do intervalo de emissão de relatórios de 15 segundos|  
 |end_time|**datetime**|Hora UTC que indica o final do intervalo de relatório de 15 segundos|
-|resource_type|Nvarchar (128)|Tipo de recurso para o qual as métricas são fornecidas.|
+|resource_type|nvarchar (128)|Tipo de recurso para o qual as métricas são fornecidas.|
 |resource_name|nvarchar(128)|Nome do recurso.|
 |sku|nvarchar(128)|Gerenciados de camada de serviço da instância da instância. O valores possíveis são os seguintes: <br><ul><li>Uso Geral</li></ul><ul><li>Comercialmente Crítica</li></ul>|
 |hardware_generation|nvarchar(128)|Identificador de geração de hardware: como Gen 4 ou 5 Gen|
@@ -59,12 +59,12 @@ O **sys.server_resource_stats** exibição tem definições diferentes dependend
 
  
 > [!TIP]  
->  Para obter mais contexto sobre esses limites e as camadas de serviço, consulte os tópicos [camadas de serviço da instância gerenciada](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-managed-instance#managed-instance-service-tier).  
+>  Para obter mais contexto sobre esses limites e as camadas de serviço, consulte os tópicos [camadas de serviço da instância gerenciada](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tier).  
     
 ## <a name="permissions"></a>Permissões  
  Essa exibição está disponível para todas as funções de usuário com permissões para conectar o **mestre** banco de dados.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Os dados retornados pelo **sys.server_resource_stats** são expressas como o total usado em bytes ou em megabytes (mencionados em nomes de colunas) que não seja avg_cpu, que é expressa como uma porcentagem do máximo permitido de limites para o serviço nível de desempenho/camada que você está executando.  
  
 ## <a name="examples"></a>Exemplos  
@@ -83,4 +83,4 @@ HAVING AVG(avg_cpu_percent) >= 80
 ```  
     
 ## <a name="see-also"></a>Consulte também  
- [As camadas de serviço de instância de gerenciados](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-managed-instance#managed-instance-service-tier)
+ [As camadas de serviço de instância de gerenciados](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tier)

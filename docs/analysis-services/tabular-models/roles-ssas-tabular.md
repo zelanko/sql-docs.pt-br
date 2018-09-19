@@ -1,6 +1,6 @@
 ---
 title: Funções | Microsoft Docs
-ms.date: 05/07/2018
+ms.date: 09/17/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,19 +9,22 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3ebefae10d3c1cd4791cc38fd5b9d30e5e29838a
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 2f33d46750085f06f890a101382d7949a85048b9
+ms.sourcegitcommit: aa9d2826e3c451f4699c0e69c9fcc8a2781c6213
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38981528"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45975685"
 ---
 # <a name="roles"></a>Funções
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Funções, em modelos tabulares, definem permissões de membro para um modelo. Membros da função podem executar ações no modelo conforme definido pela permissão de função. As funções definidas com permissões de leitura também podem fornecer segurança adicional no nível de linha usando filtros no nível de linha. 
   
  Para o SQL Server Analysis Services, funções contêm membros de usuário por nome de usuário do Windows ou grupo do Windows e permissões (leitura, processo, administrador). Para o Azure Analysis Services, os usuários devem estar no seu Active Directory do Azure e nomes de usuário e grupos especificados devem ser pelo endereço de email organizacionais ou UPN. 
-  
+
+> [!IMPORTANT]  
+>  Quando usar o SSDT para criar funções e adicionar usuários organizacionais a um modelo tabular de projeto que será implantado no Azure Analysis Services, use [espaço de trabalho integrado](workspace-database-ssas-tabular.md).
+
 > [!IMPORTANT]  
 >  Para que os usuários a se conectar a um modelo implantado por meio de um aplicativo cliente de relatório, você deve criar pelo menos uma função pelo menos a permissão para que esses usuários são membros de leitura.  
   
@@ -49,7 +52,7 @@ ms.locfileid: "38981528"
   
 |Permissões|Description|Filtros de linha usando DAX|  
 |-----------------|-----------------|----------------------------|  
-|Nenhum|Os membros não podem fazer modificações ao esquema de banco de dados modelo e não podem consultar dados.|Filtros de linha não são aplicáveis. Os dados não são visíveis a usuários nesta função|  
+|None|Os membros não podem fazer modificações ao esquema de banco de dados modelo e não podem consultar dados.|Filtros de linha não são aplicáveis. Os dados não são visíveis a usuários nesta função|  
 |leitura|Os membros têm permissão de consultar dados (com base em filtros de linha), mas não podem ver o banco de dados modelo no SSMS, não podem fazer nenhuma alteração ao esquema de banco de dados modelo e o usuário não pode processar o modelo.|Os filtros de linha podem ser aplicados. Somente os dados especificados na fórmula DAX de filtro de linha são visíveis a usuários.|  
 |Leitura e processo|Os membros têm permissão de consultar dados (com base em filtros em nível de linha) e executar operações de processo por meio de um script ou pacote que contém um comando de processo, mas não pode fazer nenhuma alteração ao banco de dados. Não é possível exibir o banco de dados modelo no SSMS.|Os filtros de linha podem ser aplicados. Somente os dados especificados na fórmula DAX de filtro de linha possam ser consultados.|  
 |Processar|Os membros podem executar operações de processo por meio de um script ou pacote que contém um comando de processo. Não pode modificar o esquema de banco de dados modelo. Não é possível consultar dados. Não é possível consultar o banco de dados de modelo no SSMS.|Filtros de linha não são aplicáveis. Nenhum dado pode ser consultado nesta função|  

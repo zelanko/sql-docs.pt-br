@@ -1,6 +1,6 @@
 ---
 title: Banco de dados de espaço de trabalho no SQL Server Data Tools | Microsoft Docs
-ms.date: 05/07/2018
+ms.date: 09/17/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,26 +9,29 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 817c3b821fef5fe1c8dcfb539e93b9bf275ee5d9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 8ebea50408a46ea2ac79030228ee06f149cece4c
+ms.sourcegitcommit: aa9d2826e3c451f4699c0e69c9fcc8a2781c6213
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045170"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45975715"
 ---
-# <a name="workspace-database"></a>Banco de Dados do Espaço de Trabalho 
+# <a name="workspace-database"></a>Banco de Dados do Espaço de Trabalho
+
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   O banco de dados de espaço de trabalho modelo de tabela, usado durante a criação de modelos, é criado quando você cria um novo projeto de modelo de tabela no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].
   
 ## <a name="specifying-a-workspace-instance"></a>Especificar uma instância do espaço de trabalho  
+
   Quando você cria um novo projeto de modelo de tabela no SSDT, você pode especificar uma instância do Analysis Services para usar ao criar seu projeto. Começando com a versão de setembro de 2016 (14.0.60918.0) de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], introduz dois modos para especificar uma instância do espaço de trabalho quando você cria um novo projeto de modelo de tabela. 
 
-**Espaço de trabalho integrado** – utiliza a própria instância interna do Analysis Services do SSDT.
+**Espaço de trabalho integrado** – recomendado. Utiliza a instância do Analysis Services interna do SSDT. Use essa configuração ao criar um projeto que será implantado no Azure Analysis Services.
 
-**Servidor de espaço de trabalho** -um banco de dados do espaço de trabalho é criado em uma instância explícita do Analysis Services, normalmente no mesmo computador que o SSDT ou em outro computador na mesma rede.
+**Servidor de espaço de trabalho** -um banco de dados do espaço de trabalho é criado em uma instância explícita do Analysis Services, normalmente no mesmo computador que o SSDT ou em outro computador na mesma rede. Embora você possa especificar um servidor do Azure Analysis Services, não é recomendável. 
   
 ### <a name="integrated-workspace"></a>Espaço de trabalho integrado
-Com o espaço de trabalho integrado, um banco de dados de trabalho é criado na memória usando a própria instância implícita de Analysis Services do SSDT. Modo de espaço de trabalho integrado reduz significativamente a complexidade da criação de projetos de tabela no SSDT, pois uma instalação separada explícita do SQL Server Analysis Services não é necessária.
+
+Com o espaço de trabalho integrado, um banco de dados de trabalho é criado na memória usando a própria instância implícita de Analysis Services do SSDT. Modo de espaço de trabalho integrado reduz significativamente a complexidade da criação de projetos de tabela no SSDT porque um servidor do Analysis Services explícito separado não é necessário.
 
 Usando o modo de espaço de trabalho integrado, SSDT Tabular dinamicamente inicia sua própria instância interna do SSAS em segundo plano e carrega o banco de dados. Você pode adicionar e exibir tabelas e dados no designer de modelo. Se você adicionar mais tabelas, colunas, relacionamentos, etc., estará alterando o banco de dados do espaço de trabalho. Modo de espaço de trabalho integrado não será alterado quando SSDT Tabular trabalhar com um servidor de espaço de trabalho e o banco de dados. O que muda é onde o SSDT Tabular hospeda o banco de dados do espaço de trabalho.
 
@@ -36,12 +39,14 @@ Você pode selecionar o modo do espaço de trabalho integrado ao criar um novo p
 
 ![Modo de espaço de trabalho integrado do SSAS](../../analysis-services/tabular-models/media/ssas-integrated-workspace-mode.png)
 
-Usando as propriedades Banco de Dados do Espaço de Trabalho e Servidor de Espaço de Trabalho para model.bim, você pode descobrir o nome do banco de dados temporário e a porta TCP da instância interna de SSAS, na qual o SSDT Tabular hospeda o banco de dados. Você pode se conectar ao banco de dados de espaço de trabalho com o SSMS, contanto que SSDT Tabular tenha o banco de dados carregado. A configuração de Retenção do Espaço de Trabalho especifica que o SSDT Tabular mantém o banco de dados de espaço de trabalho no disco, e não mais na memória depois que um projeto de modelo é fechado. Isso garante que menos memória seja consumida do que se o modelo fosse mantido na memória em todos os momentos. Se você quiser controlar essas configurações, defina a propriedade de Modo de Espaço de Trabalho integrado como Falso e forneça um servidor de espaço de trabalho explícito. Um servidor de espaço de trabalho explícito também faz sentido se os dados que você está importando para um modelo de dados excede a capacidade de memória de sua estação de trabalho do SSDT.
+Usando as propriedades Banco de Dados do Espaço de Trabalho e Servidor de Espaço de Trabalho para model.bim, você pode descobrir o nome do banco de dados temporário e a porta TCP da instância interna de SSAS, na qual o SSDT Tabular hospeda o banco de dados. Você pode se conectar ao banco de dados de espaço de trabalho com o SSMS, contanto que SSDT Tabular tenha o banco de dados carregado. A configuração de Retenção do Espaço de Trabalho especifica que o SSDT Tabular mantém o banco de dados de espaço de trabalho no disco, e não mais na memória depois que um projeto de modelo é fechado. Isso garante que menos memória seja consumida do que se o modelo fosse mantido na memória em todos os momentos. Se você quiser controlar essas configurações, defina a propriedade de Modo de Espaço de Trabalho integrado como Falso e forneça um servidor de espaço de trabalho explícito. Um servidor de espaço de trabalho explícito também tornar sentidos, se você estiver importando para um modelo de dados excedem a capacidade de memória de sua estação de trabalho do SSDT.
 
 > [!NOTE]  
->  Ao usar o modo integrado do espaço de trabalho, a instância local do Analysis Services é 64 bits, enquanto o SSDT é executado no ambiente de 32 bits do Visual Studio. Se você estiver se conectando a fontes de dados especiais, certifique-se de instalar ambas as versões de 32 bits e 64 bits dos provedores de dados correspondentes na estação de trabalho. O provedor de 64 bits é necessário para a instância do Analysis Services de 64 bits e a versão de 32 bits é necessária para o Assistente de importação de tabela no SSDT.
+>  Ao usar o modo de espaço de trabalho integrado, a instância local do Analysis Services é 64 bits, enquanto o SSDT é executado no ambiente de 32 bits do Visual Studio. Se você estiver se conectando a fontes de dados especiais, certifique-se de instalar ambas as versões de 32 bits e 64 bits dos provedores de dados correspondentes na estação de trabalho. O provedor de 64 bits é necessário para a instância do Analysis Services de 64 bits e a versão de 32 bits é necessária para que o Assistente de importação de tabela no SSDT.
 
-###  <a name="bkmk_overview"></a> Servidor de espaço de trabalho  
+###  <a name="bkmk_overview"></a> Servidor de espaço de trabalho
+
+
  Um banco de dados de espaço de trabalho é criado na instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , especificada na propriedade de Servidor de Espaço de trabalho, quando você cria um novo projeto de Business Intelligence usando um dos modelos de projeto de modelo de tabela no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Cada projeto de modelo tabular terá seu próprio banco de dados de espaço de trabalho. Você pode usar o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para exibir o banco de dados de espaço de trabalho no servidor do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . O nome de banco de dados de espaço de trabalho inclui o nome de projeto, seguido por um sublinhado, seguido pelo nome de usuário, seguido por um sublinhado, seguido por um GUID.  
   
  O banco de dados de espaço de trabalho reside na memória enquanto o projeto de modelo tabular está aberto no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Quando você fecha o projeto, o banco de dados de espaço de trabalho é mantido na memória, armazenado em disco e removido da memória (padrão), ou removido da memória e não armazenado em disco, como determinado pela propriedade de Retenção de Espaço de Trabalho. Para obter mais informações sobre a propriedade de Retenção de Espaço de Trabalho, consulte [Propriedades de Banco de Dados de Espaço de Trabalho](#bkmk_ws_prop) posteriormente neste tópico.  
@@ -86,7 +91,7 @@ Usando as propriedades Banco de Dados do Espaço de Trabalho e Servidor de Espa�
 ##  <a name="bkmk_use_ssms"></a> Usando SSMS para gerenciar o banco de dados de espaço de trabalho  
  Você pode usar o SQL Server Management Studio (SSMS) para se conectar a um servidor [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que hospeda um banco de dados do espaço de trabalho. Normalmente, não há gerenciamento do banco de dados de espaço de trabalho necessário; a exceção é desanexar ou excluir um banco de dados de espaço de trabalho, o que deve ser feito no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Não use o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para gerenciar o banco de dados de espaço de trabalho enquanto o projeto estiver aberto no designer de modelo. Fazer isso poderia causar a perda de dados.
    
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Confira também  
 [Propriedades do modelo](../../analysis-services/tabular-models/model-properties-ssas-tabular.md) 
   
   

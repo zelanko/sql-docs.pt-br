@@ -21,12 +21,12 @@ ms.assetid: cf0901c0-5f90-42d4-9d5b-8772c904062d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 44588ed7365e7f38ec514e1d272e342572f8c967
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 90007b46558fbe348f1619bbbdcf877faeaf1f7e
+ms.sourcegitcommit: c12e41eff37fdfededc9b18ecf2e7e11893eb850
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43038709"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45599940"
 ---
 # <a name="spsetapprole-transact-sql"></a>sp_setapprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ sp_setapprole [ @rolename = ] 'role',
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) e 1 (falha)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Depois de um aplicativo de função for ativada por meio **sp_setapprole**, a função permanece ativa até que o usuário se desconecta do servidor ou executa **sp_unsetapprole**. **sp_setapprole** pode ser executado somente por direct [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções. **sp_setapprole** não pode ser executado em outro procedimento armazenado ou uma transação definida pelo usuário.  
   
  Para obter uma visão geral das funções de aplicativo, consulte [funções de aplicativo](../../relational-databases/security/authentication-access/application-roles.md).  
@@ -96,7 +96,7 @@ sp_setapprole [ @rolename = ] 'role',
  O exemplo a seguir ativa uma função de aplicativo `SalesAppRole`, com a senha de texto sem-formatação `AsDeF00MbXX`, criada com permissões projetadas especificamente para o aplicativo usado pelo usuário atual.  
   
 ```  
-EXEC sp_setapprole 'SalesApprole', 'AsDeF00MbXX';  
+EXEC sys.sp_setapprole 'SalesApprole', 'AsDeF00MbXX';  
 GO  
 ```  
   
@@ -105,12 +105,12 @@ GO
   
 ```  
 DECLARE @cookie varbinary(8000);  
-EXEC sp_setapprole 'Sales11', 'fdsd896#gfdbfdkjgh700mM'  
+EXEC sys.sp_setapprole 'Sales11', 'fdsd896#gfdbfdkjgh700mM'  
     , @fCreateCookie = true, @cookie = @cookie OUTPUT;  
 -- The application role is now active.  
 SELECT USER_NAME();  
 -- This will return the name of the application role, Sales11.  
-EXEC sp_unsetapprole @cookie;  
+EXEC sys.sp_unsetapprole @cookie;  
 -- The application role is no longer active.  
 -- The original context has now been restored.  
 GO  

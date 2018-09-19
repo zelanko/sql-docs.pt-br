@@ -15,12 +15,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: b3d5174c871d25c37a299e7d24b0aab9a32bf2af
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4bd8699689489593e86011ff486b19828248e876
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38037724"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563718"
 ---
 # <a name="sql-data-warehouse-stored-procedures"></a>Procedimentos armazenados do SQL Data Warehouse
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "38037724"
  [sp_special_columns_100 &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-special-columns-100-sql-data-warehouse.md)  
   
 > [!NOTE]  
->  Alguns procedimentos armazenados são usados somente em uma instância do adicionais do sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou por meio do cliente são e APIs não se destina ao cliente usar. Esses procedimentos são listados em [procedimentos armazenados do sistema (Transact-SQL)](http://msdn.microsoft.com/en-us/library/ms187961.aspx). Estes procedimentos estão sujeitos a alterações e não há garantia de compatibilidade. Todos os procedimentos na lista não estão disponíveis em [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
+>  Alguns procedimentos armazenados são usados somente em uma instância do adicionais do sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou por meio do cliente são e APIs não se destina ao cliente usar. Esses procedimentos são listados em [procedimentos armazenados do sistema (Transact-SQL)](http://msdn.microsoft.com/library/ms187961.aspx). Estes procedimentos estão sujeitos a alterações e não há garantia de compatibilidade. Todos os procedimentos na lista não estão disponíveis em [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
   
 ## <a name="see-also"></a>Consulte também  
  [Funções armazenadas do sistema &#40;Transact-SQL&#41;](~/relational-databases/system-functions/system-functions-for-transact-sql.md)   

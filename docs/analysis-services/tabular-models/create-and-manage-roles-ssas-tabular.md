@@ -1,6 +1,6 @@
 ---
 title: Criar e gerenciar funções | Microsoft Docs
-ms.date: 05/07/2018
+ms.date: 09/17/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,18 +9,21 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5d97cd04228b13d0f57d99b6f8808a955bba1bea
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: daeef8b6d8b6953e33605816940f81ec04e0d5ab
+ms.sourcegitcommit: aa9d2826e3c451f4699c0e69c9fcc8a2781c6213
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34045610"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45975665"
 ---
 # <a name="create-and-manage-roles"></a>Criar e gerenciar funções 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  Funções, em modelos tabulares, definem permissões de membro para um modelo. As funções são definidas para um projeto de modelo usando a caixa de diálogo Gerenciador de Funções no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Quando um modelo é implantado, os administradores de banco de dados podem gerenciar funções usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  Funções, em modelos tabulares, definem permissões de membro para um modelo. As funções são definidas para um projeto de modelo usando a caixa de diálogo Gerenciador de Funções no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. 
+
+> [!IMPORTANT]
+> Se você estiver implantando seu projeto ao Azure Analysis Services, use **espaço de trabalho integrado** como seu banco de dados do espaço de trabalho. Para obter mais informações, consulte [banco de dados do espaço de trabalho](workspace-database-ssas-tabular.md).
   
- As tarefas neste artigo descrevem como criar e gerenciar funções durante a criação do modelo usando a caixa de diálogo Gerenciador de funções em [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Para obter informações sobre como gerenciar funções em um banco de dados modelo implantado, consulte [funções de modelo de tabela](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md).  
+ As tarefas neste artigo descrevem como criar e gerenciar funções durante a criação de modelo usando a caixa de diálogo Gerenciador de funções no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Para obter informações sobre como gerenciar funções em um banco de dados modelo implantado, consulte [funções de modelo Tabular](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md).  
   
 ## <a name="tasks"></a>Tarefas  
  Para criar, editar, copiar e excluir funções, você usará a caixa de diálogo **Gerenciador de Funções** . Para exibir a caixa de diálogo **Gerenciador de Funções** , no [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], clique no menu **Modelo** e em **Gerenciador de Funções**.  
@@ -60,7 +63,7 @@ ms.locfileid: "34045610"
   
 9. Clique em **OK**.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Confira também  
  [Funções](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
  [Perspectivas](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
  [Analisar no Excel](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)   

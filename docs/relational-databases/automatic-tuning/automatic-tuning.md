@@ -20,12 +20,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 89c9e6aae99d94525cfdf809e952300a84721b2e
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: fa08c3b344b399e3219c390eecb16760d23d560e
+ms.sourcegitcommit: 54a8d9ef7a714043fc72a6c530a6866804414747
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43068743"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45533998"
 ---
 # <a name="automatic-tuning"></a>Ajuste automático
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -42,9 +42,9 @@ Ajuste automático no [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] per
 
 ## <a name="why-automatic-tuning"></a>Por que o ajuste automático?
 
-Uma das principais tarefas de administração clássico do banco de dados está monitorando uma carga de trabalho, identificando críticos [!INCLUDE[tsql_md](../../includes/tsql-md.md)] consultas, índices que devem ser adicionados para melhorar o desempenho e raramente usado índices. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] Fornece informações detalhadas sobre as consultas e os índices que você precisa monitorar. No entanto, monitorar constantemente o banco de dados é uma tarefa difícil e entediante, especialmente ao lidar com muitos bancos de dados. Gerenciar um grande número de bancos de dados pode ser impossível de fazer com eficiência. Em vez de monitorar e ajustar seu banco de dados manualmente, você pode considerar delegar algumas do monitoramento e ajuste de ações a serem [!INCLUDE[ssde_md](../../includes/ssde_md.md)] usando o recurso de ajuste automático.
+Três das principais tarefas de administração clássico do banco de dados estão monitorando a carga de trabalho, identificando críticos [!INCLUDE[tsql_md](../../includes/tsql-md.md)] consultas, os índices que devem ser adicionados para melhorar o desempenho e identificação raramente usado. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] Fornece informações detalhadas sobre as consultas e os índices que você precisa monitorar. No entanto, monitorando constantemente a um banco de dados é uma tarefa difícil e entediante, especialmente ao lidar com muitos bancos de dados. Gerenciar um grande número de bancos de dados pode ser impossível de fazer com eficiência. Em vez de monitorar e ajustar seu banco de dados manualmente, você pode considerar delegar algumas do monitoramento e ajuste de ações a serem [!INCLUDE[ssde_md](../../includes/ssde_md.md)] usando o recurso de ajuste automático.
 
-### <a name="how-does-automatic-tuning-works"></a>Como o ajuste automático funciona?
+### <a name="how-does-automatic-tuning-work"></a>Como funciona o trabalho de ajuste automático?
 
 O ajuste automático é um processo de análise que constantemente aprende sobre as características da carga de trabalho e o monitoramento contínuo e identificar possíveis problemas e aprimoramentos.
 

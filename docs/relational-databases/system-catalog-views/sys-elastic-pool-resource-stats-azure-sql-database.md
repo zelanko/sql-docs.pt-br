@@ -1,7 +1,7 @@
 ---
 title: sys.elastic_pool_resource_stats (banco de dados SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/06/2018
+ms.date: 09/13/2018
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -26,12 +26,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: a04b60738a48ddbe09db3eb8d7032d2f08b4ba9c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 5f7f13ebb5699fc0fe2174e7ee1af9d6c44bcbfb
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997978"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563262"
 ---
 # <a name="syselasticpoolresourcestats-azure-sql-database"></a>sys.elastic_pool_resource_stats (banco de dados SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -54,9 +54,10 @@ ms.locfileid: "37997978"
 |**max_worker_percent**|**decimal(5,2)**|Máximo de trabalhos simultâneos (solicitações) em porcentagem do limite do pool.|  
 |**max_session_percent**|**decimal(5,2)**|Máximo de sessões simultâneas em percentual, com base no limite do pool.|  
 |**elastic_pool_dtu_limit**|**int**|Máximo do pool Elástico DTU configuração atual para este pool Elástico durante este intervalo.|  
-|**elastic_pool_storage_limit_mb**|**bigint**|Limite de armazenamento máximo do pool Elástico atual configuração para este pool Elástico em megabytes durante este intervalo.|  
+|**elastic_pool_storage_limit_mb**|**bigint**|Limite de armazenamento máximo do pool Elástico atual configuração para este pool Elástico em megabytes durante este intervalo.|
+|**avg_allocated_storage_percent**|**decimal(5,2)**|A porcentagem de espaço de dados alocado por todos os bancos de dados no pool Elástico.  Esta é a razão do espaço de dados alocado para o tamanho máximo dos dados para o pool Elástico.  Para obter mais informações, consulte: [gerenciamento de espaço de arquivo no banco de dados SQL](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Essa exibição existe no banco de dados mestre do servidor lógico. Você deve estar conectado ao banco de dados mestre para consultar **sys.elastic_pool_resource_stats**.  
   
 ## <a name="permissions"></a>Permissões  

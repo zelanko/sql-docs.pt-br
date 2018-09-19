@@ -8,19 +8,19 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: c2a209f782b264ac7e69514c9aa4cc840534258c
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.openlocfilehash: 9cc0fbddb5d1ccb6716b31a945162070aa4cf2e3
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42795655"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563742"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>Atualizar os componentes do machine learning (R e Python) em instâncias do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Integração de R e Python no SQL Server inclui pacotes de código-fonte aberto e de propriedade da Microsoft. Na manutenção do SQL Server standard, pacotes R e Python são atualizados de acordo com o ciclo de lançamento do SQL Server com correções de bugs para os pacotes existentes na versão atual. 
 
-A maioria dos cientistas de dados estão acostumados a trabalhar com pacotes mais recentes assim que estiverem disponíveis. Para serviços SQL Server 2017 Machine Learning (no banco de dados) e SQL Server 2016 R Services (no banco de dados), você pode obter versões mais recentes do R e Python, alterando a *vinculação* do serviço do SQL Server [Microsoft Servidor do Machine Learning](https://docs.microsoft.com/en-us/machine-learning-server/index) e o [política de suporte do ciclo de vida moderno](https://support.microsoft.com/help/30881/modern-lifecycle-policy).
+A maioria dos cientistas de dados estão acostumados a trabalhar com pacotes mais recentes assim que estiverem disponíveis. Para serviços SQL Server 2017 Machine Learning (no banco de dados) e SQL Server 2016 R Services (no banco de dados), você pode obter versões mais recentes do R e Python, alterando a *vinculação* do serviço do SQL Server [Microsoft Servidor do Machine Learning](https://docs.microsoft.com/machine-learning-server/index) e o [política de suporte do ciclo de vida moderno](https://support.microsoft.com/help/30881/modern-lifecycle-policy).
 
 Associação não altera os conceitos básicos da sua instalação: integração do R e Python ainda é parte de uma instância do mecanismo de banco de dados, de licenciamento permanece inalterado (não há custos adicionais associados à associação), e as políticas de suporte do SQL Server ainda são válidas para o banco de dados mecanismo. Mas reassociação alterar como os pacotes R e Python são atendidos. O restante deste artigo explica o mecanismo de ligação e como ele funciona para cada versão do SQL Server.
 

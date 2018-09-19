@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 6d5030287e7ad526816f89fd23b13fedae070c56
-ms.sourcegitcommit: 320958d0f55b6974abf46f8a04f7a020ff86a0ae
+ms.openlocfilehash: 7420476b20cef612c45227f66497ae554def7b1d
+ms.sourcegitcommit: 9d0ff4f3e40db48fc01788684d34719065d159b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42703599"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44724330"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server"></a>Dados de demonstração de táxi de Nova York para o SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -118,7 +118,7 @@ A tabela a seguir resume os objetos criados no banco de dados de demonstração 
 
 |**Nome do objeto**|**Tipo de objeto**|**Descrição**|
 |----------|------------------------|---------------|
-|**TaxiNYC_Sample** | Banco de Dados |Criado pelo script create-db-tb-upload-data.sql. Cria um banco de dados e duas tabelas:<br /><br />tabela nyctaxi_sample: contém o conjunto de dados principal táxi de Nova York. Um índice columnstore clusterizado é adicionado à tabela para melhorar o desempenho de armazenamento e consulta. A amostra de 1% do conjunto de dados de táxi de Nova York será inserida nesta tabela.<br /><br />tabela dbo.nyc_taxi_models: usado para persistir o modelo treinado de análise avançada.|
+|**NYCTaxi_Sample** | Banco de Dados |Criado pelo script create-db-tb-upload-data.sql. Cria um banco de dados e duas tabelas:<br /><br />tabela nyctaxi_sample: contém o conjunto de dados principal táxi de Nova York. Um índice columnstore clusterizado é adicionado à tabela para melhorar o desempenho de armazenamento e consulta. A amostra de 1% do conjunto de dados de táxi de Nova York será inserida nesta tabela.<br /><br />tabela dbo.nyc_taxi_models: usado para persistir o modelo treinado de análise avançada.|
 |**fnCalculateDistance** |função de valor escalar | Criado pelo script fnCalculateDistance.sql. Calcula a distância direta entre os locais de embarque e desembarque de passageiros. Essa função é usada na [criar recursos de dados](sqldev-create-data-features-using-t-sql.md), [treinar e salvar um modelo](../r/sqldev-train-and-save-a-model-using-t-sql.md) e [Operacionalizar o modelo de R](sqldev-operationalize-the-model.md).|
 |**fnEngineerFeatures** |função com valor de tabela | Criado pelo script fnEngineerFeatures.sql. Cria novos recursos de dados para treinamento do modelo. Essa função é usada na [criar recursos de dados](sqldev-create-data-features-using-t-sql.md) e [Operacionalizar o modelo de R](sqldev-operationalize-the-model.md).|
 |**PlotHistogram** |procedimento armazenado | Criado pelo script PlotHistogram.sql. Chama uma função do R para plotar o histograma de uma variável e, em seguida, retorna a plotagem como um objeto binário. Esse procedimento armazenado é usado em [explorar e visualizar dados](sqldev-explore-and-visualize-the-data.md).|

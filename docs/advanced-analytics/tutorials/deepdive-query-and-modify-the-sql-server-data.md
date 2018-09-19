@@ -1,5 +1,5 @@
 ---
-title: Consultar e modificar dados do SQL Server (SQL e R mergulho profundo) | Microsoft Docs
+title: Consultar e modificar os dados do SQL Server (SQL e R aprofundamento) | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,29 +7,29 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 90b836cd09fd0c6f130ff65c531f6077a28c2014
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 57fff9b8ddfd6507876bd6eb174a127d70d0b916
+ms.sourcegitcommit: aa9d2826e3c451f4699c0e69c9fcc8a2781c6213
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31202218"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45975645"
 ---
-# <a name="query-and-modify-the-sql-server-data-sql-and-r-deep-dive"></a>Consultar e modificar dados do SQL Server (SQL e R mergulho profundo)
+# <a name="query-and-modify-the-sql-server-data-sql-and-r-deep-dive"></a>Consultar e modificar os dados do SQL Server (SQL e R aprofundamento)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Este artigo faz parte do tutorial mergulho profundo de ciência de dados, como usar [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) com o SQL Server.
+Este artigo faz parte do tutorial de aprofundamento de ciência de dados, sobre como usar [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) com o SQL Server.
 
 Agora que você carregou os dados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], poderá usar as fontes de dados criadas como argumentos para funções do R no [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], para obter informações básicas sobre as variáveis e gerar resumos e histogramas.
 
-Nesta etapa, você reutilizar as fontes de dados para análise rápida e, em seguida, aprimorar os dados.
+Nesta etapa, você usar novamente as fontes de dados para fazer uma análise rápida e, em seguida, aprimorar os dados.
 
 ## <a name="query-the-data"></a>Consultar os dados
 
 Primeiro, obtenha uma lista das colunas e seus tipos de dados.
 
-1.  Use a função [à função rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) e especifique a fonte de dados que você deseja analisar.
+1.  Use a função [rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) e especifique a fonte de dados que você deseja analisar.
 
-    Dependendo de sua versão do RevoScaleR, você também pode usar [rxGetVarNames](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarnames). 
+    Dependendo da sua versão do RevoScaleR, você também pode usar [rxGetVarNames](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarnames). 
   
     ```R
     rxGetVarInfo(data = sqlFraudDS)
@@ -58,11 +58,11 @@ Primeiro, obtenha uma lista das colunas e seus tipos de dados.
 
 ## <a name="modify-metadata"></a>Modificar metadados
 
-Todas as variáveis são armazenadas como inteiros, mas algumas delas representam dados categóricos, chamados de *variáveis de fator* no R. Por exemplo, a coluna *state* contém números usados como identificadores para 50 estados, além do Distrito de Colúmbia.  Para facilitar a compreensão dos dados, você pode substituir os números por uma lista de abreviações de estado.
+Todas as variáveis são armazenadas como inteiros, mas algumas delas representam dados categóricos, chamados *variáveis de fator* em R. Por exemplo, a coluna *estado* contém números usados como identificadores para 50 estados, além do Distrito de Colúmbia.  Para facilitar a compreensão dos dados, você pode substituir os números por uma lista de abreviações de estado.
 
-Nesta etapa, você cria um vetor de cadeia de caracteres que contém as abreviações e, em seguida, mapear esses valores categóricos para os identificadores de inteiro original. Em seguida, usar a nova variável no *colInfo* argumento, para especificar que essa coluna ser tratado como um fator. Sempre que você analise os dados ou movê-la, as abreviações são usadas e a coluna é tratada como um fator.
+Nesta etapa, você cria um vetor de cadeia de caracteres que contém as abreviações e, em seguida, mapear esses valores categóricos para os identificadores inteiros originais. Em seguida, você usa a nova variável na *colInfo* argumento, para especificar que essa coluna seja tratada como um fator. Sempre que você pode analisa os dados ou movê-la, as abreviações são usadas e a coluna será tratada como um fator.
 
-Mapear a coluna para as abreviações antes de usá-la como um fator também melhora o desempenho. Para obter mais informações, consulte [otimização R e dados](..\r\r-and-data-optimization-r-services.md).
+Mapear a coluna para as abreviações antes de usá-la como um fator também melhora o desempenho. Para obter mais informações, consulte [otimização de dados e do R](..\r\r-and-data-optimization-r-services.md).
 
 1. Comece criando uma variável do R, *stateAbb*, e definindo o vetor de cadeias de caracteres a ser adicionado a ela, da seguinte maneira:
   
@@ -120,11 +120,11 @@ Mapear a coluna para as abreviações antes de usá-la como um fator também mel
     
     *Var 1: custID, Type: integer*
     
-    *Var 2: 2 níveis de fator de sexo: Masculino feminino*
+    *Var 2: 2 níveis de fator de sexo: Masculino fêmea*
     
     *Var 3: 51 níveis de fator de estado: AK AL AR AZ CA... VT WA WI WV WY*
     
-    *Var 4: níveis de fator de titulares 2: entidade secundária*
+    *Var 4: níveis de fator de 2 de titulares de cartão: secundário da entidade de segurança*
     
     *Var 5: balance, Type: integer*
     

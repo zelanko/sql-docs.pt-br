@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 6b34de3c71629a1563bf0d480306680dc6253748
-ms.sourcegitcommit: 320958d0f55b6974abf46f8a04f7a020ff86a0ae
+ms.openlocfilehash: 814e94b955776f1a9c6c0648b0d47b53fa9cabf3
+ms.sourcegitcommit: 9d0ff4f3e40db48fc01788684d34719065d159b6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42703619"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44724340"
 ---
 # <a name="lesson-3-explore-and-visualize-the-data"></a>Lição 3: Explorar e visualizar os dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -120,7 +120,7 @@ O procedimento armazenado retorna a imagem como um fluxo de dados varbinary, que
 2.  Abra um prompt de comando do PowerShell e execute o seguinte comando, fornecendo o nome da instância apropriada, o nome de banco de dados, nome de usuário e as credenciais como argumentos. Para aqueles que usam identidades do Windows, você pode substituir **- U** e **-P** com **-T**.
   
      ```text
-     bcp "exec PlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  TaxiNYC_Sample  -U <user name> -P <password>
+     bcp "exec PlotHistogram" queryout "plot.jpg" -S <SQL Server instance name> -d  NYCTaxi_Sample  -U <user name> -P <password>
      ```
 
     > [!NOTE]

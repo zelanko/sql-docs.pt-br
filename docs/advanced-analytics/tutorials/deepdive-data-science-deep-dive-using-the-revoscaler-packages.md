@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: ee810c998f8aecf17c3496540c65471e0b29e102
-ms.sourcegitcommit: a083e9d59e2014a06cda9138b7e17c17ecab90e0
+ms.openlocfilehash: 4aa45d7ee690d55672c86be256e66d454860c2b6
+ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44343081"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45563865"
 ---
 # <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>Tutorial: Funções de usam RevoScaleR R com dados do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -60,7 +60,7 @@ Você também deve estar familiarizado com o [!INCLUDE[tsql](../../includes/tsql
   
     Para alternar entre contextos de computação local e remota, você precisa de dois sistemas. Normalmente, o local é uma estação de trabalho de desenvolvimento com potência suficiente para cargas de trabalho de ciência de dados. Remoto nesse caso é o SQL Server 2017 ou o SQL Server 2016 com o recurso R habilitado. 
     
-    Alternar contextos de computação se baseia em ter a mesma versão RevoScaleR em sistemas locais e remotos. Em uma estação de trabalho local, você pode obter os pacotes RevoScaleR e os provedores relacionados ao instalar ou usar qualquer um dos seguintes: [VM de ciência de dados no Azure](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/overview), [(gratuito) do Microsoft R Client](https://docs.microsoft.com/en-us/machine-learning-server/r-client/what-is-microsoft-r-client), ou [ Microsoft Machine Learning Server (autônomo)](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-install). Para a opção de servidor autônomo, instale a edição de desenvolvedor gratuitas, usando os instaladores do Linux ou Windows. Você também pode usar a instalação do SQL Server para instalar um servidor autônomo.
+    Alternar contextos de computação se baseia em ter a mesma versão RevoScaleR em sistemas locais e remotos. Em uma estação de trabalho local, você pode obter os pacotes RevoScaleR e os provedores relacionados ao instalar ou usar qualquer um dos seguintes: [VM de ciência de dados no Azure](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/overview), [(gratuito) do Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client), ou [ Microsoft Machine Learning Server (autônomo)](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-install). Para a opção de servidor autônomo, instale a edição de desenvolvedor gratuitas, usando os instaladores do Linux ou Windows. Você também pode usar a instalação do SQL Server para instalar um servidor autônomo.
       
 -   **Pacotes do R adicionais**
   
