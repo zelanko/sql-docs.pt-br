@@ -9,20 +9,41 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: b4059d9460eec5cd69e6e8b4a2f2ac95af5b3d0e
-ms.sourcegitcommit: 2e038db99abef013673ea6b3535b5d9d1285c5ae
+ms.openlocfilehash: c71e8f433a49d4338025dcf4f3383ce94e4fe226
+ms.sourcegitcommit: 4b8dc15dc999935776020ba05325b57dcb3bf564
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/01/2018
-ms.locfileid: "39400639"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46289307"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>O que há de novo no Analytics Platform System, um data warehouse MPP de escalabilidade horizontal
 Veja o que há de novo nas atualizações mais recentes do dispositivo para o Microsoft® Analytics Platform System (APS). Pontos de acesso é um dispositivo de escalabilidade horizontal no local que hospeda o MPP SQL Server Parallel Data Warehouse. 
 
 ::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
+<a name="h2-aps-cu7.1"></a>
+## <a name="aps-cu71"></a>CU7.1 DE APS
+Data de lançamento - julho de 2018
 
+### <a name="dbcc-commands-do-not-consume-concurrency-slots-behavior-change"></a>Comandos DBCC não consomem slots de simultaneidade (alteração de comportamento)
+APS dá suporte a um subconjunto do T-SQL [comandos DBCC](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-transact-sql) tais como [DBCC DROPCLEANBUFFERS](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql). Anteriormente, esses comandos consumiria um [slot de simultaneidade](https://docs.microsoft.com/en-us/sql/analytics-platform-system/workload-management?view=aps-pdw-2016-au7#concurrency-slots) reduzindo o número de carregamentos/consultas de usuário que podem ser executadas. O `DBCC` comandos agora são executados em uma fila local que não consomem um slot de simultaneidade de usuário melhorando o desempenho de execução de consulta global.
+
+### <a name="replaces-some-metadata-calls-with-catalog-objects"></a>Substitui algumas chamadas de metadados com objetos de catálogo
+Usar objetos de catálogo para chamadas de metadados em vez de usar o SMO mostrou a melhoria de desempenho dos pontos de acesso. A partir da CU7.1, algumas dessas chamadas de metadados agora usam objetos de catálogo por padrão. Esse comportamento pode ser desativado pelo [comutador de recurso](appliance-feature-switch.md) se os clientes que usam consultas de metadados se tiver algum problema.
+
+### <a name="bug-fixes"></a>Correções de bugs
+Atualizamos para SQL Server 2016 SP2 CU2 com CU7.1 APS. A atualização corrige alguns problemas descritos abaixo.
+
+| Title | Description |
+|:---|:---|
+| **Deadlock potencial de motor de tupla** |A atualização corrige uma possibilidade de longa data de deadlock em um thread de plano de fundo de motor tupla e de transação distribuído. Depois de instalar CU7.1, os clientes que usaram TF634 para interromper o motor da tupla como parâmetro de inicialização do SQL Server ou o sinalizador de rastreamento global com segurança remova-a. | 
+| **Ocorre falha na consulta determinados lag/lead.** |Determinadas consultas em tabelas CCI com funções aninhadas lag/lead que seriam o erro agora é corrigido com essa atualização. | 
+
+
+<a name="h2-aps-au7"></a>
 ## <a name="aps-au7"></a>AU7 APS
-APS 2016 é um pré-requisito para atualizar para AU7. A seguir é novos no APS AU7:
+Data de lançamento - maio de 2018
+
+APS 2016 é um pré-requisito para atualizar para AU7. Estes são os novos recursos no APS AU7:
 
 ### <a name="auto-create-and-auto-update-statistics"></a>Criação automática e a atualização automática de estatísticas
 APS AU7 cria e atualiza as estatísticas automaticamente, por padrão. Para atualizar as configurações de estatísticas, os administradores podem usar um novo item de menu do comutador de recurso nas [Configuration Manager](appliance-configuration.md#CMTasks). O [comutador de recurso](appliance-feature-switch.md) controla a auto-create, a atualização automática e o comportamento de atualização assíncrona de estatísticas. Você também pode atualizar as configurações de estatísticas com o [ALTER DATABASE (Parallel Data Warehouse)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw) instrução.
@@ -42,7 +63,7 @@ Microsoft recomenda que todos os clientes instalem a atualização do BIOS. Micr
 
 ::: moniker-end
 ::: moniker range=">= aps-pdw-2016 || = sqlallproducts-allversions"
-
+<a name="h2-aps-au6"></a>
 ## <a name="aps-2016"></a>APS 2016
 Esta seção descreveu os novos recursos para AU6 APS 2016.
 
