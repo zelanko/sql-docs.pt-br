@@ -3,7 +3,7 @@ title: Manutenção e solução de problemas &amp; do Conector do SQL Server | M
 ms.custom: ''
 ms.date: 04/05/2017
 ms.prod: sql
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.suite: sql
 ms.technology: security
 ms.tgt_pltfrm: ''
@@ -15,12 +15,12 @@ caps.latest.revision: 21
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 9735b7d12bf8042436c6b554e6bb3c32fd5083b3
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 88bcc9874dbbef707ac727111515a298033168b2
+ms.sourcegitcommit: 3762dd447ca4bb449eda8476e72f393db0851b38
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35695827"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46013691"
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>Manutenção &amp; solução de problemas do Conector do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

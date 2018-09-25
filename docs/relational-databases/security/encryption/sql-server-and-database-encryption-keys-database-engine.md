@@ -3,7 +3,7 @@ title: Chaves de criptografia do SQL Server e banco de dados (Mecanismo de Banco
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.suite: sql
 ms.technology: security
 ms.tgt_pltfrm: ''
@@ -15,12 +15,12 @@ caps.latest.revision: 18
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 919cb3039d648c54241526a0c0686bd5f55942df
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 8e3b193b9488cfa0c058c92fe63af0e251c2abcf
+ms.sourcegitcommit: 3762dd447ca4bb449eda8476e72f393db0851b38
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35695327"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46013741"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>Chaves de criptografia do SQL Server e banco de dados (Mecanismo de Banco de Dados)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

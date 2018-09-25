@@ -3,7 +3,7 @@ title: Gerenciamento extensível de chaves do TDE do SQL Server usando o Azure K
 ms.custom: ''
 ms.date: 08/24/2018
 ms.prod: sql
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.suite: sql
 ms.technology: security
 ms.tgt_pltfrm: ''
@@ -17,12 +17,12 @@ caps.latest.revision: 34
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 4f8581201f9303c87a848a7456849efa7a09396a
-ms.sourcegitcommit: 0ab652fd02039a014c9661f3c5ccf4281cfb025b
+ms.openlocfilehash: b37105bb247391748f466f406c6b6dd8403e720b
+ms.sourcegitcommit: 3762dd447ca4bb449eda8476e72f393db0851b38
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925986"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46013811"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>Gerenciamento extensível de chaves do TDE do SQL Server usando o Azure Key Vault – Etapas de Configuração
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

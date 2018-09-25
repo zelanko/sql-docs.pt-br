@@ -16,15 +16,15 @@ caps.latest.revision: 41
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b4bc1092719a01bc885a261138baac388475cf9d
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 2d404cf10987e09abb3680363a9940ae2eeef582
+ms.sourcegitcommit: e34e9cd1b1ec02393dc88b1f0471023a7f7f278b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/19/2018
-ms.locfileid: "34334407"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46506164"
 ---
 # <a name="resource-governor"></a>Administrador de Recursos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resource Governor é um recurso que você pode usar para gerenciar a carga de trabalho e o consumo de recursos do sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O Administrador de Recursos permite que você especifique os limites de quantidade de CPU, E/S física e memória que as solicitações recebidas de aplicativos podem usar.  
   
 ## <a name="benefits-of-resource-governor"></a>Benefícios do Administrador de Recursos  
