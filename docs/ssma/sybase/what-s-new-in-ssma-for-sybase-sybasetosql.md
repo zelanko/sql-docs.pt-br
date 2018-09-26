@@ -1,7 +1,7 @@
 ---
 title: Quais são as novidades do SSMA para SAP ASE (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/14/2017
+ms.date: 09/22/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -16,15 +16,21 @@ caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d178cde4f921580c6c9953701d9e2101853400a2
-ms.sourcegitcommit: e2a19dfac1b581237ef694071fbace4768bb6bf4
+ms.openlocfilehash: 3ade0baa7e970639769cf5bdba522e54d3843771
+ms.sourcegitcommit: 7076fcb854c033a5dbeac7fcb22c5e15cf8528fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40392451"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46362030"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>Quais são as novidades do SSMA para SAP ASE (SybaseToSQL)
 Este artigo lista SSMA para SAP ASE (anteriormente conhecido como SSMA para Sybase) alterações em cada versão. 
+
+## <a name="ssma-v710"></a>O SSMA v7.10
+A versão de v7.10 do SSMA para SAP ASE foi aprimorada com correções direcionadas projetadas para fornecer segurança adicional e proteções de privacidade para atender às mudanças nos requisitos de globais.
+
+> [!IMPORTANT]
+> Com v SSMA 7.4 e versões posteriores, o .net 4.5.2 é um pré-requisito de instalação.
 
 ## <a name="ssma-v79"></a>O SSMA v7.9
 A versão de v7.9 do SSMA para SAP ASE contém as seguintes alterações:
@@ -87,7 +93,7 @@ A versão 7.3 do SSMA para Sybase contém as seguintes alterações:
   - Bibliotecas que podem ser consumidas por SSMA para realizar conversões personalizadas.
     - Agora você pode construir o código que pode lidar com conversões de sintaxe personalizada e conversões que anteriormente não eram tratadas pelo SSMA.
       - As instruções sobre como construir um conversor personalizado estão disponíveis nesta postagem de blog [recursos de conversão do estendendo o SQL Server Migration Assistant](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/).
-      - Projeto de exemplo para a conversão pode ser baixá-lo [postagem de blog](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/).
+      - Baixe um projeto de exemplo para a conversão deste [postagem de blog](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/).
 
 ## <a name="ssma-v72"></a>O SSMA v7.2
 A versão de v7.2 do SSMA para Sybase contém as seguintes alterações:

@@ -24,12 +24,12 @@ caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6a867b5d2caf4c21c6b99215b5e7e546d210aabc
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 741c454f78a116f9080e471bcaa49554fd2caf97
+ms.sourcegitcommit: 7076fcb854c033a5dbeac7fcb22c5e15cf8528fd
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43022285"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46361950"
 ---
 # <a name="syssoapendpoints-transact-sql"></a>sys.soap_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "43022285"
 |**is_sql_language_enabled**|**bit**|1 = A opção BATCHES = ENABLED foi especificada, o que significa que são permitidos lotes SQL ad hoc no ponto de extremidade.|  
 |**wsdl_generator_procedure**|**nvarchar(776)**|O nome de três partes do procedimento armazenado que implementa esse método.<br /><br /> Os nomes de métodos exigem sintaxe de três partes rígida. nomes de uma, duas ou quatro partes não são permitidos.|  
 |**DEFAULT_DATABASE**|**sysname**|O nome do banco de dados padrão especificado na opção DATABASE =.<br /><br /> NULL = DEFAULT foi especificado.|  
-|**default_namespace**|**nvarchar(384)**|O namespace padrão especificado no NAMESPACE = opção, ou 'http://tempuri.org' se DEFAULT foi especificado.|  
+|**default_namespace**|**nvarchar(384)**|O namespace padrão especificado no NAMESPACE = opção, ou `http://tempuri.org` se DEFAULT foi especificado.|  
 |**default_result_schema**|**tinyint**|O valor padrão da opção SCHEMA =.<br /><br /> 0 = NONE<br /><br /> 1 = STANDARD|  
 |**default_result_schema_desc**|**nvarchar(60)**|Descrição do valor padrão da opção SCHEMA =.<br /><br /> Nenhuma<br /><br /> STANDARD|  
 |**is_xml_charset_enforced**|**bit**|0 = A opção CHARACTER_SET = SQL foi especificada.<br /><br /> 1 = A opção CHARACTER_SET = XML foi especificada.|  

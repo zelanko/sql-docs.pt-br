@@ -20,12 +20,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 276ef0d34d04f58b0b23b213dc52faf5b404693e
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 7cbd74e51971e46eb26438333de419fa18dba5cd
+ms.sourcegitcommit: c3e233c13ebb6fbee60723590179da00802c3f3a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43101806"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47058895"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Processamento de grafo com o SQL Server e banco de dados SQL
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -74,11 +74,22 @@ AND Person1.Name = 'John';
 ```   
  
 ### <a name="fully-integrated-in-includessnoversionincludesssnoversion-mdmd-engine"></a>Totalmente integrado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mecanismo 
-Extensões de grafo são totalmente integradas no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mecanismo. Usamos o mesmo mecanismo de armazenamento, metadados, o processador de consultas etc para armazenar e consultar dados do gráfico. Isso permite aos usuários consultar todos os seus grafo e dados relacionais em uma única consulta. Os usuários também podem se beneficiar da combinação de recursos de gráfico com outros [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as tecnologias, como o columnstore, alta disponibilidade, o R services, etc. O banco de dados do Sistema tempdb será criptografado se qualquer outro banco da instância do SQL Server for encriptado com o uso de TDE[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Extensões de grafo são totalmente integradas no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mecanismo. Para armazenar e consultar dados do gráfico, use o mesmo mecanismo de armazenamento, metadados, o processador de consulta etc. Consulta em grafo e dados relacionais em uma única consulta. Combinar os recursos de gráfico com outros [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as tecnologias, como o columnstore, alta disponibilidade, o R services, etc. O banco de dados do Sistema tempdb será criptografado se qualquer outro banco da instância do SQL Server for encriptado com o uso de TDE[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
  
-### <a name="tooling-and-ecosystem"></a>Ferramentas e ecossistema  
-Os usuários se beneficiam de ferramentas existentes e ecossistema que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece. Ferramentas como o backup e restauração, importação e exportação, simplesmente funcionem BCP fora da caixa. Outras ferramentas ou serviços, como o SSIS, SSRS ou Power BI funcionará com tabelas de grafo, exatamente como eles funcionam com tabelas relacionais.
- 
+### <a name="tooling-and-ecosystem"></a>Ferramentas e ecossistema
+
+Se beneficiar de ferramentas existentes e ecossistema que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece. Ferramentas como o backup e restauração, importação e exportação, simplesmente funcionem BCP fora da caixa. Outras ferramentas ou serviços, como o SSIS, SSRS ou do Power BI funcionará com tabelas de grafo, exatamente como eles funcionam com tabelas relacionais.
+
+## <a name="edge-constraints"></a>Restrições de borda
+Uma restrição de borda é definida em uma tabela de borda do gráfico e é um par de tabelas de nó que pode se conectar a um tipo de borda especificado. Isso fornece aos usuários um melhor controle sobre seu esquema de grafo. Com a Ajuda de restrições de borda que os usuários podem restringir o tipo de nós de que uma determinada borda é permitida para se conectar. 
+
+Para saber mais sobre como criar e usar restrições de borda, consulte [restrições de borda](../../relational-databases/tables/graph-edge-constraints.md)
+
+## <a name="merge-dml"></a>Mesclar DML 
+O [mesclar](../../t-sql/statements/merge-transact-sql.md) executa a instrução insert, atualizar ou excluir operações em uma tabela de destino com base nos resultados de uma junção com uma tabela de origem. Por exemplo, você pode sincronizar duas tabelas inserindo, atualizando ou excluindo linhas em uma tabela de destino com base nas diferenças entre a tabela de destino e a tabela de origem. Agora há suporte para o uso de predicados de correspondência em uma instrução de mesclagem no banco de dados SQL e SQL Server vNext. Ou seja, agora é possível mesclar seus dados de gráfico atual (tabelas de borda ou nó) com novos dados usando os predicados de correspondência para especificar relações de gráfico em uma única instrução, em vez de instruções de INSERT/UPDATE/DELETE separadas.
+
+Para saber mais sobre como a correspondência pode ser usada em mesclagem DML consulte [instrução MERGE](../../t-sql/statements/merge-transact-sql.md)
+
  ## <a name="next-steps"></a>Próximas etapas  
 Leia o [banco de dados de grafos SQL - arquitetura](./sql-graph-architecture.md)
    

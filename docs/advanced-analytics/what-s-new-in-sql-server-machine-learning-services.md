@@ -3,23 +3,37 @@ title: O que&#39;s novos no SQL Server Machine Learning Services | Microsoft Doc
 description: Lançamentos de novos recursos para cada versão do SQL Server 2016 R Services, Microsoft R Server, serviços de aprendizado de máquina do SQL Server 2017.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/28/2018
+ms.date: 09/24/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: c49e56331a48921a123f067f32062cd138930d2c
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: c6df8f09d46b2f90c1cd464b6e80cda20e83c97f
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43888852"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712561"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>O que há de novo nos serviços do SQL Server Machine Learning 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Recursos de aprendizado de máquina são adicionados ao SQL Server em cada versão enquanto continuamos a expandir, estender e aprofundar a integração entre a plataforma de dados e de ciência de dados, análise e você deseja implementar sobre seus dados de aprendizado supervisionado. 
+Recursos de aprendizado de máquina são adicionados ao SQL Server em cada versão enquanto continuamos a expandir, estender e aprofundar a integração entre a plataforma de dados, análise avançada e de ciência de dados. 
 
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+## <a name="new-in-sql-server-2019-preview"></a>Novo na visualização do SQL Server de 2019
+
+Essa versão adiciona os recursos mais solicitados para operações de aprendizado de máquina de R e Python no SQL Server. Para obter mais informações sobre todos os recursos nesta versão, consulte [o que há de novo no SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md) e [notas de versão do SQL Server 2019](../sql-server/sql-server-ver15-release-notes.md).
+
+| Versão | Atualização do recurso |
+|---------|----------------|
+| CTP 2.0 | Suporte a plataformas Linux para R e Python de aprendizado de máquina, além da nova extensão de Java. Para obter ajuda na introdução, consulte [instalar o SQL Server Machine Learning Services no Linux](../linux/sql-server-linux-setup-machine-learning.md). |
+| CTP 2.0 | O [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) inclui dois novos parâmetros que permitem que você gere facilmente vários modelos de dados particionados. Saiba mais neste tutorial [criar modelos com base em partição em R](tutorials/r-tutorial-create-models-per-partition.md). |
+| CTP 2.0 | Agora há suporte para o suporte de cluster de failover no Windows e Linux, supondo que o serviço Launchpad do SQL Server é iniciado em todos os nós. Para obter mais informações, consulte [instalação de cluster de failover do SQL Server](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md). |
+::: moniker-end
+
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 ## <a name="new-in-sql-server-2017"></a>Novo no SQL Server 2017
 
 Essa versão adiciona [suporte do Python e algoritmos de aprendizado de máquina de líderes do setor](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/). Renomeado para refletir o novo escopo, o SQL Server 2017 marca a introdução de [serviços do SQL Server Machine Learning (no banco de dados)](what-is-sql-server-machine-learning.md), com suporte de idioma para o Python e R. 
@@ -66,7 +80,7 @@ Você pode usar o T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) fun�
 ### <a name="standalone-server-as-a-shared-feature-in-sql-server-setup"></a>Servidor autônomo como um recurso compartilhado na instalação do SQL Server
 
 Esta versão também adiciona [SQL Server Machine Learning Server (autônomo)](r/r-server-standalone.md), um servidor de ciência de dados totalmente independente, que dão suporte a análise preditiva e estatística em R e Python. Como com o R Services, esse servidor é a próxima versão do SQL Server 2016 R Server (autônomo). Com o servidor autônomo, você pode distribuir e dimensionar soluções R ou Python, sem nenhuma dependência no SQL Server.
-
+::: moniker-end
 
 ## <a name="new-in-sql-server-2016"></a>Novo no SQL Server 2016
 
@@ -83,15 +97,15 @@ Para o recurso anúncios completo, consulte [o que há de novo no SQL Server 201
 
 ## <a name="linux-support-roadmap"></a>Roteiro de suporte do Linux
 
-Aprendizado de máquina usando o R ou Python no banco de dados no momento, não há suporte no SQL Server no Linux. Procure anúncios em uma versão posterior.
+SQL Server 2019 CTP 2.0 adiciona suporte do Linux para R, Python e Java quando você instala os pacotes com uma instância do mecanismo de banco de dados de aprendizado de máquina. Para obter mais informações, consulte [instalar o SQL Server Machine Learning Services no Linux](../linux/sql-server-linux-setup-machine-learning.md).
 
-No entanto, no Linux você pode realizar [pontuação nativa](sql-native-scoring.md) usando a função PREVER o T-SQL. Pontuação nativa permite a pontuação de um modelo pré-treinado muito rápido, sem chamar ou até mesmo exigir um tempo de execução de R. Isso significa que você pode usar o SQL Server no Linux para gerar previsões com muita rapidez para atender a aplicativos cliente.
+No Linux, SQL Server 2017 não tem integração de R ou Python, mas você pode usar [pontuação nativa](sql-native-scoring.md) no Linux porque essa funcionalidade está disponível por meio do T-SQL [PREDICT](), que é executado no Linux. Pontuação nativa permite que a pontuação de alto desempenho de um modelo previamente treinado, sem chamar ou até mesmo exigir um tempo de execução de R.
 
 <a name="azure-sql-database-roadmap"></a>
 
 ## <a name="azure-sql-database-roadmap"></a>Roteiro de banco de dados SQL do Azure
 
-Há suporte limitado para R no banco de dados SQL: disponível apenas no Centro-Oeste dos EUA, em serviços criados na camada Premium. Cobertura expandida, incluindo o suporte do Python, é provável a seguir em uma versão futura. No entanto, não há nenhuma data de lançamento projetada no momento.  
+Atualmente, não há nenhum suporte para serviços Machine Learning (R e Python) no banco de dados SQL. Suporte está previsto, mas não há nenhuma data de lançamento projetada no momento.  
 
 ## <a name="next-steps"></a>Próximas etapas
 

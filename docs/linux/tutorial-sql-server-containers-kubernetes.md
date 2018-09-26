@@ -1,6 +1,6 @@
 ---
-title: Configurar um contêiner do SQL Server no Kubernetes para alta disponibilidade | Microsoft Docs
-description: Este tutorial mostra como implantar uma solução de alta disponibilidade do SQL Server com o Kubernetes no serviço de contêiner do Azure.
+title: Implantar um contêiner do SQL Server em Kubernetes com serviços de Kubernetes do Azure (AKS) | Microsoft Docs
+description: Este tutorial mostra como implantar uma solução de alta disponibilidade do SQL Server com o Kubernetes no serviço Kubernetes do Azure.
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -11,20 +11,20 @@ ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux,mvc
 ms.technology: linux
-ms.openlocfilehash: 5c6e794fa2e76a0fec58d767d14e9ac73fb72534
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: fba598abb0431d2e9a80b0cdc0976f72c6eadc15
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980118"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712678"
 ---
-# <a name="configure-a-sql-server-container-in-kubernetes-for-high-availability"></a>Configurar um contêiner do SQL Server no Kubernetes para alta disponibilidade
+# <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Implantar um contêiner do SQL Server em Kubernetes com serviços de Kubernetes do Azure (AKS)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Saiba como configurar uma instância do SQL Server em Kubernetes no Azure contêiner AKS (serviço), com o armazenamento persistente de alta disponibilidade (HA). A solução fornece resiliência. Se a instância do SQL Server falhar, Kubernetes automaticamente recria em um pod de novo. O AKS fornece resiliência contra uma falha de nó de Kubernetes. 
+Saiba como configurar uma instância do SQL Server em Kubernetes no serviço de Kubernetes do Azure (AKS), com o armazenamento persistente de alta disponibilidade (HA). A solução fornece resiliência. Se a instância do SQL Server falhar, Kubernetes automaticamente recria em um pod de novo. Kubernetes também fornece resiliência contra uma falha de nó.
 
-Este tutorial demonstra como configurar uma instância do SQL Server altamente disponível em contêineres que usam o AKS. 
+Este tutorial demonstra como configurar uma instância do SQL Server altamente disponível em um contêiner no AKS. Você também pode [criar um grupo de disponibilidade do SQL Server em Kubernetes](tutorial-sql-server-ag-kubernetes.md). Para comparar as duas soluções diferentes de Kubernetes, consulte [alta disponibilidade para contêineres do SQL Server](sql-server-linux-container-ha-overview.md).
 
 > [!div class="checklist"]
 > * Criar uma senha de SA
@@ -33,7 +33,7 @@ Este tutorial demonstra como configurar uma instância do SQL Server altamente d
 > * Conecte-se com o SQL Server Management Studio (SSMS)
 > * Verifique se a falha e recuperação
 
-## <a name="ha-solution-that-uses-kubernetes-running-in-azure-container-service"></a>Alta disponibilidade solução que usa o Kubernetes em execução no serviço de contêiner do Azure
+## <a name="ha-solution-on-kubernetes-running-in-azure-kubernetes-service"></a>Solução de HA no Kubernetes em execução no serviço Kubernetes do Azure
 
 Kubernetes 1.6 ou posterior tem suporte para [classes de armazenamento](http://kubernetes.io/docs/concepts/storage/storage-classes/), [declarações de volume persistente](http://kubernetes.io/docs/concepts/storage/storage-classes/#persistentvolumeclaims)e o [tipo de volume de disco do Azure](https://github.com/kubernetes/examples/tree/master/staging/volumes/azure_disk). Você pode criar e gerenciar suas instâncias do SQL Server nativamente no Kubernetes. O exemplo neste artigo mostra como criar uma [implantação](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) para atingir uma configuração de alta disponibilidade semelhante a uma instância de cluster de failover de disco compartilhado. Nessa configuração, o Kubernetes desempenha a função de orquestrador de cluster. Quando uma instância do SQL Server em um contêiner de falha, o orquestrador inicializa a outra instância do contêiner que anexa ao mesmo armazenamento persistente.
 
@@ -43,11 +43,11 @@ No diagrama anterior, `mssql-server` é um contêiner em um [pod](http://kuberne
 
 No diagrama a seguir, o `mssql-server` contêiner falhou. Como o orquestrador Kubernetes garante a contagem correta de instâncias íntegras na réplica definida e inicia um novo contêiner de acordo com a configuração. O orquestrador inicia um pod de novo no mesmo nó, e `mssql-server` reconecta-se ao mesmo armazenamento persistente. O serviço se conecta ao criada novamente `mssql-server`.
 
-![Diagrama de cluster do Kubernetes SQL Server](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-pod-fail.png)
+![Diagrama de cluster do Kubernetes SQL Server](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-node-fail.png)
 
 No diagrama a seguir, o nó que hospeda o `mssql-server` contêiner falhou. O orquestrador inicia o pod de novo em um nó diferente, e `mssql-server` reconecta-se ao mesmo armazenamento persistente. O serviço se conecta ao criada novamente `mssql-server`.
 
-![Diagrama de cluster do Kubernetes SQL Server](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-node-fail.png)
+![Diagrama de cluster do Kubernetes SQL Server](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-pod-fail.png)
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -176,7 +176,7 @@ Nesta etapa, crie um manifesto para descrever o contêiner com base no SQL Serve
          terminationGracePeriodSeconds: 10
          containers:
          - name: mssql
-           image: microsoft/mssql-server-linux
+           image: mcr.microsoft.com/mssql/server/mssql-server-linux
            ports:
            - containerPort: 1433
            env:

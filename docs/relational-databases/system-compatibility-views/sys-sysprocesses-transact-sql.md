@@ -25,12 +25,12 @@ caps.latest.revision: 57
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c3a27e699312793e734d9a94680677eb509a2bd5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f63aeb2b2a898335037f8a9df4b36186b66900f8
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33233749"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712308"
 ---
 # <a name="syssysprocesses-transact-sql"></a>sys.sysprocesses (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,14 +51,14 @@ ms.locfileid: "33233749"
 |waitresource|**nchar(256)**|Representação textual de um recurso de bloqueio.|  
 |dbid|**smallint**|ID do banco de dados usado atualmente pelo processo.|  
 |uid|**smallint**|ID do usuário que executou o comando. Excederá ou retornará NULL se o número de usuários e funções exceder 32.767.|  
-|cpu|**Int**|Tempo de CPU cumulativo para o processo. A entrada é atualizada para todos os processos, independentemente da opção SET STATISTICS TIME ser ON ou OFF.|  
+|cpu|**int**|Tempo de CPU cumulativo para o processo. A entrada é atualizada para todos os processos, independentemente da opção SET STATISTICS TIME ser ON ou OFF.|  
 |physical_io|**bigint**|Leituras e gravações de disco cumulativas para o processo.|  
-|memusage|**Int**|Número de páginas no cache de procedimento que estão atualmente alocadas para este processo. Um número negativo indica que o processo está liberando memória alocada por outro processo.|  
+|memusage|**int**|Número de páginas no cache de procedimento que estão atualmente alocadas para este processo. Um número negativo indica que o processo está liberando memória alocada por outro processo.|  
 |login_time|**datetime**|Hora na qual um processo de cliente efetuou logon no servidor.|  
 |last_batch|**datetime**|Última vez que um processo de cliente executou uma chamada de procedimento armazenado remoto ou uma instrução EXECUTE.|  
 |ecid|**smallint**|ID do contexto de execução usado para identificar exclusivamente os subthreads que operam em nome de um único processo.|  
 |open_tran|**smallint**|Número de transações abertas para o processo.|  
-|status|**nchar(30)**|Status do ID do processo. Os valores possíveis são:<br /><br /> **inativo**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está redefinindo a sessão.<br /><br /> **executando** = a sessão está executando um ou mais lotes. Quando são habilitados MARS (Vários Conjuntos de Resultados Ativos), uma sessão pode executar vários lotes. Para obter mais informações, consulte [usando Multiple Active Result Sets & #40; MARS & #41; ](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **plano de fundo** = a sessão está executando uma tarefa em segundo plano, como detecção de deadlock.<br /><br /> **reversão** = a sessão tem uma reversão de transação em processo.<br /><br /> **pendente** = a sessão está esperando por um thread de trabalho se torne disponível.<br /><br /> **executável** = a tarefa na sessão está na fila executável de um agendador enquanto aguarda para obter um quantum de tempo.<br /><br /> **spinloop** = a tarefa na sessão está aguardando um spinlock seja liberado.<br /><br /> **suspenso** = a sessão está aguardando um evento, como e/s para concluir.|  
+|status|**nchar(30)**|Status do ID do processo. Os valores possíveis são:<br /><br /> **inativas**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está redefinindo a sessão.<br /><br /> **executando** = a sessão está executando um ou mais lotes. Quando são habilitados MARS (Vários Conjuntos de Resultados Ativos), uma sessão pode executar vários lotes. Para obter mais informações, confira [Usando o MARS &#40;conjunto de resultados ativos múltiplos&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **plano de fundo** = a sessão está executando uma tarefa em segundo plano, como detecção de deadlock.<br /><br /> **reversão** = a sessão tem uma reversão de transação em processo.<br /><br /> **pendente** = a sessão está aguardando um thread de trabalho se torne disponível.<br /><br /> **executável** = a tarefa na sessão está na fila executável de um agendador enquanto aguarda para obter um quantum de tempo.<br /><br /> **spinloop** = a tarefa na sessão está aguardando um spinlock seja liberado.<br /><br /> **suspenso** = a sessão está aguardando um evento, como e/s, para ser concluída.|  
 |sid|**binary(86)**|GUID (Identificador Global Exclusivo) do usuário.|  
 |hostname|**nchar(128)**|Nome da estação de trabalho.|  
 |program_name|**nchar(128)**|Nome do programa aplicativo.|  
@@ -71,11 +71,12 @@ ms.locfileid: "33233749"
 |loginame|**nchar(128)**|Nome de logon.|  
 |context_info|**binary(128)**|Dados armazenados em um lote usando a instrução SET CONTEXT_INFO.|  
 |sql_handle|**binary(20)**|Representa o lote ou o objeto atualmente em execução.<br /><br /> **Observação** esse valor é derivado do lote ou memória do endereço do objeto. Esse valor não é calculado usando o algoritmo com base em hash do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|stmt_start|**Int**|Deslocamento inicial da instrução SQL atual para o sql_handle especificado.|  
-|stmt_end|**Int**|Deslocamento final da instrução SQL atual para o sql_handle especificado.<br /><br /> -1 = A instrução atual é executada até o final dos resultados retornados pela função fn_get_sql do sql_handle especificado.|  
-|request_id|**Int**|ID da solicitação. Usado para identificar solicitações em execução em uma sessão específica.|  
+|stmt_start|**int**|Deslocamento inicial da instrução SQL atual para o sql_handle especificado.|  
+|stmt_end|**int**|Deslocamento final da instrução SQL atual para o sql_handle especificado.<br /><br /> -1 = A instrução atual é executada até o final dos resultados retornados pela função fn_get_sql do sql_handle especificado.|  
+|request_id|**int**|ID da solicitação. Usado para identificar solicitações em execução em uma sessão específica.|
+|page_resource |**binary(8)** |**Aplica-se ao**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br /><br /> Uma representação hexadecimal de 8 bytes do recurso da página se o `waitresource` coluna contém uma página. |  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Se um usuário tiver permissão VIEW SERVER STATE no servidor, ele verá todas as sessões em execução na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; caso contrário, verá apenas a sessão atual.  
   
 ## <a name="see-also"></a>Consulte também  

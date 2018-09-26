@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7420476b20cef612c45227f66497ae554def7b1d
-ms.sourcegitcommit: 9d0ff4f3e40db48fc01788684d34719065d159b6
+ms.openlocfilehash: 58a996ae500a27a6878b30fc072bf09a75d4ba43
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44724330"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712749"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server"></a>Dados de demonstração de táxi de Nova York para o SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -127,6 +127,14 @@ A tabela a seguir resume os objetos criados no banco de dados de demonstração 
 |**PredictTip**  |procedimento armazenado |Criado pelo script PredictTip.sql. Chama o modelo treinado para criar previsões usando o modelo. O procedimento armazenado aceita uma consulta como seu parâmetro de entrada e retorna uma coluna de valores numéricos que contêm as pontuações para as linhas de entrada. Esse procedimento armazenado é usado em [Operacionalizar o modelo de R](sqldev-operationalize-the-model.md).|
 |**PredictTipSingleMode**  |procedimento armazenado| Criado pelo script PredictTipSingleMode.sql. Chama o modelo treinado para criar previsões usando o modelo. Esse procedimento armazenado aceita uma nova observação como entrada, com valores de recursos individuais passados como parâmetros na linha, e retorna um valor que prevê o resultado da nova observação. Esse procedimento armazenado é usado em [Operacionalizar o modelo de R](sqldev-operationalize-the-model.md).|
 |**TrainTipPredictionModel**  |procedimento armazenado|Criado pelo script TrainTipPredictionModel.sql. Treina um modelo de regressão logística chamando um pacote R. O modelo prevê o valor da coluna tipped e é treinado usando uma seleção aleatória de 70% dos dados. A saída do procedimento armazenado é o modelo treinado, que é salvo na tabela nyc_taxi_models. Esse procedimento armazenado é usado em [treinar e salvar um modelo](../r/sqldev-train-and-save-a-model-using-t-sql.md).|
+
+## <a name="query-data-for-verification"></a>Consultar dados de verificação
+
+Como uma etapa de validação, execute uma consulta para confirmar se que os dados foram carregados.
+
+1. No Pesquisador de objetos em bancos de dados, expanda o **NYCTaxi_Sample** banco de dados e, em seguida, abra a pasta de tabelas.
+
+2. Clique com botão direito do **nyctaxi_sample** e escolha **selecionar 1000 linhas superiores** retorne alguns dados.
 
 ## <a name="next-steps"></a>Próximas etapas
 

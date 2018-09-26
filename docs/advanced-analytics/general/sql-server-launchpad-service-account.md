@@ -8,28 +8,32 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 0afdb02c578de92bc91c5f47e973148136ebd919
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 76087367c1ba24894989038fb6fc22427d8be77b
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43892845"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712719"
 ---
 # <a name="sql-server-launchpad-service-configuration"></a>Configuração do serviço Launchpad do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Um separado [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] serviço é criado para a instância do mecanismo de banco de dados ao qual você adicionou a integração (R ou Python) de aprendizado de máquina do SQL Server.
+Um separado [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] serviço é criado para cada instância do mecanismo de banco de dados ao qual você adicionou a integração (R ou Python) de aprendizado de máquina do SQL Server.
 
-## <a name="service-account-configuration"></a>Configuração da conta de serviço
+## <a name="account-permissions"></a>Permissões de conta
 
 Por padrão, o Launchpad do SQL Server está configurado para ser executado sob **NT Service\MSSQLLaunchpad**, que é provisionado com todas as permissões necessárias para executar scripts externos. Removendo permissões desta conta pode resultar em Launchpad Falha ao iniciar ou acessar a instância do SQL Server em que os scripts externos devem ser executados.
 
-Permissão necessária para esta conta estão listados abaixo. Se você modificar a conta de serviço, certifique-se de usar o **política de segurança Local** aplicativo para incluir estas permissões:
+Se você modificar a conta de serviço, certifique-se de usar o **política de segurança Local** aplicativo (**todos os aplicativos** > **ferramentas administrativas do Windows**  >  **Política de segurança local**).
 
-+ Ajustar cotas de memória para um processo (SeIncreaseQuotaPrivilege)
-+ Ignorar verificação completa (SeChangeNotifyPrivilege)
-+ Fazer logon como um serviço (SeServiceLogonRight)
-+ Substituir um token de nível de processo (SeAssignPrimaryTokenPrivilege)
+Permissões necessárias para esta conta são listadas na tabela a seguir.
+
+| Configuração de diretiva de grupo | Nome de constante |
+|----------------------|---------------|
+| [Ajustar quotas de memória para um processo](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/adjust-memory-quotas-for-a-process) | SeIncreaseQuotaPrivilege | 
+| [Ignorar a verificação completa](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/bypass-traverse-checking) | SeChangeNotifyPrivilege | 
+| [Faça logon como um serviço](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/log-on-as-a-service) | SeServiceLogonRight | 
+| [Substituir um token no nível de processo](https://docs.microsoft.com/windows/security/threat-protection/security-policy-settings/replace-a-process-level-token) | SeAssignPrimaryTokenPrivilege | 
 
 Para obter mais informações sobre as permissões necessárias para executar serviços SQL Server, consulte [Configurar contas de serviço e permissões do Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).
 
@@ -37,9 +41,14 @@ Para obter mais informações sobre as permissões necessárias para executar se
 
 ## <a name="configuration-properties"></a>Propriedades de configuração
 
+Normalmente, não há nenhum motivo para modificar a configuração de serviço. As propriedades que pode ser alteradas incluem a conta de serviço, a contagem de processos externos (20 por padrão) ou a senha de redefinição de política para contas de trabalho.
+
 1. Abra [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md). 
 
-2. Launchpad do SQL Server com o botão direito e selecione **propriedades**.
+  + Na página inicial, digite **MMC** para abrir o Console de gerenciamento Microsoft.
+  + Na **arquivo** > **Adicionar/Remover Snap-in**, mover **SQL Server Configuration Manager** do disponíveis para o Snap-ins selecionados.
+
+2. No SQL Server Configuration Manager em serviços do SQL Server, Launchpad do SQL Server com o botão direito e selecione **propriedades**.
 
     + Para alterar a conta de serviço, clique o **fazer logon** guia.
 
@@ -48,7 +57,7 @@ Para obter mais informações sobre as permissões necessárias para executar se
 > [!Note]
 > Em versões anteriores do SQL Server 2016 R Services, você pode alterar algumas propriedades do serviço, editando o [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] arquivo de configuração. Esse arquivo não é usado para alterar as configurações. SQL Server Configuration Manager é a abordagem correta para que as alterações de configuração de serviço, como a conta de serviço e o número de usuários.
 
-#### <a name="debug-settings"></a>Configurações de depuração
+## <a name="debug-settings"></a>Configurações de depuração
 
 Algumas propriedades só podem ser alteradas usando o arquivo de configuração da barra inicial, que pode ser útil em casos limitados, como a depuração. O arquivo de configuração é criado durante a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de instalação e por padrão é salvo como um arquivo de texto sem formatação no seguinte local: `<instance path>\binn\rlauncher.config`
 

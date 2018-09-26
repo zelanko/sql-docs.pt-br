@@ -1,7 +1,7 @@
 ---
 title: column_master_keys (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/10/2016
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: system-catalog-views
@@ -32,12 +32,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4251ecafad275e64021729abe54fc243d9077f9f
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: e683a88fb9490a7041ac02edc02a8ba2f63b1382
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43079719"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713538"
 ---
 # <a name="syscolumnmasterkeys-transact-sql"></a>sys.column_master_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -52,6 +52,10 @@ ms.locfileid: "43079719"
 |**modify_date**|**datetime**|Data em que a chave mestra de coluna foi modificado pela última vez.|  
 |**key_store_provider_name**|**sysname**|Nome do provedor para o repositório de chave mestra de coluna que contém a CMK. Os valores permitidos são:<br /><br /> MSSQL_CERTIFICATE_STORE – se o repositório de chave mestra de coluna for um certificado de Store.<br /><br /> Um valor definido pelo usuário, se o repositório de chave mestra de coluna for de um tipo personalizado.|  
 |**key_path**|**nvarchar(4000)**|Um caminho de store específicas de chave mestra de coluna da chave. O formato do caminho depende do tipo de repositório de chave mestra de coluna. Exemplo:<br /><br /> `'CurrentUser/Personal/'<thumbprint>`<br /><br /> Para um repositório de chaves mestras de coluna personalizada, o desenvolvedor é responsável por definir um caminho de chave que é para o repositório de chave mestra de coluna personalizado.|  
+|**allow_enclave_computations**|**bit**|Indica se a chave mestra de coluna é enclave habilitado, (se chaves de criptografia de coluna, criptografadas com essa chave mestre, podem ser usadas para cálculos de enclaves seguras do lado do servidor). Para obter mais informações, consulte [Always Encrypted com enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md).|  
+|**signature**|**varbinary(max)**|Uma assinatura digital da **key_path** e **allow_enclave_computations**, produzido usando-se a chave mestra de coluna, referenciado pelo **key_path**.|
+
+
   
 ## <a name="permissions"></a>Permissões  
  Requer o **VIEW ANY COLUMN MASTER KEY** permissão.  

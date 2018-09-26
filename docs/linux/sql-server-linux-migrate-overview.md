@@ -12,21 +12,21 @@ ms.suite: sql
 ms.technology: linux
 ms.assetid: 1619489d-377a-4f32-8930-d4f536539689
 ms.custom: sql-linux
-ms.openlocfilehash: 818920fe2f79a19253f2a0a943a77fe0c067df1f
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 4571589c84d5faaed82ae251a4af262d51e30f3f
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083659"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712868"
 ---
 # <a name="migrate-databases-and-structured-data-to-sql-server-on-linux"></a>Migrar bancos de dados e dados estruturados para o SQL Server no Linux 
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Você pode migrar seus bancos de dados e os dados para o SQL Server 2017 em execução no Linux. O método que você optar por usar depende da fonte de dados e seu cenário específico. As seções a seguir fornecem práticas recomendadas para vários cenários de migração.
+Você pode migrar seus bancos de dados e os dados para o SQL Server em execução no Linux. O método que você optar por usar depende da fonte de dados e seu cenário específico. As seções a seguir fornecem práticas recomendadas para vários cenários de migração.
 
 ## <a name="migrate-from-sql-server-on-windows"></a>Migrar do SQL Server no Windows
-Se você quiser migrar bancos de dados do SQL Server no Windows para o SQL Server 2017 no Linux, a técnica recomendada é usar o SQL Server backup e restauração.
+Se você quiser migrar bancos de dados do SQL Server no Windows para o SQL Server no Linux, a técnica recomendada é usar o SQL Server backup e restauração.
 
 1. Crie um backup do banco de dados no computador do Windows.
 2. Transferir o arquivo de backup para a máquina do SQL Server Linux de destino.
@@ -41,7 +41,7 @@ Também é possível exportar seu banco de dados para um arquivo BACPAC (um arqu
 - [Exportar e importar um banco de dados com o SSMS ou SqlPackage.exe](sql-server-linux-migrate-ssms.md)
 
 ## <a name="migrate-from-other-database-servers"></a>Migrar de outros servidores de banco de dados
-Você pode migrar bancos de dados em outros sistemas de banco de dados para o SQL Server 2017 no Linux. Isso inclui bancos de dados Microsoft Access, DB2, MySQL, Oracle e Sybase. Nesse cenário, use o gerenciamento de Assistente do SSMA (SQL Server) para automatizar a migração para o SQL Server no Linux. Para obter mais informações, consulte [Use o SSMA para migrar bancos de dados do SQL Server no Linux](sql-server-linux-migrate-ssma.md).  
+Você pode migrar bancos de dados em outros sistemas de banco de dados do SQL Server no Linux. Isso inclui bancos de dados Microsoft Access, DB2, MySQL, Oracle e Sybase. Nesse cenário, use o gerenciamento de Assistente do SSMA (SQL Server) para automatizar a migração para o SQL Server no Linux. Para obter mais informações, consulte [Use o SSMA para migrar bancos de dados do SQL Server no Linux](sql-server-linux-migrate-ssma.md).  
 
 ## <a name="migrate-structured-data"></a>Migrar dados estruturados
 Também existem técnicas de importação de dados brutos. Você pode estruturar os arquivos de dados que foram exportados de outros bancos de dados ou fontes de dados. Nesse caso, você pode usar a ferramenta bcp para inserção em massa os dados. Ou você pode executar o SQL Server Integration Services no Windows para importar os dados para um banco de dados do SQL Server no Linux. SQL Server Integration Services permite que você execute transformações mais complexas sobre os dados durante a importação. 

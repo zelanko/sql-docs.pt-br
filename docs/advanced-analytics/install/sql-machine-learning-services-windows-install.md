@@ -3,19 +3,19 @@ title: Instalar o SQL Server serviços de Machine Learning (no banco de dados) n
 description: R no SQL Server ou Python no SQL Server está disponível quando você instala os serviços de aprendizado de máquina do SQL Server 2017 no Windows.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/08/2018
+ms.date: 09/14/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 285745a36552a0029ae0df383fc629b94632d524
-ms.sourcegitcommit: 8008ea52e25e65baae236631b48ddfc33014a5e0
+ms.openlocfilehash: c1c7b9941ecbc36bca5431c7a6cd0ddfc61ebb7e
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44311646"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713028"
 ---
-# <a name="install-sql-server-machine-learning-services"></a>Instalar serviços de aprendizado de máquina do SQL Server
+# <a name="install-sql-server-machine-learning-services-on-windows"></a>Instalar serviços no Windows de aprendizado de máquina do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 A partir do SQL Server 2017, R e Python dão suporte para análise no banco de dados é fornecido em serviços do SQL Server Machine Learning, o sucessor [SQL Server R Services](../r/sql-server-r-services.md) introduzido no SQL Server 2016. Bibliotecas de função estão disponíveis em R e Python e executar como script externo em uma instância do mecanismo de banco de dados. 
@@ -24,12 +24,12 @@ Este artigo explica como instalar o componente de aprendizado de máquina execut
 
 ## <a name="bkmk_prereqs"> </a> Lista de verificação de pré-instalação
 
-+ A instalação do SQL Server 2017 é necessária para serviços do Machine Learning com R e Python. Se em vez disso, você tiver a mídia de instalação do SQL Server 2016, consulte [instalar o SQL Server 2016 R Services](sql-r-services-windows-install.md) para obter suporte à linguagem R.
++ Instalação do 2017 (ou superior) SQL Server será necessária se você deseja instalar os serviços de Machine Learning com o suporte de linguagem R, Python ou Java. Se em vez disso, você tiver a mídia de instalação do SQL Server 2016, você pode instalar [SQL Server 2016 R Services (no banco de dados)](sql-r-services-windows-install.md) para obter suporte à linguagem R.
 
 + Uma instância do mecanismo de banco de dados é necessária. Você não pode instalar apenas recursos de R ou Python, embora você pode adicioná-los incrementalmente a uma instância existente.
 
-+ Não instale os serviços de aprendizado de máquina em um cluster de failover. O mecanismo de segurança usado para isolar processos de R e Python não é compatível com um ambiente de cluster de failover do Windows Server.
-
+- Instalar serviços de Machine Learning é *não tem suporte* em um cluster de failover no SQL Server 2017. No entanto, ele *há suporte para* com o SQL Server de 2019. 
+ 
 + Não instale os serviços de aprendizado de máquina em um controlador de domínio. A parte de serviços de Machine Learning da instalação falhará.
 
 + Não instale **recursos compartilhados** > **Machine Learning Server (autônomo)** no mesmo computador que está executando uma instância no banco de dados. Um servidor autônomo competirão pelos mesmos recursos, prejudicando o desempenho de ambas as instalações.
@@ -108,7 +108,7 @@ Para instalações locais, você deve executar a Instalação como um administra
     > [!TIP]
     > Você pode baixar e instalar a versão apropriada nesta página: [baixar o SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
     > 
-    > Você também pode experimentar a versão de visualização da [SQL Operations Studio](https://docs.microsoft.com/sql/sql-operations-studio/what-is), que oferece suporte a tarefas administrativas e consultas no SQL Server.
+    > Você também pode experimentar a versão de visualização da [Studio do Azure Data](../../azure-data-studio/what-is.md), que oferece suporte a tarefas administrativas e consultas no SQL Server.
   
 2. Conecte-se à instância onde você instalou os serviços de Machine Learning, clique em **nova consulta** para abrir uma janela de consulta e execute o seguinte comando:
 
@@ -193,34 +193,31 @@ Use as etapas a seguir para verificar se todos os componentes usados para inicia
 
 ## <a name="additional-configuration"></a>Configuração adicional
 
-Se a etapa de verificação de script externo foi bem-sucedida, você pode executar comandos de Python do SQL Server Management Studio, Visual Studio Code ou qualquer outro cliente que pode enviar instruções T-SQL para o servidor.
+Se a etapa de verificação de script externo foi bem-sucedida, você pode executar comandos de R ou Python do SQL Server Management Studio, Visual Studio Code ou qualquer outro cliente que pode enviar instruções T-SQL para o servidor.
 
 Se você obteve um erro ao executar o comando, examine as etapas de configuração adicionais nesta seção. Talvez seja necessário fazer configurações adicionais de apropriado para o serviço ou o banco de dados.
 
-Cenários comuns que requerem alterações adicionais incluem:
+No nível de instância, configurações adicionais podem incluir:
 
 * [Configurar o firewall do Windows para conexões de entrada](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)
 * [Habilite os protocolos de rede adicionais](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)
 * [Habilitar conexões remotas](../../database-engine/configure-windows/configure-the-remote-access-server-configuration-option.md)
+
+Banco de dados, talvez você precise as atualizações de configuração a seguir:
+
 * [Estender permissões internas para usuários remotos](#bkmk_configureAccounts)
 * [Conceder permissão para executar scripts externos](#permissions-external-script)
 * [Conceder acesso a bancos de dados individuais](#permissions-db)
 
 > [!NOTE]
-> Nem todas as alterações listadas são necessárias e nenhum pode ser necessária. Os requisitos dependem de seu esquema de segurança, onde você instalou o SQL Server e como você espera que os usuários para se conectar ao banco de dados e executar scripts externos. Dicas de solução de problemas adicionais podem ser encontradas aqui: [perguntas frequentes sobre atualização e instalação](../r/upgrade-and-installation-faq-sql-server-r-services.md)
+> Se a configuração adicional é necessária depende de seu esquema de segurança, onde você instalou o SQL Server e como você espera que os usuários para se conectar ao banco de dados e executar scripts externos. 
 
-###  <a name="bkmk_configureAccounts"></a> Habilitar a autenticação implícita para o grupo de contas do Launchpad
+###  <a name="bkmk_configureAccounts"></a> Habilitar a autenticação implícita para o grupo de contas de grupo de usuários restritos (SQLRUserGroup) do SQL
 
-Durante a instalação, um número de novas contas de usuário do Windows são criadas com a finalidade de executar tarefas no token de segurança do serviço [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]. Quando um usuário envia um script Python ou R de um cliente externo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ativa uma conta de trabalho disponíveis. Em seguida, mapeia-os para a identidade do usuário da chamada e executa o script em nome do usuário.
+Se você precisa executar scripts em um cliente de ciência de dados remotos e você estiver usando a autenticação do Windows, configuração adicional é necessária para fornecer contas de trabalho em execução de R e Python processa a permissão para entrar na [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância em seu nome. Esse comportamento é chamado *autenticação implícita*e é implementado pelo mecanismo de banco de dados para dar suporte à execução segura de scripts externos no SQL Server 2016 e SQL Server 2017.
 
-Isso é chamado *autenticação implícita*, e é um serviço do mecanismo de banco de dados. Esse serviço oferece suporte à execução segura de scripts externos no SQL Server 2016 e SQL Server 2017.
-
-Exiba essas contas no grupo de usuários do Windows, **SQLRUserGroup**. Por padrão, são criadas 20 contas de trabalho, que geralmente é mais do que suficiente para a execução de script externo trabalhos.
-
-> [!IMPORTANT]
-> O grupo de trabalho é denominado **SQLRUserGroup** independentemente se você instalou o R ou Python. Há um único grupo para cada instância.
-
-Se você precisa executar scripts de um cliente de ciência de dados remoto e você estiver usando a autenticação do Windows, há considerações adicionais. Essas contas de trabalho devem receber permissão para entrar para a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância em seu nome.
+> [!NOTE]
+> Se você usar um **logon do SQL** para executar scripts em um contexto de computação do SQL Server, essa etapa adicional não é necessária.
 
 1. Na [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], no Pesquisador de objetos, expanda **segurança**. Em seguida, clique com botão direito **logons**e selecione **novo logon**.
 2. No **logon - novo** caixa de diálogo, selecione **pesquisa**.
@@ -230,8 +227,13 @@ Se você precisa executar scripts de um cliente de ciência de dados remoto e vo
 6. Por padrão, o grupo é atribuído para o **pública** função, e tem permissão para se conectar ao mecanismo de banco de dados.
 7. Escolha **OK**.
 
-> [!NOTE]
-> Se você usar um **logon do SQL** para executar scripts em um contexto de computação do SQL Server, essa etapa adicional não é necessária.
+No SQL Server 2017 e versões anteriores, um número de contas de usuário locais do Windows é criado com a finalidade de executar tarefas no token de segurança do [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] service. Exiba essas contas no grupo de usuários do Windows, **SQLRUserGroup**. Por padrão, são criadas 20 contas de trabalho, que geralmente é mais do que suficiente para a execução de script externo trabalhos. 
+
+Essas contas são usadas da seguinte maneira. Quando um usuário envia um script Python ou R de um cliente externo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ativa uma conta de trabalho disponível, mapeia-os para a identidade do usuário da chamada e, em seguida, executa o script em nome do usuário. Se tiver o script, que está em execução externo ao SQL Server recuperar dados ou recursos do SQL Server, a conexão para o SQL Server requer um logon. Criando um logon de banco de dados para **SQLRUserGroup** também a conexão seja bem-sucedida.
+
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+No SQL Server de 2019, contas de trabalho são substituídas por AppContainers, com processos que estejam executando sob o serviço Launchpad do SQL Server. Embora as contas de trabalho não são mais usadas, você ainda é necessárias para adicionar um logon de banco de dados para **SQLRUsergroup** se implícita a autenticação é necessária. Assim como as contas de trabalho não tem permissão de logon, a identidade do serviço Launchpad não não o façam. Criando um logon para **SQLRUserGroup**, que consiste o serviço Launchpad nesta versão, permite que a autenticação implícita trabalhar.
+::: moniker-end
 
 ### <a name="permissions-external-script"></a> Conceder aos usuários permissão para executar scripts externos
 

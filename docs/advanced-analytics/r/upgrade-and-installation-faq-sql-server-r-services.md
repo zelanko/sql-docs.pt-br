@@ -1,18 +1,19 @@
 ---
 title: Perguntas frequentes sobre atualização e instalação para o SQL Server Machine Learning | Microsoft Docs
+ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 05/15/2018
 ms.topic: conceptual
-author: HeidiSteen
 ms.author: heidist
+author: HeidiSteen
 manager: cgronlun
-ms.openlocfilehash: 695fd6a801b8b8846d297aa0695aa4ebc04e71e5
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 37cd28b895c66d6ddcf1517e79ef6bf4537e2a96
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40396420"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712298"
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>Perguntas frequentes sobre atualização e instalação para o aprendizado de máquina do SQL Server ou Microsoft R Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -20,7 +21,7 @@ ms.locfileid: "40396420"
 Este tópico fornece respostas para perguntas comuns sobre a instalação dos recursos do SQL Server de aprendizado de máquina. Ele também aborda dúvidas comuns sobre as atualizações.
 
 + Alguns problemas ocorrem apenas com as atualizações de versões de pré-lançamento. Portanto, é recomendável que você identificar sua versão e edição primeiro antes de ler estas notas. Para obter informações de versão, execute `@@VERSION` em uma consulta do SQL Server Management Studio.
-+ Atualize para a versão mais atual ou versão de serviço assim que possível, resolver quaisquer problemas que foram corrigidos em versões recentes.
++ Atualize para a versão mais recente ou a versão de serviço assim que possível para resolver quaisquer problemas que foram corrigidos em versões recentes.
 
 **Aplica-se a:** SQL Server 2016 R Services, SQL Server 2017 serviços de Machine Learning (no banco de dados)
 
@@ -29,6 +30,10 @@ Este tópico fornece respostas para perguntas comuns sobre a instalação dos re
 Dependendo da compilação do SQL Server que você está instalando, algumas das limitações a seguir podem se aplicar:
 
 - Em versões anteriores do SQL Server 2016 R Services, a notação 8dot3 era necessário na unidade que contém o diretório de trabalho. Se você instalou uma versão de pré-lançamento, a atualização para o SQL Server 2016 Service Pack 1 deve corrigir esse problema. Esse requisito não se aplica às versões após o SP1.
+
+- Atualmente, não é possível instalar [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] em um cluster de failover. No entanto, visualização de 2019 do SQL Server oferece suporte a failover se você quiser avaliar esse capablity em um ambiente de teste. Para obter mais informações, consulte [What's New](../what-s-new-in-sql-server-machine-learning-services.md).
+
+- Em uma VM do Azure, alguma configuração adicional pode ser necessária. Por exemplo, você talvez precise criar uma exceção de firewall para dar suporte a acesso remoto.
 
 - Não há suporte para a instalação lado a lado com outra versão do R ou com outras versões do Revolution Analytics.
 

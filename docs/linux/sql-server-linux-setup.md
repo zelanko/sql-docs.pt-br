@@ -1,5 +1,5 @@
 ---
-title: Diretrizes de instalação do SQL Server 2017 no Linux | Microsoft Docs
+title: Orientação de instalação do SQL Server no Linux | Microsoft Docs
 description: Instalar, atualizar e desinstalar o SQL Server no Linux. Este artigo aborda cenários autônomos, online e offline.
 author: rothja
 ms.author: jroth
@@ -12,18 +12,18 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: 5157bd9bbadec02fe21c9b552f05c6f5635c31a4
-ms.sourcegitcommit: ae25f8be8b18c4b89e560f80862ff245b0c6e065
+ms.openlocfilehash: ce9a2c9956ab4c40c2a5840f65bf8a630fb25065
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39268744"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46712998"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Orientação de instalação do SQL Server no Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Este artigo fornece orientação para instalação, atualização e desinstalação do SQL Server 2017 no Linux.
+Este artigo fornece orientação para instalar, atualizar e desinstalar o SQL Server 2017 e visualização de 2019 do SQL Server no Linux.
 
 > [!TIP]
 > Este guia coves vários cenários de implantação. Se você estiver procurando apenas para obter instruções de instalação passo a passo, saltar para uma das guias de início rápido:
@@ -71,20 +71,24 @@ Se você usar **sistema de arquivos de rede (NFS)** compartilhamentos remotos em
 
 ## <a id="repositories"></a> Configurar repositórios de origem
 
-Quando você instala ou atualizar o SQL Server, você receberá a versão mais recente do SQL Server 2017 do seu repositório configurado do Microsoft. Guias de início rápido usam o **atualização cumulativa (CU)** repositório. Mas em vez disso, você pode configurar o **GDR** repositório. Para obter mais informações sobre repositórios e como configurá-las, consulte [configurar repositórios para o SQL Server no Linux](sql-server-linux-change-repo.md).
+Quando você instala ou atualizar o SQL Server, você receberá a versão mais recente do SQL Server do seu repositório configurado do Microsoft. Guias de início rápido usam a atualização cumulativa do SQL Server 2017 **CU** repositório. Mas em vez disso, você pode configurar o **GDR** repositório ou o **visualização (vNext)** repositório. Para obter mais informações sobre repositórios e como configurá-las, consulte [configurar repositórios para o SQL Server no Linux](sql-server-linux-change-repo.md).
 
 > [!IMPORTANT]
 > Se você instalou anteriormente um CTP ou a versão do SQL Server 2017 RC, remova o repositório de versão prévia e registrar uma disponibilidade geral (GA) um. Para obter mais informações, consulte [configurar repositórios para o SQL Server no Linux](sql-server-linux-change-repo.md).
 
-## <a id="platforms"></a> Instalar o SQL Server
+## <a id="platforms"></a> Instalar o SQL Server 2017
 
-Você pode instalar o SQL Server no Linux da linha de comando. Para obter instruções, consulte um dos seguintes inícios rápidos:
+Você pode instalar o SQL Server 2017 no Linux da linha de comando. Para obter instruções passo a passo, consulte um dos seguintes inícios rápidos:
 
 - [Instalar no Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Instalar no SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Instalar no Ubuntu](quickstart-install-connect-ubuntu.md)
 - [Executar no Docker](quickstart-install-connect-docker.md)
 - [Provisionar uma VM SQL no Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
+
+## <a id="sqlvnext"></a> Instalar o SQL Server 2019 preview
+
+Você pode instalar a visualização de 2019 do SQL Server no Linux usando os mesmos links de início rápido na seção anterior. No entanto, você deve registrar o **versão prévia (vNext)** repositório, em vez da **CU** repositório. Os inícios rápidos fornecem instruções sobre como fazer isso.  
 
 Depois de instalar, considere a possibilidade de fazer alterações de configuração adicionais para otimizar o desempenho. Para obter mais informações, consulte [práticas recomendadas de desempenho e diretrizes de configuração do SQL Server no Linux](sql-server-linux-performance-best-practices.md).
 
@@ -99,6 +103,9 @@ Para atualizar o **mssql-server** para a versão mais recente do pacote, use um 
 | Ubuntu | `sudo apt-get update`<br/>`sudo apt-get install mssql-server` |
 
 Esses comandos baixam o pacote mais recente e substitua os binários localizados em `/opt/mssql/`. O usuário gerou bancos de dados e bancos de dados do sistema não são afetados por essa operação.
+
+> [!TIP]
+> Se você primeiro [alterar seu repositório configurado](sql-server-linux-change-repo.md), é possível que o **atualizar** comando para atualizar sua versão do SQL Server. Isso é apenas o caso se o caminho de atualização tem suporte entre os dois repositórios.
 
 ## <a id="rollback"></a> Reversão SQL Server
 

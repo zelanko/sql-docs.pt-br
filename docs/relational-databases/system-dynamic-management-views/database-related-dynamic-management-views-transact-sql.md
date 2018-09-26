@@ -18,12 +18,12 @@ caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a512ae98eb219b8614100fabb2d376841e9ce216
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 3d0d01a815b84f2770a3182d1485f7c958ae1c4a
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34463543"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713328"
 ---
 # <a name="database-related-dynamic-management-views-transact-sql"></a>Exibições de gerenciamento dinâmico relacionadas a bancos de dados (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -34,16 +34,18 @@ ms.locfileid: "34463543"
 |-|-|  
 |[sys.dm_db_file_space_usage ](../../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md)|[sys.dm_db_fts_index_physical_stats ](../../relational-databases/system-dynamic-management-views/sys-dm-db-fts-index-physical-stats-transact-sql.md)|  
 |[sys.dm_db_log_info](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md) |[sys.dm_db_log_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md) |  
-|[sys.dm_db_log_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md) |[sys.dm_db_partition_stats ](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)|
-|[sys.DM db_persisted_sku_features ](../../relational-databases/system-dynamic-management-views/sys-dm-db-persisted-sku-features-transact-sql.md)|[sys.dm_db_session_space_usage ](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)|
-|[sys.dm_db_task_space_usage ](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md)|[sys.DM db_uncontained_entities ](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)|
+|[sys.dm_db_log_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)|[sys.dm_db_page_info](../../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md)|
+|[sys.dm_db_partition_stats ](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)|[DM db_persisted_sku_features ](../../relational-databases/system-dynamic-management-views/sys-dm-db-persisted-sku-features-transact-sql.md)|
+|[sys.dm_db_session_space_usage ](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)|[sys.dm_db_task_space_usage ](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md)|
+|[db_uncontained_entities ](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)||
 
-DMV a exclusiva para o banco de dados SQL ou SQL Data Warehouse.   
+
+Exclusivo ao banco de dados SQL ou SQL Data Warehouse do DMV.   
 | | | 
 |-|-|  
-|[sys.DM db_wait_stats &#40;banco de dados do SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)|[sys.dm_database_copies &#40;Banco de Dados SQL do Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)|  
-|[sys.DM db_resource_stats &#40;banco de dados do SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)|[sys.DM db_objects_impacted_on_version_change &#40;banco de dados do SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-objects-impacted-on-version-change-azure-sql-database.md)|  
-|[sys.DM operation_status &#40;banco de dados do SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) | |
+|[sys.dm_db_wait_stats &#40;banco de dados SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)|[sys.dm_database_copies &#40;Banco de Dados SQL do Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)|  
+|[sys.DM db_resource_stats &#40;banco de dados SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)|[sys.dm_db_objects_impacted_on_version_change &#40;banco de dados SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-objects-impacted-on-version-change-azure-sql-database.md)|  
+|[DM operation_status &#40;banco de dados SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) | |
   
 ## <a name="see-also"></a>Consulte também  
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  

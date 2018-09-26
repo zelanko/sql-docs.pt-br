@@ -108,7 +108,7 @@ Além **sqlcmd**, você pode usar as seguintes ferramentas de plataforma cruzada
 
 |||
 |---|---|
-| [SQL Server Operations Studio](../sql-operations-studio/index.md) | Um utilitário de gerenciamento de banco de dados de GUI de plataforma cruzada. |
+| [Studio de dados do Azure](../azure-data-studio/index.md) | Um utilitário de gerenciamento de banco de dados de GUI de plataforma cruzada. |
 | [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | Uma interface de linha de comando de plataforma cruzada para a execução de comandos Transact-SQL. |
 | [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | Um editor de código de GUI de plataforma cruzada que executam instruções Transact-SQL com a extensão mssql. |
 

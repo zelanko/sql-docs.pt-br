@@ -1,6 +1,6 @@
 ---
 title: Práticas recomendadas de desempenho para o SQL Server no Linux | Microsoft Docs
-description: Este artigo fornece diretrizes e práticas recomendadas de desempenho para a execução do SQL Server 2017 no Linux.
+description: Este artigo fornece diretrizes e práticas recomendadas de desempenho para a execução do SQL Server no Linux.
 author: rgward
 ms.author: bobward
 manager: craigg
@@ -11,12 +11,12 @@ ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: f27cda67baa5d4101f94a8351bacd1ef3ecbff05
-ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.openlocfilehash: 42e3c137a4284a3d190051251b875926a4ff532d
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39101134"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46713668"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>Práticas recomendadas de desempenho e diretrizes de configuração do SQL Server no Linux
 
