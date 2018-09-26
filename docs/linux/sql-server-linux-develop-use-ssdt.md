@@ -12,12 +12,12 @@ ms.suite: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.custom: sql-linux
-ms.openlocfilehash: e9bd11aefb01b607e02f11ebecc5adae7acf70ea
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 1c6de6fd77de2594f4d2942fa5e5c4c82c614cc6
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39086968"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46714028"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Use o Visual Studio para criar bancos de dados para o SQL Server no Linux
 
@@ -39,7 +39,7 @@ SQL Server Data Tools (SSDT) transforma o Visual Studio em um poderoso ambiente 
 
 ## <a name="upgrade-sql-server-data-tools-to-ssdt-170-rc-release"></a>Atualizar o SQL Server Data Tools para a versão RC do SSDT 17.0
 
-Há suporte para o SQL Server 2017 no Linux pelo SSDT versão 17.0 RC ou posterior.
+Há suporte para o SQL Server no Linux pelo SSDT versão 17.0 RC ou posterior.
 
 * [Baixe e instale o SSDT 17.0 RC2](https://go.microsoft.com/fwlink/?linkid=837939).
 
@@ -79,13 +79,13 @@ Há suporte para o SQL Server 2017 no Linux pelo SSDT versão 17.0 RC ou posteri
 
 ## <a name="build-and-validate-the-database"></a>Compilar e validar o banco de dados
 
-1. Abra o menu de projeto de banco de dados no **TutorialDB** e selecione **Build**. SSDT compila arquivos de código fonte. SQL em seu projeto e cria um arquivo de pacote (dacpac) do aplicativo da camada de dados. Isso pode ser usado para publicar um banco de dados à instância do SQL Server 2017 no Linux. 
+1. Abra o menu de projeto de banco de dados no **TutorialDB** e selecione **Build**. SSDT compila arquivos de código fonte. SQL em seu projeto e cria um arquivo de pacote (dacpac) do aplicativo da camada de dados. Isso pode ser usado para publicar um banco de dados em sua instância do SQL Server no Linux. 
 
     <img src="./media/sql-server-linux-develop-use-ssdt/build.png" alt="add columns" style="width: 400px;"/>
 
 2. Fazer check-in de mensagem de sucesso de build **saída** janela no Visual Studio. 
 
-## <a name="publish-the-database-to-sql-server-2017-instance-on-linux"></a>Publicar o banco de dados à instância do SQL Server 2017 no Linux
+## <a name="publish-the-database-to-sql-server-instance-on-linux"></a>Publicar o banco de dados à instância do SQL Server no Linux
 
 1. Abra o menu de projeto de banco de dados no **TutorialDB** e selecione **publicar**.
 
