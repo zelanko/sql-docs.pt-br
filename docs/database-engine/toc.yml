@@ -32,9 +32,111 @@ items:
     href: ../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md
   - name: Envio de logs
     href: ../database-engine/log-shipping/about-log-shipping-sql-server.md
-ms.openlocfilehash: d062458e981895baf22659fd9541535bc30f32a9
-ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
+- name: Conceitos
+  items:
+  - name: Blob
+    href: ../relational-databases/blob/binary-large-object-blob-data-sql-server.md
+  - name: Agrupamentos
+    href: ../relational-databases/collations/collation-and-unicode-support.md
+  - name: Cursores
+    href: ../relational-databases/cursors.md
+  - name: Coleta de dados
+    href: ../relational-databases/data-collection/data-collection.md
+  - name: Compactação de dados
+    href: ../relational-databases/data-compression/data-compression.md
+  - name: Database Mail
+    href: ../relational-databases/database-mail/database-mail.md
+  - name: Bancos de dados
+    href: ../relational-databases/databases/databases.md
+  - name: Erros e eventos
+    href: ../relational-databases/errors-events/errors-and-events-reference-database-engine.md
+  - name: Classes de evento
+    href: ../relational-databases/event-classes/sql-server-event-class-reference.md
+  - name: Eventos estendidos
+    href: ../relational-databases/extended-events/extended-events.md
+  - name: Gráficos
+    href: ../relational-databases/graphs/sql-graph-overview.md
+  - name: Dados hierárquicos
+    href: ../relational-databases/hierarchical-data-sql-server.md
+  - name: Importar e exportar
+    href: ../relational-databases/import-export/overview-import-export.md
+  - name: OLTP in-memory
+    href: ../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md
+  - name: Índices
+    href: ../relational-databases/indexes/indexes.md
+  - name: JSON
+    href: ../relational-databases/json/json-data-sql-server.md
+  - name: Servidores vinculados
+    href: ../relational-databases/linked-servers/linked-servers-database-engine.md
+  - name: Planos de manutenção
+    href: ../relational-databases/maintenance-plans/maintenance-plans.md
+  - name: Junções
+    href: ../relational-databases/performance/joins.md
+  - name: Partições
+    href: ../relational-databases/partitions/partitioned-tables-and-indexes.md
+  - name: Gerenciamento baseado em política
+    href: ../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md
+  - name: PolyBase
+    href: ../relational-databases/polybase/polybase-guide.md
+  - name: Replicação
+    href: ../relational-databases/replication/sql-server-replication.md
+  - name: Administrador de Recursos
+    href: ../relational-databases/resource-governor/resource-governor.md
+  - name: Script
+    href: ../relational-databases/scripting/database-engine-scripting.md
+  - name: Pesquisa
+    href: ../relational-databases/search/full-text-search.md
+  - name: Segurança
+    href: ../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md
+  - name: Números de sequência
+    href: ../relational-databases/sequence-numbers/sequence-numbers.md
+  - name: Service Broker
+    href: ../relational-databases/service-broker/event-notifications.md
+  - name: Operadores de plano de execução
+    href: ../relational-databases/showplan-logical-and-physical-operators-reference.md
+  - name: Espacial
+    href: ../relational-databases/spatial/spatial-data-sql-server.md
+  - name: Rastreamento do SQL
+    href: ../relational-databases/sql-trace/sql-trace.md
+  - name: Estatísticas
+    href: ../relational-databases/statistics/statistics.md
+  - name: Procedimentos armazenados
+    href: ../relational-databases/stored-procedures/stored-procedures-database-engine.md
+  - name: Subconsultas
+    href: ../relational-databases/performance/subqueries.md
+  - name: Sinônimos
+    href: ../relational-databases/synonyms/synonyms-database-engine.md
+  - name: Exibições de catálogo do sistema
+    href: ../relational-databases/system-catalog-views/catalog-views-transact-sql.md
+  - name: Exibições de compatibilidade do sistema
+    href: ../relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md
+  - name: Exibições de gerenciamento dinâmico do sistema
+    href: ../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md
+  - name: Funções do sistema
+    href: ../relational-databases/system-functions/system-functions-for-transact-sql.md
+  - name: Exibições do esquema de informações do sistema
+    href: ../relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md
+  - name: Procedimentos armazenados do sistema
+    href: ../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md
+  - name: Tabelas do sistema
+    href: ../relational-databases/system-tables/system-tables-transact-sql.md
+  - name: Exibições do sistema
+    href: ../relational-databases/system-views/replication-views-transact-sql.md
+  - name: Tabelas
+    href: ../relational-databases/tables/tables.md
+  - name: Controlar alterações
+    href: ../relational-databases/track-changes/track-data-changes-sql-server.md
+  - name: Gatilhos
+    href: ../relational-databases/triggers/logon-triggers.md
+  - name: Funções definidas pelo usuário
+    href: ../relational-databases/user-defined-functions/user-defined-functions.md
+  - name: exibições
+    href: ../relational-databases/views/views.md
+  - name: xml
+    href: ../relational-databases/xml/xml-data-sql-server.md
+ms.openlocfilehash: db1f978a972f560a98ef75c0fefe37584bd1a1be
+ms.sourcegitcommit: 2420c57d2952add3697dbe0467ee1d755c5c2ee5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42899429"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47217222"
