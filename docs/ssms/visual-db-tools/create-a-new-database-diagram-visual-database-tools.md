@@ -1,7 +1,7 @@
 ---
 title: Criar um novo diagrama de banco de dados (Visual Database Tools) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssms-visual-db
@@ -18,15 +18,15 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a672bf8d0a05d928e9bc7101e5f1fb2860b8cd95
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 44499867a37dfe590511ce2fdff719791a259e35
+ms.sourcegitcommit: e29ef5022653fe911b5fbf58fb8c7c8feb940398
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38023703"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47403283"
 ---
 # <a name="create-a-new-database-diagram-visual-database-tools"></a>Criar um novo diagrama de banco de dados (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 Você pode utilizar o Pesquisador de Objetos para criar novos diagramas de banco de dados. Os diagramas de banco de dados exibem graficamente a estrutura do banco de dados. Com os diagramas de banco de dados você pode criar e alterar tabelas, colunas, relações e chaves. Além disso, pode alterar índices e restrições.  
   
 ### <a name="to-create-a-new-database-diagram"></a>Para criar um novo diagrama de banco de dados  
@@ -45,5 +45,4 @@ Você pode continuar a adicionar ou excluir tabelas, modificar as tabelas existe
   
 ## <a name="see-also"></a>Consulte Também  
 [Trabalhar com diagramas de banco de dados &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
-[Compreender a propriedade do diagrama de banco de dados &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools.md)  
-  
+[Compreender a propriedade do diagrama de banco de dados &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools.md)

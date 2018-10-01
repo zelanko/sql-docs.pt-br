@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5a08b1c5d3685a4d4193cc7f7b40b59af27ef878
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: 160f1f169af02eb9ff75c3438eca810ca5ae0e4b
+ms.sourcegitcommit: 351f09e57c9896804e1ecabef07db64aeeff947a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42775918"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47443004"
 ---
 # <a name="troubleshoot-multiserver-jobs-that-use-proxies"></a>Solucionar problemas de trabalhos multisservidor que usam proxies
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ Trabalhos distribuídos cujas etapas estejam associadas a um proxy são executad
   
 -   "A etapa do trabalho requer uma conta proxy. Entretanto, a verificação de proxy está desabilitada no servidor de destino."  
   
-    Para resolver este erro, defina a subchave do Registro **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.***\<n*>** \SQLServerAgent\AllowDownloadedJobsToMatchProxyName** como **1 (verdadeiro)**. Por padrão, essa subchave está definida como **0** (**falso**). O valor de **MSSQL.**\<*n*> é o nome de instância; por exemplo, **MSSQL.1** ou **MSSQL.3**.  
+    Para resolver este erro, defina a subchave do Registro **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL.**_\<n\>_**\SQLServerAgent\AllowDownloadedJobsToMatchProxyName** como **1 (verdadeiro)**. Por padrão, essa subchave está definida como **0** (**falso**). O valor de **MSSQL.**\<*n*> é o nome de instância; por exemplo, **MSSQL.1** ou **MSSQL.3**.  
   
 -   "Proxy não localizado."  
   
