@@ -6,8 +6,6 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.dbprojectwizard.importschema
@@ -17,16 +15,15 @@ f1_keywords:
 - sql.data.tools.SqlProjectImportDatabaseSummaryDialog.dialog
 - sql.data.tools.importscriptwizard.fileselection
 ms.assetid: 0b7883fa-b6e1-4ccf-b1d8-f522fd03a59d
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4fdaca995e96116b1268916d008b565454511489
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 17471823dcc3e77d23423fda3c81dbe8c958ab89
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39088478"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47673254"
 ---
 # <a name="how-to-create-a-new-database-project"></a>Como: Criar um novo projeto de banco de dados
 Você pode criar um novo projeto de banco de dados e importar o esquema de banco de dados de um banco de dados existente, um arquivo de script .sql ou um aplicativo da camada de dados (.dacpac). Você poderá invocar então as mesmas ferramentas de designer visual (Editor de Transact\-SQL, Designer de Tabela) disponíveis para o desenvolvimento de bancos de dados conectados para fazer alterações no projeto de banco de dados offline e para publicar as alterações no banco de dados de produção. As alterações também podem ser salvas como um script a ser publicado posteriormente. Usando o painel **Propriedades do Projeto**, você pode alterar a plataforma de destino para versões diferentes do SQL Server (incluindo o SQL Azure).  
