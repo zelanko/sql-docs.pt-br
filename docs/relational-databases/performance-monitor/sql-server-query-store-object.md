@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/17/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Store object
 - SQL Server:Query Store
 ms.assetid: b4a04acd-0b66-44a5-b72d-1a45b49e13e6
-caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 527ad5bc399654bd69a05bbca4f801e7c6d643ab
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5c849a405c3cfd343e1c63027ca314008abad37b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32951161"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47608052"
 ---
 # <a name="sql-server-query-store-object"></a>SQL Server, Objeto de Repositório de Consultas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +29,7 @@ ms.locfileid: "32951161"
   
  Esta tabela descreve os contadores do **SQLServer:Repositório de Consultas**.  
   
-|Contadores de Repositório de Consultas do SQL Server|Description|  
+|Contadores de Repositório de Consultas do SQL Server|Descrição|  
 |-------------------------------------|-----------------|  
 |**Uso de CPU do Repositório de Consultas**|Indica o uso da CPU pelos Repositórios de Consultas.|  
 |**Leituras lógicas do Repositório de Consultas**|Indica o número de leituras lógicas feitas pelo Repositório de Consultas.|  
@@ -42,7 +38,7 @@ ms.locfileid: "32951161"
   
  Cada contador no objeto contém as seguintes instâncias:  
   
-|Instância do Repositório de Consultas|Description|  
+|Instância do Repositório de Consultas|Descrição|  
 |--------------------------|-----------------|  
 |**_Total**|Informações para o Repositório de Consultas para esta instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |\<nome do banco de dados>|Informações do Repositório de Consultas para este banco de dados.|  

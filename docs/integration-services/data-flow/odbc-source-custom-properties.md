@@ -5,21 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 362bbcd8-b7b0-4bab-8afe-1212b2ad1af9
-caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b15b88320c48a711539c952ea749c21d85ab6e15
-ms.sourcegitcommit: 5152caf8f4346f8b565742bc1df4e454551d63eb
+ms.openlocfilehash: b961bb0dff9f832660807211cf59189db036dd23
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042586"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47730174"
 ---
 # <a name="odbc-source-custom-properties"></a>ODBC Source Custom Properties
   A tabela a seguir descreve as propriedades personalizadas da origem ODBC. Todas as propriedades podem ser definidas a partir de expressões de propriedades SSIS.  

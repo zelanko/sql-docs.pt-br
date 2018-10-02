@@ -5,9 +5,7 @@ ms.date: 07/16/2016
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database backups [SQL Server], recovery models
@@ -28,16 +26,15 @@ helpviewer_keywords:
 - full recovery model [SQL Server]
 - backing up transaction logs [SQL Server], recovery models
 ms.assetid: 8cfea566-8f89-4581-b30d-c53f1f2c79eb
-caps.latest.revision: 70
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f86cc963e5328247b1ee883abb658dcc57e81efc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0c8c2efee10a38120717487fc6e04429de7f1bf6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921771"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47653402"
 ---
 # <a name="recovery-models-sql-server"></a>Modelos de recuperação (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +49,7 @@ ms.locfileid: "32921771"
 ##  <a name="RMov"></a> Visão geral do modelo de recuperação  
  A tabela a seguir resume os três modelos de recuperação.  
   
-|modelo de recuperação|Description|Exposição à perda de trabalho|Recuperação pontual?|  
+|modelo de recuperação|Descrição|Exposição à perda de trabalho|Recuperação pontual?|  
 |--------------------|-----------------|------------------------|-------------------------------|  
 |**Simple (simples)**|Sem backups de log<br /><br /> Reclama espaço de log automaticamente para manter requisitos de espaços pequenos, eliminando essencialmente a necessidade de gerenciar o espaço de log de transações. Para obter informações sobre backups de banco de dados no modelo de recuperação simples, veja [Backups completos de banco de dados &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-database-backups-sql-server.md).<br /><br /> As operações que exigem backups de log de transações não têm suporte no modelo de recuperação simples. Os recursos a seguir não podem ser usados no modo de recuperação simples:<br /><br /> - Envio de logs<br /><br /> - AlwaysOn ou Espelhamento de banco de dados<br /><br /> - Recuperação de mídia sem perda de dados<br /><br /> - Recuperações pontuais|As alterações desde o backup mais recente estão desprotegidas. No caso de um desastre, essas alterações devem ser refeitas.|Só pode recuperar até o fim de um backup. Para obter mais informações, veja [Restaurações completas de banco de dados &#40;Modelo de recuperação simples&#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md). <br><br> Para obter mais uma explicação mais detalhada sobre o Modelo de recuperação simples, veja [Modelo de recuperação simples do SQL Server](https://www.mssqltips.com/sqlservertutorial/4/sql-server-simple-recovery-model/) fornecido pelo pessoal da [MSSQLTips!](https://www.mssqltips.com)|  
 |**Full (cheio)**|Requer backups de log.<br /><br /> Nenhum trabalho é perdido devido a um arquivo de dados perdido ou danificado.<br /><br /> Pode executar uma recuperação pontual (por exemplo, antes de um erro de aplicativo ou usuário). Para obter informações sobre backups de banco de dados no modelo de recuperação completa, veja [Backups completos de banco de dados &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-database-backups-sql-server.md) e [Restaurações completas de banco de dados &#40;Modelo de recuperação completo&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md).|Geralmente nenhum.<br /><br /> Se a parte final do log estiver danificada, as alterações desde o backup de log mais recente deverão ser refeitas.|Pode executar uma recuperação pontual, supondo que seus backups estejam concluídos até aquele ponto. Para obter informações sobre como usar backups de log para restaurar no ponto de falha, veja [Restaurar um Banco de dados SQL Server em um ponto específico &#40;Modelo de recuperação completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).<br /><br /> Observação: se você tiver dois ou mais bancos de dados de modelo de recuperação completa que devem ser logicamente consistentes, é possível que você precise implementar procedimentos especiais para verificar a possibilidade de recuperação desses bancos de dados. Para obter mais informações, veja [Recuperação de bancos de dados relacionados que contêm transação marcada](../../relational-databases/backup-restore/recovery-of-related-databases-that-contain-marked-transaction.md).|  

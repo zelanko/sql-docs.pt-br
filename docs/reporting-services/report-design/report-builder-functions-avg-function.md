@@ -4,17 +4,16 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: f1276c4c-bb44-44c0-a1bf-386a0c340003
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 857c0a7a5b7113adef4e43adcacc28b11f7e06f8
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: b02b21a0011fb838a697792955c56ac04d52ce32
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43276538"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47602734"
 ---
 # <a name="report-builder-functions---avg-function"></a>Funções do Construtor de Relatórios – Função Avg
 Nos relatórios paginados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , ele retorna a média de todos os valores numéricos não nulos especificados pela expressão, avaliados no escopo fornecido.  
