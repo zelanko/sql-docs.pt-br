@@ -4,17 +4,16 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 49c3c1da-b106-41f6-9173-16ff225bade8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 97ff26393b97c215efc429b55ba6a3ae0f4d21c3
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: aaebd6eadd528e9f16915fc30ae0391727c39e46
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43277888"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47675504"
 ---
 # <a name="using-my-reports-report-builder-and-ssrs"></a>Usando Meus Relatórios (Construtor de Relatórios e SSRS)
   Em um servidor de relatório configurado em modo nativo, a pasta Meus Relatórios é um espaço de trabalho individual que você pode usar para armazenar e trabalhar com seus próprios relatórios. Outras pastas do servidor de relatórios são públicas e geralmente exigem que os usuários tenham permissões avançadas para adicionar ou modificar o conteúdo de pasta. Em contraste, a pasta Meus Relatórios é uma área de trabalho gerenciada pelo usuário. Você pode adicionar ou remover relatórios e pastas e salvar relatórios vinculados com configurações personalizadas.  

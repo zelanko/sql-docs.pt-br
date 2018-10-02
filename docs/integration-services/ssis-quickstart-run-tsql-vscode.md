@@ -4,18 +4,17 @@ ms.date: 05/21/2018
 ms.topic: quickstart
 ms.prod: sql
 ms.prod_service: integration-services
-ms.suite: sql
 ms.custom: ''
 ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: de36395eed6cd85512f9e7497500bef53ab6d228
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 923134e3826e5a15bde47d9da475ee076b7054eb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332000"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47646804"
 ---
 # <a name="run-an-ssis-package-from-visual-studio-code-with-transact-sql"></a>Executar um pacote do SSIS no Visual Studio Code com o Transact-SQL
 Este guia de início rápido demonstra como usar o Visual Studio Code para se conectar ao banco de dados do Catálogo do SSIS e, em seguida, usar instruções do Transact-SQL para executar um pacote SSIS armazenado no Catálogo do SSIS.

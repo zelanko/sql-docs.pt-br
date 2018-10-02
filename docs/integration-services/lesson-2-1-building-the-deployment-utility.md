@@ -5,22 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2016
 ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 242902c582d474b510ed11ba9a2dc76f07dfaae4
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 24aeaa696a55feb7ad4e60889e2853a71f81f08b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329280"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47677654"
 ---
 # <a name="lesson-2-1---building-the-deployment-utility"></a>Lição 2-1 – compilar o utilitário de implantação
 Nesta tarefa, você configurará e compilará um utilitário de implantação para o projeto do Tutorial de Implantação.  

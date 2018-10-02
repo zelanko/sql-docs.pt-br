@@ -5,28 +5,23 @@ ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 dev_langs:
 - VB
 helpviewer_keywords:
 - Script component [Integration Services], error output
 - error outputs [Integration Services], Script component
 ms.assetid: f8b6ecff-ac99-4231-a0e7-7ce4ad76bad0
-caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 305904031b2a2820e145fe952e3dfa0b68f2b95c
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 793e6070ab5ba5219f8a3c08470fb7850f844400
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35407308"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770744"
 ---
 # <a name="simulating-an-error-output-for-the-script-component"></a>Simulando uma saída de erro para o componente Script
   Embora não seja possível configurar uma saída como uma saída de erro no componente Script para manipular automaticamente as linhas de erro, você pode reproduzir a funcionalidade de uma saída de erro interna criando uma saída adicional e usando lógica condicional em seu script para direcionar linhas a essa saída quando apropriado. Talvez você queira imitar o comportamento de uma saída de erro interna adicionando duas colunas de saída para receber o número de erro e a ID da coluna em que um erro ocorreu.  

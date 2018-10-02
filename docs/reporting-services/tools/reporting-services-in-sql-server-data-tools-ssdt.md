@@ -4,19 +4,18 @@ ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: tools
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence Development Studio, Reporting Services in
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4cea1558510664ff545d0762d430bb239c40b52a
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: d6fdf62f6fca674d6c4b3753e92e99f2e4f2cd67
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43277218"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47609734"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services no SQL Server Data Tools (SSDT)
 
@@ -238,7 +237,7 @@ ms.locfileid: "43277218"
   
 
 ##  <a name="bkmk_SourceControl"></a> Controle do código-fonte  
- O [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] pode ser integrado com plug-ins de origem. Use as páginas de Projetos e Soluções na caixa de diálogo **Opções** para especificar o plug-in e configurar as propriedades.  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] pode ser integrado com plug-ins de origem. Use as páginas de Projetos e Soluções na caixa de diálogo **Opções** para especificar o plug-in e configurar as propriedades.  
   
 ##  <a name="bkmk_CustomReportTemplates"></a> Modelos de relatório personalizados  
  Para usar relatórios personalizados como modelos de novos relatórios, basta copiá-los na pasta ReportProject no computador em que o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] está instalado. Por padrão, essa pasta está no seguinte local: `<drive>:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject`. Quando você adiciona um novo item ao projeto de relatório, o relatório personalizado aparece no painel Modelos.  

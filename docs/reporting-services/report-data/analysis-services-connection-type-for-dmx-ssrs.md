@@ -4,7 +4,6 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - parameters [Reporting Services], DMX
@@ -17,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2de825e9-6d8a-4128-add0-da15dc6cea3e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cde09f46f702a6d1df6fba57feb52fb7f9e25928
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 98230dfb1287460e9844c4adb87a47943edabcc2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43265154"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47666214"
 ---
 # <a name="analysis-services-connection-type-for-dmx-ssrs"></a>Tipo de conexão Analysis Services para DMX (SSRS)
   Quando você criar um conjunto de dados usando uma fonte de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , o Designer de Relatórios exibirá o designer de consulta MDX (Multidimensional Expression) se ele detectar um cubo válido. Se nenhum cubo for detectado, mas um modelo de mineração de dados estiver disponível, o Designer de Relatórios exibirá o designer de consulta DMX. Para alternar entre os designers MDX e DMX, clique no botão **Tipo de Comando DMX** (![Alterar para a exibição de linguagem de consulta DMX](../../reporting-services/report-data/media/rsqdicon-commandtypedmx.gif "Alterar para a exibição de linguagem de consulta DMX")) na barra de ferramentas. Use o Designer de Consulta DMX para criar de maneira interativa uma consulta DMX usando elementos gráficos. Para usar o Designer de Consulta DMX, a fonte de dados especificada já deve ter um modelo de mineração de dados que forneça os dados. Os resultados da consulta são convertidos em um conjunto de linhas bidimensional para ser usado no relatório.  

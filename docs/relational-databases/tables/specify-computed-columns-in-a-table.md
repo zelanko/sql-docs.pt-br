@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - computed columns, define
 ms.assetid: 731a4576-09c1-47f0-a8f6-edd0b55679f4
-caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5e9b43dcd5d7d3e6f744ba2659c0ba4958e9c42a
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 3f8cb3a1a2ae171c386b9f8a0b9c18e06b3cc723
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43078733"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47627854"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>Especificar colunas computadas em uma tabela
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -71,9 +68,9 @@ ms.locfileid: "43078733"
     > [!IMPORTANT]  
     >  Quando uma fórmula combina duas expressões de tipos de dados diferentes, as regras de precedência do tipo de dados especificam que o tipo de dados com menor precedência é convertido no tipo de dados de maior precedência. Se a conversão não for uma conversão implícita com suporte, o erro "`Error validating the formula for column column_name.`" será retornado. Use a função CAST ou CONVERT para resolver o conflito de tipo de dados. Por exemplo, se uma coluna de tipo **nvarchar** é combinada com uma coluna de tipo **int**, o tipo inteiro deve ser convertido em **nvarchar** , conforme mostrado nesta fórmula `('Prod'+CONVERT(nvarchar(23),ProductID))`. Para obter mais informações, veja [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
-5.  Indique se os dados são persistentes escolhendo **Sim** ou **Não** na lista suspensa da propriedade filho **Is Persisted** .  
+5.  Indique se os dados são persistentes escolhendo **Sim** ou **Não** na lista suspensa da propriedade filho **Is Persisted**.  
   
-6.  No menu **Arquivo**, clique em **Salvar***nome da tabela*.  
+6.  No menu **Arquivo** , clique em **Salvar**_table name_.  
   
 #### <a name="to-add-a-computed-column-definition-to-an-existing-column"></a>Para adicionar uma definição de coluna computada em uma coluna existente  
   

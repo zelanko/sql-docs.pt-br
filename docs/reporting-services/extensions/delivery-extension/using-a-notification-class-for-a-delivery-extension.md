@@ -4,10 +4,7 @@ ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: extensions
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - delivery extensions [Reporting Services], notifications
 - notifications [Reporting Services]
@@ -16,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 549c40c4-d33d-46c2-9d6a-7bbb671ac67a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dbfc755d6d7e89e3628871f8e43580a68078aaba
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 4fdc39665c72a65f0410bc6d46e7d922550f93ac
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43274094"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603595"
 ---
 # <a name="using-a-notification-class-for-a-delivery-extension"></a>Usando uma classe de notificação classe para uma extensão de entrega
   A classe <xref:Microsoft.ReportingServices.Interfaces.Notification> classe está localizada no namespace <xref:Microsoft.ReportingServices.Interfaces> e representa informações de assinatura que extensões de entrega usam para entregar relatórios. A classe <xref:Microsoft.ReportingServices.Interfaces.Notification> oferece algumas propriedades que podem ser usadas para renderizar os relatórios para entrega, determinar o status da notificação e definir dados de usuário.  

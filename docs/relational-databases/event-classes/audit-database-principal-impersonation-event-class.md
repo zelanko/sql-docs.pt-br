@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Audit Database Principal Impersonation event class
 ms.assetid: 1b29dea4-3727-4c5f-8362-4ca0374de0b6
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5a2f951e6c7f5595ecbd84348838f4cd660486e8
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: e61afe6a480a779525e9ee8edd412a2d7ce59ad3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43076677"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47708024"
 ---
 # <a name="audit-database-principal-impersonation-event-class"></a>Classe de evento Audit Database Principal Impersonation
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

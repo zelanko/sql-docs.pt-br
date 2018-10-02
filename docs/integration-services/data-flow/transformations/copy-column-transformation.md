@@ -5,9 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.copycolumntrans.f1
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - copying columns
 - Copy Column transformation
 ms.assetid: 1c72a313-9026-46bc-a57f-c6b3f47346f8
-caps.latest.revision: 37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ce9187c5f785e1aedd436c9be23bed2f87d522f2
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 3fe44ae7473108a15a7df98140588adfd17908a2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35403198"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47620784"
 ---
 # <a name="copy-column-transformation"></a>transformação Copiar Coluna
   A transformação Copiar Coluna cria novas colunas com a cópia de colunas de entrada e a adição de novas colunas à saída da transformação. Mais tarde no fluxo de dados, transformações diferentes podem ser aplicadas às cópias da coluna. Por exemplo, você pode usar a transformação Copiar Coluna para criar uma cópia de uma coluna e, em seguida, converter os dados copiados em caracteres maiúsculos por meio da transformação Mapa de Caracteres ou aplicar agregações à coluna nova por meio da transformação Agregação.  

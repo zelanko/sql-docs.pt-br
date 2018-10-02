@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/02/2016
 ms.prod: sql
 ms.reviewer: douglasl
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - OPENJSON, with default schema
@@ -15,12 +13,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b8ca37635aac90c20f4021659ab6ae538dadae48
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: ea2154045da369c045eea39591266cfb02f53722
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43110028"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47630214"
 ---
 # <a name="use-openjson-with-the-default-schema-sql-server"></a>Usar OPENJSON com o esquema padrão (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

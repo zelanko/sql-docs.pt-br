@@ -4,17 +4,16 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: c1490ff0-5b8a-43c1-8d22-e459395db4f6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d9582c17aef675835049e50ff363dfb860ee113b
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 51983605c640bddafae41463c27843282820041e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43271011"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47764074"
 ---
 # <a name="report-design-tips-report-builder-and-ssrs"></a>Dicas de design de relatórios (Construtor de Relatórios e SSRS)
   Use as dicas a seguir para ajudar na criação de seus relatórios paginados no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  

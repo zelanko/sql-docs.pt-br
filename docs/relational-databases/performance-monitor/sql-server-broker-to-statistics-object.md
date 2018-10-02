@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Broker Transmission Object object
 - 'SQL Server: Broker Transmission Object'
 ms.assetid: b5bc5dde-e540-4848-8aa3-5735c51df2fb
-caps.latest.revision: 14
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bfca3f86f601e6a242ad47fdb3b8e51b511ae9c2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e1307e2e47c2215aa7845114f58062b1770fe0ca
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32950741"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603114"
 ---
 # <a name="sql-server-broker-to-statistics-object"></a>SQL Server, objeto Broker TO Statistics
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +30,7 @@ ms.locfileid: "32950741"
   
  A tabela a seguir lista os contadores contidos nesse objeto.  
   
-|Contadores do SQL Server Broker TO Statistics|Description|  
+|Contadores do SQL Server Broker TO Statistics|Descrição|  
 |----------------------------------------------|-----------------|  
 |**Méd. de gravações em lotes**|O número médio de objetos de transmissão salvo em um lote.|  
 |**Méd. de tempo de gravação em lote (ms)**|O número médio de milissegundos exigido para salvar um lote de objetos de transmissão.|  

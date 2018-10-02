@@ -5,24 +5,21 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - catalog.effective_object_permissions views [Integration Services]
 - effective_object_permissions view [Integration Services]
 ms.assetid: e70c4ce9-79f5-44df-ac75-6c29b6e38776
-caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c4e9162cdcaca28f3f5d410a423fc1fb4dc3945b
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: ebf6acca8381d0443abbd00a5583284e1d889465
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35331600"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47697574"
 ---
 # <a name="catalogeffectiveobjectpermissions-ssisdb-database"></a>catalog.effective_object_permissions (Banco de Dados SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

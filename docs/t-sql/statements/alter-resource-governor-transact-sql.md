@@ -5,9 +5,7 @@ ms.date: 05/01/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER RESOURCE GOVERNOR
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - ALTER RESOURCE GOVERNOR
 - RECONFIGURE, ALTER RESOURCE GOVERNOR
 ms.assetid: 442c54bf-a0a6-4108-ad20-db910ffa6e3c
-caps.latest.revision: 49
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ca17bc051c5808dc12edd031468d55aea16f06ae
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: afac7a2ed586f53994bc60ea89e323389c979714
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37784357"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47635774"
 ---
 # <a name="alter-resource-governor-transact-sql"></a>ALTER RESOURCE GOVERNOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

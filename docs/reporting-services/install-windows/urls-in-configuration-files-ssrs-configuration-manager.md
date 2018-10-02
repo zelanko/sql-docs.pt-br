@@ -3,19 +3,18 @@ title: URLs em arquivos de configuração (Gerenciador de Configurações do SSR
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - URL configuration [Reporting Services]
 ms.assetid: 4f5e7fe0-b5b1-4665-93d4-80dce12d6b14
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fc31fa09432f2710e21eb3328610eb8f0af15c5d
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: eb3b8189c8a863b37d05334d1e2a12a8c447d20e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43269085"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47634604"
 ---
 # <a name="urls-in-configuration-files--ssrs-configuration-manager"></a>URLs em arquivos de configuração (Gerenciador de configurações do SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] armazena configurações de aplicativos em um arquivo RSReportServer.config. Nesse arquivo, há parâmetros de configuração para URLs e reservas de URL. Esses parâmetros de configuração têm propósitos muito diferentes e regras para modificação. Se estiver acostumado a modificar arquivos de configuração para ajustar uma implantação, este tópico pode ajudá-lo a entender como cada configuração de URL é usada.  

@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - / (divide)
 - divide operator (/)
 ms.assetid: 5bde9223-872d-443e-8a27-57735e1d8f3d
-caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b7f2da217eb87a6fde21dc6d564bc9a1b03a71e8
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: df98bbe47861ca2fa03acec444a9881a7f2c6a42
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35334450"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47765581"
 ---
 # <a name="divide-ssis-expression"></a>Divide (SSIS Expression)
   Divide a primeira expressão numérica pela segunda.  

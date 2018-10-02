@@ -5,25 +5,22 @@ ms.date: 05/15/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [Integration Services], Excel
 - Excel [Integration Services]
 - connection managers [Integration Services], Excel
 ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
-caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 19ecd67f514c812745e161f353e71d0037ffe783
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 03f8fe59c2c78c1687d36ab31df6321bda9a6ba9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35401058"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47728674"
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>Loop por meio de arquivos do Excel e tabelas usando um contêiner de Loop Foreach
   Os procedimentos neste tópico descrevem como criar um loop através de pastas de trabalho do Excel ou através de tabelas em uma pasta de trabalho do Excel, usando o contêiner Loop Foreach com o enumerador apropriado.  

@@ -4,21 +4,18 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: custom-report-items
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - custom report items, creating
 ms.assetid: b3e15a4a-98f8-4dbb-b847-bbcb20327051
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 156ae80057f778c2f5b808b0c70ab67c15b64cf3
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: ceb6e3636665cf8084cc6473432014943812d5f8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43265038"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47662864"
 ---
 # <a name="creating-a-custom-report-item-run-time-component"></a>Criando um componente de item de relatório personalizado em tempo de execução
   O componente de item de relatório personalizado em tempo de execução é implementado como um componente do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] usando qualquer linguagem em conformidade com CLS e é chamado pelo processador de relatório em tempo de execução. Para definir as propriedades do componente em tempo de execução no ambiente de design, modifique o componente em tempo de design correspondente do item de relatório personalizado.  

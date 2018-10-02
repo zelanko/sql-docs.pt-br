@@ -4,19 +4,18 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - filtering data [Reporting Services], filter equation examples
 ms.assetid: 66bec93d-7c3b-4d4a-8cb6-7a7bb2f34ec6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f2773a29c98a1807e2fff009155bcc28a796500d
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 098cb82ec8271afd86cf5c86a55c11df3cc8ca2e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43277071"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47751074"
 ---
 # <a name="filter-equation-examples-report-builder-and-ssrs"></a>Exemplos de equações de filtro (Construtor de Relatórios e SSRS)
   Para criar um filtro, é necessário especificar uma ou mais equações de filtro. As equações de filtro incluem uma expressão, um tipo de dados, um operador e um valor. Este tópico traz exemplos de filtros que são utilizados com frequência.  

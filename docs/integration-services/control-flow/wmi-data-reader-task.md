@@ -5,9 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.wmidatareadertask.f1
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - WQL [Integration Services]
 - WMI Data Reader task [Integration Services]
 ms.assetid: dae57067-0275-4ac3-8f34-1b9d169f1112
-caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 881118c9747dca1a328bd091bf1bfee017e2bbb5
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: c3b38ac06b9237c2212076aaf202f68f29e9a449
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35405858"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613112"
 ---
 # <a name="wmi-data-reader-task"></a>Tarefa Leitor de Dados do WMI
   A tarefa Leitor de Dados do WMI executa consultas por meio da linguagem de consulta WMI (Instrumentação de Gerenciamento do Windows) que retorna informações de WMI sobre um sistema de computador. Pode-se utilizar o Leitor de Dados WMI para as seguintes finalidades:  

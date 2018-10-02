@@ -4,7 +4,6 @@ ms.date: 03/18/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: troubleshooting
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - messages [Reporting Services]
@@ -15,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 818b4cc1-e65d-4f1a-bf7d-fe269e6dd739
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8fe13ac523188d0cc389176635db43fbdc5eb36f
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 36c66a0317fddf9b0b9d6a32ef328706125efea9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43274566"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47759494"
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>Referência de erros e eventos (Reporting Services)
   Este tópico fornece informações sobre erros e eventos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Os arquivos de log do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] também contêm informações de erro. Para obter mais informações sobre os tipos de arquivos de log que estão disponíveis e como exibir os logs, consulte [Fontes e arquivos de log do Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  

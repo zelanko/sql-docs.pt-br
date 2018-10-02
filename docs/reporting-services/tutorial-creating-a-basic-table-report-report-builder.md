@@ -4,19 +4,16 @@ ms.date: 06/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
-applies_to:
-- SQL Server 2016
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 237a10521b8dfb2584a311f598caf571a7df6384
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 6a241d0c1bde3eea57c21ca8a14b465a79aa89c3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43276713"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47627884"
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Tutorial: criando um relatório de tabela básico (Construtor de Relatórios)
 Este tutorial ensina a criar um relatório de tabela básico com base em dados de vendas de exemplo. A ilustração a seguir mostra o relatório que você criará.  

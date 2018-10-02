@@ -5,9 +5,7 @@ ms.date: 05/01/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER SERVER AUDIT SPECIFICATION
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - audits [SQL Server], specification
 - ALTER SERVER AUDIT SPECIFICATION statement
 ms.assetid: 9cac288b-940e-4c16-88d6-de06aeed2b47
-caps.latest.revision: 19
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5ba006c5081faa2de060b32f33e0ee2487a48279
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: f8ec3babd503117e70affa28ccd1a123d0f09894
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36942142"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47752284"
 ---
 # <a name="alter-server-audit-specification-transact-sql"></a>ALTER SERVER AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

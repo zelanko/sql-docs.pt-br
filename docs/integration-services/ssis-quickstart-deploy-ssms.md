@@ -4,18 +4,17 @@ ms.date: 05/21/2018
 ms.topic: quickstart
 ms.prod: sql
 ms.prod_service: integration-services
-ms.suite: sql
 ms.custom: ''
 ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5ba8568b89863edcc5cf246c1ee09efb956d6a4a
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 06a8c045c9bd8e51a1ae924ec81cbdebcbf040da
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35332080"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47605934"
 ---
 # <a name="deploy-an-ssis-project-with-sql-server-management-studio-ssms"></a>Implantar um projeto do SSIS com o SSMS (SQL Server Management Studio)
 Este guia de início rápido demonstra como usar o SSMS (SQL Server Management Studio) para se conectar ao banco de dados do Catálogo do SSIS e, em seguida, executar o Assistente de Implantação do Integration Services para implantar um projeto do SSIS no Catálogo do SSIS. 

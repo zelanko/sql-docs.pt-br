@@ -4,22 +4,19 @@ ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: extensions
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - deploying [Reporting Services], extensions
 - rendering extensions [Reporting Services], deploying
 ms.assetid: 9fb8c887-5cb2-476e-895a-7b0e2dd11398
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8c31ae1a893448dd2947c0263390a2c55690e602
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 2fdcc4d932d32177797f6f3944b59e70d9ca607f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43268438"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47621735"
 ---
 # <a name="deploying-a-rendering-extension"></a>Implantando uma extensão de renderização
   Depois de escrever e compilar a extensão de renderização de relatório do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] para uma biblioteca do [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], você precisa torná-la detectável pelo servidor de relatório e pelo Designer de Relatórios. Para fazer isso, copie a extensão para o diretório apropriado e adicione entradas para os arquivos de configuração [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] apropriados.  

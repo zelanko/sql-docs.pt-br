@@ -5,23 +5,20 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.configureflatfiledest.f1
 ms.assetid: 318e8da0-37d3-46cd-943a-fc5d66aad93a
-caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 10d89181165d76e0b48dd7b09f0508d3d9f77419
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: f8dd326b588880ca2f095c83c6a2d9ad8f02ac32
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35408518"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47694140"
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>Configurar Destino Arquivo Simples (Assistente de Importação e Exportação do SQL Server)
   Se você tiver selecionado um destino de arquivo simples, o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mostrará **Configurar Destino do Arquivo Simples** depois que você especificar que deseja copiar uma tabela ou depois de fornecer uma consulta. Nessa página, especifique opções de formatação para o arquivo simples de destino. Outra opção é examinar o mapeamento de colunas individuais e visualizar dados de exemplo.  

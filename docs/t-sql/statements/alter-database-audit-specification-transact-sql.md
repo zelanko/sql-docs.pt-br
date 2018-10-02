@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_DATABASE_AUDIT_SPECIFICATION_TSQL
@@ -19,16 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - ALTER DATABASE AUDIT SPECIFICATION statement
 ms.assetid: 85f4e7e6-a330-4de0-9048-64f386ccc314
-caps.latest.revision: 22
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 8c09b4c3c8099983304cd207ac5d5e4724dc2019
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: 56fbd27b9e5e4d4e760743d94948540f0f6d87ad
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36941272"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47667124"
 ---
 # <a name="alter-database-audit-specification-transact-sql"></a>ALTER DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

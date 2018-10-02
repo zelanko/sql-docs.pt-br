@@ -4,17 +4,16 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: security
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 08e6d8b5-d88c-4ed2-9c05-55c757e00014
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e37457eb57f1276e8a822bf82e28f79769d63ff3
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 830955375dec473f7587ef33c1e7f6927df530b2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43278914"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47725554"
 ---
 # <a name="secure-shared-dataset-items"></a>Proteger itens de conjuntos de dados compartilhados
   Em um servidor de relatório, itens de conjuntos de dados compartilhados podem ser usados por vários relatórios. Você pode proteger conjuntos de dados compartilhados para controlar o grau de acesso concedido aos usuários. Por padrão, apenas usuários que são membros do grupo interno **Administradores** podem exibir conjuntos de dados compartilhados, modificar propriedades, habilitar o cache, criar planos de atualização do cache e excluir os itens. Todos os outros usuários devem ter atribuições de função criadas para eles que permitam acesso a um conjunto de dados compartilhado.  

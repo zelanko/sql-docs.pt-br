@@ -4,18 +4,17 @@ ms.date: 05/21/2018
 ms.topic: quickstart
 ms.prod: sql
 ms.prod_service: integration-services
-ms.suite: sql
 ms.custom: ''
 ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d4943bbddb027632a39e7a3ef13748dec286c68c
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 56e3cb535570c768b1a7db6b55c439e1fb3be74e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35328450"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47654354"
 ---
 # <a name="run-an-ssis-package-from-ssms-with-transact-sql"></a>Executar um pacote do SSIS do SSMS com o Transact-SQL
 Este guia de início rápido demonstra como usar o SSMS (SQL Server Management Studio) para se conectar ao banco de dados do Catálogo do SSIS e, em seguida, usar instruções do Transact-SQL para executar um pacote do SSIS armazenado no Catálogo do SSIS.

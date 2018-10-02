@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Audit Object Derived Permission event class
 ms.assetid: cf61b789-a326-47f9-9d0c-19470782328f
-caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 70b9eb74a54bfeda6f0bae8547d4631a9d5d141d
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 1a06993d36297ef328bfdcad27e5cf3fb3413bfc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43068377"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47648391"
 ---
 # <a name="audit-object-derived-permission-event-class"></a>Classe de evento Audit Object Derived Permission
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

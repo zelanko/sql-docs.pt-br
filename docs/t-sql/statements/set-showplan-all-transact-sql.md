@@ -5,9 +5,7 @@ ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SET SHOWPLAN_ALL
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - stopping statement execution
 - estimated execution information [SQL Server]
 ms.assetid: a500b682-bae4-470f-9e00-47de905b851b
-caps.latest.revision: 40
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: dfd6611e13e45c1e3fa969111c68d3bd74d63249
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 8ef59fc6349a588bbb58515614d6d977253d213a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37783627"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47733975"
 ---
 # <a name="set-showplanall-transact-sql"></a>SET SHOWPLAN_ALL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

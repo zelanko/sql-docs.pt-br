@@ -4,17 +4,16 @@ ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 2fcb9be2-1daa-4c92-ad00-5f63cdf39f70
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a14dcfdb76fb931bdcc05b79ad2d7669b37b65d7
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: bfb82586a5bd01f812de3ab704b01e670d048f55
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43273997"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47665974"
 ---
 # <a name="sort-data-in-a-data-region-report-builder-and-ssrs"></a>Classificar dados em uma região de dados (Construtor de Relatórios e SSRS)
   Para alterar a ordem de classificação dos dados em uma região quando um relatório for executado pela primeira vez, defina a expressão de classificação na região de dados ou no grupo. Por padrão, a expressão de classificação de um grupo é definida automaticamente como o mesmo valor da expressão do grupo.  

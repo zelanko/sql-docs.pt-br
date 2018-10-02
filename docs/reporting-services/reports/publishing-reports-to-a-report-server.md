@@ -4,7 +4,6 @@ ms.date: 06/01/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reports
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - production environments [Reporting Services]
@@ -22,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: bd7aa5e0-61ce-43fd-8f74-5d1aeed078bb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 95427bd5ccb158ede439cb32aa7ebfcb24c61bf9
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 44d376414ce4043bca6f053c6523365af5d96d4a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43264433"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47714096"
 ---
 # <a name="publishing-reports-to-a-report-server"></a>Publicando relatórios em um servidor de relatórios
   Depois de criar e testar um relatório ou conjunto de relatórios, você pode usar os recursos implantação do [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para publicar os relatórios em um servidor de relatório. Você pode publicar relatórios individuais ou um projeto do Servidor de Relatório que pode incluir vários relatórios e fontes de dados. A publicação de um projeto do Servidor de Relatório é a forma mais fácil de publicar vários relatórios. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usa o termo *implantar*, em vez termo *publicar*. Os dois termos significam o mesmo.  

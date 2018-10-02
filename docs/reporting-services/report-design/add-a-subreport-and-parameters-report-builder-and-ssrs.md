@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - "10093"
@@ -12,12 +11,12 @@ f1_keywords:
 ms.assetid: 94f960f8-a629-4f1e-8277-c3b8f0680d98
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3a1134d1a26fdd63a95a9e278c47f7c4041bdf22
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 8425d664ea849d00b78c4f4e76fd01e54e990b33
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43278285"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47664204"
 ---
 # <a name="add-a-subreport-and-parameters-report-builder-and-ssrs"></a>Adicionar um sub-relatório e parâmetros (Construtor de Relatórios e SSRS)
   Adicione sub-relatórios a um relatório quando quiser criar um relatório principal que seja um contêiner para vários relatórios relacionados. Um sub-relatório é uma referência a outro relatório. Para relacionar os relatórios por valores de dados (por exemplo, para que diversos relatórios exibam dados para o mesmo cliente), é preciso criar um relatório com parâmetros (por exemplo, um relatório que exiba os detalhes de um cliente específico) como o sub-relatório. Ao adicionar um sub-relatório ao relatório principal, você também pode especificar os parâmetros que serão passados para o sub-relatório.  

@@ -5,9 +5,7 @@ ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - servers [SQL Server], permissions
 - granting permissions [SQL Server], servers
 ms.assetid: 7e880a5a-3bdc-491f-a167-7a9ed338be7f
-caps.latest.revision: 36
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5925f0a4e6147f3917674c4414f6fd868dbe9171
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: b6a581ebabd708cb191a936b78f9fdf1c205cce0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36941892"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47767309"
 ---
 # <a name="grant-server-permissions-transact-sql"></a>Permissões de servidor GRANT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

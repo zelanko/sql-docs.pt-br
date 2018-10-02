@@ -5,19 +5,18 @@ ms.date: 06/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.suite: sql
 ms.custom: ''
 ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 8979512a2ac2edeba8a5a6479fe0ef8bb6c3179a
-ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
+ms.openlocfilehash: 4dfe14abd938e456a1b1415226ff6d903e0b5b07
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45564002"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47608626"
 ---
 # <a name="connect-to-data-sources-and-file-shares-with-windows-authentication-from-ssis-packages-in-azure"></a>Conectar-se a fontes de dados e a compartilhamentos de arquivos com a Autenticação do Windows de pacotes SSIS no Azure
 Você pode usar a autenticação do Windows para se conectar a fontes de dados e compartilhamentos de arquivos na mesma rede virtual que o Azure SSIS IR (Integration Runtime), em máquinas virtuais locais/do Azure e em Arquivos do Azure. Há três métodos de se conectar a fontes de dados e compartilhamentos de arquivos com a Autenticação do Windows de pacotes SSIS em execução no Azure-SSIS IR:

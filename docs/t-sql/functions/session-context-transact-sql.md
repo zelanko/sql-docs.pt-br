@@ -5,9 +5,7 @@ ms.date: 06/22/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SESSION_CONTEXT
@@ -17,16 +15,15 @@ f1_keywords:
 helpviewer_keywords:
 - SESSION_CONTEXT function
 ms.assetid: b6bdbc54-331a-43cc-ab3d-3872d6a12100
-caps.latest.revision: 11
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f959c49d8ecde2549da413df049800a5e83adf5c
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: c86460fa6e06a6bc0ab25edfb2787547583092f8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37786677"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47673383"
 ---
 # <a name="sessioncontext-transact-sql"></a>SESSION_CONTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

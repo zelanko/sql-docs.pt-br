@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: wmi-provider-library-reference
-ms.suite: pro-bi
 ms.topic: conceptual
 apiname:
 - GenerateDatabaseUpgradeScript (WMI MSReportServer_ConfigurationSetting Class)
@@ -16,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 88534e8e-2877-41cd-b5c2-b1d33a0fd203
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b7215fa012198b6694217920cdf61f01a2c0f5a9
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 32099377d1a40e6a579020b9673d39932953076b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43265435"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47681504"
 ---
 # <a name="configurationsetting-method---generatedatabaseupgradescript"></a>Método de ConfigurationSetting – GenerateDatabaseUpgradeScript
   Gera um script que pode ser usado para atualizar o banco de dados do servidor de relatório para o esquema do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] .  

@@ -3,17 +3,16 @@ title: Configurar a conta de serviço do servidor de relatório (Gerenciador de 
 ms.date: 05/18/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: f880c623-67c8-4167-b98b-ace17e800faa
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 9609112f55fcb9a63fe0fe68e7b92c442143542e
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 797b174427fa5a23542c26131dc3a74cd81fbba2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43268136"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603004"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>Configurar a conta de serviço do servidor de relatório (Gerenciador de configurações SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é implementado com um único serviço que contém um serviço Web do Servidor de Relatório, um [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]e um aplicativo de processamento em segundo plano usado para processamento agendado de relatórios e entrega de assinaturas. Este tópico explica como uma conta de serviço é configurada inicialmente e como modificar a conta ou a senha usando a ferramenta Configuração do Reporting Services.  

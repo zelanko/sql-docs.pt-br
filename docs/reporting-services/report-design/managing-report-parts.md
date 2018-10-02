@@ -4,17 +4,16 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5ebfe30b11c7d4aea0d98557b2457577f1c8632d
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: dce1ca8367db90177d9a9093da2f7300d7409e45
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43273718"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47614484"
 ---
 # <a name="managing-report-parts"></a>Gerenciando partes de relatório
   Partes de relatório podem ser reutilizadas em relatórios paginados por vários usuários e em vários relatórios. Os usuários podem pesquisar partes de relatório no servidor e adicioná-las a um relatório.  Também podem ser informados de atualizações para a parte de relatório no servidor e republicar novas versões de uma parte de relatório. Essas ações de criação de relatório podem ser afetadas e controladas pelas permissões de segurança dos serviços de relatório.  Este tópico revisa as propriedades de parte de relatório e o comportamento depois que elas estão no servidor.  

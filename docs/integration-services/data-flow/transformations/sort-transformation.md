@@ -5,9 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.sorttrans.f1
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - multiple sorts
 - duplicate data [Integration Services]
 ms.assetid: 728c9351-84a8-4a89-be4d-d50d4adc04e0
-caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b012acc9fd4183c8255875d4df8dbcbc3b681ffa
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: bfcf99a28a847097d943495c205d7d894bb388ea
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35405318"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47658464"
 ---
 # <a name="sort-transformation"></a>Transformação Classificação
   A transformação Classificação ordena os dados de entrada de modo crescente ou decrescente e os copia na saída da transformação. Você pode aplicar várias classificações a uma entrada. Cada classificação é identificada por um numeral que determina a ordem de classificação. A coluna com o número mais baixo é classificada primeiro, a com o segundo número mais baixo é classificada em seguida e assim por diante. Por exemplo, se uma coluna denominada **CountryRegion** tiver uma ordem de classificação 1 e uma coluna denominada **City** tiver uma ordem de classificação 2, a saída será ordenada por país/região e depois por cidade. Um número positivo indica que a classificação está aumentando, e um negativo que está diminuindo. As colunas que não forem classificadas terão a ordem de classificação 0. As colunas que não forem selecionadas para classificação serão automaticamente copiadas para a saída de transformação junto com as colunas classificadas.  

@@ -6,22 +6,19 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL.DATA.TOOLS.SQLEDITOR
 ms.assetid: fa78e2cf-3c64-49f5-93cc-a3d50b1e7d05
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4bdca5a6c8ea949e9106bd8d62b8fa6868577d13
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 8f2862d1e5ae68e5b97a9721d22758c5441e9b50
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39082958"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47669764"
 ---
 # <a name="use-transact-sql-editor-to-edit-and-execute-scripts"></a>Usar o Editor Transact-SQL para editar e executar scripts
 O Editor Transact\-SQL proporciona uma experiência avançada de edição e depuração quando você está trabalhando com scripts. Ele é invocado quando você usa o menu contextual **Exibir Código** para abrir uma entidade de banco de dados em um banco de dados conectado ou um projeto. Ele também é aberto automaticamente quando você usa o menu contextual **Nova Consulta** no Pesquisador de Objetos do SQL Server ou adiciona um novo objeto de script a um projeto de banco de dados.  
@@ -34,7 +31,7 @@ O Editor Transact\-SQL contém um painel **T-SQL** principal onde é possível g
   
 |Tópico|Descrição|  
 |---------|---------------|  
-|[Como estruturar tópicos e adicionar trechos a scripts Transact-SQL](../ssdt/how-to-outline-and-add-snippets-to-transact-sql-script.md)|Use o Selecionador de Trecho para inserir código Transact\-SQL pronto para codificar a sua consulta.|  
+|[Como estruturar tópicos e adicionar snippets a scripts Transact-SQL](../ssdt/how-to-outline-and-add-snippets-to-transact-sql-script.md)|Use o Selecionador de Snippet para inserir código Transact\-SQL pronto para codificar a sua consulta.|  
 |[Como navegar entre scripts](../ssdt/how-to-navigate-between-scripts.md)|Use a Ir para Definição e Localizar todas as referências para navegar entre scripts.|  
 |[Como usar renomeação e refatoração para fazer alterações em seus objetos de banco de dados](../ssdt/how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects.md)|Renomeie um objeto em todos os scripts e visualize as alterações.|  
 |[Como executar uma consulta parcial](../ssdt/how-to-execute-a-partial-query.md)|Realce um segmento específico do script e execute-o como uma única consulta.|  

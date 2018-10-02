@@ -4,17 +4,16 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c89595a791ed67dc63730d2591ef0e4ab6ad562d
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 28cea40552b79be184c8c600e6be48f2c81fecd0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43278558"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47703034"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Propriedades de campos estendidos para um banco de dados do Analysis Services (SSRS)
   A extensão de processamento de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dá suporte às propriedades de campo estendidas. As propriedades de campo estendidas são propriedades adicionais às propriedades de campo **Value** e **IsMissing** que estão disponíveis na fonte de dados e que têm suporte na extensão de processamento de dados. As propriedades estendidas não são exibidas no painel Dados do Relatório como parte da coleção de campos de um conjunto de dados do relatório. Você pode inclui os valores de propriedade do campo estendido em seu relatório escrevendo expressões que os especifiquem por nome usando a coleção interna de **Fields** .  

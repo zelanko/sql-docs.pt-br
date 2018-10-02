@@ -4,10 +4,7 @@ ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: extensions
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - security [Reporting Services], extensions
 - extensions [Reporting Services], security
@@ -15,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 58cbdfeb-1105-4a7d-a3b8-b897ff95f367
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 008695a4157fc51080f344d23399d65130dcbe9c
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 4d3cd9c1db8b2662d867a7f2885e611192401c2a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43270227"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47741294"
 ---
 # <a name="security-considerations-for-extensions"></a>Considerações de segurança para extensões
   Todos aplicativo que se destinam ao CLR (Common Language Runtime) devem interagir com o sistema de segurança CLR. Quando tal aplicativo é executado, é automaticamente avaliado e recebe um conjunto de permissões do CLR. Dependendo das permissões que o aplicativo receber, ele continuará sua execução ou vai gerar uma exceção de segurança. As configurações e as diretrizes locais de segurança dos arquivos de configuração de política de segurança para um determinado servidor de relatório definem as permissões de código recebidas por um assembly.  

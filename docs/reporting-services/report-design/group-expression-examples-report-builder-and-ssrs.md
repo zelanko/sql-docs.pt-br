@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - data [Reporting Services], grouping
@@ -14,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 34cd0249-fc74-4cf2-ba11-7b072992bfd2
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8e12a7d045f628c67fb07ceb2b25189865723111
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: cc7b23b28005ad6ba362704cd33c4c591ba380a0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43270855"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47768932"
 ---
 # <a name="group-expression-examples-report-builder-and-ssrs"></a>Exemplos de expressões de grupo (Construtor de Relatórios e SSRS)
   Em uma região de dados, você pode agrupar dados por um único campo ou criar expressões mais complexas que identifiquem os dados nos quais deve ser feito o agrupamento. Expressões complexas incluem referências a vários campos ou parâmetros, instruções condicionais ou código personalizado. Quando você define um grupo para uma região de dados, você adiciona essas expressões às propriedades **Group** . Para obter mais informações, consulte [Adicionar ou excluir um grupo em uma região de dados &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  

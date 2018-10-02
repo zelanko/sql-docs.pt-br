@@ -4,16 +4,16 @@ ms.date: 10/05/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server-sharepoint
-ms.suite: pro-bi
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6e74f983cfa2dd98a986c66a2cdcf2fcef4f9a21
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: 8920ed788f7ffcf51a93627ad84f924df3d164eb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43268976"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47605884"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Gerenciar um aplicativo de serviço do SharePoint no Reporting Services
 

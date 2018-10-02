@@ -5,9 +5,7 @@ ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - permissions [SQL Server], symmetric keys
 - REVOKE statement, symmetric keys
 ms.assetid: 091da030-a768-4aa3-9509-cc23bd719cea
-caps.latest.revision: 19
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 979cb0791822ca5ae0f01598f8bb546e5246e287
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 8a99ce445bd9278bc6918c81dcbf13be32bcf696
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37785817"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47595564"
 ---
 # <a name="revoke-symmetric-key-permissions-transact-sql"></a>Permissões de chave simétrica REVOKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

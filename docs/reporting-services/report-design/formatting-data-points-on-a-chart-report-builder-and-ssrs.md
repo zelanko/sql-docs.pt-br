@@ -4,7 +4,6 @@ ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - "10248"
@@ -12,12 +11,12 @@ f1_keywords:
 ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b2d7d53489a89c5cb7f4790f437e5e61e5892048
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 0c132829009fb8212919434dff77f8ceb5710be6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43269666"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47624564"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>Formatando pontos de dados em um gráfico (Construtor de Relatórios e SSRS)
 Em um relatório paginado do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , um ponto de dados é a menor entidade individual no gráfico. Em gráficos sem-forma, os pontos de dados são representados de acordo com seu tipo de gráfico. Por exemplo, uma série de linhas consiste em um ou mais pontos de dados conectados. Em gráficos com forma, os pontos de dados são representados por fatias individuais ou segmentos acrescidos a todo o gráfico. Por exemplo, em um gráfico de pizza, cada pedaço é um ponto de dados. Para obter mais informações, consulte [Tipos de gráficos &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md).  

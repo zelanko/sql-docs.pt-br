@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Broker:Forwarded Message Dropped event class
 ms.assetid: ec242d0b-77b0-45f5-8b12-186a14b173a8
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c17fe8a30934741751a1c0f02cd93430a9f30a0f
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: f9a2853168944e3611eb22cf377761f9b73f8d50
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43070668"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47647404"
 ---
 # <a name="brokerforwarded-message-dropped-event-class"></a>classe de evento Broker:Forwarded Message Dropped
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

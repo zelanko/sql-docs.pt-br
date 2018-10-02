@@ -4,21 +4,18 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: custom-report-items
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - custom report items, creating
 ms.assetid: 323fd58a-a462-4c48-b188-77ebc0b4212e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e42f36a6fbd827a6785e7266f9e74e2bb5b838df
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 3b07cf939df0df0233ec0d7e91800eb1a16b4fa2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43274176"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47644854"
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>Criando um componente de tempo de design de item de relatório personalizado
   Um componente em tempo de design de item de relatório personalizado é um controle que pode ser usado no ambiente do Designer de Relatórios do Visual Studio. O componente em tempo de design de item de relatório personalizado oferece uma superfície de design ativada que pode aceitar operações de arrastar e soltar, a integração ao pesquisador de propriedade [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] e a capacidade de oferecer editores de propriedade personalizados.  

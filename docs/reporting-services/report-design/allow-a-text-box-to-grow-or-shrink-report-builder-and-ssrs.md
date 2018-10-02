@@ -4,17 +4,16 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: dbc01e78-5993-47e5-af04-34f9e3bbcee1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 3e0efafcb493fd6de47b6b3fc1c2c9b16bc6c915
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: dce0f20910913da4c8d1d5dae818a051e0aadd40
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43276468"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47759458"
 ---
 # <a name="allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs"></a>Permitir que uma caixa de texto seja ampliada ou reduzida (Construtor de Relatórios e SSRS)
   Em um relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , as caixas de texto não são apenas as caixas autônomas na superfície de design do relatório. Todas as células de uma tabela ou matriz (uma região de dados tablix) também contêm uma caixa de texto, que pode ser formatada da mesma maneira que caixas de texto autônomas. Por padrão, as caixas de texto têm tamanho fixo. Você pode definir opções que permitem a expansão ou redução da caixa de texto com base em seu conteúdo. Essas opções correspondem à propriedade **CanGrow** ou **CanShrink** no painel Propriedades.  

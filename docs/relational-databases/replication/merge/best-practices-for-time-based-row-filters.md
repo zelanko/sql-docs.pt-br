@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - best practices
 ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
-caps.latest.revision: 15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2c66f26fd27bd0f36161866ec0cf6e69b03bc752
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 3a2b86b5f9b08e9915adae27132b6beb5647394f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40410948"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47755874"
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>Práticas recomendadas para filtros de linha baseados em tempo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

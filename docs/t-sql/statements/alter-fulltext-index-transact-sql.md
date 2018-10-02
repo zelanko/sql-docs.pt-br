@@ -5,9 +5,7 @@ ms.date: 04/27/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER FULLTEXT INDEX
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - search property lists [SQL Server], associating with full-text indexes
 - ALTER FULLTEXT INDEX statement
 ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
-caps.latest.revision: 95
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ed53bf8d3bb8034f7a55e8329bb14ba24bbccb73
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: f824f7fec40cf99b55ff97382269413ae82b5c83
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782617"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47662094"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

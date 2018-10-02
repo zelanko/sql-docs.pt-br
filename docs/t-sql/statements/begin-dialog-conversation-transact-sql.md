@@ -5,9 +5,7 @@ ms.date: 07/26/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DIALOG CONVERSATION
@@ -30,16 +28,15 @@ helpviewer_keywords:
 - encryption [SQL Server], conversations
 - starting conversations
 ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
-caps.latest.revision: 47
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 93bf812ebdc2b238ec7b84dee99d91e9aef8fb58
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 976c052b519cc72de226c06f27abf8b8f43fd74c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37783857"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47616844"
 ---
 # <a name="begin-dialog-conversation-transact-sql"></a>BEGIN DIALOG CONVERSATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

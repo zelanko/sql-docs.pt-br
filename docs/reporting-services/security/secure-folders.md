@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: security
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - high-security folders [Reporting Services]
@@ -14,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0fd91f77-0143-476b-9af0-87293be78e44
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: d8a99d9a05844acc111e4879d5eaa59ff55a684b
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: f3d1969f1e055b239dee317dbcd8d0b4cd73a4d4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43270828"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47634104"
 ---
 # <a name="secure-folders"></a>Proteger pastas
   A segurança de pasta é a base para proteger todo o conteúdo em um servidor de relatório. Como a segurança é herdada em toda a estrutura de pastas, é possível designar seções grandes ou pequenas da hierarquia de pasta para permitir determinados tipos de acesso.  

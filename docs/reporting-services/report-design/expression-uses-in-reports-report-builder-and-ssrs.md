@@ -4,19 +4,18 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Reporting Services], about expressions
 ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bf030c6f87c7f7fc524873e7426f2db27b76e475
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: e1a3611e0575014ba2abba89d61d0512b484f720
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43267215"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47733164"
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>Uso de expressões em relatórios (Construtor de Relatórios e SSRS)
 Em relatórios paginados do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , as expressões são usadas em toda a definição de relatório para especificar ou calcular valores para parâmetros, consultas, filtros, propriedades de itens de relatório, definições de classificação e grupo, propriedades de caixa de texto, indicadores, mapas do documento, conteúdo de cabeçalho e rodapé de página dinâmica, imagens e definições de fonte de dados dinâmicos. Este tópico contém exemplos dos muitos lugares em que você pode usar expressões para variar o conteúdo ou a aparência de um relatório. Esta lista não é completa. Defina uma expressão para qualquer propriedade em uma caixa de diálogo que exibe o botão de expressão (**fx**) ou em uma lista suspensa que exibe **\<Expression...>**.  

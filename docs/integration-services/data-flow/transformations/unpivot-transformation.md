@@ -5,9 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.unpivottrans.f1
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - normalized data [Integration Services]
 - datasets [Integration Services], normalized data
 ms.assetid: f635c64b-a9c5-4f11-9c40-9cd9d5298c5d
-caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: dae8d80182c1a38c7124d16f1b0eefeec10e1e0b
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: f24af29ad0c0378f9977bf73a6555135f2c1df8b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35410688"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47753804"
 ---
 # <a name="unpivot-transformation"></a>Transformação Não Dinâmica
   A transformação não dinâmica transforma um conjunto de dados não normalizado em uma versão mais normalizada, expandindo valores de várias colunas de um único registro em vários registros, com os mesmos valores em uma única coluna. Por exemplo, um conjunto de dados que lista nomes de clientes tem uma linha para cada cliente, com os produtos e a quantidade comprada mostrados em colunas da linha. Depois que a transformação não dinâmica normaliza o conjunto de dados, este contém uma linha diferente para cada produto que o cliente comprou.  

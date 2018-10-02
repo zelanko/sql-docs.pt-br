@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - User Settable object
 - SQLServer:User Settable
 ms.assetid: 633de3ef-533c-4f0c-9c7b-c105129d8e94
-caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 64c32d1497a0bc54f6d3d72779ca65f1b5fa05d1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c908154b21c1adca88b959d0a1d1243a0465ea02
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32951951"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47609954"
 ---
 # <a name="sql-server-user-settable-object"></a>SQL Server, objeto User Settable
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,13 +33,13 @@ ms.locfileid: "32951951"
   
  Essa tabela descreve o objeto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **User Settable** .  
   
-|Contadores do SQL Server definíveis pelo usuário|Description|  
+|Contadores do SQL Server definíveis pelo usuário|Descrição|  
 |---------------------------------------|-----------------|  
 |**Consulta**|O objeto **User Settable** contém o contador da consulta. Os usuários configuram os **Contadores do usuário** dentro do objeto de consulta.|  
   
  Essa tabela descreve as **instâncias** do contador de **Consultas** .  
   
-|Instâncias do contador de consultas|Description|  
+|Instâncias do contador de consultas|Descrição|  
 |-----------------------------|-----------------|  
 |**Contador do usuário 1**|Definido usando **sp_user_counter1**.|  
 |**Contador do usuário 2**|Definido usando **sp_user_counter2**.|  

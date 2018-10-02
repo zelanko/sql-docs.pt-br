@@ -5,9 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.charactertrans.f1
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - string functions
 - Character Map transformation [Integration Services]
 ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
-caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a6d60fcbff7a6878b757997b2ddec8ae16066b92
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 6bbf9e0fa3d3c2a8cc900e0bd48163dc11eba3ae
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35403228"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47619374"
 ---
 # <a name="character-map-transformation"></a>Transformação Mapas de Caracteres
   A transformação Mapa de Caracteres aplica funções de cadeia de caracteres, como a conversão de letra minúscula em maiúscula, em dados de caracteres. Essa transformação funciona apenas em dados de coluna com um tipo de dados de cadeia de caracteres.  

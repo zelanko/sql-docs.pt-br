@@ -4,7 +4,6 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - sql13.rtp.rptdesigner.tablixgroup.f1
@@ -34,12 +33,12 @@ f1_keywords:
 ms.assetid: 9dcf3fc8-bf9c-4a14-a03d-e78254aa4098
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a2ebc327ca394fdef1007485ed6d59013cf33968
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 369c70b35d76b48c3c2b18039250c7b9b016057a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43281569"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47653682"
 ---
 # <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>Tabelas, matrizes e listas (Construtor de Relatórios e SSRS)
  No [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], tabelas, matrizes e listas são *regiões de dados* que exibem dados de relatório paginado em células organizadas em linhas e colunas. As células geralmente contêm dados de texto como texto, datas e números, mas também podem conter medidores, gráficos ou itens de relatório como imagens. Coletivamente, tabelas, matrizes e listas são geralmente chamadas de regiões de dados do *tablix* .  

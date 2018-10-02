@@ -5,23 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 6eb853aa-8016-490c-be4f-06ab8d7f5021
-caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1490e786bd2799d6ea2abb1c821b155777f1356f
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: bd08837dffff9fb77ff8dd0f43d3b558fc6af2d0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35403888"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47688784"
 ---
 # <a name="functional-dependency-profile-request-options-data-profiling-task"></a>Opções da solicitação do perfil Dependência Funcional (tarefa Criação de Perfil de Dados)
   Use o painel **Propriedades da Solicitação** da página **Solicitações de Perfil** para definir as opções da **Solicitação de Perfil de Dependência Funcional** selecionada no painel de solicitações. Um perfil de Dependência Funcional informa até que ponto os valores em uma coluna (a coluna dependente) dependem dos valores em outra coluna ou conjunto de colunas (a coluna determinante). Esse perfil também pode ajudá-lo a identificar problemas em seus dados, como valores inválidos. Por exemplo, você perfila a dependência entre uma coluna Código Postal e uma coluna estado dos Estados Unidos. Nesse perfil, o mesmo Código Postal deve sempre ter o mesmo estado, mas o perfil descobre violações da dependência.  

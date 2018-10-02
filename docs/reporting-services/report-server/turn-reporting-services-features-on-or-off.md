@@ -4,7 +4,6 @@ ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, configuration
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: b69db02a-43a7-4fdc-ad9b-438d817a7f83
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 7dc6000f91bdb2eda4fb37d73fb2453b6113252d
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 7f1831bd4f089cd3c97706ba3efa6983a98b007a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43280974"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47640694"
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>Ativar e desativar recursos do Reporting Services
   Você pode desativar os recursos do servidor de relatório que não são usados como parte de uma estratégia de bloqueio para reduzir a superfície de ataque de um servidor de relatório de produção. Na maioria dos casos, você deve executar os recursos do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] simultaneamente para usar toda a funcionalidade disponível no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. No entanto, dependendo de seu modelo de implantação, você pode desabilitar os recursos dos quais não precisa. Por exemplo, você pode habilitar apenas o processamento em segundo plano se todo o processamento de relatórios for configurado como operações agendadas. Da mesma maneira, você pode executar somente o serviço Web Servidor de Relatório se quiser apenas relatórios interativos sob demanda.  

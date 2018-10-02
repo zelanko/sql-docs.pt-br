@@ -4,17 +4,16 @@ ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: fbb00dc6-7887-480c-b771-cab6fecb8dcc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b29d21e482765680acea22de427023e02b1a1062
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 42f53c59b6e18ee998feed08e3656de866310f70
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43269315"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47681764"
 ---
 # <a name="preparing-data-for-display-in-a-tablix-data-region-report-builder-and-ssrs"></a>Preparando dados para exibição em uma região de dados Tablix (Construtor de Relatórios e SSRS)
   Uma região de dados tablix exibe dados de um conjunto de dados. É possível exibir todos os dados recuperados do conjunto de dados ou criar filtros para exibir apenas um subconjunto dos dados. Você também pode adicionar expressões condicionais para preencher valores nulos ou modificar a consulta de um conjunto de dados para incluir colunas que identificam a ordem de classificação de uma coluna existente.  
