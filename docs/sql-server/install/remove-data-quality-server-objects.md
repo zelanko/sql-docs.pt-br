@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: install
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1b7c6dbb-b40e-4822-9caa-608e1056af8e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 103193bc2e9f8b487a2f7083b09cf0f2f856e869
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ae11b65eab37e07286b5d06a7c09305ba5020095
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37993398"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47819404"
 ---
 # <a name="remove-data-quality-server-objects"></a>Remover objetos do Data Quality Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -25,7 +23,7 @@ ms.locfileid: "37993398"
   A desinstalação do [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou a total remoção de uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que tem o [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] não exclui alguns objetos do [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] , incluindo bancos de dados DQS. Isso implica que você não perca seus dados DQS se desinstalar o [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] usando a instalação do SQL Server. Exclua manualmente esses objetos do [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] quando o processo de desinstalação estiver concluído.  
   
 > [!NOTE]  
->  -   Antes de desinstalar o [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)], considere fazer backup de todas as suas bases de dados de conhecimento exportando-as para um arquivo .dqsb e use o arquivo posteriormente para importar todas as bases de conhecimento em uma nova instalação do [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] . A exportação e a importação de todas as bases de dados de conhecimento DQS podem ser realizadas somente executando DQSInstaller.exe com os parâmetros de linha de comando apropriados no prompt de comando. Para obter mais informações, consulte [Export and Import DQS Knowledge Bases Using DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md).  
+>  -   Antes de desinstalar o [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)], considere fazer backup de todas as suas bases de dados de conhecimento exportando-as para um arquivo .dqsb e use o arquivo posteriormente para importar todas as bases de conhecimento em uma nova instalação do [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] . A exportação e a importação de todas as bases de dados de conhecimento DQS podem ser realizadas somente executando DQSInstaller.exe com os parâmetros de linha de comando apropriados no prompt de comando. Para obter mais informações, consulte [Exportar e importar bases de dados de conhecimento DQS usando o DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md).  
 > -   Antes de excluir os bancos de dados do DQS, faça backup dos bancos de dados se desejar preservá-los, e use-o posteriormente para restaurar os dados. Para obter informações sobre como fazer isso, consulte [Gerenciar bancos de dados do DQS](../../data-quality-services/manage-dqs-databases.md).  
   
 ## <a name="uninstall-data-quality-server-from-a-sql-server-instance"></a>Desinstalar o Data Quality Server de uma instância do SQL Server  
