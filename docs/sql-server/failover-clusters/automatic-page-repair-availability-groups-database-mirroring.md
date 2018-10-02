@@ -5,9 +5,7 @@ ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - automatic page repair
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - database mirroring [SQL Server], automatic page repair
 - suspect pages [SQL Server]
 ms.assetid: cf2e3650-5fac-4f34-b50e-d17765578a8e
-caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d76ab4cee846252b749a664619d1117eacd4aa93
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4c674c7a100d5a757ef0d7d3d1f06349f0ec5e50
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33036693"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47844634"
 ---
 # <a name="automatic-page-repair-availability-groups-database-mirroring"></a>Reparo automático de página (grupos de disponibilidade: espelhamento de banco de dados)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +47,7 @@ ms.locfileid: "33036693"
 ##  <a name="ErrorTypes"></a> Error Types That Cause an Automatic Page-Repair Attempt  
  O reparo automático de página do espelhamento de banco de dados tenta reparar apenas páginas em um arquivo de dados no qual houve falha na operação de um dos erros listados na tabela a seguir.  
   
-|Número do erro|Description|Instâncias que causam uma tentativa de reparo automático de página|  
+|Número do erro|Descrição|Instâncias que causam uma tentativa de reparo automático de página|  
 |------------------|-----------------|---------------------------------------------------------|  
 |823|Ação realizada apenas se o sistema operacional tiver executado uma CRC (verificação de redundância cíclica) que falhou nos dados.|ERROR_CRC. O valor do sistema operacional desse erro é 23.|  
 |824|Erros lógicos.|Erros de dados lógicos, como gravação interrompida ou soma de verificação de página inválida.|  
