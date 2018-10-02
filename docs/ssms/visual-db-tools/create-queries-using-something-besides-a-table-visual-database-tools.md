@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-visual-db
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - user-defined functions [SQL Server], queries
 - queries [SQL Server], creating
 ms.assetid: 8e4a1f0a-8a42-4733-be8d-e21d6dbddb33
-caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 16ce8b8901e94ea995b1ac0c517d0df7f7304922
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: e7e473fcc1298fbaa302cceecc80611938d084f4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979309"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47799390"
 ---
 # <a name="create-queries-using-something-besides-a-table-visual-database-tools"></a>Criar consultas usando algo além de uma tabela (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
