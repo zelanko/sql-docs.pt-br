@@ -6,20 +6,17 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7f78f517-f13d-4f4b-84b9-e804cb490b2c
-caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1d7b1e6537aa58d06d21eb3df0b4523bfd703252
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 05a0fa6029a1995c8d6e8104e4638d4b41100f35
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087128"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47731244"
 ---
 # <a name="how-to-specify-predeployment-or-postdeployment-scripts"></a>Como especificar scripts de pré-implantação ou pós-implantação
 Os scripts de pré-implantação e pós-implantação executam instruções do Transact\-SQL antes e após o script de implantação principal, que é gerado do projeto de banco de dados. Um projeto pode ter somente um script de pré-implantação e um de pós-implantação. Esses scripts podem ser usados para várias finalidades. Por exemplo:  

@@ -4,19 +4,17 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c8121ede-1aec-459b-b7b0-1408bb3e62fb
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 03d94268884854c21f5aa6d00eff78a908798a58
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 9cd313b8db22a74f8e2fead537f3b513a94e7818
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37968508"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47738084"
 ---
 # <a name="configure-compatible-sql-server-features-with-stretch-database"></a>Configurar recursos do SQL Server compatíveis com o Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

@@ -6,8 +6,6 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql.data.tools.dbrefactoring.previewdialog
@@ -16,16 +14,15 @@ f1_keywords:
 - sql.data.tools.dbrefactoring.moveschemadialog
 - sql.data.tools.dbrefactoring.renameserverdatabasedialog
 ms.assetid: f35520e6-8e6e-47b1-87a3-22c0cf2cabdb
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4ba39da9c13a1a2051f249942de86b18963eade8
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 971df125a63ecdd1e46b6b884198886cccbcc378
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083358"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47737664"
 ---
 # <a name="how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects"></a>Como: Usar renomeação e refatoração para fazer alterações em seus objetos de banco de dados
 O menu contextual Refatorar no Editor de Transact\-SQL permite renomear ou mover um objeto para um esquema diferente e permite uma visualização de todas as áreas afetadas antes de confirmar a alteração. Você também pode usar o menu Refatorar para qualificar completamente todas as referências a objetos de banco de dados ou expandir os caracteres curinga nas instruções `SELECT` em seu projeto de banco de dados.  

@@ -4,12 +4,8 @@ ms.custom: ''
 ms.date: 04/28/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2016
 helpviewer_keywords:
 - AlwaysOn
 - DB_FAILOVER
@@ -17,16 +13,15 @@ helpviewer_keywords:
 - High Availability
 - SQL Server
 ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
-caps.latest.revision: 4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 85fcf4c5f16093b51da9ec8cab3cf3da7b16bdc2
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 649ebf4f39013ccc44b26c74acd311fe4f712f9a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769962"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47730864"
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>Opção de failover de detecção de integridade no nível do banco de dados do grupo de disponibilidade
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
