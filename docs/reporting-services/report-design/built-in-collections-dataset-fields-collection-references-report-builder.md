@@ -4,17 +4,16 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bcc14000dac439a1f559133883789ca27f3c2b40
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 662c4b4fbd3eb754a971b0228e403c64e71b684b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43264797"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789924"
 ---
 # <a name="built-in-collections---dataset-fields-collection-references-report-builder"></a>Coleções internas – referências de coleções de campos de conjuntos de dados (Construtor de Relatórios)
   Cada conjunto de dados de um relatório contém uma coleção Fields. A coleção Fields é o conjunto de campos especificado pela consulta do conjunto de dados, além de qualquer campo calculado adicional que você criar. Assim que você criar um conjunto de dados, a coleção de campos aparecerá no painel **Dados do Relatório** .  
