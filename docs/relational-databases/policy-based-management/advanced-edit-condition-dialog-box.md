@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 08/12/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.dmf.condition.advancededit.f1
 ms.assetid: a0bbe501-78c5-45ad-9087-965d04855663
-caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 375d21441757d274dbd62bcd94638b03a0ded57f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5985712af5eb0f4cb45446e5072229023456cea5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32956631"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47598884"
 ---
 # <a name="advanced-edit-condition-dialog-box"></a>Caixa de diálogo Edição Avançada (Condição)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +64,7 @@ ms.locfileid: "32956631"
   
 > **IMPORTANTE:** As funções que você pode usar para criar condições de Gerenciamento Baseado em Políticas nem sempre usam a sintaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] . Não se esqueça de seguir a sintaxe de exemplo. Por exemplo, quando usar as funções **DateAdd** ou **DatePart** , você deverá colocar o argumento *datepart* entre aspas simples.  
   
-|Função|Assinatura|Description|Argumentos|Valor retornado|Exemplo|  
+|Função|Assinatura|Descrição|Argumentos|Valor retornado|Exemplo|  
 |--------------|---------------|-----------------|---------------|------------------|-------------|  
 |**Add()**|Numeric Add (Numeric *expression1*, Numeric *expression2*)|Soma dois números.|*expression1* e *expression2* – Qualquer expressão válida de qualquer um dos tipos de dados na categoria numeric, exceto pelo tipo de dados **bit** . Pode ser uma constante, propriedade ou função que retorna um tipo numérico.|Retorna o tipo de dados do argumento que tem a maior precedência.|`Add(Property1, 5)`|  
 |**Array()**|Array Array (VarArgs *expression*)|Cria uma matriz com base em uma lista de valores. Pode ser usado com funções de agregação como Sum() e Count().|*expression* – Uma expressão que será convertida em uma matriz.|A matriz|`Array(2,3,4,5,6)`|  
@@ -86,7 +82,7 @@ ms.locfileid: "32956631"
 |**ExecuteSQL()**|Variant ExecuteSQL (String *returnType*, String *sqlQuery*)|Executa a consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] no servidor de destino.<br /><br /> Para obter mais informações sobre ExecuteSql(), veja [Função ExecuteSql()](http://blogs.msdn.com/b/sqlpbm/archive/2008/07/03/executesql.aspx).|*returnType* – especifica o tipo de retorno dos dados retornados pela instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] . Os literais válidos para *returnType* são os seguintes: **Numeric**, **String**, **Bool**, **DateTime**, **Array**e **Guid**.<br /><br /> *sqlQuery* – A cadeia de caracteres que contém a consulta a ser executada.||`ExecuteSQL ('Numeric', 'SELECT COUNT(*) FROM msdb.dbo.sysjobs') <> 0`<br /><br /> Executa uma consulta de Transact-SQL com valor escalar em uma instância de destino do SQL Server. Só uma coluna pode ser especificada em uma instrução `SELECT` ; são ignoradas colunas adicionais além da primeira. A consulta resultante deveria retornar só uma linha; são ignoradas linhas adicionais além da primeira. Se a consulta retornar um conjunto vazio, a expressão de condição compilada com base no `ExecuteSQL` será avaliada como falsa. `ExecuteSql` oferece suporte aos modos de avaliação **Sob demanda** e **Ao agendar** .<br /><br /> -`@@ObjectName`:<br />                      Corresponde ao campo de nome em [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md). A variável será substituída pelo nome do objeto atual.<br /><br /> -`@@SchemaName`: corresponde ao campo de nome em [sys.schemas](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md). A variável será substituída pelo nome do esquema para o objeto atual, se aplicável.<br /><br /> Observação: para incluir uma aspa simples em uma instrução ExecuteSQL, utilize uma segunda aspa simples. Por exemplo, para incluir uma referência a um usuário nomeado O'Brian, digite O"Brian.|  
 |**ExecuteWQL()**|Variant ExecuteWQL (string *returnType* , string *namespace*, string *wql*)|Executa o script WQL no namespace que é fornecido. A instrução de seleção pode conter apenas uma única coluna de retorno. Se mais de uma coluna for fornecida, um erro será gerado.|*returnType* – Especifica o tipo de retorno de dados que é retornado pelo WQL. As literais válidas são **Numeric**, **String**, **Bool**, **DateTime**, **Array**e **Guid**.<br /><br /> *namespace* – Namespace WMI que será usado para a execução.<br /><br /> *wql* – Cadeia de caracteres que contém o WQL a ser executado.||`ExecuteWQL('Numeric', 'root\CIMV2', 'select NumberOfProcessors from win32_ComputerSystem') <> 0`|  
 |**False()**|Bool False()|Retorna um valor booliano FALSE.|Nenhuma|Retorna um valor booliano FALSE.|`IsDatabaseMailEnabled = False()`|  
-|**GetDate()**|DateTime GetDate()|Retorna a data do sistema.|Nenhum|Retorna a data de sistema como DateTime.|`@DateLastModified = GetDate()`|  
+|**GetDate()**|DateTime GetDate()|Retorna a data do sistema.|None|Retorna a data de sistema como DateTime.|`@DateLastModified = GetDate()`|  
 |**Guid()**|Guid Guid(String *guidString*)|Retorna um GUID de uma cadeia de caracteres.|*guidString* – A representação de cadeia de caracteres do GUID a ser criado.|Retorna o GUID criado a partir da cadeia de caracteres.|`Guid('12340000-0000-3455-0000-000000000454')`|  
 |**IsNull()**|Variant IsNull (Variant *check_expression*, Variant *replacement_value*)|O valor de *check_expression* será retornado se não for NULL; caso contrário, *replacement_value* será retornado. Se os tipos forem diferentes, *replacement_value* será implicitamente convertido para o tipo *check_expression*.|*check_expression* – A expressão a ser verificada quanto a NULL. *check_expression* pode ser qualquer um dos tipos de Gerenciamento Baseado em Políticas com suporte: Numeric, String, Bool, DateTime, Array e Guid.<br /><br /> *replacement_value* – A expressão a ser retornada se *check_expression* for NULL. *replacement_value* deve ser de um tipo que seja implicitamente convertido para o tipo *check_expression*.|O tipo de retorno será o tipo de *check_expression* se *check_expression* não for NULL; caso contrário, o tipo de *replacement_value* será retornado.||  
 |**Len()**|Numeric Len (*string_expression*)|Retorna o número de caracteres, da expressão da cadeia de caracteres atribuída, excluindo espaços em branco à direita.|*string_expression* – A expressão de cadeia de caracteres a ser avaliada.|Retorna um valor da categoria de tipo de dados integer.|`Len('Hello')` retorna `5` neste exemplo.|  
