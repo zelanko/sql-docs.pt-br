@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: databases
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - cross-database queries [SQL Server]
@@ -36,16 +33,15 @@ helpviewer_keywords:
 - credentials [SQL Server], metadata
 - copying databases
 ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
-caps.latest.revision: 84
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 610c566e97a700ee47f48aedd99874c9ac719064
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: e67b8ad7112be79d34a1bfa790d5e05fde67377b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40406472"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47840984"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>Gerenciar metadados ao disponibilizar um banco de dados em outro servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -136,7 +132,7 @@ ms.locfileid: "40406472"
   
  Para permitir a descriptografia automática da chave mestra do banco de dados em uma instância do servidor, uma cópia dessa chave é criptografada usando a chave mestra do serviço. Esta cópia criptografada é armazenada no banco de dados e no **mestre**. Normalmente, a cópia armazenada em **mestre** é silenciosamente atualizada sempre que a chave mestra é alterada. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta primeiramente descriptografar a chave mestra do banco de dados com a chave de serviço mestra da instância. Se essa descriptografia falhar, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pesquisará o repositório de credenciais em busca das credenciais de chave mestra que têm o mesmo GUID de família do banco de dados cuja chave mestra é necessária. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta descriptografar a chave mestra de banco de dados com cada credencial compatível até que a descriptografia obtenha êxito ou não haja mais credenciais. Uma chave mestra não criptografada pela chave mestra de serviço deve ser aberta usando a instrução OPEN MASTER KEY e uma senha.  
   
- Quando um banco de dados criptografado é copiado, restaurado ou anexado a uma nova instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], uma cópia da chave mestra do banco de dados criptografada pela chave mestra do serviço não é armazenada no **mestre** na instância do servidor de destino. Na instância do servidor de destino, você deve abrir a chave mestra do banco de dados. Para abrir a chave mestra, execute esta instrução: OPEN MASTER KEY DECRYPTION BY PASSWORD **='***password***'**. Recomendamos que, em seguida, a descriptografia automática da chave mestra do banco de dados seja habilitada executando a seguinte instrução: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Essa instrução ALTER MASTER KEY fornece à instância do servidor uma cópia da chave mestra do banco de dados que é criptografada com a chave mestra do serviço. Para obter mais informações, veja [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md) e [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md).  
+ Quando um banco de dados criptografado é copiado, restaurado ou anexado a uma nova instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], uma cópia da chave mestra do banco de dados criptografada pela chave mestra do serviço não é armazenada no **mestre** na instância do servidor de destino. Na instância do servidor de destino, você deve abrir a chave mestra do banco de dados. Para abrir a chave mestra, execute esta instrução: OPEN MASTER KEY DECRYPTION BY PASSWORD **='**_password_**'**. Recomendamos que, em seguida, a descriptografia automática da chave mestra do banco de dados seja habilitada executando a seguinte instrução: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Essa instrução ALTER MASTER KEY fornece à instância do servidor uma cópia da chave mestra do banco de dados que é criptografada com a chave mestra do serviço. Para obter mais informações, veja [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md) e [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md).  
   
  Para obter informações sobre como habilitar a descriptografia automática da chave mestra de um banco de dados espelho, veja [Configurar um banco de dados espelho criptografado](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md).  
   

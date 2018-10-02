@@ -1,45 +1,42 @@
 ---
-title: Inserir trechos Transact-SQL com Surround | Microsoft Docs
+title: Inserir snippets Transact-SQL com Surround | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: scripting
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - snippets [Transact-SQL], surround with
 - IntelliSense [SQL Server], surround with snippets
 - Transact-SQL snippets, surround with
 ms.assetid: 5b5a8c6c-968e-4361-a7f5-9e2ac186d927
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 34184787ceab633fe3667865b6d2088b2c726437
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 1f13056aa942832e33bcc272203e078ed318f4e3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43064319"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47841335"
 ---
-# <a name="insert-surround-with-transact-sql-snippets"></a>Inserir trechos Transact-SQL com Surround
+# <a name="insert-surround-with-transact-sql-snippets"></a>Inserir snippets Transact-SQL com Surround
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  Um trecho com surround é um modelo que você pode usar como ponto de partida ao colocar um conjunto de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] em um bloco BEGIN, IF ou WHILE.  
+  Um snippet com surround é um modelo que você pode usar como ponto de partida ao colocar um conjunto de instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] em um bloco BEGIN, IF ou WHILE.  
   
-## <a name="inserting-surround-with-snippets"></a>Inserindo trechos com surround  
- Trechos com surround podem ser iniciados por uma das três maneiras: por meio de um atalho de teclado, menu **Editar** e menu de contexto.  
+## <a name="inserting-surround-with-snippets"></a>Inserindo snippets com surround  
+ Snippets com surround podem ser iniciados por uma das três maneiras: por meio de um atalho de teclado, menu **Editar** e menu de contexto.  
   
- Após a inserção do trecho, você deve alterar o texto de substituição para formar uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] válida. Para obter mais informações, veja [Concluir trechos de código Transact-SQL](../../relational-databases/scripting/complete-transact-sql-snippets.md).  
+ Após a inserção do snippet, você deve alterar o texto de substituição para formar uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] válida. Para obter mais informações, veja [Concluir snippets Transact-SQL](../../relational-databases/scripting/complete-transact-sql-snippets.md).  
   
-#### <a name="to-insert-a-surround-with-snippet"></a>Para inserir um trecho com surround  
+#### <a name="to-insert-a-surround-with-snippet"></a>Para inserir um snippet com surround  
   
 1.  Na janela Editor de Consulta do [!INCLUDE[ssDE](../../includes/ssde-md.md)] , selecione o conjunto de instruções a serem incluídas no bloco.  
   
-2.  Use um destes três métodos para exibir a lista de trechos com surround:  
+2.  Use um destes três métodos para exibir a lista de snippets com surround:  
   
     -   Digite CTRL+K, CTRL+S.  
   
@@ -47,9 +44,9 @@ ms.locfileid: "43064319"
   
     -   Clique com o botão direito do mouse no texto selecionado e selecione o comando **Surround With** no menu de contexto.  
   
-3.  Selecione o nome do trecho (BEGIN, IF ou WHILE) na lista usando o mouse ou digitando-o e pressionando TAB ou ENTER.  
+3.  Selecione o nome do snippet (BEGIN, IF ou WHILE) na lista usando o mouse ou digitando-o e pressionando TAB ou ENTER.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Inserir trechos Transact-SQL](../../relational-databases/scripting/insert-transact-sql-snippets.md)  
+ [Inserir snippets Transact-SQL](../../relational-databases/scripting/insert-transact-sql-snippets.md)  
   
   

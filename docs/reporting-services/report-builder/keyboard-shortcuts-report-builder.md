@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - keyboard shortcuts
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d8e3346a95c8b03f1f256088901d99579faf433a
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 7c026c5ddd7e7e9e82269bfa28f04d5b538afc21
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43264535"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47832624"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>Atalhos de teclado (Construtor de Relatórios)
   Quando você cria e edita relatórios paginados do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no Construtor de Relatórios, tem acesso a todas as teclas de atalho para navegação fornecidas pelo ambiente do Windows. Você pode selecionar de vários esquemas de mapeamento de teclado padrão.  

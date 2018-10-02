@@ -4,10 +4,8 @@ ms.date: 11/14/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.custom: ''
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CHECKTABLE_TSQL
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - low overhead checks
 - table integrity checks [SQL Server]
 ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
-caps.latest.revision: 89
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 148fcb3dd5970d84be7a0380c97ab0be7bd8ca92
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7d846878ae012a82f7ff8f6662b8a6095d664cb8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263172"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47831934"
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -184,7 +181,7 @@ A verificação paralela pode ser desabilitada usando o sinalizador de rastreame
 ## <a name="understanding-dbcc-error-messages"></a>Compreendendo mensagens de erro DBCC    
 Depois que o comando DBCC CHECKTABLE é concluído, uma mensagem é gravada no log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se o comando DBCC for executado com êxito, a mensagem indicará uma conclusão bem-sucedida e o tempo de execução do comando. Se o comando DBCC parar antes de concluir a verificação devido a um erro, a mensagem indicará que o comando foi finalizado, um valor de estado e a duração da execução do comando. A tabela a seguir lista e descreve os valores de estado que podem ser incluídos na mensagem.
     
-|Estado|Description|    
+|Estado|Descrição|    
 |-----------|-----------------|    
 |0|O número do erro 8930 foi gerado. Isso indica um dano de metadados que provocou a finalização do comando DBCC.|    
 |1|O erro número 8967 foi gerado. Ocorreu um erro interno de DBCC.|    

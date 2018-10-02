@@ -5,9 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.odbcdest.f1
@@ -15,16 +13,15 @@ f1_keywords:
 - sql13.ssis.designer.odbcdest.columns.f1
 - sql13.ssis.designer.odbcdest.errorhandling.f1
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
-caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4f9255f356347e0bcfb7a35bbe17b9c8ec6468b4
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: faa30c32aea774d51a901402ff57975f14207e68
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35409978"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47808284"
 ---
 # <a name="odbc-destination"></a>Destino ODBC
   O destino ODBC carrega dados em massa em tabelas de bancos de dados com suporte ODBC. O destino ODBC usa um gerenciador de conexões ODBC para se conectar à fonte de dados.  

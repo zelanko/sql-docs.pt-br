@@ -4,17 +4,16 @@ ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: b96936c9-c387-41a9-8c19-6eb325769ffd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e91173ee1e743ddbc64d0505f1d636cd3c26c4c2
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 804caf76a061385c483515fc50e76ce078f81326
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43274832"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47816285"
 ---
 # <a name="print-a-report-report-builder-and-ssrs"></a>Imprimir um relatório (Construtor de Relatórios e SSRS)
   Depois de salvar um relatório em um servidor de relatório, exiba e imprima o relatório em um navegador, no portal da Web do Reporting Services ou em qualquer aplicativo usado para exibir um relatório exportado. Antes de salvar um relatório, você pode imprimi-lo quando o visualiza.  

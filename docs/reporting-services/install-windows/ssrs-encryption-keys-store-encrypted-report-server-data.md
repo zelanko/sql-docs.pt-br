@@ -3,7 +3,6 @@ title: Armazenar dados criptografados do servidor de relatório (Gerenciador de 
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], encryption
@@ -15,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ac0f4d4d-fc4b-4c62-a693-b86e712e75f2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: fbfdcd45e7c8894956a6a8702cc91be41f59e150
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 3eb58910390765607514239a43c6059ebcd5c220
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43275707"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47815364"
 ---
 # <a name="ssrs-encryption-keys---store-encrypted-report-server-data"></a>Chaves de criptografia do SSRS – Armazenar dados criptografados do servidor de relatório
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] armazena valores criptografados no banco de dados do servidor de relatório e em arquivos de configuração. A maioria dos valores criptografados é credencial usada para acessar fontes de dados externas que fornecem dados a relatórios. Este tópico descreve quais valores são criptografados, a funcionalidade de criptografia usada no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], entre outros tipos de dados confidenciais armazenados sobre os quais é útil saber mais a respeito.  

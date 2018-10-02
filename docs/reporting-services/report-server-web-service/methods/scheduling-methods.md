@@ -4,10 +4,7 @@ ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server-web-service
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - schedules [Reporting Services], methods
 - reports [Reporting Services], scheduling
@@ -16,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 68ae13f9-d91e-4572-a82a-8fa42001569e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cfd2df79b56b37cbd7bf1a0cac030ccf0df2e17b
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 387be09d03396c0bacb4d282ff2b6abdbaa9c4d2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43272888"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47856766"
 ---
 # <a name="scheduling-methods"></a>Métodos de agendamento
   É possível usar esses métodos para criar e gerenciar agendas compartilhadas para execução e entrega de relatório e para planos de atualização do cache utilizados pelo servidor de relatório.  

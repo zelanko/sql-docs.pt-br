@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server 2016 XTP Databases
 ms.assetid: 488ff55e-173f-43f6-9bdb-67b35e7cebfe
-caps.latest.revision: 3
 author: dagiro
 ms.author: v-dagir
 manager: craigg
-ms.openlocfilehash: a5550c9a6df1ae646d4960a0d9eca8bd5a43bec4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c06b0b8a55be4d231ce6593538168fad440f08c5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32955511"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47852165"
 ---
 # <a name="sql-server-xtp-databases"></a>Bancos de dados XTP do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +31,7 @@ O objeto de desempenho **Bancos de dados XTP do SQL Server** fornece contadores 
 
 Esta tabela descreve os contadores **Bancos de dados XTP do SQL Server** .
 
-|Contador|Description| 
+|Contador|Descrição| 
 |-------------|-----------------|  
 |**Tamanho Médio de Dados Grandes do Segmento de Transação**|Tamanho médio da carga de dados grandes do segmento de transação. Este é um contador de nível muito baixo, não planejado para uso do cliente.|
 |**Tamanho Médio do Segmento de Transação**|Tamanho médio da carga do segmento de transação. Se esse valor chegar a zero, um número maior de páginas será alocado pelo alocador de back-end. Este é um contador de nível muito baixo, não planejado para uso do cliente.|

@@ -4,22 +4,19 @@ ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: extensions
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - IRenderingExtension interface
 - rendering extensions [Reporting Services], IRenderingExtension interface
 ms.assetid: 74b2f2b7-6796-42da-ab7d-b05891ad4001
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5526129418f454f7323add732458081f5db11869
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 594c1bf8f27e3ff48164368a2827238cad4fdd5c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43274458"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47803214"
 ---
 # <a name="implementing-the-irenderingextension-interface"></a>Implementando a interface IRenderingExtension
   A extensão de renderização obtém os resultados de uma definição de relatório combinada com os dados reais e renderiza os dados resultantes para um formato que seja utilizável. A transformação dos dados combinados e a formatação são feitas usando uma classe CLR (Common Language Runtime) que implementa <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension>. Isto transforma o modelo de objeto em um formato de saída que é consumível por um visualizador, impressora ou outro destino de saída.  
