@@ -4,7 +4,6 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: security
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - roles [Reporting Services], creating
@@ -14,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d1b8dbf0-4462-402e-92dd-0e4835002b6e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 006d109559a8232664c4f83f651048a3077212f1
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: a5dd1e17cbef4dd716959c38d852b2a8def8853a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43279856"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47849464"
 ---
 # <a name="role-definitions"></a>Definições de função
   No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], uma *definição de**função* é uma coleção nomeada de tarefas que definem as operações disponíveis em um servidor de relatório. As definições de função fornecem as regras usadas pelo servidor de relatório para impor a segurança. Quando um usuário tenta executar uma tarefa, como publicar um relatório, o servidor de relatório verifica a atribuição de função de relatório do usuário para determinar se a tarefa está incluída em sua definição de função. Se a tarefa estiver incluída na definição de função, a solicitação será enviada.  

@@ -5,9 +5,7 @@ ms.date: 04/02/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.exceldest.f1
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - destinations [Integration Services], Excel
 - Excel [Integration Services]
 ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
-caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0d61ae17221838c6188d670e9afc42cc1f7e9516
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: f0818056ed0d8390021189d59fda95a3b7daf27f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35333820"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47852524"
 ---
 # <a name="excel-destination"></a>Destino do Excel
   O destino do Excel carrega dados em planilhas ou intervalos em pastas de trabalho do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  

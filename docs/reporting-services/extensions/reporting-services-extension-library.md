@@ -4,10 +4,7 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: extensions
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - namespaces [Reporting Services]
 - Reporting Services, extending
@@ -16,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e8eff470-64d6-41c3-b98b-5ec916c121c3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 49dd2b1d0b23806a3372179ee892c8f7ea4a87a8
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: f7c4ca9eac612cd80796f5ab48ae41648f2811d6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43282578"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47844514"
 ---
 # <a name="reporting-services-extension-library"></a>Biblioteca de extensões do Reporting Services
   A biblioteca de extensões do Reporting Services é um conjunto de classes, interfaces e tipos de valores que são incluídos no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Essa biblioteca fornece acesso à funcionalidade do sistema e foi projetada para ser a base na qual os aplicativos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] podem ser usados para estender os componentes do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  

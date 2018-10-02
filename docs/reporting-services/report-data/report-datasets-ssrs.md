@@ -4,17 +4,16 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 90efc26ea3833722e730bb3d3f36bb1d55350d37
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 6c3f7551c731dd8be32918f8c4fab2628f0204e7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43272328"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47843907"
 ---
 # <a name="report-datasets-ssrs"></a>Conjuntos de dados de relatório (SSRS)
   Para adicionar dados a um relatório, você cria conjuntos de dados. Cada conjunto de dados representa o conjunto de resultados gerado pela execução de um comando de consulta em uma fonte dados. As colunas do conjunto de resultados são a coleção de campos. As linhas do conjunto de resultados são os dados. O conjunto de resultados não contêm os dados reais. Um conjunto de dados contém as informações necessárias para recuperar um conjunto específico de dados de uma fonte de dados.  

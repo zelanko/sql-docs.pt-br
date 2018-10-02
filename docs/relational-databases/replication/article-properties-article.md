@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.rep.newpubwizard.articleproperties.f1
 helpviewer_keywords:
 - Article Properties dialog box
 ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
-caps.latest.revision: 38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9fa58456bf72ab50dec1ff67a40c10be19b0ad45
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 35fbe2c739ac8dafcedf18a4873bc7235469648b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37354258"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47857108"
 ---
 # <a name="article-properties---ltarticlegt"></a>Propriedades do Artigo – &lt;Artigo&gt;
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

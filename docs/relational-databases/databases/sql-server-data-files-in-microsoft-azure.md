@@ -4,24 +4,20 @@ ms.custom: ''
 ms.date: 10/02/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: databases
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
-caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8f0fb9a3b956a6ae1be07c3fc8337d83ebb4ad34
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 03d9dd525c06574360782a288faf2dae917f49cd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32933103"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47822194"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Arquivos de dados do SQL Server no Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +64,7 @@ ms.locfileid: "32933103"
   
 -   É necessário armazenar as informações relacionadas ao contêiner do Armazenamento do Azure, seu nome de política associado e a chave SAS no repositório de credenciais do SQL Server.  
   
- O exemplo a seguir supõe que um contêiner de Armazenamento do Azure tenha sido criado e uma política tenha sido criada com direitos de leitura, gravação, lista. Criar uma política em um contêiner gera uma chave de SAS que pode ser mantida não criptografada na memória e usada pelo SQL Server para acessar os arquivos de blob no contêiner. No trecho de código a seguir, substitua `'<your SAS key>'` por uma entrada semelhante à seguinte: `'sr=c&si=<MYPOLICYNAME>&sig=<THESHAREDACCESSSIGNATURE>'`. Para saber mais, confira [Gerenciar o acesso aos recursos de Armazenamento do Azure](http://docs.microsoft.com/azure/storage/blobs/storage-manage-access-to-resources).  
+ O exemplo a seguir supõe que um contêiner de Armazenamento do Azure tenha sido criado e uma política tenha sido criada com direitos de leitura, gravação, lista. Criar uma política em um contêiner gera uma chave de SAS que pode ser mantida não criptografada na memória e usada pelo SQL Server para acessar os arquivos de blob no contêiner. No snippet de código a seguir, substitua `'<your SAS key>'` por uma entrada semelhante à seguinte: `'sr=c&si=<MYPOLICYNAME>&sig=<THESHAREDACCESSSIGNATURE>'`. Para saber mais, confira [Gerenciar o acesso aos recursos de Armazenamento do Azure](http://docs.microsoft.com/azure/storage/blobs/storage-manage-access-to-resources).  
   
 ```sql
 CREATE CREDENTIAL [https://testdb.blob.core.windows.net/data]  

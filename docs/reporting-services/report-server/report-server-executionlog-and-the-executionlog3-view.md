@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], execution
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 85ebd0ec4668387609781e72becad43e9b52a4a8
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 0a76c8c745101a6327be13f6865bcbc392cc40c2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43273787"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47808754"
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>ExecutionLog do servidor de relatório e exibição do ExecutionLog3
   O [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], o log de execução do servidor de relatório contém informações sobre os relatórios executados no servidor ou em vários servidores em uma implantação em expansão no modo nativo ou no farm do SharePoint. É possível usar o log de execução de relatório para descobrir a frequência na qual um relatório é solicitado, quais são os formatos de saída mais usados e qual é o tempo de processamento em milissegundos em cada fase do processamento. O log contém informações sobre o período de tempo gasto na execução da consulta do conjunto de dados de um relatório e a hora gasta no processamento dos dados. Se você for um administrador de servidor de relatório, poderá revisar as informações de log, identificar tarefas demoradas e dar sugestões aos autores de relatório sobre as áreas do relatório (conjunto de dados ou processamento) que eles podem melhorar.  

@@ -4,7 +4,6 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: tools
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - Web service [Reporting Services], scripts
@@ -15,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0ec5ac6e-b3cf-49cd-96f6-6b4b7dc29982
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 142e6fe56094c4fa7ddf993163b4bbef9f52e68f
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 4bc9f71e2cec93ef3077f5cbd32ca1f4000ab275
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43278806"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47816904"
 ---
 # <a name="script-with-the-rsexe-utility-and-the-web-service"></a>Gerar scripts com o utilitário rs.exe e o serviço Web
   Desenvolvedores e administradores de servidor de relatório podem executar operações em um servidor de relatório por meio do utilitário **rs** (RS.exe). Com esse utilitário, é possível administrar de forma programática um servidor de relatório usando scripts gravados com [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  

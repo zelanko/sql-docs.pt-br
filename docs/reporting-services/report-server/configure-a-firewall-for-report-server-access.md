@@ -4,7 +4,6 @@ ms.date: 09/14/2015
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - firewall systems [Reporting Services]
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 04dae07a-a3a4-424c-9bcb-a8000e20dc93
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1ffc2ca8b6eca3acb64cba382b0f1fc8ebe08f8e
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 36e1de6d25715fdc807f5f07b8bd90279fd09b86
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43275375"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47850301"
 ---
 # <a name="configure-a-firewall-for-report-server-access"></a>Configure a Firewall for Report Server Access
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Os aplicativos e os relatórios publicados do servidor de relatório são acessados por meio de URLs que especificam um endereço IP, uma porta e um diretório virtual. Se o Firewall do Windows estiver ativado, a porta que o servidor de relatório está configurado para usar provavelmente estará fechada. As indicações de que uma porta deve ser fechada são uma página em branco quando você tenta abrir o **Gerenciador de Relatórios** de um computador cliente remoto ou uma página da Web em branco após a solicitação em um relatório.  

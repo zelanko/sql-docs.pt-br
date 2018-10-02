@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - VERIFYSIGNEDBYASYMKEY_TSQL
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - signatures [SQL Server]
 - digital signatures [SQL Server]
 ms.assetid: 9f7c6e0b-5ba4-4dbb-994d-5bd59f4908de
-caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0a0efe8bce4965aa640afbaf3a73fc44e7724218
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 0b932435b65d7c3638e575b9ee3a86fd709f2985
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37781287"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47799432"
 ---
 # <a name="verifysignedbyasymkey-transact-sql"></a>VERIFYSIGNEDBYASYMKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

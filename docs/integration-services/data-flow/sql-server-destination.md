@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.sqlserverdest.f1
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - inserting data
 - bulk load [Integration Services]
 ms.assetid: a0227cd8-6944-4547-87e8-7b2507e26442
-caps.latest.revision: 65
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a6aeb1d1e276e2aa6f1101eb619d0846fabfb10d
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 7bf348d969f3e8ced5b08ae58323e3e698981274
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329620"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47833014"
 ---
 # <a name="sql-server-destination"></a>destino do SQL Server
   O destino do SQL Server conecta-se a um banco de dados local do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e efetua carregamentos de dados em massa em tabelas e modos de exibição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Não é possível usar o destino do SQL Server em pacotes que acessam um banco de dados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um servidor remoto. Em vez disso, os pacotes devem usar o destino OLE DB. Para obter mais informações, consulte [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md).  

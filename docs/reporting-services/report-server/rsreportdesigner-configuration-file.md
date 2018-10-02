@@ -4,7 +4,6 @@ ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], configuration file
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: fdcc9c58-3bad-45b3-ba8e-c7816d64f14c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e73cebccd25798f067bc807d01c3c110b8084e4d
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: dff986f9007e721521a2bc4ac7094d0a72c1d4f5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43280993"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47836154"
 ---
 # <a name="rsreportdesigner-configuration-file"></a>arquivo de configuração RSReportDesigner
   O arquivo RSReportDesigner.config armazena configurações sobre as extensões de renderização e processamento de dados disponíveis no Designer de Relatórios. Informações de extensão de processamento de dados são armazenadas no elemento **Data** . Informações de extensão de renderização são armazenadas no elemento **Render** . O elemento **Designer** enumera os construtores de consulta usados no Designer de Relatórios.  

@@ -4,10 +4,7 @@ ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server-web-service-net-framework-soap-headers
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - session states [Reporting Services]
 - lifetimes [Reporting Services]
@@ -16,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d8143a4b-08a1-4c38-9d00-8e50818ee380
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 277121625c568b060a560adaa5342f8f40083537
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 2652b7ac43daba48c214de00d9787a60c6a7b4c9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43273349"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47857064"
 ---
 # <a name="identifying-execution-state"></a>Identificando o estado de execução
   O HTTP (Hypertext Transfer Protocol) é um protocolo sem-conexão e sem-estado, o que significa que ele não indica automaticamente se diferentes solicitações provêm do mesmo cliente ou até se uma única instância de navegador ainda está visualizando ativamente uma página ou site. As sessões criam uma conexão lógica para manter o estado entre servidor e cliente por meio do HTTP. As informações específicas para o usuário, pertinentes a uma sessão específica, são conhecidas como o estado da sessão.  

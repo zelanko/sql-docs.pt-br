@@ -4,19 +4,18 @@ ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [Reporting Services], embedded
 ms.assetid: 27af5195-c845-40e0-9a9c-efe569424022
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 81c037101caec5bd9d1087ee4910bb5bedb47f0c
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 7e50917bd524e8ce8c68bc904e100b673419d684
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43282108"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47843934"
 ---
 # <a name="configure-data-source-properties-for-a-paginated-report"></a>Configurar propriedades de fonte de dados para um relatório paginado
   Quando um relatório paginado é executado, o servidor de relatório recupera informações de propriedade para determinar como conectar-se a uma fonte de dados. O tipo de fonte de dados, a cadeia de conexão e as informações de credenciais são especificados nas páginas de propriedade Fonte de Dados do relatório publicado. É possível definir as propriedades para variar as informações de conexão da fonte de dados com relação aos valores originais que foram especificados quando o relatório foi criado.  

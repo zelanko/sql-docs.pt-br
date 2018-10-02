@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 10/24/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: release-landing
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 42f45b23-6509-45e8-8ee7-76a78f99a920
-caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: b3d32cba82f35066cd66a130e8d2cb12aafcb4c3
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: e00e45f15923955d7ae4e65e8d39e92121a33a1b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40405489"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47838674"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2017"></a>Novidades no mecanismo de banco de dados – SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]

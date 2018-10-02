@@ -4,30 +4,24 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: extending-packages-scripting-task-examples
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - Foreach Loop containers
 - Script task [Integration Services], Foreach loops
 - Script task [Integration Services], examples
 - SSIS Script task, Foreach loops
 ms.assetid: 694f0462-d0c5-4191-b64e-821b1bdef055
-caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e1fa5494f175315ece0f497a6afe69b98a6df026
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: c5f5e0b602ae51654159c60513c1bfdab98f2dc1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35400928"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47818160"
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>Obtendo uma lista para o loop ForEach com a tarefa Script
   O Enumerador Foreach De Variável enumera os itens em uma lista que é passada para ele em uma variável e executa as mesmas tarefas em cada item. Você pode usar o código personalizado em uma tarefa Script para preencher uma lista com esse propósito. Para obter mais informações sobre o enumerador, consulte [Contêiner do Loop Foreach](../../integration-services/control-flow/foreach-loop-container.md).  
@@ -254,6 +248,6 @@ MessageBoxButtons.OK, MessageBoxIcon.Information);
   
 ## <a name="see-also"></a>Consulte Também  
  [Contêiner do Loop Foreach](../../integration-services/control-flow/foreach-loop-container.md)   
- [Configurar um contêiner Loop Foreach](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)  
+ [Para configurar um contêiner Loop Foreach](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)  
   
   

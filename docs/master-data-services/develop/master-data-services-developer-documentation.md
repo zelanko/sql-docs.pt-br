@@ -4,25 +4,19 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: develop
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 ms.assetid: 067b1f69-84eb-4a13-b220-120cd63704b4
-caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 30eec29a14454c2e95f2fd21a08d87ac9dce1782
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8ddb2ae5f0298a2f7d182bb5e1ef7057827617fe
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32893004"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47812234"
 ---
 # <a name="master-data-services-developer-documentation"></a>Documentação do desenvolvedor do Master Data Services
 
@@ -58,7 +52,7 @@ ms.locfileid: "32893004"
 ## <a name="web-server-namespaces"></a>Namespaces do servidor Web  
  O [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] instala um conjunto de assemblies no computador do servidor Web. Esses assemblies contêm namespaces que podem ser usados para cenários avançados que personalizam o comportamento do computador do servidor Web. A tabela a seguir descreve esses namespaces.  
   
-|Namespace|Description|  
+|Namespace|Descrição|  
 |---------------|-----------------|  
 |<xref:Microsoft.MasterDataServices.Deployment>|Contém classes que podem ser usadas para criar um pacote de implantação de um modelo e para implantar um pacote em um banco de dados do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].|  
 |<xref:Microsoft.MasterDataServices.Services>|Contém uma classe que recebe e processa operações de serviço Web feitas no computador do servidor Web por meio do aplicativo Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)].|  

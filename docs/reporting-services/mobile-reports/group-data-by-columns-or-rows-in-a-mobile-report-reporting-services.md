@@ -4,17 +4,16 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: b9ebd36c-a337-47ae-83e5-6c2f2144eb52
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 08d4d39d6393ec413f5e72254cca1e82740bd51c
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: c3a4db20da76fa0188db3171f879e6fdcaefdacd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43268213"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47806764"
 ---
 # <a name="group-data-by-columns-or-rows-in-a-mobile-report--reporting-services"></a>Agrupar dados por colunas ou linhas em um relatório móvel | Reporting Services
 Você pode organizar os dados por colunas ou linhas em vários tipos de gráficos no [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]. Acompanhe esse passo a passo.

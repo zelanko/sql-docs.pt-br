@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - performance [Reporting Services]
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 85afd00f-e8d7-4ef7-9174-2ff84d82f960
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c8df3226d2b1cc72730ded58f96c4f0f9e92b2a8
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 116ff01c859f5657b57e4813bbf828737fdaf297
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43273879"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47826694"
 ---
 # <a name="performance-snapshots-caching-reporting-services"></a>Desempenho, instantâneos, cache (Reporting Services)
   O desempenho do servidor de relatório é afetado por uma combinação de fatores que incluem o hardware, o número de usuários simultâneos que acessam relatórios, a quantidade de dados em um relatório e o formato de saída. Para entender os fatores de desempenho específicos de sua instalação e quais reparos produzirão os resultados desejados, será necessário obter dados de linha de base e executar testes. Para obter mais informações sobre ferramentas e diretrizes, consulte as seguintes publicações no MSDN: [Otimização de desempenho do Reporting Services](http://blogs.msdn.com/b/sqlcat/archive/2013/10/30/reporting-services-performance-and-optimization.aspx) e [Usando o Visual Studio 2005 para executar um teste de carregamento em um servidor de relatório do SQL Server 2005](http://go.microsoft.com/fwlink/?LinkID=77519).  

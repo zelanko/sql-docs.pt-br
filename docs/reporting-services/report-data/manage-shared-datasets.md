@@ -4,17 +4,16 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 2cbb1fa3-959e-4df6-9887-ebc93cc1b686
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a9148b723d2ac5ccb566c28524f54bad48de2a75
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: a2282d6475d8f76fe1a479f16ad0b24f67d2189f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43268731"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47817504"
 ---
 # <a name="manage-shared-datasets"></a>Gerenciar conjuntos de dados compartilhados
   No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], os conjuntos de dados compartilhados recuperam dados de fontes de dados compartilhadas que se conectam a fontes de dados externas. Um conjunto de dados compartilhado fornece uma maneira de compartilhar uma consulta para ajudar a fornecer um conjunto de dados consistente para vários relatórios. A consulta do conjunto de dados pode incluir parâmetros de conjunto de dados. Você pode configurar um conjunto de dados compartilhado para armazenar em cache os resultados da consulta para combinações de parâmetros específicas no primeiro uso ou especificando uma agenda. Você pode usar um cache de conjunto de dados compartilhado em combinação com um cache de relatório e feeds de dados de relatório para ajudar a gerenciar o acesso a uma fonte de dados.  

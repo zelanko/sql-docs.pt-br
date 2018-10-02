@@ -5,22 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
 ms.assetid: e3751e53-77c7-47d0-8fe8-73ed1a53413a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1f35bc0041d986cc7347c4ee12299d2470a4b1aa
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 61eea29c0c8094bf5f5c70df4488a950b860bc4c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35330740"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47806044"
 ---
 # <a name="lesson-1-8---making-the-lesson-1-package-easier-to-understand"></a>Lição 1-8 – tornando o pacote da Lição 1 mais fácil de compreender
 Agora que você concluiu a configuração do pacote da Lição 1, é uma boa ideia verificar o layout do pacote. Se as formas dos layouts de controle e dos fluxos de dados são de tamanhos aleatórias ou se as formas não estão alinhadas ou agrupadas, a funcionalidade de pacote pode ser mais difícil de ser entendida.  

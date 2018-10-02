@@ -4,19 +4,16 @@ ms.date: 05/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
-applies_to:
-- SQL Server 2016
 ms.assetid: ae46efa9-6e04-48ec-afb4-5a2314dcb05a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 11d66ec7c3431c24d1a54bf93b634110da38fb13
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 8b04fa0c468c9e18264809f69ea42797ba83b452
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43270107"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47842624"
 ---
 # <a name="lesson-5-formatting-a-report-reporting-services"></a>Lesson 5: Formatting a Report (Reporting Services)
 Agora que já adicionou uma região de dados e alguns campos ao relatório de ordens de venda, você pode formatar os campos de data e moeda, além dos cabeçalhos da coluna.  

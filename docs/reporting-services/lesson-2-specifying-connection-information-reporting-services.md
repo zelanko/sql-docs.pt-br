@@ -4,19 +4,16 @@ ms.date: 05/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
-applies_to:
-- SQL Server 2016
 ms.assetid: 54405a3a-d7fa-4d95-8963-9aa224e5901e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 9ca21419e841482747410f50809d0d502f495f06
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 381192f80128ca3bd2ebade55dc539137c4bc9bd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43274767"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47805604"
 ---
 # <a name="lesson-2-specifying-connection-information-reporting-services"></a>Lição 2: Especificando informações sobre conexão (Reporting Services)
 Depois de adicionar um relatório paginado do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] ao de projeto de Tutorial na Lição 1, agora você precisa definir uma *fonte de dados*, que são informações de conexão usadas pelo relatório para acessar dados de um banco de dados relacional, banco de dados multidimensional ou outra origem.  

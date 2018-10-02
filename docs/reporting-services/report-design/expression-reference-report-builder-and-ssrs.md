@@ -4,17 +4,16 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: bb16e4ab-b13f-48f2-8cfe-1851656875ef
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e57ae614becca7f8b13e1bbf6ed06f8810eb5652
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 662243a595790efdc4ad29aeff266e097b370dde
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43273926"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47832734"
 ---
 # <a name="expression-reference-report-builder-and-ssrs"></a>Referência de expressões (Construtor de Relatórios e SSRS)
   As expressões de relatório dão suporte a uma variedade de referências a funções e coleções internas. A sintaxe [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] das expressões deve ser válida para que um relatório possa ser publicado ou processado.  

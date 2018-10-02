@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 12/04/2015
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - RPC:Completed event class
 ms.assetid: 0d526201-94c9-4e4c-afb1-4213df1815ba
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8e21218249f3ff6da8a71b4c38ed68da9ef186a4
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: e93775f61f4a60173447a734db1f6e567b49bc7b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43075089"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47830114"
 ---
 # <a name="rpccompleted-event-class"></a>classe de evento RPC:Completed
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

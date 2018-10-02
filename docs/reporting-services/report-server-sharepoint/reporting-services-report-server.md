@@ -4,16 +4,15 @@ ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server-sharepoint
-ms.suite: pro-bi
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f39da2fe550309e73f8cdf0a32336fd3669cfa08
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 2cac4c0df7f995baa8445b639237c61e26a98856
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43271544"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47837944"
 ---
 # <a name="reporting-services-report-server"></a>Servidor de relatório do Reporting Services
 
@@ -48,7 +47,7 @@ Um servidor de relatório do Reporting Services é executado em um destes dois m
   
 ## <a name="feature-comparison-of-sharepoint-and-native-mode"></a>Comparação de recursos do SharePoint e do modo nativo
   
-|Recurso ou componente|nativo|Modo do SharePoint|  
+|Recurso ou componente|nativo|SharePoint|  
 |--------------------------|-----------------|---------------------|  
 |**Endereçamento de URL**|Sim|O endereçamento de URL é diferente no modo integrado do SharePoint. As URLs do SharePoint são usadas para relatórios de referência, modelos de relatório, fontes de dados compartilhadas e recursos. A hierarquia de pastas do servidor de relatório não é usada. Se você tiver aplicativos personalizados que dependem do acesso à URL com suporte em um servidor de relatório no modo nativo, essa funcionalidade deixará de funcionar quando o servidor de relatório for configurado para integração com o SharePoint.<br /><br /> Para obter mais informações sobre acesso à URL, consulte [Referência de parâmetro de acesso à URL](../../reporting-services/url-access-parameter-reference.md)|  
 |**Extensões de segurança personalizadas**|Sim|As extensões de segurança personalizadas do Reporting Services não podem ser implantadas nem usadas no servidor de relatório. O servidor de relatório inclui uma extensão de segurança para fins especiais que é usada sempre que você configura um servidor de relatório para ser executado no modo integrado do SharePoint. Essa extensão de segurança é um componente interno e é necessário para operações integradas.|  
@@ -82,7 +81,7 @@ Um servidor de relatório do Reporting Services é executado em um destes dois m
 
  O Reporting Services fornece duas web parts que podem ser instaladas e registradas em uma instância do [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 2.0 ou posterior, ou Servidor do Portal do SharePoint 2003 ou posterior. Em um site do SharePoint, você pode usar as web parts para localizar e exibir relatórios armazenados e processados em um servidor de relatório executado no modo nativo. Essas web parts foram introduzidas em versões anteriores do Reporting Services.  
   
-## <a name="sharepoint-mode"></a>Modo do SharePoint
+## <a name="sharepoint-mode"></a>SharePoint
 
  No modo do SharePoint, um servidor de relatório deve ser executado em um farm de servidores do SharePoint. Os recursos de processamento, renderização e gerenciamento do servidor de relatório são representados por um servidor de aplicativos do SharePoint que executa o serviço compartilhado do SharePoint do Reporting Services e um ou mais aplicativos de serviço do Reporting Services. Um site do SharePoint fornece o acesso front-end ao conteúdo e às operações do servidor de relatório.  
   

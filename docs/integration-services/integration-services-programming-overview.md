@@ -5,12 +5,8 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - Integration Services, programming
 - architecture [Integration Services]
@@ -22,16 +18,15 @@ helpviewer_keywords:
 - data flow engine [Integration Services]
 - languages [Integration Services]
 ms.assetid: 262babc6-eea5-4609-bc65-07d64cbcfee9
-caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 91d394a573e918acd6d9a5719e8e531cbcb8173f
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: a57146619406891b7f503b8cc20c41f70ecd7e98
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35409278"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47849734"
 ---
 # <a name="integration-services-programming-overview"></a>Visão geral da programação do Integration Services
   O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] tem uma arquitetura que separa a movimentação e a transformação de dados de gerenciamento e fluxos de controle de pacotes. Há dois mecanismos distintos que definem essa arquitetura e isso pode ser automatizado e estendido na programação do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. O mecanismo de tempo de execução implementa a infraestrutura de gerenciamento de fluxos de controle e pacotes que permite aos desenvolvedores controlar o fluxo de execução e definir opções para registro de log, manipuladores de eventos e variáveis. O mecanismo de fluxo de dados é um mecanismo de desempenho alto, especializado, dedicado exclusivamente a extrair, transformar e carregar dados. Sua programação do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] se baseará nesses dois mecanismos.  

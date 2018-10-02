@@ -5,9 +5,7 @@ ms.date: 06/09/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - servers [SQL Server], permissions
 - DENY statement, servers
 ms.assetid: 68d6b2a9-c36f-465a-9cd2-01d43a667e99
-caps.latest.revision: 34
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b27b7e9e2f1a4269f46ed414c8c9541e78857352
-ms.sourcegitcommit: 00ffbc085c5a4b792646ec8657495c83e6b851b5
+ms.openlocfilehash: 5119b225e96f34fa5caedf538a8047c683f28169
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36941072"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47851574"
 ---
 # <a name="deny-server-permissions-transact-sql"></a>Permissões de servidor DENY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -4,10 +4,7 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: extensions
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - delivery extensions [Reporting Services], namespace assignments
 - library [Reporting Services]
@@ -15,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 63b32f93-4bab-4b07-bd72-39a47aca1cda
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1d979eb12993f77cc66fb273aed5c0be731777a8
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 13003add2f2b5d55871555a285e224c6c604e822
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43265213"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47818108"
 ---
 # <a name="creating-a-delivery-extension-library"></a>Criando uma biblioteca de extensões de entrega
   Cada extensão de entrega do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] que você cria deve ser atribuída a um namespace exclusivo e criada em uma biblioteca ou em um arquivo de assembly. O nome exato do namespace não é importante, mas deve ser exclusivo e não deve ser compartilhado com qualquer outra extensão. Você deve criar seus próprios namespaces exclusivos para as extensões de entrega da sua empresa.  

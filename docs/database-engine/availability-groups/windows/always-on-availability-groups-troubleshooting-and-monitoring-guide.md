@@ -4,21 +4,18 @@ ms.custom: ag-guide
 ms.date: 05/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
-caps.latest.revision: 8
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e82c43cbca60f1804c2a5b2becfcdbaaf734fd26
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6a1f55ad47ee17504118b3db5c00e61f39092e34
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32861691"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47840997"
 ---
 # <a name="always-on-availability-groups-troubleshooting-and-monitoring-guide"></a>Guia de solução de problemas e monitoramento dos Grupos de Disponibilidade Always On
  Este guia ajuda você a começar a monitorar Grupos de Disponibilidade Always On e solucionar alguns dos problemas comuns em grupos de disponibilidade. Ele fornece o conteúdo original, bem como uma página inicial com informações úteis que são publicadas em outros lugares. Embora este guia não aborde completamente todos os problemas que podem ocorrer no vasto campo dos grupos de disponibilidade, ele pode indicar a direção correta para sua análise de causa raiz e para a solução de problemas. 
@@ -30,7 +27,7 @@ ms.locfileid: "32861691"
 ##  <a name="BKMK_SCENARIOS"></a> Cenários de solução de problemas  
  A tabela a seguir contém links para os cenários de solução de problemas comuns de grupos de disponibilidade. Eles são categorizados por tipo de cenário, como configuração, conectividade de cliente, failover e desempenho.  
   
-|Cenário|Tipo de cenário|Description|  
+|Cenário|Tipo de cenário|Descrição|  
 |--------------|-------------------|-----------------|  
 |[Solucionar problemas de configuração de Grupos de Disponibilidade Always On &#40;SQL Server&#41;](troubleshoot-always-on-availability-groups-configuration-sql-server.md)|Configuração|Fornece informações para ajudar a solucionar problemas típicos com a configuração de instâncias de servidor de grupos de disponibilidade. Os problemas de configuração típicos incluem grupos de disponibilidade desabilitados, contas configuradas incorretamente, ponto de extremidade de espelhamento de banco de dados inexistente, ponto de extremidade inacessível (Erro 1418 do SQL Server), acesso à rede inexistente e falha no comando de junção de banco de dados (Erro 35250 do SQL Server).|  
 |[Solução de problemas de uma operação de adição de arquivos com falha &#40;Grupos de Disponibilidade Always On&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)|Configuração|Uma operação de adição de arquivo fez com que o banco de dados secundário fosse suspenso e entrasse no estado NOT SYNCHRONIZING.|  
@@ -44,7 +41,7 @@ ms.locfileid: "32861691"
 ##  <a name="BKMK_TOOLS"></a> Ferramentas úteis para solução de problemas  
  Ao configurar ou executar grupos de disponibilidade, diversas ferramentas podem ajudá-lo a diagnosticar diferentes tipos de problemas. A tabela a seguir fornece links para informações úteis sobre as ferramentas.  
   
-|Ferramenta|Description|  
+|Ferramenta|Descrição|  
 |----------|-----------------|  
 |[Usar o Painel AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)|Oferece relatório em uma exibição resumida da integridade de seu grupo de disponibilidade com uma interface fácil de usar.|  
 |[Políticas Always On](always-on-policies.md)|Usado pelo Painel Always On.|  
@@ -64,7 +61,7 @@ ms.locfileid: "32861691"
   
  A tabela abaixo aponta para tópicos que podem ajudá-lo a monitorar a integridade da solução de grupos de disponibilidade.  
   
-|Tópico|Description|  
+|Tópico|Descrição|  
 |-----------|-----------------|  
 |[Monitorar o desempenho de Grupos de Disponibilidade Always On](monitor-performance-for-always-on-availability-groups.md)|Descreve o processo de sincronização de dados para grupos de disponibilidade, os portões de controle de fluxo e as métricas úteis ao monitorar um grupo de disponibilidade; também mostra como coletar métricas de RTO e RPO.|  
 |[Monitoramento de grupos de disponibilidade &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)|Fornece informações sobre ferramentas para monitorar um grupo de disponibilidade.|  

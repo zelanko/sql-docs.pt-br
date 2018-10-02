@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - 'TM: Save Tran Starting event class'
 ms.assetid: 6f19fe7c-a452-4323-b957-7e17d13bf8fd
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 09867cd1b9ed15d5f42ac120bf97dbdf81000170
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 75c263439a5da45e4a6c751d3a669350b29f153f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43076186"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47821724"
 ---
 # <a name="tm-save-tran-starting-event-class"></a>classe de evento TM: Save Tran Starting
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

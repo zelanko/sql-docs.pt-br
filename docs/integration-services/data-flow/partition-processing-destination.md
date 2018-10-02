@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.partitionprocessingdest.f1
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - Partition Processing destination [Integration Services]
 - destinations [Integration Services], Partition Processing
 ms.assetid: 36c592ff-3f78-4a58-b496-31c1c8eee131
-caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e8f4a37d9d1ffc68c0887bf67921a3b32b097413
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: ef097b772aca991ed7b61b79572a1eff2d837108
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35333650"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47838874"
 ---
 # <a name="partition-processing-destination"></a>Destino de processamento de partições
   O destino de Processamento de Partição carrega e processa uma partição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para obter mais informações sobre partições, consulte [Partições &#40;Analysis Services – Dados Multidimensionais&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md).  

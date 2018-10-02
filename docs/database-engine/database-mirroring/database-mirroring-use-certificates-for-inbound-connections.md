@@ -5,25 +5,22 @@ ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - certificates [SQL Server], database mirroring
 - inbound connections
 - database mirroring [SQL Server], security
 ms.assetid: 5d48bb98-61f0-4b99-8f1a-b53f831d63d0
-caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e723c0f46e1cb60223ba00a19d8e5b87af0f0892
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: b4f641af83a39fa76af3b6dc525740e1c0b0057b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35311605"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47819284"
 ---
 # <a name="database-mirroring---use-certificates-for-inbound-connections"></a>Espelhamento de Banco de Dados – usar certificados para conexões de entrada
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -136,7 +133,7 @@ ms.locfileid: "35311605"
  O exemplo a seguir demonstra como configurar HOST_B para conexões de entrada.  
   
 > [!NOTE]  
->  Este exemplo usa um arquivo de certificado que contém o certificado HOST_A criado por um trecho de código em [Permitir que um ponto de extremidade de espelhamento de banco de dados use certificados para conexões de saída &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md).  
+>  Este exemplo usa um arquivo de certificado que contém o certificado HOST_A criado por um snippet de código em [Permitir que um ponto de extremidade de espelhamento de banco de dados use certificados para conexões de saída &amp;#40;Transact-SQL&amp;#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md).  
   
 ```  
 USE master;  

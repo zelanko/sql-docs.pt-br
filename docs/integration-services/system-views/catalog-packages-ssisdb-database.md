@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 helpviewer_keywords:
 - packages view [Integration Services]
 - catalog.packages view [Integration Services]
 ms.assetid: a634e94d-f492-4dfd-9611-a35f545106a1
-caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e879598419d050b60bbb9f149751e64762597134
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 1558aeed5266d573fcf7b99ced456a4d2de09940
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35405328"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47818954"
 ---
 # <a name="catalogpackages-ssisdb-database"></a>catalog.packages (Banco de dados SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

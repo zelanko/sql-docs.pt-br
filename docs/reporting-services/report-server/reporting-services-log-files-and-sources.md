@@ -4,7 +4,6 @@ ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - troubleshooting [Reporting Services], log files
@@ -16,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 80ef0acc-cbef-49d0-87e7-844e3ce19604
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 29a67f467efeae2e196589c1524c55ae07799bab
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 29395aef09da3ba92d5c096266bbf11f9a439350
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43272248"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47839314"
 ---
 # <a name="reporting-services-log-files-and-sources"></a>Fontes e arquivos de log do Reporting Services
   Um servidor de relatório e um ambiente de servidor de relatório usam uma variedade de destinos de log para registrar informações sobre operações e status do servidor. Há duas categorias básicas de registro em log, log de execução e log de rastreamento. O log de execução inclui informações sobre estatística de execução de relatório, auditoria, diagnóstico de desempenho e otimização. O log de rastreamento são informações sobre mensagens de erro e diagnóstico em geral.  

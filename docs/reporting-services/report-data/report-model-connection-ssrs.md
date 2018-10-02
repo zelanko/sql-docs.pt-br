@@ -4,17 +4,16 @@ ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: da880fb8-13cc-4d5f-b992-91ed0ec3ca7d
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: f82c17407e6b7861e597a34d92ee16751e8ad980
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 6fb1b5f810af0385195ad1f2f6bec048152887e8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43264628"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47856796"
 ---
 # <a name="report-model-connection-ssrs"></a>Conexão de modelo de relatório (SSRS)
   Para incluir dados de um modelo de relatório, é necessário ter um conjunto de dados baseado em um modelo de relatório como uma fonte de dados. Diferentemente de outras fontes de dados de relatório, não há nenhuma extensão de dados para um modelo de relatório. No Construtor de Relatórios, procure e selecione o modelo diretamente no servidor de relatório. Em Designer de Relatórios, você especifica a URL para o modelo de relatório.  
