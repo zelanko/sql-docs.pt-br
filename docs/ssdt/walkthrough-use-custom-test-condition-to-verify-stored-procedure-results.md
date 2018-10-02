@@ -6,20 +6,17 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4c33b494-a85e-4dd2-97b6-c88ee858a99c
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 85393d548550f58d43533a0c7e11e0b951288dbb
-ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
+ms.openlocfilehash: f109fd19d6c74fc60746fdccd5560b8aa482eb02
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45563886"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47832994"
 ---
 # <a name="walkthrough-using-a-custom-test-condition-to-verify-the-results-of-a-stored-procedure"></a>Passo a passo: usando uma condição de teste personalizada para verificar os resultados de um procedimento armazenado
 Neste passo a passo da extensão de recursos, você criará uma condição de teste e verificará sua funcionalidade criando um teste de unidade do SQL Server. O processo inclui criar um projeto de biblioteca de classes para a condição de teste, além de assiná-lo e instalá-lo. Se você já tiver uma condição de teste para atualização, confira [Como atualizar uma condição de teste personalizado do Visual Studio 2010 de uma versão anterior do SQL Server Data Tools](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md).  
