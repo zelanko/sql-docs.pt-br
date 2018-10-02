@@ -5,9 +5,7 @@ ms.date: 7/22/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - GetDescendant_TSQL
@@ -17,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - GetDescendant [Database Engine]
 ms.assetid: f5f39596-033e-4243-acbc-caa188b45b03
-caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4fea2cf85ab38bfad67801b9ca3e5bfcd3f6297c
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: f52cf671a162546d9f0cb6248c87397976124ed3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37406945"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47605114"
 ---
 # <a name="getdescendant-database-engine"></a>GetDescendant (Mecanismo de Banco de Dados)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -145,7 +142,7 @@ SELECT @c2.ToString();
 ```  
   
 ### <a name="e-clr-example"></a>E. Exemplo de CLR  
-O trecho de código a seguir chama o método `GetDescendant()`:
+O snippet de código a seguir chama o método `GetDescendant()`:
   
 ```sql
 SqlHierarchyId parent, child1, child2;  

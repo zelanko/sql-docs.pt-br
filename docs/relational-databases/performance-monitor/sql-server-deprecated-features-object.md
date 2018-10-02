@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 05/03/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Deprecated Features
@@ -17,16 +14,15 @@ helpviewer_keywords:
 - deprecation [SQL Server], performance counters
 - Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
-caps.latest.revision: 61
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 92353cf4dde604e191d26dc971edf83f16ae4b51
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9302e518ab06f4e7ac01d51e27bcdf7e6e6b5970
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32957141"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47748394"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server, objeto Recursos Preteridos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +38,13 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 
 Esta tabela a seguir descreve o objeto de desempenho **Recursos Preteridos** do SQL Server.
 
-|**Contador Recursos Preteridos do SQL Server**|Description|  
+|**Contador Recursos Preteridos do SQL Server**|Descrição|  
 |-------------|-----------------|  
 |**Uso**|Uso de recursos desde a última inicialização do SQL Server.|
   
  A tabela a seguir descreve as instâncias de contadores dos Recursos Preteridos do SQL Server.  
   
-|Instâncias do contador de Recursos Preteridos do SQL Server|Description|  
+|Instâncias do contador de Recursos Preteridos do SQL Server|Descrição|  
 |------------------------------------------------------|-----------------|  
 |'#' e '##' como o nome de tabelas temporárias e procedimentos armazenados|Um identificador que não contém nenhum caractere diferente de # foi encontrado. Use pelo menos um caractere adicional. Ocorre uma vez por compilação.|  
 |sintaxe '::' de chamada de função|A sintaxe de chamada de função :: foi encontrada para uma função com valor de tabela. Substitua por `SELECT column_list FROM` *< function_name>*`()`. Por exemplo, substitua `SELECT * FROM ::fn_virtualfilestats(2,1)` por `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Ocorre uma vez por compilação.|  

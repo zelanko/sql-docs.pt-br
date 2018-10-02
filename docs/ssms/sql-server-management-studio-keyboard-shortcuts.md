@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], shortcuts
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - shortcuts [SQL Server Management Studio]
 - accelerator keys
 ms.assetid: 98baaac4-0727-4ce4-8bfe-c63793ae69b8
-caps.latest.revision: 82
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f3954a9b74c32b7bc5ae36708ffc41e2bcb346d0
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 6289e84ecfce552345688368810a9081529b5f9b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42775358"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47615514"
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>Atalhos de teclado do SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -316,10 +312,10 @@ ms.locfileid: "42775358"
 |Copiar dica de parâmetro|CTRL+SHIFT+ALT+C|Sem equivalente|  
 |Colar dica de parâmetro|CTRL+SHIFT+ALT+P|Sem equivalente|  
 |Saltar entre pares de sintaxe|CTRL+]|CTRL+]|  
-|Iniciar o selecionador de trechos de código|CTRL+K, CTRL+X|CTRL+K, CTRL+Z|  
+|Iniciar o selecionador de snippets de código|CTRL+K, CTRL+X|CTRL+K, CTRL+Z|  
 |Atualizar o cache local|CTRL+SHIFT+R|CTRL+SHIFT+R|  
-|Iniciar o selecionador de trechos Cerque Com|CTRL+K, CTRL+S|CTRL+K, CTRL+S|  
-|Exibir o Gerenciador de Trecho de Código|CTRL+K, CTRL+B|Sem equivalente|  
+|Iniciar o selecionador de snippets Cerque Com|CTRL+K, CTRL+S|CTRL+K, CTRL+S|  
+|Exibir o Gerenciador de Snippet de Código|CTRL+K, CTRL+B|Sem equivalente|  
 |Altera o nível de filtro do IntelliSense da guia **Comum** para a guia **Tudo** .|ALT+SINAL DE ADIÇÃO (+)|Sem equivalente|  
 |Altera o nível de filtro do IntelliSense da guia **Tudo** para a guia **Comum** .|ALT+PONTO (.)|Sem equivalente|  
   

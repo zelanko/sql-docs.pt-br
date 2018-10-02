@@ -4,17 +4,16 @@ ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 403a9384-6ca4-42e8-97ca-ac3f6fe4316b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 01b2a6dc4b0d396fe6985ab0c4cefd689171fb2a
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: b3cb25aee9e71724173c913fd75ad01c9227ea5f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43280852"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47857184"
 ---
 # <a name="report-builder-functions---previous-function"></a>Funções do Construtor de Relatórios – Função Previous
   Retorna o valor ou o valor de agregação especificado para a instância anterior de um item do escopo especificado.  

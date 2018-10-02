@@ -6,18 +6,17 @@ author: MashaMSFT
 ms.author: mathoma
 ms.date: 03/13/2018
 ms.topic: tutorial
-ms.suite: sql
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg
 ms.prod: sql
 ms.technology: ssms
-ms.openlocfilehash: e487537bd5051d396e5f24243a33ded4aa38daf7
-ms.sourcegitcommit: f9d4f9c1815cff1689a68debdccff5e7ff97ccaf
+ms.openlocfilehash: 02aee760447f61867f5ec85bbe24266539a44a33
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39367658"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47738244"
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>Tutorial: Conectar-se a uma instância do SQL Server e consultá-la usando o SQL Server Management Studio
 Este tutorial ensina a usar o SSMS (SQL Server Management Studio) para conectar-se à instância do SQL Server e executar alguns comandos T-SQL (Transact-SQL) básicos. O artigo demonstra como fazer o seguinte:
@@ -77,7 +76,7 @@ Crie um banco de dados chamado TutorialDB fazendo o seguinte:
 
    ![O link de nova consulta](media/connect-query-sql-server/newquery.png)
    
-2. Cole o seguinte trecho de código T-SQL na janela de consulta: 
+2. Cole o seguinte snippet de código T-SQL na janela de consulta: 
    ```sql
    USE master
    GO
@@ -103,7 +102,7 @@ Nesta seção, você criará uma tabela no banco de dados TutorialDB recém-cria
 
    ![Alterar banco de dados](media/connect-query-sql-server/changedb.png)
 
-2. Cole o seguinte trecho de código T-SQL na janela de consulta, selecione-o e, em seguida, escolha **Executar** (ou F5 no teclado).  
+2. Cole o seguinte snippet de código T-SQL na janela de consulta, selecione-o e, em seguida, escolha **Executar** (ou F5 no teclado).  
    Você pode substituir o texto existente na janela de consulta ou acrescentá-lo no final. Para executar tudo na janela de consulta, selecione **Executar**. Para executar uma parte do texto, realce essa parte e, em seguida, selecione **Executar**.  
   
    ```sql
@@ -126,7 +125,7 @@ Nesta seção, você criará uma tabela no banco de dados TutorialDB recém-cria
 Depois que a consulta for concluída, a nova tabela Clientes será exibida na lista de tabelas no Pesquisador de Objetos. Se a tabela não for exibida, clique com o botão direito do mouse no nó **TutorialDB** > **Tabelas** no Pesquisador de Objetos e selecione **Atualizar**.
 
 ## <a name="insert-rows-into-the-new-table"></a>Inserir linhas na nova tabela
-Insira algumas linhas na tabela Clientes que você já criou. Para fazer isso, cole o seguinte trecho de código T-SQL na janela de consulta e, em seguida, selecione **Executar**: 
+Insira algumas linhas na tabela Clientes que você já criou. Para fazer isso, cole o seguinte snippet de código T-SQL na janela de consulta e, em seguida, selecione **Executar**: 
 
 
    ```sql
@@ -144,7 +143,7 @@ Insira algumas linhas na tabela Clientes que você já criou. Para fazer isso, c
 ## <a name="query-the-table-and-view-the-results"></a>Consultar a tabela e exibir os resultados
 Os resultados de uma consulta são exibidos abaixo da janela de texto de consulta. Para consultar a tabela Clientes e exibir as linhas que já foram inseridas, faça o seguinte:  
 
-1. Cole o seguinte trecho de código T-SQL na janela de consulta e, em seguida, selecione **Executar**: 
+1. Cole o seguinte snippet de código T-SQL na janela de consulta e, em seguida, selecione **Executar**: 
 
    ```sql
    -- Select rows from table 'Customers'
