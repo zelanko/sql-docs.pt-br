@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 2017-04-21
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: install
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - instance configuration, Setup
@@ -18,12 +16,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 robots: noindex,nofollow
-ms.openlocfilehash: b2224040e62b1c9f75cf93e4231cef1443edfbac
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 0e6be5445533c6d86f5ae7b000bc1b9e7226abc8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34772762"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47764834"
 ---
 # <a name="installation-wizard-help"></a>Ajuda do Assistente de Instalação
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

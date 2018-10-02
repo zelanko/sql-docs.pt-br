@@ -3,10 +3,8 @@ title: Especificações de capacidade máxima do SQL Server | Microsoft Docs
 ms.date: 11/6/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.custom: ''
 ms.technology: install
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - objects [SQL Server]
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - objects [SQL Server], capacity specifications
 - Database Engine [SQL Server], capacity specifications
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
-caps.latest.revision: 88
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 185353af9af9e65ec67e932b4b7da30238f9915f
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 8823f7fd346fdadfecb67c8db217894415b4e0a9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42775018"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47764365"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Especificações de capacidade máxima do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
