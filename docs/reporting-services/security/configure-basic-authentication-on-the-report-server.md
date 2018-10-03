@@ -4,7 +4,6 @@ ms.date: 08/26/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: security
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, configuration
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 268fa0a3dc73642ffa188a4c5be1d2a123703998
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 42f19fbe37a953ab22f1c9ac3de3cc2c4c8bb0da
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43278112"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47684430"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>Configurar autenticação básica no Servidor de Relatório
   Por padrão, o Reporting Services aceita solicitações que especificam a autenticação Negotiate e NTLM. Se a sua implantação inclui aplicativos cliente ou navegadores que usam autenticação Básica, adicione a autenticação Básica à lista de tipos suportados. Além disso, para usar o Construtor de Relatórios, você deve habilitar o acesso Anônimo aos arquivos do Construtor de Relatórios.  

@@ -5,9 +5,7 @@ ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - backup headers [SQL Server]
@@ -33,16 +31,15 @@ helpviewer_keywords:
 - restore history tables [SQL Server]
 - listing backed up files
 ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
-caps.latest.revision: 54
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cd442f668c272795321a93d23faf2ae832673788
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e8c19200923dc21e3000263095438a65b63a019a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32922381"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47684734"
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>Informações de histórico e cabeçalho de backup (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +69,7 @@ ms.locfileid: "32922381"
 ##  <a name="BnRHistoryTables"></a> Tabelas de histórico de backup e restauração  
  Esta seção apresenta as tabelas de histórico que armazenam backup e restauram metadados no banco de dados do sistema **msdb** .  
   
-|Tabela de histórico|Description|  
+|Tabela de histórico|Descrição|  
 |-------------------|-----------------|  
 |[backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)|Contém uma linha para cada arquivo de dados ou arquivo de log para o qual é feito o backup.|  
 |[backupfilegroup](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)|Contém uma linha para cada grupo de arquivos em um conjunto de backup.|  
@@ -92,7 +89,7 @@ ms.locfileid: "32922381"
 > [!IMPORTANT]  
 >  As instruções Transact-SQL RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY e RESTORE VERIFYONLY exigem a permissão CREATE DATABASE. Com essa exigência, seus arquivos e suas informações de backup estão mais protegidos do que nas versões anteriores. Para obter informações sobre essa permissão, veja [Permissões de banco de dados GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md).  
   
-|Instrução de informações|Tabela de histórico de backup|Description|  
+|Instrução de informações|Tabela de histórico de backup|Descrição|  
 |---------------------------|--------------------------|-----------------|  
 |[RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)|[backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)|Retorna um conjunto de resultados que tem uma lista dos arquivos de log e de banco de dados contidos no backup especificado.<br /><br /> Para obter mais informações, consulte "Listando arquivos de log de transações e de banco de dados", mais adiante neste tópico.|  
 |[RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)|[backupset](../../relational-databases/system-tables/backupset-transact-sql.md)|Recupera todas as informações do cabeçalho de backup de todos os conjuntos de backup em um dispositivo de backup particular. O resultado de executar RESTORE HEADERONLY é um conjunto de resultados.<br /><br /> Para obter mais informações, consulte "Exibindo informações do cabeçalho de backup" mais adiante neste tópico.|  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - event notifications [SQL Server], database mirroring
 - Audit Database Mirroring Login event class
 - database mirroring [SQL Server], event notifications
 ms.assetid: d0bd436d-aade-4208-a7e5-75cf3b5d0ce9
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 48caa4b54fbf2a7045533bfdc793a1ef1aec9a2e
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 66da3f496c244a63055020d02a41560279712099
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43082756"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47679854"
 ---
 # <a name="audit-database-mirroring-login-event-class"></a>Classe de evento Audit Database Mirroring Login
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

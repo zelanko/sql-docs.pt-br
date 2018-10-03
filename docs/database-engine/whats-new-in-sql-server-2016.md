@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 07/26/2017
 ms.prod: sql
 ms.prod_service: high-availability
-ms.component: database-engine
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - what's new [SQL Server Database Engine]
 - Database Engine [SQL Server], what's new
 ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
-caps.latest.revision: 431
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a25bfbe07720f190d5da0cc0b30e2104d77dc576
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 21e42bda8955a2235f70790aa14b915b404ac514
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38980595"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47703654"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>Novidades no mecanismo de banco de dados – SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

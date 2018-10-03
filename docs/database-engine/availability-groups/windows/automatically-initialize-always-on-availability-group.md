@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
-caps.latest.revision: 18
 author: MashaMSFT
 ms.author: v-saume
 manager: craigg
-ms.openlocfilehash: 4856ae5b4feede296b0c51ccfe5abf58e9947eee
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: eccdccaaa6e448439097ba25d2c6706152544088
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34768662"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47684884"
 ---
 # <a name="automatically-initialize-always-on-availability-group"></a>Inicializar automaticamente o grupo de disponibilidade AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

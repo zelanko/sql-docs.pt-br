@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_APPLICATION_ROLE_TSQL
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - ALTER APPLICATION ROLE statement
 - application roles [SQL Server], modifying
 ms.assetid: c6cd5d0f-18f4-49be-b161-64d9c5569086
-caps.latest.revision: 46
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5d4b3b6b886d46d8e7fb91418af8eec82b81a824
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 58cac793f7bcf356f8055c27b598c9521f0c7bce
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37788977"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47690224"
 ---
 # <a name="alter-application-role-transact-sql"></a>ALTER APPLICATION ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -4,7 +4,6 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: subscriptions
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], report delivery
@@ -13,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8c202fbf1eda198208026a986c135aeb0f6e72e7
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 3336112a7b422db606b93cab30b8942839aed862
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43273033"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47674316"
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Entrega de biblioteca do SharePoint no Reporting Services
   Um servidor de relatório configurado para integração com o SharePoint inclui uma extensão de entrega que você pode usar para enviar um relatório a uma biblioteca do SharePoint.  
