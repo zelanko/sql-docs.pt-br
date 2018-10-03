@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: data-movement
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - field terminators [SQL Server]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - bulk exporting [SQL Server], data formats
 - XML bulk load [SQL Server]
 ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
-caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 957ca45730f0f16febff3c86d2c459965069bd3f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 12201091caba40e145e6848fe25eef3b02b6b06a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37303926"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48221036"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Exemplos de importação e exportação em massa de documentos XML (SQL Server)
     
@@ -91,7 +88,7 @@ SELECT * FROM OPENROWSET(
    SINGLE_BLOB) AS x;  
 ```  
   
-#### <a name="remarks"></a>Remarks  
+#### <a name="remarks"></a>Comentários  
  Usando SINGLE_BLOB nesse caso, você pode evitar uma desigualdade entre a codificação do documento XML (como especificado pela declaração de codificação XML) e a cadeia de caracteres da página de código implícita pelo servidor.  
   
  Se você usar tipos de dados NCLOB ou CLOB e executar em uma página de código ou conflito de código, você deve adotar um dos seguintes procedimentos:  

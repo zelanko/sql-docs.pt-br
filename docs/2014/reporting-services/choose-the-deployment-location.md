@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.choosedeployment.f1
 ms.assetid: 3b19b8a3-000d-48a4-b4a2-4f7da078a0c6
-caps.latest.revision: 24
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f2295bc04bf82d588a9b9ec08534bd4c60828cda
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3d56de89c895962966b0aabcc88493a25e18cfa1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37311236"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48223476"
 ---
 # <a name="choose-the-deployment-location"></a>Escolher o local de implantação
   Use esta página do Assistente de Relatório para definir o servidor de implantação e a pasta para o projeto de servidor de relatório.  

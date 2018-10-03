@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d94f79ec-9f8f-4c06-b62b-3ed22a0f8971
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8d55d182bac7908a17ec6ffe241b46d3c8c5cf2b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 537d7e48440e3c68639438068d7b3ff8bd7e9634
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37286592"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48228276"
 ---
 # <a name="other-ways-of-viewing-the-code-window"></a>Outros modos de exibir a janela de código
   A janela de código pode ser configurada para exibir múltiplas janelas de código de vários modos.  

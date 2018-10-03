@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DisplayFolder Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - DisplayFolder element
 ms.assetid: 55184c02-03e7-4d6c-b87a-d4d34bc11d0e
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 646a98170e24c36841ab445bf87897a0b4e9686f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 73de197b50ebd3636cb97e6a011fee1e8c3a71af
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293196"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220096"
 ---
 # <a name="displayfolder-element-assl"></a>Elemento DisplayFolder (ASSL)
   Especifica a pasta na qual listar o elemento pai. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] aplicativos para desenvolvedores e administradores podem dar suporte o uso de pastas de exibição para categorizar vários elementos visualmente.  
@@ -51,7 +48,7 @@ ms.locfileid: "37293196"
 |Característica|Description|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|Cadeia de caracteres|  
-|Valor padrão|Nenhum|  
+|Valor padrão|None|  
 |Cardinalidade|0-1: elemento opcional que pode ocorrer apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -59,9 +56,9 @@ ms.locfileid: "37293196"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|[CalculationProperty](../objects/calculationproperty-element-assl.md), [hierarquia](../objects/hierarchy-element-assl.md), [Kpi](../objects/kpi-element-assl.md), [medida](../objects/measure-element-assl.md), [tradução](../objects/translation-element-assl.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Em cubos maiores, pode haver centenas de medidas e hierarquias. A propriedade `DisplayFolder` define a aparência de usuário no cliente. O valor da propriedade `DisplayFolder` pode conter qualquer uma das opções a seguir:  
   
 -   Estar vazia, indicando que a medida não pertence a uma pasta.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ProtocolCapabilities Element
@@ -23,21 +21,20 @@ f1_keywords:
 helpviewer_keywords:
 - ProtocolCapabilities element
 ms.assetid: f923896a-3f32-46a3-9543-388c30b3465d
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c4183d90d07a54cf009daec59ca29ca802f2bf67
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 12e4cac0c9846582c40213048e71c7f3793ff736
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37295426"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48219036"
 ---
 # <a name="protocolcapabilities-element-xmla"></a>Elemento ProtocolCapabilities (XMLA)
   Usa o cabeçalho SOAP em uma mensagem de solicitação SOAP para identificar os recursos de protocolo entre uma instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e um aplicativo cliente.  
   
- **Namespace** http://schemas.microsoft.com/analysisservices/2003/engine  
+ **namespace** http://schemas.microsoft.com/analysisservices/2003/engine  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -61,18 +58,18 @@ ms.locfileid: "37295426"
   
 |Característica|Description|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|Nenhum|  
-|Valor padrão|Nenhum|  
+|Comprimento e tipo de dados|None|  
+|Valor padrão|None|  
 |Cardinalidade|0-1: elemento opcional que pode ocorrer apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
   
 |Relação|Elemento|  
 |------------------|-------------|  
-|Elementos pai|Nenhum|  
+|Elementos pai|None|  
 |Elementos filho|[Recurso](../xml-elements-properties/capability-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O elemento `ProtocolCapabilities` permite que os aplicativos cliente negociem os recursos de protocolo com uma instância [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], como o suporte à compactação ou XML binário, a qualquer momento. A negociação dos recursos de protocolo envolve as seguintes etapas:  
   
 1.  O aplicativo cliente identifica seu recurso de protocolo enviando uma solicitação SOAP que inclui o `ProtocolCapabilities` elemento como parte do cabeçalho SOAP.  

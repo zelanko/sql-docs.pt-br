@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - AllowPartiallyTrustedCallers attribute
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - common language runtime [SQL Server], security
 - partially trusted callers [CLR integration]
 ms.assetid: 20b0248f-36da-4fc3-97d2-3789fcf6e084
-caps.latest.revision: 20
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: deb561ec43fda2e831f115b1c1a7f8eb21974e92
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e79e83263ab498a86a82fcdc65d56f6f8910d497
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37265295"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222956"
 ---
 # <a name="allowing-partially-trusted-callers"></a>Permitindo chamadores parcialmente confiáveis
   O compartilhamento de bibliotecas de códigos é um cenário comum na integração do CLR (common language runtime), onde um assembly que contém um tipo definido pelo usuário, procedimento armazenado, função definida pelo usuário, agregação definida pelo usuário, gatilho ou classe de utilitário é normalmente acessada por outro assembly ou aplicativo. Bibliotecas de códigos a serem compartilhadas entre vários aplicativos devem ser assinadas com um nome forte.  

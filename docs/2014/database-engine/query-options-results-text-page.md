@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.text.f1
 ms.assetid: fd2fb409-58f9-4ede-8349-ce007126b68d
-caps.latest.revision: 15
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: d6c4fb6fe50f20bcac8d4f16644a35466a7b2f2e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8136f43214ef966c7beb05501ca0b27d451f0451
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37205746"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48223876"
 ---
 # <a name="query-options-results-text-page"></a>Resultados das opções de consulta (página de texto)
   Use esta página para especificar as opções de exibição de um conjunto de resultados da consulta em formato de texto. As configurações desta página também se aplicam quando **Resultados em Arquivo** é selecionado.  
@@ -41,19 +38,19 @@ ms.locfileid: "37205746"
  **Alinhar valores numéricos à direita**  
  Marque esta caixa de seleção para alinhar valores numéricos à direita da coluna. Isso pode tornar mais fácil a revisão de números com um número fixo de casas decimais.  
   
- **Descartar resultado após a execução de consulta**  
+ **Descartar resultado após a execução da consulta**  
  Libera memória descartando os resultados da consulta depois de serem recebidos pelo monitor.  
   
  **Exibir resultados em uma guia separada**  
  Marque essa caixa de seleção para exibir o conjunto de resultados em uma nova janela de documento, em vez de na parte inferior da janela de documentos de consulta.  
   
- **Alternar para a guia resultados após a execução da consulta**  
+ **Alternar para a guia Resultados após a execução da consulta**  
  Clique para definir automaticamente o foco da tela no conjunto de resultados.  
   
  **Número máximo de caracteres exibidos em cada coluna**  
  Esse valor padrão é 256. Aumente o valor para exibir conjuntos de resultados maiores sem truncar.  
   
- **Redefinir para padrão**  
+ **Restaurar Padrões**  
  Redefine todos os valores dessa página com os valores padrão originais.  
   
 ## <a name="saving-a-text-result-set-with-headers"></a>Salvar um conjunto de resultados de texto com cabeçalhos  
