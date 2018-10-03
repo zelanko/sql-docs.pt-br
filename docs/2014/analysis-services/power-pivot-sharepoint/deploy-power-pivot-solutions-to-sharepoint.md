@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f202a2b7-34e0-43aa-90d5-c9a085a37c32
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ce0863ef023f96580eb809b6562cfc54b0de5b60
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d40854ecff0b138fa854103650dda9691be94a41
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243656"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48145096"
 ---
 # <a name="deploy-powerpivot-solutions-to-sharepoint"></a>Implantar soluções PowerPivot para SharePoint
   Use as instruções a seguir para implantar manualmente dois pacotes de solução que adicionam recursos do PowerPivot a um ambiente do SharePoint Server 2010. Implantar as soluções é uma etapa necessária para configurar o PowerPivot para SharePoint em um servidor do SharePoint 2010. Para exibir a lista completa de etapas necessárias, consulte [administração de servidor do PowerPivot e a configuração na Administração Central](power-pivot-server-administration-and-configuration-in-central-administration.md).  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], about
 - full-text search [SQL Server], server management
 ms.assetid: 2733ed78-6d33-4bf9-94da-60c3141b87c8
-caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8b9ca3983da961da7e6d0c72708bfc5dbc02bd6f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2fd0f2ae6efce8eba2229df199025bc09eaec64b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37227386"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147366"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>Gerenciar e monitorar a pesquisa de texto completo em uma instância do servidor
   A administração de texto completo para uma instância de servidor inclui:  

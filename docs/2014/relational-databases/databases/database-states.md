@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 07/15/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.DATABASESTATES.F1
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - states [SQL Server]
 - restoring database state [SQL Server]
 ms.assetid: b7f1f111-ca73-4a89-b567-a98d64d6ecb3
-caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5e601b308e4b688332b6e4bd050dc79ec70e8b75
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b96d575384a7d2be546193c8ce829723f57a3dbc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37307926"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48141137"
 ---
 # <a name="database-states"></a>Estados de banco de dados
   Um banco de dados sempre está em um estado específico. Por exemplo, esses estados incluem ONLINE, OFFLINE ou SUSPECT. Para verificar o estado atual de um banco de dados, selecione a coluna **state_desc** na exibição de catálogo [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) ou a propriedade **Status** da função [DATABASEPROPERTYEX](/sql/t-sql/functions/databasepropertyex-transact-sql) .  

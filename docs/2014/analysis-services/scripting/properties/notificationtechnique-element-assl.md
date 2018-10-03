@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - NotificationTechnique Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - NotificationTechnique element
 ms.assetid: 80c43de3-f147-4bf5-bb85-da9d182ce415
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e661b47c5344b0094daef53102aada68a6b6aad9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8dc05b03286785e2d06d5595897a263a294ae97e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37213906"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48139468"
 ---
 # <a name="notificationtechnique-element-assl"></a>Elemento NotificationTechnique (ASSL)
   Especifica se [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou um aplicativo cliente externo processa as notificações.  
@@ -55,9 +52,9 @@ ms.locfileid: "37213906"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elemento pai|[ProactiveCachingBinding](../data-type/binding-data-type-assl.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O valor desse elemento é limitado a uma das cadeias de caracteres listadas na tabela a seguir.  
   
 |Valor|Description|  

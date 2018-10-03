@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - RefreshPolicy Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - RefreshPolicy element
 ms.assetid: f4c36280-1a39-4f1c-a3ab-fbeb81742d6d
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cf0aa9478a44e7479b20357ae56317b90801f77f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6322c725a0c4b339425b9cc9e10aa6596c9fc34c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37277612"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48144426"
 ---
 # <a name="refreshpolicy-element-assl"></a>Elemento RefreshPolicy (ASSL)
   Determina a frequência com que a parte dinâmica do grupo de medidas ou dimensões (conforme especificado pela [persistência](persistence-element-assl.md) elemento) é verificada quanto a alterações.  
@@ -56,16 +53,16 @@ ms.locfileid: "37277612"
 |Ancestral ou pai|Valor Padrão|  
 |------------------------|-------------------|  
 |[DimensionBinding](../data-type/binding-data-type-assl.md)|*ByQuery*|  
-|[MeasureGroupBinding](../data-type/measuregroupbinding-data-type-assl.md)|Nenhum|  
+|[MeasureGroupBinding](../data-type/measuregroupbinding-data-type-assl.md)|None|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
   
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|[DimensionBinding](../data-type/binding-data-type-assl.md), [MeasureGroupBinding](../data-type/measuregroupbinding-data-type-assl.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O valor desse elemento é limitado a uma das cadeias de caracteres listadas na tabela a seguir.  
   
 |Valor|Description|  

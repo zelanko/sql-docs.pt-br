@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ce8aa034-161b-473f-baec-9c29e0a8e5f5
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 35cbe12526fbd8ead78132f8560368b62e50aa61
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 26869ca780bc74e3c9c56b38b39195b893dbf523
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153377"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147766"
 ---
 # <a name="exploring-the-clustering-model-basic-data-mining-tutorial"></a>Explorando o modelo de clustering (Tutorial de mineração de dados básico)
   O [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo Clustering agrupa casos em clusters que contenham características semelhantes. Esses agrupamentos são úteis para explorar dados, identificando anomalias nos dados e criar previsões.  

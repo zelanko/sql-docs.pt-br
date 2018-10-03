@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 64149fd4-239b-40e4-91e2-f9011f7d9f66
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c0622e1ebac261085b341056e6178e72d02d66d0
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 9158544f40a18ff6dce97483be57e645e15a57d4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37426315"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147722"
 ---
 # <a name="get-mutual-kerberos-authentication"></a>Obter autenticação Kerberos mútua
   Este exemplo mostra como obter autenticação mútua do Kerberos usando o ODBC em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  

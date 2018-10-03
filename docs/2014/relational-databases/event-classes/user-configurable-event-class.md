@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - User-Configurable event class
 ms.assetid: 06fe5f07-a0dd-4968-b123-56b124a86020
-caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8bc28433c9d54f3563bb635cbdbb12590f985a40
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: eb325d4121670940b22292a7c4ee3d73cc3edcc7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300456"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48143276"
 ---
 # <a name="user-configurable-event-class"></a>classe de evento User-Configurable
   Use a categoria de evento User-Configurable para monitorar eventos definidos pelo usuário. Crie classes de evento definidas pelo usuário para monitorar eventos que não podem ser monitorados pelas classes de eventos fornecidas pelo sistema em outras categorias de evento. Por exemplo, um evento definido pelo usuário pode ser criado para monitorar o progresso do aplicativo que você está testando. À medida que o aplicativo é executado, ele pode gerar eventos em pontos predefinidos, permitindo que você determine o ponto de execução atual no seu aplicativo.  
