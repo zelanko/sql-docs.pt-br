@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: da1c9cb7-6c32-4b9b-96ec-ecea772aeb77
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c81bba0a055f812afddb56eac604111796f464d7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c71dfded020167ddd9d01c458f370882dc493fbc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37179133"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211936"
 ---
 # <a name="exploring-the-market-basket-models-intermediate-data-mining-tutorial"></a>Explorando os modelos de cesta de compras (Tutorial de mineração de dados intermediário)
   Agora que você criou o `Association` modelo, você pode explorá-lo usando o [!INCLUDE[msCoName](../includes/msconame-md.md)] Visualizador de associação na **Visualizador do modelo de mineração** guia do Designer de mineração de dados. Este tutorial orienta você a usar o visualizador para explorar relacionamentos entre itens. O visualizador ajuda você a ver rapidamente quais produtos tendem a aparecer juntos e a obter uma ideia geral dos padrões emergentes.  

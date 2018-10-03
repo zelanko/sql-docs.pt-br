@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SSIS packages, security
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - files [Integration Services], security
 - SQL Server Integration Services packages, security
 ms.assetid: 2e3ddea9-5289-4289-a70e-11c018f34977
-caps.latest.revision: 24
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e3f4c1efc392020f943759d7698c837316f4fdf4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6b6e78e04a64f9bddeeb4f24ba2f90919b9d228c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37178413"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48214986"
 ---
 # <a name="access-to-files-used-by-packages"></a>Acesso aos arquivos usados por pacotes
   O nível de proteção do pacote não protege arquivos armazenados fora do pacote. Esses arquivos incluem o seguinte:  

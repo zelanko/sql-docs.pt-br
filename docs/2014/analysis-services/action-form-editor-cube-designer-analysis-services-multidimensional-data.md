@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.actionexpression.action.f1
 ms.assetid: c363a29b-6099-473c-9625-460cc15b3d95
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f51a23b7dddddc0365809fd6bc92c922fdd402fe
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 32d1389fcb780fab6a370e6a9043600461baec4b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37239956"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48225546"
 ---
 # <a name="action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor de Formulário de Ação (guia Ações, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use o painel Editor de Formulário de Ação na guia **Ações** do Designer de Cubo para criar e modificar ações padrão.  

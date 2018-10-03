@@ -1,12 +1,10 @@
 ---
-title: 'Buscando dados BLOB usando IRow:: Open e ISequentialStream | Microsoft Docs'
+title: Buscando dados BLOB usando IRow::Open e ISequentialStream | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - fetching BLOB data
@@ -14,21 +12,20 @@ helpviewer_keywords:
 - ISequentialStream interface
 - BLOBs, fetching
 ms.assetid: 439b3976-84e7-4d11-8dba-f668adbc9159
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7604022093a63dd536648fd43a3370ac21c05fcb
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: c67e606b0f74d3886f0b5890d5061406d0d7f3fa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37418585"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211356"
 ---
 # <a name="fetching-blob-data-using-irowopen-and-isequentialstream"></a>Buscando dados de BLOB usando IRow::Open e ISequentialStream
-  **IRow:: Open** dá suporte ao tipo DBGUID_STREAM e DBGUID_NULL somente de objetos a ser aberto.  
+  **IRow::Open** só dá suporte à abertura do tipo de objetos DBGUID_STREAM e DBGUID_NULL.  
   
- A função a seguir usa **IRow:: Open** e **ISequentialStream** para buscar dados grandes.  
+ A função a seguir usa **IRow::Open** e **ISequentialStream** para buscar dados grandes.  
   
 ```  
 void InitializeAndExecuteCommand()  
@@ -79,7 +76,7 @@ HRESULT GetSequentialColumn(IRow* pUnkRow, ULONG iCol)
 }  
 ```  
   
- Dados grandes podem ser associados ou recuperados usando o **ISequentialStream** interface. No caso das colunas associadas, o sinalizador de status indicará se os dados estiverem truncados definindo DBSTATUS_S_TRUNCATED.  
+ Os dados grandes podem ser associados ou recuperados por meio da interface **ISequentialStream**. No caso das colunas associadas, o sinalizador de status indicará se os dados estiverem truncados definindo DBSTATUS_S_TRUNCATED.  
   
 ## <a name="see-also"></a>Consulte também  
  [Buscando dados BLOB usando IRow](../../database-engine/dev-guide/fetching-blob-data-using-irow.md)  
