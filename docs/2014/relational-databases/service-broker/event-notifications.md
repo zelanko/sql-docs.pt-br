@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - event notifications, about
 - events [SQL Server], notifications
 ms.assetid: 4da73ca1-6c06-4e96-8ab8-2ecba30b6c86
-caps.latest.revision: 18
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f26d6b4622d11ae9a620d5cbdb03eed737de1645
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1d7c74ee9963d93d289f589115712614a745dad1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37305106"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049577"
 ---
 # <a name="event-notifications"></a>Notificações de eventos
   As notificações de evento enviam informações sobre eventos a um serviço do [!INCLUDE[ssSB](../../includes/sssb-md.md)] . As notificações de evento são executadas em resposta a uma variedade de instruções DDL (linguagem de definição de dados) do [!INCLUDE[tsql](../../includes/tsql-md.md)] e eventos de Rastreamento do SQL por meio do envio de informações sobre esses eventos a um serviço do [!INCLUDE[ssSB](../../includes/sssb-md.md)] .  

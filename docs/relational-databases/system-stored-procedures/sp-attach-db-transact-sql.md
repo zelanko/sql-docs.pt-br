@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_attach_db_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_attach_db
 ms.assetid: 59bc993e-7913-4091-89cb-d2871cffda95
-caps.latest.revision: 69
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1c275128a8e3c2bbce6165486e256fc5b34d402d
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 87093ee870549307e9395c013b2f8727f047ae4b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38037194"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811284"
 ---
 # <a name="spattachdb-transact-sql"></a>sp_attach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,9 +63,9 @@ sp_attach_db [ @dbname= ] 'dbname'
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhum  
+ None  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O **sp_attach_db** procedimento armazenado deve ser executado apenas em bancos de dados que tenham sido previamente desanexados do servidor de banco de dados usando uma explícita **sp_detach_db** operação ou em bancos de dados copiados. Se você precisar especificar mais de 16 arquivos, use CREATE DATABASE *database_name* FOR ATTACH ou CREATE DATABASE *database_name* FOR_ATTACH_REBUILD_LOG. Para obter mais informações, consulte [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
  Considera-se que todo arquivo não especificado esteja em seu último local conhecido. Para usar um arquivo em um local diferente, você deve especificar o novo local.  

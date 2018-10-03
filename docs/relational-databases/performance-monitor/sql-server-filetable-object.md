@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:FileTable
 ms.assetid: 325f5e58-1095-450f-9321-dfacfe6fd55f
-caps.latest.revision: 3
 author: dagiro
 ms.author: v-dagir
 manager: craigg
-ms.openlocfilehash: d8011be879fd610a8a7f42fb78f6dd6d464f88d4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4588c8230d355fddddcc0f758b2be029db8e9cb5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32952101"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47821194"
 ---
 # <a name="sql-server-filetable-object"></a>SQL Server, objeto FileTable
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +27,7 @@ O objeto de desempenho **SQLServer:FileTable** fornece contadores para estatíst
 
 A tabela a seguir descreve os objetos de desempenho **FileTable** do SQL Server.
 
-|**Contadores de FileTable do SQL Server**|Description|  
+|**Contadores de FileTable do SQL Server**|Descrição|  
 |-------------|-----------------|  
 |**Tempo médio para excluir um item FileTable**|Tempo médio (em milissegundos) para excluir um item FileTable.|
 |**Tempo médio de enumeração de FileTable**|Tempo médio (em milissegundos) de uma solicitação de enumeração FileTable.|

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - PropertyType Property (ServerNetworkProtocolProperty Class)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - PropertyType property
 ms.assetid: d4932eaf-da7c-4b09-8298-ffb6333dfba2
-caps.latest.revision: 31
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f57b2404724a13505130dbc0d328e4a7823c55cb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ea3922c397e787a1464941f1ed2556c4261d4fc0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37266092"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48059006"
 ---
 # <a name="propertytype-property-servernetworkprotocolproperty-class"></a>Propriedade PropertyType (classe ServerNetworkProtocolProperty)
   Obtém o tipo de propriedade.  
@@ -48,7 +45,7 @@ object
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
  Um valor `uint32` que especifica o tipo de dado da propriedade.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 ## <a name="see-also"></a>Consulte também  
  [Configurando protocolos de rede do servidor e bibliotecas de rede](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

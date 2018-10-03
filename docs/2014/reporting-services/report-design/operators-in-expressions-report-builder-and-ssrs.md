@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d22dc8b6-4353-40e7-91a1-65e8dae6325d
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 6ab017df400de3a9894a64108d97cbd97fd3374c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 79ad4c19b0f6b3dff91def701611b0a20d66a34d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218976"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049806"
 ---
 # <a name="operators-in-expressions-report-builder-and-ssrs"></a>Operadores em expressões (Construtor de Relatórios e SSRS)
   Um operador é um símbolo que representa ações aplicadas a um ou mais termos em uma expressão. As seguintes categorias de operadores têm suporte em uma expressão: aritmética, de comparação, de concatenação, lógica ou de bit a bit e de deslocamento de bit.  
@@ -51,7 +48,7 @@ ms.locfileid: "37218976"
 |>=|Maior que ou igual a.|  
 |=|Igual a.|  
 |<>|Diferente de.|  
-|Como|Determina se uma cadeia de caracteres específica corresponde a um padrão especificado. Um padrão pode incluir caracteres normais e curingas. Durante a correspondência de padrões, os caracteres normais devem corresponder exatamente aos caracteres especificados na cadeia de caracteres. No entanto, os caracteres curinga podem ser correspondidos a fragmentos arbitrários da cadeia de caracteres. O uso de caracteres curinga torna o operador LIKE mais flexível que o uso dos operadores de comparação de cadeias de caracteres = e !=.<br /><br /> Os seguir lista os caracteres que podem ser usados como curingas:<br /><br /> **%**: Qualquer cadeia de caracteres de zero ou mais caracteres.<br /><br /> **_**: Qualquer caractere único.<br /><br /> **[]**: Qualquer caractere único dentro do intervalo especificado (por exemplo, [a-f]) ou conjunto (por exemplo, [aeiou]).<br /><br /> **[^] **: Qualquer caractere único não dentro do intervalo especificado (por exemplo, [^ a-f]) ou conjunto (por exemplo, [^ aeiou]).|  
+|Como|Determina se uma cadeia de caracteres específica corresponde a um padrão especificado. Um padrão pode incluir caracteres normais e curingas. Durante a correspondência de padrões, os caracteres normais devem corresponder exatamente aos caracteres especificados na cadeia de caracteres. No entanto, os caracteres curinga podem ser correspondidos a fragmentos arbitrários da cadeia de caracteres. O uso de caracteres curinga torna o operador LIKE mais flexível que o uso dos operadores de comparação de cadeias de caracteres = e !=.<br /><br /> Os seguir lista os caracteres que podem ser usados como curingas:<br /><br /> **%**: Qualquer cadeia de caracteres de zero ou mais caracteres.<br /><br /> **_**: Qualquer caractere único.<br /><br /> **[]**: Qualquer caractere único dentro do intervalo especificado (por exemplo, [a-f]) ou conjunto (por exemplo, [aeiou]).<br /><br /> **[^]** : Qualquer caractere único não dentro do intervalo especificado (por exemplo, [^ a-f]) ou conjunto (por exemplo, [^ aeiou]).|  
 |Is|Compara duas referências de objeto.|  
   
 ### <a name="string-concatenation"></a>Concatenação de cadeias de caracteres  

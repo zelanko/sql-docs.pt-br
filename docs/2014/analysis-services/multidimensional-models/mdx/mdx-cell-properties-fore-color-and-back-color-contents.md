@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - FORE_COLOR contents
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - cell backgrounds
 - BACK_COLOR contents
 ms.assetid: ff8f40cb-2ac4-4fc2-9761-7f1b14c17c8c
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8a4909413bb7847d4254020ed2b4135049baaea4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 17b4bf37eef74824c51a81b97f8b2e5b204df3c0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278206"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48051066"
 ---
 # <a name="forecolor-and-backcolor-contents-mdx"></a>Conteúdo de FORE_COLOR e BACK_COLOR (MDX)
   As propriedades de célula `FORE_COLOR` e `BACK_COLOR` armazenam informações sobre a cor do texto e do plano de fundo de uma célula, respectivamente, no formato RGB (vermelho, verde e azul) do sistema operacional Microsoft Windows.  

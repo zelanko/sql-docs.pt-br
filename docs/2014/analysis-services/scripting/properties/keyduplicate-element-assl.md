@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - KeyDuplicate Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - KeyDuplicate element
 ms.assetid: d7000b8b-e81f-4401-8738-00c2e0f73a59
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6bbd445a1b362e7ae5bc7c12df3404efe1a781ea
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c4ca2e06d39607acf92dc820bc08cfe53f938bed
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37192432"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48055286"
 ---
 # <a name="keyduplicate-element-assl"></a>Elemento KeyDuplicate (ASSL)
   Determina como [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] manipula um erro de chave duplicada, caso seja encontrado algum durante o processamento.  
@@ -59,9 +56,9 @@ ms.locfileid: "37192432"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elemento pai|[ErrorConfiguration](../objects/errorconfiguration-element-assl.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Os erros de chave duplicada são gerados apenas durante o processamento da dimensão, quando uma chave de atributo é encontrada mais de uma vez. Como as chaves de atributo devem ser exclusivas, o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] descarta os registros duplicados. Os erros de chave duplicadas indicam uma falha na criação da dimensão, especificamente nas relações entre os atributos.  
   
  O valor desse elemento é limitado a uma das cadeias de caracteres listadas na tabela a seguir.  

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, pdw
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_configure
@@ -18,17 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_configure
 ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
-caps.latest.revision: 60
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 9ebd6f7eb1493afda5adba7071cfeff175b7458b
-ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
+ms.openlocfilehash: f3b983411fade381b926e05a3bdbb81355bf4c02
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44171657"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47852334"
 ---
 # <a name="spconfigure-transact-sql"></a>sp_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)]
@@ -91,7 +87,7 @@ RECONFIGURE
 |**config_value**|**int**|Valor para o qual a opção de configuração foi definida usando **sp_configure** (o valor **Configurations**). Para obter mais informações sobre essas opções, consulte [opções de configuração do servidor &#40;SQL Server&#41; ](../../database-engine/configure-windows/server-configuration-options-sql-server.md) e [Configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
 |**run_value**|**int**|Valor da opção de configuração em execução no momento (valor em **value_in_use**).<br /><br /> Para obter mais informações, consulte [sys. Configurations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Use **sp_configure** para exibir ou alterar as configurações de nível de servidor. Para alterar configurações de nível de banco de dados, use ALTER DATABASE. Para alterar configurações que afetam somente a sessão do usuário atual, use a instrução SET.  
   
 ## <a name="updating-the-running-configuration-value"></a>Atualizando o valor de configuração de execução  

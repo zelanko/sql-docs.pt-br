@@ -5,8 +5,6 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.technology: scripting
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.TextEditor
@@ -26,17 +24,16 @@ helpviewer_keywords:
 - scripts [SQL Server], SQL Server Management Studio
 - queries [SQL Server], SQL Server Management Studio
 ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
-caps.latest.revision: 53
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 954dd2b44dc1c2a603bb827e6e06244d41e93072
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: acf755d1055e9d46abe22bf33bf421b685d3c14f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43089243"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47821764"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>Editores de Consultas e de Texto (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -104,8 +101,8 @@ ms.locfileid: "43089243"
  **Estatísticas do cliente**  
  Exibe informações sobre a execução da consulta agrupada em categorias. Quando a opção **Incluir Estatísticas do Cliente** é selecionada no menu **Consulta** , uma janela **Estatísticas do Cliente** é exibida na execução da consulta. São listadas estatísticas de execuções de consulta sucessivas junto com os valores médios. Selecione **Redefinir Estatísticas do Cliente** no menu **Consulta** para redefinir a média.  
   
- **Trechos de códigos**  
- Os modelos que você pode usar como ponto de partida ao adicionar instruções ao Editor de Consultas do Mecanismo de Banco de Dados. Você pode inserir os trechos predefinidos fornecidos com o SQL Server ou adicionar seus próprios trechos.  
+ **Snippets de código**  
+ Os modelos que você pode usar como ponto de partida ao adicionar instruções ao Editor de Consultas do Mecanismo de Banco de Dados. Você pode inserir os snippets predefinidos fornecidos com o SQL Server ou adicionar seus próprios snippets.  
   
  **Modo SQLCMD**  
  Executa scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] que incluem o conjunto de comandos com suporte no utilitário sqlcmd. Para saber mais, confira [Tópicos de instruções do sqlcmd](http://msdn.microsoft.com/library/dd7a2d2b-6327-4d77-ac5a-580d36073ad4).  
@@ -131,7 +128,7 @@ ms.locfileid: "43089243"
 |Descreve como imprimir scripts ou resultados em uma janela ou grade.|[Imprimir código e resultados](../../relational-databases/scripting/print-code-and-results.md)|  
 |Descreve como usar os recursos do sqlcmd no Editor de Consultas [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|[Editar scripts SQLCMD com o Editor de Consultas](../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)|  
 |Descreve como usar recursos do IntelliSense como nomes de objeto de conclusão automática à medida que os digita ou garantir que pontos de interrupção sejam colocados em locais válidos.|[IntelliSense &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/intellisense-sql-server-management-studio.md)|  
-|Descreve como usar os trechos de códigos no Editor de Consultas [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Os trechos são modelos para instruções ou blocos geralmente usados, e podem ser personalizados ou estendidos para incluir trechos específicos de site.|[Trechos de código Transact-SQL](../../relational-databases/scripting/transact-sql-code-snippets.md)|  
+|Descreve como usar os snippets de códigos no Editor de Consultas [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Os snippets são modelos para instruções ou blocos geralmente usados, e podem ser personalizados ou estendidos para incluir snippets específicos de site.|[Snippets de código Transact-SQL](../../relational-databases/scripting/transact-sql-code-snippets.md)|  
 |Descreve como usar o depurador [!INCLUDE[tsql](../../includes/tsql-md.md)] para percorrer informações de depuração de código e exibição, como os valores em variáveis e parâmetros.|[Depurador do Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)|  
 |Descreve como definir cores personalizadas para instâncias diferentes do [!INCLUDE[ssDE](../../includes/ssde-md.md)]e fazer com que essas cores sejam definidas como o plano de fundo da barra de status nas janelas do Editor de Consultas [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|[Barra de status &#40;Editor de Consultas do Mecanismo de Banco de Dados&#41;](../../relational-databases/scripting/status-bar-database-engine-query-editor.md)|  
   

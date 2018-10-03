@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - hotfixes [SQL Server]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - upgrading mirrored database systems
 - upgrading SQL Server, mirrored databases
 ms.assetid: bdc63142-027d-4ead-9d3e-147331387ef5
-caps.latest.revision: 13
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cca85c8f2d38e5f786aa635380c3bd6199e3a48f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6f654292e1d756cd655766851e0bc056e41ce3f3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37296916"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48053006"
 ---
 # <a name="install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases"></a>Instalar um service pack em um sistema com tempo de inatividade mínimo para bancos de dados espelhados
   Este tópico descreve como minimizar o tempo de inatividade para bancos de dados espelhados ao instalar service packs e hotfixes. Esse processo envolve atualizar sequencialmente as instâncias do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] que estão participando do espelhamento de banco de dados. Essa forma de atualização, o que é conhecida como um *atualização sem interrupção*, reduz o tempo de inatividade para um único failover. Observe que para sessões em modo de alto desempenho em que o servidor espelho está geograficamente distante do servidor principal, uma atualização sem interrupção pode ser inadequada.  

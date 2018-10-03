@@ -1,27 +1,24 @@
 ---
-title: Campos de conjunto de propriedades, métodos e eventos | Microsoft Docs
+title: Coleção de propriedades, métodos e eventos de campos | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Fields collection [ADO], members
 ms.assetid: 8cc13e41-7ed8-40df-9a74-5bf846c14c06
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3baa6859d7e5b54879582fa58d4eea109c37d9ba
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 8c27dfd012f87d730999e0e03a5a8b96d97b3d7c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278659"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47851134"
 ---
 # <a name="fields-collection-properties-methods-and-events"></a>Propriedades de coleção de campos, métodos e eventos
 ## <a name="properties"></a>Propriedades  

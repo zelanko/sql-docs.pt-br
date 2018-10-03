@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.All_Languages.General
 ms.assetid: bf18907c-94e2-4c09-9b2b-0925ac04c627
-caps.latest.revision: 28
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 39394ea71a428d634bcee27adc2b76a3fca4af02
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8d9919d2d74bfa0fe26ca7f7ad915dd808f29382
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189073"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48048628"
 ---
 # <a name="options-text-editor---all-languages---general-page"></a>Opções (página Editor de texto – Todos os idiomas – Geral)
   Use esta caixa de diálogo para definir as opções de edição gerais nos cinco editores no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Para exibir essas opções, clique em **Opções** no menu **Ferramentas** . Selecione a pasta **Editor de Texto**, expanda a pasta **Todos os Idiomas** e clique em **Geral**.  

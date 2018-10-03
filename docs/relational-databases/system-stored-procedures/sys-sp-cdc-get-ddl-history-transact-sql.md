@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cdc_get_ddl_history
@@ -25,12 +22,12 @@ ms.assetid: 4dee5e2e-d7e5-4fea-8037-a4c05c969b3a
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2a5b652807c0392e7c55c51173aa1aeecbae4dba
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 657d7b6cc21c573d2d9535d36392f9b7eb94200f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43036354"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47827214"
 ---
 # <a name="sysspcdcgetddlhistory-transact-sql"></a>sys.sp_cdc_get_ddl_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +62,7 @@ sys.sp_cdc_get_ddl_history [ @capture_instance = ] 'capture_instance'
 |ddl_lsn|**binary(10)**|Número de sequência de log (LSN) associado com a alteração de DDL.|  
 |ddl_time|**datetime**|Hora associada à alteração de DDL.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  As modificações de DDL da tabela de origem que alteram a estrutura de coluna de tabela de origem, como adicionar ou descartar uma coluna ou alterar o tipo de dados de uma coluna existente, são mantidas na [ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) tabela. Essas mudanças podem ser informadas usando este procedimento armazenado. Entradas em cdc.ddl_history são realizadas no momento em que o processo de captura lê a transação de DDL no log.  
   
 ## <a name="permissions"></a>Permissões  

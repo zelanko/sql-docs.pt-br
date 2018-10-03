@@ -6,27 +6,24 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Getrows method [ADO], Visual Basic example
 ms.assetid: 9f7c78bb-7bb8-4c4f-8e5a-4d3bfc8a208f
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1567342e31352b21b53fb03a769039a8e31d8e1f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 815fb6268fd55566ede8d7f6722f66d9be912a97
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278835"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47837041"
 ---
 # <a name="getrows-method-example-vb"></a>Exemplo do método GetRows (VB)
-Este exemplo usa o [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) método para recuperar um número especificado de linhas de uma [registros](../../../ado/reference/ado-api/recordset-object-ado.md) e preencher uma matriz com os dados resultantes. O **GetRows** método retornará a menos que o número desejado de linhas em dois casos: ou se [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) foi atingido, ou se **GetRows** tentou recuperar um registro que foi excluído por outro usuário. A função retorna **False** somente se o segundo caso ocorre. A função GetRowsOK é necessária executar este procedimento.  
+Este exemplo usa o [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) método para recuperar um número especificado de linhas de uma [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) e preencher uma matriz com os dados resultantes. O **GetRows** método retornará a menos que o número desejado de linhas em dois casos: ambos if [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) tiver sido atingido, ou se **GetRows** tentou recuperar um registro que foi excluído por outro usuário. A função retornará **falsos** somente se o segundo caso ocorre. A função GetRowsOK é necessária executar este procedimento.  
   
 ```  
 'BeginGetRowsVB  
@@ -117,5 +114,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Método GetRows (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)   
+ [Exemplo do método GetRows (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)   
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
