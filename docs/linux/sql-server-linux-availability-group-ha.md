@@ -3,23 +3,19 @@ title: SQL Server Always On padrões de implantação de grupo de disponibilidad
 ms.custom: sql-linux
 ms.date: 10/16/2017
 ms.prod: sql
-ms.component: ''
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: linux
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
-caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c37cba83ebea7fbced662c3e909ee4007f57225f
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 22178bb26309bba1529189e728bde3e5a26bab0e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084658"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47798934"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>Alta disponibilidade e proteção de dados para as configurações de grupo de disponibilidade
 
@@ -63,7 +59,7 @@ Essa configuração consiste em três réplicas síncronas. Por padrão, ele for
 
 Um grupo de disponibilidade com três réplicas síncronas pode fornecer proteção de dados, alta disponibilidade e escala de leitura. A tabela a seguir descreve o comportamento de disponibilidade. 
 
-| |escala de leitura|Alta disponibilidade & </br> proteção de dados | Proteção de dados
+| |escala de leitura|Alta disponibilidade & </br> proteção de dados | proteção de dados
 |:---|---|---|---
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>*</sup>|2
 |Interrupção principal | Failover manual. Pode ocorrer perda de dados. A nova primária é R / w. |Failover automático. A nova primária é R / w. |Failover automático. Novo primário não está disponível para transações de usuário até que o antigo primário se recupere e ingresse o grupo de disponibilidade como secundária. 
@@ -80,7 +76,7 @@ Essa configuração permite que a proteção de dados. Como as outras configura�
 
 Um grupo de disponibilidade com duas réplicas síncronas fornece proteção de dados e escala de leitura. A tabela a seguir descreve o comportamento de disponibilidade. 
 
-| |escala de leitura |Proteção de dados
+| |escala de leitura |proteção de dados
 |:---|---|---
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
 |Interrupção principal | Failover manual. Pode ocorrer perda de dados. A nova primária é R / w.| Failover automático. Novo primário não está disponível para transações de usuário até que o antigo primário se recupere e ingresse o grupo de disponibilidade como secundária.
@@ -108,7 +104,7 @@ No diagrama de grupo de disponibilidade, uma réplica primária envia dados de c
 
 O valor padrão para `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` é 0. A tabela a seguir descreve o comportamento de disponibilidade. 
 
-| |Alta disponibilidade & </br> proteção de dados | Proteção de dados
+| |Alta disponibilidade & </br> proteção de dados | proteção de dados
 |:---|---|---
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>*</sup>|1
 |Interrupção principal | Failover automático. A nova primária é R / w. | Failover automático. Novo primário não está disponível para transações de usuário. 

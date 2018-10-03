@@ -5,9 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - COLUMNS
@@ -22,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0a151bbc75924c6051f946df490d1d7399df5ba7
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 5a5d8039b34401bbe8cd11e6b9fb79320a35360b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43101622"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811374"
 ---
 # <a name="columns-transact-sql"></a>COLUMNS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,7 +60,7 @@ ms.locfileid: "43101622"
 |**DOMAIN_SCHEMA**|**nvarchar(** 128 **)**|Se a coluna for do tipo de dados definido pelo usuário, essa coluna retornará o nome do esquema do tipo de dados definido pelo usuário. Caso contrário, será retornado NULL.<br /><br /> **\*\* Importante \* \***  não use exibições INFORMATION_SCHEMA para determinar o esquema de um tipo de dados. O único modo seguro para localizar o esquema de um tipo é usar a função TYPEPROPERTY.|  
 |**NOME_DO_DOMÍNIO**|**nvarchar(** 128 **)**|Se a coluna for do tipo de dados definido pelo usuário, essa coluna será o nome do tipo de dados definido pelo usuário. Caso contrário, será retornado NULL.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O **ORDINAL_POSITION** coluna o **INFORMATION_SCHEMA. COLUNAS** exibição não é compatível com o padrão de bit de colunas retornadas pela função COLUMNS_UPDATED. Para obter um padrão de bit que é compatível com COLUMNS_UPDATED, você deve fazer referência a **ColumnID** propriedade da função de sistema COLUMNPROPERTY ao consultar o **INFORMATION_SCHEMA. COLUNAS** modo de exibição. Por exemplo:  
   
 ```  

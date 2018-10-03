@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,16 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - Count property [ADO]
 ms.assetid: da9ccd1f-d402-41a2-940c-45556fc5340d
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bccb2760b124040973baa7ba889d2110ec5efe95
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 988ee3dc6cb4b394ee1da170cb902b88fcb0f1ca
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277225"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47759324"
 ---
 # <a name="count-property-ado"></a>Propriedade Count (ADO)
 Indica o número de objetos em uma coleção.  
@@ -32,12 +29,12 @@ Indica o número de objetos em uma coleção.
 ## <a name="return-value"></a>Valor retornado  
  Retorna um **longo** valor.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Use o **contagem** propriedade para determinar quantos objetos estão em uma determinada coleção.  
   
- Como a numeração de membros de uma coleção começa com zero, você sempre deve codificar loops iniciando com zero membro e terminando com o valor da **contagem** propriedade menos 1. Se você estiver usando o Microsoft Visual Basic e deseja executar um loop através dos membros de uma coleção sem verificar o **contagem** propriedade, use o **para cada um... Próxima** comando.  
+ Como a numeração de membros de uma coleção começa com zero, você deve sempre codificar loops começando com o membro zero e terminando com o valor da **contagem** propriedade menos 1. Se você estiver usando o Microsoft Visual Basic e deseja executar um loop através dos membros de uma coleção sem verificar a **contagem** propriedade, use o **para cada um... Próxima** comando.  
   
- Se o **contagem** é zero, não existem objetos na coleção.  
+ Se o **contagem** for zero, não existem objetos na coleção.  
   
 ## <a name="applies-to"></a>Aplica-se a  
   
@@ -52,6 +49,6 @@ Indica o número de objetos em uma coleção.
 |[Coleção Views (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)|||  
   
 ## <a name="see-also"></a>Consulte também  
- [Exemplo de propriedade Count (VB)](../../../ado/reference/ado-api/count-property-example-vb.md)   
- [Exemplo de propriedade Count (VC + +)](../../../ado/reference/ado-api/count-property-example-vc.md)   
+ [Exemplo da propriedade Count (VB)](../../../ado/reference/ado-api/count-property-example-vb.md)   
+ [Exemplo da propriedade Count (VC + +)](../../../ado/reference/ado-api/count-property-example-vc.md)   
  [Método Refresh (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)

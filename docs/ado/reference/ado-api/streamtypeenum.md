@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,27 +13,26 @@ f1_keywords:
 helpviewer_keywords:
 - StreamTypeEnum enumeration [ADO]
 ms.assetid: 220fe51d-4889-4020-a099-2ec9c7485503
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 652dde464014a758041cfb6dba56c68e41714713
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 8337e439f1187857636396f8d07613cca157e846
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282555"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47772884"
 ---
 # <a name="streamtypeenum"></a>StreamTypeEnum
-Especifica o tipo de dados armazenados em um [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) objeto.  
+Especifica o tipo de dados armazenados em um [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objeto.  
   
 |Constante|Valor|Description|  
 |--------------|-----------|-----------------|  
-|**adTypeBinary**|1|Indica os dados binários.|  
+|**adTypeBinary**|1|Indica dados binários.|  
 |**adTypeText**|2|Padrão. Indica os dados de texto, que está no conjunto de caracteres especificado por [Charset](../../../ado/reference/ado-api/charset-property-ado.md).|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC equivalente  
- Constantes não têm equivalentes do ADO/WFC.  
+## <a name="adowfc-equivalent"></a>Equivalente do ADO/WFC  
+ Essas constantes não têm equivalentes do ADO/WFC.  
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Propriedade Type (Fluxo ADO)](../../../ado/reference/ado-api/type-property-ado-stream.md)

@@ -6,27 +6,24 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Status property [ADO Field], Visual Basic example
 ms.assetid: fdd09b60-39c7-44be-8008-e891a031f80e
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 58c71c4f69cdd25de960eacba7370aa64b67bfb7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f6554e76488cd83452c0ab1617c9bd65e9196c11
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282035"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47816364"
 ---
-# <a name="status-property-example-field-vb"></a>Exemplo da propriedade status (campo) (VB)
-O exemplo a seguir abre um documento de uma pasta de leitura/gravação usando o [Internet Publishing Provider](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). O [Status](../../../ado/reference/ado-api/status-property-ado-field.md) propriedade de um [campo](../../../ado/reference/ado-api/field-object.md) objeto do [registro](../../../ado/reference/ado-api/record-object-ado.md) primeiro ser definida como **adFieldPendingInsert**, e ser atualizado para **adFieldOk**.  
+# <a name="status-property-example-field-vb"></a>Exemplo da propriedade Status (Campo) (VB)
+O exemplo a seguir abre um documento de uma pasta de leitura/gravação usando o [Internet Publishing Provider](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). O [Status](../../../ado/reference/ado-api/status-property-ado-field.md) propriedade de uma [campo](../../../ado/reference/ado-api/field-object.md) objeto do [registro](../../../ado/reference/ado-api/record-object-ado.md) primeiro será definido como **adFieldPendingInsert**, e em seguida, ser atualizado para **adFieldOk**.  
   
 ```  
 'BeginStatusFieldVB  
@@ -83,13 +80,13 @@ End Sub
 'EndStatusFieldVB  
 ```  
   
- O exemplo a seguir exclui um conhecido **campo** de um **registro** aberto a partir de um documento. O **Status** propriedade ser definida primeiro como **adFieldOK**, em seguida, **adFieldPendingUnknown**.  
+ O exemplo a seguir exclui um conhecido **campo** de uma **registro** aberto a partir de um documento. O **Status** propriedade ser definida primeiro como **adFieldOK**, em seguida, **adFieldPendingUnknown**.  
   
 ```  
 Attribute VB_Name = "StatusField"  
 ```  
   
- O código a seguir exclui um **campo** de um **registro** aberto em um documento somente leitura. **Status** será definida como **adFieldPendingDelete**. Em [atualização](../../../ado/reference/ado-api/update-method.md), a exclusão falhará e **Status** será **adFieldPendingDelete** mais **adFieldPermissionDenied**. [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) limpa o pendente **Status** configuração.  
+ O código a seguir exclui um **campo** de uma **registro** aberto em um documento somente leitura. **Status** será definido como **adFieldPendingDelete**. No [atualização](../../../ado/reference/ado-api/update-method.md), a exclusão falhará e **Status** estará **adFieldPendingDelete** plus **adFieldPermissionDenied**. [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) limpa o pendente **Status** configuração.  
   
 ```  
 Attribute VB_Name = "StatusField"  
@@ -97,5 +94,5 @@ Attribute VB_Name = "StatusField"
   
 ## <a name="see-also"></a>Consulte também  
  [Objeto Field](../../../ado/reference/ado-api/field-object.md)   
- [Objeto de registro (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
+ [Objeto Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Propriedade Status (campo ADO)](../../../ado/reference/ado-api/status-property-ado-field.md)

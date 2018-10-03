@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,19 +15,18 @@ f1_keywords:
 helpviewer_keywords:
 - ParentRow property [ADO]
 ms.assetid: 5ea8029b-eda4-490b-ae84-2ad036fb582f
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 86122a7cb075816809dd8868c1db94adf1b81612
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 9ea31baf4b215a6a516c13b438b526b8e9d8b612
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280555"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47606574"
 ---
 # <a name="parentrow-property-ado"></a>Propriedade ParentRow (ADO)
-Define o contêiner do OLE DB **linha** do objeto em um **ADORecordConstruction** do objeto, para que o pai da linha é transformado em ADO **registro** objeto.  
+Define o contêiner de um banco de dados OLE **linha** do objeto em um **ADORecordConstruction** objeto, de modo que o pai da linha é transformado em ADO **registro** objeto.  
   
  Somente gravação.  
   

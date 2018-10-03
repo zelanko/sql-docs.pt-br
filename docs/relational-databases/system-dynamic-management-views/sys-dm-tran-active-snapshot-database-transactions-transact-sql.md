@@ -5,9 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_tran_active_snapshot_database_transactions_TSQL
@@ -19,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_tran_active_snapshot_database_transactions dynamic management view
 ms.assetid: 55b83f9c-da10-4e65-9846-f4ef3c0c0f36
-caps.latest.revision: 55
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7ef3ff9a4507474543a3d2049a56f7ce91f1eec2
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 4a020dc8b695bbebaef4bc5cc60c956b5a9e4e05
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43068468"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47825154"
 ---
 # <a name="sysdmtranactivesnapshotdatabasetransactions-transact-sql"></a>sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -80,7 +77,7 @@ sys.dm_tran_active_snapshot_database_transactions
 Na [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
 Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` permissão no banco de dados.   
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  **DM tran_active_snapshot_database_transactions** relata as transações que são atribuídas a um número de sequência da transação (XSN). O XSN é atribuído quando a transação acessa o armazenamento de versões pela primeira vez. Em um banco de dados habilitado para isolamento de instantâneo ou isolamento confirmado por leitura utilizando controle de versão de linhas, os exemplos mostram quando um XSN é atribuído a uma transação:  
   
 -   Se uma transação estiver executando em nível de isolamento de serializável, um XSN será atribuído quando a transação executar, pela primeira vez, uma instrução, como uma operação UPDATE, que cause a criação de uma versão de linha.  
