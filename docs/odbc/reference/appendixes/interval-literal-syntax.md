@@ -1,38 +1,35 @@
 ---
-title: Sintaxe de literais de intervalo | Microsoft Docs
+title: Sintaxe Literal de intervalo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - literals [ODBC], interval
 - interval literals [ODBC]
 - ODBC literals [ODBC], interval
 ms.assetid: 2f2d22c1-51d6-4055-9f5a-53bc31e9fea0
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 016a4fa307e9bda697dde5eec81ce606ad07a19b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d477dbc6b54d7ebd82b7e2ef8611f5f6dd807e83
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32907341"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47694041"
 ---
-# <a name="interval-literal-syntax"></a>Sintaxe de literais de intervalo
-A sintaxe a seguir é usada para literais de intervalo no ODBC.  
+# <a name="interval-literal-syntax"></a>Sintaxe literal de intervalo
+A sintaxe a seguir é usada para literais de intervalo em ODBC.  
   
- *literal de intervalo:: = intervalo* [+*&#124;*-] *qualificador de intervalo de cadeia de caracteres de intervalo*  
+ *literal de intervalo:: = intervalo* [+*&#124;*-] *qualificador de intervalo de cadeia de caracteres do intervalo*  
   
- *intervalo de cadeia de caracteres* :: = *aspas* { *ano-mês-literal* &#124; *literal de hora do dia* } *aspas*  
+ *intervalo de cadeia de caracteres* :: = *cotação* { *ano-mês-literal* &#124; *literal de hora do dia* } *aspas*  
   
- *ano-mês-literal* :: = *anos valor* &#124; [*anos valor* -] *valor de meses*  
+ *ano-mês-literal* :: = *valor de ano* &#124; [*valor de ano* -] *valor de meses*  
   
  *literal de hora do dia* :: = *intervalo de tempo do dia* &#124; *intervalo de tempo*  
   
@@ -60,24 +57,24 @@ A sintaxe a seguir é usada para literais de intervalo no ODBC.
   
  *fração de segundos* :: = *inteiro não assinado*  
   
- *valor de DateTime* :: = *inteiro não assinado*  
+ *valor de data e hora* :: = *inteiro não assinado*  
   
- *qualificador de intervalo* :: = *campo Início* para *campo final* &#124; *único campo de data e hora*  
+ *intervalo-qualifier* :: = *campo inicial* TO *campo final* &#124; *único campo de data e hora*  
   
- *campo de início* :: = *campo Data e hora que não é segundo* [(*intervalo à esquerda-campo precisão* )]  
+ *campo de início* :: = *campo Data e hora que não é segundo* [(*intervalo líderes-campo precisão* )]  
   
- *campo final* :: = *campo Data e hora que não é segundo* &#124; segundo [(*intervalo--segundos-precisão fracionária*)]  
+ *campo final* :: = *campo Data e hora que não é segundo* &#124; segundo [(*intervalo de--segundos-precisão fracionária*)]  
   
- *campo datetime único* :: = *campo Data e hora que não é segundo* [(*intervalo à esquerda-campo precisão*)] &#124; segundo [(*intervalo à esquerda-campo precisão*  [, (*intervalo--segundos-precisão fracionária*)]  
+ *único campo de data e hora* :: = *campo Data e hora que não é segundo* [(*intervalo líderes-campo precisão*)] &#124; segundo [(*intervalo-líderes de campo de precisão*  [, (*intervalo de--segundos-precisão fracionária*)]  
   
- *campo de data/hora* :: = *campo Data e hora que não é segundo* &#124; segundo  
+ *campo de data e hora* :: = *campo Data e hora que não é segundo* &#124; segundo  
   
  *campo Data e hora que não é segundo* :: = ano &#124; mês &#124; dia &#124; hora &#124; minuto  
   
  *intervalo de--segundos-precisão fracionária* :: = *inteiro não assinado*  
   
- *intervalo à esquerda-campo precisão* :: = *inteiro não assinado*  
+ *intervalo-líderes de campo de precisão* :: = *inteiro não assinado*  
   
- *aspas* :: = '  
+ *cotação* :: = '  
   
- *inteiro não assinado* :: = *dígitos...*
+ *inteiro sem sinal* :: = *dígito...*

@@ -5,29 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - arrays of parameter values [ODBC]
 - parameter arrays [ODBC]
 ms.assetid: 9b572c5b-1dfe-40af-bebd-051548ab6d90
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 350e6221601899dcc119f875c22b341203c17c60
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 03479a0187c7720a595b550290a8f5ac8197fa9c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909331"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47686324"
 ---
-# <a name="arrays-of-parameter-values"></a>Matrizes de valores de parâmetro
-Geralmente é útil para aplicativos transmitir matrizes de parâmetros. Por exemplo, usando matrizes de parâmetros e um com parâmetros **inserir** instrução, um aplicativo pode inserir um número de linhas de uma vez. Há várias vantagens de usar matrizes. Primeiro, o tráfego de rede é reduzido porque os dados para muitas instruções são enviados em um único pacote (se a fonte de dados oferece suporte a matrizes de parâmetro modo nativo). Segundo, algumas fontes de dados podem executar instruções SQL usando matrizes mais rápido do que executar o mesmo número de instruções SQL separadas. Finalmente, quando os dados são armazenados em uma matriz, como é geralmente o caso para dados da tela, o aplicativo pode associar todas as linhas em uma determinada coluna com uma única chamada para **SQLBindParameter** e atualizá-los por uma única instrução em execução.  
+# <a name="arrays-of-parameter-values"></a>Matriz de valores de parâmetros
+Muitas vezes é útil para aplicativos para passar matrizes de parâmetros. Por exemplo, usando matrizes de parâmetros e um parametrizada **inserir** instrução, um aplicativo pode inserir um número de linhas ao mesmo tempo. Há diversas vantagens em usar matrizes. Primeiro, o tráfego de rede é reduzido porque os dados para muitas instruções são enviados em um único pacote (se a fonte de dados dá suporte a matrizes de parâmetro nativamente). Em segundo lugar, algumas fontes de dados podem executar instruções SQL usando matrizes mais rápido do que executar o mesmo número de instruções de SQL separadas. Por fim, quando os dados são armazenados em uma matriz, como é geralmente o caso para dados da tela, o aplicativo pode associar todas as linhas em uma determinada coluna com uma única chamada para **SQLBindParameter** e atualizá-los executando uma única instrução.  
   
- Infelizmente, não várias fontes de dados dá suporte a matrizes de parâmetros. No entanto, um driver pode emular matrizes de parâmetros, executar uma instrução SQL, uma vez para cada conjunto de valores de parâmetro. Isso pode levar a aumentos na velocidade porque o driver, em seguida, pode preparar a instrução que seu plano é executado uma vez para cada conjunto de parâmetros. Ele também pode resultar em código de aplicativo mais simples.  
+ Infelizmente, não de várias fontes de dados dá suporte a matrizes de parâmetros. No entanto, um driver pode emular a matrizes de parâmetros, executando uma instrução SQL, uma vez para cada conjunto de valores de parâmetro. Isso pode levar a aumentos de velocidade, porque o driver, em seguida, pode preparar a instrução que seu plano é executado uma vez para cada conjunto de parâmetros. Ele também pode levar mais simples do código do aplicativo.  
   
  Esta seção contém os tópicos a seguir.  
   

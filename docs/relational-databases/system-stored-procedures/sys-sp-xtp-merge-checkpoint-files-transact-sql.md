@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 11/28/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sp_xtp_merge_checkpoint_files_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_xtp_merge_checkpoint_files
 ms.assetid: da04df2a-f7a1-41e7-a1ef-2d5d68919892
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1bc2c91d93ad24147fa288ffb8164823f4f8a84c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 9121485ddbe3f4fd72bf40b4518a7af8b196fa23
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37979418"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47725404"
 ---
 # <a name="sysspxtpmergecheckpointfiles-transact-sql"></a>sys.sp_xtp_merge_checkpoint_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -61,15 +57,15 @@ sys.sp_xtp_merge_checkpoint_files database_name, @transaction_lower_bound, @tran
  O limite de superior (bigint) de transações para um arquivo de dados, conforme mostrado na [DM db_xtp_checkpoint_files &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md). Um erro é gerado para o valor inválido de transactonId.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- Nenhum  
+ None  
   
 ## <a name="cursors-returned"></a>Cursores retornados  
- Nenhum  
+ None  
   
 ## <a name="permissions"></a>Permissões  
  Requer a função de servidor fixa sysadmin e a função de banco de dados fixa db_owner.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Mescla os dados e arquivos delta no intervalo válido para gerar um único arquivo de dados e delta. Esse procedimento não honra a política de mesclagem.  
   
 ## <a name="see-also"></a>Consulte também  

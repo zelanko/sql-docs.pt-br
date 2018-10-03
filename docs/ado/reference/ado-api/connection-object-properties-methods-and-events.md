@@ -6,26 +6,23 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Connection object [ADO], members
 ms.assetid: f571b74d-b796-4009-9c66-6a36ab995a2a
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a414ffc7fea1a269024a56dedd7221c2f5c5fda1
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6c94b6c03cebb720fae7a64fe8c06ccea96e710f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276945"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47744024"
 ---
 # <a name="connection-object-properties-methods-and-events"></a>Eventos, métodos e propriedades do objeto de Conexão
 ## <a name="propertiescollections"></a>Propriedades/coleções  
- [Propriedade de atributos](../../../ado/reference/ado-api/attributes-property-ado.md)  
+ [Propriedade Attributes](../../../ado/reference/ado-api/attributes-property-ado.md)  
   
  [Propriedade CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md)  
   
@@ -45,14 +42,14 @@ ms.locfileid: "35276945"
   
  [Coleção de propriedades](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
- [Propriedade do provedor](../../../ado/reference/ado-api/provider-property-ado.md)  
+ [Propriedade de provedor](../../../ado/reference/ado-api/provider-property-ado.md)  
   
  [Propriedade State](../../../ado/reference/ado-api/state-property-ado.md)  
   
  [Propriedade Version](../../../ado/reference/ado-api/version-property-ado.md)  
   
 ## <a name="methods"></a>Métodos  
- [BeginTrans, CommitTrans e métodos RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)  
+ [BeginTrans, CommitTrans e RollbackTrans métodos](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)  
   
  [Método Cancel](../../../ado/reference/ado-api/cancel-method-ado.md)  
   
@@ -67,11 +64,11 @@ ms.locfileid: "35276945"
 ## <a name="events"></a>Eventos  
  [BeginTransComplete, CommitTransComplete e RollbackTransComplete eventos](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)  
   
- [ConnectComplete e eventos de desconexão](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)  
+ [Eventos ConnectComplete e Disconnect](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)  
   
  [Evento ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)  
   
- [Evento do InfoMessage](../../../ado/reference/ado-api/infomessage-event-ado.md)  
+ [Evento InfoMessage](../../../ado/reference/ado-api/infomessage-event-ado.md)  
   
  [Evento WillConnect](../../../ado/reference/ado-api/willconnect-event-ado.md)  
   

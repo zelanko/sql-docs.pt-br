@@ -1,14 +1,11 @@
 ---
-title: fn_my_permissions (Transact-SQL) | Microsoft Docs
+title: sys. fn_my_permissions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.fn_my_permissions_TSQL
@@ -21,21 +18,20 @@ helpviewer_keywords:
 - fn_my_permissions function
 - sys.fn_my_permissions function
 ms.assetid: 30f97f00-03d8-443a-9de9-9ec420b7699b
-caps.latest.revision: 21
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b837943f16a7c8882b4e35aef3f769a3d731cd38
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 244e8935a580a8febc483673d6d747b6cc4b7b1c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239806"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47659244"
 ---
 # <a name="sysfnmypermissions-transact-sql"></a>sys.fn_my_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Retorna uma lista das permissões efetivamente concedidas à entidade em um protegível. Uma função relacionada é [HAS_PERMS_BY_NAME](../../t-sql/functions/has-perms-by-name-transact-sql.md).  
+  Retorna uma lista das permissões efetivamente concedidas à entidade em um protegível. É uma função relacionada [HAS_PERMS_BY_NAME](../../t-sql/functions/has-perms-by-name-transact-sql.md).  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,7 +47,7 @@ fn_my_permissions ( securable , 'securable_class' )
  É o nome do protegível. Se o protegível for o servidor ou um banco de dados, esse valor deverá ser definido como NULL. *securable* é uma expressão escalar do tipo **sysname**. *protegível* pode ser um nome com diversas partes.  
   
  '*securable_class*'  
- É o nome da classe de protegível para a qual são listadas as permissões. *securable_class* é um **sysname**. *securable_class* deve ser um dos seguintes: função de aplicativo, ASSEMBLY, chave ASSIMÉTRICA, certificado, contrato, banco de dados, ponto de EXTREMIDADE, FULLTEXT CATALOG, LOGIN, tipo de mensagem, objeto, REMOTE SERVICE BINDING, função, ROTA, esquema, servidor, serviço , CHAVE SIMÉTRICA, TIPO, USUÁRIO, COLEÇÃO DE ESQUEMAS XML.  
+ É o nome da classe de protegível para a qual são listadas as permissões. *securable_class* é um **sysname**. *securable_class* deve ser um dos seguintes: função de aplicativo, ASSEMBLY, chave ASSIMÉTRICA, certificado, contrato, banco de dados, ponto de EXTREMIDADE, FULLTEXT CATALOG, LOGIN, MESSAGE TYPE, objeto, REMOTE SERVICE BINDING, função, ROTA, esquema, servidor, serviço , CHAVE SIMÉTRICA, TIPO, USUÁRIO, COLEÇÃO DE ESQUEMAS XML.  
   
 ## <a name="columns-returned"></a>Colunas retornadas  
  A tabela a seguir lista as colunas que **fn_my_permissions** retorna. Cada linha retornada descreve uma permissão mantida pelo contexto de segurança atual no protegível. Retorna NULL se a consulta falhar.  
@@ -62,7 +58,7 @@ fn_my_permissions ( securable , 'securable_class' )
 |subentity_name|**sysname**|Nome da coluna se o protegível tiver colunas; caso contrário, será NULL.|  
 |permission_name|**nvarchar**|Nome da permissão.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esta função com valor de tabela retorna uma lista das permissões efetivas mantidas pela entidade de chamada em um protegível especificado. Uma permissão efetiva é qualquer uma das seguintes:  
   
 -   Uma permissão concedida diretamente à entidade de segurança, e não negada.  
@@ -75,7 +71,7 @@ fn_my_permissions ( securable , 'securable_class' )
   
  A avaliação da permissão é sempre executada no contexto de segurança do chamador. Para determinar se alguma outra entidade tem uma permissão efetiva, o chamador deve ter a permissão IMPERSONATE nessa entidade.  
   
- Para entidades em nível de esquema, nomes não nulos de uma, duas ou três partes são aceitos. Para entidades de nível de banco de dados, um nome de uma parte é aceito, com uma valor nulo que significa "*banco de dados atual*". Para o servidor propriamente dito, um valor nulo (que significa “servidor atual”) é obrigatório. **fn_my_permissions** não é possível verificar as permissões em um servidor vinculado.  
+ Para entidades em nível de esquema, nomes não nulos de uma, duas ou três partes são aceitos. Para entidades de nível de banco de dados, um nome de uma parte é aceito, com uma valor nulo que significa "*banco de dados atual*". Para o servidor propriamente dito, um valor nulo (que significa “servidor atual”) é obrigatório. **fn_my_permissions** não pode verificar permissões em um servidor vinculado.  
   
  A consulta a seguir retornará uma lista de classes protegíveis internas:  
   
@@ -85,7 +81,7 @@ SELECT DISTINCT class_desc FROM fn_builtin_permissions(default)
 GO  
 ```  
   
- Se o padrão é fornecido como o valor de *protegível* ou *securable_class*, o valor será interpretado como NULL.  
+ Se DEFAULT for fornecido como o valor de *protegível* ou *securable_class*, o valor será interpretado como NULL.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -136,7 +132,7 @@ GO
 ```  
   
 ### <a name="f-listing-effective-permissions-on-an-xml-schema-collection"></a>F. Listando permissões efetivas em uma coleção de esquemas XML  
- O exemplo a seguir retorna uma lista das permissões efetivas do chamador em uma coleção de esquema XML chamado `ProductDescriptionSchemaCollection` no [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] banco de dados.  
+ O exemplo a seguir retorna uma lista das permissões efetivas do chamador em uma coleção de esquema XML denominado `ProductDescriptionSchemaCollection` no [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] banco de dados.  
   
 ```  
 USE AdventureWorks2012;  
@@ -168,7 +164,7 @@ GO
  [Funções de segurança &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)   
  [Permissões &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Securables](../../relational-databases/security/securables.md)   
- [Hierarquia de permissões &#40;Mecanismo de Banco de Dados&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
+ [Hierarquia de permissões &#40;Mecanismo de banco de dados&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
  [Exibições de catálogo de segurança &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)  

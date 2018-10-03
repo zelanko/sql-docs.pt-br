@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC function call reserved words [ODBC]
 - reserved keywords [ODBC]
 ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2b791ea7d4430e4f594079231926c41e02de1ed4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1d77d6632d689a1f169c61cb636e3bc89a900419
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32912813"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47626334"
 ---
 # <a name="reserved-keywords"></a>Palavras-chave reservadas
-As palavras seguintes são reservadas para uso em chamadas de função ODBC. Essas palavras não restringem a gramática SQL mínima; No entanto, para garantir a compatibilidade com drivers que oferecem suporte à gramática SQL principal, aplicativos devem evitar usar qualquer uma dessas palavras-chave. O #**definir** valor SQL_ODBC_KEYWORDS contém uma lista separada por vírgulas destas palavras-chave.  
+As palavras seguintes são reservadas para uso em chamadas de função ODBC. Essas palavras não restringem a gramática SQL mínima; No entanto, para garantir a compatibilidade com drivers que dão suporte à gramática principal do SQL, aplicativos devem evitar usar qualquer uma dessas palavras-chave. O #**definir** valor SQL_ODBC_KEYWORDS contém uma lista separada por vírgulas dessas palavras-chave.  
   
 |||  
 |-|-|  
@@ -58,7 +55,7 @@ As palavras seguintes são reservadas para uso em chamadas de função ODBC. Ess
 |CATALOG|NULL|  
 |CHAR|NULLIF|  
 |CHAR_LENGTH|NUMERIC|  
-|CHARACTER|OCTET_LENGTH|  
+|CHARACTER|FUNÇÃO OCTET_LENGTH|  
 |CHARACTER_LENGTH|OF|  
 |CHECK|ON|  
 |CLOSE|ONLY|  
@@ -82,7 +79,7 @@ As palavras seguintes são reservadas para uso em chamadas de função ODBC. Ess
 |CURRENT_TIME|PROCEDURE|  
 |CURRENT_TIMESTAMP|PUBLIC|  
 |CURRENT_USER|READ|  
-|CURSOR|REAL|  
+|CURSOR|real|  
 |DATE|REFERENCES|  
 |DAY|RELATIVE|  
 |DEALLOCATE|RESTRICT|  
@@ -92,7 +89,7 @@ As palavras seguintes são reservadas para uso em chamadas de função ODBC. Ess
 |DEFAULT|ROWS|  
 |DEFERRABLE|SCHEMA|  
 |DEFERRED|SCROLL|  
-|DELETE|SECOND|  
+|Delete (excluir)|SECOND|  
 |DESC|SECTION|  
 |DESCRIBE|SELECT|  
 |DESCRIPTOR|SESSION|  
@@ -115,13 +112,13 @@ As palavras seguintes são reservadas para uso em chamadas de função ODBC. Ess
 |EXTRACT|TEMPORARY|  
 |FALSE|THEN|  
 |FETCH|TIME|  
-|FIRST|TIMESTAMP|  
+|FIRST|timestamp|  
 |FLOAT|TIMEZONE_HOUR|  
 |FOR|TIMEZONE_MINUTE|  
 |FOREIGN|TO|  
 |FORTRAN|TRAILING|  
 |FOUND|TRANSACTION|  
-|FROM|TRADUZIR|  
+|FROM|TRANSLATE|  
 |FULL|TRANSLATION|  
 |GET|TRIM|  
 |GLOBAL|TRUE|  
@@ -133,7 +130,7 @@ As palavras seguintes são reservadas para uso em chamadas de função ODBC. Ess
 |HOUR|USAGE|  
 |IDENTITY|Usuário|  
 |IMMEDIATE|USING|  
-|IN|VALUE|  
+|IN|Value|  
 |INCLUDE|VALUES|  
 |INDEX|VARCHAR|  
 |INDICATOR|VARYING|  

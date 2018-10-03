@@ -4,33 +4,27 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
 - substring function [XQuery]
 - fn:substring function
 ms.assetid: 2b3b8651-de51-46dc-af82-c86c45eac871
-caps.latest.revision: 42
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4bf01599d3144ca6eb3ebbfa74435ab16b25176a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e31fb80768b6d8b025589d97ffbb635c36aa5556
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37995068"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47628684"
 ---
-# <a name="functions-on-string-values---substring"></a>Funções em valores de cadeia de caracteres – substring
+# <a name="functions-on-string-values---substring"></a>Funções em Valores da Cadeia de Caracteres – substring
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Retorna a parte do valor de *$sourceString*, começando na posição indicada pelo valor da *$startingLoc,* e continua para o número de caracteres indicado pelo valor de *$ comprimento*.  
@@ -57,7 +51,7 @@ fn:substring($sourceString as xs:string?,
  *$length*  
  [opcional] Número de caracteres a recuperar. Se não for especificado, ele retorna todos os caracteres do local especificado na *$startingLoc* até o fim da cadeia de caracteres.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A versão de três argumentos da função retorna os caracteres em `$sourceString` cuja posição `$p` obedece:  
   
  `fn:round($startingLoc) <= $p < fn:round($startingLoc) + fn:round($length)`  

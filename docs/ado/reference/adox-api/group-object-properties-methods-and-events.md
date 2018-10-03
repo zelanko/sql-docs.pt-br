@@ -1,29 +1,26 @@
 ---
-title: Agrupar eventos, métodos e propriedades do objeto | Microsoft Docs
+title: As propriedades do objeto, métodos e eventos de grupo | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - group object [ADOX], members
 ms.assetid: ba9642d0-9025-4eff-8885-e6e7f8154c73
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 84b22d2081e64dfd90c5aa0604d3b6b9b678b4db
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 447ee9d65c4ce50daacfbf2f81d1822a41629ebb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285900"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47741454"
 ---
-# <a name="group-object-properties-methods-and-events"></a>Propriedades do objeto de grupo, métodos e eventos
+# <a name="group-object-properties-methods-and-events"></a>Propriedades, Métodos e Eventos do objeto Group
 ## <a name="propertiescollections"></a>Propriedades/coleções  
  [Propriedade Name](../../../ado/reference/adox-api/name-property-adox.md)  
   

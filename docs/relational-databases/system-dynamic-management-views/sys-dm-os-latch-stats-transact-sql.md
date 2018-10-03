@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_os_latch_stats_TSQL
@@ -18,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_latch_stats dynamic management view
 ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
-caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 03e3a5a0497a1d2da15124287d557f6e27bc3e7e
-ms.sourcegitcommit: df3923e007527ce79e2d05821b62d77ee06fd655
+ms.openlocfilehash: 1fe8a78047be763aecb898a48a882b8f08d3bfb6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44375679"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47734025"
 ---
 # <a name="sysdmoslatchstats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +47,7 @@ ms.locfileid: "44375679"
 Na [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
 Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` permissão no banco de dados.   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  sys.dm_os_latch_stats pode ser usado para identificar a origem de uma contenção de travamento, examinando os números e os tempos de espera relativos para as diferentes classes de trava. Em algumas situações, talvez seja possível resolver ou reduzir contenção de trava. Entretanto, pode haver situações em que seja necessário contatar o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Serviço de Atendimento ao Cliente.  
   
  É possível redefinir o conteúdo de sys.dm_os_latch_stats usando `DBCC SQLPERF` da seguinte maneira:  

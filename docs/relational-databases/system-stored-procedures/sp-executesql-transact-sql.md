@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_executesql
@@ -19,17 +16,16 @@ helpviewer_keywords:
 - sp_executesql
 - dynamic SQL
 ms.assetid: a8d68d72-0f4d-4ecb-ae86-1235b962f646
-caps.latest.revision: 64
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 812e8f4a99aa16a6251fe20b0cfea436e793bb55
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 20ddff9570c3d7bd092b9dbd757fb0541234b4af
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43059217"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47647054"
 ---
 # <a name="spexecutesql-transact-sql"></a>sp_executesql (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -80,7 +76,7 @@ sp_executesql [ @stmt = ] statement
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Retorna os conjuntos de resultados de todas as instruções SQL construídas na cadeia de caracteres SQL.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  parâmetros de sp_executesql devem ser inseridos na ordem específica, conforme descrito na seção "Sintaxe" neste tópico. Se os parâmetros forem inseridos na ordem incorreta, uma mensagem de erro será exibida.  
   
  sp_executesql tem o mesmo comportamento que EXECUTE em relação a lotes, ao escopo de nomes e ao contexto de banco de dados. O [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução ou lote em sp_executesql \@stmt parâmetro não é compilado até que a instrução sp_executesql seja executada. O conteúdo de \@stmt são então compilados e executados como um plano de execução separado do plano de execução de lote que chamou sp_executesql. O lote sp_executesql não pode referenciar variáveis declaradas no lote que chama sp_executesql. Cursores locais ou variáveis no lote de sp_executesql não são visíveis para o lote que chama sp_executesql. As alterações no contexto de banco de dados duram apenas até o fim da instrução sp_executesql.  

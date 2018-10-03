@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_who_TSQL
@@ -21,12 +18,12 @@ ms.assetid: 132dfb08-fa79-422e-97d4-b2c4579c6ac5
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 17d178f1fdf5784ca1e9d9f7dc9042a70611137c
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: d748f06a592283c49d85624c97f4db7afdc188e3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43036936"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47628954"
 ---
 # <a name="spwho-transact-sql"></a>sp_who (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +71,7 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
   
  No caso de processamento paralelo, são criados subthreads para a ID de sessão específica. O thread principal é indicado como `spid = <xxx>` e `ecid =0`. Os outros subthreads têm o mesmo `spid = <xxx>`, mas com **ecid** > 0.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Um processo de bloqueio, que pode ter um bloqueio exclusivo, é um que está retendo recursos que outro processo precisa.  
   
  Todas as transações distribuídas órfãs recebem o valor de ID da sessão de '-2'. As transações distribuídas órfãs são transações distribuídas que não estão associadas a qualquer ID de sessão. Para obter mais informações, veja [Usar transações marcadas para recuperar bancos de dados relacionados de forma consistente &#40;Modelo de recuperação completa&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md).  

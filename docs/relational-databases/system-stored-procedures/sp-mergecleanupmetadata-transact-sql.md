@@ -4,31 +4,25 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - sp_mergecleanupmetadata_TSQL
 - sp_mergecleanupmetadata
 helpviewer_keywords:
 - sp_mergecleanupmetadata
 ms.assetid: 892f8628-4cbe-4cc3-b959-ed45ffc24064
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d25c9f1b1c2869ccce2e396eafc491fb0ffc153c
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 994f24e0b19dac70e6987a0c23d45d5446548689
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43029351"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47670578"
 ---
 # <a name="spmergecleanupmetadata-transact-sql"></a>sp_mergecleanupmetadata (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +49,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  **sp_mergecleanupmetadata** deve ser usado somente em topologias de replicação que incluem servidores que executam versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anteriores ao [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 1. Topologias que só incluem o [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 1 ou versão posterior deveriam usar limpeza automática de metadados com base em retenção. Ao executar esse procedimento armazenado, tenha cuidado com o crescimento potencialmente grande e necessário do arquivo de log no computador em que o procedimento armazenado está sendo executado.  
   
 > [!CAUTION]  

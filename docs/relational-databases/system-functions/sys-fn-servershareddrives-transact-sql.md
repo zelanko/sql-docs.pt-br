@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_servershareddrives
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - names [SQL Server], shared drives
 - sys.fn_serversharedrives function
 ms.assetid: ff01eff7-8cb6-460c-ba7a-6a52bda6d471
-caps.latest.revision: 39
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 72c5f0af9d3e32b76b3ea3bbad91fc680528a469
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: a9fe23ad67b8a8cc4e687badf8ef6f75d9363e3e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33234558"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47702314"
 ---
 # <a name="sysfnservershareddrives-transact-sql"></a>sys.fn_servershareddrives (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +34,7 @@ ms.locfileid: "33234558"
   Retorna os nomes das unidades compartilhadas usadas pelo servidor clusterizado.  
   
 > [!IMPORTANT]  
->  Essa função de sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é incluída para fins de compatibilidade com versões anteriores. Recomendamos que você use [sys.DM io_cluster_valid_path_names &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql.md) em vez disso.  
+>  Essa função de sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é incluída para fins de compatibilidade com versões anteriores. É recomendável que você use [DM io_cluster_valid_path_names &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql.md) em vez disso.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,11 +46,11 @@ fn_servershareddrives()
 ```  
   
 ## <a name="tables-returned"></a>Tabelas retornadas  
- Se o servidor atual é um servidor clusterizado, **fn_servershareddrives** retorna o nome de unidade das unidades compartilhadas.  
+ Se o servidor atual é um servidor clusterizado, **fn_servershareddrives** retorna o nome da unidade das unidades compartilhadas.  
   
- Se a instância de servidor atual não é um servidor clusterizado, **fn_servershareddrives** retorna um conjunto de linhas vazio.  
+ Se a instância do servidor atual não for um servidor clusterizado, **fn_servershareddrives** retorna um conjunto de linhas vazio.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  `fn_servershareddrives` retorna uma lista de unidades compartilhadas usada por esse servidor clusterizado. Essas unidades compartilhadas pertencem ao mesmo grupo de cluster como o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recursos. Além disso, o recurso do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] depende dessas unidades.  
   
  Esta função é útil para identificar as unidades disponíveis aos usuários.  

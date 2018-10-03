@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,16 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - CreateParameter method [RDS]
 ms.assetid: 9666fdcc-0544-4ed7-a97b-c415f2a56d7e
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 865b2b0b8009b03e33e24f72ab4f336910a17ace
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b150fe1c0c7260960140558eeff74b54c0798d80
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277245"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47631344"
 ---
 # <a name="createparameter-method-ado"></a>Método CreateParameter (ADO)
 Cria um novo [parâmetro](../../../ado/reference/ado-api/parameter-object.md) objeto com as propriedades especificadas.  
@@ -56,21 +53,21 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
  *Value*  
  Opcional. Um **Variant** que especifica o valor para o **parâmetro** objeto.  
   
-## <a name="remarks"></a>Remarks  
- Use o **CreateParameter** método para criar um novo **parâmetro** objeto com um nome especificado, o tipo, a direção, o tamanho e o valor. Quaisquer valores que você passa os argumentos são gravados para o correspondente **parâmetro** propriedades.  
+## <a name="remarks"></a>Comentários  
+ Use o **CreateParameter** método para criar uma nova **parâmetro** objeto com um nome especificado, o tipo, a direção, o tamanho e o valor. Quaisquer valores que você passe os argumentos são gravados para os respectivos **parâmetro** propriedades.  
   
- Esse método não anexa automaticamente o **parâmetro** o objeto para o **parâmetros** coleção de um [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto. Isso permite que você defina propriedades adicionais, cujo valores ADO será validado quando você acrescentar o **parâmetro** objeto à coleção.  
+ Esse método não anexa automaticamente os **parâmetro** do objeto para o **parâmetros** coleção de um [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto. Isso permite que você defina propriedades adicionais ADO cujos valores validará quando você acrescenta o **parâmetro** objeto à coleção.  
   
  Se você especificar um tipo de dados de comprimento variável no *tipo* argumento, você deve passar um *tamanho* argumento ou um conjunto de [tamanho](../../../ado/reference/ado-api/size-property-ado-parameter.md) propriedade do **parâmetro**  objeto antes de acrescentá-lo para o **parâmetros** coleção; caso contrário, ocorrerá um erro.  
   
- Se você especificar um tipo de dados numéricos (**adNumeric** ou **adDecimal**) no *tipo* argumento, em seguida, você também deve definir o [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) e [Precisão](../../../ado/reference/ado-api/precision-property-ado.md) propriedades.  
+ Se você especificar um tipo de dados numéricos (**adNumeric** ou **adDecimal**) na *tipo* argumento, em seguida, você também deve definir o [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) e [Precisão](../../../ado/reference/ado-api/precision-property-ado.md) propriedades.  
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Anexar e exemplo dos métodos CreateParameter (VB)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vb.md)   
- [Anexar e exemplo dos métodos CreateParameter (VC + +)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vc.md)   
- [(ADO) do método append](../../../ado/reference/ado-api/append-method-ado.md)   
+ [Acrescente e exemplo dos métodos CreateParameter (VB)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vb.md)   
+ [Append e CreateParameter métodos (VC + +)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vc.md)   
+ [Método append (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
  [Objeto de parâmetro](../../../ado/reference/ado-api/parameter-object.md)   
  [Coleção Parameters (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)

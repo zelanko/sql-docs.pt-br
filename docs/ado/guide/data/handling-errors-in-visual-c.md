@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,20 +13,19 @@ helpviewer_keywords:
 - errors [ADO], Visual C++
 - Visual C++ error handling [ADO]
 ms.assetid: b7576f07-020a-45f7-9e79-b5756f33f7ab
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 68ce5fb8cc94b130de5171a45b65743e86eec3da
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e33d28201e1a2e4f7df8ac330ac89b3f00194b14
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271685"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47630664"
 ---
-# <a name="handling-errors-in-visual-c"></a>Tratamento de erros no Visual C++
-Em COM, a maioria das operações retornam um código de retorno de HRESULT que indica se uma função foi concluída com êxito. A diretiva #import gera o código de wrapper em torno de cada propriedade ou método "bruto" e verifica o HRESULT retornado. Se o HRESULT indica falha, o código de wrapper gerará um erro de COM pela chamada _com_issue_errorex() com o código de retorno HRESULT como um argumento. Objetos de erro podem ser capturados em uma **de try-catch** bloco. (Para a mesma da eficiência, capturar uma referência a um objeto com_error).  
+# <a name="handling-errors-in-visual-c"></a>Tratamento de erro em Visual C++
+No COM, a maioria das operações retornam um código de retorno de HRESULT que indica se uma função foi concluída com êxito. A diretiva #import gera o código de wrapper em torno de cada propriedade ou método "bruto" e verifica o HRESULT retornado. Se o HRESULT indica falha, o código de wrapper gerará um erro de COM por chamada _com_issue_errorex() com o código de retorno de HRESULT como um argumento. Objetos de erro de COM podem ser capturados em uma **try-catch** bloco. (Para meu Deus da eficiência, capturar uma referência a um objeto com_error).  
   
- Lembre-se de que esses são erros de ADO: eles são provenientes de falha de operação do ADO. Erros retornados pelo provedor subjacente aparecem como **erro** objetos no **Conexão** do objeto **erros** coleção.  
+ Lembre-se de que esses são erros ADO: eles resultam de falha de operação do ADO. Erros retornados pelo provedor subjacente aparecem como **erro** objetos na **Conexão** do objeto **erros** coleção.  
   
- A diretiva #import só cria rotinas de tratamento de erros para os métodos e propriedades declaradas no arquivo. dll ADO. No entanto, você pode aproveitar o mesmo mecanismo de tratamento de erros, escrevendo sua própria verificação de erros de macro ou função embutida. Consulte o tópico de extensões do Visual C++® para obter exemplos.
+ A diretiva #import cria apenas as rotinas de tratamento de erros para métodos e propriedades declaradas no arquivo. dll ADO. No entanto, você pode aproveitar o mesmo mecanismo de tratamento de erros ao escrever sua própria verificação de erro macro ou uma função in-line. Consulte o tópico de extensões do Visual C++® para obter exemplos.

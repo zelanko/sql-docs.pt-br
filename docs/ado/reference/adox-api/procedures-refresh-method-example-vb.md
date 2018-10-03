@@ -6,27 +6,24 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Refresh method [ADOX], Visual Basic example
 ms.assetid: 499679bd-287b-487d-bdfb-3803abffec1c
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eb1e831fafeeadd47e87928fe7d829ea83d93e58
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6f46bc9aceeec0e03329572814653a94ea64aa50
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286775"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47632304"
 ---
-# <a name="procedures-refresh-method-example-vb"></a>Procedimentos de atualização de exemplo do método (VB)
-O código a seguir mostra como atualizar o [procedimentos](../../../ado/reference/adox-api/procedures-collection-adox.md) coleção de um [catálogo](../../../ado/reference/adox-api/catalog-object-adox.md). Isso é necessário antes de [procedimento](../../../ado/reference/adox-api/procedure-object-adox.md) de objetos a partir de **catálogo** pode ser acessado.  
+# <a name="procedures-refresh-method-example-vb"></a>Exemplo do método Refresh de procedimentos (VB)
+O código a seguir mostra como atualizar o [procedimentos](../../../ado/reference/adox-api/procedures-collection-adox.md) coleção de uma [catálogo](../../../ado/reference/adox-api/catalog-object-adox.md). Isso é necessário antes de [procedimento](../../../ado/reference/adox-api/procedure-object-adox.md) objetos das **catálogo** pode ser acessado.  
   
 ```  
 ' BeginProceduresRefreshVB  
@@ -59,6 +56,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Objeto de catálogo (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Coleção de procedimentos (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)   
+ [Objeto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Coleção Procedures (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)   
  [Método Refresh (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)

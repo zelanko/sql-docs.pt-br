@@ -6,28 +6,25 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - RDS configuration [ADO]
 ms.assetid: 5dd48483-858a-48c2-98ce-f2359abe1f59
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7275d87bc314223231392bd67f9752e29a4c41be
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 547588d79d52f81d6f12c8b733829f7e38a6da70
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273775"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47630674"
 ---
-# <a name="configuring-rds"></a>Configurando o RDS
+# <a name="configuring-rds"></a>Configurar o RDS
 > [!IMPORTANT]
->  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (veja o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Aplicativos que usam o RDS devem migrar para [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (consulte o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Devem ser migrados para aplicativos que usam o RDS [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Para implementar o RDS com eficiência, certifique-se de que você está familiarizado com as várias configurações disponíveis para você. Esta seção inclui informações importantes sobre segurança e a escalabilidade em sua implementação do RDS. Consulte os tópicos a seguir para obter informações sobre como configurar seus computadores para usar RDS.  
+ Para implementar o RDS com eficiência, certifique-se de que você estiver familiarizado com as várias configurações disponíveis para você. Esta seção inclui informações importantes sobre segurança e escalabilidade em sua implementação do RDS. Consulte os tópicos a seguir para obter informações sobre como configurar os computadores para usar o RDS.  
   
 -   [Concedendo privilégios de convidado para um computador do servidor Web](../../../ado/guide/remote-data-service/granting-guest-privileges-to-a-web-server-computer.md)  
   

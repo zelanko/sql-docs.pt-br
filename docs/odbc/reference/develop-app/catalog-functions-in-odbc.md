@@ -1,28 +1,25 @@
 ---
-title: Funções em ODBC de catálogo | Microsoft Docs
+title: Funções de catálogo em ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - catalog functions [ODBC], listed
 - functions [ODBC], catalog functions
 ms.assetid: 4f28f557-7eca-4905-aa6d-45a6cf501a66
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0bbff6af05123484c09cbd514f626b05d438d79e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 84c870d45cc487fc9ec5497e43b764bd4187d2f6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32912021"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47721244"
 ---
 # <a name="catalog-functions-in-odbc"></a>Funções de catálogo em ODBC
 ODBC contém as seguintes funções de catálogo:  
@@ -39,9 +36,9 @@ ODBC contém as seguintes funções de catálogo:
 |**SQLColumnPrivileges**|Retorna uma lista de privilégios associados a uma ou mais colunas em uma única tabela.|  
 |**SQLProcedures**|Retorna uma lista de procedimentos na fonte de dados.|  
 |**SQLProcedureColumns**|Retorna uma lista de parâmetros de entrada e saída, o valor de retorno e as colunas no conjunto de resultados de um único procedimento.|  
-|**SQLGetTypeInfo**|Retorna uma lista dos tipos de dados SQL suportado pela fonte de dados. Esses tipos de dados são geralmente usados em **CREATE TABLE** e **ALTER TABLE** instruções.|  
+|**SQLGetTypeInfo**|Retorna uma lista dos tipos de dados SQL com suporte pela fonte de dados. Esses tipos de dados são geralmente usados em **CREATE TABLE** e **ALTER TABLE** instruções.|  
   
- Porque **SQLTables**, **SQLColumns**, **SQLStatistics**, e **SQLSpecialColumns** em conformidade com a CLI do grupo aberto e **SQLGetTypeInfo** está em conformidade com ISO CLI 92, eles são implementados pela maioria dos drivers. As funções de catálogo restantes são em nível de conformidade do ODBC.  
+ Porque **SQLTables**, **SQLColumns**, **SQLStatistics**, e **SQLSpecialColumns** estão em conformidade com a CLI de grupo aberto e o **SQLGetTypeInfo** está de acordo com o ISO CLI 92, eles são implementados pela maioria dos drivers. As funções de catálogo restantes estão em nível de conformidade com ODBC.  
   
  Esta seção contém os tópicos a seguir.  
   

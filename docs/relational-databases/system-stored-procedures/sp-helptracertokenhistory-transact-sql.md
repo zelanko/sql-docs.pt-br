@@ -4,31 +4,25 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - sp_helptracertokenhistory_TSQL
 - sp_helptracertokenhistory
 helpviewer_keywords:
 - sp_helptracertokenhistory
 ms.assetid: 96910d1c-be76-43eb-9c93-4477e6761749
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: deeab8c5a6f7e7b8897c55a86ccf95f965645574
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 7c56ad691f960e083a4fa4f7c655808638215c46
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43026135"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47725124"
 ---
 # <a name="sphelptracertokenhistory-transact-sql"></a>sp_helptracertokenhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +70,7 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  **sp_helptracertokenhistory** é usado em replicação transacional.  
   
  Execute [sp_helptracertokens &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md) para obter uma lista de tokens de rastreamento para a publicação.  

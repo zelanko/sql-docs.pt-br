@@ -1,41 +1,38 @@
 ---
-title: Métodos ADOX | Microsoft Docs
+title: Métodos do ADOX | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - methods [ADOX]
 - ADOX, methods
 ms.assetid: 8de11ef7-034c-4613-91df-2244171f0b9a
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ced2fbeb94aacd1035b28b56a46b10535f17c192
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7df30f8e277985e16dc0066d80906a2a3694e310
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284795"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47631334"
 ---
-# <a name="adox-methods"></a>Métodos ADOX
+# <a name="adox-methods"></a>Métodos do ADOX
 |||  
 |-|-|  
-|[Acrescente (colunas)](../../../ado/reference/adox-api/append-method-adox-columns.md)|Adiciona um novo **coluna** o objeto para o **colunas** coleção.|  
-|[Acrescente (grupos)](../../../ado/reference/adox-api/append-method-adox-groups.md)|Adiciona um novo **grupo** o objeto para o **grupos** coleção.|  
-|[Acrescente (índices)](../../../ado/reference/adox-api/append-method-adox-indexes.md)|Adiciona um novo **índice** o objeto para o **índices** coleção.|  
-|[Acrescente (chaves)](../../../ado/reference/adox-api/append-method-adox-keys.md)|Adiciona um novo **chave** o objeto para o **chaves** coleção.|  
-|[Acrescente (procedimentos)](../../../ado/reference/adox-api/append-method-adox-procedures.md)|Adiciona um novo **procedimento** o objeto para o **procedimentos** coleção.|  
-|[Acrescente (tabelas)](../../../ado/reference/adox-api/append-method-adox-tables.md)|Adiciona um novo **tabela** o objeto para o **tabelas** coleção.|  
-|[Acrescente (usuários)](../../../ado/reference/adox-api/append-method-adox-users.md)|Adiciona um novo **usuário** o objeto para o **usuários** coleção.|  
-|[Acrescente (Views)](../../../ado/reference/adox-api/append-method-adox-views.md)|Adiciona um novo **exibição** o objeto para o **exibições** coleção.|  
-|[ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md)|Altera a senha de uma conta de usuário.|  
+|[Append (colunas)](../../../ado/reference/adox-api/append-method-adox-columns.md)|Adiciona um novo **coluna** do objeto para o **colunas** coleção.|  
+|[Acrescente (grupos)](../../../ado/reference/adox-api/append-method-adox-groups.md)|Adiciona um novo **grupo** do objeto para o **grupos** coleção.|  
+|[Append (índices)](../../../ado/reference/adox-api/append-method-adox-indexes.md)|Adiciona um novo **índice** do objeto para o **índices** coleção.|  
+|[Append (chaves)](../../../ado/reference/adox-api/append-method-adox-keys.md)|Adiciona um novo **chave** do objeto para o **chaves** coleção.|  
+|[Append (procedimentos)](../../../ado/reference/adox-api/append-method-adox-procedures.md)|Adiciona um novo **procedimento** do objeto para o **procedimentos** coleção.|  
+|[Anexar (tabelas)](../../../ado/reference/adox-api/append-method-adox-tables.md)|Adiciona um novo **tabela** do objeto para o **tabelas** coleção.|  
+|[Append (usuários)](../../../ado/reference/adox-api/append-method-adox-users.md)|Adiciona um novo **usuário** do objeto para o **usuários** coleção.|  
+|[Append (exibições)](../../../ado/reference/adox-api/append-method-adox-views.md)|Adiciona um novo **modo de exibição** do objeto para o **modos de exibição** coleção.|  
+|[ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md)|Altera a senha para uma conta de usuário.|  
 |[Criar](../../../ado/reference/adox-api/create-method-adox.md)|Cria um novo catálogo.|  
 |[Delete (excluir) (excluir)](../../../ado/reference/adox-api/delete-method-adox-collections.md)|Remove um objeto de uma coleção.|  
 |[GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md)|Retorna o proprietário de um objeto em um catálogo.|  
@@ -44,5 +41,5 @@ ms.locfileid: "35284795"
 |[SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)|Especifica as permissões de grupo ou usuário em um objeto.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência da API ADOX](../../../ado/reference/adox-api/adox-api-reference.md)   
+ [Referência da API do ADOX](../../../ado/reference/adox-api/adox-api-reference.md)   
  [Extensões ADO para segurança e linguagem de definição de dados (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

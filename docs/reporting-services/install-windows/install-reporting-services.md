@@ -3,17 +3,16 @@ title: Instalar o SQL Server Reporting Services (2017 e posterior) | Microsoft D
 ms.date: 12/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.suite: pro-bi
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8d5f2058230435722a8d39444b5bf23f1a7adafd
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: baf7f555f7856422674f41f006cd02a4c730ba10
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43271028"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47785344"
 ---
 # <a name="install-sql-server-reporting-services-2017-and-later"></a>Instalar o SQL Server Reporting Services (2017 e posterior)
 

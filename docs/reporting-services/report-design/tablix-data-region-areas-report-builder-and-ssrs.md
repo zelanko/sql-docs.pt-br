@@ -4,17 +4,16 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: f6c13407-2887-4287-9396-a58dba619d9b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1b3adf09885d4ee68f4f898381e148c66c6671eb
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 66d349e2cb6203689ec2bdee70345c0968699a72
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43280218"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47785444"
 ---
 # <a name="tablix-data-region-areas-report-builder-and-ssrs"></a>Áreas da região de dados Tablix (Construtor de Relatórios e SSRS)
  Em um [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] relatório paginado, uma região de dados tablix tem quatro áreas que contêm células tablix:   

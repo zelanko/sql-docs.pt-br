@@ -5,31 +5,28 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC drivers [ODBC], driver setup DLL
 - driver setup DLL [ODBC]
 ms.assetid: f9d03f17-1c0d-4e7c-9c04-8c316e07ef25
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fa09dad7423a56db064ade504f3b6598f3daf4ff
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d81bb9f5ec54f3d66089205f5b5941119d365501
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32916501"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47622204"
 ---
 # <a name="setup-dll-api-reference"></a>Referência de API de DLL de instalação
-Esta seção descreve a sintaxe da API de DLL, que consiste em duas funções de instalação do driver (**ConfigDriver** e **ConfigDSN**). **ConfigDriver** e **ConfigDSN** pode ser na DLL do driver ou em um separado DLL de instalação.  
+Esta seção descreve a sintaxe da API de DLL, que consiste em duas funções de instalação do driver (**ConfigDriver** e **ConfigDSN**). **ConfigDriver** e **ConfigDSN** pode estar na DLL do driver ou DLL de instalação em um separado.  
   
- Além disso, esta seção descreve a sintaxe da API de DLL, que consiste em uma única função de instalação do conversor (**ConfigTranslator**). **ConfigTranslator** pode ser no tradutor DLL ou em um separado DLL de instalação.  
+ Além disso, esta seção descreve a sintaxe da API de DLL, que consiste em uma única função de configuração do translator (**ConfigTranslator**). **ConfigTranslator** pode estar no tradutor DLL ou DLL de instalação em um separado.  
   
- Cada função é rotulada com a versão do ODBC no qual ele foi introduzido.  
+ Cada função é rotulada com a versão do ODBC na qual ele foi introduzido.  
   
  Esta seção contém os tópicos a seguir.  
   

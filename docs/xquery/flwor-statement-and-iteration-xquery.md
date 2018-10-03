@@ -4,15 +4,10 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
@@ -27,16 +22,15 @@ helpviewer_keywords:
 - XQuery, FLWOR statement
 - EBV
 ms.assetid: d7cd0ec9-334a-4564-bda9-83487b6865cb
-caps.latest.revision: 44
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c9ca8e71d1f71ba6416c08586e5613d129ad35d8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fe062b9d42dcedfc9c357f5af10ae19c2298acdb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33078103"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47656314"
 ---
 # <a name="flwor-statement-and-iteration-xquery"></a>Iteração e instrução FLWOR (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -149,9 +143,9 @@ SELECT @x.query('
   
  No [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], não são permitidas sequências heterogêneas. Especificamente, não são permitidas sequências que tenham uma combinação de valores atômicos e nós.  
   
- Iteração é frequentemente usada junto com o [construção XML](../xquery/xml-construction-xquery.md) formatos de sintaxe na transformação de XML, conforme mostrado na próxima consulta.  
+ Iteração é frequentemente usada junto com o [construção XML](../xquery/xml-construction-xquery.md) formatos de sintaxe na transformação XML, conforme mostrado na próxima consulta.  
   
- No banco de dados de exemplo AdventureWorks, as instruções de fabricação armazenado na **instruções** coluna o **productmodel** tabela têm o seguinte formato:  
+ No banco de dados de exemplo AdventureWorks, as instruções de fabricação armazenadas na **instruções** coluna das **productmodel** tabela têm o seguinte formato:  
   
 ```  
 <Location LocationID="10" LaborHours="1.2"   
@@ -197,7 +191,7 @@ where ProductModelID=7
   
 -   A instrução FLWOR recupera uma sequência de elementos <`Location`> de um produto específico.  
   
--   O [função data (XQuery)](../xquery/data-accessor-functions-data-xquery.md) é usado para extrair o valor de cada atributo para que eles serão adicionados ao XML resultante como nós de texto em vez de como atributos.  
+-   O [função data (XQuery)](../xquery/data-accessor-functions-data-xquery.md) é usado para extrair o valor de cada atributo, portanto, eles serão adicionados ao XML resultante como nós de texto em vez de como atributos.  
   
 -   A expressão na cláusula RETURN constrói o XML desejado.  
   
@@ -254,7 +248,7 @@ where ProductModelID=7
   
  Observe o seguinte na consulta anterior:  
   
--   O `where` palavra-chave usa o **contagem** função para contar o número de <`step`> elementos filho em cada trabalho center local.  
+-   O `where` palavra-chave usa o **Count ()** função para contar o número de <`step`> elementos filho em cada trabalho center local.  
   
 -   A expressão `return` constrói o XML desejado a partir dos resultados da iteração.  
   
@@ -316,7 +310,7 @@ Manu step 1 at Loc 1
 Manu step 1 at Loc 2  
 ```  
   
- A consulta a seguir é semelhante, exceto que ele é especificado na coluna Instructions, digitada **xml** coluna, do **ProductModel** tabela. [Construção XML (XQuery)](../xquery/xml-construction-xquery.md) é usado para gerar o XML que você deseja.  
+ A consulta a seguir é semelhante, exceto que é especificada na coluna Instructions, digitado **xml** coluna, da **ProductModel** tabela. [Construção XML (XQuery)](../xquery/xml-construction-xquery.md) é usado para gerar o XML desejado.  
   
 ```  
 SELECT Instructions.query('  
@@ -336,9 +330,9 @@ WHERE ProductModelID=7
   
 -   A cláusula `for` define duas variáveis, `$WC` e `$S`. A expressão associada com `$WC` gera uma sequência de locais de centro de trabalho na fabricação de um modelo do produto de bicicleta. A expressão de caminho atribuída à variável `$S` gera uma sequência de etapas para cada sequência de local do centro de trabalho no `$WC`.  
   
--   A instrução return constrói XML com um <`Step`> elemento que contém a etapa de fabricação e **LocationID** como seu atributo.  
+-   A instrução de retorno constrói XML com um <`Step`> elemento que contém a etapa de fabricação e a **LocationID** como seu atributo.  
   
--   O **declarar o namespace do elemento padrão** é usado no prólogo do XQuery para que todas as declarações de namespace no XML resultante apareçam no elemento de nível superior. Isso torna o resultado mais legível. Para obter mais informações sobre namespaces padrão, consulte [manipulando Namespaces em XQuery](../xquery/handling-namespaces-in-xquery.md).  
+-   O **declaração de namespace do elemento padrão** é usado no prólogo do XQuery para que todas as declarações de namespace no XML resultante apareçam no elemento de nível superior. Isso torna o resultado mais legível. Para obter mais informações sobre namespaces padrão, consulte [manipulando Namespaces em XQuery](../xquery/handling-namespaces-in-xquery.md).  
   
  Este é o resultado parcial:  
   
@@ -360,7 +354,7 @@ WHERE ProductModelID=7
 ```  
   
 ## <a name="using-the-order-by-clause"></a>Usando a cláusula order by  
- A classificação no XQuery é executada usando a cláusula `order by` na expressão FLWOR. As expressões de classificação passadas para o `order by` cláusula deve retornar valores cujos tipos são válidos para o **gt** operador. Cada expressão de classificação deve resultar em uma sequência singleton com um item. Por padrão, a classificação é executada em ordem crescente. Você pode especificar opcionalmente a ordem crescente ou decrescente para cada expressão de classificação.  
+ A classificação no XQuery é executada usando a cláusula `order by` na expressão FLWOR. As expressões de classificação é passado para o `order by` cláusula deve retornar valores cujos tipos são válidos para o **gt** operador. Cada expressão de classificação deve resultar em uma sequência singleton com um item. Por padrão, a classificação é executada em ordem crescente. Você pode especificar opcionalmente a ordem crescente ou decrescente para cada expressão de classificação.  
   
 > [!NOTE]  
 >  A classificação de comparações em valores da cadeia de caracteres executada pela implementação do XQuery no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sempre é realizada usando o agrupamento Unicode Codepoint binário.  
@@ -381,7 +375,7 @@ FROM Person.Person
 WHERE BusinessEntityID=291;  
 ```  
   
- Observe que o [Atomização (XQuery)](../xquery/atomization-xquery.md) processo recupera o valor atômico do <`number`> elementos antes de passá-lo para `order by`. Você pode escrever a expressão usando a **Data ()** função, mas que não é necessário.  
+ Observe que o [Atomização (XQuery)](../xquery/atomization-xquery.md) processo recupera o valor atômico da <`number`> elementos antes de passá-lo para `order by`. Você pode escrever a expressão usando o **Data ()** função, mas que não é necessário.  
   
 ```  
 order by data($a/act:number[1]) descending  

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syspolicy_subscribe_to_policy_category
@@ -21,12 +18,12 @@ ms.assetid: de88cc49-bcc8-4dc6-8e59-ad85cfbfb2fb
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 530a45bc4b3a1691637d6a09aec2d05403f8bfb3
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 4af05ca0f4b4f042bcd2a59cda213f35537592ca
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43029607"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47743374"
 ---
 # <a name="spsyspolicysubscribetopolicycategory-transact-sql"></a>sp_syspolicy_subscribe_to_policy_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +48,7 @@ sp_syspolicy_subscribe_to_policy_category [ @policy_category = ] 'policy_categor
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Você deve executar sp_syspolicy_subscribe_to_policy_category no contexto do banco de dados ao qual deseja adicionar uma assinatura de categoria de política.  
   
 ## <a name="permissions"></a>Permissões  

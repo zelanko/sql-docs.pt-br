@@ -1,43 +1,40 @@
 ---
-title: Processamento de instruções SQL | Microsoft Docs
+title: Processando instruções SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC cursor library [ODBC], statement processing
 - SQL statements [ODBC], cursor library
 - cursor library [ODBC], statement processing
 ms.assetid: 54dad6a3-e86c-477b-ba7c-4e95e0385ec1
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 603cb680e2986d484074a43d14f56de210da0b4a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5d5aa94062f90154126fb18c3658adb39bb1d5c0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909531"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47689744"
 ---
-# <a name="processing-sql-statements"></a>Processamento de instruções SQL
+# <a name="processing-sql-statements"></a>Processar instruções SQL
 > [!IMPORTANT]  
->  Este recurso será removido em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. A Microsoft recomenda o uso da funcionalidade de cursor do driver.  
+>  Este recurso será removido em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que usam esse recurso atualmente. A Microsoft recomenda usar a funcionalidade de cursor do driver.  
   
- A biblioteca de cursores ODBC passa todas as instruções SQL diretamente para o driver exceto o seguinte:  
+ A biblioteca de cursores ODBC passa todas as instruções SQL diretamente para o driver, exceto o seguinte:  
   
--   Posicionado atualização e exclusão de instruções  
+-   Posicionado atualização e instruções delete  
   
--   **Selecione para atualização** instruções  
+-   **SELECT FOR UPDATE** instruções  
   
 -   Instruções SQL em lote  
   
- Para executar a atualização posicionada e instruções delete e para posicionar o cursor em uma linha para chamar **SQLGetData** para aquela linha, a biblioteca de cursores constrói uma instrução pesquisada que identifica a linha.  
+ Para executar a atualização posicionadas e instruções delete e posicionar o cursor em uma linha para chamar **SQLGetData** para aquela linha, a biblioteca de cursores constrói uma instrução pesquisada que identifica a linha.  
   
  Esta seção contém os tópicos a seguir.  
   

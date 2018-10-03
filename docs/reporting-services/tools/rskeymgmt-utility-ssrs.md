@@ -4,7 +4,6 @@ ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: tools
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], encryption
@@ -20,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b533252b3f633e3996d4d169ea8288241c297730
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 3c9eff9d11f56fac8b979f7ca96703c76497f7cc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43268588"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47783634"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>Utilitário rskeymgmt (SSRS)
   Extrai, restaura, cria e exclui a chave simétrica usada para proteger dados confidenciais de servidor de relatório contra acesso não autorizado. Esse utilitário também é usado para unir instâncias de servidor de relatório em uma implantação de expansão. Uma *implantação em expansão de servidor de relatório* se refere a várias instâncias do servidor de relatório que compartilham um único banco de dados do servidor de relatório.  

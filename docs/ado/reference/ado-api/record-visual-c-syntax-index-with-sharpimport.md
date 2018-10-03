@@ -1,13 +1,11 @@
 ---
-title: 'Registro (Visual C++ sintaxe índice com #import) | Microsoft Docs'
+title: 'Registro (Visual C++ índice de sintaxe com #import) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 dev_langs:
@@ -15,18 +13,17 @@ dev_langs:
 helpviewer_keywords:
 - 'Record collection [ADO], Visual C++ syntax index with #import'
 ms.assetid: ba6dd186-9552-4b6c-960b-3ee6cd589afd
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 03ec7a636d52ca2da92601acc3d8441500795a09
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 05b2ab826fd5afe9b91b3dcfb314af176b1cb9da
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280827"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47645734"
 ---
-# <a name="record-visual-c-syntax-index-with-import"></a>Registro (Visual C++ sintaxe índice com #import)
+# <a name="record-visual-c-syntax-index-with-import"></a>Registro (Visual C++ índice de sintaxe com #import)
 ## <a name="methods"></a>Métodos  
   
 ```  

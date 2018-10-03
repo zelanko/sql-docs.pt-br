@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dbo.sysdac_instances_TSQL
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - dbo.sysdac_instances
 - sysdac_instances
 ms.assetid: 28285f3d-3889-439f-8b24-3bdef08e46b4
-caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 813a786f68fe02431073033172d37ffe2c682ee0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d6cb75ec737a8342f284179b37bbcd09d1eec335
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38031334"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47654144"
 ---
 # <a name="data-tier-application-views---dbosysdacinstances"></a>Exibições de aplicativo da camada de dados - dbo.sysdac_instances
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +45,7 @@ ms.locfileid: "38031334"
 |created_by|**sysname**|Logon que criou a instância do DAC.|  
 |database_name|**sysname**|Nome do banco de dados criado para a instância do DAC.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Um DAC inclui um tipo de DAC que é uma definição dos objetos da camada de dados lógicos usados por um aplicativo, como tabelas e exibições. Um pacote do DAC é um arquivo usado para implantar um DAC. O pacote do DAC contém uma representação de todos os objetos lógicos contidos no tipo do DAC. O pacote do DAC pode ser usado para implantar uma ou mais cópias, ou instâncias, do DAC em uma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Cada instância do DAC implantada a partir do mesmo pacote do DAC compartilha o mesmo tipo, mas é atribuída a um nome e identificador de instância exclusivos.  
   
 ## <a name="permissions"></a>Permissões  

@@ -6,23 +6,20 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - OLE DB provider for ODBC [ADO]
 - providers [ADO], OLE DB provider for ODBC
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 16a13b9051bafa40ed61d1aecce6f5b47cf4a8f3
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 565217e494b753ee22c2fa3715f17108a9fab5da
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982158"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47638304"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Provedor Microsoft OLE DB para visão geral do ODBC
 Para um programador do ADO ou RDS, um mundo ideal seria um no qual todos os dados fonte expõe uma interface OLE DB, para que o ADO pode chamar diretamente na fonte de dados. Embora cada vez mais fornecedores de banco de dados estiver implementando interfaces OLE DB, algumas fontes de dados não são ainda expostos dessa maneira. No entanto, a maioria dos sistemas DBMS em uso atualmente podem ser acessados por meio de ODBC.
@@ -84,7 +81,7 @@ MSDASQL
 DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Comentários
  Se você usar um **DSN** ou **FileDSN**, ela deve ser definida por meio do administrador de fonte de dados do ODBC no painel de controle do Windows. No Microsoft Windows 2000, o administrador de ODBC está localizado em Ferramentas administrativas. Em versões anteriores do Windows, o ícone de administrador de ODBC é denominado **ODBC de 32 bits** ou apenas **ODBC**.
 
  Como uma alternativa à configuração de um **DSN**, você pode especificar o driver ODBC (**DRIVER =**), como "SQL Server"; o nome do servidor (**SERVER =**); e o nome do banco de dados (**Banco de dados =**).

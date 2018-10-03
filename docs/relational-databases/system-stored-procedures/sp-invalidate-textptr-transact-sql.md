@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_invalidate_textptr_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_invalidate_textptr
 ms.assetid: dd9920e1-7064-4c05-93d8-9303103fa1d6
-caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a3822cc5d7ec4d346c70d717c58d4f0dc391f177
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 9075b653b6cdb9baec70a182b560201efcb6c965
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43019701"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47724264"
 ---
 # <a name="spinvalidatetextptr-transact-sql"></a>sp_invalidate_textptr (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +46,7 @@ sp_invalidate_textptr [ [ @TextPtrValue = ] textptr_value ]
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite um máximo de 1.024 ponteiros de texto em linha válidos ativos por transação, por banco de dados, no entanto, uma transação que inclui mais de um banco de dados pode ter 1.024 ponteiros de texto em linha em cada banco de dados. **sp_invalidate_textptr** pode ser usado para invalidar ponteiros de texto em linha e, portanto, liberar espaço para ponteiros de texto em linha adicionais.  
   
  Para obter mais informações sobre a opção text in row, consulte [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md).  

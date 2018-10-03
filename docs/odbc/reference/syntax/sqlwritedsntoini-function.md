@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLWriteDSNToIni
@@ -19,20 +17,19 @@ f1_keywords:
 helpviewer_keywords:
 - SQLWriteDSNToIni [ODBC]
 ms.assetid: dc7018b2-18d4-4657-96d0-086479a47474
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4a1ee3bdbdc14c01bf267c9dbb64ef10c93dfe1a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7f9eed345d3d6483cd1b47f8141e00d2a0164eb1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32918161"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47680814"
 ---
 # <a name="sqlwritedsntoini-function"></a>Função SQLWriteDSNToIni
-**Conformidade**  
- Versão introduzidas: ODBC 1.0  
+**Conformidade com**  
+ Introduziu versão: ODBC 1.0  
   
  **Resumo**  
  **SQLWriteDSNToIni** adiciona uma fonte de dados para as informações do sistema.  
@@ -51,26 +48,26 @@ BOOL SQLWriteDSNToIni(
  [Entrada] Nome da fonte de dados para adicionar.  
   
  *lpszDriver*  
- [Entrada] Descrição do driver (geralmente o nome do DBMS associado) apresentada aos usuários em vez do nome físico do driver.  
+ [Entrada] Descrição do driver (geralmente o nome do DBMS associado) apresentada aos usuários em vez do nome físico de driver.  
   
 ## <a name="returns"></a>Retorna  
  A função retorna TRUE se for bem-sucedida, FALSO se ele falhar.  
   
-## <a name="diagnostics"></a>diagnóstico  
- Quando **SQLWriteDSNToIni** retorna FALSE, um tipo de  *\*pfErrorCode* valor pode ser obtido chamando **SQLInstallerError**. A seguinte tabela lista o  *\*pfErrorCode* valores que podem ser retornados por **SQLInstallerError** e explica cada uma no contexto dessa função.  
+## <a name="diagnostics"></a>Diagnóstico  
+ Quando **SQLWriteDSNToIni** retornar FALSE, um associado  *\*pfErrorCode* valor pode ser obtido chamando **SQLInstallerError**. A seguinte tabela lista os  *\*pfErrorCode* valores que podem ser retornados por **SQLInstallerError** e explica cada uma no contexto dessa função.  
   
 |*\*pfErrorCode*|Erro|Description|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|Erro geral de instalador|Ocorreu um erro para que nenhum erro específico do instalador.|  
 |ODBC_ERROR_INVALID_DSN|DSN inválido|O *lpszDSN* argumento continha uma cadeia de caracteres que era inválida para um DSN.|  
-|ODBC_ERROR_INVALID_NAME|Nome de driver ou conversor inválido|O *lpszDriver* argumento era inválido.|  
+|ODBC_ERROR_INVALID_NAME|Nome inválido de driver ou conversor|O *lpszDriver* argumento era inválido.|  
 |ODBC_ERROR_REQUEST_FAILED|Falha na solicitação|O instalador não conseguiu criar um DSN no registro.|  
-|ODBC_ERROR_OUT_OF_MEM|Memória insuficiente|O instalador não pôde executar a função devido a uma falta de memória.|  
+|ODBC_ERROR_OUT_OF_MEM|Memória insuficiente|O instalador não foi possível executar a função devido à falta de memória.|  
   
 ## <a name="comments"></a>Comentários  
- **SQLWriteDSNToIni** adiciona a fonte de dados à seção [fontes de dados ODBC] as informações do sistema. Em seguida, cria uma seção de especificação para a fonte de dados e adiciona uma única palavra-chave (**Driver**) com o nome do driver DLL como seu valor. Se a seção de especificação de fonte de dados já existir, **SQLWriteDSNToIni** remove a seção antiga antes de criar um novo.  
+ **SQLWriteDSNToIni** adiciona a fonte de dados para a seção [fontes de dados ODBC] as informações do sistema. Em seguida, cria uma seção de especificação para a fonte de dados e adiciona uma única palavra-chave (**Driver**) com o nome do driver DLL como seu valor. Se a seção de especificação de fonte de dados já existir, **SQLWriteDSNToIni** remove a seção antiga antes de criar um novo.  
   
- O chamador dessa função deve adicionar quaisquer palavras-chave específicas de driver e os valores para a seção de especificação de fonte de dados as informações do sistema.  
+ O chamador dessa função deve adicionar os valores e palavras-chave específicas de driver para a seção de especificação de fonte de dados de informações do sistema.  
   
  Se o nome da fonte de dados é o padrão, **SQLWriteDSNToIni** também cria a seção de especificação de driver padrão nas informações do sistema.  
   
@@ -82,4 +79,4 @@ BOOL SQLWriteDSNToIni(
 |---------------------------|---------|  
 |Adicionar, modificar ou remover uma fonte de dados|[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md)(na configuração de DLL)|  
 |Adicionar, modificar ou remover uma fonte de dados|[SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)|  
-|Remover um nome de fonte de dados das informações do sistema|[SQLRemoveDSNFromIni](../../../odbc/reference/syntax/sqlremovedsnfromini-function.md)|
+|Removendo um nome de fonte de dados de informações do sistema|[SQLRemoveDSNFromIni](../../../odbc/reference/syntax/sqlremovedsnfromini-function.md)|

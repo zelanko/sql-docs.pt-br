@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - diagnostic information [ODBC], SqlGetDiagField
@@ -16,25 +14,24 @@ helpviewer_keywords:
 - diagnostic information [ODBC], SqlGetDiagRec
 - retrieving diagnostic information [ODBC]
 ms.assetid: 4f486bb1-fad8-4064-ac9d-61f2de85b68b
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 555bc3ba25ba895b54384acb8772a4b4293e61c1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 37fb095579fd173fd24a5df933e3e1a65edbeada
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32916031"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47626034"
 ---
-# <a name="using-sqlgetdiagrec-and-sqlgetdiagfield"></a>Usando SQLGetDiagRec e SQLGetDiagField
-Aplicativos chamam **SQLGetDiagRec** ou **SQLGetDiagField** para recuperar informações de diagnóstico. Essas funções aceitam um identificador de ambiente, conexão, instrução ou descritor e retornam o diagnóstico da função que esse identificador usado pela última vez. O diagnóstico de logon de um identificador específico será descartado quando uma nova função é chamada usando esse identificador. Se a função retornou vários registros de diagnósticos, o aplicativo chama essas funções várias vezes; o número total de registros de status é recuperado pela chamada **SQLGetDiagField** para o registro de cabeçalho (record 0) com a opção SQL_DIAG_NUMBER.  
+# <a name="using-sqlgetdiagrec-and-sqlgetdiagfield"></a>Usar SQLGetDiagRec e SQLGetDiagField
+Aplicativos chamam **SQLGetDiagRec** ou **SQLGetDiagField** para recuperar informações de diagnóstico. Essas funções aceitam um identificador de ambiente, conexão, instrução ou descritor e retornam o diagnóstico da função que é usado pela última vez esse identificador. O diagnóstico registrado em um identificador específico é descartado quando uma nova função é chamada usando esse identificador. Se a função retornou vários registros de diagnóstico, o aplicativo chama essas funções várias vezes; o número total de registros de status é recuperado chamando **SQLGetDiagField** para o registro de cabeçalho (record 0) com a opção SQL_DIAG_NUMBER.  
   
- Aplicativos recuperam campos individuais de diagnósticos chamando **SQLGetDiagField** e especificando o campo a recuperar. Alguns campos de diagnósticos não tem nenhum significado para determinados tipos de identificadores. Para obter uma lista de campos de diagnóstico e seus significados, consulte o [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) descrição da função.  
+ Aplicativos de recuperam campos individuais de diagnóstico, chamando **SQLGetDiagField** e especificando o campo a recuperar. Determinados campos de diagnóstico não tem nenhum significado para determinados tipos de identificadores. Para obter uma lista de campos de diagnóstico e seus significados, consulte o [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) descrição da função.  
   
- Aplicativos recuperam o SQLSTATE, o código de erro nativo e a mensagem de diagnóstico em uma única chamada chamando **SQLGetDiagRec**; **SQLGetDiagRec** não pode ser usado para recuperar as informações de registro de cabeçalho.  
+ Aplicativos recuperam o SQLSTATE, o código de erro nativo e a mensagem de diagnóstico em uma única chamada chamando **SQLGetDiagRec**; **SQLGetDiagRec** não pode ser usado para recuperar informações de registro de cabeçalho.  
   
- Por exemplo, o código a seguir solicita ao usuário uma instrução SQL e executa-o. Se quaisquer informações de diagnóstico foi retornadas, ele chama **SQLGetDiagField** para obter o número de registros de status e **SQLGetDiagRec** para obter o SQLSTATE, o código de erro nativo e a mensagem de diagnóstico dos registros.  
+ Por exemplo, o código a seguir solicita ao usuário uma instrução SQL e o executa. Se as informações de diagnóstico foi retornadas, ele chama **SQLGetDiagField** para obter o número de registros de status e **SQLGetDiagRec** para obter o SQLSTATE, o código de erro nativo e a mensagem de diagnóstico dos registros.  
   
 ```  
 SQLCHAR       SqlState[6], SQLStmt[100], Msg[SQL_MAX_MESSAGE_LENGTH];  

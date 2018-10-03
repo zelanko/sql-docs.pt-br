@@ -4,58 +4,52 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 613a8368-b372-443f-8252-fb6dc31a003d
-caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f61bbf015c9c4a1dc0a650aa2299e763b00e7e62
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: ef7778854248f194c01254b9cd6f833f67e9cefc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34775322"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47685114"
 ---
 # <a name="refresh-from-database-db2tosql"></a>Atualização do banco de dados (DB2ToSQL)
-O **de atualização do banco de dados** caixa de diálogo permite que você selecione quais objetos para atualização do banco de dados DB2. Linhas na caixa de diálogo estão codificados por cores com base no estado de metadados:  
+O **Refresh do banco de dados** caixa de diálogo permite que você selecione quais objetos de atualização do banco de dados DB2. Linhas na caixa de diálogo são codificadas por cores com base no estado de metadados:  
   
--   Se os metadados do objeto foi alterado localmente e no banco de dados DB2, a linha azul.  
+-   Se os metadados do objeto foi alterado localmente e no banco de dados DB2, a linha é azul.  
   
--   Se os metadados do objeto foi alterado no banco de dados DB2, mas não em SSMA, a linha é amarela.  
+-   Se os metadados do objeto foi alterado no banco de dados DB2, mas não no SSMA, a linha será amarela.  
   
--   Se os metadados do objeto foi alterado localmente, mas não no banco de dados DB2, a linha é verde.  
+-   Se os metadados do objeto foi alterado localmente, mas não no banco de dados DB2, a linha está verde.  
   
--   Se o objeto for novo no banco de dados DB2, a linha é rosa.  
+-   Se o objeto é novo no banco de dados DB2, a linha é rosa.  
   
-Você pode especificar as configurações padrão do objeto atualização o **configurações de projeto** caixa de diálogo. Para obter mais informações, consulte [configurações de projeto&#40;sincronização&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-synchronization-db2tosql.md).  
+Você pode especificar configurações de atualização do objeto padrão no **configurações do projeto** caixa de diálogo. Para obter mais informações, consulte [configurações do projeto&#40;sincronização&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-synchronization-db2tosql.md).  
   
-Para acessar o **de atualização do banco de dados** caixa de diálogo, o botão direito do mouse, um objeto no Gerenciador de metadados do DB2 e clique em **de atualização do banco de dados**.  
+Para acessar o **atualização do banco de dados** caixa de diálogo, clique com botão direito um objeto no Gerenciador de metadados do DB2 e clique em **atualização do banco de dados**.  
   
 ## <a name="options"></a>Opções  
 **Recolher (-)**  
 Recolha todos os grupos de objeto para ocultar objetos individuais.  
   
 **Expandir (+)**  
-Expanda todos os grupos de objeto para mostrar os objetos individuais.  
+Expanda todos os grupos de objeto para mostrar objetos individuais.  
   
-**Mostrar/ocultar objetos iguais**  
-Oculta os objetos da lista se os metadados do objeto são o mesmo do banco de dados do DB2 e na SSMA.  
+**Ocultar/Mostrar objetos iguais**  
+Oculta os objetos da lista se os metadados do objeto são o mesmo do banco de dados do DB2 e do SSMA.  
   
 **Atualização do banco de dados (botão de seta)**  
-Use o botão de seta para especificar que os metadados para os objetos selecionados devem ser atualizados em SSMA.  
+Use o botão de seta para especificar que os metadados para os objetos selecionados devem ser atualizados no SSMA.  
   
 **Fazer a atualização não do banco de dados (botão X)**  
-Use o botão X para especificar que os metadados para os objetos selecionados não devem ser atualizados em SSMA.  
+Use o botão X para especificar os metadados para os objetos selecionados não devem ser atualizados no SSMA.  
   
 **Legenda**  
-Exibe um **legenda** caixa de diálogo. A legenda contém o mapeamento entre as cores de linha e estados de metadados.  
+Exibe uma **legenda** caixa de diálogo. A legenda contém o mapeamento entre os estados de metadados e as cores de linha.  
   
-Para manter o **legenda** caixa de diálogo sobre o **de atualização do banco de dados** caixa de diálogo, selecione o **Mostrar na parte superior** caixa de seleção.  
+Para manter o **legenda** caixa de diálogo, na parte superior das **atualização do banco de dados** caixa de diálogo, selecione o **Mostrar na parte superior** caixa de seleção.  
   

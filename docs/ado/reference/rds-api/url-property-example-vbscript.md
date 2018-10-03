@@ -1,35 +1,32 @@
 ---
-title: Exemplo de propriedade de URL (VBScript) | Microsoft Docs
+title: Exemplo da propriedade URL (VBScript) | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - URL property [ADO], VBScript example
 ms.assetid: 6ae5ac50-c88c-4262-b7ab-f2b3de382a0b
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 233d7ab118a25725deca1cb5c6d90396b4dd0dea
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 57e7899753f2574ed62c644fcdb0c2fecc99b232
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288855"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47697187"
 ---
-# <a name="url-property-example-vbscript"></a>Exemplo de propriedade de URL (VBScript)
+# <a name="url-property-example-vbscript"></a>Exemplo da propriedade URL (VBScript)
 > [!IMPORTANT]
->  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (veja o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Aplicativos que usam o RDS devem migrar para [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (consulte o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Devem ser migrados para aplicativos que usam o RDS [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- O código a seguir demonstra como definir a **URL** propriedade no lado do cliente para especificar um arquivo. ASP que por sua vez, controla o envio de alterações para a fonte de dados.  
+ O código a seguir demonstra como definir a **URL** propriedade no lado do cliente para especificar um arquivo. ASP que por sua vez manipula o envio das alterações à fonte de dados.  
   
 ```  
 <!-- BeginURLClientVBS -->  
@@ -104,7 +101,7 @@ End Sub
 <!-- EndURLClientVBS -->  
 ```  
   
- O código do lado do servidor que existe no **URLServerVBS.asp** envia a atualização **registros** à fonte de dados.  
+ O código do lado do servidor que existe no **URLServerVBS.asp** envia atualizada **Recordset** à fonte de dados.  
   
 ```  
 <!-- BeginURLServerVBS -->  

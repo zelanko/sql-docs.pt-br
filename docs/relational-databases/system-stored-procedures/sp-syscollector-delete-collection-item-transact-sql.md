@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_delete_collection_item
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - sp_syscollector_delete_collecton_item
 - data collector [SQL Server], stored procedures
 ms.assetid: 9c2b0990-1d3d-4a59-94a0-3cca6fef4681
-caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 331a5201e4a179427cbe1ec558ff49958eb818aa
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 9bb3db70db6d888858ec413de852acccf73b96e5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258528"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47703264"
 ---
 # <a name="spsyscollectordeletecollectionitem-transact-sql"></a>sp_syscollector_delete_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,15 +43,15 @@ sp_syscollector_delete_collection_item [[ @collection_item_id = ] collection_ite
   
 ## <a name="arguments"></a>Argumentos  
  [ @collection_item_id =] *collection_item_id*  
- É o identificador exclusivo do item de coleta. *collection_item_id* é **int** com um padrão NULL. *collection_item_id* deve ter um valor se *nome* é NULL.  
+ É o identificador exclusivo do item de coleta. *collection_item_id* está **int** com um padrão NULL. *collection_item_id* deve ter um valor se *nome* é NULL.  
   
  [ @name =] '*nome*'  
- É o nome do item de coleta. *nome* é **sysname** com um valor padrão de NULL. *nome* deve ter um valor se *collection_item_id* é NULL.  
+ É o nome do item de coleta. *nome da* está **sysname** com um valor padrão de NULL. *nome da* deve ter um valor se *collection_item_id* é NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  sp_syscollector_delete_collection_item deve ser executado no contexto do banco de dados do sistema msdb. Os itens de coleta não podem ser excluídos dos conjuntos de coletas do sistema.  
   
  O conjunto de coleta que contém o item de coleta é interrompido e reiniciado durante esta operação.  
@@ -73,7 +69,7 @@ EXEC sp_syscollector_delete_collection_item @name = 'MyCollectionItem1';
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Coleta de dados](../../relational-databases/data-collection/data-collection.md)   
+ [Coleta de Dados](../../relational-databases/data-collection/data-collection.md)   
  [sp_syscollector_create_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)   
  [Procedimentos armazenados de coletor de dados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [syscollector_collection_items &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)  

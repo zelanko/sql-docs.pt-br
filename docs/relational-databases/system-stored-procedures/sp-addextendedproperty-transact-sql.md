@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/11/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addextendedproperty
@@ -22,12 +19,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a3fddc067c353dd9aab66ba100fef8ac8067175e
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 1eced8802504704506402d2ffb75609a096cb51a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43106944"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47689214"
 ---
 # <a name="spaddextendedproperty-transact-sql"></a>sp_addextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -89,7 +86,7 @@ sp_addextendedproperty
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Para especificar as propriedades estendidas, os objetos em um banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são classificados em três níveis: 0, 1 e 2. O nível 0 é o nível mais alto e está definido como objetos que estão contidos no escopo do banco de dados. Os objetos de nível 1 estão contidos em um esquema ou escopo de usuário e os objetos de nível 2 estão contidos pelos objetos de nível 1. As propriedades estendidas podem ser definidas para os objetos em qualquer um desses níveis.  
   
  As referências a um objeto de um nível precisam ser qualificadas com os nomes dos objetos de nível superior que as possua ou contenha. Por exemplo, ao adicionar uma propriedade estendida à coluna de uma tabela (nível 2), é necessário também especificar o nome da tabela (nível 1) que contém a coluna e o esquema (nível 0) que contém a tabela.  

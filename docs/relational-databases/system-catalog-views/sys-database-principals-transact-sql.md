@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 10/27/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - database_principals
@@ -24,12 +21,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 411d5af51163124448823c2fda553a5b294c4368
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 512994ada852ea7807cc14ecd5b25d9acff56ffc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43066966"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47643154"
 ---
 # <a name="sysdatabaseprincipals-transact-sql"></a>sys.database_principals (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,7 +51,7 @@ ms.locfileid: "43066966"
 |**default_language_lcid**|**int**|**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Significa o LCID padrão para esta entidade de segurança.|  
 |**allow_encrypted_value_modifications**|**bit**|**Aplica-se a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Suprime as verificações de metadados criptográficos no servidor em operações de cópia em massa. Isso permite que o usuário copiar em massa dados criptografados usando Always Encrypted, entre tabelas ou bancos de dados, sem descriptografá-los. O padrão é OFF. |      
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O *PasswordLastSetTime* propriedades estão disponíveis em todas as configurações com suporte do SQL Server, mas as outras propriedades só estão disponíveis quando o SQL Server está em execução no Windows Server 2003 ou posterior e CHECK_POLICY e CHECK_ EXPIRAÇÃO estão habilitados. Ver [política de senha](../../relational-databases/security/password-policy.md) para obter mais informações.  
   
 ## <a name="permissions"></a>Permissões  

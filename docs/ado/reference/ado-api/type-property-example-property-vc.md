@@ -1,34 +1,31 @@
 ---
-title: Tipo de exemplo da propriedade (propriedade) (VC + +) | Microsoft Docs
+title: Digite um exemplo da propriedade (propriedade) (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Type property [property] [ADO], VC++ example
 ms.assetid: a4e23508-fbf3-4468-be55-212e7238802b
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b62b3db629cabd77cea270cf41e76bd36c5b1cb4
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: abb6e450e0a61b91fa0839e9efa8c32fdb00d730
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282735"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47736744"
 ---
-# <a name="type-property-example-property-vc"></a>Exemplo de propriedade de tipo (propriedade) (VC + +)
-Este exemplo demonstra o [tipo](../../../ado/reference/ado-api/type-property-ado.md) propriedade. É um modelo de um utilitário para listar os nomes e tipos de uma coleção, como [propriedades](../../../ado/reference/ado-api/properties-collection-ado.md), [campos](../../../ado/reference/ado-api/fields-collection-ado.md), etc.  
+# <a name="type-property-example-property-vc"></a>Exemplo da propriedade Type (Propriedade) (VC++)
+Este exemplo demonstra a [tipo](../../../ado/reference/ado-api/type-property-ado.md) propriedade. Ele é um modelo de um utilitário para listar os nomes e tipos de uma coleção, como [propriedades](../../../ado/reference/ado-api/properties-collection-ado.md), [campos](../../../ado/reference/ado-api/fields-collection-ado.md), etc.  
   
- Não sendo necessário abrir o [registros](../../../ado/reference/ado-api/recordset-object-ado.md) para acessar seu **propriedades** coleção; entram em existência quando o **Recordset** objeto é instanciado. Entretanto, a configuração de [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) propriedade **adUseClient** adiciona várias propriedades dinâmicas para o **registros** do objeto **propriedades** coleção, tornando o exemplo um pouco mais interessante. Para fins de ilustração, podemos usar explicitamente o [Item](../../../ado/reference/ado-api/item-property-ado.md) propriedade para acessar cada [propriedade](../../../ado/reference/ado-api/property-object-ado.md) objeto.  
+ Não precisamos abrir o [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) para acessar seus **propriedades** coleção; eles passam a existir quando o **Recordset** objeto é instanciado. No entanto, definir a [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) propriedade a ser **adUseClient** adiciona várias propriedades dinâmicas para o **conjunto de registros** do objeto **propriedades** coleção, fazendo o exemplo um pouco mais interessante. Para ilustração, podemos usar explicitamente o [Item](../../../ado/reference/ado-api/item-property-ado.md) propriedade para acessar cada [propriedade](../../../ado/reference/ado-api/property-object-ado.md) objeto.  
   
 ```  
 // BeginTypePropertyCpp.cpp  

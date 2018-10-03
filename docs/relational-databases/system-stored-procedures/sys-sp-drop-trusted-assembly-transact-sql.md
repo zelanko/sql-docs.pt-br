@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_drop_trusted_assembly_TSQL
@@ -24,12 +21,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ec961d45296008765fc997fab1e4665491667797
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: d49d7cd38edb86fc7cebd28f5e59949066fc2f25
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43071079"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47732014"
 ---
 # <a name="sysspdroptrustedassembly-transact-sql"></a>sys.sp_drop_trusted_assembly (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +47,7 @@ sp_drop_trusted_assembly
 [ @hash =] '*valor*'  
 O valor de hash SHA2_512 do assembly para remover da lista de assemblies confiáveis para o servidor. Assemblies confiáveis podem carregar quando segurança estrita do clr está habilitada, mesmo se o assembly estiver assinado ou o banco de dados não está marcado como confiável.
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 
 Este procedimento remove um assembly a partir [sys.trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md).
 

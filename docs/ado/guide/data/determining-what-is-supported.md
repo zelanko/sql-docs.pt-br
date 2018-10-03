@@ -6,35 +6,32 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - editing data [ADO], Supports method
 - Supports method [ADO]
 ms.assetid: 65090cba-6d46-4775-8d61-f6838e7752a6
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d6eaf6ed08d6e79f8428e86b983794cb32c6447d
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 835584da4c51f5e65306d0609b4e69f78a7d58b9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270585"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47707564"
 ---
-# <a name="determining-what-is-supported"></a>Determinando o que tem suporte
-O **dá suporte a** método é usado para determinar se um especificado **registros** objeto oferece suporte a um determinado tipo de funcionalidade. Ele tem a seguinte sintaxe:  
+# <a name="determining-what-is-supported"></a>Determinar o que é compatível
+O **dá suporte a** método é usado para determinar se um especificado **Recordset** objeto dá suporte a um determinado tipo de funcionalidade. Ele tem a seguinte sintaxe:  
   
 ```  
   
 boolean = recordset.Supports(CursorOptions )  
 ```  
   
-## <a name="remarks"></a>Remarks  
- O **suporta** método retorna um valor booliano que indica se o provedor oferece suporte a todos os recursos identificados pelo argumento CursorOptions. Você pode usar o **dá suporte a** método para determinar quais tipos de funcionalidade um **registros** objeto oferece suporte. Se o **registros** objeto suporta os recursos cujos constantes correspondentes estão em *CursorOptions*, o **dá suporte a** método retorna **True**. Caso contrário, retornará **False**.  
+## <a name="remarks"></a>Comentários  
+ O **dá suporte a** método retorna um valor booliano que indica se o provedor oferece suporte a todos os recursos identificados pelo argumento CursorOptions. Você pode usar o **dá suporte a** método para determinar quais tipos de funcionalidade um **Recordset** objeto dá suporte. Se o **conjunto de registros** objeto suporta os recursos cujos constantes correspondentes estão no *CursorOptions*, o **dá suporte a** retorno do método **True**. Caso contrário, retornará **falsos**.  
   
- Usando o **dá suporte a** método, você pode verificar a capacidade do **registros** objeto para adicionar novos registros, usar marcadores, use o **localizar** método, use a rolagem, use o  **Índice** propriedade e para executar atualizações em lotes. Para obter uma lista completa das constantes e seus significados, consulte [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md).  
+ Usando o **dá suporte a** método, você pode verificar a capacidade dos **conjunto de registros** objeto para adicionar novos registros, usar indicadores, use o **localizar** método, o uso de rolagem, use o  **Índice** propriedade e para executar atualizações em lotes. Para obter uma lista completa de constantes e seus significados, consulte [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md).  
   
- Embora o **dá suporte a** método pode retornar **True** para uma determinada funcionalidade, ele não garante que o provedor pode tornar o recurso disponível em todas as circunstâncias. O **suporta** método simplesmente retorna se o provedor pode oferecer suporte a funcionalidade especificada, supondo que determinadas condições forem atendidas. Por exemplo, o **dá suporte a** método pode indicar que um **registros** objeto dá suporte a atualizações, mesmo que o cursor estiver baseado em uma junção de várias tabelas — algumas colunas que não são atualizáveis.
+ Embora o **suporta** método pode retornar **verdadeiro** para uma determinada funcionalidade, ele não garante que o provedor pode disponibilizar o recurso em todas as circunstâncias. O **dá suporte a** método simplesmente retorna se o provedor pode dar suporte a funcionalidade especificada, supondo que determinadas condições forem atendidas. Por exemplo, o **dá suporte a** método pode indicar que um **Recordset** objeto dá suporte a atualizações, mesmo que o cursor estiver baseado em uma junção de várias tabelas — algumas colunas que não são atualizáveis.

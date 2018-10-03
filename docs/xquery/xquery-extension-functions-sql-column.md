@@ -4,33 +4,27 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
 - sql:column function
 - sql:column() function
 ms.assetid: e8f67bdf-b489-49a9-9d0f-2069c1750467
-caps.latest.revision: 38
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 19a427f43667718225120cdd72a571eba66cd041
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 75980cf457d1422bba783c02f9978bdd9263f220
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37981938"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47627704"
 ---
-# <a name="xquery-extension-functions---sqlcolumn"></a>Funções de extensão XQuery – SQL: Column
+# <a name="xquery-extension-functions---sqlcolumn"></a>Funções de Extensão XQuery – sql:column()
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Conforme descrito no tópico [associando dados relacionais dentro do XML](../t-sql/xml/binding-relational-data-inside-xml-data.md), você pode usar o **sql:column(()** funcionar quando você usa [métodos de tipo de dados XML](../t-sql/xml/xml-data-type-methods.md) para expor um valor relacional dentro do XQuery.  
@@ -46,7 +40,7 @@ ms.locfileid: "37981938"
 sql:column("columnName")  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Observe que essa referência a uma coluna especificada na **SQL: Column** função dentro de um XQuery refere-se a uma coluna na linha que está sendo processada.  
   
  Na [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], você só pode se referir a um **xml** instância no contexto da expressão de origem de um XML-DML insert instrução; caso contrário, você não pode se referir a colunas que são do tipo **xml** ou um CLR tipo definido pelo usuário.  

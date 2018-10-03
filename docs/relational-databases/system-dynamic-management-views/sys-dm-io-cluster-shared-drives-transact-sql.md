@@ -5,9 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_io_cluster_shared_drives_TSQL
@@ -19,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_io_cluster_shared_drives dynamic management view
 ms.assetid: c8fcced8-c780-49dc-99bd-6beb3ca532c4
-caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2c6dbc9b88bde892cae76fdbc7405896f88a28a
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: da578c61af08ff8167779d5ed86e671bba29e23a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43109804"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47646454"
 ---
 # <a name="sysdmioclustershareddrives-transact-sql"></a>sys.dm_io_cluster_shared_drives (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -44,7 +41,7 @@ ms.locfileid: "43109804"
 |**DriveName**|**nchar(2)**|O nome da unidade (a letra da unidade) que representa um disco individual que faz parte da matriz de disco compartilhado de cluster. A coluna não é anulável.|  
 |**pdw_node_id**|**int**|**Aplica-se a**: ssPDW<br /><br /> O identificador para o nó que essa distribuição é no.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Quando a clusterização é habilitada, a instância de cluster de failover requer que os arquivos de dados e de log estejam em discos compartilhados para que possam ser acessados depois que a instância falhar em outro nó. Cada linha nessa exibição representa um único disco compartilhado que é usado por essa instância clusterizada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Somente os discos listados por essa exibição podem ser usados para armazenar dados ou arquivos de log para essa instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os discos listados nessa exibição são aqueles que estão no grupo de recursos de cluster associados à instância.  
   
 > [!NOTE]  

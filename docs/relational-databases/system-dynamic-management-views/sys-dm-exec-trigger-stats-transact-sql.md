@@ -5,9 +5,7 @@ ms.date: 01/10/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_exec_trigger_stats
@@ -19,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_trigger_stats dynamic management function
 ms.assetid: 863498b4-849c-434d-b748-837411458738
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e4fafc4fb5f082c5be3c3c66537a5ff6d8e7d0f7
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: cf9299896fb03ea8eb947b5fb5ab9f1967e7d7c0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43085757"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47649195"
 ---
 # <a name="sysdmexectriggerstats-transact-sql"></a>sys.dm_exec_trigger_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -72,7 +69,7 @@ ms.locfileid: "43085757"
 |**min_spills**|**bigint**|O número mínimo de páginas que esse gatilho já foram liberados durante uma única execução.<br /><br /> **Aplica-se ao**: começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**max_spills**|**bigint**|O número máximo de páginas que esse gatilho já foram liberados durante uma única execução.<br /><br /> **Aplica-se ao**: começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  No [!INCLUDE[ssSDS](../../includes/sssds-md.md)], as exibições de gerenciamento dinâmico não podem expor informações que afetarão a contenção do banco de dados ou informações sobre outros bancos de dados aos quais o usuário tem acesso. Para evitar a exposição dessas informações, cada linha que contém os dados que não pertencem ao locatário conectado será filtrada.  
 
 As estatísticas na exibição são atualizadas quando uma consulta é concluída.  

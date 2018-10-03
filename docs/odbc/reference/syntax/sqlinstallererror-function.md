@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLInstallerError
@@ -19,23 +17,22 @@ f1_keywords:
 helpviewer_keywords:
 - SQLInstallerError [ODBC]
 ms.assetid: e6474b79-4d55-458f-81ce-abfafe357f83
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c76d89a69ade4aca9c915db8d960cc749f8ca2a7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f76b65b1382db3954094d0a22913edf2f8b912be
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32918021"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47677104"
 ---
 # <a name="sqlinstallererror-function"></a>Função SQLInstallerError
-**Conformidade**  
- Versão introduzidas: ODBC 3.0  
+**Conformidade com**  
+ Versão introduzida: ODBC 3.0  
   
  **Resumo**  
- **SQLInstallerError** retorna informações de erro ou de status para as funções do instalador ODBC.  
+ **SQLInstallerError** retorna informações de status ou erro para as funções do instalador ODBC.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -50,7 +47,7 @@ RETCODE SQLInstallerError(
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *IERRO*  
+ *iError*  
  [Entrada] Número de registro de erro. Números válidos são de 1 a 8.  
   
  *pfErrorCode*  
@@ -60,27 +57,27 @@ RETCODE SQLInstallerError(
  [Saída] Ponteiro para o armazenamento para o texto da mensagem de erro.  
   
  *cbErrorMsgMax*  
- [Entrada] Comprimento máximo do *szErrorMsg* buffer. Isso deve ser menor ou igual a SQL_MAX_MESSAGE_LENGTH menos o caractere null de terminação.  
+ [Entrada] Comprimento máximo do *szErrorMsg* buffer. Isso deve ser menor ou igual a SQL_MAX_MESSAGE_LENGTH menos do caractere nulo de terminação.  
   
  *cbErrorMsgMax*  
- [Entrada] Comprimento máximo do *szErrorMsg* buffer. Isso deve ser menor ou igual a SQL_MAX_MESSAGE_LENGTH menos o caractere null de terminação.  
+ [Entrada] Comprimento máximo do *szErrorMsg* buffer. Isso deve ser menor ou igual a SQL_MAX_MESSAGE_LENGTH menos do caractere nulo de terminação.  
   
  *pcbErrorMsg*  
- [Saída] Ponteiro para o número total de bytes (excluindo o caractere null de terminação) disponíveis para retornar em *lpszErrorMsg*. Se o número de bytes disponíveis para retornar é maior que ou igual a *cbErrorMsgMax*, o texto da mensagem de erro no *lpszErrorMsg* será truncado para *cbErrorMsgMax* menos de bytes de caractere NULL de terminação. O *pcbErrorMsg* argumento pode ser um ponteiro nulo.  
+ [Saída] Ponteiro para o número total de bytes (exceto o caractere nulo de terminação) disponíveis para retornar na *lpszErrorMsg*. Se o número de bytes disponíveis para retornar for maior que ou igual a *cbErrorMsgMax*, o texto da mensagem de erro na *lpszErrorMsg* será truncado com *cbErrorMsgMax* menos o bytes de caractere de finalização null. O *pcbErrorMsg* argumento pode ser um ponteiro nulo.  
   
 ## <a name="returns"></a>Retorna  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA ou SQL_ERROR.  
   
-## <a name="diagnostics"></a>diagnóstico  
- **SQLInstallerError** não lançar valores de erro para si mesmo. **SQLInstallerError** retorna SQL_NO_DATA quando não é possível recuperar informações de erro (nesse caso *pfErrorCode* é indefinido). Se **SQLInstallerError** não é possível acessar os valores de erro por qualquer motivo que normalmente retornaria SQL_ERROR, **SQLInstallerError** retornará SQL_ERROR, mas não envia os valores de erro. Se você não souber o comprimento da cadeia de caracteres de aviso (*lpszErrorMsg*), você pode definir *lpszErrorMsg* como NULL e chame **SQLInstallerError**. **SQLInstallerError** será, em seguida, retornar o comprimento da cadeia de caracteres de aviso em *cbErrorMsgMax*. Se o buffer para a mensagem de erro é muito curto, **SQLInstallerError** retorna SQL_SUCCESS_WITH_INFO e retorna o correto *pfErrorCode* valor para **SQLInstallerError**.  
+## <a name="diagnostics"></a>Diagnóstico  
+ **SQLInstallerError** não poste os valores de erro para si mesmo. **SQLInstallerError** retorna SQL_NO_DATA quando não for possível recuperar qualquer informação de erro (caso em que *pfErrorCode* é indefinido). Se **SQLInstallerError** não é possível acessar os valores de erro por qualquer motivo que normalmente retornaria SQL_ERROR, **SQLInstallerError** retornará SQL_ERROR, mas não postar quaisquer valores de erro. Se você não souber o comprimento da cadeia de caracteres de aviso (*lpszErrorMsg*), você pode definir *lpszErrorMsg* como NULL e chame **SQLInstallerError**. **SQLInstallerError** será, em seguida, retornar o comprimento da cadeia de caracteres de aviso no *cbErrorMsgMax*. Se o buffer para a mensagem de erro é curto demais **SQLInstallerError** retorna SQL_SUCCESS_WITH_INFO e retorna a correta *pfErrorCode* valor para **SQLInstallerError**.  
   
- Para determinar se ocorreu um truncamento na mensagem de erro, um aplicativo pode comparar o valor de *cbErrorMsgMax* argumento para o comprimento real do texto da mensagem gravado o *pcbErrorMsg* argumento. Se o truncamento ocorrer, o tamanho do buffer correto deve ser alocado para *lpszErrorMsg* e **SQLInstallerError** deve ser chamado novamente com a correspondente *IERRO*registro.  
+ Para determinar se ocorreu um truncamento na mensagem de erro, um aplicativo pode comparar o valor na *cbErrorMsgMax* argumento para o comprimento real do texto da mensagem gravado para o *pcbErrorMsg* argumento. Se ocorrer o truncamento, o comprimento do buffer correto deve ser alocado para *lpszErrorMsg* e **SQLInstallerError** deve ser chamado novamente com a correspondente *iError*registro.  
   
 ## <a name="comments"></a>Comentários  
- Um aplicativo chama **SQLInstallerError** quando uma chamada anterior para a função do instalador ODBC retorna FALSE. Funções da instalação do instalador e driver ou conversor ODBC lançar zero ou mais erros somente quando a função falha (retorna FALSE); Portanto, um aplicativo chama **SQLInstallerError** somente depois que uma função do instalador ODBC falha.  
+ Um aplicativo chama **SQLInstallerError** quando uma chamada anterior para a função do instalador ODBC retorna FALSE. Funções de instalação instalador e o driver ou conversor ODBC lançar zero ou mais erros somente quando a função falhar (retorna FALSE); Portanto, um aplicativo chama **SQLInstallerError** somente depois que uma função do instalador ODBC falha.  
   
- A fila de erros do instalador ODBC é liberada sempre que uma nova função de instalador é chamada. Portanto, um aplicativo não se pode esperar recuperar os erros de funções que na última chamada de função do instalador.  
+ A fila de erros do instalador ODBC é liberada sempre que uma nova função do instalador é chamada. Portanto, um aplicativo não pode esperar recuperar os erros para as funções que da última chamada de função do instalador.  
   
- Para recuperar vários erros de uma chamada de função, um aplicativo chama **SQLInstallerError** várias vezes.  
+ Para recuperar vários erros para uma chamada de função, um aplicativo chama **SQLInstallerError** várias vezes.  
   
- Quando não houver nenhuma informação adicional, **SQLInstallerError** retorna SQL_NO_DATA, o *pfErrorCode* argumento será indefinido, o *pcbErrorMsg* argumento for igual a 0, e o *lpszErrorMsg* argumento contém um único caractere null de terminação (a menos que o *cbErrorMsgMax* argumento for igual a 0).
+ Quando não há nenhuma informação adicional, **SQLInstallerError** retorne SQL_NO_DATA, o *pfErrorCode* argumento é indefinido, o *pcbErrorMsg* argumento for igual a 0, e o *lpszErrorMsg* argumento contém um único caractere de terminação null (a menos que o *cbErrorMsgMax* argumento for igual a 0).

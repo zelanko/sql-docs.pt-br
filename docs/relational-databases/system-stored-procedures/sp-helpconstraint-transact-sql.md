@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_helpconstraint
@@ -18,17 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpconstraint
 ms.assetid: 29d6cd36-535d-4765-bca8-62f9d9886ff5
-caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c8aa65d7ce6035ca09cae9f4a81e33c3d5733a40
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 4158fd290b2a64ddf7e8f3a8fc9b566dd5602d4c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43071381"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47704364"
 ---
 # <a name="sphelpconstraint-transact-sql"></a>sp_helpconstraint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,7 +54,7 @@ sp_helpconstraint [ @objname = ] 'table'
 ## <a name="result-sets"></a>Conjuntos de resultados  
  **sp_helpconstraint** exibe uma coluna indexada decrescente se ela participou de chaves primárias. A coluna indexada de maneira decrescente será listada no conjunto de resultados com um sinal de menos (-) após seu nome. O padrão, uma coluna indexada de maneira crescente, será listada apenas por seu nome.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Executar **sp_help * * * tabela* relata todas as informações sobre a tabela especificada. Para ver apenas as informações de restrição, use **sp_helpconstraint**.  
   
 ## <a name="permissions"></a>Permissões  

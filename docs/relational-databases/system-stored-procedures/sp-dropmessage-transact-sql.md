@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_dropmessage_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_dropmessage
 ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
-caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 216f5e9ffca4865cb9a2deddbe38097099d74f9c
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 4aa4b07c3a7c27546990f1b5a1a25fd4f7d0da83
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43032979"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47725034"
 ---
 # <a name="spdropmessage-transact-sql"></a>sp_dropmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +56,7 @@ sp_dropmessage [ @msgnum = ] message_number
 ## <a name="permissions"></a>Permissões  
  Requer associação na **sysadmin** e **serveradmin** funções de servidor fixas.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A menos que **todos os** é especificado para *idioma*localizado todas as versões de uma mensagem devem ser descartadas antes de descartar a versão em inglês dos EUA.  
   
 ## <a name="examples"></a>Exemplos  

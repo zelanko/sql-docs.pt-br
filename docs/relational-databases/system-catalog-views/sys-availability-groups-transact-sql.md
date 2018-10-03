@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.availability_groups_TSQL
@@ -21,21 +18,20 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.availability_groups catalog view
 ms.assetid: da7fa55f-c008-45d9-bcfc-3513b02d9e71
-caps.latest.revision: 42
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d92fb6ad5444abd447352d691887ce066c9fd7d8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b55828992f748579351120bebe4e2043d377b9ac
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33181842"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47699470"
 ---
 # <a name="sysavailabilitygroups-transact-sql"></a>sys.availability_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Retorna uma linha para cada grupo de disponibilidade para os quais a instância local do SQL Server hospeda uma réplica de disponibilidade. Cada linha contém uma cópia armazenada em cache dos metadados do grupo de disponibilidade.  
+  Retorna uma linha para cada grupo de disponibilidade para o qual a instância local do SQL Server hospeda uma réplica de disponibilidade. Cada linha contém uma cópia armazenada em cache dos metadados do grupo de disponibilidade.  
    
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
@@ -43,23 +39,23 @@ ms.locfileid: "33181842"
 |**name**|**sysname**|O nome do grupo de disponibilidade. Esse é um nome especificado pelo usuário que deve ser exclusivo no WSFC (Windows Server Failover Cluster).|  
 |**resource_id**|**nvarchar(40)**|ID de recurso do recurso de cluster WSFC.|  
 |**resource_group_id**|**nvarchar(40)**|ID do grupo de recursos do cluster WSFC do grupo de disponibilidade.|  
-|**failure_condition_level**|**Int**|Falha definido pelo usuário nível de condição sob a qual um failover automático deve ser disparado, um dos valores de inteiro mostrados na tabela imediatamente abaixo da tabela.<br /><br /> Os níveis da condição de falha (1 a 5) variam do menos restritivo, nível 1, até o mais restritivo, nível 5. Um determinado nível de condição abrange todos os níveis menos restritivos. Assim, o nível de condição mais rígido, 5, inclui os quatro níveis de condição menos restritivos (1 a 4), o nível 4 inclui os níveis 1 a 3 e assim sucessivamente.<br /><br /> Para alterar esse valor, use a opção FAILURE_CONDITION_LEVEL do [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução.|  
-|**health_check_timeout**|**Int**|Tempo de espera (em milissegundos) para o [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) sistema de procedimento armazenado para retornar informações de integridade do servidor, antes da instância do servidor é considerada lenta ou suspenso. O valor padrão é 30000 milissegundos (30 segundos).<br /><br /> Para alterar esse valor, use a opção HEALTH_CHECK_TIMEOUT do [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução.|  
-|**automated_backup_preference**|**tinyint**|Local preferido para executar backups nos bancos de dados de disponibilidade nesse grupo de disponibilidade. Estes são os valores possíveis e suas descrições.<br /><br /> <br /><br /> 0: principal. Backups sempre devem ocorrer na réplica primária.<br /><br /> 1: somente secundária. A execução de backups em uma réplica secundária é preferível.<br /><br /> 2: preferir secundário. A execução de backups em uma réplica secundária é preferível, mas a execução de backups na réplica primária será aceitável se nenhuma réplica secundária estiver disponível para operações de backup. Esse é o comportamento padrão.<br /><br /> 3: qualquer réplica. Nenhuma preferência sobre se os backups são executados na réplica primária ou em uma réplica secundária.<br /><br /> <br /><br /> Para obter mais informações, consulte [Secundárias ativas: backup em réplicas secundárias &#40;Grupos de Disponibilidade AlwaysOn&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).|  
-|**automated_backup_preference_desc**|**nvarchar(60)**|Descrição do **automated_backup_preference**, um de:<br /><br /> PRIMARY<br /><br /> SECONDARY_ONLY<br /><br /> SECONDARY<br /><br /> Nenhuma|  
-|**version**|**smallint**|A versão dos metadados do grupo de disponibilidade armazenada no Cluster de Failover do Windows. Esse número de versão é incrementado quando novos recursos foram adicionados.|  
+|**failure_condition_level**|**int**|Falha definido pelo usuário nível de condição sob a qual um failover automático deve ser disparado, um dos valores de inteiro, mostrados na tabela imediatamente abaixo desta tabela.<br /><br /> Os níveis da condição de falha (1 a 5) variam do menos restritivo, nível 1, até o mais restritivo, nível 5. Um determinado nível de condição abrange todos os níveis menos restritivos. Assim, o nível de condição mais rígido, 5, inclui os quatro níveis de condição menos restritivos (1 a 4), o nível 4 inclui os níveis 1 a 3 e assim sucessivamente.<br /><br /> Para alterar esse valor, use a opção FAILURE_CONDITION_LEVEL dos [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução.|  
+|**health_check_timeout**|**int**|Tempo de espera (em milissegundos) para o [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) sistema de procedimento armazenado para retornar informações de integridade do servidor, antes da instância do servidor é considerada lenta ou travada. O valor padrão é 30000 milissegundos (30 segundos).<br /><br /> Para alterar esse valor, use a opção HEALTH_CHECK_TIMEOUT dos [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] instrução.|  
+|**automated_backup_preference**|**tinyint**|Local preferido para executar backups nos bancos de dados de disponibilidade nesse grupo de disponibilidade. A seguir estão os valores possíveis e suas descrições.<br /><br /> <br /><br /> 0: primário. Backups sempre devem ocorrer na réplica primária.<br /><br /> 1: somente secundário. A execução de backups em uma réplica secundária é preferível.<br /><br /> 2: preferir secundário. A execução de backups em uma réplica secundária é preferível, mas a execução de backups na réplica primária será aceitável se nenhuma réplica secundária estiver disponível para operações de backup. Esse é o comportamento padrão.<br /><br /> 3: qualquer réplica. Nenhuma preferência sobre se os backups são executados na réplica primária ou em uma réplica secundária.<br /><br /> <br /><br /> Para obter mais informações, consulte [Secundárias ativas: backup em réplicas secundárias &#40;Grupos de Disponibilidade AlwaysOn&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).|  
+|**automated_backup_preference_desc**|**nvarchar(60)**|Descrição da **automated_backup_preference**, um de:<br /><br /> PRIMARY<br /><br /> SECONDARY_ONLY<br /><br /> SECONDARY<br /><br /> Nenhuma|  
+|**version**|**smallint**|A versão dos metadados do grupo de disponibilidade armazenado no Cluster de Failover do Windows. Esse número de versão é incrementado quando novos recursos são adicionados.|  
 |**basic_features**|**bit**|Especifica se este é um grupo de disponibilidade básica. Para obter mais informações, consulte [Grupos de disponibilidade básicos &#40;Grupos de Disponibilidade AlwaysOn&#41;](../../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).|  
-|**dtc_support**|**bit**|Especifica se o suporte DTC foi habilitado para este grupo de disponibilidade. O **DTC_SUPPORT** opção de **criar grupo de disponibilidade** controla essa configuração.|  
-|**db_failover**|**bit**|Especifica se o grupo de disponibilidade dá suporte a failover para condições de integridade do banco de dados. O **DB_FAILOVER** opção de **criar grupo de disponibilidade** controla essa configuração.|  
-|**is_distributed**|**bit**|Especifica se este é um grupo de disponibilidade distribuída. Para obter mais informações, veja [Grupos de disponibilidade distribuídos e &#40;Grupos de disponibilidade AlwaysOn&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md).|  
+|**dtc_support**|**bit**|Especifica se o suporte DTC foi habilitado para este grupo de disponibilidade. O **DTC_SUPPORT** opção de **CREATE AVAILABILITY GROUP** controla essa configuração.|  
+|**db_failover**|**bit**|Especifica se o grupo de disponibilidade dá suporte a failover para condições de integridade do banco de dados. O **DB_FAILOVER** opção de **CREATE AVAILABILITY GROUP** controla essa configuração.|  
+|**is_distributed**|**bit**|Especifica se este é um grupo de disponibilidade distribuído. Para obter mais informações, veja [Grupos de disponibilidade distribuídos e &#40;Grupos de disponibilidade AlwaysOn&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md).|  
   
 ## <a name="failure-condition-level--values"></a>Valores de nível de condição de falha  
  A tabela a seguir descreve os níveis de condição de falha possíveis para o **failure_condition_level** coluna.  
   
-|Value|Condição de falha|  
+|Valor|Condição de falha|  
 |-----------|-----------------------|  
-|1|Especifica que um failover automático deverá ser iniciado quando uma destas condições ocorrer:<br /><br /> <br /><br /> -A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serviço está inativo.<br /><br /> -A concessão do grupo de disponibilidade para conectar-se ao cluster de failover WSFC expira porque nenhum ACK foi recebido da instância de servidor. Para obter mais informações, veja [Como funciona o tempo limite de concessão de AlwaysOn do SQL Server](http://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx).|  
-|2|Especifica que um failover automático deverá ser iniciado quando uma destas condições ocorrer:<br /><br /> <br /><br /> -A instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não se conectar ao cluster e o usuário especificado **health_check_timeout** limite do grupo de disponibilidade é excedido.<br /><br /> -A réplica de disponibilidade está em estado de falha.|  
+|1|Especifica que um failover automático deverá ser iniciado quando uma destas condições ocorrer:<br /><br /> <br /><br /> -O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serviço está inativo.<br /><br /> -A concessão do grupo de disponibilidade para se conectar ao cluster de failover WSFC expira porque nenhum ACK foi recebido da instância de servidor. Para obter mais informações, veja [Como funciona o tempo limite de concessão de AlwaysOn do SQL Server](http://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx).|  
+|2|Especifica que um failover automático deverá ser iniciado quando uma destas condições ocorrer:<br /><br /> <br /><br /> -A instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não se conectar ao cluster e o usuário especificou **health_check_timeout** limite do grupo de disponibilidade é excedido.<br /><br /> -A réplica de disponibilidade está em estado de falha.|  
 |3|Especifica que um failover automático deve ser iniciado em erros internos críticos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como spinlocks órfãos, violações do acesso de gravação graves ou muito descarte.<br /><br /> Este é o valor padrão.|  
 |4|Especifica que um failover automático deve ser iniciado em caso de erros internos moderados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como uma condição de memória insuficiente persistente no pool de recursos interno do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |5|Especifica que um failover automático deve ser iniciado em qualquer condição de falha qualificada, incluindo:<br /><br /> <br /><br /> -Esgotamento dos threads de trabalho do SQL Engine.<br /><br /> -Detecção de um deadlock insolúvel.|  
@@ -72,7 +68,7 @@ ms.locfileid: "33181842"
 ## <a name="see-also"></a>Consulte também  
  [sys.availability_replicas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)   
  [Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [Monitorar grupos de disponibilidade & #40; Transact-SQL & #41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
+ [Monitorar grupos de disponibilidade &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [Monitorar grupos de disponibilidade &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
   
   

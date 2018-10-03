@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_fulltext_catalog_components_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_fulltext_catalog_components
 ms.assetid: fbd6a3d4-6a4c-42a2-bff8-2a5eb0745e47
-caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0b0fcb1d151d9e201998eb4ee2725239fc239e33
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 54c22d025ae809d035fe75a0b8fe89160bdfb84f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242102"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47720364"
 ---
 # <a name="sphelpfulltextcatalogcomponents-transact-sql"></a>sp_help_fulltext_catalog_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,12 +46,12 @@ sp_help_fulltext_catalog_components
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**nome do catálogo de texto completo**|**Int**|Nome do catálogo de texto completo.|  
-|**id de catálogo de texto completo**|**sysname**|Identificação do catálogo de texto completo.|  
-|**componenttype**|**sysname**|Tipo de componente. Um dos seguintes:<br /><br /> Filtro<br /><br /> Manipulador de protocolo<br /><br /> Separador de palavras|  
+|**nome do catálogo de texto completo**|**int**|Nome do catálogo de texto completo.|  
+|**id do catálogo de texto completo**|**sysname**|Identificação do catálogo de texto completo.|  
+|**componenttype**|**sysname**|Tipo de componente. Um dos seguintes:<br /><br /> Filtrar<br /><br /> Manipulador de protocolo<br /><br /> Separador de palavras|  
 |**componentname**|**sysname**|O nome do componente.|  
 |**clsid**|**uniqueidentifier**|Identificador de classe do componente.|  
-|**fullpath**|**nvarchar(256)**|Caminho até a localização do componente.<br /><br /> NULL = o chamador não é um membro de **serveradmin** função de servidor fixa.|  
+|**fullpath**|**nvarchar(256)**|Caminho até a localização do componente.<br /><br /> NULL = o chamador não é membro de **serveradmin** função de servidor fixa.|  
 |**version**|**nvarchar(30)**|A versão do componente.|  
 |**manufacturer**|**sysname**|Nome do fabricante do componente.|  
   

@@ -6,61 +6,58 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - DataFactory handler in RDS [ADO]
 - customized handler in RDS [ADO]
 ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3b9cb903d276357e46489dbdcd316d4f3974087a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ced8796278ffab61b5f4e45b687e8059bb34255f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35274695"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47680194"
 ---
-# <a name="writing-your-own-customized-handler"></a>Escrevendo seu próprio manipulador personalizado
-Talvez você queira gravar seu próprio manipulador se você for um administrador de servidor do IIS que deseja que o padrão de suporte de RDS, mas mais controle sobre solicitações de usuários e direitos de acesso.  
+# <a name="writing-your-own-customized-handler"></a>Escrever seu próprio manipulador personalizado
+Talvez você queira escrever seu próprio manipulador se você for um administrador de servidor IIS que queiram padrão dão suporte a RDS, mas mais controle sobre as solicitações do usuário e direitos de acesso.  
   
  MSDFMAP. Manipulador implementa o **IDataFactoryHandler** interface.  
   
 > [!IMPORTANT]
->  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (veja o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Aplicativos que usam o RDS devem migrar para [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (consulte o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Devem ser migrados para aplicativos que usam o RDS [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="idatafactoryhandler-interface"></a>Interface IDataFactoryHandler  
- Essa interface possui dois métodos, **GetRecordset** e **reconectar**. Ambos os métodos requerem que o [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) propriedade ser definida como **adUseClient**.  
+ Essa interface tem dois métodos, **GetRecordset** e **reconectar**. Ambos os métodos requerem que o [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) propriedade ser definida como **adUseClient**.  
   
- Ambos os métodos usam argumentos que apareçam depois da vírgula primeiro no "**manipulador =**" palavra-chave. Por exemplo, `"Handler=progid,arg1,arg2;"` irá passar uma cadeia de caracteres do argumento de `"arg1,arg2"`, e `"Handler=progid"` irá passar um argumento nulo.  
+ Ambos os métodos usam argumentos que apareçam depois da primeira vírgula no "**manipulador =**" palavra-chave. Por exemplo, `"Handler=progid,arg1,arg2;"` irá passar uma cadeia de caracteres do argumento `"arg1,arg2"`, e `"Handler=progid"` irá passar um argumento nulo.  
   
 ## <a name="getrecordset-method"></a>Método GetRecordset  
- Este método consulta a fonte de dados e cria um novo [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto usando os argumentos fornecidos. O **registros** deve ser aberto com **adLockBatchOptimistic** e não deve ser aberto de forma assíncrona.  
+ Este método consulta a fonte de dados e cria um novo [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto usando os argumentos fornecidos. O **conjunto de registros** deve ser aberto com **adLockBatchOptimistic** e não deve ser aberto de forma assíncrona.  
   
 ### <a name="arguments"></a>Argumentos  
  ***conn*** a cadeia de caracteres de conexão.  
   
- ***argumentos*** os argumentos para o manipulador.  
+ ***args*** os argumentos para o manipulador.  
   
- ***consulta*** o texto de comando para fazer uma consulta.  
+ ***consulta*** o texto do comando para fazer uma consulta.  
   
- ***ppRS*** o ponteiro onde o **registros** devem ser retornados.  
+ ***ppRS*** o ponteiro no qual o **Recordset** devem ser retornados.  
   
 ## <a name="reconnect-method"></a>Reconectar-se o método  
- Este método atualiza a fonte de dados. Cria um novo [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto e anexa o determinado **registros**.  
+ Esse método atualiza a fonte de dados. Ele cria um novo [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto e anexa o determinado **conjunto de registros**.  
   
 ### <a name="arguments"></a>Argumentos  
  ***conn*** a cadeia de caracteres de conexão.  
   
- ***argumentos*** os argumentos para o manipulador.  
+ ***args*** os argumentos para o manipulador.  
   
- ***pRS*** um **registros** objeto.  
+ ***pRS*** um **Recordset** objeto.  
   
 ## <a name="msdfhdlidl"></a>msdfhdl.idl  
- Esta é a definição de interface para **IDataFactoryHandler** que aparece no **msdfhdl.idl** arquivo.  
+ Essa é a definição de interface para **IDataFactoryHandler** que aparece na **msdfhdl.idl** arquivo.  
   
 ```  
 [  
@@ -104,10 +101,10 @@ HRESULT _stdcall GetRecordset(
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Arquivo de personalização de conectar-se a seção](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
+ [Seção conexão do arquivo de personalização](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
  [Seção de Logs do arquivo de personalização](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
  [Seção SQL do arquivo de personalização](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [Seção do arquivo UserList de personalização](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
+ [Seção de UserList do arquivo de personalização](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
  [Personalização do DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [Configurações de cliente necessárias](../../../ado/guide/remote-data-service/required-client-settings.md)   
  [Noções básicas sobre o arquivo de personalização](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)

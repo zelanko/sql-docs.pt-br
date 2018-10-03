@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_set_cache_directory_TSQL
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_set_cache_directory stored procedure
 ms.assetid: df56d5a5-8961-494f-a745-d752ca63805a
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2fec21ffdac0ee58f6927935942fedadda563f0f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 825291445c0d31df8230793c3a5d6a1b7f272082
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260882"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47726764"
 ---
 # <a name="spsyscollectorsetcachedirectory-transact-sql"></a>sp_syscollector_set_cache_directory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,12 +42,12 @@ sp_syscollector_set_cache_directory [ @cache_directory = ] 'cache_directory'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@cache_directory =** ] **'***cache_directory***'**  
- O diretório no sistema de arquivos no qual os dados coletados são armazenados temporariamente. *cache_directory* é **nvarchar (255)**, com um valor padrão de NULL. Se nenhum valor for especificado, o valor temporário padrão do diretório do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] será utilizado.  
+ O diretório no sistema de arquivos no qual os dados coletados são armazenados temporariamente. *cache_directory* está **nvarchar (255)**, com um valor padrão de NULL. Se nenhum valor for especificado, o valor temporário padrão do diretório do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] será utilizado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Você deve desabilitar o coletor de dados antes de alterar sua configuração do diretório de cache. Esse procedimento armazenado falhará se o coletor de dados estiver habilitado. Para obter mais informações, consulte [habilitar ou desabilitar a coleta de dados](../../relational-databases/data-collection/enable-or-disable-data-collection.md), e [gerenciar coleta de dados](../../relational-databases/data-collection/manage-data-collection.md).  
   
  O diretório especificado não precisa existir no momento em que o sp_syscollector_set_cache_directory for executado. Entretanto, os dados não serão armazenados em cache ou carregados com êxito até que o diretório seja criado. Recomenda-se criar o diretório antes de executar esse procedimento armazenado.  

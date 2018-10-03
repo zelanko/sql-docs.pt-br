@@ -6,24 +6,21 @@ ms.date: 08/29/2018
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: dma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-caps.latest.revision: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 84601b6a556df64d3708fd749af06be8e753048d
-ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
+ms.openlocfilehash: 63a21ebfd11e9104a2a4b3722a6d54df57784f81
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43240144"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47684444"
 ---
 # <a name="identify-the-right-azure-sql-database-sku-for-your-on-premises-database"></a>Identificar a SKU certa de banco de dados de SQL do Azure para seu banco de dados local
 

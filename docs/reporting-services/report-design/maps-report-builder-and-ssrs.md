@@ -4,7 +4,6 @@ ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - "10508"
@@ -16,12 +15,12 @@ f1_keywords:
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 823c0a7dfc18ffc7504c65a8967c0f203ade596c
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 851451b025b28db88b7939511778c259b337dfd0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43267388"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47785694"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>Mapas (Construtor de Relatórios e SSRS)
   Para visualizar dados comerciais em uma tela de fundo geográfica, você pode acrescentar um mapa ao seu relatório paginado do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . O tipo de mapa selecionado depende de qual informação você deseja comunicar no seu relatório. Você pode adicionar um mapa que só exibe locais ou um mapa de bolhas que varia o tamanho da bolha com base no número de residências em uma área, ou um mapa de marcador que varia o estilo de marcador com base no produto mais lucrativo para cada loja, ou um mapa de linha que exibe rotas entre lojas.  
@@ -87,7 +86,7 @@ ms.locfileid: "43267388"
 #### <a name="spatial-data-in-design-view"></a>Dados espaciais no modo Design  
  No modo Design, o processador de relatório exibe dados espaciais de exemplo para ajudá-lo a criar a camada do mapa. Os dados exibidos dependem da disponibilidade dos dados espaciais:  
   
--   **Dados incorporados.** Os dados de exemplo são recuperados de elementos do mapa inseridos nas camadas do mapa em seu relatório.  
+-   **Dados incorporados.** Os dados de exemplo são recuperados de elementos do mapa incorporados às camadas do mapa em seu relatório.  
   
 -   **Link para um arquivo de forma ESRI.** Se o arquivo de forma (.shp) ESRI e o arquivo de suporte (.dbf) estiverem disponíveis, os dados de exemplo serão carregados a partir do arquivo de forma. Caso contrário, o processador de relatório gerará dados de exemplo e exibirá a mensagem **Nenhum dado espacial disponível**.  
   

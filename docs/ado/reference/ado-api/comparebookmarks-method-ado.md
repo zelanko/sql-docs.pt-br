@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,19 +15,18 @@ f1_keywords:
 helpviewer_keywords:
 - CompareBookmarks method [ADO]
 ms.assetid: d0b64286-2cc4-4a22-8f1d-9aefeebbcbc6
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 592a1e06580aca5990bf5ec6b7d28a6a1ecc5abc
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 85ca76678c0d3e75a106164626c4e3c3a81bd7e9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276795"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47649744"
 ---
 # <a name="comparebookmarks-method-ado"></a>Método CompareBookmarks (ADO)
-Compara dois indicadores e retorna uma indicação de seus valores relativos.  
+Compara dois indicadores e retorna uma indicação dos valores relativos.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,23 +36,23 @@ result = recordset.CompareBookmarks(Bookmark1, Bookmark2)
 ```  
   
 ## <a name="return-value"></a>Valor retornado  
- Retorna um [CompareEnum](../../../ado/reference/ado-api/compareenum.md) valor que indica a posição de linha relativa de dois registros representados por seus indicadores.  
+ Retorna um [CompareEnum](../../../ado/reference/ado-api/compareenum.md) valor que indica a posição de linha relativa de dois registros representado por seus indicadores.  
   
 #### <a name="parameters"></a>Parâmetros  
  *Bookmark1*  
  O indicador da primeira linha.  
   
  *Bookmark2*  
- O marcador da segunda linha.  
+ O indicador da segunda linha.  
   
-## <a name="remarks"></a>Remarks  
- Os indicadores devem aplicar o mesmo [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto, ou um **registros** objeto e seu [clone](../../../ado/reference/ado-api/clone-method-ado.md). Você não pode comparar confiável indicadores de diferentes **registros** objetos, mesmo se elas foram criadas da mesma fonte ou do comando. Ou você pode comparar indicadores para uma **registros** objeto cujo provedor subjacente não oferece suporte a comparações.  
+## <a name="remarks"></a>Comentários  
+ Os indicadores devem aplicar o mesmo [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto, ou uma **conjunto de registros** objeto e seu [clone](../../../ado/reference/ado-api/clone-method-ado.md). Você não pode comparar com confiança indicadores de diferentes **Recordset** objetos, mesmo que elas foram criadas da mesma fonte ou do comando. Nem você pode comparar indicadores para uma **Recordset** cujo provedor subjacente não oferece suporte a comparações de objeto.  
   
- Um indicador identifica exclusivamente uma linha em uma **registros** objeto. Use o [indicador](../../../ado/reference/ado-api/bookmark-property-ado.md) propriedade da linha atual para obter seu indicador.  
+ Um indicador identifica exclusivamente uma linha em uma **Recordset** objeto. Use o [indicador](../../../ado/reference/ado-api/bookmark-property-ado.md) propriedade da linha atual para obter seu indicador.  
   
- Como o tipo de dados de um indicador é específico para cada provedor, ADO expõe como uma **Variant**. Por exemplo, os indicadores do SQL Server são do tipo DBTYPE_R8 (**duplo**). ADO poderia expor este tipo como um **Variant** com um subtipo de **duplo**.  
+ Como o tipo de dados de um indicador é específico para cada provedor, o ADO expõe-o como uma **Variant**. Por exemplo, os indicadores do SQL Server são do tipo DBTYPE_R8 (**duplas**). ADO poderia expor esse tipo como uma **Variant** com um subtipo do **duplo**.  
   
- Ao comparar os indicadores, ADO não tenta executar qualquer tipo de coerção. Apenas os valores são passados para o provedor de onde ocorre a comparação. Se os indicadores passado para o **CompareBookmarks** método são armazenados em variáveis de tipos diferentes, ele pode gerar o seguinte erro de incompatibilidade de tipo: "argumentos são do tipo errado, estão fora do intervalo aceitável ou estão em conflito com o outro."  
+ Ao comparar os indicadores, ADO não tenta fazer qualquer tipo de coerção. Os valores são simplesmente passados para o provedor de onde ocorre a comparação. Se os indicadores são passados para o **CompareBookmarks** método são armazenadas em variáveis de tipos diferentes, ele pode gerar o seguinte erro de incompatibilidade de tipo: "argumentos são do tipo errado, estão fora do intervalo aceitável ou estão em conflito uns com os outros."  
   
  Um indicador que não é válido ou formado incorretamente causará um erro.  
   

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.database_mirroring_endpoints_TSQL
@@ -26,12 +23,12 @@ ms.assetid: f2285199-97ad-473c-a52d-270044dd862b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0b4a39c79c5abf457a3140f731f56c7190aba86a
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: c4a791f5d47382e78ce9bbfe34d939cffc273515
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43021196"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47734594"
 ---
 # <a name="sysdatabasemirroringendpoints-transact-sql"></a>sys.database_mirroring_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +50,7 @@ ms.locfileid: "43021196"
 |**encryption_algorithm**|**tinyint**|Algoritmo de criptografia; um dentre:<br /><br /> **0** – NONE<br /><br /> **1** – RC4<br /><br /> **2** – AES<br /><br /> **3** – NONE, RC4<br /><br /> **4** – NONE, AES<br /><br /> **5** – RC4, AES<br /><br /> **6** – AES, RC4<br /><br /> **7** – NONE, RC4, AES<br /><br /> **8** – NONE, AES, RC4|  
 |**encryption_algorithm_desc**|**nvarchar(60)**|Descrição do algoritmo de criptografia; uma dentre:<br /><br /> Nenhuma<br /><br /> RC4<br /><br /> AES<br /><br /> NONE, RC4<br /><br /> NONE, AES<br /><br /> RC4, AES<br /><br /> AES, RC4<br /><br /> NONE, RC4, AES<br /><br /> NONE, AES, RC4|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 > [!NOTE]  
 >  O algoritmo RC4 tem suporte somente para compatibilidade com versões anteriores. O novo material só pode ser criptografado por meio do algoritmo RC4 ou RC4_128 quando o banco de dados está no nível de compatibilidade 90 ou 100. (Não recomendável.) Use um algoritmo mais recente; por exemplo, um dos algoritmos AES. No [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e superior, o material criptografado usando RC4 ou RC4_128 pode ser descriptografado em qualquer nível de compatibilidade.  

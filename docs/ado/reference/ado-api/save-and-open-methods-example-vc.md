@@ -1,13 +1,11 @@
 ---
-title: Salve e abra o exemplo de métodos (VC + +) | Microsoft Docs
+title: Salvar e abrir um exemplo dos métodos (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,21 +13,20 @@ helpviewer_keywords:
 - Save method [ADO], VC++ example
 - Open method [ADO]
 ms.assetid: 334ae655-8cac-48e6-8d00-1d28f3436e1e
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 870ae7f5776b601b312d799b643c09bd589dc26b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6eaa73453339fd1e62bcd2e3039374a9ca7974b9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281325"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47735984"
 ---
-# <a name="save-and-open-methods-example-vc"></a>Salve e abra o exemplo de métodos (VC + +)
-Esses três exemplos demonstram como o [salvar](../../../ado/reference/ado-api/save-method.md) e **abrir** métodos podem ser usados juntos.  
+# <a name="save-and-open-methods-example-vc"></a>Salvar e abrir um exemplo dos métodos (VC + +)
+Esses três exemplos demonstram como o [salve](../../../ado/reference/ado-api/save-method.md) e **abrir** métodos podem ser usados juntos.  
   
- Suponha que você vai uma viagem de negócios e é executada ao longo de uma tabela de banco de dados. Antes de entrar, você acessa os dados como um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) e salvá-lo em um formulário transportável. Quando você chega ao seu destino, você acessa o **registros** como um local, desconectado **registros**. Fazer alterações para o **Recordset**, em seguida, salve-o novamente. Finalmente, quando você voltar ao início, você se conectar novamente ao banco de dados e atualizá-lo com as alterações feitas em trânsito.  
+ Suponha que você está saindo de uma viagem de negócios e deseja levar ao longo de uma tabela de banco de dados. Antes de entrar, você acessa os dados como uma [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) e salve-o em um formulário transportável. Quando você chega ao seu destino, você acessa o **conjunto de registros** como um local, desconectado **conjunto de registros**. Fazer alterações para o **Recordset**, em seguida, salve-o novamente. Finalmente, quando você voltar ao início, conecte-se novamente ao banco de dados e atualizá-lo com as alterações feitas em trânsito.  
   
 ```  
 // BeginSaveCpp.cpp  

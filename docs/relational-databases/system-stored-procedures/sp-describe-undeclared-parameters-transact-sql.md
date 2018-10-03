@@ -1,14 +1,11 @@
 ---
 title: sp_describe_undeclared_parameters (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/15/2018
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_describe_undeclared_parameters
@@ -18,20 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_undeclared_parameters
 ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9b6b17565a12cde0148982f82cf4b84bd1fd8db1
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 8194c74acb14a78482cc1e1de8fae38682699d3d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43099860"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47679625"
 ---
 # <a name="spdescribeundeclaredparameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Retorna um conjunto de resultados que contém metadados sobre parâmetros não declarados em um [!INCLUDE[tsql](../../includes/tsql-md.md)] em lotes. Considera cada parâmetro é usado na  **\@tsql** do lote, mas não declarado em  **\@params**. Um conjunto de resultados que contém uma linha para cada um desses parâmetros é retornado com as informações de tipo deduzidas para esse parâmetro. O procedimento retornará um resultado vazio definido se o  **\@tsql** lote de entrada não tem parâmetros, exceto aqueles declarados em  **\@params**.  
   
@@ -47,11 +43,11 @@ sp_describe_undeclared_parameters
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **\@tsql =** ] **'***SQL_batch Transact***'**  
- Uma ou mais instruções [!INCLUDE[tsql](../../includes/tsql-md.md)]. *SQL_batch Transact* pode ser **nvarchar (***n***)** ou **nvarchar (max)**.  
+ [  **\@tsql =** ] **'**_Transact-SQL\_lote_**'**  
+ Uma ou mais instruções [!INCLUDE[tsql](../../includes/tsql-md.md)]. *SQL_batch Transact* pode ser **nvarchar (**_n_**)** ou **nvarchar (max)**.  
   
- [  **\@params =** ] **N'***parâmetros***'**  
- \@params fornece uma cadeia de caracteres de declaração de parâmetros para o [!INCLUDE[tsql](../../includes/tsql-md.md)] funciona em lotes, da mesma forma que a forma de sp_executesql. *Parâmetros* pode ser **nvarchar (***n***)** ou **nvarchar (max)**.  
+ [  **\@params =** ] **N'**_parâmetros_**'**  
+ \@params fornece uma cadeia de caracteres de declaração de parâmetros para o [!INCLUDE[tsql](../../includes/tsql-md.md)] funciona em lotes, da mesma forma que a forma de sp_executesql. *Parâmetros* pode ser **nvarchar (**_n_**)** ou **nvarchar (max)**.  
   
  É uma cadeia de caracteres que contém as definições de todos os parâmetros que foram inseridos em *SQL_batch Transact*. A cadeia de caracteres deve ser uma constante Unicode ou uma variável Unicode. Cada definição de parâmetro consiste em um nome de parâmetro e um tipo de dados. n é um espaço reservado que indica definições de parâmetro adicionais. Se a instrução Transact-SQL ou lote na instrução não contiver parâmetros, \@params não é necessária. O valor padrão para este parâmetro é NULL.  
   
@@ -91,7 +87,7 @@ sp_describe_undeclared_parameters
 |**suggested_tds_type_id**|**int NOT NULL**|Para uso interno.|  
 |**suggested_tds_length**|**int NOT NULL**|Para uso interno.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  **sp_describe_undeclared_parameters** sempre retorna retorna o status de zero.  
   
  O uso mais comum é quando um aplicativo recebe uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] que pode conter parâmetros e precisa processá-los de algum modo. Um exemplo é uma interface do usuário (como ODBCTest ou RowsetViewer) onde o usuário fornece uma consulta com sintaxe de parâmetro ODBC. O aplicativo deve descobrir o número de parâmetros dinamicamente e deve solicitar cada parâmetro ao usuário.  
@@ -106,7 +102,7 @@ sp_describe_undeclared_parameters
   
 -   Se a entrada [!INCLUDE[tsql](../../includes/tsql-md.md)] lote declara uma variável local de mesmo nome como um parâmetro declarado na \@params.  
   
--   Se a instrução faz referência a tabelas temporárias.  
+- Se a instrução faz referência a tabelas temporárias.
   
  Se \@tsql não tem parâmetros, além daqueles declarados em \@params, o procedimento retornará um conjunto de resultados vazio.  
   

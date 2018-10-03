@@ -4,31 +4,25 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - sp_deletemergeconflictrow
 - sp_deletemergeconflictrow_TSQL
 helpviewer_keywords:
 - sp_deletemergeconflictrow
 ms.assetid: 64cf1186-28b8-4cd9-88f1-a7808a9c8d60
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c4290c07ddb9e7f352c6fe6177205ce6add03ead
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: fc1152ee4893991a207936c1a08dccc988fbde5a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43017389"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47670558"
 ---
 # <a name="spdeletemergeconflictrow-transact-sql"></a>sp_deletemergeconflictrow (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +61,7 @@ sp_deletemergeconflictrow [ [ @conflict_table = ] 'conflict_table' ]
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  **sp_deletemergeconflictrow** é usado em replicação de mesclagem.  
   
  [MSmerge_conflicts_info &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) tabela é uma tabela do sistema e não é excluída do banco de dados, mesmo se ele estiver vazio.  

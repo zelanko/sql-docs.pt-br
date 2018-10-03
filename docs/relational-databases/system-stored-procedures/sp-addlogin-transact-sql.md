@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addlogin
@@ -21,12 +18,12 @@ ms.assetid: 030f19c3-a5e3-4b53-bfc4-de4bfca0fddc
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: eb5604df7df4213db9c30bae494022fc5041962c
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 7d6981879f08b65c334eae9cd81e73223bc353bf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43022136"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47724564"
 ---
 # <a name="spaddlogin-transact-sql"></a>sp_addlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +82,7 @@ sp_addlogin [ @loginame = ] 'login'
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem conter 1 a 128 caracteres, inclusive cartas, símbolos e números. Logons não podem conter uma barra invertida (\\); ser um nome de logon reservado, por exemplo, sa ou público, nem existirem; nem ser nulo ou uma cadeia de caracteres vazia (`''`).  
   
  Se o nome de um banco de dados padrão for fornecido, não será possível conectar-se ao banco de dados especificado sem executar a instrução USE. No entanto, você não pode usar o banco de dados padrão até que você terá acesso ao banco de dados pelo proprietário do banco de dados (usando [sp_adduser](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md) ou [sp_addrolemember](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)) ou [sp_addrole](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md).  

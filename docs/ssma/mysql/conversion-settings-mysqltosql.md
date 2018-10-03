@@ -4,24 +4,18 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: f551cf6e-1575-4206-9cca-975b5b43a6b8
-caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 70450580a3b473f7b549578924e7f965531ad30f
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: a311b35597b3c474c2128e73b148ab882f19f42c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34776012"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47732314"
 ---
 # <a name="conversion-settings-mysqltosql"></a>Configurações de conversão (MySQLToSQL)
 O **'Configurações'** guia permite que o usuário defina as configurações de nível de nó. Na guia estará disponível nos seguintes nós da Metabase:  
@@ -36,22 +30,22 @@ O **'Configurações'** guia permite que o usuário defina as configurações de
   
 -   Nó de tabela  
   
-## <a name="specifications"></a>Especificações de:  
-O **configurações** guia tem duas configurações de usuário, viz.:  
+## <a name="specifications"></a>Especificações:  
+O **configurações** guia tem duas configurações de usuário, de visualização.:  
   
 1.  Conversão de função  
   
 2.  Conversão de tabela  
   
-Essas configurações estarão disponíveis com base no tipo de nó de Metabase. Por exemplo, conversão de função relacionados ao definir não estará disponível no nó de tabela  
+Essas configurações estarão disponíveis com base no tipo de nó de Metabase. Por exemplo, conversão de função relacionados ao definir não estarão disponível em um nó da tabela  
   
 > [!NOTE]  
 > -   As alterações feitas pelo usuário serão salvas no espaço de trabalho do projeto como um arquivo separado de preferência.  
-> -   A extensão deste arquivo será **ccprefs**.  
+> -   A extensão deste arquivo serão **ccprefs**.  
   
 1.  **Configuração da função de conversão:**  
   
-    1.  Essa guia contém **'Forçar a conversão de função'** opção. A opção pode ter um dos quatro valores a seguir:  
+    1.  Essa guia conterá **'Forçar a conversão de função'** opção. A opção pode ter um dos quatro valores a seguir:  
   
         -   Converter de acordo com as configurações de projeto [herdadas]  
   
@@ -63,11 +57,11 @@ Essas configurações estarão disponíveis com base no tipo de nó de Metabase.
   
     2.  Com base nas configurações, a função será ser convertida para uma função ou um procedimento armazenado.  
   
-    3.  As configurações feitas pelo usuário são salvas no arquivo de preferências em cascata quando você clicar em **aplicar** botão.  
+    3.  As configurações feitas pelo usuário são salvas no arquivo de preferências em cascata, ao clicar em **aplicar** botão.  
   
 2.  **Configuração da conversão de tabela:**  
   
-    1.  Essa guia contém **'Geração de coluna auxiliar ROWID Suprimir'** opção. A opção pode ter um dos quatro valores a seguir:  
+    1.  Essa guia conterá **'Geração de coluna auxiliar ROWID Suprimir'** opção. A opção pode ter um dos quatro valores a seguir:  
   
         -   Converter de acordo com as configurações de projeto [herdadas]  
   
@@ -77,10 +71,10 @@ Essas configurações estarão disponíveis com base no tipo de nó de Metabase.
   
         -   Converter de acordo com as configurações de projeto  
   
-    2.  Se **'Sim'**, essa configuração impede a criação de criação de coluna auxiliar ROWID nas tabelas de destino.  
+    2.  Se **'Sim'**, essa configuração impede a criação de criação de coluna auxiliar ROWID em tabelas de destino.  
   
-    3.  As configurações feitas pelo usuário são salvas no arquivo de preferências em cascata quando você clicar em **aplicar** botão.  
+    3.  As configurações feitas pelo usuário são salvas no arquivo de preferências em cascata ao clicar em **aplicar** botão.  
   
 ## <a name="see-also"></a>Consulte também  
-[Configurações de projeto (conversão) (MySQL para o SQL)](http://msdn.microsoft.com/en-us/7ad5fe44-6445-4ba8-a457-5af792631f11)  
+[Configurações do projeto (conversão) (MySQL para o SQL)](http://msdn.microsoft.com/en-us/7ad5fe44-6445-4ba8-a457-5af792631f11)  
   

@@ -4,15 +4,10 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
@@ -22,16 +17,15 @@ helpviewer_keywords:
 - EBV
 - expressions [XQuery], logical
 ms.assetid: de94cd2e-2d48-49fb-9ebd-a2d90c79bf62
-caps.latest.revision: 26
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 20579cbbc8fc16fad2ab33c033fa8c73fbeadf1d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f30b9673ac7ba59e54544e00aaeecbf501c7500b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076763"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47627894"
 ---
 # <a name="logical-expressions-xquery"></a>Expressões lógicas (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +37,7 @@ expression1 and expression2
 expression1 or expression2  
 ```  
   
- As expressões de teste, `expression1,``expression2`, na [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pode resultar em uma sequência vazia, uma sequência de um ou mais nós ou um único valor booliano. Com base no resultado, o valor Booliano efetivo da sequência é determinado da maneira seguinte:  
+ As expressões de teste `expression1,``expression2`, no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pode resultar em uma sequência vazia, uma sequência de um ou mais nós ou um único valor booliano. Com base no resultado, o valor Booliano efetivo da sequência é determinado da maneira seguinte:  
   
 -   Se a expressão de teste resultar em uma sequência vazia, o resultado da expressão será False.  
   
@@ -53,7 +47,7 @@ expression1 or expression2
   
 -   Caso contrário, um erro estático surgirá.  
   
- A lógica **e** e **ou** operador, em seguida, é aplicado aos valores booliano resultantes das expressões com as semânticas lógicas padrão.  
+ A lógica **e** e **ou** operador é então aplicado a valores booliano resultantes das expressões com as semânticas lógicas padrão.  
   
  A consulta a seguir recupera do catálogo de produtos as pequenas imagens de ângulo frontal, o elemento <`Picture`>, para um modelo de produto específico. Observe que para cada documento de descrição de produto, o catálogo pode armazenar uma ou mais imagens de produto com atributos diferentes, como tamanho e ângulo.  
   

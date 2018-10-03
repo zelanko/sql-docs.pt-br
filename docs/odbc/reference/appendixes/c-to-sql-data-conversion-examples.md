@@ -5,29 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - converting data from c to SQL types [ODBC], examples
 - data conversions from C to SQL types [ODBC], examples
 ms.assetid: 9f390afc-d8b8-4286-b559-98b3b8781f3d
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fcba6d92970d0e0b5490f4c24506fe8bb2951217
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 40cd9973bfdce68b1ccbe63edd8c875519dbd22b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32906351"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47620184"
 ---
-# <a name="c-to-sql-data-conversion-examples"></a>C para exemplos de conversão de dados SQL
-Os exemplos a seguir ilustram como o driver converte dados de C para dados do SQL:  
+# <a name="c-to-sql-data-conversion-examples"></a>Exemplos de conversão de dados de C para SQL
+Os exemplos a seguir ilustram como o driver converte os dados de C aos dados do SQL:  
   
-|Identificador de tipo C|Valor de dados C|Tipo SQL<br /><br /> identificador|Coluna<br /><br /> comprimento|Dados SQL<br /><br /> value|SQLSTATE|  
+|Identificador de tipo C|Valor de dados C|Tipo SQL<br /><br /> identificador|coluna<br /><br /> comprimento|Dados SQL<br /><br /> value|SQLSTATE|  
 |-----------------------|------------------|-----------------------------|-----------------------|------------------------|--------------|  
 |SQL_C_CHAR|abcdef\0 [a]|SQL_CHAR|6|abcdef|n/d|  
 |SQL_C_CHAR|abcdef\0 [a]|SQL_CHAR|5|abcde|22001|  
@@ -46,8 +43,8 @@ Os exemplos a seguir ilustram como o driver converte dados de C para dados do SQ
   
  [a] "\0" representa um byte nulo de terminação. O byte nulo de terminação é necessário somente se o comprimento dos dados é SQL_NTS.  
   
- [b] em além para bytes de números, um byte é necessário para um logon e outro bytes é necessária para o ponto decimal.  
+ [b] em além com bytes para números, um byte é necessário para um sinal e outro byte é necessária para o ponto decimal.  
   
- [c] o os números na lista são armazenados nos campos da estrutura de SQL_DATE_STRUCT.  
+ [c] os números nesta lista são os números armazenados nos campos da estrutura SQL_DATE_STRUCT.  
   
- [d] o os números na lista são armazenados nos campos da estrutura de SQL_TIMESTAMP_STRUCT.
+ [d] os números nesta lista são os números armazenados nos campos da estrutura de SQL_TIMESTAMP_STRUCT.

@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,18 +13,17 @@ helpviewer_keywords:
 - CommandText property [ADOX]
 - Views collection [ADOX], Visual Basic example
 ms.assetid: a05a0190-352d-44ff-9488-0c94e9fb656e
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7785eb796690dc0f22dc2a41f714c3b6bb3843dd
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 13dc0a46daa2636dc56cf84f91ad8d014c4a3bdb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287275"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47731324"
 ---
-# <a name="views-collection-commandtext-property-example-vb"></a>Coleção de modos de exibição, o exemplo da propriedade CommandText (VB)
+# <a name="views-collection-commandtext-property-example-vb"></a>Coleção Views, exemplo da propriedade CommandText (VB)
 O código a seguir demonstra como usar o [comando](../../../ado/reference/adox-api/command-property-adox.md) propriedade para atualizar o texto de uma exibição.  
   
 ```  
@@ -82,7 +79,7 @@ End Sub
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedade ActiveConnection (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Objeto de catálogo (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Propriedade de comando (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
- [Objeto de exibição (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
+ [Objeto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Propriedade Command (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
+ [Objeto View (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
  [Coleção Views (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

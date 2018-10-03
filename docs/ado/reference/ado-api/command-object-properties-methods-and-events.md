@@ -1,27 +1,24 @@
 ---
-title: Propriedades do objeto, métodos e eventos de comando | Microsoft Docs
+title: As propriedades do objeto, métodos e eventos de comando | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Command object [ADO], members
 ms.assetid: 0389f21c-06da-4090-9da1-28d912f888d7
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 44133617ed912c0b16d6850769838dc1fde879db
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 132d302d994da5de812347f7c4d0396d5b5cf8ba
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276675"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47705504"
 ---
 # <a name="command-object-properties-methods-and-events"></a>Propriedades do objeto de comando, métodos e eventos
 ## <a name="propertiescollections"></a>Propriedades/coleções  

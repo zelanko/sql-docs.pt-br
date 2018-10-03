@@ -4,13 +4,8 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - authentication
 - instance of SQL Server
@@ -24,16 +19,15 @@ helpviewer_keywords:
 - SQL Server, connecting to
 - SQL Server, reconnecting
 ms.assetid: f84cf007-ddf1-4396-a07c-3e0729abc769
-caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 264e56119b8de2eaf180af82fdff80b1ef14e03a
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 0bedb8ba74d7965df34a102fb0d53a0cbdb248dc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395837"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47649274"
 ---
 # <a name="connecting-to-sql-server-accesstosql"></a>Conectando ao SQL Server (AccessToSQL)
 Migrar bancos de dados de acesso à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você deve se conectar à instância de destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando você se conectar, o SSMA obtém metadados sobre os bancos de dados na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e exibe metadados de banco de dados em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gerenciador de metadados. O SSMA armazena informações sobre qual instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que você está conectado ao, mas não armazena as senhas.  

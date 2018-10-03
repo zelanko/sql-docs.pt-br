@@ -5,9 +5,7 @@ ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_db_missing_index_details
@@ -20,17 +18,16 @@ helpviewer_keywords:
 - missing indexes feature [SQL Server], sys.dm_db_missing_index_details dynamic management view
 - sys.dm_db_missing_index_details dynamic management view
 ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
-caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c7588c1549f73c263df8d805d7b370fab877611a
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 35058af357c7ab702a39e07baac96fa1ee9a38f8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43109872"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47649004"
 ---
 # <a name="sysdmdbmissingindexdetails-transact-sql"></a>sys.dm_db_missing_index_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +47,7 @@ ms.locfileid: "43109872"
 |**included_columns**|**nvarchar(4000)**|Lista separada por vírgulas de colunas necessárias como colunas de cobertura para a consulta. Para obter mais informações sobre como cobrir ou colunas incluídas, consulte [criar índices com colunas incluídas](../../relational-databases/indexes/create-indexes-with-included-columns.md).<br /><br /> Para índices com otimização de memória (hash e otimização de memória não clusterizado), ignore **included_columns**. Todas as colunas da tabela são incluídas em cada índice com otimização de memória.|  
 |**instrução**|**nvarchar(4000)**|Nome da tabela onde o índice está ausente.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Informações retornadas por **DM db_missing_index_details** é atualizada quando uma consulta for otimizada pelo otimizador de consulta e não é persistente. As informações do índice ausente são mantidas apenas até o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ser reiniciado. Os administradores de banco de dados devem periodicamente gerar cópias de backup de informações de índice ausente se quiserem mantê-las após o desligamento e a reinicialização do servidor.  
   
  Para determinar qual índice ausente grupos a um determinado índice ausente é parte do, você pode consultar a **db_missing_index_groups** exibição de gerenciamento dinâmico por pertence com **DM db_missing_index_details**  com base em de **index_handle** coluna.  
