@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 08/16/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_virtualfilestats_TSQL
@@ -21,17 +18,16 @@ helpviewer_keywords:
 - sys.fn_virtualfilestats function
 - statistical information [SQL Server], I/O
 ms.assetid: 96b28abb-b059-48db-be2b-d60fe127f6aa
-caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f8e8bf556d721ac18af7fa552db558395bff76f2
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 73e30668dc103c478d0308d1fd8ee09689822129
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43090984"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47731804"
 ---
 # <a name="sysfnvirtualfilestats-transact-sql"></a>sys.fn_virtualfilestats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,7 +67,7 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 |**FileHandle**|**bigint**|Valor do identificador de arquivo.|  
 |**BytesOnDisk**|**bigint**|Tamanho do arquivo físico (contagem de bytes) em disco.<br /><br /> Para arquivos de banco de dados, isso é o mesmo valor que **tamanho** na **sys. database_files**, mas é expresso em bytes em vez de páginas.<br /><br /> Para arquivos esparsos de instantâneo do banco de dados, este é o espaço que o sistema operacional está usando para o arquivo.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  **fn_virtualfilestats** é um sistema de função com valor de tabela que fornece informações de estatísticas, como o número total de e/SS realizada em um arquivo. Você pode usar essa função para ajudar a manter o controle do período de tempo que os usuários esperaram para ler ou gravar em um arquivo. A função também ajuda a identificar os arquivos que encontram grande quantidade de atividade de E/S.  
   
 ## <a name="permissions"></a>Permissões  

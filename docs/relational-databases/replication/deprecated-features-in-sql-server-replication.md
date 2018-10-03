@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 01/22/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: replication
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - deprecated features [SQL Server replication]
 ms.assetid: 46bd3edd-d6de-40a6-a015-21cce8321feb
-caps.latest.revision: 67
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 23c3395ce12f5a2d60c9c2472f6c4db39394e7d6
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: ad33d137f6c5815bb30c4546d6d6acf578e60997
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37353438"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47758334"
 ---
 # <a name="deprecated-features-in-sql-server-replication"></a>Recursos preteridos em Replicação do Microsoft SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -5,38 +5,35 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], procedures
 - procedures [ODBC], executing
 ms.assetid: a75e497a-4661-438a-a10e-f598c65f81be
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d61929c1d2afb756be5157f3378ff0fe6b4d7e95
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ff234d1d8e099611c8718eac5ae3b584e926a2bd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32910771"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47717944"
 ---
-# <a name="executing-procedures"></a>Executando procedimentos
-ODBC define uma sequência de escape padrão para a execução de procedimentos. Para obter a sintaxe dessa sequência e um exemplo de código que usa, consulte [chamadas de procedimento](../../../odbc/reference/develop-app/procedure-calls.md).  
+# <a name="executing-procedures"></a>Executar procedimentos
+ODBC define uma sequência de escape padrão para a execução de procedimentos. Para obter a sintaxe dessa sequência e um exemplo de código que a usa, consulte [chamadas de procedimento](../../../odbc/reference/develop-app/procedure-calls.md).  
   
  Para executar um procedimento, um aplicativo executa as seguintes ações:  
   
 1.  Define os valores de quaisquer parâmetros. Para obter mais informações, consulte [parâmetros de instrução](../../../odbc/reference/develop-app/statement-parameters.md), mais adiante nesta seção.  
   
-2.  Chamadas **SQLExecDirect** e passa uma cadeia de caracteres que contém a instrução SQL que executa o procedimento. Essa instrução pode usar a sequência de escape definida pela sintaxe ODBC ou específicos de DBMS; instruções que usam a sintaxe específica de DBMS não são interoperáveis.  
+2.  Chamadas **SQLExecDirect** e passa uma cadeia de caracteres que contém a instrução SQL que executa o procedimento. Essa instrução pode usar a sequência de escape definida pela sintaxe ODBC ou específicos de DBMS; as instruções que usam a sintaxe específica de DBMS não são interoperáveis.  
   
 3.  Quando **SQLExecDirect** é chamado, o driver:  
   
     -   Recupera os valores de parâmetro atuais e converte-os conforme necessário. Para obter mais informações, consulte [parâmetros de instrução](../../../odbc/reference/develop-app/statement-parameters.md), mais adiante nesta seção.  
   
-    -   Chama o procedimento na fonte de dados e envia os valores de parâmetro convertido. Como o driver chama o procedimento é específico do driver. Por exemplo, ele pode modificar a instrução SQL para usar a gramática SQL da fonte de dados e enviar essa instrução para execução ou ele pode chamar o procedimento diretamente, usando um mecanismo de chamada de procedimento remoto (RPC) que é definido no protocolo de fluxo de dados do DBMS.  
+    -   Chama o procedimento na fonte de dados e envia os valores de parâmetro convertido. Como o driver chama o procedimento é específica do driver. Por exemplo, ele pode modificar a instrução SQL para usar a gramática SQL da fonte de dados e enviar essa instrução para execução, ou ele pode chamar o procedimento diretamente usando um mecanismo de chamada de procedimento remoto (RPC) que é definido no protocolo de fluxo de dados do DBMS.  
   
-    -   Retorna os valores dos parâmetros de saída ou qualquer entrada/saída ou o valor de retorno do procedimento, supondo que o procedimento for bem-sucedido. Esses valores podem não estar disponíveis até após o processamento de todos os outros resultados (conjuntos de resultados e contagens de linhas) gerados pelo procedimento. Se o procedimento falhar, o driver retorna erros.
+    -   Retorna os valores de parâmetros de saída ou qualquer entrada/saída ou o valor de retorno do procedimento, supondo que o procedimento for bem-sucedido. Esses valores podem não estar disponíveis até depois do processamento de todos os outros resultados (conjuntos de resultados e contagens de linhas) gerados pelo procedimento. Se o procedimento falhar, o driver retornará quaisquer erros.

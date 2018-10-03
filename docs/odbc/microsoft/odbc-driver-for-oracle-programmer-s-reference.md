@@ -5,23 +5,20 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d70e79a1-6403-49ad-8713-eda6e8aa287e
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f68964557d5878b4575a1a6a9592514b3abe8cb7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6b3373566d002d75856c13b725150f9202aef5dd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32900931"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47751134"
 ---
-# <a name="odbc-driver-for-oracle-programmer39s-reference"></a>O Driver ODBC para Oracle programador&#39;s referência
+# <a name="odbc-driver-for-oracle-programmer39s-reference"></a>O Driver ODBC para Oracle programador&#39;referência de s
 > [!IMPORTANT]  
 >  Este recurso será removido em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Em vez disso, use o driver ODBC fornecido pela Oracle.  
   
@@ -47,7 +44,7 @@ ms.locfileid: "32900931"
   
 -   [Procedimentos armazenados do Driver ODBC para Oracle](../../odbc/microsoft/stored-procedures-odbc-driver-for-oracle.md)  
   
--   [Driver ODBC para mensagens de erro do Oracle](../../odbc/microsoft/error-messages-odbc-driver-for-oracle.md)  
+-   [Driver ODBC para Oracle mensagens de erro](../../odbc/microsoft/error-messages-odbc-driver-for-oracle.md)  
   
 -   [Níveis de conformidade do ODBC](../../odbc/microsoft/odbc-driver-for-oracle-conformance-levels.md)  
   

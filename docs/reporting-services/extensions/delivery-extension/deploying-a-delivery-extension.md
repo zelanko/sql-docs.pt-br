@@ -4,10 +4,7 @@ ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: extensions
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - delivery extensions [Reporting Services], deploying
 - Extension element
@@ -15,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4436ce48-397d-42c7-9b5d-2a267e2a1b2c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 356f29e4f92c4949e311993ee1444bb57ad61aa9
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 4661104c1254dd7b3cf58a5e8be1dbe7c598fd6e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43269985"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47768694"
 ---
 # <a name="deploying-a-delivery-extension"></a>Implantando uma extensão de entrega
   As extensões de entrega fornecem suas informações de configuração na forma de um arquivo de configuração XML. O arquivo XML é compatível com o esquema XML definido para extensões de entrega. As extensões de entrega oferecem infraestrutura para a definição e para a modificação do arquivo de configuração.  

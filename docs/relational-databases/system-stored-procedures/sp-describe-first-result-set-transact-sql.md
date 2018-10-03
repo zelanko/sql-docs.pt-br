@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/17/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_describe_first_result_set
@@ -18,17 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_first_result_set
 ms.assetid: f2355a75-3a8e-43e6-96ad-4f41038f6d22
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 03d40263e27c16dcf3eff5300f942f3deb295bd9
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: e4c538f7433034744e5a2799c38e6b5f5826ba48
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43099102"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47705874"
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -112,7 +108,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**tds_collation_id**|**int NULL**|Para uso interno.|  
 |**tds_collation_sort_id**|**tinyint NULL**|Para uso interno.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  **sp_describe_first_result_set** garantias de que se o procedimento retorna os metadados do primeiro conjunto de resultados para (um controle) em lotes A e, se esse lote (A) for subsequentemente executado, em seguida, o lote serão de (1) gerará um erro de tempo de otimização, (2) gera um erro de tempo de execução, (3) não retornará nenhum resultado definida, ou (4) retorna um primeiro conjunto de resultados com os mesmos metadados descritos por **sp_describe_first_result_set**.  
   
  O nome, a nulidade e o tipo de dados podem diferir. Se **sp_describe_first_result_set** retorna um conjunto de resultados vazio, a garantia é que a execução de lote retornará conjuntos sem resultados.  

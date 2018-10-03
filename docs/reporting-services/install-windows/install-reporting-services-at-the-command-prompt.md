@@ -3,7 +3,6 @@ title: Instalar o Reporting Services 2016 no prompt de comando – SSRS | Micros
 ms.date: 01/09/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - command line
@@ -11,18 +10,18 @@ ms.assetid: 048169b3-512c-41e4-895a-0416eff41268
 author: markingmyname
 ms.author: maghan
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 53797621cda632c85700506c753c96f5d1e21ae4
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: b098ffb4559393d3ca1b309b8310e4c3df65f475
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43267595"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47772864"
 ---
 # <a name="install-reporting-services-2016-at-the-command-prompt"></a>Instalar o Reporting Services 2016 no prompt de comando
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
-[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] oferece suporte a uma instalação de linha de comando do programa de instalação do SQL Server. Este tópico contém vários exemplos de instalações de linha de comando que são específicas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Para obter uma descrição completa das opções de linha de comando disponíveis para todos os componentes do SQL Server, consulte [Instalar o SQL Server por meio do prompt de comando](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md). Este tópico não descreve opções de linha de comando para o suplemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para produtos SharePoint. Para obter informações sobre a instalação de comando do suplemento, consulte [Instalar o suplemento usando o arquivo de instalação rsSharePoint.msi](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md#bkmk_install_rssharepoint).
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dá suporte a uma instalação de linha de comando do programa de instalação do SQL Server. Este tópico contém vários exemplos de instalações de linha de comando que são específicas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Para obter uma descrição completa das opções de linha de comando disponíveis para todos os componentes do SQL Server, consulte [Instalar o SQL Server por meio do prompt de comando](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md). Este tópico não descreve opções de linha de comando para o suplemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para produtos SharePoint. Para obter informações sobre a instalação de comando do suplemento, consulte [Instalar o suplemento usando o arquivo de instalação rsSharePoint.msi](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md#bkmk_install_rssharepoint).
 
 ##  <a name="bkmk_native_mode"></a> Reporting Services no modo Nativo
 

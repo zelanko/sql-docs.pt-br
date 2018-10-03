@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - rowset size [ODBC]
@@ -16,26 +14,25 @@ helpviewer_keywords:
 - block cursors [ODBC]
 - result sets [ODBC], block cursors
 ms.assetid: 60366ae8-175c-456a-ae5e-bdd860786911
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c0fa3d2feb8bcd3c4c342567e67f403edfb8029a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 132ee99180595dca5e203a6821c5f87aa616530d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32912331"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47695214"
 ---
 # <a name="rowset-size"></a>Tamanho do conjunto de linhas
-O tamanho do conjunto de linhas a ser usado depende do aplicativo. Aplicativos baseados em tela comumente siga uma das duas estratégias. A primeira é para definir o tamanho do conjunto de linhas para o número de linhas exibidas na tela; Se o usuário o redimensiona a tela, o aplicativo altera o tamanho do conjunto de linhas adequadamente. A segunda é definir o tamanho do conjunto de linhas para um número maior, como 100, que reduz o número de chamadas para a fonte de dados. O aplicativo localmente rola dentro do conjunto de linhas quando possível e busca de novas linhas apenas quando ele rola fora do conjunto de linhas.  
+Qual tamanho de conjunto de linhas a ser usado depende do aplicativo. Aplicativos baseados em tela comumente siga uma das duas estratégias. A primeira é definir o tamanho do conjunto de linhas para o número de linhas exibidas na tela; Se o usuário redimensiona a tela, o aplicativo altera o tamanho do conjunto de linhas adequadamente. A segunda é definir o tamanho do conjunto de linhas para um número maior, como 100, que reduz o número de chamadas para a fonte de dados. O aplicativo localmente rola dentro do conjunto de linhas quando possível e busca de novas linhas somente quando ele rola fora do conjunto de linhas.  
   
- Outros aplicativos, como relatórios, tendem a definir o tamanho do conjunto de linhas para o maior número de linhas que o aplicativo pode manipular razoavelmente — com um conjunto de linhas maior, a rede sobrecarga por linha, às vezes, é reduzida. Exatamente um conjunto de linhas como grande pode ser depende do tamanho de cada linha e a quantidade de memória disponível no.  
+ Outros aplicativos, como relatórios, tendem a definir o tamanho do conjunto de linhas para o maior número de linhas que o aplicativo pode manipular razoavelmente — com um conjunto de linhas maior, a rede sobrecarga por linha, às vezes, é reduzida. Exatamente um conjunto de linhas como grandes pode ser depende do tamanho de cada linha e a quantidade de memória disponível.  
   
- Tamanho do conjunto de linhas é definido por uma chamada para **SQLSetStmtAttr** com um *atributo* argumento de SQL_ATTR_ROW_ARRAY_SIZE. O aplicativo pode alterar o tamanho do conjunto de linhas, associar novos buffers de conjunto de linhas (chamando **SQLBindCol** ou especificando um deslocamento de associação) mesmo depois que linhas foram buscadas, ou ambos. As implicações de alterar o tamanho do conjunto de linhas dependem da função:  
+ Tamanho do conjunto de linhas é definido por uma chamada para **SQLSetStmtAttr** com um *atributo* argumento de SQL_ATTR_ROW_ARRAY_SIZE. O aplicativo pode alterar o tamanho do conjunto de linhas, associar os buffers do novo conjunto de linhas (chamando **SQLBindCol** ou especificando um deslocamento de associação), mesmo depois de linhas foram buscadas, ou ambos. As implicações de alterar o tamanho do conjunto de linhas dependem da função:  
   
--   **SQLFetch** e **SQLFetchScroll** usar o tamanho do conjunto de linhas no momento da chamada para determinar quantas linhas para buscar. No entanto, **SQLFetchScroll** com um *FetchOrientation* de incrementos SQL_FETCH_NEXT o cursor com base no conjunto de linhas de busca anterior e, em seguida, busca um conjunto de linhas com base no tamanho atual do conjunto de linhas.  
+-   **SQLFetch** e **SQLFetchScroll** usar o tamanho de conjunto de linhas no momento da chamada para determinar quantas linhas para buscar. No entanto, **SQLFetchScroll** com um *FetchOrientation* de incrementos SQL_FETCH_NEXT o cursor com base no conjunto de linhas de busca anterior e, em seguida, busca um conjunto de linhas com base no tamanho atual do conjunto de linhas.  
   
--   **SQLSetPos** usa o tamanho de conjunto de linhas está em vigor a partir de uma chamada anterior para **SQLFetch** ou **SQLFetchScroll**, pois **SQLSetPos** opera em um conjunto de linhas que já foi definido. **SQLSetPos** também escolherá o novo tamanho do conjunto de linhas se **SQLBulkOperations** foi chamado depois que o tamanho do conjunto de linhas foi alterado.  
+-   **SQLSetPos** usa o tamanho do conjunto de linhas que entra em vigor a partir de uma chamada anterior para **SQLFetch** ou **SQLFetchScroll**, pois **SQLSetPos** opera em um conjunto de linhas que já foi definida. **SQLSetPos** também selecionará o novo tamanho do conjunto de linhas se **SQLBulkOperations** foi chamado depois que o tamanho do conjunto de linhas foi alterado.  
   
--   **SQLBulkOperations** usa o tamanho do conjunto de linhas em vigor no momento da chamada, porque ele executa as operações em uma tabela independente de qualquer conjunto de linhas busca.
+-   **SQLBulkOperations** usa o tamanho do conjunto de linhas em vigor no momento da chamada, pois ele executa operações em uma tabela independente de qualquer conjunto de linhas buscado.

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_dbmmonitorresults
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - sp_dbmmonitorresults
 - database mirroring [SQL Server], monitoring
 ms.assetid: d575e624-7d30-4eae-b94f-5a7b9fa5427e
-caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 16061dc41994cd032a9e6124d38abf3acb2e6be5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 54cf9a13396674c2ac9dd43845c94d7ac657f008
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33256665"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47702742"
 ---
 # <a name="spdbmmonitorresults-transact-sql"></a>sp_dbmmonitorresults (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,9 +63,9 @@ sp_dbmmonitorresults database_name
   
  6 = últimas 100 linhas  
   
- 7 = 500 última linhas  
+ 7 = último 500 linhas  
   
- 8 = última 1.000 linhas  
+ 8 = último 1.000 linhas  
   
  9 = Últimas 1.000.000 linhas  
   
@@ -78,10 +74,10 @@ sp_dbmmonitorresults database_name
   
  0 = Não atualiza o status do banco de dados. Os resultados são computados utilizando somente as últimas duas linhas, a idade depende de quando a tabela de status foi atualizada.  
   
- 1 = atualiza o status do banco de dados chamando **sp_dbmmonitorupdate** antes de calcular os resultados. No entanto, se a tabela de status tenha sido atualizada nos 15 segundos anteriores ou o usuário não é um membro do **sysadmin** função fixa de servidor **sp_dbmmonitorresults** é executado sem atualizar o status.  
+ 1 = atualiza o status do banco de dados chamando **sp_dbmmonitorupdate** antes de computar os resultados. No entanto, se a tabela de status tenha sido atualizada nos 15 segundos anteriores, ou o usuário não é um membro do **sysadmin** função de servidor fixa **sp_dbmmonitorresults** é executado sem atualizar o status.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- Nenhuma  
+ None  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Retorna o número solicitado de linhas de status de histórico do banco de dados especificado. Cada linha contém as seguintes informações:  
@@ -89,29 +85,29 @@ sp_dbmmonitorresults database_name
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|Nome de um banco de dados espelho.|  
-|**role**|**Int**|Função de espelhamento atual da instância do servidor:<br /><br /> 1 = Principal<br /><br /> 2 = Espelhamento|  
-|**mirroring_state**|**Int**|Estado do banco de dados:<br /><br /> 0 = suspenso<br /><br /> 1 = desconectado<br /><br /> 2 = Sincronização<br /><br /> 3 = Failover pendente<br /><br /> 4 = Sincronizado|  
-|**witness_status**|**Int**|O status da conexão da testemunha na sessão de espelhamento de banco de dados pode ser:<br /><br /> 0 = Desconhecido<br /><br /> 1 = conectado<br /><br /> 2 = Desconectado|  
-|**log_generation_rate**|**Int**|Quantidade de log gerado desde a atualização anterior do status de espelhamento deste banco de dados em kilobytes/segundo.|  
-|**unsent_log**|**Int**|Tamanho de log não enviado na fila de envio do principal em kilobytes.|  
-|**send_rate**|**Int**|Taxa de envio de logs do principal para o espelhamento em kilobytes/segundo.|  
-|**unrestored_log**|**Int**|Tamanho da fila de restauração do espelhamento em kilobytes.|  
-|**recovery_rate**|**Int**|Taxa de restauração do espelhamento em kilobytes/segundo.|  
-|**transaction_delay**|**Int**|Atraso total de todas as transações em milissegundos.|  
-|**transactions_per_sec**|**Int**|Número de transações que estão ocorrendo por segundo na instância do servidor principal.|  
-|**average_delay**|**Int**|Espera média na instância de servidor principal para cada transação devido ao espelhamento de banco de dados. Em modo de alto desempenho (isto é, quando a propriedade SAFETY é definida em OFF), este valor geralmente é 0.|  
+|**role**|**int**|Função de espelhamento atual da instância do servidor:<br /><br /> 1 = Principal<br /><br /> 2 = Espelhamento|  
+|**mirroring_state**|**int**|Estado do banco de dados:<br /><br /> 0 = Suspended<br /><br /> 1 = desconectado<br /><br /> 2 = Sincronização<br /><br /> 3 = Failover pendente<br /><br /> 4 = Sincronizado|  
+|**witness_status**|**int**|O status da conexão da testemunha na sessão de espelhamento de banco de dados pode ser:<br /><br /> 0 = Desconhecido<br /><br /> 1 = conectado<br /><br /> 2 = Desconectado|  
+|**log_generation_rate**|**int**|Quantidade de log gerado desde a atualização anterior do status de espelhamento deste banco de dados em kilobytes/segundo.|  
+|**unsent_log**|**int**|Tamanho de log não enviado na fila de envio do principal em kilobytes.|  
+|**send_rate**|**int**|Taxa de envio de logs do principal para o espelhamento em kilobytes/segundo.|  
+|**unrestored_log**|**int**|Tamanho da fila de restauração do espelhamento em kilobytes.|  
+|**recovery_rate**|**int**|Taxa de restauração do espelhamento em kilobytes/segundo.|  
+|**transaction_delay**|**int**|Atraso total de todas as transações em milissegundos.|  
+|**transactions_per_sec**|**int**|Número de transações que estão ocorrendo por segundo na instância do servidor principal.|  
+|**average_delay**|**int**|Espera média na instância de servidor principal para cada transação devido ao espelhamento de banco de dados. Em modo de alto desempenho (isto é, quando a propriedade SAFETY é definida em OFF), este valor geralmente é 0.|  
 |**time_recorded**|**datetime**|Hora em que a linha foi registrada pelo monitor de espelhamento de banco de dados. Essa é a hora do relógio do sistema do principal.|  
 |**time_behind**|**datetime**|Hora de relógio do sistema aproximada do principal para o qual o banco de dados espelho é atualmente atualizado. Este valor é significante somente na instância de servidor principal.|  
 |**local_time**|**datetime**|Hora de relógio de sistema na instância de servidor local quando esta linha foi atualizada.|  
   
-## <a name="remarks"></a>Remarks  
- **sp_dbmmonitorresults** pode ser executado somente no contexto da **msdb** banco de dados.  
+## <a name="remarks"></a>Comentários  
+ **sp_dbmmonitorresults** pode ser executado somente no contexto do **msdb** banco de dados.  
   
 ## <a name="permissions"></a>Permissões  
- Requer a participação no **sysadmin** função de servidor fixa ou o **dbm_monitor** função de banco de dados fixa no **msdb** banco de dados. O **dbm_monitor** função permite que seus membros exibir o status de espelhamento de banco de dados, mas não atualizá-lo, mas não exibir ou configurar eventos de espelhamento de banco de dados.  
+ Requer associação na **sysadmin** função de servidor fixa ou nos **dbm_monitor** função de banco de dados fixa no **msdb** banco de dados. O **dbm_monitor** função permite que seus membros exibir o status de espelhamento de banco de dados, mas não atualizá-lo, mas não exibir ou configurar eventos de espelhamento de banco de dados.  
   
 > [!NOTE]  
->  Na primeira vez que **sp_dbmmonitorupdate** é executado, ele cria o **dbm_monitor** função de banco de dados fixa no **msdb** banco de dados. Membros do **sysadmin** função de servidor fixa pode adicionar qualquer usuário para o **dbm_monitor** função fixa de banco de dados.  
+>  Na primeira vez em que **sp_dbmmonitorupdate** é executado, ele cria a **dbm_monitor** função de banco de dados fixa no **msdb** banco de dados. Membros do **sysadmin** função de servidor fixa pode adicionar qualquer usuário para o **dbm_monitor** função fixa de banco de dados.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo seguinte retorna as linhas registradas durante as duas horas anteriores sem atualizar o status do banco de dados.  

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_create_plan_guide_from_handle_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_create_plan_guide_from_handle
 ms.assetid: 02cfb76f-a0f9-4b42-a880-1c3e7d64fe41
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 78d466a6860eb145c409f32735c812f17a051e44
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 29e5bd9f5dc682862d636b49d77e6b338fe937b9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43032966"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47734065"
 ---
 # <a name="spcreateplanguidefromhandle-transact-sql"></a>sp_create_plan_guide_from_handle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +55,7 @@ sp_create_plan_guide_from_handle [ @name = ] N'plan_guide_name'
   
  Quando NULL é especificado ou um deslocamento de instrução não é especificado, um guia de plano é criado para cada instrução no lote usando o plano de consulta do identificador de plano especificado. Os guias de plano resultantes são equivalentes aos que usam a dica de consulta USE PLAN para forçar o uso de um determinado plano.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Um guia de plano não pode ser criado para todos os tipos de instrução. Se um guia de plano não puder ser criado para uma instrução no lote, o procedimento armazenado ignorará a instrução e avançará para a próxima instrução do lote. Caso uma instrução ocorra várias vezes no mesmo lote, o plano da última ocorrência será habilitado, e os planos anteriores da instrução serão desabilitados. Se nenhuma instrução do lote puder ser usada em um guia de plano, o erro 10532 será gerado e a instrução falhará. Recomendamos sempre que você obtenha o identificador de plano na exibição de gerenciamento dinâmico sys.dm_exec_query_stats para ajudar a evitar a possibilidade de ocorrência desse erro.  
   
 > [!IMPORTANT]  

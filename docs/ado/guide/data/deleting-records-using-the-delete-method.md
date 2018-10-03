@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ADO, deleting records
@@ -15,37 +13,36 @@ helpviewer_keywords:
 - editing data [ADO], Delete method
 - Delete method [ADO]
 ms.assetid: bfed5cfa-7f57-463b-9da2-0c612a079d30
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a708b3ed5d709be7a05e50a0511f29e3f1430e89
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 1a099b033422e7c10214371772edd090f0cc15fd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270335"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47718164"
 ---
-# <a name="deleting-records-using-the-delete-method"></a>Excluindo registros usando o método Delete
-Usando o **excluir** método marca o registro atual ou um grupo de registros em um **registros** objeto para exclusão. Se o **registros** objeto não permite a exclusão do registro, ocorrerá um erro. Se você estiver no modo de atualização imediata, exclusões ocorrerem no banco de dados imediatamente. Se um registro não pode ser excluído com êxito (devido a violações de integridade de banco de dados, por exemplo), o registro permanecerá no modo de edição após a chamada a **atualização.** Isso significa que você deve cancelar a atualização usando [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) antes de mover fora do registro atual (por exemplo, usando [fechar](../../../ado/reference/ado-api/close-method-ado.md), [mover](../../../ado/reference/ado-api/move-method-ado.md), ou [ NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)).  
+# <a name="deleting-records-using-the-delete-method"></a>Excluir registros usando o método Delete
+Usando o **exclua** método marca o registro atual ou um grupo de registros em uma **Recordset** objeto para exclusão. Se o **Recordset** objeto não permite exclusão de registros, ocorrerá um erro. Se você estiver no modo de atualização imediata, exclusões ocorrem no banco de dados imediatamente. Se um registro não pode ser excluído com êxito (devido a violações de integridade de banco de dados, por exemplo), o registro permanecerá no modo de edição após a chamada para **atualização.** Isso significa que você deve cancelar a atualização usando [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) antes de passar fora do registro atual (por exemplo, usando [Close](../../../ado/reference/ado-api/close-method-ado.md), [mover](../../../ado/reference/ado-api/move-method-ado.md), ou [ NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)).  
   
- Se você estiver no modo de atualização em lotes, os registros marcados para exclusão do cache e a exclusão real acontece quando você chamar o **UpdateBatch** método. (Para exibir os registros excluídos, defina o **filtro** propriedade **adFilterAffectedRecords** depois **excluir** é chamado.)  
+ Se você estiver no modo de atualização em lotes, os registros marcados para exclusão do cache e a exclusão real acontece quando você chama o **UpdateBatch** método. (Para exibir os registros excluídos, defina a **filtro** propriedade **adFilterAffectedRecords** após **excluir** é chamado.)  
   
- Tentativa de recuperar valores de campo do registro excluído gera um erro. Depois de excluir o registro atual, o registro excluído permanece atual até que você mova para um registro diferente. Uma vez sair de registro excluído, ele não é mais acessível.  
+ A tentativa de recuperar valores de campo do registro excluído gera um erro. Depois de excluir o registro atual, o registro excluído permanece atual até que você mova para um registro diferente. Quando você se afasta o registro excluído, ele não está mais acessível.  
   
- Se você aninhar exclusões em uma transação, você pode recuperar os registros excluídos por meio de **RollbackTrans** método. Se você estiver no modo de atualização em lotes, você pode cancelar uma exclusão pendente ou grupo de pendente exclusões usando o **CancelBatch** método.  
+ Caso você aninhe exclusões em uma transação, você pode recuperar registros excluídos usando o **RollbackTrans** método. Se você estiver no modo de atualização em lotes, você pode cancelar uma exclusão pendente ou o grupo de pendentes exclusões usando o **CancelBatch** método.  
   
- Se a tentativa de excluir registros falhar devido a um conflito com os dados subjacentes (por exemplo, um registro já foi excluído por outro usuário), o provedor retornará avisos para o **erros** coleção, mas não pare o programa execução. Um erro de tempo de execução ocorre somente se houver conflitos em todos os registros solicitados.  
+ Se a tentativa de excluir registros falhar devido a um conflito com os dados subjacentes (por exemplo, um registro já foi excluído por outro usuário), o provedor retornará avisos para o **erros** coleção, mas não interromper o programa execução. Um erro de tempo de execução ocorre somente se houver conflitos em todos os registros solicitados.  
   
- Se o **tabela exclusiva** dinâmico está definida e o **registros** é o resultado da execução de uma operação de junção em várias tabelas, o **excluir** método excluirá linhas somente da tabela nomeada no **tabela exclusiva** propriedade.  
+ Se o **tabela exclusiva** dinâmico estiver definida e o **conjunto de registros** é o resultado da execução de uma operação de junção em várias tabelas, o **excluir** método excluirá linhas somente da tabela nomeada na **tabela exclusiva** propriedade.  
   
- O **excluir** método usa um argumento opcional que permite que você especifique quais registros são afetados pelo **excluir** operação. Os únicos valores válidos para esse argumento são qualquer uma das seguinte ADO **AffectEnum** constantes enumeradas:  
+ O **exclua** método usa um argumento opcional que permite que você especifique quais registros são afetados pela **excluir** operação. Os únicos valores válidos para esse argumento são qualquer uma das seguinte ADO **AffectEnum** constantes enumeradas:  
   
 -   **adAffectCurrent** afeta somente o registro atual.  
   
--   **adAffectGroup** afeta somente os registros que satisfazem atual **filtro** configuração de propriedade. O **filtro** propriedade deve ser definida um **FilterGroupEnum** valor ou uma matriz de **indicadores** para usar essa opção.  
+-   **adAffectGroup** afeta somente os registros que atendem a atual **filtro** configuração da propriedade. O **filtro** propriedade deve ser definida como um **FilterGroupEnum** valor ou uma matriz de **indicadores** para usar essa opção.  
   
- O código a seguir mostra um exemplo da especificação **adAffectGroup** ao chamar o **excluir** método. Este exemplo adiciona alguns registros para o exemplo **registros** e atualiza o banco de dados. Em seguida, ele filtra o **registros** usando o **adFilterAffectedRecords** constante enumerada filtro, que deixa somente novos registros visíveis no **conjunto de registros.** Finalmente, ele chama o **excluir** método e especifica que todos os registros que atendem a atual **filtro** (os novos registros) de configuração de propriedade deve ser excluída.  
+ O código a seguir mostra um exemplo da especificação **adAffectGroup** ao chamar o **excluir** método. Este exemplo adiciona alguns registros para a amostra **Recordset** e atualiza o banco de dados. Em seguida, ele filtra o **conjunto de registros** usando o **adFilterAffectedRecords** constante enumerada filtro, que deixa apenas os registros adicionados recentemente visível no **conjunto de registros.** Por fim, ele chama o **exclua** método e especifica que todos os registros que satisfazem atual **filtro** (os novos registros) de configuração de propriedade deve ser excluída.  
   
 ```  
 'BeginDeleteGroup  

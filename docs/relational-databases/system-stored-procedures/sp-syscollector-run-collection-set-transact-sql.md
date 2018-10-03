@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_run_collection_set_TSQL
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - sp_syscollector_run_collection_set
 - data collector [SQL Server], stored procedures
 ms.assetid: 7bbaee48-dfc7-45c0-b11f-c636b6a7e720
-caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 599cc4a9f8603b8248c7241cbb2ba68055e6fb55
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 706a10db6bc16deb34a428444b2918c5c1ff6b37
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33260159"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47716766"
 ---
 # <a name="spsyscollectorruncollectionset-transact-sql"></a>sp_syscollector_run_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,23 +48,23 @@ sp_syscollector_run_collection_set [[ @collection_set_id = ] collection_set_id ]
   
 ## <a name="arguments"></a>Argumentos  
  [  **@collection_set_id =** ] *collection_set_id*  
- É o identificador local exclusivo do conjunto de coleta. *collection_set_id* é **int** e deve ter um valor se *nome* é NULL.  
+ É o identificador local exclusivo do conjunto de coleta. *collection_set_id* está **int** e deve ter um valor se *nome* é NULL.  
   
  [  **@name =** ] **'***nome***'**  
- É o nome do conjunto de coleta. *nome* é **sysname** e deve ter um valor se *collection_set_id* é NULL.  
+ É o nome do conjunto de coleta. *nome da* está **sysname** e deve ter um valor se *collection_set_id* é NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Remarks  
- O *collection_set_id* ou *nome* deve ter um valor, não pode ser NULL.  
+## <a name="remarks"></a>Comentários  
+ Qualquer um dos *collection_set_id* ou *nome* deve ter um valor, ambos não podem ser NULL.  
   
- Esse procedimento será iniciar a coleta e carregará os trabalhos para conjunto de coleção especificada e iniciará imediatamente o trabalho do agente de coleta se o conjunto de coleta tiver seu **@collection_mode** definido como não armazenado em cache (1). Para obter mais informações, consulte [sp_syscollector_create_collection_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
+ Esse procedimento iniciará a coleta e carregará os trabalhos para a coleção especificada definida e iniciará imediatamente o trabalho de agente de coleta se o conjunto de coleta tem seu **@collection_mode** definido como não armazenado em cache (1). Para obter mais informações, consulte [sp_syscollector_create_collection_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
   
  sp_sycollector_run_collection_set também pode ser usado para executar um conjunto de coleta que não tenha uma agenda.  
   
 ## <a name="permissions"></a>Permissões  
- Requer a participação no **dc_operator** (com permissão EXECUTE) função de banco de dados fixa para executar esse procedimento.  
+ Requer associação na **dc_operator** (com permissão EXECUTE) a função de banco de dados fixa para executar esse procedimento.  
   
 ## <a name="example"></a>Exemplo  
  Inicia um conjunto de coleta usando seu identificador.  

@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,32 +14,31 @@ f1_keywords:
 helpviewer_keywords:
 - FilterAxis property [ADO MD]
 ms.assetid: 9c656963-531e-4cd1-b698-d5f42a9b7ba3
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f59eeff4dc01e2f881712ca2309a83e80d785b27
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 5015888cfafcce56c97f2369d418ed7be842dd28
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283925"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47725954"
 ---
 # <a name="filteraxis-property-ado-md"></a>Propriedade FilterAxis (ADO MD)
-Indica as informações de filtro sobre atual [conjunto de células](../../../ado/reference/ado-md-api/cellset-object-ado-md.md).  
+Indica as informações de filtro sobre o atual [conjunto de células](../../../ado/reference/ado-md-api/cellset-object-ado-md.md).  
   
 ## <a name="return-values"></a>Valores de retorno  
- Retorna um [eixo](../../../ado/reference/ado-md-api/axis-object-ado-md.md) do objeto e é somente leitura.  
+ Retorna um [eixo](../../../ado/reference/ado-md-api/axis-object-ado-md.md) de objeto e é somente leitura.  
   
-## <a name="remarks"></a>Remarks  
- Use o **FilterAxis** propriedade para retornar informações sobre as dimensões que foram usadas para segmentar os dados. O [DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md) propriedade o **eixo** retorna o número de dimensões de slicer. Normalmente, este eixo tem apenas uma linha.  
+## <a name="remarks"></a>Comentários  
+ Use o **FilterAxis** propriedade para retornar informações sobre as dimensões que foram usados para dividir os dados. O [DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md) propriedade da **eixo** retorna o número de dimensões de segmentação de dados. Esse eixo normalmente tem apenas uma linha.  
   
- O **eixo** retornado por **FilterAxis** não está contida no [eixos](../../../ado/reference/ado-md-api/axes-collection-ado-md.md) coleção para um [conjunto de células](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) objeto.  
+ O **eixo** retornado pela **FilterAxis** não está contido no [eixos](../../../ado/reference/ado-md-api/axes-collection-ado-md.md) coleção para uma [conjunto de células](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) objeto.  
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Cellset (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Objeto de eixo (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)   
+ [Objeto Axis (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)   
  [Objeto de dimensão (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)   
  [Propriedade DimensionCount (ADO MD)](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md)

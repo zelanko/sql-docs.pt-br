@@ -4,22 +4,19 @@ ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: extensions
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 helpviewer_keywords:
 - interfaces [Reporting Services]
 - delivery extensions [Reporting Services], implementing
 ms.assetid: aee1608d-374f-4ad3-bc23-fe07fdaa52b7
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: cbc1a9e64e2bdd089776c565c33f4a07105a5619
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 83b4e0f0f6281a3947012be5cf3e64e5ccd7f754
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43271160"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47777264"
 ---
 # <a name="preparing-to-implement-a-delivery-extension"></a>Preparando para implementar uma entrega de extensão
   Antes de implementar a sua extensão de entrega do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], você deve definir as interfaces a serem implementadas. Primeiro você precisa decidir como a sua extensão de entrega será usada, que configurações a sua extensão de entrega exigirá e a funcionalidade específica de que você precisará implementar para entregar notificações de relatório.  

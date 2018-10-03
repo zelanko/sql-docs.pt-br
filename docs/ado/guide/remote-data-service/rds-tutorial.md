@@ -6,55 +6,52 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 02/15/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - RDS tutorial [ADO]
 ms.assetid: 6e3305a0-7bc7-40d1-9122-235c15d23ab2
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dca0329dc201d50335983c9078f85e31f8302d0d
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f9a7538bb51ebe0a04a20aff81e83c3cc1ac92aa
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35274245"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47747884"
 ---
 # <a name="rds-tutorial"></a>Tutorial RDS
-Este tutorial ilustra o uso do modelo de programação do RDS para consultar e atualizar uma fonte de dados. Primeiro, ele descreve as etapas necessárias para realizar essa tarefa. Em seguida, o tutorial é repetido no Microsoft® Visual Basic Scripting Edition (com o ADO para Windows Foundation Classes (ADO/WFC)).  
+Este tutorial ilustra como usar o modelo de programação do RDS para consultar e atualizar uma fonte de dados. Primeiro, ele descreve as etapas necessárias para realizar essa tarefa. Em seguida, o tutorial é repetido no Microsoft® Visual Basic Scripting Edition (apresentando o ADO para Windows Foundation Classes (ADO/WFC)).  
   
- Este tutorial é codificado em idiomas diferentes por dois motivos:  
+ Este tutorial é codificado em diferentes idiomas por dois motivos:  
   
--   A documentação do RDS assume os códigos de leitor no Visual Basic. Isso torna a documentação conveniente para programadores de Visual Basic, mas menos úteis para programadores que usam outras linguagens.  
+-   A documentação do RDS pressupõe que os códigos de leitor no Visual Basic. Isso torna a documentação conveniente para programadores de Visual Basic, mas menos úteis para programadores que usam outras linguagens.  
   
--   Se você não tiver certeza sobre um recurso específico de RDS e você conhece um pouco de outro idioma, você poderá resolver sua pergunta olhando para o mesmo recurso expressado em outro idioma.  
+-   Se você não tiver certeza sobre um determinado recurso RDS e você sabe um pouco de outro idioma, você poderá resolver sua pergunta olhando para o mesmo recurso expressado em outra linguagem.  
   
 > [!IMPORTANT]
->  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (veja o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Aplicativos que usam o RDS devem migrar para [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (consulte o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Devem ser migrados para aplicativos que usam o RDS [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="how-the-tutorial-is-presented"></a>Como o Tutorial é apresentado  
- Este tutorial baseia-se no modelo de programação RDS. Ele aborda cada etapa do modelo de programação individualmente. Além disso, ele ilustra cada etapa com um fragmento de código do Visual Basic.  
+ Este tutorial se baseia no modelo de programação do RDS. Ele aborda cada etapa do modelo de programação individualmente. Além disso, ele ilustra cada etapa com um fragmento de código do Visual Basic.  
   
- O exemplo de código é repetido em outras linguagens com a discussão sobre mínimo. Cada etapa em um tutorial de linguagem de programação determinado é marcada com a etapa correspondente no modelo de programação e descritivo tutorial. Use o número da etapa para se referir a discussão no tutorial descritivo.  
+ O exemplo de código é repetido em outras linguagens com mínima discussão. Cada etapa em um tutorial de linguagem de programação determinado é marcada com a etapa correspondente no modelo de programação e tutorial descritivo. Use o número da etapa para referir-se à discussão no tutorial descritivo.  
   
- O modelo de programação do RDS é mencionado na seção a seguir. Usá-lo como um roteiro conforme você prosseguir com o tutorial.  
+ O modelo de programação do RDS é mencionado na seção a seguir. Usá-lo como um roteiro conforme você continua pelo tutorial.  
   
-## <a name="rds-programming-model-with-objects"></a>Modelo de programação de RDS com objetos  
+## <a name="rds-programming-model-with-objects"></a>Modelo de programação do RDS com objetos  
   
--   Especifique o programa a ser invocado no servidor e obter uma forma (proxy) para se referir a ele do cliente.  
+-   Especifique o programa a ser invocado no servidor e obter uma maneira (proxy) para se referir a ele do cliente.  
   
--   Invoque o programa do servidor. Passe parâmetros para o programa do servidor que identifica a fonte de dados e emitir o comando.  
+-   Invocar o programa do servidor. Passe parâmetros para o programa de servidor que identifica a fonte de dados e emitir o comando.  
   
--   O programa de servidor obtém um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto da fonte de dados, normalmente usando o ADO. Opcionalmente, o **registros** objeto for processado no servidor.  
+-   O programa de servidor obtém um [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto da fonte de dados, normalmente usando o ADO. Opcionalmente, o **Recordset** objeto for processado no servidor.  
   
--   O programa do servidor retorna o último **registros** objeto para o aplicativo cliente.  
+-   O programa de servidor retorna o último **Recordset** objeto para o aplicativo cliente.  
   
--   No cliente, o **registros** objeto opcionalmente é colocado em um formulário que pode ser usado facilmente por controles de visual.  
+-   No cliente, o **Recordset** objeto opcionalmente é colocado em um formulário que pode ser facilmente usado por controles visuais.  
   
--   Altera para o **registros** objeto são enviadas de volta para o servidor e usado para atualizar a fonte de dados.  
+-   Altera para o **Recordset** objeto são enviadas de volta para o servidor e usado para atualizar a fonte de dados.  
   
  Este tutorial contém os tópicos a seguir.  
   
@@ -73,5 +70,5 @@ Este tutorial ilustra o uso do modelo de programação do RDS para consultar e a
 -   [Tutorial RDS (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Etapa 1: Especificar um programa de servidor (Tutorial de RDS)](../../../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md)   
+ [Etapa 1: Especificar um programa de servidor (Tutorial RDS)](../../../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md)   
  [Tutorial RDS (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   

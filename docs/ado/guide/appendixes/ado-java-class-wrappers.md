@@ -6,25 +6,22 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 02/15/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - class wrappers [ADO]
 ms.assetid: 1fc09dc1-9e32-412e-9f43-b8eb8bb483ca
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 72206624c6952a63d7784e2b054f86b9c6cd43f3
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 840d8a0e266a6f913a8a74ec1451bc6285fbb08b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270225"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47729214"
 ---
 # <a name="ado-java-class-wrappers"></a>Wrappers de classe Java ADO
-Esse código declara uma instância do ADO [registros](../../../ado/reference/ado-api/recordset-object-ado.md) wrapper de classe e a inicializa todos na mesma linha de código. Além disso, ele declara variáveis para cada um dos argumentos no [abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md) método, especialmente para [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) e [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) (porque não dá suporte ao Java enumerados tipos). Ele abre e fecha o **registros** objeto. Definir Rs1 como NULL simplesmente agenda essa variável para ser liberado quando Java executa a versão intermitente e sistemática de objetos não utilizados.  
+Esse código declara uma instância do ADO [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) wrapper de classe e a inicializa, tudo na mesma linha de código. Além disso, ele declara variáveis para cada um dos argumentos de [aberto](../../../ado/reference/ado-api/open-method-ado-recordset.md) método, especialmente para [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) e [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) (porque não dá suporte a Java enumerados tipos). Ele abre e fecha o **Recordset** objeto. Definir Rs1 como NULL simplesmente agenda essa variável para ser liberado quando o Java executa sua versão de intermitente e sistemática de objetos não utilizados.  
   
 ```  
 public static void main( String args[])  

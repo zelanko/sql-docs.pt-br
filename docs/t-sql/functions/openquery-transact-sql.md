@@ -5,9 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - OPENQUERY_TSQL
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - pass-through queries [SQL Server]
 - INSERT statement [SQL Server], OPENQUERY function
 ms.assetid: b805e976-f025-4be1-bcb0-3a57b0c57717
-caps.latest.revision: 42
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cbe4bb57e37d650a56f88413b03b8002f6ac2096
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: f89a979716e944a4fff4f6d3021a34c7a51973aa
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37787667"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47768524"
 ---
 # <a name="openquery-transact-sql"></a>OPENQUERY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

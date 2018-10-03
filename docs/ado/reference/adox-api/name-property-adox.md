@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -41,27 +39,26 @@ f1_keywords:
 helpviewer_keywords:
 - Name property [ADOX]
 ms.assetid: 81b92baf-b6b9-4f4e-9f33-4503795518cd
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a9bb6d6e570de4595e2c6b3130432b8829da137b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f078f8664ce0386bba6069d771ba880b1c02e026
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286595"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47737184"
 ---
 # <a name="name-property-adox"></a>Propriedade Name (ADOX)
 Indica o nome do objeto.  
   
-## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
+## <a name="settings-and-return-values"></a>As configurações e valores de retorno  
  Define ou retorna um **cadeia de caracteres** valor.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Nomes não precisam ser exclusivos dentro de uma coleção.  
   
- O **nome** propriedade é leitura/gravação em [coluna](../../../ado/reference/adox-api/column-object-adox.md), [grupo](../../../ado/reference/adox-api/group-object-adox.md), [chave](../../../ado/reference/adox-api/key-object-adox.md), [índice](../../../ado/reference/adox-api/index-object-adox.md), [ Tabela](../../../ado/reference/adox-api/table-object-adox.md), e [usuário](../../../ado/reference/adox-api/user-object-adox.md) objetos. O **nome** propriedade é somente leitura no [catálogo](../../../ado/reference/adox-api/catalog-object-adox.md), [procedimento](../../../ado/reference/adox-api/procedure-object-adox.md), e [exibição](../../../ado/reference/adox-api/view-object-adox.md) objetos.  
+ O **nome** propriedade é leitura/gravação na [coluna](../../../ado/reference/adox-api/column-object-adox.md), [grupo](../../../ado/reference/adox-api/group-object-adox.md), [chave](../../../ado/reference/adox-api/key-object-adox.md), [índice](../../../ado/reference/adox-api/index-object-adox.md), [ Tabela](../../../ado/reference/adox-api/table-object-adox.md), e [usuário](../../../ado/reference/adox-api/user-object-adox.md) objetos. O **nome** propriedade é somente leitura no [catálogo](../../../ado/reference/adox-api/catalog-object-adox.md), [procedimento](../../../ado/reference/adox-api/procedure-object-adox.md), e [exibição](../../../ado/reference/adox-api/view-object-adox.md) objetos.  
   
  Para objetos de leitura/gravação (**coluna**, **grupo**, **chave**, **índice**, **tabela** e  **Usuário** objetos), o valor padrão é uma cadeia de caracteres vazia ("").  
   
@@ -77,6 +74,6 @@ Indica o nome do objeto.
 |[Objeto Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)|[Objeto User (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)|[Objeto View (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)|  
   
 ## <a name="see-also"></a>Consulte também  
- [Tabelas e colunas acrescentar métodos, exemplo de nome de propriedade (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
- [Chaves de acrescentar o método, tipo de chave, RelatedColumn, RelatedTable e exemplo de propriedades de UpdateRule (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+ [Columns and Tables Append métodos, exemplo da propriedade Name (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
+ [Chaves de acrescentar o método, tipo de chave, RelatedColumn, RelatedTable e exemplo das propriedades UpdateRule (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [Exemplo da propriedade ParentCatalog (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)

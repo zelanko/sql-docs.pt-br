@@ -3,7 +3,6 @@ title: Excluir e recriar chaves de criptografia (Gerenciador de Configurações 
 ms.date: 05/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - re-creating encryption keys
@@ -15,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b52d7521d46aa19f452f95f9af3381328672dcc1
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: d910518c2811877920c1656b36a771ea6aebc61b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43264819"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47747194"
 ---
 # <a name="ssrs-encryption-keys---delete-and-re-create-encryption-keys"></a>Chaves de criptografia do SSRS – Excluir e recriar chaves de criptografia
   A exclusão e a recriação de chaves de criptografia são atividades que estão fora da manutenção rotineira da chave de criptografia. Você executa essas tarefas em resposta a uma ameaça específica ao seu servidor de relatórios ou como um último recurso quando não mais puder acessar um banco de dados de servidor de relatórios.  

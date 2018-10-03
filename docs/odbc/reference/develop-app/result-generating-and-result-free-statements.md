@@ -1,13 +1,11 @@
 ---
-title: Instruções de geração de resultado e liberar resultados | Microsoft Docs
+title: Instruções de geração de resultado e sem | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - result-generating statements [ODBC]
@@ -16,28 +14,27 @@ helpviewer_keywords:
 - SQL statements [ODBC], batches
 - result-free statements [ODBC]
 ms.assetid: 2f3475d1-3999-4dd8-aba2-a6e1299c95f8
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d314aa68c02a227f84e6785b722f44dd68964d9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e38e17ac469ec0685f11d7dfde587f36073fb970
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32913721"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47706904"
 ---
-# <a name="result-generating-and-result-free-statements"></a>Instruções de geração de resultado e liberar resultados
-Instruções SQL podem ser livremente divididas em cinco categorias a seguir:  
+# <a name="result-generating-and-result-free-statements"></a>Instruções de geração de resultado e sem resultados
+Instruções SQL podem ser livremente divididas nas seguintes cinco categorias:  
   
--   **Resultados de geração de conjunto de instruções** essas são instruções SQL que geram um conjunto de resultados. Por exemplo, um **selecione** instrução.  
+-   **Resultar de geração de conjunto de instruções** essas são instruções SQL que geram um conjunto de resultados. Por exemplo, uma **selecionar** instrução.  
   
 -   **Instruções de geração de contagem de linhas** essas são instruções SQL que geram uma contagem de linhas afetadas. Por exemplo, um **atualização** ou **excluir** instrução.  
   
 -   **Data Definition Language (DDL) instruções** essas são instruções SQL que modificam a estrutura do banco de dados. Por exemplo, **CREATE TABLE** ou **DROP INDEX**.  
   
--   **Instruções de alteração de contexto** essas são instruções SQL que alterar o contexto de um banco de dados. Por exemplo, o **USE** e **definir** instruções no SQL Server.  
+-   **Alterando o contexto de instruções** essas são instruções SQL que alterar o contexto de um banco de dados. Por exemplo, o **uso** e **definir** instruções no SQL Server.  
   
--   **Instruções administrativas** essas são instruções SQL usado para fins administrativos em um banco de dados. Por exemplo, **GRANT** e **REVOGAR**.  
+-   **Instruções administrativas** essas são instruções SQL usadas para fins administrativos em um banco de dados. Por exemplo, **GRANT** e **REVOGAR**.  
   
- Instruções SQL nas duas primeiras categorias são coletivamente conhecidas como *instruções geram resultados*. Instruções SQL em três categorias de segundo são coletivamente conhecidas como *livre resultados de instruções*. ODBC define a semântica de lotes que incluem as instruções somente gerar resultados. Essa semântica variar muito e, portanto, específico de fonte de dados. Por exemplo, o driver do SQL Server não dá suporte a descartar um objeto e, em seguida, referindo-se a ou recriando o mesmo objeto no mesmo lote. Portanto, o termo *lote* como usado nesse manual refere-se somente a lotes de geração de resultado instruções.
+ Instruções SQL em que as duas primeiras categorias são coletivamente conhecidas como *instruções de geração de resultado*. Instruções SQL em três categorias de segundo são coletivamente conhecidas como *livres de resultado instruções*. ODBC define a semântica de lotes que incluem as instruções de apenas gerar resultados. Essa semântica variar muito e, portanto, específico da fonte de dados. Por exemplo, o driver do SQL Server não oferece suporte a descartar um objeto e, em seguida, referindo-se a ou recriando o mesmo objeto no mesmo lote. Portanto, o termo *lote* como usado deste manual refere-se somente a lotes de geração de resultado de instruções.

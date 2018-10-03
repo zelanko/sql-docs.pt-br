@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_delete_collector_type
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_delete_collector_type
 ms.assetid: 3f32905e-0005-42cb-aef1-7bd04c51fbac
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a6161667473e001fe596d073f8f16aa1022bd969
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 909f85ee78348ac81822b5ebbd09a98b121bb76d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33250762"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47738314"
 ---
 # <a name="spsyscollectordeletecollectortype-transact-sql"></a>sp_syscollector_delete_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,21 +43,21 @@ sp_syscollector_delete_collector_type [[ @collector_type_uid = ] 'collector_type
   
 ## <a name="arguments"></a>Argumentos  
  [  **@collector_type_uid =** ] **'***collector_type_uid***'**  
- É o GUID do tipo de coletor. *collector_type_uid* é **uniqueidentifier** e deve ter um valor se *nome* é NULL.  
+ É o GUID do tipo de coletor. *collector_type_uid* está **uniqueidentifier** e deve ter um valor se *nome* é NULL.  
   
  [  **@name =** ] **'***nome***'**  
- É o nome do tipo de coletor. *nome* é **sysname** e deve ter um valor se *collector_type_uid* é NULL.  
+ É o nome do tipo de coletor. *nome da* está **sysname** e deve ter um valor se *collector_type_uid* é NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Remarks  
- O *collector_type_uid* ou *nome* deve ter um valor, não pode ser NULL.  
+## <a name="remarks"></a>Comentários  
+ Qualquer um dos *collector_type_uid* ou *nome* deve ter um valor, ambos não podem ser NULL.  
   
  Este procedimento lançará um erro caso existam itens de coleta deste tipo de coleta.  
   
 ## <a name="permissions"></a>Permissões  
- Requer a participação no **dc_admin** (com permissão EXECUTE) função de banco de dados fixa para executar esse procedimento.  
+ Requer associação na **dc_admin** (com permissão EXECUTE) a função de banco de dados fixa para executar esse procedimento.  
   
 ## <a name="example"></a>Exemplo  
  Este exemplo exclui o tipo de coletor de Consultas T-SQL Genérico.  

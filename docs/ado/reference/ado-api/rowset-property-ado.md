@@ -1,13 +1,11 @@
 ---
-title: Propriedade de conjunto de linhas (ADO) | Microsoft Docs
+title: Propriedade RowSet (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -19,19 +17,18 @@ f1_keywords:
 helpviewer_keywords:
 - Rowset property [ADO]
 ms.assetid: 7d359294-4ff2-47e0-8111-0c221b24d80e
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1c28d9b4398c0ef17067117ee392ff52aeef5e8f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 4bb98bb7c23d20baf696c553a088cd03f2aa76e1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281285"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47701654"
 ---
-# <a name="rowset-property-ado"></a>Propriedade de conjunto de linhas (ADO)
-Obtém ou define um banco de dados OLE **linhas** objeto de/em uma **ADORecordsetConstruction** objeto. Quando você usa put_Rowset, o conjunto de linhas é transformado em ADO **registros** objeto.  
+# <a name="rowset-property-ado"></a>Propriedade Rowset (ADO)
+Obtém ou define um banco de dados OLE **conjunto de linhas** objeto de/em uma **ADORecordsetConstruction** objeto. Quando você usa put_Rowset, o conjunto de linhas é transformado em ADO **Recordset** objeto.  
   
  Leitura/gravação.  
   
@@ -44,10 +41,10 @@ HRESULT put_Rowset([in] IUnknown* pRowset);
   
 ## <a name="parameters"></a>Parâmetros  
  *ppRowset*  
- Ponteiro para um banco de dados OLE **linhas** objeto.  
+ Ponteiro para um banco de dados OLE **conjunto de linhas** objeto.  
   
  *PRowset*  
- OLE DB **linhas** objeto.  
+ Um banco de dados OLE **conjunto de linhas** objeto.  
   
 ## <a name="return-values"></a>Valores de retorno  
  Esse método de propriedade retorna os valores HRESULT padrão, incluindo S_OK e E_FAIL.  

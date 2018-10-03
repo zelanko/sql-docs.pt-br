@@ -5,21 +5,18 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 386cedbb-fae5-45ce-9363-c4a417f80a2f
-caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 01f55b5907d69585d42385844cc839dd0066e079
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: b49d5a4bee30a8fc5b225bf12e15c29bf942631b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35335940"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47750554"
 ---
 # <a name="connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard"></a>Conectar-se a uma fonte de dados do SQL Server (Assistente de Importação e Exportação do SQL Server)
 Este tópico mostra como se conectar a uma fonte de dados do **Microsoft SQL Server** (arquivo de texto) por meio da página **Escolher uma Fonte de Dados** ou **Escolher um Destino** do Assistente de Importação e Exportação do SQL Server. Há vários provedores de dados que você pode usar para se conectar ao SQL Server.

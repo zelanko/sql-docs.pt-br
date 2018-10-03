@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - server-side cursors [ADO]
@@ -15,30 +13,29 @@ helpviewer_keywords:
 - client-side cursors [ADO]
 - cursors [ADO], server-side
 ms.assetid: 70ef5b1c-0459-41a1-b796-031f61a29a8a
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6323e6ac260d413ad86e11ef5aefa38c7117b138
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6d25153a3c84340ad6feea43aa969ef52d358fe4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272995"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47717714"
 ---
-# <a name="the-significance-of-cursor-location"></a>A importância da posição do Cursor
-Cada cursor usa recursos temporários para armazenar seus dados. Esses recursos podem ser a memória, um arquivo de paginação de disco, os arquivos de disco temporário ou armazenamento temporário até mesmo no banco de dados. O cursor é chamado um *cliente* cursor quando esses recursos estão localizados no computador cliente. O cursor é chamado um *do lado do servidor* cursor quando esses recursos estão localizados no servidor.  
+# <a name="the-significance-of-cursor-location"></a>A importância da posição do cursor
+Cada cursor usa recursos temporários para armazenar seus dados. Esses recursos podem ser um arquivo de paginação de disco, memória, arquivos temporários no disco ou armazenamento temporário até mesmo no banco de dados. O cursor é chamado de um *cliente* cursor quando esses recursos estão localizados no computador cliente. O cursor é chamado de um *servidor* cursor quando esses recursos estão localizados no servidor.  
   
 ## <a name="client-side-cursors"></a>Cursores do lado do cliente  
- No ADO, chame para um cursor do lado do cliente, usando o **adUseClient CursorLocationEnum.** Com um cursor do conjunto de chaves não do lado do cliente, o servidor envia todo conjunto de resultados pela rede para o computador cliente. O computador cliente fornece e gerencia o temporário de recursos necessários pelo conjunto de cursor e resultado. O aplicativo cliente pode procurar por meio de todo conjunto de resultados para determinar quais linhas requer.  
+ No ADO, chame para um cursor do lado do cliente usando o **adUseClient CursorLocationEnum.** Com um cursor do lado do cliente não keyset, o servidor envia o resultado de inteiro definido pela rede para o computador cliente. O computador cliente fornece e gerencia os recursos temporários necessários para o conjunto de cursor e resultado. O aplicativo do lado do cliente pode navegar pelos todo conjunto de resultados para determinar quais linhas em que ele exige.  
   
- Estáticos e controlado por cursores do lado do cliente podem colocar uma carga significativa em sua estação de trabalho se elas incluem muitas linhas. Enquanto todas as bibliotecas de cursor são capazes de criação de cursores com milhares de linhas, os aplicativos projetados para buscar esses grandes conjuntos de linhas podem insatisfatório. Há exceções, claro. Para alguns aplicativos, um grande cursor do lado do cliente pode ser perfeitamente adequado e desempenho não pode ser um problema.  
+ Estáticos e controlado por cursores do lado do cliente podem colocar uma carga significativa em sua estação de trabalho se elas incluírem muitas linhas. Embora todas as bibliotecas de cursor são capazes de criação de cursores com milhares de linhas, os aplicativos projetados para buscar esses grandes conjuntos de linhas podem insatisfatório. Há exceções, é claro. Para alguns aplicativos, um grande cursor do lado do cliente pode ser perfeitamente adequado e desempenho pode não ser um problema.  
   
- Uma vantagem óbvia do cursor do lado do cliente é uma resposta rápida. Depois que o conjunto de resultados foi baixado para o computador cliente, navegar pelas linhas é muito rápido. Seu aplicativo é geralmente mais escalonável com cursores do lado do cliente, pois os requisitos de recursos do cursor são colocados em cada cliente separado e não no servidor.  
+ Uma vantagem óbvia do cursor do lado do cliente é uma resposta rápida. Depois que o conjunto de resultados tiver sido baixado no computador cliente, navegar pelas linhas é muito rápido. Seu aplicativo é geralmente mais escalonável com cursores do lado do cliente, porque os requisitos de recursos do cursor são colocados em cada cliente separado e não no servidor.  
   
 ## <a name="server-side-cursors"></a>Cursores do lado do servidor  
- No ADO, chame para um cursor do lado do servidor, usando o **adUseServer CursorLocationEnum.** Com um cursor do lado do servidor, o servidor gerencia o conjunto de resultados usando os recursos fornecidos com o computador do servidor. O cursor do lado do servidor retorna apenas os dados solicitados pela rede. Esse tipo de cursor às vezes pode fornecer desempenho melhor do que o cursor do lado do cliente, especialmente em situações em que o tráfego excessivo na rede é um problema.  
+ No ADO, chame para um cursor do lado do servidor usando o **adUseServer CursorLocationEnum.** Com um cursor do lado do servidor, o servidor gerencia o conjunto de resultados usando os recursos fornecidos pelo computador do servidor. O cursor do lado do servidor retorna apenas os dados solicitados pela rede. Esse tipo de cursor às vezes, pode fornecer desempenho melhor do que o cursor do lado do cliente, especialmente em situações em que o tráfego excessivo na rede é um problema.  
   
- No entanto, é importante ressaltar que é um cursor do lado do servidor — pelo menos temporariamente — consuma recursos do servidor preciosos para cada cliente ativo. Você deve planejar adequadamente para garantir que o hardware de servidor é capaz de gerenciar todos os cursores do lado do servidor solicitados por clientes ativos. Além disso, um cursor do lado do servidor pode ser lento porque ele fornece acesso somente de única linha, nenhum cursor de lote está disponível.  
+ No entanto, é importante ressaltar que é de um cursor do lado do servidor — pelo menos temporariamente — consuma recursos do servidor preciosos para cada cliente do Active Directory. Você deve planejar adequadamente para garantir que seu hardware de servidor é capaz de gerenciar todos os cursores do lado do servidor solicitados por clientes do Active Directory. Além disso, um cursor do lado do servidor pode ser lento porque fornece apenas acesso de linha única — nenhum cursor de lote está disponível.  
   
- Cursores do lado do servidor são úteis quando a inserção, atualização ou exclusão de registros. Com cursores do lado do servidor, você pode ter várias instruções ativas na mesma conexão.
+ Cursores de servidor são úteis quando a inserção, atualização ou exclusão de registros. Com cursores do lado do servidor, você pode ter várias instruções ativas na mesma conexão.

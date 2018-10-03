@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLGetStmtAttr
@@ -19,26 +17,25 @@ f1_keywords:
 helpviewer_keywords:
 - SQLGetStmtAttr function [ODBC]
 ms.assetid: e321d460-e997-4527-aee6-207cf5a498e9
-caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1a45674ecbb65fcedd64551af3b7a2440b2b4621
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d2df20e27949b82a9f2e827984f0c2fb77a3814b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32923221"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47731984"
 ---
 # <a name="sqlgetstmtattr-function"></a>Função SQLGetStmtAttr
-**Conformidade**  
- Versão introduzidas: Conformidade de padrões 3.0 ODBC: 92 ISO  
+**Conformidade com**  
+ Versão introduziu: Conformidade de padrões 3.0 ODBC: ISO 92  
   
  **Resumo**  
  **SQLGetStmtAttr** retorna a configuração atual de um atributo de instrução.  
   
 > [!NOTE]  
->  Para obter mais informações sobre o que o Gerenciador de Driver mapeia essa função quando um ODBC 3. *x* aplicativo estiver trabalhando com um ODBC 2. *x* driver, consulte [mapeamento de funções de substituição para compatibilidade com versões anteriores de aplicativos](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md).  
+>  Para obter mais informações sobre o que o Gerenciador de Driver mapeia essa função quando um ODBC 3. *x* aplicativo está funcionando com um ODBC 2. *x* driver, consulte [mapeamento de funções de substituição para compatibilidade com versões anteriores de aplicativos](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -57,60 +54,60 @@ SQLRETURN SQLGetStmtAttr(
  [Entrada] Identificador de instrução.  
   
  *Atributo*  
- [Entrada] Atributo para recuperar.  
+ [Entrada] Atributo a ser recuperado.  
   
  *ValuePtr*  
- [Saída] Ponteiro para um buffer no qual retornar o valor do atributo especificado no *atributo*.  
+ [Saída] Ponteiro para um buffer no qual retornar o valor do atributo especificado na *atributo*.  
   
- Se *ValuePtr* for NULL, *StringLengthPtr* ainda retornará o número total de bytes (excluindo o caractere null de terminação para dados de caractere) disponíveis para retornar o buffer apontado pelo  *ValuePtr*.  
+ Se *ValuePtr* for NULL, *StringLengthPtr* ainda retornará o número total de bytes (exceto o caractere nulo de terminação para dados de caracteres) disponíveis para retornar no buffer apontado por  *ValuePtr*.  
   
  *BufferLength*  
- [Entrada] Se *atributo* é um atributo definido pelo ODBC e *ValuePtr* aponta para uma cadeia de caracteres ou um buffer binário, este argumento deve ser o comprimento de \* *ValuePtr*. Se *atributo* é um atributo definido pelo ODBC e \* *ValuePtr* é um inteiro, *BufferLength* será ignorado. Se o valor retornado em  *\*ValuePtr* é uma cadeia de caracteres Unicode (ao chamar **SQLGetStmtAttrW**), o *BufferLength* argumento deve ser um número par.  
+ [Entrada] Se *atributo* é um atributo definido pelo ODBC e *ValuePtr* aponta para uma cadeia de caracteres ou um buffer de binário, este argumento deve ser o comprimento da \* *ValuePtr*. Se *atributo* é um atributo definido pelo ODBC e \* *ValuePtr* é um inteiro, *BufferLength* será ignorado. Se o valor retornado em  *\*ValuePtr* é uma cadeia de caracteres Unicode (ao chamar **SQLGetStmtAttrW**), o *BufferLength* argumento deve ser um número par.  
   
  Se *atributo* é um atributo definido pelo driver, o aplicativo indica a natureza do atributo para o Gerenciador de Driver, definindo o *BufferLength* argumento. *BufferLength* pode ter os seguintes valores:  
   
 -   Se  *\*ValuePtr* é um ponteiro para uma cadeia de caracteres, em seguida, *BufferLength* é o comprimento da cadeia de caracteres ou SQL_NTS.  
   
--   Se  *\*ValuePtr* é um ponteiro para um buffer de binário, em seguida, o aplicativo coloca o resultado da SQL_LEN_BINARY_ATTR (*comprimento*) macro em *BufferLength*. Isso coloca um valor negativo em *BufferLength*.  
+-   Se  *\*ValuePtr* é um ponteiro para um buffer de binário, em seguida, o aplicativo coloca o resultado do SQL_LEN_BINARY_ATTR (*comprimento*) macro na *BufferLength*. Isso coloca um valor negativo em *BufferLength*.  
   
--   Se  *\*ValuePtr* é um ponteiro para um valor diferente de uma cadeia de caracteres ou cadeia de caracteres binária, em seguida, *BufferLength* devem ter o valor SQL_IS_POINTER.  
+-   Se  *\*ValuePtr* é um ponteiro para um valor diferente de uma cadeia de caracteres ou cadeia de caracteres binária, então *BufferLength* deve ter o valor SQL_IS_POINTER.  
   
--   Se  *\*ValuePtr* é contém um tipo de dados de comprimento fixo, em seguida, *BufferLength* é SQL_IS_INTEGER ou SQL_IS_UINTEGER, conforme apropriado.  
+-   Se  *\*ValuePtr* é contiver um tipo de dados de comprimento fixo, então *BufferLength* é SQL_IS_INTEGER ou SQL_IS_UINTEGER, conforme apropriado.  
   
  *StringLengthPtr*  
- [Saída] Um ponteiro para um buffer no qual retornar o número total de bytes (excluindo o caractere null de terminação) disponíveis para retornar em  *\*ValuePtr*. Se *ValuePtr* é um ponteiro nulo, nenhum comprimento é retornado. Se o valor do atributo é uma cadeia de caracteres e o número de bytes disponíveis para retornar é maior que ou igual a *BufferLength*, os dados em  *\*ValuePtr* será truncado para *BufferLength* menos o comprimento de um caractere null de terminação e é terminada em nulo pelo driver.  
+ [Saída] Um ponteiro para um buffer no qual retornar o número total de bytes (exceto o caractere nulo de terminação) disponíveis para retornar na  *\*ValuePtr*. Se *ValuePtr* for um ponteiro nulo, nenhum tamanho é retornado. Se o valor do atributo é uma cadeia de caracteres e o número de bytes disponíveis para retornar é maior que ou igual a *BufferLength*, os dados no  *\*ValuePtr* será truncado com *BufferLength* menos o comprimento de um caractere de finalização null e é terminada em nulo pelo driver.  
   
 ## <a name="returns"></a>Retorna  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR ou SQL_INVALID_HANDLE.  
   
-## <a name="diagnostics"></a>diagnóstico  
- Quando **SQLGetStmtAttr** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtida chamando **SQLGetDiagRec** com um *HandleType* do SQL _HANDLE_STMT e um *tratar* de *StatementHandle*. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLGetStmtAttr** e explica cada uma no contexto dessa função; a notação "(DM)" precede as descrições de SQLSTATEs retornados pelo Gerenciador de Driver. O código de retorno associado a cada valor SQLSTATE é SQL_ERROR, a menos que indicado em contrário.  
+## <a name="diagnostics"></a>Diagnóstico  
+ Quando **SQLGetStmtAttr** retorna SQL_ERROR ou SQL_SUCCESS_WITH_INFO, um valor SQLSTATE associado pode ser obtida chamando **SQLGetDiagRec** com um *HandleType* do SQL _HANDLE_STMT e uma *manipular* dos *StatementHandle*. A tabela a seguir lista os valores SQLSTATE normalmente retornados por **SQLGetStmtAttr** e explica cada uma no contexto dessa função; a notação "(DM)" precede as descrições das SQLSTATEs retornados pelo Gerenciador de Driver. O código de retorno associado com cada valor SQLSTATE é SQL_ERROR, a menos que indicado o contrário.  
   
 |SQLSTATE|Erro|Description|  
 |--------------|-----------|-----------------|  
-|01000|Aviso geral|Mensagem de informação específica do driver. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
-|01004|Dados de cadeia de caracteres truncados à direita|Os dados retornados em  *\*ValuePtr* foi truncado para ser *BufferLength* menos o comprimento de um caractere null de terminação. O comprimento do valor completo da cadeia de caracteres é retornado em **StringLengthPtr*. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
+|01000|Aviso geral|Mensagem informativa de específicos do driver. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
+|01004|Dados de cadeia de caracteres truncados à direita|Os dados retornados  *\*ValuePtr* foi truncado para ser *BufferLength* menos o comprimento de um caractere nulo de terminação. O comprimento do valor completo da cadeia de caracteres é retornado no **StringLengthPtr*. (A função retornará SQL_SUCCESS_WITH_INFO.)|  
 |24000|Estado de cursor inválido|O argumento *atributo* foi SQL_ATTR_ROW_NUMBER e o cursor não foi aberto ou o cursor é posicionado antes do início do conjunto de resultados ou após o final do conjunto de resultados.|  
-|HY000|Erro geral|Ocorreu um erro para o qual não houve nenhuma SQLSTATE específico e para o qual nenhuma SQLSTATE específicos de implementação foi definida. A mensagem de erro retornada pelo **SQLGetDiagRec** no argumento *MessageText* descreve o erro e sua causa.|  
-|HY001|Erro de alocação de memória|O driver não pôde alocar a memória necessária para dar suporte a execução ou a conclusão da função.|  
-|HY010|Erro de sequência de função|(DM) uma função de execução assíncrona foi chamada para o identificador de conexão que está associado a *StatementHandle*. Essa função assíncrona ainda estava em execução quando o **SQLGetStmtAttr** função foi chamada.<br /><br /> (DM) uma função de execução assíncrona foi chamada para o *StatementHandle* e ainda estava em execução quando esta função foi chamada.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, ou **SQLSetPos** foi chamado para o  *StatementHandle* e retorna SQL_NEED_DATA. Essa função foi chamada antes de dados foi enviados para todas as colunas ou parâmetros de dados em execução.|  
-|HY013|Erro de gerenciamento de memória|Não foi possível processar a chamada de função porque os objetos de memória subjacente não podem ser acessados, possivelmente devido a condições de memória insuficiente.|  
-|HY090|Comprimento de buffer ou cadeia de caracteres inválido|*(DM) \*ValuePtr* é uma cadeia de caracteres e BufferLength era menor que zero, mas não igual a SQL_NTS.|  
+|HY000|Erro geral|Ocorreu um erro para o qual não houve nenhum SQLSTATE específico e para o qual não foi definida nenhuma SQLSTATE específicos de implementação. A mensagem de erro retornada por **SQLGetDiagRec** no argumento *MessageText* descreve o erro e sua causa.|  
+|HY001|Erro de alocação de memória|O driver não pôde alocar a memória necessária para dar suporte à execução ou a conclusão da função.|  
+|HY010|Erro de sequência de função|(DM) uma função de execução assíncrona foi chamada para o identificador de conexão que está associado a *StatementHandle*. Essa função assíncrona ainda estava em execução quando o **SQLGetStmtAttr** função foi chamada.<br /><br /> (DM) uma função de execução assíncrona foi chamada para o *StatementHandle* e ainda estava em execução quando essa função foi chamada.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, ou **SQLSetPos** foi chamado para o  *StatementHandle* e retornados de SQL_NEED_DATA. Essa função foi chamada antes de dados foi enviados para todos os parâmetros de dados em execução ou colunas.|  
+|HY013|Erro de gerenciamento de memória|A chamada de função não pôde ser processada porque os objetos de memória subjacente não pôde ser acessados, possivelmente devido a condições de memória insuficiente.|  
+|HY090|Comprimento de buffer ou cadeia de caracteres inválido|*(DM) \*ValuePtr* é uma cadeia de caracteres e BufferLength era menor que zero, mas não é igual a SQL_NTS.|  
 |HY092|Identificador de atributo/opção inválido|O valor especificado para o argumento *atributo* não era válido para a versão do ODBC com suporte pelo driver.|  
-|HY109|Posição de cursor inválido|O *atributo* argumento era SQL_ATTR_ROW_NUMBER e a linha tivesse sido excluída ou não pôde ser obtida.|  
-|HY117|Conexão está suspenso devido ao estado de transação desconhecido. Somente Desconecte e funções de somente leitura são permitidas.|(DM) para obter mais informações sobre o estado suspenso, consulte [função SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
-|HYC00|Recurso opcional não implementado|O valor especificado para o argumento *atributo* era um atributo de instrução ODBC válido para a versão do ODBC com suporte pelo driver, mas não era compatível com o driver.|  
-|HYT01|Tempo limite de Conexão expirou|O período de tempo limite de conexão expirou antes que a fonte de dados respondeu à solicitação. O período de tempo limite de conexão é definido por meio de **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
-|IM001|Driver não dá suporte a esta função|(DM) o driver correspondente a *StatementHandle* não oferece suporte para a função.|  
+|HY109|Posição do cursor inválida|O *atributo* argumento era SQL_ATTR_ROW_NUMBER e a linha tivesse sido excluída ou não pôde ser buscada.|  
+|HY117|Conexão está suspenso devido ao estado de transação desconhecida. Somente se desconectar e funções de somente leitura são permitidas.|(DM) para obter mais informações sobre o estado suspenso, consulte [função SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
+|HYC00|Recurso opcional não implementado|O valor especificado para o argumento *atributo* foi um atributo de instrução ODBC válido para a versão do ODBC com suporte pelo driver, mas não tinha suporte pelo driver.|  
+|HYT01|Tempo limite da Conexão expirado|O período de tempo limite de conexão expirado antes que a fonte de dados respondeu à solicitação. O período de tempo limite de conexão é definido por meio **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
+|IM001|Driver não oferece suporte a essa função|(DM) o driver correspondente a *StatementHandle* não suporta a função.|  
   
 ## <a name="comments"></a>Comentários  
  Para obter informações gerais sobre os atributos de instrução, consulte [atributos de instrução](../../../odbc/reference/develop-app/statement-attributes.md).  
   
- Uma chamada para **SQLGetStmtAttr** retorna  *\*ValuePtr* o valor do atributo de declaração especificado no *atributo*. Esse valor pode ser um valor SQLULEN ou uma cadeia de caracteres terminada em nulo. Se o valor for um valor SQLULEN, alguns drivers podem gravar somente inferior 32 bits ou 16 bits de um buffer e deixe o bit de ordem superior inalterado. Portanto, os aplicativos devem usar um buffer de SQLULEN e inicializar o valor para 0 antes de chamar essa função. Além disso, o *BufferLength* e *StringLengthPtr* argumentos não são usados. Se o valor for uma cadeia de caracteres terminada em nulo, o aplicativo especifica o tamanho máximo dessa cadeia de caracteres no *BufferLength* argumento e o driver retorna o comprimento dessa cadeia de caracteres no  *\* StringLengthPtr* buffer.  
+ Uma chamada para **SQLGetStmtAttr** retorna  *\*ValuePtr* o valor do atributo de instrução especificado no *atributo*. Esse valor pode ser um valor SQLULEN ou uma cadeia de caracteres terminada em nulo. Se o valor é um valor SQLULEN, alguns drivers podem apenas gravar inferior 32 bits ou o bit de ordem superior de 16 bits de um buffer e deixar inalterado. Portanto, os aplicativos devem usar um buffer de SQLULEN e inicializar o valor para 0 antes de chamar essa função. Além disso, o *BufferLength* e *StringLengthPtr* argumentos não são usados. Se o valor for uma cadeia de caracteres terminada em nulo, o aplicativo especifica o comprimento máximo da cadeia de caracteres na *BufferLength* argumento e o driver retorna o comprimento da cadeia de caracteres na  *\* StringLengthPtr* buffer.  
   
- Para permitir que aplicativos que chamam **SQLGetStmtAttr** para trabalhar com ODBC 2. *x* drivers, uma chamada para **SQLGetStmtAttr** está mapeado no Gerenciador de Driver para **SQLGetStmtOption**.  
+ Para permitir que os aplicativos que chamam **SQLGetStmtAttr** para trabalhar com ODBC 2. *x* drivers, uma chamada para **SQLGetStmtAttr** é mapeada no Gerenciador de Driver para **SQLGetStmtOption**.  
   
- Os seguintes atributos de instrução são somente leitura, portanto pode ser recuperada por **SQLGetStmtAttr**, mas não definido por **SQLSetStmtAttr**:  
+ Os seguintes atributos de instrução são somente leitura, portanto, pode ser recuperada por **SQLGetStmtAttr**, mas não definido por **SQLSetStmtAttr**:  
   
 -   SQL_ATTR_IMP_PARAM_DESC  
   
@@ -129,5 +126,5 @@ SQLRETURN SQLGetStmtAttr(
 |Definir um atributo de instrução|[Função SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
+ [Referência da API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Arquivos de cabeçalho ODBC](../../../odbc/reference/install/odbc-header-files.md)

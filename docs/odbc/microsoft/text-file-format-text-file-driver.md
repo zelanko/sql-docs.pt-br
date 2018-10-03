@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - delimited text lines
@@ -15,23 +13,22 @@ helpviewer_keywords:
 - text format [ODBC]
 - text file driver [ODBC], text format
 ms.assetid: f53cd4b5-0721-4562-a90f-4c55e6030cb9
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d2f0de1d7b5ca14c5ae51cd057244d0c3252780a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cd2bc95e6fe5468e88fc61dd8ed4adcd985ec052
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911071"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47739524"
 ---
-# <a name="text-file-format-text-file-driver"></a>Formato de arquivo de texto (Driver de arquivo de texto)
-O driver ODBC texto dá suporte a ambos os arquivos de texto delimitados e de largura fixa. Um arquivo de texto consiste em uma linha de cabeçalho opcionais e zero ou mais linhas de texto.  
+# <a name="text-file-format-text-file-driver"></a>Text File Format (Driver de Arquivo de texto)
+O driver ODBC texto dá suporte a ambos os arquivos de texto delimitados e de largura fixa. Um arquivo de texto consiste em uma linha de cabeçalho opcional e zero ou mais linhas de texto.  
   
- Embora a linha de cabeçalho usa o mesmo formato que as outras linhas no arquivo de texto, o driver ODBC texto interpreta as entradas de linha de cabeçalho como nomes de coluna, não dados.  
+ Embora a linha de cabeçalho usa o mesmo formato que outras linhas no arquivo de texto, o driver ODBC texto interpreta as entradas de linha de cabeçalho como nomes de coluna, não dados.  
   
- Uma linha de texto delimitado contém um ou mais valores de dados separados por delimitadores: vírgulas, tabulações ou um delimitador personalizado. Mesmo delimitador deve ser usado em todo o arquivo. Valores de dados nulos são indicados pelos dois delimitadores em uma linha sem dados entre eles. Cadeias de caracteres em uma linha de texto delimitado que podem ser colocadas entre aspas duplas (""). Nenhum espaço em branco pode ocorrer antes ou depois de valores delimitados.  
+ Uma linha de texto delimitado contiver um ou mais valores de dados separados por delimitadores: vírgulas, tabulações ou um delimitador personalizado. O mesmo delimitador deve ser usado em todo o arquivo. Valores de dados nulos são indicados por dois delimitadores em uma linha sem dados entre eles. Cadeias de caracteres em uma linha de texto delimitado que podem ser colocadas entre aspas duplas (""). Nenhum espaço em branco pode ocorrer antes ou depois de valores delimitados.  
   
  A largura de cada entrada de dados em uma linha de texto de largura fixa é especificada em um esquema. Valores de dados nulos são indicados por espaços em branco.  
   
@@ -39,11 +36,11 @@ O driver ODBC texto dá suporte a ambos os arquivos de texto delimitados e de la
   
  Um arquivo de texto pode ser aberto somente para um único usuário. Não há suporte para vários usuários.  
   
- Gramática a seguir, escrita para programadores, define o formato de um arquivo de texto que possa ser lido pelo driver ODBC texto:  
+ A gramática a seguir, escrita para programadores, define o formato de um arquivo de texto que pode ser lido pelo driver ODBC texto:  
   
 |Formato|Representação|  
 |------------|--------------------|  
-|Não itálico|Caracteres que devem ser inseridos, conforme mostrado|  
+|Não itálico|Caracteres que devem ser inseridos conforme mostrado|  
 |*Itálico*|Argumentos que são definidos em outro lugar na gramática|  
 |colchetes ([])|Itens opcionais|  
 |chaves ({})|Uma lista de opções mutuamente exclusivas|  
@@ -71,7 +68,7 @@ fixed-width-data ::= fixed-width-string | number | date | fixed-width-null
 ```  
   
 > [!NOTE]  
->  A largura de cada coluna em um arquivo de texto de largura fixa é especificada no arquivo Schema.ini.  
+>  A largura de cada coluna em um arquivo de texto de largura fixa é especificada no arquivo Schema. ini.  
   
 ```  
   
@@ -91,7 +88,7 @@ custom-delimitercustom-delimiter ::= any character except:
 ```  
   
 > [!NOTE]  
->  O delimitador em um arquivo de texto delimitado por personalizado é especificado no arquivo Schema.ini.  
+>  O delimitador em um arquivo de texto delimitado por personalizado é especificado no arquivo Schema. ini.  
   
 ```  
 quote-character ::= "  
@@ -117,7 +114,7 @@ delimited-null ::=
 ```  
   
 > [!NOTE]  
->  Para arquivos delimitados, um valor nulo é representado por nenhum dado entre dois delimitadores.  
+>  Para arquivos delimitados, um valor nulo é representado por nenhum dados entre dois delimitadores.  
   
 ```  
 fixed-width-null ::= <SPACE>...  

@@ -1,13 +1,11 @@
 ---
-title: Armazenado exemplo de propriedades de procedimento (VB) | Microsoft Docs
+title: Armazenado um exemplo de propriedades de procedimento (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -18,18 +16,17 @@ helpviewer_keywords:
 - ActiveConnection property [ADO], Visual Basic example
 - Direction property [ADO], Visual Basic example
 ms.assetid: dade4531-0bcc-4a52-8f86-b110ba2a3f9d
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 221201c9b82314c821d93ff8291676a5d52b2210
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7994623168d4ebc785ec0afeddbbfd7de185bf10
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35274957"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47747374"
 ---
-# <a name="activeconnection-commandtext-commandtimeout-commandtype-size-and-direction-properties-example-vb"></a>ActiveConnection CommandText, CommandTimeout, CommandType, tamanho e exemplo de propriedades de direção (VB)
+# <a name="activeconnection-commandtext-commandtimeout-commandtype-size-and-direction-properties-example-vb"></a>ActiveConnection, CommandText, CommandTimeout, CommandType, tamanho e exemplo de propriedades de direção (VB)
 Este exemplo usa o [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md), [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md), [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md), [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md), [tamanho](../../../ado/reference/ado-api/size-property-ado-parameter.md), e [direção](../../../ado/reference/ado-api/direction-property.md) propriedades para executar um procedimento armazenado.  
   
 ```  
@@ -144,8 +141,8 @@ End Sub
  [Propriedade CommandTimeout (ADO)](../../../ado/reference/ado-api/commandtimeout-property-ado.md)   
  [Propriedade CommandType (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md)   
  [Objeto de Conexão (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Propriedade de direção](../../../ado/reference/ado-api/direction-property.md)   
+ [Propriedade Direction](../../../ado/reference/ado-api/direction-property.md)   
  [Objeto de parâmetro](../../../ado/reference/ado-api/parameter-object.md)   
- [Objeto de registro (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
+ [Objeto Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Propriedade Size (Parâmetro ADO)](../../../ado/reference/ado-api/size-property-ado-parameter.md)

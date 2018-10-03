@@ -5,21 +5,18 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4bce9b82-7bbd-41df-b3f4-4b40b8bad474
-caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 41b5ff930a715cccdcbd8a83c1f0fbf4c39390eb
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: cdd6241b498a8d23f26a146644e2b302cddd9f5f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329130"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47765554"
 ---
 # <a name="how-to-view-the-cdc-instance-properties"></a>Como exibir as propriedades de instância CDC
   Este procedimento descreve como usar o CDC Designer Console para exibir informações sobre as instâncias que você cria para ajudar a gerenciar a operação das instâncias.  

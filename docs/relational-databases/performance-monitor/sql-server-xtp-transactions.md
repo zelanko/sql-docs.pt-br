@@ -4,24 +4,20 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 443d67e4-1c7f-41d7-b18d-2d657f58c22a
-caps.latest.revision: 7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a9da78f30f38fb5cbb72e573497f93a138fec37e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 911b124bd4ae1bf36d2eb9278bf1841bb83b0236
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32950991"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47749465"
 ---
 # <a name="sql-server-xtp-transactions"></a>Transações XTP do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +26,7 @@ ms.locfileid: "32950991"
   
  Esta tabela descreve os contadores **Transações de XTP do SQL Server** .  
   
-|Contador|Description|  
+|Contador|Descrição|  
 |-------------|-----------------|  
 |**Anulações em cascata/s**|O número de transações que foram revertidas devido a uma reversão de dependência de confirmação (em média), por segundo.|  
 |**Dependências de confirmação realizadas/s**|O número de dependências de confirmação realizadas por transações (em média), por segundo.|  

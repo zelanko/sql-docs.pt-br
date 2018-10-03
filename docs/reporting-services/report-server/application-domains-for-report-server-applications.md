@@ -4,7 +4,6 @@ ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - application domains [Reporting Services]
@@ -12,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a455e2e6-8764-493d-a1bc-abe80829f543
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dbb25efefd5fc69a3a64f04208e5f32ef20387f4
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: ec98c02ff88a1d343b96f149bce4bebdb7aa707d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43277750"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47751614"
 ---
 # <a name="application-domains-for-report-server-applications"></a>Domínios do aplicativo para aplicativos do Servidor de Relatório
   No [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], o servidor de relatório é implementado como um único serviço que contém um serviço Web Servidor de Relatórios, Gerenciador de Relatórios e um aplicativo executado em segundo plano. Cada aplicativo é executado em seu próprio domínio de aplicativo dentro do único processo de servidor de relatório. Para a maior parte, os domínios de aplicativo são criados, configurados e gerenciados internamente. Entretanto, saber como as operações de reciclagem ocorrem para os domínios de aplicativo para servidores de relatório poderá ser útil se você estiver investigando o desempenho ou problemas de memória ou solucionando problemas de interrupção de serviço.  
