@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.ftcatalogproperties.tablesviews.f1
 ms.assetid: 2d45fcd2-0f0f-4167-9027-316d6696c106
-caps.latest.revision: 25
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: e0e73607bf54d066c0328ae45785151ceaa2cca1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 78d7dc111bc0b6eb10e80f32785beeda710e52bd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37298906"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48202086"
 ---
 # <a name="full-text-catalog-properties-tables-and-views-page"></a>Propriedades do catálogo de texto completo (página Tabelas e Exibições)
   Usa essa página de caixa de diálogo para exibir ou modificar as tabelas e exibições atribuídas ao catálogo de texto completo.  

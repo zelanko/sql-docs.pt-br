@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Error Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Error element
 ms.assetid: add670cb-cab2-42be-91a3-d0c385f29d16
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 55b63c016f9f2c61cc83563e697a49a0c4970cae
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5b9b961a0d8d5a33cb0869b72e0250dee5456ca7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273732"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48210146"
 ---
 # <a name="error-element-xmla"></a>Elemento Error (XMLA)
   Contém informações sobre o erro retornado por uma instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -67,8 +64,8 @@ ms.locfileid: "37273732"
   
 |Característica|Description|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|Nenhum|  
-|Valor padrão|Nenhum|  
+|Comprimento e tipo de dados|None|  
+|Valor padrão|None|  
 |Cardinalidade|0-1: elemento opcional que pode ocorrer apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -81,7 +78,7 @@ ms.locfileid: "37273732"
   
 |Ancestor|Elementos filho|  
 |--------------|--------------------|  
-|[Mensagem](message-element-xmla.md)|Nenhum|  
+|[Mensagem](message-element-xmla.md)|None|  
 |[Célula](cell-element-mddataset-xmla.md), [linha](description-element-xmla.md), [ErrorCode](errorcode-element-xmla.md), [HelpFile](file-element-xmla.md), [fonte](source-element-error-xmla.md)|  
   
 ## <a name="attributes"></a>Atributos  
@@ -94,7 +91,7 @@ ms.locfileid: "37273732"
 |Origem|Opcional `String` atributo (somente quando `Message` é o elemento pai.) Contém o nome do componente que gerou o erro.|  
 |HelpFile|Opcional `String` atributo (somente quando `Message` é o elemento pai.) Contém o caminho ou a URL para o arquivo de Ajuda ou tópico que descreve o erro.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 ## <a name="see-also"></a>Consulte também  
  [Elemento Warning &#40;XMLA&#41;](warning-element-xmla.md)   

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - best practices analyzer
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - tutorials [Policy-Based Management]
 - Policy-Based Management, tutorials
 ms.assetid: c7867f9b-7acc-4fae-bde1-63808c403ebc
-caps.latest.revision: 7
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 129fdbd715df234c05319ab02b15fcb99b19ac08
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 663fb563f5fa8b80945f70f7086262a56b059dea
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37315056"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48206916"
 ---
 # <a name="tutorial-evaluating-best-practices-by-using-policy-based-management"></a>Tutorial: Avaliando práticas recomendadas usando o Gerenciamento Baseado em Políticas
   Bem-vindo ao tutorial Avaliando práticas recomendadas usando o Gerenciamento Baseado em Políticas. O tutorial é destinado a usuários familiarizados com o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], mas que não conhecem o Gerenciamento Baseado em Políticas. O gerenciamento baseado em políticas é um sistema que define as políticas que podem ser usadas para impor padrões de administração de sites. O gerenciamento baseado em políticas inclui um conjunto de práticas recomendadas que você pode usar para analisar uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e determinar se a instância atende às diretrizes de práticas recomendadas e recomendações.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SSRS, tools
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - SQL Server Reporting Services, tools
 - architecture [Reporting Services]
 ms.assetid: 23d616e3-eb90-43fb-9b7a-869bd7e22e7b
-caps.latest.revision: 73
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2942373c9732ea1233788ef23061c42433d2baa7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 859959ec966c9a3c3141f3fb962668e141d14175
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37212576"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200536"
 ---
 # <a name="reporting-services-tools"></a>Ferramentas do Reporting Services
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] contém um conjunto de ferramentas gráficas e de script que dão suporte ao desenvolvimento e ao uso de relatórios em um ambiente gerenciado. O conjunto de ferramentas inclui ferramentas de desenvolvimento, de configuração e de administração, além de ferramentas de visualização de relatórios. Este tópico dá uma visão geral breve de cada ferramenta do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e como ela pode ser acessada.  
@@ -56,7 +53,7 @@ ms.locfileid: "37212576"
 |----------|-----------------|-------------------|  
 |Gerenciador de Configurações do Reporting Services|Use essa ferramenta para configurar uma instalação do Reporting Services. Observe que o Gerenciador de configuração do Reporting Services não ajuda a gerenciar o conteúdo do servidor de relatório, habilitar recursos adicionais ou conceder acesso ao servidor. As tarefas disponíveis incluem:<br /><br /> Configurar as instâncias locais e remotas do servidor de relatório<br /><br /> Configurar a conta de serviço do Servidor de Relatório.<br /><br /> Criar e configurar uma ou mais URLs de serviço Web.<br /><br /> Configurar a URL do Gerenciador de Relatórios<br /><br /> Criar e configurar o banco de dados do servidor de relatório.<br /><br /> Configurar uma implantação de expansão.<br /><br /> Fazer backup, restaurar ou substituir a chave simétrica usada para criptografar cadeias de conexão e credenciais armazenadas.<br /><br /> Configurar a conta de execução autônoma.<br /><br /> Configurar um servidor SMTP para entrega de email.<br /><br /> <br /><br /> Para obter mais informações, consulte [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md).|Menu Iniciar|  
 |SQL Server Management Studio|Use essa ferramenta para gerenciar uma ou mais instâncias do servidor de relatório em um único ambiente, inclusive:<br /><br /> Gerenciar instâncias locais e remotas do servidor de relatório<br /><br /> Configurar propriedades do servidor de relatório<br /><br /> Modificar definições de função<br /><br /> Desativar recursos do servidor de relatório que você não está usando<br /><br /> Gerenciar trabalhos<br /><br /> Gerenciar agendas compartilhadas|Menu Iniciar|  
-|SQL Server Configuration Manager|Use essa ferramenta para:<br /><br /> Iniciar e interromper os serviços do Windows do Reporting Services<br /><br /> Configurar o Relatório de Comentários do Cliente, o local do diretório de despejo e o relatório de erros<br /><br /> <br /><br /> **\*\* Aviso \* \* ** não use essa ferramenta para configurar a conta de serviço. Em vez disso, use a ferramenta Configuração do Reporting Services.<br /><br /> Para obter mais informações, consulte [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).|Menu Iniciar|  
+|SQL Server Configuration Manager|Use essa ferramenta para:<br /><br /> Iniciar e interromper os serviços do Windows do Reporting Services<br /><br /> Configurar o Relatório de Comentários do Cliente, o local do diretório de despejo e o relatório de erros<br /><br /> <br /><br /> **\*\* Aviso \* \***  não use essa ferramenta para configurar a conta de serviço. Em vez disso, use a ferramenta Configuração do Reporting Services.<br /><br /> Para obter mais informações, consulte [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).|Menu Iniciar|  
 |Utilitário rsconfig|Use essa ferramenta para configurar e gerenciar a conexão do servidor de relatório com o banco de dados do servidor de relatório. Você também pode usá-lo para especificar uma conta de usuário a ser usada para processamento de relatório autônomo.<br /><br /> Para obter mais informações, consulte [Utilitários de prompt de comando do Servidor de Relatório &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md).|Prompt de comando|  
 |Utilitário rskeymgmt|Use essa ferramenta para:<br /><br /> Extrair, restaurar, criar e excluir a chave simétrica usada para criptografar dados do servidor de relatório<br /><br /> Unir instâncias do servidor de relatório em uma implantação de expansão<br /><br /> <br /><br /> Para obter mais informações, consulte [Utilitários de prompt de comando do Servidor de Relatório &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md).|Prompt de comando|  
 |Classes WMI (Instrumentação de Gerenciamento do Windows)|Use essas classes para automatizar as tarefas de configuração no Gerenciador de Configurações do Reporting Services sem precisar usar a interface gráfica do usuário.<br /><br /> Para obter mais informações, consulte [acessar o WMI Provider Programmatically](../accessing-the-wmi-provider-programmatically.md).|Script do Visual Basic|  

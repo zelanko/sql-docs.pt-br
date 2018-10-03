@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Schema Generation Wizard, steps
 - relational schema [Analysis Services], Schema Generation Wizard
 ms.assetid: 8c710745-d41d-4c31-b6a2-2956229df75a
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ac0560032be47e1934eb111a13511cf579d63fe1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: da833d9c71b93405369a1fee1d7947784d2a09e8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37237666"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48210166"
 ---
 # <a name="use-the-schema-generation-wizard-analysis-services"></a>Use o assistente de geração de esquema (Analysis Services)
   O Assistente de Geração de Esquema requer uma quantidade limitada de informações durante a fase de geração. A maioria das informações que o Assistente de Geração de Esquema requer para gerar esquemas relacionais é extraída dos cubos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e dimensões que você já criou no projeto. Além disso, você pode personalizar como o esquema de banco de dados de área de assunto é gerado e como são nomeados objetos no esquema.  

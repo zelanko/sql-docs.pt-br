@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor Report Viewer
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - analyzing system [Upgrade Advisor]
 - analyzing system [Upgrade Advisor], about analysis
 ms.assetid: f5c56f63-4478-40af-abb9-642f58a0026c
-caps.latest.revision: 47
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0b30fddb6ce8570b438c869d72c2d3d0ac48036e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9fba325ab05844388ceceb1e53b6d4a8cf618468
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37315956"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48208387"
 ---
 # <a name="upgrade-advisor-overview"></a>Visão geral do Supervisor de Atualização
   O Supervisor de Atualização fornece um console central para análise de componentes do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], do [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] e do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e para exibição de relatórios que contenham informações sobre os resultados da análise.  

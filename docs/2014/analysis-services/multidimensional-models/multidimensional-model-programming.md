@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 871a6d98-85bf-4200-8343-137543029512
-caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a31015e4103f480899bfb423d506b38ef5b7f140
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0d09ea9167e26c61c5c78671da5dcf782a9cfa86
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37245618"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200552"
 ---
 # <a name="multidimensional-model-programming"></a>Programação de modelo multidimensional
   O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oferece várias APIs que você pode usar para programar em uma instância do Analysis Services e os bancos de dados multidimensionais que ele disponibiliza. Esta seção descreve as abordagens disponíveis para desenvolvedores que querem criar aplicativos personalizados usando soluções multidimensionais do Analysis Services. Você pode usar estas informações para escolher a interface de programação que melhor atende aos requisitos de um projeto específico. Os projetos de desenvolvimento do Analysis Services podem se basear em código gerenciado ou não gerenciado, executado em uma plataforma Windows ou em outras plataformas que ofereçam suporte ao acesso HTTP.  
