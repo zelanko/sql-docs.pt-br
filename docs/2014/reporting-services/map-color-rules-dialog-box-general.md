@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10541"
 - sql12.rtp.rptdesigner.shared.mapcolorrulesgeneral.f1
 ms.assetid: 14ff5fc1-4cf8-4a45-9d98-47a1bf1c52c4
-caps.latest.revision: 7
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2de58631464b4d96ebde5cac82778f6b365e5b3c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6557db236aba57db2c6f06a29faee1f05bdc30cb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37238516"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48179286"
 ---
 # <a name="map-color-rules-dialog-box-general"></a>Caixa de diálogo Regra de Cor do Mapa, Geral
   Selecione **Geral** na caixa de diálogo **Propriedades de Regras de Cor** para definir as opções de cor dos elementos de mapa nessa camada. Os elementos de mapa incluem polígonos, linhas e pontos. As regras de cor podem ser aplicadas quando você tiver criado uma relação entre os elementos do mapa com base em dados espaciais e dados analíticos de um campo de conjunto de dados ou de um campo de fonte de dados espacial.  

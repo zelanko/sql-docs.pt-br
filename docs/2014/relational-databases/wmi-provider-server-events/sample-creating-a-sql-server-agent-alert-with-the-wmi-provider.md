@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Agent [WMI]
 - WMI Provider for Server Events, samples
 - sample applications [WMI]
 ms.assetid: d44811c7-cd46-4017-b284-c863ca088e8f
-caps.latest.revision: 14
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6c6a8ded031806322961d5f56a1b0ba28fe6dad3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2623087a485070b442716c953501b2496679be9d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37186213"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48180576"
 ---
 # <a name="sample-creating-a-sql-server-agent-alert-by-using-the-wmi-provider-for-server-events"></a>Exemplo: Criação de um alerta do SQL Server Agent usando o provedor WMI para eventos do servidor
   Uma forma comum de usar o Provedor de eventos de WMI é criar alertas do SQL Server Agent que respondem a eventos específicos. O seguinte exemplo apresenta um alerta simples que salva eventos de gráfico de deadlock XML em uma tabela para análise posterior. O SQL Server Agent envia uma solicitação WQL, recebe eventos WMI, e executa um trabalho em resposta ao evento. Observe que, embora vários objetos do Service Broker estejam envolvidos no processamento da mensagem de notificação, o Provedor de eventos de WMI manipula os detalhes da criação e do gerenciamento desses objetos.  

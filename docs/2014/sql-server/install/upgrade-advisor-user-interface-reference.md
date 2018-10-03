@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor Analysis Wizard
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - user interface reference [Upgrade Advisor]
 - SQL Server Upgrade Advisor, user interface reference
 ms.assetid: 9375e3d0-c193-4714-96bb-7effd8f4bf18
-caps.latest.revision: 27
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 09cc0df077b51e02cc65edc244dfac8c03518fc4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 57259e3608dfe58df5ce88ca5a4009c8c3ec0241
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37257732"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48159028"
 ---
 # <a name="upgrade-advisor-user-interface-reference"></a>Referência da interface de usuário do Supervisor de Atualização
   Esta seção inclui tópicos de ajuda para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Supervisor de atualização. Esses tópicos estão disponíveis no Assistente do Supervisor de atualização pressionando a tecla F1 ou clicando **ajudar** nas páginas do assistente e caixas de diálogo.  

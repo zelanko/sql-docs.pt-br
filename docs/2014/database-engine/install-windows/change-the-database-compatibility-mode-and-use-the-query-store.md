@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - query plans [SQL Server], migrating
 - upgrading SQL Server, migrating query plans
 - plan guides [SQL Server], migrating query plans
 ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
-caps.latest.revision: 14
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 86396a835b68e9a6028bce45a68110e337ce9131
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 82530d7707b6b93c2b4360ea4dd1fae27a868246
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37324966"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48143416"
 ---
 # <a name="migrate-query-plans"></a>Migrar planos de consulta
   Na maioria dos casos, a atualização de um banco de dados para a versão mais recente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resultará em melhoria do desempenho de consulta. No entanto, se você tiver consultas essenciais que foram cuidadosamente ajustadas para desempenho, pode desejar preservar os planos dessas consultas antes da atualização através da criação de um guia de plano para cada consulta. Se depois da atualização o otimizador de consultas escolher um plano menos eficiente para uma ou mais consultas, você pode habilitar os guias de plano e forçar o otimizador de consulta a usar planos anteriores à atualização.  

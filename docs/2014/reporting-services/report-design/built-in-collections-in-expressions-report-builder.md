@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 78d5e3b8-9320-4e4b-a025-e2de3cf7afa7
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: c478ee22ae7a92feeeba059780705df2255a363d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6065291efcf59f5ac5341b47bfdae95afb35a119
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37299856"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095653"
 ---
 # <a name="built-in-collections-in-expressions-report-builder-and-ssrs"></a>Coleções internas em expressões (Construtor de Relatórios e SSRS)
   Em uma expressão em um relatório, você pode incluir referências às seguintes coleções internas: ReportItems, Parâmetros, Campos, DataSets, DataSources, Variáveis e campos internos para informações globais, como o nome do relatório. Nem todas as coleções são exibidas na caixa de diálogo **Expressão** . As coleções de DataSets e DataSources estão disponíveis apenas em tempo de execução para relatórios publicados em um servidor de relatório. A coleção de ReportItems é a coleção de caixas de texto em uma região do relatório, por exemplo, as caixas de texto em uma página ou em um cabeçalho de página.  

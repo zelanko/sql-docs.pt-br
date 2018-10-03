@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Domains
 ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
-caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8199de0df5b7910c547867fa62e5670670510988
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 076d2ab9b8c542594c4a13043f591dc679a269ba
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37183303"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48178756"
 ---
 # <a name="introduction-to-data-quality-services"></a>Introdução ao Data Quality Services
   A solução de qualidade de dados fornecida pelo [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) permite que um administrador de dados ou profissional de TI mantenha a qualidade de seus dados e assegure que os dados sejam adequados para uso comercial. O DQS é uma solução controlada por conhecimento que fornece maneiras assistidas por computador e interativas para gerenciar a integridade e a qualidade de suas fontes de dados. O DQS permite descobrir, compilar e gerenciar conhecimento sobre seus dados. Você pode usar esse conhecimento para executar a limpeza, a correspondência e a criação de perfil de dados. Você também pode aproveitar os serviços baseados em nuvem de provedores de dados de referência em um projeto de qualidade de dados do DQS.  

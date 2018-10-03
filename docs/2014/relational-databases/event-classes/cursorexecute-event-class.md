@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - CursorExecute event class
 ms.assetid: 83399fd8-cc25-4d3c-8985-7a824ef08e08
-caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 73d720ca7e91d64d088983573eacd41d98d5cc8d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2174684879a71372e19d9e7ac3390ee7c0831e38
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37152737"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48157546"
 ---
 # <a name="cursorexecute-event-class"></a>Classe de evento CursorExecute
   A classe de evento **CursorExecute** descreve eventos de execução do cursor que ocorrem em cursores da API (interface de programação de aplicativo). Os eventos de execução do cursor ocorrem quando o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] cria e popula um cursor pelo plano de execução criado por um evento de preparação do cursor.  

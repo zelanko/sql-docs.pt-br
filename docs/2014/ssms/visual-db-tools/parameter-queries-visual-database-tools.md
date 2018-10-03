@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - parameter queries [SQL Server]
 ms.assetid: 4897c41a-324a-47b8-a30b-cbc9e9e19a8b
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e8e1f6503ba431314f7addd0b33d2c607a32fb9c
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 53d38505a07fe30ef22145f4ec8197092e7bc6d0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43812292"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48098628"
 ---
 # <a name="parameter-queries-visual-database-tools"></a>Consultas de parâmetros (Visual Database Tools)
   Em alguns casos, talvez você queira criar uma consulta que possa ser utilizada muitas vezes, mas com um valor diferente a cada vez. Por exemplo, pode ser que você execute com frequência uma consulta para localizar todos os `title_ids` escritos por um autor. Você pode executar a mesma consulta para cada solicitação, exceto se a ID ou o nome do autor forem diferentes.  

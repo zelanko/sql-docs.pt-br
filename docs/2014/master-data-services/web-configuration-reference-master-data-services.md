@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - web configuration file [Master Data Services]
 ms.assetid: b8cc9a35-97ab-4fe0-ab4b-c07f13d9793a
-caps.latest.revision: 5
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 9c345312ddadab6c5efd689d36f36f09cc2d0a41
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2f52ca10bd9d857d4e87a54f19cfaa87f1e92575
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37250216"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48130956"
 ---
 # <a name="web-configuration-reference-master-data-services"></a>Referência de configuração da Web (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] usa um arquivo Web.config que contém as definições de configuração que permitem que o IIS (Serviços de Informações da Internet) hospede o serviço Web e o aplicativo Web do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . O arquivo Web.config está localizado na pasta WebApplication do caminho de instalação do [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Para obter mais informações sobre o caminho e as permissões, consulte [Permissões de pasta e arquivo &#40;Master Data Services&#41;](folder-and-file-permissions-master-data-services.md).  

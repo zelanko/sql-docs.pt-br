@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - deployment [Reporting Services]
 ms.assetid: 699d24eb-7756-4b41-9294-ef1a94b2f267
-caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 83f19122e9c6846de6465fba84226076ce7fec9b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a26f748a5dd8e291587b4e35e0f0677d9da415cc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37265702"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48172286"
 ---
 # <a name="sql-server-2005-report-server-web-service-group-detected-upgrade-advisor"></a>Grupo do serviço Web do servidor de relatório do SQL Server 2005 foi detectado (Supervisor de Atualização)
   O Supervisor de atualização detectou que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância está associada um [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] grupo do serviço Web servidor de relatório.  

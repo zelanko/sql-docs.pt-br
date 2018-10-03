@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbsource.f1
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - sources [Integration Services], OLE DB
 - OLE DB source [Integration Services]
 ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
-caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 26900d1b1ba9500c114d65927121be80760d484e
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 1b1d37bba3216a22d732c5562108db51925d37bf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083918"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48120569"
 ---
 # <a name="ole-db-source"></a>Origem de OLE DB
   A origem de OLE DB extrai dados de uma variedade de bancos de dados relacionais compatíveis com OLE DB usando uma tabela de banco de dados, uma exibição ou um comando SQL. Por exemplo, a origem de OLE DB pode extrair dados de tabelas em [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access ou bancos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -81,7 +78,7 @@ ms.locfileid: "39083918"
   
  `EXEC uspGetWhereUsedProductID ?, ?`  
   
- O procedimento armazenado espera as variáveis, `@StartProductID` e `@CheckDate`, para fornecer os valores de parâmetros. A ordem na qual os parâmetros aparecem na lista **Mapeamentos** é irrelevante. O único requisito é que os nomes de parâmetro correspondem aos nomes de variáveis no procedimento armazenado, incluindo o \@ sinal.  
+ O procedimento armazenado espera as variáveis, `@StartProductID` e `@CheckDate`, para fornecer os valores de parâmetros. A ordem na qual os parâmetros aparecem na lista **Mapeamentos** é irrelevante. O único requisito é que os nomes de parâmetros correspondam aos nomes de variáveis no procedimento armazenado, incluindo o sinal \@.  
   
 ### <a name="mapping-parameters-to-variables"></a>Mapeando parâmetros para variáveis  
  Os parâmetros são mapeados para variáveis que fornecem os valores de parâmetros em tempo de execução. As variáveis geralmente são definidas pelo usuário, embora você também possa usar as variáveis de sistema que o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornece. Se você usar variáveis definidas pelo usuário, defina o tipo de dados que seja compatível com o tipo de dados da coluna à qual o parâmetro mapeado faz referência. Para obter mais informações, consulte [Integration Services &#40;SSIS&#41; Variables](../integration-services-ssis-variables.md).  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 10778ec9-5fe4-4b4e-89b0-ade1f06b781d
-caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4a41599128d6b0f9bbceaa47a30d851e312f39e3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ee8df91688c3878b0b124b72630922c9ee09f843
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37168127"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48167976"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Servidor de relatório do Reporting Services (modo do SharePoint)
   Um servidor de relatório do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] configurado para o **Modo do SharePoint** pode ser executado em uma implantação de um produto do SharePoint. Um servidor de relatório no modo do SharePoint pode usar os recursos de colaboração e gerenciamento do SharePoint para relatórios e outros [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] tipos de conteúdo. O modo do SharePoint requer a instalação da versão apropriada do suplemento do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para produtos do SharePoint nos seus Front Ends Web do SharePoint.  

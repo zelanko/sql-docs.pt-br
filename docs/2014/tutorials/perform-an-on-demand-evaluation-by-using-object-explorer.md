@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ee6d3b79-18bc-49d3-8a1d-0c0905b990f0
-caps.latest.revision: 8
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 95ce7493353fbce70ec10f575b7a637ea4d8809c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f950b99b7de4b7e81d75ed9decee47f74a785206
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37237926"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48098106"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-object-explorer"></a>Realize uma avaliação sob demanda usando o Pesquisador de Objetos
   Nesta tarefa, você usará o Pesquisador de Objetos para realizar uma avaliação sob demanda das políticas de práticas recomendadas para o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] em uma única instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

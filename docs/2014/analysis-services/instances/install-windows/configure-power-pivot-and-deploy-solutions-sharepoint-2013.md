@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6401fd92-f43b-450e-8298-12db644c25bc
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bb76491d121921f4e5b826ecf760923ba9e2238e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4f06745f47bd78df8d9464c090afb46116594e8b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312666"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104796"
 ---
 # <a name="configure-powerpivot-and-deploy-solutions-sharepoint-2013"></a>Configurar o PowerPivot e implantar soluções (SharePoint 2013)
   Este tópico descreve a implantação e configuração de aprimoramentos de camada intermediária aos recursos do PowerPivot no [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] incluindo a Galeria PowerPivot, agendar a provedores de dados, painel de gerenciamento e atualização de dados. Execute a ferramenta de **Configuração do PowerPivot para SharePoint 2013** para concluir o seguinte:  

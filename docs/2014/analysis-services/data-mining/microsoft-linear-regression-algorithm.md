@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - algorithms [data mining]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - linear regression [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 50a4abb8-c0b0-4380-ba5e-c49b305b9d22
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6efc2b76fe6a6c4b53a2b108a776f2104b02318d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 84a7ae52cf3556d7c79e3b9ca8d6027f8a5f14db
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37315069"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48180406"
 ---
 # <a name="microsoft-linear-regression-algorithm"></a>Algoritmo Regressão Linear da Microsoft
   O algoritmo Regressão Linear da [!INCLUDE[msCoName](../../includes/msconame-md.md)] é uma variação do algoritmo Árvores de Decisão da [!INCLUDE[msCoName](../../includes/msconame-md.md)] que o ajuda a calcular uma relação linear entre uma variável dependente e uma independente e, depois, a usar aquela relação para previsão.  
@@ -70,7 +67,7 @@ ms.locfileid: "37315069"
   
  Além de criar um modelo de regressão linear selecionando o algoritmo Regressão Linear da [!INCLUDE[msCoName](../../includes/msconame-md.md)] , se o atributo previsível for um tipo de dados numérico contínuo, você poderá criar um modelo de árvore de decisão que contenha regressões. Neste caso, o algoritmo irá dividir quando encontrar os pontos de separação apropriados, mas criará uma fórmula de regressão para algumas regiões de dados. Para obter mais informações sobre árvores de regressão em um modelo de árvores de decisão, consulte [Conteúdo do modelo de mineração para modelos da árvore de decisão &#40;Analysis Services – Mineração de dados&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 -   Não dá suporte ao uso de PMML para criar modelos de mineração.  
   

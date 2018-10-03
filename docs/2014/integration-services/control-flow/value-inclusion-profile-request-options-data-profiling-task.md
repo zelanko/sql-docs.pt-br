@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: ca94da82-a4c9-4e87-9cba-c2d85bd31f01
-caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 525bb7bd5ed1fc3d2c5f48e97f13343d6910182f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a149bb829e542ab98aedc1e3f0d646e347bc979a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37199746"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48114966"
 ---
 # <a name="value-inclusion-profile-request-options-data-profiling-task"></a>Opções da solicitação do perfil Inclusão de Valor (tarefa Criação de Perfil de Dados)
   Use o painel **Propriedades da Solicitação** da página **Solicitações de Perfil** para definir as opções da **Solicitação do Perfil de Inclusão de Valor** selecionada no painel de solicitações. Um perfil de Inclusão de Valor computa a sobreposição nos valores entre duas colunas ou conjuntos de colunas. Portanto, esse perfil também pode determinar se uma coluna ou conjunto de colunas é apropriado para servir como uma chave estrangeira entre as tabelas selecionadas. Esse perfil também pode ajudá-lo a identificar problemas em seus dados, como valores inválidos. Por exemplo, você usa um perfil de inclusão de valor para criar um perfil para a coluna ProductID de uma tabela de vendas. O perfil descobre que a coluna contém valores que não são encontrados na coluna ProductID da tabela Produtos.  

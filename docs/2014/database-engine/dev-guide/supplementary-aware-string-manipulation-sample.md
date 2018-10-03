@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 343a1cd6-94e9-4200-9d17-11cef0d73f73
-caps.latest.revision: 11
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ef48666d6e7c73d530895e315cbc3a42b57599eb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 96171211f08ae5348dfb183dc20abaaa66b3fb6d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37277092"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48182479"
 ---
 # <a name="supplementary-aware-string-manipulation-sample"></a>Exemplo de manipulação de cadeias de caracteres com reconhecimento de suplementares
   O exemplo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] demonstra o processamento de cadeia de caracteres com reconhecimento de caracteres suplementares. Este exemplo mostra a implementação de cinco funções da cadeia de caracteres do Transact-SQL que fornecem as mesmas funções de manipulação de cadeia de caracteres, como as funções internas, porém com capacidade de reconhecimento de caracteres suplementares adicionais para tratar cadeias de caracteres suplementares e Unicode. As cinco funções são lens, `lefts(), rights(), subs()` e `replace_s()` que são equivalentes às funções internas `LEN(), LEFT(), RIGHT(), SUBSTRING()` e `REPLACE()` funções de cadeia de caracteres.  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b201f2b8-9ab5-425b-9ff3-fe321a60a7b7
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e0dc6f1be5fd1d0a6c983005d7db10c4c94a690b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5ea66ce1ef677e150a93fbd873c8b97f939e19e1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251178"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48174016"
 ---
 # <a name="lesson-1-creating-a-time-series-mining-model-and-mining-structure"></a>Lição 1: Criando um modelo de mineração de série temporal e uma estrutura de mineração
   Nesta lição, você criará um modelo de mineração que permite prever valores com o passar do tempo, com base em dados históricos. Quando você criar o modelo, a estrutura subjacente será gerada automaticamente e poderá ser usada como a base para outros modelos de mineração.  

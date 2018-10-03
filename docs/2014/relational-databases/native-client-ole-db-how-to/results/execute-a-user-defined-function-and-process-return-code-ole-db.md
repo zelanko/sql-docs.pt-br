@@ -1,26 +1,23 @@
 ---
-title: Executar uma função definida pelo usuário e o processo de código de retorno (OLE DB) | Microsoft Docs
+title: Executar uma função definida pelo usuário e processar o código de retorno (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - user-defined functions [OLE DB]
 ms.assetid: d96c33fd-ed17-4713-8921-bf2dc3347f78
-caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 33408db3d1db2ba06c9db871f8a4e785d9564e10
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 57b54049542c08042a3edbca8310af9c16f9c62d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37409957"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48172246"
 ---
 # <a name="execute-a-user-defined-function-and-process-return-code-ole-db"></a>Executar uma função definida pelo usuário e processar o código de retorno (OLE DB)
   Neste exemplo, uma função definida pelo usuário é executada e o código de retorno é impresso. Este exemplo não tem suporte em IA64.  
@@ -33,7 +30,7 @@ ms.locfileid: "37409957"
 ## <a name="example"></a>Exemplo  
  Execute a primeira listagem de código ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) para criar o procedimento armazenado usado pelo aplicativo.  
   
- Compile com ole32.lib oleaut32.lib e execute a segunda listagem de código (C++). Esse aplicativo se conecta ao padrão do seu computador [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instância. Em alguns sistemas operacionais Windows, será necessário alterar (localhost) ou (local) para o nome de sua instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para se conectar a uma instância nomeada, altere a cadeia de caracteres de conexão de L"(local)" para L"(local)\\\name", onde o nome é a instância nomeada. Por padrão, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express é instalado em uma instância nomeada. Verifique se a variável de ambiente INCLUDE inclui o diretório que contém sqlncli.h.  
+ Compile com ole32.lib oleaut32.lib e execute a segunda listagem de código (C++). Esse aplicativo se conecta à instância padrão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] do computador. Em alguns sistemas operacionais Windows, será necessário alterar (localhost) ou (local) para o nome de sua instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para se conectar a uma instância nomeada, altere a cadeia de conexão de L"(local)" para L"(local)\\\name", em que name é a instância nomeada. Por padrão, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express é instalado em uma instância nomeada. Verifique se a variável de ambiente INCLUDE inclui o diretório que contém sqlncli.h.  
   
  Execute a terceira listagem de código ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) para excluir o procedimento armazenado usado pelo aplicativo.  
   
@@ -367,6 +364,6 @@ go
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Tópicos explicativos de resultados de processamento &#40;OLE DB&#41;](processing-results-how-to-topics-ole-db.md)  
+ [Tópicos de instruções sobre o processamento de resultados &#40;OLE DB&#41;](processing-results-how-to-topics-ole-db.md)  
   
   

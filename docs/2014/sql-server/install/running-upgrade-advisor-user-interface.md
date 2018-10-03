@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor Report Viewer
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - starting Upgrade Advisor
 - SQL Server Upgrade Advisor, running
 ms.assetid: 7f47c9b3-88d3-43d6-837e-f157b49a55ac
-caps.latest.revision: 40
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 881075f22468cb384aa3c3b5a4677a6e0d70bdf7
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: c402516980f5cf3e1790f8a5fa6d594c93b0e500
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40393560"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48176097"
 ---
 # <a name="running-upgrade-advisor-user-interface"></a>Executando o Supervisor de Atualização (Interface do usuário)
   Você pode executar o Supervisor de Atualização para analisar componentes locais ou remotos durante o planejamento da atualização. O Supervisor de Atualização gera um relatório para cada componente e instância que é analisado.  

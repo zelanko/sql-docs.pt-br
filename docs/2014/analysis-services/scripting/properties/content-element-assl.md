@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Content Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Content element
 ms.assetid: 221addef-2f88-49c5-b8f5-9eee330497a9
-caps.latest.revision: 42
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bd9e3c237d8009ac153e8c69033ce9cce958aba3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b27152b0c181061e25727270fd89bd423728a5a2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267472"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48097856"
 ---
 # <a name="content-element-assl"></a>Elemento Content (ASSL)
   Descreve o conteúdo da coluna na [MiningStructure](../objects/miningstructure-element-assl.md) elemento.  
@@ -51,7 +48,7 @@ ms.locfileid: "37267472"
 |Característica|Description|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|Cadeia de caracteres (enumeração)|  
-|Valor padrão|Nenhum|  
+|Valor padrão|None|  
 |Cardinalidade|1-1: elemento obrigatório que pode ocorrer apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -59,9 +56,9 @@ ms.locfileid: "37267472"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elemento pai|[ScalarMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Essa enumeração descreve o tipo de conteúdo representado por uma coluna da estrutura de mineração e pode ser estendida conforme necessário pelos provedores de algoritmo de mineração. Para obter mais informações sobre tipos de conteúdo, consulte [Tipos de conteúdo &#40;Mineração de dados&#41;](../../data-mining/content-types-data-mining.md).  
   
  Os valores listados na tabela a seguir normalmente têm suporte em todos os provedores de algoritmo de mineração.  
@@ -69,7 +66,7 @@ ms.locfileid: "37267472"
 |Valor|Description|  
 |-----------|-----------------|  
 |*Discreto*|A coluna contém valores discretos.|  
-|*Contínua*|Os valores para a coluna definem um conjunto contínuo de dados numéricos.|  
+|*contínua*|Os valores para a coluna definem um conjunto contínuo de dados numéricos.|  
 |*Dados discretos*|Os valores da coluna representam grupos (ou blocos) de valores derivados de uma coluna contínua.|  
 |*Ordenado*|Os valores da coluna definem um conjunto ordenado.|  
 |*Cíclico*|Os valores da coluna definem um conjunto ordenado cíclico.|  

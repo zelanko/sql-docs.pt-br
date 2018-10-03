@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - PowerShell [SQL Server], job steps
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - job steps [PowerShell]
 - SQL Server Agent jobs, PowerShell steps
 ms.assetid: 50afcf84-fae0-4eb5-9b0f-f2cf144c1433
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f75e4ff6ecacc44413ebbecc5c400f1b00c9a989
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 68f671d8c0345db830a6cdac463869b531b39011
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43810772"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104606"
 ---
 # <a name="create-a-powershell-script-job-step"></a>Create a PowerShell Script Job Step
   Este tópico descreve como criar e definir uma etapa de trabalho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent que execute um script PowerShell no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  

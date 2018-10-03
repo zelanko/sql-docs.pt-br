@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 940140a7-4785-46fc-8bf4-151435dccd3c
-caps.latest.revision: 4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 72a6236e7fed91aeaf7ee946bf3393fb767dd496
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: a28f2401f11f20f8891dbe71537ce2240a570ed8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394801"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48158766"
 ---
 # <a name="in-memory-oltp-garbage-collection"></a>Coleta de lixo de OLTP na memória
   Uma linha de dados é considerada obsoleta se foi excluída por uma transação que não está mais ativa. Uma linha obsoleta é qualificada para a coleta de lixo. Estas são características da coleta de lixo no [!INCLUDE[hek_2](../../includes/hek-2-md.md)]:  

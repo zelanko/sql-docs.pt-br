@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4380040a-1368-4a47-8930-47c65a192e59
-caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ae1d09ddc1df0d4ff33808c92b708f92b4f4820c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: db0a090cd82e1bbcd9caa9ac5542662f67c5aecd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37240526"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48181246"
 ---
 # <a name="deployment-checklist-multi-server-installation-of-powerpivot-for-sharepoint-2010"></a>Lista de verificação de implantação: instalação multisservidor do PowerPivot para SharePoint 2010
   Esta lista de verificação orienta você pelas etapas para adicionar [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint para um farm do SharePoint 2010 de três camadas que você cria do zero. Um farm em três níveis contém os níveis de banco de dados, aplicativo e Web. Adicionando [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para esta topologia requer que você execute a instalação do SQL Server para instalar o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] na camada de aplicativo. Arquivos de programa do PowerPivot são adicionados na camada da web, mas somente como uma tarefa de pós-instalação quando você o implantar solução de aplicativo web. Embora haja etapas de instalação, não é necessário executar nenhuma etapa de instalação separada na camada da Web nem na camada de dados. A etapa de instalação somente que você precisa executar é instalar [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] nos servidores de aplicativos.  

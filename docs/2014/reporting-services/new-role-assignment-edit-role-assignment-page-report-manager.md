@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3319ced0-4b86-42af-b18d-da41a625113c
-caps.latest.revision: 30
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0d1635c6b9c801b5a2ad9a2eff107c3bf35cf23a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e9b964ba4be7587836da9e8852261a43f1e8f43c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37179643"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48181786"
 ---
 # <a name="new-role-assignment-edit-role-assignment-page-report-manager"></a>Página Atribuição de Nova Função: Editar Atribuição de Função (Gerenciador de Relatórios)
   Use a página Atribuição de Nova Função ou Editar Atribuição de Função para conceder permissões a itens de servidor de relatório e operações. Cada usuário que solicita acesso a um servidor de relatórios deve ter uma atribuição de função que define o nível de acesso. Você pode criar atribuições de função no nó raiz ou em determinado relatório, modelo, pasta, recurso ou fonte de dados compartilhada. A segurança do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] é imposta pelas atribuições de função que você aplica aos itens. Uma atribuição de função faz a correspondência entre um grupo ou usuário e uma definição de função, sendo que cada definição identifica as tarefas que os grupos ou usuários podem executar em um item específico.  

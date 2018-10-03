@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - finding Help topics [SQL Server]
 ms.assetid: 2d43a79f-8f4e-4c98-b921-16035129a15b
-caps.latest.revision: 19
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 44dfb789b8caa90413106655aefb635d0ba7c3db
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 69127078f72eeab296c754dfce666804dcdda53d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37223656"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48134878"
 ---
 # <a name="getting-assistance-sql-server-2014"></a>Obtendo assistência (SQL Server 2014)
   Existem três origens principais de informações da [!INCLUDE[msCoName](../includes/msconame-md.md)] sobre o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  

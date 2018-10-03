@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - OLEDB QueryInterface event class
 ms.assetid: f54c9ef9-3add-497c-a09b-42c4ce3c623d
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4a6fcacac48a6f32cbdd7744566400936decc51e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 54459f4c31854c11a2285c072b8e5d20ca510807
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37223436"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48174986"
 ---
 # <a name="oledb-queryinterface-event-class"></a>classe de evento OLEDB QueryInterface
   A classe de evento **OLEDB QueryInterface** ocorre quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] emite uma chamada OLE DB **QueryInterface** para consultas distribuídas e procedimentos armazenados remotamente. Inclua essa classe de evento em rastreamentos que estão monitorando problemas associados a consultas distribuídas e procedimentos armazenados remotamente.  

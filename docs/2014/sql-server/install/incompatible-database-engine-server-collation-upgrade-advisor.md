@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 80f499d6-2c90-49eb-a5b3-0bb5b7faaa3b
-caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e182df78fc7faae8a50092fd51a8f2c0964fe2bc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d66e01079a0ab86a1456e53dd310614d3c291267
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37286642"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48173406"
 ---
 # <a name="incompatible-database-engine-server-collation-upgrade-advisor"></a>Agrupamento do servidor de mecanismo de banco de dados incompatível (Supervisor de Atualização)
   Supervisor de atualização detectado [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] está usando uma instância da [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que é configurado para usar um agrupamento do servidor incompatível.  

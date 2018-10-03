@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2f5b1a42-b814-4d7d-b603-5383d9ac66b9
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7694bdc07e602f9ed93cee5419e51f9c7083d26a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7dddb6aec8d55a2a0495900b87661a431f8de9d0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37275772"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106739"
 ---
 # <a name="analysis-services-tutorial-scenario"></a>Cenário do tutorial de Analysis Services
   Este tutorial baseia-se na [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], uma empresa fictícia. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] é uma grande empresa multinacional que produz e distribui bicicletas de metal e compostos para mercados comerciais da América do Norte, Europa e Ásia. A sede da [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] é em Bothell, Washington, onde a empresa emprega 500 trabalhadores. Além disso, a [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] emprega várias equipes de vendas regionais por toda a sua base de mercado.  

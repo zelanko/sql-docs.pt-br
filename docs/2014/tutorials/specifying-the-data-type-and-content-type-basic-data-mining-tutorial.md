@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 72484d27-3ef1-4f16-813c-2f43231fc2da
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 578d47783f22e857bb2fb84949e9d22dd6ad0e85
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b97cec782c7f95de42ee64d7db0ce56ffa916c3e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37174946"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48176597"
 ---
 # <a name="specifying-the-data-type-and-content-type-basic-data-mining-tutorial"></a>Especificando o tipo de dados e o tipo de conteúdo (Tutorial de mineração de dados básico)
   Agora que você selecionou as colunas a serem usadas na criação da sua estrutura e no treinamento de seus modelos, faça as alterações necessárias nos dados padrão e nos tipos de conteúdo definidos pelo assistente.  
@@ -36,11 +33,11 @@ ms.locfileid: "37174946"
     |------------|------------------|---------------|  
     |**Linha de endereço1**|**Discreto**|**Texto**|  
     |**Linha de endereço2**|**Discreto**|**Texto**|  
-    |**Idade**|**Contínua**|**Long**|  
+    |**Idade**|**contínua**|**Long**|  
     |**Comprador de bicicleta**|**Discreto**|**Long**|  
     |**Distância do Trabalho**|**Discreto**|**Texto**|  
     |**CustomerKey**|**Chave**|**Long**|  
-    |**DateLastPurchase**|**Contínua**|**Date**|  
+    |**DateLastPurchase**|**contínua**|**Date**|  
     |**Endereço de email**|**Discreto**|**Texto**|  
     |**Educação em inglês**|**Discreto**|**Texto**|  
     |**Ocupação em inglês**|**Discreto**|**Texto**|  
@@ -54,7 +51,7 @@ ms.locfileid: "37174946"
     |**Número de Crianças na Casa**|**Discreto**|**Long**|  
     |**Região**|**Discreto**|**Texto**|  
     |**Total de Filhos**|**Discreto**|**Long**|  
-    |**Renda Anual**|**Contínua**|**Double**|  
+    |**Renda Anual**|**contínua**|**Double**|  
   
 3.  Clique em **Avançar**.  
   

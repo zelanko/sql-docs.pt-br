@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.tableprop.f1
 ms.assetid: 16d3347b-7e43-4a6b-9956-fdd6ede092e6
-caps.latest.revision: 8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c94cb6ed1092944fd19683e57d3f7b9265f495c4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 13a1b980174fa04428b1c9d525554501360db1cb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37183353"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48169016"
 ---
 # <a name="table-properties-ssas-tabular"></a>Propriedades da tabela (SSAS tabular)
   Este tópico descreve as propriedades do modelo de tabela. As propriedades descritas aqui são diferentes daquelas na caixa de diálogo Editar Propriedades de Tabela, que definem quais colunas da origem são importadas.  

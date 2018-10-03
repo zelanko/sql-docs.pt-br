@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mining structures, creating
 ms.assetid: b8b1eedc-4d6d-4429-a578-e629ec573934
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2244f9c73d48946628c063d22a1f0645182a73ac
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 166689f175485af66ca140f82fa968512baf8519
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37244046"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48086336"
 ---
 # <a name="create-mining-structure-sql-server-data-mining-add-ins"></a>Criar estrutura de mineração (Suplementos de Mineração de Dados do SQL Server)
   ![O botão Criar estrutura de mineração, faixa de opções mineração de dados](media/dmc-createstruct.gif "botão Criar estrutura de mineração, faixa de opções mineração de dados")  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 01/31/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - troubleshooting [SQL Server], deploying
 - Availability Groups [SQL Server], troubleshooting
 - Availability Groups [SQL Server], configuring
 ms.assetid: 8c222f98-7392-4faf-b7ad-5fb60ffa237e
-caps.latest.revision: 38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: efd9cb30582ffcf48c8a7f410dcb164e0a4d3da0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6bf6502b459cf8f81a3137d73402b73ab6b6e9c4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37209856"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48182256"
 ---
 # <a name="troubleshoot-alwayson-availability-groups-configuration-sql-server"></a>Solucionar problemas de configuração de grupos de disponibilidade AlwaysOn (SQL Server)
   Este tópico fornece informações para ajudar a solucionar problemas típicos ao configurar instâncias de servidor para o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Os problemas de configuração típicos incluem: o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] está desabilitado, as contas estão configuradas incorretamente, o ponto de extremidade de espelhamento de banco de dados não existe, o ponto de extremidade está inacessível (Erro 1418 do SQL Server), o acesso à rede não existe e falha no comando de junção de banco de dados (Erro 35250 do SQL Server).  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - external programs [Database Mail]
 - DatabaseMail90.exe
 - Database Mail [SQL Server], external programs
 ms.assetid: bc124164-eb6e-4b7f-bf66-98a3113d02f7
-caps.latest.revision: 39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cc14bf4c5128cff5e836c894dbcd74aa8e7a5cc0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7b565a18009346f5f49d47e2336993bd4d27c899
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37233346"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096496"
 ---
 # <a name="database-mail-external-program"></a>Programa externo do Database Mail
   O executável externo do Database Mail é **DatabaseMail.exe**, que está localizado no **diretório MSSQL\Binn** da instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O Database Mail usa a ativação do Service Broker para iniciar o programa externo quando há mensagens de email a serem processadas. O Database Mail inicia uma instância do programa externo. O programa externo é executado no contexto de segurança da conta de serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

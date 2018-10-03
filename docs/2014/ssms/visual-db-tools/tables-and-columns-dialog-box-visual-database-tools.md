@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.tablesandcolumns
 ms.assetid: 8cf27be1-e66d-4735-a428-9ab4b33af4f5
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 03ce3fa48be896074cf2dfd23f2ce51eb0828c74
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 4a89dbc440cd47dc7ed951181c49d20d52097faa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43809292"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48165296"
 ---
 # <a name="tables-and-columns-dialog-box-visual-database-tools"></a>Caixa de dialogo Tabelas e Colunas (Visual Database Tools)
   Use esta caixa de diálogo para mapear uma chave primária em uma tabela para uma chave estrangeira em outra. Para acessar essa caixa de diálogo, no menu **Designer de Tabela** , clique em **Relações**. Na caixa de diálogo **Relações de Chave Estrangeira** , clique no campo **Especificação das Tabelas e Colunas** e, em seguida, clique nas reticências **(…)** à direita da propriedade.  

@@ -1,28 +1,25 @@
 ---
-title: Suporte de API do OLE DB para data e hora aprimoramentos | Microsoft Docs
+title: Suporte da API do OLE DB para melhorias de data e hora | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - OLE DB, date/time improvements
 ms.assetid: e65c9253-bd99-4dc3-9cb8-7613f754c966
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b94ba91b68daf5415b4c9ae753f4d9e32c6949bc
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 536860699bcdbed6753724bfad7832bc9fa7705e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37408382"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48143996"
 ---
-# <a name="ole-db-api-support-for-date-and-time-enhancements"></a>Suporte de API do OLE DB para data e hora aprimoramentos
+# <a name="ole-db-api-support-for-date-and-time-enhancements"></a>Suporte da API do OLE DB para melhorias de data e hora
   O suporte das APIs do OLE DB a seguir aprimorou os recursos de data/hora.  
   
 |Função|Description|  
@@ -38,6 +35,6 @@ ms.locfileid: "37408382"
 |ITableDefinition::CreateTable|Para obter mais informações, consulte [suporte de tipo de dados para OLE DB aprimoramentos de data e hora](data-type-support-for-ole-db-date-and-time-improvements.md).|  
   
 ## <a name="see-also"></a>Consulte também  
- [Aprimoramentos de data e hora &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
+ [Melhorias de data e hora &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
   
   

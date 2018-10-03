@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - LastProcessed Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - LastProcessed element
 ms.assetid: df3d1f6f-705c-4408-9eb3-c550a1dec450
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7d5fd5e94c8a92ee21b1cb04e5f9ef62eddae91f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d634eead7abe78e60eda98083bc6dbeb4ae932ea
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37206186"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153396"
 ---
 # <a name="lastprocessed-element-assl"></a>Elemento LastProcessed (ASSL)
   Contém o carimbo de data e hora somente leitura que indica quando o banco de dados que contém o elemento pai foi processado por último.  
@@ -51,7 +48,7 @@ ms.locfileid: "37206186"
 |Característica|Description|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|DateTime|  
-|Valor padrão|Nenhum|  
+|Valor padrão|None|  
 |Cardinalidade|0-1: elemento opcional que pode ocorrer apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -59,9 +56,9 @@ ms.locfileid: "37206186"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|[Cubo](../objects/cube-element-assl.md), [banco de dados](../objects/database-element-assl.md), [dimensão](../objects/dimension-element-assl.md), [MeasureGroup](../objects/group-element-assl.md), [MiningModel](../objects/miningmodel-element-assl.md), [MiningStructure](../objects/miningstructure-element-assl.md), [Partição](../objects/partition-element-assl.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] mantém o valor da `LastProcessed` elemento. O valor irá se alterar somente se o banco de dados que contém o elemento pai for processado. O processamento do elemento pai individualmente não altera o valor do elemento `LastProcessed`.  
   
  Os elementos que correspondem aos pais de `LastProcessed` no modelo de objeto AMO (Objetos de Gerenciamento de Análise) são <xref:Microsoft.AnalysisServices.Cube>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.Dimension>, <xref:Microsoft.AnalysisServices.MeasureGroup>, <xref:Microsoft.AnalysisServices.MiningModel>, <xref:Microsoft.AnalysisServices.MiningStructure> e <xref:Microsoft.AnalysisServices.Partition>.  

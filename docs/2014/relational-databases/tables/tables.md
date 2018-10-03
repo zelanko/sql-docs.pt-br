@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - tables [SQL Server]
 - table components [SQL Server]
 ms.assetid: 82d7819c-b801-4309-a849-baa63083e83f
-caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7374db46a57d3f214d3f40edd885c59902437ace
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: acdc9600b7d1081492893f3cc8497359df65fdb3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37184143"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153706"
 ---
 # <a name="tables"></a>Tabelas
   Tabelas são objetos de banco de dados que contêm todos os dados em um banco de dados. Nas tabelas, os dados são organizados de maneira lógica em um formato de linha-e-coluna semelhante ao de uma planilha. Cada linha representa um registro exclusivo e cada coluna representa um campo no registro. Por exemplo, uma tabela que contém dados de funcionários de uma empresa pode conter uma linha para cada funcionário e colunas representando as informações sobre o funcionário, como número, nome, endereço, cargo e número do telefone residencial do funcionário.  

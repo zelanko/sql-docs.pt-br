@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - bitwise NOT (~)
 - ~ (bitwise NOT)
 ms.assetid: e4413ddd-0d0e-40c3-9c76-b5ce323218ec
-caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f422eb2e9b75e7488cff9ceaa089954595d00313
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 655f09c1470e37f7d1503e1e3d151a734210e45c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37231486"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48154316"
 ---
 # <a name="-bitwise-not-ssis-expression"></a>~ (Não de bit a bit) (Expressão SSIS)
   Executa uma negação bit a bit de um inteiro. Esse operador pode ser se aplicado a tipos de dados inteiro assinados e não assinados.  
@@ -42,8 +39,8 @@ ms.locfileid: "37231486"
 ## <a name="result-types"></a>Tipos de resultado  
  Retorna o tipo de dados de *integer_expression.*  
   
-## <a name="remarks"></a>Remarks  
- Nenhum  
+## <a name="remarks"></a>Comentários  
+ None  
   
 ## <a name="expression-examples"></a>Exemplos de expressões  
  Esse exemplo executa uma operação ~ (NOT) bit a bit no número 170 (0000 0000 1010 1010). O número é um inteiro assinado.  

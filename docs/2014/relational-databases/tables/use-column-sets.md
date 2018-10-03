@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - sparse columns, column sets
 - column sets
 ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
-caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6c6807bbb743b39177e282f965916e5d5d78e4bc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 19e99799eac66823d8b243470eb5540c94e22708
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37258212"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48180656"
 ---
 # <a name="use-column-sets"></a>Usar conjuntos de colunas
   As tabelas que usam colunas esparsas podem designar um conjunto de colunas para retornar todas as colunas esparsas na tabela. Um conjunto de colunas é uma representação em XML sem-tipo que combina todas as colunas esparsas de uma tabela em uma saída estruturada. Um conjunto de colunas é como uma coluna calculada em que o conjunto de colunas não é fisicamente armazenado na tabela. Um conjunto de colunas difere de uma coluna calculada em que o conjunto de colunas é diretamente atualizável.  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 703db83b-e554-450e-813e-23ad08c1cdad
-caps.latest.revision: 4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 378f2a9503abbf277b25c09b66e11acc606529e4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 01060e5161071a06a0fb2c269af5f5a3e14c31b6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273862"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48178474"
 ---
 # <a name="delete-a-column-ssas-tabular"></a>Excluir uma coluna (SSAS tabular)
   Este tópico descreve como excluir uma coluna de uma tabela de modelo de tabela.  

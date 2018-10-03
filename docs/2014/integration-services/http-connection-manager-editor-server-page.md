@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.httpconnection.server.f1
 helpviewer_keywords:
 - HTTP Connection Manager Editor
 ms.assetid: 774778a0-ece6-4971-b93f-b121d8fc1fc1
-caps.latest.revision: 31
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 816653a78a5702c4e1308eb5adb1341f527d9aaf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5ee0b1b738ffda626fdfd761efbc766f823dd3ba
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300536"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48176406"
 ---
 # <a name="http-connection-manager-editor-server-page"></a>Editor do Gerenciador de Conexões HTTP (página Servidor)
   Use a guia **Servidor** da caixa de diálogo **Editor do Gerenciador de Conexões de HTTP** para configurar o Gerenciador de Conexões de HTTP especificando propriedades como URL e credenciais de segurança. Uma conexão HTTP permite que um pacote acesse um servidor Web usando o HTTP para enviar ou receber arquivos. Depois de configurar o Gerenciador de Conexões de HTTP, você também pode testar a conexão.  

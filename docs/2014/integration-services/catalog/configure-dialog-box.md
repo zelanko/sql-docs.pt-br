@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SSIS.SSMS.ISPROJECTPROP.PARAMETERS.F1
 - SQL12.SSIS.SSMS.ISPROJECTPROP.REFERENCES.F1
 - sql12.dts.designer.configure.f1
 ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
-caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 021cb357b85b7e75ec2d4594300c096b8f09fda8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ac0637b19437c2570cbb87fb56b84641274d9d3c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37184673"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48174186"
 ---
 # <a name="configure-dialog-box"></a>Caixa de diálogo Configurar
   Use a caixa de diálogo **Configurar** para configurar parâmetros, gerenciadores de conexões e referências a ambientes para projetos e pacotes.  

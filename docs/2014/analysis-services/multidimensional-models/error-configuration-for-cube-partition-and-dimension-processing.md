@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.cubeproperties.errorconfiguration.f1
 - sql12.asvs.sqlserverstudio.dimensionproperties.errorconfiguration.f1
 - sql12.asvs.sqlserverstudio.partitionproperties.errorconfiguration.f1
 ms.assetid: 3f442645-790d-4dc8-b60a-709c98022aae
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3edb4e923424def48ff3cacdd9eb8967f8cb6579
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0ec0d1acbe1714159d6777f6cb91056e4e14b356
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37275912"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48175366"
 ---
 # <a name="error-configuration-for-cube-partition-and-dimension-processing-ssas---multidimensional"></a>Configuração de erros para cubo, partição e processamento da dimensão (SSAS - multidimensional)
   As propriedades de configuração de erro no cubo, na partição ou nos objetos de dimensão determinam como o servidor responde quando ocorrem erros de integridade de dados durante o processamento. As chaves duplicadas, chaves ausentes e os valores nulos em uma coluna de chave normalmente disparam esses erros, e embora o registro que cause o erro não seja adicionado ao banco de dados, você pode definir propriedades que determinam o que acontece em seguida. Por padrão, o processamento para. No entanto, durante o desenvolvimento do cubo, talvez você queira que o processamento continue quando ocorrerem os erros de forma que você possa testar comportamentos do cubo com dados importados, mesmo se estiverem incompletos.  

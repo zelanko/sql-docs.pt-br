@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - tools [Analysis Services]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - data mining [Analysis Services], tools
 - data mining [Analysis Services], development
 ms.assetid: 003ada6a-0bcd-4f16-8c34-1a9ffc75cd2c
-caps.latest.revision: 47
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 810210c6c04cc0830c8c1586d82cb18c0ed5a02e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 70669026a7953ba1c2818ebc35b3d8fa7cb55427
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37179083"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48171546"
 ---
 # <a name="data-mining-tools"></a>Ferramentas de mineração de dados
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece as seguintes ferramentas que podem ser usadas para criar soluções de mineração de dados:  

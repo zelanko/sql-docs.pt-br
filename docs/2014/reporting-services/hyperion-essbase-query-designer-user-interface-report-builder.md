@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10013"
@@ -15,20 +13,18 @@ helpviewer_keywords:
 - Hyperion Essbase query designer
 - query designers, Hyperion
 ms.assetid: d89a6773-dbe5-48e5-bda9-db0e67100696
-caps.latest.revision: 13
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3653c8bf79c3c7527f72d01282fe7af961fbbec8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6559f17e1bbe28e1a30d636b196b6e8d21497041
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37208586"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166276"
 ---
 # <a name="hyperion-essbase-query-designer-user-interface-report-builder"></a>Interface de usuário do Designer de Consulta do Hyperion Essbase (Construtor de Relatórios)
-  
-            [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] oferece um designer de consultas gráficas para criar consultas MDX (Multidimensional Expression) para uma fonte de dados do [!INCLUDE[extEssbase](../includes/extessbase-md.md)] . O designer de consultas gráficas MDX tem dois modos: Design e Consulta. Cada modo contém um painel Metadados, do qual é possível arrastar membros de um cubo definido na fonte de dados para criar uma consulta MDX que recupere dados quando o relatório for processado.  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] oferece um designer de consultas gráficas para criar consultas MDX (Multidimensional Expression) para uma fonte de dados do [!INCLUDE[extEssbase](../includes/extessbase-md.md)] . O designer de consultas gráficas MDX tem dois modos: Design e Consulta. Cada modo contém um painel Metadados, do qual é possível arrastar membros de um cubo definido na fonte de dados para criar uma consulta MDX que recupere dados quando o relatório for processado.  
   
 > [!IMPORTANT]  
 >  Os usuários acessam fontes de dados quando criam e executam consultas. Você deve conceder permissões mínimas nas fontes de dados, como permissões somente leitura.  

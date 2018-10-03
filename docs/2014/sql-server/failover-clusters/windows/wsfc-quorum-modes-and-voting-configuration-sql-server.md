@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - quorum [SQL Server], AlwaysOn and WSFC quorum
 - failover clustering [SQL Server], AlwaysOn Availability Groups
 ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
-caps.latest.revision: 12
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4944037ce934c4e876cd2d333e6cb7aff6b44147
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 26e5c4cdbc181012d72f02f4bc05b122a4e722ca
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37226966"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48111468"
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>Configuração de modos de quorum WSFC e votação (SQL Server)
   Ambos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] e instâncias de Cluster de Failover (FCI) AlwaysOn tiram proveito do WSFC Windows Server Failover Clustering () como uma tecnologia de plataforma.  O WSFC usa uma abordagem baseada em quorum para monitorar integridade de cluster geral e maximizar a tolerância a falhas no nível do nó. Um entendimento fundamental dos modos de quorum do WSFC e a configuração de votação de nó são muito importantes para o design, a operação e a resolução de problemas da sua solução de alta disponibilidade e recuperação de desastre AlwaysOn.  

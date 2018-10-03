@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services deployments, processing options
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - modifying processing options
 - Analysis Services Deployment Wizard, processing options
 ms.assetid: e9e50817-908e-4210-bc3d-8e2957568241
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c5f20e9061aae762eda6b773c7bdb345273fd1b5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 450cc656d22d471225e013bfcd2664f6eb27dba9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37149097"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48173188"
 ---
 # <a name="specifying-processing-options"></a>Especificando opções de processamento
   O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Assistente de implantação do lê as opções de processamento das \< *nome do projeto*>. deploymentoptions arquivo. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] cria esse arquivo quando você cria o projeto [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usa as opções de processamento especificadas na **implantação** página do  *\<nome do projeto >* **páginas de propriedades** caixa de diálogo para criar o \< *nome do projeto*>. deploymentoptions arquivo.  
@@ -39,7 +36,7 @@ ms.locfileid: "37149097"
   
     -   Processamento completo  
   
-    -   Nenhum  
+    -   None  
   
 -   **Opções de Tabelas de Write-back** Se o write-back estiver habilitado no projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , essa configuração definirá como o write-back será manipulado. Há três opções de tabela de write-back:  
   

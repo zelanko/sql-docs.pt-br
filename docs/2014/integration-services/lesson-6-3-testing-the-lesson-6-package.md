@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c184c92d-948f-4037-a502-5fabd909c84c
-caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 77fa6d4f000f58322524b7a32917ed7e29144b8f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9ddacdc7ede5d65132912783464250ff5f0db6bf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37271142"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48122026"
 ---
 # <a name="step-3-testing-the-lesson-6-package"></a>Etapa 3: Testando o pacote da Lição 6
   Em tempo de execução, seu pacote irá obter o valor para a propriedade Diretório a partir do parâmetro VarFolderName.  

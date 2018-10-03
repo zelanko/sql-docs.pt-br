@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Aggregation Design Wizard
 ms.assetid: 39e23cf1-6405-4fb6-bc14-ba103314362d
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9926d41c221356f89633d8b3130069c28181a32a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9323f9b4fa6655fe72ae70457329c4ffc0d5dec2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37259692"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48150636"
 ---
 # <a name="aggregation-design-wizard-f1-help"></a>Ajuda F1 do Assistente de Design de Agregação
   As agregações fornecem melhorias de desempenho permitindo que o [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] recupere totais pré-calculados diretamente do armazenamento de cubo em vez de precisar recalcular dados de uma fonte de dados subjacente para cada consulta.  

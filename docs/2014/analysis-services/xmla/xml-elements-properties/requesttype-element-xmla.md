@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - RequestType Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - RequestType element
 ms.assetid: 54270a57-e327-4233-b4b2-d85b44652ac5
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d73bcac80918bc79064e0b6e1a4eabf315cdcd9a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 322b212853f94a1e1e5b1b48534dee649632d164
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37171187"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48105306"
 ---
 # <a name="requesttype-element-xmla"></a>Elemento RequestType (XMLA)
   Determina o tipo de metadados retornados pela [Discover](../xml-elements-methods-discover.md) método.  
@@ -53,7 +50,7 @@ ms.locfileid: "37171187"
 |Característica|Description|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|Cadeia de caracteres (enumeração)|  
-|Valor padrão|Nenhum|  
+|Valor padrão|None|  
 |Cardinalidade|1-1: elemento obrigatório que ocorre apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -61,9 +58,9 @@ ms.locfileid: "37171187"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|[Descobrir](../xml-elements-methods-discover.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O elemento `RequestType` determina o conjunto de linhas de esquema a partir do qual o método `Discover` retorna dados. Essa enumeração é limitada aos nomes dos conjuntos de linhas de esquema com suporte pelo [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Para obter mais informações sobre conjuntos de linhas de esquema, consulte [conjuntos de linhas de esquema do Analysis Services](../../schema-rowsets/analysis-services-schema-rowsets.md).  
   
 > [!NOTE]  

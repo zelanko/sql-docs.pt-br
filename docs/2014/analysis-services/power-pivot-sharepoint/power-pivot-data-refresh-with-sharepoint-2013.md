@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 34f03407-2ec4-4554-b16b-bc9a6c161815
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fa5a4ddce8c51b3e360c4fc4f243b90b310fd07f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 78780e497ba67589dc3e227430f59ed1c536c36b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280772"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48172596"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2013"></a>Atualização de dados PowerPivot com SharePoint 2013
   O design para atualização de modelos de dados do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] no SharePoint 2013 utiliza Serviços do Excel como o principal componente para carregar e atualizar modelos de dados em uma instância do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] executada no modo SharePoint. O servidor do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é executado externamente ao farm do SharePoint.  

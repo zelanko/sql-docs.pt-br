@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e547382a-c064-4bc6-818c-5127890af334
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0ac88882120b588599af625852675e9be95031ea
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 77e4b6ba8f70c826dcfdf5a89fc9c577d587a3f7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37235686"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48181366"
 ---
 # <a name="roles-ssas-tabular"></a>Funções (SSAS tabular)
   Funções, em modelos tabulares, definem permissões de membro para um modelo. Cada função contém membros, por nome de usuário do Windows ou grupo do Windows, e permissões (leitura, processo, administrador). Membros da função podem executar ações no modelo conforme definido pela permissão de função. As funções definidas com permissões de leitura também podem fornecer segurança adicional no nível de linha usando filtros no nível de linha.  
@@ -68,7 +65,7 @@ ms.locfileid: "37235686"
   
 |Permissões|Description|Filtros de linha usando DAX|  
 |-----------------|-----------------|----------------------------|  
-|Nenhum|Os membros não podem fazer modificações ao esquema de banco de dados modelo e não podem consultar dados.|Filtros de linha não são aplicáveis. Os dados não são visíveis a usuários nesta função|  
+|None|Os membros não podem fazer modificações ao esquema de banco de dados modelo e não podem consultar dados.|Filtros de linha não são aplicáveis. Os dados não são visíveis a usuários nesta função|  
 |leitura|Os membros têm permissão de consultar dados (com base em filtros de linha), mas não podem ver o banco de dados modelo no SSMS, não podem fazer nenhuma alteração ao esquema de banco de dados modelo e o usuário não pode processar o modelo.|Os filtros de linha podem ser aplicados. Somente os dados especificados na fórmula DAX de filtro de linha são visíveis a usuários.|  
 |Leitura e processo|Os membros têm permissão de consultar dados (com base em filtros em nível de linha) e executar operações de processo por meio de um script ou pacote que contém um comando de processo, mas não pode fazer nenhuma alteração ao banco de dados. Não pode exibir o banco de dados modelo no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|Os filtros de linha podem ser aplicados. Somente os dados especificados na fórmula DAX de filtro de linha possam ser consultados.|  
 |Processar|Os membros podem executar operações de processo por meio de um script ou pacote que contém um comando de processo. Não pode modificar o esquema de banco de dados modelo. Não é possível consultar dados. Não pode consultar o banco de dados modelo no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|Filtros de linha não são aplicáveis. Nenhum dado pode ser consultado nesta função|  

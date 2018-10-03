@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - NULL function
 - null values [Integration Services]
 ms.assetid: df144237-3fbb-41ac-8624-efd92b6522b9
-caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3cb260a0dd304a87aef74d750a13e0e260a55596
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6659b9390f52bc27c52f82b875d50da3fd37b5ce
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37239176"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48102919"
 ---
 # <a name="null-ssis-expression"></a>NULL (Expressão SSIS)
   Retorna um valor nulo de um tipo de dados solicitado.  
@@ -41,7 +38,7 @@ NULL(typespec)
 ## <a name="result-types"></a>Tipos de resultado  
  Qualquer tipo de dados válido com um valor nulo.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  NULL retornará um resultado nulo se o argumento for nulo.  
   
  Os parâmetros são exigidos para solicitar um valor nulo para alguns tipos de dados. A tabela a seguir lista esses tipos de dados e seus parâmetros.  

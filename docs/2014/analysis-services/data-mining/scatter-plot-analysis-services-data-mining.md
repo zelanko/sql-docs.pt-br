@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - charts [Analysis Services]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - scatter charts
 - regression algorithms [Analysis Services]
 ms.assetid: 166812ec-fd1c-47c8-88db-d5041142be91
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6ae52af8c9449b5636d799d306e3ab317cea9d6a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5135fa8ed6565096e8e2cf5ff851c3c0c2aced72
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251548"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48179166"
 ---
 # <a name="scatter-plot-analysis-services---data-mining"></a>Dispersão (Analysis Services - Mineração de dados)
   Uma *dispersão* representa de forma gráfica os valores reais de seus dados em relação aos valores previstos pelo modelo. A dispersão exibe os valores reais no eixo X e os valores previstos no eixo Y. Ela também exibe uma linha que ilustra a previsão perfeita, onde o valor previsto corresponde exatamente ao valor real. A distância de um ponto a partir desta linha angular ideal de 45º indica quão boa ou ruim foi a previsão.  

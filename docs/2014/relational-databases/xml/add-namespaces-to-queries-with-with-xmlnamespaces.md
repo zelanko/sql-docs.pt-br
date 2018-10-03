@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ELEMENTS XSINIL directive
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - xml data type [SQL Server], WITH XMLNAMESPACES clause
 - WITH XMLNAMESPACES clause
 ms.assetid: 2189cb5e-4460-46c5-a254-20c833ebbfec
-caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 67ca4f1a0663b83eb4fe9cb1abfa2a1b609e2c56
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: b9689a0e46abbcba53e7c9765e9d327df4ef220a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43889562"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48172466"
 ---
 # <a name="add-namespaces-to-queries-with-with-xmlnamespaces"></a>Adicionar namespaces a consultas com WITH XMLNAMESPACES
   [WITH XMLNAMESPACES (Transact-SQL)](/sql/t-sql/xml/with-xmlnamespaces) fornece suporte a URI de namespace da seguinte maneira:  

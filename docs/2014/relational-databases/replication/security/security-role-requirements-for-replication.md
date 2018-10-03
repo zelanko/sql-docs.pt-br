@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - security [SQL Server replication], roles
 - roles [SQL Server], replication
 ms.assetid: b324a80f-4319-4cb2-847b-1910c49d90e0
-caps.latest.revision: 34
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1f70f4e11bec18bb713fa04b01b912d476701b4d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8c57fa5ea252aa66e14628d49529970ceab7eb64
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37184293"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48146406"
 ---
 # <a name="security-role-requirements-for-replication"></a>Security Role Requirements for Replication
   A replicação restringe as ações específicas que um usuário pode executar, baseada nas funções que o logon do usuário é mapeado. A replicação concede determinadas permissões para os membros da função de servidor fixa **sysadmin** , função de banco de dados fixa, **db_owner** e os logons na PAL (Publication Access List).  

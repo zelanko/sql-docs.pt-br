@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - PendingValue Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - PendingValue element
 ms.assetid: 386b2ec6-3d83-42d2-b83a-83e375fbdcbd
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ef24ae229f879adc15fa9f2ecfd8cb10a19d09ff
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c0f78f1916f9d6b4cd266848d5b5c5943fb17cc9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37263392"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48117407"
 ---
 # <a name="pendingvalue-element-assl"></a>Elemento PendingValue (ASSL)
   Contém o pendente somente leitura valor associado [ServerProperty](../objects/serverproperty-element-assl.md) elemento.  
@@ -51,7 +48,7 @@ ms.locfileid: "37263392"
 |Característica|Description|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|Qualquer simpleType|  
-|Valor padrão|Nenhum|  
+|Valor padrão|None|  
 |Cardinalidade|0-1: elemento opcional que pode ocorrer apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -59,9 +56,9 @@ ms.locfileid: "37263392"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elemento pai|[ServerProperty](../objects/serverproperty-element-assl.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse elemento contém o valor da `ServerProperty` que será usado na próxima vez que a instância atual do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] é iniciado. Esse valor normalmente é recuperado de qualquer lugar onde o valor da propriedade de servidor está armazenado, em um arquivo de inicialização, no registro do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows ou em outro mecanismo de armazenamento.  
   
  O elemento que corresponde ao pai de `PendingValue` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.ServerProperty>.  

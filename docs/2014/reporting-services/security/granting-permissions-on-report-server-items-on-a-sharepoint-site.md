@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - permissions [Reporting Services], native mode
 - security [Reporting Services], SharePoint integrated mode
 ms.assetid: 0eb2f34a-3643-4b03-81c2-5741ba7ebefd
-caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2c106d3d086366146c0ed32dca78533238e81ed2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a1ba908e9db3764ccfc0bd35f8dbb901245519e5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37183843"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48087008"
 ---
 # <a name="granting-permissions-on-report-server-items-on-a-sharepoint-site"></a>Concedendo permissões para itens do servidor de relatório em um site do SharePoint
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] fornece recursos de segurança internos que podem ser usados para conceder acesso a itens do servidor de relatório acessados nos sites e bibliotecas do SharePoint. Se você já tiver atribuído permissões a usuários, esses mesmos usuários terão acesso a itens e operações do servidor de relatórios assim que você configurar a integração entre o [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] e um servidor de relatório. Você pode usar permissões existentes para carregar definições de relatório e outros documentos, exibir relatórios, criar assinaturas e gerenciar itens.  

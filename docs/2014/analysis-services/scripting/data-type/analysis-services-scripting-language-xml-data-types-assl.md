@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Analysis Services Scripting Language XML Data Types
@@ -21,18 +19,17 @@ helpviewer_keywords:
 - Analysis Services Scripting Language, data types
 - data types [Analysis Services Scripting Language]
 ms.assetid: 8e527916-932e-48ec-9010-f22cd4b721e2
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bc773c4eda7b9f26b8ddafab5f6c80b068d32ec9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f5ff2f0989aa2c88a69351d698c847ca6e835285
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37276632"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48179246"
 ---
-# <a name="analysis-services-scripting-language-xml-data-types-assl"></a>Tipos de dados XML de linguagem script (ASSL) do Analysis Services
+# <a name="analysis-services-scripting-language-xml-data-types-assl"></a>Tipo de dados XML do ASSL (Linguagem de Script do Analysis Services)
   Esta seção de referência contém informações de sintaxe e uso de cada elemento que age como um tipo no esquema ASSL (Analysis Services Scripting Language).  
   
  Embora o esquema ASSL contenha somente elementos XML, do ponto de vista do desenvolvedor, os elementos descritos nessa seção correspondem aos tipos, como `Binding` e `Permission`, que são usados para definir os elementos filho e as propriedades de outros objetos.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - synchronization [SQL Server replication], about synchronization
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - replication [SQL Server], synchronization
 - scripts [SQL Server replication]
 ms.assetid: 724802f7-7d69-46d3-a330-bd8aa7f53114
-caps.latest.revision: 35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 25f339972a55b9b7ef3f2a8679acf610f70cfb54
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4c417fb90dd4467fe6fb79ea9bfaf812c414326d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37164267"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48128666"
 ---
 # <a name="synchronize-data"></a>Sincronizar dados
   Sincronizando dados se refere ao processo de alterações de dados e esquemas sendo propagadas entre o Publicador e os Assinantes após o instantâneo inicial ter sido aplicado ao Assinante. A sincronização pode acontecer:  

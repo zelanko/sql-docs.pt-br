@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - global default for all users [SQL Server]
 - users [SQL Server], global defaults
 - user options option [SQL Server]
 ms.assetid: cfed8f86-6bcf-4b90-88eb-9656e22d5dc5
-caps.latest.revision: 24
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a746b087259d5159f693198a3cf60a1ce98ce6e8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9c418de267940942c99aae21bcf00118bb1ac36e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37257062"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48172666"
 ---
 # <a name="configure-the-user-options-server-configuration-option"></a>Configurar as opções de configuração de servidor user connections
   Este tópico descreve como configurar a opção de configuração de servidor **user options** no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A opção **user options** especifica padrões globais para todos os usuários. Uma lista de opções de processamento de consulta padrão é definida para a duração da sessão de trabalho de um usuário. A opção **user options** permite alterar os valores padrão das opções SET (se as configurações padrão do servidor não forem apropriadas).  

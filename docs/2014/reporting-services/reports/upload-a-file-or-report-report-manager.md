@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - publishing reports [Reporting Services], uploading files
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - uploading files [Reporting Services]
 - files [Reporting Services], uploading
 ms.assetid: 79027e11-f4ba-4bfd-bd8c-d334e3da02a1
-caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 44dd1787da648e332c2234b83323990784b0d4bc
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: bc1a807ed81ffb0b0aa5482d2fe3a09e70eb7908
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085438"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116176"
 ---
 # <a name="upload-a-file-or-report-report-manager"></a>Carregar um arquivo ou relatório (Gerenciador de Relatórios)
   O Gerenciador de Relatórios fornece um recurso de carregamento que permite adicionar relatórios, modelos e outros arquivos a um servidor de relatório sem publicar esses itens a partir de um aplicativo cliente. Os arquivos carregados a partir do sistema de arquivos são armazenados como itens no servidor de relatório. O tipo de arquivo carregado determina o modo de armazenamento:  

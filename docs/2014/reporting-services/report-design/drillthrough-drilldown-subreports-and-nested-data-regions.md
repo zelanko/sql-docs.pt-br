@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4791a157-b028-4698-905d-f1dd0887aa0d
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 4a951ab61a50ddf9983678a50989e5560d40f85e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 764f4a6f84b710be9ac0b6a7c6a8f4989530ca8f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37228826"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48179536"
 ---
 # <a name="drillthrough-drilldown-subreports-and-nested-data-regions-report-builder-and-ssrs"></a>Detalhamento, busca detalhada, sub-relatórios e regiões de dados aninhadas (Construtor de Relatórios e SSRS)
   É possível organizar dados de várias formas para mostrar a relação entre o geral e o detalhado.  É possível colocar todos os dados no relatório, mas defini-lo como oculto até que um usuário clique para revelar detalhes; trata-se de uma ação de *busca detalhada* . É possível exibir os dados em uma região de dados, como uma tabela ou um gráfico, *aninhado* em outra região de dados, como uma tabela ou matriz. É possível exibir os dados em um *sub-relatório* totalmente contido em um relatório principal. Se preferir, você pode colocar os dados detalhados em relatórios de *detalhamento* , relatórios à parte que são exibidos quando um usuário clica em um link.  

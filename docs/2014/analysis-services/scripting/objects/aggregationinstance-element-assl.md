@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - AggregationInstance Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - AggregationInstance element
 ms.assetid: 2e77e9e1-9f2c-4df4-9aa6-5b7b911016a3
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 089fcff4b01b66f3b2bc1ac98de2f5cb4ba88319
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: aef7afde2cf93d18ad0a567f5a5e1071b7e42ebf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37229766"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48177896"
 ---
 # <a name="aggregationinstance-element-assl"></a>Elemento AggregationInstance (ASSL)
   Define uma instância de agregação para uma partição.  
@@ -53,8 +50,8 @@ ms.locfileid: "37229766"
   
 |Característica|Description|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|Nenhum|  
-|Valor padrão|Nenhum|  
+|Comprimento e tipo de dados|None|  
+|Valor padrão|None|  
 |Cardinalidade|0-n: Elemento opcional que pode ocorrer mais de uma vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -64,7 +61,7 @@ ms.locfileid: "37229766"
 |Elementos pai|[AggregationInstances](../collections/aggregationinstances-element-assl.md)|  
 |Elementos filho|[AggregationID](../properties/id-element-assl.md), [AggregationType](../properties/aggregationtype-element-assl.md), [Annotations](../collections/annotations-element-assl.md), [Dimensions](../collections/dimensions-element-assl.md), [Measures](../collections/measures-element-assl.md), [Source](../properties/source-element-binding-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Quando um [partição](partition-element-assl.md) elemento usa um [AggregationDesign](aggregationdesign-element-assl.md) elemento para gerar agregações para essa partição, cada [agregação](aggregation-element-assl.md) no `AggregationDesign` é instanciada para essa partição. Várias partições podem usar o mesmo design de agregação para gerar várias instâncias de uma agregação definida. O elemento `AggregationInstance` representa uma instância de uma agregação definida.  
   
  O elemento correspondente no modelo de objeto Analysis Management Objects (AMO) é <xref:Microsoft.AnalysisServices.AggregationInstance>.  

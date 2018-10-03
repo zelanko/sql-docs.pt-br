@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: dc0c27a4-7e31-4a15-a0bc-3a02479d5b02
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: fd3b765bff38ea006a1dd1a60fe861373715ee80
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bbc1b3eaabe4760cd8f0778f1c2e2659e4c6db74
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37309416"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095706"
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>Planejar um relatório de mapa (Construtor de Relatórios e SSRS)
   Bons relatórios apresentam informações que levam a ações ou ideias. Para apresentar dados analíticos como totais de vendas ou dados demográficos em relação a um plano de fundo geográfico, você pode adicionar um mapa a seu relatório. Um mapa pode conter várias camadas, onde cada uma exibe elementos de mapas que são definidos por um tipo específico de dados espaciais: pontos que representam locais, linhas que representam rotas ou polígonos que representam áreas. Você pode associar seus dados analíticos a elementos de mapas em cada camada.  

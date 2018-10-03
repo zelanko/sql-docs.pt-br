@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - service master key [SQL Server], exporting
 ms.assetid: f60b917c-6408-48be-b911-f93b05796904
-caps.latest.revision: 16
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: f4933108a167ca0572ed59e2bb834dcb260bbc6c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 23d4a24811c545bc69b41cb43bfc3f6b957eddf6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37262302"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48180536"
 ---
 # <a name="back-up-the-service-master-key"></a>Fazer backup da chave mestra de serviço
   Este tópico descreve como fazer backup da Chave mestra de serviço no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. A chave mestra de serviço é a raiz da hierarquia de criptografia. Ela deve ter seu backup feito e armazenado em um local seguro, fora do site. Criar este backup deveria ser uma das primeiras ações administrativas executadas no servidor.  

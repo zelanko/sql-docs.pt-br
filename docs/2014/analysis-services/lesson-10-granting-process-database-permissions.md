@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 69ba952e-09ae-49a9-9297-00e32e8e89a8
-caps.latest.revision: 17
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2f3cce413fa5a5c47afa5ea9a97b142a75d23472
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 955cb236d3b89d5fe682770150b7ab723865ff0c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37306516"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48171756"
 ---
 # <a name="granting-process-database-permissions"></a>Concedendo permissões ao banco de dados do processo
   Depois da instalação de uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], todos os membros da função do administrador de servidor do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] nessa instância têm permissões em todo o servidor para executar qualquer tarefa na instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Por padrão, nenhum outro usuário tem qualquer permissão para administrar ou exibir objetos na instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - removing subscriptions
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - pull subscriptions [SQL Server replication], deleting
 - subscriptions [SQL Server replication], pull
 ms.assetid: 997c0b8e-d8d9-4eed-85b1-6baa1f8594ce
-caps.latest.revision: 35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6fe35faf0b633e5fe7525371713dff189ac559b2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d9eb39e06198881ac5c51a9fc78e623b010485a4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37150857"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48175306"
 ---
 # <a name="delete-a-pull-subscription"></a>Excluir uma assinatura pull
   Este tópico descreve como excluir uma assinatura pull no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]ou o RMO (Replication Management Objects).  

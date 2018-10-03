@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - copying queries
 - queries [SQL Server], copying
 ms.assetid: 46cd1557-cf3d-40b8-b489-8446e0984e0f
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b3faca33f58b40a3a0575f2b911ab88659e0d603
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: ee17ffd28b133146ba56575dec08fec992def95a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43808992"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48178806"
 ---
 # <a name="copy-queries-visual-database-tools"></a>Copiar consultas (Visual Database Tools)
   Você pode copiar o corpo de uma consulta em uma nova consulta para usar como ponto de partida.  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], display options
 - URL access [Reporting Services], report display parameters
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
-caps.latest.revision: 44
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d4dc8cb04d2755f534b8ff4f13b113639a14f3b3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2bdae6fe44e416786e842eb2ecc36d213d771cf7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37306906"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48179236"
 ---
 # <a name="url-access-parameter-reference"></a>Referência de parâmetro de acesso de URL
   Você pode usar os parâmetros a seguir como parte de uma URL para configurar a aparência de seus relatórios. Os parâmetros mais comuns estão listados nesta seção. Os parâmetros não diferenciam maiúsculas de minúsculas e começam com o prefixo de parâmetro *rs:* quando direcionados ao servidor de relatório e com *rc:* quando direcionados a um Visualizador de HTML. Você também pode especificar parâmetros que são específicos de dispositivos ou extensões de renderização. Para obter mais informações sobre parâmetros específicos do dispositivo, consulte [especificar configurações de informações de dispositivo em uma URL](specify-device-information-settings-in-a-url.md).  

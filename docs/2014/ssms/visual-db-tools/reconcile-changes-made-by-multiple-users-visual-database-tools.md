@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - table modifications [SQL Server], multiple users
 - reconciling changes made by multiple users
 - modifications made by multiple users
 ms.assetid: fc7ed4f2-ad3d-47fc-a3ef-51e5bb069ef0
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 986e737dd3cccdfe67ef745f2cbcb3789ca3aa12
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 10d432ca5ba341bda0d3aacdb9ef9a9a90f4820c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43809692"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48172306"
 ---
 # <a name="reconcile-changes-made-by-multiple-users-visual-database-tools"></a>Reconciliar alterações feitas por vários usuários (Visual Database Tools)
   Em um ambiente multiusuário, é possível ter vários usuários fazendo alterações no mesmo objeto simultaneamente. Isso pode acontecer quando você estiver trabalhando na estrutura do objeto nos designers de diagrama de banco de dados ou tabela, ou pode ocorrer em valores nos resultados retornados no painel de resultados dos Designers de Consulta e Exibição. Isso pode causar conflitos que devem ser resolvidos.  

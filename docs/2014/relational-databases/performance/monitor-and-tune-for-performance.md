@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - instances of SQL Server, monitoring performance
@@ -28,16 +26,15 @@ helpviewer_keywords:
 - database monitoring [SQL Server]
 - monitoring server performance [SQL Server], about monitoring server performance
 ms.assetid: 87f23f03-0f19-4b2e-bfae-efa378f7a0d4
-caps.latest.revision: 31
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cf401890d55cd26240523b141f3ba52272060b2e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1acbc868471ebae0de110d8c346303e45cff50a8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37276782"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48179756"
 ---
 # <a name="monitor-and-tune-for-performance"></a>Monitorar e ajustar o desempenho
   A meta do monitoramento de bancos de dados é avaliar o desempenho do servidor. Um monitoramento eficaz envolve a criação de instantâneos periódicos do desempenho atual para isolar processos que estão ocasionando problemas, e a coleta contínua de dados para o controle das tendências de desempenho.  

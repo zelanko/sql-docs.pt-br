@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.nativecompilationwizard.f1
 - swb.nativecompilationwizard.f1
 ms.assetid: d3898a47-2985-4a08-bc70-fd8331a01b7b
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3218596e2f627eb8f330dbb161e178ffbac16648
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 36a6a30ffbf5a0991e2b55ba655549454516e82d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394391"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147096"
 ---
 # <a name="native-compilation-advisor"></a>Orientador de compilação nativa
   A ferramenta de relatórios de desempenho da transação (consulte [Determinando se uma tabela ou um procedimento armazenado deve ser movido para o OLTP na memória](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) informa sobre quais procedimentos armazenados interpretados no banco de dados serão beneficiados se usarem a compilação nativa. Depois de identificar um procedimento armazenado que você gostaria de ser aprovado para usar a compilação nativa, você poderá usar o orientador de compilação nativa para ajudá-lo a migrar o procedimento armazenado interpretado para compilação nativa. Para obter mais informações sobre procedimentos armazenados nativamente compilados, consulte [Natively Compiled Stored Procedures](natively-compiled-stored-procedures.md).  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - nested tables, in association models
 - association [data mining]
 ms.assetid: 4db6462f-93c7-443f-8ff7-39474dc7029e
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ed09d260a7db66561af6cf80136c801ea46cc5a2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f9288c6a4f01cff6c3c4a19ff79a1d49775035cf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216606"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48179426"
 ---
 # <a name="associate-wizard-data-mining-client-for-excel"></a>Assistente para Associação (Cliente de Mineração de Dados para Excel)
   ![Assistente para associação na faixa de opções mineração de dados](media/dmc-associate.gif "Assistente para associação na faixa de opções mineração de dados")  
