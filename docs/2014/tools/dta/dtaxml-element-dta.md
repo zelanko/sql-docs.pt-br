@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - DTAXML element
 ms.assetid: 3d9942ed-8a27-40db-a7c9-808984d914a2
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d460721fd138c0629322687b1160b8c75cdd0cfa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d567c422299809f04be97c8db298aadecc22dde8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37177133"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48192216"
 ---
 # <a name="dtaxml-element-dta"></a>Elemento DTAXML (DTA)
   O elemento raiz de um arquivo de entrada ou saída XML do Orientador de Otimização do Mecanismo de Banco de Dados, **DTAXML** , contém todos os elementos que descrevem a entrada e a saída de ajuste geradas pelo Orientador.  
@@ -58,10 +55,10 @@ ms.locfileid: "37177133"
   
 |Relação|Elementos|  
 |------------------|--------------|  
-|**Elemento pai**|Nenhum|  
+|**Elemento pai**|None|  
 |**Elementos filho**|[Elemento DTAInput &#40;DTA&#41;](dtainput-element-dta.md)<br /><br /> `DTAOutput` Elemento (consulte [esquema XML do Orientador de otimização de mecanismo de banco de dados](http://schemas.microsoft.com/sqlserver/) para obter informações)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Para obter mais informações sobre namespaces XML, consulte [Namespaces em um documento XML](http://go.microsoft.com/fwlink/?LinkId=7341) na Biblioteca MSDN do [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
 ## <a name="example"></a>Exemplo  

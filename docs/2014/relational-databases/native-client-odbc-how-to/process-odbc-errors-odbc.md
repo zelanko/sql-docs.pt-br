@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - errors [ODBC]
 ms.assetid: 66ab0762-79fe-4a31-b655-27dd215a0af7
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8057ac412d673fff49105c8fd7d051d13f3ac63e
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 5299054716b644b5b6271dcc72d9e596e78da1cb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37423025"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48192936"
 ---
 # <a name="process-odbc-errors-odbc"></a>Processar erros ODBC (ODBC)
   É possível usar duas chamadas de função ODBC para recuperar mensagens ODBC: [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402) e [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md). Para obter informações relacionadas ao ODBC principal nos campos de diagnóstico **SQLState**, **pfNative** e **ErrorMessage**, chame [SQLGetDiagRec](http://go.microsoft.com/fwlink/?LinkId=58402) até ele retornar SQL_NO_DATA. Para cada registro de diagnóstico, é possível chamar [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) a fim de recuperar campos individuais. Todos os campos específicos do driver devem ser recuperados usando `SQLGetDiagField`.  

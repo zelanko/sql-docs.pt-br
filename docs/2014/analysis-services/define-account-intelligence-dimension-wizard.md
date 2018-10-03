@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.accountintelligencetypemapping.f1
 ms.assetid: cbcff072-3a7e-4e98-858f-1b4265461561
-caps.latest.revision: 26
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a6609c795afdf4f966e9a5375459975dccc54587
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 927442d1fe46fc42998643d4f7de47b438cbaa49
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210316"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48179966"
 ---
 # <a name="define-account-intelligence-dimension-wizard"></a>Definir Inteligência de Conta (Assistente de Business Intelligence)
   Use a página **Definir Inteligência de Conta** para mapear tipos de conta definidos na instância do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para tipos de conta definidos no atributo de dimensão associado ao atributo **Tipo de Conta** na dimensão.  

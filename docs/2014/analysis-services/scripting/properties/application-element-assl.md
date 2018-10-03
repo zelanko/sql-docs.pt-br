@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Application Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Application element
 ms.assetid: dfd780ad-f643-4a1c-b58b-34271ae91240
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e04ce46a9fc2797885e3c8dff0acd697a782b95a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8b4a9b82bef51b02d65c934a6b8adbbbdb30e2e4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37279492"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200386"
 ---
 # <a name="application-element-assl"></a>Elemento Application (ASSL)
   Identifica o aplicativo associado com um [ação](../objects/action-element-assl.md) elemento.  
@@ -51,7 +48,7 @@ ms.locfileid: "37279492"
 |Característica|Description|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|Cadeia de caracteres|  
-|Valor padrão|Nenhum|  
+|Valor padrão|None|  
 |Cardinalidade|0-1: elemento opcional que pode ocorrer apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -59,9 +56,9 @@ ms.locfileid: "37279492"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elemento pai|[Ação](../objects/action-element-assl.md) ou um de seus elementos derivados: [DrillThroughAction](../data-type/action-data-type-assl.md), [ReportAction](../data-type/reportaction-data-type-assl.md), [StandardAction](../data-type/standardaction-data-type-assl.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O elemento `Application` pode ser usado pelos aplicativos cliente para determinar quais ações devem ser aplicadas a um determinado aplicativo cliente. O aplicativo cliente é responsável por avaliar o valor desse elemento.  
   
  O elemento que corresponde ao pai de `Application` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Action>.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - TableNotification Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - TableNotification element
 ms.assetid: 3afd075a-74f9-428c-b527-ee497cbe71e7
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e952acc38173462440ec94c050fb27e7a96cce89
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b8fea5896667afa1952e088faa97b9a0797f9864
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37321126"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48184266"
 ---
 # <a name="tablenotification-element-assl"></a>Elemento TableNotification (ASSL)
   Contém informações para o [ProactiveCaching](proactivecaching-element-assl.md) elemento sobre uma tabela ou exibição em uma fonte de dados que foi modificada.  
@@ -49,8 +46,8 @@ ms.locfileid: "37321126"
   
 |Característica|Description|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|Nenhum|  
-|Valor padrão|Nenhum|  
+|Comprimento e tipo de dados|None|  
+|Valor padrão|None|  
 |Cardinalidade|1-n: elemento obrigatório que pode ocorrer mais de uma vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -60,7 +57,7 @@ ms.locfileid: "37321126"
 |Elementos pai|[TableNotifications](../collections/tablenotifications-element-assl.md)|  
 |Elementos filho|[DbSchemaName](../properties/name-element-assl.md), [DbTableName](../properties/dbtablename-element-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O elemento correspondente no modelo de objeto Analysis Management Objects (AMO) é <xref:Microsoft.AnalysisServices.TableNotification>.  
   
 ## <a name="see-also"></a>Consulte também  

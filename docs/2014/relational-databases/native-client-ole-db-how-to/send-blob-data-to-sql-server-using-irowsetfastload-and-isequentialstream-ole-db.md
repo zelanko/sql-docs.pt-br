@@ -4,28 +4,25 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: cb022814-a86b-425d-9b24-eaac20ab664e
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e58e42b2bede1c29024a17643b611190c980b905
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 048dbd899f8c330e053ce9e97ee78d38b7f4e336
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37410705"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48177172"
 ---
 # <a name="send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db"></a>Enviar dados BLOB ao SQL SERVER usando IROWSETFASTLOAD e ISEQUENTIALSTREAM (OLE DB)
   Este exemplo mostra como usar IRowsetFastLoad para o fluxo de dados BLOB de comprimento variável por linha.  
   
  Por padrão, este exemplo mostra como usar IRowsetFastLoad para enviar dados BLOB de comprimento variável por linha usando associações embutidas. Os dados BLOB embutidos devem se ajustar à memória disponível. Este método é executado melhor quando os dados BLOB têm menos de alguns megabytes, pois não há sobrecarga de fluxo adicional. Para dados com mais de alguns megabytes, principalmente dados que não estejam disponíveis em um bloco, o acesso de fluxo fornece desempenho melhor.  
   
- No código-fonte, quando você remover o comentário #define USE_ISEQSTREAM, o exemplo usará ISequentialStream. A implementação de fluxo é definida no exemplo e pode enviar qualquer tamanho de dados BLOB simplesmente alterando MAX_BLOB. Os dados de fluxo não têm que se ajustar à memória ou estar disponíveis em um bloco. Para chamar esse provedor, use IRowsetFastLoad::InsertRow. Passe um ponteiro usando IRowsetFastLoad::InsertRow para a implementação de fluxo no buffer de dados (deslocamento rgBinding.obValue) junto com a quantidade de dados disponível para leitura do fluxo. Alguns provedores talvez não tenham que saber o comprimento dos dados quando a associação ocorre. Nesse caso, o comprimento poderá ser omitido da associação.  
+ No código-fonte, quando você remover o comentário #define USE_ISEQSTREAM, o exemplo usará ISequentialStream. A implementação de fluxo é definida na amostra e pode enviar qualquer tamanho de dados BLOB simplesmente alterando MAX_BLOB. Os dados de fluxo não têm que se ajustar à memória ou estar disponíveis em um bloco. Para chamar esse provedor, use IRowsetFastLoad::InsertRow. Passe um ponteiro usando IRowsetFastLoad::InsertRow para a implementação de fluxo no buffer de dados (deslocamento rgBinding.obValue) junto com a quantidade de dados disponível para leitura do fluxo. Alguns provedores talvez não tenham que saber o comprimento dos dados quando a associação ocorre. Nesse caso, o comprimento poderá ser omitido da associação.  
   
  O exemplo não usa a interface de fluxo do provedor para gravar dados no provedor. Em vez disso, o exemplo passa um ponteiro ao objeto de fluxo que o provedor consumirá para ler os dados. Normalmente, os provedores Microsoft (SQLOLEDB e SQLNCLI) lerão dados em partes de 1024 bytes do objeto até que todo os dados sejam processados. Nem SQLOLEDB nem SQLNCLI têm implementações completas para permitir ao consumidor gravar dados no objeto de fluxo do provedor. Somente dados de comprimento zero podem ser enviados pelo objeto de fluxo do provedor.  
   
@@ -41,7 +38,7 @@ ms.locfileid: "37410705"
 ## <a name="example"></a>Exemplo  
  Execute a primeira listagem de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) para criar a tabela usada pelo aplicativo.  
   
- Compile com ole32.lib oleaut32.lib e execute a seguinte listagem de código C++. Esse aplicativo se conecta ao padrão do seu computador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância. Em alguns sistemas operacionais Windows, será necessário alterar (localhost) ou (local) para o nome de sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para se conectar a uma instância nomeada, altere a cadeia de caracteres de conexão de L"(local)" para L"(local)\\\name", onde o nome é a instância nomeada. Por padrão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express é instalado em uma instância nomeada. Verifique se a variável de ambiente INCLUDE inclui o diretório que contém sqlncli.h.  
+ Compile com ole32.lib oleaut32.lib e execute a seguinte listagem de código C++. Esse aplicativo se conecta à instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do computador. Em alguns sistemas operacionais Windows, será necessário alterar (localhost) ou (local) para o nome de sua instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para se conectar a uma instância nomeada, altere a cadeia de conexão de L"(local)" para L"(local)\\\name", em que name é a instância nomeada. Por padrão, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express é instalado em uma instância nomeada. Verifique se a variável de ambiente INCLUDE inclui o diretório que contém sqlncli.h.  
   
  Execute a terceira listagem de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) para excluir a tabela usada pelo aplicativo.  
   

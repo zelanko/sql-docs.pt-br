@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4d1a4f97-3fe4-44af-9d4f-f884a6eaa457
-caps.latest.revision: 14
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 0575762bbdb9446fc461bca6d09f71e174138177
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 799b6a05850abb88c97c8e2a27214055eb20d976
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37301336"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164866"
 ---
-# Arquitetura e gerenciamento do log de transações do SQL Server
+# <a name="sql-server-transaction-log-architecture-and-management"></a>Arquitetura e gerenciamento do log de transações do SQL Server
 [!INCLUDE[appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Todo banco de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tem um log de transações que registra todas as transações e modificações feitas no banco de dados a cada transação. O log de transações é um componente crítico do banco de dados e, se houver uma falha do sistema, será necessário que o log de transações retorne seu banco de dados a um estado consistente. Este guia fornece informações sobre a arquitetura física e lógica do log de transações. A compreensão da arquitetura pode melhorar sua efetividade na administração de logs de transações.  
@@ -82,7 +79,7 @@ ms.locfileid: "37301336"
   
  Se o log contiver diversos arquivos de log físico, o log lógico percorrerá todos os arquivos de log físico antes de voltar ao início do primeiro arquivo de log físico.  
   
-### Truncamento do log  
+### <a name="log-truncation"></a>Truncamento do log  
  O truncamento de log é essencial para impedir o preenchimento do log. O truncamento de log exclui arquivos de log virtuais inativos do log de transações lógicas de um banco de dados do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , liberando espaço no log lógico para reutilização pelo log de transações físicas. Se um log de transações nunca foi truncado, eventualmente, ele preencherá todo o espaço em disco alocado para seus arquivos de log físicos. No entanto, para que o log possa ser truncado, deve ocorrer uma operação ponto de verificação. Um ponto de verificação grava as páginas modificadas na memória atualmente (conhecidas como páginas sujas) e as informações do log de transações de memória em disco. Quando o ponto de verificação é executado, a porção inativa do log de transações é marcada como reutilizável. Depois disso, a porção inativa pode ser liberada por meio do truncamento de log. Para obter mais informações sobre pontos de verificação, consulte [Pontos de verificação de bancos de dados &#40;SQL Server&#41;](../relational-databases/logs/database-checkpoints-sql-server.md).  
   
  As ilustrações seguintes mostram um log de transações antes e depois do truncamento. A primeira ilustração mostra um log de transações que nunca foi truncado. Atualmente, quatro arquivos de log virtuais estão em uso pelo log lógico. O log virtual inicia à frente do primeiro arquivo de log virtual e termina em log 4 virtual. O registro de MinLSN está em log 3 virtual. O log 1 virtual e o log 2 virtual contêm apenas registros de log inativos. Estes registros podem ser truncados. O log 5 virtual ainda está sem-uso e não é parte do log lógico atual.  
@@ -117,15 +114,15 @@ ms.locfileid: "37301336"
   
  Para limitar o número de backups de log que você precisa restaurar, é essencial fazer backup dos dados com frequência. Por exemplo, convém programar um backup de banco de dados completo por semana e backups de diferenciais de banco de dados diariamente.  
   
-### A cadeia de logs  
+### <a name="the-log-chain"></a>A cadeia de logs  
  Uma sequência contínua de backups de log é denominada *cadeia de logs*. Uma cadeia de logs começa com um backup completo do banco de dados. Normalmente, uma cadeia de logs nova será iniciada apenas quando for feito backup do banco de dados pela primeira vez ou, depois que o modelo de recuperação for trocado de recuperação simples para recuperação completa ou recuperação com log de operações bulk-logged. A menos que você decida substituir os conjuntos de backup existentes quando criar um backup de banco de dados completo, a cadeia de logs existente permanecerá intacta. Com a cadeia de logs intacta, é possível restaurar o banco de dados a partir de qualquer backup de banco de dados completo do conjunto de mídias, seguido por todos os backups de logs subsequentes até o ponto de recuperação. O ponto de recuperação pode estar no fim do último backup de log ou em um ponto de recuperação específico em qualquer dos backups de log. Para obter mais informações, consulte [Backups de log de transações &#40;SQL Server&#41;](../relational-databases/backup-restore/transaction-log-backups-sql-server.md).  
   
  Para restaurar um banco de dados até o ponto de falha, a cadeia de logs deve estar intacta. Isto é, uma sequência ininterrupta de backups de log de transações deve se estender até o ponto de falha. Onde essa sequência de log deve começar depende do tipo de backup de dados que você está restaurando: banco de dados, parcial ou de arquivo. Para um backup de banco de dados ou backup parcial, a sequência de backups de log deve se estender do final de um banco de dados ou backup parcial. Para um conjunto de backups de arquivos, a sequência de backups de log deve se estender desde o início de um conjunto completo de backups de arquivos. Para obter mais informações, veja [Aplicar backups de log de transações &#40;SQL Server&#41;](../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md).  
   
-### Restaurar backups de log  
+### <a name="restore-log-backups"></a>Restaurar backups de log  
  A restauração de um backup de log rola para frente as alterações que foram registradas no log de transações para recriar o estado exato do banco de dados no momento em que a operação do backup de log começou. Ao restaurar um banco de dados, é necessário, também, restaurar os backups de log que foram criados após o backup completo do banco de dados restaurado ou, desde o início do primeiro backup de arquivos que você restaura. Normalmente, depois de restaurar o backup de dados ou diferencial mais recente, será necessário restaurar uma série de backups de log até alcançar o seu ponto de recuperação. Em seguida, o banco de dados é recuperado. Isso rola para trás todas as transações que estavam incompletas quando a recuperação começou e coloca o banco de dados online. Depois que o banco de dados for recuperado, não será possível restaurar mais nenhum backup. Para obter mais informações, veja [Aplicar backups de log de transações &#40;SQL Server&#41;](../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md).  
   
-## Leitura adicional  
+## <a name="additional-reading"></a>Leitura adicional  
  Recomendamos a leitura dos artigos e livros a seguir, que fornecem mais informações sobre o log de transações.  
   
  [Noções básicas sobre registro em log e recuperação no SQL Server, por Paul Randall](http://technet.microsoft.com/magazine/2009.02.logging.aspx)  
