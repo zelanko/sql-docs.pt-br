@@ -5,10 +5,6 @@ ms.date: 03/03/2017
 ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.service: sql-data-warehouse
-ms.component: system-objects
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -17,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 6508d150df663a6e95437d0b6b3bfd0c8f65906f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: eeb1263c02b9b06ffe747b78f8dae5691b7f92fd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38052224"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47846614"
 ---
 # <a name="sppdwdatabaseencryption-sql-data-warehouse"></a>sp_pdw_database_encryption (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -50,7 +46,7 @@ sp_pdw_database_encryption [ [ @enabled = ] enabled ] ;
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Quando a TDE é habilitada por meio **sp_pdw_database_encryption**, banco de dados tempdb é descartado, recriado e criptografado. Por esse motivo, a TDE não pode ser habilitada em um dispositivo, embora haja outras sessões ativas usando o tempdb. Habilitando ou desabilitando a TDE em um dispositivo é uma ação que altera o estado do dispositivo, na maioria dos casos é esperada para ser executada uma vez no tempo de vida de dispositivo e deve ser executada quando não há nenhum tráfego no dispositivo.  
   
 ## <a name="permissions"></a>Permissões  

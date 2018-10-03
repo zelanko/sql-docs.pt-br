@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.process.incrementalupdate.f1
 ms.assetid: d5a5ae27-44e7-4179-b9e2-efbf21d6c5f5
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 22d7038fa3d8f07c5b32e35c5cb39e0d8db95766
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 354ec6968698dc5b6a7bbca8ffcd33a34db4389d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37284162"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48066276"
 ---
 # <a name="incremental-update-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Atualização Incremental (Analysis Services - Dados Multidimensionais)
   Use a caixa de diálogo **Atualização Incremental** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] e no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para definir as configurações a serem usadas quando grupos de medidas e partições forem atualizados incrementalmente. É possível exibir a caixa de diálogo **Atualização Incremental** clicando em **Configurar** na coluna **Configurações** da grade **Lista de Objetos** na caixa de diálogo **Processar** .  

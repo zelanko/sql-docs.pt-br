@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 01/25/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
-caps.latest.revision: 14
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d99796f219623e72fd42e0a9780ea0d2d9458250
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 8f91a410e5c1c6e16a6fc3e1da26f89893ac261b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393974"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48065116"
 ---
 # <a name="sql-server-backup-to-url"></a>Backup do SQL Server para URL
   Este tópico apresenta os conceitos, os requisitos e os componentes necessários para usar o serviço de armazenamento de Blob do Windows Azure como um destino de backup. A funcionalidade de backup e restauração tem o mesmo efeito de DISK ou TAPE, com algumas diferenças. As diferenças, todas as exceções notáveis e alguns exemplos de código são incluídos neste tópico.  

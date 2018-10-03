@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_helprole_TSQL
@@ -18,17 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_helprole
 ms.assetid: b023103f-ccf3-44e2-b418-4be9bdd49f4a
-caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f8dd9392cd3ca1e4b14992853bbcf5d8f58a3dfb
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 7d298e167e17bea6cc3995479d8ddf8abf4e3531
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43068629"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47594345"
 ---
 # <a name="sphelprole-transact-sql"></a>sp_helprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -59,7 +55,7 @@ sp_helprole [ [ @rolename = ] 'role' ]
 |**RoleId**|**smallint**|ID da **RoleName**.|  
 |**IsAppRole**|**int**|0 = **RoleName** não é uma função de aplicativo.<br /><br /> 1 = **RoleName** é uma função de aplicativo.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Para exibir as permissões associadas à função, use **sp_helprotect**. Para exibir os membros de uma função de banco de dados, use **sp_helprolemember**.  
   
 ## <a name="permissions"></a>Permissões  

@@ -6,30 +6,27 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - customization file in RDS [ADO]
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a80667371709c4035a4a45fa4e322d59f03f5bc7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ce87954d2cb6e436af9ab990eb93dc1e5a91e8f1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35274575"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47678464"
 ---
 # <a name="understanding-the-customization-file"></a>Noções básicas sobre o arquivo de personalização
-Cada cabeçalho de seção no arquivo de personalização consiste em colchetes (**[]**) que contém um tipo e o parâmetro. Os tipos de quatro seção são indicados por cadeias de caracteres literais **conectar**, **sql**, **userlist**, ou **logs**. O parâmetro é a cadeia de caracteres literal, o padrão, um identificador de usuário especificado ou nada.  
+Cada cabeçalho de seção no arquivo de personalização é formado por colchetes (**[]**) que contém um tipo e o parâmetro. Os tipos de quatro seção são indicados por cadeias de caracteres literais **conectar-se**, **sql**, **userlist**, ou **logs**. O parâmetro é a cadeia de caracteres literal, o padrão, um identificador especificado pelo usuário ou nada.  
   
 > [!IMPORTANT]
->  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (veja o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Aplicativos que usam o RDS devem migrar para [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (consulte o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Devem ser migrados para aplicativos que usam o RDS [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Portanto, cada seção está marcada com um dos cabeçalhos da seção a seguir:  
+ Portanto, cada seção é marcada com um dos cabeçalhos de seção a seguir:  
   
 ```  
   
@@ -51,30 +48,30 @@ identifier
 |**sql**|Uma cadeia de caracteres literal que modifica uma cadeia de caracteres de comando.|  
 |**userlist**|Uma cadeia de caracteres literal que modifica os direitos de acesso de um usuário específico.|  
 |**logs**|Uma cadeia de caracteres literal que especifica um arquivo de log operacionais erros de gravação.|  
-|**default**|Uma cadeia de caracteres literal que será usada se nenhum identificador é especificada ou encontrada.|  
-|*identifier*|Uma cadeia de caracteres que corresponde a uma cadeia de caracteres de **conectar** ou **comando** cadeia de caracteres.<br /><br /> -Use esta seção se o cabeçalho de seção contém **conectar** e a cadeia de caracteres do identificador foi encontrada na cadeia de conexão.<br />-Use esta seção se o cabeçalho de seção contém **sql** e a cadeia de caracteres do identificador foi encontrada na cadeia de caracteres de comando.<br />-Use esta seção se o cabeçalho de seção contém **userlist** e a cadeia de caracteres do identificador corresponde uma **conectar** identificador de seção.|  
+|**default**|Uma cadeia de caracteres literal que será usada se nenhum identificador é especificado ou localizado.|  
+|*identifier*|Uma cadeia de caracteres que corresponde a uma cadeia de caracteres a **conectar-se** ou **comando** cadeia de caracteres.<br /><br /> -Use esta seção se o cabeçalho de seção contém **conectar-se** e a cadeia de caracteres de identificador for encontrada na cadeia de conexão.<br />-Use esta seção se o cabeçalho de seção contém **sql** e a cadeia de caracteres de identificador for encontrada na cadeia de caracteres de comando.<br />-Use esta seção se o cabeçalho de seção contém **userlist** e a cadeia de caracteres de identificador corresponde uma **conectar** identificador de seção.|  
   
- O **DataFactory** chama o manipulador, passando parâmetros de cliente. O manipulador de pesquisa para cadeias de caracteres inteiras nos parâmetros do cliente que correspondem a identificadores nos cabeçalhos de seção apropriada. Se uma correspondência for encontrada, o conteúdo dessa seção é aplicado para o parâmetro do cliente.  
+ O **DataFactory** chama o manipulador, passando parâmetros de cliente. O manipulador de procura cadeias de caracteres inteiras nos parâmetros de cliente que correspondem aos identificadores nos cabeçalhos de seção apropriada. Se uma correspondência for encontrada, o conteúdo dessa seção é aplicado para o parâmetro do cliente.  
   
  Uma seção específica é usada nas seguintes circunstâncias:  
   
--   Um **conectar-se** seção é usada se a parte do valor do cliente se conectar a palavra-chave de cadeia de caracteres, "**fonte de dados = * valor*", corresponde a um **conectar** identificador de seção *.*  
+-   Um **conectar-se** seção é usada se a parte do valor do cliente se conectar a palavra-chave de cadeia de caracteres, "**fonte de dados = * * * valor*", corresponde a um **conectar** identificador de seção *.*  
   
--   Um **sql** seção será usada se a cadeia de caracteres de comando do cliente contém uma cadeia de caracteres que corresponde a um **sql** identificador de seção.  
+-   Uma **sql** seção será usada se a cadeia de caracteres de comando do cliente contém uma cadeia de caracteres que corresponde a um **sql** identificador de seção.  
   
--   Um **conectar** ou **sql** seção com um parâmetro padrão é usada se não houver nenhum identificador correspondente.  
+-   Um **conectar-se** ou **sql** seção com um parâmetro padrão é usada se não houver nenhum identificador correspondente.  
   
--   Um **userlist** seção será usada se o **userlist** seção correspondências de identificador um **conectar** identificador de seção. Se houver uma correspondência, o conteúdo do **userlist** seção são aplicadas para a conexão controlado pelo **conectar** seção.  
+-   Um **userlist** seção será usada se o **userlist** correspondências de identificador de seção um **conectar** identificador de seção. Se houver uma correspondência, o conteúdo do **userlist** seção são aplicadas para a conexão regulado a **conectar-se** seção.  
   
--   Se a cadeia de caracteres em uma cadeia de conexão ou o comando não coincide com o identificador em qualquer **conectar** ou **sql** cabeçalho da seção e não há nenhum **conectar** ou **sql**  seção cabeçalho com um parâmetro padrão, em seguida, a cadeia de caracteres do cliente é usada sem modificação.  
+-   Se a cadeia de caracteres em uma cadeia de conexão ou o comando não coincide com o identificador em qualquer **conectar-se** ou **sql** cabeçalho da seção e não há nenhum **conectar** ou **sql**  seção de cabeçalho com um parâmetro padrão, em seguida, a cadeia de caracteres do cliente for usada sem modificação.  
   
 -   O **logs** seção é usada sempre que o **DataFactory** está em operação.  
   
 ## <a name="see-also"></a>Consulte também  
- [Arquivo de personalização de conectar-se a seção](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
+ [Seção conexão do arquivo de personalização](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
  [Seção de Logs do arquivo de personalização](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
  [Seção SQL do arquivo de personalização](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [Seção do arquivo UserList de personalização](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
+ [Seção de UserList do arquivo de personalização](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
  [Personalização do DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [Configurações de cliente necessárias](../../../ado/guide/remote-data-service/required-client-settings.md)   
  [Escrevendo seu próprio manipulador personalizado](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)

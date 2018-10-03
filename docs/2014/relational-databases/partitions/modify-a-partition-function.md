@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ae5bfc09-f27a-4ea9-9518-485278b11674
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 700d4ea1e3f5e0fc77de052ac9e83a2875f89bd5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9371a82366f31c2d8221834a1bd29f9cfd9cc0d7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37266762"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049036"
 ---
 # <a name="modify-a-partition-function"></a>Modificar uma função de partição
   Você pode alterar o modo como uma tabela ou um índice é particionado no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] adicionando ou subtraindo o número de partições especificadas, em incrementos de 1, na função de partição da tabela ou do índice particionado usando [!INCLUDE[tsql](../../includes/tsql-md.md)]. Ao adicionar uma partição, você “divide” em duas uma partição existente e redefine os limites das novas partições. Ao descartar uma partição, você "funde" os limites das duas partições criando uma só. Esta última ação repopula uma partição e deixa a outra partição não atribuída.  

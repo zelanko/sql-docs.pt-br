@@ -4,26 +4,20 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Project Options Setting
 ms.assetid: 97b70fc8-1f68-4f15-8e22-db5b784ea4ec
-caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 9048eb69fd10cafc97daa91b5cac8571a4240cd0
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 08b1084f2f54a204f82bc0d1a0ee4096d207d835
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40392896"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47773974"
 ---
 # <a name="setting-project-options-sybasetosql"></a>Definir opções do projeto (SybaseToSQL)
 Para cada projeto do SSMA, você pode definir opções de nível de projeto. Essas opções especificam a conversão do objeto, o carregamento do objeto, o SQL azure, interface do usuário e configurações de migração de dados. Antes de converter objetos a serem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do SQL Azure ou migrar os dados em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, verifique se as opções de configuração são adequadas para o projeto.  

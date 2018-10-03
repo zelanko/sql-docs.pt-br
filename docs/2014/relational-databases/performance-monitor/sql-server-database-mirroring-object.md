@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:Database Mirroring
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - performance counters [SQL Server], database mirroring
 - Database Mirroring object
 ms.assetid: a27b51ee-7637-4525-9424-bcc16947dc13
-caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8d2ae6130ff9f56bebddb4c8e9f52423115b7e86
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 8a24e7ad7a6acb6f9c639a89d8cdc30b8301db49
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43817432"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48084356"
 ---
 # <a name="sql-server-database-mirroring-object"></a>SQL Server, objeto Database Mirroring
   O objeto de desempenho **SQLServer:Database Mirroring** contém contadores de desempenho que relatam informações sobre o espelhamento de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . A tabela a seguir lista os contadores contidos nesse objeto.  
@@ -55,7 +52,7 @@ ms.locfileid: "43817432"
 > [!NOTE]  
 >  Em cada parceiro, alguns dos contadores mostram um valor zero dependendo de qual função o parceiro desempenha atualmente.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Os contadores de desempenho permitem que você monitore o desempenho de espelhamento de banco de dados. Por exemplo, você pode examinar o contador **Atraso na Transação** para verificar se o espelhamento de banco de dados está afetando o desempenho do servidor principal, você pode examinar os contadores **Fila de Restauração** e **Fila de Envio de Log** para verificar como o banco de dados espelho está se comportando em relação ao banco de dados principal. Você pode examinar o contador **Bytes de Log Enviados/s** para monitorar a quantidade de logs enviados por segundo.  
   
 ## <a name="see-also"></a>Consulte também  

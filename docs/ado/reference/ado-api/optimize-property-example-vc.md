@@ -6,27 +6,24 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Optimize property [ADO], VC++ example
 ms.assetid: cb335455-b027-4f66-868d-d0d8b2175de1
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 90d3234b54c4dd0c0c8e51cbade0199b4d67ade1
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3cb58d24675c414cefc3e2d19dc306986aa8b440
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279977"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47601787"
 ---
-# <a name="optimize-property-example-vc"></a>Otimizar o exemplo da propriedade (VC + +)
-Este exemplo demonstra o [campo](../../../ado/reference/ado-api/field-object.md) objeto dinâmico **otimizar** propriedade. O **zip** campo o **autores** tabela o **Pubs** banco de dados não está indexado. Definindo o [otimizar](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) propriedade **True** no **zip** campo autoriza ADO para criar um índice que melhora o desempenho do [localizar](../../../ado/reference/ado-api/find-method-ado.md)método.  
+# <a name="optimize-property-example-vc"></a>Exemplo da propriedade Optimize (VC++)
+Este exemplo demonstra a [campo](../../../ado/reference/ado-api/field-object.md) objeto dinâmico **otimizar** propriedade. O **zip** campo da **autores** na tabela a **Pubs** banco de dados não está indexado. Definindo o [otimizar](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) propriedade a ser **verdadeiro** no **zip** campo autoriza o ADO para criar um índice que melhora o desempenho do [localizar](../../../ado/reference/ado-api/find-method-ado.md)método.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -136,7 +133,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **Akiko Yokomoto 3 prata Ct. Autoridade de certificação Walnut Creek**   
+ **Akiko Yokomoto 3 Silver Ct. Autoridade de certificação Walnut Creek**   
 ## <a name="see-also"></a>Consulte também  
  [Objeto Field](../../../ado/reference/ado-api/field-object.md)   
  [Otimizar a propriedade dinâmica (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)

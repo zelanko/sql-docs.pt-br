@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_start_collection_set_TSQL
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_start_collection_set
 ms.assetid: d8357180-f51e-4681-99f9-0596fe2d2b53
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 59fba98f9dcca30cc23828439deeb1e42822fdd3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: de6aff356e5de49802f0bc2813ff481bd45244c8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33263504"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47803794"
 ---
 # <a name="spsyscollectorstartcollectionset-transact-sql"></a>sp_syscollector_start_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,18 +45,18 @@ sp_syscollector_start_collection_set
   
 ## <a name="arguments"></a>Argumentos  
  [  **@collection_set_id =** ] *collection_set_id*  
- É o identificador local exclusivo do conjunto de coleta. *collection_set_id* é **int** com um valor padrão de NULL. *collection_set_id* deve ter um valor se *nome* é NULL.  
+ É o identificador local exclusivo do conjunto de coleta. *collection_set_id* está **int** com um valor padrão de NULL. *collection_set_id* deve ter um valor se *nome* é NULL.  
   
  [  **@name =** ] '*nome*'  
- É o nome do conjunto de coleta. *nome* é **sysname** com um valor padrão de NULL. *nome* deve ter um valor se *collection_set_id* é NULL.  
+ É o nome do conjunto de coleta. *nome da* está **sysname** com um valor padrão de NULL. *nome da* deve ter um valor se *collection_set_id* é NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  sp_syscollector_create_collection_set deve ser executado no contexto do banco de dados do sistema msdb e o SQL Server Agent deve estar habilitado.  
   
- Este procedimento falha quando executado em um conjunto de coleta que não tem uma agenda. Se o conjunto de coleta não tem uma agenda (porque seu modo de coleta está definido como não cache, por exemplo), use o [sp_syscollector_run_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-run-collection-set-transact-sql.md) procedimento armazenado para iniciar o conjunto de coleta.  
+ Este procedimento falha quando executado em um conjunto de coleta que não tem uma agenda. Se o conjunto de coleta não tiver um agendamento (porque seu modo de coleta está definido como não cache, por exemplo), use o [sp_syscollector_run_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-run-collection-set-transact-sql.md) procedimento armazenado para iniciar o conjunto de coleta.  
   
  Este procedimento habilita os trabalhos de carregamento e de coleta para o conjunto de coleta especificado e iniciará imediatamente o trabalho do agente de coleta, se o conjunto de coleta tiver seu modo de coleta definido como armazenado em cache (0). Para obter mais informações, consulte [sp_syscollector_create_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
   
@@ -80,7 +76,7 @@ EXEC sp_syscollector_start_collection_set @collection_set_id = 1;
   
 ## <a name="see-also"></a>Consulte também  
  [Procedimentos armazenados de coletor de dados &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
- [Coleta de dados](../../relational-databases/data-collection/data-collection.md)   
+ [Coleta de Dados](../../relational-databases/data-collection/data-collection.md)   
  [syscollector_collection_sets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)  
   
   

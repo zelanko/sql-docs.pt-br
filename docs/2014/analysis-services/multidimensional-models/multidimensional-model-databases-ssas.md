@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [Analysis Services], databases
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - Business Intelligence Development Studio, databases [Analysis Services]
 - databases [Analysis Services]
 ms.assetid: 78b2f22a-b7bd-4a2b-b6fc-0bff4d2b3168
-caps.latest.revision: 55
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 08a5d383d9c46b01c52e1fc888c8d692470fd619
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: adba97ff78d22ef2e82bb53065952a716f71a1d5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37241676"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48082796"
 ---
 # <a name="multidimensional-model-databases-ssas"></a>Bancos de dados de modelo multidimensional (SSAS)
   Um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é uma coleção de fontes de dados, exibições da fontes de dados, cubos, dimensões e funções. Opcionalmente, um banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pode incluir estruturas para mineração de dados e assemblies personalizados que fornecem um modo de você adicionar funções definidas pelo usuário ao banco de dados.  

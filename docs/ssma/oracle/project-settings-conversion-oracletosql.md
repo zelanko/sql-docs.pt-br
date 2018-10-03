@@ -4,23 +4,18 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2016 Preview
 ms.assetid: a98a5e07-eb5e-47b9-a6f2-e2cb3a18309c
-caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 7847b837fb568de2677882eda540b762ac9a8e5f
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 184bbfc4f81119a4af6f6a6320d660cf4536d413
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40394382"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47733757"
 ---
 # <a name="project-settings-conversion-oracletosql"></a>Configurações do projeto (conversão) (OracleToSQL)
 A página de conversão do **configurações do projeto** caixa de diálogo contém configurações que personalizam como SSMA converte a sintaxe do Oracle para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sintaxe.  

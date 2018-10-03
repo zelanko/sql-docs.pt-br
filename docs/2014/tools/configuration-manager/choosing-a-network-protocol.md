@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - configmgr-client
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - shared memory [SQL Server]
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - Banyan VINES
 - protocols [SQL Server], client configuration
 ms.assetid: 6565fb7d-b076-4447-be90-e10d0dec359a
-caps.latest.revision: 25
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 864e8563eec427204f8256372a6a0d947bee9fb5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 86a15b6617b85de2e0a44287344ef47c92546072
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37327476"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48068550"
 ---
 # <a name="choosing-a-network-protocol"></a>Escolhendo um protocolo de rede
   Para se conectar ao [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , você deve ter um protocolo de rede habilitado. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode atender a solicitações em vários protocolos ao mesmo tempo. Os clientes se conectam ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com um único protocolo. Se o programa cliente não souber qual protocolo o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está escutando, configure o cliente para tentar sequencialmente vários protocolos. Use o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager para habilitar, desabilitar e configurar os protocolos de rede.  

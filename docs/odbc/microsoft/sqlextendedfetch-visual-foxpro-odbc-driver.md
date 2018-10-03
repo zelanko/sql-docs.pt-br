@@ -5,34 +5,31 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLExtendedFetch function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: b28af112-fb47-4143-b11e-3b743b2ae1b8
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4336f76093383a170fbb1028851564098213a74d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a2d01c25044bf7b03e2fabe9c615668fc7837312
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904541"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47667144"
 ---
 # <a name="sqlextendedfetch-visual-foxpro-odbc-driver"></a>SQLExtendedFetch (Driver ODBC do Visual FoxPro)
 > [!NOTE]  
->  Este tópico contém informações específicas do Driver ODBC do Visual FoxPro. Para obter informações gerais sobre esta função, consulte o tópico apropriado em [referência da API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Este tópico contém informações específicas de Driver ODBC do Visual FoxPro. Para obter informações gerais sobre essa função, consulte o tópico apropriado sob [referência da API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
  Suporte: completo  
   
- Conformidade de API de ODBC: Nível 2  
+ Conformidade com a API ODBC: 2 de nível  
   
- Semelhante ao [SQLFetch](../../odbc/microsoft/sqlfetch-visual-foxpro-odbc-driver.md) mas retorna várias linhas usando uma matriz para cada coluna. O conjunto de resultados é rolável de avanço e pode ser feito com versões anteriores rolável se o cursor está definido para ser estático, não somente de encaminhamento.  
+ Semelhante ao [SQLFetch](../../odbc/microsoft/sqlfetch-visual-foxpro-odbc-driver.md) , mas retorna várias linhas usando uma matriz para cada coluna. O conjunto de resultados é rolável de encaminhamento e pode ser feito com versões anteriores-rolável se o cursor é definido como estático, não apenas de encaminhamento.  
   
- Por padrão, o Driver de ODBC do Visual FoxPro não retorna linhas marcadas como excluídas em uma tabela FoxPro. Linhas marcadas para exclusão, mas ainda não foram removidas de uma tabela não são incluídas no cursor de conjunto de resultados. Você pode alterar esse comportamento usando o [definido excluídas](../../odbc/microsoft/set-deleted-command.md) comando.  
+ Por padrão, o Driver de ODBC do Visual FoxPro não retorna linhas marcadas como excluídas em uma tabela FoxPro. Marcado para exclusão, mas ainda não foram removidas de uma tabela de linhas não são incluídas no cursor de conjunto de resultados. Você pode alterar esse comportamento usando o [definir excluído](../../odbc/microsoft/set-deleted-command.md) comando.  
   
- Para obter mais informações, consulte [SQLExtendedFetch](../../odbc/reference/syntax/sqlextendedfetch-function.md) no *referência do programador de ODBC*.
+ Para obter mais informações, consulte [SQLExtendedFetch](../../odbc/reference/syntax/sqlextendedfetch-function.md) na *referência do programador de ODBC*.

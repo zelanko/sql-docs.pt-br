@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SqlErrorLogEvent class
 - SqlErrorLogFile class
 ms.assetid: bde6c467-38d0-4766-a7af-d6c9d6302b07
-caps.latest.revision: 14
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 724e07a08a0dd08efe47b6a9da8906e3ea49b66d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 02bf982b6b154d99c5f3f153550c8531f23afa72
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33012683"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47669654"
 ---
 # <a name="sqlerrorlogevent-class"></a>Classe SqlErrorLogEvent
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +51,7 @@ class SQLErrorLogEvent
 |Mensagem|Tipo de dados: **cadeia de caracteres**<br /><br /> Tipo de acesso: Somente leitura<br /><br /> <br /><br /> A mensagem do evento.|  
 |ProcessInfo|Tipo de dados: **cadeia de caracteres**<br /><br /> Tipo de acesso: Somente leitura<br /><br /> <br /><br /> Informações sobre a SPID (ID do processo do servidor de origem) do evento.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 |||  
 |-|-|  
@@ -64,7 +60,7 @@ class SQLErrorLogEvent
 |Namespace|\root\Microsoft\SqlServer\ComputerManagement10|  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir mostra como recuperar valores para todos os eventos registrados em um arquivo de log especificado. Para executar o exemplo, substitua \< *Instance_Name*> com o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como 'Instance1' e substitua 'File_Name' pelo nome do arquivo de log de erros, como 'ERRORLOG.1'.  
+ O exemplo a seguir mostra como recuperar valores para todos os eventos registrados em um arquivo de log especificado. Para executar o exemplo, substitua \< *nome_instância*> com o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como 'Instance1' e substitua 'File_Name' pelo nome do arquivo de log de erros, como 'ERRORLOG.1.'.  
   
 ```  
 on error resume next  
@@ -85,7 +81,7 @@ Next
 ```  
   
 ## <a name="comments"></a>Comentários  
- Quando *InstanceName* ou *FileName* não são fornecidos na instrução WQL, a consulta retornará informações para a instância padrão e atual [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] arquivo de log. Por exemplo, a instrução WQL a seguir retornará todos os eventos de log do arquivo de log atual (ERRORLOG) na instância padrão (MSSQLSERVER).  
+ Quando *nome_da_instância* ou *FileName* não são fornecidos na instrução WQL, a consulta retornará informações para a instância padrão e atual [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] arquivo de log. Por exemplo, a instrução WQL a seguir retornará todos os eventos de log do arquivo de log atual (ERRORLOG) na instância padrão (MSSQLSERVER).  
   
 ```  
 "SELECT * FROM SqlErrorLogEvent"  
@@ -96,11 +92,11 @@ Next
   
 -   Acesso de leitura para o **Root\Microsoft\SqlServer\ComputerManagement10** namespace WMI. Por padrão, todos usuários têm acesso de leitura por meio da permissão Habilitar Conta.  
   
--   Permissão de leitura para a pasta que contém os logs de erros. Por padrão, o erro logs estão localizados no caminho a seguir (onde \< *Drive >* representa a unidade onde você instalou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e \< *InstanceName*> é o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]):  
+-   Permissão de leitura para a pasta que contém os logs de erros. Por padrão, o erro logs estão localizados no caminho a seguir (onde \< *unidade >* representa a unidade onde você instalou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e \< *InstanceName*> é o nome da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]):  
   
-     **\<Unidade >: \Program Files\Microsoft SQL mssql13** **.\< InstanceName > \mssql\log.**  
+     **\<Unidade >: \Program Files\Microsoft SQL Server\MSSQL13** **.\< InstanceName > \mssql\log.**  
   
- Se você se conectar através de um firewall, verifique se uma exceção está definida no firewall para WMI em computadores de destino remotos. Para obter mais informações, consulte [se conectar ao WMI remotamente começando com o Windows Vista](http://go.microsoft.com/fwlink/?LinkId=178848).  
+ Se você se conectar através de um firewall, verifique se uma exceção está definida no firewall para WMI em computadores de destino remotos. Para obter mais informações, consulte [conectar-se ao WMI iniciando remotamente com o Windows Vista](http://go.microsoft.com/fwlink/?LinkId=178848).  
   
 ## <a name="see-also"></a>Consulte também  
  [Classe SqlErrorLogFile](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogfile-class.md)   

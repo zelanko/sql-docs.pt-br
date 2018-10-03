@@ -6,29 +6,26 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Clone method [ADO], VBScript example
 ms.assetid: 36b96e3d-8cb0-4b79-bd93-ea5e0eb5679f
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 83bc13a4f86c888a819b2c7dc39ea971f4ffcda7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b259eaf019bc3ac173bfd1a4c282b517b41b1394
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276385"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47783664"
 ---
-# <a name="clone-method-example-vbscript"></a>Exemplo do método clone (VBScript)
-Este exemplo usa o [Clone](../../../ado/reference/ado-api/clone-method-ado.md) método para criar cópias de um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) e, em seguida, permite que o usuário posicionar o ponteiro de registro de cada cópia independentemente.  
+# <a name="clone-method-example-vbscript"></a>Exemplo do método Clone (VBScript)
+Este exemplo usa o [Clone](../../../ado/reference/ado-api/clone-method-ado.md) método para criar cópias de um [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) e, em seguida, permite que o usuário posicionar o ponteiro de registro de cada cópia de forma independente.  
   
- Use o exemplo a seguir em uma página ASP (Active Server). Este exemplo usa o **Northwind** banco de dados distribuído com o Microsoft Access. Recorte e cole o seguinte código ao bloco de notas ou outro editor de texto e salve-o como CloneVBS.asp. Você pode exibir o resultado em qualquer navegador do cliente.  
+ Use o exemplo a seguir em um Active Server Page (ASP). Este exemplo usa o **Northwind** banco de dados distribuído com o Microsoft Access. Recortar e colar o seguinte código ao bloco de notas ou outro editor de texto e salve-o como CloneVBS.asp. Você pode exibir o resultado em qualquer navegador do cliente.  
   
  Para utilizar o exemplo, altere a linha `RsCustomerList.Source = "Customers"` para `RsCustomerList.Source = "Products"` para contar uma tabela maior.  
   

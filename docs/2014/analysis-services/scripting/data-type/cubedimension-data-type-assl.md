@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - CubeDimension Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - CubeDimension data type
 ms.assetid: 128ac790-65a1-4e35-b909-8dba2a61b24c
-caps.latest.revision: 40
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a02ef89f5dac200450faf8151a71aeae703e8b35
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c3ea688681749a2b22f8c457fb9a5eb8ee39d8eb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37220316"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48059504"
 ---
 # <a name="cubedimension-data-type-assl"></a>Tipo de dados CubeDimension (ASSL)
   Define um tipo de dados primitivo que representa a relação entre uma dimensão e um cubo.  
@@ -58,18 +55,18 @@ ms.locfileid: "37220316"
   
 |Característica|Description|  
 |--------------------|-----------------|  
-|Tipos de dados base|Nenhum|  
-|Tipos de dados derivados|Nenhum|  
+|Tipos de dados base|None|  
+|Tipos de dados derivados|None|  
   
 ## <a name="data-type-relationships"></a>Relação do tipo de dados  
   
 |Relação|Elemento|  
 |------------------|-------------|  
-|Elementos pai|Nenhum|  
+|Elementos pai|None|  
 |Elementos filho|[AllMemberAggregationUsage](../properties/aggregationusage-element-assl.md), [anotações](../collections/annotations-element-assl.md), [atributos](../collections/attributes-element-assl.md), [DimensionID](../properties/id-element-assl.md), [hierarquias](../collections/hierarchies-element-assl.md), [HierarchyUniqueNameStyle](../properties/hierarchyuniquenamestyle-element-assl.md), [ID](../properties/id-element-assl.md), [MemberUniqueNameStyle](../properties/memberuniquenamestyle-element-assl.md), [nome](../properties/name-element-assl.md), [visível](../properties/visible-element-assl.md), [Traduções](../collections/translations-element-assl.md)|  
 |Elementos derivados|[Dimensão](../objects/dimension-element-assl.md) ([dimensões](../collections/dimensions-element-assl.md) coleção de [cubo](../objects/cube-element-assl.md))|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Há um elemento `CubeDimension` para cada relação de dimensão em um `Cube`. O elemento `CubeDimension` cobre todos os `MeasureGroups` do cubo.  
   
  Um `CubeDimension` deve incluir uma [CubeHierarchy](hierarchy-data-type-assl.md) se a dimensão tiver algo específico a dizer sobre a hierarquia, incluindo a desabilitação da hierarquia (, permitindo a seleção das hierarquias aplicáveis a um determinado uso da dimensão), ou a invisibilidade da hierarquia.  

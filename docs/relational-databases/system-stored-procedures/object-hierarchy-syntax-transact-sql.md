@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -18,12 +15,12 @@ ms.assetid: 7ed8df86-9fd2-4e09-96bc-5381fec85f65
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 979d67b930d95817c0c27f671885c9b5fd9fb0d4
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 3fe5e6b71836854fc6cdcc409e61ef1936641def
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43032534"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47679644"
 ---
 # <a name="object-hierarchy-syntax-transact-sql"></a>Sintaxe da hierarquia de objetos (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +57,7 @@ ms.locfileid: "43032534"
   
  As aspas duplas (") são necessárias. Todos os parâmetros nomeados deverão ser especificados depois que todos os parâmetros posicionais forem especificados.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Se *TraversedObject* não for especificado, *PropertyOrMethod* é necessária.  
   
  Se *PropertyOrMethod* não for especificado, o *TraversedObject* é retornado como um parâmetro de saída de token de objeto do procedimento armazenado de automação OLE. Se *PropertyOrMethod* for especificado, a propriedade ou método da *TraversedObject* é chamado, e o valor da propriedade ou o valor retornado do método é retornado como um parâmetro de saída de automação OLE procedimento armazenado.  

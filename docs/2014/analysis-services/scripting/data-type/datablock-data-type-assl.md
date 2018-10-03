@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DataBlock Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - DataBlock data type
 ms.assetid: 4192b388-613a-472b-881c-f9c02215aa81
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 167af587de6f06d283ec29f8afbc0fedb2ebc99e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 706b934c51d280ec588bedf3752d61a4cc46697d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37211956"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48082586"
 ---
 # <a name="datablock-data-type-assl"></a>Tipo de dados DataBlock (ASSL)
   Define um tipo de dados primitivo que representa uma coleção de blocos de dados usado para armazenar o conteúdo binário de um [ClrAssemblyFile](clrassemblyfile-data-type-assl.md) elemento.  
@@ -48,14 +45,14 @@ ms.locfileid: "37211956"
   
 |Característica|Description|  
 |--------------------|-----------------|  
-|Tipos de dados base|Nenhum|  
-|Tipos de dados derivados|Nenhum|  
+|Tipos de dados base|None|  
+|Tipos de dados derivados|None|  
   
 ## <a name="data-type-relationships"></a>Relação do tipo de dados  
   
 |Relação|Elemento|  
 |------------------|-------------|  
-|Elementos pai|Nenhum|  
+|Elementos pai|None|  
 |Elementos filho|[Blocos](../collections/blocks-element-assl.md)|  
 |Elementos derivados|[Dados](../objects/data-element-assl.md) elemento de [ClrAssemblyFile](clrassemblyfile-data-type-assl.md) tipo ([arquivos](../collections/files-element-assl.md) coleção de [ClrAssembly](assembly-data-type-assl.md) tipo)|  
   

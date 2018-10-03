@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - ICommandStream interface
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - OLE DB, SQLXML
 - executing updategrams [SQLXML]
 ms.assetid: 4154c590-1541-49d0-8117-4ddf2ce5ccba
-caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7affd08d1b670fa653facb47f5aae5d0bd1d1aed
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cfc39301cdaf149256b1d99e8ffcd479f0c158cc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37177723"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48084287"
 ---
 # <a name="executing-an-updategram-by-using-ole-db-sqlxml-40"></a>Executando um diagrama de atualização usando OLE DB (SQLXML 4.0)
   Este tópico fornece um exemplo de funcionamento de usingOLE DB para executar um diagrama de atualização.  

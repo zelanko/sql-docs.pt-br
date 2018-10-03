@@ -4,24 +4,18 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: f245c017-023e-4880-8721-8908d339525e
-caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c74c3f21508ce08e6e540dd5c4cc84531b7c744d
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 472f830f41c5cc9d250a26b8e2612b7c0a6b68b9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40393970"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47728747"
 ---
 # <a name="getting-started-with-ssma--for-db2-console-db2tosql"></a>Introdução ao SSMA para DB2 Console (DB2ToSQL)
 Esta seção descreve o procedimento para iniciar e começar a trabalhar com o aplicativo de console do DB2. Também é listado, aqui, são as convenções usadas em uma janela de saída do Console do SSMA típica.  

@@ -1,13 +1,11 @@
 ---
-title: Feche o método (ADO MD) | Microsoft Docs
+title: Método (ADO MD) Close | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,18 +14,17 @@ f1_keywords:
 helpviewer_keywords:
 - Close method [ADO MD]
 ms.assetid: a3aa594d-f9d4-4654-8625-ec20153ff5d9
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 91741cba272afddfae3f27c64bcfabb4233ef997
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ca61f383198207223abf30ce25d9c922909f6526
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283605"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47683684"
 ---
-# <a name="close-method-ado-md"></a>Feche o método (ADO MD)
+# <a name="close-method-ado-md"></a>Método Close (ADO MD)
 Fecha um conjunto de células aberto.  
   
 ## <a name="syntax"></a>Sintaxe  
@@ -37,18 +34,18 @@ Fecha um conjunto de células aberto.
 Cellset.Close  
 ```  
   
-## <a name="remarks"></a>Remarks  
- Usando o **fechar** método para fechar um [conjunto de células](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) objeto liberará os dados associados, inclusive dados em qualquer relacionadas [célula](../../../ado/reference/ado-md-api/cell-object-ado-md.md), [eixo](../../../ado/reference/ado-md-api/axis-object-ado-md.md), [Posição](../../../ado/reference/ado-md-api/position-object-ado-md.md), ou [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md) objetos. Fechando uma **conjunto de células** não o remove da memória; você pode alterar suas configurações de propriedade e abri-lo novamente mais tarde. Para eliminar completamente um objeto da memória, defina a variável de objeto para **nada**.  
+## <a name="remarks"></a>Comentários  
+ Usando o **feche** método para fechar um [conjunto de células](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) objeto liberará os dados associados, inclusive dados em qualquer um relacionado [célula](../../../ado/reference/ado-md-api/cell-object-ado-md.md), [eixo](../../../ado/reference/ado-md-api/axis-object-ado-md.md), [Posição](../../../ado/reference/ado-md-api/position-object-ado-md.md), ou [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md) objetos. Fechando uma **conjunto de células** não o remove da memória; você pode alterar suas configurações de propriedade e abri-lo novamente mais tarde. Para eliminar completamente um objeto da memória, defina a variável de objeto para **nada**.  
   
- Posteriormente, você pode chamar o [abrir](../../../ado/reference/ado-md-api/open-method-ado-md.md) método para reabrir o **conjunto de células** usando a mesma ou em outra cadeia de caracteres de origem. Enquanto o **conjunto de células** objeto é fechado, recuperar todas as propriedades ou chamar os métodos que fazem referência a dados subjacente ou metadados gera um erro.  
+ Posteriormente, você pode chamar o [aberto](../../../ado/reference/ado-md-api/open-method-ado-md.md) método para reabrir a **conjunto de células** usando a mesma ou em outra cadeia de caracteres de origem. Enquanto o **conjunto de células** objeto está fechado, recuperando todas as propriedades ou chamar métodos que fazem referência aos dados subjacentes ou metadados gera um erro.  
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Cellset (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Objeto de eixo (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)   
- [Objeto de célula (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
- [Membro de objeto (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)   
+ [Objeto Axis (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)   
+ [Objeto Cell (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
+ [Objeto de membro (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)   
  [Método Open (ADO MD)](../../../ado/reference/ado-md-api/open-method-ado-md.md)   
- [Objeto de posição (ADO MD)](../../../ado/reference/ado-md-api/position-object-ado-md.md)   
+ [Objeto Position (ADO MD)](../../../ado/reference/ado-md-api/position-object-ado-md.md)   
  [Propriedade State (ADO MD)](../../../ado/reference/ado-md-api/state-property-ado-md.md)

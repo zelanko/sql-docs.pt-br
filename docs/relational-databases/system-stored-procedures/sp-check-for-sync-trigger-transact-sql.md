@@ -4,31 +4,25 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - filter_TSQL
 - sp_check_for_sync_trigger
 helpviewer_keywords:
 - sp_check_for_sync_trigger
 ms.assetid: 54a1e2fd-c40a-43d4-ac64-baed28ae4637
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ed3cd29b694e0e87f207376ad54b06fc0827b45b
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: d274e25b3a12a4fdd60c32365626bcb9ba912848
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43020255"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47628694"
 ---
 # <a name="spcheckforsynctrigger-transact-sql"></a>sp_check_for_sync_trigger (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +60,7 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 indica que o procedimento armazenado não está sendo chamado dentro do contexto de um gatilho da atualização imediata. 1 indica que ele está sendo chamado dentro do contexto de um gatilho de atualização imediata e é o tipo de gatilho que está sendo retornado em *@trigger_op*.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  **sp_check_for_sync_trigger** é usado em replicação de instantâneo e replicação transacional.  
   
  **sp_check_for_sync_trigger** é usado para coordenar entre a replicação e gatilhos definidos pelo usuário. Esse procedimento armazenado determina se ele está sendo chamado dentro do contexto de um gatilho de replicação. Por exemplo, você pode chamar o procedimento **sp_check_for_sync_trigger** no corpo de um gatilho definido pelo usuário. Se **sp_check_for_sync_trigger** retorna **0**, o gatilho definido pelo usuário continua o processamento. Se **sp_check_for_sync_trigger** retorna **1**, o gatilho definido pelo usuário é encerrada. Isso assegura que o gatilho definido pelo usuário não seja disparado quando o gatilho de replicação atualizar a tabela.  

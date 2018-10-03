@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server utility [SQL Server]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - UCP
 - Multi-server management [SQL Server]
 ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
-caps.latest.revision: 9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0de7b600ddd01130df7876cab66e075b0cb176dc
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 81d816d58780f32eeaca64c1d90257eef1a8aaff
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43816352"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48056696"
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>Recursos e tarefas do Utilitário do SQL Server
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precisam gerenciar seu ambiente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como um todo. Isso é abordado nesta versão por meio do conceito de gerenciamento de aplicativo e multisservidor do Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

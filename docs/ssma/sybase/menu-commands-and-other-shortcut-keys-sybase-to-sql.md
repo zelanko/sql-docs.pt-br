@@ -1,30 +1,24 @@
 ---
-title: Comandos de menu e outras teclas de atalho (Sybase para SQL) | Microsoft Docs
+title: Comandos de menu e outras teclas de atalho (Sybasetosql) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 1ca622b2-55d8-4666-b80a-8d9791cd3d3b
-caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: ab3cf6f49004144b325d051ce308fd53215c1760
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: ad27017466429bba36b062a86ed4c39ff1293885
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34779342"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47670324"
 ---
-# <a name="menu-commands-and-other-shortcut-keys-sybase-to-sql"></a>Comandos de menu e outras teclas de atalho (Sybase para SQL)
-As seções a seguir descrevem os atalhos de teclado para acessar comandos de menu e outras teclas de atalho usadas em várias caixas de diálogo do SSMA para Sybase aplicativo.  
+# <a name="menu-commands-and-other-shortcut-keys-sybase-to-sql"></a>Comandos de menu e outras teclas de atalho (SybaseToSQL)
+As seções a seguir descrevem os atalhos de teclado para acessar os comandos de menu e outras teclas de atalho usadas em várias caixas de diálogo do SSMA para Sybase aplicativo.  
   
 ## <a name="file-menu-commands"></a>Comandos do menu Arquivo  
 Para acessar o menu Arquivo, o atalho de teclado usado é ALT + F. A tabela a seguir descreve o teclado atalhos usados para acessar itens de menu no menu arquivo.  
@@ -34,9 +28,9 @@ Para acessar o menu Arquivo, o atalho de teclado usado é ALT + F. A tabela a se
 |Exiba a caixa de diálogo Novo projeto.|ALT + F + N|  
 |Exiba a caixa de diálogo Abrir projeto.|ALT + F + O|  
 |Feche o projeto atual.|ALT + F + C|  
-|Exibir salvar caixa de diálogo do projeto.|ALT + F + S|  
-|Exibir a conectar-se ou reconectar-se a caixa de diálogo do Sybase.|ALT + F + T|  
-|Exibir a conectar-se ou reconectar-se a caixa de diálogo do SQL Server ou SQL Azure.|ALT + F + P|  
+|Exiba o salvar caixa de diálogo do projeto.|ALT + F + S|  
+|Exibir o conectar-se ou reconectar-se a caixa de diálogo do Sybase.|ALT + F + T|  
+|Exibir o conectar-se ou reconectar-se a caixa de diálogo do SQL Server ou SQL Azure.|ALT + F + Q|  
 |Projetos recentes de acesso.|ALT + F + P|  
 |Saia do aplicativo do SSMA.|ALT + F + X|  
   
@@ -45,7 +39,7 @@ Para acessar o menu Editar, o atalho de teclado usado é ALT + E. A tabela a seg
   
 |PARA FAZER ISSO|PRESSIONE|  
 |--------------|---------|  
-|Recorta o texto selecionado para a área de transferência.|ALT + E + T ou CTRL + X|  
+|Recorta o texto selecionado na área de transferência.|ALT + E + T ou CTRL + X|  
 |Copie o texto selecionado para a área de transferência.|ALT + E + C ou CTRL + C|  
 |Cole o texto adicionado mais recentemente da área de transferência.|ALT + E + P ou CTRL + V|  
 |Desfaz a última ação.|ALT + E + U ou CTRL + Z|  
@@ -57,25 +51,25 @@ Para acessar o menu Editar, o atalho de teclado usado é ALT + E. A tabela a seg
 |Localizar ou localização rápida.|ALT + E + F + F ou CTRL + F|  
 |Exiba a caixa de diálogo de pesquisa avançada.|ALT + E + F + A ou ALT + F12|  
 |Inicie a informações rápidas.|ALT + E + F + I ou CTRL + SHIFT + espaço|  
-|Vá para a declaração.|ALT + E + F + G ou F12|  
+|Ir para declaração.|ALT + E + F + G ou F12|  
 |Localize anterior.|ALT + E + F + P ou CTRL + SHIFT + F3|  
 |Localizar próximo|ALT + E + F + N ou CTRL + F3|  
   
 ## <a name="view-menu-commands"></a>Comandos do menu Exibir  
-Para acessar o menu de exibição, o atalho de teclado usado é ALT + V. A tabela a seguir descreve o teclado atalhos usados para acessar itens de menu no menu Exibir.  
+Para acessar o menu Exibir, o atalho de teclado usado é ALT + V. A tabela a seguir descreve o teclado atalhos usados para acessar itens de menu no menu de exibição.  
   
 |PARA FAZER ISSO|PRESSIONE|  
 |--------------|---------|  
 |Sincronize os gerenciadores de metadados.|ALT + V + Z|  
-|Mostre árvore.|ALT + V + H ou CTRL + T|  
-|Mostra a parte de origem.|ALT + V + S|  
+|Mostra árvore.|ALT + V + H ou CTRL + T|  
+|Mostra parte do código-fonte.|ALT + V + S|  
 |Mostra a parte de destino.|ALT + V + T|  
-|Mostre painel de lista de erros.|ALT + V + eletrônico ou CTRL + E|  
-|Mostre painel de saída.|ALT + V + O ou CTRL + S|  
+|Mostre painel de lista de erros.|ALT + V + E ou CTRL + E|  
+|Mostre painel de saída.|ALT + V + S ou CTRL + O|  
 |Submenu de layouts de acesso.|ALT + V + L|  
-|Adicione o layout atual.|ALT + V + A + L|  
-|Selecione o layout padrão.|ALT + V + L + D ou CTRL + ALT + 1|  
-|Selecione sem layout pesquisadores.|ALT + V + L + W ou CTRL + ALT + 2|  
+|Adicione o layout atual.|ALT + V + L + A|  
+|Selecione o layout padrão.|ALT + V + L + 1!d ou CTRL + ALT + 1|  
+|Selecione sem layout explorers.|ALT + V + L + W ou CTRL + ALT + 2|  
 |Exiba a caixa de diálogo Gerenciar layouts.|ALT + V + L + M|  
   
 ## <a name="tools-menu-commands"></a>Comandos do menu Ferramentas  
@@ -83,31 +77,31 @@ Para acessar o menu Ferramentas, o atalho de teclado usado é ALT + T. A tabela 
   
 |PARA FAZER ISSO|PRESSIONE|  
 |--------------|---------|  
-|Crie o relatório.|ALT + T + C|  
-|Converta o esquema.|ALT + T + N ou CTRL + R|  
+|Crie um relatório.|ALT + T + C|  
+|Converta esquema.|ALT + T + N ou CTRL + R|  
 |Atualização do banco de dados Sybase.|ALT + T + R|  
 |Sincronize com o banco de dados do SQL Server ou SQL Azure.|ALT + T + S|  
 |Salve como script.|ALT + T + A|  
-|Migração de dados.|ALT + T + M|  
-|Interrompa a operação atual.|ALT + T + S|  
+|Migre dados.|ALT + T + M|  
+|Interrompa a operação atual.|ALT + T + O|  
 |Exiba a caixa de diálogo Configurações globais.|ALT + T + G|  
-|Exiba a caixa de diálogo de configurações de projeto.|ALT + T + P|  
+|Exiba a caixa de diálogo de configurações do projeto.|ALT + T + P|  
 |Exiba a caixa de diálogo de configurações de projeto padrão.|ALT + T + J|  
   
-## <a name="tester-menu-commands"></a>Comandos de menu Tester  
-Para acessar o menu de teste, o atalho de teclado usado é ALT + S. A tabela a seguir descreve o teclado atalhos usados para acessar itens de menu no menu Tester.  
+## <a name="tester-menu-commands"></a>Comandos de menu do testador  
+Para acessar o menu de testador, o atalho de teclado usado é ALT + S. A tabela a seguir descreve o teclado atalhos usados para acessar itens de menu no menu de testador.  
   
 |PARA FAZER ISSO|PRESSIONE|  
 |--------------|---------|  
 |Exiba a caixa de diálogo do Assistente de caso de teste.|ALT + S + N|  
-|Exiba o repositório de caixa de diálogo casos de teste.|ALT + S + C|  
-|Exiba o repositório de caixa de diálogo de resultados de teste.|ALT + S + R|  
-|Acesse Sybase submenu de gerenciamento de backup.|ALT + S + B|  
-|Exibição adicionar tabelas ao backup para Sybase caixa de diálogo.|ALT + S + B + B|  
+|Exiba o repositório da caixa de diálogo casos de teste.|ALT + S + C|  
+|Exiba o repositório da caixa de diálogo de resultados de teste.|ALT + S + R|  
+|Acesse o submenu de gerenciamento de backup do Sybase.|ALT + S + B|  
+|Exibição adicionar tabelas ao backup para a caixa de diálogo do Sybase.|ALT + S + B + B|  
 |Exibir tabelas de restauração de backup para a caixa de diálogo do Sybase.|ALT + S + B + R|  
-|Exibição gerenciar o conteúdo de backup para Sybase caixa de diálogo.|ALT + S + B + C|  
+|Exibição gerenciar o conteúdo de backup para a caixa de diálogo do Sybase.|ALT + S + B + C|  
 |Acesse o submenu de gerenciamento de backup do SQL Server.|ALT + S + M|  
-|Exibição adicionar tabelas ao backup para caixa de diálogo do SQL Server.|ALT + S + M + B|  
+|Exibição adicionar tabelas ao backup para a caixa de diálogo do SQL Server.|ALT + S + M + B|  
 |Exibir tabelas de restauração de backup para a caixa de diálogo do SQL Server.|ALT + S + M + R|  
 |Exibição gerenciar o conteúdo de backup para a caixa de diálogo do SQL Server.|ALT + S + M + C|  
   
@@ -130,11 +124,11 @@ Para acessar o menu de contexto para o objeto selecionado no Pesquisador de obje
 |Guia de GUI de acesso.|ALT + U|  
 |Guia de registro em log de acesso.|ALT + L|  
   
-## <a name="project-settings-dialog-box"></a>Caixa de diálogo de configurações de projeto  
+## <a name="project-settings-dialog-box"></a>Caixa de diálogo de configurações do projeto  
   
 |PARA FAZER ISSO|PRESSIONE|  
 |--------------|---------|  
-|Guia de informações de projeto do Access.|ALT + P|  
+|Guia de informações do projeto de acesso.|ALT + P|  
 |Guia geral de acesso.|ALT + G|  
 |Guia de sincronização de acesso.|ALT + S|  
 |Guia de GUI de acesso.|ALT + U|  
@@ -149,7 +143,7 @@ Para acessar o menu de contexto para o objeto selecionado no Pesquisador de obje
 |Guia de GUI de acesso.|ALT + U|  
 |Guia de mapeamentos de tipo de acesso.|ALT + T|  
   
-## <a name="end-user-license-agreement-dialog-box"></a>Caixa de diálogo do contrato de licença de usuário final  
+## <a name="end-user-license-agreement-dialog-box"></a>Caixa de diálogo de contrato de licença de usuário final  
   
 |PARA FAZER ISSO|PRESSIONE|  
 |--------------|---------|  
@@ -161,16 +155,16 @@ Para acessar o menu de contexto para o objeto selecionado no Pesquisador de obje
   
 |PARA FAZER ISSO|PRESSIONE|  
 |--------------|---------|  
-|Mova um resultado de pesquisa para cima ou para baixo.|Teclas de seta para cima e|  
-|Mover para iniciar ou o fim da pesquisa visível resulta na grade.|Página para cima ou page down chaves|  
-|Exiba o resultado de pesquisa selecionado.|Insira a chave|  
+|Mova um resultado da pesquisa para cima ou para baixo.|Para cima e para teclas de direção|  
+|Mover para iniciar ou fim da pesquisa visível resulta na grade.|Page up ou page teclas pressionadas|  
+|Exiba o resultado de pesquisa selecionados.|Insira a chave|  
   
 ## <a name="quick-info-dialog-box"></a>Caixa de diálogo de informações rápidas  
   
 |PARA FAZER ISSO|PRESSIONE|  
 |--------------|---------|  
-|Mova um item para cima ou para baixo.|Teclas de seta para cima e|  
-|Mover para iniciar ou no final da janela de informações rápidas.|Página para cima ou page down chaves|  
+|Mova um item para cima ou para baixo.|Para cima e para teclas de direção|  
+|Mover para iniciar ou no final da janela de informações rápidas.|Page up ou page teclas pressionadas|  
 |Feche a caixa de diálogo.|Tecla ESC|  
   
 ## <a name="output-pane"></a>Painel de saída  
@@ -178,7 +172,7 @@ Para acessar o menu de contexto para o objeto selecionado no Pesquisador de obje
 |PARA FAZER ISSO|PRESSIONE|  
 |--------------|---------|  
 |Abra o menu pop-up.|SHIFT + F10|  
-|Recorta o texto selecionado para a área de transferência.|CTRL + X|  
+|Recorta o texto selecionado na área de transferência.|CTRL + X|  
 |Copie o texto selecionado para a área de transferência.|CTRL + C|  
 |Cole o texto adicionado mais recentemente da área de transferência.|CTRL + V|  
 |Selecione todo o texto.|CTRL + A|  
@@ -187,22 +181,22 @@ Para acessar o menu de contexto para o objeto selecionado no Pesquisador de obje
   
 |PARA FAZER ISSO|PRESSIONE|  
 |--------------|---------|  
-|Copie os itens selecionados.|CTRL + C|  
+|Copie itens selecionados.|CTRL + C|  
 |Selecione todos os itens.|CTRL + A|  
-|Mova um item para cima ou para baixo.|Teclas de seta para cima e|  
+|Mova um item para cima ou para baixo.|Para cima e para teclas de direção|  
   
 ## <a name="sql-tab-page"></a>Página da guia SQL  
   
 |PARA FAZER ISSO|PRESSIONE|  
 |--------------|---------|  
-|Converta o esquema.|CTRL + R|  
-|Recorta o texto selecionado para a área de transferência.|CTRL + X|  
+|Converta esquema.|CTRL + R|  
+|Recorta o texto selecionado na área de transferência.|CTRL + X|  
 |Copie o texto selecionado para a área de transferência.|CTRL + C|  
 |Cole o texto adicionado mais recentemente da área de transferência.|CTRL + V|  
 |Iniciar a localização rápida|CTRL + F|  
 |Inicie a informações rápidas.|CTRL + SHIFT + ESPAÇO|  
-|Vá para a declaração.|F12|  
+|Ir para declaração.|F12|  
   
 ## <a name="see-also"></a>Consulte também  
-[Teclas de atalho&#40;Sybase para o SQL&#41;](../../ssma/sybase/shortcut-keys-sybase-to-sql.md)  
+[Teclas de atalho do&#40;Sybase para SQL&#41;](../../ssma/sybase/shortcut-keys-sybase-to-sql.md)  
   

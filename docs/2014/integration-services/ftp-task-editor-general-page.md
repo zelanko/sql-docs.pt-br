@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.ftptask.general.f1
 helpviewer_keywords:
 - File Transfer Protocol Task Editor
 ms.assetid: 28b46fdd-b04a-4f97-a99f-883f5735a6d9
-caps.latest.revision: 28
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 97f8761af335319cbd205eca3c57d4f6874e5829
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1309a746aa60ee1a7c49a0d6569b51d0a57b3a39
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37283632"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48054196"
 ---
 # <a name="ftp-task-editor-general-page"></a>Editor da Tarefa FTP (página Geral)
   Use a página **Geral** da caixa de diálogo **Editor da Tarefa FTP** para especificar o gerenciador de conexões que estabelece conexão com o servidor FTP com o qual a tarefa se comunica. Você também pode nomear e descrever a tarefa FTP.  

@@ -1,13 +1,11 @@
 ---
-title: Exemplo de propriedades de CursorLocation (VC + +) e AbsolutePosition | Microsoft Docs
+title: Exemplo de AbsolutePosition e CursorLocation propriedades (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - CursorLocation property [ADO], VC++ example
 - AbsolutePosition property [ADO], VC++ example
 ms.assetid: 48c07216-d199-4822-89f8-ce928d3d2b74
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dafee71e3b5fd70116260ad542a80085aaa845b7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 922ccc2768b317d3ea0dac612bf965def9c7f2e9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275125"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47826774"
 ---
-# <a name="absoluteposition-and-cursorlocation-properties-example-vc"></a>Exemplo de propriedades de CursorLocation (VC + +) e AbsolutePosition
-Este exemplo demonstra como o [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) propriedade pode acompanhar o progresso de um loop que enumera todos os registros de um [registros](../../../ado/reference/ado-api/recordset-object-ado.md). Ele usa o [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) propriedade para habilitar o **AbsolutePosition** propriedade definindo o cursor para um cursor do cliente.  
+# <a name="absoluteposition-and-cursorlocation-properties-example-vc"></a>Exemplo de AbsolutePosition e CursorLocation propriedades (VC + +)
+Este exemplo demonstra como o [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) propriedade pode acompanhar o progresso de um loop que enumera todos os registros de uma [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md). Ele usa o [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) propriedade para habilitar o **AbsolutePosition** propriedade definindo o cursor para um cursor do cliente.  
   
 ```  
 // BeginAbsolutePositionCpp.cpp  

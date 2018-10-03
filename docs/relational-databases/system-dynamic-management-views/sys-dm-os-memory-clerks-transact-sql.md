@@ -5,9 +5,7 @@ ms.date: 03/13/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_os_memory_clerks
@@ -19,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_memory_clerks dynamic management view
 ms.assetid: 1d556c67-5c12-46d5-aa8c-7ec1bb858df7
-caps.latest.revision: 47
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9de4fc757abbd5c9a01ff4b16b3e7507e8ccebe0
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 2b308f17a7b5555f77f36174c7d11dd9979cf4ad
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43081526"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47725894"
 ---
 # <a name="sysdmosmemoryclerks-transact-sql"></a>sys.dm_os_memory_clerks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -63,7 +60,7 @@ ms.locfileid: "43081526"
 Na [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
 Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` permissão no banco de dados.   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O gerenciador de memória do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consiste em uma hierarquia de três camadas. Na parte inferior da hierarquia estão os nós de memória. O próximo nível médio consiste em administradores de memória, caches de memória e pools de memória. A camada superior consiste em objetos de memória. Esses objetos geralmente são usados para alocar memória em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Os nós de memória fornecem a interface e a implementação para alocadores de baixo nível. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], apenas os administradores de memória têm acesso a nós de memória. Os administradores de memória acessam interfaces de nó de memória para alocar memória. Os nós de memória também controlam a memória alocada, usando o administrador para diagnósticos. Todo componente que aloca uma quantidade significativa de memória deve criar seu próprio administrador de memória e alocar toda a sua memória usando as interfaces do administrador. Frequentemente, os componentes criam seus administradores correspondentes no momento em que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é iniciado.  

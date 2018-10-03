@@ -5,51 +5,48 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - outer join escape sequence [ODBC]
 - escape sequences [ODBC], outer join
 - ODBC escape sequences [ODBC], outer join
 ms.assetid: 2cfd1525-6677-4d36-9b9e-730496853750
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: af6a98b3e1a7848fa242dfceb890c472e1d16f74
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ba08d33efca6fa90531f89bd57a307f42f343ebd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32907521"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47817580"
 ---
-# <a name="outer-join-escape-sequence"></a>Sequência de Escape de junção externa
+# <a name="outer-join-escape-sequence"></a>Sequência de escape de junção externa
 ODBC usa sequências de escape de junções externas. A sintaxe dessa sequência de escape é da seguinte maneira:  
   
 ```  
 {oj outer-join}  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Na notação BNF, a sintaxe é:  
   
- *ODBC-outer-join-escape* :: =  
+ *Outer-join-escape ODBC* :: =  
   
- *Iniciador de esc ODBC* oj *junção externa ODBC esc terminador*  
+ *Iniciador do ODBC-esc* oj *junção externa ODBC esc terminador*  
   
- *junção externa* :: = *nome de tabela* [*nome de correlação*] {esquerda &#124; direita &#124; completo}  
+ *junção externa* :: = *nome da tabela* [*nome de correlação*] {esquerda &#124; direita &#124; completo}  
   
- JUNÇÃO externa {*nome de tabela* [*nome de correlação*] &#124; *junção externa*} ON  
+ JUNÇÃO externa {*nome da tabela* [*nome de correlação*] &#124; *junção externa*} ON  
   
  *pesquisa-*  
   
- *condição*  
+ *Condição*  
   
  *nome de correlação* :: = *nome definido pelo usuário*  
   
- *Iniciador de esc ODBC* :: = {  
+ *Iniciador do ODBC-esc* :: = {  
   
  *Terminador de esc ODBC* :: =}  
   

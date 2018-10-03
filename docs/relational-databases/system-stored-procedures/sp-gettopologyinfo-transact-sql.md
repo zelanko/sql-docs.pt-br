@@ -4,31 +4,25 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - sp_gettopologyinfo_TSQL
 - sp_gettopologyinfo
 helpviewer_keywords:
 - sp_gettopologyinfo
 ms.assetid: 8bbe8a06-a4aa-4219-8402-12db6a4682c6
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ee8f192a96bc88c1e37d0d61b6dcf12dc074d1ea
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 043a074c1ae708ed4bc01311fb454c185bf27ec7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43025288"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47814185"
 ---
 # <a name="spgettopologyinfo-transact-sql"></a>sp_gettopologyinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +48,7 @@ sp_gettopologyinfo [ @request_id = ] request_id
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  sp_gettopologyinfo é usado em replicação transacional ponto a ponto. Execute [sp_requestpeertopologyinfo](../../relational-databases/system-stored-procedures/sp-requestpeertopologyinfo-transact-sql.md) antes de executar sp_gettopologyinfo. Esses procedimentos são usados pelo Assistente para Configurar Topologia Ponto a Ponto, mas eles também podem ser usados diretamente se você precisar de informações sobre topologia em um formato XML. Se você preferir resultados tabulares, consulte o [MSpeer_topologyresponse](../../relational-databases/system-tables/mspeer-topologyresponse-transact-sql.md) tabela do sistema.  
   
 ## <a name="permissions"></a>Permissões  

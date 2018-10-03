@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - IssuedBy Property (SecurityCertificate Class)
@@ -19,16 +16,15 @@ apitype: MOFDef
 helpviewer_keywords:
 - IssuedBy property
 ms.assetid: 9fcf9c62-01a8-4be2-9d10-5b1b796b397c
-caps.latest.revision: 32
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: b67588e2af68e4cfb660c3ec04181351d3fde2bb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 108f1da5b4f913bb1a395dacd3439db78ebe9aef
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33006593"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47735154"
 ---
 # <a name="issuedby-property-securitycertificate-class"></a>Propriedade IssuedBy (classe SecurityCertificate)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +38,7 @@ object.IssuedBy [= value]
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  Um objeto da [classe SecurityCertificate](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md) que representa um certificado de segurança.  
   
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  

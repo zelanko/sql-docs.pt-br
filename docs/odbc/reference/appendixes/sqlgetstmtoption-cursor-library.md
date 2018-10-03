@@ -1,33 +1,30 @@
 ---
-title: SQLGetStmtOption (biblioteca de Cursor) | Microsoft Docs
+title: SQLGetStmtOption (biblioteca de cursores) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetStmtOption function [ODBC], Cursor Library
 ms.assetid: 986170b3-fba8-4323-9224-60b381c7effb
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d360146c264f68b5662157f2ce5f7385b2cfb237
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f4c7429bd4a3780caaf5bc7e0624d0e92ef4dd3f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32907811"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828870"
 ---
-# <a name="sqlgetstmtoption-cursor-library"></a>SQLGetStmtOption (biblioteca de Cursor)
+# <a name="sqlgetstmtoption-cursor-library"></a>SQLGetStmtOption (Biblioteca de cursores)
 > [!IMPORTANT]  
->  Este recurso será removido em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. A Microsoft recomenda o uso da funcionalidade de cursor do driver.  
+>  Este recurso será removido em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que usam esse recurso atualmente. A Microsoft recomenda usar a funcionalidade de cursor do driver.  
   
- Este tópico discute o uso do **SQLGetStmtOption** função na biblioteca de cursor. Para obter informações gerais sobre **SQLGetStmtOption**, consulte [SQLGetStmtOption função](../../../odbc/reference/syntax/sqlgetstmtoption-function.md).  
+ Este tópico discute o uso do **SQLGetStmtOption** função na biblioteca de cursor. Para obter informações gerais sobre **SQLGetStmtOption**, consulte [função SQLGetStmtOption](../../../odbc/reference/syntax/sqlgetstmtoption-function.md).  
   
  A biblioteca de cursores suporta as seguintes opções de instrução com **SQLGetStmtOption**:  
   

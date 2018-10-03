@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - syscollector_collector_types
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - data collector view
 - syscollector_collector_types view
 ms.assetid: d5cd30bb-89fd-4814-a7e8-9074f043f90f
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7951259911347457e4927cb9c3c0133d87cc9cf6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 41ae978e31db70f0cc49469d5ec14ae6f075ab7e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221880"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47650574"
 ---
 # <a name="syscollectorcollectortypes-transact-sql"></a>syscollector_collector_types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +54,7 @@ ms.locfileid: "33221880"
 |---------------------|  
 |Atualizado **collection_type_uid** nome de coluna para **collector_type_uid**.|  
 |Corrigida a descrição para o **parameter_schema** coluna para indicar que o valor é anulável.|  
-|Adicionado o **parameter_formatter** coluna.|  
+|Adicionada a **parameter_formatter** coluna.|  
 |Corrigido o tipo de dados para o **collection_package_path** coluna e atualizada a descrição para indicar que o valor é anulável.|  
 |Corrigido o tipo de dados para o **upload_package_path** coluna e atualizada a descrição para indicar que o valor é anulável.|  
   

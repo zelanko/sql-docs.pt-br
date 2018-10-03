@@ -5,40 +5,37 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - row-wise binding [ODBC]
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
 ms.assetid: 4f622cf4-0603-47a1-a48b-944c4ef46364
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5d5f36f33773a10212c37eac5087327935981a9c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c596f4924e9859b3ac61d38f68bacbc3ecd54a2e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32912053"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47855854"
 ---
-# <a name="row-wise-binding"></a>A associação
-Ao usar a associação, um aplicativo define uma estrutura que contém um ou dois, ou em alguns casos, três elementos para cada coluna para o qual os dados são a ser retornado. O primeiro elemento contém o valor dos dados, e o segundo elemento contém o buffer de comprimento/indicador. Indicadores e os valores de comprimento podem ser armazenados em buffers separados, definindo os campos de descritor SQL_DESC_INDICATOR_PTR e SQL_DESC_OCTET_LENGTH_PTR como valores diferentes; Se isso for feito, a estrutura contém um elemento de terceiro. O aplicativo, em seguida, aloca uma matriz dessas estruturas, que contém elementos existem linhas no conjunto de linhas.  
+# <a name="row-wise-binding"></a>Associação de linha
+Ao usar a associação, um aplicativo define uma estrutura que contém um ou dois, ou em alguns casos, três elementos para cada coluna para a qual data será retornado. O primeiro elemento contém o valor de dados, e o segundo elemento contém o buffer de comprimento/indicador. Indicadores e os valores de comprimento podem ser armazenados em buffers separadas ao definir os campos de descritor SQL_DESC_INDICATOR_PTR e SQL_DESC_OCTET_LENGTH_PTR como valores diferentes; Se isso for feito, a estrutura contém um terceiro elemento. O aplicativo, em seguida, aloca uma matriz dessas estruturas, que contém elementos tantas quantas forem as linhas no conjunto de linhas.  
   
- O aplicativo declara o tamanho da estrutura para o driver com o atributo de instrução SQL_ATTR_ROW_BIND_TYPE e associa o endereço de cada membro no primeiro elemento da matriz. Portanto, o driver pode calcular o endereço dos dados para uma determinada linha e coluna como  
+ O aplicativo declara o tamanho da estrutura para o driver com o atributo da instrução SQL_ATTR_ROW_BIND_TYPE e associa o endereço de cada membro no primeiro elemento da matriz. Portanto, o driver pode calcular o endereço dos dados para uma determinada linha e coluna como  
   
 ```  
 Address = Bound Address + ((Row Number - 1) * Structure Size)  
 ```  
   
- em que as linhas são numeradas de 1 para o tamanho do conjunto de linhas. (Um é subtraído do número de linha porque a matriz de indexação em C é baseado em zero.) A ilustração a seguir mostra como a associação funciona. Em geral, apenas as colunas que serão associadas são incluídas na estrutura. A estrutura pode conter campos para colunas do conjunto de resultados não relacionadas. As colunas podem ser colocadas na estrutura em qualquer ordem, mas são mostradas em ordem sequencial para maior clareza.  
+ em que as linhas são numeradas de 1 para o tamanho do conjunto de linhas. (Um é subtraído do número de linha porque a matriz de indexação em C é baseado em zero.) A ilustração a seguir mostra como a associação funciona. Em geral, apenas as colunas que serão associadas são incluídas na estrutura. A estrutura pode conter campos que não são relacionados para colunas do conjunto de resultados. As colunas podem ser colocadas na estrutura em qualquer ordem, mas são mostradas em ordem sequencial para maior clareza.  
   
- ![Linha mostra&#45;associação aconselhável](../../../odbc/reference/develop-app/media/pr22.gif "pr22")  
+ ![Linha mostra&#45;associação wise](../../../odbc/reference/develop-app/media/pr22.gif "pr22")  
   
- Por exemplo, o código a seguir cria uma estrutura com elementos no qual retornar dados para as colunas OrderID, o vendedor e o Status e o comprimento/indicadores para as colunas de vendedor e Status. Ele aloca 10 dessas estruturas e associa-os para as colunas OrderID, o vendedor e o Status.  
+ Por exemplo, o código a seguir cria uma estrutura com elementos no qual retornar dados para as colunas OrderID, o vendedor e o Status e comprimento/indicadores para as colunas de vendedor e Status. Ele aloca 10 dessas estruturas e associa-os para as colunas OrderID, o vendedor e o Status.  
   
 ```  
 #define ROW_ARRAY_SIZE 10  

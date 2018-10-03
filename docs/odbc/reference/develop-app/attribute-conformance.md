@@ -1,13 +1,11 @@
 ---
-title: Atributo conformidade | Microsoft Docs
+title: Conformidade de atributo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC], conformance levels
@@ -15,21 +13,20 @@ helpviewer_keywords:
 - conformance levels [ODBC], attribute
 - attribute conformance levels [ODBC]
 ms.assetid: 34fea100-10f9-46d5-bc50-3aa867b70f24
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2c765982a35fd41fc36fdc82ddbd3434b2d90c07
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 44f1311d98f37412454ad2352366492a8d5a1768
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32913731"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47818834"
 ---
 # <a name="attribute-conformance"></a>Conformidade de atributo
 A tabela a seguir indica o nível de conformidade de cada atributo de ambiente ODBC, que isso é bem definido.  
   
-|Função|Nível de conformidade|  
+|Função|nível de conformidade|  
 |--------------|-----------------------|  
 |SQL_ATTR_CONNECTION_POOLING|--[1]|  
 |SQL_ATTR_CP_MATCH|--[1]|  
@@ -40,7 +37,7 @@ A tabela a seguir indica o nível de conformidade de cada atributo de ambiente O
   
  A tabela a seguir indica o nível de conformidade de cada atributo de conexão ODBC, que isso é bem definido.  
   
-|Função|Nível de conformidade|  
+|Função|nível de conformidade|  
 |--------------|-----------------------|  
 |SQL_ATTR_ACCESS_MODE|Núcleo|  
 |SQL_ATTR_ASYNC_ENABLE|Nível 1 ou nível 2 [1]|  
@@ -59,13 +56,13 @@ A tabela a seguir indica o nível de conformidade de cada atributo de ambiente O
 |SQL_ATTR_TRANSLATE_OPTION|Núcleo|  
 |SQL_ATTR_TXN_ISOLATION|Nível 1 ou nível 2 [2]|  
   
- [1] os aplicativos que dão suporte ao nível de conexão assincronia (necessária para o nível 1) devem dar suporte a configuração deste atributo como SQL_TRUE chamando **SQLSetConnectAttr**; o atributo não precisa ser configurável para um valor diferente de padrão valor por meio de **SQLSetStmtAttr**. Aplicativos que dão suporte ao nível de instrução assincronia (necessária para o nível 2) devem oferecer suporte a configuração deste atributo como SQL_TRUE usando a função.  
+ [1] os aplicativos que dão suporte à assincronia do nível de conexão (necessária para o nível 1) devem dar suporte a configuração deste atributo como SQL_TRUE chamando **SQLSetConnectAttr**; o atributo não precisa ser configurável para um valor diferente de seu padrão valor por meio **SQLSetStmtAttr**. Aplicativos que dão suporte à assincronia de nível de instrução (necessária para o nível 2) devem dar suporte a configuração deste atributo como SQL_TRUE usando qualquer função.  
   
- [2] para conformidade de interface de nível 1, o driver deve oferecer suporte a um valor além do valor padrão definido pelo driver (chamando **SQLGetInfo** com a opção SQL_DEFAULT_TXN_ISOLATION). Para conformidade de interface de nível 2, o driver também deve suportar SQL_TXN_SERIALIZABLE.  
+ [2] para conformidade de interface de nível 1, o driver deve oferecer suporte a um valor além do valor padrão definido pelo driver (disponíveis por meio da chamada **SQLGetInfo** com a opção SQL_DEFAULT_TXN_ISOLATION). Para conformidade de interface de nível 2, o driver também deve suportar SQL_TXN_SERIALIZABLE.  
   
  A tabela a seguir indica o nível de conformidade de cada atributo de instrução ODBC, que isso é bem definido.  
   
-|Função|Nível de conformidade|  
+|Função|nível de conformidade|  
 |--------------|-----------------------|  
 |SQL_ATTR_APP_PARAM_DESC|Núcleo|  
 |SQL_ATTR_APP_ROW_DESC|Núcleo|  
@@ -73,7 +70,7 @@ A tabela a seguir indica o nível de conformidade de cada atributo de ambiente O
 |SQL_ATTR_CONCURRENCY|Nível 1 ou nível 2 [2]|  
 |SQL_ATTR_CURSOR_SCROLLABLE|Nível 1|  
 |SQL_ATTR_CURSOR_SENSITIVITY|Nível 2|  
-|SQL_ATTR_CURSOR_TYPE|Núcleo/nível 2 [3]|  
+|SQL_ATTR_CURSOR_TYPE|Nível/Core 2 [3]|  
 |SQL_ATTR_ENABLE_AUTO_IPD|Nível 2|  
 |SQL_ATTR_FETCH_BOOKMARK_PTR|Nível 2|  
 |SQL_ATTR_IMP_PARAM_DESC|Núcleo|  
@@ -101,7 +98,7 @@ A tabela a seguir indica o nível de conformidade de cada atributo de ambiente O
 |SQL_ATTR_SIMULATE_CURSOR|Nível 2|  
 |SQL_ATTR_USE_BOOKMARKS|Nível 2|  
   
- [1] os aplicativos que dão suporte ao nível de conexão assincronia (necessária para o nível 1) devem dar suporte a configuração deste atributo como SQL_TRUE chamando **SQLSetConnectAttr**; o atributo não precisa ser configurável para um valor diferente de padrão valor por meio de **SQLSetStmtAttr**. Aplicativos que dão suporte ao nível de instrução assincronia (necessária para o nível 2) devem oferecer suporte a configuração deste atributo como SQL_TRUE usando a função.  
+ [1] os aplicativos que dão suporte à assincronia do nível de conexão (necessária para o nível 1) devem dar suporte a configuração deste atributo como SQL_TRUE chamando **SQLSetConnectAttr**; o atributo não precisa ser configurável para um valor diferente de seu padrão valor por meio **SQLSetStmtAttr**. Aplicativos que dão suporte à assincronia de nível de instrução (necessária para o nível 2) devem dar suporte a configuração deste atributo como SQL_TRUE usando qualquer função.  
   
  [2] para conformidade de interface de nível 2, o driver deve oferecer suporte a SQL_CONCUR_READ_ONLY e pelo menos um outro valor.  
   

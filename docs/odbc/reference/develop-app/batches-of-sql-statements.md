@@ -5,30 +5,27 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - batches [ODBC]
 - SQL statements [ODBC], batches
 - batches [ODBC], about batches
 ms.assetid: 766488cc-450c-434c-9c88-467f6c57e17c
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 52d5b9953f193009f6aa521b08cf1af9b335e079
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fb6d91fef3e12a26d7082defa5b579e00dbae4ba
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911241"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47775094"
 ---
 # <a name="batches-of-sql-statements"></a>Lotes de instruções SQL
-Um lote de instruções SQL é um grupo de duas ou mais instruções SQL ou uma única instrução SQL que tem o mesmo efeito de um grupo de duas ou mais instruções SQL. Em algumas implementações, a instrução de lote inteiro é executada antes de todos os resultados estão disponíveis. Isso geralmente é mais eficiente que enviar instruções separadamente, pois o tráfego de rede geralmente pode ser reduzido e a fonte de dados, às vezes, pode otimizar a execução de um lote de instruções SQL. Em outras implementações, chamando **SQLMoreResults** dispara a execução da próxima instrução no lote. ODBC suporta os seguintes tipos de lotes:  
+Um lote de instruções SQL é um grupo de duas ou mais instruções SQL ou uma única instrução SQL que tem o mesmo efeito de um grupo de duas ou mais instruções SQL. Em algumas implementações, a instrução do lote inteiro é executada antes que todos os resultados estejam disponíveis. Isso geralmente é mais eficiente do que enviar instruções separadamente, pois o tráfego de rede geralmente pode ser reduzido e a fonte de dados, às vezes, pode otimizar a execução de um lote de instruções SQL. Em outras implementações, chamando **SQLMoreResults** dispara a execução da próxima instrução no lote. ODBC dá suporte aos seguintes tipos de lotes:  
   
--   **Lotes explícitas** um *lote explícito* é duas ou mais instruções SQL separadas por ponto e vírgula (;). Por exemplo, o lote de instruções SQL a seguir abre um novo pedido de vendas. Isso requer inserir linhas em tabelas de pedidos e de linhas. Observe que não há nenhum ponto e vírgula após a última instrução.  
+-   **Lotes explícitos** uma *lote explícito* é dois ou mais instruções SQL separadas por ponto e vírgula (;). Por exemplo, o lote de instruções SQL a seguir abre uma nova ordem de venda. Isso requer inserindo linhas em tabelas de pedidos e linhas. Observe que não há nenhum ponto e vírgula após a última instrução.  
   
     ```  
     INSERT INTO Orders (OrderID, CustID, OpenDate, SalesPerson, Status)  
@@ -43,7 +40,7 @@ Um lote de instruções SQL é um grupo de duas ou mais instruções SQL ou uma 
        VALUES (2002, 4, 412, 500)  
     ```  
   
--   **Procedimentos** se um procedimento contiver mais de uma instrução SQL, ele é considerado um lote de instruções SQL. Por exemplo, a instrução a seguir específicas do SQL Server cria um procedimento que retorna um conjunto de resultados contendo informações sobre um cliente e um conjunto listando todos os pedidos de vendas abertos para esse cliente de resultados:  
+-   **Procedimentos** se um procedimento contiver mais de uma instrução SQL, ele é considerado um lote de instruções SQL. Por exemplo, a seguinte instrução específicos do SQL Server cria um procedimento que retorna um conjunto de resultados contendo informações sobre um cliente e um resultado definido listando todos os pedidos de vendas abertos desse cliente:  
   
     ```  
     CREATE PROCEDURE GetCustInfo (@CustomerID INT) AS  
@@ -52,18 +49,18 @@ Um lote de instruções SQL é um grupo de duas ou mais instruções SQL ou uma 
           WHERE CustID = @CustomerID AND Status = 'OPEN'  
     ```  
   
-     O **CREATE PROCEDURE** instrução em si não é um lote de instruções SQL. No entanto, o procedimento cria é um lote de instruções SQL. Nenhum ponto e vírgula separe os dois **selecione** instruções porque o **CREATE PROCEDURE** instrução é específica ao SQL Server e do SQL Server não requer um ponto e vírgula para separar várias instruções em um  **CREATE PROCEDURE** instrução.  
+     O **CREATE PROCEDURE** instrução em si não é um lote de instruções SQL. No entanto, o procedimento que ele cria é um lote de instruções SQL. Nenhum ponto e vírgula separar as duas **selecionar** instruções porque o **CREATE PROCEDURE** instrução é específica para o SQL Server e do SQL Server não requer um ponto e vírgula para separar várias instruções em um  **CREATE PROCEDURE** instrução.  
   
--   **Matrizes de parâmetros** matrizes de parâmetros podem ser usados com uma instrução SQL parametrizada como uma maneira eficiente para executar operações em massa. Por exemplo, as matrizes de parâmetros podem ser usados com os seguintes **inserir** instrução inserir várias linhas na tabela de linhas durante a execução de uma única instrução SQL:  
+-   **Matrizes de parâmetros** matrizes de parâmetros podem ser usados com uma instrução SQL parametrizada como uma maneira eficiente para executar operações em massa. Por exemplo, as matrizes de parâmetros podem ser usados com o seguinte **inserir** instrução inserir várias linhas na tabela de linhas durante a execução de uma única instrução SQL:  
   
     ```  
     INSERT INTO Lines (OrderID, Line, PartID, Quantity)  
        VALUES (?, ?, ?, ?)  
     ```  
   
-     Se uma fonte de dados não oferece suporte a matrizes de parâmetros, o driver pode emulá-los, executando a instrução SQL, uma vez para cada conjunto de parâmetros. Para obter mais informações, consulte [parâmetros de instrução](../../../odbc/reference/develop-app/statement-parameters.md) e [matrizes de valores de parâmetro](../../../odbc/reference/develop-app/arrays-of-parameter-values.md), mais adiante nesta seção.  
+     Se uma fonte de dados não der suporte a matrizes de parâmetros, o driver poderá emulá-los executando a instrução SQL, uma vez para cada conjunto de parâmetros. Para obter mais informações, consulte [parâmetros de instrução](../../../odbc/reference/develop-app/statement-parameters.md) e [matrizes de valores de parâmetro](../../../odbc/reference/develop-app/arrays-of-parameter-values.md), mais adiante nesta seção.  
   
- Os diferentes tipos de lotes não podem ser misturados de maneira interoperável. Ou seja, como um aplicativo determina o resultado da execução de um lote explícito que inclui um procedimento chama, um lote explícito que usa matrizes de parâmetros, e uma chamada de procedimento que usa matrizes de parâmetros é específico do driver.  
+ Os diferentes tipos de lotes não podem ser combinados de maneira interoperável. Ou seja, como um aplicativo determina o resultado da execução de um lote explícito que inclui um procedimento chama, um lote explícito que usa matrizes de parâmetros, e uma chamada de procedimento que usa matrizes de parâmetros é específica do driver.  
   
  Esta seção contém os tópicos a seguir.  
   

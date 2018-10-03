@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_log_shipping_secondary_database
@@ -21,12 +18,12 @@ ms.assetid: 11ce42ca-d3f1-44c8-9cac-214ca8896b9a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bfdfd891065f0a0fa4cf30376fdaa0c55c5e10a0
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 19bac76afeb56bf196b7f717596777435d813f04
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43033622"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47846424"
 ---
 # <a name="sphelplogshippingsecondarydatabase-transact-sql"></a>sp_help_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +87,7 @@ sp_help_log_shipping_secondary_database
 |**history_retention_period**|O período em minutos em que os registros de histórico de envio de logs são retidos em um determinado banco de dados secundário antes de serem excluídos.|  
 |**last_restored_latency**|Período em minutos decorrido entre o momento de criação do backup de log no primário e o momento em que ele foi restaurado no secundário.<br /><br /> O valor inicial é NULL.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Se você incluir a *secondary_database* parâmetro, o conjunto de resultados conterá informações sobre o banco de dados secundário; se você incluir a *secondary_id* parâmetro, o conjunto de resultados conterá informações sobre todos os bancos de dados secundários associados àquela identificação secundária.  
   
  **sp_help_log_shipping_secondary_database** deve ser executado a partir de **mestre** banco de dados no servidor secundário.  

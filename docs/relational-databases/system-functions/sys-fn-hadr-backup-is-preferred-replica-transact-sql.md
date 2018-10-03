@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.fn_hadr_backup_is_preferred_replica_TSQL
@@ -22,16 +19,15 @@ helpviewer_keywords:
 - active secondary replicas [SQL Server], backup on secondary replicas
 - sys.fn_hadr_backup_is_preferred_replica function
 ms.assetid: 61b9be77-e2f6-4da1-b2ae-a62cbe226145
-caps.latest.revision: 19
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d89528595dc2cec10bd86f9605b8ef55331c8ab5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: a6bba59d680a9f7ba1595808eed27762670aab97
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232472"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47597647"
 ---
 # <a name="sysfnhadrbackupispreferredreplica--transact-sql"></a>sys.fn_hadr_backup_is_preferred_replica  (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +50,7 @@ sys.fn_hadr_backup_is_preferred_replica ( 'dbname' )
 ## <a name="returns"></a>Retorna  
  Retornará 1 se o banco de dados da instância atual estiver na réplica preferencial. Caso contrário, retorna 0.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Use esta função em um script de backup para determinar se o banco de dados atual está na réplica preferencial para backups. Você pode executar um script em cada réplica de disponibilidade. Cada um desses trabalhos examina os mesmos dados para determinar qual trabalho deve ser executado, portanto, somente um dos trabalhos agendados realmente passa para o estágio de backup. O código de exemplo pode ser semelhante ao seguinte:  
   
 ```  
@@ -78,13 +74,13 @@ GO
   
 ##  <a name="RelatedTasks"></a> Tarefas relacionadas  
   
--   [Configurar Backup em réplicas de disponibilidade & #40; SQL Server & #41;](../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)  
+-   [Configurar backup em réplicas de disponibilidade &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Funções de grupos de disponibilidade sempre &#40;Transact-SQL&#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
+ [Funções de grupos de disponibilidade Always On &#40;Transact-SQL&#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
  [Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [CRIAR GRUPO de DISPONIBILIDADE &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
+ [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
- [Secundárias ativas: Backup em réplicas secundárias &#40;em grupos de disponibilidade AlwaysOn&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)[exibições do catálogo de grupos de disponibilidade AlwaysOn &#40;Transact-SQL    &#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)  
+ [Secundárias ativas: Backup em réplicas secundárias &#40;grupos de disponibilidade Always On&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)[exibições do catálogo de grupos de disponibilidade Always On &#40;Transact-SQL    &#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)  
   
   

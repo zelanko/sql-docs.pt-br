@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 05/02/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_dropmergearticle
@@ -17,16 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_dropmergearticle
 ms.assetid: 5ef1fbf7-c03d-4488-9ab2-64aae296fa4f
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 87a999b49b7239531b7aa374c1695226af3df1a0
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: d15a58815c7a3e394df968aae4e26d04fbf8eee2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43028965"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47702324"
 ---
 # <a name="spdropmergearticle-transact-sql"></a>sp_dropmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +77,7 @@ sp_dropmergearticle [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  **sp_dropmergearticle** é usado em replicação de mesclagem. Para obter mais informações sobre como descartar artigos, consulte [adicionar e remover artigos de publicações existentes](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
  Executando **sp_dropmergearticle** descartar um artigo de uma publicação não remove o objeto de banco de dados de publicação ou o objeto correspondente do banco de dados de assinatura. Use `DROP <object>` para remover esses objetos manualmente, se necessário.  

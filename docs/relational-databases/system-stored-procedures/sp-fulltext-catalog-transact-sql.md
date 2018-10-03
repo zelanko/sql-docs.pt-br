@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_fulltext_catalog_TSQL
@@ -18,17 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_catalog
 ms.assetid: e49b98e4-d1f1-42b2-b16f-eb2fc7aa1cf5
-caps.latest.revision: 37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a95aeee70e673e0db05016eaa0cf95e2cc129439
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: ab482a70374c9a11256719811db02dd4eb1586e4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43087344"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47663234"
 ---
 # <a name="spfulltextcatalog-transact-sql"></a>sp_fulltext_catalog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -81,7 +77,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 ## <a name="result-sets"></a>Conjuntos de resultados  
  None  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O **start_full** ação é usada para criar um instantâneo completo dos dados de texto completo *fulltext_catalog_name*. O **start_incremental** ação é usada para reindexar somente as linhas alteradas no banco de dados. População incremental pode ser aplicada somente se a tabela tem uma coluna do tipo **carimbo de hora**. Se uma tabela no catálogo de texto completo não contiver uma coluna do tipo **carimbo de hora**, a tabela sofrerá uma população completa.  
   
  Os dados do catálogo de texto completo e do índice são armazenados em arquivos criados em um diretório de catálogo de texto completo. O diretório de catálogo de texto completo é criado como um subdiretório do diretório especificado na **@path** ou no diretório de catálogo de texto completo do servidor padrão se **@path** não é especificado. O nome do diretório de catálogo de texto completo é criado de uma forma que garante que ele será exclusivo no servidor. Portanto, todos os diretórios de catálogo de texto completo em um servidor podem compartilhar o mesmo caminho.  

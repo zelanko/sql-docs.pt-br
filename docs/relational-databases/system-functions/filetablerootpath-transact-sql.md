@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FileTableRootPath_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - FileTableRootPath function
 ms.assetid: 0cba908a-c85c-4b09-b16a-df1cb333c629
-caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 637653dc75154f00c14cb248703aec3645f313bb
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c74a17d9a3781948727f0eb28f4729967728e033
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230506"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47732924"
 ---
 # <a name="filetablerootpath-transact-sql"></a>FileTableRootPath (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +44,7 @@ FileTableRootPath ( [ ‘[schema_name.]FileTable_name’ ], @option )
  *@option*  
  Uma expressão de inteiro que define como o componente do servidor do caminho deve ser formatado. *@option* Pode ter um dos seguintes valores:  
   
-|Value|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**0**|Retorna o nome do servidor convertido no formato NetBIOS, por exemplo:<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDatabase`<br /><br /> Este é o valor padrão.|  
 |**1**|Retorna o nome do servidor sem conversão, por exemplo:<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDatabase`|  
@@ -57,21 +53,21 @@ FileTableRootPath ( [ ‘[schema_name.]FileTable_name’ ], @option )
 ## <a name="return-type"></a>Tipo de retorno  
  **nvarchar(4000)**  
   
- Quando o banco de dados pertence a um grupo de disponibilidade AlwaysOn, então o **FileTableRootPath** função retorna o nome de rede virtual (VNN) em vez do nome do computador.  
+ Quando o banco de dados pertence a um grupo de disponibilidade Always On, o **FileTableRootPath** função retorna o nome de rede virtual (VNN) em vez do nome do computador.  
   
 ## <a name="general-remarks"></a>Comentários gerais  
- O **FileTableRootPath** função retorna NULL quando uma das seguintes condições for verdadeira:  
+ O **FileTableRootPath** função retornará NULL quando uma das seguintes condições for verdadeira:  
   
 -   O valor de *FileTable_name* não é válido.  
   
 -   O chamador não tiver permissão suficiente para referenciar a tabela especificada ou o banco de dados atual.  
   
--   A opção FILESTREAM de *database_directory* não está definido para o banco de dados atual.  
+-   A opção de FILESTREAM *database_directory* não está definida para o banco de dados atual.  
   
  Para obter mais informações, consulte [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md).  
   
 ## <a name="best-practices"></a>Práticas recomendadas  
- Para manter código e aplicativos independentes do computador e do banco de dados atuais, evite escrever código baseado em caminhos de arquivo absolutos. Em vez disso, obtenha o caminho completo para um arquivo em tempo de execução usando o **FileTableRootPath** e **GetFileNamespacePath** funções juntas, conforme mostrado no exemplo a seguir. Por padrão, a função **GetFileNamespacePath** retorna o caminho relativo do arquivo sob o caminho raiz do banco de dados.  
+ Para manter código e aplicativos independentes do computador e do banco de dados atuais, evite escrever código baseado em caminhos de arquivo absolutos. Em vez disso, obtenha o caminho completo para um arquivo em tempo de execução usando o **FileTableRootPath** e **GetFileNamespacePath** funciona em conjunto, conforme mostrado no exemplo a seguir. Por padrão, a função **GetFileNamespacePath** retorna o caminho relativo do arquivo sob o caminho raiz do banco de dados.  
   
 ```sql  
 USE MyDocumentDatabase;  

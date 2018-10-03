@@ -1,32 +1,29 @@
 ---
-title: Exemplo de propriedade CacheSize (JScript) | Microsoft Docs
+title: Exemplo da propriedade CacheSize (JScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - JScript
 helpviewer_keywords:
 - CacheSize property [ADO], JScript example
 ms.assetid: 3675f641-b4b1-48ff-ba33-8d9ea064cd04
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d9d0267aec726c6213d36d9224b457fcff3caf97
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f8b5dfc7affb2a6db7db0b30fa95087b3e024e00
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276115"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47648834"
 ---
-# <a name="cachesize-property-example-jscript"></a>Exemplo de propriedade CacheSize (JScript)
-Este exemplo usa o [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) para mostrar a diferença no desempenho de uma operação realizada com e sem um cache de registro de 30. Recorte e cole o seguinte código ao bloco de notas ou outro editor de texto e salve-o como **CacheSizeJS.asp**.  
+# <a name="cachesize-property-example-jscript"></a>Exemplo da propriedade CacheSize (JScript)
+Este exemplo usa o [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) para mostrar a diferença de desempenho para uma operação executada com e sem um cache de registro de 30. Recortar e colar o seguinte código ao bloco de notas ou outro editor de texto e salve-o como **CacheSizeJS.asp**.  
   
 ```  
 <!-- BeginCacheSizeJS -->  

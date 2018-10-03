@@ -4,26 +4,20 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - SSMA extension pack, Installation
 ms.assetid: 6772d0c5-258f-4d7b-afb0-b5f810e71af1
-caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 5a5e64aca2b46e60a1fda93a9bde2f5b62c981fa
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 1f80198787dd85d8f0c65e9881925641f9f081e5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40395404"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47730584"
 ---
 # <a name="installing-ssma-components-on-sql-server-mysqltosql"></a>Instalar os componentes do SSMA no SQL Server (MySQLToSql)
 Além de instalar o SSMA, você também deve instalar componentes no computador que está executando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esses componentes incluem o pacote de extensão do SSMA, que dá suporte à migração de dados e provedores do MySQL para habilitar a conectividade de servidor para servidor.  

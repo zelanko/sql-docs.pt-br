@@ -4,27 +4,21 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: b099d0f9-dd37-4c87-8b6f-ed0177881ea4
-caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: aee540eecc4635dc699de9db217f417485a5a0ac
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 167496250631866c009caef0dfe2044db4d11d6d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34773852"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47644576"
 ---
 # <a name="managing-passwords-accesstosql"></a>Gerenciamento de senhas (AccessToSQL)
-Esta seção é sobre como proteger senhas de banco de dados e o procedimento para importar ou exportá-los entre servidores:  
+Esta seção é sobre como proteger as senhas de banco de dados e o procedimento para importar ou exportá-los entre servidores:  
   
 1.  Proteção de senha  
   
@@ -35,19 +29,19 @@ O SSMA permite proteger sua senha de um banco de dados.
   
 Use o procedimento a seguir para implementar uma conexão segura:  
   
-Especifique uma senha válida usando um dos três métodos a seguir:  
+Especifique uma senha válida, usando um dos três métodos a seguir:  
   
 1.  **Texto não criptografado:** digite a senha do banco de dados no atributo de valor do nó 'senha'. Ele é encontrado sob o nó de definição de servidor na seção de servidor do arquivo de script ou arquivo de conexão do servidor.  
   
-    Senhas em texto não criptografado não são seguras. Portanto, você encontrará a seguinte mensagem de aviso na saída do console: *"servidor &lt;id do servidor&gt; senha é fornecida no formato de texto não criptografado não seguras, aplicativo de Console SSMA fornece uma opção para proteger o senha por meio da criptografia, consulte a opção – securepassword em SSMA arquivo de ajuda para obter mais informações."*  
+    As senhas em texto não criptografado não são seguras. Portanto, você encontrará a seguinte mensagem de aviso na saída do console: *"servidor &lt;id do servidor&gt; senha é fornecida na forma de texto não criptografado não seguro, o aplicativo de Console do SSMA fornece uma opção para proteger o senha por meio da criptografia, consulte a opção – securepassword no SSMA arquivo de ajuda para obter mais informações."*  
   
     **Senhas criptografadas:** a senha especificada, nesse caso, é armazenada em um formato criptografado no computador local em ProtectedStorage.ssma.  
   
-    -   **Proteção de senhas**  
+    -   **Proteger senhas**  
   
-        -   Execute o `SSMAforAccessConsole.exe` com o `–securepassword` e adicione a opção na linha de comando, passando o servidor de conexão ou arquivo de script que contém o nó de senha na seção de definição de servidor.  
+        -   Execute o `SSMAforAccessConsole.exe` com o `–securepassword` e adicione o comutador na linha de comando, passando o servidor de conexão ou arquivo de script que contém o nó de senha na seção de definição de servidor.  
   
-        -   No prompt, o usuário será solicitado a digitar a senha do banco de dados e confirmá-la.  
+        -   No prompt, o usuário é solicitado a inserir a senha do banco de dados e confirmá-la.  
   
             As ids de definição de servidor e suas senhas criptografadas correspondentes são armazenadas em um arquivo no computador local  
   
@@ -82,16 +76,16 @@ Especifique uma senha válida usando um dos três métodos a seguir:
   
     -   **Listando as Ids do servidor cujas senhas são criptografadas**  
   
-        Execute o SSMAforAccessConsole.exe com o `–securepassword` e `–list` alternar na linha de comando para listar todas as ids de servidor cujas senhas foram criptografadas.  
+        Execute o SSMAforAccessConsole.exe com o `–securepassword` e `–list` alternar na linha de comando para listar todas as ids do servidor cujas senhas foram criptografadas.  
   
             C:\SSMA\SSMAforAccessConsole.EXE –securepassword –list  
   
     > [!NOTE]  
     > 1.  A senha em texto não criptografado mencionado no arquivo de conexão de servidor ou de script tem precedência sobre a senha criptografada no arquivo protegido.  
-    > 2.  Quando não existe nenhuma senha na seção de servidor de arquivo de conexão do servidor ou o arquivo de script ou se ele não foi protegido no computador local, o console solicita que você digite a senha.  
+    > 2.  Quando nenhuma senha existe na seção servidor de arquivo de conexão do servidor ou o arquivo de script ou se ele não foram protegido no computador local, o console solicitará que você insira a senha.  
   
 ## <a name="exporting-or-importing-encrypted-passwords"></a>Exportando ou importando senhas criptografadas  
-O aplicativo de Console SSMA permite exportar o banco de dados criptografado senhas presente em um arquivo no computador local para um arquivo protegido e vice-versa. Ele ajuda a tornar a máquina de senhas criptografadas independentes. Funcionalidade de exportação lê a id do servidor e a senha do local protegido armazenamento e salva as informações em um arquivo criptografado. O usuário é solicitado a inserir a senha para o arquivo protegido. Verifique se a senha digitada é 8 caracteres ou mais. Este arquivo protegido é portátil em máquinas diferentes. Funcionalidade de importação lê o servidor de informações de id e a senha do arquivo protegido. O usuário é solicitado a inserir a senha para o arquivo protegido e acrescenta as informações para o armazenamento protegido local.  
+O aplicativo de Console do SSMA permite que você exporte as senhas de banco de dados criptografado presente em um arquivo no computador local para um arquivo protegido e vice-versa. Ele ajuda a tornar a máquina de senhas criptografadas independentes. Funcionalidade de exportação lê a id do servidor e armazenamento protegido de senha no local e salva as informações em um arquivo criptografado. O usuário é solicitado a inserir a senha para o arquivo protegido. Verifique se a senha inserida é o comprimento de 8 caracteres ou mais. Esse arquivo protegido é portátil entre diferentes computadores. Funcionalidade de importação lê o servidor de informações de id e a senha do arquivo protegido. O usuário é solicitado a inserir a senha para o arquivo protegido e acrescenta as informações para o armazenamento local protegido.  
 
 
     Export password

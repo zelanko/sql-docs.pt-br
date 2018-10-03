@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.registered_search_properties
@@ -24,17 +21,16 @@ helpviewer_keywords:
 - search property lists [SQL Server], viewing registered properties
 - sys.registered_search_properties catalog view
 ms.assetid: 1b9a7a5c-8c05-4819-83c3-7487dd08fcf7
-caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 79fddbbaa06dc5486b08a1c7209d5952b1a10dcd
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: ac940ecd4d6c85a308e3a3495241222f1864245b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43107139"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47718614"
 ---
 # <a name="sysregisteredsearchproperties-transact-sql"></a>sys.registered_search_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +46,7 @@ ms.locfileid: "43107139"
 |**property_description**|**nvarchar(512)**|Descrição da propriedade.|  
 |**property_id**|**int**|ID de propriedade interna da propriedade de pesquisa dentro da lista de propriedade de pesquisa identificada pelo **property_list_id** valor.<br /><br /> Quando uma determinada propriedade é adicionada a uma determinada lista de propriedades de pesquisa, o Mecanismo de Texto Completo registra a propriedade e atribui uma ID de propriedade interna que é específica àquela lista de propriedades a propriedade. A ID de propriedade interna, que é um inteiro, é exclusiva de uma determinada lista de propriedades de pesquisa. Se uma determinada propriedade for registrada para várias listas de propriedades de pesquisa, uma ID de propriedade interna diferente poderá ser atribuída para cada lista de propriedades de pesquisa.<br /><br /> Observação: A ID de propriedade interna é distinta do identificador de inteiro de propriedade que é especificado ao adicionar a propriedade à lista de propriedades de pesquisa. Para obter mais informações, veja [Pesquisar propriedades de documento com listas de propriedades de pesquisa](../../relational-databases/search/search-document-properties-with-search-property-lists.md).<br /><br /> Para exibir conteúdo tudo relacionado à propriedade no índice de texto completo: <br />                  [sys.dm_fts_index_keywords_by_property &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Para obter mais informações sobre listas de propriedades de pesquisa, veja [Pesquisar propriedades de documento com listas de propriedades de pesquisa](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
 ## <a name="permissions"></a>Permissões  

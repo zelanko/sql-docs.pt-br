@@ -1,13 +1,11 @@
 ---
-title: Funções ODBC executadas pela biblioteca de Cursor | Microsoft Docs
+title: Funções ODBC executadas pela biblioteca de cursores | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - cursor library [ODBC], functions
@@ -15,29 +13,28 @@ helpviewer_keywords:
 - ODBC functions [ODBC], cursor library
 - ODBC cursor library [ODBC], functions
 ms.assetid: 2f1d3386-7e59-4d55-a5b4-3440b61343a3
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 51e123ef04153579227f92e449c3dc4e46f6ac0d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 611a79ece0da905c5fc12aeafdbcd7b8c54ee2bb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32907751"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47638735"
 ---
-# <a name="odbc-functions-executed-by-the-cursor-library"></a>Funções ODBC executadas pela biblioteca de Cursor
+# <a name="odbc-functions-executed-by-the-cursor-library"></a>Funções ODBC executadas pela biblioteca de cursores
 > [!IMPORTANT]  
->  Este recurso será removido em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. A Microsoft recomenda o uso da funcionalidade de cursor do driver.  
+>  Este recurso será removido em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que usam esse recurso atualmente. A Microsoft recomenda usar a funcionalidade de cursor do driver.  
   
- A biblioteca de cursores executa as seguintes funções. Quando um aplicativo chama uma função na lista, o Gerenciador de Driver invoca a biblioteca de cursores, não o driver. Observe que a biblioteca de cursores pode chamar o driver ao executar a função.  
+ A biblioteca de cursores executa as seguintes funções. Quando um aplicativo chama uma função nesta lista, o Gerenciador de Driver chama a biblioteca de cursores, não o driver. Observe que a biblioteca de cursores pode chamar o driver ao executar a função.  
   
 |||  
 |-|-|  
 |**SQLBindCol**|**SQLGetStmtOption**|  
 |**SQLBindParam**|**SQLNativeSql**|  
 |**SQLBindParameter**|**SQLNumParams**|  
-|**SQLCloseCursor**|**Para SQLParamOptions**|  
+|**SQLCloseCursor**|**SQLParamOptions**|  
 |**SQLEndTran**|**SQLRowCount**|  
 |**SQLExtendedFetch**|**SQLSetConnectAttr**|  
 |**SQLFetchScroll**|**SQLSetConnectOption**|  

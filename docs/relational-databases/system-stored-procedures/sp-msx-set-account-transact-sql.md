@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_msx_set_account
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_msx_set_account
 ms.assetid: 314ec720-3a37-48f7-bb6b-8d5b894bf843
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a2d776a7ad3d29c180a4a2d2b017f5e1e6d0158a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 358918d91a13cf879d56ff5afd23d9aea0c8d81f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249418"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47627926"
 ---
 # <a name="spmsxsetaccount-transact-sql"></a>sp_msx_set_account (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,24 +41,24 @@ sp_msx_set_account [ @credential_name = ] 'credential_name'  | [ @credential_id 
   
 ## <a name="arguments"></a>Argumentos  
  [  **@credential_name=** ] **'***credential_name***'**  
- O nome da credencial a ser usada para fazer o logon no servidor mestre. O nome fornecido deve ser o nome de uma credencial existente. O *credential_name* ou *credential_id* deve ser especificado.  
+ O nome da credencial a ser usada para fazer o logon no servidor mestre. O nome fornecido deve ser o nome de uma credencial existente. Qualquer um dos *credential_name* ou *credential_id* deve ser especificado.  
   
  [  **@credential_id=** ] *credential_id*  
- O identificador da credencial a ser usada para fazer o logon no servidor mestre. Ele deve ser um identificador para uma credencial existente. O *credential_name* ou *credential_id* deve ser especificado.  
+ O identificador da credencial a ser usada para fazer o logon no servidor mestre. Ele deve ser um identificador para uma credencial existente. Qualquer um dos *credential_name* ou *credential_id* deve ser especificado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma.  
+ Nenhum.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa credenciais para armazenar as informações de nome de usuário e senha que um servidor de destino usa para fazer o logon em um servidor mestre. Este procedimento define a credencial que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent para este servidor de destino usa para fazer o logon no servidor mestre.  
   
  A credencial especificada deve ser uma credencial existente. Para obter mais informações sobre como criar uma credencial, consulte [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md).  
   
 ## <a name="permissions"></a>Permissões  
- Permissões de execução para **sp_msx_set_account** padrão para os membros do **sysadmin** função de servidor fixa.  
+ Permissões de execução **sp_msx_set_account** padrão para os membros da **sysadmin** função de servidor fixa.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir define que este servidor use a credencial `MsxAccount` para fazer o logon no servidor mestre.  
