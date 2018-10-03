@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 05/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - cdc
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - cdc.<capture_instance>_CT
 ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
-caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 089e20c09880feaaafc355896fd0249de6a13746
-ms.sourcegitcommit: a431ca21eac82117492d7b84c398ddb3fced53cc
+ms.openlocfilehash: 7b13f890063246c1557d11a504ccf229bb162057
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39102255"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47621024"
 ---
 # <a name="cdcltcaptureinstancegtct-transact-sql"></a>CDC. &lt;capture_instance&gt;CT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +44,7 @@ ms.locfileid: "39102255"
 |*\<colunas da tabela de origem capturada>*|varia|As colunas restantes na tabela de alteração são as colunas da tabela de origem que foram identificadas como colunas capturadas quando a instância de captura foi criada. Se nenhuma coluna tiver sido especificada na lista de colunas capturadas, todas as colunas da tabela de origem serão incluídas nessa tabela.|  
 |**_ $command_id** |**int** |Controla a ordem das operações em uma transação. |  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
 
 O `__$command_id` coluna foi a coluna foi introduzida em uma atualização cumulativa em versões de 2012 até 2016. Para obter informações de versão e o download, consulte o artigo KB 3030352 em [corrigir: A tabela de alteração é ordenada incorretamente para atualizada linhas depois de habilitar dados de alteração de captura para um banco de dados do Microsoft SQL Server](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you).  Para obter mais informações, consulte [funcionalidade de CDC pode falhar após a atualização para o CU mais recente do SQL Server 2012, 2014 e 2016](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/).
 

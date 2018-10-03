@@ -6,27 +6,24 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - NextRecordset method [ADO], VC++ example
 ms.assetid: 8bb72817-0cf5-4ce9-9fb8-043c89da941c
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3c12be648119f53e5dd9c03544bae3c234cf18e5
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 25f77216f31cf6ec15f108aea8bd7634a9008b35
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279905"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47687994"
 ---
-# <a name="nextrecordset-method-example-vc"></a>Exemplo do método NextRecordset (VC + +)
-Este exemplo usa o [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) método para exibir os dados em um conjunto de registros que usa uma instrução de comando composta composta de três separado **selecione** instruções.  
+# <a name="nextrecordset-method-example-vc"></a>Exemplo do método NextRecordset (VC++)
+Este exemplo usa o [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) método para exibir os dados em um conjunto de registros que usa uma instrução composta comando composta por três separado **selecione** instruções.  
   
 ```  
 // BeginNextRecordsetCpp.cpp  

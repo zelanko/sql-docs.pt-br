@@ -4,13 +4,8 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Access databases
 - Access databases, converting schemas
@@ -32,16 +27,15 @@ helpviewer_keywords:
 - translating Access to SQL Azure
 - translating Access to SQL Server
 ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
-caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 3db879598974e798c91fc274c0c2dff0d2205358
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 8137ed37cdbe3bec62e8f7e5a900ade9513894fb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395038"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47735177"
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>Convertendo objetos de banco de dados do Access (AccessToSQL)
 Depois de ter adicionado bancos de dados do Access e conectado ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou do SQL Azure, o SSMA exibe metadados para o acesso e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou objetos de banco de dados do SQL Azure. Você pode agora selecionar objetos de banco de dados do Access e, em seguida, converter os esquemas em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou esquemas do SQL Azure.  

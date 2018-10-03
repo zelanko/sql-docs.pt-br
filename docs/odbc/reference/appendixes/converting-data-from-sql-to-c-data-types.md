@@ -1,13 +1,11 @@
 ---
-title: Conversão de dados do SQL para tipos de dados C | Microsoft Docs
+title: Convertendo dados de SQL para tipos de dados C | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data conversions from SQL to C types [ODBC]
@@ -20,39 +18,38 @@ helpviewer_keywords:
 - converting data from SQL to c types [ODBC], about converting
 - C data types [ODBC], converting from SQL types
 ms.assetid: 029727f6-d3f0-499a-911c-bcaf9714e43b
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 370286bb4e955247e53d3c010b0bbb2088957bbe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 553596f474cd8e7c4f4c91911b0167d5b1bc0b4a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32914061"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47680834"
 ---
-# <a name="converting-data-from-sql-to-c-data-types"></a>Conversão de dados do SQL para tipos de dados C
-Quando um aplicativo chama **SQLFetch**, **SQLFetchScroll**, ou **SQLGetData**, o driver recupera os dados da fonte de dados. Se necessário, ele converte os dados do tipo de dados no qual o driver recuperá-lo para o tipo de dados especificado pelo *TargetType* argumento **SQLBindCol** ou **SQLGetData.** Finalmente, ele armazena os dados no local apontado pelo *TargetValuePtr* argumento **SQLBindCol** ou **SQLGetData** (e o campo SQL_DESC_DATA_PTR da descartar).  
+# <a name="converting-data-from-sql-to-c-data-types"></a>Converter dados de SQL para tipos de dados do C
+Quando um aplicativo chama **SQLFetch**, **SQLFetchScroll**, ou **SQLGetData**, o driver recupera os dados da fonte de dados. Se necessário, ele converte os dados do tipo de dados em que o driver recuperados-lo para o tipo de dados especificado pela *TargetType* argumento **SQLBindCol** ou **SQLGetData.** Por fim, ele armazena os dados no local apontado pela *TargetValuePtr* argumento **SQLBindCol** ou **SQLGetData** (e o campo SQL_DESC_DATA_PTR da descartar).  
   
- A tabela a seguir mostra as conversões com suporte do ODBC SQL tipos de dados para tipos de dados ODBC C. Um círculo preenchido indica a conversão padrão para um tipo de dados SQL (o tipo de dados C para o qual os dados serão convertidos quando o valor de *TargetType* é SQL_C_DEFAULT). Um círculo vazio indica uma conversão com suporte.  
+ A tabela a seguir mostra as conversões com suporte do ODBC SQL em tipos de dados para tipos de dados ODBC C. Um círculo preenchido indica a conversão padrão para um tipo de dados SQL (o tipo de dados C para o qual os dados serão convertidos quando o valor de *TargetType* é SQL_C_DEFAULT). Um círculo vazio indica uma conversão com suporte.  
   
- Para um ODBC 3 *. x* aplicativo trabalhando com um ODBC 2. *x* driver, conversão de dados específica do driver tipos podem não ter suporte.  
+ Para um ODBC 3 *. x* aplicativo trabalhar com um ODBC 2. *x* driver, a conversão de dados específica do driver tipos podem não ter suporte.  
   
  O formato dos dados convertidos não é afetado pela configuração de país Windows®.  
   
  As tabelas nas seções a seguir descrevem como o driver ou fonte de dados converte os dados recuperados da fonte de dados; drivers são necessários para dar suporte a conversões para todos os tipos de dados ODBC C dos tipos de dados SQL ODBC que dão suporte a eles. Para um determinado tipo de dados SQL ODBC, a primeira coluna da tabela lista os valores válidos de entrada do *TargetType* argumento **SQLBindCol** e **SQLGetData**. A segunda coluna lista os resultados de um teste, geralmente usando o *BufferLength* argumento especificado em **SQLBindCol** ou **SQLGetData**, que o driver executa a Determine se ele pode converter os dados. Para cada resultado, as terceira e quarta colunas listam os valores colocados nos buffers especificados pelo *TargetValuePtr* e *StrLen_or_IndPtr* argumentos especificados na **SQLBindCol** ou **SQLGetData** depois que o driver tentou converter os dados. (O *StrLen_or_IndPtr* argumento corresponde ao campo SQL_DESC_OCTET_LENGTH_PTR da descartar.) A última coluna lista o SQLSTATE retornado para cada resultado por **SQLFetch**, **SQLFetchScroll**, ou **SQLGetData**.  
   
- Se o *TargetType* argumento **SQLBindCol** ou **SQLGetData** contém um identificador para um tipo de dados ODBC C não mostrado na tabela para um determinado tipo de dados SQL ODBC  **SQLFetch**, **SQLFetchScroll**, ou **SQLGetData** retornará SQLSTATE 07006 (violação do atributo de tipo de dados restrito). Se o *TargetType* argumento contém um identificador que especifica uma conversão de um tipo de dados SQL específico do driver para um tipo de dados ODBC C e esta conversão não é suportada pelo driver, **SQLFetch**, **SQLFetchScroll**, ou **SQLGetData** retornará SQLSTATE HYC00 (recurso opcional não implementado).  
+ Se o *TargetType* argumento **SQLBindCol** ou **SQLGetData** contém um identificador para um tipo de dados ODBC C não mostrado na tabela para um determinado tipo de dados SQL ODBC  **SQLFetch**, **SQLFetchScroll**, ou **SQLGetData** retornará SQLSTATE 07006 (violação do atributo de tipo de dados restrito). Se o *TargetType* argumento contém um identificador que especifica uma conversão de um tipo de dados específicos do driver SQL de um tipo de dados ODBC C e não tem suporte pelo driver, essa conversão **SQLFetch**, **SQLFetchScroll**, ou **SQLGetData** retornará SQLSTATE HYC00 (recurso opcional não implementado).  
   
- Embora não seja mostrado nas tabelas, o driver retorna SQL_NULL_DATA no buffer especificado pelo *StrLen_or_IndPtr* argumento quando o valor de dados SQL é NULL. Para obter uma explicação sobre o uso de *StrLen_or_IndPtr* quando várias chamadas são feitas para recuperar dados, consulte o [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)descrição da função. Quando dados do SQL são convertidos em dados de caractere C, o número de caracteres retornados na \* *StrLen_or_IndPtr* não inclui o byte nulo de terminação. Se *TargetValuePtr* é um ponteiro nulo, **SQLGetData** retorna SQLSTATE HY009 (uso inválido de ponteiro nulo); na **SQLBindCol**, isso desvincula a coluna.  
+ Embora não seja mostrado nas tabelas, o driver retorna SQL_NULL_DATA no buffer especificado pelo *StrLen_or_IndPtr* argumento quando o valor de dados SQL é NULL. Para obter uma explicação do uso de *StrLen_or_IndPtr* quando várias chamadas são feitas para recuperar dados, consulte o [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)descrição da função. Quando os dados SQL são convertidos em dados de caractere C, a contagem de caracteres retornado em \* *StrLen_or_IndPtr* não inclui o byte nulo de terminação. Se *TargetValuePtr* for um ponteiro nulo, **SQLGetData** retorna um SQLSTATE HY009 (uso inválido de ponteiro nulo); na **SQLBindCol**, isso desvincula a coluna.  
   
  Os termos e as convenções a seguir são usadas nas tabelas:  
   
--   **Comprimento em bytes de dados** é o número de bytes de dados de C disponíveis para retornar em **TargetValuePtr*, se os dados serão truncados antes de ser retornado para o aplicativo ou não. Para dados de cadeia de caracteres, isso não inclui o espaço para o caractere null de terminação.  
+-   **Comprimento de bytes de dados** é o número de bytes de dados C disponíveis para retornar em **TargetValuePtr*, esteja ou não os dados serão truncados antes de ser retornado ao aplicativo. Para dados de cadeia de caracteres, isso não inclui o espaço para o caractere nulo de terminação.  
   
--   **Bytes de comprimento de caracteres** é o número total de bytes necessários para exibir os dados em formato de caractere. Isso é definido para cada tipo de dados C na seção [exibir tamanho](../../../odbc/reference/appendixes/display-size.md), exceto que o comprimento de bytes de caractere é em bytes, enquanto o tamanho de exibição está em caracteres.  
+-   **Bytes de comprimento de caracteres** é o número total de bytes necessários para exibir os dados em formato de caractere. Isso é, conforme definido para cada tipo de dados C na seção [exibir tamanho](../../../odbc/reference/appendixes/display-size.md), exceto que o comprimento de byte do caractere está em bytes e o tamanho da exibição está em caracteres.  
   
--   As palavras em *itálico* representar argumentos de função ou elementos da gramática SQL. Para obter a sintaxe de elementos de gramática, consulte [gramática de SQL do apêndice c:](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md).  
+-   Palavras *itálico* representam argumentos de função ou elementos de gramática SQL. Para obter a sintaxe de elementos de gramática, consulte [apêndice c: SQL gramática](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md).  
   
  Esta seção contém os tópicos a seguir.  
   

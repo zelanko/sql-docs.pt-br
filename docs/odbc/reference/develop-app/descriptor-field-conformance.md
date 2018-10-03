@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - descriptor field conformance levels [ODBC]
@@ -15,21 +13,20 @@ helpviewer_keywords:
 - data sources [ODBC], conformance levels
 - ODBC drivers [ODBC], conformance levels
 ms.assetid: 6c29d93b-696c-4960-bff3-4d6bc41bc513
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b01b9da55da1fd3decb46e69dc073781427ccfab
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 193bdadaf36e975b1f79327bfef161daaaed427b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911841"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47642304"
 ---
 # <a name="descriptor-field-conformance"></a>Conformidade de campo de descritor
 A tabela a seguir indica o nível de conformidade de cada campo de cabeçalho do descritor ODBC, que isso é bem definido.  
   
-|Função|Nível de conformidade|  
+|Função|nível de conformidade|  
 |--------------|-----------------------|  
 |SQL_DESC_ALLOC_TYPE|Núcleo|  
 |SQL_DESC_ARRAY_SIZE|Núcleo|  
@@ -39,9 +36,9 @@ A tabela a seguir indica o nível de conformidade de cada campo de cabeçalho do
 |SQL_DESC_COUNT|Núcleo|  
 |SQL_DESC_ROWS_PROCESSED_PTR|Núcleo|  
   
- A tabela a seguir indica o nível de conformidade de cada campo de registro do descritor ODBC, que isso é bem definido.  
+ A tabela a seguir indica o nível de conformidade de cada campo de registro de descritor ODBC, que isso é bem definido.  
   
-|Função|Nível de conformidade|  
+|Função|nível de conformidade|  
 |--------------|-----------------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|Nível 2|  
 |SQL_DESC_BASE_COLUMN_NAME|Núcleo|  
@@ -50,8 +47,8 @@ A tabela a seguir indica o nível de conformidade de cada campo de cabeçalho do
 |SQL_DESC_CATALOG_NAME|Nível 2|  
 |SQL_DESC_CONCISE_TYPE|Núcleo|  
 |SQL_DESC_DATA_PTR|Núcleo|  
-|CÓDIGO DE SQL_DESC_DATETIME_INTERVAL_|Núcleo [1]|  
-|PRECISÃO DE SQL_DESC_DATETIME_INTERVAL_|Núcleo [1]|  
+|CÓDIGO DE SQL_DESC_DATETIME_INTERVAL_|Core [1]|  
+|PRECISÃO SQL_DESC_DATETIME_INTERVAL_|Core [1]|  
 |SQL_DESC_DISPLAY_SIZE|Núcleo|  
 |SQL_DESC_FIXED_PREC_SCALE|Núcleo|  
 |SQL_DESC_INDICATOR_PTR|Núcleo|  
@@ -64,7 +61,7 @@ A tabela a seguir indica o nível de conformidade de cada campo de cabeçalho do
 |SQL_DESC_NULLABLE|Núcleo|  
 |SQL_DESC_OCTET_LENGTH|Núcleo|  
 |SQL_DESC_OCTET_LENGTH_PTR|Núcleo|  
-|SQL_DESC_PARAMETER_TYPE|Núcleo/nível 2 [2]|  
+|SQL_DESC_PARAMETER_TYPE|Nível/Core 2 [2]|  
 |SQL_DESC_PRECISION|Núcleo|  
 |SQL_DESC_ROWVER|Nível 1|  
 |SQL_DESC_SCALE|Núcleo|  
@@ -79,4 +76,4 @@ A tabela a seguir indica o nível de conformidade de cada campo de cabeçalho do
   
  [1] suporte para esses campos de registro é necessário somente se o driver oferece suporte a tipos de dados aplicável.  
   
- [2] para o acordo de nível de núcleo, o driver deve oferecer suporte a SQL_PARAM_INPUT. Para conformidade de interface de nível 2, o driver também deve suportar SQL_PARAM_INPUT_OUTPUT e SQL_PARAM_OUTPUT.
+ [2] para conformidade de nível de núcleo, o driver deve oferecer suporte a SQL_PARAM_INPUT. Para conformidade de interface de nível 2, também deve oferecer suporte o driver SQL_PARAM_INPUT_OUTPUT e SQL_PARAM_OUTPUT.

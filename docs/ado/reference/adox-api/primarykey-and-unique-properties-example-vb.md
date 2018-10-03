@@ -1,13 +1,11 @@
 ---
-title: PrimaryKey e exemplo de propriedades exclusivas (VB) | Microsoft Docs
+title: PrimaryKey e propriedades exclusivas (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - Unique property [ADOX], Visual Basic example
 - PrimaryKey property [ADOX], Visual Basic example
 ms.assetid: f536acac-06ea-4b39-bfba-ee9902b01615
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7fdb442faab89d88577449c136ba4ffb1cf2781f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 10f5a1a5c1436181a75329bfb0371c8836d7ac6e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286695"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47730074"
 ---
-# <a name="primarykey-and-unique-properties-example-vb"></a>PrimaryKey e exemplo de propriedades exclusivas (VB)
-Este exemplo demonstra o [PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md) e [Unique](../../../ado/reference/adox-api/unique-property-adox.md) propriedades de um [índice](../../../ado/reference/adox-api/index-object-adox.md). O código cria uma nova tabela com duas colunas. O **PrimaryKey** e **Unique** propriedades são usadas para fazer uma coluna de chave primária para a qual os valores duplicados não são permitidos.  
+# <a name="primarykey-and-unique-properties-example-vb"></a>Exemplos das propriedades PrimaryKey e Unique (VB)
+Este exemplo demonstra a [PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md) e [Unique](../../../ado/reference/adox-api/unique-property-adox.md) as propriedades de um [índice](../../../ado/reference/adox-api/index-object-adox.md). O código cria uma nova tabela com duas colunas. O **PrimaryKey** e **Unique** propriedades são usadas para fazer uma coluna de chave primária para a qual os valores duplicados não são permitidos.  
   
 ```  
 ' BeginPrimaryKeyVB  
@@ -117,6 +114,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Objeto de índice (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
+ [Objeto Index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
  [Propriedade PrimaryKey (ADOX)](../../../ado/reference/adox-api/primarykey-property-adox.md)   
  [Propriedade Unique (ADOX)](../../../ado/reference/adox-api/unique-property-adox.md)

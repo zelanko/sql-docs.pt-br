@@ -1,34 +1,31 @@
 ---
-title: Exemplo de propriedade ActiveCommand (VC + +) | Microsoft Docs
+title: Exemplo da propriedade ActiveCommand (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - ActiveCommand property [ADO], VC++ example
 ms.assetid: 8269ea29-912a-4d20-9360-f48b3746081f
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 906bf36756aea9f76a800ab586f3d356d0887723
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 00eaea347c379a64863b095a17f9518e5d1897a5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35274925"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47632214"
 ---
-# <a name="activecommand-property-example-vc"></a>Exemplo de propriedade ActiveCommand (VC + +)
-Este exemplo demonstra o [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) propriedade.  
+# <a name="activecommand-property-example-vc"></a>Exemplo da propriedade ActiveCommand (VC++)
+Este exemplo demonstra a [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) propriedade.  
   
- Recebe uma sub-rotina um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto cujo **ActiveCommand** propriedade é usada para exibir o texto de comando e o parâmetro que criou o **registros**.  
+ Uma sub-rotina é fornecida uma [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) do objeto cuja **ActiveCommand** propriedade é usada para exibir o texto do comando e parâmetro que criou o **conjunto de registros**.  
   
 ## <a name="example"></a>Exemplo  
   

@@ -5,21 +5,18 @@ ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4ff59218-0d3b-4274-b647-9839c4955865
-caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8d355214c0ae093c488aedff81803c6d3654a2e6
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 4478c2799ddc23ce647c607466e0206f72ccf7b3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42787324"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47638634"
 ---
 # <a name="using-database-mirroring-jdbc"></a>Usando o espelhamento de banco de dados (JDBC)
 

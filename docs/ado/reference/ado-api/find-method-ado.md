@@ -1,13 +1,11 @@
 ---
-title: Localizar o método (ADO) | Microsoft Docs
+title: Método Find (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,19 +14,18 @@ f1_keywords:
 helpviewer_keywords:
 - Find method [ADO]
 ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6569d6c65698738025267de0d97001eb041573e8
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7e71776a43aa338246b4acb3b4d9f620c19234f0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278715"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47748214"
 ---
-# <a name="find-method-ado"></a>Localizar o método (ADO)
-Pesquisa um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) para a linha que satisfaz os critérios especificados. Opcionalmente, a direção da pesquisa, linha inicial e o deslocamento da linha inicial pode ser especificada. Se os critérios forem atendidos, a posição da linha atual é definida no registro encontrado; Caso contrário, a posição é definida ao final (ou início) da **registros**.  
+# <a name="find-method-ado"></a>Método Find (ADO)
+Pesquisas de um [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) para a linha que satisfaz os critérios especificados. Opcionalmente, a direção da pesquisa, a linha inicial e deslocamento da linha inicial pode ser especificada. Se os critérios forem atendidos, a posição da linha atual é definida no registro encontrado; Caso contrário, a posição é definida até o final (ou inicial) do **conjunto de registros**.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,33 +42,33 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  Opcional *.* Um **longo** valor, cujo valor padrão é zero, que especifica o deslocamento da linha da linha atual ou *iniciar* indicador para iniciar a pesquisa. Por padrão, a pesquisa será iniciada na linha atual.  
   
  *SearchDirection*  
- Opcional *.* Um [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md) valor que especifica se a pesquisa deve começar na linha atual ou a próxima linha disponível na direção da pesquisa. Para de pesquisas malsucedidas no final de **registros** se o valor for **adSearchForward**. Uma pesquisa bem-sucedida é interrompida no início do **registros** se o valor for **adSearchBackward**.  
+ Opcional *.* Um [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md) valor que especifica se a pesquisa deve começar na linha atual ou a próxima linha disponível na direção da pesquisa. Uma pesquisa bem-sucedida é interrompida no final do **conjunto de registros** se o valor estiver **adSearchForward**. Uma pesquisa bem-sucedida é interrompida no início do **conjunto de registros** se o valor estiver **adSearchBackward**.  
   
  *Iniciar*  
  Opcional. Um **Variant** indicador que funciona como a posição inicial da pesquisa.  
   
-## <a name="remarks"></a>Remarks  
- Apenas um nome de coluna única que pode ser especificado em *critérios*. Este método não oferece suporte a pesquisas de várias colunas.  
+## <a name="remarks"></a>Comentários  
+ Somente um nome de coluna única pode ser especificado na *critérios*. Esse método não dá suporte a pesquisas de várias colunas.  
   
- O operador de comparação em *critérios* pode ser "**>**"(maior que),"**\<**" (menor que), "=" (igual), "> =" (maior ou igual) "< =" (menor ou igual), "<>" (não igual), ou "como" (correspondência de padrão).  
+ O operador de comparação na *critérios* pode ser "**>**"(maior que),"**\<**" (menor que), "=" (igual), "> =" (maior que ou igual), "< =" (menor ou igual), "<>" (não igual), ou "como" (correspondência de padrões).  
   
- O valor em *critérios* pode ser uma cadeia de caracteres, número de ponto flutuante ou data. Os valores de cadeia de caracteres são delimitados com aspas simples ou marcas "#" (sinal numérico) (por exemplo, "estado = 'WA'" ou "estado = WA # #"). Valores de data são delimitados por marcas de "#" (sinal numérico) (por exemplo, "start_date > # # 22/7/97"). Esses valores podem conter horas, minutos e segundos para indicar os carimbos de hora, mas não devem conter milissegundos ou ocorrerão erros.  
+ O valor em *critérios* pode ser uma cadeia de caracteres, número de ponto flutuante ou data. Os valores de cadeia de caracteres são delimitados com aspas simples ou marcas de "#" (sinal numérico) (por exemplo, "estado = 'WA'" ou "estado = WA # #"). Valores de data são delimitados com marcas de "#" (sinal numérico) (por exemplo, "start_date > # 97 / #7/22"). Esses valores podem conter horas, minutos e segundos para indicar os carimbos de hora, mas não devem conter milissegundos ou ocorrerão erros.  
   
- Se o operador de comparação é "como", o valor de cadeia de caracteres pode conter um asterisco (*) para localizar uma ou mais ocorrências de qualquer caractere ou uma subcadeia de caracteres. Por exemplo, "estado como estou\*'" corresponde a rio grande do Norte e Massachusetts. Você também pode usar asteriscos à esquerda e à direita para localizar uma subcadeia de caracteres contida dentro dos valores. Por exemplo, "estado como '\*como\*'" corresponde a Alaska, Arkansas e Massachusetts.  
+ Se o operador de comparação é "como", o valor de cadeia de caracteres pode conter um asterisco (*) para localizar uma ou mais ocorrências de qualquer caractere ou subcadeia de caracteres. Por exemplo, "estado, como estou\*'" corresponde a Maine e Massachusetts. Você também pode usar asteriscos à esquerda e à direita para localizar uma subcadeia de caracteres contida dentro dos valores. Por exemplo, "estado como '\*como\*'" corresponde a Alaska, Arkansas e Massachusetts.  
   
- Asteriscos podem ser usados somente no final de uma cadeia de caracteres de critérios ou no início e no final de uma cadeia de caracteres de critérios, como mostrado acima. Você não pode usar o asterisco como um caractere curinga à esquerda ('* str'), ou como um curinga incorporado ('s\*r'). Isso causará um erro.  
-  
-> [!NOTE]
->  Ocorrerá um erro se a posição de linha atual não está definida antes de chamar **localizar**. Qualquer método que define a posição de linha, como [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), deve ser chamado antes de chamar **localizar**.  
+ Os asteriscos podem ser usados somente no final de uma cadeia de caracteres de critérios ou no início e no final de uma cadeia de caracteres de critérios, como mostrado acima. Você não pode usar o asterisco como curinga à esquerda ('* str'), ou como um curinga incorporado ('s\*r'). Isso causará um erro.  
   
 > [!NOTE]
->  Se você chamar o **localizar** método em um conjunto de registros e a posição atual no conjunto de registros é o último registro ou o final do arquivo (EOF), você não encontrará nada. Você precisa chamar o **MoveFirst** método para definir o posição atual/cursor para o início do conjunto de registros.  
+>  Ocorrerá um erro se uma posição de linha atual não for definida antes de chamar **localizar**. Qualquer método que define a posição de linha, como [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), deve ser chamado antes de chamar **localizar**.  
+  
+> [!NOTE]
+>  Se você chamar o **localizar** método em um conjunto de registros e a posição atual no conjunto de registros está no último registro ou no final do arquivo (EOF), você não encontrará nada. Você precisa chamar o **MoveFirst** método para definir o posição/cursor atual para o início do conjunto de registros.  
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Localizar o exemplo de método (VB)](../../../ado/reference/ado-api/find-method-example-vb.md)   
+ [Encontre um exemplo do método (VB)](../../../ado/reference/ado-api/find-method-example-vb.md)   
  [Propriedade Index](../../../ado/reference/ado-api/index-property.md)   
  [Otimizar a propriedade dinâmica (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)   
  [Método Seek](../../../ado/reference/ado-api/seek-method.md)

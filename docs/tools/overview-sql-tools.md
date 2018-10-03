@@ -4,25 +4,21 @@ ms.custom: ''
 ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: misc
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ''
-caps.latest.revision: 0
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 154c80f8293d85ecdaeb498dec5e4a6682dea1fe
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 1ff16d7a8b2253fc793db00cb46282539415ff86
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46712988"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47767364"
 ---
 # <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>Ferramentas do SQL e utilitários para o SQL Server, o banco de dados SQL do Azure e o Azure SQL Data Warehouse
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

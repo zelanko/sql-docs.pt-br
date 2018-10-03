@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,29 +13,28 @@ f1_keywords:
 helpviewer_keywords:
 - EventStatusEnum enumeration [ADO]
 ms.assetid: ebfd4cda-4017-4873-9d28-38b1c7db12a8
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 20a5582eb8c8744e5d8a065c5fa8ce29c0d4b793
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 623468be9022a722109f99022df8d8a583888c09
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278055"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47678534"
 ---
 # <a name="eventstatusenum"></a>EventStatusEnum
 Especifica o status atual da execução de um evento.  
   
 |Constante|Valor|Description|  
 |--------------|-----------|-----------------|  
-|**adStatusCancel**|4|Cancelamento de solicitações de operação que causou o evento ocorra.|  
+|**adStatusCancel**|4|Solicita o cancelamento da operação que causou o evento ocorra.|  
 |**adStatusCantDeny**|3|Indica que a operação não é possível solicitar o cancelamento da operação pendente.|  
 |**adStatusErrorsOccurred**|2|Indica que a operação que causou o evento falhou devido a um erro ou erros.|  
 |**adStatusOK**|1|Indica que a operação que causou o evento foi bem-sucedida.|  
-|**adStatusUnwantedEvent**|5|Impede que as notificações subsequentes antes do método de evento concluiu a execução.|  
+|**adStatusUnwantedEvent**|5|Impede que as notificações subsequentes antes do método de evento terminou de executar.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC equivalente  
+## <a name="adowfc-equivalent"></a>Equivalente do ADO/WFC  
  Pacote: **com.ms.wfc.data**  
   
 |Constante|  

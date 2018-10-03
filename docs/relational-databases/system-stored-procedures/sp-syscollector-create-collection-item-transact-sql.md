@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_create_collection_item
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - sp_syscollector_create_collection_item
 - data collector [SQL Server], stored procedures
 ms.assetid: 60dacf13-ca12-4844-b417-0bc0a8bf0ddb
-caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 818294f3fdeebc19a26a8689403205f57d9c8e03
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 1e155fb51bd5f78a3c4a639e9233746131ddf6f5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261675"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47719814"
 ---
 # <a name="spsyscollectorcreatecollectionitem-transact-sql"></a>sp_syscollector_create_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,31 +48,31 @@ sp_syscollector_create_collection_item
   
 ## <a name="arguments"></a>Argumentos  
  [ @collection_set_id = ] *collection_set_id*  
- É o identificador local exclusivo do conjunto de coleta. *collection_set_id* é **int**.  
+ É o identificador local exclusivo do conjunto de coleta. *collection_set_id* está **int**.  
   
  [ @collector_type_uid =] '*collector_type_uid*'  
- É o GUID que identifica o tipo de coletor para este item *collector_type_uid* é **uniqueidentifier** sem nenhum valor padrão. Para obter uma lista dos tipos de coletores, consulte a exibição de sistema syscollector_collector_types.  
+ É o GUID que identifica o tipo de coletor a ser usado para este item *collector_type_uid* é **uniqueidentifier** sem nenhum valor padrão... Para obter uma lista dos tipos de coletores, consulte a exibição de sistema syscollector_collector_types.  
   
  [ @name =] '*nome*'  
- É o nome do item de coleta. *nome* é **sysname** e não pode ser uma cadeia de caracteres vazia ou NULL.  
+ É o nome do item de coleta. *nome da* está **sysname** e não pode ser uma cadeia de caracteres vazia ou nula.  
   
- *nome* devem ser exclusivos. Para obter uma lista dos nomes dos itens de coleta atuais, consulte a exibição de sistema syscollector_collection_items.  
+ *nome* deve ser exclusivo. Para obter uma lista dos nomes dos itens de coleta atuais, consulte a exibição de sistema syscollector_collection_items.  
   
  [ @frequency =] *frequência*  
- É usado para especificar a frequência (em segundos) em que os dados são coletados por esse item de coleta. *frequência* é **int**, com um padrão de 5. O valor mínimo que pode ser especificado é de 5 segundos.  
+ É usado para especificar a frequência (em segundos) em que os dados são coletados por esse item de coleta. *frequência* está **int**, com um padrão de 5. O valor mínimo que pode ser especificado é de 5 segundos.  
   
  Se o conjunto de coleta estiver definido para o modo não armazenado em cache, a frequência será ignorada, pois esse modo faz com que a coleta e o carregamento dos dados ocorram conforme a agenda especificada para o conjunto de coleta. Para exibir o modo de coleta do conjunto de coleta, consulte o [syscollector_collection_sets](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md) exibição do sistema.  
   
  [ @parameters =] '*parâmetros*'  
- Os parâmetros de entrada do tipo de coletor. *parâmetros* é **xml** com um padrão NULL. O *parâmetros* esquema deve corresponder ao esquema de parâmetros do tipo de coletor.  
+ Os parâmetros de entrada do tipo de coletor. *parâmetros* está **xml** com um padrão NULL. O *parâmetros* esquema deve corresponder ao esquema de parâmetros do tipo de coletor.  
   
  [ @collection_item_id =] *collection_item_id*  
- É o identificador exclusivo que identifica o item do conjunto de coleta. *collection_item_id* é **int** e tem OUTPUT.  
+ É o identificador exclusivo que identifica o item do conjunto de coleta. *collection_item_id* está **int** e tem OUTPUT.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  sp_syscollector_create_collection_item deve ser executado no contexto do banco de dados do sistema msdb.  
   
  O conjunto de coleta para o qual o item de coleta está sendo adicionado deve ser interrompido antes da criação do item de coleta. Os itens de coleta não podem ser e adicionados aos conjuntos de coleta do sistema.  
@@ -85,7 +81,7 @@ sp_syscollector_create_collection_item
  Requer associação na função de banco de dados fixa dc_admin (com a permissão EXECUTE) para executar esse procedimento.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir cria um item de coleta baseado no tipo de coleta `Generic T-SQL Query Collector Type` e o adiciona ao conjunto de coleta denominado `Simple collection set test 2`. Para criar o conjunto especificado definido, execute o exemplo B no [sp_syscollector_create_collection_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
+ O exemplo a seguir cria um item de coleta baseado no tipo de coleta `Generic T-SQL Query Collector Type` e o adiciona ao conjunto de coleta denominado `Simple collection set test 2`. Para criar a coleção especificada definida, execute o exemplo B no [sp_syscollector_create_collection_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
   
 ```  
 USE msdb;  
@@ -122,7 +118,7 @@ EXEC sp_syscollector_create_collection_item
   
 ## <a name="see-also"></a>Consulte também  
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Coleta de dados](../../relational-databases/data-collection/data-collection.md)   
+ [Coleta de Dados](../../relational-databases/data-collection/data-collection.md)   
  [sp_syscollector_update_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-update-collection-item-transact-sql.md)   
  [sp_syscollector_delete_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-delete-collection-item-transact-sql.md)   
  [syscollector_collector_types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collector-types-transact-sql.md)   

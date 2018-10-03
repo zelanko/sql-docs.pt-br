@@ -1,14 +1,11 @@
 ---
-title: (Transact-SQL) de exibições do catálogo de pesquisa de texto completo e pesquisa semântica | Microsoft Docs
+title: Exibições (Transact-SQL) do catálogo de pesquisa de texto completo e pesquisa semântica | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -17,16 +14,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], catalog views
 - full-text indexes [SQL Server], catalog views
 ms.assetid: b08ad2fd-e3d8-458f-96f1-678217e0f419
-caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ce32b848982bb16155d7f2661bdec0067b984717
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 9a6785c198bedb99ea0fd5b42f54cab431535527
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33180132"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47735024"
 ---
 # <a name="full-text-search-and-semantic-search-catalog-views-transact-sql"></a>Exibições de catálogo da pesquisa de texto completo e pesquisa semântica (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +34,7 @@ ms.locfileid: "33180132"
  Contém uma linha para cada catálogo de texto completo.  
   
  [sys.fulltext_document_types](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md)  
- Retorna uma linha para cada tipo de documento disponível para operações de indexação de texto completo. Cada linha representa a **IFilter** interface que está registrado na instância do SQL Server.  
+ Retorna uma linha para cada tipo de documento disponível para operações de indexação de texto completo. Cada linha representa o **IFilter** interface que está registrado na instância do SQL Server.  
   
  [sys.fulltext_index_catalog_usages](../../relational-databases/system-catalog-views/sys-fulltext-index-catalog-usages-transact-sql.md)  
  Retorna uma linha para cada catálogo de texto completo para referência de índice de texto completo.  

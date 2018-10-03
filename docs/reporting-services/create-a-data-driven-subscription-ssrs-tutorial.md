@@ -4,10 +4,7 @@ ms.date: 05/26/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
-applies_to:
-- SQL Server 2016
 helpviewer_keywords:
 - subscriptions [Reporting Services], tutorials
 - walkthroughs [Reporting Services]
@@ -15,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 0cb0b02deae636cf003938153ec6402deb070b9c
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: fa047ea7506c4fd9111345e0b5cbb6beca877356
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43280579"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47815396"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Criar uma assinatura controlada por dados (Tutorial do SSRS)
 Este tutorial do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ensina os conceitos de assinaturas controladas por dados, apresentando um exemplo simples que cria uma assinatura controlada por dados para gerar e salvar a saída do relatório filtrado em um compartilhamento de arquivos. 

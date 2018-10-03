@@ -4,7 +4,6 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], data
@@ -16,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 42a5afb5-f4c8-4957-b1fd-77bf39afa5be
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 747ac0342b416caac84a3a6afa431a20da8899bf
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 1471714c99dc11b8367d73fd7327c3776dd3f1fc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43264325"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47818624"
 ---
 # <a name="data-processing-extensions-and-net-framework-data-providers-ssrs"></a>Extensões de processamento de dados e provedores de dados do .NET Framework (SSRS)
   Uma extensão de processamento de dados [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é um componente instalado com [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], projetado para recuperar dados de um tipo específico de fonte de dados e para fornecer funcionalidade adicional para oferecer suporte ao design de relatórios e processamento de relatórios. Uma extensão de processamento de dados [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] é um componente disponível do [!INCLUDE[msCoName](../../includes/msconame-md.md)] ou de fontes de terceiros que dá suporte às interfaces <xref:System.Data> que permitem que você recupere e modifique dados de um tipo específico de fonte de dados.  

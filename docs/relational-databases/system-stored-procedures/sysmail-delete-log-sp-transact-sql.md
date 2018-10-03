@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_delete_log_sp_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_delete_log_sp
 ms.assetid: e94b37a1-70ad-46a5-86c0-721892156f7c
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f565100bff8373839e70231b0a99a716efc76ec7
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: a1a61fa55fc9f2b1209d0f7da7f483c0fedce07f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258174"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47649196"
 ---
 # <a name="sysmaildeletelogsp-transact-sql"></a>sysmail_delete_log_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,21 +43,21 @@ sysmail_delete_log_sp  [ [ @logged_before = ] 'logged_before' ]
   
 ## <a name="arguments"></a>Argumentos  
  [ **@logged_before** =] **'***logged_before***'**  
- Exclui entradas até a data e hora especificadas pelo *logged_before* argumento. *logged_before* é **datetime** com NULL como padrão. NULL indica todas as datas.  
+ Exclui entradas até a data e hora especificadas pelo *logged_before* argumento. *logged_before* está **datetime** com NULL como padrão. NULL indica todas as datas.  
   
  [ **@event_type** = ] **'***event_type***'**  
- Exclui entradas de log de tipo especificado como o *event_type*. *event_type* é **varchar(15)** sem nenhum padrão. As entradas válidas são **êxito**, **aviso**, **erro**, e **informativa**. NULL indica todos os tipos de evento.  
+ Exclui entradas de log de tipo especificado como o *event_type*. *event_type* está **varchar(15)** sem nenhum padrão. As entradas válidas são **sucesso**, **aviso**, **erro**, e **informativa**. NULL indica todos os tipos de evento.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Use o **sysmail_delete_log_sp** procedimento armazenado para excluir permanentemente as entradas do log do Database Mail. Um argumento opcional permite excluir somente os registros mais antigos fornecendo uma data e hora. Os eventos mais antigos que o argumento serão excluídos. Um argumento opcional permite excluir somente os eventos de um determinado tipo, especificado como o **event_type** argumento.  
   
  A exclusão de entradas no log do Database Mail não exclui as entradas de emails das tabelas do Database Mail. Use [sysmail_delete_mailitems_sp](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md) para excluir email das tabelas do Database Mail.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função de servidor fixa pode acessar esse procedimento.  
+ Somente os membros dos **sysadmin** função de servidor fixa pode acessar esse procedimento.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -94,6 +90,6 @@ GO
 ## <a name="see-also"></a>Consulte também  
  [sysmail_event_log &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)   
  [sysmail_delete_mailitems_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql.md)   
- [Criar um trabalho do SQL Server Agent para arquivar mensagens do Database Mail e logs de eventos](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)  
+ [Criar um trabalho do SQL Server Agent para arquivar mensagens e logs de eventos do Database Mail](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)  
   
   

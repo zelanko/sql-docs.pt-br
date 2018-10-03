@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -45,19 +43,18 @@ f1_keywords:
 helpviewer_keywords:
 - Item property [ADO]
 ms.assetid: e11484bb-c5c7-42d8-9bb8-21572125d727
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 81c6ebc6b7dc0346a2d703c2969f1b114dd72039
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 776a74422941118e2091c9240d14edbf8c1f0fec
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279245"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47655644"
 ---
-# <a name="item-property-ado"></a>Propriedade item (ADO)
-Indica um membro específico de uma coleção, por nome ou número ordinal.  
+# <a name="item-property-ado"></a>Propriedade Item (ADO)
+Indica um membro específico de uma coleção por nome ou número ordinal.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -70,12 +67,12 @@ Set object = collection.Item ( Index )
   
 ## <a name="parameters"></a>Parâmetros  
  *Index*  
- Um **Variant** expressão que é avaliada para o nome ou o número ordinal de um objeto em uma coleção.  
+ Um **Variant** expressão que é avaliada para o nome ou para o número ordinal de um objeto em uma coleção.  
   
-## <a name="remarks"></a>Remarks  
- Use o **Item** propriedade para retornar um objeto específico em uma coleção. Se **Item** não é possível localizar um objeto na coleção correspondente para o *índice* argumento, um erro ocorre. Além disso, algumas coleções não oferecem suporte a objetos nomeados; para essas coleções, você deve usar referências de número ordinal.  
+## <a name="remarks"></a>Comentários  
+ Use o **Item** propriedade para retornar um objeto específico em uma coleção. Se **Item** não é possível localizar um objeto na coleção correspondente para o *índice* argumento, um erro ocorre. Além disso, algumas coleções não dão suporte a objetos nomeados; para essas coleções, você deve usar referências de número ordinal.  
   
- O **Item** é a propriedade padrão para todas as coleções; portanto, são intercambiáveis formas de sintaxe a seguir:  
+ O **Item** é a propriedade padrão para todas as coleções; portanto, as formas de sintaxe a seguir são intercambiáveis:  
   
 ```  
 collection.Item (Index)  

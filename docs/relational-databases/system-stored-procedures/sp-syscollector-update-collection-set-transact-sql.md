@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_update_collection_set_TSQL
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - sp_syscollector_update_collection_set
 - data collector [SQL Server], stored procedures
 ms.assetid: 2dccc3cd-0e93-4e3e-a4e5-8fe89b31bd63
-caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 62867f22c044a42c40499e0a1143557621931db8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f9e7ba855bde4caa04efea0411857705eb4bf976
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261422"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47702734"
 ---
 # <a name="spsyscollectorupdatecollectionset-transact-sql"></a>sp_syscollector_update_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,47 +57,47 @@ sp_syscollector_update_collection_set
   
 ## <a name="arguments"></a>Argumentos  
  [  **@collection_set_id =** ] *collection_set_id*  
- É o identificador local exclusivo do conjunto de coleta. *collection_set_id* é **int** e deve ter um valor se *nome* é NULL.  
+ É o identificador local exclusivo do conjunto de coleta. *collection_set_id* está **int** e deve ter um valor se *nome* é NULL.  
   
  [  **@name =** ] '*nome*'  
- É o nome do conjunto de coleta. *nome* é **sysname** e deve ter um valor se *collection_set_id* é NULL.  
+ É o nome do conjunto de coleta. *nome da* está **sysname** e deve ter um valor se *collection_set_id* é NULL.  
   
- [  **@new_name =** ] '*novo_nome*'  
- É o novo nome do conjunto de coleta. *Novo_nome* é **sysname**, e se usado, não pode ser uma cadeia de caracteres vazia. *Novo_nome* devem ser exclusivos. Para obter uma lista dos nomes dos conjuntos de coleta atuais, consulte a exibição de sistema syscollector_collection_sets.  
+ [  **@new_name =** ] '*new_name*'  
+ É o novo nome do conjunto de coleta. *new_name* está **sysname**, e se usado, não pode ser uma cadeia de caracteres vazia. *new_name* deve ser exclusivo. Para obter uma lista dos nomes dos conjuntos de coleta atuais, consulte a exibição de sistema syscollector_collection_sets.  
   
  [  **@target =** ] '*destino*'  
  Reservado para uso futuro.  
   
  [  **@collection_mode =** ] *collection_mode*  
- É o tipo de coleta de dados a ser usado. *collection_mode* é **smallint** e pode ter um dos seguintes valores:  
+ É o tipo de coleta de dados a ser usado. *collection_mode* está **smallint** e pode ter um dos seguintes valores:  
   
  0 - Modo de cache. A coleta e o carregamento de dados estão em agendas separadas. Especifique o modo cache para a coleta contínua.  
   
  1 - Modo não armazenado em cache. A coleção e o carregamento de dados estão na mesma agenda. Especifique o modo não armazenado em cache para a coleta ad hoc ou de instantâneo.  
   
- Se alterar de modo não armazenado em cache para o modo de cache (0), você deve também especificar *schedule_uid* ou *schedule_name*.  
+ Se a alteração do modo não armazenado em cache para o modo de cache (0), você deve também especificar *schedule_uid* ou *schedule_name*.  
   
  [  **@days_until_expiration=** ] *days_until_expiration*  
- É o número de dias durante os quais os dados coletados são salvos no data warehouse de gerenciamento. *days_until_expiration* é **smallint**. *days_until_expiration* deve ser 0 ou um número inteiro positivo.  
+ É o número de dias durante os quais os dados coletados são salvos no data warehouse de gerenciamento. *days_until_expiration* está **smallint**. *days_until_expiration* deve ser 0 ou um número inteiro positivo.  
   
  [  **@proxy_id =** ] *proxy_id*  
- É o identificador exclusivo de uma conta proxy do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. *proxy_id* é **int**.  
+ É o identificador exclusivo de uma conta proxy do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. *proxy_id* está **int**.  
   
  [  **@proxy_name =** ] '*proxy_name*'  
- É o novo nome do proxy. *proxy_name* é **sysname** e é anulável.  
+ É o novo nome do proxy. *proxy_name* está **sysname** e é anulável.  
   
  [ **@schedule_uid** =] '*schedule_uid*'  
- É o GUID que aponta para uma agenda. *schedule_uid* é **uniqueidentifier**.  
+ É o GUID que aponta para uma agenda. *schedule_uid* está **uniqueidentifier**.  
   
  Para obter *schedule_uid*, consultar a tabela de sistema sysschedules.  
   
  Quando *collection_mode* é definido como 0, *schedule_uid* ou *schedule_name* deve ser especificado. Quando *collection_mode* é definido como 1, *schedule_uid* ou *schedule_name* será ignorado se especificado.  
   
  [  **@schedule_name =** ] '*schedule_name*'  
- É o nome da agenda. *schedule_name* é **sysname** e é anulável. Se especificado, *schedule_uid* deve ser NULL. Para obter *schedule_name*, consultar a tabela de sistema sysschedules.  
+ É o nome da agenda. *schedule_name* está **sysname** e é anulável. Se especificado, *schedule_uid* deve ser NULL. Para obter *schedule_name*, consultar a tabela de sistema sysschedules.  
   
  [  **@logging_level =** ] *logging_level*  
- É o nível de registro em log. *logging_level* é **smallint** com um dos seguintes valores:  
+ É o nível de registro em log. *logging_level* está **smallint** com um dos seguintes valores:  
   
  0 - informações de execução de log e eventos do [!INCLUDE[ssIS](../../includes/ssis-md.md)] que monitoram:  
   
@@ -124,17 +120,17 @@ sp_syscollector_update_collection_set
  O valor padrão para *logging_level* é 1.  
   
  [  **@description =** ] '*descrição*'  
- É a descrição do conjunto de coleta. *Descrição* é **nvarchar (4000)**.  
+ É a descrição do conjunto de coleta. *Descrição* está **nvarchar (4000)**.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  sp_syscollector_update_collection_set deve ser executado no contexto do banco de dados do sistema msdb.  
   
- O *collection_set_id* ou *nome* deve ter um valor, não pode ser NULL. Para obter esses valores, consulte a exibição de sistema syscollector_collection_sets.  
+ Qualquer um dos *collection_set_id* ou *nome* deve ter um valor, ambos não podem ser NULL. Para obter esses valores, consulte a exibição de sistema syscollector_collection_sets.  
   
- Se o conjunto de coleta está em execução, você pode atualizar somente *schedule_uid* e *descrição*. Para interromper o conjunto de coleta, use [sp_syscollector_stop_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-stop-collection-set-transact-sql.md).  
+ Se o conjunto de coleta está em execução, você pode atualizar apenas *schedule_uid* e *descrição*. Para interromper o conjunto de coleta, use [sp_syscollector_stop_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-stop-collection-set-transact-sql.md).  
   
 ## <a name="permissions"></a>Permissões  
  Para executar esse procedimento, a associação na função de banco de dados fixa dc_admin ou dc_operator (com a permissão EXECUTE) é necessária. Embora dc_operator possa executar esse procedimento armazenado, membros desta função estão limitados nas propriedades que eles podem alterar. As propriedades a seguir só podem ser alteradas através de dc_admin:  
@@ -197,7 +193,7 @@ GO
   
 ## <a name="see-also"></a>Consulte também  
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Coleta de dados](../../relational-databases/data-collection/data-collection.md)   
+ [Coleta de Dados](../../relational-databases/data-collection/data-collection.md)   
  [syscollector_collection_sets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)   
  [dbo.sysschedules &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
   

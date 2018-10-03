@@ -4,7 +4,6 @@ ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - URL access [Reporting Services]
@@ -16,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 52c3f2a3-3d6d-4fee-9c46-83f366919398
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8caef22c0eec07e2ec9255136570a3c058d45a1b
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: e1fc511cdfd383979ba3bcecd782ed4b481d6260
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43274756"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47817404"
 ---
 # <a name="url-access-ssrs"></a>Acesso à URL (SSRS)
   O acesso à URL do servidor de relatório do SQL Server Reporting Services (SSRS) permite enviar comandos a um servidor de relatório por meio de uma solicitação de URL. Por exemplo, você pode personalizar a renderização de um relatório em um servidor de relatório em modo nativo ou em uma biblioteca do SharePoint. Você pode exibir o relatório usando um conjunto específico de valores de parâmetros de relatório ou exibir uma página específica de interesse do relatório. Você pode encapsular essas informações na URL usando parâmetros de acesso à URL predefinidos. Você pode personalizar ainda mais como o servidor de relatório processa o relatório inserindo parâmetros de renderização de formatos ou de aparência do visualizador de relatórios. Você pode colar essa URL diretamente em um email ou página da Web para permitir que outros acessem seu relatório da mesma maneira no navegador.  
