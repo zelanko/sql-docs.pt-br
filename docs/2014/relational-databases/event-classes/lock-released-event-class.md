@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Released event class
 ms.assetid: a150c300-72fa-4231-8f41-f1abd550a429
-caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e783fa34c08fbc7f72cf8a9601519b518bcb0410
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d7099149b8725e03430a3d45bc2a6371c1dd1019
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37156457"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48136336"
 ---
 # <a name="lockreleased-event-class"></a>Classe de evento Lock:Released
   A classe de evento Lock:Released indica que um bloqueio em um recurso, como uma página, foi liberado.  

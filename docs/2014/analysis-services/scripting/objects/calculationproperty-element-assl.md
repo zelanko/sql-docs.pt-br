@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - CalculationProperty Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - CalculationProperty element
 ms.assetid: 5f0b4cfc-7d25-4c01-a517-cc2e89859be3
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 251cd4bd439fad70fd64e1c5ebf4be2965cf983d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cfd8d16293314db4a9ca382d6a4042dd0a493f06
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37308396"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161696"
 ---
 # <a name="calculationproperty-element-assl"></a>Elemento CalculationProperty (ASSL)
   Contém uma coleção de propriedades de interface do usuário para um cálculo usado em uma [MdxScript](mdxscript-element-assl.md) elemento.  
@@ -64,8 +61,8 @@ ms.locfileid: "37308396"
   
 |Característica|Description|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|Nenhum|  
-|Valor padrão|Nenhum|  
+|Comprimento e tipo de dados|None|  
+|Valor padrão|None|  
 |Cardinalidade|0-n: Elemento opcional que pode ocorrer mais de uma vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -75,7 +72,7 @@ ms.locfileid: "37308396"
 |Elementos pai|[CalculationProperties](../collections/calculationproperties-element-assl.md)|  
 |Elementos filho|[AssociatedMeasureGroupID](../properties/id-element-assl.md), [BackColor](../properties/backcolor-element-assl.md), [CalculationReference](../properties/calculationreference-element-assl.md), [CalculationType](../properties/calculationtype-element-assl.md), [descrição](../properties/description-element-assl.md), [DisplayFolder](../properties/displayfolder-element-assl.md), [FontFlags](../properties/fontflags-element-assl.md), [FontName](../properties/name-element-assl.md), [FontSize](../properties/fontsize-element-assl.md), [ForeColor](../properties/forecolor-element-assl.md), [FormatString](../properties/formatstring-element-assl.md), [NonEmptyBehavior](../properties/nonemptybehavior-element-assl.md), [SolveOrder](../properties/solveorder-element-assl.md), [traduções](../collections/translations-element-assl.md), [visíveis](../properties/visible-element-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O elemento correspondente no modelo de objeto Analysis Management Objects (AMO) é <xref:Microsoft.AnalysisServices.CalculationProperty>.  
   
 ## <a name="see-also"></a>Consulte também  

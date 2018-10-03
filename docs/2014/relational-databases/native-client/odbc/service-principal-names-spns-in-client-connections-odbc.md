@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 1d60cb30-4c46-49b2-89ab-701e77a330a2
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8b89902c1949252c18d08c441e1e7ce1ba5a4e31
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 7f45e6124dbbad79802e290f935ccc6f3f45cee0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395215"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155338"
 ---
 # <a name="service-principal-names-spns-in-client-connections-odbc"></a>SPNs (Nomes da Entidade de Serviço) em conexões de cliente (ODBC)
   Este tópico descreve atributos e funções ODBC que dão suporte a SPNs (nomes de entidades de serviço) em aplicativos cliente. Para obter mais informações sobre SPNs em aplicativos cliente, consulte [nome da entidade de serviço &#40;SPN&#41; suporte em conexões de cliente](../features/service-principal-name-spn-support-in-client-connections.md) e [obter autenticação mútua do Kerberos](../../native-client-odbc-how-to/get-mutual-kerberos-authentication.md).  

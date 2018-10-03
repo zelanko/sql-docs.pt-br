@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - SkippedLevelsColumn Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - SkippedLevelsColumn element
 ms.assetid: 6b00a288-99c1-4735-9e6b-cd13ed4fa346
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c04dea8c63d71483de9a8194a15bc4e4d7be5b88
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9727a5080437352bebbfa9c7ced1cd3c88689113
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37196026"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48141726"
 ---
 # <a name="skippedlevelscolumn-element-assl"></a>Elemento SkippedLevelsColumn (ASSL)
     
@@ -55,7 +52,7 @@ ms.locfileid: "37196026"
 |Característica|Description|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|[DataItem](../data-type/dataitem-data-type-assl.md)|  
-|Valor padrão|Nenhum|  
+|Valor padrão|None|  
 |Cardinalidade|0-1: elemento opcional que pode ocorrer apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -63,9 +60,9 @@ ms.locfileid: "37196026"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|[DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O `SkippedLevelsColumn` elemento é aplicável somente a atributos pai (em outras palavras, o valor da [uso](../properties/usage-element-dimensionattribute-assl.md) elemento para o `DimensionAttribute` pai está definido como *pai*). O elemento `SkippedLevelsColumn` contém a coluna ou o atributo para o atributo pai que armazena o número de níveis ignorados entre cada membro e seu pai. Isso permite que hierarquias pai-filho baseadas no atributo pai ignorem níveis entre membros. Os valores contidos nessa coluna ou atributo devem ser inteiros não negativos; caso contrário, um erro de processamento ocorrerá. Se o elemento `SkippedLevelsColumn` não for especificado ou não contiver nenhum valor, o membro atual terá um nível abaixo de seu pai.  
   
  Para obter mais informações sobre o `DataItem` tipo, incluindo uma tabela de objetos do Analysis Services Scripting Language (ASSL) e propriedades do `DataItem` da tabela, consulte [tipo de dados DataItem &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md).  

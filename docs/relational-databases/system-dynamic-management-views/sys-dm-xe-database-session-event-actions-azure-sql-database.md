@@ -5,25 +5,21 @@ ms.date: 06/10/2016
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.service: sql-database
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 48519fd9-c7c2-434b-848d-ccbf41133fdd
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: b52adfa82c532a8144e142f5d87c991a249becf8
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 3adadf92559f21bacaecd962f30d44ffced3203f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040224"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47720574"
 ---
-# <a name="sysdmxedatabasesessioneventactions-azure-sql-database"></a>sys.dm_xe_database_session_event_actions (banco de dados SQL)
+# <a name="sysdmxedatabasesessioneventactions-azure-sql-database"></a>sys.dm_xe_database_session_event_actions (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Retorna informações sobre ações da sessão de evento. Quando eventos são disparados, são executadas ações. Esta exibição de gerenciamento agrega estatísticas sobre o número de vezes que uma ação foi executada e o tempo total de execução da ação.  

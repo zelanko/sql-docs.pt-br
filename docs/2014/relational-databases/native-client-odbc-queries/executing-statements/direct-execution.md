@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - ODBC applications, statements
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - SQLExecDirect function
 - statements [ODBC], direct execution
 ms.assetid: fa36e1af-ed98-4abc-97c1-c4cc5d227b29
-caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4f8de566fbac1f94d3aef5cb5e63130834d728c4
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 4e912ac2dd63fa63ce57647f0c4e95e6702a22ed
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37415035"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48072326"
 ---
 # <a name="direct-execution"></a>Execução direta
   A execução direta é o modo mais básico de executar uma instrução. Um aplicativo compila uma cadeia de caracteres contendo um [!INCLUDE[tsql](../../../includes/tsql-md.md)] instrução e o envia para execução usando o **SQLExecDirect** função. Quando a instrução alcança o servidor, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a compila em um plano de execução e executa esse plano imediatamente.  

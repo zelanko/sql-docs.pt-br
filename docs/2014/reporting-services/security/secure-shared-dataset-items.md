@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 08e6d8b5-d88c-4ed2-9c05-55c757e00014
-caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f691cc55d7e8a6107e9c602d8edbb5c7d32d904c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 590d24fb56a91ce4bea13e5404c24a395986a397
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37323876"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48098798"
 ---
 # <a name="secure-shared-dataset-items"></a>Proteger itens de conjuntos de dados compartilhados
   Em um servidor de relatório, itens de conjuntos de dados compartilhados podem ser usados por vários relatórios. Você pode proteger conjuntos de dados compartilhados para controlar o grau de acesso concedido aos usuários. Por padrão, apenas usuários que são membros do grupo interno **Administradores** podem exibir conjuntos de dados compartilhados, modificar propriedades, habilitar o cache, criar planos de atualização do cache e excluir os itens. Todos os outros usuários devem ter atribuições de função criadas para eles que permitam acesso a um conjunto de dados compartilhado.  

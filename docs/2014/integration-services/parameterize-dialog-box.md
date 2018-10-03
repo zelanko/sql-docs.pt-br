@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.parameter.f1
 ms.assetid: fac02b6d-d247-447a-8940-e8700c7ac350
-caps.latest.revision: 7
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3e7e9e6a982dfc7645785ed04ef359e47b77f83a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 76a48abe8ab2fe8481b2944ed6b3c77258b4c855
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37287622"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48075588"
 ---
 # <a name="parameterize-dialog-box"></a>Parameterize Dialog Box
   A caixa de diálogo **Parametrizar** permite que você associe um novo parâmetro ou um existente à propriedade de uma tarefa. Você abre a caixa de diálogo clicando com o botão direito em uma tarefa ou na guia Fluxo de Controle no Designer do [!INCLUDE[ssIS](../includes/ssis-md.md)] e, em seguida, clique em **Parametrizar**. A lista a seguir descreve os elementos da interface de usuário na caixa de diálogo. Para obter mais informações sobre parâmetros, consulte [Parâmetros do Integration Services &#40;SSIS&#41;](integration-services-ssis-package-and-project-parameters.md).  

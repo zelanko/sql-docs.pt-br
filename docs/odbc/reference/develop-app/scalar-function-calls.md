@@ -5,32 +5,29 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - escape sequences [ODBC], scalar function calls
 ms.assetid: 10cb4dcf-4cd8-4a56-8725-d080bd3ffe47
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ee7070453f7d6303bdaebe15c7bbdd89710d5c28
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 54615676558165e4044e99bf9452ce8e8a333170
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32913391"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47704294"
 ---
 # <a name="scalar-function-calls"></a>Chamadas de função escalar
 Funções escalares retornam um valor para cada linha. Por exemplo, a função escalar do valor absoluto considera uma coluna numérica como um argumento e retorna o valor absoluto de cada valor na coluna. É a sequência de escape para chamar uma função escalar  
   
- **{fn***função escalar* **}**  
+ **{fn***função escalar* **}**   
   
- onde *função escalar* é uma das funções listadas no [funções escalares do apêndice e:](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md). Para obter mais informações sobre a sequência de escape de função escalar, consulte [sequência de Escape de função escalar](../../../odbc/reference/appendixes/scalar-function-escape-sequence.md) na gramática do apêndice c: SQL.  
+ em que *função escalar* é uma das funções listadas na [funções escalares do apêndice e:](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md). Para obter mais informações sobre a sequência de escape de função escalar, consulte [sequência de Escape de função escalar](../../../odbc/reference/appendixes/scalar-function-escape-sequence.md) na gramática do apêndice c: SQL.  
   
- Por exemplo, as seguintes instruções SQL criam o mesmo conjunto de resultados do cliente maiusculas nomes. A primeira instrução usa a sintaxe de sequência de escape. A segunda instrução usa a sintaxe de nativo para Ingres para OS/2 e não é interoperável.  
+ Por exemplo, as seguintes instruções SQL criam o mesmo conjunto de resultados de cliente em maiusculas nomes. A primeira instrução usa a sintaxe de sequência de escape. A segunda instrução usa a sintaxe de nativa para Ingres para o sistema operacional/2 e não é interoperável.  
   
 ```  
 SELECT {fn UCASE(Name)} FROM Customers  
@@ -38,21 +35,21 @@ SELECT {fn UCASE(Name)} FROM Customers
 SELECT uppercase(Name) FROM Customers  
 ```  
   
- Um aplicativo pode misturar chamadas para funções escalares que usam sintaxe nativo e chamadas para funções escalares que usam sintaxe ODBC. Por exemplo, suponha que os nomes na tabela de funcionários são armazenados como um sobrenome, uma vírgula e um nome. A instrução SQL a seguir cria um conjunto de resultados de sobrenomes de funcionários na tabela de funcionários. A instrução usa a função escalar ODBC **subcadeia de caracteres** e a função escalar do SQL Server **CHARINDEX** e serão executados corretamente apenas no SQL Server.  
+ Um aplicativo pode misturar chamadas para funções escalares que usam sintaxe nativo e chamadas para funções escalares que usam a sintaxe ODBC. Por exemplo, suponha que os nomes na tabela de funcionários são armazenados como um nome, uma vírgula e um sobrenome. A instrução SQL a seguir cria um conjunto de resultados de sobrenomes de funcionários na tabela de funcionários. A instrução usa a função escalar de ODBC **subcadeia de caracteres** e a função escalar do SQL Server **CHARINDEX** e será executado corretamente apenas no SQL Server.  
   
 ```  
 SELECT {fn SUBSTRING(Name, 1, CHARINDEX(',', Name) – 1)} FROM Customers  
 ```  
   
- Para interoperabilidade máxima, os aplicativos devem usar o **converter** função escalar para certificar-se de que a saída de uma função escalar é o tipo exigido. O **converter** função converte dados de um tipo de dados do SQL para o tipo de dados SQL especificado. A sintaxe do **converter** função é  
+ Para interoperabilidade máxima, os aplicativos devem usar o **converter** função escalar para certificar-se de que a saída de uma função escalar é o tipo solicitado. O **converter** função converte dados de um tipo de dados SQL para o tipo de dados SQL especificado. A sintaxe do **converter** é de função  
   
- **Converter (** *value_exp* **,** *data_type *)**  
+ **Converter (** *value_exp* **,** *data_type * * *)**  
   
- onde *value_exp* é um nome de coluna, o resultado de outra função escalar ou um valor literal, e *data_type* é uma palavra-chave que corresponde a **#define** nome que é usado por um Identificador de tipo de dados SQL conforme definido em [tipos de dados do apêndice d:](../../../odbc/reference/appendixes/appendix-d-data-types.md). Por exemplo, a instrução SQL a seguir usa o **converter** função para certificar-se de que a saída do **CURDATE** função for uma data, em vez de um caractere ou carimbo de hora de dados:  
+ em que *value_exp* é um nome de coluna, o resultado de outra função escalar ou um valor literal, e *data_type* é uma palavra-chave que corresponda a **#define** nome que é usado por um Identificador de tipo de dados SQL conforme definido em [tipos de dados do apêndice d:](../../../odbc/reference/appendixes/appendix-d-data-types.md). Por exemplo, a seguinte instrução SQL usa o **converter** função para ter certeza de que a saída da **CURDATE** função for uma data, em vez de um caractere ou carimbo de hora de dados:  
   
 ```  
 INSERT INTO Orders (OrderID, CustID, OpenDate, SalesPerson, Status)  
    VALUES (?, ?, {fn CONVERT({fn CURDATE()}, SQL_DATE)}, ?, ?)  
 ```  
   
- Para determinar quais funções escalares têm suporte por uma fonte de dados, um aplicativo chama **SQLGetInfo** com SQL_CONVERT_FUNCTIONS, SQL_NUMERIC_FUNCTIONS, SQL_STRING_FUNCTIONS, SQL_SYSTEM_FUNCTIONS e SQL_TIMEDATE_ Opções de funções. Para determinar quais operações de conversão são suportadas pelo **converter** função, um aplicativo chama **SQLGetInfo** com qualquer uma das opções que começam com SQL_CONVERT.
+ Para determinar quais funções escalares são suportadas por uma fonte de dados, um aplicativo chama **SQLGetInfo** com SQL_CONVERT_FUNCTIONS, SQL_NUMERIC_FUNCTIONS, SQL_STRING_FUNCTIONS, SQL_SYSTEM_FUNCTIONS e SQL_TIMEDATE_ Opções de funções. Para determinar quais operações de conversão têm suporte a **converter** função, um aplicativo chama **SQLGetInfo** com qualquer uma das opções que começam com SQL_CONVERT.

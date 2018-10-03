@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server data processing extension [Reporting Services]
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - ODBC data processing extension
 - Reporting Services, data sources
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
-caps.latest.revision: 92
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 41c5bf1d39603f1fb0de8dfe6133258f312eab02
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 037ab45c3d9afdb9f76f4c4988c2d2657e01b844
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37266292"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48112178"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Fontes de dados com suporte no Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] recupera dados de relatório de fontes de dados por meio de uma camada de dados modular e extensível que usa extensões de processamento de dados. Para recuperar dados de relatório de uma fonte de dados, você deve selecionar uma extensão de processamento de dados que dá suporte ao tipo de fonte de dados, à versão do software em execução na fonte de dados e à plataforma da fonte de dados ( [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]de 32 bits ou 64 bits).  
@@ -164,7 +161,7 @@ ms.locfileid: "37266292"
   
  No [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)], o designer de consultas gráficas associado a essa extensão de dados é a [Interface do usuário do designer de consultas relacionais](../relational-query-designer-user-interface.md), e não o [Designer do Visual Database Tool](../../ssms/visual-db-tools/visual-database-tool-designers.md) que você usa com o tipo de fonte de dados **Microsoft SQL Server**.  
   
- [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] diferencia automaticamente entre ** [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ** e **Microsoft SQL Server** tipos de fonte de dados e abre o designer de consultas gráficas associado com o tipo de fonte de dados.  
+ [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] diferencia automaticamente entre **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]** e **Microsoft SQL Server** tipos de fonte de dados e abre o designer de consultas gráficas associado com o tipo de fonte de dados.  
   
  Caso você use o designer de consulta em modo gráfico, a consulta é analisada e, possivelmente, reescrita. Um designer de consulta com base em texto também está disponível para gravar consultas. Use o designer de consultas com base em texto quando quiser controlar a sintaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] exata usada em uma consulta. Para obter mais informações, consulte [Interface do usuário do Designer de Consultas baseado em texto](../text-based-query-designer-user-interface.md).  
   

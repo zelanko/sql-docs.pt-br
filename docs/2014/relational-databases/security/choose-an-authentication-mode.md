@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.ins.instwizard.authenticationmode.f1
@@ -25,12 +23,12 @@ ms.assetid: ff7a6a48-3d38-4209-aa0f-7d6c0a8c64ef
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 226a36b90d14e6a24ca651bec5ffee0688e6aaa9
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 5e06e33048548baad245bee78b9989e9c4cc700b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43019525"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48163776"
 ---
 # <a name="choose-an-authentication-mode"></a>Escolher um modo de autenticação
   Durante a instalação, você deve selecionar um modo de autenticação para o [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Há dois modos possíveis: modo de Autenticação do Windows e modo misto. O modo de Autenticação do Windows habilita a Autenticação do Windows e desabilita a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . O modo misto habilita a Autenticação do Windows e do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . A Autenticação do Windows sempre está disponível e não é possível desabilitá-la.  

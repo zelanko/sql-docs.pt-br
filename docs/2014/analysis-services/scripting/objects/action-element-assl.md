@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Action Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Action element
 ms.assetid: aaee06a2-91c6-4007-b787-79cb08d63c77
-caps.latest.revision: 40
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bfc51d797852e80cf7bf501cf3f1d93f2f52c9d9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 48a07020a2c4b8bb2fbc79c5c3d67697a30760d7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37196006"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166436"
 ---
 # <a name="action-element-assl"></a>Elemento Action (ASSL)
   Contém informações sobre uma ação disponível em um [cubo](cube-element-assl.md) elemento ou um [perspectiva](perspective-element-assl.md) elemento.  
@@ -52,7 +49,7 @@ ms.locfileid: "37196006"
   
 |Característica|Description|  
 |--------------------|-----------------|  
-|Valor padrão|Nenhum|  
+|Valor padrão|None|  
 |Cardinalidade|0-n: Elemento opcional que pode ocorrer mais de uma vez.|  
   
 |Ancestral ou pai|Tipo de Dados|  
@@ -65,9 +62,9 @@ ms.locfileid: "37196006"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|[Ações](../collections/actions-element-assl.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O elemento correspondente no modelo de objeto Analysis Management Objects (AMO) é <xref:Microsoft.AnalysisServices.Action>.  
   
 ## <a name="see-also"></a>Consulte também  

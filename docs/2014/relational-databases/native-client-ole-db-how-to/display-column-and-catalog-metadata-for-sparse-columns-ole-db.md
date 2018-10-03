@@ -1,24 +1,21 @@
 ---
-title: Coluna de exibição e os metadados de catálogo para colunas esparsas (OLE DB) | Microsoft Docs
+title: Exibir metadados de colunas e catálogos para colunas esparsas (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 3b8ccad5-411d-4b79-b95e-ee524714f7d6
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 22b1e8512a1a6bd92416504ee48883715cef9a3b
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: fa66d85d11c4c99094f554cb1be8c036329b8608
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37411545"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48109276"
 ---
 # <a name="display-column-and-catalog-metadata-for-sparse-columns-ole-db"></a>Exibir metadados de colunas e catálogos para colunas esparsas (OLE DB)
   Este exemplo compila uma tabela com três colunas: uma coluna esparsa, uma coluna que não é esparsa e uma coluna de conjunto de colunas. Em seguida, o exemplo exibe o sinalizador OLE DB mostrando os metadados da coluna e do catálogo paras as colunas que não são esparsas e para a coluna do conjunto de colunas.  

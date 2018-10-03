@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
-caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 243524a0f073ab1950398eff715bd1f1420144a3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0035994dbcc1e0f4aebf01b6dbc4b69dcb7bfb6a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37291342"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48157946"
 ---
 # <a name="database-engine-instances-sql-server"></a>Instâncias do mecanismo de banco de dados (SQL Server)
   Uma instância das [!INCLUDE[ssDE](../../includes/ssde-md.md)] é uma cópia do `sqlservr.exe` executável que é executado como um serviço de sistema operacional. Cada instância gerencia vários bancos de dados do sistema e um ou mais bancos de dados de usuários. Cada computador pode executar várias instâncias do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Aplicativos conectam à instância para executar trabalhos em um banco de dados gerenciado pela instância.  

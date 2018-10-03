@@ -5,9 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - bcp_readfmt
@@ -17,17 +15,16 @@ apitype: DLLExport
 helpviewer_keywords:
 - bcp_readfmt function
 ms.assetid: 654001c8-ae9f-425c-b820-f0191bf89367
-caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7b05034bd1cbbdd69cc624131e79372f0f27f371
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: a94a4c25e739b49b0e212e030f088c50ff818202
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43071782"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47794924"
 ---
 # <a name="bcpreadfmt"></a>bcp_readfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,7 +51,7 @@ RETCODE bcp_readfmt (
 ## <a name="returns"></a>Retorna  
  SUCCEED ou FAIL.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Após **bcp_readfmt** lê os valores de formato, fará as chamadas apropriadas aos [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) e [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md). Não há necessidade de você analisar um arquivo de formato e fazer essas chamadas.  
   
  Para manter um arquivo de formato, chame [bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md). As chamadas de **bcp_readfmt** podem referenciar formatos salvos. Para obter mais informações, consulte [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md).  

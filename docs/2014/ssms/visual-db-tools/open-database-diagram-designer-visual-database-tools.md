@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - opening Database Diagram Designer
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - database diagrams [SQL Server], Database Diagram Designer
 - diagrams [SQL Server], Database Diagram Designer
 ms.assetid: 9427c418-1e2f-464f-8a6c-9109f053e832
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f1ce834d6437afd0f7a06e0a4af82faf9e697806
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: b45e9729eb66334703b15f9a9d801fc072a5ea5b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43812882"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48086508"
 ---
 # <a name="open-database-diagram-designer-visual-database-tools"></a>Abrir Designer do Diagrama de Banco de Dados (Visual Database Tools)
   O Designer do Diagrama de Banco de Dados é uma ferramenta visual que permite projetar e visualizar um banco de dados ao qual se está conectado. Ao criar um banco de dados, você pode usar o Designer de Banco de Dados para criar, editar ou excluir tabelas, colunas, chaves, índices, relações e restrições. Para visualizar um banco de dados, você pode criar um ou mais diagramas que ilustrem todas ou parte das tabelas, colunas, chaves e relações.  

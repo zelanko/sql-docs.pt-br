@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - regular identifiers [Integration Services]
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - expressions [Integration Services], identifiers
 - qualified identifiers [Integration Services]
 ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
-caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 322a91c77eaac5433cada0cfef056e1688020dc6
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: bfcd429eeb6979fea8ba889212b5e56a7afee887
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083998"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48154826"
 ---
 # <a name="identifiers-ssis"></a>Identificadores (SSIS)
   Em expressões, identificadores são colunas e variáveis, que estão disponíveis para a operação. Expressões podem usar identificadores regulares e qualificados.  
@@ -41,7 +38,7 @@ ms.locfileid: "39083998"
   
 -   O primeiro caractere do nome deve ser uma letra como definido pelo Unicode Standard 2.0, ou um caractere de sublinhado (_).  
   
--   Os caracteres subsequentes podem ser letras ou números conforme definido no Unicode Standard 2.0, o sublinhado (_), \@, $ e caracteres #.  
+-   Os caracteres subsequentes podem ser letras ou números conforme definido no Unicode Standard 2.0 e os caracteres (_), \@, $ e #.  
   
 > [!IMPORTANT]  
 >  Espaços inseridos e caracteres especiais, diferentes daqueles listados, não são válidos em identificadores regulares. Para usar espaços e caracteres especiais, você deve usar um identificador qualificado em vez de um identificador regular.  
@@ -89,15 +86,15 @@ ms.locfileid: "39083998"
 >  Se ambos os elementos na notação pontilhada estiverem entre colchetes, o avaliador de expressão interpretará o par como um único identificador, não como uma combinação origem-coluna.  
   
 ## <a name="variables-in-expressions"></a>Variáveis em expressões  
- Variáveis, quando referenciadas em expressões, devem incluir o \@ prefixo. Por exemplo, o **contador** variável é referenciada usando \@contador. O \@ caractere não é parte do nome da variável; só identifica a variável para o avaliador de expressão. Se você construir expressões usando a caixa de diálogo caixas que [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer fornece, o \@ caractere é adicionado automaticamente ao nome da variável. Não é válido para incluir espaços entre o \@ caractere e o nome da variável.  
+ Variáveis, quando referenciadas em expressões, devem incluir o prefixo \@. Por exemplo, a variável **Counter** é referenciada usando \@Counter. O caractere \@ não faz parte do nome de variável; só identifica a variável para o avaliador de expressão. Se você construir expressões utilizando as caixas de diálogo que o [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer fornece, o caractere \@ será automaticamente adicionado ao nome da variável. Ele não é válido para incluir espaços entre o caractere \@ e o nome de variável.  
   
  Nomes de variável seguem as mesmas regras que esses para outros identificadores regulares:  
   
 -   O primeiro caractere do nome deve ser uma letra como definido pelo Unicode Standard 2.0, ou um caractere de sublinhado (_).  
   
--   Os caracteres subsequentes podem ser letras ou números conforme definido no Unicode Standard 2.0, o sublinhado (_), \@, $ e caracteres #.  
+-   Os caracteres subsequentes podem ser letras ou números conforme definido no Unicode Standard 2.0 e os caracteres (_), \@, $ e #.  
   
- Se um nome de variável contiver caracteres diferente daqueles listados, a variável deverá ser colocada entre colchetes. Por exemplo, os nomes de variável com espaços devem ser colocados entre colchetes. O colchete de abertura segue o \@ caractere. Por exemplo, o **My Name** variável é referenciada como \@[My Name]. Ele não é válido para incluir espaços entre o nome de variável e os colchetes.  
+ Se um nome de variável contiver caracteres diferente daqueles listados, a variável deverá ser colocada entre colchetes. Por exemplo, os nomes de variável com espaços devem ser colocados entre colchetes. O colchete de abertura segue o caractere \@. Por exemplo, a variável **My Name** é referenciada como \@[My Name]. Ele não é válido para incluir espaços entre o nome de variável e os colchetes.  
   
 > [!NOTE]  
 >  Os nomes das variáveis do sistema e das variáveis definidas pelo usuário diferenciam maiúsculas de minúsculas.  

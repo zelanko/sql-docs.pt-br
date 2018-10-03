@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connection managers [Integration Services], adding
 - adding connection managers
 ms.assetid: 6f2ba4ea-10be-4c40-9e80-7efcf6ee9655
-caps.latest.revision: 56
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1f726306b53f896176de23726fc17cdc3a6b2d53
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fba1fff373ad7d9ea4371715bcc2ca2b72a38477
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37277402"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48148306"
 ---
 # <a name="add-delete-or-share-a-connection-manager-in-a-package"></a>Adicionar, excluir ou compartilhar um gerenciador de conexões em um pacote
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclui uma variedade de gerenciadores de conexão para se conectar a fontes de dados diferentes, como bancos de dados relacionais [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] bancos de dados e arquivos nos formatos CSV e XML. Um gerenciador de conexões pode ser criado no nível de pacote ou no nível de projeto. O gerenciador de conexões criado no nível de projeto está disponível para todos os pacotes no projeto. Por outro lado, o gerenciador de conexões criado no nível de pacote está disponível para aquele pacote específico.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - stopping Report Server service
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Report Server service, starting
 - starting Report Server service
 ms.assetid: 6ec69ac3-27b0-472d-91e1-733af9078ed2
-caps.latest.revision: 54
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0cd026561a1f17a7b50dab79319c38ffbeef7b1a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 65eadf33e827e0aa6018d69b86339bc8233c1ee7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37301766"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48074292"
 ---
 # <a name="start-and-stop-the-report-server-service"></a>Iniciar e parar o serviço Servidor de Relatório
   O servidor de relatório é implementado como um serviço do Windows que contém o serviço Web do servidor de relatório, o Gerenciador de Relatórios e um aplicativo executado em segundo plano. O serviço deve ser executado se você desejar usar alguma funcionalidade do servidor de relatório. Parar o serviço para todas as operações do servidor de relatório.  

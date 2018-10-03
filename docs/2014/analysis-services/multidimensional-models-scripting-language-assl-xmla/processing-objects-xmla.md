@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - errors [XML for Analysis]
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - processing objects [XML for Analysis]
 - XMLA, objects
 ms.assetid: a65b3249-303d-49c6-98af-6ac6eed11a03
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ce70d5d9168d1158b98453553b2323afc8da8e11
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7fdfd3ce4393fef5ae2574e5ec151cd345f59bcf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37306506"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48117816"
 ---
 # <a name="processing-objects-xmla"></a>Processando objetos (XMLA)
   Na [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], o processamento é a etapa ou série de etapas que transformam dados em informações para análise de negócios. O processamento será diferente dependendo do tipo de objeto, mas sempre fará parte da transformação de dados em informações.  

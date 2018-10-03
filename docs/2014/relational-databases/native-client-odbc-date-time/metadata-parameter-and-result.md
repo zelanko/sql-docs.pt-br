@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - metadata [ODBC]
 ms.assetid: 1518e6e5-a6a8-4489-b779-064c5624df53
-caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f07127b8ae80ff212f671d94f55a311584552c58
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: e85b784b2c8d5a123e5cf16bc014f27c68a390a8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37420176"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48159866"
 ---
 # <a name="parameter-and-result-metadata"></a>Parâmetro e metadados de resultado
   Este tópico descreve o que é retornado nos campos IPD (descritor de parâmetro de implementação) e IRD (descritor de linha de implementação) dos tipos de dados de data e hora.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.tableproperties.storage.f1
@@ -16,16 +14,15 @@ f1_keywords:
 - sql12.swb.tableproperties.general.f1
 - sql12.swb.tableproperties.changetracking.f1
 ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
-caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 858be4ef2443a92f2a2999535714084fe60a67f4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e2b518a0044c4d4778fa2b94a6643c805e7c19ca
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37181763"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096656"
 ---
 # <a name="table-properties"></a>Propriedades da tabela
   Este tópico descreve as propriedades de tabela que são exibidas na caixa de diálogo Propriedades da Tabela no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obter mais informações sobre como exibir essas propriedades, veja [Exibir a definição da tabela](view-the-table-definition.md).  

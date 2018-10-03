@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -19,22 +17,21 @@ f1_keywords:
 helpviewer_keywords:
 - CreateRecordset method [RDS]
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 61f918c7a7530ae504825182a1d6a1c4ced1d84c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 791586badfeff0c1bde35b5cdf25ba750f79fe80
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287615"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47779024"
 ---
 # <a name="createrecordset-method-rds"></a>Método CreateRecordset (RDS)
-Cria um vazio, desconectado [registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
+Cria um vazio, desconectado [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
 > [!IMPORTANT]
->  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (veja o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Aplicativos que usam o RDS devem migrar para [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (consulte o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Devem ser migrados para aplicativos que usam o RDS [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -48,7 +45,7 @@ object.CreateRecordset(ColumnInfos)
  Uma variável de objeto que representa um [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) ou [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objeto.  
   
  *ColumnsInfos*  
- Um **Variant** matriz de atributos que definem cada coluna a **registros** criado. Cada definição de coluna contém uma matriz de quatro atributos necessários e um atributo opcional.  
+ Um **Variant** matriz de atributos que definem cada coluna na **Recordset** criado. Cada definição de coluna contém uma matriz de quatro atributos necessários e um atributo opcional.  
   
 |attribute|Description|  
 |---------------|-----------------|  
@@ -56,18 +53,18 @@ object.CreateRecordset(ColumnInfos)
 |Tipo|Inteiro do tipo de dados.|  
 |Tamanho|Inteiro da largura em caracteres, independentemente do tipo de dados.|  
 |Nulidade|Valor booliano.|  
-|Escala (opcional)|Este atributo opcional define a escala para campos numéricos. Se esse valor não for especificado, serão truncados em uma escala de três valores numéricos. Precisão não é afetada, mas o número de dígitos após o ponto decimal será truncado para três.|  
+|Escala (opcional)|Esse atributo opcional define a escala para campos numéricos. Se esse valor não for especificado, serão truncados para uma escala de três valores numéricos. Precisão não é afetada, mas o número de dígitos após o ponto decimal será truncado para três.|  
   
- O conjunto de matrizes de coluna, em seguida, é agrupado em uma matriz, que define o **registros**.  
+ O conjunto de matrizes de coluna, em seguida, é agrupado em uma matriz, que define o **conjunto de registros**.  
   
-## <a name="remarks"></a>Remarks  
- O objeto comercial do lado do servidor pode preencher resultante **registros** com dados de um provedor de dados não - OLE DB, como um sistema operacional do arquivo contendo cotações de ações.  
+## <a name="remarks"></a>Comentários  
+ O objeto de negócios do lado do servidor pode popular resultante **Recordset** com dados de um provedor de dados não - OLE DB, como um sistema operacional do arquivo contendo cotações de ações.  
   
- A seguinte tabela lista o [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) valores com suporte a **CreateRecordset** método. O número listado é o número de referência usada para definir campos.  
+ A seguinte tabela lista os [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) valores com suporte a **CreateRecordset** método. O número listado é o número de referência usado para definir os campos.  
   
- Cada um dos tipos de dados é de comprimento fixo ou comprimento variável. Tipos de comprimento fixo devem ser definidos com um tamanho de -1, porque o tamanho é predeterminado e uma definição de tamanho ainda é necessária. Tipos de dados de comprimento variável permitem um tamanho de 1 a 32767.  
+ Cada um dos tipos de dados é de comprimento fixo ou comprimento variável. Tipos de comprimento fixo devem ser definidos com um tamanho de – 1, porque o tamanho é predeterminado e uma definição de tamanho ainda é necessária. Tipos de dados de comprimento variável que um tamanho de 1 a 32767.  
   
- Para alguns dos tipos de dados da variável, o tipo pode ser forçado para o tipo indicado na coluna de substituição. Você não verá as substituições até após o **registros** é criada e preenchida. Em seguida, você pode verificar o tipo de dados reais, se necessário.  
+ Para alguns dos tipos de dados da variável, o tipo pode ser forçado para o tipo indicado na coluna de substituição. Você não verá as substituições até após o **Recordset** é criado e preenchido. Em seguida, você pode verificar o tipo de dados, se necessário.  
   
 |Comprimento|Constante|Número|Substituição|  
 |------------|--------------|------------|------------------|  

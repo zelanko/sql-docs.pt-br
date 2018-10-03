@@ -1,30 +1,27 @@
 ---
-title: Erros de ADO | Microsoft Docs
+title: Erros ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 02/15/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - errors [ADO]
 ms.assetid: 9bb84114-a1df-4122-a1b8-ad98dcd85cc3
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: adae5d5247a3d0966ad5685eacc1a6cdebdc5437
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 4fadb19aac4700738f4c6ec43449b3de7d4a4a18
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270845"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47776364"
 ---
-# <a name="ado-run-time-errors"></a>Erros de tempo de execução de ADO
-São relatados erros de ADO para o seu programa como erros de tempo de execução. Você pode usar o mecanismo de interceptação de erro da linguagem de programação para interceptar e tratá-los. Por exemplo, no Visual Basic, utilize o **On Error** instrução. No Visual C++, ele depende do método que você está usando para acessar as bibliotecas do ADO. Com #import, use um **de try-catch** bloco. Caso contrário, os programadores do C++ precisará recuperar explicitamente o objeto de erro chamando **GetErrorInfo**. O seguinte procedimento sub Visual Basic demonstra a interceptação de erro de ADO:
+# <a name="ado-run-time-errors"></a>Erros de tempo de execução do ADO
+Erros ADO são relatados para o seu programa como erros de tempo de execução. Você pode usar o mecanismo de interceptação de erro de sua linguagem de programação para interceptar e tratá-los. Por exemplo, no Visual Basic, use o **On Error** instrução. No Visual C++, ele depende do método que você está usando para acessar as bibliotecas ADO. Com #import, usar um **try-catch** bloco. Caso contrário, os programadores de C++ precisará recuperar explicitamente o objeto de erro chamando **GetErrorInfo**. O seguinte procedimento de sub-rotina do Visual Basic demonstra como interceptar um erro ADO:
 
 ```
 ' BeginErrorHandlingVB01
@@ -82,7 +79,7 @@ End Sub
 ' EndErrorHandlingVB01
 ```
 
- Isso **Form_Load** procedimento de evento intencionalmente gera um erro ao tentar abrir o mesmo **Conexão** objeto duas vezes. Na segunda vez que o **abrir** método é chamado, o manipulador de erros é ativado. Nesse caso, o erro é do tipo **adErrObjectOpen**, portanto, o manipulador de erros exibe a mensagem a seguir antes de continuar a execução do programa:
+ Isso **Form_Load** procedimento de evento cria intencionalmente um erro ao tentar abrir o mesmo **Conexão** objeto duas vezes. Na segunda vez que o **abrir** método é chamado, o manipulador de erro é ativado. Nesse caso, o erro é do tipo **adErrObjectOpen**, portanto, o manipulador de erro exibe a mensagem a seguir antes de continuar a execução do programa:
 
 ```
 Error #3705: Operation is not allowed when the object is open.
@@ -90,15 +87,15 @@ Error reported by: ADODB.Connection
 Help File: E:\WINNT\HELP\ADO260.CHM Topic ID: 1003705
 ```
 
- A mensagem de erro inclui cada parte das informações fornecidas pelo Visual Basic **Err** objeto exceto para o **LastDLLError** valor, que não se aplicam aqui. O número do erro informa o erro ocorrido. A descrição é útil em casos em que você não deseja tratar o erro por conta própria. Você pode simplesmente passá-lo ao longo para o usuário. Embora geralmente você desejará usar mensagens personalizadas para seu aplicativo, você não pode prever cada erro. a descrição fornece alguma indicação sobre o que deu errado. No código de exemplo, o erro foi relatado pelo **Conexão** objeto. Você verá o tipo do objeto ou o ID programática aqui, não um nome de variável.
+ A mensagem de erro inclui cada parte das informações fornecidas pelo Visual Basic **Err** do objeto, exceto para o **LastDLLError** valor, que não se aplica aqui. O número de erro informa o erro ocorrido. A descrição é útil em casos em que você não deseja tratar o erro por conta própria. Você pode simplesmente passá-lo ao longo para o usuário. Embora normalmente você desejará usar mensagens personalizadas para seu aplicativo, você não pode prever cada erro; a descrição fornece alguma dica em relação o que deu errado. No código de exemplo, o erro foi relatado o **Conexão** objeto. Você verá o tipo do objeto ou o ID programática aqui — não um nome de variável.
 
 > [!NOTE]
->  O Visual Basic **Err** objeto contém apenas informações sobre o erro mais recente. O ADO **erros** coleção do **Conexão** objeto contém um **erro** objeto para cada erro gerado pela operação mais recente do ADO. Use o **erros** coleção em vez de **Err** objeto para manipular vários erros. Para obter mais informações sobre o **erros** coleta, consulte [erros do provedor](../../../ado/guide/data/provider-errors.md). No entanto, se não houver não válido **Conexão** objeto, o **Err** objeto é a única fonte para obter informações sobre erros de ADO.
+>  O Visual Basic **Err** objeto contém apenas informações sobre o erro mais recente. O ADO **erros** coleção da **Conexão** objeto contém um **erro** objeto para cada erro gerado pela operação mais recente do ADO. Use o **erros** coleção em vez de **Err** objeto para lidar com vários erros. Para obter mais informações sobre o **erros** coleção, consulte [erros do provedor](../../../ado/guide/data/provider-errors.md). No entanto, se não houver não válido **Conexão** objeto, o **Err** objeto é a única fonte para obter informações sobre erros ADO.
 
- Que tipos de operações são prováveis que causam erros de ADO? Erros comuns de ADO podem envolver a abertura de um objeto, como um **Conexão** ou **registros**, a tentativa de atualizar dados ou chamar um método ou propriedade que não é suportada pelo provedor.
+ Que tipos de operações são prováveis que causam erros ADO? Erros comuns de ADO podem envolver a abertura de um objeto, como um **Conexão** ou **conjunto de registros**, a tentativa de atualizar os dados ou chamar um método ou propriedade não é compatível com seu provedor.
 
  Erros de OLE DB também podem ser passados para o seu aplicativo como erros de tempo de execução no **erros** coleção.
 
- O tópico a seguir fornece mais informações sobre erros de ADO.
+ O tópico a seguir fornece mais informações sobre erros do ADO.
 
 -   [Referência de erros ADO](../../../ado/guide/data/ado-error-reference.md)

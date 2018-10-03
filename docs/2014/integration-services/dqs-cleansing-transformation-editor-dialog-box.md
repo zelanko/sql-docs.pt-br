@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssdqs.designer.cleansing.f1
 - SQL12.SSDQS.DESIGNER.DQCONNECTION.F1
 ms.assetid: 07e79641-71ee-45d0-a9ba-ed6f9f68f333
-caps.latest.revision: 15
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0034984a58971af442ab7154bbba50820dfe1a16
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b262cea6362c1f6cb3c69c8b9e96e2bb09aa3e14
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37219666"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48062458"
 ---
 # <a name="dqs-cleansing-transformation-editor-dialog-box"></a>Caixa de diálogo Editor de Transformação de Limpeza DQS
   Use a caixa de diálogo **Editor de Transformação de Limpeza DQS** para corrigir os dados usando Data Quality Services (DQS). Para obter mais informações, consulte [Data Quality Services Concepts](../../2014/data-quality-services/data-quality-services-concepts.md).  
@@ -130,7 +127,7 @@ ms.locfileid: "37219666"
   
 2.  Clique com o botão direito do mouse na área de conexões, clique em **Nova Conexão**e, em seguida, clique em **DQS**.  
   
-3.   Clique em **Adicionar**.  
+3.  Clique em **Adicionar**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Aplicar regras de qualidade de dados à fonte de dados](data-flow/transformations/apply-data-quality-rules-to-data-source.md)  

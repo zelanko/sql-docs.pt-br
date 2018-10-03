@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data source views [Analysis Services], bindings
@@ -33,16 +31,15 @@ helpviewer_keywords:
 - measure groups [Analysis Services], bindings
 - partitions [Analysis Services], bindings
 ms.assetid: bc028030-dda2-4660-b818-c3160d79fd6d
-caps.latest.revision: 40
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d6009cfc820cb3eec8a0aa8499850546f31dba57
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 606d3e19334e37ee418d4e99472845d24344d452
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37230196"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48148086"
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>Fontes de dados e associações (SSAS multidimensional)
   Podem ser acoplados cubos, dimensões e outros objetos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a uma fonte de dados. Uma fonte de dados pode ser um dos seguintes objetos:  
@@ -152,7 +149,7 @@ ms.locfileid: "37230196"
   
 -   Cada coluna de tabela não aninhada é associada a uma coluna na tabela da caixa ou a tabela relacionada à tabela da caixa (seguindo uma relação muitos para um ou um para um). O DSV define as relações entre as tabelas.  
   
--   Cada coluna da tabela aninhada está associada à tabela de fontes. As colunas de propriedade da coluna da tabela aninhada são associadas às colunas na tabela de fontes ou a tabela relacionada à tabela de fontes. (Novamente, a associação segue uma relação muitos para um ou um para um.) As associações do modelo de mineração não fornecem o caminho de junção para a tabela aninhada. Em vez disso, as relações definidas no DSV fornecem essas informações.  
+-   Cada coluna da tabela aninhada está associada à tabela de fontes. As colunas de propriedade da coluna da tabela aninhada são associadas às colunas na tabela de fontes ou a tabela relacionada à tabela de fontes. (Novamente, a associação segue uma relação muitos para um ou um para um.) Os model bindings de mineração não fornecem o caminho de junção para a tabela aninhada. Em vez disso, as relações definidas no DSV fornecem essas informações.  
   
 ### <a name="bindings-for-an-olap-mining-model"></a>Associações para modelos de mineração OLAP  
  Os modelos de mineração OLAP não têm o equivalente de um DSV. Portanto, as associações de dados devem remover as ambiguidades entre colunas e fontes de dados. Por exemplo, um modelo de mineração pode ter base no cubo Vendas e as colunas podem basear-se em Qtd, Valor e Nome do Produto. Como alternativa, um modelo de mineração pode basear-se em Produto e as colunas podem em Nome do Produto, Cor do Produto e uma tabela aninhada com a Qtd. de Vendas.  

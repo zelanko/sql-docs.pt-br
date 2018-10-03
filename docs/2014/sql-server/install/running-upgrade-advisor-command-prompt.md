@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor [SQL Server], running
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - UpgradeAdvisorWizardCmd utility
 - XML formats [Upgrade Advisor]
 ms.assetid: 7c83049b-9227-4723-9b7f-66288bc6bd1d
-caps.latest.revision: 25
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f30f9169e352b7ac7b889d0ca066eadf6c1778db
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ee501c8e576363fd4a4bc15883ca322490d60908
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37330946"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48150766"
 ---
 # <a name="running-upgrade-advisor-command-prompt"></a>Executando o Supervisor de Atualização (Prompt de Comando)
   Use o **UpgradeAdvisorWizardCmd** utilitário para executar o Supervisor de atualização do prompt de comando. Você pode escolher receber os resultados no formato XML ou em um arquivo CSV (valores separados por vírgula).  
@@ -60,10 +57,10 @@ where <server_info> is any combination of the following:
  **-Instância** *instance_name*  
  Especifica o nome da instância que será analisada. Não há valor padrão. Se você não especificar esse parâmetro, o [!INCLUDE[ssDE](../../includes/ssde-md.md)] não será verificado. O valor para uma instância padrão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é MSSQLSERVER. Para uma instância nomeada, use o nome da instância.  
   
- **-ASInstance***AS_instance_name  *  
+ **-ASInstance***AS_instance_name*   
  Especifica o nome da instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que será analisada. Não há valor padrão. Se você não especificar esse valor, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] não será verificado. O valor para uma instância padrão do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] é MSSQLServerOLAPService. Para uma instância nomeada, use o nome da instância.  
   
- **-RSInstance***RS_instance_name  *  
+ **-RSInstance***RS_instance_name*   
  Especifica o nome da instância do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que será analisada. Não há valor padrão. Se você não especificar esse valor, o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não será verificado. O valor para uma instância padrão do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é ReportServer. Para uma instância nomeada, use o nome da instância.  
   
  **-SqlUser** *login_id*  
@@ -84,7 +81,7 @@ where <server_info> is any combination of the following:
 |número inteiro positivo|A análise foi bem-sucedida e foram encontrados problemas de atualização.|  
 |número inteiro negativo|A análise falhou.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Todas as informações necessárias para executar a análise, além dos nomes de usuários e das senhas de Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], podem ser fornecidas em um arquivo de configuração XML. Esse arquivo de configuração XML é documentado no modelo. Se você não usar um arquivo de configuração, poderá analisar todos os componentes instalados em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando as configurações padrão. Para isso, especifique os nomes dos computadores e das instâncias. Consulte a tabela ‘Descrições de elementos’ neste tópico para obter uma descrição das configurações do arquivo de configuração padrão.  
   
 ## <a name="configuration-file-template"></a>Modelo do arquivo de configuração  

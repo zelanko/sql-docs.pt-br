@@ -1,28 +1,25 @@
 ---
-title: Apêndices ODBC | Microsoft Docs
+title: Apêndices do ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3331aa89-24d0-4c0e-b377-c720c1107ad5
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2a7c55c5c7114858850b6fb3f7188d28707165c4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4934ed875a427e68938ed09d4353b7fe14f3aee2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32906172"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47700634"
 ---
-# <a name="odbc-appendixes"></a>Apêndices ODBC
-Detalhes técnicos relacionados à interface do Microsoft ODBC estão contidos nos Apêndices a seguir:  
+# <a name="odbc-appendixes"></a>Apêndices do ODBC
+Detalhes técnicos relacionados à interface do Microsoft ODBC estão contidos nos seguintes apêndices:  
   
 -   [Apêndice A: Códigos de erro ODBC](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)  
   

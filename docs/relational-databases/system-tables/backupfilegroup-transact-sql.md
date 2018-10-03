@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - backupfilegroup_TSQL
@@ -19,30 +16,29 @@ helpviewer_keywords:
 - filegroups [SQL Server], backupfilegroup system table
 - backupfilegroup system table
 ms.assetid: d26e8fbe-f5c5-4e10-b2bd-0d8e16ea21f9
-caps.latest.revision: 53
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 040e55c50c91ed40b7e43bfc71d8ea5fbca0273c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b1d7cc485899a7f8173552788471ef6ec45ce49c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33259226"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47832974"
 ---
 # <a name="backupfilegroup-transact-sql"></a>backupfilegroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Contém uma linha para cada grupo de arquivos em um banco de dados no momento do backup. **backupfilegroup** é armazenado no **msdb** banco de dados.  
+  Contém uma linha para cada grupo de arquivos em um banco de dados no momento do backup. **backupfilegroup** é armazenado em de **msdb** banco de dados.  
   
 > [!NOTE]  
->  O **backupfilegroup** tabela mostra a configuração do grupo de arquivos do banco de dados, não do conjunto de backup. Para identificar se um arquivo está incluído no conjunto de backup, use o **is_present** coluna o [backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md) tabela.  
+>  O **backupfilegroup** tabela mostra a configuração do grupo de arquivos do banco de dados, e não do conjunto de backup. Para identificar se um arquivo está incluído no conjunto de backup, use o **is_present** coluna o [backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md) tabela.  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**backup_set_id**|**Int**|Conjunto de backup que contém este grupo de arquivos.|  
+|**backup_set_id**|**int**|Conjunto de backup que contém este grupo de arquivos.|  
 |**name**|**sysname**|Nome do grupo de arquivos.|  
-|**filegroup_id**|**Int**|ID de grupo de arquivos, exclusivo no banco de dados. Corresponde à **data_space_id** na **sys. filegroups**.|  
+|**filegroup_id**|**int**|ID de grupo de arquivos, exclusivo no banco de dados. Corresponde ao **data_space_id** na **sys. filegroups**.|  
 |**filegroup_guid**|**uniqueidentifier**|Identificador Global Exclusivo do grupo de arquivos. Pode ser NULL.|  
 |**type**|**char(2)**|Tipo de conteúdo, um de:<br /><br /> FG = Grupo de arquivos de “linhas”<br /><br /> SL = Grupo de arquivos de log do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |**type_desc**|**nvarchar(60)**|Descrição de tipo de função, um de:<br /><br /> ROWS_FILEGROUP<br /><br /> SQL_LOG_FILEGROUP|  
@@ -50,17 +46,17 @@ ms.locfileid: "33259226"
 |**is_readonly**|**bit**|1 = O grupo de arquivos é somente leitura.|  
 |**log_filegroup_guid**|**uniqueidentifier**|Pode ser NULL.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 > [!IMPORTANT]  
->  O mesmo nome de grupo de arquivos pode aparecer em bancos de dados diferentes; porém, cada grupo de arquivos tem seu próprio GUID. Portanto, **(backup_set_id, filegroup_guid)** é uma chave exclusiva que identifica um grupo de arquivos em **backupfilegroup**.  
+>  O mesmo nome de grupo de arquivos pode aparecer em bancos de dados diferentes; porém, cada grupo de arquivos tem seu próprio GUID. Portanto, **(filegroup_guid backup_set_id)** é uma chave exclusiva que identifica um grupo de arquivos **backupfilegroup**.  
   
  RESTORE VERIFYONLY FROM *backup_device* WITH LOADHISTORY preenche as colunas da **backupmediaset** tabela com os valores apropriados do cabeçalho de conjunto de mídias.  
   
- Para reduzir o número de linhas nessa tabela e em outras tabelas de histórico e de backup, execute o [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) procedimento armazenado.  
+ Para reduzir o número de linhas nessa tabela e em outras tabelas de histórico e backup, execute as [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) procedimento armazenado.  
   
 ## <a name="see-also"></a>Consulte também  
- [Backup e restauração tabelas &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
+ [Backup e restauração de tabelas &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
  [backupfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)   
  [backupmediafamily &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
  [backupmediaset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   

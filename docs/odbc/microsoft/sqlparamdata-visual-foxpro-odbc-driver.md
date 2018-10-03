@@ -5,32 +5,29 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLParamData function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: a2308f6c-2fa1-47e9-903f-37c2a03c723a
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8aa90ac3b22bdfb143d35197302d5e2ccb646e8a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5a29b9502fcadf77075f6ee1d49b021233f07ab1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32901931"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47771534"
 ---
 # <a name="sqlparamdata-visual-foxpro-odbc-driver"></a>SQLParamData (Driver ODBC do Visual FoxPro)
 > [!NOTE]  
->  Este tópico contém informações específicas do Driver ODBC do Visual FoxPro. Para obter informações gerais sobre esta função, consulte o tópico apropriado em [referência da API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Este tópico contém informações específicas de Driver ODBC do Visual FoxPro. Para obter informações gerais sobre essa função, consulte o tópico apropriado sob [referência da API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
  Suporte: completo  
   
- Conformidade de API de ODBC: Nível 1  
+ Conformidade com a API ODBC: 1 de nível  
   
- Usado em conjunto com [SQLPutData](../../odbc/microsoft/sqlputdata-visual-foxpro-odbc-driver.md) para especificar dados de parâmetro em tempo de execução de instrução.  
+ Usado em conjunto com [SQLPutData](../../odbc/microsoft/sqlputdata-visual-foxpro-odbc-driver.md) para especificar dados de parâmetro durante o tempo de execução de instrução.  
   
- Para obter mais informações, consulte [SQLParamData](../../odbc/reference/syntax/sqlparamdata-function.md) no *referência do programador de ODBC*.
+ Para obter mais informações, consulte [SQLParamData](../../odbc/reference/syntax/sqlparamdata-function.md) na *referência do programador de ODBC*.

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Deprecation Final Support event class
 - deprecation [SQL Server], events final support
 ms.assetid: 2b4d88d0-62be-45c0-bea8-c5900d553d31
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6be712b5b2ecf84e68abf7be1681962a83dc86d6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3187c30d3c39bfc488baf260f4b6061de5acb942
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37154337"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48145850"
 ---
 # <a name="deprecation-final-support-event-class"></a>Classe de evento Deprecation Final Support
   A classe de evento **Deprecation Final Support** ocorre quando é usado um recurso que será removido da próxima versão principal do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para que seus aplicativos tenham tempo de vida mais longo, não use recursos que provoquem a classe de evento **Deprecation Final Support** ou **Deprecation Announcement** . Modifique os aplicativos que usam recursos de substituição final o mais rápido possível.  

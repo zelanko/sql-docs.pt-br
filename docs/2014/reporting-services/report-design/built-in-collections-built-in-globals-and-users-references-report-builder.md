@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
-caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 35a17dd8fd787fe585108b661117b36f887bdfca
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bdc0c39d8b475ed90eba778ad46981c5ff4a2875
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37331006"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166636"
 ---
 # <a name="built-in-globals-and-users-references-report-builder-and-ssrs"></a>Referências globais internas e referências de usuários (Construtor de Relatórios e SSRS)
   A coleção de campos internos que inclui as coleções de `Globals` e de `User` representa valores globais fornecidos pelo Reporting Services quando um relatório é processado. A coleção de `Globals` fornece valores, como o nome do relatório, a hora em que o seu processamento foi iniciado e os números das páginas atuais para o cabeçalho ou o rodapé do relatório. A coleção de `User` fornece o identificador de usuário e configurações de idioma. Esses valores podem ser usados em expressões para filtrar resultados em um relatório.  

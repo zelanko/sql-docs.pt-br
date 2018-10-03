@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_server_info
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_server_info
 ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
-caps.latest.revision: 39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9355b4a6ca344111c5b3d9365823b2175942bcea
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 6ee0f3e2f7858959b04394e4e809df3ab71dcc83
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43026203"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47846634"
 ---
 # <a name="spserverinfo-transact-sql"></a>sp_server_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +88,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**113**|REMOTE_SPROC<br /><br /> Especifica se os procedimentos armazenados podem ser executados pelas funções remotas de procedimento armazenado em DB-Library.|S|  
 |**500**|SYS_SPROC_VERSION<br /><br /> Especifica a versão dos procedimentos armazenados do catálogo atualmente implementados.|Número da versão atual|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  **sp_server_info** retorna um subconjunto das informações fornecidas por **SQLGetInfo** no ODBC.  
   
 ## <a name="permissions"></a>Permissões  

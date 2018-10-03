@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5e027605-1086-4941-bb01-f315df8f829b
-caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3b56558bf2e7d49f336d756699f8b5dc59f2ac58
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1c3b42834bc12048680c97465810832f5431441d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37222296"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168176"
 ---
 # <a name="configure-dedicated-data-refresh-or-query-only-processing-powerpivot-for-sharepoint"></a>Configurar o processamento dedicado de atualização de dados ou de somente consulta (PowerPivot para SharePoint)
   No modo integrado do SharePoint, uma instância do servidor do Analysis Services pode ser configurada para dar suporte a um tipo específico de solicitação de processamento, como processamento de atualização de dados ou de somente consulta. Por padrão, os dois tipos de solicitação de carregamento estão habilitados. Você pode desativar qualquer um dos tipos para criar um mecanismo de consulta ou servidor de atualização de dados dedicado.  

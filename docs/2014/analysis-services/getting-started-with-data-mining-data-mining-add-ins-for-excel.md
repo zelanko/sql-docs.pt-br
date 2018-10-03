@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: cbe10a19-e194-408e-a65b-5fdf3fb1e880
-caps.latest.revision: 9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0faa8178d535fa5cd493f65e002e27e5565059c1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5c4fe81ed240f210157e450b6c54fe370e22bcb8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37303126"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48094126"
 ---
 # <a name="getting-started-with-data-mining-data-mining-add-ins-for-excel"></a>Introdução à mineração de dados (Suplementos de Mineração de Dados para Excel)
   A mineração de dados é o processo de descoberta de padrões significativos nos dados. A mineração de dados é um complemento natural ao processo de explorar e entender seus dados por meio de BI tradicional. Os algoritmos da máquina podem processar grandes quantidades de dados e descobrir padrões e tendências que, de outra forma, ficariam ocultos.  

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_targetservergroup_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_targetservergroup
 ms.assetid: 4ac65ed6-e07e-40e4-a282-13bfd92dfa41
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8b6ba9e9e079c201c1f322b58aae861a0c30ae53
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: d38c9727995b20cd23087a0f944ccbfa28bf019d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260822"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47788076"
 ---
 # <a name="spupdatetargetservergroup-transact-sql"></a>sp_update_targetservergroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +43,10 @@ sp_update_targetservergroup
   
 ## <a name="arguments"></a>Argumentos  
  [  **@name =**] **'***current_name***'**  
- O nome do grupo de servidores de destino. *current_name* é **sysname**, sem padrão.  
+ O nome do grupo de servidores de destino. *current_name* está **sysname**, sem padrão.  
   
- [  **@new_name =**] **'***novo_nome***'**  
- O novo nome do grupo de servidores de destino. *Novo_nome* é **sysname**, sem padrão.  
+ [  **@new_name =**] **'***new_name***'**  
+ O novo nome do grupo de servidores de destino. *new_name* está **sysname**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
@@ -58,7 +54,7 @@ sp_update_targetservergroup
 ## <a name="permissions"></a>Permissões  
  Para executar esse procedimento armazenado, os usuários devem ter o **sysadmin** função de servidor fixa.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  **sp_update_targetservergroup** deve ser executado a partir de **msdb** banco de dados.  
   
 ## <a name="examples"></a>Exemplos  

@@ -6,20 +6,17 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a1454493-1c86-46c2-ada8-d3c6fcdaf3c1
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0be38956ee55ba42c02cfe8002ef1b3937aff665
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 41c340d2d84e80100788ae2d797a37fd048e4264
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272845"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47735514"
 ---
 # <a name="step-2-initialize-the-main-list-box"></a>Etapa 2: Inicializar a caixa de listagem principal
 Para declarar objetos globais de registro e o conjunto de registros, insira o código a seguir (geral) (declarações) para Form1:  
@@ -30,10 +27,10 @@ Dim grec As Record
 Dim grs As Recordset  
 ```  
   
- Esse código declara as referências de objeto global para objetos de registro e o conjunto de registros que serão usadas posteriormente nesse cenário.  
+ Esse código declara referências de objeto global para objetos de registro e o conjunto de registros que serão usados mais tarde neste cenário.  
   
 ## <a name="to-connect-to-a-url-and-populate-lstmain"></a>Para se conectar a uma URL e popular lstMain  
- Insira o seguinte código para o manipulador de eventos de carregar formulário para Form1:  
+ Insira o seguinte código no manipulador de eventos de carregamento de formulário para Form1:  
   
 ```  
 Private Sub Form_Load()  
@@ -49,9 +46,9 @@ Private Sub Form_Load()
 End Sub  
 ```  
   
- Esse código cria uma instância de objetos globais de registro e o conjunto de registros. O objeto de registro, `grec`, é aberta com uma URL especificada como o ActiveConnection. Se a URL existir, ele é aberto; Se ele ainda não existir, ele será criado. Observe que você deve substituir "http://servername/foldername/" com uma URL válida de seu ambiente.  
+ Esse código instancia os objetos globais de registro e o conjunto de registros. O objeto de registro, `grec`, é aberta com uma URL especificada como o ActiveConnection. Se a URL existir, ele é aberto; Se ele ainda não existir, ele será criado. Observe que você deve substituir "http://servername/foldername/" com uma URL válida do seu ambiente.  
   
- O objeto de conjunto de registros, `grs`, é aberta nos filhos do registro, `grec`. Em seguida, `lstMain` é preenchida com os nomes de arquivo dos recursos publicados para a URL.  
+ O objeto de conjunto de registros `grs`, é aberta nos filhos do registro, `grec`. Em seguida, `lstMain` é preenchida com os nomes de arquivo dos recursos publicados para a URL.  
   
 ## <a name="see-also"></a>Consulte também  
  [Cenário de publicação na Internet](../../../ado/guide/data/internet-publishing-scenario.md)   

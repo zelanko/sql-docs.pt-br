@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - smallest integer great than or equal to expression
 - CEILING function [SSIS]
 ms.assetid: c35bd4ee-1ab6-46ab-89a7-cf771527faa2
-caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d50b8c181eb600003ccad22bc6a968b3898477f5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bb8882090de6302d6abeaa7ee8112ca31112e938
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37256792"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48084936"
 ---
 # <a name="ceiling-ssis-expression"></a>CEILING (Expressão SSIS)
   Retorna o menor inteiro que é maior que ou igual a uma expressão numérica.  
@@ -41,7 +38,7 @@ CEILING(numeric_expression)
 ## <a name="result-types"></a>Tipos de resultado  
  O tipo de dados da expressão numérica submetido à função.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  CEILING retornará um resultado nulo se o argumento for nulo.  
   
 ## <a name="expression-examples"></a>Exemplos de expressões  

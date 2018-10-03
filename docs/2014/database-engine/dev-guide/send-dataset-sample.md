@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: d10dacbc-1b0f-4a4b-b53b-83eae2a6d809
-caps.latest.revision: 13
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 03552b94c8a50bea83d1d5e69f589379baf81697
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c736cbf5a5c6fd98f3635224c21c785468ce932d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37171357"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48105696"
 ---
 # <a name="send-dataset-sample"></a>Exemplo Send DataSet
   O exemplo Send `DataSet` demonstra como retornar um `DataSet` baseado em ADO.NET em um procedimento armazenado de servidor baseado em CLR (common language runtime) como um conjunto de resultados para o cliente. Isso é útil, por exemplo, quando tal procedimento armazenado preenche um `DataSet` usando os resultados de uma consulta e, em seguida, manipula os dados contidos nesse `DataSet`. Alternativamente, isso será útil se o procedimento armazenado criar e popular um `DataSet` do zero. O exemplo é composto de duas classes, `DataSetUtilities` e `TestSendDataSet`. O método `SendDataSet` na classe `DataSetUtilities` implementa um modo geral de transmitir o conteúdo de uma instância `DataSet` ao cliente. O método `DoTest` definido na classe `TestSendDataSet` verifica se o método `SendDataSet` funciona criando um `DataSet` e preenchendo-o com os dados do procedimento armazenado Transact-SQL `uspGetTwoBOMTestData` . O `uspGetTwoBOMTestData` executa o procedimento armazenado Transact-SQL `uspGetBillOfMaterials` duas vezes para consultar repetidamente a lista de materiais dos dois produtos especificados como parâmetros para o procedimento armazenado `usp_GetTwoBOMTestData` . Em geral, depois de preencher o conjunto de dados, os dados seriam modificados antes de invocar `SendDataSet` para entregar os dados no conjunto de dados como um conjunto de resultados para o cliente. Para simplificar, esse exemplo retorna os dados sem modificação.  

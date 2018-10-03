@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 12/02/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - simultaneous connections [SQL Server]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - maximum number of simultaneous user connections
 - connections [SQL Server], simultaneous
 ms.assetid: 53beee6e-59fe-4276-9abb-8f1cec2a3508
-caps.latest.revision: 27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ce587032e5956e4f86792a60d361e19b4f2a08e4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a1d1d29ee5c4fcfc7b13267e6ea4e6b0e96d1269
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37228206"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48122306"
 ---
 # <a name="configure-the-user-connections-server-configuration-option"></a>Configurar a opção de configuração de servidor user connections
   Este tópico descreve como definir a opção de configuração de servidor **user connections** no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A opção **user connections** especifica o número máximo de conexões de usuário simultâneas permitido em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O número real de conexões de usuário permitidas depende também da versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que você está usando e dos limites de seu aplicativo ou aplicativos e hardware. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite um máximo de 32.767 conexões de usuário. Como **conexões de usuário** é uma opção dinâmica (autoconfigurável), o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ajusta o número máximo de conexões de usuário automaticamente conforme o necessário, até o valor máximo permitido. Por exemplo, se somente 10 usuários estiverem conectados, 10 objetos de conexão de usuário serão alocados. Na maioria dos casos, não é necessário alterar o valor dessa opção. O padrão é 0, o que significa que as permitidas conexões máximas (32,767) de usuário são permitidas.  

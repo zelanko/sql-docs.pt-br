@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - members [Analysis Services], hierarchies
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - multilevel hierarchies [Analysis Services]
 - unbalanced hierarchies [Analysis Services]
 ms.assetid: 9394e9a3-2242-4f0e-85e0-25d499d2d3b6
-caps.latest.revision: 39
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a680e531c91d56db0271f373066fb768049f7f8f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c9e5b2be2d3c6c83e91fd735f3e32c826e2f50c0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37286144"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48152776"
 ---
 # <a name="user-hierarchies"></a>Hierarquias do usuário
   Hierarquias definidas pelo usuário são hierarquias definidas pelo usuário de atributos que são usados em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para organizar os membros de uma dimensão em estruturas hierárquicas e fornecer caminhos de navegação em um cubo. Por exemplo, a tabela a seguir define uma tabela de dimensões para uma dimensão temporal. A tabela de dimensão oferece suporte para três atributos nomeados, Ano, Trimestre e Mês.  

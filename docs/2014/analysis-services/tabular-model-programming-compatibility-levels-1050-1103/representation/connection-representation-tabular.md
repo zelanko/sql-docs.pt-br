@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 4b410b16-d36e-4185-bb20-922e66e5e2b7
-caps.latest.revision: 8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 136c23698e9fe9aff170a66d6a959f57e8cf304a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e7656ef997ae7cd05816a24813566e8c58510719
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37195996"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48152846"
 ---
 # <a name="connection-representation-tabular"></a>Representação de conexão (de tabela)
   O objeto de conexão define a origem dos dados que populam o modelo de tabela.  
@@ -31,7 +28,7 @@ ms.locfileid: "37195996"
 ### <a name="connection-in-amo"></a>Conexão em AMO  
  Ao usar o AMO para gerenciar um banco de dados modelo de tabela, o objeto <xref:Microsoft.AnalysisServices.DataSource> no AMO coincide um-para-um ao objeto lógico de conexão.  
   
- O trecho de código a seguir mostra como criar uma fonte de dados de AMO ou objeto de conexão em um modelo de tabela.  
+ O snippet de código a seguir mostra como criar uma fonte de dados de AMO ou objeto de conexão em um modelo de tabela.  
   
 ```  
   

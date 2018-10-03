@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying article properties
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - publications [SQL Server replication], changing properties
 - articles [SQL Server replication], properties
 ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
-caps.latest.revision: 19
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c89fc300fded846216250928852d4ac3721fa950
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9cdbbbedacd9f88133e0d17411f441aa5ed884a9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37296596"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149396"
 ---
 # <a name="change-publication-and-article-properties"></a>Alterar propriedades da publicação e do artigo
   Depois que uma publicação foi criada, a maior parte das propriedades de publicação e do artigo podem ser alteradas, mas algumas requerem que um novo instantâneo seja gerado e/ou que as assinaturas sejam reinicializadas. Este tópico fornece informações sobre todas as propriedades que requerem uma ou ambas as ações, se forem alteradas.  

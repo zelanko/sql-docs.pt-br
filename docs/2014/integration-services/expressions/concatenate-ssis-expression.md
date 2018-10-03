@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - concatenation [Integration Services]
 - + (concatenate operator)
 - concatenate operator (+)
 ms.assetid: 0fed6334-7a4f-42dc-a611-191fcaa0e443
-caps.latest.revision: 37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d4a443e62b96a4e96cdd12f91e96f42841eb1397
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 809586f89288a930a672e2f6daa45fafe7901ec6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37235236"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48146236"
 ---
 # <a name="-concatenate-ssis-expression"></a>+ (Concatenar) (Expressão SSIS)
   Concatena duas expressões em uma expressão.  
@@ -43,7 +40,7 @@ character_expression1 + character_expression2
 ## <a name="result-types"></a>Tipos de resultado  
  DT_WSTR  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A expressão pode usar um ou ambos os tipos de dados DT_STR e DT_WSTR.  
   
  A concatenação dos tipos de dados DT_STR e DT_WSTR retorna um resultado do tipo DT_WSTR. O comprimento da cadeia de caracteres é a soma dos comprimentos das cadeias originais expressas em caracteres.  

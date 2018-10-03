@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.backupdevice.general.f1
 ms.assetid: c557e37d-319e-4adb-a0c1-94189b15d2ac
-caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8f0c8574282f8cc2e6958b1cc161522e145b7b78
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7a4f23fd3d6d8208410c520676ee4e0c8bbe00fd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37203486"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48140686"
 ---
 # <a name="backup-device-general-page"></a>Dispositivo de backup (página Geral)
   Use a página **Geral** para especificar ou exibir as propriedades gerais de um dispositivo de backup lógico.  
@@ -55,7 +52,7 @@ ms.locfileid: "37203486"
     > [!IMPORTANT]  
     >  Backups de dados em uma rede podem estar sujeitos a erros de rede; assim, recomendamos que você verifique a operação de backup quando ela estiver concluída. Para obter mais informações, consulte [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-verifyonly-transact-sql).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Os backups em um conjunto de um ou mais dispositivos de backup compõem um único conjunto de mídias. Um *conjunto de mídias* é uma coleção ordenada de mídias de backup, fitas ou arquivos de disco, em que uma ou mais operações de backup foram gravadas, usando um número e tipo fixo de dispositivos de backup. Para obter informações sobre conjuntos de mídias, consulte [Conjuntos de mídias, famílias de mídia e conjuntos de backup &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md).  
   
  O dispositivo de backup físico, que corresponde a um dispositivo de backup lógico, é inicializado quando o primeiro backup no conjunto de mídia é escrito ao dispositivo de backup lógico. Se o dispositivo de backup físico for um arquivo que ainda não existe, ele será criado nesse momento.  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.validate.mergeoptions.f1
 helpviewer_keywords:
 - Subscription Validation Options dialog box
 ms.assetid: 4958c4ab-2025-42ce-b836-6fb4e9e6f24d
-caps.latest.revision: 14
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ba1d468b04ab25ee97cacde6ef582f193d8a1856
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4837c185280f68afb025663cdd1da71747f0d3af
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37166747"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48169838"
 ---
 # <a name="subscription-validation-options-merge-subscriptions"></a>Opções de Validação de Assinatura (assinaturas de mesclagem)
   Use a caixa de diálogo **Opções de Validação de Assinatura** para especificar se a validação deve usar somente uma contagem de linhas ou uma contagem de linhas e uma soma de verificação binária.  

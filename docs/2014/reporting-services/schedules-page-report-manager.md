@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ef19d96e-9f00-4434-950e-152dda9c1ced
-caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: bf66402ba021949bce1eb2810d634177ddf1916d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d4c3dab6371b9272436a49147c8ff2c09b2620d9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37198506"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48157186"
 ---
 # <a name="schedules-page-report-manager"></a>Página Agendas (Gerenciador de Relatórios)
   Use a página Agendas para criar, modificar, excluir, pausar ou reiniciar agendas compartilhadas. Uma agenda compartilhada é uma agenda nomeada que você pode criar e gerenciar separadamente de relatórios, assinaturas e outros processos que consomem informações de agenda. Os usuários podem selecionar agendas compartilhadas que você fornece.  

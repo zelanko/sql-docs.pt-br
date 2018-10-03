@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - ISSCommandWithParameters::SetParameterProperties (OLE DB)
@@ -15,17 +13,16 @@ apitype: COM
 helpviewer_keywords:
 - SetParameterProperties method
 ms.assetid: 4cd0281a-a2a0-43df-8e46-eb478b64cb4b
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7747c8efdc01efdc30ee3c6b8b369c7613aa1874
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 01d61838d1267b54eedd1c389c198d50fa52f7d5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43084234"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47844484"
 ---
 # <a name="isscommandwithparameterssetparameterproperties-ole-db"></a>ISSCommandWithParameters::SetParameterProperties (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +49,7 @@ HRESULT SetParameterProperties(
 ## <a name="return-code-values"></a>Valores do código de retorno  
  O método **ISSCommandWithParameters::SetParameterProperties** retorna os mesmos códigos de erro do método principal **ICommandProperties::SetProperties** do OLE DB.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A definição das propriedades de parâmetro com esse método é permitida para cada parâmetro por ordinal, ou com uma única chamada a **ISSCommandWithParameters::SetParameterProperties**, depois que SSPARAMPROPS tiver sido criado com base na matriz de propriedades.  
   
  O método **SetParameterInfo** precisa ser chamado antes do método **ISSCommandWithParameters::SetParameterProperties**. Se você chamar `SetParameterProperties(0, NULL)` limpará todas as propriedades de parâmetro especificadas, ao passo que se chamar `SetParameterInfo(0,NULL,NULL)`, limpará todas as informações do parâmetro incluindo as propriedades que podem ser associadas a um parâmetro.  

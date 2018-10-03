@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9b9786fe-9e80-429a-afcb-dc3b3dd6f0b0
-caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d434f30fb3ef34c97aa38463aa9a28c115ac5e46
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 19d11ad01c36a681b6a7ba80eaadad56e5c28785
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37321246"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168496"
 ---
 # <a name="import-a-knowledge-base-from-a-dqs-file"></a>Importar uma base de dados de conhecimento de um arquivo .dqs
   Este tópico descreve como importar uma base de dados de conhecimento inteira de um arquivo de dados .dqs no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Você cria o arquivo de dados exportando uma base de dados de conhecimento existente do aplicativo [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] (consulte [exportar uma Base de dados de conhecimento para um arquivo. DQS](../../2014/data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)).  
@@ -40,7 +37,7 @@ ms.locfileid: "37321246"
 ####  <a name="Permissions"></a> Permissões  
  Você deve ter a função dqs_kb_editor ou dqs_administrator no banco de dados DQS_MAIN para importar uma base de dados de conhecimento de um arquivo de dados .dqs.  
   
-##  <a name="Import"></a> Import a knowledge base from a .dqs file  
+##  <a name="Import"></a> Importar uma base de dados de conhecimento de um arquivo .dqs  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Executar o aplicativo Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
   

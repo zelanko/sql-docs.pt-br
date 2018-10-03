@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql11.asvs.ssmsimbi.RestoreFromPP.f1
 ms.assetid: 232ac8ed-77fe-47d8-acd3-59bc2fdfdf48
-caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 65f585fe2a6ac0046cebd99878f6e2bf8c5a5061
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 21b3c477c87861d224d72a52dcce89ceacf7bb3a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37250847"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48146646"
 ---
 # <a name="restore-from-powerpivot"></a>Restaurar do PowerPivot
   Você pode usar o recurso Restaurar do PowerPivot no SQL Server Management Studio para criar um novo banco de dados modelo de tabela em uma instância do Analysis Services (executando em modo Tabular) ou restaurar para um banco de dados existente de uma pasta de trabalho PowerPivot (.xlsx).  

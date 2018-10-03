@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 3e514715-9fe6-4e6a-accb-4149ffd7e0bf
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ae9955e9f052e4be2317206d5618ccf9294232cb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 111aa44a99c59fdc4bb9953903e2827c79b54104
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37325016"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48133468"
 ---
 # <a name="discoverstoragetablecolumnsegments-rowset"></a>Conjunto de linhas DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS
   Fornece informações em nível de coluna e segmento sobre tabelas de armazenamento usadas por um banco de dados do Analysis Services executado no modo tabular ou do PowerPivot. Este conjunto de linhas é usado principalmente para solução e análise de problemas.  

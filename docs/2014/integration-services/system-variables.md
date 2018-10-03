@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], variables
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - event handlers [Integration Services], variables
 - variables [Integration Services], system
 ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
-caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2c5f708afa4ce172807c1e0fd0697f6f7a29542d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7c77ca84cd844b5c49f704d44f2eca3ba34c4269
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37311966"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48163466"
 ---
 # <a name="system-variables"></a>Variáveis do sistema
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornece um conjunto de variáveis de sistema que armazena informações sobre o pacote em execução e seus objetos. Essas variáveis podem ser usadas em expressões e expressões de propriedade para personalizar pacotes, contêineres, tarefas e manipuladores de eventos.  

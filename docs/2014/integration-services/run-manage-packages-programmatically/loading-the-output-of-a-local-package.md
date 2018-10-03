@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - data flow [Integration Services], loading results
 - loading data flow results
 ms.assetid: aba8ecb7-0dcf-40d0-a2a8-64da0da94b93
-caps.latest.revision: 64
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c7b0056def4b62d7305fe5ac78db93ba15fb22a8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b8214e3da53bf87ea96edcf5fb77d9bc774f65aa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37254628"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155052"
 ---
 # <a name="loading-the-output-of-a-local-package"></a>Carregando a saída de um pacote local
   Aplicativos cliente podem ler a saída de pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] quando a saída é salva em destinos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por meio de [!INCLUDE[vstecado](../../includes/vstecado-md.md)] ou quando a saída é salva em um destino de arquivo simples por meio das classes no namespace **System.IO**. Entretanto, um aplicativo cliente também consegue ler a saída de um pacote diretamente da memória, sem precisar de uma etapa intermediária para manter os dados. A chave para essa solução é o `Microsoft.SqlServer.Dts.DtsClient` namespace, que contém implementações especializadas da `IDbConnection`, `IDbCommand`, e **IDbDataParameter** interfaces do **deSystem.Data** namespace. O assembly Microsoft.SqlServer.Dts.DtsClient.dll é instalado por padrão em **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn**.  
@@ -298,7 +295,7 @@ namespace DtsClientWParamCS
 }  
 ```  
   
-![Ícone do Integration Services (pequeno)](../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services  **<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone do Integration Services (pequeno)](../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services** <br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
 ## <a name="see-also"></a>Consulte também  
  [Compreender as diferenças entre execução local e remota](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   

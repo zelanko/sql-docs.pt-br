@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], encryption
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - rskeymgmt utility
 - scale-out deployments [Reporting Services]
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
-caps.latest.revision: 55
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e39e1bd9772ea1e05e4e2c0dbb951cba721caaa1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 28ce36cbd728787e69fcf00963aa024896d60750
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37214826"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116846"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>Utilitário rskeymgmt (SSRS)
   Extrai, restaura, cria e exclui a chave simétrica usada para proteger dados confidenciais de servidor de relatório contra acesso não autorizado. Esse utilitário também é usado para unir instâncias de servidor de relatório em uma implantação de expansão. Uma *implantação em expansão de servidor de relatório* se refere a várias instâncias do servidor de relatório que compartilham um único banco de dados do servidor de relatório.  
@@ -82,7 +79,7 @@ ms.locfileid: "37214826"
  **-r**  *installationID*  
  Remove as informações de chave simétrica de uma instância de servidor de relatório específica, removendo assim o servidor do relatório de uma implantação em expansão. O *ID_instalação* é um valor GUID que pode ser localizado no arquivo RSReportserver.config.  
   
- `-f`  *arquivo*  
+ `-f`  *Arquivo*  
  Especifica um caminho totalmente qualificado ao arquivo que armazena uma cópia de backup das chaves simétricas.  
   
  Para **rskeymgmt -e**, a chave simétrica é gravada no arquivo especificado.  
@@ -171,7 +168,7 @@ rskeymgmt -r <installationID>
 ## <a name="file-location"></a>Local do arquivo  
  Rskeymgmt.exe está localizado em **\<*drive*>:\Program Files\Microsoft SQL Server\110\Tools\Binn** ou em **\<*drive*>:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn**. Você pode executar o utilitário de qualquer pasta em seu sistema de arquivos.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Um servidor de relatório criptografa credenciais armazenadas e informações de conexão. Uma chave pública e uma chave simétrica são usadas para criptografar dados. Um banco de dados do servidor de relatório deve ter chaves válidas para que o servidor de relatório seja executado. Você pode usar **rskeymgmt** para fazer backup, excluir ou restaurar as chaves. Se as chaves não puderem ser restauradas, essa ferramenta fornecerá um modo de excluir conteúdo criptografado que não pode mais ser usado.  
   
  O utilitário **rskeymgmt** é usado para gerenciar o conjunto de chaves definido durante a instalação ou durante a inicialização. Ele se conecta ao serviço Servidor de Relatório do Windows através de um ponto de extremidade RPC (Chamada de Procedimento Remoto). O serviço Servidor de Relatório do Windows deve estar em execução para que esse utilitário funcione.  

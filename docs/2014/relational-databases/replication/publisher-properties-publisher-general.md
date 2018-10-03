@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/30/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.configdistwizard.pubproperties.general.f1
 helpviewer_keywords:
 - Publisher Properties dialog box
 ms.assetid: 9055bd4a-89cc-4059-9474-e213d7bcc36d
-caps.latest.revision: 18
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b50a28dd6faaa4731ec9c0af952b88dce487627c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0fee9e9c98f06590978ddbe3a0a136ce275f0a4a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202997"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48156999"
 ---
 # <a name="publisher-properties---publisher-general"></a>Propriedades do Publicador - Publicador, Geral
   A página **Geral** da caixa de diálogo **Propriedades do Publicador** exibe informações somente leitura no Distribuidor e no banco de dados de distribuição que o Publicador usa. Para alterar o Distribuidor ou o banco de dados de um Publicador:  

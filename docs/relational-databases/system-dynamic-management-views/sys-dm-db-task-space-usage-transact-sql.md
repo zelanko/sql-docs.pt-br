@@ -5,9 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_db_task_space_usage_TSQL
@@ -19,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_task_space_usage dynamic management view
 ms.assetid: fb0c87e5-43b9-466a-a8df-11b3851dc6d0
-caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b82cafa42738ad8608df65ffd72235a3174e39e
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 7ab12b9a0c042b96803e44c479a68a110a3c560b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43077976"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47806734"
 ---
 # <a name="sysdmdbtaskspaceusage-transact-sql"></a>sys.dm_db_task_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,7 +56,7 @@ ms.locfileid: "43077976"
 Na [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requer `VIEW SERVER STATE` permissão.   
 Na [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requer o `VIEW DATABASE STATE` permissão no banco de dados.   
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  As páginas IAM não estão incluídas em nenhuma contagem de páginas relatada pela exibição.  
   
  Os contadores de páginas são zerados (0) ao início da solicitação. Esses valores são agregados no nível de sessão quando a solicitação é concluída. Para obter mais informações, veja [sys.dm_db_session_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md).  

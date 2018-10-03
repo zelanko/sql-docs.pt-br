@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - SP:CacheRemove event class
 ms.assetid: aaa3c5c4-2d3a-4832-a473-ce9bd4fb1c17
-caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7c5e1a05ce2007c4c99a1336c997e69bbdf047dc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1965a770b7a171eca260db43348f410415f38a99
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37158417"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155828"
 ---
 # <a name="spcacheremove-event-class"></a>Classe de evento SP:CacheRemove
   A classe de evento SP:CacheRemove indica que o procedimento armazenado foi removido do cache do plano.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Size Property (ClientNetLibInfo Class)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - Size property
 ms.assetid: 66f7264e-2c18-40f5-8091-b5dd83d5716f
-caps.latest.revision: 30
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: acc960b04e3deb5299a1ac43000809ab6c42b7a3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 74a343a87403120b0cb4e06c9b8efb1c510135da
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37329352"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48157636"
 ---
 # <a name="size-property-clientnetlibinfo-class"></a>Propriedade Size (classe ClientNetLibInfo)
   Obtém o tamanho da biblioteca de rede de cliente em quilobytes.  
@@ -48,7 +45,7 @@ object
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
  Um valor uint32 que especifica o tamanho da biblioteca de rede de cliente em KB.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 ## <a name="see-also"></a>Consulte também  
  [Configurar protocolos de cliente](http://technet.microsoft.com/library/ms181035.aspx)  

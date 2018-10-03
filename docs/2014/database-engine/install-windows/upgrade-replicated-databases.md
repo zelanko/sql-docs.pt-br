@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - merge replication database upgrades [SQL Server replication]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], upgrading databases
 - upgrading replicated databases
 ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
-caps.latest.revision: 71
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2ce7d9e9a67a11e7df2d2322e2c3c9bda17f3d44
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 697f0d59cb912aef549288073922d555c3c21057
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37233806"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049998"
 ---
 # <a name="upgrade-replicated-databases"></a>Atualizar bancos de dados replicados
   O [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] suporta a atualização de bancos de dados replicados de versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; não é necessário interromper a atividade de outros nós durante a atualização de um nó. Verifique se você está em conformidade com as regras que dizem respeito às versões suportadas em uma topologia:  

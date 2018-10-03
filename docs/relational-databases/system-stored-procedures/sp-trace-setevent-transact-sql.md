@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_trace_setevent_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_setevent
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
-caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 352d406b2c8735cb09787e9cd1554a4df7dd1bc0
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 59351e8ec30cf02dc74b2d47d6ef160cd5aff74e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38005768"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47739904"
 ---
 # <a name="sptracesetevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -346,7 +342,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |13|Memória insuficiente. Retornado quando não há memória suficiente para executar a ação especificada.|  
 |16|A função não é válida para este rastreamento.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  **sp_trace_setevent** executa muitas das ações anteriormente executadas por procedimentos armazenados estendidos disponíveis em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use **sp_trace_setevent** em vez do seguinte:  
   
 -   **xp_trace_addnewqueue**  

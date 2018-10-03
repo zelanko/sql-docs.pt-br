@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 05a08baa-23cc-4011-9c2e-f60a20bb87da
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 708e829f1af3ebc9d727e3abfd6643913cd460f2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fa1fcc05363cf356d5895c0d5e6f62c037f45fb2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37330226"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48120856"
 ---
 # <a name="defaultdetails-element-csdlbi"></a>Elemento DefaultDetails (CSDLBI)
   O elemento DefaultDetails representa uma lista de referências de propriedade que juntas definem o "conjunto de campos padrão" de colunas na tabela. Cada propriedade pode fazer referência apenas a uma medida ou uma coluna.  

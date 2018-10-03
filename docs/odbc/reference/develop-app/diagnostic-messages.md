@@ -5,40 +5,37 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - diagnostic information [ODBC], diagnostic messages messages
 - error messages [ODBC], diagnostic messages
 - diagnostic messages [ODBC]
 ms.assetid: 98027871-9901-476e-a722-ee58b7723c1f
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9ea827e040afa43762edc32c5a4c28de5581b94e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 883cd29d8628f1e9270ae95a772c4d116b896710
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911301"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47767624"
 ---
 # <a name="diagnostic-messages"></a>Mensagens de diagnóstico
-Uma mensagem de diagnóstico é retornada com cada SQLSTATE. O SQLSTATE mesmo geralmente é retornado com um número de mensagens diferentes. Por exemplo, o SQLSTATE 42000 (sintaxe ou violação de acesso) é retornado para a maioria dos erros de sintaxe SQL. No entanto, cada erro de sintaxe costuma ser descrita por uma mensagem diferente.  
+Uma mensagem de diagnóstico será retornada com cada SQLSTATE. O SQLSTATE mesmo frequentemente é retornado com um número de mensagens diferentes. Por exemplo, o SQLSTATE 42000 (sintaxe ou violação de acesso) é retornado para a maioria dos erros de sintaxe SQL. No entanto, cada erro de sintaxe é a probabilidade de ser descrito por uma mensagem diferente.  
   
- Exemplos de mensagens de diagnósticos são listados na coluna de erro na tabela de SQLSTATEs no Apêndice A e em cada função. Embora drivers podem retornar essas mensagens, eles são mais prováveis de retornar qualquer mensagem que é passada a eles pela fonte de dados.  
+ Mensagens de diagnóstico de exemplo são listadas na coluna de erro na tabela de SQLSTATEs no Apêndice A e em cada função. Embora drivers podem retornar essas mensagens, eles são mais prováveis de retornar qualquer mensagem é passada a eles pela fonte de dados.  
   
- Aplicativos geralmente exibem mensagens de diagnóstico para o usuário, juntamente com o SQLSTATE e o código de erro nativo. Isso ajuda o usuário e a equipe de suporte determinar a causa de problemas. As informações de componente inseridas na mensagem serão particularmente útil ao fazer isso.  
+ Aplicativos geralmente exibem mensagens de diagnóstico para o usuário, junto com o SQLSTATE e o código de erro nativo. Isso ajuda o usuário e equipe de suporte determinar a causa de quaisquer problemas. As informações de componente inseridas na mensagem são particularmente útil ao fazer isso.  
   
- Mensagens de diagnóstico vêm de fontes de dados e componentes em uma conexão ODBC, como drivers, gateways e o Gerenciador de Driver. Normalmente, fontes de dados dão suporte diretamente ODBC. Consequentemente, se um componente em uma conexão ODBC recebe uma mensagem de uma fonte de dados, ele deve identificar a fonte de dados como a origem da mensagem. Ele deve também se identificar como o componente que recebeu a mensagem.  
+ Mensagens de diagnóstico provenientes de fontes de dados e componentes em uma conexão ODBC, como drivers, gateways e o Gerenciador de Driver. Normalmente, fontes de dados não suportam diretamente ODBC. Consequentemente, se um componente em uma conexão ODBC recebe uma mensagem de uma fonte de dados, ele deverá identificar a fonte de dados como a origem da mensagem. Ele também deve identificar em si como o componente que recebeu a mensagem.  
   
- Se a fonte de um erro ou aviso é um componente em si, a mensagem de diagnóstica deve explicar isso. Portanto, o texto de mensagens tem dois formatos diferentes. Para erros e avisos que não ocorram em uma fonte de dados, a mensagem de diagnóstica deve usar este formato:  
+ Se a fonte de um erro ou aviso é um componente em si, a mensagem de diagnóstico deve explicar isso. Portanto, o texto de mensagens tem dois formatos diferentes. Para erros e avisos que não ocorram em uma fonte de dados, a mensagem de diagnóstico deve usar este formato:  
   
  **[** *identificador de fornecedor* **] [** *identificador de componente de ODBC* **]** *texto fornecido pelo componente*  
   
- Para erros e avisos que ocorrem em uma fonte de dados, a mensagem de diagnóstica deve usar este formato:  
+ Para erros e avisos que ocorrem em uma fonte de dados, a mensagem de diagnóstico deve usar este formato:  
   
  **[** *identificador de fornecedor* **] [** *identificador de componente de ODBC* **] [** *identificador da fonte de dados*  **]** *dados--fornecido-texto de origem*  
   
@@ -47,8 +44,8 @@ Uma mensagem de diagnóstico é retornada com cada SQLSTATE. O SQLSTATE mesmo ge
 |Elemento|Significado|  
 |-------------|-------------|  
 |*Identificador de fornecedor*|Identifica o fornecedor do componente no qual ocorreu o erro ou aviso ou que recebeu o erro ou aviso diretamente da fonte de dados.|  
-|*Identificador de componente de ODBC*|Identifica o componente no qual ocorreu o erro ou aviso ou que recebeu o erro ou aviso diretamente da fonte de dados.|  
-|*Identificador da fonte de dados*|Identifica a fonte de dados. Para drivers baseados em arquivo, isso geralmente é um formato de arquivo, como os drivers baseados em DBMS para Xbase [1], este é o produto do DBMS.|  
+|*Identificador do componente de ODBC*|Identifica o componente no qual ocorreu o erro ou aviso ou que recebeu o erro ou aviso diretamente da fonte de dados.|  
+|*Identificador da fonte de dados*|Identifica a fonte de dados. Para drivers baseados em arquivo, isso normalmente é um formato de arquivo, como drivers baseados em DBMS para Xbase [1], isso é o produto do DBMS.|  
 |*texto fornecido pelo componente*|Gerado pelo componente do ODBC.|  
 |*dados de origem-fornecido-texto*|Gerado pela fonte de dados.|  
   

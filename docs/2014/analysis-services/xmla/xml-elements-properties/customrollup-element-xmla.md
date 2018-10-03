@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - CustomRollup Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - CustomRollup element
 ms.assetid: b266ac8b-1ae7-461c-9127-3c5642f829f5
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a5da3f49101d900088e11cbb954aa65dbbf16620
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d9000cde33d3f4440f5aefd2c81b087d263c5db0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37261102"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48157706"
 ---
 # <a name="customrollup-element-xmla"></a>Elemento CustomRollup (XMLA)
   Contém a fórmula de acúmulo personalizado para um membro de atributo representado pelo pai [atributo](attribute-element-xmla.md) elemento.  
@@ -53,7 +50,7 @@ ms.locfileid: "37261102"
 |Característica|Description|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|Cadeia de caracteres|  
-|Valor padrão|Nenhum|  
+|Valor padrão|None|  
 |Cardinalidade|0-1: elemento opcional que pode ocorrer apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -61,9 +58,9 @@ ms.locfileid: "37261102"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|[Atributo](attribute-element-xmla.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O elemento `CustomRollup` contém uma linguagem MDX que define o comportamento de acúmulo do membro de atributo definido pelo elemento pai `Attribute`.  
   
  Para obter mais informações sobre expressões MDX, consulte [expressões &#40;MDX&#41;](/sql/mdx/expressions-mdx).  

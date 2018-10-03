@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - replication upgrade issues
 - upgrading replication
 ms.assetid: 18898388-5158-407b-9774-639af99e8f07
-caps.latest.revision: 29
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 41fb3b0a4176f6b069f5e651616e4a0b1bfe6279
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5ec1e3b914a5dd0a3df05e181b7f11d5bef6c30b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37257772"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48158936"
 ---
 # <a name="replication-upgrade-issues"></a>Problemas na atualização da replicação
   Os tópicos a seguir descrevem os problemas de replicação que podem afetar a atualização para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Esses tópicos descrevem ações que você pode fazer para ajudar a reduzir os efeitos destas alterações em seu ambiente.  

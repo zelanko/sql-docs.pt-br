@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 29a00a41-5b0d-44b2-8a86-1b16fe507768
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cca12397250ad12e4f892d00271b9afdbb81ca2f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 25d79370893dc2d3bfef06890baf5ffd88f0da53
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319466"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48171256"
 ---
 # <a name="connection-string-properties-analysis-services"></a>Propriedades de cadeia de conexão (Analysis Services)
   Este tópico documenta as propriedades da cadeia de conexão que você pode definir em uma das ferramentas de designer ou de administração, ou que você pode ver nas cadeias de conexão criadas por aplicativos cliente que se conectam aos dados do Analysis Services ou os consultam. Sendo assim, ele aborda apenas um subconjunto das propriedades disponíveis. A lista completa inclui várias propriedades de servidor e de banco de dados, permitindo que você personalize a conexão de um aplicativo específico, independentemente de como a instância ou o banco de dados está configurado no servidor.  

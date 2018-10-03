@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - components [Integration Services], data flow
 - data flow [Integration Services], components
 ms.assetid: c06065cf-43e5-4b6b-9824-7309d7f5e35e
-caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 082655f520c64c453844e0f3911c61e9eca66bd4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fe429fb3c4aa56516cad543d42250545b8e24a65
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37231506"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48135226"
 ---
 # <a name="adding-data-flow-components-programmatically"></a>Adicionando componentes de fluxo de dados programaticamente
   Ao compilar um fluxo de dados, comece adicionando componentes. Em seguida, configure esses componentes e os conecte para estabelecer o fluxo de dados em tempo de execução. Esta seção descreve como adicionar um componente à tarefa de fluxo de dados, criar a instância tempo de design do componente e configurar o componente. Para obter informaçõessobre como conectar componentes, consulte [Conectar componentes do fluxo de dados programaticamente](../building-packages-programmatically/connecting-data-flow-components-programmatically.md).  
@@ -287,7 +284,7 @@ End Module
 ## <a name="external-resources"></a>Recursos externos  
  Entrada de blog, [EzAPI – Atualizado para SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=243223) em blogs.msdn.com.  
   
-![Ícone do Integration Services (pequeno)](../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services  **<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone do Integration Services (pequeno)](../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services** <br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
 ## <a name="see-also"></a>Consulte também  
  [Conectar componentes de fluxo de dados programaticamente](../building-packages-programmatically/connecting-data-flow-components-programmatically.md)  

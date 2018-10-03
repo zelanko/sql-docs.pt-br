@@ -4,15 +4,10 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
@@ -22,16 +17,15 @@ helpviewer_keywords:
 - static context
 - dynamic context [XQuery]
 ms.assetid: 5059f858-086a-40d4-811e-81fedaa18b06
-caps.latest.revision: 19
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4b9100ff14fc4cbd5e7d2a94830741fa6a1ceda2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 31b5cbd8d446cbda034ee0e13e7e991607973ec9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077573"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47755914"
 ---
 # <a name="expression-context-and-query-evaluation-xquery"></a>Contexto de expressão e avaliação de consulta (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +39,7 @@ ms.locfileid: "33077573"
 ## <a name="static-context"></a>Contexto estático  
  A inicialização de contexto estático refere-se ao processo de reunir todas as informações para análise estática da expressão. Como parte da inicialização do contexto estático, o seguinte é completado:  
   
--   O **limite o espaço em branco** política é configurada para ser eliminada. Portanto, a boundary white space não é mantida pelo **qualquer elemento** e **atributo** construtores na consulta. Por exemplo:  
+-   O **limite o espaço em branco** política é configurada para ser eliminada. Portanto, a boundary white space não é preservada pela **qualquer elemento** e **atributo** construtores na consulta. Por exemplo:  
   
     ```  
     declare @x xml  
@@ -87,7 +81,7 @@ ms.locfileid: "33077573"
   
 -   Se a consulta com um tipo **xml** coluna ou variável, os componentes da coleção de esquemas XML associada com a coluna ou variável são importados para o contexto estático. Para obter mais informações, consulte [Comparar XML digitado com XML não digitado](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
   
--   Para todo tipo atômico nos esquemas importados, uma função de conversão também se torna disponível no contexto estático. Isso é ilustrado no exemplo a seguir. Neste exemplo, uma consulta é especificada em relação a um tipo **xml** variável. A coleção de esquemas XML associada a essa variável define um tipo atômico, myType. Correspondendo a esse tipo, uma função de conversão, **myType()**, está disponível durante a análise estática. A expressão de consulta (`ns:myType(0)`) retorna um valor de myType.  
+-   Para todo tipo atômico nos esquemas importados, uma função de conversão também se torna disponível no contexto estático. Isso é ilustrado no exemplo a seguir. Neste exemplo, uma consulta é especificada em relação a um tipado **xml** variável. A coleção de esquemas XML associada a essa variável define um tipo atômico, myType. Correspondendo a esse tipo, uma função de conversão **myType()**, está disponível durante a análise estática. A expressão de consulta (`ns:myType(0)`) retorna um valor de myType.  
   
     ```  
     -- DROP XML SCHEMA COLLECTION SC  
@@ -160,7 +154,7 @@ ms.locfileid: "33077573"
   
 -   Não há suporte para o modo de compatibilidade XPath.  
   
--   Para a construção XML, só há suporte para o modo de construção de tira. Essa é a configuração padrão. Portanto, o tipo do nó de elemento construído é **xdt: sem tipo** tipo e os atributos são do **XDT: untypedatomic** tipo.  
+-   Para a construção XML, só há suporte para o modo de construção de tira. Essa é a configuração padrão. Portanto, o tipo do nó de elemento construído é do **xdt: sem-tipo** são de tipo e os atributos do **XDT: untypedatomic** tipo.  
   
 -   Só há suporte para o modo de ordenação ordenada.  
   
@@ -181,7 +175,7 @@ ms.locfileid: "33077573"
   
 -   O foco de expressão, como item de contexto, posição de contexto e tamanho de contexto, é inicializado como mostrado a seguir. Observe que todos esses valores podem ser substituídos pelo [método Nodes ()](../t-sql/xml/nodes-method-xml-data-type.md).  
   
-    -   O **xml** tipo de dados define o item de contexto, o nó sendo processado para o nó de documento.  
+    -   O **xml** tipo de dados define o item de contexto, o nó que está sendo processado, para o nó do documento.  
   
     -   A posição de contexto, a posição do item de contexto relativo aos nós que são processados, é primeiro configurada como 1.  
   
@@ -190,11 +184,11 @@ ms.locfileid: "33077573"
 ### <a name="implementation-restrictions"></a>Restrições de implementação  
  A seguir são descritas as limitações relacionadas ao contexto dinâmico:  
   
--   O **data e hora atuais** funções de contexto, **fn:current-data**, **fn:current-tempo**, e **fn:current-dateTime**, não são com suporte.  
+-   O **data e hora atuais** funções de contexto **fn:current-data**, **fn:current-hora**, e **fn:current-dateTime**, não são com suporte.  
   
--   O **fuso horário implícito** é fixado como UTC + 0 e não pode ser alterado.  
+-   O **fuso horário implícito** é fixo como UTC+0 e não pode ser alterado.  
   
--   O **fn:doc()** não há suporte para a função. Todas as consultas são executadas em **xml** colunas ou variáveis de tipo.  
+-   O **fn:doc()** não há suporte para a função. Todas as consultas são executadas no **xml** variáveis ou colunas do tipo.  
   
 -   O **fn:collection()** não há suporte para a função.  
   

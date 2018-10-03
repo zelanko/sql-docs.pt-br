@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 09/01/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b5cd35e0-3d8f-4784-9172-93d60c730321
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4d2e5434ae7f306b3f4a8de1d1c7356beb989b82
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c52425d05f7e9acf8ea5468dff21f17aaf30ebe4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37180987"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48163676"
 ---
 # <a name="create-and-customize-powerpivot-gallery"></a>Criar e personalizar uma galeria do PowerPivot
   A Galeria PowerPivot é um tipo especial de biblioteca de documentos do SharePoint que fornece visualização avançada e gerenciamento de documentos das pastas de trabalho do Excel publicadas e relatórios dos Reporting Services que contêm dados PowerPivot.  
@@ -63,7 +60,7 @@ ms.locfileid: "37180987"
   
  As imagens de visualização se baseiam na maneira como a pasta de trabalho é processada pelos Serviços do Excel. A representação na Galeria [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] deve ser idêntica àquela que você vê ao exibir uma pasta de trabalho [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] em um navegador. No entanto, a visualização tem uma área da superfície limitada. Partes de uma pasta de trabalho ou de um relatório podem ser recortadas para ela se ajustar ao espaço disponível. Talvez você precise abrir uma pasta de trabalho ou um relatório para exibir o documento em sua totalidade.  
   
- Há suporte total para a atualização dados de pastas de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] a partir de fontes de dados externas na Galeria [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , mas isso exige configuração adicional. O administrador de um farm ou serviço deve adicionar a Galeria [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] como um local confiável dos Serviços do Excel. Para obter mais informações, consulte [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
+ Há suporte total para a atualização dados de pastas de trabalho do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] a partir de fontes de dados externas na Galeria [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , mas isso exige configuração adicional. O administrador de um farm ou serviço deve adicionar a Galeria [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] como um local confiável dos Serviços do Excel. Para obter mais informações, consulte [criar um local confiável para sites do PowerPivot na Administração Central](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   
 ##  <a name="createlib"></a> Criar a Galeria PowerPivot  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] é criada para você durante a instalação do [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] usando-se a opção de instalação Novo Servidor. Se você adicionar o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] a um farm existente ou se desejar uma biblioteca adicional, poderá criar uma nova para seu aplicativo ou site.  

@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: db1d668a-23b7-4757-a9c5-1bd848ba7f6d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9fa7957927c04f883e7aedf5f19571c41fd21e30
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 65c45ab0696792268cc6268503054a894161114a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37417915"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48162746"
 ---
 # <a name="delete-user-defined-functions"></a>Excluir funções definidas pelo usuário
   Você pode excluir (remover) funções definidas pelo usuário no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]  

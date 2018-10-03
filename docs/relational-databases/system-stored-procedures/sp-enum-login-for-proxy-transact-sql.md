@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_enum_login_for_proxy_TSQL
@@ -20,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 7faec16e49bb2776babb126a5f4d314889b70c2b
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 9250f4c7da207561c935d7aa1c72ac4df7104526
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43036268"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47799426"
 ---
 # <a name="spenumloginforproxy-transact-sql"></a>sp_enum_login_for_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +63,7 @@ sp_enum_login_for_proxy
 |**name**|**sysname**|Nome da entidade de segurança da associação.|  
 |**flags**|**int**|Tipo da entidade de segurança.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logon<br /><br /> **1** = função de sistema fixa<br /><br /> **2** = função de banco de dados em **msdb**|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Quando nenhum parâmetro for fornecido, **sp_enum_login_for_proxy** lista informações sobre todos os logons na instância para todo proxy.  
   
  Quando uma id de proxy ou nome de proxy é fornecido, **sp_enum_login_for_proxy** lista logons que têm acesso ao proxy. Quando um nome de logon é fornecido, **sp_enum_login_for_proxy** listas os proxies que o logon tem acessem ao.  

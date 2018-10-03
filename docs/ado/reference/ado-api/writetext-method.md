@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,19 +14,18 @@ f1_keywords:
 helpviewer_keywords:
 - WriteText method [ADO]
 ms.assetid: 7a669048-13f4-4574-a2b1-985e089729d5
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c38b1e8573e59d4446ff0a4dbfebf1cc627b3863
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a3b50db388151de1f5b99d8d9a3f48904e6d7c2c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283185"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47679884"
 ---
 # <a name="writetext-method"></a>Método WriteText
-Grava uma cadeia de caracteres de texto especificado para um [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) objeto.  
+Grava uma cadeia de caracteres de texto especificado para um [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,15 +41,15 @@ Stream.WriteText Data, Options
  *Opções*  
  Opcional. Um [StreamWriteEnum](../../../ado/reference/ado-api/streamwriteenum.md) valor que especifica se um caractere de separador de linha deve ser gravado no final da cadeia de caracteres especificada.  
   
-## <a name="remarks"></a>Remarks  
- Cadeias de caracteres especificadas são gravadas para o **fluxo** objeto sem espaços ou caracteres entre cada cadeia de caracteres.  
+## <a name="remarks"></a>Comentários  
+ Cadeias de caracteres especificadas são gravadas para o **Stream** objeto sem espaços ou caracteres entre cada cadeia de caracteres.  
   
- Atual [posição](../../../ado/reference/ado-api/position-property-ado.md) é definido como o caractere após os dados gravados. O **WriteText** método não trunca o restante dos dados em um fluxo. Se você deseja truncar esses caracteres, chamar [SetEOS](../../../ado/reference/ado-api/seteos-method.md).  
+ O atual [posição](../../../ado/reference/ado-api/position-property-ado.md) é definido como o caractere após os dados gravados. O **WriteText** método não trunca o restante dos dados em um fluxo. Se você deseja truncar esses caracteres, chame [SetEOS](../../../ado/reference/ado-api/seteos-method.md).  
   
- Se você gravar depois atual [EOS](../../../ado/reference/ado-api/eos-property.md) posição, o [tamanho](../../../ado/reference/ado-api/size-property-ado-stream.md) do **fluxo** aumenta para conter caracteres de nova e **EOS** será movido para o último byte novo no **fluxo**.  
+ Se você gravar depois atual [EOS](../../../ado/reference/ado-api/eos-property.md) posição, o [tamanho](../../../ado/reference/ado-api/size-property-ado-stream.md) da **Stream** aumenta para conter quaisquer caracteres de nova, e **EOS** passará para o novo último byte na **Stream**.  
   
 > [!NOTE]
->  O **WriteText** método é usado com fluxos de texto ([tipo](../../../ado/reference/ado-api/type-property-ado-stream.md) é **adTypeText**). Para fluxos binários (**tipo** é **adTypeBinary**), use [gravar](../../../ado/reference/ado-api/write-method.md).  
+>  O **WriteText** método é usado com fluxos de texto ([tipo](../../../ado/reference/ado-api/type-property-ado-stream.md) está **adTypeText**). Para fluxos binários (**tipo** é **adTypeBinary**), use [gravar](../../../ado/reference/ado-api/write-method.md).  
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  

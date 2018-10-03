@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 72dfd37f-dbe7-4d1d-bda6-7eb54c7922d3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9dc290b0cc833b46b11d0db0df42301be098a1ba
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d64724108630e64ecfd654367180a6603aabe3e5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37286542"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48125932"
 ---
 # <a name="save-scripts-as-projects-or-solutions"></a>Salvar scripts como projetos ou soluções
   Desenvolvedores familiarizados com o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio darão as boas-vindas ao Gerenciador de Soluções no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Os scripts que dão suporte a seu negócio podem ser agrupados em projetos de script e os projetos de script podem ser administrados juntos, como uma solução. Quando os scripts são colocados em projetos de script e soluções, eles podem ser abertos em conjunto, como um grupo, ou salvos em conjunto em um produto de controle de código-fonte, como o Visual SourceSafe. Projetos de script incluem as informações de conexão dos scripts para serem executados corretamente, e podem incluir arquivos diferentes (não script), como um arquivo de texto de suporte.  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - indexed views [SQL Server], creating
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - indexed views [SQL Server]
 - views [SQL Server], indexed views
 ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
-caps.latest.revision: 77
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d56783347d9c5aaf59a1b45b24e2003a35df96df
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 056675637b181340dc27e7f09698a0ac439dfb6a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37150417"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164596"
 ---
 # <a name="create-indexed-views"></a>Criar exibições indexadas
   Este tópico descreve como criar uma exibição indexada no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[tsql](../../includes/tsql-md.md)]. O primeiro índice criado em uma exibição deve ser um índice clusterizado exclusivo. Depois que o índice clusterizado exclusivo for criado, você poderá criar mais índices não clusterizados. Criar um índice clusterizado exclusivo em uma exibição melhora o desempenho da consulta porque a exibição é armazenada no banco de dados da mesma forma que uma tabela com um índice clusterizado é armazenada. O otimizador de consulta pode usar exibições indexadas para acelerar a execução da consulta. A exibição não precisa estar referenciada na consulta para o otimizador considerá-la para uma substituição.  

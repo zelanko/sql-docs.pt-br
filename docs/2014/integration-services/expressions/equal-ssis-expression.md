@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - equal operator (==)
 - == (equal operator)
 ms.assetid: 36fd2354-7b93-4c95-9cf3-51ee24568950
-caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a14ebea2cea05b050b2a8bca4a51d75784b05190
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ac0cdceaa69a6d98862d464994e0fbdb127d42c4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37158617"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48135526"
 ---
 # <a name="-equal-ssis-expression"></a>== (Igual a) (Expressão SSIS)
   Executará uma comparação para determinar se duas expressões são iguais. O avaliador de expressões converte automaticamente muitos tipos de dados antes de executar a comparação. Para obter mais informações, consulte [Integration Services Data Types in Expressions](integration-services-data-types-in-expressions.md).  
@@ -44,7 +41,7 @@ expression1 == expression2
 ## <a name="result-types"></a>Tipos de resultado  
  DT_BOOL  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Se qualquer expressão na comparação for nula, o resultado da comparação será nulo. Se ambas as expressões forem nulas, o resultado será nulo.  
   
  O conjunto de expressões, *expression1* e *expression2*, deve seguir uma destas regras:  

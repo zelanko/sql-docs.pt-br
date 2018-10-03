@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - cursors [ODBC], how to topics
 ms.assetid: c502736f-bca0-45c3-ae25-d2ad52d296bf
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cfb7dc92b49ec434b9fd4bf407704afbcf795f45
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 222cb3cd5511d4c663e86ba847090cc35d84e2cd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37431635"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48143077"
 ---
 # <a name="use-cursors-odbc"></a>Usar cursores (ODBC)
     

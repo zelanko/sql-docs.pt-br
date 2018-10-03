@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - updating data [ODBC], about updating data
@@ -16,21 +14,20 @@ helpviewer_keywords:
 - INSERT [ODBC]
 - data updates [ODBC], about data updates
 ms.assetid: 5004ea72-4c49-4064-9752-f7032ba7f133
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a3c3c8bca44a5cce4a81ecef91c631f3ee1d769c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 92fb7b0e9722c52c7f1e9fc071d434f531b2fc46
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32915551"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47721904"
 ---
-# <a name="update-delete-and-insert-statements"></a>Instruções INSERT, DELETE e UPDATE
-Aplicativos baseados em SQL fazem alterações em tabelas, executando o **atualização**, **excluir**, e **inserir** instruções. Essas instruções são parte do nível de conformidade de gramática SQL mínima e devem ser suportadas por todos os drivers e fontes de dados.  
+# <a name="update-delete-and-insert-statements"></a>Instruções UPDATE, DELETE e INSERT
+Aplicativos baseados em SQL fazer alterações em tabelas, executando o **atualização**, **excluir**, e **inserir** instruções. Essas instruções fazem parte do nível de conformidade de gramática SQL mínima e devem ser suportadas por todos os drivers e fontes de dados.  
   
- A sintaxe das instruções a seguir é:  
+ É a sintaxe dessas instruções:  
   
  **UPDATE**  *table-name*  
   
@@ -40,18 +37,18 @@ Aplicativos baseados em SQL fazem alterações em tabelas, executando o **atuali
   
  [**Onde** *critério de pesquisa*]  
   
- **DELETE FROM** *nome de tabela*[**onde** *critério de pesquisa*]  
+ **DELETE FROM** *nome da tabela*[**onde** *critério de pesquisa*]  
   
- **INSERT INTO** *nome de tabela*[**(* identificador da coluna* [* *,** *identificador de coluna*]... **)**]  
+ **INSERT INTO** *nome da tabela*[**(* * * identificador da coluna* [* *,** *identificador de coluna*]... **)**]  
   
- {*especificação de consulta* &#124;  **valores (* Inserir valor* [* *,** *Inserir valor*]... **)**}  
+ {*especificação de consulta* &#124;  **valores (* * * Inserir valor* [* *,** *Inserir valor*]... **)**}  
   
- Observe que o *especificação de consulta* elemento só é válido em gramáticas Core e SQL estendida e que o *expressão* e *critério de pesquisa* elementos se tornem mais complexo em gramáticas Core e estendida do SQL.  
+ Observe que o *especificação de consulta* elemento só é válido nas gramáticas do Core e SQL estendida e que o *expressão* e *critério de pesquisa* elementos se tornem mais complexo nas gramáticas do Core e SQL estendida.  
   
- Como outras instruções SQL, **atualização**, **excluir**, e **inserir** instruções são geralmente mais eficientes quando o uso de parâmetros. Por exemplo, a instrução a seguir pode preparada e executada repetidamente para inserir várias linhas na tabela:  
+ Como outras instruções SQL, **atualização**, **excluir**, e **inserir** instruções são geralmente mais eficiente quando eles usam parâmetros. Por exemplo, a instrução a seguir pode preparada e executada repetidamente para inserir várias linhas na tabela Orders:  
   
 ```  
 INSERT INTO Orders (PartID, Description, Price) VALUES (?, ?, ?)  
 ```  
   
- Para obter essa eficiência pode ser aumentada passando matrizes de valores de parâmetro. Para obter mais informações sobre os parâmetros de instrução e matrizes de valores de parâmetro, consulte [parâmetros de instrução](../../../odbc/reference/develop-app/statement-parameters.md).
+ Essa eficiência pode ser aumentada, passando matrizes de valores de parâmetro. Para obter mais informações sobre parâmetros de instrução e matrizes de valores de parâmetro, consulte [parâmetros de instrução](../../../odbc/reference/develop-app/statement-parameters.md).

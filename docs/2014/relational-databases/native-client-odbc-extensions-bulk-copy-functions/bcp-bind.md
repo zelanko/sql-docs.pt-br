@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - bcp_bind
@@ -17,16 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_bind function
 ms.assetid: 6e335a5c-64b2-4bcf-a88f-35dc9393f329
-caps.latest.revision: 46
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 118b0a076a4a3f1cc377fc0407f83d1fe23d766c
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: ff7fe566c7547dc4e0755762d37764cd8b5bc50b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37416325"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48069726"
 ---
 # <a name="bcpbind"></a>bcp_bind
   Associa dados de uma variável de programa a uma coluna de tabela para cópia em massa no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -146,7 +143,7 @@ bcp_bind(hdbc, szName, 0,
 ## <a name="returns"></a>Retorna  
  SUCCEED ou FAIL.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Use **bcp_bind** de uma maneira rápida e eficiente copiar dados de uma variável de programa em uma tabela no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Chame [bcp_init](bcp-init.md) antes de chamar essa ou qualquer outra função de cópia em massa. Chamando **bcp_init** define o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabela de destino para cópia em massa. Ao chamar **bcp_init** para uso com **bcp_bind** e [bcp_sendrow](bcp-sendrow.md), o **bcp_init** *szDataFile*parâmetro, que indica o arquivo de dados é definido como NULL; o **bcp_init * * * eDirection* parâmetro for definido como DB_IN.  

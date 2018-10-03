@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - CubeAttributeBinding Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - CubeAttributeBinding data type
 ms.assetid: 04e3d619-1de8-4fc8-a089-9a44ac0f930c
-caps.latest.revision: 41
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c0991e2e25f20e41462fe445ca93e8d84db0c7e7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6b0bf386c24a27c0c02caec6d71049d6d1eb8d5e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37286002"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164016"
 ---
 # <a name="cubeattributebinding-data-type-assl"></a>Tipo de dados CubeAttributeBinding (ASSL)
   Define um tipo de dados derivado que representa a associação de um atributo em uma dimensão de cubo a uma ação ou coluna de estrutura de mineração.  
@@ -54,17 +51,17 @@ ms.locfileid: "37286002"
 |Característica|Description|  
 |--------------------|-----------------|  
 |Tipos de dados base|[Associação](binding-data-type-assl.md)|  
-|Tipos de dados derivados|Nenhum|  
+|Tipos de dados derivados|None|  
   
 ## <a name="data-type-relationships"></a>Relação do tipo de dados  
   
 |Relação|Elemento|  
 |------------------|-------------|  
-|Elementos pai|Nenhum|  
+|Elementos pai|None|  
 |Elementos filho|[AttributeID](../properties/id-element-assl.md), [CubeDimensionID](../properties/dimensionid-element-assl.md), [CubeID](../properties/cubeid-element-assl.md), [Ordinal](../properties/ordinal-element-assl.md), [tipo](../properties/type-element-binding-assl.md)|  
 |Elementos derivados|Consulte [de associação](binding-data-type-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Para obter mais informações sobre o `Binding` tipo, incluindo tabelas de objetos do Analysis Services Scripting Language (ASSL) da `Binding` tipo e a hierarquia de herança dos `Binding` tipos, consulte [ &#40;ASSL&#41;](binding-data-type-assl.md).  
   
  Para uma visão geral de associações de dados em ASSL, consulte [fontes de dados e associações &#40;Multidimensional do SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  

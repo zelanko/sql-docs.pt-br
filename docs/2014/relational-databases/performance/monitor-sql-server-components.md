@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e8f1b16b-ea40-4e12-886c-967ebda4e6e4
-caps.latest.revision: 7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 986819015191d7fbb1f07738d25b3dab489e185b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8a4c52340cde2aefb73785ee52794cf138c38627
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37290632"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48145606"
 ---
 # <a name="monitor-sql-server-components"></a>Monitorar componentes do SQL Server
   Monitorar é importante porque o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece serviço em um ambiente dinâmico. Os dados mudam no aplicativo. O tipo de acesso de que os usuários precisam muda. O modo de conexão dos usuários muda. Os tipos de aplicativos que acessam o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem até mudar, mas o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gerencia automaticamente os recursos em nível de sistema, como a memória e o espaço em disco, a fim de minimizar a necessidade de ajustes manuais abrangentes em nível de sistema. O monitoramento permite aos administradores identificar tendências de desempenho para determinar se são necessárias alterações.  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9212fc68-f0a6-4f79-83c1-84baf4d1957e
-caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f580f26ac2431c7872f3a311027780900d4dd58f
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: fbe0e3b1226eca1c739d9ddb2abeff594d36793e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083398"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48053586"
 ---
 # <a name="new-folder-page-report-manager"></a>Página Nova Pasta (Gerenciador de Relatórios)
   Use a página Nova Pasta para criar uma pasta nova na hierarquia de pasta do servidor de relatório. A pasta que você cria é uma pasta virtual que é armazenada em um banco de dados do servidor de relatórios. A pasta não é criada no sistema de arquivos do seu computador.  

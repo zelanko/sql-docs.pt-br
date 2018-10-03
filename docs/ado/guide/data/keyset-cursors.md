@@ -1,45 +1,42 @@
 ---
-title: Cursores | Microsoft Docs
+title: Cursores keyset | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Keyset cursors [ADO]
 - cursors [ADO], Keyset
 ms.assetid: 14b51b17-6fd9-4146-af45-ca4b0fe6d48a
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 94df9cb54dcdb98b6f0932e63d0935b0350eb868
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a2ff246d01254ceb2b526b5118553d72cc499046
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271925"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47726144"
 ---
-# <a name="keyset-cursors"></a>Cursores
-O cursor keyset fornece funcionalidade entre static e um cursor dinâmico em sua capacidade de detectar alterações. Como um cursor estático, ele não detectar sempre alterações para a associação e a ordem do conjunto de resultados. Como um cursor dinâmico, ele detecta as alterações dos valores de linhas no conjunto de resultados.  
+# <a name="keyset-cursors"></a>Cursores do conjunto de chaves
+O cursor de conjunto de chaves fornece a funcionalidade entre um estático e um cursor dinâmico em sua capacidade de detectar alterações. Como um cursor estático, ele sempre detectar alterações para a associação e a ordem do conjunto de resultados. Como um cursor dinâmico, ele detectar alterações nos valores de linhas no conjunto de resultados.  
   
- Os cursores controlados por conjuntos de chaves são controlados por um conjunto de identificadores exclusivos (chaves), conhecido como o conjunto de chaves. As chaves são criadas a partir de um conjunto de colunas, que identificam exclusivamente as linhas no conjunto de resultados. O conjunto de chaves é o conjunto de valores de chave de todas as linhas retornadas pela instrução de consulta.  
+ Cursores controlados por conjunto de chaves são controlados por um conjunto de identificadores exclusivos (chaves), conhecido como o conjunto de chaves. As chaves são criadas a partir de um conjunto de colunas, que identificam exclusivamente as linhas no conjunto de resultados. O conjunto de chaves é o conjunto de valores de chave de todas as linhas retornadas pela instrução de consulta.  
   
- Com cursores controlados por conjuntos de chaves, uma chave é criada e salvo para cada linha do cursor e armazenada na estação de trabalho cliente ou no servidor. Quando você acessar cada linha, a chave armazenada é usada para buscar os valores de dados atuais da fonte de dados. Em um cursor controlado por, associação de conjunto de resultados está congelada quando o conjunto de chaves é totalmente preenchido. Depois disso, adições ou atualizações que afetam a associação não fazem parte do resultado definido até que ele é reaberto.  
+ Com cursores controlados por, uma chave é criada e salvo para cada linha do cursor e armazenada na estação de trabalho cliente ou no servidor. Quando você acessar cada linha, a chave armazenada é usada para buscar os valores de dados atual da fonte de dados. Em um cursor controlado por conjunto de chaves, a associação do conjunto de resultados é congelada quando o conjunto de chaves está completamente populado. Depois disso, adições ou atualizações que afetam a associação não fazem parte do resultado definido até que ele é reaberto.  
   
- Alterações nos valores de dados (feitas por outros processos ou o proprietário de conjunto de chaves) são visíveis como rolagens do usuário por meio do conjunto de resultados. Inserções feitas fora do cursor (por outros processos) são visíveis apenas se o cursor for fechado e reaberto. Inserções feitas de dentro do cursor são visíveis no final do conjunto de resultados.  
+ Alterações nos valores de dados (feitas por outros processos ou o proprietário do conjunto de chaves) são visíveis como o usuário rola pelo conjunto de resultados. Inserções feitas fora do cursor (por outros processos) são visíveis apenas se o cursor for fechado e reaberto. Inserções feitas de dentro do cursor são visíveis no final do conjunto de resultados.  
   
- Quando um cursor controlado por tenta recuperar uma linha que foi excluída, a linha é exibida como um "buraco" no conjunto de resultados. A chave para a linha existe no conjunto de chaves, mas a linha não existe mais no conjunto de resultados. Se os valores de chave em uma linha são atualizados, a linha é considerada foi excluído e, em seguida, inserir, portanto, essas linhas também é exibido como falhas no conjunto de resultados. Enquanto um cursor controlado por conjunto de chaves sempre pode detectar as linhas excluídas por outros processos, ele também pode remover as chaves de linhas, que ela é excluída. Os cursores controlados por conjuntos de chaves que isso não é possível detectar suas próprias exclusões porque a evidência foi removida.  
+ Quando um cursor controlado por tenta recuperar uma linha que foi excluída, a linha é exibida como uma "brecha" no conjunto de resultados. A chave para a linha existe no conjunto de chaves, mas a linha não existe mais no conjunto de resultados. Se os valores de chave em uma linha forem atualizados, a linha é considerada foi excluído e, em seguida, inserida, para que essas linhas também aparecem como brechas no conjunto de resultados. Enquanto um cursor controlado por sempre pode detectar linhas excluídas por outros processos, ele pode, opcionalmente, remover as chaves para excluir a próprio de linhas. Cursores controlados por que isso não é possível detectar suas próprias exclusões porque a evidência foi removida.  
   
- Uma atualização para uma coluna de chave funciona como uma exclusão da chave antigo, seguida por uma inserção da nova chave. O novo valor de chave não é visível se a atualização não foi realizada pelo cursor. Se a atualização foi feita por meio do cursor, o novo valor de chave é visível ao final do conjunto de resultados.  
+ Uma atualização para uma coluna de chave funciona como uma exclusão da chave antiga, seguida por uma inserção da nova chave. O novo valor de chave não é visível se a atualização não foi realizada pelo cursor. Se a atualização foi feita por meio do cursor, o novo valor de chave está visível no final do conjunto de resultados.  
   
- Há uma variação os cursores controlados por conjuntos de chaves chamado controlado por cursores padrão. Em um cursor padrão por conjunto de chaves, a associação de linhas no conjunto de resultados e a ordem das linhas são fixas no tempo de abertura de cursor, mas as alterações aos valores que são feitas pelo proprietário do cursor e as alterações confirmadas feitas por outros processos estão visíveis. Se uma alteração de uma linha para a associação se enquadra nessa ou afeta a ordem de uma linha, a linha não desaparecem ou mova a menos que o cursor for fechado e reaberto. Dados inseridos não aparecem, mas as alterações nos dados existentes são exibidas como linhas buscadas.  
+ Há uma variação em cursores controlados por chamados de cursores controlados por cursores padrão. Em um cursor padrão controlado por conjunto de chaves, a associação de linhas no conjunto de resultados e a ordem das linhas são fixos no tempo de abertura do cursor, mas as alterações aos valores que são realizadas pelo proprietário do cursor e as alterações confirmadas feitas por outros processos estão visíveis. Se uma alteração desqualifica uma linha para a associação ou afeta a ordem de uma linha, a linha não desaparecem ou mover, a menos que o cursor for fechado e reaberto. Dados inseridos não aparecem, mas as alterações nos dados existentes aparecem como as linhas sejam buscadas.  
   
- O cursor controlado por conjunto de chaves é difícil de usar corretamente porque a sensibilidade a alterações de dados depende de muitas circunstâncias diferentes, conforme descrito acima. No entanto, se seu aplicativo não está preocupado com atualizações simultâneas, programaticamente pode lidar com chaves inválidas e deve acessar diretamente determinadas linhas com chave, o cursor controlado por pode funcionar para você. Use o **adOpenKeyset CursorTypeEnum** para indicar que você deseja usar um cursor de conjunto de chaves no ADO.  
+ O cursor controlado por conjunto de chaves é difícil de usar corretamente porque a sensibilidade a alterações de dados depende de muitas circunstâncias diferentes, conforme descrito acima. No entanto, se seu aplicativo não está preocupado com atualizações simultâneas, por meio de programação pode lidar com chaves ruins e deve acessar diretamente a determinadas linhas com chave, o cursor controlado por conjunto de chaves pode funcionar para você. Use o **adOpenKeyset CursorTypeEnum** para indicar que você deseja usar um cursor keyset no ADO.  
   
 ## <a name="see-also"></a>Consulte também  
  [Cursores de somente avanço](../../../ado/guide/data/forward-only-cursors.md)   

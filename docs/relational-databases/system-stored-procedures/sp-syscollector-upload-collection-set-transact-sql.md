@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_upload_collection_set
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - sp_syscollector_upload_collection_set
 - data collector [SQL Server], stored procedures
 ms.assetid: eed9232c-2b0a-4b6a-8ba0-76b7c99f48dc
-caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 081a5eccfdec4ea8582efb00f6c5f2e74e7f510e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 9017209ef2e4b500ee6a90e14830b520ed2a588d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33249648"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47780894"
 ---
 # <a name="spsyscollectoruploadcollectionset-transact-sql"></a>sp_syscollector_upload_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,21 +46,21 @@ sp_syscollector_upload_collection_set [[ @collection_set_id = ] collection_set_i
   
 ## <a name="arguments"></a>Argumentos  
  [  **@collection_set_id =** ] *collection_set_id*  
- É o identificador local exclusivo do conjunto de coleta. *collection_set_id* é **int** e deve ter um valor se *nome* é NULL.  
+ É o identificador local exclusivo do conjunto de coleta. *collection_set_id* está **int** e deve ter um valor se *nome* é NULL.  
   
  [  **@name =** ] **'***nome***'**  
- É o nome do conjunto de coleta. *nome* é **sysname** e deve ter um valor se *collection_set_id* é NULL.  
+ É o nome do conjunto de coleta. *nome da* está **sysname** e deve ter um valor se *collection_set_id* é NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Remarks  
- O *collection_set_id* ou *nome* deve ter um valor; não pode ser NULL.  
+## <a name="remarks"></a>Comentários  
+ Qualquer um dos *collection_set_id* ou *nome* deve ter um valor; ambos não podem ser NULL.  
   
  Este procedimento pode ser usado para iniciar uma carga sob demanda de um conjunto de coleta em execução. Só pode ser usado para conjuntos de coleta configurados para a coleta e o carregamento dos dados em cache. Isto permite que o usuário obtenha dados para analisar sem precisar aguardar um carregamento programado.  
   
 ## <a name="permissions"></a>Permissões  
- Requer a participação no **dc_operator** (com permissão EXECUTE) função de banco de dados fixa para executar esse procedimento.  
+ Requer associação na **dc_operator** (com permissão EXECUTE) a função de banco de dados fixa para executar esse procedimento.  
   
 ## <a name="example"></a>Exemplo  
  Efetua o carregamento sob demanda de um conjunto de coleta chamado `Simple Collection Set`.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - encryption keys [Reporting Services]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - rskeymgmt utility
 - scale-out deployments [Reporting Services]
 ms.assetid: 2da86fb3-4b4d-407f-9825-74dcc42486f5
-caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6d253287d8eb5b774794114003682151ecd00c4d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4c91f05ef42f3840186ee758e733f73631c0d976
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37170255"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48125046"
 ---
 # <a name="add-and-remove-encryption-keys-for-scale-out-deployment-ssrs-configuration-manager"></a>Adicionar e remover chaves de criptografia para implantação em expansão (Gerenciador de configurações do SSRS)
   É possível executar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em um modelo de implantação de expansão com a configuração de vários servidores de relatório para usarem um banco de dados do servidor de relatório compartilhado. A associação em uma implantação de expansão tem como base o fato de o servidor de relatório armazenar uma chave de criptografia no banco de dados do servidor de relatório. Você pode controlar a associação de implantação de expansão pela adição ou remoção de chaves de criptografia para instâncias específicas do servidor de relatório. Se estiver removendo nós da implantação, você poderá os removê-los em qualquer ordem. Se estiver adicionando nós a uma implantação, você deverá unir quaisquer novas instâncias de um servidor de relatório que já faça parte da implantação.  

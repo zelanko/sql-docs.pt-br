@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - log shipping [SQL Server], AlwaysOn Availability Groups
 - Availability Groups [SQL Server], interoperability
 ms.assetid: 2738ce65-205e-4682-92d8-dc7e37c58b2b
-caps.latest.revision: 21
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 511a8e6425cf49060be396b0737d72943136842d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dbe9d1338e3b64bf829eec0be1cf33bee3d8591e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37178363"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161936"
 ---
 # <a name="prerequisites-for-migrating-from-log-shipping-to-alwayson-availability-groups-sql-server"></a>Pré-requisitos para migrar de envio de logs para grupos de disponibilidade AlwaysOn (SQL Server)
   Esse tópico descreve os pré-requisitos para converter um banco de dados primário para envio de logs junto com um ou mais de seus bancos de dados secundários para um banco de dados primário AlwaysOn e bancos de dados secundários.  

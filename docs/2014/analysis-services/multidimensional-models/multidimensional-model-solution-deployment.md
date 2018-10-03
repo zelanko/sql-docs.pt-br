@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services deployments, planning
 - deploying [Analysis Services]
 - deploying [Analysis Services], planning
 ms.assetid: 7259c201-ff54-43e8-bda5-a6d51474e0e6
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 781bbeed98772266d4ea9c228c42426df424fe1c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5874eae9b579371740f9faffed73957b78d86be2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37222216"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48113538"
 ---
 # <a name="multidimensional-model-solution-deployment"></a>Implantação de solução de modelo multidimensional
   Depois de você ter concluído o desenvolvimento de um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , poderá implantar o banco de dados em um servidor do Analysis Services. O Analysis Services fornece seis métodos de implantação possíveis que podem ser usados para mover o banco de dados para um servidor de teste ou produção. Os métodos estão listados aqui em ordem de eficiência: automatização AMO, XMLA, Assistente para Implantação, Utilitário de Implantação, Assistente para Sincronizar, backup e restauração.  

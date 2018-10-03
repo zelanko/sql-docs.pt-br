@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.editorxml.f1
@@ -17,16 +15,15 @@ f1_keywords:
 helpviewer_keywords:
 - XML Designer [SQL Server Management Studio]
 ms.assetid: 0824a5ce-e67b-4b53-98d9-d371faf2d23c
-caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a4d6fedddf4b99d2f8ef068cc1212972b6a25fe2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2bf9af55c8ba7660a80dc65fa1f2eb6e322aad4f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37160337"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166286"
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>Editor XML (SQL Server Management Studio)
   Fornece um conjunto de ferramentas visuais para trabalhar com Esquemas XML, conjuntos de dados ADO.NET e documentos XML. O XML Designer oferece suporte para a linguagem de definição de esquema XML (XSD) definida pelo World Wide Web Consortium (WC3). O designer não oferece suporte para DTDs (definições de tipo de documento) ou outras linguagens de esquema XML, como XDR (XML-Data Reduced).  

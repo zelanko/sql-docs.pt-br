@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 10054250-d915-4bcb-8a1d-26837db4e932
-caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: e120229a41ae80490ab1950113c4de6f37b70c9e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ea05556d69c40a18494d0b5600e05399a0da632b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37270332"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48110726"
 ---
 # <a name="print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs"></a>Imprimir relatórios em um navegador com o controle de impressão (Construtor de Relatórios e SSRS)
   Embora um navegador seja o aplicativo cliente mais usado para exibir um relatório, a funcionalidade de impressão do navegador não é ideal para imprimir relatórios. A funcionalidade de impressão de um navegador foi projetada para imprimir páginas da Web. Normalmente, as páginas impressas em um navegador incluem todos os elementos visuais presentes em uma página da Web, além das informações de cabeçalho e rodapé que identificam a página ou o site. Imprimir em um navegador imprime o conteúdo da janela atual. Em um relatório com várias páginas, o navegador normalmente imprime a primeira ou menos caso a página do relatório exceda as dimensões de uma página impressa.  

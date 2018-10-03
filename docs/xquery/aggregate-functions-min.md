@@ -4,33 +4,27 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
 - fn:min function
 - min function [XQuery]
 ms.assetid: db0b7d94-3fa6-488f-96d6-6a9a7d6eda23
-caps.latest.revision: 28
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8e5ce4f5ac16b337db62633d8b0a72ca98c708a5
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: c52144d2cef297109c3c8aef1751690edf723cf9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38051704"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47792464"
 ---
-# <a name="aggregate-functions---min"></a>Funções de agregação – min
+# <a name="aggregate-functions---min"></a>Funções de Agregação – min
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Retorna de uma sequência de valores atômicos, *$arg*, o item cujo valor é menor do que todos os outros.  
@@ -46,7 +40,7 @@ fn:min($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
  *$arg*  
  Sequência de itens dos quais retornar o valor mínimo.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Todos os tipos de valores atomizados que são passados para **min ()** têm que ser subtipos do mesmo tipo base. Tipos base aceitos são os tipos que oferecem suporte a **gt** operação. Esses tipos incluem os três tipos base numéricos internos, os tipos base de data/hora, xs:string, xs:boolean e xdt:untypedAtomic. Valores do tipo xdt:untypedAtomic são convertidos em xs:double. Se há uma mistura desses tipos, ou se outros valores de outros tipos são passados, um erro estático será gerado.  
   
  O resultado de **min ()** recebe o tipo base dos tipos passados como xs: Double no caso de XDT: untypedatomic. Se a entrada estiver estaticamente vazia, o vazio será implícito e um erro estático será retornado.  

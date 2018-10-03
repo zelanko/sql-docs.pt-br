@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Merge Agent, executables
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - agents [SQL Server replication], Merge Agent
 - command prompt [SQL Server replication]
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
-caps.latest.revision: 63
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8234986c27b6bffc593d8eb7cc6c21c8988d7d0a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 71c35ad53fd9c90b8c7130bac104f370e466448f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37287142"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48154176"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
   O Agente de Mesclagem de Replicação é um executável utilitário que aplica o instantâneo inicial contido nas tabelas do banco de dados aos Assinantes. Ele também mescla as alterações incrementais de dados que ocorreram no Publicador depois que o instantâneo inicial foi criado e reconcilia conflitos de acordo com as regras que você configura ou usando um resolvedor personalizado que você cria.  
@@ -385,7 +382,7 @@ ms.locfileid: "37287142"
  **-ValidateInterval** *validate_interval*  
  É a frequência, em minutos, com que a assinatura é validada em modo contínuo. O padrão é **60** minutos.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 > [!IMPORTANT]  
 >  Se você instalou o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent para executar com uma conta Sistema Local em vez de uma conta de usuário de domínio (o padrão), o serviço só poderá acessar o computador local. Se o Merge Agent executado no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent for configurado para usar o Modo de Autenticação do Windows ao fazer logon no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], o Merge Agent falhará. A configuração padrão é Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  

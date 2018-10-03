@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database performance [SQL Server], alerts
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - database monitoring [SQL Server], alerts
 - server performance [SQL Server], alerts
 ms.assetid: 0511136a-1b6b-4095-aa45-39e77b67aba2
-caps.latest.revision: 21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1dcbc89e580283335f0a969baa04322f38f7c71a
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: f58ae046ce906472a8c4b979832e278c4e2b7ad8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43818292"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48114986"
 ---
 # <a name="create-a-sql-server-database-alert"></a>Criar um alerta de banco de dados do SQL Server
   É possível usar o Monitor do Sistema para criar um alerta a ser emitido quando um valor limite de um contador do Monitor do Sistema for atingido. Em resposta ao alerta, o Monitor do Sistema inicia um aplicativo, tal como um aplicativo cliente escrito para manipular a condição de alerta. Por exemplo, você pode criar um alerta a ser emitido quando o número de deadlocks exceder um valor específico.  

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_category
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_category
 ms.assetid: 098b926a-b078-4122-a5e1-3ef54b979dd4
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f07e44e12193e506146e299bd57f84b02c802856
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 22cb6ac1283c0ad8e7b423d73f6ec768c90af11c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33255742"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47670514"
 ---
 # <a name="spupdatecategory-transact-sql"></a>sp_update_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,24 +44,24 @@ sp_update_category
   
 ## <a name="arguments"></a>Argumentos  
  [  **@class =**] **'***classe***'**  
- O classe da categoria a ser atualizada. *classe*é **varchar(8)**, sem padrão e pode ser um destes valores.  
+ O classe da categoria a ser atualizada. *classe*está **varchar(8)**, sem padrão e pode ser um destes valores.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**ALERTA**|Atualiza uma categoria de alerta.|  
 |**JOB**|Atualiza uma categoria de trabalho.|  
 |**OPERADOR**|Atualiza uma categoria de operador.|  
   
  [  **@name =**] **'***nome_antigo***'**  
- O nome atual da categoria. *nome_antigo*é **sysname**, sem padrão.  
+ O nome atual da categoria. *nome_antigo*está **sysname**, sem padrão.  
   
- [  **@new_name =**] **'***novo_nome***'**  
- O novo nome da categoria. *Novo_nome*é **sysname**, sem padrão.  
+ [  **@new_name =**] **'***new_name***'**  
+ O novo nome da categoria. *new_name*está **sysname**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  **sp_update_category** deve ser executado a partir de **msdb** banco de dados.  
   
 ## <a name="permissions"></a>Permissões  

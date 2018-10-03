@@ -6,23 +6,20 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ADO MD, methods
 - methods [ADO MD]
 ms.assetid: 78bfa2f0-358b-40bb-be2e-16262752d676
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e94c983a6d7d18b7ff95aa7a5ffa060852378b52
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 669e1bdc70aa0c5bd5510db8c9fbd86e26b22b41
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283325"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770835"
 ---
 # <a name="ado-md-methods"></a>Métodos do ADO MD
 |||  
@@ -36,6 +33,6 @@ ms.locfileid: "35283325"
  [Exemplos de código do ADO MD](../../../ado/reference/ado-md-api/ado-md-code-examples.md)   
  [Coleções do ADO MD](../../../ado/reference/ado-md-api/ado-md-collections.md)   
  [Constantes enumeradas do ADO MD](../../../ado/reference/ado-md-api/ado-md-enumerated-constants.md)   
- [Modelo de objeto ADO MD](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
+ [Modelo de objeto do ADO MD](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
  [Objetos do ADO MD](../../../ado/reference/ado-md-api/ado-md-objects.md)   
  [Propriedades do ADO MD](../../../ado/reference/ado-md-api/ado-md-properties.md)

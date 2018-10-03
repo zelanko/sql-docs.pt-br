@@ -1,13 +1,11 @@
 ---
-title: Mais informações sobre o conjunto de registros persistência | Microsoft Docs
+title: Mais sobre a persistência do conjunto de registros | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - persisting data [ADO]
@@ -15,29 +13,28 @@ helpviewer_keywords:
 - data persistence [ADO]
 - updating data [ADO], persisting data
 ms.assetid: a9b287f5-04b0-4514-8143-f67879ca9842
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a4bf42cb3b915f66cd3c9249ada5fffa7f5da6d7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3e626c924e7b84312877b47f811329e215f47e42
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272145"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47846854"
 ---
-# <a name="more-about-recordset-persistence"></a>Mais informações sobre a persistência de conjunto de registros
-O objeto de conjunto de registros ADO dá suporte ao armazenar o conteúdo de um **registros** objeto em um arquivo usando seu [salvar](../../../ado/reference/ado-api/save-method.md) método. O arquivo armazenado persistentemente pode existir em um local da unidade, server, ou como uma URL em uma Web sites. Posteriormente, o arquivo pode ser restaurado com o o [abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md) método do **registros** objeto ou o [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) método do [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto.  
+# <a name="more-about-recordset-persistence"></a>Mais informações sobre a persistência do conjunto de registros
+O objeto de conjunto de registros ADO dá suporte ao armazenar o conteúdo de um **conjunto de registros** objeto em um arquivo usando seu [salvar](../../../ado/reference/ado-api/save-method.md) método. O arquivo persistentemente armazenado pode existir em um local da unidade, servidor, ou como uma URL em uma Web sites. Posteriormente, o arquivo pode ser restaurado com um a [aberto](../../../ado/reference/ado-api/open-method-ado-recordset.md) método da **conjunto de registros** objeto ou o [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) o método da [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto.  
   
- Além disso, o [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) método converte um **registros** objeto a um formulário no qual as colunas e linhas são delimitadas por caracteres que você especificar.  
+ Além disso, o [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) método converte um **Recordset** objeto a um formulário no qual as colunas e linhas são delimitadas por caracteres que você especificar.  
   
- Para manter um **registros**, comece convertê-la em um formulário que pode ser armazenado em um arquivo. **Conjunto de registros** objetos podem ser armazenados no formato de TableGram de dados avançado (ADTG) proprietário ou o abra Extensible Markup Language (XML). Exemplos ADTG são mostrados na próxima seção. Para obter mais informações sobre a persistência de XML, consulte [manter registros em formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md).  
+ Para manter uma **Recordset**, comece convertê-la em um formulário que pode ser armazenado em um arquivo. **Conjunto de registros** objetos podem ser armazenados no formato TableGram avançada de dados (ADTG) proprietárias ou formato aberto Extensible Markup Language (XML). Exemplos ADTG são mostrados na próxima seção. Para obter mais informações sobre a persistência do XML, consulte [manter registros em formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md).  
   
- Salve as alterações pendentes no arquivo persistente. Isso permite que você emita uma consulta que retorna um **registros** objeto, edições a **registros**, salva-o e as alterações pendentes, restaura mais tarde o **Recordset**e, em seguida, Atualiza a fonte de dados com o salva as alterações pendentes.  
+ Salve as alterações pendentes no arquivo persistente. Isso permite que você emita uma consulta que retorna um **conjunto de registros** objeto, as edições a **conjunto de registros**, salva a ele e as alterações pendentes, posterior restaura o **conjunto de registros**e, em seguida, Atualiza a fonte de dados com o salva as alterações pendentes.  
   
- Para obter informações sobre o armazenamento persistente **fluxo** objetos, consulte [fluxos e persistência](../../../ado/guide/data/streams-and-persistence.md).  
+ Para obter informações sobre como armazenar persistentemente **Stream** objetos, consulte [fluxos e persistência](../../../ado/guide/data/streams-and-persistence.md).  
   
- Para obter um exemplo de **registros** persistência, consulte o cenário de persistência do conjunto de registros de XML.  
+ Para obter um exemplo de **Recordset** persistência, consulte o cenário de persistência do conjunto de registros XML.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -55,7 +52,7 @@ Dim rs as New ADODB.Recordset
 rs.Open "c:\yourFile.adtg", "Provider=MSPersist",,,adCmdFile  
 ```  
   
- Opcionalmente, se o **registros** does não tem uma conexão ativa, você pode aceitar todos os padrões e de código a seguir:  
+ Opcionalmente, se o **Recordset** faz não tem uma conexão ativa, você pode aceitar todos os padrões e de código a seguir:  
   
 ```  
 Dim rs as New ADODB.Recordset  
@@ -71,8 +68,8 @@ conn.Open "Provider=MSPersist"
 Set rs = conn.execute("c:\yourFile.adtg")  
 ```  
   
-### <a name="open-a-persisted-file-with-rdsdatacontrol"></a>Abrir um arquivo persistente com RDS. DataControl:  
- Nesse caso, o **Server** propriedade não está definida.  
+### <a name="open-a-persisted-file-with-rdsdatacontrol"></a>Abrir um arquivo persistente com o RDS. DataControl:  
+ Nesse caso, o **Server** não está definida.  
   
 ```  
 Dim dc as New RDS.DataControl  
@@ -83,6 +80,6 @@ dc.Refresh
   
 ## <a name="see-also"></a>Consulte também  
  [Método GetString (ADO)](../../../ado/reference/ado-api/getstring-method-ado.md)   
- [Provedor de persistência do Microsoft OLE DB (provedor de serviços de ADO)](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)   
+ [Persistência do Microsoft OLE DB Provider (provedor de serviços do ADO)](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Fluxos e persistência](../../../ado/guide/data/streams-and-persistence.md)

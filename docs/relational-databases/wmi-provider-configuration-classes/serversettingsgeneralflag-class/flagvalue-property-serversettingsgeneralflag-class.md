@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - FlagValue Property (ServerSettingsGeneralFlag Class)
@@ -19,16 +16,15 @@ apitype: MOFDef
 helpviewer_keywords:
 - FlagValue property
 ms.assetid: a32f0ef0-f5f6-4e71-96c7-7d4617dedf0e
-caps.latest.revision: 30
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7b4995ecd7b8348960a7e8a3b514ee3b11519339
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c1eddae863deacb0f87aadd7aaf62d7f66e7881d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33008133"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47680844"
 ---
 # <a name="flagvalue-property-serversettingsgeneralflag-class"></a>Propriedade FlagValue (classe ServerSettingsGeneralFlag)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +38,7 @@ object.FlagValue [= value]
 ```  
   
 ## <a name="parts"></a>Partes  
- *objeto*  
+ *object*  
  Um objeto da [classe ServerSettingsGeneralFlag](../../../relational-databases/wmi-provider-configuration-classes/serversettingsgeneralflag-class/serversettingsgeneralflag-class.md) que representa um sinalizador geral para as configurações de servidor.  
   
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  

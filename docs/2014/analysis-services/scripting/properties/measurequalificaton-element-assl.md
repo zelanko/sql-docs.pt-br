@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - MeasureQualificaton Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - MeasureQualification element
 ms.assetid: 754a037c-f20b-4717-a6e8-12f495e8e3b4
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cb84c39d7d7a3b69ea3c13e43dfda0b331c548e4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: aff36cad69d59b7effa51ac9ab3e32490931f779
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37149497"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48123326"
 ---
 # <a name="measurequalificaton-element-assl"></a>Elemento MeasureQualification (ASSL)
   Determina se um prefixo é aplicado nas medidas na [MeasureGroup](../objects/group-element-assl.md).  
@@ -57,9 +54,9 @@ ms.locfileid: "37149497"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elemento pai|[MeasureGroup](../objects/group-element-assl.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O valor desse elemento é limitado a uma das cadeias de caracteres listadas na tabela a seguir.  
   
 |Valor|Description|  
@@ -67,7 +64,7 @@ ms.locfileid: "37149497"
 |*Nenhuma*|Nenhum prefixo é aplicado nas medidas desse grupo de medidas.|  
 |*PrefixMeasureGroup*|O nome exclusivo e a legenda de cada medida desse grupo de medidas têm um prefixo que é o nome do grupo de medidas e um único espaço.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O elemento que corresponde ao pai de `MeasureQualification` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.MeasureGroup>.  
   
 ## <a name="see-also"></a>Consulte também  

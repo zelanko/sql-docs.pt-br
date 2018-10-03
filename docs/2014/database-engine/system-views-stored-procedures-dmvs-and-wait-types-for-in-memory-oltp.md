@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: efaa59e3-dbfa-407f-b1aa-cb0c6602ea17
-caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d8d886a95b0cb62ad2217478873e85fb2db5d7bb
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 04b2d0fdd00d9f3001ce1687744a9ecd992f44dd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392688"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48144616"
 ---
 # <a name="system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp"></a>Exibições do sistema, procedimentos armazenados, tipos de espera e DMVs para OLTP in-memory
   Este tópico fornece descrições breves e links para vários objetos de banco de dados que dão suporte a OLTP na memória.  

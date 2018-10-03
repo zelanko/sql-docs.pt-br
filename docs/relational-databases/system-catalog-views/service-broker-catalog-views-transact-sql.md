@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -16,16 +13,15 @@ helpviewer_keywords:
 - Service Broker, catalog views
 - catalog views [SQL Server], Service Broker
 ms.assetid: 00682b5e-4720-422e-a5ec-4a96f26e1300
-caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6a4c80c642ab550ca46dd439ec92ff71cda7569f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 384bdc9bf2da72c32f309e1cdfbb4e624ec465a8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33178652"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47649054"
 ---
 # <a name="service-broker-catalog-views-transact-sql"></a>Exibições do catálogo do Service Broker (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

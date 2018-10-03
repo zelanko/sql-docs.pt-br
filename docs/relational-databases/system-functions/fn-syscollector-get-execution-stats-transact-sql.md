@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_syscollector_get_execution_stats
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - fn_syscollector_get_execution_stats function
 ms.assetid: 793ad72c-a992-4a8d-8584-bcb6b3b476f1
-caps.latest.revision: 18
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1a80d59325234108f16a75c081f94d4102c44154
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 91227f3f5d1ef6238b18064b4c978d238f85e4b2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230306"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47811187"
 ---
 # <a name="fnsyscollectorgetexecutionstats-transact-sql"></a>fn_syscollector_get_execution_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,21 +43,21 @@ fn_syscollector_get_execution_stats ( log_id )
   
 ## <a name="arguments"></a>Argumentos  
  *log_id*  
- O identificador exclusivo local do log de execução. *log_id* é **int**.  
+ O identificador exclusivo local do log de execução. *log_id* está **int**.  
   
 ## <a name="table-returned"></a>Tabela retornada  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|avg_row_count_in|**Int**|Número médio de linhas que entraram nas tarefas de fluxo de dados do pacote.<br /><br /> Observação: Uma tarefa de fluxo de dados é um [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] componente que processa dados. Esses dados estão em formato relacional, portanto, têm um conjunto de dados de entrada que consiste em linhas. É o número de linhas que entraram na tarefa. Depois que os dados são transformados, sua saída ocorre como um resultado que consiste em linhas. A tarefa de fluxo de dados transforma os dados e produz uma saída como um conjunto de resultados que consiste em linhas. Essa saída é o número de linhas que saíram da tarefa.|  
-|min_row_count_in|**Int**|Número mínimo de linhas que entraram nas tarefas de fluxo de dados do pacote.|  
-|max_row_count_in|**Int**|Número máximo de linhas que entraram nas tarefas de fluxo de dados do pacote.|  
-|avg_row_count_out|**Int**|Número médio de linhas que saíram das tarefas de fluxo de dados do pacote.|  
-|min_row_count_out|**Int**|Número mínimo de linhas que saíram os dados de fluxo de tarefas do pacote.|  
-|max_row_count_out|**Int**|Número máximo de linhas que saíram das tarefas de fluxo de dados do pacote.|  
-|avg_duration|**Int**|Tempo médio, em milissegundos, gasto no componente de fluxo de dados do pacote.|  
-|min_duration|**Int**|Tempo mínimo, em milissegundos, gasto no componente de fluxo de dados do pacote.|  
-|max_duration|**Int**|Tempo máximo, em milissegundos, gasto no componente de fluxo de dados do pacote.|  
+|avg_row_count_in|**int**|Número médio de linhas que entraram nas tarefas de fluxo de dados do pacote.<br /><br /> Observação: Uma tarefa de fluxo de dados é um [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] componente que processa os dados. Esses dados estão em formato relacional, portanto, têm um conjunto de dados de entrada que consiste em linhas. É o número de linhas que entraram na tarefa. Depois que os dados são transformados, sua saída ocorre como um resultado que consiste em linhas. A tarefa de fluxo de dados transforma os dados e produz uma saída como um conjunto de resultados que consiste em linhas. Essa saída é o número de linhas que saíram da tarefa.|  
+|min_row_count_in|**int**|Número mínimo de linhas que entraram nas tarefas de fluxo de dados do pacote.|  
+|max_row_count_in|**int**|Número máximo de linhas que entraram nas tarefas de fluxo de dados do pacote.|  
+|avg_row_count_out|**int**|Número médio de linhas que saíram das tarefas de fluxo de dados do pacote.|  
+|min_row_count_out|**int**|Número mínimo de linhas que saíram os dados de tarefas de fluxo do pacote.|  
+|max_row_count_out|**int**|Número máximo de linhas que saíram das tarefas de fluxo de dados do pacote.|  
+|avg_duration|**int**|Tempo médio, em milissegundos, gasto no componente de fluxo de dados do pacote.|  
+|min_duration|**int**|Tempo mínimo, em milissegundos, gasto no componente de fluxo de dados do pacote.|  
+|max_duration|**int**|Tempo máximo, em milissegundos, gasto no componente de fluxo de dados do pacote.|  
   
 ## <a name="permissions"></a>Permissões  
  Requer SELECT para **dc_operator**.  

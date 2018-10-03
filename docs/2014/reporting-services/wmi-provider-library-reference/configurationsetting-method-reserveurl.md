@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ReservedURL method
 ms.assetid: b9008a62-3edd-4f8a-99f2-7598c2133899
-caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f3f7ee5edc3c9deb73e19f97421c7a0da7206082
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d670170a594af7346f44f236e96a724813278743
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37166067"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48162756"
 ---
 # <a name="reserveurl-method-wmi-msreportserverconfigurationsetting"></a>Método ReserveURL (WMI MSReportServer_ConfigurationSetting)
   Adiciona uma reserva de URL para um determinado aplicativo.  
@@ -58,7 +55,7 @@ public void ReserveURL(string Application, string UrlString, int Lcid,
 ## <a name="return-value"></a>Valor retornado  
  Retorna um *HRESULT* indicando êxito ou falha da chamada do método. Um valor 0 indica que a chamada do método foi bem-sucedida; um código de erro indica que a chamada não foi bem-sucedida.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  *UrlString* não inclui o nome do diretório virtual. O [SetVirtualDirectory](configurationsetting-method-setvirtualdirectory.md) método é fornecido para essa finalidade.  
   
  As reservas de URL são criadas para a conta atual de serviço do Windows. Para alterar a conta de serviço do Windows, é necessário atualizar todas as reservas de URL manualmente.  

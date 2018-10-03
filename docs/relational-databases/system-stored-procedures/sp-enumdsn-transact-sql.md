@@ -4,31 +4,25 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - sp_enumdsn
 - sp_enumdsn_TSQL
 helpviewer_keywords:
 - sp_enumdsn
 ms.assetid: 171cbc7d-7406-4cb0-8602-9405243bfd1d
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 30aa77cb33e5d55bef6b110e020116467536eaff
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 0efa131401cddf568d3cf92842387d5cdd8f09ef
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43031068"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47657894"
 ---
 # <a name="spenumdsn-transact-sql"></a>sp_enumdsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +50,7 @@ sp_enumdsn
 |**Tipo**|**int**|Tipo da fonte de dados.<br /><br /> **1** = DSN ODBC<br /><br /> **3** = fonte de dados OLE DB|  
 |**Nome do provedor**|**varchar(255)**|Nome do provedor OLE DB. O valor é NULL para ODBC DSN.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Cada [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serviço tem um contexto de usuário. Um contexto de usuário é um conjunto de entradas de Registro que inclui as definições das fontes de dados ODBC para o usuário. O contexto de usuário é fornecido pelo nome de usuário sob o qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está executando.  
   
  Por exemplo, se o servidor estiver em execução no contexto de usuário de conta do sistema, os DSNs (nomes das fontes de dados) retornados serão todos DSNs do sistema associados à conta do sistema. Se o servidor estiver em execução em uma conta de usuário particular, somente os DSNs definidos para aquela conta particular daquele usuário serão retornados.  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 56283497-624c-45b5-8a0d-036b0e331d22
-caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5587d26a8c5df5f343f43b64b692d477ea07a015
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 090a7cdb4958dacdaebcdcc0db176991d6bebaa1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37194366"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48142696"
 ---
 # <a name="autoexists"></a>autoexists
   O conceito de *autoexists* limita o espaço de cubo a células que, de fato, existem no cubo em contraposição às que podem existir em decorrência da criação de todas as combinações possíveis de membros de hierarquia de atributos da mesma hierarquia. Isso porque os membros de uma hierarquia de atributo não podem existir com membros de outra hierarquia de atributo na mesma dimensão. Quando duas ou mais hierarquias de atributo da mesma dimensão são usadas em uma instrução SELECT, o Analysis Services avalia as expressões dos atributos para verificar se os membros desses atributos sejam corretamente confinados para atender aos critérios de todos os outros atributos.  

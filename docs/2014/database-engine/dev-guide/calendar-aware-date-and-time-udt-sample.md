@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: cfcf8516-0e7b-4ca4-8bd8-8b2511a50308
-caps.latest.revision: 12
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 161395e5c57e8355c75f952f0ea0998feb487c26
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 82c52544bf808bee40097043871a4e4703c513d1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37330456"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48108696"
 ---
 # <a name="calendar-aware-date-and-time-udt-sample"></a>Exemplo de UDT de reconhecimento de calendário data e hora
   Armazenar datas como cadeias de caracteres pode ser confuso, pois as datas não fazem sentido quando não se entende qual sistema de calendário está sendo usado. O exemplo `CADatetime` define dois tipos de dados definidos pelo usuário, `CADatetime` e `CADate`, que fornecem manipulação de datas e horas com base no calendário.  

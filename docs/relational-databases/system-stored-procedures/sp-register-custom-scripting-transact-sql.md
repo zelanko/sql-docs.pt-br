@@ -4,31 +4,25 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - sp_register_custom_scripting
 - sp_register_custom_scripting_TSQL
 helpviewer_keywords:
 - sp_register_custom_scripting
 ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
-caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 738139cae553dff72dc04b8761b578da692482a4
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 57a58ec761dfbc8a3db0a9bec01ffeb04dc9e0e9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43036879"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47700544"
 ---
 # <a name="spregistercustomscripting-transact-sql"></a>sp_register_custom_scripting (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +69,7 @@ sp_register_custom_scripting [ @type  = ] 'type'
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  **sp_register_custom_scripting** é usado em replicação de instantâneo e transacional.  
   
  Esse procedimento armazenado deve ser executado antes de efetuar uma alteração de esquema em uma  tabela replicada. Para obter mais informações sobre como usar esse procedimento armazenado, consulte [regenerar os procedimentos transacionais personalizados para refletir alterações de esquema](../../relational-databases/replication/transactional/transactional-articles-regenerate-to-reflect-schema-changes.md).  

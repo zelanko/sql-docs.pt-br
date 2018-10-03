@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6296848a-890f-4ad3-8d9f-92ed6a79aa00
-caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a3f19a5c197eb519aa9e78a0d99d7e88132da123
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1815b3e4e45fb08430af1c22a39a125cd8d81595
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37231426"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155498"
 ---
 # <a name="manage-tab-completion-sql-server-powershell"></a>Gerenciar conclusão de guia (SQL Server PowerShell)
   O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] snap-ins do PowerShell apresentam três variáveis (`$SqlServerMaximumTabCompletion`, `$SqlServerMaximumChildItems`, e `$SqlServerIncludeSystemObjects`) para controlar o preenchimento de guia do Windows PowerShell. A conclusão da guia reduz a quantidade de digitação necessária, retornando tabelas de itens cujos nomes iniciam com a cadeia de caracteres que você está digitando.  

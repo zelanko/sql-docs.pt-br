@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - clusters [SQL Server], preinstallation checklist
 - installing failover clusters
 - failover clustering [SQL Server], preinstallation checklist
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
-caps.latest.revision: 137
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0e4ec4708141badd4f215484cf746633f8a670eb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 87066f0d1460490312bbd2a7ca22035629b9f069
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37268152"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116439"
 ---
 # <a name="before-installing-failover-clustering"></a>Antes de instalar o cluster de failover
   Antes de instalar um cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], você deve selecionar o hardware e o sistema operacional nos quais o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] será executado. Você também deve configurar o WSFC (Clustering de Failover do Windows Server) e examinar a rede, a segurança e as considerações sobre outros softwares que serão executados no cluster de failover.  

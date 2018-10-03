@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - system stored procedures [SQL Server replication]
 - replication [SQL Server], how-to topics
 ms.assetid: 816d2bda-ed72-43ec-aa4d-7ee3dc25fd8a
-caps.latest.revision: 38
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2fd79f87d69ea11e255bb6009f6a5d2365cab296
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 58ea6e365d16e4487a1f24700a7731ed96e04914
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37292266"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147486"
 ---
 # <a name="replication-system-stored-procedures-concepts"></a>Replication System Stored Procedures Concepts
   Em [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], o acesso programático a toda a funcionalidade configurável pelo usuário em uma topologia de replicação é fornecido por procedimentos armazenados do sistema. Embora os procedimentos armazenados possam ser executados individualmente por meio do [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou do utilitário de linha de comando sqlcmd, pode ser útil gravar arquivos de script [!INCLUDE[tsql](../../../includes/tsql-md.md)] que possam ser executados para a criação de uma sequência lógica de tarefas de replicação.  

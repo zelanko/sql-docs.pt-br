@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - storage [Analysis Services], roles
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - storing data [Analysis Services], roles
 - access rights [Analysis Services], roles
 ms.assetid: 5b7e9cef-ff68-4d8e-99bc-e0094ced1baa
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 979f6302d3b03a06187d3ed1860b3c167ff66828
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4400755b5a117b16f56fe191cf0e2c80da03261c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37165517"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164646"
 ---
 # <a name="security-roles--analysis-services---multidimensional-data"></a>Funções de Segurança (Analysis Services - Dados Multidimensionais)
   As funções são usadas no [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] para gerenciar a segurança de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objetos e dados. Em termos básicos, uma função associa os identificadores de segurança (SIDs) de usuários do Microsoft Windows e grupos que têm direitos de acesso específicos e as permissões definidas para objetos gerenciados por uma instância do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Dois tipos de funções são fornecidos no [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:  

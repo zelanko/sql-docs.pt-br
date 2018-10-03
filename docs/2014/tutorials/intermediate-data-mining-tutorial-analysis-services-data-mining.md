@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 404b31d5-27f4-4875-bd60-7b2b8613eb1b
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2286ab1890865e651f8166ebd4cc8f0dd42274f6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 61c81668f2bac2f25b75a6b58efb9e1b97da4144
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37301296"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48119646"
 ---
 # <a name="intermediate-data-mining-tutorial-analysis-services---data-mining"></a>Tutorial de mineração de dados intermediário (Analysis Services – Mineração de dados)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Fornece um ambiente integrado para criar e trabalhar com modelos de mineração de dados. Você pode se associar com facilidade a fontes de dados, criar e testar vários modelos com os mesmos dados e implantar modelos a serem usados na análise de previsão.  

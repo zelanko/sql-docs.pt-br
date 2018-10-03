@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - query optimizer [SQL Server], index usage
 - index concepts [SQL Server]
 ms.assetid: b7d6b323-728d-4763-a987-92e6292f6f7a
-caps.latest.revision: 35
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 560fed2eba751609f9e187be60a1d08d9b6a1364
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 525dd41faa2c1f9d150ba7bd02442b125975c395
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37188463"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48079406"
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>Índices clusterizados e não clusterizados descritos
   Um índice é uma estrutura em disco associada a uma tabela ou exibição, que agiliza a recuperação das linhas de uma tabela ou exibição. Um índice contém chaves criadas de uma ou mais colunas da tabela ou exibição. Essas chaves são armazenadas em uma estrutura (árvore B) que habilita o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a localizar a linha ou as linhas associadas aos valores de chave de forma rápida e eficaz.  

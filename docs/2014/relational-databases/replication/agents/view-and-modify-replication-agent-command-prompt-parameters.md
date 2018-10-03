@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - agents [SQL Server replication], command prompt parameters
 ms.assetid: 45f2e781-c21d-4b44-8992-89f60fb3d022
-caps.latest.revision: 19
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a3282ba855984dcf8a9880616ef9c582de7475a2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: efac904be2e062cc2c3ebdbbd32a09d57294de4d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37283512"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155066"
 ---
 # <a name="view-and-modify-replication-agent-command-prompt-parameters-sql-server-management-studio"></a>Exibir e modificar parâmetros do prompt de comando de agentes de replicação (SQL Server Management Studio)
   Agentes de replicação são executáveis que aceitam parâmetros de linha de comando. Por padrão, os agentes seguem as etapas de trabalho do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agente, assim sendo, esses parâmetros podem ser exibidos e modificados usando a caixa de diálogo **Propriedades do trabalho – \<Trabalho>**. Essa caixa de diálogo está disponível na pasta **Trabalhos** no [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] e na guia **Agentes** no Replication Monitor. Para obter informações sobre como iniciar o Replication Monitor, consulte [Start the Replication Monitor](../monitor/start-the-replication-monitor.md) (Iniciar o Replication Monitor).  

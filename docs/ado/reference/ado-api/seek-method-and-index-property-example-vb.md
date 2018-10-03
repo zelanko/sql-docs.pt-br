@@ -1,13 +1,11 @@
 ---
-title: Busca de método e exemplo de propriedade de índice (VB) | Microsoft Docs
+title: Exemplo da propriedade Index (VB) e do método Seek | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - Seek method [ADO], Visual Basic example
 - index property [ADO]
 ms.assetid: 337c9eda-9ddf-49ac-94d3-b33114ba6224
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6f9b13fa707cd1b44621b3c3dd74b7649f25b5f7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 8f53fb3258e7eebc54aa0adfad60ff81e83e41bf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281545"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47661464"
 ---
-# <a name="seek-method-and-index-property-example-vb"></a>Exemplo de propriedade de índice (VB) e método de busca
-Este exemplo usa o [registros](../../../ado/reference/ado-api/recordset-object-ado.md) do objeto [busca](../../../ado/reference/ado-api/seek-method.md) método e [índice](../../../ado/reference/ado-api/index-property.md) propriedade em conjunto com um determinado ***ID de funcionário***, para localizar o nome do funcionário no ***funcionários*** tabela do banco de dados Nwind.  
+# <a name="seek-method-and-index-property-example-vb"></a>Exemplo da propriedade Index (VB) e do método Seek
+Este exemplo usa o [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) do objeto [busca](../../../ado/reference/ado-api/seek-method.md) método e [índice](../../../ado/reference/ado-api/index-property.md) propriedade em conjunto com um determinado ***ID do funcionário***, para localizar o nome do funcionário na ***funcionários*** tabela do banco de dados Nwind.  
   
 ```  
 'BeginSeekVB  

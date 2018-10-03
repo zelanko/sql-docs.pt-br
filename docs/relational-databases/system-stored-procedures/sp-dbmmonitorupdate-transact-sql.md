@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_dbmmonitorupdate
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - sp_dbmmonitorupdate
 - database mirroring [SQL Server], monitoring
 ms.assetid: 9ceb9611-4929-44ee-a406-c39ba2720fd5
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0882644bb3cef95694cee44e308b21fc627cd489
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f8ee54383074e624d082d2ab782d6b038fd03d06
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242480"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47817054"
 ---
 # <a name="spdbmmonitorupdate-transact-sql"></a>sp_dbmmonitorupdate (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,20 +45,20 @@ sp_dbmmonitorupdate [ database_name ]
   
 ## <a name="arguments"></a>Argumentos  
  *database_name*  
- O nome do banco de dados para o qual atualizar o status de espelhamento. Se *database_name* não for especificado, o procedimento atualiza a tabela de status para cada banco de dados espelho na instância do servidor.  
+ O nome do banco de dados para o qual atualizar o status de espelhamento. Se *database_name* não for especificado, o procedimento atualiza a tabela de status para cada banco de dados espelhado na instância do servidor.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- Nenhuma  
+ None  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma  
+ None  
   
-## <a name="remarks"></a>Remarks  
- **sp_dbmmonitorupdate** pode ser executado somente no contexto da **msdb** banco de dados.  
+## <a name="remarks"></a>Comentários  
+ **sp_dbmmonitorupdate** pode ser executado somente no contexto do **msdb** banco de dados.  
   
  Se uma coluna da tabela de status não se aplicar ao papel de um parceiro, o valor será NULL nesse parceiro. Uma coluna também deveria ter um valor NULL se as informações relevantes não estiverem disponíveis, como durante um failover ou reinicialização de servidor.  
   
- Depois de **sp_dbmmonitorupdate** cria o **dbm_monitor** função de banco de dados fixa no **msdb** banco de dados, membros do **sysadmin** função de servidor fixa pode adicionar qualquer usuário para o **dbm_monitor** função fixa de banco de dados. O **dbm_monitor** função permite que seus membros exibir o status de espelhamento de banco de dados, mas não atualizá-lo, mas não exibir ou configurar eventos de espelhamento de banco de dados.  
+ Após **sp_dbmmonitorupdate** cria a **dbm_monitor** função de banco de dados fixa no **msdb** banco de dados, os membros a **sysadmin** função de servidor fixa pode adicionar qualquer usuário para o **dbm_monitor** função fixa de banco de dados. O **dbm_monitor** função permite que seus membros exibir o status de espelhamento de banco de dados, mas não atualizá-lo, mas não exibir ou configurar eventos de espelhamento de banco de dados.  
   
  Ao atualizar o status de espelhamento de banco de dados, **sp_dbmmonitorupdate** inspeciona o último valor de qualquer métrica de desempenho de espelhamento para o qual foi especificado um limite de aviso. Se o valor exceder o limiar, o procedimento adicionará um evento de informação ao log de evento. Todas as taxas são médias desde a última atualização. Para obter mais informações, veja [Usar os limites de aviso e alertas em métricas de desempenho de espelhamento &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md).  
   

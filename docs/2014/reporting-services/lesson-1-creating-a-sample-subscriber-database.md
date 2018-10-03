@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
-caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 72d19e915fc937eb18ca1713e190d077f2e92d5d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 516353788009feae4ac643182cac644b65e422f9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37286712"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48156036"
 ---
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>Lição 1: Criando um banco de dados do assinante de exemplo
   Antes de definir uma assinatura controlada por dados, você deve ter uma fonte de dados que fornece dados de assinatura. Nesta etapa, você criará um banco de dados pequeno para armazenar os dados de assinatura usados neste tutorial. Posteriormente, quando a assinatura for processada, o servidor de relatório recuperará esses dados e os utilizará para personalizar a saída de relatório, as opções de entrega e o formato de apresentação do relatório.  

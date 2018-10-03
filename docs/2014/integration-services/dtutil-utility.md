@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - verifying packages
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - removing packages
 - relocating packages
 ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
-caps.latest.revision: 111
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5e565c0750db83191273c66978ae1b1816d1c1d5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d21a944b037affb71700bf49cf665331acb60e1c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37219706"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149166"
 ---
 # <a name="dtutil-utility"></a>utilitário dtutil
   O **dtutil** utilitário de p1ompt do comando é usado para gerenciar [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] pacotes. O utilitário pode copiar, mover, excluir ou verificar a existência de um pacote. Essas ações podem ser desenvolvidas em qualquer pacote do [!INCLUDE[ssIS](../includes/ssis-md.md)] que esteja armazenado em um dos três locais: um banco de dados do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , o Armazenamento de Pacotes [!INCLUDE[ssIS](../includes/ssis-md.md)] e o sistema de arquivos. Se o utilitário acessar um pacote armazenado em **msdb**, o prompt de comando poderá exigir um nome de usuário e uma senha. Se a instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usar Autenticação de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , o prompt de comando solicitará um nome de usuário e uma senha. Se o nome de usuário estiver ausente, o **dtutil** tentará fazer logon no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usando a Autenticação do Windows. O tipo de armazenamento do pacote é identificado por `/SQL`, `/FILE` e pelas opções `/DTS`.  
@@ -129,7 +126,7 @@ dtutil /option [value] [/option [value]]...
 |5|O utilitário não pode carregar o pacote solicitado.|  
 |6|O utilitário não pode resolver a linha de comando porque contém erros sintáticos ou semânticos.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Você não pode usar arquivos de comandos ou redirecionamento com **dtutil**.  
   
  A ordem das opções dentro da linha de comando não é significativa.  

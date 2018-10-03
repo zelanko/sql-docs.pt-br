@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], pseudo-type identifiers
 - pseudo-type identifiers [ODBC], SQL_ARD_TYPE
 - SQL_ARD_TYPE [ODBC]
 ms.assetid: 8d87ca10-f955-4284-8689-e9f4cc31e7ae
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4e3d3ba38947babc5e7335fd38a63db18943b31f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 683b81f82094aa33deef86ffc19dc8c5c0a53a27
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32907141"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47669844"
 ---
 # <a name="sqlardtype"></a>SQL_ARD_TYPE
-O identificador de tipo SQL_ARD_TYPE é usado para indicar que os dados em um buffer será do tipo especificado no campo SQL_DESC_CONCISE_TYPE da descartar. SQL_ARD_TYPE é inserido no *TargetType* argumento de uma chamada para **SQLGetData** em vez de um tipo de dados específico e permite que um aplicativo para alterar os dados de tipo de buffer alterando o descritor campo. Esse valor vincula o tipo de dados de  *\*TargetValuePtr* buffer para o campo do descritor. (SQL_ARD_TYPE não é inserido em uma chamada para **SQLBindCol** ou **SQLBindParameter** porque o tipo do buffer associado já está associado aos campos SQL_DESC_TYPE e SQL_DESC_CONCISE_TYPE e pode ser alterado a qualquer momento alterando esses campos.)  
+O identificador de tipo SQL_ARD_TYPE é usado para indicar que os dados em um buffer será do tipo especificado no campo SQL_DESC_CONCISE_TYPE da descartar. SQL_ARD_TYPE é inserido na *TargetType* argumento de uma chamada para **SQLGetData** em vez de um tipo de dados específico e permite que um aplicativo para alterar os dados de tipo de buffer, alterando o descritor de campo. Esse valor vincula o tipo de dados do  *\*TargetValuePtr* buffer para o campo do descritor. (SQL_ARD_TYPE não é inserido em uma chamada para **SQLBindCol** ou **SQLBindParameter** porque o tipo de buffer associado já está vinculado aos campos SQL_DESC_TYPE e SQL_DESC_CONCISE_TYPE e pode ser alterado a qualquer momento alterando qualquer um desses campos.)  
   
- O identificador de tipo SQL_ARD_TYPE pode ser usado para especificar valores não padrão para precisão à esquerda e a precisão de segundos de tipos de dados de intervalo e tipo de precisão e escala de valores para os dados SQL_C_NUMERIC. Para obter mais informações, consulte [substituindo padrão à esquerda e a precisão de segundos para tipos de dados de intervalo](../../../odbc/reference/appendixes/overriding-default-leading-and-seconds-precision-for-interval-data-types.md) e [substituindo padrão precisão e escala para tipos de dados numéricos](../../../odbc/reference/appendixes/overriding-default-precision-and-scale-for-numeric-data-types.md), mais adiante neste apêndice.
+ O identificador de tipo SQL_ARD_TYPE pode ser usado para especificar valores não padrão para precisão à esquerda e a precisão de segundos de intervalo de tipos de dados e digite valores de precisão e escala para os dados SQL_C_NUMERIC. Para obter mais informações, consulte [substituindo padrão à esquerda e a precisão de segundos para tipos de dados de intervalo](../../../odbc/reference/appendixes/overriding-default-leading-and-seconds-precision-for-interval-data-types.md) e [substituindo padrão precisão e escala para tipos de dados numéricos](../../../odbc/reference/appendixes/overriding-default-precision-and-scale-for-numeric-data-types.md), mais adiante neste apêndice.

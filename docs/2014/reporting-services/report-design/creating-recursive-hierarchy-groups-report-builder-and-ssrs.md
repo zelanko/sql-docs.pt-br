@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 06eccab6-4089-46e8-a84f-5bf3bbe0c23b
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: af5b0d3159dd8cae1fb33933b93bc0a92a2b20a5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 14eb29f4e5390a92118ddb97bab908d8c6c1a1d2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189963"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48169192"
 ---
 # <a name="creating-recursive-hierarchy-groups-report-builder-and-ssrs"></a>Criando grupos de hierarquias recursivas (Construtor de Relatórios e SSRS)
   Para exibir dados recursivos onde o relacionamento entre pai e filho é representado por campos no conjunto de dados, você pode definir a expressão de grupo da região de dados com base no campo filho e defina a propriedade Parent com base no campo pai.  

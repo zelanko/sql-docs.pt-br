@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - heaps
 ms.assetid: df5c4dfb-d372-4d0f-859a-a2d2533ee0d7
-caps.latest.revision: 7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: abcd7a3ba58bd80c8fb14605d76764a7357f960c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: de71808c54264639aea82fe66cf23a7bfd6bd0ab
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37279192"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48098676"
 ---
 # <a name="heaps-tables-without-clustered-indexes"></a>Heaps (Tabelas sem índices clusterizados)
   Heap é uma tabela sem índice clusterizado. Podem ser criados um ou mais índices não clusterizados em tabelas armazenadas como um heap. Dados são armazenados no heap sem especificar uma ordem. Normalmente, os dados são armazenados inicialmente na ordem em que as linhas são inseridas na tabela, mas o [!INCLUDE[ssDE](../../includes/ssde-md.md)] pode mover os dados no heap para armazenar as linhas de forma eficaz; portanto, a ordem de dados não pode ser prevista. Para garantir a ordem das linhas retornadas de um heap, você deve usar o `ORDER BY` cláusula. Para especificar a ordem de armazenamento das linhas, crie um índice clusterizado na tabela, de forma que a tabela não seja um heap.  

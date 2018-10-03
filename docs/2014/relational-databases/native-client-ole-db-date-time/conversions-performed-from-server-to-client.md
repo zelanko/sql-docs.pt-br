@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - conversions [OLE DB], server to client
 ms.assetid: 676fdf24-fb72-4ea0-a8d2-2b197da3c83f
-caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 28d992cdc8536fc0c8e8b93322de191c614b7c51
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: c1ec005ab299a8be40e977ccf6a3a8f318591b86
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37430855"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48167181"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>Conversões executadas do servidor para o cliente
   Este tópico descreve conversões de data/hora executadas entre o [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (ou posterior) e um aplicativo cliente escrito com o OLE DB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
@@ -65,6 +62,6 @@ ms.locfileid: "37430855"
 |13|A cadeia de caracteres é analisada como um literal ISO e convertida para o tipo de destino. Se houver falha, a cadeia de caracteres será analisada como um literal de data OLE (que também tem componentes de hora) e convertida de uma data OLE (DBTYPE_DATE) para o tipo de destino. A cadeia de caracteres deve se conformar com a sintaxe de literais datetime, a menos que o destino seja DBTYPE_DATE ou DBTYPE_DBTIMESTAMP. Se for o caso, um literal datetime ou time será permitido para que a análise de formato ISO tenha êxito. Para que a análise de OLE tenha êxito, a cadeia de caracteres deve se conformar com a sintaxe reconhecida pelo OLE. Se não for possível analisar a cadeia de caracteres, DBSTATUS_E_CANTCONVERTVALUE será definido. Se qualquer valor de componente estiver fora do intervalo, DBSTATUS_E_DATAOVERFLOW será definido.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Associações e conversões de &#40;OLE DB&#41;](conversions-ole-db.md)  
+ [Associações e conversões &#40;OLE DB&#41;](conversions-ole-db.md)  
   
   

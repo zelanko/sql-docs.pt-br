@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 11/23/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Transparent Data Encryption
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - Transparent Data Encryption, about
 - encryption [SQL Server], transparent data encryption
 ms.assetid: c75d0d4b-4008-4e71-9a9d-cee2a566bd3b
-caps.latest.revision: 70
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 25893299dfc708e952cbc2cb4673e34e5612cf23
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 03971bcd487016fbc1fadc07203ebe2ab73555d2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37236596"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48163166"
 ---
 # <a name="transparent-data-encryption-tde"></a>Criptografia de Dados Transparente (TDE)
   *Transparent Data Encryption* (TDE) criptografa os arquivos de dados [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] , o que é conhecido como criptografia de dados em repouso. Você pode tomar várias precauções para ajudar a proteger o banco de dados como, por exemplo, projetando um sistema seguro, criptografando ativos confidenciais e criando um firewall em torno dos servidores de banco de dados. No entanto, em um cenário no qual a mídia física (como unidades ou fitas de backup) é roubada, um terceiro mal-intencionado pode restaurar ou anexar o banco de dados e navegar pelos dados. Uma solução é criptografar dados confidenciais no banco de dados e proteger as chaves usadas para criptografar os dados com um certificado. Isso impede que alguém sem as chaves use os dados, mas esse tipo de proteção deve ser planejado antecipadamente.  

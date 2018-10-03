@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: bb16e4ab-b13f-48f2-8cfe-1851656875ef
-caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: cea6ddb8e6a7d29d5dffeb43648dd5c08267261d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: aba89b5d98ba7caa81f98e6a80346b4e3d6bd0bb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37236196"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166756"
 ---
 # <a name="expression-reference-report-builder-and-ssrs"></a>Referência de expressões (Construtor de Relatórios e SSRS)
   As expressões de relatório dão suporte a uma variedade de referências a funções e coleções internas. A sintaxe [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] das expressões deve ser válida para que um relatório possa ser publicado ou processado.  

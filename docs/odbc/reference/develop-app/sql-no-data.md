@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL_NO_DATA [ODBC]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - compatibility [ODBC], SQL_NO_DATA
 - upgrading applications [ODBC], SQL_NO_DATA
 ms.assetid: 07a4144a-a548-4578-b2be-715c3cf73bf8
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ff7ba5184642f419a62ffef0610bfc08995ed6b4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 749351694a41764b9b5cc8bf3421340d62626aaf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911211"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47739884"
 ---
 # <a name="sqlnodata"></a>SQL_NO_DATA
-Quando um ODBC 3. *x* aplicativo chama **SQLExecDirect**, **SQLExecute**, ou **SQLParamData** em um ODBC 2. *x* driver para executar uma atualização pesquisada ou delete que não afeta qualquer linha na fonte de dados, o driver deve retornar SQL_SUCCESS, não SQL_NO_DATA. Quando um ODBC 2. *x* ou ODBC 3. *x* aplicativo trabalhando com um ODBC 3. *x* driver chama **SQLExecDirect**, **SQLExecute**, ou **SQLParamData** com o mesmo resultado, o ODBC 3. *x* driver deve retornar SQL_NO_DATA.
+Quando um ODBC 3. *x* aplicativo chamará **SQLExecDirect**, **SQLExecute**, ou **SQLParamData** em uma ODBC 2. *x* driver executar uma atualização pesquisada ou excluir a instrução que não afeta nenhuma linha na fonte de dados, o driver deve retornar SQL_SUCCESS, não SQL_NO_DATA. Quando um ODBC 2. *x* ou o ODBC 3. *x* aplicativo trabalhar com um ODBC 3. *x* chamadas de driver **SQLExecDirect**, **SQLExecute**, ou **SQLParamData** com o mesmo resultado, o ODBC 3. *x* driver deve retornar SQL_NO_DATA.

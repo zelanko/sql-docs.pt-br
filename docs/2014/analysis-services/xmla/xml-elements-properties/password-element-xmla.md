@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Password Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Password element
 ms.assetid: 8a0603bd-f6a1-4b86-84f1-c83d0b03951b
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9ab15627b4f5cde95ecff8f368d294d4336060cc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a72d111dd6bccec8b6b40440a0e40e5a6669d87e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328446"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48159176"
 ---
 # <a name="password-element-xmla"></a>Elemento Password (XMLA)
   Determina a senha a ser usada pelo pai [Backup](../xml-elements-commands/backup-element-xmla.md) ou [restaurar](../xml-elements-commands/restore-element-xmla.md) comando para criptografar ou descriptografar um arquivo de backup.  
@@ -53,7 +50,7 @@ ms.locfileid: "37328446"
 |Característica|Description|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|Cadeia de caracteres|  
-|Valor padrão|Nenhum|  
+|Valor padrão|None|  
 |Cardinalidade|0-1: elemento opcional que pode ocorrer apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -61,9 +58,9 @@ ms.locfileid: "37328446"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|[Backup](../xml-elements-commands/backup-element-xmla.md), [restaurar](../xml-elements-commands/restore-element-xmla.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Para comandos `Backup`, se o elemento `Password` não estiver incluído ou contiver uma cadeia de caracteres vazia, o arquivo de backup não será criptografado.  
   
  Para comandos `Restore`, se o elemento `Password` não estiver incluído ou contiver uma cadeia de caracteres vazia ao tentar restaurar um arquivo de backup criptografado, ocorrerá um erro.  

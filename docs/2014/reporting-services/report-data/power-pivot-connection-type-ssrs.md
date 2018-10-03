@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
-caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 3cf73cb88d2d7e88836e41e5b1a8c3a80368e8a7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1938012555328b389c2b1b3e6c10fc20514496db
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37234746"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166096"
 ---
 # <a name="powerpivot-connection-type-ssrs"></a>Tipo de conexão PowerPivot (SSRS)
   É possível usar a extensão de processamento de dados do SQL Server Analysis Services para recuperar dados de uma pasta de trabalho PowerPivot publicada em uma Galeria PowerPivot do SharePoint.  
@@ -51,7 +48,7 @@ ms.locfileid: "37234746"
 ## <a name="parameters"></a>Parâmetros  
  No painel Filtros, selecione a opção **Parâmetros** de um filtro para criar automaticamente um parâmetro de relatório com os valores disponíveis correspondentes às seleções do filtro.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Se você abrir o Construtor de Relatórios na pasta de trabalho PowerPivot em uma Galeria PowerPivot, as Tabelas Dinâmicas, os Gráficos Dinâmicos, as segmentações de dados e outros recursos de layout e analíticos da pasta de trabalho PowerPivot não serão recriados no relatório. Em vez disso, o relatório em branco inclui uma fonte de dados pré-configurada que aponta para os dados na pasta de trabalho PowerPivot. A criação de relatórios com base em uma pasta de trabalho PowerPivot pode ser trabalhosa e demorada dependendo do número de segmentações de dados, filtros e tabelas ou gráficos que você deseja recriar no relatório. Uma abordagem melhor é prever a apresentação dos dados desejada em um relatório, independentemente do design do PowerPivot.  
   
  Os dados em uma pasta de trabalho PowerPivot são altamente compactados. Os dados recuperados da pasta de trabalho PowerPivot para um relatório não são compactados. Use o designer de consulta para especificar filtros e parâmetros para limitar os dados para apenas o que é necessário no relatório.  

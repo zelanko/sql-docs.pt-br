@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2665040a-1291-4064-ba01-f458637dda57
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9cecd7cf22f5849e201aeca7779ceccb4a9e07dc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b91be4b60c65a246b56a2d08142ce6937d80cea0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185333"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48162576"
 ---
 # <a name="adding-a-data-source-view-for-forecasting-intermediate-data-mining-tutorial"></a>Adicionando uma exibição da fonte de dados para previsão (Tutorial de mineração de dados intermediário)
   Nesta tarefa, você adiciona uma exibição da fonte de dados que será usada no cenário de previsão. Um modelo de previsão exige que os dados contenham uma coluna que possa ser usada na identificação das etapas de uma série temporal. Se você planeja analisar várias séries de dados, todas elas deverão terminar na mesma data ou período.  

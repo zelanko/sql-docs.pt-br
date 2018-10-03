@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - adding nodes
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - clusters [SQL Server], creating
 - removing nodes
 ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
-caps.latest.revision: 75
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 672699fe7c941098b0b689a49a30e12c6cc71ee8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dd742a01e52f63aa7c357d954c2de025d2f4d509
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155797"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116779"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>Criar um novo cluster de failover do SQL Server (instalação)
   Para instalar ou atualizar um cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , você deve executar o programa de instalação em cada nó do cluster de failover. Para adicionar um nó a um cluster de failover existente do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , é necessário executar a instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no nó a ser adicionado à instância do cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Não execute a Instalação no nó ativo para gerenciar os outros nós.  

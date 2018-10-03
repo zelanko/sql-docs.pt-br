@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.timeperioddefinition.f1
 ms.assetid: a5e6b9ff-69fa-4896-a840-de2b3e063ca9
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3b62c3da0e8a92eda40d883a596e862a6c679364
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2086fa86f65cd467b84bf77e57123ded51e3dd4a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328856"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161456"
 ---
 # <a name="define-time-periods-data-source-dimension-wizard"></a>Definir Períodos de Tempo (Fonte de Dados) (Assistente para Dimensões)
   Use a página **Definir Períodos de Tempo** para definir atributos que representam períodos de tempo na dimensão de tempo com colunas na tabela especificada na página **Selecionar o Tipo de Dimensão** .  

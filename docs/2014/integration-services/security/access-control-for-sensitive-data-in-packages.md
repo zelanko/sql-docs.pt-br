@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - passwords [Integration Services]
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - cryptography [Integration Services]
 - security [Integration Services], protection levels
 ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
-caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8657428ef8a31829fffb77ccf9ceb997fa34e74a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 39c6316a6e256cf7dab161d57a032b777dfac09a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37277260"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48163626"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>Controle de acesso de dados confidenciais em pacotes
   Para proteger os dados em um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , você pode definir um nível de proteção que ajude a proteger apenas dados confidenciais ou todos os dados no pacote. Além disso, você pode criptografar esses dados com uma senha ou uma chave de usuário ou contar com o banco de dados para criptografar os dados. Além disso, o nível de proteção usado para um pacote não é necessariamente estático, mas altera todo o ciclo de vida do pacote. Defina sempre um nível de proteção durante um desenvolvimento e outro assim que implantar o pacote.  

@@ -4,33 +4,27 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
 - floor function [XQuery]
 - fn:floor function
 ms.assetid: 4ace57dd-b66e-4b60-a2b9-a1b0f1a0831d
-caps.latest.revision: 27
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4f0ec0cc8b4a6e958767c805a5bc7ec68678f753
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 5f06ae6337436ac599d6d804e9481dfe59c57f0a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37991338"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47766684"
 ---
-# <a name="numeric-values-functions---floor"></a>Funções de valores numéricos – floor
+# <a name="numeric-values-functions---floor"></a>Funções de Valores Numéricos – floor
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Retorna o maior número sem parte de fração que não seja maior que o valor de seu argumento. Se o argumento for uma sequência vazia, ele retornará a sequência vazia.  
@@ -46,7 +40,7 @@ fn:floor ($arg as numeric?) as numeric?
  *$arg*  
  Número ao qual a função é aplicada.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Se o tipo de *$arg* é um dos tipos base numéricos três, **xs: float**, **xs: Double**, ou **xs: decimal**, o tipo de retorno é igual a *$arg* tipo. Se o tipo de *$arg* é um tipo que é derivado de um dos tipos numéricos, o tipo de retorno é o tipo numérico básico.  
   
  Se for de entrada para as funções fn: Floor, FN: Ceiling ou FN: round **XDT: untypedatomic**, dados não digitados, ela será convertida implicitamente para **xs: Double**. Qualquer outro tipo gera um erro estático.  
