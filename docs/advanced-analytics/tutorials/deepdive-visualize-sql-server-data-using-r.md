@@ -1,5 +1,5 @@
 ---
-title: Visualizar dados do SQL Server usando o R (SQL e R mergulho profundo) | Microsoft Docs
+title: Visualizar dados do SQL Server usando o R (R e SQL aprofundamento) | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,21 +7,21 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 923b8201b6948a93f0994306269c0d3338f54c2d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 0d34ece68c421dbb7aabd845e117c9f07e00d013
+ms.sourcegitcommit: 2420c57d2952add3697dbe0467ee1d755c5c2ee5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31202308"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47217511"
 ---
-#  <a name="visualize-sql-server-data-using-r-sql-and-r-deep-dive"></a>Visualizar dados do SQL Server usando o R (SQL e R mergulho profundo)
+#  <a name="visualize-sql-server-data-using-r-sql-and-r-deep-dive"></a>Visualizar dados do SQL Server usando o R (R e SQL aprofundamento)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Este artigo faz parte do tutorial mergulho profundo de ciência de dados, como usar [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) com o SQL Server.
+Este artigo faz parte do tutorial de aprofundamento de ciência de dados, sobre como usar [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) com o SQL Server.
 
 Os pacotes avançados do [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] incluem várias funções que foram otimizadas para escalabilidade e processamento paralelo. Normalmente, essas funções tem como prefixo **rx** ou **Rx**.
 
-Para este passo a passo, você deve usar o **rxHistogram** função para exibir a distribuição de valores no _creditLine_ coluna sexo.
+Para este passo a passo, você deve usar o **rxHistogram** função para exibir a distribuição de valores na _creditLine_ coluna por gênero.
 
 ## <a name="visualize-data-using-rxhistogram"></a>Visualizar dados usando rxHistogram
 
@@ -43,17 +43,17 @@ Para este passo a passo, você deve usar o **rxHistogram** função para exibir 
    
 ![resultados do histograma](media/rsql-sue-histogramresults.jpg "resultados do histograma")
 
-4. Você também pode chamar o **rxCube** de função e passar os resultados para um R plotagem de função.  Por exemplo, o exemplo a seguir usa **rxCube** para calcular a média de *fraudRisk* de cada combinação de *numTrans* e *numIntlTrans*:
+4. Você também pode chamar o **rxCube** de função e passar os resultados para um função de plotagem do R.  Por exemplo, o exemplo a seguir usa **rxCube** para calcular a média de *fraudRisk* de cada combinação de *numTrans* e *numIntlTrans*:
   
     ```R
     cube1 <- rxCube(fraudRisk~F(numTrans):F(numIntlTrans),  data = sqlFraudDS)
     ```
   
-    Para especificar os grupos usados para calcular os meios de grupo, use a notação `F()` . Neste exemplo, `F(numTrans):F(numIntlTrans)` indica que os inteiros nas variáveis de `_numTrans` e `numIntlTrans` devem ser tratados como variáveis categóricas, com um nível para cada valor de inteiro.
+    Para especificar os grupos usados para calcular os meios de grupo, use a notação `F()` . Neste exemplo, `F(numTrans):F(numIntlTrans)` indica que os inteiros nas variáveis `numTrans` e `numIntlTrans` devem ser tratados como variáveis categóricas, com um nível para cada valor de inteiro.
   
-    Como os níveis de baixos e altos já foram adicionados à fonte de dados `sqlFraudDS` (usando o `colInfo` parâmetro), os níveis são usados automaticamente no histograma.
+    Como os níveis baixos e altos já foram adicionados à fonte de dados `sqlFraudDS` (usando o `colInfo` parâmetro), os níveis são usados automaticamente no histograma.
   
-5. O padrão retornam o valor de **rxCube** é um *rxCube objeto*, que representa uma referência cruzada. No entanto, você pode usar a função [rxResultsDF](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxresultsdf) para converter os resultados em um quadro de dados que pode ser facilmente usado em uma das funções de plotagem do R padrão.
+5. O padrão retornam o valor de **rxCube** é um *objeto rxCube*, que representa uma tabulação cruzada. No entanto, você pode usar a função [rxResultsDF](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxresultsdf) para converter os resultados em um quadro de dados que pode ser facilmente usado em uma das funções de plotagem do R padrão.
   
     ```R
     cubePlot <- rxResultsDF(cube1)
@@ -65,7 +65,7 @@ Para este passo a passo, você deve usar o **rxHistogram** função para exibir 
        
     No entanto, a saída de **rxResultsDF** é muito mais limpa e preserva os nomes das colunas de origem.
   
-6. Por fim, execute o seguinte código para criar um mapa de calor usando o `levelplot` de função do **entrelaçadas** pacote, que é incluído com todas as distribuições de R.
+6. Por fim, execute o seguinte código para criar um mapa de calor usando a `levelplot` função do **Treliça** pacote, que está incluído em todas as distribuições do R.
   
     ```R
     levelplot(fraudRisk~numTrans*numIntlTrans, data = cubePlot)
@@ -77,7 +77,7 @@ Para este passo a passo, você deve usar o **rxHistogram** função para exibir 
   
 Até mesmo com essa análise rápida, você pode ver que o risco de fraude aumenta com o número de transações e o número de transações internacionais.
 
-Para obter mais informações sobre o **rxCube** função e referências cruzadas em geral, consulte [resumos de dados usando o RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries).
+Para obter mais informações sobre o **rxCube** função e tabelas de referência cruzada em geral, consulte [resumos de dados usando o RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries).
 
 ## <a name="next-step"></a>Próxima etapa
 
