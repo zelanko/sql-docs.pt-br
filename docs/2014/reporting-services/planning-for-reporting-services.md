@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4dde9d4d-e4fa-4bbe-91b0-0bcb0dc7dde7
-caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4e720586f448512342d88dc695988ce9afb90b56
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: adc4c6ea2cc33fe9c0c911b75c74a4232963fe2e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37260518"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48100376"
 ---
 # <a name="planning"></a>Planejamento
   Use estes tópicos para entender melhor o [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Aprenda a instalar e configurar o ambiente do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para melhor atender às suas necessidades.  

@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: eb567ef8-f412-4d34-837a-75e53b88b3ce
-caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c93e14e122dbe3e0905e25e56570c67c3fa769a1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8843e2eafd32ac9e4bdb4cc7e4cbf97a04ea3f51
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37193896"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48054206"
 ---
 # <a name="contextualnamerule-element-xml"></a>Elemento ContextualNameRule (XML)
   Fornece uma dica sobre a melhor forma de construir um nome composto para o atributo.  
@@ -49,9 +46,9 @@ ms.locfileid: "37193896"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|[RelationshipEndVisualizationProperties](../../scripting/data-type/relationshipendvisualizationproperties-data-type-assl.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Fornece uma dica a aplicativos cliente sobre como criar nomes inequívocos para este atributo.  
   
  O valor do elemento `ContextualNameRule` é limitado a uma das cadeias de caracteres listadas na tabela a seguir.  

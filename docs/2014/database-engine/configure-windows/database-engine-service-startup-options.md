@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - single-user mode [SQL Server], startup option
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - startup options [SQL Server]
 - starting SQL Server, options
 ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
-caps.latest.revision: 75
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 373f9493ac9effd62bb0c7178fca09289f70b4bf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b76df2fc563c8170e176bb69d8d6a1e9e3209c98
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37219826"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061996"
 ---
 # <a name="database-engine-service-startup-options"></a>Opções de inicialização do serviço Mecanismo de Banco de Dados
   As opções de inicialização designam certos locais de arquivos necessários durante inicialização e especificam algumas condições que abrangem o servidor. A maioria dos usuários não precisa especificar opções de inicialização a menos que você esteja solucionando problemas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou tenha um problema incomum e é instruído a usar uma opção de inicialização pelo Suporte de Cliente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

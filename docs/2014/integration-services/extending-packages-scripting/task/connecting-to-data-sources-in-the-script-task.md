@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -24,16 +22,15 @@ helpviewer_keywords:
 - SQL Server Integration Services packages, connections
 - SSIS Script task, connections
 ms.assetid: 9c008380-715b-455b-9da7-22572d67c388
-caps.latest.revision: 58
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0266f6683e354f87edb6423bab638436447fcc5d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 528e9e0a6ce51845bc79823aaf248bb51f13f104
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37285642"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48060816"
 ---
 # <a name="connecting-to-data-sources-in-the-script-task"></a>Conectando a fontes de dados na tarefa Script
   Gerenciadores de conexões fornecem acesso a fontes de dados que foram configuradas no pacote. Para obter mais informações, consulte [Integration Services &#40;SSIS&#41; Conexões](../../connection-manager/integration-services-ssis-connections.md).  
@@ -103,7 +100,7 @@ public class ScriptMain
   
 ```  
   
-![Ícone do Integration Services (pequeno)](../../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services  **<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone do Integration Services (pequeno)](../../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services** <br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
 ## <a name="see-also"></a>Consulte também  
  [Conexões do SSIS &#40;Integration Services&#41;](../../connection-manager/integration-services-ssis-connections.md)   

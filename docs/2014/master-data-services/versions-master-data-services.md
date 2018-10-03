@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - version flags [Master Data Services], about version flags
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - version flags [Master Data Services]
 - versions [Master Data Services], version flags
 ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
-caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 40d1a247b8d6efeb39b0c0f311a014ef76b55db4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5003667b952e927454e5674538d0b40fab577aa9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37217676"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48190898"
 ---
 # <a name="versions-master-data-services"></a>Versões (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], você pode criar várias versões dos dados mestre dentro de um modelo. As versões podem ser bloqueadas enquanto você valida seus dados e confirmadas depois que os dados forem validados. Versões confirmadas formam um registro auditável de alterações. Cada versão que você cria contém todos os membros, valores de atributo, membros de hierarquia, relações de hierarquia e coleções para o modelo.  

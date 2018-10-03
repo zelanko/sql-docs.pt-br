@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - data flow components [Integration Services], validating
 - validation [Integration Services]
 ms.assetid: 1a7d5925-b387-4e31-af7f-c7f3c5151040
-caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 545d4b494dc5214d0fa5b1b25f4687a7263330cd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 357e3030657933c20715cb334ec66026b3a97adc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37252448"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48154436"
 ---
 # <a name="validating-a-data-flow-component"></a>Validando um componente de fluxo de dados
   O método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A> da classe base <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> é fornecido para impedir a execução de um componente que não está configurado corretamente. Utilize esse método para verificar se um componente possui o número esperado de objetos de entrada e saída, se as propriedades personalizadas do componente possuem valores aceitáveis e se há conexões especificadas, caso necessário. Utilize esse método também para verificar se as colunas nas coleções de entrada e saída possuem os tipos de dados corretos e se o <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSUsageType> de cada coluna está definido adequadamente para o componente. A implementação da classe base ajuda no processo de validação pois verifica a coleção de colunas de entrada do componente e se cada coluna da coleção se refere a uma coluna do <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputCollection100> do componente upstream.  
@@ -194,6 +191,6 @@ Public  Overrides Sub ReinitializeMetaData()
 End Sub  
 ```  
   
-![Ícone do Integration Services (pequeno)](../../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services  **<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone do Integration Services (pequeno)](../../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services** <br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
   

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.dataview.smqlquerydesigner.f1
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - datasets [Reporting Services], creating
 - query designers [Reporting Services]
 ms.assetid: db86c208-ff1e-4297-aa0c-c250f053f83e
-caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 231d9357d613d647599a15cbf0e7ed08f7cf25cb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 77b3d858696c5dc4d2ed6422eb414f6b650a0487
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37301746"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48110588"
 ---
 # <a name="report-model-query-designer-user-interface"></a>Interface de usuário do Designer de Consulta do modelo de relatório
   O Designer de Relatórios fornece dois designers de consulta para ajudá-lo a especificar quais dados de uma fonte de dados do Modelo do Servidor de Relatórios você deseja usar em um relatório. Use o designer de consultas gráficas para explorar e escolher entidades de modelo e campos de entidade. Use o designer de consulta baseado em texto para trabalhar diretamente com uma especificação de linguagem SMDL em formato XML.  

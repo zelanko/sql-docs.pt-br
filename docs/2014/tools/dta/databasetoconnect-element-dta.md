@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - DatabaseToConnect element
 ms.assetid: 65153a66-3aee-4429-99b7-0816ac23c285
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9a29e28782207d5da0e3166669c6c38a7119f597
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b458e0707f36bde18f6128ae302c7e5826fb5680
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37161587"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48078586"
 ---
 # <a name="databasetoconnect-element-dta"></a>Elemento DatabaseToConnect (DTA)
   Especifica o primeiro banco de dados que o Orientador de Otimização do Mecanismo de Banco de Dados conecta ao ajustar uma carga de trabalho.  
@@ -50,9 +47,9 @@ ms.locfileid: "37161587"
 |Relação|Elementos|  
 |------------------|--------------|  
 |**Elemento pai**|[Elemento TuningOptions &#40;DTA&#41;](tuningoptions-element-dta.md)|  
-|**Elementos filho**|Nenhum|  
+|**Elementos filho**|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Use `DatabaseToConnect` para especificar o nome do primeiro banco de dados ao qual você deseja que o orientador de otimização do mecanismo de banco de dados para se conectar quando ele inicia a sessão de ajuste. Você pode especificar apenas um banco de dados com esse elemento. Se forem especificados vários nomes de banco de dados, o Orientador de Otimização do Mecanismo de Banco de Dados retornará um erro.  
   
 ## <a name="example"></a>Exemplo  

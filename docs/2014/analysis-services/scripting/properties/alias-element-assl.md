@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Alias Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Alias element
 ms.assetid: 674fdb06-e33c-4f35-bd6a-d9bbb13ececa
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 97823c9c491a354b71e73aea460c562e7c317044
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b894b9883fc2146ba234bccf543a0d08d436bf86
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37310506"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104256"
 ---
 # <a name="alias-element-assl"></a>Elemento Alias (ASSL)
   Define um alias para um [conta](../objects/account-element-assl.md) elemento.  
@@ -49,7 +46,7 @@ ms.locfileid: "37310506"
 |Característica|Description|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|Cadeia de caracteres|  
-|Valor padrão|Nenhum|  
+|Valor padrão|None|  
 |Cardinalidade|0-n: Elemento opcional que pode ocorrer mais de uma vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -57,9 +54,9 @@ ms.locfileid: "37310506"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|[Aliases](../collections/aliases-element-assl.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O valor do elemento `Alias` é usado como um nome alternativo para a conta definida pelo elemento pai `Account` e ajuda a identificar a combinação do tipo de conta e da função de agregação em uma interface de usuário.  
   
  O elemento que corresponde ao pai da coleção `Aliases` no modelo de objeto AMO (Objetos de Gerenciamento de Análise) é <xref:Microsoft.AnalysisServices.Account>.  

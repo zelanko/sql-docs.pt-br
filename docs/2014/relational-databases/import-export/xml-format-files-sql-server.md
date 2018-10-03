@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: data-movement
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - format files [SQL Server], XML format files
 - bulk importing [SQL Server], format files
 - XML format files [SQL Server]
 ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
-caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 06ba4a93e79d9b2a602101b25944d251ea9c5b54
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0a6dee085342d800caf2cf7353d28a6813d8b74b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37203546"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48201036"
 ---
 # <a name="xml-format-files-sql-server"></a>Arquivos de formato XML (SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] fornece um esquema XML que define a sintaxe para escrever *arquivos de formato XML* a serem usados para importar dados em massa para uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Arquivos no formato XML devem aderir a este esquema que está definido no Schema Definition Language XML (XSDL). Os arquivos de formato XML só têm suporte quando as ferramentas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são instaladas junto com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
@@ -284,7 +281,7 @@ ms.locfileid: "37203546"
  Do mesmo modo, para exportar dados em massa de uma tabela, cada \<COLUMN> no arquivo de formato mapeia a coluna da linha da tabela de entrada para seu campo correspondente no arquivo de dados de saída.  
   
 ###  <a name="PutXsiTypeValueIntoDataSet"></a> Colocando o valor de xsi:type em um conjunto de dados  
- Quando um documento XML é validado com a linguagem XSD (XML Schema Definition), o valor de xsi:type não é colocado no conjunto de dados. Porém, você pode colocar a informações de xsi:type no conjunto de dados carregando o arquivo de formato XML em um documento XML (por exemplo, `myDoc`), como ilustrado no fragmento de código seguinte:  
+ Quando um documento XML é validado com a linguagem XSD (XML Schema Definition), o valor de xsi:type não é colocado no conjunto de dados. Porém, você pode colocar a informações de xsi:type no conjunto de dados carregando o arquivo de formato XML em um documento XML (por exemplo, `myDoc`), como ilustrado no snippet de código seguinte:  
   
 ```  
 ...;  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - OpenXML method [XML in SQL Server]
 - value method [XML in SQL Server]
 - nodes method [XML in SQL Server]
 ms.assetid: c73dbe55-d685-42eb-b0ee-9f3c5b9d97f3
-caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 322bd5111aac211f400e5f917c9486e0a2c84b4c
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 15384e112b4d770d49095d0450341f5da89c2bd0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43888742"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48156056"
 ---
 # <a name="use-the-value-and-nodes-methods-with-openxml"></a>Usar os métodos value() e nodes() com OPENXML
   Você pode usar várias **Value ()** métodos em `xml` de tipo de dados em um **selecione** valores extraídos de cláusula para gerar um conjunto de linhas. O método **nodes()** produz uma referência interna para cada nó selecionado que pode ser usado para consulta adicional. A combinação dos métodos **nodes()** e **value()** pode ser mais eficiente para gerar o conjunto de linhas quando ele tem várias colunas e, talvez, quando as expressões de caminho usadas em sua geração são complexas.  

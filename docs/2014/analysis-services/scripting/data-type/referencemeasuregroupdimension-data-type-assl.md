@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ReferenceMeasureGroupDimension Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - ReferenceMeasureGroupDimension data type
 ms.assetid: 81f7b83e-71a3-4eab-b291-0500d05903dc
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e8e2134f14ad34f14cbf1b7f6a2858fe14485bbe
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 29a3a0a6e396fc3c8d1ff2e94c9f8f0c070e7f36
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37159299"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48118046"
 ---
 # <a name="referencemeasuregroupdimension-data-type-assl"></a>Tipo de dados ReferenceMeasureGroupDimension (ASSL)
   Define um tipo de dados derivado que representa uma dimensão que está indiretamente relacionada à tabela de fatos por meio de uma dimensão intermediária. Por exemplo, um grupo de medidas Vendas pode fazer referência a uma dimensão Geografia, que está relacionada pela dimensão Cliente.  
@@ -52,17 +49,17 @@ ms.locfileid: "37159299"
 |Característica|Description|  
 |--------------------|-----------------|  
 |Tipos de dados base|[MeasureGroupDimension](dimension-data-type-assl.md)|  
-|Tipos de dados derivados|Nenhum|  
+|Tipos de dados derivados|None|  
   
 ## <a name="data-type-relationships"></a>Relação do tipo de dados  
   
 |Relação|Elemento|  
 |------------------|-------------|  
-|Elementos pai|Nenhum|  
+|Elementos pai|None|  
 |Elementos filho|[IntermediateCubeDimensionID](../properties/id-element-assl.md), [IntermediateGranularityAttributeID](../properties/attributeid-element-assl.md), [materialização](../properties/materialization-element-assl.md)|  
-|Elementos derivados|Nenhum|  
+|Elementos derivados|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O elemento correspondente no modelo de objeto Analysis Management Objects (AMO) é <xref:Microsoft.AnalysisServices.ReferenceMeasureGroupDimension>.  
   
 ## <a name="see-also"></a>Consulte também  

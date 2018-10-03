@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 62bc9fc5-c6ff-4517-b598-d92df76743a2
-caps.latest.revision: 5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: eb48edb7b991a92e17e3c1c8d7b70cce54d1c938
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9ed50f8107b1ee12109eedc904ef07c6a5342df7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319336"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48133538"
 ---
 # <a name="import-a-data-mining-project-using-the-analysis-services-import-wizard"></a>Importar um projeto de mineração de dados usando o Assistente de Importação do Analysis Services
   Este tópico descreve como criar um novo projeto de mineração de dados importando os metadados de projetos existentes de mineração de dados em outro servidor, usando o modelo **Projeto Importar do Servidor (Multidimensional ou Mineração de dados)**, no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  

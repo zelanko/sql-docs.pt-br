@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.specifyordering.selectdimension.f1
 ms.assetid: 071d8c50-de8a-490d-b4a7-c809ba79df18
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 05caa09e6100aad7943ade8d64231d8293f1f9ef
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 58b35c6bf321dec4f6e190eed14b4aa00acbec8a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167257"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48179296"
 ---
 # <a name="specify-attribute-ordering-dimension-business-intelligence-wizard"></a>Especificar a Ordenação de Atributos (Dimensão) (Assistente de Business Intelligence)
   Use a página **Especificar a Ordenação de Atributos** para selecionar uma dimensão para a qual o Assistente de Business Intelligence definirá um atributo e critérios de ordenação que serão usados para classificar membros em cada atributo contido naquela dimensão.  

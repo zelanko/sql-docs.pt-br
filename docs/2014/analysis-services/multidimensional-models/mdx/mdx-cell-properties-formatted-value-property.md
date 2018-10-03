@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7534ff5f-954e-47d4-a2ed-4b5b8ccb30e6
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: de58b31abed2a082964d70ca4036e204767d1f43
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3ecdc453b6498463e431cbad555af738fde2da1d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319266"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052346"
 ---
 # <a name="language-and-formatstring-on-formatedvalue"></a>LANGUAGE e FORMAT_STRING em FORMATED_VALUE
   A propriedade FORMATTED_VALUE é criada com base nas interações das propriedades VALUE, FORMAT_STRING e LANGUAGE da célula. Este tópico explica como essas propriedades interagem para criar a propriedade FORMATTED_VALUE.  

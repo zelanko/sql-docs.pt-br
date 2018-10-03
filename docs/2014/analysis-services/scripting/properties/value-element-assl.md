@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Value Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Value element
 ms.assetid: a2fad411-73fd-42df-b4e1-df2cb8454182
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5bdf16f2f9ce7415d396cf5f4110fd3127e04774
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d338b8607d8515bf89183eeadd24252c55af8fc5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37201986"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218186"
 ---
 # <a name="value-element-assl"></a>Elemento Value (ASSL)
   Contém o valor do elemento pai.  
@@ -50,7 +47,7 @@ ms.locfileid: "37201986"
   
 |Característica|Description|  
 |--------------------|-----------------|  
-|Valor padrão|Nenhum|  
+|Valor padrão|None|  
 |Cardinalidade|1-1: elemento obrigatório que ocorre apenas uma única vez.|  
   
 |Ancestral ou pai|Tipo de Dados|  
@@ -64,9 +61,9 @@ ms.locfileid: "37201986"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|[AlgorithmParameter](../objects/algorithmparameter-element-assl.md), [anotação](../objects/annotation-element-assl.md), [Kpi](../objects/kpi-element-assl.md), [ReportFormatParameter](../objects/reportformatparameter-element-asl.md), [ReportParameter](../objects/reportparameter-element-assl.md), [ServerProperty](../objects/serverproperty-element-assl.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O elemento `Value` contém o valor associado ao objeto pai. O valor esperado do elemento `Value` varia, dependendo do elemento pai, conforme descrito na tabela seguinte.  
   
 |Elemento pai|Valor esperado|  

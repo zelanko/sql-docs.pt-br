@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, Locals Window
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - Transact-SQL debugger, QuickWatch
 - Transact-SQL debugger, viewing information
 ms.assetid: b99819cc-f388-41a1-b304-36e78ce24147
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 881f38c4828508f25434964a0ee7d519009b381d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cf132c55677580a22e57e52a106e3e7c639c3cef
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37230816"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147436"
 ---
 # <a name="transact-sql-debugger-information"></a>Informações do depurador Transact-SQL
   Toda vez que o depurador pausa a execução em uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] específica, você pode usar as várias janelas do depurador para exibir o estado de execução atual.  

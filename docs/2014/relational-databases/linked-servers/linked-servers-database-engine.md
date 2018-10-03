@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - OLE DB, linked servers
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - remote servers [SQL Server], linked servers
 - linked servers [SQL Server], about linked servers
 ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
-caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bcb1df0fdccee488bfdfeaae99f16f567618afd2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: aa47617e59e750fba5ea3d985781ca5510eb455b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37256652"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48193156"
 ---
 # <a name="linked-servers-database-engine"></a>Servidores vinculados (Mecanismo de Banco de Dados)
   Configure um servidor vinculado para permitir que o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] execute comandos em fontes de dados do OLE DB fora da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Normalmente, servidores vinculados são configurados para habilitar o [!INCLUDE[ssDE](../../includes/ssde-md.md)] a executar uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] que inclui tabelas em outra instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ou outro produto de banco de dados como Oracle. Muitos tipos de fontes de dados do OLE DB podem ser configurados, como servidores vinculados, inclusive o Access e o Excel do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] . Servidores vinculados têm as seguintes vantagens:  

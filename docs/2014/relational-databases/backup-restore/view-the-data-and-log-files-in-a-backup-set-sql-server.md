@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database backups [SQL Server], viewing backup sets
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - transaction log backups [SQL Server], viewing backup sets
 - backing up [SQL Server], viewing backup sets
 ms.assetid: abb6420c-f809-426e-aeb4-d0a74989cf39
-caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3c548ee0a7c5c4c32fa789c15fabe9b99a9b94bb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 09bbecf0e0cc308449adde0a462e1641d240b1bf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37205416"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48063306"
 ---
 # <a name="view-the-data-and-log-files-in-a-backup-set-sql-server"></a>Exibir os dados e arquivos de log em um conjunto de backup (SQL Server)
   Este tópico descreve como exibir os arquivos de dados e logs em um conjunto de backup no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  

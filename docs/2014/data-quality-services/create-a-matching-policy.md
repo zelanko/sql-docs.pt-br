@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.kbmatchingresults.f1
 - sql12.dqs.kb.kbmatchingmap.f1
 - sql12.dqs.kb.kbmatchingpolicy.f1
 ms.assetid: cce77a06-ca31-47b6-8146-22edf001d605
-caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7f78681d2fd7e46b4f6307a2bf5573cf1121cdea
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c2313708f4669b9cde09233d6a87d66eaf5662fc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200206"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48090937"
 ---
 # <a name="create-a-matching-policy"></a>Criar uma política de correspondência
   Este tópico descreve como criar uma política correspondente em uma base de dados de conhecimento no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Você se prepara para o processo de correspondência no DQS executando a atividade Política de Correspondência dos dados de exemplo. Nesta atividade, você cria e testa uma ou mais regras de correspondência na política e depois publica a base de dados de conhecimento para tornar as regras de correspondência publicamente disponíveis para uso. Pode haver apenas uma política de correspondência em uma base de dados de conhecimento, mas essa política pode conter várias regras de correspondência.  

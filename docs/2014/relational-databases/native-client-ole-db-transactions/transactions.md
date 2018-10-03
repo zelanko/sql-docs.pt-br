@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - OLE DB, transactions
 - transactions [OLE DB]
 - SQL Server Native Client OLE DB provider, transactions
 ms.assetid: 3b41e33a-c1ca-4b2a-9464-312b0ed3ca89
-caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0bf9bf1d02c09007bfeed695ec7f01ca34ef1e9b
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: dca9b7a3289390b1d1e20e1b0d18c23b44b87617
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37411525"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48145486"
 ---
 # <a name="transactions"></a>Transactions
   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client implementa o suporte de transação local. O consumidor pode usar transações distribuídas ou coordenadas pelo Coordenador de Transações Distribuídas da Microsoft (MS DTC). Para os consumidores que necessitam de controle de transações que englobe várias sessões, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor OLE DB do Native Client pode unir transações iniciadas e mantidas pelo MS DTC.  

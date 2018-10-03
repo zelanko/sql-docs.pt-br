@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Integration Services], syntax
 - syntax [Integration Services]
 ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
-caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2fc62fbd298f5559dff9dc5d944bd668a17a79bd
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 4c1b1be45aff03e3e4e0c0358c3b3eb9903e718d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39082968"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48189296"
 ---
 # <a name="syntax-ssis"></a>Sintaxe (SSIS)
   A sintaxe de expressão [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] é semelhante à sintaxe que as linguagens C e C# usam. Expressões incluem elementos como identificadores (colunas e variáveis), literais, operadores e funções. Este tópico resume os requisitos exclusivos da sintaxe do avaliador de expressão como eles se aplicam a diferentes elementos de expressão.  
@@ -39,7 +36,7 @@ ms.locfileid: "39082968"
 ## <a name="identifiers"></a>Identificadores  
  Expressões podem incluir identificadores de coluna e variável. As colunas podem ter origem na fonte de dados ou podem ser criadas através de transformações no fluxo de dados. Expressões podem usar identificadores de linhagem para fazer referência a colunas. Identificadores de linhagem são números que identifique exclusivamente elementos de pacote. Identificadores de linhagem, referenciados em uma expressão, devem incluir um prefixo de libra (#). Por exemplo, o identificador de linhagem 138 é referenciado utilizando #138.  
   
- Expressões podem incluir as variáveis de sistema que o [!INCLUDE[ssIS](../../includes/ssis-md.md)] fornece e variáveis personalizadas. Variáveis, quando referenciadas em uma expressão devem incluir o \@ prefixo. Por exemplo, o `Counter` variável é referenciada usando \@contador. O \@ caractere não faz parte do nome da variável; só indica para o avaliador de expressão que o identificador é uma variável. Para obter mais informações, consulte [Identificadores &#40;SSIS&#41;](identifiers-ssis.md).  
+ Expressões podem incluir as variáveis de sistema que o [!INCLUDE[ssIS](../../includes/ssis-md.md)] fornece e variáveis personalizadas. Variáveis, quando referenciadas em uma expressão, devem incluir o prefixo \@. Por exemplo, a variável `Counter` é referenciada utilizando \@Counter. O caractere \@ não faz parte do nome de variável; só indica para o avaliador de expressão que o identificador é uma variável. Para obter mais informações, consulte [Identificadores &#40;SSIS&#41;](identifiers-ssis.md).  
   
 ## <a name="literals"></a>Literais  
  Expressões podem incluir literais numérico, de cadeia de caracteres e boolianos. Literais de cadeia de caracteres utilizados em expressões devem ser colocados entre aspas. Literais numéricos e boolianos não têm aspa. A linguagem de expressão inclui sequências de escape para caracteres que frequentemente escapam. Para obter mais informações, consulte [Literais &#40;SSIS&#41;](numeric-string-and-boolean-literals.md).  

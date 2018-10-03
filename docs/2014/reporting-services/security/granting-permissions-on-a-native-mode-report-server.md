@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - roles [Reporting Services], creating
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - role-based security [Reporting Services], about role-based security
 - security [Reporting Services], role-based
 ms.assetid: 260dc2e9-546c-4f04-9fa1-977e23c9d68c
-caps.latest.revision: 59
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c9628b3e6393c6fe33bcff6b5bf14933b46c2dd2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d0ea2e775edd95ec7a30dc6cbf9f9d04bc62a162
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37260122"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161466"
 ---
 # <a name="granting-permissions-on-a-native-mode-report-server"></a>Concedendo permissões em um servidor de relatório no modo nativo
   O SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa autorização com base em funções e um subsistema de autenticação para determinar quem pode executar operações e acessar itens em um servidor de relatório. A autorização com base em funções é categorizada nas funções do conjunto de ações que um usuário ou grupo pode executar. A autenticação se baseia na Autenticação interna do Windows ou em um módulo de autenticação personalizado fornecido por você. É possível utilizar funções predefinidas ou personalizadas com qualquer tipo de autenticação.  

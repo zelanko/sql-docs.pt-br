@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - witness [SQL Server], establishing
 - database mirroring [SQL Server], witness
 ms.assetid: 4b5ecffd-f025-4ab7-b69d-8958c6477127
-caps.latest.revision: 15
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0960274d83f50bfe1781bdfb72e5a482dcfef9c4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d4bc9f0865ed5ff00099f121f254d17aafc298f5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200136"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48050191"
 ---
 # <a name="add-or-replace-a-database-mirroring-witness-sql-server-management-studio"></a>Adicionar ou substituir uma testemunha de espelhamento de banco de dados (SQL Server Management Studio)
   Se os pontos de extremidade do espelhamento de banco de dados usar Autenticação do Windows, você poderá usar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para adicionar ou substituir uma testemunha. Ao adicionar uma testemunha ao [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] isso também altera o modo operacional para modo de segurança alta com failover automático.  

@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - RAW mode, specifying XSINIL example
 ms.assetid: 07c873ff-1f9d-480e-8536-862c39eb8249
-caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 21f7427138f4a4672e562867c94363e04ba4ce0f
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: cf5020a092199d4440905302b309a573358d4471
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43888652"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48062926"
 ---
 # <a name="example-specifying-xsinil-with-the-elements-directive"></a>Exemplo: Especificando XSINIL com a política ELEMENTS
   A consulta a seguir especifica a política `ELEMENTS` para gerar XML centrado em elemento a partir do resultado da consulta.  

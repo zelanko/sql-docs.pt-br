@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Server Object GDR event class
 ms.assetid: 117fedca-c1c4-469a-929a-9ea332c83d25
-caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 626e3057e13eae9de778cc29cbe72ab2360fd03a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: af6d3b8a3544f701a10c53b2d07df0e4a1aec872
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37209386"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48141006"
 ---
 # <a name="audit-server-object-gdr-event-class"></a>Classe de evento Audit Server Object GDR
   A classe de evento **Audit Server Object GDR** ocorre sempre que uma instrução GRANT, REVOKE ou DENY é emitida para uma permissão de objeto de servidor por qualquer usuário no Microsoft SQL Server.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - parameters [Reporting Services], MDX
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - MDX [Reporting Services], defining parameters
 - DMX [Reporting Services]
 ms.assetid: 4ad1e5bc-f510-4752-b4f6-589e55317a90
-caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c46a722ce7f06e816a6625297ab35c9f5548c236
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 81faaac64b045911ca6b8cfc6dabaa5389ce8a5a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37179573"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48159516"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services-report-builder-and-ssrs"></a>Definir parâmetros no Designer de Consulta MDX do Analysis Services (Construtor de Relatórios e SSRS)
   Para parametrizar uma consulta MDX referente a uma fonte de dados do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , é necessário adicionar um parâmetro de consulta à consulta. No designer de consulta MDX, você pode adicionar um parâmetro de consulta nos modos de Design e de Consulta especificando um filtro. Depois de definir a consulta com um parâmetro de consulta, o Reporting Services cria automaticamente um parâmetro de relatório e um conjunto de dados para fornecer a lista de valores válidos. Dessa forma, o usuário pode especificar um valor que é passado diretamente para a consulta.  

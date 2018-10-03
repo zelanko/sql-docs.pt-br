@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.SUMMARY.RENDER.CUSTOM.REPORT.F1
 ms.assetid: e976e7c0-a805-4370-bf73-356c8e3becfb
-caps.latest.revision: 14
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9c035c2d8dacf29f8ca4d81b13c0ace5500a2dbb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 224345a2dc32f12e925a6f97299c91a5e2f7e9b4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37180293"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096166"
 ---
 # <a name="reports-for-the-integration-services-server"></a>Relatórios do servidor do Integration Services
   Na versão atual do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], estão disponíveis em relatórios padrão [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para ajudá-lo a monitorar [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] projetos que foram implantados a [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server. Esses relatórios ajudam a exibir o status e o histórico do pacote e, se necessário, a identificar a causa de falhas na execução do pacote.  

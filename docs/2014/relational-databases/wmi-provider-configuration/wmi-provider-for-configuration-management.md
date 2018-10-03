@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - WMI Provider for Configuration Management
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - configuration management [WMI]
 - WMI Provider for Configuration Management, about WMI Provider for Configuration Management
 ms.assetid: 7e41db24-b915-4eb8-a1d6-e6948ee915b7
-caps.latest.revision: 23
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5e19f7bda872dbf29c018599430f40bfd353ae42
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dfa4b21eb44e3462d9f8d95bed2f09b5c4747d22
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37290282"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095056"
 ---
 # <a name="wmi-provider-for-configuration-management-concepts"></a>Provedor WMI para conceitos de gerenciamento de configuração
   O provedor WMI é uma camada publicada usada com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] snap-in Gerenciador de configuração do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (MMC) e o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do Configuration Manager. Ele fornece uma forma unificada para fazer a interface com chamadas de API que gerenciam as operações do Registro solicitadas pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager e fornece controle e manipulação aprimorados sobre os serviços selecionados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

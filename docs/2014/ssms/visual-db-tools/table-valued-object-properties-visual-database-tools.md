@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vdt.designers.properties.TVO
 ms.assetid: eaf06cbf-8242-4483-894f-80ae02a4840e
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5931df39cc628c71745be485f7fc07a8f9de8c03
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 08686e3dd511d3336c94ab4b0aa96b43ce6d7007
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43816282"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129356"
 ---
 # <a name="table-valued-object-properties-visual-database-tools"></a>Propriedades de objeto com valor de tabela (Visual Database Tools)
   Essas propriedades aparecem na janela Propriedades quando você seleciona um objeto com valor de tabela no **Designer de Consulta e Exibição**. O objeto com valor de tabela pode ser uma exibição, sinônimo, tabela derivada ou função com valor de tabela. A menos que indicado em contrário, essas propriedades são somente leitura na janela **Propriedades** .  

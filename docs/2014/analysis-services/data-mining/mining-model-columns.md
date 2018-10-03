@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - columns [data mining], mining model columns
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - MODEL_EXISTENCE_ONLY column
 - usage property [data mining]
 ms.assetid: fab47643-5bfd-424e-a0f7-69e665db6bab
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6067f165746f653819655063b9eb6798f23d3dc3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 92cee93affaedab7c36517c730e09914ba842041
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37326846"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48167986"
 ---
 # <a name="mining-model-columns"></a>Colunas do modelo de mineração
   Um modelo de mineração de dados aplica um algoritmo de modelo de mineração aos dados que são representados por uma estrutura de mineração. Como a estrutura de mineração, o modelo de mineração contém colunas. Um modelo de mineração reside na estrutura de mineração e herda todos os valores das propriedades que são definidos pela estrutura de mineração. O modelo pode usar todas as colunas contidas na estrutura de mineração ou um subconjunto das colunas.  

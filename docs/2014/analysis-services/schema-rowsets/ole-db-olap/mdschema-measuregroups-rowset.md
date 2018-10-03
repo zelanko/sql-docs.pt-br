@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - MDSCHEMA_MEASUREGROUPS
@@ -17,16 +15,15 @@ topic_type:
 helpviewer_keywords:
 - MDSCHEMA_MEASUREGROUPS rowset
 ms.assetid: bab1bbd0-421b-4fad-9aee-e6511e0e1f1b
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7846fa9eb88a91a945c787cfec0fe19d0c520cf6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f889b66a9dcc72053c04adbd5e1949f6ebbf17dc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300976"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48060269"
 ---
 # <a name="mdschemameasuregroups-rowset"></a>Conjunto de linhas MDSCHEMA_MEASURESGROUPS
   Descreve os grupos de medidas dentro de um banco de dados.  

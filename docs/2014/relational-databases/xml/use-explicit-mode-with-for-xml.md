@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - EXPLICIT FOR XML mode
 - FOR XML clause, EXPLICIT mode
 - FOR XML EXPLICIT mode
 ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
-caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 58e0ac44e282d6d2de4b989cd0e0940aa3b6866c
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: e5972f4dfb9ad47b4017acf36df45098c11eceb2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43889692"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48086376"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>Usar o modo EXPLICIT com FOR XML
   Conforme descrito no tópico [Construindo XML usando FOR XML](../xml/for-xml-sql-server.md), os modos RAW e AUTO não fornecem muito controle sobre a forma do XML gerado de um resultado da consulta. No entanto o modo EXPLICIT fornece máxima flexibilidade para gerar o XML desejado de um resultado de consulta.  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], how-to topics
 ms.assetid: 1bc2a775-6e62-4c66-a53c-201f2ea66295
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e79d4ee05472de8be071cd47c1868d649f7e247b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cfa2d33d949aad49701e5294329349dc231965db
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37257452"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48189636"
 ---
 # <a name="data-mining-query-tasks-and-how-tos"></a>Tarefas e instruções de consulta de Data Mining
   A capacidade de criar consultas será essencial se você for utilizar seus modelos de mineração de dados. Esta seção contém links para exemplos sobre como criar consultas em um modelo de mineração de dados usando as ferramentas fornecidas no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Se precisar de mais informações sobre a definição de uma consulta de mineração de dados ou sobre os diferentes tipos de consultas que você pode criar, consulte [Consultas de mineração de dados](data-mining-queries.md).  
@@ -46,10 +43,10 @@ ms.locfileid: "37257452"
 ## <a name="using-other-data-mining-query-tools"></a>Usando outras ferramentas de consulta de mineração de dados  
  Além de usar o Construtor de Consultas de Previsão, você pode digitar uma consulta diretamente no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usando o DMX ou o XMLA. Você também pode criar consultas de previsão de forma programática e enviá-las a um servidor [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Os tópicos a seguir fornecem mais informações sobre como criar e trabalhar com consultas de previsão fora do Construtor de Consultas de Previsão.  
   
- [Criar uma consulta de previsão singleton com base em um modelo](create-a-singleton-prediction-query-from-a-template.md)  
+ [Criar uma consulta de previsão Singleton a partir de um modelo](create-a-singleton-prediction-query-from-a-template.md)  
  Descreve como usar as ferramentas do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para criar e executar uma consulta de previsão.  
   
- [Criar uma consulta de previsão singleton com base em um modelo](create-a-singleton-prediction-query-from-a-template.md)  
+ [Criar uma consulta de previsão Singleton a partir de um modelo](create-a-singleton-prediction-query-from-a-template.md)  
  Descreve como usar os modelos fornecidos no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para adicionar parâmetros a uma consulta de previsão.  
   
  [Alterar o valor do tempo limite de consultas de mineração de dados](change-the-time-out-value-for-data-mining-queries.md)  
@@ -58,7 +55,7 @@ ms.locfileid: "37257452"
  [Criar uma consulta de conteúdo em um modelo de mineração](create-a-content-query-on-a-mining-model.md)  
  Descreve como criar consultas que retornam informações detalhadas armazenadas no modelo de mineração, usando conjuntos de linhas do esquema de mineração de dados.  
   
- [Create a Mineração de dados Query by Using XMLA](create-a-data-mining-query-by-using-xmla.md)  
+ [Criar uma consulta de mineração de dados usando XML/A](create-a-data-mining-query-by-using-xmla.md)  
  Descreve como criar uma consulta no conteúdo do modelo de mineração usando os modelos XMLA do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="see-also"></a>Consulte também  

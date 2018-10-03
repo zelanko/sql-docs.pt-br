@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ReadOnly property
 - ReadWriteMode command
 - operations [Analysis Services - multidimensional data]
 ms.assetid: 4eff8181-08dd-4fad-b091-d400fc21a020
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bb0d9ae239d33cd55d50e0e876df1584ff2fe965
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b2f9b97122e157ffd356163de63b0ab96708f36a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37286102"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48178196"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>Alternar um banco de dados do Analysis Services entre os modos ReadOnly e ReadWrite
   Geralmente há situações quando um [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] administrador de banco de dados (dba) quer alterar o modo de leitura/gravação de um banco de dados tabular ou multidimensional. Essas situações frequentemente são conduzidas pelas necessidades comerciais, como compartilhar o banco de dados entre um pool de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] servidores para uma melhor experiência de usuário.  

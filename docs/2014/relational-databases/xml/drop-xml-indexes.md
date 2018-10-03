@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - removing indexes
 - dropping indexes
 - XML indexes [SQL Server], dropping
 ms.assetid: 7591ebea-34af-4925-8553-b2adb5b487c2
-caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 270894bf6a1baf7993528bce5eef4ae89f20c977
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 82fd8836bb4fda85a7fdadd6345826cf432485cf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43888532"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48194146"
 ---
 # <a name="drop-xml-indexes"></a>Descartar índices XML
   A instrução [DROP INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)] pode ser usada para remover índices primários ou secundários XML e não XML existentes. No entanto nenhuma opção de DROP INDEX se aplica a índices XML. Se você descartar o índice XML primário, qualquer índice secundário que estiver presente também será excluído.  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 27d5bf66-b0e7-489e-a830-ffe2ec8e5350
-caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5bc389fff162d5e04aabb1bd9e4be85590eaab30
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 50df73e41d67b69479782385244031f85baf5652
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083248"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48138786"
 ---
 # <a name="new-model-page-report-manager"></a>Página Novo Modelo (Gerenciador de Relatórios)
   Use essa página para gerar um modelo de relatório padrão de uma fonte de dados compartilhada. Você só pode gerar modelos de relatório de fontes de dados multidimensionais do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , Oracle e [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  

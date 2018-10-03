@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Permission Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Permission data type
 ms.assetid: 5f309544-59f8-4432-b1eb-b7c1a049f8df
-caps.latest.revision: 43
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c570ae1b3f2e2dbf65a4037f96e515d6667863a8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8d12fb71a8ed19ca083e8ec506fba6338f6b58a7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37233946"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48101936"
 ---
 # <a name="permission-data-type-assl"></a>Tipo de dados Permission (ASSL)
   Define um tipo de dados primitivo abstrato que representa as informações sobre uma permissão individual.  
@@ -58,18 +55,18 @@ ms.locfileid: "37233946"
   
 |Característica|Description|  
 |--------------------|-----------------|  
-|Tipos de dados base|Nenhum|  
+|Tipos de dados base|None|  
 |Tipos de dados derivados|[CubePermission](../objects/cubepermission-element-assl.md), [DatabasePermission](../objects/databasepermission-element-assl.md), [DimensionPermission](permission-data-type-assl.md), [MiningModelPermission](../objects/miningmodelpermission-element-assl.md), [MiningStructurePermission](../objects/miningstructurepermission-element-assl.md)|  
   
 ## <a name="data-type-relationships"></a>Relação do tipo de dados  
   
 |Relação|Elemento|  
 |------------------|-------------|  
-|Elementos pai|Nenhum|  
+|Elementos pai|None|  
 |Elementos filho|[Anotações](../collections/annotations-element-assl.md), [CreatedTimestamp](../properties/createdtimestamp-element-assl.md), [descrição](../properties/description-element-assl.md), [ID](../properties/id-element-assl.md), [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md), [nome](../properties/name-element-assl.md), [Processo](../properties/process-element-assl.md), [leitura](../properties/read-element-assl.md), [ReadDefinition](../properties/readdefinition-element-assl.md), [RoleID](../properties/roleid-element-assl.md), [de gravação](../properties/write-element-assl.md)|  
-|Elementos derivados|Nenhum|  
+|Elementos derivados|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  `Permission` serve como o tipo base abstrato para diversos tipos de permissões derivadas usadas em uma instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
  Este tipo de dados tem as validações a seguir no valor 2 de DeploymentMode (modo de servidor de tabela).  

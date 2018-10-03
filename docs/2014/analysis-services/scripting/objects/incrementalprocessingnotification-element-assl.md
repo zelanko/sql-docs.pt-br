@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - IncrementalProcessingNotification Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - IncrementalProcessingNotification element
 ms.assetid: bfc9b0a4-4043-4aaf-82d9-67e7f1d1eb81
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bd7e2a8defb588e722ac714d3fa07b22a581bf0a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 639d58928b27e965a707602c0ea124c9078e5b47
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189003"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48120736"
 ---
 # <a name="incrementalprocessingnotification-element-assl"></a>Elemento IncrementalProcessingNotification (ASSL)
   Contém informações para o [ProactiveCaching](proactivecaching-element-assl.md) elemento sobre uma consulta a ser executada para determinar o andamento do processamento incremental.  
@@ -47,7 +44,7 @@ ms.locfileid: "37189003"
 |Característica|Description|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|[IncrementalProcessingNotification](../data-type/incrementalprocessingnotification-data-type-assl.md)|  
-|Valor padrão|Nenhum|  
+|Valor padrão|None|  
 |Cardinalidade|1-n: elemento obrigatório que pode ocorrer mais de uma vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -55,9 +52,9 @@ ms.locfileid: "37189003"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|[IncrementalProcessingNotifications](../collections/incrementalprocessingnotifications-element-assl.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O elemento correspondente no modelo de objeto Analysis Management Objects (AMO) é <xref:Microsoft.AnalysisServices.IncrementalProcessingNotification>.  
   
 ## <a name="see-also"></a>Consulte também  

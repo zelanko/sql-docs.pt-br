@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.textboxproperties.alignment.f1
 - "10125"
 ms.assetid: 12a18ad3-a578-4ec2-813b-841b96c327b0
-caps.latest.revision: 9
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c981605bf2f7473fdd24ba10e167f970c1aac8b5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b39bed7faeba38ff8275d61ae5bf3350a43bff28
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37214646"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48144653"
 ---
 # <a name="text-box-properties-dialog-box-alignment-report-builder-and-ssrs"></a>Caixa de diálogo Propriedades da Caixa de Texto, Alinhamento (Construtor de Relatórios e SSRS)
   Selecione **Alinhamento** na caixa de diálogo **Propriedades da Caixa de Texto** para posicionar os valores dentro de uma célula ou região de dados selecionada.  
@@ -43,7 +40,7 @@ ms.locfileid: "37214646"
  **Top**  
  Especifique a quantidade de preenchimento ou o espaço existente entre a borda superior de uma célula e o valor exibido dentro dela. O padrão é 2 pontos. Clique no botão **Expressão** (*fx*) para editar a expressão.  
   
- **Parte inferior**  
+ **parte inferior**  
  Especifique a quantidade de preenchimento ou o espaço existente entre a borda inferior de uma célula e o valor exibido dentro dela. O padrão é 2 pontos. Clique no botão **Expressão** (*fx*) para editar a expressão.  
   
 ## <a name="see-also"></a>Consulte também  

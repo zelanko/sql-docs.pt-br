@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - Managed Classes [SQLXML], executing template files
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - templates [SQLXML], SQLXML Managed Classes
 - CommandStream property
 ms.assetid: 55c564e3-56d1-4d85-bcaa-703e2905dd57
-caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d149b40acdc7fc81c79f8800787d093636753d39
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 442d6a8d355a11d53f5eb6728b7a0f207e37de6d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37331286"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48199026"
 ---
 # <a name="executing-template-files-by-using-the-commandstream-property"></a>Executando os arquivos de modelo usando a propriedade CommandStream
   Este exemplo ilustra como os arquivos de modelo que consistem em consultas SQL ou XPath podem ser especificados usando a propriedade CommandStream do objeto SqlXmlCommand. Neste aplicativo, um FileStreamobject é aberto para um arquivo de comando, e o fluxo de arquivos é atribuído como o CommandStream que é executado.  

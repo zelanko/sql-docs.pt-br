@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - URL reservations
 ms.assetid: 30e4be2e-e65d-462c-895a-5a0a636d042f
-caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c1aabe7b98174ea420e9944c4a195a2fe3b15870
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8984f0a1057bfa7eb3cb9cf2372de75e7da36852
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37301706"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153792"
 ---
 # <a name="url-reservation-syntax--ssrs-configuration-manager"></a>Sintaxe de reserva de URL (Gerenciador de Configurações do SSRS)
   Este tópico descreve as partes da cadeia de caracteres da URL para o serviço Web Servidor de Relatório e o Gerenciador de Relatórios. A cadeia de caracteres da URL armazenada internamente tem uma estrutura diferente de uma URL digitada na barra de Endereço de uma janela do navegador. A cadeia de caracteres de reserva de URL aparece na janela Resultados da ferramenta Configuração do Reporting Services quando você configura uma URL e no arquivo RSReportServer.config. Poderá ser útil saber como a cadeia de caracteres da URL é definida se você estiver solucionando problemas de reserva de URL ou consultando HTTP.SYS para exibir as reservas de URL internas que estão definidas em seu servidor.  

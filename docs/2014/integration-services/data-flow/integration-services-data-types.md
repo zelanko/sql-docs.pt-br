@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying data types
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - Integration Services, data types
 - SQL Server Integration Services, data types
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
-caps.latest.revision: 97
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2a9c9cb0f668f6484a35be458654bdae26869a2f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7046891c252bba57ff91c43ce9d3d3cf0b69f07e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37265321"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129456"
 ---
 # <a name="integration-services-data-types"></a>Tipos de dados do Integration Services
   Quando dados entram em um fluxo de dados em um pacote, a fonte que extrai esses dados converte-os em um tipo de dados do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Dados numéricos são atribuídos a um tipo de dados numéricos, dados de cadeia são atribuídos a um tipo de dados de caractere e datas são atribuídas a um tipo de dados de data. Outros dados, como GUIDs e BLOBs, também são atribuídos aos tipos de dados apropriados do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Se dados tiverem um tipo de dados que não pode ser convertido em um tipo de dados do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , ocorrerá um erro.  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.serverSpecialCalendars.f1
 ms.assetid: 6e28a020-2586-4b13-9333-b499fb1b33af
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7166b39dd5cc9d8a2a4cbb6da1c8f44d49181d46
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 67e4d316b122f44e207037603354f696446aed3f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37245586"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48139436"
 ---
 # <a name="select-calendars-dimension-wizard"></a>Selecionar Calendários (Assistente para Dimensões)
   Use a página **Selecionar Calendários** para criar hierarquias adicionais representando calendários fiscais, de relatório, de fabricação ou ISO 8601 para a dimensão de tempo.  

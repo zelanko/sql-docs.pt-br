@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 48e351d3-ac5b-4eda-a4bd-32a0de206a30
-caps.latest.revision: 4
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: ac10ea59e329f89630510fa6529e54ff2417efd4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9207eb48df3ad54fc8c826d83ad16daf3032befc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37215416"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48210186"
 ---
 # <a name="range-charts-report-builder-and-ssrs"></a>Gráficos de intervalos (Construtor de Relatórios e SSRS)
   Um tipo de gráfico de intervalos exibe um conjunto de pontos de dados que são definidos por diversos valores para a mesma categoria. Os valores são representados pela altura do marcador, de acordo com a medição feita pelo eixo y. Os rótulos de categoria são exibidos no eixo de categoria. O gráfico de intervalos comum preenche a área entre os valores superior e inferior de cada ponto de dados.  

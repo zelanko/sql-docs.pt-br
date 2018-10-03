@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.restoreencryptionkey.F1
 ms.assetid: 11ce51e5-f5d4-40b6-88d8-9360fb50e66c
-caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d9a048a70beb3fa22ab250316b6e630b845e7ca7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9e85f9c17a28ba5c416bcab4853af9bdd823611f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37303626"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220077"
 ---
 # <a name="restore-encryption-key-ssrs-native-mode"></a>Restaurar chave de criptografia (modo nativo do SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa uma chave de criptografia para proteger dados confidenciais armazenados no banco de dados de servidor de relatório. Para assegurar-se de que tenha acesso contínuo aos dados criptografados, é importante criar um backup da chave da criptografia, caso seja necessário restaurá-la posteriormente devido a alterações na conta de serviço ou como parte de uma migração planejada. Este tópico é uma visão geral de como usar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager para restaurar as chaves.  

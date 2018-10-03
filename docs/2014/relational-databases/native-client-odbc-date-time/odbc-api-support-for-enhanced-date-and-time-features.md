@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - date/time [ODBC], API support
 ms.assetid: 430c029d-f8c1-4de7-a9dd-330e9b6bfc20
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 241073ede72de329c9027d32913b34a498dd319d
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: d898406bb78662ea6b56a923307f432dc68a080f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37418679"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48215196"
 ---
-# <a name="odbc-api-support-for-enhanced-date-and-time-features"></a>Suporte a API ODBC para recursos aprimorados de data e hora
+# <a name="odbc-api-support-for-enhanced-date-and-time-features"></a>Suporte à API ODBC para recursos avançados de data e hora
   As seguintes APIs ODBC suportam a funcionalidade avançada de data e hora:  
   
 -   [SQLBindCol](../native-client-odbc-api/sqlbindcol.md)  

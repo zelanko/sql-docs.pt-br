@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.File_Extension
 ms.assetid: 6637bf3f-03c8-4552-ae63-d4896307cf4c
-caps.latest.revision: 18
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 4fd0abdb6c1bc93d730ccb502d6eb1c2facf891a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 440576ae4c4d89639ec2ca44c9bfec7142a4326d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37176413"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48076847"
 ---
 # <a name="options-text-editor---file-extension-page"></a>Opções (página Editor de texto – Extensão de arquivo)
   Use a caixa de diálogo **Opções** para especificar como todos os arquivos com algumas extensões de arquivo são tratados pelo [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Para cada extensão que digita, você pode selecionar um editor. Assim, você pode escolher o editor do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] no qual serão abertos documentos de um certo tipo. Para abrir as opções de extensão de arquivo, clique em **Opções** no menu **Ferramentas**, expanda o **Editor de Texto** e clique em **Extensão de Arquivo**.  

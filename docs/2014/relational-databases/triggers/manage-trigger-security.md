@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - triggers [SQL Server], security
@@ -14,12 +12,12 @@ ms.assetid: e94720a8-a3a2-4364-b0a3-bbe86e3ce4d5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9a290fd763adb52cc83213478103a93a47d3a274
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: bcdc2af7f67c1ea4bda49e09cfe92eda43c9dea3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37409515"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48128146"
 ---
 # <a name="manage-trigger-security"></a>Gerenciar a segurança dos gatilhos
   Por padrão, os gatilhos DML e DDL executam sob o contexto do usuário que aciona o gatilho. O chamador do gatilho é o usuário que executa a instrução que faz com que o gatilho execute. Por exemplo, se o usuário **Marina** executar uma instrução DELETE que faz com que o gatilho DML **DML_trigMarina** seja executado, o código dentro do **DML_trigMarina** executará no contexto dos privilégios do usuário para **Marina**. Esse comportamento padrão pode ser explorado pelos usuários que desejam apresentar um código mal-intencionado no banco de dados ou na instância do servidor. Por exemplo, o gatilho DDL a seguir é criado pelo usuário `JohnDoe`:  

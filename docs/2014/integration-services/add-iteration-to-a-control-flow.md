@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - repeating workflows
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - iterations [Integration Services]
 - For Loop containers
 ms.assetid: eb3a7494-88ae-4165-9d0f-58715eb1734a
-caps.latest.revision: 42
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5fb691bb954b463e584cf56527b8b87b0662c6f1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4093d5ce5feb9a5498fbc6213e5c63cc8bf83536
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273412"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48047837"
 ---
 # <a name="add-iteration-to-a-control-flow"></a>Adicionar iteração a um fluxo de controle
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclui o contêiner Loop For, um elemento de fluxo de controle que torna simples a inclusão de um looping que repete condicionalmente um fluxo de controle em um pacote. Para obter mais informações, consulte [Contêiner Loop For](control-flow/for-loop-container.md).  

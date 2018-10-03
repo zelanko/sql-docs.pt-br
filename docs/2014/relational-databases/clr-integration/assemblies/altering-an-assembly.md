@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - assemblies [CLR integration], modifying
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - altering assemblies
 - ALTER ASSEMBLY statement
 ms.assetid: 9e765fbd-f339-473c-8537-22f478e79696
-caps.latest.revision: 13
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: aea33e50f60b824a122f3f320ba058ae2cae158f
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 780b64f59143d3bf2b8ef99e3da6d32a1fe160cc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37349708"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48158656"
 ---
 # <a name="altering-an-assembly"></a>Alterando um assembly
   Os assemblies que foram registrados no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] podem ser atualizados de uma versão mais recente que use a instrução ALTER ASSEMBLY. Para atualizar um assembly, use a instrução ALTER ASSEMBLY com a seguinte sintaxe:  

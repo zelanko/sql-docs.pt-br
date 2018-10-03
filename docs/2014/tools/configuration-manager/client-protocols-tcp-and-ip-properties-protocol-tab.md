@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - configmgr-client
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - TCP/IP [SQL Server], client protocols
 - client protocols [SQL Server]
 ms.assetid: d04f1bce-069c-4a02-b561-c87c3282be36
-caps.latest.revision: 24
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: f0728a93fbf44cc476d59e0576324b5aa07976bd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d7686844144b43467c152907dfdff10a033005b7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37240056"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48165206"
 ---
-# <a name="client-protocols---tcp-and-ip-properties-protocol-tab"></a>Protocolos de cliente – propriedades IP (guia protocolo) e TCP
+# <a name="client-protocols---tcp-and-ip-properties-protocol-tab"></a>Protocolos de Cliente – Propriedades de TCP e IP (guia Protocolo)
   No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, use a guia **Protocolo** na caixa de diálogo **Propriedades de TCP/IP** para exibir ou especificar as opções a seguir. Para se conectar a uma porta diferente, digite o número da porta na caixa **Pipe Padrão** . Para obter mais informações sobre cadeias de conexão, consulte [Criando uma cadeia de conexão válida usando TCP/IP](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md).  
   
 ## <a name="options"></a>Opções  

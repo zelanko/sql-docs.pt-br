@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.audittransformation.f1
 helpviewer_keywords:
 - Audit Transformation Editor
 ms.assetid: 32786a34-5870-4fde-83c7-ec74d62404b8
-caps.latest.revision: 12
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f0ec690b0c1b90ffc01c5bf275769658c72ffc99
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a230d6118d68c588c7671d3b9f410ecd9b5071da
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37148347"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48135256"
 ---
 # <a name="audit-transformation-editor"></a>Editor de Transformação Auditoria
   A opção Auditar Transformação permite ao fluxo de dados de um pacote incluir dados sobre o ambiente em que o pacote é executado. Por exemplo, o nome do pacote, o computador e o operador podem ser adicionados ao fluxo de dados. O [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclui variáveis do sistema que fornecem essas informações.  

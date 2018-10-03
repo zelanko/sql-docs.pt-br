@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ProactiveCachingIncrementalProcessingBinding Data Type
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - ProactiveCachingIncrementalProcessingBinding data type
 ms.assetid: f49c0c96-4277-417b-9660-d77a4faebd00
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ad1107d1ad2e135e65b2ef4f05fd2e85d799123c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3abbeafe4bb3a6d9cc3a9a35e4a77b6fede11f46
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37247716"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48216396"
 ---
 # <a name="proactivecachingincrementalprocessingbinding-data-type-assl"></a>Tipo de dados ProactiveCachingIncrementalProcessingBinding (ASSL)
   Define um tipo de dados derivado que representa uma associação para o [ProactiveCaching](../objects/proactivecaching-element-assl.md) elemento sobre o status do processo de recriação do cache.  
@@ -49,17 +46,17 @@ ms.locfileid: "37247716"
 |Característica|Description|  
 |--------------------|-----------------|  
 |Tipos de dados base|[ProactiveCachingBinding](binding-data-type-assl.md)|  
-|Tipos de dados derivados|Nenhum|  
+|Tipos de dados derivados|None|  
   
 ## <a name="data-type-relationships"></a>Relação do tipo de dados  
   
 |Relação|Elemento|  
 |------------------|-------------|  
-|Elementos pai|Nenhum|  
+|Elementos pai|None|  
 |Elementos filho|[IncrementalProcessingNotification](../objects/incrementalprocessingnotification-element-assl.md), [RefreshInterval](../properties/refreshinterval-element-assl.md)|  
-|Elementos derivados|Nenhum|  
+|Elementos derivados|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Para obter mais informações sobre o `ProactiveCachingBinding` tipo, incluindo uma tabela da hierarquia de herança `ProactiveCachingBinding` tipos, consulte [tipo de dados ProactiveCachingBinding &#40;ASSL&#41;](binding-data-type-assl.md).  
   
  Para obter mais informações sobre o `Binding` tipo, incluindo tabelas de objetos do Analysis Services Scripting Language (ASSL) da `Binding` tipo e a hierarquia de herança dos `Binding` tipos, consulte [tipo de associação de dados &#40;ASSL &#41;](binding-data-type-assl.md).  

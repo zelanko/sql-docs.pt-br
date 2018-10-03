@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.maintplanproperties.integrity.f1
@@ -15,16 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - Check Database Integrity Task dialog box
 ms.assetid: 3534494a-5dfe-4738-b49a-e7fabd731c47
-caps.latest.revision: 21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6f232b12ff76f933f1d5a0a4c64632ddefc5e697
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5385aec450862a1f09dad45d94376f6f17a8d13a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37195402"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48145936"
 ---
 # <a name="check-database-integrity-task-maintenance-plan"></a>Tarefa Verificar Integridade do Banco de Dados (Plano de Manutenção)
   Use a caixa de diálogo **Tarefa Verificar Integridade do Banco de Dados** para verificar a alocação e integridade estrutural de tabelas do usuário e do sistema, além de índices no banco de dados, executando a instância `DBCC CHECKDB`[!INCLUDE[tsql](../../includes/tsql-md.md)] . A execução de `DBCC` garante que quaisquer problemas de integridade com o banco de dados sejam reportados, permitindo assim serem endereçados posteriormente por um administrador do sistema ou proprietário de banco de dados.  

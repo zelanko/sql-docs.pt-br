@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - HierarchyID
 ms.assetid: 3b4f7dae-65b5-4d8d-8641-87aba9aa692d
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 70a12acddb455496856b8c54e501b1c3a7acfb1c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 26981ad1cc1cfbf9b3a69cca49f9529c0b590b61
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37282902"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229676"
 ---
 # <a name="querying-a-hierarchical-table-using-hierarchy-methods"></a>Consultando uma tabela hierárquica por meio de métodos de hierarquia
   Agora que a tabela HumanResources.EmployeeOrg está completamente populada, essa tarefa mostrará como consultar a hierarquia usando alguns métodos hierárquicos.  

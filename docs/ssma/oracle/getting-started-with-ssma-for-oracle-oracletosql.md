@@ -4,24 +4,21 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SSMA for Oracle, Metadata Explorers
 - SSMA for Oracle, Toolbars
 ms.assetid: df79664c-972e-4bef-865a-ce609789fee7
-caps.latest.revision: 9
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: e1c2b325e10223cf30d233facb3de3e3282eaa7b
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 80fc86c4b3d9385dc056b0c0ea9633f9f5f26675
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40392235"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47782064"
 ---
 # <a name="getting-started-with-ssma-for-oracle-oracletosql"></a>Introdução ao SSMA para Oracle (OracleToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Assistente de migração (SSMA) para Oracle permite que você rapidamente converter esquemas de banco de dados Oracle para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esquemas, carregar os esquemas resultantes em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e migrar dados do Oracle para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

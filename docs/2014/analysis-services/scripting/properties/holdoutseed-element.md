@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -17,16 +15,15 @@ f1_keywords:
 helpviewer_keywords:
 - HoldoutSeed element
 ms.assetid: 6b608bb3-c075-4744-9722-f5fb9fa1cc7e
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6b5ba2d0d5d3cb355a4d0d6a372b41207ddce1d6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b97d88ee83d92d22f72db13d20ce37bb6ea9da08
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185223"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48097588"
 ---
 # <a name="holdoutseed-element"></a>Elemento HoldoutSeed
   Especifica a semente para uma partição de validação repetível que contém o conjunto de teste de um [MiningStructure](../objects/miningstructure-element-assl.md) elemento. Esta semente assegura que o conteúdo do modelo permaneça o mesmo durante o reprocessamento. Se não for especificado ou definido como 0, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] cria uma semente, usando um algoritmo de hash no nome da estrutura de mineração.  
@@ -55,9 +52,9 @@ ms.locfileid: "37185223"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elemento pai|[MiningStructure](../objects/miningstructure-element-assl.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Quando você criar uma estrutura de mineração pela primeira vez, a ID e o nome serão os mesmos. Porém, você poderá alterar o nome da estrutura de mineração. Portanto, se você quiser assegurar que a partição é repetível, não deverá confiar na semente criada pelo nome, mas deverá definir explicitamente uma semente.  
   
  Além disso, quando você cria uma cópia de uma estrutura de mineração usando o `EXPORT` instrução, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] manterão o nome da nova estrutura de mineração, mas irá gerar automaticamente uma nova ID. Portanto, é possível ter duas estruturas de mineração que compartilhem o mesmo nome, porém, com IDs diferentes. Quaisquer duas estruturas de mineração que tenham o mesmo nome terão a mesma semente. No entanto, como o particionamento dos dados também depende dos dados de origem, o conteúdo real das partições poderá ser diferente em cada estrutura.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - security [Reporting Services], authentication
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - authentication [Reporting Services]
 - custom authentication [Reporting Services]
 ms.assetid: 103ce1f9-31d8-44bb-b540-2752e4dcf60b
-caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 18ea77b885dd7aed809eb1ebda04bbfddad11137
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5088cabad39f75fb1becd65a21c84133608e9a2c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37235016"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093311"
 ---
 # <a name="authentication-in-reporting-services"></a>Autenticação no Reporting Services
   A autenticação é o processo de estabelecimento do direito de um usuário a uma identidade. Existem muitas técnicas que você pode usar para autenticar um usuário. O modo mais comum é usar senhas. Quando você implementa a Autenticação de Formulários, por exemplo, deseja uma implementação que solicite credenciais dos usuários (normalmente por meio de alguma interface que solicita um nome de login e uma senha) e depois valide os usuários em um repositório de dados, como uma tabela de banco de dados ou um arquivo de configuração. Se as credenciais não puderem ser validadas, o processo de autenticação falhará e o usuário assumirá uma identidade anônima.  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
-caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: fe42fc3dd5e1398cc0e66ad2c37cd14a3fedd67a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 97082f1fcfc739e622c976b4dff0c1dbe4e6a79d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202806"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48068986"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>Tutorial: criando um relatório de formato livre (Construtor de Relatórios)
   Este tutorial ensina a criar um relatório de formulário livre do SSRS que se parece com uma carta de formulários. Você pode organizar itens de relatório para criar um formulário com caixas de texto, imagens e outras regiões de dados.  

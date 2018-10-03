@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Optimization Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Optimization element
 ms.assetid: fb9ff737-59e2-4d8b-9f0e-af392eb25d08
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b20e8875f982f16a3f7ee128552c65fbbfca0f60
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f12921ee12008c96396483426253ac54bdb6fd6a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37261302"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48178342"
 ---
 # <a name="optimization-element-xmla"></a>Elemento Optimization (XMLA)
   Especifica a porcentagem de limite de otimização usada pelo comando [DesignAggregations](../xml-elements-commands/designaggregations-element-xmla.md) para projetar agregações.  
@@ -53,7 +50,7 @@ ms.locfileid: "37261302"
 |Característica|Description|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|Duplo|  
-|Valor padrão|Nenhum|  
+|Valor padrão|None|  
 |Cardinalidade|0-1: elemento opcional que pode ocorrer apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -61,9 +58,9 @@ ms.locfileid: "37261302"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|[DesignAggregations](../xml-elements-commands/designaggregations-element-xmla.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;XMLA&#41;](xml-elements-properties.md)  

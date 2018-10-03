@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - service account configuration, SQL Server
 ms.assetid: c283702d-ab20-4bfa-9272-f0c53c31cb9f
-caps.latest.revision: 37
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2debf9c1754b81741e25f535b1cf05dce2ce2233
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9f642458f8d30fab0d20eeaad427831c5dece964
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37212366"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48066876"
 ---
 # <a name="server-configuration---service-accounts"></a>Configuração do servidor - Contas de serviço
   Use a página Configuração do Servidor do Assistente de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para atribuir contas de logon aos serviços do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os serviços reais configurados nessa página dependem dos recursos que você selecionou para instalação.  
@@ -50,7 +47,7 @@ ms.locfileid: "37212366"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Cliente Distributed Replay|A conta de serviço usada para o serviço do Distributed Replay Client.<br /><br /> Forneça uma conta na qual executará o serviço do Distributed Replay Client. Essa conta deve ser diferente da conta que você usa para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service.<br /><br /> O tipo de inicialização padrão é Manual.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Controlador Distributed Replay|A conta de serviço usada para o serviço do Distributed Replay Controller.<br /><br /> Forneça uma conta na qual executará o serviço do Distributed Replay Controller. Essa conta deve ser diferente da conta que você usa para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service.<br /><br /> O tipo de inicialização padrão é Manual.|  
 |Iniciador do Daemon de Filtro de Texto Completo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|O serviço que cria os processos de fdhost.exe. Ele é necessário para hospedar os separadores de palavras e os filtros que processam dados textuais para indexação de texto completo.<br /><br /> Se você fornecer uma conta de domínio na qual executará o serviço do Iniciador FDHOST, é altamente recomendável que você use uma conta de baixo privilégio. Essa conta deve ser diferente da conta que você usa para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service.|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Navegador|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Navegador é o serviço de resolução de nomes que fornece [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] informações de conexão para computadores cliente. Esse serviço é compartilhado por várias [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] instâncias. A conta de logon padrão é NT Authority\Local service e não pode ser alterada durante [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a instalação. Você pode alterar a conta depois que a instalação for concluída. Se o tipo inicial não for especificado durante a instalação, isso será determinado da seguinte maneira:<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Navegador está definido como automático e é executado nos cenários de instalação descritos abaixo:<br />-<br />                            [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância de cluster de failover<br />-<br />                            Instância nomeada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em que TCP ou NP está habilitado<br />-<br />                            Instância nomeada do Analysis Server e não está clusterizada<br /><br /> Se nenhum dos cenários acima se aplicam, e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] navegador já estiver instalado, o estado atual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] navegador será mantido.<br /><br /> O tipo de inicialização está definido como Desabilitado e não há uma instância existente de uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anterior à instalação.|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Navegador|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Navegador é o serviço de resolução de nomes que fornece [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] informações de conexão para computadores cliente. Esse serviço é compartilhado por várias [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] instâncias. A conta de logon padrão é NT Authority\Local service e não pode ser alterada durante [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a instalação. Você pode alterar a conta depois que a instalação for concluída. Se o tipo inicial não for especificado durante a instalação, isso será determinado da seguinte maneira:<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Navegador está definido como automático e é executado nos cenários de instalação descritos abaixo:<br />-<br />                            [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instância de cluster de failover<br />-<br />                            Instância nomeada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em que TCP ou NP está habilitado<br />-<br />                            Instância nomeada do Analysis Server e não está clusterizada<br /><br /> Se nenhum dos cenários acima se aplicam, e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] navegador já estiver instalado, o estado atual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] navegador será mantido.<br /><br /> O tipo de inicialização está definido como Desabilitado e não há uma instância existente de uma versão anterior do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anterior à instalação.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Considerações sobre segurança para uma instalação do SQL Server](../../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)  

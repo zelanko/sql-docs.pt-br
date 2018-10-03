@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Analysis Services], full control
 - full control permissions [Analysis Services]
 ms.assetid: be7e5f64-af43-47d6-84a5-c5c1c277d644
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 49e677c7c0a452b5b465d2a82c0bd3477dcc3b5c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6bac9958c7b906a52b5b0d9d28a37c31d280b836
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37286162"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149006"
 ---
 # <a name="grant-database-permissions-analysis-services"></a>Conceder permissões de banco de dados (Analysis Services)
   Se você estiver acessando a administração de banco de dados do Analysis Services com experiência em bancos de dados relacionais, a primeira coisa que você precisa entender é que, em termos de acesso a dados, o banco de dados não é o principal objeto protegível no Analysis Services.  

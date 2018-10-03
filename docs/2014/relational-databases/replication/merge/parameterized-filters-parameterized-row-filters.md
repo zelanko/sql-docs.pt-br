@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/02/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - publications [SQL Server replication], dynamic filters
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - filters [SQL Server replication], parameterized
 - dynamic filters [SQL Server replication]
 ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
-caps.latest.revision: 68
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1a66dcf09bc64991be32b9d7bf66e2e1729de6c5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fcc10aefddfe657e038f524f90075ae1fae0ce23
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37225408"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48216306"
 ---
 # <a name="parameterized-row-filters"></a>Parameterized Row Filters
   Os filtros de linha com parâmetros permitem que diferentes partições de dados sejam enviadas a diferentes Assinantes sem a necessidade de criar múltiplas publicações (os filtros com parâmetros foram referidos como filtros dinâmicos em versões anteriores do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). Uma partição é um subconjunto das linhas de uma tabela; dependendo das configurações escolhidas ao criar um filtro de linha com parâmetros, cada linha de uma tabela publicada pode pertencer a uma partição somente (o que produz partições que não se sobrepõem) ou a duas ou mais partições (o que produzem partições que se sobrepõem).  

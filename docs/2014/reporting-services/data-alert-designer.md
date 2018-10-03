@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - editing, data alerts
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - creating, data alerts
 - creating, alerts
 ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
-caps.latest.revision: 21
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e0b0e8d5d18b45d15feb0f1af8f7ef2671053ab1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3b4bf77cc626f78014ab139d3e27377c8f139e0c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155697"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48162236"
 ---
 # <a name="data-alert-designer"></a>Editar um Alerta de Dados no Designer de Alertas
   Você cria e edita definições de alerta de dados no Designer de Alertas de Dados. Uma definição de alerta é uma coleção de metadados, incluindo os dados de relatório nos quais você está interessado, as regras que os dados de relatório devem atender para criar instâncias de alerta de dados e enviar mensagens de alerta de dados, os destinatários da mensagem de alerta, e assim sucessivamente.  

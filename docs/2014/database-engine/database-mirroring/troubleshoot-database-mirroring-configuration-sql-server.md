@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - database mirroring [SQL Server], troubleshooting
 - troubleshooting [SQL Server], database mirroring
 ms.assetid: 87d3801b-dc52-419e-9316-8b1f1490946c
-caps.latest.revision: 68
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3281a4112f585936f10b5c626a4b22f5fd359092
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b99fb881fc6bf09aa848bd41a42f8254e5f3acd6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293156"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48085506"
 ---
 # <a name="troubleshoot-database-mirroring-configuration-sql-server"></a>Solução de problemas de configuração de espelhamento de banco de dados (SQL Server)
   Este tópico fornece informações para ajudá-lo a solucionar problemas ao configurar uma sessão de espelhamento de banco de dados.  

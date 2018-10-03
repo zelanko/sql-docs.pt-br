@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - custom assemblies [Reporting Services], debugging
 - debugging custom assemblies [Reporting Services]
 - troubleshooting [Reporting Services], custom assemblies
 ms.assetid: 3a3215b3-548c-4474-81ba-3a98dd3912bf
-caps.latest.revision: 43
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a810f5fd5296a109b266fdafc6033f9cb371032a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d151641736523457e4c22ea94f50fb0652a73aa3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218856"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48159726"
 ---
 # <a name="how-to-debug-custom-assemblies"></a>Como depurar assemblies personalizados
   O [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] fornece várias ferramentas de depuração que podem ajudar você a analisar o código de assembly personalizado e localizar erros nele. A melhor ferramenta a ser usada dependerá do que você estiver tentando realizar. Este exemplo usa o [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)].  

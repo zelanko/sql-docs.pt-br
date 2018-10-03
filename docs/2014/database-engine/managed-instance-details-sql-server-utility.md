@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6e51b7bb-a733-4852-8c33-7f4dbdf931c2
-caps.latest.revision: 5
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 80548c0ea7ba2b8bf8232a66daf709050f4cdc4f
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 5677e7f5dc7a5191b2d39e6100cafee1f38e86ab
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43814152"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48185446"
 ---
 # <a name="managed-instance-details-sql-server-utility"></a>Detalhes de instâncias gerenciadas (Utilitário do SQL Server)
   As informações da exibição Instâncias Gerenciadas do Gerenciador do Utilitário fornecem dados de utilização para instâncias individuais do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], histórico de utilização da CPU, detalhes de utilização do armazenamento em nível de arquivo e a capacidade de exibir e atualizar limites de políticas. Os limites de políticas podem ser controlados no nível de instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , para um computador, para arquivos de banco de dados e arquivos de log e no nível de volumes de armazenamento. Você também pode exibir detalhes de propriedades de instâncias gerenciadas individuais do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

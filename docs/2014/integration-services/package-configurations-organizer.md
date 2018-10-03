@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.packageconfigurationorganizer.f1
 helpviewer_keywords:
 - Package Configurations Organizer dialog box
 ms.assetid: f20ae6cb-9e6a-4d24-88ff-d7a903a4e8d3
-caps.latest.revision: 37
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 83911534bc17b9b453f6b67f92f6bf463ead9037
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 34789e64c2e8bc1892827b414a89975377c75cfc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37217736"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48085966"
 ---
 # <a name="package-configurations-organizer"></a>Organizador de Configurações do Pacote
   Use a caixa de diálogo **Organizador de Configurações do Pacote** para habilitar configurações de pacote, visualizar uma lista de configurações para o pacote atual e para definir a ordem de preferência para carregar as configurações.  

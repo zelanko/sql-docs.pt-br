@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 9debb638-1b28-401b-9499-8f63943863e9
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: be67c3059f09beefae68d0264fd0316579344d64
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 34ef944610a9e3b52fec600b3da5e1f9b06790bf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37250786"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129246"
 ---
 # <a name="hierarchy-element-csdlbi"></a>Elemento Hierarchy (CSDLBI)
   O elemento Hierarchy é um contêiner lógico para os campos em uma tabela que podem ser vinculados entre si para formar uma hierarquia. O elemento Hierarchy é derivado do elemento CSDL Member e foi estendido para oferecer suporte às hierarquias criadas em modelos de dados de business intelligence.  
@@ -33,7 +30,7 @@ ms.locfileid: "37250786"
 |Documentação|não|Uma descrição da hierarquia.|  
 |Nível|Sim|Um ou mais elementos Level que definem as colunas usadas na hierarquia.<br /><br /> Consulte [Elemento Level &#40;CSDLBI&#41;](level-element-csdlbi.md).|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Em modelos tabulares, as hierarquias são criadas por meio da especificação de relações pai-filho entre colunas na mesma tabela. Para obter mais informações, consulte [Hierarquias &#40;SSAS Tabular&#41;](../../tabular-models/hierarchies-ssas-tabular.md).  
   
 ## <a name="example"></a>Exemplo  

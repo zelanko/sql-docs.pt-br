@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.restorepage.general.f1
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - pages [SQL Server], damaged
 - restoring [SQL Server], pages
 ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
-caps.latest.revision: 65
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6dcda45c3aa53bfe6e3e73338e2a37f207b3007d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d30c8adfc19daa58f4aa3782072c6a9b08f11d83
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37279712"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48108726"
 ---
 # <a name="restore-pages-sql-server"></a>Restaurar páginas (SQL Server)
   Este tópico descreve como restaurar páginas no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A meta da restauração de uma página é restaurar uma ou mais páginas danificadas sem restaurar todo o banco de dados. Geralmente, as páginas candidatas à restauração foram marcadas como "suspeitas" por causa de um erro encontrado durante seu acesso. Páginas suspeitas são identificadas na tabela [suspect_pages](/sql/relational-databases/system-tables/suspect-pages-transact-sql) do banco de dados **msdb** .  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - AND, bitwise AND
 - '& (bitwise AND)'
 - bitwise AND (&)
 ms.assetid: 06d2958e-66a5-44d8-8bc4-56209ebe1ff2
-caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4a0c0557b4a0bbb1c0735476413e91af7645102e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a89f5c0a9c4044c56d14015fe1fe9282b6a5dfb7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37156518"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48118736"
 ---
 # <a name="amp-bitwise-and-ssis-expression"></a>&amp; (AND bit a bit) (Expressão SSIS)
   Executa uma operação AND de bit a bit de dois valores de inteiro. Compara cada bit de seu primeiro operando com o bit correspondente de seu segundo operando. Se ambos os bits forem 1, o bit de resultado correspondente será definido como 1. Caso contrário, o bit de resultado correspondente é definido como zero (0).  
@@ -45,7 +42,7 @@ integer_expression1 & integer_expression2
 ## <a name="result-types"></a>Tipos de resultado  
  Determinado por tipos de dados dos dois argumentos. Para obter mais informações, consulte [Integration Services Data Types in Expressions](integration-services-data-types-in-expressions.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Se qualquer condição for nula, o resultado de expressão será nulo.  
   
 ## <a name="expression-examples"></a>Exemplos de expressões  

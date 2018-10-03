@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: fdf75c47-77dc-4bdb-9931-8eca198fdb88
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3fd89aaa69e8dc2b29b80ca82f89d1453dc44017
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8b932ac5fac719be29bda37f134f9beb06d1483f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37211476"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104776"
 ---
 # <a name="level-element-csdlbi"></a>Elemento Level (CSDLBI)
   O elemento Level é um tipo complexo que define um único nível em uma hierarquia  
@@ -33,7 +30,7 @@ ms.locfileid: "37211476"
 |Origem|Sim|Um contêiner para a referência da propriedade.|  
 |PropertyRef|Sim|Uma referência a uma propriedade da instância. Outros atributos do nível, como legendas, nome e nome de referência, podem ser tirados da propriedade da instância referenciada. Nesse caso, você não precisa especificá-los no elemento Level.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Para obter mais informações sobre hierarquias em modelos tabulares, consulte [Elemento Hierarchy &#40;CSDLBI&#41;](hierarchy-element-csdlbi.md).  
   
 ## <a name="example"></a>Exemplo  

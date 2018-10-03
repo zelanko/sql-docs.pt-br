@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - custom report items
 ms.assetid: cfacd816-00d6-4a3d-be72-1bba6f7f6886
-caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: fb91618c5fb39795b3b55bb92d1741509b3d4169
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 534197a9ed148685d58c5f3ff17b6b329e9ee913
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37221046"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48219466"
 ---
 # <a name="custom-report-item-implementation-requirements"></a>Requisitos de implementação de item de relatório personalizado
   Este tópico descreverá os pré-requisitos para desenvolver e implantar itens de relatório personalizados.  

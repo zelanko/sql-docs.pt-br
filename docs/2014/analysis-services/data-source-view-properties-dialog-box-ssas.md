@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.datasourceviewproperties.f1
 ms.assetid: 560d1846-8da2-475f-b021-13ff31fb49d7
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 25afba8b1e342595fd4777c9122aa474fada8f84
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 45543781aad4ea3997b0d62b238ddf348a3c8230
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37301206"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48110226"
 ---
 # <a name="data-source-view-properties-dialog-box-ssas"></a>Caixa de diálogo Propriedades da Exibição da Fonte de Dados (SSAS)
   Use a caixa de diálogo **Propriedades da Exibição da Fonte de Dados** no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para definir as propriedades de uma exibição de fonte de dados em um banco de dados do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . É possível exibir a caixa de diálogo **Propriedades da Exibição da Fonte de Dados** clicando com o botão direito do mouse em uma fonte de dados no **Explorador de Objetos** e selecionando **Propriedades**.  

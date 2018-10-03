@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 17d243cb-9bfb-43d7-8e6f-4d601fd62150
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f6d1f397b5950144ed898e4907c7ea30bc582f1c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f3a8d6ec71017071b77e45644972a5055b232fe0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37255488"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48140306"
 ---
 # <a name="lesson-3-modifying-measures-attributes-and-hierarchies"></a>Lição 3: Modificando medidas, atributos e hierarquias
   Depois de definir o cubo inicial, você poderá melhorar a utilidade e a facilidade de uso do cubo. Você pode fazer isto adicionando hierarquias que dão suporte à navegação e agregação em vários níveis, aplicando formatos a medidas específicas, e definindo cálculos e relações.  

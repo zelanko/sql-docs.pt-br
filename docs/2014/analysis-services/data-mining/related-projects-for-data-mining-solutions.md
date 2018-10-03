@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cdedfd113f3bb771ee18cc9fe3d45159e7a094df
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8a99d28697a25e2b8fc6d1550765e03e52a8fdc3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37179093"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106866"
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>Projetos relacionados a soluções de mineração de dados
   O mínimo que é necessário para uma solução de mineração de dados é o projeto de mineração de dados que define fontes de dados, exibições da fonte de dados, estruturas de mineração e modelos de mineração. Porém, quando os modelos de mineração de dados são usados no processo diário de tomadas de decisão, é importante que a mineração de dados esteja integrada com outra parte de uma solução de análises preditiva, que pode incluir estes processos e componentes:  

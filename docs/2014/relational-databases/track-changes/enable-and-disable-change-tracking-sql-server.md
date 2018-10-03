@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - change tracking [SQL Server], disabling
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - change tracking [SQL Server], configuring
 - data [SQL Server], changing
 ms.assetid: 1c92ec7e-ae53-4498-8bfd-c66a42a24d54
-caps.latest.revision: 33
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 78ed720a12ec00b3d196b4cd9c95faee9ed4e0e0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0d320c18bce915d5361fe9bde0a9fb1c910bc856
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37242406"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48100496"
 ---
 # <a name="enable-and-disable-change-tracking-sql-server"></a>Habilitar e desabilitar o controle de alterações (SQL Server)
   Este tópico descreve como habilitar e desabilitar o controle de alterações para um banco de dados e uma tabela.  

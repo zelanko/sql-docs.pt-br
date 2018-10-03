@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
-caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: cc3c6ab630680d3d0d5cf1e3998153ac3e3a66fe
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a22d59c38366d5010cc472bb5d86414849cf9e22
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37305226"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48188724"
 ---
 # <a name="rsreportserver-configuration-file"></a>RSReportServer Configuration File
   O arquivo **RsReportServer.config** armazena configurações que são usadas pelo Gerenciador de Relatórios, pelo serviço Web Servidor de Relatórios e pelo processamento em segundo plano. Todos os aplicativos do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] são executados dentro de um único processo que lê as configurações armazenadas no arquivo RSReportServer.config. Os servidores de relatório nos modos nativo e SharePoint usam o RSReportServer.config, porém os dois modos não usam todas as mesmas configurações do arquivo de configuração. A versão do modo do SharePoint do arquivo é menor, pois muitas das configurações do modo do SharePoint são armazenadas nos bancos de dados de configuração do SharePoint, em vez de no arquivo. Este tópico descreve o arquivo de configuração padrão instalado para o modo Nativo e o modo do SharePoint e algumas das configurações e comportamentos importantes controlados pelo arquivo de configuração.  

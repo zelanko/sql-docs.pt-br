@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferjobstask.f1
 helpviewer_keywords:
 - Transfer Jobs task [Integration Services]
 ms.assetid: 1bf33885-9c5b-47e4-a549-f5920b66a1de
-caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ef0ed6a2af2d48010550997d7ba216a91f2728f5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d9926ce7d8ef85533ec7e67f0cd2800d74ee253e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37296986"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48194646"
 ---
 # <a name="transfer-jobs-task"></a>Tarefa Transferir Trabalhos
   A tarefa Transferir Trabalhos transfere um ou mais trabalhos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent entre instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

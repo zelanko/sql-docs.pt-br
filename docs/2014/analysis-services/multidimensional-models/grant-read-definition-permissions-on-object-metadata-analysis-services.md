@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - metadata [Analysis Services]
 - permissions [Analysis Services], read metadata
 - read metadata permissions
 ms.assetid: c857e48e-64b0-4ffe-900d-a0a3ddafcefb
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f87b088072350e58aa00d7c0063a2aa2378346cb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0c517445eaf8fd82e42ffa6250b9958ef3afdc40
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37241726"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48087696"
 ---
 # <a name="grant-read-definition-permissions-on-object-metadata-analysis-services"></a>Conceder permissões para ler definição em metadados de objetos (Analysis Services)
   A permissão para ler uma definição de objeto, ou metadados, em objetos selecionados permite que o administrador conceda permissão para exibir informações de objeto, sem conceder permissão para modificar a definição ou a estrutura do objeto ou para exibir os dados reais do objeto. `Read Definition` permissões podem ser concedidas no banco de dados, fonte de dados, dimensões, estrutura de mineração e nos níveis do modelo de mineração. Se você precisar `Read Definition` permissões para um cubo, você deve habilitar `Read Definition` para o banco de dados. Lembre-se de que as permissões são aditivas. Por exemplo, uma função concede permissão para ler os metadados de um cubo, enquanto uma segunda função fornece ao mesmo usuário permissão para ler os metadados de uma dimensão. As permissões das duas funções diferentes são combinadas para fornecer ao usuário permissão para ler os metadados do cubo e os metadados da dimensão dentro desse banco de dados.  

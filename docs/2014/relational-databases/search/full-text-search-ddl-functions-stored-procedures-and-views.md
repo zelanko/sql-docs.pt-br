@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 98c36715-4195-482e-a4a3-d93ff65b75f1
-caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cd955394028c3a748e4a7e6b1e5a24f9013ef79e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 63fe1debc88ef1ce66571bc048cd104f93871aa1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37277452"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48226116"
 ---
 # <a name="full-text-search-ddl-functions-stored-procedures-and-views"></a>DDL, funções, procedimentos armazenados e exibições de pesquisa de texto completo
   Lista as instruções Transact-SQL e os objetos de banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que oferecem suporte à pesquisa de texto completo, incluindo o recurso de pesquisa de propriedade.  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - examining the current structure of the employee
 ms.assetid: d546a820-105a-417d-ac35-44a6d1d70ac6
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 16f66dceaa4ff44658d86319d28a7bf068a2ff64
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 38c16d837dd886785479e1e2994b5b0f19372cfe
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37227156"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211426"
 ---
 # <a name="examining-the-current-structure-of-the-employee-table"></a>Examinando a estrutura atual da tabela Employee
   O banco de dados de exemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] contém uma tabela **Employee** no esquema **HumanResources** . Para evitar alterar a tabela original, este passo cria uma cópia da tabela **Employee** nomeada **EmployeeDemo**. Para simplificar o exemplo, você copia só cinco colunas da tabela original. Em seguida, você consulta os **Employeedemo** tabela para revisar como os dados são estruturados em uma tabela sem usar o `hierarchyid` tipo de dados.  

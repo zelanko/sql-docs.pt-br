@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.DATABASEUSER.GENERAL.F1
@@ -25,12 +23,12 @@ ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 6ea43a226b7f390abbf551cdb73818d5f3daea8d
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 2fba39e592835f3c5e6dbffc6c8b6d384c5c837a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43030648"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48057306"
 ---
 # <a name="create-a-database-user"></a>Criar um usuário de banco de dados
   Este tópico descreve como criar um usuário de banco de dados mapeado para um logon no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] por meio [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../../includes/tsql-md.md)]. O usuário de banco de dados é a identidade do logon quando é conectado a um banco de dados. O usuário de banco de dados pode usar o mesmo nome como o logon, mas isso não é requerido. Este tópico pressupõe que já exista um logon no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obter informações sobre como criar um logon, consulte [criar um logon](create-a-login.md).  

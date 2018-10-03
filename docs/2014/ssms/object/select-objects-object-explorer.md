@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.common.selectobjects.f1
 ms.assetid: 692477fe-dd7c-403d-acd2-bb108b6077f1
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3e887cccec4a7f03626639624c2c109280a31614
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: d56ed58ed48c1c9383e087e09c90eb2433ed7a0e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43818132"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48227396"
 ---
 # <a name="select-objects-object-explorer"></a>Selecionar objetos (Pesquisador de Objetos)
   Use a caixa de diálogo **Selecionar Objetos** para adicionar um objeto a uma lista em outra caixa de diálogo. O título da caixa de diálogo e as opções disponíveis na caixa de diálogo dependem de como foram abertos. Aparecerão somente opções disponíveis; por exemplo, só estão disponíveis logons quando você está selecionando um proprietário para um objeto novo.  

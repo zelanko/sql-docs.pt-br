@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - RSExecRole
 ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
-caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 560b889359a428625131ff69d8aab5589834a39e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bfcf78ea493794527d22a0bc1b62051ede2871b4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37225286"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48171516"
 ---
 # <a name="create-the-rsexecrole"></a>Criar o RSExecRole
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] usa uma função de banco de dados predefinida chamada `RSExecRole` para conceder permissões no banco de dados do servidor de relatório do servidor de relatório. O `RSExecRole` função é criada automaticamente com o banco de dados do servidor de relatório. Como regra geral, você nunca deve modificá-la ou atribuir outros usuários à função. No entanto, ao mover um banco de dados de servidor de relatório para um [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../../includes/ssde-md.md)] novo ou diferente, recrie a função nos bancos de dados Mestre e MSDB do sistema.  
@@ -121,7 +118,7 @@ ms.locfileid: "37225286"
   
 8.  Clique em **Protegíveis**.  
   
-9.  Clique em **Adicionar**. A caixa de diálogo **Adicionar Objetos** é exibida. A opção **Especificar Objetos** é selecionada por padrão.  
+9. Clique em **Adicionar**. A caixa de diálogo **Adicionar Objetos** é exibida. A opção **Especificar Objetos** é selecionada por padrão.  
   
 10. Clique em **OK**.  
   

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.pivottrans.f1
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - datasets [Integration Services], normalized data
 - less normalized data set [Integration Services]
 ms.assetid: 55f5db6e-6777-435f-8a06-b68c129f8437
-caps.latest.revision: 55
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1845f31deda21a34b0ef3e843ef33016981c074b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bbca3b0ce90e56f3327e1e591a033e8d5fb212c2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37182737"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48157586"
 ---
 # <a name="pivot-transformation"></a>transformação Dinâmica
   A transformação Dinâmica transforma um conjunto de dados normalizado em um conjunto menos normalizado, em uma versão mais compacta, tornando dinâmicos os dados de entrada em um valor de coluna. Por exemplo, um conjunto de dados **Orders** normalizado que lista nome de cliente, produto e quantidade adquirida normalmente tem várias linhas para qualquer cliente que tenha comprado diversos produtos, sendo que cada linha daquele cliente apresenta detalhes do pedido para um produto diferente. Ao dinamizar o conjunto de dados na coluna de produto, a transformação dinâmica pode produzir um conjunto de dados com uma única linha por cliente. Aquela única linha lista todas as compras realizadas pelo cliente, com os nomes de produto mostrados como nomes de coluna, e a quantidade exibida como um valor na coluna de produto. Como nem todo cliente compra todos os produtos, muitas colunas podem conter valores nulos.  

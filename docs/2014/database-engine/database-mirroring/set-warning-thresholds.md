@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.dbmmonitor.setwarningthreshold.f1
 ms.assetid: 17f93147-e7d9-4092-b4c2-c11b38051171
-caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f77cb6ae0912bb5885cfc61aeb729a6eea25f833
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 09f9cc460368109e3e1a7fd7464602182bf188e1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37277972"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48195466"
 ---
 # <a name="set-warning-thresholds"></a>Configurar limites de aviso
   Use essa caixa de diálogo para habilitar e configurar um ou mais limites de aviso para o banco de dados selecionado na árvore de navegação da caixa de diálogo **Monitor de Espelhamento de Banco de Dados** .  
@@ -86,7 +83,7 @@ ms.locfileid: "37277972"
  **OK**  
  Clicar em **OK** fecha essa caixa de diálogo e exibe os valores dos limites de aviso especificados atualmente na grade **Limites** na página com guias **Avisos**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Um limite só se aplica a um parceiro por vez, mas é recomendado definir um limite para um determinado evento em ambos os parceiros, para assegurar que o aviso persista caso o banco de dados apresente failover. O limite adequado para cada parceiro depende das capacidades de desempenho o sistema daquele parceiro.  
   
  Um evento de desempenho é gravado no log de eventos somente se o seu valor estiver no seu limite ou acima dele quando a tabela de status for atualizada. Se um valor máximo alcançar temporariamente o limite entre as atualizações de status, este valor máximo é ignorado  

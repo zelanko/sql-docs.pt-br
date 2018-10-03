@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying replication security settings
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - viewing replication security settings
 - security [SQL Server replication], modifying settings
 ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
-caps.latest.revision: 46
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3f5f4de1de339e3fc6d92106e645a6b84ead2cd4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4ffe50320214f9d2d21c28612d5ac3ffb348dda6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37292476"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48163756"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>Exibir e modificar configurações de segurança de replicação
   Este tópico descreve como exibir e modificar configurações de segurança de replicação no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], ou RMO (Replication Management Objects). Por exemplo, você pode querer alterar a conexão do Agente de Leitor de Log com o Publicador de uma autenticação do SQL Server para uma autenticação integrada do Windows ou alterar as credenciais usadas para executar um trabalho do agente quando a senha do Windows foi alterada. Para obter informações sobre as permissões exigidas por cada agente, consulte [Modelo de segurança do agente de replicação](replication-agent-security-model.md).  

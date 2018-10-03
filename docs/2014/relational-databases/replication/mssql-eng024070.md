@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - MSSQL_ENG024070 error
 ms.assetid: 23ac7e00-fab6-429b-9f85-2736a322aa65
-caps.latest.revision: 12
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c1d2141f51c0434fb0c03dee6c1a07875b8150f0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 31421597871bfef0c02a15ce83bf486ea9cc6646
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37305406"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48048416"
 ---
 # <a name="mssqleng024070"></a>MSSQL_ENG024070
     

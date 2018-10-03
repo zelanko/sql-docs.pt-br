@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - naive bayes model [Analysis Services]
 - naive bayes algorithms [Analysis Services]
 - content queries [DMX]
 ms.assetid: e642bd7d-5afa-4dfb-8cca-4f84aadf61b0
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9a2fb2a44ff12ef938abc09f7e307841a1b057be
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 207e8dbd7ea9c0fcb2c453fb6611efcfc4ab7a16
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224686"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48060446"
 ---
 # <a name="naive-bayes-model-query-examples"></a>Exemplos de consulta de modelo Naive Bayes
   Ao criar uma consulta para um modelo de mineração de dados, você pode criar uma consulta de conteúdo, que fornece detalhes de padrões descobertos em análises, ou uma consulta de previsão, que usa os padrões no modelo para fazer previsões para novos dados. Você também pode recuperar metadados sobre o modelo usando uma consulta no conjunto de linhas do esquema de mineração de dados. Esta seção explica como criar essas consultas para modelos baseados no algoritmo Naive Bayes da Microsoft.  

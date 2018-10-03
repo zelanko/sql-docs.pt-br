@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Annotation Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Annotation element
 ms.assetid: 7d75291a-47b4-498a-8ba4-3d093b8513b2
-caps.latest.revision: 43
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0453688aab37831c54bad3080a34409b078740bf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3c8c8b70e9e15e01a0864cd9f3491aa188be6777
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304496"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48103395"
 ---
 # <a name="annotation-element-assl"></a>Elemento Annotation (ASSL)
   Contém elementos que são usados para estender o esquema ASSL (Analysis Services Scripting Language).  
@@ -52,8 +49,8 @@ ms.locfileid: "37304496"
   
 |Característica|Description|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|Nenhum|  
-|Valor padrão|Nenhum|  
+|Comprimento e tipo de dados|None|  
+|Valor padrão|None|  
 |Cardinalidade|0-n: Elemento opcional que pode ocorrer mais de uma vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -63,7 +60,7 @@ ms.locfileid: "37304496"
 |Elementos pai|[Anotações](../collections/annotations-element-assl.md)|  
 |Elementos filho|[Nome da](../properties/name-element-assl.md), [valor](../properties/value-element-assl.md), [visibilidade](../properties/visibility-element-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O elemento `Annotation` fornece a extensibilidade do esquema ASSL para todos os objetos diferentes dos usados unicamente para definir um tipo de dados complexo. O elemento `Value` do elemento `Annotation` pode conter um XML válido de qualquer namespace XML diferente de ASSL, sujeito às seguintes regras:  
   
 -   O XML pode conter somente elementos.  

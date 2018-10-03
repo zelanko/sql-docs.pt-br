@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a612ed91-b89b-4173-a0b1-0bce381e1e28
-caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cd72de564b67b9130f2cf4d8175a190f8d76a302
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 29998bdd95a24b66ff2aebf304cd6b36b7701d02
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300576"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48102306"
 ---
 # <a name="sap-bw-destination"></a>Destino SAP BW
   O destino SAP BW é o componente de destino do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 para SAP BW. Portanto, o destino do SAP BW carrega dados do fluxo de dados em um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] em um sistema SAP Netweaver BW versão 7.  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.databaseproperties.logshipping.settings.tlogback.f1
 ms.assetid: 9a6e6c16-7f71-412b-bba6-7bffac001277
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d1eacdcf8bca99cd5351aaf92414c1d7fc67be73
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8f4b54d14ff56113e115ce5eb611c227e7bc1020
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37320386"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48208098"
 ---
 # <a name="log-shipping-transaction-log-backup-settings"></a>Configurações de backup de log de transações do envio de log
   Use esta caixa de diálogo para configurar e modificar as configurações de backup de log de transações para o envio de log  

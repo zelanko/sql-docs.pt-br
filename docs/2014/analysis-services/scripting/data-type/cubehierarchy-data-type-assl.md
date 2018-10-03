@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - CubeHierarchy Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - CubeHierarchy data type
 ms.assetid: cd633409-0c14-4dd9-97cc-3d30e25df24f
-caps.latest.revision: 44
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0d719b6c841b27df473599514dc12c4e90644610
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ba39d031f8760a82232f4f276c46d04101cc6438
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37176193"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209629"
 ---
 # <a name="cubehierarchy-data-type-assl"></a>Tipo de dados CubeHierarchy (ASSL)
   Define um tipo de dados primitivo que representa informações sobre um [hierarquia](../objects/hierarchy-element-assl.md) elemento em um [cubo](../objects/cube-element-assl.md) elemento.  
@@ -45,18 +42,18 @@ ms.locfileid: "37176193"
   
 |Característica|Description|  
 |--------------------|-----------------|  
-|Tipos de dados base|Nenhum|  
-|Tipos de dados derivados|Nenhum|  
+|Tipos de dados base|None|  
+|Tipos de dados derivados|None|  
   
 ## <a name="data-type-relationships"></a>Relação do tipo de dados  
   
 |Relação|Elemento|  
 |------------------|-------------|  
-|Elementos pai|Nenhum|  
+|Elementos pai|None|  
 |Elementos filho|[Anotações](../collections/annotations-element-assl.md), [habilitados](../properties/enabled-element-assl.md), [HierarchyID](../properties/id-element-assl.md), [nome](../properties/name-element-assl.md), [OptimizedState](../properties/state-element-assl.md), [visíveis](../properties/visible-element-assl.md)|  
 |Elementos derivados|[Hierarquia](../objects/hierarchy-element-assl.md) ([hierarquias](../collections/hierarchies-element-assl.md) coleção de [CubeDimension](dimension-data-type-assl.md))|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Este tipo de dados não tem nenhuma restrição e pode ser usado em nenhum modo de implantação: 0-Multidimensional e Mineração de Dados, 1-SharePoint, e 2-Tabular.  
   
  Na [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)], o *Enabled* propriedade não pode ser definida como `False` para *CubeHierarchy*.  

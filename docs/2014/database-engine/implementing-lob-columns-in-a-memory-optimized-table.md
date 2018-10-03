@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: bd8df0a5-12b9-4f4c-887c-2fb78dd79f4e
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c99792fbb660cb6e1bdff70fcfd60cfba2119dfb
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 511e74f40931a22ac56bb27bde0c3fd87eec942b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395213"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166348"
 ---
 # <a name="implementing-lob-columns-in-a-memory-optimized-table"></a>Implementando Colunas LOB em uma tabela com otimização de memória
   As tabelas com otimização de memória não têm armazenamento fora da linha ou LOB (objeto grande) e o limite de tamanho da linha é 8060 bytes. O armazenamento de valores altos de binário ou cadeia de caracteres pode ser feito de duas maneiras:  

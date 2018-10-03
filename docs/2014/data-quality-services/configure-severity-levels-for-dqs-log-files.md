@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.admin.config.log.f1
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - logging,severity levels
 - configure severity levels
 ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
-caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c1ce0ea05c39db00f96bff2bc14e6f52c9ed3aec
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 331502f69f176a7d0cb08c6dff2ad3a8b3e54fcb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37204041"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48110316"
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>Configurar níveis de severidade para arquivos de log do DQS
   Este tópico descreve como configurar níveis de severidade para várias atividades e módulos no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) usando o [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Níveis de severidade definem a intensidade de eventos que ocorrem no DQS. Eventos DQS têm os seguintes níveis de severidade, na ordem decrescente de severidade:  

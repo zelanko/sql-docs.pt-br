@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ElementPath syntax
 - XML [Reporting Services], data retrieval
 ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
-caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: bcb0036fbf6d0c3f5af18d044d389bc8673cd5ce
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e43bf28f3908c50bb22fb1d426c84c943321c376
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37238488"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48058886"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>Sintaxe do caminho do elemento para dados de relatório XML (SSRS)
   No Designer de Relatórios, você especifica os dados para uso em um relatório de uma fonte de dados XML definindo um caminho do elemento que faz distinção entre maiúsculas e minúsculas. Um caminho de elemento indica como transpor os nós hierárquicos XML e seus atributos na fonte de dados XML. Para usar o caminho do elemento padrão, deixe a consulta do conjunto de dados ou o `ElementPath` XML da `Query` XML vazio. Quando os dados são recuperados da fonte de dados XML, os nós do elemento que possuem valores de texto e os atributos do nó do elemento se tornam colunas no conjunto de resultados. Os valores dos nós e atributos tornam-se os dados da linha quando a consulta é executada. As colunas são exibidas como a coleção de campos do conjunto de dados no painel de dados do relatório. Este tópico descreve a sintaxe do caminho do elemento.  
@@ -70,7 +67,7 @@ XMLLocalName :: =
     Identifier in the XML tag.   
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A tabela a seguir resume os termos do caminho do elemento. Os exemplos na tabela referem-se ao documento XML de exemplo Customers.xml, que está incluído na seção Exemplos deste tópico.  
   
 > [!NOTE]  

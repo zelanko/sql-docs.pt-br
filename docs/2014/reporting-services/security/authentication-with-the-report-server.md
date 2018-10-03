@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [Reporting Services], configuring
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - authentication [Reporting Services]
 - Forms authentication
 ms.assetid: 753c2542-0e97-4d8f-a5dd-4b07a5cd10ab
-caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 71382e58d8709c2a0015e40819b74638413441e9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5a2ad8bfa15d8f6e487ba4fc3b28fa3c7796fbed
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37266082"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48192926"
 ---
 # <a name="authentication-with-the-report-server"></a>Autenticação com o servidor de relatório
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) oferece várias opções configuráveis para autenticar usuários e aplicativos cliente em relação ao servidor de relatório. Por padrão, o servidor de relatório usa a Autenticação Integrada do Windows e supõe relações de confiança onde os recursos do cliente e da rede estão no mesmo domínio ou em um domínio confiável. Dependendo de sua topologia de rede e das necessidades de sua organização, você pode personalizar o protocolo de autenticação usado para a Autenticação Integrada do Windows, usar a autenticação básica ou usar uma extensão de autenticação baseada em formulários personalizada fornecida por você. Cada um dos tipos de autenticação pode ser ativado ou desativado individualmente. Você poderá habilitar mais de um tipo de autenticação se desejar que o servidor de relatório aceite solicitações de vários tipos.  

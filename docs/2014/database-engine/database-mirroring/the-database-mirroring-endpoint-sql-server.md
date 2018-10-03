@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - endpoints [SQL Server], database mirroring
 - Availability Groups [SQL Server], endpoint
 ms.assetid: 39332dc5-678e-4650-9217-6aa3cdc41635
-caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e9250860dbdc750bda53e28e52a31bcbe0e038b9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c18c22cf4db3f442050c739aaf68e159fd1cc230
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185163"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48170366"
 ---
 # <a name="the-database-mirroring-endpoint-sql-server"></a>O ponto de extremidade de espelhamento de banco de dados (SQL Server)
   Para participar do espelhamento de banco de dados ou [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] , uma instância de servidor requer seu *ponto de extremidade de espelhamento de banco de dados*próprio, dedicado. Esse ponto de extremidade é um ponto de extremidade com finalidade especial usado exclusivamente para receber conexões de outras instâncias de servidor. Em uma determinada instância de servidor, toda conexão de espelhamento do [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ou de banco de dados com qualquer outra instância de servidor usa um único ponto de extremidade de espelhamento de banco de dados.  

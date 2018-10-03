@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - IBCPSession::BCPInit (OLE DB)
@@ -15,16 +13,15 @@ topic_type:
 helpviewer_keywords:
 - BCPInit method
 ms.assetid: 583096d7-da34-49be-87fd-31210aac81aa
-caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 11ddae5bacdd5428a4381ec034d9dc9f0f22b6b7
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: fc9983cea171eb78f4b3b4f2b9c5cb9f31ecb2d3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37413395"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052156"
 ---
 # <a name="ibcpsessionbcpinit-ole-db"></a>IBCPSession::BCPInit (OLE DB)
   Inicializa a estrutura de cópia em massa, executa alguma verificação de erros, verifica se os nomes dos arquivos de formato e de dados estão corretos e, então, os abre.  
@@ -40,25 +37,25 @@ const wchar_t *pwszErrorFile,
 inteDirection);  
 ```  
   
-## <a name="remarks"></a>Remarks  
- O **BCPInit** método deve ser chamado antes de qualquer outro método de cópia em massa. O **BCPInit** método executa as inicializações necessárias para uma cópia em massa de dados entre a estação de trabalho e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+## <a name="remarks"></a>Comentários  
+ O método **BCPInit** deve ser chamado antes de qualquer outro método de cópia em massa. O método **BCPInit** executa as inicializações necessárias para uma cópia em massa de dados entre a estação de trabalho e o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- O **BCPInit** método examina a estrutura do banco de dados fonte ou destino tabela, não o arquivo de dados. Ele especifica valores de formato de dados para o arquivo de dados com base em cada coluna na tabela, exibição ou conjunto de resultados SELECT do banco de dados. Essa especificação inclui o tipo de dados de cada coluna, a presença ou ausência de um indicador de comprimento ou nulo e cadeias de caracteres de bytes de terminador nos dados, além da largura de tipos de dados de comprimento fixo. O **BCPInit** método define esses valores da seguinte maneira:  
+ O método **BCPInit** examina a estrutura da tabela de origem ou de destino do banco de dados, não o arquivo de dados. Ele especifica valores de formato de dados para o arquivo de dados com base em cada coluna na tabela, exibição ou conjunto de resultados SELECT do banco de dados. Essa especificação inclui o tipo de dados de cada coluna, a presença ou ausência de um indicador de comprimento ou nulo e cadeias de caracteres de bytes de terminador nos dados, além da largura de tipos de dados de comprimento fixo. O método **BCPInit** define esses valores da seguinte maneira:  
   
 -   O tipo de dados especificado é o tipo de dados da coluna na tabela, exibição ou conjunto de resultados de SELECT do banco de dados. O tipo de dados é enumerado pelos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de dados nativos especificados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] arquivo de cabeçalho do Native Client (sqlncli. h). Seus valores estão no padrão de BCP_TYPE_XXX. Os dados são representados em seu formato de computador. Ou seja, os dados de uma coluna com o tipo de dados inteiro são representados por uma sequência de quatro bytes baseado em big ou little endian no computador que criou o arquivo de dados.  
   
--   Se um tipo de dados de banco de dados tiver comprimento fixo, os dados do arquivo de dados também terão comprimento fixo. Métodos de cópia em massa que processam dados (por exemplo, [ibcpsession:: BCPExec](ibcpsession-bcpexec-ole-db.md)) analisam as linhas de dados esperando que o comprimento dos dados no arquivo de dados seja idêntico ao comprimento dos dados especificados na tabela de banco de dados, exibição ou Selecionar coluna lista. Por exemplo, os dados de uma coluna de banco de dados definida como `char(13)` devem ser representados por 13 caracteres para cada linha de dados no arquivo. Os dados de comprimento fixo podem ser prefixados com um indicador nulo se a coluna do banco de dados permitir valores nulos.  
+-   Se um tipo de dados de banco de dados tiver comprimento fixo, os dados do arquivo de dados também terão comprimento fixo. Os métodos de cópia em massa que processam dados (por exemplo, [IBCPSession::BCPExec](ibcpsession-bcpexec-ole-db.md)) analisam as linhas de dados esperando que o tamanho dos dados no arquivo de dados seja idêntico ao tamanho dos dados especificados na tabela, na exibição ou na lista de colunas SELECT do banco de dados. Por exemplo, os dados de uma coluna de banco de dados definida como `char(13)` devem ser representados por 13 caracteres para cada linha de dados no arquivo. Os dados de comprimento fixo podem ser prefixados com um indicador nulo se a coluna do banco de dados permitir valores nulos.  
   
 -   Ao copiar dados para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o arquivo de dados deve ter dados em cada coluna na tabela do banco de dados. Ao copiar dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], os dados de todas as colunas na tabela, exibição ou conjunto de resultados de SELECT do banco de dados são copiados para o arquivo de dados.  
   
--   Ao copiar dados para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a posição ordinal de uma coluna no arquivo de dados deve ser idêntica à posição ordinal da coluna na tabela do banco de dados. Ao copiar dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o **BCPExec** método coloca dados com base na posição ordinal da coluna na tabela de banco de dados.  
+-   Ao copiar dados para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a posição ordinal de uma coluna no arquivo de dados deve ser idêntica à posição ordinal da coluna na tabela do banco de dados. Ao copiar dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o método **BCPExec** coloca os dados com base na posição ordinal da coluna na tabela de banco de dados.  
   
--   Se um tipo de dados do banco de dados tiver comprimento variável (por exemplo, `varbinary(22)`) ou se uma coluna do banco de dados puder conter valores nulos, os dados nos arquivos de dados serão prefixados com um indicador de comprimento/nulo. A largura do indicador varia dependendo do tipo de dados e da versão da cópia em massa. O [ibcpsession:: Bcpcontrol](ibcpsession-bcpcontrol-ole-db.md) opção BCP_OPTION_FILEFMT do método fornece compatibilidade entre os arquivos de dados de cópia em massa anteriores e servidores que executam versões posteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indicando quando a largura dos indicadores no os dados são mais estreitos do que o esperado.  
+-   Se um tipo de dados do banco de dados tiver comprimento variável (por exemplo, `varbinary(22)`) ou se uma coluna do banco de dados puder conter valores nulos, os dados nos arquivos de dados serão prefixados com um indicador de comprimento/nulo. A largura do indicador varia dependendo do tipo de dados e da versão da cópia em massa. A opção BCP_OPTION_FILEFMT do método [IBCPSession::BCPControl](ibcpsession-bcpcontrol-ole-db.md) oferece compatibilidade entre arquivos de dados de cópia em massa anteriores e servidores que executam versões posteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indicando quando a largura dos indicadores nos dados é mais estreita que o esperado.  
   
 > [!NOTE]  
->  Para alterar os valores de formato de dados especificados para um arquivo de dados, use o [ibcpsession:: BCPColumns](ibcpsession-bcpcolumns-ole-db.md) e [ibcpsession:: BCPColFmt](ibcpsession-bcpcolfmt-ole-db.md) métodos.  
+>  Para alterar os valores de formato de dados especificados para um arquivo de dados, use os métodos [IBCPSession::BCPColumns](ibcpsession-bcpcolumns-ole-db.md) e [IBCPSession::BCPColFmt](ibcpsession-bcpcolfmt-ole-db.md).  
   
- Cópias em massa para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode ser otimizada para tabelas que não contêm índices, definindo a opção de banco de dados **select em / bulkcopy**.  
+ É possível otimizar cópias em massa para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para tabelas que não contêm índices, definindo a opção de banco de dados **select into/bulkcopy**.  
   
 ## <a name="arguments"></a>Argumentos  
  *pwszTable*[in]  
@@ -66,7 +63,7 @@ inteDirection);
   
  Se o argumento eDirection for definido como BCP_DIRECTION_OUT, o argumento pwszTable poderá ser o nome de uma exibição do banco de dados.  
   
- Se o argumento eDirection for definido como BCP_DIRECTION_OUT e uma instrução SELECT for especificada usando o **BCPControl** método antes do **BCPExec** método é chamado, o *pwszTable*argumento deve ser definido como NULL.  
+ Se o argumento eDirection for definido como BCP_DIRECTION_OUT e uma instrução SELECT for especificada usando o método **BCPControl** antes de o método **BCPExec** ser chamado, o argumento *pwszTable* precisará ser definido como NULL.  
   
  *pwszDataFile*[in]  
  O nome do arquivo do usuário a ser copiado de ou para.  
@@ -82,7 +79,7 @@ inteDirection);
  O método foi bem-sucedido.  
   
  E_FAIL  
- Ocorreu um erro específico do provedor ' para obter informações detalhadas, use o [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md) interface.  
+ Erro específico do provedor. Para obter informações detalhadas, use a interface [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md).  
   
  E_OUTOFMEMORY  
  Erro de memória insuficiente.  

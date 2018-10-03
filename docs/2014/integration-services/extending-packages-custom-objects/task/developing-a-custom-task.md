@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -24,16 +22,15 @@ helpviewer_keywords:
 - tasks [Integration Services], custom
 - TaskHost object
 ms.assetid: dcbd8615-fa6d-4ddb-b8a5-0b19dddd6239
-caps.latest.revision: 66
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 53838bc555747fe34dd1d04f2b7a0e0a6e3b3891
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9f0d959ebc36af5fd0c8a1d15a5b64b6308a3e0e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37283492"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48204216"
 ---
 # <a name="developing-a-custom-task"></a>Desenvolvendo uma tarefa personalizada
   O [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] usa tarefas para executar unidades de trabalho como suporte à extração, transformação e carregamento de dados. O [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] inclui várias tarefas que executam as ações usadas mais frequentemente, da execução de uma instrução SQL ao download de um arquivo de um site de FTP. Se as tarefas incluídas e as ações suportadas não satisfizerem seus requisitos completamente, você poderá criar uma tarefa personalizada.  

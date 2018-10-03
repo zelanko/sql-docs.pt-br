@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - AggregationDesignDimension Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - AggregationDesignDimension data type
 ms.assetid: 06a0d418-014c-4f40-a63a-5cfeee3f6a41
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 74a28002d7074ad58c044b4af57310c22518a87d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 758fc3a42b2ff1277deda1e7cff566b9eba17a26
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37247246"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200406"
 ---
 # <a name="aggregationdesigndimension-data-type-assl"></a>Tipo de dados AggregationDesignDimension (ASSL)
   Define um tipo de dados primitivo que representa a relação entre uma dimensão de cubo e um [AggregationDesign](../objects/aggregationdesign-element-assl.md) elemento.  
@@ -50,18 +47,18 @@ ms.locfileid: "37247246"
   
 |Característica|Description|  
 |--------------------|-----------------|  
-|Tipos de dados base|Nenhum|  
-|Tipos de dados derivados|Nenhum|  
+|Tipos de dados base|None|  
+|Tipos de dados derivados|None|  
   
 ## <a name="data-type-relationships"></a>Relação do tipo de dados  
   
 |Relação|Elemento|  
 |------------------|-------------|  
-|Elementos pai|Nenhum|  
+|Elementos pai|None|  
 |Elementos filho|[Anotações](../collections/annotations-element-assl.md), [atributos](../collections/attributes-element-assl.md), [CubeDimensionID](../properties/id-element-assl.md)|  
 |Elementos derivados|[Dimensão](../objects/dimension-element-assl.md) ([dimensões](../collections/dimensions-element-assl.md) coleção de [AggregationDesign](../objects/aggregationdesign-element-assl.md))|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O elemento correspondente no modelo de objeto Analysis Management Objects (AMO) é <xref:Microsoft.AnalysisServices.AggregationDesignDimension>.  
   
 ## <a name="see-also"></a>Consulte também  

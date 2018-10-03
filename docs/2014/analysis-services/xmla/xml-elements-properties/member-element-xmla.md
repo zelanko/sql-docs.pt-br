@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Member Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Member element
 ms.assetid: 5cc33a1f-192e-4821-a4ef-9a5f2bb7a9f0
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 318a54528ed5f9d22f0925ff10e0596413e47043
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8ab24b02a46a5e6416018d9f77c733b0d3de7153
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37217926"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168966"
 ---
 # <a name="member-element-xmla"></a>Elemento Member (XMLA)
   Representa um único membro em um elemento pai [Members](members-element-xmla.md) ou [Tuple](tuple-element-xmla.md) .  
@@ -70,8 +67,8 @@ ms.locfileid: "37217926"
   
 |Característica|Description|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|Nenhum|  
-|Valor padrão|Nenhum|  
+|Comprimento e tipo de dados|None|  
+|Valor padrão|None|  
 |Cardinalidade|0-n: Elemento opcional que pode ocorrer mais de uma vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -87,7 +84,7 @@ ms.locfileid: "37217926"
 |---------------|-----------------|  
 |Hierarquia|Atributo `String` obrigatório (somente para elementos pai `Tuple`). O nome da hierarquia à qual o membro representado pelo elemento `Member` pertence.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O elemento `Member` contém as informações necessárias para identificar e exibir um membro em uma determinada hierarquia. Para elementos pai `Members`, a hierarquia já é especificada pelo atributo `Hierarchy` do elemento pai. Para elementos pai `Tuple`, a hierarquia é especificada usando o atributo `Hierarchy` do elemento `Member`.  
   
 ## <a name="see-also"></a>Consulte também  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - sqllogship
 ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
-caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 065491c5bdf2254f6ee356383f7992c6d52b6c0e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a8e31a24d54b9f1c8013c67628fbe6e279604a31
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37306676"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48123636"
 ---
 # <a name="sqllogship-application"></a>Aplicativo sqllogship
   O aplicativo **sqllogship** realiza uma operação de backup, cópia ou restauração e as tarefas de limpeza associadas de uma configuração de envio de logs. A operação é realizada em uma instância específica do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para um banco de dados específico.  
@@ -73,7 +70,7 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
  **-querytimeout** *timeout_value*  
  Especifica o tempo designado para iniciar a operação especificada antes da tentativa expirar. O padrão é sem período de expiração. *timeout_value* é **int***.*  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Recomendamos a utilização das opções de backup, copiar e restaurar para realizar as tarefas de backup, copiar e restaurar quando for possível. Para iniciar esses trabalhos em uma operação em lote ou em outro aplicativo, chame o procedimento armazenado [sp_start_job](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql) .  
   
  O histórico do envio de logs criado por **sqllogship** é intercalado com o histórico criado pelos trabalhos de backup, cópia e restauração do envio de logs. Se você pretende usar **sqllogship** repetidamente para realizar as operações de backup, cópia ou restauração de uma configuração de envio de logs, considere desabilitar o(s) trabalho(s) de envio de logs correspondente(s). Para obter mais informações, consulte [Disable or Enable a Job](../ssms/agent/disable-or-enable-a-job.md).  

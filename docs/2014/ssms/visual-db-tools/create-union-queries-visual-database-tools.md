@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], types
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - combining query results
 - merged SELECT query [SQL Server]
 ms.assetid: b5aafb1d-e4ed-4922-b790-56abc5ec551a
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 559da2f60b0764c6dad07d33e16362eb80daa49c
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 5571494e5dbf3410152d18445d4454d91ae8e0d6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43806792"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48065798"
 ---
 # <a name="create-union-queries-visual-database-tools"></a>Criar consultas UNION (Visual Database Tools)
   A palavra-chave UNION permite que se incluam resultados de duas instruções SELECT em uma tabela resultante. Todas as linhas retornadas da instrução SELECT são combinadas no resultado da expressão UNION. Para obter exemplos, consulte [exemplos de SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-examples-transact-sql).  

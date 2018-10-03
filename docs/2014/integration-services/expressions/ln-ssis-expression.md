@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - LN function
 - natural logarithm of expression [Integration Services]
 ms.assetid: 55d7b657-b5fd-4753-9c81-54ed7575e720
-caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 111c97e177f9829309e5fb727a0227b6f2150791
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cf836d26c67276b6780392bef44e1d4e5a470f86
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37308056"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48140214"
 ---
 # <a name="ln-ssis-expression"></a>LN (Expressão SSIS)
   Retorna o logaritmo natural de uma expressão numérica.  
@@ -41,7 +38,7 @@ LN(numeric_expression)
 ## <a name="result-types"></a>Tipos de resultado  
  DT_R8  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A expressão numérica é convertida para o tipo de dados DT_R8 antes de o logaritmo ser computado. Para obter mais informações, consulte [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
   
  Se *numeric_expression* for avaliado como zero ou um valor negativo, o resultado de retorno será nulo.  

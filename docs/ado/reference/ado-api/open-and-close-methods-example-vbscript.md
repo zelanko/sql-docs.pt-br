@@ -1,13 +1,11 @@
 ---
-title: Abrir e fechar o exemplo de métodos (VBScript) | Microsoft Docs
+title: Abrir e fechar um exemplo dos métodos (VBScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,21 +13,20 @@ helpviewer_keywords:
 - Close method [ADO], VBScript example
 - Open method [ADO], VBScript example
 ms.assetid: 66eca011-e258-4d8f-bd67-e017bcf0871b
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e876658bcdd8bd7595349bc2e4a559d21d7efa08
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 375ebc025368551ccf9fda9dfba299027e6225ab
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279955"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47709204"
 ---
-# <a name="open-and-close-methods-example-vbscript"></a>Exemplo dos métodos de abertura e fechamento (VBScript)
-Este exemplo usa o [abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md) e [fechar](../../../ado/reference/ado-api/close-method-ado.md) métodos em ambos os [registros](../../../ado/reference/ado-api/recordset-object-ado.md) e [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objetos que foram abertos.  
+# <a name="open-and-close-methods-example-vbscript"></a>Exemplo dos métodos Open e Close (VBScript)
+Este exemplo usa o [aberto](../../../ado/reference/ado-api/open-method-ado-recordset.md) e [Close](../../../ado/reference/ado-api/close-method-ado.md) métodos em ambos [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) e [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objetos que foram abertos.  
   
- Use o exemplo a seguir em uma página ASP (Active Server). Use **localizar** para localizar o arquivo Adovbs.inc e coloque-o no diretório que você planeja usar. Recortar e colar o código a seguir no bloco de notas ou outro editor de texto e salve-o como **OpenVBS.asp**. Você pode exibir o resultado em qualquer navegador.  
+ Use o exemplo a seguir em um Active Server Page (ASP). Use **localizar** para localizar o arquivo Adovbs.inc e coloque-o no diretório que você planeja usar. Recorte e cole o código a seguir no bloco de notas ou outro editor de texto e salve-o como **OpenVBS.asp**. Você pode exibir o resultado em qualquer navegador.  
   
 ```  
 <!-- BeginOpenVBS -->  
@@ -166,7 +163,7 @@ BODY {
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Feche o método (ADO)](../../../ado/reference/ado-api/close-method-ado.md)   
+ [Método Close (ADO)](../../../ado/reference/ado-api/close-method-ado.md)   
  [Objeto de Conexão (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Método Open (Conexão ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
  [Método Open (conjunto de registros ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   

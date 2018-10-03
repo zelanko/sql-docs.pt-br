@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Mining Accuracy Chart [Analysis Services], nested tables
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - nested tables
 - adding nested tables
 ms.assetid: 162e0686-ada3-4dd3-9151-9589926e6613
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 53b61da97453d2572f14062a9f471de1fc63aab4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9ffec1e01fd5e1c0c35a2088235cc2979a7694f3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37321326"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48196686"
 ---
 # <a name="using-nested-table-data-as-an-input-for-an-accuracy-chart"></a>Usando dados de uma tabela aninhada como entrada para um gráfico de precisão
   Quando você testar a precisão de um modelo de mineração usando dados externos, se o modelo de mineração contiver tabelas aninhadas, os dados externos também deverão contar uma tabela de casos e uma tabela aninhada associada.  

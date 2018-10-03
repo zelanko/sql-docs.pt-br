@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -24,16 +22,15 @@ helpviewer_keywords:
 - custom data flow components [Integration Services], external metadata
 - external metadata [Integration Services]
 ms.assetid: 8f5bd3ed-3e79-43a4-b6c1-435e4c2cc8cc
-caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f8e43702349bae9dd5f3eb89bb6454fb62b05816
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 838cbe74489ba0a9388eb8f2848722b78cf999b3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37169183"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052516"
 ---
 # <a name="implementing-external-metadata"></a>Implementando metadados externos
   Quando um componente é desconectado de sua fonte de dados, você pode validar as colunas nas coleções de colunas de entrada e saída com base nas colunas da fonte de dados externa por meio da interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100>. Essa interface permite que você mantenha um instantâneo das colunas na fonte de dados externa e as mapeie para as colunas da coleção de colunas de entrada e saída do componente.  

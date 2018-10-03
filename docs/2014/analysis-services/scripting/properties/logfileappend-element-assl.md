@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - LogFileAppend Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - LogFileAppend element
 ms.assetid: f85e94a9-e5c5-478a-a5a0-fc99ed19b582
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b4cd2f873b3d7394dac45a1a40b9b98483118f44
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bea470af9f145be58e9a6e0d2645f2173097a587
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37190906"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200446"
 ---
 # <a name="logfileappend-element-assl"></a>Elemento LogFileAppend (ASSL)
   Determina se o [rastreamento](../objects/trace-element-assl.md) elemento anexa sua saída de log ao arquivo de log existente, ou o substitui.  
@@ -59,9 +56,9 @@ ms.locfileid: "37190906"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elemento pai|[Rastreamento](../objects/trace-element-assl.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O elemento que corresponde ao pai de `LogFileAppend` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Trace>.  
   
 ## <a name="see-also"></a>Consulte também  

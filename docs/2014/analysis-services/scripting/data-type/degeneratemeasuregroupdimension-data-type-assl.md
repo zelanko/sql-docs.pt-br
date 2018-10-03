@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DegenerateMeasureGroupDimension Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - DegenerateMeasureGroupDimension data type
 ms.assetid: a64fe908-154d-4fea-b435-afb6ee37a6fa
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 343668137e77f53f94df2b6bc1324c3a67d94256
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: aac39fb97d6f078b6ff5441c6b84da370d90600f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37321138"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48082736"
 ---
 # <a name="degeneratemeasuregroupdimension-data-type-assl"></a>Tipo de dados DegenerateMeasureGroupDimension (ASSL)
   Define um tipo de dados derivado que representa a relação entre uma dimensão de degeneração (ou seja, uma dimensão de fatos) e um grupo de medidas.  
@@ -49,17 +46,17 @@ ms.locfileid: "37321138"
 |Característica|Description|  
 |--------------------|-----------------|  
 |Tipos de dados base|[RegularMeasureGroupDimension](dimension-data-type-assl.md)|  
-|Tipos de dados derivados|Nenhum|  
+|Tipos de dados derivados|None|  
   
 ## <a name="data-type-relationships"></a>Relação do tipo de dados  
   
 |Relação|Elemento|  
 |------------------|-------------|  
-|Elementos pai|Nenhum|  
-|Elementos filho|Nenhum|  
-|Elementos derivados|Nenhum|  
+|Elementos pai|None|  
+|Elementos filho|None|  
+|Elementos derivados|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Para obter mais informações sobre dimensões de fato, consulte [relações de dimensão](../../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   
  O elemento correspondente no modelo de objeto Analysis Management Objects (AMO) é <xref:Microsoft.AnalysisServices.DegenerateMeasureGroupDimension>.  

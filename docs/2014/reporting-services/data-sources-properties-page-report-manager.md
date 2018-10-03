@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f37edda0-19e6-489e-b544-8751fa6b6cfb
-caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e826f27b2ce6bbb75d4aabc9d8537d0f867a0cce
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 30576bc7ff9cb2049dc035a9f7b4efa152f5f3b5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37179553"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48192136"
 ---
 # <a name="data-sources-properties-page-report-manager"></a>Página Propriedades de Fontes de Dados (Gerenciador de Relatórios)
   Use a página de propriedades de Fontes de Dados para definir como o relatório atual se conecta a uma fonte de dados externa. Você pode substituir as informações de conexão de fonte de dados publicadas originalmente com o relatório. Se várias fontes de dados forem usadas em um relatório, cada fonte de dados terá sua própria seção na página de propriedades. As fontes de dados são listadas na ordem em que foram definidas no relatório.  

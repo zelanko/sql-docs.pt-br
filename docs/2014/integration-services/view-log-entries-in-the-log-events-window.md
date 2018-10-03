@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Integration Services], viewing
 - Integration Services packages, logs
 - packages [Integration Services], logs
 ms.assetid: c02123c3-67fc-4370-ad14-91ed259f1873
-caps.latest.revision: 20
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 15afed05e62e6d03fb785df734afcb5c6dabd2d3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 51c08b271229e207f72b594d87e3c9f95b6770f6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37279662"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48172726"
 ---
 # <a name="view-log-entries-in-the-log-events-window"></a>Exibir entradas de log na janela Eventos de Log
   Este procedimento descreve como executar um pacote e exibir as entradas de log que ele grava. Você pode exibir as entradas de log em tempo real. As entradas de log, gravadas na janela **Eventos de Log** , também podem ser copiadas e salvas para uma análise posterior.  

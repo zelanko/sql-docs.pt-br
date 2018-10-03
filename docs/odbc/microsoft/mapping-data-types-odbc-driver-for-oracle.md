@@ -1,39 +1,36 @@
 ---
-title: Mapeando tipos de dados (ODBC Driver for Oracle) | Microsoft Docs
+title: Mapeando tipos de dados (Driver ODBC para Oracle) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mapping data types [ODBC]
 - data types [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], data types
 ms.assetid: a5d9ce12-19da-4943-8493-e3d56fa08348
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 92e8df65faf6be2cbe7d63d00e922ac1c4ed3af2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ecdd7d7d4b597c4cae218e18b40b0f78e27a6bd5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32902801"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47775804"
 ---
-# <a name="mapping-data-types-odbc-driver-for-oracle"></a>Mapeando tipos de dados (ODBC Driver for Oracle)
+# <a name="mapping-data-types-odbc-driver-for-oracle"></a>Tipos de dados de mapeamento (Driver ODBC para Oracle)
 > [!IMPORTANT]  
 >  Este recurso será removido em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Em vez disso, use o driver ODBC fornecido pela Oracle.  
   
- O servidor Oracle oferece suporte a um conjunto de tipos de dados. O Driver ODBC do Oracle mapeia esses tipos de dados para seus tipos de dados SQL ODBC apropriados. A tabela a seguir lista os tipos de dados do Oracle Server 7.3 e seus tipos de dados ODBC SQL correspondentes.  
+ O servidor Oracle dá suporte a um conjunto de tipos de dados. O Driver ODBC para Oracle mapeia esses tipos de dados para seus tipos de dados SQL ODBC apropriados. A tabela a seguir lista os tipos de dados do Oracle Server 7.3 e seus tipos de dados ODBC SQL correspondentes.  
   
- O Driver ODBC do Oracle oferece suporte ao Oracle 7.3 e alguns tipos de dados do Oracle8. Para obter mais informações sobre tipos de dados Oracle8 com suporte, consulte [suporte para tipos de dados](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md).  
+ O Driver ODBC para Oracle dá suporte ao Oracle 7.3 e alguns tipos de dados Oracle8. Para obter mais informações sobre tipos de dados Oracle8 com suporte, consulte [suporte para tipos de dados](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md).  
   
-|Tipo de dados do Oracle Server|Tipo de dados ODBC SQL|  
+|Tipo de dados do servidor Oracle|Tipo de dados SQL do ODBC|  
 |-----------------------------|------------------------|  
 |CHAR|SQL_CHAR|  
 |DATE|SQL_TIMESTAMP|  
@@ -46,4 +43,4 @@ ms.locfileid: "32902801"
 |VARCHAR2|SQL_VARCHAR|  
   
 > [!NOTE]  
->  Para obter mais informações sobre o tamanho permitido da coluna de VARCHAR, consulte [tamanho da coluna de VARCHAR](../../odbc/microsoft/varchar-column-size-odbc-driver-for-oracle.md) neste guia.
+>  Para obter mais informações sobre o tamanho permitido da coluna VARCHAR, consulte [tamanho da coluna VARCHAR](../../odbc/microsoft/varchar-column-size-odbc-driver-for-oracle.md) neste guia.

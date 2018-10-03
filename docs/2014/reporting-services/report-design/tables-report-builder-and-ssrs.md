@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0a95c339-c5aa-49ad-b1c8-72824b7a9c82
-caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 18815fb99232048f0d914283b15855f5525ef65c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cb940edad51f7d05effc7ba35534a25edddaf441
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37198336"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48180666"
 ---
 # <a name="tables-report-builder--and-ssrs"></a>Tabelas (Construtor de Relatórios e SSRS)
   Use uma tabela para exibir dados detalhados ou dados agrupados, ou uma combinação de ambos. É possível agrupar dados por um campo único, vários campos ou escrevendo uma expressão própria. Você pode criar grupos aninhados ou adjacentes, independentes. Para exibir valores agregados em relação aos dados agrupados, adicione totais aos grupos. Formate as linhas e as colunas para realçar os dados que você deseja enfatizar. Inicialmente, é possível ocultar dados detalhados ou agrupados e incluir alternâncias de detalhamento para permitir que um usuário escolha interativamente quantos dados devem ser mostrados.  

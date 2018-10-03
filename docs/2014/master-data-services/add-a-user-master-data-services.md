@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - users [Master Data Services], adding
 - adding users [Master Data Services]
 ms.assetid: 44262bdd-430c-4337-ac92-9333f54c7039
-caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8ac2ea33acb750b030bf75b39ba420ee90eb8784
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6e25a740966f0e09c53acb3342e516beae49f85b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37295056"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48217516"
 ---
 # <a name="add-a-user-master-data-services"></a>Adicionar um usuário (Master Data Services)
   Adicione um usuário à lista **Usuários** do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] para iniciar o processo de atribuição de permissão ao aplicativo Web. Antes de um usuário da lista poder acessar o [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], é preciso atribuir a permissão de usuário a uma ou mais áreas funcionais e objetos de modelo.  

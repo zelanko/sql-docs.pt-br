@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d5619e9f-ec5b-4376-9b34-1f74de6fade7
-caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 519d65684224496608ce8ffbaf8130b3f7884967
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f3acf241fbc5737daff76c408159b17b27affe9e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37311346"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48220656"
 ---
 # <a name="enable-and-disable-rdl-sandboxing"></a>Habilitar e desabilitar o RDL Sandboxing
   O recurso RDL Sandboxing (Linguagem RDL) permite que você detecte e restrinja o uso de tipos específicos de recurso por locatários individuais em um ambiente de vários locatários que utilizam um único web farm de servidores de relatório. Um exemplo disso é um cenário de serviços de hospedagem onde você poderia manter um único web farm de servidores de relatório que são usados por vários locatários e talvez empresas diferentes. Como administrador de servidor de relatório, você pode permitir que esse recurso ajude a obter os objetivos seguintes:  

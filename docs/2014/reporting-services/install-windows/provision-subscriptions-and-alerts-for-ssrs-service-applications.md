@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services Shared Service
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - Reporting Services Service Application
 - SSRS service application
 ms.assetid: d0de3f1f-4887-47fb-bacf-46aaad74c4be
-caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 910bd13ffca5ceec7e31d7c27079c48ffe249b04
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8e289f05f511f3d5dbed3e48c08b84d446ceaa35
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37297916"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48098126"
 ---
 # <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>Provisionar Assinaturas e Alertas para aplicativos de serviço SSRS
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] as assinaturas e os alertas de dados exigem o SQL Server Agent e a configuração de permissões para o SQL Server Agent. Se você visualizar mensagens de erro que indicam que um SQL Server Agent é necessário e tiver verificado que o SQL Server Agent está em execução; em seguida, atualize ou verifique as permissões. O escopo deste tópico é [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no modo do SharePoint e o tópico descreve três maneiras de atualizar as permissões do SQL Server Agent com assinaturas do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . As credenciais que você usa para as etapas neste tópico precisam ter permissões suficientes para conceder permissões execute a RSExecRole para objetos nos bancos de dados de aplicativos de serviço, msdb e mestre.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - MiningStructurePermission Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - MiningStructurePermission element
 ms.assetid: 4ba2bfd2-9003-4eed-8049-a74d452894ea
-caps.latest.revision: 43
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2f3789cd5b5b72048b9c9163c11bebf4fe5a77d5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 89521b4201e3956ab6d44d95d7234321a0948f56
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37295486"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48197616"
 ---
 # <a name="miningstructurepermission-element-assl"></a>Elemento MiningStructurePermission (ASSL)
   Define as permissões que os membros de um [função](role-element-assl.md) elemento ter em um indivíduo [MiningStructure](miningstructure-element-assl.md) elemento.  
@@ -53,7 +50,7 @@ ms.locfileid: "37295486"
 |Característica|Description|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|[Permissão](../data-type/permission-data-type-assl.md)|  
-|Valor padrão|Nenhum|  
+|Valor padrão|None|  
 |Cardinalidade|0-n: Elemento opcional que pode ocorrer mais de uma vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -61,9 +58,9 @@ ms.locfileid: "37295486"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|[MiningStructurePermissions](../collections/miningstructurepermissions-element-assl.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O elemento correspondente no modelo de objeto Analysis Management Objects (AMO) é <xref:Microsoft.AnalysisServices.MiningStructurePermission>.  
   
  Na [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], a permissão `AllowDrillthrough` foi estendido para aplicar a uma estrutura de mineração. Ao atribuir essa permissão a uma função, qualquer usuário que for um membro dessa função poderá consultar diretamente a estrutura de mineração usando a seguinte sintaxe:  

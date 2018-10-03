@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Parameter Info option [IntelliSense]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - language references [SQL Server]
 - IntelliSense [SQL Server], Parameter Info option
 ms.assetid: 56c2aac9-c65c-4679-b62c-d9f689876dde
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7c79538695c6770e0d3c9025165137ca2823011f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0b7c93da6efafc5603b79efc992637ff2d1fd757
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37329276"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229656"
 ---
 # <a name="parameter-info-intellisense"></a>Informações sobre Parâmetros (IntelliSense)
   A opção [!INCLUDE[msCoName](../../includes/msconame-md.md)] Informações sobre Parâmetros **do** IntelliSense abre uma lista de parâmetros com informações sobre número, nomes e tipos dos parâmetros necessários para uma função ou um procedimento armazenado. O parâmetro em negrito indica o próximo parâmetro exigido à medida que você digita uma função ou um procedimento armazenado.  

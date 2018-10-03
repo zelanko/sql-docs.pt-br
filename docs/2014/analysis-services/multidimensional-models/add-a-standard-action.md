@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ccb2928a-f75d-4acb-8ff8-fa80bb0935b2
-caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 47b13520762bd1ffc23f9bc466b82090fa60d8ee
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 408f92b86cdfdd148ea11ca49b6ba540b0f4cf86
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37165527"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161086"
 ---
 # <a name="add-a-standard-action"></a>Adicionar uma ação padrão
   Você adiciona uma ação a um banco de dados usando a exibição Ações no Designer de Cubo. Essa exibição pode ser acessada pelo [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Depois de você criar uma ação, ela ficará disponível a usuários depois que você reprocessar o cubo pertinente. Para obter mais informações, consulte [Processing Analysis Services Objects](processing-analysis-services-objects.md).  

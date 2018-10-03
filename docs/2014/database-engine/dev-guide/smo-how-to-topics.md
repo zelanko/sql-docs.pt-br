@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 201c83af-47b3-413a-8909-3c7cc5142be5
-caps.latest.revision: 8
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 93999c94ca535c456cde806abb59946284aa09ca
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 94f810fd3c20d76dd689b6f37b3e7c745ea4db97
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37233716"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48120474"
 ---
 # <a name="smo-how-to-topics"></a>Tópicos de instruções sobre SMO
   Os tópicos de instruções sobre SMO fornecem informações sobre como configurar o ambiente de programação do [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET para criar programas no [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] ou no C#.  

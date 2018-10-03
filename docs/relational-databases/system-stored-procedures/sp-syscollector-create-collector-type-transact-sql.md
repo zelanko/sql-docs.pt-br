@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_create_collector_type
@@ -19,21 +16,20 @@ helpviewer_keywords:
 - sp_syscollector_create_collector_type
 - data collector [SQL Server], stored procedures
 ms.assetid: 568e9119-b9b0-4284-9cef-3878c691de5f
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b65f9ccc2c68fffd8137dfc7a6d289e7c4f38e13
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f7b50d9cf05f1242ae853f7aa24e7e681bdc245f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33254416"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47781704"
 ---
 # <a name="spsyscollectorcreatecollectortype-transact-sql"></a>sp_syscollector_create_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Cria um tipo de coletor para o coletor de dados. Um tipo de coletor é um wrapper lógico envolve a [!INCLUDE[ssIS](../../includes/ssis-md.md)] pacotes que fornecem o mecanismo real para coletar dados e carregá-los para o data warehouse de gerenciamento.  
+  Cria um tipo de coletor para o coletor de dados. Um tipo de coletor é um wrapper de lógico em torno de [!INCLUDE[ssIS](../../includes/ssis-md.md)] pacotes que fornecem o mecanismo real para coletar dados e carregá-lo no data warehouse de gerenciamento.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,22 +48,22 @@ sp_syscollector_create_collector_type
   
 ## <a name="arguments"></a>Argumentos  
  [ @collector_type_uid =] '*collector_type_uid*'  
- É o GUID do tipo de coletor. *collector_type_uid* é **uniqueidentifier** e se for NULL, ele será automaticamente criado e retornado como OUTPUT.  
+ É o GUID do tipo de coletor. *collector_type_uid* está **uniqueidentifier** e se for NULL, ele será automaticamente criado e retornado como OUTPUT.  
   
  [ @name =] '*nome*'  
- É o nome do tipo de coletor. *nome* é **sysname** e deve ser especificado.  
+ É o nome do tipo de coletor. *nome da* está **sysname** e deve ser especificado.  
   
  [ @parameter_schema =] '*parameter_schema*'  
- É o esquema XML deste tipo de coletor. *parameter_schema* é **xml** com um padrão NULL.  
+ É o esquema XML deste tipo de coletor. *parameter_schema* está **xml** com um padrão NULL.  
   
  [ @parameter_formatter =] '*parameter_formatter*'  
- É o modelo a ser usado para transformar o XML para uso na página de propriedades do conjunto de coleta. *parameter_formatter* é **xml** com um padrão NULL.  
+ É o modelo a ser usado para transformar o XML para uso na página de propriedades do conjunto de coleta. *parameter_formatter* está **xml** com um padrão NULL.  
   
  [@collection_package_id =] *collection_package_id*  
- É um identificador exclusivo local que aponta para o pacote de coleta do [!INCLUDE[ssIS](../../includes/ssis-md.md)] usado pelo conjunto de coleta. *collection_package_id* é **uniqueidentifer** e é necessária.  
+ É um identificador exclusivo local que aponta para o pacote de coleta do [!INCLUDE[ssIS](../../includes/ssis-md.md)] usado pelo conjunto de coleta. *collection_package_id* está **uniqueidentifer** e é necessária.  
   
  [@upload_package_id = ] *upload_package_id*  
- É um identificador exclusivo local que aponta para o pacote de carregamento do [!INCLUDE[ssIS](../../includes/ssis-md.md)] usado pelo conjunto de coleta. *upload_package_id* é **uniqueidentifier** e é necessária.  
+ É um identificador exclusivo local que aponta para o pacote de carregamento do [!INCLUDE[ssIS](../../includes/ssis-md.md)] usado pelo conjunto de coleta. *upload_package_id* está **uniqueidentifier** e é necessária.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  

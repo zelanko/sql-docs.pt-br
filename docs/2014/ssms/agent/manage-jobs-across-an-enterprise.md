@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - multiserver job management [SQL Server]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - SQL Server Agent jobs, modifying
 - target servers [SQL Server], job changes
 ms.assetid: 4fe7f6c6-f89b-4430-979c-4994a5dcf7a6
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: adb40ead9f932e2b9de46623ab3c90f94090e28a
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 505ec27423b7a0cc508b2161e408440c4fb8eaa3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43809892"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48167277"
 ---
 # <a name="manage-jobs-across-an-enterprise"></a>Gerenciar trabalhos em toda a empresa
   Se você fizer alterações em definições de trabalho multisservidor fora do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], será preciso postar as alterações na lista de downloads para que os servidores de destino possam baixar novamente o trabalho atualizado. Para garantir que os servidores de destino possuam as definições de trabalho atuais, poste uma instrução INSERT após atualizar o trabalho multisservidor, da seguinte maneira:  

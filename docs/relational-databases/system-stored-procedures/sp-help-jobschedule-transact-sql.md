@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_jobschedule
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobschedule
 ms.assetid: 2cded902-9272-4667-ac4b-a4f95a9f008e
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ac24c12f2ec6f7228857b013c8478db070a52e64
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 1a327b07384ce2c12e64612b19c611c57dbbf18b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395218"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47850364"
 ---
 # <a name="sphelpjobschedule-transact-sql"></a>sp_help_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +90,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 > **Observação:****sp_help_jobschedule** retorna valores da **dbo. sysjobschedules** e **dbo. sysschedules** tabelas do sistema no **msdb** .   **sysjobschedules** atualiza a cada 20 minutos. Isso pode afetar os valores que são retornados por esse procedimento armazenado.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Os parâmetros da **sp_help_jobschedule** pode ser usado somente em determinadas combinações. Se *schedule_id* for especificada, nem *job_id* nem *job_name* pode ser especificado. Caso contrário, o *job_id* ou *job_name* parâmetros podem ser usados com *schedule_name*.  
   
 ## <a name="permissions"></a>Permissões  

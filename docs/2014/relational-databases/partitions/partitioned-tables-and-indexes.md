@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - partitioned tables [SQL Server], about partitioned tables
@@ -17,12 +15,12 @@ ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 85627a122c87c3065fe0bbcd5bfc5cd246a77c9d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8d3342c6a45b705c72c113f58bde7d8df2ae71c3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37154257"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229816"
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
   O[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece suporte ao particionamento de tabelas e índices. Os dados de tabelas e índices particionados são divididos em unidades que podem ser difundidas por mais de um grupo de arquivos em um banco de dados. Os dados são particionados horizontalmente, de forma que os grupos de linhas são mapeados em partições individuais. Todas as partições de um único índice ou de uma única tabela devem residir no mesmo banco de dados. A tabela ou o índice é tratado como uma única entidade lógica quando são executadas consultas ou atualizações nos dados. As tabelas e os índices particionados não estão disponíveis em todas as edições de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
