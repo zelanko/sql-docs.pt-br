@@ -5,24 +5,21 @@ ms.date: 02/13/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 keywords:
 - master data services
 ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
-caps.latest.revision: 40
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5db1d056725fee435c3e56c7715e7f1ac02695c3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c9d5a6651613fe99707e26cdae5fc3410359911d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32894486"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47851061"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Requisitos do aplicativo Web (Master Data Service)
 
@@ -77,7 +74,7 @@ Install-WindowsFeature Web-App-Dev, NET-Framework-45-Features -IncludeAllSubFeat
   
 ### <a name="accounts-and-permissions"></a>Contas e permissões  
   
-|Tipo|Description|  
+|Tipo|Descrição|  
 |----------|-----------------|  
 |Conta do Windows|Você deve fazer logon no computador do servidor Web com uma conta do Windows que tenha permissão para configurar funções, serviços de função e recursos do Windows e para criar e gerenciar pools de aplicativos, sites e aplicativos Web no IIS no computador local.|  
 |Conta de serviço|Quando você criar o aplicativo Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] no [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)], especifique uma identidade para o pool de aplicativos em que o aplicativo é executado. Esta conta pode ser diferente da conta de serviço especificada quando o banco de dados [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] foi criado.<br /><br /> Essa identidade deve ser uma conta de usuário de domínio e é acrescentada à função de banco de dados mds_exec no banco de dados do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] para acesso ao banco de dados. Para obter mais informações, veja [Logons, usuários e funções de banco de dados](../../master-data-services/database-logins-users-and-roles-master-data-services.md). Essa conta também é adicionada a um grupo do [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] no Windows, **MDS_ServiceAccounts**, que recebe permissão para o diretório temporário de compilação, **MDSTempDir**, no sistema de arquivos. Para obter mais informações, veja [Permissões de pasta e arquivo &#40;Master Data Services&#41;](../../master-data-services/folder-and-file-permissions-master-data-services.md).|  

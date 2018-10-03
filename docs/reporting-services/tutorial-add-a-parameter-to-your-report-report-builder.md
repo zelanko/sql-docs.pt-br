@@ -4,19 +4,16 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
-applies_to:
-- SQL Server 2016
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0fd54e59c30a03cc918bc080ab64b21db8983ba1
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: a9a62e1258bb5c7babda59f9c3b64b9afd16afe1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43278474"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47833284"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Tutorial: Adicionar um parâmetro ao relatório (Construtor de Relatórios)
 Neste tutorial, você adiciona um parâmetro a um relatório paginado do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] para que os leitores do relatório possam filtrar um ou mais valores nos dados do relatório. 

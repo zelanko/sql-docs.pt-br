@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - transformations [Integration Services], listed
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - row transformations [Integration Services]
 - rowset transformations [Integration Services]
 ms.assetid: c70c4f6e-82dd-4948-b923-fd5193f67f7e
-caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2b5c14308dfe28c103e60d136a1aa7c137bf73cd
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 1256ce8b9e7d68f46a34f3abdffc4cbff31ebb20
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35404268"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47853324"
 ---
 # <a name="integration-services-transformations"></a>Transformações do Integration Services
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] transformações são os componentes no fluxo de dados de um pacote que agregam, mesclam, distribuem e modificam dados. As transformações também podem executar operações de pesquisa e gerar conjuntos de dados de exemplo. Esta seção descreve as transformações que o [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] inclui e explica como elas funcionam.  

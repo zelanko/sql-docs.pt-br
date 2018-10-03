@@ -4,7 +4,6 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-server
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - performance counters [Reporting Services]
@@ -16,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c642fc4f-8734-4626-a194-42ac9cd8e2ef
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5faebaba96b5162e0c4127f6898256455e7bc561
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 113fd8eb61880b8d04ba7e699be69e1576de1362
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43278497"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47851514"
 ---
 # <a name="performance-counters-msrs-2011-web-service-performance-objects"></a>Contadores de desempenho para os objetos de desempenho do serviço Web do MSRS 2011
   Este tópico descreve contadores de desempenho para os objetos de desempenho do **Serviço Web MSRS 2011** e do **Serviço do Windows MSRS 2011** . Esses objetos fazem parte de uma implantação do Modo Nativo do [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] .  

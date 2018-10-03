@@ -5,12 +5,8 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -18,16 +14,15 @@ helpviewer_keywords:
 - run-time [Integration Services]
 - data flow components [Integration Services], run-time methods
 ms.assetid: fd9e4317-18dd-43af-bbdc-79db32183ac4
-caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9101f363e8d3eb5a46fd5d0d7b9cb477a8e7d056
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 29778e66926b84044e4ade1036f9f30d31b4be94
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35411358"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47853434"
 ---
 # <a name="run-time-methods-of-a-data-flow-component"></a>Métodos de tempo de execução de um componente de fluxo de dados
   No tempo de execução, a tarefa de fluxo de dados examina a sequência de componentes, prepara um plano de execução e gerencia um pool de threads de trabalho que executa o plano de trabalho. A tarefa carrega linhas de dados de origens, processa essas linhas através de transformações e as salva em destinos.  

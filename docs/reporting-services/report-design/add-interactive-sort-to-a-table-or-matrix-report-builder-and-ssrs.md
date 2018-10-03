@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - "10121"
@@ -12,12 +11,12 @@ f1_keywords:
 ms.assetid: 05819637-729b-4cf6-82de-91a99f184ec6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a92f326fd1933fdc6df2adb1add9db11e92b6a19
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 1c7c9ddd615ef5dda1bccd9a1e3d90cf54fdc993
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43269028"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47851424"
 ---
 # <a name="add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs"></a>Adicionar classificação interativa a uma tabela ou matriz (Construtor de Relatórios e SSRS)
   Adicione botões de classificação interativa para permitir que os usuários alterem a ordem de classificação de linhas e colunas em tabelas e matrizes. Esse recurso só é suportado em formatos de renderização que dão suporte à interação do usuário, como o HTML.  
