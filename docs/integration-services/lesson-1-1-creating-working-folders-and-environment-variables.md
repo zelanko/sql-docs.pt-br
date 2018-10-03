@@ -5,22 +5,18 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
 ms.assetid: 45091ba2-ea3d-4399-9814-489d812b42cc
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bbe2d1da5f15e0fcbdf85fd889a7d70739b0e02d
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 5ffaef2277d5e6e902078a75fca75df7c6400106
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35402868"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47719236"
 ---
 # <a name="lesson-1-1---creating-working-folders-and-environment-variables"></a>Lição 1-1 – criar pastas de trabalho e variáveis de ambiente
 Nesta tarefa, você criará a pasta de trabalho (C:\DeploymentTutorial) e as novas variáveis de ambiente do sistema (`DataTransfer` e `LoadXMLData`), que serão usadas em tarefas posteriores do tutorial.  

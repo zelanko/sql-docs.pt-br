@@ -5,23 +5,20 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.completewizard.f1
 ms.assetid: fbf0aa37-fd9e-47e1-82b4-26c1359ec3da
-caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e691d352507bddb75ba6db0986cc05a75eb6d858
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: b7d417f2887c58e88e1bbb52c7fc171eba24030c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35329070"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47710122"
 ---
 # <a name="complete-the-wizard-sql-server-import-and-export-wizard"></a>Concluir o Assistente (Assistente de Importação e Exportação do SQL Server)
 Depois de especificar se deseja executar a operação de cópia imediatamente e, opcionalmente, salvar o pacote criado pelo assistente, o Assistente de Importação e Exportação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mostra **Concluir o assistente**. Nessa página, examine as opções feitas no assistente e, em seguida, clique em **Concluir** para iniciar a operação de cópia.

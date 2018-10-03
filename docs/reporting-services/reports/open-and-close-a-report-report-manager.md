@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reports
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - opening reports
@@ -13,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a9db1caf-1e7d-41ee-9aed-e09fd0712f9b
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 01e8574905e4f7788c6ab00fb4ec4da8d86b3525
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 0640a41beedbd7752a7b12a356e0d12314493d58
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43269067"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47711734"
 ---
 # <a name="open-and-close-a-report-report-manager"></a>Abrir e fechar um relatório (Gerenciador de Relatórios)
   Você pode usar o Gerenciador de Relatórios para exibir relatórios publicados em um servidor de relatório. Por padrão, todos os relatórios são abertos em HTML. Depois de abrir um relatório, é possível exportá-lo para exibi-lo em outros formatos de aplicativo. Se o relatório possuir recursos interativos ou se for um relatório do Construtor de Relatórios que contiver dados interativos, clique nos links para exibir relatórios ou dados adicionais.  

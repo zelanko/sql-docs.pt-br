@@ -5,17 +5,16 @@ ms.date: 03/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: a5a8dbf6-4c3a-435d-8188-d6656c32f229
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4b8385a2001b6d4c2bba392805d8072f214af567
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 412669834546ddd7583b8f7bd3f7eeaef3cb0348
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43274807"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47739334"
 ---
 # <a name="create-mobile-reports-with-sql-server-mobile-report-publisher"></a>Criar relatórios móveis com o Publicador de Relatórios Móveis do SQL Server
 Saiba mais sobre relatórios móveis do [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , otimizados para dispositivos móveis e conectados a dados locais, com uma variedade de visualizações de dados. 

@@ -1,13 +1,11 @@
 ---
-title: Oferece suporte ao método | Microsoft Docs
+title: Dá suporte ao método | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,19 +14,18 @@ f1_keywords:
 helpviewer_keywords:
 - Supports method [ADO]
 ms.assetid: 298fc41c-0b55-42fc-b373-c5133b4da6a5
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5788431361aa73999b819a09f76a0c4bef268c83
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 97c0e4660c14845ddfb59ce4f5f509a0954d98f0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282575"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47616974"
 ---
-# <a name="supports-method"></a>Oferece suporte ao método
-Determina se um especificado [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto oferece suporte a um determinado tipo de funcionalidade.  
+# <a name="supports-method"></a>Método Supports
+Determina se um especificado [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto dá suporte a um determinado tipo de funcionalidade.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,22 +35,22 @@ boolean = recordset.Supports(CursorOptions )
 ```  
   
 ## <a name="return-value"></a>Valor retornado  
- Retorna um **booliano** valor que indica se todos os recursos identificado pelo *CursorOptions* argumento são suportados pelo provedor.  
+ Retorna um **Boolean** valor que indica se todos os recursos identificados pela *CursorOptions* argumento são suportados pelo provedor.  
   
 #### <a name="parameters"></a>Parâmetros  
  *CursorOptions*  
- Um **longo** expressão que consiste em um ou mais [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md) valores.  
+ Um **longo** expressão consiste em um ou mais [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md) valores.  
   
-## <a name="remarks"></a>Remarks  
- Use o **dá suporte a** método para determinar quais tipos de funcionalidade um **registros** objeto oferece suporte. Se o **registros** objeto suporta os recursos cujos constantes correspondentes estão em *CursorOptions*, o **dá suporte a** método retorna **True**. Caso contrário, retornará **False**.  
+## <a name="remarks"></a>Comentários  
+ Use o **dá suporte a** método para determinar quais tipos de funcionalidade um **Recordset** objeto dá suporte. Se o **conjunto de registros** objeto suporta os recursos cujos constantes correspondentes estão no *CursorOptions*, o **dá suporte a** retorno do método **True**. Caso contrário, retornará **falsos**.  
   
 > [!NOTE]
->  Embora o **dá suporte a** método pode retornar **True** para uma determinada funcionalidade, ele não garante que o provedor pode tornar o recurso disponível em todas as circunstâncias. O **suporta** método simplesmente retorna se o provedor pode oferecer suporte a funcionalidade especificada, supondo que determinadas condições forem atendidas. Por exemplo, o **dá suporte a** método pode indicar que um **registros** objeto dá suporte a atualizações, embora o cursor é baseado em uma associação de tabela de várias, algumas colunas que não são atualizáveis.  
+>  Embora o **suporta** método pode retornar **verdadeiro** para uma determinada funcionalidade, ele não garante que o provedor pode disponibilizar o recurso em todas as circunstâncias. O **dá suporte a** método simplesmente retorna se o provedor pode dar suporte a funcionalidade especificada, supondo que determinadas condições forem atendidas. Por exemplo, o **suporta** método pode indicar que um **conjunto de registros** objeto dá suporte a atualizações, mesmo que o cursor estiver baseado em uma junção múltipla de tabela, algumas colunas que não são atualizáveis.  
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Exemplo do método dá suporte a (VB)](../../../ado/reference/ado-api/supports-method-example-vb.md)   
- [Dá suporte ao método de exemplo (VC + +)](../../../ado/reference/ado-api/supports-method-example-vc.md)   
+ [Dá suporte ao exemplo do método (VB)](../../../ado/reference/ado-api/supports-method-example-vb.md)   
+ [Dá suporte ao exemplo do método (VC + +)](../../../ado/reference/ado-api/supports-method-example-vc.md)   
  [Propriedade CursorType (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)

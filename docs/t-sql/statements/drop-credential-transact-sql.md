@@ -5,9 +5,7 @@ ms.date: 08/19/2015
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DROP CREDENTIAL
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - deleting credentials
 - dropping credentials
 ms.assetid: df22c826-317d-45a6-b078-186acb65f71e
-caps.latest.revision: 31
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 20aedcc74ed091e1a46dbb19ece465cce0d1bba6
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: dcf4a0d7492e36432ecec80778a49fa5ba37a7d2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37784467"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47711384"
 ---
 # <a name="drop-credential-transact-sql"></a>DROP CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

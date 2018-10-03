@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_manage_jobs_by_login
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_manage_jobs_by_login
 ms.assetid: 832ec15a-6e92-4eb5-8c4a-af4dba79fbaa
-caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 59f79ac7f0dfa72be2f63d0c3e711969f92ea93d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: dc6538cbc62be98414b180d44725d987e660ff99
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33251082"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47742434"
 ---
 # <a name="spmanagejobsbylogin-transact-sql"></a>sp_manage_jobs_by_login (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,19 +44,19 @@ sp_manage_jobs_by_login
   
 ## <a name="arguments"></a>Argumentos  
  [  **@action=** ] **'***ação***'**  
- A ação a ser tomada para o logon especificado. *ação* é **varchar (10)**, sem padrão. Quando *ação*é **excluir**, **sp_manage_jobs_by_login** exclui todos os trabalhos pertencentes a *current_owner_login_name*. Quando *ação* é **REATRIBUIR**, todos os trabalhos serão atribuídos a *new_owner_login_name*.  
+ A ação a ser tomada para o logon especificado. *ação* está **varchar(10)**, sem padrão. Quando *ação*é **excluir**, **sp_manage_jobs_by_login** exclui todos os trabalhos pertencentes a *current_owner_login_name*. Quando *ação* é **REATRIBUIR**, todos os trabalhos são atribuídos a *new_owner_login_name*.  
   
  [ **@current_owner_login_name=** ] **'***current_owner_login_name***'**  
- O nome de logon do novo proprietário do trabalho atual. *current_owner_login_name* é **sysname**, sem padrão.  
+ O nome de logon do novo proprietário do trabalho atual. *current_owner_login_name* está **sysname**, sem padrão.  
   
  [ **@new_owner_login_name=** ] **'***new_owner_login_name***'**  
- O nome de logon do novo proprietário do trabalho. Use este parâmetro somente se *ação* é **REATRIBUIR**. *new_owner_login_name* é **sysname**, com um padrão NULL.  
+ O nome de logon do novo proprietário do trabalho. Use este parâmetro somente se *ação* é **REATRIBUIR**. *new_owner_login_name* está **sysname**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma  
+ None  
   
 ## <a name="permissions"></a>Permissões  
  Para executar esse procedimento armazenado, os usuários devem ter o **sysadmin** função de servidor fixa.  
