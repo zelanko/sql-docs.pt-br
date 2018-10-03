@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - certificates [SQL Server], database mirroring
 - inbound connections
 - database mirroring [SQL Server], security
 ms.assetid: 5d48bb98-61f0-4b99-8f1a-b53f831d63d0
-caps.latest.revision: 28
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 54f0e50786d500b22c7fba7cd52c5bee116147ad
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 20c4cc7fe03d9c57ea45575b243a24da690ba88d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37229656"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48064466"
 ---
 # <a name="allow-a-database-mirroring-endpoint-to-use-certificates-for-inbound-connections-transact-sql"></a>Permitir que um ponto de extremidade de espelhamento de banco de dados use certificados para conexões de entrada (Transact-SQL)
   Esse tópico descreve as etapas para configuração de instâncias de servidor a fim de usar certificados para autenticar conexões de entrada para espelhamento de banco de dados. Antes de poder configurar conexões de entrada, devem ser configuradas conexões de saída em cada instância de servidor. Para obter mais informações, consulte [Permitir que um ponto de extremidade de espelhamento de banco de dados use certificados para conexões de saída &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md).  
@@ -134,7 +131,7 @@ ms.locfileid: "37229656"
  O exemplo a seguir demonstra como configurar HOST_B para conexões de entrada.  
   
 > [!NOTE]  
->  Este exemplo usa um arquivo de certificado que contém o certificado HOST_A criado por um trecho de código em [Permitir que um ponto de extremidade de espelhamento de banco de dados use certificados para conexões de saída &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md).  
+>  Este exemplo usa um arquivo de certificado que contém o certificado HOST_A criado por um snippet de código em [Permitir que um ponto de extremidade de espelhamento de banco de dados use certificados para conexões de saída &amp;#40;Transact-SQL&amp;#41;](database-mirroring-use-certificates-for-outbound-connections.md).  
   
 ```  
 USE master;  

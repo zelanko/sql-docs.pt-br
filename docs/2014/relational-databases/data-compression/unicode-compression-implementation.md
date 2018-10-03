@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Unicode data compression
 - compression [SQL Server], Unicode data
 ms.assetid: 44e69e60-9b35-43fe-b9c7-8cf34eaea62a
-caps.latest.revision: 7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 216e2278418747a713575c165f14390c7b785e71
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 498bf394cb896f12a4b246edf42b9b741a0a99b2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37156327"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48084698"
 ---
 # <a name="unicode-compression-implementation"></a>Implementação da compactação Unicode
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa uma implementação do algoritmo SCSU (Esquema de Compactação Padrão para Unicode) para compactar valores Unicode que são armazenados em objetos compactados por linha ou página. Para esses objetos compactados, a compactação Unicode é automática para as colunas `nchar(n)` e `nvarchar(n)`. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] armazena dados Unicode como 2 bytes, seja qual for a localidade. Isso é conhecido como codificação UCS-2. Para algumas localidades, a implementação da compactação SCSU no SQL Server pode economizar até 50 por cento em espaço de armazenamento.  

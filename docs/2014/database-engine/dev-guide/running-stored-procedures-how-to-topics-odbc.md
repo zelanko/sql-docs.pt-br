@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - stored procedures [ODBC], running
 ms.assetid: c2220182-a23d-4475-b353-77a77ab613d6
-caps.latest.revision: 7
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1629ddec83036180c315bc53a83799044bd8d2c0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 426e1038e5a11f4878a03dc14a9fda6729899856
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37296996"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48079446"
 ---
 # <a name="running-stored-procedures-how-to-topics-odbc"></a>Tópicos de instruções sobre execução de procedimentos armazenados (ODBC)
   O driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suporta a execução de procedimentos armazenados como procedimentos armazenados remotos. Executar um procedimento armazenado como um procedimento armazenado remoto permite que o driver e o servidor otimizem o desempenho da execução do procedimento.  

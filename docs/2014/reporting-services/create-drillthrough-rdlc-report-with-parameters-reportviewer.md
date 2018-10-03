@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 628c8775-c62d-45ac-b349-23db86fa4e6c
-caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0147922c6b52d83cde9dc9a3724e82a5e4f30a3a
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 3618f3bef198a4ad92f8fd92f48911ee0c935c13
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393351"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106876"
 ---
 # <a name="create-a-drillthrough-rdlc-report-with-parameters-using-reportviewer-ssrs-tutorial"></a>Criar um relatório detalhado (RDLC) com parâmetros usando o Visualizador de Relatórios (Tutorial do SSRS)
-  Um relatório de [detalhamento](http://technet.microsoft.com/library/ff519554.aspx) é um relatório que pode ser aberto pelo usuário quando ele clica em um link dentro de outro relatório. Os relatórios detalhados normalmente contêm detalhes sobre um item que está em um relatório de resumo original. Este tutorial orienta você pelas seguintes lições de criação de um relatório detalhado com parâmetros e uma consulta, no [relatórios no modo local](local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md).  
+  Um relatório de [detalhamento](http://technet.microsoft.com/library/ff519554.aspx) é um relatório que pode ser aberto pelo usuário quando ele clica em um link dentro de outro relatório. Os relatórios detalhados normalmente contêm detalhes sobre um item que está em um relatório de resumo original. Este tutorial apresentará as lições a seguir sobre como criar um relatório de detalhamento com parâmetros e uma consulta, no [relatório de modo local](local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md).  
   
 ## <a name="requirements"></a>Requisitos  
  Para usar este passo a passo, você deve ter acesso para o **AdventureWorks2008** banco de dados de exemplo. A consulta usada neste passo a passo também funcionarão com **AdventureWorks2012** banco de dados. Para obter mais informações sobre como obter o **AdventureWorks2008** banco de dados de exemplo, consulte [Walkthrough: Installing the AdventureWorks Database](http://msdn.microsoft.com/library/aa992075\(v=vs.100\).aspx) para Microsoft Visual Studio 2010.  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10080"
 ms.assetid: eb3b5d01-7b82-4808-a58b-9e096742f8c6
-caps.latest.revision: 10
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 51df7fe3664e3e35bf0fb4c45a0124481d5c6ce7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a4e7fa108ffbfc083b84460795e17515ae300302
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37306886"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48207376"
 ---
 # <a name="report-properties-dialog-box-page-setup-report-builder"></a>Caixa de diálogo Propriedades do Relatório, Configurar Página (Construtor de Relatórios)
   Selecione **Configuração de Página** na caixa de diálogo **Propriedades do Relatório**para definir as opções de página para o relatório inteiro.  
@@ -51,7 +48,7 @@ ms.locfileid: "37306886"
  **Top**  
  Define a distância entre a parte superior do relatório e a parte superior da primeira linha do relatório.  
   
- **Parte inferior**  
+ **parte inferior**  
  Define a distância entre a parte inferior do relatório e a parte inferior da última linha do relatório.  
   
  **À esquerda**  

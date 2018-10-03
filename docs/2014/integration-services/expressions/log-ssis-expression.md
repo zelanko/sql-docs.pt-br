@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - base-10 logarithms
 - LOG function
 ms.assetid: f7fccace-c178-4e13-bde9-7dc4ef1d98fa
-caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8d53a1a4c67e4447fd64d47c609e2a0f244e75c9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0d5a09e2b641828cacefb188859f5bd794d6e105
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300506"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48085026"
 ---
 # <a name="log-ssis-expression"></a>LOG (Expressão SSIS)
   Retorna o logaritmo de base 10 de uma expressão numérica.  
@@ -41,7 +38,7 @@ LOG(numeric_expression)
 ## <a name="result-types"></a>Tipos de resultado  
  DT_R8  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A *expressão numérica* é convertida para o tipo de dados DT_R8 antes de o logaritmo ser computado. Para obter mais informações, consulte [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
   
  Se *numeric_expression* for avaliado como zero ou um valor negativo, o resultado de retorno será nulo.  

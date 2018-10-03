@@ -4,13 +4,9 @@ ms.custom: ''
 ms.date: 08/12/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2014
 helpviewer_keywords:
 - security [Reporting Services], extensions
 - report servers [Reporting Services], about report server
@@ -26,16 +22,15 @@ helpviewer_keywords:
 - Web service [Reporting Services], report server
 - storage [Reporting Services]
 ms.assetid: 88ed5b97-1d28-4980-80e4-b36761f3c03a
-caps.latest.revision: 89
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 63cd3c39d5c58d31eef427f309fe9d941903ad01
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: 9cb9c580dbd044034923718dd59e4ed27caebab2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40392676"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48108486"
 ---
 # <a name="reporting-services-report-server"></a>Servidor de Relatório do Reporting Services
   Este tópico é uma visão geral do servidor de relatório [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , o componente central da instalação de um [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Ele consiste em um par de mecanismos de processamento mais uma coleção de extensões de propósitos especiais que manipulam autenticação, processamento de dados, renderização e operações de entrega. Um servidor de relatório do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] é executado em um destes dois modos de implantação: modo nativo ou modo do SharePoint. Consulte a seção [Comparação de recursos do SharePoint e do modo nativo](#bkmk_featuresupport) para obter uma comparação entre os recursos.  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4874ba29-429b-4dd4-a8cb-d4f087237dc2
-caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0ff8af0b8badf1bc1bbee5e864f825af9d0ab03c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8a2697af9ede2b6b72e7f08efd88822101c51d53
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37311226"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48102796"
 ---
 # <a name="view-page-reports-report-manager"></a>Página Exibir, Relatórios (Gerenciador de Relatórios)
   Use a página Exibir de relatórios para exibir um relatório. Quando você abre um relatório pela primeira vez no Gerenciador de Relatórios, ele é formatado em HTML. Relatórios HTML incluem uma barra de ferramentas de relatórios que aparece no topo do relatório para que você possa navegar pelas páginas do relatório, pesquisar no relatório ou exportá-lo para um formato diferente. O diagrama a seguir mostra a barra de ferramentas do relatório.  

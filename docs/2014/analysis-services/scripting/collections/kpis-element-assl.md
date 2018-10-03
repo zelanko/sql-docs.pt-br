@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Kpis Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Kpis element
 ms.assetid: da4e32a0-1416-4d32-8b7f-7d74be23c9d4
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0947535590d2484ac8022a3fa845dc4b85c96d4e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d1b0817a7419aa76d9a015c8409b2f09962e04ad
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37197772"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168177"
 ---
 # <a name="kpis-element-assl"></a>Elemento Kpis (ASSL)
   Contém a coleção de indicadores chave de desempenho ([Kpi](../objects/kpi-element-assl.md) elementos) associado ao elemento pai.  
@@ -53,8 +50,8 @@ ms.locfileid: "37197772"
   
 |Característica|Description|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|Nenhum|  
-|Valor padrão|Nenhum|  
+|Comprimento e tipo de dados|None|  
+|Valor padrão|None|  
 |Cardinalidade|0-1: elemento opcional que pode ocorrer apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -68,7 +65,7 @@ ms.locfileid: "37197772"
 |[Cube](../objects/cube-element-assl.md)|[KPI](../objects/kpi-element-assl.md)|  
 |[Perspectiva](../objects/perspective-element-assl.md)|[KPI](../objects/kpi-element-assl.md) do tipo [PerspectiveKpi](../data-type/perspectivekpi-data-type-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O elemento correspondente no modelo de objeto Analysis Management Objects (AMO) é <xref:Microsoft.AnalysisServices.KpiCollection>.  
   
 ## <a name="see-also"></a>Consulte também  

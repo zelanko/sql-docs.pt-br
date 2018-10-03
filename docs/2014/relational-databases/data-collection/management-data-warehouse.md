@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data collector [SQL Server], management data warehouse
 - data warehouse
 - management data warehouse
 ms.assetid: 9874a8b2-7ccd-494a-944c-ad33b30b5499
-caps.latest.revision: 43
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 78b42cdab893f98596f45c7e82145eab789640a4
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 26f75c135fdc0dcbcc5534a019ff6658d7c9e88e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43809302"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089306"
 ---
 # <a name="management-data-warehouse"></a>data warehouse de gerenciamento
   O data warehouse de gerenciamento é um banco de dados relacional que contém os dados coletados de um servidor representa o destino da coleta de dados. Esses dados são usados para gerar os relatórios dos conjuntos de coleta de Dados do Sistema e também podem ser usados para criar relatórios personalizados.  

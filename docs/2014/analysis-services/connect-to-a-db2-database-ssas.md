@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.conndb2db.f1
 ms.assetid: eeef3697-a4fd-4263-ba7e-f86afa1f46cc
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3952978ea68e1df54772f6a6065afd9fcb8d10b2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ae414d3108e694bf565a6411e1835892f3df4a98
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200566"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48142306"
 ---
 # <a name="connect-to-a-db2-database-ssas"></a>Conectar a um banco de dados DB2 (SSAS)
   Esta página do **Assistente de Importação de Tabela** permite que você especifique as configurações de conexão a um banco de dados DB2. Para acessar o assistente do [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], no menu **Modelo** , clique em **Importar de Fonte de Dados**.  

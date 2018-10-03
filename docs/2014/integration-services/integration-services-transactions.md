@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], transactions
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - tasks [Integration Services], transactions
 - transactions [Integration Services]
 ms.assetid: 3c78bb26-ddce-4831-a5f8-09d4f4fd53cc
-caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4002487af9dba5e4466b75e3fce19ce0c9b8d531
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b1057dd8a7e70dc663d1b0de7d206fd7cc84e2c5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37165007"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129906"
 ---
 # <a name="integration-services-transactions"></a>Transações do Integration Services
   Os pacotes usam transações para associar as ações do banco de dados realizadas pelas tarefas em unidades atômicas e, ao fazer isso, a integridade dos dados é mantida. Todos os tipos de contêineres do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , pacotes, o Loop For, Loop Foreach, contêineres de Sequência, e os hosts de tarefas que encapsulam cada tarefa, podem ser configurados para usar transações. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fornece três opções para configurar transações: **Sem Suporte**, **Há Suporte**e **Necessário**.  

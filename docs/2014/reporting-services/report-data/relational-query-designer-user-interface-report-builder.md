@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10012"
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - accessing data, query designer
 - relational query designer
 ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
-caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: cbcbb6c64ef5a11db341d1a49c5d966991661a84
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 41736a7de5469650d1d2e13b6b78d8a9c2e92573
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37181863"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48152816"
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>Interface de usuário do Designer de Consulta relacional (Construtor de Relatórios)
   Construtor de relatórios fornece um designer de consultas gráficas e um designer de consulta baseado em texto para ajudá-lo a criar uma consulta que especifica os dados para recuperar a partir [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] bancos de dados relacionais e [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] para um conjunto de dados do relatório. Use o designer de consultas gráficas para explorar os metadados, criar uma consulta interativamente e exibir os dados da consulta. Use o designer de consulta baseado em texto para exibir a consulta que foi criada pelo designer de consultas gráficas ou modificar uma consulta. Também é possível importar uma consulta existente de um arquivo ou relatório.  

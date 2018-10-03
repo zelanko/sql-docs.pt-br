@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.datasources.f1
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - connection strings [Analysis Services]
 - data sources [Analysis Services], security
 ms.assetid: b4e302d3-c93b-4383-aa4a-37d15c129830
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dbe08e5e23b8c40ddeba9efa99c151314d499916
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 124795b07c79d0b2478bb91121d37783a48a1782
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243716"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48126256"
 ---
 # <a name="grant-permissions-on-a-data-source-object-analysis-services"></a>Conceder permissões em um objeto de fonte de dados (Analysis Services)
   Normalmente, a maioria dos usuários do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] não precisa de acesso às fontes de dados subjacentes a um projeto do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Os usuários normalmente só consultam os dados no banco de dados do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Porém, no contexto de mineração de dados, como executar previsões com base em um modelo de mineração, um usuário tem que unir os dados obtidos de um modelo de mineração com os dados fornecidos pelo usuário. Para conectar-se à fonte de dados que contém os dados fornecidos pelo usuário, o usuário usa uma consulta DMX (extensões DMX) que contém as cláusulas [OPENQUERY &#40;DMX&#41;](/sql/dmx/source-data-query-openquery) e [OPENROWSET &#40;DMX&#41;](/sql/dmx/source-data-query-openrowset).  

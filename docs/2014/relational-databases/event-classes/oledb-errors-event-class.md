@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - OLEDB Errors event class
 ms.assetid: 0ce1e906-5d92-42f2-ab38-8771ad5ca008
-caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e2392b6ee2bdafe0cc6a836cadb0bca94bf71612
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c81cfcac808b5bf4055f968dadff018eadc4d8be
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37309966"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48174726"
 ---
 # <a name="oledb-errors-event-class"></a>classe de evento OLEDB Errors
   A classe de evento OLEDB Errors ocorre no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando uma chamada para um provedor OLE DB retorna um erro. Inclua esta classe de evento em rastreamentos para exibir uma falha de HRESULT de um provedor OLE DB.  

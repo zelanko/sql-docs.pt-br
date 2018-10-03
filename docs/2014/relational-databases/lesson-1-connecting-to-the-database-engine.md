@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
-caps.latest.revision: 22
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0dd6a74e002a6eb8dcb266d2ede766becc89813b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 145adf31e3b59e846eb17369a897e4012f0177ed
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37184234"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48132386"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Lição 1: conectando-se ao mecanismo de banco de dados
   Quando você instala o [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], as ferramentas instaladas dependem da edição e de suas opções de instalação. Esta lição analisa as principais ferramentas e mostra como conectar e executar uma função básica (autorizar mais usuários).  

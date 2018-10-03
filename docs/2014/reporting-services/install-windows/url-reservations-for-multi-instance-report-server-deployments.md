@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - URL reservations
 ms.assetid: f67c83c0-1f74-42bb-bfc1-e50c38152d3d
-caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 126a885988deee0ac05126282f4db233f7a756ad
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6c1b5dbe65105de7d5f775c6d98ba17b2d646d87
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37307336"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48138718"
 ---
 # <a name="url-reservations-for-multi-instance-report-server-deployments--ssrs-configuration-manager"></a>Reservas de URL para implantações do Servidor de Relatório com várias instâncias (Gerenciador de configurações do SSRS)
   Se você instalar várias instâncias do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no mesmo computador, será preciso considerar como definirá as reservas de URL para cada instância. Em cada instância, o serviço Web Servidor de Relatórios e o Gerenciador de Relatórios devem ter pelo menos uma reserva de URL cada. O conjunto inteiro de reservas deve ser exclusivo em HTTP.SYS.  

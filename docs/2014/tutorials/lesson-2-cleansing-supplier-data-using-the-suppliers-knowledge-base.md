@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 215c14de-fc3f-46de-a022-bf69b9ea2a96
-caps.latest.revision: 7
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5708dfe72d3eaa745d1ffefd88147b3e72b7c46c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d957c5ddb394828ed29f169796bcb2bf19cea6a3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37191216"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48162586"
 ---
 # <a name="lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base"></a>Lição 2: Limpando dados de fornecedor usando a base de dados de conhecimento de fornecedores
   Nesta lição, você deve limpar os dados do fornecedor em um arquivo do Excel usando o **fornecedores** base de dados de conhecimento que você criou na primeira lição. Limpeza de dados no DQS inclui um **processo auxiliado por computador** que analisa como dados está em conformidade com o conhecimento em uma base de dados de conhecimento e um **processo interativo** que permite que você examine e modifique resultados do processo auxiliado por computador. O recurso de limpeza de dados identifica dados incorretos na fonte de dados e corrige ou sugere correções para os dados incorretos. Também padroniza e enriquece dados de cliente usando valores de domínio, valores principais para sinônimos, regras de domínio, relações baseadas em termos e dados de referência. Você pode aprovar ou rejeitar interativamente as alterações propostas pelo processo auxiliado por computador. Ver [limpeza de dados](http://msdn.microsoft.com/library/gg524800.aspx) para obter mais detalhes.  

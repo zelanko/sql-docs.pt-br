@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 07f13e1c-0b20-4f9e-ad62-c438983f2785
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 49779aa45ad8f0316dafa5fb74b037b5d199f328
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0d9411ab88d259718aaa62873e615a62efdd82e9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37238356"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48070297"
 ---
 # <a name="defining-calculated-members"></a>Definindo membros calculados
   Membros calculados são membros de uma dimensão ou um grupo de medidas definidos com base em uma combinação de dados de cubo, operadores aritméticos, números e funções. Por exemplo, você pode criar um membro calculado que possa calcular a soma de duas medidas físicas no cubo. As definições de um membro calculado são armazenadas em cubos, mas seus valores são calculados no momento da consulta.  

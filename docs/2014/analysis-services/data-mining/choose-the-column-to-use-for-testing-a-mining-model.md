@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - columns [data mining], predictable mining columns
 - Mining Accuracy Chart [Analysis Services], columns
 - predictable mining columns [Analysis Services]
 ms.assetid: c6a8f23a-da21-4f31-9521-99460d624649
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a0458e4ad7b17b4f4713b8aa1aad0a10dba88098
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8f8fcbac925be2910cba7110b96cc33b80a4092e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304656"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48120826"
 ---
 # <a name="choose-the-column-to-use-for-testing-a-mining-model"></a>Escolha a coluna para usar para teste em um modelo de mineração
   Antes de poder medir a exatidão de um modelo de mineração, você deverá decidir qual resultado deseja avaliar. A maioria dos modelos de mineração de dados exige que você escolha pelo menos uma coluna para usar como o atributo previsível ao criar o modelo. Portanto, quando você testar a exatidão do modelo, geralmente terá que selecionar esse atributo para testar.  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Object:Altered event class
 ms.assetid: f94e3b59-ff2f-4d8d-8479-e85ce5b3483e
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2cc8e96e4e45558571e062ab70c3b30ea6040c0b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c396e1faf5084eb7e9e465aff5a6f2d098ca7dec
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37327676"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48115778"
 ---
 # <a name="objectaltered-event-class"></a>classe de evento Object:Altered
   A classe de evento Object:Altered indica que um objeto foi alterado; por exemplo, pelas instruções ALTER INDEX e ALTER TABLE ou ALTER DATABASE. Essa classe de evento pode ser usada para determinar se objetos estão sendo alterados, por exemplo, por aplicativos ODBC, que geralmente criam procedimentos armazenados temporários.  

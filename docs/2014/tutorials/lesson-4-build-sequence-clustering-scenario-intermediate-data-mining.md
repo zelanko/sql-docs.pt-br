@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], tutorials
 - sequence clustering algorithms [Analysis Services]
 - tutorials [Data Mining]
 ms.assetid: 63436bbd-0f73-4012-b6f1-358c81e4d92a
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2e594e44dd3c8af8ade94c549d8b489f31623553
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5e276d4a2b44c8d0fdc6be6787f58e359e4c15d5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251198"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48122566"
 ---
 # <a name="lesson-4-building-a-sequence-clustering-scenario-intermediate-data-mining-tutorial"></a>Lição 4: Criando um cenário de clustering de sequências (Tutorial de mineração de dados intermediário)
   O departamento de marketing da [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] deseja compreender como os clientes navegam pelo [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] site da Web. A empresa suspeita que há um padrão para a ordem na qual os clientes colocam os produtos em suas cestas de compra. Eles desejam analisar a ordem das sequências de compra para aprender como os clientes adicionam itens relacionados às suas cestas. Em seguida, eles podem usar essas informações para simplificar o fluxo do site para que ele leve os clientes a adquirir produtos adicionais.  

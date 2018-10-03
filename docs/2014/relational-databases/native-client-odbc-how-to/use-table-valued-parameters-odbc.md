@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 6f8da6ab-9de6-4d0a-9b7e-acb76a50a2e7
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 13cf47c37cf2b7936ed2e6be5d3aaa27eb74fdb0
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: ec4d66af36ff74b5b0a9160529990c9fc52fc961
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37417115"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48138447"
 ---
 # <a name="use-table-valued-parameters-odbc"></a>Usar Parâmetros com valor de tabela (ODBC)
   Este exemplo mostra como usar parâmetros com valor de tabela para inserir várias linhas, com várias colunas, com uma chamada para o servidor.  

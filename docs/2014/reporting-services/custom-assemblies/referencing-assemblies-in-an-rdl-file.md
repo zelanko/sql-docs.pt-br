@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - RDL [Reporting Services], referencing assemblies
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - Report Definition Language, referencing assemblies
 - report definition files [Reporting Services]
 ms.assetid: 9a48e552-7d47-4243-9be1-894990c506d9
-caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 29e2a4698ef09627b4098ab5e28ecbe096d6af30
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fa861745b4b786e730ff302cf7cfdc53d6035fcd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153967"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48097766"
 ---
 # <a name="referencing-assemblies-in-an-rdl-file"></a>Referenciando assemblies em um arquivo RDL
   Para dar suporte ao uso de assemblies de código personalizado em arquivos de definição de relatório, dois elementos da linguagem RDL foram incluídos na especificação de RDL: o elemento **CodeModules** e o elemento **Classes**.  

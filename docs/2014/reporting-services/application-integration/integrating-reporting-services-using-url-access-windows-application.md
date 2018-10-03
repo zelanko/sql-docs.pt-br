@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - Windows applications [Reporting Services]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - browser controls [Reporting Services]
 - URL access [Reporting Services], Windows applications
 ms.assetid: a4b222e5-0cbd-409c-92c4-046a674db8ac
-caps.latest.revision: 47
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6afbc2feba8430e85ecd8b9695797f49eef1c420
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 76975f2eba0423c6fd36a764663b9df8d6ae921c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37262362"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48082542"
 ---
 # <a name="using-url-access-in-a-windows-application"></a>Usando acesso à URL em um aplicativo do Windows
   Embora o acesso à URL a um servidor de relatório seja otimizado para um ambiente da Web, você também pode usá-lo para inserir relatórios do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em um aplicativo do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. No entanto, o acesso à URL que envolve o Windows Forms ainda exige que você use tecnologia de navegador da Web. Você pode usar os seguintes cenários de integração com o acesso à URL e o Windows Forms:  

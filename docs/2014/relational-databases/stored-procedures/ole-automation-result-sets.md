@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: stored-procedures
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data types [SQL Server], OLE Automation
@@ -19,12 +17,12 @@ ms.assetid: b2f99e33-2303-427c-94b9-9d55f8e2a6ab
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dc91ee4a040ce2a2dbe15afed5b1655dbcf7a052
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 649731c1dbbe3f52dec899cc47366cfeb15c9c56
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37416235"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48160148"
 ---
 # <a name="ole-automation-result-sets"></a>Conjuntos de resultado de automação OLE
   Se uma propriedade de automação OLE ou método retorna dados em uma matriz com uma ou duas dimensões, a matriz é retornada ao cliente como um conjunto de resultados:  

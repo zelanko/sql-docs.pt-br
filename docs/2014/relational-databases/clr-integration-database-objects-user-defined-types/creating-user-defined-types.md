@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -14,18 +12,17 @@ helpviewer_keywords:
 - user-defined types [CLR integration], creating
 - UDTs [CLR integration], creating
 ms.assetid: 0feb8b08-4062-467b-8433-e88e4e302738
-caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4446d468738ea9db533488de62705c548e777f0a
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 1b52eb9ecab5dd75e7f483bead1ef523b6b02360
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37350968"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48170406"
 ---
-# <a name="creating-a-user-defined-type"></a>Criando um tipo definido pelo usuário
+# <a name="creating-a-user-defined-type"></a>Criar um tipo definido pelo usuário
   Para criar um tipo definido pelo usuário (UDT) que possa ser instalado no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], primeiro crie uma classe em uma das linguagens de programação .NET Framework com suporte, como Visual C# ou Visual Basic, que esteja de acordo com as especificações para criação de UDTs. A classe poderá, então, ser compilada como uma DLL (Dynamic-Link Library), que poderá ser carregada no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Você também poderá criar e implantar UDTs com o Visual Studio.  
   
  A capacidade de executar código CLR (Common Language Runtime) é definida, por padrão, como OFF no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O CLR pode ser habilitado usando o procedimento armazenado do sistema `sp_configure`, como mostrado nas seguintes instruções [!INCLUDE[tsql](../../includes/tsql-md.md)]:  

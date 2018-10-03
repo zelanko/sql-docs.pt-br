@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - source controls [SQL Server Management Studio], checkouts
 - checkouts [SQL Server Management Studio]
 - checking out files
 ms.assetid: ddd4adba-d432-4005-9cb2-bb9ee3163d8e
-caps.latest.revision: 20
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f2f1d25a1344f395779d084c659fc7a4579f098c
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 9de9a1f8ceca0fbb05ab2b6680c5fcc34c951109
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43813038"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48183776"
 ---
 # <a name="manage-checkouts"></a>Gerenciar check-outs
   Depois que um arquivo é adicionado ao controle do código-fonte, faça check-out do arquivo antes de você fazer modificações nele. Ao fazer o check-out de um arquivo com controle do código-fonte, o provedor de controle do código-fonte cria uma cópia da versão mais recente em seu disco local e remove o atributo somente leitura do arquivo. Em algumas circunstâncias, você pode precisar editar um arquivo sem fazer check-out do mesmo. Para obter mais informações sobre como editar um arquivo sem fazer check-out do arquivo, consulte [editar arquivos de Checked-In](../../2014/database-engine/edit-checked-in-files.md).  

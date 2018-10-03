@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapproperties.general.f1
@@ -17,16 +15,15 @@ f1_keywords:
 - MICROSOFT.REPORTDESIGNER.MAPPOLYGON.CENTERPOINTTEMPLATE
 - "10500"
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
-caps.latest.revision: 28
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 801c4ef8ce4c07491d45577224726167c86b0250
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c0c65216c2a74653cb2752d0183b3d0635a6c3cc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37313287"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48187956"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>Mapas (Construtor de Relatórios e SSRS)
   Para visualizar dados comerciais em um plano de fundo geográfico, você pode acrescentar um mapa a seu relatório. O tipo de mapa selecionado depende de qual informação você deseja comunicar no seu relatório. Você pode adicionar um mapa que só exibe locais ou um mapa de bolhas que varia o tamanho da bolha com base no número de residências em uma área, ou um mapa de marcador que varia o estilo de marcador com base no produto mais lucrativo para cada loja, ou um mapa de linha que exibe rotas entre lojas.  

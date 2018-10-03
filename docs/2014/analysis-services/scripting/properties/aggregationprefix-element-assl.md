@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - AggregationPrefix Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - AggregationPrefix element
 ms.assetid: 1581e0df-ae8e-41ce-9c92-f0f7cac487f2
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d7f7fe7ad16c8949116edb13c7d2c9b5144443dd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c6cb7355644a437b7427dcd366c5f102f469135a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293276"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48121536"
 ---
 # <a name="aggregationprefix-element-assl"></a>Elemento AggregationPrefix (ASSL)
   Define o prefixo comum a ser usado para nomes de agregação no elemento pai associado.  
@@ -51,7 +48,7 @@ ms.locfileid: "37293276"
 |Característica|Description|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|Cadeia de caracteres|  
-|Valor padrão|Nenhum|  
+|Valor padrão|None|  
 |Cardinalidade|0-1: elemento opcional que pode ocorrer apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -59,9 +56,9 @@ ms.locfileid: "37293276"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|[Cubo](../objects/cube-element-assl.md), [banco de dados](../objects/database-element-assl.md), [MeasureGroup](../objects/group-element-assl.md), [partição](../objects/partition-element-assl.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Prefixos de agregação geram os nomes de agregação em [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]e também geram os nomes de tabela no banco de dados relacional para agregações armazenadas em uma partição OLAP (ROLAP) relacional.  
   
  Um nome de agregação completamente expandido tem as partes a seguir:  

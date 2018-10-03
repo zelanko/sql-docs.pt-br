@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 539c6b5f-f4b6-42f9-af81-7c02f74d5efe
-caps.latest.revision: 9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d1d74fe1e59121466acf3671e3ce036a6b3e4e89
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 763561a3b13917c290794db145c6309267f9dc97
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37259412"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48190696"
 ---
 # <a name="tabular-model-databases-ssas-tabular"></a>Bancos de dados modelo de tabela (SSAS tabular)
   Um banco de dados modelo de tabela é um banco de dados do Analysis Services que você cria no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usando o modelo de projeto modelo de tabela do Analysis Services, onde tabelas e relações são as estruturas primárias para representar dados.  

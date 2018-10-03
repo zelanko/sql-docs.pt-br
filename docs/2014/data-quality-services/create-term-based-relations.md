@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.kbtermsbased.f1
 ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
-caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9678f42ee401a2d1f223220e82fb0c024559f5d8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 524c0b4b875d8fc63cbd508c04032d7b50453c3b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37277422"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48092832"
 ---
 # <a name="create-term-based-relations"></a>Criar relações baseadas em termos
   Este tópico descreve como criar relações baseadas em termos para um domínio no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Uma relação baseada em termos permite que você faça uma correção em um termo que faz parte de um valor em um domínio. Elas permitem que diversos valores idênticos, exceto pela ortografia de uma parte comum deles, sejam considerados como sinônimos idênticos. Por exemplo, você pode configurar uma relação baseada em termos que altere o termo “Inc.” para “Incorporated”. O termo “Inc.” será alterado toda vez que ocorrer no domínio. Instâncias de "Contoso, Inc." serão alteradas para "Contoso, Incorporated", e os dois valores serão considerados sinônimos exatos.  

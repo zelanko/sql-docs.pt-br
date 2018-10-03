@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Analysis Services], process
 - process permissions [Analysis Services]
 ms.assetid: c1531c23-6b46-46a8-9ba3-b6d3f2016443
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b718fab80ad85ee52cadcc9547c11848de0ee9a4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 175e07432d3f67374710d6e33f3006f2b3b6bf68
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37187283"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48181251"
 ---
 # <a name="grant-process-permissions-analysis-services"></a>Conceder permissões de processo (Analysis Services)
   Como administrador, você pode criar uma função dedicada às operações de processamento do Analysis Services, o que lhe permitirá delegar essa tarefa específica a outros usuários ou a aplicativos usados para o processamento autônomo agendado. As permissões de processo podem ser concedidas nos níveis de banco de dados, cubo, dimensão e estrutura de mineração. A menos que você esteja trabalhando com um grande cubo ou banco de dados de tabelas, recomendamos a concessão de direitos de processamento no nível de banco de dados, incluindo aqueles que apresentem dependências entre si.  

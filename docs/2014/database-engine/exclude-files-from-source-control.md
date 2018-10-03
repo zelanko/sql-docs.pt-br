@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - excluding files from source control
 - source controls [SQL Server Management Studio], file exclusions
 ms.assetid: 7dcb6514-db5c-49eb-8b5a-2c766ce39aa7
-caps.latest.revision: 21
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: aa1379d18c84db90207e68d548219740ac8d60af
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 42ae16970e59e2eac1af68e54a38b19bd760c068
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43811862"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48195086"
 ---
 # <a name="exclude-files-from-source-control"></a>Excluir arquivos do controle do código-fonte
   Se a solução que você está trabalhando contiver arquivos que não requerem serviços de controle do código-fonte, você pode usar o **excluir do controle do código-fonte** comando para excluir o arquivo de controle de origem. Quando você faz isso, o arquivo permanece no banco de dados do [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe, mas já não é feito o check-in ou check-out com o projeto.  

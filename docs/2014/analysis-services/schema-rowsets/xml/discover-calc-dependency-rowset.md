@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - DISCOVER_CALC_DEPENDENCIES rowset
 ms.assetid: f39dde72-fa5c-4c82-8b4e-88358aa2e422
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 57f839d6c50208828de3441ec6e3c5f5f77c67c6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 88e423e248293e537dba5d90e8d688b826cb5244
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37297236"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48199027"
 ---
 # <a name="discovercalcdependency-rowset"></a>Conjunto de linhas DISCOVER_CALC_DEPENDENCY
   Cria relatórios sobre as dependências entre cálculos e sobre os objetos referenciados nesses cálculos. Você pode usar essas informações em um aplicativo cliente para gerar relatórios sobre problemas com fórmulas complexas ou para advertir quando objetos relacionados forem excluídos ou modificados. Você também pode usar o conjunto de linhas para extrair as expressões DAX usadas em medidas ou colunas calculadas.  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.dimensionstoragesettings.f1
 helpviewer_keywords:
 - Attribute Data Translation dialog box
 ms.assetid: bed286de-1e9b-49de-b09e-3cd076aba152
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9b17c7aba04bc832fd3554d82dd885e8add05214
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 32832a354342b822ac0e6b2853c18c11ed3eb004
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210356"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48117350"
 ---
 # <a name="attribute-data-translation-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Tradução de Dados de Atributo (Analysis Services - Dados Multidimensionais)
   Use a caixa de diálogo **Tradução de Dados de Atributo** para definir a coluna que contém os dados de legenda de tradução, assim como o agrupamento e a ordem de classificação a serem usados com os dados traduzidos. É possível exibir a caixa de diálogo **Tradução de Dados de Atributo** das seguintes maneiras:  

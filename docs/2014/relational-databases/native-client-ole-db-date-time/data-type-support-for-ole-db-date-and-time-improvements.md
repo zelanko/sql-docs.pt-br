@@ -1,29 +1,26 @@
 ---
-title: Suporte de tipo de dados para OLE DB aprimoramentos de data e hora | Microsoft Docs
+title: Suporte a tipos de dados para melhorias de data e hora do OLE DB | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - date/time [OLE DB], data type support
 - OLE DB, date/time improvements
 ms.assetid: d40e3fd6-9057-4371-8236-95cef300603e
-caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 915a86b1170809bf1508f0214060fea9e0cf8a79
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 2ff3ef6c9fd7347585b4e7df026fdc95bafdd069
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37427035"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48157916"
 ---
-# <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Suporte de tipo de dados para OLE DB aprimoramentos de data e hora
+# <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Suporte a tipos de dados para melhorias de data e hora do OLE DB
   Este tópico fornece informações sobre os tipos OLE DB ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client) que oferecem suporte aos tipos de dados de data/hora do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="data-type-mapping-in-rowsets-and-parameters"></a>Mapeamento de tipos de dados em conjuntos de linhas e parâmetros  
@@ -33,7 +30,7 @@ ms.locfileid: "37427035"
 |-----------------------------------------|----------------------|-----------|  
 |DATETIME|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
-|Data|DBTYPE_DBDATE|133 (OLEDB)|  
+|Data|DBTYPE_DBDATE|133 (oledb.h)|  
 |time|DBTYPE_DBTIME2|145 (sqlncli. h)|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|146 (sqlncli. h)|  
 |datetime2|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
@@ -183,6 +180,6 @@ enum SQLVARENUM {
  Quando um aplicativo especificar DBTYPE_DBTIMESTAMP em *wType*, ele pode anular o mapeamento para `datetime2` fornecendo um nome de tipo em *pwszTypeName*. Se `datetime` for especificado, *bScale* deve ser 3. Se `smalldatetime` for especificado, *bScale* deve ser 0. Se *bScale* não é consistente com *wType* e *pwszTypeName*, DB_E_BADSCALE será retornado.  
   
 ## <a name="see-also"></a>Consulte também  
- [Aprimoramentos de data e hora &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
+ [Melhorias de data e hora &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
   
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.addreplicawizard.progress.f1
@@ -18,16 +16,15 @@ f1_keywords:
 - sql12.swb.adddatabasewizard.progress.f1
 - sql12.swb.failoverwixard.progress.f1
 ms.assetid: bd3b0306-8384-4120-a1c9-03825f0ae26a
-caps.latest.revision: 11
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: de5c8d19326015da6371cc3796c752d9f80f5842
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3c87b2a3c6ac2156a4d52ece48efa2982bb4ca2d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37217886"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48130836"
 ---
 # <a name="progress-page-alwayson-availability-group-wizards"></a>Página de Progresso (Assistentes de Grupo de Disponibilidade AlwaysOn)
   Use esta caixa de diálogo para exibir o progresso de um assistente do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] que você está executando no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. A barra de progresso indica o progresso relativo das etapas que o assistente está executando.  

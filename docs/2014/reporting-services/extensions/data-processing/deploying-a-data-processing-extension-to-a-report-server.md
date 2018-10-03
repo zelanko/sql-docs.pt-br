@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - data processing extensions [Reporting Services], deploying
 - assemblies [Reporting Services], data processing extension deployments
 ms.assetid: e00dface-70f8-434b-9763-8ebee18737d2
-caps.latest.revision: 44
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 47092d05e9908e68722dbebea88e110f58170000
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cf4013f5a557dde93cf628f55e108c5a4e1772ed
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37160067"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48160724"
 ---
 # <a name="how-to-deploy-a-data-processing-extension-to-a-report-server"></a>Como implantar uma extensão de processamento de dados para um Servidor de Relatórios
   Servidores de relatórios usam extensões de processamento de dados por recuperar e processar dados em relatórios renderizados. Você deve implantar o seu assembly de extensão de processamento de dados para um servidor de relatório como um assembly privado. Também será preciso criar uma entrada no arquivo de configuração do servidor de relatório, RSReportServer.config.  

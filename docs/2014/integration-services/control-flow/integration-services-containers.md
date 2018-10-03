@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SSIS containers
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - control flow [Integration Services], containers
 - SQL Server Integration Services containers
 ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
-caps.latest.revision: 47
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 06ba65f48edc9434eb1cec485e0f219958e52a1e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 520f237c4f73708841a6e1f46c1bd14d49c84fa4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37283622"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200806"
 ---
 # <a name="integration-services-containers"></a>Contêineres do Integration Services
   Contêineres são objetos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que fornecem estrutura a pacotes e serviços a tarefas. Eles fornecem suporte à repetição de fluxos de controle em pacotes e agrupam tarefas e contêineres em unidades de trabalho significativas. Os contêineres podem incluir outros contêineres, além de tarefas.  

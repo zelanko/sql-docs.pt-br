@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b856ee9a-49e7-4fab-a88d-48a633fce269
-caps.latest.revision: 17
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 6e9f17e76dca1f5f3266908ed8f009161cf1d829
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 3d939e8d1576e31de3ba42eaa7deba59a2801bb1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392466"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48178247"
 ---
-# Guia de criação de índice do SQL Server
+# <a name="sql-server-index-design-guide"></a>Guia de criação de índice do SQL Server
   Os índices criados inadequadamente e a falta de índices são as principais fontes de gargalos do aplicativo de banco de dados. A criação eficiente de índices é muito importante para alcançar um bom desempenho de banco de dados e de aplicativo. Este guia de criação de índice do SQL Server contém informações e práticas recomendadas para ajudar você a criar índices efetivos para atender às necessidades de seu aplicativo.  
   
 **Aplica-se ao**: [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] por meio de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , a menos que indicado o contrário.  
@@ -51,7 +48,7 @@ ms.locfileid: "40392466"
   
  Não equipare sempre o uso de índice com bom desempenho e bom desempenho com uso de índice eficiente. Se o uso de um índice sempre ajudasse a produzir o melhor desempenho, a tarefa do otimizador de consulta seria simples. Na realidade, a escolha incorreta de um índice pode causar um desempenho insatisfatório. Portanto, a tarefa do otimizador de consulta é selecionar um índice ou uma combinação de índices apenas quando isso gerar melhoria de desempenho e evitar a recuperação indexada quando isso atrapalhar o desempenho.  
   
-### Tarefas de criação de índice  
+### <a name="index-design-tasks"></a>Tarefas de criação de índice  
  As seguintes tarefas compõem a estratégia recomendada para criação de índices:  
   
 1.  Entenda as características do banco de dados. Por exemplo, trata-se de um banco de dados OLTP (transação online) com modificações frequentes de dados, um DSS (sistema de apoio à decisão) ou um banco de dados OLAP de data warehouse que contém principalmente dados somente leitura e deve processar conjuntos de dados muito grandes rapidamente. No [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], o *columnstore xVelocity de memória otimizada* é especialmente apropriado para conjuntos de dados de data warehouse típicos. Os índices columnstore podem transformar a experiência com data warehouse para usuários proporcionando um desempenho mais rápido para consultas de data warehouse comuns, como filtragem, agregação, agrupamento ou consultas de junção em estrela. Para obter mais informações, consulte [índices Columnstore descritos](../relational-databases/indexes/columnstore-indexes-described.md).  
@@ -69,7 +66,7 @@ ms.locfileid: "40392466"
 ##  <a name="General_Design"></a> Diretrizes para criação de índice geral  
  Administradores de banco de dados experientes podem projetar um bom conjunto de índices, mas essa tarefa é muito complexa, demorada e propensa a erros até mesmo para bancos de dados e cargas de trabalho moderadamente complexos. Compreender as características de seu banco de dados, consultas e colunas de dados pode lhe ajudar a projetar índices melhores.  
   
-### Considerações sobre banco de dados  
+### <a name="database-considerations"></a>Considerações sobre banco de dados  
  Quando você projeta um índice, considere as seguintes diretrizes para banco de dados:  
   
 -   Números grandes de índices em uma tabela afetam o desempenho das instruções INSERT, UPDATE, DELETE e MERGE porque todos os índices precisam ser ajustados adequadamente à medida que os dados são alterados em uma tabela. Por exemplo, se uma coluna for usada em vários índices e você executar uma instrução UPDATE que modifica os dados dessa coluna, cada índice que contém essa coluna deverá ser atualizado, bem como a coluna na tabela base subjacente (heap ou índice clusterizado).  
@@ -84,7 +81,7 @@ ms.locfileid: "40392466"
   
 -   Use o Orientador de Otimização do Mecanismo de Banco de Dados para analisar seu banco de dados e fazer recomendações de índice. Para obter mais informações, consulte [Database Engine Tuning Advisor](../relational-databases/performance/database-engine-tuning-advisor.md).  
   
-### Considerações sobre consultas  
+### <a name="query-considerations"></a>Considerações sobre consultas  
  Quando você projeta um índice, considere as seguintes diretrizes para consultas:  
   
 -   Crie índices não clusterizados nas colunas frequentemente usadas em predicados e condições de junção em consultas. No entanto, evite adicionar colunas desnecessárias. Acrescentar muitas colunas de índice pode afetar adversamente o espaço em disco e o desempenho de manutenção de índice.  
@@ -95,7 +92,7 @@ ms.locfileid: "40392466"
   
 -   Avalie o tipo da consulta e como as colunas são usadas na consulta. Por exemplo, uma coluna usada em uma consulta de correspondência exata seria uma boa candidata para um índice clusterizado ou não clusterizado.  
   
-### Considerações sobre colunas  
+### <a name="column-considerations"></a>Considerações sobre colunas  
  Quando você projeta um índice, considere as seguintes diretrizes para as colunas:  
   
 -   Mantenha o comprimento da chave de índice curto para os índices clusterizados. Além disso, os índices clusterizados se beneficiam de serem criados em colunas exclusivas ou não nulas.  
@@ -116,7 +113,7 @@ ms.locfileid: "40392466"
   
 -   Considere indexar as colunas computadas. Para obter mais informações, consulte [Indexes on Computed Columns](../relational-databases/indexes/indexes-on-computed-columns.md).  
   
-### Características do índice  
+### <a name="index-characteristics"></a>Características do índice  
  Depois de ter determinado que um índice é apropriado para uma consulta, você pode selecionar o tipo de índice que melhor se adéque a sua situação. Características de índice incluem o seguinte:  
   
 -   Clusterizado X não clusterizado.  
@@ -146,7 +143,7 @@ ms.locfileid: "40392466"
   
  Como você não pode prever que tipo de acesso acontecerá e quando ocorrerá, pode ser preferível distribuir suas tabelas e índices por todos os grupos de arquivos. Isso garantirá que todos os discos estejam sendo acessados, pois todos os dados e índices estarão distribuídos igualmente por todos os discos, independentemente da maneira como os dados sejam acessados. Essa também é uma abordagem mais simples para os administradores do sistema.  
   
-#### Partições em vários grupos de arquivos  
+#### <a name="partitions-across-multiple-filegroups"></a>Partições em vários grupos de arquivos  
  Você também pode considerar o particionamento de índices cluster e não cluster em vários grupos de arquivos. Os índices particionados são particionados horizontalmente, ou por linha, com base na função de uma partição. A função da partição define como cada linha é mapeada para um conjunto de partições, com base nos valores de certas colunas, chamadas colunas de particionamento. Um esquema de partição especifica o mapeamento das partições para um conjunto de grupos de arquivos.  
   
  O particionamento de um índice pode proporcionar os seguintes benefícios:  
@@ -205,7 +202,7 @@ ON Purchasing.PurchaseOrderDetail
   
  Se o índice clusterizado não for criado com a propriedade UNIQUE, o [!INCLUDE[ssDE](../includes/ssde-md.md)] acrescentará uma coluna de indicador de exclusividade de 4 bytes automaticamente à tabela. Quando necessário, o [!INCLUDE[ssDE](../includes/ssde-md.md)] acrescenta um valor de indicador de exclusividade automaticamente a uma linha para tornar cada chave exclusiva. Essa coluna e seus valores são usados internamente e não podem ser vistos ou avaliados por usuários.  
   
-### Arquitetura de índice clusterizado  
+### <a name="clustered-index-architecture"></a>Arquitetura de índice clusterizado  
  No [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], os índices são organizados como árvores B. Cada página em uma árvore B de índice é chamada de nó do índice. O nó superior da árvore B é chamado de nó raiz. Os nós inferiores no índice são chamados de nós folha. Quaisquer níveis de índice entre os nós raiz e folha são coletivamente conhecidos como níveis intermediários. Em um índice clusterizado, os nós folha contêm as páginas de dados da tabela subjacente. Os nós de nível intermediário e raiz contêm páginas de índice com linhas de índice. Cada linha de índice contém um valor de chave e um ponteiro para uma página de nível de intermediário na árvore B ou uma linha de dados no nível folha do índice. As páginas de cada nível do índice são vinculadas a uma lista vinculada duas vezes.  
   
  Índices clusterizados têm uma linha em [sys.partitions](/sql/relational-databases/system-catalog-views/sys-partitions-transact-sql), com **index_id** = 1 para cada partição usada pelo índice. Por padrão, um índice clusterizado tem um único particionamento. Quando um índice clusterizado tem particionamentos múltiplos, cada particionamento tem uma estrutura de árvore B que contém os dados para aquele particionamento específico. Por exemplo, se um índice clusterizado tiver quatro particionamentos, haverá quatro estruturas de árvore B; uma em cada particionamento.  
@@ -218,7 +215,7 @@ ON Purchasing.PurchaseOrderDetail
   
  ![Níveis de um índice clusterizado](media/bokind2.gif "níveis de um índice clusterizado")  
   
-### Considerações sobre consultas  
+### <a name="query-considerations"></a>Considerações sobre consultas  
  Antes de criar índices clusterizados, entenda como seus dados serão acessados. Considere utilizar um índice clusterizado para consultas que façam o seguinte:  
   
 -   Retornam um intervalo de valores usando os operadores como BETWEEN, >, >=, < e <=.  
@@ -233,7 +230,7 @@ ON Purchasing.PurchaseOrderDetail
   
      Um índice nas colunas especificadas na cláusula ORDER BY ou GROUP BY pode eliminar a necessidade de o [!INCLUDE[ssDE](../includes/ssde-md.md)] classificar os dados, pois as linhas já estão classificadas. Isso melhora o desempenho da consulta.  
   
-### Considerações sobre colunas  
+### <a name="column-considerations"></a>Considerações sobre colunas  
  Geralmente, você deve definir a chave de índice clusterizado com o menor número de colunas possível. Considere colunas que tenham um ou mais dos seguintes atributos:  
   
 -   Sejam exclusivas ou contenham muitos valores distintos  
@@ -267,7 +264,7 @@ ON Purchasing.PurchaseOrderDetail
   
  Semelhante à maneira como o índice de um livro é usado, o otimizador de consulta procura um valor de dados pesquisando o índice não clusterizado para encontrar o local do valor de dados na tabela e, depois, recupera os dados diretamente daquele local. Isso faz com que os índices não clusterizados sejam a opção ideal para consultas de correspondência exata, uma vez que o índice contém entradas que descrevem o local preciso na tabela dos valores de dados pesquisados pelas consultas. Por exemplo, para consultar a tabela `HumanResources. Employee` de todos os funcionários que reportam para um determinado gerente, o otimizador de consulta pode usar o índice não clusterizado `IX_Employee_ManagerID`, que tem `ManagerID` como sua coluna de chave. O otimizador de consulta pode localizar rapidamente todas as entradas no índice que correspondem ao `ManagerID`especificado. Cada entrada do índice aponta para a página e a linha exatas na tabela ou índice clusterizado, em que os dados correspondentes podem ser localizados. Depois que o otimizador de consulta localizar todas as entradas no índice, poderá ir diretamente para a página e a linha exatas e recuperar os dados.  
   
-### Arquitetura de índice não clusterizado  
+### <a name="nonclustered-index-architecture"></a>Arquitetura de índice não clusterizado  
  Os índices não clusterizados têm a mesma estrutura de árvore B que os índices clusterizados, com exceção das seguintes diferenças significativas:  
   
 -   As linhas de dados da tabela subjacente não são classificadas nem armazenadas em ordem com base nas suas chaves não clusterizadas.  
@@ -288,7 +285,7 @@ ON Purchasing.PurchaseOrderDetail
   
  ![Níveis de um índice não clusterizado](media/bokind1.gif "níveis de um índice não clusterizado")  
   
-### Considerações sobre banco de dados  
+### <a name="database-considerations"></a>Considerações sobre banco de dados  
  Considere as características do banco de dados ao criar índices não clusterizados.  
   
 -   Os bancos de dados ou as tabelas com baixos requisitos de atualização, mas volumes grandes de dados, podem se beneficiar de muitos índices não clusterizados para aprimorar o desempenho da consulta. Considere a criação de índices filtrados para subconjuntos bem definidos de dados para aprimorar o desempenho da consulta, reduzir os custos de armazenamento de índice e reduzir os custos de manutenção de índice comparados a índices não clusterizados de tabela completa.  
@@ -299,7 +296,7 @@ ON Purchasing.PurchaseOrderDetail
   
      Números grandes de índices em uma tabela afetam o desempenho das instruções INSERT, UPDATE, DELETE e MERGE porque todos os índices precisam ser ajustados adequadamente à medida que os dados são alterados em uma tabela.  
   
-### Considerações sobre consultas  
+### <a name="query-considerations"></a>Considerações sobre consultas  
  Antes de criar índices não clusterizados, é recomendado entender como os dados são acessados. Considere usar um índice não clusterizado para consultas com os seguintes atributos:  
   
 -   Use as cláusulas JOIN ou GROUP BY.  
@@ -312,7 +309,7 @@ ON Purchasing.PurchaseOrderDetail
   
 -   Contém as colunas envolvidas frequentemente em condições de pesquisa de consulta, como a cláusula WHERE, que retorna correspondências exatas.  
   
-### Considerações sobre colunas  
+### <a name="column-considerations"></a>Considerações sobre colunas  
  Considere as colunas que tenham um ou mais destes atributos:  
   
 -   Cubra a consulta.  
@@ -339,7 +336,7 @@ ON Purchasing.PurchaseOrderDetail
   
  Enquanto as colunas de chave são armazenadas em todos os níveis do índice, as colunas não chave são armazenadas apenas em nível folha.  
   
-##### Usando colunas incluídas para evitar limites de tamanho  
+##### <a name="using-included-columns-to-avoid-size-limits"></a>Usando colunas incluídas para evitar limites de tamanho  
  Você pode incluir colunas não chave em um índice não clusterizado para evitar exceder as limitações do tamanho atual do índice, de um máximo de 16 colunas de chave, e um máximo de tamanho chave de índice de 900 bytes. O [!INCLUDE[ssDE](../includes/ssde-md.md)] não considera as colunas não chave ao calcular o número de colunas de chave de índice, ou o tamanho da chave do índice.  
   
  Por exemplo, suponha que você quer indexar as colunas seguintes na tabela `Document` :  
@@ -358,7 +355,7 @@ ON Production.Document (Title, Revision)
 INCLUDE (FileName);   
 ```  
   
-##### Índice com diretrizes das colunas incluídas  
+##### <a name="index-with-included-columns-guidelines"></a>Índice com diretrizes das colunas incluídas  
  Quando você projeta índices não clusterizados com colunas incluídas, considere as seguintes diretrizes:  
   
 -   As colunas não chave estão definidas na cláusula INCLUDE da instrução CREATE INDEX.  
@@ -375,7 +372,7 @@ INCLUDE (FileName);
   
 -   Os nomes das colunas não podem ser repetidos na lista INCLUDE.  
   
-##### Diretrizes do tamanho da coluna  
+##### <a name="column-size-guidelines"></a>Diretrizes do tamanho da coluna  
   
 -   Pelo menos uma coluna de chave deve ser definida. O número de máximo de colunas não chave é de 1023 colunas. Esse é o número máximo de colunas de tabela menos 1.  
   
@@ -383,7 +380,7 @@ INCLUDE (FileName);
   
 -   O tamanho total de todas as colunas não chave está limitado somente pelo tamanho especificado das colunas na cláusula INCLUDE; por exemplo, as colunas `varchar(max)` estão limitadas a 2 GB.  
   
-##### Diretrizes para modificação de coluna  
+##### <a name="column-modification-guidelines"></a>Diretrizes para modificação de coluna  
  Quando você modifica uma coluna de tabela que estava definida como uma coluna incluída, as restrições seguintes se aplicam:  
   
 -   As colunas não chave não podem ser soltar das tabelas, a menos que o índice seja solto antes.  
@@ -397,7 +394,7 @@ INCLUDE (FileName);
         > [!NOTE]  
         >  Estas restrições de modificação de coluna também se aplicam para indexar colunas de chave.  
   
-##### Recomendações de design  
+##### <a name="design-recommendations"></a>Recomendações de design  
  Redesenhe índices não clusterizados com um comprimento de chave de índice, de tal forma que apenas as colunas usadas para buscas e pesquisas sejam colunas de chave. Faça todas as outras colunas que abrangem a consulta colunas não chave incluídas. Deste modo, você terá todas as colunas necessárias para abranger a consulta, mas a chave de índice em si é pequena e eficiente.  
   
  Por exemplo, suponha que você quer projetar um índice para abranger a consulta seguinte.  
@@ -418,7 +415,7 @@ ON Person.Address (PostalCode)
 INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);  
 ```  
   
-##### Considerações sobre desempenho  
+##### <a name="performance-considerations"></a>Considerações sobre desempenho  
  Evite a adição desnecessária de colunas. Adicionar muitas colunas de índice, sejam elas chave ou não, pode gerar as seguintes implicações no desempenho:  
   
 -   Poucas filas de índice se ajustarão em uma página. Isto poderia criar aumentos de E/S e eficiência de cache reduzida.  
@@ -446,7 +443,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
  Criar uma restrição PRIMARY KEY ou UNIQUE automaticamente gera um índice exclusivo nas colunas especificadas. Não há nenhuma diferença significativa entre criar uma restrição UNIQUE e criar um índice exclusivo independente de uma restrição. A validação de dados ocorre da mesma maneira e o otimizador de consultas não diferencia entre um índice exclusivo criado por uma restrição ou manualmente. Entretanto, você deverá criar uma restrição UNIQUE ou PRIMARY KEY na coluna quando o objetivo for a integridade de dados. Fazendo isso o objetivo do índice será claro.  
   
-### Considerações  
+### <a name="considerations"></a>Considerações  
   
 -   Um índice exclusivo, uma restrição UNIQUE ou uma restrição PRIMARY KEY não poderão ser criados, se existirem valores de chave duplicados nos dados.  
   
@@ -491,10 +488,10 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
  Os índices filtrados são definidos em uma tabela e oferecem suporte apenas a operadores de comparação simples. Se você precisar de uma expressão de filtro que referencie várias tabelas ou que tenha uma lógica complexa, deverá criar uma exibição.  
   
-### Considerações de criação  
+### <a name="design-considerations"></a>Considerações de criação  
  Para criar índices filtrados eficazes, é importante entender quais consultas o aplicativo usa e como elas se relacionam com os subconjuntos de dados. Alguns exemplos de dados com subconjuntos bem-definidos são as colunas com valores predominantemente NULL, as colunas com categorias de valores heterogêneas e as colunas com intervalos de valores diferentes. As considerações sobre criação a seguir apresentam uma variedade de cenários em que um índice filtrado pode ser vantajoso com relação aos índices de tabela completa.  
   
-#### Índices filtrados para subconjuntos de dados  
+#### <a name="filtered-indexes-for-subsets-of-data"></a>Índices filtrados para subconjuntos de dados  
  Quando a coluna tem apenas uma pequena quantidade de valores relevantes para consultas, você pode criar um índice filtrado no subconjunto de valores. Por exemplo, se os valores de uma coluna forem predominantemente NULL e a consulta selecionar apenas valores não NULL, será possível criar um índice filtrado para linhas de dados não NULL. O índice resultante será menor e sua manutenção será menos dispendiosa em comparação com um índice não clusterizado de tabela completa definido nas mesmas colunas de chave.  
   
  Por exemplo, o banco de dados `AdventureWorks2012` tem uma tabela `Production.BillOfMaterials` com 2.679 linhas. A coluna `EndDate` tem apenas 199 linhas que contêm um valor não NULL e outras 2.480 linhas que contêm NULL. O índice filtrado a seguir abrange consultas que retornam as colunas definidas no índice e que selecionam apenas linhas com valor não NULL para `EndDate`.  
@@ -518,7 +515,7 @@ WHERE EndDate IS NOT NULL
   
  Para obter mais informações sobre como criar índices filtrados e definir a expressão de predicado do índice filtrado, consulte [Create Filtered Indexes](../relational-databases/indexes/create-filtered-indexes.md).  
   
-#### Índices filtrados para dados heterogêneos  
+#### <a name="filtered-indexes-for-heterogeneous-data"></a>Índices filtrados para dados heterogêneos  
  Quando a tabela contém linhas de dados heterogêneos, é possível criar um índice filtrado para uma ou mais categorias de dados.  
   
  Por exemplo, a cada produto listado na tabela `Production.Product` é atribuído um `ProductSubcategoryID`que, por sua vez, está associado às categorias de produtos Bikes, Components, Clothing ou Accessories. Essas categorias são heterogêneas porque os valores das coluna da tabela `Production.Product` não estão estreitamente correlacionados. Por exemplo, as colunas `Color`, `ReorderPoint`, `ListPrice`, `Weight`, `Class`e `Style` têm características exclusivas para cada categoria de produto. Suponha que haja consultas frequentes sobre acessórios que possuem subcategorias entre 27 e 36. É possível aprimorar o desempenho das consultas sobre acessórios criando um índice filtrado nas subcategorias de acessórios, conforme ilustrado no exemplo a seguir.  
@@ -540,7 +537,7 @@ FROM Production.Product
 WHERE ProductSubcategoryID = 33 AND ListPrice > 25.00 ;  
 ```  
   
-#### Colunas de Chave  
+#### <a name="key-columns"></a>Colunas de Chave  
  Uma prática recomendada é incluir um pequeno número de colunas de chave ou incluídas em uma definição de índice filtrado e inserir apenas as colunas necessárias para o otimizador de consulta escolher o índice filtrado para o plano de execução da consulta. O otimizador de consulta pode escolher um índice filtrado para a consulta, independentemente de ele abranger ou não a consulta. No entanto, é mais provável que o otimizador de consulta escolha um índice filtrado se ele abranger a consulta.  
   
  Em alguns casos, um índice filtrado abrange a consulta sem incluir as colunas na expressão do índice filtrado como colunas de chave ou incluídas na definição do índice filtrado. As diretrizes a seguir explicam quando uma coluna em uma expressão de índice filtrado deve ser uma coluna de chave ou incluída na definição do índice filtrado. Os exemplos se referem ao índice filtrado `FIBillOfMaterialsWithEndDate` que foi criado anteriormente.  
@@ -568,7 +565,7 @@ WHERE EndDate IS NOT NULL;
   
  A chave de índice clusterizado da tabela não precisa ser uma coluna de chave ou incluída na definição do índice filtrado. A chave de índice clusterizado é incluída automaticamente em todos os índices não clusterizados, inclusive índices filtrados.  
   
-#### Operadores de conversão de dados no predicado do filtro  
+#### <a name="data-conversion-operators-in-the-filter-predicate"></a>Operadores de conversão de dados no predicado do filtro  
  Se o operador de comparação especificado na expressão do índice filtrado resultar em uma conversão de dados implícita ou explícita, ocorrerá um erro se a conversão ocorrer à esquerda do operador de comparação. Uma solução seria gravar a expressão do índice filtrado com o operador de conversão de dados (CAST ou CONVERT) à direita do operador de comparação.  
   
  O exemplo a seguir cria uma tabela com diversos tipos de dados.  

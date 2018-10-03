@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - logistic regression [Analysis Services]
 - mining model content, logistic regression models
 - regression algorithms [Analysis Services]
 ms.assetid: 69cc0b86-e8bc-4d6c-903e-85724f5c0396
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6af2d4d2e3f5007cbe0721fe734073e7306b95a3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 56bd850ac5da9353073d2cf4d75fd1980bb8a38b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328922"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48164506"
 ---
 # <a name="mining-model-content-for-logistic-regression-models-analysis-services---data-mining"></a>Conteúdo do modelo de mineração para modelos de regressão logística (Analysis Services – Mineração de Dados)
   Este tópico descreve o conteúdo do modelo de mineração que é específico para modelos que usam o algoritmo Regressão Logística da Microsoft. Para obter uma explicação de como interpretar as estatísticas e a estrutura compartilhada por todos os tipos de modelos, e definições gerais dos termos relacionados ao conteúdo do modelo de mineração, consulte [Conteúdo do Modelo de Mineração &#40;Analysis Services – Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  

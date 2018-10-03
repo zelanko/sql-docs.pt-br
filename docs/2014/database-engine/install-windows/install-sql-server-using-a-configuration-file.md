@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 01/20/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a832153a-6775-4bed-83f0-55790766d885
-caps.latest.revision: 28
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9536c674f9bf5733fb6d20109ee03206a50570c4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 55f5fdabcb3c751c0c9d4575e0375d4438fea30b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37231856"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149766"
 ---
 # <a name="install-sql-server-2014-using-a-configuration-file"></a>Instalar o SQL Server 2014 usando um arquivo de configuração
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] A Instalação fornece a capacidade de gerar um arquivo de configuração baseado no padrão do sistema e em entradas de tempo de execução. É possível usar o arquivo de configuração para implantar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em toda a empresa com a mesma configuração. Também é possível padronizar instalações manuais em toda a empresa criando um arquivo em lotes que inicie o Setup.exe.  

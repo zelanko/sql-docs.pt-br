@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - header files [SQL Server Native Client]
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - ODBC applications, header files
 - SQLNCLI, library files
 ms.assetid: 69889a98-7740-4667-aecd-adfc0b37f6f0
-caps.latest.revision: 63
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f0d38f93bb5677ff679ee85b36c9a0cd77377d2a
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 800b3e43129bba36db0836f9a58a3ad1e47b40c1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395414"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48141176"
 ---
 # <a name="using-the-sql-server-native-client-header-and-library-files"></a>Usando os arquivos de biblioteca e de cabeçalho do SQL Server Native Client
   Os arquivos de biblioteca e de cabeçalho do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client são instalados com o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Quando você for desenvolver um aplicativo, é importante copiar e instalar todos os arquivos necessários para o desenvolvimento no seu ambiente de desenvolvimento. Para obter mais informações sobre como instalar e redistribuir [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, consulte [instalar o SQL Server Native Client](installing-sql-server-native-client.md).  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - issue element
 - XML output file format [ssbdiagnose], issue element
 - ssbdiagnose
 ms.assetid: 2246a886-686b-44ca-9771-b155cedad8be
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 39b279a22da8c75573aa0cad2dc50d7f85e46a74
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 54109bc479d06833aeee6af803c39e8ac7873ec7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37175198"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48195176"
 ---
 # <a name="issue-element-ssbdiagnose"></a>Elemento Issue (ssbdiagnose)
   Reporta um problema que foi encontrado pelo utilitário **ssbdiagnose** . O arquivo de saída XML de **ssbdiagnose** tem um elemento Issue por problema reportado.  
@@ -65,7 +62,7 @@ ms.locfileid: "37175198"
 |Relação|Elementos|  
 |------------------|--------------|  
 |**Elemento pai**|[Elemento DiagnosticInformation &#40;ssbdiagnose&#41;](diagnosticinformation-element-ssbdiagnose.md)|  
-|**Elementos filho**|Nenhum|  
+|**Elementos filho**|None|  
   
 ## <a name="example"></a>Exemplo  
  Este elemento reporta um erro 1102 para um banco de dados que não tenha uma chave mestra e o erro foi encontrado durante a análise de uma configuração do [!INCLUDE[ssSB](../../includes/sssb-md.md)] .  

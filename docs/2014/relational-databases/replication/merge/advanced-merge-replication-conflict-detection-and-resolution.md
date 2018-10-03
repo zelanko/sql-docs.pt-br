@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - merge replication conflict resolution [SQL Server replication], about conflict resolution
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - logical record-level conflict tracking [SQL Server replication]
 - conflict resolution [SQL Server replication], merge replication
 ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
-caps.latest.revision: 44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f1e980a6574a9beff16c9b9e00dddc55a026b6ae
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a6d4cfc3de43528d957025455426d8670c59e417
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37172707"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48159876"
 ---
 # <a name="advanced-merge-replication-conflict-detection-and-resolution"></a>Advanced Merge Replication Conflict Detection and Resolution
   Quando o Publicador e o Assinante estão conectados e ocorre a sincronização, o Agente de Mesclagem detecta se há algum conflito. Se forem detectados conflitos, o Agente de Mesclagem usará o resolvedor de conflitos (especificado quando um artigo é adicionado à publicação) para determinar quais dados serão aceitos e propagados para outros sites.  

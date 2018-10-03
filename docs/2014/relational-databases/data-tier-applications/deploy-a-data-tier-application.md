@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
 ms.topic: conceptual
 f1_keywords:
@@ -23,12 +22,12 @@ ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f869a6a88fb13669d6f3196a040272470fecbc8d
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: ad76099b7cc6386e20b8c46f300298a13492f32b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43813502"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104926"
 ---
 # <a name="deploy-a-data-tier-application"></a>Implantar um aplicativo da camada de dados
   Você pode implantar um DAC (aplicativo da camada de dados) de um pacote de DAC para uma instância existente do [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou do [!INCLUDE[ssSDS](../../includes/sssds-md.md)] usando um assistente ou um script do PowerShell. O processo de implantação registra uma instância do DAC armazenando a definição do DAC no banco de dados do sistema **msdb** (**master** em [!INCLUDE[ssSDS](../../includes/sssds-md.md)]), cria um banco de dados e o preenche com todos os objetos de banco de dados definidos no DAC.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - objects [SQL Server]
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - objects [SQL Server], capacity specifications
 - Database Engine [SQL Server], capacity specifications
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
-caps.latest.revision: 76
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 08997fa0dd4fe66b4e3c22fd6447105d11991c29
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a766dcae2ac4e5fdba3fad3390c2a805177e1c17
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37296036"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48077576"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Especificações de capacidade máxima do SQL Server
   As tabelas a seguir especificam os tamanhos e números máximos de vários objetos definidos nos componentes do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para navegar até a tabela de uma tecnologia do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , clique no respectivo link:  
@@ -97,7 +94,7 @@ ms.locfileid: "37296036"
 |REFERENCES por tabela|253|253|  
 |Linhas por tabela|Limitado pelo armazenamento disponível|Limitado pelo armazenamento disponível|  
 |Tabelas por banco de dados<br /><br /> Observação: Os objetos de banco de dados incluem objetos como tabelas, exibições, procedimentos armazenados, funções definidas pelo usuário, gatilhos, regras, padrões e restrições. A soma do número de todos os objetos em um banco de dados não pode exceder 2.147.483.647.|Limitado pelo número de objetos em um banco de dados|Limitado pelo número de objetos em um banco de dados|  
-|Partições por tabela ou índice particionado|1,000<br /><br /> **\*\* Importante \* \* ** criando uma tabela ou índice com mais de 1.000 partições é possível em um sistema de 32 bits, mas não tem suporte.|15,000|  
+|Partições por tabela ou índice particionado|1,000<br /><br /> **\*\* Importante \* \***  criando uma tabela ou índice com mais de 1.000 partições é possível em um sistema de 32 bits, mas não tem suporte.|15,000|  
 |Estatísticas em colunas não indexadas|30,000|30,000|  
 |Tabelas por instrução SELECT|Limitado apenas pelos recursos disponíveis|Limitado apenas pelos recursos disponíveis|  
 |Gatilhos por tabela<br /><br /> Observação: Os objetos de banco de dados incluem objetos como tabelas, exibições, procedimentos armazenados, funções definidas pelo usuário, gatilhos, regras, padrões e restrições. A soma do número de todos os objetos em um banco de dados não pode exceder 2.147.483.647.|Limitado pelo número de objetos em um banco de dados|Limitado pelo número de objetos em um banco de dados|  

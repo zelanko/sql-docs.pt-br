@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 28ff17dc-172b-4ac4-853f-990b5dc02fd1
-caps.latest.revision: 8
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 9f9dc86071bbed98e835b9b7849c4a1fd4c58f43
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d55a1a8bef5e3d4a74aa2bb09c27e3f7c2a8dc82
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243106"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48066795"
 ---
 # <a name="manage-full-text-indexes"></a>Gerenciar índices de texto completo
      
@@ -40,7 +37,7 @@ ms.locfileid: "37243106"
     |----------|-----------------|  
     |**Geral**|Exibe as propriedades básicas do índice de texto completo. Isso inclui várias propriedades modificáveis e uma série de propriedades inalteráveis, como o nome do banco de dados, o nome da tabela e o nome da coluna de chave de texto completo. As propriedades modificáveis são:<br /><br /> **Lista de palavras irrelevantes de índice de texto completo**<br /><br /> **Indexação de texto completo habilitada**<br /><br /> **Controle de alterações**<br /><br /> **Lista de propriedades de pesquisa**<br /><br /> <br /><br /> Para obter mais informações, consulte [propriedades do índice de texto completo &#40;página geral&#41;](full-text-index-properties-general-page.md).|  
     |**Colunas**|Exibe as colunas da tabela que estão disponíveis para indexação de texto completo. A(s) coluna(s) selecionada(s) tem(têm) índice de texto completo. Você pode selecionar tantas colunas disponíveis quantas desejar para incluí-las no índice de texto completo. Para obter mais informações, consulte [propriedades do índice de texto completo &#40;página de colunas&#41;](../../2014/database-engine/full-text-index-properties-columns-page.md).|  
-    |**Agendas**|Use esta página para criar ou gerenciar agendas para executar um trabalho do SQL Server Agent que inicia uma população incremental de tabela para as populações de índice de texto completo. Para obter mais informações, veja [Popular índices de texto completo](../relational-databases/indexes/indexes.md).<br /><br /> **\*\* Importante \* \* ** depois que você sair do **propriedades do índice de texto completo** caixa de diálogo, qualquer agenda recém-criada será associada um trabalho do SQL Server Agent (Iniciar população Incremental da tabela no *database_name*.* table_name*).|  
+    |**Agendas**|Use esta página para criar ou gerenciar agendas para executar um trabalho do SQL Server Agent que inicia uma população incremental de tabela para as populações de índice de texto completo. Para obter mais informações, veja [Popular índices de texto completo](../relational-databases/indexes/indexes.md).<br /><br /> **\*\* Importante \* \***  depois que você sair do **propriedades do índice de texto completo** caixa de diálogo, qualquer agenda recém-criada será associada um trabalho do SQL Server Agent (Iniciar população Incremental da tabela no *database_name*. *table_name*).|  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)] para salvar quaisquer alterações e sair da caixa de diálogo **Propriedades do índice de texto completo**.  
   

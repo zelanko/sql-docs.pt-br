@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Table element [DTA]
 ms.assetid: a59e8319-05d1-47f3-af39-7d970ab8e7dc
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f58288d90c1a3158f4757856b51b7374ee07f167
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c7d85b45ff292d4262393542909566b233de882d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37187753"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48074407"
 ---
 # <a name="table-element-for-schema-dta"></a>Elemento de tabela para esquema (DTA)
   Especifica a tabela para ajuste.  
@@ -58,7 +55,7 @@ ms.locfileid: "37187753"
 |**Elemento pai**|[Elemento de esquema para o banco de dados &#40;DTA&#41;](schema-element-for-database-dta.md)|  
 |**Elementos filho**|[Nomeie o elemento para a tabela &#40;DTA&#41;](name-element-for-table-dta.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Se você não especificar um elemento `Table`, o Orientador de Otimização do Mecanismo de Banco de Dados assumirá que todas as tabelas no banco de dados especificado podem ser ajustadas.  
   
 ## <a name="example"></a>Exemplo  

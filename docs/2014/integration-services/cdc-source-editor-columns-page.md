@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdcsource.columns.f1
 ms.assetid: bcf3030e-98d8-4445-967c-33c3f8ecb4fc
-caps.latest.revision: 9
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 12fc9ddc38caa6525138f630dfb51a74c65c38b3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4369ab3606310e38a4bf6927f6abfae10fdc0ffb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37306076"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48187876"
 ---
 # <a name="cdc-source-editor-columns-page"></a>Editor de Origem CDC (página Colunas)
   Use a página **Colunas** da caixa de diálogo do **Editor de Origem CDC** para mapear uma coluna de saída em cada coluna externa (origem).  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - DIMENSION PROPERTIES keyword
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - member properties [MDX]
 - members [MDX], properties
 ms.assetid: 26b5ad08-3799-4a5e-89f3-dca25e637d45
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c2918188146fd84761bd23340ec5b76b48685eab
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e650ee07183123f5c90e24129282820825cee652
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37259532"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48075537"
 ---
 # <a name="using-member-properties-mdx"></a>Usando propriedades do membro (MDX)
   As propriedades do membro incluem informações básicas sobre cada membro de cada tupla. Entre as informações básicas estão nome do membro, nível pai, número de filhos, e assim por diante. As propriedades do membro estão disponíveis para todos os membros de um determinado nível. Em termos de organização, elas são tratadas como dados organizados dimensionalmente, armazenados em uma única dimensão.  

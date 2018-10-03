@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - firewall systems [SQL Server]
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - file system security [SQL Server]
 - installing SQL Server, security
 ms.assetid: cf96155f-30a8-48b7-8d6b-24ce90dafdc7
-caps.latest.revision: 48
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f8d17d471020a4b6960307c6718caf4624579da8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c486dfe6e1d41d18274bb5825c3ed63dc4598a0b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37166097"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093586"
 ---
 # <a name="security-considerations-for-a-sql-server-installation"></a>Considerações sobre segurança para uma instalação do SQL Server
   A segurança é importante para todo produto e todo negócio. Seguindo práticas recomendadas simples, você pode evitar muitas vulnerabilidades de segurança. Este tópico discute algumas práticas recomendadas de segurança que você deve considerar antes de instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e depois de instalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Está incluída orientação de segurança para recursos específicos nos tópicos de referência para esses recursos.  

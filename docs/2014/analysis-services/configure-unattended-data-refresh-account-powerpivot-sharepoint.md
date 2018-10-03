@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 81401eac-c619-4fad-ad3e-599e7a6f8493
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: beb9bc2a3dfcd20a12ad387b8192ff1694d77f8d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5160b7dc6c6c4082551144ef459a989e414d83b2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37297526"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48130116"
 ---
 # <a name="configure-the-powerpivot-unattended-data-refresh-account-powerpivot-for-sharepoint"></a>Configurar a conta autônoma de atualização de dados PowerPivot (PowerPivot para SharePoint)
   A conta autônoma de atualização de dados PowerPivot é uma conta designada para executar trabalhos de atualização de dados PowerPivot em um farm do SharePoint. Ao configurá-la, você habilita o **Use a atualização de dados configurada pelo administrador de conta** opção em uma página de agendamento de atualização de dados (veja abaixo). Autores de pasta de trabalho que agendarem a atualização de dados poderão escolher essa opção se quiserem usar a conta autônoma de atualização de dados PowerPivot para executar um trabalho de atualização de dados. Para obter mais informações sobre como exibir as opções de credenciais em uma agenda de atualização de dados, consulte [agendar uma atualização de dados &#40;PowerPivot para SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md).  

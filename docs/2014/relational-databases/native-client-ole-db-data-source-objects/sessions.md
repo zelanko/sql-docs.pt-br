@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - sessions [OLE DB]
 - SQL Server Native Client OLE DB provider, sessions
 ms.assetid: 3a980816-675c-4fba-acc9-429297d85bbd
-caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 060a951bd7fa594e2d16c05f8698d8245174fd2c
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: f594ace96fc34a77adca244e79c55551f0ddb8d4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37415685"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48138246"
 ---
 # <a name="sessions"></a>Sessões
   Um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sessão do provedor OLE DB do Native Client representa uma única conexão a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -183,10 +180,10 @@ EXIT:
   
  Conectando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos de sessão do provedor OLE DB do Native Client a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode gerar uma sobrecarga significativa para aplicativos que criam e liberam objetos de sessão. A sobrecarga pode ser minimizada com o gerenciamento [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eficaz dos objetos de sessão do provedor OLE DB do Native Client. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Aplicativos nativos de provedor de dados OLE DB podem manter o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conexão de um objeto de sessão ativo, mantendo uma referência pelo menos uma interface do objeto.  
   
- Por exemplo, manter um pool de referências a objeto de criação de comando mantém ativas as conexões a esses objetos de sessão no pool. Como objetos de sessão são necessários, o código de manutenção do pool transmite válida **IDBCreateCommand** ponteiro de interface para o método de aplicativo que solicita a sessão. Quando o método do aplicativo não necessita mais da sessão, o método retorna o ponteiro de interface para o código de manutenção do pool em vez de liberar a referência do aplicativo ao objeto de criação de comando.  
+ Por exemplo, manter um pool de referências a objeto de criação de comando mantém ativas as conexões a esses objetos de sessão no pool. Como os objetos de sessão são necessários, o código de manutenção do pool passa um ponteiro de interface **IDBCreateCommand** válido para o método de aplicativo que solicita a sessão. Quando o método do aplicativo não necessita mais da sessão, o método retorna o ponteiro de interface para o código de manutenção do pool em vez de liberar a referência do aplicativo ao objeto de criação de comando.  
   
 > [!NOTE]  
->  No exemplo anterior, o **IDBCreateCommand** interface é usada porque o **ICommand** interface implementa o **GetDBSession** método, o único método no comando ou o escopo de conjunto de linhas que permite que um objeto determinar a sessão na qual ele foi criado. Portanto, um objeto de comando, e somente um objeto de comando, permite que um aplicativo recupere um ponteiro de objeto de fonte de dados a partir do qual outras sessões são criadas.  
+>  No exemplo anterior, a interface **IDBCreateCommand** é usada porque a interface **ICommand** implementa o método **GetDBSession**, o único método no escopo do comando ou do conjunto de linhas que permite que um objeto determine a sessão na qual ele foi criado. Portanto, um objeto de comando, e somente um objeto de comando, permite que um aplicativo recupere um ponteiro de objeto de fonte de dados a partir do qual outras sessões são criadas.  
   
 ## <a name="see-also"></a>Consulte também  
  [Objetos de fonte de dados &#40;OLE DB&#41;](data-source-objects-ole-db.md)  

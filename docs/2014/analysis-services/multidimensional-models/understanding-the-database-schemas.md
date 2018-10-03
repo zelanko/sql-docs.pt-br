@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Schema Generation Wizard, database schema
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - staging area schema options [Analysis Services]
 - denormalized schemas
 ms.assetid: 51e411f9-ee3f-4b92-9833-c2bce8c6b752
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ef75cf2773781f94bd02a26c5c94958b9f4dfe3f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 554f226c3b6ca1fa3a753947b08a3fea3d6946c6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37282242"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48133418"
 ---
 # <a name="understanding-the-database-schemas"></a>Entendendo os esquemas de banco de dados
   O Assistente de Geração de Esquema gera um esquema relacional não normalizado para o banco de dados da área de assunto com base nas dimensões e nos grupos de medidas do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. O assistente gera uma tabela relacional para cada dimensão para armazenar dados da dimensão, chamada tabela de dimensões, e uma tabela relacional para cada grupo de medidas para armazenar dados de fatos, chamada tabela de fatos. O assistente ignora dimensões vinculadas, grupos de medidas vinculados e dimensões de tempo de servidor ao gerar essas tabelas relacionais.  

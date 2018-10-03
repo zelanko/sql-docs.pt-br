@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: data-movement
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - bulk importing [SQL Server], null values
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - OPENROWSET function, bulk importing
 - data formats [SQL Server], default values
 ms.assetid: 6b91d762-337b-4345-a159-88abb3e64a81
-caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f99b040dc2a2caa0b7df7847760e978fef010fc4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4753e1097dee300d4d806c42b71954e6e557ed12
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37258772"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48186696"
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>Manter valores nulos ou use os valores padrão durante a importação em massa (SQL Server)
   Por padrão, quando os dados são importados para uma tabela, o comando **bcp** e a instrução BULK INSERT observam os padrões definidos para as colunas na tabela. Por exemplo, se houver um campo nulo em um arquivo de dados, o valor padrão para a coluna será carregado no campo nulo. O comando **bcp** e a instrução BULK INSERT permitem que você especifique a retenção de campos nulos.  

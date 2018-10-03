@@ -4,28 +4,25 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - control flow [Integration Services], elements
 - SSIS control flow elements
 - SQL Server Integration Services control flow elements
 ms.assetid: 0cc042a9-1a7f-49ed-9f47-091653d5ef6e
-caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 10b125c2dccff68b95ce5bd7578cb052d83d5311
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 300dbf1bc32d6113349eab5fbc1fad4511a92d4c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37295126"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48092816"
 ---
-# <a name="control-flow"></a>Fluxo de Controle
+# <a name="control-flow"></a>Fluxo de controle
   Um pacote consiste em um fluxo de controle e, opcionalmente, em um ou mais fluxos de dados. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] O [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fornece três tipos diferentes de elementos de fluxo de controle: contêineres, que fornecem estruturas em pacotes, tarefas, que oferecem funcionalidade e restrições de precedência, que conectam os executáveis, os contêineres e as tarefas em um fluxo de controle ordenado.  
   
  Para obter mais informações, consulte [Restrições de precedência](precedence-constraints.md), [Contêineres do Integration Services](integration-services-containers.md)e [Tarefas do Integration Services](integration-services-tasks.md).  

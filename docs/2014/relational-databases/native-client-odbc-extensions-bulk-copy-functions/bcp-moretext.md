@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - bcp_moretext
@@ -17,16 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_moretext function
 ms.assetid: 23e98015-a8e4-4434-9b3f-9c7350cf965f
-caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 30ddae53cc452796de0617bb5718d04156dcda41
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 83142e83ba04328ddf025e0a2f16ff18ad947075
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37430175"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48137496"
 ---
 # <a name="bcpmoretext"></a>bcp_moretext
   Envia parte de um valor de tipo de dados longo, de tamanho variável, para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -61,7 +58,7 @@ pData
 ## <a name="returns"></a>Retorna  
  SUCCEED ou FAIL.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Essa função pode ser usada em conjunto com [bcp_bind](bcp-bind.md) e [bcp_sendrow](bcp-sendrow.md) longos e copiar os valores de dados de comprimento variável para o SQL Server em um número de partes menores. **bcp_moretext** pode ser usado com colunas que têm os seguintes tipos de dados do SQL Server: `text`, `ntext`, `image`, `varchar(max)`, `nvarchar(max)`, `varbinary(max)`, tipo definido pelo usuário (UDT) e XML. **bcp_moretext** não não conversões de dados de suporte, os dados fornecidos devem corresponder ao tipo de dados da coluna de destino.  
   
  Se **bcp_bind** for chamado com um nonNULL *pData* parâmetro para tipos de dados que são suportados pelo **bcp_moretext**, `bcp_sendrow` envia o valor de inteiro de dados, independentemente de comprimento. Se, no entanto, **bcp_bind** tem um valor nulo *pData* parâmetro para tipos de dados com suporte **bcp_moretext** pode ser usado para copiar dados logo após um retorno bem-sucedido de `bcp_sendrow` que indica se todas as colunas associadas aos dados presentes foram processadas.  

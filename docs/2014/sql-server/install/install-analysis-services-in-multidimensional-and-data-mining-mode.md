@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - installing Analysis Services, about installing Analysis Services
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - Analysis Services, installing
 - SQL Server Analysis Services, installing
 ms.assetid: 8a1f33e8-2bd6-4fb8-bd46-c86f2a067f60
-caps.latest.revision: 47
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: d90380f1e908c3b0cf1226f94de4a404ae5e65e5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 92460328b9d85ab5818679b12639618ffe2b0a14
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37222576"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149896"
 ---
 # <a name="install-analysis-services-in-multidimensional-and-data-mining-mode"></a>Instalar o Analysis Services em modo multidimensional e de mineração de dados
   O [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece funcionalidade de mineração de dados e OLAP (processamento analítico online) para aplicativos de business intelligence. Nesta versão, suporte para bancos de dados OLAP e modelos de mineração de dados está disponível quando você instala [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] na *modo Multidimensional*. O modo multidimensional é um dos três modos do servidor em que o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] executa. Esse é o modo padrão. Se você instalar o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usando valores padrão, obterá uma instância que executa bancos de dados multidimensionais e modelos de mineração de dados.  

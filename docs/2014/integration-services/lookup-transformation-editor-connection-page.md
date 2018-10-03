@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.lookuptransformation.referencetable.f1
 helpviewer_keywords:
 - Lookup Transformation Editor
 ms.assetid: e90d6b69-5a26-43c5-8433-5c3c9588e08c
-caps.latest.revision: 42
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3c3236fe156e103269995a0707be17602af0a5ce
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9ecacc7fa89256cf5efb42ee792a08251a9af013
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37318906"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48063706"
 ---
 # <a name="lookup-transformation-editor-connection-page"></a>Editor da Transformação Pesquisa (página Conexão)
   Use a página **Conexão** da caixa de diálogo **Editor da Transformação Pesquisa** para selecionar um gerenciador de conexões. Se você selecionar um gerenciador de conexões OLE DB, também poderá selecionar uma consulta, tabela ou exibição para gerar o conjunto de dados de referência.  

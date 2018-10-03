@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.adddatabasewizard.selectdatabases.f1
 - sql12.swb.newagwizard.selectdatabases.f1
 ms.assetid: 929c5e15-d087-438d-b1f2-aa97c5f8bff8
-caps.latest.revision: 12
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dc83c051c75887ee58230e2a1276b8eb408c6830
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a2c6cdeb27dfd1768c9a494497f5b2b1e0b7350a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37320926"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149576"
 ---
 # <a name="select-databases-page-new-availability-group-wizard-add-database-wizard"></a>Página Selecionar bancos de dados (novo grupo de disponibilidade / Assistente para adicionar Assistente de banco de dados)
   Este tópico descreve as opções da página **Especificar Bancos de Dados** . Este tópico aplica-se ao [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] e ao [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  

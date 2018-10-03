@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.cubeproperties.f1
 ms.assetid: 97e367f9-f95a-4163-add1-c74fd22db249
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9ad93386960630ffe1a49b473304cce80e580e61
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 404dd6cd6c47f89b3a8e12acd6048aecae0c7098
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37317458"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153496"
 ---
 # <a name="cube-or-model-properties-dialog-box-ssas"></a>Caixa de diálogo Propriedades do Cubo ou Modelo (SSAS)
   Use a caixa de diálogo **Propriedades do Banco de Dados** no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para definir as propriedades de um banco de dados de cubo ou modelo. Você pode exibir a caixa de diálogo clicando com o botão direito do mouse em um cubo ou em modelo no **Pesquisador de Objetos** e selecionando **Propriedades**.  

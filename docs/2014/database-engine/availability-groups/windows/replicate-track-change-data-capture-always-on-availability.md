@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - change tracking [SQL Server], AlwaysOn Availability Groups
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
-caps.latest.revision: 31
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1519ac814a1f8a55333af5050eab8f5fcbc1b022
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 50328c814b23f9df33a0524bae1758afecd3f5f8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37204022"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48091256"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>Replicação, controle de alterações, Change Data Capture e grupos de disponibilidade AlwaysOn (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Há suporte para a replicação, a CDC (captura de dados de alteração) e o CT (controle de alterações) no [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] fornece alta disponibilidade e recursos adicionais de recuperação de banco de dados.  

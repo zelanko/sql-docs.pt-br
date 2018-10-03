@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e5e065ad-c688-4c2c-8c82-7f3038e04915
-caps.latest.revision: 5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2a272b1a86de667087c8a2a583d0fee6fd5584f8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2ad62600c6ae48f156049cdae6078df37de0b330
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37265752"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48090686"
 ---
 # <a name="use-drillthrough-from-the-model-viewers"></a>Usar detalhamento dos visualizadores do modelo
   Dependendo do tipo de modelo, você pode usar o detalhamento dos visualizadores de procura na guia **Visualizador de Modelo de Mineração** de Designer de Mineração de Dados para explorar os casos usados no modelo de mineração ou consultar colunas adicionais na estrutura de mineração. Embora muitos tipos de modelos não ofereçam suporte ao detalhamento porque os padrões no modelo não podem ser vinculados diretamente a casos específicos, os tipos de modelos a seguir oferecem suporte ao detalhamento.  

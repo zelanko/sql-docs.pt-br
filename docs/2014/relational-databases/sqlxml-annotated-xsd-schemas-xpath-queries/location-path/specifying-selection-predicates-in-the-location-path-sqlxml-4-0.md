@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - XPath queries [SQLXML], predicates
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - filtering [SQLXML]
 - location path for XPath query
 ms.assetid: dbef4cf4-a89b-4d7e-b72b-4062f7b29a80
-caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 19cb37e252bad6f09640d409e67178690bcdaba0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a491b824881f9c308eed30e797e492561c40ad73
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37238666"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48144216"
 ---
 # <a name="specifying-selection-predicates-in-the-location-path-sqlxml-40"></a>Especificando predicados de seleção no caminho do local (SQLXML 4.0)
   Um predicado filtra um conjunto de nós com respeito a um eixo (semelhantemente a uma cláusula WHERE em uma instrução SELECT). O predicado é especificado entre colchetes. Para cada nó no conjunto de nós a ser filtrado, a expressão de predicado é avaliada com esse nó como o nó de contexto, com o número de nós no conjunto de nós como o tamanho do contexto. Se a expressão de predicado for avaliada como TRUE para esse nó, o nó será incluído no conjunto de nós resultante.  

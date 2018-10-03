@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - PriorityRatio property
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - MaxThreads property
 - Concurrency property
 ms.assetid: e2697bb6-6d3f-4621-b9fd-575ac39c2185
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 92c1e8d4a1014e7af89e056fe43244a51fb9d9a9
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: b4b1b53558f27c3d86046c2ab71639e6d487ebc5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394178"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116916"
 ---
 # <a name="thread-pool-properties"></a>Propriedades de pool de threads
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa multi-threading para várias operações, melhorando o desempenho global do servidor ao executar vários trabalhos em paralelo. Para gerenciar threads com mais eficiência, o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa pools de threads para pré-alocar threads e facilitar a disponibilidade do thread para o próximo trabalho.  

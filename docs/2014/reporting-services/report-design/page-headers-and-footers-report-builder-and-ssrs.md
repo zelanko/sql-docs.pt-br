@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.pagefooter.fill.f1
@@ -23,16 +21,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.pagefooter.general.f1
 - "10124"
 ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
-caps.latest.revision: 5
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 863a4415bb75b5a5cd4fe017de4ebeca975e32a3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 18228ba7240b2d26462545463d8cf5fdf8636a5a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328884"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48098436"
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>Cabeçalhos e rodapés de página (Construtor de Relatórios e SSRS)
   Um relatório pode conter um cabeçalho e um rodapé nas partes superior e inferior de cada página, respectivamente. Os cabeçalhos e rodapés podem conter texto estático, imagens, linhas, retângulos, bordas, cor e imagens de plano de fundo e expressões. Expressões incluem referências a campos de conjunto de dados de relatórios com exatamente um conjunto de dados e chamadas de função de agregação que incluem o conjunto de dados como um escopo.  
@@ -128,7 +125,7 @@ ms.locfileid: "37328884"
   
  Uma contagem de páginas mais precisa baseia-se em páginas lógicas que se correlacionam às dimensões de uma página impressa. No Excel, o rodapé de página usa números de página lógicos automaticamente. Para posicionar a contagem de página lógica no cabeçalho da página, defina as configurações de informações de dispositivo para usar cabeçalhos simples. Lembre-se de que, ao usar cabeçalhos simples, você elimina a capacidade de lidar com layout de relatório complexo na região de cabeçalho.  
   
- Para obter mais informações, consulte [Exporting to Microsoft Excel &#40;Report Builder and SSRS&#41;](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
+ Para obter mais informações, consulte [Exportar para Microsoft Excel &#40;Construtor de Relatórios e SSRS&#41;](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Inserir uma imagem em um relatório &#40;relatórios e SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - online index operations
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - temporary mapping index [SQL Server]
 - index temporary mappings [SQL Server]
 ms.assetid: eef0c9d1-790d-46e4-a758-d0bf6742e6ae
-caps.latest.revision: 27
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 13eab1a47eddaa94204cdc699c1f34a3e5d463ee
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2d9a0eb261f40773df48d01a3e6e32214174a5b0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37270922"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48102636"
 ---
 # <a name="how-online-index-operations-work"></a>Como funcionam as operações de índice online
   Esse tópico define as estruturas que existem durante uma operação de índice online e mostra as atividades associadas a elas.  

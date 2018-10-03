@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - members [Analysis Services], custom
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - MDX [Analysis Services], custom rollup formulas
 - custom member formulas [Analysis Services]
 ms.assetid: 258304e2-d900-4013-97e3-871f51dfdce2
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 09f50cbfab0b4d5554d33e0a8526d14a22909381
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 83c864fc3af588b2dbf78346af1ddf1cd8430a01
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37183433"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48186016"
 ---
 # <a name="define-custom-member-formulas"></a>Definir fórmulas de membro personalizado
   É possível definir uma expressão multidimensional (MDX), chamada fórmula de membro personalizado, para fornecer os valores aos membros de um atributo especificado. Uma coluna em uma tabela da exibição da fonte de dados fornece, para cada membro de um atributo, a expressão usada para fornecer o valor para esse membro.  

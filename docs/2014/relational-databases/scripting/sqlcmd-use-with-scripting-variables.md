@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - sqlcmd utility, scripts
 - setvar command
 ms.assetid: 793495ca-cfc9-498d-8276-c44a5d09a92c
-caps.latest.revision: 45
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 84a4f389b7f72d23e072410cb6862fdcb780044d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 85c701c583705a2d2c0e7438832a5074e60c337a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300016"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48113776"
 ---
 # <a name="use-sqlcmd-with-scripting-variables"></a>Usar sqlcmd com variáveis de script
   As variáveis usadas em scripts normalmente são chamadas de variáveis de script. As variáveis de script habilitam um script ser usado em vários cenários. Por exemplo, se você desejar executar um script em vários servidores, em vez de modificar o script para cada servidor, pode usar uma variável de script para o nome do servidor. Alterando o nome do servidor fornecido para a variável de script, o mesmo script pode ser executado em diferentes servidores.  

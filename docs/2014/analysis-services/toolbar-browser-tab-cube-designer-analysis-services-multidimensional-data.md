@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a1c6272d-e514-456b-9995-b73fec0112a2
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d0735af06261d606888fe04d45e968b63f5d6403
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 050be457b1b7915e4354e8a0edf2fe79fabf8d67
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300916"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48126466"
 ---
 # <a name="toolbar-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Barra de Ferramentas (guia Navegador, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use os recursos na **Barra de Ferramentas** no Designer de Cubo para executar operações comuns ao criar ou procurar um cubo ou seu objeto, ou ao criar uma consulta MDX. As operações comuns ao tempo de design e exibição de consulta incluem a definição de o contexto do usuário, o processamento dos objetos e a definição do idioma padrão.  

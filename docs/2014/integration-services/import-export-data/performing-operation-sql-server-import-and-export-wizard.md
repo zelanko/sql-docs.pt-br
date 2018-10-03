@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.performingoperation.f1
 ms.assetid: 83259509-71d6-4a64-a7f2-4e9603b30bd4
-caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a44dd79a67fe38735d54d1d91a9a37fdeb32e0e6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 954fcc8806a290ffc171bde9db4af883c30ec9a4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37209616"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48120096"
 ---
 # <a name="performing-operation-sql-server-import-and-export-wizard"></a>Executando Operação (Assistente de Importação e Exportação do SQL Server)
   Use o **realizando operação** página para exibir o progresso e os resultados da operação de importação/exportação e para interromper a operação, se necessário.  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.passwordexpired.f1
 helpviewer_keywords:
 - Password Expired dialog box
 ms.assetid: 9831b194-9ad5-47b0-8009-59c7aef4319b
-caps.latest.revision: 22
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 982795a23e2fc45a3c15feaa2d81a433f0c281bd
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 70da82ab5d9ecb37ca08f3cf79801f209f25d86e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43819092"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48068916"
 ---
 # <a name="password-expired"></a>Senha Expirada
   Aparece quando você se conecta a um servidor com o [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] usando autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e a senha fornecida está correta, mas já expirou. Também aparece quando você se conecta a um servidor com uma nova conta que foi criada usando a opção **O usuário deve alterar a senha no próximo logon** . Use a caixa de diálogo **Senha Expirada** para alterar a senha para esse logon de autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  

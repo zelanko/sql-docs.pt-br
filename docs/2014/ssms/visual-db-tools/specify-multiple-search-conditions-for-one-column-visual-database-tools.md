@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - search criteria [SQL Server], multiple conditions
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - OR operator
 - AND, Criteria pane
 ms.assetid: 2c006e36-56b1-4992-89b4-c6c0b19808f3
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 12ab4a9ab271d7a67e79286adf3e7310545ad283
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 6d5eba192847c1778002c69d9afecb93efd5209c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43816642"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48170836"
 ---
 # <a name="specify-multiple-search-conditions-for-one-column-visual-database-tools"></a>Especificar várias condições de pesquisa para uma coluna (Visual Database Tools)
   Em algumas instâncias, você pode querer aplicar vários critérios de pesquisa à mesma coluna de dados. Por exemplo, você pode querer:  

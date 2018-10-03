@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - bcp_colfmt
@@ -17,16 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_colfmt function
 ms.assetid: 5c3b6299-80c7-4e84-8e69-4ff33009548e
-caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ad117fe5580267db103f1e6a44ec6798bf87c023
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 4c583ffad2267a82c39d4ab6c7cd71a1852c7cb2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37423575"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089276"
 ---
 # <a name="bcpcolfmt"></a>bcp_colfmt
   Especifica o formato de origem ou de destino dos dados em um arquivo de usuário. Quando usado como um formato de origem **bcp_colfmt** Especifica o formato de um arquivo de dados existente usado como a fonte de dados em uma cópia em massa para uma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabela. Quando usado como formato de destino, o arquivo de dados é criado usando os formatos de coluna especificados com **bcp_colfmt**.  
@@ -129,7 +126,7 @@ idxServerCol
 ## <a name="returns"></a>Retorna  
  SUCCEED ou FAIL.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A função **bcp_colfmt** permite especificar o formato do arquivo de usuário para cópias em massa. Para cópia em massa, um formato contém as seguintes partes:  
   
 -   Um mapeamento de colunas do arquivo de usuário para colunas de banco de dados.  

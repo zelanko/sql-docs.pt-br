@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.scheduleproperties.general.f1
 ms.assetid: 20e43966-6caf-4972-a2e2-0d9131ac8f51
-caps.latest.revision: 33
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 56a6a698b941369d80bed200d64e236eb87ecfa6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a483cf1df89da6f4b28de5e86986491e0ce05b1d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304996"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48125646"
 ---
 # <a name="schedule-properties-general-page"></a>Propriedades da Agenda (página Geral)
   Use essa página para exibir ou modificar uma agenda compartilhada. As agendas compartilhadas podem ser usadas no lugar de agendas específicas de relatório ou de assinaturas. Alterações à agenda são aplicadas depois que você salva a agenda. A edição de uma agenda não tem nenhum efeito em trabalhos atualmente em andamento. Se você editar uma agenda enquanto ela estiver sendo usada, todos os relatórios e assinaturas atualmente em processamento disparados daquela agenda terão permissão para serem concluídos.  

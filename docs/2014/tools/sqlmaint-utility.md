@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database maintenance plans [SQL Server]
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - maintenance plans [SQL Server], command prompt
 - backing up [SQL Server], sqlmaint utility
 ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
-caps.latest.revision: 45
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 94181b7b45ee1e1258678bbc4bc3357ebecb0bc5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1e8da941588b466aeaf690214dfee836718569a1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37236117"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48110056"
 ---
 # <a name="sqlmaint-utility"></a>utilitário sqlmaint
   O utilitário**sqlmaint** executa um conjunto especificado de operações de manutenção em um ou mais bancos de dados. Use o **sqlmaint** para executar verificações DBCC, fazer backup de um banco de dados e do respectivo log de transações, atualizar estatísticas e recompilar índices. Todas as atividades de manutenção de banco de dados geram um relatório que pode ser enviado a um arquivo de texto designado, arquivo HTML ou conta de email. O**sqlmaint** executa planos de manutenção de bancos de dados criados com versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para executar planos de manutenção do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no prompt de comando, use o [Utilitário dtexec](../integration-services/packages/dtexec-utility.md).  
@@ -231,7 +228,7 @@ dbname_log_yyyymmddhhmm.BAK
   
  Se apenas o *number* for especificado, a parte de data padrão será **weeks**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O utilitário **sqlmaint** executa operações de manutenção em um ou mais bancos de dados. Se **-D** for especificado, as operações especificadas nas demais opções serão executadas apenas no banco de dados especificado. Se **-PlanName** ou **-PlanID** forem especificados, a única informação que **sqlmaint** recuperará do plano de manutenção especificado será a lista de bancos de dados no plano. Todas as operações especificadas nos demais parâmetros do **sqlmaint** são aplicadas a cada banco de dados na lista obtida do plano. O utilitário **sqlmaint** não aplica atividades de manutenção definidas no próprio plano.  
   
  O utilitário **sqlmaint** retorna 0 se for executado com êxito ou 1 se apresentar falha. A falha é informada:  

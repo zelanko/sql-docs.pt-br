@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.failoverwizard.progress.f1
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], wizards
 - Availability Groups [SQL Server], configuring
 ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
-caps.latest.revision: 25
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4e760ac9e1c806ef742c84f0725b94c204dc8345
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 62fb2107b74518afbf55b64057aec63c4e2eec36
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37314526"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48206216"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>Usar o Assistente para Grupo de Disponibilidade de Failover (SQL Server Management Studio)
   Este tópico descreve como fazer um failover manual planejado ou um failover manual forçado (failover forçado) em um grupo de disponibilidade AlwaysOn usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou o PowerShell no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Um grupo de disponibilidade faz failover no nível de uma réplica de disponibilidade. Se você fizer failover em uma réplica secundária no estado SYNCHRONIZED, o assistente fará um failover manual planejado (sem perda de dados). Se você fizer failover em uma réplica secundária no estado UNSYNCHRONIZED ou NOT SYNCHRONIZING, o assistente executará um failover manual forçado, também conhecido como *failover forçado* (com possível perda de dados). As duas formas de failover manual fazem a transição da réplica secundária à qual você está conectado para a função primária. Um failover manual planejado faz a transição da réplica primária antiga para a função secundária. Após um failover forçado, quando a réplica primária antiga ficar online, ela fará a transição para a função secundária.  

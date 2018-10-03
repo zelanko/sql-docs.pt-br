@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - installing Analysis Services, backward compatibility
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - SSAS, backward compatibility
 - SQL Server Analysis Services, backward compatibility
 ms.assetid: 618b6c3a-e20d-47a9-b2c6-6d848dfba05a
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ed422c1db365ffecbdd405e400c521605d1cf9cc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 633bc51ed0ce4c25e30c2fd78ee7845c075cd094
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37261942"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48177026"
 ---
 # <a name="analysis-services-backward-compatibility"></a>Analysis Services Backward Compatibility
   Os tópicos desta seção descrevem as alterações no comportamento entre versões do  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  

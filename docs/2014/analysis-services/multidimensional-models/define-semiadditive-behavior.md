@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - semiadditive
 - Business Intelligence enhancements [Analysis Services], semiadditive behavior
 - measures [Analysis Services], semiadditive
 ms.assetid: b25726bc-728b-4601-ad87-9015c39dc615
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5a96921b37affe35fcb4344a66ef36aaf26cadeb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 84b5d71a14c08c47d630ed834ef0a6e436b52edd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37265412"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48190266"
 ---
 # <a name="define-semiadditive-behavior"></a>Definir um comportamento semiaditivo
   Medidas semiaditivas, que não agregam uniformemente todas as dimensões, são muito comuns em muitos cenários empresariais. Todo cubo que se baseia em instantâneos de balanços, com o decorrer do tempo, apresenta esse problema. Você encontra esses instantâneos em aplicativos que cuidam de títulos, saldos de contas, orçamentos, recursos humanos, apólices de seguros e sinistros e em vários outros domínios empresariais.  
@@ -52,7 +49,7 @@ ms.locfileid: "37265412"
   
 -   Primeiro Filho Não Vazio  
   
--   Nenhum  
+-   None  
   
  Essa opção não altera as medidas com uma função de agregação regular: `Sum`, `Min`, `Max`, `Count`, ou `Distinct``Count`.  
   
@@ -82,7 +79,7 @@ ms.locfileid: "37265412"
 |LastNonEmpty|O valor do membro é avaliado como o valor de seu último filho juntamente com a dimensão que contém dados.|  
 |Max|A função de agregação máxima é aplicada.|  
 |Mín|A função de agregação mínima é aplicada.|  
-|Nenhum|Nenhuma agregação é aplicada.|  
+|None|Nenhuma agregação é aplicada.|  
 |SUM|A função de soma padrão é aplicada.|  
   
  Qualquer comportamento semiaditivo existente será substituído quando você concluir o assistente.  

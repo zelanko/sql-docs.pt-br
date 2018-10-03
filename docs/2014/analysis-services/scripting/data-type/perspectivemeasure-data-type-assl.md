@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - PerspectiveMeasure Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - PerspectiveMeasure data type
 ms.assetid: 8622ad67-3dcf-48e2-ad4a-c5f0a086eec3
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 47d8578d2d41d5362b43a514dcb6d20df0999828
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e5f35c50e7f7a54506c5fb79440671726253d757
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210006"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104806"
 ---
 # <a name="perspectivemeasure-data-type-assl"></a>Tipo de dados PerspectiveMeasure (ASSL)
   Define um tipo de dados primitivo que representa informações sobre uma medida em uma [PerspectiveMeasureGroup](perspectivemeasuregroup-data-type-assl.md) elemento.  
@@ -49,18 +46,18 @@ ms.locfileid: "37210006"
   
 |Característica|Description|  
 |--------------------|-----------------|  
-|Tipos de dados base|Nenhum|  
-|Tipos de dados derivados|Nenhum|  
+|Tipos de dados base|None|  
+|Tipos de dados derivados|None|  
   
 ## <a name="data-type-relationships"></a>Relação do tipo de dados  
   
 |Relação|Elemento|  
 |------------------|-------------|  
-|Elementos pai|Nenhum|  
+|Elementos pai|None|  
 |Elementos filho|[Anotações](../collections/annotations-element-assl.md), [MeasureID](../properties/id-element-assl.md)|  
 |Elementos derivados|[Medida](../objects/measure-element-assl.md) ([medidas](../collections/measures-element-assl.md) coleção de [PerspectiveMeasureGroup](perspectivemeasuregroup-data-type-assl.md))|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O elemento correspondente no modelo de objeto Analysis Management Objects (AMO) é <xref:Microsoft.AnalysisServices.PerspectiveMeasure>.  
   
 ## <a name="see-also"></a>Consulte também  

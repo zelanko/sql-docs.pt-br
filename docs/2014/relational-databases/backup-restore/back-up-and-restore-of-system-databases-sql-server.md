@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - system databases [SQL Server], backing up and restoring
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - database backups [SQL Server], system databases
 - servers [SQL Server], backup
 ms.assetid: aef0c4fa-ba67-413d-9359-1a67682fdaab
-caps.latest.revision: 57
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 81645730d3a854eff8b318ef04ee234f6206b4d0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 83dd88ee1c95f5d88319a60b0c17e4ddc2882ef4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37197546"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129147"
 ---
 # <a name="back-up-and-restore-of-system-databases-sql-server"></a>Fazer backup e restaurar bancos de dados do sistema (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantém um conjunto de bancos de dados em nível de sistema,*bancos de dados do sistema*, essenciais para a operação de uma instância do servidor. Deve ser feito backup de vários bancos de dados do sistema após cada atualização significativa. Os bancos de dados do sistema que você sempre deve fazer backup incluem **msdb**, **mestre**e **modelo**. Se qualquer banco de dados usar replicação na instância de servidor, haverá um banco de dados do sistema de **distribuição** do qual também deverá ser feito backup. Os backups desses bancos de dados do sistema permitem que você restaure e recupere o sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no caso de falha do sistema, como a perda de um disco rígido.  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connection managers [Integration Services], modifying
 - modifying connection managers
 ms.assetid: 54793114-2198-4d80-8091-e241d5a5d13c
-caps.latest.revision: 35
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 42e6f4473e9589ce861c22d6e85d83502e6329b1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0148cca6701db9f28ed6dd7abccb1a1f00269510
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37190606"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48111838"
 ---
 # <a name="set-the-properties-of-a-connection-manager"></a>Definir as propriedades de um Gerenciador de Conexões
   Todos os gerenciadores de conexões podem ser configurados usando a janela **Propriedades** .  

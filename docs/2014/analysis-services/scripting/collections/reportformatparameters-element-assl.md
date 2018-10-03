@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ReportFormatParameters Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - ReportFormatParameters element
 ms.assetid: f2e677bf-7b6b-4ce4-b0ec-75a4999306c9
-caps.latest.revision: 30
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b11bab41072f558af5ecbea86852f129853ed6e2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 298357fffbbf2fed441a86d7d0e1ad211eef1c3c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37234206"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48171606"
 ---
 # <a name="reportformatparameters-element-assl"></a>Elemento ReportFormatParameters (ASSL)
   Contém a coleção de elementos [ReportFormatParameter](../objects/reportformatparameter-element-asl.md) para um elemento [ReportAction](../data-type/action-data-type-assl.md) .  
@@ -52,8 +49,8 @@ ms.locfileid: "37234206"
   
 |Característica|Description|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|Nenhum|  
-|Valor padrão|Nenhum|  
+|Comprimento e tipo de dados|None|  
+|Valor padrão|None|  
 |Cardinalidade|0-1: elemento opcional que pode ocorrer apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -63,7 +60,7 @@ ms.locfileid: "37234206"
 |Elementos pai|[Action](../objects/action-element-assl.md) do tipo [ReportAction](../data-type/action-data-type-assl.md)|  
 |Elementos filho|[ReportFormatParameter](../objects/reportformatparameter-element-asl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O elemento que corresponde ao pai de `ReportFormatParameters` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.ReportAction>.  
   
 ## <a name="see-also"></a>Consulte também  

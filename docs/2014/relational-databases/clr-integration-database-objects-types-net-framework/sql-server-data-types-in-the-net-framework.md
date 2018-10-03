@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - System.Data library
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - building database objects [CLR integration], data types
 - mapping data types [CLR integration]
 ms.assetid: c70d3ffe-2c32-45a5-849b-ef113dda09b9
-caps.latest.revision: 38
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a3f476b727527e1c2616106451409c98870f9810
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 2ca5e816d3068b0607a8ab30e949040df0187db9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37354998"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48205286"
 ---
 # <a name="sql-server-data-types-in-the-net-framework"></a>Tipos de dados do SQL Server no .NET Framework
   A biblioteca `SqlTypes` faz parte da biblioteca de classe base do [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Ela é projetada para fornecer tipos de dados com a mesma semântica e precisão presentes no banco de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este tópico descreve a nova semântica para os programadores do .NET Framework e apresenta os tipos implementados no namespace `System.Data.SqlTypes` incluído na biblioteca `System.Data`.  

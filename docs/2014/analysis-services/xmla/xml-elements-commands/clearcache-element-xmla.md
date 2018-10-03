@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ClearCache Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - ClearCache command
 ms.assetid: e154b489-e443-469a-9490-43c62da62e11
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 37b43439705b3288530a919f77da7b0ead461b35
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b5bcc8840d57f4290ef0d0cf70908f0c75921bcf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37188963"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48084386"
 ---
 # <a name="clearcache-element-xmla"></a>Elemento ClearCache (XMLA)
   Limpa o cache de memória para o objeto especificado em um [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instância.  
@@ -52,8 +49,8 @@ ms.locfileid: "37188963"
   
 |Característica|Description|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|Nenhum|  
-|Valor padrão|Nenhum|  
+|Comprimento e tipo de dados|None|  
+|Valor padrão|None|  
 |Cardinalidade|0-n: Elemento opcional que pode ocorrer mais de uma vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -63,7 +60,7 @@ ms.locfileid: "37188963"
 |Elementos pai|[Comando](../xml-elements-properties/command-element-xmla.md)|  
 |Elementos filho|[Objeto](../xml-elements-properties/object-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O `ClearCache` comando libera o cache de um banco de dados especificado, dimensão, cubo, grupo de medidas ou partição em um [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instância. Se um objeto que não seja um banco de dados, dimensão, cubo, grupo de medidas ou partição for especificado no elemento `Object`, ocorrerá um erro.  
   
 ## <a name="see-also"></a>Consulte também  

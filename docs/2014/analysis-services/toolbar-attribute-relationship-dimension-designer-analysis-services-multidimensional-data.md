@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.ardesigner.toolbar.f1
 ms.assetid: 9c0415a8-b780-40dd-a6dd-6ee0e30a24cb
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2426c4c39c68e553782d1b9e1a28e3993f180eb9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b0bc20265b2b880a650cc63a4f2d01f3b084483d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216016"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209676"
 ---
 # <a name="toolbar-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Barra de ferramentas (guia Designer de Relação de Atributo, Designer de Dimensão) (Analysis Services - Dados multidimensionais)
   Use a barra de ferramentas na guia **Relação de Atributo** do Designer de Dimensão para executar as seguintes operações:  

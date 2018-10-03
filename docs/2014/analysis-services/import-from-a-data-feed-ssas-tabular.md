@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0686e519-67c2-4f9b-8cd2-84a4871499ee
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3b476ed1641b5db87afefc8bc4787efed01e2a5a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 27c22caf9c3b6dfebede60cd795496496562c19b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37325136"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48099836"
 ---
 # <a name="import-from-a-data-feed-ssas-tabular"></a>Importar de um feed de dados (SSAS tabular)
   Feeds de dados são um ou mais fluxos de dados XML gerados a partir de uma fonte de dados online e transmitidos para um documento ou aplicativo de destino. Você pode importar dados de um feed de dados para o modelo usando o Assistente de Importação de Tabela.  
