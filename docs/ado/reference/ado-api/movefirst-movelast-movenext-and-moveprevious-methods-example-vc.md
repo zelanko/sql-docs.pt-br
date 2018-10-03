@@ -1,13 +1,11 @@
 ---
-title: Mova o ponteiro do registro de exemplo de conjunto de registros (VC + +) | Microsoft Docs
+title: Mova o ponteiro de registro de exemplo de conjunto de registros (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -17,19 +15,18 @@ helpviewer_keywords:
 - MovePrevious method [ADO], VC++ example
 - MoveFirst method [ADO], VC++ example
 ms.assetid: 7f8aea7b-9183-4b29-8ac0-a393ed2e8bd5
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fe4d75e222b494c8cbef93e0a843d93033e3637a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: d9cbfbdb67df21e6274353d71398a640f52d6fa1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279445"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47812034"
 ---
-# <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vc"></a>MoveFirst, MoveLast, MoveNext e MovePrevious métodos exemplo (VC + +)
-Este exemplo usa o [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), e [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) métodos para mover o ponteiro do registro de um [Registros](../../../ado/reference/ado-api/recordset-object-ado.md) com base no comando fornecido. A função MoveAny é necessária para executar este exemplo.  
+# <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vc"></a>MoveFirst, MoveLast, MoveNext e MovePrevious exemplo dos métodos (VC + +)
+Este exemplo usa o [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), e [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) métodos para mover o ponteiro de registro de um [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) com base no comando fornecido. A função MoveAny é necessária para executar este exemplo.  
   
 ## <a name="example"></a>Exemplo  
   

@@ -5,42 +5,39 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - backward compatibility [ODBC], behavioral changes
 - behavioral changes [ODBC]
 - compatibility [ODBC], behavioral changes
 ms.assetid: a17ae701-6ab6-4eaf-9e46-d3b9cd0a3a67
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ed9b06793abef5006e49b2f526d11ead798c7931
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: abe670570dd2219247da0c70b2b62e1de4e60341
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32910911"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47757175"
 ---
-# <a name="behavioral-changes"></a>Alterações de comportamento
-Alterações de comportamento são as alterações para o qual o *sintaxe* da interface permanece a mesma, mas o *semântica* foram alterados. Para que essas alterações, a funcionalidade usada no ODBC 2. *x* se comporta de forma diferente do que a mesma funcionalidade em ODBC 3. *x*.  
+# <a name="behavioral-changes"></a>Alterações comportamentais
+Alterações de comportamento são essas alterações para o qual o *sintaxe* da interface permanece a mesma, mas o *semântica* foram alterados. Para que essas alterações, a funcionalidade usada no ODBC 2. *x* se comporta de forma diferente do que a mesma funcionalidade em ODBC 3. *x*.  
   
- Se um aplicativo apresenta ODBC 2. *x* comportamento ou ODBC 3. *x* comportamento é determinado pelo atributo SQL_ATTR_ODBC_VERSION ambiente. Esse valor de 32 bits é definido como SQL_OV_ODBC2 exibam ODBC 2. *x* comportamento e SQL_OV_ODBC3 exibam ODBC 3. *x* comportamento.  
+ Se um aplicativo exibe o ODBC 2. *x* comportamento ou o ODBC 3. *x* comportamento é determinado pelo atributo SQL_ATTR_ODBC_VERSION ambiente. Esse valor de 32 bits é definido como SQL_OV_ODBC2 exibem o ODBC 2. *x* comportamento e SQL_OV_ODBC3 exibem o ODBC 3. *x* comportamento.  
   
- O atributo de ambiente SQL_ATTR_ODBC_VERSION é definido por uma chamada para **SQLSetEnvAttr**. Depois que um aplicativo chama **SQLAllocHandle** para alocar um identificador de ambiente, ele deverá chamar**SQLSetEnvAttr** imediatamente para definir o comportamento que ele exibe. (Como resultado, há um novo estado de ambiente para descrever o identificador de ambiente em um alocado, mas automáticas sem versão, estado.) Para obter mais informações, consulte [tabelas de transição de estado do apêndice b: ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
+ O atributo de ambiente SQL_ATTR_ODBC_VERSION é definido por uma chamada para **SQLSetEnvAttr**. Depois que um aplicativo chama **SQLAllocHandle** para alocar um identificador de ambiente, ele deve chamar**SQLSetEnvAttr** imediatamente para definir o comportamento que ele exibe. (Como resultado, há um novo estado de ambiente para descrever o identificador de ambiente em um alocados, mas automáticas sem versão, estado.) Para obter mais informações, consulte [apêndice b: tabelas de transição de estado de ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
   
- Um aplicativo declara que ele exibe um com o atributo de ambiente SQL_ATTR_ODBC_VERSION, mas o atributo de comportamento não tem nenhum efeito na conexão do aplicativo com um ODBC 2. *x* ou ODBC 3. *x* driver. ODBC 3. *x* aplicativo pode se conectar como um ODBC 2. *x* ou 3. *x* driver, independentemente da configuração do atributo ambiente.  
+ Um aplicativo declara que comportamento ele exibe um com o atributo de ambiente SQL_ATTR_ODBC_VERSION, mas o atributo não tem efeito sobre a conexão do aplicativo com um ODBC 2. *x* ou o ODBC 3. *x* driver. ODBC 3. *x* aplicativo pode se conectar a qualquer um uma ODBC 2. *x* ou 3. *x* driver, independentemente da configuração do atributo ambiente.  
   
  ODBC 3. *x* aplicativos nunca devem chamar **SQLAllocEnv**. Como resultado, se o Gerenciador de Driver recebe uma chamada para **SQLAllocEnv**, ele reconhece o aplicativo como um ODBC 2. *x* aplicativo.  
   
- O atributo SQL_ATTR_ODBC_VERSION afeta três aspectos diferentes de um ODBC 3. *x* comportamento do driver:  
+ O atributo SQL_ATTR_ODBC_VERSION afeta três diferentes aspectos de um ODBC 3. *x* comportamento do driver:  
   
 -   SQLSTATEs  
   
--   Tipos de dados de data, hora e carimbo de hora  
+-   Tipos de dados para data, hora e carimbo de hora  
   
 -   O *CatalogName* argumento **SQLTables** aceita padrões de pesquisa em ODBC 3. *x*, mas não no ODBC 2. *x*  
   

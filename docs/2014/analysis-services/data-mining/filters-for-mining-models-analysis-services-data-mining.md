@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - filters [data mining]
 - filtering data [Analysis Services]
 ms.assetid: 0f29c19c-4be3-4bc7-ab60-f4130a10d59c
-caps.latest.revision: 27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6c92fc27326167977f5fcab323e3b885f9ede635
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bb95e8bf7237fcf7ebae4321d14de690ebd0b2c2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312706"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48142706"
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>Filtros para modelos de mineração (Analysis Services - Mineração de dados)
   A filtragem de modelos com base em dados ajuda na criação de modelos de mineração que usam subconjuntos de dados em uma estrutura de mineração. A filtragem proporciona flexibilidade quando você projeta suas estruturas de mineração e fontes de dados porque você pode criar uma única estrutura de mineração, com base em uma exibição da fonte de dados abrangente. Em seguida, é possível criar filtros que serão usados somente como parte dos dados para treinar e testar uma variedade de modelos, em vez de criar uma estrutura diferente e um modelo relacionado para cada subconjunto de dados.  

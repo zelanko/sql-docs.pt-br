@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.ssmsimbi.TableProperties.f1
 ms.assetid: 77571ccd-bdba-4e07-af55-465509dc6a33
-caps.latest.revision: 4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 32603dea6e5160f2cde0f3a0326811fa3489cf53
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 783bd1ba103e97e442e61891138090198a5cdd0f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37220076"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104486"
 ---
 # <a name="table-properties-dialog-box-ssas---tabular"></a>Caixa de diálogo Propriedades de Tabela (SSAS - Tabela)
   Use a caixa de diálogo **Propriedades da Tabela** em [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para exibir as propriedades de uma tabela em um banco de dados modelo de tabela. Todas as propriedades são somente leitura.  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 747a0de0-3c2f-4d31-a692-7111fc0911d8
-caps.latest.revision: 4
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5251cd85dd24de18e582875c0a6c0100ae3fffcc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 638969f439ff6fdbc460399512d29c607e6e98ff
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37246776"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48090807"
 ---
 # <a name="add-a-destination-using-destination-assistant"></a>Adicionar um destino por meio do Assistente de Destino
   Este tópico fornece etapas para adicionar um novo destino por meio do Assistente de Destino e também lista as opções que estão disponíveis na caixa de diálogo **Adicionar Novo Destino** que você verá ao arrastar-soltar o Assistente de Destino para o Designer SSIS.  

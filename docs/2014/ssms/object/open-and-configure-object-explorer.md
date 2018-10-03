@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a138ba3d-d00b-420c-917e-e586d590d30f
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7a78051e28365c638595332845e767849cc1305c
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: e013e2764f0d26982106fde6e653ce05bfcfa986
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43809602"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48071296"
 ---
 # <a name="open-and-configure-object-explorer"></a>Abrir e configurar o Pesquisador de Objetos
   Abra o Pesquisador de Objetos usando o menu **Exibir** no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Configure as opções do Pesquisador de Objetos usando **Opções** no menu **Ferramentas** .  

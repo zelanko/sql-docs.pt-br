@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 62b1e967-af67-4915-a305-727bffd61fe4
-caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8a17c8f404d99d4b701eafb536aaa595a4039bc9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d3f4f27d074ff01f02cc05c165e8acb1ea109198
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151207"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129236"
 ---
 # <a name="discoverperformancecounters-rowset"></a>Conjunto de linhas DISCOVER_PERFORMANCE_COUNTERS
   Retorna o valor de um ou mais contadores de desempenho. Não oferece suporte a contadores que retornam informações sobre uso com o passar do tempo (como leituras de disco por segundo e porcentagem de uso de CPU).  

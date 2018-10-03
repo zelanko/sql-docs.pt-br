@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 28f07c70-7132-4d15-9505-4fdf31dc9cc0
-caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: aa0b3682b6358ee2aa7c246156cf59eecdf4559a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cc57e9b4e38377769006738ed44427b4a52c06ea
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37288382"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48076486"
 ---
 # <a name="processing-options-properties-page-report-manager"></a>Página de propriedades Opções de Processamento (Gerenciador de Relatórios)
   Use a página de propriedades Opções de Processamento para definir as propriedades de execução do relatório selecionado. Essas opções determinam quando ocorre processamento de dados para o relatório. Você pode definir essas opções para recuperar dados de relatório nos horários de pouca atividade. Se você tiver um relatório que é acessado frequentemente, pode armazenar temporariamente cópias de cache nele para eliminar tempo de espera, se vários usuários estiverem acessando o mesmo relatório com diferença de minutos.  

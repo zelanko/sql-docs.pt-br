@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.monitor.main.f1
 ms.assetid: 65ea76db-d809-439d-be64-08b6965aaea1
-caps.latest.revision: 25
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6e5f27f9a9aa96f52ef2e7ed424530688c37bcd9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6f6baec2f97c0baafbe25d15bd130627ffcc9e08
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37284852"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48134996"
 ---
 # <a name="replication-monitor-main-page"></a>Replication Monitor, página principal
   O Replication Monitor permite controlar o status e o desempenho de publicações e assinaturas em uma topologia de replicação. Os tópicos a seguir fornecem mais informações:  

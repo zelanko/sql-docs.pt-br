@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, about SQL Server Native Client OLE DB provider
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider
 - SQL Server Native Client, OLE DB
 ms.assetid: da846da4-ec19-4a4f-81fb-7d5a2b2bf80a
-caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 93db24cf78e2b9f545c90129c088419543045b3b
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 7c49bbaa5e143f241997e6ff707d84b641c3118a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37413306"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093266"
 ---
 # <a name="sql-server-native-client-ole-db"></a>SQL Server Native Client (OLE DB)
   O provedor OLE DB do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client é uma API COM de baixo nível usada para acessar dados. O provedor OLE DB do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client é recomendado para desenvolver ferramentas, utilitários ou componentes de baixo nível que precisem de alto desempenho. O provedor OLE DB do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client é um provedor nativo de alto desempenho que acessa o protocolo TDS do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] diretamente.  
@@ -57,7 +54,7 @@ ms.locfileid: "37413306"
   
 -   [Parâmetros com valor de tabela &#40;OLE DB&#41;](../../native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)  
   
--   [Aprimoramentos de data e hora &#40;OLE DB&#41;](../../native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
+-   [Melhorias de data e hora &#40;OLE DB&#41;](../../native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
 -   [Tipos CLR grandes definidos pelo usuário &#40;OLE DB&#41;](large-clr-user-defined-types-ole-db.md)  
   
@@ -67,7 +64,7 @@ ms.locfileid: "37413306"
   
 -   [Erros](../../native-client-ole-db-errors/errors.md)  
   
--   [Nomes de entidade de serviço &#40;SPNs&#41; em conexões de cliente &#40;OLE DB&#41;](service-principal-names-spns-in-client-connections-ole-db.md)  
+-   [SPNs &#40;Nomes da Entidade de Serviço&#41; em conexões de cliente &#40;OLE DB&#41;](service-principal-names-spns-in-client-connections-ole-db.md)  
   
 -   [Suporte a colunas esparsas &#40;OLE DB&#41;](sparse-columns-support-ole-db.md)  
   

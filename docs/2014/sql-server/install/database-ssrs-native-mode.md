@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.databasesetup.F1
 ms.assetid: 8c9bb3b3-ea77-4a5b-ba35-7451ed11083d
-caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7bce0a9aa3adcddb7363224138a7ec3f51a47622
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d79b50e70f3eae3d9183ae220002136b39717e46
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37183933"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48102486"
 ---
 # <a name="database-ssrs-native-mode"></a>Banco de dados (modo nativo do SSRS)
   Use a página Banco de Dados para criar e configurar os bancos de dados do servidor de relatório que fornecem armazenamento interno para uma ou mais instâncias do servidor de relatório. Se você estiver configurando um servidor de relatório para usar um banco de dados do servidor de relatório remoto, você deve usar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager para criar o banco de dados.  

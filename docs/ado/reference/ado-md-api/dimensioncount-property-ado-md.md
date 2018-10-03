@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,16 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - DimensionCount property [ADO MD]
 ms.assetid: 87929cbc-9c38-491a-8616-62d45c51e299
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f74ff9f6af5ff8bbf0847d4ee794175cbb0a178
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 4370d902c18dc8c05f61817f859cb72da28e5fb5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283965"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47788094"
 ---
 # <a name="dimensioncount-property-ado-md"></a>Propriedade DimensionCount (ADO MD)
 Indica o número de dimensões em um [eixo](../../../ado/reference/ado-md-api/axis-object-ado-md.md).  
@@ -37,5 +34,5 @@ Indica o número de dimensões em um [eixo](../../../ado/reference/ado-md-api/ax
  [Objeto Axis (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Exemplo de eixo (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
+ [Exemplo Axis (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
  [Objeto Dimension (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)

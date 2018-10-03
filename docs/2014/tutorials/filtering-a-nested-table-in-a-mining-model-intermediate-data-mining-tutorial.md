@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0a3ae0e5-897b-4898-a60d-5455eec3d305
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d39ec6f60a9d281f6e1a76f26da585b555066dcc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2dcb1e84335100eda4155fa1f0a8a1cc9c65206e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273792"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48159963"
 ---
 # <a name="filtering-a-nested-table-in-a-mining-model-intermediate-data-mining-tutorial"></a>Filtrando uma tabela aninhada em um modelo de mineração (tutorial de mineração de dados intermediário)
   Após criar e explorar o modelo, você decide que deseja enfatizar um subconjunto dos dados do cliente. Por exemplo, talvez você queira analisar apenas as cestas que contêm um determinado item ou os dados demográficos de clientes que não compraram nada em um certo período.  
@@ -95,7 +92,7 @@ ms.locfileid: "37273792"
   
  Para verificar, use o visualizador da Árvore de Conteúdo Genérico da Microsoft e examine o valor de NODE_SUPPORT em que o modelo filtrado contém menos casos do que o original.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O filtro de tabela aninhada que você acabou de criar verifica apenas a presença de pelo menos uma linha na tabela aninhada; no entanto, também é possível criar condições de filtro que verificam a presença de produtos específicos.  Por exemplo, você pode criar o seguinte filtro:  
   
 ```  

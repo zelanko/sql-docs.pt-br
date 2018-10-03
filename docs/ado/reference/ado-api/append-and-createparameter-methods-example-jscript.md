@@ -1,13 +1,11 @@
 ---
-title: Anexar e exemplo dos métodos CreateParameter (JScript) | Microsoft Docs
+title: Acrescente e exemplo dos métodos CreateParameter (JScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - JScript
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - CreateParameter method [ADO], JScript example
 - Append method [ADO], JScript example
 ms.assetid: 37000833-68f4-45f1-b2dd-7f75893d09d9
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d93d5b956576a9e2b66359ae4aef0b4d8b1e5223
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f9bd0c28d481ef107dc31e36e13582fba459b502
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275805"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47827614"
 ---
-# <a name="append-and-createparameter-methods-example-jscript"></a>Anexar e exemplo dos métodos CreateParameter (JScript)
-Este exemplo usa o [Append](../../../ado/reference/ado-api/append-method-ado.md) e [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) métodos para executar um procedimento armazenado com um parâmetro de entrada. Recorte e cole o seguinte código ao bloco de notas ou outro editor de texto e salve-o como **AppendJS.asp**.  
+# <a name="append-and-createparameter-methods-example-jscript"></a>Acrescente e exemplo dos métodos CreateParameter (JScript)
+Este exemplo usa o [Append](../../../ado/reference/ado-api/append-method-ado.md) e [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) métodos para executar um procedimento armazenado com um parâmetro de entrada. Recortar e colar o seguinte código ao bloco de notas ou outro editor de texto e salve-o como **AppendJS.asp**.  
   
 ```  
 <!-- BeginAppendJS -->  
@@ -146,8 +143,8 @@ body {
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [(ADO) do método append](../../../ado/reference/ado-api/append-method-ado.md)   
+ [Método append (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
  [Método CreateParameter (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
  [Objeto Field](../../../ado/reference/ado-api/field-object.md)   
- [Coleção de campos (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [Coleção Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Objeto Parameter](../../../ado/reference/ado-api/parameter-object.md)

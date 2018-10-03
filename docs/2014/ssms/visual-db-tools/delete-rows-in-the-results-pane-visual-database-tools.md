@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - View Designer, Results pane
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - deleting rows
 - Results pane
 ms.assetid: a1147905-fe4a-4fac-b576-a17622477e66
-caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aa8788c7381f1ae28f4be5b9db86b8d1afe0a0f0
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 799ca3ef2acdc9c9b71f62f66d5a931f1d515f83
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43807912"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48080647"
 ---
 # <a name="delete-rows-in-the-results-pane-visual-database-tools"></a>Excluir linhas do painel de Resultados (Visual Database Tools)
   Exclua linhas no painel Resultados para excluir registros do banco de dados. Para excluir todas as linhas, use uma consulta de exclusão. Para obter mais informações, consulte [Criar consultas Exclusão &#40;Visual Database Tools&#41;](visual-database-tools.md). Para remover linhas somente do painel Resultados, altere os critérios da consulta. Para obter mais informações, consulte [Especificar critérios de pesquisa &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md).  

@@ -6,23 +6,20 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 315c32dc-aeb1-4629-b30e-87b44e8f84d1
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e88957f03b821ee350a575080bd4f0fd40ce466b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 9bf639f5b624c222ca115b443ec327b45b836b82
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272705"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47784004"
 ---
-# <a name="step-3-populate-the-fields-list-box"></a>Etapa 3: Preencher a caixa de lista de campos
-Para preencher a caixa de lista de campos, insira o seguinte código para o manipulador de eventos de clique do `lstMain`:  
+# <a name="step-3-populate-the-fields-list-box"></a>Etapa 3: Preencher a caixa de listagem de campos
+Para preencher a caixa de lista de campos, insira o seguinte código no manipulador de eventos de clique de `lstMain`:  
   
 ```  
 Private Sub lstMain_Click()  
@@ -50,11 +47,11 @@ Private Sub lstMain_Click()
 End Sub  
 ```  
   
- Esse código declara e cria objetos locais de registro e o conjunto de registros, `rec` e `rs`, respectivamente.  
+ Esse código declara e instancia objetos locais de registro e o conjunto de registros, `rec` e `rs`, respectivamente.  
   
- A linha correspondente para o recurso selecionado no `lstMain` é feita a linha atual do `grs`. Em seguida, a caixa de lista de detalhes está desmarcada e `rec` é aberto com a linha atual do `grs` como a origem.  
+ A linha correspondente ao recurso selecionado na `lstMain` é feita a linha atual do `grs`. Em seguida, a caixa de lista de detalhes está desmarcada e `rec` é aberto com a linha atual do `grs` como a origem.  
   
- Se o recurso é um registro de coleção, conforme especificado por [RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md), o conjunto de registros local `rs` é aberta nos filhos de rec. Em seguida, `lstDetails` é preenchida com os valores das linhas de `rs`.  
+ Se o recurso é um registro de coleção, conforme especificado por [RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md), o conjunto de registros local `rs` é aberta nos filhos de rec. Em seguida `lstDetails` é preenchido com os valores das linhas de `rs`.  
   
  Se o recurso de registro simple, `recFields` é chamado. Para obter mais informações sobre `recFields`, consulte a próxima etapa.  
   

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_msx_get_account_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_msx_get_account
 ms.assetid: 7b478049-e2d0-4bac-865a-b97fd1d8dfbc
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a54d8e930d9a3365225c67d4f9f8479458e47295
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 297dbbf13da14916d12fc1ef457279a1268bc991
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33248652"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47792804"
 ---
 # <a name="spmsxgetaccount-transact-sql"></a>sp_msx_get_account (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,12 +47,12 @@ sp_msx_get_account
   
 |Nome da coluna|Tipo|Description|  
 |-----------------|----------|-----------------|  
-|msx_connection|**Int**|Número de conexão do servidor mestre.|  
-|msx_credential_id|**Int**|ID da credencial usada para esta conexão de servidor mestre.|  
+|msx_connection|**int**|Número de conexão do servidor mestre.|  
+|msx_credential_id|**int**|ID da credencial usada para esta conexão de servidor mestre.|  
 |msx_credential_name|**sysname**|Nome da credencial usada para esta conexão de servidor mestre.|  
 |msx_login_name|**nvarchar(4000)**|Nome de domínio e nome de usuário do usuário Windows para a credencial.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Retornará um conjunto de resultados vazio se não forem especificadas credenciais para este servidor de destino. Para definir a credencial, use sp_msx_set_account.  
   
 ## <a name="permissions"></a>Permissões  

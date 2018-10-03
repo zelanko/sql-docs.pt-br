@@ -1,13 +1,11 @@
 ---
-title: Exemplo de propriedades de DateModified (VC + +) e DateCreated | Microsoft Docs
+title: DateCreated e DateModified de propriedades (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - DateCreated property [ADOX], VC++ example
 - DateModified property [ADOX], VC++ example
 ms.assetid: b964beee-83c7-4f91-8255-3ba864c9adfd
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7919bd3e51ad685416ff35d99cb961988334dd15
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b95a22661ef66b80b9b0007aee6087e1bb49a1b0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285605"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47801084"
 ---
-# <a name="datecreated-and-datemodified-properties-example-vc"></a>DateCreated e DateModified propriedades exemplo (VC + +)
-Este exemplo demonstra o [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) e [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) propriedades adicionando um novo [coluna](../../../ado/reference/adox-api/column-object-adox.md) um existente [tabela](../../../ado/reference/adox-api/table-object-adox.md) e por Criando um novo **tabela**. O procedimento DateOutput é necessário para executar este exemplo.  
+# <a name="datecreated-and-datemodified-properties-example-vc"></a>Exemplo das propriedades DateCreated e DateModified (VC++)
+Este exemplo demonstra a [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) e [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) propriedades adicionando um novo [coluna](../../../ado/reference/adox-api/column-object-adox.md) um existente [tabela](../../../ado/reference/adox-api/table-object-adox.md) e por Criando um novo **tabela**. O procedimento DateOutput é necessário para executar este exemplo.  
   
 ```  
 // BeginDateCreatedCpp.cpp  
@@ -119,7 +116,7 @@ void DateOutPut(_bstr_t strTemp , _TablePtr tblTemp) {
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Objeto de coluna (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
+ [Objeto Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [Propriedade DateCreated (ADOX)](../../../ado/reference/adox-api/datecreated-property-adox.md)   
  [Propriedade DateModified (ADOX)](../../../ado/reference/adox-api/datemodified-property-adox.md)   
  [Objeto Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)

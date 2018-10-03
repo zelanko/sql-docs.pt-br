@@ -5,48 +5,45 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLSetStmtOption function [ODBC], Visual FoxPro ODBC Driver
 ms.assetid: 76b813e3-c7dc-4bb2-a710-d2aa9dcfdc36
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 478c15d026ab3996da6f0b0ed0c7e91c78cb4299
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9d7bcecfbd880f53d1067fd68202b62c34fce398
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904351"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47854384"
 ---
 # <a name="sqlsetstmtoption-visual-foxpro-odbc-driver"></a>SQLSetStmtOption (Driver ODBC do Visual FoxPro)
 > [!NOTE]  
->  Este tópico contém informações específicas do Driver ODBC do Visual FoxPro. Para obter informações gerais sobre esta função, consulte o tópico apropriado em [referência da API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Este tópico contém informações específicas de Driver ODBC do Visual FoxPro. Para obter informações gerais sobre essa função, consulte o tópico apropriado sob [referência da API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
  Suporte: completo  
   
- Conformidade de API de ODBC: Nível 1  
+ Conformidade com a API ODBC: 1 de nível  
   
- Define opções relacionadas a um identificador de instrução, *hstmt*.  
+ Define opções relacionadas a um identificador de instrução *hstmt*.  
   
 |*fOption*|Valores permitidos|Comentários|  
 |---------------|--------------------|--------------|  
-|SQL_ASYNC_ENABLE|SQL_ASYNC_ENABLE_OFF|Se você tentar definir isso *fOption*, o driver retornará o erro: "O Driver não funciona". Do Visual FoxPro não oferece suporte à execução assíncrona.|  
+|SQL_ASYNC_ENABLE|SQL_ASYNC_ENABLE_OFF|Se você tentar definir isso *fOption*, o driver retorna o erro: "Não têm a capacidade de Driver". Do Visual FoxPro não oferece suporte a execução assíncrona.|  
 |SQL_BIND_TYPE|SQL_BIND_BY_COLUMN ou um valor de 32 bits que indica o comprimento da estrutura ou uma instância de um buffer em qual resultado colunas serão associadas.||  
-|SQL_CONCURRENCY|SQL_CONCUR_READ_ONLY<br /><br /> SQL_CONCUR_LOCK<br /><br /> SQL_CONCUR_VALUES|O driver não permite SQL_CONCUR_ROWVER, porque Visual FoxPro não têm controle de versão de linha com base em carimbos de hora.|  
-|SQL_CURSOR_TYPE|SQL_CURSOR_FORWARD_ONLY<br /><br /> SQL_CURSOR_STATIC|O driver não permite SQL_CURSOR_KEYSET_DRIVEN ou SQL_CURSOR_DYNAMIC; consulte [SQLSetScrollOptions](../../odbc/microsoft/sqlsetscrolloptions-visual-foxpro-odbc-driver.md) para obter mais informações.|  
+|SQL_CONCURRENCY|SQL_CONCUR_READ_ONLY<br /><br /> SQL_CONCUR_LOCK<br /><br /> SQL_CONCUR_VALUES|O driver não permite SQL_CONCUR_ROWVER, porque o Visual FoxPro não tem controle de versão de linha com base em carimbos de hora.|  
+|SQL_CURSOR_TYPE|SQL_CURSOR_FORWARD_ONLY<br /><br /> SQL_CURSOR_STATIC|O driver não permite SQL_CURSOR_KEYSET_DRIVEN ou SQL_CURSOR_DYNAMIC; ver [SQLSetScrollOptions](../../odbc/microsoft/sqlsetscrolloptions-visual-foxpro-odbc-driver.md) para obter mais informações.|  
 |SQL_KEYSET_SIZE|Erro: "o Driver não funciona"|Do Visual FoxPro não oferece suporte para o modelo de cursor de conjunto de chaves.|  
-|SQL_MAX_LENGTH|0|Se você tentar definir isso *fOption* valor, o driver retorna o erro "Não compatível com Driver".|  
-|SQL_MAX_ROWS|0|Se você tentar definir isso *fOption* valor, o driver retorna o erro "Não compatível com Driver".|  
+|SQL_MAX_LENGTH|0|Se você tentar definir isso *fOption* valor, o driver retorna o erro "Não têm a capacidade de Driver".|  
+|SQL_MAX_ROWS|0|Se você tentar definir isso *fOption* valor, o driver retorna o erro "Não têm a capacidade de Driver".|  
 |SQL_NOSCAN|SQL_NOSCAN_OFF||  
-|SQL_QUERY_TIMEOUT|0|Se você tentar definir isso *fOption* valor, o driver retorna o erro "Não compatível com Driver".|  
+|SQL_QUERY_TIMEOUT|0|Se você tentar definir isso *fOption* valor, o driver retorna o erro "Não têm a capacidade de Driver".|  
 |SQL_RETRIEVE_DATA|SQL_RD_ON, SQL_RD_OFF||  
 |SQL_ROWSET_SIZE|1 para 4.294.967.296||  
 |SQL_SIMULATE_CURSOR|Erro: "o Driver não funciona"||  
 |SQL_USE_BOOKMARKS|SQL_UB_OFF<br /><br /> SQL_UB_ON||  
   
- Para obter mais informações, consulte [SQLSetStmtOption](../../odbc/reference/syntax/sqlsetstmtoption-function.md) no *referência do programador de ODBC*.
+ Para obter mais informações, consulte [SQLSetStmtOption](../../odbc/reference/syntax/sqlsetstmtoption-function.md) na *referência do programador de ODBC*.

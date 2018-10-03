@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 161afa9d-74a1-40f5-af17-162e355e7a46
-caps.latest.revision: 4
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 91e1f906e3014f4d4f702bdb2013c121a162de73
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 15a86c942fddc820b3d02244e65dfc009286c835
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37237416"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48126706"
 ---
 # <a name="accessing-native-code-from-a-clr-udf"></a>Acessando código nativo em uma UDF CLR
   Este exemplo mostra como invocar uma função em código C++ nativo (não gerenciado) a partir de uma função definida pelo usuário em um assembly, no seu banco de dados.  

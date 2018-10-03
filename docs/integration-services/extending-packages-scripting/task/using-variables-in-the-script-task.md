@@ -5,12 +5,8 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -22,16 +18,15 @@ helpviewer_keywords:
 - SSIS Script task, variables
 - variables [Integration Services], Script task
 ms.assetid: 593b5961-4bfa-4ce1-9531-a251c34e89d3
-caps.latest.revision: 63
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9db5cb46c6775eeb45c3d74bf599f6b06ffaccfa
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 2d2520eb419282b4187407c9506c25d575835961
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35404458"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47827114"
 ---
 # <a name="using-variables-in-the-script-task"></a>Usando variáveis na tarefa Script
   Variáveis possibilitam que a tarefa Script troque dados com outros objetos no pacote. Para obter mais informações, consulte [Integration Services &#40;SSIS&#41; Variables](../../../integration-services/integration-services-ssis-variables.md).  

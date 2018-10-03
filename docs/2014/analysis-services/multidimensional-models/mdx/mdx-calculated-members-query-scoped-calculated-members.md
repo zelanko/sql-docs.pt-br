@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - WITH keyword
 - query-scoped calculated members [MDX]
 ms.assetid: c4507149-e67b-4e5d-9192-cc911acd9adc
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8e5d26eb5ac3e4bb48e16b2ec33fcd2ed98ec60a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6de68556d6bbd7277324e6083d70f979fa1303fe
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37257662"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093366"
 ---
 # <a name="creating-query-scoped-calculated-members-mdx"></a>Criando membros calculados no escopo da consulta (MDX)
   Se um membro calculado for necessário para uma única consulta de expressões multidimensionais (MDX), é possível defini-lo usando a palavra-chave WITH. O membro calculado criado com a palavra-chave WITH deixará de existir ao fim da execução da consulta.  

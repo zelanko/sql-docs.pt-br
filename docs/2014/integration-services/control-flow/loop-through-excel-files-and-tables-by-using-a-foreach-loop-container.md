@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [Integration Services], Excel
 - Excel [Integration Services]
 - connection managers [Integration Services], Excel
 ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
-caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: df6de3a81b8ebd1f9ca23ffa1b004c4180c26e81
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 98cdf4263025f202279e4496b67f23eb0780b633
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37158987"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48048346"
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>Loop por meio de arquivos do Excel e tabelas usando um contêiner de Loop Foreach
   Os procedimentos neste tópico descrevem como criar um loop através de pastas de trabalho do Excel ou através de tabelas em uma pasta de trabalho do Excel, usando o contêiner Loop Foreach com o enumerador apropriado.  
@@ -73,7 +70,7 @@ ms.locfileid: "37158987"
   
 ### <a name="to-loop-through-excel-tables-by-using-the-foreach-adonet-schema-rowset-enumerator"></a>Para criar um loop através de tabelas do Excel usando o enumerador de Conjunto de Linhas de Esquema ADO.NET Foreach  
   
-1.  Crie um gerenciador de conexões ADO.NET que use o provedor OLE DB do Microsoft Jet para se conectar a uma pasta de trabalho do Excel. Na página Tudo da caixa de diálogo **Gerenciador de Conexões** , insira o Excel 8.0 como o valor da propriedade Propriedades Estendidas. Para obter mais informações, consulte [Add, Delete, or Share a Connection Manager in a Package](../add-delete-or-share-a-connection-manager-in-a-package.md).  
+1.  Crie um gerenciador de conexões ADO.NET que use o provedor OLE DB do Microsoft Jet para se conectar a uma pasta de trabalho do Excel. Na página Tudo da caixa de diálogo **Gerenciador de Conexões** , insira o Excel 8.0 como o valor da propriedade Propriedades Estendidas. Para obter mais informações, consulte [adicionar, excluir ou compartilhar um Gerenciador de Conexão em um pacote](../add-delete-or-share-a-connection-manager-in-a-package.md).  
   
 2.  Crie uma variável de cadeia que receberá o nome da tabela atual em cada iteração do loop.  
   

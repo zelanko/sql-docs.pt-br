@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - AggregationAttribute Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - AggregationAttribute data type
 ms.assetid: 636827c7-938d-4b7d-9827-46da3bc60d9a
-caps.latest.revision: 41
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 71da4468ab4edece07744ae73a13243eefd1dfed
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 05b0f2f1bc4ed517c289cb4e68810265118d9ea7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243416"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48078666"
 ---
 # <a name="aggregationattribute-data-type-assl"></a>Tipo de dados AggregationAttribute (ASSL)
   Define um tipo de dados primitivo que representa a associação entre um [agregação](../objects/aggregation-element-assl.md) elemento e um atributo.  
@@ -49,18 +46,18 @@ ms.locfileid: "37243416"
   
 |Característica|Description|  
 |--------------------|-----------------|  
-|Tipos de dados base|Nenhum|  
-|Tipos de dados derivados|Nenhum|  
+|Tipos de dados base|None|  
+|Tipos de dados derivados|None|  
   
 ## <a name="data-type-relationships"></a>Relação do tipo de dados  
   
 |Relação|Elemento|  
 |------------------|-------------|  
-|Elementos pai|Nenhum|  
+|Elementos pai|None|  
 |Elementos filho|[AttributeID](../properties/id-element-assl.md), [anotações](../collections/annotations-element-assl.md)|  
 |Elementos derivados|[Atributo](../objects/attribute-element-assl.md) ([atributos](../collections/attributes-element-assl.md) coleção de [AggregationDimension](dimension-data-type-assl.md))|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A classe correspondente no modelo de objeto AMO (Objetos de Gerenciamento de Análise) é <xref:Microsoft.AnalysisServices.AggregationAttribute>.  
   
 ## <a name="see-also"></a>Consulte também  

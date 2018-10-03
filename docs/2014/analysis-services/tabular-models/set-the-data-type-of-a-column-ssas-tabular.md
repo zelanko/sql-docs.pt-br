@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 34e2d508-7b64-4503-a4f0-c6c6ad5f8a44
-caps.latest.revision: 9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d0871dbef7b9b9a053a7c79688ec7073d2d8fdcc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 82b2d4a687c490ed1909a27fc55fdece9cc3662c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312226"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48083206"
 ---
 # <a name="set-the-data-type-of-a-column-ssas-tabular"></a>Definir o tipo de dados de uma coluna (SSAS tabular)
   Quando você importa ou cola dados em um modelo, o designer de modelo detectará automaticamente e aplicará os tipos dos dados. Depois que adicionar dados ao modelo, você poderá modificar manualmente o tipo de dados de uma coluna para alterar o modo como os dados são armazenados. Se você deseja apenas alterar o formato de exibição dos dados sem alterar o modo como são armazenados, faça isso.  

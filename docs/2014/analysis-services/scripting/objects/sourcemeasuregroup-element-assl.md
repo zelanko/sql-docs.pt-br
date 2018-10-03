@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - SourceMeasureGroup Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - SourceMeasureGroup element
 ms.assetid: aaa7cc0b-162a-4c31-ab03-a90f81eeca00
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b6d6d1dfef880153223d4be13ccb89d4ce3b1cf1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 98cf2ab2b8f97c976f0be4f9a008eb162116b124
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37156827"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48099316"
 ---
 # <a name="sourcemeasuregroup-element-assl"></a>Elemento SourceMeasureGroup (ASSL)
   Identifica o grupo de medidas que serve como a fonte de dados para uma coluna de estrutura de mineração.  
@@ -51,7 +48,7 @@ ms.locfileid: "37156827"
 |Característica|Description|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|[MeasureGroupBinding](../data-type/binding-data-type-assl.md)|  
-|Valor padrão|Nenhum|  
+|Valor padrão|None|  
 |Cardinalidade|0-1: elemento opcional que pode ocorrer apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -59,9 +56,9 @@ ms.locfileid: "37156827"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|[MiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md) do tipo [TableMiningStructureColumn](../data-type/tableminingstructurecolumn-data-type-assl.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Para obter mais informações sobre o `Binding` tipo, incluindo tabelas de objetos do Analysis Services Scripting Language (ASSL) da `Binding` tipo e a hierarquia de herança dos `Binding` tipos, consulte [tipo de associação de dados &#40;ASSL &#41;](../data-type/binding-data-type-assl.md).  
   
  Para uma visão geral de associações de dados em ASSL, consulte [fontes de dados e associações &#40;Multidimensional do SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  

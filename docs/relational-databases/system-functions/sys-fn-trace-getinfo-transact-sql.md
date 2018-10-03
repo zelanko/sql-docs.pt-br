@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_trace_getinfo
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - sys.fn_trace_getinfo function
 - fn_trace_getinfo function
 ms.assetid: 04b140fe-110a-47b8-98b5-e4c161beb6c9
-caps.latest.revision: 33
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f709ba43a3dda3b219c083449869a6963da003f5
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6f43b362b0386b20103f139c2726bf19c41408df
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38056190"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47846444"
 ---
 # <a name="sysfntracegetinfo-transact-sql"></a>sys.fn_trace_getinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +56,7 @@ sys.fn_trace_getinfo ( { trace_id | NULL | 0 | DEFAULT } )
 |propriedade|**int**|Propriedade do rastreamento.<br /><br /> 1 = Opções de rastreamento. Para obter mais informações, consulte @options na [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md).<br /><br /> 2 = Nome do arquivo<br /><br /> 3 = Tamanho máximo<br /><br /> 4 = Hora da parada<br /><br /> 5 = Status do rastreamento atual. 0 = parado; 1 - em execução.|  
 |value|**sql_variant**|Informações sobre a propriedade do rastreamento especificado.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Quando é passada a identificação de um rastreamento específico, fn_trace_getinfo retorna informações sobre esse rastreamento. Quando é passada uma ID inválida, a função retorna um conjunto de linhas vazio.  
   
  fn_trace_getinfo acrescenta uma extensão  .trc ao nome de qualquer arquivo de rastreamento incluído no conjunto de resultados. Para obter informações sobre como definir um rastreamento, consulte [sp_trace_create &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md). Para obter informações similares sobre filtros de rastreamento, consulte [sys. fn_trace_getfilterinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md).  

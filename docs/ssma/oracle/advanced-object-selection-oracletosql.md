@@ -4,28 +4,25 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c978fba4-c953-4ed0-a21d-1b38e7225552
-caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: v-pelars
-ms.openlocfilehash: 236379b49c72f19f77a5bfe213c4c8fce363a74b
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 8bc452dff465ca872f094fa7aaaba98612beb135
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34776822"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47754344"
 ---
-# <a name="advanced-object-selection--oracletosql"></a>Seleção de objeto avançado (OracleToSQL)
-O **seção Avançado do objeto** caixa de diálogo lhe permite filtrar os objetos de banco de dados por meio de cadeias de caracteres e subcadeias de caracteres no nome do objeto e, em seguida, marque ou desmarque esses objetos. O SSMA executa operações de conversão e a migração em objetos selecionados.  
+# <a name="advanced-object-selection--oracletosql"></a>Seleção de objetos avançada (OracleToSQL)
+O **seção de objeto avançado** caixa de diálogo permite que você filtre os objetos de banco de dados usando cadeias de caracteres e subcadeias de caracteres no nome do objeto e, em seguida, selecionar ou desmarcar esses objetos. O SSMA executa operações de conversão e a migração em objetos selecionados.  
   
 Para acessar essa caixa de diálogo, clique com botão direito em um Gerenciador de metadados e, em seguida, selecione **seleção de objeto avançado**.  
   
-Quando você abre a caixa de diálogo pela primeira vez, clique em **Mostrar itens de subcategorias** para exibir todos os objetos que têm metadados carregado no projeto. Em seguida, você pode digitar cadeias de caracteres para filtrar os itens. Por exemplo, digite a cadeia de caracteres "company" Mostrar todos os itens com nomes que incluam essa cadeia de caracteres.  
+Quando você abrir a caixa de diálogo, clique em **Mostrar itens de subcategorias** para exibir todos os objetos que têm metadados carregados no projeto. Em seguida, você pode inserir cadeias de caracteres para filtrar os itens. Por exemplo, insira a cadeia de caracteres "empresa" Mostrar todos os itens com nomes que incluem essa cadeia de caracteres.  
   
 Antes de usar essa caixa de diálogo, você talvez queira forçar SSMA para carregar todos os metadados de conversão de esquemas ou salvar o projeto.  
   
@@ -42,14 +39,14 @@ Exibe itens em uma lista de filtrados.
 **Modo de exibição de tabela**  
 Exibe itens em uma tabela de filtrados.  
   
-**Carregadas somente itens exibidos**  
+**Carregado apenas itens exibidos**  
 Alterna a exibição de categorias ou itens. Quando esse botão é selecionado, o SSMA mostra todos os itens que correspondem aos critérios de filtro e aqueles que foram carregados anteriormente. Quando esse botão não estiver selecionado, o SSMA mostra as pastas de categoria.  
   
 **Filter**  
-Insira a cadeia de caracteres que você deseja usar para filtrar itens. Por exemplo, para localizar itens disponíveis que contêm a cadeia de caracteres "ID" no nome do item, insira a cadeia de caracteres "ID" no **filtro** caixa.  
+Insira a cadeia de caracteres que você deseja usar para filtrar itens. Por exemplo, para localizar os itens disponíveis que contêm a cadeia de caracteres "ID" no nome do item, digite a cadeia de caracteres "ID" no **filtro** caixa.  
   
-Se itens correspondem aos critérios de filtro, as categorias ou itens serão exibido conforme você digita a cadeia de caracteres. Para ver os itens correspondentes, é recomendável que você clique o **exibido somente itens carregados** botão.  
+Se itens correspondem aos critérios de filtro, as categorias ou itens serão exibida conforme você digita a cadeia de caracteres. Para ver os itens correspondentes, é recomendável que você clique o **exibido somente itens carregados** botão.  
   
 **Limpar Filtro**  
-Limpa o **filtro** caixa.  
+Limpa a **filtro** caixa.  
   

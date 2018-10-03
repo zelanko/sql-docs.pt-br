@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - unattended data refresh [Analysis Services with SharePoint]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - scheduled data refresh [Analysis Services with SharePoint]
 - data refresh [Analysis Services with SharePoint]
 ms.assetid: 4c8d8aa8-794d-4f72-ace3-78d0e688e1a5
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5ecca7d87492645502e122497cc66eb54f083097
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 462dd89e60ef2e997ad35ec07fad4a5b767f5944
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267582"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48118966"
 ---
 # <a name="view-data-refresh-history-powerpivot-for-sharepoint"></a>Exibir histórico de atualização de dados (PowerPivot para SharePoint)
   O histórico de atualização de dados é um registro de todas as atividades de atualização de dados PowerPivot em uma pasta de trabalho do Excel. As operações da atualização de dados são executadas em uma instância de servidor do Analysis Services em um farm do SharePoint em uma agenda fornecida por você. Por padrão, o histórico de atualização de dados é mantido durante um ano. No entanto, um administrador de farm pode especificar uma política de retenção diferente para o histórico de uso e de eventos que determine por quanto tempo os registros de atualização de dados são mantidos.  

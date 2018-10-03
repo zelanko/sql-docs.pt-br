@@ -4,24 +4,18 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 580d72a3-9be3-4f19-a9b3-5b41cc84b589
-caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 39f7c04d180a5604a94721c4c4f3993ac81d9c25
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: a7c7daef9e60ae969e282d148649f0505653f9ac
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34776553"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47780334"
 ---
 # <a name="shortcut-keys-mysqltosql"></a>Teclas de atalho (MySQLToSQL)
 Você pode usar atalhos de teclado para navegar pelo aplicativo do SSMA. Para obter mais informações, consulte os tópicos a seguir.  
@@ -29,5 +23,5 @@ Você pode usar atalhos de teclado para navegar pelo aplicativo do SSMA. Para ob
 -   [Comandos de menu e outras teclas de atalho &#40;MySQLToSQL&#41;](../../ssma/mysql/menu-commands-and-other-shortcut-keys-mysqltosql.md)  
   
 ## <a name="see-also"></a>Consulte também  
-[Guia de Introdução com o SSMA para MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-mysqltosql.md)  
+[Introdução ao SSMA para MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-mysqltosql.md)  
   

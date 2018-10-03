@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - LocalDBFormatMessage
@@ -17,16 +15,15 @@ api_location:
 topic_type:
 - apiref
 ms.assetid: 31b3152a-94cf-4f75-a31b-296d7dd16dbe
-caps.latest.revision: 14
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a48c5d0ef42c2109aebeadf77a6e666e4407093f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e711b82bea95490fcf0188d5ed94c398f31c6335
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37246796"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48070976"
 ---
 # <a name="localdbformatmessage-function"></a>Função LocalDBFormatMessage
   Retorna a descrição textual localizada para o erro de LocalDB do SQL Server Express especificado.  
@@ -88,7 +85,7 @@ HRESULT LocalDBFormatMessage(
  [LOCALDB_ERROR_INTERNAL_ERROR](../express-localdb-error-messages/localdb-error-internal-error.md)  
  Erro inesperado. Consulte o log de eventos para obter detalhes.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Para obter uma amostra do código que usa a API LocalDB, consulte [SQL Server Express LocalDB Reference](../sql-server-express-localdb-reference.md).  
   
 ## <a name="see-also"></a>Consulte também  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - View Designer, Results pane
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - queries [SQL Server], results
 - Results pane
 ms.assetid: 4f8a0080-91ef-4442-83ae-53be2f478c54
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a4e398b03b6b3ec2476e135b5afdab738318b8dc
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 8a2f61a0d71c1fe54c7b66fab375681a97ae7f64
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43811702"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48103478"
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>Trabalhar com dados no painel de resultados (Visual Database Tools)
   Depois que você executa ou exibe uma consulta, os resultados são mostrados no painel Resultados. Em seguida, você pode trabalhar com esses resultados. Por exemplo, você pode adicionar e excluir linhas, inserir ou alterar dados e navegar facilmente por grandes conjuntos de resultados.  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7bb3166f-9374-4449-b66a-ffb77298507d
-caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f29cf01e446c30a69bb2c205d26965b9288ef7f3
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 8c58757e975f4a5ef68804f190aafeec0197a902
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39083019"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48128256"
 ---
 # <a name="upload-file-page-report-manager"></a>Página Carregar Arquivo (Gerenciador de Relatórios)
   Use a página Carregar Arquivo para publicar um arquivo do sistema de arquivos no banco de dados do servidor de relatório. Arquivos carregados são representados como itens na hierarquia de pasta de servidor de relatório.  

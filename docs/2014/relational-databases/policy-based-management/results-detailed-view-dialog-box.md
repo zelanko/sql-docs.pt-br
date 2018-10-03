@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.results.f1
 - sql12.swb.dmf.policy.resultdetails.f1
 ms.assetid: 366f0ff8-722a-40a9-934f-854147e4933d
-caps.latest.revision: 20
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 268d240d151c09c8677dd58e900a06944deae1bb
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: c304f672ddcead8ac2077f27d02b65033c4b1b77
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43816822"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48143426"
 ---
 # <a name="results-detailed-view-dialog-box"></a>Caixa de diálogo Exibição Detalhada de Resultados
   Esta caixa de diálogo mostra os resultados da avaliação da política após você ter executado uma política usando a caixa de diálogo **Avaliar Políticas** e ter clicado em **Avaliar**. Esta caixa de diálogo é somente leitura e ajuda a entender qual parte de uma expressão de propriedade poderia estar falhando.  

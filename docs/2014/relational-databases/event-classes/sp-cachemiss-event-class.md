@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - SP:CacheMiss event class
 ms.assetid: 82229233-f772-4558-95a0-d54584d1b1ae
-caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5857e29d1baa025c36199a9462f50b2903ec17ac
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0f5596801574815bea45762df5e91bbce9047841
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37313826"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48141046"
 ---
 # <a name="spcachemiss-event-class"></a>Classe de evento SP:CacheMiss
   A classe de evento SP:CacheMiss indica que o procedimento não foi encontrado no cache. Se a classe de evento SP:CacheMiss ocorrer com muita frequência, isso significa que talvez seja necessário aumentar a memória disponível para o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e, portanto, aumentar o tamanho do cache de procedimento.  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - binding attributes [Analysis Services]
 - attributes [Analysis Services], binding
 - key columns [Analysis Services]
 ms.assetid: a2643be4-8123-4cc3-baf9-e5ec54a1669d
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 10b3735131b85bd071b8f8333bc663f1ed4e109a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b833e41e4fbce47b892bba5d2b3792eeb2771b14
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185339"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48068756"
 ---
 # <a name="modify-the-keycolumn-property-of-an-attribute"></a>Modificar a propriedade KeyColumn de um atributo
   Você pode modificar a propriedade **KeyColumns** de um atributo. Por exemplo, convém especificar uma chave composta em vez de uma chave única como a chave para o atributo.  

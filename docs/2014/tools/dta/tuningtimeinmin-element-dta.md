@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - TuningTimeInMin element
 ms.assetid: 4973d9ac-20fd-4ac3-bc9f-5d60e39fdb7d
-caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 82821b8f8cc728c8b2f15d92af1496714414ea40
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4c81d0dd5ad56db2216143ed847f148467fc2e91
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304626"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48140326"
 ---
 # <a name="tuningtimeinmin-element-dta"></a>Elemento TuningTimeInMin (DTA)
   Especifica o comprimento máximo de uma sessão de ajuste em minutos.  
@@ -51,7 +48,7 @@ ms.locfileid: "37304626"
 |Relação|Elementos|  
 |------------------|--------------|  
 |**Elemento pai**|[Elemento TuningOptions &#40;DTA&#41;](tuningoptions-element-dta.md)|  
-|**Elementos filho**|Nenhum|  
+|**Elementos filho**|None|  
   
 ## <a name="example"></a>Exemplo  
   

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4d67a01c-eae4-49ba-a6e8-8e983c0248f5
-caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6ab466c2e6029a0da5e3ce5498fd85f8a1c8724f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3bd40d6b97215329bb2cab060853fc06ef862dbd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37232606"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48065286"
 ---
 # <a name="site-settings-page-report-manager"></a>Página Configurações de Site (Gerenciador de Relatórios)
   Use a página Configurações de Site para alterar o título do aplicativo, definir padrões do servidor para limites de histórico do relatório e valores de tempo limite de processamento de relatório, gerenciar atribuições de funções de nível de sistema e agendamentos compartilhados. Você deve ter permissões de Gerenciador de Conteúdo e de Administrador de Sistema para exibir essa página.  

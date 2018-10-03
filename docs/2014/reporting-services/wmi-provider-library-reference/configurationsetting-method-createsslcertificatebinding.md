@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - CreateSSLCertificateBinding
 ms.assetid: 407d50e4-0a55-43cb-8ddf-2d82714071b1
-caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b42af3d1cb3f8fffa9560ae7ad832fa1141ff4ae
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: da18ee258d12a667280c601526f0433c1a5b0600
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37168107"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48070486"
 ---
 # <a name="createsslcertificatebinding-method-wmi-msreportserverconfigurationsetting"></a>Método CreateSSLCertificateBinding (WMI MSReportServer_ConfigurationSetting)
   Cria uma associação de Certificado SSL.  
@@ -66,7 +63,7 @@ public void CreateSSLCertificateBinding(string application,
 ## <a name="return-value"></a>Valor retornado  
  Retorna um *HRESULT* indicando êxito ou falha da chamada do método. Um valor 0 indica que a chamada do método foi bem-sucedida; um código de erro indica que a chamada não foi bem-sucedida.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Este método adiciona uma associação a rsreportserver.config para o aplicativo. Caso ainda não exista uma associação em HTTP.SYS, ela será criada ali.  
   
  Antes de criar a associação, a chamada do método examina as Reservas de Url referentes ao aplicativo especificado a fim de determinar se a Associação de Certificado SSL é válida.  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ac516c63-1e79-4ae8-bca6-32d3c1a09c00
-caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2bbe4aa41c05d384a29935d80e39862c1264a254
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 96e4cf621a1c0f7f701012ed479797fc450d1533
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37332696"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48131566"
 ---
 # <a name="configure-maximum-file-upload-size-powerpivot-for-sharepoint"></a>Configurar o tamanho máximo do carregamento de arquivo (PowerPivot para SharePoint)
   As pastas de trabalho PowerPivot geralmente contêm grandes quantidades de dados que resultam em arquivos que excedem o tamanho máximo de arquivo permitido para carregamentos do SharePoint. Ao tentar carregar um arquivo que excede o limite superior, você receberá o seguinte erro no SharePoint:  

@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,16 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - SeekEnum enumeration [ADO]
 ms.assetid: f0ec0c92-8253-47c6-9a14-e5dbccbad219
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f61e71b03a05a8e13c1b069e4880f362ff0985a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a6e044c4a2cda01fcc9cbba2667beaae75a12caf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281585"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47772723"
 ---
 # <a name="seekenum"></a>SeekEnum
 Especifica o tipo de [busca](../../../ado/reference/ado-api/seek-method.md) para executar.  
@@ -32,13 +29,13 @@ Especifica o tipo de [busca](../../../ado/reference/ado-api/seek-method.md) para
 |Constante|Valor|Description|  
 |--------------|-----------|-----------------|  
 |**adSeekFirstEQ**|1|Procura a primeira chave igual a *KeyValues*.|  
-|**adSeekLastEQ**|2|Busca a última chave igual a *KeyValues*.|  
-|**adSeekAfterEQ**|4|Procura uma chave igual a *KeyValues* ou depois que teria ocorrido correspondentes.|  
+|**adSeekLastEQ**|2|A última chave igual de buscas *KeyValues*.|  
+|**adSeekAfterEQ**|4|Buscas de uma chave igual a *KeyValues* ou depois de onde essa correspondência teria ocorrido.|  
 |**adSeekAfter**|8|Procura uma chave depois de onde uma correspondência com *KeyValues* teria ocorrido.|  
-|**adSeekBeforeEQ**|16|Procura uma chave igual a *KeyValues*ou antes que teria ocorrido correspondentes.|  
-|**adSeekBefore**|32|Buscas imediatamente antes de uma chave quando uma correspondência com *KeyValues* teria ocorrido.|  
+|**adSeekBeforeEQ**|16|Buscas de uma chave igual a *KeyValues*ou antes de onde essa correspondência teria ocorrido.|  
+|**adSeekBefore**|32|Buscas imediatamente antes de uma chave em que uma correspondência com *KeyValues* teria ocorrido.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC equivalente  
+## <a name="adowfc-equivalent"></a>Equivalente do ADO/WFC  
  Pacote: **com.ms.wfc.data**  
   
 |Constante|  
