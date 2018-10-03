@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 03/20/2018
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,19 +15,18 @@ f1_keywords:
 helpviewer_keywords:
 - NextRecordset method [ADO]
 ms.assetid: ab1fa449-a695-4987-b1ee-bc68f89418dd
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a1df02b14168a15f9bccc476b62583334b2f0c3f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: cf13e60a25e4368b9e7877b7515aad17e3755071
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279635"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47748324"
 ---
 # <a name="nextrecordset-method-ado"></a>Método NextRecordset (ADO)
-Limpa atual [registros](../../../ado/reference/ado-api/recordset-object-ado.md) de objeto e retorna o próximo **registros** pelo adiantamento por meio de uma série de comandos.  
+Limpa o atual [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) do objeto e retorna o próximo **Recordset** por Avançar até uma série de comandos.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,29 +36,29 @@ Set recordset2 = recordset1.NextRecordset(RecordsAffected )
 ```  
   
 ## <a name="return-value"></a>Valor retornado  
- Retorna um **registros** objeto. No modelo de sintaxe, *recordset1* e *recordset2* pode ser o mesmo **registros** objeto, ou você pode usar objetos separados. Ao usar separada **registros** objetos, redefinindo o **ActiveConnection** propriedade original **registros** (*recordset1*) Depois de **NextRecordset** foi chamado irá gerar um erro.  
+ Retorna um **Recordset** objeto. No modelo de sintaxe *recordset1* e *recordset2* pode ser o mesmo **Recordset** objeto, ou você pode usar objetos separados. Ao usar separado **conjunto de registros** objetos, redefinindo o **ActiveConnection** propriedade no original **conjunto de registros** (*recordset1*) Depois que **NextRecordset** tiver sido chamado irá gerar um erro.  
   
 #### <a name="parameters"></a>Parâmetros  
  *RecordsAffected*  
- Opcional. Um **longo** variável na qual o provedor retorna o número de registros afetada a operação atual.  
+ Opcional. Um **longo** variável na qual o provedor retorna o número de registros afetada da operação atual.  
   
 > [!NOTE]
->  Este parâmetro retorna somente o número de registros afetados por uma operação; ele não retorna uma contagem de registros de uma instrução select usada para gerar o **registros**.  
+>  Esse parâmetro só retorna o número de registros afetados por uma operação; ele não retorna uma contagem de registros de uma instrução select usada para gerar o **conjunto de registros**.  
   
-## <a name="remarks"></a>Remarks  
- Use o **NextRecordset** método para retornar os resultados do próximo comando em uma instrução composta de comando ou de um procedimento armazenado que retorna vários resultados. Se você abrir um **registros** objeto com base em uma instrução composta de comando (por exemplo, "selecionar \* de table1; Selecione \* de table2 ") usando o [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) método em um [comando](../../../ado/reference/ado-api/command-object-ado.md) ou o [abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md) método em um **Recordset**, ADO executa somente o primeiro comando e retorna os resultados para *registros*. Para acessar os resultados dos comandos subsequentes na instrução, chame o **NextRecordset** método.  
+## <a name="remarks"></a>Comentários  
+ Use o **NextRecordset** método para retornar os resultados do comando próxima em uma instrução composta de comando ou de um procedimento armazenado que retorna vários resultados. Se você abrir um **conjunto de registros** objeto com base em uma instrução composta de comando (por exemplo, "selecionar \* FROM table1; Selecione \* de table2 ") usando o [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) método em um [comando](../../../ado/reference/ado-api/command-object-ado.md) ou o [abertos](../../../ado/reference/ado-api/open-method-ado-recordset.md) método em um **Recordset**, ADO executa apenas o primeiro comando e retorna os resultados para *conjunto de registros*. Para acessar os resultados dos comandos subsequentes na instrução, chame o **NextRecordset** método.  
   
- Como há resultados adicionais e o **registros** que contém as declarações compostas é desconectado ou realizar marshaling nos limites de processo, não o **NextRecordset** método continuarão a retornar **registros** objetos. Se um comando de retorno de linha é executado com êxito, mas não retornou nenhum registro retornado **registros** objeto será aberto, mas vazio. Teste para este caso, verificando se o [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) e [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) propriedades estiverem **True**. Se um comando não retornam linhas for executado com êxito, retornado **Recordset** objeto será fechado, que você pode verificar Testando o [estado](../../../ado/reference/ado-api/state-property-ado.md) propriedade no **registros**. Quando não há mais nenhum resultado *registros* será definida como *nada*.  
+ Como há resultados adicionais e o **conjunto de registros** que contém as instruções compostas não está desconectado ou marshaling entre limites de processo, o **NextRecordset** método continuará a retornar **Recordset** objetos. Se um retorno de linha comando for executado com êxito, mas não retornou nenhum registro retornado **Recordset** objeto será aberto, mas vazio. Teste para esse caso, verificando se o [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) e [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) as propriedades são ambos **verdadeiro**. Se um comando não retornar a linha for executado com êxito, retornado **conjunto de registros** objeto será fechado, que você pode verificar Testando a [estado](../../../ado/reference/ado-api/state-property-ado.md) propriedade no **Recordset**. Quando não houver mais nenhum resultado *conjunto de registros* será definido como *nada*.  
   
- O **NextRecordset** método não está disponível em um desconectada **registros** objeto, onde [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) foi definida como **nada**(no Microsoft Visual Basic) ou nulo (em outras linguagens).  
+ O **NextRecordset** método não está disponível em um desconectado **conjunto de registros** objeto, onde [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) foi definido como **nada**(no Microsoft Visual Basic) ou nulo (em outras linguagens).  
   
- Se uma edição está em andamento no modo de atualização imediata, chamando o **NextRecordset** método gera um erro; chamar o [atualizar](../../../ado/reference/ado-api/update-method.md) ou [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) método primeiro.  
+ Se uma edição está em andamento enquanto estiver no modo de atualização imediata, chamando o **NextRecordset** método gera um erro; a chamada a [atualizar](../../../ado/reference/ado-api/update-method.md) ou [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) método primeiro.  
   
- Para passar parâmetros para mais de um comando na instrução composta preenchendo o [parâmetros](../../../ado/reference/ado-api/parameters-collection-ado.md) coleção, ou passando uma matriz com o original **abrir** ou **Execute** chamada, os parâmetros devem ser na mesma ordem na coleção ou matriz de seus respectivos comandos na série de comando. Você deve concluir a leitura de todos os resultados antes de ler os valores de parâmetro de saída.  
+ Para passar parâmetros para mais de um comando na instrução composta, preenchendo a [parâmetros](../../../ado/reference/ado-api/parameters-collection-ado.md) coleção, ou passando uma matriz com o original **abra** ou **Execute** chamada, os parâmetros devem ser na mesma ordem na coleção ou matriz como seus respectivos comandos da série de comando. Você deve concluir a leitura de todos os resultados antes de ler os valores de parâmetro de saída.  
   
- O provedor OLE DB determina quando cada comando em uma instrução composta é executado. O [Microsoft OLE DB Provider para SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md), por exemplo, executa todos os comandos em um lote ao receber a instrução composta. Resultante **conjuntos de registros** simplesmente são retornadas quando você chamar **NextRecordset**.  
+ Seu provedor de OLE DB determina quando cada comando de comando em uma instrução composta é executado. O [Microsoft OLE DB Provider para SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md), por exemplo, executa todos os comandos em um lote após receber a instrução composta. Resultante **conjuntos de registros** simplesmente são retornadas quando você chama **NextRecordset**.  
   
- No entanto, outros provedores podem executar o próximo comando em uma instrução somente depois NextRecordset é chamado. Para esses provedores, se você fechar explicitamente o **registros** objeto antes de passar por meio da instrução de comando inteira, ADO nunca executa os comandos restantes.  
+ No entanto, outros provedores podem executar o próximo comando em uma instrução somente depois NextRecordset é chamado. Para esses provedores, se você fechar explicitamente o **Recordset** objeto antes de passar por meio da instrução de comando inteira, ADO nunca executa os comandos restantes.  
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  

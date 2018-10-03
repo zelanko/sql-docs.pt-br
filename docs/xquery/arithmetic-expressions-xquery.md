@@ -4,31 +4,25 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
 - expressions [XQuery], arithmetic
 - arithmetic expressions
 ms.assetid: 90d675bf-56da-459a-9771-8cd13920a9fc
-caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b39c5febb04d22b5dd79791585cd1c0fb51e1649
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3d970209b71a842aa1c78b2f7dd0db980e0ce73e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33077703"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47642644"
 ---
 # <a name="arithmetic-expressions-xquery"></a>Expressões aritméticas (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +36,7 @@ SELECT @x.query('2 div 2')
 SELECT @x.query('2 * 2')  
 ```  
   
- Porque **idiv** não é tem suporte, uma solução é usar o **xs:integer()** construtor:  
+ Porque **idiv** é uma solução que não tem suporte, é usar o **xs:integer()** construtor:  
   
 ```  
 DECLARE @x xml  
@@ -53,11 +47,11 @@ SET @x=''
 SELECT @x.query('xs:integer(2 div 3)')  
 ```  
   
- O tipo resultante de um operador aritmético é baseado nos tipos dos valores de entrada. Se os operandos forem de tipos diferentes, qualquer um dos dois, ou ambos, quando necessário serão convertidos em um tipo de base primitivo comum, de acordo com a hierarquia do tipo. Para obter informações sobre hierarquia de tipo, consulte [regras de conversão de tipo em XQuery](../xquery/type-casting-rules-in-xquery.md).  
+ O tipo resultante de um operador aritmético é baseado nos tipos dos valores de entrada. Se os operandos forem de tipos diferentes, qualquer um dos dois, ou ambos, quando necessário serão convertidos em um tipo de base primitivo comum, de acordo com a hierarquia do tipo. Para obter informações sobre a hierarquia de tipo, consulte [regras de conversão de tipo em XQuery](../xquery/type-casting-rules-in-xquery.md).  
   
  Promoção de tipo numérico ocorre se as duas operações forem de tipos de base numéricos diferentes. Por exemplo, adicionando um **xs: decimal** para um **xs: Double** alteraria primeiro o valor decimal para um duplo. Em seguida, a adição seria executada de forma a resultar em um valor duplo.  
   
- Valores atômicos não digitados são convertidos para o tipo de base numérica do outro operando, ou para **xs: Double** se o outro operando também não for digitado.  
+ Valores atômicos não digitados são convertidos para o tipo de base numérica do outro operando, ou **xs: Double** se o outro operando também não for digitado.  
   
 ## <a name="implementation-limitations"></a>Limitações de implementação  
  Estas são as limitações:  

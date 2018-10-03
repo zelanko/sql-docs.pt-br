@@ -1,31 +1,28 @@
 ---
-title: Chamado comandos | Microsoft Docs
+title: Comandos citados | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - named commands [ADO]
 - commands [ADO]
 ms.assetid: 5a0ec8f9-5ba3-4f9f-b80d-2073aa049586
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aababf292a838f801e48a9649b9efac12b04f88f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a9d38f80dcc44afa0d399885559b10f20027f906
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271995"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47670580"
 ---
 # <a name="named-commands"></a>Comandos nomeados
-[Criar e executar um comando simples](../../../ado/guide/data/creating-and-executing-a-simple-command.md) mostra uma maneira de executar um comando. Há outra maneira: torná-lo um comando nomeado e, em seguida, chamar essa chamada comando diretamente no **Conexão** objeto (atribuído para o **ActiveConnection** propriedade do **comando** objeto). Um comando de nomenclatura significa a atribuição de um nome para o **nome** propriedade de um **comando** objeto. Por exemplo,  
+[Criar e executar um comando simples](../../../ado/guide/data/creating-and-executing-a-simple-command.md) mostra uma maneira de executar um comando. Há outra maneira: você pode torná-lo em um comando nomeado e, em seguida, chame este comando diretamente no chamado a **Conexão** objeto (atribuído à **ActiveConnection** propriedade do **comando** objeto). Nomear um comando significa que a atribuição de um nome para o **nome** propriedade de uma **comando** objeto. Por exemplo,  
   
 ```  
 objCmd.Name = "GetCustomers"  
@@ -33,7 +30,7 @@ objCmd.ActiveConnection = objConn
 objConn.GetCustomers objRs  
 ```  
   
- O comando nomeado atua como se fosse um "método personalizado" o **Conexão** objeto. O resultado do comando é retornado como um parâmetro de saída desse "método personalizado".  
+ O comando nomeado atua como se fosse um "método personalizado" a **Conexão** objeto. O resultado do comando é retornado como um parâmetro de saída desse "método personalizados".  
   
  O exemplo a seguir ilustra esse recurso.  
   

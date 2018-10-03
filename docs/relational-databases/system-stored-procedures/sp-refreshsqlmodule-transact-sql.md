@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 07/25/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_refreshsqlmodule_TSQL
@@ -26,17 +23,16 @@ helpviewer_keywords:
 - stored procedures [SQL Server], refreshing metadata
 - user-defined functions [SQL Server], refreshing metadata
 ms.assetid: f0022a05-50dd-4620-961d-361b1681d375
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b64e93e6ad5bbcadde77e356cbae72c7f545291e
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: f6527d3b3ee6a0198796688bd4028bf9159406b4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43064561"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47649024"
 ---
 # <a name="sprefreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -61,7 +57,7 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@name=** ] **'***module_name***'**  
+ [  **@name=** ] **'**_módulo\_nome_**'**  
  É o nome do procedimento armazenado, função definida pelo usuário, exibição, gatilho DML, gatilho DDL de nível do banco de dados ou gatilho DDL do nível de servidor. *module_name* não pode ser um common language runtime (CLR) procedimento armazenado ou uma função CLR. *module_name* não pode ser associada a esquema. *module_name* está **nvarchar**, sem padrão. *module_name* pode ser um identificador de várias partes, mas só pode se referir a objetos no banco de dados atual.  
   
  [ **,** @**namespace** =] **'** \<classe > **'**  
@@ -75,7 +71,7 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou um número diferente de zero (falha)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  **sp_refreshsqlmodule** deve ser executado quando forem feitas alterações aos objetos subjacentes ao módulo que afeta sua definição. Caso contrário, o módulo pode produzir resultados inesperados quando consultado ou invocado. Para atualizar uma exibição, você pode usar **sp_refreshsqlmodule** ou **sp_refreshview** com os mesmos resultados.  
   
  **sp_refreshsqlmodule** não afeta quaisquer permissões, propriedades estendidas ou definir opções que estão associadas com o objeto.  

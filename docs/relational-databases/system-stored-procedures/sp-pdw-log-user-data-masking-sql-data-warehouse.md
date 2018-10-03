@@ -4,11 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
-ms.service: sql-data-warehouse
-ms.component: system-objects
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -17,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 16de9489583cce2e696a94c75c7e5fd3ac1c0fe1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 23d7846bd72329a62579765679687204a8e14ec5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37993708"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47630234"
 ---
 # <a name="sppdwloguserdatamasking-sql-data-warehouse"></a>sp_pdw_log_user_data_masking (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -56,7 +52,7 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
   
  Executando **sp_pdw_ log_user_data_masking** sem parâmetros reverte o estado atual da máscara de dados de usuário de log TDE no dispositivo como um conjunto de resultado escalar.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Dados de usuário de mascaramento na [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] permite a substituição de literais de logs de atividades com valores constantes predefinidas na **selecione** e instruções DML, como eles podem conter dados de usuário. Definindo *masking_mode* como 1 não mascara metadados, como nomes de coluna ou tabela. Definindo *masking_mode* 2 remove as instruções com metadados, como nomes de coluna ou tabela.  
   
  Dados de usuário de mascaramento no [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] os logs de atividade é implementado da seguinte maneira:  

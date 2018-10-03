@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_describe_cursor
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_cursor
 ms.assetid: 0c836c99-1147-441e-998c-f0a30cd05275
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 81b6e932fb824d636b06dc92980114fbb956ff08
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 256f1add5399d3e9c5795440d80670f66a096cb6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43034820"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47651684"
 ---
 # <a name="spdescribecursor-transact-sql"></a>sp_describe_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +90,7 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
 |last_operation|**tinyint**|Última operação executada no cursor:<br /><br /> 0 = Nenhuma operação foi executada no cursor.<br /><br /> 1 = OPEN<br /><br /> 2 = FETCH<br /><br /> 3 = INSERIR<br /><br /> 4 = UPDATE<br /><br /> 5 = EXCLUIR<br /><br /> 6 = CLOSE<br /><br /> 7 = DEALLOCATE|  
 |cursor_handle|**int**|Um valor exclusivo para o cursor dentro do escopo do servidor.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  sp_describe_cursor descreve os atributos que são globais para um cursor de servidor, como a capacidade de rolagem e atualização. Use sp_describe_cursor_columns para uma descrição dos atributos do conjunto de resultados retornado pelo cursor. Use sp_describe_cursor_tables para obter um relatório das tabelas base referenciadas pelo cursor. Para obter um relatório dos cursores de servidor [!INCLUDE[tsql](../../includes/tsql-md.md)] visíveis na conexão, use sp_cursor_list.  
   
  Uma instrução DECLARE CURSOR pode exigir um tipo de cursor que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] não suporta usando a instrução SELECT que está contida no DECLARE CURSOR. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] converte o cursor implicitamente a um tipo que ofereça suporte para usar a instrução SELECT. Se TYPE_WARNING for especificado na instrução DECLARE CURSOR, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enviará ao aplicativo uma mensagem informativa de que uma conversão foi concluída. sp_describe_cursor, em seguida, pode ser chamado para determinar o tipo de cursor que foi implementado.  

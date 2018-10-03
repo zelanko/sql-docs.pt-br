@@ -6,23 +6,20 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Execute21 method [RDS]
 ms.assetid: 9f131c8d-1497-416d-8209-abb481c38f7b
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ad55d02436d5d2ef0667e1b444ab68da5c526f46
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: ab67abb878cd5eea91aff9c8d055baec0ef87329
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40392894"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47717144"
 ---
 # <a name="execute21-method-rds"></a>Método Execute21 (RDS)
 Executa a solicitação e cria um conjunto de registros ADO para uso no ADO 2.1.  
@@ -73,7 +70,7 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
  *pParameters*  
  Uma variante que contém uma matriz segura de definições de parâmetro. Se o *GetInfo* opção foi especificada no *lExecuteOptions*, esse parâmetro é usado para retornar as definições de parâmetro obtidas do provedor OLE DB. Caso contrário, esse parâmetro pode estar vazio.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O *HandlerString* parâmetro pode ser nulo. O que ocorre nesse caso depende de como o servidor RDS é configurado. Uma cadeia de caracteres do manipulador de "MSDFMAP.handler" indica que o manipulador fornecido pela Microsoft (Msdfmap.dll) deve ser usado. Uma cadeia de caracteres do manipulador de "MASDFMAP.handler,sample.ini" indica que o manipulador Msdfmap.dll deve ser usado e que o argumento "sample.ini" deve ser passado para o manipulador. MSDFMAP.dll interpretará o argumento como uma direção para usar o sample.ini para verificar as cadeias de conexão e consulta.  
   
 > [!NOTE]

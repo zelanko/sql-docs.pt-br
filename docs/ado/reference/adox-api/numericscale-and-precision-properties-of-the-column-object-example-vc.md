@@ -1,13 +1,11 @@
 ---
-title: NumericScale e propriedades de precisão de exemplo da coluna (VC + +) | Microsoft Docs
+title: Propriedades NumericScale e Precision do exemplo de coluna (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - Precision property [ADOX], VC++ example
 - NumericScale property [ADOX], VC++ example
 ms.assetid: 69653366-ebd7-4ff6-a654-761772223b0c
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6cb5e3c3554d5930f78e688e40ae782864154a1c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 71ecb8c981bafad0bcbc2c53b27140adad9281ac
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286545"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47616904"
 ---
-# <a name="numericscale-and-precision-properties-of-the-column-object-example-vc"></a>NumericScale e propriedades de precisão de exemplo do objeto de coluna (VC + +)
-Este exemplo demonstra o [NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md) e [precisão](../../../ado/reference/adox-api/precision-property-adox.md) propriedades do [coluna](../../../ado/reference/adox-api/column-object-adox.md) objeto. Este código exibe o valor para o **Order Details** tabela do *Northwind* banco de dados.  
+# <a name="numericscale-and-precision-properties-of-the-column-object-example-vc"></a>Exemplo das propriedades NumericScale e Precision do objeto Column (VC++)
+Este exemplo demonstra a [NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md) e [Precision](../../../ado/reference/adox-api/precision-property-adox.md) propriedades do [coluna](../../../ado/reference/adox-api/column-object-adox.md) objeto. Esse código exibe seu valor para o **detalhes do pedido** tabela da *Northwind* banco de dados.  
   
 ```  
 // BeginNumericScalePrecCpp.cpp  

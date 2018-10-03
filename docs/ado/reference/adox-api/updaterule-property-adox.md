@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -19,25 +17,24 @@ f1_keywords:
 helpviewer_keywords:
 - UpdateRule property [ADOX]
 ms.assetid: f4e21060-40cb-4790-8611-4086a092dda2
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 24375b3faa749889fe98d2d3f99815bc48987439
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7a5845f8f595ee58c0085f022eff7f7c499887a5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287185"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47623575"
 ---
 # <a name="updaterule-property-adox"></a>Propriedade UpdateRule (ADOX)
-Indica a ação executada quando um primário [chave](../../../ado/reference/adox-api/key-object-adox.md) é atualizada.  
+Indica a ação executada quando um primário [chave](../../../ado/reference/adox-api/key-object-adox.md) é atualizado.  
   
-## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
- Define e retorna um **longo** que pode ser um valor de [RuleEnum](../../../ado/reference/adox-api/ruleenum.md) constantes. O valor padrão é **adRINone**.  
+## <a name="settings-and-return-values"></a>As configurações e valores de retorno  
+ Define e retorna um **longo** valor que pode ser um dos [RuleEnum](../../../ado/reference/adox-api/ruleenum.md) constantes. O valor padrão é **adRINone**.  
   
-## <a name="remarks"></a>Remarks  
- Essa propriedade é somente leitura no [chave](../../../ado/reference/adox-api/key-object-adox.md) já acrescentados à coleção de objetos.  
+## <a name="remarks"></a>Comentários  
+ Essa propriedade é somente leitura no [chave](../../../ado/reference/adox-api/key-object-adox.md) já foi acrescentados à coleção de objetos.  
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Key (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  

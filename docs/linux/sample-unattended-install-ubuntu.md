@@ -7,16 +7,14 @@ manager: craigg
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 19e73b1dfa4ced0c987f2bc8c78a020b29f7b7a0
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: dc6d12a52c20bf3269f52fcc8d2ef87c4366061f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084748"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47626517"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>Exemplo: De script de instalação autônoma do SQL Server para Ubuntu
 

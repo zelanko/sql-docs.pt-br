@@ -1,13 +1,11 @@
 ---
-title: Programação de ADO JScript | Microsoft Docs
+title: Programação ADO JScript | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - JScript
@@ -15,35 +13,34 @@ helpviewer_keywords:
 - JScript programming in ADO
 - ADO, JScript programming
 ms.assetid: 62273658-0fe7-4aac-b4d8-f725e6baf043
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3ddf5486305d0d0e19de266e12a35987899846e6
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 63559af64241be111ed99c9996b63c1978b3d649
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270295"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47655624"
 ---
-# <a name="jscript-ado-programming"></a>Programação de ADO do JScript
-## <a name="creating-an-ado-project"></a>Criando um projeto de ADO  
- Microsoft JScript não oferece suporte a bibliotecas de tipo, portanto não é necessário para a referência ADO em seu projeto. Consequentemente, não há recursos associados como conclusão de linha de comando têm suporte. Além disso, por padrão, constantes enumerado do ADO não são definidos no JScript.  
+# <a name="jscript-ado-programming"></a>Programação ADO JScript
+## <a name="creating-an-ado-project"></a>Criando um projeto do ADO  
+ Microsoft JScript não oferece suporte a bibliotecas de tipos, para que você não precise referência ADO em seu projeto. Consequentemente, não há suporte para nenhum recurso associado, como a conclusão do linha de comando. Além disso, por padrão, constantes enumerado do ADO não são definidos no JScript.  
   
- No entanto, o ADO fornece que incluir com dois arquivos que contém as definições a seguir para ser usado com JScript:  
+ No entanto, o ADO oferece que incluir com dois arquivos que contém as definições a seguir para ser usado com JScript:  
   
--   Para uso em scripts do lado do servidor Adojavas.inc, que é instalado nas pastas de biblioteca do ADO.  
+-   Para o uso de scripts de servidor Adojavas.inc, que é instalado nas pastas de biblioteca do ADO.  
   
--   Para uso em scripts do lado do cliente Adcjavas.inc, que é instalado nas pastas de biblioteca do ADO.  
+-   Para o uso de scripts de cliente Adcjavas.inc, que é instalado nas pastas de biblioteca do ADO.  
   
- Você pode copiar e colar definições de constantes desses arquivos em suas páginas ASP ou, se você estiver fazendo scripts de servidor, copie o arquivo de Adojavas.inc para uma pasta no seu site da Web e faz referência a ele na página ASP como este:  
+ Você pode copiar e colar definições de constantes desses arquivos em suas páginas ASP ou, se você estiver fazendo a criação de scripts do lado do servidor, copie o arquivo de Adojavas.inc para uma pasta no seu site da Web e faz referência a ela da sua página ASP assim:  
   
 ```  
 <!--#include File="adojavas.inc"-->  
 ```  
   
-## <a name="creating-ado-objects-in-jscript"></a>Criando objetos ADO em JScript  
- Você deve usar o **CreateObject** chamada de função:  
+## <a name="creating-ado-objects-in-jscript"></a>Criando objetos do ADO em JScript  
+ Em vez disso, você deve usar o **CreateObject** chamada de função:  
   
 ```  
 var Rs1;  
@@ -51,7 +48,7 @@ Rs1 = Server.CreateObject("ADODB.Recordset");
 ```  
   
 ## <a name="jscript-example"></a>Exemplo de JScript  
- O código a seguir é um exemplo genérico da programação do lado do servidor JScript em um arquivo de Active Server Page (ASP) que abre uma **registros** objeto:  
+ O código a seguir está um exemplo genérico da programação do lado do servidor de JScript em um arquivo de Active Server Page (ASP) que abre uma **Recordset** objeto:  
   
 ```  
 <%  @LANGUAGE="JScript" %>  

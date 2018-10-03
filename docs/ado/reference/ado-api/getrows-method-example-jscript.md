@@ -6,27 +6,24 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - JScript
 helpviewer_keywords:
 - Getrows method [ADO], JScript example
 ms.assetid: d33467a5-5a56-450d-98c1-c3ce6f9f103c
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 95799c397b5822b0169c9fcdca74c489880dbb0e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f53eec72ed95a453b8343998ef438fded10f87b0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278825"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47645614"
 ---
 # <a name="getrows-method-example-jscript"></a>Exemplo do método GetRows (JScript)
-Este exemplo usa o [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) método para recuperar todas as linhas do *Custiomers* tabela um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) e preencher uma matriz com os dados resultantes. O **GetRows** método retornará a menos que o número desejado de linhas em dois casos: ou se [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) foi atingido, ou se **GetRows** tentou recuperar um registro que foi excluído por outro usuário. A função retorna **False** somente se o segundo caso ocorre. Recorte e cole o seguinte código ao bloco de notas ou outro editor de texto e salve-o como **GetRowsJS.asp**.  
+Este exemplo usa o [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) método para recuperar todas as linhas da *Custiomers* da tabela de um [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) e preencher uma matriz com os dados resultantes. O **GetRows** método retornará a menos que o número desejado de linhas em dois casos: ambos if [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) tiver sido atingido, ou se **GetRows** tentou recuperar um registro que foi excluído por outro usuário. A função retornará **falsos** somente se o segundo caso ocorre. Recortar e colar o seguinte código ao bloco de notas ou outro editor de texto e salve-o como **GetRowsJS.asp**.  
   
 ```  
 <!-- BeginGetRowsJS -->  
@@ -163,5 +160,5 @@ BODY {
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Método GetRows (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)   
+ [Exemplo do método GetRows (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)   
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

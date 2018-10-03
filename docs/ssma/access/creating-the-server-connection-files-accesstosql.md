@@ -4,27 +4,21 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 08/17/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 829153be-aa8e-4162-87e8-69882feecf19
-caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: c6e46ab77966f6f6f392de64c076c4560c7885ab
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: f083b38d64927ded898366434def4505cd3f67c7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34773622"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47672654"
 ---
 # <a name="creating-the-server-connection-files-accesstosql"></a>Criando o servidor de arquivos de conexão (AccessToSQL)
-Informações do servidor podem ser especificado na seção de servidores do arquivo de script. Informações do servidor também podem ser especificadas em um arquivo de conexão de servidor separado. O parâmetro de linha de comando para o arquivo de conexão de servidor é `-c <serverconnectionfile>`. Se a mesma id de servidor estiver presente em arquivos de conexão do servidor e o script, a definição de servidor no arquivo de script é considerada.  
+Informações do servidor podem ser especificado na seção de servidores do arquivo de script. Informações do servidor também podem ser especificadas em um arquivo de conexão de servidor separado. O parâmetro de linha de comando para o arquivo de conexão do servidor é `-c <serverconnectionfile>`. Se a mesma id de servidor estiver presente nos arquivos de conexão o script e o servidor, a definição de servidor no arquivo de script é considerada.  
   
 ```xml  
 <!--Sample of server connection file commands -->  
@@ -68,10 +62,10 @@ Informações do servidor podem ser especificado na seção de servidores do arq
 ```  
   
 ## <a name="server-connection-file-validation"></a>Validação do arquivo de conexão de servidor  
-O usuário facilmente possa validar o arquivo de conexão de servidor no arquivo de definição de esquema **'A2SSConsoleScriptServersSchema.xsd'** disponíveis na pasta 'Esquemas'.  
+O usuário pode validar com facilidade seu arquivo de conexão de servidor contra o arquivo de definição de esquema **'A2SSConsoleScriptServersSchema.xsd'** disponível na pasta "Esquemas".  
   
 ## <a name="next-step"></a>Próxima etapa  
-A próxima etapa no operando o console é [executando o Console SSMA &#40;AccessToSQL&#41;](../../ssma/access/executing-the-ssma-console-accesstosql.md)  
+É a próxima etapa no operando o console [executar o Console do SSMA &#40;AccessToSQL&#41;](../../ssma/access/executing-the-ssma-console-accesstosql.md)  
   
 ## <a name="see-also"></a>Confira também  
 [Executar o Console do SSMA (acesso)](http://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  

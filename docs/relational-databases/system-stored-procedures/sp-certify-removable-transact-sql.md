@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_certify_removable_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_certify_removable
 ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ba9ff14bc26b18eaf80dff000f141502a01fcc7b
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 1d2586f1ad5f7be9b5916caea7699ca9c90f22db
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238726"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47691404"
 ---
 # <a name="spcertifyremovable-transact-sql"></a>sp_certify_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,16 +45,16 @@ sp_certify_removable [ @dbname= ] 'dbname'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@dbname=**] **'***dbname***'**  
- Especifica o banco de dados a ser verificado. *DBName* é **sysname**.  
+ Especifica o banco de dados a ser verificado. *DBName* está **sysname**.  
   
  [  **@autofix=**] **'auto'**  
- Atribui a propriedade do banco de dados e todos os objetos de banco de dados ao administrador de sistema e descarta quaisquer usuários de banco de dados criados pelo usuário e permissões não padrão. *auto* é **nvarchar (4)**, com um padrão NULL.  
+ Atribui a propriedade do banco de dados e todos os objetos de banco de dados ao administrador de sistema e descarta quaisquer usuários de banco de dados criados pelo usuário e permissões não padrão. *auto* está **nvarchar(4)**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
-## <a name="remarks"></a>Remarks  
- Se o banco de dados está configurado corretamente, **sp_certify_removable** executa o seguinte:  
+## <a name="remarks"></a>Comentários  
+ Se o banco de dados estiver configurado corretamente, **sp_certify_removable** executará o seguinte:  
   
 -   Configura o banco de dados em modo offline para que os arquivos possam ser copiados.  
   
@@ -66,9 +62,9 @@ sp_certify_removable [ @dbname= ] 'dbname'
   
 -   Marca os grupos de arquivos de dados como somente leitura, para que esses arquivos possam ser copiados para mídia somente leitura.  
   
- O administrador de sistema deve ser o proprietário do banco de dados e de todos os objetos de banco de dados. O administrador do sistema é um usuário conhecido que existe em todos os servidores que estão executando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e pode ser esperado de existir quando o banco de dados mais tarde é distribuído e instalado.  
+ O administrador de sistema deve ser o proprietário do banco de dados e de todos os objetos de banco de dados. O administrador do sistema é um usuário conhecido que existe em todos os servidores que estão executando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e podem ser esperados de existir quando o banco de dados mais tarde é distribuído e instalado.  
   
- Se você executar **sp_certify_removable** sem o **automática** valor e ele retorna informações sobre qualquer uma das seguintes condições:  
+ Se você executar **sp_certify_removable** sem o **automático** valor e ele retorna informações sobre qualquer uma das seguintes condições:  
   
 -   O administrador de sistema não é o proprietário do banco de dados.  
   
@@ -80,14 +76,14 @@ sp_certify_removable [ @dbname= ] 'dbname'
   
  Você pode corrigir estas condições das seguintes formas:  
   
--   Use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ferramentas e procedimentos e execute **sp_certify_removable** novamente.  
+-   Use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as ferramentas e procedimentos e execute **sp_certify_removable** novamente.  
   
--   Basta executar **sp_certify_removable** com o **automática** valor.  
+-   Basta executar **sp_certify_removable** com o **automático** valor.  
   
  Note que este procedimento armazenado somente verifica os usuários e as permissões de usuário. Você pode adicionar grupos ao banco de dados e conceder permissões a esses grupos. Para obter mais informações, veja [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md).  
   
 ## <a name="permissions"></a>Permissões  
- Execute as permissões são restritas aos membros do **sysadmin** função de servidor fixa.  
+ Execute permissões são restritas aos membros do **sysadmin** função de servidor fixa.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir certifica que o banco de dados `inventory` está pronto para ser removido.  

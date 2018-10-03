@@ -1,27 +1,24 @@
 ---
-title: Propriedades do objeto de conjunto de registros, métodos e eventos | Microsoft Docs
+title: As propriedades do objeto de conjunto de registros, métodos e eventos | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Recordset object [ADO], members
 ms.assetid: 4295a6e5-112d-4595-b18a-57728893ac2d
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0d00e286b1386d51e0bc854d48a14bc2f64555eb
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 038797e8376b8bff6b0e521ef8b2753d41706fd8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281175"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47691314"
 ---
 # <a name="recordset-object-properties-methods-and-events"></a>Eventos, métodos e propriedades do objeto de conjunto de registros
 ## <a name="propertiescollections"></a>Propriedades/coleções  
@@ -33,7 +30,7 @@ ms.locfileid: "35281175"
   
  [Propriedade ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)  
   
- [Propriedades BOF e EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)  
+ [BOF, EOF propriedades](../../../ado/reference/ado-api/bof-eof-properties-ado.md)  
   
  [Propriedade Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)  
   
@@ -92,7 +89,7 @@ ms.locfileid: "35281175"
   
  [Método Close](../../../ado/reference/ado-api/close-method-ado.md)  
   
- [Método CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)  
+ [Exemplo do método CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)  
   
  [Método Delete (Conjunto de registros ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)  
   
@@ -131,13 +128,13 @@ ms.locfileid: "35281175"
   
  [Evento FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md)  
   
- [Eventos de FieldChangeComplete e WillChangeField](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)  
+ [Eventos WillChangeField e Fieldchangecomplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)  
   
- [Eventos de RecordChangeComplete e WillChangeRecord](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)  
+ [Eventos WillChangeRecord e Recordchangecomplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)  
   
- [Eventos de RecordsetChangeComplete e WillChangeRecordset](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)  
+ [Eventos WillChangeRecordset e Recordsetchangecomplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)  
   
- [Eventos de MoveComplete e WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)  
+ [Eventos WillMove e Movecomplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

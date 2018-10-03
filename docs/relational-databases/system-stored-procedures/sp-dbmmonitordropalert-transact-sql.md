@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_dbmmonitordropalert_TSQL
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - database mirroring [SQL Server], monitoring
 - sp_dbmmonitordropalert
 ms.assetid: fe4a134b-25bf-464e-a5c4-358de215b65a
-caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 06db1e7cfdd158bb6097d13cc51ccd75d0413d39
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: d21b966df55cc796fb97c3994e37b87ba62501d2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33239556"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47708044"
 ---
 # <a name="spdbmmonitordropalert-transact-sql"></a>sp_dbmmonitordropalert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +48,7 @@ sp_dbmmonitordropalert database_name
  *alert_id*  
  Um valor inteiro que identifica o aviso a ser ignorado. Se este argumento for omitido, serão ignorados todos os avisos no banco de dados. Para ignorar o aviso de uma métrica de desempenho específica, especifique um dos seguintes valores:  
   
-|Value|Métrica de desempenho|Limite de aviso|  
+|Valor|Métrica de desempenho|Limite de aviso|  
 |-----------|------------------------|-----------------------|  
 |1|Transação não enviada mais antiga|Especifica o número de minutos de transações que podem ser acumuladas na fila de envio, antes da geração de um aviso na instância do servidor principal. Esse aviso ajuda a medir o potencial de perda de dados em termos de tempo, e é particularmente relevante para o modo de alto desempenho. No entanto, o aviso também é relevante para o modo de segurança alta, quando o espelhamento é pausado ou suspenso devido à desconexão dos parceiros.|  
 |2|Log não enviado|Especifica quantos quilobytes (KB) de log não enviado geram um aviso na instância do servidor principal. Esse aviso ajuda a medir o potencial de perda de dados em termos de KB e é particularmente relevante para o modo de alto desempenho. No entanto, o aviso também é relevante para o modo de segurança alta, quando o espelhamento é pausado ou suspenso devido à desconexão dos parceiros.|  
@@ -63,13 +59,13 @@ sp_dbmmonitordropalert database_name
 > [!NOTE]  
 >  Este procedimento descarta os limites de aviso, independentemente se eles foram especificados usando **sp_dbmmonitorchangealert** ou Monitor de espelhamento de banco de dados.  
   
- Para obter informações sobre as IDs de eventos que correspondem aos avisos, consulte [Use limites de aviso e alertas em métricas de desempenho de espelhamento &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md).  
+ Para obter informações sobre as IDs de eventos que correspondem aos avisos, consulte [alertas em métricas de desempenho de espelhamento e os limites de aviso de uso &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md).  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- Nenhuma  
+ None  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma  
+ None  
   
 ## <a name="permissions"></a>Permissões  
  Exige associação à função de servidor fixa **sysadmin** .  

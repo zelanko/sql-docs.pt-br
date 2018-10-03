@@ -4,33 +4,27 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 0bc0d5e8-b092-413e-a0ee-7ef2c516d324
-caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 2a3e375bdae16d3a7b6a448c0fd6afc8b16f4809
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 6e6801fec8392336f3351513a2db9111bafaaa60
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34778432"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47701534"
 ---
-# <a name="global-settings-editor-sybasetosql"></a>Configurações globais (Editor) (SybaseToSQL)
-Use a página do Editor do **configurações globais** caixa de diálogo para especificar configurações de janelas do editor de código.  
+# <a name="global-settings-editor-sybasetosql"></a>Configurações globais (editor) (SybaseToSQL)
+Use a página do Editor do **configurações globais** caixa de diálogo para especificar configurações para janelas do editor de código.  
   
-Para acessar as configurações do editor, no **ferramentas** menu, selecione **configurações globais**, clique em **GUI** na parte inferior do painel esquerdo e, em seguida, selecione **Editor**.  
+Para acessar as configurações do editor, na **ferramentas** menu, selecione **configurações globais**, clique em **GUI** na parte inferior do painel esquerdo e, em seguida, selecione **Editor**.  
   
 ## <a name="options"></a>Opções  
-**Mostrar os números de linha**  
-Para exibir números de linha nas janelas do editor de código, selecione **True**.  
+**Mostrar números de linha**  
+Para exibir números de linha nas janelas do editor de código, selecione **verdadeira**.  
   
-Se uma janela do editor de código é selecionada quando você alterar essa configuração, você precisará selecionar novamente o objeto atual para atualizar a exibição.  
+Se uma janela do editor de código for selecionada quando você alterar essa configuração, você precisa selecionar novamente o objeto atual para atualizar a exibição.  
   

@@ -1,34 +1,31 @@
 ---
-title: COMO as limitações de predicado | Microsoft Docs
+title: Limitações do predicado LIKE | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - LIKE predicate limitations [ODBC]
 - ODBC SQL grammar, LIKE predicate limitations
 ms.assetid: dbd39099-caf6-4c4c-9ad8-f6c63c1bd5e4
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 891c6499f54c56635d74289517e8cf33f66ba4ee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8035eed9e0aaff1f914f386b6d4bc9f2d65f9a0f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32899261"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47652965"
 ---
-# <a name="like-predicate-limitations"></a>COMO as limitações de predicado
-Se os dados em uma coluna são maiores que 255 caracteres, a comparação LIKE se baseará apenas os primeiros 255 caracteres.  
+# <a name="like-predicate-limitations"></a>Limitações do predicado LIKE
+Se os dados em uma coluna forem maiores que 255 caracteres, a comparação LIKE se baseará apenas os primeiros 255 caracteres.  
   
- Um tipo usado em um procedimento tem suporte apenas com padrões constantes. Os Drivers de banco de dados de área de trabalho oferecem suporte a SQL-92 como correspondência de padrões.  
+ Um tipo usado em um procedimento é compatível apenas com padrões constantes. Os Drivers de banco de dados de área de trabalho dão suporte a SQL-92, como correspondência de padrões.  
   
  Não há suporte para o uso de uma cláusula de escape em um predicado LIKE.  
   
- Uma comparação LIKE não deve ser executada em uma coluna que contém dados de um tipo de dados numérico ou float. Os resultados podem ser imprevisíveis. Para obter mais informações, consulte o *guia do programador do Microsoft Jet Database Engine*.
+ Uma comparação LIKE não podem ser realizada em uma coluna que contém dados de um tipo de dados numéricos ou de float. Os resultados podem ser imprevisíveis. Para obter mais informações, consulte o *guia do programador do Microsoft Jet banco de dados Engine*.

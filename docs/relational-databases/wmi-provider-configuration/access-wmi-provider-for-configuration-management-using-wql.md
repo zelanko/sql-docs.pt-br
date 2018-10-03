@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - query language [WMI]
@@ -16,16 +13,15 @@ helpviewer_keywords:
 - WQL [WMI]
 - WMI Provider for Configuration Management, WQL
 ms.assetid: 26499530-d93b-452b-bbe4-217ef1d11e68
-caps.latest.revision: 16
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: cece73ebb5402fe2f725fedbcdf7cdc833d08265
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e05bbb4a9d41f88c4c2981aff9a3565bbc14bb92
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33013173"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47692824"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-wql"></a>Acessar o provedor WMI para o gerenciamento de configuração usando o WQL
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +31,7 @@ ms.locfileid: "33013173"
   
 ### <a name="querying-services-using-wbemtest"></a>Consultando serviços que usam WBEMtest  
   
-1.  Do **iniciar** menu, clique em **executar**e, em seguida, digite **WBEMtest**.  
+1.  Do **inicie** menu, clique em **execute**e, em seguida, insira **WBEMtest**.  
   
 2.  A caixa de diálogo de WBEMtest.exe é exibida. Clique em **Conectar**.  
   
@@ -43,6 +39,6 @@ ms.locfileid: "33013173"
   
 4.  Clique em **consulta**. Digite uma consulta que retorna os serviços atuais em execução no computador local: **selecionar \* de SqlService.** Clique em **Aplicar**.  
   
-5.  Refine a consulta adicionando **onde ServiceName = "MSSQLSERVER"**.  
+5.  Refinar ainda mais a consulta adicionando **em que ServiceName = "MSSQLSERVER"**.  
   
   

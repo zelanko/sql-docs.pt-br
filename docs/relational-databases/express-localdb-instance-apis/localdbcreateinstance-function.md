@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: localdb
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - LocalDBCreateInstance
@@ -17,16 +14,15 @@ apilocation:
 - sqluserinstance.dll
 apitype: DLLExport
 ms.assetid: 3eebb485-8a53-4a79-82a9-57b8de9f8e84
-caps.latest.revision: 16
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6ad7fb0b3df6cbaef9f5bd236347a9aa129d317d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 717dc71d20951d5bed3868b74dcbefad11ee874d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32938081"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47669674"
 ---
 # <a name="localdbcreateinstance-function"></a>Função LocalDBCreateInstance
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -103,7 +99,7 @@ HRESULT LocalDBCreateInstance(
  [LOCALDB_ERROR_INTERNAL_ERROR](../../relational-databases/express-localdb-error-messages/localdb-error-internal-error.md)  
  Erro inesperado. Consulte o log de eventos para obter detalhes.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Se uma instância de LocalDB completamente funcional com o nome especificado já existir e sua versão for igual a ou mais alta que a solicitada, o resultado será S_OK.  
   
  Em casos em que uma instância existente torna-se corrompida, chamadas subsequentes para a API do método **LocalDBCreateInstance** falharão. As instâncias corrompidas devem ser corrigidas manualmente ou explicitamente excluídas antes de poderem ser usadas novamente.  
