@@ -4,17 +4,16 @@ ms.date: 02/27/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: troubleshooting
-ms.suite: pro-bi
 ms.topic: conceptual
 ms.assetid: 1e0fb399-4c16-438a-92cb-db3e877896d0
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 73b5fe3ae626076b6579671038c50ccc8cd87380
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 13a32ba9923a1655b6b8f44d6be2ad4617127edf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43281931"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47646601"
 ---
 # <a name="troubleshoot-reporting-services-report-rendering-issues"></a>Solucionar problemas de renderização de relatório do Reporting Services
 Após a combinação dos dados do relatório e das informações de layout, o relatório compilado é enviado a um renderizador de relatório. Por exemplo, quando você visualiza um relatório localmente, está usando o renderizador HTML para exibir o relatório compilado. Use este tópico para ajudar a solucionar problemas específicos da renderização de relatório.   

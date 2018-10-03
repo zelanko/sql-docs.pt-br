@@ -4,7 +4,6 @@ ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: tools
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - items [Reporting Services], deleting
@@ -13,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 57381914-3106-4dc4-acd4-7ed5b565cca6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 69dbe5d284c7d384805c9fb4ea8fd6d652866612
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 1b089c749a1f7a9ef55d82b5c324f80d5de3dfb1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43270144"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47667134"
 ---
 # <a name="delete-an-item-management-studio"></a>Excluir um item (Management Studio)
   Quando está conectado a uma instância do servidor de relatório no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], você pode excluir definições de função e agendas compartilhadas. Você não pode excluir relatórios, modelos ou outros itens de um servidor de relatório. Para excluir o conteúdo do servidor de relatório, use o Gerenciador de Relatórios. Ou, se o servidor de relatório estiver configurado para o modo integrado do SharePoint, use os recursos de gerenciamento de itens da biblioteca do SharePoint que contém o conteúdo.  

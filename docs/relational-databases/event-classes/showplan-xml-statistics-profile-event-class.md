@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Showplan XML Statistics Profile event class
 ms.assetid: 77e8ca69-d98a-4acd-9d6a-f825bf079d84
-caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 40fff948ae867dab96c129faf1d123863800b9bc
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: d4be2b5d0c7d1beacd7c13c1fc6cf57e02fc0113
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43068979"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47661514"
 ---
 # <a name="showplan-xml-statistics-profile-event-class"></a>classe de evento Showplan XML Statistics Profile
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

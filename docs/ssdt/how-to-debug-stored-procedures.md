@@ -6,22 +6,19 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL.DATA.TOOLS.EXECUTESTOREDPROCEDURE.DIALOG
 ms.assetid: e3c8707f-0f6b-4265-8a5a-81f079330b52
-caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f2cae581128fc80d2dd447998d3e49ae5e0d8866
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 70ed380939046fd66f3d829c96d798190c039918
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087388"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47605144"
 ---
 # <a name="how-to-debug-stored-procedures"></a>Como: Depurar procedimentos armazenados
 O depurador Transact\-SQL permite depurar procedimentos armazenados interativamente exibindo a pilha de chamadas de SQL, variáveis locais e parâmetros para o procedimento armazenado de SQL. Assim como a depuração em outras linguagens de programação, você pode exibir e modificar variáveis e parâmetros locais, exibir variáveis globais, bem como controlar e gerenciar pontos de interrupção enquanto depura seu script Transact\-SQL.  
