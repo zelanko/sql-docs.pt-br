@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Axis Element
@@ -22,16 +20,15 @@ f1_keywords:
 helpviewer_keywords:
 - Axis element
 ms.assetid: 336895e1-4a57-4b43-9a53-e31569866e6c
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e3e68903dc828f4b14ac60892d1b6fc2baed2f30
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8587e1cdb0105d72d2bc0219c8d038ca0bd03ca4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37263222"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153450"
 ---
 # <a name="axis-element-xmla"></a>Elemento Axis (XMLA)
   Contém um conjunto de tuplas utilizado para representar um único eixo em um conjunto de dados multidimensional contido por um [eixos](axes-element-xmla.md) elemento que usa o [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) retornado por tipo de dados, o [Execute](../xml-elements-methods-execute.md) método.  
@@ -56,8 +53,8 @@ ms.locfileid: "37263222"
   
 |Característica|Description|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|Nenhum|  
-|Valor padrão|Nenhum|  
+|Comprimento e tipo de dados|None|  
+|Valor padrão|None|  
 |Cardinalidade|0-n: Elemento opcional que pode ocorrer mais de uma vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -67,7 +64,7 @@ ms.locfileid: "37263222"
 |Elementos pai|[Eixos](axes-element-xmla.md)|  
 |Elementos filho|[CrossProduct](crossproduct-element-xmla.md) ou [tuplas](tuples-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O conteúdo do elemento `Axis` varia dependendo do valor da propriedade XMLA `AxisFormat` utilizada pelo método `Execute`.  
   
 ## <a name="tupleformat"></a>TupleFormat  

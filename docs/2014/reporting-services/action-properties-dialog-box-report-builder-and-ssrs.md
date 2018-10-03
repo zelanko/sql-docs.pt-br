@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.shared.action.f1
@@ -33,16 +31,15 @@ f1_keywords:
 - "10244"
 - sql12.rtp.rptdesigner.seriesproperties.action.f1
 ms.assetid: 2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9
-caps.latest.revision: 13
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e245d03b32dc48a96b0f1d967cc7c83b684654ef
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3ee4a1e9c6430cedb3d8bf34b2978e29c860685d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37323756"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093626"
 ---
 # <a name="action-properties-dialog-box-report-builder-and-ssrs"></a>Caixa de diálogo Propriedades de Ação (Construtor de Relatórios e SSRS)
   A caixa de diálogo **Ação** pode ser usada para habilitar opções de hiperlink para um gráfico, um medidor e elementos de mapa com suporte para links. Defina uma ação para que um usuário possa clicar no relatório e vincular a uma URL, para um relatório diferente no mesmo servidor de relatório ou em um site do SharePoint integrado a um servidor de relatório ou para um local diferente no mesmo relatório.  
