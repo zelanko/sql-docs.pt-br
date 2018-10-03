@@ -1,13 +1,11 @@
 ---
-title: Fonte de propriedade (erro de ADO) | Microsoft Docs
+title: Propriedade (Erro ADO) de origem | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,27 +15,26 @@ f1_keywords:
 helpviewer_keywords:
 - Source property [ADO Error]
 ms.assetid: 4044ba15-f013-4c4c-9fe1-b4410fe9a778
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 67134598a14d9b4a50910b2eab20f0a0cf495957
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 50294b936f211b3a841deb57e55b53f0994517a8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282055"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47611576"
 ---
-# <a name="source-property-ado-error"></a>Propriedade Source (erro de ADO)
+# <a name="source-property-ado-error"></a>Propriedade Source (Erro ADO)
 Indica o nome do objeto ou aplicativo que originalmente gerou um erro.  
   
 ## <a name="return-value"></a>Valor retornado  
- Retorna um **cadeia de caracteres** valor que indica o nome de um objeto ou o aplicativo.  
+ Retorna um **cadeia de caracteres** valor que indica o nome de um objeto ou aplicativo.  
   
-## <a name="remarks"></a>Remarks  
- Use o **fonte** propriedade em uma [erro](../../../ado/reference/ado-api/error-object.md) objeto para determinar o nome do objeto ou aplicativo que originalmente gerou um erro. Isso pode ser o nome de classe do objeto ou o ID programática. Para erros no ADO, o valor da propriedade será **ADODB. * * * ObjectName*, onde *ObjectName* é o nome do objeto que disparou o erro. Para ADOX e ADO MD, o valor será **ADOX. * * * ObjectName* e **ADOMD. * * * ObjectName,* respectivamente.  
+## <a name="remarks"></a>Comentários  
+ Use o **fonte** propriedade em um [erro](../../../ado/reference/ado-api/error-object.md) objeto para determinar o nome do objeto ou aplicativo que originalmente gerou um erro. Isso pode ser o nome de classe do objeto ou o ID programática. Para erros no ADO, o valor da propriedade será **ADODB. * * * ObjectName*, onde *ObjectName* é o nome do objeto que disparou o erro. Para ADOX e ADO MD, o valor será ser **ADOX. * * * ObjectName* e **ADOMD. * * * ObjectName,* , respectivamente.  
   
- Com base na documentação de erro do **fonte**, [número](../../../ado/reference/ado-api/number-property-ado.md), e [descrição](../../../ado/reference/ado-api/description-property.md) propriedades de **erro** objetos, você pode escrever código que manipulará o erro adequadamente.  
+ Com base na documentação de erro dos **fonte**, [número](../../../ado/reference/ado-api/number-property-ado.md), e [descrição](../../../ado/reference/ado-api/description-property.md) propriedades do **erro** objetos, você pode escrever código que manipulará o erro adequadamente.  
   
  O **fonte** propriedade é somente leitura para **erro** objetos.  
   
@@ -45,10 +42,10 @@ Indica o nome do objeto ou aplicativo que originalmente gerou um erro.
  [Objeto Error](../../../ado/reference/ado-api/error-object.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Descrição, HelpContext, HelpFile, NativeError, número, fonte e exemplo de propriedades de SQLState (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
- [Descrição, HelpContext, HelpFile, NativeError, número, fonte e exemplo de propriedades de SQLState (VC + +)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
+ [Descrição, HelpContext, HelpFile, NativeError, número, código-fonte e exemplo de propriedades de SQLState (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
+ [Descrição, HelpContext, HelpFile, NativeError, número, código-fonte e SQLState exemplo das propriedades (VC + +)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
  [Propriedade Description](../../../ado/reference/ado-api/description-property.md)   
- [Propriedades HelpContext e HelpFile](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)   
- [Propriedade de número (ADO)](../../../ado/reference/ado-api/number-property-ado.md)   
- [Propriedade Source (ADO registro)](../../../ado/reference/ado-api/source-property-ado-record.md)   
+ [Propriedades HelpContext, HelpFile](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)   
+ [Propriedade Number (ADO)](../../../ado/reference/ado-api/number-property-ado.md)   
+ [Propriedade Source (registro ADO)](../../../ado/reference/ado-api/source-property-ado-record.md)   
  [Propriedade Source (Conjunto de registros ADO)](../../../ado/reference/ado-api/source-property-ado-recordset.md)

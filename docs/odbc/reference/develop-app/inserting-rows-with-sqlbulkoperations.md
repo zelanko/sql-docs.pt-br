@@ -5,37 +5,34 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLBulkOperations function [ODBC], inserting rows
 - data updates [ODBC], SQLBulkOperations
 - updating data [ODBC], SQLBulkOperations
 ms.assetid: ed585ea7-4d56-4df9-8dc3-53ca82382450
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fbeb779917c2029576bc78ec4a1d144716b7242f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2b5dac8ae14f01dd464aab42eaed42480f1e715c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911111"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47618834"
 ---
-# <a name="inserting-rows-with-sqlbulkoperations"></a>Inserindo linhas com SQLBulkOperations
-Inserindo dados com **SQLBulkOperations** é semelhante à atualização de dados com **SQLBulkOperations** porque ele usa dados dos buffers de aplicativo associado.  
+# <a name="inserting-rows-with-sqlbulkoperations"></a>Inserir linhas com SQLBulkOperations
+Inserindo dados com **SQLBulkOperations** é semelhante à atualização de dados com **SQLBulkOperations** porque ele usa dados dos buffers de associadas de aplicativo.  
   
  Para que cada coluna na nova linha tem um valor, todos vinculados colunas com um valor de comprimento/indicador de SQL_COLUMN_IGNORE e todas as colunas desassociadas devem aceitar valores nulos ou ter um padrão.  
   
  Para inserir linhas com **SQLBulkOperations**, o aplicativo faz o seguinte:  
   
-1.  Define o atributo de instrução de SQL_ATTR_ROW_ARRAY_SIZE como o número de linhas a serem inseridas e coloca os novos valores de dados em buffers do aplicativo associado. Para obter informações sobre como enviar dados longos com **SQLBulkOperations**, consulte [dados longos e SQLSetPos e SQLBulkOperations](../../../odbc/reference/develop-app/long-data-and-sqlsetpos-and-sqlbulkoperations.md).  
+1.  Define o atributo de instrução de SQL_ATTR_ROW_ARRAY_SIZE como o número de linhas a serem inseridas e coloca os novos valores de dados nos buffers associadas de aplicativo. Para obter informações sobre como enviar dados longos com **SQLBulkOperations**, consulte [dados Long e SQLSetPos e SQLBulkOperations](../../../odbc/reference/develop-app/long-data-and-sqlsetpos-and-sqlbulkoperations.md).  
   
-2.  Define o valor do buffer de comprimento/indicador de cada coluna, conforme necessário. Esse é o comprimento de bytes dos dados ou SQL_NTS para colunas associadas aos buffers de cadeia de caracteres, o comprimento de bytes de dados para colunas vinculadas buffers binários e SQL_NULL_DATA para todas as colunas a ser definido como NULL. O aplicativo define o valor do buffer de comprimento/indicador das colunas que devem ser definidas para seu padrão (se houver) ou nulo (se não) a SQL_COLUMN_IGNORE.  
+2.  Define o valor no buffer de comprimento/indicador de cada coluna, conforme necessário. Esse é o comprimento de bytes dos dados ou SQL_NTS para colunas associadas a buffers de cadeia de caracteres, o tamanho de bytes dos dados para colunas associadas a buffers binários e SQL_NULL_DATA para todas as colunas a ser definido como NULL. O aplicativo define o valor no buffer de comprimento/indicador das colunas que devem ser definidos no padrão (se houver) ou nulo (se não existir um organograma) para SQL_COLUMN_IGNORE.  
   
 3.  Chamadas **SQLBulkOperations** com o *operação* argumento definido como SQL_ADD.  
   
- Depois de **SQLBulkOperations** retorna, a linha atual é alterada. Se a coluna de indicador (coluna 0) é associada, **SQLBulkOperations** retorna os indicadores das linhas inseridas no buffer de linhas associados a essa coluna.
+ Após **SQLBulkOperations** retorna, a linha atual é alterada. Se a coluna de indicador (coluna 0) é associada, **SQLBulkOperations** retorna os indicadores das linhas inseridas no buffer de conjunto de linhas associados a essa coluna.

@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,19 +14,18 @@ f1_keywords:
 helpviewer_keywords:
 - MoveRecord method [ADO]
 ms.assetid: 6d2807b0-b861-4583-bcaf-fb0b82e0f2d0
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c5171b0399614e266ff5ecfa974921f7bdef7646
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a2deba8c745b29b5bd69432060debad2c585e31b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279615"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47616494"
 ---
 # <a name="moverecord-method-ado"></a>Método MoveRecord (ADO)
-Move a entidade representada por um [registro](../../../ado/reference/ado-api/record-object-ado.md) para outro local.  
+Move a entidade representada por uma [registro](../../../ado/reference/ado-api/record-object-ado.md) para outro local.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,37 +39,37 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
  Opcional. Um **cadeia de caracteres** valor que contém um URL que identifica o **registro** a ser movido. Se *fonte* for omitido ou especifica uma cadeia de caracteres vazia, o objeto representado por esse **registro** é movido. Por exemplo, se o **registro** representa um arquivo, o conteúdo do arquivo é movidas para o local especificado por *destino*.  
   
  *Destino*  
- Opcional. Um **cadeia de caracteres** valor que contém uma URL que especifica o local onde *fonte* será movido.  
+ Opcional. Um **cadeia de caracteres** valor que contém uma URL especificando o local em que *origem* será movido.  
   
  *UserName*  
- Opcional. Um **cadeia de caracteres** valor que contém a ID de usuário que, se necessário, conceda acesso ao *destino*.  
+ Opcional. Um **cadeia de caracteres** valor que contém a ID de usuário que, se necessário, autoriza o acesso ao *destino*.  
   
  *Senha*  
- Opcional. Um **cadeia de caracteres** que contém a senha, se necessário, verifica *nome de usuário*.  
+ Opcional. Um **cadeia de caracteres** que contém a senha que, se necessário, verifica *nome de usuário*.  
   
  *Opções*  
- Opcional. Um [MoveRecordOptionsEnum](../../../ado/reference/ado-api/moverecordoptionsenum.md) valor cujo valor padrão é **adMoveUnspecified**. Especifica o comportamento desse método.  
+ Opcional. Um [MoveRecordOptionsEnum](../../../ado/reference/ado-api/moverecordoptionsenum.md) cujo valor padrão é de valor **adMoveUnspecified**. Especifica o comportamento desse método.  
   
  *Async*  
- Opcional. Um **booliano** valor que, quando **True**, especifica que esta operação deve ser assíncrona.  
+ Opcional. Um **Boolean** valor que, quando **verdadeiro**, especifica que esta operação deve ser assíncrona.  
   
 ## <a name="return-value"></a>Valor retornado  
- Um **cadeia de caracteres** valor. Normalmente, o valor de *destino* é retornado. No entanto, o valor exato retornado depende do provedor.  
+ Um valor de **String**. Normalmente, o valor de *destino* é retornado. No entanto, o valor exato retornado depende do provedor.  
   
-## <a name="remarks"></a>Remarks  
- Os valores de *fonte* e *destino* não deve ser idêntico; caso contrário, ocorre um erro de tempo de execução. Pelo menos os nomes de servidor, o caminho e o recurso devem ser diferente.  
+## <a name="remarks"></a>Comentários  
+ Os valores de *fonte* e *destino* não deve ser idêntico; caso contrário, ocorrerá um erro de tempo de execução. Pelo menos os nomes de servidor, o caminho e o recurso devem ser diferente.  
   
- Para arquivos movidos usando o provedor de publicação, este método atualizará todos os links de hipertexto em arquivos que está sendo movidos a menos que especificado de outra forma por *opções*. Esse método falhar se *destino* identifica um objeto existente (por exemplo, um arquivo ou diretório), a menos que **adMoveOverWrite** for especificado.  
+ Para arquivos movidos usando o provedor de publicação de Internet, esse método atualiza todos os links de hipertexto em arquivos que estão sendo movidos, a menos que especificado de outra forma por *opções*. Esse método falhar se *destino* identifica um objeto existente (por exemplo, um arquivo ou diretório), a menos que **adMoveOverWrite** for especificado.  
   
 > [!NOTE]
 >  Use o **adMoveOverWrite** opção criteriosamente. Por exemplo, especificar essa opção, ao mover um arquivo para um diretório excluirá o diretório e substituí-lo com o arquivo.  
   
- Determinados atributos do **registro** objeto, como o [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md) propriedade, não será atualizada depois que a operação for concluída. Atualizar o **registro** propriedades do objeto fechando o **registro**, em seguida, abra-o novamente com a URL do local onde o arquivo ou diretório foi movido.  
+ Determinados atributos do **registro** objeto, como o [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md) propriedade, não será atualizado depois que a operação for concluída. Atualizar o **registro** propriedades do objeto pelo fechamento a **registro**, em seguida, abri-lo novamente com a URL do local onde o arquivo ou diretório foi movido.  
   
- Se este **registro** foi obtido um [registros](../../../ado/reference/ado-api/recordset-object-ado.md), o novo local do arquivo movido ou diretório não será refletido imediatamente no **registros**. Atualizar o **registros** fechando e abri-lo novamente.  
+ Se este **registro** foi obtido um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md), o novo local do diretório ou arquivo movido não será refletido imediatamente no **conjunto de registros**. Atualizar o **Recordset** fechando e abri-lo novamente.  
   
 > [!NOTE]
->  URLs usando o esquema http invocará automaticamente o [Microsoft OLE DB Provider para Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Para obter mais informações, consulte [Absolute e URLs relativas](../../../ado/guide/data/absolute-and-relative-urls.md).  
+>  URLs usando o esquema http invocará automaticamente o [Microsoft OLE DB Provider para publicação na Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Para obter mais informações, consulte [absoluta e relativa URLs](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  

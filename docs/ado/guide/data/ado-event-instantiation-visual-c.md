@@ -1,32 +1,29 @@
 ---
-title: 'Instanciação de evento do ADO: Visual C++ | Microsoft Docs'
+title: 'Instanciação de evento ADO: Visual C++ | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 385ad90a-37d0-497c-94aa-935d21fed78f
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 699432fff2c849f4f89e7cadebe8dd4afabdd8ec
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: d3760cedb077bfde9f0972ad5e5544ae7b01d9a9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271075"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47605980"
 ---
-# <a name="ado-event-instantiation-visual-c"></a>Instanciação de evento do ADO: Visual C++
-Esta é uma descrição de esquema de como criar uma instância de eventos de ADO no Microsoft® Visual C++. Consulte [exemplo de modelo de eventos do ADO (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md) para obter uma descrição completa.  
+# <a name="ado-event-instantiation-visual-c"></a>Instanciação de evento ADO: Visual C++
+Esta é uma descrição esquemática de como criar uma instância de eventos ADO no Microsoft® Visual C++®. Ver [exemplo de modelo de eventos ADO (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md) para obter uma descrição completa.  
   
- Criar classes derivadas do **ConnectionEventsVt** e **RecordsetEventsVt** interfaces encontrado no adoint.h arquivo.  
+ Criar classes derivadas de **ConnectionEventsVt** e **RecordsetEventsVt** interfaces encontrado no adoint.h arquivo.  
   
 ```  
 // BeginEventExampleVC01  
@@ -53,7 +50,7 @@ class CRstEvent : public RecordsetEventsVt
 // EndEventExampleVC01  
 ```  
   
- Implemente cada um dos métodos do manipulador de eventos em ambas as classes. É suficiente para que cada método simplesmente retorna um HRESULT de S_OK. No entanto, quando você torná-lo conhecido que seus manipuladores de eventos estão disponíveis, ele serão chamados continuamente por padrão. Em vez disso, talvez você queira não solicitar nenhuma notificação adicional depois da primeira vez definindo **adStatus** para **adStatusUnwantedEvent**.  
+ Implemente cada um dos métodos de manipulador de eventos em ambas as classes. É suficiente para que cada método simplesmente retorna um HRESULT de S_OK. No entanto, quando você o tornará conhecidos que seus manipuladores de eventos estão disponíveis, ele serão chamados continuamente por padrão. Em vez disso, você talvez queira não solicitar nenhuma notificação adicional após a primeira vez, definindo **adStatus** à **adStatusUnwantedEvent**.  
   
 ```  
 // BeginEventExampleVC02  
@@ -69,11 +66,11 @@ STDMETHODIMP CConnEvent::ConnectComplete(
 // EndEventExampleVC02  
 ```  
   
- As classes de evento herdam **IUnknown**, portanto, você também deve implementar o **QueryInterface**, **AddRef**, e **versão** métodos. Também é implementam destruidores e construtores de classe. Escolha as ferramentas do Visual C++ com o qual você está mais à vontade simplificar a essa parte da tarefa.  
+ As classes de evento herdam **IUnknown**, portanto, você também deve implementar a **QueryInterface**, **AddRef**, e **versão** métodos. Também implemente os destruidores e construtores de classe. Escolha as ferramentas do Visual C++ com o qual você está mais familiarizado simplificar essa parte da tarefa.  
   
- Verifique conhecido que seus manipuladores de eventos estão disponíveis por meio **QueryInterface** no [registros](../../../ado/reference/ado-api/recordset-object-ado.md) e [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objetos para o  **IConnectionPointContainer** e **IConnectionPoint** interfaces. Em seguida, emita **IConnectionPoint::** para cada classe.  
+ Verifique conhecido que seus manipuladores de eventos estão disponíveis, emitindo **QueryInterface** na [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) e [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objetos para o  **IConnectionPointContainer** e **IConnectionPoint** interfaces. Em seguida, emitir **IConnectionPoint::** para cada classe.  
   
- Por exemplo, suponha que você estiver usando uma função booliana retorna **True** se ele informa com êxito um **registros** do objeto que você tem manipuladores de eventos disponíveis.  
+ Por exemplo, suponha que você estiver usando uma função booleana que retorna **verdadeira** se ele informa com êxito um **conjunto de registros** do objeto que você tenha manipuladores de eventos disponíveis.  
   
 ```  
 // BeginEventExampleVC03  
@@ -102,9 +99,9 @@ return TRUE;
 // EndEventExampleVC03  
 ```  
   
- Neste ponto, os eventos para o **RecordsetEvent** família estão habilitadas e seus métodos serão chamados como **registros** eventos ocorrem.  
+ Neste ponto, os eventos para o **RecordsetEvent** família estão habilitadas e seus métodos serão chamados como **Recordset** eventos ocorrem.  
   
- Posteriormente, quando você deseja disponibilizar seus manipuladores de eventos, obtenha o ponto de conexão novamente e emitir o **IConnectionPoint::Unadvise** método.  
+ Posteriormente, quando você deseja disponibilizar seus manipuladores de eventos, obter o ponto de conexão novamente e execute o **IConnectionPoint:: UnAdvise** método.  
   
 ```  
 // BeginEventExampleVC04  
@@ -116,9 +113,9 @@ if (FAILED(hr)) return FALSE;
 // EndEventExampleVC04  
 ```  
   
- Você deve liberar interfaces e destruir os objetos da classe conforme apropriado.  
+ Você deve liberar interfaces e destruir objetos de classe conforme apropriado.  
   
- O código a seguir mostra um exemplo completo de um **registros** classe de coletor de evento.  
+ O código a seguir mostra um exemplo completo de um **Recordset** classe de coletor do evento.  
   
 ```  
 // BeginEventExampleVC05.cpp  

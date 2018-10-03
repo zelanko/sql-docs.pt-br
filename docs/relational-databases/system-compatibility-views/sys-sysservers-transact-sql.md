@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-compatibility-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sysservers
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - sysservers system table
 - sys.sysservers compatibility view
 ms.assetid: d02f186f-c00f-44a6-b38d-dc78a3d2145b
-caps.latest.revision: 27
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a052eecd27de7767f721bc71a070eb00dad99220
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: ede7e1a97ca121073760eaa0c5dcd309b5e3e412
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232824"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47608072"
 ---
 # <a name="syssysservers-transact-sql"></a>sys.sysservers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,28 +44,28 @@ ms.locfileid: "33232824"
 |**srvproduct**|**sysname**|Nome de produto do servidor remoto.|  
 |**providername**|**nvarchar(128)**|Nome do provedor OLE DB para acesso a este servidor.|  
 |**datasource**|**nvarchar(4000)**|Valor de fonte de dados OLE DB.|  
-|**local**|**nvarchar(4000)**|Valor local de OLE DB.|  
+|**Local**|**nvarchar(4000)**|Valor local de OLE DB.|  
 |**providerstring**|**nvarchar(4000)**|Valor de cadeia de caracteres do provedor OLE DB.|  
 |**schemadate**|**datetime**|Data da última atualização da linha.|  
-|**topologyx**|**Int**|Não usado.|  
-|**topologyy**|**Int**|Não usado.|  
+|**topologyx**|**int**|Não usado.|  
+|**topologyy**|**int**|Não usado.|  
 |**catalog**|**sysname**|Catálogo que é usado quando uma conexão é feita a um provedor OLE DB.|  
 |**srvcollation**|**sysname**|O agrupamento do servidor.|  
-|**connecttimeout**|**Int**|Configuração de tempo limite para a conexão de servidor.|  
-|**querytimeout**|**Int**|Configuração de tempo limite para a consultas no servidor.|  
+|**connecttimeout**|**int**|Configuração de tempo limite para a conexão de servidor.|  
+|**querytimeout**|**int**|Configuração de tempo limite para a consultas no servidor.|  
 |**srvnetname**|**char(30)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**isremote**|**bit**|1 = Servidor é um servidor remoto.<br /><br /> 0 = Servidor é um servidor vinculado.|  
-|**rpc**|**bit**|1 = **sp_serveroption@rpc** definida como **true** ou **em**.<br /><br /> 0 = **sp_serveroption@rpc** definida como **false** ou **off**.|  
-|**pub**|**bit**|1 = **sp_serveroption@pub** definida como **true** ou **em**.<br /><br /> 0 = **sp_serveroption@pub** definida como **false** ou **off**.|  
-|**sub**|**bit**|1 = **sp_serveroption@sub** definida como **true** ou **em**.<br /><br /> 0 = **sp_serveroption@sub** definida como **false** ou **off**.|  
-|**dist**|**bit**|1 = **sp_serveroption@dist** definida como **true** ou **em**.<br /><br /> 0 = **sp_serveroption@dist** definida como **false** ou **off**.|  
-|**dpub**|**bit**|1 = **sp_serveroption@dpub** definida como **true** ou **em**.<br /><br /> 0 = **sp_serveroption@dpub** definida como **false** ou **off**.|  
-|**rpcout**|**bit**|1 =  **sp_serveroption@rpc out** definida como **true** ou **em**.<br /><br /> 0 =  **sp_serveroption@rpc out** definida como **false** ou **off**.|  
-|**dataaccess**|**bit**|1 =  **sp_serveroption@data acesso** definida como **true** ou **em**.<br /><br /> 0 =  **sp_serveroption@data acesso** definida como **false** ou **off**.|  
-|**collationcompatible**|**bit**|1 =  **sp_serveroption@collation compatível** definida como **true** ou **em**.<br /><br /> 0 =  **sp_serveroption@collation compatível** definida como **false** ou **off**.|  
-|**system**|**bit**|1 = **sp_serveroption@system** definida como **true** ou **em**.<br /><br /> 0 = **sp_serveroption@system** definida como **false** ou **off**.|  
-|**useremotecollation**|**bit**|1 =  **sp_serveroption@remote agrupamento** definida como **true** ou **em**.<br /><br /> 0 =  **sp_serveroption@remote agrupamento** definida como **false** ou **off**.|  
-|**lazyschemavalidation**|**bit**|1 =  **sp_serveroption@lazy validação de esquema** definida como **true** ou **em**.<br /><br /> 0 =  **sp_serveroption@lazy validação de esquema** definida como **false** ou **off**.|  
+|**rpc**|**bit**|1 = **sp_serveroption@rpc** definido como **verdadeira** ou **em**.<br /><br /> 0 = **sp_serveroption@rpc** definido como **falso** ou **off**.|  
+|**pub**|**bit**|1 = **sp_serveroption@pub** definido como **verdadeira** ou **em**.<br /><br /> 0 = **sp_serveroption@pub** definido como **falso** ou **off**.|  
+|**sub**|**bit**|1 = **sp_serveroption@sub** definido como **verdadeira** ou **em**.<br /><br /> 0 = **sp_serveroption@sub** definido como **falso** ou **off**.|  
+|**dist**|**bit**|1 = **sp_serveroption@dist** definido como **verdadeira** ou **em**.<br /><br /> 0 = **sp_serveroption@dist** definido como **falso** ou **off**.|  
+|**dpub**|**bit**|1 = **sp_serveroption@dpub** definido como **verdadeira** ou **em**.<br /><br /> 0 = **sp_serveroption@dpub** definido como **falso** ou **off**.|  
+|**rpcout**|**bit**|1 =  **sp_serveroption@rpc out** definido como **verdadeira** ou **em**.<br /><br /> 0 =  **sp_serveroption@rpc out** definido como **falso** ou **off**.|  
+|**dataaccess**|**bit**|1 =  **sp_serveroption@data acesso** definido como **verdadeira** ou **em**.<br /><br /> 0 =  **sp_serveroption@data acesso** definido como **falso** ou **off**.|  
+|**collationcompatible**|**bit**|1 =  **sp_serveroption@collation compatível** definido como **verdadeira** ou **em**.<br /><br /> 0 =  **sp_serveroption@collation compatível** definido como **falso** ou **off**.|  
+|**system**|**bit**|1 = **sp_serveroption@system** definido como **verdadeira** ou **em**.<br /><br /> 0 = **sp_serveroption@system** definido como **falso** ou **off**.|  
+|**useremotecollation**|**bit**|1 =  **sp_serveroption@remote agrupamento** definido como **verdadeira** ou **em**.<br /><br /> 0 =  **sp_serveroption@remote agrupamento** definido como **falso** ou **off**.|  
+|**lazyschemavalidation**|**bit**|1 =  **sp_serveroption@lazy validação de esquema** definido como **verdadeira** ou **em**.<br /><br /> 0 =  **sp_serveroption@lazy validação de esquema** definido como **falso** ou **off**.|  
 |**Agrupamento**|**sysname**|Agrupamento do servidor conforme definido pela  **sp_serveroption@collation nome**.|  
 |**nonsqlsub**|bit|0 = server é uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> 1 = server não é uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
   

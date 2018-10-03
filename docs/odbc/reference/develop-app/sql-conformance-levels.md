@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - conformance levels [ODBC], SQL
@@ -15,18 +13,17 @@ helpviewer_keywords:
 - data sources [ODBC], conformance levels
 - ODBC drivers [ODBC], conformance levels
 ms.assetid: 3529df2c-a09b-4c16-9c60-eae7a06d903a
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dcdb0f98d7260985e418a6eaeb670c40409c518d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c2e8ce5aeeb94a4f7a33b22054adc8067e0654ac
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32913291"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47605944"
 ---
-# <a name="sql-conformance-levels"></a>Níveis de conformidade do SQL
-O nível de suporte por um driver de gramática de SQL-92 é indicado pelo valor retornado por uma chamada para **SQLGetInfo** com o tipo de informação SQL_SQL_CONFORMANCE. Indica se o driver está de acordo com os níveis de entrada, transição de FIPS, intermediário ou completo definidos em SQL-92.  
+# <a name="sql-conformance-levels"></a>Níveis de conformidade SQL
+O nível de gramática de SQL-92 com suporte por um driver é indicado pelo valor retornado por uma chamada para **SQLGetInfo** com o tipo de informação SQL_SQL_CONFORMANCE. Isso indica se o driver está de acordo com os níveis de entrada, Transitional FIPS, intermediário ou completo definidos no SQL-92.  
   
- Todos os drivers ODBC devem oferecer suporte a gramática SQL mínima descrita em [gramática de SQL mínima](../../../odbc/reference/appendixes/sql-minimum-grammar.md) na gramática do apêndice c: SQL. Esta gramática é um subconjunto do nível de entrada do SQL-92. Drivers podem oferecer suporte ao SQL adicional e ser compatível para o nível de entrada do SQL-92, intermediário ou completo ou o FIPS 127-2 nível de transição. Os drivers compatíveis para um determinado nível de SQL-92 ou FIPS 127-2 podem oferecer suporte a recursos adicionais em qualquer um dos níveis mais altos ainda não estar totalmente em conformidade com esse nível. Para determinar se há suporte para um recurso, um aplicativo deve chamar **SQLGetInfo** com o tipo de informações apropriadas. O nível de conformidade de um recurso do SQL é descrito no tipo de informações correspondentes. (Consulte o [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) descrição da função.)
+ Todos os drivers ODBC devem dar suporte a gramática SQL mínima descrita em [gramática SQL mínima](../../../odbc/reference/appendixes/sql-minimum-grammar.md) na gramática do apêndice c: SQL. Essa gramática é um subconjunto do nível de entrada do SQL-92. Drivers podem oferecer suporte ao SQL adicional e ser compatível com o nível de entrada do SQL-92, intermediário ou completo ou o FIPS 127-2 nível de transição. Drivers que estão em conformidade para um determinado nível de SQL-92 ou FIPS 127-2 podem oferecer suporte a recursos adicionais em qualquer um dos níveis mais altos ainda não ser totalmente compatível com a esse nível. Para determinar se um recurso tem suporte, um aplicativo deve chamar **SQLGetInfo** com o tipo de informações apropriadas. O nível de conformidade de um recurso do SQL é descrito no tipo de informações correspondentes. (Consulte a [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) descrição da função.)

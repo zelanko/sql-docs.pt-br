@@ -5,29 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC], configuring
 ms.assetid: 0b68ff48-12e4-41aa-b9e2-b39ed5023ea7
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9c15accf395a33a1af42fe65a3c15612402e381d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bcf7d34f8faf70f57373ad1a5dae55261799145b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32915661"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47606464"
 ---
 # <a name="configuration-components"></a>Componentes de configuração
 > [!NOTE]  
->  Começando com o Windows XP e Windows Server 2003, o ODBC está incluído no sistema operacional Windows. Instale somente explicitamente ODBC em versões anteriores do Windows.  
+>  Começando com o Windows XP e Windows Server 2003, ODBC está incluído no sistema operacional Windows. Você deve instalar apenas explicitamente ODBC em versões anteriores do Windows.  
   
- Fontes de dados são configuradas pelo instalador de DLL, que por sua vez chama driver instalação DLLs e instalação de conversor DLLs conforme eles são necessários. O instalador DLL está invocado diretamente no painel de controle ou carregado e chamado por outro programa, conhecido como o *programa administração*. A ilustração a seguir mostra a relação entre os componentes de configuração.  
+ Fontes de dados são configuradas pelo instalador do DLL, que, por sua vez chama driver instalação DLLs e DLLs de instalação do tradutor conforme eles são necessários. O instalador do DLL é seja invocado diretamente no painel de controle ou carregado e chamado por outro programa, conhecido como o *programa de administração*. A ilustração a seguir mostra a relação entre os componentes de configuração.  
   
  ![Relação entre componentes de configuração](../../../odbc/reference/install/media/pr30.gif "pr30")  
   

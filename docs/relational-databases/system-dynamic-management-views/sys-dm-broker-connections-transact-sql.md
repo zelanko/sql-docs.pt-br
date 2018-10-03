@@ -1,12 +1,10 @@
 ---
-title: sys.DM broker_connections (Transact-SQL) | Microsoft Docs
+title: sys.dm_broker_connections (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/08/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_broker_connections
@@ -18,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_broker_connections dynamic management view
 ms.assetid: d9e20433-67fe-4fcc-80e3-b94335b2daef
-caps.latest.revision: 45
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 74bd0608f18530f45b2ed177a607f0bb29f37fa6
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 95acff9d1b80560294758045c449c1c6c6790c27
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34466022"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47615754"
 ---
 # <a name="sysdmbrokerconnections-transact-sql"></a>sys.dm_broker_connections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,14 +46,14 @@ ms.locfileid: "34466022"
 |**is_accept**|**bit**|Indica se a conexão foi originada no lado remoto. É NULLABLE.<br /><br /> 1 = a conexão é uma solicitação aceita da instância remota.<br /><br /> 0 = a conexão foi iniciada pela instância local.|  
 |**login_state**|**smallint**|Estado do processo de logon dessa conexão. Valores possíveis:<br /><br /> 0 = INITIAL<br /><br /> 1 = WAIT LOGIN NEGOTIATE<br /><br /> 2 = ONE ISC<br /><br /> 3 = ONE ASC<br /><br /> 4 = TWO ISC<br /><br /> 5 = TWO ASC<br /><br /> 6 = WAIT ISC Confirm<br /><br /> 7 = WAIT ASC Confirm<br /><br /> 8 = WAIT REJECT<br /><br /> 9 = WAIT PRE-MASTER SECRET<br /><br /> 10 = WAIT VALIDATION<br /><br /> 11 = WAIT ARBITRATION<br /><br /> 12 = ON-LINE<br /><br /> 13 = ERROR|  
 |**login_state_desc**|**nvarchar(60)**|Estado atual de logon do computador remoto. Valores possíveis:<br /><br /> O handshake da conexão está sendo inicializado.<br /><br /> O handshake da conexão está esperando a mensagem de Negociação de Logon.<br /><br /> O handshake da conexão foi inicializado e enviou o contexto de segurança para autenticação.<br /><br /> O handshake da conexão recebeu e aceitou o contexto de segurança para autenticação.<br /><br /> O handshake da conexão foi inicializado e enviou o contexto de segurança para autenticação. Há um mecanismo opcional disponível para autenticar os pares.<br /><br /> O handshake da conexão recebeu e enviou o contexto de segurança aceito para autenticação. Há um mecanismo opcional disponível para autenticar os pares.<br /><br /> O handshake da conexão está esperando a mensagem de Confirmação para Inicializar o Contexto de Segurança.<br /><br /> O handshake da conexão está esperando a mensagem de Confirmação para Aceitar o Contexto de Segurança.<br /><br /> O handshake da conexão está esperando a mensagem de rejeição de SSPI para autenticação com falha.<br /><br /> O handshake da conexão está esperando a mensagem de Segredo Pré-masterizado.<br /><br /> O handshake da conexão está esperando a mensagem de Validação.<br /><br /> O handshake da conexão está esperando a mensagem de Arbitragem.<br /><br /> O handshake da conexão está concluído e online (pronto) para a troca de mensagens.<br /><br /> A conexão está em estado de erro.|  
-|**peer_certificate_id**|**Int**|A ID de objeto local do certificado usado pela instância remota para autenticação. O proprietário deste certificado deve ter permissões CONNECT no ponto de extremidade do [!INCLUDE[ssSB](../../includes/sssb-md.md)]. É NULLABLE.|  
-|**encryption_algorithm**|**smallint**|Algoritmo de criptografia usado para esta conexão. É NULLABLE. Valores possíveis:<br /><br /> **Valor &#124; descrição &#124; opção DDL correspondente**<br /><br /> 0 &#124; nenhum &#124; desabilitado<br /><br /> 1 &AMP;#124; ASSINATURA<br /><br /> 2 &#124; AES, RC4 &#124; necessário &#124; algoritmo RC4 obrigatório}<br /><br /> 3 &#124; AES &#124;algoritmo AES obrigatório<br /><br /> **Observação:** o algoritmo RC4 é suporte somente para compatibilidade com versões anteriores. O novo material só pode ser criptografado por meio do algoritmo RC4 ou RC4_128 quando o banco de dados está no nível de compatibilidade 90 ou 100. (Não recomendável.) Use um algoritmo mais recente; por exemplo, um dos algoritmos AES. No [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e em versões posteriores, o material criptografado por meio do algoritmo RC4 ou RC4_128 pode ser descriptografado em qualquer nível de compatibilidade.|  
-|**encryption_algorithm_desc**|**nvarchar(60)**|Representação textual do algoritmo de criptografia. É NULLABLE. Valores possíveis:<br /><br /> **Descrição &#124; opção DDL correspondente**<br /><br /> NENHUM &#124; desabilitado<br /><br /> RC4 &#124; {necessário &#124; algoritmo RC4 obrigatório}<br /><br /> AES &#124; necessário algoritmo AES<br /><br /> NONE, RC4 &#124; {suporte &#124; suporte para o algoritmo RC4}<br /><br /> Nenhum, AES &#124; suporte para o algoritmo RC4<br /><br /> RC4, AES &#124; algoritmo RC4 obrigatório AES<br /><br /> AES, RC4 &#124; algoritmo AES RC4 obrigatório<br /><br /> NONE, RC4, AES &#124; suporte para o algoritmo RC4 AES<br /><br /> Nenhum, AES RC4 &#124; suporte para o algoritmo AES RC4|  
+|**peer_certificate_id**|**int**|A ID de objeto local do certificado usado pela instância remota para autenticação. O proprietário deste certificado deve ter permissões CONNECT no ponto de extremidade do [!INCLUDE[ssSB](../../includes/sssb-md.md)]. É NULLABLE.|  
+|**encryption_algorithm**|**smallint**|Algoritmo de criptografia usado para esta conexão. É NULLABLE. Valores possíveis:<br /><br /> **Valor &#124; descrição &#124; opção de DDL correspondente**<br /><br /> 0 &#124; none &#124; desabilitado<br /><br /> 1 &AMP;#124; ASSINATURA<br /><br /> 2 &#124; AES, RC4 &#124; necessária &#124; algoritmo RC4 obrigatório}<br /><br /> 3 &#124; AES &#124;algoritmo AES obrigatório<br /><br /> **Observação:** o algoritmo RC4 tem suporte apenas para compatibilidade com versões anteriores. O novo material só pode ser criptografado por meio do algoritmo RC4 ou RC4_128 quando o banco de dados está no nível de compatibilidade 90 ou 100. (Não recomendável.) Use um algoritmo mais recente; por exemplo, um dos algoritmos AES. No [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e em versões posteriores, o material criptografado por meio do algoritmo RC4 ou RC4_128 pode ser descriptografado em qualquer nível de compatibilidade.|  
+|**encryption_algorithm_desc**|**nvarchar(60)**|Representação textual do algoritmo de criptografia. É NULLABLE. Valores possíveis:<br /><br /> **Descrição &#124; opção de DDL correspondente**<br /><br /> NENHUM &#124; desabilitado<br /><br /> RC4 &#124; {necessária &#124; algoritmo RC4 obrigatório}<br /><br /> AES &#124; necessário algoritmo AES<br /><br /> NONE, RC4 &#124; {com suporte &#124; suporte para o algoritmo RC4}<br /><br /> Nenhum, AES &#124; suporte para o algoritmo RC4<br /><br /> RC4, AES &#124; algoritmo RC4 obrigatório AES<br /><br /> AES, RC4 &#124; algoritmo AES RC4 obrigatório<br /><br /> NONE, RC4, AES &#124; suporte para o algoritmo RC4 AES<br /><br /> Nenhum, AES, RC4 &#124; suporte para o algoritmo AES RC4|  
 |**receives_posted**|**smallint**|Número de recebimentos de rede assíncrona desta conexão que ainda não foram concluídos. É NULLABLE.|  
 |**is_receive_flow_controlled**|**bit**|Se os recebimentos de rede foram adiados pelo controle de fluxo porque a rede está ocupada. É NULLABLE.<br /><br /> 1 = True|  
 |**sends_posted**|**smallint**|Número de envios de rede assíncrona desta conexão que ainda não foram concluídos. É NULLABLE.|  
 |**is_send_flow_controlled**|**bit**|Se os envios de rede foram adiados pelo controle de fluxo de rede porque a rede está ocupada. É NULLABLE.<br /><br /> 1 = True|  
-|**total_bytes_sent**|**bigint**|Número total de bytes enviados por esta conexão. É NULLABLE.|  
+|**total_bytes_sent**|**bigint**|Número total de bytes que foram enviados por esta conexão. É NULLABLE.|  
 |**total_bytes_received**|**bigint**|Número total de bytes recebidos por esta conexão. É NULLABLE.|  
 |**total_fragments_sent**|**bigint**|Número total de fragmentos de mensagens do [!INCLUDE[ssSB](../../includes/sssb-md.md)] enviados por esta conexão. É NULLABLE.|  
 |**total_fragments_received**|**bigint**|Número total de fragmentos de mensagens do [!INCLUDE[ssSB](../../includes/sssb-md.md)] recebidos por esta conexão. É NULLABLE.|  
@@ -68,7 +65,7 @@ ms.locfileid: "34466022"
  , é necessário ter permissão VIEW SERVER STATE no servidor.  
   
 ## <a name="physical-joins"></a>Junções físicas  
- ![Junções para sys.DM broker_connections](../../relational-databases/system-dynamic-management-views/media/join-dm-broker-connections-1.gif "junções para sys.DM broker_connections")  
+ ![Junções para sys.dm_broker_connections](../../relational-databases/system-dynamic-management-views/media/join-dm-broker-connections-1.gif "junções para sys.dm_broker_connections")  
   
 ## <a name="relationship-cardinalities"></a>Cardinalidades de relações  
   
@@ -78,7 +75,7 @@ ms.locfileid: "34466022"
   
 ## <a name="see-also"></a>Consulte também  
  [Exibições e funções de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Exibições de gerenciamento dinâmico & #40; relacionadas ao Service Broker Transact-SQL & #41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
+ [Exibições de gerenciamento dinâmico relacionadas ao Service Broker &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
   
   
 
