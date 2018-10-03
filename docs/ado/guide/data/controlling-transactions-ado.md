@@ -6,25 +6,22 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - transactions [ADO]
 ms.assetid: 189240e8-3ffa-4024-81a9-c6cb5d17eee0
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b036998fba22c19e47e9e5ced581aabeec9b07b8
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 8059df4275a336d084144a73910cdef99abf9467
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270975"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603614"
 ---
-# <a name="controlling-transactions-ado"></a>Controlando transações (ADO)
-ADO dá suporte ao processamento dentro de uma conexão com a Ajuda de transações de **BeginTrans**, **CommitTrans**, e **RollbackTrans** métodos em um  **Conexão** objeto. A ideia geral de implementação de processamento de transações em ADO é ilustrada no seguinte trecho de código simples.  
+# <a name="controlling-transactions-ado"></a>Controlar de transações (ADO)
+ADO dá suporte ao processamento dentro de uma conexão com a Ajuda de transações a **BeginTrans**, **CommitTrans**, e **RollbackTrans** métodos em um  **Conexão** objeto. A ideia geral da implementação de processamento de transações no ADO é ilustrada no seguinte trecho de código simples.  
   
 ```  
 Const DS = "MySqlServer"  
@@ -81,6 +78,6 @@ oRs.Close
 oConn.Close  
 ```  
   
- Aqui o processamento de transações é usado para garantir que os dois registros são atualizados como uma unidade de operação, e que os nomes dos dois produtos são trocados ou não sejam alterados.  
+ Aqui o processamento de transações é usado para garantir que os dois registros são atualizados como uma unidade da operação, e que os nomes dos dois produtos são trocados ou não foi modificado.  
   
- Para discussões detalhadas do processamento de transações, consulte [atualizando e persistir dados](../../../ado/guide/data/updating-and-persisting-data.md).
+ Para discussões detalhadas do processamento de transações, consulte [Updating e persistência de dados](../../../ado/guide/data/updating-and-persisting-data.md).

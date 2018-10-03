@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - clusters [Analysis Services]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - sequence clustering algorithms [Analysis Services]
 - sequence [Analysis Services]
 ms.assetid: ae779a1f-0adb-4857-afbd-a15543dff299
-caps.latest.revision: 48
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: be5171c376b9f454e0474400e8bab2c55692f3bb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bc90c76792ae6eaaa21ba3e32bea66e4942c354f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37306576"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48190776"
 ---
 # <a name="microsoft-sequence-clustering-algorithm"></a>Microsoft Sequence Clustering Algorithm
   O [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering é um algoritmo de análise de sequência fornecido pelo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Você pode usar esse algoritmo para explorar os dados que contêm eventos que podem ser vinculados de acordo com caminhos ou *sequências*. O algoritmo localiza as sequências mais comuns por agrupamento, ou clustering, das sequências que são idênticas. A seguir veja alguns exemplos de dados que contêm sequências que podem ser usadas para mineração de dados, para fornecer ideias sobre problemas comuns ou cenários comerciais:  
@@ -72,7 +69,7 @@ ms.locfileid: "37306576"
   
  Para obter informações sobre como criar consultas com base em um modelo de mineração de dados, consulte [Consultas de mineração de dados](data-mining-queries.md). Para obter exemplos de como usar consultas com um modelo de sequence clustering, consulte [Exemplos de consulta de modelo de sequence clustering](clustering-model-query-examples.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 -   Não dá suporte ao uso de PMML para criar modelos de mineração.  
   

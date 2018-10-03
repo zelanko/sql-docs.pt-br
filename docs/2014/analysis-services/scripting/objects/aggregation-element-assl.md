@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Aggregation Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Aggregation element
 ms.assetid: f37af388-b2b3-4234-a1d6-936ee9b7f2ae
-caps.latest.revision: 39
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 51e28a8435b2891cf623ea851824809606d83620
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0780a8c81cf80871eed925471fd0ea7e6103e9b6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37157187"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48167796"
 ---
 # <a name="aggregation-element-assl"></a>Elemento Aggregation (ASSL)
   Define uma única agregação para um [partição](partition-element-assl.md) elemento.  
@@ -54,8 +51,8 @@ ms.locfileid: "37157187"
   
 |Característica|Description|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|Nenhum|  
-|Valor padrão|Nenhum|  
+|Comprimento e tipo de dados|None|  
+|Valor padrão|None|  
 |Cardinalidade|0-n: Elemento opcional que pode ocorrer mais de uma vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -65,7 +62,7 @@ ms.locfileid: "37157187"
 |Elemento pai|[Agregações](../collections/aggregations-element-assl.md)|  
 |Elementos filho|[Anotações](../collections/annotations-element-assl.md), [descrição](../properties/description-element-assl.md), [dimensões](../collections/dimensions-element-assl.md), [ID](../properties/id-element-assl.md), [nome](../properties/name-element-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O elemento correspondente no modelo de objeto Analysis Management Objects (AMO) é <xref:Microsoft.AnalysisServices.Aggregation>.  
   
 ## <a name="see-also"></a>Consulte também  

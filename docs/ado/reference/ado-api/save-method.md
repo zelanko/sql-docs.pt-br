@@ -1,13 +1,11 @@
 ---
-title: Método Save | Microsoft Docs
+title: Salvar método | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,19 +14,18 @@ f1_keywords:
 helpviewer_keywords:
 - Save method [ADO]
 ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a92e053443dbb32aae83756a98facdc53fa74725
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 55ba7b2fc9e1b6ea0eaeb44989e1bfb64b44d9d4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281435"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47625110"
 ---
 # <a name="save-method"></a>Método Save
-Salva o [registros](../../../ado/reference/ado-api/recordset-object-ado.md) em um arquivo ou [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) objeto.  
+Salva o [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) em um arquivo ou [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,40 +36,40 @@ recordset.Save Destination, PersistFormat
   
 #### <a name="parameters"></a>Parâmetros  
  *Destino*  
- Opcional. Um **Variant** que representa o nome de caminho completo do arquivo onde o **registros** deve ser salvo, ou uma referência a um **fluxo** objeto.  
+ Opcional. Um **Variant** que representa o nome de caminho completo do arquivo no qual o **conjunto de registros** deve ser salvo, ou uma referência a um **Stream** objeto.  
   
  *PersistFormat*  
- Opcional. Um [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md) valor que especifica o formato no qual o **registros** deve ser salvo (XML ou ADTG). O valor padrão é **adPersistADTG**.  
+ Opcional. Um [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md) valor que especifica o formato no qual o **Recordset** deve ser salvo (ADTG ou XML). O valor padrão é **adPersistADTG**.  
   
-## <a name="remarks"></a>Remarks  
- O [método Save](../../../ado/reference/ado-api/save-method.md) método só pode ser chamado em um aberto **registros**. Use o [método Open (conjunto de registros ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md) método para restauração posterior a **registros** de *destino*.  
+## <a name="remarks"></a>Comentários  
+ O [método Save](../../../ado/reference/ado-api/save-method.md) método só pode ser chamado em um aberto **conjunto de registros**. Use o [método Open (conjunto de registros ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md) método para restauração posterior a **conjunto de registros** da *destino*.  
   
- Se o [propriedade filtro](../../../ado/reference/ado-api/filter-property.md) propriedade está em vigor para o **Recordset**, em seguida, somente as linhas acessíveis com o filtro serão salvas. Se o **Recordset** é hierárquico, em seguida, o filho atual **Recordset** e seus filhos são salvos, incluindo o pai **Recordset**. Se o método de gravação de um filho **registros** é chamado, o filho e todos os seus filhos são salvas, mas o pai não é.  
+ Se o [propriedade Filter](../../../ado/reference/ado-api/filter-property.md) propriedade está em vigor para o **conjunto de registros**, em seguida, somente as linhas acessíveis sob o filtro são salvos. Se o **conjunto de registros** é hierárquico, em seguida, o filho atual **conjunto de registros** e seus filhos são salvas, incluindo o pai **conjunto de registros**. Se o método Save de um filho **Recordset** é chamado, o filho e todos os seus filhos são salvas, mas o pai não é.  
   
- Na primeira vez que você salvar o **registros**, é opcional especificar *destino*. Se você omitir *destino*, um novo arquivo será criado com um nome definido para o valor da propriedade de origem a **registros**.  
+ Na primeira vez que você salvar a **conjunto de registros**, é opcional para especificar *destino*. Se você omitir *destino*, um novo arquivo será criado com um nome definido como o valor da propriedade do código-fonte a **conjunto de registros**.  
   
- Omitir *destino* quando você chamar subsequentemente **salvar** após a primeira gravação ou um erro de tempo de execução ocorrerá. Se você chamar subsequentemente **salvar** com um novo *destino*, o **registros** é salvo para o novo destino. No entanto, o novo destino e o destino original ambos será abertas.  
+ Omitir *destino* ao chamar subsequentemente **salvar** depois que o primeiro salvar ou um erro de tempo de execução ocorrerá. Se você chamar subsequentemente **salve** com uma nova *destino*, o **Recordset** é salvo para o novo destino. No entanto, o novo destino e o destino original serão ser abertos.  
   
- **Salvar** não fecha o **registros** ou *destino*, portanto, você pode continuar a trabalhar com o **registros** e salve as alterações mais recentes. *Destino* permanece aberto até que o **registros** está fechado.  
+ **Salve** não fecha o **conjunto de registros** ou *destino*, portanto, você pode continuar a trabalhar com o **Recordset** e salve as alterações mais recentes. *Destino* permanece aberta até que o **Recordset** está fechado.  
   
- Por razões de segurança, o **salvar** método permite apenas o uso de configurações de segurança personalizados e baixa de um script executado pelo Microsoft Internet Explorer.  
+ Por motivos de segurança, o **salvar** método permite apenas o uso de configurações de segurança baixa e personalizada de um script executado pelo Microsoft Internet Explorer.  
   
- Se o **salvar** método é chamado durante assíncrona **registros** buscar, executar ou atualizar a operação está em andamento, em seguida, **salvar** aguarda até que a operação assíncrona foi concluída.  
+ Se o **salve** método é chamado durante a assíncrona **conjunto de registros** buscar, executar ou atualizar a operação está em andamento, em seguida, **salvar** aguarda até que a operação assíncrona foi concluída.  
   
- Registros são salvos, começando com a primeira linha do **registros**. Quando o **salvar** método é concluído, a posição da linha atual é movida para a primeira linha do **registros**.  
+ Registros são salvos, começando com a primeira linha do **conjunto de registros**. Quando o **salve** método for concluído, a posição da linha atual é movida para a primeira linha das **conjunto de registros**.  
   
- Para obter melhores resultados, defina o [CursorLocation Property (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md) propriedade **adUseClient** com **salvar**. Se o provedor não dá suporte toda a funcionalidade necessária para salvar **registros** objetos, o serviço de Cursor fornecem essa funcionalidade.  
+ Para obter melhores resultados, defina as [propriedade CursorLocation (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md) propriedade **adUseClient** com **salvar**. Se seu provedor não oferece suporte a todas as funcionalidades necessárias para salvar **Recordset** objetos, o serviço de Cursor fornecerá essa funcionalidade.  
   
- Quando um **Recordset** são mantidas com o **CursorLocation** propriedade definida como **adUseServer**, a capacidade de atualização para o **Recordset**é limitado. Normalmente, somente tabela única atualizações, inserções e exclusões são permitidas (dependente de funcionalidade de provedor). O [método Resync](../../../ado/reference/ado-api/resync-method.md) método também está disponível nessa configuração.  
+ Quando um **conjunto de registros** é persistida com o **CursorLocation** propriedade definida como **adUseServer**, o recurso de atualização para o **Recordset**é limitado. Normalmente, somente tabela única de atualizações, inserções e exclusões são permitidas (dependente de funcionalidade de provedor). O [método Resync](../../../ado/reference/ado-api/resync-method.md) método também está disponível nessa configuração.  
   
 > [!NOTE]
->  Salvando uma **registros** com **campos** do tipo **adVariant**, **adIDispatch**, ou **adIUnknown** é não têm suporte pelo ADO e pode causar resultados imprevisíveis.  
+>  Salvando uma **conjunto de registros** com **campos** do tipo **adVariant**, **adIDispatch**, ou **adIUnknown** é não tem suporte pelo ADO e pode causar resultados imprevisíveis.  
   
- Somente filtros na forma de cadeias de caracteres de critérios (OrderDate, por exemplo, > ' 12/31/1999 ') afeta o conteúdo de um persistente **registros**. Filtros criados com uma matriz de **indicadores** ou usando um valor da [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) não afeta o conteúdo de persistente **registros**. Essas regras se aplicam a **registros**s criados com cursores do lado do cliente ou do servidor.  
+ Filtra somente na forma de cadeias de caracteres de critérios (OrderDate, por exemplo, > ' 12/31/1999 ') afeta o conteúdo de um persistente **conjunto de registros**. Filtros criados com uma matriz de **indicadores** ou usando um valor da [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) não afetará o conteúdo de persistido **conjunto de registros**. Essas regras se aplicam a **Recordset**s criados com cursores do lado do cliente ou servidor.  
   
- Porque o *destino* parâmetro pode aceitar qualquer objeto que ofereça suporte à interface IStream do OLE DB, você pode salvar uma **registros** diretamente para o objeto de resposta do ASP. Para obter mais detalhes, consulte o **cenário de persistência do conjunto de registros de XML**.  
+ Porque o *destino* parâmetro pode aceitar qualquer objeto compatível com a interface IStream do OLE DB, você pode salvar uma **Recordset** diretamente para o objeto de resposta do ASP. Para obter mais detalhes, consulte o **cenário de persistência de conjunto de registros XML**.  
   
- Você também pode salvar uma **registros** em formato XML a uma instância de um objeto DOM MSXML, como é mostrado no seguinte código do Visual Basic:  
+ Você também pode salvar uma **Recordset** em formato XML a uma instância de um objeto DOM MSXML, conforme é mostrado no código do Visual Basic a seguir:  
   
 ```  
 Dim xDOM As New MSXML.DOMDocument  
@@ -87,9 +84,9 @@ rsXML.Save xDOM, adPersistXML   'Save Recordset directly into a DOM tree.
 ```  
   
 > [!NOTE]
->  Duas limitações se aplicam ao salvar o conjunto de registros hierárquico (formas de dados) em formato XML. Não é possível salvar em XML se o hierárquica **registros** contém as atualizações pendentes, e não é possível salvar um parametrizadas hierárquica **registros**.  
+>  Duas limitações se aplicam ao salvar os conjuntos de registros hierárquicos (formas de dados) em formato XML. Não é possível salvar em XML se o hierárquica **conjunto de registros** contém as atualizações pendentes, e não é possível salvar um parametrizada hierárquica **conjunto de registros**.  
   
- Um **registros** salvo no XML de formato é salvo usando o formato UTF-8. Quando esse arquivo é carregado em um fluxo de ADO, o objeto de fluxo não tentará abrir um **registros** do fluxo, a menos que a propriedade de conjunto de caracteres do fluxo é definida como o valor apropriado para o formato UTF-8.  
+ Um **Recordset** salvo no XML de formato é salvo usando o formato UTF-8. Quando esse arquivo é carregado em um Stream de ADO, o objeto Stream não tentará abrir um **Recordset** do fluxo, a menos que a propriedade de conjunto de caracteres do fluxo é definida como o valor apropriado para o formato UTF-8.  
   
 ## <a name="applies-to"></a>Aplica-se a  
   
@@ -98,8 +95,8 @@ rsXML.Save xDOM, adPersistXML   'Save Recordset directly into a DOM tree.
 |[Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[Objeto Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|  
   
 ## <a name="see-also"></a>Consulte também  
- [Salve e abra o exemplo de métodos (VB)](../../../ado/reference/ado-api/save-and-open-methods-example-vb.md)   
- [Salve e abra o exemplo de métodos (VC + +)](../../../ado/reference/ado-api/save-and-open-methods-example-vc.md)   
+ [Salvar e abrir um exemplo dos métodos (VB)](../../../ado/reference/ado-api/save-and-open-methods-example-vb.md)   
+ [Salvar e abrir um exemplo dos métodos (VC + +)](../../../ado/reference/ado-api/save-and-open-methods-example-vc.md)   
  [Método Open (conjunto de registros ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Método Open (fluxo de ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
+ [Método Open (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
  [Método SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)

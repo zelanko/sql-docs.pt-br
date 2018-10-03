@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_repl_articles_TSQL
@@ -18,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_repl_articles dynamic management function
 ms.assetid: 794d514e-bacd-432e-a8ec-3a063a97a37b
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 12a9e842c8ff0ebbf74e9d1126de52224980b473
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 48112a8cf804b329b16aadc04992ac04b852ba07
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467982"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47791065"
 ---
 # <a name="sysdmreplarticles-transact-sql"></a>sys.dm_repl_articles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,20 +41,20 @@ ms.locfileid: "34467982"
 |**artfilter**|**bigint**|ID do procedimento armazenado usado para filtrar horizontalmente o artigo.|  
 |**artobjid**|**bigint**|ID do objeto publicado.|  
 |**artpubid**|**bigint**|ID da publicação à qual pertence o artigo.|  
-|**artstatus**|**tinyint**|Bitmask de opções e status do artigo, que pode ser o resultado OR lógico bit a bit de um ou mais destes valores:<br /><br /> **1** = artigo está ativo.<br /><br /> **8** = incluir o nome da coluna em instruções INSERT.<br /><br /> **16** = usar instruções com parâmetros.<br /><br /> **24** = ambos incluem o nome da coluna em instruções INSERT e usar instruções com parâmetros.<br /><br /> Por exemplo, um artigo ativo que usa instruções com parâmetros teria um valor 17 nessa coluna. Um valor 0 significa que o artigo está inativo e nenhuma propriedade adicional está definida.|  
+|**artstatus**|**tinyint**|Bitmask de opções e status do artigo, que pode ser o resultado OR lógico bit a bit de um ou mais destes valores:<br /><br /> **1** = artigo está ativo.<br /><br /> **8** = incluir o nome da coluna em instruções INSERT.<br /><br /> **16** = usar instruções com parâmetros.<br /><br /> **24** = ambos incluir o nome da coluna em instruções INSERT e usar instruções com parâmetros.<br /><br /> Por exemplo, um artigo ativo que usa instruções com parâmetros teria um valor 17 nessa coluna. Um valor 0 significa que o artigo está inativo e nenhuma propriedade adicional está definida.|  
 |**arttype**|**tinyint**|O tipo de artigo:<br /><br /> **1** = artigo com base em log.<br /><br /> **3** = artigo com base em log com filtro manual.<br /><br /> **5** = artigo com base em log com exibição manual.<br /><br /> **7** = artigo com base em log com filtro manual e exibição manual.<br /><br /> **8** = execução de procedimento armazenado.<br /><br /> **24** = a execução do procedimento armazenado serializável.<br /><br /> **32** = procedimento armazenado (somente esquema).<br /><br /> **64** = exibição (somente esquema).<br /><br /> **128** = função (somente esquema).|  
 |**wszArtdesttable**|**nvarchar(514)**|Nome do objeto publicado no destino.|  
 |**wszArtdesttableowner**|**nvarchar(514)**|Proprietário do objeto publicado no destino.|  
 |**wszArtinscmd**|**nvarchar(510)**|Comando ou procedimento armazenado usado para inserções.|  
-|**cmdTypeIns**|**Int**|Sintaxe de chamada do procedimento armazenado de inserção, podendo ser um destes valores.<br /><br /> **1** = CHAMADA<br /><br /> **2** = SQL<br /><br /> **3** = NENHUM<br /><br /> **7** = DESCONHECIDO|  
+|**cmdTypeIns**|**int**|Sintaxe de chamada do procedimento armazenado de inserção, podendo ser um destes valores.<br /><br /> **1** = CHAMADA DE<br /><br /> **2** = SQL<br /><br /> **3** = NENHUM<br /><br /> **7** = DESCONHECIDO|  
 |**wszArtdelcmd**|**nvarchar(510)**|Comando ou procedimento armazenado usado em exclusões.|  
-|**cmdTypeDel**|**Int**|Sintaxe de chamada do procedimento armazenado de exclusão, podendo ser um destes valores.<br /><br /> **0** = XCALL<br /><br /> **1** = CHAMADA<br /><br /> **2** = SQL<br /><br /> **3** = NENHUM<br /><br /> **7** = DESCONHECIDO|  
+|**cmdTypeDel**|**int**|Sintaxe de chamada do procedimento armazenado de exclusão, podendo ser um destes valores.<br /><br /> **0** = XCALL<br /><br /> **1** = CHAMADA DE<br /><br /> **2** = SQL<br /><br /> **3** = NENHUM<br /><br /> **7** = DESCONHECIDO|  
 |**wszArtupdcmd**|**nvarchar(510)**|Comando ou procedimento armazenado usado em atualizações.|  
-|**cmdTypeUpd**|**Int**|Sintaxe de chamada do procedimento armazenado de atualização, podendo ser um destes valores.<br /><br /> **0** = XCALL<br /><br /> **1** = CHAMADA<br /><br /> **2** = SQL<br /><br /> **3** = NENHUM<br /><br /> **4** = MCALL<br /><br /> **5** = VCALL<br /><br /> **6** = SCALL<br /><br /> **7** = DESCONHECIDO|  
+|**cmdTypeUpd**|**int**|Sintaxe de chamada do procedimento armazenado de atualização, podendo ser um destes valores.<br /><br /> **0** = XCALL<br /><br /> **1** = CHAMADA DE<br /><br /> **2** = SQL<br /><br /> **3** = NENHUM<br /><br /> **4** = MCALL<br /><br /> **5** = VCALL<br /><br /> **6** = SCALL<br /><br /> **7** = DESCONHECIDO|  
 |**wszArtpartialupdcmd**|**nvarchar(510)**|Comando ou procedimento armazenado usado em atualizações parciais.|  
-|**cmdTypePartialUpd**|**Int**|Sintaxe de chamada do procedimento armazenado de atualização parcial, podendo ser um destes valores.<br /><br /> **2** = SQL|  
-|**numcol**|**Int**|Número de colunas na partição de um artigo filtrado verticalmente.|  
-|**artcmdtype**|**tinyint**|Tipo de comando atualmente sendo replicado, podendo ser um destes valores.<br /><br /> **1** = INSERT<br /><br /> **2** = EXCLUIR<br /><br /> **3** = ATUALIZAÇÃO<br /><br /> **4** = UPDATETEXT<br /><br /> **5** = nenhum<br /><br /> **6** = somente para uso interno<br /><br /> **7** = somente para uso interno<br /><br /> **8** = UPDATE parcial|  
+|**cmdTypePartialUpd**|**int**|Sintaxe de chamada do procedimento armazenado de atualização parcial, podendo ser um destes valores.<br /><br /> **2** = SQL|  
+|**numcol**|**int**|Número de colunas na partição de um artigo filtrado verticalmente.|  
+|**artcmdtype**|**tinyint**|Tipo de comando atualmente sendo replicado, podendo ser um destes valores.<br /><br /> **1** = INSERIR<br /><br /> **2** = EXCLUIR<br /><br /> **3** = ATUALIZAÇÃO<br /><br /> **4** = UPDATETEXT<br /><br /> **5** = nenhum<br /><br /> **6** = somente para uso interno<br /><br /> **7** = somente para uso interno<br /><br /> **8** = UPDATE parcial|  
 |**artgeninscmd**|**nvarchar(510)**|Modelo de comando INSERT baseado nas colunas incluídas no artigo.|  
 |**artgendelcmd**|**nvarchar(510)**|Modelo de comando DELETE, que pode incluir a chave primária ou as colunas incluídas no artigo, dependendo de a sintaxe de chamada ser usada ou não.|  
 |**artgenupdcmd**|**nvarchar(510)**|Modelo de comando UPDATE, que pode incluir a chave primária, colunas atualizadas ou uma lista de colunas completa, dependendo de a sintaxe de chamada ser usada ou não.|  
@@ -70,9 +67,9 @@ ms.locfileid: "34467982"
 |**intPublicationOptions**|**bigint**|Bitmap que especifica opções de publicação adicionais, onde os valores de opção bit a bit são:<br /><br /> **0x1** - habilitado para replicação ponto a ponto.<br /><br /> **0x2** -publicar somente alterações locais.<br /><br /> **0x4** - habilitado para assinantes não SQL Server.|  
   
 ## <a name="permissions"></a>Permissões  
- Requer permissão VIEW DATABASE STATE no banco de dados de publicação para chamar **dm_repl_articles**.  
+ Requer permissão de VIEW DATABASE STATE no banco de dados de publicação para chamar **dm_repl_articles**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  As informações só serão retornadas para objetos de banco de dados replicados atualmente armazenados no cache de artigo de replicação.  
   
 ## <a name="see-also"></a>Consulte também  

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - syscollector_collection_items_TSQL
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - syscollector_collection_items view
 - add data collector view
 ms.assetid: a279ecd1-a59c-4315-9f08-bf221f00a465
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9e1113453ebe83221fb8dd8b9de92113bcb346c3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 53f978bf7914776e8596a89b0ee9b62770cd6866
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33220567"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47714354"
 ---
 # <a name="syscollectorcollectionitems-transact-sql"></a>syscollector_collection_items (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,12 +33,12 @@ ms.locfileid: "33220567"
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**collection_set_id**|**Int**|Identifica o conjunto de coleta. Não permite valor nulo.|  
-|**collection_item_id**|**Int**|Identifica um item no conjunto de coleta. Não permite valor nulo.|  
+|**collection_set_id**|**int**|Identifica o conjunto de coleta. Não permite valor nulo.|  
+|**collection_item_id**|**int**|Identifica um item no conjunto de coleta. Não permite valor nulo.|  
 |**collector_type_uid**|**uniqueidentifier**|GUID usado para identificar o tipo de coletor. Não permite valor nulo.|  
 |**name**|**nvarchar(4000)**|Nome do conjunto de coleta. Permite valor nulo.|  
-|**Frequência**|**Int**|Frequência com que os dados são coletados por um item de coleta. Não permite valor nulo.|  
-|**parameters**|**xml**|Descreve a parametrização para o tipo de coletor associado ao item de coleta. O esquema XML para este item de coleta é validado com o esquema XML (XSD) armazenados na **parameter_schema** para um determinado tipo de coletor. Permite valor nulo. Para obter mais informações, consulte [syscollector_collector_types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collector-types-transact-sql.md).|  
+|**Frequência**|**int**|Frequência com que os dados são coletados por um item de coleta. Não permite valor nulo.|  
+|**parameters**|**xml**|Descreve a parametrização para o tipo de coletor associado ao item de coleta. O esquema XML para esse item de coleta é validado com o esquema XML (XSD) armazenados na **parameter_schema** para um determinado tipo de coletor. Permite valor nulo. Para obter mais informações, consulte [syscollector_collector_types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collector-types-transact-sql.md).|  
   
 ## <a name="permissions"></a>Permissões  
  Requer SELECT para **dc_operator**, **dc_proxy**.  

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cdc_help_change_data_capture_TSQL
@@ -25,12 +22,12 @@ ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f29ac764c9d948d435765abd3d11d260cbd0d59c
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: aabd005381dc2e18b01fb88d125ddeeb3f8b6428
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43027242"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47803854"
 ---
 # <a name="sysspcdchelpchangedatacapture-transact-sql"></a>sys.sp_cdc_help_change_data_capture (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +83,7 @@ sys.sp_cdc_help_change_data_capture
 |index_column_list|**nvarchar(max)**|Lista de colunas de índice usadas para identificar exclusivamente linhas na tabela de origem.|  
 |captured_column_list|**nvarchar(max)**|Lista de colunas de origem capturadas.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Quando ambos *source_schema* e *source_name* padronizados como NULL ou são definidas explicitamente o NULL, esse procedimento armazenado retorna informações para todas as do banco de dados de instâncias de captura que o chamador tem selecionar acesso. Quando *source_schema* e *source_name* são não NULL, apenas informações sobre a tabela habilitada nomeada específica serão retornadas.  
   
 ## <a name="permissions"></a>Permissões  

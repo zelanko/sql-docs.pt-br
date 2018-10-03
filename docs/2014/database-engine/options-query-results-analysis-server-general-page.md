@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryResults.AnalysisServer.AnalysisServicesResulstsGeneral
 ms.assetid: ab4bd4f9-0daa-49f1-98d3-88bbe60b52c9
-caps.latest.revision: 22
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: b1bb42865f2322c2b808d83f1311dc25ae403397
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 80291e4dc4f53fd4818801f05d99ba655a1ff73c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37254718"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48199196"
 ---
 # <a name="options-query-results-analysis-server-general-page"></a>Opções (página geral do Server os resultados da análise da consulta)
   Use esta página para determinar o comportamento padrão da janela de resultado de consultas para as consultas do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Para exibir essas configurações, selecione **Opções** no menu **Ferramentas** . Dentro da pasta **Resultados da Consulta** expanda a subpasta **Analysis Server** e, depois, escolha **Geral**.  
@@ -33,7 +30,7 @@ ms.locfileid: "37254718"
  **Reproduzir o aviso sonoro do Windows quando um lote de consulta é concluída**  
  Especifique que um sinal deve ser emitido quando um lote de consulta terminar de executar.  
   
- **Redefinir para padrão**  
+ **Restaurar Padrões**  
  Redefine todos os valores dessa página com os valores padrão originais.  
   
   

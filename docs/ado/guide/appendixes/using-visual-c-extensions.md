@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Visual C++ [ADO], using VC++ extensions
 - ADO, Visual C++
 ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 805abefbd6f934781b86060e98c73ab6ee8fd3c0
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 20b39cc744b65bb3d386f54680f641757f8d7484
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982798"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47824015"
 ---
 # <a name="visual-c-extensions"></a>Extensões do Visual C++
 ## <a name="the-iadorecordbinding-interface"></a>A Interface IADORecordBinding
@@ -119,7 +116,7 @@ Update(CADORecordBinding *binding)
 |*Classe*|Classe na qual as variáveis de C/C++ e entradas de vinculação são definidas.|
 |*Ordinal*|Número ordinal, contando a partir de um, do **Recordset** campo correspondente à sua variável de C/C++.|
 |*Tipo de dados*|Tipo de dados ADO equivalente da variável C/C++ (consulte [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) para obter uma lista de tipos de dados válidos). O valor de **conjunto de registros** campo será convertido para esse tipo de dados, se necessário.|
-|*Buffer*|Nome da variável C/C++ no qual o **Recordset** campo será armazenado.|
+|*buffer*|Nome da variável C/C++ no qual o **Recordset** campo será armazenado.|
 |*Tamanho*|Tamanho máximo em bytes do *Buffer*. Se *Buffer* conterá uma cadeia de caracteres de comprimento variável, fazer espaço para um terminação de zero.|
 |*Status*|Nome de uma variável que indicará se o conteúdo do *Buffer* são válidos e se a conversão do campo a ser *DataType* foi bem-sucedida.<br /><br /> Os dois valores mais importantes para essa variável forem **adFldOK**, que significa que a conversão foi bem-sucedida; e **adFldNull**, que significa que o valor do campo seria uma VARIANTE do tipo VT_NULL e não simplesmente vazio.<br /><br /> Os valores possíveis para *Status* são listadas na tabela a seguir, "Valores de Status".|
 |*Modificar*|Sinalizador booliano; Se for TRUE, indica o ADO tem permissão para atualizar o correspondente **conjunto de registros** campo com o valor contido no *Buffer*.<br /><br /> Defina o booliano *modificar* parâmetro como TRUE para permitir que o ADO atualizar o campo associado e FALSE se você quiser examinar o campo, mas não alterá-lo.|

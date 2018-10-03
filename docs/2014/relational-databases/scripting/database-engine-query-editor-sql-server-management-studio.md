@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.tsqlquery.f1
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - Query Editor [Database Engine], Features
 - SQL Server Management Studio [SQL Server], Database Engine Query Editor
 ms.assetid: 05cfae9b-96d5-4a35-a098-0bc3a548bcfc
-caps.latest.revision: 46
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 726ed1d79919752744a6b9246081d9c333e1e816
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3062b1acf67e8d47a70a7b3b3758a70ec1dbeda9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37181883"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48192196"
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>Editor de Consultas do Mecanismo de Banco de Dados (SQL Server Management Studio)
   Use o Editor de Consultas do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para criar e executar scripts que contenham instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] . O editor também dá suporte à execução de scripts que contêm comandos do **sqlcmd** .  

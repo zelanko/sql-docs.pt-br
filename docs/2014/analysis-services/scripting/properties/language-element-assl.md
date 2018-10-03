@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Language Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Language element
 ms.assetid: 4d745d23-6b1f-4a85-97cf-d034cc41356f
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 738403bedd7a9da120e5ba706eabe4848f7e1e2b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2ce2de9ae87ac0c4d22a179f25bbf7ff047e7633
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293226"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48126056"
 ---
 # <a name="language-element-assl"></a>Elemento Language (ASSL)
   Contém o identificador de idioma do elemento pai.  
@@ -51,7 +48,7 @@ ms.locfileid: "37293226"
 |Característica|Description|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|Integer|  
-|Valor padrão|Nenhum|  
+|Valor padrão|None|  
   
  **Cardinalidade**  
   
@@ -65,9 +62,9 @@ ms.locfileid: "37293226"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|[Cubo](../objects/cube-element-assl.md), [banco de dados](../objects/database-element-assl.md), [dimensão](../objects/dimension-element-assl.md), [MiningModel](../objects/miningmodel-element-assl.md), [MiningStructure](../objects/miningstructure-element-assl.md), [tradução](../objects/translation-element-assl.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O elemento `Language` contém o identificador de idioma padrão utilizado pelo elemento pai ou o identificador de idioma específico para um elemento `Translation`. O idioma deve ser definido usando códigos de identificador de localidade (LCID). Por exemplo, o LCID 1033 é usado para indicar o idioma inglês (EUA).  
   
  Os elementos que correspondem aos pais do elemento `Language` no modelo de objeto AMO (Objetos de Gerenciamento de Análise) são <xref:Microsoft.AnalysisServices.Cube>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.Dimension>, <xref:Microsoft.AnalysisServices.MiningModel>, <xref:Microsoft.AnalysisServices.MiningStructure> e <xref:Microsoft.AnalysisServices.Translation>.  

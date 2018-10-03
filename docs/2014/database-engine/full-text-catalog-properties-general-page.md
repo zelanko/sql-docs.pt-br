@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.ftcatalogproperties.general.f1
 ms.assetid: d1f66762-2d40-4f24-b635-a417d22ee79a
-caps.latest.revision: 34
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: cc0d0c6e287d978b0a10979843a50f40f906872b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 374ba32b5cc79a503333b691b4708921f507004a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37169308"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48182766"
 ---
 # <a name="full-text-catalog-properties-general-page"></a>Propriedades do Catálogo de Texto Completo (página Geral)
   Esta seção mostra as opções e funções disponíveis na página **Geral** da caixa de diálogo **Propriedades do Catálogo de Texto Completo** .  
@@ -47,7 +44,7 @@ ms.locfileid: "37169308"
   
 -   **Recuperando**  
   
--   **Desligamento**  
+-   **desligamento**  
   
 -   **População incremental em andamento**  
   

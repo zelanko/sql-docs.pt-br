@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.specifyordering.setordering.f1
 ms.assetid: fc0678fc-e188-4d13-8deb-9daa1281b734
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 56eac43752ad8528f3bb5989b0a3014573b6288e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: acecdb460ee61e16a82609b658eb20a2b38f323d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37332886"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48197956"
 ---
 # <a name="specify-attribute-ordering-business-intelligence-wizard"></a>Especificar a Ordenação de Atributos (Assistente de Business Intelligence)
   Use a página **Especificar a ordenação de atributos** para especificar a ordenação de atributos e de critérios de ordenação de atributos na dimensão selecionada.  

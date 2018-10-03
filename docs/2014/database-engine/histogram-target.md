@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - bucketing target [SQL Server extended events]
 - event bucketing target
 - targets [SQL Server extended events], bucketing
 ms.assetid: 2ea39141-7eb0-4c74-abf8-114c2c106a19
-caps.latest.revision: 16
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f524357956a2832b2eee50a2659e065e34d3e070
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8672fc9932dd18f73424f83a81299421186aec9c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293116"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48198136"
 ---
 # <a name="histogram-target"></a>Destino do histograma
   O destino do histograma agrupa ocorrências de um tipo de evento específico com base nos dados do evento. Os agrupamentos de eventos são contados com base em uma coluna de evento ou ação especificada. Você pode usar o destino do histograma para solucionar problemas de desempenho. Ao identificar quais eventos ocorrem mais frequentemente, você pode localizar "pontos de acesso" que indicam uma causa potencial de um problema de desempenho.  

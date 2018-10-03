@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - breaking changes [Analysis Services]
 - upgrading Analysis Services
 ms.assetid: aeb02542-5a6c-458c-a110-13413dd3e9d9
-caps.latest.revision: 46
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a00010f10148d4ed949a7d5602a68fb6a53b3f6e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1de5d311b24d8a4a73ea7ed61127310249a70ae3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37238046"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48137416"
 ---
 # <a name="breaking-changes-to-analysis-services-features-in-sql-server-2014"></a>Alterações recentes em recursos do Analysis Services no SQL Server 2014
   Este tópico descreve as alterações recentes no [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)]. Essas alterações podem interromper aplicativos, scripts ou funcionalidades baseados em versões anteriores do SQL Server.  

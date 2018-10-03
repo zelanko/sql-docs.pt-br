@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Profiler, stopping traces
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - stopping traces
 - starting traces
 ms.assetid: aeeb38eb-229a-4c8b-ad66-57e9ce45fb6a
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 678bf2b9140d5df7d19aa28088d598f4cca450c8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4b32b1d1d6416c6a8c6097a79dcba18eb62a89d8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224576"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48140221"
 ---
 # <a name="start-a-trace"></a>Iniciar um rastreamento
   Após definir um novo rastreamento ou criar um modelo usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], você pode iniciar, pausar ou interromper a captura de dados usando a nova definição ou modelo de rastreamento.  
@@ -48,7 +45,7 @@ ms.locfileid: "37224576"
 >  Ao trabalhar com rastreamentos existentes, você pode exibir as propriedades, mas não pode modificá-las. Para modificar as propriedades, interrompa ou pause o rastreamento.  
   
 ## <a name="see-also"></a>Consulte também  
- [Categoria de evento Sessions](start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
+ [Iniciar um rastreamento automaticamente após a conexão a um servidor &#40;SQL Server Profiler&#41;](start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
  [Pausar um rastreamento &#40;SQL Server Profiler&#41;](pause-a-trace-sql-server-profiler.md)   
  [Parar um rastreamento &#40;SQL Server Profiler&#41;](stop-a-trace-sql-server-profiler.md)   
  [Limpar uma janela de rastreamento &#40;SQL Server Profiler&#41;](clear-a-trace-window-sql-server-profiler.md)   

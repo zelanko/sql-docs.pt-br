@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Partition Wizard
 ms.assetid: 3b6d7053-aeef-4d9e-af70-f5b40256e859
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e9c8346f5319bbc8f7552546e52537157c699152
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 037e3a720e7c3ab2a6563d65a33e84e818de3428
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37245686"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48198526"
 ---
 # <a name="partition-wizard-f1-help-analysis-services---multidimensional-data"></a>Ajuda F1 do Assistente para Partições (Analysis Services – Dados Multidimensionais)
   É possível usar o Assistente para Partições para definir partições para um grupo de medidas em um cubo. Por padrão, uma única partição é definida para cada grupo de medidas em um cubo. No entanto o desempenho do acesso e do processamento pode se degradado no caso de partições grandes. Criando várias partições, cada uma contendo uma parte dos dados de um grupo de medidas, é possível melhorar o desempenho do acesso e do processamento daquele grupo de medidas.  

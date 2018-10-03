@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e0040fec-e2b7-4099-ae01-3b9bb9128bbd
-caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b7d059719b88abec5f3e89793baa7727ec66a962
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6ee9006aba640c6b2ffa5369dc3fdb04c82f8dc2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37175403"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48188586"
 ---
 # <a name="reporting-services-site-settings-and-site-featuressharepoint-mode"></a>Configurações de Site e Recursos de Site do Reporting Services (Modo SharePoint)
   O modo SharePoint do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] tem vários recursos personalizados em nível de site e um recurso de site que podem ser gerenciados na página Configurações de Site do SharePoint. As configurações abrangem todo o site e afetam todos os aplicativos de serviço do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Você deve ter permissões de Gerenciador de Conteúdo e de Administrador de Sistema para exibir essa página.  

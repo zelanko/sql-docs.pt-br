@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.datarefreshprogressdb.f1
 ms.assetid: 0918c04c-c1e6-45b4-acfa-96fa578e684b
-caps.latest.revision: 17
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 427d7439395c9264741e215672d1ae9390b41b04
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6f87cda5fb38fad586e5272d7d7c3ea255a478b7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304606"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48189757"
 ---
 # <a name="manually-process-data-ssas-tabular"></a>Processando os dados manualmente (SSAS tabular)
   Este tópico descreve como processar manualmente dados de espaço de trabalho no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  

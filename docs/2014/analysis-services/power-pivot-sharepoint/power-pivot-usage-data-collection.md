@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9057cb89-fb17-466e-a1ce-192c8ca20692
-caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e8993c4033112dd81be611bc3e2d36bfb1f30243
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f9acdc193b608d42b21c69c380fb21db23ec3b89
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304686"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48187476"
 ---
 # <a name="powerpivot-usage-data-collection"></a>Coleta de dados de uso do PowerPivot
   A coleta de dados de uso é um recurso do SharePoint em nível de farm. O PowerPivot para SharePoint usa e estende esse sistema para fornecer relatórios no Painel de Gerenciamento PowerPivot que mostram como os dados e serviços PowerPivot são usados. Dependendo da forma como você instala o SharePoint, a coleta de dados de uso poderá ser desativada para o farm. Um administrador de farm deve habilitar o registro em log de uso para criar os dados de uso exibidos no Painel de Gerenciamento PowerPivot. Para obter mais informações sobre como habilitar e configurar a coleta de dados de uso para o PowerPivot eventos consultar [configurar a coleta de dados de uso para &#40;PowerPivot para SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
@@ -43,7 +40,7 @@ ms.locfileid: "37304686"
   
  **Observação:** Verifique se a coleta de dados de utilização está habilitada. Para verificar, vá para **Monitoramento** na Administração Central do SharePoint. Para obter mais informações, consulte [configurar a coleta de dados de uso para &#40;PowerPivot para SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
   
- ![Componentes e processos de coleta de dados de uso. ] (../media/gmni-usagedata.gif "Componentes e processos de coleta de dados de uso.")  
+ ![Componentes e processos de coleta de dados de uso. ](../media/gmni-usagedata.gif "Componentes e processos de coleta de dados de uso.")  
   
 |Fase|Description|  
 |-----------|-----------------|  

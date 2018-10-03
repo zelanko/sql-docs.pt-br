@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Events Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Events element
 ms.assetid: de887998-dc4b-44dc-8fec-08d67b92f96d
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 33f6d302557369d7cbc90c1d5786bc21d37b0f42
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f336d2a265a6a427d2b2674ac233c0468fb63e8f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293496"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48197763"
 ---
 # <a name="events-element-assl"></a>Elemento Events (ASSL)
   Define a coleção de elementos [Event](../objects/event-element-assl.md) a serem capturados por um elemento [Trace](../objects/trace-element-assl.md).  
@@ -52,8 +49,8 @@ ms.locfileid: "37293496"
   
 |Característica|Description|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|Nenhum|  
-|Valor padrão|Nenhum|  
+|Comprimento e tipo de dados|None|  
+|Valor padrão|None|  
 |Cardinalidade|0-1: elemento opcional que pode ocorrer apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -63,7 +60,7 @@ ms.locfileid: "37293496"
 |Elemento pai|[Rastreamento](../objects/trace-element-assl.md)|  
 |Elementos filho|[Evento](../objects/event-element-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O elemento correspondente no modelo de objeto Analysis Management Objects (AMO) é <xref:Microsoft.AnalysisServices.TraceEventCollection>.  
   
 ## <a name="see-also"></a>Consulte também  

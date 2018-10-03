@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ImpersonationInfo Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - ImpersonationInfo element
 ms.assetid: d4b9c372-1023-43f7-97e9-b0a90f544fbb
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3ed7caa18c18f73f70a3f39dce608f2b32dbc319
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3c48718c9568a54a42e80be18c25dbbcf289079b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37275492"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104909"
 ---
 # <a name="impersonationinfo-element-assl"></a>Elemento ImpersonationInfo (ASSL)
   Contém as informações usadas para determinar o comportamento de personificação ao acessar ou executar um assembly.  
@@ -49,7 +46,7 @@ ms.locfileid: "37275492"
 |Característica|Description|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|[ImpersonationInfo](../data-type/impersonationinfo-data-type-assl.md)|  
-|Valor padrão|Nenhum|  
+|Valor padrão|None|  
 |Cardinalidade|0-1: elemento opcional que pode ocorrer apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -57,9 +54,9 @@ ms.locfileid: "37275492"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|[Assembly](../data-type/assembly-data-type-assl.md), [fonte de dados](../data-type/datasource-data-type-assl.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;ASSL&#41;](properties-assl.md)  

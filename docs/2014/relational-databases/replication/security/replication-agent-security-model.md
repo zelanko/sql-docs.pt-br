@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 10/07/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Snapshot Agent, security
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - Merge Agent, security
 - replication [SQL Server], agents and profiles
 ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
-caps.latest.revision: 70
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c093e7605e4adb86b3b1f42e12f90db83b962aa0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b17b7cccec50c9dc8d1eccc5cb6e1caacee47e2a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37204986"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48135656"
 ---
 # <a name="replication-agent-security-model"></a>Modelo de segurança do agente de replicação
   O modelo de segurança do agente de replicação proporciona um controle refinado nas contas sob as quais os agentes de replicação executam e fazem conexões: uma conta diferente pode ser especificada para cada agente. Para obter mais informações sobre como especificar contas, consulte [Gerenciar logons e senhas na replicação](manage-logins-and-passwords-in-replication.md).  
@@ -81,9 +78,9 @@ ms.locfileid: "37204986"
 |Distribution Agent para assinaturas push para Assinantes não SQL Server|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|  
 |Queue Reader Agent|**[\<Distributor>].\<integer>**|  
   
- <sup>1</sup> para assinaturas push para publicações Oracle, o nome do trabalho é ** \<Publisher >-\<Publisher**> em vez de ** \<Publisher >-\< PublicationDatabase >**.  
+ <sup>1</sup> para assinaturas push para publicações Oracle, o nome do trabalho é  **\<Publisher >-\<Publisher**> em vez de  **\<Publisher >-\< PublicationDatabase >**.  
   
- <sup>2</sup> para assinaturas pull para publicações Oracle, o nome do trabalho é ** \<Publisher >-\<DistributionDatabase**> em vez de ** \<Publisher >-\< PublicationDatabase >**.  
+ <sup>2</sup> para assinaturas pull para publicações Oracle, o nome do trabalho é  **\<Publisher >-\<DistributionDatabase**> em vez de  **\<Publisher >-\< PublicationDatabase >**.  
   
  Ao configurar a replicação, você especifica as contas sob as quais os agentes devem executar. Porém, todas as etapas do trabalho executam sob o contexto de segurança de um *proxy*; portanto, a replicação realiza internamente os seguintes mapeamentos para as contas de agentes que você especificar:  
   

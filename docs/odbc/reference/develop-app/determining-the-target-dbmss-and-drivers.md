@@ -1,38 +1,35 @@
 ---
-title: Determinando os DBMSs de destino e os Drivers | Microsoft Docs
+title: Determinando os Drivers e DBMSs de destino | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - target DBMSs and drivers in interoperability [ODBC]
 - interoperability [ODBC], target dbmss and drivers
 ms.assetid: 23bee0f6-e12a-4598-b34e-df11a8086829
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fd4dc48994a028b2f8569da05511fa5c2b078165
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5fe868eb16b48afd83fdd5af7dcd146157338947
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911941"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47788464"
 ---
-# <a name="determining-the-target-dbmss-and-drivers"></a>Determinando os DBMSs de destino e os Drivers
-A próxima questão a considerar é, o que são o alvo DBMSs para o aplicativo e quais drivers estão disponíveis que dão suporte a esses DBMSs? Como aplicativos genéricos tendem a ser altamente interoperável, a questão de destino DBMSs é mais aplicável para aplicativos personalizados e verticais. No entanto, a questão de drivers de destino se aplica a todos os aplicativos, como drivers variam amplamente velocidade, qualidade, suporte a recursos e disponibilidade. Além disso, se os drivers devem ser redistribuídos com o aplicativo, o custo e a disponibilidade dos planos de licenciamento precisam ser considerado.  
+# <a name="determining-the-target-dbmss-and-drivers"></a>Determinar os drivers e DBMSs de destino
+A próxima questão a considerar é, quais são o DBMSs de destino para o aplicativo e quais drivers estão disponíveis que dão suporte a esses DBMSs? Como aplicativos genéricos tendem a ser altamente interoperável, a pergunta do DBMSs de destino é mais aplicável a aplicativos personalizados e verticais. No entanto, a questão dos drivers de destino se aplica a todos os aplicativos, porque os drivers variam enormemente em velocidade, qualidade, suporte ao recurso e disponibilidade. Além disso, se os drivers devem ser redistribuídos com o aplicativo, o custo e a disponibilidade dos planos de licenciamento precisam ser considerados.  
   
- Para muitos aplicativos personalizados, o destino DBMSs é óbvio: existentes DBMSs que o aplicativo foi projetado para acessar. Também devem ser consideradas DBMSs ao qual a migração futura está planejada. No entanto, a pergunta principal para esses aplicativos é qual driver ou drivers a serem usados com eles. Para outros aplicativos personalizados — aqueles que não são projetados para acessar um DBMS existente — o destino DBMSs pode ser escolhido com base no suporte ao recurso, suporte a usuários simultâneos, disponibilidade do driver e acessíveis.  
+ Para muitos aplicativos personalizados, o destino DBMSs são óbvias: eles são existentes DBMSs que o aplicativo foi projetado para acessar. Também devem ser considerados DBMSs ao qual a migração futura está planejada. No entanto, a questão principal para esses aplicativos é qual driver ou drivers a serem usados com elas. Para outros aplicativos personalizados — aqueles que não são projetados para acessar um DBMS existente — o DBMSs de destino pode ser escolhido com base no suporte ao recurso, suporte a usuários simultâneos, a disponibilidade de drivers e acessibilidade.  
   
- Para aplicativos verticais, o destino que DBMSs normalmente são escolhidos com base no mercado, disponibilidade do driver e suporte ao recurso. Por exemplo, um aplicativo vertical projetado para pequenas empresas deve ter como destino os que são acessíveis para essas empresas; um aplicativo vertical projetado como um complemento para DBMSs existentes deve ter como destino amplamente usado DBMSs.  
+ Para aplicativos verticais, o destino que DBMSs normalmente são escolhidos com base no mercado, a disponibilidade de drivers e suporte ao recurso. Por exemplo, um aplicativo vertical projetado para pequenas empresas deve ter como destino DBMSs são acessíveis a essas empresas; um aplicativo vertical projetado como um complemento para DBMSs existentes deve ter como destino amplamente usado DBMSs.  
   
- Ao escolher DBMSs de destino, as diferenças entre bancos de dados de área de trabalho e servidor devem ser consideradas. Bancos de dados de área de trabalho, como dBASE, Paradox e Btrieve são menos eficientes do que bancos de dados do servidor. Porque elas geralmente são acessadas por meio de mecanismos SQL menos avançados nos drivers mais baseada em arquivo, eles geralmente não têm suporte de transação completa, dar suporte a menos de usuários simultâneos e limitaram SQL. No entanto, eles são mais baratos e tem uma grande base instalada.  
+ Ao escolher DBMSs de destino, as diferenças entre os bancos de dados da área de trabalho e servidor devem ser consideradas. Bancos de dados da área de trabalho, como, Paradox, dBASE e Btrieve são menos avançados que bancos de dados do servidor. Porque eles são geralmente acessados por meio de mecanismos de SQL menos potentes encontrados nos drivers mais baseados em arquivo, eles geralmente não têm suporte de transação completa, suportam o menor número de usuários simultâneo e limitaram SQL. No entanto, eles são baratos e tem uma grande base instalada.  
   
- Bancos de dados do servidor, como Oracle, DB2 e do SQL Server fornecem suporte de transação completa, o suportam a muitos usuários simultâneos e tem SQL Avançado. Eles são muito mais caros e tem uma base instalada menor. Por outro lado, os preços de software tendem a ser mais alto, um pouco a compensação de um mercado potencial menor.  
+ Bancos de dados do servidor, como Oracle, DB2 e do SQL Server dão suporte a transações completo, dar suporte a muitos usuários simultâneos e tem o SQL avançada. Eles são muito mais caros e têm uma base instalada menor. Por outro lado, os preços de software tendem a ser mais alto, um pouco o deslocamento de um mercado potencial menor.  
   
- Assim, destino DBMSs às vezes pode ser escolhido com base nos recursos necessários pelo aplicativo e o mercado-alvo do aplicativo. Por exemplo, um sistema de entrada de ordem de grandes empresas pode não ter como destino bancos de dados de área de trabalho porque eles não têm suporte de transação adequado. Um sistema semelhante desenvolvido para pequenas empresas pode excluir a maioria dos bancos de dados do servidor com base em custo. E os desenvolvedores de aplicativos genéricos podem direcionar ambos mas evite usar os recursos avançados encontrados em bancos de dados do servidor.
+ Assim, destino DBMSs, às vezes, pode ser escolhido com base nos recursos necessários pelo aplicativo e o mercado-alvo do aplicativo. Por exemplo, um sistema de entrada de pedidos para grandes corporações não pode direcionar bancos de dados da área de trabalho porque eles não têm suporte de transação adequado. Um sistema similar projetado para pequenas empresas pode excluir a maioria dos bancos de dados do servidor com base em custo. E os desenvolvedores de aplicativos genéricos podem direcionar a ambos, mas evite usar os recursos avançados encontrados em bancos de dados do servidor.

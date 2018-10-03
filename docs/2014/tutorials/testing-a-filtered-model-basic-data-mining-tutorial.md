@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f0d74f8c-600d-4df5-a742-695e6947a071
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 87af6785855f81abcffe57e3672e59fcf00b5e2b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e1264808911226150bc908e356e1b08ab90e72fc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319726"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48054996"
 ---
 # <a name="testing-a-filtered-model-basic-data-mining-tutorial"></a>Testando um modelo filtrado (Tutorial de mineração de dados básico)
   Agora que você determinou que o `TM_Decision_Tree` modelo é o mais preciso, você personalizará o modelo para atender melhor às necessidades do [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] campanha de mala. Especificamente, o departamento de marketing gostaria de saber se existe alguma diferença entre os clientes masculino e feminino. As informações podem ajudá-los a decidir que revistas a ser usado para propaganda e que produtos em suas malas diretas.  

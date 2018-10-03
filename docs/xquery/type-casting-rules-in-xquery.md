@@ -4,15 +4,10 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
@@ -23,16 +18,15 @@ helpviewer_keywords:
 - cast as operator
 - implicit casting
 ms.assetid: f2e91306-2b1b-4e1c-b6d8-a34fb9980057
-caps.latest.revision: 35
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3142794843083c5dcc314b7dc6b0f69cb62f889e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a127966d3a72a11d0d969ddc6d2fda013a7a0d2b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38055241"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47800306"
 ---
 # <a name="type-casting-rules-in-xquery"></a>Regras de conversão de tipos em XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +44,7 @@ ms.locfileid: "38055241"
 ## <a name="explicit-casting"></a>Conversão explícita  
  A tabela a seguir descreve a conversão de tipos permitida entre os tipos primitivos internos.  
   
- ![Descreve as regras de conversão para XQuery. ] (../xquery/media/casting-builtin-types.gif "Descreve as regras de conversão para XQuery.")  
+ ![Descreve as regras de conversão para XQuery. ](../xquery/media/casting-builtin-types.gif "Descreve as regras de conversão para XQuery.")  
   
 -   Um tipo primitivo interno pode ser convertido em outro tipo primitivo interno, com base nas regras na tabela.  
   

@@ -1,13 +1,11 @@
 ---
-title: Considerações de programação de Driver do Microsoft Excel | Microsoft Docs
+title: Considerações sobre programação de drivers do Microsoft Excel | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Excel driver [ODBC]
@@ -15,18 +13,17 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], Excel driver
 - ODBC desktop database drivers [ODBC], Excel driver
 ms.assetid: d3cf324c-aa52-47a6-b44a-a59a778fad23
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 484b64aff0d2f83be32c2c25b9c343403a4362a3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 02d1bbcb168db03571e7cd74d77468c23c7e9ad7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32899961"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47797974"
 ---
-# <a name="microsoft-excel-driver-programming-considerations"></a>Considerações de programação de Driver do Microsoft Excel
+# <a name="microsoft-excel-driver-programming-considerations"></a>Considerações sobre programação de driver do Microsoft Excel
 Esta seção contém os tópicos a seguir.  
   
 -   [Configurando opções programaticamente para drivers do Excel](../../odbc/microsoft/setting-options-programmatically-for-the-excel-driver.md)  
