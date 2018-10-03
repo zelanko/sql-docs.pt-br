@@ -5,37 +5,34 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
 ms.assetid: 2c8a5f50-9b37-452f-8160-05f42bc4d97e
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7e5c31c1c7629d0c339735b8777b42a15f9d880b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 70d02b933104a3106d95f6760cbdcf0abb347716
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32913461"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47791544"
 ---
 # <a name="scrollable-cursors"></a>Cursores roláveis
-Aplicativos modernos em tela, o usuário rola para trás e frente os dados. Para esses aplicativos, retornando a uma linha anteriormente busca é um problema. Uma possibilidade é feche e reabra o cursor e, em seguida, buscar linhas até que o cursor atinge a linha necessária. Outra possibilidade é ler o conjunto de resultados, armazenar em cache localmente e implementar a rolagem no aplicativo. Ambas as possibilidades funcionam bem somente com conjuntos de resultados pequenos e a segunda possibilidade é difícil de implementar. Uma solução melhor é usar um *cursor rolável,* que pode retroceder e Avançar no conjunto de resultados.  
+Em aplicativos modernos baseados em tela, o usuário rola para trás e para frente por meio dos dados. Para tais aplicativos, retornando a uma linha extraída anteriormente é um problema. Uma possibilidade é feche e reabra o cursor e, em seguida, buscar linhas até que o cursor atinge a linha necessária. Outra possibilidade é ler o conjunto de resultados, o armazena em cache localmente e implementar a rolagem no aplicativo. Ambas as possibilidades funcionam bem somente com conjuntos de resultados pequenos e a segunda possibilidade é difícil de implementar. Uma solução melhor é usar um *cursor rolável,* que pode mover para trás e para a frente no conjunto de resultados.  
   
- Um *cursor rolável* é comumente usado em aplicativos modernos em tela, em que o usuário rola para frente e para trás através dos dados. No entanto, aplicativos devem usar cursores roláveis somente quando cursores de somente avanço não fará o trabalho, como cursores roláveis são geralmente mais caros do que cursores de somente avanço.  
+ Um *cursor rolável* é comumente usado em aplicativos modernos baseados em tela, no qual o usuário rola para frente e para trás por meio dos dados. No entanto, aplicativos devem usar cursores roláveis somente quando cursores de somente avanço não fará o trabalho, como cursores roláveis são geralmente mais caros do que cursores de somente avanço.  
   
- A capacidade de mover para trás gera uma pergunta não aplicável para cursores de somente avanço: deve um cursor rolável detectar alterações feitas nas linhas buscadas anteriormente? Ou seja, ele deve detectar as linhas recentemente inseridas atualizadas e excluídas?  
+ A capacidade de voltar para levanta uma questão não é aplicável a cursores de somente avanço: deve a um cursor rolável detectar as alterações feitas às linhas buscadas previamente? Ou seja, ele deve detectar linhas recentemente inseridas atualizadas e excluídas?  
   
- Essa pergunta surge porque a definição de um resultado definido — o conjunto de linhas que corresponde a certos critérios — não informa quando linhas são verificadas para ver se corresponde a esses critérios, nem estado se linhas devem conter os mesmos dados toda vez que sejam buscadas. A omissão antiga torna possível para cursores roláveis detectar se linhas foram inseridas ou excluídas, enquanto o último torna possível detectar dados atualizados.  
+ Essa pergunta surge porque a definição de um resultado definido — o conjunto de linhas que corresponda a determinados critérios — não informa quando linhas são verificadas para ver se ele correspondem a esses critérios, nem faz estado se linhas devem conter os mesmos dados toda vez que elas sejam buscadas. A omissão antiga torna possível para cursores roláveis detectar se linhas foram inseridas ou excluídas, enquanto o último torna possível para que eles possam detectar dados atualizados.  
   
- A capacidade de detectar alterações às vezes é útil, às vezes, não. Por exemplo, um aplicativo de contabilidade precisa de um cursor que ignora todas as alterações; balanceamento manuais é impossível se o cursor mostra as alterações mais recentes. Por outro lado, um sistema de reserva aérea precisa de um cursor que mostra as alterações mais recentes para os dados. sem cursor, ele deve repetir continuamente o banco de dados para mostrar a disponibilidade de voo mais atualizada.  
+ A capacidade de detectar alterações às vezes é útil, às vezes, não. Por exemplo, um aplicativo de contabilidade precisa de um cursor que ignora todas as alterações; livros de balanceamento é impossível se o cursor mostra as alterações mais recentes. Por outro lado, um sistema de reserva de companhia aérea precisa de um cursor que mostra as alterações mais recentes para os dados. sem cursor, ele deve repetir continuamente o banco de dados para mostrar a disponibilidade mais atualizada de voo.  
   
- Para abranger as necessidades de aplicativos diferentes, o ODBC define quatro tipos diferentes de cursores roláveis. Esses cursores variam em despesas e em sua capacidade de detectar alterações para o resultado definido. Observe que se um cursor rolável pode detectar alterações em linhas, ele pode apenas detectá-los quando ele tenta buscar essas linhas; novamente não é possível para a fonte de dados para notificar o cursor de alterações para as linhas buscadas atualmente. Observe também que a visibilidade das alterações também é controlada pelo nível de isolamento da transação; Para obter mais informações, consulte [isolamento da transação](../../../odbc/reference/develop-app/transaction-isolation.md).  
+ Para abordar as necessidades de diferentes aplicativos, o ODBC define quatro tipos diferentes de cursores roláveis. Esses cursores variam em despesas e em sua capacidade de detectar alterações para o resultado definido. Observe que se um cursor rolável pode detectar alterações em linhas, ele só pode detectá-los quando ele tenta buscar essas linhas; Não há nenhuma maneira para a fonte de dados para notificar o cursor de alterações a linhas buscadas atualmente. Observe também que a visibilidade das alterações também é controlada pelo nível de isolamento da transação; Para obter mais informações, consulte [isolamento da transação](../../../odbc/reference/develop-app/transaction-isolation.md).  
   
  Esta seção contém os tópicos a seguir.  
   

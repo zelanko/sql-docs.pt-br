@@ -5,32 +5,29 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - stored procedures [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], stored procedures
 ms.assetid: 2018069b-da5d-4cee-a971-991897d4f7b5
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6f67a9044dcd95b2b652c310e066843b7aa5d1ab
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a154a8739438b76f12e311d0dec0e9d98d886457
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32903731"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47837011"
 ---
-# <a name="returning-array-parameters-from-stored-procedures"></a>Retornando os parâmetros da matriz de procedimentos armazenados
+# <a name="returning-array-parameters-from-stored-procedures"></a>Retornar os parâmetros de matriz de procedimentos armazenados
 > [!IMPORTANT]  
 >  Este recurso será removido em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Em vez disso, use o driver ODBC fornecido pela Oracle.  
   
- No Oracle 7.3, não é possível acessar um tipo de registro de PL/SQL exceto a partir de um programa de PL/SQL. Se um pacote de procedimento ou função tem um argumento formal definido como um tipo de registro de PL/SQL, não é possível associar o argumento formal como um parâmetro. Use o tipo de tabela de PL/SQL no Microsoft ODBC Driver for Oracle para invocar parâmetros da matriz de procedimentos que contém as sequências de escape correto.  
+ Oracle 7.3, não há nenhuma maneira de acessar um tipo de registro de PL/SQL, exceto a partir de um programa de PL/SQL. Se uma função ou procedimento empacotado tem um argumento formal definido como um tipo de registro de PL/SQL, não é possível associar o argumento formal como um parâmetro. Use o tipo de tabela de PL/SQL no Microsoft ODBC Driver for Oracle para invocar os parâmetros da matriz de procedimentos que contém as sequências de escape corretos.  
   
- Para chamar o procedimento, use a seguinte sintaxe:  
+ Para invocar o procedimento, use a seguinte sintaxe:  
   
 ```  
 {call  <package-name>.<proc-or-func>;  
@@ -39,7 +36,7 @@ ms.locfileid: "32903731"
 ```  
   
 > [!NOTE]  
->  O \<máx registros solicitada > parâmetro deve ser maior ou igual ao número de linhas presentes no conjunto de resultados. Caso contrário, o Oracle retornará um erro que é passado para o usuário pelo driver.  
+>  O \<solicitado de registros de max > parâmetro deve ser maior que ou igual ao número de linhas presentes no conjunto de resultados. Caso contrário, o Oracle retornará um erro que é passado para o usuário pelo driver.  
 >   
 >  Registros de PL/SQL não podem ser usados como parâmetros de matriz. Cada parâmetro de matriz pode representar apenas uma coluna de uma tabela de banco de dados.  
   
@@ -109,7 +106,7 @@ END proc2;
 END SimplePackage;  
 ```  
   
-#### <a name="to-invoke-procedure-proc1"></a>Para chamar o procedimento PROC1  
+#### <a name="to-invoke-procedure-proc1"></a>Para invocar o procedimento PROC1  
   
 1.  Retorne todas as colunas em um único conjunto de resultados:  
   
@@ -125,7 +122,7 @@ END SimplePackage;
   
      Isso retorna três conjuntos de resultados, uma para cada coluna.  
   
-#### <a name="to-invoke-procedure-proc2"></a>Para chamar o procedimento PROC2  
+#### <a name="to-invoke-procedure-proc2"></a>Para invocar o procedimento PROC2  
   
 1.  Retorne todas as colunas em um único conjunto de resultados:  
   
@@ -142,4 +139,4 @@ END SimplePackage;
  Certifique-se de que seus aplicativos buscar todos os conjuntos de resultados usando o [SQLMoreResults](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md) API. Para obter mais informações, consulte o *referência do programador de ODBC*.  
   
 > [!NOTE]  
->  No Driver ODBC para o Oracle versão 2.0, funções de Oracle que retornam matrizes PL/SQL não podem ser usadas para retornar conjuntos de resultados.
+>  No Driver ODBC para Oracle da versão 2.0, as funções do Oracle que retornam matrizes de PL/SQL não podem ser usadas para retornar conjuntos de resultados.

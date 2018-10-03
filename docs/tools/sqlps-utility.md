@@ -4,28 +4,24 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: sqlps
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - sqlps utility
 - PowerShell [SQL Server], sqlps utility
 ms.assetid: 4b2515a6-12c3-44fb-b263-1c567681cd2b
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 395eb782b93042a3edaf5be464748b88f9964083
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: d5a8a136b812ce3807ba63e42edb3b2b52c80169
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39458310"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47600705"
 ---
 # <a name="sqlps-utility"></a>Utilitário sqlps
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -73,11 +69,11 @@ sqlps
  **-**  
  **-Command** especifica que o utilitário **sqlps** leia a entrada da entrada padrão.  
   
- *script_block* [ **-args***argument_array* ]  
+ *script_block* [ **- args**_argumento\_matriz_ ]  
  Especifica um bloco de comandos de PowerShell para executar. O bloco deve ficar entre chaves: {}. *Script_block* pode ser especificado apenas quando o utilitário **sqlps** é chamado do **PowerShell** ou de outra sessão do utilitário **sqlps** . O *argument_array* é uma matriz de variáveis do PowerShell que contêm os argumentos para os comandos do PowerShell em *script_block*.  
   
  *string* [ *command_parameters* ]  
- Especifica que uma cadeia de caracteres contendo os comandos do PowerShell seja executada. Use o formato **"&{***comando***}"**. As aspas indicam uma cadeia de caracteres, e o operador de invocação (&) faz com que o utilitário **sqlps** execute o comando.  
+ Especifica que uma cadeia de caracteres contendo os comandos do PowerShell seja executada. Use o formato **"&{**_command_**}"**. As aspas indicam uma cadeia de caracteres, e o operador de invocação (&) faz com que o utilitário **sqlps** execute o comando.  
   
  [ **-?** | **-Help** ]  
  Mostra o resumo da sintaxe de opções do utilitário **sqlps** .  

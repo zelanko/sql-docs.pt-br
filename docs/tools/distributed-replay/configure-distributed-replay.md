@@ -4,24 +4,20 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: distributed-replay
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
-caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f60d8849c32aa52ac2dba616a17d0e1e6fc4734b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: d1b4ddf913d0de1f93d6b440c0fe861bdeaf1ecf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38038477"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47745314"
 ---
 # <a name="configure-distributed-replay"></a>Configure Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -169,7 +165,23 @@ ms.locfileid: "38038477"
     </OutputOptions>  
 </Options>  
 ```  
-  
+
+### <a name="possible-issue-when-running-with-synchronization-sequencing-mode"></a>Possível problema durante a execução com a sincronização de modo de sequenciamento
+ Você pode encontrar um sintoma em que a funcionalidade de reprodução parece "parada", ou eventos de repetições muito lentamente. Esse fenômeno pode ocorrer se o rastreamento está sendo reproduzido se baseia em dados de e/ou eventos que não existem no banco de dados restaurado do destino. 
+ 
+ Um exemplo é uma carga de trabalho capturada que usa WAITFOR, como na instrução WAITFOR receber do Service Broker. Ao usar o modo de sequenciamento de sincronização, os lotes são reproduzidos em série. Se uma inserção ocorrer no banco de dados de origem após o backup do banco de dados, mas antes da captura de reprodução de rastreamento é iniciado, o recebimento de WAITFOR emitido durante a repetição talvez precise aguardar durante todo o WAITFOR. Eventos definidos para ser reproduzido depois de receber o WAITFOR será paralisado. Isso pode resultar no contador de monitor de desempenho de solicitações em lote/s para a queda de destino do banco de dados de reprodução para zero até que o WAITFOR é concluída. 
+ 
+ Se você precisar usar o modo de sincronização e desejos para evitar esse comportamento, faça o seguinte:
+ 
+1.  Confirme os bancos de dados que você usará como os destinos de reprodução.
+
+2.  Permita atividade pendente para concluir.
+
+3.  Fazer backup de bancos de dados e permitir que os backups ser concluída.
+
+4.  Inicie a captura de rastreamento de reprodução distribuída e retomar a carga de trabalho normal. 
+ 
+ 
 ## <a name="see-also"></a>Consulte Também  
  [Opções de linha de comando da ferramenta de administração &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   

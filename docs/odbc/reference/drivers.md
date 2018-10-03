@@ -5,28 +5,25 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC architecture [ODBC], drivers
 - drivers [ODBC]
 - drivers [ODBC], about drivers
 ms.assetid: d6795d92-877e-44e1-b7d5-2ff2fd3989bd
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1906e61847537d3c89a5f2c3529172a9634713c0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2e3996aafa0e4f5b389e4f46d5df3b22632daad9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32915191"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47710034"
 ---
 # <a name="drivers"></a>Drivers
-*Drivers* bibliotecas que implementam as funções da API do ODBC. Cada tipo é específico para um determinado DBMS; Por exemplo, um driver para Oracle não pode acessar diretamente os dados em um DBMS Informix. Drivers exponham os recursos dos DBMSs subjacentes; eles não são necessários para implementar recursos não suportados pelo DBMS. Por exemplo, se o DBMS subjacente não oferece suporte a junções externas e não deve o driver. A única grande exceção a isso é que os drivers para os que não possuem mecanismos de banco de dados independente, como Xbase, devem implementar um mecanismo de banco de dados que oferece suporte a pelo menos uma quantidade mínima de SQL.  
+*Drivers* são bibliotecas que implementam as funções na API do ODBC. Cada um é específica para um determinado DBMS; Por exemplo, um driver para Oracle não pode acessar diretamente os dados em um DBMS Informix. Drivers de exponham as capacidades dos DBMSs subjacentes; eles não são necessários para implementar recursos não suportados pelo DBMS. Por exemplo, se o DBMS subjacente não oferece suporte a junções externas, então nenhum deles deve ser o driver. A única grande exceção a isso é que os drivers para os que não possuem mecanismos de banco de dados autônomo, como Xbase, devem implementar um mecanismo de banco de dados que oferece suporte a pelo menos uma quantidade mínima de SQL.  
   
  Esta seção contém os tópicos a seguir.  
   

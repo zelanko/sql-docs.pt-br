@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.ownDeletesAreVisible
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 2dd6d976-9f8f-4a24-9354-ff239cfd4364
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 62e0ac6fa719d02060e0f7cbe579e1f1626bf657
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 74bc5fcd815550199f0e298e232e93e4840a3003
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32842551"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47712364"
 ---
 # <a name="owndeletesarevisible-method-sqlserverdatabasemetadata"></a>Método ownDeletesAreVisible (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,9 +36,9 @@ public boolean ownDeletesAreVisible(int type)
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *type*  
+ *tipo*  
   
- Um **int** que indica o conjunto de resultados tipo, que pode ser um dos seguintes valores conforme definido em Java.SQL. ResultSet ou SQLServerResultSet:  
+ Um **int** que indica o tipo do conjunto de resultados, que pode ser um dos valores a seguir, conforme definido em java.sql.ResultSet ou SQLServerResultSet:  
   
 ## <a name="javasqlresultset-types"></a>Tipos java.sql.ResultSet  
  TYPE_FORWARD_ONLY  
@@ -61,8 +58,8 @@ public boolean ownDeletesAreVisible(int type)
   
  TYPE_SS_SCROLL_DYNAMIC  
   
-## <a name="return-value"></a>Valor de retorno  
- **True** se as exclusões estiverem visíveis. Caso contrário, **false**.  
+## <a name="return-value"></a>Valor retornado  
+ **True** se as exclusões são visíveis. Caso contrário, **false**.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -70,7 +67,7 @@ public boolean ownDeletesAreVisible(int type)
 ## <a name="remarks"></a>Remarks  
  Esse método ownDeletesAreVisible é especificado pelo método ownDeletesAreVisible na interface DatabaseMetadata.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [Membros SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Classe SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

@@ -1,13 +1,11 @@
 ---
-title: Exemplo de propriedades de DefinedSize (VB) e ActualSize | Microsoft Docs
+title: Exemplo de ActualSize e propriedades DefinedSize (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,18 +13,17 @@ helpviewer_keywords:
 - DefinedSize property [ADO], Visual Basic example
 - ActualSize property [ADO], Visual Basic example
 ms.assetid: bff2c273-b535-4b32-83b3-0336a406859c
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0930056c01586cfa68bdfcac5cab4a415ef87578
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 48201ff57b05e1ec02c55f5cab36fc914b316b8d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275015"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47824044"
 ---
-# <a name="actualsize-and-definedsize-properties-example-vb"></a>Exemplo de propriedades de DefinedSize (VB) e ActualSize
+# <a name="actualsize-and-definedsize-properties-example-vb"></a>Exemplo de ActualSize e propriedades DefinedSize (VB)
 Este exemplo usa o [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) e [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) propriedades para exibir o tamanho definido e o tamanho real de um campo.  
   
 ```  

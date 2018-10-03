@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.ownInsertsAreVisible
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 9fe76aa3-a539-4335-822f-69cc35a9e7e0
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d5710bffa0305a7e3b282ef72e9a33f94c7a0cda
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 70c1e91c37954414b199e3edd15393a055ab5d47
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32840901"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47727884"
 ---
 # <a name="owninsertsarevisible-method-sqlserverdatabasemetadata"></a>Método ownInsertsAreVisible (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,9 +36,9 @@ public boolean ownInsertsAreVisible(int type)
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *type*  
+ *tipo*  
   
- Um **int** que indica o conjunto de resultados tipo, que pode ser um dos seguintes valores conforme definido em Java.SQL. ResultSet ou SQLServerResultSet:  
+ Um **int** que indica o tipo do conjunto de resultados, que pode ser um dos valores a seguir, conforme definido em java.sql.ResultSet ou SQLServerResultSet:  
   
 ## <a name="javasqlresultset-types"></a>Tipos java.sql.ResultSet  
  TYPE_FORWARD_ONLY  
@@ -61,8 +58,8 @@ public boolean ownInsertsAreVisible(int type)
   
  TYPE_SS_SCROLL_DYNAMIC  
   
-## <a name="return-value"></a>Valor de retorno  
- **True** se as inserções estiverem visíveis. Caso contrário, **false**.  
+## <a name="return-value"></a>Valor retornado  
+ **True** se as inserções são visíveis. Caso contrário, **false**.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -70,7 +67,7 @@ public boolean ownInsertsAreVisible(int type)
 ## <a name="remarks"></a>Remarks  
  Esse método ownInsertsAreVisible é especificado pelo método ownInsertsAreVisible na interface DatabaseMetadata.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [Membros SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Classe SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

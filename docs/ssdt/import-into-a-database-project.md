@@ -6,24 +6,21 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL.DATA.TOOLS.SQLPROJECTIMPORTSNAPSHOTSUMMARYDIALOG.DIALOG
 - SQL.DATA.TOOLS.SQLPROJECTIMPORTDATABASESUMMARYDIALOG.DIALOG
 - SQL.DATA.TOOLS.IMPORTSCRIPTWIZARD.SUMMARY
 ms.assetid: d0a0a394-6cb6-416a-a25f-9babf8ba294a
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: af8ee2d569c44d19e518c1dafacddb958c66cc88
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 414b8b130ff3e16bf3be092569ce05730d5ea204
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087738"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47716044"
 ---
 # <a name="import-into-a-database-project"></a>Importar para um projeto de banco de dados
 Você pode usar Importar para popular um projeto com novos objetos de um banco de dados dinâmico ou um .dacpac, ou para atualizar objetos existentes no seu projeto com uma nova definição de um script. Há algumas diferenças de comportamento que devem ser observadas entre esses três caminhos, que são descritas a seguir.  

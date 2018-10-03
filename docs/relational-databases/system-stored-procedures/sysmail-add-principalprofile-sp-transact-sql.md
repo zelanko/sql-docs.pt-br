@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_add_principalprofile_sp_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_add_principalprofile_sp
 ms.assetid: b2a0b313-abb9-4c23-8511-db77ca8172b3
-caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7d5eda99649aa5f27cc199a2a4676c0f79d36c80
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 794a7c9013fff188500c26232a597a7dd4c6283d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261485"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47756265"
 ---
 # <a name="sysmailaddprincipalprofilesp-transact-sql"></a>sysmail_add_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,39 +43,39 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
   
 ## <a name="arguments"></a>Argumentos  
  [ **@principal_id** = ] *principal_id*  
- A ID do usuário de banco de dados ou da função no **msdb** banco de dados para a associação. *principal_id* é **int**, com um padrão NULL. O *principal_id* ou *principal_name* deve ser especificado. Um *principal_id* de **0** faz desse perfil um perfil público, concedendo acesso a todos os objetos no banco de dados.  
+ A ID do usuário de banco de dados ou função na **msdb** banco de dados para a associação. *principal_id* está **int**, com um padrão NULL. Qualquer um dos *principal_id* ou *principal_name* deve ser especificado. Um *principal_id* dos **0** faz desse perfil um perfil público, concedendo acesso a todas as entidades no banco de dados.  
   
  [ **@principal_name** =] **'***principal_name***'**  
- O nome do usuário de banco de dados ou da função no **msdb** banco de dados para a associação. *principal_name* é **sysname**, com um padrão NULL. O *principal_id* ou *principal_name* deve ser especificado. Um *principal_name* de **'public'** faz desse perfil um perfil público, concedendo acesso a todos os objetos no banco de dados.  
+ O nome do usuário de banco de dados ou função na **msdb** banco de dados para a associação. *principal_name* está **sysname**, com um padrão NULL. Qualquer um dos *principal_id* ou *principal_name* deve ser especificado. Um *principal_name* dos **'public'** faz desse perfil um perfil público, concedendo acesso a todas as entidades no banco de dados.  
   
  [ **@profile_id** =] *profile_id*  
- A ID do perfil da associação. *profile_id* é **int**, com um padrão NULL. O *profile_id* ou *profile_name* deve ser especificado.  
+ A ID do perfil da associação. *profile_id* está **int**, com um padrão NULL. Qualquer um dos *profile_id* ou *profile_name* deve ser especificado.  
   
  [ **@profile_name** =] **'***profile_name***'**  
- O nome do perfil para a associação. *profile_name* é **sysname**, sem padrão. O *profile_id* ou *profile_name* deve ser especificado.  
+ O nome do perfil para a associação. *profile_name* está **sysname**, sem padrão. Qualquer um dos *profile_id* ou *profile_name* deve ser especificado.  
   
  [ **@is_default** = ] *is_default*  
- Especifica se esse perfil é o perfil padrão para o principal. Uma entidade de segurança deve ter exatamente um perfil padrão. *is_default* é **bit**, sem padrão.  
+ Especifica se esse perfil é o perfil padrão para o principal. Uma entidade de segurança deve ter exatamente um perfil padrão. *is_default* está **bit**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Remarks  
- Para tornar um perfil público, especifique um **@principal_id** de **0** ou um **@principal_name** de **público**. Um perfil público está disponível para todos os usuários a **msdb** banco de dados, embora os usuários também devem ser um membro do **DatabaseMailUserRole** para executar **sp_send_dbmail**.  
+## <a name="remarks"></a>Comentários  
+ Para tornar um perfil público, especifique um **@principal_id** de **0** ou um **@principal_name** de **público**. Um perfil público está disponível a todos os usuários a **msdb** do banco de dados, embora os usuários também devem ser um membro da **DatabaseMailUserRole** para executar **sp_send_dbmail**.  
   
- Um usuário de banco de dados pode ter somente um perfil padrão. Quando **@is_default** é '**1**' e o usuário já está associado um ou mais perfis, o perfil especificado será o perfil padrão para o usuário. O perfil que anteriormente era o padrão permanecerá associado ao usuário, mas deixará de ser o perfil padrão.  
+ Um usuário de banco de dados pode ter somente um perfil padrão. Quando **@is_default** é '**1**' e o usuário já está associado um ou mais perfis, o perfil especificado se torna o perfil padrão para o usuário. O perfil que anteriormente era o padrão permanecerá associado ao usuário, mas deixará de ser o perfil padrão.  
   
- Quando **@is_default** é '**0**' e não há nenhuma outra associação, o procedimento armazenado retorna um erro.  
+ Quando **@is_default** é '**0**' e nenhuma outra associação existe, o procedimento armazenado retornará um erro.  
   
- O procedimento armazenado **sysmail_add_principalprofile_sp** está no **msdb** banco de dados e pertence a **dbo** esquema. O procedimento deve ser executado com um nome de três partes se o banco de dados atual não é **msdb**.  
+ O procedimento armazenado **sysmail_add_principalprofile_sp** está no **msdb** banco de dados e é de propriedade de **dbo** esquema. O procedimento deve ser executado com um nome de três partes se o banco de dados atual não for **msdb**.  
   
 ## <a name="permissions"></a>Permissões  
- Permissões de execução para esse procedimento usam como padrão membros do **sysadmin** função de servidor fixa.  
+ Permissões de execução para esse procedimento usam como padrão os membros de **sysadmin** função de servidor fixa.  
   
 ## <a name="examples"></a>Exemplos  
  **A. Criando uma associação, definindo o perfil padrão**  
   
- O exemplo a seguir cria uma associação entre o perfil chamado `AdventureWorks Administrator Profile` e **msdb** usuário de banco de dados `ApplicationUser`. O perfil é o perfil padrão para o usuário.  
+ O exemplo a seguir cria uma associação entre o perfil denominado `AdventureWorks Administrator Profile` e o **msdb** usuário de banco de dados `ApplicationUser`. O perfil é o perfil padrão para o usuário.  
   
 ```  
 EXECUTE msdb.dbo.sysmail_add_principalprofile_sp  
@@ -90,7 +86,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
  **B. Tornando um perfil o perfil público padrão**  
   
- O exemplo a seguir torna o perfil `AdventureWorks Public Profile` o perfil público padrão para os usuários a **msdb** banco de dados.  
+ O exemplo a seguir torna o perfil `AdventureWorks Public Profile` o perfil público do padrão para usuários em de **msdb** banco de dados.  
   
 ```  
 EXECUTE msdb.dbo.sysmail_add_principalprofile_sp  

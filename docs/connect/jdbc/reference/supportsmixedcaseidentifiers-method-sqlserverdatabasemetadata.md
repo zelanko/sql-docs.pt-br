@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.supportsMixedCaseIdentifiers
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 0f68d9f7-0d8d-4d8d-9188-14e253a2576a
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1c2e62dd5829e31c42a7614ceb28eeeb5569dd8e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 62596595a155b900a69595b71c11dc1ca37b185a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32848621"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47815805"
 ---
 # <a name="supportsmixedcaseidentifiers-method-sqlserverdatabasemetadata"></a>Método supportsMixedCaseIdentifiers (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,8 +35,8 @@ ms.locfileid: "32848621"
 public boolean supportsMixedCaseIdentifiers()  
 ```  
   
-## <a name="return-value"></a>Valor de retorno  
- **True** se os identificadores forem armazenados em maiusculas e minúsculas. Caso contrário, **false**.  
+## <a name="return-value"></a>Valor retornado  
+ **True** se os identificadores são armazenados em maiusculas e minúsculas. Caso contrário, **false**.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -47,7 +44,7 @@ public boolean supportsMixedCaseIdentifiers()
 ## <a name="remarks"></a>Remarks  
  Esse método supportsMixedCaseIdentifiers é especificado pelo método supportsMixedCaseIdentifiers na interface DatabaseMetadata.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [Membros SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Classe SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

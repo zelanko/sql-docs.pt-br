@@ -5,26 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC, API functions
 - ODBC SQL grammar, API functions mapped to driver (table) [ODBC]
 ms.assetid: b28a8ed6-09b1-4acf-bf3e-f90bb32422de
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8bf4b187b4439f6c8739940c657a4d44f44bd0d6
-ms.sourcegitcommit: 368a7f7e9d860f9407a5a013e135f29f27efcd02
+ms.openlocfilehash: 460b1cb00f68e9b1940a1680625a173bc92e6f84
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37872896"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47715204"
 ---
-# <a name="supported-odbc-api-functions"></a>Funções de API de ODBC com suporte
+# <a name="supported-odbc-api-functions"></a>Funções de API do ODBC com suporte
 A finalidade de redistribuição é informar ao aplicativo de quais recursos estão disponíveis para ele no driver. Os Drivers de banco de dados de área de trabalho do Microsoft ODBC dão suporte a todas as funções principal e de nível 1.  
   
  Para obter mais informações sobre níveis de conformidade para funções e gramática, consulte [níveis de conformidade](../../odbc/reference/develop-app/conformance-levels.md) na *referência do programador de ODBC*.  

@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC [ODBC], CLI
@@ -16,63 +14,62 @@ helpviewer_keywords:
 - call-level interface [ODBC]
 - call-level interface [ODBC], about call-level interface
 ms.assetid: 79b9c268-16ac-4b80-b451-f9dcd8c02ca4
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2335d0eb5033ca6b32130503b4bd9a11f180c9c5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5485da176b9bd4aa7afca7afa088e6932d6f0d58
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32916861"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47814088"
 ---
 # <a name="odbc-and-the-standard-cli"></a>ODBC e a CLI padrão
-ODBC de acordo com as seguintes especificações e padrões que lidam com a Interface de nível de chamada (CLI). (Os recursos de ODBC são um subconjunto de cada um desses padrões.)  
+ODBC alinha-se com as seguintes especificações e padrões que lidam com a Interface de nível de chamada (CLI). (Os recursos de ODBC são um subconjunto de cada um desses padrões.)  
   
--   A especificação de CAE Open Group "gerenciamento de dados: SQL Interface de nível de chamada (CLI)"  
+-   A especificação do Open Group CAE "gerenciamento de dados: Interface de nível de chamada (CLI) do SQL"  
   
 -   ISO/IEC 9075-Interface de nível de chamada 3:1995 (E) (SQL/CLI)  
   
  Como resultado, esse alinhamento forem verdadeiras:  
   
--   Um aplicativo escrito às especificações ISO CLI do Open Group e funcionará com um ODBC 3. *x* driver ou um driver compatível com os padrões quando ele é compilado com o ODBC 3. *x* arquivos de cabeçalho e vinculado com o ODBC 3. *x* bibliotecas, e quando ele obtém acesso do driver por meio de ODBC 3. *x* Gerenciador de Driver.  
+-   Um aplicativo escrito para o Open Group e especificações ISO CLI funcionará com um ODBC 3. *x* driver ou um driver compatível com os padrões quando ele é compilado com o ODBC 3. *x* arquivos de cabeçalho e vinculado com o ODBC 3. *x* bibliotecas, e quando ele ganha acesso para o driver por meio de ODBC 3. *x* Gerenciador de Driver.  
   
--   Um driver criado às especificações do Open Group e ISO CLI funcionará com um ODBC 3 *. x* aplicativo ou um aplicativo compatível com os padrões quando ele é compilado com o ODBC 3 *. x* arquivos de cabeçalho e vinculado com o ODBC 3 *. x* bibliotecas, e quando o aplicativo obtém acesso do driver por meio de ODBC 3 *. x* Gerenciador de Driver. (Para obter mais informações, consulte [compatível com os padrões de aplicativos e Drivers](../../odbc/reference/develop-app/standards-compliant-applications-and-drivers.md).  
+-   Um driver escrito com as especificações do Open Group e a CLI de ISO funcionará com um ODBC 3 *. x* aplicativo ou um aplicativo compatível com os padrões quando ele é compilado com o ODBC 3 *. x* arquivos de cabeçalho e vinculado com o ODBC 3 *. x* bibliotecas, e quando o aplicativo obtém acesso ao driver por meio de ODBC 3 *. x* Gerenciador de Driver. (Para obter mais informações, consulte [compatível com os padrões de aplicativos e Drivers](../../odbc/reference/develop-app/standards-compliant-applications-and-drivers.md).  
   
- O nível de conformidade de interface de núcleo abrange todos os recursos do CLI ISO e todos os recursos os CLI grupo aberto. Recursos opcionais do CLI grupo aberto aparecem em níveis mais altos de conformidade de interface. Como todos os ODBC 3. *x* drivers são necessários para oferecer suporte os recursos no nível de conformidade a principal interface, os seguintes condições forem verdadeiras:  
+ O nível de conformidade de interface Core abrange todos os recursos na CLI do ISO e todos os recursos os na CLI do grupo aberto. Recursos opcionais da CLI do grupo aberto aparecem em níveis mais altos de conformidade de interface. Porque todos os ODBC 3. *x* drivers são necessários para dar suporte os recursos no nível de conformidade de interface de núcleo, as seguintes condições forem verdadeiras:  
   
 -   ODBC 3. *x* driver dará suporte a todos os recursos usados por um aplicativo compatível com os padrões.  
   
--   ODBC 3. *x* usando somente os recursos no ISO CLI e os recursos do CLI grupo aberto de aplicativo funcionará com qualquer driver compatível com os padrões.  
+-   ODBC 3. *x* aplicativo usando apenas os recursos na CLI do ISO e os recursos da CLI do grupo aberto funcionará com qualquer driver compatível com os padrões.  
   
- Além das especificações de interface de nível de chamada contidas nos padrões ISO/IEC e abra CLI de grupo, o ODBC implementa os seguintes recursos. (Alguns desses recursos existiam em versões do ODBC antes de ODBC 3. *x*.)  
+ Além das especificações de interface de nível de chamada contidas nos padrões ISO/IEC e abrir CLI de grupo, o ODBC implementa os seguintes recursos. (Alguns desses recursos existiam em versões do ODBC anterior à ODBC 3. *x*.)  
   
--   Buscas multilinha por uma única chamada de função  
+-   Multilinha buscas por uma única chamada de função  
   
 -   Associando a uma matriz de parâmetros  
   
--   Suporte a indicadores incluindo busca pelo indicador indicadores de comprimento variável e, em massa de atualização e exclusão por operações de indicador em linhas não contíguas  
+-   Suporte a indicadores como buscar por indicador, indicadores de comprimento variável e em massa de atualização e exclusão por operações de indicador em linhas não adjacentes  
   
--   A associação  
+-   Associação por linha  
   
 -   Deslocamentos de associação  
   
--   Suporte a lotes de instruções SQL, em um procedimento armazenado ou como uma sequência de instruções SQL executadas por meio de **SQLExecute** ou **SQLExecDirect**  
+-   Suporte a lotes de instruções SQL, em um procedimento armazenado ou como uma sequência de instruções SQL executadas por meio **SQLExecute** ou **SQLExecDirect**  
   
--   Contagens de linha de cursor exato ou aproximado  
+-   As contagens de linhas de cursor exato ou aproximado  
   
--   Posicionada exclusões e atualizações em lotes e operações de exclusão e atualização pela chamada de função (**SQLSetPos**)  
+-   Posicionado exclusões e atualizações em lote e operações de exclusão e atualização pela chamada de função (**SQLSetPos**)  
   
--   Funções de catálogo que extrair informações do esquema de informações sem a necessidade de exibições do esquema de informações de suporte  
+-   Funções de catálogo que extrair informações do esquema de informações sem a necessidade de dar suporte a modos de exibição de esquema de informações  
   
--   Sequências de escape para procedimentos armazenados, funções escalares, literais de data e hora, literais de intervalo e junções externas  
+-   Sequências de escape para procedimentos armazenados, funções escalares, literais datetime, literais de intervalo e junções externas  
   
--   Bibliotecas de conversão de página de código  
+-   Bibliotecas de tradução de página de código  
   
--   Relatórios de nível de conformidade ANSI e suporte SQL de um driver  
+-   Relatórios de nível de conformidade ANSI um driver e o suporte do SQL  
   
--   População automática sob demanda do descritor de parâmetro de implementação  
+-   Sob demanda a população automática do descritor de parâmetro de implementação  
   
 -   Diagnóstico aprimorado e matrizes de status de linha e de parâmetro  
   
@@ -82,4 +79,4 @@ ODBC de acordo com as seguintes especificações e padrões que lidam com a Inte
   
 -   Suporte de procedimento armazenado, incluindo sequências de escape, mecanismos de associação de parâmetro de saída e funções de catálogo  
   
--   Aprimoramentos de Conexão, incluindo suporte para atributos de conexão e a navegação de atributo
+-   Aprimoramentos de Conexão, incluindo suporte para atributos de conexão e navegação de atributo

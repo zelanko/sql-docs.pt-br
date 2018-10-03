@@ -1,34 +1,31 @@
 ---
-title: Exemplo de método GetString (VC + +) | Microsoft Docs
+title: Exemplo do método GetString (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - GetString method [ADO], VC++ example
 ms.assetid: 4daa93aa-9727-4d1c-886a-e9d22017a1ea
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a301175045bbe323c00b7b17b6217aaec9f7b74f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6e3692410379c6ef87ec2da4b40f09b0d498a187
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278895"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47815584"
 ---
-# <a name="getstring-method-example-vc"></a>Exemplo de método GetString (VC + +)
-Este exemplo demonstra o [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) método.  
+# <a name="getstring-method-example-vc"></a>Exemplo do método GetString (VC++)
+Este exemplo demonstra a [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) método.  
   
- Suponha que você está depurando um problema de acesso de dados e deseja uma maneira rápida e simple de imprimir o conteúdo atual de um pequeno [registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
+ Suponha que você está depurando um problema de acesso de dados e desejar uma maneira rápida e simple de imprimir o conteúdo atual de um pequeno [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
 ## <a name="example"></a>Exemplo  
   

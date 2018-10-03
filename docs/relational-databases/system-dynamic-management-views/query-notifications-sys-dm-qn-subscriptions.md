@@ -1,12 +1,10 @@
 ---
-title: sys.DM qn_subscriptions (Transact-SQL) | Microsoft Docs
+title: DM qn_subscriptions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_qn_subscriptions
@@ -18,31 +16,30 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_qn_subscriptions dynamic management view
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e3f6886a16b8b1d87c2864ed93fd8be764700dc5
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 2cbfdd765681f99e50b38efcdb5c7c61c8cbd08b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465262"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47834704"
 ---
-# <a name="query-notifications---sysdmqnsubscriptions"></a>Consultar notificações - sys.DM qn_subscriptions
+# <a name="query-notifications---sysdmqnsubscriptions"></a>Consultar notificações - DM qn_subscriptions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna informações sobre as assinaturas de notificações de consulta ativa no servidor. Você pode usar essa exibição para verificar assinaturas ativas no servidor ou em um banco de dados especificado, ou verificar um principal de servidor especificado.  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**id**|**Int**|ID de uma assinatura.|  
-|**database_id**|**Int**|ID do banco de dados no qual a consulta de notificação foi executada. Esse banco de dados armazena informações relativas a essa assinatura.|  
+|**id**|**int**|ID de uma assinatura.|  
+|**database_id**|**int**|ID do banco de dados no qual a consulta de notificação foi executada. Esse banco de dados armazena informações relativas a essa assinatura.|  
 |**sid**|**varbinary(85)**|ID de segurança do principal do servidor que criou e detém essa assinatura.|  
-|**object_id**|**Int**|ID da tabela interna que armazena informações sobre parâmetros de assinatura.|  
+|**object_id**|**int**|ID da tabela interna que armazena informações sobre parâmetros de assinatura.|  
 |**created**|**datetime**|Data e hora em que a assinatura foi criada.|  
-|**timeout**|**Int**|Tempo limite para a assinatura em segundos. A notificação será sinalizada para disparar após o decorrer desse período.<br /><br /> Observação: O tempo real do disparo pode ser maior que o tempo limite especificado. No entanto, se uma alteração que invalida a assinatura ocorrer após o tempo limite especificado, mas antes de a assinatura ser disparada, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assegurará que o disparo ocorra no momento em que a alteração for realizada.|  
-|**status**|**Int**|Indica o status da assinatura. Veja a tabela abaixo dos comentários para obter a lista de códigos.|  
+|**timeout**|**int**|Tempo limite para a assinatura em segundos. A notificação será sinalizada para disparar após o decorrer desse período.<br /><br /> Observação: O tempo real do disparo pode ser maior que o tempo limite especificado. No entanto, se uma alteração que invalida a assinatura ocorrer após o tempo limite especificado, mas antes de a assinatura ser disparada, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assegurará que o disparo ocorra no momento em que a alteração for realizada.|  
+|**status**|**int**|Indica o status da assinatura. Veja a tabela abaixo dos comentários para obter a lista de códigos.|  
   
 ## <a name="relationship-cardinalities"></a>Cardinalidades de relações  
   
@@ -51,16 +48,16 @@ ms.locfileid: "34465262"
 |**sys.dm_qn_subscriptions**|**sys.databases**|**database_id**|Muitos para um|  
 |**sys.dm_qn_subscriptions**|**sys.internal_tables**|**object_id**|Muitos para um|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O código de status 0 indica um status indefinido.  
   
  Os códigos de status a seguir indicam que uma assinatura foi acionada devido a uma alteração:  
   
-|Código|Status secundário|informações de|  
+|Código|Status secundário|Informações de|  
 |----------|------------------|----------|  
 |65798|Assinatura acionada porque os dados foram alterados|Assinatura disparada por inserção|  
-|65799|Assinatura acionada porque os dados foram alterados|Delete (excluir)|  
-|65800|Assinatura acionada porque os dados foram alterados|Update (atualizar)|  
+|65799|Assinatura acionada porque os dados foram alterados|DELETE|  
+|65800|Assinatura acionada porque os dados foram alterados|Update|  
 |65801|Assinatura acionada porque os dados foram alterados|Mesclagem|  
 |65802|Assinatura acionada porque os dados foram alterados|Truncar tabela|  
 |66048|Assinatura acionada porque o tempo limite expirou|Modo de informações indefinido|  
@@ -73,7 +70,7 @@ ms.locfileid: "34465262"
   
  Os códigos de status a seguir indicam que uma assinatura não pôde ser criada:  
   
-|Código|Status secundário|informações de|  
+|Código|Status secundário|Informações de|  
 |----------|------------------|----------|  
 |132609|A criação de assinatura falhou porque não há suporte à instrução|Consulta muito complexa|  
 |132610|A criação de assinatura falhou porque não há suporte à instrução|Instrução inválida para assinatura|  
@@ -84,7 +81,7 @@ ms.locfileid: "34465262"
   
  Os códigos de status a seguir são usados internamente e são classificados como modos de check kill e init:  
   
-|Código|Status secundário|informações de|  
+|Código|Status secundário|Informações de|  
 |----------|------------------|----------|  
 |198656|Usado internamente: modos check kill e init|Modo de informações indefinido|  
 |198928|Assinatura destruída|Assinatura acionada porque o banco de dados foi anexado|  

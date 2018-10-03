@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_columns_ex
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_columns_ex
 ms.assetid: c12ef6df-58c6-4391-bbbf-683ea874bd81
-caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4d8fdd18d2bad59801a92f511537777496ba5dea
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 7224a4e301565dc1bc6f6968da3477792b8cfc22
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43026788"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47781484"
 ---
 # <a name="spcolumnsex-transact-sql"></a>sp_columns_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -96,7 +92,7 @@ sp_columns_ex [ @table_server = ] 'table_server'
   
  Para obter mais informações, consulte a documentação do Microsoft ODBC.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  **sp_columns_ex** é executado consultando o conjunto de linhas de colunas a **IDBSchemaRowset** interface do provedor OLE DB correspondente *table_server*. O *table_name*, *table_schema*, *table_catalog*, e *coluna* parâmetros são passados para essa interface para restringir as linhas retornado.  
   
  **sp_columns_ex** retorna um resultado vazio definido se o provedor OLE DB do servidor vinculado especificado não dá suporte para o conjunto de linhas de colunas de **IDBSchemaRowset** interface.  
@@ -104,7 +100,7 @@ sp_columns_ex [ @table_server = ] 'table_server'
 ## <a name="permissions"></a>Permissões  
  Requer a permissão SELECT no esquema.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  **sp_columns_ex** segue os requisitos para identificadores delimitados. Para obter mais informações, consulte [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
 ## <a name="examples"></a>Exemplos  

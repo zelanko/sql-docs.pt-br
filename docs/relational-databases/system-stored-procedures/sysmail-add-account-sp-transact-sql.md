@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_add_account_sp
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_add_account_sp
 ms.assetid: 65e15e2e-107c-49c3-b12c-f4edf0eb1617
-caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eab3408b20a7c144ba68d57ceba8d4acf3e54f15
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: a388fb39082ec936b473afd7fc96ff99e7d92350
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262696"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47830014"
 ---
 # <a name="sysmailaddaccountsp-transact-sql"></a>sysmail_add_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,61 +53,61 @@ sysmail_add_account_sp  [ @account_name = ] 'account_name',
   
 ## <a name="arguments"></a>Argumentos  
  [ **@account_name** = ] **'***account_name***'**  
- O nome da conta a ser adicionada. *account_name* é **sysname**, sem padrão.  
+ O nome da conta a ser adicionada. *account_name* está **sysname**, sem padrão.  
   
  [ **@email_address** =] **'***email_address***'**  
- O endereço de email a partir do qual a mensagem será enviada. Esse endereço deve ser um endereço de email na Internet. *endereço de email* é **nvarchar (128)**, sem padrão. Por exemplo, uma conta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pode enviar email do endereço **SqlAgent@Adventure-Works.com**.  
+ O endereço de email a partir do qual a mensagem será enviada. Esse endereço deve ser um endereço de email na Internet. *email_address* está **nvarchar (128)**, sem padrão. Por exemplo, uma conta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pode enviar email do endereço **SqlAgent@Adventure-Works.com**.  
   
  [ **@display_name** =] **'***display_name***'**  
- O nome para exibição a ser usado em mensagens de email enviadas por essa conta. *display_name* é **nvarchar (128)**, com um padrão NULL. Por exemplo, uma conta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pode exibir o nome **SQL Server Agent Automated Mailer** em mensagens de email.  
+ O nome para exibição a ser usado em mensagens de email enviadas por essa conta. *display_name* está **nvarchar (128)**, com um padrão NULL. Por exemplo, uma conta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pode exibir o nome **SQL Server Agent Automated Mailer** em mensagens de email.  
   
  [ **@replyto_address** = ] **'***replyto_address***'**  
- O endereço para o qual as respostas às mensagens dessa conta são enviadas. *replyto_address* é **nvarchar (128)**, com um padrão NULL. Por exemplo, respostas para uma conta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent podem ir para o administrador de banco de dados, **danw@Adventure-Works.com**.  
+ O endereço para o qual as respostas às mensagens dessa conta são enviadas. *replyto_address* está **nvarchar (128)**, com um padrão NULL. Por exemplo, respostas para uma conta do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent podem ir para o administrador de banco de dados **danw@Adventure-Works.com**.  
   
  [ **@description** =] **'***descrição***'**  
- É uma descrição da conta. *Descrição* é **nvarchar (256)**, com um padrão NULL.  
+ É uma descrição da conta. *Descrição* está **nvarchar(256)**, com um padrão NULL.  
   
  [ **@mailserver_name** = ] **'***server_name***'**  
- O nome ou o endereço IP do servidor de email SMTP a ser usado para esta conta. O computador que executa o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ser capaz de resolver o *nome_do_servidor* para um endereço IP. *server_name* é **sysname**, sem padrão.  
+ O nome ou o endereço IP do servidor de email SMTP a ser usado para esta conta. O computador que executa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve ser capaz de resolver o *server_name* para um endereço IP. *nome_do_servidor* está **sysname**, sem padrão.  
   
  [ **@mailserver_type** =] '*server_type*'  
- O tipo de servidor de email. *server_type* é **sysname**, com um padrão de **'SMTP'**...  
+ O tipo de servidor de email. *server_type* está **sysname**, com um padrão de **'SMTP'**...  
   
  [ **@port** =] *port_number*  
- O número de porta do servidor de email. *port_number* é **int**, com um padrão de 25.  
+ O número de porta do servidor de email. *port_number* está **int**, com um padrão de 25.  
   
  [ **@username** =] **'***username***'**  
- O novo nome de usuário a ser usado para fazer logon no servidor de email. *nome de usuário* é **nvarchar (128)**, com um padrão NULL. Quando este parâmetro for NULL, o Database Mail não usa autenticação para esta conta. Se o servidor de email não requerer autenticação, use NULL para o nome de usuário.  
+ O novo nome de usuário a ser usado para fazer logon no servidor de email. *nome de usuário* está **nvarchar (128)**, com um padrão NULL. Quando este parâmetro for NULL, o Database Mail não usa autenticação para esta conta. Se o servidor de email não requerer autenticação, use NULL para o nome de usuário.  
   
  [ **@password** =] **'***senha***'**  
- A nova senha a ser usada para fazer logon no servidor de email. *senha* é **nvarchar (128)**, com um padrão NULL. Não há necessidade em fornecer uma senha, a menos que um nome de usuário seja especificado.  
+ A nova senha a ser usada para fazer logon no servidor de email. *senha* está **nvarchar (128)**, com um padrão NULL. Não há necessidade em fornecer uma senha, a menos que um nome de usuário seja especificado.  
   
  [ **@use_default_credentials** =] use_default_credentials  
- Especifica se o email deve ser enviado ao servidor SMTP com as credenciais do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **use_default_credentials** é bit, com um padrão de 0. Quando este parâmetro for 1, o Database Mail usará as credenciais do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Quando esse parâmetro é 0, o Database Mail envia o **@username** e **@password** parâmetros se estiver presente, caso contrário, envia email sem **@username**e **@password** parâmetros.  
+ Especifica se o email deve ser enviado ao servidor SMTP com as credenciais do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **use_default_credentials** é bit, com um padrão de 0. Quando este parâmetro for 1, o Database Mail usará as credenciais do [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Quando esse parâmetro é 0, o Database Mail envia o **@username** e **@password** parâmetros, se presente, caso contrário, envia email sem **@username**e **@password** parâmetros.  
   
  [ **@enable_ssl** =] enable_ssl  
- Especifica se o Database Mail criptografa a comunicação usando o protocolo SSL. **Enable_ssl** é bit, com um padrão de 0.  
+ Especifica se o Database Mail criptografa a comunicação usando Secure Sockets Layer. **Enable_ssl** é bit, com um padrão de 0.  
   
  [ **@account_id** =] *account_id* saída  
- Retorna a ID da nova conta. *account_id* é **int**, com um padrão NULL.  
+ Retorna a ID da nova conta. *account_id* está **int**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Remarks  
- O Database Mail fornece parâmetros separados para **@email_address**, **@display_name**, e **@replyto_address**. O **@email_address** parâmetro é o endereço do qual a mensagem é enviada. O **@display_name** parâmetro é o nome exibido no **de:** campo da mensagem de email. O **@replyto_address** parâmetro é o endereço onde respostas à mensagem de email serão enviadas. Por exemplo, uma conta usada para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pode enviar mensagens de email a partir de um endereço de email usado apenas para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. As mensagens desse endereço devem exibir um nome amigável, de maneira que os destinatários possam determinar facilmente que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent enviou a mensagem. Se um destinatário responder à mensagem, a resposta deve ir para o administrador do banco de dados, em vez do endereço usado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Para este cenário, a conta usa **SqlAgent@Adventure-Works.com** como o endereço de email. O nome de exibição é definido como **SQL Server Agent Automated Mailer**. A conta usa **danw@Adventure-Works.com** como a resposta para o endereço, portanto as respostas às mensagens enviadas desta conta ir para o administrador de banco de dados em vez do endereço de email para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente. Ao fornecer configurações independentes para esses três parâmetros, o Database Mail permite configurar mensagens adequadas às suas necessidades.  
+## <a name="remarks"></a>Comentários  
+ O Database Mail fornece parâmetros separados para **@email_address**, **@display_name**, e **@replyto_address**. O **@email_address** parâmetro é o endereço do qual a mensagem é enviada. O **@display_name** parâmetro é o nome mostrado no **de:** campo da mensagem de email. O **@replyto_address** parâmetro é o endereço onde as respostas à mensagem de email serão enviadas. Por exemplo, uma conta usada para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pode enviar mensagens de email a partir de um endereço de email usado apenas para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. As mensagens desse endereço devem exibir um nome amigável, de maneira que os destinatários possam determinar facilmente que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent enviou a mensagem. Se um destinatário responder à mensagem, a resposta deve ir para o administrador do banco de dados, em vez do endereço usado pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Para este cenário, a conta usa **SqlAgent@Adventure-Works.com** como endereço de email. O nome de exibição é definido como **SQL Server Agent Automated Mailer**. A conta usa **danw@Adventure-Works.com** como a resposta para o endereço, portanto as respostas às mensagens enviadas desta conta vá para o administrador de banco de dados, em vez do endereço de email para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente. Ao fornecer configurações independentes para esses três parâmetros, o Database Mail permite configurar mensagens adequadas às suas necessidades.  
   
- O **@mailserver_type** parâmetro dá suporte ao valor **'SMTP'**.  
+ O **@mailserver_type** parâmetro tiver suporte para o valor **'SMTP'**.  
   
- Quando **@use_default_credentials** é 1, o email é enviado para o servidor SMTP usando as credenciais do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Quando **@use_default_credentials** é 0 e um **@username** e **@password** especificado para uma conta, a conta usa autenticação SMTP. O **@username** e **@password** são as credenciais que usa a conta para o servidor SMTP, não as credenciais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou a rede que o computador está ligado.  
+ Quando **@use_default_credentials** é 1, o email é enviado para o servidor SMTP usando as credenciais do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Quando **@use_default_credentials** é 0 e uma **@username** e **@password** são especificados para uma conta, a conta usa autenticação SMTP. O **@username** e **@password** são as credenciais usadas pela conta para o servidor SMTP, não as credenciais do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou a rede que o computador está ativado.  
   
- O procedimento armazenado **sysmail_add_account_sp** está no **msdb** banco de dados e pertence a **dbo** esquema. O procedimento deve ser executado com um nome de três partes se o banco de dados atual não é **msdb**.  
+ O procedimento armazenado **sysmail_add_account_sp** está no **msdb** banco de dados e é de propriedade de **dbo** esquema. O procedimento deve ser executado com um nome de três partes se o banco de dados atual não for **msdb**.  
   
 ## <a name="permissions"></a>Permissões  
- Permissões de execução para esse procedimento usam como padrão membros do **sysadmin** função de servidor fixa.  
+ Permissões de execução para esse procedimento usam como padrão os membros de **sysadmin** função de servidor fixa.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir cria uma conta denominada `AdventureWorks Administrator`. A conta usa o endereço de email `dba@Adventure-Works.com` e envia correio ao servidor de email SMTP `smtp.Adventure-Works.com`. Mensagens de email enviadas desta conta mostram `AdventureWorks Automated Mailer` no **de:** linha da mensagem. As respostas às mensagens são direcionadas para `danw@Adventure-Works.com`.  
+ O exemplo a seguir cria uma conta denominada `AdventureWorks Administrator`. A conta usa o endereço de email `dba@Adventure-Works.com` e envia correio ao servidor de email SMTP `smtp.Adventure-Works.com`. Mensagens de email enviadas desta conta mostram `AdventureWorks Automated Mailer` sobre o **de:** linha da mensagem. As respostas às mensagens são direcionadas para `danw@Adventure-Works.com`.  
   
 ```  
 EXECUTE msdb.dbo.sysmail_add_account_sp  

@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 01/09/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: dta
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - physical design structures [SQL Server]
@@ -22,16 +19,15 @@ helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], command prompt
 - optimizing databases [SQL Server]
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
-caps.latest.revision: 58
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8196476349cbe6f2e376a4ac651fb6b1eeb65b34
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0ad46261f10c154c86cd020afdc2c0ca33be7434
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33075543"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47644355"
 ---
 # <a name="dta-utility"></a>utilitário dta
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -159,7 +155,7 @@ dta -d AdventureWorks2012 ...
 |---------------|-------------------|-------------|  
 |*database_name*|*database_name* especificado com a opção **–D**||  
 |*owner_name*|**dbo**|*owner_name* deve ser **dbo**. Se qualquer outro valor for especificado, a execução de **dta** falhará e retornará um erro.|  
-|*table_name*|Nenhum||  
+|*table_name*|None||  
   
  Se um arquivo for usado, especifique .xml como sua extensão. Por exemplo, TuningLog.xml.  
   
@@ -172,7 +168,7 @@ dta -d AdventureWorks2012 ...
  **-fa** *physical_design_structures_to_add*  
  Especifica que tipos de estruturas de design físico **dta** deve incluir na recomendação. A tabela a seguir lista e descreve os valores que podem ser especificados para esse argumento. Quando nenhum valor é especificado, **dta** usa o padrão **-fa****IDX**.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |IDX_IV|Índices e exibições indexadas.|  
 |IDX|Somente índices.|  
@@ -183,7 +179,7 @@ dta -d AdventureWorks2012 ...
  Especifica que os índices filtrados serão considerados em novas recomendações. Para saber mais, confira [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).  
   
 **-fc**  
- Especifica que os índices columnstore serão considerados em novas recomendações. DTA considerará índices columnstore clusterizados e não clusterizados. Para obter mais informações, consulte    
+ Especifica que os índices columnstore serão considerados em novas recomendações. DTA considerará que ambos os índices columnstore clusterizados e não clusterizados. Para obter mais informações, consulte    
 [Recomendações de índice columnstore no Orientador de Otimização do Mecanismo de Banco de Dados (DTA)](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md).
  ||  
 |-|  
@@ -193,7 +189,7 @@ dta -d AdventureWorks2012 ...
  **-fk** *keep_existing_option*  
  Especifica quais estruturas de design físico **dta** deve reter ao gerar sua recomendação. A tabela a seguir lista e descreve os valores que podem ser especificados para esse argumento.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |Nenhuma|Nenhuma estrutura existente|  
 |ALL|Todas as estruturas existentes|  
@@ -204,7 +200,7 @@ dta -d AdventureWorks2012 ...
  **-fp** *partitioning_strategy*  
  Especifica se as novas estruturas de design físico (índices e exibições indexadas) propostas por **dta** devem ser particionadas e como particioná-las. A tabela a seguir lista e descreve os valores que podem ser especificados para esse argumento.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |Nenhuma|Nenhum particionamento|  
 |FULL|Particionamento completo (escolha para melhorar o desempenho).|  
@@ -221,8 +217,8 @@ dta -d AdventureWorks2012 ...
  **-ip**  
  Especifica que o cache de plano seja usado como a carga de trabalho. Os primeiros 1.000 eventos de cache de plano para bancos de dados selecionados explicitamente são analisados. Esse valor pode ser alterado usando a opção **–n** .  
  
-**-QI**  
- Especifica que o repositório de consultas seja usado como a carga de trabalho. Os primeiros 1.000 eventos do repositório de consultas para bancos de dados selecionados explicitamente são analisados. Esse valor pode ser alterado usando a opção **–n** .  Confira [Repositório de Consultas](../../relational-databases/performance/how-query-store-collects-data.md) e [Ajustando o banco de dados usando a carga de trabalho do Repositório de Consultas](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md) para obter mais informações.
+**-iq**  
+ Especifica que a consulta Store seja usado como a carga de trabalho. Os primeiros 1.000 eventos de Store de consulta para bancos de dados selecionados explicitamente são analisados. Esse valor pode ser alterado usando a opção **–n** .  Confira [Repositório de Consultas](../../relational-databases/performance/how-query-store-collects-data.md) e [Ajustando o banco de dados usando a carga de trabalho do Repositório de Consultas](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md) para obter mais informações.
  ||  
 |-|  
 |**Aplica-se a**: do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
@@ -254,7 +250,7 @@ dta -d AdventureWorks2012 ...
  **-N** *online_option*  
  Especifica se são criadas estruturas de design físico online. A tabela a seguir lista e descreve os valores que podem ser especificados para esse argumento.  
   
-|Valor|Description|  
+|Valor|Descrição|  
 |-----------|-----------------|  
 |OFF|Nenhuma estrutura de design físico recomendada pode ser criada online.|  
 |ON|Todas as estruturas de design físico recomendadas podem ser criadas online.|  
@@ -272,11 +268,11 @@ dta -n number_of_events -A 0
  Nessecaso, é importante especificar um tempo de ajuste ilimitado (`-A 0`). Caso contrário, o Orientador de Otimização do Mecanismo de Banco de Dados assume, por padrão, um tempo de ajuste de 8 horas.
  
  **-I** *time_window_in_hours*   
-   Especifica a janela de tempo (em horas) quando uma consulta deve ter executado para que ela seja considerada pelo DTA para ajustar ao usar **-QI** opção (carga de trabalho do repositório de consultas). 
+   Especifica a janela de tempo (em horas) quando uma consulta deve ter sido executado para que ela seja considerada pelo DTA para ajuste ao usar **-iq** opção (carga de trabalho de consulta Store). 
 ```  
 dta -iq -I 48  
 ```  
-Nesse caso, DTA será usar o repositório de consultas como a fonte de carga de trabalho e considerar apenas consultas que foram executadas nas últimas 48 horas.  
+Nesse caso, DTA usará Store consulta como a origem da carga de trabalho e considere apenas a consultas que foram executadas com as últimas 48 horas.  
   ||  
 |-|  
 |**Aplica-se a**: do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  

@@ -1,13 +1,11 @@
 ---
-title: Tratamento de erros em JScript | Microsoft Docs
+title: Tratamento de erro em JScript | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - JScript
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - errors [ADO], JScript
 - JScript error handling [ADO]
 ms.assetid: 3de527e5-2e65-4ab0-9b7f-6d317c4478de
-caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dcebaef8a36961a5c28af4eee80fca4d088b9ed5
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7be00967d8d17731e4564a0a23aa245e609c6e8a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270865"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47838854"
 ---
-# <a name="handling-errors-in-jscript"></a>Tratamento de erros em JScript
-Deve verificar o código de seu Microsoft® JScript® o **contagem** propriedade o **Conexão** do objeto **erros** coleção. Se o valor for maior que 0, iterar na coleção e imprimir os valores como você faria em qualquer uma das outras linguagens.  
+# <a name="handling-errors-in-jscript"></a>Tratamento de erro em JScript
+Deve verificar o código do seu Microsoft® JScript® a **contagem** propriedade da **Conexão** do objeto **erros** coleção. Se o valor for maior que 0, iterar na coleção e os valores de impressão, como você faria em qualquer uma das outras linguagens.  
   
 ```  
 <!-- BeginErrorExampleJS -->  

@@ -1,13 +1,11 @@
 ---
-title: Método anterior (SQLServerResultSet) | Microsoft Docs
+title: Método Previous (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.previous
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 66eb4e10-c375-4b31-ac46-3ba1d9dbf6a0
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 57893930a8bc75b9098ea2e8540115995da94512
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 587398c10e693081a9dc6a6c4abb61ff970b2f03
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839841"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47692314"
 ---
-# <a name="previous-method-sqlserverresultset"></a>Método anterior (SQLServerResultSet)
+# <a name="previous-method-sqlserverresultset"></a>Método previous (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Move o cursor para a linha anterior neste [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto.  
+  Move o cursor para a linha anterior no objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,16 +35,16 @@ ms.locfileid: "32839841"
 public boolean previous()  
 ```  
   
-## <a name="return-value"></a>Valor de retorno  
- **True** se a nova linha atual for válida. **False** se não existem mais linhas para processar.  
+## <a name="return-value"></a>Valor retornado  
+ **True** se a nova linha atual é válida. **False** se não houver nenhum mais linhas a serem processadas.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método anterior é especificado pelo método na interface Java.SQL. ResultSet anterior.  
+ Esse método anterior é especificado pelo método na interface do ResultSet anterior.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Membros de SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Classe SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

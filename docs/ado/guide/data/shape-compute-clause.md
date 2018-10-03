@@ -1,32 +1,29 @@
 ---
-title: Formatar a cláusula COMPUTE | Microsoft Docs
+title: Cláusula COMPUTE de forma | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - shape commands [ADO]
 - compute clause [ADO]
 - data shaping [ADO], COMPUTE clause
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 183d6536d5202c9795837a4e35f740753b77703f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f47c18d4bef6930d45ceb8e2c7ebf3bfabb86640
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272825"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47797865"
 ---
 # <a name="shape-compute-clause"></a>Cláusula COMPUTE de forma
-Uma cláusula COMPUTE de forma gera um pai **registros**, cujas colunas consistem em uma referência para o filho **registros**; opcional colunas cujo conteúdo é capítulo, novo, ou colunas calculadas, ou o resultado da execução de funções de agregação no filho **Recordset** ou de forma anteriormente **Recordset**; e todas as colunas de filho **Recordset** listados em opcional pela cláusula.  
+Uma cláusula COMPUTE de forma gera um pai **conjunto de registros**, cujas colunas consistem em uma referência para o filho **conjunto de registros**; opcional colunas cujo conteúdo é capítulo, novo, ou colunas calculadas, ou o resultado da execução de funções de agregação no filho **conjunto de registros** ou formatados anteriormente **conjunto de registros**; e todas as colunas de filho **Recordset** listados em o opcional pela cláusula.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,28 +39,28 @@ SHAPE child-command [AS] child-alias
  *child-command*  
  Consiste em uma das seguintes opções:  
   
--   Um comando de consulta entre chaves ("{}") que retornará um filho **registros** objeto. O comando é emitido para o provedor de dados subjacente e sua sintaxe depende dos requisitos do provedor. Isso geralmente será a linguagem SQL, embora o ADO não requer qualquer linguagem de consulta específica.  
+-   Um comando de consulta entre chaves ("{}") que retornará um filho **Recordset** objeto. O comando for emitido para o provedor de dados subjacente e sua sintaxe depende dos requisitos do provedor. Isso geralmente será a linguagem SQL, embora o ADO não exige qualquer linguagem de consulta específica.  
   
--   O nome de um objeto existente em forma de **registros**.  
+-   O nome de um existente em forma **conjunto de registros**.  
   
 -   Comando de outra forma.  
   
 -   A tabela a palavra-chave, seguida do nome de uma tabela no provedor de dados.  
   
  *child-alias*  
- Um alias usado para se referir a **registros** retornado pelo *comando filho.* O *filho alias* é necessária na lista de colunas na cláusula COMPUTE e define a relação entre pai e filho **registros** objetos.  
+ Um alias usado para fazer referência a **conjunto de registros** retornado pela *comando filho.* O *filho alias* é necessária na lista de colunas na cláusula COMPUTE e define a relação entre pai e filho **Recordset** objetos.  
   
  *appended-column-list*  
- Uma lista na qual cada elemento define uma coluna no pai gerado. Cada elemento contém uma coluna de capítulo, uma nova coluna, uma coluna calculada ou um valor resultante de uma função de agregação no filho **registros**.  
+ Uma lista na qual cada elemento define uma coluna no pai gerado. Cada elemento contém uma coluna de capítulo, uma nova coluna, uma coluna calculada ou um valor resultante de uma função de agregação no filho **conjunto de registros**.  
   
  *grp-field-list*  
- Uma lista de colunas pai e filho **registros** objetos que especifica como as linhas devem ser agrupadas no filho.  
+ Uma lista de colunas pai e filho **Recordset** objetos que especifica como as linhas devem ser agrupadas no filho.  
   
- Para cada coluna a *grp--lista de campos,* uma coluna correspondente no pai e filho **registros** objetos. Para cada linha no pai **registros**, o *grp lista de campos* colunas têm valores exclusivos e o filho **registros** referenciado pelo pai linha consiste exclusivamente filho linhas cuja *lista de campos grp* colunas têm os mesmos valores da linha pai.  
+ Para cada coluna na *grp--lista de campos* há uma coluna correspondente no pai e filho **Recordset** objetos. Para cada linha no pai **conjunto de registros**, o *lista de campos grp* colunas têm valores exclusivos e o filho **Recordset** referenciado pelo pai linha consiste exclusivamente em filho linhas cuja *lista de campos grp* colunas têm os mesmos valores que a linha pai.  
   
- Se a cláusula BY for incluída, o filho **registros**do linhas serão agrupadas com base nas colunas na cláusula COMPUTE. O pai **registros** conterá uma linha para cada grupo de linhas filho **registros**.  
+ Se a cláusula BY for incluída, o filho **Recordset**do linhas serão agrupadas com base nas colunas na cláusula COMPUTE. O pai **conjunto de registros** conterá uma linha para cada grupo de linhas filho **conjunto de registros**.  
   
- Se a cláusula BY for omitida, o filho todo **registros** é tratado como um único grupo e o pai **Recordset** irá conter exatamente uma linha. Essa linha fará referência filho todo **registros**. Omitir a cláusula BY permite computar agregações de "total geral" em todo filho **registros**.  
+ Se a cláusula BY for omitida, o filho todo **conjunto de registros** é tratado como um único grupo e o pai **Recordset** irá conter exatamente uma linha. Essa linha fará referência a inteiro filho **conjunto de registros**. Omitir a cláusula BY permite computar agregações de "total geral" ao longo de todo filho **conjunto de registros**.  
   
  Por exemplo:  
   
@@ -71,14 +68,14 @@ SHAPE child-command [AS] child-alias
 SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders.OrderAmount) as TotalSales         
 ```  
   
- Independentemente da maneira como o pai **registros** é formado (usando computação ou usando APPEND), ele conterá uma coluna de capítulo que é usada para relacioná-la a um filho **registros**. Se desejar, o pai **registros** também pode conter colunas que contêm agregações (SUM, MIN, MAX e assim por diante) sobre as linhas filho. O pai e filho **registros** pode conter colunas que contêm uma expressão na linha a **Recordset**, bem como colunas que são novos e inicialmente vazio.  
+ Independentemente de qual modo o pai **conjunto de registros** é formado (usando a computação ou usando o ACRÉSCIMO), ele conterá uma coluna de capítulo que é usada para relacioná-la a um filho **conjunto de registros**. Se desejar, o pai **Recordset** também podem conter colunas que contêm agregações (SUM, MIN, MAX e assim por diante) em relação às linhas filho. O pai e filho **conjunto de registros** podem conter colunas que contêm uma expressão na linha a **conjunto de registros**, bem como as colunas que são novos e inicialmente vazio.  
   
 ## <a name="operation"></a>Operação  
- O *filho comando* é emitido para o provedor, que retornará um filho **registros**.  
+ O *filho-command* é emitido para o provedor, que retorna um filho **conjunto de registros**.  
   
- A cláusula COMPUTE Especifica as colunas do pai **registros**, que pode ser uma referência para o filho **registros**, uma ou mais agregações, uma expressão calculada ou novas colunas. Se houver uma cláusula BY, as colunas que ele define também são acrescentadas ao pai **registros**. A cláusula BY Especifica como as linhas do filho **registros** são agrupados.  
+ A cláusula COMPUTE Especifica as colunas do pai **conjunto de registros**, que pode ser uma referência para o filho **conjunto de registros**, uma ou mais agregações, uma expressão calculada ou novas colunas. Se houver uma cláusula BY, as colunas que ele define também são acrescentadas ao pai **conjunto de registros**. A cláusula BY Especifica como as linhas do filho **Recordset** são agrupados.  
   
- Por exemplo, suponha que você tenha uma tabela denominada dados demográficos, que consiste em campos de população de estado e cidade. (Os valores de população da tabela são fornecidos apenas como um exemplo).  
+ Por exemplo, suponha que você tenha uma tabela denominada dados demográficos, que consiste em campos de estado, cidade e população. (As figuras de população da tabela são fornecidas somente como um exemplo).  
   
 |Estado|Cidade|População|  
 |-----------|----------|----------------|  
@@ -86,7 +83,7 @@ SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders.Or
 |OU|Medford|200,000|  
 |OU|Portland|400,000|  
 |CA|Los Angeles|800,000|  
-|CA|São Paulo|600,000|  
+|CA|SAN Diego|600,000|  
 |WA|Tacoma|500,000|  
 |OU|Corvallis|300,000|  
   
@@ -98,19 +95,19 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
            objConnection  
 ```  
   
- Esse comando abre uma forma **registros** com dois níveis. O nível pai é uma gerada **registros** com uma coluna de agregação (`SUM(rs.population)`), uma coluna de referência filho **registros** (`rs`) e uma coluna para agrupar o filho **Registros** (`state`). O nível filho é o **registros** retornada pelo comando de consulta (`select * from demographics`).  
+ Esse comando abre uma moldado **Recordset** com dois níveis. O nível pai é uma gerada **conjunto de registros** com uma coluna de agregação (`SUM(rs.population)`), uma coluna referenciando o filho **conjunto de registros** (`rs`) e uma coluna para agrupar o filho **Recordset** (`state`). O nível filho é o **conjunto de registros** retornada pelo comando de consulta (`select * from demographics`).  
   
- O filho **registros** linhas de detalhes serão agrupados por estado, mas em nenhuma ordem específica. Ou seja, os grupos não será em ordem alfabética ou numérica. Se você quiser que o pai **registros** para ser ordenado, você pode usar o **classificação do conjunto de registros** método ordenar pai **registros**.  
+ O filho **Recordset** linhas de detalhes serão agrupados por estado, mas caso contrário, sem nenhuma ordem específica. Ou seja, não serão os grupos em ordem alfabética ou numérica. Se você quiser que o pai **conjunto de registros** para serem ordenados, você pode usar o **classificação do conjunto de registros** método para fazer o pedido pai **conjunto de registros**.  
   
- Agora você pode navegar pai aberto **registros** e acessar os detalhes de filho **registros** objetos. Para obter mais informações, consulte [acessar linhas em um conjunto de registros hierárquicos](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md).  
+ Agora, você pode navegar pai aberto **conjunto de registros** e acessar os detalhes de filho **Recordset** objetos. Para obter mais informações, consulte [acessar linhas em um conjunto de registros hierárquicos](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md).  
   
 ## <a name="resultant-parent-and-child-detail-recordsets"></a>Pai resultante e conjuntos de registros de detalhe de filho  
   
 ### <a name="parent"></a>Pai  
   
-|SUM (rs. População)|rs|Estado|  
+|Soma (rs. População)|rs|Estado|  
 |---------------------------|--------|-----------|  
-|1,300,000|Referência a child1|CA|  
+|1,300,000|Referência ao child1|CA|  
 |1,200,000|Referência a child2|WA|  
 |1,100,000|Referência a child3|OU|  
   
@@ -119,7 +116,7 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
 |Estado|Cidade|População|  
 |-----------|----------|----------------|  
 |CA|Los Angeles|800,000|  
-|CA|São Paulo|600,000|  
+|CA|SAN Diego|600,000|  
   
 ## <a name="child2"></a>Child2  
   
@@ -137,13 +134,13 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
 |OU|Corvallis|300,000|  
   
 ## <a name="see-also"></a>Consulte também  
- [Acessar linhas em um conjunto de registros hierárquico](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
+ [Acessando linhas em um conjunto de registros hierárquico](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
  [Visão geral de modelagem de dados](../../../ado/guide/data/data-shaping-overview.md)   
  [Objeto Field](../../../ado/reference/ado-api/field-object.md)   
  [Gramática de forma formal](../../../ado/guide/data/formal-shape-grammar.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Provedores necessários para modelagem de dados](../../../ado/guide/data/required-providers-for-data-shaping.md)   
+ [Provedores necessários para Data Shaping](../../../ado/guide/data/required-providers-for-data-shaping.md)   
  [Cláusula APPEND de forma](../../../ado/guide/data/shape-append-clause.md)   
- [Comandos de forma em geral](../../../ado/guide/data/shape-commands-in-general.md)   
- [Propriedade de valor (ADO)](../../../ado/reference/ado-api/value-property-ado.md)   
+ [Modelar comandos em geral](../../../ado/guide/data/shape-commands-in-general.md)   
+ [Propriedade Value (ADO)](../../../ado/reference/ado-api/value-property-ado.md)   
  [Funções do Visual Basic for Applications](../../../ado/guide/data/visual-basic-for-applications-functions.md)

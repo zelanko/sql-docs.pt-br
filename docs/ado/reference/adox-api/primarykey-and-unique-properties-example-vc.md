@@ -1,13 +1,11 @@
 ---
-title: PrimaryKey e exemplo de propriedades exclusivas (VC + +) | Microsoft Docs
+title: Propriedades PrimaryKey e exclusivo (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - Unique property [ADOX], VC++ example
 - PrimaryKey property [ADOX], VC++ example
 ms.assetid: d51814a2-ff7d-48ed-b719-99776da2091a
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bacde66d71826f40eb86cb31c92c1f8663ccac74
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b7d8943249f6780de448e4eb22dcd3088dbc55bc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286765"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613314"
 ---
-# <a name="primarykey-and-unique-properties-example-vc"></a>PrimaryKey e exemplo de propriedades exclusivas (VC + +)
-Este exemplo demonstra o [PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md) e [Unique](../../../ado/reference/adox-api/unique-property-adox.md) propriedades de um [índice](../../../ado/reference/adox-api/index-object-adox.md). O código cria uma nova tabela com duas colunas. O **PrimaryKey** e **Unique** propriedades são usadas para fazer uma coluna de chave primária para a qual os valores duplicados não são permitidos.  
+# <a name="primarykey-and-unique-properties-example-vc"></a>Exemplos das propriedades PrimaryKey e Unique (VC++)
+Este exemplo demonstra a [PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md) e [Unique](../../../ado/reference/adox-api/unique-property-adox.md) as propriedades de um [índice](../../../ado/reference/adox-api/index-object-adox.md). O código cria uma nova tabela com duas colunas. O **PrimaryKey** e **Unique** propriedades são usadas para fazer uma coluna de chave primária para a qual os valores duplicados não são permitidos.  
   
 ```  
 // BeginPrimaryKeyCpp.cpp  

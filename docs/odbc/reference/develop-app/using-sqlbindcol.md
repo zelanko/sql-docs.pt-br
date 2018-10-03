@@ -5,40 +5,37 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
 - SQLBindCol function [ODBC], using
 ms.assetid: 17277ab3-33ad-44d3-a81c-a26b5e338512
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d4ccd4607e16b244279e0910fe32047f19e2e6d0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2c26aff8220d2ebaf4024a881e8b48f165999f8f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32917471"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47776404"
 ---
-# <a name="using-sqlbindcol"></a>Usando SQLBindCol
-O aplicativo associa colunas chamando **SQLBindCol**. Essa função associa uma coluna por vez. Com ele, o aplicativo especifica o seguinte:  
+# <a name="using-sqlbindcol"></a>Usar SQLBindCol
+O aplicativo associa colunas chamando **SQLBindCol**. Essa função é associado a uma coluna por vez. Com ele, o aplicativo especifica o seguinte:  
   
--   O número da coluna. A coluna 0 é a coluna de indicador; não é possível incluir essa coluna em alguns conjuntos de resultados. Todas as outras colunas são numeradas começando com o número 1. Erro ao vincular uma coluna de números maiores que o número de colunas no conjunto de resultados; Esse erro não pode ser detectado até que o conjunto de resultados tiver sido criado, para que ele é retornado por **SQLFetch**, não **SQLBindCol**.  
+-   O número da coluna. A coluna 0 é a coluna de indicador; Esta coluna não está incluída em alguns conjuntos de resultados. Todas as outras colunas são numeradas começando com o número 1. É um erro para associar uma coluna de números maiores que as colunas no conjunto de resultados; Esse erro não pode ser detectado até que o conjunto de resultados tiver sido criado, portanto, ele é retornado por **SQLFetch**, e não **SQLBindCol**.  
   
--   O comprimento C de bytes, o endereço e o tipo de dados da variável associada à coluna. É um erro para especificar um tipo de dados C para o qual o tipo de dados SQL da coluna não pode ser convertido; Esse erro talvez não seja detectado até que o conjunto de resultados tiver sido criado, para que ele é retornado por **SQLFetch**, não **SQLBindCol**. Para obter uma lista de conversões com suporte, consulte [conversão de dados do SQL para tipos de dados C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) no Apêndice d: os tipos de dados. Para obter informações sobre o comprimento em bytes, consulte [comprimento do Buffer de dados](../../../odbc/reference/develop-app/data-buffer-length.md).  
+-   O comprimento C de byte, o endereço e o tipo de dados da variável associada à coluna. É um erro para especificar um tipo de dados C para o qual o tipo de dados SQL da coluna não pode ser convertido; Esse erro não pode ser detectado até que o conjunto de resultados tiver sido criado, portanto, ele é retornado por **SQLFetch**, e não **SQLBindCol**. Para obter uma lista de conversões com suporte, consulte [conversão de dados do SQL para tipos de dados C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) apêndice d: tipos de dados. Para obter informações sobre o comprimento em bytes, consulte [comprimento do Buffer de dados](../../../odbc/reference/develop-app/data-buffer-length.md).  
   
--   O endereço de um buffer de comprimento/indicador. O buffer de comprimento/indicador é opcional. Ele é usado para retornar o comprimento de bytes de binário ou de dados de caractere ou retorno SQL_NULL_DATA se os dados são NULL. Para obter mais informações, consulte [usando valores de comprimento/indicador](../../../odbc/reference/develop-app/using-length-and-indicator-values.md).  
+-   O endereço de um buffer de comprimento/indicador. O buffer de comprimento/indicador é opcional. Ele é usado para retornar o comprimento de byte de binário ou dados de caractere ou retorno SQL_NULL_DATA se os dados forem NULL. Para obter mais informações, consulte [usando valores de comprimento/indicador](../../../odbc/reference/develop-app/using-length-and-indicator-values.md).  
   
  Quando **SQLBindCol** é chamado, o driver associa essas informações com a instrução. Quando cada linha de dados for encontrada, ele usa as informações para colocar os dados para cada coluna nas variáveis associadas de aplicativo.  
   
- Por exemplo, o código a seguir associa variáveis para as colunas de vendedor e CustID. Dados para as colunas serão retornados no *vendedor* e *CustID*. Porque *vendedor* é um buffer de caractere, o aplicativo especifica o comprimento de byte (11) para que o driver pode determinar se deseja truncar os dados. O comprimento em bytes de retornado título ou, se for NULL, será retornado no *SalesPersonLenOrInd*.  
+ Por exemplo, o código a seguir associa variáveis para as colunas de vendedor e CustID. Dados para as colunas serão retornados na *vendedor* e *CustID*. Porque *vendedor* é um buffer de caracteres, o aplicativo especifica seu comprimento de byte (11) para que o driver pode determinar se deseja truncar os dados. O comprimento em bytes de retornado do título, ou se ele for NULL, será retornado em *SalesPersonLenOrInd*.  
   
- Porque *CustID* é uma variável de inteiro e corrigiu comprimento, não há necessidade de especificar seu comprimento de byte; o driver pressupõe que ele seja **sizeof (** SQLUINTEGER **)**. O comprimento de bytes do cliente retornado a ID de dados, ou se for NULL, será retornado no *CustIDInd*. Observe que o aplicativo estiver interessado somente se o salário for NULL, porque o comprimento de bytes é sempre **sizeof (** SQLUINTEGER **)**.  
+ Porque *CustID* é uma variável de inteiro e tem o comprimento, fixo não é necessário para especificar seu comprimento de bytes; o driver pressupõe que ele é **sizeof (** SQLUINTEGER **)**. O comprimento de bytes do cliente retornado dados da ID, ou se ele for NULL, será retornado em *CustIDInd*. Observe que o aplicativo estiver interessado somente se o salário for NULL, porque o comprimento de bytes é sempre **sizeof (** SQLUINTEGER **)**.  
   
 ```  
 SQLCHAR       SalesPerson[11];  
@@ -74,7 +71,7 @@ while ((rc = SQLFetch(hstmt)) != SQL_NO_DATA) {
 SQLCloseCursor(hstmt);  
 ```  
   
- O código a seguir executa um **selecione** instrução inserida pelo usuário e imprime a cada linha de dados no conjunto de resultados. Como o aplicativo não pode prever a forma do resultado definido criado pelo **selecione** instrução, ele não é possível associar variáveis embutido ao conjunto, como no exemplo anterior de resultados. Em vez disso, o aplicativo aloca um buffer de comprimento/indicador e um buffer que contém os dados para cada coluna na linha. Para cada coluna, ela calcula o deslocamento inicial da memória para a coluna e ajusta esse deslocamento para que os buffers de dados e comprimento/indicador para a coluna Iniciar em limites de alinhamento. Em seguida, vincular a memória que inicia no deslocamento para a coluna. Do ponto de vista do driver, o endereço da memória é possível distinguir do endereço de uma variável de associado no exemplo anterior. Para obter mais informações sobre o alinhamento, consulte [alinhamento](../../../odbc/reference/develop-app/alignment.md).  
+ O código a seguir executa um **selecionar** instrução inserida pelo usuário e imprime a cada linha de dados no conjunto de resultados. Como o aplicativo não é possível prever a forma do resultado definido criado pelo **selecionar** instrução, ele não é possível associar variáveis embutidas para o conjunto como no exemplo anterior de resultados. Em vez disso, o aplicativo aloca um buffer de comprimento/indicador e um buffer que contém os dados para cada coluna na linha. Para cada coluna, ele calcula o deslocamento para o início da memória para a coluna e ajusta esse deslocamento para que os buffers de dados e comprimento/indicador para a coluna Iniciar em limites de alinhamento. Ele então liga a memória, iniciando no deslocamento para a coluna. Do ponto de vista do driver, o endereço da memória é indistinguível do endereço de uma variável de limite no exemplo anterior. Para obter mais informações sobre o alinhamento, consulte [alinhamento](../../../odbc/reference/develop-app/alignment.md).  
   
 ```  
 // This application allocates a buffer at run time. For each column, this   

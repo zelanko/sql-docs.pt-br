@@ -1,37 +1,34 @@
 ---
-title: Exemplo de estado de prontidão é de propriedade (VBScript) | Microsoft Docs
+title: Exemplo da propriedade ReadyState (VBScript) | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - ReadyState property [ADO], VBScript example
 ms.assetid: e3e18da4-0511-4ece-a35d-699978bc28c6
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 30d015d40052b781babc865a099726d1cddd4688
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 47e545cf1b1f99859330f0f0ffbbc72aa3f9393c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288475"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47826894"
 ---
-# <a name="readystate-property-example-vbscript"></a>Exemplo de estado de prontidão é de propriedade (VBScript)
+# <a name="readystate-property-example-vbscript"></a>Exemplo do método ReadyState (VBScript)
 > [!IMPORTANT]
->  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (veja o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Aplicativos que usam o RDS devem migrar para [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (consulte o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Devem ser migrados para aplicativos que usam o RDS [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- O exemplo a seguir mostra como ler o [estado de prontidão é](../../../ado/reference/rds-api/readystate-property-rds.md) propriedade o [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objeto em tempo de execução no código VBScript. **Estado de prontidão é** é uma propriedade somente leitura.  
+ O exemplo a seguir mostra como ler o [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) propriedade do [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objeto em tempo de execução no código do VBScript. **ReadyState** é uma propriedade somente leitura.  
   
- Para testar este exemplo, recorte e cole este código entre as \<corpo > e \</Body > marcas em uma HTML normal de documento e nomeie-o **RDSReadySt.asp**. Use **localizar** para localizar o arquivo Adovbs.inc e coloque-o no diretório que você planeja usar. Script ASP identificará o seu servidor.  
+ Para testar este exemplo, recorte e cole este código entre o \<Body > e \</Body > marcas em uma HTML normal de documento e nomeie-o **RDSReadySt.asp**. Use **localizar** para localizar o arquivo Adovbs.inc e coloque-o no diretório que você planeja usar. Script ASP identificará o seu servidor.  
   
 ```  
 <!-- BeginReadyStateVBS -->  

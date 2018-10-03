@@ -3,17 +3,16 @@ title: Baixar o Driver do Microsoft OLE DB para SQL Server | Microsoft Docs
 description: Onde baixar o Driver do Microsoft OLE DB para SQL Server
 ms.date: 07/03/2018
 ms.prod: sql
-ms.suite: sql
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daveng
-ms.openlocfilehash: 3efc44af72b3f64649a6a918e51ada6758eb78c1
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: c999ee9032c906711b6176ecba35404ee1fc3759
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39108708"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47821175"
 ---
 # <a name="download-microsoft-ole-db-driver-for-sql-server"></a>Baixar o Driver do Microsoft OLE DB para SQL Server
 
