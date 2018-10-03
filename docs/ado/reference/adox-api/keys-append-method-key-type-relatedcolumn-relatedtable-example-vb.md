@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -18,18 +16,17 @@ helpviewer_keywords:
 - UpdateRule property [ADOX], Visual Basic example
 - RelatedColumn property [ADOX], Visual Basic example
 ms.assetid: 13b5b1c3-6af6-439e-bb65-976578ba6bc2
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d62296909a1d55a908d9ee22c06deea3cd36379c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b0fa2c7b7b7b2ad58042f46f8a1cffb0a3706f26
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286495"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47602035"
 ---
-# <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vb"></a>Chaves de acrescentar o método, tipo de chave, RelatedColumn, RelatedTable e exemplo de propriedades de UpdateRule (VB)
+# <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vb"></a>Exemplo das propriedades UpdateRule e RelatedTable, RelatedColumn, Key Type e do método Keys Append (VB)
 O código a seguir demonstra como criar uma nova relação de chave estrangeira entre duas tabelas existentes denominada **clientes** e **pedidos**.  
   
 ```  
@@ -77,17 +74,17 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Acrescente o método (ADOX colunas)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [(ADOX chaves) do método append](../../../ado/reference/adox-api/append-method-adox-keys.md)   
- [Objeto de catálogo (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Objeto de coluna (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
- [Coleção de colunas (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [Objeto de chave (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)   
- [Coleção de chaves (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)   
+ [Acrescentar o método (colunas do ADOX)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
+ [Acrescentar o método (chaves do ADOX)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
+ [Objeto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Objeto Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
+ [Coleção Columns (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
+ [Objeto Key (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)   
+ [Coleção Keys (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)   
  [Propriedade Name (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)   
  [Propriedade RelatedColumn (ADOX)](../../../ado/reference/adox-api/relatedcolumn-property-adox.md)   
  [Propriedade RelatedTable (ADOX)](../../../ado/reference/adox-api/relatedtable-property-adox.md)   
- [Objeto de tabela (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
- [Coleção de tabelas (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)   
- [Propriedade de tipo (chave) (ADOX)](../../../ado/reference/adox-api/type-property-key-adox.md)   
+ [Objeto Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
+ [Coleção Tables (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)   
+ [Propriedade Type (Key) (ADOX)](../../../ado/reference/adox-api/type-property-key-adox.md)   
  [Propriedade UpdateRule (ADOX)](../../../ado/reference/adox-api/updaterule-property-adox.md)

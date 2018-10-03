@@ -1,32 +1,29 @@
 ---
-title: UPDATE - SQL comando | Microsoft Docs
+title: UPDATE – comando SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - update [ODBC]
 ms.assetid: ff1e0331-c060-4304-b280-039725b45f63
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 748a405ba63fb934eee162d3cc023b5935251cea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3fbd5ec98791d782fe7ad1fdb1e1884b646dcf9f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32908671"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47818304"
 ---
-# <a name="update---sql-command"></a>SQL de atualização - comando
+# <a name="update---sql-command"></a>UPDATE – comando SQL
 Atualiza os registros em uma tabela com novos valores.  
   
- O Driver de ODBC do Visual FoxPro oferece suporte a sintaxe de linguagem do Visual FoxPro nativo para este comando. Para obter informações específicas do driver, consulte **comentários de Driver**.  
+ O Driver de ODBC do Visual FoxPro dá suporte à sintaxe de linguagem do Visual FoxPro nativo para esse comando. Para obter informações específicas do driver, consulte **Driver comentários**.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,24 +39,24 @@ SET Column_Name1 = eExpression1
  ATUALIZAÇÃO [ *DatabaseName1!*] *TableName1*  
  Especifica a tabela na qual os registros são atualizados com novos valores.  
   
- *DatabaseName1!* Especifica o nome de um banco de dados diferente do especificado com a fonte de dados que contém a tabela. Você deve incluir o nome do banco de dados que contém a tabela se o banco de dados não é atual. Inclua o delimitador de ponto de exclamação (!) depois do nome do banco de dados e antes do nome da tabela.  
+ *DatabaseName1!* Especifica o nome de um banco de dados que não seja o banco de dados especificado com a fonte de dados que contém a tabela. Você deve incluir o nome do banco de dados que contém a tabela se o banco de dados não for atual. Inclua o delimitador de ponto de exclamação (!) após o nome do banco de dados e antes do nome da tabela.  
   
  DEFINIR *Column_Name1*= *eExpression1*[, *Column_Name2*= *eExpression2*  
- Especifica as colunas que estão atualizadas e seus novos valores. Se você omitir a cláusula WHERE, cada linha na coluna é atualizada com o mesmo valor.  
+ Especifica as colunas que são atualizadas e seus novos valores. Se você omitir a cláusula WHERE, cada linha na coluna é atualizada com o mesmo valor.  
   
- ONDE *FilterCondition1*[AND &#124; ou *FilterCondition2*...]  
+ Em que *FilterCondition1*[AND &#124; ou *FilterCondition2*...]  
  Especifica os registros que são atualizados com novos valores.  
   
- *FilterCondition* Especifica os critérios que os registros devem atender para ser atualizada com novos valores. Você pode incluir muitas condições de filtragem você deseja conectar-se com o operador e ou operador OR. Você também pode usar o operador NOT para reverter o valor de uma expressão lógica, ou você pode usar **vazio**() para verificar se há um campo vazio.  
+ *FilterCondition* Especifica os critérios que os registros devem atender para serem atualizados com novos valores. Você pode incluir quantos condições de filtragem desejar, conectar-se com o operador e ou operador OR. Você também pode usar o operador NOT para reverter o valor de uma expressão lógica, ou você pode usar **vazio**() para verificar se há um campo vazio.  
   
-## <a name="remarks"></a>Remarks  
- UPDATE - SQL pode atualizar somente os registros em uma única tabela.  
+## <a name="remarks"></a>Comentários  
+ ATUALIZAÇÃO - SQL pode atualizar somente os registros em uma única tabela.  
   
- Ao contrário de substituição, a atualização - SQL usa o bloqueio de registro ao atualizar vários registros em tabelas aberto para acesso compartilhado. Isso reduz a contenção de registro em situações de multiusuários, mas pode reduzir o desempenho. Para obter desempenho máximo, abra a tabela para exclusivo use ou **FLOCK**() para bloquear a tabela.  
+ Ao contrário de REPLACE, a atualização - SQL usa bloqueio de registro quando Atualizando vários registros nas tabelas aberto para acesso compartilhado. Isso reduz a contenção de registros em situações de multiusuários, mas pode reduzir o desempenho. Para obter máximo desempenho, abra a tabela para exclusiva de uso ou usar **USAM**() para bloquear a tabela.  
   
 ## <a name="driver-remarks"></a>Comentários de driver  
- Quando o aplicativo envia a instrução SQL ODBC atualização para a fonte de dados, o Driver de ODBC do Visual FoxPro converte o comando para o comando FoxProUPDATE Visual sem conversão.  
+ Quando seu aplicativo envia a instrução SQL ODBC atualização para a fonte de dados, o Driver de ODBC do Visual FoxPro converte o comando para o comando FoxProUPDATE Visual sem tradução.  
   
 ## <a name="see-also"></a>Consulte também  
- [Exclua - o comando SQL](../../odbc/microsoft/delete-sql-command.md)   
+ [DELETE – comando SQL](../../odbc/microsoft/delete-sql-command.md)   
  [INSERT – comando SQL](../../odbc/microsoft/insert-sql-command.md)

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_msx_enlist_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_msx_enlist
 ms.assetid: ceb3b2bc-0cc4-48d8-9bdc-6a809556e35f
-caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 84e48bc3d0661e7359d6794d6cc45ec494caee43
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 189861d10e308b79862f2485413aabf37a1b6aff
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253010"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47716334"
 ---
 # <a name="spmsxenlist-transact-sql"></a>sp_msx_enlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,16 +45,16 @@ sp_msx_enlist [@msx_server_name =] 'msx_server'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@msx_server_name =**] **'***msx_server***'**  
- O nome do servidor de administração multisservidor (mestre). *msx_server* é **sysname**, sem padrão.  
+ O nome do servidor de administração multisservidor (mestre). *msx_server* está **sysname**, sem padrão.  
   
  [  **@location =**] **'***local***'**  
- O local do servidor de destino a ser adicionado. *local* é **nvarchar (100)**, com um padrão NULL.  
+ O local do servidor de destino a ser adicionado. *local* está **nvarchar(100)**, com um padrão NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma  
+ None  
   
 ## <a name="permissions"></a>Permissões  
  As permissões para executar esse procedimento usam como padrão membros da função de servidor fixa **sysadmin** .  

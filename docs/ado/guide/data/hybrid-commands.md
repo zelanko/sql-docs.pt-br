@@ -1,32 +1,29 @@
 ---
-title: Comandos híbrido | Microsoft Docs
+title: Comandos híbridos | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - shape commands [ADO]
 - hybrid commands [ADO]
 - data shaping [ADO], hybrid commands
 ms.assetid: e8ca40e8-459c-40e2-8dd3-3ec6d5ee7b51
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 46d11110d7dfc5376799d412631bf9f77ee64fce
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b5313746eaa3d6d687dd5d2f3fddb303829595c0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271705"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47787278"
 ---
-# <a name="hybrid-commands"></a>Comandos híbrido
-Comandos de híbrida são parcialmente com parâmetros. Por exemplo:  
+# <a name="hybrid-commands"></a>Comandos híbridos
+Comandos híbridos são comandos parametrizados parcialmente. Por exemplo:  
   
 ```  
 SHAPE {select * from plants}   
@@ -35,9 +32,9 @@ SHAPE {select * from plants}
              PlantRegion TO CustomerRegion )   
 ```  
   
- O comportamento de cache para um comando híbrida é igual de comandos parametrizados regulares.  
+ O comportamento de cache para um comando híbrido é o mesmo que um dos comandos com parâmetros regulares.  
   
 ## <a name="see-also"></a>Consulte também  
- [Exemplo de modelagem de dados](../../../ado/guide/data/data-shaping-example.md)   
+ [Exemplo de Data Shaping](../../../ado/guide/data/data-shaping-example.md)   
  [Gramática de forma formal](../../../ado/guide/data/formal-shape-grammar.md)   
  [Modelar comandos em geral](../../../ado/guide/data/shape-commands-in-general.md)

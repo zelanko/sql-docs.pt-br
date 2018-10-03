@@ -4,33 +4,27 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
 - fn:namespace-uri-from-QName function
 - namespace-uri-from-QName function
 ms.assetid: 4ab3f003-2a3b-4268-9e88-b615e35701b2
-caps.latest.revision: 13
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 67475f0f7e10f8d49e4adefab8b44c2d4cefc272
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ff8783eee040064e016becebc64e041e1dca4ce0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37999798"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47808064"
 ---
-# <a name="functions-related-to-qnames---namespace-uri-from-qname"></a>Funções relacionadas a QNames – namespace-uri-from-QName
+# <a name="functions-related-to-qnames---namespace-uri-from-qname"></a>Funções Relacionadas a QNames – namespace-uri-from-QName
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Retorna uma cadeia de caracteres que representa o uri de namespace do QName especificado por *$arg*. O resultado é a sequência vazia se *$arg* for a sequência vazia.  

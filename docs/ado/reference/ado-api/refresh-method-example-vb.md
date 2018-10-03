@@ -1,32 +1,29 @@
 ---
-title: Atualizar exemplo de método (VB) | Microsoft Docs
+title: Método exemplo Refresh (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Refresh method [ADO], Visual Basic example
 ms.assetid: f5375fa1-4711-4f7e-9ba4-54c427f71325
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 56d9bcbb317c1c8a450a09d1ef2775d0b769cef4
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 90fecd4dcb60907137aecdbe4cbfb792e9dc4c23
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281345"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47801334"
 ---
-# <a name="refresh-method-example-vb"></a>Atualizar exemplo de método (VB)
-Este exemplo demonstra como usar o [atualizar](../../../ado/reference/ado-api/refresh-method-ado.md) método para atualizar o [parâmetros](../../../ado/reference/ado-api/parameters-collection-ado.md) coleção para um procedimento armazenado [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto.  
+# <a name="refresh-method-example-vb"></a>Exemplo do método Refresh (VB)
+Este exemplo demonstra como usar o [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) método para atualizar o [parâmetros](../../../ado/reference/ado-api/parameters-collection-ado.md) coleção para um procedimento armazenado [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto.  
   
 ```  
 'BeginRefreshVB  
@@ -126,5 +123,5 @@ End Sub
   
 ## <a name="see-also"></a>Consulte também  
  [Objeto de comando (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Coleção de parâmetros (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
+ [Coleção Parameters (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Método Refresh (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)

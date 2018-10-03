@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - backupfile
@@ -19,29 +16,28 @@ helpviewer_keywords:
 - file backups [SQL Server], backupfile system table
 - backupfile system table
 ms.assetid: f1a7fc0a-f4b4-47eb-9138-eebf930dc9ac
-caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a667986dbf546672c368179a1e23e6b82b7373c6
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: ed2f40b2ea4f711c36a3c17031047fef555ab12a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33262005"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47842974"
 ---
 # <a name="backupfile-transact-sql"></a>backupfile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Contém uma linha para cada arquivo de dados ou de log do banco de dados. As colunas descrevem a configuração de arquivo no momento em que o backup foi feito. Se o arquivo está incluído no backup é determinado pelo **is_present** coluna. Essa tabela é armazenada no **msdb** banco de dados.  
+  Contém uma linha para cada arquivo de dados ou de log do banco de dados. As colunas descrevem a configuração de arquivo no momento em que o backup foi feito. Se o arquivo está incluído no backup é determinado pelo **is_present** coluna. Essa tabela é armazenada na **msdb** banco de dados.  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**backup_set_id**|**Int**|Número de identificação exclusivo do arquivo que contém o conjunto de backup. Referências **backupset (backup_set_id)**.|  
+|**backup_set_id**|**int**|Número de identificação exclusivo do arquivo que contém o conjunto de backup. As referências **backupset (backup_set_id)**.|  
 |**first_family_number**|**tinyint**|Número de família da primeira mídia que contém este arquivo de backup. Pode ser NULL.|  
 |**first_media_number**|**smallint**|Número de mídia da primeira mídia que contém este arquivo de backup. Pode ser NULL.|  
 |**filegroup_name**|**nvarchar(128)**|Nome do grupo de arquivos que contém um arquivo de banco de dados do qual foi feito backup. Pode ser NULL.|  
-|**page_size**|**Int**|Tamanho da página em bytes.|  
+|**page_size**|**int**|Tamanho da página em bytes.|  
 |**file_number**|**numeric(10,0)**|Número de identificação do arquivo exclusivo dentro de um banco de dados (corresponde ao **sys. database_files**. **file_id**).|  
 |**backed_up_page_count**|**numeric(10,0)**|Número de páginas das quais foi feito backup. Pode ser NULL.|  
 |**file_type**|**char(1)**|Arquivo do qual foi feito backup, um dos seguintes:<br /><br /> D = Arquivo de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> L = Arquivo de log do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> F = Catálogo de texto completo.<br /><br /> Pode ser NULL.|  
@@ -50,27 +46,27 @@ ms.locfileid: "33262005"
 |**logical_name**|**nvarchar(128)**|Nome lógico do arquivo do qual é feito backup. Pode ser NULL.|  
 |**physical_drive**|**nvarchar(260)**|Unidade física ou nome de partição. Pode ser NULL.|  
 |**physical_name**|**nvarchar(260)**|Lembrete do nome de arquivo físico (sistema operacional). Pode ser NULL.|  
-|**state**|**tinyint**|Estado do arquivo, um dos seguintes:<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY PENDING<br /><br /> 4 = SUSPECT<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT<br /><br /> 8 = DESCARTADO<br /><br /> Observação: O valor 5 é ignorado para que esses valores correspondem aos valores de estados de banco de dados.|  
+|**state**|**tinyint**|Estado do arquivo, um dos seguintes:<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY PENDING<br /><br /> 4 = SUSPECT<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT<br /><br /> 8 = DESCARTADO<br /><br /> Observação: O valor 5 é ignorado para que esses valores correspondem aos valores para os estados de banco de dados.|  
 |**state_desc**|**nvarchar(64)**|Descrição do estado do arquivo, uma das seguintes:<br /><br /> ONLINE RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT OFFLINE DEFUNCT|  
 |**create_lsn**|**numeric(25,0)**|Número da sequência de log na qual o arquivo foi criado.|  
 |**drop_lsn**|**numeric(25,0)**|Número de sequência de log no qual o arquivo foi descartado. Pode ser NULL.<br /><br /> Se o arquivo não tiver sido descartado, esse valor será NULL.|  
 |**file_guid**|**uniqueidentifier**|Identificador exclusivo do arquivo.|  
 |**read_only_lsn**|**numeric(25,0)**|Número da sequência de log em que o grupo de arquivos que contém o arquivo alterado de leitura/gravação para somente leitura (a alteração mais recente). Pode ser NULL.|  
 |**read_write_lsn**|**numeric(25,0)**|Número da sequência de log em que o grupo de arquivos que contém o arquivo alterado de somente leitura para leitura/gravação (a alteração mais recente). Pode ser NULL.|  
-|**differential_base_lsn**|**numeric(25,0)**|LSN base para backups diferenciais. Um backup diferencial inclui somente as extensões de dados com uma sequência de log número maior ou igual a **differential_base_lsn**.<br /><br /> Para outros tipos de backup, o valor é NULL.|  
+|**differential_base_lsn**|**numeric(25,0)**|LSN base para backups diferenciais. Um backup diferencial inclui somente o número de extensões de dados com uma sequência de log igual ou maior que **differential_base_lsn**.<br /><br /> Para outros tipos de backup, o valor é NULL.|  
 |**differential_base_guid**|**uniqueidentifier**|Para um backup diferencial, é o identificador exclusivo do backup de dados mais recente que forma a base diferencial do arquivo; se o valor for NULL, o arquivo foi incluído no backup diferencial, mas foi adicionado após a criação da base.<br /><br /> Para outros tipos de backup, o valor é NULL.|  
 |**backup_size**|**numeric(20,0)**|Tamanho do backup do arquivo em bytes.|  
-|**filegroup_guid**|**uniqueidentifier**|ID do grupo de arquivos. Para localizar informações do grupo de arquivos na tabela backupfilegroup, use **filegroup_guid** com **backup_set_id**.|  
+|**filegroup_guid**|**uniqueidentifier**|ID do grupo de arquivos. Para localizar informações de grupo de arquivos na tabela backupfilegroup, use **filegroup_guid** com **backup_set_id**.|  
 |**is_readonly**|**bit**|1 = Arquivo somente leitura.|  
 |**is_present**|**bit**|1 = Arquivo contido no conjunto de backup.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  RESTORE VERIFYONLY FROM *backup_device* WITH LOADHISTORY preenche as colunas da **backupmediaset** tabela com os valores apropriados do cabeçalho de conjunto de mídias.  
   
- Para reduzir o número de linhas nessa tabela e em outras tabelas de histórico e de backup, execute o [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) procedimento armazenado.  
+ Para reduzir o número de linhas nessa tabela e em outras tabelas de histórico e backup, execute as [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) procedimento armazenado.  
   
 ## <a name="see-also"></a>Consulte também  
- [Backup e restauração tabelas &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
+ [Backup e restauração de tabelas &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
  [backupfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
  [backupmediafamily &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   
  [backupmediaset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   

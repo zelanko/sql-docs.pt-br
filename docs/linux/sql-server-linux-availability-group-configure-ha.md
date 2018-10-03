@@ -7,17 +7,15 @@ manager: craigg
 ms.date: 02/14/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 801009112dffaa83bd1c938194a27934e4bbbdaa
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 56a61a4bc319c06becc104db0bd846871a533d1e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39082708"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47621074"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>Configurar SQL Server sempre no grupo de disponibilidade para alta disponibilidade no Linux
 
@@ -68,6 +66,8 @@ As etapas para criar um grupo de disponibilidade em servidores Linux para alta d
 [!INCLUDE [Create Prerequisites](../includes/ss-linux-cluster-availability-group-create-prereq.md)]
 
 ## <a name="create-the-ag"></a>Criar o grupo de disponibilidade
+
+Os exemplos nesta seção explicam como criar o grupo de disponibilidade usando o Transact-SQL. Você também pode usar o Assistente de grupo de disponibilidade SQL Server Management Studio. Quando você cria um grupo de disponibilidade com o assistente, ele retornará um erro quando você unir as réplicas no AG. Para corrigir esse problema, conceda `ALTER`, `CONTROL`, e `VIEW DEFINITIONS` para o pacemaker no grupo de disponibilidade em todas as réplicas. Depois que as permissões são concedidas na réplica primária, Junte-se a nós para o grupo de disponibilidade por meio do assistente, mas para alta disponibilidade funcionar corretamente, conceder permissão em todas as réplicas.
 
 Para uma configuração de alta disponibilidade que garante que o failover automático, o grupo de disponibilidade requer pelo menos três réplicas. Qualquer uma das seguintes configurações pode dar suporte a alta disponibilidade:
 
@@ -192,6 +192,13 @@ Você também pode configurar um grupo de disponibilidade com `CLUSTER_TYPE=EXTE
 
 ### <a name="join-secondary-replicas-to-the-ag"></a>Unir réplicas secundárias para o grupo de disponibilidade
 
+O usuário de pacemaker requer `ALTER`, `CONTROL`, e `VIEW DEFINITION` permissões no grupo de disponibilidade em todas as réplicas. Para conceder permissões, execute o seguinte script de Transact-SQL depois que o grupo de disponibilidade é criado na réplica primária e cada réplica secundária imediatamente depois de serem adicionados ao grupo de disponibilidade. Antes de executar o script, substitua `<pacemakerLogin>` com o nome da conta de usuário do pacemaker.
+
+```Transact-SQL
+GRANT ALTER, CONTROL, VIEW DEFINITION ON AVAILABILITY GROUP::ag1 TO <pacemakerLogin>
+GRANT VIEW SERVER STATE TO <pacemakerLogin>
+```
+
 Script Transact-SQL a seguir une a uma instância do SQL Server para um grupo de disponibilidade denominado `ag1`. Atualize o script para o seu ambiente. Em cada instância do SQL Server que hospeda uma réplica secundária, execute o seguinte Transact-SQL para unir o grupo de disponibilidade.
 
 ```Transact-SQL
@@ -213,7 +220,7 @@ Se você seguiu as etapas neste documento, você terá um AG que ainda não est�
 >Depois de configurar o cluster e adicionar o grupo de disponibilidade como um recurso de cluster, é possível usar o Transact-SQL para fazer failover os recursos do grupo de disponibilidade. Recursos de cluster do SQL Server no Linux não estão acoplados como intimamente com o sistema operacional enquanto estiverem em um Windows Server Failover Cluster (WSFC). Serviço do SQL Server não está ciente da presença do cluster. Orquestração de todos os é feita por meio das ferramentas de gerenciamento de cluster. No Ubuntu ou RHEL usar `pcs`. No SLES usar `crm`. 
 
 >[!IMPORTANT]
->Se o grupo de disponibilidade é um recurso de cluster, há um problema conhecido na versão atual em que o failover forçado com perda de dados para uma réplica assíncrona não funciona. Isso será corrigido na próxima versão. Failover manual ou automático para uma réplica síncrona é bem-sucedida. 
+>Se o grupo de disponibilidade é um recurso de cluster, há um problema conhecido na versão atual em que o failover forçado com perda de dados para uma réplica assíncrona não funciona. Isso será corrigido na próxima versão. Failover manual ou automático para uma réplica síncrona é bem-sucedida.
 
 
 ## <a name="next-steps"></a>Próximas etapas

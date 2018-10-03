@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,27 +14,26 @@ f1_keywords:
 helpviewer_keywords:
 - DrilledDown property [ADO MD]
 ms.assetid: bf39dd36-fc7a-4f6e-86c0-fa71430c0d86
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 19d1ae46067d933941548b877da2cd2973947156
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 9021ce8b3ad4f7442650731cb60b70cd4376d78a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284001"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828204"
 ---
 # <a name="drilleddown-property-ado-md"></a>Propriedade DrilledDown (ADO MD)
 Indica se filhos logo após o [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md) no eixo.  
   
 ## <a name="return-values"></a>Valores de retorno  
- Retorna um **booliano** valor e é somente leitura. **DrilledDown** retorna **True** se não houver nenhum membro filho do membro atual no eixo. **DrilledDown** retorna **False** se o membro atual tiver um ou mais membros filho no eixo.  
+ Retorna um **Boolean** valor e é somente leitura. **DrilledDown** retorna **verdadeiro** se não houver nenhum membro filho do membro atual no eixo. **DrilledDown** retorna **falso** se o membro atual tiver um ou mais membros filhos no eixo.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Use o **DrilledDown** propriedade para determinar se há pelo menos um filho desse membro no eixo imediatamente após esse membro. Essa informação é útil ao exibir o membro.  
   
- Essa propriedade só é suportada em [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md) objetos que pertencem a um [posição](../../../ado/reference/ado-md-api/position-object-ado-md.md) objeto. Ocorre um erro quando essa propriedade é referenciada em **membro** objetos que pertencem a um [nível](../../../ado/reference/ado-md-api/level-object-ado-md.md) objeto.  
+ Essa propriedade só é compatível com [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md) objetos que pertencem a um [posição](../../../ado/reference/ado-md-api/position-object-ado-md.md) objeto. Ocorre um erro quando essa propriedade é referenciada a partir **membro** objetos que pertencem a um [nível](../../../ado/reference/ado-md-api/level-object-ado-md.md) objeto.  
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Member (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  

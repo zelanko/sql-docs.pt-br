@@ -6,29 +6,26 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - XML persistence [ADO], persistence format
 ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cd0085f4fb632d4e5be4c4e64e1934b154108488
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7e70b7ab799ee0c1704c2fcd492edb434eb7c536
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273295"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47842156"
 ---
 # <a name="xml-persistence-format"></a>Formato de persistência XML
-ADO usa codificação UTF-8 para o fluxo XML que ele persistir.  
+ADO usa codificação UTF-8 para o fluxo XML que ele persiste.  
   
- O formato XML ADO é dividido em duas seções, uma seção de esquema seguida a seção de dados. Este é um arquivo XML de exemplo para a tabela Transportadoras do banco de dados Northwind. Várias partes do XML são discutidas o exemplo a seguir.  
+ O formato XML do ADO é dividido em duas seções, uma seção de esquema seguida a seção de dados. O exemplo a seguir é um arquivo XML de exemplo para a tabela Shippers (transportadores) do banco de dados Northwind. Várias partes do XML são discutidas, o exemplo a seguir.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 ```  
 <xml xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882"   
@@ -68,11 +65,11 @@ xmlns:z="#RowsetSchema">
 </xml>  
 ```  
   
- O esquema mostra as declarações de namespaces, a seção do esquema e a seção de dados. A seção de esquema contém definições de linha, CódigoDaTransportadora, CompanyName e telefone.  
+ O esquema mostra as declarações de namespaces, a seção do esquema e a seção de dados. A seção do esquema contém definições de linha, CódigoDaTransportadora, CompanyName e telefone.  
   
- Definições de esquema estão em conformidade com a [especificação W3C XML-Data](http://www.w3.org/TR/1998/NOTE-XML-data/) e podem ser validadas totalmente (embora a validação não ocorrerá no Internet Explorer 5). Dados XML no momento são o formato de esquema com suporte apenas para a persistência de conjunto de registros.  
+ Definições de esquema estão em conformidade com o [especificação W3C XML-Data](http://www.w3.org/TR/1998/NOTE-XML-data/) e pode ser totalmente validada (embora a validação não ocorrerá no Internet Explorer 5). Dados XML são, atualmente, o formato de esquema com suporte apenas para persistência de conjunto de registros.  
   
- A seção de dados tem três linhas que contém informações sobre transportadores. Para um conjunto de linhas vazio, a seção de dados pode estar vazia, mas o \<: dados do rs > marcas devem estar presentes. Sem dados, você poderia escrever a abreviação de marca simplesmente \<: dados do rs / >. Qualquer marca prefixada com "rs" indica que é o namespace definido pelo urn: schemas-microsoft-com:rowset.  
+ A seção de dados tem três linhas que contém informações sobre Shippers (transportadores). Para um conjunto de linhas vazio, a seção de dados pode estar vazia, mas o \<: dados do rs > marcas devem estar presentes. Sem dados, você poderia escrever a forma abreviada de marca simplesmente \<: dados do rs / >. Qualquer marca prefixada com "rs" indica que ele está no namespace definido pelo urn: schemas-microsoft-com:rowset.  
   
 ## <a name="see-also"></a>Consulte também  
  [Persistência de registros em formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)

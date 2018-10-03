@@ -1,13 +1,11 @@
 ---
-title: Interface níveis de conformidade | Microsoft Docs
+title: Níveis de conformidade de interface | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - interface conformance levels [ODBC]
@@ -15,32 +13,31 @@ helpviewer_keywords:
 - data sources [ODBC], conformance levels
 - ODBC drivers [ODBC], conformance levels
 ms.assetid: 2c470e54-0600-4b2b-b1f3-9885cb28a01a
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 890684bf513b80cd484f7b15c75a04c38553513b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: df78a4890658ec83a62eeccbce23d891d5afc56d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32912041"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47812094"
 ---
 # <a name="interface-conformance-levels"></a>Níveis de conformidade de interface
-A finalidade de redistribuição é informar ao aplicativo de quais recursos estão disponíveis para ele no driver. Um esquema de redistribuição com base em funções não suficientemente atingi-lo. Em ODBC 3. *x*, drivers são classificados com base nos recursos que eles possuem. O recurso de suporte pode incluir suporte a função. Ele também pode incluir um campo de descrição, um atributo de instrução, um valor de "Y" de suporte para um tipo de informação retornado por **SQLGetInfo**, e assim por diante.  
+A finalidade de redistribuição é informar ao aplicativo de quais recursos estão disponíveis para ele no driver. Um esquema de redistribuição baseado em funções não suficientemente atingir esse objetivo. Em ODBC 3. *x*, drivers são classificados com base nos recursos que eles possuem. O recurso de suporte pode incluir suporte a função; Ele também pode incluir suporte a um campo de descritor, um atributo de instrução, um valor de "Y" para um tipo de informação retornado por **SQLGetInfo**e assim por diante.  
   
- Para simplificar a especificação de conformidade de interface, o ODBC define três níveis de conformidade. Para atender a um nível de conformidade específico, um driver deve atender aos requisitos de nível de conformidade. Conformidade com um determinado nível implica completa conformidade com todos os níveis inferiores.  
+ Para simplificar a especificação de conformidade de interface, o ODBC define três níveis de conformidade. Para atender a um nível de conformidade específico, um driver deve satisfazer todos os requisitos desse nível de conformidade. Conformidade com um determinado nível implica conformidade completa com todos os níveis inferiores.  
   
- Níveis de conformidade não sempre dividir organizado em suporte para uma lista específica de funções ODBC, mas especificar recursos com suporte, conforme listado nas seções a seguir. Para fornecer suporte para um recurso, um driver deve oferecer suporte a algumas ou todas as formas de chamadas para determinadas funções ODBC (para obter mais informações, consulte [função conformidade](../../../odbc/reference/develop-app/function-conformance.md)), definir determinados atributos (consulte [conformidade de atributo ](../../../odbc/reference/develop-app/attribute-conformance.md)) e alguns campos de descritor (consulte [conformidade de campo de descritor](../../../odbc/reference/develop-app/descriptor-field-conformance.md)).  
+ Níveis de conformidade não sempre dividir claramente em suporte para uma lista específica de funções ODBC, mas especificam recursos com suporte, conforme listado nas seções a seguir. Para fornecer suporte para um recurso, um driver deve oferecer suporte a alguns ou todos os formulários de chamadas para determinadas funções ODBC (para obter mais informações, consulte [conformidade com a função](../../../odbc/reference/develop-app/function-conformance.md)), configuração de determinados atributos (consulte [conformidade de atributo ](../../../odbc/reference/develop-app/attribute-conformance.md)) e determinados campos de descritor (consulte [conformidade de campo de descritor](../../../odbc/reference/develop-app/descriptor-field-conformance.md)).  
   
- O aplicativo descobre o nível de conformidade de interface do driver conectando-se a uma fonte de dados e chamar **SQLGetInfo** com a opção SQL_ODBC_INTERFACE_CONFORMANCE.  
+ O aplicativo descobre o nível de conformidade de interface de um driver se conectar a uma fonte de dados e chamando **SQLGetInfo** com a opção SQL_ODBC_INTERFACE_CONFORMANCE.  
   
- Drivers estão livres para implementar recursos além do nível ao qual ele alega conformidade concluída. Aplicativos descobrir todos esses recursos adicionais, chamando **SQLGetFunctions** (para determinar quais funções ODBC estão presentes) e **SQLGetInfo** (para consultar vários outros recursos do ODBC).  
+ Drivers são livres para implementar recursos além do nível ao qual eles alegam conformidade completa. Aplicativos de descobrir todos esses recursos adicionais, chamando **SQLGetFunctions** (para determinar quais funções ODBC estão presentes) e **SQLGetInfo** (para consultar vários outros recursos do ODBC).  
   
- Há três níveis de conformidade de interface ODBC: principal, nível 1 e nível 2.  
+ Há três níveis de conformidade de interface ODBC: Core, nível 1 e nível 2.  
   
 > [!NOTE]  
->  Esses níveis de conformidade com requisitos diferentes de níveis de conformidade a API ODBC de mesmo nome no ODBC 2 *. x*. Em particular, todos os recursos indicado pelo ODBC 2 *. x* conformidade API nível 1 agora fazem parte do nível de conformidade da interface principal. Como resultado, muitos drivers ODBC podem relatar a conformidade de interface de nível de núcleo.  
+>  Esses níveis de conformidade têm requisitos diferentes de níveis de conformidade com a API ODBC o mesmo nome no ODBC 2 *. x*. Em particular, a todos os recursos implícito de ODBC 2 *. x* conformidade com a API nível 1 agora são parte do nível de conformidade de interface de núcleo. Como resultado, muitos drivers ODBC podem relatar a conformidade de interface de nível de núcleo.  
   
  Esta seção contém os tópicos a seguir.  
   

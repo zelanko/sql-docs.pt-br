@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_fts_index_keywords_by_property
@@ -21,29 +19,28 @@ helpviewer_keywords:
 - full-text search [SQL Server], viewing keywords
 - sys.dm_fts_index_keywords_by_property dynamic management view
 ms.assetid: fa41e052-a79a-4194-9b1a-2885f7828500
-caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a2839cd17ce0cd6bcc2735467a326248e0caa9cd
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: a09a67894f01aff4e964907f95cfcef55d2044e0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465212"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47779914"
 ---
 # <a name="sysdmftsindexkeywordsbyproperty-transact-sql"></a>sys.dm_fts_index_keywords_by_property (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Retorna todo o conteúdo relacionado a propriedade no índice de texto completo de uma determinada tabela. Isso inclui todos os dados pertencentes a qualquer propriedade registrada pela lista de propriedades de pesquisa associada àquele índice de texto completo.  
   
- sys.DM fts_index_keywords_by_property é uma função de gerenciamento dinâmico que permite que você veja quais propriedades registradas foram emitidas pelos IFilters no tempo de índice, bem como o conteúdo exato de todas as propriedades de cada documento indexado.  
+ sys.dm_fts_index_keywords_by_property é uma função de gerenciamento dinâmico que permite que você veja quais propriedades registradas foram emitidas pelos IFilters no momento do índice, bem como o conteúdo exato de cada propriedade em cada documento indexado.  
   
  **Para exibir todo o conteúdo em nível de documento (incluindo conteúdo relacionado à propriedade)**  
   
 -   [sys.dm_fts_index_keywords_by_document &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)  
   
- **Para exibir informações de nível mais alto índice de texto completo**  
+ **Para exibir informações de nível mais altos índice de texto completo**  
   
 -   [sys.dm_fts_index_keywords &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)  
   
@@ -63,22 +60,22 @@ OBJECT_ID('table_name')
   
 ## <a name="arguments"></a>Argumentos  
  db_id('*database_name*')  
- Uma chamada para o [db_id](../../t-sql/functions/db-id-transact-sql.md) função. Essa função aceita um nome de banco de dados e retorna a ID de banco de dados, que sys.DM fts_index_keywords_by_property usa para localizar o banco de dados especificado. Se *database_name* for omitido, a ID de banco de dados atual será retornada.  
+ Uma chamada para o [db_id ()](../../t-sql/functions/db-id-transact-sql.md) função. Essa função aceita um nome de banco de dados e retorna a ID de banco de dados, quais sys.dm_fts_index_keywords_by_property usa para localizar o banco de dados especificado. Se *database_name* for omitido, a ID de banco de dados atual será retornada.  
   
  object_id ('*table_name*')  
  Uma chamada para o [object_id ()](../../t-sql/functions/object-id-transact-sql.md) função. Essa função aceita um nome de tabela e retorna a ID da tabela que contém o índice de texto completo a ser inspecionado.  
   
 ## <a name="table-returned"></a>Tabela retornada  
   
-|Coluna|Data type|Description|  
+|coluna|Data type|Description|  
 |------------|---------------|-----------------|  
 |palavra-chave|**nvarchar(4000)**|A representação hexadecimal da palavra-chave armazenada no índice de texto completo.<br /><br /> Observação: OxFF representa o caractere especial que indica o final de um arquivo ou conjunto de dados.|  
 |display_term|**nvarchar(4000)**|O formato legível da palavra-chave. Esse formato é derivado do formato interno, que é armazenado no índice de texto completo.<br /><br /> Observação: OxFF representa o caractere especial que indica o final de um arquivo ou conjunto de dados.|  
-|column_id|**Int**|A ID da coluna a partir da qual a palavra-chave atual foi indexada com texto completo.|  
-|document_id|**Int**|A ID do documento ou linha a partir da qual o termo atual foi indexado com texto completo. Essa ID corresponde ao valor da chave de texto completo desse documento ou linha.|  
-|property_id|**Int**|ID de propriedade interna da propriedade de pesquisa dentro do índice de texto completo da tabela que você especificou no OBJECT_ID ('*table_name*') parâmetro.<br /><br /> Quando uma determinada propriedade é adicionada a uma lista de propriedades de pesquisa, o Mecanismo de Texto Completo registra a propriedade e atribui a ela uma ID de propriedade interna que é específica dessa lista de propriedades. A ID de propriedade interna, que é um inteiro, é exclusiva de uma determinada lista de propriedades de pesquisa. Se uma determinada propriedade for registrada para várias listas de propriedades de pesquisa, uma ID de propriedade interna diferente poderá ser atribuída para cada lista de propriedades de pesquisa.<br /><br /> Observação: A ID de propriedade interna é distinta do identificador de inteiro de propriedade que é especificado ao adicionar a propriedade à lista de propriedades de pesquisa. Para obter mais informações, veja [Pesquisar propriedades de documento com listas de propriedades de pesquisa](../../relational-databases/search/search-document-properties-with-search-property-lists.md).<br /><br /> Para exibir a associação entre property_id e o nome da propriedade:<br />                    [sys.registered_search_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)|  
+|column_id|**int**|A ID da coluna a partir da qual a palavra-chave atual foi indexada com texto completo.|  
+|document_id|**int**|A ID do documento ou linha a partir da qual o termo atual foi indexado com texto completo. Essa ID corresponde ao valor da chave de texto completo desse documento ou linha.|  
+|property_id|**int**|ID de propriedade interna da propriedade de pesquisa dentro do índice de texto completo da tabela que você especificou no OBJECT_ID ('*table_name*') parâmetro.<br /><br /> Quando uma determinada propriedade é adicionada a uma lista de propriedades de pesquisa, o Mecanismo de Texto Completo registra a propriedade e atribui a ela uma ID de propriedade interna que é específica dessa lista de propriedades. A ID de propriedade interna, que é um inteiro, é exclusiva de uma determinada lista de propriedades de pesquisa. Se uma determinada propriedade for registrada para várias listas de propriedades de pesquisa, uma ID de propriedade interna diferente poderá ser atribuída para cada lista de propriedades de pesquisa.<br /><br /> Observação: A ID de propriedade interna é distinta do identificador de inteiro de propriedade que é especificado ao adicionar a propriedade à lista de propriedades de pesquisa. Para obter mais informações, veja [Pesquisar propriedades de documento com listas de propriedades de pesquisa](../../relational-databases/search/search-document-properties-with-search-property-lists.md).<br /><br /> Para exibir a associação entre property_id e o nome da propriedade:<br />                    [sys.registered_search_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Essa exibição de gerenciamento dinâmico pode responder a perguntas como estas:  
   
 -   Que conteúdo é armazenado em uma determinada propriedade para um determinado DocID?  
@@ -89,7 +86,7 @@ OBJECT_ID('table_name')
   
  Quando a coluna de chave de texto completo é um tipo de dados inteiro, conforme recomendado, o document_id é mapeado diretamente no valor da chave de texto completo da tabela base.  
   
- Por outro lado, quando a coluna de chave de texto completo usa um tipo de dados não inteiro, o document_id não representa a chave de texto completo da tabela base. Nesse caso, para identificar a linha na tabela base que é retornada por dm_fts_index_keywords_by_property, você precisa unir essa exibição com os resultados retornados por [sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md). Antes de uni-los, é necessário armazenar a saída do procedimento armazenado em uma tabela temporária. Em seguida, você pode adicionar a coluna document_id de dm_fts_index_keywords_by_property à coluna DocId que é retornada por esse procedimento armazenado. Observe que uma **timestamp** coluna não pode receber valores em tempo de inserção, porque eles são gerados automaticamente pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Portanto, o **timestamp** coluna deve ser convertida em **varbinary (8)** colunas. O exemplo a seguir mostra estas etapas. Neste exemplo, *table_id* é a ID da tabela, *database_name* é o nome do banco de dados, e *table_name* é o nome da tabela.  
+ Por outro lado, quando a coluna de chave de texto completo usa um tipo de dados não inteiro, o document_id não representa a chave de texto completo da tabela base. Nesse caso, para identificar a linha na tabela base que é retornada pelo dm_fts_index_keywords_by_property, você precisa unir essa exibição com os resultados retornados por [sp_fulltext_keymappings](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md). Antes de uni-los, é necessário armazenar a saída do procedimento armazenado em uma tabela temporária. Em seguida, você pode unir a coluna document_id de dm_fts_index_keywords_by_property à coluna DocId que é retornada por esse procedimento armazenado. Observe que um **timestamp** coluna não pode receber valores em tempo de inserção, porque eles são gerados automaticamente pelo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Portanto, o **timestamp** coluna deve ser convertida em **varbinary (8)** colunas. O exemplo a seguir mostra estas etapas. Neste exemplo, *table_id* é a ID da tabela *database_name* é o nome do banco de dados, e *table_name* é o nome da sua tabela.  
   
 ```  
 USE database_name;  
@@ -113,7 +110,7 @@ GO
  Requer permissões SELECT nas colunas abrangidas pelo índice de texto completo e permissões CREATE FULLTEXT CATALOG.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir retornar palavras-chave da propriedade `Author` no índice de texto completo da tabela `Production.Document` do banco de dados de amostra `AdventureWorks`. O exemplo usa o alias `KWBPOP` para a tabela retornada por **sys.DM fts_index_keywords_by_property**. O exemplo usa junções internas para combinar as colunas de [registered_search_properties](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md) e [fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
+ O exemplo a seguir retornar palavras-chave da propriedade `Author` no índice de texto completo da tabela `Production.Document` do banco de dados de amostra `AdventureWorks`. O exemplo usa o alias `KWBPOP` para a tabela retornada por **sys.dm_fts_index_keywords_by_property**. O exemplo usa junções internas para combinar as colunas de [registered_search_properties](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md) e [fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
   
 ```  
 -- Once the full-text index is configured to support property searching  
@@ -135,7 +132,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Pesquisa de texto completo](../../relational-databases/search/full-text-search.md)   
+ [Pesquisa de Texto Completo](../../relational-databases/search/full-text-search.md)   
  [Melhorar o desempenho de índices de texto completo](../../relational-databases/search/improve-the-performance-of-full-text-indexes.md)   
  [sp_fulltext_keymappings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql.md)   
  [sys.dm_fts_index_keywords_by_document &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)   

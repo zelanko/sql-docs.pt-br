@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 11/25/2015
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_bindrule_TSQL
@@ -22,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 610bd8a1676bc732c887c92b1a291d4254614e0e
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 9f06c0b7395ce61a52cae17e9cbc6429cdd6b9eb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43110584"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47728384"
 ---
 # <a name="spbindrule-transact-sql"></a>sp_bindrule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -69,7 +66,7 @@ sp_bindrule [ @rulename = ] 'rule' ,
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Você pode associar uma nova regra a uma coluna (embora o uso de uma restrição de verificação é preferível) ou a um tipo de dados de alias com **sp_bindrule** sem desassociar uma regra existente. A regra antiga é substituída. Se uma regra for associada a uma coluna com uma restrição CHECK existente, todas as restrições serão avaliadas. Não é possível associar uma regra a um tipo de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  A regra é imposta quando uma instrução INSERT é usada, mas não na associação. Você pode associar uma regra de caracteres para uma coluna de **numéricos** de tipo de dados, embora essa operação INSERT não é válida.  

@@ -1,30 +1,27 @@
 ---
-title: ADO programador&#39;guia | Microsoft Docs
+title: Programador do ADO&#39;guia de s | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ADO, programmer's guide
 ms.assetid: e3c50eee-964a-4abd-810d-1bd51978e814
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 744e81b9da4e44b604350e13da7ab10cb9e825b1
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3e78700456c26fda0a71da9219fc5d244abeec8c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271015"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47761194"
 ---
-# <a name="ado-programmer39s-guide-for-using-ado-objects"></a>ADO programador&#39;s guia para usar objetos de ADO
-Esta documentação fornece uma visão geral de como usar objetos do ADO para trabalhar com dados de várias fontes de dados. Primeiro, a introdução resume os novos recursos e a necessidade de instalar, usar e redistribuir o componente do ADO. As seções a seguir discutem o uso de vários tipos de objetos do ADO. Por fim, os apêndices discutem vários dados fornecidos pela Microsoft e provedores de serviços, mensagens de erro e dicas sobre como usar o ADO em várias linguagens de programação, além de exemplos e obter um glossário.
+# <a name="ado-programmer39s-guide-for-using-ado-objects"></a>Programador do ADO&#39;s guia para usar objetos do ADO
+Esta documentação fornece uma visão geral de como usar objetos do ADO para trabalhar com dados de várias fontes de dados. Em primeiro lugar, a introdução resume os novos recursos e o requisito para instalar, usar e redistribuir o componente do ADO. As seções a seguir abordam o uso de vários tipos de objetos do ADO. Por fim, os apêndices discutem vários dados fornecidos pela Microsoft e provedores de serviço, as mensagens de erro e dicas sobre como usar o ADO em várias linguagens de programação, além de exemplos e um glossário.
 
  Esta seção contém os tópicos a seguir.
 

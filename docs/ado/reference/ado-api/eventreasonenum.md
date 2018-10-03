@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,39 +13,38 @@ f1_keywords:
 helpviewer_keywords:
 - EventReasonEnum enumeration [ADO]
 ms.assetid: 7d4a5496-ec2d-4936-b36a-7049a82be4b4
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b173fb6838b082b0600714f3756858dcc1615ba2
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 743e36e379760cb2c148c5484bb7b49b08d1d27e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278435"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47644634"
 ---
 # <a name="eventreasonenum"></a>EventReasonEnum
 Especifica o motivo que causou um evento ocorra.  
   
 |Constante|Valor|Description|  
 |--------------|-----------|-----------------|  
-|**adRsnAddNew**|1|Uma operação de adicionar um novo registro.|  
-|**adRsnClose**|9|Uma operação fechados a **registros**.|  
-|**adRsnDelete**|2|Uma operação de um registro excluído.|  
-|**adRsnFirstChange**|11|Uma operação feita a primeira alteração para um registro.|  
-|**adRsnMove**|10|Uma operação Mover o ponteiro do registro dentro do **registros**.|  
-|**adRsnMoveFirst**|12|Uma operação de mover o ponteiro do registro para o primeiro registro no **registros**.|  
-|**adRsnMoveLast**|15|Uma operação de mover o ponteiro de registro para o último registro no **registros**.|  
-|**adRsnMoveNext**|13|Uma operação de mover o ponteiro do registro para o próximo registro no **registros**.|  
-|**adRsnMovePrevious**|14|Uma operação de mover o ponteiro do registro para o registro anterior no **registros**.|  
-|**adRsnRequery**|7|Uma operação de consulta feita a [registros](../../../ado/reference/ado-api/recordset-object-ado.md).|  
-|**adRsnResynch**|8|Uma operação ressincronizar a **registros** com o banco de dados.|  
+|**adRsnAddNew**|1|Uma operação adicionado um novo registro.|  
+|**adRsnClose**|9|Uma operação fechado o **conjunto de registros**.|  
+|**adRsnDelete**|2|Um registro excluído de uma operação.|  
+|**adRsnFirstChange**|11|Uma operação feita a primeira alteração a um registro.|  
+|**adRsnMove**|10|Uma operação movido o ponteiro de registro dentro de **conjunto de registros**.|  
+|**adRsnMoveFirst**|12|Uma operação movido o ponteiro de registro para o primeiro registro a **conjunto de registros**.|  
+|**adRsnMoveLast**|15|Uma operação movido o ponteiro de registro para o último registro a **conjunto de registros**.|  
+|**adRsnMoveNext**|13|Uma operação movido o ponteiro de registro para o próximo registro na **conjunto de registros**.|  
+|**adRsnMovePrevious**|14|Uma operação movido o ponteiro de registro para o registro anterior na **conjunto de registros**.|  
+|**adRsnRequery**|7|Uma operação consultadas novamente o [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).|  
+|**adRsnResynch**|8|Uma operação ressincronizados a **Recordset** com o banco de dados.|  
 |**adRsnUndoAddNew**|5|Uma operação revertida a adição de um novo registro.|  
 |**adRsnUndoDelete**|6|Uma operação revertida a exclusão de um registro.|  
-|**adRsnUndoUpdate**|4|Uma operação revertida, a atualização de um registro.|  
-|**adRsnUpdate**|3|Uma operação atualizar um registro existente.|  
+|**adRsnUndoUpdate**|4|Uma operação revertida a atualização de um registro.|  
+|**adRsnUpdate**|3|Uma operação atualizado um registro existente.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC equivalente  
+## <a name="adowfc-equivalent"></a>Equivalente do ADO/WFC  
  Pacote: **com.ms.wfc.data**  
   
 |Constante|  

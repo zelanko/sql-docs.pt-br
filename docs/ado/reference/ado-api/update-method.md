@@ -1,13 +1,11 @@
 ---
-title: Método Update | Microsoft Docs
+title: Atualizar método | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,19 +13,18 @@ f1_keywords:
 helpviewer_keywords:
 - Update method [ADO]
 ms.assetid: 6b2a9c31-1a7e-40db-8a53-30720d0f6cc1
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3ae65fa263d672c80fb886c5e1f212a8a189bf38
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ae2645057670ba65a33bb8b5da238c7e01790ae9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282755"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47713784"
 ---
 # <a name="update-method"></a>Método Update
-Salva as alterações feitas à linha atual de um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto, ou o [campos](../../../ado/reference/ado-api/fields-collection-ado.md) coleção de um [registro](../../../ado/reference/ado-api/record-object-ado.md) objeto.  
+Salva as alterações feitas na linha atual de um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto, ou o [campos](../../../ado/reference/ado-api/fields-collection-ado.md) coleção de um [registro](../../../ado/reference/ado-api/record-object-ado.md) objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,15 +36,15 @@ record.Fields.Update
   
 #### <a name="parameters"></a>Parâmetros  
  *Fields*  
- Opcional. Um **Variant** que representa um único nome, ou um **Variant** matriz que representa os nomes ou posições ordinais de campos que você deseja modificar.  
+ Opcional. Um **Variant** que representa um único nome, ou um **Variant** matriz que representa os nomes ou as posições ordinais do campo ou campos que você deseja modificar.  
   
  *Valores*  
- Opcional. Um **Variant** que representa um único valor, ou um **Variant** matriz que representa valores de campos no novo registro.  
+ Opcional. Um **Variant** que representa um único valor, ou um **Variant** matriz que representa os valores para o campo ou campos no novo registro.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 ## <a name="recordset"></a>Conjunto de registros  
- Use o **atualização** método para salvar as alterações feitas para o registro atual de um **registros** objeto desde a chamada a [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) método ou desde alterar quaisquer valores de campo em um registro existente. O **registros** objeto deve dar suporte a atualizações.  
+ Use o **atualização** método para salvar as alterações feitas no registro atual de uma **conjunto de registros** objeto desde a chamada a [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) método ou desde que alterar quaisquer valores de campo em um registro existente. O **Recordset** objeto deve dar suporte a atualizações.  
   
  Para definir valores de campo, siga um destes procedimentos:  
   
@@ -57,18 +54,18 @@ record.Fields.Update
   
 -   Passe uma matriz de nomes de campo e uma matriz de valores com o **atualização** chamar.  
   
- Quando você usa conjuntos de campos e valores, deve haver um número igual de elementos em matrizes. Além disso, a ordem dos nomes de campo deve corresponder à ordem de valores de campo. Se o número e a ordem dos campos e valores não coincidirem, ocorrerá um erro.  
+ Quando você usa matrizes de campos e valores, deve haver um número igual de elementos em ambas as matrizes. Além disso, a ordem dos nomes de campo deve corresponder a ordem dos valores de campo. Se o número e a ordem dos campos e valores não coincidirem, ocorrerá um erro.  
   
- Se o **registros** objeto oferece suporte a atualização em lotes, você pode armazenar em cache várias alterações para um ou mais registros localmente até que você chame o [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) método. Se você estiver editando o registro atual ou adicionar um novo registro, quando você chama o **UpdateBatch** método ADO automaticamente chamará o **atualização** método para salvar as alterações pendentes para o registro atual antes de transmitir as alterações em lotes para o provedor.  
+ Se o **conjunto de registros** objeto dá suporte à atualização em lotes, você pode armazenar em cache várias alterações para um ou mais registros localmente até que você chame a [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) método. Se você estiver editando o registro atual ou adicionar um novo registro, quando você chama o **UpdateBatch** método, ADO chamará automaticamente a **atualização** método para salvar todas as alterações pendentes no registro atual antes de transmitir as alterações em lote para o provedor.  
   
- Se você mover de registro estiver adicionando ou editando antes de chamar o **atualização** , ADO será automaticamente da chamada do método **atualização** para salvar as alterações. Você deve chamar o [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) método se você deseja cancelar as alterações feitas no registro atual ou descartar um registro recém-adicionada.  
+ Se você mover do registro estiver adicionando ou editando antes de chamar o **atualização** método, ADO chamará automaticamente **atualização** para salvar as alterações. Você deve chamar o [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) método se você quiser cancelar todas as alterações feitas no registro atual ou descartar um registro recém-adicionado.  
   
  O registro atual permanece atual depois de chamar o **atualização** método.  
   
 ## <a name="record"></a>Record  
- O **atualização** método finaliza adições, exclusões e atualizações para campos de [campos](../../../ado/reference/ado-api/fields-collection-ado.md) coleção de um **registro** objeto.  
+ O **atualização** método finaliza adições, exclusões e atualizações de campos na [campos](../../../ado/reference/ado-api/fields-collection-ado.md) coleção de um **registro** objeto.  
   
- Por exemplo, os campos excluídos com o **excluir** método são marcados para exclusão imediatamente, mas permanecem na coleção. O **atualização** método deve ser chamado para realmente excluir esses campos da coleção do provedor.  
+ Por exemplo, os campos excluídos com o **excluir** método são marcados para exclusão imediatamente, mas permanecem na coleção. O **atualização** método deve ser chamado para excluir, na verdade, esses campos da coleção do provedor.  
   
 ## <a name="applies-to"></a>Aplica-se a  
   
@@ -77,7 +74,7 @@ record.Fields.Update
 |[Coleção Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|[Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
   
 ## <a name="see-also"></a>Consulte também  
- [Exemplo dos métodos CancelUpdate (VB) e atualização](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vb.md)   
+ [Atualização e exemplo dos métodos CancelUpdate (VB)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vb.md)   
  [Exemplo dos métodos CancelUpdate (VC + +) e atualização](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vc.md)   
  [Método AddNew (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
  [Método CancelUpdate (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   

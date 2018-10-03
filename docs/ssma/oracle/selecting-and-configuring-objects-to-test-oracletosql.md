@@ -1,90 +1,87 @@
 ---
-title: Selecionando e Configurando objetos para teste (OracleToSQL) | Microsoft Docs
+title: Selecionando e Configurando objetos a testar (OracleToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Selection of Objects to Test,Parameter Comparison Settings
 ms.assetid: 29fb6542-5c1f-4b14-a822-87700beb7623
-caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 9069ec981e944118b649f1dd0d0dd326e2c217db
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: d568d1749cd54796072a108e438e448bf2a74578
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34777862"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47705152"
 ---
-# <a name="selecting-and-configuring-objects-to-test-oracletosql"></a>Selecionando e Configurando objetos para teste (OracleToSQL)
-Nesta etapa, você seleciona objetos a testar e definir configurações para a comparação dos procedimentos e dos funções parâmetros de saída, bem como os valores de retorno de funções.  
+# <a name="selecting-and-configuring-objects-to-test-oracletosql"></a>Selecionar e configurar os objetos a testar (OracleToSQL)
+Nesta etapa, você seleciona objetos a testar e definir as configurações para comparar procedimentos e dos funções parâmetros de saída, bem como os valores de retorno de funções.  
   
 ## <a name="selection-of-objects-to-test"></a>Seleção de objetos para teste  
-Na árvore de objetos de Oracle localizado no lado esquerdo da janela, verifique os objetos que você deseja invocar durante o processo de teste. Consulte a lista completa de objetos podem ser testados no [teste objetos de banco de dados migrados &#40;OracleToSQL&#41; ](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md) tópico.  
+Na árvore de objetos de Oracle localizado no lado esquerdo da janela, verifique os objetos que você deseja invocar durante o processo de teste. Consulte a lista completa de objetos que podem ser testados na [testes migrados de objetos de banco de dados &#40;OracleToSQL&#41; ](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md) tópico.  
   
-Se o SSMA Tester não dá suporte a qualquer um dos objetos selecionados para teste, você verá o link rotulado **alguns objetos selecionados contêm erros** na árvore de objetos. Clique neste link para exibir as razões por que esses objetos não podem ser testados e desmarque a seleção de objetos errados.  
+Se o testador SSMA não oferece suporte a qualquer um dos objetos selecionados para teste, você verá o link rotulado **alguns objetos selecionados contêm erros** abaixo da árvore de objetos. Clique neste link para exibir as razões por que esses objetos não podem ser testados e desmarque a seleção de objetos errados.  
   
-No lado direito, você pode exibir várias páginas de **SQL** página mostra a definição do objeto atual. O **parâmetros** página lista os parâmetros se o objeto for um procedimento armazenado ou uma função. O **propriedades** página mostra as características adicionais do objeto. Consulte a descrição do **parâmetro comparações** e **valores chamar** páginas abaixo.  
+No lado direito, você pode exibir várias páginas de **SQL** página mostra a definição do objeto atual. O **parâmetros** página lista os parâmetros se o objeto for um procedimento armazenado ou uma função. O **propriedades** página mostra as características adicionais do objeto. Consulte a descrição da **parâmetro comparações** e **chamar valores** páginas abaixo.  
   
-## <a name="parameter-comparison-settings"></a>Parâmetros de comparação  
-Estabelecer as regras de comparação para parâmetros de saída e valores de retorno de **parâmetro comparações** página. Você pode fazer as seguintes configurações.  
+## <a name="parameter-comparison-settings"></a>Configurações de comparação de parâmetro  
+Estabelecer as regras de comparação para parâmetros de saída e retornar valores de **comparações de parâmetro** página. Você pode fazer as seguintes configurações.  
   
 ### <a name="use-during-test-comparisons"></a>Use durante as comparações de teste  
 Habilite o uso do parâmetro selecionado na comparação de resultados de teste.  
   
--   Se você escolher **True**, SSMA irá comparar o valor desse parâmetro de saída depois de executar o procedimento no Oracle com o valor correspondente no SQL Server.
+-   Se você escolher **verdadeira**, SSMA irá comparar o valor desse parâmetro de saída após executar o procedimento no Oracle com o valor correspondente no SQL Server.
   
--   Se você escolher**False**, o parâmetro será excluído da verificação de resultados.  
+-   Se você escolher**falsos**, o parâmetro será excluído da verificação de resultados.  
   
 ### <a name="use-custom-scale"></a>Usar escala personalizada  
-Para parâmetros de tipo de dados numérico, você pode definir uma escala personalizada para a comparação.  
+Para parâmetros de tipo de dados numérico, você pode definir um dimensionamento personalizado para a comparação.  
   
--   Se você escolher **True**, valores numéricos serão arredondados de acordo com o **comparando escala** valor antes de serem comparadas.  
+-   Se você escolher **verdadeira**, valores numéricos serão arredondados de acordo com o **comparando escala** valor antes de serem comparadas.  
   
--   Se você escolher**False**, a comparação numérica será exata.  
+-   Se você escolher**falsos**, a comparação numérica será ser exata.  
   
 ### <a name="comparing-scale"></a>Comparação de escala  
-Disponível somente se o **escala personalizada de uso** opção é definida como **True**. Isso é a precisão para comparação numérica.  
+Disponível somente se o **escala personalizada de uso** opção for definida como **verdadeiro**. Isso é a precisão de comparação numérica.  
   
 ### <a name="date-time-comparing"></a>Comparação de tempo de data  
 Define como a data/hora valores são comparados.  
   
--   Se você selecionar **comparar todo data**, comparação de valores de ambas as plataformas será executada.  
+-   Se você selecionar **comparar todo data**, será executada uma comparação completa de valores de ambas as plataformas.  
   
--   Se você selecionar **comparar apenas data**, o tempo de parte será ignorada.  
+-   Se você selecionar **comparar apenas data**, a hora em que parte será ignorada.  
   
--   Se você selecionar **comparar apenas tempo**, a data de parte será ignorada.  
+-   Se você selecionar **comparar apenas hora**, a data em que parte será ignorada.  
   
--   Se você selecionar **milissegundos ignorar**, os resultados serão comparados em segundos.  
+-   Se você selecionar **milissegundos ignorar**, os resultados serão comparados até segundos.  
   
--   Se você selecionar **data ignorar e milissegundos**, o resultado será comparados apenas por parte do tempo e ignorando partes frações de segundo.  
+-   Se você selecionar **data ignorar e milissegundos**, o resultado será em comparação com apenas por parte do tempo e ignorando partes fracionárias de um segundo.  
   
-### <a name="ignore-strings-case"></a>Ignorar maiusculas e minúsculas cadeias de caracteres  
-Controla a diferenciação de maiusculas e minúsculas da comparação.  
+### <a name="ignore-strings-case"></a>Ignorar maiusculas e minúsculas de cadeias de caracteres  
+Controla a diferenciação de maiusculas da comparação.  
   
--   Se você escolher **True**, a comparação diferenciará maiusculas e minúsculas.  
+-   Se você escolher **verdadeira**, a comparação será diferencia maiusculas de minúsculas.  
   
--   Se você escolher **False**, a comparação será entre maiusculas e minúsculas.  
+-   Se você escolher **falsos**, a comparação será diferencia maiusculas de minúsculas.  
   
 ### <a name="ignore-trailing-spaces"></a>Ignorar Espaços à Direita  
 Controla os espaços à direita como são tratados durante a comparação.  
   
--   Se você escolher **True**, em comparação com as cadeias de caracteres serão cortados direita antes de comparar.  
+-   Se você escolher **verdadeira**, em comparação com as cadeias de caracteres será cortado para direita antes de comparar.  
   
--   Se você escolher **False**, em comparação com as cadeias de caracteres irá preservar espaço em branco à direita.  
+-   Se você escolher **falsos**, em comparação com as cadeias de caracteres irá preservar espaço em branco à direita.  
   
 ## <a name="specify-input-values-for-procedures-and-functions-call-values"></a>Especificar valores de entrada para procedimentos e funções (valores de chamada)  
-Você pode especificar valores de parâmetro de entrada no **valores chamar** página. O **adicionar chamar** botão adiciona uma nova chamada com valores de parâmetros vazia. O **remover chamadas** botão remove a chamada atual.  
+Você pode especificar valores de parâmetro de entrada sobre o **chamar valores** página. O **adicionar chamar** botão adiciona uma nova chamada com os valores de parâmetros vazia. O **remover chamadas** botão remove a chamada atual.  
   
 ## <a name="next-step"></a>Próxima etapa  
-[Selecionar e configurar objetos afetados &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
+[Selecionar e configurar os objetos afetados pelo &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
   
 ## <a name="see-also"></a>Consulte também  
-[Teste de objetos de banco de dados migrados &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+[Testar objetos de banco de dados migrados &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

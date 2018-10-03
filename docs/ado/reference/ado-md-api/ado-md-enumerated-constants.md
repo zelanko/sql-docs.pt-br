@@ -6,25 +6,22 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - enumerated constants [ADO MD]
 ms.assetid: d9e66999-96f3-48ec-93b2-d9442da56d9b
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4110e2cfa88cca08981fbbb851161649b6331c70
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7354568395dd940c171ae3837fa1a8de1fe2f441
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283175"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789224"
 ---
 # <a name="ado-md-enumerated-constants"></a>Constantes enumeradas do ADO MD
-Para ajudar a depuração, as constantes enumeradas do ADO MD listam um valor para cada constante. No entanto, esse valor é somente informativo e pode alterar de uma versão do ADO MD para outro. Seu código deve depender apenas o nome, não o valor real de constantes enumeradas.  
+Para ajudar a depuração, as constantes enumeradas do ADO MD listam um valor para cada constante. No entanto, esse valor é puramente comunicado e pode mudar de uma versão do ADO MD para outro. Seu código deve depender somente o nome, não o valor real de constantes enumeradas.  
   
  As enumerações a seguir são definidas.  
   
@@ -37,6 +34,6 @@ Para ajudar a depuração, as constantes enumeradas do ADO MD listam um valor pa
  [Exemplos de código do ADO MD](../../../ado/reference/ado-md-api/ado-md-code-examples.md)   
  [Coleções do ADO MD](../../../ado/reference/ado-md-api/ado-md-collections.md)   
  [Métodos do ADO MD](../../../ado/reference/ado-md-api/ado-md-methods.md)   
- [Modelo de objeto ADO MD](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
+ [Modelo de objeto do ADO MD](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
  [Objetos do ADO MD](../../../ado/reference/ado-md-api/ado-md-objects.md)   
  [Propriedades do ADO MD](../../../ado/reference/ado-md-api/ado-md-properties.md)

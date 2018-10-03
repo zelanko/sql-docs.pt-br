@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], cursors
@@ -17,32 +15,31 @@ helpviewer_keywords:
 - block cursors [ODBC]
 - rowset cursors [ODBC]
 ms.assetid: be95bbb2-6886-491e-a5a7-f58028d19c1e
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f12ee1bae3ae4b10b546801bf35ebbf370e1eaba
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 875348a501c292e55b267ece769f16dd6bc9dbdd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32903621"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47792656"
 ---
-# <a name="supported-cursor-model-visual-foxpro-odbc-driver"></a>Modelo de Cursor com suporte (Driver ODBC do Visual FoxPro)
-O Driver de ODBC do Visual FoxPro oferece suporte a *bloco* (*linhas*) e *estático* cursores. Cursores estáticos são suportados para qualquer driver compatível com conformidade de nível 1 ODBC. O driver não dá suporte a dinâmicos, controlados por conjunto de chaves ou misto (conjunto de chaves e dinâmico) cursores.  
+# <a name="supported-cursor-model-visual-foxpro-odbc-driver"></a>Modelo de cursor com suporte (Driver ODBC do Visual FoxPro)
+O Driver de ODBC do Visual FoxPro dá suporte a ambos *bloco* (*conjunto de linhas*) e *estático* cursores. Cursores estáticos são compatíveis com qualquer driver que está em conformidade com a conformidade de nível 1 ODBC. O driver não oferece suporte a dinâmicos, controlados por ou misto (conjunto de chaves e dinâmico) cursores.  
   
  O aplicativo pode chamar [SQLSetStmtOption](../../odbc/microsoft/sqlsetstmtoption-visual-foxpro-odbc-driver.md) com uma opção de SQL_CURSOR_TYPE de SQL_CURSOR_FORWARD_ONLY (cursor em bloco) ou SQL_CURSOR_STATIC (cursor estático).  
   
 > [!NOTE]  
->  Se você chamar **SQLSetStmtOption** com uma opção de SQL_CURSOR_TYPE diferente SQL_CURSOR_FORWARD_ONLY ou SQL_CURSOR_STATIC, a função retorna SQL_SUCCESS_WITH_INFO com um SQLSTATE de 01S02 (valor da opção alterado). O driver define todos os modos de cursor sem suporte para SQL_CURSOR_STATIC.  
+>  Se você chamar **SQLSetStmtOption** com uma opção SQL_CURSOR_TYPE diferente SQL_CURSOR_FORWARD_ONLY ou SQL_CURSOR_STATIC, a função retorna SQL_SUCCESS_WITH_INFO com um SQLSTATE de 01S02 (valor de opção alterado). O driver define todos os modos de cursor sem suporte para SQL_CURSOR_STATIC.  
   
- Para obter mais informações sobre tipos de cursor e sobre **SQLSetStmtOption**, consulte o [referência do programador de ODBC](../../odbc/reference/odbc-programmer-s-reference.md).  
+ Para obter mais informações sobre tipos de cursor e aproximadamente **SQLSetStmtOption**, consulte o [referência do programador de ODBC](../../odbc/reference/odbc-programmer-s-reference.md).  
   
 ## <a name="block-cursor"></a>cursor em bloco  
- Um conjunto de resultados de rolagem de avanço, somente leitura retornado ao cliente, que é responsável por manter o armazenamento de dados.  
+ Um conjunto de resultados de rolagem de avanço, somente leitura retornado ao cliente, quem é responsável por manter o armazenamento de dados.  
   
 ## <a name="static-cursor"></a>cursor estático  
- Um instantâneo de um conjunto de dados definido pela consulta. Cursores estáticos não refletem as alterações em tempo real dos dados subjacentes por outros usuários. O buffer de memória do cursor é mantido pela biblioteca de cursores ODBC, que permite rolagem para frente e para trás.  
+ Um instantâneo de um conjunto de dados definido pela consulta. Cursores estáticos não refletem as alterações em tempo real dos dados subjacentes por outros usuários. O buffer de memória do cursor é mantido pela biblioteca de cursores ODBC, que permite a rolagem para frente e para trás.  
   
 ## <a name="rowset"></a>conjunto de linhas  
  Blocos de dados armazenados em um cursor, que representa a linhas recuperadas da fonte de dados.

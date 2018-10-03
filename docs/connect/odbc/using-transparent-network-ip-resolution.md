@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d255208f-d486-4ad3-8080-61c6e0261825
-caps.latest.revision: 2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2d76e50b4761e8d1a32bbcfc4606778f96513ed1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 767e3e17b67a36bca93bd8a85704d50338fdfd58
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38060223"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47610734"
 ---
 # <a name="using-transparent-network-ip-resolution"></a>Como usar a resolução IP de rede transparente
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]

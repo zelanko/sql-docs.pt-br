@@ -5,9 +5,7 @@ ms.date: 07/12/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], C data types
@@ -15,25 +13,24 @@ helpviewer_keywords:
 - C data types [ODBC]
 - C buffers [ODBC]
 ms.assetid: b681d260-3dbb-47df-a616-4910d727add7
-caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 288ca6cbd5553b963131d34b8e63640518f70ef4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d1372b868499bc6b903dd7fb6c4022e724870b67
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32912731"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47782164"
 ---
-# <a name="c-data-types"></a>Tipos de dados C
-Tipos de dados ODBC C indicam o tipo de dados de C buffers usados para armazenar dados no aplicativo.  
+# <a name="c-data-types"></a>Tipos de dados do C
+Tipos de dados ODBC C indicam o tipo de dados de buffers de C usada para armazenar dados no aplicativo.  
   
- Todos os drivers devem dar suporte a todos os tipos de dados C. Isso é necessário porque todos os drivers devem dar suporte a todos os tipos de C para o qual os tipos SQL que dão suporte a eles podem ser convertidos e todos os drivers de suportam a pelo menos um caractere de tipo SQL. Porque o tipo de caractere SQL pode ser convertido para e de todos os tipos de C, todos os drivers devem dar suporte a todos os tipos C.  
+ Todos os drivers devem dar suporte a todos os tipos de dados C. Isso é necessário porque todos os drivers devem dar suporte a todos os tipos de C para o qual os tipos SQL que dão suporte a eles podem ser convertidos, e todos os drivers de dar suporte a pelo menos um caractere de tipo SQL. Como o tipo de caractere SQL pode ser convertido para e de todos os tipos de C, todos os drivers devem dar suporte a todos os tipos de C.  
   
- O tipo de dados C é especificado no **SQLBindCol** e **SQLGetData** funciona com o *TargetType* argumento e, no **SQLBindParameter**funcionar com o *ValueType* argumento. Ele também pode ser especificado ao chamar **SQLSetDescField** para definir o campo SQL_DESC_CONCISE_TYPE de descartar ou APD ou chamando **SQLSetDescRec** com o *tipo* argumento (e o *subtipo* argumento se necessário) e o *DescriptorHandle* argumento definido como o identificador de descartar ou APD.  
+ O tipo de dados C é especificado na **SQLBindCol** e **SQLGetData** funciona com o *TargetType* argumento e, no **SQLBindParameter**funcionar com o *ValueType* argumento. Também podem ser especificado ao chamar **SQLSetDescField** para definir o campo SQL_DESC_CONCISE_TYPE de descartar ou APD ou chamando **SQLSetDescRec** com o *tipo* argumento (e o *subtipo* argumento se necessário) e o *DescriptorHandle* argumento definido como o identificador de um descartar ou APD.  
   
- As tabelas a seguir lista os identificadores de tipo válido para os tipos de dados C. A tabela também lista o tipo de dados ODBC C que corresponde a cada identificador e a definição deste tipo de dados.  
+ As tabelas a seguir lista os identificadores de tipo válido para os tipos de dados C. A tabela também lista o tipo de dados ODBC C que corresponde a cada identificador e a definição desse tipo de dados.  
   
 |Identificador de tipo C|Typedef ODBC C|Tipo de C|  
 |-----------------------|--------------------|------------|  
@@ -42,20 +39,20 @@ Tipos de dados ODBC C indicam o tipo de dados de C buffers usados para armazenar
 |SQL_C_SSHORT [j]|SQLSMALLINT|short int|  
 |SQL_C_USHORT [j]|SQLUSMALLINT|int curto não assinado|  
 |SQL_C_SLONG [j]|SQLINTEGER|Long int|  
-|SQL_C_ULONG [j]|SQLUINTEGER|int longo não assinado|  
-|SQL_C_FLOAT|SQLREAL|float|  
+|SQL_C_ULONG [j]|SQLUINTEGER|inteiro longo|  
+|SQL_C_FLOAT|SQLREAL|FLOAT|  
 |SQL_C_DOUBLE|SQLDOUBLE, SQLFLOAT|double|  
-|SQL_C_BIT|SQLCHAR|caracteres não assinados|  
+|SQL_C_BIT|SQLCHAR|char não assinada|  
 |SQL_C_STINYINT [j]|SQLSCHAR|char assinada|  
-|SQL_C_UTINYINT [j]|SQLCHAR|caracteres não assinados|  
+|SQL_C_UTINYINT [j]|SQLCHAR|char não assinada|  
 |SQL_C_SBIGINT|SQLBIGINT|_int64 [h]|  
-|SQL_C_UBIGINT|SQLUBIGINT|sem sinal _int64 [h]|  
+|SQL_C_UBIGINT|SQLUBIGINT|_int64 não assinados [h]|  
 |SQL_C_BINARY|SQLCHAR *|unsigned char *|  
-|SQL_C_BOOKMARK [i]|INDICADOR|int longo não assinado [d]|  
+|SQL_C_BOOKMARK [i]|INDICADOR|inteiro longo não [d]|  
 |SQL_C_VARBOOKMARK|SQLCHAR *|unsigned char *|  
-|Todos os tipos de dados de intervalo de C|SQL_INTERVAL_STRUCT|Consulte o [C intervalo estrutura](../../../odbc/reference/appendixes/c-interval-structure.md) seção mais adiante neste apêndice.|  
+|Todos os tipos de dados de intervalo de C|SQL_INTERVAL_STRUCT|Consulte a [estrutura de intervalo de C](../../../odbc/reference/appendixes/c-interval-structure.md) seção mais adiante neste apêndice.|  
   
- **O identificador de tipo C** SQL_C_TYPE_DATE [c]  
+ **Identificador de tipo C** SQL_C_TYPE_DATE [c]  
   
  **Typedef ODBC C** SQL_DATE_STRUCT  
   
@@ -69,7 +66,7 @@ struct tagDATE_STRUCT {
 } DATE_STRUCT;[a]  
 ```  
   
- **O identificador de tipo C** SQL_C_TYPE_TIME [c]  
+ **Identificador de tipo C** SQL_C_TYPE_TIME [c]  
   
  **Typedef ODBC C** SQL_TIME_STRUCT  
   
@@ -83,7 +80,7 @@ struct tagTIME_STRUCT {
 } TIME_STRUCT;[a]  
 ```  
   
- **O identificador de tipo C** SQL_C_TYPE_TIMESTAMP [c]  
+ **Identificador de tipo C** SQL_C_TYPE_TIMESTAMP [c]  
   
  **Typedef ODBC C** SQL_TIMESTAMP_STRUCT  
   
@@ -101,7 +98,7 @@ struct tagTIMESTAMP_STRUCT {
 } TIMESTAMP_STRUCT;[a]  
 ```  
   
- **O identificador de tipo C** SQL_C_NUMERIC  
+ **Identificador de tipo C** SQL_C_NUMERIC  
   
  **Typedef ODBC C** SQL_NUMERIC_STRUCT  
   
@@ -116,7 +113,7 @@ struct tagSQL_NUMERIC_STRUCT {
 } SQL_NUMERIC_STRUCT;  
 ```  
   
- **O identificador de tipo C** SQL_C_GUID  
+ **Identificador de tipo C** SQL_C_GUID  
   
  **Typedef ODBC C** SQLGUID  
   
@@ -131,29 +128,29 @@ struct tagSQLGUID {
 } SQLGUID;[k]  
 ```  
   
- [a] os valores de ano, mês, dia, hora, minuto e segundo campos nos tipos de dados datetime C devem estar de acordo com as restrições do calendário gregoriano. (Consulte [restrições do calendário gregoriano](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md) mais adiante neste apêndice.)  
+ [a] os valores do ano, mês, dia, hora, minuto e segundo campos nos tipos de dados C de data e hora devem estar de acordo com as restrições do calendário gregoriano. (Consulte [restrições do calendário gregoriano](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md) mais adiante neste apêndice.)  
   
- [b] o valor do campo de fração é o número de bilionésimos de segundo e varia de 0 a 999.999.999 (menos de 1 bilhão de 1). Por exemplo, o valor do campo de uma segunda metade da fração é 500,000,000, para um milésimos de segundo (de um milissegundo) é 1.000.000, para um milionésimo de segundo (um microssegundos) é 1.000 e para um bilionésimo de segundo (um nanossegundos) é 1.  
+ [b] o valor do campo de fração é o número de bilionésimos de segundo e varia de 0 a 999.999.999 (menos de 1 bilhão de 1). Por exemplo, o valor do campo de fração para um meio segundo é 500,000,000, para um milésimo de segundo (de um milissegundo) é 1.000.000, para um milionésimo de segundo (um microssegundo) é 1.000 e para um bilionésimo de um segundo (um nanossegundo) é 1.  
   
- [c] em ODBC 2. *x*, os tipos de dados C data, hora e carimbo de hora são SQL_C_DATE, SQL_C_TIME e SQL_C_TIMESTAMP.  
+ [c] no ODBC 2. *x*, os tipos de dados de data, hora e carimbo de hora de C são SQL_C_DATE, SQL_C_TIME e SQL_C_TIMESTAMP.  
   
- [d] ODBC 3 *. x* SQL_C_VARBOOKMARK, não SQL_C_BOOKMARK os aplicativos devem usar. Quando um ODBC 3 *. x* aplicativo funciona com um ODBC 2. *x* driver, o ODBC 3 *. x* Gerenciador de Driver será mapeada SQL_C_VARBOOKMARK SQL_C_BOOKMARK.  
+ [d] ODBC 3 *. x* SQL_C_VARBOOKMARK, não SQL_C_BOOKMARK os aplicativos devem usar. Quando um ODBC 3 *. x* aplicativo funciona com um ODBC 2. *x* driver ODBC 3 *. x* Gerenciador de Driver mapeará SQL_C_VARBOOKMARK para SQL_C_BOOKMARK.  
   
- [e] um número é armazenado no *val* campo da estrutura SQL_NUMERIC_STRUCT como um inteiro de escala, no modo little endian (o byte mais à esquerda sendo o byte menos significativo). Por exemplo, o número 10.001 10 de base, com uma escala de 4, é dimensionado para um valor inteiro de 100010. Como isso é 186AA em formato hexadecimal, o valor em SQL_NUMERIC_STRUCT seria "AA 86 01 00 00... 00", com o número de bytes definida pelo SQL_MAX_NUMERIC_LEN **#define**.  
+ [e] um número é armazenado na *val* campo da estrutura SQL_NUMERIC_STRUCT como um inteiro dimensionado, no modo little endian (o byte mais à esquerda que está sendo o byte menos significativo). Por exemplo, o número de 10.001 base 10, com uma escala de 4, é dimensionado para um valor inteiro de 100010. Como esse é o 186AA em formato hexadecimal, o valor no SQL_NUMERIC_STRUCT seria "AA 86 01 00 00... 00" com o número de bytes definido pelo SQL_MAX_NUMERIC_LEN **#define**.  
   
- Para obter mais informações sobre **SQL_NUMERIC_STRUCT**, consulte [como: recuperar dados numéricos com SQL_NUMERIC_STRUCT](retrieve-numeric-data-sql-numeric-struct-kb222831.md).  
+ Para obter mais informações sobre **SQL_NUMERIC_STRUCT**, consulte [HOWTO: recuperando dados numéricos com SQL_NUMERIC_STRUCT](retrieve-numeric-data-sql-numeric-struct-kb222831.md).  
   
- [f], os campos de precisão e escala dos dados SQL_C_NUMERIC tipo areused para entrada de um aplicativo e de saída do driver para o aplicativo. Quando o driver grava um valor numérico para o SQL_NUMERIC_STRUCT, ele usará seu próprio padrão específicos de driver como o valor para o *precisão* campo e ele usará o valor do campo SQL_DESC_SCALE no (descritor de aplicativo qual padrão é 0) para o *escala* campo. Um aplicativo pode fornecer seus próprios valores para a precisão e escala, definindo os campos SQL_DESC_PRECISION e SQL_DESC_SCALE do descritor de aplicativo.  
+ [f] os campos de precisão e escala dos dados SQL_C_NUMERIC digite areused para entrada de um aplicativo e para a saída de driver para o aplicativo. Quando o driver grava um valor numérico para o SQL_NUMERIC_STRUCT, ele usará seu próprio padrão específicos do driver como o valor para o *precisão* campo e ele usará o valor no campo SQL_DESC_SCALE no (descritor de aplicativo cujo padrão é 0) para o *escala* campo. Um aplicativo pode fornecer seus próprios valores para a precisão e escala, definindo os campos SQL_DESC_PRECISION e SQL_DESC_SCALE do descritor de aplicativo.  
   
- [g], o campo de entrada é 1 se for positivo, 0 se for negativo.  
+ [g], o campo de entrada é 1 em caso positivo, 0 se for negativo.  
   
  [h] _int64 não pode ser fornecido por alguns compiladores.  
   
  [i] _SQL_C_BOOKMARK foi preterido no ODBC 3 *. x*.  
   
- [j] _SQL_C_SHORT, SQL_C_LONG e SQL_C_TINYINT foram substituídos no ODBC por tipos assinados e não assinados: SQL_C_SSHORT e SQL_C_USHORT, SQL_C_SLONG e SQL_C_ULONG e SQL_C_STINYINT e SQL_C_UTINYINT. Um ODBC 3 *. x* driver deve funcionar com ODBC 2. *x* aplicativos devem oferecer suporte a SQL_C_SHORT, SQL_C_LONG e SQL_C_TINYINT, porque quando eles são chamados, o Gerenciador de Driver passa-los por meio do driver.  
+ [j] _SQL_C_SHORT, SQL_C_LONG e SQL_C_TINYINT foram substituídos no ODBC pelos tipos assinados e não assinados: SQL_C_SSHORT e SQL_C_USHORT, SQL_C_SLONG e SQL_C_ULONG, SQL_C_STINYINT e SQL_C_UTINYINT. Um ODBC 3 *. x* driver deve funcionar com o ODBC 2. *x* aplicativos devem dar suporte a SQL_C_SHORT, SQL_C_LONG e SQL_C_TINYINT, porque quando eles são chamados, o Gerenciador de Driver os passa para o driver.  
   
- [k] SQL_C_GUID podem ser convertidos somente a SQL_CHAR ou SQL_WCHAR.  
+ [k] SQL_C_GUID podem ser convertidos somente para SQL_CHAR ou SQL_WCHAR.  
   
  Esta seção contém o tópico a seguir.  
   

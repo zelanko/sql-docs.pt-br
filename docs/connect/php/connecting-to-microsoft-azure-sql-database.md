@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 75622982-1815-4d96-906c-a0494c8a0b53
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 08c4b764df5ab395e2c51b523a80bdb2affa1d96
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 0f90a5b37a6c5da405c1978537e4ddfd4adf0733
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35306825"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47654147"
 ---
-# <a name="connecting-to-microsoft-azure-sql-database"></a>Conectar-se ao banco de dados SQL do Microsoft Azure
+# <a name="connecting-to-microsoft-azure-sql-database"></a>Conectar-se ao Banco de Dados SQL do Microsoft Azure
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Para obter mais informações sobre como conectar a bancos de dados do SQL Azure, consulte [como acesso de banco de dados SQL do PHP](http://azure.microsoft.com/documentation/articles/sql-database-php-how-to-use/).  
+Para obter mais informações sobre como se conectar aos bancos de dados de SQL do Azure, consulte [como o banco de dados do Access do Azure SQL do PHP](http://azure.microsoft.com/documentation/articles/sql-database-php-how-to-use/).  
   

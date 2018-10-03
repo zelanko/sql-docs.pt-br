@@ -1,27 +1,24 @@
 ---
-title: Conectando a dados de um fonte ou Driver | Microsoft Docs
+title: Conectar-se aos dados de um fonte ou Driver | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e93027ab-9e60-47b7-ba96-8289dae32a22
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 03fbd4e94f47e300e309377ad28d933fc480c2a6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a8c468b71b4c4126386d75c02b368cba9965fe1e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32908561"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47754604"
 ---
-# <a name="connecting-to-a-data-source-or-driver"></a>Conectando a dados de um fonte ou Driver
+# <a name="connecting-to-a-data-source-or-driver"></a>Conectar-se a uma fonte de dados ou a um driver
 Um aplicativo pode ser conectado a qualquer número de drivers e fontes de dados. Eles podem ser uma variedade de drivers e fontes de dados, o mesmo driver e uma variedade de fontes de dados ou até mesmo várias conexões com o mesmo driver e a fonte de dados.  
   
  Esta seção contém os tópicos a seguir.  

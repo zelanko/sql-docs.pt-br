@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -17,20 +14,19 @@ helpviewer_keywords:
 - modifying SQL Server Service properties
 - WMI Provider for Configuration Management, VBScript
 ms.assetid: f3c5d981-eaa3-4d34-9b91-37e42636aa81
-caps.latest.revision: 17
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a49cc34f92a2dd35d5f85a6013a738184d913810
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 60dc69dfa0077c5adc375aa11eba411ab4004345
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33012112"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47802094"
 ---
-# <a name="access-wmi-provider-for-configuration-management-using-vbscript"></a>Acessar o provedor WMI para gerenciamento de configuração usando o VBScript
+# <a name="access-wmi-provider-for-configuration-management-using-vbscript"></a>Acessar o provedor WMI para o gerenciamento de configuração usando o VBScript
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  Esta seção descreve como criar um programa VBScript que liste a versão das instâncias instaladas do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que são executados em um computador.  
+  Esta seção descreve como criar um programa de VBScript que liste a versão das instâncias instaladas do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que estiver executando em um computador.  
   
  O exemplo de código lista as instâncias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em execução no computador e sua versão.  
   
@@ -46,7 +42,7 @@ ms.locfileid: "33012112"
   
 5.  Salve o arquivo.  
   
-6.  Execute o script digitando **cscript test.vbs** no prompt de comando.  
+6.  Execute o script digitando **cscript Test. vbs** no prompt de comando.  
   
 ## <a name="example"></a>Exemplo  
   

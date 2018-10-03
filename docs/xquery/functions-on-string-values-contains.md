@@ -4,36 +4,30 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
 - contains function (XQuery)
 - fn:contains function
 ms.assetid: 2c88c015-04fc-429b-84b2-835596a28b65
-caps.latest.revision: 42
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fceddcf918a99667e8c92fadc7aeddca59bb21a8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 595d5fb7d98d85120fca3b96eedc5a83694dc1a7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33076903"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47753910"
 ---
-# <a name="functions-on-string-values---contains"></a>Funções em valores de cadeia de caracteres - contém
+# <a name="functions-on-string-values---contains"></a>Funções em Valores da Cadeia de Caracteres – contains
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Retorna um valor do tipo xs: Boolean indicando se o valor de *$arg1* contém um valor de cadeia de caracteres especificado por *$arg2*.  
+  Retorna um valor do tipo xs: Boolean indicando se o valor de *$arg1* contém um valor de cadeia de caracteres especificado por *US $arg2*.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -46,22 +40,22 @@ fn:contains ($arg1 as xs:string?, $arg2 as xs:string?) as xs:boolean?
  *$arg1*  
  Valor da cadeia de caracteres para testar.  
   
- *$arg2*  
+ *US $arg2*  
  Subcadeia de caracteres a ser procurada.  
   
-## <a name="remarks"></a>Remarks  
- Se o valor de *$arg2* for uma cadeia de caracteres de comprimento zero, a função retornará **True**. Se o valor de *$arg1* é uma cadeia de caracteres de comprimento zero e o valor de *$arg2* não é uma cadeia de caracteres de comprimento zero, a função retorna **False**.  
+## <a name="remarks"></a>Comentários  
+ Se o valor de *US $arg2* for uma cadeia de caracteres de comprimento zero, a função retornará **verdadeiro**. Se o valor de *$arg1* é uma cadeia de caracteres de comprimento zero e o valor de *US $arg2* não é uma cadeia de caracteres de comprimento zero, a função retornará **False**.  
   
- Se o valor de *$arg1* ou *$arg2* é a sequência vazia, o argumento é tratado como a cadeia de caracteres de comprimento zero.  
+ Se o valor de *$arg1* ou *US $arg2* é a sequência vazia, o argumento é tratado como a cadeia de caracteres de comprimento zero.  
   
  A função contains() usa o agrupamento de ponto de código Unicode padrão do XQuery para a comparação de cadeias de caracteres.  
   
- O valor de subcadeia de caracteres especificado para *$arg2* deve ser menor ou igual a 4000 caracteres. Se o valor especificado é maior que 4000 caracteres, ocorrerá uma condição de erro dinâmico e a função Contains () retorna uma sequência vazia em vez de um valor booliano de **True** ou **False**. O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não gera erros dinâmicos em expressões XQuery.  
+ O valor de subcadeia de caracteres especificado para *US $arg2* deve ser menor ou igual a 4000 caracteres. Se o valor especificado é maior que 4000 caracteres, ocorrerá uma condição de erro dinâmico e a função Contains () retorna uma sequência vazia em vez de um valor booleano **verdadeira** ou **falso**. O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não gera erros dinâmicos em expressões XQuery.  
   
- Para obter comparações de maiusculas e minúsculas, o [maiusculas](../xquery/functions-on-string-values-upper-case.md) ou minúsculas funções podem ser usadas.  
+ Para obter comparações diferencia maiusculas de minúsculas, o [maiusculas](../xquery/functions-on-string-values-upper-case.md) ou funções em letras minúsculas podem ser usadas.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caracteres suplementares (pares substitutos)  
- O comportamento de pares substitutos em funções XQuery depende do nível de compatibilidade do banco de dados e, em alguns casos, o URI do namespace padrão para funções. Para obter mais informações, consulte a seção "XQuery funções têm consciência de substitutos" no tópico [alterações recentes em recursos do mecanismo de banco de dados no SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md). Consulte também [nível de compatibilidade do banco de dados ALTER &#40;Transact-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) e [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
+ O comportamento de pares substitutos em funções XQuery depende do nível de compatibilidade do banco de dados e, em alguns casos, o URI do namespace padrão para funções. Para obter mais informações, consulte a seção "XQuery funções têm consciência de substitutos" no tópico [alterações recentes em recursos do mecanismo de banco de dados no SQL Server 2016](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md). Consulte também [nível de compatibilidade de ALTER DATABASE &#40;Transact-SQL&#41; ](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) e [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="examples"></a>Exemplos  
  Este tópico fornece exemplos de XQuery em instâncias XML armazenadas em várias colunas de tipo xml no banco de dados AdventureWorks.  

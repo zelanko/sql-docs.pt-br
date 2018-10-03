@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_set_warehouse_instance_name_TSQL
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_set_warehouse_instance_name
 ms.assetid: 5320fcd4-bed1-468f-b784-a5e10fcfaeb6
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b8a41db8df8316720f1a88b090de51e39a5d4d5e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0b8d88e1098d9bfddb690685804d29b44730da4f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258780"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47827494"
 ---
 # <a name="spsyscollectorsetwarehouseinstancename-transact-sql"></a>sp_syscollector_set_warehouse_instance_name (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,14 +42,14 @@ sp_syscollector_set_warehouse_instance_name [ @instance_name = ] 'instance_name'
   
 ## <a name="arguments"></a>Argumentos  
  [ @instance_name =] '*instance_name*'  
- É o nome de instância. *nome_da_instância* é **sysname** e padrões para a instância local se for NULL.  
+ É o nome de instância. *nome_da_instância* está **sysname** e padrões para a instância local se for NULL.  
   
-> **Observação:***instance_name* deve ser o nome totalmente qualificado da instância, que consiste do nome do computador e o nome da instância no formato *computerName* \\ *instanceName*.  
+> **Observação:***nome_instância* deve ser o nome totalmente qualificado da instância, que consiste o nome do computador e o nome da instância no formato *nome_do_computador* \\ *instanceName*.    
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Você deve desabilitar o coletor de dados antes de alterar essa configuração de todo o coletor de dados. Esse procedimento falha quando o coletor de dados está habilitado.  
   
  Para exibir o nome da instância atual, consulte o [syscollector_config_store](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md) exibição do sistema.  

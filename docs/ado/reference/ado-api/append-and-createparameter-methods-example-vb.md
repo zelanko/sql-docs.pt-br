@@ -1,13 +1,11 @@
 ---
-title: Anexar e exemplo dos métodos CreateParameter (VB) | Microsoft Docs
+title: Acrescente e exemplo dos métodos CreateParameter (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,18 +13,17 @@ helpviewer_keywords:
 - CreateParameter method [ADO], Visual Basic example
 - Append method [ADO], Visual Basic example
 ms.assetid: 46908cbd-434f-43e7-a794-ed0be0e0c0a7
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 684c0b96d383558b70176f726cf3f1df992537ea
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 58f8bb0cab715df78926b6a4a70027ff25bcba1b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275715"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47741914"
 ---
-# <a name="append-and-createparameter-methods-example-vb"></a>Anexar e exemplo dos métodos CreateParameter (VB)
+# <a name="append-and-createparameter-methods-example-vb"></a>Exemplo dos métodos Append e CreateParameter (VB)
 Este exemplo usa o [Append](../../../ado/reference/ado-api/append-method-ado.md) e [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) métodos para executar um procedimento armazenado com um parâmetro de entrada.  
   
 ```  
@@ -124,8 +121,8 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [(ADO) do método append](../../../ado/reference/ado-api/append-method-ado.md)   
+ [Método append (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
  [Método CreateParameter (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
  [Objeto Field](../../../ado/reference/ado-api/field-object.md)   
- [Coleção de campos (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [Coleção Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Objeto Parameter](../../../ado/reference/ado-api/parameter-object.md)

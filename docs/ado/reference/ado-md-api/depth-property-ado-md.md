@@ -1,13 +1,11 @@
 ---
-title: Propriedade de profundidade (ADO MD) | Microsoft Docs
+title: Propriedade Depth (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,24 +14,23 @@ f1_keywords:
 helpviewer_keywords:
 - Depth property [ADO MD]
 ms.assetid: e41f2644-617d-4c09-80a4-feb5cf736186
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f6c670a1d0a197a51c04b11f6002705a1d5009f8
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b609b8ee65c193c181c4b7583e26f489c78cd8ad
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283875"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828706"
 ---
-# <a name="depth-property-ado-md"></a>Propriedade de profundidade (ADO MD)
+# <a name="depth-property-ado-md"></a>Propriedade Depth (ADO MD)
 Indica o número de níveis entre o [nível](../../../ado/reference/ado-md-api/level-object-ado-md.md) e a raiz da hierarquia.  
   
 ## <a name="return-values"></a>Valores de retorno  
- Retorna um número inteiro e é somente leitura.  
+ Retorna um inteiro e é somente leitura.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Um **nível** na raiz de uma hierarquia tem um **profundidade** valor zero (0).  
   
 ## <a name="applies-to"></a>Aplica-se a  

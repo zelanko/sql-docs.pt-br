@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-tables
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - suspect_page_table
@@ -19,31 +16,30 @@ helpviewer_keywords:
 - suspect_pages system table
 - suspect pages [SQL Server]
 ms.assetid: 119c8d62-eea8-44fb-bf72-de469c838c50
-caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1aa5d789fbac65efadbc5a50ecf35e744dfa7233
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 112e45b056de0f1915a4ef5419e0e916f1f8d5a6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33261378"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47772614"
 ---
 # <a name="suspectpages-transact-sql"></a>suspect_pages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Contém uma linha por página que falhou com um erro 823 secundário ou um erro 824. As páginas são relacionadas nesta tabela porque há suspeita de que sejam inadequadas, mas pode ser que de fato estejam adequadas. Quando uma página suspeita for reparada, seu status é atualizado no **event_type** coluna.  
+  Contém uma linha por página que falhou com um erro 823 secundário ou um erro 824. As páginas são relacionadas nesta tabela porque há suspeita de que sejam inadequadas, mas pode ser que de fato estejam adequadas. Quando uma página suspeita for reparada, seu status é atualizado na **event_type** coluna.  
   
- A tabela a seguir, que tem um limite de 1.000 linhas, é armazenada no **msdb** banco de dados.  
+ A tabela a seguir, que tem um limite de 1.000 linhas, é armazenada na **msdb** banco de dados.  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**database_id**|**Int**|ID do banco de dados ao qual esta página se aplica.|  
-|**file_id**|**Int**|ID do arquivo no banco de dados.|  
+|**database_id**|**int**|ID do banco de dados ao qual esta página se aplica.|  
+|**file_id**|**int**|ID do arquivo no banco de dados.|  
 |**page_id**|**bigint**|ID da página suspeita. Cada página tem uma identificação de página que é um valor de 32 bits que identifica o local da página no banco de dados. O **page_id** é o deslocamento no arquivo de dados da página de 8 KB. Cada ID de página é exclusivo em um arquivo.|  
-|**event_type**|**Int**|O tipo de erro; um de:<br /><br /> 1 = Um erro 823 que causa uma página suspeita (como um erro de disco) ou um erro 824, exceto uma soma de verificação inválida ou uma página interrompida (como uma ID de página inválida).<br /><br /> 2 = Soma de verificação inválida.<br /><br /> 3 = Página interrompida.<br /><br /> 4 = Restaurada (a página foi restaurada depois de marcada como inválida).<br /><br /> 5 = Reparada (DBCC reparou a página).<br /><br /> 7 = Desalocada pelo DBCC.|  
-|**error_count**|**Int**|Número de vezes em que o erro ocorreu.|  
+|**event_type**|**int**|O tipo de erro; um de:<br /><br /> 1 = Um erro 823 que causa uma página suspeita (como um erro de disco) ou um erro 824, exceto uma soma de verificação inválida ou uma página interrompida (como uma ID de página inválida).<br /><br /> 2 = Soma de verificação inválida.<br /><br /> 3 = Página interrompida.<br /><br /> 4 = Restaurada (a página foi restaurada depois de marcada como inválida).<br /><br /> 5 = Reparada (DBCC reparou a página).<br /><br /> 7 = Desalocada pelo DBCC.|  
+|**error_count**|**int**|Número de vezes em que o erro ocorreu.|  
 |**last_update_date**|**datetime**|Carimbo de data/hora da última atualização.|  
   
 ## <a name="permissions"></a>Permissões  

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_update_collection_item
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_update_collection_item
 ms.assetid: 7a0d36c8-c6e9-431d-a5a4-6c1802bce846
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d94ce7762facb878e0e6d8deb60647ee2d05482e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e1eb288a7bb99f5f24f05e4369836d21031f7e68
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260589"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47717114"
 ---
 # <a name="spsyscollectorupdatecollectionitem-transact-sql"></a>sp_syscollector_update_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,26 +48,26 @@ sp_syscollector_update_collection_item
   
 ## <a name="arguments"></a>Argumentos  
  [ @collection_item_id =] *collection_item_id*  
- É o identificador exclusivo que identifica o item de coleta. *collection_item_id* é **int** com um valor padrão de NULL. *collection_item_id* deve ter um valor se *nome* é NULL.  
+ É o identificador exclusivo que identifica o item de coleta. *collection_item_id* está **int** com um valor padrão de NULL. *collection_item_id* deve ter um valor se *nome* é NULL.  
   
  [ @name =] '*nome*'  
- É o nome do item de coleta. *nome* é **sysname** com um valor padrão de NULL. *nome* deve ter um valor se *collection_item_id* é NULL.  
+ É o nome do item de coleta. *nome da* está **sysname** com um valor padrão de NULL. *nome da* deve ter um valor se *collection_item_id* é NULL.  
   
- [ @new_name =] '*novo_nome*'  
- É o novo nome do item da coleta. *Novo_nome* é **sysname**, e se usado, não pode ser uma cadeia de caracteres vazia.  
+ [ @new_name =] '*new_name*'  
+ É o novo nome do item da coleta. *new_name* está **sysname**, e se usado, não pode ser uma cadeia de caracteres vazia.  
   
- *Novo_nome* devem ser exclusivos. Para obter uma lista dos nomes dos itens de coleta atuais, consulte a exibição de sistema syscollector_collection_items.  
+ *new_name* deve ser exclusivo. Para obter uma lista dos nomes dos itens de coleta atuais, consulte a exibição de sistema syscollector_collection_items.  
   
  [ @frequency =] *frequência*  
- É a frequência (em segundos) com que os dados são coletados por esse item de coleta. *frequência* é **int**, com um padrão de 5, o valor mínimo que pode ser especificado.  
+ É a frequência (em segundos) com que os dados são coletados por esse item de coleta. *frequência* está **int**, com um padrão de 5, o valor mínimo que pode ser especificado.  
   
  [ @parameters =] '*parâmetros*'  
- Os parâmetros de entrada para o item da coleta. *parâmetros* é **xml** com um padrão NULL. O *parâmetros* esquema deve corresponder ao esquema de parâmetros do tipo de coletor.  
+ Os parâmetros de entrada para o item da coleta. *parâmetros* está **xml** com um padrão NULL. O *parâmetros* esquema deve corresponder ao esquema de parâmetros do tipo de coletor.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou 1 (falha)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Se o conjunto de coleta estiver definido para o modo não armazenado em cache, a alteração da frequência será ignorada, pois esse modo faz com que a coleção e o carregamento dos dados ocorram conforme a agenda especificada para o conjunto de coleta. Para exibir o status do conjunto de coleta, execute a consulta a seguir. Substitua `<collection_item_id>` pela ID do item de coleta a ser atualizado.  
   
 ```  
@@ -144,7 +140,7 @@ GO
   
 ## <a name="see-also"></a>Consulte também  
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Coleta de dados](../../relational-databases/data-collection/data-collection.md)   
+ [Coleta de Dados](../../relational-databases/data-collection/data-collection.md)   
  [sp_syscollector_create_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)   
  [syscollector_collection_items &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)  
   

@@ -4,55 +4,52 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 84492f44-c368-4c75-954d-7307a2d2bbc0
-caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 213fe8ba8569c043ca19c6737be8992da79a17de
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: decc6e25cc8480dfaf041a79baa0972bdd78e569
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34777882"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47761494"
 ---
 # <a name="refresh-from-database-oracletosql"></a>Atualização do banco de dados (OracleToSQL)
-O **de atualização do banco de dados** caixa de diálogo permite que você selecione quais objetos para atualização do banco de dados Oracle. Linhas na caixa de diálogo estão codificados por cores com base no estado de metadados:  
+O **Refresh do banco de dados** caixa de diálogo permite que você selecione quais objetos de atualização do banco de dados Oracle. Linhas na caixa de diálogo são codificadas por cores com base no estado de metadados:  
   
--   Se os metadados do objeto foi alterado localmente e no banco de dados Oracle, a linha azul.  
+-   Se os metadados do objeto foi alterado localmente e no banco de dados Oracle, a linha é azul.  
   
--   Se os metadados do objeto foi alterado no banco de dados Oracle, mas não no SSMA, a linha é amarela.  
+-   Se os metadados do objeto foi alterado no banco de dados Oracle, mas não no SSMA, a linha será amarela.  
   
--   Se os metadados do objeto foi alterado localmente, mas não no banco de dados Oracle, a linha é verde.  
+-   Se os metadados do objeto foi alterado localmente, mas não no banco de dados Oracle, a linha está verde.  
   
--   Se o objeto for novo no banco de dados Oracle, a linha é rosa.  
+-   Se o objeto é novo no banco de dados Oracle, a linha é rosa.  
   
-Você pode especificar as configurações padrão do objeto atualização o **configurações de projeto** caixa de diálogo. Para obter mais informações, consulte [configurações de projeto&#40;sincronização&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-synchronization-oracletosql.md).  
+Você pode especificar configurações de atualização do objeto padrão no **configurações do projeto** caixa de diálogo. Para obter mais informações, consulte [configurações do projeto&#40;sincronização&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-synchronization-oracletosql.md).  
   
-Para acessar o **de atualização do banco de dados** caixa de diálogo, o botão direito do mouse, um objeto no Gerenciador de metadados do Oracle e clique em **de atualização do banco de dados**.  
+Para acessar o **atualização do banco de dados** caixa de diálogo, clique com botão direito um objeto no Gerenciador de metadados do Oracle e clique em **atualização do banco de dados**.  
   
 ## <a name="options"></a>Opções  
 **Recolher (-)**  
 Recolha todos os grupos de objeto para ocultar objetos individuais.  
   
 **Expandir (+)**  
-Expanda todos os grupos de objeto para mostrar os objetos individuais.  
+Expanda todos os grupos de objeto para mostrar objetos individuais.  
   
-**Mostrar/ocultar objetos iguais**  
-Oculta os objetos da lista se os metadados do objeto são o mesmo no banco de dados Oracle e no SSMA.  
+**Ocultar/Mostrar objetos iguais**  
+Oculta os objetos da lista se os metadados do objeto são o mesmo no banco de dados Oracle e do SSMA.  
   
 **Atualização do banco de dados (botão de seta)**  
-Use o botão de seta para especificar que os metadados para os objetos selecionados devem ser atualizados em SSMA.  
+Use o botão de seta para especificar que os metadados para os objetos selecionados devem ser atualizados no SSMA.  
   
 **Fazer a atualização não do banco de dados (botão X)**  
-Use o botão X para especificar que os metadados para os objetos selecionados não devem ser atualizados em SSMA.  
+Use o botão X para especificar os metadados para os objetos selecionados não devem ser atualizados no SSMA.  
   
 **Legenda**  
-Exibe um **legenda** caixa de diálogo. A legenda contém o mapeamento entre as cores de linha e estados de metadados.  
+Exibe uma **legenda** caixa de diálogo. A legenda contém o mapeamento entre os estados de metadados e as cores de linha.  
   
-Para manter o **legenda** caixa de diálogo sobre o **de atualização do banco de dados** caixa de diálogo, selecione o **Mostrar na parte superior** caixa de seleção.  
+Para manter o **legenda** caixa de diálogo, na parte superior das **atualização do banco de dados** caixa de diálogo, selecione o **Mostrar na parte superior** caixa de seleção.  
   

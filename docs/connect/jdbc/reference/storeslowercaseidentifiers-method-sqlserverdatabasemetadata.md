@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.storesLowerCaseIdentifiers
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: b7dd60f5-c4f3-4b14-9a33-d95327395083
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8889bf20b9a9a4dfca2b69d61bd1c4fff12934af
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 10a0bc171ca6f31070464471baea496331e550e2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32846251"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47771376"
 ---
 # <a name="storeslowercaseidentifiers-method-sqlserverdatabasemetadata"></a>Método storesLowerCaseIdentifiers (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,8 +35,8 @@ ms.locfileid: "32846251"
 public boolean storesLowerCaseIdentifiers()  
 ```  
   
-## <a name="return-value"></a>Valor de retorno  
- **True** se os identificadores forem armazenados em minúsculas. Caso contrário, **false**.  
+## <a name="return-value"></a>Valor retornado  
+ **True** se os identificadores são armazenados em letras minúsculas. Caso contrário, **false**.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -47,7 +44,7 @@ public boolean storesLowerCaseIdentifiers()
 ## <a name="remarks"></a>Remarks  
  Esse método storesLowerCaseIdentifiers é especificado pelo método storesLowerCaseIdentifiers na interface DatabaseMetadata.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [Membros SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Classe SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

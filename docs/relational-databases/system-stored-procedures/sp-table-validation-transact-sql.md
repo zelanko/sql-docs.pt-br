@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/08/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_table_validation_TSQL
@@ -17,16 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_table_validation
 ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
-caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: adec12d90732b37a6613d31b819fa6e907649948
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 4f19ad878499d9739745f29aa8c2f749fe2b3132
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43038148"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47843374"
 ---
 # <a name="sptablevalidation-transact-sql"></a>sp_table_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -95,7 +91,7 @@ sp_table_validation [ @table = ] 'table'
   
  Se executar uma validação de número de linhas e o número esperado de linhas é igual ao número na tabela, **sp_table_validation** retorna uma mensagem de que a tabela passou na validação. Caso contrário, retornará uma mensagem de que a tabela pode estar fora de sincronização e informará a diferença entre o número de linhas esperado e o atual.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  **sp_table_validation** é usado em todos os tipos de replicação. **sp_table_validation** não há suporte para Publicadores Oracle.  
   
  A soma de verificação computa uma CRC (verificação e redundância cíclica) de 32 bits em toda a imagem de linha na página. Ela não verifica colunas seletivamente e não pode operar em uma exibição ou em uma partição vertical da tabela. Além disso, a soma de verificação ignora o conteúdo das **texto** e **imagem** colunas (por design).  

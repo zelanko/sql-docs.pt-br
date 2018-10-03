@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - semanticsimilaritytable
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - semanticsimilaritytable function
 ms.assetid: b49d40ab-7552-438b-ad67-6237dcccb75b
-caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8b6b4b36580c35aead16780f4ada0f461dd58754
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: bca3fe143308bb7bf3d8a8e7754c018c749786cc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232791"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47791174"
 ---
 # <a name="semanticsimilaritytable-transact-sql"></a>semanticsimilaritytable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -76,8 +72,8 @@ SEMANTICSIMILARITYTABLE
   
 |Column_name|Tipo|Description|  
 |------------------|----------|-----------------|  
-|**source_column_id**|**Int**|ID da coluna da qual um documento de origem foi usado para localizar documentos semelhantes.<br /><br /> Consulte as funções COL_NAME e COLUMNPROPERTY para obter detalhes sobre como recuperar o nome da coluna do column_id e vice-versa.|  
-|**matched_column_id**|**Int**|ID da coluna da qual um documento similar foi localizado.<br /><br /> Consulte as funções COL_NAME e COLUMNPROPERTY para obter detalhes sobre como recuperar o nome da coluna do column_id e vice-versa.|  
+|**source_column_id**|**int**|ID da coluna da qual um documento de origem foi usado para localizar documentos semelhantes.<br /><br /> Consulte as funções COL_NAME e COLUMNPROPERTY para obter detalhes sobre como recuperar o nome da coluna do column_id e vice-versa.|  
+|**matched_column_id**|**int**|ID da coluna da qual um documento similar foi localizado.<br /><br /> Consulte as funções COL_NAME e COLUMNPROPERTY para obter detalhes sobre como recuperar o nome da coluna do column_id e vice-versa.|  
 |**matched_document_key**|**\***<br /><br /> Essa chave corresponde ao tipo da chave exclusiva na tabela de origem.|Valor da chave exclusiva da extração de texto completo e semântica do documento ou linha que foi localizada como similar ao documento especificado na consulta.|  
 |**score**|**REAL**|Um valor relativo da similaridade deste documento em sua relação com todos os outros documentos similares.<br /><br /> O valor é um valor decimal fracionário no intervalo de [0,0, 1,0] onde uma pontuação mais alta representa uma correspondência mais próxima e 1,0 é uma pontuação perfeita.|  
   
@@ -85,7 +81,7 @@ SEMANTICSIMILARITYTABLE
  Para obter mais informações, consulte [localizar documentos semelhantes e relacionados com a pesquisa semântica](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md).  
   
 ## <a name="limitations-and-restrictions"></a>Limitações e restrições  
- Não é possível consultar documentos similares em colunas. O **SEMANTICSIMILARITYTABLE** função recupera documentos similares apenas da mesma coluna como coluna de origem, que é identificada pelo **source_key** argumento.  
+ Não é possível consultar documentos similares em colunas. O **SEMANTICSIMILARITYTABLE** função recupera documentos similares apenas da mesma coluna que a coluna de origem, que é identificada pelo **source_key** argumento.  
   
 ## <a name="metadata"></a>Metadados  
  Para obter informações e o status da extração e população de similaridade semântica, consulte as exibições de gerenciamento dinâmico a seguir:  

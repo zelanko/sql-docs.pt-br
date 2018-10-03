@@ -1,12 +1,10 @@
 ---
-title: sys.DM cryptographic_provider_algorithms (Transact-SQL) | Microsoft Docs
+title: sys.dm_cryptographic_provider_algorithms (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_cryptographic_provider_algorithms_TSQL
@@ -18,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_cryptographic_provider_algorithms dynamic management function
 ms.assetid: 8bcccb37-5cfb-4e1e-a0bb-7ff4c279fe8e
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9e8a16f5247cbd1ef142c4698c1e9781fd7be45d
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: cb48a9f0f7e30e6df4fa09485b9e0ea0c9fc8a56
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34463442"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47699204"
 ---
 # <a name="sysdmcryptographicprovideralgorithms-transact-sql"></a>sys.dm_cryptographic_provider_algorithms (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,10 +48,10 @@ sys.dm_cryptographic_provider_algorithms ( provider_id )
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|algorithm_id|**Int**|É o número de identificação do algoritmo.|  
+|algorithm_id|**int**|É o número de identificação do algoritmo.|  
 |algorithm_tag|**nvarchar(60)**|É a marca de identificação do algoritmo.|  
 |key_type|**nvarchar(128)**|Mostra o tipo de chave. Retorna ASYMMETRIC KEY ou SYMMETRIC KEY.|  
-|key_length|**Int**|Indica o comprimento da chave em bits.|  
+|key_length|**int**|Indica o comprimento da chave em bits.|  
   
 ## <a name="permissions"></a>Permissões  
  O usuário deve ser um membro da função de banco de dados public.  

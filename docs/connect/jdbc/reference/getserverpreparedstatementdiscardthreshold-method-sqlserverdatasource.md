@@ -1,30 +1,27 @@
 ---
-title: getServerPreparedStatementDiscardThreshold método (SQLServerDataSource) | Microsoft Docs
+title: Método getServerPreparedStatementDiscardThreshold (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ''
-caps.latest.revision: 1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 977bc2c10328d4d00ebeddf198ddae9e327e8b75
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 09762036b607f5d124ae50a333c99eff67649079
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32837682"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47633804"
 ---
-# <a name="getserverpreparedstatementdiscardthreshold-method-sqlserverdatasource"></a>getServerPreparedStatementDiscardThreshold método (SQLServerDataSource)
+# <a name="getserverpreparedstatementdiscardthreshold-method-sqlserverdatasource"></a>Método getServerPreparedStatementDiscardThreshold (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Retorna o valor de **serverPreparedStatementDiscardThreshold** propriedade de conexão. Essa configuração controla quantos pendentes preparado descarte de instrução ações (sp_unprepare) podem estar pendentes por conexão antes de uma chamada para limpar os identificadores pendentes no servidor é executada. Quando a configuração for < = 1 unprepare ações são executados imediatamente em Fechar instrução preparada. Se esse valor é definido como 1 > estas chamadas são agrupadas para evitar a sobrecarga da chamada sp_unprepare com muita frequência.
+  Retorna o valor de **serverPreparedStatementDiscardThreshold** propriedade de conexão. Essa configuração controla quantos pendentes preparado descarte instrução ações (sp_unprepare) podem estar pendentes por conexão antes de uma chamada para limpar os identificadores pendentes no servidor é executada. Quando a configuração for < = 1 unprepare ações são executadas imediatamente no fechamento instrução preparada. Se esse valor é definido como 1 > essas chamadas são agrupados em lotes, para evitar a sobrecarga da chamada sp_unprepare com muita frequência.
 
   
 ## <a name="syntax"></a>Sintaxe  
@@ -33,16 +30,16 @@ ms.locfileid: "32837682"
 public int getServerPreparedStatementDiscardThreshold();  
 ```  
   
-## <a name="return-value"></a>Valor de retorno  
- Retorna o **int** valor o **serverPreparedStatementDiscardThreshold** propriedade de conexão.  
+## <a name="return-value"></a>Valor retornado  
+ Retorna o **int** valor de **serverPreparedStatementDiscardThreshold** propriedade de conexão.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
 ## <a name="remarks"></a>Remarks  
- Esse método é disponível na versão do driver JDBC 6.4 e daí.
+ Esse método está disponível na versão do JDBC driver 6.4 e daí.
  
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Membros de SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [Classe SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   
