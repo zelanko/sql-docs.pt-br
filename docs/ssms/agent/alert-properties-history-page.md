@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-agent
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.ag.alert.history.f1
 ms.assetid: f5359f5c-93a3-4a4a-8286-e9fe6f0196c7
-caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 66564c22fff926dfc2a2295ccdf0c03169a3f021
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: e28d089ac63035d59e5444bd8250f92139322865
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42775799"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47705909"
 ---
 # <a name="alert-properties-history-page"></a>Propriedades do alerta (página Histórico)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
