@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - studio environments [Integration Services]
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - SQL Server Integration Services, studio environments
 - tools [Integration Services], SQL Server Management Studio
 ms.assetid: 4eb73e65-d9f3-4ac6-a408-abfa85afc537
-caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 884f4e70a37dae4fed46689667bb7834aa88d671
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: aef82e8a4e60015c8b0ffbf41ab7ec5abf98ed83
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37197506"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211976"
 ---
 # <a name="integration-services-ssis-and-studio-environments"></a>SSIS (Integration Services) e Studio Environments
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclui dois estúdios para o trabalho com [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]:  

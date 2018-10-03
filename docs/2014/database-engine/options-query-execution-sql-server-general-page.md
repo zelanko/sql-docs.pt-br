@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryExecution.SqlServer.SqlExecutionGeneral
 ms.assetid: 3f8d59bc-3f97-4e5d-8b86-5ac670d20780
-caps.latest.revision: 33
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 2c08ee6ab08fe90ffc075ef3f1ee0fe638d1da4e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 947412d7a4d0fe27af7975919bddb3107007e801
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167147"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48152977"
 ---
 # <a name="options-query-execution-sql-server-general-page"></a>Opções (página geral do servidor SQL de execução da consulta)
   Use essa página a fim de especificar as opções para executar consultas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . As alterações feitas nessas opções são aplicadas apenas a novas consultas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para alterar as opções de uma consulta atual, clique em **Opções de Consulta** no menu **Consulta** ou clique com o botão direito do mouse em uma janela Consulta do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e selecione **Opções de Consulta**.  
@@ -39,7 +36,7 @@ ms.locfileid: "37167147"
  **Separador de lotes**  
  Digite uma palavra que você usa para separar instruções [!INCLUDE[tsql](../includes/tsql-md.md)] em lotes. O padrão é GO.  
   
- **Por padrão, abrir novas consultas no modo SQLCMD**  
+ **Por padrão, abra consultas novas no Modo SQLCMD**  
  Marque esta caixa de seleção para abrir novas consultas no modo SQLCMD. Para obter mais informações sobre o modo SQLCMD, consulte [Editar scripts SQLCMD com o Editor de Consultas](../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md).  
   
  Ao selecionar essa opção, esteja atento às seguintes limitações:  
@@ -50,7 +47,7 @@ ms.locfileid: "37167147"
   
 -   Como o Editor de Consultas não pode responder a prompts do sistema operacional, você deve ter cuidado para não executar instruções interativas.  
   
- **Redefinir para padrão**  
+ **Restaurar Padrões**  
  Clique para restaurar todos os valores dessa página aos seus valores padrão originais.  
   
 ## <a name="see-also"></a>Consulte também  

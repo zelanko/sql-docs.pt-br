@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - templates [SQL Server], traces
 - trace templates [SQL Server]
 - exporting trace templates
 ms.assetid: 5aa5f400-4aba-4081-9ed4-62cf38828438
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 32ac4eba8c474cd004c3a21656ef77641676f31a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a9a8a4c8d766954f8095ef9eb139367211209ac1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37249706"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48081576"
 ---
 # <a name="export-a-trace-template-sql-server-profiler"></a>Exportar um modelo de rastreamento (SQL Server Profiler)
   Este tópico descreve como exportar um modelo de rastreamento existente para ser salvo como arquivo de modelo (.tdf), usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Quando um modelo de rastreamento é exportado e salvo como arquivo, ele pode ser usado com outra instância do [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  

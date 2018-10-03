@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - absolute location path
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - relative location path [SQLXML]
 - location path for XPath query
 ms.assetid: a23a2b75-bc69-49f0-99db-05e14dc15bc0
-caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 86ff805cb06248cb0348d44b137affa3b4563444
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 699f40750ef8f444de6b7115d34cfc33f834468a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37286893"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48107376"
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>Especificando um caminho para o local (SQLXML 4.0)
   São especificadas consultas XPath no formato de uma expressão. Há vários tipos de expressões. Um caminho de local é uma expressão que seleciona um conjunto de nós relativos ao nó de contexto. O resultado de avaliar um caminho de local é um conjunto de nós.  
@@ -52,7 +49,7 @@ ms.locfileid: "37286893"
   
      O eixo especifica a relação de árvore entre os nós selecionados pela etapa de local e o nó de contexto. Os eixos `parent`, `child`, `attribute` e `self` são aceitos. Se um eixo `child` for especificado no caminho de local, todos os nós selecionados pela consulta serão os filhos do nó de contexto. Se um eixo `parent` for especificado, o nó selecionado será o nó pai do nó de contexto. Se um eixo `attribute` for especificado, os nós selecionados serão os atributos do nó de contexto.  
   
--   **Teste de nó**  
+-   **teste de nó**  
   
      Um teste de nó especifica o tipo de nó selecionado pela etapa de local. Todos os eixos (`child`, `parent`, `attribute` e `self`) têm um tipo de nó principal. Para o `attribute` eixo, o tipo de nó principal é  **\<atributo >**. Para o `parent`, `child`, e `self` eixos, o tipo de nó principal é  **\<elemento >**.  
   

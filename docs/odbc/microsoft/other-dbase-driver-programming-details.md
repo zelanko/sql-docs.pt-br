@@ -1,33 +1,30 @@
 ---
-title: Outros detalhes de programação do Driver dBASE | Microsoft Docs
+title: Outro detalhes de programação de drivers do dBASE | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], DBasedriver
 - desktop database drivers [ODBC], DBasedriver
 - ODBC desktop database drivers [ODBC], DBasedriver
 ms.assetid: 1bb9b727-66e8-49e8-9a6b-587ad6217031
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6ec8380a562c4afa65df69527bb159cd2b42bc48
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1791fa0569012ca9c3cb66068a45104f95b35717
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32900601"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47857244"
 ---
-# <a name="other-dbase-driver-programming-details"></a>Outros detalhes de programação do dBASE Driver
+# <a name="other-dbase-driver-programming-details"></a>Outros detalhes de programação de drivers do dBASE
 > [!NOTE]  
->  Esta seção fornece informações específicas de Driver de dBASE sobre funções ODBC e outros detalhes de programação. Para obter informações gerais sobre uma função, consulte o tópico apropriado em [referência da API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Esta seção fornece informações de específicos do Driver do dBASE sobre funções ODBC e outros detalhes de programação. Para obter informações gerais sobre uma função, consulte o tópico apropriado no [referência da API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
  Esta seção contém os seguintes tópicos:  
   
@@ -51,4 +48,4 @@ ms.locfileid: "32900601"
   
 -   [SQLTransact (Driver do dBASE)](../../odbc/microsoft/sqltransact-dbase-driver.md)  
   
--   [Índices do dBASE (dBASE Driver)](../../odbc/microsoft/dbase-indexes.md)
+-   [Índices do dBASE (Driver do dBASE)](../../odbc/microsoft/dbase-indexes.md)

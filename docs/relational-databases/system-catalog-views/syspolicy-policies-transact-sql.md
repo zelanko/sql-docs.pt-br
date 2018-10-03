@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - syspolicy_policies_TSQL
@@ -21,12 +18,12 @@ ms.assetid: aecf35bb-187e-4f80-870f-48081b88974e
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 5eb4c6d9586b2e7b6e946b461e9d6c200042223c
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: aec3b91a52667e0ef0801bd2532689e39ebf9ccb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43031247"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47845144"
 ---
 # <a name="syspolicypolicies-transact-sql"></a>syspolicy_policies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +50,7 @@ ms.locfileid: "43031247"
 |modified_by|**sysname**|Logon que modificou mais recentemente a política. É NULL se nunca foi modificada.|  
 |date_modified|**datetime**|Data e hora em que a política foi criada. É NULL se nunca foi modificada.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Quando você estiver solucionando problemas de gerenciamento baseado em políticas, consulte o [syspolicy_conditions](../../relational-databases/system-catalog-views/syspolicy-conditions-transact-sql.md) exibição para determinar se a política está habilitada. Essa exibição também indica quem criou ou alterou mais recentemente a política.  
   
 ## <a name="permissions"></a>Permissões  

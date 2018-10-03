@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - RequiresRestart Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - RequiresRestart element
 ms.assetid: 9e98f956-c41e-4e15-a7bd-e17c10ee6fc6
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7790c12c0b5889ef89991de042db8d8a6a93a7e8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 752acb9d560ba62d74a3b5486c79279fb49fd2a8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37295416"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48120876"
 ---
 # <a name="requiresrestart-element-assl"></a>Elemento RequiresRestart (ASSL)
   Contém um valor somente leitura associado a um [ServerProperty](../objects/serverproperty-element-assl.md) elemento que determina se a alteração do valor da propriedade do servidor requer que a instância seja reiniciado para que a alteração tenha efeito.  
@@ -51,7 +48,7 @@ ms.locfileid: "37295416"
 |Característica|Description|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|Booliano|  
-|Valor padrão|Nenhum|  
+|Valor padrão|None|  
 |Cardinalidade|0-1: elemento opcional que pode ocorrer apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -59,9 +56,9 @@ ms.locfileid: "37295416"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elemento pai|[ServerProperty](../objects/serverproperty-element-assl.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O elemento que corresponde ao pai de `RequiresRestart` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.ServerProperty>.  
   
 ## <a name="see-also"></a>Consulte também  

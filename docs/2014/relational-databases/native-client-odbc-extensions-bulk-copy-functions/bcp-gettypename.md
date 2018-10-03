@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - bcp_gettypename
@@ -17,16 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_gettypename function
 ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 489980d88e5f49d2c350fa3a3784d3603deab5e0
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 5bc7caa063d14967e576fd009a23110b9647836b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37411725"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48086806"
 ---
 # <a name="bcpgettypename"></a>bcp_gettypename
   Retorna o nome do tipo SQL para um token do tipo BCP especificado.  
@@ -55,7 +52,7 @@ fIsMaxType
 ## <a name="returns"></a>Retorna  
  Uma cadeia de caracteres que contém o nome do tipo SQL que corresponde ao tipo BCP. Se um for especificado um tipo BCP inválido, uma cadeia de caracteres vazia será retornada.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Os tokens do tipo BCP são definidos arquivo do cabeçalho sqlncli.h e na biblioteca sqlncli11.lib.  
   
  A tabela a seguir especifica os possíveis tipos BCP, se eles são ou não tipos max e a saída esperada.  
@@ -79,8 +76,8 @@ fIsMaxType
 |`SQLTEXT`|Qualquer|**text**|  
 |`SQLBIGBINARY`|não|**binary**|  
 |`SQLBINARY`|não|**Binary**|  
-|`SQLBIGVARBINARY`|não|**Varbinary**|  
-|`SQLVARBINARY`|não|**Varbinary**|  
+|`SQLBIGVARBINARY`|não|**varbinary**|  
+|`SQLVARBINARY`|não|**varbinary**|  
 |`SQLIMAGE`|Qualquer|**Imagem**|  
 |`SQLINTN`|Qualquer|**int-null**|  
 |`SQLDATETIMN`|Qualquer|**datetime-null**|  
@@ -93,9 +90,9 @@ fIsMaxType
 |`SQLAOPMAX`|Qualquer|**Max**|  
 |`SQLDATETIM4`|Qualquer|**smalldatetime**|  
 |`SQLMONEY4`|Qualquer|**Smallmoney**|  
-|`SQLFLT4`|Qualquer|**Real**|  
+|`SQLFLT4`|Qualquer|**real**|  
 |`SQLUNIQUEID`|Qualquer|**uniqueidentifier**|  
-|`SQLNCHAR`|não|**Nchar**|  
+|`SQLNCHAR`|não|**nchar**|  
 |`SQLNVARCHAR`|não|**Nvarchar**|  
 |`SQLNTEXT`|Qualquer|**Ntext**|  
 |`SQLVARIANT`|Qualquer|**sql_variant**|  

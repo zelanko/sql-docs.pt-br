@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - syslockinfo
 - sp_lock
 ms.assetid: b9892ae3-ac15-48be-8b52-78dbed6467ed
-caps.latest.revision: 27
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: eb410a4c65d9b626290297fce85ddf2fe20c08d6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a6dfe3901cb23cff65dd96fa084232310ef91ede
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37295856"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104566"
 ---
 # <a name="changes-to-behavior-in-syslockinfo-and-splock"></a>Alterações no comportamento em syslockinfo e sp_lock
   O**syslockinfo** e o **sp_lock** podem retornar valores inesperados. Eles também podem retornar linhas adicionais, enquanto que versões anteriores de **syslockinfo** e **sp_lock** retornavam, no máximo, duas linhas por recurso de bloqueio.  

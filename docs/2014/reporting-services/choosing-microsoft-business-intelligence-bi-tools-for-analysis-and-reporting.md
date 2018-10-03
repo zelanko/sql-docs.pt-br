@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d0e16108-7123-4788-87b3-05db962dbc94
-caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f0122769e599963658cc2f481c7273de7803505d
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 1d70c3276c479de8d8f8d67256729ad9f2bce005
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395425"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48223816"
 ---
 # <a name="choosing-microsoft-reporting-and-analysis-tools"></a>Escolhendo ferramentas de análise e emissão de relatórios da Microsoft
   A tabela a seguir mapeia as cargas de trabalho para análise de dados e emissão de relatórios para as ferramentas BI da Microsoft mais adequadas para cargas de trabalho.  

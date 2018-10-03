@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
-caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2cd6a36267065aff8995df20c79a94c0f56f1417
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 1984802df92929cb4a311f1de8527f764d96d0fa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39084078"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48201336"
 ---
 # <a name="ssis-catalog"></a>Catálogo do SSIS
   O `SSISDB` catálogo é o ponto central para trabalhar com [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] projetos (SSIS) que você implantou o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server. Por exemplo, você define parâmetros de projeto e pacote, configura ambientes para especificar valores de tempo de execução para pacotes, executa e soluciona problemas de pacotes, e gerencia as operações de servidor do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -64,7 +61,7 @@ ms.locfileid: "39084078"
   
 -   O nome não pode conter espaços à esquerda ou à direita.  
   
--   \@ não é permitido como primeiro caractere, mas os caracteres subsequentes podem usar \@.  
+-   Não é permitido usar \@ como o primeiro caractere, mas \@ pode ser usado nos caracteres posteriores.  
   
 -   O comprimento do nome deve ser maior ou igual a 0 e menor ou igual a 128.  
   
@@ -82,7 +79,7 @@ ms.locfileid: "39084078"
   
 -   O nome não pode conter espaços à esquerda ou à direita.  
   
--   \@ não é permitido como primeiro caractere, mas os caracteres subsequentes podem usar \@.  
+-   Não é permitido usar \@ como o primeiro caractere, mas \@ pode ser usado nos caracteres posteriores.  
   
 -   O comprimento do nome deve ser maior ou igual a 0 e menor ou igual a 128.  
   

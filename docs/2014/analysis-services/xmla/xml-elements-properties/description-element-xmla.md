@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Description Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Description element
 ms.assetid: db24bb51-3d75-49f9-82be-3380b2de1622
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 90c5bb021b41c60b8ce23473fef99bb04b42b7d0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b35f5ef850eaa7f347a61120fd7d82aa2a8434a8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37257132"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218896"
 ---
 # <a name="description-element-xmla"></a>Elemento Description (XMLA)
   Contém a descrição do elemento pai [Error](error-element-xmla.md) .  
@@ -53,7 +50,7 @@ ms.locfileid: "37257132"
 |Característica|Description|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|Cadeia de caracteres|  
-|Valor padrão|Nenhum|  
+|Valor padrão|None|  
 |Cardinalidade|0-1: elemento opcional que pode ocorrer apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -61,9 +58,9 @@ ms.locfileid: "37257132"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|[Erro](error-element-xmla.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;XMLA&#41;](xml-elements-properties.md)  

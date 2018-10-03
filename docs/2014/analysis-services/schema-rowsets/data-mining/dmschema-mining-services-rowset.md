@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DMSCHEMA_MINING_SERVICES
@@ -17,16 +15,15 @@ topic_type:
 helpviewer_keywords:
 - DMSCHEMA_MINING_SERVICES rowset
 ms.assetid: 4a672f2f-d637-4def-a572-c18556f83d34
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e6ccfdba24d7bc23b97eb15e61321f82e5ab1d9b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ba6a0172207c84bb2bdb4b7e3de7acc84362b8f7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278205"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48099756"
 ---
 # <a name="dmschemaminingservices-rowset"></a>Conjunto de linhas DMSCHEMA_MINING_SERVICES
   Oferece uma descrição de cada algoritmo de mineração de dados suportado pelo provedor.  

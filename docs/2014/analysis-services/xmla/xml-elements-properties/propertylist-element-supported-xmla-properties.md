@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - XML for Analysis, properties
 - XMLA, properties
 ms.assetid: 5745f7b4-6b96-44d5-b77c-f2831a898e5e
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 04e2b96df0cc549acadd50d80356a62bf327b7c3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7d7898c0f7263bf5355934ec072511bfd8483028
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243956"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48215916"
 ---
 # <a name="supported-xmla-properties-xmla"></a>Propriedades XMLA suportadas (XMLA)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] dá suporte a propriedades listadas na tabela a seguir. Você usa estas propriedades listadas na [propriedades](properties-element-xmla.md) elemento da [Discover](../xml-elements-methods-discover.md) e [Execute](../xml-elements-methods-execute.md) métodos.  
@@ -225,7 +222,7 @@ ms.locfileid: "37243956"
 |-----------|-----------------|  
 |*Tabular*|Retorna um conjunto de resultados usando o [conjunto de linhas](../xml-data-types/rowset-data-type-xmla.md) tipo de dados.|  
 |*Multidimensional*|Retorna um conjunto de linhas usando o [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) tipo de dados.|  
-|*Nativo*|Nenhum formato é especificado explicitamente. O [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] retorna o formato apropriado para o comando. O tipo de resultado real é identificado pelo namespace do resultado.|  
+|*nativo*|Nenhum formato é especificado explicitamente. O [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] retorna o formato apropriado para o comando. O tipo de resultado real é identificado pelo namespace do resultado.|  
   
 |Nome|Elemento|  
 |----------|-------------|  

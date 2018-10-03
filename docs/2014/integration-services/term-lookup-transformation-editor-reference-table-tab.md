@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.termlookup.referencetable.f1
 helpviewer_keywords:
 - Term Lookup Transformation Editor
 ms.assetid: 86ccec6d-615b-4f84-9226-ff80d8012f17
-caps.latest.revision: 26
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0e0870761f4281b6897fb9cc9395d9f7720c865f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 69ab9ccde1d3f14a4cf3d28c856350aef4c80b56
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37176073"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48071657"
 ---
 # <a name="term-lookup-transformation-editor-reference-table-tab"></a>Editor de Transformação Pesquisa de Termos (guia Tabela de Referência)
   Use a guia **Tabela de Referência** da caixa de diálogo **Editor de Transformação Pesquisa de Termos** para especificar a conexão com a tabela de referência (pesquisa).  

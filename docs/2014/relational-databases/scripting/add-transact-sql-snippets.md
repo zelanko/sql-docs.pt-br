@@ -1,54 +1,51 @@
 ---
-title: Adicionar trechos de Transact-SQL | Microsoft Docs
+title: Adicionar snippets de Transact-SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 901c7995-8eb5-4d12-8bb0-de0a922b48f8
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ce1a74a47839174705f6910b0e0366b4098ae767
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b93171cad6896b32086604b54bce30c3fe396fb5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37160237"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48144316"
 ---
-# <a name="add-transact-sql-snippets"></a>Adicionar trechos de Transact-SQL
-  Você pode adicionar seus próprios trechos de código Transact-SQL ao conjunto de trechos predefinidos incluídos em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+# <a name="add-transact-sql-snippets"></a>Adicionar snippets de Transact-SQL
+  Você pode adicionar seus próprios snippets de código Transact-SQL ao conjunto de snippets predefinidos incluídos em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="creating-a-transact-sql-snippet-file"></a>Criando um arquivo de trecho Transact-SQL  
- A primeira parte da criação de um trecho de código do [!INCLUDE[tsql](../../includes/tsql-md.md)] é criar um arquivo XML com o texto do seu trecho de código. O arquivo deve ter uma extensão .snippet e atender as requisitos do [Esquema de trechos de código](http://go.microsoft.com/fwlink/?LinkId=207504). Defina a linguagem do trecho como SQL.  
+## <a name="creating-a-transact-sql-snippet-file"></a>Criando um arquivo de snippet Transact-SQL  
+ A primeira parte da criação de um snippet de código do [!INCLUDE[tsql](../../includes/tsql-md.md)] é criar um arquivo XML com o texto do seu snippet de código. O arquivo deve ter uma extensão .snippet e atender as requisitos do [Esquema de trechos de código](http://go.microsoft.com/fwlink/?LinkId=207504). Defina a linguagem do snippet como SQL.  
   
- Você pode usar os trechos predefinidos fornecidos com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como exemplos. Para encontrar os trechos predefinidos, abra [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], selecione o menu **Ferramentas** e clique em **Gerenciador de Trechos de Código**. Selecione **SQL** na caixa de listagem **Linguagem** ; o caminho para os trechos do [!INCLUDE[tsql](../../includes/tsql-md.md)] será exibido na caixa **Local** .  
+ Você pode usar os snippets predefinidos fornecidos com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como exemplos. Para encontrar os snippets predefinidos, abra [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], selecione o menu **Ferramentas** e clique em **Gerenciador de Snippets de Código**. Selecione **SQL** na caixa de listagem **Linguagem** ; o caminho para os snippets do [!INCLUDE[tsql](../../includes/tsql-md.md)] será exibido na caixa **Local** .  
   
-## <a name="registering-the-code-snippet"></a>Registrando o trecho de código  
- Após criar o arquivo de trecho, use o Gerenciador de Trechos de Código para registrar o trecho com o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Você pode adicionar uma pasta que contém vários trechos ou importar trechos individuais para a pasta **Meus Trechos de Código** .  
+## <a name="registering-the-code-snippet"></a>Registrando o snippet de código  
+ Após criar o arquivo de snippet, use o Gerenciador de Snippets de Código para registrar o snippet com o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Você pode adicionar uma pasta que contém vários snippets ou importar snippets individuais para a pasta **Meus Snippets de Código** .  
   
 ## <a name="procedures"></a>Procedimentos  
   
-#### <a name="adding-a-snippet-folder"></a>Adicionando uma pasta de trechos  
+#### <a name="adding-a-snippet-folder"></a>Adicionando uma pasta de snippets  
   
 1.  Abra o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-2.  Selecione o menu **Ferramentas** e clique em **Gerenciador de Trechos de Código**.  
+2.  Selecione o menu **Ferramentas** e clique em **Gerenciador de Snippets de Código**.  
   
 3.  Clique no botão **Adicionar** .  
   
-4.  Navegue até a pasta que contém seus trechos de código e clique no botão **Selecionar Pasta** .  
+4.  Navegue até a pasta que contém seus snippets de código e clique no botão **Selecionar Pasta** .  
   
-#### <a name="importing-a-snippet"></a>Importando um trecho  
+#### <a name="importing-a-snippet"></a>Importando um snippet  
   
 1.  Abra o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-2.  Selecione o menu **Ferramentas** e clique em **Gerenciador de Trechos de Código**.  
+2.  Selecione o menu **Ferramentas** e clique em **Gerenciador de Snippets de Código**.  
   
 3.  Clique no botão **Importar** .  
   
@@ -108,13 +105,13 @@ ms.locfileid: "37160237"
   
 2.  Abra o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-3.  Selecione o menu **Ferramentas** e clique em **Gerenciador de Trechos de Código**.  
+3.  Selecione o menu **Ferramentas** e clique em **Gerenciador de Snippets de Código**.  
   
 4.  Clique no botão **Importar** .  
   
-5.  Navegue até a pasta que contém TryCatch.snippet, clique no arquivo TryCatch.snippet e clique em **Abrir** . Você não deve ter um trecho TryCatch na pasta **Meus Trechos de Código** .  
+5.  Navegue até a pasta que contém TryCatch.snippet, clique no arquivo TryCatch.snippet e clique em **Abrir** . Você não deve ter um snippet TryCatch na pasta **Meus Snippets de Código** .  
   
 ## <a name="see-also"></a>Consulte também  
- [Inserir trechos cercados com o Transact-SQL](insert-surround-with-transact-sql-snippets.md)  
+ [Inserir snippets Transact-SQL com Surround](insert-surround-with-transact-sql-snippets.md)  
   
   

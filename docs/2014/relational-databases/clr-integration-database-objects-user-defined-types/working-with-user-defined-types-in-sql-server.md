@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - user-defined types [CLR integration], queries
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - UDTs [CLR integration], Transact-SQL
 - queries [CLR integration]
 ms.assetid: 807376fb-1f1a-4f2a-8cf8-a622c5858634
-caps.latest.revision: 11
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7dd010705b0afc24e6f3855e8cd46e52ab5b1b73
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 1a6a226ae76f75a07b483b74a09ecafc0191eee2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37350971"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48215186"
 ---
 # <a name="working-with-user-defined-types-in-sql-server"></a>Trabalhando com tipos de dados definidos pelo usuário no SQL Server
   Você pode acessar a funcionalidade do tipo definido pelo usuário (UDT) no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] do [!INCLUDE[tsql](../../includes/tsql-md.md)] idioma usando a sintaxe da consulta regular. Os UDTs podem ser usados na definição de objetos de banco de dados, como variáveis em lotes do [!INCLUDE[tsql](../../includes/tsql-md.md)], em funções e procedimentos armazenados, e como argumentos em funções e procedimentos armazenados.  

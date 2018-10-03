@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
 helpviewer_keywords:
 - SQLSetConnectAttr function
 ms.assetid: d21b5cf1-3724-43f7-bc96-5097df0677b4
-caps.latest.revision: 105
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 963104ee755daba6514403ddd7f5dca76507cf5a
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: f95a4d3cc6903121c3c46d926e9d66b2d81f866a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37432525"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48070576"
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
   O driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ignora a configuração de SQL_ATTR_CONNECTION_TIMEOUT.  
@@ -170,7 +167,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
   
  Depois de fazer a conexão, o aplicativo pode consultar este atributo usando [SQLGetConnectAttr](sqlgetconnectattr.md) para determinar a identidade do parceiro de failover. Se o servidor primário não tiver nenhum parceiro de failover, esta propriedade retornará uma cadeia de caracteres vazia. Isto permite que um aplicativo inteligente armazene em cache o servidor de backup determinado mais recentemente, mas tais aplicativos devem estar cientes de que as informações serão atualizadas somente depois que a conexão for estabelecida ou redefinida, se estiver em pool, e poderão ficar desatualizadas em conexões de longo prazo.  
   
- Para obter mais informações, consulte [usando o espelhamento de banco de dados](../native-client/features/using-database-mirroring.md).  
+ Para obter mais informações, confira [Usando o espelhamento de banco de dados](../native-client/features/using-database-mirroring.md).  
   
 ## <a name="sqlcoptssintegratedsecurity"></a>SQL_COPT_SS_INTEGRATED_SECURITY  
  SQL_COPT_SS_INTEGRATED_SECURITY força o uso da autenticação do Windows para validação de acesso no logon do servidor. Quando a autenticação do Windows é usada, o driver ignora os valores de identificador e a senha de usuário fornecidos como parte do **SQLConnect**, [SQLDriverConnect](sqldriverconnect.md), ou [SQLBrowseConnect](sqlbrowseconnect.md)de processamento.  

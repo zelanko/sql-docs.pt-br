@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Perspective Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Perspective element
 ms.assetid: 0442334c-8b00-4451-ad81-02e58c735e8f
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3b006d7d48c072cb98a68e42c04cf75c4aaa9e04
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7ed510b7c4b9a9c023c6bad875ed2e6293ac2ac4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37297396"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168226"
 ---
 # <a name="perspective-element-assl"></a>Elemento Perspective (ASSL)
   Define detalhes para uma perspectiva de um [cubo](cube-element-assl.md) elemento.  
@@ -62,8 +59,8 @@ ms.locfileid: "37297396"
   
 |Característica|Description|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|Nenhum|  
-|Valor padrão|Nenhum|  
+|Comprimento e tipo de dados|None|  
+|Valor padrão|None|  
 |Cardinalidade|0-n: Elemento opcional que pode ocorrer mais de uma vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -73,7 +70,7 @@ ms.locfileid: "37297396"
 |Elementos pai|[Perspectivas](../collections/perspectives-element-assl.md)|  
 |Elementos filho|[Ações](../collections/actions-element-assl.md), [anotações](../collections/annotations-element-assl.md), [cálculos](../collections/calculations-element-assl.md), [CreatedTimestamp](../properties/createdtimestamp-element-assl.md), [DefaultMeasure](measure-element-assl.md), [ Descrição](../properties/description-element-assl.md), [dimensões](../collections/dimensions-element-assl.md), [ID](../properties/id-element-assl.md), [Kpis](../collections/kpis-element-assl.md), [LastSchemaUpdate](../properties/lastschemaupdate-element-assl.md), [ MeasureGroups](../collections/groups-element-assl.md), [nome](../properties/name-element-assl.md), [traduções](../collections/translations-element-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Uma perspectiva fornece um subconjunto de um cubo, selecionando as dimensões, as hierarquias, os atributos e outros detalhes que devem ser incluídos e definindo a fatia de dados a ser incluída. Uma perspectiva pertence a um único cubo. Não é possível substituir nem adicionar objetos em uma perspectiva; todas as dimensões, hierarquias e outros detalhes devem existir no cubo subjacente. Não é possível incluir objetos e marcá-los como visível.  
   
  O elemento correspondente no modelo de objeto Analysis Management Objects (AMO) é <xref:Microsoft.AnalysisServices.Perspective>.  

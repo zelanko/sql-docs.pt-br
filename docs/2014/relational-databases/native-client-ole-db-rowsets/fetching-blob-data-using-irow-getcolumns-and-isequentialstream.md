@@ -1,12 +1,10 @@
 ---
-title: 'Buscando dados BLOB usando IRow:: Getcolumns e ISequentialStream | Microsoft Docs'
+title: Buscando dados BLOB usando IRow::GetColumns e ISequentialStream | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - fetching BLOB data
@@ -14,19 +12,18 @@ helpviewer_keywords:
 - GetColumns method
 - BLOBs, fetching
 ms.assetid: b57decda-b0c1-4ef6-8c81-491956de2890
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 566b843be0535cca2c5623cf23cb6595c030c155
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 04eb0e01b1c98552c0364c5b60d918608ae23faa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37409025"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095836"
 ---
 # <a name="fetching-blob-data-using-irowgetcolumns-and-isequentialstream"></a>Buscando dados BLOB usando IRow::GetColumns e ISequentialStream
-  A função a seguir usa **IRow:: Getcolumns** e **ISequentialStream** para buscar dados grandes:  
+  A seguinte função usa **IRow::GetColumns** e **ISequentialStream** para buscar dados grandes:  
   
 ```  
 void InitializeAndExecuteCommand()  

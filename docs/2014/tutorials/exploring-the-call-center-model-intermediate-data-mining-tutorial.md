@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9095212c-9068-4dd8-85ce-17a467adeabb
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 76f84b51c7572d9ff16f5bc03979686349a94b82
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 21a1f76992e902f8b9b3c5ba18efad3f16734300
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210406"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48110026"
 ---
 # <a name="exploring-the-call-center-model-intermediate-data-mining-tutorial"></a>Explorando o modelo de call center (Tutorial de mineração de dados intermediário)
   Agora que você criou o modelo exploratório, poderá usá-lo para saber mais sobre os dados utilizando as ferramentas a seguir fornecidas no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  

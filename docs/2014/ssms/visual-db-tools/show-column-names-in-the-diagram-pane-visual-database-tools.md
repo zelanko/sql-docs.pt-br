@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - column names [SQL Server]
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - Diagram pane [Visual Database Tools]
 - names [SQL Server], columns
 ms.assetid: b866d107-6312-44f9-9195-d74bd43b7142
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ed84257be696772ee89d2f72968ae6b41a219fc2
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 2296d7f004ab42729b62c57f65172b8304bb0bf6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43809842"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48174996"
 ---
 # <a name="show-column-names-in-the-diagram-pane-visual-database-tools"></a>Mostrar nomes de colunas no painel de Diagrama (Visual Database Tools)
   Você pode optar por ocultar ou mostrar os nomes de coluna de tabelas no **Painel Diagrama** do Designer de Consulta e Exibição.  
