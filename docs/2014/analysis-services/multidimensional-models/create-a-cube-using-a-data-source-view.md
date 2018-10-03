@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: bec845a1-d10c-4d45-9acf-0a302adfee47
-caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 32d358eef64c43535f8d04944feb445a5190414a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bddbad8ebe91aaa57ab76fdd4f30a5ebb9e5ab3d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37303046"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48068306"
 ---
 # <a name="create-a-cube-using-a-data-source-view"></a>Criar um cubo usando uma Exibição da Fonte de Dados
   Use este método de criar um novo cubo se você pretender usar uma exibição existente de fonte de dados. Com esse método, você especifica uma exibição de fonte de dados e seleciona tabelas de fatos e dimensões que deseja usar na exibição da fonte de dados. Em seguida, escolha as dimensões e as medidas que deseja incluir no cubo.  

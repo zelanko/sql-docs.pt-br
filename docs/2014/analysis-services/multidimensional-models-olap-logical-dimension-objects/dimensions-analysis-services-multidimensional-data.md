@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - OLAP objects [Analysis Services], dimensions
 - dimensions [Analysis Services]
 - Analysis Services objects, dimensions
 ms.assetid: 2b114135-2572-4479-8c81-3ccf0cfeb9f7
-caps.latest.revision: 39
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 48cba502e905c1f83503ac8955184116971316c4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 129dad08344ec7c753311c0c67889aa60cc1e58d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37301146"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48059626"
 ---
 # <a name="dimensions-analysis-services---multidimensional-data"></a>Dimensões (Analysis Services – Dados Multidimensionais)
   Na [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], as dimensões são um componente fundamental dos cubos. As dimensões organizam dados com relação a uma área de interesse, como clientes, lojas ou funcionários, para usuários. As dimensões no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] contêm atributos que correspondem às colunas nas tabelas de dimensões. Esses atributos aparecem como hierarquias de atributo e podem ser organizados em hierarquias definidas pelo usuário, ou podem ser definidos como hierarquias pai-filho com base em colunas na tabela de dimensões subjacente. As hierarquias são usadas para organizar medidas contidas em um cubo. Os tópicos a seguir fornecem uma visão geral de dimensões, atributos e hierarquias.  

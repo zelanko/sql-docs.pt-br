@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling task [Integration Services], configuring
 ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
-caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 79a86a9b589fc5118f3418d0898117c7482dda6a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8309a4d66fbcf36aca4e5e4d817c2bb34722bc08
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37285632"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48072966"
 ---
 # <a name="setup-of-the-data-profiling-task"></a>Configuração da tarefa Criação de Perfil de Dados
   Antes de rever um perfil dos dados de origem, a primeira etapa é configurar e executar a tarefa Criação de Perfil de Dados. Você cria esta tarefa dentro de um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para configurar a tarefa Criação de Perfil de Dados, use o Editor da Tarefa Criação de Perfil de Dados. Este editor permite selecionar onde produzir os perfis e quais perfis devem ser calculados. Depois de configurar a tarefa, você executa o pacote para calcular os perfis de dados.  
@@ -58,7 +55,7 @@ ms.locfileid: "37285632"
 |Para calcular|Qual ajuda identificar|Use este perfil|  
 |----------------|-------------------------|----------------------|  
 |Todos os comprimentos de valores de cadeia de caracteres na coluna selecionada e a porcentagem de linhas na tabela que cada comprimento representa.|**Valores de cadeias de caracteres que não são válidos**— Por exemplo, você cria o perfil de uma coluna que deve usar dois caracteres para códigos de estados nos Estados Unidos, mas descobre valores maiores que dois caracteres.|**Distribuição de comprimento de coluna —** válido para uma coluna com um desses tipos de dados:<br /><br /> Tipos de dados de caracteres: `char`, `nchar`, `varchar` e `nvarchar`|  
-|Um conjunto de expressões regulares que cobrem a porcentagem especificada de valores em uma coluna de cadeia de caracteres.<br /><br /> Além disso para localizar expressões regulares que podem ser usadas no futuro para validar valores novos|**Valores de cadeias de caracteres que não são válidos ou não estão no formato correto, ** por exemplo, um perfil padrão de uma coluna CEP/Código Postal pode produzir as expressões regulares: \d{5}-\d{4}, \d{5} e \d{9}. Se a saída contém outras expressões regulares, os dados conterão valores inválidos ou que estarão em um formato incorreto.|**Perfil de padrão de coluna —** válido para uma coluna com um desses tipos de dados:<br /><br /> Tipos de dados de caracteres: `char`, `nchar`, `varchar` e `nvarchar`|  
+|Um conjunto de expressões regulares que cobrem a porcentagem especificada de valores em uma coluna de cadeia de caracteres.<br /><br /> Além disso para localizar expressões regulares que podem ser usadas no futuro para validar valores novos|**Valores de cadeias de caracteres que não são válidos ou não estão no formato correto,**  por exemplo, um perfil padrão de uma coluna CEP/Código Postal pode produzir as expressões regulares: \d{5}-\d{4}, \d{5} e \d{9}. Se a saída contém outras expressões regulares, os dados conterão valores inválidos ou que estarão em um formato incorreto.|**Perfil de padrão de coluna —** válido para uma coluna com um desses tipos de dados:<br /><br /> Tipos de dados de caracteres: `char`, `nchar`, `varchar` e `nvarchar`|  
 |A porcentagem de valores nulos na coluna selecionada.|**Razão alta de valores nulos inesperada em uma coluna—** Por exemplo, você cria o perfil de uma coluna que deve conter CEPs dos Estados Unidos, mas descobre uma alta porcentagem inesperada de CEPs ausentes.|**Razão nula de coluna —** válido para uma coluna com esses tipos de dados:<br /><br /> Qualquer tipo de dados. Isso inclui `image`, `text`, `xml`, tipos definidos pelo usuário e tipos de variável.|  
 |Estatísticas como mínimo, máximo, média e desvio padrão para colunas numéricas, além de mínimo e máximo para colunas `datetime`.|**Valores numéricos e datas que não são válidos**— Por exemplo, você cria o perfil de uma coluna de datas históricas e descobre uma data de máximo que está no futuro.|**Perfil de estatísticas de coluna —** válido para uma coluna com um desses tipos de dados:<br /><br /> Tipos de dados numéricos: tipos Integer (exceto `bit`), `money`, `smallmoney`, `decimal`, `float`, `real` e `numeric`<br /><br /> Tipos de dados de data e hora: `datetime`, `smalldatetime`, `timestamp`, `date`, `time`, `datetime2` e `datetimeoffset`<br />Observação: Para uma coluna que tem um tipo de dados de data e hora, o perfil calcula o mínimo e o máximo apenas.|  
 |Todos os valores distintos na coluna selecionada e a porcentagem de linhas na tabela que cada valor representa. Ou, os valores que representam mais de uma porcentagem especificada na tabela.|**Um número incorreto de valores distintos em uma coluna**— Por exemplo, você cria o perfil de uma coluna que contém estados dos Estados Unidos e descobre mais de 50 valores distintos.|**Distribuição de valor da coluna —** válido para uma coluna com um desses tipos de dados:<br /><br /> Tipos de dados numéricos: tipos Integer (exceto `bit`), `money`, `smallmoney`, `decimal`, `float`, `real` e `numeric`<br /><br /> Tipos de dados de caracteres: `char`, `nchar`, `varchar` e `nvarchar`<br /><br /> Tipos de dados de data e hora: `datetime`, `smalldatetime`, `timestamp`, `date`, `time`, `datetime2` e `datetimeoffset`|  

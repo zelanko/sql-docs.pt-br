@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.browsecube.datapane.f1
 - sql12.asvs.ssms.analyzeinexcel.f1
 ms.assetid: 890ed457-137e-44ac-9b2c-83344a1b8fc9
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a4717a4430cb7f9b266acf73b637987995ffe932
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cdd0c98a00b5643c73b1536b7449c855a444aea8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37196696"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48075086"
 ---
 # <a name="analyze-in-excel-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Analisar no Excel (guia Navegador, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   **Analisar no Excel** oferece ao desenvolvedor de cubo uma forma rápida de examinar a aparência de um projeto para o usuário final. O recurso **Analisar no Excel** abre o Microsoft Excel, cria uma conexão da fonte de dados para o banco de dados de espaço de trabalho e adiciona automaticamente uma Tabela Dinâmica à planilha. Esse recurso substitui o Office Web Control que forneceu um Tabela Dinâmica inserida na guia Navegador nas versões anteriores.  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.All_Languages.Tabs
 ms.assetid: bd715d6b-f873-41d4-aa10-57b7098b61cc
-caps.latest.revision: 21
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 2cc5922ed04933dcb7a6b09995353e7fd64a3163
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d364760fc1c6a5b360ee9ff9ac6f7b8df7674718
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37287852"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48077256"
 ---
-# <a name="options-text-editor---all-languages--tabs-page"></a>Opções (Editor de texto – todos os idiomas – guias de página)
+# <a name="options-text-editor---all-languages--tabs-page"></a>Opções (página Editor de Texto – Todos os idiomas – Guias)
   Use esta caixa de diálogo para definir o comportamento de tabulação nos cinco editores no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Para exibir essas opções, clique em **Opções** no menu **Ferramentas** . Selecione a pasta **Editor de Texto** , expanda a pasta **Todos os Idiomas** e clique em **Tabulações**.  
   
 ## <a name="tabbing-options-by-editor"></a>Opções de tabulação pelo editor  

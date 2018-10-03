@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.browsecube.filterpane.f1
 ms.assetid: f5cf0bb1-3afb-4856-a2ef-614deb4e7e49
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 85570891b1af0b102067f9153fe17e7a7b5b21a9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1964b6562c34411201ce141c97c9df42103482ad
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37250968"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48074896"
 ---
 # <a name="query-and-filter-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Consulta e filtro (guia Navegador, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Esta área da guia **Navegador** do Designer de Cubo contém uma área de consultas e filtros para ajudar a escolher dados do cubo para usar ao navegar ou em consultas. Você pode adicionar quantos objetos cubo desejar e então exibir os resultados na área de dados ou exportar os resultados para um relatório usando Analisar no Excel para visualizar como os dados seriam exibidos pelos usuários finais.  
@@ -43,7 +40,7 @@ ms.locfileid: "37250968"
   
 |Valor|Description|  
 |-----------|-----------------|  
-|**Igual a**|Os resultados são restringidos ao conjunto definido na **Expressão de Filtro**.|  
+|**igual**|Os resultados são restringidos ao conjunto definido na **Expressão de Filtro**.|  
 |**Não é igual**|Os resultados são restringidos aos membros excluídos pelo conjunto definido na **Expressão de Filtro**.|  
 |**Entrada**|Os resultados são restringidos ao conjunto nomeado escolhido na **Expressão de Filtro**.|  
 |**Não está em**|Os resultados são restringidos aos membros excluídos pelo conjunto nomeado escolhido na **Expressão de Filtro**.|  

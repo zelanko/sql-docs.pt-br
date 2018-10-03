@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.partitiondesigner.partitionstoragesettings.f1
 - sql12.asvs.cubeeditor.cubebuilder.measuregroupstoragesettings.f1
 ms.assetid: 80c41c71-226c-45fe-b9cf-af824b592fe1
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3d39d87c0896ba77d3e323dc762d2618098dfd39
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8e93c341a73d55094624f3930934076f10674bce
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37161307"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48063437"
 ---
 # <a name="storage-settings-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Configurações de Armazenamento (Analysis Services - Dados Multidimensionais)
   Use a caixa de diálogo **Configurações de Armazenamento** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para definir configurações de cache pró-ativo, armazenamento e notificação para uma dimensão, cubo, grupo de medidas ou partição. É possível exibir a caixa de diálogo **Configurações de Armazenamento** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] da seguinte maneira:  

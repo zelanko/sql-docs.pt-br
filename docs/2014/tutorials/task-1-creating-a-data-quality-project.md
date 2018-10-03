@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: dc7ef6bc-c03a-4dd1-9ca4-43c62f8761fe
-caps.latest.revision: 5
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 32202ce456a45f34e2a2179c80a806bf0ffbf52c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 16a9636cda0a0f390decd4215c897d033b282eaf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224546"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48077086"
 ---
 # <a name="task-1-creating-a-data-quality-project"></a>Tarefa 1: Criando um Projeto de Qualidade de Dados
   Nesta tarefa, você criará um Projeto de Qualidade de Dados para limpar os dados do fornecedor em um arquivo do Excel de acordo com a base de dados de conhecimento Fornecedores criada anteriormente neste tutorial.  

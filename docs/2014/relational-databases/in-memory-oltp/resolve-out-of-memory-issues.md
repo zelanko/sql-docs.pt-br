@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
-caps.latest.revision: 15
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 566d202fcc38fd3bba6c75e40bb01062e760fd09
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 4df9c58eb7832438253fc39bf6c68e8268ff2671
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392007"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067397"
 ---
 # <a name="resolve-out-of-memory-issues"></a>Resolver problemas de memória insuficiente
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] usa mais memória e de maneiras diferentes que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. É possível que a quantidade de memória que você instalou e atribuiu para o [!INCLUDE[hek_2](../../includes/hek-2-md.md)] torne-se inadequada para suas necessidades de crescimento. Se for o caso, você pode ficar sem memória. Este tópico aborda como se recuperar de uma situação de OOM. Veja [Monitorar e solucionar problemas de uso da memória](monitor-and-troubleshoot-memory-usage.md) para obter diretrizes que podem ajudá-lo a evitar várias situações de OOM.  
@@ -40,7 +37,7 @@ ms.locfileid: "40392007"
     Ao fechar um ou mais aplicativos em execução, como Visual Studio, Internet Explorer, OneNote e outros, você disponibiliza a memória que eles estavam usando para a operação de restauração. Você poderá reiniciá-los após a restauração bem-sucedida.  
   
 -   Aumente o valor de MAX_MEMORY_PERCENT.   
-    Este trecho de código altera MAX_MEMORY_PERCENT para o pool de recursos PoolHk para 70% de memória instalada.  
+    Este snippet de código altera MAX_MEMORY_PERCENT para o pool de recursos PoolHk para 70% de memória instalada.  
   
     > [!IMPORTANT]  
     >  Se o servidor estiver sendo executado em uma máquina virtual e não for dedicado, defina o valor de MIN_MEMORY_PERCENT para o mesmo valor de MAX_MEMORY_PERCENT.   
@@ -104,7 +101,7 @@ ms.locfileid: "40392007"
  Se seu banco de dados do [!INCLUDE[hek_2](../../includes/hek-2-md.md)] estiver associado a um pool de recursos, você poderá aumentar a porcentagem de memória que o pool pode acessar. Confira o subtópico [Alterar MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT em um pool existente](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_ChangeAllocation) para obter diretrizes sobre como alterar o valor de MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT em um pool de recursos.  
   
  Aumente o valor de MAX_MEMORY_PERCENT.   
-Este trecho de código altera MAX_MEMORY_PERCENT para o pool de recursos PoolHk para 70% de memória instalada.  
+Este snippet de código altera MAX_MEMORY_PERCENT para o pool de recursos PoolHk para 70% de memória instalada.  
   
 > [!IMPORTANT]  
 >  Se o servidor estiver sendo executado em uma máquina virtual e não for dedicado, defina o valor de MIN_MEMORY_PERCENT e MAX_MEMORY_PERCENT como o mesmo.   
