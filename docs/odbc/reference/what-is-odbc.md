@@ -1,39 +1,36 @@
 ---
-title: O que é ODBC? | Microsoft Docs
+title: O que é o ODBC? | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC [ODBC], about ODBC
 ms.assetid: badf3a45-f941-44ae-a31d-393116f68a18
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eed93c1d5b096e132f6d514057abd73c090519c5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 27e153fd72c588f81342d74ce1fc851adc6fda91
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32917395"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47622324"
 ---
-# <a name="what-is-odbc"></a>O que é ODBC?
-Muitos erros de concepção sobre ODBC existem no mundo da computação. Para o usuário final, é um ícone no painel de controle do Microsoft® Windows®. Para o programador de aplicativo, é uma biblioteca que contém rotinas de acesso a dados. Para muitos outros, é a resposta para todos os problemas de acesso ao banco de dados nunca imaginado.  
+# <a name="what-is-odbc"></a>O que é o ODBC?
+Existem muitos erros de concepção sobre ODBC no mundo da informática. Para o usuário final, ele é um ícone no painel de controle do Microsoft® Windows®. Para o programador de aplicativo, é uma biblioteca que contém as rotinas de acesso de dados. Para muitos outros, é a resposta para todos os problemas de acesso de banco de dados nunca tenha imaginado.  
   
- Primeiramente, o ODBC é uma especificação de um banco de dados API. Essa API é independente de qualquer um DBMS ou sistema operacional. Embora este guia usa C, a API de ODBC é independente de linguagem. A API de ODBC é baseada nas especificações do Open Group e ISO/IEC CLI. ODBC 3. *x* totalmente implementa ambos essas especificações, versões anteriores do ODBC baseadas em versões anteriores dessas especificações, mas não os implementou totalmente — e adiciona recursos normalmente necessários por desenvolvedores de baseada em telas aplicativos de banco de dados, como cursores roláveis.  
+ Primeiramente, o ODBC é uma especificação para um banco de dados de API. Essa API é independente de qualquer um DBMS ou sistema operacional. Embora esse manual usa C, a API de ODBC é independente de linguagem. A API de ODBC é baseada nas especificações do Open Group e ISO/IEC CLI. ODBC 3. *x* implementa ambas essas especificações totalmente – versões anteriores do ODBC foram baseadas em versões preliminares dessas especificações, mas não implementou totalmente-los — e adiciona recursos comumente necessários por desenvolvedores de baseado em tela aplicativos de banco de dados, como cursores roláveis.  
   
- As funções da API do ODBC são implementadas por desenvolvedores de drivers específicos de DBMS. Aplicativos chamam as funções destes drivers para acessar dados de maneira independente do DBMS. Um Gerenciador de Driver gerencia a comunicação entre aplicativos e drivers.  
+ As funções na API do ODBC são implementadas pelos desenvolvedores de drivers específicos de DBMS. Aplicativos chamam as funções desses drivers para acessar dados de maneira independente do DBMS. Um Gerenciador de Driver gerencia a comunicação entre aplicativos e drivers.  
   
- Embora a Microsoft fornece um Gerenciador de driver para computadores que executam o Microsoft Windows® 95 e posterior, escreveu vários drivers ODBC e chama funções ODBC de alguns de seus aplicativos, qualquer pessoa pode gravar aplicativos de ODBC e drivers. Na verdade, a maioria dos aplicativos de ODBC e drivers disponíveis hoje são gravados pela Microsoft. Além disso, aplicativos e drivers de ODBC existem a Macintosh® em uma variedade de plataformas UNIX.  
+ Embora a Microsoft fornece um Gerenciador de driver para computadores que executam o Microsoft Windows® 95 e posterior, escreveu vários drivers ODBC e chama funções ODBC de alguns de seus aplicativos, qualquer pessoa pode escrever drivers e aplicativos de ODBC. Na verdade, a grande maioria dos aplicativos ODBC e drivers disponíveis hoje são escritos por empresas diferentes da Microsoft. Além disso, aplicativos e drivers ODBC existem a Macintosh® em uma variedade de plataformas UNIX.  
   
- Para ajudar os desenvolvedores de drivers e aplicativos, a Microsoft oferece um ODBC Software Development Kit (SDK) para computadores que executam o Windows 95 e posterior que fornece o Gerenciador de driver, instalador DLL, as ferramentas de teste e aplicativos de exemplo. Microsoft associou-se à Visigenic Software para esses SDKs para Macintosh e uma variedade de plataformas UNIX da porta.  
+ Para ajudar os desenvolvedores de aplicativos e drivers, a Microsoft oferece um ODBC Software Development Kit (SDK) para computadores que executam o Windows 95 e posterior que fornece o Gerenciador de driver, DLL do instalador, as ferramentas de teste e aplicativos de exemplo. A Microsoft tem se com o Visigenic Software portar esses SDKs para Macintosh e uma variedade de plataformas UNIX.  
   
- É importante entender que o ODBC foi projetado para expõe os recursos de banco de dados, não suplemento-los. Assim, gravadores de aplicativo não devem esperar que usando o ODBC repentinamente transformará um banco de dados simple em um mecanismo de banco de dados relacional totalmente em destaque. Nem gravadores de driver devem implementar a funcionalidade não encontrada no banco de dados subjacente. Uma exceção a isso é que os desenvolvedores que escrevem drivers que acessem diretamente os dados de arquivo (como dados em um arquivo Xbase) são necessárias para gravar um mecanismo de banco de dados que oferece suporte a pelo menos mínimo de funcionalidade SQL. Outra exceção é que o componente ODBC do SDK do Windows, anteriormente incluída no Microsoft Data Access Components (MDAC) SDK, fornece uma biblioteca de cursor que simula cursores roláveis para drivers que implementam um determinado nível de funcionalidade.  
+ É importante entender que o ODBC é projetada para expor recursos de banco de dados, não suplemento-los. Assim, os criadores de aplicativo não devem esperar que usando o ODBC será, de repente, transformar um banco de dados simple em um mecanismo de banco de dados relacional com recursos completos. Nem gravadores de driver devem implementar a funcionalidade não encontrada no banco de dados subjacente. Uma exceção a isso é que os desenvolvedores que escrevem os drivers que acessam diretamente os dados de arquivo (como os dados em um arquivo Xbase) são necessárias para escrever um mecanismo de banco de dados que dá suporte a pelo menos mínimo de funcionalidade SQL. Outra exceção é que o componente ODBC do SDK do Windows, anteriormente incluídas no Microsoft Data Access Components (MDAC) do SDK, fornece uma biblioteca de cursor que simula cursores roláveis para drivers que implementam um certo nível de funcionalidade.  
   
- Aplicativos que usam ODBC são responsáveis por qualquer funcionalidade do banco de dados. Por exemplo, o ODBC não é um mecanismo de junção heterogêneo, nem é um processador de transação distribuída. No entanto, porque ele é independente de DBMS, ele pode ser usado para criar essas ferramentas de banco de dados.
+ Aplicativos que usam ODBC são responsáveis por qualquer funcionalidade entre bancos de dados. Por exemplo, o ODBC não é um mecanismo de junção heterogêneo, nem é um processador de transação distribuída. No entanto, porque ele é independente de DBMS, ele pode ser usado para compilar tais ferramentas de banco de dados.

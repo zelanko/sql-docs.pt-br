@@ -6,27 +6,24 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - hierarchical Recordsets [ADO], in XML
 ms.assetid: 5d4b11c4-c94f-4910-b99b-5b9abc50d791
-caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 697305c34e1906c95b20a2f33866bc57c1a1d019
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 06725d50662500000921c541b2066302a4de918a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272055"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47615954"
 ---
 # <a name="hierarchical-recordsets-in-xml"></a>Conjuntos de registros hierárquicos em XML
-ADO permite a persistência de objetos hierárquicas do conjunto de registros em XML. Com objetos hierárquicos do conjunto de registros, o valor de um campo no conjunto de registros pai é outro conjunto de registros. Esses campos são representados como elementos filho no fluxo XML em vez de um atributo.  
+ADO permite a persistência de objetos de conjunto de registros hierárquicos em XML. Com objetos de conjunto de registros hierárquicos, o valor de um campo no conjunto de registros pai é outro conjunto de registros. Esses campos são representados como elementos filho em um fluxo XML em vez de um atributo.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O exemplo a seguir demonstra esse caso:  
   
 ```  
@@ -108,25 +105,25 @@ Rs.Open "SHAPE {select stor_id, stor_name, state from stores} APPEND ({select st
 </xml>   
 ```  
   
- A ordem exata das colunas no conjunto de registros pai não é óbvia quando ele é mantido dessa maneira. Qualquer campo no pai pode conter um conjunto de registros filho. O provedor de persistência persistir todas as colunas escalares primeiro como atributos e, em seguida, persistir as colunas"todos os filhos Recordset" como elementos filho da linha pai. A posição ordinal do campo no pai conjunto de registros pode ser obtido consultando a definição de esquema do conjunto de registros. Cada campo tem uma propriedade do OLE DB, rs: número definida no namespace do esquema de conjunto de registros que contém o número ordinal para esse campo.  
+ A ordem exata das colunas no conjunto de registros pai não é óbvia quando ele é mantido dessa maneira. Qualquer campo no pai pode conter um conjunto de registros filho. O provedor de persistência persiste todas as colunas escalares primeiro como atributos e, em seguida, persistir as colunas"todos os filhos Recordset" como elementos filho da linha pai. A posição ordinal do campo no pai o conjunto de registros pode ser obtido, observando a definição de esquema do conjunto de registros. Cada campo tem uma propriedade de banco de dados OLE, rs: número, definida no namespace do esquema de conjunto de registros que contém o número ordinal para esse campo.  
   
- Os nomes de todos os campos no conjunto de registros filho são concatenados com o nome do campo no conjunto de registros que contém esse filho do pai. Isso é para garantir que não haja nenhum colisões de nomes em casos onde pai e filho conjuntos de registros ambos contêm um campo que é obtido de duas tabelas diferentes, mas é denominado individualmente.  
+ Os nomes de todos os campos do conjunto de registros filho são concatenados com o nome do campo no conjunto de registros que contém esse filho do pai. Isso é para garantir que não há nenhum colisões de nome em casos onde o pai e filho conjuntos de registros ambos os contenham um campo que é obtido de duas tabelas diferentes, mas é denominado corresponsáveis.  
   
- Ao salvar o conjunto de registros hierárquicos em XML, você deve estar ciente das seguintes restrições no ADO:  
+ Ao salvar os conjuntos de registros hierárquicos em XML, você deve estar ciente das seguintes restrições no ADO:  
   
--   Um conjunto de registros hierárquico com atualizações pendentes não pode ser mantido em XML.  
+-   Um conjunto de registros hierárquico, com atualizações pendentes não pode ser mantido em XML.  
   
--   Um conjunto de registros hierárquico criado com um comando de forma com parâmetros não pode ser persistentes (em formato XML ou ADTG).  
+-   Um conjunto de registros hierárquico criado com um comando de forma com parâmetros não pode ser persistentes (no formato XML ou ADTG).  
   
--   Atualmente, o ADO salva a relação entre pai e o conjunto de registros filho como um objeto binário grande (BLOB). Marcas XML para descrever esse relação ainda não tem sido definidas no namespace do esquema de conjunto de linhas.  
+-   Atualmente, o ADO salva o relacionamento entre pai e filho conjuntos de registros como um objeto binário grande (BLOB). Marcas XML para descrever essa relação ainda não foi definidas no namespace do esquema de conjunto de linhas.  
   
--   Quando um conjunto de registros hierárquico é salvo, filho todos os conjuntos de registros são salvas com ela. Se o conjunto de registros atual é um filho de outro conjunto de registros, seu pai não serão salvas. Filho de todos os conjuntos de registros que formam a subárvore do conjunto de registros atual são salvas.  
+-   Quando um conjunto de registros hierárquico é salvo, filho todos os conjuntos de registros são salvos com ele. Se o conjunto de registros atual for um filho de outro conjunto de registros, seu pai não é salvo. Filho de todos os conjuntos de registros que formam a subárvore do conjunto de registros atual são salvas.  
   
- Quando um conjunto de registros hierárquico é reaberto do formato XML persistentes, você deve estar ciente das seguintes limitações:  
+ Quando um conjunto de registros hierárquico é reaberto do seu formato XML persistentes, você deve estar ciente das seguintes limitações:  
   
 -   Se o registro filho contém registros para o qual não há nenhum registro correspondente do pai, essas linhas não são gravadas na representação XML do conjunto de registros hierárquicos. Portanto, essas linhas serão perdidas quando o conjunto de registros é reaberto do local de armazenamento persistente.  
   
--   Se um registro filho tiver referências a mais de um registro pai, em seguida, em reabrir o conjunto de registros, o conjunto de registros filho pode conter registros duplicados. No entanto, essas duplicatas só estará visíveis se o usuário trabalha diretamente com o conjunto de linhas filho subjacente. Se um capítulo é usado para navegar o filho do conjunto de registros (que é a única maneira de navegar por meio de ADO), as duplicatas não são visíveis.  
+-   Se um registro filho tiver referências a mais de um registro pai, em seguida, na reabertura o conjunto de registros, o conjunto de registros filho pode conter registros duplicados. No entanto, essas duplicatas só estará visíveis se o usuário trabalha diretamente com o conjunto de linhas filho subjacente. Se um capítulo é usado para navegar o filho do conjunto de registros (ou seja, a única maneira de navegar por meio de ADO), as duplicatas não são visíveis.  
   
 ## <a name="see-also"></a>Consulte também  
  [Persistência de registros em formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)

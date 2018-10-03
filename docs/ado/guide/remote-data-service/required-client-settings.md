@@ -6,40 +6,37 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - DataFactory handler in RDS [ADO]
 ms.assetid: e776b4e3-fcc4-4bfb-a7e8-5ffae1d83833
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9d24dd3875d921020634ed418b9a7eed5b97178c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 8c7e8b5d0583c2f0938c792d4e7fb9980e663a9b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35274285"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47667234"
 ---
-# <a name="required-client-settings"></a>Configurações de cliente necessárias
+# <a name="required-client-settings"></a>Configurações necessárias de cliente
 > [!IMPORTANT]
->  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (veja o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Aplicativos que usam o RDS devem migrar para [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (consulte o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Devem ser migrados para aplicativos que usam o RDS [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
  Especifique as seguintes configurações para usar um personalizado **DataFactory** manipulador.  
   
--   Especifique "provedor = MS Remote" no [Conexão Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) objeto [provedor Property (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) propriedade ou o **Conexão** cadeia de caracteres de conexão do objeto "**Provedor**= "palavra-chave.  
+-   Especifique "provedor = Remote MS" na [o objeto de Conexão (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) objeto [provedor de propriedade (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) propriedade ou o **Conexão** cadeia de caracteres de conexão do objeto "**Provedor**= "palavra-chave.  
   
--   Definir o [CursorLocation Property (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md) propriedade **adUseClient**.  
+-   Defina as [propriedade CursorLocation (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md) propriedade **adUseClient**.  
   
--   Especifique o nome do manipulador a ser usado no [DataControl objeto (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md) do objeto **manipulador** propriedade, ou o [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) cadeia de conexão do objeto " **Manipulador**= "palavra-chave. (Você não pode definir o manipulador de **Conexão** cadeia de conexão do objeto.)  
+-   Especifique o nome do manipulador a ser usado na [objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md) do objeto **manipulador** propriedade, ou o [objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) cadeia de caracteres de conexão do objeto " **Manipulador**= "palavra-chave. (Você não pode definir o manipulador de **Conexão** cadeia de conexão do objeto.)  
   
- RDS fornece um manipulador padrão no servidor chamado **MSDFMAP. Manipulador de**. (O arquivo de personalização padrão é denominado MSDFMAP. INI).  
+ O RDS fornece um manipulador padrão no servidor chamado **MSDFMAP. Manipulador**. (O arquivo de personalização padrão é denominado MSDFMAP. INI).  
   
  **Exemplo**  
   
- Suponha que as seguintes seções **MSDFMAP. INI** e o nome da fonte de dados, AdvWorks, foi definido anteriormente:  
+ Suponha que as seguintes seções **MSDFMAP. INI** e o nome da fonte de dados, AdvWorks, foram definidos anteriormente:  
   
 ```  
 [connect CustomerDataBase]  
@@ -52,7 +49,7 @@ SQL="SELECT * FROM Customers WHERE CustomerID = ?"
   
  Os trechos de código a seguir são escritos em Visual Basic:  
   
-## <a name="rdsdatacontrol-version"></a>RDS. Versão DataControl  
+## <a name="rdsdatacontrol-version"></a>RDS. Versão do DataControl  
   
 ```  
 Dim dc as New RDS.DataControl  
@@ -70,7 +67,7 @@ Dim rs as New ADODB.Recordset
 rs.CursorLocation = adUseClient  
 ```  
   
- Especifique o [manipulador de propriedade (RDS)](../../../ado/reference/rds-api/handler-property-rds.md) propriedade ou palavra-chave; o [provedor Property (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) propriedade ou palavra-chave; e o *CustomerById* e  *CustomerDatabase* identificadores. Abra o **registros** objeto  
+ Especifique o [manipulador de propriedade (RDS)](../../../ado/reference/rds-api/handler-property-rds.md) propriedade ou a palavra-chave; o [provedor de propriedade (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) propriedade ou a palavra-chave; e o *CustomerById* e  *CustomerDatabase* identificadores. Em seguida, abra o **Recordset** objeto  
   
  RS. Abra "CustomerById(4)", "manipulador = MSDFMAP. Manipulador;"& _  
   
@@ -80,9 +77,9 @@ rs.CursorLocation = adUseClient
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Arquivo de personalização de conectar-se a seção](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
+ [Seção conexão do arquivo de personalização](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
  [Seção SQL do arquivo de personalização](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [Seção do arquivo UserList de personalização](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
+ [Seção de UserList do arquivo de personalização](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
  [Personalização do DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [Configurações de cliente necessárias](../../../ado/guide/remote-data-service/required-client-settings.md)   
  [Noções básicas sobre o arquivo de personalização](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   

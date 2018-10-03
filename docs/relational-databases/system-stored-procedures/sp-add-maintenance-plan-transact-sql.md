@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_maintenance_plan
@@ -21,12 +18,12 @@ ms.assetid: 01ab1834-6260-47cb-a1b7-20722217b062
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f8333faf08808f5299c17e159d96d3db7588df28
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 18467e53e2edec21ab91e91a0fe912e9382b35d5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43021759"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47642385"
 ---
 # <a name="spaddmaintenanceplan-transact-sql"></a>sp_add_maintenance_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +55,7 @@ sp_add_maintenance_plan [ @plan_name = ] 'plan_name' ,
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  **sp_add_maintenance_plan** deve ser executado a partir de **msdb** cria um plano de manutenção de novo, mas vazio e o banco de dados. Para adicionar um ou mais bancos de dados e associá-los a um trabalho ou trabalhos, execute **sp_add_maintenance_plan_db** e **sp_add_maintenance_plan_job**.  
   
 ## <a name="permissions"></a>Permissões  

@@ -4,31 +4,25 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - sp_helpsubscription_properties
 - sp_helpsubscription_properties_TSQL
 helpviewer_keywords:
 - sp_helpsubscription_properties
 ms.assetid: 7a76a645-97eb-47ac-b3ea-e2d75012cbed
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8bf2f6b3cf99b90662e609311fb787b0225759dc
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 6d0e785c2deb018464058594daeae56d2e6ebc78
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43019685"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47615914"
 ---
 # <a name="sphelpsubscriptionproperties-transact-sql"></a>sp_helpsubscription_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +99,7 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  **sp_helpsubscription_properties** é usado em replicação de instantâneo, replicação transacional e replicação de mesclagem.  
   
 ## <a name="permissions"></a>Permissões  

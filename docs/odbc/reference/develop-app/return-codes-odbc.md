@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - return codes [ODBC]
 - diagnostic information [ODBC], return codes
 ms.assetid: e893b719-4392-476f-911a-5ed6da6f7e94
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 12751f87c9f9832567dc04ba7df7659e80e66897
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aee8914493c66ff451d7bca7f56fc8723d2a7ca0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32913211"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47639724"
 ---
 # <a name="return-codes-odbc"></a>Códigos de retorno ODBC
-Cada função em ODBC retorna um código, conhecido como seu *retornam o código,* que indica o êxito ou falha da função geral. Em geral, a lógica de programação se baseia em códigos de retorno.  
+Cada função no ODBC retorna um código, conhecido como seu *código de retorno,* que indica o êxito ou falha da função geral. Em geral, a lógica de programação se baseia em códigos de retorno.  
   
  Por exemplo, o código a seguir chama **SQLFetch** para recuperar as linhas em um conjunto de resultados. Ele verifica o código de retorno da função para determinar se o final do conjunto de resultados foi atingido (SQL_NO_DATA), se qualquer informação de aviso foi retornada (SQL_SUCCESS_WITH_INFO) ou se um erro (SQL_ERROR).  
   
@@ -50,10 +47,10 @@ while ((rc=SQLFetch(hstmt)) != SQL_NO_DATA) {
   
 |Código de retorno|Description|  
 |-----------------|-----------------|  
-|SQL_SUCCESS|Função foi concluída com êxito. O aplicativo chama **SQLGetDiagField** para recuperar informações adicionais do registro de cabeçalho.|  
+|SQL_SUCCESS|Função foi concluída com êxito. O aplicativo chama **SQLGetDiagField** para recuperar informações adicionais de registro de cabeçalho.|  
 |SQL_SUCCESS_WITH_INFO|Função foi concluída com êxito, possivelmente com um erro não fatal (aviso). O aplicativo chama **SQLGetDiagRec** ou **SQLGetDiagField** para recuperar informações adicionais.|  
 |SQL_ERROR|Falha na função. O aplicativo chama **SQLGetDiagRec** ou **SQLGetDiagField** para recuperar informações adicionais. O conteúdo de quaisquer argumentos de saída para a função é indefinido.|  
-|SQL_INVALID_HANDLE|Função falhou devido a um identificador de ambiente, conexão, instrução ou descritor inválido. Isso indica um erro de programação. Nenhuma informação adicional está disponível na **SQLGetDiagRec** ou **SQLGetDiagField**. Este código é retornado somente quando o identificador é um ponteiro nulo ou tem tipo errado, como quando um identificador de instrução é passado como um argumento que exige um identificador de conexão.|  
-|SQL_NO_DATA|Não há mais dados estavam disponíveis. O aplicativo chama **SQLGetDiagRec** ou **SQLGetDiagField** para recuperar informações adicionais. Um ou mais registros de status definidos pelo driver de classe 02xxx podem ser retornados. **Observação:** no ODBC 2. *x*, isso retornará o código foi nomeado SQL_NO_DATA_FOUND.|  
+|SQL_INVALID_HANDLE|Função falhou devido a um identificador de ambiente, conexão, instrução ou descritor inválido. Isso indica um erro de programação. Nenhuma informação adicional está disponível no **SQLGetDiagRec** ou **SQLGetDiagField**. Esse código é retornado somente quando o identificador é um ponteiro nulo ou é o tipo errado, como quando um identificador de instrução é passado para um argumento que requer um identificador de conexão.|  
+|SQL_NO_DATA|Não há mais dados estavam disponíveis. O aplicativo chama **SQLGetDiagRec** ou **SQLGetDiagField** para recuperar informações adicionais. Um ou mais registros de status definido pelo driver na classe 02xxx podem ser retornados. **Observação:** em ODBC 2. *x*, isso retornará o código foi nomeado SQL_NO_DATA_FOUND.|  
 |SQL_NEED_DATA|Mais dados são necessários, como quando os dados de parâmetro são enviados em tempo de execução ou informações de conexão adicionais são necessárias. O aplicativo chama **SQLGetDiagRec** ou **SQLGetDiagField** para recuperar informações adicionais, se houver.|  
-|SQL_STILL_EXECUTING|Uma função que foi iniciada de forma assíncrona ainda estiver em execução. O aplicativo chama **SQLGetDiagRec** ou **SQLGetDiagField** para recuperar informações adicionais, se houver.|
+|SQL_STILL_EXECUTING|Uma função que foi iniciada de forma assíncrona ainda está em execução. O aplicativo chama **SQLGetDiagRec** ou **SQLGetDiagField** para recuperar informações adicionais, se houver.|

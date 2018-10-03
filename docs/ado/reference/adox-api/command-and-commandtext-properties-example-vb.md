@@ -1,13 +1,11 @@
 ---
-title: Comando e exemplo de propriedades CommandText (VB) | Microsoft Docs
+title: Exemplo Command e CommandText propriedades (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,18 +13,17 @@ helpviewer_keywords:
 - CommandText property [ADOX], Visual Basic example
 - Command property [ADOX], Visual Basic example
 ms.assetid: 413263a8-05c0-4404-929d-69f82b987ba3
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 710bcfef773fcb5801604eb46121da7bfc689596
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 742f00402a553d8f918e0de0c3aad0f6c6e4af64
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285315"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47634614"
 ---
-# <a name="command-and-commandtext-properties-example-vb"></a>Exemplo de propriedades de CommandText (VB) e comando
+# <a name="command-and-commandtext-properties-example-vb"></a>Exemplo da propriedade Command e CommandText (VB)
 O código a seguir demonstra como usar o [comando](../../../ado/reference/adox-api/command-property-adox.md) propriedade para atualizar o texto de um procedimento.  
   
 ```  
@@ -81,7 +78,7 @@ End Sub
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedade ActiveConnection (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Objeto de catálogo (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Propriedade de comando (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
- [Objeto de procedimento (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
+ [Objeto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Propriedade Command (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
+ [Objeto Procedure (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
  [Coleção Procedures (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)

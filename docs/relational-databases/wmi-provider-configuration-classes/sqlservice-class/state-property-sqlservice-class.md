@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - State Property (SqlService Class)
@@ -19,16 +16,15 @@ apitype: MOFDef
 helpviewer_keywords:
 - State property
 ms.assetid: 9e09f419-947c-4d4b-9a49-2d3396c847cd
-caps.latest.revision: 36
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 350d59fa026f16007cffd279f4f6298eeca86e6c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: bed08f87e3d93eb3d18a86fd0931a4359a67ffea
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38005376"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47644164"
 ---
 # <a name="state-property-sqlservice-class"></a>Propriedade State (classe SqlService)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +67,7 @@ object.State [= value]
  7  
  Em pausa. O serviço foi pausado.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 ## <a name="see-also"></a>Consulte também  
  [Iniciando e parando serviços](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

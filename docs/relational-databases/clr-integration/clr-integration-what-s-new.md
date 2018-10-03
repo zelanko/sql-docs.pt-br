@@ -3,21 +3,19 @@ title: O que&#39;novo no CLR Integration | Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.custom: ''
 ms.technology: clr
 ms.topic: conceptual
 ms.assetid: 871fcccd-b726-4b13-9f95-d02b4b39d8ab
-caps.latest.revision: 7
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 55cb6537db540fb5d916b72cb1b469dc3846f419
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: b2adfc4b32b2d6223f2852a425bf073f14cb3294
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37356208"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47659336"
 ---
 # <a name="clr-integration---what39s-new"></a>Integração CLR – o que&#39;novo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,13 +1,11 @@
 ---
-title: Exemplo de propriedades de UnderlyingValue (VC + +) e OriginalValue | Microsoft Docs
+title: Exemplo de OriginalValue e UnderlyingValue propriedades (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - UnderlyingValue property [ADO], VC++ example
 - OriginalValue property [ADO]
 ms.assetid: c5762ad2-f43b-453d-b44a-9c70210eb00f
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8fa7e2dbf687c9d07bad1e9052b7fd2eeede1e4f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e6b2f13f84f8776756253592f9b293a2a3764da9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280065"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47623718"
 ---
-# <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>Exemplo de propriedades de UnderlyingValue (VC + +) e OriginalValue
-Este exemplo demonstra o [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) e [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) propriedades exibindo uma mensagem se um registro de dados subjacentes foram alterados durante um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) atualização em lotes.  
+# <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>Exemplo de OriginalValue e UnderlyingValue propriedades (VC + +)
+Este exemplo demonstra a [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) e [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md) propriedades exibindo uma mensagem se um registro de dados subjacentes foi alterada durante uma [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) atualização em lotes.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -198,27 +195,27 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **Os dados foram alterados!**  
+ **Dados mudaram!**  
 **ID do título: PS1372**  
 **Valor atual: self_help**   
 **Valor original: psicologia**   
 **Valor subjacente: sociologia**   
-**Os dados foram alterados!**  
+**Dados mudaram!**  
 **ID do título: PS2091**  
 **Valor atual: self_help**   
 **Valor original: psicologia**   
 **Valor subjacente: sociologia**   
-**Os dados foram alterados!**  
+**Dados mudaram!**  
 **ID do título: PS2106**  
 **Valor atual: self_help**   
 **Valor original: psicologia**   
 **Valor subjacente: sociologia**   
-**Os dados foram alterados!**  
+**Dados mudaram!**  
 **ID do título: PS3333**  
 **Valor atual: self_help**   
 **Valor original: psicologia**   
 **Valor subjacente: sociologia**   
-**Os dados foram alterados!**  
+**Dados mudaram!**  
 **ID do título: PS7777**  
 **Valor atual: self_help**   
 **Valor original: psicologia**   

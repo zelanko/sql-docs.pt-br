@@ -3,13 +3,10 @@ title: sp_addsubscription (Transact-SQL) | Microsoft Docs
 ms.date: 10/28/2015
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.custom: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addsubscription
@@ -20,12 +17,12 @@ ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ea2923af852801639d3cc2007d872a2823bc5d1b
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 30dbaa3bc31135931fdceecb34ab454a4a46e495
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43026865"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47663524"
 ---
 # <a name="spaddsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -293,7 +290,7 @@ sp_addsubscription [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  sp_addsubscription é usado em replicação de instantâneo e replicação transacional.  
   
  Quando sp_addsubscription é executado por um membro da função de servidor fixa sysadmin para criar uma assinatura push, o trabalho do Distribution Agent é implicitamente criado e executado na conta de serviço do SQL Server Agent. Recomendamos que você execute [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) e especifique as credenciais da conta diferente, específica de agente do Windows para @job_login e @job_password. Para obter mais informações, consulte [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  

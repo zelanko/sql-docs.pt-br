@@ -1,13 +1,11 @@
 ---
-title: A coleção de CubeDefs (ADO MD) | Microsoft Docs
+title: Coleção CubeDefs (ADO MD) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,28 +14,27 @@ f1_keywords:
 helpviewer_keywords:
 - CubeDefs collection [ADO MD]
 ms.assetid: c79a5e36-71fd-44c4-948d-d6a7a89bb3b5
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 652d4c9f73c19a839609899a98e7c418b1501232
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ab6e6e79f155ec5c88a093c5b379b7132dbbb5a7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283615"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47660604"
 ---
-# <a name="cubedefs-collection-ado-md"></a>Coleção de CubeDefs (ADO MD)
+# <a name="cubedefs-collection-ado-md"></a>Coleção CubeDefs (ADO MD)
 Contém o [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) objetos que representam um cubo de um catálogo multidimensional.  
   
-## <a name="remarks"></a>Remarks  
- **CubeDefs** é uma coleção padrão do ADO. Com as propriedades e métodos de uma coleção, você pode fazer o seguinte:  
+## <a name="remarks"></a>Comentários  
+ **CubeDefs** é uma coleção padrão de ADO. Com as propriedades e métodos de uma coleção, você pode fazer o seguinte:  
   
 -   Obter o número de objetos na coleção com o [contagem](../../../ado/reference/ado-api/count-property-ado.md) propriedade.  
   
--   Retorna um objeto da coleção com o padrão [Item](../../../ado/reference/ado-api/item-property-ado.md) propriedade.  
+-   Retornar um objeto da coleção com o padrão [Item](../../../ado/reference/ado-api/item-property-ado.md) propriedade.  
   
--   Atualizar os objetos na coleção do provedor com o [atualização](../../../ado/reference/ado-api/refresh-method-ado.md) método.  
+-   Atualizar os objetos na coleção do provedor com o [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) método.  
   
  Esta seção contém o tópico a seguir.  
   

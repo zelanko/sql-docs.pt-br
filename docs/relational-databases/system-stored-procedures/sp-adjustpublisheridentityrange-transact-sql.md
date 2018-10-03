@@ -4,15 +4,10 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - sp_adjustpublisheridentityrange_TSQL
 - sp_adjustpublisheridentityrange
@@ -22,12 +17,12 @@ ms.assetid: 64f111fd-fb7d-4459-93f7-65f0f8dd7efe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eb3d39fd2c1f4369af598af1c593ea530150d2ab
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 2016996f05393777f8284c78d854301f22ba8f73
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43032774"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47625014"
 ---
 # <a name="spadjustpublisheridentityrange-transact-sql"></a>sp_adjustpublisheridentityrange (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +53,7 @@ sp_adjustpublisheridentityrange [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  **sp_adjustpublisheridentityrange** é usado em todos os tipos de replicação.  
   
  Para uma publicação que tem o intervalo de identidade automático habilitado, o Distribution Agent ou o Merge Agent é responsável por ajustar automaticamente o intervalo de identidade em uma publicação baseada em seu valor de limite. No entanto, se por algum motivo o Distribution Agent ou Merge Agent não foi executado por um período de tempo, e o recurso de intervalo de identidade tiver sido expressivamente consumido até o ponto de limite, os usuários podem chamar **sp_adjustpublisheridentityrange** para alocar um novo intervalo de valores para um publicador.  
