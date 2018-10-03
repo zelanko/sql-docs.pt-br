@@ -5,23 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - components [Integration Services], properties
 ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
-caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d97d2aeabc624d2d13ed4ed6e6ae515b314bbb1e
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 988675dd00135599fa053acb5cb96d58e81d9e14
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35409198"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47628574"
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>Definir as propriedades de um componente de fluxo de dados
   Para definir as propriedades de componentes de fluxo de dados, que incluem origens, destinos e transformações, use um dos seguintes recursos:  

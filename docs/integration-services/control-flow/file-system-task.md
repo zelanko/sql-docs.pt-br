@@ -5,9 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.filesystemtask.f1
@@ -15,16 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - File System task [Integration Services]
 ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
-caps.latest.revision: 58
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2913492a72dc0c384fa6885664db1038a178e64e
-ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
+ms.openlocfilehash: 19d117028e03fb3223ee3448ca555531ad47d94d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35331370"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47633884"
 ---
 # <a name="file-system-task"></a>Tarefa Sistema de Arquivos
   A tarefa Sistema de Arquivos executa operações em arquivos e diretórios no sistema de arquivos. Por exemplo, ao usar a tarefa Sistema de Arquivos, um pacote pode criar, mover ou excluir diretórios e arquivos. Você também pode usar a tarefa Sistema de Arquivos para definir atributos em arquivos e diretórios. Por exemplo, a tarefa Sistema de Arquivos pode tornar os arquivos em ocultos ou somente leitura.  

@@ -4,7 +4,6 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - "10015"
@@ -16,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: db86c208-ff1e-4297-aa0c-c250f053f83e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: dae0c4af2629bfe29766f2d55b7e635c6cf3f3fe
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: d0b7d5475804c888e26ba5b1df771c3cb6367dac
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43276235"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47611634"
 ---
 # <a name="report-model-query-designer-user-interface"></a>Interface de usuário do Designer de Consulta do modelo de relatório
   O Designer de Relatórios fornece dois designers de consulta para ajudá-lo a especificar quais dados de uma fonte de dados do Modelo do Servidor de Relatórios você deseja usar em um relatório. Use o designer de consultas gráficas para explorar e escolher entidades de modelo e campos de entidade. Use o designer de consulta baseado em texto para trabalhar diretamente com uma especificação de linguagem SMDL em formato XML.  

@@ -4,7 +4,6 @@ ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-data
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], data
@@ -16,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d92add64-e93c-4598-8508-55d1bc46acf6
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 684699b4eed7235ebb236cbc5a7a08bdb0044f6d
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: fcd1fae7282c03c739abb172304e69c9b1417a3a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43266428"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613044"
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>Registrar um provedor de dados padrão do .NET Framework (SSRS)
   Para usar um provedor de dados do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] terceirizado com o objetivo de recuperar dados para um conjunto de relatórios do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , é preciso implantar e registrar o assembly do provedor de dados do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] em dois locais: no cliente que está criando o relatório e no servidor de relatório. No cliente que está criando o relatório, você deve registrar o provedor de dados como um tipo de fonte de dados e associá-lo a um designer de consulta. Você pode selecionar esse provedor de dados como um tipo de fonte de dados quando criar um conjunto de dados de relatório. O designer de consulta associado é aberto para ajudá-lo a criar consultas para esse tipo de fonte de dados. No servidor de relatório, é preciso registrar o provedor de dados como um tipo de fonte de dados. Você pode processar os relatórios publicados que recuperam dados a partir de uma fonte de dados usando este provedor de dados.  

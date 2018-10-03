@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Audit Schema Object Management event class
 ms.assetid: f38c2380-24e0-4484-806c-d076f4f194cf
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6f6bdea716110aeb3adfd5d75690ee1a733a6d31
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 681ba7b26daa3fc36bf0c11de2ef803fe4b5e589
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43063539"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47630364"
 ---
 # <a name="audit-schema-object-management-event-class"></a>Classe de evento Audit Schema Object Management
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
