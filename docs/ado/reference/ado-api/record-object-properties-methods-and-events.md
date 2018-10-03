@@ -1,29 +1,26 @@
 ---
-title: Registram eventos, métodos e propriedades do objeto | Microsoft Docs
+title: Registre as propriedades do objeto, métodos e eventos | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Record object [ADO], members
 ms.assetid: dadde268-bd0f-4ba0-8775-83a5cd3e258a
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d92f1c1c7a06dc876879d08d475bfe00b2b0edaf
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 34a3d44ecd85845a47923a7f26de7188b65df8e8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280895"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47757514"
 ---
-# <a name="record-object-properties-methods-and-events"></a>Eventos, métodos e propriedades do objeto de registro
+# <a name="record-object-properties-methods-and-events"></a>Propriedades, métodos e eventos do objeto Record
 ## <a name="propertiescollections"></a>Propriedades/coleções  
  [Propriedade ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)  
   
@@ -48,7 +45,7 @@ ms.locfileid: "35280895"
   
  [Método CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md)  
   
- [Método ExcluirRegistro](../../../ado/reference/ado-api/deleterecord-method-ado.md)  
+ [Método DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md)  
   
  [Método GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md)  
   

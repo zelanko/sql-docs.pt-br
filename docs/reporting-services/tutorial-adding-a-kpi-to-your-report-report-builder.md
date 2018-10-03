@@ -4,19 +4,16 @@ ms.date: 06/15/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
-ms.suite: pro-bi
 ms.topic: conceptual
-applies_to:
-- SQL Server 2016
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f200c851a9cf5d8e279d0b3bd00d92481cc85128
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: 7a7e189f7ed6735d9519900735e2fde9529c50e3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43269987"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47723954"
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Tutorial: adicionando um KPI ao relatório (Construtor de Relatórios)
 Neste tutorial do [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)], você adiciona um KPI (indicador chave de desempenho) a um relatório paginado do [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)].  
@@ -338,7 +335,7 @@ O relatório será salvo no servidor de relatório. O nome do servidor de relat�
   
 2.  Clique em **Salvar**.  
   
-## <a name="next-steps"></a>Próximas etapas  
+## <a name="next-steps"></a>Next Steps  
 Você completou com êxito o tutorial Adicionando um KPI ao relatório. Para obter mais informações, consulte:
 *  [Medidores](../reporting-services/report-design/gauges-report-builder-and-ssrs.md)
 * [Indicadores](../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  

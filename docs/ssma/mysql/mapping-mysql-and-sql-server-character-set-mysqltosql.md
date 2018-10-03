@@ -1,45 +1,39 @@
 ---
-title: Mapeamento de caracteres do SQL Server e MySQL definido (MySQLToSQL) | Microsoft Docs
+title: Mapeamento de caracteres do SQL Server e MySQL definida (MySQLToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 20b3f22e-16a2-4a87-b4eb-c277be6bf5c8
-caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 94764ed6777b4310ebc38bbf8375089a0ac00c92
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: cebdf2ed28287a59ec9d4f0daaa1d0c200f8fe20
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34776412"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789024"
 ---
-# <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>Mapeamento de caracteres do SQL Server e MySQL definido (MySQLToSQL)
-Conjunto de caracteres (Charset) pode ser especificado para tipos de dados MySQL, expressões e literais.  
+# <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>Mapear o conjunto de caracteres do SQL Server e MySQL (MySQLToSQL)
+O conjunto de caracteres (Charset) pode ser especificado para tipos de dados de caractere do MySQL, expressões e literais.  
   
 ## <a name="charset-mapping"></a>Mapeamento de conjunto de caracteres  
 Mapeamento de conjunto de caracteres é definido para cada conjunto de caracteres do MySQL e usado durante a conversão de tipo de dados de caractere. Especifica como converter tipos de dados de cadeia de caracteres de um conjunto de caracteres em particular:  
   
--   Para tipos de caractere nacionais do SQL Server (NCHAR/NVARCHAR), ou  
+-   Para tipos de caracteres nacionais do SQL Server (NCHAR/NVARCHAR), ou  
   
 -   Para tipos de caracteres regulares do SQL Server (CHAR/VARCHAR)  
   
-1.  **National** são de tipos de dados de caracteres de banco de dados de destino:  
+1.  **National** são tipos de dados de caracteres de banco de dados de destino:  
   
     1.  **nchar**  
   
     2.  **nvarchar**  
   
-2.  **regular** são de tipos de dados de caracteres de banco de dados de destino:  
+2.  **regular** são tipos de dados de caracteres de banco de dados de destino:  
   
     1.  **char**  
   
@@ -48,7 +42,7 @@ Mapeamento de conjunto de caracteres é definido para cada conjunto de caractere
 3.  Mapeamento de tipo só permite o mapeamento para **national** tipos de dados de caractere. Depois que o tipo de dados de caractere do MySQL é convertido de acordo com o mapeamento de tipo, o mapeamento de conjunto de caracteres é aplicado.  
   
 > [!NOTE]  
-> Mapeamento de conjunto de caracteres pode ser definida em cada nível de nó do Pesquisador de objetos de metadados e representam todos os conjuntos de caracteres lidos do MySQL.  
+> Mapeamento de conjunto de caracteres podem ser definidas em cada nível de nó do Pesquisador de objetos de metadados e representam todos os conjuntos de caracteres lidos do MySQL.  
   
 ## <a name="charset-mapping-on-different-node-levels"></a>Mapeamento de conjunto de caracteres em diferentes níveis de nó  
 Mapeamento de conjunto de caracteres varia em diferentes níveis de nó, ou seja:  
@@ -58,21 +52,21 @@ Mapeamento de conjunto de caracteres varia em diferentes níveis de nó, ou seja
 2.  No banco de dados, categoria e nível de nó de objeto  
   
 > [!NOTE]  
-> A guia selecionada para editar o mapeamento de conjunto de caracteres, contém três botões, independentemente do mapeamento nos níveis de nó diferente.  
+> A guia selecionada para edição o mapeamento de conjunto de caracteres, contém três botões, independentemente do mapeamento nos níveis de nó diferente.  
 >   
 > São eles:  
 >   
-> 1.  **Se aplicam:** aplica as alterações feitas pelo usuário, habilitado somente quando o mapeamento de conjunto de caracteres é editado e ainda não foi salvo.  
-> 2.  **Cancelar:** cancela as alterações feitas pelo usuário. O botão obtém habilitado quando o mapeamento de conjunto de caracteres é editado mas não foi salvo.  
+> 1.  **Se aplicam:** aplica as alterações feitas pelo usuário, habilitado apenas quando o mapeamento de conjunto de caracteres é editado e ainda não foi salvo.  
+> 2.  **Cancelar:** cancela as alterações feitas pelo usuário. O botão é habilitado quando o mapeamento de conjunto de caracteres é editado, mas não salvo.  
 > 3.  **Redefinir para padrão:** redefine todos os mapeamentos para os valores padrão.  
   
-1.  **No nível de nó de metadados de raiz:** grade de mapeamento de conjunto de caracteres contém a grade de conjunto de caracteres com uma coluna separada para cada conjunto de caracteres. As colunas da grade são:  
+1.  **No nível de nó de metadados raiz:** grade de mapeamento de conjunto de caracteres contém a grade de conjunto de caracteres com uma coluna separada para cada conjunto de caracteres. As colunas da grade são:  
   
-    1.  A primeira coluna da grade nomeada **nome do conjunto de caracteres** contém o nome do conjunto de caracteres.  
+    1.  A primeira coluna da grade chamado **nome do conjunto de caracteres** contém o nome do conjunto de caracteres.  
   
-    2.  O outro denominado **descrição do conjunto de caracteres** contém a descrição do conjunto de caracteres.  
+    2.  O segundo é denominado **descrição do conjunto de caracteres** contém a descrição do conjunto de caracteres.  
   
-    3.  A terceira coluna intitulada **tipo de conjunto de caracteres de destino** contém as configurações de mapeamento de conjunto de caracteres específica. Os valores desta coluna são:  
+    3.  A terceira coluna intitulada **tipo de conjunto de caracteres de destino** contém as configurações de mapeamento para determinado conjunto de caracteres. Os valores desta coluna são:  
   
         -   CHAR/VARCHAR  
   
@@ -81,25 +75,25 @@ Mapeamento de conjunto de caracteres varia em diferentes níveis de nó, ou seja
     > [!IMPORTANT]  
     > Os valores padrão para um determinado conjunto de caracteres têm o prefixo '(padrão)' após CHAR/VARCHAR ou NCHAR/NVARCHAR.  
   
-    O mapeamento de conjunto de caracteres entre banco de dados MySQL e o banco de dados de destino no nível de nó raiz metadados é fornecido abaixo:  
+    O mapeamento de conjunto de caracteres entre o banco de dados MySQL e o banco de dados de destino no nível de nó de metadados raiz é fornecido abaixo:  
   
     ||||  
     |-|-|-|  
     |**Nome do conjunto de caracteres**|**Descrição do conjunto de caracteres**|**Tipo de conjunto de caracteres de destino (padrão)**|  
-    |Big5|Chinês tradicional Big5|NCHAR/NVARCHAR (padrão)|  
-    |dec8|Europeu Ocidental DEC|CHAR/VARCHAR (padrão)|  
-    |cp850|Oeste DOS Europeu|CHAR/VARCHAR (padrão)|  
+    |Big5|Chinês tradicional de Big5|NCHAR/NVARCHAR (padrão)|  
+    |dec8|DEC oeste Europeu|CHAR/VARCHAR (padrão)|  
+    |cp850|DOS oeste Europeu|CHAR/VARCHAR (padrão)|  
     |hp8|HP oeste Europeu|CHAR/VARCHAR (padrão)|  
     |koi8r|KOI8-R Relcom russo|CHAR/VARCHAR (padrão)|  
     |Latino 1|CP1252 oeste Europeu|CHAR/VARCHAR (padrão)|  
-    |latin2|Europeu Central ISO 8859-2|CHAR/VARCHAR (padrão)|  
+    |latin2|ISO 8859-2 Centro-europeu|CHAR/VARCHAR (padrão)|  
     |swe7|7 bits sueco|CHAR/VARCHAR (padrão)|  
     |ascii|US ASCII|CHAR/VARCHAR (padrão)|  
-    |ujis|EUC-JP japonês|NCHAR/NVARCHAR (padrão)|  
-    |SJIS|Japonês Shift JIS|NCHAR/NVARCHAR (padrão)|  
+    |ujis|Japonês EUC-JP|NCHAR/NVARCHAR (padrão)|  
+    |SJIS|Japonês Shift-JIS|NCHAR/NVARCHAR (padrão)|  
     |Hebraico|ISO 8859-8 Hebraico|CHAR/VARCHAR (padrão)|  
     |tis620|TIS620 tailandês|CHAR/VARCHAR (padrão)|  
-    |euckr|Coreano EUC-KR|NCHAR/NVARCHAR (padrão)|  
+    |euckr|Coreano Coreia EUC|NCHAR/NVARCHAR (padrão)|  
     |koi8u|Ucraniano KOI8-U|CHAR/VARCHAR (padrão)|  
     |gb2312|GB2312 Chinês simplificado|NCHAR/NVARCHAR (padrão)|  
     |Grego|ISO 8859-7 Grego|CHAR/VARCHAR (padrão)|  
@@ -110,7 +104,7 @@ Mapeamento de conjunto de caracteres varia em diferentes níveis de nó, ou seja
     |UTF8|Unicode UTF-8|NCHAR/NVARCHAR (padrão)|  
     |ucs2|Unicode UCS-2|NCHAR/NVARCHAR (padrão)|  
     |cp866|Russo DOS|CHAR/VARCHAR (padrão)|  
-    |keybcs2|DOS Kamenicky tcheco-eslovaco|CHAR/VARCHAR (padrão)|  
+    |keybcs2|Tcheco-eslovaco do DOS Kamenicky|CHAR/VARCHAR (padrão)|  
     |macce|Europeu Central do Mac|CHAR/VARCHAR (padrão)|  
     |MacRoman|Mac oeste Europeu|CHAR/VARCHAR (padrão)|  
     |cp852|Europeu Central DOS|CHAR/VARCHAR (padrão)|  
@@ -120,16 +114,16 @@ Mapeamento de conjunto de caracteres varia em diferentes níveis de nó, ou seja
     |cp 1257|Windows báltico|CHAR/VARCHAR (padrão)|  
     |BINARY|Conjunto de caracteres binária pseudo|CHAR/VARCHAR (padrão)|  
     |geostd8|Georgiano GEOSTD8|CHAR/VARCHAR (padrão)|  
-    |cp932|SJIS em japonês do Windows|NCHAR/NVARCHAR (padrão)|  
+    |cp932|SJIS para japonês do Windows|NCHAR/NVARCHAR (padrão)|  
     |eucjpms|UJIS para japonês do Windows|NCHAR/NVARCHAR (padrão)|  
   
-2.  **No banco de dados, categoria ou níveis de nó de objeto:** no nível do banco de dados, categoria ou nós de objeto, charset mapeamento grade contém as mesmas linhas como no nível de nó raiz metadados viz.:  
+2.  **No banco de dados, categoria ou nos níveis de nó de objeto:** no nível de banco de dados, categoria ou nós de objeto, grade de mapeamento de conjunto de caracteres contém as mesmas linhas como um no nível do nó de metadados de raiz, sobre visualização.:  
   
-    1.  A primeira coluna da grade intitulado **nome de conjunto de caracteres** contém o nome do conjunto de caracteres.  
+    1.  A primeira coluna da grade intitulada **nome do conjunto de caracteres** contém o nome do conjunto de caracteres.  
   
     2.  A segunda coluna intitulada **caractere definir descrição** contém a descrição do conjunto de caracteres.  
   
-    3.  A única diferença é que os valores na terceira coluna da grade. A terceira coluna intitulada **tipo de dados de destino** contém as configurações de mapeamento de conjunto de caracteres específica. Os valores da coluna são:  
+    3.  A única diferença é que os valores na terceira coluna da grade. A terceira coluna intitulada **tipo de dados de destino** contém as configurações de mapeamento para determinado conjunto de caracteres. Os valores da coluna são:  
   
         -   Herdado (CHAR/VARCHAR ou NCHAR/NVARCHAR)  
   
@@ -138,6 +132,6 @@ Mapeamento de conjunto de caracteres varia em diferentes níveis de nó, ou seja
         -   NCHAR/NVARCHAR  
   
 > [!IMPORTANT]  
-> -   No mapeamento de conjunto de caracteres entre o banco de dados MySQL e o banco de dados de destino no banco de dados, categorias e níveis de nó de objeto, os valores padrão para um determinado conjunto de caracteres em cada nível diferente de raiz para a coluna **tipo de dados de destino** deve ser 'herdada'.  
-> -   Na grade, o valor **herdadas** é o sufixo com o '(CHAR/VARCHAR)' ou '(NCHAR/NVARCHAR)' dependendo de qual valor foi herdado do pai, esse conjunto de caracteres específico.  
+> -   No mapeamento de conjunto de caracteres entre o banco de dados MySQL e banco de dados de destino no banco de dados, categoria e níveis de nó de objeto, os valores padrão para um determinado conjunto de caracteres em cada nível que não seja a raiz para a coluna **tipo de dados de destino** deve ser ' Herdado '.  
+> -   Na grade, o valor **Inherited** é sufixado com qualquer um '(CHAR/VARCHAR)' ou '(NCHAR/NVARCHAR)', dependendo de qual valor estava herdado do pai, esse conjunto de caracteres específico.  
   

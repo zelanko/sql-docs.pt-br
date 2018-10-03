@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], client connectivity
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
-caps.latest.revision: 16
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4a96778c40315871052aeb8d1ba2f5369c2c14ef
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 422ece01b8c0003fe51f685463956e143668c028
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769302"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47642184"
 ---
 # <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>Sobre Acesso de conexão de cliente a réplicas de disponibilidade (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -101,8 +98,8 @@ ms.locfileid: "34769302"
   
 |Réplica|Modo de confirmação|Função inicial|Acesso de conexão para a função secundária|Acesso de conexão para a função primária|  
 |-------------|-----------------|------------------|------------------------------------------|----------------------------------------|  
-|Replica1|Síncrona|Primária|Nenhum|Leitura-gravação|  
-|Replica2|Síncrona|Secundário|Nenhum|Leitura-gravação|  
+|Replica1|Síncrona|Primária|None|Leitura-gravação|  
+|Replica2|Síncrona|Secundário|None|Leitura-gravação|  
 |Replica3|Assíncrona|Secundário|Somente tentativa de leitura|Leitura-gravação|  
 |Replica4|Assíncrona|Secundário|Tentativa de leitura somente|Leitura-gravação|  
   

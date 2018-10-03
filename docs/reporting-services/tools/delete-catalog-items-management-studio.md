@@ -4,19 +4,18 @@ ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: tools
-ms.suite: pro-bi
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.reportserver.deleteitems.f1
 ms.assetid: b0599e01-6dc3-4484-80d4-022a412e0ebd
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c40d7c339a770c3cec1fb86264006c8cf0edba6e
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: fc1cdce9ed2e26874eaa19cff7ad9634880fd1db
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43274675"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47792114"
 ---
 # <a name="delete-catalog-items-management-studio"></a>Excluir itens do catálogo (Management Studio)
   Use essa página para excluir agendas compartilhadas e definições de função.  

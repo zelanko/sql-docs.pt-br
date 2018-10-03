@@ -1,32 +1,29 @@
 ---
-title: Exemplo de propriedade SortOrder (VB) | Microsoft Docs
+title: Exemplo da propriedade SortOrder (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - SortOrder property [ADOX]
 ms.assetid: d9502254-d89b-4bcb-94f1-6418f89e7f30
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 22dc816e9f4343d2873f169837d028babbfa111c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a324c96fcfb4f1e23157bf7a80506cdee209548a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286852"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770916"
 ---
-# <a name="sortorder-property-example-vb"></a>Exemplo de propriedade SortOrder (VB)
-Este exemplo demonstra o [SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md) propriedade de um [coluna](../../../ado/reference/adox-api/column-object-adox.md) que foi acrescentado para o [colunas](../../../ado/reference/adox-api/columns-collection-adox.md) coleção de um [índice](../../../ado/reference/adox-api/index-object-adox.md). O código acrescenta um índice em ordem crescente para a coluna de país de **funcionários** tabela, em seguida, exibe os registros. Em seguida, o código acrescenta um índice decrescente para a coluna de país de **funcionários** tabela e exibe os registros novamente. A diferença entre crescente e decrescente índices é mostrada.  
+# <a name="sortorder-property-example-vb"></a>Exemplo da propriedade SortOrder (VB)
+Este exemplo demonstra a [SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md) propriedade de uma [coluna](../../../ado/reference/adox-api/column-object-adox.md) que foi acrescentado para o [colunas](../../../ado/reference/adox-api/columns-collection-adox.md) coleção de um [índice](../../../ado/reference/adox-api/index-object-adox.md). O código acrescenta um índice em ordem crescente para a coluna de país na **funcionários** de tabela, em seguida, exibe os registros. Em seguida, o código acrescenta um índice decrescente para a coluna de país na **funcionários** de tabela e exibe os registros novamente. A diferença entre crescente e decrescente índices será mostrada.  
   
 ```  
 ' BeginSortOrderVB  
@@ -141,7 +138,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Objeto de coluna (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
- [Coleção de colunas (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [Objeto de índice (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
+ [Objeto Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
+ [Coleção Columns (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
+ [Objeto Index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
  [Propriedade SortOrder (ADOX)](../../../ado/reference/adox-api/sortorder-property-adox.md)

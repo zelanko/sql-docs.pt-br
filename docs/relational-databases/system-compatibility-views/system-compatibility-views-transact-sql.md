@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-compatibility-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -24,16 +21,15 @@ helpviewer_keywords:
 - compatibility [SQL Server], system tables
 - user IDs [SQL Server]
 ms.assetid: 8e4624f5-9d36-4ce7-9c9e-1fe010fa2122
-caps.latest.revision: 39
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b673db37d8b2123f40febb300d6aba3433f4beed
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: dbc4f4f1fb55603a6918357e4c6aa16e4a819f3d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240931"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47805464"
 ---
 # <a name="system-compatibility-views-transact-sql"></a>Exibições de compatibilidade do sistema (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -61,9 +57,9 @@ ms.locfileid: "33240931"
 |**UID**|**syscacheobjects**|**sys.dm_exec_plan_attributes**|  
 |**UID**|**sysprocesses**|**sys.dm_exec_requests**|  
   
- Quando referenciadas em um banco de dados do usuário, tabelas do sistema que foram anunciado como substituídos no SQL Server 2000 (tais como **syslanguages** ou **syscacheobjects**), agora estão associadas à exibição de compatibilidade de volta do **sys** esquema. Desde que as tabelas de sistema do SQL Server 2000 foram substituídas por várias versões, essa alteração não é considerada uma alteração de quebra.  
+ Quando referenciadas em um banco de dados do usuário, tabelas do sistema que foram anunciado como substituídos no SQL Server 2000 (tais como **syslanguages** ou **syscacheobjects**), agora estão associadas à exibição de compatibilidade de volta no **sys** esquema. Desde que as tabelas de sistema do SQL Server 2000 foram substituídas por várias versões, essa alteração não é considerada uma alteração de quebra.  
   
- Exemplo: Se um usuário cria uma tabela de usuário chamada **syslanguages** em um banco de dados usuário, no SQL Server 2008, a instrução `SELECT * from dbo.syslanguages;` no banco de dados retornaria os valores da tabela do usuário. A partir do SQL Server 2012, essa prática retornará dados da exibição do sistema **sys. syslanguages**.  
+ Exemplo: Se um usuário cria uma tabela de usuário chamada **syslanguages** em um usuário-banco de dados no SQL Server 2008, a instrução `SELECT * from dbo.syslanguages;` nesse banco de dados retornaria os valores da tabela do usuário. A partir do SQL Server 2012, essa prática retornará dados da exibição do sistema **sys. syslanguages**.  
   
 ## <a name="see-also"></a>Consulte também  
  [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

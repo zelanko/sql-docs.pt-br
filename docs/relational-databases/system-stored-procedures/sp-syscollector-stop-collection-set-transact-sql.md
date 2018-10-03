@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_stop_collection_set_TSQL
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - sp_syscollector_stop_collection_set
 - data collector [SQL Server], stored procedures
 ms.assetid: 4668cfb7-462f-40d0-948c-8f740a792a4d
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1464a9dfac11cf6b84a3895b94881d4825f9758c
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: dd5c396db88a8377a46bd965b664bc2a667d51de
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258820"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47784964"
 ---
 # <a name="spsyscollectorstopcollectionset-transact-sql"></a>sp_syscollector_stop_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,20 +45,20 @@ sp_syscollector_stop_collection_set
   
 ## <a name="arguments"></a>Argumentos  
  [ @collection_set_id = ] *collection_set_id*  
- É o identificador local exclusivo do conjunto de coleta. *collection_set_id* é **int** com um valor padrão de NULL. *collection_set_id* deve ter um valor se *nome* é NULL.  
+ É o identificador local exclusivo do conjunto de coleta. *collection_set_id* está **int** com um valor padrão de NULL. *collection_set_id* deve ter um valor se *nome* é NULL.  
   
  [ @name =] '*nome*'  
- É o nome do conjunto de coleta. *nome* é **sysname** com um valor padrão de NULL. *nome* deve ter um valor se *collection_set_id* é NULL.  
+ É o nome do conjunto de coleta. *nome da* está **sysname** com um valor padrão de NULL. *nome da* deve ter um valor se *collection_set_id* é NULL.  
   
  [ @stop_collection_job = ] *stop_collection_job*  
- Especifica que o trabalho de coleta do conjunto de coleta será interrompido se estiver em execução. *stop_collection_job* é **bit** com um padrão de 1.  
+ Especifica que o trabalho de coleta do conjunto de coleta será interrompido se estiver em execução. *stop_collection_job* está **bit** com um padrão de 1.  
   
- *stop_collection_job* aplica-se apenas aos conjuntos de coleta com o modo de coleta definido como cache. Para obter mais informações, consulte [sp_syscollector_create_collection_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
+ *stop_collection_job* aplica-se somente aos conjuntos de coleta com o modo de coleta definido como cache. Para obter mais informações, consulte [sp_syscollector_create_collection_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  sp_syscollector_create_collection_set deve ser executado no contexto do banco de dados de sistema msdb.  
   
 ## <a name="permissions"></a>Permissões  

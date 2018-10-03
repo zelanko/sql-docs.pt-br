@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 11/01/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: spatial
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - dbe-spatial
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - geometry data type [SQL Server], understanding
@@ -17,17 +14,16 @@ helpviewer_keywords:
 - planar spatial data [SQL Server], geometry data type
 - spatial data types [SQL Server]
 ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
-caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 16e327cdbb99d05f5001b5252d5d636051408f23
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 09d5469922aeda20aa0b579ef7ba9558fc2b3165
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43064381"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47699444"
 ---
 # <a name="spatial-data-types-overview"></a>Visão geral de tipos de dados espaciais
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -120,14 +116,14 @@ IF @g1.STIsValid() = 1 AND @g2.STIsValid() = 1
 
 Note que uma instância **CircularString** requer sete pontos para definir o triângulo, mas uma instância **LineString** requer somente quatro pontos para definir o triângulo. O motivo para isso é que uma instância **CircularString** armazena segmentos de arco circular e não segmentos de linha. Portanto, os lados do triângulo armazenados na instância **CircularString** são ABC, CDE e EFA, ao passo que os lados do triângulo armazenados na instância **LineString** são AC, CE e EA.  
 
-Considere o seguinte trecho de código:  
+Considere o seguinte snippet de código:  
 ```sql
 SET @g1 = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 4 0)', 0);
 SET @g2 = geometry::STGeomFromText('CIRCULARSTRING(0 0, 2 2, 4 0)', 0);
 SELECT @g1.STLength() AS [LS Length], @g2.STLength() AS [CS Length];
 ```
 
-Esse trecho produz os seguintes resultados:  
+Esse snippet produz os seguintes resultados:  
 ```
 LS LengthCS Length
 5.65685…6.28318…
@@ -160,7 +156,7 @@ SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.324
 SELECT @g.ToString(), @g.STLength();
 ```
 
-Para armazenar a fatia de pizza usando uma instância **CircularString** , é necessário que três pontos sejam usados para cada segmento de linha.  Se um ponto intermediário não for conhecido, ele deverá ser calculado ou o ponto de extremidade do segmento de linha deverá ser dobrado como mostra o seguinte trecho de código:  
+Para armazenar a fatia de pizza usando uma instância **CircularString** , é necessário que três pontos sejam usados para cada segmento de linha.  Se um ponto intermediário não for conhecido, ele deverá ser calculado ou o ponto de extremidade do segmento de linha deverá ser dobrado como mostra o seguinte snippet:  
 
 ```sql
 SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 3 6.3246, 3 6.3246, 0 7, -3 6.3246, 0 0, 0 0)');

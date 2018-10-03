@@ -5,28 +5,25 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - user-entered SQL statements [ODBC]
 - SQL statements [ODBC], constructing
 - SQL statements [ODBC], entered by user
 ms.assetid: 109af162-93ba-425a-8fe5-49c7dc7cc784
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1be7159d7f56226c94b6cbfa335883b73df15de1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 28256433802d686f4362b2b733fc2d2b13e65302
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911391"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47612614"
 ---
 # <a name="sql-statements-entered-by-the-user"></a>Instruções SQL inseridas pelo usuário
-Aplicativos que executam a análise ad hoc também costuma permitem que o usuário insira as instruções SQL diretamente. Por exemplo:  
+Aplicativos que realizam análises ad hoc normalmente também é permitir que o usuário inserir instruções SQL diretamente. Por exemplo:  
   
 ```  
 SQLCHAR *     Statement, SqlState[6], Msg[SQL_MAX_MESSAGE_LENGTH];  
@@ -52,4 +49,4 @@ if ((rc1 == SQL_ERROR) || rc1 == SQL_SUCCESS_WITH_INFO) {
 }  
 ```  
   
- Essa abordagem simplifica a codificação de aplicativo; o aplicativo se baseia no usuário para criar a instrução SQL e na fonte de dados para verificar a validade da instrução. Como é difícil escrever uma interface gráfica do usuário que expõe adequadamente a complexidade do SQL, simplesmente pedindo que o usuário insira o texto da instrução SQL pode ser uma alternativa melhor. No entanto, isso requer que o usuário sabe não apenas SQL, mas também o esquema da fonte de dados que está sendo consultada. Alguns aplicativos fornecem uma interface gráfica do usuário pelo qual o usuário pode criar uma instrução SQL básica e também fornecem uma interface de texto com a qual o usuário pode modificar.
+ Essa abordagem simplifica a codificação de aplicativo; o aplicativo se baseia no usuário para criar a instrução SQL e na fonte de dados para verificar a validade da instrução. Porque é difícil escrever uma interface gráfica do usuário que expõe adequadamente as complicações do SQL, simplesmente solicitar que o usuário insira o texto da instrução SQL pode ser uma alternativa melhor. No entanto, isso exige que o usuário conhecer não apenas SQL, mas também o esquema da fonte de dados que está sendo consultada. Alguns aplicativos fornecem uma interface gráfica do usuário pelo qual o usuário pode criar uma instrução SQL básica e também fornecem uma interface de texto com a qual o usuário pode modificar.

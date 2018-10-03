@@ -5,9 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FILE_IDEX
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - identification numbers [SQL Server], files
 - file names [SQL Server], FILE_IDEX
 ms.assetid: 7532fea5-ee5e-4edd-b98b-111a7ba56c8e
-caps.latest.revision: 35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 05bb6bb4ec9a34abf7669514f2ed1c18fe83817e
-ms.sourcegitcommit: 90a9a051fe625d7374e76cf6be5b031004336f5a
+ms.openlocfilehash: 89cd8bfb5a3098151565252e1a1fe5147c8aa6f9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39228422"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47740664"
 ---
 # <a name="fileidex-transact-sql"></a>FILE_IDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +79,7 @@ File ID
 ```  
   
 ### <a name="b-retrieving-the-file-id-when-the-file-name-is-not-known"></a>B. Recuperando a ID do arquivo quando o nome de arquivo não é conhecido  
-Este exemplo retorna a ID de arquivo do arquivo de log `AdventureWorks`. O trecho de código Transact-SQL (T-SQL) seleciona o nome do arquivo lógico da exibição de catálogo `sys.database_files`, em que o tipo de arquivo é igual a `1` (log).  
+Este exemplo retorna a ID de arquivo do arquivo de log `AdventureWorks`. O snippet de código Transact-SQL (T-SQL) seleciona o nome do arquivo lógico da exibição de catálogo `sys.database_files`, em que o tipo de arquivo é igual a `1` (log).  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -100,7 +97,7 @@ File ID
 ```  
   
 ### <a name="c-retrieving-the-file-id-of-a-full-text-catalog-file"></a>C. Recuperando a ID de um arquivo de catálogo de texto completo  
-Este exemplo retorna a ID de arquivo de um arquivo de texto completo. O trecho de código T-SQL seleciona o nome do arquivo lógico da exibição de catálogo `sys.database_files`, em que o tipo de arquivo é igual a `4` (texto completo). Este código retornará “NULL” se um catálogo de texto completo não existir.
+Este exemplo retorna a ID de arquivo de um arquivo de texto completo. O snippet de código T-SQL seleciona o nome do arquivo lógico da exibição de catálogo `sys.database_files`, em que o tipo de arquivo é igual a `4` (texto completo). Este código retornará “NULL” se um catálogo de texto completo não existir.
   
 ```sql  
 SELECT FILE_IDEX((SELECT name FROM sys.master_files WHERE type = 4))  

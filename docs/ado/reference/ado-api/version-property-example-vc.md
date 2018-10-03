@@ -6,29 +6,26 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Version property [ADO], VC++ example
 ms.assetid: 2440b6ff-2536-497c-a5f4-41db0cf1945e
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 83abd1361cad72644f948316bc24c704e0437c35
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a89f017bba11b5c0ae42df49e54be3ea6b2f14ac
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282815"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613244"
 ---
-# <a name="version-property-example-vc"></a>Exemplo da propriedade Version (VC + +)
-Este exemplo usa o [versão](../../../ado/reference/ado-api/version-property-ado.md) propriedade de um [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto para exibir a versão atual do ADO. Ele também usa várias propriedades dinâmicas para mostrar:  
+# <a name="version-property-example-vc"></a>Exemplo da propriedade Version (VC++)
+Este exemplo usa o [versão](../../../ado/reference/ado-api/version-property-ado.md) propriedade de uma [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto para exibir a versão atual do ADO. Ele também usa várias propriedades dinâmicas para mostrar:  
   
--   Nome do DBMS atual e versão.  
+-   Nome do DBMS atual e a versão.  
   
 -   Versão do OLE DB.  
   
@@ -39,7 +36,7 @@ Este exemplo usa o [versão](../../../ado/reference/ado-api/version-property-ado
 -   Nome do driver ODBC e versão.  
   
 > [!NOTE]
->  Se você estiver se conectando a um provedor de fonte de dados que oferece suporte à autenticação do Windows, você deve especificar **Trusted_Connection = yes** ou **segurança integrada = SSPI** em vez de ID de usuário e senha informações na cadeia de conexão.  
+>  Se você estiver se conectando a um provedor de fonte de dados que dá suporte à autenticação do Windows, você deve especificar **Trusted_Connection = yes** ou **Integrated Security = SSPI** em vez de ID de usuário e senha informações na cadeia de conexão.  
   
 ```  
 // BeginVersionCpp.cpp  

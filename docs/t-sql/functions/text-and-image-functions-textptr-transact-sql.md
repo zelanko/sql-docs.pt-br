@@ -5,9 +5,7 @@ ms.date: 10/23/2017
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - TEXTPTR_TSQL
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - text-pointer values
 - displaying text pointer values
 ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
-caps.latest.revision: 36
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 699df374b814c1332fa32a16b42974355e569e7a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4eb65f9b2d0c19ed2e32e6466beec715790f81c0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37971108"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47755136"
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>Funções Text e Image – TEXTPTR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,10 +63,10 @@ TEXTPTR ( column )
   
 |Função ou instrução|Descrição|  
 |---------------------------|-----------------|  
-|PATINDEX **('***%pattern%***' ,** *expression***)**|Retorna a posição de caracteres de uma cadeia de caracteres especificada nas colunas **text** ou **ntext**.|  
-|DATALENGTH **(***expression***)**|Retorna o comprimento dos dados nas colunas **text**, **ntext** e **image**.|  
+|PATINDEX<b>('</b>_%pattern%_**' ,** _expression_**)**|Retorna a posição de caracteres de uma cadeia de caracteres especificada nas colunas **text** ou **ntext**.|  
+|DATALENGTH<b>(</b>_expression_**)**|Retorna o comprimento dos dados nas colunas **text**, **ntext** e **image**.|  
 |SET TEXTSIZE|Retorna o limite, em bytes, dos dados **text**, **ntext** ou **image** a serem retornados com uma instrução SELECT.|  
-|SUBSTRING**(***text_column*, *start*, *length***)**|Retorna uma cadeia de caracteres **varchar** especificada pelo deslocamento *start* e o *length* especificados. O comprimento deve ser menor que 8 KB.|  
+|SUBSTRING<b>(</b>_text_column_, _start_, _length_**)**|Retorna uma cadeia de caracteres **varchar** especificada pelo deslocamento *start* e o *length* especificados. O comprimento deve ser menor que 8 KB.|  
   
 ## <a name="examples"></a>Exemplos  
   

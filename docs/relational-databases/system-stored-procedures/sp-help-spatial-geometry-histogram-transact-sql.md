@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_spatial_geometry_histogram
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_spatial_geometry_histogram
 ms.assetid: 036aaf61-df3e-40f7-aa4e-62983c5a37bd
-caps.latest.revision: 17
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 731004301f0419d3ce4229e2e901bf9b3bd0507e
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: c193e3cddf5e7446f38b7cf6bd78630522a708fa
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43026095"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47800264"
 ---
 # <a name="sphelpspatialgeometryhistogram-transact-sql"></a>sp_help_spatial_geometry_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +83,7 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
 ## <a name="permissions"></a>Permissões  
  Usuário deve ser um membro do **pública** função. Requer permissão READ ACCESS no servidor e no objeto.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A guia SSMS espacial mostra uma representação gráfica dos resultados. Você pode consultar os resultados em relação à janela espacial para obter um número aproximado dos itens do resultado. Os objetos da tabela podem abranger mais de uma célula, portanto, a soma de células pode ser maior que o número de objetos reais.  
   
  Uma linha adicional pode ser adicionada ao conjunto de resultados que contém o número de objetos que estão fora da caixa delimitadora ou tocando a borda da caixa delimitadora. O **cellid** dessa linha é 0 e o **célula** dessa linha contém um **LineString** que representa a caixa delimitadora. Essa linha representa o espaço inteiro fora da caixa delimitadora.  

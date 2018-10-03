@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 09/12/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: spatial
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - dbe-spatial
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - spatial indexes [SQL Server]
 ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
-caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d6338a060ca3e5ab3f7e2f7a73b4a9a1fd9538c9
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 40464a10cd58e870070636919f6f570efac97aa0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43102978"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47725164"
 ---
 # <a name="spatial-indexes-overview"></a>Visão geral de índices espaciais
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -107,7 +103,7 @@ ms.locfileid: "43102978"
   
  Por exemplo, considere a ilustração anterior que mostra um octógono que se ajusta completamente à célula 15 da grade de nível 1. Na figura, a célula 15 foi incluída no mosaico, dissecando o octógono em nove células de nível 2. Esta ilustração pressupõe que o limite de células por objeto é 9 ou maior. No entanto, se o limite de células por objeto fosse 8 ou menor, a célula 15 não seria incluída no mosaico e a apenas a célula 15 seria contada para o objeto.  
   
- Por padrão, o limite de células por objeto é de 16, o que fornece uma troca satisfatória entre espaço e precisão para a maior parte dos índices espaciais. No entanto, a instrução [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] é compatível com uma cláusula CELLS_PER_OBJECT**=***n* que permite especificar um limite de células por objeto entre 1 e 8192, inclusive.  
+ Por padrão, o limite de células por objeto é de 16, o que fornece uma troca satisfatória entre espaço e precisão para a maior parte dos índices espaciais. No entanto a instrução [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] dá suporte a uma cláusula CELLS_PER_OBJECT**=**_n_ que permite especificar um limite de células por objeto entre 1 e 8192, inclusive.  
   
 > [!NOTE]  
 >  A configuração **cells_per_object** de um índice espacial é visível na exibição de catálogo [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md) .  
@@ -136,7 +132,7 @@ ms.locfileid: "43102978"
 >  É possível especificar explicitamente esse esquema de mosaico usando a cláusula USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) da instrução [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 ##### <a name="the-bounding-box"></a>A caixa delimitadora  
- Dados geométricos ocupam um plano que pode ser infinito. Porém, no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um índice espacial requer um espaço finito. Para estabelecer um espaço finito para decomposição, o esquema de mosaico de grade geométrica requer uma *caixa delimitadora*retangular. A caixa delimitadora é definida por quatro coordenadas, **(***x-min***,***y-min***)** e **(***x-max***,***y-max***)**, que são armazenadas como propriedades do índice espacial. Essas coordenadas representam o seguinte:  
+ Dados geométricos ocupam um plano que pode ser infinito. Porém, no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um índice espacial requer um espaço finito. Para estabelecer um espaço finito para decomposição, o esquema de mosaico de grade geométrica requer uma *caixa delimitadora*retangular. A caixa delimitadora é definida por quatro coordenadas, **(**_x-min_**,**_y-min_**)** e **(**_x-max_**,**_y-max_**)** que são armazenadas como propriedades do índice espacial. Essas coordenadas representam o seguinte:  
   
 -   *x-min* é a coordenada X do canto inferior esquerdo da caixa delimitadora.  
   
@@ -149,11 +145,11 @@ ms.locfileid: "43102978"
 > [!NOTE]  
 >  Essas coordenadas são especificadas pela cláusula BOUNDING_BOX da instrução [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
- As coordenadas **(***x-min***,***y-min***)** e **(***x-max***,***y-max***)** determinam o posicionamento e as dimensões da caixa delimitadora. O espaço fora da caixa delimitadora é tratado como uma única célula numerada como 0.  
+ As coordenadas **(**_x-min_**,**_y-min_**)** e **(**_x-max_**,**_y-max_**)** determinam o posicionamento e as dimensões da caixa delimitadora. O espaço fora da caixa delimitadora é tratado como uma única célula numerada como 0.  
   
  O índice espacial decompõe o espaço dentro da caixa delimitadora. A grade de nível 1 da hierarquia de grade preenche a caixa delimitadora. Para colocar um objeto geométrico na hierarquia da grade, o índice espacial compara as coordenadas do objeto com as coordenadas da caixa delimitadora.  
   
- A ilustração a seguir mostra os pontos definidos pelas coordenadas **(***x-min***,***y-min***)** e **(***x-max***,***y-max***)** da caixa delimitadora. O nível superior da hierarquia da grade é mostrado como uma grade de 4x4. Para fins ilustrativos, os níveis inferiores são omitidos. O espaço fora da caixa delimitadora é indicado por um zero (0). Observe que o objeto 'A' se estende parcialmente além da caixa e o objeto 'B' está completamente fora da caixa na célula 0.  
+ A ilustração a seguir mostra os pontos definidos pelas coordenadas **(**_x-min_**,**_y-min_**)** e **(**_x-max_**,**_y-max_**)** da caixa delimitadora. O nível superior da hierarquia da grade é mostrado como uma grade de 4x4. Para fins ilustrativos, os níveis inferiores são omitidos. O espaço fora da caixa delimitadora é indicado por um zero (0). Observe que o objeto 'A' se estende parcialmente além da caixa e o objeto 'B' está completamente fora da caixa na célula 0.  
   
  ![Caixa delimitadora que mostra as coordenadas e a célula 0.](../../relational-databases/spatial/media/spndx-bb-4x4-objects.gif "Caixa delimitadora que mostra as coordenadas e a célula 0.")  
   

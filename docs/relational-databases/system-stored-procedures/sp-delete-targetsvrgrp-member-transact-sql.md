@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_targetsvrgrp_member_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_targetsvrgrp_member
 ms.assetid: 178a38d9-9b19-4648-95d7-e1397110d14c
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cb2b4ce1e6013e7bd0499a0bd242609d638b1899
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c73ad5d550244306d2672120cfa32c9a3ed37bf6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33242418"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47755764"
 ---
 # <a name="spdeletetargetsvrgrpmember-transact-sql"></a>sp_delete_targetsvrgrp_member (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,16 +41,16 @@ sp_delete_targetsvrgrp_member [ @group_name = ] 'group_name' , [ server_name = ]
   
 ## <a name="arguments"></a>Argumentos  
  [  **@group_name=** ] **'***group_name***'**  
- O nome do grupo. *group_name* é **sysname**, sem padrão.  
+ O nome do grupo. *group_name* está **sysname**, sem padrão.  
   
  [ **@server_name=** ] **'***server_name***'**  
- O nome do servidor a ser removido do grupo especificado. *server_name* é **nvarchar (30)**, sem padrão.  
+ O nome do servidor a ser removido do grupo especificado. *nome_do_servidor* está **nvarchar (30)**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma  
+ None  
   
 ## <a name="permissions"></a>Permissões  
  Para executar esse procedimento armazenado, os usuários devem ter o **sysadmin** função de servidor fixa.  

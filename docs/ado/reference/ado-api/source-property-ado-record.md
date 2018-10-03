@@ -1,13 +1,11 @@
 ---
-title: Propriedade (registro de ADO) de origem | Microsoft Docs
+title: Propriedade (registro ADO) de origem | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -20,40 +18,39 @@ f1_keywords:
 helpviewer_keywords:
 - Source property [ADO Record]
 ms.assetid: 2c18279e-6f35-4af0-b12e-8f1543d9ed20
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7d7ac5eb7a467109af4b1a8d3665436159f3f609
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 4b053fdeae5016d7a1b489133b3a26067da7eab2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281975"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47803044"
 ---
-# <a name="source-property-ado-record"></a>Propriedade Source (ADO registro)
+# <a name="source-property-ado-record"></a>Propriedade Source (Registro ADO)
 Indica a fonte de dados ou o objeto representado pelo [registro](../../../ado/reference/ado-api/record-object-ado.md).  
   
-## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
- Define ou retorna um **Variant** valor que indica a entidade representada pelo **registro**.  
+## <a name="settings-and-return-values"></a>As configurações e valores de retorno  
+ Define ou retorna um **Variant** valor que indica a entidade representada pela **registro**.  
   
-## <a name="remarks"></a>Remarks  
- O **fonte** propriedade retorna o *fonte* argumento do **registro** objeto [abrir](../../../ado/reference/ado-api/open-method-ado-record.md) método. Ele pode conter uma cadeia de caracteres de URL absoluta ou relativa. Uma URL absoluta que pode ser usada sem configuração o [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) propriedade abrir diretamente o **registro** objeto. Implícita **Conexão** objeto é criado nesse caso.  
+## <a name="remarks"></a>Comentários  
+ O **fonte** propriedade retorna o *fonte* argumento do **registro** objeto [abrir](../../../ado/reference/ado-api/open-method-ado-record.md) método. Ele pode conter uma cadeia de caracteres de URL absoluta ou relativa. Uma URL absoluta que pode ser usada sem definir a [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) para abrir diretamente o **registro** objeto. Implícito **Conexão** objeto é criado nesse caso.  
   
- O **fonte** propriedade também pode conter uma referência a uma já aberto **registros**, que abre um **registro** objeto que representa a linha atual o  **Conjunto de registros**.  
+ O **fonte** propriedade também pode conter uma referência a uma já aberta **conjunto de registros**, que abre uma **registro** objeto que representa a linha atual do  **Conjunto de registros**.  
   
  O **fonte** propriedade também pode conter uma referência a um [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto que retorna uma única linha de dados do provedor.  
   
- Se o **ActiveConnection** propriedade também é definida, o **fonte** propriedade deve apontar para um objeto que existe dentro do escopo dessa conexão. Por exemplo, em namespaces estruturados em árvore, se o **fonte** propriedade contém uma URL absoluta, ela deve apontar para um nó que existe dentro do escopo do nó identificado por URL na cadeia de conexão. Se o **fonte** propriedade contém uma URL relativa, em seguida, ela é validada no contexto definido pelo **ActiveConnection** propriedade.  
+ Se o **ActiveConnection** propriedade também é definida, o **origem** propriedade deve apontar para algum objeto que existe dentro do escopo dessa conexão. Por exemplo, nos namespaces estruturados em árvore, se o **origem** propriedade contém uma URL absoluta, ele deve apontar para um nó que existe dentro do escopo do nó identificado pela URL na cadeia de conexão. Se o **fonte** propriedade contém uma URL relativa, em seguida, ele é validado no contexto definido pela **ActiveConnection** propriedade.  
   
- O **fonte** propriedade é leitura/gravação ao **registro** objeto é fechado e é somente leitura enquanto o **registro** objeto está aberto.  
+ O **fonte** propriedade é leitura/gravação, enquanto o **registro** objeto está fechado e é somente leitura enquanto o **registro** objeto está aberto.  
   
 > [!NOTE]
->  URLs usando o esquema http invocará automaticamente o [Microsoft OLE DB Provider para Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Para obter mais informações, consulte [Absolute e URLs relativas](../../../ado/guide/data/absolute-and-relative-urls.md).  
+>  URLs usando o esquema http invocará automaticamente o [Microsoft OLE DB Provider para publicação na Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Para obter mais informações, consulte [absoluta e relativa URLs](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Propriedade Source (erro de ADO)](../../../ado/reference/ado-api/source-property-ado-error.md)   
+ [Propriedade Source (Erro ADO)](../../../ado/reference/ado-api/source-property-ado-error.md)   
  [Propriedade Source (Conjunto de registros ADO)](../../../ado/reference/ado-api/source-property-ado-recordset.md)

@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: performance-monitor
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Buffer Manager object
 - SQLServer:Buffer Manager
 ms.assetid: 9775ebde-111d-476c-9188-b77805f90e98
-caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: dc709ccddddbd80955cc1f5a27899495517db169
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 98f0146139670b83970ca073391f23c688cc2b44
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32953511"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47654784"
 ---
 # <a name="sql-server-buffer-manager-object"></a>SQL Server, objeto Buffer Manager
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +43,7 @@ ms.locfileid: "32953511"
 ## <a name="buffer-manager-performance-objects"></a>Objetos de desempenho do Gerenciador de Buffer  
  Esta tabela descreve os objetos de desempenho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Gerenciador de Buffer** .  
   
-|SQL Server, contadores do Gerenciador de Buffer|Description|  
+|SQL Server, contadores do Gerenciador de Buffer|Descrição|  
 |----------------------------------------|-----------------|  
 |**Páginas do gravador em segundo plano/s**|Número de páginas liberadas para aplicar as configurações do intervalo de recuperação.| 
 |**Taxa de acertos do cache do buffer**|Indica a porcentagem de páginas localizadas no cache do buffer sem ter que ler do disco. A taxa é o número total de acertos do cache, dividido pelo número total de pesquisas no cache no acesso dos últimos milhares de páginas. Após um tempo longo, a taxa varia muito pouco. Como ler do cache é muito menos dispendioso que ler do disco, convém que esta taxa seja alta. Geralmente, é possível aumentar a taxa de acertos do cache do buffer aumentando a quantidade de memória disponível para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou usando o recurso de extensão do pool de buffers.|  

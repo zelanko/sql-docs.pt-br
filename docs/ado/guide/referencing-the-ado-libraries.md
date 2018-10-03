@@ -1,10 +1,8 @@
 ---
-title: Fazer referência às bibliotecas do ADO | Microsoft Docs
+title: Referenciando as bibliotecas ADO | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,22 +12,21 @@ helpviewer_keywords:
 - referencing libraries [ADO]
 - ADO, libraries
 ms.assetid: 573f8f27-babd-4e2f-bf9a-270ee7024975
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d4966f9446f87ea25cc5fdab5e658fd5a30c80fb
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e22b5fa8d21ca693f0ea332714f2f594f8bd997c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273615"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47614454"
 ---
-# <a name="referencing-the-ado-libraries"></a>Fazer referência às bibliotecas de ADO
-A versão mais recente do ADO é empacotada como *msado15.dll*. As versões mais recentes do ADO MD e ADOX são empacotadas como *msadom.dll* e *msadox.dll*, respectivamente. Essas bibliotecas são instaladas por padrão em *$installDir*, onde *$installDir* significa o caminho do diretório no qual a biblioteca do ADO foi instalada no seu computador. Para usar as bibliotecas de ADO em seu aplicativo, você deve referenciá-los explicitamente no projeto de aplicativo.  
+# <a name="referencing-the-ado-libraries"></a>Referenciar as bibliotecas ADO
+A versão mais recente do ADO é empacotada como *msado15.dll*. As versões mais recentes do ADO MD e ADOX são empacotadas como *msadom.dll* e *msadox.dll*, respectivamente. Essas bibliotecas são instaladas por padrão no *$installDir*, onde *$installDir* significa o caminho do diretório em que a biblioteca do ADO foi instalada no seu computador. Para usar as bibliotecas ADO em seu aplicativo, você precisa referenciá-los explicitamente no projeto de aplicativo.  
   
- A seguir estão as etapas que você pode executar para fazer referência as bibliotecas de ADO:  
+ A seguir estão as etapas que você pode tomar para referenciar as bibliotecas ADO:  
   
--   [Em um aplicativo do Visual Basic](../../ado/guide/referencing-the-ado-libraries-in-a-visual-basic-6-application.md)  
+-   [Em um aplicativo Visual Basic](../../ado/guide/referencing-the-ado-libraries-in-a-visual-basic-6-application.md)  
   
 -   [Em um aplicativo do Visual C++](../../ado/guide/referencing-the-ado-libraries-in-a-visual-c-application.md)

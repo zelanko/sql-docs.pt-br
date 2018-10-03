@@ -1,13 +1,11 @@
 ---
-title: Uso de aplicativos de 16 bits e 32 bits com Drivers de 32 bits | Microsoft Docs
+title: Usando aplicativos de 16 bits e 32 bits com Drivers de 32 bits | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC drivers [ODBC], 16-bit applications
@@ -15,18 +13,17 @@ helpviewer_keywords:
 - 32-bit applications with 32-bit drivers [ODBC]
 - 16-bit applications with 32-bit drivers [ODBC]
 ms.assetid: fc65c988-b31f-4cc9-851f-30d2119604fd
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 97f4224967cd0c54b134d118533ed66f6043762c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8540983b84d4d39fe5a02b92a1e3a3606350d36d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32908911"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47714444"
 ---
-# <a name="using-16-bit-and-32-bit-applications-with-32-bit-drivers"></a>Uso de aplicativos de 16 bits e 32 bits com Drivers de 32 bits
+# <a name="using-16-bit-and-32-bit-applications-with-32-bit-drivers"></a>Using 16-Bit and 32-Bit Applications with 32-Bit Drivers
 > [!IMPORTANT]  
 >  suporte a aplicativos de 16 bits será removido em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Desenvolva aplicativos de 32 bits ou 64 bits em vez disso.  
   
@@ -39,15 +36,15 @@ ms.locfileid: "32908911"
  Não há suporte para usar um aplicativo de 32 bits com um driver de 16 bits.  
   
 > [!NOTE]  
->  Começando com a versão do ODBC versão 3.0, Windows NT 4.0 são suportados.  
+>  Começando com a versão do ODBC versão 3.0, Windows NT 4.0 tem sido suportado.  
   
- ODBC inclui os componentes ODBC necessários para oferecer suporte as configurações acima por "conversão" bibliotecas de vínculo dinâmico (DLLs) para converter os endereços de 16 bits para endereços de 32 bits e vice-versa. O programa de instalação determina qual sistema operacional você está usando e instala os componentes ODBC exigidos pelo sistema. Você também pode optar por instalar os componentes ODBC usados por todos os sistemas.  
+ ODBC inclui os componentes ODBC necessários para oferecer suporte as configurações acima por "conversão" bibliotecas de vínculo dinâmico (DLLs) para converter os endereços de 16 bits para endereços de 32 bits e vice-versa. O programa de instalação determina qual sistema operacional que você está usando e instala os componentes ODBC exigidos pelo sistema. Você também pode optar por instalar os componentes ODBC usados por todos os sistemas.  
   
- Na maioria dos casos, portando um aplicativo ou driver de 16 bits para 32 bits envolve cinco tipos de alterações:  
+ Na maioria dos casos, portar um aplicativo ou driver de 16 bits para 32 bits envolve a cinco tipos de alterações:  
   
--   Alterações no código de tratamento de mensagens  
+-   Alterações no código de manipulação de mensagens  
   
--   Alterações porque inteiros e identificadores de 32 bits  
+-   Alterações porque são números inteiros e identificadores de 32 bits  
   
 -   Alterações em chamadas para interfaces de programação de aplicativo (APIs) do Windows  
   
@@ -55,7 +52,7 @@ ms.locfileid: "32908911"
   
 -   Alterações nos componentes ODBC  
   
- Do ponto de vista programação do aplicativo ou driver, a principal diferença entre os componentes ODBC de 16 bits e 32 bits é que eles tenham nomes de arquivo diferente. Do ponto de vista de sistema, a arquitetura de cada conexão de aplicativo ou driver é diferente e as ferramentas usadas para gerenciar fontes de dados são diferentes.  
+ Do aplicativo ou driver programação ponto de Vista, a principal diferença entre os componentes ODBC de 16 bits e 32 bits é que eles tenham nomes de arquivo diferente. Do ponto de vista do sistema, a arquitetura de cada conexão de aplicativo ou driver é diferente e as ferramentas usadas para gerenciar fontes de dados são diferentes.  
   
  Esta seção contém os tópicos a seguir.  
   
