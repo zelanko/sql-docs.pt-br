@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_trace_setfilter
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_setfilter
 ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
-caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dc23abf114ce4458f40051db3d2bb86b667efca5
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 436b4d5b9a4c0a539ccc4ff9ac7e62572883dfad
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38061244"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47758614"
 ---
 # <a name="sptracesetfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +97,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |13|Memória insuficiente. Retornado quando não há memória suficiente para executar a ação especificada.|  
 |16|A função não é válida para este rastreamento.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  **sp_trace_setfilter** é um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procedimento armazenado que executa muitas das ações anteriormente executadas por procedimentos armazenados estendidos disponíveis em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use **sp_trace_setfilter** em vez da **xp_trace_set\*filtro** estendido procedimentos armazenados para criar, aplicar, remover ou manipular filtros em rastreamentos. Para obter mais informações, consulte [filtrar um rastreamento](../../relational-databases/sql-trace/filter-a-trace.md).  
   
  Todos os filtros para uma determinada coluna devem ser habilitados juntos em uma execução de **sp_trace_setfilter**. Por exemplo, se um usuário pretende aplicar dois filtros na coluna de nome de aplicativo e um filtro na coluna de nome de usuário, o usuário deve especificar os filtros em nome de aplicativo em sequência. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retorna um erro se o usuário tentar especificar um filtro em nome de aplicativo em uma chamada de procedimento armazenado, em seguida, por um filtro em nome de usuário, e depois, outro filtro em nome de aplicativo.  

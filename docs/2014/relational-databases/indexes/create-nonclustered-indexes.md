@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - index creation [SQL Server], nonclustered indexes
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - indexes [SQL Server], nonclustered
 - nonclustered indexes [SQL Server], PRIMARY KEY constraint
 ms.assetid: 9402029a-1227-46c4-93aa-c2122eb1b943
-caps.latest.revision: 41
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c3c0d0c0d21bbc2b6bfc77cac481310af1cb30c1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3e806bc2997826aa8a44be94e79d1a0b428cee3d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300366"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48124586"
 ---
 # <a name="create-nonclustered-indexes"></a>Criar índices não clusterizados
   Você pode criar índices não clusterizados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Um índice não clusterizado é uma estrutura de índice separada dos dados armazenados em uma tabela que reorganiza um ou mais colunas selecionadas. Índices não clusterizados costumam ser uma forma mais rápida de localizar dados do que a busca na tabela subjacente; as consultas às vezes podem ser totalmente respondidas pelos dados no índice não clusterizado, ou o índice não clusterizado pode apontar o [!INCLUDE[ssDE](../../includes/ssde-md.md)] para as linhas na tabela subjacente. Geralmente, os índices não clusterizados são criados para aprimorar o desempenho de consultas utilizadas com frequência, não cobertas pelo índice clusterizado, ou para localizar linhas em uma tabela sem um índice clusterizado (denominado heap). Você pode criar vários índices não clusterizados em uma tabela ou exibição indexada.  

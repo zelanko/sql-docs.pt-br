@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - error messages [ODBC], Visual FoxPro ODBC driver
@@ -15,23 +13,22 @@ helpviewer_keywords:
 - SQLSTATE [ODBC]
 - FoxPro ODBC driver [ODBC], error messages
 ms.assetid: 58ea9734-4edf-44da-ba80-938aa7b340e4
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4f6be0c46b1dcc777004edacda8a490438db438c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0b24db48d6a76c221e72944e8e5e6826cb8d5d55
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32902307"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47804414"
 ---
 # <a name="error-messages-visual-foxpro-odbc-driver"></a>Mensagens de erro (Driver ODBC do Visual FoxPro)
 Quando ocorre um erro, o driver do Visual FoxPro retorna as seguintes informações:  
   
 -   O número de erro nativo e o texto da mensagem de erro  
   
--   O texto da mensagem de erro e SQLSTATE (um código de erro ODBC)  
+-   O SQLSTATE (um código de erro ODBC) e o texto da mensagem de erro  
   
  Acessar essas informações de erro chamando [SQLError](../../odbc/microsoft/sqlerror-visual-foxpro-odbc-driver.md).  
   
@@ -39,9 +36,9 @@ Quando ocorre um erro, o driver do Visual FoxPro retorna as seguintes informaç�
  Para erros que ocorrem na fonte de dados, o driver do Visual FoxPro retorna o número de erro nativo e o texto da mensagem de erro. Para obter uma lista de números de erro nativo, consulte [Visual FoxPro ODBC Driver nativo mensagens de erro](../../odbc/microsoft/visual-foxpro-odbc-driver-native-error-messages.md).  
   
 ## <a name="sqlstate-odbc-error-codes"></a>SQLSTATE (códigos de erro ODBC)  
- Para erros que são detectados e retornados pelo driver do Visual FoxPro, o driver mapeia o número de erro nativo retornado para o SQLSTATE apropriado. Se um número de erro nativo não tiver um código de erro ODBC para mapear para, o driver do Visual FoxPro retornará SQLSTATE S1000 (erro geral).  
+ Para erros que são detectados e retornados pelo driver do Visual FoxPro, o driver mapeia o número de erro nativo retornado para o SQLSTATE apropriado. Se não tiver um código de erro ODBC para mapear para um número de erro nativo, o driver do Visual FoxPro retornará SQLSTATE S1000 (erro geral).  
   
- Para obter uma lista de valores SQLSTATE gerado pelo Visual FoxPro ODBC Driver para erros do Visual FoxPro correspondentes, consulte [códigos de erro de ODBC](../../odbc/microsoft/odbc-error-codes-visual-foxpro-odbc-driver.md).  
+ Para obter uma lista de valores SQLSTATE gerado pelo Visual FoxPro ODBC Driver para erros do Visual FoxPro correspondentes, consulte [códigos de erro ODBC](../../odbc/microsoft/odbc-error-codes-visual-foxpro-odbc-driver.md).  
   
 ## <a name="syntax"></a>Sintaxe  
  Mensagens de erro têm o seguinte formato:  
@@ -50,11 +47,11 @@ Quando ocorre um erro, o driver do Visual FoxPro retorna as seguintes informaç�
   
  Os prefixos de colchetes ([]) identificam a origem do erro, conforme definido na tabela a seguir.  
   
-|Fonte de dados|Prefixo|Value|  
+|Fonte de dados|Prefixo|Valor|  
 |-----------------|------------|-----------|  
 |Gerenciador de Driver|[fornecedor]<br />[ODBC_component]<br />[data_source]|[Microsoft]<br />[Gerenciador de Driver ODBC]<br />N/A|  
-|Driver do Visual FoxPro|fornecedor]<br />[ODBC_component]<br />[data_source]|[Microsoft]<br />[Driver do Visual FoxPro ODBC]<br />N/A|  
+|Driver do Visual FoxPro|fornecedor]<br />[ODBC_component]<br />[data_source]|[Microsoft]<br />[Driver do Visual FoxPro do ODBC]<br />N/A|  
   
- Por exemplo, se o Driver de ODBC do Visual FoxPro não foi possível encontrar a Employee. dbf de arquivo, ele pode retornar a seguinte mensagem de erro:  
+ Por exemplo, se o Driver de ODBC do Visual FoxPro não foi possível encontrar a Employee. dbf de arquivo, ele pode retornar a mensagem de erro a seguir:  
   
- "[*Microsoft*] [*Driver ODBC do Visual FoxPro*] não existe arquivo 'Employee. dbf'"
+ "[*Microsoft*] [*Driver ODBC do Visual FoxPro*] arquivo de 'Employee. dbf' não existe"

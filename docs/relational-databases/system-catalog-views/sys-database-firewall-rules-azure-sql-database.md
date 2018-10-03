@@ -5,11 +5,7 @@ ms.date: 03/14/2017
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.service: sql-database
-ms.component: system-catalog-views
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.database_firewall_rules_TSQL
@@ -26,12 +22,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 068f01bc17a9f907aafaac6d39370be2a0480f57
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: e224bec27ba3151fb531f5ad0ce9676a4e3a8d2e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43038127"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789504"
 ---
 # <a name="sysdatabasefirewallrules-azure-sql-database"></a>sys.database_firewall_rules (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -49,7 +45,7 @@ ms.locfileid: "43038127"
 |create_date|**DATETIME**|A data e a hora UTC em que a configuração de firewall de nível de banco de dados foi criada.|  
 |modify_date|**DATETIME**|A data e a hora UTC em que a configuração de firewall de nível de banco de dados foi modificada por último.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Para remover uma regra de firewall de banco de dados, use [sp_delete_database_firewall_rule &#40;banco de dados SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-firewall-rule-azure-sql-database.md). Para definir uma regra de firewall para todos os [!INCLUDE[ssSDS](../../includes/sssds-md.md)], consulte [sp_set_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md). Para retornar informações sobre o banco de dados existente com as regras de firewall, consulte [sys. database_firewall_rules (banco de dados SQL)](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md).  
   
 ## <a name="permissions"></a>Permissões  

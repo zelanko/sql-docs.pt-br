@@ -1,28 +1,25 @@
 ---
-title: Mensagens de erro (ODBC Driver for Oracle) | Microsoft Docs
+title: Mensagens de erro (Driver ODBC para Oracle) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - error messages [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], error messages
 ms.assetid: 6e54fe40-8306-4c2b-9e60-e521705e5b4b
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9c88cbdd839725dd9cd2ee7cc26af3138eb59d5f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 35193df4630b9bb613186b09c16d7c42479db686
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32899161"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47765658"
 ---
 # <a name="error-messages-odbc-driver-for-oracle"></a>Mensagens de erro (Driver ODBC para Oracle)
 > [!IMPORTANT]  
@@ -30,6 +27,6 @@ ms.locfileid: "32899161"
   
  Quando ocorre um erro, o Microsoft ODBC Driver for Oracle retorna o SQLSTATE (um código de erro ODBC) e uma mensagem de erro. O driver deriva essas informações de erros detectados pelo driver e de erros retornados pelo servidor Oracle.  
   
- Esta seção inclui os seguintes tópicos:  
+ Esta seção inclui o seguinte tópico:  
   
 -   [Mensagens retornadas pelo Driver ODBC para Oracle](../../odbc/microsoft/messages-returned-by-the-odbc-driver-for-oracle.md)

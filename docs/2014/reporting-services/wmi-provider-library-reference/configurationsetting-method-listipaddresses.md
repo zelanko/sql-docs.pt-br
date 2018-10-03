@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ListIPAddresses method
 ms.assetid: 7e7cf182-fba0-4604-a474-098461e23e9d
-caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 048d654b94d537aa5e6209d0012105ddaef127cb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3b8dc70cf1502363585abd7f1be5de7c72c6256a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37166167"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48062636"
 ---
 # <a name="listipaddresses-method-wmi-msreportserverconfigurationsetting"></a>Método ListIPAddresses (WMI MSReportServer_ConfigurationSetting)
   Lista os endereços IP do computador do servidor de relatório.  
@@ -59,7 +56,7 @@ public void ListIPAddresses (out string[] IPAddress,
 ## <a name="return-value"></a>Valor retornado  
  Retorna um *HRESULT* indicando êxito ou falha da chamada do método. Um valor 0 indica que a chamada do método foi bem-sucedida; um código de erro indica que a chamada não foi bem-sucedida.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  As cadeias de caracteres*IPVersion* são V4, V6.  
   
  Se *IsDhcpEnabled* é `True`, o *IPAddress* é dinâmico. Não deve ser usado para associações SSL.  

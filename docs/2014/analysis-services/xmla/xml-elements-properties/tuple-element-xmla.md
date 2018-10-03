@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Tuple Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Tuple element
 ms.assetid: d65aba10-55e1-49c1-81bc-0756c39c0da2
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e5db226260852207fbcfeb4dc0a071d03d0def7c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 32dc7b75f47acf69a8d16e33bc25ac505b1c9333
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37233686"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061336"
 ---
 # <a name="tuple-element-xmla"></a>Elemento Tuple (XMLA)
   Contém uma coleção de elementos [Member](member-element-xmla.md) contida pelo elemento pai [Tuples](tuples-element-xmla.md).  
@@ -53,8 +50,8 @@ ms.locfileid: "37233686"
   
 |Característica|Description|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|Nenhum|  
-|Valor padrão|Nenhum|  
+|Comprimento e tipo de dados|None|  
+|Valor padrão|None|  
 |Cardinalidade|0-n: Elemento opcional que pode ocorrer mais de uma vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -64,7 +61,7 @@ ms.locfileid: "37233686"
 |Elementos pai|[Tuplas](tuples-element-xmla.md)|  
 |Elementos filho|[Membro](member-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Quando um aplicativo cliente definir a `AxisFormat` propriedade para *TupleFormat*, um eixo é representado como um conjunto de tuplas. Cada `Axis` elemento contém um `Tuples` elemento que representa o conjunto de tuplas naquele eixo. Cada tupla é representada usando um elemento `Tuple` que contém elementos `Member` de toda hierarquia no eixo.  
   
 ## <a name="example"></a>Exemplo  

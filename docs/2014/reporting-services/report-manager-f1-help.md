@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Manager [Reporting Services], help
 ms.assetid: e0137273-85b8-45f0-83e5-38a50481768f
-caps.latest.revision: 38
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f9bb45f51107d9397494e803533c68f90647fb18
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7a3e1d824567358d54afef75c22d78613b883b5c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37208436"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48133286"
 ---
 # <a name="report-manager-f1-help"></a>Ajuda F1 do Gerenciador de Relatórios
   Os tópicos a seguir oferecem ajuda no nível de página para o Gerenciador de Relatórios do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Há um tópico para cada página no aplicativo. Nem todas as páginas podem estar disponíveis. As configurações de segurança determinam as páginas que você pode acessar. Para acessar esses tópicos do Gerenciador de Relatórios, clique em **Ajuda** na barra de ferramentas principal.  

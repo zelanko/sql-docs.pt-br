@@ -4,31 +4,28 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - SubmitChanges method [ADO]
 ms.assetid: 250062a4-13c4-4bed-807d-8b9ad81536d4
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 784103c416947b57ebea358f911dfee4996a515e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: c0a5beeef5d88a30496a8b706dcfd7ffabb931b7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288515"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47744471"
 ---
 # <a name="submitchanges-method-rds"></a>Método SubmitChanges (RDS)
-Envia as alterações de localmente em cache e atualizáveis pendentes [registros](../../../ado/reference/ado-api/recordset-object-ado.md) à fonte de dados especificado no [conectar](../../../ado/reference/rds-api/connect-property-rds.md) propriedade ou o [URL](../../../ado/reference/rds-api/url-property-rds.md) propriedade.  
+Envia as alterações de localmente em cache e atualizáveis pendentes [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) à fonte de dados especificado na [Connect](../../../ado/reference/rds-api/connect-property-rds.md) propriedade ou o [URL](../../../ado/reference/rds-api/url-property-rds.md) propriedade.  
   
 > [!IMPORTANT]
->  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (veja o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Aplicativos que usam o RDS devem migrar para [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (consulte o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Devem ser migrados para aplicativos que usam o RDS [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -45,21 +42,21 @@ DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset
  Uma variável de objeto que representa um [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) objeto.  
   
  *Conexão*  
- Um **cadeia de caracteres** valor que representa a conexão criada com o **RDS. DataControl** do objeto [conectar](../../../ado/reference/rds-api/connect-property-rds.md) propriedade.  
+ Um **cadeia de caracteres** valor que representa a conexão criada com o **RDS. DataControl** do objeto [Connect](../../../ado/reference/rds-api/connect-property-rds.md) propriedade.  
   
  *Recordset*  
- Uma variável de objeto que representa um **registros** objeto.  
+ Uma variável de objeto que representa um **Recordset** objeto.  
   
-## <a name="remarks"></a>Remarks  
- O [conectar](../../../ado/reference/rds-api/connect-property-rds.md), [servidor](../../../ado/reference/rds-api/server-property-rds.md), e [SQL](../../../ado/reference/rds-api/sql-property.md) propriedades devem ser definidas antes de usar o **SubmitChanges** método com o  **RDS. DataControl** objeto.  
+## <a name="remarks"></a>Comentários  
+ O [Connect](../../../ado/reference/rds-api/connect-property-rds.md), [Server](../../../ado/reference/rds-api/server-property-rds.md), e [SQL](../../../ado/reference/rds-api/sql-property.md) propriedades devem ser definidas antes de poder usar o **SubmitChanges** método com o  **RDS. DataControl** objeto.  
   
- Se você chamar o [CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md) método depois de ter chamado **SubmitChanges** para o mesmo **registros** objeto, o **CancelUpdate** chamada falhar porque as alterações já foram confirmadas.  
+ Se você chamar o [CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md) método depois de ter chamado **SubmitChanges** para a mesma **conjunto de registros** objeto, o **CancelUpdate** chamada falhará porque as alterações já foram confirmadas.  
   
- Somente os registros alterados são enviados para modificação e todas as alterações tenha êxito ou falham de todas as alterações em conjunto.  
+ Somente os registros alterados são enviados para modificação e todas as alterações bem sucedida ou falham de todas as alterações em conjunto.  
   
- Você pode usar **SubmitChanges** somente com o padrão **RDSServer.DataFactory** objeto. Objetos de negócios personalizada não podem usar esse método.  
+ Você pode usar **SubmitChanges** somente com o padrão **RDSServer.DataFactory** objeto. Objetos comerciais personalizados não é possível usar esse método.  
   
- Se o **URL** propriedade foi definida, **SubmitChanges** enviar alterações para o local especificado pela URL.  
+ Se o **URL** propriedade foi definida, **SubmitChanges** enviará as alterações para o local especificado pela URL.  
   
 ## <a name="applies-to"></a>Aplica-se a  
   

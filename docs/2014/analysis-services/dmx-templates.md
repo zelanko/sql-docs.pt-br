@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2a577e52-821d-4bd3-ba35-075a6be285c9
-caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 30a02f00df965362c1c8702403b06df8b0883ead
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4332d78fef98d653029d0913c6b7da8cfe5a75f0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37194356"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48048245"
 ---
 # <a name="dmx-templates"></a>Modelos DMX
   Os modelos de mineração de dados o ajudam a criar rapidamente consultas sofisticadas. Embora a sintaxe geral para consultas DMX seja bem-documentada, usar os modelos torna mais fácil criar consultas clicando e apontando para argumentos e fontes de dados.  
@@ -80,7 +77,7 @@ ms.locfileid: "37194356"
   
  Use esses modelos para criar modelos ou estruturas de dados personalizados. Você não está limitado aos modelos com suporte dos assistentes – é possível usar qualquer algoritmo de mineração de dados com suporte da instância de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] a qual você está conectado, inclusive algoritmos de plug-in.  
   
--   Modelo de mineração  
+-   modelo de mineração  
   
 -   Estrutura de mineração  
   

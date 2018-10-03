@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - SQL:FullTextQuery event class
 ms.assetid: 654fb295-f0a5-4d66-93e0-5d43e4d7d535
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4ff02ac00761e21e9611a523dcdb863b22c3759d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 102e99638cb9cec84a77b37adf0f3b368c408032
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37208936"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48109958"
 ---
 # <a name="sqlfulltextquery-event-class"></a>classe de evento SQL:FullTextQuery
   A classe de evento SQL:FullTextQuery ocorre quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executa uma consulta de texto completo. Inclua esta classe de evento em rastreamentos que estão monitorando problemas associados a catálogos de texto completos.  

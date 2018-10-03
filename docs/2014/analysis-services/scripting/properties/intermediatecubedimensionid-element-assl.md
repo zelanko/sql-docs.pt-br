@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - IntermediateCubeDimensionID Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - IntermediateCubeDimensionID element
 ms.assetid: 305c0a91-7bc2-4268-ba94-8f19d8c22ca3
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8945791ccb2b09faf3d42821a847b2a822bceda6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b95216c83858e343341217a3efa34ab01fa87f70
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37204016"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48059916"
 ---
 # <a name="intermediatecubedimensionid-element-assl"></a>Elemento IntermediateCubeDimensionID (ASSL)
   Contém o identificador (ID) da dimensão que relaciona uma dimensão de referência a um grupo de medidas.  
@@ -51,7 +48,7 @@ ms.locfileid: "37204016"
 |Característica|Description|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|Cadeia de caracteres|  
-|Valor padrão|Nenhum|  
+|Valor padrão|None|  
 |Cardinalidade|1-1: elemento obrigatório que ocorre apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -59,9 +56,9 @@ ms.locfileid: "37204016"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elemento pai|[ReferenceMeasureGroupDimension](../data-type/dimension-data-type-assl.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O elemento que corresponde ao pai de `IntermediateCubeDimensionID` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.ReferenceMeasureGroupDimension>.  
   
 ## <a name="see-also"></a>Consulte também  

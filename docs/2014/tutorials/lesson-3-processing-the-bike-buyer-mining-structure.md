@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e748c2cd-339d-4e82-82f1-be2d0fc41b61
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4fdf27dce12915a8cf0f26f976543c00ad70725a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 77c49a7b1616d1a54c652efee05ff1e827d07caf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37306626"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48053826"
 ---
 # <a name="lesson-3-processing-the-bike-buyer-mining-structure"></a>Lição 3: Processando a estrutura de mineração Comprador de Bicicleta
   Nesta lição, você usará a inserção em instrução e a exibição vTargetMail do [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] banco de dados de exemplo para processar as estruturas de mineração e modelos de mineração que você criou na [lição 1: Criando a estrutura de mineração de comprador de bicicleta](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md) e [lição 2: adicionando modelos de mineração à estrutura de mineração de comprador de bicicleta](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md).  

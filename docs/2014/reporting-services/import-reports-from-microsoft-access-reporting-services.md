@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Access reports [Reporting Services]
 - importing reports
 ms.assetid: 4f29d5b8-b77d-4714-a84a-05523df55646
-caps.latest.revision: 39
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: afe85933463aed7e1af3c598f7e8565a9b074677
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dc63daf4095238f948be6bde22bf190aa4d1977a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37155677"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48086496"
 ---
 # <a name="import-reports-from-microsoft-access-reporting-services"></a>Importar relatórios do Microsoft Access (Reporting Services)
   No Designer de relatórios, você pode importar relatórios a partir de um [!INCLUDE[msCoName](../includes/msconame-md.md)] banco de dados ou projeto. O Access 2002 ou uma versão posterior deve estar instalado no mesmo computador no qual o Designer de Relatórios está instalado.  

@@ -1,13 +1,11 @@
 ---
-title: Exemplo de propriedades de DefinedSize (VC + +) e ActualSize | Microsoft Docs
+title: Exemplo de ActualSize e propriedades DefinedSize (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,18 +13,17 @@ helpviewer_keywords:
 - ActualSize property [ADO], VC++ example
 - DefinedSize property [ADO], VC++ example
 ms.assetid: 05f7cc97-b806-41d2-939d-a955d10844c4
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 54bb6f590da02e26adb3b617de49c5f4a1de5a82
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b85ba458b96a8c5b48a2f40f1bf777374775c3b3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275055"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789274"
 ---
-# <a name="actualsize-and-definedsize-properties-example-vc"></a>Exemplo de propriedades de DefinedSize (VC + +) e ActualSize
+# <a name="actualsize-and-definedsize-properties-example-vc"></a>Exemplo de ActualSize e propriedades DefinedSize (VC + +)
 Este exemplo usa o [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) e [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) propriedades para exibir o tamanho definido e o tamanho real de um campo.  
   
 ## <a name="example"></a>Exemplo  
@@ -132,23 +129,23 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 }  
 ```  
   
- **Nome do repositório: Eric os livros de leitura**  
-**Definida pelo tamanho: 40**  
+ **Nome do Store: Eric os livros de leitura**  
+**Tamanho definido pelo: 40**  
 **Tamanho real: 19**  
-**Nome do repositório: Barnum**  
-**Definida pelo tamanho: 40**  
+**Nome do Store: Barnum**  
+**Tamanho definido pelo: 40**  
 **Tamanho real: 8**  
-**Nome do repositório: Notícias & Brews**  
-**Definida pelo tamanho: 40**  
+**Nome do Store: Notícias & Brews**  
+**Tamanho definido pelo: 40**  
 **Tamanho real: 12**  
-**Nome do repositório: Doc-U-Mat: básica de qualidade e manuais**  
-**Definida pelo tamanho: 40**  
+**Nome do Store: Doc U Mat: lavanderia de qualidade e livros**  
+**Tamanho definido pelo: 40**  
 **Tamanho real: 36**  
-**Nome do repositório: Bookshop Fricative**  
-**Definida pelo tamanho: 40**  
+**Nome do Store: Bookshop Fricative**  
+**Tamanho definido pelo: 40**  
 **Tamanho real: 18**  
-**Nome da loja: Bookbeat**  
-**Definida pelo tamanho: 40**  
+**Store nome: Bookbeat**  
+**Tamanho definido pelo: 40**  
 **Tamanho real: 8**   
 ## <a name="see-also"></a>Consulte também  
  [Propriedade ActualSize (ADO)](../../../ado/reference/ado-api/actualsize-property-ado.md)   

@@ -6,27 +6,24 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Sort property [ADO], Visual Basic example
 ms.assetid: fc2fd40b-65d6-4023-90a3-90c9a88ef6cf
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 29251f351302fc94c9f55c0ada9c4028408cbe44
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ac218d0f95e16931f359bd183d4fe8a032f8c6cf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281869"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770084"
 ---
-# <a name="sort-property-example-vb"></a>Exemplo de propriedade de classificação (VB)
-Este exemplo usa o [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) do objeto [classificação](../../../ado/reference/ado-api/sort-property.md) propriedade para reordenar as linhas de um **registros** derivado a ***autores*** tabela de o ***Pubs*** banco de dados. Uma rotina de utilitários secundária imprime cada linha.  
+# <a name="sort-property-example-vb"></a>Exemplo da propriedade Sort (VB)
+Este exemplo usa o [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) do objeto [classificação](../../../ado/reference/ado-api/sort-property.md) propriedade para reordenar as linhas de um **conjunto de registros** deriva o ***autores*** tabela de o ***Pubs*** banco de dados. Uma rotina de utilitário secundário imprime cada linha.  
   
 ```  
 'BeginSortVB  
@@ -107,7 +104,7 @@ End Sub
 'EndSortVB  
 ```  
   
- Isso é que a rotina de utilitário secundário que imprime o título especificado e o conteúdo do **registros**.  
+ Isso é a rotina de utilitário secundário que imprime o título especificado e o conteúdo do especificado **conjunto de registros**.  
   
 ```  
 Attribute VB_Name = "Sort"  

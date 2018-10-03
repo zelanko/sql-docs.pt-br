@@ -1,36 +1,30 @@
 ---
-title: Localizar o Assistente de bancos de dados (Selecione arquivos) (AccessToSQL) | Microsoft Docs
+title: Localizar o Assistente de bancos de dados (selecione os arquivos) (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Find Databases Wizard
 ms.assetid: 2f574a34-4bab-40a4-89a8-ad4907ffc3fd
-caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: da8c4f3dbdfb374defe0144ef3accb004ee70b77
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 3a8cbc5295f34e2b839598d4f459d6346f563a83
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34773512"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47780424"
 ---
-# <a name="find-databases-wizard-select-files-accesstosql"></a>Localizar o Assistente de bancos de dados (Selecione arquivos) (AccessToSQL)
-A página Selecionar arquivos do Assistente para localizar os bancos de dados lista os arquivos que foram encontrados durante a pesquisa. Para selecionar um arquivo para adicionar a SSMA, selecione a linha que contém o nome do arquivo. Quando você terminar de selecionar os arquivos, clique em **próximo** para exibir a página seleção de verificar.  
+# <a name="find-databases-wizard-select-files-accesstosql"></a>Localizar o Assistente de bancos de dados (selecione os arquivos) (AccessToSQL)
+A página Selecionar arquivos do assistente localizar bancos de dados de lista os arquivos que foram encontrados durante a pesquisa. Para selecionar um arquivo para adicionar a SSMA e selecione a linha que contém o nome do arquivo. Quando você terminar de selecionar os arquivos, clique em **próxima** para exibir a página de seleção verificar.  
   
-Para abrir a rede de verificação para o Assistente de arquivos no **arquivo** menu, clique em **localizar bancos de dados**.  
+Para abrir a rede de verificação para arquivos de assistente, nos **arquivo** menu, clique em **localizar bancos de dados**.  
   
-Para selecionar um arquivo para adicionar a SSMA, marque a caixa de seleção ao lado do nome de arquivo. Quando você terminar de selecionar os arquivos, clique em **próximo** para exibir a página de conclusão.  
+Para selecionar um arquivo para adicionar a SSMA e selecione a caixa de seleção ao lado do nome do arquivo. Quando você terminar de selecionar os arquivos, clique em **próxima** para exibir a página de conclusão.  
   
 ## <a name="options"></a>Opções  
 **Selecionar tudo**  
@@ -52,10 +46,10 @@ Exibe o caminho do arquivo de banco de dados do Access.
 O tamanho do banco de dados, em bytes.  
   
 **Criado**  
-A data e hora de que criação do banco de dados.  
+A data e hora que o banco de dados foi criado.  
   
 **Modificado**  
-A data e hora que da última atualização do banco de dados.  
+A data e hora da que última atualização do banco de dados.  
   
 ## <a name="see-also"></a>Consulte também  
 [Reference(Access) de Interface do usuário](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  

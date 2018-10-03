@@ -6,35 +6,32 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ADOX provider support [ADO]
 ms.assetid: 64234ce5-dc46-4c8a-a316-61956b6b9abb
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ac3d27c685cba755635f3ab9d111fe69b7d2067e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: e6f346779d3a4c8cb43e2b30347ebf6b198d9015
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273475"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47803274"
 ---
 # <a name="provider-support-for-adox-ado"></a>Suporte do provedor para ADOX (ADO)
-Determinados recursos do ADOX não têm suportados, dependendo do seu provedor de dados OLE DB. ADOX é totalmente compatível com o [OLE DB Provider for Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md). Recursos sem suporte com o [Microsoft OLE DB Provider para SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md), o [Microsoft OLE DB Provider para ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md), ou o [Microsoft OLE DB Provider for Oracle](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md) são listados nas tabelas a seguir. Não há suporte para ADOX por outros provedores de OLE DB do Microsoft.  
+Determinados recursos do ADOX não têm suportados, dependendo do seu provedor de dados OLE DB. ADOX é totalmente compatível com o [OLE DB Provider for Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md). Recursos sem suporte com o [Microsoft OLE DB Provider para SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md), o [Microsoft OLE DB Provider for ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md), ou o [Microsoft OLE DB Provider for Oracle](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md) são listadas nas tabelas a seguir. Não há suporte para ADOX por outros provedores de OLE DB do Microsoft.  
   
 ## <a name="microsoft-ole-db-provider-for-sql-server"></a>Provedor Microsoft OLE DB para SQL Server  
   
 |Objeto ou coleção|Restrição de uso|  
 |--------------------------|-----------------------|  
-|**Tabelas** coleção|Propriedades são somente leitura antes da criação do objeto e somente leitura ao fazer referência a um objeto existente.|  
+|**Tabelas** coleção|Propriedades são leitura/gravação antes da criação do objeto e somente leitura ao fazer referência a um objeto existente.|  
 |**Modos de exibição** coleção|**Modos de exibição** não tem suporte.|  
-|**Procedimentos** coleção|O **Append** e **excluir** métodos não são suportados.|  
+|**Procedimentos** coleção|O **Append** e **excluir** métodos não têm suporte.|  
 |**Procedimento** objeto|O **comando** não há suporte para a propriedade.|  
-|**Chaves** coleção|O **Append** e **excluir** métodos não são suportados.|  
+|**Chaves** coleção|O **Append** e **excluir** métodos não têm suporte.|  
 |**Os usuários** coleção|**Os usuários** não tem suporte.|  
 |**Grupos de** coleção|**Grupos de** não tem suporte.|  
   
@@ -42,12 +39,12 @@ Determinados recursos do ADOX não têm suportados, dependendo do seu provedor d
   
 |Objeto ou coleção|Restrição de uso|  
 |--------------------------|-----------------------|  
-|**Catálogo** objeto|O **criar** método não é suportado.|  
-|**Tabelas** coleção|O **Append** e **excluir** métodos não são suportados. Propriedades são somente leitura antes da criação do objeto e somente leitura ao fazer referência a um objeto existente.|  
-|**Procedimentos** coleção|O **Append** e **excluir** métodos não são suportados.|  
+|**Catálogo** objeto|O **criar** não há suporte para o método.|  
+|**Tabelas** coleção|O **Append** e **excluir** métodos não têm suporte. Propriedades são leitura/gravação antes da criação do objeto e somente leitura ao fazer referência a um objeto existente.|  
+|**Procedimentos** coleção|O **Append** e **excluir** métodos não têm suporte.|  
 |**Procedimento** objeto|O **comando** não há suporte para a propriedade.|  
-|**Índices** coleção|O **Append** e **excluir** métodos não são suportados.|  
-|**Chaves** coleção|O **Append** e **excluir** métodos não são suportados.|  
+|**Índices** coleção|O **Append** e **excluir** métodos não têm suporte.|  
+|**Chaves** coleção|O **Append** e **excluir** métodos não têm suporte.|  
 |**Os usuários** coleção|**Os usuários** não tem suporte.|  
 |**Grupos de** coleção|**Grupos de** não tem suporte.|  
   
@@ -55,13 +52,13 @@ Determinados recursos do ADOX não têm suportados, dependendo do seu provedor d
   
 |Objeto ou coleção|Restrição de uso|  
 |--------------------------|-----------------------|  
-|**Catálogo** objeto|O **criar** método não é suportado.|  
-|**Tabelas** coleção|O **Append** e **excluir** métodos não são suportados. Propriedades são somente leitura antes da criação do objeto e somente leitura ao fazer referência a um objeto existente.|  
-|**Modos de exibição** coleção|O **Append** e **excluir** métodos não são suportados.|  
-|**Exibição** objeto|O **comando** não há suporte para a propriedade.|  
-|**Procedimentos** objeto|O **Append** e **excluir** métodos não são suportados.|  
+|**Catálogo** objeto|O **criar** não há suporte para o método.|  
+|**Tabelas** coleção|O **Append** e **excluir** métodos não têm suporte. Propriedades são leitura/gravação antes da criação do objeto e somente leitura ao fazer referência a um objeto existente.|  
+|**Modos de exibição** coleção|O **Append** e **excluir** métodos não têm suporte.|  
+|**Modo de exibição** objeto|O **comando** não há suporte para a propriedade.|  
+|**Procedimentos** objeto|O **Append** e **excluir** métodos não têm suporte.|  
 |**Procedimento** objeto|O **comando** não há suporte para a propriedade.|  
-|**Índices** coleção|O **Append** e **excluir** métodos não são suportados.|  
-|**Chaves** coleção|O **Append** e **excluir** métodos não são suportados.|  
+|**Índices** coleção|O **Append** e **excluir** métodos não têm suporte.|  
+|**Chaves** coleção|O **Append** e **excluir** métodos não têm suporte.|  
 |**Os usuários** coleção|**Os usuários** não tem suporte.|  
 |**Grupos de** coleção|**Grupos de** não tem suporte.|

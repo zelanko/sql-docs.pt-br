@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 8d3d949e-5d43-4d2e-9dc8-48d182a7a935
-caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3cdb38afa672655dbb0a644783e7dc3fadb180b7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c547fa6363ab3a60ecbee8b348c233077e17ceed
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37295406"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48097427"
 ---
 # <a name="key-performance-indicator-representation-tabular"></a>Representação de indicador chave de desempenho (de tabela)
   Um KPI é usado para medir o desempenho de um valor, definido por uma medida base, em relação a um valor de destino  
@@ -31,7 +28,7 @@ ms.locfileid: "37295406"
 ### <a name="key-performance-indicator-in-amo"></a>Indicador chave de desempenho no AMO  
  Ao usar o AMO para gerenciar um kpi de modelo de tabela, não há nenhuma correspondência de objeto um para um para um kpi no AMO, o objeto de AMO <xref:Microsoft.AnalysisServices.Kpi>não é usado para este propósito; no AMO, para modelos de tabela, um kpi é representado por uma série de objetos criada em um dos elementos na coleção <xref:Microsoft.AnalysisServices.MdxScript.Commands%2A> e no <xref:Microsoft.AnalysisServices.MdxScript.CalculationProperties%2A>.  
   
- O trecho de código a seguir mostra como criar uma de muitas possíveis definições de kpi.  
+ O snippet de código a seguir mostra como criar uma de muitas possíveis definições de kpi.  
   
 ```  
   

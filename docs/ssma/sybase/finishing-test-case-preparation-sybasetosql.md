@@ -1,58 +1,52 @@
 ---
-title: Concluindo a preparação do caso de teste (SybaseToSQL) | Microsoft Docs
+title: Concluir a preparação do caso de teste (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Tester Component,Test Case Settings
 ms.assetid: 8b2a49b0-4296-4f3f-9e56-323aa6a6fa8e
-caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: f1df39866e511664027f5a4991360ef2eabf085a
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: b31739bb4db23ccd2159ec8146ef857d7a5d66e5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34778582"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47837346"
 ---
-# <a name="finishing-test-case-preparation-sybasetosql"></a>Concluindo a preparação do caso de teste (SybaseToSQL)
-A página final do assistente exibe a descrição do caso de teste e informações sobre os objetos envolvidos no teste. Além disso, nessa página você pode definir o teste de opções de execução.  
+# <a name="finishing-test-case-preparation-sybasetosql"></a>Concluir a preparação do caso de teste (SybaseToSQL)
+A página do assistente final exibe a descrição do caso de teste e informações sobre os objetos envolvidos no teste. Além disso, nesta página você pode definir o teste de opções de execução.  
   
 O **informações de caso de teste** seção mostra o nome do caso de teste e a descrição.  
   
-O **teste objetos** seção contém a lista nomeada de testado objetos agrupados por tipo de objeto.  
+O **objetos de teste** seção contém a lista nomeada de objetos testados agrupados por tipo de objeto.  
   
-O **objetos afetados a serem analisados** seção exibe a lista nomeada de objetos devem ser comparadas quais alterações de dados após a execução de objetos testado.  
+O **afetados objetos a serem analisados** seção exibe a lista nomeada de objetos devem ser comparadas a quais alterações de dados após a execução de objetos testado.  
   
 ## <a name="test-case-settings"></a>Configurações de caso de teste  
-No **configurações de caso de teste** seção, você pode definir opções de teste a execução do seguinte:  
+No **configurações de caso de teste** seção, você pode definir opções de teste a execução a seguir:  
   
-### <a name="stop-test-execution-after-first-failure"></a>Interromper a execução de teste após a primeira falha  
+### <a name="stop-test-execution-after-first-failure"></a>Parar a execução de teste após a primeira falha  
 Especifica para interromper o teste se ocorrer um erro durante a execução de teste.  
   
 -   Se você escolher **Sim**, quebras de execução de teste, se ocorrer um erro.  
   
 -   Se você escolher **não**, execução de teste continuará após um erro.  
   
-### <a name="perform-data-rollback"></a>Executar reversão de dados  
+### <a name="perform-data-rollback"></a>Executar a reversão de dados  
 Habilite a reversão automática de dados após a execução de teste.  
   
 -   Se você escolher **Sim**, as alterações de dados serão perdidas após a execução de teste.  
   
 -   Se você escolher **não**, todas as alterações de dados serão salvas a execução de teste.  
   
-### <a name="auxiliary-tables-saving-mode"></a>Modo de economia de tabelas auxiliares  
-Define o modo de gravação para tabelas auxiliares criados durante a execução de teste. Consulte a descrição de tabelas auxiliares do [casos de teste em execução &#40;SybaseToSQL&#41; ](../../ssma/sybase/running-test-cases-sybasetosql.md) tópico.  
+### <a name="auxiliary-tables-saving-mode"></a>Tabelas auxiliares do modo de economia  
+Define o modo de gravação para tabelas auxiliares criadas durante a execução de teste. Consulte a descrição de tabelas auxiliares na [casos de teste executando o &#40;SybaseToSQL&#41; ](../../ssma/sybase/running-test-cases-sybasetosql.md) tópico.  
   
 -   Se você selecionar **sempre salvar**, dados de tabela auxiliar sempre serão armazenados para uso posterior.  
   
@@ -62,10 +56,10 @@ Define o modo de gravação para tabelas auxiliares criados durante a execução
   
 -   Se você selecionar **peça ao usuário se a falha na comparação de tabela**, o usuário pode selecionar a ação necessária, se ocorrer um erro.  
   
-Clique o **concluir** botão para salvar o caso de teste preparado em [repositórios de teste usando &#40;SybaseToSQL&#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md).  
+Clique o **terminar** botão para salvar o caso de teste preparado em [repositórios de teste usando o &#40;SybaseToSQL&#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md).  
   
 ## <a name="see-also"></a>Consulte também  
-[Usando o teste repositórios &#40;SybaseToSQL&#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md)  
-[Casos de teste de execução &#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
-[Teste de objetos de banco de dados migrados &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+[Usando repositórios de teste &#40;SybaseToSQL&#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md)  
+[Executar casos de teste &#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
+[Testar objetos de banco de dados migrados &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

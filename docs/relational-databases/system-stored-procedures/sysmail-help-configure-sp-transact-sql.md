@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_help_configure_sp
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_configure_sp
 ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0d000f176194551f844485bcab04bfd0e085d702
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 1ef80206f9ff82cf1ab2917e90f61432be15c190
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257465"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47838424"
 ---
 # <a name="sysmailhelpconfiguresp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,13 +41,13 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
   
 ## <a name="arguments"></a>Argumentos  
  [**@parameter_name** =] **'***parameter_name***'**  
- O nome da definição de configuração a ser recuperado. Quando especificado, o valor da configuração é retornado no **@parameter_value** parâmetro de saída. Quando nenhum **@parameter_name** for especificado, esse procedimento armazenado retorna um conjunto de resultados contendo todas as definições de configuração do Database Mail na instância.  
+ O nome da definição de configuração a ser recuperado. Quando especificado, o valor da configuração é retornado na **@parameter_value** parâmetro de saída. Quando nenhum **@parameter_name** for especificado, esse procedimento armazenado retorna um conjunto de resultados contendo todas as definições de configuração do Database Mail na instância.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Quando nenhum **@parameter_name** for especificado, retorna um conjunto de resultados com as seguintes colunas.  
+ Quando nenhum **@parameter_name** for especificado, retorna um conjunto de resultados com as colunas a seguir.  
   
 ||||  
 |-|-|-|  
@@ -60,15 +56,15 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 |**paramvalue**|**nvarchar(256)**|O valor do parâmetro de configuração.|  
 |**Descrição**|**nvarchar(256)**|A descrição do parâmetro de configuração.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O procedimento armazenado **sysmail_help_configure_sp** lista as definições de configuração do Database Mail atuais para a instância.  
   
  Quando um **@parameter_name** for especificado, mas nenhum parâmetro de saída é fornecido para **@parameter_value**, esse procedimento armazenado não produz nenhuma saída.  
   
- O procedimento armazenado **sysmail_help_configure_sp** está no **msdb** banco de dados e pertence a **dbo** esquema. O procedimento deve ser chamado com um nome de três partes se o banco de dados atual não é **msdb**.  
+ O procedimento armazenado **sysmail_help_configure_sp** está no **msdb** banco de dados e é de propriedade de **dbo** esquema. O procedimento deve ser invocado com um nome de três partes se o banco de dados atual não for **msdb**.  
   
 ## <a name="permissions"></a>Permissões  
- Permissões de execução para esse procedimento usam como padrão membros do **sysadmin** função de servidor fixa.  
+ Permissões de execução para esse procedimento usam como padrão os membros de **sysadmin** função de servidor fixa.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir mostra a listagem das definições de configuração do Database Mail para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

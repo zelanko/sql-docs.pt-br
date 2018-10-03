@@ -6,30 +6,27 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - CancelUpdate method [ADO], VBScript example
 ms.assetid: c23912f0-1288-4727-8fb4-f643b8811cf7
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 000a63882a7f4ec64e0fa0c9cb4e6d88d3264df1
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: f20c372fbd98f0b14660e8c419e382a8a5c26c46
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287345"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47803004"
 ---
 # <a name="cancelupdate-method-example-vbscript"></a>Exemplo do método CancelUpdate (VBScript)
 > [!IMPORTANT]
->  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (veja o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Aplicativos que usam o RDS devem migrar para [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (consulte o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Devem ser migrados para aplicativos que usam o RDS [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Para testar este exemplo, recorte e cole este código entre as \<corpo > e \</Body > marcas em uma HTML normal de documento e nomeie-o **CancelUpdateVBS.asp**. Script ASP identificará o seu servidor de internet. Você precisará editar o nome do servidor para refletir a sua instalação. Basta altere o valor na cadeia de conexão do MyServer para o nome da sua instalação do SQL Server.  
+ Para testar este exemplo, recorte e cole este código entre o \<Body > e \</Body > marcas em uma HTML normal de documento e nomeie-o **CancelUpdateVBS.asp**. Script ASP identificará o seu servidor de internet. Você precisará editar o nome do servidor para refletir seu próprio programa de instalação. Basta altere o valor na cadeia de conexão do MyServer para o nome da sua instalação do SQL Server.  
   
 ```  
 <!-- BeginCancelUpdateVBS -->  

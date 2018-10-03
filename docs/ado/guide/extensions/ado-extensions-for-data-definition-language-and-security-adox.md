@@ -1,27 +1,24 @@
 ---
-title: ADO extensões de linguagem de definição de dados e de segurança (ADOX) | Microsoft Docs
+title: Extensões ADO para a linguagem de definição de dados e segurança (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c6579b5b-a93e-48c5-8847-743fc4590cd2
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9d5fc5a65421a5f7a80113444b385eba18a8b072
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 765ba0ec23dae20cd55ac54f14391e43725c2312
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273365"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47812124"
 ---
-# <a name="ado-extensions-for-data-definition-language-and-security-adox"></a>ADO extensões de linguagem de definição de dados e de segurança (ADOX)
+# <a name="ado-extensions-for-data-definition-language-and-security-adox"></a>Extensões ADO para segurança e linguagem de definição de dados (ADOX)
 Esta seção contém os tópicos a seguir.  
   
 -   [Conceitos básicos do ADOX](../../../ado/guide/extensions/adox-fundamentals.md)  

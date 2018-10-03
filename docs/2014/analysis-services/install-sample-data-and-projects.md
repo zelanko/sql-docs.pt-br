@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: fc475b25-cbb2-408a-901f-9299299538c5
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4a015f7827b711bf1eb638638a504fd92d886589
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8171edaa6e2265191ae4611fea79dd018b43022c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218266"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48117876"
 ---
 # <a name="install-sample-data-and-projects-for-the-analysis-services-multidimensional-modeling-tutorial"></a>Instalar dados de exemplo e projetos para o tutorial de modelagem multidimensional do Analysis Services
   Use as instruções e links fornecidos neste tópico para instalar todos os dados e arquivos de projeto usados nos Tutoriais do Analysis Services.  
@@ -69,7 +66,7 @@ ms.locfileid: "37218266"
   
 4.  Clique com o botão direito do mouse em Bancos de dados e clique em **Anexar**.  
   
-5.   Clique em **Adicionar**.  
+5.  Clique em **Adicionar**.  
   
 6.  Selecione o arquivo de banco de dados **AdventureWorksDW2012_Data.mdf** e clique em **OK**. Se o arquivo não estiver listado, verifique a pasta C:\Arquivos de Programas\MSSQL12.MSSQLSERVER\MSSQL\Data para ver se ele está lá.  
   

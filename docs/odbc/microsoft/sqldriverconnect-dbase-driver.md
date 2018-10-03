@@ -1,40 +1,37 @@
 ---
-title: SQLDriverConnect (dBASE Driver) | Microsoft Docs
+title: SQLDriverConnect (Driver do dBASE) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - DBase driver [ODBC], SQLDriverConnect
 - SQLDriverConnect function [ODBC], dBASE Driver
 ms.assetid: c837aa31-068e-4fa3-bc00-aae09bec21de
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 35f26a0e81c27bf773145410b9f0ab8bbbb2c5a3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3e4eeaa7ba710814bfeb8c5b4f5aa0dbd2d30ef7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904841"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47690874"
 ---
 # <a name="sqldriverconnect-dbase-driver"></a>SQLDriverConnect (dBASE Driver)
 > [!NOTE]  
->  Este tópico fornece informações de dBASE específica do Driver. Para obter informações gerais sobre esta função, consulte o tópico apropriado em [referência da API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Este tópico fornece informações específicas do Driver do dBASE. Para obter informações gerais sobre essa função, consulte o tópico apropriado sob [referência da API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- **SQLDriverConnect** permite que você se conectar a um driver sem criar uma fonte de dados (DSN).  
+ **SQLDriverConnect** permite que você se conecte a um driver sem criar uma fonte de dados (DSN).  
   
  As seguintes palavras-chave têm suporte na cadeia de conexão para todos os drivers: **DSN**, **DBQ**, e **FIL**.  
   
- Quando o driver do Paradox é usado, depois que um arquivo protegido por senha foi aberto por um usuário, outros usuários não são permitidos para abrir o mesmo arquivo.  
+ Quando o driver do Paradox é usado, depois um arquivo protegido por senha tiver sido aberto por um usuário, outros usuários não são permitidos para abrir o mesmo arquivo.  
   
- A tabela a seguir mostra as palavras-chave mínimo necessárias para se conectar a cada driver e fornece um exemplo de pares de palavra-chave/valor usados com **SQLDriverConnect**. Para obter uma lista completa de valores DRIVERID, consulte [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md).  
+ A tabela a seguir mostra as palavras-chave mínimas necessárias para conectar a cada driver e fornece um exemplo de pares de palavra-chave/valor usada com **SQLDriverConnect**. Para obter uma lista completa de valores DRIVERID, consulte [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md).  
   
 > [!NOTE]  
 >  Se DBQ ou DefaultDir não for especificado para o dBASEdriver, o driver se conectar ao diretório atual.  

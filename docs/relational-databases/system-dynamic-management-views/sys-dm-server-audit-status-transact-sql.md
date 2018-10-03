@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/19/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_server_audit_status_TSQL
@@ -18,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_server_audit_status dynamic management view
 ms.assetid: 4aa32d54-2ae1-437e-bbaa-7f1df1404b44
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a4797a4e81a0fabd169111e979d661d17517ce3f
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 3f2be7711a7e495608d2a35d42e617663e11bc3c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34467463"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47712506"
 ---
 # <a name="sysdmserverauditstatus-transact-sql"></a>sys.dm_server_audit_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,9 +33,9 @@ ms.locfileid: "34467463"
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**audit_id**|**Int**|ID da auditoria. Mapeia para o **audit_id** campo o **sys.audits** exibição do catálogo.|  
+|**audit_id**|**int**|ID da auditoria. Mapeia para o **audit_id** campo o **sys.audits** exibição do catálogo.|  
 |**name**|**sysname**|Nome da auditoria. Mesmo que o **nome** campo o **server_audits** exibição do catálogo.|  
-|**status**|**smallint**|Status numérico da auditoria de servidor:<br /><br /> 0 = não iniciado<br /><br /> 1 =<br />        Started (iniciado)<br /><br /> 2 =<br />      Falha de tempo de execução<br /><br /> 3 = destino criar falhar<br /><br /> 4 = desligamento|  
+|**status**|**smallint**|Status numérico da auditoria de servidor:<br /><br /> 0 = não iniciado<br /><br /> 1 =<br />        Started (iniciado)<br /><br /> 2 =<br />      Falha de tempo de execução<br /><br /> 3 = destino criar Fail<br /><br /> 4 = desligado|  
 |**status_desc**|**nvarchar(256)**|Cadeia de caracteres que mostra o status da auditoria de servidor:<br /><br /> NOT_STARTED<br /><br /> STARTED<br /><br /> RUNTIME_FAIL<br /><br /> TARGET_CREATION_FAILED<br /><br /> SHUTTING_DOWN|  
 |**status_time**|**datetime2**|Carimbo de data e hora em UTC da última alteração de status da auditoria.|  
 |**event_session_address**|**varbinary(8)**|Endereço da sessão de Eventos Estendidos associada à auditoria. Relacionados para o **sys.db_xe_sessions.address** exibição do catálogo.|  

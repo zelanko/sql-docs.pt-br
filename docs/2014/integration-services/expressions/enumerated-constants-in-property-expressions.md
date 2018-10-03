@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - enumerators [Integration Services]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - enumerated constants [Integration Services]
 - property expressions [Integration Services]
 ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
-caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d000c77263a0448ff838bff42a5020b86a299a72
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bb882f13b7f4fd19cab5f9b44885647aaafa65d3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37221826"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089640"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>Constantes enumeradas em expressões de propriedade
   Se as expressões de propriedade incluírem valores de uma lista de membros de enumerador, a expressão deverá usar o valor numérico do membro de enumerador em vez do nome amigável do membro. Por exemplo, se uma expressão define o `LoggingMode` propriedade, use o valor numérico 2 em vez do nome amigável desabilitada.  
@@ -461,7 +458,7 @@ ms.locfileid: "37221826"
   
 |Nome amigável em DTSXMLDiffOptions|Valor numérico|  
 |----------------------------------------|-------------------|  
-|Nenhum|0|  
+|None|0|  
 |IgnoreChildOrder|1|  
 |IgnoreComments|2|  
 |IgnorePI|4|  
@@ -491,7 +488,7 @@ ms.locfileid: "37221826"
   
 |Nome amigável em DatabaseSelection|Valor numérico|  
 |----------------------------------------|-------------------|  
-|Nenhum|0|  
+|None|0|  
 |Todos|1|  
 |Sistema|2|  
 |Usuário|3|  
@@ -501,7 +498,7 @@ ms.locfileid: "37221826"
   
 |Nome amigável em TableSelection|Valor numérico|  
 |-------------------------------------|-------------------|  
-|Nenhum|0|  
+|None|0|  
 |Todos|1|  
 |Specific|2|  
   
@@ -579,7 +576,7 @@ ms.locfileid: "37221826"
   
 |Nome amigável em DTSForcedExecResult|Valor numérico|  
 |------------------------------------------|-------------------|  
-|Nenhum|-1|  
+|None|-1|  
 |Êxito|0|  
 |Failure|1|  
 |Completion|2|  

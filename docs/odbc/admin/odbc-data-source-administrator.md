@@ -5,29 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC data source administrator [ODBC], about ODBC data source administrator
 - ODBC data source administrator [ODBC]
 ms.assetid: a2f66b4c-a4ac-401b-8e95-d8f96332e0b5
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1e529ab5d321625f8e6bf795a70d0e0143499df7
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: c718595d0912e4d87bb190788a6357453a8a0ee5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34706944"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47677274"
 ---
 # <a name="odbc-data-source-administrator"></a>Administrador de Fonte de Dados ODBC
-O administrador de fonte de dados do Microsoft® ODBC gerencia o banco de dados drivers e fontes de dados. Esse aplicativo está localizado no painel de controle do Windows em **ferramentas administrativas**. Começando no Windows 8, o ícone é chamado **fontes de dados ODBC**, e há uma versão de 32 bits e 64 bits em sistemas operacionais de 64 bits.  
+O administrador de fonte de dados do Microsoft® ODBC gerencia as fontes de dados e drivers de banco de dados. Esse aplicativo está localizado no painel de controle do Windows sob **ferramentas administrativas**. A partir do Windows 8, o ícone é denominado **fontes de dados ODBC**, e não há uma versão de 32 bits e 64 bits em sistemas operacionais de 64 bits.  
   
- Para obter informações sobre procedimentos detalhados do administrador de ODBC, abra o [administrador de fonte de dados ODBC](http://msdn.microsoft.com/eea94d94-f53b-4289-ae75-9ccccde15333) caixa de diálogo e clique em **ajuda**.  
+ Para obter informações sobre procedimentos detalhados do administrador de ODBC, abra o [administrador de fonte de dados ODBC](http://msdn.microsoft.com/eea94d94-f53b-4289-ae75-9ccccde15333) caixa de diálogo e clique em **ajudar**.  
   
  Você pode usar comandos do PowerShell para gerenciar drivers e fontes de dados. Para obter mais informações sobre esses comandos do PowerShell, consulte [comandos do Windows PowerShell de componentes de acesso de dados](https://msdn.microsoft.com/library/windows/desktop/jj134064.aspx).  
   

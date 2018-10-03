@@ -4,27 +4,24 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Managing Passwords in Oracle, Exporting or Importing Encrypted Password
 - Managing passwords in Oracle, Securing Password
 ms.assetid: 8c7d9f8e-06bb-476c-bbd2-15b61d5bba3c
-caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 2b99f456fe02dbebcbaecf1a59a3fcc9f0d536e2
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: aab7c06903f334ee0b24907cb4189b56d620b49a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34777382"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47842964"
 ---
-# <a name="managing-passwords-oracletosql"></a>Gerenciamento de senhas (OracleToSQL)
-Esta seção é sobre como proteger senhas de banco de dados e o procedimento para importar ou exportá-los entre servidores:  
+# <a name="managing-passwords-oracletosql"></a>Gerenciar senhas (OracleToSQL)
+Esta seção é sobre como proteger as senhas de banco de dados e o procedimento para importar ou exportá-los entre servidores:  
   
 1.  Proteção de senha  
   
@@ -35,19 +32,19 @@ O SSMA permite proteger sua senha de um banco de dados.
   
 Use o procedimento a seguir para implementar uma conexão segura:  
   
-Especifique uma senha válida usando um dos três métodos a seguir:  
+Especifique uma senha válida, usando um dos três métodos a seguir:  
   
 1.  **Texto não criptografado:** digite a senha do banco de dados no atributo de valor do nó 'senha'. Ele é encontrado sob o nó de definição de servidor na seção de servidor do arquivo de script ou arquivo de conexão do servidor.  
   
-    Senhas em texto não criptografado não são seguras. Portanto, você encontrará a seguinte mensagem de aviso na saída do console: *"servidor &lt;id do servidor&gt; senha é fornecida no formato de texto não criptografado não seguras, aplicativo de Console SSMA fornece uma opção para proteger o senha por meio da criptografia, consulte a opção – securepassword em SSMA arquivo de ajuda para obter mais informações."*  
+    As senhas em texto não criptografado não são seguras. Portanto, você encontrará a seguinte mensagem de aviso na saída do console: *"servidor &lt;id do servidor&gt; senha é fornecida na forma de texto não criptografado não seguro, o aplicativo de Console do SSMA fornece uma opção para proteger o senha por meio da criptografia, consulte a opção – securepassword no SSMA arquivo de ajuda para obter mais informações."*  
   
     **Senhas criptografadas:** a senha especificada, nesse caso, é armazenada em um formato criptografado no computador local em ProtectedStorage.ssma.  
   
-    -   **Proteção de senhas**  
+    -   **Proteger senhas**  
   
-        -   Execute o `SSMAforOracleConsole.exe` com o `–securepassword` e adicione a opção na linha de comando, passando o servidor de conexão ou arquivo de script que contém o nó de senha na seção de definição de servidor.  
+        -   Execute o `SSMAforOracleConsole.exe` com o `–securepassword` e adicione o comutador na linha de comando, passando o servidor de conexão ou arquivo de script que contém o nó de senha na seção de definição de servidor.  
   
-        -   No prompt, o usuário será solicitado a digitar a senha do banco de dados e confirmá-la.  
+        -   No prompt, o usuário é solicitado a inserir a senha do banco de dados e confirmá-la.  
   
             As ids de definição de servidor e suas senhas criptografadas correspondentes são armazenadas em um arquivo no computador local  
             
@@ -84,7 +81,7 @@ Especifique uma senha válida usando um dos três métodos a seguir:
   
     -   **Listando as Ids do servidor cujas senhas são criptografadas**  
   
-        Execute o `SSMAforOracleConsole.exe` com o `–securepassword` e `–list` alternar na linha de comando para listar todas as ids de servidor cujas senhas foram criptografadas.  
+        Execute o `SSMAforOracleConsole.exe` com o `–securepassword` e `–list` alternar na linha de comando para listar todas as ids do servidor cujas senhas foram criptografadas.  
   
         Exemplo:  
         
@@ -92,10 +89,10 @@ Especifique uma senha válida usando um dos três métodos a seguir:
   
     > [!NOTE]  
     > 1.  A senha em texto não criptografado mencionado no arquivo de conexão de servidor ou de script tem precedência sobre a senha criptografada no arquivo protegido.  
-    > 2.  Quando não existe nenhuma senha na seção de servidor de arquivo de conexão do servidor ou o arquivo de script ou se ele não foi protegido no computador local, o console solicita que você digite a senha.  
+    > 2.  Quando nenhuma senha existe na seção servidor de arquivo de conexão do servidor ou o arquivo de script ou se ele não foram protegido no computador local, o console solicitará que você insira a senha.  
   
 ## <a name="exporting-or-importing-encrypted-passwords"></a>Exportando ou importando senhas criptografadas  
-O aplicativo de Console SSMA permite exportar o banco de dados criptografado senhas presente em um arquivo no computador local para um arquivo protegido e vice-versa. Ele ajuda a tornar a máquina de senhas criptografadas independentes. Funcionalidade de exportação lê a id do servidor e a senha do local protegido armazenamento e salva as informações em um arquivo criptografado. O usuário é solicitado a inserir a senha para o arquivo protegido. Verifique se a senha digitada é 8 caracteres ou mais. Este arquivo protegido é portátil em máquinas diferentes. Funcionalidade de importação lê o servidor de informações de id e a senha do arquivo protegido. O usuário é solicitado a inserir a senha para o arquivo protegido e acrescenta as informações para o armazenamento protegido local.  
+O aplicativo de Console do SSMA permite que você exporte as senhas de banco de dados criptografado presente em um arquivo no computador local para um arquivo protegido e vice-versa. Ele ajuda a tornar a máquina de senhas criptografadas independentes. Funcionalidade de exportação lê a id do servidor e armazenamento protegido de senha no local e salva as informações em um arquivo criptografado. O usuário é solicitado a inserir a senha para o arquivo protegido. Verifique se a senha inserida é o comprimento de 8 caracteres ou mais. Esse arquivo protegido é portátil entre diferentes computadores. Funcionalidade de importação lê o servidor de informações de id e a senha do arquivo protegido. O usuário é solicitado a inserir a senha para o arquivo protegido e acrescenta as informações para o armazenamento local protegido.  
   
 Exemplo:  
 

@@ -4,26 +4,23 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Test Cases Repository
 - Test Results Repository
 ms.assetid: f941cce4-d3e3-4aeb-a88a-4f101a97a9f4
-caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 863fee753776b0e86408d6ccd0d9d7e0cfc7f33b
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: f0390360aef76b15c9743780eff787dd0a2d275d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979738"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47676494"
 ---
-# <a name="using-test-repositories-oracletosql"></a>Usando repositórios de teste (OracleToSQL)
+# <a name="using-test-repositories-oracletosql"></a>Uso de repositórios de teste (OracleToSQL)
 O repositório de teste do SSMA armazenamentos casos de teste do testador do SSMA e resultados de teste para uso posterior. Os dados de repositório são salvos nas tabelas do SQL Server **TestCaseRepository** e **RunTestCaseResultRepository** no esquema **ssma_oracle_utilities** de **ssmatesterdb** banco de dados.  
   
 Os seguintes botões estão disponíveis na caixa de diálogo repositório de casos de teste:  

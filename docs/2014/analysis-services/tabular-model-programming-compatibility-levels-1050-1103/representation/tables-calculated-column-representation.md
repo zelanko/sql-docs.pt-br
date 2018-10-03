@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 190bfa92-2445-404d-86df-7cc94d283add
-caps.latest.revision: 8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9712182e3416a81edab77d1cb19b50ee5bc4bd07
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 90c3cc0d95183dbab7df03c62d5be6a0f8dcc2fb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37285832"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48131496"
 ---
 # <a name="calculated-column-representation-tabular"></a>Representação de coluna calculada (tabela)
   Uma coluna calculada é uma expressão DAX que cria uma nova coluna em uma tabela e os valores obtidos são armazenados na tabela. A expressão de coluna calculada é avaliada toda vez que a tabela é processada.  
@@ -30,7 +27,7 @@ ms.locfileid: "37285832"
 ### <a name="calculated-columns-in-amo"></a>Colunas calculadas no AMO  
  Ao usar o AMO para gerenciar uma tabela de modelo de tabela, não há correspondência de objeto um para um em uma coluna calculada no AMO. Uma coluna calculada é representada por um atributo em <xref:Microsoft.AnalysisServices.Dimension> e um atributo em <xref:Microsoft.AnalysisServices.MeasureGroup>.  
   
- O trecho de código a seguir mostra como adicionar uma coluna calculada a um modelo de tabela existente. O código supõe que você tenha um objeto de banco de dados de AMO, newDatabase e um objeto de cubo AMO, modelCube.  
+ O snippet de código a seguir mostra como adicionar uma coluna calculada a um modelo de tabela existente. O código supõe que você tenha um objeto de banco de dados de AMO, newDatabase e um objeto de cubo AMO, modelCube.  
   
 ```  
   

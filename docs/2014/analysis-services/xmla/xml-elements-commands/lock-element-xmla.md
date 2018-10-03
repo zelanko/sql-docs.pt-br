@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Lock Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Lock command
 ms.assetid: a819e805-4793-43bb-8af3-16a19f8bdab3
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 44225f211ac013edd82de08c9ca82f22cb349f96
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: aee5d603c2708cb42b666d3cc0c9acc5ea208f0b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37209866"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48079516"
 ---
 # <a name="lock-element-xmla"></a>Elemento Lock (XMLA)
   Bloqueia um objeto especificado em um [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instância.  
@@ -54,8 +51,8 @@ ms.locfileid: "37209866"
   
 |Característica|Description|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|Nenhum|  
-|Valor padrão|Nenhum|  
+|Comprimento e tipo de dados|None|  
+|Valor padrão|None|  
 |Cardinalidade|0-n: Elemento opcional que pode ocorrer mais de uma vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -65,7 +62,7 @@ ms.locfileid: "37209866"
 |Elementos pai|[Comando](../xml-elements-properties/command-element-xmla.md)|  
 |Elementos filho|[ID](../xml-elements-properties/id-element-xmla.md), [modo](../xml-elements-properties/mode-element-xmla.md), [objeto](../xml-elements-properties/object-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O comando `Lock` bloqueia um objeto, para uso compartilhado ou exclusivo, no contexto da transação ativa no momento. Apenas administradores de banco de dados ou de servidor podem emitir um comando `Lock` explicitamente. Um bloqueio em um objeto impede a confirmação de transações até que o bloqueio seja removido. O [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] oferece suporte a dois tipos de bloqueios, bloqueios compartilhados e bloqueios exclusivos. Para obter mais informações sobre os tipos de bloqueio com suporte [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], consulte [elemento Mode &#40;XMLA&#41;](../xml-elements-properties/mode-element-xmla.md).  
   
  O [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] permite apenas o bloqueio de bancos de dados. O elemento `Object` deve conter uma referência de objeto a um banco de dados [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Se o `Object` não for especificado ou se o `Object` elemento se refere a um objeto diferente de um banco de dados, ocorrerá um erro.  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c428d717-05de-436c-b9dc-e8c1925a60ca
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ef5d63ab45c1bad7d74bbf162fd3da0c2e67a161
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6def0344726c2b4427d12b548e60d3b68135369d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37319356"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48099706"
 ---
 # <a name="tables-and-columns-ssas-tabular"></a>Tabelas e colunas (SSAS tabular)
   Depois de ter adicionado tabelas e os dados em um modelo usando o Assistente de Importação de Tabela, você pode começar a trabalhar com as tabelas adicionando novas colunas de dados, criando relacionamentos entre tabelas, definindo cálculos que estendem os dados e filtrando e classificando dados nas tabelas para facilitar a exibição.  

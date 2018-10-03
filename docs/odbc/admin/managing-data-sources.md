@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - deleting data sources [ODBC], ODBC data source administrator
@@ -16,22 +14,21 @@ helpviewer_keywords:
 - removing data sources [ODBC], ODBC data source administrator
 - ODBC data source administrator [ODBC], data source management
 ms.assetid: 67cc4945-4850-4eb4-8da6-b835ddaeca4c
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6be8fba37a93e2fda66e96d1334ee4ddcb15d9e5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6a1f8893351ceb68ebd7c42e3ac82c876c01c10b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32901711"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47723235"
 ---
 # <a name="managing-data-sources"></a>Gerenciar fontes de dados
-Depois de instalar um driver ODBC do programa de instalação do driver, você pode definir uma ou mais fontes de dados para ele. O nome da fonte de dados (DSN) deve fornecer uma descrição exclusiva dos dados. Por exemplo, *folha de pagamento* ou *contas a pagar*. As fontes de dados de usuário e do sistema que estão definidas para todos os drivers instalados no momento são listadas no **DSN do usuário** ou **DSN de sistema** guias do **administrador de fonte de dados ODBC**caixa de diálogo. As fontes de dados de arquivo em um diretório específico são listadas no **DSN de arquivo** guia; o diretório a ser mostrado é inserido no **examinar** caixa o **DSN de arquivo** guia.  
+Depois de instalar um driver ODBC do programa de instalação do driver, você pode definir uma ou mais fontes de dados para ele. O nome da fonte de dados (DSN) deve fornecer uma descrição exclusiva dos dados. Por exemplo, *folha de pagamento* ou *contas a pagar*. As fontes de dados de usuário e do sistema que são definidas para todos os drivers instalados no momento são listadas na **DSN de usuário** ou **DSN de sistema** guias do **administrador de fonte de dados ODBC**caixa de diálogo. As fontes de dados de arquivo em um determinado diretório são listadas na **DSN de arquivo** guia; o diretório a ser mostrado é inserido na **examinar** caixa a **DSN de arquivo** guia.  
   
 > [!NOTE]  
->  Para gerenciar uma fonte de dados que se conecta a um driver de 32 bits em plataformas de 64 bits, use c:\windows\sysWOW64\odbcad32.exe. Para gerenciar uma fonte de dados que se conecta a um driver de 64 bits, use c:\windows\system32\odbcad32.exe. Em **ferramentas administrativas** em um sistema de operacional do Windows 8 de 64 bits, há ícones para 32 bits e 64 bits **administrador de fonte de dados ODBC** caixa de diálogo.  
+>  Para gerenciar uma fonte de dados que se conecta a um driver de 32 bits na plataforma de 64 bits, use c:\windows\sysWOW64\odbcad32.exe. Para gerenciar uma fonte de dados que se conecta a um driver de 64 bits, use c:\windows\system32\odbcad32.exe. Na **ferramentas administrativas** em um sistema de operacional do Windows 8 de 64 bits, há ícones para os 32 bits e 64 bits **administrador de fonte de dados ODBC** caixa de diálogo.  
   
  Se você usar o odbcad32.exe 64-bit para configurar ou remover um DSN que se conecta a um driver de 32 bits, por exemplo, **Driver Microsoft Access (\*. mdb)**, você receberá a seguinte mensagem de erro:  
   
@@ -41,15 +38,15 @@ The specified DSN contains an architecture mismatch between the Driver and Appli
   
  Para resolver esse erro, use o odbcad32.exe 32 bits para configurar ou remover o DSN.  
   
- Uma fonte de dados associa um determinado driver ODBC com os dados que você deseja acessar pelo driver. Por exemplo, você pode criar uma fonte de dados para usar o driver ODBC do dBASE para acessar um ou mais arquivos dBASE encontrados em um diretório específico no disco rígido ou uma unidade de rede. Usando o administrador de fonte de dados ODBC, você pode adicionar, modificar e excluir fontes de dados, conforme descrito na tabela a seguir.  
+ Uma fonte de dados associa um determinado driver ODBC com os dados que você deseja acessar por meio do driver. Por exemplo, você pode criar uma fonte de dados para usar o driver do dBASE ODBC para acessar um ou mais arquivos dBASE encontrados em um diretório específico no seu disco rígido ou uma unidade de rede. Usando o administrador de fonte de dados ODBC, você pode adicionar, modificar e excluir fontes de dados, conforme descrito na tabela a seguir.  
   
 |Ação|Description|  
 |------------|-----------------|  
-|Adicionando fontes de dados|É possível adicionar várias fontes de dados, cada uma associação de um driver com alguns dados que você deseja acessar usando o driver. Dê um nome que identifica exclusivamente essa fonte de dados de cada fonte de dados. Por exemplo, se você criar uma fonte de dados para um conjunto de arquivos dBASE que contêm informações de cliente, você pode nomear a fonte de dados "Clientes". Aplicativos normalmente exibem nomes de fonte de dados para os usuários à sua escolha.<br /><br /> Adicionando uma fonte de dados de arquivo é ligeiramente diferente da adição de fontes de dados do sistema ou usuário. Para obter mais informações, consulte o administrador de fonte de dados ODBC no arquivo de Ajuda.|  
-|Modificando fontes de dados|Dependendo dos requisitos, talvez seja necessário reconfigurar as fontes de dados. Você pode redefinir as opções clicando **configurar** em qualquer caixa de diálogo de instalação do driver.|  
+|Adicionando fontes de dados|É possível adicionar várias fontes de dados, cada um deles associando um driver com alguns dados que você deseja acessar usando esse driver. Dê um nome que identifica exclusivamente essa fonte de dados de cada fonte de dados. Por exemplo, se você criar uma fonte de dados para um conjunto de arquivos dBASE que contêm informações do cliente, você pode nomear a fonte de dados "Clientes". Aplicativos normalmente exibem nomes de fonte de dados para os usuários podem escolher.<br /><br /> Adicionando uma fonte de dados de arquivo é um pouco diferente da adição de usuário ou fontes de dados do sistema. Para obter mais informações, consulte o administrador de fonte de dados ODBC no arquivo de Ajuda.|  
+|Modificando fontes de dados|Dependendo dos seus requisitos, talvez seja necessário reconfigurar as fontes de dados. Você pode redefinir opções clicando **configurar** em qualquer caixa de diálogo de instalação do driver.|  
 |Excluindo fontes de dados|Clique em **remover** depois de selecionar uma fonte de dados.|  
   
- Para obter mais informações sobre fontes de dados de arquivo, consulte [conectar fontes de dados de arquivo usando](../../odbc/reference/develop-app/connecting-using-file-data-sources.md) ou [função SQLDriverConnect](../../odbc/reference/syntax/sqldriverconnect-function.md).  
+ Para obter mais informações sobre fontes de dados de arquivo, consulte [conectar fontes de dados de arquivo usando](../../odbc/reference/develop-app/connecting-using-file-data-sources.md) ou o [função SQLDriverConnect](../../odbc/reference/syntax/sqldriverconnect-function.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Administrador de fonte de dados ODBC](../../odbc/admin/odbc-data-source-administrator.md)

@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - date/time [OLE DB], enhanced behavior with earlier SQL Server versions
 ms.assetid: 96976bac-018c-47cc-b1b2-fa9605eb55e5
-caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bd1f9f48b1703719ce08ca2d1da4a5c9addaffc0
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 1a715c6f9008b81cc77fdea84b47f3d70e9007a6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37420175"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48125486"
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>Novos recursos de data e hora com versões anteriores do SQL Server (OLE DB)
   Este tópico descreve o comportamento esperado quando um aplicativo cliente que usa recursos aprimorados de data e hora se comunica com uma versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anteriores ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]e quando um cliente compilado com uma versão do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client anteriores ao [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] envia comandos para um servidor que oferece suporte a recursos de data e hora aprimorados.  
@@ -41,7 +38,7 @@ ms.locfileid: "37420175"
 |DBTYPE_DBTIME||Time(7)|Falha – literal de hora inválido.|OK|  
 |DBTYPE_DBTIMESTAMP|||Falha – literal de hora inválido.|OK|  
 |DBTYPE_DBTIMESTAMP||Datetime2(3)|OK|OK|  
-|DBTYPE_DBTIMESTAMP||Datetime2(7)|OK|OK|  
+|DBTYPE_DBTIMESTAMP||datetime2(7)|OK|OK|  
 |DBTYPE_DBDATE|Smalldatetime|data|OK|OK|  
 |DBTYPE_DBTIMESTAMP|||Campos de hora definidos como zero.|IRowsetChange falhará devido ao truncamento de cadeia de caracteres se o campo de hora for diferente de zero.|  
 |DBTYPE_DBTIME||Time(0)|OK|OK|  
@@ -169,6 +166,6 @@ ms.locfileid: "37420175"
  Todos os operadores de comparação são permitidos para os novos tipos de data/hora, porque eles aparecem como tipos de cadeia de caracteres, em vez de tipos de data/hora.  
   
 ## <a name="see-also"></a>Consulte também  
- [Aprimoramentos de data e hora &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
+ [Melhorias de data e hora &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
   
   

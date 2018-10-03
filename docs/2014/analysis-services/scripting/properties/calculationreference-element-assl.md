@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - CalculationReference Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - CalculationReference element
 ms.assetid: 4dd18b1f-55c3-4673-afbe-736d1bce8331
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: aace0256c454505e07b4226efc63da0d5d3581c7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b97ce0ccb7c9a8ba6bc5f1e5778c334380747bc6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224056"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049117"
 ---
 # <a name="calculationreference-element-assl"></a>Elemento CalculationReference (ASSL)
   Contém o nome do conjunto nomeado ou da célula calculada mencionado pelo [CalculationProperty](../objects/calculationproperty-element-assl.md).  
@@ -51,7 +48,7 @@ ms.locfileid: "37224056"
 |Característica|Description|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|Cadeia de caracteres|  
-|Valor padrão|Nenhum|  
+|Valor padrão|None|  
 |Cardinalidade|1-1: elemento obrigatório que pode ocorrer apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -59,9 +56,9 @@ ms.locfileid: "37224056"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elemento pai|[CalculationProperty](../objects/calculationproperty-element-assl.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Se o valor do elemento `CalculationReference` não coincidir com o nome de um conjunto nomeado ou de uma definição de célula calculada existente, o elemento `CalculationReference` será ignorado.  
   
  O elemento que corresponde ao pai de `CalculationReference` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.CalculationProperty>.  

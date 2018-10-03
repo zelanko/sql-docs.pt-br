@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.browsecube.view.f1
 ms.assetid: efb5ee1c-de50-4bfc-83ff-08a4f03c3ece
-caps.latest.revision: 26
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bfa10bce2a4cd6462d1555b6b45fe375c6c68e04
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b15f077132fcc50c89dd93a38525316bf112f0a7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37236166"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093158"
 ---
 # <a name="browser-cube-designer-analysis-services---multidimensional-data"></a>Navegador (Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use a guia **Navegador** do Designer de Cubo para explorar dimensões, medidas e KPIs em um cubo. No [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], o Navegador do Cubo do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] foi integrado com o Designer de Consulta MDX e fornece interfaces gráficas do usuário para ajudar a criar consultas MDX, filtrar e fatiar cubos, além de fazer buscas detalhadas em hierarquias.  

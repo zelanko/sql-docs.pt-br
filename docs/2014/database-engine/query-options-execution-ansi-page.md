@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.ansi.f1
 ms.assetid: c90d7cdf-3309-46f4-b900-220521bb9552
-caps.latest.revision: 23
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: d7e3c070c8054378aeae2e3be8e6a2a237c4c3b5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bfc25b918c9cca50af6ac7c57bfc0ce1c1b4c3c9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37252648"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48088606"
 ---
 # <a name="query-options-execution-ansi-page"></a>Execução de Opções de Consulta (página ANSI)
   Use esta página para especificar que o [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] executará as consultas usando todas ou uma parte das configurações especificadas no padrão ISO (ANSI).  
@@ -57,7 +54,7 @@ ms.locfileid: "37252648"
  **SET ANSI_NULLS**  
  Especifica o comportamento compatível com ISO dos operadores de comparação Igual a (`=`) e Diferente de (`<>`) quando usados com valores nulos. Quando **SET ANSI_NULLS** é selecionado, todas as comparações com um valor nulo são avaliadas como UNKNOWN, o comportamento compatível com ISO. Quando **SET ANSI_NULLS** não é selecionado, as comparações de todos os dados com um valor nulo são avaliadas como TRUE se o valor dos dados for NULL. Esta opção é selecionada por padrão.  
   
- **Redefinir para padrão**  
+ **Restaurar Padrões**  
  Redefine todos os valores dessa página com os valores padrão originais.  
   
   

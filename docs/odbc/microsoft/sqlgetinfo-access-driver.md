@@ -1,34 +1,31 @@
 ---
-title: SQLGetInfo (Driver de acesso) | Microsoft Docs
+title: SQLGetInfo (Driver do Access) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLGetInfo function [ODBC], Access Driver
 - Access driver [ODBC], SQLGetInfo
 ms.assetid: c226aba7-a2f4-4b32-b640-92654b40e5a7
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0a761fe38b7d162d7e43ae2f9148626dadff57e6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e559bcf9f66980c6c4ecd7a753e49e21819da54d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904842"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696274"
 ---
-# <a name="sqlgetinfo-access-driver"></a>SQLGetInfo (Driver de acesso)
+# <a name="sqlgetinfo-access-driver"></a>SQLGetInfo (Driver do Access)
 > [!NOTE]  
->  Este tópico fornece informações específicas de Driver de acesso. Para obter informações gerais sobre esta função, consulte o tópico apropriado em [referência da API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Este tópico fornece informações específicas de Driver do Access. Para obter informações gerais sobre essa função, consulte o tópico apropriado sob [referência da API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- **SQLGetInfo** oferece suporte ao tipo de informações SQL_FILE_USAGE. O valor retornado é um inteiro de 16 bits que indica como o driver trata diretamente os arquivos em uma fonte de dados:  
+ **SQLGetInfo** dá suporte ao tipo de informações SQL_FILE_USAGE. O valor retornado é um inteiro de 16 bits que indica como o driver trata diretamente os arquivos em uma fonte de dados:  
   
 -   SQL_FILE_NOT_SUPPORTED — O driver não é um driver de camada única.  
   
@@ -41,7 +38,7 @@ ms.locfileid: "32904842"
 ## <a name="sqlbookmarkpersistence"></a>SQL_BOOKMARK_PERSISTENCE  
  SQL_BP_SCROLL &AMP;#124; SQL_BP_UPDATE [1]  
   
- [1] indicadores persistirem após uma confirmação, mas não persistirão após uma reversão.  
+ [1] indicadores persistirem após uma confirmação, mas não permanecem após uma reversão.  
   
 ## <a name="sqlconvertbinary"></a>SQL_CONVERT_BINARY  
  SQL_CVT_DOUBLE &AMP;#124; SQL_CVT_FLOAT &AMP;#124; SQL_CVT_INTEGER &AMP;#124; SQL_CVT_NUMERIC &AMP;#124; SQL_CVT_REAL &AMP;#124; SQL_CVT_SMALLINT &AMP;#124; SQL_CVT_VARCHAR &AMP;#124; SQL_CVT_WVARCHAR  
@@ -104,7 +101,7 @@ ms.locfileid: "32904842"
 ||4.0|04.00.0000|  
   
 > [!NOTE]  
->  Não há suporte para as versões 1.0 e 1.1. Além disso, não há nenhuma diferença no formato de dados no Microsoft Access versões 3.0, 7.0 e 97.  
+>  Não há suporte para as versões 1.0 e 1.1. Além disso, não há nenhuma diferença no formato de dados em versões do Microsoft Access 97, 7.0 e 3.0.  
   
 ## <a name="sqlddlindex"></a>SQL_DDL_INDEX  
  SQL_DL_CREATE_INDEX  

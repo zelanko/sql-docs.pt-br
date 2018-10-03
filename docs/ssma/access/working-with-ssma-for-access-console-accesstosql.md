@@ -4,24 +4,18 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 08/17/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: ef94e843-9f88-45a2-86c4-a0af268738c4
-caps.latest.revision: 16
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 55516cea32bd7482d4fcba448253d045c8540918
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 021458a2c47f9c57f641da575b346ab09c66fee9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40396442"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47818914"
 ---
 # <a name="working-with-ssma-for-access-console-accesstosql"></a>Trabalhar com o SSMA para Access Console (AccessToSQL)
 Microsoft SQL Server SSMA (Migration Assistant) para acesso agora está acessível por meio de um aplicativo de console na linha de comando. Os arquivos de script formam a entrada para o aplicativo para executar os comandos. Como um aplicativo de console SSMA permite que a interface de nível de script, reduz o ciclo de migração e dimensiona o esforço de migração.  

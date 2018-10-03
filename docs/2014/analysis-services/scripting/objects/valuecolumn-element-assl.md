@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ValueColumn Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - ValueColumn element
 ms.assetid: 6c2d6822-8ecc-46df-9fa9-bb92ac716c36
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d7279cb1f8f9bc5a7dc8c9e564081a227edc32f4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 876d5efb4d4b84e8f42cfd3c360258c8cb67d865
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37231896"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48048137"
 ---
 # <a name="valuecolumn-element-assl"></a>Elemento ValueColumn (ASSL)
   Identifica a coluna que fornece o valor do elemento pai.  
@@ -57,9 +54,9 @@ ms.locfileid: "37231896"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|[DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Se o [NameColumn](namecolumn-element-assl.md) elemento de `DimensionAttribute` for especificado, o mesmo `DataItem` valores são usados como valores padrão para o `ValueColumn` elemento. Se o `NameColumn` elemento de `DimensionAttribute` não for especificado e o [KeyColumns](../collections/keycolumns-element-assl.md) coleção de `DimensionAttribute` contém uma única [KeyColumn](keycolumn-element-assl.md) elemento que representa uma coluna de chave com uma cadeia de caracteres tipo de dados, os mesmos `DataItem` valores são usados como valores padrão para o `ValueColumn` elemento.  
   
  Para obter mais informações sobre o `DataItem` tipo, incluindo uma tabela de objetos do Analysis Services Scripting Language (ASSL) e propriedades do `DataItem` de tipo, consulte [tipo de dados DataItem &#40;ASSL&#41;](../data-type/dataitem-data-type-assl.md).  

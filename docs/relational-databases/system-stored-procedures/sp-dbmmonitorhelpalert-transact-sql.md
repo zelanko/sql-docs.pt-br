@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_dbmmonitorhelpalert_TSQL
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - sp_dbmmonitorhelpalert
 - database mirroring [SQL Server], monitoring
 ms.assetid: 43911660-b4e4-4934-8c02-35221160aaec
-caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b05d7449322bd35bf924a5fb12b0cf72ff383d28
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 4639f548ec75844e72c19cb34ec29fc21933e31a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258154"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47851604"
 ---
 # <a name="spdbmmonitorhelpalert-transact-sql"></a>sp_dbmmonitorhelpalert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +50,7 @@ sp_dbmmonitorhelpalert database_name
   
  Para retornar um aviso específico, especifique um dos valores seguintes:  
   
-|Value|Métrica de desempenho|Limite de aviso|  
+|Valor|Métrica de desempenho|Limite de aviso|  
 |-----------|------------------------|-----------------------|  
 |1|Transação não enviada mais antiga|Especifica o número de minutos de transações que podem ser acumuladas na fila de envio, antes da geração de um aviso na instância do servidor principal. Esse aviso ajuda a medir o potencial de perda de dados em termos de tempo, e é particularmente relevante para o modo de alto desempenho. No entanto, o aviso também é relevante para o modo de segurança alta, quando o espelhamento é pausado ou suspenso devido à desconexão dos parceiros.|  
 |2|Log não enviado|Especifica quantos quilobytes (KB) de log não enviado geram um aviso na instância do servidor principal. Esse aviso ajuda a medir o potencial de perda de dados em termos de KB e é particularmente relevante para o modo de alto desempenho. No entanto, o aviso também é relevante para o modo de segurança alta, quando o espelhamento é pausado ou suspenso devido à desconexão dos parceiros.|  
@@ -62,26 +58,26 @@ sp_dbmmonitorhelpalert database_name
 |4|Sobrecarga espelhada confirmada|Especifica o número de milissegundos de atraso médio por transação tolerado, antes que um aviso seja gerado no servidor principal. Esse atraso consiste na quantidade de sobrecarga incidente enquanto a instância do servidor principal aguarda que a instância do servidor espelho grave o registro do log da transação na fila de restauração. Esse valor é relevante somente no modo de alta segurança.|  
 |5|Período de retenção|Metadados que controlam quanto tempo as linhas na tabela de status de espelhamento de banco de dados são preservadas.|  
   
- Para obter informações sobre as IDs de eventos que correspondem aos avisos, consulte [Use limites de aviso e alertas em métricas de desempenho de espelhamento &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md).  
+ Para obter informações sobre as IDs de eventos que correspondem aos avisos, consulte [alertas em métricas de desempenho de espelhamento e os limites de aviso de uso &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md).  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- Nenhuma  
+ None  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Para cada alerta retornado, retorna uma fila que contém as colunas seguintes:  
   
-|Coluna|Data type|Description|  
+|coluna|Data type|Description|  
 |------------|---------------|-----------------|  
-|**alert_id**|**Int**|A tabela abaixo lista os **alert_id** valor para cada métrica de desempenho e a unidade de medida da métrica exibida no **sp_dbmmonitorresults** conjunto de resultados:|  
-|**threshold**|**Int**|O valor do limite para o aviso. Se um valor acima desse limite for retornado quando o status de espelhamento for atualizado, uma entrada será inserida no log de eventos do Windows. Esse valor representa KB, minutos ou milissegundos, dependendo do aviso. Se o limite não estiver definido atualmente, o valor será NULL.<br /><br /> **Observação:** para exibir os valores atuais, execute o [sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md) procedimento armazenado.|  
-|**Habilitado**|**bit**|0 = Evento desabilitado.<br /><br /> 1 = Evento habilitado.<br /><br /> **Observação:** período de retenção está sempre habilitado.|  
+|**alert_id**|**int**|A tabela abaixo lista os **alert_id** valor para cada métrica de desempenho e a unidade de medida da métrica exibida na **sp_dbmmonitorresults** conjunto de resultados:|  
+|**threshold**|**int**|O valor do limite para o aviso. Se um valor acima desse limite for retornado quando o status de espelhamento for atualizado, uma entrada será inserida no log de eventos do Windows. Esse valor representa KB, minutos ou milissegundos, dependendo do aviso. Se o limite não estiver definido atualmente, o valor será NULL.<br /><br /> **Observação:** para exibir os valores atuais, execute o [sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md) procedimento armazenado.|  
+|**habilitado**|**bit**|0 = Evento desabilitado.<br /><br /> 1 = Evento habilitado.<br /><br /> **Observação:** período de retenção está sempre habilitado.|  
   
-|Value|Métrica de desempenho|Unidade|  
+|Valor|Métrica de desempenho|Unidade|  
 |-----------|------------------------|----------|  
 |1|Transação não enviada mais antiga|Minutes (minutos)|  
 |2|Log não enviado|KB|  
 |3|Log não restaurado|KB|  
-|4|Sobrecarga espelhada confirmada|Milissegundos|  
+|4|Sobrecarga espelhada confirmada|milissegundos|  
 |5|Período de retenção|Hours (horas)|  
   
 ## <a name="permissions"></a>Permissões  

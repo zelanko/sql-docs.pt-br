@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9c69792d-d7c4-453b-ae2f-6d2d071d8606
-caps.latest.revision: 6
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e88dda740e842ad4b7a96d1e1b73dd9bf7b14844
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 853bed4a458fd7f3e7472c563b0cd973bb3eea5f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37201216"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48063376"
 ---
 # <a name="check-for-updates-or-turn-updates-off-report-builder-and-ssrs"></a>Verificar ou desativar atualizações (Construtor de Relatórios e SSRS)
   Sempre que você abre um relatório, o Construtor de Relatórios verifica se as instâncias publicadas das partes de relatório no relatório foram atualizadas no servidor de relatório ou no site do SharePoint integrado com o servidor de relatório. Também procura alterações nos itens dependentes das partes de relatório, como o conjunto de dados e os parâmetros. Se as partes de relatório ou suas dependências foram atualizados no site ou servidor, uma barra de informações no relatório exibe o número de partes atualizadas. Você pode optar por exibir e aceitar ou rejeitar as atualizações ou descartar a barra de informações.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Key Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Key element
 ms.assetid: 09d3cd48-49f7-4b58-b8bb-ca75b81bb02f
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1f98ae6863f0aab25149ee4f8a69ef13b65da974
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f1532db273c83f16678d278f068befefcd8df4b4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37213756"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48101276"
 ---
 # <a name="key-element-xmla"></a>Elemento Key (XMLA)
   Contém um valor de chave de membro para um membro de atributo.  
@@ -53,7 +50,7 @@ ms.locfileid: "37213756"
 |Característica|Description|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|Any (qualquer)|  
-|Valor padrão|Nenhum|  
+|Valor padrão|None|  
 |Cardinalidade|0-n: Elemento opcional que pode ocorrer mais de uma vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -61,9 +58,9 @@ ms.locfileid: "37213756"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|[Chaves](keys-element-xmla.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O tipo de dados usado por este elemento deve corresponder ao tipo de dados da coluna de chave adequada do atributo especificado. Se os elementos `Key` não forem especificados para um elemento pai `Attribute`, os elementos `AttributeName` e `Name` especificados no elemento pai `Attribute` serão usados para identificar o membro de atributo a ser modificado.  
   
 ## <a name="see-also"></a>Consulte também  

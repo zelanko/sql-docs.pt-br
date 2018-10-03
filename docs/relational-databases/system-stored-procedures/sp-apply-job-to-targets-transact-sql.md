@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_apply_job_to_targets
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_apply_job_to_targets
 ms.assetid: 4a3e9173-7e3c-4100-a9ac-2f5d2c60a8b0
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7e7ec6285f807dd51b0a67ad55ab2e53634584e5
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 192747d920f92681617d0dc19cc562e52e9c310e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238147"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47641704"
 ---
 # <a name="spapplyjobtotargets-transact-sql"></a>sp_apply_job_to_targets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,31 +44,31 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 ## <a name="arguments"></a>Argumentos  
  [  **@job_id =**] *job_id*  
- O número de identificação do trabalho a ser aplicado aos servidores de destino ou grupos de servidores de destino especificados. *job_id* é **uniqueidentifier**, com um padrão NULL.  
+ O número de identificação do trabalho a ser aplicado aos servidores de destino ou grupos de servidores de destino especificados. *job_id* está **uniqueidentifier**, com um padrão NULL.  
   
  [  **@job_name =**] **'***job_name***'**  
- O nome do trabalho a ser aplicado aos grupos de servidores de destino ou servidores de destino associados especificados. *job_name* é **sysname**, com um padrão NULL.  
+ O nome do trabalho a ser aplicado aos grupos de servidores de destino ou servidores de destino associados especificados. *job_name* está **sysname**, com um padrão NULL.  
   
 > [!NOTE]  
->  O *job_id* ou *job_name* devem ser especificados, mas não é possível especificar ambos.  
+>  Qualquer um dos *job_id* ou *job_name* deve ser especificado, mas não podem ser especificados.  
   
  [  **@target_server_groups =**] **'***target_server_groups***'**  
- Uma lista separada por vírgulas de grupos de servidores de destino aos quais o trabalho especificado será aplicado. *target_server_groups* é **nvarchar (2048)**, com um padrão NULL.  
+ Uma lista separada por vírgulas de grupos de servidores de destino aos quais o trabalho especificado será aplicado. *target_server_groups* está **nvarchar(2048)**, com um padrão NULL.  
   
  [ **@target_servers=** ] **'***target_servers***'**  
- Uma lista separada por vírgulas de servidores de destino aos quais o trabalho especificado será aplicado. *target_servers*é **nvarchar (2048)**, com um padrão NULL.  
+ Uma lista separada por vírgulas de servidores de destino aos quais o trabalho especificado será aplicado. *target_servers*está **nvarchar(2048)**, com um padrão NULL.  
   
  [  **@operation=** ] **'***operação***'**  
- Se o trabalho especificado deve ser aplicado aos ou removidos dos servidores de destino ou grupos de servidores de destino especificados. *operação*é **varchar(7)**, com um padrão APPLY. As operações válidas são **aplicar** e **remover**.  
+ Se o trabalho especificado deve ser aplicado aos ou removidos dos servidores de destino ou grupos de servidores de destino especificados. *operação*está **varchar(7)**, com um padrão APPLY. As operações válidas são **APPLY** e **remover**.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Remarks  
- **sp_apply_job_to_targets** fornece uma maneira fácil de aplicar (ou remover) um trabalho de vários servidores de destino e é uma alternativa à chamada **sp_add_jobserver** (ou **sp_delete_jobserver**) uma vez para cada servidor de destino necessário.  
+## <a name="remarks"></a>Comentários  
+ **sp_apply_job_to_targets** fornece uma maneira fácil de aplicar (ou remover) um trabalho de vários servidores de destino, e é uma alternativa à chamada **sp_add_jobserver** (ou **sp_delete_jobserver**) uma vez para cada servidor de destino necessário.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função fixa de servidor pode executar este procedimento.  
+ Somente os membros dos **sysadmin** função fixa de servidor pode executar este procedimento.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir aplica o trabalho `Backup Customer Information` criado anteriormente a todos os servidores de destino do grupo `Servers Maintaining Customer Information`.  

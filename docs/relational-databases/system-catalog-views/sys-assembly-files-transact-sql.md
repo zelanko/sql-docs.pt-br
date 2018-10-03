@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.assembly_files
@@ -20,16 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.assembly_files catalog view
 ms.assetid: 1a384a2c-5556-4d12-a2ba-4da781363143
-caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 686f8182a1c18115fc3ea9f29a56c37bf4d4503a
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0279d6c2850dff07b365e7543f387f6cf6e9f328
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33177952"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47810224"
 ---
 # <a name="sysassemblyfiles-transact-sql"></a>sys.assembly_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,9 +34,9 @@ ms.locfileid: "33177952"
     
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**assembly_id**|**Int**|ID do assembly ao qual este arquivo pertence.|  
+|**assembly_id**|**int**|ID do assembly ao qual este arquivo pertence.|  
 |**name**|**nvarchar(260)**|Nome do arquivo assembly.|  
-|**file_id**|**Int**|ID do arquivo. É exclusivo em um assembly. O ID de arquivo com o número 1 representa a DLL do assembly.|  
+|**file_id**|**int**|ID do arquivo. É exclusivo em um assembly. O ID de arquivo com o número 1 representa a DLL do assembly.|  
 |**content**|**varbinary(max)**|Conteúdo do arquivo.|  
   
 ## <a name="permissions"></a>Permissões  

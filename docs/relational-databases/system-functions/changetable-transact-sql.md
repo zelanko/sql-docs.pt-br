@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CHANGETABLE_TSQL
@@ -19,17 +16,16 @@ helpviewer_keywords:
 - CHANGETABLE
 - change tracking [SQL Server], CHANGETABLE
 ms.assetid: d405fb8d-3b02-4327-8d45-f643df7f501a
-caps.latest.revision: 34
 author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 117f6246be6f99de3229bb173d9d69e3644f594c
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: a3a0ad02f508aea78faa8f3da80e68f8ea6b3c7b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43093278"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47658084"
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -117,7 +113,7 @@ CHANGETABLE (
 |SYS_CHANGE_CONTEXT|**varbinary(128)**|Altere as informações de contexto que podem opcionalmente ser especificadas usando a cláusula WITH como parte de uma instrução INSERT, UPDATE ou DELETE.|  
 |\<o valor de coluna de chave primária >|Igual às colunas de tabela de usuário|Os valores de chave primária da tabela controlada. Esses valores identificam exclusivamente cada linha da tabela do usuário.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Em geral, a função CHANGETABLE é usada na cláusula FROM de uma consulta como se fosse uma tabela.  
   
 ## <a name="changetablechanges"></a>CHANGETABLE(CHANGES...)  

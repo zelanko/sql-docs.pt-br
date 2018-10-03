@@ -1,32 +1,29 @@
 ---
-title: Dá suporte ao método de exemplo (VC + +) | Microsoft Docs
+title: Dá suporte ao exemplo do método (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Supports method [ADO], VC++ example
 ms.assetid: 6e174179-9d95-41b9-b72b-6cdbdca6e255
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f92a96be897f8cf89a8355d6aaab22b65e1398f4
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 98ccc6dfdc904c2789f1ee8a68c0097d5ec6f817
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282645"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47828364"
 ---
-# <a name="supports-method-example-vc"></a>Dá suporte ao método de exemplo (VC + +)
-Este exemplo usa o [suporta](../../../ado/reference/ado-api/supports-method.md) método para exibir as opções de suporte por um conjunto de registros abertos com tipos diferentes de cursor. A função DisplaySupport é necessária para executar este exemplo.  
+# <a name="supports-method-example-vc"></a>Exemplo do método Supports (VC++)
+Este exemplo usa o [dá suporte a](../../../ado/reference/ado-api/supports-method.md) método para exibir as opções compatíveis com um conjunto de registros aberto com tipos diferentes de cursor. A função DisplaySupport é necessária para executar este exemplo.  
   
 ```  
 // SupportsMethodExample.cpp  

@@ -1,13 +1,11 @@
 ---
-title: Mover o método (ADO) | Microsoft Docs
+title: Método Move (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,19 +14,18 @@ f1_keywords:
 helpviewer_keywords:
 - Move method [ADO]
 ms.assetid: 13fe9381-d00b-4f4a-9162-83c3f21b3837
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d4cd82d1e3e18c408afb1771a5f0f3fa1557b8ae
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: c8306a7d8e3247e77579d0bebc9147c3f9a1cc56
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279365"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789324"
 ---
 # <a name="move-method-ado"></a>Método Move (ADO)
-Move a posição do registro atual em um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
+Move a posição do registro atual em um [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,30 +36,30 @@ recordset.Move NumRecords, Start
   
 #### <a name="parameters"></a>Parâmetros  
  *NumRecords*  
- Entrou **longo** expressão que especifica o número de registros move a posição do registro atual.  
+ Com um sinal **longo** expressão que especifica o número de registros que move a posição do registro atual.  
   
  *Iniciar*  
  Opcional. Um **cadeia de caracteres** valor ou **Variant** que é avaliada como um indicador. Você também pode usar um [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) valor.  
   
-## <a name="remarks"></a>Remarks  
- O **mover** método tem suporte em todos os **registros** objetos.  
+## <a name="remarks"></a>Comentários  
+ O **mova** método tem suporte em todos os **Recordset** objetos.  
   
- Se o *NumRecords* argumento for maior que zero, a posição do registro atual avança (até o fim do **registros**). Se *NumRecords* é menor que zero, a posição atual do registro recua (no início do **registros**).  
+ Se o *NumRecords* argumento for maior que zero, a posição atual do registro move para frente (até o final do **Recordset**). Se *NumRecords* é menor que zero, a posição atual do registro move para trás (até o início de **Recordset**).  
   
- Se o **mover** chamada moverá a posição atual do registro para um ponto antes do primeiro registro, o ADO define o registro atual para a posição antes do primeiro registro no conjunto de registros ([BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) é **True** ). Tentativa de mover para trás quando o **BOF** propriedade já está **True** gera um erro.  
+ Se o **mova** chamada moveria a posição do registro atual para um ponto antes do primeiro registro, o ADO define o registro atual para a posição antes do primeiro registro no conjunto de registros ([BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) é **True** ). Tentativa de mover quando com versões anteriores a **BOF** propriedade já está **verdadeiro** gera um erro.  
   
- Se o **mover** chamada moverá a posição atual do registro para um ponto após o último registro, o ADO define o registro atual para a posição após o último registro no conjunto de registros ([EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) é **True** ). Tentativa de mover quando encaminhar o **EOF** propriedade já está **True** gera um erro.  
+ Se o **mova** chamada moveria a posição do registro atual para um ponto após o último registro, o ADO define o registro atual para a posição após o último registro no conjunto de registros ([EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) é **True** ). Tentativa de mover o encaminhamento quando o **EOF** propriedade já está **verdadeiro** gera um erro.  
   
- Chamando o **mover** método de vazio **registros** objeto gera um erro.  
+ Chamar o **mova** método vazio **Recordset** objeto gera um erro.  
   
- Se você passar o *iniciar* argumento, a movimentação é relativo ao registro com esse indicador, supondo que o **registros** objeto dá suporte a indicadores. Se não for especificado, a movimentação é relativo ao registro atual.  
+ Se você passar o *inicie* argumento, a movimentação é relativo ao registro com esse indicador, supondo que o **Recordset** objeto dá suporte a indicadores. Se não for especificado, a movimentação é relativo ao registro atual.  
   
- Se você estiver usando o [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) propriedade em cache localmente registros do provedor, passando um *NumRecords* argumento que move a posição atual do registro fora do grupo atual de registros armazenado em cache força o ADO para recuperar um novo grupo de registros, a partir do registro de destino. O **CacheSize** propriedade determina o tamanho do grupo recuperado recentemente, e o registro de destino é o primeiro registro recuperado.  
+ Se você estiver usando o [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) propriedade em cache localmente os registros do provedor, de passando um *NumRecords* argumento que move a posição atual do registro fora do grupo atual de registros armazenados em cache força o ADO para recuperar um novo grupo de registros, começando do registro de destino. O **CacheSize** propriedade determina o tamanho do grupo recém-recuperado e o registro de destino é o primeiro registro recuperado.  
   
- Se o **registros** objeto é somente encaminhada, um usuário ainda pode passar um *NumRecords* argumento menor que zero, fornecido é o destino dentro do conjunto atual de registros armazenado em cache. Se o **mover** chamada seria movidos da posição atual do registro para um registro antes do primeiro registro armazenado em cache, ocorrerá um erro. Assim, você pode usar um cache de registro que oferece suporte à rolagem completos por um provedor que suporte o roll-forward apenas. Porque registros armazenados em cache são carregados na memória, você deve evitar armazenamento em cache registros que não são necessários. Mesmo se um e somente de encaminhamento **registros** move dá suporte ao objeto com versões anteriores dessa forma, ao chamar o [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) método em qualquer somente de encaminhamento **Recordset** objeto ainda Gere um erro.  
+ Se o **conjunto de registros** objeto é somente encaminhada, um usuário ainda pode passar um *NumRecords* argumento menor que zero, desde que o destino seja dentro do conjunto atual de registros armazenados em cache. Se o **mover** chamada moveria a posição do registro atual para um registro antes do primeiro registro armazenado em cache, ocorrerá um erro. Assim, você pode usar um cache de registro que oferece suporte à rolagem completa ao longo de um provedor que dá suporte a apenas roll-forward. Porque registros armazenados em cache são carregados na memória, você deve evitar o armazenamento em cache os registros que não são necessárias. Mesmo se um somente de avanço **conjunto de registros** dá suporte ao objeto com versões anteriores move dessa forma, chamar o [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) método em qualquer somente de avanço **Recordset** objeto ainda Gere um erro.  
   
 > [!NOTE]
->  Suporte para mover com versões anteriores em um e somente de encaminhamento **registros** não é previsível, dependendo de seu provedor. Se o registro atual tiver sido posicionado após o último registro de **registros**, **mover** com versões anteriores talvez não resulte na posição atual correta.  
+>  Suporte para mover para trás em uma somente de avanço **Recordset** é imprevisível, dependendo do seu provedor. Se o registro atual tiver sido posicionado após o último registro a **conjunto de registros**, **mover** com versões anteriores talvez não resulte na posição atual do correta.  
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  

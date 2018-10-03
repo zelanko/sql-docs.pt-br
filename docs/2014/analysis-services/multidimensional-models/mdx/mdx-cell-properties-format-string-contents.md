@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - formats [Analysis Services], string values
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - FORMATTED_VALUE property
 - FORMAT_STRING contents
 ms.assetid: c354c938-0328-4b8e-adc5-3b52fd2a7152
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 198fadc6d3f2e1599c98ba5146e830fef5b8be17
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f8226f0d065620db27ca1046500c89360613d9eb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293586"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052257"
 ---
 # <a name="formatstring-contents-mdx"></a>Conteúdo de FORMAT_STRING (MDX)
   O `FORMAT_STRING` formatos de propriedade de célula a `VALUE` propriedade de célula, criando o valor para o `FORMATTED_VALUE` propriedade de célula. O `FORMAT_STRING` manipula de propriedade de célula numéricos e cadeia de caracteres de valores, aplicando uma expressão de formato ao valor para retornar um valor formatado para o `FORMATTED_VALUE` propriedade de célula. As tabelas a seguir detalham a sintaxe e os caracteres de formatação usados para lidar com valores de cadeia de caracteres e numéricos.  
@@ -74,7 +71,7 @@ ms.locfileid: "37293586"
   
 |Caractere|Description|  
 |---------------|-----------------|  
-|Nenhum|Exibe o número sem qualquer formatação.|  
+|None|Exibe o número sem qualquer formatação.|  
 |**0**|Representa um espaço reservado de dígito que exibe um dígito ou um zero (0).<br /><br /> Se o número tiver um dígito na posição onde aparece um zero na cadeia de caracteres de formato, o valor formatado exibirá o dígito. Caso contrário, o valor formatado exibirá um zero nessa posição.<br /><br /> Se o número tiver menos dígitos que zeros (em qualquer lado da divisão decimal) na cadeia de caracteres de formato, o valor formatado exibirá zeros à esquerda e à direita.<br /><br /> Se o número tiver mais dígitos à direita do separador decimal que zeros à direita do separador decimal na expressão de formato, o valor formatado arredondará o número para o mesmo número de casas decimais que a quantidade de zeros.<br /><br /> Se o número tiver mais dígitos à esquerda do separador decimal que zeros à esquerda do separador decimal na expressão de formato, o valor formatado exibirá os dígitos adicionais sem alteração.|  
 |**#**|Representa um espaço reservado de dígito que exibe um dígito ou nada.<br /><br /> Se a expressão tiver um dígito na posição em que aparece um sinal numérico (**#**) na cadeia de caracteres de formato, o valor formatado exibirá o dígito. Caso contrário, o valor formatado não exibirá nada naquela posição.<br /><br /> O espaço reservado para sinal numérico (**#**) funciona como o espaço reservado para o dígito zero (**0**), exceto pelo fato de que os zeros à esquerda e à direita não serão exibidos se o número tiver a mesma quantidade de dígitos, ou menos, que de caracteres **#** em qualquer um dos lados do separador decimal na expressão de formato.|  
 |**.**|Representa um espaço reservado decimal que determina quantos dígitos serão exibidos à esquerda e à direita do separador decimal.<br /><br /> Se a expressão de formato contiver apenas caracteres de sinal numérico (**#**) à esquerda do ponto (**.**), números menores que 1 começaram com um separador decimal. Para exibir um zero à esquerda no caso de números fracionais, use zero (0) como o primeiro espaço reservado para dígito à esquerda do separador decimal.<br /><br /> O caractere real usado como espaço reservado decimal na saída formatada depende do formato numérico reconhecido pelo sistema do computador.<br /><br /> Observação: em algumas localidades, a vírgula é usada como o separador decimal.|  

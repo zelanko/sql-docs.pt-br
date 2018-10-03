@@ -1,13 +1,11 @@
 ---
-title: Drivers de banco de dados de área de trabalho do Microsoft ODBC | Microsoft Docs
+title: Drivers de banco de dados da área de trabalho do Microsoft ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC]
@@ -17,21 +15,20 @@ helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], about Jet-based ODBC drivers
 - desktop database drivers [ODBC], about desktop database drivers
 ms.assetid: 4e505c65-a8dd-4283-ae28-313d8a3aa046
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4411abb0d9eccf3a209f873d80360de92317ae48
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 81cdf1738d35d89c35c34500900be79f7702f877
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32903311"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47631664"
 ---
 # <a name="microsoft-odbc-desktop-database-drivers"></a>Drivers de banco de dados de área de trabalho do Microsoft ODBC
-ODBC é uma API que usa SQL Structured Query Language () como o idioma de acesso de banco de dados. Você pode acessar uma ampla variedade de sistemas de gerenciamento de banco de dados (DBMSs) com o mesmo código de origem ODBC que esteja incorporado diretamente no código-fonte do aplicativo. Com os Drivers de banco de dados de área de trabalho do Microsoft ODBC, um usuário de um aplicativo habilitado para ODBC pode abrir a consulta e atualizar um banco de dados de área de trabalho por meio da interface do ODBC.  
+O ODBC é uma API que usa SQL Structured Query Language () como a linguagem de acesso do banco de dados. Você pode acessar uma grande variedade de sistemas de gerenciamento de banco de dados (DBMSs) com o mesmo código de origem ODBC que é incorporado diretamente no código-fonte do aplicativo. Com os Drivers de banco de dados de área de trabalho do Microsoft ODBC, um usuário de um aplicativo habilitado para ODBC pode abrir, consulta e atualizar um banco de dados da área de trabalho por meio da interface do ODBC.  
   
- Os Drivers de banco de dados de área de trabalho do Microsoft ODBC são um conjunto de drivers ODBC baseado em Jet do Microsoft. Enquanto o banco de dados do Microsoft ODBC Desktop Drivers 2.0 incluir drivers de 16 bits e 32 bits, versões 3.0 e posteriores incluem apenas drivers de 32 bits que funcionam no Windows 95 ou posterior, Windows NT Workstation ou Server versão 4.0, Windows 2000 Professional ou Windows 2000 Servidor. Esses drivers fornecem acesso aos seguintes tipos de fontes de dados:  
+ Os Drivers de banco de dados de área de trabalho do Microsoft ODBC são um conjunto de drivers ODBC baseado em Jet do Microsoft. Enquanto o banco de dados do Microsoft ODBC Desktop Drivers 2.0 incluir drivers de 16 bits e 32 bits, versões 3.0 e posteriores incluem apenas drivers de 32 bits que funcionam no Windows 95 ou posterior, estação de trabalho do Windows NT ou versão 4.0, Windows 2000 Professional ou Windows 2000 Server Servidor. Esses drivers fornecem acesso aos seguintes tipos de fontes de dados:  
   
 -   Microsoft Access  
   
@@ -43,10 +40,10 @@ ODBC é uma API que usa SQL Structured Query Language () como o idioma de acesso
   
 -   Texto  
   
- Consulte [Visual FoxPro ODBC Driver](../../odbc/microsoft/visual-foxpro-odbc-driver.md) para obter a documentação detalhada sobre o Driver de ODBC do Microsoft Visual FoxPro®.  
+ Ver [Driver ODBC do Visual FoxPro](../../odbc/microsoft/visual-foxpro-odbc-driver.md) para obter documentação detalhada sobre o Driver de ODBC do Microsoft Visual FoxPro®.  
   
 > [!NOTE]  
->  Acesso a outras fontes de dados, como Lotus 1-2-3, Microsoft Exchange e HTML, é habilitado por drivers de ISAM (IISAM) pode ser instalado. Para obter mais informações sobre esses drivers, consulte "Acessando dados externos" o *referência do programador do Microsoft Jet Database Engine*. O ODBC Desktop Database Drivers 4.0 não dão suporte a formatos de dados Btrieve e EMS.  
+>  Acesso a outras fontes de dados, como Lotus 1-2-3, Microsoft Exchange e HTML, é habilitado por drivers instaláveis do ISAM (IISAM). Para obter mais informações sobre esses drivers, consulte "Acessando dados externos" no *referência do programador do Microsoft Jet banco de dados Engine*. Banco de dados de área de trabalho de ODBC Drivers 4.0 não dão suporte a formatos de dados Btrieve e EMS.  
   
  Esta seção contém os tópicos a seguir.  
   

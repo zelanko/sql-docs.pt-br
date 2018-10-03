@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_event_log
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_event_log database mail view
 ms.assetid: 440bc409-1188-4175-afc4-c68e31e44fed
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b6c43f41415f97d87cddaf2c7b57e1e8250aa65f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 8ac38c2e54fde2beb02e009e00b9f587e9265a43
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221067"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47781094"
 ---
 # <a name="sysmaileventlog-transact-sql"></a>sysmail_event_log (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,23 +32,23 @@ ms.locfileid: "33221067"
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**Log_id**|**Int**|Identificador de itens no log.|  
+|**Log_id**|**int**|Identificador de itens no log.|  
 |**event_type**|**varchar(11)**|O tipo de aviso inserido no log. Os valores possíveis são erros, avisos, mensagens informativas, mensagens de êxito e mensagens internas adicionais.|  
 |**log_date**|**datetime**|A data e a hora em que a entrada de log foi feita.|  
 |**Descrição**|**nvarchar(max)**|O texto da mensagem que está sendo registrada.|  
-|**process_id**|**Int**|O ID de processo do programa externo Database Mail. Isso normalmente é alterado toda vez que o programa externo Database Mail é iniciado.|  
-|**mailitem_id**|**Int**|Identificador do item de email na fila de email. NULL se a mensagem não estiver relacionada a um item de email específico.|  
-|**account_id**|**Int**|O **account_id** da conta referente ao evento. NULL se a mensagem não estiver relacionada a uma conta específica.|  
+|**process_id**|**int**|O ID de processo do programa externo Database Mail. Isso normalmente é alterado toda vez que o programa externo Database Mail é iniciado.|  
+|**mailitem_id**|**int**|Identificador do item de email na fila de email. NULL se a mensagem não estiver relacionada a um item de email específico.|  
+|**account_id**|**int**|O **account_id** da conta relacionada ao evento. NULL se a mensagem não estiver relacionada a uma conta específica.|  
 |**last_mod_date**|**datetime**|A data e a hora da última modificação da linha.|  
 |**last_mod_user**|**sysname**|O usuário que modificou a linha pela última vez. Para emails, este é o usuário que enviou o email. Para mensagens geradas pelo programa externo Database Mail, este é o contexto de usuário do programa.|  
   
-## <a name="remarks"></a>Remarks  
- Ao solucionar problemas do Database Mail, pesquise o **sysmail_event_log** exibição para eventos relacionados a falhas de email. Algumas mensagens, como a falha do programa externo Database Mail, não estão associadas a emails específicos. Para procurar por erros relacionados a emails específicos, pesquisar o **mailitem_id** de email com falha no **sysmail_faileditems** exibir e, em seguida, procure o **sysmail_event_log**para mensagens relacionadas a esse **mailitem_id**. Quando um erro é retornado da **sp_send_dbmail**, o email não será enviado para o sistema de email de banco de dados e o erro não é exibido nessa exibição.  
+## <a name="remarks"></a>Comentários  
+ Ao solucionar problemas de Database Mail, pesquise o **sysmail_event_log** exibir para eventos relacionados a falhas de email. Algumas mensagens, como a falha do programa externo Database Mail, não estão associadas a emails específicos. Para procurar erros relacionados a emails específicos, pesquisar o **mailitem_id** de email com falha na **sysmail_faileditems** exibir e, em seguida, pesquise o **sysmail_event_log**para mensagens relacionadas a essa **mailitem_id**. Quando um erro é retornado da **sp_send_dbmail**, o email não será enviado para o sistema de email de banco de dados e o erro não é exibido nessa exibição.  
   
- Quando houver falha em tentativas de entrega de conta individual, o Database Mail reterá as mensagens de erro durante tentativas de repetição até que a entrega do item de email obtenha êxito ou falhe. No caso de êxito final, todos os erros acumulados são registrados como avisos separados, incluindo o **account_id**. Isto pode causar o aparecimento de avisos, mesmo se o email foi enviado. Em caso de falha de entrega final, todos os avisos anteriores serão registrados como uma mensagem de erro sem um **account_id**, uma vez que todas as contas falharam.  
+ Quando houver falha em tentativas de entrega de conta individual, o Database Mail reterá as mensagens de erro durante tentativas de repetição até que a entrega do item de email obtenha êxito ou falhe. No caso de êxito final, todos os erros acumulados são registrados como avisos separados, incluindo o **account_id**. Isto pode causar o aparecimento de avisos, mesmo se o email foi enviado. Em caso de falha de entrega final, todos os avisos anteriores serão registrados como uma mensagem de erro sem um **account_id**, já que todas as contas falharam.  
   
 ## <a name="permissions"></a>Permissões  
- Você deve ser um membro do **sysadmin** função de servidor fixa ou **DatabaseMailUserRole** função de banco de dados para acessar essa exibição. Membros de **DatabaseMailUserRole** que não são membros do **sysadmin** função, só poderá ver os eventos de emails que eles enviarem.  
+ Você deve ser um membro do **sysadmin** função de servidor fixa ou o **DatabaseMailUserRole** função de banco de dados para acessar essa exibição. Os membros **DatabaseMailUserRole** que não são membros da **sysadmin** função, só pode ver os eventos de emails que eles enviarem.  
   
 ## <a name="see-also"></a>Consulte também  
  [sysmail_faileditems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)   

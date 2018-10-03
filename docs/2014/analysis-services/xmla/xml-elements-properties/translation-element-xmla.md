@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Translation Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Translation element
 ms.assetid: ce962d4b-dda9-4a16-a56c-ff7a5275c48a
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2ce94966eae0cb1088ff462f551bdd27ad4304ee
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7dce14aae6cd8df63d0405869b23f71874cff378
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37180783"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48100456"
 ---
 # <a name="translation-element-xmla"></a>Elemento Translation (XMLA)
   Define uma tradução para um membro de atributo.  
@@ -55,8 +52,8 @@ ms.locfileid: "37180783"
   
 |Característica|Description|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|Nenhum|  
-|Valor padrão|Nenhum|  
+|Comprimento e tipo de dados|None|  
+|Valor padrão|None|  
 |Cardinalidade|0-n: Elemento opcional que pode ocorrer mais de uma vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -66,7 +63,7 @@ ms.locfileid: "37180783"
 |Elementos pai|[Traduções](translations-element-xmla.md)|  
 |Elementos filho|[Language](language-element-xmla.md), [Name](name-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Um `Translation` elemento define as informações necessárias para associar um membro de atributo a uma tradução definida para um determinado atributo durante um [inserir](../xml-elements-commands/insert-element-xmla.md) ou [atualização](../xml-elements-commands/update-element-xmla.md) comando.  
   
 ## <a name="see-also"></a>Consulte também  

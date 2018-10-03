@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: fb22cffa-ac99-4d34-ac4a-9c93068e33e8
-caps.latest.revision: 28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2e2a9fa7f42e547940e1b4576f63cc3067e01da0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 109c4eb07dd34aa5ef3e41d794edfc39ffffcac8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37310826"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48119866"
 ---
 # <a name="creating-time-series-predictions-intermediate-data-mining-tutorial"></a>Criando previsões de série temporal (Tutorial de mineração de dados intermediário)
   Nas tarefas anteriores desta lição, você criou um modelo de série temporal e explorou os resultados. Por padrão, o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] sempre cria um conjunto de cinco (5) previsões para um modelo de série temporal e a exibe os valores previstos como parte do gráfico de previsão. No entanto, também é possível criar previsões criando-se consultas de previsão DMX.  

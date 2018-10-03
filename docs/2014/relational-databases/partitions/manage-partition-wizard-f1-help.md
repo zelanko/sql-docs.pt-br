@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.managepartition.getstart.f1
@@ -22,16 +20,15 @@ f1_keywords:
 helpviewer_keywords:
 - wizards [SQL Server Management Studio] See Manage Partition Wizard
 ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
-caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0d07d35db7a6604c98646cc15a9d892bb230407b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e706a867c9192f4b447badc70db46dc4b0abc338
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37197556"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48130666"
 ---
 # <a name="manage-partition-wizard-f1-help"></a>Ajuda de F1 do Assistente para Gerenciar Partição
   Use o **Assistente para Gerenciar Partição** para gerenciar e modificar as tabelas particionadas existentes por meio da troca de partição ou pela implementação de um cenário de janela deslizante. Esse assistente pode facilitar o gerenciamento das partições e simplificar a migração regular de dados de e para as tabelas.  

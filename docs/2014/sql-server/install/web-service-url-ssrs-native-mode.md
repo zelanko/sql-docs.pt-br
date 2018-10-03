@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.reportservervirtualdirectory.F1
 helpviewer_keywords:
 - Reporting Services, Web service
 ms.assetid: 9d210b5d-2a08-4e56-a4f5-c16715b00d79
-caps.latest.revision: 9
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 21a9ede5ef83169d312bb59e84bfd3f33619dafb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: abb2e425df70a3425a6dfc7eef278f6bd6aa6cc2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37270232"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48099026"
 ---
 # <a name="web-service-url-ssrs-native-mode"></a>URL do serviço Web (modo nativo do SSRS)
   Use a página URL do Serviço Web para configurar ou modificar a URL usada para acessar o servidor de relatório. Uma *reserva de URL* será criada com base na URL que você especificar. A reserva de URL define a sintaxe e as regras para todas as URLs que podem ser subsequentemente usadas para acessar o serviço Web Servidor de Relatório. Ela especifica o prefixo, o host, a porta e o diretório virtual do serviço Web Servidor de Relatório. Dependendo de como você especifica o host, várias URLs poderiam ser possíveis para uma única reserva. O valor padrão do host especifica um curinga forte. Um curinga forte permite especificar em uma URL qualquer nome de host que possa ser resolvido para o computador que hospeda o servidor de relatório. Para obter mais informações sobre reservas e a configuração de URL, consulte [configurar uma URL &#40;Configuration Manager do SSRS&#41; ](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md) e [configurar as URLs do servidor de relatório &#40;SSRS Configuration Manager&#41; ](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Type Element (DimensionAttribute)
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Type element
 ms.assetid: 64fce1f5-39b7-4d0a-ae60-21203a03bd0d
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 99b84675dbc0b13d7d73823126e7bc11fb75ad05
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4b162bceeb6ffd6f6a2f719d86f27cef07c27103
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293466"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48123248"
 ---
 # <a name="type-element-dimensionattribute-assl"></a>Elemento Type (DimensionAttribute) (ASSL)
   Contém o tipo do atributo.  
@@ -59,9 +56,9 @@ ms.locfileid: "37293466"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elemento pai|[DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O valor desse elemento é limitado a uma das cadeias de caracteres listadas na tabela a seguir.  
   
 |Valor|Description|  
@@ -199,7 +196,7 @@ ms.locfileid: "37293466"
 |*MonthOfQuarter*|O atributo representa o ordinal de mês de um trimestre.|  
 |*MonthOfTrimester*|O atributo representa o ordinal de mês de um quadrimestre.|  
 |*MonthOfYear*|O atributo representa o ordinal de mês de um ano.|  
-|*Meses*|O atributo representa meses.|  
+|*meses*|O atributo representa meses.|  
 |*OrganizationalUnit*|O atributo representa uma unidade organizacional.|  
 |*OrgTitle*|O atributo representa um cargo organizacional.|  
 |*PercentOwnership*|O atributo representa uma porcentagem da propriedade.|  
@@ -295,7 +292,7 @@ ms.locfileid: "37293466"
 |*WeekOfQuarter*|O atributo representa o ordinal de semana de um trimestre.|  
 |*WeekOfTrimester*|O atributo representa o ordinal de semana de um quadrimestre.|  
 |*WeekOfYear*|O atributo representa o ordinal de semana de um ano.|  
-|*Semanas*|O atributo representa semanas.|  
+|*semanas*|O atributo representa semanas.|  
 |*Anos*|O atributo representa anos.|  
   
  A enumeração que corresponde aos valores permitidos para `Type` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.AttributeType>.  

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_delete_mailitems_sp_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_delete_mailitems_sp
 ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ca730dc633f8aad10aa79fd34bb7e94870a48076
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 4c1e161a678b6834123aabf1eb5126445927a7fe
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260259"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47650765"
 ---
 # <a name="sysmaildeletemailitemssp-transact-sql"></a>sysmail_delete_mailitems_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,21 +42,21 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
   
 ## <a name="arguments"></a>Argumentos  
  [ **@sent_before=** ] **'***sent_before***'**  
- Exclui emails até a data e hora fornecido como o *sent_before* argumento. *sent_before* é **datetime** com NULL como padrão. NULL indica todas as datas.  
+ Exclui emails até a data e hora fornecido como o *sent_before* argumento. *sent_before* está **datetime** com NULL como padrão. NULL indica todas as datas.  
   
  [ **@sent_status=** ] **'***sent_status***'**  
- Exclui emails do tipo especificado pelo *sent_status*. *sent_status* é **varchar(8)** sem nenhum padrão. As entradas válidas são **enviados**, **unsent**, **repetindo**, e **falha**. NULL indica todos os status.  
+ Exclui emails do tipo especificado pelo *sent_status*. *sent_status* está **varchar(8)** sem nenhum padrão. As entradas válidas são **enviado**, **unsent**, **repetindo**, e **falha**. NULL indica todos os status.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Remarks  
- Mensagens do Database Mail e seus anexos são armazenados na **msdb** banco de dados. As mensagens devem ser excluídas periodicamente para evitar **msdb** fique maior do que o esperado e para estar de acordo com seu programa de retenção de documentos de organizações. Use o **sysmail_delete_mailitems_sp** procedimento armazenado para excluir permanentemente as mensagens de email das tabelas do Database Mail. Um argumento opcional permite excluir somente os emails mais antigos fornecendo uma data e hora. Os emails mais antigos que o argumento serão excluídos. Outro argumento opcional permite excluir apenas emails de um determinado tipo, especificado como o **sent_status** argumento. Você deve fornecer um argumento para **@sent_before** ou **@sent_status**. Para excluir todas as mensagens, use  **@sent_before = getDate ()**.  
+## <a name="remarks"></a>Comentários  
+ Mensagens do Database Mail e seus anexos são armazenados na **msdb** banco de dados. As mensagens devem ser excluídas periodicamente para evitar **msdb** fique maior do que o esperado e para estar em conformidade com seu programa de retenção de documentos de organizações. Use o **sysmail_delete_mailitems_sp** procedimento armazenado para excluir permanentemente as mensagens de email das tabelas do Database Mail. Um argumento opcional permite excluir somente os emails mais antigos fornecendo uma data e hora. Os emails mais antigos que o argumento serão excluídos. Outro argumento opcional permite excluir somente os emails de um determinado tipo, especificado como o **sent_status** argumento. Você deve fornecer um argumento para **@sent_before** ou **@sent_status**. Para excluir todas as mensagens, use  **@sent_before = getDate ()**.  
   
- A exclusão de email também exclui anexos relacionados a essas mensagens. A exclusão de email não exclui as entradas correspondentes em **sysmail_event_log**. Use [sysmail_delete_log_sp](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md) para excluir itens do log.  
+ A exclusão de email também exclui anexos relacionados a essas mensagens. A exclusão de email não exclui as entradas correspondentes no **sysmail_event_log**. Use [sysmail_delete_log_sp](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md) para excluir itens do log.  
   
 ## <a name="permissions"></a>Permissões  
- Por padrão, esse procedimento armazenado é concedido para execução membros desativar o **sysadmin** função de servidor fixa e **DatabaseMailUserRole**. Membros de **sysadmin** função fixa de servidor pode executar este procedimento para excluir emails enviados por todos os usuários. Membros de **DatabaseMailUserRole** só pode excluir emails enviados por esse usuário.  
+ Por padrão, esse procedimento armazenado é concedido para execução por membros desativar o **sysadmin** função de servidor fixa e **DatabaseMailUserRole**. Os membros de **sysadmin** função fixa de servidor pode executar este procedimento para excluir emails enviados por todos os usuários. Os membros **DatabaseMailUserRole** só pode excluir emails enviados por esse usuário.  
   
 ## <a name="examples"></a>Exemplos  
   
@@ -96,6 +92,6 @@ GO
  [sysmail_allitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)   
  [sysmail_event_log &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)   
  [sysmail_mailattachments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)   
- [Criar um trabalho do SQL Server Agent para arquivar mensagens do Database Mail e logs de eventos](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)  
+ [Criar um trabalho do SQL Server Agent para arquivar mensagens e logs de eventos do Database Mail](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)  
   
   

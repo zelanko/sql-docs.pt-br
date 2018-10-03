@@ -1,12 +1,10 @@
 ---
-title: sys.DM os_cluster_nodes (Transact-SQL) | Microsoft Docs
+title: DM os_cluster_nodes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/18/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_os_cluster_nodes_TSQL
@@ -18,33 +16,32 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_cluster_nodes dynamic management view
 ms.assetid: 92fa804e-2d08-42c6-a36f-9791544b1d42
-caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6fb5b957cfdaa340ec90a9bb30a5e9db6a54ca31
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 97aa72e4b4012878125ec6635cc181d0f012ecb1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465202"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47847514"
 ---
 # <a name="sysdmosclusternodes-transact-sql"></a>sys.dm_os_cluster_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna uma linha para cada nó na configuração de instância de cluster de failover. Se a instância atual for uma instância clusterizada, ela retornará uma lista de nós nos quais essa instância de cluster de failover (anteriormente "servidor virtual") foi definida. Se a instância de servidor atual não for uma instância clusterizada de failover, ela retornará um conjunto de linhas vazio.  
   
-> **Observação:** chamá-la de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use o nome **sys.dm_pdw_nodes_os_cluster_nodes**.  
+> **Observação:** chamá-lo partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use o nome **sys.dm_pdw_nodes_os_cluster_nodes**.  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**NodeName**|**sysname**|Nome de um nó na configuração da instância clusterizada de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (servidor virtual).|  
-|status|**Int**|Status do nó de um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância de cluster de failover: 0, 1, 2, 3, -1. Para obter mais informações, consulte [função GetClusterNodeState](http://go.microsoft.com/fwlink/?LinkId=204794).|  
+|status|**int**|Status do nó em um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instância de cluster de failover: 0, 1, 2, 3, -1. Para obter mais informações, consulte [função GetClusterNodeState](http://go.microsoft.com/fwlink/?LinkId=204794).|  
 |status_description|**nvarchar(20)**|Descrição do status do nó de cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 0 = ativo<br /><br /> 1 = inativo<br /><br /> 2 = pausado<br /><br /> 3 = unindo<br /><br /> -1 = desconhecido|  
 |is_current_owner|bit|1 indica que este nó é o proprietário atual do recurso de cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|pdw_node_id|**Int**|**Aplica-se a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
+|pdw_node_id|**int**|**Aplica-se ao**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> O identificador para o nó que essa distribuição é no.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Quando o clustering de failover está habilitado, a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode ser executada em qualquer um dos nós do cluster de failover que são criados como parte da instância de cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (servidor virtual).  
   
 > **Observação:** essa exibição substitui a função fn_virtualservernodes, que será preterida em uma versão futura.  

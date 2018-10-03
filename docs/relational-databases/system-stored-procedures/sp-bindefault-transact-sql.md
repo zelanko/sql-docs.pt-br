@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 11/25/2015
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_bindefault
@@ -22,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 69f008794756176c3046985e17d6263cf7979278
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: f14b269b65b6a6c30e7ac8de25aebafa7b7c38be
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43062827"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47835664"
 ---
 # <a name="spbindefault-transact-sql"></a>sp_bindefault (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,7 +63,7 @@ sp_bindefault [ @defname = ] 'default' ,
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Você pode usar **sp_bindefault** para vincular um novo padrão a uma coluna, embora o uso da restrição DEFAULT seja preferido, ou a um tipo de dados de alias sem desassociar um padrão existente. O padrão antigo será substituído. Você não pode associar um padrão a um tipo de dados de sistema do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou a um tipo de dado CLR definido pelo usuário. Se o padrão não for compatível com a coluna à qual ele foi associado, o [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] retornará uma mensagem de erro ao tentar inserir o valor padrão, não ao associá-lo.  
   
  As colunas existentes do tipo de dados de alias herdam o novo padrão, a menos que um padrão é associado diretamente para eles ou *futureonly_flag* é especificado como **futureonly**. As novas colunas do tipo de dados de alias sempre herdam o padrão.  

@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - AdLockBatchOptimistic [ADO]
@@ -17,31 +15,30 @@ helpviewer_keywords:
 - AdLockOptimistic [ADO]
 - AdLockPessimistic [ADO]
 ms.assetid: 12a978c0-b8a0-4ef0-87f0-a43c13659272
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 952030ca1edc6e13261021bb0e840adedf92535f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 039f09a1d3731b316359acd03e72312b4485df89
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273135"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47726814"
 ---
 # <a name="types-of-locks"></a>Tipos de bloqueios
 ## <a name="adlockbatchoptimistic"></a>adLockBatchOptimistic  
  Indica as atualizações em lotes otimista. Necessário para o modo de atualização em lotes.  
   
- Muitos aplicativos buscar um número de linhas de uma vez e, em seguida, precisam verificar as atualizações de coordenadas que incluem todo o conjunto de linhas a serem inseridas, atualizadas ou excluídas. Com cursores de lote, apenas uma resposta para o servidor for necessária, que melhora o desempenho de atualização e reduz o tráfego de rede. Usando uma biblioteca de cursores em lotes, você pode criar um cursor estático e, em seguida, desconecte a fonte de dados. Agora você pode fazer alterações em linhas e subsequentemente reconectar e postar as alterações para a fonte de dados em um lote.  
+ Muitos aplicativos buscar um número de linhas de uma vez e, em seguida, precisam fazer atualizações coordenadas que incluem todo o conjunto de linhas a serem inseridos, atualizados ou excluídos. Com cursores de lote, apenas um round trip para o servidor é necessária, melhorando o desempenho de atualização e diminuindo o tráfego de rede. Usando uma biblioteca de cursores em lotes, você pode criar um cursor estático e, em seguida, se desconectar da fonte de dados. Neste ponto você pode fazer alterações em linhas e, subsequentemente, reconectar-se e postar as alterações à fonte de dados em um lote.  
   
 ## <a name="adlockoptimistic"></a>adLockOptimistic  
- Indica se o provedor usa bloqueio otimista — bloqueando registros somente quando você chamar o **atualização** método. Isso significa que há uma possibilidade de que outro usuário pode alterar os dados entre o momento em que você editar o registro e quando você chama **atualização**, que cria conflitos. Use esse tipo de bloqueio em situações nas quais as chances de uma colisão serão baixas ou onde colisões podem ser resolvidas imediatamente.  
+ Indica que o provedor usa bloqueio otimista — bloqueando registros somente quando você chama o **atualização** método. Isso significa que há uma chance de que outro usuário pode alterar os dados entre o momento em que você editar o registro e quando você chama **atualização**, que cria conflitos. Usar esse tipo de bloqueio em situações em que as chances de uma colisão de baixa ou colisões em que podem ser resolvidas prontamente.  
   
 ## <a name="adlockpessimistic"></a>adLockPessimistic  
- Indica o bloqueio pessimista, registro por registro. O provedor não o que é necessário para garantir a edição bem-sucedida dos registros, normalmente por um bloqueio de registros na fonte de dados imediatamente antes de editar. Obviamente, isso significa que os registros não estão disponíveis para outros usuários depois que você começar a editar, até que você libere o bloqueio chamando **atualização.** Use este tipo de bloqueio em um sistema onde você não pode ter alterações simultâneas a dados, como em um sistema de reserva.  
+ Indica o bloqueio pessimista, registro por registro. O provedor faz o que é necessário para garantir que a edição bem-sucedida dos registros, geralmente por um bloqueio de registros na fonte de dados imediatamente antes de editar. Obviamente, isso significa que os registros não estão disponíveis para outros usuários depois que você começa a editar, até que você libere o bloqueio chamando **atualização.** Use esse tipo de bloqueio em um sistema onde você não pode ter alterações simultâneas aos dados, como em um sistema de reserva.  
   
 ## <a name="adlockreadonly"></a>adLockReadOnly  
- Indica os registros de somente leitura. Você não pode alterar os dados. Um bloqueio de somente leitura é "rápido" tipo de bloqueio, porque ele não exigir que o servidor para manter um bloqueio em registros.  
+ Indica os registros de somente leitura. Você não pode alterar os dados. Um bloqueio somente leitura é o tipo "rápido" de bloqueio, porque ele não requer o servidor para manter um bloqueio de registros.  
   
 ## <a name="adlockunspecified"></a>adLockUnspecified  
- Não especifique um tipo de bloqueio.
+ Não especifica um tipo de bloqueio.

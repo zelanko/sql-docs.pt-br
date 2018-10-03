@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,28 +13,27 @@ f1_keywords:
 helpviewer_keywords:
 - AffectEnum enumeration [ADO]
 ms.assetid: 1ab921a0-6c57-43b4-9291-701b2599f3e8
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 797ee0a58457848b3dec133c695d1d36dc579bbe
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3a26d1f9b1e8ff7cf9ed127dc78a02827952d411
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275695"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47772194"
 ---
 # <a name="affectenum"></a>AffectEnum
 Especifica quais registros são afetados por uma operação.  
   
 |Constante|Valor|Description|  
 |--------------|-----------|-----------------|  
-|**adAffectAll**|3|Se não houver um [filtro](../../../ado/reference/ado-api/filter-property.md) aplicada para o **registros**, afeta todos os registros.<br /><br /> Se o **filtro** está definida como um critério de cadeia de caracteres (como "Autor = 'Smith'"), em seguida, a operação afeta o capítulo atual de registros visíveis.<br /><br /> Se o **filtro** está definida como um membro do [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) ou uma matriz de indicadores e, em seguida, a operação afetará todas as linhas do **registros**. **Observação:****adAffectAll** está oculto no Pesquisador de objetos do Visual Basic.|  
-|**adAffectAllChapters**|4|Afeta todos os registros em todos os capítulos irmão do **registros**, incluindo aqueles não visíveis por meio de qualquer **filtro** que está sendo aplicado.|  
+|**adAffectAll**|3|Se não houver um [filtro](../../../ado/reference/ado-api/filter-property.md) aplicada para o **conjunto de registros**, afeta todos os registros.<br /><br /> Se o **filtro** estiver definida como um critério de cadeia de caracteres (como "Autor = 'Smith'"), em seguida, a operação afeta registros visíveis no capítulo atual.<br /><br /> Se o **filtro** estiver definida como um membro do [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) ou uma matriz de indicadores e, em seguida, a operação afetarão todas as linhas dos **conjunto de registros**. **Observação:****adAffectAll** está oculto no Pesquisador de objetos do Visual Basic.  |  
+|**adAffectAllChapters**|4|Afeta todos os registros nos capítulos todos os irmãos a **conjunto de registros**, incluindo aqueles não visíveis por meio de qualquer **filtro** que é aplicado no momento.|  
 |**adAffectCurrent**|1|Afeta somente o registro atual.|  
-|**adAffectGroup**|2|Afeta somente os registros que satisfazem atual [filtro](../../../ado/reference/ado-api/filter-property.md) configuração de propriedade. Você deve definir o **filtro** propriedade para um **FilterGroupEnum** valor ou uma matriz de **indicadores** para usar essa opção.|  
+|**adAffectGroup**|2|Afeta somente os registros que satisfazem o atual [filtro](../../../ado/reference/ado-api/filter-property.md) configuração da propriedade. Você deve definir a **filtro** propriedade para um **FilterGroupEnum** valor ou uma matriz de **indicadores** para usar essa opção.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC equivalente  
+## <a name="adowfc-equivalent"></a>Equivalente do ADO/WFC  
  Pacote: **com.ms.wfc.data**  
   
 |Constante|  

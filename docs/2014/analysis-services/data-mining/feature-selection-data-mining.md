@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], feature selections
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - clustering algorithms [Analysis Services]
 - coding [Data Mining]
 ms.assetid: b044e785-4875-45ab-8ae4-cd3b4e3033bb
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bb4a3282137aa76db08b1d6084db27d1a476140f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4d2cf693a4f4c909ef66b647f3ddd644a9bda6a4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37295996"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067916"
 ---
 # <a name="feature-selection-data-mining"></a>Seleção de recursos (mineração de dados)
   *Seleção de recursos* é um termo geralmente usado em mineração de dados para descrever as ferramentas e técnicas disponíveis para reduzir entradas a um tamanho gerenciável para processamento e análise. Seleção de recursos implica não só *redução de cardinalidade*, o que significa impor um corte arbitrário ou predefinido no número de atributos que podem ser considerados ao criar um modelo, mas também a escolha de atributos, que significa que que o analista ou a ferramenta de modelagem ativamente seleciona ou descarta atributos com base em sua utilidade para análise.  

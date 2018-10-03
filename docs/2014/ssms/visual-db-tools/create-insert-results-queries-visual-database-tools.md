@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], types
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Insert Results query
 - queries [SQL Server], results
 ms.assetid: 8770d630-09cc-47ec-a0e9-e9de2d7bbc89
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3a89fd3a76997655fb7f4a01498df9e05a8d6e59
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 68197c2fa00cd6853e719a1304be5863144ec9af
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43808782"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48068547"
 ---
 # <a name="create-insert-results-queries-visual-database-tools"></a>Criar consultas Inserir Resultados (Visual Database Tools)
   Você pode copiar linhas de uma tabela para outra ou em uma tabela utilizando uma consulta Inserir Resultados. Por exemplo, em uma tabela `titles` , é possível utilizar uma consulta Inserir Resultados para copiar informações sobre todos os títulos de um publicador para uma segunda tabela que você pode disponibilizar para esse publicador. Uma consulta Inserir Resultados é semelhante às Consultas de Criar Tabela, mas copia linhas para uma tabela existente.  

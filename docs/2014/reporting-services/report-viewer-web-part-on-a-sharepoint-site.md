@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], viewing reports
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - SharePoint integration [Reporting Services], Web Parts
 - Report Viewer Web Part [Reporting Services]
 ms.assetid: b6341a73-172f-4632-a9e9-cc79fed3f36b
-caps.latest.revision: 13
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 87498b7eca136eba037a8454416b875f5690cae3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 84afc267fe7b61ee850395750128a5cad15f716f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37198476"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48063466"
 ---
 # <a name="report-viewer-web-part-on-a-sharepoint-site"></a>Web Part do Visualizador de Relatórios em um site do SharePoint
   A Web Part do Visualizador de Relatórios é uma Web Part personalizada instalada pelo suplemento [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para produtos SharePoint. Você pode usar a Web Part para exibir, navegar, imprimir e exportar relatórios em um servidor de relatório configurado para ser executado no modo integrado do SharePoint. A Web Part do Visualizador de relatórios está associada com os arquivos de definição (. RDL) de relatórios são processados por um [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] servidor de relatório. Você não pode usar isso com outros documentos de relatório criados em outros produtos de software.  

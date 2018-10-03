@@ -4,11 +4,7 @@ ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
-ms.service: sql-data-warehouse
-ms.component: system-objects
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -17,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 349297399955dd9b3f43f4507f38918507f64cff
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: fd24c36801d4b17217ebe688d51913618697d6a5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37978258"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47830229"
 ---
 # <a name="spdatatypeinfo90-sql-data-warehouse"></a>sp_datatype_info_90 (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -48,7 +44,7 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
  É a versão do ODBC usada. *odbc_version* está **tinyint**, com um padrão de 2.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- Nenhum  
+ None  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -75,7 +71,7 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 |INTERVAL_PRECISION|**smallint**|Valor de intervalo de precisão inicial se *data_type* é **intervalo**; caso contrário, NULL.|  
 |USERTYPE|**smallint**|**usertype** valor da tabela systypes.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  sp_datatype_info é equivalente a SQLGetTypeInfo no ODBC. Os resultados retornados são ordenados por DATA_TYPE e depois pela proximidade com que o tipo de dados é mapeado ao tipo de dados ODBC SQL correspondente.  
   
 ## <a name="permissions"></a>Permissões  

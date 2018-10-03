@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Assemblies Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Assemblies element
 ms.assetid: 8c9be991-0717-4fcf-97d9-13df0f27da05
-caps.latest.revision: 38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2990946d1e124027cf653db3148c55d4c828a3e1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0ad02db5c06bf45782b22a761dad4f712a223255
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37314806"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48077219"
 ---
 # <a name="assemblies-element-assl"></a>Elemento Assemblies (ASSL)
   Contém a coleção de [Assembly](../objects/assembly-element-assl.md) elementos associados a um [Server](../objects/server-element-assl.md) ou [banco de dados](../objects/database-element-assl.md) elemento.  
@@ -53,8 +50,8 @@ ms.locfileid: "37314806"
   
 |Característica|Description|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|Nenhum|  
-|Valor padrão|Nenhum|  
+|Comprimento e tipo de dados|None|  
+|Valor padrão|None|  
 |Cardinalidade|0-1: elemento opcional que pode ocorrer apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -64,7 +61,7 @@ ms.locfileid: "37314806"
 |Elementos pai|[Database](../objects/database-element-assl.md), [Server](../objects/server-element-assl.md)|  
 |Elementos filho|[Assembly](../objects/assembly-element-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O elemento correspondente no modelo de objeto Analysis Management Objects (AMO) é <xref:Microsoft.AnalysisServices.AssemblyCollection>.  
   
 ## <a name="see-also"></a>Consulte também  

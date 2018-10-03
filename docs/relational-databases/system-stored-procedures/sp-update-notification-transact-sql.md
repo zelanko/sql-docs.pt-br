@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_notification_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_updatenotification
 ms.assetid: 3e1c3d40-8c24-46ce-a68e-ce6c6a237fda
-caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bc08790ad08ce6bb4e94e61a8c3bdfc58615edf9
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 6a612506b4efa34e9f47511789d792e3116f8b91
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33260199"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47817534"
 ---
 # <a name="spupdatenotification-transact-sql"></a>sp_update_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,15 +45,15 @@ sp_update_notification
   
 ## <a name="arguments"></a>Argumentos  
  [  **@alert_name =**] **'***alerta***'**  
- O nome do alerta associado a esta notificação. *alerta* é **sysname**, sem padrão.  
+ O nome do alerta associado a esta notificação. *alerta* está **sysname**, sem padrão.  
   
  [  **@operator_name =**] **'***operador***'**  
- O operador que será notificado quando o alerta ocorrer. *operador* é **sysname**, sem padrão.  
+ O operador que será notificado quando o alerta ocorrer. *operador* está **sysname**, sem padrão.  
   
  [  **@notification_method =**] *notificação*  
- O método através do qual o operador é notificado. *notificação*é **tinyint**, sem padrão e pode ser um ou mais desses valores.  
+ O método através do qual o operador é notificado. *notificação*está **tinyint**, sem padrão e pode ser um ou mais destes valores.  
   
-|Value|Descrição|  
+|Valor|Description|  
 |-----------|-----------------|  
 |**1**|Email|  
 |**2**|Pager|  
@@ -67,16 +63,16 @@ sp_update_notification
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  **sp_update_notification** deve ser executado a partir de **msdb** banco de dados.  
   
- Você pode atualizar uma notificação para um operador que não tenha as informações de endereço necessárias usando especificado *notification_method*. Se ocorrer uma falha ao enviar uma mensagem de email ou uma notificação de pager, a falha será relatada no log de erros do Microsoft SQL Server Agent.  
+ Você pode atualizar uma notificação para um operador que não tem as informações de endereço necessárias usando especificado *notification_method*. Se ocorrer uma falha ao enviar uma mensagem de email ou uma notificação de pager, a falha será relatada no log de erros do Microsoft SQL Server Agent.  
   
 ## <a name="permissions"></a>Permissões  
  Para executar esse procedimento armazenado, os usuários devem ter o **sysadmin** função de servidor fixa.  
   
 ## <a name="examples"></a>Exemplos  
- O exemplo a seguir modifica o método de notificação para notificações enviadas a `François Ajenstat`para o alerta `Test Alert`.  
+ O exemplo a seguir modifica o método de notificação para notificações enviadas para `François Ajenstat`para o alerta `Test Alert`.  
   
 ```  
 USE msdb ;  

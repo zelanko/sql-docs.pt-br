@@ -4,24 +4,18 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: a5629a72-8c17-46a4-bb4d-19d51a0b98a2
-caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 0fe2dbcb60b4d01ed015c4ab272b17cc1e7a0252
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 0aa572611a522e1a83f334e13c36a7fc178c6090
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40396017"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47791764"
 ---
 # <a name="project-settingssynchronization-db2tosql"></a>Projeto (sincronização) (DB2ToSQL)
 A página de sincronização do **configurações do projeto** caixa de diálogo contém configurações que personalizam o SSMA carrega e as atualizações de banco de dados objetos como tabelas e procedimentos armazenados, em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

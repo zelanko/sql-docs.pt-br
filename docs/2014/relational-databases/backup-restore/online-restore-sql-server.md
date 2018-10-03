@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - online restores [SQL Server]
 - online restores [SQL Server], about online restores
 ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
-caps.latest.revision: 43
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 391becc72bcbcb21ff0f15c57229ec28acc8f158
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 69aedf4a3712b79672a0630e953e399c08f23338
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37326196"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48060266"
 ---
 # <a name="online-restore-sql-server"></a>Restauração online (SQL Server)
   Somente há suporte para a restauração online no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise edition. Nessa edição, um arquivo, uma página ou uma restauração por etapas está online por padrão. Este tópico é pertinente para bancos de dados que contêm vários arquivos ou grupos de arquivos (e, no modelo de recuperação simples, somente para grupos de arquivos somente leitura).  

@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 47dc2b5b-7803-4202-ad53-a431a821ad69
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 719682f5b5f8b595c13f3bdbac587023e52e56ce
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 271be9656aa7fabc1edbece16f18ae7a60ba3978
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37206396"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48070457"
 ---
 # <a name="set-the-startup-options"></a>Definir as opções de inicialização
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pode ser configurado para abrir a superfície de design na configuração preferida quando o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] é iniciado. Configurar o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] para ser aberto na configuração preferida pode economizar tempo.  

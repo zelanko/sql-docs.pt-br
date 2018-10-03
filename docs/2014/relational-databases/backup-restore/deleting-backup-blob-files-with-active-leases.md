@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
-caps.latest.revision: 13
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 491cde35ec200cdacc9c12794d5692d657ad22f5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e07b58138f76d44f92cd356fdfc40da801c8637e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37256682"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093916"
 ---
 # <a name="deleting-backup-blob-files-with-active-leases"></a>Excluindo arquivos de blob de backup com arrendamentos ativos
   Ao fazer backup ou restauração no armazenamento do Windows Azure, o SQL Server adquirirá uma concessão infinita para bloquear o acesso exclusivo ao blob. Quando o processo de backup ou restauração for concluído com êxito, a concessão será liberada. Se um backup ou uma restauração falhar, o processo de backup tentará limpar qualquer blob inválido. Entretanto, se o backup falhar devido a uma falha de conectividade de rede prolongada ou contínua, o processo de backup pode não ser capaz de obter acesso ao blob e o blob pode permanecer órfão. Isso significa que o blob só poderá ser gravado ou excluído quando a concessão for liberada. Este tópico descreve como liberar a concessão e excluir o blob.  
@@ -42,7 +39,7 @@ ms.locfileid: "37256682"
 3.  **Excluindo o blob:** para excluir um blob que tem uma concessão ativa, primeiro você deve interromper a concessão.  
   
 ###  <a name="Code_Example"></a> Exemplo de script do PowerShell  
- **\*\* Importante \* \* ** se você estiver executando o PowerShell 2.0, você pode ter problemas ao carregar o assembly Microsoft WindowsAzure.Storage.dll. Recomendamos que você atualize o Powershell 3.0 para resolver o problema. Você também pode usar a seguinte solução para o PowerShell 2.0:  
+ **\*\* Importante \* \***  se você estiver executando o PowerShell 2.0, você pode ter problemas ao carregar o assembly Microsoft WindowsAzure.Storage.dll. Recomendamos que você atualize o Powershell 3.0 para resolver o problema. Você também pode usar a seguinte solução para o PowerShell 2.0:  
   
 -   Crie ou modifique o arquivo powershell.exe.config para carregar os assemblies do .NET 2.0 e do .NET 4.0 em tempo de execução com o seguinte:  
   

@@ -1,32 +1,29 @@
 ---
-title: 'SQL para c: data | Microsoft Docs'
+title: 'SQL to c: data | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - converting data from SQL to C types [ODBC], date
 - date data type [ODBC]
 - data conversions from SQL to C types [ODBC], date
 ms.assetid: 703c7960-9cf4-4d7a-9920-53b29c184f97
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d99ebd45ffa463ccfd66bd751dd7415b35a8f5d1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fe0c30f0f0fbf0ea695d79387fdec3694a54ebca
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32908861"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47777474"
 ---
-# <a name="sql-to-c-date"></a>SQL para c: data
-O identificador para a data do tipo de dados SQL ODBC:  
+# <a name="sql-to-c-date"></a>SQL para C: data
+O identificador para a data do tipo de dados SQL do ODBC:  
   
  SQL_TYPE_DATE  
   
@@ -34,16 +31,16 @@ O identificador para a data do tipo de dados SQL ODBC:
   
 |Identificador de tipo C|Teste|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|*BufferLength* > bytes de comprimento de caracteres<br /><br /> 11 < = *BufferLength* < = comprimento de bytes de caracteres<br /><br /> *BufferLength* < 11|data<br /><br /> Dados truncados<br /><br /> Indefinido|10<br /><br /> Comprimento dos dados em bytes<br /><br /> Indefinido|n/d<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_CHAR|*BufferLength* > bytes de comprimento de caracteres<br /><br /> 11 < = *BufferLength* < = comprimento de byte do caractere<br /><br /> *BufferLength* < 11|data<br /><br /> Dados truncados<br /><br /> Indefinido|10<br /><br /> Comprimento dos dados em bytes<br /><br /> Indefinido|n/d<br /><br /> 01004<br /><br /> 22003|  
 |SQL_C_WCHAR|*BufferLength* > comprimento de caracteres<br /><br /> 11 < = *BufferLength* < = comprimento de caracteres<br /><br /> *BufferLength* < 11|data<br /><br /> Dados truncados<br /><br /> Indefinido|10<br /><br /> Comprimento dos dados em caracteres<br /><br /> Indefinido|n/d<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_BINARY|Comprimento em bytes de dados < = *BufferLength*<br /><br /> Comprimento em bytes de dados > *BufferLength*|data<br /><br /> Indefinido|Comprimento dos dados em bytes<br /><br /> Indefinido|n/d<br /><br /> 22003|  
-|SQL_C_TYPE_DATE|Nenhum [a]|data|6 [c]|n/d|  
-|SQL_C_TYPE_TIMESTAMP|Nenhum [a]|Dados [b]|16 [c]|n/d|  
+|SQL_C_BINARY|Comprimento de bytes de dados < = *BufferLength*<br /><br /> Comprimento de bytes de dados > *BufferLength*|data<br /><br /> Indefinido|Comprimento dos dados em bytes<br /><br /> Indefinido|n/d<br /><br /> 22003|  
+|SQL_C_TYPE_DATE|None [a]|data|6 [c]|n/d|  
+|SQL_C_TYPE_TIMESTAMP|None [a]|Dados [b]|16 [c]|n/d|  
   
  [a] o valor de *BufferLength* é ignorado para essa conversão. O driver pressupõe que o tamanho de **TargetValuePtr* é o tamanho do tipo de dados C.  
   
  [b] os campos de hora da estrutura de carimbo de hora são definidos como zero.  
   
- [c] este é o tamanho do tipo de dados C correspondente.  
+ [c] esse é o tamanho do tipo de dados C correspondente.  
   
- Quando a data de dados do SQL é convertida em dados de caractere C, a cadeia de caracteres resultante é a "*aaaa*-*mm*-*dd*" formato. Esse formato não é afetado pela configuração de país Windows®.
+ Quando a data de dados do SQL é convertida em dados de caractere C, a cadeia de caracteres resultante está no "*aaaa*-*mm*-*dd*" formato. Esse formato não é afetado pela configuração de país Windows®.

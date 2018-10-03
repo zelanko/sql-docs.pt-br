@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.xmlsourceadapter.erroroutput.f1
 helpviewer_keywords:
 - XML Source Editor
 ms.assetid: 2ddb97c2-1e43-478f-8872-b6efd41b931e
-caps.latest.revision: 17
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e39eeee91c458dda4fb882e6374075a95d255b94
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3126888e0e2d64d2091ace450c276881c408259b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37271232"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48111736"
 ---
 # <a name="xml-source-editor-error-output-page"></a>Editor de Origem XML (página Saída de Erro)
   Use a página **Saída de Erro** da caixa de diálogo **Editor de Origem XML** , para selecionar opções de manipulação de erros e definir propriedades em colunas de saída de erros.  

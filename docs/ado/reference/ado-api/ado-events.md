@@ -1,61 +1,58 @@
 ---
-title: Eventos de ADO | Microsoft Docs
+title: Eventos ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - events [ADO]
 - ADO, events
 ms.assetid: 0ded5ad9-8f83-4224-95af-38512783b972
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 764e47be93509356de38fc90b7b67a1c85e7ff00
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 28c64bbe66da1adf6ad4d3a0f9484789ee2a71dd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275515"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47838220"
 ---
-# <a name="ado-events"></a>Eventos de ADO
+# <a name="ado-events"></a>Eventos ADO
 |||  
 |-|-|  
 |[BeginTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|Chamado após o **BeginTrans** operação.|  
 |[CommitTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|Chamado após o **CommitTrans** operação.|  
-|[ConnectComplete](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|Chamado após o início de uma conexão.|  
+|[ConnectComplete](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|Chamado depois que uma conexão é iniciado.|  
 |[Desconectar](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|Chamado após o término de uma conexão.|  
-|[EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|Chamado quando há uma tentativa de mover para uma linha após o término do **registros**.|  
+|[EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|Chamado quando há uma tentativa de mover para uma linha após o término do **conjunto de registros**.|  
 |[ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)|Chamado depois que um comando tiver concluído a execução.|  
-|[FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|Chamado depois que todos os registros em uma operação assíncrona demorada foram recuperados para o **registros**.|  
-|[FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md)|Chamado periodicamente durante uma operação demorada assíncrona para informar quantas linhas foram recuperadas no momento no **registros**.|  
+|[FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|Chamado depois que todos os registros em uma operação assíncrona demorada foram recuperados para o **conjunto de registros**.|  
+|[FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md)|Chamado periodicamente durante uma operação assíncrona demorada para relatar o número de linhas atualmente foram recuperado na **conjunto de registros**.|  
 |[FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|Chamado após o valor de um ou mais **campo** objetos foi alterado.|  
-|[InfoMessage](../../../ado/reference/ado-api/infomessage-event-ado.md)|Chamado sempre que ocorrer um aviso durante uma **ConnectionEvent** operação.|  
-|[MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|Chamado após a posição atual no **registros** alterações.|  
+|[InfoMessage](../../../ado/reference/ado-api/infomessage-event-ado.md)|Chamado sempre que ocorrer um aviso durante um **ConnectionEvent** operação.|  
+|[MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|Chamado após a posição atual na **Recordset** alterações.|  
 |[RecordChangeComplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|Chamado após alterar um ou mais registros.|  
-|[RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|Chamado após o **registros** foi alterado.|  
+|[RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|Chamado após o **Recordset** foi alterado.|  
 |[RollbackTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|Chamado após o **RollbackTrans** operação.|  
-|[WillChangeField](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|Chamado antes de uma operação pendente altera o valor de uma ou mais **campo** objetos no **registros**.|  
-|[WillChangeRecord](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|Chamado antes de um ou mais registros (linhas) no **registros** alterar.|  
-|[WillChangeRecordset](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|Chamado antes de uma operação pendente altera o **registros**.|  
+|[WillChangeField](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|Chamado antes que uma operação pendente altera o valor de um ou mais **campo** objetos na **conjunto de registros**.|  
+|[WillChangeRecord](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|Chamado antes de um ou mais registros (linhas) na **Recordset** alterar.|  
+|[WillChangeRecordset](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|Chamado antes que uma operação pendente é alterado de **conjunto de registros**.|  
 |[WillConnect](../../../ado/reference/ado-api/willconnect-event-ado.md)|Chamado antes do início de uma conexão.|  
-|[WillExecute](../../../ado/reference/ado-api/willexecute-event-ado.md)|Chamado logo antes de um comando pendente executa nessa conexão e dá ao usuário uma oportunidade para examinar e modificar os parâmetros de execução pendente.|  
-|[WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|O **WillMove** é chamado de evento *antes de* uma operação pendente altera a posição atual no **registros**.|  
+|[WillExecute](../../../ado/reference/ado-api/willexecute-event-ado.md)|Chamado pouco antes de um comando pendente executa nessa conexão e permite que o usuário a oportunidade de examinar e modificar os parâmetros de execução pendente.|  
+|[WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|O **eventos WillMove** evento é chamado *antes* uma operação pendente altera a posição atual no **conjunto de registros**.|  
   
 ## <a name="see-also"></a>Consulte também  
  [Referência da API ADO](../../../ado/reference/ado-api/ado-api-reference.md)   
- [Coleções de ADO](../../../ado/reference/ado-api/ado-collections.md)   
+ [Coleções ADO](../../../ado/reference/ado-api/ado-collections.md)   
  [Propriedades dinâmicas do ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
  [Constantes enumeradas do ADO](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
  [Apêndice b: erros de ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
- [Manipulação de eventos de ADO](../../../ado/guide/data/handling-ado-events.md)   
- [Métodos de ADO](../../../ado/reference/ado-api/ado-methods.md)   
+ [Manipulando eventos ADO](../../../ado/guide/data/handling-ado-events.md)   
+ [Métodos ADO](../../../ado/reference/ado-api/ado-methods.md)   
  [Modelo de objeto ADO](../../../ado/reference/ado-api/ado-object-model.md)   
- [Interfaces e ADO](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)   
+ [Interfaces e os objetos do ADO](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)   
  [Propriedades ADO](../../../ado/reference/ado-api/ado-properties.md)

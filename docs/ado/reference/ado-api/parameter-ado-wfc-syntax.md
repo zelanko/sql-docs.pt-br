@@ -1,30 +1,27 @@
 ---
-title: Parâmetro (ADO - sintaxe WFC) | Microsoft Docs
+title: Parâmetro (ADO – sintaxe WFC) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 02/15/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Parameter collection [ADO], ADO/WFC syntax
 ms.assetid: d00d1e1e-14b1-41a2-a00f-2a3cb7396f15
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: eb5ee000ca00031f35f27ec23dec3e284656f56a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7bcb96b2bd0710af94b944d2f8e3417d9cfbcee6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280585"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47720699"
 ---
-# <a name="parameter-ado---wfc-syntax"></a>Parâmetro (ADO - WFC sintaxe)
+# <a name="parameter-ado---wfc-syntax"></a>Parâmetro (ADO – Sintaxe WFC)
 ## <a name="package-commswfcdata"></a>pacote com.ms.wfc.data  
   
 ### <a name="constructor"></a>Construtor  
@@ -69,13 +66,13 @@ public AdoProperties getProperties()
 ```  
   
 ## <a name="parameter-accessor-methods"></a>Métodos de acessador de parâmetro  
- O [valor](../../../ado/reference/ado-api/value-property-ado.md) propriedade de um [parâmetro](../../../ado/reference/ado-api/parameter-object.md) objeto obtém ou define o conteúdo do objeto. O conteúdo é representado como uma VARIANTE de um tipo de objeto que pode ser atribuído um valor e qualquer um dos vários tipos de dados.  
+ O [valor](../../../ado/reference/ado-api/value-property-ado.md) propriedade de uma [parâmetro](../../../ado/reference/ado-api/parameter-object.md) objeto obtém ou define o conteúdo desse objeto. O conteúdo é representado como uma VARIANTE, um tipo de objeto que pode ser atribuído um valor e qualquer um dos vários tipos de dados.  
   
  ADO/WFC implementa o **valor** propriedade com o **getValue** método, que retorna um objeto de VARIANTE; e o **setValue** método, que usa uma VARIANTE como um argumento. Variantes são altamente eficientes em determinados idiomas, como o Microsoft Visual Basic.  
   
- Além de **valor** propriedade ADO/WFC fornece *acessador* métodos que usam tipos de dados Java para obter e definir o conteúdo de **parâmetro** objetos. A maioria desses métodos têm nomes no formato **obter * DataType* ou **definir * DataType*.  
+ Além de **valor** propriedade, ADO/WFC fornece *acessador* métodos que usam tipos de dados Java para obter e definir o conteúdo de **parâmetro** objetos. A maioria desses métodos têm nomes no formato **obter * * * DataType* ou **definir * * * DataType*.  
   
- Há uma exceção notável: não há nenhum **getNull** propriedade; em vez disso, há um **isNull** propriedade que retorna um valor booliano que indica se o campo é nulo.  
+ Há uma exceção notável: não há nenhuma **getNull** propriedade; em vez disso, há um **isNull** propriedade que retorna um valor booliano que indica se o campo é nulo.  
   
 ```  
 public boolean getBoolean()  
