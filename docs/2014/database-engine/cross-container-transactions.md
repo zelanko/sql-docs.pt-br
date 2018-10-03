@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5d84b51a-ec17-4c5c-b80e-9e994fc8ae80
-caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 01d689554375e17b96ecbda1b10851cb5d7de94c
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 17461cb9fcde8e37118a275512b332085beb5313
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393975"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48112116"
 ---
 # <a name="cross-container-transactions"></a>Transações entre contêineres
   As transações entre contêineres são as transações de usuário implícitas ou explícitas que incluem chamadas para procedimentos armazenados compilados nativamente ou para operações em tabelas com otimização de memória.  

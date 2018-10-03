@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], tutorials
 - walkthroughs [Reporting Services]
 - data-driven subscriptions
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
-caps.latest.revision: 46
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 616ca1e1984c36c2a20814367b3bd030825f3c0c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d91acd160949d0438c73d21ac3e422f57a3522cb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37181523"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48081676"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Criar uma assinatura controlada por dados (Tutorial do SSRS)
   O [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fornece assinaturas controladas por dados de forma que você pode personalizar a distribuição de um relatório baseado em dados de assinante dinâmicos. As assinaturas controladas por dados foram desenvolvidas para os seguintes tipos de cenário:  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8516f0ad-32ee-4688-a304-e705143642ca
-caps.latest.revision: 9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b61d01e59aa99e6ed97a328d14cee8ab82c3427a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f8b451134d621c8f151fa43ec4214317ab087918
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280542"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48072726"
 ---
 # <a name="string-storage-and-collation-in-tabular-models"></a>Armazenamento de cadeia e agrupamento em modelos de tabela
   Cadeias de caracteres (valores de texto) são armazenadas em um formato altamente compactado em modelos de tabela; por causa desta compactação, você pode obter resultados inesperados ao recuperar cadeias de caracteres inteiras ou parciais. Além disso, como a localidade e o agrupamento são herdados hierarquicamente do objeto pai mais próximo, se o idioma da cadeia de caracteres não for definido explicitamente, a localidade e o agrupamento do pai poderão afetar como cada cadeia de caracteres é armazenada e se ela é exclusiva ou combinada com cadeias de caracteres semelhantes, conforme definido pelo agrupamento pai.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [Reporting Services], configuring
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - command prompt utilities [Reporting Services]
 - command prompt utilities [SQL Server], rsconfig
 ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
-caps.latest.revision: 46
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5598de66babc70f9301894d96b215e903e6654e6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cd33c950d8594d7763bd265c443fabb3604aa8c4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37196756"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48078462"
 ---
 # <a name="rsconfig-utility-ssrs"></a>Utilitário rsconfig (SSRS)
   O utilitário **rsconfig.exe** criptografa e armazena conexão e valores de conta no arquivo RSReportServer.config. Valores criptografados incluem informações de conexão de banco de dados do servidor de relatório e valores de conta usados para processamento de relatório autônomo.  
@@ -69,7 +66,7 @@ ms.locfileid: "37196756"
 ## <a name="file-location"></a>Local do arquivo  
  O Rsconfig.exe está localizado em **\Arquivos de Programas\Microsoft SQL Server\110\Tools\Binn**. Você pode executar o utilitário de qualquer pasta em seu sistema de arquivos.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Rsconfig.exe é usado para dois propósitos:  
   
 -   Para modificar a informações de conexão que um servidor de relatório usa para conectar-se a um banco de dados do servidor de relatório.  

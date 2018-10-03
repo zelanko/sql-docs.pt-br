@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
 helpviewer_keywords:
 - SQLDriverConnect function
 ms.assetid: a1e38e2c-3a97-42d1-9c45-a0ca3282ffd1
-caps.latest.revision: 60
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a9a7ab39d15b32a093cf7a9924645f2ad81f97e4
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: d2570a21987ed46ce7bda01302cf890ffab87bb5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37426755"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48086766"
 ---
 # <a name="sqldriverconnect"></a>SQLDriverConnect
   O driver ODBC para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client define atributos de conexão que substituem ou aprimoram palavras-chave de cadeia de conexão. Várias palavras-chave de cadeia de conexão têm valores padrão especificados pelo driver ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  

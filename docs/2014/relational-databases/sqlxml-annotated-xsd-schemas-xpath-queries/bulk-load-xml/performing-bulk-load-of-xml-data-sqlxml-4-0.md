@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - XML Bulk Load [SQLXML]
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - XDR schemas [SQLXML], XML Bulk Load
 - inserting data
 ms.assetid: 3708b493-322e-4f3c-9b27-441d0c0ee346
-caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7669d5342ecfff26a81808b9a1969e1b367e60e3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cc55c5122c0d7d2405ed732c84ce55b6f4c09905
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37230626"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48121756"
 ---
 # <a name="performing-bulk-load-of-xml-data-sqlxml-40"></a>Executando o carregamento em massa de dados XML (SQLXML 4.0)
   XML Bulk Load é um objeto COM autônomo que lhe permite carregar dados XML semiestruturados em tabelas do Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

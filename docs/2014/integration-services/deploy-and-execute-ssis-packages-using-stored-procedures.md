@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 60914b0c-1f65-45f8-8132-0ca331749fcc
-caps.latest.revision: 9
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 4c9a86fd007501c3c8fa742f55057852d222f358
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 699c6c2dad976cc070609b3c652b5abcfe2d7577
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37266622"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48094136"
 ---
 # <a name="deploy-and-execute-ssis-packages-using-stored-procedures"></a>Implantar e executar pacotes SSIS usando procedimentos armazenados
   Quando configura um projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para usar o modelo de implantação de projeto, você pode usar procedimentos armazenados no catálogo do [!INCLUDE[ssIS](../includes/ssis-md.md)] para implantar o projeto e executar os pacotes. Para obter informações sobre o modelo de implantação de projeto, consulte [Implantação de projetos e pacotes](packages/deploy-integration-services-ssis-projects-and-packages.md).  

@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - RenderedOutputFile class
 - data streams [Reporting Services]
 - delivery extensions [Reporting Services], data streams
 ms.assetid: 8b591801-42d5-49fa-b710-bf7e6917accf
-caps.latest.revision: 33
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 09540b39357f41fcbe9bd9d02e7ea1a6b71d11a7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 37b6c2201326ede7c4dc42dffc4fa831136c50a6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37260142"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48078516"
 ---
 # <a name="using-the-renderedoutputfile-class-for-a-delivery-extension"></a>Usando a classe RenderedOutputFile para uma extensão de entrega
   A classe de <xref:Microsoft.ReportingServices.Interfaces.RenderedOutputFile> representa um fluxo de dados e informações sobre as propriedades associadas ao fluxo de dados. A propriedade **Data** da classe <xref:Microsoft.ReportingServices.Interfaces.RenderedOutputFile> é usada para representar um relatório renderizado ou relatar um recurso como um objeto **Stream**.  

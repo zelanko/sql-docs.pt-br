@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - leaf members [Master Data Services]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - leaf members [Master Data Services], about leaf members
 - members [Master Data Services]
 ms.assetid: 0fda32b9-677d-4ba2-bb28-f76f2383a30f
-caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 934dbb8ff42bfbb3c334131f77e33d44d8542223
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b07719a39cd8f82561bd92635dcba8e97ffee532
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37307972"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096036"
 ---
 # <a name="members-master-data-services"></a>Membros (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], os membros são os dados mestres físicos. Por exemplo, um membro pode ser uma Road-150 bike em uma entidade Product ou um cliente específico em uma entidade Customer.  

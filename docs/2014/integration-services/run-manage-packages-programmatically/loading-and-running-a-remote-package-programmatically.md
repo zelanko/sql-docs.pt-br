@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - Integration Services packages, running
 - packages [Integration Services], running
 - remote packages [Integration Services]
 ms.assetid: 9f6ef376-3408-46bf-b5fa-fc7b18c689c9
-caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: df53d355babd082cba4b67404c91b7d4c33bec28
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e4baf6550273218cd8d560ef9ea3950924fab544
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37186683"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48138721"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>Carregando e executando um pacote remoto programaticamente
   Para executar pacotes remotos de um computador local que não tenha o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] instalado, inicie-os de forma que eles sejam executados no computador remoto em que o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] está instalado. Para isso, o computador local deve usar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, um serviço Web ou um componente remoto para iniciar os pacotes no computador remoto. Se você tentar iniciar os pacotes remotos diretamente do computador local, eles serão carregados e tentarão executar do computador local. Se o computador local não tiver o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] instalado, os pacotes não serão executados.  

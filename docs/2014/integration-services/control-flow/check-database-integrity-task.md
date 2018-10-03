@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.checkdatabaseintegritytask.f1
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - verifying database consistency
 - integrity checking [Integration Services]
 ms.assetid: 5a82fe99-4503-429f-9337-e6bac7649fe4
-caps.latest.revision: 37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d4f2801b550f760c9a14efa2fba780a686dd80ab
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cba77106e1aba2ee9c5e4bf2671d32137b09e27f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243036"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48123336"
 ---
 # <a name="check-database-integrity-task"></a>Tarefa Verificar Integridade do Banco de Dados
   A tarefa Verificar Integridade do Banco de Dados verifica a alocação e integridade estrutural de todos os objetos no banco de dados especificado. A tarefa pode verificar um único ou vários bancos de dados, e você também pode optar por verificar os índices de banco de dados.  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vdt.tabledesigner
 - vdt.designers.properties.Table
 ms.assetid: cc392987-1aab-45f5-b5af-a26be53409bf
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 417327fc8c6b85d1e791b3d67d5ccd8922c1fe64
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 33e75ea1383a597f3e896ad2d7d24f05a7021ac2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43810522"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48065376"
 ---
 # <a name="table-properties-visual-database-tools"></a>Propriedades da tabela (Visual Database Tools)
   Essas propriedades aparecem na janela Propriedades quando você clicar em Designer de Tabela com o botão direito do mouse e selecionar Propriedades. A menos que seja indicado o contrário, é possível editar essas propriedades na janela Propriedades quando a tabela for selecionada.  

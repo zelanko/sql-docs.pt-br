@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - projects [SQL Server Management Studio], item additions
 - adding project items
 ms.assetid: 084b3879-e96b-45a7-b421-6a4b0db2b92b
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c7a6bb9c0ee86b1693a60a69354f5e8dec343447
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: e30b7d7893fee8324b48ab3d208c7a8f92d2850a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43810712"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095236"
 ---
 # <a name="add-existing-items-to-a-project"></a>Adicionar itens existentes a um projeto
   Adicione novos itens a um projeto para estender a funcionalidade do aplicativo. Um item existente pode ser uma consulta ou um arquivo diverso. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] tem dois tipos de projeto: Projeto de Script do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e Projeto de Script do Analysis Services. O tipo de projeto determina os arquivos de consulta que você pode adicionar ao projeto. Por exemplo, você pode adicionar uma consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] (um arquivo com uma extensão .sql) a um projeto de script do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , mas não pode adicioná-lo a um Projeto de Script do Analysis Services. Para associar extensões de arquivo adicionais a um tipo de projeto, consulte [associar extensões de arquivo para um Editor de código](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md).  

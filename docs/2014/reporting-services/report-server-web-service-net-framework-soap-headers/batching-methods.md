@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - methods [Reporting Services], batches
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - locking [Reporting Services]
 - multiple Web service methods
 ms.assetid: 86435534-c9fe-4b49-b88c-7fb6d21976b0
-caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ddf923a82f342b87d7108d21aa7c7af7998dc858
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 56e58bfdb36e464aa6048343350ea929971989f5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37260152"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48112636"
 ---
 # <a name="batching-methods"></a>Métodos de processamento em lote
   O uso de cabeçalhos SOAP no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] permite que você inclua vários métodos de serviço Web em uma única operação. Os métodos são executados dentro do escopo de uma única transação de banco de dados, na ordem que são chamados.  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - System Monitor [SQL Server], running
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - starting Windows NT System Monitor
 - RPC
 ms.assetid: 05297984-bc8d-43df-829c-032387f7ea61
-caps.latest.revision: 21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3de73cac82b6acb7d9356d2d8a23f6a2e0efed7f
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: de0da660823bafbb93943059f8e986008dabe70c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43810392"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48137088"
 ---
 # <a name="run-system-monitor"></a>Executar o Monitor do Sistema
   O Monitor do Sistema usa RPCs (chamadas de procedimento remotas) para coletar informações do Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Qualquer usuário com permissões do Microsoft Windows para executar o Monitor do Sistema pode utilizá-lo para monitorar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

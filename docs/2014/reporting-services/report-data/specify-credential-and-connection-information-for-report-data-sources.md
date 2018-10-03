@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - no credentials option [Reporting Services]
@@ -28,16 +26,15 @@ helpviewer_keywords:
 - security [Reporting Services], data sources
 - Windows integrated security [Reporting Services]
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
-caps.latest.revision: 59
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: cb7ef033bc481772f0acbb524988fc8e85a2e91d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ce1866d4ffde34052a05ec6fbcbcd2c0dacaea42
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210736"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48082236"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>Especificar informações de credenciais e de conexão para fontes de dados de relatório
   Um servidor de relatório usa credenciais para se conectar a fontes de dados externas que fornecem conteúdo a relatórios ou informações de destinatário para assinaturas controladas por dados. Você pode especificar credenciais que usam a Autenticação do Windows, autenticação de banco de dados, nenhuma autenticação ou autenticação personalizada. Ao enviar uma solicitação de conexão pela rede, o servidor de relatório representará uma conta de usuário ou uma conta de execução autônoma. Para obter mais informações sobre o contexto de segurança sob o qual uma conexão é feita, consulte [Configuração de fontes de dados e conexões de rede](#DataSourceConfigurationConnections) mais adiante neste tópico.  
@@ -138,7 +135,7 @@ ms.locfileid: "37210736"
 |Segurança integrada|Representar o usuário atual|Para todos os tipos de fonte de dados, conecte-se usando a conta do usuário atual.|  
 |Credenciais do Windows|Representar o usuário especificado|Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC e OLE DB: conecte usando a conta do usuário representado.|  
 |Credenciais de banco de dados|Representar a conta de execução autônoma ou conta de serviço<br /><br /> (o Reporting Services remove as permissões de administrador ao enviar a solicitação de conexão que usa a identidade do serviço).|Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC e OLE DB:<br /><br /> Acrescente o nome de usuário e senha à cadeia de caracteres de conexão.<br /><br /> Para [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:<br /><br /> A conexão será bem-sucedida se você estiver usando o protocolo TCP/IP, caso contrário ela falhará.<br /><br /> Para XML:<br /><br /> Falha na conexão com o servidor de relatório se forem usadas as credenciais do banco de dados.|  
-|Nenhum|Representar a conta de execução autônoma.|Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC e OLE DB:<br /><br /> Use as credenciais definidas na cadeia de caracteres de conexão. A conexão com o servidor de relatório falhará se a conta de execução autônoma estiver indefinida.<br /><br /> Para [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:<br /><br /> A conexão sempre falhará se nenhuma credencial for especificada, mesmo se a conta de execução autônoma for definida.<br /><br /> Para XML:<br /><br /> Conecte-se como Usuário Anônimo se a conta de execução autônoma estiver definida; caso contrário, a conexão falhará.|  
+|None|Representar a conta de execução autônoma.|Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC e OLE DB:<br /><br /> Use as credenciais definidas na cadeia de caracteres de conexão. A conexão com o servidor de relatório falhará se a conta de execução autônoma estiver indefinida.<br /><br /> Para [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:<br /><br /> A conexão sempre falhará se nenhuma credencial for especificada, mesmo se a conta de execução autônoma for definida.<br /><br /> Para XML:<br /><br /> Conecte-se como Usuário Anônimo se a conta de execução autônoma estiver definida; caso contrário, a conexão falhará.|  
   
 ## <a name="setting-credentials-programmatically"></a>Definindo credenciais programaticamente  
  Você pode definir credenciais em seu código para controlar o acesso a relatórios e ao servidor de relatório. Para obter mais informações, consulte [fontes de dados e métodos de Conexão](../report-server-web-service/methods/data-sources-and-connection-methods.md).  

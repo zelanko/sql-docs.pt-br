@@ -1,13 +1,11 @@
 ---
-title: Exemplo de propriedades de RecordCount (JScript) e filtro | Microsoft Docs
+title: Exemplo de Filter e RecordCount propriedades (JScript) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - JScript
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - RecordCount property [ADO], JScript example
 - Filter property [ADO], JScript example
 ms.assetid: 677fa67e-9cb9-4d7d-a786-beeb5bee5236
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 656c981dd242ad7f11768aac0bb79c7214845c06
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 45e3a53bd006302d368b97304a1f6e8eeab438f0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278605"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47623974"
 ---
-# <a name="filter-and-recordcount-properties-example-jscript"></a>Exemplo de propriedades de RecordCount (JScript) e filtro
-Este exemplo abre uma **registros** na tabela de empresas de banco de dados Northwind e, em seguida, usa o [filtro](../../../ado/reference/ado-api/filter-property.md) propriedade para limitar os registros visíveis para aquelas onde o campo CompanyName começa com a letra D. recortar e colar o código a seguir para o bloco de notas ou outro editor de texto e salve-o como **FilterJS.asp**.  
+# <a name="filter-and-recordcount-properties-example-jscript"></a>Exemplo de Filter e RecordCount propriedades (JScript)
+Este exemplo abre um **conjunto de registros** na tabela de banco de dados Northwind e, em seguida, usa as empresas a [filtro](../../../ado/reference/ado-api/filter-property.md) propriedade para limitar os registros visíveis para aqueles em que o campo CompanyName começa com a letra D. recortar e colar o seguinte código ao bloco de notas ou outro editor de texto e salve-o como **FilterJS.asp**.  
   
 ```  
 <!-- BeginFilterJS -->  

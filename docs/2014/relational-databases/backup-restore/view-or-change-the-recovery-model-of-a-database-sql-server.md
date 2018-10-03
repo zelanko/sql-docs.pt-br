@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database backups [SQL Server], recovery models
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - database restores [SQL Server], recovery models
 - modifying database recovery models
 ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
-caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d81eee206ee511c3004d4306a373e527a572901e
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 5ef0cb341c0f37f6961eebb759f2a236510044f3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395214"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48097486"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>Exibir ou alterar o modelo de recuperação de um banco de dados (SQL Server)
   Este tópico descreve como exibir ou alterar o modelo de recuperação de um banco de dados no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]. Um *modelo de recuperação* é uma propriedade de banco de dados que controla como as transações são registradas, se o log de transações exige (e permite) backup e que tipos de operações de restauração estão disponíveis. Existem três modelos de recuperação: simples, completo e bulk-logged. Geralmente, um banco de dados usa o modelo de recuperação completa ou o modelo de recuperação simples. É possível alternar para outro modelo de recuperação do banco de dados a qualquer momento. Os banco de dados **modelo** define o modelo de recuperação padrão de novos bancos de dados.  

@@ -4,24 +4,18 @@ ms.custom: ''
 ms.date: 09/30/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
-caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a76b6092cfc092c44b6ec023e97b4914520c4ed6
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 89998a328aa400958d8cd406f412bf7f91b4884e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34778102"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47845775"
 ---
 # <a name="sql-server-migration-assistant"></a>Assistente de Migração do SQL Server
 Microsoft SQL Server SSMA (Migration Assistant) é uma ferramenta projetada para automatizar a migração de banco de dados para o SQL Server do Microsoft Access, DB2, MySQL, Oracle e SAP ASE.  
@@ -38,8 +32,8 @@ Microsoft SQL Server SSMA (Migration Assistant) é uma ferramenta projetada para
   
 -   [Assistente de migração do SQL Server para SAP ASE](../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md)  
 
-## <a name="supported-sources-and-target-versions"></a>Fontes com suporte e versões de destino
-Para fontes com suporte, revise as informações no Centro de Download para baixar o SSMA.
+## <a name="supported-sources-and-target-versions"></a>Fontes com suporte e as versões de destino
+Para fontes com suporte, revise as informações no Centro de Download para o download do SSMA.
 
 As seguintes versões de destino têm suporte para o SSMA.
 
@@ -50,9 +44,9 @@ As seguintes versões de destino têm suporte para o SSMA.
 - SQL Server 2016
 - Banco de dados SQL do Azure
 - SQL Server 2017 no Windows e Linux (visualização)
-- * * Do azure SQL Data Warehouse
+- * * Azure SQL Data Warehouse
 
-* * Este destino só é suportado por SSMA para Oracle.
+* * Este destino é compatível apenas com o SSMA para Oracle.
  
 ## <a name="downloads"></a>Downloads
 - [SSMA para Access](http://aka.ms/ssmaforaccess)
@@ -61,7 +55,7 @@ As seguintes versões de destino têm suporte para o SSMA.
 - [SSMA para Oracle](http://aka.ms/ssmafororacle)
 - [SSMA para SAP ASE](http://aka.ms/ssmaforsybase)
  
-## <a name="getting-ssma-support"></a>Obter suporte do SSMA  
+## <a name="getting-ssma-support"></a>Como obter suporte do SSMA  
 **Ajuda e suporte para Microsoft SQL Server SSMA (Migration Assistant):**  
   
 -   **Ajuda do produto** - para acessar o suporte do produto, inicie o SSMA e selecione o menu Ajuda ou pressione a tecla F1.  
@@ -72,11 +66,11 @@ As seguintes versões de destino têm suporte para o SSMA.
   
     -   [Comunidade do SQL Server Developer Center](http://go.microsoft.com/fwlink/?LinkId=42456) -grupos de notícias, fóruns e outros recursos da comunidade que são úteis para desenvolvedores do SQL Server  
   
--   Suporte - acesse assistido [ https://support.microsoft.com/assistedsupportproducts ](https://support.microsoft.com/assistedsupportproducts) e procure 'SQL Server Migration Assistant'.  Selecione a versão e selecione "Iniciar a solicitação".  Suporte assistido é incluído com a ferramenta de Assistente de migração do SQL Server.  
+-   Suporte - acesse assistido [ https://support.microsoft.com/assistedsupportproducts ](https://support.microsoft.com/assistedsupportproducts) e procure por 'SQL Server Migration Assistant'.  Selecione sua versão e, em seguida, selecione "Iniciar solicitação".  Suporte assistido é incluído com a ferramenta de Assistente de migração do SQL Server.  
   
--   Suporte Premier - se você tiver um contrato Premier, você pode obter Premier suporte a [portal Premier Online](https://premier.microsoft.com/).  
+-   Suporte Premier - se você tiver um contrato Premier, você pode obter Premier suporte sobre o [portal Premier Online](https://premier.microsoft.com/).  
   
--   Serviços – para o parceiro de consultoria assistido migrações, acesse o [Portal de parceiros](https://www.platformmodernization.org/Pages/default.aspx).  
+-   Serviços de consultoria – para parceiro assistido por migrações, acesse o [Portal de parceiros](https://www.platformmodernization.org/Pages/default.aspx).  
   
 ## <a name="legal-notice-ssma"></a>Aviso legal (SSMA)  
 Esta documentação, incluindo os aplicativos de exemplo nela mencionados, é fornecida apenas em caráter informativo e não estipula garantias expressas ou tácitas. As informações contidas nesta documentação, incluindo URLs e outras referências a sites da Internet, estão sujeitas a alterações sem aviso prévio. Todo o risco associado ao uso ou aos resultados do uso desta documentação é de responsabilidade do usuário.  

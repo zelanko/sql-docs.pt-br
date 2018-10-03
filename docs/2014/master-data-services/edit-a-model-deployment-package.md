@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6b0fdb7d-83dd-4392-9011-4ae642c471f1
-caps.latest.revision: 6
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 690897612e73c1f1a9d9cfc8f4a2ed7d8ee84bd9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a3f53b46116c05c9b6d51e5bccaa071375f4c36f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37229266"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48135576"
 ---
 # <a name="edit-a-model-deployment-package"></a>Editar um pacote de implantação de modelo
   Este tópico descreve como implantar partes selecionadas de um modelo em MDS, e não um modelo inteiro. Para fazer isso, edite um pacote de modelo MDS usando o Editor de Pacote de Modelo.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - affinity I/O mask option
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - binding processors [SQL Server]
 - CPU affinity mask option
 ms.assetid: 9950a8c9-9fe0-4003-95df-6f0d1becb0e7
-caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 905421043a2d595d08bc1780213f91811f5c0960
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3a2a4e3c41e98be8f39a39e37aee968532e2d9d2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37159037"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48101546"
 ---
 # <a name="affinity-input-output-mask-server-configuration-option"></a>Opção de configuração do servidor de máscara de Entrada-Saída de afinidade
   Para realizar multitarefa, o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 2000 e o Windows Server 2003 às vezes movem threads de processos entre processadores diferentes. Embora seja eficiente de um ponto de vista de sistema operacional, essa atividade pode reduzir o desempenho do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sob cargas de sistema pesadas, quando, à medida que cada cache de processador é recarregado repetidamente com dados. Atribuir processadores a threads específicos poderá melhorar o desempenho sob estas condições eliminando recargas de processador; tal associação entre um thread e um processador é chamada de afinidade de processador.  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - partitions [Analysis Services], remote
 - remote partitions [Analysis Services]
 ms.assetid: 4322b5cb-af07-4e79-8ecb-59e1121a9eb8
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 44922bea51081a134410ac7f656cb5e3670001af
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 584dea7a48b316a4e78a46b0ef1b014b8cc7cf02
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37315036"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106896"
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>Criar e gerenciar uma partição remota (Analysis Services)
   Ao particionar um grupo de medidas, você pode configurar um banco de dados secundário em uma instância remota do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] como um armazenamento da partição.  

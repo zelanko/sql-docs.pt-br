@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - network protocols [SQL Server], disabling
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - surface area configuration [SQL Server], connection protocols
 - connections [SQL Server], enabling remote using Configuration Manager
 ms.assetid: ec5ccb69-61c9-4576-8843-014b976fd46e
-caps.latest.revision: 28
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: aafa905b9f1f1367cfca0fc6dfaedb25c3672170
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 37a5d31f4b4f7bf2ba21489fe917e3b6f4ad27d1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37237536"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48100596"
 ---
 # <a name="enable-or-disable-a-server-network-protocol"></a>Habilitar ou desabilitar um protocolo de rede de servidor
   Todos os protocolos de rede são instalados pela Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , mas podem ou não ser habilitados. Este tópico descreve como habilitar ou desabilitar um protocolo de rede de servidor no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager ou o PowerShell. O [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve ser interrompido e reiniciado para que a alteração entre em vigor.  

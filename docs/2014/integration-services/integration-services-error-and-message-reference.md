@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - error numbers [Integration Services]
 - hresults [Integration Services]
 - errors [Integration Services], listed
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
-caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b681fb6cf46ae61cf8a706925aa8d853baf38532
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: a3ae4c2b4742365bc2022e602d15f00a3b37b96c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085718"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106726"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Referência de mensagens e erros do Integration Services
   As tabelas a seguir listam erros, advertências e mensagens informativas do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , em ordem numérica crescente, dentro de cada categoria, acompanhados de seus códigos numéricos e nomes simbólicos. Cada um desses erros está definido como um campo da classe <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> no namespace <xref:Microsoft.SqlServer.Dts.Runtime> .  
@@ -1046,7 +1043,7 @@ ms.locfileid: "39085718"
 |0xC00470A1|-1073450847|DTS_E_BUFFERORPHANED|Esse buffer ficou órfão. O gerenciador de buffer foi desligado, deixando um buffer pendente, e nenhuma limpeza será feita no buffer. Existe possibilidade de vazamento de memória e outros problemas.|  
 |0xC00470A2|-1073450846|DTS_E_EXPREVALINPUTCOLUMNNAMENOTFOUND|Falha na tentativa de encontrar a coluna de entrada denominada "%1" com o código de erro 0x%2!8.8X!. A coluna de entrada especificada não foi encontrada na coleção de colunas de entrada.|  
 |0xC00470A3|-1073450845|DTS_E_EXPREVALINPUTCOLUMNIDNOTFOUND|Falha na tentativa de encontrar a coluna de entrada com a ID de linhagem %1!d! com código de erro 0x%2!8.8X!. A coluna de entrada não foi encontrada na coleção de colunas de entrada.|  
-|0xC00470A4|-1073450844|DTS_E_EXPREVALNOINPUTCOLUMNCOLLECTIONFORCOLUMNNAME|A expressão contém token "%1" não reconhecido. Se "%1" for uma variável, ela deverá ser expressa como "\@%1". O token especificado não é válido. Se o token deve ser um nome de variável, ele deve ser prefixado com o \@ símbolo.|  
+|0xC00470A4|-1073450844|DTS_E_EXPREVALNOINPUTCOLUMNCOLLECTIONFORCOLUMNNAME|A expressão contém token "%1" não reconhecido. Se "%1" for uma variável, ela deverá ser expressa como "\@%1". O token especificado não é válido. Se a intenção é que o token seja um nome de variável, deve ter como prefixo o símbolo \@.|  
 |0xC00470A5|-1073450843|DTS_E_EXPREVALNOINPUTCOLUMNCOLLECTIONFORCOLUMNID|A expressão contém o token não reconhecido "#%1!d!".|  
 |0xC00470A6|-1073450842|DTS_E_EXPREVALVARIABLENOTFOUND|A variável "%1" não foi encontrada na coleção Variables. A variável pode não existir no escopo correto.|  
 |0xC00470A7|-1073450841|DTS_E_EXPREVALINVALIDTOKENSTATE|Falha na tentativa de análise da expressão "%1". A expressão pode conter um token inválido, um token incompleto ou um elemento inválido. Ela pode não estar bem formada, ou pode estar faltando um elemento necessário, como um parêntese.|  
@@ -1093,7 +1090,7 @@ ms.locfileid: "39085718"
 |0xC00470DA|-1073450790|DTS_E_INDIVIDUALPUTREFTRACKERFAILED|O componente "%1" não pôde armazenar em cache a coleção de controladores de referência de objeto de tempo de execução e retornou o código de erro 0x%2!8.8X!.|  
 |0xC00470DB|-1073450789|DTS_E_EXPREVALAMBIGUOUSINPUTCOLUMNNAME|Existem várias colunas de entrada com o nome "%1". A coluna de entrada desejada deve ser especificada de forma exclusiva como [Nome do Componente]. [%2] ou referenciada por ID de linhagem. No momento, a coluna de entrada especificada existe em mais de um componente.|  
 |0xC00470DC|-1073450788|DTS_E_EXPREVALDOTTEDINPUTCOLUMNNAMENOTFOUND|Falha na localização da coluna de entrada denominada "[%1].[%2]" com o código de erro 0x%3!8.8X!. A coluna de entrada não foi encontrada na coleção de colunas de entrada.|  
-|0xC00470DD|-1073450787|DTS_E_EXPREVALAMBIGUOUSVARIABLENNAME|Existem diversas variáveis com o nome "%1". A variável desejada deve ser especificada exclusivamente como \@[namespace::%2]. A variável existe em mais de um namespace.|  
+|0xC00470DD|-1073450787|DTS_E_EXPREVALAMBIGUOUSVARIABLENNAME|Existem diversas variáveis com o nome "%1". A variável desejada deve ser especificada de forma exclusiva como \@[Namespace::%2]. A variável existe em mais de um namespace.|  
 |0xC00470DE|-1073450786|DTS_E_REDUCTIONFAILED|O agendador do mecanismo de Fluxo de Dados não reduziu o plano de execução para o pipeline. Defina a propriedade OptimizedMode como falsa.|  
 |0xC00470DF|-1073450785|DTS_E_EXPREVALSQRTINVALIDPARAM|A função SQRT não pode operar com valores negativos, e foi passado um valor negativo à função SQRT.|  
 |0xC00470E0|-1073450784|DTS_E_EXPREVALLNINVALIDPARAM|A função LN não pode operar com zero ou valores negativos, e foi passado um zero ou um valor negativo à função LN.|  
@@ -1226,7 +1223,7 @@ ms.locfileid: "39085718"
 |0xC004909D|-1073442659|DTS_E_EXPREVALSTATIC_INVALIDTOKENSINGLEEQUAL|A expressão contém um sinal de igualdade (=) inesperado. Esse erro normalmente ocorre quando são necessários dois sinais de igualdade (==).|  
 |0xC00490AA|-1073442646|DTS_E_EXPREVALSTATIC_AMBIGUOUSINPUTCOLUMNNAME|Foi especificado um nome ambíguo de coluna de entrada.  A coluna deve ser qualificada como [Nome do Componente].[Nome da Coluna] ou referenciada por ID de linhagem. Esse erro ocorre quando a coluna de entrada existe em mais de um componente e deve ser diferenciada adicionando o nome do componente ou usando a ID de linhagem.|  
 |0xC00490AB|-1073442645|DTS_E_EXPREVALSTATIC_PLACEHOLDERINEXPRESSION|Foi encontrado um parâmetro de função de espaço reservado ou um operando em uma expressão. Ele deve ser substituído por um operando ou parâmetro real.|  
-|0xC00490AC|-1073442644|DTS_E_EXPREVALSTATIC_AMBIGUOUSVARIABLENNAME|Um nome ambíguo de variável foi especificado. A variável desejada deve ser qualificada como \@[namespace:: Variable]. Esse erro ocorre quando a variável existe em mais de um namespace.|  
+|0xC00490AC|-1073442644|DTS_E_EXPREVALSTATIC_AMBIGUOUSVARIABLENNAME|Um nome ambíguo de variável foi especificado. A variável desejada deve ser qualificada como \@ [Namespace::Variable]. Esse erro ocorre quando a variável existe em mais de um namespace.|  
 |0xC00490D3|-1073442605|DTS_E_EXPREVALSTATIC_BINARYOPDTSTRNOTSUPPORTED|Para operandos de operação binária, existe suporte apenas para colunas de entrada e operações de conversão de tipo de dados DT_STR. Um operando DT_STR que não é uma coluna de entrada ou o resultado de uma conversão não pode ser usado com uma operação binária. Para executar essa operação, o operando precisa ser convertido explicitamente com um operador de conversão.|  
 |0xC00490D4|-1073442604|DTS_E_EXPREVALSTATIC_CONDITIONALOPDTSTRNOTSUPPORTED|Para operandos de um operador condicional, existe suporte apenas para colunas de entrada e operações de conversão de tipo de dados DT_STR. Um operando DT_STR que não é uma coluna de entrada ou o resultado de uma conversão não pode ser usado com a operação condicional. Para executar essa operação, o operando precisa ser convertido explicitamente com um operador de conversão.|  
 |0xC00490D5|-1073442603|DTS_E_EXPREVALSTATIC_FNFINDSTRINGINVALIDOCCURRENCECOUNT|O parâmetro de contagem de ocorrências não é válido para função FINDSTRING. Esse parâmetro deve ser maior que zero.|  

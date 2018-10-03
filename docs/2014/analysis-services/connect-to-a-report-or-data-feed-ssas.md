@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.connreportdatafeed.f1
 ms.assetid: e0ccfb0b-e646-4de8-b7da-f88c986c96e4
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 726007e635a41295c682ebc929e909fda8f0b0a9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4a55f15074257ae19b026ef373ea0c7838a55081
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210286"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48090206"
 ---
 # <a name="connect-to-a-report-or-data-feed-ssas"></a>Conectar a um relatório ou feed de dados (SSAS)
   Esta página do **Assistente de Importação de Tabela** permite que você se conecte a um feed de dados. Para acessar o assistente do [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], no menu **Modelo** , clique em **Importar de Fonte de Dados**.  
@@ -59,7 +56,7 @@ ms.locfileid: "37210286"
  **Chave de conta**  
  Especifique a chave de conta usada para acessar suas assinaturas do conjunto de dados do Windows Azure Marketplace.  
   
- **Localizar**  
+ **localizar**  
  Localize uma chave de conta associada a uma conta do Windows Live.  
   
  **Salvar minha chave de conta**  

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_syscollector_get_execution_details_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - fn_syscollector_get_execution_details function
 ms.assetid: d59ddf0c-72c0-4c57-bc83-aef260e4e105
-caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4336b2bd20dbfb49996f6eb4edd5826533215b89
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 032b424c0ac7706962d17520b47d6b8ec447a536
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230078"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47845154"
 ---
 # <a name="fnsyscollectorgetexecutiondetails-transact-sql"></a>fn_syscollector_get_execution_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,13 +41,13 @@ fn_syscollector_get_execution_details ( log_id )
   
 ## <a name="arguments"></a>Argumentos  
  *log_id*  
- O identificador exclusivo local do log de execução. *log_id* é **int**.  
+ O identificador exclusivo local do log de execução. *log_id* está **int**.  
   
 ## <a name="table-returned"></a>Tabela retornada  
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|id|**Int**|O identificador exclusivo da entrada do log.|  
+|id|**int**|O identificador exclusivo da entrada do log.|  
 |event|**sysname**|O nome do evento que gerou a entrada do log.|  
 |computer|**nvarchar**|O computador no qual o pacote foi executado quando a entrada do log foi gerada.|  
 |operador|**nvarchar**|O nome de usuário da pessoa ou agente que executou o pacote que gerou a entrada do log.|  
@@ -60,7 +56,7 @@ fn_syscollector_get_execution_details ( log_id )
 |executionid|**uniqueidentifier**|A GUID da instância de execução do executável que gerou a entrada do log.|  
 |starttime|**datetime**|A hora em que o pacote começou a ser executado.|  
 |endtime|**datetime**|A hora em que o pacote foi concluído.|  
-|datacode|**Int**|Um valor inteiro que identifica o evento associado à entrada do log. "0" indica que o evento não forneceu nenhum identificador.|  
+|datacode|**int**|Um valor inteiro que identifica o evento associado à entrada do log. "0" indica que o evento não forneceu nenhum identificador.|  
 |databytes|**image**|Uma matriz de bytes que identifica um valor de retorno.|  
 |message|**nvarchar**|Uma descrição do evento e as informações associadas a ele.|  
   
@@ -68,7 +64,7 @@ fn_syscollector_get_execution_details ( log_id )
  Requer permissão SELECT para **dc_operator**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Habilitar o log no SQL Server Data Tools de pacote](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)   
+ [Habilitar o log de pacote no SQL Server Data Tools](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)   
  [Coleta de Dados](../../relational-databases/data-collection/data-collection.md)  
   
   

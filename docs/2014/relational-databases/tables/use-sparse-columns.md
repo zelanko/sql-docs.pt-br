@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - sparse columns, described
 - null columns
 - sparse columns
 ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
-caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 37706a23164e3948eb139deff9fd1eb14c654e22
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 975cd41f544f38a5ded070396fce5df644e6048c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37204966"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48107197"
 ---
 # <a name="use-sparse-columns"></a>Usar colunas esparsas
   Colunas esparsas são colunas comuns que têm um armazenamento otimizado para valores nulos. Elas reduzem os requisitos de espaço para valores nulos às custas de maior sobrecarga para recuperar valores não nulos. Considere o uso de colunas esparsas quando o espaço salvo for pelo menos de 20 a 40 por cento. As colunas esparsas e os conjuntos de colunas são definidos usando as instruções [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) ou [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) .  

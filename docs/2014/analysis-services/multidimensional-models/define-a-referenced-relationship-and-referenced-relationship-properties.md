@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - referenced dimension relationship
 - relationships [Analysis Services], referenced dimensions
 ms.assetid: 5bb44b41-635b-4398-8fe9-0bfbb142553e
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 131479d064f911f7574de3a7dc113d0ed313601c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0b173aa62dfe5656bfc784c766791c294453596c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37191238"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48133232"
 ---
 # <a name="define-a-referenced-relationship-and-referenced-relationship-properties"></a>Definir uma relação referenciada e as propriedades da relação referenciada
   Uma relação de dimensão de referência é definida na guia **Uso da Dimensão** do Designer de Cubo. A relação de dimensão de referência é definida especificando-se o seguinte:  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.rawfiledestinationcolumns.f1
 ms.assetid: 37f61d0b-1269-42ee-94ab-011cbaac63e9
-caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0f14b1a99b2e60ecb43a08676ca7f1a57c41fce3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f833084ea5faecaa7e494397e7f1651b3086e513
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37328026"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095857"
 ---
 # <a name="raw-file-destination-editor-columns-page"></a>Editor de destino Arquivo Bruto (página Colunas)
   Use o Editor de Destino Arquivo Bruto para configurar o destino Arquivo Bruto para gravar dados brutos em um arquivo.  

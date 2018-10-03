@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - deprecated features [full-text search]
 - full-text search [SQL Server], deprecated features
 - full-text queries [SQL Server], proximity
 ms.assetid: ab0d799c-ba79-4459-837b-c4862730dafd
-caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 140e7262d3cfc66e956ee0fc53ea1009d7afda0b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 63c53ddd93af33c966ae229c305d9f69367f1ceb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37179683"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129866"
 ---
 # <a name="deprecated-full-text-search-features-in-sql-server-2014"></a>Recursos de pesquisa de texto completo obsoletos no SQL Server 2014
   Este tópico descreve os recursos de pesquisa de texto completo preteridos que ainda estão disponíveis no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Esses recursos estão programados para serem removidos em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Recursos preteridos não devem ser usados em aplicativos novos.  
@@ -39,7 +36,7 @@ ms.locfileid: "37179683"
 |sp_fulltext_catalog|CREATE FULL CATALOG<br /><br /> ALTER FULLTEXT CATALOG<br /><br /> DROP FULLTEXT CATALOG|sp_fulltext_catalog|84|  
 |sp_fulltext_column<br /><br /> sp_fulltext_database<br /><br /> sp_fulltext_table|CREATE FULL INDEX<br /><br /> ALTER FULLTEXT INDEX<br /><br /> DROP FULLTEXT INDEX|sp_fulltext_column<br /><br /> sp_fulltext_database<br /><br /> sp_fulltext_table|86<br /><br /> 87<br /><br /> 85|  
 |sp_help_fulltext_catalogs<br /><br /> sp_help_fulltext_catalog_components<br /><br /> sp_help_fulltext_catalogs_cursor<br /><br /> sp_help_fulltext_columns<br /><br /> sp_help_fulltext_columns_cursor<br /><br /> sp_help_fulltext_tables<br /><br /> sp_help_fulltext_tables_cursor|sys.fulltext_catalogs<br /><br /> sys.fulltext_index_columns<br /><br /> sys.fulltext_indexes|sp_help_fulltext_catalogs<br /><br /> sp_help_fulltext_catalog_components<br /><br /> sp_help_fulltext_catalogs_cursor<br /><br /> sp_help_fulltext_columns<br /><br /> sp_help_fulltext_columns_cursor<br /><br /> sp_help_fulltext_table<br /><br /> sp_help_fulltext_tables_cursor|88<br /><br /> 203<br /><br /> 90<br /><br /> 92<br /><br /> 93<br /><br /> 91<br /><br /> 89|  
-|Os valores da ação sp_fulltext_service: clean_up, connect_timeout e data_timeout retornam zero|Nenhum|sp_fulltext_service @action=clean_up<br /><br /> sp_fulltext_service @action=connect_timeout<br /><br /> sp_fulltext_service @action=data_timeout|116<br /><br /> 117<br /><br /> 118|  
+|Os valores da ação sp_fulltext_service: clean_up, connect_timeout e data_timeout retornam zero|None|sp_fulltext_service @action=clean_up<br /><br /> sp_fulltext_service @action=connect_timeout<br /><br /> sp_fulltext_service @action=data_timeout|116<br /><br /> 117<br /><br /> 118|  
 |Colunas de sys.dm_fts_active_catalogs:<br /><br /> is_paused<br /><br /> previous_status<br /><br /> previous_status_description<br /><br /> row_count_in_thousands<br /><br /> status<br /><br /> status_description<br /><br /> worker_count|Nenhum.|dm_fts_active_catalogs.is_paused<br /><br /> dm_fts_active_catalogs.previous_status<br /><br /> dm_fts_active_catalogs.previous_status_description<br /><br /> dm_fts_active_catalogs.row_count_in_thousands<br /><br /> dm_fts_active_catalogs.status<br /><br /> dm_fts_active_catalogs.status_description<br /><br /> dm_fts_active_catalogs.worker_count|218<br /><br /> 221<br /><br /> 222<br /><br /> 224<br /><br /> 219<br /><br /> 220<br /><br /> 223|  
 |Coluna de sys.dm_fts_memory_buffers:<br /><br /> row_count|Nenhum.|dm_fts_memory_buffers.row_count|225|  
 |Colunas de sys.fulltext_catalogs:<br /><br /> path<br /><br /> data_space_id<br /><br /> Colunas de file_id|Nenhum.|fulltext_catalogs.path<br /><br /> fulltext_catalogs.data_space_id<br /><br /> fulltext_catalogs.file_id|215<br /><br /> 216<br /><br /> 217|  
@@ -55,7 +52,7 @@ ms.locfileid: "37179683"
 |Opção CREATE FULLTEXT CATALOG:<br /><br /> IN PATH '*rootpath*'<br /><br /> ON FILEGROUP *filegroup*|Nenhum.|CREATE FULLTEXT CATLOG IN PATH<br /><br /> Nenhum.*|237<br /><br /> Nenhum.<sup>*</sup>|  
 |Propriedade DATABASEPROPERTYEX: IsFullTextEnabled|Nenhum.|DATABASEPROPERTYEX **('IsFullTextEnabled')**|202|  
 |Opção sp_detach_db:<br /><br /> [ @keepfulltextindexfile = ] '*KeepFulltextIndexFile*'|Nenhum.|sp_detach_db @keepfulltextindexfile|226|  
-|Os valores da ação sp_fulltext_service: resource_usage não têm nenhuma função.|Nenhum|sp_fulltext_service @action=resource_usage|200|  
+|Os valores da ação sp_fulltext_service: resource_usage não têm nenhuma função.|None|sp_fulltext_service @action=resource_usage|200|  
   
  \*O objeto **SQL Server:Deprecated Features** não monitora ocorrências de CREATE FULLTEXT CATLOG ON FILEGROUP *filegroup*.  
   

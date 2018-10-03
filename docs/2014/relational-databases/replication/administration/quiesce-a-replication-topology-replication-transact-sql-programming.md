@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - quiesce [SQL Server replication]
 - transactional replication, backup and restore
 ms.assetid: 7626d575-9994-47be-b772-5b6f1b7ef7ca
-caps.latest.revision: 33
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0051586042e7fd188f856324fe248a09ce03b94e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: be357eb541887f149daf8ea1f24223f7b92d23bb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37162197"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48068926"
 ---
 # <a name="quiesce-a-replication-topology-replication-transact-sql-programming"></a>Confirmar uma topologia de replicação (Programação Transact-SQL de replicação)
   *Confirmar* um sistema inclui interromper as atividades em tabelas publicadas em todos os nós, e assegurar que todos eles tenham recebido todas as alterações de todos os demais nós. Esse tópico explica como confirmar a topologia de replicação, necessária para um número de tarefas administrativas, e como garantir que um nó tenha recebido todas as alterações dos demais nós.  

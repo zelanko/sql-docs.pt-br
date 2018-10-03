@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10033"
 helpviewer_keywords:
 - Grouping Pane dialog box
 ms.assetid: 983ee5a4-944c-491e-8720-7cd9f3881961
-caps.latest.revision: 16
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 922ffe08cfff03a1f3347136d2b809ae5b9926c8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: acb003df07b23f47e3cb5bb78e04f92b35029ea9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153817"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48127576"
 ---
 # <a name="grouping-pane-report-builder"></a>Painel Agrupamento (Construtor de Relatórios)
   O painel Agrupamento exibe os grupos de linhas e de colunas referentes à região de dados Tablix selecionada no momento. O painel Agrupamento não está disponível para as regiões de dados Gráfico e Medidor. O painel Agrupamento contém os painéis Grupos de Linhas e Grupos de Colunas. Ele tem dois modos: padrão e Avançado. O modo padrão exibe uma exibição hierárquica dos membros dinâmicos dos grupos de linhas e de colunas. O modo Avançado exibe os membros dinâmicos e estáticos dos grupos de linhas e de colunas. Um grupo é um conjunto nomeado de dados de um conjunto de dados de relatório exibido em uma região de dados. Os grupos são organizados em hierarquias que incluem membros estáticos e dinâmicos. Para obter mais informações, consulte [Compreendendo grupos &#40;Construtor de Relatórios e SSRS&#41;](understanding-groups-report-builder-and-ssrs.md).  

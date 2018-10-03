@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - checking report server installations
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - report servers [Reporting Services], verifying installations
 - Setup [Reporting Services], verifying installations
 ms.assetid: 82a51a99-66f0-4b0c-b05b-07d22387adb0
-caps.latest.revision: 42
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9e57883c7b6119499135fede5ad9c398350e587a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e1ea6363f2acb76d7c95fb6d2e8f7c0e9dbdbc6a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37272522"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48108926"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verificar uma instalação do Reporting Services
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] podem ser instalados em um de dois modos: Nativo ou SharePoint. As etapas que você deve seguir para verificar a instalação dependem do modo do servidor de relatório.  

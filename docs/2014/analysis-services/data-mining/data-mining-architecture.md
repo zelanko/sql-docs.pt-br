@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 105f52e1-ad3b-4cd0-b67b-06dbb451c304
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bb84b8ffc9f3dfbb5b1e89a50b0d57b2dafa9111
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 64e7e0fe7a8f68ce9248c02e3a59f34e1b7f65bb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37239946"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48121046"
 ---
 # <a name="data-mining-architecture"></a>Arquitetura de mineração de dados
   Esta seção descreve a arquitetura de soluções de mineração de dados que são hospedadas em uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Os tópicos desta seção descrevem a arquitetura lógica e física de uma instância do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que oferece suporte à mineração de dados, e também fornecem informações sobre os clientes, provedores e protocolos que podem ser usados na comunicação com servidores de mineração de dados e para trabalhar local ou remotamente com objetos de mineração de dados.  

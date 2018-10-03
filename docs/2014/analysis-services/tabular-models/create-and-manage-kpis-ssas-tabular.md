@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.kpi.f1
 ms.assetid: c96026c2-4394-4c3c-986b-4c95a4421900
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 735d471cdfb847a56cb4b30857a097d8acd7e8b4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dd373f8080878a69200706a7d53d2dd92f9ad160
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37302806"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48134106"
 ---
 # <a name="create-and-manage-kpis-ssas-tabular"></a>Criar e Gerenciar KPIs (SSAS tabular)
   Este tópico descreve como criar, editar ou excluir um KPI (Indicador chave de desempenho) em um modelo tabular. Para criar um KPI, selecione uma medida que seja avaliada como o valor base do KPI. Use a caixa de diálogo Indicador Chave de Desempenho para selecionar uma segunda medida ou um valor absoluto que seja avaliado para um valor de destino. Em seguida, você pode definir os limites de status que abrangem o desempenho entre as medidas Base e Destino.  

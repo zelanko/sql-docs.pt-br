@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vs.customize.toolbars
 - sql12.swb.vs.customizetool.f1
 ms.assetid: 51ce6254-5682-43ff-8beb-4116a75c652e
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c0e422a938822982ea716a9b4c7d90f57d2c597a
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 1b4435288069cbd465995d555de8653b39226b68
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43814102"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48115072"
 ---
 # <a name="customize-toolbars-page"></a>Personalizar (página Barras de Ferramentas)
   A guia **Barras de Ferramentas** permite que você crie, renomeie, remova e redefina as barras de ferramentas. Você pode acessar essa guia clicando em **Personalizar** , no menu **Ferramentas** , e clicando em **Barras de Ferramentas**.  

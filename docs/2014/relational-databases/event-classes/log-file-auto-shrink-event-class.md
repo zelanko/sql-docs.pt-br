@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Log File Auto Shrink event class
 ms.assetid: 4bf82a13-9985-4f20-9ef8-0083f104d124
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 22e00e3acdbb317b4cfd9c164a7e7ddfde0eb6a0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ec419efcc2c5354aaa6e51e070c47e0f9a457445
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37275272"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48107896"
 ---
 # <a name="log-file-auto-shrink-event-class"></a>classe de evento Log File Auto Shrink
   A classe de evento **Log File Auto Shrink** indica que o arquivo de log se reduziu automaticamente. Esse evento não será acionado se o arquivo de log for reduzido devido a uma instrução ALTER DATABASE explícita.  

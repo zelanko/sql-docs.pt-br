@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: filestream
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], accessing files with file APIs
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
-caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3083e3365c8303c12adfc631881d887a970e471f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8c12736694451d1a6fd1dff34c4f883cb45694e6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37191736"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48082196"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>Acessar FileTables com APIs de entrada e saída de arquivo
   Descreve como a E/S do sistema de arquivos funciona em uma FileTable.  

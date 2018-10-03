@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Missing Join Predicate event class
 ms.assetid: 0668cb4d-5682-4140-aab5-7b0da5cd3479
-caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: febb116be8f127d16ff1cdc6cb03bca68d61e0a3
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: abbf752f1e272f92c555bb9695da0c7b0e4c0e26
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37227676"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48124036"
 ---
 # <a name="missing-join-predicate-event-class"></a>classe de evento Missing Join Predicate
   A classe de evento Missing Join Predicate indica que uma consulta está sendo executada sem nenhum predicado de junção. Isso pode resultar em uma consulta de longa execução. Para obter mais informações sobre predicados de junção, consulte [Predicados &#40;Transact-SQL&#41;](/sql/t-sql/queries/predicates).  

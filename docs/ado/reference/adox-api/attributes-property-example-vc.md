@@ -6,27 +6,24 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Attributes property [ADOX], VC++ example
 ms.assetid: 1057b57b-5ace-4830-9a20-562e88aeef86
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0372befbf0c69beaf036228d97e217766f99d480
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 4aab3372068a621235da9e26461df29240928440
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285345"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47633501"
 ---
-# <a name="attributes-property-example-vc"></a>Exemplo da propriedade Attributes (VC + +)
-Este exemplo demonstra o [atributos](../../../ado/reference/adox-api/attributes-property-adox.md) propriedade de um [coluna](../../../ado/reference/adox-api/column-object-adox.md). Definindo-a como **adColNullable** permite que o usuário defina o valor de um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) [campo](../../../ado/reference/ado-api/field-object.md) para uma cadeia de caracteres vazia. Nessa situação, o usuário pode distinguir entre um registro de onde os dados não são conhecidos e um registro de onde os dados não se aplica.  
+# <a name="attributes-property-example-vc"></a>Exemplo da propriedade Attributes (VC++)
+Este exemplo demonstra a [atributos](../../../ado/reference/adox-api/attributes-property-adox.md) propriedade de uma [coluna](../../../ado/reference/adox-api/column-object-adox.md). Definindo-o como **adColNullable** permite que o usuário definir o valor de uma [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) [campo](../../../ado/reference/ado-api/field-object.md) para uma cadeia de caracteres vazia. Nessa situação, o usuário pode distinguir entre um registro de onde os dados não são conhecidos e um registro de onde os dados não se aplica.  
   
 ```  
 // Attributes_Property_Sample.cpp  

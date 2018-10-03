@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.currencyconversion.localcurrency.f1
 ms.assetid: 74993b0d-dfca-476b-acba-d66c593680a5
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0c2334bf24e692d5728521a1aee4967cfaeba25e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 364c86c5b908408dc3212593612467abade93735
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37206276"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48048618"
 ---
 # <a name="define-local-currency-reference-business-intelligence-wizard"></a>Definir Referência de Moeda Local (Assistente de Business Intelligence)
   Use a página **Definir Referência de Moeda Local** para definir as moedas locais para a funcionalidade de conversão de moedas que cobre os tipos de conversão muitos para muitos ou muitos para um especificados na página **Selecionar Tipo de Conversão** . Uma moeda local é a moeda na qual as transações de medidas selecionadas na página **Selecionar Medidas** estão armazenadas.  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - input row filtering [SQL Server]
 - filtering input rows [Analysis Services]
 - Mining Accuracy Chart [Analysis Services], filtering input rows
 ms.assetid: 9ccc9a23-5597-4b35-a05f-2fc8eb885147
-caps.latest.revision: 43
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f81b15b5fa36913a54e6529602d903ede426addf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: eeb95d0fb8d1e89fe5c2dc66362641c96f2230af
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153277"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48114420"
 ---
 # <a name="apply-filters-to-model-testing-data"></a>Aplicar filtros a dados de testes de modelo
   Quando você especifica uma fonte de dados externa a ser usada para testar um modelo, pode opcionalmente aplicar um filtro para restringir os dados de entrada. Por exemplo, talvez queira testar o modelo especificamente para previsões sobre clientes com determinada faixa de renda.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ProtocolDLL Property (ClientNetworkProtocol Class)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - ProtocolDLL property
 ms.assetid: fe8650d5-7b9d-46f8-bf74-baf1d9d2a06a
-caps.latest.revision: 36
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ab5e3ff06ea7549d75b1a8c30575168663ae1a30
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 67fdda95d3a447f9390b8366f99a97e269c99ddd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37234796"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48115636"
 ---
 # <a name="protocoldll-property-clientnetworkprotocol-class"></a>Propriedade ProtocolDLL (classe ClientNetworkProtocol)
   Obtém o nome do arquivo .dll exigido pelo protocolo de rede especificado pela opção [Configurar protocolos de cliente](http://technet.microsoft.com/library/ms181035.aspx).  
@@ -48,7 +45,7 @@ object
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
  Um valor da cadeia de caracteres que especifica o protocolo do arquivo .dll que é exigido pelo protocolo de rede do cliente.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 ## <a name="see-also"></a>Consulte também  
  [Configurando protocolos de rede do cliente e bibliotecas de rede](http://technet.microsoft.com/library/ms181035.aspx)  

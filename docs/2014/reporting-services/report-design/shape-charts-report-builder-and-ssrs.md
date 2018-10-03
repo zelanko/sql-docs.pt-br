@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 4b8404c1-aa89-4350-8bd6-203bc0446ee4
-caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 85832491b5129111b44daa724475749086588bfa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 30068c028b497b00408ca87cf1e796df8ba34926
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37294056"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48081687"
 ---
 # <a name="shape-charts-report-builder-and-ssrs"></a>Gráficos de forma (Construtor de Relatórios e SSRS)
   Um gráfico de forma exibe os dados de valor como porcentagens do todo. São usados gráficos de forma normalmente para mostrar comparações proporcionais entre valores diferentes em um conjunto. Categorias são representadas por segmentos individuais da forma. O tamanho do segmento é determinado pelo valor. Os gráficos de forma tem uso semelhante aos gráficos de pizza, exceto que eles classificam as categorias do maior para o menor.  

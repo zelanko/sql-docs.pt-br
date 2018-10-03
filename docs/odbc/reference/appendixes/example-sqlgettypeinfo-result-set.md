@@ -1,59 +1,56 @@
 ---
-title: Conjunto de resultados de SQLGetTypeInfo exemplo | Microsoft Docs
+title: O conjunto de resultados SQLGetTypeInfo de exemplo | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL data types [ODBC], examples
 - SQLGetTypeInfo function [ODBC], examples
 - data types [ODBC], SQL data types
 ms.assetid: dc1952cc-7581-4d69-9c72-7dc1cd370836
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d536df043bc7f609f4842d7c0bf68638f47bb66c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 028b9be01439b122ff164aed68adb40eb1b4a46e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32914451"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47662606"
 ---
-# <a name="example-sqlgettypeinfo-result-set"></a>Conjunto de resultados de SQLGetTypeInfo de exemplo
-Um aplicativo chama **SQLGetTypeInfo** para determinar quais tipos de dados têm suporte por uma fonte de dados e as características desses tipos de dados. As tabelas a seguir mostram um conjunto de resultados de exemplo retornado por **SQLGetTypeInfo** para uma fonte de dados que oferece suporte a SQL_CHAR, SQL_LONGVARCHAR, SQL_DECIMAL, SQL_REAL, SQL_DATETIME, SQL_INTERVAL_YEAR e SQL_INTERVAL_DAY_TO_SECOND.  
+# <a name="example-sqlgettypeinfo-result-set"></a>Conjunto de resultados SQLGetTypeInfo de exemplo
+Um aplicativo chama **SQLGetTypeInfo** para determinar quais tipos de dados são compatíveis com uma fonte de dados e as características desses tipos de dados. As tabelas a seguir mostram um conjunto de resultados de exemplo retornado por **SQLGetTypeInfo** para uma fonte de dados que dá suporte a SQL_CHAR, SQL_LONGVARCHAR, SQL_DECIMAL, SQL_REAL, SQL_DATETIME, SQL_INTERVAL_YEAR e SQL_INTERVAL_DAY_TO_SECOND.  
   
 |TYPE_NAME|DATA_TYPE|COLUMN_SIZE|LITERAL_PREFIX|LITERAL_SUFFIX|CREATE_PARAMS|NULLABLE|  
 |----------------|----------------|------------------|---------------------|---------------------|--------------------|--------------|  
 |"char"|SQL_CHAR|255|"'"|"'"|"comprimento"|SQL_TRUE|  
-|"texto"|SQL_LONGVARCHAR|2147483647|"'"|"'"|\<Nulo >|SQL_TRUE|  
-|"decimal"|SQL_DECIMAL|28|\<Nulo >|\<Nulo >|"precisão,<br />escala"|SQL_TRUE|  
-|"real"|SQL_REAL|7|\<Nulo >|\<Nulo >|\<Nulo >|SQL_TRUE|  
-|"datetime"|SQL_TYPE_TIMESTAMP|23|"'"|"'"|\<Nulo >|SQL_TRUE|  
-|"INTERVALO YEAR() ANO"|SQL_INTERVAL_YEAR|9|"'"|"'"|"precisão"|SQL_TRUE|  
+|"texto"|SQL_LONGVARCHAR|2147483647|"'"|"'"|\<NULL >|SQL_TRUE|  
+|"decimal"|SQL_DECIMAL|28|\<NULL >|\<NULL >|"precisão,<br />escala"|SQL_TRUE|  
+|"real"|SQL_REAL|7|\<NULL >|\<NULL >|\<NULL >|SQL_TRUE|  
+|"datetime"|SQL_TYPE_TIMESTAMP|23|"'"|"'"|\<NULL >|SQL_TRUE|  
+|"INTERVALO YEAR() AO ANO"|SQL_INTERVAL_YEAR|9|"'"|"'"|"precisão"|SQL_TRUE|  
 |"INTERVALO DAY() PARA FRACTION(5)"|SQL_INTERVAL_DAY_TO_SECOND|24|"'"|"'"|"precisão"|SQL_TRUE|  
   
 |DATA_TYPE|CASE_SENSITIVE|SEARCHABLE|UNSIGNED_ATTRIBUTE|FIXED_PREC_SCALE|AUTO_UNIQUE_VALUE|LOCAL_TYPE_NAME|  
 |----------------|---------------------|----------------|-------------------------|------------------------|-------------------------|-----------------------|  
-|**SQL_CHAR**|SQL_FALSE|SQL_SEARCHABLE|\<Nulo >|SQL_FALSE|\<Nulo >|"char"|  
-|**SQL_LONGVARCHAR**|SQL_FALSE|SQL_PRED_CHAR|\<Nulo >|SQL_FALSE|\<Nulo >|"texto"|  
+|**SQL_CHAR**|SQL_FALSE|SQL_SEARCHABLE|\<NULL >|SQL_FALSE|\<NULL >|"char"|  
+|**SQL_LONGVARCHAR**|SQL_FALSE|SQL_PRED_CHAR|\<NULL >|SQL_FALSE|\<NULL >|"texto"|  
 |**SQL_DECIMAL**|SQL_FALSE|SQL_PRED_BASIC|SQL_FALSE|SQL_FALSE|SQL_FALSE|"decimal"|  
 |**SQL_REAL**|SQL_FALSE|SQL_PRED_BASIC|SQL_FALSE|SQL_FALSE|SQL_FALSE|"real"|  
-|**SQL_TYPE_TIMESTAMP**|SQL_FALSE|SQL_SEARCHABLE|\<Nulo >|SQL_FALSE|\<Nulo >|"datetime"|  
-|**SQL_INTERVAL_YEAR**|SQL_FALSE|SQL_SEARCHABLE|\<Nulo >|SQL_FALSE|\<Nulo >|"INTERVALO YEAR() ANO"|  
-TERVAL_DAY_TO_SECOND**|SQL_FALSE|SQL_PRED_BASIC|\<Nulo >|SQL_FALSE|\<Nulo >|"INTERVALO DAY() PARA FRACTION(5)"|  
+|**SQL_TYPE_TIMESTAMP**|SQL_FALSE|SQL_SEARCHABLE|\<NULL >|SQL_FALSE|\<NULL >|"datetime"|  
+|**SQL_INTERVAL_YEAR**|SQL_FALSE|SQL_SEARCHABLE|\<NULL >|SQL_FALSE|\<NULL >|"INTERVALO YEAR() AO ANO"|  
+TERVAL_DAY_TO_SECOND**|SQL_FALSE|SQL_PRED_BASIC|\<NULL >|SQL_FALSE|\<NULL >|"INTERVALO DAY() PARA FRACTION(5)"|  
   
 |DATA_TYPE|MINIMUM_SCALE|MAXIMUM_SCALE|SQL_DATA_TYPE|SQL_DATETIME_SUB|NUM_PREC_RADIX|INTERVAL_PRECISION|  
 |----------------|--------------------|--------------------|---------------------|------------------------|----------------------|-------------------------|  
-|**SQL_CHAR**|\<Nulo >|\<Nulo >|SQL_CHAR|\<Nulo >|\<Nulo >|\<Nulo >|  
-|**SQL_LONGVARCHAR**|\<Nulo >|\<Nulo >|SQL_LONGVARCHAR|\<Nulo >|\<Nulo >|\<Nulo >|  
-|**SQL_DECIMAL**|0|28|SQL_DECIMAL|\<Nulo >|10|\<Nulo >|  
-|**SQL_REAL**|\<Nulo >|\<Nulo >|SQL_REAL|\<Nulo >|10|\<Nulo >|  
-|**SQL_TYPE_TIMESTAMP**|3|3|SQL_DATETIME|SQL_CODE_TIMESTAMP|\<Nulo >|12|  
-|**SQL_INTERVAL_YEAR**|0|0|SQL_INTERVAL|SQL_CODE_INTERVALYEAR|\<Nulo >|9|  
-ERVAL_DAY_TO_SECOND**|5|5|SQL_INTERVAL|SQL_CODE_INTERVALDAY_TO_SECOND|\<Nulo >|9|
+|**SQL_CHAR**|\<NULL >|\<NULL >|SQL_CHAR|\<NULL >|\<NULL >|\<NULL >|  
+|**SQL_LONGVARCHAR**|\<NULL >|\<NULL >|SQL_LONGVARCHAR|\<NULL >|\<NULL >|\<NULL >|  
+|**SQL_DECIMAL**|0|28|SQL_DECIMAL|\<NULL >|10|\<NULL >|  
+|**SQL_REAL**|\<NULL >|\<NULL >|SQL_REAL|\<NULL >|10|\<NULL >|  
+|**SQL_TYPE_TIMESTAMP**|3|3|SQL_DATETIME|SQL_CODE_TIMESTAMP|\<NULL >|12|  
+|**SQL_INTERVAL_YEAR**|0|0|SQL_INTERVAL|SQL_CODE_INTERVALYEAR|\<NULL >|9|  
+ERVAL_DAY_TO_SECOND**|5|5|SQL_INTERVAL|SQL_CODE_INTERVALDAY_TO_SECOND|\<NULL >|9|

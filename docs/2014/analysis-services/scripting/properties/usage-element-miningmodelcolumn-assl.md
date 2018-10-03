@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Usage Element (MiningModelColumn)
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Usage element
 ms.assetid: 435a857e-37a9-434e-9de1-354f1ff2993f
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a6767c4c5ac535ac603cc6182cbe645088c8ac05
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 220f59e5e342f61f30d0f94bc9f9728982105986
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37265292"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48090279"
 ---
 # <a name="usage-element-miningmodelcolumn-assl"></a>Elemento Usage (MiningModelColumn) (ASSL)
   Descreve como a coluna associada no pai [MiningStructure](../objects/miningstructure-element-assl.md) é usado.  
@@ -51,7 +48,7 @@ ms.locfileid: "37265292"
 |Característica|Description|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|Cadeia de caracteres (enumeração)|  
-|Valor padrão|Nenhum|  
+|Valor padrão|None|  
 |Cardinalidade|0-1: elemento opcional que pode ocorrer apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -59,15 +56,15 @@ ms.locfileid: "37265292"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elemento pai|[MiningModelColumn](../data-type/miningmodelcolumn-data-type-assl.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O valor desse elemento é limitado a uma das cadeias de caracteres listadas na tabela a seguir.  
   
 |Valor|Description|  
 |-----------|-----------------|  
 |*Chave*|A coluna é uma coluna de chave.|  
-|*Entrada*|A coluna é uma coluna de entrada.|  
+|*entrada*|A coluna é uma coluna de entrada.|  
 |*Predict*|A coluna é uma coluna de previsão.|  
 |*PredictOnly*|A coluna é somente uma coluna de previsão.|  
 |*Nenhuma*|A coluna não é usada pelo modelo. **Aviso:** quando o valor de uso for "None", do Analysis Services não envia qualquer valor para o servidor por padrão; portanto, o atributo de uso não está incluído na solicitação/resposta.|  

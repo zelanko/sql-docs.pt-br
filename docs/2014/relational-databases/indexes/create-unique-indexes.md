@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - unique indexes
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - nonclustered indexes [SQL Server], unique
 - unique indexes, design guidelines
 ms.assetid: 56b5982e-cb94-46c0-8fbb-772fc275354a
-caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: feca3023253c950b49b76d51eac7a18bc004b2ef
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 35ef352eda0d712098ce0453caccf4bc2422b4b4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300386"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48122616"
 ---
 # <a name="create-unique-indexes"></a>Criar índices exclusivos
   Este tópico descreve como criar um índice exclusivo em uma tabela no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Um índice exclusivo garante que a chave de índice não contém nenhum valor duplicado e, portanto, cada linha na tabela é exclusiva de algum modo. Não existe nenhuma diferença significativa entre criar uma restrição UNIQUE e criar um índice exclusivo que seja independente de uma restrição. A validação de dados ocorre da mesma maneira, e o otimizador de consultas não diferencia entre um índice exclusivo criado por uma restrição ou manualmente criado. No entanto, criar uma restrição UNIQUE na coluna torna claro o objetivo do índice. Para obter mais informações sobre restrições UNIQUE, consulte [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  

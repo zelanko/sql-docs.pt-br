@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 486195ca-530f-49e8-b40d-0f817db159ee
-caps.latest.revision: 8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4b1ff3dfedd5dce6a4db551cc6fdb180e4d723d8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fae71e74f2c8498b537f1d93d951de76f5625094
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37219966"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48123536"
 ---
 # <a name="use-a-bi-semantic-model-connection-in-excel-or-reporting-services"></a>Usar uma conexão de modelo semântico de BI no Excel ou Reporting Services
   Este tópico explica como usar as conexões de modelo semântico de BI que você criou usando as instruções em outros tópicos. Se você ainda não tiver criado um modelo semântico de BI, consulte [criar uma Conexão de modelo semântico do BI para uma pasta de trabalho do PowerPivot](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md) e [criar uma Conexão de modelo semântico do BI para um banco de dados de modelo Tabular](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  

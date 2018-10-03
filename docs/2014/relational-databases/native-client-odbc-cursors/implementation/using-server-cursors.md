@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - ODBC applications, cursors
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - ODBC cursors, server cursors
 - server cursors [SQL Server]
 ms.assetid: 8a6d99b7-10b8-4474-8639-4914b25ba170
-caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 14e3a92f31f4e494fc722eb3d12feb8e70252728
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: cef56db912d786b6908271d0747fe45690e90536
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37427865"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48094646"
 ---
 # <a name="using-server-cursors"></a>Usando cursores de servidor
   Se um aplicativo ODBC definir qualquer um dos atributos de cursor ODBC para algo diferente dos padrões, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client solicitará que o servidor para implementar um cursor de servidor de API do mesmo tipo. O uso de cursores de servidor de API libera memória no cliente e pode reduzir significativamente o tráfego de rede entre o cliente e o servidor.  

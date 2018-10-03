@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_table_privileges
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_table_privileges
 ms.assetid: 0512e688-4fc0-4557-8dc8-016672c1e3fe
-caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ddd0407cda5bf3a623c0fad4121384aaa61d8264
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: dcc3d02505a1bd568d440d5b70fc06bcfff93ae9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43032186"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47815744"
 ---
 # <a name="sptableprivileges-transact-sql"></a>sp_table_privileges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +72,7 @@ sp_table_privileges [ @table_name = ] 'table_name'
 |PRIVILEGE|**sysname**|Uma das permissões de tabela disponíveis. As permissões de tabela podem ter um dos seguintes valores (ou outros valores que tenham suporte na fonte de dados quando a implementação for definida):<br /><br /> SELECT = GRANTEE pode recuperar dados para uma ou mais colunas.<br /><br /> INSERT = GRANTEE pode fornecer dados a novas linhas para uma ou mais colunas.<br /><br /> UPDATE = GRANTEE pode modificar dados existentes para uma ou mais colunas.<br /><br /> DELETE = GRANTEE pode remover linhas da tabela.<br /><br /> REFERENCES = GRANTEE pode referenciar uma coluna em uma tabela estrangeira em uma relação de chave primária/chave estrangeira. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], as relações de chave primária/chave estrangeira são definidas com restrições de tabela.<br /><br /> O escopo de ação dado ao GRANTEE por um determinado privilégio de tabela é dependente da fonte de dados. Por exemplo, o privilégio UPDATE pode permitir que o GRANTEE atualize todas as colunas de uma tabela em uma fonte de dados e somente aquelas colunas para as quais o GRANTOR possui o privilégio UPDATE em outra fonte de dados.|  
 |IS_GRANTABLE|**sysname**|Indica se o GRANTEE tem ou não permissão para conceder permissões a outros usuários (em geral referida como permissão "concessão com concessão"). Pode ser YES, NO ou NULL. Um valor desconhecido (ou NULL) refere-se a uma fonte de dados para a qual a "concessão com concessão" não é aplicável.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O procedimento armazenado sp_table_privileges é equivalente a SQLTablePrivileges no ODBC. Os resultados retornados são ordenados por TABLE_QUALIFIER, TABLE_OWNER, TABLE_NAME e PRIVILEGE.  
   
 ## <a name="permissions"></a>Permissões  

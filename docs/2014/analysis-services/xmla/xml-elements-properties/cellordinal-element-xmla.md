@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - CellOrdinal Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - CellOrdinal element
 ms.assetid: 1808c498-e3b4-4e5c-9e22-7f8662d32874
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0e8e0413afb58ae448a053e9eab20d77a1b36096
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7c1c46936acfe909f3655b09737bb595bebb6b22
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37245366"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48133466"
 ---
 # <a name="cellordinal-element-xmla"></a>Elemento CellOrdinal (XMLA)
   Contém a posição ordinal dentro de um cubo de uma célula a ser atualizada por um [UpdateCells](../xml-elements-commands/updatecells-element-xmla.md) comando.  
@@ -53,17 +50,17 @@ ms.locfileid: "37245366"
 |Característica|Description|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|Longo|  
-|Valor padrão|Nenhum|  
+|Valor padrão|None|  
 |Cardinalidade|1-1: elemento obrigatório que ocorre apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
   
 |Relação|Elemento|  
 |------------------|-------------|  
-|Elementos pai|[Célula](cell-element-xmla.md)|  
-|Elementos filho|Nenhum|  
+|Elementos pai|[célula](cell-element-xmla.md)|  
+|Elementos filho|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O elemento `CellOrdinal` identifica a célula a ser atualizada pelo comando `UpdateCells`.  
   
  Para obter mais informações sobre atualização de células, consulte [Atualizando células &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/updating-cells-xmla.md).  

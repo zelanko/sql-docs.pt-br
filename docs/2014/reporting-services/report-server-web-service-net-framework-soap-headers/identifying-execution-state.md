@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - session states [Reporting Services]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - sessions [Reporting Services]
 - SessionHeader SOAP header
 ms.assetid: d8143a4b-08a1-4c38-9d00-8e50818ee380
-caps.latest.revision: 45
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 252ec37bb94881a04cfe1137c829274cac6ad893
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dc6189daffb2e099023ff6adb0d247c28c922545
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37330856"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48114356"
 ---
 # <a name="identifying-execution-state"></a>Identificando o estado de execução
   O HTTP (Hypertext Transfer Protocol) é um protocolo sem-conexão e sem-estado, o que significa que ele não indica automaticamente se diferentes solicitações provêm do mesmo cliente ou até se uma única instância de navegador ainda está visualizando ativamente uma página ou site. As sessões criam uma conexão lógica para manter o estado entre servidor e cliente por meio do HTTP. As informações específicas para o usuário, pertinentes a uma sessão específica, são conhecidas como o estado da sessão.  

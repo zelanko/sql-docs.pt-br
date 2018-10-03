@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - syscollector_execution_log_TSQL
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - data collector view
 - syscollector_execution_log view
 ms.assetid: 11554d64-0426-42ce-b7ce-5591f67864d2
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 25ceaeee0a5fd46c6e30446f0bc4a5c23a7795f3
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e982c086bdae807220a2c9cf1c9e3260d0d66a83
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221297"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47773485"
 ---
 # <a name="syscollectorexecutionlog-transact-sql"></a>syscollector_execution_log (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,8 +35,8 @@ ms.locfileid: "33221297"
 |-----------------|---------------|-----------------|  
 |log_id|**bigint**|Identifica cada execução do conjunto de coleta. Usado para unir essa exibição a outros logs detalhados. Não permite valor nulo.|  
 |parent_log_id|**bigint**|Identifica o pacote pai ou o conjunto de coleta. Não permite valor nulo. As IDs são encadeadas na relação pai-filho, o que permite determinar qual pacote foi iniciado por qual conjunto de coleta. Essa exibição agrupa as entradas de log pela vinculação pai-filho e recua os nomes dos pacotes de forma que o encadeamento de chamada seja claramente visível.|  
-|collection_set_id|**Int**|Identifica o conjunto de coleta ou pacote que essa entrada de log representa. Não permite valor nulo.|  
-|collection_item_id|**Int**|Identifica um item de coleção. Permite valor nulo.|  
+|collection_set_id|**int**|Identifica o conjunto de coleta ou pacote que essa entrada de log representa. Não permite valor nulo.|  
+|collection_item_id|**int**|Identifica um item de coleção. Permite valor nulo.|  
 |start_time|**datetime**|A hora em que o conjunto de coleta ou o pacote foi iniciado. Não permite valor nulo.|  
 |last_iteration_time|**datetime**|Para pacotes de execução contínua, a última vez que o pacote capturou um instantâneo. Permite valor nulo.|  
 |finish_time|**datetime**|A hora em que a execução de pacotes e de conjuntos de coletas foi concluída. Permite valor nulo.|  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - REVERSE function
 - reverse character expressions
 ms.assetid: bcebcc55-7247-4896-8f53-4d582d58cfb4
-caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eb219d26d5aa4ce4d1bb2d241475b39d65673f80
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 42b74657402e3e4b8ade0deaf2505217ceb0c0de
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37180363"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093636"
 ---
 # <a name="reverse-ssis-expression"></a>REVERSE (Expressão SSIS)
   Retorna uma expressão character na ordem inversa.  
@@ -41,7 +38,7 @@ REVERSE(character_expression)
 ## <a name="result-types"></a>Tipos de resultado  
  DT_WSTR  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O argumento *character_expression* deve ter o tipo de dados DT_WSTR.  
   
  REVERSE retornará um resultado nulo se *character_expression* for nulo.  

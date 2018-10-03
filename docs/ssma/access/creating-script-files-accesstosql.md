@@ -4,24 +4,18 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 08/17/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 64dfe192-965c-49d4-a3ea-848fbc5f619f
-caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 7beb9b14c215f04fc65b3cff4cb510cd032e1331
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 4c7f94672642e0a5d8fa8979dd3972f608519ce5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392705"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47799354"
 ---
 # <a name="creating-script-files-accesstosql"></a>Criar arquivos de script (AccessToSQL)
 A primeira etapa antes de iniciar o aplicativo de console do SSMA é criar o arquivo de script e se for necessário criar o arquivo de valor da variável e o arquivo de conexão do servidor.  

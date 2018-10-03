@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6260e911-ea8b-4c69-a39d-d1bccd565a32
-caps.latest.revision: 7
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cf5fc254aff0398b40605fdc6c568d9dc01b3a60
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 00f4c86dd09dd9b88959415459151d4cef518d57
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216266"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48099526"
 ---
 # <a name="task-3-creating-and-running-a-data-quality-project-for-matching"></a>Tarefa 3: Criando e executando um projeto de qualidade de dados para correspondência
   Nesta tarefa, você criará um Projeto do Data Quality para a atividade de correspondência e executará o processo de correspondência nos dados de fornecedor limpos para remover as duplicatas nos dados.  

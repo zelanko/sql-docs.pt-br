@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - endpoints [SQL Server], AlwaysOn Availability Groups
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], endpoint
 - Endpoint URLs (HADR)
 ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
-caps.latest.revision: 19
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 571ffb7537474343cd595445af77a4ecae48d3e6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 94cf3cff73e98718db6e097f13dcab47cd676ed4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37222616"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48097176"
 ---
 # <a name="specify-the-endpoint-url-when-adding-or-modifying-an-availability-replica-sql-server"></a>Especifique a URL do Ponto de Extremidade Ao Adicionar ou Modificando uma Réplica de disponibilidade (SQL Server)
   Para hospedar uma réplica de disponibilidade para um grupo de disponibilidade, uma instância de servidor deve ter um ponto de extremidade de espelhamento de banco de dados. A instância de servidor usa este ponto de extremidade para escutar mensagens de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] de réplicas de disponibilidade hospedadas por outras instâncias de servidor. Para definir uma réplica de disponibilidade para um grupo de disponibilidade, você deve especificar a URL de ponto de extremidade da instância de servidor que hospedará a réplica. A *URL de ponto de extremidade* identifica o protocolo de transporte do ponto de extremidade de espelhamento de banco de dados — TCP, o endereço do sistema da instância de servidor e o número de porta associado ao ponto de extremidade.  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - TRUSTWORTHY database property
@@ -14,12 +12,12 @@ ms.assetid: 64b2a53d-4416-4a19-acc0-664a61b45348
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 9ac99b46c31d67b0175fffa882dcf5411194930c
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 04f4dbeee8c160e968ee4b9df29e96d21d857e58
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43025546"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48099516"
 ---
 # <a name="trustworthy-database-property"></a>Propriedade de banco de dados TRUSTWORTHY
   A propriedade de banco de dados TRUSTWORTHY é usada para indicar se a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] confia no banco de dados e em seu conteúdo. Por padrão, esta configuração é OFF, mas pode ser definida como ON usando a instrução ALTER DATABASE. Por exemplo, `ALTER DATABASE AdventureWorks2012 SET TRUSTWORTHY ON;`.  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e22b7c24-edab-42d6-82f6-95068e1c6043
-caps.latest.revision: 14
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1f8b9d8587c41a45ee60203debee778a88714dd9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e57b58eb5b3a3321397dc17668b92ab10e0c5169
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37214786"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093276"
 ---
 # <a name="report-data-ssrs"></a>Dados de relatório (SSRS)
   Os dados do relatório podem vir de várias fontes de dados de sua organização. Sua primeira etapa de criação de um relatório é criar fontes de dados e conjuntos de dados que representem os dados de relatório subjacentes. Cada fonte de dados inclui informações sobre a conexão de dados. Cada conjunto de dados inclui um comando de consulta que define o conjunto de campos a serem usados como dados de uma fonte de dados. Para visualizar os dados de cada conjunto de dados, adicione uma região de dados, como uma tabela, uma matriz ou um mapa. Quando o relatório é processado, as consultas são executadas na fonte de dados e cada região de dados é expandida conforme necessário para exibir os resultados da consulta do conjunto de dados.  

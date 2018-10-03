@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.executepackagetask.f1
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - child packages
 - parent packages [Integration Services]
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
-caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 256a7cbabc6c07bb0e1f42aeb6a3a3d77a5d93a2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: af7dc60469f088f2023365f638666056bdf6e412
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37171137"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129127"
 ---
 # <a name="execute-package-task"></a>Tarefa Executar Pacote
   A tarefa Executar Pacote estende os recursos empresariais do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ao permitir que pacotes executem outros pacotes como parte de um fluxo de trabalho.  

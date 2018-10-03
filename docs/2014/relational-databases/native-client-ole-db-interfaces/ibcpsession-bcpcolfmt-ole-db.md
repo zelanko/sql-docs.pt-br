@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - IBCPSession::BCPColFmt (OLE DB)
@@ -15,16 +13,15 @@ topic_type:
 helpviewer_keywords:
 - BCPColFmt method
 ms.assetid: 2852f4ba-f1c6-4c4c-86b2-b77e4abe70de
-caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ea0872d071893e7d88a5d52d677702a984e49f02
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: e896f3e04d24becf136b7abefcff9dbe97fa0970
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37426715"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48058676"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
   Cria uma associação entre variáveis de programa e colunas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -43,8 +40,8 @@ intcbUserDataTerm,
 DBORDINALidxServerCol);  
 ```  
   
-## <a name="remarks"></a>Remarks  
- O **BCPColFmt** método é usado para criar uma associação entre campos de arquivo de dados BCP e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] colunas. Ele usa o comprimento, o tipo, o terminador e o comprimento do prefixo de uma coluna como parâmetros e define cada uma dessas propriedades para arquivos individuais.  
+## <a name="remarks"></a>Comentários  
+ O método **BCPColFmt** é usado para criar uma associação entre campos de arquivo de dados BCP e colunas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ele usa o comprimento, o tipo, o terminador e o comprimento do prefixo de uma coluna como parâmetros e define cada uma dessas propriedades para arquivos individuais.  
   
  Caso o usuário opte pelo modo interativo, esse método é chamado duas vezes: uma para definir o formato da coluna de acordo com os valores padrão (que dependem do tipo de coluna do servidor) e outra para definir o formato de acordo com o tipo de coluna da opção feita pelo cliente durante o modo interativo em cada coluna.  
   
@@ -67,11 +64,11 @@ DBORDINALidxServerCol);
  Cada chamada para **BCPColFmt** especifica o formato de um campo de arquivo do usuário. Por exemplo, para alterar as configurações padrão de três campos em um arquivo de dados do usuário com cinco campos, primeiro chame `BCPColumns(5)`e, em seguida, **BCPColFmt** cinco vezes, com três dessas chamadas definindo o formato personalizado. Para as duas chamadas restantes, defina *eUserDataType* como BCP_TYPE_DEFAULT, além de *cbIndicator*, *cbUserData*e *cbUserDataTerm* como 0, BCP_VARIABLE_LENGTH e 0, respectivamente. Esse procedimento copia todas as cinco colunas, três com seu formato personalizado e duas com o formato padrão.  
   
 > [!NOTE]  
->  O [ibcpsession:: BCPColumns](ibcpsession-bcpcolumns-ole-db.md) método deve ser chamado antes de qualquer chamada para **BCPColFmt**. Você deve chamar **BCPColFmt** uma vez para cada coluna no arquivo do usuário. Chamar **BCPColFmt** mais de uma vez para qualquer coluna de arquivo do usuário causa um erro.  
+>  O método [IBCPSession::BCPColumns](ibcpsession-bcpcolumns-ole-db.md) precisa ser chamado antes de qualquer chamada a **BCPColFmt**. Você deve chamar **BCPColFmt** uma vez para cada coluna no arquivo do usuário. Chamar **BCPColFmt** mais de uma vez para qualquer coluna de arquivo do usuário causa um erro.  
   
  Você não precisa copiar todos os dados de um arquivo de usuário para uma tabela do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para ignorar uma coluna, especifique o formato dos dados da coluna definindo o parâmetro idxServerCol como 0. Para ignorar um campo, você continua precisando de todas as informações para que o método funcione corretamente.  
   
- **Observação** as [ibcpsession:: Bcpwritefmt](ibcpsession-bcpwritefmt-ole-db.md) função pode ser usada para manter a especificação de formato fornecida por meio **BCPColFmt**.  
+ **Observação** a função [IBCPSession::BCPWriteFmt](ibcpsession-bcpwritefmt-ole-db.md) pode ser usada para persistir a especificação do formato fornecida por meio de **BCPColFmt**.  
   
 ## <a name="arguments"></a>Argumentos  
  *idxUserDataCol*[in]  
@@ -118,10 +115,10 @@ DBORDINALidxServerCol);
  O método foi bem-sucedido.  
   
  E_FAIL  
- Ocorreu um erro específico do provedor, para obter informações detalhadas, use o [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md) interface.  
+ Erro específico do provedor. Para obter informações detalhadas, use a interface [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md).  
   
  E_UNEXPECTED  
- A chamada para o método era inesperada. Por exemplo, o [ibcpsession:: BCPInit](ibcpsession-bcpinit-ole-db.md) método não foi chamado antes de chamar esse método.  
+ A chamada para o método era inesperada. Por exemplo, o método [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md) não foi chamado antes desse método.  
   
  E_INVALIDARG  
  O argumento era inválido.  

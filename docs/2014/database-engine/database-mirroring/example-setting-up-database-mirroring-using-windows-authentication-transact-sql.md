@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - authentication [SQL Server], database mirroring
 - database mirroring [SQL Server], security
 ms.assetid: 35800769-aede-4aac-b077-0e0e487e302f
-caps.latest.revision: 38
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 02b26ad89a5ad1d7cb6620a81829d247fa6b483f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d52e94eb98bfe4e22a2acb879a393d289baf00bb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273462"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48103438"
 ---
 # <a name="example-setting-up-database-mirroring-using-windows-authentication-transact-sql"></a>Exemplo: Configurando o espelhamento de banco de dados usando a Autenticação do Windows (Transact-SQL)
   Este exemplo mostra todas as fases necessárias para criar uma sessão de espelhamento de banco de dados com uma testemunha, usando a Autenticação do Windows. Os exemplos deste tópico usam o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Note que como uma alternativa para o uso de passos de [!INCLUDE[tsql](../../includes/tsql-md.md)], você pode usar o Assistente para Configurar Segurança de Espelhamento de Banco de Dados para a configuração do espelhamento de banco de dados. Para obter mais informações, veja [Estabelecer uma sessão de espelhamento de banco de dados usando a Autenticação do Windows &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md).  

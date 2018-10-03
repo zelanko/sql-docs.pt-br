@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vs.toolbox
 helpviewer_keywords:
 - Toolbox [SQL Server Management Studio]
 ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
-caps.latest.revision: 20
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 35bd6647459cff188ff90553fdaa824d85ac9459
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 869bbc88b10c5b1c561dd7fa9f085c5296aaf16f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300356"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48103166"
 ---
 # <a name="toolbox-component-f1-help"></a>Ajuda de F1 do componente Caixa de Ferramentas
   A**Caixa de Ferramentas** exibe uma série de itens para serem usados em projetos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Você pode abrir a **Caixa de Ferramentas** no menu **Exibir** e encaixar esta janela como desejar. Enquanto estiver encaixada, a **Caixa de Ferramentas** poderá ser fixada como aberta ou definida como **Ocultar Automaticamente** quando não estiver sendo usada.  

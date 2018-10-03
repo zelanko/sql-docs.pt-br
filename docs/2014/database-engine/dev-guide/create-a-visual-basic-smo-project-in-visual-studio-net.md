@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
 helpviewer_keywords:
 - Visual Basic [SMO]
 ms.assetid: d7a3892c-0f1c-4c4d-8480-b58dce3720bc
-caps.latest.revision: 43
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0a3cacc04d8ce4afd863c7ef3cc8d21e1446c319
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 48046a2a5570a4ef5809bc41666188c3afd68dc6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37213786"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48103237"
 ---
 # <a name="create-a-visual-basic-smo-project-in-visual-studio-net"></a>Criar um projeto SMO do Visual Basic no Visual Studio .NET
   Esta seção descreve como criar um aplicativo de console SMO simples.  

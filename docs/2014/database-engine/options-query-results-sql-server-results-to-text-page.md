@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryResults.SqlServer.SQLResultsToText
 ms.assetid: 2ccbdf17-e14f-42f1-a836-ca999a3432c9
-caps.latest.revision: 19
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 72bcaf98c2a7089aa101379001559ee12b8f9b55
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2810a8738368f87651bc90d6cb15ae34195258ab
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37165327"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48105516"
 ---
 # <a name="options-query-results-sql-server-results-to-text-page"></a>Opções (resultados do SQL Server – resultados da consulta para página de texto)
   Use esta página para especificar as opções de exibição de um conjunto de resultados da consulta em formato de texto. As alterações feitas nessas opções são aplicadas apenas a novas consultas do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para alterar as opções das consultas atuais, clique em **Opções de Consulta** no menu **Consulta** ou clique com o botão direito do mouse na janela Consulta do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e selecione **Opções de Consulta**. Na caixa de diálogo **Opções de Consulta**, em **Resultados**, clique em **Texto**.  
@@ -45,19 +42,19 @@ ms.locfileid: "37165327"
  **Alinhar valores numéricos à direita**  
  Marque esta caixa de seleção para alinhar valores numéricos à direita da coluna. Isso pode tornar mais fácil a revisão de números com um número fixo de casas decimais.  
   
- **Descartar resultado após a execução de consulta**  
+ **Descartar resultado após a execução da consulta**  
  Marque essa caixa de seleção para descartar os resultados da consulta depois que forem exibidos no painel resultados da janela de consulta.  
   
  **Exibir resultados em uma guia separada**  
  Marque essa caixa de seleção para exibir o conjunto de resultados em uma nova janela de documento, em vez de na parte inferior da janela de documentos de consulta.  
   
- **Alternar para a guia resultados após a execução da consulta**  
+ **Alternar para a guia Resultados após a execução da consulta**  
  Marque essa caixa de seleção para definir o foco de tela automaticamente para o conjunto de resultados.  
   
  **Número máximo de caracteres exibidos em cada coluna**  
  Esse valor padrão é 256. Aumente o valor para exibir conjuntos de resultados maiores sem truncar. O valor máximo é 8.192.  
   
- **Redefinir para padrão**  
+ **Restaurar Padrões**  
  Redefine todos os valores dessa página com os valores padrão originais.  
   
   

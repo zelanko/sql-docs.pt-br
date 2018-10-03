@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7b50b101-daf8-4fb0-ae04-57384755779f
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 3fc2b74413f2ecb7f0a1f72684494f85ecf82ca9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c8c9ec3622318de6d2d70b8b49294dd282487d80
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37152167"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48114026"
 ---
 # <a name="count-function-report-builder-and-ssrs"></a>função Count (Construtor de Relatórios e SSRS)
   Retorna uma contagem de valores não nulos especificados pela expressão, avaliados no contexto do escopo fornecido.  
@@ -47,7 +44,7 @@ Count(expression, scope, recursive)
 ## <a name="return-type"></a>Tipo de retorno  
  Retorna um `Integer`.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O valor de *scope* deve ser uma constante de cadeia de caracteres e não pode ser uma expressão. Para agregações externas ou que não especificam outras agregações, *scope* deve se referir ao escopo atual ou a um escopo contentor. Para agregações de agregações, as agregações aninhadas podem especificar um escopo filho.  
   
  *Expression* pode conter chamadas para funções de agregação aninhadas com as seguintes exceções e condições:  

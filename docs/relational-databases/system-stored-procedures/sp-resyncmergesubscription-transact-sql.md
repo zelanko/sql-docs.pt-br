@@ -4,31 +4,25 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - sp_resyncmergesubscription_TSQL
 - sp_resyncmergesubscription
 helpviewer_keywords:
 - sp_resyncmergesubscription
 ms.assetid: e04d464a-60ab-4b39-a710-c066025708e6
-caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 78cfd43dfa297f44555d8790e3bea41efcde9652
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 3fb59abb80a1a7f8454d7aa97f227e4746675b03
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43033387"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47810379"
 ---
 # <a name="spresyncmergesubscription-transact-sql"></a>sp_resyncmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +75,7 @@ sp_resyncmergesubscription [ [ @publisher = ] 'publisher' ]
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  **sp_resyncmergesubscription** é usado em replicação de mesclagem.  
   
  Um valor de **0** para o *resync_type* parâmetro, que reaplica todas as alterações desde o instantâneo inicial, poderá ser intensivo de recursos, mas possivelmente muito menos do que uma reinicialização completa. Por exemplo, se o instantâneo inicial foi entregue há um mês, esse valor causará a reaplicação dos dados do último mês. Se o instantâneo inicial continha 1 gigabyte (GB) de dados, mas a quantidade de alterações do último mês consistiu em 2 megabytes (MB) de dados alterados, seria mais eficiente reaplicar os dados do que reaplicar todo o instantâneo de 1 GB.  

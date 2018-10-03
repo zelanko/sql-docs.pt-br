@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - schedules [Reporting Services]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], scheduling
 - automatic report processing
 ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
-caps.latest.revision: 50
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5b673c1dfe86caab3feeeae6bdbdfda853bd2a5f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 405bb71bc5ceaee65afa70d055c88a75a2326ca9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278395"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48107457"
 ---
 # <a name="schedules"></a>Agendamentos
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Fornece agendas compartilhadas e específicas de relatório para ajudar você a controlar o processamento e distribuição de relatórios. A diferença entre os dois tipos de agendas é como elas são definidas, armazenadas e administradas. A construção interna dos dois tipos de agendas é a mesma. Todas as agendas especificam um tipo de recorrência: mensal, semanal ou diária. Dentro do tipo de recorrência, você define os intervalos e as faixas para a frequência com que um evento ocorre. O tipo de padrão de recorrência e a forma como ele é especificado são os mesmos para criar uma agenda compartilhada ou uma agenda específica de relatório.  

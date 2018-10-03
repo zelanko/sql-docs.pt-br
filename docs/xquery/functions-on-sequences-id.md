@@ -4,33 +4,27 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
 - fn:id function
 - id function
 ms.assetid: de99fc60-d0ad-4117-a17d-02bdde6512b4
-caps.latest.revision: 19
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b31e1dc2894511d56cf8809396853dbb0a2e8329
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 39b389221613e6bc3d789f47cb9b972d96a53377
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38004618"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47703834"
 ---
-# <a name="functions-on-sequences---id"></a>Funções em sequências – id
+# <a name="functions-on-sequences---id"></a>Funções em Sequências – ID
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Retorna a sequência de nós de elemento com valores xs: ID correspondentes aos valores de um ou mais dos valores xs: IDREF fornecidos em *$arg*.  
@@ -46,7 +40,7 @@ fn:id($arg as xs:IDREF*) as element()*
  *$arg*  
  Um ou mais valores xs:IDREF.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O resultado da função é uma sequência de elementos na instância XML, na ordem do documento, que tem um valor xs:ID igual a um ou mais dos xs:IDREFs na lista de xs:IDREFs candidatos.  
   
  Se o valor xs:IDREF não corresponder a qualquer elemento, a função retornará a sequência vazia.  

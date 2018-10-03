@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vs.openfile
 - vs.openproject
 ms.assetid: 3e01b9f5-2b0a-4fb3-9da8-984d27d17b8a
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7a4b823029b71a511c7dd9c4377fbd692bbb94ad
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: f197c90dc20c3c3cff031e58af2e1cac19bcb706
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43817322"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48070847"
 ---
 # <a name="open-file-dialog-box"></a>Caixa de diálogo Abrir Arquivo
   Use a caixa de diálogo **Abrir Arquivo** para abrir um arquivo existente no disco. Você também pode usar essa caixa de diálogo para abrir um arquivo já aberto usando opções de codificação de linguagem diferentes.  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 814b4653-572a-48c7-847f-b310ba0f3046
-caps.latest.revision: 30
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a43e81feb0cd8e0ecfd134468cd37f3cfac92049
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 041553621a9f85cf4ca4f409f25b05cb2660c12b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37223216"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116830"
 ---
 # <a name="create-data-driven-subscription-page-report-manager"></a>Página Criar Assinatura Controlada por Dados (Gerenciador de Relatórios)
   Use a página Criar Assinatura Controlada por Dados para criar ou modificar uma assinatura que consulta um banco de dados de assinante para informações de assinatura cada vez que a assinatura é executada. Assinaturas controladas por dados usam resultados de consulta para determinar os destinatários da assinatura, as configurações de entrega e os valores de parâmetro do relatório. Em tempo de execução, o servidor de relatórioss executa uma consulta para obter valores usados nas configurações da assinatura. Você pode usar a página Criar Assinatura Controlada por Dados para definir a consulta e atribuir valores de consulta às configurações de assinatura. Os valores e as opções especificadas para uma assinatura controlada por dados são divididos entre várias páginas, semelhantes a um assistente. Há sete páginas ao todo.  

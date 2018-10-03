@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - storage [Analysis Services], partitions
@@ -24,16 +22,15 @@ helpviewer_keywords:
 - remote partitions [Analysis Services]
 - measure groups [Analysis Services], partitions
 ms.assetid: cd10ad00-468c-4d49-9f8d-873494d04b4f
-caps.latest.revision: 42
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3b9affca8de4e6b0cbd50e25eaaca6447ada4b0b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8ec379d0dde0775aad3fe81a3443cf5d27601d3f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37183323"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48087776"
 ---
 # <a name="partitions-analysis-services---multidimensional-data"></a>Partições (Analysis Services – Dados Multidimensional)
   Uma partição é um contêiner de uma parte dos dados de grupo de medidas. As partições não são vistas a partir das consultas MDX; todas as consultas refletem o conteúdo completo do grupo de medidas, independentemente de quantas partições são definidas para o grupo de medidas. O conteúdo de dados de uma partição é definido pelas associações de consulta da partição e pela divisão da expressão.   

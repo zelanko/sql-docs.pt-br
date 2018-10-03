@@ -4,13 +4,8 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - assessing SQL
 - assessing syntax
@@ -21,16 +16,15 @@ helpviewer_keywords:
 - SQL, assessing
 - syntax, assessing
 ms.assetid: 8b9e23d6-da62-437a-8c05-8ad2628b9441
-caps.latest.revision: 16
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: dc8649b028ba925e215d21ca9c7f4f52a8e69ec5
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 7d265ea1bd3b2461219858d39fd0b9164999cc30
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395412"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47722194"
 ---
 # <a name="assessing-access-database-objects-for-conversion-accesstosql"></a>Avaliar os objetos de banco de dados do Access para conversão (AccessToSQL)
 Antes de carregar objetos e migrar dados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, você deve determinar o quanto da migração seja bem-sucedida, e quanto a conversão pode levar. O SSMA pode criar um relatório de avaliação que mostra o percentual de objetos que foram convertidos com êxito para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou estimativas de sintaxe do SQL Azure e a hora para executar a migração. O SSMA também permite que você exiba os problemas específicos que causava falhas de conversão.  

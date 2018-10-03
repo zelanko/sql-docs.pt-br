@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [Integration Services], ADO
 - connection managers [Integration Services], ADO
 - ADO connection manager [Integration Services]
 ms.assetid: 490418bc-5ef1-41b8-a9c8-de38aa96e0f6
-caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 434468c487d1dc758eeef10a04b8623c88abb529
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3d5f03c184e8df929b29f1e79970024af59ac096
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243046"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48054546"
 ---
 # <a name="ado-connection-manager"></a>Gerenciador de conexões ADO
   Um gerenciador de conexões ADO permite a um pacote se conectar a ActiveX Data Objects (ADO), como um conjunto de registros. Este gerenciador de conexões é usado tipicamente em tarefas personalizadas escritas em uma versão anterior da linguagem, como o Microsoft Visual Basic 6.0, ou em tarefas personalizadas que são parte de uma aplicação existente que usa ADO para conectar em uma fonte de dados.  

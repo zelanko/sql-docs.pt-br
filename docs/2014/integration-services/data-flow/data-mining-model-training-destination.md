@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dataminingmodeltrainingdest.f1
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - mining models [Analysis Services], training
 - training mining models
 ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
-caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2bb23745ab0858cb598fd668d5f066f0e247d817
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fdef0e0ed6de3bf527a5b87bc05a12e1bc6ace5f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37171007"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48068943"
 ---
 # <a name="data-mining-model-training-destination"></a>Destino de treinamento do modelo de mineração de dados
   Um destino de treinamento de modelos de mineração de dados treina modelos de mineração de dados ao passar os dados que o destino recebe pelos algoritmos de modelo de mineração de dados. Vários modelos de mineração de dados poderão ser treinados por um destino se os modelos forem criados na mesma estrutura de mineração de dados. Para obter mais informações, consulte [Mining Structure Columns](../../analysis-services/data-mining/mining-structure-columns.md) e [Mining Model Columns](../../analysis-services/data-mining/mining-model-columns.md).  

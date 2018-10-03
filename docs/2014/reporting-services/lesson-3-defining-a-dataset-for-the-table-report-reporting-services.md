@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
-caps.latest.revision: 50
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 719776a37cae748516d7a4882ea31e9796d01332
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3b300b51acf83f79b54b12341299ebe9a8d82c17
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202646"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48086536"
 ---
 # <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>Lição 3: Definindo um conjunto de dados para o relatório de tabela (Reporting Services)
   Depois de definir a fonte de dados, é necessário definir um conjunto de dados. No [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], os dados usados em relatórios são contidos em um *conjunto de dados*. Um conjunto de dados inclui um ponteiro para uma fonte de dados e uma consulta a ser usada pelo relatório, bem como variáveis e campos calculados.  

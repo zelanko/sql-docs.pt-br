@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], breakpoints
 - breakpoints [Integration Services]
 - tasks [Integration Services], breakpoints
 ms.assetid: e7fa106a-2221-403a-bb74-efc9f12bb450
-caps.latest.revision: 33
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b063089105af1de7656387be8cc12639498e7c37
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ff0f1ef3f7baff1c39b3d338f47eb5eddde286e7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37308106"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48098176"
 ---
 # <a name="debug-a-package-by-setting-breakpoints-on-a-task-or-a-container"></a>Depurar um pacote por meio da definição de pontos de interrupção em uma tarefa ou contêiner
   Este procedimento descreve como definir pontos de interrupção em um pacote, uma tarefa, um contêiner Loop For, um contêiner Loop Foreach ou um contêiner Sequência.  

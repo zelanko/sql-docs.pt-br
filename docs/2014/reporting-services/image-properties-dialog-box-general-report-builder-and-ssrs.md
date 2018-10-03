@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10051"
 - sql12.rtp.rptdesigner.pictureproperties.general.f1
 ms.assetid: c2218b93-f7fe-46ef-995f-d7dadf9752ec
-caps.latest.revision: 12
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7137b65223a092cc136db7fda21cd2cd0e5c2ce2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: afd91dda1a6a4694980d0976f1ceae9db928c36a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37292206"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48108426"
 ---
 # <a name="image-properties-dialog-box-general-report-builder-and-ssrs"></a>Caixa de diálogo Propriedades da Imagem, Geral (Construtor de Relatórios e SSRS)
   Selecione **Geral** na caixa de diálogo **Propriedades da Imagem** para adicionar uma imagem, alterar o nome padrão da imagem e adicionar texto à Dica de Ferramenta.  

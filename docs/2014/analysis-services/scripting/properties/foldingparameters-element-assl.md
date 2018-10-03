@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - FoldingParameters element
 ms.assetid: 5f5c5a3e-4aed-48fb-bca5-e67f421bef2f
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ac348aa326c53b1266edfff3396feadda6c80ea6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5f7f32684686f7b8f12bb147bb4f6b7ea87537e3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37161137"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48117406"
 ---
 # <a name="foldingparameters-element-assl"></a>Elemento FoldingParameters (ASSL)
   Especifica os parâmetros usados pelo servidor do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] durante a execução de uma validação cruzada de modelos de mineração.  
@@ -69,7 +66,7 @@ ms.locfileid: "37161137"
 |Elemento pai|[MiningModel](../objects/miningmodel-element-assl.md)|  
 |Elementos filho|*FoldIndex*<br /><br /> *FoldCount*<br /><br /> *MaxCases*<br /><br /> *FoldTargetAttribute*|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Essas propriedades são apenas para uso interno e não são suportadas para serem usadas em instruções DDL.  
   
  Para obter informações sobre como usar a validação cruzada no [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], consulte [medidas no relatório de validação cruzada](../../data-mining/measures-in-the-cross-validation-report.md).  

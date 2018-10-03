@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e1011278-556d-4984-b01d-a37f8a33b304
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b976a83220a501fde422b6f58fea21631c0d3f26
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9e2c54ec3c724e9fb43eff956e0bf96fd406d6bd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37232066"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48091106"
 ---
 # <a name="calculated-columns-ssas-tabular"></a>Colunas calculadas (SSAS tabular)
   Colunas calculadas, em modelos tabulares, permitem que você adicione novos dados a seu modelo. Em vez de colar ou importar valores para a coluna, você cria uma fórmula DAX que define os valores do nível de linha da coluna. A coluna calculada pode então ser usada em um relatório, Tabela Dinâmica ou Gráfico Dinâmico como você faria com qualquer outra coluna.  

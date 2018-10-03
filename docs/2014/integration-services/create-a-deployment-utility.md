@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - deploying packages [Integration Services], deployment utility
 - deployment utility [Integration Services]
 ms.assetid: 354322a4-ae8c-4d92-8e71-42d29dbd0614
-caps.latest.revision: 49
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 09c39bccc82df8539fc419180465739cf1ed8054
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fe7bd725bc7fc9be7289c4834a3df8f44e36c41b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273112"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48102196"
 ---
 # <a name="create-a-deployment-utility"></a>Criar um utilitário de implantação
   A primeira etapa da implantação de pacotes é a criação de um utilitário de implantação para um projeto do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . O utilitário de implantação é uma pasta que contém os arquivos necessários para a implantação dos pacotes em um projeto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] em um servidor diferente. O utilitário de implantação é criado no computador no qual o projeto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] é armazenado.  

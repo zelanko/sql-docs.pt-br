@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - SSIS connection managers
 - adding package connections
 ms.assetid: d90716d1-4c65-466c-b82c-4aabbee1e3e5
-caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 030ba6850c05f6fd81d106833205566576474faa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 39a8eaf1f487d70e7e7042129410fcf2b6fb4a67
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167057"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48105726"
 ---
 # <a name="adding-connections-programmatically"></a>Adicionando conexões programaticamente
   A classe <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> representa conexões físicas com fontes de dados externas. A classe <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> isola os detalhes de implementação da conexão do tempo de execução. Isso permite que o tempo de execução interaja com cada gerenciador de conexões de uma maneira consistente e previsível. Gerenciadores de conexões contêm um conjunto de propriedades de estoque que todas as conexões têm em comum, como <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ID%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Description%2A> e <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A>. Porém, as propriedades <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A> e <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A> são, ordinariamente, as únicas propriedades necessárias para configurar um gerenciador de conexões. Ao contrário de outros paradigmas de programação, em que as classes de conexão expõem métodos como `Open` ou `Connect` para estabelecer fisicamente uma conexão com a fonte de dados, o mecanismo de tempo de execução gerencia todas as conexões para o pacote enquanto ele é executado.  

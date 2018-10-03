@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - bcp_colptr
@@ -17,16 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_colptr function
 ms.assetid: 02ece13e-1da3-4f9d-b860-3177e43d2471
-caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c0c548a1decd7410cd1cbc8df3ee68126e62ca25
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 269ab3c748557d1d2870195524310f2371b79c52
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37413565"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48130996"
 ---
 # <a name="bcpcolptr"></a>bcp_colptr
   Define o endereço de dados variáveis do programa da cópia atual no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -65,7 +62,7 @@ idxServerCol
 ## <a name="returns"></a>Retorna  
  SUCCEED ou FAIL.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O **bcp_colptr** função permite que você altere o endereço dos dados de origem para uma determinada coluna ao copiar dados para o SQL Server com [bcp_sendrow](bcp-sendrow.md).  
   
  Inicialmente, o ponteiro para dados de usuário é definido por uma chamada para **bcp_bind**. Se o endereço de dados da variável de programa é alterado entre chamadas para **bcp_sendrow**, você pode chamar **bcp_colptr** para redefinir o ponteiro para os dados. A próxima chamada para **bcp_sendrow** envia os dados endereçados pela chamada para **bcp_colptr**.  

@@ -6,27 +6,24 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MaxRecords property [ADO], VC++ example
 ms.assetid: af6b399b-e546-4de5-9cd1-5a6e0ec7ddc7
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 91c3a9d2016b0ec99ee4deee8ebcac16c9befa83
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6d4c9d8f6f39abf50238866dae9decfb6f04651f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279325"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47636904"
 ---
-# <a name="maxrecords-property-example-vc"></a>Exemplo da propriedade MaxRecords (VC + +)
-Este exemplo usa o [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) propriedade para abrir um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) que contém os títulos mais caros 10 no ***títulos*** tabela.  
+# <a name="maxrecords-property-example-vc"></a>Exemplo da propriedade MaxRecords (VC++)
+Este exemplo usa o [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) para abrir um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) que contém os títulos mais caros 10 no ***títulos*** tabela.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -169,17 +166,17 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **Títulos de dez principais de preço:**  
+ **Títulos de dez principais por preço:**  
 **Mas é amigável de usuário? ---22.95**  
-**Computador indivíduos Phobic e não Phobic: Variações de comportamento---21,59**  
-**Onions, Leeks e Garlic: culinária segredos de Mediterrâneo---20,95**  
+**Indivíduos Phobic e não com aversão ao computador: Variações de comportamento---21,59**  
+**Onions, Leeks e Garlic: cozinhar segredos de Mediterrâneo---20,95**  
 **Segredos do vale do silício---20,00**  
-**Guia de banco de dados do executivo ocupado---19,99**  
+**Guia do banco de dados de um executivo ocupado---19,99**  
 **Reta falar sobre computadores---19,99**  
 **Vale do silício Gastronomia trata---19,99**  
-**Deprivation prolongada de dados: Estudos de caso quatro---19,99**  
+**Deprivation prolongada de dados: Quatro estudos de caso---19,99**  
 **Sushi, qualquer pessoa? ---14,99**  
-**50 anos em Palace Buckingham cozinhas---11.95**   
+**50 anos em s Pizza Palace Buckingham cozinhas---11.95**   
 ## <a name="see-also"></a>Consulte também  
  [Propriedade MaxRecords (ADO)](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 12be8011-b76c-45c1-8f55-7f46e0e374e9
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b187186b573a70a3f3a03a408099bcb307798370
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 262a2a39ec8843a1e52a1418fe66f0ec0f40a128
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394805"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48079996"
 ---
 # <a name="creating-and-accessing-tables-in-tempdb-from-natively-compiled-stored-procedures"></a>Criando e acessando tabelas em TempDB de procedimentos armazenados nativamente compilados
   Não há suporte para criar e acessar tabelas em TempDB de procedimentos armazenados nativamente compilados. Use tipos e variáveis de tabela. Por exemplo:  

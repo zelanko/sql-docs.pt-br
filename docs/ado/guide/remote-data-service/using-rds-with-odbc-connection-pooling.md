@@ -1,39 +1,36 @@
 ---
-title: Usando o RDS com Conexão ODBC Pooling | Microsoft Docs
+title: Usando RDS com Conexão de ODBC Pooling | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connection pooling in RDS [ADO]
 ms.assetid: e8b912c1-da5b-4e85-a000-1e6648a94237
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 416cbadf4d77ab9c7325c5f874f9818c4e05d8e5
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 40efbdd80f5c6ba814936d952cba03cc7ac5b8ae
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35274645"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47812194"
 ---
-# <a name="using-rds-with-odbc-connection-pooling"></a>Usando o RDS com Conexão ODBC Pooling
-Se você estiver usando uma fonte de dados ODBC, você pode usar a opção no Internet Information Services (IIS) do pool de conexão para alcançar a manipulação de alto desempenho de carga do cliente. Pooling de Conexão é um Gerenciador de recursos para conexões, manter o estado aberto em conexões usadas com frequência.  
+# <a name="using-rds-with-odbc-connection-pooling"></a>Usar RDS com pool de conexões ODBC
+Se você estiver usando uma fonte de dados ODBC, você pode usar a opção no Internet Information Services (IIS) do pool de conexão para alcançar a manipulação de alto desempenho de carga do cliente. Pooling de Conexão é um Gerenciador de recursos para conexões, mantendo o estado aberto em conexões usadas com frequência.  
   
 > [!IMPORTANT]
->  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (veja o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Aplicativos que usam o RDS devem migrar para [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (consulte o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Devem ser migrados para aplicativos que usam o RDS [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
- Para habilitar o pool de conexão, consulte a documentação de serviços de informações da Internet.  
+ Para habilitar o pooling de conexão, consulte a documentação de serviços de informações da Internet.  
   
- Observe que habilitar pool de conexão pode da entidade do servidor Web para outras restrições, como indicado na documentação do Microsoft Internet Information Services.  
+ Observe que habilitar o pooling de conexão pode sujeitar o servidor Web para outras restrições, conforme indicado na documentação do Microsoft Internet Information Services.  
   
- Para garantir que o pool de conexão é estável e fornece ganhos de desempenho adicionais, você deve configurar o Microsoft SQL Server para usar a biblioteca de rede de soquete TCP/IP.  
+ Para garantir que o pooling de conexão é estável e fornece ganhos de desempenho adicionais, você deve configurar o Microsoft SQL Server para usar a biblioteca de rede de soquete TCP/IP.  
   
  Para fazer isso, você precisa:  
   
@@ -52,7 +49,7 @@ Se você estiver usando uma fonte de dados ODBC, você pode usar a opção no In
   
 2.  Clique duas vezes em continuar.  
   
-3.  No Microsoft SQL Server — a caixa de diálogo Opções, selecione o suporte à alteração de rede e, em seguida, clique em continuar.  
+3.  No Microsoft SQL Server — a caixa de diálogo Opções, selecione o suporte de rede de alteração e, em seguida, clique em continuar.  
   
 4.  Verifique se que a caixa de seleção de soquetes TCP/IP está selecionada e clique em Okey.  
   
@@ -66,14 +63,14 @@ Se você estiver usando uma fonte de dados ODBC, você pode usar a opção no In
   
 3.  Na caixa de diálogo Adicionar configuração da biblioteca de rede, clique em TCP/IP.  
   
-4.  Nas caixas de endereço de Proxy e o número de porta, digite o endereço de número e o proxy de porta fornecido pelo seu administrador de rede.  
+4.  Nas caixas de endereço de Proxy e número da porta, digite o endereço de número e o proxy de porta fornecido pelo seu administrador de rede.  
   
 5.  Clique em Okey para concluir e sair da instalação.  
   
 ## <a name="configuring-the-web-server-to-use-tcpip-sockets"></a>Configurando o servidor Web para usar soquetes TCP/IP  
- Há duas opções para configurar o servidor Web para usar soquetes TCP/IP. O que fazer depende se todos os servidores SQL são acessados do servidor Web, ou apenas um servidor específico do SQL é acessado do servidor Web.  
+ Há duas opções para configurar o servidor Web para usar soquetes TCP/IP. O que fazer depende se todos os servidores SQL são acessados a partir do servidor Web ou apenas um servidor específico do SQL é acessado do servidor Web.  
   
- Se todos os servidores SQL são acessados do servidor Web, você precisa executar o utilitário de configuração do cliente SQL Server no computador do servidor Web. As etapas a seguir alteram a biblioteca de rede padrão para todas as conexões do SQL Server feitas deste servidor Web do IIS para usar a biblioteca de rede soquetes TCP/IP.  
+ Se todos os servidores SQL são acessados do servidor Web, você precisará executar o utilitário de configuração de cliente do SQL Server no computador do servidor Web. As etapas a seguir alteram a biblioteca de rede padrão para todas as conexões do SQL Server feitas nesse servidor Web do IIS para usar a biblioteca de rede de soquetes TCP/IP.  
   
 ### <a name="to-configure-the-web-server-all-sql-servers"></a>Para configurar o servidor Web (todos os servidores SQL)  
   
@@ -83,9 +80,9 @@ Se você estiver usando uma fonte de dados ODBC, você pode usar a opção no In
   
 2.  Clique na guia biblioteca de rede.  
   
-3.  Na caixa de ferramentas padrão de rede, selecione soquetes TCP/IP.  
+3.  Na caixa de rede padrão, selecione soquetes TCP/IP.  
   
-4.  Clique em concluído para salvar as alterações e saia do utilitário.  
+4.  Clique em concluído para salvar as alterações e sair do utilitário.  
   
 ### <a name="for-microsoft-sql-server-70"></a>Para o Microsoft SQL Server 7.0:  
   
@@ -95,9 +92,9 @@ Se você estiver usando uma fonte de dados ODBC, você pode usar a opção no In
   
 3.  Na caixa de biblioteca de rede padrão, clique em TCP/IP.  
   
-4.  Clique em Okey para salvar as alterações e saia do utilitário.  
+4.  Clique em Okey para salvar as alterações e sair do utilitário.  
   
- Se um servidor específico do SQL é acessado de um servidor Web, você precisa executar o utilitário de configuração do cliente SQL Server no computador do servidor Web. Para alterar a biblioteca de rede para uma conexão específica do SQL Server, configure o software cliente do SQL Server no computador do servidor Web, como segue.  
+ Se um servidor específico do SQL é acessado de um servidor Web, você precisa executar o utilitário de configuração de cliente do SQL Server no computador do servidor Web. Para alterar a biblioteca de rede para uma conexão específica do SQL Server, configure o software cliente do SQL Server no computador do servidor Web, da seguinte maneira.  
   
 ### <a name="to-configure-the-web-server-a-specific-sql-server"></a>Para configurar o servidor Web (um servidor específico do SQL)  
   
@@ -111,7 +108,7 @@ Se você estiver usando uma fonte de dados ODBC, você pode usar a opção no In
   
 4.  Na caixa Nome da DLL, selecione soquetes TCP/IP.  
   
-5.  Clique em Adicionar/modificar. Todas as fontes de dados, apontando para esse servidor usará soquetes TCP/IP.  
+5.  Clique em Adicionar/modificar. Todas as fontes de dados que aponta para esse servidor passará a usar soquetes TCP/IP.  
   
 6.  Clique em concluído.  
   
@@ -123,7 +120,7 @@ Se você estiver usando uma fonte de dados ODBC, você pode usar a opção no In
   
 3.  Clique em Adicionar.  
   
-4.  Digite o alias do servidor na caixa alias do servidor. Na caixa de bibliotecas de rede, clique em TCP/IP. Na caixa Nome do computador, digite o nome de computador do computador que escuta clientes de soquetes TCP/IP. Na caixa de número de porta, insira a porta na qual o SQL Server escuta.  
+4.  Insira o alias do servidor na caixa de alias do servidor. Na caixa de bibliotecas de rede, clique em TCP/IP. Na caixa Nome do computador, insira o nome do computador do computador que escuta para clientes de soquetes TCP/IP. Na caixa de número de porta, insira a porta na qual o SQL Server escuta.  
   
 5.  Clique em Okey e Okey novamente para sair do utilitário.  
   

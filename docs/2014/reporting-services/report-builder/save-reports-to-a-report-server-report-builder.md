@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 48dfef01-ed8c-4f23-90c3-de67c90a97dd
-caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: a159751c90db011ef856f57c8611e121a0977d67
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1ecb94722bc5eed521be2d731bf8d65f9d4c7efd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153847"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48092900"
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>Salvar relatórios em um servidor de relatório (Construtor de Relatórios)
   No Construtor de Relatórios, é possível salvar uma definição de relatório em um servidor de relatório (processo também conhecido como publicação de relatório). Quando o relatório for salvo em um servidor de relatório, outros usuários poderão exibi-lo. Cada vez que você executa o relatório publicado, recupera os dados mais atuais. Para salvar uma cópia estática de um relatório renderizado, exporte o relatório para um formato de arquivo diferente e salve-o ou use o recurso de histórico de relatório para salvar versões dos relatórios renderizados.  

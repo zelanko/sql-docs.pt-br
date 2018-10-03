@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 06/20/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: clr
 ms.topic: reference
 helpviewer_keywords:
@@ -16,18 +15,17 @@ helpviewer_keywords:
 - code access security [CLR integration]
 - managed code [SQL Server], CLR integration
 ms.assetid: 7be9e644-36a2-48fc-9206-faf59fdff4d7
-caps.latest.revision: 64
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d79fe5e7d56e58e48ae92a6f934b11f8b3b42b67
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 85f3bc694fa1636316eb19de49ad5ad9defa5eaf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37352648"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47718374"
 ---
-# <a name="common-language-runtime-integration-overview"></a>Visão geral do Common Language Runtime integração
+# <a name="common-language-runtime-integration-overview"></a>Visão geral da integração Common Language Runtime
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Agora o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] apresenta a integração do componente CLR do .NET Framework para o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. O CLR fornece código gerenciado com serviços como integração entre idiomas, segurança de acesso do código, gerenciamento do tempo de vida de objetos e suporte à depuração e à criação de perfis. Para usuários e desenvolvedores de aplicativos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a integração CLR significa que agora você pode gravar procedimentos armazenados, gatilhos, tipos definidos pelo usuário, funções definidas pelo usuário (escalares e com valor de tabela) e funções de agregação definidas pelo usuário usando qualquer linguagem do .NET Framework, incluindo o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET e o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclui o .NET Framework 4 pré-instalado.  

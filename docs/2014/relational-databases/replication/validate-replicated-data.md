@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - inline data validation [SQL Server replication]
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - merge replication data validation [SQL Server replication], about data validation
 - validating replicated data
 ms.assetid: f7500a2b-61cb-41b5-816d-27609a6c58e7
-caps.latest.revision: 45
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0fad815b99f6daf9ba14e765f394cfe1e416aaa6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ae1484fd98b7cf10f06eb86406b03b9c2991a210
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37211216"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48098096"
 ---
 # <a name="validate-replicated-data"></a>Validar os dados replicados
   A replicação transacional e de mesclagem permitem validar os dados no Assinante que correspondem aos dados no Publicador. A validação pode ser executada para assinaturas específicas ou para todas as assinaturas em uma publicação. Especifique um dos seguintes tipos de validação e o Distribution Agent ou o Merge Agent validarão os dados na próxima vez que executarem:  

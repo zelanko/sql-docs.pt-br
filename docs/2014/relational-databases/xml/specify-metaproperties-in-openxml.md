@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - overflow in XML document [SQL Server]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - extracting information of XML nodes [SQL Server]
 - OPENXML statement, metaproperties
 ms.assetid: 29bfd1c6-3f9a-43c4-924a-53d438e442f4
-caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 55dad5adeafa9689f8d3a0910f1b345ee575ffbe
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 15c3a98ad0e74ba7a1d5ee6d683f6de2e7353984
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43889922"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48107609"
 ---
 # <a name="specify-metaproperties-in-openxml"></a>Especificar metapropriedades no OPENXML
   Atributos de metapropriedades em um documento XML são atributos que descrevem as propriedades de um item XML, como elemento, atributo ou qualquer outro nó DOM. Esses atributos não existem fisicamente no documento de texto XML. No entanto o OPENXML fornece essas metapropriedades para todos os itens XML. Essas metapropriedades permitem extrair informações, como posicionamento local e informações de namespace, de nós XML. Essas informações fornecem mais detalhes do que os que estão aparentes na representação textual.  

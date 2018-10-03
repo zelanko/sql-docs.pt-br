@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3a7162ba-cf2f-481f-830d-bb6a02823827
-caps.latest.revision: 7
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8dc51cf8a33c183f3256f7aec089c8e0095918ca
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3c8bbc2bb88747aee84be9eeff18fcae59df54d5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37275792"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48138722"
 ---
 # <a name="task-4-setting-domain-rules"></a>Tarefa 4: Definindo regras de domínio
   Nesta tarefa, você pode criar uma regra para o **Contact Email** domínio para verificar se o endereço de email termina com **@adventure-works.com**. Ver [criando uma regra de domínio](http://msdn.microsoft.com/library/hh510397.aspx) tópico para obter mais detalhes sobre a página.  

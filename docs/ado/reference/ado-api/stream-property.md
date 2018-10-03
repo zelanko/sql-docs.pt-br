@@ -1,13 +1,11 @@
 ---
-title: Fluxo de propriedade | Microsoft Docs
+title: Stream de propriedade | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -19,19 +17,18 @@ f1_keywords:
 helpviewer_keywords:
 - Stream property
 ms.assetid: 4a44f9f6-0265-4c00-8def-d85b6af923b1
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9318e52eac9301cdcf2d3cf02bbc88ad917b4669
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ddeaadb1f25c3ea50e59c20d48f14e31831f2639
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282545"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47822004"
 ---
-# <a name="stream-property"></a>Propriedade de fluxo
-Obtém ou define um banco de dados OLE **fluxo** objeto de/em uma **ADOStreamConstruction** objeto.  
+# <a name="stream-property"></a>Propriedade Stream
+Obtém ou define um banco de dados OLE **Stream** objeto de/em uma **ADOStreamConstruction** objeto.  
   
  Leitura/gravação.  
   
@@ -44,10 +41,10 @@ HRESULT put_Stream([in] IUnknown* pStream);
   
 ## <a name="parameters"></a>Parâmetros  
  *ppStream*  
- Ponteiro para um banco de dados OLE **fluxo** objeto.  
+ Ponteiro para um banco de dados OLE **Stream** objeto.  
   
  *pStream*  
- OLE DB **fluxo** objeto.  
+ Um banco de dados OLE **Stream** objeto.  
   
 ## <a name="return-values"></a>Valores de retorno  
  Esse método de propriedade retorna os valores HRESULT padrão. Isso inclui S_OK e E_FAIL.  

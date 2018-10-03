@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 5d98bab3-3577-4143-b737-5196444a36ac
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9426c3afabb53c158feffa22c9b3ee53166ceb5c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 611b4cf87158be48cae3bc37ef7311de64c77ddf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37301256"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48126216"
 ---
 # <a name="deploying-an-analysis-services-project"></a>Implantando um projeto do Analysis Services
   Para exibir os dados do cubo e da dimensão para os objetos do cubo do Tutorial do  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] no projeto do Tutorial do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], você deve implantar o projeto em uma instância específica do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e depois processar o cubo e suas dimensões. *Implantar* um projeto  do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cria os objetos definidos em uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. O*processamento* dos objetos em uma instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] copia os dados das fontes de dados subjacentes nos objetos de cubo. Para obter mais informações, consulte [Implantar projetos do Analysis Services &#40;SSDT&#41;](multidimensional-models/deploy-analysis-services-projects-ssdt.md) e [Configurar propriedades de projeto do Analysis Services &#40;SSDT&#41;](multidimensional-models/configure-analysis-services-project-properties-ssdt.md).  

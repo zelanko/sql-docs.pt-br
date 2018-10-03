@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - encryption [SQL Server], hierarchies
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - security [SQL Server], encryption
 - hierarchies [SQL Server], encryption
 ms.assetid: 96c276d5-1bba-4e95-b678-10f059f1fbcf
-caps.latest.revision: 40
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 292ac985db70fc280185b6f240565857055a8b83
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5be9eb21e12402f7463c7e79714ef93e7eccb455
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37164127"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48093132"
 ---
 # <a name="encryption-hierarchy"></a>Hierarquia de criptografia
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] criptografa dados com uma criptografia hierárquica e infraestrutura de gerenciamento de chaves. Cada camada criptografa a camada abaixo dela usando uma combinação de certificados, chaves assimétricas e chaves simétricas. Chaves assimétricas e chaves simétricas podem ser armazenadas fora do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] em um módulo EKM (Gerenciamento Extensível de Chaves).  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 56b2c852-fd69-4cd2-9b5d-977467b94fd9
-caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b16fd6b9ce9d89a730f64c5cadd7a67553cb6dd1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 54e2594b040c74715d279576a3e09a6fc6016fff
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37166899"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48137530"
 ---
 # <a name="create-the-finance-name-policy"></a>Criar a política Nome Financeiro
   Nessa tarefa, você criará um banco de dados chamado Finance e uma condição que exige que todas as tabelas comecem com as letras **fintbl**. Em seguida, você criará uma política e uma categoria de políticas para impor um padrão de nomenclatura para as tabelas no banco de dados Finanças.  

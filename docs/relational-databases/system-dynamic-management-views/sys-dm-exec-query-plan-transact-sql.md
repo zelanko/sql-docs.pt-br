@@ -1,12 +1,10 @@
 ---
-title: sys.DM exec_query_plan (Transact-SQL) | Microsoft Docs
+title: . DM exec_query_plan (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_exec_query_plan_TSQL
@@ -18,23 +16,22 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_query_plan dynamic management function
 ms.assetid: e26f0867-9be3-4b2e-969e-7f2840230770
-caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 36eb4273ebdc689320ff831268a508fa977997fb
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: b76d583cf73b035024e57ba1cb66e63c76d1ad23
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34466482"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47797184"
 ---
 # <a name="sysdmexecqueryplan-transact-sql"></a>sys.dm_exec_query_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna o plano de execução em formato XML para o lote especificado pelo identificador de plano. O plano especificado pelo identificador do plano pode estar em cache ou estar sendo executado.  
   
- O esquema XML do plano de execução está publicado e disponível em [neste site da Microsoft](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409). Ele fica disponível também no diretório em que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é instalado.  
+ O esquema XML para o plano de execução está publicado e disponível [este site da Microsoft](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409). Ele fica disponível também no diretório em que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é instalado.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,7 +46,7 @@ sys.dm_exec_query_plan ( plan_handle )
  *plan_handle*  
  Identifica exclusivamente um plano de consulta para um lote em cache ou sendo executado atualmente.  
   
- *plan_handle* é **varbinary(64)**. *plan_handle* pode ser obtido dos seguintes objetos de gerenciamento dinâmico:  
+ *plan_handle* está **varbinary(64)**. *plan_handle* pode ser obtido dos seguintes objetos de gerenciamento dinâmico:  
   
  [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
   
@@ -62,39 +59,39 @@ sys.dm_exec_query_plan ( plan_handle )
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |**dbid**|**smallint**|A ID do banco de dados de contexto em vigor quando a instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] correspondente a esse plano foi compilada. Para instruções SQL preparadas e ad hoc, a ID do banco de dados no qual as instruções foram compiladas.<br /><br /> A coluna é anulável.|  
-|**objectid**|**Int**|A identificação do objeto (por exemplo, procedimento armazenado ou função definida pelo usuário) para este plano de consulta. Para lotes ad hoc e preparados, essa coluna é **nulo**.<br /><br /> A coluna é anulável.|  
-|**number**|**smallint**|Inteiro de procedimento armazenado numerado. Por exemplo, um grupo de procedimentos para o **pedidos** aplicativo pode ser nomeado **orderproc; 1**, **orderproc; 2**, e assim por diante. Para lotes ad hoc e preparados, essa coluna é **nulo**.<br /><br /> A coluna é anulável.|  
+|**objectid**|**int**|A identificação do objeto (por exemplo, procedimento armazenado ou função definida pelo usuário) para este plano de consulta. Para lotes ad hoc e preparadas, essa coluna é **nulo**.<br /><br /> A coluna é anulável.|  
+|**number**|**smallint**|Inteiro de procedimento armazenado numerado. Por exemplo, um grupo de procedimentos para o **pedidos** aplicativo pode ser nomeado **orderproc; 1**, **orderproc; 2**e assim por diante. Para lotes ad hoc e preparadas, essa coluna é **nulo**.<br /><br /> A coluna é anulável.|  
 |**Criptografado**|**bit**|Indica se o procedimento armazenado correspondente está criptografado.<br /><br /> 0 = não criptografado<br /><br /> 1 = criptografado<br /><br /> A coluna não é anulável.|  
-|**query_plan**|**xml**|Contém a representação de Showplan em tempo de compilação do plano de execução de consulta que é especificado com *plan_handle*. O Showplan está em formato XML. Um plano é gerado para cada lote que contém, por exemplo, instruções ad hoc [!INCLUDE[tsql](../../includes/tsql-md.md)], chamadas de procedimento armazenado e chamadas de função definidas pelo usuário.<br /><br /> A coluna é anulável.|  
+|**query_plan**|**xml**|Contém a representação de plano de execução de tempo de compilação do plano de execução de consulta que é especificado com *plan_handle*. O Showplan está em formato XML. Um plano é gerado para cada lote que contém, por exemplo, instruções ad hoc [!INCLUDE[tsql](../../includes/tsql-md.md)], chamadas de procedimento armazenado e chamadas de função definidas pelo usuário.<br /><br /> A coluna é anulável.|  
   
-## <a name="remarks"></a>Remarks  
- Sob as seguintes condições, nenhuma saída Showplan é retornada no **query_plan** coluna da tabela retornada para **sys.DM exec_query_plan**:  
+## <a name="remarks"></a>Comentários  
+ Sob as seguintes condições, nenhuma saída Showplan é retornada na **query_plan** coluna da tabela retornada para **. DM exec_query_plan**:  
   
--   Se o plano de consulta é especificado usando *plan_handle* foi removido do cache do plano, o **query_plan** coluna da tabela retornada é nula. Por exemplo, essa condição pode ocorrer se houver um atraso entre quando o identificador de plano foi captado e quando foi usado com **sys.DM exec_query_plan**.  
+-   Se o plano de consulta é especificado usando *plan_handle* foi retirado do cache de planos, o **query_plan** coluna da tabela retornada é nula. Por exemplo, essa condição pode ocorrer se houver um atraso entre quando o identificador de plano foi capturado e quando ele foi usado com **. DM exec_query_plan**.  
   
--   Algumas instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] não são colocadas em cache, como instruções de operação em massa ou instruções que contêm literais de cadeia de caracteres maiores que 8 KB. Planos de execução XML para tais instruções não podem ser recuperados usando **sys.DM exec_query_plan** , a menos que o lote está em execução porque eles não existem no cache.  
+-   Algumas instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] não são colocadas em cache, como instruções de operação em massa ou instruções que contêm literais de cadeia de caracteres maiores que 8 KB. Planos de execução XML para tais instruções não podem ser recuperados usando **. DM exec_query_plan** , a menos que o lote está em execução porque eles não existem no cache.  
   
--   Se um [!INCLUDE[tsql](../../includes/tsql-md.md)] lote ou procedimento armazenado contém uma chamada para uma função definida pelo usuário ou uma chamada para SQL dinâmico, por exemplo, usando EXEC (*cadeia de caracteres*), o XML Showplan compilado para a função definida pelo usuário não está incluída na tabela retornado por **sys.DM exec_query_plan** para o lote ou procedimento armazenado. Em vez disso, você deve fazer uma chamada separada para **sys.DM exec_query_plan** para o identificador de plano que corresponde à função definida pelo usuário.  
+-   Se um [!INCLUDE[tsql](../../includes/tsql-md.md)] lote ou procedimento armazenado contém uma chamada para uma função definida pelo usuário ou uma chamada para SQL dinâmico, por exemplo, usando EXEC (*cadeia de caracteres*), o XML Showplan compilado para a função definida pelo usuário não está incluída na tabela retornado por **. DM exec_query_plan** para o lote ou procedimento armazenado. Em vez disso, você deve fazer uma chamada separada para **. DM exec_query_plan** para o identificador de plano que corresponde à função definida pelo usuário.  
   
- Quando uma consulta ad hoc usa parametrização simple ou forçada, o **query_plan** coluna conterá apenas o texto da instrução e não o plano de consulta real. Para retornar o plano de consulta, chame **sys.DM exec_query_plan** do identificador do plano de consulta parametrizada preparada. Você pode determinar se a consulta foi parametrizada referenciando a **sql** coluna o [syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) exibição ou a coluna de texto a [dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)exibição de gerenciamento dinâmico.  
+ Quando uma consulta ad hoc usa parametrização simples ou forçada, o **query_plan** coluna conterá apenas o texto da instrução e não o plano de consulta real. Para retornar o plano de consulta, chame **. DM exec_query_plan** do identificador do plano de consulta parametrizada preparada. Você pode determinar se a consulta foi parametrizada referenciando a **sql** coluna da [sys. syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) modo de exibição ou a coluna de texto o [DM exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)exibição de gerenciamento dinâmico.  
   
- Devido a uma limitação no número de níveis aninhados permitida no **xml** tipo de dados, **sys.DM exec_query_plan** não pode retornar planos de consulta que atendem ou excedem 128 níveis de elementos aninhados. Em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta condição evitava que o plano de consulta retornasse e gerasse um erro 6335. Em [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 e versões posteriores, o **query_plan** coluna retorna NULL. Você pode usar o [sys.DM exec_text_query_plan &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md) a função de gerenciamento dinâmico para retornar a saída do plano de consulta em formato de texto.  
+ Devido a uma limitação no número de níveis aninhados permitida na **xml** tipo de dados **. DM exec_query_plan** não pode retornar planos de consulta que atendem ou excedem 128 níveis de elementos aninhados. Em versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta condição evitava que o plano de consulta retornasse e gerasse um erro 6335. Na [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 e versões posteriores, o **query_plan** coluna retorna NULL. Você pode usar o [DM exec_text_query_plan &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md) a função de gerenciamento dinâmico para retornar a saída do plano de consulta em formato de texto.  
   
 ## <a name="permissions"></a>Permissões  
- Para executar **sys.DM exec_query_plan**, um usuário deve ser um membro do **sysadmin** função de servidor fixa ou ter a permissão VIEW SERVER STATE no servidor.  
+ Para executar **. DM exec_query_plan**, um usuário deve ser um membro do **sysadmin** função de servidor fixa ou ter a permissão VIEW SERVER STATE no servidor.  
   
 ## <a name="examples"></a>Exemplos  
- Os exemplos a seguir mostram como usar o **sys.DM exec_query_plan** exibição de gerenciamento dinâmico.  
+ Os exemplos a seguir mostram como usar o **. DM exec_query_plan** exibição de gerenciamento dinâmico.  
   
- Para exibir os planos de execução XML, execute as seguintes consultas no Editor de consultas de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], em seguida, clique em **ShowPlanXML** no **query_plan** coluna da tabela retornada por **sys.dm_ exec_query_plan**. O plano de execução XML é exibido no painel de resumo do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Para salvar o plano de execução XML em um arquivo, clique com botão direito **ShowPlanXML** no **query_plan** coluna, clique em **salvar resultados como**, nomeie o arquivo no formato \< *file_name*>. sqlplan; por exemplo, Myxmlshowplan.  
+ Para exibir os planos de execução XML, execute as seguintes consultas no Editor de consultas do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], em seguida, clique em **ShowPlanXML** no **query_plan** coluna da tabela retornada por **sys exec_query_plan**. O plano de execução XML é exibido no painel de resumo do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Para salvar o plano de execução XML em um arquivo, clique com botão direito **ShowPlanXML** na **query_plan** coluna, clique em **salvar resultados como**, nomeie o arquivo no formato \< *file_name*>. sqlplan; por exemplo, Myxmlshowplan.  
   
 ### <a name="a-retrieve-the-cached-query-plan-for-a-slow-running-transact-sql-query-or-batch"></a>A. Recuperar o plano de consulta em cache para uma consulta ou lote Transact-SQL de execução lenta  
- Planos de Consulta para vários tipos de lotes [!INCLUDE[tsql](../../includes/tsql-md.md)], como lotes ad hoc, procedimentos armazenados e funções definidas pelo usuário, são colocados em cache em uma área da memória denominada cache de plano. Cada plano de consulta em cache é identificado por um identificador exclusivo chamado de identificador de plano. Você pode especificar esse identificador de plano com a **sys.DM exec_query_plan** exibição de gerenciamento dinâmico para recuperar o plano de execução para um determinado [!INCLUDE[tsql](../../includes/tsql-md.md)] consulta ou lote.  
+ Planos de Consulta para vários tipos de lotes [!INCLUDE[tsql](../../includes/tsql-md.md)], como lotes ad hoc, procedimentos armazenados e funções definidas pelo usuário, são colocados em cache em uma área da memória denominada cache de plano. Cada plano de consulta em cache é identificado por um identificador exclusivo chamado de identificador de plano. Você pode especificar esse identificador de plano com o **. DM exec_query_plan** exibição de gerenciamento dinâmico para recuperar o plano de execução para um determinado [!INCLUDE[tsql](../../includes/tsql-md.md)] consulta ou lote.  
   
  Se uma consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] ou lote for executado por muito tempo em uma determinada conexão com [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], recupere o plano de execução para essa consulta ou lote para descobrir o que está causando o retardo. O exemplo a seguir mostra como recuperar o plano de execução XML para uma consulta ou lote de execução lenta.  
   
 > [!NOTE]  
->  Para executar esse exemplo, substitua os valores de *session_id* e *plan_handle* com valores específicos de seu servidor.  
+>  Para executar este exemplo, substitua os valores para *session_id* e *plan_handle* com valores específicos ao seu servidor.  
   
  Primeiramente, recupere a identificação de processo do servidor (SPID) para o processo que está executando a consulta ou lote usando o procedimento armazenado `sp_who`:  
   
@@ -115,7 +112,7 @@ WHERE session_id = 54;
 GO  
 ```  
   
- A tabela que é retornada por **exec_requests** indica que o identificador de plano para a consulta ou lote em execução lenta é `0x06000100A27E7C1FA821B10600`, que você pode especificar como o *plan_handle* argumento com `sys.dm_exec_query_plan` para recuperar o plano de execução em formato XML como se segue. O plano de execução em formato XML para a consulta ou lote em execução lenta é contido no **query_plan** coluna da tabela retornada por `sys.dm_exec_query_plan`.  
+ A tabela que é retornada por **. DM exec_requests** indica que o identificador de plano para a consulta ou lote em execução lenta é `0x06000100A27E7C1FA821B10600`, que você pode especificar como o *plan_handle* argumento com `sys.dm_exec_query_plan` para recuperar o plano de execução em formato XML da seguinte maneira. O plano de execução em formato XML para a consulta ou lote em execução lenta é contido na **query_plan** coluna da tabela retornada por `sys.dm_exec_query_plan`.  
   
 ```  
 USE master;  

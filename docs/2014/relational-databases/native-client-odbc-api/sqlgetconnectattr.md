@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
 helpviewer_keywords:
 - SQLGetConnectAttr function
 ms.assetid: 26e4e69a-44fd-45e3-b47a-ae39184f041b
-caps.latest.revision: 60
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b31b14603777a98a623dbd80144d400a069a2136
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 5f62ec88ad7dc3ad7837a73b57abd215be29c3e3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37415665"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089416"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
   O driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client define atributos de conexão específicos de driver. Alguns dos atributos estão disponíveis para `SQLGetConnectAttr`, e a função é usada para informar as configurações atuais. Os valores informados em relação a esses atributos não são garantidos até depois que uma conexão seja estabelecida ou o atributo foi definido usando [SQLSetConnectAttr](sqlsetconnectattr.md).  

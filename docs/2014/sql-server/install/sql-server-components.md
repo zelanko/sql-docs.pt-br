@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Upgrade Advisor, components
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - analyzing system [Upgrade Advisor], component list
 - identifying components to analyze
 ms.assetid: 539b9525-ce3f-4950-9146-5527a5a297ee
-caps.latest.revision: 41
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 99998b5b9e24de92f826a73941bf6b86e5ad4318
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 546a9908791972564cd5cf749eb9e189753602c8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37177113"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48098646"
 ---
 # <a name="sql-server-components"></a>Componentes do SQL Server
   Você pode executar o Assistente de análise do Supervisor de atualização em um computador local ou remoto que tenha [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] instalado. A primeira etapa da análise de pré-atualização é identificar o computador e os componentes que serão analisados.  
@@ -54,7 +51,7 @@ ms.locfileid: "37177113"
   
  Se for verificar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], você deve especificar o nome do computador local. O Supervisor de Atualização verifica somente os servidores de relatório locais.  
   
- **Detectar**  
+ **detectar**  
  O **detectar** botão acessa o computador especificado e detecta os componentes para analisar:  
   
 -   Se você estiver analisando uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um computador remoto, deverá habilitar os serviços de Registro remoto no computador remoto.  

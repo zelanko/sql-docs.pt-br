@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data source views [Analysis Services]
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - multiple data source views
 - SSAS, data source views
 ms.assetid: 4c12376f-4fc2-492b-9a00-93eec34571ed
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e11f6d77229b81bd2ccb3fb6eebad16da7731ce8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6c9f4a8c8c968bcd7a633b943ea8c42b08662a50
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37271862"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48126106"
 ---
 # <a name="data-source-views-in-multidimensional-models"></a>Exibições de fontes de dados em modelos multidimensionais
   Uma DSV (exibição da fonte de dados) é uma abstração de uma fonte de dados relacional que se torna a base dos cubos e das dimensões que você cria em um projeto multidimensional. A finalidade de uma DSV é conceder o controle sobre as estruturas de dados usadas em seu projeto e funcionar independentemente das fontes de dados subjacentes (por exemplo, a capacidade de renomear ou concatenar colunas sem modificar diretamente a fonte de dados original).  

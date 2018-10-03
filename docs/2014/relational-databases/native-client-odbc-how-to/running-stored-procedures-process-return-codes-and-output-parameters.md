@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - return codes [ODBC]
 - output parameters [ODBC]
 ms.assetid: 102ae1d0-973d-4e12-992c-d844bf05160d
-caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d8f5eab232d9651375ea9cd2857a8b8bb9129e88
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 19a151435ec23ae2e445d80e510c5bca7b066e04
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37422525"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48118706"
 ---
 # <a name="process-return-codes-and-output-parameters-odbc"></a>Processar códigos de retorno e parâmetros de saída (ODBC)
   Os procedimentos armazenados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ter códigos de retorno e parâmetros de saída inteiros. Os códigos de retorno e parâmetros de saída são enviados no último pacote do servidor e não estão disponíveis para o aplicativo até que [SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md) retorne SQL_NO_DATA. Se um erro for retornado por um procedimento armazenado, chame o SQLMoreResults para Avançar para o próximo resultado até que SQL_NO_DATA seja retornado.  

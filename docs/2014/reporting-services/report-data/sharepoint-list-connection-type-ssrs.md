@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
-caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 129fabab52b2e7b7e59cf832d21e25972cb9b07a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 09adbf8ca6fb16becd98b94c15f93052c003abb2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37260392"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116337"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>Conexões de conexão de lista do SharePoint (SSRS)
   Para incluir dados de uma lista do Microsoft SharePoint no relatório, você deve adicionar ou criar um conjunto de dados baseado em uma fonte de dados de relatório do tipo Lista do Microsoft SharePoint. Esse é um tipo de fonte de dados interna baseado na extensão de dados Lista do SharePoint do Microsoft SQL Server Reporting Services. Use esse tipo de fonte de dados para se conectar e recuperar dados de lista dos sites do [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], [!INCLUDE[SPS2010](../../includes/sps2010-md.md)], do [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 e do [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007.  

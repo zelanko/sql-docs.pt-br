@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - access controls [Reporting Services]
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - security [Reporting Services], role-based
 - identity [Reporting Services]
 ms.assetid: eea655fe-43ed-418d-8233-b288a8f4daa4
-caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 4d373ed35e148bc7994ab88221b71152f6b10e8e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4f9364b2c15adc07e7d265434678eca573537567
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280522"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116837"
 ---
 # <a name="roles-and-permissions-reporting-services"></a>Funções e permissões (Reporting Services)
   O Reporting Services fornece um subsistema de autenticação e modelo de autorização com base na função. Os modelos de autenticação e autorização variam, dependendo se o servidor de relatório é executado no modo nativo ou no modo do SharePoint. Se o servidor de relatório fizer parte de uma implantação do SharePoint, as permissões do SharePoint determinarão quem tem acesso ao servidor de relatório.  

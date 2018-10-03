@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client ODBC driver, bulk copy
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - minimally logged operations [SQL Server Native Client]
 - bulk copy [ODBC], about bulk copy
 ms.assetid: 5c793405-487c-4f52-88b8-0091d529afb3
-caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ef27718464b59f29d28c61a1fb9fb97566e32d74
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 25144e13b4e129209356d0e4e4ebe37f9a3c5d1c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37421795"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48102186"
 ---
 # <a name="performing-bulk-copy-operations-odbc"></a>Executando operações de cópia em massa (ODBC)
   O padrão ODBC não dá suporte diretamente a operações de cópia em massa do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando conectado a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versão 7.0 ou posterior, o driver ODBC do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client dá suporte às funções DB-Library que executam operações de cópia em massa do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta extensão específica do driver fornece um caminho de atualização fácil para aplicativos DB-Library existente que usam funções de cópia em massa. O suporte especializado à cópia em massa se encontra nos seguintes arquivos:  
@@ -49,7 +46,7 @@ ms.locfileid: "37421795"
   
  Para obter informações sobre como usar o registro em log mínimo, consulte [pré-requisitos para registro em log mínimo em importação em massa](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Ao usar o bcp.exe no [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou posterior, você pode obter erros em situações onde não havia erros antes do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Isto se deve ao fato de, nas versões posteriores, o bcp.exe não executar mais a conversão implícita de tipo de dados. Antes do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], o bcp.exe convertia dados numéricos em um tipo de dados money, se a tabela de destino tivesse um tipo de dados money. Porém, nessa situação, o bcp.exe simplesmente truncava os campos extras. A partir do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], se os dados de tipos não correspondem entre o arquivo e a tabela de destino, bcp.exe gerará um erro se não houver nenhum dado que teria que ser truncado para se ajustar à tabela de destino. Para resolver este erro, corrija os dados para que correspondam ao tipo de dados de destino. Opcionalmente, use o bcp.exe de uma versão anterior ao [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
 ## <a name="in-this-section"></a>Nesta seção  

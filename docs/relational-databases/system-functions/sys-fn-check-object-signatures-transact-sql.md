@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine, pdw
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.fn_check_object_signatures_TSQL
@@ -20,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.fn_check_object_signatures function
 ms.assetid: 47509566-d3d7-46a9-89c1-91b4895d56b9
-caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 169874556872404448fbb6c4d826513dc7261fa9
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: dc6d8bb4c3318f488c7969359c6aa8b18782b6cb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43067887"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47800954"
 ---
 # <a name="sysfncheckobjectsignatures-transact-sql"></a>sys.fn_check_object_signatures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -72,7 +68,7 @@ fn_ check_object_signatures (
 |is_signed|**int**|Retorna 0 quando o objeto não foi assinado pela impressão digital fornecida. Retorna 1 quando o objeto foi assinado pela impressão digital fornecida.|  
 |is_signature_valid|**int**|Quando o valor de is_signed é 1, retorna 0 quando a assinatura não é válida. Retorna 1 quando a assinatura é válida.<br /><br /> Quando o valor de is_signed é 0, sempre retorna 0.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Use **fn_check_object_signatures** para confirmar que usuários mal-intencionados não alterados com objetos.  
   
 ## <a name="permissions"></a>Permissões  

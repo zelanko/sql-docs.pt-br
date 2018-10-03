@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - dates [Integration Services], MONTH
 - MONTH function
 ms.assetid: b5a47a11-c2ef-49bd-bd70-235632ff7bf6
-caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ac7362079175711c7027919abccf246670497545
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d4106fed90fd370ee30a6bb3a5ad2be5324caddf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37173077"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48102476"
 ---
 # <a name="month-ssis-expression"></a>MONTH (Expressão SSIS)
   Retorna um número inteiro que representa a parte do mês de uma data.  
@@ -41,7 +38,7 @@ MONTH(date)
 ## <a name="result-types"></a>Tipos de resultado  
  DT_I4  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  MONTH retornará um resultado nulo se o argumento for nulo.  
   
  Um literal de data deve ser convertido explicitamente em um dos tipos de dados de data. Para obter mais informações, consulte [Integration Services Data Types](../data-flow/integration-services-data-types.md).  

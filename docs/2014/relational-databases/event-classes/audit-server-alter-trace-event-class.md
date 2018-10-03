@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Audit Server Alter Trace event class
 ms.assetid: 967586bf-d5f1-466c-82ab-8c461bfb6222
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 791410e55eaec2c89410c04fe047ed92570bec0b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fd2924d10460f548b676ef900870941a92e2732f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37182323"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48126556"
 ---
 # <a name="audit-server-alter-trace-event-class"></a>Classe de evento Audit Server Alter Trace
   A classe de evento **Audit Server Alter Trace** ocorre em todas as instruções que verificam a permissão ALTER TRACE. As instruções que verificam ALTER TRACE incluem aquelas usadas para criar ou configurar um rastreamento ou para definir um filtro em um rastreamento.  

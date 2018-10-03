@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - IBCPSession::BCPDone (OLE DB)
@@ -15,16 +13,15 @@ topic_type:
 helpviewer_keywords:
 - BCPDone method
 ms.assetid: 19cd6e55-432a-450e-a15c-54d50eb53dee
-caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 50f7fe4d747692ff11ffa130bf48b88d3252c994
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: ecbf8d8b11e0804c3621163d38e243bd78259e43
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37420705"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48137576"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
   Confirma as linhas restantes a serem enviadas ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -36,8 +33,8 @@ ms.locfileid: "37420705"
 HRESULT BCPDone(void);  
 ```  
   
-## <a name="remarks"></a>Remarks  
- Nenhuma outra operação pode ser chamada na [IBCPSession](ibcpsession-ole-db.md) interface após a chamada a **BCPDone** método. A única possibilidade é chamar o [ibcpsession:: BCPInit](ibcpsession-bcpinit-ole-db.md) método para iniciar uma nova operação de cópia em massa. Isso é semelhante a chamar o [IRowsetFastLoad:: Commit](irowsetfastload-commit-ole-db.md) método.  
+## <a name="remarks"></a>Comentários  
+ Nenhuma outra operação pode ser chamada na interface [IBCPSession](ibcpsession-ole-db.md) após a chamada ao método **BCPDone**. A única possibilidade é chamar o método [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md) para iniciar uma nova operação de cópia em massa. Isso é semelhante à chamada ao método [IRowsetFastLoad::Commit](irowsetfastload-commit-ole-db.md).  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  S_OK  
@@ -65,7 +62,7 @@ insert into fltest values (4, 4, 0xFAD)
   
  Você pode usar BCP para adicionar estes dados novamente à tabela com o comando a seguir:  
   
- **BCP master... fltest em outfile - n -T -S** *server*  
+ **bcp master..fltest em outfile.dat -n -T -S** *server*  
   
  É necessário especificar sqlncli11.lib ao compilar este exemplo.  
   

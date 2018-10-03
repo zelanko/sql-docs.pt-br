@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SOAP [Reporting Services], Web applications
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - report servers [Reporting Services], SOAP
 - Web applications [Reporting Services]
 ms.assetid: e8ca4455-0dc3-4741-8872-3636114938ad
-caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: befd0c7215ac2b765e898c440aab8a184626aaa0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3853fd48c75cfeb6ec786b0d7d7518112fe07f61
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37170117"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48056316"
 ---
 # <a name="using-the-soap-api-in-a-web-application"></a>Usando a API SOAP em um aplicativo Web
   Você pode acessar a funcionalidade completa do servidor de relatório por meio da API SOAP do Reporting Services. Por ser um serviço Web, a API SOAP pode ser acessada facilmente para fornecer os recursos de relatórios corporativos para seus aplicativos comerciais personalizados. Você acessa o serviço Web do servidor de relatório a partir de um aplicativo Web da mesma forma que acessa a API SOAP de um aplicativo do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Usando o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], você pode gerar uma classe proxy que expõe as propriedades e os métodos do serviço Web Servidor de Relatórios e que permite usar uma infraestrutura e ferramentas conhecidas para criar aplicativos de negócios na tecnologia do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  

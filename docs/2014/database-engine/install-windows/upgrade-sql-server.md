@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - upgrading SQL Server
 ms.assetid: 5064e35b-b70d-4a0b-a9e9-fff04162f9d2
-caps.latest.revision: 33
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b5c7262807cddc848c12e08988e1d28cb0965279
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8db84e6e3a2de3133a933de755edbd14da62f15f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37203938"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48087436"
 ---
 # <a name="upgrade-to-sql-server-2014"></a>Atualizar para o SQL Server 2014
   Você pode atualizar instâncias do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Antes de executar a Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para atualizar para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], confira o [Guia Técnico de Atualização do SQL Server 2014](http://download.microsoft.com/download/7/1/5/715BDFA7-51B6-4D7B-AF17-61E78C7E538F/SQL_Server_2014_Upgrade_technical_guide.pdf) (download em PDF), consulte os tópicos sobre o processo de atualização nesta seção e leia as o [Notas de Versão do SQL Server 2014](http://go.microsoft.com/fwlink/?LinkID=296445).  

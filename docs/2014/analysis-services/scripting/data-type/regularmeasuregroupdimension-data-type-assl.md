@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - RegularMeasureGroupDimension Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - RegularMeasureGroupDimension data type
 ms.assetid: 5c4ce400-6d7c-40fc-9bcb-392718b77182
-caps.latest.revision: 39
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 20ac4c8ddf1d9acba769b0e6931d15b1c8a94647
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 072ada60b803f4c8adfde73a228144a4d0157dff
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37163477"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48051806"
 ---
 # <a name="regularmeasuregroupdimension-data-type-assl"></a>Tipo de dados RegularMeasureGroupDimension (ASSL)
   Define um tipo de dados derivado que representa uma relação regular entre uma dimensão e um grupo de medidas.  
@@ -57,11 +54,11 @@ ms.locfileid: "37163477"
   
 |Relação|Elemento|  
 |------------------|-------------|  
-|Elementos pai|Nenhum|  
+|Elementos pai|None|  
 |Elementos filho|[Atributos](../collections/attributes-element-assl.md), [cardinalidade](../properties/cardinality-element-assl.md)|  
 |Elementos derivados|[Dimensão](../objects/dimension-element-assl.md) ([dimensões](../collections/dimensions-element-assl.md) coleção)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O elemento correspondente no modelo de objeto Analysis Management Objects (AMO) é <xref:Microsoft.AnalysisServices.RegularMeasureGroupDimension>.  
   
 ## <a name="see-also"></a>Consulte também  

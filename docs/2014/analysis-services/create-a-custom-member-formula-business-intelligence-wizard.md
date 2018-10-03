@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.enablecustommemberformula.selectacolumn.f1
 ms.assetid: 5b9b2d93-0798-4bac-bbd3-c657e09d9883
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 31e6109367041f8fa810f2048dda3c23aa259833
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 06943ba0892799275fa6c1c479f9066d2e34f3e9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37226516"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48054376"
 ---
 # <a name="create-a-custom-member-formula-business-intelligence-wizard"></a>Criar uma Fórmula de Membro Personalizado (Assistente de Business Intelligence)
   Use a página **Criar uma Fórmula de Membro Personalizado** para associar atributos na dimensão especificada a colunas de fórmula de membro personalizado, colunas que contêm instruções MDX que definem valores de membros para aquele atributo.  

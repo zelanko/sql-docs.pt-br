@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - SetDefaults Method (ServerSettings Class)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - SetDefaults method
 ms.assetid: 76e4cfab-4b15-4da4-bb2f-8aac6f927f79
-caps.latest.revision: 14
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7f42f7149b20dc51149dcece77bb076e32b4109b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8454317ff08a4576970c2ffc448605ac5825f1d1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37297946"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48080136"
 ---
 # <a name="setdefaults-method-serversettings-class"></a>Método SetDefaults (classe ServerSettings)
   Define todos os valores padrão para a instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] com a opção de substituir dados existentes.  
@@ -57,7 +54,7 @@ OverwriteAll
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
  Um valor u`int32`, que é 0 se o serviço tiver sido modificado com êxito, 1 se a solicitação não tiver suporte e qualquer outro número para indicar um erro.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 ## <a name="see-also"></a>Consulte também  
  [Configurando protocolos de rede do servidor e bibliotecas de rede](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

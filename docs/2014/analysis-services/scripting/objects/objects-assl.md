@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - ASSL, objects
 - objects [Analysis Services Scripting Language]
 - Analysis Services Scripting Language, objects
 ms.assetid: 0f672b93-c317-47e5-b44d-ecea9b587c98
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 87b6cf55c658b3f381f5b575d565b1892b454362
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 302ad689a3e54a7a9937929b9c20f975fc3cd98f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267552"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48079606"
 ---
 # <a name="objects-assl"></a>Objetos (ASSL)
   Esta seção de referência contém informações de sintaxe e uso de cada elemento que age como um objeto no esquema ASSL (Analysis Services Scripting Language).  

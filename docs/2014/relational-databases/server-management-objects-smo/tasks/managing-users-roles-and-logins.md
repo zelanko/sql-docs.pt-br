@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - logins [SMO]
 - roles [SMO]
 - users [SMO]
 ms.assetid: 74e411fa-74ed-49ec-ab58-68c250f2280e
-caps.latest.revision: 42
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c14e955bd2f2e0442cde266bb9bf56f4b9caed3c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 36119391ebd552e1b3553e94ba3fcf0634887560
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37199166"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48134576"
 ---
 # <a name="managing-users-roles-and-logins"></a>Gerenciando usuários, funções e logons
   No SMO, os logons são representados pelo objeto <xref:Microsoft.SqlServer.Management.Smo.Login>. Quando o logon existir no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], ele poderá ser adicionado a uma função de servidor. A função de servidor é representada pelo <xref:Microsoft.SqlServer.Management.Smo.ServerRole> objeto. A função de banco de dados é representada pelo objeto <xref:Microsoft.SqlServer.Management.Smo.DatabaseRole> e a função de aplicativo é representada pelo objeto <xref:Microsoft.SqlServer.Management.Smo.ApplicationRole>.  

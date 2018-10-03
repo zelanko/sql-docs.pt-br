@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 9623013f-15f1-4614-8dac-1155e57c880c
-caps.latest.revision: 12
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 892a950795569b87f5a09d4b30aa5b171b26321e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e5fa9fa472541b764a046e418f99b15028b81b56
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37275092"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089206"
 ---
 # <a name="string-utility-functions-sample"></a>Exemplo Funções de utilitário de cadeia de caracteres
   O exemplo Utilitários de Cadeia de Caracteres contém uma função de streaming com valor de tabela gravada em Visual C# e Visual Basic, que divide uma cadeia de caracteres separada por vírgula em uma tabela com uma coluna. Ele também contém uma função de agregação que converte uma coluna de cadeia de caracteres em uma cadeia de caracteres separada por vírgula.  Além disso, estão implementadas uma função escalar e uma função com valor de tabela, que fornece a funcionalidade de substituição de expressão regular e pesquisa de expressão regular.  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10157"
 - sql12.rtp.rptdesigner.chartareaproperties.alignment.f1
 ms.assetid: dc3c365b-c263-402a-bf6f-c2a7081db073
-caps.latest.revision: 5
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 53bf187b7a41ffdcb3dfc474daa4ce8dcf2bd4aa
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 34337c9418151e873726e5b04fd62e41f18c004c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153707"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48100316"
 ---
 # <a name="specify-a-chart-area-for-a-series-report-builder-and-ssrs"></a>Especificar uma área do gráfico para uma série (Construtor de Relatórios e SSRS)
   O gráfico é o contêiner de nível superior que inclui a borda exterior, o título e a legenda do gráfico. Por padrão, o gráfico contém uma área de gráfico padrão. A área do gráfico não é visível na superfície do gráfico, mas você pode imaginá-la como um contêiner que inclui somente os rótulos e o título dos eixos e a área de plotagem de uma ou mais séries. A ilustração a seguir mostra o conceito de áreas de gráfico dentro de um único gráfico.  

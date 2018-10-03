@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - row Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - row element
 ms.assetid: 4d9977a0-c396-44c7-9fd4-97f4c3d643aa
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 17bc202bb7e1d2c0701b478409b02f4bbb160958
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 45bda6938dd98dae305c7143af39fd7d4bfd4142
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37223986"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096867"
 ---
 # <a name="row-element-xmla"></a>Elemento row (XMLA)
   Contém uma única linha de dados para um [raiz](root-element-xmla.md) elemento que contém dados tabulares retornados por uma [Discover](../xml-elements-methods-discover.md) ou [Execute](../xml-elements-methods-execute.md) chamada de método.  
@@ -52,8 +49,8 @@ ms.locfileid: "37223986"
   
 |Característica|Description|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|Nenhum|  
-|Valor padrão|Nenhum|  
+|Comprimento e tipo de dados|None|  
+|Valor padrão|None|  
 |Cardinalidade|0-n: Elemento opcional que pode ocorrer mais de uma vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -63,7 +60,7 @@ ms.locfileid: "37223986"
 |Elementos pai|[raiz](root-element-xmla.md) (usando o [conjunto de linhas](../xml-data-types/rowset-data-type-xmla.md) tipo de dados)|  
 |Elementos filho|Um ou mais elementos de coluna.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Cada linha retornada por um elemento `root` que contém dados tabulares tem um elemento `row` correspondente. Cada coluna no elemento `root` é representada por um elemento XML separado. O valor da coluna para o elemento `row` equivale aos dados contidos pelo elemento XML e o nome da coluna corresponde ao nome do elemento XML.  
   
  Há dois modos para expressar um valor nulo para uma coluna em uma linha:  

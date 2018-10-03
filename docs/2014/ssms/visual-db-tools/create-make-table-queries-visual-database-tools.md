@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], types
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Make Table query
 - adding tables
 ms.assetid: 4493cffa-7b2d-4c24-8ef0-d49329198972
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5784a37090427564be20e2c43bb7df351a38fa8d
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: b965aa05819d38a5243385da12c081128dec6bf4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43809852"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48101166"
 ---
 # <a name="create-make-table-queries-visual-database-tools"></a>Criar consultas Criar Tabela (Visual Database Tools)
   Você pode copiar linhas em uma tabela nova utilizando uma consulta Criar Tabela, que é útil para criar subconjuntos de dados para trabalhar ou copiar o conteúdo de uma tabela de um banco de dados para outro. Uma consulta Criar Tabela é semelhante a uma consulta Inserir Resultados, porém cria uma nova tabela para copiar as linhas.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Sources Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Sources element
 ms.assetid: fefe8f01-4c62-4b70-9bf6-f11d2f01623a
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1aae2aca405aaabce130400d4d5896a6ae823851
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1e03eb7156b05236d302c8e1bff54932a357cf2f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304166"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48109756"
 ---
 # <a name="sources-element-xmla"></a>Elemento Sources (XMLA)
   Contém uma coleção de [fonte](source-element-xmla.md) elementos pai [MergePartitions](../xml-elements-commands/mergepartitions-element-xmla.md) elemento.  
@@ -54,8 +51,8 @@ ms.locfileid: "37304166"
   
 |Característica|Description|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|Nenhum|  
-|Valor padrão|Nenhum|  
+|Comprimento e tipo de dados|None|  
+|Valor padrão|None|  
 |Cardinalidade|1-1: elemento obrigatório que ocorre apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -65,7 +62,7 @@ ms.locfileid: "37304166"
 |Elementos pai|[MergePartitions](../xml-elements-commands/mergepartitions-element-xmla.md)|  
 |Elementos filho|[Origem](source-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 ## <a name="example"></a>Exemplo  
  O exemplo a seguir combina as quatro partições do grupo de medidas `Internet Sales` na partição de destino `Internet_Sales_2004` . O exemplo usa o cubo Adventure Works DW do banco de dados [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)]de exemplo do [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  

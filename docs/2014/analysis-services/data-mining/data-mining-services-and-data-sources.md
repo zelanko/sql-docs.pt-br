@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b26fd6e3-7d87-4f66-ab47-5303b51b87da
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3289ecf95c61c21942ba075b8eb20e3db074e870
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0f74492fc0d177ba87fe29dc73a5cd67e9663a61
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37297466"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48090966"
 ---
 # <a name="data-mining-services-and-data-sources"></a>Serviços de mineração de dados e fontes de dados
   A mineração de dados requer uma conexão com uma instância do SQL Server Analysis Services. Os dados de um cubo não são necessários para a mineração de dados e o uso de fontes relacionais é recomendado; porém, a mineração de dados usa componentes fornecidos pelo mecanismo do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  

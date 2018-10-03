@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - OLE DB, transactions
@@ -17,23 +15,22 @@ helpviewer_keywords:
 - ITransactionJoin interface
 - MS DTC, about distributed transaction support
 ms.assetid: d250b43b-9260-4ea4-90cc-57d9a2f67ea7
-caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: be4fa798483927e89f7154d371caaa1f59d73ee7
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: b35715487638a21e71f76788650b3238a3c9290c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37409585"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061087"
 ---
 # <a name="supporting-distributed-transactions"></a>Dando suporte a transações distribuídas
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Consumidores do provedor de dados OLE DB nativos podem usar o **itransactionjoin:: Jointransaction** método participem de uma transação distribuída coordenada pelo Microsoft Distributed Transaction Coordinator (MS DTC).  
   
- O MS DTC expõe objetos COM que permitem que os clientes iniciem e participem de transações coordenadas através de várias conexões com vários repositórios de dados. Para iniciar uma transação, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consumidor do provedor OLE DB do Native Client usa o MS DTC **ITransactionDispenser** interface. O **BeginTransaction** membro **ITransactionDispenser** retorna uma referência em um objeto de transação distribuída. Essa referência é passada para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB do Native Client usando **JoinTransaction**.  
+ O MS DTC expõe objetos COM que permitem que os clientes iniciem e participem de transações coordenadas através de várias conexões com vários repositórios de dados. Para iniciar uma transação, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consumidor do provedor OLE DB do Native Client usa o MS DTC **ITransactionDispenser** interface. O membro **BeginTransaction** de **ITransactionDispenser** retorna uma referência a um objeto de transação distribuída. Essa referência é passada para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provedor do OLE DB do Native Client usando **JoinTransaction**.  
   
- O MS DTC dá suporte à confirmação e à anulação assíncronas de transações distribuídas. Para a notificação de status da transação assíncrona, o consumidor implementa a **ITransactionOutcomeEvents** de interface e conecta-se a interface para um objeto de transação do MS DTC.  
+ O MS DTC dá suporte à confirmação e à anulação assíncronas de transações distribuídas. Para obter a notificação do status da transação assíncrona, o consumidor implementa a interface **ITransactionOutcomeEvents** e a conecta a um objeto de transação do MS DTC.  
   
  Para transações distribuídas, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB do Native Client provedor implementa **itransactionjoin:: Jointransaction** parâmetros da seguinte maneira.  
   

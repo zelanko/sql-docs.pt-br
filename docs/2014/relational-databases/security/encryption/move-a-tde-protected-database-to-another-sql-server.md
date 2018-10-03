@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Transparent Data Encryption, moving
 - TDE, moving a database
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
-caps.latest.revision: 15
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 7bb389ff9f94a60607f30355ec5cf8ff5872b5ad
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 55c88228de170336fec7ecd24f5acb17851fdea1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37266302"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48132932"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Mover um banco de dados protegido por TDE para outro SQL Server
   Este tópico descreve como proteger um banco de dados usando TDE (criptografia de dados transparente) e, em seguida, mover o banco de dados para outra instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. A TDE realiza a criptografia e a descriptografia de E/S em tempo real dos arquivos de dados e de log. A criptografia usa uma DEK (chave de criptografia do banco de dados), que é armazenada no registro de inicialização do banco de dados para disponibilidade durante a recuperação. A DEK é uma chave simétrica protegida por um certificado armazenado no banco de dados `master` do servidor ou uma chave assimétrica protegida por um módulo EKM.  

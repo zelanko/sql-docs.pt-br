@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Type Element (Dimension)
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Type element
 ms.assetid: 6a2798b1-26c7-49d8-b556-e681c69d9574
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c6afa3b273200630a4d36e0c4df679c58efb6bd5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ab2d68ab78b31373e08185c3ee816241fe82bbd1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37283942"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48117616"
 ---
 # <a name="type-element-dimension-assl"></a>Elemento Type (Dimension) (ASSL)
   Fornece informações sobre o conteúdo da dimensão.  
@@ -59,9 +56,9 @@ ms.locfileid: "37283942"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elemento pai|[Dimension](../objects/dimension-element-assl.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Alguns valores para `Type`, por exemplo *contas*, determinam um comportamento específico.  
   
  O valor desse elemento é limitado a uma das cadeias de caracteres listadas na tabela a seguir.  
@@ -79,7 +76,7 @@ ms.locfileid: "37283942"
 |*Cenário*|A dimensão contém atributos relacionados ao cenário.|  
 |*Quantitativa*|A dimensão contém atributos quantitativos.|  
 |*Utilitário*|A dimensão contém atributos de utilitário.|  
-|*Moeda*|A dimensão contém atributos de moeda.|  
+|*moeda*|A dimensão contém atributos de moeda.|  
 |*Taxas*|A dimensão contém atributos de taxa de câmbio.|  
 |*Canal*|A dimensão contém atributos de canal.|  
 |*Promoção*|A dimensão contém atributos relacionados à promoção.|  

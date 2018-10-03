@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying subscriptions
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - pull subscriptions [SQL Server replication], properties
 - modifying subscriptions, SQL Server Management Studio
 ms.assetid: 1601e54f-86f0-49e8-b023-87a5d1def033
-caps.latest.revision: 36
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c6bffdbc7778d6819009873599b7a196f580b86e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ab2dd19449e83468063e3e191c816cf1cfe4c755
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37201176"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48112929"
 ---
 # <a name="view-and-modify-pull-subscription-properties"></a>Exibir e modificar propriedades de assinatura pull
   Este tópico descreve como exibir e modificar propriedades de assinatura pull no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], ou RMO (Replication Management Objects).  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.categorygroupproperties.filters.f1
@@ -17,16 +15,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.chartproperties.filters.f1
 - "10165"
 ms.assetid: fab97b2f-d53f-42f2-900c-c159653d89ed
-caps.latest.revision: 14
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3123a7c1ba3a520ad743ffe7dbd65dfd57443672
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 64dda9e4da8e5045466b63410c9c19788dc48fc9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37317896"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116326"
 ---
 # <a name="filters-page-chart-dialog-boxes-report-builder-and-ssrs"></a>Página Filtros, caixas de diálogo de Gráficos (Construtor de Relatórios e SSRS)
   Clique em **filtros** na:  

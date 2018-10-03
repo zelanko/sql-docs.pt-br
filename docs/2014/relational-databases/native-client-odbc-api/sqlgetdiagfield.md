@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
 helpviewer_keywords:
 - SQLGetDiagField function
 ms.assetid: 395245ba-0372-43ec-b9a4-a29410d85a6d
-caps.latest.revision: 36
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8fcb95ada7482f48f9316d02553bba9aab4867fc
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 20b84484500e338136ff0ab99af7890d06a466e3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37421885"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48109508"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
   O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client Especifica os seguintes campos de diagnósticos adicionais para `SQLGetDiagField`. Esses campos suportam relatórios bem-elaborados de erros para os aplicativos do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e estão disponíveis em todos os registros de diagnóstico gerados em identificadores de conexão conectados ODBC e identificadores de instrução ODBC. Os campos são definidos em sqlncli.h.  

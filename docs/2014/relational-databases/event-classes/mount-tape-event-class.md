@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Mount Tape event class
 ms.assetid: 4c595e0a-d968-47d3-a84f-9b6857342671
-caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c0d6b7726e2a9bdeeb378df45b998bcd6d8e5187
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: aa4b3409cba18044e437e119ab3f47870ef854bc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37271362"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48075526"
 ---
 # <a name="mount-tape-event-class"></a>classe de evento Mount Tape
   A classe de evento Mount Tape ocorre quando uma solicitação de montagem de fita é recebida. Use essa classe de evento para monitorar solicitações de montagem de fita e o seu êxito ou falha.  

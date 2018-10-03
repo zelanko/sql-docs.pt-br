@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ManagedProvider Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - ManagedProvider element
 ms.assetid: ed5a1077-20a4-40b9-b62d-0db0d53b9624
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b5a4b2d94d0d3abb681be2b288ce3a5ca3b371e8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d7b29b4db3d2acf34e684d89588ef5f1e2a935aa
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37180843"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48101626"
 ---
 # <a name="managedprovider-element-assl"></a>Elemento ManagedProvider (ASSL)
   Contém o nome do provedor gerenciado usado por um elemento que é derivado de [fonte de dados](../data-type/datasource-data-type-assl.md) tipo de dados.  
@@ -49,7 +46,7 @@ ms.locfileid: "37180843"
 |Característica|Description|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|Cadeia de caracteres|  
-|Valor padrão|Nenhum|  
+|Valor padrão|None|  
 |Cardinalidade|0-1: elemento opcional que pode ocorrer apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -57,9 +54,9 @@ ms.locfileid: "37180843"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elemento pai|[Fonte de dados](../data-type/datasource-data-type-assl.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Se uma fonte de dados usar um provedor gerenciado, o elemento `ManagedProvider` conterá o nome do provedor gerenciado.  
   
 ## <a name="see-also"></a>Consulte também  

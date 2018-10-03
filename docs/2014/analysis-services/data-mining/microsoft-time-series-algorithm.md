@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ARTXP
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - series [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 642297cc-f32a-499b-b26e-fdc7ee24361e
-caps.latest.revision: 74
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 428a6433222c4d6d0aca47e065d85130792b94ef
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f9cf1670325e0f40ddfb481f186ee3440aa5b9dc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37325106"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48134256"
 ---
 # <a name="microsoft-time-series-algorithm"></a>Algoritmo MTS
   O [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo MTS fornece algoritmos de regressão que são otimizados para previsão de valores contínuos, como vendas de produtos, ao longo do tempo. Enquanto outros algoritmos [!INCLUDE[msCoName](../../includes/msconame-md.md)] , como árvores de decisão, requerem colunas adicionais de novas informações como entrada para prever uma tendência; um modelo de série temporal não requer isso. Um modelo de série temporal pode prever tendências baseadas somente no conjunto de dados original, usado para criar o modelo. Também é possível adicionar novos dados ao modelo quando fizer uma previsão e incorporar automaticamente os novos dados na análise de tendência.  
@@ -146,7 +143,7 @@ ms.locfileid: "37325106"
   
 -   Um modelo de série temporal pode fazer previsões que diferem às vezes, significativamente, dependendo do sistema operacional de 64 bits que o servidor usar. Essas diferenças ocorrem devido ao modo como um sistema com base em [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]representa e lida com números para aritmética de ponto flutuante, que difere do modo de um sistema com base em [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)] Como os resultados da previsão podem ser específicos para o sistema operacional, recomendamos que você avalie modelos no mesmo sistema operacional que usará na produção.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 -   Não suporta o uso de PMML (Predictive Model Markup Language) para criar modelos de mineração.  
   

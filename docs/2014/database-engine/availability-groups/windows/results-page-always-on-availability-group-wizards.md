@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.failoverwizard.results.f1
@@ -14,16 +12,15 @@ f1_keywords:
 - sql12.swb.adddatabasewizard.results.f1
 - sql12.swb.newagwizard.results.f1
 ms.assetid: d80b14eb-60db-4351-90ad-6c179d235aa3
-caps.latest.revision: 8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f46948269307bbca0f0989cb1d4cf8e3e0e0c30d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7a76c87b38dc333f55745c61620398f086a3db5d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37205796"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104946"
 ---
 # <a name="results-page-alwayson-availability-group-wizards"></a>Página Resultados (Assistentes de Grupo de Disponibilidade AlwaysOn)
   Este tópico da ajuda descreve as opções da página **Resultados** . Este tópico aplica-se ao [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], ao [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]e ao [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Use esta página para exibir os resultados do assistente.  

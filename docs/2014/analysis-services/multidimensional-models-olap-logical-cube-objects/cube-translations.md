@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - multiple language support [Analysis Services]
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - OLAP objects [Analysis Services], translations
 - translations [Analysis Services], cubes
 ms.assetid: 4e4fd6a4-d324-4508-b75a-2a57de9ab8ff
-caps.latest.revision: 41
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f894d45dffbf1c6eb746e3674127c75c4e59a81e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c32010135b534975f5ddabc86dcf23591d2d457f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37163307"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48125996"
 ---
 # <a name="cube-translations"></a>Traduções de cubo
   Uma tradução é um mecanismo simples para alterar os rótulos e legendas exibidos de um idioma para outro. Cada tradução é definida como um par de valores: uma cadeia de caracteres com o texto traduzido e um número com uma ID do idioma. As traduções estão disponíveis para todos os objetos no [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. As dimensões também podem ter os valores de atributo traduzidos. O aplicativo cliente é responsável por encontrar a configuração de idioma que o usuário definiu e alternar a exibição de todas as legendas e rótulos para esse idioma. Um objeto pode ter a quantidade de traduções que você desejar.  

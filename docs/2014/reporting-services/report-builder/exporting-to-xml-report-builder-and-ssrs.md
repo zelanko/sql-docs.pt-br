@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 11bb46bc593a95811c56a5489fd5489ca72ca917
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 947cdf64fa93eadb13724220fc6684813be11fb8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37223251"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116389"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>Exportando para XML (Construtor de Relatórios e SSRS)
   A extensão XML de renderização retorna um relatório no formato XML. O esquema para o XML do relatório é específico para este relatório e contém somente dados. As informações de layout não são renderizadas e a paginação não é mantida pela extensão XML de renderização. O XML gerado por esta extensão pode ser importado para um banco de dados, usado como uma mensagem de dados XML ou enviado para um aplicativo personalizado.  

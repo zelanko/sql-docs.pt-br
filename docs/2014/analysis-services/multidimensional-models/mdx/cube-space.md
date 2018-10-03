@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c3a012b4-9ca0-4fb8-9c26-5ecc0e2e2b2b
-caps.latest.revision: 6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d0bcd66844f5eaacca291cd67e84e34b6222788c
-ms.sourcegitcommit: 01fccb8015644e75fd99fc5543d8216a1539f6ca
+ms.openlocfilehash: 029492a13a3b332ba05ff7f0b84ea06a4d2a0fd5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "40392445"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48091116"
 ---
 # <a name="cube-space"></a>Espaço de cubo
   Espaço de cubo é o produto dos membros das hierarquias de atributo de um cubo com as medidas do cubo. Portanto, o espaço de cubo é determinado pelo produto combinatório de todos os membros de hierarquia de atributo no cubo e as medidas do cubo e define o tamanho máximo do cubo. É importante observar que esse espaço inclui todas as possíveis combinações de membros de hierarquia de atributo, inclusive combinações que poderiam ser consideradas impossíveis no mundo real, como combinações onde a cidade é Paris e os países são Inglaterra, Espanha, Japão, Índia ou qualquer outro.  

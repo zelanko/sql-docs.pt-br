@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - FOR XML RAW mode
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - RAW mode
 - XMLDATA option
 ms.assetid: 02c1bc0b-760c-4589-9ab1-6927c6d9c734
-caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 001c06b44eba66bd7e1ee1da3907d39158d5d4ce
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: d074ad6fe9dcd3a26a9c9be84a326291df9f5aed
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43890222"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48084227"
 ---
 # <a name="use-raw-mode-with-for-xml"></a>Usar modo RAW com FOR XML
   O modo RAW transforma cada linha no conjunto de resultados da consulta em um elemento XML que tem o identificador genérico \<row> ou o nome do elemento fornecido opcionalmente. Por padrão, cada valor de coluna no conjunto de linhas que não é NULL é mapeado para um atributo do elemento \<row>. Se a diretiva ELEMENTS for adicionada à cláusula FOR XML, cada valor de coluna será mapeado para um subelemento do elemento \<row>. Em conjunto com a diretiva ELEMENTS, é possível especificar opcionalmente a opção XSINIL para mapear valores de coluna NULL no conjunto de resultados para um elemento que tem o atributo xsi:nil=`"`true`"`.  

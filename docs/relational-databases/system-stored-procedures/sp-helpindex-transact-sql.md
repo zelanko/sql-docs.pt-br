@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_helpindex_TSQL
@@ -18,17 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpindex
 ms.assetid: c7f73ba0-ec35-4b10-aa5f-f1487e51fbf7
-caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 16cfecbfdc412cbdb3518b4f658f7993ba17b853
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 064018cdc595935ce3987fc44bc7be7da74bbd02
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43101668"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47727694"
 ---
 # <a name="sphelpindex-transact-sql"></a>sp_helpindex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +57,7 @@ sp_helpindex [ @objname = ] 'name'
   
  A coluna indexada em ordem decrescente será listada no conjunto de resultados com um sinal de menos (-) após seu nome; uma coluna indexada em ordem crescente, a padrão, será listada por seu nome apenas.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Se os índices tiverem sido definidos usando a opção NORECOMPUTE de UPDATE STATISTICS, essas informações serão incluídas na **index_description** coluna.  
   
  **sp_helpindex** expõe apenas as colunas de índices; portanto, ele não expõe informações sobre índices XML ou índices espaciais.  

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - syscollector_execution_log_full
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - data collector view
 - syscollector_execution_log_full view
 ms.assetid: 6c8db22d-2e4c-4b7c-ac5a-8762ef1b175b
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9ab52100b8c6de54b531de6c8b8e965848301d60
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 99ce8003b70ad41be225a7678c97ed44d9f6c7dd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33221267"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47755864"
 ---
 # <a name="syscollectorexecutionlogfull-transact-sql"></a>syscollector_execution_log_full (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,11 +41,11 @@ ms.locfileid: "33221267"
 |start_time|**datetime**|A hora em que o conjunto de coleta ou o pacote foi iniciado. Permite valor nulo.|  
 |last_iteration_time|**datetime**|Para pacotes de execução contínua, a última vez que o pacote capturou um instantâneo. Permite valor nulo.|  
 |finish_time|**datetime**|A hora em que a execução de pacotes e de conjuntos de coletas foi concluída. Permite valor nulo.|  
-|duration|**Int**|O tempo, em segundos, de execução do pacote ou do conjunto de coleta. Permite valor nulo.|  
+|duration|**int**|O tempo, em segundos, de execução do pacote ou do conjunto de coleta. Permite valor nulo.|  
 |failure_message|**nvarchar(2048)**|Se houve falha no conjunto de coleta ou no pacote, a mais recente mensagem de erro para aquele componente. Permite valor nulo. Para obter informações mais detalhadas do erro, use o [fn_syscollector_get_execution_details &#40;Transact-SQL&#41; ](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md) função.|  
 |operador|**nvarchar(128)**|Identifica quem iniciou o conjunto de coleta ou o pacote. Permite valor nulo.|  
 |package_execution_id|**uniqueidentifier**|Fornece um link para a tabela de logs [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Permite valor nulo.|  
-|collection_set_id|**Int**|Fornece um link para a tabela de configuração de coleta de dados no msdb. Permite valor nulo.|  
+|collection_set_id|**int**|Fornece um link para a tabela de configuração de coleta de dados no msdb. Permite valor nulo.|  
   
 ## <a name="permissions"></a>Permissões  
  Requer SELECT para **dc_operator**.  

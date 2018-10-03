@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: aa6898db-f54b-4e98-84e4-ac64e48c3561
-caps.latest.revision: 8
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bab6fa2667ea1f34348db87301873339d3ec6372
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b0383bc30f93afd893abcf86717df3a4e3a06d7d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37204566"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48138386"
 ---
 # <a name="task-2-adding-domain-values-manually"></a>Tarefa 2: Adicionando valores de domínio manualmente
   Nesta tarefa, você adiciona um valor para o **país** domínio manualmente. Ver [Change Domain Values](http://msdn.microsoft.com/library/hh510408.aspx) tópico para obter mais detalhes sobre os campos nessa página.  

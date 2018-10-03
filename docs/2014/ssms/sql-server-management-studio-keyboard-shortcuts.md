@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], shortcuts
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - shortcuts [SQL Server Management Studio]
 - accelerator keys
 ms.assetid: 98baaac4-0727-4ce4-8bfe-c63793ae69b8
-caps.latest.revision: 82
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a50cf7d5cf3ef1a99e8d10fa22263f0590f08250
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 20fe82c5ca0060d5a373f90fe72b8f4468240af8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37317586"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48085836"
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>Atalhos de teclado do SQL Server Management Studio
   O [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] oferece aos usuários dois esquemas de teclado. Por padrão, ele usa o esquema [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , com atalhos de teclado com base no [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010. O [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] também oferece um esquema de teclado semelhante ao esquema padrão do [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]. Para alterar o esquema de teclado ou adicionar outros atalhos de teclado, no menu **Ferramentas** , clique em **Opções**. Selecione o esquema de teclado desejado no **Ambiente**, página **Teclado** .  
@@ -314,10 +311,10 @@ ms.locfileid: "37317586"
 |Copiar dica de parâmetro|CTRL+SHIFT+ALT+C|Sem equivalente|  
 |Colar dica de parâmetro|CTRL+SHIFT+ALT+P|Sem equivalente|  
 |Saltar entre pares de sintaxe|CTRL+]|CTRL+]|  
-|Iniciar o selecionador de trechos de código|CTRL+K, CTRL+X|CTRL+K, CTRL+Z|  
+|Iniciar o selecionador de snippets de código|CTRL+K, CTRL+X|CTRL+K, CTRL+Z|  
 |Atualizar o cache local|CTRL+SHIFT+R|CTRL+SHIFT+R|  
-|Iniciar o selecionador de trechos Cerque Com|CTRL+K, CTRL+S|CTRL+K, CTRL+S|  
-|Exibir o Gerenciador de Trecho de Código|CTRL+K, CTRL+B|Sem equivalente|  
+|Iniciar o selecionador de snippets Cerque Com|CTRL+K, CTRL+S|CTRL+K, CTRL+S|  
+|Exibir o Gerenciador de Snippet de Código|CTRL+K, CTRL+B|Sem equivalente|  
 |Altera o nível de filtro do IntelliSense da guia **Comum** para a guia **Tudo** .|ALT+SINAL DE ADIÇÃO (+)|Sem equivalente|  
 |Altera o nível de filtro do IntelliSense da guia **Tudo** para a guia **Comum** .|ALT+PONTO (.)|Sem equivalente|  
   

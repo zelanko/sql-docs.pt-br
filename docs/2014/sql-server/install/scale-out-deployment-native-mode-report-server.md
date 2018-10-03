@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.scaleoutdeployment.F1
 ms.assetid: 4df38294-6f9d-4b40-9f03-1f01c1f0700c
-caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8038c9cbbce2eeb68b6e23b91fba1d7b0a2e708e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c091c115f9e03fbc0f1243e1c2fcf3a075f3586f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151797"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48099933"
 ---
 # <a name="scale-out-deployment-native-mode-report-server"></a>Implantação de expansão (modo nativo do Servidor de Relatório)
   Use o **implantação escalável** página no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] do Configuration Manager para exibir o status de inicialização para uma implantação de expansão ou para unir um servidor de relatório a uma implantação de expansão. Uma *implantação de expansão* se refere a duas ou mais instâncias do servidor de relatório que compartilham um único banco de dados do servidor de relatório.  
@@ -67,7 +64,7 @@ ms.locfileid: "37151797"
   
      Para um servidor de relatório que já faça parte de uma implantação de expansão, você pode usar essa página para adicionar ou remover nós.  
   
- **Inicializar**  
+ **inicializar**  
  Clique em **Inicializar** para adicionar um servidor de relatório à implantação de expansão. Esta etapa configura um servidor de relatório para usar uma chave simétrica em um banco de dados do servidor de relatório compartilhado. Você pode usar **Inicializar** para adicionar uma instância do servidor de relatório a uma implantação de expansão ou para solucionar um problema de migração ou instalação.  
   
  Uma instância de servidor de relatório estará disponível somente se você configurou anteriormente uma conexão com o banco de dados do servidor de relatório compartilhado. Além disso, é necessário executar a inicialização a partir de um servidor de relatório que já esteja inicializado para usar o banco de dados do servidor de relatório.  

@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -17,21 +15,20 @@ helpviewer_keywords:
 - MovePrevious method [ADO], VBScript example
 - MoveFirst method [ADO], VBScript example
 ms.assetid: 911aa1dd-2786-4f34-992c-bb2fbdabcbdf
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ff58806c899fbe111204923d0c5daac5b1c1c6c0
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6f665cbaee72529e965d2e7f7d2ba7aec31c0154
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279565"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47674124"
 ---
-# <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vbscript"></a>MoveFirst, MoveLast, MoveNext e MovePrevious métodos exemplo (VBScript)
-Este exemplo usa o [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), e [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) métodos para mover o ponteiro do registro de um [Registros](../../../ado/reference/ado-api/recordset-object-ado.md) com base no comando fornecido.  
+# <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vbscript"></a>MoveFirst, MoveLast, MoveNext e MovePrevious exemplo dos métodos (VBScript)
+Este exemplo usa o [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), e [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) métodos para mover o ponteiro de registro de um [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) com base no comando fornecido.  
   
- Recortar e colar o código a seguir no bloco de notas ou outro editor de texto e salve-o como **MoveFirstVBS.asp**. Você pode exibir o resultado em qualquer navegador.  
+ Recorte e cole o código a seguir no bloco de notas ou outro editor de texto e salve-o como **MoveFirstVBS.asp**. Você pode exibir o resultado em qualquer navegador.  
   
 ```  
 <!-- BeginMoveFirstVBS -->  

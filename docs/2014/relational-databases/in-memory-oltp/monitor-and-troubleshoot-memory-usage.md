@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
-caps.latest.revision: 27
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 3d2fb6cea9a1c2073a921503c0c4e1b88e5a8d25
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 6f65ecd222adfbadab453084d2b5a0dfbfa171ae
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392907"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48136136"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>Monitorar e solucionar problemas de uso da memória
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] consome memória em padrões diferentes comparado a tabelas baseadas em disco. Você pode monitorar a quantidade de memória alocada e usada pelas tabelas e índices com otimização de memória em seu banco de dados, usando as DMVs ou os contadores de desempenho fornecidos para a memória e o subsistema de coleta de lixo.  Isso oferece visibilidade em nível de sistema e banco de dados, e permite que você evite problemas devido ao esgotamento de memória.  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - rules [SMO]
 ms.assetid: 16981459-524e-4b39-a899-4370eaf763cc
-caps.latest.revision: 44
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d68aa2d625de762ad1bf503c9c79fdbbeaa3875d
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 6785e14e6e6ef08c7b77daa5e7ab555d05ac1744
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39082808"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48084496"
 ---
 # <a name="creating-altering-and-removing-rules"></a>Criando, alterando e removendo regras
   No SMO, as regras são representadas pelo objeto <xref:Microsoft.SqlServer.Management.Smo.Rule>. A regra é definida pela propriedade <xref:Microsoft.SqlServer.Management.Smo.DefaultRuleBase.TextBody%2A> que é uma cadeia de caracteres de texto que contém uma expressão de condição que usa operadores ou predicados, como IN, LIKE ou BETWEEN. Uma regra não pode fazer referência a colunas ou a outros objetos de banco de dados. É possível incluir funções internas que não fazem referência a objetos de banco de dados.  

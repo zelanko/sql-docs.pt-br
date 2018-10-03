@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7aad4946-c903-4e25-88b9-b087c20cb67d
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: aab77b225eeef6844dc74deb272430b0434de71e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7b67d295f79188cf83994225125886142c961e3b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37194386"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48138217"
 ---
 # <a name="lesson-5-extending-the-time-series-model"></a>Lição 5: Estendendo o modelo de série temporal
   No [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Enterprise, é possível adicionar novos dados a um modelo de série temporal e incorporar automaticamente os novos dados no módulo. Você adiciona novos dados a um modelo de mineração de série temporal de um de dois modos:  
