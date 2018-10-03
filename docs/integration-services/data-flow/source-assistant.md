@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.sourceassistant.f1
 - sql13.dts.designer.addNewSource.f1
 ms.assetid: 5ca9d821-7d61-4727-9133-5f9cb485c7f3
-caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 96b9c897ddb8cb508d4ce95ee133a8060ec818e0
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: 13db320fc1c35e7fe67fd02f1a7bbc9746c9fedb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35411098"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47829654"
 ---
 # <a name="source-assistant"></a>Assistente de origem
   O componente Assistente de Origem ajuda a criar um componente de origem e um gerenciador de conexões. O componente está localizado na seção **Favoritos** da Caixa de Ferramentas do SSIS.  

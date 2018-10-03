@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Auto Stats event class
 ms.assetid: cd613fce-01e1-4d8f-86cc-7ffbf0759f9e
-caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 24ab2577ca22083c298b6f5b5099aee2a96b59c2
-ms.sourcegitcommit: 01fccb8015644e75fd99fc5543d8216a1539f6ca
+ms.openlocfilehash: 462b14902e9a0a5e830e3359d3db4474a150fd5c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "40409330"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47827344"
 ---
 # <a name="auto-stats-event-class"></a>Classe de evento Auto Stats
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
