@@ -1,13 +1,11 @@
 ---
-title: BeginTrans, CommitTrans e métodos RollbackTrans (ADO) | Microsoft Docs
+title: BeginTrans, CommitTrans e RollbackTrans métodos (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -22,25 +20,24 @@ helpviewer_keywords:
 - CommitTrans method [ADO]
 - RollbackTrans method [ADO]
 ms.assetid: d4683472-4120-4236-8640-fa9ae289e23e
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 42f43c3dfc508ac6885f0e42811af26d89cd6692
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7c796cefc03092e944520a6517bc31c585a2dc42
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275975"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613884"
 ---
-# <a name="begintrans-committrans-and-rollbacktrans-methods-ado"></a>BeginTrans, CommitTrans e métodos RollbackTrans (ADO)
-Esses métodos de transação dentro de processamento de transações de gerenciar um [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) do objeto da seguinte maneira:  
+# <a name="begintrans-committrans-and-rollbacktrans-methods-ado"></a>Métodos BeginTrans, CommitTrans e RollbackTrans (ADO)
+Esses métodos de transação dentro de processamento de transações de gerenciar um [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) da seguinte maneira:  
   
 -   **BeginTrans** inicia uma nova transação.  
   
 -   **CommitTrans** salva as alterações e termina a transação atual. Ele também pode iniciar uma nova transação.  
   
--   **RollbackTrans** cancela as alterações feitas durante a transação atual e termina a transação. Ele também pode iniciar uma nova transação.  
+-   **RollbackTrans** cancela todas as alterações feitas durante a transação atual e termina a transação. Ele também pode iniciar uma nova transação.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -60,18 +57,18 @@ object.RollbackTrans
  Um **Conexão** objeto.  
   
 ## <a name="connection"></a>Conexão  
- Use esses métodos com um **Conexão** objeto quando você deseja salvar ou cancelar uma série de alterações feitas nos dados de origem como uma única unidade. Por exemplo, para transferir dinheiro entre contas, subtrair um valor de uma e adicionar o mesmo valor para o outro. Se a atualização falhar, as contas não serão mais proporcionais. Fazer essas alterações dentro de uma transação aberta garante que todas ou nenhuma alteração percorrer.  
+ Usar esses métodos com um **Conexão** objeto quando você deseja salvar ou cancelar uma série de alterações feitas nos dados de origem como uma única unidade. Por exemplo, para transferir dinheiro entre contas, você subtrair um valor de um e adicione a mesma quantidade às outras. Se uma das atualizações falhar, as contas não serão mais proporcionais. Fazer essas alterações dentro de uma transação aberta garante que todas ou nenhuma das alterações passem pelo.  
   
 > [!NOTE]
->  Nem todos os provedores oferecem suporte a transações. Verifique a propriedade definido pelo provedor "**transações DDL**" aparece no **Conexão** do objeto [propriedades](../../../ado/reference/ado-api/properties-collection-ado.md) coleção, indicando que o provedor oferece suporte transações. Se o provedor não oferece suporte a transações, chamar um dos métodos a seguir retornará um erro.  
+>  Nem todos os provedores oferecem suporte a transações. Verificar se a propriedade definida pelo provedor "**transação DDL**" aparece na **Conexão** do objeto [propriedades](../../../ado/reference/ado-api/properties-collection-ado.md) coleção, que indica que o provedor oferece suporte transações. Se o provedor não oferece suporte a transações, chamar um desses métodos retornará um erro.  
   
- Depois de chamar o **BeginTrans** método, o provedor não instantaneamente confirmará as alterações feitas até que você chame **CommitTrans** ou **RollbackTrans** para encerrar o transação.  
+ Depois de chamar o **BeginTrans** método, o provedor não precisa mais instantaneamente confirmará as alterações feitas até que você chame **CommitTrans** ou **RollbackTrans** para encerrar o transação.  
   
- Para provedores que dão suporte a transações aninhadas, chamando o **BeginTrans** método dentro de uma transação aberta inicia uma nova transação aninhada. O valor de retorno indica o nível de aninhamento: um valor de retorno de "1" indica que você abriu uma transação de nível superior (ou seja, a transação não está aninhada dentro de outra transação), "2" indica que você abriu uma transação de segundo nível (uma transações aninhadas dentro de uma transação de nível superior), e assim por diante. Chamando **CommitTrans** ou **RollbackTrans** afeta apenas mais abriu recentemente a transação; você deve fechar ou reverter a transação atual antes de resolver quaisquer transações de nível superior.  
+ Para provedores que dão suporte a transações aninhadas, chamando o **BeginTrans** método dentro de uma transação aberta inicia uma nova transação aninhada. O valor de retorno indica o nível de aninhamento: um valor de retorno de "1" indica que você abriu uma transação de nível superior (ou seja, a transação não está aninhada dentro de outra transação), "2" indica que você abriu uma transação de segundo nível (a transações aninhadas dentro de uma transação de nível superior), e assim por diante. Chamando **CommitTrans** ou **RollbackTrans** afeta apenas mais recentemente abriu a transação; você deve fechar ou reverter a transação atual antes de resolver todas as transações de nível mais altos.  
   
- Chamando o **CommitTrans** método salva as alterações feitas em uma transação aberta sobre a conexão e termina a transação. Chamando o **RollbackTrans** método reverte todas as alterações feitas em uma transação aberta e termina a transação. O método de chamada quando não houver nenhuma transação aberta gera um erro.  
+ Chamar o **CommitTrans** método salva as alterações feitas em uma transação aberta sobre a conexão e termina a transação. Chamar o **RollbackTrans** método reverte todas as alterações feitas em uma transação aberta e termina a transação. Qualquer um dos métodos de chamada quando não há nenhuma transação aberta gera um erro.  
   
- Dependendo do **Conexão** do objeto [atributos](../../../ado/reference/ado-api/attributes-property-ado.md) propriedade, chamar o **CommitTrans** ou **RollbackTrans** métodos podem Inicie automaticamente uma nova transação. Se o **atributos** está definida como **adXactCommitRetaining**, o provedor automaticamente inicia uma nova transação após um **CommitTrans** chamar. Se o **atributos** está definida como **adXactAbortRetaining**, o provedor automaticamente inicia uma nova transação após um **RollbackTrans** chamar.  
+ Dependendo dos **Conexão** do objeto [atributos](../../../ado/reference/ado-api/attributes-property-ado.md) propriedade, chamar o **CommitTrans** ou **RollbackTrans** métodos podem Inicie automaticamente uma nova transação. Se o **atributos** estiver definida como **adXactCommitRetaining**, o provedor inicia automaticamente uma nova transação após uma **CommitTrans** chamar. Se o **atributos** estiver definida como **adXactAbortRetaining**, o provedor inicia automaticamente uma nova transação após uma **RollbackTrans** chamar.  
   
 ## <a name="remote-data-service"></a>Serviço de dados remotos  
  O **BeginTrans**, **CommitTrans**, e **RollbackTrans** métodos não estão disponíveis em um cliente **Conexão** objeto.  
@@ -80,6 +77,6 @@ object.RollbackTrans
  [Objeto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [BeginTrans, CommitTrans e exemplo de métodos RollbackTrans (VB)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vb.md)   
- [BeginTrans, CommitTrans e exemplo dos métodos RollbackTrans (VC + +)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vc.md)   
+ [BeginTrans, CommitTrans e RollbackTrans exemplo dos métodos (VB)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vb.md)   
+ [BeginTrans, CommitTrans e RollbackTrans exemplo dos métodos (VC + +)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vc.md)   
  [Propriedade Attributes (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)

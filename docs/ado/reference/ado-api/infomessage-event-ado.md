@@ -1,13 +1,11 @@
 ---
-title: Evento do InfoMessage (ADO) | Microsoft Docs
+title: Evento InfoMessage (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,19 +14,18 @@ f1_keywords:
 helpviewer_keywords:
 - InfoMessage event [ADO]
 ms.assetid: 468c87dd-e3bc-4084-9941-94d10743d4e9
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d6cce906c08e524c3a709c573394a72df89eac8e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 516e6a95ba98f1b8d66ddf9f417460ef2a6b7dc0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279185"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47602564"
 ---
-# <a name="infomessage-event-ado"></a>Evento do InfoMessage (ADO)
-O **InfoMessage** evento é chamado sempre que ocorrer um aviso durante uma **ConnectionEvent** operação.  
+# <a name="infomessage-event-ado"></a>Evento InfoMessage (ADO)
+O **InfoMessage** eventos é chamado sempre que ocorrer um aviso durante uma **ConnectionEvent** operação.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,17 +36,17 @@ InfoMessage pError, adStatus, pConnection
   
 #### <a name="parameters"></a>Parâmetros  
  *pError*  
- Um [erro](../../../ado/reference/ado-api/error-object.md) objeto. Este parâmetro contém erros que são retornados. Se vários erros são retornados, enumerar o **erros** coleção encontrá-las.  
+ Uma [erro](../../../ado/reference/ado-api/error-object.md) objeto. Este parâmetro conterá todos os erros que são retornados. Se vários erros forem retornados, enumerar os **erros** coleção encontrá-los.  
   
  *adStatus*  
- Um [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) valor de status. Se ocorrer um aviso, *adStatus* é definido como **adStatusOK** e *pError* contém o aviso.  
+ Uma [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) valor de status. Se ocorrer um aviso, *adStatus* é definido como **adStatusOK** e o *pError* contém o aviso.  
   
- Antes desse evento retorna, defina este parâmetro como **adStatusUnwantedEvent** para impedir que as notificações subsequentes.  
+ Antes de retorna a este evento, defina esse parâmetro como **adStatusUnwantedEvent** para evitar notificações subsequentes.  
   
  *pConnection*  
- Um [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto. A conexão para a qual o aviso ocorreu. Por exemplo, os avisos podem ocorrer ao abrir um **Conexão** objeto ou executar um [comando](../../../ado/reference/ado-api/command-object-ado.md) em uma **Conexão**.  
+ Um [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto. A conexão para a qual o aviso ocorreu. Por exemplo, os avisos podem ocorrer ao abrir um **Conexão** objeto ou à execução de uma [comando](../../../ado/reference/ado-api/command-object-ado.md) em um **Conexão**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Exemplo de modelo de eventos do ADO (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
- [Resumo de manipulador de eventos de ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
+ [Exemplo de modelo de eventos ADO (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
+ [Resumo do manipulador de eventos ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
  [Objeto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

@@ -1,34 +1,31 @@
 ---
-title: Exemplo de propriedade ActiveCommand (VB) | Microsoft Docs
+title: Exemplo da propriedade ActiveCommand (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - ActiveCommand property [ADO], Visual Basic example
 ms.assetid: 23b06499-62df-4f46-88eb-6da392f9b456
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 30e70c09826344db57ea9152447d2d197bb33ef7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a45eafed2c0e673820a5b93eaa13438ac7898988
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275135"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47617144"
 ---
-# <a name="activecommand-property-example-vb"></a>Exemplo de propriedade ActiveCommand (VB)
-Este exemplo demonstra o [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) propriedade.  
+# <a name="activecommand-property-example-vb"></a>Exemplo da propriedade ActiveCommand (VB)
+Este exemplo demonstra a [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) propriedade.  
   
- Recebe uma sub-rotina um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto cujo **ActiveCommand** propriedade é usada para exibir o texto de comando e o parâmetro que criou o **registros**.  
+ Uma sub-rotina é fornecida uma [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) do objeto cuja **ActiveCommand** propriedade é usada para exibir o texto do comando e parâmetro que criou o **conjunto de registros**.  
   
 ```  
 'BeginActiveCommandVB  
@@ -94,11 +91,11 @@ End Sub
 'EndActiveCommandVB  
 ```  
   
- O **ActiveCommandXprint** rotina é fornecida apenas um **registros** do objeto, mas ele deve imprimir o texto de comando e o parâmetro que criou o **registros**. Isso pode ser feito porque o **registros** do objeto **ActiveCommand** propriedade produz associado [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto.  
+ O **ActiveCommandXprint** rotina é fornecida somente uma **conjunto de registros** do objeto, mas ele deve imprimir o texto do comando e parâmetro que criou o **conjunto de registros**. Isso pode ser feito porque o **conjunto de registros** do objeto **ActiveCommand** propriedade produz associado [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto.  
   
- O **comando** do objeto [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) propriedade produz o comando com parâmetros que criou o **registros**. O **comando** do objeto [parâmetros](../../../ado/reference/ado-api/parameters-collection-ado.md) coleção produz o valor que foi substituído por espaço reservado para o parâmetro do comando ("**?**").  
+ O **comando** do objeto [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) propriedade produz o comando com parâmetros que criou o **conjunto de registros**. O **comando** do objeto [parâmetros](../../../ado/reference/ado-api/parameters-collection-ado.md) coleção produz o valor que foi substituído por espaço reservado de parâmetro do comando ("**?**").  
   
- Por fim, uma mensagem de erro ou o nome do autor e ID são impressas.  
+ Por fim, uma mensagem de erro ou o nome do autor e ID são impressos.  
   
 ```  
 'BeginActiveCommandPrintVB  

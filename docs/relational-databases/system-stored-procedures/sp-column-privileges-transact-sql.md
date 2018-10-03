@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_column_privileges_TSQL
@@ -18,17 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_column_privileges
 ms.assetid: a3784301-2517-4b1d-bbd9-47404483fad0
-caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d79cf19f29f64f9db7370c993b023a3e54258cec
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 0926afa9cb434f105dfbd817f5c6bac9663fa5d1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43101414"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47644144"
 ---
 # <a name="spcolumnprivileges-transact-sql"></a>sp_column_privileges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,7 +72,7 @@ sp_column_privileges [ @table_name = ] 'table_name'
 |PRIVILEGE|**varchar(** 32 **)**|Uma das permissões de coluna disponíveis. As permissões de coluna podem ter um dos seguintes valores (ou outros valores que tenham suporte na fonte de dados quando a implementação é definida):<br /><br /> SELECT = GRANTEE pode recuperar dados para as colunas.<br /><br /> INSERT = GRANTEE pode fornecer dados para esta coluna quando novas linhas são inseridas (pelo GRANTEE) na tabela.<br /><br /> UPDATE = GRANTEE pode modificar os dados existentes na coluna.<br /><br /> REFERENCES = GRANTEE pode referenciar uma coluna em uma tabela estrangeira em uma relação de chave primária/chave estrangeira. As relações de chave primária/chave estrangeira são definidas usando restrições de tabela.|  
 |IS_GRANTABLE|**varchar (** 3 **)**|Indica se GRANTEE tem permissão para conceder permissões a outros usuários (em geral, referenciada como permissão de "concessão com concessão"). Pode ser YES, NO ou NULL. Um valor desconhecido ou NULL refere-se a uma fonte de dados para a qual a "concessão com concessão" não é aplicável.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], as permissões são concedidas com a instrução GRANT e retiradas com a instrução REVOKE.  
   
 ## <a name="permissions"></a>Permissões  

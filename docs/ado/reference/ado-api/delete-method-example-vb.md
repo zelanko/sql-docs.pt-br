@@ -1,32 +1,29 @@
 ---
-title: Excluir exemplo de método (VB) | Microsoft Docs
+title: Exemplo do método (VB) Delete | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Delete method [ADO], Visual Basic example
 ms.assetid: 0c80e71b-9e3f-4d05-ab2a-9e78798dad88
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ee42e1717c9a142c5da551b89b3c3b8fe79d86d9
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 32548ce458d84e234907efadb3694ae587c2b526
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277595"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47601394"
 ---
-# <a name="delete-method-example-vb"></a>Excluir exemplo de método (VB)
-Este exemplo usa o [excluir](../../../ado/reference/ado-api/delete-method-ado-recordset.md) método para remover um registro específico de um [registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
+# <a name="delete-method-example-vb"></a>Exemplo do método Delete (VB)
+Este exemplo usa o [exclua](../../../ado/reference/ado-api/delete-method-ado-recordset.md) método para remover um registro especificado de uma [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
 ```  
 'BeginDeleteVB  

@@ -1,13 +1,11 @@
 ---
-title: Tipos de dados de intervalo | Microsoft Docs
+title: Tipos de dados Interval | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - second intervals [ODBC]
@@ -25,25 +23,24 @@ helpviewer_keywords:
 - C data types [ODBC], interval
 - interval fields [ODBC]
 ms.assetid: fba93f65-c1db-44f4-91ba-532f87241cf7
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ebc6b5d2a8e2277c3bb427053f43ebed4983e0b9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 930a848ea01d128cb248c7929408ce7510937ad9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909561"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47622214"
 ---
-# <a name="interval-data-types"></a>Tipos de dados de intervalo
-Um intervalo é definido como a diferença entre duas datas e horas. Intervalos são expressos em uma das duas maneiras diferentes. Um é um *ano-mês* intervalo que expressa intervalos em termos de anos e um número integral de meses. A outra é um *dia hora* intervalo que expressa intervalos em termos de dias, minutos e segundos. Esses dois tipos de intervalos são diferentes e não podem ser misturados, como meses podem ter diferentes números de dias.  
+# <a name="interval-data-types"></a>Tipo de dados de intervalo
+Um intervalo é definido como a diferença entre duas datas e horas. Intervalos são expressas em uma das duas maneiras diferentes. Um é um *ano-mês* intervalo que expressa a intervalos em termos de anos e um número integral de meses. O outro é um *tempo-dia* intervalo que expressa a intervalos em termos de dias, minutos e segundos. Esses dois tipos de intervalos são distintos e não podem ser misturados, como meses podem ter diferentes números de dias.  
   
- Um intervalo consiste em um conjunto de campos. Há uma ordenação implícita entre os campos. Por exemplo, em um intervalo de ano-mês, ano vier primeiro, seguido por mês. Da mesma forma, em um intervalo de dias para minutos, os campos estão na ordem dia, hora e minuto. O primeiro campo em um tipo de intervalo é chamado de *principal* campo, ou o *superiores* campo. O último campo é chamado de *à direita* campo.  
+ Um intervalo consiste em um conjunto de campos. Há uma ordenação implícita entre os campos. Por exemplo, em um intervalo de ano para mês, ano vem primeiro, seguido por mês. Da mesma forma, um intervalo de dias para minutos, os campos estão em ordem dia, hora e minuto. O primeiro campo em um tipo de intervalo é chamado de *à esquerda* campo, ou o *ordem alta* campo. O último campo é chamado de *à direita* campo.  
   
- Em todos os intervalos, o campo à esquerda não é restrito pelas regras do calendário gregoriano. Por exemplo, em um intervalo de hora-minuto, o campo de hora não está restrito a ser entre 0 e 23 (inclusive), que normalmente é. Os campos à direita após o campo principal execute as restrições normais do calendário gregoriano. Para obter mais informações, consulte [restrições do calendário gregoriano](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md), mais adiante neste apêndice.  
+ Em todos os intervalos, o campo à esquerda não é restrito pelas regras do calendário gregoriano. Por exemplo, em um intervalo de hora para minuto, o campo de hora não é restrito para ser entre 0 e 23 (inclusive), pois ele é normalmente. Os campos à direita após o campo principal seguem as restrições comuns do calendário gregoriano. Para obter mais informações, consulte [restrições do calendário gregoriano](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md), mais adiante neste apêndice.  
   
- Há 13 tipos de dados SQL de intervalo e 13 tipos de dados C de intervalo. Cada um dos tipos de dados de intervalo C usa a mesma estrutura, SQL_INTERVAL_STRUCT, para conter os dados de intervalo. (Para obter mais informações, consulte a próxima seção, [C intervalo estrutura](../../../odbc/reference/appendixes/c-interval-structure.md).) Para obter mais informações sobre os tipos de dados SQL, consulte [tipos de dados SQL](../../../odbc/reference/appendixes/sql-data-types.md); para obter mais informações sobre os tipos de dados C, consulte [tipos de dados C](../../../odbc/reference/appendixes/c-data-types.md).  
+ Há 13 tipos de dados SQL de intervalo e 13 tipos de dados C de intervalo. Cada um dos tipos de dados de intervalo C usa a mesma estrutura, SQL_INTERVAL_STRUCT, para conter os dados de intervalo. (Para obter mais informações, consulte a próxima seção, [estrutura de intervalo de C](../../../odbc/reference/appendixes/c-interval-structure.md).) Para obter mais informações sobre os tipos de dados SQL, consulte [tipos de dados SQL](../../../odbc/reference/appendixes/sql-data-types.md); para obter mais informações sobre os tipos de dados C, consulte [tipos de dados C](../../../odbc/reference/appendixes/c-data-types.md).  
   
 |Identificador de tipo|Classe|Description|  
 |---------------------|-----------|-----------------|  
