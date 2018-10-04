@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Broker:Connection event class
 ms.assetid: d3e505f2-0a43-486f-aa92-9c8e49b2dfea
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: af532b41286f058ce1323bb2e7520091aab9dc5f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 51db04605dd898407a1295e5a80e9d7b9c9ae42a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37233316"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067237"
 ---
 # <a name="brokerconnection-event-class"></a>classe de evento Broker:Connection
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gera um evento **Broker:Connection** para informar o status de uma conexão de transporte gerenciado pelo Service Broker.  

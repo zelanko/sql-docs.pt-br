@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.service_queue_usages
@@ -20,16 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.service_queue_usages catalog view
 ms.assetid: d58dcdaf-f82d-43d9-941b-f520581442bf
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f74e2dd9df4da7fb86d237d46d4633217ab818fc
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 8ddeccbf7b70f399569083a05366bc803fd1b1c8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33219987"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47596205"
 ---
 # <a name="sysservicequeueusages-transact-sql"></a>sys.service_queue_usages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +34,8 @@ ms.locfileid: "33219987"
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**service_id**|**Int**|Identificador do serviço. Exclusiva no banco de dados. Não é NULLABLE.|  
-|**service_queue_id**|**Int**|Identificador da fila de serviço usada pelo serviço. Não é NULLABLE.|  
+|**service_id**|**int**|Identificador do serviço. Exclusiva no banco de dados. Não é NULLABLE.|  
+|**service_queue_id**|**int**|Identificador da fila de serviço usada pelo serviço. Não é NULLABLE.|  
   
 ## <a name="permissions"></a>Permissões  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obter mais informações, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_xe_object_columns
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - sys.dm_xe_object_columns dynamic management view
 - extended events [SQL Server], views
 ms.assetid: d96a14f3-4284-45ff-b1fe-4858e540a013
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 24b7123f557674afe6016138f05803a8d13753c6
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 0a00c2aea93b77f65455024d15af13b153d7ebef
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34465802"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47732165"
 ---
 # <a name="sysdmxeobjectcolumns-transact-sql"></a>sys.dm_xe_object_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,14 +38,14 @@ ms.locfileid: "34465802"
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |nome|**nvarchar(60)**|O nome da coluna. nome é exclusivo dentro do objeto. Não permite valor nulo.|  
-|column_id|**Int**|O identificador da coluna. column_id é exclusivo dentro do objeto quando usado com column_type. Não permite valor nulo.|  
+|column_id|**int**|O identificador da coluna. column_id é exclusivo dentro do objeto quando usado com column_type. Não permite valor nulo.|  
 |object_name|**nvarchar(60)**|O nome do objeto ao qual a coluna pertence. Há uma relação muitos para um com sys.dm_xe_packages.package_id. Não permite valor nulo.|  
 |object_package_guid|**uniqueidentifier**|O GUID do pacote que contém o objeto. Não permite valor nulo.|  
 |type_name|**nvarchar(60)**|O nome do tipo desta coluna. Não permite valor nulo.|  
 |type_package_guid|**uniqueidentifier**|O GUID do pacote que contém o tipo de dados de coluna. Não permite valor nulo.|  
-|column_type|**nvarchar(60)**|Indica como essa coluna é usada. Não permite valor nulo. column_type pode ser um dos seguintes:<br /><br /> readonly. A coluna contém um valor estático que não pode ser alterado.<br /><br /> data. A coluna contém dados de tempo de execução mostrados pelo objeto.<br /><br /> customizable. A coluna contém um valor que pode ser alterado.<br /><br /> Observação: Esse valor pode modificar o comportamento do objeto.|  
+|column_type|**nvarchar(60)**|Indica como essa coluna é usada. Não permite valor nulo. column_type pode ser uma das seguintes opções:<br /><br /> readonly. A coluna contém um valor estático que não pode ser alterado.<br /><br /> data. A coluna contém dados de tempo de execução mostrados pelo objeto.<br /><br /> customizable. A coluna contém um valor que pode ser alterado.<br /><br /> Observação: A alteração desse valor pode modificar o comportamento do objeto.|  
 |column_value|**nvarchar(256)**|Exibe valores estáticos associados à coluna de objeto. Permite valor nulo.|  
-|funcionalidades|**Int**|Um bitmap que descreve as capacidades desta coluna. Permite valor nulo.|  
+|funcionalidades|**int**|Um bitmap que descreve as capacidades desta coluna. Permite valor nulo.|  
 |capabilities_desc|**nvarchar(256)**|Uma descrição dos recursos desta coluna de objeto. Este valor pode ser um dos seguintes:<br /><br /> Mandatory. O valor deve ser definido ao associar o objeto pai a uma sessão de evento.<br /><br /> NULL|  
 |descrição|**nvarchar(256)**|A descrição desta coluna de objeto. Permite valor nulo.|  
   

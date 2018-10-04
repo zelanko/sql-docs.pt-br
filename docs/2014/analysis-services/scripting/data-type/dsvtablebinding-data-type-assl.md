@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DSVTableBinding Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - DSVTableBinding data type
 ms.assetid: 149e753f-6218-4805-9223-7155b6827e64
-caps.latest.revision: 41
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9d4748adb2ca6b26c42bee9b0ba5ea502d973679
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7b2ceab8524135338aa066837c50170268711a9d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37195986"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095726"
 ---
 # <a name="dsvtablebinding-data-type-assl"></a>Tipo de dados DSVTableBinding (ASSL)
   Define um tipo de dados derivado que representa a associação entre uma tabela e um [DataSourceView](../objects/datasourceview-element-assl.md) elemento.  
@@ -51,17 +48,17 @@ ms.locfileid: "37195986"
 |Característica|Description|  
 |--------------------|-----------------|  
 |Tipos de dados base|[TabularBinding](binding-data-type-assl.md)|  
-|Tipos de dados derivados|Nenhum|  
+|Tipos de dados derivados|None|  
   
 ## <a name="data-type-relationships"></a>Relação do tipo de dados  
   
 |Relação|Elemento|  
 |------------------|-------------|  
-|Elementos pai|Nenhum|  
+|Elementos pai|None|  
 |Elementos filho|[DataSourceViewID](../properties/id-element-assl.md), [TableID](../properties/tableid-element-assl.md)|  
 |Elementos derivados|Consulte [de associação](binding-data-type-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Para obter mais informações sobre o `Binding` tipo, incluindo tabelas de objetos do Analysis Services Scripting Language (ASSL) da `Binding` tipo e a hierarquia de herança dos `Binding` tipos, consulte [associação](binding-data-type-assl.md) elemento.  
   
  Para uma visão geral de associações de dados em ASSL, consulte [fontes de dados e associações &#40;Multidimensional do SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  

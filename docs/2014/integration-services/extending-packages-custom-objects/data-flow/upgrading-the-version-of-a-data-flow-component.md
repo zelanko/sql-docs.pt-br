@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - PerformUpgrade method
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - data flow components [Integration Services], upgrading version
 - upgrading data flow components [Integration Services]
 ms.assetid: c2a298c6-01b3-4ad1-884d-6108165eb56e
-caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 348508258476712a1197281260db402d4412ae81
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c4f4847df58b1b65248dafc908aa39243ff10c36
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37193866"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48052926"
 ---
 # <a name="upgrading-the-version-of-a-data-flow-component"></a>Atualizando a versão de um componente de fluxo de dados
   Pacotes criados com uma versão mais antiga do seu componente podem conter metadados que não são mais válidos, como propriedades personalizadas cujo uso foi modificado em versões mais recentes do componente. É possível substituir o método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PerformUpgrade%2A> da classe base <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> para atualizar os metadados salvos anteriormente em pacotes mais antigos, a fim de refletir as propriedades atuais do seu componente.  

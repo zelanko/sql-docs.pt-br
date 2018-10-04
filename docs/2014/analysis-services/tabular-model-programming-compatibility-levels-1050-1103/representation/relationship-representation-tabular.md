@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 86a5eff8-4e07-444b-ac15-5695f09aa105
-caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 122c09c71985e00792efece956955cd5469562c9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c62af4be43978f36f46594757964a9fcdae58ce5
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37187055"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48058896"
 ---
 # <a name="relationship-representation-tabular"></a>Representação de relação (de tabela)
   Uma relação é uma conexão entre duas tabelas de dados. A relação estabelece como os dados nas duas tabelas devem ser correlacionados.  
@@ -33,7 +30,7 @@ ms.locfileid: "37187055"
 ### <a name="relationship-in-amo"></a>Relação no AMO  
  Em termos de objetos AMO, todas as relações inativas têm uma representação de uma relação de mapeamento um para um com o <xref:Microsoft.AnalysisServices.Relationship> e nenhum outro objeto AMO principal é exigido; para a relação ativa outros requisitos existem e um mapeamento para o <xref:Microsoft.AnalysisServices.ReferenceMeasureGroupDimension> também é exigido.  
   
- Os trechos de códigos a seguir mostram como criar uma relação em modelos de tabela, como ativar uma relação e como definir uma chave primária em uma tabela (além de "RowNumber"). Para criar uma relação ativa, uma chave primária precisa ser definida na tabela de chave primária - PKTableName - da relação (o lado um da relação). O exemplo mostrado aqui cria a chave primária no PKColumnName se nenhuma chave primária tiver sido definida nesta coluna. Podem ser criadas relações inativas sem a necessidade de ter uma chave primária na coluna de chave primária.  
+ Os snippets de códigos a seguir mostram como criar uma relação em modelos de tabela, como ativar uma relação e como definir uma chave primária em uma tabela (além de "RowNumber"). Para criar uma relação ativa, uma chave primária precisa ser definida na tabela de chave primária - PKTableName - da relação (o lado um da relação). O exemplo mostrado aqui cria a chave primária no PKColumnName se nenhuma chave primária tiver sido definida nesta coluna. Podem ser criadas relações inativas sem a necessidade de ter uma chave primária na coluna de chave primária.  
   
 ```  
   

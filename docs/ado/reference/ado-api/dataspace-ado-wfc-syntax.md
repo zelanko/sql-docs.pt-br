@@ -1,31 +1,28 @@
 ---
-title: DataSpace (ADO - sintaxe WFC) | Microsoft Docs
+title: DataSpace (ADO – sintaxe WFC) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - DataSpace collection [ADO], ADO/WFC syntax
 ms.assetid: 950d45d8-07de-467b-b255-f9a7b997204c
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6213c4f5246395911cc562a64246007500d0059e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 94a539fb2ba3285bd8bb5c3668879695598725a4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277515"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47718344"
 ---
-# <a name="dataspace-ado---wfc-syntax"></a>DataSpace (ADO - WFC sintaxe)
-O **createObject** método o **DataSpace** classe especifica um objeto comercial para processar solicitações de aplicativo cliente (*progid*) e o protocolo de comunicação e o servidor (*conexão*). **createObject** retorna um [ObjectProxy](../../../ado/reference/ado-api/objectproxy-ado-wfc-syntax.md) objeto que representa o servidor.  
+# <a name="dataspace-ado---wfc-syntax"></a>DataSpace (ADO – Sintaxe WFC)
+O **createObject** método o **DataSpace** classe especifica um objeto de negócios para processar solicitações de aplicativo do cliente (*progid*) e o protocolo de comunicação e o servidor (*conexão*). **createObject** retorna um [ObjectProxy](../../../ado/reference/ado-api/objectproxy-ado-wfc-syntax.md) objeto que representa o servidor.  
   
 ## <a name="package-commswfcdata"></a>pacote com.ms.wfc.data  
   

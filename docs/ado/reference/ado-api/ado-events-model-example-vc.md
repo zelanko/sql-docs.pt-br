@@ -1,56 +1,53 @@
 ---
-title: Exemplo (VC + +) de modelo de eventos de ADO | Microsoft Docs
+title: Exemplo (VC + +) de modelo de eventos ADO | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Visual C++ code examples [ADO], event model
 ms.assetid: 29530153-b963-4a7c-8665-2335f1d604a8
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 20df675bbbee8b513f7e1008da0cb4772255701c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3e9f40c4a5810ab712c4b6f67737fd308594de97
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275465"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47614444"
 ---
-# <a name="ado-events-model-example-vc"></a>Exemplo de modelo de eventos do ADO (VC + +)
-A seção de Visual C++ de [ADO evento instanciação pela linguagem](../../../ado/guide/data/ado-event-instantiation-by-language.md) fornece uma descrição geral de como criar uma instância do modelo de evento do ADO. A seguir está um exemplo específico de instanciação de modelo de evento dentro do ambiente criado pelo **#import** diretiva.  
+# <a name="ado-events-model-example-vc"></a>Exemplo do modelo de eventos ADO (VC++)
+A seção do Visual C++ [instanciação de evento ADO por linguagem](../../../ado/guide/data/ado-event-instantiation-by-language.md) fornece uma descrição geral de como criar uma instância do modelo de evento ADO. A seguir está um exemplo específico de instanciar o modelo de evento dentro do ambiente criado pela **#import** diretiva.  
   
- A descrição geral usa **adoint.h** como uma referência para assinaturas de método. No entanto, alguns detalhes na descrição geral ligeiramente alterado como resultado do uso de **#import** diretiva:  
+ Usa a descrição geral **adoint.h** como uma referência para assinaturas de método. No entanto, alguns detalhes na descrição geral ligeiramente alterado como resultado do uso de **#import** diretiva:  
   
--   O **#import** diretiva resolve **typedef**do, tipos de dados de assinatura de método e modificadores aos formulários fundamentais.  
+-   O **#import** diretiva resolve **typedef**do, tipos de dados de assinatura de método e modificadores de suas formas fundamentais.  
   
--   Os métodos virtuais puros que devem ser substituídos são prefixados por "**raw_**".  
+-   Os métodos puros virtuais que devem ser substituídos são prefixados por "**RAW _**".  
   
  Parte do código simplesmente reflete o estilo de codificação.  
   
--   O ponteiro para **IUnknown** usado pelo **Advise** método é obtido explicitamente com uma chamada para **QueryInterface**.  
+-   O ponteiro para **IUnknown** usado pelas **Advise** método é obtido explicitamente com uma chamada para **QueryInterface**.  
   
--   Você não precisa explicitamente um destruidor nas definições de classe de código.  
+-   Você não precisa codificar explicitamente um destruidor nas definições de classe.  
   
--   Você talvez queira código mais robustas implementações de QueryInterface, AddRef e versão.  
+-   Você talvez queira código mais robustas implementações de QueryInterface, AddRef e Release.  
   
--   O **__uuidof()** diretiva usada amplamente para obter IDs de interface.  
+-   O **__uuidof()** diretiva é usada extensivamente para obter as IDs de interface.  
   
- Por fim, o exemplo contém um código de trabalho.  
+ Por fim, o exemplo contém algum código de trabalho.  
   
--   O exemplo é gravado como um aplicativo de console.  
+-   O exemplo é escrito como um aplicativo de console.  
   
 -   Você deve inserir seu próprio código sob o comentário "`// Do some work`".  
   
--   Todos os eventos manipuladores padrão para fazer nada e cancelando a notificações. Você deve inserir o código apropriado para seu aplicativo e permitir notificações se necessário.  
+-   Todos os eventos manipuladores padrão sem fazer nada e cancelando a notificações. Você deve inserir o código apropriado para seu aplicativo e permitir as notificações se necessário.  
   
 ```  
 // ADO_Events_Model_Example.cpp  

@@ -1,36 +1,33 @@
 ---
-title: Associação de parâmetros ODBC | Microsoft Docs
+title: Associando parâmetros ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - binding parameters [ODBC]
 ms.assetid: 7538a82b-b08b-4c8f-9809-e4ccea16db11
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cc39c8183c996dd4d011d9bcdaba6dfe1f94cc05
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0cdbb90bfbca6994a875a0653ee9d34c8e8ffb9e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909283"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47775764"
 ---
-# <a name="binding-parameters-odbc"></a>Associação de parâmetros ODBC
-Cada parâmetro em uma instrução SQL deve ser associado, ou *associado,* a uma variável no aplicativo antes da instrução é executada. Quando o aplicativo associa uma variável para um parâmetro, ele descreve essa variável, endereço, tipo de dados C e assim por diante — para o driver. Ele também descreve o próprio parâmetro — dados SQL tipo, precisão e assim por diante. O driver armazena essas informações na estrutura, ele mantém para essa instrução e usa as informações para recuperar o valor da variável quando a instrução é executada.  
+# <a name="binding-parameters-odbc"></a>Associar parâmetros ODBC
+Cada parâmetro em uma instrução SQL deve ser associado, ou *associado,* a uma variável no aplicativo antes da instrução é executada. Quando o aplicativo é associado a uma variável a um parâmetro, ele descreve essa variável, endereço, tipo de dados C e assim por diante — para o driver. Ele também descreve o próprio parâmetro — dados SQL tipo, precisão e assim por diante. O driver armazena essas informações na estrutura, ele mantém para essa instrução e usa as informações para recuperar o valor da variável quando a instrução é executada.  
   
- Parâmetros podem ser associados ou reassociados a qualquer momento antes de uma instrução é executada. Se um parâmetro é vinculada outra vez depois de uma instrução é executada, a associação não se aplica até que a instrução é executada novamente. Para associar um parâmetro a uma variável diferente, um aplicativo simplesmente reconecta o parâmetro com a nova variável; a associação anterior é liberada automaticamente.  
+ Parâmetros podem ser associados ou se a qualquer momento antes de uma instrução é executada. Se um parâmetro é ligado novamente depois que uma instrução é executada, a associação não se aplica até que a instrução é executada novamente. Para associar um parâmetro a uma variável diferente, um aplicativo simplesmente associa novamente o parâmetro com a nova variável; a associação anterior é liberada automaticamente.  
   
- Uma variável permanece associada a um parâmetro até que uma variável diferente está associada ao parâmetro, até que todos os parâmetros são desassociados chamando **SQLFreeStmt** com a opção SQL_RESET_PARAMS ou até que a instrução seja liberada. Por esse motivo, o aplicativo deve ser-se de que variáveis não são liberadas até depois que eles serão desvinculados. Para obter mais informações, consulte [Allocating e liberar Buffers](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md).  
+ Uma variável permanece associada a um parâmetro até que uma variável diferente é associada ao parâmetro, até que todos os parâmetros são desassociados chamando **SQLFreeStmt** com a opção SQL_RESET_PARAMS, ou até que a instrução seja liberada. Por esse motivo, o aplicativo deve ser-se de que as variáveis não são liberadas até depois que eles serão desvinculados. Para obter mais informações, consulte [alocando e liberando Buffers](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md).  
   
- Como as associações de parâmetro são apenas informações armazenadas na estrutura da mantidas pelo driver para a instrução, eles podem ser definidos em qualquer ordem. Eles também são independentes da instrução SQL que é executada. Por exemplo, suponha que um aplicativo associa três parâmetros e, em seguida, executa a instrução SQL a seguir:  
+ Como as associações de parâmetro são apenas as informações armazenadas na estrutura mantida pelo driver para a instrução, elas podem ser definidas em qualquer ordem. Eles também são independentes da instrução SQL que é executada. Por exemplo, suponha que um aplicativo associa três parâmetros e, em seguida, executa a instrução SQL a seguir:  
   
 ```  
 INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)  
@@ -42,7 +39,7 @@ INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)
 SELECT * FROM Orders WHERE OrderID = ?, OpenDate = ?, Status = ?  
 ```  
   
- no mesmo identificador de instrução, associações de parâmetro para o **inserir** instrução são usados porque essas são as associações armazenadas na estrutura de instrução. Na maioria dos casos, isso é uma prática de programação ruim e deve ser evitado. Em vez disso, o aplicativo deve chamar **SQLFreeStmt** com a opção SQL_RESET_PARAMS desassociar todos os parâmetros antigos e, em seguida, associe novos.  
+ no mesmo identificador de instrução, associações de parâmetro para o **inserir** instrução são usados porque essas são as associações armazenadas na estrutura da instrução. Na maioria dos casos, isso é uma prática inadequada de programação e deve ser evitado. Em vez disso, o aplicativo deve chamar **SQLFreeStmt** com a opção SQL_RESET_PARAMS desvincular todos os parâmetros antigos e, em seguida, associar novas.  
   
  Esta seção contém os tópicos a seguir.  
   

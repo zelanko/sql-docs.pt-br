@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - NamingTemplate Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - NamingTemplate element
 ms.assetid: d68d765c-f012-40c1-acd4-32741ee2eadf
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8ba346be8664cf26992143c15789684c503fdf2a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2b1a167ffc7418d69b28e8436bb67238acc3284b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300836"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106306"
 ---
 # <a name="namingtemplate-element-assl"></a>Elemento NamingTemplate (ASSL)
   Define como os níveis são nomeados em uma hierarquia pai-filho construída a partir de [DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md) elemento pai.  
@@ -51,7 +48,7 @@ ms.locfileid: "37300836"
 |Característica|Description|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|Cadeia de caracteres|  
-|Valor padrão|Nenhum|  
+|Valor padrão|None|  
 |Cardinalidade|0-1: elemento opcional que pode ocorrer apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -59,9 +56,9 @@ ms.locfileid: "37300836"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elemento pai|[DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O valor da `NamingTemplate` elemento é usado somente por atributos pai (em outras palavras, o valor da [uso](usage-element-dimensionattribute-assl.md) elemento do `DimensionAttribute` elemento pai é definido como *pai*).  
   
  Quando um atributo pai é usado para construir uma hierarquia, os níveis da hierarquia são determinados pelas relações pai-filho entre os membros contidos no atributo pai. Entretanto, ao contrário de outras dimensões, os nomes de nível não podem ser formulados a partir dos nomes de atributo usados para a hierarquia.  

@@ -1,13 +1,11 @@
 ---
-title: Propriedades de LineSeparator e EOS e exemplo de método SkipLine (VB) | Microsoft Docs
+title: EOS e LineSeparator propriedades e exemplo de método SkipLine (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,19 +14,18 @@ helpviewer_keywords:
 - Skipline method [ADO], Visual Basic example
 - EOS property [ADO], Visual Basic example
 ms.assetid: 77ce3042-9ebc-44ba-a4ff-0f1b1fd4a9c4
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 60a68227156d7138f6dbaacd3670fbd142543a9a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 19bc563e6080d1eba9768e95db5315d1d808a9b8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278035"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603184"
 ---
-# <a name="eos-and-lineseparator-properties-and-skipline-method-example-vb"></a>Propriedades de LineSeparator e EOS e exemplo de método SkipLine (VB)
-Este exemplo demonstra como manipular uma linha de fluxos de texto por vez. O efeito de alterar o separador de linha da padrão de carro retorno/alimentação de linha (**adCRLF**) para simplesmente avanço de linha (**adLF**) ou o retorno de carro (**adCR**) é mostrado.  
+# <a name="eos-and-lineseparator-properties-and-skipline-method-example-vb"></a>EOS e LineSeparator propriedades e exemplo de método SkipLine (VB)
+Este exemplo demonstra como manipular texto fluxos uma linha por vez. O efeito de alterar o separador de linha do padrão de carro retorno/avanço de linha (**adCRLF**) para simplesmente avanço de linha (**adLF**) ou o retorno de carro (**adCR**) é mostrada.  
   
 ```  
 'BeginSkipLineVB  

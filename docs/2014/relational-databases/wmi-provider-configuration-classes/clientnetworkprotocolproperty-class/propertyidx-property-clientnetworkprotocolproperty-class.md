@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - PropertyIdx Property (ClientNetworkProtocolProperty Class)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - PropertyIdx property
 ms.assetid: d7845962-ac68-4435-9c59-70ec450fec88
-caps.latest.revision: 29
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 331827dfd16ed941d903b5e877cb9c31b7ccc621
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 29bfcf0a06b6e69b61f592d74b893788d2fca624
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37186183"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104016"
 ---
 # <a name="propertyidx-property-clientnetworkprotocolproperty-class"></a>Propriedade PropertyIdx (classe ClientNetworkProtocolProperty)
   Obtém ou define o valor de índice da propriedade na matriz de propriedade referenciada pela [propriedade Properties (classe ClientNetworkProtocol)](../clientnetworkprotocol-class/clientnetworkprotocol-class.md) do objeto da [classe ClientNetworkProtocol](../clientnetworkprotocol-class/clientnetworkprotocol-class.md) .  
@@ -48,7 +45,7 @@ object
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
  Um valor `uint32` que especifica o valor do índice da matriz da propriedade atual.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 ## <a name="see-also"></a>Consulte também  
  [Configurar protocolos de cliente](../../../database-engine/configure-windows/configure-client-protocols.md)  

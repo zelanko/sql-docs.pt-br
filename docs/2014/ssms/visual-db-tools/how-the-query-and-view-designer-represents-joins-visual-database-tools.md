@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL pane [Visual Database Tools]
 - joins [SQL Server], Query and View Designer
 - Diagram pane [Visual Database Tools]
 ms.assetid: 20a99dcb-83bd-4aa6-9139-92e2e5ba4887
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7eaee902e0bd199d969f60544e7d5bd86fdb1c3a
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 1e03e7ef3899b4f01b0844d5d721fa3a86eb6d4b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43820542"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48100096"
 ---
 # <a name="how-the-query-and-view-designer-represents-joins-visual-database-tools"></a>Como o Designer de Consulta e Exibição representa junções (Visual Database Tools)
   Se as tabelas forem unidas, o [Designer de Consulta e Exibição](visual-database-tools.md) representará a junção graficamente no [painel Diagrama](diagram-pane-visual-database-tools.md) e pelo uso da sintaxe SQL no [painel SQL](sql-pane-visual-database-tools.md).  

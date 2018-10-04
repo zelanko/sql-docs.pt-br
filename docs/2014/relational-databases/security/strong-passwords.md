@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - logins [SQL Server], passwords
@@ -20,12 +18,12 @@ ms.assetid: 338548f4-c4d8-47ca-b597-5c9c0f2fa205
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: bf9bac77913385c4cdf2d219fbacb5a380e5101b
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 97b13e8ccf7ef331320d15254dde3480331c4bb0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43025923"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48075726"
 ---
 # <a name="strong-passwords"></a>Senhas fortes
   As senhas podem ser o link mais fraco em uma implantação de segurança de servidor. Você sempre deveria tomar muito cuidado ao selecionar uma senha. Uma senha segura tem as seguintes características:  

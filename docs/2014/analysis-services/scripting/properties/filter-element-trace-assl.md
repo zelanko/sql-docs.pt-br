@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Filter Element (Trace)
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Filter element
 ms.assetid: 411a598e-3bb1-487b-9f37-cce4b57a67b4
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 17f062bf17436a1f177c29deef8654402ffd7d6d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 85564817deb4f252d4709a451a93e1718319f3e3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37159347"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106416"
 ---
 # <a name="filter-element-trace-assl"></a>Elemento Filter (Trace) (ASSL)
   Contém um fragmento de documento XML que descreve o [rastreamento](../objects/trace-element-assl.md) filtro.  
@@ -51,7 +48,7 @@ ms.locfileid: "37159347"
 |Característica|Description|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|Cadeia de caracteres|  
-|Valor padrão|Nenhum|  
+|Valor padrão|None|  
 |Cardinalidade|0-1: elemento opcional que pode ocorrer apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -59,9 +56,9 @@ ms.locfileid: "37159347"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elemento pai|[Rastreamento](../objects/trace-element-assl.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O elemento que corresponde ao pai de `Filter` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.Trace>.  
   
 ## <a name="see-also"></a>Consulte também  

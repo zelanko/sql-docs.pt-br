@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DBSCHEMA_PROVIDER_TYPES
@@ -17,16 +15,15 @@ topic_type:
 helpviewer_keywords:
 - DBSCHEMA_PROVIDER_TYPES rowset
 ms.assetid: 255e01ba-53a9-478d-9b86-45faba76710e
-caps.latest.revision: 30
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7bca2527b77df65dede59878e91ef88ec5f933e0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2840e67e8ddb1b412164bacc6c26ff9ac0c90e10
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37250946"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48049177"
 ---
 # <a name="dbschemaprovidertypes-rowset"></a>Conjunto de linhas DBSCHEMA_PROVIDER_TYPES
   Identifica os tipos de dados (base) suportados pelo provedor de dados.  

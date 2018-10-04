@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - OLAP objects [Analysis Services], cubes
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - cubes [Analysis Services]
 - OLAP [Analysis Services], cubes
 ms.assetid: e0f7acf3-4b07-41fc-a5fc-ac30b4a56c54
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ca5da5ea8dfb22adc6e038f9dc54740e5102aad0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: adb21e802d437f7cd1e2d805f90c4525d6f9e8ef
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37237726"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48103947"
 ---
 # <a name="cubes-in-multidimensional-models"></a>Cubos em modelos multidimensionais
   Um cubo é uma estrutura multidimensional que contém informações para fins analíticos; os principais elementos constituintes de um cubo são dimensões e medidas. As dimensões definem a estrutura do cubo que você usa para fazer divisões, e as medidas fornecem valores numéricos agregados de interesse do usuário final. Como é uma estrutura lógica, um cubo permite a um aplicativo cliente recuperar valores, de medidas, como se estivessem contidos em células no cubo; as células são definidas para cada valor resumido possível. Uma célula, no cubo, é definida pela interseção de membros de dimensão e contém os valores agregados das medidas nessa interseção específica.  

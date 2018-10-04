@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.ftstoplist.general.f1
 ms.assetid: 97f8e82d-82ab-4525-91c9-1ee3ae217309
-caps.latest.revision: 16
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 2304b2b9a8711210117ffbb2a84abbf167694e71
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: eca5e82b9d23709b45949cfe6af9022f1243ef08
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37221966"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48066346"
 ---
 # <a name="new-full-text-stoplist-general-page"></a>Nova Lista de Palavras Irrelevantes de Texto Completo (página Geral)
   Use esta caixa de diálogo para criar uma lista de palavras irrelevantes (stoplist) de texto completo. Uma *lista de palavras irrelevantes* é um conjunto de palavras usadas com frequência, chamadas *palavras irrelevantes*, que são omitidas da indexação de texto completo de tabelas que usam a lista de palavras irrelevantes. Para obter mais informações, veja [Configurar e gerenciar palavras irrelevantes e listas de palavras irrelevantes para pesquisa de texto completo](../relational-databases/search/full-text-search.md).  
@@ -50,7 +47,7 @@ ms.locfileid: "37221966"
  **Criar com base em uma lista de palavras irrelevantes existente**  
  A nova lista de palavras irrelevantes será criada a partir da cópia de uma lista de palavras irrelevantes existente.  
   
- **Banco de dados de origem**  
+ **banco de dados de origem**  
  Especifica o nome do banco de dados ao qual a lista de palavras irrelevantes existente pertence. Por padrão, o banco de dados atual é selecionado. Você tem a opção de selecionar um outro banco de dados na caixa de listagem.  
   
  **Palavras irrelevantes de origem**  

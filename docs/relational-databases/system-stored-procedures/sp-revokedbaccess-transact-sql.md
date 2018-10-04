@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_revokedbaccess_TSQL
@@ -21,12 +18,12 @@ ms.assetid: c997cfa1-539d-485c-a664-9c6f76bfe0c2
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: f349df1368e3beac9c84ea56cde85828125ec280
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 98e962d5600064194ef4aff4a8f514e39a8f71a4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43032926"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47806766"
 ---
 # <a name="sprevokedbaccess-transact-sql"></a>sp_revokedbaccess (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +49,7 @@ sp_revokedbaccess [ @name_in_db = ] 'name'
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Quando o usuário de banco de dados é removido, as permissões e os aliases que dependem do usuário também são removidos.  
   
  **sp_revokedbaccess** pode remover somente os usuários de banco de dados do banco de dados atual. Antes de remover um usuário que possui objetos no banco de dados atual, é necessário transferir a propriedade dos objetos ou descartá-los do banco de dados. Para obter mais informações, confira [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md).  

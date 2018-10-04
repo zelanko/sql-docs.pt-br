@@ -4,23 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- SQL Server 2014
 ms.assetid: 47d9a7e8-c597-4b95-a58a-dcf66df8e572
-caps.latest.revision: 53
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 66edebe05c59ca8bcb0d755f3e6d530718cf1388
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 314f90a482091823efae4430dbdc2d62ad7b34f4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395426"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48073906"
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>Requisitos para usar tabelas com otimização de memória
   Além de [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md), estes são os requisitos para usar o OLTP na memória:  
