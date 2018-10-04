@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.pro.tracetableproperties.eventsselection.f1
 helpviewer_keywords:
 - Trace Table Properties dialog box
 ms.assetid: fa21df6a-b6b5-4b15-9104-957385821594
-caps.latest.revision: 23
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 28084e041538412399e518856ef4d948add75def
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 77660e19bed6781d73efdd36e6a752ae5c3cc1fb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37250556"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48169136"
 ---
 # <a name="trace-table-properties-events-selection-tab"></a>Propriedades da Tabela de Rastreamento (Guia Seleção de Eventos)
   Use a guia **Seleção de Eventos** da caixa de diálogo **Propriedades da Tabela de Rastreamento** para exibir eventos e propriedades da coluna de dados do rastreamento ou para remover eventos ou colunas do rastreamento.  

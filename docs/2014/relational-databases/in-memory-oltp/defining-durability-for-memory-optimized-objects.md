@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0fe85fbf-8e8d-4983-96fd-d04b3c7d6d65
-caps.latest.revision: 5
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6423f92f639c7408cd66c4bdcf91fae02afff1d0
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: ecf171c8c50e1f7ce1e7cdc9e86cd27ac6fe558b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40396019"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48169546"
 ---
 # <a name="defining-durability-for-memory-optimized-objects"></a>Definindo a durabilidade dos objetos com otimização de memória
   O OLTP na memória garante as propriedades ACID (total atomicidade, consistência, isolamento e total durabilidade). A durabilidade no contexto do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e nas tabelas com otimização de memória oferece as seguintes garantias:  

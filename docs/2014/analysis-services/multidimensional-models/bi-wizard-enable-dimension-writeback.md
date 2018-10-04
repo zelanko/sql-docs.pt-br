@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying dimensions
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - dimensions [Analysis Services], modifying
 - manual dimension structure modifications
 ms.assetid: a4b5eb5a-366d-4fc8-ad0d-5bdb8e7b4163
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0e7ee13d4fdfa021e050c4357dc8796289a3cd4d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e9236bfbd945386aa249291b490ad41680a3ff5d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37247426"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48171646"
 ---
 # <a name="enable-dimension-writeback"></a>Habilitar Write-back de Dimensão
   Adicione o aprimoramento de write-back de dimensão a um cubo ou dimensão para que os usuários possam modificar manualmente a estrutura e os membros da dimensão. Atualizações em uma dimensão habilitada para gravação são registradas diretamente na tabela de dimensões. Esse aprimoramento altera a configuração de propriedade `WriteEnabled` de uma dimensão.  
@@ -44,7 +41,7 @@ ms.locfileid: "37247426"
 ## <a name="setting-dimension-writeback-capability"></a>Definindo a capacidade de write-back de dimensão  
  Na segunda página **Habilitar o Write-back de Dimensão** do assistente, você realmente define a opção **Habilitar write-back na dimensão** . Selecionar esta opção automaticamente define o `WriteEnabled` propriedade da dimensão como `True`. Desmarcar essa opção definirá automaticamente a propriedade como `False`.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Ao criar um novo membro, você deve incluir todo atributo em uma dimensão. Você não pode inserir um membro sem especificar um valor para o atributo de chave da dimensão. Portanto, a criação de membros está sujeita às restrições (como valores de chave não nulos) definidas na tabela de dimensões. Você também deve considerar opcionalmente colunas especificadas por propriedades de dimensão, como colunas especificadas na `CustomRollupColumn`, `CustomRollupPropertiesColumn` ou o `UnaryOperatorColumn` propriedades de dimensão.  
   
 > [!WARNING]  

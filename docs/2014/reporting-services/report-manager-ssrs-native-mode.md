@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], managing
@@ -20,18 +18,17 @@ helpviewer_keywords:
 - Report Manager [Reporting Services]
 - components [Reporting Services], Report Manager
 ms.assetid: 80949f9d-58f5-48e3-9342-9e9bf4e57896
-caps.latest.revision: 69
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8fc0febe87f937e8ad301bb070e22dcd44b788c5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c3a102af211ccaa8fad3d7792cf868653ca4797d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37327066"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48176936"
 ---
-# <a name="report-manager--ssrs-native-mode"></a>Gerenciador de relatórios (modo nativo do SSRS)
+# <a name="report-manager--ssrs-native-mode"></a>Gerenciador de Relatórios (modo nativo do SSRS)
   O Gerenciador de Relatórios é uma ferramenta de gerenciamento e acesso a relatório com base na Web que é usada para administrar uma única instância de servidor de relatório a partir de um local remoto em uma conexão HTTP. Você também pode usar o Gerenciador de Relatórios para seu visualizador de relatório e recursos de navegação. Neste tópico:  
   
 -   [O que é o Gerenciador de relatórios?](#bkmk_whatis_report_manager)  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - event classes [SQL Server], QN:Parameter Table
 ms.assetid: 292da1ed-4c7e-4bd2-9b84-b9ee09917724
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5681c630cc3c45d0f2de06d3b5baa981bebe8c85
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ae4921f764819ca0210fcd4c71cf57ebcb588f57
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37184653"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48162306"
 ---
 # <a name="qnparameter-table-event-class"></a>Classe de evento QN:Parameter Table
   O evento QN:Parameter table fornece informações sobre as operações necessárias para criar, manter contagens de referência e descartar as tabelas internas que armazenam informações sobre parâmetros. Esse evento também informa a atividade interna para reajustar a contagem de uso para uma tabela de parâmetros.  

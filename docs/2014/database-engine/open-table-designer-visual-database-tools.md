@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - opening tables
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - tables [SQL Server], opening
 - Table Designer, opening
 ms.assetid: 2a8c0a59-71c4-4280-824c-2dc17999532e
-caps.latest.revision: 14
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: acaeb10ee4f8ea900971d843538442cdde171946
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 788aead525e8a4d21728de60a2162aafb5d286cb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43815132"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48163286"
 ---
 # <a name="open-table-designer-visual-database-tools"></a>Abrir o Designer de Tabela (Visual Database Tools)
   O Designer de Tabela é uma ferramenta visual que permite projetar e visualizar tabelas do banco de dados ao qual você está conectado. Você pode usar o Designer de Tabela para criar, editar ou excluir tabelas, colunas, chaves, índices, relações e restrições.  

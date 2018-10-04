@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Type Element (Action)
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Type element
 ms.assetid: 534cdf99-1edf-4490-9eaa-61f189a19434
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 99147acb4b2a1b467913087f4e4df14469de9a03
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: af38eb6a60e8e54ecfc4ac5bb4fb05faeab69feb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37249072"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48168416"
 ---
 # <a name="type-element-action-assl"></a>Elemento Type (Ação) (ASSL)
   Contém o tipo dos [ação](../objects/action-element-assl.md) elemento.  
@@ -51,7 +48,7 @@ ms.locfileid: "37249072"
 |Característica|Description|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|Cadeia de caracteres (enumeração)|  
-|Valor padrão|Nenhum|  
+|Valor padrão|None|  
 |Cardinalidade|1-1: elemento obrigatório que ocorre apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -59,9 +56,9 @@ ms.locfileid: "37249072"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elemento pai|[Ação](../objects/action-element-assl.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O valor desse elemento é limitado a uma das cadeias de caracteres listadas na tabela a seguir.  
   
 |Valor|Description|  
@@ -72,7 +69,7 @@ ms.locfileid: "37249072"
 |*Detalhamento*|Recupera um conjunto de linhas para extração de detalhes.<br /><br /> Esse valor é idêntico ao *conjunto de linhas* e identifica ações de detalhamento. Ele só pode ser usado em ações cujo [TargetType](targettype-element-assl.md) valor é definido como *células*.|  
 |*Conjunto de dados*|Recupera um conjunto de dados.|  
 |*Rowset*|Recupera um conjunto de linhas.|  
-|*Linha de comando*|Executa um comando em um prompt de comando.|  
+|*linha de comando*|Executa um comando em um prompt de comando.|  
 |*Proprietários*|Executa uma operação usando uma interface diferente das listadas anteriormente nesta tabela.|  
 |*Relatório*|Exibe uma página variável em um navegador de Internet.<br /><br /> Esse valor é idêntico ao *Url* e identifica ações de relatório.|  
   

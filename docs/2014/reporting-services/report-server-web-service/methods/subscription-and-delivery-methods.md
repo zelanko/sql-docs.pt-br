@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - reports [Reporting Services], delivering
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - methods [Reporting Services], subscription and delivery
 - subscriptions [Reporting Services], about subscriptions
 ms.assetid: a8637501-1817-4ccc-b07d-dd9ed5608805
-caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 614ec62fec8cbd77c86c6d8e038d897d7769de7b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5598122d95d3c90bcd91a32b8423117e05dc2a90
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37175138"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48163585"
 ---
 # <a name="subscription-and-delivery-methods"></a>Métodos de assinatura e de entrega
   Você pode usar estes métodos para criar e gerenciar assinaturas e a entrega de itens de catálogo.  

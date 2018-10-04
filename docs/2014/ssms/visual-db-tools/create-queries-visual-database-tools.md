@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], creating
 ms.assetid: 696a080d-848f-44d3-a918-e29bafaab85a
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4ce62236dc084f495dff2530141553ca77ee9697
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: d6eec2455269026151d285f781ee475934825082
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43809592"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48160006"
 ---
 # <a name="create-queries-visual-database-tools"></a>Criar consultas (Visual Database Tools)
   As consultas permitem que você recupere dados das tabelas e exibições em seu banco de dados. Você cria e trabalha com consultas no **Designer de Consulta e Exibição**, que é composto por quatro painéis: o [Painel de Diagrama](visual-database-tools.md), o [Painel SQL](sql-pane-visual-database-tools.md), o [Painel de Critérios](criteria-pane-visual-database-tools.md)e o [Painel de Resultados](results-pane-visual-database-tools.md).  

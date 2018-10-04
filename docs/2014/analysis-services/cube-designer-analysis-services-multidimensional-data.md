@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Cube Designer
 ms.assetid: a6692467-da88-4312-8b03-d812f2ae5a96
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dc6972d90683de658dd0d8104cff138d59960904
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a4333b9d2c15097b1954144738543250bb591621
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37246276"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155409"
 ---
 # <a name="cube-designer-analysis-services---multidimensional-data"></a>Designer de Cubo (Analysis Services - Dados Multidimensionais)
   Use o **Designer de Cubo** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para editar várias propriedades de um cubo existente, inclusive os grupos de medidas e medidas, dimensões de cubo e relações de dimensão, cálculos, KPIs (indicadores chave de desempenho), ações, partições, perspectivas e traduções incluídas no cubo, bem como para procurar os dados contidos no cubo. Você pode exibir a caixa de diálogo **Designer de Cubo** das seguintes maneiras:  

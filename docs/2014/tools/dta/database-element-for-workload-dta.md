@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - XML
 helpviewer_keywords:
 - Database element
 ms.assetid: 112fca2a-37e5-4162-b2e7-b56eb8ab0c6f
-caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 085af567ae906835b33942a57e0590c9296f5198
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f3f5f7d912a41476588662c4543b20c041b02672
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37257612"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48172136"
 ---
 # <a name="database-element-for-workload-dta"></a>Elemento de banco de dados para carga de trabalho (DTA)
   Especifica o banco de dados em que se encontra a tabela de rastreamento da carga de trabalho.  
@@ -53,7 +50,7 @@ ms.locfileid: "37257612"
 |**Elemento pai**|[Elemento de carga de trabalho &#40;DTA&#41;](workload-element-dta.md)|  
 |**Elementos filho**|[Nome de elemento para o banco de dados &#40;DTA&#41;](name-element-for-database-dta.md)<br /><br /> [Elemento de esquema para o banco de dados &#40;DTA&#41;](schema-element-for-database-dta.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esse elemento tem o nome **DatabaseDetailsTypecomplexType** no Esquema XML do Orientador de Otimização do Mecanismo de Banco de Dados. Não confunda este elemento do `Database` com aquele cujo pai raiz é o elemento `Configuration`. (Consulte [Elemento Database para Configuration &#40;DTA&#41;](database-element-for-configuration-dta.md).)  
   
 ## <a name="example"></a>Exemplo  

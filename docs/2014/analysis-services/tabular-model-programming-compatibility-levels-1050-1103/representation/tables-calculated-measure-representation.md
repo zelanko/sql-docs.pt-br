@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 4cb9fea5-1616-467b-a539-d051e5833aea
-caps.latest.revision: 9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 16d360e8595b92ab5ff0af56cffdbf59bfdce488
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 58382e66ca6e59ea89e942f97a20ba5d6a138559
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37324806"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48160776"
 ---
 # <a name="calculated-measure-representation-tabular"></a>Representação de medida calculada (de tabela)
   Uma medida calculada é uma expressão DAX nomeada avaliada toda vez que é usada.  
@@ -30,7 +27,7 @@ ms.locfileid: "37324806"
 ### <a name="calculated-measure-in-amo"></a>Medidas calculadas no AMO  
  Ao usar o AMO para gerenciar uma medida calculada de modelo de tabela, há uma correspondência um-para-um entre o objeto de Medida Calculada lógica e uma medida definida em um objeto <xref:Microsoft.AnalysisServices.Command> do objeto <xref:Microsoft.AnalysisServices.MdxScript>. Cada **medida calculada** é definido como um `CREATE MEASURE` expressão dentro de um <xref:Microsoft.AnalysisServices.Command> do objeto e separados por ponto e vírgula. Todas as medidas calculadas em um modelo de tabela correspondem à cadeia de caracteres `CREATE MEASURE` da coleção em um objeto de comando em um objeto <xref:Microsoft.AnalysisServices.MdxScript>. Para cada medida calculada, há um mapeamento um para um com <xref:Microsoft.AnalysisServices.CalculationProperty>.  
   
- O trecho de código a seguir mostra como criar uma medida calculada.  
+ O snippet de código a seguir mostra como criar uma medida calculada.  
   
 ```  
   

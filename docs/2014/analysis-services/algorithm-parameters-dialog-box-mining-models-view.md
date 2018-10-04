@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.models.algorithmparameters.f1
 helpviewer_keywords:
 - Algorithm Parameters dialog box
 ms.assetid: 57f9f6f8-8ca4-4a6e-8f18-85f0571b7060
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 491605a58b6a30f0f8b86afd0a2354e3c9b81ed9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dc3d863889f7e5cb8ca1e79f78e920aedd79f979
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37178953"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48172996"
 ---
 # <a name="algorithm-parameters-dialog-box-mining-models-view"></a>Caixa de diálogo Parâmetros de Algoritmo (Exibição de Modelos de Mineração)
   Use a caixa de diálogo **Parâmetros de Algoritmo** para ajustar os parâmetros de algoritmo que sejam específicos ao modelo selecionado. A alteração de um parâmetro de algoritmo geralmente altera os resultados do modelo de mineração. O modo como cada parâmetro afeta os resultados, depende do algoritmo que está sendo usado e dos dados. Para obter mais informações, consulte [Personalizar os modelos de mineração e a estrutura](data-mining/customize-mining-models-and-structure.md).  
@@ -39,7 +36,7 @@ ms.locfileid: "37178953"
 |**Parâmetro**|Liste o nome do parâmetro.|  
 |**Value**|Digite um valor somente se desejar alterar o valor padrão do parâmetro.|  
 |**Default**|Liste um valor padrão do parâmetro que o algoritmo utilizará caso você não forneça um valor na coluna **Valor** .|  
-|**Intervalo**|Liste o intervalo de possíveis valores que se pode digitar na coluna **Valor** . Os intervalos podem ser um dos seguintes:<br /><br /> Uma lista distinta, como 1, 2, 3<br /><br /> Um intervalo inclusivo, como [0, 100]<br /><br /> Um intervalo exclusivo, como (0,...)<br /><br /> Uma combinação, como [0...)|  
+|**intervalo**|Liste o intervalo de possíveis valores que se pode digitar na coluna **Valor** . Os intervalos podem ser um dos seguintes:<br /><br /> Uma lista distinta, como 1, 2, 3<br /><br /> Um intervalo inclusivo, como [0, 100]<br /><br /> Um intervalo exclusivo, como (0,...)<br /><br /> Uma combinação, como [0...)|  
   
  **Descrição**  
  Descreve o parâmetro selecionado na lista **Parâmetros** .  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - xml data type [SQL Server], variables
@@ -24,16 +22,15 @@ helpviewer_keywords:
 - XML [SQL Server], untyped
 - xml data type [SQL Server], parameters
 ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
-caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bcffb5fa9a023f893446479769c75089ca13fe06
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: a318e2729c6d03770b5d7c8e41412cef182f641a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43890262"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48163056"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>Comparar XML digitado com XML não digitado
   É possível criar variáveis, parâmetros e colunas do tipo `xml`. Opcionalmente, você pode associar uma coleção de esquemas XML com uma variável, parâmetro ou coluna de `xml` tipo. Nesse caso, o `xml` instância de tipo de dados é chamada *digitado*. Caso contrário, a instância XML é chamada *sem-tipo*.  

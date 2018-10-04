@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8311ed32-00f3-451d-8279-946429f5fee1
-caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b133cd5882ea3dfa2d44a9fa4984091bf1fbab10
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 28366043f6681ab01cd3d1912d5180ae06914ae8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37276102"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48157646"
 ---
 # <a name="error-page-report-manager"></a>Página Erro (Gerenciador de Relatórios)
   Use a página Erro para exibir detalhes sobre uma condição de erro. Erros com base em servidor ou em sessão são exibidos nesta página. Erros de validação relacionados a uma página específica controlam exibições embutidas próximas ao controle.  

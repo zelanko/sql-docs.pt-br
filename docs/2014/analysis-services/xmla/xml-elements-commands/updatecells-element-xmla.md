@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - UpdateCells Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - UpdateCells command
 ms.assetid: 18336a35-8a46-4532-9ee7-71828b2982af
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 05b3b1dae8f409f367a88b696accb77484304b4e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0bc6c13b156e7cf9483f9acdf58c67cb866a043d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37219976"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48155865"
 ---
 # <a name="updatecells-element-xmla"></a>Elemento UpdateCells (XMLA)
   Atualiza células em um cubo habilitado para gravação.  
@@ -52,8 +49,8 @@ ms.locfileid: "37219976"
   
 |Característica|Description|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|Nenhum|  
-|Valor padrão|Nenhum|  
+|Comprimento e tipo de dados|None|  
+|Valor padrão|None|  
 |Cardinalidade|0-n: Elemento opcional que pode ocorrer mais de uma vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -61,9 +58,9 @@ ms.locfileid: "37219976"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|[Comando](../xml-elements-properties/command-element-xmla.md)|  
-|Elementos filho|[Célula](../xml-elements-properties/cell-element-xmla.md)|  
+|Elementos filho|[célula](../xml-elements-properties/cell-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O comando `UpdateCells` atualiza as células em um cubo que oferece suporte à write-back de célula.  
   
  Para obter mais informações sobre atualização de células, consulte [Atualizando células &#40;XMLA&#41;](../../multidimensional-models-scripting-language-assl-xmla/updating-cells-xmla.md).  

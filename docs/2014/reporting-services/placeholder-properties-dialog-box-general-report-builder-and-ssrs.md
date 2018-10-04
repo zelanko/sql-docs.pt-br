@@ -4,31 +4,28 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10131"
 - sql12.rtp.rptdesigner.placeholderproperties.general.f1
 ms.assetid: 7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8
-caps.latest.revision: 11
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 03c093382d1027c984e3ee1c953bd803dcbdbe25
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bceb733247e806f9e03803797c831561662229d2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37309726"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48171156"
 ---
 # <a name="placeholder-properties-dialog-box-general-report-builder-and-ssrs"></a>Caixa de diálogo Propriedades do Espaço Reservado, Geral (Construtor de Relatórios e SSRS)
   Use a caixa de diálogo **Propriedades do Espaço Reservado** para alterar o valor, a Dica de Ferramenta e as opções de marcação de um espaço reservado em uma caixa de texto.  
   
 ## <a name="options"></a>Opções  
- **Rótulo**  
+ **Label**  
  Digite um rótulo para o espaço reservado. O rótulo é exibido apenas na superfície de design.  
   
  **Value**  
