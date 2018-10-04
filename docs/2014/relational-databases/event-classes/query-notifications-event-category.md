@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - event classes [SQL Server], Query Notifications event category
 ms.assetid: 13c62636-ce8a-410f-9af9-c0a78959fb49
-caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8a8f349b44d3854c38481184c5d7f39ad37a85c0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b1a707d7fce73294b518988b128c0c5984cc5735
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37285282"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48066676"
 ---
 # <a name="query-notifications-event-category"></a>Categoria de eventos Query Notifications
   A categoria de evento **Notificações de Consultas** contém classes de eventos que relatam informações que os desenvolvedores e administradores podem usar para monitorar e solucionar problemas de notificações de consulta.  

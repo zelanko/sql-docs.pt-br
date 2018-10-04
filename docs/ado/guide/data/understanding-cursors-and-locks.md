@@ -6,28 +6,25 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - locks [ADO]
 - cursors [ADO]
 ms.assetid: c1b7d7e6-1707-4ce2-863f-0c6dea967df6
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bdbbaa5d57bdaa1bf3d9d784f3bb378a833db9cc
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a5c5a0d7d51acfd2ecf6d0ffda945a6223c7e04f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35273035"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696955"
 ---
 # <a name="understanding-cursors-and-locks"></a>Noções básicas sobre cursores e bloqueios
-É importante entender como os cursores operam para que você pode selecionar o tipo de cursor melhor e mais eficiente para requisitos de acesso a dados do aplicativo. Uma configuração menor ideal do cursor pode tornar lenta lamentavelmente de operações de acesso a dados.  
+É importante entender como os cursores funcionam para que você possa selecionar o tipo de cursor melhor e mais eficiente para requisitos de acesso a dados do aplicativo. Uma configuração de cursor menos aquém do ideal pode fazer operações de acesso a dados lamentavelmente lentas.  
   
- Muitos recursos do ADO **registros** objeto são determinados pelo tipo e local do cursor, bem como o tipo de bloqueio.  
+ Muitos recursos do ADO **Recordset** objeto são determinados pelo tipo e local do cursor, bem como o tipo de bloqueio.  
   
  Esta seção contém os tópicos a seguir.  
   

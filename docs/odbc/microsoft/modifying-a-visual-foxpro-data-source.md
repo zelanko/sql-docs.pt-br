@@ -5,26 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual FoxPro data source [ODBC], changing
 - editing data sources [ODBC], Visual FoxPro
 ms.assetid: d9c30b5a-9ddf-4044-a7c5-0bdb983fdda4
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 31a455855204b5b608f22955120f3a58c1e6b3f8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fabd9efd5e6dcfcabd318584364d8f1d70752ad9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32899931"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47800664"
 ---
-# <a name="modifying-a-visual-foxpro-data-source"></a>Modificando uma fonte de dados do Visual FoxPro
+# <a name="modifying-a-visual-foxpro-data-source"></a>Modificar uma fonte de dados do Visual FoxPro
 ### <a name="to-modify-a-visual-foxpro-data-source"></a>Para modificar uma fonte de dados do Visual FoxPro  
   
 1.  Em computadores que executam o Windows 2000, abra o painel de controle do Windows e clique duas vezes em Ferramentas administrativas.  
@@ -36,8 +33,8 @@ ms.locfileid: "32899931"
   
 3.  Na guia DSN de usuário ou DSN de sistema, selecione o nome da fonte de dados que você deseja modificar e clique em configurar.  
   
-4.  No [caixa de diálogo a instalação do Visual FoxPro ODBC](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md), selecionar e alterar os itens que você deseja modificar e, em seguida, clique em Okey.  
+4.  No [caixa de diálogo de instalação do ODBC Visual FoxPro](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md), selecionar e alterar os itens que você deseja modificar e, em seguida, clique em Okey.  
   
 5.  Clique em Okey para salvar as alterações e fechar a caixa de diálogo Administrador de fonte de dados ODBC.  
   
- As alterações terão efeito na próxima vez que você acessar a fonte de dados do seu aplicativo.
+ As alterações entrarão em vigor na próxima vez que acessar a fonte de dados de seu aplicativo.

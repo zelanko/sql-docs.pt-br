@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.currencyconversion.calculationsettings.f1
 ms.assetid: a49d4e1f-bdda-4a83-ab4f-ce8c500e1d6d
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a6ecdd5959754ab2ca7d4d9e5fc32d313dacfa00
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8ca50d2c29bcc1a4394561b4b5106e4da65afa93
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37289494"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48205726"
 ---
 # <a name="set-currency-conversion-options-business-intelligence-wizard"></a>Definir Opções de Conversão de Moeda (Assistente de Business Intelligence)
   Use a página **Definir Opções de Conversão de Moeda** para definir cálculos de conversão de moeda para um grupo de medidas que contém taxas de câmbio.  

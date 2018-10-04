@@ -6,49 +6,46 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - HelloData sample application [ADO]
 - ADO, samples
 ms.assetid: de4bcd56-dac2-45e6-95ab-9fd7f25878fc
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fe8a5f0cd56c50441a44ab59da234791438876a7
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ed92b3f83e865d2b8d4f3e3a3a3cb95e291d771e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271695"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47624674"
 ---
-# <a name="hellodata-a-simple-ado-application"></a>HelloData: Um aplicativo ADO simples
-Este aplicativo simples percorre cada uma das quatro principais operações ADO: obtendo, examinando, editar e atualizar dados. Essas operações são executadas no banco de dados de exemplo Northwind incluído com o Microsoft® SQL Server. Para focalizar os conceitos básicos do ADO e evitar desordem de código, no exemplo de tratamento de erro é mínimo.  
+# <a name="hellodata-a-simple-ado-application"></a>HelloData: um aplicativo ADO simples
+Este aplicativo simples percorre cada uma das quatro principais operações ADO: Introdução, o exame, edição e atualização de dados. Essas operações são executadas em relação a dados de exemplo Northwind incluído com o Microsoft® SQL Server. Para se concentrar nos conceitos básicos do ADO e evitar a desordem de código, no exemplo de tratamento de erro é mínimo.  
   
-### <a name="to-run-hellodata"></a>Para executar HelloData  
+### <a name="to-run-hellodata"></a>Para executar o HelloData  
   
-1.  Crie um novo projeto Standard EXE Visual Basic que faz referência a biblioteca do ADO. Para obter mais informações, consulte [fazer referência às bibliotecas do ADO](../../../ado/guide/referencing-the-ado-libraries.md).  
+1.  Crie um novo projeto Standard EXE Visual Basic que faz referência a biblioteca do ADO. Para obter mais informações, consulte [referenciando as bibliotecas ADO](../../../ado/guide/referencing-the-ado-libraries.md).  
   
 2.  Criar quatro botões de comando na parte superior do formulário, definindo a **nome** e **legenda** propriedades com os valores mostrados na tabela no final deste tópico.  
   
-3.  Abaixo os botões, adicione um **Microsoft controle DataGrid** (Msdatgrd.ocx). O arquivo Msdatgrd.ocx está incluído com o Visual Basic e está localizado na pasta \windows\system32 ou \Winnt\System32. Para adicionar o controle DataGrid ao painel de ferramentas do Visual Basic, selecione **componentes...**  do **projeto** menu. Em seguida, marque a caixa ao lado de "Microsoft controle DataGrid 6.0 (SP3) (OLEDB)" e, em seguida, clique em **Okey**. Para adicionar o controle ao projeto, arraste o controle DataGrid da caixa de ferramentas para o formulário do Visual Basic.  
+3.  Abaixo dos botões, adicione uma **Microsoft controle DataGrid** (Msdatgrd.ocx). O arquivo Msdatgrd.ocx está incluído no Visual Basic e está localizado no diretório \windows\system32 ou \Winnt\System32. Para adicionar o controle DataGrid ao seu painel de caixa de ferramentas do Visual Basic, selecione **componentes...**  do **projeto** menu. Em seguida, marque a caixa ao lado de "Microsoft controle DataGrid 6.0 (SP3) (OLEDB)" e, em seguida, clique em **Okey**. Para adicionar o controle ao projeto, arraste o controle DataGrid da caixa de ferramentas para o formulário do Visual Basic.  
   
-4.  Criar um **TextBox** no formulário abaixo da grade e defina suas propriedades conforme mostrado na tabela. O formulário deve se parecer com a figura a seguir, quando tiver terminado.  
+4.  Criar uma **caixa de texto** no formulário abaixo da grade e defina suas propriedades, conforme mostrado na tabela. O formulário deve ser semelhante a figura a seguir, quando tiver terminado.  
   
-5.  Por fim, copie o código listado na [HelloData código](../../../ado/guide/data/hellodata-code.md)e cole-o na janela do editor de código do formulário. Pressione **F5** para executar o código.  
+5.  Por fim, copie o código listado na [código do HelloData](../../../ado/guide/data/hellodata-code.md)e cole-o na janela do editor de código do formulário. Pressione **F5** para executar o código.  
   
 > [!NOTE]
->  No exemplo a seguir e em todo este guia, a id de usuário "MyId" com uma senha de "123aBc" é usada para autenticar no servidor. Você deve substituir esses valores com credenciais de logon válido para o servidor. Além disso, substitua o valor de "MySQLServer" com o nome do seu servidor.  
+>  No exemplo a seguir e neste guia, a id de usuário "MyId" com uma senha de "123aBc" é usada para autenticar no servidor. Você deve substituir esses valores com credenciais de logon válidas para o servidor. Além disso, substitua o valor de "MySQLServer" com o nome do seu servidor.  
   
- Para obter uma descrição detalhada do código, consulte [comentários em HelloData](../../../ado/guide/data/comments-on-hellodata.md).  
+ Para obter uma descrição detalhada do código, consulte [comentários sobre o HelloData](../../../ado/guide/data/comments-on-hellodata.md).  
   
  ![Mostra Form1 para o aplicativo HelloData VB](../../../ado/guide/data/media/hellodata.gif "HelloData")  
   
 |Tipo de controle|Propriedade|Valor|  
 |------------------|--------------|-----------|  
-|formulário|Nome|Form1|  
+|Formulário|Nome|Form1|  
 ||Altura|6500|  
 ||Largura|6500|  
 |DataGrid MS|Nome|grdDisplay1|  
@@ -57,7 +54,7 @@ Este aplicativo simples percorre cada uma das quatro principais operações ADO:
 |Botão de comando|Nome|cmdGetData|  
 ||Legenda|Get Data|  
 |Botão de comando|Nome|cmdExamineData|  
-||Legenda|Examinar os dados|  
+||Legenda|Examinar dados|  
 |Botão de comando|Nome|cmdEditData|  
 ||Legenda|Editar dados|  
 |Botão de comando|Nome|cmdUpdateData|  

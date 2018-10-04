@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - StatusGraphic Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - StatusGraphic element
 ms.assetid: 14b365bc-924d-4791-ad4a-a38155fec42e
-caps.latest.revision: 36
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 12d175d20c562fd9c0df30941ded999988fed976
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 98c1b9d076b6ed6981b02b8c4198c330bb0aca53
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37215956"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48190406"
 ---
 # <a name="statusgraphic-element-assl"></a>Elemento StatusGraphic (ASSL)
   Contém a representação gráfica recomendada do status do [Kpi](../objects/kpi-element-assl.md) elemento.  
@@ -51,7 +48,7 @@ ms.locfileid: "37215956"
 |Característica|Description|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|Cadeia de caracteres|  
-|Valor padrão|Nenhum|  
+|Valor padrão|None|  
 |Cardinalidade|0-1: elemento opcional que pode ocorrer apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -59,9 +56,9 @@ ms.locfileid: "37215956"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elemento pai|[KPI](../objects/kpi-element-assl.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O valor desse elemento é limitado a uma das cadeias de caracteres listadas na tabela a seguir.  
   
 |Valor|Description|  

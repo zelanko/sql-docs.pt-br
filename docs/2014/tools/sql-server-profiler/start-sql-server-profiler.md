@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Profiler [SQL Server Profiler], starting
 - SQL Server Profiler, starting
 - starting SQL Server Profiler
 ms.assetid: 22e57ffa-63b0-4de3-b92e-df297dda1226
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f5b752dfc31fd83530a773370551b88589fc2f4b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d8d306be84e1c039122a462fdfa8b298bb451c1f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37246136"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48084707"
 ---
 # <a name="start-sql-server-profiler"></a>Iniciar o SQL Server Profiler
   É possível iniciar o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] de várias maneiras diferentes para dar suporte à coleta da saída de rastreamento em vários cenários. Você pode iniciar o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] no menu **Iniciar** , no menu **Ferramentas** do [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor e em vários locais do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - AggregationInstanceSource Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - AggregationInstanceSource element
 ms.assetid: ab58c817-eb2b-4974-8470-2946ca5affea
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cd2001d304d951f4eeb2ac737e3cfe6e8526c1af
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 26d8783b220e02b558f8f62ba72d32117ab991c8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312406"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48226106"
 ---
 # <a name="aggregationinstancesource-element-assl"></a>Elemento AggregationInstanceSource (ASSL)
   Identifica a fonte de dados para instâncias de agregação definida pelo usuário associadas a um [partição](../objects/partition-element-assl.md) elemento.  
@@ -49,7 +46,7 @@ ms.locfileid: "37312406"
 |Característica|Description|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|[DataSourceViewBinding](../data-type/binding-data-type-assl.md)|  
-|Valor padrão|Nenhum|  
+|Valor padrão|None|  
 |Cardinalidade|0-1: elemento opcional que pode ocorrer apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -57,9 +54,9 @@ ms.locfileid: "37312406"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|[Partição](../objects/partition-element-assl.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Se esse elemento estiver ausente ou for definido como uma cadeia de caracteres em branco, a exibição da fonte de dados do cubo a qual pertence a partição é usada por padrão.  
   
  Para obter mais informações sobre o `Binding` tipo, incluindo tabelas de objetos do Analysis Services Scripting Language (ASSL) da `Binding` tipo e a hierarquia de herança dos `Binding` tipos, consulte [ &#40;ASSL&#41;](../data-type/binding-data-type-assl.md).  

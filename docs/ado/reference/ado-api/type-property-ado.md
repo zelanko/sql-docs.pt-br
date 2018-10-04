@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -16,25 +14,24 @@ f1_keywords:
 helpviewer_keywords:
 - Type property [ADO]
 ms.assetid: 8a4c079f-9f4f-4545-801d-85983b8db71e
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 33bf90a2ac3101cbf582449f2b5495f110a37a62
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 02c5b9193b89c131095ccfec6ef185d5ff39f4d5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282565"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47820784"
 ---
 # <a name="type-property-ado"></a>Propriedade Type (ADO)
 Indica o tipo de dados ou tipo operacional de um [parâmetro](../../../ado/reference/ado-api/parameter-object.md), [campo](../../../ado/reference/ado-api/field-object.md), ou [propriedade](../../../ado/reference/ado-api/property-object-ado.md) objeto.  
   
-## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
+## <a name="settings-and-return-values"></a>As configurações e valores de retorno  
  Define ou retorna um [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) valor.  
   
-## <a name="remarks"></a>Remarks  
- Para **parâmetro** objetos, o **tipo** propriedade é leitura/gravação. Para o novo **campo** objetos que foram acrescentados ao [campos](../../../ado/reference/ado-api/fields-collection-ado.md) coleção de um [registro](../../../ado/reference/ado-api/record-object-ado.md), **tipo** é leitura/gravação somente após o [ Valor](../../../ado/reference/ado-api/value-property-ado.md) propriedade para o **campo** foi especificado e o provedor de dados foi adicionado com êxito o novo **campo** chamando o [atualizar](../../../ado/reference/ado-api/update-method.md)método o **campos** coleção.  
+## <a name="remarks"></a>Comentários  
+ Para **parâmetro** objetos, o **tipo** propriedade é leitura/gravação. Para o novo **campo** objetos que foram acrescentados para o [campos](../../../ado/reference/ado-api/fields-collection-ado.md) coleção de um [registro](../../../ado/reference/ado-api/record-object-ado.md), **tipo** é leitura/gravação somente após o [ Valor](../../../ado/reference/ado-api/value-property-ado.md) propriedade para o **campo** foi especificado e o provedor de dados foi adicionado com êxito a nova **campo** chamando o [atualizar](../../../ado/reference/ado-api/update-method.md)método de **campos** coleção.  
   
  Para todos os outros objetos, o **tipo** propriedade é somente leitura.  
   
@@ -45,7 +42,7 @@ Indica o tipo de dados ou tipo operacional de um [parâmetro](../../../ado/refer
 |[Objeto Field](../../../ado/reference/ado-api/field-object.md)|[Objeto Parameter](../../../ado/reference/ado-api/parameter-object.md)|[Objeto Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
   
 ## <a name="see-also"></a>Consulte também  
- [Exemplo de propriedade de tipo (campo) (VB)](../../../ado/reference/ado-api/type-property-example-field-vb.md)   
- [Exemplo de propriedade de tipo (propriedade) (VC + +)](../../../ado/reference/ado-api/type-property-example-property-vc.md)   
+ [Exemplo da propriedade Type (campo) (VB)](../../../ado/reference/ado-api/type-property-example-field-vb.md)   
+ [Exemplo da propriedade Type (propriedade) (VC + +)](../../../ado/reference/ado-api/type-property-example-property-vc.md)   
  [Propriedade RecordType (ADO)](../../../ado/reference/ado-api/recordtype-property-ado.md)   
  [Propriedade Type (Fluxo ADO)](../../../ado/reference/ado-api/type-property-ado-stream.md)

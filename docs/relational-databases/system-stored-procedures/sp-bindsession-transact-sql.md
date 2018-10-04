@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_bindsession
@@ -21,12 +18,12 @@ ms.assetid: 1436fe21-ad00-4a98-aca1-1451a5e571d2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 86c735cece67642ab6cd42c5e8164df7f7400d8e
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: a24c219937341b7c1f9d44515bf52c4de220d4c2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43036989"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47851984"
 ---
 # <a name="spbindsession-transact-sql"></a>sp_bindsession (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +49,7 @@ sp_bindsession { 'bind_token' | NULL }
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Duas sessões associadas compartilham somente uma transação e bloqueios. Cada sessão retém seu próprio nível de isolamento e a definição de um novo nível de isolamento em uma sessão não afeta o nível de isolamento da outra sessão. Cada sessão permanece identificada por sua conta de segurança e só pode acessar os recursos de banco de dados para o qual a conta recebeu permissão.  
   
  **sp_bindsession** usa um token de associação para associar duas ou mais sessões de cliente existentes. Essas sessões de cliente devem estar na mesma instância do [!INCLUDE[ssDE](../../includes/ssde-md.md)] do qual o token de associação foi obtido. Uma sessão é um cliente executando um comando. As sessões associadas de banco de dados compartilham uma transação e um espaço de bloqueio.  

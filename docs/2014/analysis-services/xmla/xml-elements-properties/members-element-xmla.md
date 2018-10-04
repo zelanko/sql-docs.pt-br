@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Members Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Members element
 ms.assetid: 55f9ec3a-5a41-4b3a-acd6-c07598868c46
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 37eb0532f56fd4aff8ca760b843697f30f3c9585
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fa1a418c0dc131f02c1afc2f2dd67810ebf90ea2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37201956"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48083487"
 ---
 # <a name="members-element-xmla"></a>Elemento Members (XMLA)
   Contém uma coleção de [membro](member-element-xmla.md) elementos contidos pelo pai [CrossProduct](crossproduct-element-xmla.md) elemento.  
@@ -53,8 +50,8 @@ ms.locfileid: "37201956"
   
 |Característica|Description|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|Nenhum|  
-|Valor padrão|Nenhum|  
+|Comprimento e tipo de dados|None|  
+|Valor padrão|None|  
 |Cardinalidade|0-n: Elemento opcional que pode ocorrer mais de uma vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -70,7 +67,7 @@ ms.locfileid: "37201956"
 |---------------|-----------------|  
 |Hierarquia|Necessário `String` atributo. O nome da hierarquia à qual os membros contidos pelo elemento `Members` pertencem.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Quando um aplicativo cliente definir a `AxisFormat` propriedade para *ClusterFormat*, os membros em cada eixo são divididos em clusters em que cada cluster representa um produto cruzado entre conjuntos ordenados de membros de cada hierarquia. Cada elemento `Axis` consiste em um ou mais elementos `CrossProduct`. Cada elemento `CrossProduct` contém um elemento `Members` para cada hierarquia no eixo. O elemento `Members`, por sua vez, contém um elemento `Member` para cada membro da hierarquia especificada incluída no produto cruzado.  
   
 ## <a name="example"></a>Exemplo  

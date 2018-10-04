@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - FiscalYearName Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - FiscalYearName element
 ms.assetid: ce613a21-6890-4796-aac5-b029eca46255
-caps.latest.revision: 30
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2564345c916d73c5984be851523a234d2be6bbe4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9acbbcdcf1695228cf197c1a29f653d01ccbd320
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37197886"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48083426"
 ---
 # <a name="fiscalyearname-element-assl"></a>Elemento FiscalYearName (ASSL)
   Define a convenção de nomenclatura para o nome do ano fiscal para um [TimeBinding](../data-type/binding-data-type-assl.md) elemento.  
@@ -59,9 +56,9 @@ ms.locfileid: "37197886"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elemento pai|[TimeBinding](../data-type/binding-data-type-assl.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O valor desse elemento é limitado a uma das cadeias de caracteres listadas na tabela a seguir.  
   
 |Valor|Description|  

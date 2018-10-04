@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,21 +13,20 @@ f1_keywords:
 helpviewer_keywords:
 - Key object [ADOX]
 ms.assetid: 55f116fe-4d56-4892-bffe-0cdd6fc727c9
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 05863d8227f2f0dddc6b7a44c60951fe3f8471be
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 7365b3ac33f215840a112089523f23e88697a433
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286819"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47626724"
 ---
-# <a name="key-object-adox"></a>Objeto de chave (ADOX)
+# <a name="key-object-adox"></a>Objeto Key (ADOX)
 Representa um campo de chave estrangeiro, exclusivo ou primário de uma tabela de banco de dados.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O código a seguir cria um novo **chave**:  
   
 ```  
@@ -38,21 +35,21 @@ Dim obj As New Key
   
  Com as propriedades e coleções de uma **chave** do objeto, você pode:  
   
--   Identifique a chave com o [nome](../../../ado/reference/adox-api/name-property-adox.md) propriedade.  
+-   Identificar a chave com o [nome](../../../ado/reference/adox-api/name-property-adox.md) propriedade.  
   
--   Determinar se a chave é primária, externa ou exclusivo com o [tipo](../../../ado/reference/adox-api/type-property-key-adox.md) propriedade.  
+-   Determinar se a chave é, estrangeiras, exclusiva ou primária com a [tipo](../../../ado/reference/adox-api/type-property-key-adox.md) propriedade.  
   
 -   Acessar as colunas de banco de dados da chave com o [colunas](../../../ado/reference/adox-api/columns-collection-adox.md) coleção.  
   
 -   Especifique o nome da tabela relacionada com a [RelatedTable](../../../ado/reference/adox-api/relatedtable-property-adox.md) propriedade.  
   
--   Determinar a ação executada na exclusão ou atualização de uma chave primária com o [DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md) e [UpdateRule](../../../ado/reference/adox-api/updaterule-property-adox.md) propriedades.  
+-   Determinar a ação executada na exclusão ou atualização de uma chave primária com a [DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md) e [UpdateRule](../../../ado/reference/adox-api/updaterule-property-adox.md) propriedades.  
   
  Esta seção contém o tópico a seguir.  
   
 -   [Propriedades, Métodos e Eventos do objeto Key](../../../ado/reference/adox-api/key-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Chaves de acrescentar o método, tipo de chave, RelatedColumn, RelatedTable e exemplo de propriedades de UpdateRule (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
- [Coleção de colunas (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
+ [Chaves de acrescentar o método, tipo de chave, RelatedColumn, RelatedTable e exemplo das propriedades UpdateRule (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+ [Coleção Columns (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [Coleção Keys (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)

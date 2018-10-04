@@ -6,36 +6,33 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Optimize property [ADO]
 ms.assetid: a491c4ce-2b04-4c84-be83-3846bde8d16b
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8bebc49795ff10a29cb3b367c98e9471bc7a2eaa
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: d461d0fad834dfc3c3c6f22ec64cc4987eca6fa5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280016"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47662274"
 ---
 # <a name="optimize-property-dynamic-ado"></a>Otimizar a propriedade dinâmica (ADO)
 Especifica se um índice deve ser criado em uma [campo](../../../ado/reference/ado-api/field-object.md).  
   
-## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
- Define ou retorna um **booliano** valor que indica se um índice deve ser criado.  
+## <a name="settings-and-return-values"></a>As configurações e valores de retorno  
+ Define ou retorna um **Boolean** valor que indica se um índice deve ser criado.  
   
-## <a name="remarks"></a>Remarks  
- Um índice pode melhorar o desempenho de operações que encontrar ou classificar valores em um [registros](../../../ado/reference/ado-api/recordset-object-ado.md). O índice é interno ao ADO; não é possível acessar ou usá-lo em seu aplicativo explicitamente.  
+## <a name="remarks"></a>Comentários  
+ Um índice pode melhorar o desempenho de operações que encontrar ou classificar valores em uma [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md). O índice é interno ao ADO; Você não pode acessar ou usá-lo em seu aplicativo explicitamente.  
   
- Para criar um índice em um campo, defina o **otimizar** propriedade **True**. Para excluir o índice, defina essa propriedade como **False**.  
+ Para criar um índice em um campo, defina as **otimizar** propriedade **verdadeiro**. Para excluir o índice, defina essa propriedade como **falsos**.  
   
- **Otimizar** é uma propriedade dinâmica anexada para o [campo](../../../ado/reference/ado-api/field-object.md) objeto [propriedades](../../../ado/reference/ado-api/properties-collection-ado.md) coleção quando o [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) está definida como **adUseClient**.  
+ **Otimizar** uma propriedade dinâmica que é acrescentada ao [campo](../../../ado/reference/ado-api/field-object.md) objeto [as propriedades](../../../ado/reference/ado-api/properties-collection-ado.md) coleção quando o [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) estiver definida como **adUseClient**.  
   
 ## <a name="usage"></a>Uso  
   
@@ -57,5 +54,5 @@ fld.Properties("Optimize") = False   'Delete an index
  [Otimizar o exemplo da propriedade (VB)](../../../ado/reference/ado-api/optimize-property-example-vb.md)   
  [Otimizar o exemplo da propriedade (VC + +)](../../../ado/reference/ado-api/optimize-property-example-vc.md)   
  [Propriedade de filtro](../../../ado/reference/ado-api/filter-property.md)   
- [Localizar o método (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
+ [Método Find (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
  [Propriedade Sort](../../../ado/reference/ado-api/sort-property.md)

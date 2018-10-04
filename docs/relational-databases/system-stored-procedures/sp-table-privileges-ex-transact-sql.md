@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_table_privileges_ex
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_table_privileges_ex
 ms.assetid: b58d4a07-5c40-4f17-b66e-6d6b17188dda
-caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 97486a281f2c962cb10d24762957769eba806387
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: d800eed984c6371ed689e9d8ec2748cb6b9886c1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43035915"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47752745"
 ---
 # <a name="sptableprivilegesex-transact-sql"></a>sp_table_privileges_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +74,7 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
 |**PRIVILÉGIO**|**varchar(** 32 **)**|Uma das permissões de tabela disponíveis. As permissões de tabela podem ter um dos valores a seguir, ou outros valores que tenham suporte na fonte de dados quando a implementação é definida.<br /><br /> Selecione = **ao usuário autorizado** pode recuperar dados para um ou mais das colunas.<br /><br /> INSERT = **ao usuário autorizado** pode fornecer dados para novas linhas para uma ou mais das colunas.<br /><br /> UPDATE = **ao usuário autorizado** pode modificar dados existentes para um ou mais das colunas.<br /><br /> Excluir = **ao usuário autorizado** pode remover linhas da tabela.<br /><br /> REFERÊNCIAS = **ao usuário autorizado** pode fazer referência a uma coluna em uma tabela estrangeira em uma relação de chave estrangeira/chave primária. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], as relações de chave primária/chave estrangeira são definidas usando restrições de tabela.<br /><br /> O escopo de ação dado para o **ao usuário autorizado** por uma tabela específica privilégio é dependente da fonte de dados. Por exemplo, a permissão UPDATE pode habilitar o **ao usuário autorizado** para atualizar todas as colunas em uma tabela em uma fonte de dados e somente aquelas colunas para o qual o **CONCESSOR** possui permissão UPDATE em outra fonte de dados.|  
 |**IS_GRANTABLE**|**varchar (** 3 **)**|Indica se o **ao usuário autorizado** tem permissão para conceder permissões a outros usuários. Isso é frequentemente chamado de permissão de "concessão com concessão". Pode ser YES, NO ou NULL. Um valor desconhecido ou NULL refere-se a uma fonte de dados na qual a "concessão com concessão" não é aplicável.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Os resultados retornados são ordenados por **TABLE_QUALIFIER**, **TABLE_OWNER**, **TABLE_NAME**, e **PRIVILÉGIO**.  
   
 ## <a name="permissions"></a>Permissões  
