@@ -1,36 +1,30 @@
 ---
-title: Configurações globais (Tester) (SybaseToSQL) | Microsoft Docs
+title: Configurações globais (testador) (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 6f0b9cea-5a24-4e42-8bbf-c4516b00da23
-caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: cff28dcfed7c8afe35ecbc2b4241cb89de537dea
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 5d9bf2a94146739a743fc4c310ece1d9c4642d11
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34778922"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47607184"
 ---
-# <a name="global-settings-tester-sybasetosql"></a>Configurações globais (Tester) (SybaseToSQL)
-Use a página de teste do **configurações globais** caixa de diálogo para especificar configurações para o SSMA Tester.  
+# <a name="global-settings-tester-sybasetosql"></a>Configurações globais (testador) (SybaseToSQL)
+Use a página do testador do **configurações globais** caixa de diálogo para especificar configurações para o testador SSMA.  
   
-Para acessar as configurações de teste, no **ferramentas** menu, selecione **configurações globais**e clique em **Tester** na parte inferior do painel esquerdo.  
+Para acessar as configurações de testador, sobre o **ferramentas** menu, selecione **configurações globais**e clique em **testador** na parte inferior do painel esquerdo.  
   
 ## <a name="options"></a>Opções  
-**Análise de objeto testável**  
-Essa configuração especifica se deve executar a análise de objetos podem ser testados. Selecione **Sim** se testador do SSMA para analisar e verificar automaticamente se os objetos dependentes. Conjunto de opção padrão é **Sim**.  
+**Análise de objeto que pode ser testada**  
+Essa configuração especifica se deve executar a análise dos objetos que podem ser testados. Selecione **Sim** se você quiser que o Testador de SSMA para analisar e verificar automaticamente os objetos dependentes. É o conjunto de opções padrão **Sim**.  
   
 As seguintes opções estão disponíveis para essa configuração:  
   
@@ -38,8 +32,8 @@ As seguintes opções estão disponíveis para essa configuração:
   
 2.  não  
   
-**Modo de economia de tabelas auxiliares**  
-Essa configuração especifica como salvar tabelas auxiliares internas criadas durante a execução do caso de teste. As opções a seguir pode ser definida para essa configuração específica:  
+**Tabelas auxiliares do modo de economia**  
+Essa configuração especifica como salvar tabelas auxiliares internas criadas durante a execução do caso de teste. Opções a seguir pode ser definida para essa configuração específica:  
   
 1.  Sempre excluir  
   
@@ -51,8 +45,8 @@ Essa configuração especifica como salvar tabelas auxiliares internas criadas d
   
 O conjunto de opção padrão é: **sempre excluir**.  
   
-**Executar reversão de dados**  
-Essa configuração especifica se deve executar uma operação de reversão após a execução de cada caso de teste. Conjunto de opção padrão é **não**.  
+**Executar a reversão de dados**  
+Essa configuração especifica se deve executar uma operação de reversão após a execução de cada caso de teste. É o conjunto de opções padrão **não**.  
   
 As seguintes opções estão disponíveis para essa configuração:  
   
@@ -60,8 +54,8 @@ As seguintes opções estão disponíveis para essa configuração:
   
 2.  não  
   
-**Interromper a execução de teste após a primeira falha**  
-Essa configuração especifica se é preciso parar o caso de teste em execução atual, se tiver ocorrido um erro durante a execução. Conjunto de opção padrão é **Sim**.  
+**Parar a execução de teste após a primeira falha**  
+Essa configuração especifica se deseja interromper o caso de teste em execução atual, se tiver ocorrido um erro durante a execução. É o conjunto de opções padrão **Sim**.  
   
 As seguintes opções estão disponíveis para essa configuração:  
   
@@ -70,5 +64,5 @@ As seguintes opções estão disponíveis para essa configuração:
 2.  não  
   
 ## <a name="see-also"></a>Consulte também  
-[Concluindo a preparação do caso de teste &#40;SybaseToSQL&#41;](../../ssma/sybase/finishing-test-case-preparation-sybasetosql.md)  
+[Concluir a preparação do caso de teste &#40;SybaseToSQL&#41;](../../ssma/sybase/finishing-test-case-preparation-sybasetosql.md)  
   

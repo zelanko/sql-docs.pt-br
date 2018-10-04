@@ -1,13 +1,11 @@
 ---
-title: Coleção de erros (ADO) | Microsoft Docs
+title: Coleção Errors (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,33 +15,32 @@ f1_keywords:
 helpviewer_keywords:
 - Errors collection [ADO]
 ms.assetid: 290819e1-7b39-4e1e-a93b-801257138b00
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 17e21c1d807ba537544a1578cb9ef2b8ea83ad21
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b595baf25a8b0f3982399c384c169c6af3f1cd81
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278155"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47612224"
 ---
-# <a name="errors-collection-ado"></a>Coleção de erros (ADO)
+# <a name="errors-collection-ado"></a>Coleção Errors (ADO)
 Contém todos os [erro](../../../ado/reference/ado-api/error-object.md) objetos criados em resposta a uma única falha de provedor.  
   
-## <a name="remarks"></a>Remarks  
- Qualquer operação que envolva objetos ADO pode gerar um ou mais erros do provedor. Como cada erro, um ou mais **erro** objetos podem ser colocados no **erros** coleção do [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto. Quando outra operação ADO gera um erro, o **erros** coleção é desmarcada e o novo conjunto de **erro** objetos podem ser colocados no **erros** coleção.  
+## <a name="remarks"></a>Comentários  
+ Qualquer operação que envolva objetos ADO pode gerar um ou mais erros do provedor. Conforme cada erro ocorrer, um ou mais **erro** objetos podem ser colocados na **erros** coleção dos [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto. Quando outra operação ADO gera um erro, o **erros** coleção estiver desmarcada e o novo conjunto de **erro** objetos podem ser colocados no **erros** coleção.  
   
- Cada **erro** objeto representa um erro de provedor específico, não um erro de ADO. Erros de ADO são expostos para o mecanismo de tratamento de exceções de tempo de execução. Por exemplo, no Microsoft Visual Basic, a ocorrência de um erro específico de ADO irá disparar um [onError](../../../ado/reference/rds-api/onerror-event-rds.md) evento e aparece no **Err** objeto.  
+ Cada **erro** objeto representa um erro de provedor específico, não um erro do ADO. Erros ADO são expostos para o mecanismo de tratamento de exceções de tempo de execução. Por exemplo, no Microsoft Visual Basic, a ocorrência de um erro específico de ADO irá disparar uma [onError](../../../ado/reference/rds-api/onerror-event-rds.md) evento e aparece na **Err** objeto.  
   
- Operações de ADO que não geram erros não têm nenhum efeito o **erros** coleção. Use o [limpar](../../../ado/reference/ado-api/clear-method-ado.md) método limpar manualmente o **erros** coleção.  
+ Operações de ADO que não geram um erro não têm nenhum efeito o **erros** coleção. Use o [desmarque](../../../ado/reference/ado-api/clear-method-ado.md) método limpar manualmente as **erros** coleção.  
   
- O conjunto de **erro** objetos no **erros** coleção descreve todos os erros que ocorreram em resposta a uma única instrução. Enumeração de erros específicos no **erros** coleção permite que suas rotinas de tratamento de erros determinar a causa e origem de um erro com mais precisão e execute as etapas apropriadas para recuperar.  
+ O conjunto de **erro** objetos na **erros** coleção descreve todos os erros que ocorreram em resposta a uma única instrução. Enumeração de erros específicos na **erros** coleção permite que suas rotinas de tratamento de erros determinar a causa e origem de um erro com mais precisão e tomar as medidas apropriadas para recuperar.  
   
- Algumas propriedades e métodos retornam os avisos que aparecem como **erro** objetos no **erros** coleção, mas não interromper a execução do programa. Antes de chamar o [Resync](../../../ado/reference/ado-api/resync-method.md), [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md), ou [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) métodos em um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto, o [abrir](../../../ado/reference/ado-api/open-method-ado-connection.md) método em um **Conexão** de objeto, ou definir o [filtro](../../../ado/reference/ado-api/filter-property.md) propriedade em um **Recordset** de objeto, chame o **limpar**método sobre o **erros** coleção. Dessa forma, você pode ler o [contagem](../../../ado/reference/ado-api/count-property-ado.md) propriedade o **erros** avisos retornados de coleção para testar.  
+ Algumas propriedades e métodos retornam os avisos que aparecem como **erro** objetos na **erros** coleção, mas não interrompem a execução de um programa. Antes de chamar o [ressincronizar](../../../ado/reference/ado-api/resync-method.md), [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md), ou [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) métodos em um [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto, o [abrir](../../../ado/reference/ado-api/open-method-ado-connection.md) método em um **Conexão** de objeto, ou definir a [filtro](../../../ado/reference/ado-api/filter-property.md) propriedade em um **Recordset** de objeto, chame o **limpar**método de **erros** coleção. Dessa forma, você pode ler o [contagem](../../../ado/reference/ado-api/count-property-ado.md) propriedade da **erros** avisos retornados de coleção para testar.  
   
 > [!NOTE]
->  Consulte o **erro** tópico para obter uma explicação mais detalhada da maneira como uma única operação ADO pode gerar vários erros.  
+>  Consulte a **erro** tópico de objeto para obter uma explicação mais detalhada da maneira como uma única operação de ADO pode gerar vários erros.  
   
  Esta seção contém o tópico a seguir.  
   

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 09/25/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_updatestats_TSQL
@@ -18,17 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_updatestats
 ms.assetid: 01184651-6e61-45d9-a502-366fecca0ee4
-caps.latest.revision: 45
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 02b1a54da680b9db09cbc488072a9ed0a4c906f1
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 129c7bd5c1932d509b9afc5a28a2548c9fa8c3f9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43068118"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47818762"
 ---
 # <a name="spupdatestats-transact-sql"></a>sp_updatestats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +49,7 @@ sp_updatestats [ [ @resample = ] 'resample']
  [ **@resample** =] **'resample'**  
  Especifica que **sp_updatestats** usará a opção RESAMPLE das [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) instrução. Se **'resample'** não for especificado, **sp_updatestats** atualizará as estatísticas usando a amostragem padrão. **Criar nova amostra** está **varchar(8)** com um valor padrão NO.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  **sp_updatestats** executa UPDATE STATISTICS, especificando a palavra-chave ALL, em todas as tabelas internas e definidas pelo usuário no banco de dados. sp_updatestats exibe mensagens que indicam seu progresso. Quando a atualização é concluída, ela informa que as estatísticas foram atualizadas em todas as tabelas.  
   
  O sp_updatestats atualiza estatísticas em índices não clusterizados desabilitados e não atualiza estatísticas em índices clusterizados desabilitados.  

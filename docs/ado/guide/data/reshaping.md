@@ -1,33 +1,30 @@
 ---
-title: Reformatação | Microsoft Docs
+title: Remodelagem | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - reshaping previously shaped Recordset [ADO]
 - data shaping [ADO], reshaping
 ms.assetid: b1c965b7-3dad-4de6-9e0e-502ca8785be3
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 82b2b66d691f94ce79795b7a11002ba88f7ac74a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 324801cbfc97db4e2a1137fa04df0c74dc1897a1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272465"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47714524"
 ---
-# <a name="reshaping"></a>Reformatação
-Um **registros** criado por uma cláusula de uma forma de comando pode ser atribuído um *alias* nome (normalmente com a palavra-chave). O alias de uma forma **registros** podem ser referenciados em um comando completamente diferente. Ou seja, você pode reutilizar, ou *remodelar*, anteriormente com um formato **registros** em um novo comando de forma. Para dar suporte a esse recurso, o ADO fornece uma propriedade, [nome remodelar](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md).  
+# <a name="reshaping"></a>Remodelagem
+Um **conjunto de registros** criado por uma cláusula de uma forma de comando pode ser atribuído uma *alias* nome (normalmente com a palavra-chave). O alias de um moldado **Recordset** pode ser referenciada em um comando completamente diferente. Ou seja, você pode reutilizar, ou *remodelar*, anteriormente moldado **conjunto de registros** em um novo comando de forma. Para dar suporte a esse recurso, o ADO oferece uma propriedade, [remodelar nome](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md).  
   
- Reformatação tem duas funções principais. A primeira é para associar um existente **registros** com um novo pai **registros**.  
+ Remodelagem tem duas funções principais. A primeira é associar um existente **conjunto de registros** com um novo pai **conjunto de registros**.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -40,10 +37,10 @@ rs2.Open "SHAPE {select * from Employees} " & _
          "APPEND (chapOrders RELATE EmployeeID to EmployeeID)", cn  
 ```  
   
- A segunda função é permitir o acesso não tem capítulos filho existente **registros** objetos, usando a sintaxe "forma \<recordset remodelar nome >".  
+ A segunda função é permitir o acesso não dividido em capítulos filho existentes **conjunto de registros** objetos, usando a sintaxe "forma \<recordset remodelar nome >".  
   
 > [!NOTE]
->  Não é possível acrescentar colunas a uma **Recordset**, reformatar um parametrizadas **Recordset** ou o **Recordset** objetos em qualquer cláusula COMPUTE intermediária ou executar agregar operações em qualquer **registros** descendente do **registros** sendo reformatado. O **registros** sendo reformatado e a nova forma de comando devem usar o mesmo [Conexão](../../../ado/reference/ado-api/connection-object-ado.md).  
+>  Não é possível acrescentar colunas a um existente **conjunto de registros**, reformatar um parametrizada **conjunto de registros** ou o **Recordset** objetos em qualquer cláusula de computação intermediária ou executar agregar operações em qualquer **conjunto de registros** entre o **conjunto de registros** sendo reformatado. O **conjunto de registros** sendo reformatado e a nova forma de comando devem usar o mesmo [Conexão](../../../ado/reference/ado-api/connection-object-ado.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [Exemplo de data shaping](../../../ado/guide/data/data-shaping-example.md)

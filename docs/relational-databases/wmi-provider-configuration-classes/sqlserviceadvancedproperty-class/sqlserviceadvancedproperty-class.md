@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - SqlServiceAdvancedProperty Class
@@ -18,24 +15,23 @@ apitype: MOFDef
 helpviewer_keywords:
 - SqlServiceAdvancedProperty class
 ms.assetid: a5d06bde-6058-464c-a4aa-444d83f2331f
-caps.latest.revision: 32
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 1ec3b9a9bcf17ef5f18087af64950ffba0bca6f1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eb62dee3cd772d3b4e4e699fc4ab340f7f36dbbf
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33011573"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603634"
 ---
 # <a name="sqlserviceadvancedproperty-class"></a>Classe SqlServiceAdvancedProperty
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  O [classe SqlServiceAdvancedProperty](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) representa uma propriedade avançada do serviço que é referenciado pelo [SqlService classe](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) objeto.  
+  O [classe SqlServiceAdvancedProperty](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) representa uma propriedade avançada do que é referenciado pelo serviço do [classe SqlService](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) objeto.  
   
- O [propriedade AdvancedProperties (classe SqlService)](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/advancedproperties-property-sqlservice-class.md) faz referência a uma matriz de [SqlServiceAdvancedProperty classe](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) objetos.  
+ O [propriedade AdvancedProperties (classe SqlService)](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/advancedproperties-property-sqlservice-class.md) faz referência a uma matriz de [classe SqlServiceAdvancedProperty](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md) objetos.  
   
- O [Iniciando e parando serviços](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx) classe representa propriedades que são exclusivas para o serviço. Essas propriedades não estão na lista de propriedades associada com o [SqlService classe](http://technet.microsoft.com/library/ms186497.aspx) classe. O [SqlServiceAdvancedProperty classe](http://technet.microsoft.com/library/ms182447.aspx) classe permite a representação de propriedades de cadeia de caracteres, numérico ou booleano. Você pode usar essa classe para exibir as propriedades exclusivas do serviço especificado.  
+ O [Iniciando e parando serviços](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx) classe representa as propriedades que são exclusivas para o serviço. Essas propriedades não estão na lista de propriedades que está associado a [SqlService classe](http://technet.microsoft.com/library/ms186497.aspx) classe. O [classe SqlServiceAdvancedProperty](http://technet.microsoft.com/library/ms182447.aspx) classe permite a representação de propriedades de cadeia de caracteres, numéricos ou booleanos. Você pode usar essa classe para exibir as propriedades exclusivas do serviço especificado.  
   
 ## <a name="see-also"></a>Consulte também  
  [Iniciando, parando e pausas serviços](http://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

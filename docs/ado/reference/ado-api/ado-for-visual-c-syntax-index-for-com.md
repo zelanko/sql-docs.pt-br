@@ -1,13 +1,11 @@
 ---
-title: ADO para o índice da sintaxe do Visual C++ COM | Microsoft Docs
+title: ADO para índice de sintaxe do Visual C++ para COM | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 dev_langs:
@@ -16,21 +14,20 @@ helpviewer_keywords:
 - ADO for Visual C++ syntax [ADO]
 - syntax indexes [ADO], ADO for Visual C++ syntax
 ms.assetid: d02b199e-1e52-4cc9-b118-750952ae7f63
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 28753a50e8fea591c266db27e8121256869b1d6e
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 6140fe9fc991356a0138c533e8dcbfdb53ca0959
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275505"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789467"
 ---
 # <a name="ado-for-visual-c-syntax-index-for-com"></a>ADO para índice de sintaxe do Visual C++ para COM
 Esse índice é uma referência cruzada para a referência de linguagem do ADO com base no Microsoft Visual C++.  
   
- Se você usar o **#import** diretiva em seu aplicativo, um arquivo de cabeçalho será gerado que permite que você use uma sintaxe semelhante para o Microsoft Visual Basic. Nomes de propriedades do formulário **get _ * PropertyName* e **Put _ * PropertyName* podem ser tratados como se eles foram declarados simplesmente como *PropertyName*. Uma propriedade pode ser tratada como um membro de dados em vez de uma função.  
+ Se você usar o **#import** diretiva em seu aplicativo, um arquivo de cabeçalho será gerado que permitirá que você use uma sintaxe semelhante para o Microsoft Visual Basic. Nomes de propriedade no formato **get _ * * * PropertyName* e **Put _ * * * PropertyName* pode ser tratado como se eles foram declarados simplesmente como *PropertyName*. Uma propriedade, em seguida, pode ser tratada como um membro de dados, em vez de uma função.  
   
  Todos os métodos, propriedades e eventos são funções que retornam um **HRESULT**, que você pode testar para determinar se a função é executada com êxito.  
   
@@ -52,8 +49,8 @@ Esse índice é uma referência cruzada para a referência de linguagem do ADO c
   
 -   [Objeto de conjunto de registros](../../../ado/reference/ado-api/recordset-ado-for-visual-c-syntax.md)  
   
--   [Objeto de fluxo](../../../ado/reference/ado-api/stream-ado-for-visual-c-syntax.md)  
+-   [Objeto Stream](../../../ado/reference/ado-api/stream-ado-for-visual-c-syntax.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [ADO para o índice de sintaxe de C++ Visual com #import](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)   
+ [ADO para índice de sintaxe do Visual C++ com #import](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)   
  [Microsoft ADO (ActiveX Data Objects)](../../../ado/microsoft-activex-data-objects-ado.md)

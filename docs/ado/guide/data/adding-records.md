@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - AddNew method [ADO]
@@ -15,23 +13,22 @@ helpviewer_keywords:
 - editing data [ADO], AddNew method
 - editing data [ADO], adding data
 ms.assetid: dd34669e-6f06-403b-9241-1c85c82aecc2
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7a1d367e572a7839b6a5d54b1c6460716aa09160
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a17e09df7c7235e1361aae79bd89152c290b1bdb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271055"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47850379"
 ---
-# <a name="adding-records-to-a-recordset"></a>Adicionando registros para um conjunto de registros
-Use o **AddNew** método para criar e inicializar um novo registro em existente **registros**. Você pode usar o **dá suporte a** método com um **CursorOptionEnum** valor **adAddNew** para verificar se você pode adicionar registros a atual **doconjuntoderegistros** objeto.
+# <a name="adding-records-to-a-recordset"></a>Adicionar registros a um conjunto de registros
+Use o **AddNew** método para criar e inicializar um novo registro em um existente **conjunto de registros**. Você pode usar o **dá suporte a** método com um **CursorOptionEnum** valor de **adAddNew** para verificar se você pode adicionar registros a atual **doconjuntoderegistros** objeto.
 
- Depois de chamar o **AddNew** método, o novo registro se tornará o registro atual e permanece atual depois de chamar o **atualização** método. Se o **registros** objeto não oferece suporte a indicadores, você não poderá acessar o novo registro depois que você vai para outro registro. Portanto, dependendo de seu tipo de cursor, você precisará chamar o **Requery** método para disponibilizar o novo registro.
+ Depois de chamar o **AddNew** método, o novo registro se tornará o registro atual e permanece atual depois de chamar o **atualização** método. Se o **Recordset** objeto não oferece suporte a indicadores, você não consiga acessar o novo registro, quando você move para outro registro. Portanto, dependendo do seu tipo de cursor, você pode precisar chamar o **Requery** método para disponibilizar o novo registro.
 
- Se você chamar **AddNew** ao editar o registro atual ou ao adicionar um novo registro, o ADO chama o **atualização** método para salvar quaisquer alterações e, em seguida, cria o novo registro.
+ Se você chamar **AddNew** durante a edição do registro atual ou ao adicionar um novo registro, o ADO chama o **atualização** método para salvar qualquer altera e, em seguida, cria o novo registro.
 
  Esta seção contém os tópicos a seguir.
 
