@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.dtsserver.exportpackage.f1
 helpviewer_keywords:
 - Export Package dialog box
 ms.assetid: 3742fe8a-ef57-444d-b2fb-cb25d16bae97
-caps.latest.revision: 22
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5bb36260542709ad9c1776f8bd7f00ae037fa039
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 90a098ce2c4ea006f33eb01034136bd92e7fe0b0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37269332"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116717"
 ---
 # <a name="export-package-dialog-box-ui-reference"></a>Referência da interface do usuário da caixa de diálogo Exportar Pacote
   Use a caixa de diálogo **Exportar Pacote**, disponível no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], para exportar um pacote do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para um local diferente e, opcionalmente, modificar o nível de proteção do pacote.  

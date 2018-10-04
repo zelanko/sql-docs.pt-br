@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.webservicestask.general.f1
 helpviewer_keywords:
 - Web Service Task Editor
 ms.assetid: 4d7df283-430d-4f0f-9dd4-5909554cd5eb
-caps.latest.revision: 34
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9d68fdf156caf460ee6130df7ab746fcbd13fec0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 32da4424359a7b27ebef6f48c988f9e20c6f4d71
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37331856"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48090226"
 ---
 # <a name="web-service-task-editor-general-page"></a>Editor da Tarefa Serviço da Web (página Geral)
   Use a página **Geral** da caixa de diálogo **Editor da Tarefa Serviços da Web** para especificar um gerenciador de conexões HTTP, o local do arquivo WSDL (linguagem WSDL) usado pela tarefa, descrever a tarefa Serviços da Web e baixar o arquivo WSDL.  

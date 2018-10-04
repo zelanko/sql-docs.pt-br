@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - binary collations [SQL Server]
@@ -27,16 +25,15 @@ helpviewer_keywords:
 - SQL Server collations
 - server-level collations [SQL Server]
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
-caps.latest.revision: 41
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0547ac482e5dc56ec3b5e207b5776f5c8fbdab4a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7f313854119094b4407dc8bf4f6e62fdf7a31677
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37287332"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48126526"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
   Os agrupamentos em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornecem propriedades de regras de classificação, de diferenciação de maiúsculas e minúsculas e de diferenciação de acentos para seus dados. Os agrupamentos utilizados com tipos de dados de caractere, como `char` e `varchar` ditar o código de página e os caracteres correspondentes que podem ser representados para esse tipo de dados. Independentemente de você estar instalando uma nova instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], restaurando um backup de banco de dados ou conectando o servidor a bancos de dados cliente, é importante estar ciente dos requisitos de localidade, ordem de classificação e distinção de maiúsculas e minúsculas e de acentos dos dados com os quais trabalhará. Para listar os agrupamentos disponíveis na instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], veja [sys.fn_helpcollations &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql).  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - stoplists [full-text search]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], stopwords
 - stopwords [full-text search]
 ms.assetid: 43b5ce7b-9f09-4443-8a5b-c3da6eb28bcc
-caps.latest.revision: 79
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c3ea419224478d1c4c45117795fe5a67ebfcaf5e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4024ffd9bee842173998fed81c9bbf80152fa530
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37284832"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48126759"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>Configurar e gerenciar palavras irrelevantes e listas de palavras irrelevantes (stoplists) para pesquisa de texto completo
   Para evitar que os índices de texto completo fiquem lotados, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dispõe de um mecanismo que descarta cadeias de caracteres que ocorrem com frequência e que não auxiliam nas pesquisas. Essas cadeias de caracteres descartadas são chamadas de *palavras irrelevantes*(stopwords). Durante a criação do índice, o Mecanismo de Texto Completo omite as palavras irrelevantes do índice de texto completo. Em outras palavras, as consultas de texto completo não pesquisarão palavras irrelevantes.  

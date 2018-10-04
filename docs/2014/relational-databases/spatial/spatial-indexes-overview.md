@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - dbe-spatial
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - spatial indexes [SQL Server]
 ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
-caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e21d0142212541ff41bef6ba76f8e274235b86a6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6a775ffdbe70eb47214ecb100ad395d37ca79a38
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37194962"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48113618"
 ---
 # <a name="spatial-indexes-overview"></a>Visão geral de índices espaciais
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dá suporte a dados e índices espaciais. Um *índice espacial* é um tipo de índice estendido que permite indexar uma coluna espacial. Uma coluna espacial é uma coluna de uma tabela que contém tipo de dados espaciais, como `geometry` ou `geography`.  

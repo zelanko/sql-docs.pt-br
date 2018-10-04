@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.realtime.f1
 ms.assetid: 45ad2965-05ec-4fb1-a164-d8060b562ea5
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1b0badf00027259bb2203828e075a8d009deb8d5
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 183719983a6ea95ab545888d009d5226fe24b7dc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37149827"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106496"
 ---
 # <a name="directquery-mode-ssas-tabular"></a>Modo DirectQuery (SSAS tabular)
   O Analysis Services permite recuperar dados e criar relatórios de um modelo de tabela, recuperando dados e agregações diretamente de um sistema de banco de dados relacional, usando o *modo DirectQuery*. Este tópico apresenta as diferenças entre modelos de tabela padrão que só residem na memória e modelos de tabela que podem consultar uma fonte de dados relacional, e também explica como você pode criar e implantar um modelo para usar no modo DirectQuery.  

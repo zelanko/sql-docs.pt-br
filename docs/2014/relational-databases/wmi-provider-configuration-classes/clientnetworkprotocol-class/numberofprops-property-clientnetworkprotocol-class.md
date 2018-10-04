@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - NumberOfProps Property (ClientNetworkProtocol Class)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - NumberOfProps property
 ms.assetid: 9c508bc5-c7a4-4db1-b3bf-c7098c66435a
-caps.latest.revision: 34
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 24e99ca2b2695d2be3b05a24844f02c52c2735fd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0d7d2109811e9f1d3e36e78741af08d48e3da3cb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216776"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48106466"
 ---
 # <a name="numberofprops-property-clientnetworkprotocol-class"></a>Propriedade NumberOfProps (classe ClientNetworkProtocol)
   Obtém o número de propriedades do cliente de protocolo de rede especificado o [método SetOrderValue (classe ClientNetworkProtocol)](clientnetworkprotocol-class.md).  
@@ -48,7 +45,7 @@ object
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
  Um valor uint32 que especifica o número de propriedades do protocolo de rede do cliente.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 ## <a name="see-also"></a>Consulte também  
  [Configurar protocolos de cliente](http://technet.microsoft.com/library/ms181035.aspx)  

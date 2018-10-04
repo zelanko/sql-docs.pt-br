@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - statistical information [XML for Analysis]
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - XML for Analysis, aggregations
 - iterative aggregation process [XMLA]
 ms.assetid: 4dd27afa-10c7-408d-bc24-ca74217ddbcb
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 773187385538a70ed145e330eb60c648cf8f0511
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 71abb7339a45e86e39329f6f5e9478d03889c71b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37161327"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48094756"
 ---
 # <a name="designing-aggregations-xmla"></a>Criando agregações (XMLA)
   Designs de agregação estão associados a partições de um determinado grupo de medidas para garantir que as partições usem a mesma estrutura ao armazenarem agregações. Usando a mesma estrutura de armazenamento para partições permite que você defina com facilidade partições que podem ser mescladas posteriormente usando o [MergePartitions](../xmla/xml-elements-commands/mergepartitions-element-xmla.md) comando. Para obter mais informações sobre designs de agregação, consulte [agregações e Designs de agregação](../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  

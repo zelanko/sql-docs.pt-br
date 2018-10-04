@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - statements [SQL Server], command prompt
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - command prompt utilities [SQL Server], osql
 - CTRL+C command
 ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
-caps.latest.revision: 48
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bd66af98effae023f2a1436b6eb88e76c78a2e44
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bbf8009d078058e825360190b268c3cbb124bcdf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37239996"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48123696"
 ---
 # <a name="osql-utility"></a>Utilitário osql
   O utilitário **osql** permite inserir instruções [!INCLUDE[tsql](../includes/tsql-md.md)] , procedimentos de sistema e arquivos de script. Esse utilitário usa o ODBC para comunicar-se com o servidor.  
@@ -195,7 +192,7 @@ osql -E -q "select name, object_id from %table%"
 > [!NOTE]  
 >  As opções **-n**, **-O** e **-D** já não têm suporte do **osql**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O utilitário **osql** é iniciado diretamente do sistema operacional com as opções que diferenciam maiúsculas de minúsculas listadas aqui. Depois que o **osql**é iniciado, ele aceita instruções SQL e as envia interativamente ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Os resultados são formatados e exibidos na tela (**stdout**). Use QUIT ou EXIT para sair do **osql**.  
   
  Se você não especificar um nome de usuário quando você inicia **osql**, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verifica as variáveis de ambiente e usa aqueles que, por exemplo, **osqluser = (*`user`*)** ou **osqlserver = (*`server`*)**. Se nenhuma variável de ambiente for definida, o nome de usuário da estação de trabalho será usado. Se você não especificar um servidor, o nome da estação de trabalho será usado.  

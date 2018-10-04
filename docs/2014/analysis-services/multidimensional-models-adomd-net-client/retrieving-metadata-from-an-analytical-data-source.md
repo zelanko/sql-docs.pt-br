@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - metadata [ADOMD.NET]
 - retrieving metadata
 ms.assetid: 00043ebd-7164-4ceb-b945-6e44378ea00a
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2beb806c4a76aa3ac6062f8e6ae0e44c007520ae
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 654ea55f3b285409dab5e3f1cf178b8ff7818bcd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37151667"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153046"
 ---
 # <a name="retrieving-metadata-from-an-analytical-data-source"></a>Retrieving Metadata from an Analytical Data Source
   Os metadados são importantes para aplicativos que recuperam dados analíticos e que trabalham com eles. Na recuperação de dados de uma fonte relacional, a dimensionalidade de tais dados será previsível, até mesmo com conjuntos de dados aninhados. Os conjuntos de resultados de um banco de dados relacional são tipicamente bidimensionais ou escalares em estrutura. No entanto, os dados recuperados de fontes de dados analíticos podem ser de dimensionalidade variável, organizados em hierarquias potencialmente profundas.  

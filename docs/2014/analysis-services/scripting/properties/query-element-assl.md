@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Query Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - Query element
 ms.assetid: 832c3337-de6d-43b2-8f1c-75bdba76539b
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2917bfe5a0050a3e3baa17838dffc1e1d94a0172
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 46720600782cb986c0fd99ee50aa21ef729289e3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37308406"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149266"
 ---
 # <a name="query-element-assl"></a>Elemento Query (ASSL)
   Contém o texto da consulta a ser executado para a notificação.  
@@ -47,7 +44,7 @@ ms.locfileid: "37308406"
 |Característica|Description|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|Cadeia de caracteres|  
-|Valor padrão|Nenhum|  
+|Valor padrão|None|  
 |Cardinalidade|1-1: elemento obrigatório que ocorre apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -55,9 +52,9 @@ ms.locfileid: "37308406"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elemento pai|[QueryNotification](../objects/querynotification-element-assl.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O elemento que corresponde ao pai de `Query` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.QueryNotification>.  
   
 ## <a name="see-also"></a>Consulte também  

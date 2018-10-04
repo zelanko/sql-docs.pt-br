@@ -4,28 +4,25 @@ ms.custom: ''
 ms.date: 09/01/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c9ff92d1-787a-4f34-990f-6676b61875d7
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c6864e7144ce3a1098e7733924e02978b13c744c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 85fbcf7fdf8a15f9705c9b27ba838b41911f31db
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37321256"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48113586"
 ---
 # <a name="use-powerpivot-gallery"></a>Usar a Galeria PowerPivot
   A Galeria do [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] é uma biblioteca de documentos do SharePoint, com finalidade especial, que fornece visualização avançada e gerenciamento de documentos das pastas de trabalho do Excel publicadas e relatórios dos Reporting Services que contêm dados PowerPivot.  
   
 > [!NOTE]  
->  Dependendo de como seu servidor está configurado, talvez você veja mensagens de erro ou aviso na área de visualização para documentos específicos. As mensagens podem ser exibidas quando uma pasta de trabalho do Excel estiver definida para atualizar automaticamente os dados sempre que for aberta. As mensagens de aviso de atualização de dados serão exibidas como a imagem de visualização se os Serviços do Excel forem configurados para mostrar mensagens de erro Aviso em atualização de dados. Os administradores de farm ou serviço podem modificar parâmetros de configuração para permitir que uma visualização da planilha real seja exibida. Para obter mais informações, consulte [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
+>  Dependendo de como seu servidor está configurado, talvez você veja mensagens de erro ou aviso na área de visualização para documentos específicos. As mensagens podem ser exibidas quando uma pasta de trabalho do Excel estiver definida para atualizar automaticamente os dados sempre que for aberta. As mensagens de aviso de atualização de dados serão exibidas como a imagem de visualização se os Serviços do Excel forem configurados para mostrar mensagens de erro Aviso em atualização de dados. Os administradores de farm ou serviço podem modificar parâmetros de configuração para permitir que uma visualização da planilha real seja exibida. Para obter mais informações, consulte [criar um local confiável para sites do PowerPivot na Administração Central](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   
 ##  <a name="bkmk_top"></a> Neste tópico  
   

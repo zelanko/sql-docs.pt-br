@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: be78d051-0d56-46d3-bb89-327e218dadd6
-caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2ae32c1e29ec8252326e353e6b62f8b6b6f12b2b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 647fe2c53dfc02bd53a063f49e3bef4b635137ac
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37227816"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48103488"
 ---
 # <a name="data-quality-matching-in-the-mds-add-in-for-excel"></a>Correspondência de qualidade de dados no Suplemento do MDS para Excel
   Com o tempo, você desejará adicionar mais dados ao repositório do MDS. Antes de adicionar dados, talvez seja útil comparar os novos dados aos dados que já são gerenciados no MDS, para assegurar que você não está adicionando dados duplicados ou inexatos.  

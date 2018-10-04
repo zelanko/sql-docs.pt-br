@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - administering Reporting Services
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - report servers [Reporting Services], content management
 - content management [Reporting Services]
 ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
-caps.latest.revision: 48
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b2878a1f12978bfab6f9cd7d0c0d04787ceccfd7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c5697fea6bea90407686f909e6c5cbafa2e2877b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37212356"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48120786"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>Gerenciamento do Conteúdo do Servidor de Relatório (Modo Nativo SSRS)
   No [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], o gerenciamento de conteúdo se refere ao gerenciamento de itens de servidor de relatório. Todos os itens podem ser gerenciados independentemente um do outro por propriedades e configurações de segurança. Qualquer item pode ser movido para um local diferente no namespace de pasta de servidor de relatório. Para gerenciar os itens com eficiência, você precisa saber quais tarefas são executadas por um gerenciador de conteúdo.  

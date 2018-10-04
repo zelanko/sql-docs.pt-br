@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - opening solutions
 - solutions [SQL Server Management Studio], opening
 ms.assetid: a96a1f0d-0183-4587-a3b0-4598309cbdd2
-caps.latest.revision: 21
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 588e945d95aca8946e327c0fff98e78c21dae8aa
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 9f8405c9fcb04559b6f25d2244bc36dde760a182
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43811742"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48107756"
 ---
 # <a name="open-solutions-from-source-control"></a>Abrir soluções no controle do código-fonte
   Você pode usar o [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para abrir soluções diretamente do controle do código-fonte. Quando você faz isso, o ambiente do Studio cria uma cópia da última versão dos arquivos da solução no local que você especifica.  

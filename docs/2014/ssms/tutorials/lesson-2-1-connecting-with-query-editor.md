@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 48725f54-a7b6-4b79-948e-965c1fe4eef1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 666904837a211b0aa76214155c2d55024175c5c8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bcb2454d9f6b4a6df465c33ca218c4a960f8099b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37148997"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48145849"
 ---
 # <a name="connecting-with-query-editor"></a>Conectando com o Editor de Consultas
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] permite que você escreva ou edite código enquanto estiver desconectado do servidor. Isso pode ser útil quando o servidor não estiver disponível ou quando você quiser conservar recursos escassos de rede ou servidor. Você também pode alterar a conexão do Editor de Consultas com uma instância nova do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sem abrir uma nova janela do editor ou redigitar o código.  

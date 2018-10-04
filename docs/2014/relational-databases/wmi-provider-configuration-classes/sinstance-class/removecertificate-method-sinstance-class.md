@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - RemoveCertificate Method (SInstance Class)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - RemoveCertificate method
 ms.assetid: 7e5dbafa-a634-4617-9622-510514fce0ce
-caps.latest.revision: 14
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 56fcc69e20517602e906057f411d97fbaa7191e1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d172f7e8e14eba76b066cb815f5d99b8e912ba9e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37258492"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48122746"
 ---
 # <a name="removecertificate-method-sinstance-class"></a>Método RemoveCertificate (classe SInstance)
   Remove o certificado de segurança atual da instância de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -49,7 +46,7 @@ object
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
  Um valor uint32, que é 0 se o serviço tiver sido modificado com êxito, 1 se a solicitação não tiver suporte e qualquer outro número para indicar um erro.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 ## <a name="see-also"></a>Consulte também  
  [Configurando protocolos de rede do servidor e bibliotecas de rede](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

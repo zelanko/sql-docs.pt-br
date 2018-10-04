@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - folders [Integration Services], connections
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - connections [Integration Services], files
 - File connection manager
 ms.assetid: 019078bc-44ee-4975-9169-0f9a89e3f3be
-caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 33e9bb0dbb4030d09be6db95dda2a33245cd7288
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ea35467bd5b5209a2e625adc081774ef39492439
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37252688"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48119966"
 ---
 # <a name="file-connection-manager"></a>Gerenciador de conexões de arquivos
   Um gerenciador de conexões de Arquivo permite que um pacote faça referência a um arquivo ou pasta existente ou crie um arquivo ou pasta em tempo de execução. Por exemplo, você pode fazer referência a um arquivo do Excel. Alguns componentes em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usam as informações nos arquivos para executar seu trabalho. Por exemplo, uma tarefa Executar SQL pode fazer referência a um arquivo que contém as instruções SQL que a tarefa executa. Outros componentes executam operações em arquivos. Por exemplo, a tarefa Sistema de Arquivos pode fazer referência a um arquivo para copiá-lo para um novo local.  

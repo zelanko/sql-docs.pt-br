@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Windows authentication [Reporting Services]
 - Reporting Services, configuration
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
-caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c71455bc6f9748cdd31cddfde2f3cfb01f6a9589
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b0ce020f0d3df8b91591daf083748f909edbb1e7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37325716"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116336"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Configurar a Autenticação do Windows no servidor de relatório
   Por padrão, o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] aceita solicitações que especificam a autenticação Negotiate ou NTLM. Se sua implantação incluir aplicativos cliente e navegadores que usam esses provedores de segurança, use os valores padrão sem nenhuma configuração adicional. Se desejar usar um provedor de segurança diferente para a segurança integrada do Windows (por exemplo, se desejar usar Kerberos diretamente) ou se tiver modificado os valores padrão e desejar restaurar as configurações originais, use as informações deste tópico para especificar configurações de autenticação no servidor de relatório.  

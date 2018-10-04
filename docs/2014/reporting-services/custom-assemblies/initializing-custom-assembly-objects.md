@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - initializing custom assemblies [Reporting Services]
 - custom assemblies [Reporting Services], initializing
 - OnInit method
 ms.assetid: 26fd74dc-d02f-40f7-aeb3-50ce05e9e6b9
-caps.latest.revision: 35
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ea8336f9e771676ab261b11570a57e68ad3eb321
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6b5d14f94a9fdd71a628ddecdc1b91bad8e11e54
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37272842"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48096676"
 ---
 # <a name="initializing-custom-assembly-objects"></a>Inicializando objetos assembly personalizados
   Em alguns casos, talvez você precise inicializar valores de propriedade e de campo em suas classes assembly personalizadas ao instanciá-las. É mais provável que você tenha de inicializar as suas classes personalizadas com valores disponíveis a partir de coleções de objetos globais do relatório. Faça isso substituindo o método **OnInit** do objeto **Code** de um relatório. Para acessar **OnInit**, use o elemento **Code** da definição de relatório. Existem duas técnicas para a inicialização de valores de propriedade e de campo das classes em um assembly personalizado que você pretende usar em seu relatório: você pode declarar e criar uma nova instância da classe usando **OnInit** ou chamar um método disponível publicamente usando **OnInit**.  

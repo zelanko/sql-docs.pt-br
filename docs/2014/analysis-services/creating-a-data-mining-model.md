@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining models, creating
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - estimation
 - classification [data mining]
 ms.assetid: 804b7db3-1f6a-4f73-a81d-bbe02520d7c6
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c2bb6c2b6ada95816cc45288c68bc784eb0ef2a0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0375d2254a742149215d5e3328510d598f0fea3a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37239916"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48134786"
 ---
 # <a name="creating-a-data-mining-model"></a>Criando um modelo de mineração de dados
   Modelagem de dados é a etapa de mineração de dados em que você cria padrões e tendências, aplicando *algoritmos* aos dados. Posteriormente, você poderá usar esses padrões para análise ou para fazer previsões.  

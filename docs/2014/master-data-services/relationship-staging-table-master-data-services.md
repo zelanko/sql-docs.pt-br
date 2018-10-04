@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - relationships staging table [Master Data Services]
 - database [Master Data Services], relationships table
 ms.assetid: e19b6002-67bd-4e7d-9f19-ecb455522b1a
-caps.latest.revision: 7
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 38b92d05a119af10a3c6c2e464b745b8fb26b197
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d9c1622a95adbe667db27ea975783483fe053051
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37229326"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48107586"
 ---
 # <a name="relationship-staging-table-master-data-services"></a>Tabela de preparo de relações (Master Data Services)
   Use a tabela de preparo de relação (stg.name_Relationship) no banco de dados [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] para alterar o local dos membros em uma hierarquia explícita, com base na relação que os membros têm entre si.  

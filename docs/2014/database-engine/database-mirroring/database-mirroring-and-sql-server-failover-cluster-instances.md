@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - failover clustering [SQL Server], database mirroring
 - database mirroring [SQL Server], failover
 - high-availability mode [SQL Server]
 ms.assetid: f1dd6a79-698b-4e31-b923-6bfc3ea0b617
-caps.latest.revision: 40
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7a39a20d2d39e0a056d40ede36c8bf3fb85bfc29
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e7c3a3094309d2d1d32a840d4eee933555daa66a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37225947"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48150935"
 ---
 # <a name="database-mirroring-and-sql-server-failover-cluster-instances"></a>Espelhamento de banco de dados e instâncias de cluster de failover do SQL Server
   Um cluster de failover é uma combinação de um ou mais discos físicos em um grupo de clusters do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Cluster Service (MSCS), conhecido como um grupo de recursos, que são nós participantes do cluster. O grupo de recursos é configurado como uma instância clusterizada de failover que hospeda uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Uma instância clusterizada de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aparece na rede como se fosse um único computador, mas tem funções que fornecerão failover de um nó para outro se um nó se tornar disponível. Para obter mais informações, consulte [Instâncias do Cluster de Failover do AlwaysOn (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  

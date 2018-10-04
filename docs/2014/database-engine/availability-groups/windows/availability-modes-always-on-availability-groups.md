@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - asynchronous-commit availability mode
 - Availability Groups [SQL Server], availability modes
 ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
-caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 13676e5706743cb2ce16e0f94e72ab8301695a71
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d993ef299f08400a54487a4e7e99b017e8e9bc55
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273742"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48129036"
 ---
 # <a name="availability-modes-always-on-availability-groups"></a>Modos de disponibilidade (grupos de disponibilidade AlwaysOn)
   No [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], o *modo de disponibilidade* é uma propriedade de réplica que determina se uma determinada réplica de disponibilidade pode ser executada em modo de confirmação síncrona. Para cada réplica de disponibilidade, o modo de disponibilidade deve ser configurado para modo de confirmação síncrona ou modo de confirmação assíncrona.  Se a réplica primária for configurada para o *modo de confirmação assíncrona*, ela não aguardará qualquer réplica secundária gravar registros de log de transação de entrada no disco (para *proteger o log*). Se uma determinada réplica secundária for configurada para modo de confirmação assíncrona, a réplica primária não aguardará que essa réplica secundária proteja o log. Se a réplica primária e uma determinada réplica secundária forem ambas configuradas para *modo de confirmação síncrona*, a réplica primária aguardará que a réplica secundária confirme que protegeu o log (a menos que a réplica secundária não execute ping na réplica primária dentro do *período do tempo limite de sessão*dela).  

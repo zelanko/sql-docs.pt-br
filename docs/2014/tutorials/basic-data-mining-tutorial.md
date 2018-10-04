@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - databases [Analysis Services], tutorials
 - data mining [Analysis Services], tutorials
 - tutorials [Data Mining]
 ms.assetid: 6602edb6-d160-43fb-83c8-9df5dddfeb9c
-caps.latest.revision: 48
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5711bc105432b0d23f5fd2fd2b429449c2549258
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: db5b4fcded48a711fc1c8e8c8ffdebdd36562282
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37314966"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48150296"
 ---
 # <a name="basic-data-mining-tutorial"></a>Tutorial de mineração de dados básico
   Bem-vindo à [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial de mineração de dados básico. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Fornece um ambiente integrado para criação de modelos de mineração de dados e fazer previsões. Neste tutorial, você concluirá um cenário para uma campanha de mala direta na qual usará o aprendizado automatizado para analisar e prever o comportamento de compra do cliente. O tutorial demonstra como usar três dos algoritmos de mineração de dados mais importantes: clustering, árvores de decisão, e Naive Bayes. Você também aprenderá como analisar os resultados usando os visualizadores de modelo de mineração e para criar previsões e gráficos de precisão usando as ferramentas de mineração de dados que estão incluídas no [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. A empresa fictícia, [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], é usada para todos os exemplos.  

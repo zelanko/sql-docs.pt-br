@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f951a4aa-da55-4e43-8579-4a5d4480d11f
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 099d9f8ccb24e2675f61c89f277d82984901cd4e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0b2d11854134eb7b83182b35b113b591687f2775
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37168147"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48095106"
 ---
 # <a name="datasources-and-datasets-collection-references-report-builder-and-ssrs"></a>Referências de coleções DataSources e DataSets (Construtor de Relatórios e SSRS)
   A coleção `DataSources` representa todas as fontes de dados usadas em um relatório. Da mesma forma, o `DataSets` coleção representa todos os conjuntos de dados para todas as fontes de dados em um relatório. Use o painel **Dados do Relatório** para obter uma exibição hierárquica dos conjuntos de dados do relatório organizados sob a fonte de dados a qual eles fazem referência. Se você incluir referências nessas coleções, não poderá ver os valores ao visualizar o relatório. Essas coleções estão disponíveis apenas após o relatório ter sido publicado em um servidor de relatório.  

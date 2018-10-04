@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1fec079e-33b3-4e4d-92b3-6b4d06a49a77
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 3022c5d802da527dc1c1bfb062f8a5dca267f50e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 62923987b3214a319268291b1349cb32f5bd0bd7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37157737"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147447"
 ---
 # <a name="multilookup-function-report-builder-and-ssrs"></a>Função Multilookup (Construtor de Relatórios e SSRS)
   Retorna o conjunto de primeiros valores correspondentes para o conjunto de nomes especificado de um conjunto de dados que contém pares de nome/valor.  
@@ -50,7 +47,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
 ## <a name="return"></a>Retorno  
  Retorna um `VariantArray`, ou `Nothing` se não houver nenhuma correspondência.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Use `Multilookup` para recuperar um conjunto de valores de um conjunto de dados para os pares nome-valor em que cada par tem uma relação de 1 para 1. `MultiLookup` é o equivalente a chamar `Lookup` para um conjunto de nomes ou chaves. Por exemplo, um parâmetro baseado em identificadores de chave primária, você pode usar `Multilookup` em uma expressão em uma caixa de texto em uma tabela para recuperar valores associados de um conjunto de dados que não está associado ao parâmetro ou à tabela.  
   
  `Multilookup` faz o seguinte:  

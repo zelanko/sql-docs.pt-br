@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.pro.tracetemplateproperties.general.f1
 helpviewer_keywords:
 - Trace Template Properties dialog box
 ms.assetid: a5696c47-5f10-4ab4-bd6a-8eea71d4c020
-caps.latest.revision: 20
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6e740d4866797c8d64b8798cd41dea9159f262ff
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2f9e78216d333303cfacaf49ed85b7ac2c6c8f1a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37184753"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48088806"
 ---
 # <a name="trace-template-properties-general-tab"></a>Propriedades do modelo de rastreamento (guia Geral)
   Use a guia **Geral** da caixa de diálogo **Propriedades do Modelo de Rastreamento** para criar novos modelos de rastreamento usando as opções a seguir. Para acessar essa caixa de diálogo, no menu [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **Arquivo** aponte para **Modelos**e clique em **Novo Modelo**.  

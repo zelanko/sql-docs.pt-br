@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.cubes.f1
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - read/write permissions
 - permissions [Analysis Services], cubes
 ms.assetid: 55b1456e-2f6b-4101-b316-c926f40304e3
-caps.latest.revision: 30
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2c2602f95332f48b71f56ce1fb3028c22c51d2ee
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 44159dccd8fd912e0ebee75c5ab7d1a72c946e75
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37306556"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149706"
 ---
 # <a name="grant-cube-or-model-permissions-analysis-services"></a>Conceder permissões de cubo ou modelo (Analysis Services)
   Um cubo ou modelo de tabela é o objeto de consulta principal em um modelo de dados do Analysis Services. Ao se conectarem a dados multidimensionais ou de tabela do Excel para exploração de dados ad hoc, normalmente os usuários começam ao selecionar um cubo ou modelo de tabela específico como a estrutura de dados por trás do objeto de relatório dinâmico. Este tópico explica como conceder as permissões necessárias para acesso de dados de cubo ou de tabela.  

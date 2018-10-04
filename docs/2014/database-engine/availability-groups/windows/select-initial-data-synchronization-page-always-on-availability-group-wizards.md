@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.addreplicawizard.selectinitialdatasync.f1
 - sql12.swb.adddatabasewizard.selectinitialdatasync.f1
 - sql12.swb.newagwizard.selectinitialdatasync.f1
 ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
-caps.latest.revision: 36
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f9a3f04a5d6ea060cd905d2bf81d628c27d99eb8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f48418911358fb7833b745ee8c3172de2d763155
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37211766"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48091426"
 ---
 # <a name="select-initial-data-synchronization-page-alwayson-availability-group-wizards"></a>Selecionar a página Sincronização de Dados Inicial (assistentes de Grupo de Disponibilidade AlwaysOn)
   Use a página **Selecionar Sincronização de Dados Inicial** do AlwaysOn para indicar sua preferência por sincronização de dados inicial de novos bancos de dados secundários. Essa página é compartilhada por três assistentes: o [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], o [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]e o [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)].  

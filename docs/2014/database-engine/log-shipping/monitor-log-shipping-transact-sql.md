@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - log shipping [SQL Server], status
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - status information [SQL Server], log shipping
 - monitoring log shipping [SQL Server]
 ms.assetid: acf3cd99-55f7-4287-8414-0892f830f423
-caps.latest.revision: 28
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9fb5c435f46788f7b3d703da16ccddab80d81d32
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d480fe510b6d2e252faefaae13d7dd3776c8ec5d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37160908"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48127607"
 ---
 # <a name="monitor-log-shipping-transact-sql"></a>Monitorar envio de logs (Transact-SQL)
   Depois que você configurar o envio de logs, você poderá monitorar as informações sobre o status de todos os servidores de envio de logs. O histórico e status de operações de envio de logs são sempre salvos localmente pelos trabalhos de envio de log. O histórico e status da operação de backup são armazenados no servidor primário e o histórico e status de operações de cópia e restauração são armazenados no servidor secundário. Se você implementou um servidor monitor remoto, estas informações também serão armazenadas no servidor monitor.  

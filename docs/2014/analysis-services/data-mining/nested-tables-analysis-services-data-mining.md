@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], nested tables
 - tables [Analysis Services], nested
 - nested tables
 ms.assetid: cb192aa2-597e-4d4f-ac34-3556d037fed4
-caps.latest.revision: 51
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4b072c134c047f9833f3b5297688bf30d68a6050
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 278244f5cf8f7a25f497ece40490920c7a8a9c8b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167727"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48121086"
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>Tabelas aninhadas (Analysis Services - Mineração de Dados)
   No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], os dados devem ser alimentados com um algoritmo de mineração de dados como uma série de casos contidos em uma tabela de casos. No entanto, nem todos os casos podem ser descritos por uma única linha de dados. Por exemplo, um caso pode ser derivado de duas tabelas: uma contendo informações sobre o cliente e outra as compras do cliente. Um único cliente na tabela de informações de clientes pode ter vários itens na tabela de compras do cliente, o que dificulta a descrição dos dados em uma única linha. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornece um método exclusivo para tratar desses casos, com o uso de *tabelas aninhadas*. O conceito de uma tabela aninhada é demonstrado na ilustração a seguir.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - alerts [SQL Server replication]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - Replication Monitor, thresholds and warnings
 - monitoring performance [SQL Server replication], thresholds and warnings
 ms.assetid: 3a409c2c-b77e-4001-b81a-1dcd918618ec
-caps.latest.revision: 31
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a8ed8815e1ca314ec5562d662914e0cdefa6ed4a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3934f596eecf9f0c431814c9e55823f876e51a7e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37203016"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48133246"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>Definir os limites e avisos no Replication Monitor
   O[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Monitor exibe informações de status para publicações e assinaturas. Por padrão, o Replication Monitor só exibe avisos para assinaturas não inicializadas, mas você pode habilitar os avisos para outras condições. Recomendamos habilitar os avisos para a sua topologia, para que esteja informado sobre o status e o desempenho de maneira oportuna.  

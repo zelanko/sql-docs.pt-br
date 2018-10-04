@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Cell Element (MDDataSet)
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Cell element
 ms.assetid: c4ea08a4-f653-4ade-be07-b91eb5b1ef32
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3f07798a28c59597575de08bf5d0f3ea1d7087c8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7c422fdd13c03a2ab3c5a9cd58ce4cca1d22c5d6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37269502"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48091666"
 ---
 # <a name="cell-element-mddataset-xmla"></a>Elemento Cell (MDDataSet) (XMLA)
   Contém informações sobre uma única célula contida por um pai [CellData](celldata-element-xmla.md) elemento.  
@@ -54,8 +51,8 @@ ms.locfileid: "37269502"
   
 |Característica|Description|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|Nenhum|  
-|Valor padrão|Nenhum|  
+|Comprimento e tipo de dados|None|  
+|Valor padrão|None|  
 |Cardinalidade|0-n: Elemento opcional que pode ocorrer mais de uma vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -71,7 +68,7 @@ ms.locfileid: "37269502"
 |---------------|-----------------|  
 |CellOrdinal|Necessário `unsignedInt` atributo. A posição ordinal da célula dentro do conjunto de dados multidimensional.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  No elemento pai `root`, o elemento `Axes` é  seguido pelo elemento `CellData`, uma coleção de elementos `Cell` que contêm os valores de propriedade de  cada célula retornada no conjunto de dados multidimensionais. O elemento `Cell` contém o atributo `CellOrdinal`, que indica a posição ordinal baseada em zero da célula dentro do conjunto de dados multimensional e um elemento para cada valor de propriedade de célula associado à célula. Cada valor de propriedade de célula no `Cell` elemento é definido por um elemento XML separado. O valor da propriedade de célula é o dado contido pelo elemento XML, e o nome da propriedade de célula, conforme definido no elemento `CellInfo` do elemento raiz pai, corresponde ao nome do elemento XML.  
   
  A sintaxe a seguir descreve um valor de propriedade de célula.  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9e556fb1-ca37-4f06-8f8f-f187cb0fdb37
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bca31a21dda5f03b29456f842afb2d4d7504c608
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 50ddca5c3cdb1b7e314ccc6650bbd8fcc3ed3841
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37297426"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48113427"
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>Determina o Modo de Servidor de uma instância do Analysis Services.
   O Analysis Services pode ser instalado em um dos três modos de servidor: Multidimensional e Mineração de Dados (padrão), PowerPivot para SharePoint e Tabular. O modo de servidor de uma instância do Analysis Services é determinado durante a instalação quando você escolhe opções para instalar o servidor.  

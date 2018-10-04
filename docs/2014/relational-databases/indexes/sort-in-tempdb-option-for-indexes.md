@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SORT_IN_TEMPDB option
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - indexes [SQL Server], tempdb database
 - index creation [SQL Server], tempdb database
 ms.assetid: 754a003f-fe51-4d10-975a-f6b8c04ebd35
-caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9d8ec82b43cdfd215254c3f16577b1c82af52b47
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 49a10795cbb9177837960739890baebc221c0712
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37164727"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48145248"
 ---
 # <a name="sortintempdb-option-for-indexes"></a>Opção SORT_IN_TEMPDB para índices
   Quando você cria ou recria um índice, definindo a opção SORT_IN_TEMPDB como ON, você pode direcionar [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] para usar **tempdb** para armazenar os resultados intermediários de classificação utilizados para criar o índice. Embora essa opção aumente a quantidade de espaço temporário em disco usada para criar um índice, a opção pode reduzir o tempo necessário à criação ou recriação de um índice quando **tempdb** estiver em um conjunto de discos diferente do banco de dados do usuário. Para obter mais informações sobre **tempdb**, veja [Configurar a opção index create memory de configuração de servidor](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md).  

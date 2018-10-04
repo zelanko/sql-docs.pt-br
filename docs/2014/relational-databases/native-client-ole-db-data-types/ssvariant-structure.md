@@ -4,32 +4,29 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - SSVARIANT
 helpviewer_keywords:
 - SSVARIANT struct
 ms.assetid: d13c6aa6-bd49-467a-9093-495df8f1e2d9
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 52ea23ff970d094330aaf046f9ebdd843c8b4956
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 0af799acbf0c498797564f2c057532a4964db0ae
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37429035"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48101316"
 ---
 # <a name="ssvariant-structure"></a>Estrutura SSVARIANT
   A estrutura `SSVARIANT`, definida em sqlncli.h, corresponde a um valor DBTYPE_SQLVARIANT no provedor OLEDB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
- `SSVARIANT` é uma união distinta. Dependendo do valor do membro vt, o consumidor pode determinar qual membro deve ser lido. os valores VT correspondem aos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de dados. Portanto, a estrutura `SSVARIANT` pode hospedar qualquer tipo do SQL Server. Para obter mais informações sobre a estrutura de dados para tipos OLE DB padrão, consulte [indicadores de tipo](http://go.microsoft.com/fwlink/?LinkId=122171).  
+ `SSVARIANT` é uma união distinta. Dependendo do valor do membro vt, o consumidor pode determinar qual membro deve ser lido. Os valores vt correspondem aos tipos de dados do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Portanto, a estrutura `SSVARIANT` pode hospedar qualquer tipo do SQL Server. Para obter mais informações sobre a estrutura de dados para tipos OLE DB padrão, consulte [indicadores de tipo](http://go.microsoft.com/fwlink/?LinkId=122171).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Quando DataTypeCompat==80, vários subtipos `SSVARIANT` se tornam cadeias de caracteres. Por exemplo, os valores vt seguintes aparecerão em `SSVARIANT` como VT_SS_WVARSTRING:  
   
 -   VT_SS_DATETIMEOFFSET  

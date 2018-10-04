@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - SetOrderValue Method (ClientNetworkProtocol Class)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - SetOrderValue method
 ms.assetid: 15f693fd-37f6-41d9-9dab-d2c93db19895
-caps.latest.revision: 33
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 7dd190efcf5a593017fb9c1bc3dbb3cc3ccd9fc0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 603a3e22a3fee14dc3e03ccb2afae7e731547e21
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37270362"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48113742"
 ---
 # <a name="setordervalue-method-clientnetworkprotocol-class"></a>Método SetOrderValue (classe ClientNetworkProtocol)
   Seleciona o protocolo com o valor de ordem especificado da lista de protocolo do cliente.  
@@ -57,7 +54,7 @@ OrderValue
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
  Um valor `uint32`, que é 0 se o serviço tiver sido modificado com êxito, 1 se a solicitação não tiver suporte e qualquer outro número para indicar um erro.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades de Protocolos de Cliente (guia Ordem)](http://technet.microsoft.com/library/ms187884.aspx)  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.specifycontentdatatype.f1
 ms.assetid: 7061f674-e806-46f2-8c15-e260a3c69a17
-caps.latest.revision: 21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a4ee726afd23b410d5d145a548a1f810fe758711
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fc0fa58c45a49c6a2f09ca3e42df395cbaf20660
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37316956"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48118976"
 ---
 # <a name="specify-the-column39s-content-and-data-type-data-mining-wizard"></a>Especifique a coluna&#39;s conteúdo e tipo de dados (Assistente de mineração de dados)
   Use a página **Especificar o Tipo de Conteúdo e de Dados da Coluna** para modificar a coluna e os tipos de conteúdo que já foram definidos pelo assistente. O assistente usa os tipos de dados das colunas de origem e os recursos do algoritmo selecionado para determinar os tipos de dados e de conteúdo padrão de cada coluna.  
@@ -38,7 +35,7 @@ ms.locfileid: "37316956"
  **Tipo de Dados**  
  Os tipos de dados que são atribuídos a cada coluna. Clique dentro de uma célula para alterar o tipo de dados. Para obter mais informações sobre tipos de conteúdo, consulte [Tipos de dados &#40;Mineração de dados&#41;](data-mining/data-types-data-mining.md).  
   
- **Detectar**  
+ **detectar**  
  Clique para detectar automaticamente os tipos de conteúdo contínuo e distinto para a coluna numérica. Isso não se aplica a estruturas de mineração baseadas em fontes de dados OLAP. Para estruturas de mineração OLAP, o assistente detecta tipos de conteúdo automaticamente e escolhe um tipo compatível com o algoritmo selecionado.  
   
 ## <a name="see-also"></a>Consulte também  

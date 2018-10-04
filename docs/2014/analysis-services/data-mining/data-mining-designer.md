@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], structure
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - Data Mining Designer
 - data mining [Analysis Services], modifying
 ms.assetid: 2540db5b-2bf3-4b6c-87c8-79c48d71acce
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 07f6d732e2c22bd33b6d5df3c6c68a2703f8acfc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 010b9b18be2264add14bc5242ced6a57ed8fdcca
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37247746"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48117379"
 ---
 # <a name="data-mining-designer"></a>Data Mining Designer
   O Designer de Mineração de Dados é o ambiente primário para trabalhar com modelos de mineração no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Você pode acessar o designer selecionando uma estrutura de mineração existente ou usando o Assistente de Mineração de Dados para criar uma nova estrutura e um novo modelo de mineração. É possível usar o Designer de Mineração de Dados para executar as seguintes tarefas:  

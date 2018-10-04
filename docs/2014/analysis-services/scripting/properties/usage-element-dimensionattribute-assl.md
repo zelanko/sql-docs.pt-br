@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Usage Element (DimensionAttribute)
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Usage element
 ms.assetid: c5e38d2e-5a8e-4157-84e9-285e78c84e74
-caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ce7dea2cb3c0e928b5a1b0c80aa0ca526f5f8329
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 91c9eb328103f4d6a22a965e519836968413b43b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37183234"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48149316"
 ---
 # <a name="usage-element-dimensionattribute-assl"></a>Elemento Usage (DimensionAttribute) (ASSL)
   Descreve como um atributo é usado.  
@@ -59,9 +56,9 @@ ms.locfileid: "37183234"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elemento pai|[DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O valor desse elemento é limitado a uma das cadeias de caracteres listadas na tabela a seguir.  
   
 |Valor|Description|  

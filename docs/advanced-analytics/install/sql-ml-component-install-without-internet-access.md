@@ -3,17 +3,17 @@ title: Instalar os componentes do R e Python sem acesso à internet de aprendiza
 description: Offline ou desconectada Machine Learning R e Python instalação na instância do SQL Server isolada.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/02/2018
+ms.date: 10/01/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 94aa87c0ecad8be94498bf5571e6e4b7ed7e1af9
-ms.sourcegitcommit: 9528843359cc43b9c66afac363f542ae343266e9
+ms.openlocfilehash: 24369c69df30e2723ce0c2098f2050ed0e5d7b20
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "40437646"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48150537"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>Instalar o R e Python de aprendizado em computadores sem acesso à internet de máquina do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -97,6 +97,34 @@ Quando você executa a instalação do SQL Server em um computador desconectado 
 
 5. Continuar a seguir as instruções na tela para concluir a instalação.
 
+<a name="apply-cu"></a>
+
+## <a name="apply-cumulative-updates"></a>Aplicar atualizações cumulativas
+
+É recomendável que você aplique a atualização cumulativa mais recente para o mecanismo de banco de dados e componentes de aprendizado de máquina. As atualizações cumulativas são instaladas por meio do programa de instalação. 
+
+1. Comece com uma instância de linha de base. Só é possível aplicar atualizações cumulativas para as instalações existentes do SQL Server:
+
+  + Versão inicial do SQL Server 2017
+  + Versão inicial do SQL Server 2016, SQL Server 2016 SP 1 ou SQL Server 2016 SP 2
+
+2. Em um dispositivo conectado à internet, vá para a lista de atualização cumulativa para sua versão do SQL Server:
+
+  + [Atualizações do SQL Server 2017](https://sqlserverupdates.com/sql-server-2017-updates/)
+  + [Atualizações do SQL Server 2016](https://sqlserverupdates.com/sql-server-2016-updates/)
+
+3. Selecione a atualização cumulativa mais recente para baixar o arquivo executável.
+
+4. Obter os arquivos CAB correspondentes para R e Python. Para obter links de download, consulte [CAB baixa atualizações cumulativas na análise do SQL Server no banco de dados de instâncias](sql-ml-cab-downloads.md).
+
+5. Transferência de todos os arquivos, executáveis e arquivos CAB, na mesma pasta no computador offline.
+
+6. Execute a instalação. Aceite os termos de licenciamento e, na página de seleção de recursos, analise os recursos para os quais as atualizações cumulativas são aplicadas. Você deve ver todos os recursos instalados para a instância atual, incluindo recursos de aprendizado de máquina.
+
+  ![](media/cumulative-update-feature-selection.png)
+
+5. Prossiga com o assistente, aceitando os termos de licenciamento para distribuições do R e Python. Durante a instalação, você precisará escolher o local da pasta que contém os arquivos CAB atualizados.
+
 ## <a name="post-install-configuration"></a>Configuração de pós-instalação
 
 Após a instalação for concluída, reinicie o serviço e, em seguida, configure o servidor para habilitar a execução do script:
@@ -108,30 +136,6 @@ Uma instalação offline inicial dos serviços de aprendizado de máquina do SQL
 
 + [Verificar a instalação do](sql-machine-learning-services-windows-install.md#verify-installation) (para SQL Server 2016, clique em [aqui](sql-r-services-windows-install.md#verify-installation)).
 + [Configuração adicional conforme necessário](sql-machine-learning-services-windows-install.md#additional-configuration) (para SQL Server 2016, clique em [aqui](sql-r-services-windows-install.md#bkmk_FollowUp)).
-
-<a name="slipstream-upgrades"></a>
-
-## <a name="slipstream-upgrades"></a>Atualizações de instalação integrada
-
-A instalação integrada refere-se à capacidade de aplicar um patch ou atualizar para uma instalação de instância com falha para corrigir problemas existentes. A vantagem desse método é que o SQL Server é atualizado ao mesmo tempo em que você executa a instalação, evitando uma reinicialização separada posterior.
-
-Quando um servidor não tem acesso à Internet, as atualizações de serviço são aplicadas ao baixar uma atualização do SQL Server installer e as versões correspondentes dos arquivos CAB de idioma específico. 
-
-1. Comece com uma instância de linha de base. Essas versões do SQL Server têm suporte para atualizações de instalação integrada:
-
-  + Versão inicial do SQL Server 2017
-  + Versão inicial do SQL Server 2016
-  + SQL Server 2016 SP 1
-  + SQL Server 2016 SP 2
-
-2. Obter uma versão atualizada do instalador do SQL Server para uma determinada atualização cumulativa. Qualquer atualização para os recursos de aprendizado (R e Python) do computador está em tandem com uma atualização cumulativa da instância do mecanismo de banco de dados subjacente.
-
-  + [Atualizações do SQL Server 2016](https://sqlserverupdates.com/sql-server-2016-updates/)
-  + [Atualizações do SQL Server 2017](https://sqlserverupdates.com/sql-server-2017-updates/)
-
-3. Obter os arquivos CAB correspondentes para R e Python. Para obter links de download, consulte [CAB baixa atualizações cumulativas na análise do SQL Server no banco de dados de instâncias](sql-ml-cab-downloads.md).
-
-4. Coloque todos os arquivos na mesma pasta, execute a instalação. Durante a instalação, você precisará escolher o local da pasta para os arquivos CAB atualizados.
 
 ## <a name="next-steps"></a>Próximas etapas
 

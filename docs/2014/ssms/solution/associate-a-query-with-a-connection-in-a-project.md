@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [SQL Server Management Studio], query associations
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - projects [SQL Server Management Studio], query connections
 - query associations [SQL Server Management Studio]
 ms.assetid: c9625ae0-29c1-4179-a709-51b7e2f9e23d
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c8729cbeb075f31cd2b37a72aa97009f155eadd2
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 015d961d2b6ae10e6594788707a6c3816062e357
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43806962"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48105916"
 ---
 # <a name="associate-a-query-with-a-connection-in-a-project"></a>Associar uma consulta a uma conexão em um projeto
   Se uma consulta for criada sem uma conexão, ou se uma consulta for movida de um projeto para outro, ela não será associada a uma conexão no projeto atual.  

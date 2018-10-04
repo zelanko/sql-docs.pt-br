@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - discontinued functionality [Reporting Services]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Rsactivate.exe
 - unsupported features [Reporting Services]
 ms.assetid: d529cc96-3483-480b-9bfc-bd28b1d0ef52
-caps.latest.revision: 47
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 971662bbb0b1c8b08507574d569418d065f6204a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ec97f47c87abed0a3fd650632458bf4ba956e985
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37201026"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48100216"
 ---
 # <a name="discontinued-functionality-to-sql-server-reporting-services-in-sql-server-2014"></a>Funcionalidade descontinuada do SQL Server Reporting Services no SQL Server 2014
   Este tópico descreve os recursos do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] que não estão mais disponíveis no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Não inclui anúncios sobre suporte descontinuado para versões específicas do sistema operacional ou do IIS (Serviços de Informações da Internet) da [!INCLUDE[msCoName](../includes/msconame-md.md)] . Para obter mais informações sobre os pré-requisitos, consulte [Hardware and Software Requirements for Installing SQL Server 2014](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  

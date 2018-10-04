@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - deployment script [CLR integration]
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - deploying assemblies [CLR integration]
 - deploying [CLR integration]
 ms.assetid: 00752573-3367-41a7-af98-7b7a29e8e2f2
-caps.latest.revision: 34
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 95a69542a6d6f400d3b5a3e88786bda2d7e4a23a
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 4e06dfced9b9800c0e5c0b7d0dca208bac67c900
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37353308"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48122776"
 ---
 # <a name="deploying-clr-database-objects"></a>Implantando objetos de banco de dados CLR
   Implantação é o processo pelo qual você distribui um aplicativo concluído ou módulo a ser instalado e executado em outro computador. Usando o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio, é possível desenvolver objetos de banco de dados do CLR (Common Language Runtime) e implantá-los em um servidor de teste. Os objetos de banco de dados gerenciados também podem ser compilados com os arquivos de redistribuição do [!INCLUDE[msCoName](../../../includes/msconame-md.md)].NET Framework, e não o Visual Studio. Quando compilados, os assemblies que contêm os objetos de banco de dados do CLR podem ser implantados em um servidor de teste que usa o Visual Studio ou as instruções [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Observe que o Visual Studio .NET 2003 não pode ser usado na programação de integração ou no desenvolvimento do CLR. O [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornece o .NET Framework pré-instalado, e o Visual Studio .NET 2003 não pode usar os assemblies do .NET Framework 2.0.  

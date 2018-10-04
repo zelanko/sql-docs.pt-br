@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Binding Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - Binding data type
 ms.assetid: 0a777219-b885-4961-ac66-b76faeb520db
-caps.latest.revision: 39
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a34209ea08d1cdfd0100bd5e2402edc0f592f066
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2e46d48f94035a59c54a3e9bb9c8ccb087226660
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37169537"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48135896"
 ---
 # <a name="binding-data-type-assl"></a>Tipo de dados Binding (ASSL)
   Define um tipo de dados primitivo abstrato que representa uma relação de dependência entre dois objetos na qual os dados ou os metadados de um objeto dependem dos dados ou metadados de um objeto associado.  
@@ -46,18 +43,18 @@ ms.locfileid: "37169537"
   
 |Característica|Description|  
 |--------------------|-----------------|  
-|Tipos de dados base|Nenhum|  
+|Tipos de dados base|None|  
 |Tipos de dados derivados|[AttributeBinding](binding-data-type-assl.md), [ColumnBinding](columnbinding-data-type-assl.md), [CubeAttributeBinding](cubeattributebinding-data-type-assl.md), [CubeDimensionBinding](dimensionbinding-data-type-assl.md), [DataSourceViewBinding](datasourceviewbinding-data-type-assl.md), [DimensionBinding](dimensionbinding-data-type-assl.md), [InheritedBinding](inheritedbinding-data-type-assl.md), [MeasureBinding](measurebinding-data-type-assl.md), [MeasureGroupBinding](measuregroupbinding-data-type-assl.md), [ MeasureGroupDimensionBinding](measuregroupdimensionbinding-data-type-assl.md), [ProactiveCachingBinding](proactivecachingbinding-data-type-assl.md), [RowBinding](rowbinding-data-type-assl.md), [TabularBinding](tabularbinding-data-type-assl.md), [ TimeAttributeBinding](timeattributebinding-data-type-assl.md), [TimeBinding](timebinding-data-type-assl.md), [UserDefinedGroupBinding](userdefinedgroupbinding-data-type-assl.md)|  
   
 ## <a name="data-type-relationships"></a>Relação do tipo de dados  
   
 |Relação|Elemento|  
 |------------------|-------------|  
-|Elementos pai|Nenhum|  
-|Elementos filho|Nenhum|  
-|Elementos derivados|Nenhum|  
+|Elementos pai|None|  
+|Elementos filho|None|  
+|Elementos derivados|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O elemento correspondente no modelo de objeto Analysis Management Objects (AMO) é <xref:Microsoft.AnalysisServices.Binding>.  
   
  Para obter mais informações sobre associação de dados, consulte [fontes de dados e associações &#40;Multidimensional do SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  

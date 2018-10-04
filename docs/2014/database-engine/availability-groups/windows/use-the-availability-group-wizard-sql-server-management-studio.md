@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.newagwizard.f1
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], wizards
 - Availability Groups [SQL Server], creating
 ms.assetid: e1f1dccc-9e65-471d-8fd1-b45085c9484a
-caps.latest.revision: 41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f021d637b04a67dccde5d3428edd0b033f0bf297
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: dc448704ef0362c70a957a4e5a1574cd92df3578
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300896"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116452"
 ---
 # <a name="use-the-availability-group-wizard-sql-server-management-studio"></a>Usar a caixa de diálogo Assistente de Grupo de Disponibilidade (SQL Server Management Studio)
   Este tópico descreve como usar o Assistente de novo grupo de disponibilidade (no [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]) para criar e configurar um grupo de disponibilidade AlwaysOn no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Um *grupo de disponibilidade* define um conjunto de bancos de dados de usuários que realizará o failover como uma única unidade e um conjunto de parceiros de failover, conhecido como *réplicas de disponibilidade*, que oferece suporte a failover.  

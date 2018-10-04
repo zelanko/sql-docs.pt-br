@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.slicesourcecube.f1
 ms.assetid: 16485608-d3b9-49ee-8baa-948038cdd7ec
-caps.latest.revision: 23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6024c1e58b48c8661eaa15a0ea85c464103403ae
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e4036705b86b26e1f39bd42578c991014096f113
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37326546"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089986"
 ---
 # <a name="slice-source-cube-data-mining-wizard"></a>Fatiar cubo de origem (Assistente de Mineração de Dados)
   Você pode usar a caixa de diálogo **Fatiar Cubo de Origem** para restringir os dados usados para treinar o modelo. Normalmente, um cubo contém os dados relacionados a muitas dimensões e atributos diferentes, como todos os repositórios, todas as regiões e todos os produtos. Não é prático treinar um modelo em combinações ilimitadas de atributos; portanto, use essa caixa de diálogo para escolher um conjunto específico a ser usado no treinamento de um modelo.  

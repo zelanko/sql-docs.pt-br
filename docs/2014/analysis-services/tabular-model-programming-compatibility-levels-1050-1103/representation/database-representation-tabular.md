@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 16a233fb-f83b-4ca1-acb5-6186eca0a62c
-caps.latest.revision: 9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e288ccfb3cee35ef1506fe46d2128dd6ab43480a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 02fd33d8adf1ccee042f09c8b102401d5ba94435
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37197766"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116276"
 ---
 # <a name="database-representationtabular"></a>Representação de banco de dados (de tabela)
   No Modo de Tabela, o banco de dados é o contêiner de todos os objetos no modelo de tabela.  
@@ -37,7 +34,7 @@ ms.locfileid: "37197766"
 ### <a name="database-in-adomdnet"></a>Banco de dados no ADOMD.Net  
  Ao usar o ADOMD para consultar um banco de dados modelo de tabela, a conexão com um banco de dados específico é obtida por meio do objeto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>.  
   
- Você pode se conectar diretamente a determinado banco de dados usando o seguinte trecho de código:  
+ Você pode se conectar diretamente a determinado banco de dados usando o seguinte snippet de código:  
   
 ```csharp  
 using ADOMD = Microsoft.AnalysisServices.AdomdClient;  
@@ -48,7 +45,7 @@ using ADOMD = Microsoft.AnalysisServices.AdomdClient;
   
 ```  
   
- Além disso, em um objeto de conexão existente (que não foi fechado), você pode alterar o banco de dados atual para outro, conforme mostrado no seguinte trecho de código:  
+ Além disso, em um objeto de conexão existente (que não foi fechado), você pode alterar o banco de dados atual para outro, conforme mostrado no seguinte snippet de código:  
   
 ```csharp  
 currentCnx.ChangeDatabase("myOtherDatabase");  
@@ -58,7 +55,7 @@ currentCnx.ChangeDatabase("myOtherDatabase");
 ## <a name="database-in-amo"></a>Banco de dados no AMO  
  Ao usar o AMO para gerenciar um objeto de banco de dados, comece com um objeto <xref:Microsoft.AnalysisServices.Server>. Em seguida, procure seu banco de dados na coleção de banco de dados ou crie um novo banco de dados adicionando um à coleção.  
   
- O trecho de código a seguir mostra as etapas para conectar-se a um servidor e criar um banco de dados vazio, depois de verificar que o banco de dados não existe:  
+ O snippet de código a seguir mostra as etapas para conectar-se a um servidor e criar um banco de dados vazio, depois de verificar que o banco de dados não existe:  
   
 ```  
   

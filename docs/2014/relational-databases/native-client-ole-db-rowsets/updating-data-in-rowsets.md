@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - updating data [SQL Server]
@@ -16,19 +14,18 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, data updates
 - data updates [SQL Server], OLE DB
 ms.assetid: 37769b1c-c480-419a-8c54-5cc420bf73db
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 34071ebd4c0f4a365d654eb858ea419383ceeaa6
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: f68e4f2be641d6c6aeaf8bbbfcc8cad81ab1a39a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37425695"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48130969"
 ---
 # <a name="updating-data-in-rowsets"></a>Atualizando dados em conjuntos de linhas
-  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as atualizações do provedor OLE DB do Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dados quando um consumidor atualiza um conjunto de linhas modificável que contém os dados. Um conjunto de linhas modificável é criado quando o consumidor solicita suporte para à **IRowsetChange** ou **IRowsetUpdate** interface.  
+  O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as atualizações do provedor OLE DB do Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dados quando um consumidor atualiza um conjunto de linhas modificável que contém os dados. Um conjunto de linhas modificável é criado quando o consumidor solicita suporte para a interface **IRowsetChange** ou **IRowsetUpdate**.  
   
  Todos os [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conjuntos de linhas modificáveis do provedor OLE DB do Native Client usam [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cursores para dar suporte ao conjunto de linhas. A propriedade do conjunto de linhas DBPROP_LOCKMODE altera o comportamento de controle da simultaneidade do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em cursores e determina o comportamento da busca de linhas do conjunto de linhas e da geração de erros de integridade de dados nos conjuntos de linhas atualizáveis.  
   

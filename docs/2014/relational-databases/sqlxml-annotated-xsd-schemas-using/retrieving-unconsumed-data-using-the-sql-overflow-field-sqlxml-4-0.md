@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - unconsumed data
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - overflow data [SQLXML]
 - sql:overflow-field
 ms.assetid: 8526998d-b47d-4a32-8dc2-7f50a8d11097
-caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9b22aca6d379a4670cc44de1b07f6e18c8a26d47
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d07153f80cc1b6dfdc8383e33a8668b63364ad8a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37189985"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48119506"
 ---
 # <a name="retrieving-unconsumed-data-using-the-sqloverflow-field-sqlxml-40"></a>Recuperando dados não consumidos usando sql:overflow-field (SQLXML 4.0)
   Quando forem inseridos registros em um banco de dados a partir de um documento XML usando a função OPENXML do [!INCLUDE[tsql](../../includes/tsql-md.md)], todos os dados não consumidos no documento XML de origem poderão ser armazenados em uma coluna. Ao recuperar os dados de um banco de dados usando esquemas anotados, o atributo `sql:overflow-field` pode ser especificado para identificar a coluna da tabela na qual os dados de estouro estão armazenados. O `sql:overflow-field` atributo pode ser especificado em  **\<elemento >**.  

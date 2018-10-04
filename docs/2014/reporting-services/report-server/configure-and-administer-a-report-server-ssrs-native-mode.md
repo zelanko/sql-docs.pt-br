@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, components
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - components [Reporting Services], configuring
 - configuring servers [Reporting Services]
 ms.assetid: cfec012b-56f1-4346-9814-247acf22351c
-caps.latest.revision: 50
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 296bc51f6a3793d0a37e3b730152f4292c799be1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cf0aca61929a45545b2d6f6de988b8dcaf83ea56
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37295816"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48115887"
 ---
 # <a name="configure-and-administer-a-report-server-ssrs-native-mode"></a>Configurar e administrar um servidor de relatório (modo nativo do SSRS)
   Este tópico resume as abordagens que podem ser usadas para configurar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Também inclui uma lista de tópicos que explicam como configurar componentes, recursos ou recursos específicos de servidor. Para configurar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], você pode:  

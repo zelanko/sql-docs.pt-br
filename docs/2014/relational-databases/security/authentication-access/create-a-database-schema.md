@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.schemas.general.f1
@@ -19,12 +17,12 @@ ms.assetid: ed2a5522-f4d2-4111-95a4-d3e1e5081739
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 10dd4ad8d0dcbd63e7133e2daf4d35a70695da19
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 3a241cc086ae7f1558f9899295496395b4959b74
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43031563"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147066"
 ---
 # <a name="create-a-database-schema"></a>Criar um esquema de banco de dados
   Este tópico descreve como criar um esquema no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  

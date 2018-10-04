@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters, rowset creation
 ms.assetid: ffe213ca-cc0e-465e-b31c-a8272324c4fe
-caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e9f223bbc3ae87173f98a00dc02f5fc3fcc1d13e
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: de130ef821551383ada1a6df3574404cd3518e88
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37420265"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153648"
 ---
 # <a name="table-valued-parameter-rowset-creation"></a>Criação do conjunto de linhas do parâmetro com valor de tabela
   Embora os consumidores possam fornecer qualquer objeto do conjunto de linhas a parâmetros com valor de tabela, objetos do conjunto de linhas típicos são implementados com relação a armazenamentos de dados de back-end e, portanto, fornecem desempenho limitado. Por isso, o provedor OLE DB do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client permite que os consumidores criem um objeto de conjunto de linhas especializado sobre os dados da memória. Esse objeto de conjunto de linhas especiais, na memória é um novo objeto COM chamado um conjunto de linhas de parâmetro com valor de tabela. Ele fornece funcionalidade semelhante para conjuntos de parâmetro.  
@@ -30,15 +27,15 @@ ms.locfileid: "37420265"
 ## <a name="static-scenario"></a>Cenário estático  
  Quando as informações de tipo são conhecidas, o consumidor usa ITableDefinitionWithConstraints::CreateTableWithConstraints para instanciar um objeto de conjunto de linhas de parâmetro com valor de tabela que corresponde a um parâmetro com valor de tabela.  
   
- O *guid* campo (*pTableID* parâmetro) contém a GUID especial (CLSID_ROWSET_TVP). O *pwszName* membro contém o nome do tipo de parâmetro com valor de tabela que o consumidor deseja criar uma instância. O *eKind* campo será definido como DBKIND_GUID_NAME. Esse nome é necessário quando a instrução for ad hoc SQL; o nome é opcional, se for uma chamada de procedimento.  
+ O *guid* campo (*pTableID* parâmetro) contém a GUID especial (CLSID_ROWSET_TVP). O membro *pwszName* contém o nome do tipo de parâmetro com valor de tabela para o qual o consumidor deseja criar uma instância. O campo *eKind* será definido como DBKIND_GUID_NAME. Esse nome é necessário quando a instrução for ad hoc SQL; o nome é opcional, se for uma chamada de procedimento.  
   
  Para agregação, o consumidor transmite o *pUnkOuter* parâmetro com o controle IUnknown.  
   
  As propriedades de objeto do conjunto de linhas de parâmetro com valor de tabela são somente leitura, portanto, o consumidor não é esperado para definir as propriedades no *rgPropertySets*.  
   
- Para o *rgPropertySets* membro de cada estrutura DBCOLUMNDESC, o consumidor pode especificar propriedades adicionais para cada coluna. Essas propriedades pertencem ao conjunto de propriedades DBPROPSET_SQLSERVERCOLUMN. Elas permitem que você especifique as configurações computadas e padrão de cada coluna. Elas também dão suporte a propriedades de coluna existentes, como nulidade e identidade.  
+ Para o membro *rgPropertySets* de cada estrutura DBCOLUMNDESC, o consumidor pode especificar propriedades adicionais para cada coluna. Essas propriedades pertencem ao conjunto de propriedades DBPROPSET_SQLSERVERCOLUMN. Elas permitem que você especifique as configurações computadas e padrão de cada coluna. Elas também dão suporte a propriedades de coluna existentes, como nulidade e identidade.  
   
- Para recuperar informações correspondentes de um objeto de conjunto de linhas de parâmetro com valor de tabela, o consumidor usa irowsetinfo:: GetProperties.  
+ Para recuperar informações correspondentes de um objeto do conjunto de linhas do parâmetro com valor de tabela, o consumidor usa IRowsetInfo::GetProperties.  
   
  Para recuperar as informações sobre o nulo, exclusivo, computado e atualizar o status de cada coluna, o consumidor usar IColumnsRowset:: Getcolumnsrowset ou icolumnsinfo:: Getcolumninfo. Esses métodos fornecem informações detalhadas sobre cada coluna do conjunto de linhas do parâmetro com valor de tabela.  
   

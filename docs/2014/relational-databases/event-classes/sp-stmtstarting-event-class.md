@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - SP:StmtStarting event class
 ms.assetid: 73550597-a3f3-4454-8678-0bf39db80a7f
-caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 95382cec4c94c9cd75a3164bac1566d8a88c2322
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 892a3aee2236c93953825d3414b402ce5b49d174
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37149087"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48115866"
 ---
 # <a name="spstmtstarting-event-class"></a>Classe de evento SP: StmtStarting
   A classe de evento SP:StmtStarting indica que uma instrução [!INCLUDE[tsql](../../includes/tsql-md.md)] em um procedimento armazenado foi iniciada.  

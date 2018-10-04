@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.axisproperties.axisoptions.f1
 - "10138"
 ms.assetid: b276e210-7a12-48ae-971b-7dabae51df11
-caps.latest.revision: 10
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c2b769fd686ba2bd32611b073cfe08a71e224d89
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c2911f9ac2da57e284bd6841df7b4b1ec5b2b105
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37315446"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48144176"
 ---
 # <a name="axis-properties-dialog-box-axis-options-report-builder-and-ssrs"></a>Caixa de diálogo Propriedades do Eixo, Opções do Eixo (Construtor de Relatórios e SSRS)
   Selecione **opções de eixo** sobre o **Horizontal** ou **propriedades VerticalAxis** caixa de diálogo para definir a aparência do eixo do gráfico especificado. Em versões anteriores do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], o gráfico exibia todos os rótulos no eixo x por padrão. No entanto, no [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2008, o gráfico descarta os rótulos para produzir uma imagem mais limpa no gráfico e evitar colisões de rótulos. Para obter mais informações, consulte [Formatação de rótulos de eixos em um gráfico &#40;Construtor de Relatórios e SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
@@ -54,7 +51,7 @@ ms.locfileid: "37315446"
  **Máximo**  
  Digite uma expressão ou um valor para obter o valor máximo para o eixo x. Se omitido, o valor máximo será determinado pelos dados retornados pelo conjunto de dados.  
   
- **Intervalo**  
+ **intervalo**  
  Digite uma expressão ou um valor para o intervalo entre os rótulos do eixo. Por exemplo, digite 1 para exibir cada rótulo de categoria no eixo. Digite 2 para exibir qualquer outro rótulo de categoria. Se omitido, os rótulos serão calculados automaticamente com base nos valores do conjunto de dados.  
   
  **Tipo de intervalo**  

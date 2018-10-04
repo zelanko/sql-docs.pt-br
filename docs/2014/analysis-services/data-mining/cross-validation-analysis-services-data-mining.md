@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - stored procedures [Analysis Services], data mining
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - scoring [data mining]
 - accuracy testing [data mining]
 ms.assetid: 718b9072-0f35-482a-a803-9178002ff5b9
-caps.latest.revision: 32
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1ff61a92995d65e66a1115b70681585eb643a7ff
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1620b1dc5f25506e1da54c426333817efd29882a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37236006"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48118186"
 ---
 # <a name="cross-validation-analysis-services---data-mining"></a>Validação cruzada (Analysis Services - Mineração de dados)
   A *validação cruzada* é uma ferramenta padrão para análise e é um importante recurso para ajudar a desenvolver e ajustar os modelos de mineração de dados. Você utiliza a validação cruzada depois de criar uma estrutura de mineração e os modelos de mineração relacionados para assegurar a validade do modelo.  A validação cruzada tem os aplicativos seguintes:  

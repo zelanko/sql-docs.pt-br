@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.translations.translationspane.translationdetails.f1
 ms.assetid: ba59fd0b-e2c5-4d42-ba99-eaf784b45975
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 401c69274fad3e88b29d06bcb3446dd0c1e3bf59
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a48ac22eb47eca8e265958289fdb461d4dd7f032
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185273"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48118742"
 ---
 # <a name="translation-details-translations-tab-cube-designer-analysis-services---multidimensional-data"></a>Detalhes da Tradução (guia Traduções, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use o painel **Detalhes da Transação** na guia **Transações** do Designer de Dimensão para definir e gerenciar traduções do cubo selecionado.  

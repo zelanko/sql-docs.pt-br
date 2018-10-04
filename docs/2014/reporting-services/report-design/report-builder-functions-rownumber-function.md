@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9d718ba8-d323-49fb-aac8-e7013a117b75
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: bb6025b8cf196d45fe0a6c9ac5cf0c19aa54013e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: abf8cdd0eb4ffceb21061ea0101a42e4b84f3773
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37276272"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48105706"
 ---
 # <a name="rownumber-function-report-builder-and-ssrs"></a>Função RowNumber (Construtor de Relatórios e SSRS)
   Retorna uma contagem contínua do número de linhas para o escopo especificado.  
@@ -38,7 +35,7 @@ RowNumber(scope)
  *escopo*  
  (`String`) O nome de um conjunto de dados, região de dados ou grupo ou nulo (`Nothing` em [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]), que especifica o contexto no qual avaliar o número de linhas. `Nothing` Especifica o contexto mais externo, geralmente o conjunto de dados do relatório.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  `RowNumber` Retorna um valor em uso da contagem de linhas dentro do escopo especificado, assim como [RunningValue](report-builder-functions-runningvalue-function.md) retorna o valor em execução de uma função de agregação. Ao especificar um escopo, você especifica quando redefinir a contagem de linhas como 1.  
   
  O*scope* não pode ser uma expressão. *scope* deve ser um escopo contentor. Escopos típicos, do confinamento mais externo ao mais interno, são conjuntos de dados de relatório, região de dados, grupos de linhas ou grupos de colunas.  

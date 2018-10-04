@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], troubleshooting
 - Availability Groups [SQL Server], policies
 ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
-caps.latest.revision: 19
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 44d086a00d2e18bfd87410848a5acd73461fac6d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e1e4c878004f3cdcc492637d338e8ff6c8d92937
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37287912"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48104166"
 ---
 # <a name="always-on-policies-for-operational-issues-with-always-on-availability-groups-sql-server"></a>Políticas AlwaysOn para problemas operacionais com grupos de disponibilidade AlwaysOn (SQL Server)
   O modelo de integridade do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] avalia um conjunto de políticas predefinidas de gerenciamento baseado em políticas (PBM). Você pode usar essas políticas para visualizar a integridade de um grupo de disponibilidade e suas réplicas de disponibilidade e bancos de dados no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -49,22 +46,22 @@ ms.locfileid: "37287912"
 ##  <a name="AlwaysOnPBM"></a> Políticas predefinidas e problemas  
  A tabela a seguir resume as políticas predefinidas.  
   
-|Nome de política|Problema|Categoria**<sup>*</sup>**|Faceta|  
+|Nome de política|Problema|categoria**<sup>*</sup>**|Faceta|  
 |-----------------|-----------|------------------------------|-----------|  
-|Estado do cluster WSFC|[WSFC cluster service is offline](wsfc-cluster-service-is-offline.md).|Crítico|Instância do SQL Server|  
-|Estado Online do Grupo de Disponibilidade|[Availability group is offline](availability-group-is-offline.md).|Crítico|grupo de disponibilidade|  
-|Prontidão para Failover Automático do Grupo de Disponibilidade|[Availability group is not ready for automatic failover](availability-group-is-not-ready-for-automatic-failover.md).|Crítico|grupo de disponibilidade|  
-|Estado de Sincronização de Dados de Réplicas de Disponibilidade|[Some availability replicas are not synchronizing data](some-availability-replicas-are-not-synchronizing-data.md).|Aviso|grupo de disponibilidade|  
-|Estado de sincronização de dados de réplicas síncronas|[Some synchronous replicas are not synchronized](some-synchronous-replicas-are-not-synchronized.md).|Aviso|grupo de disponibilidade|  
-|Estado da Função das Réplica de Disponibilidade|[Some availability replicas do not have a healthy role](some-availability-replicas-do-not-have-a-healthy-role.md).|Aviso|grupo de disponibilidade|  
-|Estado da conexão em réplicas de disponibilidade|[Some availability replicas are disconnected](some-availability-replicas-are-disconnected.md).|Aviso|grupo de disponibilidade|  
-|Estado da função da réplica de disponibilidade|[Availability replica does not have a healthy role](availability-replica-does-not-have-a-healthy-role.md).|Crítico|réplica de disponibilidade|  
-|Estado da Conexão da Réplica de Disponibilidade|[Availability replica is disconnected](availability-replica-is-disconnected.md).|Crítico|Réplica de disponibilidade|  
+|Estado do cluster WSFC|[O serviço de cluster WSFC está offline](wsfc-cluster-service-is-offline.md).|Crítico|Instância do SQL Server|  
+|Estado Online do Grupo de Disponibilidade|[O grupo de disponibilidade está offline](availability-group-is-offline.md).|Crítico|grupo de disponibilidade|  
+|Prontidão para Failover Automático do Grupo de Disponibilidade|[O grupo de disponibilidade não está pronto para o failover automático](availability-group-is-not-ready-for-automatic-failover.md).|Crítico|grupo de disponibilidade|  
+|Estado de Sincronização de Dados de Réplicas de Disponibilidade|[Algumas réplicas de disponibilidade não estão sincronizando dados](some-availability-replicas-are-not-synchronizing-data.md).|Aviso|grupo de disponibilidade|  
+|Estado de sincronização de dados de réplicas síncronas|[Algumas réplicas síncronas não são sincronizadas](some-synchronous-replicas-are-not-synchronized.md).|Aviso|grupo de disponibilidade|  
+|Estado da Função das Réplica de Disponibilidade|[Algumas réplicas de disponibilidade não têm uma função íntegra](some-availability-replicas-do-not-have-a-healthy-role.md).|Aviso|grupo de disponibilidade|  
+|Estado da conexão em réplicas de disponibilidade|[Algumas réplicas de disponibilidade estão desconectadas](some-availability-replicas-are-disconnected.md).|Aviso|grupo de disponibilidade|  
+|Estado da função da réplica de disponibilidade|[A réplica de disponibilidade não tem uma função íntegra](availability-replica-does-not-have-a-healthy-role.md).|Crítico|réplica de disponibilidade|  
+|Estado da Conexão da Réplica de Disponibilidade|[A réplica de disponibilidade está desconectada](availability-replica-is-disconnected.md).|Crítico|Réplica de disponibilidade|  
 |Estado da junção da réplica de disponibilidade|[A réplica de disponibilidade não está unida](availability-replica-is-not-joined.md).|Aviso|Réplica de disponibilidade|  
-|Estado de Sincronização de Dados de Réplicas de Disponibilidade|[Data synchronization state of some availability database is not healthy](data-synchronization-state-of-some-availability-database-is-not-healthy.md).|Aviso|Réplica de disponibilidade|  
-|Estado de Suspensão do Banco de Dados de Disponibilidade|[Availability database is suspended](availability-database-is-suspended.md).|Aviso|Banco de dados de disponibilidade|  
-|Estado de junção do banco de dados de disponibilidade|[Secondary database is not joined](secondary-database-is-not-joined.md).|Aviso|Banco de dados de disponibilidade|  
-|Estado de Sincronização dos Dados do Banco de Dados de Disponibilidade|[Data synchronization state of availability database is not healthy](data-synchronization-state-of-availability-database-is-not-healthy.md).|Aviso|Banco de dados de disponibilidade|  
+|Estado de Sincronização de Dados de Réplicas de Disponibilidade|[O estado de sincronização de dados de algum banco de dados de disponibilidade não é íntegro](data-synchronization-state-of-some-availability-database-is-not-healthy.md).|Aviso|Réplica de disponibilidade|  
+|Estado de Suspensão do Banco de Dados de Disponibilidade|[Banco de dados de disponibilidade está suspenso](availability-database-is-suspended.md).|Aviso|Banco de dados de disponibilidade|  
+|Estado de junção do banco de dados de disponibilidade|[O banco de dados secundário não está unido](secondary-database-is-not-joined.md).|Aviso|Banco de dados de disponibilidade|  
+|Estado de Sincronização dos Dados do Banco de Dados de Disponibilidade|[O estado de sincronização de dados do banco de dados de disponibilidade não é íntegro](data-synchronization-state-of-availability-database-is-not-healthy.md).|Aviso|Banco de dados de disponibilidade|  
   
 > [!IMPORTANT]  
 >  **<sup>*</sup>**  Para políticas de AlwaysOn, os nomes das categorias são usados como IDs. A alteração do nome de uma categoria AlwaysOn interrompe sua funcionalidade de avaliação de integridade. Portanto, não modifique os nomes das categorias AlwaysOn.  
