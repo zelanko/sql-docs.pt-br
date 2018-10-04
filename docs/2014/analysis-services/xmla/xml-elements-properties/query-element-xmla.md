@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Query Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Query element
 ms.assetid: 5a4544e4-012f-4a47-942c-23596400ea16
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 02feb5cb14e6b6acdc6100070495d0c84b89e483
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 68da02ef99a5668c7ee0a3a57a06aca90ae68a25
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37293228"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48224396"
 ---
 # <a name="query-element-xmla"></a>Elemento Query (XMLA)
   Contém uma consulta dentro de [consultas](queries-element-xmla.md) coleção usada pela [DesignAggregations](../xml-elements-commands/designaggregations-element-xmla.md) comando durante a otimização baseada em uso.  
@@ -53,7 +50,7 @@ ms.locfileid: "37293228"
 |Característica|Description|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|Cadeia de caracteres|  
-|Valor padrão|Nenhum|  
+|Valor padrão|None|  
 |Cardinalidade|0-1: elemento opcional que pode ocorrer apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -61,9 +58,9 @@ ms.locfileid: "37293228"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|[Consultas](queries-element-xmla.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O comando `DesignAggregations` oferece suporte para a otimização baseada em uso incluindo um ou mais elementos `Query` na coleção `Queries` do comando. Cada `Query` elemento representa uma meta de consulta que usa o processo de design para definir agregações que se destinam às consultas usadas com mais frequência. Você pode especificar suas próprias consultas de meta ou você pode usar as informações armazenadas por uma instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] no log de consultas para recuperar informações sobre com mais frequência as consultas usadas.  
   
  Se você estiver criando agregações iterativamente, você só precisa transmitir as metas de consulta no primeiro `DesignAggregations` o comando porque o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instância armazena essas metas e utiliza essas consultas durante subsequentes `DesignAggregations` comandos. Após transmitir as metas de consulta no primeiro comando `DesignAggregations` de um processo iterativo, qualquer comando `DesignAggregations` subsequente que contém metas de consulta na propriedade `Queries` gerará um erro.  

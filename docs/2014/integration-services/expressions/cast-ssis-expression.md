@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - CAST function
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - data types [Integration Services], expressions
 - data types [Integration Services], converting
 ms.assetid: d4e915cc-1c7b-4b2e-93b0-13a8b0cb9242
-caps.latest.revision: 61
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 31c1adf6d76bfa399e199aa67f5bf4f97392505d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1a5316ed842e49e0c0077887dd6d980bf05d4b4a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37192126"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48229666"
 ---
 # <a name="cast-ssis-expression"></a>Cast (Expressão SSIS)
   Converte explicitamente uma expressão de um tipo de dados em um tipo de dados diferente. O operador cast também pode funcionar como um operador de truncamento.  
@@ -48,7 +45,7 @@ ms.locfileid: "37192126"
 ## <a name="result-types"></a>Tipos de resultado  
  O tipo de dados de *type_spec*. Para obter mais informações, consulte [Integration Services Data Types](../data-flow/integration-services-data-types.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O diagrama a seguir mostra operações de conversão legais.  
   
  ![Conversões legais e não legais entre tipos de dados](../media/data-conversion.gif "Conversões legais e não legais entre tipos de dados")  

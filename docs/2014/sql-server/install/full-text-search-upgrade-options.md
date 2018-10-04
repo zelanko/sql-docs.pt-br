@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - Full-Text Search
 - Upgrade options, Full-Text Search
 ms.assetid: 16c9376b-5fbb-4495-a429-06a2493849c9
-caps.latest.revision: 18
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 52490126091c122a272d0404f95026a1d68d12ea
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9388ade07b8593ec06289141df0f013351f3f7f1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280712"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48217936"
 ---
 # <a name="full-text-search-upgrade-options"></a>Opções de Atualização da Pesquisa de Texto Completo
   Use a página Opções de Atualização da Pesquisa de Texto Completo do Assistente de Instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para selecionar as opções a serem usadas para os bancos de dados que você está atualizando no momento.  

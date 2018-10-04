@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ApplyCompression Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - ApplyCompression element
 ms.assetid: 93e222e5-9371-4fb5-aae0-f50b964cc264
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b0e0fcf4fedf431f9dcdffd69e87539ab84df068
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 67cb528486c1976eacd3e0231a1c4a83e6497f1f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37254898"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48225086"
 ---
 # <a name="applycompression-element-xmla"></a>Elemento ApplyCompression (XMLA)
   Determina se o comando pai [Backup](../xml-elements-commands/backup-element-xmla.md) compacta o arquivo de backup.  
@@ -61,9 +58,9 @@ ms.locfileid: "37254898"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|[Backup](../xml-elements-commands/backup-element-xmla.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;XMLA&#41;](xml-elements-properties.md)  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e60e5bab-b286-4897-9685-9ff12703517d
-caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 41a75e8559738294986bc5fb203b1b0469305f57
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 066982863d07cd125b5904e4c7467ffe9da5b107
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37222906"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48217496"
 ---
 # <a name="lookup-function-report-builder-and-ssrs"></a>Função Lookup (Construtor de Relatórios e SSRS)
   Retorna o primeiro valor correspondente para o nome especificado de um conjunto de dados que contém pares de nome/valor.  
@@ -50,7 +47,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
 ## <a name="return"></a>Retorno  
  Retorna um `Variant`, ou `Nothing` se não houver nenhuma correspondência.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Use `Lookup` para recuperar o valor do conjunto de dados especificado para um par nome/valor onde há uma relação de 1 para 1. Por exemplo, para um campo de ID em uma tabela, você pode usar `Lookup` para recuperar todos os números de telefone associados àquele cliente de um conjunto de dados que não esteja associado à região de dados.  
   
  `Lookup` faz o seguinte:  

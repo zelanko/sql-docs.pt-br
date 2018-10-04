@@ -1,20 +1,21 @@
 ---
 title: Tutorial sobre como criar, treinar e pontuar modelos de partição em R (SQL Server Machine Learning Services) | Microsoft Docs
+description: Saiba como modelar, treinar e usar dados particionados que são criados dinamicamente ao usar os recursos de modelagem baseadas na partição do aprendizado de máquina do SQL Server.
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/24/2018
+ms.date: 10/02/2018
 ms.topic: tutorial
 ms.author: heidist
 author: HeidiSteen
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 51fd17b10ed2fde9d8412c6c47f868458edf7d5c
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 3289e9f7493b7e5a6377de3491bd5726d557fdf7
+ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46714877"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48232560"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>Tutorial: Criar a partição com base em modelos em R no SQL Server
 [!INCLUDE[appliesto-ssvnex-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -29,7 +30,7 @@ Modelagem de partição está habilitada por meio de dois novos parâmetros em [
 Neste tutorial, saiba modelagem com base em partição usando o script R e o clássicos dados de exemplo de táxi de NYC. A coluna de partição é o método de pagamento.
 
 > [!div class="checklist"]
-> * Partição com base em uma coluna payment_type. Valores nesses dados de segmento de coluna, uma partição para cada tipo de pagamento.
+> * As partições são baseadas nos tipos de pagamento (5).
 > * Criar e treinar modelos em cada partição e armazenar os objetos no banco de dados.
 > * Prever a probabilidade dos resultados de dica ao longo de cada modelo de partição, usando dados de exemplo reservados para essa finalidade.
 
@@ -37,21 +38,17 @@ Neste tutorial, saiba modelagem com base em partição usando o script R e o cl�
  
 Para concluir este tutorial, você deve ter o seguinte:
 
-+ Instância de mecanismo de banco de dados de 2019 do SQL Server, com serviços de Machine Learning e o recurso do R
-+ Dados de exemplo
-+ Uma ferramenta para execução da consulta T-SQL, como SQL Server Management Studio
++ Recursos de sistema suficientes. O conjunto de dados é grande e operações de treinamento são intensivo de recursos. Se possível, use um sistema que tem pelo menos 8 GB de RAM. Como alternativa, você pode usar conjuntos de dados menores para contornar as restrições de recursos. Instruções para reduzir o conjunto de dados são embutidos. 
 
-### <a name="system-resources"></a>Recursos do sistema
++ Uma ferramenta para T-SQL, a execução de consulta como [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
-O conjunto de dados é grande e operações de treinamento são intensivo de recursos. Se possível, use um sistema que tem pelo menos 8 GB de RAM. Como alternativa, você pode usar conjuntos de dados menores para contornar as restrições de recursos. Instruções para reduzir o conjunto de dados são embutidos. 
++ [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak), que você pode [Baixe e restaure](sqldev-download-the-sample-data.md) à sua instância do mecanismo de banco de dados local. Tamanho do arquivo é de aproximadamente 90 MB.
 
-### <a name="sql-server-database-engine-with-machine-learning-services"></a>Mecanismo de banco de dados do SQL Server com serviços de Machine Learning
++ SQL Server 2019 visualização banco de dados instância do mecanismo, com a integração de serviços de Machine Learning e R.
 
-2019 CTP do SQL Server 2.0 ou posterior, com serviços de Machine Learning instalado e configurado, é necessário. Você pode verificar a versão do servidor no Management Studio, executando `SELECT @@Version` como uma consulta T-SQL. Saída deve ser "Microsoft SQL Server (CTP 2.0) - de 2019 15.0.x".
+Verificar a versão executando **`SELECT @@Version`** como uma consulta T-SQL em uma ferramenta de consulta. Saída deve ser "Microsoft SQL Server (CTP 2.0) - de 2019 15.0.x".
 
-### <a name="r-packages"></a>Pacotes de R
-
-Este tutorial usa o R instalado com os serviços de aprendizado de máquina. Você pode verificar a instalação do R, retornando uma lista bem formatada de todos os pacotes R instalados com a instância do mecanismo de banco de dados:
+Verifique a disponibilidade dos pacotes de R, retornando uma lista bem formatada de todos os pacotes R instalados com a instância do mecanismo de banco de dados:
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -64,18 +61,6 @@ EXECUTE sp_execute_external_script
   @input_data_1 = N''
 WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 ```
-
-### <a name="tools-for-query-execution"></a>Ferramentas para execução da consulta
-
-Você pode [Baixe e instale o SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms), ou usar qualquer ferramenta que se conecta a um banco de dados relacional e executa o script T-SQL. Verifique se que você pode se conectar a uma instância do mecanismo de banco de dados que tem serviços de Machine Learning.
-
-### <a name="sample-data"></a>Dados de exemplo
-
-Data é proveniente de [táxi de NYC e Limusines comissão](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml) conjunto de dados público. 
-
-+ Baixe o [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak ) arquivo de backup do banco de dados e restaurá-lo na instância do mecanismo de banco de dados.
-
-O nome do arquivo de banco de dados deve ser **NYCTaxi_sample** se você quiser executar os scripts a seguir sem modificação.
 
 ## <a name="connect-to-the-database"></a>Conectar-se ao banco de dados
 
