@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d253bb05-9166-4b50-bd4a-27b818f514e0
-caps.latest.revision: 14
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c934f79ba4f8fec418c422beb0a60a3c563516ed
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 39fc136bc29813c01c237289debbc6474f7d291d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37330806"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161348"
 ---
 # <a name="full-text-search-has-changed-since-sql-server-2008"></a>A Pesquisa de Texto Completo mudou desde o SQL Server 2008
   O Supervisor de Atualização detectou que a pesquisa de texto completo será atualizada. Muitas opções e configurações da pesquisa de texto completo foram alteradas. Por isso, quando você atualizar para a Pesquisa de Texto Completo do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , algumas das configurações poderão exigir modificação.  

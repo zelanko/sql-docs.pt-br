@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - inserting and updating data
@@ -14,12 +12,12 @@ ms.assetid: 514dc87a-b829-43b5-8fc8-1a400a260284
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 051301fc440de5336701438e35fbbaebc68b0b17
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 19e6683baeb0a82c77a858b04f18695ba7120b15
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43035500"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48217626"
 ---
 # <a name="inserting-and-updating-data-in-a-table-tutorial"></a>Inserindo e atualizando dados em uma tabela (tutorial)
   Agora que você criou a tabela **Products**, está pronto para inserir dados na tabela usando a instrução INSERT. Depois que os dados forem inseridos, você alterará o conteúdo de uma linha usando uma instrução UPDATE. Você usará a cláusula WHERE da instrução UPDATE para restringir a atualização a uma única linha. As quatro instruções inserem os dados a seguir.  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], server instance
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], disabling
 - Availability Groups [SQL Server], enabling
 ms.assetid: 7c326958-5ae9-4761-9c57-905972276a8f
-caps.latest.revision: 58
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8cfcbdb8e61941a651539bd545b5067a1df5b63a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cafc562581a5f34bf9b59b1ff7cde1c679abd726
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185345"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48228636"
 ---
 # <a name="enable-and-disable-alwayson-availability-groups-sql-server"></a>Habilitar e desabilitar Grupos de Disponibilidade AlwaysOn (SQL Server)
   Habilitar o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] é um pré-requisito para uma instância de servidor usar grupos de disponibilidade. Antes de poder criar e configurar qualquer grupo de disponibilidade, o recurso [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] deve ser habilitado em cada instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospedará uma réplica de disponibilidade de um ou mais grupos de disponibilidade.  

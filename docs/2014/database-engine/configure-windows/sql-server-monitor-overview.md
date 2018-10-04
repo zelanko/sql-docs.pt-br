@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.sqlservermonitor.main.f1
 helpviewer_keywords:
 - SQL Server Monitor [SQL Server]
 ms.assetid: 048ae16d-31c3-489a-9f1e-1400a3bacd39
-caps.latest.revision: 21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8cdf53d365c12d773ad579fc7e2f1b8827b7bba0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3d5d62b1a0d9f17d32aeb1ab537c5631f9aa8e7d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200166"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222066"
 ---
 # <a name="sql-server-monitor-overview"></a>Visão geral do SQL Server Monitor
   O SQL Server Monitor não realiza funções de monitoramento, mas hospeda módulos que as realizam. Os módulos do SQL Server Monitor incluem o Replication Monitor e o Monitor de Espelhamento de Banco de Dados.  

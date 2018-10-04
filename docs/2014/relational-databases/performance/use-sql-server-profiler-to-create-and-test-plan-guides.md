@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: performance
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - checking plan guides
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - Profiler [SQL Server Profiler], plan guides
 - query-to-plan guide matching [SQL Server]
 ms.assetid: 7018dbf0-1a1a-411a-88af-327bedf9cfbd
-caps.latest.revision: 30
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7dbb134441f33e6bf4c5d21a036387c6e0b2f99d
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: fcdbfe9f9289ab9cc529d4d37eb27d877dfff3ee
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37421265"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48151617"
 ---
 # <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>Usar o SQL Server Profiler para criar e testar guias de plano
   Ao criar um guia de plano, você poderá usar o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para capturar o texto de consulta exato para usar no argumento *statement_text* do procedimento armazenado **sp_create_plan_guide** . Isto ajuda a certificar que o guia de plano será correspondido à consulta no tempo de compilação. Depois que o guia de plano é criado, o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] também pode ser usado para testar se o guia de plano está, de fato, sendo correspondido à consulta. De maneira geral, você deve testar guias de plano usando o [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para verificar se a sua consulta está sendo correspondida ao guia de plano.  

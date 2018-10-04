@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - FOR XML clause, TYPE directive
 - TYPE directive
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
-caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d331e0a22042258c087a3f58b0c72330c66f9203
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: 10c6d8cf2b5c68aba12d92530f345a56b2882474
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43889412"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48082007"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>Diretiva TYPE em consultas FOR XML
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suporte para o [xml &#40;Transact-SQL&#41; ](/sql/t-sql/xml/xml-transact-sql) lhe permite solicitar opcionalmente que o resultado de uma consulta FOR XML seja retornado como `xml` tipo de dados, especificando a diretiva TYPE. Isso permite processar o resultado de uma consulta FOR XML no servidor. Por exemplo, você pode especificar uma consulta XQuery em relação a ela, atribuir o resultado a um `xml` variável de tipo, ou escrever [consultas FOR XML aninhadas](use-nested-for-xml-queries.md).  

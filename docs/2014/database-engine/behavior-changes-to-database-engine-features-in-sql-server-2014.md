@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - behavior changes [SQL Server]
 - Database Engine [SQL Server], what's new
 - Transact-SQL behavior changes
 ms.assetid: 65eaafa1-9e06-4264-b547-cbee8013c995
-caps.latest.revision: 134
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d83d502ec6b384a7c3e6a5f4ee2f4e7787ead4da
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 84c24494797a96670fc6abd5e8fd6fd409b0a705
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37193956"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48226266"
 ---
 # <a name="behavior-changes-to-database-engine-features-in-sql-server-2014"></a>Alterações no comportamento de recursos do Mecanismo de Banco de Dados no SQL Server 2014
   Este tópico descreve as alterações no comportamento no [!INCLUDE[ssDE](../includes/ssde-md.md)]. Essas alterações afetam a maneira como os recursos funcionam ou interagem no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] em comparação com as versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -34,7 +31,7 @@ ms.locfileid: "37193956"
 ## <a name="behavior-changes-in-includesssql11includessssql11-mdmd"></a>Alterações de comportamento no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
 ### <a name="metadata-discovery"></a>Descoberta de metadados  
- Melhorias na [!INCLUDE[ssDE](../includes/ssde-md.md)] começando com [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] permitir SQLDescribeCol Obtenha descrições mais precisas dos resultados esperados que os retornados por SQLDescribeCol nas versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obter mais informações, consulte [descoberta de metadados](../relational-databases/native-client/features/metadata-discovery.md).  
+ Melhorias na [!INCLUDE[ssDE](../includes/ssde-md.md)] começando com [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] permitir SQLDescribeCol Obtenha descrições mais precisas dos resultados esperados que os retornados por SQLDescribeCol nas versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obter mais informações, veja [Descoberta de metadados](../relational-databases/native-client/features/metadata-discovery.md).  
   
  O [SET FMTONLY](/sql/t-sql/statements/set-fmtonly-transact-sql) opção para determinar o formato de uma resposta sem realmente executar a consulta é substituído pelo [sp_describe_first_result_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql), [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql), [DM exec_describe_first_result_set &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql), e [sys exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql).  
   

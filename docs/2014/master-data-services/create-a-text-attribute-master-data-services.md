@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [Master Data Services], creating text attributes
 - creating text attributes [Master Data Services]
 ms.assetid: cd8b57de-364d-42a3-9273-c1c6b992bb40
-caps.latest.revision: 5
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f72155508494f4f88267ecb2cf3ffd021a04a66a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 100039cc1fff2e7c4eb4d5631cd8721427a985f6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37213256"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48177156"
 ---
 # <a name="create-a-text-attribute-master-data-services"></a>Criar um atributo de texto (Master Data Services)
   No [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], crie um atributo de texto quando desejar que os usuários insiram uma cadeia de caracteres de texto como um valor de atributo.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Profiler, Analysis Services
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - Profiler [SQL Server Profiler], Analysis Services
 - event classes [Analysis Services]
 ms.assetid: 6fb219cc-f37e-437a-a544-01cec0953571
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a4c4631e20227cb1d3aeba34337d7b36c8a84c62
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f9d20abf0f811b06ec380b1d4ba984c2f6d7eb87
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37163437"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153486"
 ---
 # <a name="analysis-services-trace-events"></a>Eventos de rastreamento do Analysis Services
   Você pode acompanhar a atividade de uma instância do Microsoft SQL Server Analysis Services (SSAS) capturando e analisando os eventos de rastreamento gerados pela instância.  Os eventos de rastreamento são agrupados de forma que você possa localizar facilmente eventos de rastreamento relacionados.  Cada evento de rastreamento contém um conjunto de dados relevantes para o evento; nem todos os dados são relevantes para todos os eventos.  

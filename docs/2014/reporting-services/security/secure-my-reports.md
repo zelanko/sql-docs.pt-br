@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - denying My Reports folder access
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - security [Reporting Services], My Reports folder
 - My Reports folder [Reporting Services]
 ms.assetid: 3b23a382-13b8-4196-9a93-7fe62d03a63c
-caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 959706458a4b529252d8a45c80aae99f377b9531
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f6f52a6d9a1a28d103f407da049814bbf4a6c0f6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37238306"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48166306"
 ---
 # <a name="secure-my-reports"></a>Proteger Meus Relatórios
   O recurso Meus Relatórios fornece uma área de trabalho gerenciada pelo usuário para trabalhar com relatórios. Para funcionar conforme pretendido, a pasta Meus Relatórios requer permissões menos restritivas do que as outras pastas que estão disponíveis para uso geral. Os usuários que têm permissões apenas para exibir e executar relatórios em outras pastas podem precisar de um conjunto maior de permissões para gerenciar suas pastas Meus Relatórios e seu próprio conteúdo. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fornece uma atribuição de função especializada e uma definição de função para essa finalidade.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - hybrid OLAP
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - ROLAP
 - cache [Analysis Services]
 ms.assetid: 422660b2-4d80-4165-b1c9-3963bcde556b
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a8a9d32557e9b9158f1fa5429b2bcaec7dd17ce2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f79c628c9c58c3fca2884cbdf330eb23178081e3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37216356"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48223426"
 ---
 # <a name="proactive-caching-partitions"></a>Cache pró-ativo (partições)
   O cache pró-ativo fornece criação automática de cache MOLAP e gerenciamento de objetos OLAP. Os cubos incorporam imediatamente as alterações feitas nos dados no banco de dados, com base em modificações recebidas do banco de dados. O objetivo do cache pró-ativo é oferecer o desempenho do MOLAP tradicional, além de manter a instantaneidade e facilidade de gerenciamento oferecida pelo ROLAP.  

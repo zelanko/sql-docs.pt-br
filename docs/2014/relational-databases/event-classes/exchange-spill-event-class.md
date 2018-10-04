@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Exchange Spill event class
 ms.assetid: fb876cec-f88d-4975-b3fd-0fb85dc0a7ff
-caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 839d6ca721129dc94c51b998ecbf2fec02ee6fcf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 63d92155eb5924fbb923b6b6d99ef97350250153
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37277722"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48193296"
 ---
 # <a name="exchange-spill-event-class"></a>classe de evento Exchange Spill
   A classe de evento **Exchange Spill** indica que os buffers de comunicação em um plano de consulta paralelo foram temporariamente gravados no banco de dados **tempdb** . Isso ocorre raramente e somente quando um plano de consulta tiver exames de vários intervalos.  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.makemanaged.agentaccount.F1
@@ -19,16 +17,15 @@ f1_keywords:
 helpviewer_keywords:
 - Enroll instance
 ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
-caps.latest.revision: 11
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1cebb8ef23c5c1c7a12bdc17bc721e51d542a3d6
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 382b2212ef32e47b0045285ad497f2d476099c79
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43810922"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48152726"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>Inscrever uma instância do SQL Server (Utilitário do SQL Server)
   Inscreva uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em um Utilitário do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existente para monitorar o desempenho e a configuração como uma instância gerenciada do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O UCP (ponto de controle de utilitário) coleta informações de configuração e de desempenho de instâncias gerenciadas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cada 15 minutos. Estas informações são armazenadas no UMDW (data warehouse de gerenciamento do utilitário) no UCP; o nome de arquivo UMDW é sysutility_mdw. Dados de desempenho do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] são comparados a políticas para ajudar a identificar gargalos no uso de recursos e oportunidades de consolidação.  

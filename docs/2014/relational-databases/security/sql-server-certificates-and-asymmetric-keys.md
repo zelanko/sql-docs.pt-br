@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - security [SQL Server], certificates and asymmetric keys
@@ -14,12 +12,12 @@ ms.assetid: 8519aa2f-f09c-4c1c-96b5-abc24811e60c
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: e789ea94a33db2f53a526c00a588d259eba69c1b
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: af78f507b56ec83c2768bbf3d30f5d8d7313d7c8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43027912"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48125106"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>Certificados e chaves assimétricas do SQL Server
   A PKI (criptografia de chave pública) é um formulário de mensagem secreto no qual um usuário cria uma chave *pública* e uma chave *privada* . A chave privada é mantida em segredo, enquanto que a chave pública pode ser distribuída a outros. Embora as chaves estejam matematicamente relacionadas, a chave privada não pode ser obtida facilmente usando a chave pública. A chave pública é usada para criptografar dados e a chave privada é usada para descriptografar dados. Uma mensagem que é criptografada usando a chave pública só pode ser descriptografada usando a chave privada correta. Como há duas chaves diferentes, essas chaves são *assimétricas*.  

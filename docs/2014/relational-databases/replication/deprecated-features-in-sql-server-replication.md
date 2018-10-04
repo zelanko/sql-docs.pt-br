@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - deprecated features [SQL Server replication]
 ms.assetid: 46bd3edd-d6de-40a6-a015-21cce8321feb
-caps.latest.revision: 64
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: eaed6b7988f9a0ea6f63fc8858c564adfb753bbd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e76f53f2a3163c69310d31dd03796ee694d9bc8a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37278732"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48228946"
 ---
 # <a name="deprecated-features-in-sql-server-replication"></a>Recursos preteridos em Replicação do Microsoft SQL Server
   Este tópico descreve os recursos de replicação preteridos que ainda estão disponíveis no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Esses recursos estão programados para serem removidos em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Recursos preteridos não devem ser usados em aplicativos novos.  

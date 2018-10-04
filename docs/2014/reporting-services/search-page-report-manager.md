@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 51ffdc07-e1b9-4ed7-acb3-dd98d7cce273
-caps.latest.revision: 26
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e8fbd4956e5e836def836acf1693fe9f548dc081
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f848f0f2f168304d5ceb9d3be92ed793b4579fe7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37192986"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48206126"
 ---
 # <a name="search-page-report-manager"></a>Página Pesquisa (Gerenciador de Relatórios)
   Use a página Resultados da Pesquisa para exibir os resultados de uma operação de pesquisa especificada para um relatório, relatório vinculado, modelo de relatório, fonte de dados compartilhada, pasta ou recurso. Os resultados da pesquisa são listados em ordem alfabética. Você pode classificar por tipo, nome ou descrição.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - UserDefinedGroupBinding Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - UserDefinedGroupBinding data type
 ms.assetid: 70149929-0ff7-4a67-84bf-e94908ae7611
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a31c1867296ff00d8000b24640dfb44bef034a00
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 286355779e1cac2d858d9a288b1077888ab240e3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37194316"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48199996"
 ---
 # <a name="userdefinedgroupbinding-data-type-assl"></a>Tipo de dados UserDefinedGroupBinding (ASSL)
   Define um tipo de dados derivado que representa um agrupamento definido pelo usuário para um atributo.  
@@ -51,17 +48,17 @@ ms.locfileid: "37194316"
 |Característica|Description|  
 |--------------------|-----------------|  
 |Tipos de dados base|[Associação](binding-data-type-assl.md)|  
-|Tipos de dados derivados|Nenhum|  
+|Tipos de dados derivados|None|  
   
 ## <a name="data-type-relationships"></a>Relação do tipo de dados  
   
 |Relação|Elemento|  
 |------------------|-------------|  
-|Elementos pai|Nenhum|  
+|Elementos pai|None|  
 |Elementos filho|[AttributeID](../properties/id-element-assl.md), [grupos](../collections/groups-element-assl.md)|  
 |Elementos derivados|Consulte [de associação](binding-data-type-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  `UserDefinedGroupBinding` é tratado automaticamente como uma [AttributeBinding](attributebinding-data-type-assl.md), cujo [tipo](../properties/type-element-binding-assl.md) é definido como *todos os*.  
   
  Para obter mais informações sobre o `Binding` tipo, incluindo tabelas de objetos do Analysis Services Scripting Language (ASSL) da `Binding` tipo e a hierarquia de herança dos `Binding` tipos, consulte [tipo de associação de dados &#40;ASSL &#41;](binding-data-type-assl.md).  

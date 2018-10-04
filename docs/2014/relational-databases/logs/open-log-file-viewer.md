@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Log File Viewer, opening
 ms.assetid: a86b89cb-0432-4648-895a-05ecc5450e45
-caps.latest.revision: 29
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 457d30086bf8be4f44c002ab1fd54c38f92f8031
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 84f624ce603a852bed3527b45c942f1ffa00fdbb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37281562"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48170236"
 ---
 # <a name="open-log-file-viewer"></a>Abrir o Visualizador do Arquivo de Log
   É possível usar o Visualizador do Arquivo de Log no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para acessar informações sobre erros e eventos capturados nos seguintes logs:  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: acc9a905-90f8-4544-aec6-b2ab3a1b0015
-caps.latest.revision: 26
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a613f3d2cadae9913f14759ca3c59252d62cd14f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6a64dd80608d7b1d60718e5753d77fb37687234a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37294096"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48183106"
 ---
 # <a name="security-page-site-settings-report-manager"></a>Página Segurança (Configurações de Site - Gerenciador de Relatórios)
   Use a página Segurança para exibir as atribuições de função do sistema que controlam acesso ao site do servidor de relatório. As atribuições de função do sistema existem fora do escopo do namespace de servidor de relatórios ou da hierarquia de pastas. As atribuições de função do sistema são globais e não variam para itens específicos. Operações que têm suporte nas atribuições de função do sistema incluem a criação e o uso de agendas compartilhadas, o uso do Construtor de Relatórios e configuração de valores padrão para alguns recursos de servidor.  

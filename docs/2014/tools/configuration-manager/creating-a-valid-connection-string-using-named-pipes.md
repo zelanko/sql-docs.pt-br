@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - configmgr-client
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connection strings [Database Engine], named pipes
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - aliases [SQL Server], named pipes
 - Named Pipes [SQL Server], connection strings
 ms.assetid: 90930ff2-143b-4651-8ae3-297103600e4f
-caps.latest.revision: 30
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: b5cd4cc03a1b4254e26750b45704d67af62cef04
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 95c094282aa185f79f9399a26e3b6fe8049cc965
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37317436"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48167576"
 ---
 # <a name="creating-a-valid-connection-string-using-named-pipes"></a>Criando uma cadeia de conexão válida usando pipes nomeados
   A menos que alteradas pelo usuário, quando a instância padrão do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escuta no protocolo de pipes nomeados, ele usa `\\.\pipe\sql\query` como o nome do pipe. O ponto indica que o computador é local, `pipe` indica que a conexão é um pipe nomeado e `sql\query` é o nome do pipe. Para conectar ao pipe padrão, o alias deve ter `\\<computer_name>\pipe\sql\query` como nome do pipe. Se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tiver sido configurado para escutar em um pipe diferente, o nome do pipe deverá usar esse pipe. Por exemplo, se o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver usando `\\.\pipe\unit\app` como o pipe, o alias deverá usar `\\<computer_name>\pipe\unit\app` como o nome do pipe.  

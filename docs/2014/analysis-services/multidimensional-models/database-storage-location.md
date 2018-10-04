@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - databases [Analysis Services], storage location
 ms.assetid: cf88c62e-581e-42f2-846f-a9bf1d7c3292
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c62d463a424c1e5245a7b5f5a36e9d7a99fe7c9e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 15b50e0cd8b030c6026dfa46c92a2d52dbcb2e5a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37234246"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48216536"
 ---
 # <a name="database-storage-location"></a>Local de armazenamento do banco de dados
   Existem situações frequentes em que um administrador de banco de dados (dba) do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] deseja que determinados bancos de dados estejam fora da pasta de dados do servidor. Essas situações frequentemente são conduzidas pelas necessidades comerciais, como melhorar o desempenho ou expandir o armazenamento. Nessas situações, o `DbStorageLocation` permite que a propriedade de banco de dados a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba para especificar o local do banco de dados em um dispositivo de disco ou rede local.  

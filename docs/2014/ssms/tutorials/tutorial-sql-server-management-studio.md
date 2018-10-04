@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.tutorialstart.ssms.f1
@@ -24,12 +22,12 @@ ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1d0c5e3193c343e43a01b64e5197fdd1d73b2e9b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b6cd02b0679990e7781faf2195b17444cadb53e6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37238156"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48167306"
 ---
 # <a name="tutorial-sql-server-management-studio"></a>Tutorial: SQL Server Management Studio
   O tutorial do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] apresenta o ambiente integrado para gerenciar a infraestrutura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] apresenta uma interface gráfica para configurar, monitorar e administrar as instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ele também permite que você implante, monitore e atualize os componentes de camada de dados usados pelos aplicativos, como bancos de dados e data warehouses. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] também fornece editores da linguagem [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX e XML para editar e depurar scripts.  

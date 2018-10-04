@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6e9402f4-4d50-49ff-820d-65a77829c4a5
-caps.latest.revision: 21
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 615d289b3232c59c6266ec8864d52b0a14a67591
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e701bb22a2350d90fdaf4ab461aa70063eab97b1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37316886"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48120956"
 ---
 # <a name="deploy-projects-to-integration-services-server"></a>Implantar projetos no servidor do Integration Services
   Na versão atual do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], você pode implantar seus projetos no servidor do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . O servidor do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] permite gerenciar pacotes, executar pacotes, e configura valores de tempo de execução para pacotes por meio de ambientes.  
@@ -40,7 +37,7 @@ ms.locfileid: "37316886"
     -   Se você criou o projeto em uma versão anterior do [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], depois que abrir o arquivo de projeto no [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], converta o projeto no modelo de implantação de projeto.  
   
         > [!NOTE]  
-        >  Se o projeto contiver uma ou mais fontes de dados, as fontes de dados serão removidas quando a conversão de projeto estiver concluída. Para criar uma conexão com uma fonte de dados que pode ser compartilhada pelos pacotes no projeto, adicione um gerenciador de conexões no nível de projeto. Para obter mais informações, consulte [Add, Delete, or Share a Connection Manager in a Package](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md).  
+        >  Se o projeto contiver uma ou mais fontes de dados, as fontes de dados serão removidas quando a conversão de projeto estiver concluída. Para criar uma conexão com uma fonte de dados que pode ser compartilhada pelos pacotes no projeto, adicione um gerenciador de conexões no nível de projeto. Para obter mais informações, consulte [adicionar, excluir ou compartilhar um Gerenciador de Conexão em um pacote](../../2014/integration-services/add-delete-or-share-a-connection-manager-in-a-package.md).  
   
          Dependendo em se você executa o **Assistente de Conversão de Projeto do Integration Services** no [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ou no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], o assistente executa tarefas de conversão diferentes.  
   

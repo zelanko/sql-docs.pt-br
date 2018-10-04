@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 10/26/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - components [SQL Server], adding to existing installations
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - upgrading SQL Server, upgrades supported
 - cross-language support
 ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
-caps.latest.revision: 132
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6ce657b9b4b832e1c880edd3d2c6d966cd5a78dc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 6045b6e54758a210014c302d1d1301d29aae073d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37252638"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48199573"
 ---
 # <a name="supported-version-and-edition-upgrades"></a>Atualizações de versão e edição com suporte
   Você pode atualizar do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], e [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], e [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Este tópico lista os caminhos de atualização com suporte dessas versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e as atualizações de edição com suporte para o [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  

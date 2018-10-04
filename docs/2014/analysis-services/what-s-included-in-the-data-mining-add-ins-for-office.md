@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - getting started
 ms.assetid: 6c3d2b96-6646-42ef-b219-fea2e0cd3459
-caps.latest.revision: 25
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5630c67926713b997adfe85fe0fd9f8da10e03e4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c2652dd6ababc37a3883eef0cf385914a880ebdd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37231979"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48157626"
 ---
 # <a name="what39s-included-in-the-data-mining-add-ins-for-office"></a>O que&#39;s incluídos na mineração de dados suplementos para Office
   Quando você instalar os Suplementos de Mineração de Dados para Office 2013, e selecionar todas as opções de instalação, as seguintes barras de ferramentas e modelos serão adicionados:  

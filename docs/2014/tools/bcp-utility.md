@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 10/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - bcp utility [SQL Server]
@@ -27,16 +25,15 @@ helpviewer_keywords:
 - file importing [SQL Server]
 - column exporting [SQL Server]
 ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
-caps.latest.revision: 198
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 478537d3e4f74a83593147a7e790ab2d5806ba34
-ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
+ms.openlocfilehash: 9921e018b81d22097161d2ea93226e47b7880073
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39310293"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48205856"
 ---
 # <a name="bcp-utility"></a>Utilitário bcp
   O **bcp** copia dados entre uma instância do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e um arquivo de dados em um formato especificado pelo usuário. O utilitário **bcp** pode ser usado para importar grande número de novas linhas para tabelas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou para exportar dados de tabelas para arquivos de dados. Exceto quando usado com a opção **queryout** , o utilitário não requer conhecimento de [!INCLUDE[tsql](../includes/tsql-md.md)]. Para importar dados para uma tabela, você deve usar um arquivo de formato criado para aquela tabela ou entender a estrutura da tabela e os tipos de dados válidos para suas colunas.  
@@ -147,7 +144,7 @@ ms.locfileid: "39310293"
 |RAW|Não ocorre nenhuma conversão de uma página de código para outra. Essa é a opção mais rápida porque não acontece nenhuma conversão.|  
 |*code_page*|Um número de página de código específico, por exemplo, 850.<br /><br /> **\*\* Importante \* \***  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] não oferece suporte a página de código 65001 (codificação UTF-8).|  
   
- `-d` *Database_name*  
+ `-d` *Database_Name*  
  Especifica o banco de dados que deve ser conectado. Por padrão, bcp.exe se conecta ao banco de dados padrão do usuário. Se `-d` *database_name* e um nome de três partes (*database_name.schema.table*passado como o primeiro parâmetro para bcp.exe) for especificado, ocorrerá um erro porque você não pode especificar o nome do banco de dados duas vezes. Se *database_name* começa com um hífen (-) ou uma barra (/), não adicione um espaço entre `-d` e o nome do banco de dados.  
   
  **-e** *err_file*  
@@ -330,7 +327,7 @@ ms.locfileid: "39310293"
  **-x**  
  Usado com o **formato** e **-f * * * format_file* opções, gera um arquivo de formato baseado em XML em vez do arquivo de formato não XML padrão. O **-x** não funciona ao importar ou exportar dados. Ele gera um erro se usado sem **formato** e **-f * * * format_file*.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O **bcp** 12.0 é instalado quando você instala [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] ferramentas. Se as ferramentas forem instaladas para o [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] e para uma versão anterior do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], dependendo do valor na variável de ambiente PATH, você poderá estar usando o cliente **bcp** anterior em vez do cliente **bcp** 12.0. Essa variável de ambiente define o conjunto de diretórios usado pelo Windows para pesquisar por arquivos executáveis. Para descobrir qual versão você está usando, execute o comando **bcp /v** no Prompt de Comando do Windows. Para obter mais informações sobre como definir o caminho de comando na variável de ambiente PATH, consulte a Ajuda do Windows.  
   
  Os arquivos de formato XML só têm suporte quando as ferramentas do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] são instaladas junto com o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client.  

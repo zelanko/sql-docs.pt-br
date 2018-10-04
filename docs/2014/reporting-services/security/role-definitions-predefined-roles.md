@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 10/22/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - security [Reporting Services], defaults
 - default security
 - role-based security [Reporting Services], defaults
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
-caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9ec8661b0a5c5362c83a767975e8c01a61779df1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b18501020d1764399315202d2c7efe9a31549172
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37149937"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48167212"
 ---
 # <a name="predefined-roles"></a>Funções predefinidas
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] é instalado com funções predefinidas que você pode usar para conceder acesso a operações de servidor de relatório. Cada função predefinida descreve uma coleção de tarefas relacionadas. Você pode atribuir grupos e contas do usuário a funções predefinidas para fornecer acesso imediato a operações de servidor de relatório.  

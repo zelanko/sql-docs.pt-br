@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - bulk copy using format file [ODBC]
 - ODBC, bulk copy operations
 ms.assetid: 970fd3af-f918-4fc3-a5b1-92596515d4de
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5994c0904e688817fdbdcb58cd4d03e9a3338e16
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 9c1618bb590ea0733d537216548679eeb67f53ba
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37417575"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48180286"
 ---
 # <a name="bulk-copy-by-using-a-format-file-odbc"></a>Copiar em massa usando um arquivo de formato (ODBC)
   Este exemplo mostra como usar a função ODBC bcp_init com um arquivo de formato.  

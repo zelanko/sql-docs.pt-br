@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 29b4488e-4c6a-4bf0-a64d-19e2fdafa7ae
-caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 865a135e144dd93a60a8f74da6559637b2c566d8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: eb78a5a7179caf7a42173c2fd752708c0434d2b2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37154237"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48186438"
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>Reverter os separadores de palavras usados por pesquisa à versão anterior
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instala e habilita uma versão dos separadores de palavras e lematizadores para todos os idiomas com suporte de Pesquisa de Texto Completo com a exceção de coreano. Este tópico descreve como alternar deste nova versão desses componentes para a versão anterior, ou alternar da versão anterior para a nova versão.  
@@ -215,8 +212,8 @@ ms.locfileid: "37154237"
 |---------------|------------------|-------------|  
 |CLSID anterior|7EFD3C7E-9E4B-4a93-9503-DECD74C0AC6D|483B0283-25DB-4c92-9C15-A65925CB95CE|  
 |Nome de arquivo anterior|NaturalLanguage6.dll|NaturalLanguage6.dll|  
-|CLSID atual|04b37e30-c9a9-4a7d-8f20-792fc87ddf71|Nenhum|  
-|Nome do arquivo atual|MSWB7.dll|Nenhum|  
+|CLSID atual|04b37e30-c9a9-4a7d-8f20-792fc87ddf71|None|  
+|Nome do arquivo atual|MSWB7.dll|None|  
   
  **Alemão (deu), LCID 1031**  
   
@@ -233,8 +230,8 @@ ms.locfileid: "37154237"
 |---------------|------------------|-------------|  
 |CLSID anterior|E1E8F15E-8BEC-45df-83BF-50FF84D0CAB5|3D5DF14F-649F-4cbc-853D-F18FEDE9CF5D|  
 |Nome de arquivo anterior|NaturalLanguage6.dll|NaturalLanguage6.dll|  
-|CLSID atual|04096682-6ece-4e9e-90c1-52d81f0422ed|Nenhum|  
-|Nome do arquivo atual|MsWb70011.dll|Nenhum|  
+|CLSID atual|04096682-6ece-4e9e-90c1-52d81f0422ed|None|  
+|Nome do arquivo atual|MsWb70011.dll|None|  
   
  **Holandês (nld), LCID 1043**  
   
@@ -349,8 +346,8 @@ ms.locfileid: "37154237"
 |---------------|------------------|-------------|  
 |CLSID anterior|CCA22CF4-59FE-11D1-BBFF-00C04FB97FDA|CEDC01C7-59FE-11D1-BBFF-00C04FB97FDA|  
 |Nome de arquivo anterior|Thawbrkr.dll|Thawbrkr.dll|  
-|CLSID atual|F70C0935-6E9F-4ef1-9F06-7876536DB900|Nenhum|  
-|Nome do arquivo atual|MsWb7001e.dll|Nenhum|  
+|CLSID atual|F70C0935-6E9F-4ef1-9F06-7876536DB900|None|  
+|Nome do arquivo atual|MsWb7001e.dll|None|  
   
  **Chinês tradicional (zh-hk), LCID 3076**  
   

@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f4bdc9c1-7922-4fac-8183-d11ec58fec4e
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 04cc9e0bea00d1eb2bc542a996ff4bc39e1009f2
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 263fdcd4b09c4acc6c2bba4d67629f867d64c6b3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395822"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48169466"
 ---
 # <a name="hash-indexes"></a>Índices de hash
   Os índices são usados como pontos de entrada para tabelas com otimização de memória. A leitura das linhas de uma tabela requer um índice para localizar os dados na memória.  

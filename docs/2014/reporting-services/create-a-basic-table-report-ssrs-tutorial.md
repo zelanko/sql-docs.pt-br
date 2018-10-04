@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - walkthroughs [Reporting Services]
 - tutorials [Reporting Services]
 - reports [Reporting Services], creating
 ms.assetid: 3b539b4b-26f2-4c0b-b506-80f175679a46
-caps.latest.revision: 61
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: a5c3560a7aafd3fcf53f9b10d606e1f999bbf063
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2c2c31258da39fa8aa7481432dad1286c8278bf7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37196806"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48184362"
 ---
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>Criando um relatório de tabela básico (Tutorial do SSRS)
   Este tutorial é projetado para ajudá-lo a criar um relatório de tabela básico com base no [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] usando o Designer de relatórios do banco de dados. Você também pode usar o Construtor de Relatórios ou o Assistente de Relatório para criar relatórios. Neste tutorial, você irá criar um projeto de relatório, configurar informações de conexão, definir uma consulta, adicionar uma região de dados de Tabela, agrupar e totalizar alguns campos e visualizar o relatório.  

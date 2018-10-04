@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6f0a4287-7fd4-4f18-b7e4-a5191a9d4a3c
-caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d7cf9ccd921ecdef56560e712415604355b97b2f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 74862c1db4ad3c34afc759ba94f36ba5fb896e7e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37171997"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48227696"
 ---
 # <a name="task-1-prerequisite-removing-supplier-data-in-mds"></a>Tarefa 1 (pré-requisito): Removendo os dados do fornecedor no MDS
   Nesta tarefa, você removerá os dados do fornecedor armazenados no MDS. Você carregou os dados manualmente usando **Suplemento MDS do Excel** na lição anterior. O pacote SSIS que será criado nesta lição carregará automaticamente os dados no MDS para você. Consequentemente, antes de testar o pacote SSIS, será necessário remover os dados do fornecedor do MDS, remover da hierarquia derivada, remover entidades de fornecedor e estado e criar a entidade do fornecedor sem dados.  

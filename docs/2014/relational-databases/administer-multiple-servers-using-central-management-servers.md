@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - multiserver queries
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - target configuration [SQL Server]
 - server configuration [SQL Server]
 ms.assetid: 427911a7-57d4-4542-8846-47c3267a5d9c
-caps.latest.revision: 25
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: efc9759ffdc64361986a1e0285051afb9bb1290e
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 62a954706d2e96cc83214df8c532994776b1be3f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43810812"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48205306"
 ---
 # <a name="administer-multiple-servers-using-central-management-servers"></a>Administrar vários servidores usando os Servidores Centrais de Gerenciamento
   Você pode administrar vários servidores designando servidores de gerenciamento centrais e criando grupos de servidores.  

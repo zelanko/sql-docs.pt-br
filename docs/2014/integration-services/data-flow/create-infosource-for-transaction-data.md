@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: ab5f23e2-cd4e-4507-83d9-ac5ef721c171
-caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c18c6edb21effe53c31e7885ec25025c94c4f1d2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d57bbdf7219561dfea45f338f463834e578e3138
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37162727"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48203876"
 ---
 # <a name="create-infosource-for-transaction-data"></a>Criar InfoSource para os dados da transação
   Use a caixa de diálogo **Criar InfoSource para os Dados da Transação** para criar um novo InfoSource para dados de transação no sistema SAP Netweaver BW.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - SqlTriggerContext class
 - transactions [CLR integration]
 ms.assetid: 302a4e4a-3172-42b6-9cc0-4a971ab49c1c
-caps.latest.revision: 67
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c6702a9a3851e7ce41862f8f314d9aebdb7a5745
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a2827d98dda93a59b3e599f1db07ebb3fadd234d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37160987"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48226696"
 ---
 # <a name="clr-triggers"></a>Gatilhos CLR
   Por causa da integração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] com CLR (Common Language Runtime) do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], você pode usar qualquer linguagem do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para criar gatilhos CLR. Esta seção contém informações específicas para gatilhos implementados com a integração CLR. Para obter uma discussão completa sobre gatilhos, consulte [gatilhos DDL](../../relational-databases/triggers/ddl-triggers.md).  
@@ -103,7 +100,7 @@ command.CommandText = "SELECT * FROM " + "inserted"
 ### <a name="determining-updated-columns"></a>Determinando colunas atualizadas  
  Você pode determinar o número de colunas que foram modificadas por uma operação UPDATE usando a propriedade `ColumnCount` do objeto `SqlTriggerContext`. Você pode usar o método `IsUpdatedColumn` que considera o ordinal da coluna como um parâmetro de entrada, a fim de determinar se a coluna foi atualizada. Um valor `True` indica que a coluna foi atualizada.  
   
- Por exemplo, este trecho de código (do gatilho EmailAudit mais adiante neste tópico) lista todas as colunas atualizadas:  
+ Por exemplo, este snippet de código (do gatilho EmailAudit mais adiante neste tópico) lista todas as colunas atualizadas:  
   
  C#  
   

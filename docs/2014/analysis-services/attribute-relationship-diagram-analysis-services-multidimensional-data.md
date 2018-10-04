@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.ardesigner.ardiagram.f1
 ms.assetid: 320989ad-bd95-43f4-a2e7-b262d66dbda7
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e4467e0ca268edd9d9e38ca4d915c489c5f65014
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1255cbcaffe114a47b4c7d251c37e5b3d50d6b2b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37208116"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48174656"
 ---
 # <a name="attribute-relationship-diagram-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Diagrama de Relação de Atributo (guia Designer de Relação de Atributo, Designer de Dimensão) (Analysis Services - Dados multidimensionais)
   Use o painel situado imediatamente abaixo da barra de ferramentas na guia **Relações de Atributo** para exibir o diagrama de relação de atributo e para criar, modificar e excluir relações de atributo.  

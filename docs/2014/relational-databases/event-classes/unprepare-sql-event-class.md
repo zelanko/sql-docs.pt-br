@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Unprepare SQL event class
 ms.assetid: cfcbdd9d-d83b-46ae-9caa-d1833b5913f4
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a84f7d017b8a0737eaedcdcb7fa9babd7a7fb5f7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 91aafd30e5c2c9765a2b2d7a467854142694cf4d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37193316"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48225776"
 ---
 # <a name="unprepare-sql-event-class"></a>Classe de evento Unprepare SQL
   A classe de evento Unprepare SQL indica que SqlClient, ODBC, OLE DB ou DB-Library cancelou a preparação (excluiu) de uma ou mais instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] preparadas.  

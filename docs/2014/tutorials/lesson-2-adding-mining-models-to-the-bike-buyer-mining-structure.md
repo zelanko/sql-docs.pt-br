@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 03fe44c5-6452-4ed0-95f6-9682670c0f52
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 055450b7461accaa62b1c9bafe4273f6fc3f9dd7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 7c4191d74e2c9a9e4e84bf87bfd0137a241407d6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37149547"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222606"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure"></a>Lição 2: Adicionando modelos de mineração à estrutura de mineração de Comprador de Bicicleta
   Nesta lição, você adicionará dois modelos de mineração à estrutura de mineração de comprador de bicicleta que você criou [lição 1: Criando a estrutura de mineração de comprador de bicicleta](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md). Esses modelos de mineração lhe permitirão explorar os dados usando um modelo e criar previsões usando outro.  

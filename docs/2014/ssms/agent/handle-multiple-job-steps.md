@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - job steps [SQL Server Agent]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - SQL Server Agent jobs, job steps
 - control of flow for jobs [SQL Server]
 ms.assetid: 7aba19ff-72b3-45f6-8e54-23f4988d63a8
-caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e2c57c544c7c23186455a0cb5cb3e788620e2098
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 5489dec3f665f56ebd267ccd24ec069a3906bdbf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43814572"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48187316"
 ---
 # <a name="handle-multiple-job-steps"></a>Manipular várias etapas de trabalho
   Se um trabalho tiver mais de uma etapa, você terá que especificar a ordem em que as etapas de trabalho devem ser executadas. Isso é chamado *controle de fluxo**.* Você pode adicionar novas etapas de trabalho e reorganizar o fluxo a qualquer hora; as alterações entram em vigor na próxima vez em que o trabalho é executado. Essa ilustração mostra o controle de fluxo para um trabalho de backup de banco de dados.  

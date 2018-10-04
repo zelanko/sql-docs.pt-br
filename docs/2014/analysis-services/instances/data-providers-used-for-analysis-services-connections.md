@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 128f6dde-409d-4c12-9820-3305bab57b75
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 357849f815fcdd8310d7056caa2f199d70675e64
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 70a13f23a303ee87d3d4169f4b626d618d5a5b0e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37157197"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48136996"
 ---
 # <a name="data-providers-used-for-analysis-services-connections"></a>Provedores de dados usados para conexões do Analysis Services
   O Analysis Services fornece três provedores de dados do servidor e acesso a dados. Todos os aplicativos que se conectam ao Analysis Services fazem isso usando um desses provedores. Dois dos provedores, ADOMD.NET e AMO (objetos de gerenciamento do Analysis Services), são provedores de dados gerenciados. O provedor OLE DB do Analysis Services (MSOLAP DLL) é um provedor de dados nativo.  

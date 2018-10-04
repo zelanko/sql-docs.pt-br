@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - vdtsql.chm:65558
 - vdtsql.chm:69657
 - vdt.ppg.columns
 ms.assetid: 09830897-cc10-46b8-95f5-e0e9681b668c
-caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4c84cca055d927dc617fea1aebce6c6401eaa991
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3c5892e4824ae31bebe2b0f2047a52b751da025a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37215156"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48057746"
 ---
 # <a name="table-column-properties-sql-server-management-studio"></a>Propriedades da coluna de tabela (SQL Server Management Studio)
   As propriedades aparecem no painel inferior do Criador de Tabelas. A menos que seja indicado o contrário, será possível editar as propriedades na janela Propriedades quando a coluna for selecionada. As **Propriedades de Colunas** podem ser exibidas em categorias ou em ordem alfabética. Muitas propriedades aparecem ou podem ser alteradas apenas para certos tipos de dados.  

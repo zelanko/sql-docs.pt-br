@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, connections
 - connections [SQL Server], SQL Server Agent service
 ms.assetid: 28b6178b-0a9e-4f2c-8562-7a62d2d2a285
-caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5e9d4724254a3dc3370f6d553baeb990fb5c8964
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: a05c720a2db962683c81ad948aa616b5c6b20fd1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43810222"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161416"
 ---
 # <a name="set-the-sql-server-connection-for-the-sql-server-agent-service-sql-server-management-studio"></a>Definir a Conexão do SQL Server para o Serviço do SQL Server Agent (SQL Server Management Studio)
   Este tópico descreve como definir a conexão entre o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent e o [!INCLUDE[ssDE](../../includes/ssde-md.md)] no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. O serviço do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pode se conectar a uma instância local do SQL Server usando autenticação do Windows.  

@@ -4,8 +4,6 @@ ms.date: 05/25/2017
 ms.prod: sql-server-2014
 ms.technology: release-landing
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: 'index-page '
 f1_keywords:
 - sql12.portal.f1
@@ -21,20 +19,20 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 2504ca0853d11d496e88b963a4421885b83631b0
-ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
+ms.openlocfilehash: 31232de01fcd2e1f4c9d6ce67d446c737990d105
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39310193"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161756"
 ---
-# Manuais online do SQL Server 2014
+# <a name="books-online-for-sql-server-2014"></a>Manuais online do SQL Server 2014
   Bem-vindo ao [!INCLUDE[msCoName](../includes/msconame-md.md)]® Manuais Online para [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]®. Os Manuais Online contém as descrições de tarefa e a documentação de referência que descreve como executar o trabalho de inteligência de negócios e gerenciamento de dados usando [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **Experimente:**  
  ![Máquina Virtual pequena do Azure](../sql-server/media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) Tem uma conta do Azure?  Em seguida, acesse **[aqui](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** para criar uma máquina Virtual com o SQL Server 2014 Service Pack 1 (SP1) já instalado. Para obter mais informações sobre o SQL Server 2014 (SP1), consulte [informações de versão do SQL Server 2014 Service Pack 1 ](https://support.microsoft.com/en-us/kb/3058865). 
   
-## Tecnologias do SQL Server  
+## <a name="sql-server-technologies"></a>Tecnologias do SQL Server  
  O [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] inclui várias tecnologias de gerenciamento de dados e análise. Clique nos links na tabela a seguir para localizar o recurso, a tarefa e a documentação de referência para cada tecnologia.  
   
 |||  
@@ -47,7 +45,7 @@ ms.locfileid: "39310193"
 |![Ícone de replicação](media/replication.gif "ícone de replicação")|[Replicação](../relational-databases/replication/sql-server-replication.md)<br /><br /> A replicação é um conjunto de tecnologias para copiar e distribuir dados e objetos de um banco de dados para outro e, em seguida, sincronizar entre os bancos de dados para manter a consistência. Ao usar a replicação, é possível distribuir dados para diferentes locais e para usuários remotos e móveis através de redes locais e de longa distância, conexões discadas, conexões sem-fio e a Internet.|  
 |![Ícone do Reporting Services](media/reportingservices.gif "ícone do Reporting Services")|[Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)<br /><br /> O Reporting Services fornece às corporações a funcionalidade de relatórios online possibilitando criar relatórios que se conectam a conteúdos de várias fontes de dados, permite também, publicar os relatórios em diversos formatos e além disso centralizar o gerenciamento de segurança e de assinaturas.|  
   
-## Informações do SQL Server na Web  
+## <a name="sql-server-information-on-the-web"></a>Informações do SQL Server na Web  
  A [!INCLUDE[msCoName](../includes/msconame-md.md)] publica informações adicionais sobre o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em vários sites.  
   
  **Sites do SQL Server**  
@@ -64,7 +62,7 @@ ms.locfileid: "39310193"
   
 -   [XML Developer Center](http://go.microsoft.com/fwlink/?LinkId=42458)  
   
-## Consulte também  
+## <a name="see-also"></a>Consulte também  
  [Ajuda do SQL Server Configuration Manager](../tools/configuration-manager/sql-server-configuration-manager-help.md)  
   
   

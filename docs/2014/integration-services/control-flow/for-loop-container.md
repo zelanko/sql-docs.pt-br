@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.forloopcontainerdetails.f1
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - containers [Integration Services], For Loop
 - For Loop containers
 ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
-caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 15e2239a7285e4d460e4fa5a85add8445f797ede
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f1d04762b61376d2e9ede00467d89f62c55634d7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37227846"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48203726"
 ---
 # <a name="for-loop-container"></a>Contêiner Loop For
   O contêiner Loop For define um fluxo de controle repetitivo em um pacote. A implementação de loop é semelhante à estrutura de loop **For** em linguagens de programação. Em cada repetição do loop, o contêiner Loop For avalia uma expressão e repete seu fluxo de trabalho até que a expressão é avaliada como `False`.  

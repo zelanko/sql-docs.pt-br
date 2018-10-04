@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - DISCOVER_CONNECTIONS rowset
 ms.assetid: e4703970-c31d-448c-ab68-503303c91aa4
-caps.latest.revision: 16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 02c834a399f2dc6056831f2d4f84b65deb5ba503
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3718045bc6fdcc6d83fd862bbf1f45dce96492dc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37194296"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48171466"
 ---
 # <a name="discoverconnections-rowset"></a>Conjunto de linhas DISCOVER_CONNECTIONS
   Oferece uso de recursos e de informações de atividade sobre as conexões atualmente abertas no servidor.  

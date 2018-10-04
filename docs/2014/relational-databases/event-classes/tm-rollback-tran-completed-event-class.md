@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - 'TM: Rollback Tran Completed event class'
 ms.assetid: af4043db-bc9f-4cd8-8d07-ef3efae85148
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dad04cf855a6916a522007a0e3f3959c00888f1d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0872d301bbd4d03c0e51e26efd76c9221609bd38
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37186645"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48145517"
 ---
 # <a name="tm-rollback-tran-completed-event-class"></a>classe de evento TM: Rollback Tran Completed
   A classe de evento TM: Rollback Tran Completed indica que foi concluída uma solicitação ROLLBACK TRANSACTION. A solicitação foi enviada do cliente pela interface de gerenciamento de transações. A coluna EventSubClass indica se uma transação nova será iniciada depois que a transação atual for revertida.  

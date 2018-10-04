@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7412ce68-aece-41c0-8c37-76a0e54b6b53
-caps.latest.revision: 7
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2bfa96110c521386cf6e7697f6f395f845ae6a83
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c4a6c4af1938057652aa21ce8feef8671b2535f6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37280322"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48154096"
 ---
 # <a name="specify-credentials-in-report-builder"></a>Especificar as credenciais no Construtor de Relatórios
   As credenciais autenticam o usuário que está tentando recuperar dados de uma fonte de dados. O proprietário da fonte de dados determina o tipo de credenciais que devem ser usadas. Por exemplo, um administrador de banco de dados pode especificar que o usuário deve fornecer um nome de usuário do Windows e uma senha.  

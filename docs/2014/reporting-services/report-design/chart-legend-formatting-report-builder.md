@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10183"
@@ -27,16 +25,15 @@ f1_keywords:
 - "10188"
 - sql12.rtp.rptdesigner.legendtitleproperties.general.f1
 ms.assetid: b035b2e0-ab1e-4a37-bff7-a42d1e914bac
-caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 8e67ff32578131fc5689ac819fd3ac1fc155d0f1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f61ad0448df247678be1479b8f28ebb8828796a9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37244316"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211826"
 ---
 # <a name="formatting-the-legend-on-a-chart-report-builder-and-ssrs"></a>Formatando a legenda em um gráfico (Construtor de Relatórios e SSRS)
   A legenda do gráfico contém descrições de cada categoria em um gráfico. Uma legenda sempre contém um ou mais itens de legenda, no qual cada item de legenda é composto por uma caixa colorida que representa a série, e uma cadeia de caracteres de texto que descreve a série, conforme indicado na ilustração a seguir.  

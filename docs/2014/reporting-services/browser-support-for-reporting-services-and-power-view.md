@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - displaying reports
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - components [Reporting Services], browsers
 - Web browsers [Reporting Services]
 ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
-caps.latest.revision: 99
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ba6f4bd415f5e418d80b691e2461d08c8b1a8d19
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 975c396eb3c0bfa7414e3af4249338d2790754b4
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37164317"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48157036"
 ---
 # <a name="planning-for-reporting-services-and-power-view-browser-support-reporting-services-2014"></a>Planejando o suporte ao navegador do Reporting Services e do Power View (Reporting Services 2014)
   Na [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], use um navegador da web para exibir relatórios e executar o Gerenciador de relatórios. Nem todos os navegadores dão suporte à funcionalidade de relatório. Este tópico descreve o suporte e os requisitos para os recursos de gerenciamento do Gerenciador de Relatórios, exibir relatórios, os controles do Visualizador de Relatórios no Visual Studio. O tópico também resume a disponibilidade de recursos para os navegadores com suporte, os requisitos de autenticação e os requisitos de script.  

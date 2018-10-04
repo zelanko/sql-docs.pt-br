@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data types [data mining]
 - columns [data mining], data types
 - data mining [Analysis Services], data types
 ms.assetid: 4af5b7db-790b-459c-b2b4-00f0cf6b5ce4
-caps.latest.revision: 46
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e13002a2cd4fd8cd0690968733eacffa74020cab
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 77a0c6f2f0100e7e0c0e73ee70bc8705135d259f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37191176"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48225246"
 ---
 # <a name="data-types-data-mining"></a>Tipos de dados (Mineração de Dados)
   Quando você cria um modelo ou uma estrutura de mineração no [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], deve definir os tipos de dados para cada uma das colunas na estrutura de mineração. O tipo de dados informa ao mecanismo de mineração de dados se os dados na fonte de dados são numéricos ou de texto, e como devem ser processados. Por exemplo, se a fonte de dados contiver dados numéricos, você poderá especificar se os números serão tratados como inteiros ou com o uso de casas decimais.  

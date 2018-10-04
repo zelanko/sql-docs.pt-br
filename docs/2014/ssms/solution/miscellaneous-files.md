@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - files [SQL Server Management Studio], miscellaneous
@@ -14,16 +12,15 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], files
 - miscellaneous files folder [SQL Server]
 ms.assetid: 3c952b0b-8f5f-4d86-9e5d-616c10b9df0d
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d0bffcec84abd3d743141342c2b8dde65df48ceb
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: dd0656f0ced52eb7888cac49e108392c333de435
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43813612"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48152496"
 ---
 # <a name="miscellaneous-files"></a>arquivos diversos
   Arquivos externos a qualquer projeto são chamados de *arquivos diversos*. Quando você tiver uma solução aberta, poderá abrir e modificar arquivos diversos relacionados ao projeto. Um arquivo é classificado como um arquivo diverso se a extensão do arquivo não for associada com o editor de códigos de projeto. Por exemplo, em um projeto de script do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , arquivos com a extensão .txt ou .mdx serão tratados como arquivos diversos. Em um projeto MDX, arquivos com a extensão .txt ou .sql serão tratados como arquivos diversos. Para associar uma extensão de arquivo com um editor de código, consulte [associar extensões de arquivo para um Editor de código](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md).  

@@ -1,25 +1,22 @@
 ---
-title: Propriedades do Analysis Server (guia serviço) | Microsoft Docs
+title: Propriedades do Analysis Server (guia Serviço) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - configmgr-client
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8dbe4bc5-6aa9-48ee-857e-0b4ea764b9cb
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fd921f3f954c027c60ef036a7846388e6927aaef
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 80f8c532bd416926a604d29946e979669b964228
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304736"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48173376"
 ---
 # <a name="analysis-server-properties-service-tab"></a>Propriedades do Analysis Server (guia Serviço)
   Este serviço é o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Ele deve estar sendo executado para que o [!INCLUDE[ssAS](../../includes/ssas-md.md)] funcione corretamente. Os valores de propriedade em cinza claro não podem ser alterados com o uso deste aplicativo.  

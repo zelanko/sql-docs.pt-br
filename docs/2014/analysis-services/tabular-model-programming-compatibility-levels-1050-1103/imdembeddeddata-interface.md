@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 9dba8c68-4bef-4c2b-815c-c286f1a1939b
-caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cc1f1032a644277cab9645a11f8b3bedbb65c13d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b5a80b6bd9ef469d6711f7d6d019935fbfa1a581
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37157137"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48218015"
 ---
 # <a name="imdembedded-interface"></a>Interface IMDEmbedded
   A interface IMDEmbedded é uma interface pública usada para gerenciar um banco de dados do PowerPivot inserido ou um banco de dados modelo de tabela. A interface herda da interface `IPersistStream`. A interface permite as seguintes operações:  
@@ -103,7 +100,7 @@ HRESULT GetStreamIdentifier (
  `E_FAIL`  
  Erro ao acessar o identificador de fluxo.  
   
-#### <a name="remarks"></a>Remarks  
+#### <a name="remarks"></a>Comentários  
  Para verificar se a conexão atual contém um banco de dados inserido, o usuário deve verificar o valor da propriedade DBPROP_MSMD_EMBEDDED_DATA nas propriedades de conexão OLE DB.  
   
  Os valores possíveis para DBPROP_MSMD_EMBEDDED_DATA são:  

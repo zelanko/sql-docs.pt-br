@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - nearest neighbor [Data Mining]
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - mining model content, clustering models
 - clustering algorithms [Analysis Services]
 ms.assetid: aed1b7d3-8f20-4eeb-b156-0229f942cefd
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dc2d9ce1c0581d067b8a0a9be0ad52643ee6287a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e3d93d564dedbb5a08cf403d771a6f8e794fb498
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37153307"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48190276"
 ---
 # <a name="mining-model-content-for-clustering-models-analysis-services---data-mining"></a>Conteúdo do modelo de mineração para modelos de clustering (Analysis Services – Mineração de Dados)
   Este tópico descreve o conteúdo do modelo de mineração que é específico para modelos que usam o algoritmo Microsoft Clustering. Para obter uma explicação geral sobre o conteúdo do modelo de mineração para todos os tipos de modelo, consulte [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -156,7 +153,7 @@ ms.locfileid: "37153307"
   
  **Nós de cluster** O nome do cluster. Exemplo: Cluster 1.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oferece vários métodos para a criação de um modelo de clustering. Se você não souber qual método foi usado para criar o modelo com que você está trabalhando, pode recuperar os metadados do modelo programaticamente, usando um cliente ADOMD ou AMO ou consultando o conjunto de linhas do esquema de mineração de dados. Para obter mais informações, consulte [Como consultar os parâmetros usados para criar um modelo de mineração](query-the-parameters-used-to-create-a-mining-model.md).  
   
 > [!NOTE]  

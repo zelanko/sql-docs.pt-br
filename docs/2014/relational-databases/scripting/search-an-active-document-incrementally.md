@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - searches [SQL Server Management Studio], incremental
 - Query Editor [SQL Server Management Studio], incremental search
 - incremental searches [SQL Server Management Studio]
 ms.assetid: 490bb36c-dd43-4219-9e2a-ff27046b9395
-caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 15d053e71b2c2ac156bbd32e548ecd926384eefe
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 927558fc5da39f612acd7f8a3270d8810569258a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37213046"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48184146"
 ---
 # <a name="search-an-active-document-incrementally"></a>Pesquisar um documento ativo de forma incremental
   É possível pesquisar um único documento ou janela de forma incremental digitando texto. A operação de pesquisa realça o primeiro conjunto de caracteres que corresponde aos caracteres digitados durante a pesquisa incremental no documento ou na janela. A pesquisa incremental pesquisa automaticamente todo o texto dentro de um documento ou de uma janela, com exceção de texto oculto.  

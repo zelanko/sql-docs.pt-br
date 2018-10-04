@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - physical design structures [SQL Server]
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], command prompt
 - optimizing databases [SQL Server]
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
-caps.latest.revision: 52
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5dcf0994c14496f32de3734d5456d462ad74fe74
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 174343d5c937c8c58277579192a9deb968355a0c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200816"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48091727"
 ---
 # <a name="dta-utility"></a>utilitário dta
   O utilitário **dta** é a versão do prompt de comando do Orientador de Otimização do Mecanismo de Banco de Dados. O utilitário **dta** foi projetado para permitir o uso da funcionalidade do Orientador de Otimização do Mecanismo de Banco de Dados em aplicativos e scripts.  
@@ -154,7 +151,7 @@ dta -d AdventureWorks2012 ...
 |---------------|-------------------|  
 |*database_name*|*database_name* especificado com a opção **–D**|  
 |*owner_name*|**dbo**<br /><br /> Observação: *owner_name* deve ser **dbo**. Se qualquer outro valor for especificado, a execução de **dta** falhará e retornará um erro.|  
-|*table_name*|Nenhum|  
+|*table_name*|None|  
   
  Se um arquivo for usado, especifique .xml como sua extensão. Por exemplo, TuningLog.xml.  
   
@@ -338,7 +335,7 @@ dta -n number_of_events -A 0
  **-x**  
  Inicia a sessão de ajuste e sai.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Pressione CTRL+C uma vez para parar a sessão de ajuste e gerar recomendações com base na análise do **dta** concluída até este ponto. Você será solicitado a indicar se deseja ou não gerar recomendações. Pressione CTRL+C novamente para parar a sessão de ajuste sem gerar recomendações.  
   
 ## <a name="examples"></a>Exemplos  

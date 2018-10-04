@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)
@@ -15,16 +13,15 @@ topic_type:
 helpviewer_keywords:
 - WaitForAsynchCompletion method
 ms.assetid: 9f65e9e7-eb93-47a1-bc42-acd4649fbd0e
-caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 10fa772517ac96f59510245ab25ef0e5a05438d8
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: af77f5f5519a49e2d9a744dceca2857cc88ce8e1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37425846"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48089967"
 ---
 # <a name="issasynchstatuswaitforasynchcompletion-ole-db"></a>ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)
   Aguarda até que a operação com execução assíncrona seja concluída ou que um tempo limite seja atingido.  
@@ -57,19 +54,19 @@ HRESULT WaitForAsynchCompletion(
 > [!NOTE]  
 >  Além dos valores de código de retorno listados anteriormente, o método **ISSAsynchStatus::WaitForAsynchCompletion** também dá suporte aos valores de código de retorno retornados pelos principais métodos **ICommand::Execute** e **IDBInitialize::Initialize** do OLE DB.  
   
-## <a name="remarks"></a>Remarks  
- O método **ISSAsynchStatus::WaitForAsynchCompletion** não será retornado enquanto o valor de tempo limite (em milissegundos) não se esgotar ou a operação pendente não for concluída. O objeto **Command** tem uma propriedade **CommandTimeout** que controla o número de segundos que uma consulta será executada antes de exceder o tempo limite. O **CommandTimeout** propriedade será ignorada se usado em conjunto com **issasynchstatus:: Waitforasynchcompletion** método.  
+## <a name="remarks"></a>Comentários  
+ O método **ISSAsynchStatus::WaitForAsynchCompletion** não será retornado enquanto o valor de tempo limite (em milissegundos) não se esgotar ou a operação pendente não for concluída. O objeto **Command** tem uma propriedade **CommandTimeout** que controla o número de segundos que uma consulta será executada antes de exceder o tempo limite. A propriedade **CommandTimeout** será ignorada se for usada em conjunto com o método **ISSAsynchStatus::WaitForAsynchCompletion**.  
   
  A propriedade de tempo limite é ignorada para operações assíncronas. O parâmetro de tempo limite de **ISSAsynchStatus::WaitForAsynchCompletion** especifica o tempo máximo decorrido antes de o controle ser retornado ao chamador. Se esse tempo limite expirar, DB_S_ASYNCHRONOUS será retornado. Os tempos limite nunca cancelam operações assíncronas. Se o aplicativo precisar cancelar uma operação assíncrona que não tenha sido concluída dentro de um tempo limite, ele deverá aguardar o tempo limite e, em seguida, cancelar explicitamente a operação, caso DB_S_ASYNCHRONOUS seja retornado.  
   
 > [!NOTE]  
->  Quando o serviço de componentes do OLE DB são usados, S_OK pode ser retornado quando DB_S_ASYNCHRONOUS é esperado, portanto, os aplicativos devem chamar [issasynchstatus:: getStatus](issasynchstatus-getstatus-ole-db.md) para verificar a conclusão quando S_OK ou DB_S_ASYNCHRONOUS é retornado.  
+>  Quando os Componentes de Serviço do OLE DB são usados, S_OK pode ser retornado quando DB_S_ASYNCHRONOUS é esperado; portanto, os aplicativos devem chamar [ISSAsynchStatus::GetStatus](issasynchstatus-getstatus-ole-db.md) para verificar a conclusão quando S_OK ou DB_S_ASYNCHRONOUS é retornado.  
   
  Se o valor de *dwMillisecTimeOut* for definido como INFINITE, o método **ISSAsynchStatus::WaitForAsynchCompletion** será bloqueado até a conclusão da operação. Se o valor de *dwMillisecTimeOut* for definido como 0, o método será retornado imediatamente com o status da operação pendente. Se o tempo limite expirar antes da conclusão da operação, DB_S_ASYNCHRONOUS será retornado.  
   
  Se a operação for concluída antes da expiração do tempo limite, o HRESULT retornado será o HRESULT retornado pela operação (o HRESULT retornado executou a operação de forma síncrona).  
   
- Além disso, a propriedade SSPROP_ISSAsynchStatus foi adicionada ao conjunto de propriedades DBPROPSET_SQLSERVERROWSET. Provedores que dão suporte a [ISSAsynchStatus](issasynchstatus-ole-db.md) interface deve implementar essa propriedade com um valor de VARIANT_TRUE.  
+ Além disso, a propriedade SSPROP_ISSAsynchStatus foi adicionada ao conjunto de propriedades DBPROPSET_SQLSERVERROWSET. Os provedores que dão suporte à interface [ISSAsynchStatus](issasynchstatus-ole-db.md) precisam implementar essa propriedade com um valor de VARIANT_TRUE.  
   
 ## <a name="see-also"></a>Consulte também  
  [Executando operações assíncronas](../native-client/features/performing-asynchronous-operations.md)   

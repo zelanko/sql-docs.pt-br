@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - rendering extensions [Reporting Services], custom extensions
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - data processing extensions [Reporting Services], custom extensions
 - delivery extensions [Reporting Services]
 ms.assetid: fa184bd7-11d6-4ea3-9249-bc1b13db49e5
-caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 213113dedeed3e5401081ff8ff7345b5d2fb09f6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 86c0aa75e73c59980e8de6456556087201d949d3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37220836"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48153096"
 ---
 # <a name="custom-extensions-were-detected-on-the-report-server-upgrade-advisor"></a>Extensões personalizadas foram detectadas no servidor de relatório (Supervisor de Atualização)
   O Supervisor de Atualização detectou configurações de extensão personalizada nos arquivos de configuração, o que indica que sua instalação tem uma ou mais extensões personalizadas para processamento de dados, entrega, renderização, segurança ou autenticação. A atualização moverá os parâmetros de configuração de extensão com o servidor de relatório atualizado. No entanto, se houver extensões personalizadas instaladas na pasta existente do servidor de relatório, os arquivos de assembly dessas extensões personalizadas não serão movidos para a nova pasta de instalação durante o processo de atualização. Concluída a atualização, mova os arquivos de assembly para a nova pasta de instalação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  

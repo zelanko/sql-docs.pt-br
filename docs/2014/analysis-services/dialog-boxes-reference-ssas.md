@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c7d1059a-3133-4884-b2f0-518febfc56ad
-caps.latest.revision: 10
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fb38f8a65dbf1fccc9dac0cf467e204b5ab7700b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 931b1379a0138bc33000774d4ee9c19cf814b57f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37221986"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48210136"
 ---
 # <a name="dialog-boxes-reference-ssas"></a>Referência a caixas de diálogo (SSAS)
   Para obter informações sobre as caixas de diálogo no [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], consulte os tópicos a seguir.  

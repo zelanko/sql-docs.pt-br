@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - query designers [Reporting Services]
 ms.assetid: 07efd3f1-804f-45f7-b62a-3e727a3d9835
-caps.latest.revision: 16
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: aed7304b4e7e48eff1691970da5ff68b03fd0962
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1e8a2fabc77b4b2ca5d8a27b83c29c233148032e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37222936"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48219486"
 ---
 # <a name="reporting-services-query-designers"></a>Designers de Consulta do Reporting Services
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Fornece designers de consulta baseado em texto e gráficos para ajudá-lo a criar consultas para cada tipo de fonte de dados em seu relatório.  

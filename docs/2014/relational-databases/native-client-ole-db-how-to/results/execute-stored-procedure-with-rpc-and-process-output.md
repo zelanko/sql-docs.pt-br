@@ -4,30 +4,27 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - RPC syntax
 - stored procedures [SQL Server], RPC syntax
 ms.assetid: 1eb60087-da67-433f-9b45-4028595e68ab
-caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3bffe276292dc64731e6114df52b6dd0317fb04a
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: fe22e706e8083ad14c278e6f38d160600838cd81
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37408195"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48224086"
 ---
 # <a name="execute-a-stored-procedure-using-rpc-syntax-and-process-return-codes-and-output-parameters-ole-db"></a>Executar um procedimento armazenado (usando sintaxe de RPC) e processar códigos de retorno e parâmetros de saída (OLE DB)
   Os procedimentos armazenados do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] podem ter códigos de retorno e parâmetros de saída inteiros. Os códigos de retorno e os parâmetros de saída são enviados no último pacote do servidor e, portanto, não estão disponíveis para o aplicativo enquanto o conjunto de linhas não é completamente liberado. Se o comando retornar vários resultados, os dados dos parâmetros de saída estarão disponíveis quando `IMultipleResults::GetResult` retornar DB_S_NORESULT ou quando a interface `IMultipleResults` for completamente liberada, o que ocorrer primeiro.  
   
 > [!IMPORTANT]  
->  Quando possível, use a Autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se for necessário manter credenciais, criptografe-as com o [Win32 Crypto API](http://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Quando possível, use a Autenticação do Windows. Se a Autenticação do Windows não estiver disponível, solicite aos usuários que digitem suas credenciais em tempo de execução. Evite armazenar as credenciais em um arquivo. Se for necessário persistir as credenciais, criptografe-as com a [Win32 Crypto API](http://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-process-return-codes-and-output-parameters"></a>Para processar códigos de retorno e parâmetros de saída  
   
@@ -54,7 +51,7 @@ ms.locfileid: "37408195"
   
  Execute a primeira listagem de código ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) para criar o procedimento armazenado usado pelo aplicativo.  
   
- Compile com ole32.lib oleaut32.lib e execute a segunda listagem de código (C++). Esse aplicativo se conecta ao padrão do seu computador [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instância. Em alguns sistemas operacionais Windows, será necessário alterar (localhost) ou (local) para o nome de sua instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para se conectar a uma instância nomeada, altere a cadeia de caracteres de conexão de L"(local)" para L"(local)\\\name", onde o nome é a instância nomeada. Por padrão, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express é instalado em uma instância nomeada. Verifique se a variável de ambiente INCLUDE inclui o diretório que contém sqlncli.h.  
+ Compile com ole32.lib oleaut32.lib e execute a segunda listagem de código (C++). Esse aplicativo se conecta à instância padrão do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] do computador. Em alguns sistemas operacionais Windows, será necessário alterar (localhost) ou (local) para o nome de sua instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para se conectar a uma instância nomeada, altere a cadeia de conexão de L"(local)" para L"(local)\\\name", em que name é a instância nomeada. Por padrão, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express é instalado em uma instância nomeada. Verifique se a variável de ambiente INCLUDE inclui o diretório que contém sqlncli.h.  
   
  Execute a terceira listagem de código ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) para excluir o procedimento armazenado usado pelo aplicativo.  
   
@@ -397,6 +394,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Tópicos explicativos de resultados de processamento &#40;OLE DB&#41;](processing-results-how-to-topics-ole-db.md)  
+ [Tópicos de instruções sobre o processamento de resultados &#40;OLE DB&#41;](processing-results-how-to-topics-ole-db.md)  
   
   

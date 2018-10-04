@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - SetEnable Method (ServerNetworkProtocol Class)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - SetEnable method
 ms.assetid: a287950b-086f-4b6d-a2d8-4d3973bd1b21
-caps.latest.revision: 30
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f1a2127beb5e8427d4c95798a5e2c7ae0f88c373
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b766ec37e22169a0f9e5716826713345405f5345
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37148387"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48215436"
 ---
 # <a name="setenable-method-servernetworkprotocol-class"></a>Método SetEnable (classe ServerNetworkProtocol)
   Habilita o protocolo de rede do servidor.  
@@ -49,7 +46,7 @@ object
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
  Um valor `uint32`, que é 0 se o serviço tiver sido modificado com êxito, 1 se a solicitação não tiver suporte e qualquer outro número para indicar um erro.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 ## <a name="see-also"></a>Consulte também  
  [Configurando protocolos de rede do servidor e bibliotecas de rede](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

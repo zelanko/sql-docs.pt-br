@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Distribution Agent, executables
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - Distribution Agent, parameter reference
 - command prompt [SQL Server replication]
 ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
-caps.latest.revision: 62
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: eecc519ea4093d549c245a8287424feb69df6216
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 93648144c2da900c88888b78bbb77dab9bbc5233
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37199366"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222616"
 ---
 # <a name="replication-distribution-agent"></a>Agente de Distribuição de Replicação
   O Replication Agente de Distribuição é um executável que move o instantâneo (para replicação de instantâneo e replicação transacional) e as transações mantidas nas tabelas do banco de dados de distribuição (para replicação transacional) para as tabelas de destino nos Assinantes.  
@@ -285,7 +282,7 @@ ms.locfileid: "37199366"
  **-UseOledbStreaming**  
  Quando especificado, habilita a associação de dados de objeto binário grande como um fluxo. Use **-OledbStreamThreshold** para especificar o tamanho, em bytes, acima do qual um fluxo será usado.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 > [!IMPORTANT]  
 >  Se você instalou o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent para ser executado com uma conta Sistema Local em vez de uma conta de usuário de domínio (o padrão), o serviço só poderá acessar o computador local. Se o Agente de Distribuição executado no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent for configurado para usar o Modo de Autenticação do Windows ao fazer logon em uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], o Agente de Distribuição falhará. A configuração padrão é Autenticação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para obter informações em como alterar contas de segurança, consulte [View and Modify Replication Security Settings](../security/view-and-modify-replication-security-settings.md).  

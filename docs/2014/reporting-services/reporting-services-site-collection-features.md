@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: e05ae162-a4b2-489d-9853-d6b09414e632
-caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: eb321258a8dc87a499479d66ced85b95ce643b6d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1bf79e0cfdb6ab21011ec35ba0cf1536f852e04f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37294116"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48182806"
 ---
 # <a name="reporting-services-site-collection-features"></a>Recursos da coleção de sites do Reporting Services
   O modo do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint fornece três recursos de coleção de sites do SharePoint. Os recursos de suportam geral [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] reporting ambiente, de modo do SharePoint [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)], um recurso do [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] suplemento para [!INCLUDE[SPS2010](../includes/sps2010-md.md)] Enterprise Edition e operações de gerenciamento para [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] em Administração Central do SharePoint.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ProtocolDLL Property (ServerNetworkProtocol Class)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - ProtocolDLL property
 ms.assetid: ac386558-392e-46f3-97f8-382f267b7fca
-caps.latest.revision: 31
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 50b726584db8f547007558331f80f9b06f801642
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2e4740666fd1e53a26347706dc7af57b029f7840
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37208566"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48188098"
 ---
 # <a name="protocoldll-property-servernetworkprotocol-class"></a>Propriedade ProtocolDLL (classe ServerNetworkProtocol)
   Obtém o nome do arquivo .dll que é exigido por um protocolo de rede do servidor.  
@@ -48,7 +45,7 @@ object
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
  Um valor da cadeia de caracteres que especifica o protocolo do arquivo .dll que é exigido pelo protocolo de rede do servidor.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 ## <a name="see-also"></a>Consulte também  
  [Configurando protocolos de rede do servidor e bibliotecas de rede](http://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

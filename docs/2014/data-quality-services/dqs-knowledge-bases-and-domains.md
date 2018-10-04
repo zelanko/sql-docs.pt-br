@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
-caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5fd39b54d39d559608c8634345fd7c1e59835a9b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4ad3530b8179989f86cc62c9c18c888575890b26
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37285812"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48152996"
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>Bases de Dados de Conhecimento DQS e domínios
   Este tópico descreve o que é uma base de dados de conhecimento no [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Para limpar dados, você tem que ter conhecimento sobre os dados. Para preparar conhecimento para um projeto de qualidade de dados, compile e mantenha uma KB (base de dados de conhecimento) que o DQS possa usar para identificar dados incorretos ou inválidos. O DQS permite que você use processos interativos e assistidos por computador para criar, compilar e atualizar sua base de dados de conhecimento. O conhecimento em uma base de dados de conhecimento é mantido em domínios, cada qual específico para um campo de dados. A base de dados de conhecimento é um repositório de conhecimento sobre seus dados que permitem que você entenda seus dados e mantenha sua integridade.  

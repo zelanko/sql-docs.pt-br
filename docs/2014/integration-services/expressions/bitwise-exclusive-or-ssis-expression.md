@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ^ (bitwise exclusive OR operator)
 - bitwise exclusive OR (^)
 ms.assetid: 6ac53cab-29c4-4835-9f87-371b058b2f38
-caps.latest.revision: 37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1fc4229cdddc1d2b7411020ac11b0748b7935afb
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fb2a9c0ebdc6616940f09c2b8770dbefa6ca15e6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37298646"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48201266"
 ---
 # <a name="-bitwise-exclusive-or-ssis-expression"></a>^ (OR exclusivo de bit a bit) (Expressão SSIS)
   Executa uma operação OR de bit a bit exclusiva de dois valores inteiros. Compara cada bit de seu primeiro operando com o bit correspondente de seu segundo operando. Se um bit for 0 e o outro bit for 1, o bit de resultado correspondente será definido como 1. Se ambos os bits forem 0 ou ambos os bits forem 1, o bit de resultado correspondente será definido como 0.  
@@ -44,7 +41,7 @@ integer_expression1 ^ integer_expression2
 ## <a name="result-types"></a>Tipos de resultado  
  Determinado por tipos de dados dos dois argumentos. Para obter mais informações, consulte [Integration Services Data Types in Expressions](integration-services-data-types-in-expressions.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Se qualquer condição for nula, o resultado de expressão será nulo.  
   
 ## <a name="expression-examples"></a>Exemplos de expressões  

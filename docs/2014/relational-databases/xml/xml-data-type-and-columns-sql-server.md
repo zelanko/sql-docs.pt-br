@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
-caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bc1e6aeb11188fa7a50d61bb24b499265252a86d
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: f26049671f6276b125e06355d7fa15bb5b3febea
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43889712"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48205276"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>Tipos e colunas de dados XML (SQL Server)
   Este tópico discute as vantagens e as limitações do `xml` tipo de dados no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e ajuda você a escolher como armazenar dados XML.  

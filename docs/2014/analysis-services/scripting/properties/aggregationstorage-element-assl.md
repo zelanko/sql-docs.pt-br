@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - AggregationStorage Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - AggregationStorage element
 ms.assetid: dd082388-534d-4847-9232-8f80fc9fe96e
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1f66a2161d7c5d5983366fd67cd695e7d90c4917
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e3ec001116b63816d0b1e2831a266ec3029a38a9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37200076"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48187066"
 ---
 # <a name="aggregationstorage-element-assl"></a>Elemento AggregationStorage (ASSL)
   Identifica o método de armazenamento para agregações.  
@@ -59,9 +56,9 @@ ms.locfileid: "37200076"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elemento pai|[ProactiveCaching](../objects/proactivecaching-element-assl.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O valor desse elemento é limitado a uma das cadeias de caracteres a seguir:  
   
 |Valor|Description|  

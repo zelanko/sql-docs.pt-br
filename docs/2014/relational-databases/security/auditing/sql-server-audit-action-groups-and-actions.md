@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 10/19/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - audit
@@ -23,12 +21,12 @@ ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: f9425c18109817aa3f0112262b6b0928d4e77cf2
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: e204a1865c2a928079fcd9b32b31a8ae0c0bd0a8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43029799"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48222986"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>Ações e grupos de ações de auditoria do SQL Server
   O recurso [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit permite auditar grupos de eventos e eventos individuais no nível do servidor e do banco de dados. Para obter mais informações, veja [Auditoria do SQL Server &#40;Mecanismo de Banco de Dados&#41;](sql-server-audit-database-engine.md).  

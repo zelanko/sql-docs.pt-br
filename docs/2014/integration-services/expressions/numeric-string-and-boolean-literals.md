@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - string literals
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - literals [Integration Services]
 - mapping literals [Integration Services]
 ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
-caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 812e0d2db0e0cc202e78e0bd920901509b9ae082
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: cbbb6a94a8cf3182328c5aab73897feb345109a6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312026"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48198827"
 ---
 # <a name="literals-ssis"></a>Literais (SSIS)
   Expressões podem incluir literais numérico, de cadeia de caracteres e boolianos. O avaliador de expressão aceita uma variedade de literais numéricos como inteiros, decimais e constantes de ponto flutuante. O avaliador de expressão também dá suporte a sufixos longos e flutuantes, que especificam como o avaliador de expressão trata os valores, e uma notação científica em literais numéricos.  
@@ -80,7 +77,7 @@ ms.locfileid: "37312026"
   
     |Sufixo|Tipo de resultado|  
     |------------|-----------------|  
-    |Nenhum|DT_I4|  
+    |None|DT_I4|  
     |U|DT_UI4|  
     |L|DT_I8|  
     |UL|DT_UI8|  

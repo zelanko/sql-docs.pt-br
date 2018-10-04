@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], creating
 ms.assetid: 8bc0bb53-ad8a-464d-bb6a-7fea5fa62c5c
-caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8d1d96273c21f2b22b3482a74b5b55370b09589e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4bffdacee7496c27f41db7897861e3ec1f015dc1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37230176"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48173596"
 ---
 # <a name="add-a-new-or-existing-report-to-a-report-project-ssrs"></a>Adicionar um relatório novo ou existente a um projeto de relatório (SSRS)
   No [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], você pode adicionar um novo relatório usando o Assistente de relatório ou adicionando um novo relatório em branco ao seu projeto. Também é possível adicionar um relatório existente. Depois de adicionar um relatório, você poderá ver o nome do relatório listado na pasta **Relatórios** do seu projeto.  

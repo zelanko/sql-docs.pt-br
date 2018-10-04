@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
 - apiref
 helpviewer_keywords:
 - SQLColAttribute function
 ms.assetid: a5387d9e-a243-4cfe-b786-7fad5842b1d6
-caps.latest.revision: 52
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1ca244662cf8924ac033004dde92b5de4df41ccf
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 8029a3a2fb059ebfc764c8e29d9f893d1434b2dd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37422655"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48204916"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
   Você pode usar `SQLColAttribute` para recuperar um atributo de uma coluna do conjunto de resultados para instruções ODBC preparadas ou executadas. Chamando `SQLColAttribute` em instruções preparadas causa uma ida e volta ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client recebe os dados de coluna do conjunto de resultados como parte da execução da instrução, por isso a chamada `SQLColAttribute` após a conclusão da **SQLExecute** ou **SQLExecDirect** faz não envolvem uma ida e volta do servidor.  

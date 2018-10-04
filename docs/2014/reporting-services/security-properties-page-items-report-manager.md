@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 351b8503-354f-4b1b-a7ac-f1245d978da0
-caps.latest.revision: 27
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 59b44a164b321c0d5d82fce7016427ad7d639f1f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 87bdd8c30468f18a30de5bcb3ee122469ac3958c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37230216"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48189606"
 ---
 # <a name="security-properties-page-items-report-manager"></a>Página Propriedades de Segurança, Itens (Gerenciador de Relatórios)
   Use a página Propriedades de Segurança para exibir ou modificar as definições de segurança que determinam acesso a pastas, relatórios, modelos, recursos e fontes de dados compartilhadas. Essa página está disponível para itens que você tem permissão para proteger.  

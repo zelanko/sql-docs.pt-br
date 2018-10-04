@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: ec24b11d-d11e-4369-a619-7e41a3c46159
-caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7f335861084f86fa509b8c2bc3f977332d5e1da7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a23acca8488d5fa747d29338240cf98e0f703ecc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37291322"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48057246"
 ---
 # <a name="allowedrowsexpression-element-assl"></a>AllowedRowsExpression Element (ASSL)
   Contém uma expressão DAX, do tipo booliano, que define o conteúdo do elemento pai.  
@@ -41,7 +38,7 @@ ms.locfileid: "37291322"
 |Característica|Description|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|Cadeia de caracteres|  
-|Valor padrão|Nenhum|  
+|Valor padrão|None|  
 |Cardinalidade|1-1: elemento obrigatório que ocorre apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -49,9 +46,9 @@ ms.locfileid: "37291322"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|[CellPermission](../objects/cellpermission-element-assl.md), [StandardAction](../data-type/action-data-type-assl.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Para o `CellPermission` elemento, o `Expression` elemento contém uma expressão MDX lógica que identifica células aplicáveis aos direitos indicados pelo [Access](access-element-assl.md) elemento do `CellPermission` elemento. Se o valor de um elemento `Expression` para um elemento `CellPermission` estiver vazio, o elemento `CellPermission` será ignorado.  
   
  Para o elemento `StandardAction`, o elemento `Expression` contém uma linguagem MDX que representa o conteúdo da ação. Se o valor de um elemento `Expression` para um elemento `StandardAction` estiver vazio, o elemento `StandardAction` será ignorado.  

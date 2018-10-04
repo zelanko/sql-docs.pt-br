@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Cloud adapter
 - Deploy to Windows Azure
 ms.assetid: 82ed0d0f-952d-4d49-aa36-3855a3ca9877
-caps.latest.revision: 12
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fd0a6901770c3c30138e694c9e792146be85ba4a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 90bc2c9f6f268bf03904d768fd25b25b3ade3fbc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37243376"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48157986"
 ---
 # <a name="cloud-adapter-for-sql-server"></a>Adaptador de nuvem para SQL Server
   O serviço de Adaptador de Nuvem é criado como parte do provisionamento do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] em uma máquina virtual do Windows Azure. O serviço de Adaptador de Nuvem gera um certificado SSL autoassinado como parte da sua primeira execução e é executado como uma conta **Sistema Local** . Ele gera um arquivo de configuração que é usado para autoconfiguração. O Adaptador de Nuvem também cria uma regra de Firewall do Windows para permitir suas conexões TCP de entrada na porta padrão 11435.  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - initializing subscriptions [SQL Server replication], reinitializing
 - subscriptions [SQL Server replication], reinitializing
 - reinitializing subscriptions
 ms.assetid: ca3625c5-c62e-4ab7-9829-d511f838e385
-caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a13bd70e82e219a3935f0076481df9de7b683e23
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 738b9179143b4c6b0c986f7f6a16464980b60f8f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37318326"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48130326"
 ---
 # <a name="reinitialize-a-subscription"></a>Reinicializar uma assinatura
   Este tópico descreve como reinicializar uma assinatura no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../includes/tsql-md.md)]ou o RMO (Replication Management Objects). Assinaturas individuais podem ser marcadas para reinicialização, para que durante a próxima sincronização, um novo instantâneo seja aplicado.  

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourceviewwizard.advancedoptions.f1
 ms.assetid: db736863-3fc2-4166-af05-4c7d0323d4d1
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 42e7677867ebf04a0b239f1785f318a58e0f7e76
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: ee7ee9cf4ba8b7caa0085f0f792173b1f2856857
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37169837"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48158076"
 ---
 # <a name="advanced-data-source-view-options-dialog-box-data-source-view-wizard-analysis-services"></a>Caixa de diálogo Opções Avançadas de Exibição da Fonte de Dados (Assistente de Exibição da Fonte de Dados) (Analysis Services)
   A caixa de diálogo **Opções Avançadas de Exibição da Fonte de Dados** fornece controle adicional sobre como a exibição da fonte de dados extrai esquemas e relações da fonte de dados para criar a exibição.  

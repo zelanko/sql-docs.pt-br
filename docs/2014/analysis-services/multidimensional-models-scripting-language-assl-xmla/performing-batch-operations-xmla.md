@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - multiple projects
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - batches [XML for Analysis]
 - nontransactional batches
 ms.assetid: 731c70e5-ed51-46de-bb69-cbf5aea18dda
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 186d5a0896814544f34531fe98ad88c8034ac63a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: caa4083d1a35f710cbbfb87ecb904b1dafc346af
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304586"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48213266"
 ---
 # <a name="performing-batch-operations-xmla"></a>Executando operações em lote (XMLA)
   Você pode usar o [lote](../xmla/xml-elements-commands/batch-element-xmla.md) comando XML for Analysis (XMLA) para executar vários comandos XMLA usando um único XMLA [Execute](../xmla/xml-elements-methods-execute.md) método. Você pode executar vários comandos contidos no comando `Batch` como uma única transação ou em transações individuais para cada comando, em série ou em paralelo. Você também pode especificar associações fora de linha e outras propriedades na `Batch` comando para processar vários [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objetos.  

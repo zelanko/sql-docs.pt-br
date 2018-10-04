@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 7d881278-1e77-42e1-8cfc-f1bbd9ec2340
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: adcf9e8b2b87e0302158bbbf5652d8c32277170f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 929529214979c2c8bd6c441914ef84974a86a807
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37297146"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48060026"
 ---
 # <a name="displaykey-element-csdlbi"></a>Elemento DisplayKey (CSDLBI)
   O elemento DisplayKey contém uma lista dos elementos a seguir que juntos constituem um identificador forte. O DisplayKey é encontrado apenas como um filho do elemento EntityType. Ele pode fazer referência a colunas ou extremidades de função.  
@@ -32,7 +29,7 @@ ms.locfileid: "37297146"
 |----------|-----------------|-----------------|  
 |IsDisplayKey|não|Verdadeiro ou falso.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Este elemento é para relatórios. O elemento ao qual você aplica esse atributo não precisa ser a chave de tabela real, apenas um elemento que será apresentado como a chave. No entanto, a coluna que você usa para o DisplayKey deve conter valores exclusivos.  
   
 ## <a name="example"></a>Exemplo  

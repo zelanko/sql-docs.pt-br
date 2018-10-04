@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - segmentation
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - Naive Bayes
 - time series [data mining]
 ms.assetid: 3a1a62e4-9fb5-4cdb-a6c6-1b8b30d417ef
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8cbcfbeae8691fb76daa6fa9231274040b52c23c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4b1feb34dca2fba1bad8829edff24ef1ce54e1fe
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37288532"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48161556"
 ---
 # <a name="data-mining-algorithms-sql-server-data-mining-add-ins"></a>Algoritmos de mineração de dados (Suplementos de mineração de dados do SQL Server)
   Os Suplementos de Mineração de Dados para Office oferecem suporte à criação de modelos analíticos usando os algoritmos de mineração de dados a seguir. Todos os algoritmos são baseados nos métodos de aprendizado automatizado conhecido e foram implementados pelo Microsoft Research.  

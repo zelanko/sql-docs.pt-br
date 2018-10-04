@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DataSourceViewID Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - DataSourceViewID element
 ms.assetid: dcf617fe-0bf6-4767-af35-07c0c7fd96e5
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a5f74aa1a747dedce0d3b9beae8b8aa9886bb681
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bea1a67eaedc1119ad5260df435266649d11f048
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37271542"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48225196"
 ---
 # <a name="datasourceviewid-element-assl"></a>Elemento DataSourceViewID (ASSL)
   Identifica o [DataSourceView](../objects/datasourceview-element-assl.md) elemento associado a [associação](../data-type/binding-data-type-assl.md) elemento pai.  
@@ -51,7 +48,7 @@ ms.locfileid: "37271542"
 |Característica|Description|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|Cadeia de caracteres|  
-|Valor padrão|Nenhum|  
+|Valor padrão|None|  
 |Cardinalidade|0-1: elemento opcional que pode ocorrer apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -59,9 +56,9 @@ ms.locfileid: "37271542"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elemento pai|[DataSourceViewBinding](../data-type/datasourceviewbinding-data-type-assl.md), [DSVTableBinding](../data-type/tablebinding-data-type-assl.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Os elementos que correspondem aos pais de `DataSourceViewID` no modelo de objeto Analysis Management Objects (AMO) são <xref:Microsoft.AnalysisServices.DataSourceViewBinding> e <xref:Microsoft.AnalysisServices.DSVTableBinding>.  
   
 ## <a name="see-also"></a>Consulte também  

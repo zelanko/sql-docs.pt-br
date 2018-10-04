@@ -3,17 +3,17 @@ title: Instalação Standalone R Server ou Machine Learning Server no SQL Server
 description: Visão geral introdução ao R Server autônomo e Machine Learning Server na instalação do SQL Server
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/27/2018
+ms.date: 10/01/2018
 ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: a5be61888c34ef4931c65475921225198bef0091
-ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
+ms.openlocfilehash: a821706126519e5d48026eae834e320f706d2e4a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43240024"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48176426"
 ---
 # <a name="r-server-standalone-and-machine-learning-server-standalone-in-sql-server"></a>R Server (autônomo) e Machine Learning Server (autônomo) no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -23,7 +23,7 @@ SQL Server fornece suporte à instalação de um R Server autônomo ou Machine L
 No SQL Server 2016, esse recurso é chamado **R Server (autônomo)** e é somente para R. No SQL Server 2017, ele é chamado **Machine Learning Server (autônomo)** e inclui o R e Python.  
 
 > [!Note]
-> Como instalado pela instalação do SQL Server, um servidor autônomo é funcionalmente equivalente às versões do SQL sem marca [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), os mesmos cenários de usuário, incluindo a execução remota de suporte operacionalização e os serviços web e a coleção completa de funções de RevoScaleR e revoscalepy.
+> Como instalado pela instalação do SQL Server, um servidor autônomo é funcionalmente equivalente às versões do SQL sem marca [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), os mesmos cenários de usuário, incluindo a execução remota de suporte operacionalização e os serviços web e a coleção completa de bibliotecas de R e Python.
 
 ## <a name="components"></a>Componentes
 

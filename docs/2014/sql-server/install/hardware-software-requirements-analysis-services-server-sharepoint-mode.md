@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: fb86ca0a-518c-4c61-ae78-7680c57fae1f
-caps.latest.revision: 17
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2bd9afb97eae82bdb3bfe63859e9081dca5586b4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e5c405862dfb13bf8db1a619f052e6ca9206f1f8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37232666"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48167737"
 ---
 # <a name="hardware-and-software-requirements-for-analysis-services-server-in-sharepoint-mode-sql-server-2014"></a>Requisitos de hardware e software para servidor do Analysis Services no modo do SharePoint (SQL Server 2014)
   O [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] oferece suporte ao SharePoint 2010 e ao SharePoint 2013. O [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013 é executado fora do farm do SharePoint, embora ele possa ser instalado em servidores do SharePoint. O [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010 é executado em servidores de aplicativos em um farm do SharePoint 2010, e usa os recursos e a infraestrutura do SharePoint para dar suporte a operações do servidor. Para instalar o [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] para uma versão do SharePoint, use o assistente de instalação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Após a instalação, siga estas etapas:  

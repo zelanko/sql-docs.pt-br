@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: stored-procedures
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sp_rda_set_rpo_duration
@@ -19,12 +17,12 @@ ms.assetid: 95c80c5b-9252-4612-9ea7-544c48834fd2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 61b425d999448f4a5b4d8f833fc0ae32cb3291e7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 11336658a557d9a2ceced08425a12963dd15782e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37981397"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47685224"
 ---
 # <a name="syssprdasetrpoduration-transact-sql"></a>sys.sp_rda_set_rpo_duration (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +51,7 @@ sp_rda_set_rpo_duration [ @duration_hrs = ] duration_hrs
 ## <a name="permissions"></a>Permissões    
  Exige permissões db_owner.    
     
-## <a name="remarks"></a>Remarks    
+## <a name="remarks"></a>Comentários    
  Obtenha o valor atual executando [sp_rda_get_rpo_duration &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-get-rpo-duration-transact-sql.md).    
     
 ## <a name="see-also"></a>Consulte também    

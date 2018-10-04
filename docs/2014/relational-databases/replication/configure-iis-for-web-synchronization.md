@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - IIS server configuration [SQL Server replication]
 - websync.log
 - Web synchronization, IIS servers
 ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
-caps.latest.revision: 86
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5556c3e3392dd52fdd27acacd6c3320b7d9fbff0
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: ca646f4df2976d75ee6665731e5c5641bbb8d982
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40395616"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48176066"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>Configurar IIS para sincronização da Web
   Os procedimentos neste tópico compõem a segunda etapa para configurar a sincronização da Web para replicação de mesclagem. Esta etapa é executada depois que você habilita uma publicação para sincronização da Web. Para obter uma visão geral do processo de configuração, consulte [Configurar Sincronização da Web](configure-web-synchronization.md). Depois de concluir os procedimentos neste tópico, continue na terceira etapa, configurando uma assinatura para usar a sincronização da Web. A terceira etapa é descrita nos seguintes tópicos:  
@@ -34,7 +31,7 @@ ms.locfileid: "40395616"
   
 -   RMO: [Como configurar uma assinatura para usar sincronização da Web (programação RMO)](http://msdn.microsoft.com/library/ms345207.aspx)  
   
- A sincronização da Web usa um computador que esteja executando o IIS (Serviços de Informações da Internet) da [!INCLUDE[msCoName](../../includes/msconame-md.md)] para sincronizar assinaturas pull para publicações de mesclagem. Há suporte para o IIS versão 5.0, IIS versão 6.0 e IIS versão 7.0. O Assistente para Configurar a Sincronização da Web não tem suporte no IIS versão 7.0.  
+ A sincronização da Web usa um computador que esteja executando o IIS (Serviços de Informações da Internet) da [!INCLUDE[msCoName](../../includes/msconame-md.md)] para sincronizar assinaturas pull para publicações de mesclagem. As versões 5.0, 6.0 e 7.0 do IIS são compatíveis. O Assistente para Configurar a Sincronização da Web não tem suporte no IIS versão 7.0.  
   
 > [!IMPORTANT]  
 >  Certifique-se de que seu aplicativo use apenas versões [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] ou posteriores e que as versões anteriores do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] não estejam instaladas no servidor IIS. Versões anteriores do [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] podem causar erros. Esses erros incluem o seguinte: "Formato inválido de uma mensagem durante a sincronização da Web. Verifique se os componentes de replicação estão adequadamente configurados no servidor Web".  

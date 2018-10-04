@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - FOR XML clause, nested FOR XML queries
 - queries [XML in SQL Server], nested FOR XML
 - nested FOR XML queries
 ms.assetid: 7604161a-a958-446d-b102-7dee432979d0
-caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fb5b70541c6fb01f04be891bfda72acb55d9e7c0
-ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
+ms.openlocfilehash: a804585f215b7328890d2f0400c77307af7b1b4b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43888832"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211136"
 ---
 # <a name="use-nested-for-xml-queries"></a>Usar consultas FOR XML aninhadas
   O `xml` tipo de dados e o [diretiva TYPE em consultas FOR XML](type-directive-in-for-xml-queries.md) permitem que o XML retornado por consultas FOR XML seja processado no servidor e no cliente.  

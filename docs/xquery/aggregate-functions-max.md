@@ -4,33 +4,27 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
 - max function [XQuery]
 - fn:max function
 ms.assetid: 5ee625c0-044a-4cda-b210-02b64e619d65
-caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a53b02bc682bf7b3c918a02d5a16dc326ca3a594
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 814d8b0d33c55bd6aac77965d19a403ee7aec0c0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37983384"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47625144"
 ---
-# <a name="aggregate-functions---max"></a>Funções de agregação – máximo
+# <a name="aggregate-functions---max"></a>Funções de Agregação – max
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Retorna de uma sequência de valores atômicos, *$arg*, o item cujo valor é maior do que todos os outros.  
@@ -46,7 +40,7 @@ fn:max($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
  *$arg*  
  Sequência de valores atômicos do qual deve ser retornado o valor máximo.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Todos os tipos de valores atomizados que são passados para **Max ()** têm que ser subtipos do mesmo tipo base. Tipos base aceitos são os tipos que oferecem suporte a **gt** operação. Esses tipos incluem os três tipos base numéricos internos, os tipos base de data/hora, xs:string, xs:boolean e xdt:untypedAtomic. Valores do tipo xdt:untypedAtomic são convertidos em xs:double. Se há uma mistura desses tipos, ou se outros valores de outros tipos são passados, um erro estático será gerado.  
   
  O resultado de **Max ()** recebe o tipo base dos tipos passados como xs: Double no caso de XDT: untypedatomic. Se a entrada estiver estaticamente vazia, vazio será implícito e um erro estático será gerado.  

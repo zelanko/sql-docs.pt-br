@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rep.replconflictviewer.cvmerge.f1
 ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923
-caps.latest.revision: 23
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e627b0cec731afa34d12397c90d13fe0ddabdd33
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5ac6813542099b955b7430309fe6629f6a5648af
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210996"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48156066"
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Visualizador de Conflitos de Replicação da Microsoft (replicação de mesclagem)
   O Visualizador de Conflitos de Replicação permite exibir qualquer conflito ocorrido durante a sincronização de replicação. Os conflitos ocorrem quando os mesmos dados são modificados em dois servidores separados, por exemplo, no Publicador e no Assinante, ou em dois Assinantes diferentes. A replicação resolve conflitos automaticamente usando o resolvedor de conflitos que você selecionou quando o artigo foi criado. No entanto, o Visualizador de Conflitos de Replicação permite escolher uma resolução diferente para o conflito quando necessário. Podem ocorrer os seguintes conflitos:  

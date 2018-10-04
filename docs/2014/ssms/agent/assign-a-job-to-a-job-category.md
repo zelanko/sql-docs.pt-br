@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - jobs [SQL Server Agent], assigning
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - SQL Server Agent jobs, assigning
 - assigning job to category
 ms.assetid: a9ea65a2-1d73-4582-a335-63adeb450cb6
-caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fddc320f13c39d12577eb55cf83bf3a1c3605bc0
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 645953aa9864eb867617dc8aacd71735d978d4c7
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43817742"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48177196"
 ---
 # <a name="assign-a-job-to-a-job-category"></a>Atribuir um trabalho a uma categoria de trabalho
   Este tópico descreve como atribuir trabalhos do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent a categorias de trabalho no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] ou o SQL Server Management Objects.  

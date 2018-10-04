@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQLServer:SQL Statistics
 - SQL Statistics object
 ms.assetid: da7dbb4b-f632-45a0-b1ab-c35cc2695c86
-caps.latest.revision: 30
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 57fb6867343a62b95465d5c67fbd587e806e8002
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: f6991ed3113f577a767229010e1b9a3af09e86e3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43811092"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48187246"
 ---
 # <a name="sql-server-sql-statistics-object"></a>SQL Server, objeto SQL Statistics
   O objeto **SQLServer:SQL Statistics** no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece contadores para monitorar a compilação e o tipo de solicitações enviadas a uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A monitoração do número de compilações e recompilações de consultas e do número de lotes recebidos por uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornece uma indicação da velocidade com que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está processando as consultas do usuário e o grau de eficácia com que o otimizador de consulta está processando as consultas.  

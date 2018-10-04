@@ -5,7 +5,6 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.deletedacwizard.introduction.f1
@@ -21,12 +20,12 @@ ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7d31a8856f4fcefffb0fca4989789643d714d251
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: f92e05d76fc3d3c585667045261649f91ce303d9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43808372"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48183696"
 ---
 # <a name="delete-a-data-tier-application"></a>Excluir um Aplicativo da Camada de Dados
   Você poderá excluir um aplicativo da camada de dados usando o Assistente para Excluir Aplicativo da Camada de Dados ou um script do Windows PowerShell. É possível especificar se o banco de dados associado será retido, desanexado ou removido.  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - logical Not (!)
 - '! (logical Not)'
 ms.assetid: d5c4d1e1-7be4-4d25-bcd9-5b6ddb53b3b3
-caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 119efb0b0957e55c1563d193593854cebfb87524
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 30d3e56f69335b4dc90f7af31790c3c1e02242de
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37213386"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48169107"
 ---
 # <a name="-logical-not-ssis-expression"></a>! (Não lógico) (Expressão do SSIS)
   Nega um operando booliano.  
@@ -45,7 +42,7 @@ ms.locfileid: "37213386"
 ## <a name="result-types"></a>Tipos de resultado  
  DT_BOOL  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A tabela a seguir mostra o resultado da operação publicação.  
   
 |Expressão booliana original|Depois de aplicar o operador|  

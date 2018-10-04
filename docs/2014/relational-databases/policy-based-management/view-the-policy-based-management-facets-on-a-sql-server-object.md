@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Policy-Based Management, view facets
 ms.assetid: 5f423b9f-a6c4-41a7-9d8d-8f4926ce1fb4
-caps.latest.revision: 7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 43374b6ebcf661b9207e39979684bafe2bd98876
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 648de1ee5d44dcfab7d686a69de20f9dd272db19
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43819472"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48214016"
 ---
 # <a name="view-the-policy-based-management-facets-on-a-sql-server-object"></a>Exibir as facetas de Gerenciamento Baseado em Políticas em um objeto do SQL Server
   Este tópico descreve como exibir todas as facetas do Gerenciamento Baseado em Políticas aplicadas a um objeto do SQL Server específico no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
-caps.latest.revision: 19
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: aac25e3bdab6ab5f52be0d5a443075ecbe05eb0d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 45e874ab6ed6f73ab5f0c27081daf200971603d1
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37193330"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48206176"
 ---
 # <a name="sql-server-data-files-in-windows-azure"></a>Arquivos de dados do SQL Server no Windows Azure
   Arquivos de dados do SQL Server no Windows Azure permitem o suporte nativo para os arquivos de banco de dados do SQL Server armazenados como blobs do Windows Azure. Ele permite que você crie um banco de dados do SQL Server executado localmente ou em uma máquina virtual no Windows Azure com um local de armazenamento dedicado para seus dados no armazenamento de blob do Windows Azure. Esse aprimoramento simplifica especialmente a movimentação de bancos de dados entre computadores usando operações de anexação e desanexação. Além disso, ele fornece um local de armazenamento alternativo para os arquivos de backup de banco de dados ao permitir que você restaure de ou para o Armazenamento do Windows Azure. Em virtude disso, ele permite várias soluções híbridas ao fornecer vários benefícios para virtualização de dados, movimentação de dados, segurança e disponibilidade, baixo custo e facilidade de manutenção, o que proporciona alta disponibilidade e dimensionamento elástico.  
@@ -61,7 +58,7 @@ ms.locfileid: "37193330"
   
 -   Você deve armazenar as informações relacionadas ao contêiner de Armazenamento do Windows Azure, seu nome de política associado e a chave de SAS no repositório de credenciais do SQL Server.  
   
- O exemplo a seguir supõe que um contêiner de Armazenamento do Windows Azure tenha sido criado e uma política tenha sido criada com direitos de leitura, gravação, lista. Criar uma política em um contêiner gera uma chave de SAS que pode ser mantida não criptografada na memória e usada pelo SQL Server para acessar os arquivos de blob no contêiner. No trecho de código a seguir, substitua `'your SAS key'` por uma entrada semelhante à seguinte: `'sr=c&si=<MYPOLICYNAME>&sig=<THESHAREDACCESSSIGNATURE>'`. Para obter mais informações, consulte [criar e usar uma assinatura de acesso compartilhado](http://msdn.microsoft.com/library/azure/jj721951.aspx)  
+ O exemplo a seguir supõe que um contêiner de Armazenamento do Windows Azure tenha sido criado e uma política tenha sido criada com direitos de leitura, gravação, lista. Criar uma política em um contêiner gera uma chave de SAS que pode ser mantida não criptografada na memória e usada pelo SQL Server para acessar os arquivos de blob no contêiner. No snippet de código a seguir, substitua `'your SAS key'` por uma entrada semelhante à seguinte: `'sr=c&si=<MYPOLICYNAME>&sig=<THESHAREDACCESSSIGNATURE>'`. Para obter mais informações, consulte [criar e usar uma assinatura de acesso compartilhado](http://msdn.microsoft.com/library/azure/jj721951.aspx)  
   
 ```  
   

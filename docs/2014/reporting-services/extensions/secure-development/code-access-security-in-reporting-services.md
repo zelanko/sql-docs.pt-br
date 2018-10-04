@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - code groups [Reporting Services]
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - code access security [Reporting Services], about code access security
 - named permission sets [Reporting Services]
 ms.assetid: 97480368-1fc3-4c32-b1b0-63edfb54e472
-caps.latest.revision: 28
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 94cae16b2cfd437ff5e2e1d4878ffb027745e3ef
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 03c0dde2c3df8d8403897b660ed81ba7dbe75f43
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218896"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48163726"
 ---
 # <a name="code-access-security-in-reporting-services"></a>Segurança de acesso do código no Reporting Services
   A segurança de acesso do código gira em torno desses conceitos centrais: evidência, grupos de código e conjuntos de permissões nomeadas. No [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], os componentes Gerenciador de Relatórios, Desingner de Relatórios e Servidor de Relatório têm um arquivo de política que configura a segurança de acesso do código para assemblies personalizados, bem como para extensões de dados, entrega, renderização e segurança. As seções a seguir fornecem uma visão geral da segurança de acesso do código. Para obter informações mais detalhadas sobre os tópicos abordados nesta seção, consulte “Modelo de política de segurança” na documentação do SDK do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  

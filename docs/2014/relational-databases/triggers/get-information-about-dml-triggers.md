@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - metadata [SQL Server], triggers
@@ -19,12 +17,12 @@ ms.assetid: 37574aac-181d-4aca-a2cc-8abff64237dc
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 71307a1504016fdfaaae5b0d04bf62d509a60439
-ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
+ms.openlocfilehash: 780616b452865324c3a34abcaa6dd5935123151f
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37418915"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48203006"
 ---
 # <a name="get-information-about-dml-triggers"></a>Obter informações sobre gatilhos DML
   Este tópico descreve como obter informações sobre os gatilhos DML no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Essas informações podem incluir os tipos de gatilhos em uma tabela, o nome de um gatilho, seu proprietário e a data em que foi criado ou modificado. Se o gatilho não tiver sido criptografado quando foi criado, você obterá a definição do gatilho. A definição ajudará a entender como um gatilho afeta a tabela na qual está definido. Além disso, você pode descobrir os objetos que um gatilho específico usa. Com essas informações, você pode identificar os objetos que afetam o gatilho se eles são alterados ou excluídos do banco de dados.  

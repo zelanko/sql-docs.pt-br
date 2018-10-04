@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8930c63c-bc6f-46c2-b428-b3c29ee89a7d
-caps.latest.revision: 12
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6d6dc6dedc92fd70d4b3a9e1adf6eb6deb4bc3bc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c6d1d614ee66731a24355a918678226dcc54ae35
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37245236"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48201646"
 ---
 # <a name="enable-logging-for-package-execution-on-the-ssis-server"></a>Habilitar o log para a execução do pacote no servidor SSIS
   Este procedimento descreve como definir ou alterar o nível de log para um pacote quando você executa um pacote implantado no servidor [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. O nível de log que você define ao executar o pacote anula o log do pacote configurado usando o [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Consulte [Habilitar o log de pacote no SQL Server Data Tools](../../2014/integration-services/enable-package-logging-in-sql-server-data-tools.md) para obter mais informações.  
@@ -48,7 +45,7 @@ ms.locfileid: "37245236"
   
 |Nível de log|Description|  
 |-------------------|-----------------|  
-|Nenhum|O log está desativado. Apenas o status da execução do pacote é registrado em log.|  
+|None|O log está desativado. Apenas o status da execução do pacote é registrado em log.|  
 |Basic|Todos os eventos são registrados em log, menos personalizados e de diagnóstico. Este é o valor padrão.|  
 |Desempenho|Apenas estatísticas de desempenho e eventos OnError e OnWarning são registrados em log.<br /><br /> O relatório **Desempenho de Execução** mostra a hora ativa e o tempo total para os componentes de fluxo de dados do pacote. Estas informações estão disponíveis quando o nível de log da última execução do pacote foi definido como **desempenho** ou **detalhado**. Para saber mais, confira [Reports for the Integration Services Server](../../2014/integration-services/reports-for-the-integration-services-server.md).<br /><br /> A exibição [catalog.execution_component_phases](/sql/integration-services/system-views/catalog-execution-component-phases) mostra as horas de início e de término para os componentes de fluxo de dados, para cada fase de uma execução. Esta exibição mostra essas informações para esses componentes apenas quando o nível de log da execução do pacote é definido como **Desempenho** ou **Detalhado**.|  
 |Detalhado|Todos os eventos são registrados em log, inclusive eventos personalizados e de diagnóstico.<br /><br /> Um exemplo de um evento de diagnóstico é o evento DiagnosticEx. Sempre que uma tarefa Executar Pacote executa um pacote filho, ela registra esse evento. A mensagem de evento consiste nos valores de parâmetros passados para pacotes filho<br /><br /> O valor da coluna de mensagem para DiagnosticEx é texto XML. para obter informações sobre a ferramenta de configuração e recursos adicionais. Para exibir o texto da mensagem para uma execução de pacote, consulte a exibição [catalog.operation_messages &#40;Banco de Dados SSISDB&#41;](/sql/integration-services/system-views/catalog-operation-messages-ssisdb-database).<br /><br /> Observação: Eventos personalizados incluem os eventos são registrados pelo [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] tarefas. Para saber mais, veja [Custom Messages for Logging](../../2014/integration-services/custom-messages-for-logging.md).<br /><br /> A exibição [catalog.execution_data_statistics](../relational-databases/statistics/statistics.md) mostra uma linha cada vez que um componente de fluxo de dados envia dados a um componente downstream, para determinada execução do pacote. O nível de log deve ser definido como **Detalhado** para capturar essas informações na exibição.|  

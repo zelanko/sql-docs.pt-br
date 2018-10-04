@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, target servers
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - master servers [SQL Server], defecting target servers
 - defecting target servers
 ms.assetid: a6da262b-7b38-4ce4-bfd6-6a557c6e8a84
-caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 28a40461e72b61dfb4063e091893e0ba183855cd
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: c80098677d43eeb8fa5cf4a76a2c5f1ef0e49180
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43818322"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48198546"
 ---
 # <a name="defect-a-target-server-from-a-master-server"></a>Remover um servidor de destino de um servidor mestre
   Este tópico descreve como remover um servidor de destino de um servidor mestre no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] ou SQL Server Management Objects (SMO). Execute este procedimento a partir do servidor de destino.  

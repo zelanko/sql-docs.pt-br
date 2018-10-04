@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - input properties [Integration Services]
 - component properties [Integration Services]
 ms.assetid: 51973502-5cc6-4125-9fce-e60fa1b7b796
-caps.latest.revision: 45
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5bc0d0f75f911c27ec8b117653aef978a615f3e6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5d9d641ccb2a0e261ea899f4fc086d4ad8de0643
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37169311"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48160636"
 ---
 # <a name="common-properties"></a>Propriedades comuns
   Os objetos de fluxo de dados no modelo de objeto do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] têm propriedades comuns e personalizadas no componente, na entrada e saída e nos níveis de colunas de entrada e saída. Muitas propriedades têm valores somente leitura, atribuídos em tempo de execução pelo mecanismo de fluxo de dados.  
