@@ -1,34 +1,31 @@
 ---
-title: Sincronizar o método (RDS) | Microsoft Docs
+title: Método Synchronize (RDS) | Microsoft Docs
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.prod: sql
 ms.prod_service: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Synchronize method [ADO]
 ms.assetid: 7af42866-7db2-4174-8251-388a2cf741f2
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 705b1ef1cad19886848cd383fecb20e46074f5d1
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 39e5aef4700212c30d3e75d95ff2eaf40b2ed439
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35288835"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47815794"
 ---
-# <a name="synchronize-method-rds"></a>Método (RDS) de sincronização
-Sincronize o conjunto de registros fornecido com o banco de dados especificado pela cadeia de conexão para uso no ADO 2.5 e superior.  
+# <a name="synchronize-method-rds"></a>Método Synchronize (RDS)
+Sincronize o determinado conjunto de registros com o banco de dados especificado pela cadeia de conexão para uso em ADO 2.5 e posterior.  
   
 > [!IMPORTANT]
->  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (veja o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Aplicativos que usam o RDS devem migrar para [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Começando com o Windows 8 e Windows Server 2012, os componentes de servidor RDS não estão mais incluídos no sistema operacional Windows (consulte o Windows 8 e [manual de compatibilidade do Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) para obter mais detalhes). Componentes de cliente RDS serão removidos em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Devem ser migrados para aplicativos que usam o RDS [WCF Data Service](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -39,36 +36,36 @@ object.Synchronize(ConnectionString As String, HandlerString As String, lSynchro
   
 #### <a name="parameters"></a>Parâmetros  
  *ConnectionString*  
- Uma cadeia de caracteres usada para conexão com o provedor OLE DB em que a solicitação será enviada. Se um manipulador é usado, o manipulador pode editar ou substituir a cadeia de caracteres de conexão.  
+ Uma cadeia de caracteres usada para conexão com o provedor OLE DB em que a solicitação será enviada. Se um manipulador for usado, o manipulador pode editar ou substituir a cadeia de caracteres de conexão.  
   
  *HandlerString*  
- A cadeia de caracteres identifica o manipulador a ser usado com essa execução. A cadeia de caracteres contém duas partes. A primeira parte contém o nome (ProgID) do manipulador a ser usado. A segunda parte da cadeia de caracteres contém argumentos a serem passados para o manipulador. Como a cadeia de caracteres de argumentos é interpretada é manipulador específico. As duas partes são separadas pela primeira instância de uma vírgula na cadeia de caracteres (embora a cadeia de caracteres de argumentos pode conter vírgulas adicionais). Os argumentos são opcionais.  
+ A cadeia de caracteres identifica o manipulador a ser usado com essa execução. A cadeia de caracteres contém duas partes. A primeira parte contém o nome (ProgID) do manipulador a ser usado. A segunda parte da cadeia de caracteres contém os argumentos a serem passados para o manipulador. Como a cadeia de caracteres de argumentos é interpretada é específico do manipulador. As duas partes são separadas pela primeira instância de uma vírgula na cadeia de caracteres (embora a cadeia de caracteres de argumentos pode conter vírgulas adicionais). Os argumentos são opcionais.  
   
  *lSynchronizeOptions*  
  Uma máscara de bits de opções de sincronização.  
   
  1 =*UpdateTransact* atualizações para o banco de dados são encapsuladas em uma transação. A transação será anulada se qualquer uma das atualizações falhar.  
   
- 2 =*RefreshWithUpdate* faz com que linhas de status a ser retornado quando nenhuma *atualizar* nem *RefreshConflicts* está definido.  
+ 2 =*RefreshWithUpdate* causas de status a ser retornado quando nenhuma linha *atualize* nem *RefreshConflicts* está definido.  
   
- 4 =*atualização* o conjunto de registros é atualizado com dados atuais do banco de dados. Atualizações pendentes não são propagadas para o banco de dados. Se este bit não for definido, o conjunto de registros não é atualizado e todas as atualizações pendentes são enviados por push para o banco de dados.  
+ 4 =*refresh* o conjunto de registros é atualizado com dados atuais do banco de dados. Atualizações pendentes não são propagadas para o banco de dados. Se este bit não está definido, o conjunto de registros não é atualizado, e todas as atualizações pendentes são enviados por push para o banco de dados.  
   
- 8 =*RefreshConflicts* não atualizarão as linhas com alterações pendentes. As linhas que não conseguiu atualizar são atualizadas com dados atuais do banco de dados.  
+ 8 =*RefreshConflicts* quaisquer linhas com alterações pendentes não conseguir atualizar. As linhas que não conseguiu atualizar são atualizadas com dados atuais do banco de dados.  
   
  *ppRecordset*  
  Um ponteiro para o conjunto de registros a serem sincronizados.  
   
  *pStatusArray*  
- Uma variante usada para retornar uma matriz segura do status de linha para as linhas afetadas por sincronizar. Não defina se nenhuma das seguintes opções de sincronização são definidas: *RefreshWithUpdate*, *atualizar* e *RefreshConflicts*.  
+ Uma variante usada para retornar uma matriz segura de status de linha para as linhas afetadas por sincronizar. Não defina se nenhuma das seguintes opções de sincronização são definidas: *RefreshWithUpdate*, *atualize* e *RefreshConflicts*.  
   
  *lcid*  
- O LCID usado para criar os erros que são retornados no *pInformation*.  
+ O LCID é usado para compilar todos os erros que são retornados em *pInformation*.  
   
  *pInformation*  
  Um ponteiro para o erro de informações retornado por **Execute**. Se for NULL, nenhuma informação de erro é retornada.  
   
-## <a name="remarks"></a>Remarks  
- O *HandlerString* parâmetro pode ser nulo. O que acontece nesse caso depende de como o servidor RDS é configurado. Uma cadeia de caracteres do manipulador de "MSDFMAP.handler" indica que o manipulador fornecido pela Microsoft (Msdfmap.dll) deve ser usado. Uma cadeia de caracteres do manipulador de "MASDFMAP.handler,sample.ini" indica que o manipulador Msdfmap.dll deve ser usado e que o argumento "sample.ini" deve ser passado para o manipulador. Msdfmap.dll interpretará, em seguida, o argumento como uma direção para usar o sample.ini para verificar se as cadeias de caracteres de conexão e consulta.  
+## <a name="remarks"></a>Comentários  
+ O *HandlerString* parâmetro pode ser nulo. O que acontece nesse caso depende de como o servidor RDS é configurado. Uma cadeia de caracteres do manipulador de "MSDFMAP.handler" indica que o manipulador fornecido pela Microsoft (Msdfmap.dll) deve ser usado. Uma cadeia de caracteres do manipulador de "MASDFMAP.handler,sample.ini" indica que o manipulador Msdfmap.dll deve ser usado e que o argumento "sample.ini" deve ser passado para o manipulador. Msdfmap.dll interpretará, em seguida, o argumento como uma direção de usar o sample.ini para verificar as cadeias de conexão e consulta.  
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)

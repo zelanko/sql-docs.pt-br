@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - "10040"
@@ -15,16 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - Expression dialog box [Reporting Services]
 ms.assetid: e6c74ccb-4594-4d4f-b958-618d710e34eb
-caps.latest.revision: 63
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 747943591907b1025250e3554270e9dda14d3e51
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2b2ec18b03081d3469e9187db6043ba27406389b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37325636"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48207672"
 ---
 # <a name="expression-dialog-box"></a>Caixa de diálogo Expressão
   Use o **expressão** caixa de diálogo para gravar [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] propriedades de itens de expressões de relatório. É possível usar expressões para definir muitas propriedades, incluindo cor, fonte e bordas. Em tempo de execução, o processador de relatório avalia as expressões e substitui o resultado do valor da propriedade.  
@@ -40,7 +37,7 @@ ms.locfileid: "37325636"
 ## <a name="expression-constructs"></a>Construções de expressões  
  As expressões começam com um sinal de igual (=) e podem incluir constantes, literais, operadores e referências a campos internos, coleções internas, funções internas, funções da biblioteca em tempo de execução do [!INCLUDE[vbprvb](../includes/vbprvb-md.md)], classes do common language runtime do [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] e funções personalizadas. A lista a seguir descreve as categorias e os valores que podem ser adicionados a uma expressão.  
   
- **Definir expressão para:***\<PropertyName >  *  
+ **Definir expressão para:***\<PropertyName >*   
  O nome da propriedade para a qual você está definindo uma expressão. Também é possível definir essa propriedade por nome, no painel Propriedades.  
   
  **Constantes**  
@@ -54,7 +51,7 @@ ms.locfileid: "37325636"
  **Parâmetros**  
  Fornece uma lista de parâmetros de relatório.  
   
- **Campos (** * \<conjunto de dados selecionado >* **)**  
+ **Campos (**  *\<conjunto de dados selecionado >* **)**  
  Exibe a lista de campos para o conjunto de dados selecionado na categoria Conjuntos de dados. Clique duas vezes em um campo para copiá-lo na caixa **Expressão** .  
   
  **Conjuntos de dados**  

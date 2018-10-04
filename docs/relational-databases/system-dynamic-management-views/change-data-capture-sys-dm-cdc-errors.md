@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_cdc_errors_TSQL
@@ -19,18 +17,17 @@ helpviewer_keywords:
 - sys.dm_cdc_errors dynamic management view
 - change data capture [SQL Server], error reporting
 ms.assetid: 898f2d76-9e63-45ef-94da-8034e86004ab
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 488e9eb3695dea1eada4b57d092451d40131f419
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: ed8c72e0114804780cd3ee090b536eb28135e628
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468582"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47743264"
 ---
-# <a name="change-data-capture---sysdmcdcerrors"></a>Change Data Capture - sys.DM cdc_errors
+# <a name="change-data-capture---sysdmcdcerrors"></a>Change Data Capture - DM cdc_errors
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retorna uma linha para cada erro encontrado durante a sessão de verificação de log do Change Data Capture.  
@@ -38,22 +35,22 @@ ms.locfileid: "34468582"
  
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|**session_id**|**Int**|ID da sessão.<br /><br /> 0 = o erro não ocorreu em uma sessão de verificação de log.|  
-|**phase_number**|**Int**|Número que indica a fase em que a sessão estava no momento em que o erro ocorreu. Para obter uma descrição de cada fase, consulte [cdc_log_scan_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md).|  
+|**session_id**|**int**|ID da sessão.<br /><br /> 0 = o erro não ocorreu em uma sessão de verificação de log.|  
+|**phase_number**|**int**|Número que indica a fase em que a sessão estava no momento o erro ocorreu. Para obter uma descrição de cada fase, consulte [DM cdc_log_scan_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md).|  
 |**entry_time**|**datetime**|A data e hora em que o erro foi registrado. Esse valor corresponde ao carimbo de data/hora no log de erros do SQL.|  
-|**error_number**|**Int**|A identificação da mensagem de erro.|  
-|**error_severity**|**Int**|O nível de severidade da mensagem, entre 1 e 25.|  
-|**error_state**|**Int**|Número de estado do erro.|  
+|**error_number**|**int**|A identificação da mensagem de erro.|  
+|**error_severity**|**int**|O nível de severidade da mensagem, entre 1 e 25.|  
+|**error_state**|**int**|Número de estado do erro.|  
 |**error_message**|**nvarchar(1024)**|Texto da mensagem do erro.|  
 |**start_lsn**|**nvarchar(23)**|Valor LSN de início das linhas sendo processadas quando o erro ocorreu.<br /><br /> 0 = o erro não ocorreu em uma sessão de verificação de log.|  
 |**begin_lsn**|**nvarchar(23)**|Valor LSN de início da transação sendo processada quando o erro ocorreu.<br /><br /> 0 = o erro não ocorreu em uma sessão de verificação de log.|  
 |**sequence_value**|**nvarchar(23)**|Valor LSN das linhas sendo processadas quando o erro ocorreu.<br /><br /> 0 = o erro não ocorreu em uma sessão de verificação de log.|  
   
-## <a name="remarks"></a>Remarks  
- **sys.DM cdc_errors** contém informações de erro para 32 sessões anteriores.  
+## <a name="remarks"></a>Comentários  
+ **DM cdc_errors** contém informações de erro para das 32 sessões anteriores.  
   
 ## <a name="permissions"></a>Permissões  
- Requer permissão VIEW DATABASE STATE para consultar o **sys.DM cdc_errors** exibição de gerenciamento dinâmico. Para obter mais informações sobre permissões sobre exibições de gerenciamento dinâmico, consulte [funções e exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
+ Requer permissão VIEW DATABASE STATE para consultar o **DM cdc_errors** exibição de gerenciamento dinâmico. Para obter mais informações sobre permissões de exibições de gerenciamento dinâmico, consulte [funções e exibições de gerenciamento dinâmico &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
 ## <a name="see-also"></a>Consulte também  
  [sys.dm_cdc_log_scan_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md)   

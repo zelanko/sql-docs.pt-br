@@ -6,24 +6,21 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Positions collection [ADO MD], members
 ms.assetid: 56091fcb-71e1-463a-b8ae-c09108eece2f
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f5c9f5db7676793a53a06ded38a9be3f3274eee2
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 629a193253eac34b99accad3c17ccfb861ea398d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35284495"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47762914"
 ---
-# <a name="positions-collection-properties-methods-and-events"></a>Propriedades de coleção de posições, métodos e eventos
+# <a name="positions-collection-properties-methods-and-events"></a>Propriedades, métodos e eventos da coleção Positions
 ## <a name="properties"></a>Propriedades  
  [Propriedade Count](../../../ado/reference/ado-api/count-property-ado.md)  
   

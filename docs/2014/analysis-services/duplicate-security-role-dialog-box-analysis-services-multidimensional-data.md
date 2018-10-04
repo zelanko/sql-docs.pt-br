@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.duplicaterole.f1
 ms.assetid: 0420a2f6-6d11-4d6c-a889-31e8ef55bbee
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 02aaae2b8f2b067f8c728220522294e93f295a2f
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1787687db39fe4a9d9516c3753d59f59907dce47
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37202146"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48194546"
 ---
 # <a name="analysis-services-duplicate-security-role-dialog-box-analysis-services---multidimensional-data"></a>Caixa de diálogo Função de Segurança Duplicada do Analysis Services (Analysis Services - Dados Multidimensionais)
   Use o **duplicados segurança função do Analysis Services - \<nome do banco de dados >- \<cópia do nome da função >** da caixa de diálogo [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] duplicar uma função existente em um [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] banco de dados. É possível exibir a caixa de diálogo **Duplicar Função** clicando com o botão direito do mouse em uma função no Explorador de Objetos e selecionando **Duplicar**.  

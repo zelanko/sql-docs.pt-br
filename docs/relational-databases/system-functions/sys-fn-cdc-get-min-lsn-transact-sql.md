@@ -4,14 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server (starting with 2008)
 f1_keywords:
 - sys.fn_cdc_get_min_lsn
 - fn_cdc_get_min_lsn
@@ -23,21 +18,20 @@ helpviewer_keywords:
 - fn_cdc_get_min_lsn
 - sys.fn_cdc_get_min_lsn
 ms.assetid: bd49e28a-128b-4f6b-8545-6a2ec3f4afb3
-caps.latest.revision: 17
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4c4c6a9bf83e83628891104f0c95a6baefa08234
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7f1be9ff365412444f87ef0abcc3795301d98cf7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33230437"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47825226"
 ---
 # <a name="sysfncdcgetminlsn-transact-sql"></a>sys.fn_cdc_get_min_lsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Retorna o valor da coluna start_lsn para a instância de captura especificada no [change_tables](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md) tabela do sistema. Esse valor representa o ponto de extremidade inferior do intervalo de validade da instância de captura.  
+  Retorna o valor da coluna start_lsn para a instância de captura especificada a [change_tables](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md) tabela do sistema. Esse valor representa o ponto de extremidade inferior do intervalo de validade da instância de captura.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,12 +44,12 @@ sys.fn_cdc_get_min_lsn ( 'capture_instance_name' )
   
 ## <a name="arguments"></a>Argumentos  
  **'** *capture_instance_name* **'**  
- É o nome da instância de captura. *capture_instance_name* é **sysname**.  
+ É o nome da instância de captura. *capture_instance_name* está **sysname**.  
   
 ## <a name="return-types"></a>Tipos de retorno  
  **binary(10)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Retorna 0x00000000000000000000 quando a instância de captura não existe ou quando o chamador não está autorizado a acessar os dados de alteração associados a uma instância de captura.  
   
  Essa função é usada normalmente para identificar o ponto de extremidade inferior da linha do tempo do Change Data Capture associado à instância de captura. Você também pode usar essa função para validar os pontos de extremidade de um intervalo de consulta que estejam dentro da linha de tempo da instância de captura antes de solicitar dados de alteração. É importante executar essas verificações porque o ponto de extremidade inferior da instância de captura é alterado quando a limpeza é executada nas tabelas de alteração. Se o período entre as solicitações de dados de alteração for significativo, mesmo um ponto de extremidade inferior que seja definido para o ponto de extremidade superior da solicitação de dados de alteração anterior poderá ficar fora da linha do tempo atual.  

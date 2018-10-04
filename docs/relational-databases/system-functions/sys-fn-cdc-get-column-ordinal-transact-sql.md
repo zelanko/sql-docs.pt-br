@@ -4,14 +4,9 @@ ms.custom: ''
 ms.date: 01/25/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server (starting with 2008)
 f1_keywords:
 - sys.fn_cdc_get_column_ordinal
 - fn_cdc_get_column_ordinal_TSQL
@@ -23,21 +18,20 @@ helpviewer_keywords:
 - fn_cdc_get_column_ordinal
 - sys.fn_cdc_get_column_ordinal
 ms.assetid: 4bb21a57-2b94-4208-8bdf-6a3e2681d881
-caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 70ca20e98ba1330482fd19265b7f54f07d9711e4
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b82aac8f856c1e057f389ac0af7d06dfee549fa5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33229843"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47624204"
 ---
 # <a name="sysfncdcgetcolumnordinal-transact-sql"></a>sys.fn_cdc_get_column_ordinal (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Retorna o ordinal de coluna da coluna especificada como ele aparece no [alterar tabela](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) associado com a instância de captura especificada.  
+  Retorna o ordinal da coluna especificada como ele aparece na [tabela de alteração](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) associado com a instância de captura especificada.  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,16 +44,16 @@ sys.fn_cdc_get_column_ordinal ( 'capture_instance','column_name')
   
 ## <a name="arguments"></a>Argumentos  
  **'** *capture_instance* **'**  
- É o nome da instância de captura na qual a coluna especificada é identificada como uma coluna capturada. *capture_instance* é **sysname**.  
+ É o nome da instância de captura na qual a coluna especificada é identificada como uma coluna capturada. *capture_instance* está **sysname**.  
   
  **'** *column_name* **'**  
- É a coluna na qual os dados serão reportados. *nome da coluna* é **sysname**.  
+ É a coluna na qual os dados serão reportados. *column_name* está **sysname**.  
   
 ## <a name="return-type"></a>Tipo de retorno  
- **Int**  
+ **int**  
   
-## <a name="remarks"></a>Remarks  
- Esta função é usada para identificar a posição ordinal de uma coluna capturada dentro da máscara de atualização do Change Data Capture. Ele é usado principalmente em conjunto com a função [sys. fn_cdc_is_bit_set](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md) para extrair informações da máscara de atualização ao consultar dados de alteração.  
+## <a name="remarks"></a>Comentários  
+ Esta função é usada para identificar a posição ordinal de uma coluna capturada dentro da máscara de atualização do Change Data Capture. É principalmente usada em conjunto com a função [fn_cdc_is_bit_set](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md) para extrair informações da máscara de atualização ao consultar dados de alteração.  
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão SELECT em todas as colunas capturadas da tabela de origem. Se uma função de banco de dados do componente do Change Data Capture estiver especificada para uma instância de captura, a associação naquela função também será requerida.  

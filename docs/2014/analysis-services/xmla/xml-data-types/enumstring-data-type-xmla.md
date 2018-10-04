@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - EnumString Data Type
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - EnumString data type
 ms.assetid: 9214195e-4539-419b-95ec-b7aa75e033ab
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ea4f9057c05d7be5a5f8d8591d27460540a377fe
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fb075a8c659fe264dbed7dd68654d1fb84fdf7a9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37224008"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48210227"
 ---
 # <a name="enumstring-data-type-xmla"></a>Tipo de dados EnumString (XMLA)
   Define um tipo de dados derivado que representa um conjunto de constantes nomeadas para um determinado enumerador.  
@@ -49,17 +46,17 @@ ms.locfileid: "37224008"
 |Característica|Description|  
 |--------------------|-----------------|  
 |Tipos de dados base|`string`|  
-|Tipos de dados derivados|Nenhum|  
+|Tipos de dados derivados|None|  
   
 ## <a name="data-type-relationships"></a>Relação do tipo de dados  
   
 |Relação|Elemento|  
 |------------------|-------------|  
-|Elementos pai|Nenhum|  
-|Elementos filho|Nenhum|  
-|Elementos derivados|Nenhum|  
+|Elementos pai|None|  
+|Elementos filho|None|  
+|Elementos derivados|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  XMLA (XML for Analysis) usa enumeração para limitar os valores de cadeia para um conjunto de configurações verificáveis. `EnumString` usa o tipo de dados XML `string` padrão. São especificados os valores específicos para cada uma das constantes nomeadas com a definição de enumerador. Os enumeradores são definidos ao adicioná-los para o [DISCOVER_ENUMERATORS](../../schema-rowsets/xml/discover-enumerators-rowset.md) linhas de esquema e pode ser recuperado usando o [Discover](../xml-elements-methods-discover.md) tipo de solicitação do método com o DISCOVER_ENUMERATORS.  
   
  A tabela a seguir descreve os enumeradores suportados por uma instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  

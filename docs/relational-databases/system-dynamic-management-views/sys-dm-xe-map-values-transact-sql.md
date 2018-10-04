@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_xe_map_values
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - sys.dm_xe_map_values dynamic management view
 - xe
 ms.assetid: c0c5dd7e-9cee-47e2-b65a-88194c00aa1f
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8c76c06d3ce9afba4560f2948c1776c801e00c73
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: e0adf93355baebd7be881d46c62f649c61245af4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34466082"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47680334"
 ---
 # <a name="sysdmxemapvalues-transact-sql"></a>sys.dm_xe_map_values (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +36,7 @@ ms.locfileid: "34466082"
 |-----------------|---------------|-----------------|  
 |nome|**nvarchar(60)**|O nome do mapa. nome é exclusivo em todo o sistema local. Não permite valor nulo.|  
 |object_package_guid|**uniqueidentifier**|O GUID do pacote que contém o mapa. Não permite valor nulo.|  
-|map_key|**Int**|O valor da chave interno. Não permite valor nulo.|  
+|map_key|**int**|O valor da chave interno. Não permite valor nulo.|  
 |map_value|**nvarchar(2048)**|Uma descrição do valor da chave. Não permite valor nulo.|  
   
 ## <a name="permissions"></a>Permissões  

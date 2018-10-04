@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DiscretizationMethod Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - DiscretizationMethod element
 ms.assetid: 4cfe015f-ad6c-47e1-8aff-c9c7677867b1
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6347db0e5d964b10112516b4c607a5185f247b65
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 75308b5270eb762236be22fc0838a480474898dc
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37252998"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48200467"
 ---
 # <a name="discretizationmethod-element-assl"></a>Elemento DiscretizationMethod (ASSL)
   Define o método a ser usado para diferenciação.  
@@ -59,9 +56,9 @@ ms.locfileid: "37252998"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|[DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md), [ScalarMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O valor do elemento `DiscretizationMethod` determina como os valores de `DimensionAttribute` ou `ScalarMiningStructureColumn` são diferenciados ou organizados em um conjunto específico de grupos. Para obter mais informações sobre os métodos de diferenciação, consulte [métodos de discretização &#40;mineração de dados&#41;](../../data-mining/discretization-methods-data-mining.md).  
   
  O valor desse elemento é limitado a uma das cadeias de caracteres listadas na tabela a seguir.  

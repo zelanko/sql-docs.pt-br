@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
-caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ee4d362dc90ac51f90c91d5fcdebd849c23a6882
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bc5b6d6738523d359c72b2e294fe1225004ca388
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37272332"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48059826"
 ---
 # <a name="reporting-services-data-alerts"></a>Alertas de dados do Reporting Services
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] são uma solução de alerta de dados que ajuda você a manter-se informado sobre os dados de relatório interessantes ou importantes para você, na hora certa. Usando dados de alerta você não precisa mais procurar informações, elas vêm até você.  
@@ -116,9 +113,9 @@ ms.locfileid: "37272332"
 ##  <a name="InstallAlerting"></a> Instalar os alertas de dados  
  O recurso de alertas de dados está disponível apenas quando o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] está instalado no modo integrado do SharePoint. Quando você instala o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no modo do SharePoint, a instalação cria automaticamente o banco de dados de alertas que armazena definições de alertas de dados e metadados de alertas, e duas páginas do SharePoint para gerenciamento de alertas, e adiciona o Designer de Alertas no site do SharePoint. Não há nenhuma etapa especial para execução, ou opções para definição de alertas durante a instalação.  
   
- Se você quiser saber mais sobre como instalar o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no modo do SharePoint, incluindo o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] que há de novo no serviço compartilhado [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] e [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] aplicativo de serviço que você deve criar e configurar antes de poder usar [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] recursos, consulte [instalar o Reporting Services SharePoint Mode para SharePoint 2010](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md) na biblioteca MSDN.  
+ Se você quiser saber mais sobre como instalar o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] no modo do SharePoint, inclusive o serviço compartilhado do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], que é novo no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] e no aplicativo do serviço [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] que você deve criar e configurar antes de poder usar recursos do [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], consulte [Instalar o Reporting Services no Modo do SharePoint para SharePoint 2010](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md) na biblioteca MSDN.  
   
- Como mostra o diagrama anterior deste tópico, os alertas de dados usam trabalhos do SQL Server Agent. Para criar os trabalhos, o SQL Server Agent deve estar em execução. Talvez você tenha configurado o SQL Server Agent para iniciar automaticamente quando instalou o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Se não, você pode iniciar o SQL Server Agent manualmente. Para obter mais informações, consulte [configurar o SQL Server Agent](../ssms/agent/configure-sql-server-agent.md) e [Iniciar, parar, pausar, retomar, reiniciar o mecanismo de banco de dados, o SQL Server Agent ou o serviço navegador do SQL Server](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
+ Como mostra o diagrama anterior deste tópico, os alertas de dados usam trabalhos do SQL Server Agent. Para criar os trabalhos, o SQL Server Agent deve estar em execução. Talvez você tenha configurado o SQL Server Agent para iniciar automaticamente quando instalou o [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Se não, você pode iniciar o SQL Server Agent manualmente. Para obter mais informações, confira [Configurar o SQL Server Agent](../ssms/agent/configure-sql-server-agent.md) e [Iniciar, parar, pausar, retomar e reiniciar os serviços Mecanismo de Banco de Dados, SQL Server Agent ou SQL Server Browser](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
  Você pode usar a página **Provisionar Assinaturas e Alertas** na Administração Central do SharePoint para descobrir se o SQL Server Agent está sendo executado e criar e baixar scripts [!INCLUDE[tsql](../includes/tsql-md.md)] personalizados que executa para conceder permissões ao SQL Server Agent. Se possível, gere também os scripts [!INCLUDE[tsql](../includes/tsql-md.md)] usando o PowerShell. Para obter mais informações, consulte [Provisionar assinaturas e alertas para aplicativos de serviço do SSRS](install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md).  
   

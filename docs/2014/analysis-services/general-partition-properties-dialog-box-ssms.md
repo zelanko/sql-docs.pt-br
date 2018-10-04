@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.partitionproperties.general.f1
 ms.assetid: efb505be-354f-4d23-8f2d-3e76fa50d27b
-caps.latest.revision: 11
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 54ef8ce15795f8744b8ab7d368c05892a2dc850a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 612a997e51e23c6b8d3b1860fbc74df79de6c73c
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37170147"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48211096"
 ---
 # <a name="general-partition-properties-dialog-box-ssms"></a>Geral (caixa de diálogo Propriedades da Partição) (SSMS)
   Use a página **Geral** da caixa de diálogo **Propriedades da Partição** no SQL Server Management Studio para definir as propriedades gerais de uma partição em um grupo de medidas para um cubo em um banco de dados do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -43,7 +40,7 @@ ms.locfileid: "37170147"
 |**Nome**|Exibe o nome da partição.|  
 |**Modo de processamento**|Selecione o modo de processamento da partição. Para obter mais informações sobre modos de processamento para [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] objetos, consulte [processamento de objeto de modelo Multidimensional](multidimensional-models/processing-a-multidimensional-model-analysis-services.md).|  
 |**ID da fonte de dados remotos**|Exibe o identificador da fonte de dados remota da qual são recuperados os dados de origem da partição.<br /><br /> Observação: essa propriedade contém um valor apenas para partições remotas.|  
-|**Fatia**|Exibe a expressão que identifica a fatia de dados representada pela partição.|  
+|**fatia**|Exibe a expressão que identifica a fatia de dados representada pela partição.|  
 |**Origem**|Exibe a tabela ou consulta que fornece os dados de origem da partição.|  
 |**Estado**|Exibe o estado do processamento atual da partição.|  
 |**Local de armazenamento**|Exibe a pasta na qual são armazenados os dados da partição.<br /><br /> Observação: essa propriedade conterá um valor apenas se um local de armazenamento diferente do local de armazenamento padrão for especificado para a instância do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  

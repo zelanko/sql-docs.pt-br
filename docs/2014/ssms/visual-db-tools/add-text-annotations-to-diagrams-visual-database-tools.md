@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - annotations [SQL Server]
 - database diagrams [SQL Server], annotations
 ms.assetid: 0dced59b-06cc-4600-9c27-430f501279e2
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8a6db90ca70e0cfeb0e3a1101ce82b1bb10a28ba
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 569988ddc2f804d2b97ffd26286fdbdcf70b8d88
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43807053"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48213856"
 ---
 # <a name="add-text-annotations-to-diagrams-visual-database-tools"></a>Adicionar anotações de texto a diagramas (Visual Database Tools)
   Para fazer observações ou comentários em um diagrama, você pode adicionar anotações de texto.  

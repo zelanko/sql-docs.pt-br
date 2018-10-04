@@ -1,54 +1,48 @@
 ---
-title: Configurações (banco de dados do SQL Azure) do projeto (AccessToSQL) | Microsoft Docs
+title: Configurações (BD SQL do Azure) do projeto (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 helpviewer_keywords:
 - Project Settings dialog box, SQL Azure
 - SQL Azure settings
 ms.assetid: bbb8a204-d0e4-4f0b-9709-271feb1f136e
-caps.latest.revision: 11
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 9d1666bf70cb07e616995dbd8f14fe4522cadc99
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: d10af49e419827f9fbd70b7cbef45fdf0562dea3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34774112"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47749566"
 ---
-# <a name="project-settings-azure-sql-db-accesstosql"></a>Configurações (banco de dados do SQL Azure) do projeto (AccessToSQL)
-As configurações de projeto do SQL Azure permitem que você configure o sufixo do banco de dados do SQL Azure para serem adicionadas na caixa de diálogo de conexão e também permitem implementar o mecanismo de pulsação na conexão do SQL Azure.  
+# <a name="project-settings-azure-sql-db-accesstosql"></a>Configurações (BD SQL do Azure) do projeto (AccessToSQL)
+As configurações do projeto do SQL Azure permitem que você configurar o sufixo do banco de dados do SQL Azure a serem adicionados na caixa de diálogo de conexão e também permite implementar o mecanismo de pulsação na conexão do SQL Azure.  
   
-O painel do SQL Azure está disponível na **configurações de projeto** e **configurações de projeto padrão** caixas de diálogo.  
+O painel do SQL Azure está disponível na **configurações do projeto** e **configurações do projeto padrão** caixas de diálogo.  
   
--   Use a caixa de diálogo de configurações do projeto para definir opções de configuração para o projeto atual. Para acessar as configurações do SQL Azure, no **ferramentas** menu, selecione **configurações de projeto**, clique em **geral** na parte inferior do painel esquerdo e, em seguida, selecione **SQL Azure**.  
+-   Use a caixa de diálogo de configurações do projeto para definir opções de configuração para o projeto atual. Para acessar as configurações do SQL Azure, nos **ferramentas** menu, selecione **configurações do projeto**, clique em **geral** na parte inferior do painel esquerdo e, em seguida, selecione **SQL Azure**.  
   
--   Use a caixa de diálogo de configurações de projeto padrão para definir opções de configuração para todos os projetos. Para acessar as configurações do SQL Azure, no **ferramentas** menu, selecione **DefaultProject configurações**, selecione o tipo de projeto como "SQL Azure" na **versão de destino de migração** caixa de combinação para acessar as configurações no painel do SQL Azure, clique em **geral** na parte inferior do painel esquerdo e, em seguida, selecione **SQL Azure**.  
+-   Use a caixa de diálogo de configurações de projeto padrão para definir opções de configuração para todos os projetos. Para acessar as configurações do SQL Azure, nos **ferramentas** menu, selecione **DefaultProject configurações**, selecione o tipo de projeto como "SQL Azure" na **versão de destino de migração** caixa de combinação para acessar as configurações no painel do SQL Azure, clique em **gerais** na parte inferior do painel esquerdo e, em seguida, selecione **SQL Azure**.  
   
 ## <a name="options"></a>Opções  
   
 ## <a name="connectivity"></a>Conectividade  
 **Intervalo de pulsação**  
   
-Especifica um intervalo de tempo a ser usado para o mecanismo de pulsação para manter a conexão do SQL Azure ativa em ' minutos: formato de segundos.  
+Especifica um intervalo de tempo a ser usado para o mecanismo de pulsação para manter a conexão do SQL Azure ativo no ' minutos: formato de segundos.  
   
 **Valor padrão**:' 4:45 '  
   
 O valor deve ser especificado em Estou: formato dos ss (por exemplo, ' 4:45 ' ou ' 0:50 ').  
   
-**Sufixo do SQL Server do Azure**  
+**Sufixo de servidor do SQL Azure**  
   
 Especifica o sufixo do servidor do SQL Azure  
   
-**Valor padrão**: 't'.  
+**Valor padrão**: 'database.windows.net'.  
   

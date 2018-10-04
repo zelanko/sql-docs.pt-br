@@ -4,29 +4,23 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 04cd7ffa-5402-4aba-90dd-8b562dd4b0bb
-caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: d017b56e358ab70360f216aa985e73392858f584
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 8167857b3ee1653eac81067cc19efd198d7aa032
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34774862"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47848374"
 ---
 # <a name="troubleshooting-accesstosql"></a>Solução de problemas (AccessToSQL)
-Não é incomum para ser executado no Centro de problemas de migração, executando os comandos ou scripts do console.  
+Não é incomum enfrentar midway de problemas de migração executando os comandos ou scripts do console.  
   
-Os erros possíveis podem estar relacionados a:  
+Os erros corrigível podem estar relacionados a:  
   
 1.  Função  
   
@@ -36,9 +30,9 @@ Os erros possíveis podem estar relacionados a:
   
 4.  Gatilho  
   
-5.  Modificar o tipo de dados  
+5.  Modificando o tipo de dados  
   
-6.  A alteração das configurações de projeto  
+6.  Alterando as configurações do projeto  
   
-Os problemas podem ser corrigidos usando a interface de usuário do SSMA abrindo o arquivo de projeto criado por meio do console.  
+O problema pode ser corrigido usando a interface de usuário do SSMA, abrindo o arquivo de projeto criado por meio do console.  
   

@@ -4,11 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
-ms.service: sql-data-warehouse
 ms.reviewer: ''
-ms.suite: sql
-ms.component: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -17,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 966fbd2efde6934f8cfe1b59706dec27b92e301e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: c2a1978aeea7ec69ea45bc088bbdff432de3c9f4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37980677"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47621864"
 ---
 # <a name="sysdmpdwexecrequests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -39,7 +35,7 @@ ms.locfileid: "37980677"
 |end_compile_time|**datetime**|Hora em que o mecanismo concluiu a solicitação de compilação.|NULL para solicitações que não foram compilados ainda; Caso contrário, válido **datetime** menor do que start_time e menor ou igual à hora atual.|
 |end_time|**datetime**|Hora em que a execução da solicitação concluído, falhou ou foi cancelada.|NULL para solicitações em fila ou do Active Directory; Caso contrário, válido **datetime** menor ou igual à hora atual.|  
 |total_elapsed_time|**int**|Tempo decorrido na execução desde que a solicitação foi iniciada, em milissegundos.|Entre 0 e a diferença entre start_time e end_time.<br /><br /> Se total_elapsed_time exceder o valor máximo para um número inteiro, o total_elapsed_time continuará a ser o valor máximo. Essa condição gerará o aviso "o valor máximo foi excedido."<br /><br /> O valor máximo em milissegundos é equivalente a 24,8 dias.|  
-|rótulo|**nvarchar(255)**|Cadeia de caracteres de rótulo opcional associada com algumas instruções de consulta SELECT.|Qualquer cadeia de caracteres que contém 'a-z', 'A-Z','0-9', '_'.|  
+|Rótulo|**nvarchar(255)**|Cadeia de caracteres de rótulo opcional associada com algumas instruções de consulta SELECT.|Qualquer cadeia de caracteres que contém 'a-z', 'A-Z','0-9', '_'.|  
 |error_id|**nvarchar(36)**|Id exclusiva do erro associado à solicitação, se houver.|Ver [sys.dm_pdw_errors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md); definido como NULL se nenhum erro tiver ocorrido.|  
 |database_id|**int**|Identificador do banco de dados usado pelo contexto explícito (por exemplo, USE DB_X).|Consulte a id na [sys. Databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
 |command|**nvarchar(4000)**|Contém o texto completo da solicitação enviado pelo usuário.|Qualquer texto de consulta ou de solicitação válido. Consultas que têm mais de 4000 bytes são truncadas.|  

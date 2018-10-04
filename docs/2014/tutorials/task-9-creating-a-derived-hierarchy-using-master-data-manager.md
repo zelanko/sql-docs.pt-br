@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 3bd2ec05-933f-4947-b1fe-c9226961eb7d
-caps.latest.revision: 6
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 22aba36efffe3b4e15d358e6077bb6b58e7aa328
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3004c9d5ae6637f288a87c50444b46fb958e7d22
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37273582"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48076876"
 ---
 # <a name="task-9-creating-a-derived-hierarchy-using-master-data-manager"></a>Tarefa 9: Criando uma hierarquia derivada usando o Master Data Manager
   Nesta tarefa, você criará uma hierarquia derivada usando o Master Data Manager. Essa hierarquia é derivada de relações de atributo baseado em domínio entre o **Supplier** e **estado** entidades.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 2015-12-07
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Parallel Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Parallel element
 ms.assetid: 04726d94-37ee-460b-9744-d62b45f536b9
-caps.latest.revision: 12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b514732345cc8c4c7c0bc2c2f4f3fa0ad2d75993
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 90c722d8bb1b32e17ef5dc27e8ea0c84b00ff80e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37161017"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48091556"
 ---
 # <a name="parallel-element-xmla"></a>Parallel Element (XMLA)
   Identifica comandos a serem executados em paralelo pelo comando pai [Batch](../xml-elements-commands/batch-element-xmla.md) .  
@@ -54,8 +51,8 @@ ms.locfileid: "37161017"
   
 |Característica|Description|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|Nenhum|  
-|Valor padrão|Nenhum|  
+|Comprimento e tipo de dados|None|  
+|Valor padrão|None|  
 |Cardinalidade|0-n: Elemento opcional que pode ocorrer mais de uma vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -71,7 +68,7 @@ ms.locfileid: "37161017"
 |---------------|-----------------|  
 |maxParallel|Opcional `Integer` atributo. Indica o número de máximo de threads nos quais devem ser executados comandos em paralelo. Se não for especificado ou definido como 0, a instância de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] determina um número ideal de threads com base no número de processadores disponíveis no computador.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedades &#40;XMLA&#41;](xml-elements-properties.md)  

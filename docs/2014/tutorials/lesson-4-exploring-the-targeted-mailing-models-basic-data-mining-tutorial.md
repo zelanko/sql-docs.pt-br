@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 1e00c5b9-a9f8-4503-99ee-377c9cc02d7f
-caps.latest.revision: 51
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1afd478583520bddb2f0990b282e3f96c851feb1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 820a65ce9d45a72fe6a7629aebb7bb10374dbfae
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37269832"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48147300"
 ---
 # <a name="lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial"></a>Lição 4: Explorando os modelos de mala direta (Tutorial de mineração de dados básico)
   Depois que os modelos do seu projeto tiverem sido processados, você poderá explorá-los para procurar por tendências que sejam interessantes. Como padrões podem ser complexos e difíceis se analisarmos somente os números, a Mineração de Dados do SQL Server oferece algumas ferramentas visuais que o ajudam a investigar os dados e a compreender as regras e as relações que os algoritmos encontraram nos dados. Você também pode usar uma variedade de testes de precisão para validar seu conjunto de dados ou para descobrir qual o melhor modelo antes de implantá-lo.  

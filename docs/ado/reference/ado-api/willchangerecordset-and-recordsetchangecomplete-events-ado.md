@@ -1,13 +1,11 @@
 ---
-title: WillChangeRecordset e RecordsetChangeComplete eventos (ADO) | Microsoft Docs
+title: Eventos WillChangeRecordset e Recordsetchangecomplete (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -19,19 +17,18 @@ helpviewer_keywords:
 - RecordsetChangeComplete event [ADO]
 - WillChangeRecordset event [ADO]
 ms.assetid: d5d44659-e0d9-46d9-a297-99c43555082f
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 63962d0ce3c8c4a5bf5aa0274a4084a9f8d84a5f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 9ed1c7a9f1ed86359eef75fdaf13c9e40d838f3f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282795"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47718864"
 ---
-# <a name="willchangerecordset-and-recordsetchangecomplete-events-ado"></a>WillChangeRecordset e RecordsetChangeComplete eventos (ADO)
-O **WillChangeRecordset** evento é chamado antes de uma operação pendente altera o [registros](../../../ado/reference/ado-api/recordset-object-ado.md). O **RecordsetChangeComplete** evento é chamado após o **registros** foi alterado.  
+# <a name="willchangerecordset-and-recordsetchangecomplete-events-ado"></a>Eventos WillChangeRecordset e RecordsetChangeComplete (ADO)
+O **eventos WillChangeRecordset** evento é chamado antes de uma operação pendente altera o [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md). O **RecordsetChangeComplete** eventos é chamado após o **Recordset** foi alterado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,32 +40,32 @@ RecordsetChangeComplete adReason, pError, adStatus, pRecordset
   
 #### <a name="parameters"></a>Parâmetros  
  *adReason*  
- Um [EventReasonEnum](../../../ado/reference/ado-api/eventreasonenum.md) valor que especifica o motivo para esse evento. Seu valor pode ser **adRsnRequery**, **adRsnResynch**, **adRsnClose**, **adRsnOpen**.  
+ Uma [EventReasonEnum](../../../ado/reference/ado-api/eventreasonenum.md) valor que especifica o motivo para esse evento. Seu valor pode ser **adRsnRequery**, **adRsnResynch**, **adRsnClose**, **adRsnOpen**.  
   
  *adStatus*  
- Um [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) valor de status.  
+ Uma [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) valor de status.  
   
- Quando **WillChangeRecordset** é chamado, esse parâmetro é definido como **adStatusOK** se a operação que causou o evento foi bem-sucedida. Ele é definido como **adStatusCantDeny** se esse evento não é possível solicitar o cancelamento da operação pendente.  
+ Quando **eventos WillChangeRecordset** é chamado, esse parâmetro é definido como **adStatusOK** se a operação que causou o evento foi bem-sucedida. Ele é definido como **adStatusCantDeny** se esse evento não é possível solicitar o cancelamento da operação pendente.  
   
- Quando **RecordsetChangeComplete** é chamado, esse parâmetro é definido como **adStatusOK** se a operação que causou o evento foi bem-sucedida, **adStatusErrorsOccurred** se a operação falhou, ou **adStatusCancel** se a operação associados ao aceitas anteriormente **WillChangeRecordset** evento foi cancelado.  
+ Quando **RecordsetChangeComplete** é chamado, esse parâmetro é definido como **adStatusOK** se a operação que causou o evento foi bem-sucedida, **adStatusErrorsOccurred** se a operação falhou, ou **adStatusCancel** se a operação associada com aceitos anteriormente **eventos WillChangeRecordset** evento tiver sido cancelado.  
   
- Antes de **WillChangeRecordset** retorna, defina este parâmetro como **adStatusCancel** para solicitar o cancelamento da operação pendente ou definir esse parâmetro como adStatusUnwantedEvent para evitar subsequentes notificações.  
+ Antes de **eventos WillChangeRecordset** retorna, defina esse parâmetro como **adStatusCancel** para solicitar o cancelamento da operação pendente ou definir esse parâmetro como adStatusUnwantedEvent para evitar subsequentes notificações.  
   
- Antes de **WillChangeRecordset** ou **RecordsetChangeComplete** retorna, defina este parâmetro como **adStatusUnwantedEvent** para impedir que as notificações subsequentes.  
+ Antes de **eventos WillChangeRecordset** ou **RecordsetChangeComplete** retorna, defina esse parâmetro como **adStatusUnwantedEvent** para evitar notificações subsequentes.  
   
  *pError*  
- Um [erro](../../../ado/reference/ado-api/error-object.md) objeto. Descreve o erro ocorrido se o valor de *adStatus* é **adStatusErrorsOccurred**; caso contrário, ele não está definido.  
+ Uma [erro](../../../ado/reference/ado-api/error-object.md) objeto. Ele descreve o erro ocorrido se o valor de *adStatus* é **adStatusErrorsOccurred**; caso contrário, ele não está definido.  
   
  *pRecordset*  
- Um **registros** objeto. O **registros** para que esse evento ocorreu.  
+ Um **Recordset** objeto. O **Recordset** para que esse evento ocorreu.  
   
-## <a name="remarks"></a>Remarks  
- Um **WillChangeRecordset** ou **RecordsetChangeComplete** evento pode ocorrer devido a **registros** [Requery](../../../ado/reference/ado-api/requery-method.md) ou [Abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md) métodos.  
+## <a name="remarks"></a>Comentários  
+ Um **eventos WillChangeRecordset** ou **RecordsetChangeComplete** evento pode ocorrer devido a **conjunto de registros** [Requery](../../../ado/reference/ado-api/requery-method.md) ou [Abra](../../../ado/reference/ado-api/open-method-ado-recordset.md) métodos.  
   
- Se o provedor não oferece suporte a indicadores, um **RecordsetChange** notificação de evento ocorre toda vez que novas linhas são recuperadas do provedor. A frequência desse evento depende de **RecordsetCacheSize** propriedade.  
+ Se o provedor não dá suporte a indicadores, uma **RecordsetChange** notificação de evento ocorre sempre que novas linhas são recuperadas do provedor. A frequência desse evento depende do **RecordsetCacheSize** propriedade.  
   
- Você deve definir o **adStatus** parâmetro **adStatusUnwantedEvent** para cada possível **adReason** valor pare completamente a notificação de eventos para qualquer evento que inclui um **adReason** parâmetro.  
+ Você deve definir a **adStatus** parâmetro **adStatusUnwantedEvent** para cada possível **adReason** valor pare completamente a notificação de eventos para qualquer evento, que inclui uma **adReason** parâmetro.  
   
 ## <a name="see-also"></a>Consulte também  
- [Exemplo de modelo de eventos do ADO (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
+ [Exemplo de modelo de eventos ADO (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [Resumo do manipulador de eventos ADO](../../../ado/guide/data/ado-event-handler-summary.md)

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - prediction queries [Analysis Services]
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - Prediction Query Builder
 - mining models [Analysis Services], querying
 ms.assetid: 802806a6-69bb-4c3c-b9aa-d1a1ddfc7fc2
-caps.latest.revision: 44
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e735d73e8bad733c330d0d5134f13905c1ef8e15
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 71704480c6c3258c2d6553c3328535ff4ea4a9cd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37170190"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48197706"
 ---
 # <a name="data-mining-queries"></a>Consultas de mineração de dados
   Consultas de mineração de dados são úteis para muitos propósitos. Você pode:  
@@ -165,7 +162,7 @@ ms.locfileid: "37170190"
 |Use ferramentas de consulta de mineração de dados no SQL Server Management Studio e no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]|[Criar uma consulta DMX no SQL Server Management Studio](create-a-dmx-query-in-sql-server-management-studio.md)<br /><br /> [Criar uma consulta de previsão usando o Construtor de Consultas de previsão](create-a-prediction-query-using-the-prediction-query-builder.md)<br /><br /> [Aplicar funções de previsão a um modelo](apply-prediction-functions-to-a-model.md)<br /><br /> [Editar manualmente uma consulta de previsão](manually-edit-a-prediction-query.md)|  
 |Trabalhe com dados externos usados em consultas de previsão|[Escolher e mapear dados de entrada para uma consulta de previsão](choose-and-map-input-data-for-a-prediction-query.md)<br /><br /> [Escolher e mapear dados de entrada para uma consulta de previsão](choose-and-map-input-data-for-a-prediction-query.md)|  
 |Trabalhe com os resultados de consultas|[Exibir e salvar os resultados de uma consulta de previsão](view-and-save-the-results-of-a-prediction-query.md)|  
-|Use DMX e modelos de consulta de XMLA fornecidos no Management Studio|[Criar uma consulta de previsão singleton com base em um modelo](create-a-singleton-prediction-query-from-a-template.md)<br /><br /> [Create a Mineração de dados Query by Using XMLA](create-a-data-mining-query-by-using-xmla.md)<br /><br /> [Usar modelos do Analysis Services no SQL Server Management Studio](../instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
+|Use DMX e modelos de consulta de XMLA fornecidos no Management Studio|[Criar uma consulta de previsão Singleton a partir de um modelo](create-a-singleton-prediction-query-from-a-template.md)<br /><br /> [Criar uma consulta de mineração de dados usando XML/A](create-a-data-mining-query-by-using-xmla.md)<br /><br /> [Usar modelos do Analysis Services no SQL Server Management Studio](../instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
 |Saiba mais sobre consultas de conteúdo e veja exemplos|[Criar uma consulta de conteúdo em um modelo de mineração](create-a-content-query-on-a-mining-model.md)<br /><br /> [Consultar os parâmetros usados para criar um modelo de mineração](query-the-parameters-used-to-create-a-mining-model.md)<br /><br /> [Consultas de conteúdo &#40;mineração de dados&#41;](content-queries-data-mining.md)|  
 |Defina opções de consulta e solucione permissões de consulta e problemas|[Alterar o valor do tempo limite de consultas de mineração de dados](data-mining-queries.md)|  
 |Use os componentes de mineração de dados no Integration Services|[Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md)<br /><br /> [Data Mining Query Transformation](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)|  

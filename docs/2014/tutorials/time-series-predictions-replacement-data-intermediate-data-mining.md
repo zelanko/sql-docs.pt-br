@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a23a6e1d-1d49-41ea-8314-925dc8e4df5e
-caps.latest.revision: 30
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c170fab7f4f6711e81e07603302839430404aa3b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 815b50c8d687c1df76b9dc5de4b1fbe34f15f233
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267752"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48120278"
 ---
 # <a name="time-series-predictions-using-replacement-data-intermediate-data-mining-tutorial"></a>Previsões de série temporal usando dados de substituição (Tutorial de mineração de dados intermediário)
   Nesta tarefa, você criará um novo modelo com base em dados de vendas mundiais. Depois, você criará uma consulta de previsão que aplica o modelo de vendas mundial a uma das regiões individuais.  

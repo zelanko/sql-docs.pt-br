@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - DMX [Analysis Services], tutorials
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - Data Mining Extensions [Analysis Services], tutorials
 - tutorials [Data Mining]
 ms.assetid: 4b634cc1-86dc-42ec-9804-a19292fe8448
-caps.latest.revision: 33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 788cdb0ccd3f8093972c45db1463412c5f41a765
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2d5b77952cd3476adddcdf0a528c2e12ab30cc2b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37187663"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48074956"
 ---
 # <a name="bike-buyer-dmx-tutorial"></a>Tutorial DMX Comprador de bicicleta
   Nesse tutorial, você aprenderá a criar, treinar e explorar modelos de mineração de dados com o uso da linguagem de consulta DMX (Extensões de Mineração de Dados). Você então utilizará esses modelos de mineração de dados para criar previsões que determinem se um cliente comprará uma bicicleta.  

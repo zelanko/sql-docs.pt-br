@@ -1,29 +1,26 @@
 ---
-title: Obtendo e definindo campos de descritor | Microsoft Docs
+title: Obter e definir campos de descritor | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - descriptors [ODBC], retrieving or setting field values
 ms.assetid: 394fe500-803d-463f-ae95-f8eb87b66bc8
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a08268590df17d6af36cee9f1dbac7c840263e2a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 72fe76d566a5b4a92899b0a8a30804201ab13109
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32910351"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47825404"
 ---
-# <a name="getting-and-setting-descriptor-fields"></a>Obtendo e definindo campos de descritor
+# <a name="getting-and-setting-descriptor-fields"></a>Obter e configurar campos de descritor
 Esta seção descreve os métodos de que um aplicativo pode usar para recuperar ou definir os valores nos campos de descritor.  
   
  Esta seção contém os tópicos a seguir.  

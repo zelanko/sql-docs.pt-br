@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - data-quality-services
 - integration-services
 - master-data-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7d74a60b-8933-4038-bcbb-4e9dcc4f70e9
-caps.latest.revision: 8
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9114289ed2a4e09a5f7b59ed016c553c1d225dfc
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1222d6d217c004790336a6a234d7f52154e148ba
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37226576"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48132427"
 ---
 # <a name="task-1-creating-a-knowledge-base-and-domains"></a>Tarefa 1: Criando a base de dados de conhecimento e domínios
   Nesta tarefa, você cria o **fornecedores** da Base de dados de conhecimento e criar domínios que é usado para dados de limpeza e correspondência de dados para remover duplicatas.  

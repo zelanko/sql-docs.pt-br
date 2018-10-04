@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbdestadapter.errorhandling.f1
 helpviewer_keywords:
 - OLE DB Destination Editor
 ms.assetid: 3c01f480-16c9-49eb-b40c-13cbc90b019d
-caps.latest.revision: 29
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ac164885aaa3e5d96716946bda912a48181d52d4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 35627cefd3bbdf4bec280baaa9dcdb1b43391e05
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37190707"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48176836"
 ---
 # <a name="ole-db-destination-editor-error-output-page"></a>Editor de Destino de OLE DB (página Saída de Erro)
   Use a página **Saída de Erro** da caixa de diálogo **Editor de Destino OLE DB** para especificar opções de tratamento de erros.  

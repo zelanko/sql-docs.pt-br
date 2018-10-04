@@ -4,27 +4,24 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - collections [Analysis Services Scripting Language]
 - Analysis Services Scripting Language, collections
 - ASSL, collections
 ms.assetid: 072b8c6b-1550-4cab-ae64-ba0e3e60b059
-caps.latest.revision: 19
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a56b577f39c2b2f4ef7a4033203fcda9706d1370
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9f549a8d84f356b9315cdf3ec03ee41234e4dd0d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37300986"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48199706"
 ---
 # <a name="collections-assl"></a>Coleções (ASSL)
   Esta seção de referência contém informações de sintaxe e uso de cada elemento que age como uma coleção no esquema ASSL (Analysis Services Scripting Language).  

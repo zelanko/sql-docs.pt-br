@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ProcessId Class (SqlService Class)
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - ProcessId property
 ms.assetid: 99b5a2e9-b44a-48a0-993e-04bd15c7fef4
-caps.latest.revision: 35
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 0885ca6300d50b1d9f9aacd81ae4382985f650d8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 2bcc9e31fd70f0201f26751bddbcb3f3f8aeec98
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37251528"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48080916"
 ---
 # <a name="processid-class-sqlservice-class"></a>Classe ProcessId (classe SqlService)
   Obtém a ID de processo de sistema que identifica exclusivamente um serviço.  
@@ -48,7 +45,7 @@ object
 ## <a name="property-valuereturn-value"></a>Valor da propriedade/Valor do retorno  
  Um valor `uint32` que especifica a ID que identifica exclusivamente o processo.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 ## <a name="example"></a>Exemplo  
   

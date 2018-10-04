@@ -1,38 +1,35 @@
 ---
-title: A associação | Microsoft Docs
+title: A associação em | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - column-wise binding [ODBC]
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
 ms.assetid: 86d37637-3a25-455d-9c82-a0d7bff8d70d
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 77b82a8ab37f4da51801f860638b5c03e6c499aa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5f5a8237e32479bed033b8b9a8003726556a3b25
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909771"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47618974"
 ---
-# <a name="column-wise-binding"></a>A associação
-Ao usar a associação, um aplicativo associar um ou dois ou em alguns casos, três, matrizes para cada coluna para o qual os dados são a ser retornado. A primeira matriz contém os valores de dados, e a segunda matriz contém buffers de comprimento/indicador. Indicadores e os valores de comprimento podem ser armazenados em buffers separados, definindo os campos de descritor SQL_DESC_INDICATOR_PTR e SQL_DESC_OCTET_LENGTH_PTR como valores diferentes; Se isso for feito, está associada a uma matriz de terceira. Cada matriz contém elementos existem linhas no conjunto de linhas.  
+# <a name="column-wise-binding"></a>Associação de coluna
+Ao usar a associação, um aplicativo associa matrizes de três, um ou dois ou em alguns casos para cada coluna para a qual data será retornado. A primeira matriz contém os valores de dados e a segunda matriz armazena buffers de comprimento/indicador. Indicadores e os valores de comprimento podem ser armazenados em buffers separadas ao definir os campos de descritor SQL_DESC_INDICATOR_PTR e SQL_DESC_OCTET_LENGTH_PTR como valores diferentes; Se isso for feito, uma terceira matriz está associada. Cada matriz contém elementos tantas quantas forem as linhas no conjunto de linhas.  
   
  O aplicativo declara que ele está usando a associação com o atributo de instrução SQL_ATTR_ROW_BIND_TYPE, que determina o tipo de associação para buffers de conjunto de linhas em vez de parâmetro de conjunto de buffers. O driver retorna os dados para cada linha em elementos sucessivos de cada matriz. A ilustração a seguir mostra como a associação funciona.  
   
- ![Coluna&#45;aconselhável associação de três colunas](../../../odbc/reference/develop-app/media/pr21.gif "pr21")  
+ ![Coluna&#45;associação wise de três colunas](../../../odbc/reference/develop-app/media/pr21.gif "pr21")  
   
- Por exemplo, o código a seguir associa as matrizes de elemento de 10 para as colunas OrderID, o vendedor e o Status:  
+ Por exemplo, o código a seguir associa matrizes do elemento de 10 para as colunas OrderID, o vendedor e o Status:  
   
 ```  
 #define ROW_ARRAY_SIZE 10  

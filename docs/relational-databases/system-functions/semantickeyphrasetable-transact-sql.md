@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - semantickeyphrasetable
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - semantickeyphrasetable function
 ms.assetid: d33b973a-2724-4d4b-aaf7-67675929c392
-caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 98d837abe05cf99051230e24fd0d418e1263aa4f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b033342e8e6e7d3fb55d51d03705b2168d72209f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33236060"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47785324"
 ---
 # <a name="semantickeyphrasetable-transact-sql"></a>semantickeyphrasetable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +70,7 @@ SEMANTICKEYPHRASETABLE
   
 |Column_name|Tipo|Description|  
 |------------------|----------|-----------------|  
-|**column_id**|**Int**|ID da coluna da qual a frase-chave atual foi extraída e indexada.<br /><br /> Consulte as funções COL_NAME e COLUMNPROPERTY para obter detalhes sobre como recuperar o nome da coluna do column_id e vice-versa.|  
+|**column_id**|**int**|ID da coluna da qual a frase-chave atual foi extraída e indexada.<br /><br /> Consulte as funções COL_NAME e COLUMNPROPERTY para obter detalhes sobre como recuperar o nome da coluna do column_id e vice-versa.|  
 |**document_key**|**\***<br /><br /> Essa chave corresponde ao tipo da chave exclusiva na tabela de origem.|O valor da chave exclusiva do documento ou linha a partir da qual a frase-chave atual foi indexada.|  
 |**frases-chave**|**NVARCHAR**|A frase-chave localizada na coluna identificada por column_id e associada ao documento especificado por document_key.|  
 |**score**|**REAL**|Um valor relativo para essa frase-chave em sua relação com todas as outras frases-chave no mesmo documento na coluna indexada.<br /><br /> O valor é um valor decimal fracionário no intervalo de [0,0, 1,0] onde uma pontuação mais alta representa peso mais alto e 1,0 é a pontuação perfeita.|  
@@ -96,7 +92,7 @@ SEMANTICKEYPHRASETABLE
   
 ## <a name="examples"></a>Exemplos  
   
-###  <a name="HowToTopPhrases"></a>Exemplo 1: Localizar as principais frases-chave em um documento específico  
+###  <a name="HowToTopPhrases"></a> Exemplo 1: Localizar as principais frases chave em um documento específico  
  O exemplo a seguir recupera as 10 principais frases-chave do documento especificado pela variável @DocumentId na coluna Document da tabela Production.Document do banco de dados de exemplo AdventureWorks. A variável @DocumentId representa um valor da coluna de chave do índice de texto completo. A função **SEMANTICKEYPHRASETABLE** recupera esses resultados com eficácia usando uma busca de índice em vez de um exame de tabela. Este exemplo assume que a coluna está configurada para indexação de texto completo e semântica.  
   
 ```sql  
@@ -111,7 +107,7 @@ ORDER BY KEYP_TBL.score DESC;
   
 ```  
   
-###  <a name="HowToTopDocuments"></a>Exemplo 2: Localizar os principais documentos que contêm uma frase chave específica  
+###  <a name="HowToTopDocuments"></a> Exemplo 2: Localizar os principais documentos que contêm uma frase chave específica  
  O exemplo a seguir recupera os 25 principais documentos que contêm a frase-chave Bracket da coluna Document da tabela Production.Document do banco de dados de exemplo AdventureWorks. Este exemplo assume que a coluna está configurada para indexação de texto completo e semântica.  
   
 ```sql  

@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -19,29 +17,28 @@ f1_keywords:
 helpviewer_keywords:
 - StayInSync property
 ms.assetid: 502d69b5-dc9a-455d-b115-a03bd39a552b
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1ccd1cf14eddb9fb0b7b440defb0eb700b2fb354
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 50cf569f6e0af5e753cca7fba030b8fc2caa4a86
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35282495"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47805754"
 ---
 # <a name="stayinsync-property"></a>Propriedade StayInSync
-Indica, em um hierárquica [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto, se a referência para os registros filho subjacente (isto é, o *capítulo*) é alterado quando a linha pai posicione as alterações.  
+Indica, em modo hierárquico [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto, se a referência para os registros filho subjacente (ou seja, o *capítulo*) é alterado quando a linha pai posicione as alterações.  
   
-## <a name="settings-and-return-values"></a>Configurações e valores de retorno  
- Define ou retorna um **booliano** valor. O valor padrão é **True**. Se **True**, o capítulo será atualizado se o pai **registros** alterações de objeto linha posição; se **False**, o capítulo continuará a fazer referência a dados no capítulo anterior mesmo que o pai **registros** objeto alterado posição da linha.  
+## <a name="settings-and-return-values"></a>As configurações e valores de retorno  
+ Define ou retorna um **Boolean** valor. O valor padrão é **True**. Se **verdadeira**, o capítulo será atualizado se pai **conjunto de registros** alterações do objeto de linha posição; se **False**, o capítulo continuará se referem aos dados no capítulo anterior mesmo que o pai **Recordset** objeto foi alterado a posição da linha.  
   
-## <a name="remarks"></a>Remarks  
- Essa propriedade se aplica a conjuntos de registros hierárquicos, como aqueles com suporte a [Microsoft Data Shaping Service para OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)e deve ser definido no pai **registros** antes do filho  **Conjunto de registros** é recuperado. Essa propriedade simplifica a navegação hierárquicos conjuntos de registros.  
+## <a name="remarks"></a>Comentários  
+ Essa propriedade aplica-se a conjuntos de registros hierárquicos, como aqueles compatíveis com o [Microsoft Data Shaping Service para OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)e deve ser definido no pai **conjunto de registros** antes do filho  **Conjunto de registros** é recuperado. Essa propriedade simplifica navegando conjuntos de registros hierárquicos.  
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Exemplo de propriedade StayInSync (VB)](../../../ado/reference/ado-api/stayinsync-property-example-vb.md)   
- [Microsoft Data Shaping Service para OLE DB (provedor de serviços de ADO)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)
+ [Exemplo da propriedade StayInSync (VB)](../../../ado/reference/ado-api/stayinsync-property-example-vb.md)   
+ [Microsoft Data Shaping Service para OLE DB (provedor de serviços do ADO)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)

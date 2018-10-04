@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 9e361798-688e-4b11-9eef-31fc793e8ba4
-caps.latest.revision: 5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ce3ca1202c5e20676a4dbf1fa972f5bdfa52e9b0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9e0c2204aeb8c428d558b8bfe31f29c19ba6d773
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37299176"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48212086"
 ---
 # <a name="subselects-in-queries"></a>Subseleções em consultas
   Expressões de subseleção são expressões SELECT aninhadas que são usadas para restringir o espaço do cubo onde o SELECT externo exterior está sendo avaliado. Subseleções permitem definir um novo espaço sobre os quais todos os cálculos são avaliados.  
@@ -342,7 +339,7 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
  Como você pode ver, há diferenças nos resultados entre ambos os conjuntos. A primeira consulta respondeu a pergunta de quais são os melhores produtos de venda nas primeiras 5 regiões, a segunda consulta respondeu a pergunta de onde são as maiores vendas dos 5 principais produtos.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>Comentários  
  As subseleções têm as seguintes restrições e limitações:  
   
 -   A cláusula WHERE não filtra o subespaço.  

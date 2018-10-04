@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - CalculationType Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - CalculationType element
 ms.assetid: b974b3d3-fbf7-4d77-8f6e-4e05a258fe84
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 24e8f95af2ab7eb8be754eb2d1c7de96fee91ea7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 49f8981abcf3bb5d1ad07b0266793a4c3d3d4b76
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37275932"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48120644"
 ---
 # <a name="calculationtype-element-assl"></a>Elemento CalculationType (ASSL)
   Descreve o tipo de cálculo definido no associado [CalculationProperty](../objects/calculationproperty-element-assl.md) elemento.  
@@ -51,7 +48,7 @@ ms.locfileid: "37275932"
 |Característica|Description|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|Cadeia de caracteres (enumeração)|  
-|Valor padrão|Nenhum|  
+|Valor padrão|None|  
 |Cardinalidade|1-1: elemento obrigatório que pode ocorrer apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -59,9 +56,9 @@ ms.locfileid: "37275932"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|[CalculationProperty](../objects/calculationproperty-element-assl.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O valor desse elemento é limitado a uma das cadeias de caracteres listadas na tabela a seguir.  
   
 |Valor|Description|  

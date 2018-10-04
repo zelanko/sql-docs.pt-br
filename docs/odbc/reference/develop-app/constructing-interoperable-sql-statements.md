@@ -1,35 +1,32 @@
 ---
-title: Construindo instruções SQL interoperável | Microsoft Docs
+title: Construindo instruções SQL interoperáveis | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], interoperability
 - interoperability of SQL statements [ODBC], constructing statements
 ms.assetid: dee6f7e2-bcc4-4c74-8c7c-12aeda8a90eb
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 257440b78a466178d09e954e9aed5b9385325b8a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dc8072a6d7291a546f0f12256aa4b336da037a83
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909951"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47809164"
 ---
-# <a name="constructing-interoperable-sql-statements"></a>Construindo instruções SQL interoperáveis
-Conforme mencionado na seção anterior, os aplicativos interoperáveis devem usar a gramática SQL ODBC. Além de usar esta gramática, no entanto, um número de problemas adicionais é enfrentado pelos aplicativos interoperáveis. Por exemplo, o que um aplicativo faz se desejar usar um recurso, como junções externas, que não é suportado por todas as fontes de dados?  
+# <a name="constructing-interoperable-sql-statements"></a>Construir instruções SQL interoperáveis
+Conforme mencionado nas seções anteriores, os aplicativos interoperáveis devem usar a gramática SQL ODBC. Além de usar esta gramática, no entanto, uma série de problemas adicionais enfrentada por aplicativos interoperáveis. Por exemplo, o que um aplicativo faz se desejar usar um recurso, como junções externas, que não é suportado por todas as fontes de dados?  
   
- Neste ponto, o gravador de aplicativos deve tomar algumas decisões sobre quais recursos de idioma são necessários e opcionais. Na maioria dos casos, se um driver específico não dá suporte a um recurso exigido pelo aplicativo, o aplicativo simplesmente se recusa a executar com esse driver. No entanto, se o recurso é opcional, o aplicativo pode resolver o recurso. Por exemplo, ele pode desabilitar as partes da interface que permite que o usuário use o recurso.  
+ Neste ponto, o criador do aplicativo deve tomar algumas decisões sobre quais recursos de idioma são necessários e opcionais. Na maioria dos casos, se um determinado driver não dá suporte a um recurso exigido pelo aplicativo, o aplicativo simplesmente se recusar a executar com esse driver. No entanto, se o recurso é opcional, o aplicativo pode contornar o recurso. Por exemplo, ele pode desabilitar essas partes da interface que permitem ao usuário usar o recurso.  
   
- Para determinar quais recursos têm suporte, os aplicativos iniciam chamando **SQLGetInfo** com a opção SQL_SQL_CONFORMANCE. O nível de conformidade do SQL dá ao aplicativo uma visão geral dos quais há suporte para SQL. Para refinar nessa exibição, o aplicativo chama **SQLGetInfo** com qualquer uma das várias outras opções. Para obter uma lista completa dessas opções, consulte o [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) descrição da função. Por fim, **SQLGetTypeInfo** retorna informações sobre os tipos de dados suportados pela fonte de dados. As seções a seguir listam alguns possíveis fatores de aplicativos devem ter cuidado ao construir interoperáveis instruções de SQL.  
+ Para determinar quais recursos têm suporte, os aplicativos iniciam chamando **SQLGetInfo** com a opção SQL_SQL_CONFORMANCE. O nível de compatibilidade do SQL oferece ao aplicativo uma visão geral dos quais há suporte para SQL. Para refinar essa exibição, o aplicativo chama **SQLGetInfo** com qualquer uma das várias outras opções. Para obter uma lista completa dessas opções, consulte o [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) descrição da função. Por fim, **SQLGetTypeInfo** retorna informações sobre os tipos de dados com suporte pela fonte de dados. As seções a seguir listam uma série de fatores possíveis que aplicativos devem ter cuidado ao construir as instruções de SQL interoperáveis.  
   
  Esta seção contém os tópicos a seguir.  
   

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - DataSourcePermission Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - DataSourcePermission element
 ms.assetid: 6dc6fb13-034e-479a-902e-27f3fb78c33f
-caps.latest.revision: 14
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d88f18a752e96e5081462056d831bc968dc605df
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d4130cd2a0eb83b32c8bcdf703d10ca6305af619
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37241356"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48087616"
 ---
 # <a name="datasourcepermission-element-assl"></a>Elemento DataSourcePermission (ASSL)
   Define as permissões padrão em uma [fonte de dados](../data-type/datasource-data-type-assl.md) tipo de dados para um determinado [função](role-element-assl.md) elemento.  
@@ -49,7 +46,7 @@ ms.locfileid: "37241356"
 |Característica|Description|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|[Permissão](../data-type/permission-data-type-assl.md)|  
-|Valor padrão|Nenhum|  
+|Valor padrão|None|  
 |Cardinalidade|0-n: elemento opcional que pode ocorrer uma vez ou mais.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -57,9 +54,9 @@ ms.locfileid: "37241356"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|[DataSourcePermissions](../collections/datasourcepermissions-element-assl.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Os objetos `DataSourcePermission` podem existir somente para as funções possuídas pelo banco de dados e somente um objeto `DataSourcePermission` pode existir para qualquer função.  
   
 ## <a name="see-also"></a>Consulte também  

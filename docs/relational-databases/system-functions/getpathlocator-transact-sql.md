@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - GetPathLocator
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - GetPathLocator function
 ms.assetid: 78b7e220-445b-4fdf-811b-7253f4f2b058
-caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0b7714606336e46d25459d972b0bd0f4f319a529
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 7770ced88953fd64d9ce48b624416b9a7e787f7e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33225414"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47699124"
 ---
 # <a name="getpathlocator-transact-sql"></a>GetPathLocator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +41,7 @@ GetPathLocator(filenamespace_path)
  *filenamespace_path*  
  Um caminho de namespace na FileTable. O caminho do namespace é do tipo **nvarchar (max)**.  
   
- Quando o banco de dados pertence a um grupo de disponibilidade AlwaysOn, então o **GetPathLocator** função aceita o nome de rede virtual (VNN) ou o nome do computador.  
+ Quando o banco de dados pertence a um grupo de disponibilidade Always On, o **GetPathLocator** função aceita o nome de rede virtual (VNN) ou o nome do computador.  
   
 ## <a name="return-type"></a>Tipo de retorno  
  **hierarchyid**  

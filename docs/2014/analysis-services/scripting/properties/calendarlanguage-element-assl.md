@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - CalendarLanguage Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - CalendarLanguage element
 ms.assetid: e43a0f48-a583-418b-a0a4-d73a40035573
-caps.latest.revision: 31
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0bcdf5c3f0955a3adb8994217eb10f3fd9447863
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c162d3b408949cfad542095f09bc94bdec4924bd
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37241376"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48126566"
 ---
 # <a name="calendarlanguage-element-assl"></a>Elemento CalendarLanguage (ASSL)
   Define a linguagem de calendário usada para o [TimeBinding](../data-type/binding-data-type-assl.md) elemento.  
@@ -59,9 +56,9 @@ ms.locfileid: "37241376"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elemento pai|[TimeBinding](../data-type/binding-data-type-assl.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Essa é a linguagem na qual são criados nomes de membro de dimensão. A linguagem de legendas deve ser definida usando códigos LCID com base em inteiro. Por exemplo, o valor padrão representa o LCID em inglês americano.  
   
  O elemento que corresponde ao pai de `CalendarLanguage` no objeto Analysis Management Objects (AMO) o modelo é <xref:Microsoft.AnalysisServices.TimeBinding>.  

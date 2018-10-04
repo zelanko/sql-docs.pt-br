@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], tool windows
 - tool windows [SQL Server Management Studio]
 ms.assetid: d3be5062-234c-43a8-8d47-cce111dd3c25
-caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c3e75b93be21e650ca4e22445d77ae87437d6cc3
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 3cc2885149a4056fdf7a007003a48ad526feff83
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43819282"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48069323"
 ---
 # <a name="tool-windows-in-sql-server-management-studio"></a>Janelas de ferramentas no SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] fornece muitas janelas de ferramentas poderosas para todas as fases de desenvolvimento e administração. Algumas ferramentas podem ser usadas em qualquer componente do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] e outras somente em certos tipos de componentes. A tabela a seguir identifica as ferramentas que podem ser usadas para todos os componentes do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

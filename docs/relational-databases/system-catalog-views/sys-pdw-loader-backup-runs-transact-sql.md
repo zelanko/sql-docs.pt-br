@@ -4,11 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
-ms.service: sql-data-warehouse
-ms.component: system-objects
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -17,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 8da926d5e3e12619a249fe593fac4b1be5df2bf6
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: d8675de8ff7931753d20e99d5c0d61151192e5b2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36875004"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47751584"
 ---
 # <a name="syspdwloaderbackupruns-transact-sql"></a>sys.pdw_loader_backup_runs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -45,7 +41,7 @@ ms.locfileid: "36875004"
 |session_id|**nvarchar(32)**|ID da sessão que está executando a operação.|Consulte session_id [DM pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  
 |request_id|**nvarchar(32)**|ID da solicitação executando a operação. Para cargas, isso é a solicitação atual ou última associada com essa carga...|Consulte request_id na [DM pdw_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
 |status|**nvarchar(16)**|Status da execução.|'CANCELAR', 'CONCLUIR', 'FALHA', 'ENFILEIRADO', 'RUNNING'|  
-|progresso|**int**|Porcentagem concluída.|0 a 100|  
+|Progresso|**int**|Porcentagem concluída.|0 a 100|  
 |command|**nvarchar(4000)**|Texto completo do comando enviado pelo usuário.|Será truncado se for maior que 4000 caracteres (contando espaços).|  
 |rows_processed|**bigint**|Número de linhas processadas como parte dessa operação.||  
 |rows_rejected|**bigint**|Número de linhas rejeitadas como parte dessa operação.||  

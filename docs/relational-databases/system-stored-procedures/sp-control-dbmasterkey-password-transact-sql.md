@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 02/25/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_control_dbmasterkey_password
@@ -21,12 +18,12 @@ ms.assetid: 63979a87-42a2-446e-8e43-30481faaf3ca
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 6a468fc35805dc51bd76a51021fab82f66c8fc25
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: af6e23ba3cce2ef4dfaa6901f51a9d6c0b034e60
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43037529"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47659904"
 ---
 # <a name="spcontroldbmasterkeypassword-transact-sql"></a>sp_control_dbmasterkey_password (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +53,7 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
  @action= N'drop'  
  Especifica que uma credencial para o banco de dados especificado será descartada do armazenamento de credenciais. O valor passado para @action está **nvarchar**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precisa de uma chave mestra de banco de dados para descriptografar ou criptografar uma chave, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta descriptografar a chave mestra de serviço da instância. Se a descriptografia falhar, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pesquisará o repositório de credenciais em busca das credenciais de chave mestra que têm o mesmo GUID de família do banco de dados cuja chave mestra é necessária. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenta descriptografar a chave mestra de banco de dados com cada credencial compatível até que a descriptografia obtenha êxito ou não haja mais credenciais.  
   
 > [!CAUTION]  

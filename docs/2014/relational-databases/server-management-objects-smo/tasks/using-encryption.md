@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - database master key [SMO]
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - certificates [SMO]
 - service master key [SMO]
 ms.assetid: 405e0ed7-50a9-430e-a343-471f54b4af76
-caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a0d99702b9b6a48e02fe5acc36abed823718c560
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 95a0323cc5362ec2fd780c5ee28926b3b78aa755
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37236726"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48198516"
 ---
 # <a name="using-encryption"></a>Usando a criptografia
   No SMO, a chave mestra de serviço é representada pelo <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey> objeto. Isso é referenciado pela <xref:Microsoft.SqlServer.Management.Smo.Server.ServiceMasterKey%2A> propriedade do <xref:Microsoft.SqlServer.Management.Smo.Server> objeto. Ele pode ser regenerado usando o <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey.Regenerate%2A> método.  
