@@ -5,10 +5,7 @@ ms.date: 03/03/2017
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.service: sql-database
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_continuous_copy_status_TSQL
@@ -21,19 +18,18 @@ helpviewer_keywords:
 - dm_continuous_copy_status
 - sys.dm_continuous_copy_status
 ms.assetid: 411b2e71-4421-4ef5-900d-5af068750899
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 478e5ed025fb371d7b615e39580865346413d4b6
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 407af081f09fb773a8a3a4ee7ccc7e3c42ee3229
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38061794"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47655934"
 ---
-# <a name="sysdmcontinuouscopystatus-azure-sql-database"></a>sys.dm_continuous_copy_status (banco de dados SQL)
+# <a name="sysdmcontinuouscopystatus-azure-sql-database"></a>sys.dm_continuous_copy_status (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Retorna uma linha para cada banco de dados do usuário (V11) atualmente envolvido em uma relação de cópia contínua replicação geográfica. Se mais de uma relação de cópia contínua for iniciada para um banco de dados primário, essa tabela conterá uma linha para cada banco de dados secundário ativo.  
@@ -57,7 +53,7 @@ Se você estiver usando a V12 do banco de dados SQL deve usar [DM geo_replicatio
 ## <a name="permissions"></a>Permissões  
  Para recuperar dados, requer associação na **db_owner** função de banco de dados. O usuário dbo, os membros de **dbmanager** função de banco de dados e o logon sa podem consultar essa exibição também.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O **sys.dm_continuous_copy_status** modo de exibição é criado na **recursos** de banco de dados e é visível em todos os bancos de dados, incluindo o mestre lógico. No entanto, a consulta dessa exibição no mestre lógico retorna um conjunto vazio.  
   
  Se a relação de cópia contínua é encerrada em um banco de dados, a linha desse banco de dados na **sys.dm_continuous_copy_status** desaparece da exibição.  

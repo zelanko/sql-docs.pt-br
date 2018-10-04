@@ -4,31 +4,25 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - sp_scriptdynamicupdproc_TSQL
 - sp_scriptdynamicupdproc
 helpviewer_keywords:
 - sp_scriptdynamicupdproc
 ms.assetid: b4c18863-ed92-4aa2-a04f-7ed832fc9e07
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9158cc2bfb9a482a126a199fb7cbec801007ebe5
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 8675cc6e79bbfd78b82abb756a6de80cd33d54d6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43034664"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47627914"
 ---
 # <a name="spscriptdynamicupdproc-transact-sql"></a>sp_scriptdynamicupdproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +45,7 @@ sp_scriptdynamicupdproc [ @artid =] artid
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Retorna um conjunto de resultados que consiste em uma única **nvarchar (4000)** coluna. O conjunto de resultados forma a instrução completa CREATE PROCEDURE usada para criar o procedimento armazenado personalizado.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  **sp_scriptdynamicupdproc** é usado em replicação transacional. A lógica de script MCALL padrão inclui todas as colunas da instrução UPDATE e usa um bitmap para determinar as colunas alteradas. Se uma coluna não foi alterada, será redefinida como ela mesma, o que geralmente não causa problemas. Se a coluna for indexada, ocorrerá processamento extra. A abordagem dinâmica só inclui as colunas que foram alteradas, o que fornece uma cadeia de caracteres UPDATE otimizada. Porém, processamento extra incorre em tempo de execução, quando a instrução UPDATE dinâmica é criada. Recomendamos que você teste as abordagens dinâmica e estática e depois escolha a melhor solução.  
   
 ## <a name="permissions"></a>Permissões  

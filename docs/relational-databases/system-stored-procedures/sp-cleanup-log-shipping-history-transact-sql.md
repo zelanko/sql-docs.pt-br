@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cleanup_log_shipping_history_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_cleanup_log_shipping_history
 ms.assetid: 96d236a9-1d0e-4f83-a4d3-f825b7381e46
-caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 993fc3ef57226d136a37728958b869b6a14c9bf1
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b6a0d2c93c5ce00897136fc1c40611a1ef94e0fa
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238756"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47717534"
 ---
 # <a name="spcleanuplogshippinghistory-transact-sql"></a>sp_cleanup_log_shipping_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,25 +43,25 @@ sp_cleanup_log_shipping_history
   
 ## <a name="arguments"></a>Argumentos  
  [  **@agent_id =** ] '*agent_id*',  
- A ID primária para backup ou ID secundária para cópia ou restauração. *agent_id* é **uniqueidentifier** e não pode ser NULL.  
+ A ID primária para backup ou ID secundária para cópia ou restauração. *agent_id* está **uniqueidentifier** e não pode ser NULL.  
   
  [  **@agent_type =** ] '*agent_type*'  
- O tipo de trabalho de envio de log. 0 = Backup, 1 = Copiar, 2 = Restaurar. *agent_type* é **tinyint** e não pode ser NULL.  
+ O tipo de trabalho de envio de log. 0 = Backup, 1 = Copiar, 2 = Restaurar. *agent_type* está **tinyint** e não pode ser NULL.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma.  
+ Nenhum.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  **sp_cleanup_log_shipping_history** deve ser executado a partir de **mestre** banco de dados em qualquer servidor de envio de log. Esse procedimento armazenado limpa cópias locais e remotas do **log_shipping_monitor_history_detail** e **log_shipping_monitor_error_detail** com base no período de retenção de histórico.  
   
 ## <a name="permissions"></a>Permissões  
- Somente membros do **sysadmin** função fixa de servidor pode executar esse procedimento.  
+ Somente os membros dos **sysadmin** função de servidor fixa pode executar esse procedimento.  
   
 ## <a name="see-also"></a>Consulte também  
- [Sobre o envio de logs & #40; SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Sobre o envio de logs &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Procedimentos armazenados do sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

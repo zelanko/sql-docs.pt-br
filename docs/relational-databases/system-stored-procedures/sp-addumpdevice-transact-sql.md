@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addumpdevice_TSQL
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - backup devices [SQL Server], defining
 - sp_addumpdevice
 ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
-caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cbf23913e95b53e490d55099cde44b5ab60d3141
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: f5d8fe09af9133bd0a4f4a2c6a11824f16963698
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33240126"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47649846"
 ---
 # <a name="spaddumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,18 +49,18 @@ sp_addumpdevice [ @devtype = ] 'device_type'
   
 ## <a name="arguments"></a>Argumentos  
  [  **@devtype=** ] **'***device_type***'**  
- É o tipo do dispositivo de backup. *device_type* é **varchar (20)**, sem padrão e pode ser um dos valores a seguir.  
+ É o tipo do dispositivo de backup. *device_type* está **varchar(20)**, sem padrão e pode ser um dos valores a seguir.  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
-|**Disco**|Arquivo de disco rígido como dispositivo de backup.|  
-|**Fita**|Qualquer dispositivo de fita com suporte no [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.<br /><br /> Observação: o suporte para dispositivos de backup em fita será removido em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam.|  
+|**disco**|Arquivo de disco rígido como dispositivo de backup.|  
+|**fita**|Qualquer dispositivo de fita com suporte no [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.<br /><br /> Observação: o suporte para dispositivos de backup em fita será removido em uma versão futura do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam.|  
   
  [  **@logicalname =** ] **'***logical_name***'**  
- É o nome lógico do dispositivo de backup usado na instruções BACKUP e RESTORE. *logical_name* é **sysname**, sem padrão, e não pode ser NULL.  
+ É o nome lógico do dispositivo de backup usado na instruções BACKUP e RESTORE. *logical_name* está **sysname**, sem padrão, e não pode ser NULL.  
   
  [  **@physicalname =** ] **'***physical_name***'**  
- Nome físico do dispositivo de backup. Os nomes físicos devem seguir as regras para nomes de arquivo do sistema operacional ou convenções universais de nomenclatura de dispositivos de rede e devem incluir um caminho completo. *physical_name* é **nvarchar (260)**, sem padrão de valor e não pode ser NULL.  
+ Nome físico do dispositivo de backup. Os nomes físicos devem seguir as regras para nomes de arquivo do sistema operacional ou convenções universais de nomenclatura de dispositivos de rede e devem incluir um caminho completo. *physical_name* está **nvarchar (260)**, sem nenhum padrão de valor e não pode ser NULL.  
   
  Ao criar um dispositivo de backup em um local de rede remota, certifique-se de que o nome com o qual o [!INCLUDE[ssDE](../../includes/ssde-md.md)] foi iniciado tenha os recursos adequados de gravação no computador remoto.  
   
@@ -83,10 +79,10 @@ sp_addumpdevice [ @devtype = ] 'device_type'
  0 (êxito) ou 1 (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma  
+ None  
   
-## <a name="remarks"></a>Remarks  
- **sp_addumpdevice** adiciona um dispositivo de backup para o **backup_devices** exibição do catálogo. O dispositivo pode ser referenciado logicamente em instruções BACKUP e RESTORE. **sp_addumpdevice** não executa nenhum acesso ao dispositivo físico. O acesso ao dispositivo especificado ocorre apenas quando uma instrução BACKUP ou RESTORE é executada. A criação de um dispositivo de backup lógico pode simplificar as instruções BACKUP e RESTORE, em que a especificação do nome do dispositivo é uma alternativa que usa uma cláusula "TAPE = " ou "DISK = " para especificar o caminho do dispositivo.  
+## <a name="remarks"></a>Comentários  
+ **sp_addumpdevice** adiciona um dispositivo de backup para o **sys. backup_devices** exibição do catálogo. O dispositivo pode ser referenciado logicamente em instruções BACKUP e RESTORE. **sp_addumpdevice** não realiza qualquer acesso ao dispositivo físico. O acesso ao dispositivo especificado ocorre apenas quando uma instrução BACKUP ou RESTORE é executada. A criação de um dispositivo de backup lógico pode simplificar as instruções BACKUP e RESTORE, em que a especificação do nome do dispositivo é uma alternativa que usa uma cláusula "TAPE = " ou "DISK = " para especificar o caminho do dispositivo.  
   
  Os problemas de propriedade e de permissões podem interferir no uso dos dispositivos de backup de disco ou de arquivos. Verifique se as permissões de arquivo adequadas foram fornecidas à conta do Windows em que o [!INCLUDE[ssDE](../../includes/ssde-md.md)] foi iniciado.  
   

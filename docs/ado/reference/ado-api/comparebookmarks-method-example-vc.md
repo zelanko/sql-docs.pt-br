@@ -6,29 +6,26 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - CompareBookmarks method [ADO], VC++ example
 ms.assetid: 24ab3f3a-29c5-4ee1-942e-2634c02d0778
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 16ff4ae1e6314f1ed72dd73ec25eef0b3261906f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 02ae773493258afa7c1e3b8e3074347ce08ff4cc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276905"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47639274"
 ---
-# <a name="comparebookmarks-method-example-vc"></a>Exemplo do método CompareBookmarks (VC + +)
-Este exemplo demonstra o [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md) método. O valor relativo de indicadores raramente é necessário, a menos que um determinado indicador é alguma forma especial.  
+# <a name="comparebookmarks-method-example-vc"></a>Exemplo do método CompareBookmarks (VC++)
+Este exemplo demonstra a [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md) método. O valor relativo de indicadores raramente é necessária, a menos que um indicador específico é alguma forma especial.  
   
- Designar uma linha aleatória de um [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) derivado de ***autores*** tabela como o destino de uma pesquisa. Em seguida, exiba a posição de cada linha em relação ao destino.  
+ Designar uma linha aleatória de um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) deriva a ***autores*** tabela como o destino de uma pesquisa. Em seguida, exibe a posição de cada linha em relação ao que se destinam.  
   
 ```  
 // BeginCompareBookmarksCpp.cpp  

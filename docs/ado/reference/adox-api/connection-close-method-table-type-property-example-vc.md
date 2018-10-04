@@ -1,13 +1,11 @@
 ---
-title: Exemplo de propriedade do tipo de tabela (VC + +), do método de fechar Conexão | Microsoft Docs
+title: Conexão feche o método de exemplo da propriedade Table Type (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - Type property [ADOX], VC++ example
 - Close method [ADOX], VC++ example
 ms.assetid: d0e250aa-fc57-4fd3-9610-d64f50c5507f
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4cc1899b0d8772d27f3c505787469913a9e24150
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 133e0c86db9216d4959d8ee81fdc48f62c64d4fa
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35285275"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47837864"
 ---
-# <a name="connection-close-method-table-type-property-example-vc"></a>Método Close da Conexão, exemplo de propriedade do tipo de tabela (VC + +)
-Definindo o [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) propriedade **nada** deve "Fechar" do catálogo. Coleções associadas estará vazias. Todos os objetos que foram criados a partir de objetos de esquema no catálogo serão órfão. As propriedades desses objetos que tiverem sido armazenados em cache ainda estará disponíveis, mas falhará ao tentar ler as propriedades que requerem uma chamada para o provedor.  
+# <a name="connection-close-method-table-type-property-example-vc"></a>Método Connection Close, exemplo da propriedade Table Type (VC++)
+Definindo o [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) propriedade **nada** deve "Fechar" o catálogo. Coleções associadas estará vazias. Todos os objetos que foram criados de objetos de esquema no catálogo se tornem órfãs. Quaisquer propriedades nesses objetos que tiverem sido armazenados em cache ainda estará disponíveis, mas falhará ao tentar ler as propriedades que exigem uma chamada para o provedor.  
   
 ```  
 // BeginCloseConnectionCpp.cpp  

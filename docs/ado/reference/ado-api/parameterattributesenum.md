@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,16 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - ParameterAttributesEnum enumeration [ADO]
 ms.assetid: 7ef6c728-5eda-4bde-8052-02d2db1d2cfe
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 67473647635f9a6b89f767bcbaf1b4bde42cafef
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: c43697cad7682f23fdf9def8f961d550192aff67
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280715"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47660794"
 ---
 # <a name="parameterattributesenum"></a>ParameterAttributesEnum
 Especifica os atributos de uma [parâmetro](../../../ado/reference/ado-api/parameter-object.md) objeto.  
@@ -35,7 +32,7 @@ Especifica os atributos de uma [parâmetro](../../../ado/reference/ado-api/param
 |**adParamNullable**|64|Indica que o parâmetro aceita valores nulos.|  
 |**adParamLong**|128|Indica que o parâmetro aceita dados binários longos.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC equivalente  
+## <a name="adowfc-equivalent"></a>Equivalente do ADO/WFC  
  Pacote: **com.ms.wfc.data**  
   
 |Constante|  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - NullKeyNotAllowed Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - NullKeyNotAllowed element
 ms.assetid: 4ece99eb-954b-4da1-add4-dd9efd5fff0a
-caps.latest.revision: 35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6e514e1258fc8a73be70195641525f400021a002
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0d17edc031d66282b433571b18ef1c32cf6e09bf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37165267"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48054566"
 ---
 # <a name="nullkeynotallowed-element-assl"></a>Elemento NullKeyNotAllowed (ASSL)
   Determina como o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] mecanismo de processamento manipula um erro de chave nula encontrado durante o processamento.  
@@ -59,9 +56,9 @@ ms.locfileid: "37165267"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elemento pai|[ErrorConfiguration](../objects/errorconfiguration-element-assl.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Os erros de chave nula ocorrem quando um valor nulo é encontrado em uma coluna de chave na qual os valores nulos não são permitidos, forçando o descarte do registro durante o processamento. No entanto, esse erro ocorre somente se o [NullProcessing](nullprocessing-element-assl.md) elemento para o `DataItem` ancestral a `ErrorConfiguration` elemento pai é definido como *erro*.  
   
  O valor desse elemento é limitado a uma das cadeias de caracteres listadas na tabela a seguir.  

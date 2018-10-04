@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_create_snapshot
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - core.sp_create_snapshot stored procedure
 - sp_create_snapshot
 ms.assetid: ff297bda-0ee2-4fda-91c8-7000377775e3
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 33ba9d69763a9d07cc9907aef60397b6c5b37eee
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 271c8baf01825baa9ee88e7c8ee365019b6bca66
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33238563"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47780964"
 ---
 # <a name="corespcreatesnapshot-transact-sql"></a>core.sp_create_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,27 +49,27 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
   
 ## <a name="arguments"></a>Argumentos  
  [ @collection_set_uid =] '*collection_set_uid*'  
- O GUID do conjunto de coleta. *collection_set_uid* é **uniqueidentifier** sem nenhum valor padrão. Para obter o GUID, consulte a exibição dbo.syscollector_collection_sets no banco de dados msdb.  
+ O GUID do conjunto de coleta. *collection_set_uid* está **uniqueidentifier** sem nenhum valor padrão. Para obter o GUID, consulte a exibição dbo.syscollector_collection_sets no banco de dados msdb.  
   
  [ @collector_type_uid =] '*collector_type_uid*'  
- O GUID de um tipo de coletor. *collector_type_uid* é **uniqueidentifier** sem nenhum valor padrão. Para obter o GUID, consulte a exibição dbo.syscollector_collector_types no banco de dados msdb.  
+ O GUID de um tipo de coletor. *collector_type_uid* está **uniqueidentifier** sem nenhum valor padrão. Para obter o GUID, consulte a exibição dbo.syscollector_collector_types no banco de dados msdb.  
   
- [ @machine_name=] '*nome_da_máquina*'  
- O nome do servidor no qual o conjunto de coleta reside. *nome_da_máquina* é **sysname**, sem nenhum valor padrão.  
+ [ @machine_name=] '*machine_name*'  
+ O nome do servidor no qual o conjunto de coleta reside. *nome_do_computador* está **sysname**, sem nenhum valor padrão.  
   
  [ @named_instance=] '*instância_nomeada*'  
- O nome da instância do conjunto de coleta. *instância_nomeada* é **sysname**, sem nenhum valor padrão.  
+ O nome da instância do conjunto de coleta. *instância_nomeada* está **sysname**, sem nenhum valor padrão.  
   
  [ @log_id =] *log_id*  
- O identificador exclusivo que é mapeado para o log de eventos do conjunto de coleta que coletou os dados. *log_id* é **bigint** sem nenhum valor padrão. Para obter o valor de *log_id*, consulte a exibição syscollector_execution_log no banco de dados msdb.  
+ O identificador exclusivo que é mapeado para o log de eventos do conjunto de coleta que coletou os dados. *log_id* está **bigint** sem nenhum valor padrão. Para obter o valor de *log_id*, consulte a exibição syscollector_execution_log no banco de dados msdb.  
   
  [ @snapshot_id =] *snapshot_id*  
- O identificador exclusivo de uma linha que é inserido no modo de exibição snapshots. *snapshot_id* é **int** e é retornada como OUTPUT.  
+ O identificador exclusivo para uma linha que é inserido no modo de exibição snapshots. *snapshot_id* está **int** e é retornada como OUTPUT.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Sempre que um pacote de carregamento começa a carregar dados no data warehouse de gerenciamento, o componente de tempo de execução do coletor de dados chama core.sp_create_snapshot.  
   
  Esse procedimento verifica se:  
@@ -85,7 +81,7 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
  Se alguma das verificações acima falhar, o procedimento falhará e retornará um erro.  
   
 ## <a name="permissions"></a>Permissões  
- Requer a participação no **mdw_writer** (com permissão EXECUTE) função fixa de banco de dados.  
+ Requer associação na **mdw_writer** (com permissão EXECUTE) a função de banco de dados fixa.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir cria um instantâneo do conjunto de coleta Uso do Disco, adiciona-o ao data warehouse de gerenciamento e retorna o identificador do instantâneo. No exemplo, a instância padrão é usada.  

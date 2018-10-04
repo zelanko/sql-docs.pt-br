@@ -5,46 +5,43 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - updating data [ODBC], SQLSetPos
 - data updates [ODBC], SQLSetPos
 - SQLSetPos function [ODBC], updating rows
 ms.assetid: d83a8c2a-5aa8-4f19-947c-79a817167ee1
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c5e971d597178501ecc7107da4bbaeb6158f0c99
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dfb57a6512245c9adb36a511ce48721dd901995c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32916331"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47715414"
 ---
-# <a name="updating-rows-in-the-rowset-with-sqlsetpos"></a>Atualizando linhas no conjunto de linhas com SQLSetPos
-A operação de atualização de **SQLSetPos** faz com que a fonte de dados atualizar uma ou mais linhas selecionadas de uma tabela, usando dados nos buffers de aplicativo para cada coluna associada (a menos que o valor no buffer de comprimento/indicador é SQL_COLUMN_IGNORE). Colunas que não são associadas não serão atualizadas.  
+# <a name="updating-rows-in-the-rowset-with-sqlsetpos"></a>Atualizar linhas no conjunto de linhas com SQLSetPos
+A operação de atualização do **SQLSetPos** faz com que a fonte de dados atualizar um ou mais linhas selecionadas de uma tabela, usando dados nos buffers de aplicativo para cada coluna associada (a menos que o valor no buffer de comprimento/indicador é SQL_COLUMN_IGNORE). Colunas que não são associadas não serão atualizadas.  
   
  Para atualizar linhas com **SQLSetPos**, o aplicativo faz o seguinte:  
   
-1.  Coloca os novos valores de dados em buffers do conjunto de linhas. Para obter informações sobre como enviar dados longos com **SQLSetPos**, consulte [dados longos e SQLSetPos e SQLBulkOperations](../../../odbc/reference/develop-app/long-data-and-sqlsetpos-and-sqlbulkoperations.md).  
+1.  Coloca os novos valores de dados nos buffers de conjunto de linhas. Para obter informações sobre como enviar dados longos com **SQLSetPos**, consulte [dados Long e SQLSetPos e SQLBulkOperations](../../../odbc/reference/develop-app/long-data-and-sqlsetpos-and-sqlbulkoperations.md).  
   
-2.  Define o valor do buffer de comprimento/indicador de cada coluna, conforme necessário. Esse é o comprimento de bytes dos dados ou SQL_NTS para colunas associadas aos buffers de cadeia de caracteres, o comprimento de bytes de dados para colunas vinculadas buffers binários e SQL_NULL_DATA para todas as colunas a ser definido como NULL.  
+2.  Define o valor no buffer de comprimento/indicador de cada coluna, conforme necessário. Esse é o comprimento de bytes dos dados ou SQL_NTS para colunas associadas a buffers de cadeia de caracteres, o tamanho de bytes dos dados para colunas associadas a buffers binários e SQL_NULL_DATA para todas as colunas a ser definido como NULL.  
   
-3.  Define o valor do buffer de comprimento/indicador dessas colunas que não devem ser atualizadas para SQL_COLUMN_IGNORE. Embora o aplicativo pode ignorar esta etapa e reenviar os dados existentes, isso é ineficiente e corre o risco de enviar valores para a fonte de dados que foram truncados quando foram lidas.  
+3.  Define o valor no buffer de comprimento/indicador dessas colunas que não devem ser atualizados para SQL_COLUMN_IGNORE. Embora o aplicativo pode ignorar esta etapa e reenviar os dados existentes, isso é ineficiente e o risco de enviar valores para a fonte de dados foram truncados quando foram lidas.  
   
 4.  Chamadas **SQLSetPos** com *operação* definido como SQL_UPDATE e *RowNumber* definido como o número da linha para atualizar. Se *RowNumber* for 0, todas as linhas no conjunto de linhas são atualizadas.  
   
- Depois de **SQLSetPos** retorna, a linha atual foi definida para a linha atualizada.  
+ Após **SQLSetPos** retorna, a linha atual é definida como a linha atualizada.  
   
- Ao atualizar todas as linhas do conjunto de linhas (*RowNumber* é igual a 0), um aplicativo pode desativar a atualização de determinadas linhas definindo os elementos correspondentes da matriz de operação de linha (indicada pela SQL_ATTR_ROW_OPERATION_PTR atributo de instrução) para SQL_ROW_IGNORE. A matriz de operação de linha corresponde em tamanho e número de elementos na matriz de status de linha (apontado pelo atributo de instrução SQL_ATTR_ROW_STATUS_PTR). Para atualizar somente as linhas no conjunto de resultados que foram obtidas com êxito e não tem sido excluídas do conjunto de linhas, o aplicativo usa a matriz de status de linha da função que buscadas o conjunto de linhas como a matriz de operação de linha para **SQLSetPos**.  
+ Ao atualizar todas as linhas do conjunto de linhas (*RowNumber* é igual a 0), um aplicativo pode desativar a atualização de determinadas linhas, definindo os elementos correspondentes da matriz de operação de linha (apontada para o SQL_ATTR_ROW_OPERATION_PTR atributo de instrução) para SQL_ROW_IGNORE. A matriz de operação de linha corresponde no tamanho e número de elementos na matriz de status de linha (apontada para o atributo da instrução SQL_ATTR_ROW_STATUS_PTR). Para atualizar somente as linhas no conjunto de resultados que foram obtidas com êxito e não foram excluídas do conjunto de linhas, o aplicativo usa a matriz de status de linha da função que buscadas o conjunto de linhas como a matriz para a operação linha **SQLSetPos**.  
   
- Para cada linha que é enviada para a fonte de dados como uma atualização, os buffers do aplicativo devem ter dados de linha válido. Se os buffers do aplicativo foram preenchidos pela busca e se uma matriz de status de linha foi mantida, seus valores em cada uma dessas posições de linha não devem ser SQL_ROW_DELETED, SQL_ROW_ERROR ou SQL_ROW_NOROW.  
+ Para cada linha é enviada à fonte de dados como uma atualização, os buffers do aplicativo devem ter dados de linha válido. Se os buffers do aplicativo foram preenchidos pela busca e se uma matriz de status de linha foi mantida, seus valores em cada uma das posições não devem ser SQL_ROW_DELETED, SQL_ROW_ERROR ou SQL_ROW_NOROW.  
   
- Por exemplo, o código a seguir permite que um usuário rolar a tabela de clientes e atualizar, excluir ou adicionar novas linhas. Coloca os novos dados em buffers do conjunto de linhas antes de chamar **SQLSetPos** para atualizar ou adicionar novas linhas. Uma linha extra é alocada no final dos buffers de linhas para manter as novas linhas; Isso impede que os dados existentes que está sendo substituído quando dados de uma linha nova são colocados nos buffers.  
+ Por exemplo, o código a seguir permite que um usuário rolar a tabela de clientes e atualizar, excluir ou adicionar novas linhas. Ele coloca os novos dados nos buffers de conjunto de linhas antes de chamar **SQLSetPos** para atualizar ou adicionar novas linhas. Uma linha extra é alocada no final dos buffers de linhas para conter novas linhas; Isso impede que os dados existentes sendo substituído quando os dados para uma nova linha são colocados nos buffers.  
   
 ```  
 #define UPDATE_ROW   100  

@@ -1,29 +1,26 @@
 ---
-title: Propriedades do objeto, métodos e eventos de dimensão | Microsoft Docs
+title: As propriedades do objeto, métodos e eventos de dimensão | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Dimension object [ADO MD], members
 ms.assetid: e491439f-8eff-4bf6-a808-8dba243af8c3
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 814dc793c1819edd41a5689f09a618505c9ed608
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 3c161898599cadd5e31a45720cbace26243ea7ba
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35283885"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696545"
 ---
-# <a name="dimension-object-properties-methods-and-events"></a>Propriedades do objeto de dimensão, métodos e eventos
+# <a name="dimension-object-properties-methods-and-events"></a>Propriedades, métodos e eventos do objeto Dimension
 ## <a name="propertiescollections"></a>Propriedades/coleções  
  [Propriedade Description](../../../ado/reference/ado-md-api/description-property-ado-md.md)  
   

@@ -4,26 +4,24 @@ description: Este artigo explica como usar Dprovides um passo a passo para confi
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 09/24/2018
+ms.date: 09/25/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.component: ''
-ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3242f0d074dc3c2f33fc83de4604a20bfdcbd64a
-ms.sourcegitcommit: df21af652d0906ade8cc9ca3985a7ba5569f0db6
+ms.openlocfilehash: 65bd8b35c0ab211a522a380521b5e2246c31bdf0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47049387"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47793774"
 ---
 # <a name="how-to-use-distributed-transactions-with-sql-server-on-docker"></a>Como usar transações distribuídas com o SQL Server no Docker
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Este artigo explica como configurar o SQL Server no Docker para transações distribuídas.
+Este artigo explica como configurar contêineres do Linux do SQL Server no Docker para transações distribuídas.
 
 Imagens de contêiner a partir da versão prévia do SQL Server 2019, dão suporte para o Microsoft Distributed Transaction Coordinator (MSDTC) exigido para transações distribuídas. Para entender os requisitos de comunicações para o MSDTC, consulte [como configurar o Microsoft Distributed Transaction coordenador (MSDTC) no Linux](sql-server-linux-configure-msdtc.md). Este artigo explica os requisitos especiais e os cenários relacionados a contêineres do Docker do SQL Server.
 
@@ -32,34 +30,27 @@ Imagens de contêiner a partir da versão prévia do SQL Server 2019, dão supor
 Para habilitar a transação do MSDTC em contêineres do docker, você deve definir duas novas variáveis de ambiente:
 
 - **MSSQL_RPC_PORT**: a porta TCP que o serviço de mapeador de ponto de extremidade RPC associa a e escuta.  
-- **MSSQL_DTC_TCP_PORT** a porta que o serviço MSDTC está configurado para escutar em.
+- **MSSQL_DTC_TCP_PORT**: a porta que o serviço MSDTC está configurado para escutar em.
 
 ### <a name="pull-and-run"></a>Efetuar pull e executar
 
-O exemplo a seguir mostra como usar essas variáveis de ambiente para efetuar pull e executar um contêiner configurado para o MSDTC. Isso permite que ele se comunique com qualquer aplicativo em todos os hosts.
+O exemplo a seguir mostra como usar essas variáveis de ambiente para efetuar pull e executar um único contêiner do SQL Server configurado para o MSDTC. Isso permite que ele se comunique com qualquer aplicativo em todos os hosts.
 
 ```bash
 docker run \
    -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
-   -e 'MSSQL_RPC_PORT=13500' -e 'MSSQL_DTC_TCP_PORT=51000' \
-   -p 51433:1433 -p 13500:13500 -p 51000:51000  \
+   -e 'MSSQL_RPC_PORT=135' -e 'MSSQL_DTC_TCP_PORT=51000' \
+   -p 51433:1433 -p 135:135 -p 51000:51000  \
    -d mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu
 ```
 
-O comando a seguir mostra o mesmo comando para o Docker no Windows no PowerShell:
+> [!IMPORTANT]
+> O comando anterior só funciona para o Docker em execução no Linux. Docker no Windows, o host do Windows já escuta na porta 135. Você pode remover o `-p 135:135` parâmetro para o Docker no Windows, mas tem algumas limitações. O contêiner resultante não, em seguida, pode ser usado para transações distribuídas que envolvem o host; ele pode participar apenas em transações distribuídas entre os contêineres do docker no host.
 
-```PowerShell
-docker run `
-   -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
-   -e "MSSQL_RPC_PORT=13500" -e "MSSQL_DTC_TCP_PORT=51000" `
-   -p 51433:1433 -p 13500:13500 -p 51000:51000 `
-   -d "mcr.microsoft.com/mssql/server:vNext-CTP2.0-ubuntu"
-```
-
-Neste comando, o **mapeador de ponto de extremidade RPC** serviço foi associado à porta 13500 e o **MSDTC** serviço foi associado à porta 51000 dentro da rede virtual do docker. A comunicação do SQL Server TDS ocorre na porta 1433 dentro da rede virtual do docker. Essas portas foram expostas externamente ao host como a porta do protocolo TDS 51433, porta de mapeador de ponto de extremidade RPC 13500 e porta do MSDTC 51000.
+Neste comando, o **mapeador de ponto de extremidade RPC** serviço foi associado à porta 135 e o **MSDTC** serviço foi associado à porta 51000 dentro da rede virtual do docker. A comunicação do SQL Server TDS ocorre na porta 1433 dentro da rede virtual do docker. Essas portas foram expostas externamente ao host como a porta do protocolo TDS 51433, porta de mapeador de ponto de extremidade RPC 135 e porta do MSDTC 51000.
 
 > [!NOTE]
-> O mapeador de ponto de extremidade de RPC e a porta do MSDTC não precisa ser o mesmo no host e o contêiner. Portanto, enquanto a porta do mapeador de ponto de extremidade RPC foi configurada para ser 13500 no contêiner, ele poderia ser mapeado para a porta 13501 ou qualquer outra porta disponível no servidor host.
+> O mapeador de ponto de extremidade de RPC e a porta do MSDTC não precisa ser o mesmo no host e o contêiner. Portanto, enquanto a porta do mapeador de ponto de extremidade RPC foi configurada para ser 135 no contêiner, ele poderia ser mapeado para a porta 13501 ou qualquer outra porta disponível no servidor host.
 
 ## <a name="configure-the-firewall"></a>Configurar o firewall
 
@@ -84,7 +75,9 @@ sudo firewall-cmd --reload
 
 ## <a name="configure-port-routing-on-the-host"></a>Configurar o roteamento de porta no host
 
-Se o contêiner do docker participa de transações distribuídas com um servidor externo para o host, o host deve configurar o roteamento de porta. Para obter mais informações, consulte [configurar o roteamento de porta](sql-server-linux-configure-msdtc.md#configure-port-routing).
+No exemplo anterior, pois um único contêiner do Docker mapeia a porta RPC 135 para a porta 135 no host, transações distribuídas com o host agora devem funcionar sem nenhuma configuração adicional. Observe que é possível usar diretamente a porta 135 no contêiner, como o SQL Server é executado com privilégios elevados em um contêiner. Para SQL Server fora de um contêiner, uma porta efêmera diferente deve ser usada e o tráfego para a porta 135, em seguida, deve ser roteado para essa porta.
+
+No entanto, se você decidiu a porta do contêiner 135 para uma porta diferente no host, como 13500 do mapa, em seguida, você precisa configurar o roteamento de porta no host. Isso permite que o contêiner do docker participar de transações distribuídas com o host e com outros servidores externos. Para obter mais informações, consulte [configurar o roteamento de porta](sql-server-linux-configure-msdtc.md#configure-port-routing).
 
 ## <a name="next-steps"></a>Próximas etapas
 

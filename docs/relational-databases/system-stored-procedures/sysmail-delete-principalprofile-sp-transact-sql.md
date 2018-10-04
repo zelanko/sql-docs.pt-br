@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_delete_principalprofile_sp_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_delete_principalprofile_sp
 ms.assetid: 8fc14700-e17a-4073-9a96-7fc23e775c69
-caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6f1f7fc964f5be9e045614f7a49c7f5fec194537
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: c292ba89a3b79dc19ca038672cf5cc587a55ed4f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33257150"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47673174"
 ---
 # <a name="sysmaildeleteprincipalprofilesp-transact-sql"></a>sysmail_delete_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,29 +42,29 @@ sysmail_delete_principalprofile_sp  { [ @principal_id = ] principal_id | [ @prin
   
 ## <a name="arguments"></a>Argumentos  
  [ **@principal_id** = ] *principal_id*  
- É a ID do usuário de banco de dados ou da função no **msdb** banco de dados para associação a ser excluída. *principal_id* é **int**, com um padrão NULL. Para fazer um perfil público em um perfil privado, forneça a ID da entidade **0** ou o nome da entidade **'public'**. O *principal_id* ou *principal_name* deve ser especificado.  
+ É a ID do usuário de banco de dados ou função na **msdb** banco de dados para associação a ser excluída. *principal_id* está **int**, com um padrão NULL. Para fazer um perfil público em um perfil privado, forneça a ID da entidade **0** ou o nome da entidade **'public'**. Qualquer um dos *principal_id* ou *principal_name* deve ser especificado.  
   
  [ **@principal_name** =] **'***principal_name***'**  
- É o nome do usuário de banco de dados ou da função no **msdb** banco de dados para associação a ser excluída. *principal_name* é **sysname**, com um padrão NULL. Para fazer um perfil público em um perfil privado, forneça a ID da entidade **0** ou o nome da entidade **'public'**. O *principal_id* ou *principal_name* deve ser especificado.  
+ É o nome do usuário de banco de dados ou função na **msdb** banco de dados para associação a ser excluída. *principal_name* está **sysname**, com um padrão NULL. Para fazer um perfil público em um perfil privado, forneça a ID da entidade **0** ou o nome da entidade **'public'**. Qualquer um dos *principal_id* ou *principal_name* deve ser especificado.  
   
  [ **@profile_id** =] *profile_id*  
- É a ID do perfil da associação a ser excluída. *profile_id* é **int**, com um padrão NULL. O *profile_id* ou *profile_name* deve ser especificado.  
+ É a ID do perfil da associação a ser excluída. *profile_id* está **int**, com um padrão NULL. Qualquer um dos *profile_id* ou *profile_name* deve ser especificado.  
   
  [ **@profile_name** =] **'***profile_name***'**  
- É o nome do perfil da associação a ser excluída. *profile_name* é **sysname**, com um padrão NULL. O *profile_id* ou *profile_name* deve ser especificado.  
+ É o nome do perfil da associação a ser excluída. *profile_name* está **sysname**, com um padrão NULL. Qualquer um dos *profile_id* ou *profile_name* deve ser especificado.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Para fazer um perfil público em um perfil privado, forneça **'public'** para o nome da entidade ou **0** para a id da entidade.  
   
- Tenha cuidado ao remover permissões do perfil privado padrão para um usuário ou do perfil público padrão. Quando nenhum perfil padrão estiver disponível, **sp_send_dbmail** requer o nome de um perfil como um argumento. Portanto, a remoção de um perfil padrão pode causar chamadas para **sp_send_dbmail** falha. Para obter mais informações, consulte [sp_send_dbmail &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md).  
+ Tenha cuidado ao remover permissões do perfil privado padrão para um usuário ou do perfil público padrão. Quando nenhum perfil padrão estiver disponível, **sp_send_dbmail** requer um nome de um perfil como um argumento. Portanto, a remoção de um perfil padrão pode causar chamadas para **sp_send_dbmail** falhe. Para obter mais informações, consulte [sp_send_dbmail &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md).  
   
- O procedimento armazenado **sysmail_delete_principalprofile_sp** está no **msdb** banco de dados e pertence a **dbo** esquema. O procedimento deve ser executado com um nome de três partes se o banco de dados atual não é **msdb**.  
+ O procedimento armazenado **sysmail_delete_principalprofile_sp** está no **msdb** banco de dados e é de propriedade de **dbo** esquema. O procedimento deve ser executado com um nome de três partes se o banco de dados atual não for **msdb**.  
   
 ## <a name="permissions"></a>Permissões  
- Permissões de execução para esse procedimento usam como padrão membros do **sysadmin** função de servidor fixa.  
+ Permissões de execução para esse procedimento usam como padrão os membros de **sysadmin** função de servidor fixa.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir mostra a exclusão da associação entre o perfil **AdventureWorks Administrator** e o logon **ApplicationUser** no **msdb** banco de dados.  

@@ -5,42 +5,39 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - text file driver [ODBC], SQLConfigDataSource
 - SQLConfigDataSource function [ODBC], Text File Driver
 ms.assetid: c505d36e-1e72-47b2-a9e5-e4926b408468
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0c0f481adc2eef06022eb10d1fa71d5bb49de1fe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1635538f69b313a73a24ab1531f8793c7d98741e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32904111"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47612654"
 ---
-# <a name="sqlconfigdatasource-text-file-driver"></a>SQLConfigDataSource (Driver de arquivo de texto)
+# <a name="sqlconfigdatasource-text-file-driver"></a>SQLConfigDataSource (Driver de Arquivo de texto)
 > [!NOTE]  
->  Este tópico fornece informações específicas de Driver do arquivo de texto. Para obter informações gerais sobre esta função, consulte o tópico apropriado em [referência da API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Este tópico fornece informações específicas de Driver de arquivo de texto. Para obter informações gerais sobre essa função, consulte o tópico apropriado sob [referência da API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- O **SQLConfigDataSource** função que é usada para adicionar, modificar ou excluir uma fonte de dados dinamicamente usa as seguintes palavras-chave.  
+ O **SQLConfigDataSource** função que é usada para adicionar, modificar ou excluir uma fonte de dados usa as seguintes palavras-chave dinamicamente.  
   
 |Palavra-chave|Description|  
 |-------------|-----------------|  
-|CHARACTERSET|Para o driver de texto, OEM ou ANSI.|  
+|CHARACTERSET|Para o driver de texto, ANSI ou OEM.|  
 |COLNAMEHEADER|Para o driver de texto, indica se o primeiro registro de dados especificará os nomes de coluna. VERDADEIRO ou falso.|  
 |DEFAULTDIR|A especificação de caminho para o diretório.|  
 |DESCRIPTION|Uma descrição dos dados na fonte de dados.<br /><br /> Isso define a mesma opção como **descrição** na caixa de diálogo de instalação.|  
 |DRIVER|A especificação de caminho para a DLL do driver.|  
 |DRIVERID|Uma ID de inteiro para o driver. 27 (texto)|  
-|EXTENSÕES|Lista as extensões de nome de arquivo dos arquivos de texto na fonte de dados.<br /><br /> Isso define a mesma opção como **lista extensões** na caixa de diálogo de instalação.|  
+|EXTENSÕES|Lista as extensões de nome de arquivo dos arquivos de texto na fonte de dados.<br /><br /> Isso define a mesma opção como **lista de extensões** na caixa de diálogo de instalação.|  
 |FIL|Tipo de arquivo de texto|  
 |TIPO DE ARQUIVO|Tipo de arquivo para o driver de texto (texto).|  
-|FORMAT|Para o driver de texto, pode ser FIXEDLENGTH, TABDELIMITED, CSVDELIMITED (por uma vírgula) ou DELIMITED() (pelo caractere especial especificado entre parênteses). O caractere especial é um caractere de comprimento e pode estar no formato de caractere, decimal ou hexadecimal.|  
-|MAXSCANROWS|O número de linhas a serem examinadas ao definir o tipo de dados da coluna com base em dados existentes.<br /><br /> Para o driver de texto, você pode inserir um número de 1 a 32767 para o número de linhas a serem examinadas; No entanto, o valor padrão será sempre 25. (Um número fora do limite retornará um erro.)<br /><br /> Isso define a mesma opção como **linhas a examinar** na caixa de diálogo de instalação.|  
+|FORMAT|Para o driver de texto, que pode ser FIXEDLENGTH, TABDELIMITED, CSVDELIMITED (por uma vírgula) ou DELIMITED() (pelo caractere especial especificado nos parênteses). O caractere especial é um caractere de comprimento e pode estar no formato de caractere, decimal ou hexadecimal.|  
+|MAXSCANROWS|O número de linhas a serem examinadas ao definir o tipo de dados da coluna com base nos dados existentes.<br /><br /> Para o driver de texto, você pode inserir um número de 1 a 32767 para o número de linhas a serem examinadas; No entanto, o valor será sempre padrão 25. (Um número fora do limite retornará um erro.)<br /><br /> Isso define a mesma opção como **linhas a examinar** na caixa de diálogo de instalação.|  
 |READONLY|TRUE para tornar o arquivo somente leitura; FALSE para tornar o arquivo não é somente leitura.<br /><br /> Isso define a mesma opção como **somente leitura** na caixa de diálogo de instalação.|

@@ -1,40 +1,37 @@
 ---
-title: Os cursores controlados por conjuntos de chaves | Microsoft Docs
+title: Cursores controlados por | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - keyset-driven cursors [ODBC]
 - cursors [ODBC], key-set driven
 ms.assetid: 01769f43-1d9c-4685-84fa-15a6465335e9
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 13bb740a6d76ae97541f39b73d1cecf60bef61fa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: be6dc5a164220befb534368eace4f51f4dbd84e1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32912441"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47719434"
 ---
 # <a name="keyset-driven-cursors"></a>Cursores controlados por conjunto de chaves
-Um cursor controlado por fica entre static e um cursor dinâmico em sua capacidade de detectar alterações. Como um cursor estático, ele não detectar sempre alterações para a associação e a ordem do conjunto de resultados. Como um cursor dinâmico, ele detectar alterações em valores de linhas no conjunto (sujeito o nível de isolamento da transação, conforme definido pelo atributo de conexão SQL_ATTR_TXN_ISOLATION) de resultados.  
+Um cursor controlado por conjunto de chaves se encontra entre um estático e um cursor dinâmico em sua capacidade de detectar alterações. Como um cursor estático, ele sempre detectar alterações para a associação e a ordem do conjunto de resultados. Como um cursor dinâmico, ele detectar alterações nos valores de linhas no resultado definido (sujeito ao nível de isolamento da transação, conforme definido pelo atributo SQL_ATTR_TXN_ISOLATION conexão).  
   
- Quando um cursor controlado por conjunto de chaves é aberto, ele salva as chaves para o conjunto de resultados inteiro; Isso corrige a associação aparente e a ordem do conjunto de resultados. Como o cursor percorre o conjunto de resultados, ele usa as chaves na *keyset* para recuperar os valores de dados atual para cada linha. Por exemplo, suponha que um cursor controlado por busca uma linha e outro aplicativo, em seguida, atualiza a linha. Se o cursor refetches a linha, os valores que ele vê são novos, porque ele refetched a linha usando sua chave. Por isso, os cursores controlados por conjuntos de chaves sempre detectam as alterações feitas por si mesmos e outros.  
+ Quando um cursor controlado por conjunto de chaves é aberto, ele salva as chaves para o conjunto de resultados inteiro; Isso corrige a associação aparente e a ordem do conjunto de resultados. Como o cursor percorre o conjunto de resultados, ele usa as chaves desta *keyset* para recuperar os valores de dados atual para cada linha. Por exemplo, suponha que um cursor controlado por busca uma linha e o outro aplicativo, em seguida, atualiza a linha. Se o cursor refetches a linha, os valores que ele vê são novos, porque ele refetched usando sua chave de linha. Por isso, os cursores controlados por sempre detectam as alterações feitas por si só e outras pessoas.  
   
- Quando o cursor tenta recuperar uma linha que foi excluída, essa linha é exibida como um "buraco" no conjunto de resultados: A chave para a linha existe no conjunto de chaves, mas a linha não existe mais no conjunto de resultados. Se os valores de chave em uma linha são atualizados, a linha é considerada foi excluído e, em seguida, inserir, portanto, essas linhas também é exibido como falhas no conjunto de resultados. Enquanto um cursor controlado por conjunto de chaves sempre pode detectar as linhas excluídas por outras pessoas, ele também pode remover as chaves para linhas ela é excluída do conjunto de chaves. Os cursores controlados por conjuntos de chaves que isso não é possível detectar suas próprias exclusões. Se um cursor de cursores controlados por determinado detecta suas próprias exclusões é relatado com a opção SQL_STATIC_SENSITIVITY **SQLGetInfo**.  
+ Quando o cursor tenta recuperar uma linha que foi excluída, essa linha é exibida como uma "brecha" no conjunto de resultados: A chave para a linha existe no conjunto de chaves, mas a linha não existe mais no conjunto de resultados. Se os valores de chave em uma linha forem atualizados, a linha é considerada foi excluído e, em seguida, inserida, para que essas linhas também aparecem como brechas no conjunto de resultados. Enquanto um cursor controlado por sempre pode detectar linhas excluídas por outras pessoas, ele pode, opcionalmente, remover as chaves para linhas ele exclui em si do conjunto de chaves. Cursores controlados por que isso não é possível detectar suas próprias exclusões. Se um cursor específico de cursores controlados por detecta suas própria exclusões é relatado por meio da opção SQL_STATIC_SENSITIVITY na **SQLGetInfo**.  
   
- Linhas inseridas por outras pessoas nunca são visíveis para um cursor controlado por porque não há chaves para essas linhas existem no conjunto de chaves. No entanto, um cursor controlado por conjunto de chaves pode, opcionalmente, adicionar as chaves para linhas insere em si para o conjunto de chaves. Os cursores controlados por conjuntos de chaves que isso podem detectar suas próprias inserções. Se um cursor de cursores controlados por determinado detecta suas próprias inserções é relatado com a opção SQL_STATIC_SENSITIVITY **SQLGetInfo**.  
+ Linhas inseridas por outras pessoas nunca são visíveis para um cursor controlado por porque nenhuma chave para essas linhas existe no conjunto de chaves. No entanto, um cursor controlado por conjunto de chaves, opcionalmente, pode adicionar as chaves para linhas insere em si para o conjunto de chaves. Os cursores controlados por fazem isso podem detectar suas próprias inserções. Se um cursor específico de cursores controlados por detecta inserções de seus próprio é relatada com a opção SQL_STATIC_SENSITIVITY **SQLGetInfo**.  
   
- A matriz de status de linha especificada pelo atributo de instrução SQL_ATTR_ROW_STATUS_PTR pode conter SQL_ROW_SUCCESS, SQL_ROW_SUCCESS_WITH_INFO ou SQL_ROW_ERROR para qualquer linha. Ele retorna SQL_ROW_UPDATED, SQL_ROW_DELETED ou SQL_ROW_ADDED para linhas que detecta como atualizadas, excluídas ou inseridas.  
+ A matriz de status de linha especificada pelo atributo de instrução SQL_ATTR_ROW_STATUS_PTR pode conter SQL_ROW_SUCCESS, SQL_ROW_SUCCESS_WITH_INFO ou SQL_ROW_ERROR para qualquer linha. Ele retorna SQL_ROW_UPDATED, SQL_ROW_DELETED ou SQL_ROW_ADDED para linhas que detecta como atualizado, excluído ou inserido.  
   
- Cursores controlados por conjuntos de chaves geralmente são implementados por meio da criação de uma tabela temporária que contém as chaves para cada linha no conjunto de resultados. Porque o cursor também deve determinar se linhas foram atualizadas, esta tabela normalmente contém uma coluna com informações de controle de versão de linha.  
+ Cursores controlados por conjunto de chaves geralmente são implementados por criar uma tabela temporária que contém as chaves para cada linha no conjunto de resultados. Como o cursor também deve determinar se linhas foram atualizadas, esta tabela contém também costuma ser uma coluna com informações de controle de versão de linha.  
   
- Para rolar sobre o conjunto de resultados original, o cursor controlado por abre um cursor estático sobre a tabela temporária. Para recuperar uma linha no conjunto de resultados original, o cursor primeiro recupera a chave apropriada da tabela temporária e, em seguida, recupera os valores atuais para a linha. Se forem usados cursores em bloco, o cursor deve recuperar várias linhas e chaves.
+ Para rolar ao longo do conjunto de resultados original, o cursor controlado por abre um cursor estático sobre a tabela temporária. Para recuperar uma linha no conjunto de resultados original, o cursor primeiro recupera a chave apropriada da tabela temporária e, em seguida, recupera os valores atuais para a linha. Se forem usados cursores em bloco, o cursor deve recuperar várias chaves e linhas.

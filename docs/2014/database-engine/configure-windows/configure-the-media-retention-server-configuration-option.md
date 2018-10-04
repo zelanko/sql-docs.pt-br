@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - backup retention duration [SQL Server]
 - backup sets [SQL Server], retention duration
 - media retention option
 ms.assetid: 12e9fe6a-20a5-4c6e-9cc9-d500c003b70a
-caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 55cc2d946aaff8aec1079b9f97e462aa9f4e4ccf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bafbdc7821fdaccf9a0c30a46280ba6947de3156
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37148927"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48057926"
 ---
 # <a name="configure-the-media-retention-server-configuration-option"></a>Configurar a opção de configuração de servidor media retention
   Este tópico descreve como configurar a opção de configuração de servidor **media retention** no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. A opção **media retention** especifica a duração da retenção de cada conjunto de backups. A opção ajuda a proteger os backups para que não sejam substituídos até que o número especificado de dias tenha se passado. Depois de configurar a opção **media retention** , não é necessário especificar a quantidade de tempo para reter backups de sistema cada vez em que se executa um backup. O valor padrão é 0 dias e o valor máximo é 365 dias.  

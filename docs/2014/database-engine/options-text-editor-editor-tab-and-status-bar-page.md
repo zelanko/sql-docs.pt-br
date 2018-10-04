@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.sqleditors.editorcontextsettings
 - VS.ToolsOptionsPages.Text_Editor.EditorTabAndStatusBar
 ms.assetid: e4815678-7885-4631-878f-c6a2b857ee05
-caps.latest.revision: 15
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 1fdef7c6b3a72b4c6556ec5d8e6354c837d6be04
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 241a74861a7f634389324276daf9b03a8590e64d
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37267262"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48055446"
 ---
 # <a name="options-text-editor-editor-tab-and-status-bar-page"></a>Opções (Editor de Texto: página Guia Editor e Barra de Status)
   A **página Guia Editor e Barra de Status** permite que você personalize as informações exibidas pelos Editores de Consultas do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] . Você pode especificar o nível de informações exibido na guia e na barra de status da janela Editor de Consulta e se a barra de status será exibida na parte superior ou parte inferior da janela do editor.  
@@ -41,7 +38,7 @@ ms.locfileid: "37267262"
  **Nenhuma**  
  A barra de status não exibe nenhuma informação de hora.  
   
- **Final**  
+ **final**  
  A barra de status exibe a hora atual enquanto o script está em execução. Quando o script é concluído, o vídeo exibe a hora em que o script foi concluído.  
   
  **Decorrido**  
@@ -74,7 +71,7 @@ ms.locfileid: "37267262"
  **Top**  
  A barra de status aparece na parte superior do Editor de Consultas.  
   
- **Parte inferior**  
+ **parte inferior**  
  A barra de status aparece na parte inferior da janela do Editor de Consultas.  
   
 ## <a name="tab-text"></a>Texto da Guia  

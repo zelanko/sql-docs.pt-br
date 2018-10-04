@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - restoring databases [XML for Analysis]
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - synchronization [XML for Analysis]
 - database restores [XML for Analysis]
 ms.assetid: 6c021b2e-6ad0-444e-b23f-4b5f72ce084b
-caps.latest.revision: 22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 07f4fd6beae68fc0d8a81f610beb56ff779ec25d
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 1edd498468296f8f89309f18772a1e0b6617d699
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37159597"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48061156"
 ---
 # <a name="backing-up-restoring-and-synchronizing-databases-xmla"></a>Fazendo backup, restaurando e sincronizando bancos de dados (XMLA)
   No XML for Analysis, existem três comandos que fazem backup de bancos de dados, que os restauram e que os sincronizam:  
@@ -66,7 +63,7 @@ ms.locfileid: "37159597"
   
 |Valor|Description|  
 |-----------|-----------------|  
-|*SkipMembership*|Inclua definições de segurança, mas exclua informações de associação, no arquivo de backup.|  
+|*skipMembership*|Inclua definições de segurança, mas exclua informações de associação, no arquivo de backup.|  
 |*CopyAll*|Inclua definições de segurança e informações de associação no arquivo de backup.|  
 |*IgnoreSecurity*|Exclua definições de segurança do arquivo de backup.|  
   
@@ -96,7 +93,7 @@ ms.locfileid: "37159597"
   
 |Valor|Description|  
 |-----------|-----------------|  
-|*SkipMembership*|Inclua definições de segurança, mas exclua informações de associação, no banco de dados.|  
+|*skipMembership*|Inclua definições de segurança, mas exclua informações de associação, no banco de dados.|  
 |*CopyAll*|Inclua definições de segurança e informações de associação no banco de dados.|  
 |*IgnoreSecurity*|Exclua definições de segurança do banco de dados.|  
   
@@ -134,7 +131,7 @@ ms.locfileid: "37159597"
   
 |Valor|Description|  
 |-----------|-----------------|  
-|*SkipMembership*|Inclua definições de segurança, mas exclua informações de associação, no banco de dados de destino.|  
+|*skipMembership*|Inclua definições de segurança, mas exclua informações de associação, no banco de dados de destino.|  
 |*CopyAll*|Inclua definições de segurança e informações de associação no banco de dados de destino.|  
 |*IgnoreSecurity*|Exclua definições de segurança do banco de dados de destino.|  
   

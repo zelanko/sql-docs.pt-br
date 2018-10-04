@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,27 +15,26 @@ f1_keywords:
 helpviewer_keywords:
 - Properties collection [ADO]
 ms.assetid: 1d539aa8-ce0d-4418-ab03-8d0a3c1e9d82
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 557f24dcc7695efadb9a3db5c18f81ae6a26b59d
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: bf4a56ea4efa8e9b5c29e9e4bdd10f8867817d61
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35280645"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47616754"
 ---
-# <a name="properties-collection-ado"></a>Coleção de propriedades (ADO)
+# <a name="properties-collection-ado"></a>Coleção Properties (ADO)
 Contém todos os [propriedade](../../../ado/reference/ado-api/property-object-ado.md) objetos para uma instância específica de um objeto.  
   
-## <a name="remarks"></a>Remarks  
- Alguns objetos ADO têm um **propriedades** coleção composta de **propriedade** objetos. Cada **propriedade** objeto corresponde a uma característica do objeto ADO específica do provedor.  
+## <a name="remarks"></a>Comentários  
+ Alguns objetos do ADO têm uma **propriedades** coleção composta **propriedade** objetos. Cada **propriedade** objeto corresponde a uma característica do objeto ADO específica do provedor.  
   
 > [!NOTE]
->  Consulte o [propriedade](../../../ado/reference/ado-api/property-object-ado.md) tópico para obter uma explicação mais detalhada de como usar **propriedade** objetos.  
+>  Consulte a [propriedade](../../../ado/reference/ado-api/property-object-ado.md) tópico de objeto para obter uma explicação mais detalhada de como usar **propriedade** objetos.  
   
- O **propriedades dinâmicas** do **registros** objeto vá fora do escopo (indisponível) quando o **registros** está fechado.  
+ O **propriedades dinâmicas** da **conjunto de registros** objeto vá fora do escopo (indisponível) quando o **Recordset** está fechado.  
   
  Esta seção contém os tópicos a seguir.  
   

@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.grid.f1
 ms.assetid: 764bf435-3aab-4c62-b4e0-64fe020a5a95
-caps.latest.revision: 18
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: ba8b1d1fb182ca0f16fe157630253b74b9580eb2
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a0351173100703b8b78f7b4b019fcd2c63688918
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37312286"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48088086"
 ---
 # <a name="query-options-results-grid-page"></a>Resultados das opções de consultas (Página Grade)
   Use esta página para especificar as opções de exibição de um conjunto de resultados da consulta em formato de grade.  
@@ -30,7 +27,7 @@ ms.locfileid: "37312286"
  **Incluir a consulta no conjunto de resultados**  
  Retorna o texto da consulta como parte do conjunto de resultados.  
   
- **Incluir cabeçalhos de coluna ao copiar ou salvar os resultados**  
+ **Inclua cabeçalhos de coluna ao copiar ou salvar resultados**  
  Inclui os cabeçalhos de coluna (títulos) quando os resultados são copiados para a área de transferência ou quando são salvos em um arquivo. Desmarque essa caixa de seleção se você não deseja que os dados de resultados copiados ou salvos contenham apenas os dados e não os cabeçalhos da coluna.  
   
  **Descartar resultados após a execução**  
@@ -39,10 +36,10 @@ ms.locfileid: "37312286"
  **Exibir resultados em uma guia separada**  
  Exibe o conjunto de resultados em uma janela de documentos nova, em vez de na parte inferior da janela de documentos de consulta.  
   
- **Alternar para a guia resultados após a execução da consulta**  
+ **Alternar para a guia Resultados após a execução da consulta**  
  Define automaticamente o foco da tela para o conjunto de resultados.  
   
- **Máximo de caracteres recuperados**  
+ **Máximo de Caracteres Recuperados**  
  **Dados não XML**:  
   
  Digite um número de 1 a 65535 para especificar o número máximo de caracteres que serão exibidos em cada célula.  
@@ -54,7 +51,7 @@ ms.locfileid: "37312286"
   
  Selecione **1 MB**, **2 MB**ou **5 MB**. Selecione **Ilimitado** para recuperar todos os caracteres.  
   
- **Redefinir para padrão**  
+ **Restaurar Padrões**  
  Redefine todos os valores dessa página com os valores padrão originais.  
   
   

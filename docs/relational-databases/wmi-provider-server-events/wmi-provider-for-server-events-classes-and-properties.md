@@ -4,27 +4,23 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: wmi
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - event classes [WMI]
 - WMI Provider for Server Events, events listed
 - classes [WMI]
 ms.assetid: e2916cd7-a3ed-41e6-97b4-2ee060754cbe
-caps.latest.revision: 33
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 3514bd676b6b84436141cdcf669cc6c8f33598e7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7b4c980a70772ed8e63065cc741326b8d497a29f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33011313"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47762054"
 ---
 # <a name="wmi-provider-for-server-events-classes-and-properties"></a>Provedor WMI para classes e propriedades de eventos de servidor
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,16 +28,16 @@ ms.locfileid: "33011313"
   
  Para saber quais propriedades podem ser examinadas de um evento ou grupo de eventos, consulte o esquema de evento. Por padrão, o esquema do evento é instalado no seguinte diretório: [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events .xsd.  
   
- Como alternativa, você pode consultar o esquema do evento publicado em [ http://schemas.microsoft.com/sqlserver ](http://go.microsoft.com/fwlink/?linkid=43100).  
+ Como alternativa, você pode consultar o esquema de evento publicado no [ http://schemas.microsoft.com/sqlserver ](http://go.microsoft.com/fwlink/?linkid=43100).  
   
- Por exemplo, referindo-se ao evento ALTER_DATABASE, você vai aprender que seu evento pai é DDL_SERVER_LEVEL_EVENTS e suas propriedades são **TSQLCommand** e **DatabaseName**. O evento também herda as propriedades **SQLInstance**, **PostTime**, **ComputerName**, **SPID**, e **LoginName** . O evento não tem nenhum evento filho.  
+ Por exemplo, referindo-se ao evento ALTER_DATABASE, você aprenderá que seu evento pai é DDL_SERVER_LEVEL_EVENTS e suas propriedades são **TSQLCommand** e **DatabaseName**. O evento também herda as propriedades **SQLInstance**, **PostTime**, **ComputerName**, **SPID**, e **LoginName** . O evento não tem nenhum evento filho.  
   
 > [!NOTE]  
->  Os procedimentos armazenados do sistema que executam operações similares a DDL também podem acionar notificações de eventos. Teste as notificações de eventos para determinar suas respostas aos procedimentos armazenados que são executados. Por exemplo, a instrução CREATE TYPE e **sp_addtype** procedimento armazenado dispararão uma notificação de evento que é criada em um evento CREATE_TYPE. Para obter mais informações, consulte[eventos DDL](../../relational-databases/triggers/ddl-events.md).  
+>  Os procedimentos armazenados do sistema que executam operações similares a DDL também podem acionar notificações de eventos. Teste as notificações de eventos para determinar suas respostas aos procedimentos armazenados que são executados. Por exemplo, a instrução CREATE TYPE e **sp_addtype** procedimento armazenado acionarão uma notificação de eventos é criada em um evento CREATE_TYPE. Para obter mais informações, consulte[eventos DDL](../../relational-databases/triggers/ddl-events.md).  
   
  **Eventos de linguagem de definição de dados e grupos de eventos**  
   
- ![Provedor WMI de árvore de servidor eventos](../../relational-databases/wmi-provider-server-events/media/sql-wmi-ddl-events-ktm.gif "provedor WMI para a árvore de eventos de eventos do servidor")  
+ ![Provedor WMI para a árvore de servidor eventos](../../relational-databases/wmi-provider-server-events/media/sql-wmi-ddl-events-ktm.gif "provedor WMI para a árvore de servidor eventos")  
   
  **Eventos de rastreamento e grupos de eventos**  
   

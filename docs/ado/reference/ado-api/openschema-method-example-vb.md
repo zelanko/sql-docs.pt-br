@@ -6,27 +6,24 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - OpenSchema method [ADO], Visual Basic example
 ms.assetid: 455a02f0-8143-4562-8648-8fb45ffd334c
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e2ebcb40cc91f93c7810223304e0dde2ed45a21a
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: b8889cf8cf24ddc9befd356af98d8c982eb562ba
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35279936"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47778984"
 ---
 # <a name="openschema-method-example-vb"></a>Exemplo do método OpenSchema (VB)
-Este exemplo usa o [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) método para exibir o nome e o tipo de cada tabela no ***Pubs*** banco de dados.  
+Este exemplo usa o [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) método para exibir o nome e tipo de cada tabela na ***Pubs*** banco de dados.  
   
 ```  
 'BeginOpenSchemaVB  
@@ -82,12 +79,12 @@ End Sub
 'EndOpenSchemaVB  
 ```  
   
- Este exemplo especifica uma restrição de consulta TABLE_TYPE no **OpenSchema** método ***critérios*** argumento. Como resultado, somente as informações de esquema para os modos de exibição especificado no ***Pubs*** banco de dados são retornados. O exemplo, em seguida, exibe os nomes e tipos de cada tabela (s).  
+ Este exemplo especifica uma restrição de consulta TABLE_TYPE na **OpenSchema** método ***critérios*** argumento. Como resultado, apenas as informações de esquema para os modos de exibição especificado na ***Pubs*** banco de dados são retornados. O exemplo, em seguida, exibe o nome (s) e o tipo (s) de cada tabela (s).  
   
 ```  
 Attribute VB_Name = "OpenSchema"  
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Método OpenSchema](../../../ado/reference/ado-api/openschema-method.md)   
+ [Exemplo do método OpenSchema](../../../ado/reference/ado-api/openschema-method.md)   
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

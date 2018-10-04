@@ -1,32 +1,29 @@
 ---
-title: Exemplo de propriedade IndexNulls (VB) | Microsoft Docs
+title: Exemplo da propriedade IndexNulls (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - IndexNulls property [ADOX], Visual Basic example
 ms.assetid: 45204669-32c0-4690-aab9-ddf0fd71ae48
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 11141a152d680ff843387de3a5998aff007eef06
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 895082ffe456e38ccaf120688e2bf77c1b410344
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35286525"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47688124"
 ---
-# <a name="indexnulls-property-example-vb"></a>Exemplo de propriedade IndexNulls (VB)
-Este exemplo demonstra o [IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md) propriedade de um [índice](../../../ado/reference/adox-api/index-object-adox.md). O código cria um novo índice e define o valor de **IndexNulls** com base na entrada do usuário (de uma caixa de listagem denominada List1). Em seguida, o **índice** é acrescentado ao **funcionários** [tabela](../../../ado/reference/adox-api/table-object-adox.md) no *Northwind* [catálogo](../../../ado/reference/adox-api/catalog-object-adox.md). O novo **índice** é aplicado a um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) com base no **funcionários** tabela e o **Recordset** é aberto. Um novo registro é adicionado para o **funcionários** tabela, com um **nulo** valor no campo indexado. Se esse novo registro é exibido depende da configuração do **IndexNulls** propriedade.  
+# <a name="indexnulls-property-example-vb"></a>Exemplo da propriedade IndexNulls (VB)
+Este exemplo demonstra a [IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md) propriedade de um [índice](../../../ado/reference/adox-api/index-object-adox.md). O código cria um novo índice e define o valor de **IndexNulls** com base na entrada do usuário (de uma caixa de listagem chamada List1). Em seguida, o **índice** é acrescentado para o **funcionários** [tabela](../../../ado/reference/adox-api/table-object-adox.md) no *Northwind* [catálogo](../../../ado/reference/adox-api/catalog-object-adox.md). O novo **índice** é aplicado a um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) com base no **funcionários** tabela e o **Recordset** é aberto. Um novo registro é adicionado para o **funcionários** tabela, com um **nulo** valor no campo indexado. Se este novo registro é exibido depende da configuração das **IndexNulls** propriedade.  
   
 ```  
 ' BeginIndexNullsVB  
@@ -113,5 +110,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Objeto de índice (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
+ [Objeto Index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
  [Propriedade IndexNulls (ADOX)](../../../ado/reference/adox-api/indexnulls-property-adox.md)

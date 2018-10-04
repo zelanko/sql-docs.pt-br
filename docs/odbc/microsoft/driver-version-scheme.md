@@ -1,53 +1,50 @@
 ---
-title: Esquema de versão de driver | Microsoft Docs
+title: Esquema de versão do driver | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], versions
 ms.assetid: e4a8d9d7-8aba-48ab-8be6-1a6129adfb8f
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f4a6e04da609034fbf0a3d0ba57bc5db2b7b7870
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e6c76b1a931101fce366cc6d3b20d4aa74de23e5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32900501"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47806524"
 ---
-# <a name="driver-version-scheme"></a>Esquema de versão de driver
+# <a name="driver-version-scheme"></a>Esquema de versão do driver
 > [!IMPORTANT]  
 >  Este recurso será removido em uma versão futura do Windows. Evite usar esse recurso em desenvolvimentos novos e planeje modificar os aplicativos que atualmente o utilizam. Em vez disso, use o driver ODBC fornecido pela Oracle.  
   
- A tabela a seguir lista todas as versões do Driver de ODBC da Microsoft para Oracle.  
+ A tabela a seguir lista todas as versões do Driver Microsoft ODBC para Oracle.  
   
-|Versão do driver|Número da compilação|Histórico de disponibilidade|  
+|Versão do driver|Número de build|Histórico de disponibilidade|  
 |--------------------|------------------|--------------------------|  
 |1.0|2.00.6235|Visual C++ 4.2 e 5.0, Enterprise Edition do Visual Basic|  
-|2.0|2.73.7269|Visual Studio 97 e MDAC 1.5|  
+|2.0|2.73.7269|Visual Studio 97 e o MDAC 1.5|  
 |2.0 atualizado|2.73.7283.01|IIS 4.0|  
 |2.0 atualizado|2.73.7283.03|MDAC 1.5b e 1.5 c|  
 |2.0 atualizado|2.73.7356|O ODBC 3.5 SDK|  
-|2.5|2.573.2927|O Visual Studio 6.0 e o MDAC 2.0|  
+|2.5|2.573.2927|Visual Studio 6.0 e o MDAC 2.0|  
 |2.5 atualizado|2.573.3513|SQL Server 7.0<br /><br /> SQL Server 6.5 SP5|  
   
- Compilação 2.00.6235 (versão 1) foi a primeira versão do Driver de ODBC da Microsoft para Oracle. Após o lançamento da primeira versão, uma convenção de nomenclatura novo foi adotada.  
+ Compilação 2.00.6235 (versão 1) foi a primeira versão do Driver Microsoft ODBC para Oracle. Após o lançamento da primeira versão, uma nova convenção de nomenclatura foi adotada.  
   
- Por exemplo, 2.73.7283.03 pode ser dividido nos seguintes componentes distintos:  
+ Por exemplo, 2.73.7283.03 podem ser divididos nos seguintes componentes distintos:  
   
 -   2 = o número de versão.  
   
 -   73 = a versão do servidor Oracle para o qual o driver foi criado.  
   
--   7283.03 = o número de compilação do driver.  
+-   7283.03 = o número de build do driver.  
   
 > [!NOTE]  
->  Com a versão 2.573.2973, a convenção de nomenclatura levou a alguma confusão que 2.573 é uma versão anterior que 2,73, mas cada seção do número de compilação deve ser considerada individualmente. O número 573 é maior que 73, portanto, é uma versão mais recente. Além disso, "2.5" indica o número de versão do driver.
+>  Com a versão 2.573.2973, a convenção de nomenclatura levou a uma certa confusão que 2.573 é uma versão anterior que 2,73, mas cada seção do número de build deve ser considerada individualmente. O número 573 é maior do que 73, portanto, é uma versão mais recente. Além disso, "2.5" indica o número de versão do driver.

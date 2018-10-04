@@ -1,30 +1,27 @@
 ---
-title: Conexão (ADO - sintaxe WFC) | Microsoft Docs
+title: Conexão (ADO – sintaxe WFC) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Connection collection [ADO], ADO/WFC syntax
 ms.assetid: 8cfc35bb-91e2-47da-ad4c-982e9162cd51
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fb4fb9792fc59c6206328b23f97b9b2f3257228b
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2f50c116060f5ef842cf359b958f9e6cedb5c716
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276845"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47633644"
 ---
-# <a name="connection-ado---wfc-syntax"></a>Conexão (ADO - WFC sintaxe)
+# <a name="connection-ado---wfc-syntax"></a>Conexão (ADO – Sintaxe WFC)
 ## <a name="package-commswfcdata"></a>pacote com.ms.wfc.data  
   
 ### <a name="constructor"></a>Construtor  
@@ -48,7 +45,7 @@ public int executeUpdate(String commandText)
 public int executeUpdate(String commandText, int options)  
 ```  
   
- O **executeUpdate** método é um método de casos especial que chama o ADO subjacente **executar** método com determinados parâmetros. O **executeUpdate** método não oferece suporte para o retorno de um **registros** objeto, portanto, o **executar** do método *opções* parâmetro é modificado com **AdoEnums.ExecuteOptions.NORECORDS**. Após o **executar** método é concluído, ele é atualizado *RecordsAffected* parâmetro é passado de volta para o **executeUpdate** método, que, por fim, é retornado como um **int**.  
+ O **executeUpdate** método é um método de caso especial que chama o ADO subjacente **executar** método com determinados parâmetros. O **executeUpdate** método não oferece suporte para o retorno de uma **conjunto de registros** objeto, portanto, o **executar** desse método *opções* parâmetro é modificado com **AdoEnums.ExecuteOptions.NORECORDS**. Após o **execute** método é concluído, ele é atualizado *RecordsAffected* parâmetro é passado de volta para o **executeUpdate** método, que, por fim, é retornado como um **int**.  
   
 ```  
 public void open()   
@@ -90,7 +87,7 @@ public com.ms.wfc.data.Errors getErrors()
 ```  
   
 ### <a name="events"></a>Eventos  
- Para obter mais informações sobre eventos de ADO/WFC, consulte [ADO instanciação de eventos por idioma](../../../ado/guide/data/ado-event-instantiation-by-language.md).  
+ Para obter mais informações sobre eventos ADO/WFC, consulte [instanciação de evento ADO por linguagem](../../../ado/guide/data/ado-event-instantiation-by-language.md).  
   
 ```  
 public void addOnBeginTransComplete(ConnectionEventHandler handler)  

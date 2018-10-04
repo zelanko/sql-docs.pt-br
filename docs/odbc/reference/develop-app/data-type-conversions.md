@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], conversions
@@ -16,24 +14,23 @@ helpviewer_keywords:
 - converting data types [ODBC]
 - C data types [ODBC], conversions
 ms.assetid: d311fe1c-d882-4136-9fa5-220a4121e04c
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0501e4bf627d8dafddfbf5020345d43135af9d6d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 84710ffd69ea377c979adf94af1394d8436ef10b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32911931"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47786334"
 ---
 # <a name="data-type-conversions"></a>Conversões de tipo de dados
-Dados podem ser convertidos de um tipo para outro em um dos quatro vezes: quando dados são transferidos da variável de um aplicativo para outro (C para C), quando dados em uma variável de aplicativo são enviados para um parâmetro de instrução (C para SQL), quando os dados em uma coluna do conjunto de resultados são retornados no uma variável de aplicativo (SQL para C), e quando os dados são transferidos da coluna de origem de dados para outro (SQL para SQL).  
+Dados podem ser convertidos de um tipo para outro em um dos quatro vezes: quando dados são transferidos da variável de um aplicativo para outro (C para C), quando os dados em uma variável de aplicativo são enviados para um parâmetro de instrução (C to SQL), quando os dados em uma coluna do conjunto de resultados são retornados no uma variável de aplicativo (SQL para C), e quando os dados são transferidos da coluna de origem de dados para outro SQL (SQL).  
   
  Qualquer conversão que ocorre quando dados são transferidos da variável de um aplicativo para outro está fora do escopo deste documento.  
   
- Quando um aplicativo associar uma variável para um parâmetro de coluna ou instrução de conjunto de resultados, o aplicativo especifica implicitamente uma conversão de tipo de dados de sua escolha do tipo de dados da variável de aplicativo. Por exemplo, suponha que uma coluna contém dados de número inteiro. Se o aplicativo associa uma variável de inteiro para a coluna, ela especifica que nenhuma conversão ser feito; Se o aplicativo associa uma variável de caractere para a coluna, especifica que os dados de ser convertida de inteiro em caractere.  
+ Quando um aplicativo está associado a uma variável para um parâmetro de coluna ou a instrução de conjunto de resultados, o aplicativo especifica implicitamente uma conversão de tipo de dados de sua escolha do tipo de dados da variável de aplicativo. Por exemplo, suponha que uma coluna contém dados de inteiro. Se o aplicativo associar uma variável de inteiro para a coluna, ela especifica que nenhuma conversão a ser feita; Se o aplicativo associar uma variável de caractere para a coluna, ela especifica que os dados de ser convertido de inteiro em caractere.  
   
- ODBC define como os dados são convertidos entre cada tipo de dados SQL e C. Basicamente, ODBC oferece suporte a todas as conversões razoáveis, como caractere de inteiro e inteiro em flutuante e não oferece suporte a conversões bem-definido, como float para data. Drivers são necessários para dar suporte a todas as conversões para cada tipo de dados SQL que dão suporte. Para obter uma lista completa das conversões entre tipos de dados SQL e C, consulte [conversão de dados do SQL para tipos de dados C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) e [converter dados de C para tipos de dados SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) no Apêndice d: os tipos de dados.  
+ ODBC define como os dados são convertidos entre cada tipo de dados SQL e C. Basicamente, o ODBC dá suporte a todas as conversões razoáveis, como o caractere para inteiro e inteiro em float e não oferece suporte a conversões mal definidas, como float para data. Drivers são necessários para dar suporte a todas as conversões para cada tipo de dados SQL que dar suporte a eles. Para obter uma lista completa de conversões entre tipos de dados SQL e C, consulte [conversão de dados do SQL para tipos de dados C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) e [Convertendo dados de C para tipos de dados SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) apêndice d: tipos de dados.  
   
- O ODBC também define uma função escalar para converter dados de um tipo de dados do SQL para outro. O **converter** função escalar é mapeada pelo driver para a função escalar subjacente ou funções definidas para realizar conversões na fonte de dados. Porque essa função é mapeada para funções específicas de DBMS, ODBC não define como funcionam essas conversões ou quais conversões devem ter suporte. Um aplicativo descobre que conversões são suportados por uma determinado driver e fonte de dados através das opções de SQL_CONVERT no **SQLGetInfo**. Para obter mais informações sobre o **converter** função escalar, consulte [sequências de Escape no ODBC](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md) e [função de conversão de tipo de dados explícito](../../../odbc/reference/appendixes/explicit-data-type-conversion-function.md).
+ O ODBC também define uma função escalar para converter dados de um tipo de dados SQL para outro. O **converter** função escalar é mapeada pelo driver para a função escalar subjacente ou funções definidas para executar conversões na fonte de dados. Como essa função é mapeada para funções específicas do DBMS, ODBC não definem como funcionam essas conversões ou conversões de quais devem ter suporte. Um aplicativo descobre quais conversões são suportadas por uma fonte de dados e driver específica por meio das opções de SQL_CONVERT no **SQLGetInfo**. Para obter mais informações sobre o **converter** função escalar, consulte [sequências de Escape no ODBC](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md) e [função de conversão de tipo de dados explícito](../../../odbc/reference/appendixes/explicit-data-type-conversion-function.md).

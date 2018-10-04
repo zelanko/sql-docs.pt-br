@@ -1,12 +1,10 @@
 ---
-title: sys.DM db_persisted_sku_features (Transact-SQL) | Microsoft Docs
+title: DM db_persisted_sku_features (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_db_persisted_sku_features_TSQL
@@ -19,44 +17,43 @@ helpviewer_keywords:
 - editions [SQL Server], feature restrictions
 - sys.dm_db_persisted_sku_features dynamic management view
 ms.assetid: b4b29e97-b523-41b9-9528-6d4e84b89e09
-caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 25333b8fc57764d2d99a5630d83907e00913d15f
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: f35bb06301fb7d4f53a415e055371db989942586
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34464852"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47642410"
 ---
 # <a name="sysdmdbpersistedskufeatures-transact-sql"></a>sys.dm_db_persisted_sku_features (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Alguns recursos do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] alterar a maneira que [!INCLUDE[ssDE](../../includes/ssde-md.md)] armazena informações nos arquivos de banco de dados. Esses recursos são restritos a edições específicas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Um banco de dados que contém esses recursos não pode ser movido para uma edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que não dê suporte a eles. Use o modo de exibição de gerenciamento dinâmico sys.DM db_persisted_sku_features para listar os recursos específicos de edição habilitados no banco de dados atual.
+  Alguns recursos do [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] alterar a maneira que [!INCLUDE[ssDE](../../includes/ssde-md.md)] armazena as informações nos arquivos de banco de dados. Esses recursos são restritos a edições específicas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Um banco de dados que contém esses recursos não pode ser movido para uma edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que não dê suporte a eles. Use o modo de exibição de gerenciamento dinâmico de DM db_persisted_sku_features para listar os recursos específicos de edição habilitados no banco de dados atual.
   
 **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
 |feature_name|**sysname**|Nome externo do recurso habilitado no banco de dados, mas que não possui suporte em todas as edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esse recurso deve ser removido antes que o banco de dados possa ser migrado a todas as edições disponíveis do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|feature_id|**Int**|ID de recurso associada ao recurso. [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)].|  
+|feature_id|**int**|ID de recurso associada ao recurso. [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)].|  
   
 ## <a name="permissions"></a>Permissões  
  Requer a permissão VIEW DATABASE STATE no banco de dados.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Se nenhum recurso que pode ser restrita por uma edição específica é usado pelo banco de dados, a exibição não retorna nenhuma linha.  
   
- sys.DM db_persisted_sku_features pode listar os seguintes recursos de alteração de banco de dados como restritos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edições:  
+ DM db_persisted_sku_features pode listar os seguintes recursos alterando o banco de dados como restritos específicos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edições:  
   
 -   **ChangeCapture**: indica que um banco de dados tem o change data capture está habilitado. Para remover o change data capture, use o [sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) procedimento armazenado. Para obter mais informações, veja [Sobre a captura de dados de alterações &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md).  
   
--   **ColumnStoreIndex**: indica que pelo menos uma tabela tem um índice columnstore. Para habilitar um banco de dados a ser movida para uma edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que não dá suporte a esse recurso, use o [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) ou [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) instrução para remover o índice columnstore. Para obter mais informações, consulte [índices Columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md).  
+-   **ColumnStoreIndex**: indica que pelo menos uma tabela tem um índice columnstore. Para habilitar um banco de dados a ser movido para uma edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que não oferece suporte a esse recurso, use o [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) ou [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) instrução para remover o índice columnstore. Para obter mais informações, consulte [índices Columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md).  
   
     **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
--   **Compactação**: indica que pelo menos uma tabela ou índice usa compactação de dados ou o formato de armazenamento vardecimal. Para habilitar um banco de dados a ser movida para uma edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que não dá suporte a esse recurso, use o [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) ou [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) instrução para remover a compactação de dados. Para remover o formato de armazenamento vardecimal, use a instrução sp_tableoption. Para obter mais informações, consulte [Data Compression](../../relational-databases/data-compression/data-compression.md).  
+-   **Compactação**: indica que pelo menos uma tabela ou índice usa compactação de dados ou formato de armazenamento vardecimal. Para habilitar um banco de dados a ser movido para uma edição do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que não oferece suporte a esse recurso, use o [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) ou [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) instrução para remover a compactação de dados. Para remover o formato de armazenamento vardecimal, use a instrução sp_tableoption. Para saber mais, veja [Data Compression](../../relational-databases/data-compression/data-compression.md).  
   
 -   **MultipleFSContainers**: indica que o banco de dados usa vários contêineres FILESTREAM. O banco de dados tem um grupo de arquivos FILESTREAM com vários contêineres (arquivos). Para obter mais informações, veja [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md).  
   
@@ -69,7 +66,7 @@ ms.locfileid: "34464852"
 -   **TransparentDataEncryption.** Indica que um banco de dados deve ser criptografado usando criptografia transparente de dados. Para remover a criptografia transparente de dados, use a instrução ALTER DATABASE. Para obter mais informações, veja [TDE &#40;Transparent Data Encryption&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
 
 > [!NOTE]
-> Começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Service Pack 1, esses recursos estão disponíveis em vários [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edições e não se limitando a Enterprise ou Developer Editions somente.
+> Começando com [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Service Pack 1, esses recursos estão disponíveis em vários [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Editions e não se limitando a Enterprise ou Developer Editions apenas.
 
  Para determinar se um banco de dados usa qualquer recurso que seja restrito a edições específicas, execute a seguinte instrução no banco de dados:  
   

@@ -4,39 +4,33 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-applies_to:
-- Azure SQL Database
-- SQL Server
 ms.assetid: 59a6db8f-2db6-4071-9005-928a7231de92
-caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: e7641b8cdfa10aae263371291b66d56e5e4296ba
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 690d12a2f5f397256760c1c0cf5e2ee954d90843
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34776242"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47746434"
 ---
-# <a name="refresh-from-database-mysqltosql"></a>Atualização do banco de dados (MySQLToSQL)
-O **de atualização do banco de dados** caixa de diálogo permite que você selecione quais objetos para atualização do banco de dados MySQL. Linhas na caixa de diálogo estão codificados por cores com base no estado de metadados:  
+# <a name="refresh-from-database-mysqltosql"></a>Atualizar do banco de dados (MySQLToSQL)
+O **Refresh do banco de dados** caixa de diálogo permite que você selecione quais objetos de atualização do banco de dados MySQL. Linhas na caixa de diálogo são codificadas por cores com base no estado de metadados:  
   
--   Se os metadados do objeto foi alterado localmente e no banco de dados MySQL, a linha azul.  
+-   Se os metadados do objeto foi alterado localmente e no banco de dados MySQL, a linha é azul.  
   
--   Se os metadados do objeto foi alterado no banco de dados MySQL, mas não em SSMA, a linha é amarela.  
+-   Se os metadados do objeto foi alterado no banco de dados MySQL, mas não no SSMA, a linha será amarela.  
   
--   Se os metadados do objeto foi alterado localmente, mas não no banco de dados MySQL, a linha é verde.  
+-   Se os metadados do objeto foi alterado localmente, mas não no banco de dados MySQL, a linha está verde.  
   
--   Se o objeto for novo no banco de dados MySQL, a linha é rosa.  
+-   Se o objeto é novo no banco de dados MySQL, a linha é rosa.  
   
-Você pode especificar as configurações padrão do objeto atualização o **configurações de projeto** caixa de diálogo. Para obter mais informações, consulte [configurações de projeto &#40;sincronização&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md)  
+Você pode especificar configurações de atualização do objeto padrão no **configurações do projeto** caixa de diálogo. Para obter mais informações, consulte [configurações do projeto &#40;sincronização&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md)  
   
-Para acessar o **de atualização do banco de dados** caixa de diálogo, o botão direito do mouse, um objeto no Gerenciador de metadados do MySQL e clique em **de atualização do banco de dados**.  
+Para acessar o **atualização do banco de dados** caixa de diálogo, clique com botão direito um objeto no Gerenciador de metadados do MySQL e clique em **atualização do banco de dados**.  
   
 ## <a name="options"></a>Opções  
   
@@ -44,9 +38,9 @@ Para acessar o **de atualização do banco de dados** caixa de diálogo, o botã
 |-|-|  
 |**Termo**|**Definição**|  
 |**Recolher (-)**|Recolha todos os grupos de objeto para ocultar objetos individuais.|  
-|**Expandir (+)**|Expanda todos os grupos de objeto para mostrar os objetos individuais.|  
-|**Mostrar/ocultar objetos iguais**|Oculta os objetos da lista se os metadados do objeto são o mesmo em um banco de dados MySQL em SSMA.|  
-|**Atualização do banco de dados (botão de seta)**|Use o botão de seta para especificar que os metadados para os objetos selecionados devem ser atualizados em SSMA.|  
-|**Fazer a atualização não do banco de dados (botão X)**|Use o botão X para especificar que os metadados para os objetos selecionados não devem ser atualizados em SSMA.|  
-|**Legenda**|Exibe um **legenda** caixa de diálogo. A legenda contém o mapeamento entre as cores de linha e estados de metadados.<br /><br />Para manter o **legenda** caixa de diálogo sobre o **de atualização do banco de dados** caixa de diálogo, selecione o **Mostrar na parte superior** caixa de seleção.|  
+|**Expandir (+)**|Expanda todos os grupos de objeto para mostrar objetos individuais.|  
+|**Ocultar/Mostrar objetos iguais**|Oculta os objetos da lista se os metadados do objeto são o mesmo no banco de dados MySQL e no SSMA.|  
+|**Atualização do banco de dados (botão de seta)**|Use o botão de seta para especificar que os metadados para os objetos selecionados devem ser atualizados no SSMA.|  
+|**Fazer a atualização não do banco de dados (botão X)**|Use o botão X para especificar os metadados para os objetos selecionados não devem ser atualizados no SSMA.|  
+|**Legenda**|Exibe uma **legenda** caixa de diálogo. A legenda contém o mapeamento entre os estados de metadados e as cores de linha.<br /><br />Para manter o **legenda** caixa de diálogo, na parte superior das **atualização do banco de dados** caixa de diálogo, selecione o **Mostrar na parte superior** caixa de seleção.|  
   

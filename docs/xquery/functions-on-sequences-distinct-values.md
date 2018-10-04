@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - XML
@@ -17,18 +14,17 @@ helpviewer_keywords:
 - distinct-values function
 - fn:distinct-values function
 ms.assetid: f4c2bb53-2bec-4f1a-9c00-cf997fb7ae5b
-caps.latest.revision: 26
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 67534172dc879b7865af535e8a85f4a69d8dfc68
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 480183fb649589869645b3ffc98279b8c9722c8f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38040504"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47618024"
 ---
-# <a name="functions-on-sequences---distinct-values"></a>Funções em sequências – distinct-values
+# <a name="functions-on-sequences---distinct-values"></a>Funções em Sequências – distinct-values
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Remove valores duplicados da sequência especificada por *$arg*. Se *$arg* é uma sequência vazia, a função retornará a sequência vazia.  
@@ -44,7 +40,7 @@ fn:distinct-values($arg as xdt:anyAtomicType*) as xdt:anyAtomicType*
  *$arg*  
  Sequência de valores atômicos.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Todos os tipos de valores atomizados que são passados para **distinct-values()** têm que ser subtipos do mesmo tipo base. Tipos base aceitos são os tipos que oferecem suporte a **eq** operação. Esses tipos incluem os três tipos base numéricos internos, os tipos base de data/hora, xs:string, xs:boolean e xdt:untypedAtomic. Os valores do tipo xdt:untypedAtomic são convertidos em xs:string. Se houver uma mistura desses tipos, ou se outros valores de outros tipos forem passados, será gerado um erro estático.  
   
  O resultado de **distinct-values()** recebe o tipo base dos tipos passados como xs: string no caso de XDT: untypedatomic, com a cardinalidade original. Se a entrada estiver estaticamente vazia, vazio será implícito e um erro estático será gerado.  

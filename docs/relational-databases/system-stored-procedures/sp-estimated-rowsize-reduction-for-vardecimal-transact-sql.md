@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_estimated_rowsize_reduction_for_vardecimal
@@ -22,16 +19,15 @@ helpviewer_keywords:
 - estimate decimal compression
 - table compression [SQL Server]
 ms.assetid: 0fe45983-f9f2-4c7f-938a-0fd96e1cbe8d
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2b82d06ba4e6bc8927fca7edd807c98e595ea93d
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: ee1d51d304e43e2c6e50bd8621035486dd778133
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43022146"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47799514"
 ---
 # <a name="spestimatedrowsizereductionforvardecimal-transact-sql"></a>sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +62,7 @@ sp_estimated_rowsize_reduction_for_vardecimal [ [ @table_name = ] 'table'] [;]
 |**avg_rowlen_vardecimal_format**|**decimal (12, 2)**|Representa o tamanho médio da linha quando o formato de armazenamento vardecimal é usado.|  
 |**row_count**|**int**|Número de linhas na tabela.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Use **sp_estimated_rowsize_reduction_for_vardecimal** para estimar o aumento resultante se você habilitar uma tabela para o formato de armazenamento vardecimal. Por exemplo, se o tamanho médio da linha puder ser reduzido em 40%, potencialmente, você poderá reduzir o tamanho da tabela em 40%. Dependendo do fator de preenchimento e do tamanho da linha, um aumento de espaço poderá não ser obtido. Por exemplo, se você tiver uma linha de 8000 bytes de comprimento e reduzir seu tamanho em 40%, ainda poderá ajustar apenas uma linha em uma página de dados, resultando em nenhum aumento.  
   
  Se os resultados de **sp_estimated_rowsize_reduction_for_vardecimal** indicar que a tabela crescerá, isso significa que muitas linhas na tabela usam aproximadamente a precisão inteira dos tipos de dados decimais e a adição da pequena sobrecarga necessária para formato de armazenamento vardecimal é maior que a economia do formato de armazenamento vardecimal. Nesse caso raro, não habilite o formato de armazenamento vardecimal.  

@@ -1,32 +1,29 @@
 ---
-title: Exibições de acrescentar o exemplo de método (VB) | Microsoft Docs
+title: Append de exibições de exemplo do método (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: b5b4c082-ac29-4f49-a8b8-e21b554c9b0d
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 72a8c9518ce11a8c4180e6661944df6983e01167
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 5651edc56fbffd1c49373374123e8a030be675dc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35287335"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47681664"
 ---
-# <a name="views-append-method-example-vb"></a>Exibições de acrescentar o exemplo de método (VB)
-O código a seguir demonstra como usar um [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto e o [exibições](../../../ado/reference/adox-api/views-collection-adox.md) coleção [Append](../../../ado/reference/adox-api/append-method-adox-views.md) método para criar uma nova exibição da fonte de dados subjacente.  
+# <a name="views-append-method-example-vb"></a>Exemplo do método Append de exibições (VB)
+O código a seguir demonstra como usar um [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto e o [exibições](../../../ado/reference/adox-api/views-collection-adox.md) coleção [Append](../../../ado/reference/adox-api/append-method-adox-views.md) método para criar uma nova exibição na fonte de dados subjacente.  
   
 ```  
 ' BeginCreateViewVB  
@@ -67,7 +64,7 @@ End Sub
   
 ## <a name="see-also"></a>Consulte também  
  [Propriedade ActiveConnection (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Método (ADOX exibições) append](../../../ado/reference/adox-api/append-method-adox-views.md)   
- [Objeto de catálogo (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Objeto de exibição (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
+ [Acrescentar o método (exibições do ADOX)](../../../ado/reference/adox-api/append-method-adox-views.md)   
+ [Objeto Catalog (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Objeto View (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
  [Coleção Views (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

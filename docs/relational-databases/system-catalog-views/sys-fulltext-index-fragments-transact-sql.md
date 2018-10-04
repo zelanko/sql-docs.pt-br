@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fulltext_index_fragments
@@ -23,17 +20,16 @@ helpviewer_keywords:
 - troubleshooting [SQL Server], full-text search
 - sys.fulltext_index_fragments catalog view
 ms.assetid: a82e5018-5d88-45c0-9a47-c251e17a6cdb
-caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0691f165a90b6bb8daa6e666b66dee9100ddfa9d
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: dbf3affc922eeddd0b27d15df1177bad30bb185f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43078467"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47646264"
 ---
 # <a name="sysfulltextindexfragments-transact-sql"></a>sys.fulltext_index_fragments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +47,7 @@ ms.locfileid: "43078467"
 |row_count|**int**|Número de linhas individuais no fragmento.|  
 |status|**int**|Status do fragmento, um de:<br /><br /> 0 = Criado recentemente e não utilizado ainda<br /><br /> 1 = Sendo usado para inserção durante população ou mesclagem de índice de texto completo<br /><br /> 4 = Fechado. Pronto para consulta<br /><br /> 6 = Sendo usado para entrada de mesclagem e pronto para consulta<br /><br /> 8 = Marcado para exclusão. Não será usado para consulta e mesclagem de origem.<br /><br /> Um status de 4 ou 6 significa que o fragmento faz parte do índice de texto completo lógico e pode ser consultado; ou seja, ele é um *passível de consulta* fragmento.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A exibição do catálogo sys.fulltext_index_fragments pode ser usada para consultar o número de fragmentos que formam um índice de texto completo. Se estiver observando um baixo desempenho de consulta de texto completo, é possível usar sys.fulltext_index_fragments para consultar o número de fragmentos que podem ser consultados (status = 4 ou 6) no índice de texto completo desta forma:   
   
 ```  

@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_maintenance_plan_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_maintenance_plan
 ms.assetid: e972a510-960e-41d6-93c5-c71cd581a585
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8c144581e7d1ed73da251d13419d5ec04a7fd687
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 665d4de0f1ee61942e4f1af431889672bcc313bb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37979048"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47757414"
 ---
 # <a name="sphelpmaintenanceplan-transact-sql"></a>sp_help_maintenance_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +49,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
  Especifica a ID do plano do plano de manutenção. *plan_id* está **UNIQUEIDENTIFIER**. O padrão é NULO.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
- Nenhum  
+ None  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Se *plan_id* for especificado, **sp_help_maintenance_plan** retornará três tabelas: plano, o banco de dados e o trabalho.  
@@ -65,7 +61,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 |**plan_id**|**uniqueidentifier**|Identificação do plano de manutenção.|  
 |**plan_name**|**sysname**|Nome do plano de manutenção.|  
 |**date_created**|**datetime**|Data em que o plano de manutenção foi criado.|  
-|**proprietário**|**sysname**|Proprietário do plano de manutenção.|  
+|**Proprietário**|**sysname**|Proprietário do plano de manutenção.|  
 |**max_history_rows**|**int**|Número máximo de linhas alocado para o registro do histórico do plano de manutenção na tabela de sistema.|  
 |**remote_history_server**|**int**|O nome do servidor remoto para o qual o relatório de histórico poderia ser escrito.|  
 |**max_remote_history_rows**|**int**|Número máximo de linhas alocado na tabela do sistema em um servidor remoto para o qual o relatório de histórico poderia ser escrito.|  
@@ -86,7 +82,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 |-----------------|-----------------|  
 |**job_id**|ID de todos os trabalhos associados ao plano de manutenção. *job_id* está **uniqueidentifier**.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  **sp_help_maintenance_plan** está no **msdb** banco de dados.  
   
 ## <a name="permissions"></a>Permissões  

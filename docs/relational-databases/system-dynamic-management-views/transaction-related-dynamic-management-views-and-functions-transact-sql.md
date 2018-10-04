@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - dynamic management objects [SQL Server], transactions
 ms.assetid: 4db9f715-995e-4e71-9544-26eb59e9fae0
-caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7fba1a08368ed3868dd08261012a5f7d40e0bcc0
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 2558a4c1ce99b6a7033ee974280fa544c1d29606
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34466772"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47676064"
 ---
 # <a name="transaction-related-dynamic-management-views-and-functions-transact-sql"></a>Funções e exibições de gerenciamento dinâmico relacionadas à transação (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

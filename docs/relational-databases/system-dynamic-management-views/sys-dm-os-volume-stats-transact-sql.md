@@ -1,12 +1,10 @@
 ---
-title: sys.DM os_volume_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_os_volume_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/02/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_os_volume_stats_TSQL
@@ -18,16 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_volume_stats dynamic management function
 ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
-caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a5fcc94554408ed68988ddbdf34422078ca31dd4
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 0f599084d70903ae3d74c04795ddb60d473b6002
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34468302"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47670484"
 ---
 # <a name="sysdmosvolumestats-transact-sql"></a>sys.dm_os_volume_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,15 +44,15 @@ sys.dm_os_volume_stats (database_id, file_id)
  ID do banco de dados. *database_id* é **int**, sem padrão. Não pode ser NULL.  
   
  *file_id*  
- ID do arquivo. *file_id* é **int**, sem padrão. Não pode ser NULL.  
+ ID do arquivo. *file_id* está **int**, sem padrão. Não pode ser NULL.  
   
 ## <a name="table-returned"></a>Tabela retornada  
   
 ||||  
 |-|-|-|  
-|**Coluna**|**Tipo de dados**|**Descrição**|  
-|**database_id**|**Int**|ID do banco de dados. Não pode ser nulo.|  
-|**file_id**|**Int**|ID do arquivo. Não pode ser nulo.|  
+|**Coluna**|**Data type**|**Descrição**|  
+|**database_id**|**int**|ID do banco de dados. Não pode ser nulo.|  
+|**file_id**|**int**|ID do arquivo. Não pode ser nulo.|  
 |**volume_mount_point**|**nvarchar(512)**|Ponto de montagem no qual o volume está na raiz. Pode retornar uma cadeia de caracteres vazia.|  
 |**volume_id**|**nvarchar(512)**|ID de volume do sistema operacional. Pode retornar uma cadeia de caracteres vazia|  
 |**logical_volume_name**|**nvarchar(512)**|Nome lógico do volume. Pode retornar uma cadeia de caracteres vazia|  

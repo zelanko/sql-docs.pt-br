@@ -1,13 +1,11 @@
 ---
-title: Execute, repetir e limpar o exemplo de métodos (JScript) | Microsoft Docs
+title: Execute, Requery e Clear (JScript) exemplo dos métodos | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - JScript
@@ -16,19 +14,18 @@ helpviewer_keywords:
 - Clear method [ADO], JScript example
 - Execute method [ADO], JScript example
 ms.assetid: 51a87e91-c9d9-4e49-af47-79cce2c4cfe0
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f2b93451eb327cbd76a5fb79eda2b2b6df4c3f26
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 96ee3363a5077f6ab8324b7bfb4ca81fa8b781d3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278045"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47674224"
 ---
-# <a name="execute-requery-and-clear-methods-example-jscript"></a>Execute, repetir e limpar o exemplo de métodos (JScript)
-Este exemplo demonstra o **Execute** método quando executado tanto uma [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto e um [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto. Ele também usa o [Requery](../../../ado/reference/ado-api/requery-method.md) método para recuperar os dados atuais um [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)e o [limpar](../../../ado/reference/ado-api/clear-method-ado.md) método para limpar o conteúdo do [erros](../../../ado/reference/ado-api/errors-collection-ado.md)coleção. (O **erros** coleção é acessada por meio do **Conexão** objeto do [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) propriedade do [registros](../../../ado/reference/ado-api/recordset-object-ado.md).) Nomeie o arquivo **ExecuteJS.asp**.  
+# <a name="execute-requery-and-clear-methods-example-jscript"></a>Execute, Requery e Clear exemplo dos métodos (JScript)
+Este exemplo demonstra a **Execute** método quando executado tanto uma [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto e uma [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto. Ele também usa o [Requery](../../../ado/reference/ado-api/requery-method.md) método para recuperar os dados atuais em um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md)e o [limpar](../../../ado/reference/ado-api/clear-method-ado.md) método para limpar o conteúdo do [erros](../../../ado/reference/ado-api/errors-collection-ado.md)coleção. (O **erros** coleção seja acessada por meio do **Conexão** objeto do [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) propriedade do [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).) Nomeie o arquivo **ExecuteJS.asp**.  
   
 ```  
 <!-- BeginExecuteJS -->  

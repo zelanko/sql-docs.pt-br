@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_helplinkedsrvlogin_TSQL
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_helplinkedsrvlogin
 ms.assetid: a2b1eba0-bf71-47e7-a4c7-9f55feec82a3
-caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 74f2885b8b1226afbcd7f4aceb4d6f5835e20a0b
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 4242494c94518817dd7ba161ddc16e1c47b51952
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43036568"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47659094"
 ---
 # <a name="sphelplinkedsrvlogin-transact-sql"></a>sp_helplinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +59,7 @@ sp_helplinkedsrvlogin [ [ @rmtsrvname = ] 'rmtsrvname' ]
 |**Mapeamento de autoatendimento**|**smallint**|0 = **logon local** é mapeado para **logon remoto** ao se conectar ao **servidor vinculado**.<br /><br /> 1 = **logon local** é mapeado para o mesmo logon e senha ao se conectar ao **servidor vinculado**.|  
 |**Logon remoto**|**sysname**|Nome de logon no **LinkedServer** que é mapeado para **LocalLogin** quando **IsSelfMapping** é 0. Se **IsSelfMapping** é 1, **RemoteLogin** é NULL.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Antes de excluir mapeamentos de logon, use **sp_helplinkedsrvlogin** para determinar os servidores vinculados que estão envolvidos.  
   
 ## <a name="permissions"></a>Permissões  

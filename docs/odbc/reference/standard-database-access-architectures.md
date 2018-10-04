@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a9d41800-9068-4b76-895a-32b2853692dd
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1235aa339afdce6bc895c8d616ffdcdec8cae766
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9ff5ee3c22a01b0b1963f1ca6021e72502aa377b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32915031"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47724114"
 ---
-# <a name="standard-database-access-architectures"></a>Arquiteturas de acesso de banco de dados padrão
-Olhando para os componentes de acesso de banco de dados descritos na seção anterior, acontece que dois deles, interfaces de programação e os dados de fluxo de protocolos — são bons candidatos para padronização. Os dois componentes, protocolos de rede e o mecanismo IPC — não apenas residem em um nível muito baixo, mas eles são altamente dependentes de rede e sistema operacional. Há também uma terceira abordagem — gateways — que fornece as possibilidades de padronização.  
+# <a name="standard-database-access-architectures"></a>Arquiteturas de acesso ao banco de dados padrão
+Olhando para os componentes de acesso de banco de dados descritos na seção anterior, acontece que dois deles — protocolos de fluxo de dados e as interfaces de programação — são bons candidatos para padronização. Os dois componentes, protocolos de rede e o mecanismo IPC — não só residem em um nível muito baixo, mas eles são altamente dependentes na rede e sistema operacional. Há também uma terceira abordagem — gateways — que oferece possibilidades para padronização.  
   
  Esta seção contém os tópicos a seguir.  
   

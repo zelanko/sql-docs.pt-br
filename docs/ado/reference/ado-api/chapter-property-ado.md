@@ -1,13 +1,11 @@
 ---
-title: Propriedade de capítulo (ADO) | Microsoft Docs
+title: Propriedade Chapter (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -17,19 +15,18 @@ f1_keywords:
 helpviewer_keywords:
 - Chapter property [ADO]
 ms.assetid: 8aa90cb0-f588-4141-9dc9-3b22918394ee
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 81173778a8c183ec92ddb9eb435f8e7c9f50a4eb
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 601573a34082f386bfee238308a8f97c41743e4b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276275"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47655400"
 ---
-# <a name="chapter-property-ado"></a>Propriedade de capítulo (ADO)
-Obtém ou define um banco de dados OLE **capítulo** objeto de/em uma [ADORecordsetConstruction Interface](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md) objeto. Quando você usa **put_Chapter** para definir o **capítulo** do objeto, um subconjunto de linhas é transformado em ADO [objeto Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto. Isso define o capítulo atual o **linhas**objeto. Esta propriedade é leitura/gravação.  
+# <a name="chapter-property-ado"></a>Propriedade Chapter (ADO)
+Obtém ou define um banco de dados OLE **capítulo** objeto de/em uma [ADORecordsetConstruction Interface](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md) objeto. Quando você usa **put_Chapter** para definir o **capítulo** do objeto, um subconjunto de linhas é transformado em ADO [objeto Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto. Isso define o capítulo atual de **conjunto de linhas**objeto. Esta propriedade é leitura/gravação.  
   
 ## <a name="syntax"></a>Sintaxe  
   

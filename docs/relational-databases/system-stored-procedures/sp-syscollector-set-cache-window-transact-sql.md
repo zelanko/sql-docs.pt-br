@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_set_cache_window
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - sp_syscollector_set_cache_window stored procedure
 - data collector [SQL Server], stored procedures
 ms.assetid: 660f2749-392f-46bf-89f3-27764d848507
-caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3b5d457ff251535e483658f8be6bcdab847b5ee8
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: fd261178b852e8e890dd654893ce8fc167a15915
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33258757"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47628805"
 ---
 # <a name="spsyscollectorsetcachewindow-transact-sql"></a>sp_syscollector_set_cache_window (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,9 +43,9 @@ sp_syscollector_set_cache_window [ @cache_window = ] cache_window
   
 ## <a name="arguments"></a>Argumentos  
  [ @cache_window = ] *cache_window*  
- É o número de vezes em que, depois de uma falha, há uma nova tentativa de carregamento de dados no data warehouse de gerenciamento sem perda dos dados. *cache_window* é **int** com um valor padrão de 1. *cache_window* pode ter um dos seguintes valores:  
+ É o número de vezes em que, depois de uma falha, há uma nova tentativa de carregamento de dados no data warehouse de gerenciamento sem perda dos dados. *cache_window* está **int** com um valor padrão de 1. *cache_window* pode ter um dos seguintes valores:  
   
-|Value|Description|  
+|Valor|Description|  
 |-----------|-----------------|  
 |-1|Armazena em cache todos os dados de carregamento de falhas de carregamento anteriores.|  
 |0|Não armazena em cache quaisquer dados de uma falha de carregamento.|  
@@ -58,7 +54,7 @@ sp_syscollector_set_cache_window [ @cache_window = ] cache_window
 ## <a name="return-code-values"></a>Valores do código de retorno  
  0 (êxito) ou 1 (falha)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Você deve desabilitar o coletor de dados antes de alterar sua configuração de janela de cache. Esse procedimento armazenado falhará se o coletor de dados estiver habilitado. Para obter mais informações, consulte [habilitar ou desabilitar a coleta de dados](../../relational-databases/data-collection/enable-or-disable-data-collection.md), e [gerenciar coleta de dados](../../relational-databases/data-collection/manage-data-collection.md).  
   
 ## <a name="permissions"></a>Permissões  

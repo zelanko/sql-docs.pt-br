@@ -1,36 +1,33 @@
 ---
-title: Excluir exemplo de método (VBScript) | Microsoft Docs
+title: Exemplo do método (VBScript) Delete | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - Delete method [ADO], VBScript example
 ms.assetid: 78935d6d-1c1a-4306-a83a-1763210c69f9
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 148baaf84c8025d23b78f01bd098fb4a37634257
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2e9c059a003d263a61f1e224e0187fc6e5a80b9f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277585"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47787454"
 ---
-# <a name="delete-method-example-vbscript"></a>Excluir exemplo de método (VBScript)
-Este exemplo usa o [excluir](../../../ado/reference/ado-api/delete-method-ado-recordset.md) método para remover um registro específico de um [registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
+# <a name="delete-method-example-vbscript"></a>Exemplo do método Delete (VBScript)
+Este exemplo usa o [exclua](../../../ado/reference/ado-api/delete-method-ado-recordset.md) método para remover um registro especificado de uma [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
- Use o exemplo a seguir em uma página ASP (Active Server). Para exibir este exemplo totalmente funcional, você deve ter os dados de origem AdvWorks.mdb (instalado com o SDK) localizado em C:\Program Files\Microsoft plataforma SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb ou editar o caminho no código de exemplo para refletir o local real do arquivo. Este é um arquivo de banco de dados do Microsoft Access.  
+ Use o exemplo a seguir em um Active Server Page (ASP). Para exibir este exemplo totalmente funcional, você deve ter os dados de origem AdvWorks.mdb (instalado com o SDK) localizado em C:\Program Files\Microsoft plataforma SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb ou editar o caminho no código de exemplo para refletir o local real desse arquivo. Este é um arquivo de banco de dados do Microsoft Access.  
   
- Use **localizar** para localizar o arquivo Adovbs.inc e coloque-o no diretório que você planeja usar. Recortar e colar o código a seguir no bloco de notas ou outro editor de texto e salve-o como **DeleteVBS.asp**. Você pode exibir o resultado em qualquer navegador do cliente.  
+ Use **localizar** para localizar o arquivo Adovbs.inc e coloque-o no diretório que você planeja usar. Recorte e cole o código a seguir no bloco de notas ou outro editor de texto e salve-o como **DeleteVBS.asp**. Você pode exibir o resultado em qualquer navegador do cliente.  
   
  Para utilizar o exemplo, tente usar o [AddNew](../../../ado/reference/ado-api/addnew-method-example-vbscript.md) exemplo primeiro para adicionar alguns registros. Em seguida, você pode tentar excluí-los. Exiba o resultado em qualquer navegador do cliente.  
   

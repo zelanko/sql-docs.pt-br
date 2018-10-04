@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ODBC date functions [ODBC]
@@ -17,31 +15,30 @@ helpviewer_keywords:
 - ODBC time and date functions [ODBC]
 - date functions [ODBC]
 ms.assetid: c1fb63b7-af50-45d6-8dec-ae6ea7119527
-caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f795e12cb2a88bfa1b7e17371745a841a3e6f854
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7752c1c1d5184ddb1beea26d7c35e29ea5769796
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32908701"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47644324"
 ---
-# <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>Funções de hora e data (Driver ODBC do Visual FoxPro)
-A tabela a seguir lista funções de data e hora ODBC com suporte do Visual FoxPro ODBC Driver; Quando a gramática do Visual FoxPro para a mesma função difere da sintaxe de ODBC, o Visual FoxPro equivalente é listado.  
+# <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>Funções de data e hora (Driver ODBC do Visual FoxPro)
+A tabela a seguir lista as funções de data e hora ODBC compatíveis com o Driver ODBC para Visual FoxPro; Quando a gramática do Visual FoxPro para a mesma função difere da sintaxe ODBC, o Visual FoxPro equivalente é listado.  
   
 |Gramática ODBC|Gramática do Visual FoxPro|  
 |------------------|---------------------------|  
 |CURDATE *)*|DATA *)*|  
-|CURTIME *)*|TEMPO *)*|  
-|DAYNAME *(date_exp)*|CDOW *(date_exp)*|  
-|DAYOFMONTH (*date_exp)*|DIA *)*|  
+|FUNÇÃO CURTIME *)*|TEMPO *)*|  
+|Função DAYNAME *(date_exp)*|CDOW *(date_exp)*|  
+|Dia do mês (*date_exp)*|DIA *)*|  
 |HORA *(time_exp)*||  
 |MINUTO *(time_exp)*||  
 |MÊS *(time_exp)*||  
 |MONTHNAME *(date_exp)*|CMONTH *(date_exp)*|  
-|AGORA *)*|DATETIME *)*|  
+|AGORA *)*|DATA E HORA *)*|  
 |SEGUNDO *(time_exp)*|S *(time_exp)*|  
 |SEMANA *(date_exp)*||  
 |ANO *(date_exp)*||  
@@ -56,15 +53,15 @@ A tabela a seguir lista funções de data e hora ODBC com suporte do Visual FoxP
   
  TIMESTAMPDIFF *(intervalo, timestamp_exp1, timestamp_exp2)*  
   
-## <a name="odbc-escape-sequences"></a>Sequências de Escape ODBC  
- O driver também oferece suporte a sequência de escape ODBC para dados de data e o carimbo de hora. A sintaxe da cláusula escape é o seguinte:  
+## <a name="odbc-escape-sequences"></a>Sequências de escape do ODBC  
+ O driver também oferece suporte a sequência de escape ODBC para dados de data e o carimbo de hora. A sintaxe da cláusula de escape é da seguinte maneira:  
   
 ```  
 --(*vendor(Microsoft),product(ODBC) d 'value' *)—  
 --(*vendor(Microsoft),product(ODBC) ts ''value' *)—  
 ```  
   
- Nessa sintaxe, **d** indica que *valor* é uma data no *aaaa-mm-dd* formato e **ts** indica que *valor*  é um carimbo de hora a *aaaa-mm-dd hh*[.*f...*] formato. A sintaxe abreviada para dados de data e o carimbo de hora é o seguinte:  
+ Nesta sintaxe **1!d** indica que *valor* é uma data no *aaaa-mm-dd* formato e **ts** indica que *valor*  é um carimbo de hora a *aaaa-mm-dd hh*[.*f...*] formato. A sintaxe abreviada para dados de data e o carimbo de hora é da seguinte maneira:  
   
 ```  
 {d 'value'}  
@@ -83,5 +80,5 @@ UPDATE alltypes
    WHERE KEY=111  
 ```  
   
-## <a name="remarks"></a>Remarks  
- Para obter mais informações sobre sequências de escape, consulte [sequências de Escape no ODBC](../../odbc/reference/develop-app/escape-sequences-in-odbc.md) no *referência do programador de ODBC*.
+## <a name="remarks"></a>Comentários  
+ Para obter mais informações sobre sequências de escape, consulte [sequências de Escape no ODBC](../../odbc/reference/develop-app/escape-sequences-in-odbc.md) na *referência do programador de ODBC*.

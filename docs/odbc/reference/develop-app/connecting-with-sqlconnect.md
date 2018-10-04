@@ -1,13 +1,11 @@
 ---
-title: Conectar-se com o SQLConnect | Microsoft Docs
+title: Conectando com SQLConnect | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [ODBC], connection functions
@@ -20,21 +18,20 @@ helpviewer_keywords:
 - connection functions [ODBC]
 - ODBC drivers [ODBC], connection functions
 ms.assetid: b16319d2-2c2c-4341-abb5-caa9e17362b4
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b6a0f793ef6e646d0b2be823be86a34ac75e591d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d89825bcfc9f885d4339874c870cbc5a29938062
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32909601"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47712444"
 ---
 # <a name="connecting-with-sqlconnect"></a>Conectar-se com o SQLConnect
-**SQLConnect** é a função de conexão mais simples. Ele requer um nome de fonte de dados e aceita uma ID de usuário opcionais e uma senha. Ela funciona bem para aplicativos que codificar um fonte de dados nome e não requerem uma ID de usuário ou senha. Ele também funciona bem para aplicativos que desejam controlam seu próprios "aparência" ou que não tem nenhuma interface do usuário. Esses aplicativos podem criar uma lista de fontes de dados usando **SQLDataSources**, solicitar ao usuário para a fonte de dados, ID de usuário e senha e, em seguida, chamar **SQLConnect**.  
+**SQLConnect** é a função de conexão mais simples. Ele requer um nome de fonte de dados e aceita um ID de usuário opcional e uma senha. Ele funciona bem para aplicativos que codificar um fonte de dados nome e não requerem uma ID de usuário ou senha. Ele também funciona bem para aplicativos que desejam controlam seu próprios "aparência" ou que não tem nenhuma interface do usuário. Esses aplicativos podem criar uma lista de fontes de dados usando **SQLDataSources**avisar o usuário para a fonte de dados, ID de usuário e senha e, em seguida, chame **SQLConnect**.  
   
- O exemplo a seguir se conecta ao banco de dados Northwind, usando um DSN chamado Northwind e recupera todos os campos nome e sobrenome de todos os registros na tabela de funcionários.  
+ O exemplo a seguir se conecta ao banco de dados Northwind, usando um DSN chamado Northwind e recupera todos os campos nome e sobrenome de todos os registros na tabela Funcionários.  
   
 ```  
 // Connecting_with_SQLConnect.cpp  

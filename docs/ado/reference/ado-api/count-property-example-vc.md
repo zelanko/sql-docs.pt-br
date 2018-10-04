@@ -1,32 +1,29 @@
 ---
-title: Exemplo de propriedade Count (VC + +) | Microsoft Docs
+title: Exemplo da propriedade Count (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Count property [ADO], VC++ example
 ms.assetid: 54dfb1dd-636c-4560-8a3f-32b1f6aa07d7
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 567e1eed35fba0148e4ebb0e9fd137d4425e90ac
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: c4dcaa288df7b6e232c187ae50dac3e4ac51d8be
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35277215"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47747204"
 ---
-# <a name="count-property-example-vc"></a>Exemplo de propriedade Count (VC + +)
-Este exemplo demonstra o [contagem](../../../ado/reference/ado-api/count-property-ado.md) propriedade com duas coleções do ***funcionário*** banco de dados. A propriedade obtém o número de objetos em cada coleção e define o limite superior dos loops que enumeram essas coleções.  
+# <a name="count-property-example-vc"></a>Exemplo da propriedade Count (VC++)
+Este exemplo demonstra a [contagem](../../../ado/reference/ado-api/count-property-ado.md) propriedade com duas coleções na ***funcionário*** banco de dados. A propriedade obtém o número de objetos em cada coleção e define o limite superior para loops que enumerá-las.  
   
 ```  
 // BeginCountCpp.cpp  

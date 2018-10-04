@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 07/22/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_filestream_force_garbage_collection
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - FILESTREAM [SQL Server]
 - sp_filestream_force_garbage_collection
 ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
-caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5cd74006b394f7412f7ec2d3c6bfacb36f701cf1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 350c007c8a0153f2dfd0f84d596110b3dea29500
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38063744"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47733414"
 ---
 # <a name="spfilestreamforcegarbagecollection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +70,7 @@ sp_filestream_force_garbage_collection
 |*num_unprocessed_items*|Indica o número de itens FILESTREAM qualificados (arquivos ou diretórios) que não foram processados para coleta de lixo neste FILESTREAM. Itens podem não ser processados por várias razões, inclusive as seguintes:<br /><br /> Arquivos que precisam ser definidos porque não foi obtido o backup de log ou um ponto de verificação.<br /><br /> Arquivos no modelo de recuperação FULL ou BULK_LOGGED.<br /><br /> Há uma transação ativa de execução longa.<br /><br /> O trabalho de leitor de log de replicação não foi executada. Consulte o white paper [armazenamento de FILESTREAM no SQL Server 2008](http://go.microsoft.com/fwlink/?LinkId=209156) para obter mais informações.|  
 |*last_collected_xact_seqno*|Retorna o número de sequência de log correspondente (LSN) até onde os arquivos do contêiner FILESTREAM especificado foram coletados pelo coletor de lixo.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Executa explicitamente a tarefa Coletor de lixo FILESTREAM até a conclusão no banco de dados solicitado (e no contêiner FILESTREAM). Arquivos que não são mais necessários são removidos pelo processo de coleta de lixo. O tempo necessário para que essa operação seja concluída depende do tamanho dos dados FILESTREAM no banco de dados ou contêiner, bem como a quantidade de atividades de DML ocorridas recentemente nos dados FILESTREAM. Embora esta operação possa ser executada com o banco de dados online, isso pode afetar o desempenho do banco de dados durante sua execução devido a várias atividades de E/S feitas pelo processo de coleta de lixo.  
   
 > [!NOTE]  

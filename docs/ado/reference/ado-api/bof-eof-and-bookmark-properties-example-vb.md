@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,19 +14,18 @@ helpviewer_keywords:
 - Bookmark property [ADO], Visual Basic example
 - EOF property [ADO], Visual Basic example
 ms.assetid: b6573c6e-fee8-4267-a722-fadaec6eafe6
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 439bba8dd4eae06a388060c905cbff45539f8b69
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ef1ab4199de6b0249173f13c607e6cb1816ccbc5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35275995"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47698214"
 ---
-# <a name="bof-eof-and-bookmark-properties-example-vb"></a>Exemplo de propriedades do indicador (VB), BOF e EOF
-Este exemplo usa o [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) e [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) propriedades para exibir uma mensagem se um usuário tenta mover após o primeiro ou último registro de um [registros](../../../ado/reference/ado-api/recordset-object-ado.md). Ele usa o [indicador](../../../ado/reference/ado-api/bookmark-property-ado.md) propriedade para permitir que o usuário sinalize um registro em uma **registros** e retornar a ele mais tarde.  
+# <a name="bof-eof-and-bookmark-properties-example-vb"></a>Exemplo das propriedades BOF, EOF e Bookmark (VB)
+Este exemplo usa o [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) e [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) as propriedades para exibir uma mensagem se um usuário tenta mover o cursor após o primeiro ou último registro de um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md). Ele usa o [indicador](../../../ado/reference/ado-api/bookmark-property-ado.md) propriedade para permitir que o usuário sinalize um registro em um **Recordset** e retornar a ele mais tarde.  
   
 ```  
 'BeginBOFVB  
@@ -133,13 +130,13 @@ End Sub
 'EndBOFVB  
 ```  
   
- Este exemplo usa o **indicador** e [filtro](../../../ado/reference/ado-api/filter-property.md) propriedades para criar uma exibição limitada do **registros**. Somente os registros referenciados pela matriz de indicadores são acessíveis.  
+ Este exemplo usa o **indicador** e [filtro](../../../ado/reference/ado-api/filter-property.md) as propriedades para criar uma visão limitada do **conjunto de registros**. Somente os registros referenciados pela matriz de indicadores são acessíveis.  
   
 ```  
 Attribute VB_Name = "BOF"  
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [BOF, propriedades EOF (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
+ [BOF, EOF propriedades (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
  [Propriedade Bookmark (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)   
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

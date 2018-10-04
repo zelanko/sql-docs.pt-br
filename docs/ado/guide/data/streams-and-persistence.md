@@ -6,35 +6,32 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - persisted streams [ADO]
 - streams [ADO], persistence
 ms.assetid: ad5bf52c-fd10-4cfa-bf7d-fcedcaa41eea
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fd1ab20fbd539a0e944060837d1e32c8655b5e1f
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: a2db82bb76ab58782682a612983bca3d7c4fccfe
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272945"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47701724"
 ---
 # <a name="streams-and-persistence"></a>Fluxos e persistência
-O [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto [salvar](../../../ado/reference/ado-api/save-method.md) repositórios de método ou *persistir*, um **registros** em um arquivo e o [abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)método restaura o **registros** desse arquivo.  
+O [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto [salve](../../../ado/reference/ado-api/save-method.md) armazenamentos de método, ou *persistir*, um **Recordset** em um arquivo e o [abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)restaurações de método de **Recordset** desse arquivo.  
   
- Com o ADO 2.7 ou posterior, o **salvar** e **abrir** métodos podem persistir um **Recordset** para um [fluxo](../../../ado/reference/ado-api/stream-object-ado.md) objeto também. Esse recurso é especialmente útil ao trabalhar com o Remote Data Service (RDS) e o Active Server Pages (ASP).  
+ Com o ADO 2.7 ou posterior, o **salvar** e **abra** métodos podem persistir um **conjunto de registros** para um [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objeto também. Esse recurso é especialmente útil ao trabalhar com o serviço de dados remota (RDS) e o Active Server Pages (ASP).  
   
- Para obter mais informações sobre como persistência pode ser usada por si só nas páginas ASP, consulte a documentação atual do ASP.  
+ Para obter mais informações sobre como persistência pode ser usada por si só em páginas ASP, consulte a documentação atual do ASP.  
   
- Estes são alguns cenários que mostram como **fluxo** objetos e persistência podem ser usados.  
+ A seguir está alguns cenários que mostram como **Stream** objetos e persistência podem ser usados.  
   
 ## <a name="scenario-1"></a>Cenário 1  
- Neste cenário simplesmente salva um **registros** para um arquivo e, em seguida, um **fluxo**. Ele é aberto o fluxo persistente em outro **registros**.  
+ Neste cenário simplesmente salva uma **conjunto de registros** para um arquivo e, em seguida, para um **Stream**. Ele é aberto o fluxo persistido em outro **conjunto de registros**.  
   
 ```  
 Dim rs1 As ADODB.Recordset  
@@ -54,7 +51,7 @@ rs2.Open stm
 ```  
   
 ## <a name="scenario-2"></a>Cenário 2  
- Essa situação persiste um **registros** em uma **fluxo** em formato XML. Ele lê o **fluxo** em uma cadeia de caracteres que você pode examinar, manipular ou exibir.  
+ Esse cenário persiste um **conjunto de registros** em um **Stream** em formato XML. Em seguida, ele lê a **Stream** em uma cadeia de caracteres que você pode examinar, manipular ou exibir.  
   
 ```  
 Dim rs As ADODB.Recordset  
@@ -80,7 +77,7 @@ strRst = stm.ReadText(adReadAll)
 ```  
   
 ## <a name="scenario-3"></a>Cenário 3  
- Este exemplo de código mostra a persistência de código ASP um **registros** como XML diretamente para o **resposta** objeto:  
+ Esse código de exemplo mostra a persistência de código ASP uma **conjunto de registros** como XML diretamente para o **resposta** objeto:  
   
 ```  
 ...  
@@ -104,11 +101,11 @@ Set rs = nothing
 ```  
   
 ## <a name="scenario-4"></a>Cenário 4  
- Nesse cenário, o código ASP grava o conteúdo do **registros** no formato ADTG ao cliente. O [do serviço Microsoft Cursor do OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) pode usar esses dados para criar um desconectada **registros**.  
+ Nesse cenário, o código ASP grava o conteúdo a **Recordset** no formato ADTG ao cliente. O [Microsoft Cursor Service para OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) pode usar esses dados para criar um desconectado **conjunto de registros**.  
   
- Uma nova propriedade no RDS [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md), [URL](../../../ado/reference/rds-api/url-property-rds.md), aponta para a página. ASP que gera a **registros**. Isso significa um **registros** objeto pode ser obtido sem RDS usando o lado do servidor [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) objeto ou o usuário gravar um objeto comercial. Isso simplifica o modelo de programação de RDS significativamente.  
+ Uma nova propriedade no RDS [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md), [URL](../../../ado/reference/rds-api/url-property-rds.md), aponta para a página. ASP que gera a **conjunto de registros**. Isso significa que um **conjunto de registros** objeto pode ser obtido sem RDS usando o lado do servidor [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) objeto ou o usuário escrever um objeto comercial. Isso simplifica o modelo de programação do RDS significativamente.  
   
- Código do lado do servidor, denominado http://server/directory/recordset.asp:  
+ Código do lado do servidor, chamado de http://server/directory/recordset.asp:  
   
 ```  
 <%  
@@ -151,7 +148,7 @@ rs.Save response, adPersistADTG
 </HTML>  
 ```  
   
- Os desenvolvedores também tem a opção de usar um **registros** objeto no cliente:  
+ Os desenvolvedores também têm a opção de usar um **Recordset** objeto no cliente:  
   
 ```  
 ...  
@@ -166,5 +163,5 @@ function GetRs()
   
 ## <a name="see-also"></a>Consulte também  
  [Método Open (conjunto de registros ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Objeto de registro (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
+ [Objeto Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Método Save](../../../ado/reference/ado-api/save-method.md)

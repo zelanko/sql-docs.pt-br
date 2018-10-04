@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.cubebuilder.datasourcepane.f1
 ms.assetid: 1e39c910-5c10-4624-be27-ca02a461b46b
-caps.latest.revision: 20
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0025792747cf0cea5fffd7b0a1a35c5efc7ea759
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: fd3d21c2371878c44accc4d7e9f501f47ce64646
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185303"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48057036"
 ---
 # <a name="data-source-view-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Exibição da Fonte de Dados (guia Estrutura do Cubo, Designer de Cubo) (Analysis Services - Dados Multidimensionais)
   Use o painel **Exibição da Fonte de Dados** para exibir tabelas e colunas da exibição da fonte de dados associada ao cubo selecionado. Esse painel é usado para criar grupos de medidas e medidas, arrastando colunas do painel **Exibição da Fonte de Dados** para o painel **Medidas** .  

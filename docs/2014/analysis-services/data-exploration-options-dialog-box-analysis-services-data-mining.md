@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dataexplorationoptionsdialog.f1
 helpviewer_keywords:
 - Data Exploration Options dialog box
 ms.assetid: 876920c8-9d6f-4d09-abb2-53d78161a289
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 956c8ad82cc1675dd2e5838327a8300c3ffb22b9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bd497b6c4adae9a89ad0907985591675633a9c84
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37254968"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48048976"
 ---
 # <a name="data-exploration-options-dialog-box-analysis-services---data-mining"></a>Caixa de diálogo Opções de Exploração de Dados (Analysis Services - Mineração de Dados)
   Use a caixa de diálogo **Opções de Exploração de Dados** no [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para definir as opções de amostragem e de gráfico para a caixa de diálogo **Explorar Dados**. É possível exibir a caixa de diálogo **Opções de Exploração de Dados** clicando em **Opções de amostragem** na caixa de diálogo **Explorar Dados** .  

@@ -4,14 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server (starting with 2008)
 f1_keywords:
 - fn_cdc_is_bit_set
 - sys.fn_cdc_is_bit_set_TSQL
@@ -23,16 +18,15 @@ helpviewer_keywords:
 - sys.fn_cdc_is_bit_set
 - fn_cdc_is_bit_set
 ms.assetid: 792fe7cf-b3b8-4f25-8329-78d63f0e6921
-caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 74979c5c5f9a03b7a2d438a31b67caa65f63fa0e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 0796f25396d4c5303fb0de1762f6f04a18035fa9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33232406"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47705624"
 ---
 # <a name="sysfncdcisbitset-transact-sql"></a>sys.fn_cdc_is_bit_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,16 +44,16 @@ sys.fn_cdc_is_bit_set ( position , update_mask )
   
 ## <a name="arguments"></a>Argumentos  
  *position*  
- É a posição ordinal na máscara a ser verificada. *posição* é **int**.  
+ É a posição ordinal na máscara a ser verificada. *posição* está **int**.  
   
  *update_mask*  
- É a máscara que identifica colunas atualizadas. *update_mask* é **varbinary(128)**.  
+ É a máscara que identifica colunas atualizadas. *update_mask* está **varbinary(128)**.  
   
 ## <a name="return-type"></a>Tipo de retorno  
  **bit**  
   
-## <a name="remarks"></a>Remarks  
- Esta função é geralmente usada como parte de uma consulta de dados de alteração, a fim de indicar se a coluna foi alterada. Nesse cenário, a função [fn_cdc_get_column_ordinal](../../relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql.md) é usada antes da consulta para obter o ordinal da coluna necessária. **sys. fn_cdc_is_bit_set** é então aplicado a cada linha de dados de alteração que são retornados, fornecendo as informações específicas de coluna como parte do conjunto de resultados retornado.  
+## <a name="remarks"></a>Comentários  
+ Esta função é geralmente usada como parte de uma consulta de dados de alteração, a fim de indicar se a coluna foi alterada. Nesse cenário, a função [fn_cdc_get_column_ordinal](../../relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql.md) é usada antes da consulta para obter o ordinal da coluna necessária. **fn_cdc_is_bit_set** é então aplicado a cada linha de dados de alteração que são retornadas, fornecendo as informações específicas de coluna como parte do conjunto de resultados retornado.  
   
  É recomendável usar essa função em vez da função [fn_cdc_has_column_changed](../../relational-databases/system-functions/sys-fn-cdc-has-column-changed-transact-sql.md) ao determinar se as colunas foram alterados para todas as linhas de um conjunto de resultados retornado.  
   

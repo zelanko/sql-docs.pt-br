@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLConfigDataSource
@@ -19,25 +17,24 @@ f1_keywords:
 helpviewer_keywords:
 - SQLConfigDataSource function [ODBC]
 ms.assetid: f8d6e342-c010-434e-b1cd-f5371fb50a14
-caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ddff49350de9d4e713b065848ab53649b25cb094
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ef1336514d876d171cd9d31d8c20171e154f9a2a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32920531"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47646890"
 ---
 # <a name="sqlconfigdatasource-function"></a>Função SQLConfigDataSource
-**Conformidade**  
- Versão introduzidas: ODBC 1.0  
+**Conformidade com**  
+ Introduziu versão: ODBC 1.0  
   
  **Resumo**  
  **SQLConfigDataSource** adiciona, modifica ou exclui as fontes de dados.  
   
- A funcionalidade de **SQLConfigDataSource** também podem ser acessados com [ODBCCONF. EXE](../../../odbc/odbcconf-exe.md).  
+ A funcionalidade do **SQLConfigDataSource** também podem ser acessados com [ODBCCONF. EXE](../../../odbc/odbcconf-exe.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -52,7 +49,7 @@ BOOL SQLConfigDataSource(
   
 ## <a name="arguments"></a>Argumentos  
  *hwndParent*  
- [Entrada] Identificador da janela pai. A função não exibirá caixas de diálogo se o identificador é nulo.  
+ [Entrada] Identificador de janela pai. A função não exibirá nenhuma caixa de diálogo se o identificador for nulo.  
   
  *Frequentes*  
  [Entrada] Tipo de solicitação. O *frequentes* argumento deve conter um dos seguintes valores:  
@@ -65,41 +62,41 @@ BOOL SQLConfigDataSource(
   
  ODBC_ADD_SYS_DSN: Adicione uma nova fonte de dados do sistema.  
   
- ODBC_CONFIG_SYS_DSN: Modificar uma fonte de dados de sistema existente.  
+ ODBC_CONFIG_SYS_DSN: Modificar uma fonte de dados do sistema existente.  
   
- ODBC_REMOVE_SYS_DSN: Remova uma fonte de dados de sistema existente.  
+ ODBC_REMOVE_SYS_DSN: Remova uma fonte de dados do sistema existente.  
   
- ODBC_REMOVE_DEFAULT_DSN: Remova a seção de especificação de fonte de dados padrão das informações do sistema. (Ele também remove a seção de especificação de driver padrão da entrada Odbcinst.ini nas informações do sistema. Isso *frequentes* executa a mesma função preterido **SQLRemoveDefaultDataSource** função.) Quando essa opção for especificada, todos os outros parâmetros na chamada para **SQLConfigDataSource** devem ser valores nulos; se não forem nulos, eles serão ignorados.  
+ ODBC_REMOVE_DEFAULT_DSN: Remova a seção de especificação de fonte de dados padrão de informações do sistema. (Ela também remove a seção de especificação de driver padrão da entrada Odbcinst. ini nas informações do sistema. Isso *frequentes* executa a mesma função como preteridas **SQLRemoveDefaultDataSource** função.) Quando essa opção for especificada, todos os outros parâmetros na chamada para **SQLConfigDataSource** devem ser valores nulos; se não forem nulos, eles serão ignorados.  
   
  *lpszDriver*  
- [Entrada] Descrição do driver (geralmente o nome do DBMS associado) apresentada aos usuários em vez do nome físico do driver.  
+ [Entrada] Descrição do driver (geralmente o nome do DBMS associado) apresentada aos usuários em vez do nome físico de driver.  
   
  *lpszAttributes*  
- [Entrada] Uma lista de atributos na forma de pares de valor de palavra-chave duplamente terminada em nulo. Para obter mais informações, consulte [ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md).  
+ [Entrada] Uma lista duplamente terminada em nulo de atributos na forma de pares de palavra-chave-valor. Para obter mais informações, consulte [ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md).  
   
 ## <a name="returns"></a>Retorna  
- A função retorna TRUE se for bem-sucedida, FALSO se ele falhar. Se não houver nenhuma entrada nas informações do sistema quando esta função é chamada, a função retornará FALSE.  
+ A função retorna TRUE se for bem-sucedida, FALSO se ele falhar. Se não houver nenhuma entrada nas informações do sistema quando essa função é chamada, a função retorna FALSE.  
   
-## <a name="diagnostics"></a>diagnóstico  
- Quando **SQLConfigDataSource** retorna FALSE, um tipo de  *\*pfErrorCode* valor pode ser obtido chamando **SQLInstallerError**. A seguinte tabela lista o  *\*pfErrorCode* valores que podem ser retornados por **SQLInstallerError** e explica cada uma no contexto dessa função.  
+## <a name="diagnostics"></a>Diagnóstico  
+ Quando **SQLConfigDataSource** retornar FALSE, um associado  *\*pfErrorCode* valor pode ser obtido chamando **SQLInstallerError**. A seguinte tabela lista os  *\*pfErrorCode* valores que podem ser retornados por **SQLInstallerError** e explica cada uma no contexto dessa função.  
   
 |*\*pfErrorCode*|Erro|Description|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|Erro geral de instalador|Ocorreu um erro para que nenhum erro específico do instalador.|  
-|ODBC_ERROR_INVALID_HWND|Identificador de janela inválido|O *hwndParent* argumento era nulo ou inválido.|  
+|ODBC_ERROR_INVALID_HWND|Identificador de janela inválido|O *hwndParent* argumento era inválido ou nulo.|  
 |ODBC_ERROR_INVALID_REQUEST_TYPE|Tipo de solicitação inválido|O *frequentes* argumento não era um dos seguintes:<br /><br /> ODBC_ADD_DSN ODBC_CONFIG_DSN ODBC_REMOVE_DSN ODBC_ADD_SYS_DSN ODBC_CONFIG_SYS_DSN ODBC_REMOVE_SYS_DSN ODBC_REMOVE_DEFAULT_DSN|  
-|ODBC_ERROR_INVALID_NAME|Nome de driver ou conversor inválido|O *lpszDriver* argumento era inválido. Ele não pôde ser encontrado no registro.|  
-|ODBC_ERROR_INVALID_KEYWORD_VALUE|Pares de valor de palavra-chave inválida|O *lpszAttributes* argumento continha um erro de sintaxe.|  
-|ODBC_ERROR_REQUEST_FAILED|*Solicitar* falha|O instalador não foi possível executar a operação solicitada pelo *frequentes* argumento. A chamada para **ConfigDSN** falhou.|  
-|ODBC_ERROR_LOAD_LIBRARY_FAILED|Não foi possível carregar a biblioteca de instalação de driver ou conversor|Não foi possível carregar a biblioteca de instalação do driver.|  
-|ODBC_ERROR_OUT_OF_MEM|Memória insuficiente|O instalador não pôde executar a função devido a uma falta de memória.|  
+|ODBC_ERROR_INVALID_NAME|Nome inválido de driver ou conversor|O *lpszDriver* argumento era inválido. Ele não pôde ser encontrado no registro.|  
+|ODBC_ERROR_INVALID_KEYWORD_VALUE|Pares de valor de palavra-chave inválido|O *lpszAttributes* argumento continha um erro de sintaxe.|  
+|ODBC_ERROR_REQUEST_FAILED|*Solicitar* falhou|O instalador não foi possível executar a operação solicitada pelo *frequentes* argumento. A chamada para **ConfigDSN** falhou.|  
+|ODBC_ERROR_LOAD_LIBRARY_FAILED|Não foi possível carregar a biblioteca de instalação do driver ou conversor|Não foi possível carregar a biblioteca de instalação do driver.|  
+|ODBC_ERROR_OUT_OF_MEM|Memória insuficiente|O instalador não foi possível executar a função devido à falta de memória.|  
   
 ## <a name="comments"></a>Comentários  
- **SQLConfigDataSource** usa o valor de *lpszDriver* para ler o caminho completo da DLL de instalação para o driver das informações do sistema. Ele carrega a DLL e chamadas **ConfigDSN** com os mesmos argumentos foram passados para ele.  
+ **SQLConfigDataSource** usa o valor da *lpszDriver* para ler o caminho completo da instalação do DLL para o driver a partir das informações do sistema. Ele carrega a DLL e chama **ConfigDSN** com os mesmos argumentos foram passados para ele.  
   
- **SQLConfigDataSource** retornará FALSE se não for possível localizar ou carregar a DLL de configuração ou se o usuário cancelar a caixa de diálogo. Caso contrário, retornará o status recebido do **ConfigDSN**.  
+ **SQLConfigDataSource** retorna FALSE se não for possível localizar ou carregar a DLL de instalação ou se o usuário cancelar a caixa de diálogo. Caso contrário, retornará o status recebido do **ConfigDSN**.  
   
- **SQLConfigDataSource** mapeia o DSN do sistema *frequentes*s para o DSN do usuário *frequentes*s (ODBC_ADD_SYS_DSN para ODBC_ADD_DSN, ODBC_CONFIG_SYS_DSN ODBC_CONFIG_DSN e ODBC_REMOVE_SYS_ DSN para ODBC_REMOVE_DSN). Para distinguir os DSNs de sistema e usuário **SQLConfigDataSource** define o instalador do modo de configuração de acordo com a tabela a seguir. Antes de retornar, **SQLConfigDataSource** redefine o modo de configuração para BOTHDSN. **ConfigDSN** (implementado pelos drivers) deve chamar **SQLWriteDSNToIni** e **SQLWritePrivateProfileString** para dar suporte a um DSN de sistema. Para obter mais informações, consulte [ConfigDSN função](../../../odbc/reference/syntax/configdsn-function.md).  
+ **SQLConfigDataSource** mapeia o DSN do sistema *frequentes*s para o DSN de usuário *frequentes*s (ODBC_ADD_SYS_DSN para ODBC_ADD_DSN, ODBC_CONFIG_SYS_DSN ODBC_CONFIG_DSN e ODBC_REMOVE_SYS_ DSN para ODBC_REMOVE_DSN). Para distinguir os DSNs de sistema e de usuário **SQLConfigDataSource** define o instalador do modo de configuração de acordo com a tabela a seguir. Antes de retornar, **SQLConfigDataSource** redefine o modo de configuração para BOTHDSN. **ConfigDSN** (implementado pelos drivers) deve chamar **SQLWriteDSNToIni** e **SQLWritePrivateProfileString** para dar suporte a um DSN de sistema. Para obter mais informações, consulte [função ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md).  
   
 |*Frequentes*|Modo de configuração|  
 |----------------|------------------------|  
@@ -115,5 +112,5 @@ BOOL SQLConfigDataSource(
 |Para obter informações sobre|Consulte|  
 |---------------------------|---------|  
 |Adicionar, modificar ou remover uma fonte de dados|[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md) (na configuração de DLL)|  
-|Remover um nome de fonte de dados das informações do sistema|[SQLRemoveDSNFromIni](../../../odbc/reference/syntax/sqlremovedsnfromini-function.md)|  
-|Adicionar um nome de fonte de dados para as informações do sistema|[SQLWriteDSNToIni](../../../odbc/reference/syntax/sqlwritedsntoini-function.md)|
+|Removendo um nome de fonte de dados de informações do sistema|[SQLRemoveDSNFromIni](../../../odbc/reference/syntax/sqlremovedsnfromini-function.md)|  
+|Adicionando um nome de fonte de dados para as informações do sistema|[SQLWriteDSNToIni](../../../odbc/reference/syntax/sqlwritedsntoini-function.md)|

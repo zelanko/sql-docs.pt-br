@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - fast parse [Integration Services]
 ms.assetid: 6688707d-3c5b-404e-aa2f-e13092ac8d95
-caps.latest.revision: 49
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a7ae98d9bd29b5d6d444c08fa358500d8da066e9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 41e7848dff95d531db44bef2b45b11d7c3c5f85a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37233706"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48054286"
 ---
 # <a name="fast-parse"></a>Fast Parse
   A análise rápida fornece um conjunto de rotinas simples e rápidas para analisar dados. Essas rotinas não são sensíveis à localidade e aceitam apenas um subconjunto de formatos de data, hora e inteiro.  

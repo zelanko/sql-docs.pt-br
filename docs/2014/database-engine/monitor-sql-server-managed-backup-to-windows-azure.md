@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: cfb9e431-7d4c-457c-b090-6f2528b2f315
-caps.latest.revision: 20
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ff97e8210c38bac14bd7bd88075c2dea16f77489
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: e3406468961dcd5817fb88b5a30098177ec6ac67
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37149787"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48073236"
 ---
 # <a name="monitor-sql-server-managed-backup-to-windows-azure"></a>Monitorar o Backup Gerenciado do SQL Server para Windows Azure
   O [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] tem medidas internas para identificar problemas e erros durante processos de backup e adotar uma ação corretiva quando possível.  No entanto, há determinadas situações onde a intervenção do usuário é necessária. Este tópico descreve as ferramentas que você pode usar para determinar o estado de integridade geral dos backups e identifica todos os erros que precisam ser resolvidos.  

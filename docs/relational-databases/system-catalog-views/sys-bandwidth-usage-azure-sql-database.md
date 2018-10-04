@@ -5,11 +5,7 @@ ms.date: 03/04/2017
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.service: sql-database
-ms.component: system-catalog-views
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - bandwidth_usage
@@ -26,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 1accec58750bfd4a3806308252113a6c2aecc2ac
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 5f671e8450255e9c03005c71d6f887c63559d3a7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43031109"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603844"
 ---
 # <a name="sysbandwidthusage-azure-sql-database"></a>sys.bandwidth_usage (Banco de Dados SQL do Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -56,7 +52,7 @@ ms.locfileid: "43031109"
 ## <a name="permissions"></a>Permissões  
  Essa exibição só está disponível na **mestre** banco de dados para o logon principal no nível do servidor.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
 ### <a name="external-and-internal-classes"></a>Classes External e Internal  
  Para cada banco de dados usado em um determinado momento, o **sys. bandwidth_usage** exibição retorna linhas que mostram a classe e a direção do uso de largura de banda. O exemplo a seguir ilustra os dados que podem ser expostos para um banco de dados específico. Neste exemplo, a hora é 2012-04-21 17:00:00, que ocorre durante o horário de pico. O nome do banco de dados é Db1. Neste exemplo, **sys. bandwidth_usage** retornou uma linha para todas as quatro combinações Ingress e Egress das direções das classes External e Internal, da seguinte maneira:  

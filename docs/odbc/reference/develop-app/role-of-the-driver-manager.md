@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - diagnostic information [ODBC], SqlGetDiagField
@@ -18,23 +16,22 @@ helpviewer_keywords:
 - diagnostic information [ODBC], SqlGetDiagRec
 - driver manager [ODBC], error checking
 ms.assetid: 7b861c82-357e-4590-8074-45136e9ed15e
-caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d5985144c212988d8c35553f710f3edd40e6bfc1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 485cd951992ed427461e497c53d17a4f6db24a38
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32913191"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47626094"
 ---
-# <a name="role-of-the-driver-manager"></a>Função do Gerenciador de Driver
-O Gerenciador de Driver determina a ordem final para retornar registros de status que ele gera. Em particular, ele determina qual registro tem a classificação mais alta e deve ser retornada pela primeira vez. O driver é responsável por ordenar registros de status que ele gera. Se os registros de status são lançados pelo Gerenciador de Driver e o driver, o Gerenciador de Driver é responsável por ordená-los. Para obter mais informações, consulte [sequência de registros de Status](../../../odbc/reference/develop-app/sequence-of-status-records.md).  
+# <a name="role-of-the-driver-manager"></a>Função do Gerenciador do Driver
+O Gerenciador de Driver determina a ordem final no qual retornar os registros de status que ele gera. Em particular, ele determina qual registro tem a classificação mais alta e deve ser retornado pela primeira vez. O driver é responsável por ordenar registros de status que ele gera. Se os registros de status são lançados pelo Gerenciador de Driver e o driver, o Gerenciador de Driver é responsável pela ordenação-los. Para obter mais informações, consulte [sequência de registros de Status](../../../odbc/reference/develop-app/sequence-of-status-records.md).  
   
- O Gerenciador de Driver não tanta verificação de erro possível. Isso evita que todos os drivers verificando os mesmos erros. Por exemplo, se um argumento de função aceita um número discreto de valores, tais como *operação* na **SQLSetPos**, o Gerenciador de Driver verifica se o valor especificado é válido.  
+ O Gerenciador de Driver não tanta verificação de erro possível. Isso salva cada driver de verificação para os mesmos erros. Por exemplo, se um argumento de função aceita um número distinto de valores, como *operação* na **SQLSetPos**, o Gerenciador de Driver verifica se o valor especificado é válido.  
   
- As seções a seguir descrevem os tipos de condições verificadas pelo Gerenciador de Driver. Eles não se destina a ser completa; Para obter uma lista completa de SQLSTATEs retorna o Gerenciador de Driver, consulte a seção "Diagnóstico" de cada função. a descrição de cada verificação feita pelo Gerenciador de Driver começa com as letras "(DM)". Consulte também as tabelas de transição de estado no [tabelas de transição de estado do apêndice b: ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md); erros mostrados entre parênteses são detectados pelo Gerenciador de Driver.  
+ As seções a seguir descrevem os tipos de condições verificadas pelo Gerenciador de Driver. Elas não pretendem ser completa; Para obter uma lista completa das SQLSTATEs retorna o Gerenciador de Driver, consulte a seção de "Diagnóstico" de cada função; a descrição de cada verificação feita pelo Gerenciador de Driver começa com as letras "(DM)". Consulte também as tabelas de transição de estado no [apêndice b: tabelas de transição de estado de ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md); erros mostrados entre parênteses são detectados pelo Gerenciador de Driver.  
   
  Esta seção contém os tópicos a seguir.  
   

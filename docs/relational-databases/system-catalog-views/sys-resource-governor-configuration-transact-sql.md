@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.resource_governor_configuration_TSQL
@@ -20,16 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.resource_governor_configuration catalog view
 ms.assetid: 89099668-1dc6-4b07-9d8b-49bc95c7bfc0
-caps.latest.revision: 24
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 56ab892143c87ae53f2b9276247f06224ba83d10
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 38ba526abcafb8d8bd046cbb1624b778bab52090
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33179862"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47816284"
 ---
 # <a name="sysresourcegovernorconfiguration-transact-sql"></a>sys.resource_governor_configuration (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,11 +34,11 @@ ms.locfileid: "33179862"
   
 |Nome da coluna|Tipo de dados|Description|  
 |-----------------|---------------|-----------------|  
-|classifier_function_id|**Int**|A ID da função de classificador como está armazenada nos metadados. Não permite valor nulo.<br /><br /> **Observação** essa função é usada para classificar novas sessões e usa regras para encaminhar a carga de trabalho ao grupo de carga de trabalho adequado. Para obter mais informações, consulte [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).|  
-|is_enabled|**bit**|Indica o estado atual do Administrador de Recursos:<br /><br /> 0 = o administrador de recursos não está habilitado.<br /><br /> 1 = o administrador de recursos está habilitado.<br /><br /> Não permite valor nulo.|  
-|max_outstanding_io_per_volume|**Int**|**Aplica-se a**: do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> O número máximo de E/S pendente por volume.|  
+|classifier_function_id|**int**|A ID da função de classificador como está armazenada nos metadados. Não permite valor nulo.<br /><br /> **Observação** essa função é usada para classificar novas sessões e usa regras para encaminhar a carga de trabalho ao grupo de carga de trabalho adequado. Para obter mais informações, consulte [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).|  
+|is_enabled|**bit**|Indica o estado atual do Administrador de Recursos:<br /><br /> 0 = administrador de recursos não está habilitado.<br /><br /> 1 = administrador de recursos está habilitado.<br /><br /> Não permite valor nulo.|  
+|max_outstanding_io_per_volume|**int**|**Aplica-se a**: do [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> O número máximo de E/S pendente por volume.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A exibição de catálogo mostra a configuração do Administrador de Recursos na forma como está armazenada nos metadados. Para verificar a configuração da memória, use a exibição de gerenciamento dinâmica correspondente.  
   
 ## <a name="permissions"></a>Permissões  
@@ -74,6 +70,6 @@ GO
  [Exibições de catálogo do administrador de recursos &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)   
  [Exibições de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [sys.dm_resource_governor_configuration &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md)   
- [Administrador de Recursos](../../relational-databases/resource-governor/resource-governor.md)  
+ [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)  
   
   

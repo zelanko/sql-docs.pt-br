@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cycle_agent_errorlog
@@ -18,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_cycle_agent_errorlog
 ms.assetid: 8aa96182-60b7-4d7b-b2a7-ccce70378c6e
-caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 74b0bc568dfa883b6b2eb4c6b19fcf3a38512e9e
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: dfb1f3ef9dc8bdac81ed7c3a3a490ca91f73ff23
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33238007"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47779234"
 ---
 # <a name="spcycleagenterrorlog-transact-sql"></a>sp_cycle_agent_errorlog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,15 +43,15 @@ sp_cycle_agent_errorlog
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Nenhuma  
+ None  
   
-## <a name="remarks"></a>Remarks  
- Sempre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent é iniciado, atual [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log de erros do agente foi renomeada para **SQLAgent. 1**; **SQLAgent. 1** se torna **SQLAgent. 2**, **SQLAgent. 2** se torna **SQLAgent. 3**, e assim por diante. **sp_cycle_agent_errorlog** permite alternar os arquivos de log de erros sem interromper e iniciar o servidor.  
+## <a name="remarks"></a>Comentários  
+ Sempre que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent é iniciado, atual [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log de erros do agente foi renomeada para **SQLAgent.1**; **SQLAgent.1** se torna **SQLAgent.2**, **SQLAgent.2** se torna **SQLAgent.3**e assim por diante. **sp_cycle_agent_errorlog** lhe permite alternar os arquivos de log de erros sem interromper e iniciar o servidor.  
   
  Esse procedimento armazenado deve ser executado a partir de **msdb** banco de dados.  
   
 ## <a name="permissions"></a>Permissões  
- Permissões de execução para **sp_cycle_agent_errorlog** são restritas a membros do **sysadmin** função de servidor fixa.  
+ Permissões de execução **sp_cycle_agent_errorlog** estão restritas a membros da **sysadmin** função de servidor fixa.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir alterna o log de erros do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  

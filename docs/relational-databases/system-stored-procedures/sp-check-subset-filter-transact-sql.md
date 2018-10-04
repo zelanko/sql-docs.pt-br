@@ -4,15 +4,10 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - sp_check_TSQL
 - sp_check_subset_filter
@@ -24,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_check_subset_filter
 ms.assetid: 525cfcfc-f317-478d-ba84-72e62285f160
-caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 33964ac01b09fe9a67a194fe62f37f34eb50d4cd
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 7c5c3df76ad1e2751f2997eb48899b86beb260e0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43038726"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47848494"
 ---
 # <a name="spchecksubsetfilter-transact-sql"></a>sp_check_subset_filter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +68,7 @@ sp_check_subset_filter [ @filtered_table = ] 'filtered_table'
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  **sp_check_subset_filter** é usado em replicação de mesclagem.  
   
  **sp_check_subset_filter** pode ser executado em qualquer tabela, mesmo se a tabela não for publicada. Esse procedimento armazenado pode ser usado para verificar uma cláusula de filtro antes de definir um artigo filtrado.  

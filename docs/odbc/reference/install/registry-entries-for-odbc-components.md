@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - subkeys [ODBC]
@@ -16,22 +14,21 @@ helpviewer_keywords:
 - subkeys [ODBC], for components
 - registry entries for components [ODBC], about registry entries
 ms.assetid: c90aa8a4-6ece-48de-901c-17d23739a9ff
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4cf61535ecda3e95f25dbd9e1b01a1d3ad25d4ab
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3d0a654b70fb93020bbb0dcfde159b4884cb15c0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32915801"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47651469"
 ---
-# <a name="registry-entries-for-odbc-components"></a>Entradas do registro para componentes ODBC
+# <a name="registry-entries-for-odbc-components"></a>Entradas do Registro para componentes ODBC
 > [!NOTE]  
->  Começando com o Windows XP e Windows Server 2003, o ODBC está incluído no sistema operacional Windows. Instale somente explicitamente ODBC em versões anteriores do Windows.  
+>  Começando com o Windows XP e Windows Server 2003, ODBC está incluído no sistema operacional Windows. Você deve instalar apenas explicitamente ODBC em versões anteriores do Windows.  
   
- O instalador DLL mantém informações no registro sobre cada componente do ODBC instalado. Em computadores que executam o Microsoft Windows NT e o Microsoft Windows 95/98, essas informações são armazenadas em subchaves na seguinte chave no registro:  
+ A DLL do instalador mantém informações no registro sobre cada componente do ODBC instalado. Em computadores que executam o Microsoft Windows NT e o Microsoft Windows 95/98, essas informações são armazenadas em subchaves na seguinte chave do registro:  
   
  HKEY_LOCAL_MACHINE  
   
@@ -39,9 +36,9 @@ ms.locfileid: "32915801"
   
  ODBC  
   
- Odbcinst.ini  
+ Odbcinst. ini  
   
- Como uma subchave da árvore HKEY_LOCAL_MACHINE Odbcinst.ini, as informações sobre componentes ODBC estão disponíveis para todos os usuários da máquina.  
+ Como uma subchave da árvore HKEY_LOCAL_MACHINE Odbcinst. ini, as informações sobre componentes ODBC estão disponíveis para todos os usuários da máquina.  
   
  Esta seção contém os tópicos a seguir.  
   

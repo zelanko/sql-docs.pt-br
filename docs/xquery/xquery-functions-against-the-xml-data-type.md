@@ -4,15 +4,10 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
@@ -20,16 +15,15 @@ helpviewer_keywords:
 - xml data type [SQL Server], XQuery
 - functions [SQL Server], XQuery
 ms.assetid: 8df0877d-a03f-4ca9-b84e-908c4bb42b5e
-caps.latest.revision: 37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: db1906027692ec40974668f48521588b2231cebd
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 6ab763da75dda7a2f55f70d89b5e06368358f2c7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997108"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47746745"
 ---
 # <a name="xquery-functions-against-the-xml-data-type"></a>Funções XQuery em tipos de dados xml
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +40,7 @@ ms.locfileid: "37997108"
 ||[Floor](../xquery/numeric-values-functions-floor.md)|  
 ||[Arredondar](../xquery/numeric-values-functions-round.md)|  
 |[Funções XQuery em valores de cadeia de caracteres](http://msdn.microsoft.com/library/2dccefef-5d90-4f56-bda7-4c1954d8a730)|[concat](../xquery/functions-on-string-values-concat.md)|  
-||[contém](../xquery/functions-on-string-values-contains.md)|  
+||[Contém](../xquery/functions-on-string-values-contains.md)|  
 ||[subcadeia de caracteres](../xquery/functions-on-string-values-substring.md)|  
 ||[Função LOWER-Case &#40;XQuery&#41;](../xquery/functions-on-string-values-lower-case.md)|  
 ||[comprimento da cadeia de caracteres](../xquery/functions-on-string-values-string-length.md)|  

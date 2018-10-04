@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - xp_sqlmaint
@@ -21,12 +18,12 @@ ms.assetid: bda66e1b-6bbd-49be-b86e-37efc920e912
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5bd203a2d0d5d8eee4c73156bef42ff655978cee
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 2157462ca1f9509034f33208cce7aed2983ae4f2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43030177"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47746514"
 ---
 # <a name="xpsqlmaint-transact-sql"></a>xp_sqlmaint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +51,7 @@ xp_sqlmaint 'switch_string'
 ## <a name="return-code-values"></a>Valores do código de retorno  
  Nenhum. Retorna um erro se o **sqlmaint** utilitário falhar.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Se esse procedimento for chamado por um usuário feito logon com a autenticação do SQL Server, o **- U "***login_id***"** e **-P "***senha***"** switches são pré-anexados *switch_string* antes da execução. Se o usuário fizer logon com a autenticação do Windows, *switch_string* é passado sem alteração **sqlmaint**.  
   
 ## <a name="permissions"></a>Permissões  

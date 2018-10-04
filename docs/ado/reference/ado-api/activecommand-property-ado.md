@@ -6,8 +6,6 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
 f1_keywords:
@@ -15,35 +13,34 @@ f1_keywords:
 helpviewer_keywords:
 - ActiveCommand property [ADO]
 ms.assetid: fb4088d5-5968-42d6-aeaa-3955046bb4da
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e85286a885ab8edcfb08b029f7a1fd77c8d3f4a0
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 4dfdb60f9a394fa4d11e9b66ffb1f4b205881293
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35274955"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47705534"
 ---
 # <a name="activecommand-property-ado"></a>Propriedade ActiveCommand (ADO)
-Indica o [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto criado associado [registros](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
+Indica o [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto que criou associado [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
   
 ## <a name="return-value"></a>Valor retornado  
- Retorna um **Variant** que contém um **comando** objeto. Padrão é uma referência de objeto nulo.  
+ Retorna um **Variant** que contém uma **comando** objeto. O padrão é uma referência de objeto nulo.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O **ActiveCommand** propriedade é somente leitura.  
   
- Se um **comando** objeto não foi usado para criar atual **registros**, em seguida, um **nulo** referência de objeto é retornada.  
+ Se um **comando** objeto não foi usado para criar atual **conjunto de registros**, em seguida, um **nulo** referência de objeto é retornada.  
   
- Use esta propriedade para localizar associado **comando** objeto quando você terá apenas resultante **registros** objeto.  
+ Use essa propriedade para localizar associado **comando** objeto quando você tem apenas resultante **Recordset** objeto.  
   
 ## <a name="applies-to"></a>Aplica-se a  
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Exemplo de propriedade ActiveCommand (VB)](../../../ado/reference/ado-api/activecommand-property-example-vb.md)   
- [Exemplo de propriedade ActiveCommand (JScript)](../../../ado/reference/ado-api/activecommand-property-example-jscript.md)   
- [Exemplo de propriedade ActiveCommand (VC + +)](../../../ado/reference/ado-api/activecommand-property-example-vc.md)   
+ [Exemplo da propriedade ActiveCommand (VB)](../../../ado/reference/ado-api/activecommand-property-example-vb.md)   
+ [Exemplo da propriedade ActiveCommand (JScript)](../../../ado/reference/ado-api/activecommand-property-example-jscript.md)   
+ [Exemplo da propriedade ActiveCommand (VC + +)](../../../ado/reference/ado-api/activecommand-property-example-vc.md)   
  [Objeto Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)

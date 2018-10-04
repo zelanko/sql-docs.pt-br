@@ -4,33 +4,27 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
 - sql:variable() function
 - sql:variable function
 ms.assetid: 6e2e5063-c1cf-4b5a-b642-234921e3f4f7
-caps.latest.revision: 36
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 66e71e9748d143eb338d612046f97c50db014107
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 299c762bc8c1487990402fc627d0d25268315947
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38018197"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47745334"
 ---
-# <a name="xquery-extension-functions---sqlvariable"></a>Funções de extensão XQuery – SQL: Variable
+# <a name="xquery-extension-functions---sqlvariable"></a>Funções de Extensão XQuery – sql:variable()
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Expõe uma variável que contém um valor relacional SQL dentro de uma expressão XQuery.  
@@ -42,7 +36,7 @@ ms.locfileid: "38018197"
 sql:variable("variableName") as xdt:anyAtomicType?  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Conforme descrito no tópico [associando dados relacionais dentro do XML](../t-sql/xml/binding-relational-data-inside-xml-data.md), você pode usar essa função quando você usa [métodos de tipo de dados XML](../t-sql/xml/xml-data-type-methods.md) para expor um valor relacional dentro do XQuery.  
   
  Por exemplo, o [método Query ()](../t-sql/xml/query-method-xml-data-type.md) é usado para especificar uma consulta em relação a uma instância XML que é armazenada em um **xml** variável ou coluna de tipo de dados. Às vezes, você pode também desejar que sua consulta utilize valores de uma variável ou de um parâmetro [!INCLUDE[tsql](../includes/tsql-md.md)], para unir dados relacionais e de XML. Para fazer isso, você deve usar o **SQL: Variable** função.  

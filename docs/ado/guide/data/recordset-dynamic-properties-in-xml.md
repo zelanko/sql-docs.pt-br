@@ -1,30 +1,27 @@
 ---
-title: Propriedades de conjunto de registros dinâmicos no XML | Microsoft Docs
+title: Propriedades do conjunto de registros dinâmicos em XML | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Recordset dynamic properties in XML [ADO]
 ms.assetid: 52f8e379-812a-4db8-9210-94458926301c
-caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cd874d0db6d026b82ddbc8055a17a073194c6e07
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 50841931d26847ba339d64634d3eff4d7a7efc1b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35272325"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47712526"
 ---
-# <a name="recordset-dynamic-properties-in-xml"></a>Propriedades de conjunto de registros dinâmicos no XML
-Atualmente, as seguintes propriedades específico do provedor de conjunto de registros (do mecanismo de Cursor de cliente) são mantidas no formato XML:  
+# <a name="recordset-dynamic-properties-in-xml"></a>Propriedades dinâmicas do conjunto de registros em XML
+Atualmente, as seguintes propriedades específicas do provedor de conjunto de registros (do mecanismo de Cursor de cliente) são persistidas no formato XML:  
   
 -   Ressincronização de atualização  
   
@@ -34,7 +31,7 @@ Atualmente, as seguintes propriedades específico do provedor de conjunto de reg
   
 -   Catálogo exclusivo  
   
--   Sincronizar de comando  
+-   Comando de ressincronização  
   
 -   IRowsetChange  
   
@@ -50,7 +47,7 @@ Atualmente, as seguintes propriedades específico do provedor de conjunto de reg
   
 -   AutoRecalc  
   
- Essas propriedades são salvos na seção de esquema como atributos da definição do elemento do conjunto de registros sendo persistente. Esses atributos são definidos no namespace do esquema de conjunto de linhas e deve ter o prefixo "rs:".  
+ Essas propriedades são salvos na seção esquema como atributos da definição de elemento para o conjunto de registros que estão sendo mantido. Esses atributos são definidos no namespace do esquema de conjunto de linhas e deve ter o prefixo "rs:".  
   
 ## <a name="see-also"></a>Consulte também  
  [Persistência de registros em formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)

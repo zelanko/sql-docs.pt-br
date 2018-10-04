@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: clr
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -17,18 +15,17 @@ helpviewer_keywords:
 - invoking user-defined aggregate functions
 - user-defined functions [CLR integration]
 ms.assetid: 5a188b50-7170-4069-acad-5de5c915f65d
-caps.latest.revision: 53
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ca243bc1961b703839ff72e5b559349e3a4c3e36
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: 9fa5ab2af307cb0ebdd55e4137c3c7642251f10e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37355368"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47723364"
 ---
-# <a name="clr-user-defined-aggregate---invoking-functions"></a>Agregação definida pelo usuário CLR - invocando funções
+# <a name="clr-user-defined-aggregate---invoking-functions"></a>Agregação do CLR definida pelo usuário – Invocação de funções
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Em instruções SELECT [!INCLUDE[tsql](../../includes/tsql-md.md)], você pode invocar agregações CLR (Common Language Runtime) definidas pelo usuário de acordo com todas as regras que se aplicam às funções de agregação do sistema.  
   

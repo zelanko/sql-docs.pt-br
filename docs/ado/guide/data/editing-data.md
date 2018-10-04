@@ -6,29 +6,26 @@ ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - ADO, editing data
 - AdUseClient [ADO]
 - editing data [ADO]
 ms.assetid: ef514f85-c446-4f05-824e-c9313b2ffae1
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 80e6fe9c0e615311bfbc7ee9602aae9ed929a38d
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 0c12692a6ebd1467148b52f993a77043ff495d43
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35270265"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47823376"
 ---
-# <a name="editing-data"></a>Editando dados
-Ter explicamos como usar o ADO para se conectar a uma fonte de dados, executar um comando, obter os resultados em um **Recordset** objeto e, em seguida, navegar dentro a **Recordset**. Esta seção aborda a próxima operação ADO fundamental: edição de dados.  
+# <a name="editing-data"></a>Editar dados
+Ter explicamos como usar o ADO para conectar a uma fonte de dados, executar um comando, obter os resultados um **conjunto de registros** do objeto e navegar no **conjunto de registros**. Esta seção se concentra na próxima operação ADO fundamental: edição de dados.  
   
- Esta seção continua a usar o exemplo **registros** introduzido no [examinando dados](../../../ado/guide/data/examining-data.md), com uma alteração importante. O código a seguir é usado para abrir o **registros**:  
+ Esta seção continua a usar a amostra **conjunto de registros** introduzido no [examinando dados](../../../ado/guide/data/examining-data.md), com uma alteração importante. O código a seguir é usado para abrir o **Recordset**:  
   
 ```  
 'BeginEditIntro  
@@ -47,11 +44,11 @@ Ter explicamos como usar o ADO para se conectar a uma fonte de dados, executar u
 'EndEditIntro  
 ```  
   
- A alteração importante para o código envolve a configuração de **CursorLocation** propriedade do **Conexão** objeto igual a **adUseClient** no  *GetNewConnection* função (mostrada no exemplo a seguir), que indica o uso de um cursor do cliente. Para obter mais informações sobre as diferenças entre os cursores do lado do cliente e do servidor, consulte [Noções básicas sobre cursores e bloqueios](../../../ado/guide/data/understanding-cursors-and-locks.md).  
+ A alteração importante no código envolve a configuração de **CursorLocation** propriedade da **Conexão** igual do objeto **adUseClient** no  *GetNewConnection* função (mostrada no exemplo a seguir), que indica o uso de um cursor do cliente. Para obter mais informações sobre as diferenças entre os cursores do lado do cliente e servidor, consulte [Noções básicas sobre cursores e bloqueios](../../../ado/guide/data/understanding-cursors-and-locks.md).  
   
- O **CursorLocation** da propriedade **adUseClient** configuração move o local do cursor da fonte de dados (o SQL Server, neste caso) para o local do código de cliente (a estação de trabalho da área de trabalho). Essa configuração força o ADO para invocar o mecanismo de Cursor do cliente para OLE DB no cliente para criar e gerenciar o cursor.  
+ O **CursorLocation** da propriedade **adUseClient** configuração move a posição do cursor da fonte de dados (o SQL Server, neste caso) para o local do código do cliente (a área de trabalho da estação de trabalho). Essa configuração força o ADO para invocar o mecanismo de Cursor do cliente para OLE DB no cliente para criar e gerenciar o cursor.  
   
- Você também deve ter notado que o **LockType** parâmetro o **abrir** método alterado para **adLockBatchOptimistic**. Isso abre o cursor no modo de lote. (O provedor armazena em cache várias alterações e grava a fonte de dados somente quando você chamar o **UpdateBatch** método.) As alterações feitas a **Recordset** não serão atualizadas no banco de dados até que o **UpdateBatch** método é chamado.  
+ Você também deve ter notado que o **LockType** parâmetro do **abra** método alterado para **adLockBatchOptimistic**. Isso abre o cursor no modo de lote. (O provedor armazena em cache várias alterações e grava-os à fonte de dados subjacente, somente quando você chama o **UpdateBatch** método.) As alterações que foram feitas para o **conjunto de registros** não será atualizada no banco de dados até que o **UpdateBatch** método é chamado.  
   
  Por fim, o código nesta seção usa uma versão modificada da função GetNewConnection. Esta versão da função agora retorna um cursor do lado do cliente. A função tem esta aparência:  
   

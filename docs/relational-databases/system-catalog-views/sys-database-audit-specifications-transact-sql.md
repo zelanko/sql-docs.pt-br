@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-catalog-views
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - database_audit_specifications_TSQL
@@ -20,16 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.database_audit_specifications catalog view
 ms.assetid: bf80e5c6-0588-4eb7-86ff-aa7c73461335
-caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9581acdf727d46157925010c47f92cea00862d8b
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 8b91e302c48917454ba29210a2557caf558940a3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43027294"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47604905"
 ---
 # <a name="sysdatabaseauditspecifications-transact-sql"></a>database_audit_specifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +41,7 @@ ms.locfileid: "43027294"
 |is_state_enabled|**bit**|Estado da especificação de auditoria:<br /><br /> 0 – DESABILITADA<br /><br /> 1 – HABILITADA|  
 |audit_GUID|**uniqueidentifer**|GUID da auditoria que contém essa especificação. É usada durante a enumeração das especificações de auditoria do banco de dados membro durante a anexação/inicialização do banco de dados.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Se o banco de dados estiver no modo somente leitura, o recurso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit não poderá adicionar Especificações de Auditoria de Banco de Dados.  
   
 ## <a name="permissions"></a>Permissões  

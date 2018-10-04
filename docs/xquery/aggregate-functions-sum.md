@@ -4,33 +4,27 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: sql
-ms.component: xquery
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 dev_langs:
 - XML
 helpviewer_keywords:
 - sum function [XQuery]
 - fn:sum function
 ms.assetid: 12288f37-b54c-4237-b75e-eedc5fe8f96d
-caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 071394e1c2889c94c65a8e42179fd1bdbf5cf383
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 802c870f2ea22d24d8dfa80144a44f8805a14c96
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38022624"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47619954"
 ---
-# <a name="aggregate-functions---sum"></a>Funções de agregação – soma
+# <a name="aggregate-functions---sum"></a>Funções de Agregação – sum
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Retorna a soma de uma sequência de números.  
@@ -46,7 +40,7 @@ fn:sum($arg as xdt:anyAtomicType*) as xdt:anyAtomicType
  *$arg*  
  Sequência de valores atômicos cuja soma deve ser calculada.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Todos os tipos de valores atomizados que são passados para **SUM ()** têm que ser subtipos do mesmo tipo base. Os tipos base aceitos são os três tipos base numéricos internos ou xdt:untypedAtomic. Valores do tipo xdt:untypedAtomic são convertidos em xs:double. Se há uma mistura desses tipos, ou se outros valores de outros tipos são passados, um erro estático será gerado.  
   
  O resultado de **SUM ()** recebe o tipo base dos tipos passados como xs: Double no caso de XDT: untypedatomic, mesmo se a entrada for opcionalmente a sequência vazia. Se a entrada estiver estaticamente vazia, o resultado será 0 com o tipo estático e dinâmico de xs:integer.  

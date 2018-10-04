@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services, backward compatibility
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - SQL Server Analysis Services, backward compatibility
 - deprecated features [Analysis Services]
 ms.assetid: 2c96ecfe-a170-41d0-bee3-74503f880197
-caps.latest.revision: 48
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2e49169f4fd0264302feb35a7315fc527999c568
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 620e74b3854b5cc590ffb84e2b8b70b33d0bfcd3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37259582"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48067706"
 ---
 # <a name="deprecated-analysis-services-features-in-sql-server-2014"></a>Recursos do Analysis Services preteridos no SQL Server 2014
   Este tópico descreve os recursos substituídos do [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que ainda estão disponíveis no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Esses recursos estão programados para serem removidos em uma versão futura do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Recursos preteridos não devem ser usados em aplicativos novos.  

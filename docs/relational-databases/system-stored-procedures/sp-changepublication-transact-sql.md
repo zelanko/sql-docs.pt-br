@@ -4,31 +4,25 @@ ms.custom: ''
 ms.date: 08/29/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server
 f1_keywords:
 - sp_changepublication
 - sp_changepublication_TSQL
 helpviewer_keywords:
 - sp_changepublication
 ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
-caps.latest.revision: 42
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b816f2b0ba41d213f043ea47686edbff7860a871
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: c715b7af71fc98df34036daf9311f1ed32b1c772
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43021707"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47689724"
 ---
 # <a name="spchangepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -146,7 +140,7 @@ Consulte a seção Comentários das propriedades que, quando alteradas, requerem
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  **sp_changepublication** é usado em replicação de instantâneo e replicação transacional.  
   
  Depois de alterar qualquer uma das propriedades a seguir, você deve gerar um novo instantâneo, e você deve especificar um valor de **1** para o *force_invalidate_snapshot* parâmetro.  

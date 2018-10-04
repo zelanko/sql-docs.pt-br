@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_update_collector_type_TSQL
@@ -19,16 +16,15 @@ helpviewer_keywords:
 - sp_syscollector_update_collector_type
 - data collector [SQL Server], stored procedures
 ms.assetid: 3c414dfd-d9ca-4320-81aa-949465b967bf
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9013eb0eccd260c2f90d8f2858ab9ae2871a6c6f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: ed8c11a7d5f333a086482d2882a6aef7a97370e3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33252308"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47830064"
 ---
 # <a name="spsyscollectorupdatecollectortype-transact-sql"></a>sp_syscollector_update_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,25 +46,25 @@ sp_syscollector_update_collector_type [ @collector_type_uid = ] 'collector_type_
   
 ## <a name="arguments"></a>Argumentos  
  [  **@collector_type_uid =** ] **'***collector_type_uid***'**  
- É o GUID do tipo de coletor. *collector_type_uid* é **uniqueidentifier**, e se for NULL, ele será automaticamente criado e retornado como OUTPUT.  
+ É o GUID do tipo de coletor. *collector_type_uid* está **uniqueidentifier**, e se for NULL, ele será automaticamente criado e retornado como OUTPUT.  
   
  [  **@name =** ] **'***nome***'**  
- É o nome do tipo de coletor. *nome* é **sysname** e deve ser especificado.  
+ É o nome do tipo de coletor. *nome da* está **sysname** e deve ser especificado.  
   
  [  **@parameter_schema =** ] **'***parameter_schema***'**  
- É o esquema XML deste tipo de coletor. *parameter_schema* é **xml** e pode ser necessário para determinados tipos de coletor. Se não for necessário, esse argumento poderá ser NULL.  
+ É o esquema XML deste tipo de coletor. *parameter_schema* está **xml** e pode ser necessário para determinados tipos de coletor. Se não for necessário, esse argumento poderá ser NULL.  
   
  [  **@collection_package_id =** ] *collection_package_id*  
- É um identificador exclusivo local que aponta para o pacote de coleta do [!INCLUDE[ssIS](../../includes/ssis-md.md)] usado pelo conjunto de coleta. *collection_package_id* é **uniqueidentifer** e é necessária. Para obter o valor de *collection_package_id*, consulte a exibição de sistema syscollector_collector_types no banco de dados msdb.  
+ É um identificador exclusivo local que aponta para o pacote de coleta do [!INCLUDE[ssIS](../../includes/ssis-md.md)] usado pelo conjunto de coleta. *collection_package_id* está **uniqueidentifer** e é necessária. Para obter o valor de *collection_package_id*, consulte a exibição de sistema syscollector_collector_types no banco de dados msdb.  
   
  [  **@upload_package_id =** ] *upload_package_id*  
- É um identificador exclusivo local que aponta para o pacote de carregamento do [!INCLUDE[ssIS](../../includes/ssis-md.md)] usado pelo conjunto de coleta. *upload_package_id* é **uniqueidentifier** e é necessária. Para obter o valor de *upload_package_id*, consulte a exibição de sistema syscollector_collector_types no banco de dados msdb.  
+ É um identificador exclusivo local que aponta para o pacote de carregamento do [!INCLUDE[ssIS](../../includes/ssis-md.md)] usado pelo conjunto de coleta. *upload_package_id* está **uniqueidentifier** e é necessária. Para obter o valor de *upload_package_id*, consulte a exibição de sistema syscollector_collector_types no banco de dados msdb.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
  **0** (êxito) ou **1** (falha)  
   
 ## <a name="permissions"></a>Permissões  
- Requer a participação no **dc_admin** (com permissão EXECUTE) função fixa de banco de dados.  
+ Requer associação na **dc_admin** (com permissão EXECUTE) a função de banco de dados fixa.  
   
 ## <a name="example"></a>Exemplo  
  Esse exemplo atualiza o tipo de coletor de Consulta T-SQL Genérico. (No exemplo, o esquema padrão do tipo de coletor de Consulta T-SQL Genérico é usado.)  

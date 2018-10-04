@@ -1,13 +1,11 @@
 ---
-title: Exemplo de propriedades de RecordCount (VB) e filtro | Microsoft Docs
+title: Exemplo de Filter e RecordCount propriedades (VB) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,19 +13,18 @@ helpviewer_keywords:
 - RecordCount property [ADO], Visual Basic example
 - Filter property [ADO], Visual Basic example
 ms.assetid: e8bc63c7-8967-438a-9a49-512478a87a15
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9d467ae897108f248991bc8eb8ac21461c22065c
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 9038609907c7649755a46002927ccafb71090754
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35278657"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47675414"
 ---
-# <a name="filter-and-recordcount-properties-example-vb"></a>Exemplo de propriedades de RecordCount (VB) e filtro
-Este exemplo abrir um [registros](../../../ado/reference/ado-api/recordset-object-ado.md) na tabela editores o ***Pubs*** banco de dados. Ele usa o [filtro](../../../ado/reference/ado-api/filter-property.md) propriedade para limitar o número de registros visíveis para esses editores em um país/região específico. O **RecordCount** propriedade é usada para mostrar a diferença entre os conjuntos de registros filtradas e.  
+# <a name="filter-and-recordcount-properties-example-vb"></a>Exemplo das propriedades Filter e RecordCount (VB)
+Este exemplo aberto um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) na tabela editores a ***Pubs*** banco de dados. Ele usa o [filtro](../../../ado/reference/ado-api/filter-property.md) propriedade para limitar o número de registros visíveis para esses editores em um país/região específico. O **RecordCount** propriedade é usada para mostrar a diferença entre os conjuntos de registros filtrados e não filtradas.  
   
 ```  
 'BeginFilterVB  
@@ -112,7 +109,7 @@ End Sub
 ```  
   
 > [!NOTE]
->  Quando você conhece os dados que você deseja selecionar, geralmente é mais eficiente para abrir um **registros** com uma instrução SQL. Este exemplo mostra como você pode criar apenas um **registros** e obter os registros de um país específico.  
+>  Quando você souber que os dados que você deseja selecionar, ele normalmente é mais eficiente para abrir um **Recordset** com uma instrução SQL. Este exemplo mostra como você pode criar apenas um **Recordset** e obter os registros de um país específico.  
   
 ```  
 Attribute VB_Name = "Filter"  

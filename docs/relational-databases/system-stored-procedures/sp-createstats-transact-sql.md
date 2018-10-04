@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_createstats_TSQL
@@ -18,17 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_createstats
 ms.assetid: 8204f6f2-5704-40a7-8d51-43fc832eeb54
-caps.latest.revision: 47
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ece50521e42335f7152fd976424bce075c423239
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 374fab9dca601e7cc933143643bcc5055f47bda7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43089682"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47803914"
 ---
 # <a name="spcreatestats-transact-sql"></a>sp_createstats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,7 +67,7 @@ sp_createstats
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Cada objeto de estatísticas novo tem o mesmo nome da coluna em que foi criado.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  sp_createstats não cria nem atualiza estatísticas em colunas que são a primeira coluna em um objeto de estatísticas existente;  Isso inclui a primeira coluna de estatísticas criada para índices, colunas com estatísticas de coluna única geradas com a opção AUTO_CREATE_STATISTICS e a primeira coluna de estatísticas criadas com a instrução CREATE STATISTICS. sp_createstats não cria estatísticas nas primeiras colunas de índices desabilitados a menos que essa coluna é usada em outro índice habilitado. sp_createstats não cria estatísticas em tabelas com um índice clusterizado desabilitado.  
   
  Quando a tabela contém um conjunto de colunas, sp_createstats não cria estatísticas em colunas esparsas. Para obter mais informações sobre conjuntos de colunas esparsas, consulte [usar conjuntos de colunas](../../relational-databases/tables/use-column-sets.md) e [usar colunas esparsas](../../relational-databases/tables/use-sparse-columns.md).  

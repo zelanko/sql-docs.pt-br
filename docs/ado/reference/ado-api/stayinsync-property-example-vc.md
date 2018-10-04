@@ -1,34 +1,31 @@
 ---
-title: Exemplo de propriedade StayInSync (VC + +) | Microsoft Docs
+title: Exemplo da propriedade StayInSync (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - StayInSync property [ADO], VC++ example
 ms.assetid: 3a5db5f0-094b-46e1-939b-d9fa9417a406
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 755fcb827a2ee4789beb85f8a4f58666c6176657
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: ce7a4a2a9cbfefd9ff2c61fcf8ff4fdfeed233c8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35281935"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47729484"
 ---
-# <a name="stayinsync-property-example-vc"></a>Exemplo de propriedade StayInSync (VC + +)
-Este exemplo demonstra como o [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) propriedade facilita acessar linhas em hierárquico [registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
+# <a name="stayinsync-property-example-vc"></a>Exemplo da propriedade StayInSync (VC++)
+Este exemplo demonstra como o [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) propriedade facilita o acesso às linhas no modo hierárquico [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
- O loop externo exibe o nome e sobrenome de cada autor, estado e identificação. O acrescentados **registros** para cada linha é recuperada do [campos](../../../ado/reference/ado-api/fields-collection-ado.md) coleta e atribuído automaticamente aos **rstTitleAuthor** pela **StayInSync**  propriedade sempre que o pai **registros** move para uma nova linha. O loop interno exibe quatro campos de cada linha no conjunto de registros acrescentado.  
+ O loop externo exibe o nome e sobrenome, estado e identificação de cada autor. O acréscimo **conjunto de registros** para cada linha é recuperada do [campos](../../../ado/reference/ado-api/fields-collection-ado.md) coleção e atribuído automaticamente aos **rstTitleAuthor** pela **StayInSync**  propriedade sempre que o pai **Recordset** move para uma nova linha. O loop interno exibe quatro campos de cada linha no conjunto de registros acrescentado.  
   
 ```  
 // BeginStayInSyncCpp.cpp  
@@ -148,6 +145,6 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Coleção de campos (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [Coleção Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Propriedade StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)

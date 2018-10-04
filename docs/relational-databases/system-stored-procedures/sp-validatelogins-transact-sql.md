@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_validatelogins
@@ -21,12 +18,12 @@ ms.assetid: 6ac52e21-e20d-469b-ad40-5aa091e06b61
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: be184539a88e4a89fb841a26594a28eb0f2a2d33
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: b60478b4ca3bdd6f2688f5a77c18cdce7166b37d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43029533"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47796034"
 ---
 # <a name="spvalidatelogins-transact-sql"></a>sp_validatelogins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +49,7 @@ sp_validatelogins
 |**SID**|**varbinary(85)**|SID (identificador de segurança) do usuário ou grupo do Windows.|  
 |**Logon do NT**|**sysname**|Nome de usuário ou do grupo do Windows.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Se a entidade de nível de servidor órfão possuir um usuário do banco de dados, esse usuário deverá ser removido para que o principal de servidor órfão também possa ser removido. Para remover um usuário de banco de dados, use [DROP USER](../../t-sql/statements/drop-user-transact-sql.md). Se a entidade de nível de servidor possuir protegíveis no banco de dados, o proprietário dos protegíveis deverá ser transferido ou descartado. Para transferir a propriedade de protegíveis de banco de dados, use [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md).  
   
  Para remover mapeamentos para usuários do Windows e grupos que não existem mais, use [DROP LOGIN](../../t-sql/statements/drop-login-transact-sql.md).  

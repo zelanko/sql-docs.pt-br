@@ -5,9 +5,7 @@ ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_db_index_operational_stats
@@ -19,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_index_operational_stats dynamic management function
 ms.assetid: 13adf2e5-2150-40a6-b346-e74a33ce29c6
-caps.latest.revision: 61
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 65b6d8841ed2204ef549a3b8a2efafb94806675f
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: b8ddd123c60806826918f8b42412048aaa408776
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43059758"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47716494"
 ---
 # <a name="sysdmdbindexoperationalstats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -132,7 +129,7 @@ sys.dm_db_index_operational_stats (
 |**page_compression_attempt_count**|**bigint**|Número de páginas avaliadas por compactação de nível de PAGE para partições específicas de tabela, índice ou exibição indexada. Inclui páginas que não foram compactadas porque economias significativas não puderam ser obtidas. Sempre 0 para índice columnstore.|    
 |**page_compression_success_count**|**bigint**|Número de páginas de dados que foram compactadas com a compactação de PAGE para partições específicas de tabela, índice ou exibição indexada. Sempre 0 para índice columnstore.|    
     
-## <a name="remarks"></a>Remarks    
+## <a name="remarks"></a>Comentários    
  Esse objeto de gerenciamento dinâmico não aceita parâmetros correlatos de CROSS APPLY e OUTER APPLY.    
     
  Você pode usar **DM db_index_operational_stats** para rastrear o período de tempo em que os usuários devem aguardar para ler ou gravar em uma tabela, índice ou partição e identificar as tabelas ou índices que estão encontrando atividade de e/s significativa ou quente pontos de acesso.    

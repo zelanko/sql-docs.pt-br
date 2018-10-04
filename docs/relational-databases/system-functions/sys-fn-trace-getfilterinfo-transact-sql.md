@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_trace_getfilterinfo
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - filters [SQL Server], traces
 - fn_trace_getfilterinfo function
 ms.assetid: 09fe4a28-ff8a-4655-9da1-4654d5bc514d
-caps.latest.revision: 36
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1f55c02dfd91edbb964b87e74e2d413f9066501d
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: ce54144c3f7f367248cdb9d92484874deaaf78fc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37971871"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47690644"
 ---
 # <a name="sysfntracegetfilterinfo-transact-sql"></a>sys.fn_trace_getfilterinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +60,7 @@ fn_trace_getfilterinfo ( trace_id )
 |**comparison_operator**|**int**|Especifica o tipo de comparação feita:<br /><br /> 0 = Igual<br /><br /> 1 = Diferente de<br /><br /> 2 = Maior que<br /><br /> 3 = Menor que<br /><br /> 4 = Maior que ou igual a<br /><br /> 5 = Menor que ou igual a<br /><br /> 6 = Like<br /><br /> 7 = Not like|  
 |**value**|**sql_variant**|Especifica o valor no qual o filtro é aplicado.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O usuário define *trace_id* valor para identificar, modificar e controlar o rastreamento. Quando é passada a identificação de um rastreamento específico, **fn_trace_getfilterinfo** retorna informações sobre qualquer filtro desse rastreamento. Se o rastreamento especificado não tiver um filtro, essa função retornará um conjunto de linhas vazio. Quando é passada uma ID inválida, a função retorna um conjunto de linhas vazio. Para obter informações similares sobre rastreamentos, consulte [sys. fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md).  
   
 ## <a name="permissions"></a>Permissões  

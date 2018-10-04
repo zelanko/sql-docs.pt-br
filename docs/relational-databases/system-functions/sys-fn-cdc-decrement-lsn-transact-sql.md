@@ -4,14 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: system-functions
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
-applies_to:
-- SQL Server (starting with 2008)
 f1_keywords:
 - fn_cdc_decrement_lsn
 - sys.fn_cdc_decrement_lsn_TSQL
@@ -23,16 +18,15 @@ helpviewer_keywords:
 - fn_cdc_decrement_lsn
 - sys.fn_cdc_decrement_lsn
 ms.assetid: 83c182ad-4713-439b-8769-9b7408aec8b4
-caps.latest.revision: 18
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0cc85998b26b17619343317369a8afb832b32f94
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 2bfbe04376b71401694eb8bea025b8418cfea643
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33227605"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47636534"
 ---
 # <a name="sysfncdcdecrementlsn-transact-sql"></a>sys.fn_cdc_decrement_lsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,16 +44,16 @@ sys.fn_cdc_decrement_lsn ( lsn_value )
   
 ## <a name="arguments"></a>Argumentos  
  *lsn_value*  
- Valor do LSN. *lsn_value* é **binário (10)**.  
+ Valor do LSN. *lsn_value* está **binário (10)**.  
   
 ## <a name="return-type"></a>Tipo de retorno  
  **binary(10)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O LSN retornado pela função é sempre inferior ao valor especificado e nenhum valor de LSN pode existir entre os dois valores.  
   
 ## <a name="permissions"></a>Permissões  
- Requer a participação no **pública** função de banco de dados.  
+ Requer associação na **pública** função de banco de dados.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir usa `sys.fn_cdc_decrement_lsn` para definir o limite LSN superior em uma consulta que retorna linhas de dados alterados com valores LSN inferiores ao valor LSN máximo.  

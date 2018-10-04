@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: f6641f59-5267-4f57-8957-63b93d1a9679
-caps.latest.revision: 30
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a221095f73da5d68256f91298e3bb0d35ee4121b
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 4342504d0d62f2c611c680c58fcdeae1f046f29b
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37218866"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48078096"
 ---
 # <a name="snapshot-options-properties-page-report-manager"></a>Página de propriedades Opções de Instantâneo (Gerenciador de Relatórios)
   Use a página de propriedades Opções de Instantâneo para agendar instantâneos de relatório a serem adicionados ao histórico de relatórios e para definir limites do número de instantâneos de relatórios armazenados nesse histórico.  

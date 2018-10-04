@@ -1,13 +1,11 @@
 ---
-title: Exemplo de propriedades do indicador (VC + +), BOF e EOF | Microsoft Docs
+title: BOF, EOF e exemplo de propriedades do indicador (VC + +) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -16,21 +14,20 @@ helpviewer_keywords:
 - EOF property [ADO], VC++ example
 - BOF property [ADO], VC++ example
 ms.assetid: bd2b9d85-e75e-4fc8-a392-076582019caa
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9a09c56981f6884f03551d10d78a51ad8ea3d140
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 2e2b76cc255748f52feb2235296cc57070f8a9a4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35276075"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47659524"
 ---
-# <a name="bof-eof-and-bookmark-properties-example-vc"></a>Exemplo de propriedades do indicador (VC + +), BOF e EOF
-A primeira função neste exemplo usa o [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) e [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) propriedades para exibir uma mensagem se um usuário tenta mover após o primeiro ou último registro de um [registros](../../../ado/reference/ado-api/recordset-object-ado.md). Ele usa o [indicador](../../../ado/reference/ado-api/bookmark-property-ado.md) propriedade para permitir que o usuário sinalize um registro em uma **registros** e retornar a ele mais tarde.  
+# <a name="bof-eof-and-bookmark-properties-example-vc"></a>BOF, EOF e exemplo de propriedades do indicador (VC + +)
+A primeira função neste exemplo usa o [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) e [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) as propriedades para exibir uma mensagem se um usuário tenta mover o cursor após o primeiro ou último registro de um [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md). Ele usa o [indicador](../../../ado/reference/ado-api/bookmark-property-ado.md) propriedade para permitir que o usuário sinalize um registro em um **Recordset** e retornar a ele mais tarde.  
   
- A segunda função usa a propriedade Bookmark para colocar o **indicador** de todos os outros registros de um **registros** uma matriz e, em seguida, o conjunto de registros usando a matriz de filtros.  
+ A segunda função usa a propriedade Bookmark para colocar o **indicador** de todos os outros registros de uma **conjunto de registros** em uma matriz e, em seguida, o conjunto de registros usando a matriz de filtros.  
   
 ## <a name="example"></a>Exemplo  
   
@@ -210,6 +207,6 @@ Authors with 25 percent royalty
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [BOF, propriedades EOF (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
+ [BOF, EOF propriedades (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
  [Propriedade Bookmark (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)   
  [Objeto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Cancel Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Cancel command
 ms.assetid: de4062c1-7434-44dc-9f01-29fcf78963bd
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fb71b55e514a2e058d50cd1c923a3e0b794ac8f9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 0b106806118649d35e7be239b4ceea7201f349d6
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37173267"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48055206"
 ---
 # <a name="cancel-element-xmla"></a>Elemento Cancel (XMLA)
   Cancela um comando em execução no momento uma [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instância.  
@@ -55,8 +52,8 @@ ms.locfileid: "37173267"
   
 |Característica|Description|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|Nenhum|  
-|Valor padrão|Nenhum|  
+|Comprimento e tipo de dados|None|  
+|Valor padrão|None|  
 |Cardinalidade|0-n: Elemento opcional que pode ocorrer mais de uma vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -66,7 +63,7 @@ ms.locfileid: "37173267"
 |Elementos pai|[Comando](../xml-elements-properties/command-element-xmla.md)|  
 |Elementos filho|[CancelAssociated](../xml-elements-properties/cancelassociated-element-xmla.md), [ConnectionID](../xml-elements-properties/id-element-xmla.md), [SessionID](../xml-elements-properties/sessionid-element-xmla.md), [SPID](../xml-elements-properties/spid-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O comando `Cancel` cancela os comandos que estiverem sendo executados neste momento dentro do contexto de uma sessão. Se o aplicativo cliente não solicitou uma sessão, um comando não poderá ser cancelado.  
   
  Se o comando `Cancel` for executado durante a execução de um comando `Batch`, todo o comando `Batch` será cancelado. Se o comando `Batch` era transacional, todos os comandos contidos no comando `Batch` serão revertidos. Se o comando `Batch` era transacional, todos os comandos contidos no comando `Batch` que estiverem sendo executados no momento em que o comando `Cancel` foi executado serão revertidos. Os comandos não transacionais em um comando `Batch` que foram executados antes, não serão revertidos.  

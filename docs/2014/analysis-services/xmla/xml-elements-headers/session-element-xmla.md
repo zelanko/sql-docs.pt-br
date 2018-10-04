@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - Session Element
@@ -23,16 +21,15 @@ f1_keywords:
 helpviewer_keywords:
 - Session element
 ms.assetid: 884ed090-968e-41d3-97e5-6d12787467da
-caps.latest.revision: 15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 74ce499ba167c7c0d439fba4e4099638f4e98db6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a2f18754a2ef7d44a2a85bb9da78378bc631ecd0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37310363"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48080386"
 ---
 # <a name="session-element-xmla"></a>Elemento Session (XMLA)
   Usa o cabeçalho SOAP em uma mensagem de solicitação SOAP para identificar uma sessão existente explícita em uma instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -61,16 +58,16 @@ ms.locfileid: "37310363"
   
 |Característica|Description|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|Nenhum|  
-|Valor padrão|Nenhum|  
+|Comprimento e tipo de dados|None|  
+|Valor padrão|None|  
 |Cardinalidade|0-1: elemento opcional que pode ocorrer apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
   
 |Relação|Elemento|  
 |------------------|-------------|  
-|Elementos pai|Nenhum|  
-|Elementos filho|Nenhum|  
+|Elementos pai|None|  
+|Elementos filho|None|  
   
 ## <a name="attributes"></a>Atributos  
   
@@ -78,7 +75,7 @@ ms.locfileid: "37310363"
 |---------------|-----------------|  
 |SessionId|Atributo obrigatório `String` que identifica a sessão a ser usada. O [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] usa um GUID (identificador global exclusivo) para identificar uma sessão.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O elemento do cabeçalho `Session` identifica uma sessão existente explicitamente iniciada na instância [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. O elemento `Session` faz parte do cabeçalho SOAP nos seguintes tipos de mensagens:  
   
 -   Uma resposta SOAP que contém um [BeginSession](session-element-xmla.md) elemento de cabeçalho SOAP.  

@@ -4,25 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.maintplanproperties.server.f1
 - sql12.swb.maint.servers.f1
 ms.assetid: ac24d1a8-dd2f-4162-b804-c0df1fc1e61d
-caps.latest.revision: 6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1d2940db99ffb0defc24761654804c90170e4256
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: df05d1f7bdbcf2f149caf1b82b592607d588b0ab
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37233066"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48050402"
 ---
 # <a name="maintenance-plan-servers"></a>Plano de manutenção (Servidores)
   Use a caixa de diálogo **Servidores** para selecionar os servidores em que você quer executar o plano de manutenção.  

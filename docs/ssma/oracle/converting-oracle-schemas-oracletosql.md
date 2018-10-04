@@ -4,23 +4,20 @@ ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssma
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Conversion Results
 ms.assetid: e021182d-31da-443d-b110-937f5db27272
-caps.latest.revision: 14
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 277ad816d887a7f5641d8d37e7bdc60dc7ddb28a
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 18da150a435b5d3d61740139309d109a16691da3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40393793"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47788504"
 ---
 # <a name="converting-oracle-schemas-oracletosql"></a>Converter esquemas Oracle (OracleToSQL)
 Depois de se conectar ao Oracle, conectado ao [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], e defina o projeto e as opções de mapeamento de dados, você pode converter objetos de banco de dados Oracle para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos de banco de dados.  

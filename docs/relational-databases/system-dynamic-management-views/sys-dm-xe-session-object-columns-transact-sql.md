@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: system-objects
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_xe_session_object_columns_TSQL
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - xe
 - sys.dm_xe_session_object_columns dynamic management view
 ms.assetid: e97f3307-2da6-4c54-b818-a474faec752e
-caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 62d2e43572ae6501535eebda978c6592e565aa05
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: 49ef6a48dba129311f70b1ba03c427258127b358
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34466982"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47810204"
 ---
 # <a name="sysdmxesessionobjectcolumns-transact-sql"></a>sys.dm_xe_session_object_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +36,7 @@ ms.locfileid: "34466982"
 |-----------------|---------------|-----------------|  
 |event_session_address|**varbinary(8)**|O endereço da memória da sessão de evento. Tem uma relação muitos para um com sys.dm_xe_sessions.address. Não permite valor nulo.|  
 |column_name|**nvarchar(60)**|O nome do valor de configuração. Não permite valor nulo.|  
-|column_id|**Int**|A ID da coluna. É exclusiva no objeto. Não permite valor nulo.|  
+|column_id|**int**|A ID da coluna. É exclusiva no objeto. Não permite valor nulo.|  
 |column_value|**nvarchar(2048)**|O valor configurado da coluna. Permite valor nulo.|  
 |object_type|**nvarchar(60)**|O tipo do objeto. Não permite valor nulo. object_type é um de:<br /><br /> event<br /><br /> target|  
 |object_name|**nvarchar(60)**|O nome do objeto ao qual a coluna pertence. Não permite valor nulo.|  

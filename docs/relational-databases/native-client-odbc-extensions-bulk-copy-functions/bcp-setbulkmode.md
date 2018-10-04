@@ -5,24 +5,21 @@ ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: native-client
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - bcp_setbulkmode function
 ms.assetid: de56f206-1f7e-4c03-bf22-da9c7f9f4433
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48a3d9ef9299eb26bea2d41b2744ad311e2bfacd
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: ea0f839fb1f1366827279d2a9254a88dbe0f8de6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43103267"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47854644"
 ---
 # <a name="bcpsetbulkmode"></a>bcp_setbulkmode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -66,7 +63,7 @@ RETCODE bcp_setbulkmode (
 ## <a name="returns"></a>Retorna  
  SUCCEED ou FAIL  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  bcp_setbulkmode pode ser usado para fazer cópias fora de uma consulta ou uma tabela em massa. Quando bcp_setbulkmode é usado para copiar uma instrução de consulta em massa, ele deve ser chamado antes de chamar bcp_control com BCP_HINT.  
   
  bcp_setbulkmode é uma alternativa ao uso [bcp_setcolfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md) e [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md), que permitem apenas especificar o formato de uma coluna por chamada de função.  

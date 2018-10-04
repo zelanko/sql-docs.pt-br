@@ -5,49 +5,46 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - escape sequences [ODBC], literals
 ms.assetid: 2b42a52a-6353-494c-a179-3a7533cd729f
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c41d78b848009083abef2595d8628bb8fa1c0b0e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aa7fb107e67d529c656a49b271744757a1a73746
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32913381"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47651314"
 ---
-# <a name="date-time-and-timestamp-literals"></a>Data, hora e literais de carimbo de hora
-A sequência de escape para literais de data, hora e carimbo de hora é  
+# <a name="date-time-and-timestamp-literals"></a>Data, hora e literais de carimbo de data/hora
+É a sequência de escape para literais de data, hora e carimbo de hora  
   
- **{***-tipo* **'** *valor* **'}**  
+ **{***-tipo* **'** *valor* **'}**   
   
- onde *tipo literal* é um dos valores listados na tabela a seguir.  
+ em que *tipo literal* é um dos valores listado na tabela a seguir.  
   
-|*tipo literal*|Significado|Formato de *valor*|  
+|*tipo de literal*|Significado|Formato de *valor*|  
 |---------------------|-------------|-----------------------|  
-|**d**|Data|*aaaa*-*mm*-*dd*|  
-|**T**|Hora *|*hh*:*mm*:*ss*[1]|  
+|**d**|data|*yyyy*-*mm*-*dd*|  
+|**t**|Hora *|*hh*:*mm*:*ss*[1]|  
 |**TS**|Timestamp|*aaaa*-*mm*-*dd* *hh*:*mm*:*ss*[.*f...*] [1]|  
   
- [1] o número de dígitos à direita da vírgula decimal em um intervalo de tempo ou carimbo de hora literal que contém um componente de segundos é dependente de precisão de segundos, como contido no campo de descritor SQL_DESC_PRECISION. (Para obter mais informações, consulte [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md).)  
+ [1] o número de dígitos à direita da vírgula decimal em um intervalo de tempo ou carimbo de hora literal que contém um componente de segundos é dependente de precisão de segundos, conforme contido no campo de descritor SQL_DESC_PRECISION. (Para obter mais informações, consulte [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md).)  
   
- Para obter mais informações sobre sequências de escape de carimbo de hora, data e hora, consulte [data, hora e sequências de Escape de carimbo de hora](../../../odbc/reference/appendixes/date-time-and-timestamp-escape-sequences.md) na gramática do apêndice c: SQL.  
+ Para obter mais informações sobre a data, hora e sequências de escape de carimbo de hora, consulte [data, hora e sequências de Escape de carimbo de hora](../../../odbc/reference/appendixes/date-time-and-timestamp-escape-sequences.md) na gramática do apêndice c: SQL.  
   
- Por exemplo, ambas as seguintes instruções SQL atualizar a open data de pedido de vendas 1023 na tabela Orders. A primeira instrução usa a sintaxe de sequência de escape. A segunda instrução usa a sintaxe de Oracle Rdb nativo para a coluna de data e não é interoperável.  
+ Por exemplo, ambas as seguintes instruções SQL atualizar a data de abertura da ordem de venda 1023 na tabela Orders. A primeira instrução usa a sintaxe da sequência de escape. A segunda instrução usa a sintaxe de Oracle Rdb nativa para a coluna de data e não é interoperável.  
   
 ```  
 UPDATE Orders SET OpenDate={d '1995-01-15'} WHERE OrderID=1023  
 UPDATE Orders SET OpenDate='15-Jan-1995' WHERE OrderID=1023  
 ```  
   
- A sequência de escape para uma data, hora ou literal de carimbo de hora também pode ser colocada em uma variável de caracteres associada a uma data, hora ou parâmetro de carimbo de hora. Por exemplo, o código a seguir usa um parâmetro de data associado a uma variável de caractere para atualizar a open data de pedido de vendas 1023 na tabela:  
+ A sequência de escape para uma data, hora ou literal de carimbo de hora também pode ser colocada em uma variável de caracteres associada a uma data, hora ou parâmetro de carimbo de hora. Por exemplo, o código a seguir usa um parâmetro de data associado a uma variável de caractere para atualizar a data de abertura da ordem de venda 1023 na tabela Orders:  
   
 ```  
 SQLCHAR      OpenDate[56]; // The size of a date literal is 55.  
@@ -88,8 +85,8 @@ SQLExecDirect(hstmt, "UPDATE Employee SET OpenDate=? WHERE OrderID = 1023", SQL_
   
  Para determinar se um driver suporta as sequências de escape ODBC para data, hora ou literais de carimbo de hora, um aplicativo chama **SQLGetTypeInfo**. Se a fonte de dados oferece suporte a um tipo de dados de data, hora ou carimbo de hora, ele também deverá dar suporte a sequência de escape correspondente.  
   
- Fontes de dados também podem dar suporte as literais de data e hora definidas na especificação ANSI SQL-92, que são diferentes das sequências de escape ODBC para data, hora ou literais de carimbo de hora. Para determinar se uma fonte de dados oferece suporte as literais de ANSI, um aplicativo chama **SQLGetInfo** com a opção SQL_ANSI_SQL_DATETIME_LITERALS.  
+ Fontes de dados também podem dar suporte a literais de data e hora definidas na especificação ANSI SQL-92, que são diferentes das sequências de escape ODBC para data, hora ou literais de carimbo de hora. Para determinar se uma fonte de dados dá suporte a literais de ANSI, um aplicativo chama **SQLGetInfo** com a opção SQL_ANSI_SQL_DATETIME_LITERALS.  
   
- Para determinar se um driver suporta as sequências de escape ODBC para literais de intervalo, um aplicativo chama **SQLGetTypeInfo**. Se a fonte de dados oferece suporte a um tipo de dados de intervalo de data e hora, ele também deve oferecer suporte a sequência de escape correspondente.  
+ Para determinar se um driver suporta as sequências de escape ODBC para literais de intervalo, um aplicativo chama **SQLGetTypeInfo**. Se a fonte de dados oferece suporte a um tipo de dados de intervalo de data e hora, ele também deverá dar suporte a sequência de escape correspondente.  
   
- Fontes de dados também podem dar suporte as literais datetime definidos na especificação do ANSI SQL-92, que são diferentes das sequências de escape ODBC para literais de intervalo de data e hora. Para determinar se uma fonte de dados oferece suporte as literais de ANSI, um aplicativo chama **SQLGetInfo** com a opção SQL_ANSI_SQL_DATETIME_LITERALS.
+ Fontes de dados também podem dar suporte a literais de data e hora definidas na especificação ANSI SQL-92, que são diferentes das sequências de escape ODBC para literais de intervalo de data e hora. Para determinar se uma fonte de dados dá suporte a literais de ANSI, um aplicativo chama **SQLGetInfo** com a opção SQL_ANSI_SQL_DATETIME_LITERALS.

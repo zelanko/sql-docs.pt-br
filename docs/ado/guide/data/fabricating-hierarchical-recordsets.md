@@ -1,13 +1,11 @@
 ---
-title: Conjuntos de registros hierárquicos de fabricating | Microsoft Docs
+title: Fabricando conjuntos de registros hierárquicos | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Recordset fabrication [ADO]
@@ -15,21 +13,20 @@ helpviewer_keywords:
 - fabricating hierarchical Recordsets [ADO]
 - data shaping [ADO], hierarchical Recordsets
 ms.assetid: a584e642-a4a3-418e-bc20-3aff81a5625a
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 37e2ffd58c7dbf9e142c2525b7348cbc88cc6823
-ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
+ms.openlocfilehash: 17cf661e092e253e206b595dec5d807a35b895fb
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35271525"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47770884"
 ---
-# <a name="fabricating-hierarchical-recordsets"></a>Conjuntos de registros hierárquicos fabricating
-O exemplo a seguir mostra como fabricar um conjunto de registros hierárquico sem uma fonte de dados subjacente usando dados de formatação gramática definir colunas pai, filho e neto **conjuntos de registros**.  
+# <a name="fabricating-hierarchical-recordsets"></a>Fabricar conjuntos de registros hierárquicos
+O exemplo a seguir mostra como fabricar um conjunto de registros hierárquico sem uma fonte de dados subjacente usando os dados de formatação a gramática para definir as colunas para o pai, filho e neto **conjuntos de registros**.  
   
- Para fabricar hierárquico **registros**, você deve especificar o [Microsoft Data Shaping Service para OLE DB (provedor de serviços de ADO)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (MSDataShape), e você pode especificar um valor nenhum no provedor de dados a parâmetro de cadeia de caracteres de conexão do [abrir](../../../ado/reference/ado-api/open-method-ado-connection.md) método o [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto. Para obter mais informações, consulte [provedores necessários para modelagem de dados](../../../ado/guide/data/required-providers-for-data-shaping.md).  
+ Para fabricar hierárquico **conjunto de registros**, você deve especificar o [Microsoft Data Shaping Service para OLE DB (provedor de serviços do ADO)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (MSDataShape), e você pode especificar um valor nenhum no provedor de dados a parâmetro de cadeia de caracteres de conexão das [aberto](../../../ado/reference/ado-api/open-method-ado-connection.md) método da [Conexão](../../../ado/reference/ado-api/connection-object-ado.md) objeto. Para obter mais informações, consulte [provedores necessários para Data Shaping](../../../ado/guide/data/required-providers-for-data-shaping.md).  
   
 ```  
 Dim cn As New ADODB.Connection  
@@ -56,11 +53,11 @@ strShape = _
 rsCustomers.Open strShape, cn, adOpenStatic, adLockOptimistic, -1  
 ```  
   
- Assim que o **registros** tiver sido gerados, ele pode ser preenchido, manipulado ou persistente em um arquivo.  
+ Assim que o **Recordset** tiver sido gerados, ele pode ser preenchido, manipulado ou mantido em um arquivo.  
   
 ## <a name="see-also"></a>Consulte também  
- [Acessar linhas em um conjunto de registros hierárquico](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
+ [Acessando linhas em um conjunto de registros hierárquico](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
  [Gramática de forma formal](../../../ado/guide/data/formal-shape-grammar.md)   
- [Provedores necessários para modelagem de dados](../../../ado/guide/data/required-providers-for-data-shaping.md)   
+ [Provedores necessários para Data Shaping](../../../ado/guide/data/required-providers-for-data-shaping.md)   
  [Cláusula APPEND de forma](../../../ado/guide/data/shape-append-clause.md)   
  [Modelar comandos em geral](../../../ado/guide/data/shape-commands-in-general.md)
