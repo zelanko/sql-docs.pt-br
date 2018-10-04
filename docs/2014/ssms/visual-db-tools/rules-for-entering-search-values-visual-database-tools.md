@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - time [SQL Server], searches
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - text value searches [SQL Server]
 - numeric value searches [SQL Server]
 ms.assetid: 3c8134b7-83f4-41b4-99c8-e3949a685ff5
-caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 44f1cc4f153ee340377ff3bbb7c8e692d3a7c041
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 2e3715c888e9d71d465e9b2f43302bb7e180aaea
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43809062"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48188096"
 ---
 # <a name="rules-for-entering-search-values-visual-database-tools"></a>Regras para inserção de valores de pesquisa (Visual Database Tools)
   Este tópico discute as convenções que devem ser usadas para inserir os seguintes tipos de valores literais em um critério de pesquisa:  

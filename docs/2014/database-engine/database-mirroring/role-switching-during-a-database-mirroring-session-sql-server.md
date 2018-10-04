@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - role switching [SQL Server]
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - failover [SQL Server], database mirroring
 - database mirroring [SQL Server], failover
 ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
-caps.latest.revision: 49
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 80db1069e46f6ec8bc8edba6820dad2780f5aacd
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 184018d0c0973f41e686f9111b9664e12f91cd20
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37207686"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48181206"
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>Troca de função durante uma sessão de espelhamento de banco de dados (SQL Server)
   No contexto da sessão de espelhamento de banco de dados, as funções principal e espelho podem ser, normalmente, alternadas em um processo conhecido como *troca de função*. Na troca de função, o servidor espelho age como o *parceiro de failover* do servidor principal, assumindo a função principal, recuperando a cópia do banco de dados e colocando-a online como novo banco de dados principal. O antigo servidor principal, quando disponível, assume a função espelho e seu banco de dados se torna o novo banco de dados espelho. Potencialmente, as funções podem ser alternadas como resposta a várias falhas ou por razões administrativas.  

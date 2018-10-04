@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - MDX [Analysis Services], data manipulation
 - data manipulation [MDX]
 - Multidimensional Expressions [Analysis Services], data manipulation
 ms.assetid: 4865192e-f46b-4ce5-b51c-9e08dbad5b85
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7ed85590cfc766b1db7eb97a3c373c0cf967f2a8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b7fe82be443271e1d679e5da6f0db95dc418cd99
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37208006"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48188636"
 ---
 # <a name="manipulating-data-mdx"></a>Manipulando dados (MDX)
   As expressões multidimensionais (MDX) podem ser usadas para manipular os dados de várias formas. Os tópicos a seguir abrangem alguns do mais avançados conceitos de manipulação de dados na linguagem MDX.  

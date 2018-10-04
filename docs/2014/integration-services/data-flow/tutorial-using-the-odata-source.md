@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
-caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 99695cbfb50a74488a2525544e892d5878e4392e
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 32d4e2f651fe4a080c1b75c4bd8c00ded7940bae
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37318787"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48154996"
 ---
 # <a name="tutorial-using-the-odata-source-ssis"></a>Tutorial: Usando o OData Source [SSIS]
   Este tutorial orienta você pelo processo de extrair a coleção **Funcionários** do serviço **Northwind** OData de amostra (http://services.odata.org/V3/Northwind/Northwind.svc/) e, em seguida, carregue-o para um arquivo simples.  

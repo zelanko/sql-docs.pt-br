@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 001bed84-f50f-4961-bc25-9906728d99ec
-caps.latest.revision: 18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 402d53f58e1d23667e181849dc5e23276bb663b8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 3f89e4b5e6d209efeb3fd37661a5f4b925aaeb63
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37178453"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48171536"
 ---
 # <a name="create-a-newtabular-model-project-ssas-tabular"></a>Criar um projeto de modelo NewTabular (SSAS tabular)
   Este tópico descreve como criar um novo projeto de modelo tabular e em branco no [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Depois que um novo projeto modelo foi criado, você poderá começar a criar seu projeto de modelo com a importação dos dados das fontes de dados.  

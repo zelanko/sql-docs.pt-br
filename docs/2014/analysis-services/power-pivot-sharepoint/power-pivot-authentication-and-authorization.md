@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
-caps.latest.revision: 29
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cea8b8e9d6f883d6933ed72591da20de73d55326
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: bc2118315b40ab89d19d562b364a0a0250f7f3c2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37210216"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48165746"
 ---
 # <a name="powerpivot-authentication-and-authorization"></a>Autenticação e autorização PowerPivot
   Uma implantação do PowerPivot para SharePoint, executada dentro de um farm do SharePoint 2010, usa o subsistema de autenticação e o modelo de autorização fornecidos pelos servidores do SharePoint. A infraestrutura de segurança do SharePoint se estende ao conteúdo e operações do PowerPivot porque todo o conteúdo relacionado ao PowerPivot é armazenado nos bancos de dados de conteúdo do SharePoint, e todas as operações relacionadas ao PowerPivot é executado pelos serviços compartilhados PowerPivot no farm. Os usuários que solicitam uma pasta de trabalho que contém dados PowerPivot são autenticados, usando uma identidade de usuário do SharePoint que é baseada na respectiva identidade de usuário do Windows. As permissões de exibição na pasta de trabalho determinam se a solicitação é concedida ou negada.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - FontSize Element
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - FontSize element
 ms.assetid: 49f66a73-946a-4fbd-9749-a3ca1b717ff3
-caps.latest.revision: 37
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8f6b5ba39d52cb96061fe4d19208e6e343bab5f6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8486b3b6404b9518f4fa099fa5bdb821f74c1ed2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37167527"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48178106"
 ---
 # <a name="fontsize-element-assl"></a>Elemento FontSize (ASSL)
   Descreve características de exibição relacionadas à fonte de [CalculationProperty](../objects/calculationproperty-element-assl.md) ou [medida](../objects/measure-element-assl.md) elemento pai.  
@@ -51,7 +48,7 @@ ms.locfileid: "37167527"
 |Característica|Description|  
 |--------------------|-----------------|  
 |Comprimento e tipo de dados|Cadeia de caracteres|  
-|Valor padrão|Nenhum|  
+|Valor padrão|None|  
 |Cardinalidade|0-1: elemento opcional que pode ocorrer apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -59,9 +56,9 @@ ms.locfileid: "37167527"
 |Relação|Elemento|  
 |------------------|-------------|  
 |Elementos pai|[CalculationProperty](../objects/calculationproperty-element-assl.md), [medidas](../objects/measure-element-assl.md)|  
-|Elementos filho|Nenhum|  
+|Elementos filho|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O `FontSize` propriedade contém uma expressão MDX (Multidimensional Expressions) e aplica-se ao `CalculationProperty` elementos que têm um [CalculationType](calculationtype-element-assl.md) dos *membro* ou *células* .  
   
  Os elementos que correspondem aos pais de `FontSize` no modelo de objeto Analysis Management Objects (AMO) são <xref:Microsoft.AnalysisServices.CalculationProperty> e <xref:Microsoft.AnalysisServices.Measure>.  

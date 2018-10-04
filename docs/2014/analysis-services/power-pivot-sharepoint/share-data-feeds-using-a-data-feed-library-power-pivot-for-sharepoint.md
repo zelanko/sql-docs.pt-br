@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - data feeds [Analysis Services with SharePoint]
 ms.assetid: 4ec98dec-0cd2-4727-bb79-5bf6f8a865d6
-caps.latest.revision: 24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1ac02a4f06eb66528d68ba42b3036d0837f308d4
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c1df9d79a6e7852e331edcb2b37396283aeedccb
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37161387"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48178546"
 ---
 # <a name="share-data-feeds-using-a-data-feed-library-powerpivot-for-sharepoint"></a>Compartilhar feeds de dados usando uma biblioteca de feed de dados (PowerPivot para SharePoint)
   Um feed de dados é um fluxo de dados XML que é gerado em um serviço ou aplicativo que expõe dados no formato de conexão Atom. Ele é usado cada vez mais para transportar dados entre aplicativos e para visualizadores do lado do cliente. Em uma implantação do PowerPivot para SharePoint, os feeds de dados são usados para preencher um [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] fonte de dados com os dados de um aplicativo de reconhecimento do Atom ou serviço.  

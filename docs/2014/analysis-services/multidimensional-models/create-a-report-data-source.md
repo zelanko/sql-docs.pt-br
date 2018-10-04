@@ -4,22 +4,19 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: bd6662c7-ffbe-479d-8944-3dc858340998
-caps.latest.revision: 7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4fae3254d7b5019408838bb14ed09082c15e49ce
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 15034c7bdf1dd32f173e3c2f9eebacda8b72fc11
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37261342"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48187346"
 ---
 # <a name="create-a-report-data-source"></a>Criar uma fonte de dados de relatório
   Para que o Power View se conecte a um modelo multidimensional, você deve criar uma definição de fonte de dados de relatório compartilhada, também conhecida como um arquivo .rsds, em uma biblioteca do SharePoint. O arquivo .rsds especifica o nome de uma instância de servidor do Analysis Services, um tipo de conexão, uma cadeia de conexão, além de credenciais usadas para se conectar ao modelo multidimensional. Quando um usuário clica no .rsds, um novo relatório em branco do Power View (um arquivo .rdlx) é aberto no navegador.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ComAssembly Data Type
@@ -21,16 +19,15 @@ f1_keywords:
 helpviewer_keywords:
 - ComAssembly data type
 ms.assetid: 23c0f4b3-b6ac-4ec8-9254-74d2f84f5244
-caps.latest.revision: 49
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 824fb508bb392f6ef84ede39645a5bac0da645e6
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 9cf05a673de90310563cdc5264f61e2da0952450
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37171547"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48133446"
 ---
 # <a name="comassembly-data-type-assl"></a>Tipo de dados ComAssembly (ASSL)
   Define um tipo de dados derivado que representa uma biblioteca COM associada com um [Server](../objects/server-element-assl.md) ou [banco de dados](../objects/database-element-assl.md) elemento.  
@@ -53,17 +50,17 @@ ms.locfileid: "37171547"
 |Característica|Description|  
 |--------------------|-----------------|  
 |Tipos de dados base|[Assembly](../objects/assembly-element-assl.md)|  
-|Tipos de dados derivados|Nenhum|  
+|Tipos de dados derivados|None|  
   
 ## <a name="data-type-relationships"></a>Relação do tipo de dados  
   
 |Relação|Elemento|  
 |------------------|-------------|  
-|Elementos pai|Nenhum|  
+|Elementos pai|None|  
 |Elementos filho|[Origem](../properties/source-element-comassembly-assl.md)|  
 |Elementos derivados|Ver [Assembly](../objects/assembly-element-assl.md) ([Assemblies](../collections/assemblies-element-assl.md) coleção de [banco de dados](../objects/database-element-assl.md) ou [Server](../objects/server-element-assl.md))|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O `ComAssembly` elemento contém uma referência (o nome de arquivo totalmente qualificado ou o identificador programático) a uma biblioteca COM associada a uma instância do [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ou com um banco de dados específico em uma instância do [!INCLUDE[ssAS](../../../includes/ssas-md.md)].  
   
  O elemento correspondente no modelo de objeto Analysis Management Objects (AMO) é <xref:Microsoft.AnalysisServices.ComAssembly>.  

@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.termlookup.advanced.f1
 helpviewer_keywords:
 - Term Lookup Transformation Editor
 ms.assetid: be3575dc-e79c-49f6-8243-ad270bce77d5
-caps.latest.revision: 27
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 193652a7e813f929191a3e677e164190f0ea3edf
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c0138c9b016b89f2e524ecffc025203e705f1f0a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37314126"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48189769"
 ---
 # <a name="term-lookup-transformation-editor-advanced-tab"></a>Editor de Transformação Pesquisa de Termos (guia Avançado)
   Use a guia **Avançado** da caixa de diálogo **Editor de Transformação Pesquisa de Termos** para especificar se a pesquisa deve diferenciar maiúsculas e minúsculas.  

@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - reporting-services-native
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.selectcolor.f1
@@ -15,16 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - Select Color dialog box
 ms.assetid: ac7089a3-5c7b-4f53-8348-180610e86da2
-caps.latest.revision: 10
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d2b14615cb231f6df5385306ded4257a86998a56
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 42dc3c37a93bf3240b4332915488ad293b68ec66
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37185757"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48184656"
 ---
 # <a name="select-color-dialog-box-report-builder-and-ssrs"></a>Caixa de diálogo Selecionar Cor (Construtor de Relatórios SSRS)
   Use a caixa de diálogo **Selecionar Cor** para especificar as opções de cor da tela de fundo de uma única ou de várias células em uma região de dados ou de uma caixa de texto, ou para um gráfico.  
@@ -66,7 +63,7 @@ ms.locfileid: "37185757"
  **Azul**  
  O valor decimal para a parte azul da cor de RGB. Use a caixa de rotação para alterar o valor ou digitar um valor entre 0 e 255.  
   
- **Alfa**  
+ **alfa**  
  O valor decimal para o alfa ou parte de transparência da cor. Quando este valor é ativado, você pode usar a opção de controle deslizante para ajustar o grau de transparência desejado.  
   
  **Matiz**  

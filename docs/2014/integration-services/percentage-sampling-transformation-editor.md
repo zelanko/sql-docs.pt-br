@@ -4,26 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.percentagesamplingtransformation.f1
 helpviewer_keywords:
 - Percentage Sampling Transformation Editor
 ms.assetid: 2c40d804-26a3-4d35-809b-bc923d83d451
-caps.latest.revision: 24
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ca7b3d4dcbb4643076aa62e05299e3b42332d528
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 14776d4f26d324b60619aef2bfa3fad9c0deadaf
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37250596"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48183616"
 ---
 # <a name="percentage-sampling-transformation-editor"></a>Editor de Transformação Amostragem Percentual
   Use a caixa de diálogo **Editor de Transformação Amostragem Percentual** para dividir parte de uma entrada em uma amostra, usando uma porcentagem de linhas especificada. Essa transformação divide a entrada em duas saídas separadas.  

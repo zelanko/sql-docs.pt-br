@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - analysis-services
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - TableNotifications Element
@@ -19,16 +17,15 @@ topic_type:
 helpviewer_keywords:
 - TableNotifications element
 ms.assetid: 4cecdfea-0d4d-4bd6-bbb3-4d0d2284c665
-caps.latest.revision: 13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8c146f223d0819c8570b051d77d5764ae384d1b1
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d4c48ef76db4a1dd2a96008c108d050ff832fd52
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37163381"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48188826"
 ---
 # <a name="tablenotifications-element-assl"></a>Elemento TableNotifications (ASSL)
   Contém a coleção de [TableNotification](../objects/tablenotification-element-assl.md) elementos que fornecem informações para o [ProactiveCaching](../objects/proactivecaching-element-assl.md) elemento sobre tabelas ou exibições em uma fonte de dados que foram modificadas.  
@@ -48,8 +45,8 @@ ms.locfileid: "37163381"
   
 |Característica|Description|  
 |--------------------|-----------------|  
-|Comprimento e tipo de dados|Nenhum|  
-|Valor padrão|Nenhum|  
+|Comprimento e tipo de dados|None|  
+|Valor padrão|None|  
 |Cardinalidade|1-1: elemento obrigatório que ocorre apenas uma única vez.|  
   
 ## <a name="element-relationships"></a>Relações do elemento  
@@ -59,7 +56,7 @@ ms.locfileid: "37163381"
 |Elementos pai|[ProactiveCachingTablesBinding](../data-type/binding-data-type-assl.md)|  
 |Elementos filho|[TableNotification](../objects/tablenotification-element-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  O elemento correspondente no modelo de objeto Analysis Management Objects (AMO) é <xref:Microsoft.AnalysisServices.TableNotificationCollection>.  
   
 ## <a name="see-also"></a>Consulte também  

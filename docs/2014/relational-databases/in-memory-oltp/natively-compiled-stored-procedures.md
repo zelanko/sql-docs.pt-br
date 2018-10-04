@@ -4,23 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology: in-memory-oltp
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - natively compiled stored procedures
 ms.assetid: d5ed432c-10c5-4e4f-883c-ef4d1fa32366
-caps.latest.revision: 54
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 79dbaba00d9eb8ff0b344fb713ee6599344ec317
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: e9bdc0c104b212f3c26389c1792b6b617634a12a
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392238"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48150556"
 ---
 # <a name="natively-compiled-stored-procedures"></a>procedimentos armazenados compilados nativamente
   Os procedimentos armazenados compilados nativamente são procedimentos armazenados [!INCLUDE[tsql](../../includes/tsql-md.md)] compilados no código nativo que acessam tabelas com otimização de memória. Procedimentos armazenados compilados nativamente permitem a execução eficiente de consultas e lógica de negócios no procedimento armazenado. Para obter mais detalhes sobre o processo de compilação nativo, consulte [Native Compilation of Tables and Stored Procedures](native-compilation-of-tables-and-stored-procedures.md). Para obter mais informações sobre como migrar procedimentos armazenados baseados em disco para os procedimentos armazenados compilados nativamente, consulte [Migration Issues for Natively Compiled Stored Procedures](migration-issues-for-natively-compiled-stored-procedures.md).  
