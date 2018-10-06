@@ -1,6 +1,6 @@
 ---
 title: Propriedades de memória | Microsoft Docs
-ms.date: 06/07/2018
+ms.date: 10/03/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,31 +9,31 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: b0239d2d203e7cb32a2ea587ee069d26ad003b0e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a080bed935a8f981376ff40dc36e19ef61a3c144
+ms.sourcegitcommit: 448106b618fe243e418bbfc3daae7aee8d8553d2
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38054868"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48264876"
 ---
 # <a name="memory-properties"></a>Propriedades de memória
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pré-aloca um volume modesto de memória na inicialização para que solicitações possam ser manipuladas imediatamente. Mais memória é alocada como consulta e as cargas de trabalho de processamento aumentam. 
+  Analysis Services pré-aloca um volume modesto de memória na inicialização para que solicitações possam ser manipuladas imediatamente. Mais memória é alocada como consulta e as cargas de trabalho de processamento aumentam. 
   
   Ao especificar definições de configuração, você pode controlar os limites nos quais a memória é liberada. Por exemplo, a configuração **HardMemoryLimit** especifica uma condição de falta de memória imposta automaticamente (por padrão, esse limite não é habilitado), em que novas solicitações são rejeitadas totalmente até que mais recursos estejam disponíveis.
 
-Para saber mais sobre a memória máxima utilizada por instância do Analysis Services por edição, consulte [edições e recursos com suporte do SQL Server](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits).
+Para saber mais sobre a memória máxima utilizada por instância do SQL Server Analysis Services por edição, consulte [edições e recursos com suporte do SQL Server](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits).
   
- As configurações a seguir se aplicam a ambos os modo de servidor de tabela e multidimensionais, a menos que indicado o contrário.  
+ As configurações a seguir se aplicam a servidores tabulares e multidimensionais, a menos que indicado o contrário.  
  
 ## <a name="default-memory-configuration"></a>Configuração de memória padrão
 
-Sob a configuração padrão, cada instância do Analysis Services aloca uma pequena quantidade de RAM (40MB a 50 MB) na inicialização, mesmo se a instância estiver ociosa. 
+Sob a configuração padrão, cada instância do Analysis Services aloca uma pequena quantidade de RAM (40 MB a 50 MB) na inicialização, mesmo se a instância estiver ociosa. 
 
 Lembre-se de que as definições de configuração são por instância. Se você estiver executando várias instâncias do Analysis Services, como uma instância tabular e multidimensional no mesmo hardware, cada instância alocará sua própria memória independentemente de outras instâncias.
 
-A tabela a seguir descreve resumidamente as configurações de memória mais comumente usadas (com mais detalhes na seção de referência). Você deve configurar essas configurações somente se o Analysis Services estiver competindo por memória com outros aplicativos no mesmo servidor:
+A tabela a seguir descreve resumidamente as configurações de memória mais comumente usadas (com mais detalhes na seção de referência). Defina essas configurações somente se o Analysis Services estiver competindo por memória com outros aplicativos no mesmo servidor:
 
 Configuração | Description
 --------|------------
@@ -66,12 +66,10 @@ Somente Azure Analysis Services. Uma propriedade avançada para controlar a quan
  **VertiPaqPagingPolicy**  
   Apenas para instâncias tabulares, especifica o comportamento de paginação, caso o servidor fique com pouca memória. Estes são os valores válidos:  
   
-  
-
 Configuração  |Description  
 ---------|---------
-**0**     |  Desabilita a paginação. Se a memória for insuficiente, o processamento falhará com um erro de memória insuficiente. Se você desabilitar a paginação, será preciso conceder privilégios do Windows à conta de serviço. Consulte [Configurar contas de serviço &#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md) para obter instruções. 
-**1**     |  (padrão) Esta propriedade habilita a paginação no disco, usando o arquivo de paginação do sistema operacional (pagefile.sys).   
+**0**     |  (padrão para o Azure Analysis Services) Desabilita a paginação. Se a memória for insuficiente, o processamento falhará com um erro de memória insuficiente. Se você desabilitar a paginação, será preciso conceder privilégios do Windows à conta de serviço. Consulte [Configurar contas de serviço &#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md) para obter instruções. 
+**1**     |  (padrão para o SQL Server Analysis Services) Essa propriedade permite que a paginação no disco usando o arquivo de paginação do sistema operacional (Pagefile. sys).   
   
 Quando definido como 1, o processamento apresenta menor probabilidade de falhar devido a restrições de memória, pois o servidor tentará paginar para o disco usando o método especificado por você. A definição da propriedade **VertiPaqPagingPolicy** não garante que erros de memória nunca ocorrerão. Erros de falta de memória ainda podem ocorrer sob as seguintes condições:  
   

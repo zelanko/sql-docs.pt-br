@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 814e94b955776f1a9c6c0648b0d47b53fa9cabf3
-ms.sourcegitcommit: 9d0ff4f3e40db48fc01788684d34719065d159b6
+ms.openlocfilehash: 3fcf73193c44b72c46adb3300085650b20495a9d
+ms.sourcegitcommit: 7d702a1d01ef72ad5e133846eff6b86ca2edaff1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44724340"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48798584"
 ---
 # <a name="lesson-3-explore-and-visualize-the-data"></a>Lição 3: Explorar e visualizar os dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -92,7 +92,7 @@ Para criar o gráfico, use [rxHistogram](https://docs.microsoft.com/machine-lear
     GO
     ```
 
-O procedimento armazenado **PlotHistogram2** é idêntico a um procedimento armazenado pré-existente **PlotHistogram** criado pelo `RunSQL_SQL_Walkthrough.ps1` script. 
+O procedimento armazenado **PlotHistogram2** é idêntico a um procedimento armazenado pré-existente **PlotHistogram** encontrado no banco de dados NYCTaxi_sample. 
   
 + A variável `@query` define o texto da consulta (`'SELECT tipped FROM nyctaxi_sample'`), que é passado para o script do R como o argumento da variável de entrada de script, `@input_data_1`.
   
@@ -164,7 +164,7 @@ O procedimento armazenado retorna a imagem como um fluxo de dados varbinary, que
 
 Normalmente, os cientistas de dados geram várias visualizações de dados para obter informações sobre os dados de diferentes perspectivas. Neste exemplo, o procedimento armazenado usa a função Hist para criar o histograma, exportando os dados binários para formatos populares, como. JPG. PDF, e. PNG. 
 
-1. Use o procedimento armazenado existente **PlotInOutputFiles**, escrever histogramas, dispersões e outros gráficos de R para. JPG e. Formato PDF. O `RunSQL_SQL_Walkthrough.ps1` cria **PlotInOutputFiles** e adiciona-o banco de dados. Use o botão direito do mouse **modificar** para exibir o código-fonte.
+1. Use o procedimento armazenado existente **PlotInOutputFiles**, escrever histogramas, dispersões e outros gráficos de R para. JPG e. Formato PDF. Use o botão direito do mouse **modificar** para exibir o código-fonte.
 
 2. Opcionalmente, como um exercício de aprendizado, crie sua própria cópia do procedimento como **PlotInOutputFiles2**, com um nome exclusivo para evitar um conflito de nomenclatura.
 

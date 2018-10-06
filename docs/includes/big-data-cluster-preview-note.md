@@ -1,0 +1,2 @@
+> [!NOTE]
+> Clusters de grandes dados do SQL Server está disponível como visualização pública limitada por meio do programa de adoção antecipada do SQL Server de 2019. Para solicitar acesso, registre [aqui](https://aka.ms/eapsignup)e especifique seu interesse para tentar a clusters de grandes dados do SQL Server. A Microsoft todas as solicitações de triagem e responder assim que possível.

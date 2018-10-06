@@ -10,16 +10,16 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f8667c74843ab26b251c5a23a1e93f7f26e72fef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 187517c79f14ddcbf08ffa644e65558fa0a85b38
+ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759354"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48251994"
 ---
 # <a name="sql-server-always-on-availability-group-kubernetes-operator-parameters"></a>SQL Server Always On disponibilidade Kubernetes operador parâmetros do grupo
 
-Um grupo de disponibilidade Always On no Kubernetes requer um operador. O operador é descrito em um arquivo. YAML.  Veja um exemplo da especificação em [este tutorial](tutorial-sql-server-ag-kubernetes.md).
+Um grupo de disponibilidade Always On no Kubernetes requer um operador. Um manifesto descreve o operador. O manifesto é um `.yaml` arquivo. Veja um exemplo da especificação em [grupos de disponibilidade Always On para contêineres do SQL Server](sql-server-ag-kubernetes.md).
 
 Este artigo explica as variáveis de ambiente global do operador.
 
@@ -31,15 +31,15 @@ O exemplo a seguir descreve uma implantação para o `mssql-operator`.
 
 * `MSSQL_K8S_POD_NAMESPACE` 
   * Obrigatório
-  * **Descrição**: o namespace de Kubernetes do operador.
+  * **Descrição**: Kubernetes o namespace do operador.
 
 * `MSSQL_K8S_SQL_WRITE_LEASE_PERIOD_SECONDS`
   * Opcional
-  * **Descrição**: A duração do sql server externo gravar concessão para manter o sql server gravável e evitar cenários de separação. Réplicas secundárias aguardar essa expiração após eleger um novo líder.
+  * **Descrição**: A duração da concessão de gravação do servidor sql. Usado para manter o sql server gravável e evitar cenários de separação. Réplicas secundárias Aguarde esse número de segundos depois de selecionar um novo líder.
 
 * `MSSQL_K8S_MONITOR_PERIOD_SECONDS`
   * Opcional
-  * **Descrição**: O período para monitorar se o estado do grupo de disponibilidade. Determina o quão rapidamente as réplicas são adicionadas e removidas. Deve ser menor que `MSSQL_K8S_SQL_WRITE_LEASE_PERIOD_SECONDS`.
+  * **Descrição**: O período para monitorar o estado do grupo de disponibilidade. Determina o quão rapidamente as réplicas são adicionadas e removidas. Deve ser menor que `MSSQL_K8S_SQL_WRITE_LEASE_PERIOD_SECONDS`.
   * **Padrão**: 1
 
 * `MSSQL_K8S_LEASE_DURATION_SECONDS`

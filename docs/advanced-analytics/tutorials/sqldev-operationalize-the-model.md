@@ -1,6 +1,6 @@
 ---
-title: Lição 6 resultados potenciais de previsão usando modelos de R (aprendizado de máquina do SQL Server) | Microsoft Docs
-description: Tutorial mostra como inserir R no SQL Server procedimentos armazenados e funções T-SQL
+title: Lição 6 resultados potenciais de previsão usando modelos do R (aprendizado de máquina do SQL Server) | Microsoft Docs
+description: Tutorial que mostra como incorporar o R no SQL Server procedimentos armazenados e funções T-SQL
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/08/2018
@@ -8,21 +8,21 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 32984626dfac11bd2465cb783c583f6b210f6b68
-ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
+ms.openlocfilehash: 03118cec4ee068f5615af7d3319ca8f3172de0c1
+ms.sourcegitcommit: 7d702a1d01ef72ad5e133846eff6b86ca2edaff1
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35249849"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48798566"
 ---
-# <a name="lesson-6-predict-potential-outcomes-using-an-r-model-in-a-stored-procedure"></a>Lição 6: Prever possíveis resultados usando um modelo de R em um procedimento armazenado
+# <a name="lesson-6-predict-potential-outcomes-using-an-r-model-in-a-stored-procedure"></a>Lição 6: Prever resultados possíveis, usando um modelo do R em um procedimento armazenado
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Este artigo faz parte de um tutorial para desenvolvedores em SQL sobre como usar o R no SQL Server.
+Este artigo faz parte de um tutorial para desenvolvedores SQL sobre como usar o R no SQL Server.
 
-Nesta etapa, você aprenderá a usar o modelo no novo observações para prever resultados possíveis. O modelo é encapsulado em um procedimento armazenado que pode ser chamado diretamente por outros aplicativos. Passo a passo demonstra várias maneiras de executar pontuação:
+Nesta etapa, você aprenderá a usar o modelo em relação a novas observações para prever resultados possíveis. O modelo é encapsulado em um procedimento armazenado que pode ser chamado diretamente por outros aplicativos. O passo a passo demonstra várias maneiras de executar a pontuação:
 
-- **Modo de pontuação em lote**: usar uma consulta SELECT como uma entrada para o procedimento armazenado. O procedimento armazenado retorna uma tabela de observações correspondente aos casos de entrada.
+- **Modo de pontuação em lote**: Use uma consulta SELECT como uma entrada para o procedimento armazenado. O procedimento armazenado retorna uma tabela de observações correspondente aos casos de entrada.
 
 - **Modo de pontuação individual**: passe um conjunto de valores de parâmetros individuais como entrada.  O procedimento armazenado retorna uma única linha ou valor.
 
@@ -54,17 +54,17 @@ END
 GO
 ```
 
-+ A instrução SELECT obtém o modelo serializado do banco de dados e armazena o modelo na variável R `mod` para processamento adicional usando o R.
++ A instrução SELECT obtém o modelo serializado do banco de dados e armazena o modelo na variável do R `mod` para processamento adicional usando o R.
 
-+ Os novos casos de pontuação são obtidos de [!INCLUDE[tsql](../../includes/tsql-md.md)] consulta especificada no `@inquery`, o primeiro parâmetro para o procedimento armazenado. Conforme os dados da consulta são lidos, as linhas são salvas no quadro de dados padrão, `InputDataSet`. Este quadro de dados é passado para o [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) funcionar em [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler), que gera as pontuações.
++ Os novos casos de pontuação são obtidos a partir de [!INCLUDE[tsql](../../includes/tsql-md.md)] consulta especificada no `@inquery`, o primeiro parâmetro para o procedimento armazenado. Conforme os dados da consulta são lidos, as linhas são salvas no quadro de dados padrão, `InputDataSet`. Esse quadro de dados é passado para o [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) funcionar [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler), que gera as pontuações.
   
     `OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL, predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);`
   
     Como um data.frame pode conter uma única linha, você pode usar o mesmo código para a pontuação única ou de lote.
   
-+ O valor retornado pelo `rxPredict` função é um **float** que representa a probabilidade de que o driver obtém uma dica de qualquer valor.
++ O valor retornado pela `rxPredict` função é um **float** que representa a probabilidade de que o driver obtém uma dica de qualquer valor.
 
-## <a name="batch-scoring"></a>A pontuação do lote
+## <a name="batch-scoring"></a>Pontuação do lote
 
 Agora vamos ver como funciona a pontuação de lote.
 
@@ -84,7 +84,7 @@ Agora vamos ver como funciona a pontuação de lote.
     WHERE b.medallion IS NULL
     ```
 
-    **Resultados de exemplo**
+    **Resultados do exemplo**
     
     ```
     passenger_count   trip_time_in_secs    trip_distance  dropoff_datetime   direct_distance
@@ -93,7 +93,7 @@ Agora vamos ver como funciona a pontuação de lote.
     1  214 0.7 2013-06-26 13:28:10.000   0.6970098661
     ```
 
-    Essa consulta pode ser usada como entrada para o procedimento armazenado, **PredictTipMode**, fornecido como parte do download.
+    Essa consulta pode ser usada como entrada para o procedimento armazenado **PredictTipMode**, fornecido como parte do download.
 
 2. Reserve um minuto para examinar o código do procedimento armazenado **PredictTipMode** em [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
 
@@ -130,18 +130,18 @@ Agora vamos ver como funciona a pontuação de lote.
     EXEC [dbo].[PredictTip] @inquery = @query_string;
     ```
   
-4. O procedimento armazenado retorna uma série de valores que representam a previsão para cada uma das viagens 10 principais. No entanto, os principais percursos também são viagens passageiro único com uma distância de viagem relativamente curto, para o qual o driver é improvável obter uma dica.
+4. O procedimento armazenado retorna uma série de valores que representam a previsão para cada uma das viagens 10 principais. No entanto, as primeiras corridas também são corridas de passageiro único com uma distância de corrida relativamente curta, para o qual o driver é improvável que receber uma gorjeta.
   
 
 > [!TIP]
 > 
-> Em vez de retornar apenas a "dica Sim" e "nenhuma dica" resultados, você pode também retornar a pontuação de probabilidade da previsão e, em seguida, aplicar uma cláusula WHERE para o _pontuação_ valores de coluna para classificar pontuação como "propenso a dica" ou " provavelmente não dica", usando um valor de limite como 0,5 ou 0,7. Essa etapa não está incluída no procedimento armazenado, mas seria fácil de ser implementada.
+> Em vez de retornar apenas o "Sim – gorjeta" e "sem gorjeta" resultados, você pode também retornar a pontuação de probabilidade da previsão e, em seguida, aplicar uma cláusula WHERE para o _pontuação_ valores de coluna para categorizar a pontuação como "propenso a dar gorjeta" ou " improvável gorjeta", usando um valor de limite como 0,5 ou 0,7. Essa etapa não está incluída no procedimento armazenado, mas seria fácil de ser implementada.
 
-## <a name="single-row-scoring"></a>Pontuação de única linha
+## <a name="single-row-scoring"></a>Uma única linha de pontuação
 
 Às vezes, você deseja passar valores individuais de um aplicativo e obter um único resultado com base nesses valores. Por exemplo, você poderá definir uma planilha do Excel, um aplicativo Web ou um relatório do Reporting Services para chamar o procedimento armazenado e fornecer entradas digitadas ou selecionadas por usuários.
 
-Nesta seção, você aprenderá como criar previsões únicas usando um procedimento armazenado.
+Nesta seção, você aprenderá a criar previsões únicas usando um procedimento armazenado.
 
 1. Reserve um minuto para examinar o código do procedimento armazenado **PredictTipSingleMode**, que é incluído como parte do download.
   
@@ -168,7 +168,7 @@ Nesta seção, você aprenderá como criar previsões únicas usando um procedim
   
     - Esse procedimento armazenado usa vários valores únicos como entrada, como contagem de passageiros, distância da corrida e assim por diante.
   
-        Se você chamar o procedimento armazenado de um aplicativo externo, certifique-se de que os dados correspondem aos requisitos do modelo de R. Isso pode incluir a garantia de que os dados de entrada possam ser convertidos em um tipo de dados do R ou a validação do tipo e comprimento dos dados. 
+        Se você chamar o procedimento armazenado de um aplicativo externo, certifique-se de que os dados corresponde aos requisitos do modelo de R. Isso pode incluir a garantia de que os dados de entrada possam ser convertidos em um tipo de dados do R ou a validação do tipo e comprimento dos dados. 
   
     -   O procedimento armazenado cria uma pontuação com base no modelo do R armazenado.
   
@@ -192,12 +192,12 @@ Nesta seção, você aprenderá como criar previsões únicas usando um procedim
     EXEC [dbo].[PredictTipSingleMode] 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
-3. Os resultados indicam que a probabilidade de obter uma dica é baixa nessas 10 viagens principais, já que todos são viagens passageiro único em uma distância relativamente curta.
+3. Os resultados indicam que a probabilidade de receber uma gorjeta é baixa (zero) dessas viagens 10 principais, como todos são corridas de passageiro único em uma distância relativamente curta.
 
 ## <a name="conclusions"></a>Conclusões
 
-Isso conclui o tutorial. Agora que você aprendeu a inserir código R em procedimentos armazenados, você pode estender essas práticas recomendadas para criar modelos de sua preferência. A integração com o [!INCLUDE[tsql](../../includes/tsql-md.md)] torna muito mais fácil a implantação de modelos do R para previsão e incorporação do novo treinamento do modelo como parte de um fluxo de trabalho de dados empresariais.
+Isso conclui o tutorial. Agora que você aprendeu a incorporar código R em procedimentos armazenados, você pode estender essas práticas recomendadas para criar modelos de sua preferência. A integração com o [!INCLUDE[tsql](../../includes/tsql-md.md)] torna muito mais fácil a implantação de modelos do R para previsão e incorporação do novo treinamento do modelo como parte de um fluxo de trabalho de dados empresariais.
 
 ## <a name="previous-lesson"></a>Lição anterior
 
-[Lição 5: Treinar e salvar um modelo de R usando o T-SQL](../r/sqldev-train-and-save-a-model-using-t-sql.md)
+[Lição 5: Treinar e salvar um modelo do R usando o T-SQL](../r/sqldev-train-and-save-a-model-using-t-sql.md)

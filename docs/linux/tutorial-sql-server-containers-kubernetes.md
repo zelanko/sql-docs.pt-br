@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.custom: sql-linux,mvc
 ms.technology: linux
-ms.openlocfilehash: 44f81a23d341e549243b8e99366fef435be04ffa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: dedd8b0c51176d64f4f65b27bd90f747f8690859
+ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808624"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48252004"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Implantar um contêiner do SQL Server em Kubernetes com serviços de Kubernetes do Azure (AKS)
 
@@ -22,7 +22,7 @@ ms.locfileid: "47808624"
 
 Saiba como configurar uma instância do SQL Server em Kubernetes no serviço de Kubernetes do Azure (AKS), com o armazenamento persistente de alta disponibilidade (HA). A solução fornece resiliência. Se a instância do SQL Server falhar, Kubernetes automaticamente recria em um pod de novo. Kubernetes também fornece resiliência contra uma falha de nó.
 
-Este tutorial demonstra como configurar uma instância do SQL Server altamente disponível em um contêiner no AKS. Você também pode [criar um grupo de disponibilidade do SQL Server em Kubernetes](tutorial-sql-server-ag-kubernetes.md). Para comparar as duas soluções diferentes de Kubernetes, consulte [alta disponibilidade para contêineres do SQL Server](sql-server-linux-container-ha-overview.md).
+Este tutorial demonstra como configurar uma instância do SQL Server altamente disponível em um contêiner no AKS. Você também pode criar [grupos de disponibilidade Always On para contêineres do SQL Server](sql-server-ag-kubernetes.md). Para comparar as duas soluções diferentes de Kubernetes, consulte [alta disponibilidade para contêineres do SQL Server](sql-server-linux-container-ha-overview.md).
 
 > [!div class="checklist"]
 > * Criar uma senha de SA
