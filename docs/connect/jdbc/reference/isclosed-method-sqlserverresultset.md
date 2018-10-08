@@ -5,26 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6081aa34-fc88-4dd0-9a3f-05e8488219dc
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a91de3a0a4e6a164f3fe290aa82148fc20239143
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: c17ec2b88d5f86d94c918dc1a02d4cc2c5a0fdc4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839161"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47736184"
 ---
 # <a name="isclosed-method-sqlserverresultset"></a>Método isClosed (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Indica se este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) o objeto foi fechado.  
+  Indica se o objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) foi fechado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -33,16 +30,16 @@ ms.locfileid: "32839161"
 public boolean isClosed()  
 ```  
   
-## <a name="return-value"></a>Valor de retorno  
- **True** se este [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto é fechado, **false** se ainda estiver aberto.  
+## <a name="return-value"></a>Valor retornado  
+ **Verdadeiro** se esse [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto está fechado, **falso** se ele ainda estiver aberto.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método isClosed é especificado pelo método isClosed na interface Java.SQL. resultset.  
+ Esse método isClosed é especificado pelo método isClosed na interface do resultset.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Membros de SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Classe SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

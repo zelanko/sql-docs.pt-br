@@ -5,21 +5,18 @@ ms.date: 07/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6faaf05b-8b70-4ed2-9b44-eee5897f1cd0
-caps.latest.revision: 54
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1ece23b74de9265f28468ae11702c07cdca1cecc
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 19e1d9d72cef09c12bb00a6cdcfd2db9b9818a93
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42785874"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47845324"
 ---
 # <a name="using-the-jdbc-driver"></a>Usando o JDBC Driver
 
@@ -67,11 +64,11 @@ O **mssql-jdbc-7.0.0.jre8.jar** ou **mssql-jdbc-7.0.0.jre10.jar** arquivos são 
 \<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-7.0.0.jre10.jar
 ```
 
-O trecho a seguir é um exemplo da instrução CLASSPATH que é usada para um aplicativo do Windows:  
+O snippet a seguir é um exemplo da instrução CLASSPATH que é usada para um aplicativo do Windows:  
 
 `CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 7.0 for SQL Server\sqljdbc_7.0\enu\mssql-jdbc-7.0.0.jre10.jar`  
   
-O trecho a seguir é um exemplo da instrução CLASSPATH que é usada para um aplicativo do Unix/Linux:  
+O snippet a seguir é um exemplo da instrução CLASSPATH que é usada para um aplicativo do Unix/Linux:  
   
 `CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_7.0/enu/mssql-jdbc-7.0.0.jre10.jar`  
   
@@ -89,11 +86,11 @@ O **mssql-jdbc-6.4.0.jre7.jar**, * * mssql-jdbc-6.4.0.jre8.jar, ou **mssql-jdbc-
 \<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-6.4.0.jre9.jar
 ```
 
-O trecho a seguir é um exemplo da instrução CLASSPATH que é usada para um aplicativo do Windows:  
+O snippet a seguir é um exemplo da instrução CLASSPATH que é usada para um aplicativo do Windows:  
   
 `CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 6.4 for SQL Server\sqljdbc_6.4\enu\mssql-jdbc-6.4.0.jre9.jar`  
   
-O trecho a seguir é um exemplo da instrução CLASSPATH que é usada para um aplicativo do Unix/Linux:  
+O snippet a seguir é um exemplo da instrução CLASSPATH que é usada para um aplicativo do Unix/Linux:  
   
 `CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_6.4/enu/mssql-jdbc-6.4.0.jre9.jar`  
   
@@ -109,11 +106,11 @@ O **mssql-jdbc-6.2.2.jre7.jar** ou **mssql-jdbc-6.2.2.jre8.jar** arquivos são i
 \<installation directory>\sqljdbc_<version>\<language>\mssql-jdbc-6.2.2.jre8.jar
 ```
 
-O trecho a seguir é um exemplo da instrução CLASSPATH que é usada para um aplicativo do Windows:  
+O snippet a seguir é um exemplo da instrução CLASSPATH que é usada para um aplicativo do Windows:  
   
 `CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 6.2 for SQL Server\sqljdbc_6.2\enu\mssql-jdbc-6.2.2.jre8.jar`  
   
-O trecho a seguir é um exemplo da instrução CLASSPATH que é usada para um aplicativo do Unix/Linux:  
+O snippet a seguir é um exemplo da instrução CLASSPATH que é usada para um aplicativo do Unix/Linux:  
   
 `CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_6.2/enu/mssql-jdbc-6.2.2.jre8.jar`  
   
@@ -133,11 +130,11 @@ Os arquivos sqljdbc.jar, sqljdbc4.jar, sqljdbc41.jar ou sqljdbc42.jar estão ins
 \<installation directory>\sqljdbc_<version>\<language>\sqljdbc42.jar  
 ```
 
-O trecho a seguir é um exemplo da instrução CLASSPATH que é usada para um aplicativo do Windows:  
+O snippet a seguir é um exemplo da instrução CLASSPATH que é usada para um aplicativo do Windows:  
   
 `CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 6.0 for SQL Server\sqljdbc_4.2\enu\sqljdbc42.jar`  
   
-O trecho a seguir é um exemplo da instrução CLASSPATH que é usada para um aplicativo do Unix/Linux:  
+O snippet a seguir é um exemplo da instrução CLASSPATH que é usada para um aplicativo do Unix/Linux:  
 
 `CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_4.2/enu/sqljdbc42.jar`  
   
