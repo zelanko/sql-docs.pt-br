@@ -44,7 +44,7 @@ ms.locfileid: "47844634"
   
 -   [Como exibir tentativas de reparo automático de página](#ViewAPRattempts)  
   
-##  <a name="ErrorTypes"></a> Error Types That Cause an Automatic Page-Repair Attempt  
+##  <a name="ErrorTypes"></a> Tipos de erro que causam uma tentativa de reparo automático de página  
  O reparo automático de página do espelhamento de banco de dados tenta reparar apenas páginas em um arquivo de dados no qual houve falha na operação de um dos erros listados na tabela a seguir.  
   
 |Número do erro|Descrição|Instâncias que causam uma tentativa de reparo automático de página|  
@@ -56,7 +56,7 @@ ms.locfileid: "47844634"
  Para exibir erros 823 CRC e erros 824 recentes, veja a tabela [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) no banco de dados [msdb](../../relational-databases/databases/msdb-database.md) .  
 
   
-##  <a name="UnrepairablePageTypes"></a> Page Types That Cannot Be Automatically Repaired  
+##  <a name="UnrepairablePageTypes"></a> Tipos de página que não podem ser reparados automaticamente  
  O reparo automático de página não pode reparar os seguintes tipos de página de controle:  
   
 -   Página de cabeçalho do arquivo (ID da página 0).  
@@ -66,7 +66,7 @@ ms.locfileid: "47844634"
 -   Páginas de alocação: páginas GAM (Global Allocation Map), páginas SGAM (Shared Global Allocation Map) e páginas PFS (Page Free Space).  
   
  
-##  <a name="PrimaryIOErrors"></a> Handling I/O Errors on the Principal/Primary Database  
+##  <a name="PrimaryIOErrors"></a> Manipulando erros de E/S no banco de dados principal/primário  
  No banco de dados principal/primário, haverá a tentativa de reparo automático de página apenas quando o estado do banco de dados for SYNCHRONIZED e o principal/primário ainda estiver enviando registros de log do banco de dados ao espelho/secundário. A sequência básica de ações em uma tentativa de reparo automático de página é a seguinte:  
   
 1.  Quando ocorre um erro de leitura em uma página de dados no banco de dados principal/primário, o principal/primário insere uma linha na tabela [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) com o status de erro apropriado. Para o espelhamento de banco de dados, o principal solicita uma cópia da página do espelho. Para [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], o primário transmite a solicitação a todos os secundários e obtém a página do primeiro a responder. A solicitação especifica a ID da página e o LSN que estão atualmente na parte final do log liberado. A página é marcada como *restauração pendente*. Isso a torna inacessível durante a tentativa de reparo automático de página. Ocorrerá falha com o erro 829 nas tentativas de acesso a essa página durante a tentativa de reparo (restauração pendente).  
@@ -80,7 +80,7 @@ ms.locfileid: "47844634"
 5.  Se o erro de E/S de página causar quaisquer [transações adiadas](../../relational-databases/backup-restore/deferred-transactions-sql-server.md), após a página ser reparada, o principal/primário tentará resolver essas transações.  
   
  
-##  <a name="SecondaryIOErrors"></a> Handling I/O Errors on the Mirror/Secondary Database  
+##  <a name="SecondaryIOErrors"></a> Manipulando erros de E/S no banco de dados espelho/secundário  
  Os erros de E/S em páginas de dados que ocorrem no banco de dados espelho/secundário costumam ser tratados da mesma forma pelo espelhamento de banco de dados e pelo [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
   
 1.  Com o espelhamento de banco de dados, se o espelho encontrar um ou mais erros de E/S de página ao refazer um registro de log, a sessão de espelhamento entrará no estado SUSPENDED. Com o [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], se uma réplica secundária encontrar um ou mais erros de E/S de página ao refazer um registro de log, o banco de dados secundário entrará no estado SUSPENDED. Nesse ponto, o espelho/secundário insere uma linha na tabela **suspect_pages** com o status de erro apropriado. O espelho/secundário solicita uma cópia da página do principal/primário.  
@@ -96,7 +96,7 @@ ms.locfileid: "47844634"
  Um reparo automático de página é um processo assíncrono executado em segundo plano. Portanto, ocorre falha na operação de banco de dados que solicita uma página ilegível e o código de erro é retornado para qualquer condição que causou a falha. Ao desenvolver um aplicativo para um banco de dados espelho ou um banco de dados de disponibilidade, você deve interceptar as exceções para operações com falha. Se o código de erro [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for 823, 824 ou 829, você deverá tentar novamente a operação mais tarde.  
   
 
-##  <a name="ViewAPRattempts"></a> How To: View Automatic Page-Repair Attempts  
+##  <a name="ViewAPRattempts"></a> Como exibir tentativas de reparo automático de página  
  As exibições de gerenciamento dinâmico a seguir retornam linhas para as últimas tentativas de reparo automático de página em determinado banco de dados de disponibilidade ou banco de dados espelho, com um máximo de 100 linhas por banco de dados.  
   
 -   **Grupos de Disponibilidade AlwaysOn:**  
