@@ -1,17 +1,18 @@
 ---
 title: Configurar uma conexão de banco de dados do servidor de relatório (Gerenciador de Configurações do SSRS) | Microsoft Docs
-ms.date: 09/20/2017
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 175178a067a674dfde3635bca65a05894c401570
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.date: 09/20/2017
+ms.openlocfilehash: eed0c630bca54b28e78f2c59c5a14fca6e77da54
+ms.sourcegitcommit: 2da0c34f981c83d7f1d37435c80aea9d489724d1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644444"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48782315"
 ---
 # <a name="configure-a-report-server-database-connection--ssrs-configuration-manager"></a>Configurar uma conexão de banco de dados do servidor de relatório (Gerenciador de configurações do SSRS)
 

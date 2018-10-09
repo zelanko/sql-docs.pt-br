@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 91da8325f2917605cf508f1e279ae829d525e658
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7cfd9c9d9a1e309cae28abfa7674d021405f6d02
+ms.sourcegitcommit: 7d702a1d01ef72ad5e133846eff6b86ca2edaff1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838614"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48798595"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -232,7 +232,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
 #### <a name="a-using-delete-with-no-where-clause"></a>A. Usando DELETE sem a cláusula WHERE  
  O exemplo a seguir exclui todas as linhas de uma tabela `SalesPersonQuotaHistory` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] porque uma cláusula WHERE não é usada para limitar o número de linhas excluídas.  
   
-```  
+```sql
 DELETE FROM Sales.SalesPersonQuotaHistory;  
 GO  
 ```  
@@ -243,7 +243,7 @@ GO
 #### <a name="b-using-the-where-clause-to-delete-a-set-of-rows"></a>B. Usando a cláusula WHERE para excluir um conjunto de linhas  
  O exemplo a seguir exclui todas as linhas de uma tabela `ProductCostHistory` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] na qual o valor da coluna `StandardCost` é maior que `1000.00`.  
   
-```    
+```sql
 DELETE FROM Production.ProductCostHistory  
 WHERE StandardCost > 1000.00;  
 GO  
@@ -251,7 +251,7 @@ GO
   
  O exemplo a seguir mostra uma cláusula WHERE mais complexa. A cláusula WHERE define duas condições que devem ser atendidas para determinar as linhas a serem excluídas. O valor na coluna `StandardCost` deve ser entre `12.00` e `14.00` , e o valor na coluna `SellEndDate` deve ser nulo. O exemplo também imprime o valor da função **@@ROWCOUNT** para retornar o número de linhas excluídas.  
   
-```  
+```sql
 DELETE Production.ProductCostHistory  
 WHERE StandardCost BETWEEN 12.00 AND 14.00  
       AND EndDate IS NULL;  
@@ -261,7 +261,7 @@ PRINT 'Number of rows deleted is ' + CAST(@@ROWCOUNT as char(3));
 #### <a name="c-using-a-cursor-to-determine-the-row-to-delete"></a>C. Usando um cursor para determinar a linha a ser excluída  
  O exemplo a seguir exclui uma única linha da tabela `EmployeePayHistory` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] que usa um cursor chamado `my_cursor`. O operação de exclusão afeta somente a única linha buscada atualmente pelo cursor.  
   
-```  
+```sql
 DECLARE complex_cursor CURSOR FOR  
     SELECT a.BusinessEntityID  
     FROM HumanResources.EmployeePayHistory AS a  
@@ -281,7 +281,7 @@ GO
 #### <a name="d-using-joins-and-subqueries-to-data-in-one-table-to-delete-rows-in-another-table"></a>D. Usando junções e subconsultas para dados em uma tabela para excluir linhas em outra tabela  
  Os exemplos a seguir mostram dois modos de excluir linhas em uma tabela com base em dados de outra tabela. Nos dois exemplos, as linhas da tabela `SalesPersonQuotaHistory` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] são excluídas com base nas vendas acumuladas no ano armazenadas na tabela `SalesPerson`. A primeira instrução `DELETE` mostra a solução de subconsulta compatível com ISO e a segunda instrução `DELETE` mostra a extensão FROM [!INCLUDE[tsql](../../includes/tsql-md.md)] para unir as duas tabelas.  
   
-```  
+```sql
 -- SQL-2003 Standard subquery  
   
 DELETE FROM Sales.SalesPersonQuotaHistory   
@@ -292,7 +292,7 @@ WHERE BusinessEntityID IN
 GO  
 ```  
   
-```  
+```sql
 -- Transact-SQL extension  
   
 DELETE FROM Sales.SalesPersonQuotaHistory   
@@ -303,7 +303,7 @@ WHERE sp.SalesYTD > 2500000.00;
 GO  
 ```  
   
-```  
+```sql
 -- No need to mention target table more than once.  
   
 DELETE spqh  
@@ -317,7 +317,7 @@ DELETE spqh
 #### <a name="e-using-top-to-limit-the-number-of-rows-deleted"></a>E. Usando TOP para limitar o número de linhas excluídas  
  Quando uma cláusula TOP (*n*) é usada com DELETE, a operação de exclusão é executada em uma seleção aleatória de um número *n* de linhas. O exemplo a seguir exclui `20` linhas aleatórias da tabela `PurchaseOrderDetail` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] que têm datas de vencimento anteriores a 1º de julho de 2006.  
   
-```  
+```sql
 DELETE TOP (20)   
 FROM Purchasing.PurchaseOrderDetail  
 WHERE DueDate < '20020701';  
@@ -326,7 +326,7 @@ GO
   
  Se você precisar usar TOP para excluir linhas em uma ordem cronológica significativa, será preciso usar TOP junto com ORDER BY em uma instrução de subseleção. A consulta a seguir exclui as 10 linhas da tabela `PurchaseOrderDetail` que têm as primeiras datas de vencimento. Para garantir que apenas 10 linhas sejam excluídas, a coluna especificada na instrução de subseleção (`PurchaseOrderID`) é a chave primária da tabela. O uso de uma coluna não chave na instrução de subseleção pode resultar na exclusão de mais de 10 linhas se a coluna especificada contiver valores duplicados.  
   
-```  
+```sql
 DELETE FROM Purchasing.PurchaseOrderDetail  
 WHERE PurchaseOrderDetailID IN  
    (SELECT TOP 10 PurchaseOrderDetailID   
@@ -343,7 +343,7 @@ GO
 #### <a name="f-deleting-data-from-a-remote-table-by-using-a-linked-server"></a>F. Excluindo dados de uma tabela remota por meio de um servidor vinculado  
  O exemplo a seguir exclui uma linhas de uma tabela remota. O exemplo começa criando um link com a fonte de dados remota usando [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). O nome do servidor vinculado, `MyLinkServer`, é especificado, em seguida, como parte do nome de objeto de quatro partes no formulário *server.catalog.schema.object*.  
   
-```  
+```sql
 USE master;  
 GO  
 -- Create a link to the remote data source.   
@@ -357,7 +357,7 @@ EXEC sp_addlinkedserver @server = N'MyLinkServer',
 GO  
 ```  
   
-```  
+```sql
 -- Specify the remote data source using a four-part name   
 -- in the form linked_server.catalog.schema.object.  
   
@@ -369,7 +369,7 @@ GO
 #### <a name="g-deleting-data-from-a-remote-table-by-using-the-openquery-function"></a>G. Excluindo dados de uma tabela remota por meio da função OPENQUERY  
  O exemplo a seguir exclui linhas de uma tabela remota especificando a função do conjunto de linhas [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md). O nome de servidor vinculado criado no exemplo anterior é usado neste exemplo.  
   
-```  
+```sql
 DELETE OPENQUERY (MyLinkServer, 'SELECT Name, GroupName 
 FROM AdventureWorks2012.HumanResources.Department  
 WHERE DepartmentID = 18');  
@@ -379,7 +379,7 @@ GO
 #### <a name="h-deleting-data-from-a-remote-table-by-using-the-opendatasource-function"></a>H. Excluindo dados de uma tabela remota por meio da função OPENDATASOURCE  
  O exemplo a seguir exclui linhas de uma tabela remota especificando a função do conjunto de linhas [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md). Especifique um nome do servidor válido para a fonte de dados usando o formato *server_name* ou *server_name\instance_name*.  
   
-```  
+```sql
 DELETE FROM OPENDATASOURCE('SQLNCLI',  
     'Data Source= <server_name>; Integrated Security=SSPI')  
     .AdventureWorks2012.HumanResources.Department   
@@ -391,7 +391,7 @@ WHERE DepartmentID = 17;'
 #### <a name="i-using-delete-with-the-output-clause"></a>I. Usando DELETE com a cláusula OUTPUT  
  O exemplo a seguir mostra como salvar os resultados de uma instrução `DELETE` em uma variável de tabela no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```  
+```sql
 DELETE Sales.ShoppingCartItem  
 OUTPUT DELETED.*   
 WHERE ShoppingCartID = 20621;  
@@ -406,7 +406,7 @@ GO
 #### <a name="j-using-output-with-fromtablename-in-a-delete-statement"></a>J. Usando OUTPUT com <do_nome_da_tabela> em uma instrução DELETE  
  O exemplo a seguir exclui linhas da tabela `ProductProductPhoto` no banco de dados [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] com base em critérios de pesquisa definidos na cláusula `FROM` da instrução `DELETE`. A cláusula `OUTPUT` retorna colunas da tabela que está sendo excluída, `DELETED.ProductID`, `DELETED.ProductPhotoID`, e colunas da tabela `Product` . É usada na cláusula `FROM` para especificar as linhas a serem excluídas.  
   
-```  
+```sql
 DECLARE @MyTableVar table (  
     ProductID int NOT NULL,   
     ProductName nvarchar(50)NOT NULL,  
@@ -436,14 +436,14 @@ GO
 ### <a name="k-delete-all-rows-from-a-table"></a>K. Excluir todas as linhas de uma tabela  
  O exemplo a seguir exclui todas as linhas de uma tabela `Table1` porque uma cláusula WHERE não é usada para limitar o número de linhas excluídas.  
   
-```  
+```sql
 DELETE FROM Table1;  
 ```  
   
 ### <a name="l-delete-a-set-of-rows-from-a-table"></a>L. Excluir um conjunto de linhas de uma tabela com DELETE  
  O exemplo a seguir exclui todas as linhas do `Table1` tabela que tem um valor maior que 1.000,00 na coluna `StandardCost`.  
   
-```  
+```sql
 DELETE FROM Table1  
 WHERE StandardCost > 1000.00;  
 ```  
@@ -451,7 +451,7 @@ WHERE StandardCost > 1000.00;
 ### <a name="m-using-label-with-a-delete-statement"></a>M. Usando LABEL com uma instrução DELETE  
  O exemplo a seguir usa um rótulo com a instrução DELETE.  
   
-```  
+```sql
 DELETE FROM Table1  
 OPTION ( LABEL = N'label1' );  
   
@@ -460,7 +460,7 @@ OPTION ( LABEL = N'label1' );
 ### <a name="n-using-a-label-and-a-query-hint-with-the-delete-statement"></a>N. Usando um rótulo e uma dica de consulta com a instrução DELETE  
  Essa consulta mostra a sintaxe básica para uso de uma dica de consulta de junção com a instrução DELETE. Para obter mais informações sobre dicas de junção e como usar a cláusula OPTION, consulte [OPTION (SQL Server PDW)](http://msdn.microsoft.com/72bbce98-305b-42fa-a19f-d89620621ecc).  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 DELETE FROM dbo.FactInternetSales  
