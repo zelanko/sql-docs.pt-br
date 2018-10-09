@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - srv_rpcname
@@ -21,16 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - srv_rpcname
 ms.assetid: 0a1424e4-3319-4836-b8d8-5e0344cc683f
-caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4415c7cd4ed79426403d73650d4502edace44fd8
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 582c59efd38f2eed7a4fa09d34fab783c605e485
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37324266"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48174516"
 ---
 # <a name="srvrpcname-extended-stored-procedure-api"></a>srv_rpcname (API de procedimento armazenado estendido)
     
@@ -63,7 +60,7 @@ len
 ## <a name="returns"></a>Retorna  
  Um ponteiro DBCHAR para a cadeia de caracteres com terminação nula do componente de nome de procedimento armazenado remoto do procedimento armazenado remoto atual. Se não houver um procedimento armazenado remoto atual, NULL será retornado e *len* será definido como -1.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Essa função retorna apenas o nome do procedimento armazenado remoto. Ela não inclui os especificadores opcionais para proprietário, nome do banco de dados e número do procedimento armazenado remoto.  
   
  Como é válido chamar **srv_rpcname** quando não existe um procedimento armazenado remoto (nenhum erro informativo ocorre), essa função fornece um método para determinar se um procedimento armazenado remoto existe.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - srv_paramlen
@@ -21,16 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - srv_paramlen
 ms.assetid: d1fe92ff-cad6-4396-8216-125e5642e81e
-caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1981d64f0371f665cc2441fd107d18ace9ec1666
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 5d6e306b0537180f2b2fa230e819fbc72c9fe6e0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37304096"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48069596"
 ---
 # <a name="srvparamlen-extended-stored-procedure-api"></a>srv_paramlen (API de procedimento armazenado estendido)
     
@@ -78,7 +75,7 @@ n
   
  \*   *len* real = tamanho da cadeia de caracteres de vários bytes (cch)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Cada parâmetro de procedimento armazenado remoto tem um comprimento de dados real e um máximo. Para tipos de dados padrão de comprimento fixo que não permitem valores nulos, os comprimentos real e máximo são os mesmos. Para tipos de dados de comprimento de variável, os comprimentos podem variar. Por exemplo, um parâmetro declarado como `varchar(30)` pode ter dados de apenas 10 bytes de comprimento. O comprimento real do parâmetro é 10 e seu comprimento máximo é 30. A função **srv_paramlen** obtém o tamanho real de dados, em bytes, de um procedimento armazenado remoto. Para obter o tamanho máximo de dados de um parâmetro, use **srv_parammaxlen**.  
   
  Quando uma chamada de procedimento armazenado remoto é feita com parâmetros, os parâmetros podem ser passados pelo nome ou pela posição (sem-nome). Se a chamada de procedimento armazenado remoto for feita com alguns parâmetros transmitidos pelo nome e outros pela posição, ocorrerá um erro. O manipulador SRV_RPC ainda O manipulador SRV_RPC ainda é chamado, mas aparece como se não houvesse parâmetros e **srv_rpcparams** retorna 0.  

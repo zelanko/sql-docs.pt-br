@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - srv_parammaxlen
@@ -21,16 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - srv_parammaxlen
 ms.assetid: 49bfc29d-f76a-4963-b0e6-b8532dfda850
-caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f832700277d8e015dae9ef7beec41790c6624784
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 8d1ebf8be54abfd0b7a12239cb84df103a8106d0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37248460"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48156386"
 ---
 # <a name="srvparammaxlen-extended-stored-procedure-api"></a>srv_parammaxlen (API de procedimento armazenado estendido)
     
@@ -76,7 +73,7 @@ n
 |`NVARCHAR`|**NULL:** 255<br /><br /> **ZERO:** 255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
 |`NTEXT`|**NULL:** -1<br /><br /> **ZERO:** -1<br /><br /> **>=255:** -1<br /><br /> **\<255:** -1|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Cada parâmetro de procedimento armazenado remoto tem um comprimento de dados real e um máximo. Para tipos de dados padrão de comprimento fixo que não permitem valores nulos, os comprimentos real e máximo são os mesmos. Para tipos de dados de comprimento de variável, os comprimentos podem variar. Por exemplo, um parâmetro declarado como **varchar(30)** pode ter dados de apenas 10 bytes de comprimento. O comprimento real do parâmetro é 10 e seu comprimento máximo é 30. A função **srv_parammaxlen** obtém o tamanho máximo de dados de um procedimento armazenado remoto. Para obter o tamanho real de um parâmetro, use **srv_paramlen**.  
   
  Quando uma chamada de procedimento armazenado remoto é feita com parâmetros, os parâmetros podem ser passados pelo nome ou pela posição (sem-nome). Se a chamada de procedimento armazenado remoto for feita com alguns parâmetros transmitidos pelo nome e outros pela posição, ocorrerá um erro. O manipulador SRV_RPC ainda é chamado, mas aparece como se não houvesse parâmetros e **srv_rpcparams** retorna 0.  

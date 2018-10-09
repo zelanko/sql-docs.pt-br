@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - srv_message_handler
@@ -21,16 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - srv_message_handler
 ms.assetid: 41bcd057-436f-4fa8-8293-fc8057a30877
-caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 039ffe0f446b5d17da50a15840f58f3eda9ddc2c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: f671168cdebe2d9dffb738a7f7742a47719e4f16
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37244796"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48050438"
 ---
 # <a name="srvmessagehandler-extended-stored-procedure-api"></a>srv_message_handler (API de procedimento armazenado estendido)
     
@@ -105,7 +102,7 @@ oserrtextlen
 ## <a name="returns"></a>Retorna  
  SUCCEED ou FAIL.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  A função **srv_message_handler** permite que um procedimento armazenado estendido seja integrado aos recursos de log de erros centralizado e relatório do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Os alertas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podem ser estabelecidos para eventos de procedimentos armazenados estendidos e o SQL Server Agent fará o monitoramento das condições desses alertas.  
   
  Se a mensagem de erro for mais longa, ela será truncada para 412 bytes.  

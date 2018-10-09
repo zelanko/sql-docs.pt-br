@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - srv_senddone
@@ -21,16 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - srv_senddone
 ms.assetid: 1fc4f1d5-56d4-43f6-b5e4-0c0cc295cba3
-caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 10d5f559d37b713064761dd2715038431f99817c
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 51589cea0306f7a9fe3e4074c586c7c89892d9c9
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37283162"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48157936"
 ---
 # <a name="srvsenddone-extended-stored-procedure-api"></a>srv_senddone (API de procedimento armazenado estendido)
     
@@ -80,7 +77,7 @@ count
 ## <a name="returns"></a>Retorna  
  SUCCEED ou FAIL  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Uma solicitação do cliente pode fazer com que o servidor execute vários comandos e retorne vários conjuntos de resultados. Para cada conjunto de resultados, **srv_senddone** deve retornar uma mensagem de conclusão de resultado para o cliente.  
   
  O campo *count* indica o número de linhas afetadas por um comando. Se o campo *count* contiver uma contagem, o sinalizador SRV_DONE_COUNT deverá ser definido no campo *status* . Essa configuração permite ao cliente distinguir entre um valor *count* igual a 0 e um campo não usado *count* .  

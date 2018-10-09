@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - SSIS Script component, configuring
 - Script component [Integration Services], configuring
 ms.assetid: 586dd799-f383-4d6d-b1a1-f09233d14f0a
-caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7299359d6535a9a3378dc898fa61da62a969d438
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 433354cb123e8240bac47dcbb2e7dce82c4a0d64
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37292886"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48116686"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>Configurando o componente Script no Editor de Componentes de Script
   Antes de escrever um código personalizado no componente Script, primeiro selecione o tipo de componente de fluxo de dados que deseja criar – origem, transformação ou destino – e, em seguida, configure os metadados e as propriedades do componente no **Editor de Transformação Scripts**.  
@@ -131,7 +128,7 @@ Dim myADONETConnectionManager As IDTSConnectionManager100 = _
   
  Para obter mais informações, consulte [conexão a fontes de dados no Component]((connecting-to-data-sources-in-the-script-component.md) Script.  
   
-![Ícone do Integration Services (pequeno)](../../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services  **<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone do Integration Services (pequeno)](../../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services** <br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
 ## <a name="see-also"></a>Consulte também  
  [Codificando e depurando o componente Script] ((coding-and-debugging-the-script-component.md)  

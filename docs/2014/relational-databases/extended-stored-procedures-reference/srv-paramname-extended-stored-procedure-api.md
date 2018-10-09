@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - srv_paramname
@@ -21,16 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - srv_paramname
 ms.assetid: 1a53d707-7b06-49cc-a0df-ac727cfe953f
-caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8108cbf1c08f9259734280105df931dc3f91203a
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 65844bb9d810242381eabada835ceea5053ca414
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37217266"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48114976"
 ---
 # <a name="srvparamname-extended-stored-procedure-api"></a>srv_paramname (API de procedimento armazenado estendido)
     
@@ -60,7 +57,7 @@ SRV_PROC * srvproc,intn, int *len );
 ## <a name="returns"></a>Retorna  
  Um ponteiro para uma cadeia de caracteres com terminação nula que contém o nome do parâmetro. O tamanho do nome do parâmetro é armazenado em *len*. Se não houver *n*-ésimo parâmetro nem um procedimento armazenado remoto, será retornado NULL, *len* será definido como -1 e uma mensagem de erro informativa será enviada. Se o nome do parâmetro for o NULL, *len* será definido como 0 e uma cadeia de caracteres vazia que termina em nulo será retornada.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Essa função obtém o nome de um parâmetro de chamada de procedimento armazenado remoto. Quando uma chamada de procedimento armazenado remoto é feita com parâmetros, os parâmetros podem ser passados pelo nome ou pela posição (sem-nome). Se a chamada de procedimento armazenado remoto for feita com alguns parâmetros transmitidos pelo nome e outros pela posição, ocorrerá um erro. O manipulador SRV_RPC ainda é chamado, mas aparece como se não houvesse parâmetros e **srv_rpcparams** retorna 0.  
   
 > [!IMPORTANT]  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - docset-sql-devref
 - integration-services
-ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - SSIS Script component, coding
 - VSTA
 ms.assetid: c3913c15-66aa-4b61-89b5-68488fa5f0a4
-caps.latest.revision: 64
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 821d47f8a112efb3c2f70a094c139fdc7936ab32
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: c25b5b564f0fbe69d2559ae0c7c57d262c6646e0
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37203986"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48177516"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>Codificando e depurando o componente Script
   No [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer, o componente Script tem dois modos: modo de design de metadados e modo de design de código. Quando você abre o **Editor de Transformação Scripts**, o componente digita o modo de design de metadados no qual você configura metadados e define propriedades do componente. Depois de definir as propriedades do componente Script e configurar a entrada e as saídas em modo de design de metadados, você pode alternar para o modo de design de código para gravar seu script personalizado. Para obter mais informações sobre o modo de design de metadados e modo de design de código, consulte [Configurando o componente Script no Editor de Componentes de Script](configuring-the-script-component-in-the-script-component-editor.md).  
@@ -213,7 +210,7 @@ public class ScriptMain : UserComponent
   
 -   Entrada de blog, [Problemas de instalação e configuração de VSTA nas instalações de SSIS 2008 e R2](http://go.microsoft.com/fwlink/?LinkId=215661), em blogs.msdn.com.  
   
-![Ícone do Integration Services (pequeno)](../../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services  **<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone do Integration Services (pequeno)](../../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services** <br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
 ## <a name="see-also"></a>Consulte também  
  [Configurar o componente de Script no Editor de Componentes de Script](configuring-the-script-component-in-the-script-component-editor.md)  

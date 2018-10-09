@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - srv_paramdata
@@ -21,16 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - srv_paramdata
 ms.assetid: 3104514d-b404-47c9-b6d7-928106384874
-caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: aa55de23181266f8358a5f38aead82383bf6d8e9
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: 90ef2956d169cc9591102ab945b0545ab1b325b2
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37262762"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48151926"
 ---
 # <a name="srvparamdata-extended-stored-procedure-api"></a>srv_paramdata (API de procedimento armazenado estendido)
     
@@ -78,7 +75,7 @@ n
   
  \* Os dados não terminam em nulo; nenhum aviso é emitido no truncamento de dados >255 caracteres.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Se você souber o nome do parâmetro, poderá usar **srv_paramnumber** para obter o número do parâmetro. Para determinar se um parâmetro é NULL, use **srv_paramlen**.  
   
  Quando uma chamada de procedimento armazenado remoto for feita com parâmetros, os parâmetros poderão ser passados pelo nome ou pela posição (sem-nome). Se a chamada de procedimento armazenado remoto for feita com alguns parâmetros transmitidos pelo nome e outros pela posição, ocorrerá um erro. Em caso de erro, o manipulador SRV_RPC ainda será chamado, mas aparecerá como se não houvesse parâmetros e **srv_rpcparams** retornará 0.  

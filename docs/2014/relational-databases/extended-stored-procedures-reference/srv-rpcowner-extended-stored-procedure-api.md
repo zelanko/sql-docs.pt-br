@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - srv_rpcowner
@@ -21,16 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - srv_rpcowner
 ms.assetid: e81a60e6-14ea-47bc-a11c-3d7635344447
-caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0c8f633959116752457d5e5776aa963f3d1aa2a0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: db4ad39f83b7e929c6af12ee5760a2c8735f70b8
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37310006"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48124086"
 ---
 # <a name="srvrpcowner-extended-stored-procedure-api"></a>srv_rpcowner (API de procedimento armazenado estendido)
     
@@ -63,7 +60,7 @@ len
 ## <a name="returns"></a>Retorna  
  Um ponteiro DBCHAR ponteiro para o componente do proprietário com terminação nula para o procedimento armazenado remoto atual. Se não houver um procedimento armazenado remoto atual, NULL será retornado e *len* será definido como -1.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Essa função retorna apenas o componente proprietário do procedimento armazenado remoto. Ela não inclui os especificadores opcionais para nome, nome de procedimento armazenado remoto e número de procedimento armazenado remoto.  
   
 > [!IMPORTANT]  

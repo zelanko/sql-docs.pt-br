@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - srv_paramset
@@ -21,16 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - srv_paramset
 ms.assetid: 2a509206-a1b8-4b20-b0a2-ef680cef7bd8
-caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2caae5a5cc900234cc21dd71659eed27a67c1ad7
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: d90d58ea3017102d2e059f2e7b32274b401d87f3
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37274792"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48209256"
 ---
 # <a name="srvparamset-extended-stored-procedure-api"></a>srv_paramset (API de procedimento armazenado estendido)
     
@@ -93,7 +90,7 @@ len
 |IG = Valor será ignorado||  
 |valid = Qualquer ponteiro válido para dados||  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Os parâmetros contêm dados passados entre os clientes e o aplicativo com procedimentos armazenados remotos. O cliente pode especificar certos parâmetros como parâmetros de retorno. Esses parâmetros de retorno podem conter valores que o aplicativo servidor Open Data Services devolve ao cliente. Usar parâmetros de retorno equivale a passar parâmetros por referência.  
   
  Você não pode definir o valor de retorno para um parâmetro que não foi invocado como um parâmetro de retorno. Use **srv_paramstatus** para determinar como o parâmetro foi invocado.  

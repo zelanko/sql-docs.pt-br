@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - database-engine
 - docset-sql-devref
-ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - srv_rpcparams
@@ -21,16 +19,15 @@ dev_langs:
 helpviewer_keywords:
 - srv_rpcparams
 ms.assetid: 96a5e6f6-d320-4623-b96e-0a856e3abebb
-caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e3910a9b26487b536761ade4835e30862d723261
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: b99010c8d4ece2811c8b98b588489b874501544e
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37325966"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48069876"
 ---
 # <a name="srvrpcparams-extended-stored-procedure-api"></a>srv_rpcparams (API de procedimento armazenado estendido)
     
@@ -56,7 +53,7 @@ srvproc
 ## <a name="returns"></a>Retorna  
  O número de parâmetros no procedimento armazenado remoto. Se não houver nenhum parâmetro no procedimento armazenado remoto ou se não houver nenhum procedimento armazenado remoto atual, -1 será retornado e ocorrerá um erro de informação.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
  Esta função retorna o número de parâmetros no procedimento armazenado remoto atual. Normalmente é chamado do procedimento armazenado remoto.  
   
  Quando uma chamada de procedimento armazenado remoto é feita com parâmetros, os parâmetros podem ser passados pelo nome ou pela posição (sem-nome). Se a chamada de procedimento armazenado remoto tiver sido feita com alguns parâmetros passados pelo nome e outros pela posição, ocorrerá um erro. Quando esse erro ocorrer, o manipulador de procedimento armazenado remoto será chamado, mas não receberá os parâmetros e **srv_rpcparams** retornará 0.  
