@@ -1,18 +1,17 @@
 ---
-title: Release Notes (Driver do OLE DB para SQL Server) | Microsoft Docs
+title: Microsoft OLE DB Driver for SQL Server | Microsoft Docs
 ms.date: 07/03/2018
 ms.prod: sql
-ms.suite: sql
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daveng
-ms.openlocfilehash: ec5abfce888f0af956f1b72f509ef298ee7405a0
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: 01ea0242637f4dd5c813808b3b840d3a5a86df9a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39109368"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47789114"
 ---
 # <a name="release-notes-for-the-microsoft-ole-db-driver-for-sql-server"></a>Notas de versão do Driver do Microsoft OLE DB para SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

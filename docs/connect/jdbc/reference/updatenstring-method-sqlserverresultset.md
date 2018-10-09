@@ -5,35 +5,32 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0b6b65a1-8e62-4cd5-ab28-6231c3e20d81
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 73d7bf396b5915b535a2d3116815f0926cf89791
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 1737004c5ded0f577e549a6009807cb74096bc32
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850991"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47706084"
 ---
 # <a name="updatenstring-method-sqlserverresultset"></a>Método updateNString (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Atualiza a coluna designada com um **cadeia de caracteres** valor.  
+  Atualiza a coluna designada com um valor de **Cadeia de Caracteres**.  
   
 ## <a name="overload-list"></a>Lista de sobrecargas  
   
-|Nome|Description|  
+|Nome|Descrição|  
 |----------|-----------------|  
-|[Método updateNString &#40;int, Java&#41;](../../../connect/jdbc/reference/updatenstring-method-int-java-lang-string.md)|Atualiza a coluna designada com um **cadeia de caracteres** valor usando o índice da coluna especificada.|  
-|[Método updateNString &#40;Java, Java&#41;](../../../connect/jdbc/reference/updatenstring-method-java-lang-string-java-lang-string.md)|Atualiza a coluna designada com um **cadeia de caracteres** valor usando o rótulo da coluna especificada.|  
+|[Método updateNString (int, java.lang.String)](../../../connect/jdbc/reference/updatenstring-method-int-java-lang-string.md)|Atualiza a coluna designada com um valor **String** usando o rótulo de coluna especificado.|  
+|[Método updateNString (java.lang.String, java.lang.String)](../../../connect/jdbc/reference/updatenstring-method-java-lang-string-java-lang-string.md)|Atualiza a coluna designada com um valor **String** usando o rótulo de coluna especificado.|  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Membros de SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Classe SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

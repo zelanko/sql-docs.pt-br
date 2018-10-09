@@ -5,19 +5,17 @@ ms.date: 01/11/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3068d2a796e7e28e4eda58514cc316fe504bbce3
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 5030124775a8016fe5ddb716524276365aa47be7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42785571"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613073"
 ---
 # <a name="programming-guidelines"></a>Diretrizes de programação
 
@@ -114,7 +112,7 @@ Ao associar parâmetros de entrada com SQLBindParameter, se o tipo de SQL de um 
 
 Para evitar essa perda de dados ao associar parâmetros de entrada, especifique um tipo de caractere SQL Unicode, como SQL_NVARCHAR. Nesse caso, o driver converte do cliente de codificação para UTF-16, que pode representar todos os caracteres Unicode. Além disso, a coluna de destino ou parâmetro no servidor também pode ser um tipo de Unicode (**nchar**, **nvarchar**, **ntext**) ou um arquivo com uma agrupamento/codificação, que pode representa todos os caracteres da fonte de dados original. Para evitar a perda de dados com parâmetros de saída, especifique um tipo SQL de Unicode e um Unicode C tipo (SQL_C_WCHAR), fazendo com que o driver retornar dados como UTF-16. ou uma estreita C de tipo e certifique-se de que o cliente de codificação pode representar todos os caracteres da fonte de dados (Isso é sempre possível com UTF-8.)
 
-Para obter mais informações sobre codificações e agrupamentos, consulte [Collation and Unicode Support](../../../relational-databases/collations/collation-and-unicode-support.md).
+Para obter mais informações sobre agrupamentos, consulte [Suporte a agrupamentos e a Unicode](../../../relational-databases/collations/collation-and-unicode-support.md).
 
 Há algumas diferenças de conversão de codificação entre o Windows e várias versões da biblioteca iconv no Linux e macOS. Dados de texto na página de código 1255 (hebraico) tem um ponto de código (0xCA) que se comporta de forma diferente após a conversão para Unicode. No Windows, esse caractere converte para o ponto de código UTF-16 de 0x05BA. No macOS e Linux com libiconv versões anteriores à 1.15, ele converte em 0x00CA. No Linux com iconv bibliotecas que dão suporte a revisão de 2003 da Big5/CP950 (chamado `BIG5-2003`), caracteres adicionados com essa revisão não converterá corretamente. Na página de código 932 (japonês, Shift-JIS), o resultado de decodificação não originalmente definido no padrão de codificação de caracteres também é diferente. Por exemplo, o byte 0x80 converte a U + 0080 no Windows, mas pode se tornar a U + 30FB no Linux e macOS, dependendo da versão iconv.
 

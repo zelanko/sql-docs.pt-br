@@ -1,13 +1,11 @@
 ---
-title: setString (long, Java) do método | Microsoft Docs
+title: setString (long, lang) do método | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerClob.setString (long, java.lang.String)
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 1b2190e9-5ace-497a-8554-0e913ea9b0cb
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7194a8778ecae136d7a70086c5fa2e9353988a93
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 4a5fd1c9f0f876f024047fab5e28fb31ba29b687
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32845301"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47839104"
 ---
 # <a name="setstring-method-long-javalangstring"></a>Método setString (long, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Grava o determinado **cadeia de caracteres** no CLOB iniciando na posição determinada.  
+  Grava a cadeia de caracteresfornecida no CLOB, começando na posição fornecida.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,11 +41,11 @@ public int setString(long pos,
   
  A posição em que a gravação deve ser iniciada no CLOB.  
   
- *S*  
+ *s*  
   
- O **cadeia de caracteres** para ser gravada no CLOB.  
+ A cadeia de caracteres a ser gravada no CLOB.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  O número de caracteres gravados.  
   
 ## <a name="exceptions"></a>Exceções  
@@ -59,7 +56,7 @@ public int setString(long pos,
   
  Os dados de caractere são substituídos iniciando na posição especificada e podem ultrapassar o comprimento inicial do CLOB. A especificação de um valor posição +1 acrescentará a cadeia de caracteres. A especificação de valores de posição+2 ou maiores (ou zero ou menos) causarão o lançamento de um erro de posição.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Método setString &#40;SQLServerClob&#41;](../../../connect/jdbc/reference/setstring-method-sqlserverclob.md)   
  [Métodos SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-methods.md)   
  [Membros SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-members.md)   

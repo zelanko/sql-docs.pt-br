@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 8472d839-8124-4a62-a83c-7e771b0d4962
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: deffdb98790baa64eaa1983fee6839a65289d0d4
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8d5d9fcb2664fa17e1138ebad57fd4330bea34af
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37990158"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47769416"
 ---
 # <a name="cursor-types-sqlsrv-driver"></a>Tipos de cursor (driver SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -51,7 +48,7 @@ A tabela a seguir descreve os valores que você pode especificar o *linha* parâ
 |SQLSRV_SCROLL_NEXT|Especifica a próxima linha. Isso é o valor padrão, se você não especificar o *linha* parâmetro para um conjunto de resultados roláveis.|  
 |SQLSRV_SCROLL_PRIOR|Especifica a linha antes da linha atual.|  
 |SQLSRV_SCROLL_FIRST|Especifica a primeira linha no conjunto de resultados.|  
-|SQLSRV_SCROLL_LAST|Especifica a última linha no conjunto de resultados.|  
+|SQLSRV_SCROLL_LAST|Especifica a primeira linha no conjunto de resultados.|  
 |SQLSRV_SCROLL_ABSOLUTE|Especifica a linha especificada com o *deslocamento* parâmetro.|  
 |SQLSRV_SCROLL_RELATIVE|Especifica a linha especificada com o *deslocamento* parâmetro da linha atual.|  
   
