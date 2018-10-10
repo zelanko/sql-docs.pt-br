@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: extended-stored-procedures
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - srv_willconvert
@@ -21,16 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - srv_willconvert
 ms.assetid: 6f4db5fd-215a-461c-95e4-17697852733e
-caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e22955b073e17802be37e95ddf41659766da0662
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e2ce7009049f0f29b08251453601599b6add74be
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32935014"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47674240"
 ---
 # <a name="srvwillconvert-extended-stored-procedure-api"></a>srv_willconvert (API de procedimento armazenado estendido)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
