@@ -22,7 +22,7 @@ ms.locfileid: "47713904"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   
-  Há várias abordagens a serem consideradas quando você está planejando fazer upgrade do [!INCLUDE[ssDE](../../includes/ssde-md.md)] de uma versão anterior do SQL Server, a fim de minimizar o tempo de inatividade e o risco. Você pode executar uma atualização in-loco, migrar para uma nova instalação ou executar uma atualização sem interrupção. O diagrama a seguir ajudará você a escolher entre essas abordagens. Cada uma das abordagens no diagrama também são discutidas abaixo. Para ajudá-lo com os pontos de decisão no diagrama, veja também [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
+  Há várias abordagens a serem consideradas quando você está planejando fazer upgrade do [!INCLUDE[ssDE](../../includes/ssde-md.md)] de uma versão anterior do SQL Server, a fim de minimizar o tempo de inatividade e o risco. Você pode executar uma atualização in-loco, migrar para uma nova instalação ou executar uma atualização sem interrupção. O diagrama a seguir ajudará você a escolher entre essas abordagens. Cada uma das abordagens no diagrama também são discutidas abaixo. Para ajudá-lo com os pontos de decisão no diagrama, veja também [planejar e testar o Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
   
  ![Árvore de decisão do método de upgrade do Mecanismo de Banco de Dados](../../database-engine/install-windows/media/database-engine-upgrade-method-decision-tree.png "Árvore de decisão do método de upgrade do Mecanismo de Banco de Dados")  
   
@@ -45,7 +45,7 @@ ms.locfileid: "47713904"
   
 -   Um ambiente de desenvolvimento sem uma configuração de alta disponibilidade (HA).  
   
--   Um ambiente de produção de missão não crítica que pode tolerar tempo de inatividade e que é executado em hardware e software recentes. O tempo de inatividade depende do tamanho do banco de dados e da velocidade de seu subsistema de E/S. Atualizar o SQL Server 2014 quando as tabelas com otimização de memória estiverem em uso levará um pouco mais de tempo. Para saber mais, confira [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
+-   Um ambiente de produção de missão não crítica que pode tolerar tempo de inatividade e que é executado em hardware e software recentes. O tempo de inatividade depende do tamanho do banco de dados e da velocidade de seu subsistema de E/S. Atualizar o SQL Server 2014 quando as tabelas com otimização de memória estiverem em uso levará um pouco mais de tempo. Para saber mais, confira [Planejar e testar o plano de atualização do mecanismo de banco de dados](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
   
 > [!WARNING]  
 >  Ao executar o programa de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é interrompida e reiniciada como parte da execução das verificações pré-atualização.  
@@ -73,7 +73,7 @@ ms.locfileid: "47713904"
  Quando o novo ambiente do   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tiver os mesmos objetos de sistema do ambiente existente, migre os bancos de dados do usuário do sistema existente para a instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de maneira que minimize o tempo de inatividade do sistema existente. Realize a migração do banco de dados usando backup e restauração ou redirecionando LUNs se você estiver em um ambiente de SAN. As etapas para ambos os métodos são delineadas nos diagramas a seguir.  
   
 > [!CAUTION]  
->  O tempo de inatividade depende do tamanho do banco de dados e da velocidade de seu subsistema de E/S. Atualizar o SQL Server 2014 quando as tabelas com otimização de memória estiverem em uso levará um pouco mais de tempo. Para saber mais, confira [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
+>  O tempo de inatividade depende do tamanho do banco de dados e da velocidade de seu subsistema de E/S. Atualizar o SQL Server 2014 quando as tabelas com otimização de memória estiverem em uso levará um pouco mais de tempo. Para saber mais, confira [Planejar e testar o plano de atualização do mecanismo de banco de dados](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
   
  Depois de migrar os bancos de dados do usuário, direcione novos usuários para a nova instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando um entre vários métodos possíveis (por exemplo, renomear o servidor, usar uma entrada de DNS, modificar cadeias de conexão).  A nova abordagem de instalação reduz o risco e o tempo de inatividade em comparação com uma atualização in-loco e facilita as atualizações de hardware e sistema operacional em conjunto com a atualização para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -118,7 +118,7 @@ ms.locfileid: "47713904"
 -   Um ambiente expandido do SQL Server Reporting Services: para obter etapas detalhadas para executar uma atualização sem interrupção nesse ambiente, veja [Atualizar e migrar o Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).  
   
 ## <a name="next-steps"></a>Próximas etapas
- [Plan and Test the Database Engine Upgrade Plan](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)   
+ [Planejar e testar o plano de atualização do mecanismo de banco de dados](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)   
  [Concluir a atualização do mecanismo de banco de dados](../../database-engine/install-windows/complete-the-database-engine-upgrade.md)  
   
   
