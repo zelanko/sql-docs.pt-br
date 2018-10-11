@@ -149,7 +149,7 @@ ms.locfileid: "47840984"
  Mensagens de erro definidas pelo usuário residem na exibição do catálogo [sys.messages](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md) . Essa exibição do catálogo é armazenada no **mestre**. Se um aplicativo de banco de dados depender de mensagens de erro definidas pelo usuário e o banco de dados for disponibilizado em outra instância do servidor, use [sp_addmessage](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md) para adicionar essas mensagens definidas pelo usuário à instância do servidor de destino.  
 
   
-##  <a name="event_notif_and_wmi_events"></a> Event Notifications and Windows Management Instrumentation (WMI) Events (at Server Level)  
+##  <a name="event_notif_and_wmi_events"></a> Notificações de eventos e o Windows Management Instrumentation (WMI) eventos (no nível de servidor)  
   
 ### <a name="server-level-event-notifications"></a>Notificações de eventos em nível de servidor  
  Notificações de eventos em nível de servidor são armazenadas no **msdb**. Portanto, se um aplicativo de banco de dados depender de uma notificação de eventos em nível de servidor, essa notificação de evento deverá ser recriada na instância do servidor de destino. Para exibir as notificações de eventos em uma instância do servidor, use a exibição de catálogo [sys.server_event_notifications](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md) . Para obter mais informações, consulte [Event Notifications](../../relational-databases/service-broker/event-notifications.md).  
