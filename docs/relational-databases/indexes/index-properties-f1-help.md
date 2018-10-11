@@ -173,7 +173,7 @@ ms.locfileid: "47846357"
 >  Esta opção não está disponível para índices XML ou se o índice for um índice clusterizadoF desabilitado.  
   
  **Definir grau máximo de paralelismo**  
- Limita o número de processadores a serem usados durante execução do plano paralelo. O valor padrão, 0, usa o número real de CPUs disponíveis. A definição do valor como 1 elimina a geração em plano paralelo; a definição do valor como um número maior que 1 restringe o número máximo de processadores usados por uma única execução da consulta. Esta opção ficará disponível apenas se a caixa de diálogo estiver no estado **Recriar** ou **Recriar** . Para obter mais informações, consulte [Set the Max Degree of Parallelism Option for Optimal Performance](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md).  
+ Limita o número de processadores a serem usados durante execução do plano paralelo. O valor padrão, 0, usa o número real de CPUs disponíveis. A definição do valor como 1 elimina a geração em plano paralelo; a definição do valor como um número maior que 1 restringe o número máximo de processadores usados por uma única execução da consulta. Esta opção ficará disponível apenas se a caixa de diálogo estiver no estado **Recriar** ou **Recriar** . Para obter mais informações, consulte [definir o Max Degree of Parallelism opção para otimizar o desempenho](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md).  
   
 > [!NOTE]  
 >  Se um valor maior que o número de CPUs disponíveis for especificado, será usado o número real de CPUs disponíveis.  

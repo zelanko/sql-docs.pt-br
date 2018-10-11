@@ -66,7 +66,7 @@ ms.locfileid: "47631014"
   
 4.  Para aumentar o tamanho de um arquivo existente, aumente o valor na coluna **Tamanho inicial (MB)** para o arquivo. Você deve aumentar o tamanho do banco de dados em pelo menos 1 megabyte.  
   
-5.  Para aumentar o tamanho do banco de dados adicionando um novo arquivo, clique em **Adicionar** e, depois, digite os valores para o novo arquivo. Para obter mais informações, consulte [Add Data or Log Files to a Database](../../relational-databases/databases/add-data-or-log-files-to-a-database.md).  
+5.  Para aumentar o tamanho do banco de dados adicionando um novo arquivo, clique em **Adicionar** e, depois, digite os valores para o novo arquivo. Para obter mais informações, consulte [adicionar dados ou arquivos de Log para um banco de dados](../../relational-databases/databases/add-data-or-log-files-to-a-database.md).  
   
 6.  Clique em **OK**.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "47631014"
  Para obter mais exemplos, consulte [Opções de arquivo e grupos de arquivos ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).  
   
 ## <a name="see-also"></a>Consulte Também  
- [Add Data or Log Files to a Database](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)   
+ [Adicionar arquivos de dados ou de log a um banco de dados](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)   
  [Reduzir um banco de dados](../../relational-databases/databases/shrink-a-database.md)  
   
   

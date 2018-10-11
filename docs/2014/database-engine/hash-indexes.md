@@ -44,7 +44,7 @@ ms.locfileid: "48169466"
   
  A figura tem três buckets com linhas. O segundo bucket na parte superior contém as três linhas vermelhas. O quarto bucket contém uma única linha azul. O bucket inferior contém as duas linhas verdes. Essas versões podem ser diferentes e estarem na mesma linha.  
   
- Para obter mais informações sobre índices para tabelas com otimização de memória, consulte [Guidelines for Using Indexes on Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
+ Para obter mais informações sobre índices para tabelas com otimização de memória, consulte [Diretrizes para usar índices em tabelas com otimização de memória](../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Índices em tabelas com otimização de memória](../../2014/database-engine/indexes-on-memory-optimized-tables.md)  

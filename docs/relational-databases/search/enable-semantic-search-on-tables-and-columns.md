@@ -275,7 +275,7 @@ GO
   
  Se o tipo de documento que você deseja indexar não estiver na lista de tipos com suporte, talvez seja preciso localizar, baixar e instalar filtros adicionais. Para obter mais informações, consulte [Exibir ou alterar filtros registrados e separadores de palavras](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md).  
   
-##  <a name="BestPracticeFilegroup"></a> Best practice: Consider creating a separate filegroup for the full-text and semantic indexes  
+##  <a name="BestPracticeFilegroup"></a> Prática recomendada: considerar a criação de um grupo de arquivos separado para os índices de texto completo e semânticos  
  Considere criar um grupo de arquivos separado para os índices de texto completo e semântico se a alocação de espaço em disco for um problema. Os índices semânticos são criados no mesmo grupo de arquivos que o índice de texto completo. Um índice semântico totalmente populado pode conter uma grande quantidade de dados.  
  
 ##  <a name="IssueNoResults"></a> Problema: a pesquisa em coluna específica não retorna resultados  

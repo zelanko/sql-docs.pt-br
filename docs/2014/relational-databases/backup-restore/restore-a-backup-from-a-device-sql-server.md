@@ -26,7 +26,7 @@ ms.locfileid: "48200026"
   Este tópico descreve como restaurar um backup de um dispositivo no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 > [!NOTE]  
->  Para obter informações sobre o backup do SQL Server no serviço de armazenamento do Blob do Windows Azure, consulte [SQL Server Backup and Restore with Windows Azure Blob Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+>  Para obter informações sobre o backup do SQL Server no serviço de armazenamento do Blob do Windows Azure, consulte [Backup e restauração do SQL Server com o serviço de armazenamento de Blob do Windows Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  **Neste tópico**  
   

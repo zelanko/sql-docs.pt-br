@@ -22,7 +22,7 @@ ms.locfileid: "48226116"
   
  Essa lista não inclui objetos preteridos.  
   
- Para obter a lista de objetos de banco de dados que oferecem suporte à pesquisa semântica, consulte [Semantic Search DDL, Functions, Stored Procedures, and Views](../views/views.md).  
+ Para obter a lista de objetos de banco de dados que oferecem suporte à pesquisa semântica, consulte [Pesquisa de semântica DDL, funções, procedimentos armazenados e exibições](../views/views.md).  
   
 ##  <a name="ddl"></a> Instruções DDL (linguagem de definição de dados) Transact-SQL  
   
