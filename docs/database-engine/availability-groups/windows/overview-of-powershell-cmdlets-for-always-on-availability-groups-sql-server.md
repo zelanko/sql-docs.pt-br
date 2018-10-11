@@ -48,7 +48,7 @@ ms.locfileid: "47597865"
 > [!NOTE]  
 >  Para obter uma lista de tópicos nos Manuais Online do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] que descrevem como usar os cmdlets para executar tarefas do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , confira a seção “Tarefas relacionadas” de [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
   
-##  <a name="ConfiguringServerInstance"></a> Configuring a Server Instance for Always On Availability Groups  
+##  <a name="ConfiguringServerInstance"></a> Configurando uma instância de servidor para o grupos de disponibilidade AlwaysOn  
   
 |Cmdlets|Descrição|Com suporte em|  
 |-------------|-----------------|------------------|
@@ -70,7 +70,7 @@ ms.locfileid: "47597865"
   
  Para obter informações sobre como usar esses cmdlets para preparar um banco de dados secundário, veja [Preparar um banco de dados secundário manualmente para um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
-##  <a name="DeployManageAGs"></a> Creating and Managing an Availability Group  
+##  <a name="DeployManageAGs"></a> Criando e gerenciando um grupo de disponibilidade  
   
 |Cmdlets|Descrição|Com suporte em|  
 |-------------|-----------------|------------------|  
@@ -79,7 +79,7 @@ ms.locfileid: "47597865"
 |[**Set-SqlAvailabilityGroup**](/powershell/module/sqlserver/set-sqlavailabilitygroup)|Define as propriedades de um grupo de disponibilidade; coloca um grupo de disponibilidade online/offline|Instância de servidor que hospeda a réplica primária|  
 |[**Switch-SqlAvailabilityGroup**](/powershell/module/sqlserver/switch-sqlavailabilitygroup)|Inicia um dos seguintes formulários de failover:<br /><br /> Um failover forçado de um grupo de disponibilidade (com possível perda de dados).<br /><br /> Um failover manual de um grupo de disponibilidade.|Instância de servidor que hospeda a réplica secundária de destino|  
   
-##  <a name="AGlisteners"></a> Creating and Managing an Availability Group Listener  
+##  <a name="AGlisteners"></a> Criando e gerenciando um ouvinte de grupo de disponibilidade  
   
 |Cmdlet|Descrição|Com suporte em|  
 |------------|-----------------|------------------|  
@@ -96,7 +96,7 @@ ms.locfileid: "47597865"
 |[**Remove-SqlAvailabilityReplica**](/powershell/module/sqlserver/remove-sqlavailabilityreplica)|Exclui uma réplica de disponibilidade.|Instância de servidor que hospeda a réplica primária|  
 |[**Set-SqlAvailabilityReplica**](/powershell/module/sqlserver/set-sqlavailabilityreplica)|Define as propriedades de uma réplica de disponibilidade.|Instância de servidor que hospeda a réplica primária|  
   
-##  <a name="DeployManageDbs"></a> Adding and Managing an Availability Database  
+##  <a name="DeployManageDbs"></a> Adicionando e gerenciando um banco de dados de disponibilidade  
   
 |Cmdlets|Descrição|Com suporte em|  
 |-------------|-----------------|------------------|  
@@ -105,7 +105,7 @@ ms.locfileid: "47597865"
 |[**Resume-SqlAvailabilityDatabase**](/powershell/module/sqlserver/resume-sqlavailabilitydatabase)|Retoma a movimentação de dados para um banco de dados de disponibilidade suspenso.|As instância do servidor na qual o banco de dados é suspenso.|  
 |[**Suspend-SqlAvailabilityDatabase**](/powershell/module/sqlserver/suspend-sqlavailabilitydatabase)|Suspende a movimentação de dados para um banco de dados de disponibilidade.|Qualquer instância de servidor que hospeda uma réplica de disponibilidade.|  
   
-##  <a name="MonitorTblshtAGs"></a> Monitoring Availability Group Health  
+##  <a name="MonitorTblshtAGs"></a> Monitorando a integridade do grupo de disponibilidade  
  Os cmdlets [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a seguir permitem monitorar a integridade de um grupo de disponibilidade e de suas réplicas e bancos de dados.  
   
 > [!IMPORTANT]  
