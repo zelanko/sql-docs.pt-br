@@ -1,0 +1,89 @@
+items:
+- name: Azure Data Studio
+  href: what-is.md
+- name: Instalar
+  href: download.md
+- name: Notas de versão
+  href: release-notes.md
+- name: Guias de início rápido
+  items:
+  - name: Conectar-se ao SQL Server e consultá-lo
+    href: quickstart-sql-server.md
+  - name: Conectar-se a um Banco de Dados SQL do Azure e consultá-lo
+    href: quickstart-sql-database.md
+  - name: Conectar-se a um SQL Data Warehouse do Azure e consultá-lo
+    href: quickstart-sql-dw.md
+- name: Tutoriais
+  items:
+  - name: Editor T-SQL
+    href: tutorial-sql-editor.md
+  - name: 'Amostra de insight: consultas lentas'
+    href: tutorial-qds-sql-server.md
+  - name: 'Amostra de insight: uso de espaço de tabela'
+    href: tutorial-table-space-sql-server.md
+  - name: Criar um insight personalizado
+    href: tutorial-build-custom-insight-sql-server.md
+  - name: Backup e restauração
+    href: tutorial-backup-restore-sql-server.md
+- name: Guias de instruções
+  items:
+  - name: Painéis e widgets de insights
+    href: insight-widgets.md
+  - name: Snippets de código
+    href: code-snippets.md
+  - name: Terminal integrado (PowerShell, Bash)
+    href: integrated-terminal.md
+  - name: Atalhos de teclado
+    href: keyboard-shortcuts.md
+  - name: Explorar os recursos do SQL do Azure
+    href: azure-resource-explorer.md
+  - name: Grupos de servidores
+    href: server-groups.md
+  - name: Controle do código-fonte
+    href: source-control.md
+  - name: Configurações de espaço de trabalho e de usuário
+    href: settings.md
+  - name: Autenticação do Windows (Kerberos)
+    href: enable-kerberos.md
+  - name: Coleta de dados de uso
+    href: usage-data-collection.md
+- name: Extensões
+  items:
+  - name: Visão geral
+    href: extensions.md
+  - name: SQL Server 2019 (versão prévia)
+    href: sql-server-2019-extension.md
+  - name: SQL Server Agent (versão prévia)
+    href: sql-server-agent-extension.md
+  - name: SQL Server Import (versão prévia)
+    href: sql-server-import-extension.md
+  - name: SQL Server Profiler (versão prévia)
+    href: sql-server-profiler-extension.md
+- name: Criação de extensão
+  items:
+  - name: Visão geral da extensibilidade
+    href: extensibility.md
+  - name: Criação de extensão
+    href: extension-authoring.md
+  - name: Criar uma extensão
+    href: tutorial-create-extension.md
+  - name: APIs de extensibilidade
+    href: extensibility-apis.md
+- name: Recursos
+  items:
+  - name: Referência do Transact-SQL
+    href: ../t-sql/language-reference.md
+  - name: Repositório do GitHub do Azure Data Studio
+    href: https://www.github.com/Microsoft/azuredatastudio
+  - name: Blog do SQL Server
+    href: https://blogs.technet.microsoft.com/dataplatforminsider/
+- name: PERGUNTAS FREQUENTES
+  href: faq.md
+- name: Relatar problemas e dar sugestões
+  href: https://github.com/microsoft/azuredatastudio/issues
+ms.openlocfilehash: 7b3fd8c449344d123795c5ede2b7028a7730cff1
+ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46714161"

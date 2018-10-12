@@ -3,132 +3,417 @@ layout: HubPage
 hide_bc: true
 title: Documentação do Microsoft SQL | Microsoft Docs
 description: Aprenda sobre o SQL
-ms.date: 09/01/2018
-author: craigg-msft
-ms.author: craigg
-ms.topic: conceptual
-ms.prod: sql
-ms.technology: install
-ms.openlocfilehash: 20861197abd978fc6598d9290fffa5b0059f8153
-ms.sourcegitcommit: a083e9d59e2014a06cda9138b7e17c17ecab90e0
+author: barbkess
+ms.author: barbkess
+ms.topic: hub-page
+ms.technology:
+- database-engine
+ms.openlocfilehash: 5b7536cd31c0653625633356d301dc24f164b6ee
+ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44343121"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48232540"
 ---
 <div id="main" class="v2">
     <div class="container">
-        <h1>Documentação do SQL</h1>
+        <ul class="cardsY panelContent featuredContent">
+            <li>
+                <a href="https://www.microsoft.com/sql-server/sql-server-downloads">
+                    <div class="cardSize">
+                        <div class="cardPadding">
+                            <div class="card">
+                                <div class="cardImageOuter">
+                                    <div class="cardImage">
+                                        <img src="media/index/download-sql-server.svg" alt="" />
+                                    </div>
+                                </div>
+                                <div class="cardText">
+                                    <span class="likeAnH3">Baixar o SQL Server</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm">
+                    <div class="cardSize">
+                        <div class="cardPadding">
+                            <div class="card">
+                                <div class="cardImageOuter">
+                                    <div class="cardImage">
+                                        <img src="media/index/get-azure-sql-vm.svg" alt="" />
+                                    </div>
+                                </div>
+                                <div class="cardText">
+                                    <span class="likeAnH3">Obter uma VM do Azure com o SQL Server</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="/sql/ssms/download-sql-server-management-studio-ssms">
+                    <div class="cardSize">
+                        <div class="cardPadding">
+                            <div class="card">
+                                <div class="cardImageOuter">
+                                    <div class="cardImage">
+                                        <img src="media/index/download-ssms.svg" alt="" />
+                                    </div>
+                                </div>
+                                <div class="cardText">
+                                    <span class="likeAnH3">Baixar o SQL Server Management Studio</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="container">
+        <h1 class="screenReader">Documentação do Microsoft SQL</h1>
         <ul class="pivots">
             <li>
-                <a data-default="true" href="#main"></a>
-                <ul id="main">
+                <a href="#sqlserver">SQL Server</a>
+                <ul id="sqlserver">
                     <li>
-                        <a href="#databases">Bancos de dados</a>
-                        <ul id="databases" class="cardsL">
+                        <a href="#sqlserver"></a>
+                        <ul id="sqlserver" class="cardsL cols cols3">
+                            <li>
+                              <div class="cardSize">
+                                  <div class="cardPadding">
+                                      <div class="card">
+                                          <div class="cardImageOuter">
+                                              <div class="cardImage">
+                                                  <img src="media/index/windows.png" alt="" />
+                                              </div>
+                                          </div>
+                                          <div class="cardText">
+                                              <h3>SQL Server no Windows</h3>
+                                              <ul class="noBullet">
+                                              <li><a class="barLink" href="/sql/sql-server/sql-server-technical-documentation/"><strong>Local</strong></a></li>
+                                              <li><a class="barLink" href="/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview/"> <strong>Em uma VM do Azure</strong></a></li>
+                                              <li><a class="barLink" href="/sql/sql-server/what-s-new-in-sql-server-2017/"><strong>Novidades</strong></a></li>
+                                              </ul>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="cardSize">
+                                  <div class="cardPadding">
+                                      <div class="card">
+                                          <div class="cardImageOuter">
+                                              <div class="cardImage">
+                                                  <img src="media/index/azure.png" alt="" />
+                                              </div>
+                                          </div>
+                                          <div class="cardText">
+                                              <h3>SQL como um serviço do Azure</h3>
+                                              <ul class="noBullet">
+                                                  <li><a class="barLink" href="/azure/sql-database/"><strong>Banco de Dados SQL do Azure</strong></a></li>
+                                                  <li><a class="barLink" href="/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is/"> <strong>SQL Data Warehouse do Azure</strong></a></li>
+                                              </ul>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                            </li>
+                            <li>
+                                <div class="cardSize">
+                                    <div class="cardPadding">
+                                        <div class="card">
+                                            <div class="cardImageOuter">
+                                                <div class="cardImage">
+                                                    <img src="media/index/linux.png" alt="" />
+                                                </div>
+                                            </div>
+                                            <div class="cardText">
+                                                <h3>SQL Server no Linux</h3>
+                                                <ul class="noBullet">
+                                                    <li><a class="barLink" href="/sql/linux/sql-server-linux-overview/"><strong>Local</strong></a></li>
+                                                    <li><a class="barLink" href="/sql/linux/quickstart-install-connect-clouds/"> <strong>Em uma VM do Azure</strong></a></li>
+                                                    <li><a class="barLink" href="/sql/linux/sql-server-linux-whats-new/"><strong>Novidades</strong></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
                             <li class="fullSpan">
-                                <div class="container intro">
-                                    <p>Gerenciar dados relacionais com bancos de dados SQL em seu datacenter ou no Azure. Usar o machine learning e a análise para aprofundar-se nos dados do SQL. </p>
-                                </div>
+                                <ul class="cardsC panelContent singlePanelContent cols cols4" style="display:flex!important;">
+                                    <li>
+                                      <a href="/sql/lp/sql-server/install-sql-and-services/">
+                                          <div class="cardSize">
+                                              <div class="cardPadding">
+                                                  <div class="card">
+                                                      <div class="cardImageOuter">
+                                                          <div class="cardImage">
+                                                              <img src="media/index/install-or-upgrade.svg" alt="" />
+                                                          </div>
+                                                      </div>
+                                                      <div class="cardText">
+                                                          <h3>Instalar ou atualizar</h3>
+                                                          <p>Introdução à documentação detalhando como instalar e atualizar o SQL Server e os serviços associados a ele.</p>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="/sql/lp/sql-server/business-continuity/">
+                                          <div class="cardSize">
+                                              <div class="cardPadding">
+                                                  <div class="card">
+                                                      <div class="cardImageOuter">
+                                                          <div class="cardImage">
+                                                              <img src="media/index/business-continuity.svg" alt="" />
+                                                          </div>
+                                                      </div>
+                                                      <div class="cardText">
+                                                          <h3>Continuidade de negócios</h3>
+                                                          <p><b>Alta disponibilidade, recuperação de desastres, Grupo de disponibilidade Always On, instância de cluster de failover do Always On, espelhamento de banco de dados, backup e restauração</b></p>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="/sql/lp/sql-server/secure-sql-server/">
+                                          <div class="cardSize">
+                                              <div class="cardPadding">
+                                                  <div class="card">
+                                                      <div class="cardImageOuter">
+                                                          <div class="cardImage">
+                                                              <img src="media/index/secure-sql-server.svg" alt="" />
+                                                          </div>
+                                                      </div>
+                                                      <div class="cardText">
+                                                          <h3>Segurança</h3>
+                                                          <p><b>Permissões de gerenciamento de acesso, Always Encrypted, TDE, SSL</b></p>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="/sql/lp/sql-server/manage-monitor-tune/">
+                                          <div class="cardSize">
+                                              <div class="cardPadding">
+                                                  <div class="card">
+                                                      <div class="cardImageOuter">
+                                                          <div class="cardImage">
+                                                              <img src="media/index/manage-monitor-tune.svg" alt="" />
+                                                          </div>
+                                                      </div>
+                                                      <div class="cardText">
+                                                          <h3>Gerenciar, monitorar e ajustar</h3>
+                                                          <p><b>Planos de manutenção, SQL Profiler, Ajuste automático, o OLTP in-memory, partições, estatísticas, índices, estimativa de cardinalidade </b>  </p>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="/sql/lp/sql-server/load-move-data/">
+                                          <div class="cardSize">
+                                              <div class="cardPadding">
+                                                  <div class="card">
+                                                      <div class="cardImageOuter">
+                                                          <div class="cardImage">
+                                                              <img src="media/index/load-move-data.svg" alt="" />
+                                                          </div>
+                                                      </div>
+                                                      <div class="cardText">
+                                                          <h3>Migrar, carregar e mover dados</h3>
+                                                          <p><b>Assistentes de migração, Integration Services, assistente de importação e exportação, replicação </b> </p>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="/sql/lp/sql-server/database-design/">
+                                          <div class="cardSize">
+                                              <div class="cardPadding">
+                                                  <div class="card">
+                                                      <div class="cardImageOuter">
+                                                          <div class="cardImage">
+                                                              <img src="media/index/database-design.svg" alt="" />
+                                                          </div>
+                                                      </div>
+                                                      <div class="cardText">
+                                                          <h3>Design do banco de dados</h3>
+                                                          <p><b>FileStream, Filetable, dados espaciais, exibições, gatilhos, grafos, números de sequência, procedimentos armazenados, controle de alterações </b> </p>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="/sql/lp/sql-server/query-data/">
+                                          <div class="cardSize">
+                                              <div class="cardPadding">
+                                                  <div class="card">
+                                                      <div class="cardImageOuter">
+                                                          <div class="cardImage">
+                                                              <img src="media/index/query-data.svg" alt="" /> 
+                                                          </div>
+                                                      </div>
+                                                      <div class="cardText">
+                                                          <h3>Consultar dados</h3>
+                                                          <p><b>Cursores, sinônimos, scripts, uniões, funções definidas pelo usuário, pesquisa de texto completo </b></p>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </a>
+                                    </li>
+                                    <li>
+                                      <a href="/sql/lp/sql-server/sql-education-center/">
+                                          <div class="cardSize">
+                                              <div class="cardPadding">
+                                                  <div class="card">
+                                                      <div class="cardImageOuter">
+                                                          <div class="cardImage">
+                                                              <img src="media/index/learn-sql.svg" alt="" />
+                                                          </div>
+                                                      </div>
+                                                      <div class="cardText">
+                                                          <h3>Aprenda sobre o SQL Server</h3>
+                                                          <p>Saiba mais sobre os recursos internos de arquiteturas do SQL Server com uma série de tutoriais e guias. </p>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </a>
+                                    </li>
+                                </ul>
                             </li>
-                             <li>
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardText">
-                                                <h3 class="bgdAccent1" style="padding:20px;">Bancos de dados</h3>
-                                                <h4>SQL</h4>
-                                                <ul class="noBullet">
-                                                    <li><a class="barLink" href="https://docs.microsoft.com/azure/sql-database/">Banco de Dados SQL do Azure</a></li>
-                                                    <li><a class="barLink" href="https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is">Azure SQL Data Warehouse</a></li>                                                    <li><a class="barLink" href="/sql/sql-server/sql-server-technical-documentation?view=sql-server-2017">SQL Server 2017</a></li>
-                                                    <li><a class="barLink" href="/sql/sql-server/sql-server-technical-documentation?view=sql-server-2016">SQL Server 2016</a></li>
-                                                    <li><a class="barLink" href="/sql/2014-toc/books-online-for-sql-server-2014?view=sql-server-2014">SQL Server 2014</a></li>
-                                                    <li><a class="barLink" href="https://docs.microsoft.com/en-us/previous-versions/sql/">Versões anteriores do SQL Server (2005 – 2012)</a></li>
-                                                    <li><a class="barLink" href="/sql/analytics-platform-system/index">Analytics Platform System – Parallel Data Warehouse</a><li>
-                                                </ul>
-                                                <h4>Executados no Windows ou Linux</h4>
-                                                <ul class="noBullet">
-                                                    <li><a class="barLink" href="/sql/linux/sql-server-linux-overview">SQL Server no Linux</a></li>
-                                                    <li><a class="barLink" href="/azure/virtual-machines/linux/">Máquinas virtuais do Linux</a></li>
-                                                    <li><a class="barLink" href="/azure/virtual-machines/windows/">Máquinas virtuais do Windows</a></li>
-                                                </ul>
-                                                <h4>SQL de software livre</h4>
-                                                <ul class="noBullet">
-                                                    <li><a class="barLink" href="/azure/postgresql/">Banco de Dados do Azure para PostgreSQL</a></li>
-                                                    <li><a class="barLink" href="/azure/mysql/">Banco de Dados do Azure para MySQL</a></li>
-                                                </ul>
-                                                <h4>NoSQL</h4>
-                                                <ul class="noBullet">
-                                                    <li><a class="barLink" href="/azure/cosmos-db/">Cosmos DB</a></li>
-                                                </ul>
-                                            </div>
-                                         </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardText">
-                                                <h3 class="bgdAccent1" style="padding:20px;">Desenvolver</h3>
-                                                <h4>Design</h4>
-                                                <ul class="noBullet">
-                                                    <li><a class="barLink" href="/sql/connect/homepage-sql-connection-programming">Conectar-se com aplicativos cliente</a></li>
-                                                    <li><a class="barLink" href="/sql/relational-databases/database-features">Conceitos de banco de dados relacional</a></li>
-                                                    <li><a class="barLink" href="/sql/relational-databases/security">Segurança do SQL</a></li>
-                                                </ul>
-                                                <h4>Ferramentas</h4>
-                                                <ul class="noBullet">
-                                                    <li><a class="barLink" href="/sql/sql-operations-studio/download">SQL Operations Studio <sup>VERSÃO PRÉVIA</sup></a></li>   <li><a class="barLink" href="/sql/ssms/download-sql-server-management-studio-ssms">SSMS (SQL Server Management Studio)</a></li>
-                                                    <li><a class="barLink" href="/sql/ssdt/download-sql-server-data-tools-ssdt">SSDT (SQL Server Data Tools)</a></li>
-                                                    <li><a class="barLink" href="/sql/tools/overview-sql-tools">Consulte todas as ferramentas do SQL</a></li>
-                                                </ul>
-                                                <h4>Referência</h4>
-                                                <ul class="noBullet">
-                                                    <li><a class="barLink" href="/sql/t-sql/language-reference">T-SQL</a></li>
-                                                    <li><a class="barLink" href="/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views">DMVs</a></li>
-                                                    <li><a class="barLink" href="/sql/powershell/sql-server-powershell">PowerShell</a></li>
-                                                    <li><a class="barLink" href="/sql/xquery/xquery-language-reference-sql-server">XQuery</a></li>
-                                                </ul>
-                                                <h4>Exemplos</h4>
-                                                <ul class="noBullet">
-                                                    <li><a class="barLink" href="https://github.com/Microsoft/sql-server-samples/tree/master/samples">Exemplos de código no GitHub</a></li>
-                                                    <li><a class="barLink" href="https://docs.microsoft.com/en-us/sql/samples/wide-world-importers-what-is?view=sql-server-2017">BD dos Importadores Internacionais</a></li>
-                                                    <li><a class="barLink" href="https://docs.microsoft.com/sql/samples/sql-samples-where-are?view=sql-server-2017">BD do AdventureWorks</a></li>
-                                                </ul>
+                            <li class="fullSpan">
+                                <ul class="cardsL panelContent singlePanelContent" style="display:flex!important;">
+                                    <li>
+                                        <div class="cardSize">
+                                            <div class="cardPadding">
+                                                <div class="card">
+                                                  <div class="cardText">
+                                                        <h3>Design</h3>
+                                                        <ul class="noBullet">
+                                                          <li><a class="barLink" href="/sql/relational-databases/database-features/">Conceitos de banco de dados relacional</a></li>
+                                                            <li><a class="barLink" href="/sql/connect/homepage-sql-connection-programming/">Conectar-se com aplicativos cliente locais</a></li>
+                                                            <li><a class="barLink" href="/azure/sql-database/sql-database-libraries">Bibliotecas de conectividade do Azure SQL DB</a></li>
+                                                            <li><a class="barLink" href="/sql/relational-databases/sql-database-develop-overview/">Aplicativos do Azure SQL DB</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="cardSize">
-                                    <div class="cardPadding">
-                                        <div class="card">
-                                            <div class="cardText">
-                                                <h3 class="bgdAccent1" style="padding:20px;">Análise de Dados</h3>
-                                                <h4>Análise</h4>
-                                                <ul class="noBullet">
-                                                    <li><a class="barLink" href="/sql/analysis-services/analysis-services">SQL Server Analysis Services (2016, 2017)</a></li>
-                                                    <li><a class="barLink" href="https://msdn.microsoft.com/en-us/library/bb522607(v=sql.120).aspx">SQL Server 2014 Analysis Services</a></li>
-                                                    <li><a class="barLink" href="https://msdn.microsoft.com/en-us/library/bb522607(v=sql.110).aspx">SQL Server 2012 Analysis Services</a></li>
-                                                    <li><a class="barLink" href="/azure/analysis-services/">Azure Analysis Services</a></li>
-                                                    <li><a class="barLink" href="https://docs.microsoft.com/azure/machine-learning/">Azure Machine Learning</a></li>
-                                                    <li><a class="barLink" href="https://docs.microsoft.com/sql/advanced-analytics/r/r-services">Serviços de aprendizado de máquina do SQL Server</a></li>
-                                                    <li><a class="barLink" href="https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone">Servidor do Machine Learning (autônomo)</a></li>
-                                                </ul>
-                                                <h4>Relatório</h4>
-                                                <ul class="noBullet">
-                                                    <li><a class="barLink" href="/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports">SQL Server Reporting Services (2016, 2017)</a></li>
-                                                    <li><a class="barLink" href="https://msdn.microsoft.com/en-us/library/ms159106(v=sql.120).aspx">SQL Server 2014 Reporting Services</a></li>
-                                                    <li><a class="barLink" href="https://msdn.microsoft.com/en-us/library/ms159106(v=sql.110).aspx">SQL Server 2012 Reporting Services</a></li>
-                                                    <li><a class="barLink" href="https://powerbi.microsoft.com/en-us/documentation/powerbi-service-get-started/">Serviço do Power BI</a></li>
-                                                </ul>
+                                    </li>
+                                    <li>
+                                        <div class="cardSize">
+                                            <div class="cardPadding">
+                                                <div class="card">
+                                                  <div class="cardText">
+                                                        <h3>Ferramentas</h3>
+                                                        <ul class="noBullet">
+                                                            <li><a class="barLink" href="/sql/ssms/download-sql-server-management-studio-ssms">SSMS (SQL Server Management Studio)</a></li>
+                                                            <li><a class="barLink" href="/sql/azure-data-studio/download/">Azure Data Studio</a></li> 
+                                                            <li><a class="barLink" href="/sql/ssdt/download-sql-server-data-tools-ssdt">SSDT (SQL Server Data Tools)</a></li>
+                                                            <li><a class="barLink" href="/sql/tools/overview-sql-tools">Outras ferramentas do SQL</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
+                                    </li>
+                                    <li>
+                                        <div class="cardSize">
+                                            <div class="cardPadding">
+                                                <div class="card">
+                                                    <div class="cardText">
+                                                        <h3>Referência</h3>
+                                                <table cellpadding="0" cellspacing="0" border="0"><tr><td style="border-top-color:transparent!important;padding-left:0;">
+                                                <ul class="noBullet">
+                                                    <li><a class="barLink" href="/sql/xquery/xquery-language-reference-sql-server">xQuery</a></li>
+                                                    <li><a class="barLink" href="/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views/">DMVs</a></li>
+                                                    <li><a class="barLink" href="/sql/powershell/sql-server-powershell">Powershell</a></li>
+                                                </ul></td>
+                                                <td style="border-top-color:transparent!important;padding-left:0;">
+                                                <ul class="noBullet">
+                                                     <li><a class="barLink" href="/sql/t-sql/language-reference">Transact-SQL (T-SQL)</a></li>
+                                                     <li><a class="barLink" href="/sql/samples/sql-samples-where-are/">Exemplos de banco de dados</a></li>
+                                                     <li><a class="barLink" href="/previous-versions/sql/">Conteúdo arquivado (SQL 2005 a 2012)</a></li>
+                                                </ul></td></tr></table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="fullSpan">
+                                <ul class="cardsL panelContent singlePanelContent" style="display:flex!important;">
+                                    <li>
+                                        <div class="cardSize">
+                                            <div class="cardPadding">
+                                                <div class="card">
+                                                  <div class="cardText">
+                                                        <h3>Relatório</h3>
+                                                        <ul class="noBullet">
+                                                             <li><a class="barLink" href="/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports/">SQL Server Reporting Services</a></li>
+                                                            <li><a class="barLink" href="/power-bi/service-get-started/">Serviço do Power BI</a></li>
+                                                            <li><a class="barLink" href="/power-bi/report-server/get-started/">Servidor de relatórios do PowerBI</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="cardSize">
+                                            <div class="cardPadding">
+                                                <div class="card">
+                                                  <div class="cardText">
+                                                        <h3>Análise de Dados</h3>
+                                                        <ul class="noBullet">
+                                                        <li><a class="barLink" href="/sql/analytics-platform-system/">Microsoft Analytics Platform System</a></li>
+                                                            <li><a class="barLink" href="/sql/relational-databases/polybase/polybase-guide/">Polybase</a></li>
+                                                            <li><a class="barLink" href="/sql/analysis-services/analysis-services">SQL Server Analysis Services</a></li>
+                                                            <li><a class="barLink" href="/azure/analysis-services/">Azure Analysis Services</a></li>
+                                                       </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="cardSize">
+                                            <div class="cardPadding">
+                                                <div class="card">
+                                                  <div class="cardText">
+                                                        <h3>IA e Machine Learning</h3>
+                                                        <ul class="noBullet">
+                                                            <li><a class="barLink" href="/sql/advanced-analytics/what-is-sql-server-machine-learning">Serviços de Machine Learning do SQL</a></li>
+                                                            <li><a class="barLink" href="/sql/sql/advanced-analytics/r/sql-server-r-services">R Services</a></li>
+                                                            <li><a class="barLink" href="/azure/machine-learning/">Azure Machine Learning</a></li>
+                                                       </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
                     </li>
@@ -136,4 +421,27 @@ ms.locfileid: "44343121"
             </li>
         </ul>
     </div>
-</div>
+<div class="container centered pageFooter">
+        <h2>Mantenha contato conosco</h2>
+        <ul class="links">
+           <li>
+                <a href="http://aka.ms/editsqldocs" data-linktype="external"> Contribua com a documentação do SQL </a>
+            </li>
+           <li>
+                <a href="http://aka.ms/sqldocsurvey" data-linktype="external"> Comentários sobre a documentação do SQL </a>
+            </li>
+           <li>
+                <a href="https://cloudblogs.microsoft.com/sqlserver/" data-linktype="external"> Blog </a>
+            </li>
+            <li>
+                <a href="https://twitter.com/sqldocs" data-linktype="external"> Twitter </a>
+            </li>
+            <li>
+                <a href="https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqldatabaseengine&filter=alltypes&sort=lastpostdesc" data-linktype="external"> Fórum do MSDN </a>
+            </li>
+            <li>
+                <a href="https://feedback.azure.com/forums/908035-sql-server" data-linktype="external"> Voz do Usuário </a>
+            </li>
+        </ul>
+    </div>
+

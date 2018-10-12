@@ -40,6 +40,17 @@ items:
   href: use-column-sets.md
 - name: Usar parâmetros com valor de tabela (Mecanismo de Banco de Dados)
   href: use-table-valued-parameters-database-engine.md
+- name: Restrições do Edge
+  href: graph-edge-constraints.md
+  items:
+  - name: Criar
+    href: create-edge-constraints.md
+  - name: DELETE
+    href: delete-edge-constraint.md
+  - name: Modificar
+    href: modify-edge-constraint.md
+  - name: Exibição
+    href: view-edge-constraint-properties.md
 - name: Restrições de chave primária e chave estrangeira
   href: primary-and-foreign-key-constraints.md
   items:
@@ -130,9 +141,9 @@ items:
     href: lesson-1-converting-a-table-to-a-hierarchical-structure.md
   - name: 'Lição 2: Criando e gerenciando dados em uma tabela hierárquica'
     href: lesson-2-creating-and-managing-data-in-a-hierarchical-table.md
-ms.openlocfilehash: fd255928f82fec333250060f5f70639eeb19aa8e
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.openlocfilehash: 9d65ec6e5e5367da83a163d7ca8ee8e2040f6153
+ms.sourcegitcommit: 2420c57d2952add3697dbe0467ee1d755c5c2ee5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42782047"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47217501"
