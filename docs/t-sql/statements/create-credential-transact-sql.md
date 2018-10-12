@@ -5,9 +5,7 @@ ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREDENTIAL_TSQL
@@ -23,17 +21,16 @@ helpviewer_keywords:
 - CREATE CREDENTIAL statement
 - credentials [SQL Server], CREATE CREDENTIAL statement
 ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
-caps.latest.revision: 51
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 58250bd30559b497d6e2ab841086f9e5bbb26ffd
-ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
+ms.openlocfilehash: fb335a8be8f5006421c98ac98ac6974a1603f640
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44171608"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47608838"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -59,13 +56,13 @@ WITH IDENTITY = 'identity_name'
  *credential_name*  
  Especifica o nome da credencial que está sendo criada. *credential_name* não pode começar com a tecla jogo da velha (#). As credenciais de sistema começam com ##.  Ao usar uma SAS (assinatura de acesso compartilhado), esse nome deve corresponder ao caminho do contêiner, começar com https e não deve conter uma barra "/". Veja o exemplo D abaixo.  
   
- IDENTITY **='***identity_name***'**  
+ IDENTITY **='**_identity\_name_**'**  
  Especifica o nome da conta a ser usada ao conectar o servidor externamente. Quando a credencial é usada para acessar o Azure Key Vault, o **IDENTITY** é o nome do cofre de chaves. Veja o exemplo C a seguir. Quando a credencial usa uma SAS (assinatura de acesso compartilhado), a **IDENTITY** é *SHARED ACCESS SIGNATURE*. Veja o exemplo D abaixo.  
  
 > [!IMPORTANT]
 > O Banco de dados SQL do Azure é compatível apenas as identidades do Azure Key Vault e com Assinatura de Acesso Compartilhado. Não há suporte para identidades de usuário do Windows.
  
- SECRET **='***secret***'**  
+ SECRET **='**_secret_**'**  
  Especifica o segredo necessário para a autenticação de saída.  
   
  Quando a credencial é usada para acessar o Azure Key Vault, o argumento **SECRET** de **CREATE CREDENTIAL** exige que a *\<Client ID>* (sem hifens) e o *\<Secret>* de uma **Entidade de Serviço** no Azure Active Directory sejam passados juntos sem um espaço entre eles. Veja o exemplo C a seguir. Quando a credencial usa uma assinatura de acesso compartilhado, o **SECRET** é o token de assinatura de acesso compartilhado. Veja o exemplo D abaixo.  Para obter informações sobre como criar uma política de acesso armazenado e uma assinatura de acesso compartilhado em um contêiner do Azure, consulte [Lição 1: Criar uma política de acesso armazenado e uma assinatura de acesso compartilhado em um contêiner do Azure](../../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md).  

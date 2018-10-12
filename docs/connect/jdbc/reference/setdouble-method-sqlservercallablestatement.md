@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.setDouble
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: c054bb84-1292-4b70-b574-2ae189cd4e68
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1445675e81ae6c86bb3e5d00166163a45e468293
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 7ebb554c0fada590e22a151293738bd16b7447f4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843431"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47839164"
 ---
 # <a name="setdouble-method-sqlservercallablestatement"></a>Método setDouble (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Define o parâmetro designado como o determinado **duplo** valor.  
+  Define o parâmetro designado como o valor **double** fornecido.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -44,17 +41,17 @@ public void setDouble(java.lang.String sCol,
   
  Uma **String** que contém o nome do parâmetro.  
   
- *D*  
+ *d*  
   
- Um **duplo** valor.  
+ Um **duplas** valor.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método setDouble é especificado pelo método setDouble na interface do CallableStatement.  
+ Esse método setDouble é especificado pelo método setDouble na interface java.sql.CallableStatement.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Membros SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Classe SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

@@ -5,28 +5,25 @@ ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - connecting to the server, Windows Authentication
 ms.assetid: f403a4e0-b0a8-4939-9dc1-e1209626367e
-caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 70c2c0f9316384d831af7d7ce317d16bdc3c41a6
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: c78506897432cdbfa4f4dd926e3f6035fb1881f3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307395"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47759935"
 ---
 # <a name="how-to-connect-using-windows-authentication"></a>Como se conectar usando a Autenticação do Windows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Por padrão, os [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] usam a Autenticação do Windows para se conectar ao SQL Server. É importante observar que na maioria dos cenários, isso significa que o identidade de processo do servidor Web ou a identidade do thread (se o servidor Web estiver usando representação) é usada para se conectar ao servidor, não a identidade de um usuário final.  
+Por padrão, os [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] usam a Autenticação do Windows para se conectar ao SQL Server. É importante observar que, na maioria dos cenários, isso significa que a identidade do processo ou do thread do servidor Web (se o servidor Web estiver usando representação) será usada para a conexão ao servidor e não a identidade de um usuário final.  
   
 Os seguintes pontos devem ser considerados ao usar a Autenticação do Windows para se conectar ao SQL Server:  
   
@@ -48,7 +45,7 @@ Se a Autenticação do Windows não é uma opção prática, consulte [How to: C
 ## <a name="example"></a>Exemplo  
 O exemplo a seguir usa o driver SQLSRV dos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]com Autenticação do Windows para se conectar a uma instância local do SQL Server. Depois que a conexão tiver sido estabelecida, o servidor será consultado para o logon do usuário que está acessando o banco de dados.  
   
-O exemplo supõe que SQL Server e o [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) banco de dados são instalados no computador local. Toda a saída é gravada no navegador quando o exemplo é executado do navegador.  
+O exemplo supõe que o SQL Server e o banco de dados [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) estejam instalados no computador local. Toda a saída é gravada no navegador quando o exemplo é executado do navegador.  
   
 ```  
 <?php  
@@ -108,20 +105,20 @@ while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){
 ?>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Como se conectar usando a Autenticação do SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md)
 
-[Programação de guia para os Drivers da Microsoft para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Guia de programação para os Drivers da Microsoft para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [Sobre exemplos de código na documentação](../../connect/php/about-code-examples-in-the-documentation.md)
 
-[Como: criar um logon do SQL Server](../../relational-databases/security/authentication-access/create-a-login.md)
+[Como criar um logon do SQL Server](../../relational-databases/security/authentication-access/create-a-login.md)
 
-[Como: criar um usuário de banco de dados](../../relational-databases/security/authentication-access/create-a-database-user.md)
+[Como criar um usuário de banco de dados](../../relational-databases/security/authentication-access/create-a-database-user.md)
 
 [Gerenciando usuários, funções e logons](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
 
-[Separação do esquema de usuário](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
+[Separação do Esquema de Usuário](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
 
 [Conceder permissões de objeto (Transact-SQL)](../../t-sql/statements/grant-object-permissions-transact-sql.md)  
   

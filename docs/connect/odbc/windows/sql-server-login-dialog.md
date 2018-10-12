@@ -5,35 +5,32 @@ ms.date: 03/21/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: 22
 author: MightyPen
 ms.author: v-jizho2
 manager: craigg
-ms.openlocfilehash: 3dcd7f9d5d3807858ae13a9ded3a2164eca20b45
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 58248a2772377ccecba0c701d03276025785c964
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32855351"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47698054"
 ---
 # <a name="sql-server-login-dialog-box-odbc"></a>Caixa de diálogo Logon do SQL Server (ODBC)
 
-Quando você chama uma conexão ODBC sem especificar informações suficientes para o driver para se conectar a um SQL Server, o ODBC driver exibe o **logon do SQL Server** caixa de diálogo.
+Quando você chama uma conexão ODBC sem especificar informações suficientes para que o driver se conecte a um SQL Server, o driver ODBC exibe a caixa de diálogo **Logon do SQL Server**.
 
 ## <a name="options"></a>Opções
 
 ### <a name="server"></a>Servidor
 
-O nome de uma instância do SQL Server em sua rede. Selecione um nome de servidor \ instância na lista ou digite o nome de servidor \ instância no **Server** caixa. Opcionalmente, você pode criar um alias de servidor no computador cliente usando **SQL Server Configuration Manager**e digite esse nome de **Server** caixa.
+O nome de uma instância do SQL Server em sua rede. Selecione um nome de servidor\instância na lista ou digite o nome do servidor\instância na caixa **Servidor**. Se desejar, crie um alias de servidor no computador cliente usando o **SQL Server Configuration Manager** e digite esse nome na caixa **Servidor**.
 
-Você pode digitar "(local)" quando você estiver usando o mesmo computador que o SQL Server. Em seguida, você pode se conectar a uma instância local do SQL Server, mesmo se estiver executando uma versão fora da rede do SQL Server.
+Digite "(local)" quando estiver usando o mesmo computador como SQL Server. Assim, você pode se conectar a uma instância local do SQL Server, até mesmo ao executar uma versão não em rede do SQL Server.
 
-Para obter mais informações sobre nomes de servidor para diferentes tipos de redes, consulte a documentação de instalação do SQL Server nos Manuais Online do SQL Server.
+Para obter mais informações sobre nomes de servidor para diferentes tipos de rede, confira a documentação de instalação do SQL Server nos Manuais Online do SQL Server.
 
 ### <a name="authentication-mode"></a>Modo de Autenticação
 
@@ -42,9 +39,9 @@ Seleciona o modo de autenticação de um dos seguintes:
 - **Integrada do Windows** autenticação usando a conta do usuário conectado no momento
 - **Senha do Active Directory** com ID de logon e senha
 - **Integrado ao Active Directory** autenticação usando a conta do usuário conectado no momento
-- **Active Directory interativo** autenticação com a ID de logon
+- Autenticação **Interativa do Active Directory** com ID de logon
 
-Consulte [dados fonte Assistente tela 2](../../../connect/odbc/windows/dsn-wizard-2.md) para obter mais informações sobre os modos de autenticação.
+Ver [dados de origem Assistente tela 2](../../../connect/odbc/windows/dsn-wizard-2.md) para obter mais informações sobre os modos de autenticação.
 
 ### <a name="server-spn"></a>SPN do servidor
 
@@ -52,19 +49,19 @@ Se você usar uma conexão confiável, poderá especificar um SPN (nome de entid
 
 ### <a name="login-id"></a>ID de Logon
 
-Especifica a ID de logon do SQL Server ou do Active Directory do Azure a ser usado para a conexão se **modo de autenticação** é definido como **do SQL Server** ou **senha do Active Directory** ou **Do active Directory interativo**. Caso contrário, o **ID de logon** caixa está desabilitada.
+Especifica a ID de logon do SQL Server ou do Active Directory do Azure a ser usado para a conexão se **modo de autenticação** é definido como **SQL Server** ou **senha do Active Directory** ou **Interativa do Active Directory**. Caso contrário, o **ID de logon** caixa está desabilitada.
 
 ### <a name="password"></a>Senha
 
-Especifica a senha para a ID de logon do SQL Server ou do Active Directory do Azure usada para a conexão se **modo de autenticação** é definido como **do SQL Server** ou **senhadoActiveDirectory**. Caso contrário, o **senha** caixa está desabilitada.
+Especifica a senha para a ID de logon do SQL Server ou o Azure Active Directory usada para a conexão se **modo de autenticação** é definido como **SQL Server** ou **senhadoActiveDirectory**. Caso contrário, o **senha** caixa está desabilitada.
 
 ### <a name="options"></a>Opções
 
-Exibe ou oculta o **opções** grupo. O **opções** botão é habilitado se **Server** tem um valor.
+Exibe ou oculta o grupo **Opções**. O botão **Opções** será habilitado se **Servidor** tiver um valor.
 
 ### <a name="change-password"></a>Alterar Senha
 
-Quando essa caixa é selecionada, exibe o **nova senha** e **Confirmar nova senha** caixas.
+Quando essa caixa está selecionada, exibe as caixas **Nova Senha** e **Confirmar Nova Senha**.
 
 ### <a name="new-password"></a>Nova Senha
 
@@ -78,7 +75,7 @@ Especifica a nova senha uma segunda vez, para confirmação.
 
 Especifica o banco de dados padrão a ser usado na conexão. Essa configuração substitui o banco de dados padrão especificado para o logon no servidor. Se nenhum banco de dados for especificado, a conexão usará o banco de dados padrão especificado para o logon no servidor.
 
-### <a name="mirror-server"></a>Servidor espelho
+### <a name="mirror-server"></a>Servidor Espelho
 
 Especifica o nome do parceiro de failover do banco de dados a ser espelhado.
 
@@ -86,26 +83,26 @@ Especifica o nome do parceiro de failover do banco de dados a ser espelhado.
 
 Se desejar, especifique um SPN para o servidor espelho. O SPN do servidor espelho é usado para autenticação mútua entre cliente e servidor.
 
-### <a name="language"></a>Idioma
+### <a name="language"></a>Linguagem
 
-Especifica o idioma nacional a ser usado para mensagens de sistema do SQL Server. O computador executando o SQL Server deve ter o idioma instalado. Essa configuração substitui o idioma padrão especificado para o logon no servidor. Se nenhum idioma for especificado, a conexão usará o idioma padrão especificado para o logon no servidor.
+Especifica o idioma nacional a ser usado para mensagens de sistema do SQL Server. O computador que executa o SQL Server deve ter o idioma instalado. Essa configuração substitui o idioma padrão especificado para o logon no servidor. Se nenhum idioma for especificado, a conexão usará o idioma padrão especificado para o logon no servidor.
 
 ### <a name="application-name"></a>Nome do Aplicativo
 
-(Opcional) Especifica o nome do aplicativo a ser armazenado na **program_name** coluna na linha para essa conexão em **sys. sysprocesses**.
+(Opcional) Especifica o nome do aplicativo a ser armazenado na coluna **program_name** na linha dessa conexão em **sys.sysprocesses**.
 
 ### <a name="workstation-id"></a>ID da Estação de Trabalho
 
-(Opcional) Especifica a ID de estação de trabalho a ser armazenado na **hostname** coluna na linha para essa conexão em **sys. sysprocesses**.
+(Opcional) Especifica a ID da estação de trabalho a ser armazenada na coluna **hostname** na linha dessa conexão em **sys.sysprocesses**.
 
 ### <a name="use-strong-encryption-for-data"></a>Usar criptografia forte para dados
 
 Quando selecionada, os dados que são passados por meio de conexão serão criptografados. Os logons são criptografados por padrão, até mesmo quando a caixa de seleção está desmarcada.
 
-### <a name="trust-server-certificate"></a>Certificado do servidor confiável
+### <a name="trust-server-certificate"></a>Confiar em certificado do servidor
 
 Essa opção é aplicável somente quando **usar criptografia forte para dados** está habilitado. Quando selecionada, o certificado do servidor não será validado para que o nome de host correto do servidor e ser emitido por uma autoridade de certificação confiável.
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 
 [Microsoft ODBC Driver for SQL Server no Windows](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)

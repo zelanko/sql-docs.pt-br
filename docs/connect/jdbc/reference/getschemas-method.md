@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.getSchemas
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: adba0ee6-ff6d-4215-b646-62c735be3fe9
-caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bdfcd711d1ddc2b36fe4524b14cd12455f346b30
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 72ff77a7284368f901667febfd8853fb2bb7f873
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42786588"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47611990"
 ---
 # <a name="getschemas-method-"></a>Método getSchemas ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,7 +42,7 @@ public java.sql.ResultSet getSchemas()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método getSchemas é especificado pelo método getSchemas na interface DatabaseMetadata.  
+ Esse método getSchemas é especificado pelo método getSchemas na interface java.sql.DatabaseMetaData.  
   
  O conjunto de resultados retornado pelo método getSchemas contém as seguintes informações:  
   

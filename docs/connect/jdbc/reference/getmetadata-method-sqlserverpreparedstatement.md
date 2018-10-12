@@ -1,13 +1,11 @@
 ---
-title: Método (SQLServerPreparedStatement) getMetaData | Microsoft Docs
+title: Método getMetaData (SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerPreparedStatement.getMetaData
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 5ed49a53-ed61-4e95-ad67-45957aaabb6a
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 45a890d293530ad73110bb9e81f71de98fce8c54
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: eab31765374c30436062b9d0a7eaa3783c3e651f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32835581"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47804804"
 ---
-# <a name="getmetadata-method-sqlserverpreparedstatement"></a>getMetaData método (SQLServerPreparedStatement)
+# <a name="getmetadata-method-sqlserverpreparedstatement"></a>Método getMetaData (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera um [classe SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md) que contém informações sobre as colunas do objeto de [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objeto que será retornado quando isso [ SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) objeto é executado.  
+  Recupera um objeto [SQLServerResultSetMetaData Class](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md) que contém informações sobre as colunas do objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) que será retornado quando o objeto [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) for executado.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,16 +35,16 @@ ms.locfileid: "32835581"
 public final java.sql.ResultSetMetaData getMetaData()  
 ```  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  Um objeto ResultSetMetaData.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método getMetaData é especificado pelo método getMetaData na interface PreparedStatement.  
+ Esse método getMetaData é especificado pelo método getMetaData na interface do PreparedStatement.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Membros de SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [Classe SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   

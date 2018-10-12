@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerPreparedStatement.setObject (int, java.lang.Object)
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 61f19faa-3006-4a1c-974c-55951e3b3000
-caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cac0013c8867bce46dc9fd8ebbae9d0b0c487259
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: e8c01241d6dc257808a91ba3772a8a4ed8ffbc94
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42783976"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47652184"
 ---
 # <a name="setobject-method-int-javalangobject"></a>Método setObject (int, java.lang.Object)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,7 +49,7 @@ public final void setObject(int index,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método setObject é especificado pelo método setObject na interface do PreparedStatement.  
+ Esse método setObject é especificado pelo método setObject na interface java.sql.PreparedStatement.  
   
  Antes de chamar o método setObject, o aplicativo pode definir o parâmetro especificado usando um dos métodos a seguir:  
   

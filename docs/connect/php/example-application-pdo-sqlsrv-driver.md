@@ -1,44 +1,41 @@
 ---
-title: Aplicativo de exemplo (Driver PDO_SQLSRV) | Microsoft Docs
+title: O aplicativo de exemplo (Driver PDO_SQLSRV) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a153e4ce-992d-4211-9a0f-c0998c706402
-caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6a75fd91a8ac3be76198e545a6d73237e976161b
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: f0c3f2bd194d211ef3c48aa0fe9e37b09f44bf11
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307625"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47651974"
 ---
-# <a name="example-application-pdosqlsrv-driver"></a>Aplicativo de exemplo (Driver PDO_SQLSRV)
+# <a name="example-application-pdosqlsrv-driver"></a>Aplicativo de exemplo (driver PDO_SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-O aplicativo de exemplo AdventureWorks Product Reviews é um aplicativo Web que usa o driver PDO_SQLSRV do [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. O aplicativo permite que o usuário pesquise produtos inserindo uma palavra-chave e, para um produto selecionado, consulte as análises, escreva uma análise e carregue uma imagem.  
+O aplicativo de exemplo AdventureWorks Product Reviews é um aplicativo Web que usa o driver PDO_SQLSRV dos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. O aplicativo permite que o usuário pesquise produtos inserindo uma palavra-chave e, para um produto selecionado, consulte as análises, escreva uma análise e carregue uma imagem.  
   
 ### <a name="running-the-example-application"></a>Execução do aplicativo de exemplo  
   
-1.  Instale os [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Para obter informações detalhadas, consulte [guia de Introdução com os Drivers da Microsoft para PHP para SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
+1.  Instale os [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Para obter informações detalhadas, consulte [introdução com o Microsoft Drivers for PHP para SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
 2.  Copie o código mencionado posteriormente neste documento em dois arquivos: adventureworks_demo.php e photo.php.  
 3.  Coloque os arquivos adventureworks_demo.php e photo.php.no diretório raiz do servidor Web.  
-4.  Execute o aplicativo iniciando http://localhost/adventureworks_demo.php no seu navegador.  
+4.  Execute o aplicativo iniciando http://localhost/adventureworks_demo.php do seu navegador.  
   
 ## <a name="requirements"></a>Requisitos  
 Para executar o aplicativo de exemplo AdventureWorks Product Reviews, as condições a seguir devem ser atendidas em seu computador:  
   
--   O sistema cumpre os requisitos dos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Para obter informações detalhadas, consulte [requisitos de sistema para os Drivers da Microsoft para PHP para SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md).  
+-   O sistema cumpre os requisitos dos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Para obter informações detalhadas, consulte [requisitos do sistema para o Microsoft Drivers for PHP para SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md).  
  -   Os arquivos adventureworks_demo.php e photo.php estão no diretório raiz do servidor Web. Os arquivos devem conter o código mencionado posteriormente neste documento.  
--   SQL Server 2005 ou SQL Server 2008, com o [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) banco de dados anexado, está instalado no computador local.  
+-   O SQL Server 2005 ou o SQL Server 2008, com o banco de dados [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) anexado, está instalado no computador local.  
 -   Um navegador da Web está instalado.  
   
 ## <a name="demonstrates"></a>Demonstra  
@@ -507,7 +504,7 @@ die( print_r( $e->getMessage() ) );
 ?>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Conectando-se ao servidor](../../connect/php/connecting-to-the-server.md)
 
 [Comparando funções de execução](../../connect/php/comparing-execution-functions.md)

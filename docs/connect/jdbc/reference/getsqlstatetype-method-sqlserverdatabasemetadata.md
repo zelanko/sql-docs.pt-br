@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDatabaseMetaData.getSQLStateType
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: ee4d6751-68a3-4d04-831c-e6d704c59e63
-caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d5778b2b42af466ced101633a38ac9d0db83791
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: a4a01e2bb8ef76af91c4dede71ae7457351d430b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32838251"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47733194"
 ---
 # <a name="getsqlstatetype-method-sqlserverdatabasemetadata"></a>Método getSQLStateType (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,12 +35,12 @@ ms.locfileid: "32838251"
 public int getSQLStateType()  
 ```  
   
-## <a name="return-value"></a>Valor de retorno  
- Um **int** que indica o tipo de SQLSTATE que pode ser um dos seguintes valores:  
+## <a name="return-value"></a>Valor retornado  
+ Um **int** que indica o tipo de SQLSTATE que pode ter um dos seguintes valores:  
   
--   Para o Java Runtime Environment versão 5.0: se o **xopenStates** conexão está definida como **true**, esse método retorna DatabaseMetaData.sqlStateXOpen. Caso contrário, DatabaseMetaData.sqlStateSQL99.  
+-   Para o Java Runtime Environment versão 5.0: se o **xopenStates** propriedade de conexão é definida como **verdadeiro**, esse método retornará DatabaseMetaData.sqlStateXOpen. Caso contrário, DatabaseMetaData.sqlStateSQL99.  
   
--   Para o Java Runtime Environment versão 6.0: se o **xopenStates** conexão está definida como **true**, esse método retorna DatabaseMetaData.sqlStateXOpen. Caso contrário, DatabaseMetaData.sqlStateSQL.  
+-   Para o Java Runtime Environment versão 6.0: se o **xopenStates** propriedade de conexão é definida como **verdadeiro**, esse método retornará DatabaseMetaData.sqlStateXOpen. Caso contrário, DatabaseMetaData.sqlStateSQL.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -51,7 +48,7 @@ public int getSQLStateType()
 ## <a name="remarks"></a>Remarks  
  Esse método getSQLStateType é especificado pelo método getSQLStateType na interface DatabaseMetadata.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [Membros SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Classe SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

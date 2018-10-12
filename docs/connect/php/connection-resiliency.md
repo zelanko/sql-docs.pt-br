@@ -1,54 +1,53 @@
 ---
-title: Resiliência de Conexão ociosa
+title: Resiliência da Conexão Ociosa
 ms.date: 07/13/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.suite: sql
 ms.custom: ''
 ms.technology: connectivity
 ms.topic: conceptual
 author: david-puglielli
 ms.author: v-dapugl
 manager: v-hakaka
-ms.openlocfilehash: 250e4e6334a31d760c8fcb3e1e571ec1a726d020
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 2e66db8c4f821d3401ab354f705cebb81c3b3b36
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307255"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47666794"
 ---
-# <a name="idle-connection-resiliency"></a>Resiliência de Conexão ociosa
+# <a name="idle-connection-resiliency"></a>Resiliência da Conexão Ociosa
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[Resiliência de Conexão](https://msdn.microsoft.com/library/dn632678.aspx) é o princípio de que uma conexão ociosa quebrada possa ser restabelecido, de acordo com determinadas restrições. Se uma conexão para o Microsoft SQL Server falhar, a resiliência de conexão permite que o cliente tentará automaticamente restabelecer a conexão. Resiliência de Conexão é uma propriedade da fonte de dados; somente SQL Server 2014 e versões posterior e banco de dados SQL do Azure oferecem suporte a resiliência de conexão.
+[Resiliência de Conexão](https://msdn.microsoft.com/library/dn632678.aspx) é o princípio de que uma conexão ociosa quebrada possa ser restabelecido, dentro de determinados limites. Se uma conexão ao Microsoft SQL Server falhar, a resiliência de conexão permite que o cliente tentar restabelecer a conexão automaticamente. Resiliência de Conexão é uma propriedade de fonte de dados; somente SQL Server 2014 e versões posterior e banco de dados SQL do Azure dão suporte a resiliência de conexão.
 
-Resiliência de Conexão é implementada com duas conexão palavras-chave que podem ser adicionadas em cadeias de caracteres de conexão: **ConnectRetryCount** e **ConnectRetryInterval**.
+Resiliência de Conexão é implementada com duas conexão palavras-chave que podem ser adicionadas às cadeias de caracteres de conexão: **ConnectRetryCount** e **ConnectRetryInterval**.
 
-|Palavra-chave|Valores|Padrão|Description|
+|Palavra-chave|Valores|Padrão|Descrição|
 |-|-|-|-|
-|**ConnectRetryCount**| Número inteiro entre 0 e 255 (inclusive)|1|O número máximo de tentativas de restabelecer uma conexão interrompida antes de desistir. Por padrão, um único tenta restabelecer uma conexão quando quebrado. Um valor de 0 significa que nenhum reconexão será tentada.|
-|**ConnectRetryInterval**| Número inteiro entre 1 e 60 (inclusivo)|1| O tempo, em segundos, entre as tentativas de restabelecer uma conexão. O aplicativo tentará reconectar-se imediatamente ao detectar uma conexão interrompida e, em seguida, aguardará **ConnectRetryInterval** segundos antes de tentar novamente. Esta palavra-chave será ignorado se **ConnectRetryCount** é igual a 0.
+|**ConnectRetryCount**| Número inteiro entre 0 e 255 (inclusive)|1|O número máximo de tentativas para reestabelecer uma conexão interrompida antes de desistir. Por padrão, uma única tentativa é feita para restabelecer uma conexão quando quebrado. Um valor de 0 significa que nenhum reconexão será tentada.|
+|**ConnectRetryInterval**| Número inteiro entre 1 e 60 (inclusive)|1| O tempo, em segundos entre tentativas para reestabelecer uma conexão. O aplicativo tentará reconectar-se imediatamente ao detectar uma conexão interrompida e, em seguida, aguardará **ConnectRetryInterval** segundos antes de tentar novamente. Essa palavra-chave será ignorado se **ConnectRetryCount** é igual a 0.
 
-Se o produto de **ConnectRetryCount** multiplicado por **ConnectRetryInterval** é maior do que **LoginTimeout**, em seguida, o cliente deixará de tentar se conectar de uma vez  **LoginTimeout** for atingido; caso contrário, ele continuará a tentar se reconectar até **ConnectRetryCount** for atingido.
+Se o produto dos **ConnectRetryCount** multiplicado por **ConnectRetryInterval** é maior que **LoginTimeout**, em seguida, o cliente deixará de tentar se conectar a vez  **LoginTimeout** for atingido; caso contrário, ele continuará a tentar reconectar-se até **ConnectRetryCount** for atingido.
 
 #### <a name="remarks"></a>Remarks
 
-Resiliência de Conexão se aplica quando a conexão estiver ociosa. Falhas que ocorrem durante a execução de uma transação, por exemplo, não vai disparar tentativas de reconexão – eles falharão, pois caso contrário, deve ser esperado. As seguintes situações, conhecidas como estados de sessão não recuperável, não vai disparar tentativas de reconexão:
+Resiliência de Conexão se aplica quando a conexão está ocioso. Falhas que ocorrem durante a execução de uma transação, por exemplo, não disparará as tentativas de reconexão – eles falhará, pois caso contrário, deve ser esperado. Situações a seguir, conhecidas como estados de sessão não recuperável, não disparará a tentativas de reconexão:
 
 * Tabelas temporárias
 * Cursores globais e locais
-* Bloqueios de nível de transação de contexto e a sessão de transação
+* Bloqueios de transação de nível de sessão e o contexto de transação
 * Bloqueios de aplicativo
 * EXECUTE AS / REVERTER o contexto de segurança
 * Identificadores de automação OLE
-* Identificadores XML preparados
+* Identificadores preparados do XML
 * Sinalizadores de rastreamento
 
 ## <a name="example"></a>Exemplo
 
-O código a seguir se conecta a um banco de dados e executa uma consulta. A conexão for interrompida, eliminando a sessão e uma nova consulta é tentada usando a conexão interrompida. Este exemplo usa o [AdventureWorks](https://msdn.microsoft.com/library/ms124501%28v=sql.100%29.aspx) banco de dados de exemplo.
+O código a seguir se conecta a um banco de dados e executa uma consulta. A conexão é interrompida por encerrar a sessão e uma nova consulta será tentada usando a conexão interrompida. Este exemplo usa o banco de dados [AdventureWorks](https://msdn.microsoft.com/library/ms124501%28v=sql.100%29.aspx) de exemplo.
 
-Neste exemplo, podemos especificar um cursor em buffer antes de dividir a conexão. Se não especificamos um cursor em buffer, a conexão não será restabelecida porque seria um cursor do lado do servidor ativo e, portanto, a conexão não seria ocioso quando quebrado. No entanto, nesse caso, podemos chamar sqlsrv_free_stmt() antes de dividir a conexão para liberação de cursor e a conexão deve ser restabelecida com êxito.
+Neste exemplo, podemos especificar um cursor em buffer antes de interromper a conexão. Se não especificamos um cursor em buffer, a conexão não seria restabelecida porque seria um cursor do lado do servidor ativo e, portanto, a conexão não seria ocioso quando quebrado. No entanto, nesse caso, podemos chamar sqlsrv_free_stmt() antes de interromper a conexão para a liberação de cursor e a conexão deve ser restabelecida com êxito.
 
 ```php
 <?php
@@ -131,5 +130,5 @@ Statement 2 successful.
 16 rows in result set.
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Consulte Também
 [Resiliência de conexão no driver ODBC do Windows](https://docs.microsoft.com/en-us/sql/connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver)

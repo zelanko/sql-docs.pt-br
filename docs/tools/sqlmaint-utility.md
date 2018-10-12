@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: sqlmaint
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database maintenance plans [SQL Server]
@@ -20,16 +17,15 @@ helpviewer_keywords:
 - maintenance plans [SQL Server], command prompt
 - backing up [SQL Server], sqlmaint utility
 ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
-caps.latest.revision: 47
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e7b1c7b1f415388ac2fad57b2973b2dd552e267f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 12be5a2f822fb2b49100103032e7268f9f35b1cd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37997138"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47625184"
 ---
 # <a name="sqlmaint-utility"></a>utilitário sqlmaint
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,8 +82,8 @@ number[minutes | hours | days | weeks | months]
  **-?**  
  Especifica que o diagrama de sintaxe para o **sqlmaint** seja retornado. Este parâmetro deve ser usado sozinho.  
   
- **-S** *server_name*[ **\\***instance_name*]  
- Especifica a instância de destino do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Especifica *server_name* para a conexão com a instância padrão do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] nesse servidor. Especifique *server_name***\\***instance_name* para conectar-se a uma instância nomeada do [!INCLUDE[ssDE](../includes/ssde-md.md)] nesse servidor. Se nenhum servidor for especificado, o **sqlmaint** se conecta à instância padrão do [!INCLUDE[ssDE](../includes/ssde-md.md)] no computador local.  
+ **-S** *server_name*[ **\\**_instance\_name_]  
+ Especifica a instância de destino do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Especifica _server\_name_ para a conexão com a instância padrão do [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] nesse servidor. Especifica _server\_name_**\\**_instance\_name_ para conectar-se a uma instância nomeada do [!INCLUDE[ssDE](../includes/ssde-md.md)] nesse servidor. Se nenhum servidor for especificado, o **sqlmaint** se conecta à instância padrão do [!INCLUDE[ssDE](../includes/ssde-md.md)] no computador local.  
   
  **-U** *login_ID*  
  Especifica a ID de logon a ser usada para se conectar ao servidor. Se não for fornecida, o **sqlmaint** tenta usar a [!INCLUDE[msCoName](../includes/msconame-md.md)] -Windows-Authentication. Se *login_ID* contiver caracteres especiais, ele deverá estar entre aspas duplas ("); caso contrário, as aspas duplas serão opcionais.  

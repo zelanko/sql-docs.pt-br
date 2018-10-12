@@ -5,21 +5,18 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 073f3b9e-8edd-4815-88ea-de0655d0325e
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: aec0aabb38edc0446728569648dde0a4f4bafedc
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: bcf632e4953232144b82ba9701c62eb1d226d127
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42784334"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47697407"
 ---
 # <a name="understanding-ssl-support"></a>Compreendendo o suporte a SSL
 
@@ -82,7 +79,7 @@ Durante o handshake SSL, o servidor envia seu certificado de chave pública ao c
   
 - O CN (Nome Comum) na Entidade ou um nome DNS na rede SAN (Nome Alternativo da Entidade) do certificado coincide com o valor **serverName** especificado na cadeia de conexão ou, caso especificado, com o valor da propriedade **hostNameInCertificate**.  
   
-- Um nome DNS pode incluir caracteres curinga. Mas o [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] não oferece suporte à correspondência de caracteres curinga. Ou seja, abc.com não corresponderá a *.com, mas \*.com corresponderá a \*.com.  
+- Um nome DNS pode incluir caracteres curinga. Mas o [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] não oferece suporte à correspondência de caracteres curinga. Ou seja, abc.com não corresponderá a \*.com, mas \*.com corresponderá a \*.com.  
   
 ## <a name="see-also"></a>Consulte Também
 

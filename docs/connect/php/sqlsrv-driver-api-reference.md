@@ -1,35 +1,32 @@
 ---
-title: Referência da API do JDBC Driver | Microsoft Docs
+title: Referência da API do Driver SQLSRV | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 0b55da26-ddeb-4e89-872a-91e0aba57103
-caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6722c709e016ab0a78b682a022575bbee9b89018
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: b1b1b94952006e338b324e7ca1da1d3bcbf8c2a0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308995"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47756584"
 ---
 # <a name="sqlsrv-driver-api-reference"></a>Referência da API do driver JDBC
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-O nome da API para o driver SQLSRV nos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] é **sqlsrv**. Todos os **sqlsrv** funções começam com **sqlsrv _** e são seguidas por um verbo ou um substantivo. As que são seguidas por um verbo executam alguma ação, e as que são seguidas por um substantivo retornam alguma forma de metadados.  
+O nome da API para o driver SQLSRV nos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] é **sqlsrv**. Todas as funções **sqlsrv** começam com **sqlsrv** e são seguidas por um verbo ou um substantivo. As que são seguidas por um verbo executam alguma ação, e as que são seguidas por um substantivo retornam alguma forma de metadados.  
   
 ## <a name="in-this-section"></a>Nesta seção  
 O driver SQLSRV contém as seguintes funções:  
   
-|Função|Description|  
+|Função|Descrição|  
 |------------|---------------|  
 |[sqlsrv_begin_transaction](../../connect/php/sqlsrv-begin-transaction.md)|Começa uma transação.|  
 |[sqlsrv_cancel](../../connect/php/sqlsrv-cancel.md)|Cancela uma instrução; descarta qualquer resultado pendente para a instrução.|  
@@ -61,12 +58,12 @@ O driver SQLSRV contém as seguintes funções:
 ## <a name="reference"></a>Referência  
 [Manual do PHP](http://php.net/manual)  
   
-## <a name="see-also"></a>Consulte também  
-[Visão geral dos Drivers da Microsoft para PHP para SQL Server](../../connect/php/overview-of-the-php-sql-driver.md)
+## <a name="see-also"></a>Consulte Também  
+[Visão geral dos Microsoft Drivers for PHP for SQL Server](../../connect/php/overview-of-the-php-sql-driver.md)
 
 [Constantes &#40;Drivers da Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 
-[Programação de guia para os Drivers da Microsoft para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Guia de programação para os Drivers da Microsoft para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [Guia de Introdução com os Drivers da Microsoft para PHP para SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
   

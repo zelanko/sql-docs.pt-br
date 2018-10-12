@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - getHostNameInCertificate Method (SQLServerDataSource)
@@ -15,16 +13,15 @@ apilocation:
 - getHostNameInCertificate Method (SQLServerDataSource)
 apitype: Assembly
 ms.assetid: 45ea04e2-9ea5-4171-9136-d09f8a95e128
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bd5ba2b9a98fedc7d2ebf47c3282cca839d59265
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 9d4873d1251f640f6347d844d46fcb94d63e3857
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32835341"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47615774"
 ---
 # <a name="gethostnameincertificate-method-sqlserverdatasource"></a>Método getHostNameInCertificate (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,15 +35,15 @@ ms.locfileid: "32835341"
 public java.lang.String getHostNameInCertificate()  
 ```  
   
-## <a name="return-value"></a>Valor de retorno  
- Um **cadeia de caracteres** que contém o host de nome, ou nulo se nenhum valor for definido.  
+## <a name="return-value"></a>Valor retornado  
+ Uma **String** que contém o nome do host ou o valor nulo se nenhum valor tiver sido definido.  
   
 ## <a name="remarks"></a>Remarks  
  O nome do host é usado para validar o valor do certificado SSL do SQL Server quando a camada de comunicação é criptografada com SSL.  
   
- Se o nome do host não está definido, o [getHostNameInCertificate](../../../connect/jdbc/reference/gethostnameincertificate-method-sqlserverdatasource.md) método retornará nulo.  
+ Se o nome do host não for definido, o método [getHostNameInCertificate](../../../connect/jdbc/reference/gethostnameincertificate-method-sqlserverdatasource.md) retornará nulo.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Membros de SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [Classe SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

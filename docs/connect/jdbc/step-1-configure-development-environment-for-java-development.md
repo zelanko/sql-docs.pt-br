@@ -5,23 +5,20 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: a59cac14-32f5-4fa3-ad38-81a3e1e9d29c
-caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f7df7736d52fb0f1924f0b0b7ea5ae84ce5df7aa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 64cd3fc21a318d0e617cfeeff858c87648501bf5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32848781"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47615234"
 ---
-# <a name="step-1-configure-development-environment-for-java-development"></a>Etapa 1: Configurar o ambiente de desenvolvimento para o desenvolvimento de Java
+# <a name="step-1-configure-development-environment-for-java-development"></a>Etapa 1: Configurar o ambiente de desenvolvimento para o desenvolvimento Java
   
 ## <a name="windows"></a>Windows  
   

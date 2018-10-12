@@ -1,13 +1,11 @@
 ---
-title: Método setCharacterStream (Java, Java.IO. Reader, int) | Microsoft Docs
+title: Método setCharacterStream (java.lang.String, java.io.Reader, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.setCharacterStream
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 88a8e89e-8817-4161-85b1-9a9a2fd01cdb
-caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fed8100ff45c9440fede1b73fec4a41a045347ab
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 1705a738f327ec07641d6d6dbf960ab37c30b9f2
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32842571"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47639664"
 ---
 # <a name="setcharacterstream-method-javalangstring-javaioreader-int"></a>Método setCharacterStream (java.lang.String, java.io.Reader, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Define o parâmetro designado como o objeto specifiedReader, que é o número de caracteres segundosespecificado.  
+  Define o parâmetro designado como o objeto specifiedReader, que é o specifiednumber do número de caracteres.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,15 +38,15 @@ public final void setCharacterStream(java.lang.String parameterName,
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *nome do parâmetro*  
+ *parameterName*  
   
- Um **cadeia de caracteres** que contém o nome do parâmetro.  
+ Uma **Cadeia de Caracteres** que contém o nome do parâmetro.  
   
  *value*  
   
- Um objeto do leitor que contém os dados Unicode.  
+ Um objeto Reader que contém os dados Unicode.  
   
- *Comprimento*  
+ *length*  
   
  Um **int** que indica o comprimento em número de caracteres.  
   
@@ -59,11 +56,11 @@ public final void setCharacterStream(java.lang.String parameterName,
 ## <a name="remarks"></a>Remarks  
  Esse método setCharacterStream é especificado pelo método setCharacterStream na interface do CallableStatement.  
   
- Se o comprimento do fluxo for diferente do especificado no *comprimento* parâmetro, o driver JDBC lançará uma exceção quando a linha for atualizada ou inserida.  
+ Se o comprimento do fluxo for diferente daquele especificado no parâmetro *length*, o driver JDBC lançará uma exceção quando a linha for atualizada ou inserida.  
   
- Se o comprimento do fluxo for desconhecido, o *comprimento* parâmetro pode ser definido como -1 para indicar que o driver deve aceitar o fluxo independentemente de seu tamanho. Com sqljdbc4.jar, é recomendável que você use o método do JDBC 4.0 [método setCharacterStream (Java, Java.IO. Reader)](../../../connect/jdbc/reference/setcharacterstream-method-java-lang-string-java-io-reader.md) quando o aplicativo quiser atualizar a coluna de um fluxo cujo comprimento é desconhecido.  
+ Se o comprimento do fluxo for desconhecido, o parâmetro *length* poderá ser definido como -1 para indicar que o driver deve aceitar o fluxo independentemente do seu comprimento. Com sqljdbc4.jar, é recomendável usar o Método [setCharacterStream Method (java.lang.String, java.io.Reader)](../../../connect/jdbc/reference/setcharacterstream-method-java-lang-string-java-io-reader.md) do JDBC 4.0 quando o aplicativo quiser atualizar a coluna de um fluxo cujo comprimento é desconhecido.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Membros SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Classe SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

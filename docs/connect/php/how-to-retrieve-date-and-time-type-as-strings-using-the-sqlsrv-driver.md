@@ -1,34 +1,31 @@
 ---
-title: Recuperar data e hora tipo como cadeias de caracteres usando o Driver SQLSRV | Microsoft Docs
+title: Como recuperar um tipo de data e hora como cadeias de caracteres usando o driver SQLSRV | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - date and time types, retrieving as strings
 ms.assetid: 58a974ea-4daf-4e3b-98ed-9731b9c9250f
-caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 62ad28ed5316f0be403f63af2acd7e4090faa75a
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 29e36f2246556da7a43c3b8335f7a4e3479ae63c
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35308334"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47686984"
 ---
 # <a name="how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver"></a>Como recuperar um tipo de data e hora como cadeias de caracteres usando o driver SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Esse recurso foi adicionado na versão 1.1 do [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] e é válido somente ao usar o driver SQLSRV para o [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. É um erro usar a opção de conexão ReturnDatesAsStrings com o driver PDO_SQLSRV.  
   
-Você pode recuperar tipos de data e hora (**datetime**, **data**, **tempo**, **datetime2**, e **datetimeoffset**) como cadeias de caracteres especificando uma opção na cadeia de conexão.  
+Você pode recuperar tipos de data e hora (**datetime**, **date**, **time**, **datetime2** e **datetimeoffset**) como cadeias de caracteres especificando uma opção na cadeia de conexão.  
   
 ### <a name="to-retrieve-date-and-time-types-as-strings"></a>Para recuperar tipos de data e hora como cadeias de caracteres  
   
@@ -59,7 +56,7 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="example"></a>Exemplo  
-O exemplo a seguir mostra o que você pode recuperar datas como cadeias de caracteres especificando UTF-8 quando recuperar a cadeia de caracteres, mesmo quando a conexão foi feita com `"ReturnDatesAsStrings" => false`.  
+O exemplo a seguir mostra que você pode recuperar datas como cadeias de caracteres especificando UTF-8 quando recuperar a cadeia de caracteres, mesmo quando a conexão tiver sido feita com `"ReturnDatesAsStrings" => false`.  
   
 ```  
 <?php  
@@ -169,6 +166,6 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Recuperando dados](../../connect/php/retrieving-data.md)  
   

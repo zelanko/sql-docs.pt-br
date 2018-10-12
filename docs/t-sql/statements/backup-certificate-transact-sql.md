@@ -1,13 +1,11 @@
 ---
 title: BACKUP CERTIFICATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 10/04/2018
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DUMP_CERTIFICATE_TSQL
@@ -27,20 +25,19 @@ helpviewer_keywords:
 - decryption [SQL Server]
 - cryptography [SQL Server], certificates
 ms.assetid: 509b9462-819b-4c45-baae-3d2d90d14a1c
-caps.latest.revision: 40
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: acc945ee464ae143f5ae9b2fd9ce803a3045d1f0
-ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
+monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
+ms.openlocfilehash: bf65c24924d7e585131d90d01c42cf551ae4997d
+ms.sourcegitcommit: 7d702a1d01ef72ad5e133846eff6b86ca2edaff1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44171588"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48798556"
 ---
 # <a name="backup-certificate-transact-sql"></a>BACKUP CERTIFICATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   Exporta um certificado para um arquivo.  
   
@@ -62,7 +59,7 @@ BACKUP CERTIFICATE certname TO FILE = 'path_to_file'
 ```  
   
 ```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Parallel Data Warehouse  
   
 BACKUP CERTIFICATE certname TO FILE ='path_to_file'  
       WITH PRIVATE KEY   
@@ -79,10 +76,6 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
  *path_to_private_key_file*  
  Especifica o caminho completo, incluindo o nome, do arquivo no qual a chave privada deve ser salva. Esse pode ser um caminho local ou um caminho UNC para um local de rede. O padrão é o caminho da pasta DATA do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
-> [!IMPORTANT]
-> O Banco de Dados SQL do Azure não é compatível com o backup de um certificado em um arquivo.
-
-  
  *encryption_password*  
  É a senha usada para criptografar a chave privada antes de gravá-la no arquivo de backup. A senha está sujeita a verificações de complexidade.  
   

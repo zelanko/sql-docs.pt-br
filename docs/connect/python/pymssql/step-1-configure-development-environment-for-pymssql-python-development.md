@@ -1,43 +1,40 @@
 ---
-title: 'Etapa 1: Configurar o ambiente de desenvolvimento do Python pymssql | Microsoft Docs'
+title: 'Etapa 1: Configurar o ambiente de desenvolvimento Python pymssql | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6d392a5e-b08e-4b35-9e99-61260888fc41
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6a4a573ce609bfb5364a1dabac784eb760915b8a
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: b60c7aa0f53be6d9c9a249c69ace6780a318e6f3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35309515"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47787444"
 ---
-# <a name="step-1-configure-development-environment-for-pymssql-python-development"></a>Etapa 1: Configurar o ambiente de desenvolvimento para pymssql desenvolvimento do Python
-Você precisará configurar seu ambiente de desenvolvimento com os pré-requisitos para desenvolver um aplicativo usando o Driver do Python para o SQL Server.    
+# <a name="step-1-configure-development-environment-for-pymssql-python-development"></a>Etapa 1: configurar o ambiente de desenvolvimento para o desenvolvimento Python pymssql
+Você precisará configurar seu ambiente de desenvolvimento com os pré-requisitos para desenvolver um aplicativo usando o Driver Python para SQL Server.    
   
-Observe que os Drivers de SQL do Python usa o protocolo TDS, que é habilitado por padrão no SQL Server e banco de dados do SQL Azure.  Nenhuma configuração adicional é necessária.  
+Observe que os Drivers do SQL Python usam o protocolo TDS, que é habilitado por padrão no SQL Server e banco de dados SQL.  Nenhuma configuração adicional é necessária.  
   
 ## <a name="windows"></a>Windows  
   
-1. **Instalar o tempo de execução do Python e pip Gerenciador de pacotes**  
+1. **Instalar o tempo de execução do Python e o Gerenciador de pacotes do pip**  
 A. Vá para [python.org](https://www.python.org/downloads/)  
 B. Clique no link apropriado Windows instalador msi.   
 c. Executar uma vez baixado o msi para instalar o tempo de execução do Python  
   
 2. **Baixar o módulo pymssql** de [aqui](http://www.lfd.uci.edu/~gohlke/pythonlibs/#pymssql)  
   
-    Verifique se que você escolher o arquivo whl correto.  Por exemplo: escolha se você estiver usando o Python 2.7 em um computador de 64 bits: pymssql‑2.1.1‑cp27‑none‑win_amd64.whl. Após baixar o arquivo .whl colocá-lo a pasta c: / Python27.  
+    Verifique se que você escolher o arquivo whl correto.  Por exemplo: se você estiver usando o Python 2.7 em um computador de 64 bits, escolha: pymssql‑2.1.1‑cp27‑none‑win_amd64.whl. Depois de baixar o arquivo. whl colocá-lo a pasta c:/python27.  
       
-3. **Abrir cmd.exe**  
+3. **Abra cmd.exe**  
   
 4. **Instalar o módulo pymssql**     
     Por exemplo, se você estiver usando o Python 2.7 em um computador de 64 bits:  
@@ -48,14 +45,14 @@ c. Executar uma vez baixado o msi para instalar o tempo de execução do Python
   
 ## <a name="ubuntu-linux"></a>Ubuntu Linux  
   
-1. **Instalar o tempo de execução do Python e Gerenciador de pacotes de pip** Python vem pré-instalado na maioria das distribuições do Ubuntu.  Se seu computador não tiver python instalado, você pode obter o download do tarball da fonte de [python.org](https://www.python.org/downloads/) e criar localmente, ou você pode usar o Gerenciador de pacotes:  
+1. **Instalar o tempo de execução do Python e o Gerenciador de pacotes do pip** Python vem pré-instalado na maioria das distribuições do Ubuntu.  Se seu computador não tiver o python instalado, você pode obter o download do tarball de origem do [python.org](https://www.python.org/downloads/) e criar localmente, ou você pode usar o Gerenciador de pacotes:  
 ```  
 > sudo apt-get install python   
 ```  
   
-2.  **Abra terminal**  
+2.  **Abrir terminal**  
   
-3.  **Install pymssql module e dependências**  
+3.  **Instalar o módulo pymssql e dependências**  
 ```  
 > sudo apt-get --assume-yes update  
 > sudo apt-get --assume-yes install freetds-dev freetds-bin  
@@ -65,14 +62,14 @@ c. Executar uma vez baixado o msi para instalar o tempo de execução do Python
   
 ## <a name="mac"></a>Mac  
   
-1. **Instalar o tempo de execução do Python e pip Gerenciador de pacotes**  
+1. **Instalar o tempo de execução do Python e o Gerenciador de pacotes do pip**  
 A. Vá para [python.org](https://www.python.org/downloads/)  
-B. Clique no link apropriado Mac instalador pkg.   
+B. Clique no link de pacote do instalador Mac apropriado.   
 c. Executar uma vez baixado o pacote para instalar o tempo de execução do Python  
   
-2.  **Abra terminal**  
+2.  **Abrir terminal**  
   
-3. **Instalar o Gerenciador de pacotes do Homebrew**  
+3. **Instalar o Gerenciador de pacotes Homebrew**  
 ```  
 > ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"  
 ```  

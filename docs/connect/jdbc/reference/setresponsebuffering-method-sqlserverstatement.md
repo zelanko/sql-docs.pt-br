@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerStatement.setResponseBuffering(String responseBufferingValue)
@@ -15,21 +13,20 @@ apilocation:
 - SQLServerStatement.setResponseBuffering(String responseBufferingValue)
 apitype: Assembly
 ms.assetid: 9f489835-6cda-4c8c-b139-079639a169cf
-caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 114bba1ad782a3cc14585267407386d30f4ac0b6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 946792cc2f1d2f96f51785322e211ec959dc3722
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32845791"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47820774"
 ---
 # <a name="setresponsebuffering-method-sqlserverstatement"></a>Método setResponseBuffering (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Define a modo de buffer para esta resposta [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) objeto maiusculas de minúsculas **cadeia de caracteres completa** ou **adaptável**.  
+  Define o modo de buffer de resposta do objeto [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) como **String full** ou **adaptive** que não diferencia maiúsculas de minúsculas.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,23 +38,23 @@ public final void setResponseBuffering(java.lang.String value)
 #### <a name="parameters"></a>Parâmetros  
  *value*  
   
- Um **cadeia de caracteres** que contém o modo de buffer de resposta. O modo válido pode ser uma das seguintes cadeias de caracteres de maiusculas e minúsculas: **completo** ou **adaptável**.  
+ Uma **String** que contém o modo de buffer de resposta. O modo válido pode ser uma das cadeias de caracteres sem diferenciação de maiúsculas e minúsculas a seguir: **full** ou **adaptive**.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- **adaptável** Especifica o armazenamento em buffer o mínimo possível de dados quando necessário.  
+ **adaptive** especifica o armazenamento do mínimo possível de dados em buffer, quando necessário.  
   
- **completo** Especifica a leitura do resultado inteiro do servidor em tempo de execução.  
+ **full** especifica a leitura do resultado inteiro no servidor em tempo de execução.  
   
- adaptável é o valor padrão no Driver JDBC versão 2.0 e 3.0. completo era o padrão anterior ao JDBC Driver versão 2.0.  
+ adaptável é o valor padrão no JDBC Driver versão 2.0 e 3.0. completo era o padrão anterior ao JDBC Driver versão 2.0.  
   
- O [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) método permite que você substitua o **responseBuffering** conexão **cadeia de caracteres** propriedade atual [ SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) objeto. Para obter mais informações sobre como usar a modo de buffer de resposta, consulte [buffer adaptável usando](../../../connect/jdbc/using-adaptive-buffering.md).  
+ O método [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) permite substituir a conexão **responseBuffering**, propriedade **String**, para o objeto [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) atual. Para obter mais informações sobre como usar a modo de buffer de resposta, consulte [Using Adaptive Buffering](../../../connect/jdbc/using-adaptive-buffering.md).  
   
- Se o aplicativo especificar um valor de parâmetro inválido para o [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) método, uma [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) é gerada.  
+ Se o aplicativo especificar um valor de parâmetro inválido para o método [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md), um [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) será lançado.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Membros SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [Classe SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)   
  [Usando buffer adaptável](../../../connect/jdbc/using-adaptive-buffering.md)  

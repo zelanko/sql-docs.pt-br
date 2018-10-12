@@ -1,32 +1,29 @@
 ---
-title: 'Como: manipular erros e avisos usando o Driver SQLSRV | Microsoft Docs'
+title: Como tratar erros e avisos usando o driver SQLSRV | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - errors and warnings
 ms.assetid: fa231d60-4c06-4137-89e8-097c28638c5d
-caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 16791a307fe317aa9495c5b4173cb1ebbb23d719
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: cc7a80e7c63a92863abdbcbba0475fe74f05a3c5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307415"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47799094"
 ---
 # <a name="how-to-handle-errors-and-warnings-using-the-sqlsrv-driver"></a>Como tratar erros e avisos usando odriver SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Por padrão, o driver SQLSRV trata avisos como erros. uma chamada para um **sqlsrv** função que gera um erro ou um aviso retornará **false**. Este tópico demonstra como desativar esse comportamento padrão e como tratar avisos e erros separadamente.  
+Por padrão, o driver SQLSRV trata avisos como erros; uma chamada para uma função **sqlsrv** que gere um erro ou um aviso retornará **false**. Este tópico demonstra como desativar esse comportamento padrão e como tratar avisos e erros separadamente.  
   
 > [!NOTE]  
 > Há algumas exceções para o comportamento padrão de tratamento de avisos como erros. Os avisos que correspondem aos valores SQLSTATE 01000, 01001, 01003 e 01S02 nunca são tratados como erros.  
@@ -42,11 +39,11 @@ O exemplo de código a seguir usa duas funções definidas pelo usuário, **Disp
   
 4.  Exibe as horas de férias restantes para cada funcionário.  
   
-Na primeira chamada para um **sqlsrv** função ([sqlsrv_configure](../../connect/php/sqlsrv-configure.md)), os avisos são tratados como erros. Como os avisos são adicionados à coleção de erros, não é necessário verificar se há avisos separadamente dos erros. Porém, nas chamadas subsequentes para as funções **sqlsrv** , os avisos não serão tratados como erros, por isso, é necessário verificar explicitamente os avisos e erros.  
+Na primeira chamada para uma função **sqlsrv** ([sqlsrv_configure](../../connect/php/sqlsrv-configure.md)), os avisos são tratados como erros. Como os avisos são adicionados à coleção de erros, não é necessário verificar se há avisos separadamente dos erros. Porém, nas chamadas subsequentes para as funções **sqlsrv** , os avisos não serão tratados como erros, por isso, é necessário verificar explicitamente os avisos e erros.  
   
 Observe também que o código de exemplo verifica erros após cada chamada para uma função **sqlsrv** . Essa é a prática recomendada.  
   
-Este exemplo supõe que SQL Server e o [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) banco de dados são instalados no computador local. Toda a saída será gravada no console quando o exemplo for executado da linha de comando. Quando o exemplo for executado em uma nova instalação do banco de dados AdventureWorks, ele produzirá três avisos e dois erros. Os dois primeiros são avisos padrão, emitidos quando você se conecta a um banco de dados. O terceiro aviso ocorre porque as horas de férias disponíveis de um funcionário são atualizadas para um valor negativo. O erro ocorre porque as horas de férias disponíveis de um funcionário são atualizadas para um valor menor que -40 horas, que é uma violação de uma restrição na tabela.  
+Este exemplo supõe que o SQL Server e o banco de dados [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) estejam instalados no computador local. Toda a saída será gravada no console quando o exemplo for executado da linha de comando. Quando o exemplo for executado em uma nova instalação do banco de dados AdventureWorks, ele produzirá três avisos e dois erros. Os dois primeiros são avisos padrão, emitidos quando você se conecta a um banco de dados. O terceiro aviso ocorre porque as horas de férias disponíveis de um funcionário são atualizadas para um valor negativo. O erro ocorre porque as horas de férias disponíveis de um funcionário são atualizadas para um valor menor que -40 horas, que é uma violação de uma restrição na tabela.  
   
 ```  
 <?php  
@@ -203,7 +200,7 @@ function DisplayWarnings()
 ?>  
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Como configurar o tratamento de erros e avisos usando o driver SQLSRV](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)
 
 [Referência da API do driver SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  

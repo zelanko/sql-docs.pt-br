@@ -1,13 +1,11 @@
 ---
-title: Método updateBlob (Java, Java.SQL. blob) | Microsoft Docs
+title: Método updateBlob (java.lang.String, java.sql.Blob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerResultSet.updateBlob (java.lang.String, java.sql.Blob)
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: fdd47885-c7ec-4599-a645-ad0e082586f4
-caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 19e089cd8ccbaf2b70c9c81f266dda8ded9edc02
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 81d089b7a0cd2d052be6df55791559f4a45aa1b1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32848851"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47674084"
 ---
 # <a name="updateblob-method-javalangstring-javasqlblob"></a>Método updateBlob (java.lang.String, java.sql.Blob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +39,7 @@ public void updateBlob(java.lang.String columnName,
 #### <a name="parameters"></a>Parâmetros  
  *columnName*  
   
- Um **cadeia de caracteres** que contém o nome da coluna.  
+ Uma **Cadeia de Caracteres** que contém o nome da coluna.  
   
  *x*  
   
@@ -52,9 +49,9 @@ public void updateBlob(java.lang.String columnName,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método updateBlob é especificado pelo método updateBlob na interface Java.SQL. resultset.  
+ Esse método updateBlob é especificado pelo método updateBlob na interface do resultset.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Método updateBlob &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateblob-method-sqlserverresultset.md)   
  [Membros de SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Classe SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDataSource.getResponseBuffering()
@@ -15,21 +13,20 @@ apilocation:
 - SQLServerDataSource.getResponseBuffering()
 apitype: Assembly
 ms.assetid: 19585a93-88a4-415e-a20e-12ba58cddeaa
-caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: de608f0932c26b4ae0609d5920cb255e247164d8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 7f63ae057278b996b02b42668c3ad97bcf7b3f50
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32839061"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47645464"
 ---
 # <a name="getresponsebuffering-method-sqlserverdatasource"></a>Método getResponseBuffering (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Retorna a modo de buffer para esta resposta [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) objeto.  
+  Retorna o modo de buffer de resposta do objeto [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,17 +35,17 @@ ms.locfileid: "32839061"
 public java.lang.String getResponseBuffering()  
 ```  
   
-## <a name="return-value"></a>Valor de retorno  
- Um **cadeia de caracteres** que contém um minúsculas **completo** ou **adaptável**.  
+## <a name="return-value"></a>Valor retornado  
+ Um **cadeia de caracteres** que contém um minúsculo **completo** ou **adaptável**.  
   
 ## <a name="remarks"></a>Remarks  
- O **completo** valor Especifica a leitura do resultado inteiro do servidor em tempo de execução.  
+ O valor **full** especifica a leitura do resultado inteiro no servidor em tempo de execução.  
   
- O **adaptável** valor Especifica o armazenamento em buffer o mínimo possível de dados quando necessário. O **adaptável** valor é o modo de buffer padrão.  
+ O valor **adaptive** especifica o armazenamento do mínimo possível de dados em buffer, quando necessário. O valor **adaptive** é o modo de armazenamento padrão.  
   
- Para obter mais informações sobre como usar a modo de buffer de resposta, consulte [buffer adaptável usando](../../../connect/jdbc/using-adaptive-buffering.md).  
+ Para obter mais informações sobre como usar a modo de buffer de resposta, consulte [Using Adaptive Buffering](../../../connect/jdbc/using-adaptive-buffering.md).  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Método setResponseBuffering &#40;SQLServerDataSource&#41;](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverdatasource.md)   
  [Membros de SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [Classe SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  

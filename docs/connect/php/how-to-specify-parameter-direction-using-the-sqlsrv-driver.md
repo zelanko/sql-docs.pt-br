@@ -1,32 +1,29 @@
 ---
-title: 'Como: especificar a direção de parâmetro usando o Driver SQLSRV | Microsoft Docs'
+title: Como especificar a direção do parâmetro usando o driver SQLSRV | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - stored procedure support
 ms.assetid: 1209eeca-df75-4283-96dc-714f39956b95
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f4738ce4f8071c5fc1485fad608e00f5e47d9abb
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 64c73b14f0195441979891f626976648b56d583d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307835"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47642364"
 ---
 # <a name="how-to-specify-parameter-direction-using-the-sqlsrv-driver"></a>Como especificar a direção do parâmetro com o driver SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Este tópico descreve como usar o driver SQLSRV para especificar a direção do parâmetro ao chamar um procedimento armazenado. A direção do parâmetro é especificado quando você cria uma matriz de parâmetros (etapa 3) que é passada para [sqlsrv_query](../../connect/php/sqlsrv-query.md) ou [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md).  
+Este tópico descreve como usar o driver SQLSRV para especificar a direção do parâmetro ao chamar um procedimento armazenado. A direção do parâmetro é especificada ao criar um parâmetro de matriz (etapa 3) que é passado para [sqlsrv_query](../../connect/php/sqlsrv-query.md) ou [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md).  
   
 ### <a name="to-specify-parameter-direction"></a>Para especificar a direção do parâmetro  
   
@@ -37,7 +34,7 @@ Este tópico descreve como usar o driver SQLSRV para especificar a direção do 
     ```  
   
     > [!NOTE]  
-    > Chamar os procedimentos armazenados usando a sintaxe canônica é a prática recomendada. Para obter mais informações sobre a sintaxe canônica, consulte [chamando um procedimento armazenado](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md).  
+    > Chamar os procedimentos armazenados usando a sintaxe canônica é a prática recomendada. Para obter mais informações sobre a sintaxe canônica, veja [Como chamar um procedimento armazenado](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md).  
   
 2.  Inicialize ou atualize as variáveis do PHP correspondentes aos espaços reservados na consulta Transact-SQL. Por exemplo, o código a seguir inicializa os dois parâmetros para o procedimento armazenado UpdateVacationHours:  
   
@@ -49,7 +46,7 @@ Este tópico descreve como usar o driver SQLSRV para especificar a direção do 
     > [!NOTE]  
     > Variáveis que são inicializadas ou atualizadas para **null**, **DateTime**ou tipos de fluxo não podem ser usadas como parâmetros de saída.  
   
-3.  Use suas variáveis PHP da etapa 2 para criar ou atualizar uma matriz de valores de parâmetros que correspondam, em sequência, aos espaços reservados do parâmetro na cadeia de caracteres Transact-SQL. Especifique a direção de cada parâmetro na matriz. A direção de cada parâmetro é determinada em uma das duas maneiras: por padrão (para parâmetros de entrada) ou usando **SQLSRV_PARAM _\***  constantes (para parâmetros de saída e bidirecional). Por exemplo, o código a seguir especifica o parâmetro *$employeeId* como um parâmetro de entrada e o parâmetro *$usedVacationHours* como um parâmetro bidirecional:  
+3.  Use suas variáveis PHP da etapa 2 para criar ou atualizar uma matriz de valores de parâmetros que correspondam, em sequência, aos espaços reservados do parâmetro na cadeia de caracteres Transact-SQL. Especifique a direção de cada parâmetro na matriz. A direção de cada parâmetro é determinada por uma destas duas formas: por padrão (para parâmetros de entrada) ou usando constantes **SQLSRV_PARAM_\*** (para parâmetros de saída e bidirecionais). Por exemplo, o código a seguir especifica o parâmetro *$employeeId* como um parâmetro de entrada e o parâmetro *$usedVacationHours* como um parâmetro bidirecional:  
   
     ```  
     $params = array(  
@@ -86,7 +83,7 @@ Este tópico descreve como usar o driver SQLSRV para especificar a direção do 
     sqlsrv_query($conn, $tsql, $params);  
     ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Como recuperar parâmetros de saída usando o driver SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
 
 [How to: Retrieve Input and Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)  

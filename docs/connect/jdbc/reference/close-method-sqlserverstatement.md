@@ -1,13 +1,11 @@
 ---
-title: Feche o método (SQLServerStatement) | Microsoft Docs
+title: Método Close (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerStatement.close
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 84a25d64-dd3e-4696-bb5f-4eaf391fab7e
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 296b4551251913b9a8c8d2961bbf65d833390bb9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 813ae2fdd58c8a89da6f97903c8bf70628a8b855
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32827121"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47798454"
 ---
-# <a name="close-method-sqlserverstatement"></a>Feche o método (SQLServerStatement)
+# <a name="close-method-sqlserverstatement"></a>Método close (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Libera isso [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) do objeto banco de dados e recursos do JDBC imediatamente em vez de aguardar que eles sejam liberados automaticamente.  
+  Libera imediatamente o banco de dados e os recursos do JDBC do objeto [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md), em vez de aguardar que eles sejam liberados automaticamente.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -42,9 +39,9 @@ public void close()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método fechar é especificado pelo método na interface Java.SQL. Statement fechar.  
+ Esse método close é especificado pelo método close na interface java.sql.Statement.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Membros SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [Classe SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   

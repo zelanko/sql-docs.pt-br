@@ -5,21 +5,18 @@ ms.date: 02/14/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: d90fa182-1dab-4d6f-bd85-a04dd1479986
-caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cfbf0ef8a02695a2bc3a1870a2660cf2bff23b7d
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
-ms.translationtype: MTE75
+ms.openlocfilehash: 0d0b1b34105df8568e12be170b0ab9afa8fdad88
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42786411"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47716564"
 ---
 # <a name="system-requirements-installation-and-driver-files"></a>Requisitos do sistema, instalação e arquivos de driver
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -57,7 +54,7 @@ O driver é instalado quando você executa `msodbcsql.msi` de um dos links a seg
 - [Baixar o Microsoft ODBC Driver 11 for SQL Server no Windows](https://www.microsoft.com/download/details.aspx?id=36434). 
 
 [!NOTE]
-Para aqueles que têm o Driver 17.1.0.1 instalado, é recomendável que ele seja desinstalado manualmente antes de instalar o Driver 17.2.0.1 ou acima
+Para aqueles que têm o Driver 17.1.0.1 ou instalado abaixo, é recomendável que ele seja desinstalado manualmente antes de instalar a versão mais recente do Driver
 
 Ele pode ser instalado lado a lado com o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
 
@@ -104,7 +101,7 @@ Por exemplo, quando você compila um aplicativo ODBC com `msodbcsql11.lib` e `ms
 |msodbcdiag17.dll ou <br> msodbcdiag13.dll ou <br> msodbcdiag11.dll|O arquivo de biblioteca de vínculo dinâmico (DLL) que contém a interface de diagnóstico (rastreamento) do driver. Esse arquivo é instalado em % SYSTEMROOT%\System32.|
 |msodbcsqlr17.rll ou <br> msodbcsqlr13.rll ou <br> msodbcsqlr11.rll|O arquivo de recursos que acompanha a biblioteca do driver. Esse arquivo é instalado em % SYSTEMROOT%\System32\1033.| 
 |s13ch_msodbcsql.chm ou <br> s11ch_msodbcsql.chm |O arquivo de ajuda do Assistente para Fontes de Dados que documenta como criar uma fonte de dados do driver. Esse arquivo é instalado em %SYSTEMROOT%\System32\1033 <br /> <br /> **Observação:** há nenhum arquivo chm para ODBC Driver 17. |  
-|msodbcsql.h|O arquivo de cabeçalho que contém todas as novas definições necessárias para usar o driver.<br /><br /> **Observação:**  você não pode referenciar msodbcsql.h e odbcss.h no mesmo programa.<br /><br /> O msodbcsql.h para o ODBC Driver 17 é instalado em %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\13\SDK. <br /> O msodbcsql.h para o ODBC Driver 11 é instalado em %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\110\SDK.| 
+|msodbcsql.h|O arquivo de cabeçalho que contém todas as novas definições necessárias para usar o driver.<br /><br /> **Observação:**  você não pode referenciar msodbcsql.h e odbcss.h no mesmo programa.<br /><br /> O msodbcsql.h para o ODBC Driver 17 ou 13 é instalado em %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\130\SDK. <br /> O msodbcsql.h para o ODBC Driver 11 é instalado em %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\110\SDK.| 
 |msodbcsql17.lib ou <br> msodbcsql13.lib ou <br> msodbcsql11.lib|O arquivo de biblioteca necessário para chamar as funções do utilitário **bcp** que fazem parte do driver.<br /><br /> **Observação:** se você referenciar esse arquivo de biblioteca no programa, verifique se ele está no caminho do sistema e no caminho do sistema dos usuários que usam o aplicativo.<br /><br /> O msodbcsql17.lib ou o msodbcsql13.lib é instalado em %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\130\SDK.<br /> O msodbcsql11.lib é instalado em %PROGRAMFILES%\Microsoft SQL Server\Client SDK\ODBC\110\SDK.|
 
   

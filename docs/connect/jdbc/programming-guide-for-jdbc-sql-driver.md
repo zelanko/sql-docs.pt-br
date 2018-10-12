@@ -5,26 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 99f0db69-ce1a-49cf-9c24-0b9abfa4e0c3
-caps.latest.revision: 2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1d697ecfc653843efb15cb9717de1170817270b9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: a48078b7225bf077b469f0f02addb7b364ec9ac8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32828621"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47703884"
 ---
-# <a name="programming-guide-for-jdbc-sql-driver"></a>Guia para o Driver SQL JDBC de programação
+# <a name="programming-guide-for-jdbc-sql-driver"></a>Guia de programação para o driver SQL JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-* [Conectar-se ao SQL Server com o Driver JDBC](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)
+* [Como se conectar ao SQL Server com o JDBC Driver](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)
 * [Noções básicas sobre os tipos de dados do JDBC Driver](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)
 * [Usando instruções com o JDBC Driver](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)
 * [Gerenciando conjuntos de resultados com o JDBC Driver](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)
@@ -34,4 +31,4 @@ ms.locfileid: "32828621"
 * [Use Always Encrypted com o Driver JDBC](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)
 * [Usando parâmetros com valor de tabela](../../connect/jdbc/using-table-valued-parameters.md)
 * [Recursos internacionais do JDBC Driver](../../connect/jdbc/international-features-of-the-jdbc-driver.md)
-* [Referência da API do Driver JDBC](../../connect/jdbc/reference/jdbc-driver-api-reference.md)
+* [Referência de API do JDBC Driver](../../connect/jdbc/reference/jdbc-driver-api-reference.md)

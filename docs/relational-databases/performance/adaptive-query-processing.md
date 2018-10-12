@@ -6,9 +6,7 @@ ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords: ''
 ms.assetid: ''
@@ -16,12 +14,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2897b0bb371e68ab4e7cccaffe245191f21243ce
-ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
+ms.openlocfilehash: 19ba6fc7c2841a478107398d6987a53d1bce4670
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44171631"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47851414"
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>Processamento de consultas adaptável em bancos de dados SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -112,7 +110,7 @@ Uma dica de consulta USE HINT tem precedência sobre uma configuração de escop
 **Aplica-se a**: Banco de Dados SQL como um recurso de visualização pública
 
 > [!NOTE]
-> Comentários de concessão de memória do modo de linha é uma versão prévia pública do recurso.  
+> Feedback de concessão de memória do modo de linha é uma versão prévia pública do recurso.  
 
 Os comentários de concessão de memória de modo de linha expande o recurso de comentários de concessão de memória do modo de lote, ajustando os tamanhos de concessão de memória para operadores de modo de lote e de linha.  
 

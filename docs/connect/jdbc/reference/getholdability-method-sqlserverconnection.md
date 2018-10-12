@@ -1,13 +1,11 @@
 ---
-title: Método (SQLServerConnection) getHoldability | Microsoft Docs
+title: Método getHoldability (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerConnection.getHoldability
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: b1644791-c36a-4837-86c4-9299537ee1c2
-caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a2aa0c83ab2fc5148194a402359e445984369cc9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 932939a7302c58f59d018264bf73d7ae8019de99
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32835391"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47611364"
 ---
-# <a name="getholdability-method-sqlserverconnection"></a>getHoldability método (SQLServerConnection)
+# <a name="getholdability-method-sqlserverconnection"></a>Método getHoldability (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera a suspensão atual de [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objetos criados usando esse [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) objeto.  
+  Recupera a suspensão atual de objetos [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) criados com o objeto [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -38,8 +35,8 @@ ms.locfileid: "32835391"
 public int getHoldability()  
 ```  
   
-## <a name="return-value"></a>Valor de retorno  
- Um **int** valor que contenha um dos seguintes níveis de suspensão:  
+## <a name="return-value"></a>Valor retornado  
+ Um valor **int** que contém um dos seguintes níveis de suspensão:  
   
  HOLD_CURSORS_OVER_COMMIT  
   
@@ -49,9 +46,9 @@ public int getHoldability()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método getHoldability é especificado pelo método getHoldability na interface Java.SQL.  
+ Esse método getHoldability é especificado pelo método getHoldability na interface do Connection.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Membros de SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [Classe SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

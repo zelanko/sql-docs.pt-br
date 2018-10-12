@@ -5,21 +5,18 @@ ms.date: 07/31/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6d1ea295-8e34-438e-8468-4bbc0f76192c
-caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 319ada38e07a30fa936608adce4e5c091ba098ec
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: e7459e99e64bddaa0e971666edb8bb9c7c67c009
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42786763"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47727484"
 ---
 # <a name="connection-options"></a>Opções de conexão
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -67,7 +64,7 @@ Este tópico lista as opções que são permitidas na matriz associativa (ao usa
 
 3. A habilitação de *Encryption* pode afetar o desempenho de alguns aplicativos devido à sobrecarga de computação necessária para criptografar os dados.  
 
-4. A instância do *UID* e *PWD* devem ser definidos ao se conectar com a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+4. A instância do *UID* e *PWD* devem ser definidos ao se conectar com a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
 Muitas das chaves com suporte são atributos de cadeias de conexão do ODBC. Para obter informações sobre cadeias de conexão do ODBC, confira [Usando palavras-chave da cadeia de conexão com o SQL Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).
 

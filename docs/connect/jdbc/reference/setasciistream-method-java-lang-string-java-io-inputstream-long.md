@@ -1,25 +1,22 @@
 ---
-title: setAsciiStream método para entrada de fluxo de bytes - longa) | Microsoft Docs
+title: Método para entrada setAsciiStream transmitir bytes - longa) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 6bc486cd-e432-4057-8789-9957ba23dd30
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5e1fc8cd3b54ad78bdfea395f7fd6c7b6724a429
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 3259cf29f487c24b82ec8cd27227cca651b78577
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32843591"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47687684"
 ---
 # <a name="setasciistream-method-javalangstring-javaioinputstream-long"></a>Método setAsciiStream (java.lang.String, java.io.InputStream, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +33,7 @@ public final void setAsciiStream(java.lang.String parameterName,
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *nome do parâmetro*  
+ *parameterName*  
   
  Uma **String** que contém o nome do parâmetro.  
   
@@ -44,21 +41,21 @@ public final void setAsciiStream(java.lang.String parameterName,
   
  Um objeto InputStream.  
   
- *Comprimento*  
+ *length*  
   
- Um **longo** que indica o número de bytes.  
+ Um **long** que indica o número de bytes.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método setAsciiStream é especificado pelo método setAsciiStream na interface PreparedStatement.  
+ Esse método setAsciiStream é especificado pelo método setAsciiStream na interface do PreparedStatement.  
   
- Se o comprimento do fluxo for diferente do especificado no *comprimento* parâmetro, o driver JDBC lançará uma exceção quando a linha for atualizada ou inserida.  
+ Se o comprimento do fluxo for diferente do especificado no parâmetro *length*, o driver JDBC lançará uma exceção quando a linha for atualizada ou inserida.  
   
- Se o comprimento do fluxo for desconhecido, o *comprimento* parâmetro pode ser definido como -1 para indicar que o driver deve aceitar o fluxo independentemente de seu tamanho. Com sqljdbc4.jar, é recomendável que você use o método do JDBC 4.0 [método setAsciiStream (Java, Java.IO. InputStream)](../../../connect/jdbc/reference/setasciistream-method-java-lang-string-java-io-inputstream.md) quando o aplicativo quiser atualizar a coluna de um fluxo cujo comprimento é desconhecido.  
+ Se o comprimento do fluxo for desconhecido, o parâmetro *length* poderá ser definido como -1 para indicar que o driver deve aceitar o fluxo independentemente do seu comprimento. Com sqljdbc4.jar, é recomendável usar o Método [setAsciiStream (java.lang.String, java.io.InputStream)](../../../connect/jdbc/reference/setasciistream-method-java-lang-string-java-io-inputstream.md) do JDBC 4.0 quando o aplicativo quiser atualizar a coluna de um fluxo cujo comprimento é desconhecido.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [setAsciiStream &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setasciistream-sqlservercallablestatement.md)   
  [Membros SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)  
   

@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - converting data types
 - streaming data
 ms.assetid: fee6e6b8-aad9-496b-84a2-18d2950470a4
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d41612ee46f791ef5a130e82d7f75b7afecea3a9
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
-ms.translationtype: MT
+ms.openlocfilehash: 50c03fb857a2c136748a5f9c5c4630bff29b49c7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35307595"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47691814"
 ---
 # <a name="how-to-specify-php-data-types"></a>Como especificar tipos de dados do PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -35,14 +32,14 @@ As etapas a seguir resumem como especificar tipos de dados do PHP ao recuperar d
   
 2.  Disponibilize a próxima linha de dados para leitura com [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md).  
   
-3.  Recupere os dados de um campo de uma linha retornada usando [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) com o tipo de dados do PHP desejado especificado como o terceiro parâmetro opcional. Se o terceiro parâmetro opcional não for especificado, dados são retornados de acordo com os tipos do PHP padrão. Para obter informações sobre tipos do PHP retornados padrão, consulte [Default PHP Data Types](../../connect/php/default-php-data-types.md).  
+3.  Recupere os dados de um campo de uma linha retornada usando [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) com o tipo de dados do PHP desejado especificado como o terceiro parâmetro opcional. Se o terceiro parâmetro opcional não for especificado, os dados serão retornados de acordo com os tipos do PHP padrão. Para obter informações sobre tipos do PHP retornados padrão, consulte [Default PHP Data Types](../../connect/php/default-php-data-types.md).  
   
-    Para obter informações sobre as constantes usadas para especificar o tipo de dados do PHP, consulte a seção PHPTYPEs de [constantes &#40;Drivers da Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
+    Para saber mais sobre as constantes usadas para especificar o tipo de dados do PHP, consulte a seção PHPTYPEs de [Constantes &#40;Drivers da Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
   
 ## <a name="example"></a>Exemplo  
-O exemplo a seguir recupera linhas da tabela *Production.ProductReview* do banco de dados AdventureWorks. Em cada linha retornada, o *ReviewDate* campo é recuperado como uma cadeia de caracteres e o *comentários* campo é recuperado como um fluxo. Os dados de fluxo são exibidos com o uso da função [fpassthru](http://php.net/manual/en/function.fpassthru.php) do PHP.  
+O exemplo a seguir recupera linhas da tabela *Production.ProductReview* do banco de dados AdventureWorks. Em cada linha retornada, o campo *ReviewDate* é recuperado como uma cadeia de caracteres, e o campo *Comments* é recuperado como um fluxo. Os dados de fluxo são exibidos com o uso da função [fpassthru](http://php.net/manual/en/function.fpassthru.php) do PHP.  
   
-O exemplo supõe que SQL Server e o [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) banco de dados são instalados no computador local. Toda a saída será gravada no console quando o exemplo for executado da linha de comando.  
+O exemplo supõe que o SQL Server e o banco de dados [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) estejam instalados no computador local. Toda a saída será gravada no console quando o exemplo for executado da linha de comando.  
   
 ```  
 <?php  
@@ -103,12 +100,12 @@ sqlsrv_close( $conn);
   
 No exemplo, a recuperação do segundo campo (*ReviewDate*) como uma cadeia de caracteres preserva a precisão de milissegundos do tipo de dados DATETIME do SQL Server. Por padrão, o tipo de dados DATETIME do SQL Server é recuperado como um objeto DateTime do PHP, no qual a precisão de milissegundos é perdida.  
   
-Recuperação do quarto campo (*comentários*) como um fluxo para fins de demonstração. Por padrão, o tipo de dados nvarchar (3850) do SQL Server é recuperado como uma cadeia de caracteres, que é aceitável para a maioria das situações.  
+A recuperação do quarto campo (*Comments*) como um fluxo tem fins de demonstração. Por padrão, o tipo de dados nvarchar (3850) do SQL Server é recuperado como uma cadeia de caracteres, que é aceitável para a maioria das situações.  
   
 > [!NOTE]  
 > A função [sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md) fornece uma maneira de obter informações de campo, incluindo informações de tipo, antes de executar uma consulta.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
 [Recuperando dados](../../connect/php/retrieving-data.md)
 
 [Sobre exemplos de código na documentação](../../connect/php/about-code-examples-in-the-documentation.md)

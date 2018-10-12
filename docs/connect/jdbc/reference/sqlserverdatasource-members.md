@@ -5,21 +5,18 @@ ms.date: 01/19/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7e749bc5-d765-4864-be2b-7822d4c20c09
-caps.latest.revision: 43
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9eec784d4d8887a528b17e29c3cf913f0e574896
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: db62f127b5f955de24186c3625d72860eac49f90
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42783821"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47794204"
 ---
 # <a name="sqlserverdatasource-members"></a>Membros de SQLServerDataSource
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -89,7 +86,7 @@ ms.locfileid: "42783821"
 |[setFailoverPartner](../../../connect/jdbc/reference/setfailoverpartner-method-sqlserverdatasource.md)|Define o nome do servidor de reserva usado em uma configuração de espelhamento de banco de dados.|  
 |[setHostNameInCertificate](../../../connect/jdbc/reference/sethostnameincertificate-method-sqlserverdatasource.md)|Define o nome do host a ser usado durante a validação do certificado SSL do SQL Server.|  
 |[setInstanceName](../../../connect/jdbc/reference/setinstancename-method-sqlserverdatasource.md)|Define o nome da instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
-|[setIntegratedSecurity](../../../connect/jdbc/reference/setintegratedsecurity-method-sqlserverdatasource.md)|Define uma **Boolean** valor que indica se a propriedade integratedSecurity está habilitada.|  
+|[setIntegratedSecurity](../../../connect/jdbc/reference/setintegratedsecurity-method-sqlserverdatasource.md)|Define um valor **Booliano** que indica se a propriedade integratedSecurity está habilitada.|  
 |[setLastUpdateCount](../../../connect/jdbc/reference/setlastupdatecount-method-sqlserverdatasource.md)|Define um valor **booliano** que indica se a propriedade lastUpdateCount está habilitada.|  
 |[setLockTimeout](../../../connect/jdbc/reference/setlocktimeout-method-sqlserverdatasource.md)|Define um valor **int** que indica o número de milissegundos que o banco de dados deve aguardar antes de informar um tempo limite de bloqueio.|  
 |[setLoginTimeout](../../../connect/jdbc/reference/setlogintimeout-method-sqlserverdatasource.md)|Define o número de segundos que o objeto [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) aguarda enquanto tenta estabelecer uma conexão.|  

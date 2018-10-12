@@ -5,20 +5,17 @@ ms.date: 07/20/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
-caps.latest.revision: 1
 author: David-Engel
 ms.author: v-daveng
 manager: ''
-ms.openlocfilehash: 3ee34b40af4f72b32286067e5853c673f62ad240
-ms.sourcegitcommit: ae25f8be8b18c4b89e560f80862ff245b0c6e065
+ms.openlocfilehash: 82a8576365889d02381e3b18b622fd541b5b9235
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39268764"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47728694"
 ---
 # <a name="microsoft-php-drivers-for-sql-server-support-matrix"></a>Drivers PHP Microsoft para SQL Server Support Matrix
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -26,7 +23,7 @@ ms.locfileid: "39268764"
   Esta página contém a matriz de suporte e a política de ciclo de vida de suporte para os Microsoft PHP Drivers for SQL Server.
 
 ## <a name="microsoft-php-drivers-support-lifecycle-matrix-and-policy"></a>Matriz de ciclo de vida de suporte do Microsoft PHP Drivers e política
- A política de ciclo de vida de suporte da Microsoft (MSL) fornece informações transparentes e previsíveis sobre o ciclo de vida de suporte dos produtos da Microsoft. Versões de Drivers de PHP 3. x, 4.x e 5.x têm cinco anos de suporte base a partir da data de lançamento do driver. O suporte base é definido no [site do ciclo de vida de suporte da Microsoft](https://support.microsoft.com/lifecycle).
+ A política de ciclo de vida de suporte da Microsoft (MSL) fornece informações transparentes e previsíveis sobre o ciclo de vida de suporte dos produtos da Microsoft. As versões de driver PHP 3.x, 4.x e 5.x têm cinco anos de suporte base a partir da data de lançamento do driver. O suporte base é definido no [site do ciclo de vida de suporte da Microsoft](https://support.microsoft.com/lifecycle).
 
  As opções de suporte personalizado e estendido não estão disponíveis para os Microsoft PHP Drivers.
 

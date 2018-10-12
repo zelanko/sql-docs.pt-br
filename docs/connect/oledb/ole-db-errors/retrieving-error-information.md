@@ -5,11 +5,8 @@ ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: oledb|ole-db-errors
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - OLE DB Driver for SQL Server, errors
@@ -21,19 +18,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: c09a3d0ba3afb2060232aadba84516f52c409c4a
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 8cd520017b423c562628056ea818dfacd01b0631
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43025346"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47639624"
 ---
 # <a name="retrieving-error-information"></a>Recuperando informações de erro
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Este exemplo obtém informações das várias interfaces de erro expostas pelo provedor OLE DB do  Native Client.  
+  Este exemplo obtém informações das várias interfaces de erro expostas pelo OLE DB Driver para SQL Server.  
   
 ```  
 // DumpErrorInfo queries MSOLEDBSQL error interfaces, retrieving available  

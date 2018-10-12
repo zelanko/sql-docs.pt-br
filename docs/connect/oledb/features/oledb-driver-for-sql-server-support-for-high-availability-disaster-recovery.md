@@ -5,21 +5,18 @@ ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: oledb|features
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: ac2a123be5557069964edaddf0a3d6234fba6d19
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: b50dcb3713ba92e000791a70cc6cb7c8100c36d1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43027522"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47674814"
 ---
 # <a name="ole-db-driver-for-sql-server-support-for-high-availability-disaster-recovery"></a>Suporte ao Driver do OLE DB para SQL Server para alta disponibilidade e recuperação de desastre
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -85,7 +82,7 @@ As palavras-chave do cadeia de caracteres de conexão do OLE DB dois foram adici
 -   **ApplicationIntent** 
 -   **MultiSubnetFailover**  
   
- Para obter mais informações sobre palavras-chave de cadeia de caracteres de conexão no Driver do OLE DB para SQL Server, consulte [usando Conexão cadeia de caracteres de palavras-chave com o Driver do OLE DB para SQL Server](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).  
+ Para saber mais sobre palavras-chave da cadeia de conexão no OLE DB Driver para SQL Server, confira [Usando palavras-chave da cadeia de conexão com o OLE DB Driver para SQL Server](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).  
 
 ### <a name="application-intent"></a>Tentativa de aplicativo 
 

@@ -1,26 +1,23 @@
 ---
-title: Propriedades do SQL Server (guia Serviço) | Microsoft Docs
+title: Propriedades do servidor de relatório (guia Serviço) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 2a2e1dbf-02b9-4893-aaf0-c0e4a2c9b4f9
-caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 38013f87cd94649dde759dd347223dbba0148002
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 047b201f19275d8bd39b624d6380c99497380135
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42786770"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47600494"
 ---
 # <a name="report-server-properties-service-tab"></a>Propriedades do servidor de relatório (guia Serviço)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

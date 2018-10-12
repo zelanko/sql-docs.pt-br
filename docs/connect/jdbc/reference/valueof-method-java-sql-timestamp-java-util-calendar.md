@@ -5,26 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7320c383-0b06-446d-963b-7005e50324a2
-caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c2b742e3ccdf297aaa6ede4feb5bb93b04224823
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: fd94495081d99521758747f174268d2163cf67e7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38039234"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47742734"
 ---
 # <a name="valueof-method-javasqltimestamp-javautilcalendar"></a>Método valueOf (java.sql.Timestamp, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Cria uma **DateTimeOffset** objeto que representa um ponto no tempo em um deslocamento específico do GMT dados um valor de timestamp e um valor de java.util.Calendar indicando o deslocamento.  
+  Cria um objeto **DateTimeOffset** que representa um momento determinado em um deslocamento específico do GMT dados um valor java.sql.Timestamp e um valor java.util.Calendar indicando o deslocamento.  
   
 ## <a name="syntax"></a>Sintaxe  
   

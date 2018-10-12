@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerDriver.connect
@@ -15,16 +13,15 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: 43813a4c-1cc7-4659-ba27-f1786f1371eb
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ee87f7694e3612cd89ca3dfa21a691c2aaecb8e3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: b4c1a7853925cfe6dbc97ab8f6c4c5b4f9147ac6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32829131"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47718334"
 ---
 # <a name="connect-method-sqlserverdriver"></a>Método connect (SQLServerDriver)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,26 +37,26 @@ public java.sql.Connection connect(java.lang.String Url,
 ```  
   
 #### <a name="parameters"></a>Parâmetros  
- *URL*  
+ *Url*  
   
- Um **cadeia de caracteres** valor que contém a URL que é usada para se conectar ao banco de dados.  
+ Um valor **String** que contém a URL que é usada para conexão com o banco de dados.  
   
  *suppliedProperties*  
   
  Um conjunto de pares de valor de cadeia de caracteres usado como argumentos de conexão.  
   
-## <a name="return-value"></a>Valor de retorno  
- Um objeto de Conexão.  
+## <a name="return-value"></a>Valor retornado  
+ Um objeto de conexão.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método de conexão é especificado pelo método na interface Java.SQL. driver conectar.  
+ Esse método connect é especificado pelo método connect na interface Java.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Métodos SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-methods.md)   
- [Membros de SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-members.md)   
+ [Membros do SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-members.md)   
  [Classe SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-class.md)  
   
   

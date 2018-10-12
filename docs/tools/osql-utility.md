@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: osql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - statements [SQL Server], command prompt
@@ -25,17 +22,16 @@ helpviewer_keywords:
 - command prompt utilities [SQL Server], osql
 - CTRL+C command
 ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
-caps.latest.revision: 49
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 683bffc470aba863d25b252c7e7d305976631da8
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: b2f6a7406fb500f3e909761c4c632587748c1df8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39452630"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47847465"
 ---
 # <a name="osql-utility"></a>Utilitário osql
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -101,8 +97,8 @@ C:\>osql
  **-E**  
  Usa uma conexão confiável em vez de pedir uma senha.  
   
- **-S** *server_name*[ **\\***instance_name*]  
- Especifica uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a qual se conectar. Especifica *server_name* para a conexão com a instância padrão do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nesse servidor. Especifique *server_name***\\***instance_name* para conectar-se a uma instância nomeada do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nesse servidor. Se nenhum servidor for especificado, o **osql** se conectará à instância padrão do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no computador local. Essa opção é obrigatória quando o **osql** é executado de um computador remoto na rede.  
+ **-S** _server\_nome_[ **\\** _instância\_nome_]  
+ Especifica uma instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a qual se conectar. Especifica *server_name* para a conexão com a instância padrão do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nesse servidor. Especifica _server\_name_**\\**_instance\_name_ para conectar-se a uma instância nomeada do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nesse servidor. Se nenhum servidor for especificado, o **osql** se conectará à instância padrão do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no computador local. Essa opção é obrigatória quando o **osql** é executado de um computador remoto na rede.  
   
  **-H** *wksta_name*  
  É um nome de estação de trabalho. O nome de estação de trabalho é armazenado em **sysprocesses.hostname** e exibido por **sp_who**. Se essa opção não for especificada, o nome do computador atual será presumido.  
@@ -202,7 +198,7 @@ osql -E -q "select name, object_id from %table%"
 ## <a name="remarks"></a>Remarks  
  O utilitário **osql** é iniciado diretamente do sistema operacional com as opções que diferenciam maiúsculas de minúsculas listadas aqui. Depois que o **osql**é iniciado, ele aceita instruções SQL e as envia interativamente ao [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Os resultados são formatados e exibidos na tela (**stdout**). Use QUIT ou EXIT para sair do **osql**.  
   
- Se você não especificar um nome de usuário ao iniciar o **osql**, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verificará se há variáveis de ambiente e as usará, como **osqluser=(***user***)** ou **osqlserver=(***server***)**. Se nenhuma variável de ambiente for definida, o nome de usuário da estação de trabalho será usado. Se você não especificar um servidor, o nome da estação de trabalho será usado.  
+ Se você não especificar um nome de usuário ao iniciar o **osql**, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fará a verificação e usará variáveis de ambiente, como **osqluser=(**_user_**)** ou **osqlserver=(**_server_**)**. Se nenhuma variável de ambiente for definida, o nome de usuário da estação de trabalho será usado. Se você não especificar um servidor, o nome da estação de trabalho será usado.  
   
  Se as opções **-U** ou **-P** não forem usadas, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tentará conectar usando o Modo de Autenticação do [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows. A autenticação baseia-se na conta do [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows do usuário que está executando o **osql**.  
   
@@ -261,7 +257,7 @@ osql -E -i titles.qry -o titles.res
 > [!IMPORTANT]  
 >  Quando possível, use a opção **-E**(conexão de confiança).  
   
- Ao usar o **osql** de forma interativa, você pode ler um arquivo do sistema operacional no buffer de comandos com **:r***file_name*. Isso envia o script SQL no *file_name* diretamente para o servidor como um único lote.  
+ Ao usar o **osql** interativamente, você pode ler um arquivo do sistema operacional no buffer de comandos com **:r**_file\_name_. Isso envia o script SQL no *file_name* diretamente para o servidor como um único lote.  
   
 > [!NOTE]  
 >  Ao usar o **osql**, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] trata o separador em lote GO, se ele for exibido em um arquivo de script SQL, como um erro de sintaxe.  
@@ -302,7 +298,7 @@ osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"
 > [!NOTE]  
 >  Executa o lote e então sai imediatamente e não retorna valor algum.  
   
--   EXIT **(***query***)**  
+-   EXIT **(**_query_**)**  
   
 > [!NOTE]  
 >  Executa o lote, incluindo a consulta, e sai depois de retornar os resultados da consulta.  

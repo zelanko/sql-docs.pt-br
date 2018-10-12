@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - sqlsrv_free_stmt
@@ -16,16 +14,15 @@ helpviewer_keywords:
 - sqlsrv_free_stmt
 - API Reference, sqlsrv_free_stmt
 ms.assetid: 3c71f432-36ad-41e1-8ac7-587c82539448
-caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2e5a0d3cbf54917f32d0e30f2d0b1f15929d6836
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 7188935f0466a58c444f72e02ce541a646e1b41f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38019684"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47610735"
 ---
 # <a name="sqlsrvfreestmt"></a>sqlsrv_free_stmt
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,7 +43,7 @@ sqlsrv_free_stmt( resource $stmt)
 O valor booliano **true** , a menos que a função seja chamada com um parâmetro inválido. Se a função for chamada com um parâmetro inválido, **false** será retornado.  
   
 > [!NOTE]  
-> **Null** é um parâmetro válido para esta função. Isso permite que a função seja chamada várias vezes em um script. Por exemplo, se você liberar uma instrução em uma condição de erro e liberá-la novamente no final do script, a segunda chamada para sqlsrv_free_stmt **retornará true** porque a primeira chamada para sqlsrv_free_stmt **(na condição de erro) define o recurso de conexão como null**.  
+> **Null** é um parâmetro válido para esta função. Isso permite que a função seja chamada várias vezes em um script. Por exemplo, se você liberar uma instrução em uma condição de erro e liberá-la novamente no final do script, a segunda chamada para **sqlsrv_free_stmt** retornará **true** porque a primeira chamada para **sqlsrv_free_stmt** (na condição de erro) define o recurso de conexão como **null**.  
   
 ## <a name="example"></a>Exemplo  
 O exemplo a seguir cria um recurso de instrução, executa uma consulta simples e chama **sqlsrv_free_stmt** para liberar todos os recursos associados à instrução. O exemplo supõe que o SQL Server e o banco de dados [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) estejam instalados no computador local. Toda a saída será gravada no console quando o exemplo for executado da linha de comando.  

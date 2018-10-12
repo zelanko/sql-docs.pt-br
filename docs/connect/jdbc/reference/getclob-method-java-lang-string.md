@@ -1,13 +1,11 @@
 ---
-title: Método (Java) getClob | Microsoft Docs
+title: Método (lang) getClob | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerCallableStatement.getClob (java.lang.String)
@@ -15,21 +13,20 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: ad871d09-ec43-4885-9067-20854b439b0c
-caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6c9aeb741a28338a56fd2175447c3b4c03f5a691
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: f546a846b96b3c0d518663fbf52edb033631a7ec
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32831811"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47647614"
 ---
 # <a name="getclob-method-javalangstring"></a>Método getClob (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera o valor do parâmetro JDBC BLOB designado como um objeto Clob na linguagem de programação Java considerando o nome do parâmetro.  
+  Recupera o valor do parâmetro JDBC BLOB designado como um objeto Clob na linguagem de programação Java, considerando o nome do parâmetro.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -43,16 +40,16 @@ public java.sql.Clob getClob(java.lang.String sCol)
   
  Uma **String** que contém o nome do parâmetro.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  Um objeto Clob.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método getClob é especificado pelo método getClob na interface do CallableStatement.  
+ Esse método getClob é especificado pelo método getClob na interface java.sql.CallableStatement.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Método getClob &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getclob-method-sqlservercallablestatement.md)   
  [Membros SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Classe SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  

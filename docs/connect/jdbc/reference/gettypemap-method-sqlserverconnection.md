@@ -5,9 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apiname:
 - SQLServerConnection.getTypeMap
@@ -15,24 +13,23 @@ apilocation:
 - sqljdbc.jar
 apitype: Assembly
 ms.assetid: c81bcf9a-2e24-4dfc-8c04-d612e9b7baca
-caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8ee3c2a34840609f228c40dc1868747c9d42dfc3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: f019041b6e13ea547619645223e6a5d3a3824403
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32840091"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47834726"
 ---
 # <a name="gettypemap-method-sqlserverconnection"></a>Método getTypeMap (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera o objeto de mapa associado a esta [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) objeto.  
+  Recupera o objeto Map associado ao objeto [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).  
   
 > [!NOTE]  
->  Esse método não é suportado atualmente pelo [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)].  
+>  No momento, este método não é compatível com [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)].  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -41,16 +38,16 @@ ms.locfileid: "32840091"
 public java.util.Map getTypeMap()  
 ```  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  Um objeto de mapa.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- Esse método getTypeMap é especificado pelo método getTypeMap na interface Java.SQL.  
+ Esse método getTypeMap é especificado pelo método getTypeMap na interface do Connection.  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Membros de SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [Classe SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

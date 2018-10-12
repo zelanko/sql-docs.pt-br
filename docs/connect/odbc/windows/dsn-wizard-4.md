@@ -1,49 +1,46 @@
 ---
-title: Tela do Assistente de 4 (Driver ODBC para SQL Server) da fonte de dados | Microsoft Docs
+title: Tela 4 (Driver ODBC para SQL Server) do Assistente de fonte de dados | Microsoft Docs
 ms.custom: ''
 ms.date: 09/27/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7f53180976b3a4778f687ef8a83d9438ea858c05
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 2c8a5a785f7c208d8543f9ec3a27d34b34f7a918
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32855881"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47724364"
 ---
-# <a name="data-source-wizard-screen-4"></a>Tela de Assistente de fonte de dados 4
+# <a name="data-source-wizard-screen-4"></a>Tela 4 do Assistente de Fonte de Dados
 
-Especifique o idioma a ser usado para mensagens do SQL Server, o conjunto de caracteres de conversão, e se o driver ODBC do SQL Server deve usar configurações regionais. Você também pode controlar o log de consultas demoradas e as configurações de estatísticas de driver.
+Especifique o idioma a ser usado para mensagens do SQL Server, a tradução do conjunto de caracteres e se o driver ODBC do SQL Server deverá usar configurações regionais. Você também pode controlar o log de consultas demoradas e as configurações de estatísticas de driver.
 
 ## <a name="options"></a>Opções
 
 ### <a name="change-the-language-of-sql-server-system-messages-to"></a>Alterar o idioma das mensagens de sistema do SQL Server para
 
-Cada instância do SQL Server pode ter vários conjuntos de mensagens do sistema, com cada conjunto em um idioma diferente (por exemplo, inglês, espanhol, francês e assim por diante). Se uma fonte de dados for definida em relação a um servidor com vários conjuntos de mensagens do sistema, você poderá especificar o idioma a ser utilizado para essas mensagens. Clique no idioma na lista. Essa opção estará disponível se apenas um idioma for instalado no SQL Server.
+Cada instância do SQL Server pode ter vários conjuntos de mensagens de sistema, cada um deles em um idioma diferente (por exemplo, inglês, espanhol, francês etc.). Se uma fonte de dados for definida em relação a um servidor com vários conjuntos de mensagens do sistema, você poderá especificar o idioma a ser utilizado para essas mensagens. Clique no idioma na lista. Esta opção não estará disponível se só um idioma for instalado no SQL Server.
 
 ### <a name="use-strong-encryption-for-data"></a>Usar criptografia forte para dados
 
 Quando essa opção está selecionada, os dados passados por conexões estabelecidas com o uso de DSN serão criptografados. Os logons são criptografados por padrão, até mesmo quando a caixa de seleção está desmarcada.
 
-### <a name="trust-server-certificate"></a>Certificado do servidor confiável
+### <a name="trust-server-certificate"></a>Confiar em certificado do servidor
 
 Essa opção é aplicável somente quando **usar criptografia forte para dados** está habilitado. Quando selecionada, o certificado do servidor não será validado para que o nome de host correto do servidor e ser emitido por uma autoridade de certificação confiável. 
 
 ### <a name="perform-translation-for-character-data"></a>Executar tradução de dados de caracteres
 
-Quando essa caixa de seleção é selecionada, o driver ODBC do SQL Server converte cadeias de caracteres ANSI enviadas entre o computador cliente e o SQL Server usando o Unicode. Às vezes, o driver ODBC converte entre a página de código do SQL Server e o Unicode no computador cliente. Isso requer que a página de código usada pelo SQL Server seja uma das páginas de código disponíveis no computador cliente.
+Quando essa caixa de seleção está marcada, o driver ODBC do SQL Server converte cadeias de caracteres ANSI enviadas entre o computador cliente e o SQL Server com o uso de Unicode. O driver ODBC às vezes converte entre a página de código do SQL Server e o Unicode no computador cliente. Isso requer que a página de código usada pelo SQL Server seja uma das páginas de código disponíveis no computador cliente.
 
-Quando essa caixa de seleção está desmarcada, nenhuma tradução dos caracteres estendidos em cadeias de caracteres ANSI é feita quando eles são enviados entre o aplicativo cliente e o servidor. Se o computador cliente estiver usando uma página de código ANSI (ACP) diferente da página de código do SQL Server, caracteres estendidos em cadeias de caracteres ANSI talvez sejam interpretados incorretamente. Se o computador cliente está usando a mesma página de código desse ACP que o SQL Server está usando, os caracteres estendidos serão interpretados corretamente.
+Quando essa caixa de seleção está desmarcada, nenhuma tradução dos caracteres estendidos em cadeias de caracteres ANSI é feita quando eles são enviados entre o aplicativo cliente e o servidor. Se o computador cliente estiver usando uma página de código ANSI (ACP) diferente da página de código do SQL Server, os caracteres estendidos em cadeias de caracteres ANSI talvez sejam interpretados incorretamente. Se o computador cliente usando a mesma página de código desse ACP que o SQL Server está utilizando, os caracteres estendidos serão interpretados corretamente.
 
 ### <a name="use-regional-settings-when-outputting-currency-numbers-dates-and-times"></a>Usar configurações regionais na saída de moedas, números, datas e horas
 
@@ -51,7 +48,7 @@ Especifica que o driver usa as configurações regionais do computador cliente p
 
 ### <a name="save-long-running-queries-to-the-log-file"></a>Salvar consultas demoradas no arquivo de log
 
-Especifica que o log registra qualquer consulta que demora mais do que o **tempo da consulta demorada** valor. As consultas demoradas são registradas no arquivo especificado. Para especificar um arquivo de log, digite o caminho completo e nome de arquivo na caixa ou clique em **procurar** para selecionar um arquivo de log navegando pelos diretórios de arquivo existentes.
+Especifica que o log registra qualquer consulta que demore mais do que o valor de **tempo de consulta Demorada**. As consultas demoradas são registradas no arquivo especificado. Para especificar um arquivo de log, digite o caminho completo e o nome de arquivo na caixa ou clique em **Procurar** para selecionar um arquivo de log navegando pelos diretórios de arquivo existentes.
 
 ### <a name="long-query-time-milliseconds"></a>Tempo da consulta demorada (milissegundos)
 
@@ -59,17 +56,17 @@ Especifica um valor de limite, em milissegundos, para registrar uma consulta dem
 
 ### <a name="log-odbc-driver-statistics-to-the-log-file"></a>Registrar estatísticas de driver ODBC no arquivo de log
 
-Especifica que as estatísticas sejam registradas. As estatísticas são registradas no arquivo especificado. Para especificar um arquivo de log, digite o nome de arquivo e caminho completo na caixa ou clique em **procurar** para selecionar um arquivo de log navegando pelos diretórios de arquivo existentes.
+Especifica que as estatísticas sejam registradas. As estatísticas são registradas no arquivo especificado. Para especificar um arquivo de log, digite o caminho completo e o nome de arquivo na caixa ou clique em **Procurar** para selecionar um arquivo de log navegando pelos diretórios de arquivo existentes.
 
 O log de estatísticas é um arquivo delimitado por tabulações que pode ser analisado no Microsoft Excel ou em qualquer aplicativo com suporte para arquivos delimitados por tabulações.
 
-### <a name="connect-retry-count"></a>Conecte-se a contagem de repetição
+### <a name="connect-retry-count"></a>Contagem de repetições de conexão
 
 Especifica o número de vezes para repetir uma tentativa de conexão malsucedida.
 
-### <a name="connect-retry-interval-seconds"></a>Conecte-se o intervalo de repetição (segundos)
+### <a name="connect-retry-interval-seconds"></a>Intervalo de repetições de conexão (segundos)
 
-Especifica o número de segundos entre cada tentativa de conexão. Para obter mais informações sobre a operação de isso e o **contagem de repetições de conexão** opções, consulte [resiliência de Conexão no Driver ODBC do Windows](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md).
+Especifica o número de segundos entre cada tentativa de repetição de conexão. Para obter mais informações sobre a operação e o **contagem de repetição do Connect** opções, consulte [resiliência de Conexão no Driver ODBC do Windows](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md).
 
 ### <a name="back"></a>Voltar
 
@@ -77,8 +74,8 @@ Clique neste botão para voltar à página anterior do assistente.
 
 ### <a name="finish"></a>Concluir
 
-Se as informações especificadas nesta tela estiverem concluídas, você pode clicar em **concluir**. O DSN é criado usando todos os atributos especificados sobre esta e outras telas do assistente, e você terá a oportunidade de testar o DSN recém-criado.
+Se as informações especificadas nesta tela forem concluídas, você poderá clicar **concluir**. O DSN é criado usando todos os atributos especificados sobre esta e outras telas do assistente e você terá a oportunidade de testar o DSN criado recentemente.
 
 ## <a name="next-steps"></a>Próximas etapas
 
-[Tela de Assistente de fonte de dados 3](../../../connect/odbc/windows/dsn-wizard-3.md)
+[Tela 3 do Assistente de Fonte de Dados](../../../connect/odbc/windows/dsn-wizard-3.md)

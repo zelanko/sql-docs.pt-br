@@ -5,26 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: cbbf2728-b8c8-4c35-875a-6e967c8285dc
-caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 85f1e7364f5037817b4b49b31c387d3be83f7c43
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MT
+ms.openlocfilehash: 40a1072776d2f926d353012656c921f217528d92
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32850881"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47666784"
 ---
 # <a name="unwrap-method-sqlservercallablestatement"></a>Método unwrap (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Retorna um objeto que implementa a interface especificada para permitir acesso a [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-métodos específicos.  
+  Retorna um objeto que implementa a interface especificada para permitir o acesso aos métodos específicos do [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)].  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -36,24 +33,24 @@ public <T> T unwrap(Class<T> iface)
 #### <a name="parameters"></a>Parâmetros  
  *iface*  
   
- Uma classe de tipo **T** define uma interface.  
+ Uma classe do tipo **T** que define uma interface.  
   
-## <a name="return-value"></a>Valor de retorno  
+## <a name="return-value"></a>Valor retornado  
  Um objeto que implementa a interface especificada.  
   
 ## <a name="exceptions"></a>Exceções  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- O [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md) método é definido pela interface Java.SQL, introduzida no JDBC 4.0 Spec.  
+ O método [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md) é definido pela interface java.sql.Wrapper introduzida no JDBC 4.0 Spec.  
   
- Aplicativos talvez precisem acessar extensões para a API do JDBC que são específicas para o [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]. O método unwrap oferece suporte ao desencapsulamento em classes públicas que estende a esse objeto, caso as classes exponham extensões do fornecedor.  
+ Os aplicativos talvez precisem acessar extensões para a API do JDBC específicas do [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]. O método unwrap é compatível com o desencapsulamento para classes públicas estendidas por esse objeto, caso as classes exponham extensões do fornecedor.  
   
- [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) implementa [ISQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md), que é estendido a partir de [ISQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md). Quando este método é chamado, o objeto é desencapsulado nas classes seguintes: [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md), [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md), e [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md).  
+ [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) implementa [ISQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md), que é estendido a partir de [ISQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md). Quando esse método é chamado, o objeto é desencapsulado nas classes seguintes: [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md), [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) e [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md).  
   
  Para obter mais informações, consulte [Wrappers e Interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
- O exemplo de código a seguir demonstra como usar o isWrapperFor e unwrap métodos para verificar se as extensões de driver e chamar os métodos específicos do fornecedor, como [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) e [ getResponseBuffering](../../../connect/jdbc/reference/getresponsebuffering-method-sqlserverstatement.md).  
+ O exemplo de código a seguir demonstra como usar os métodos isWrapperFor e unwrap para verificar as extensões de driver e chamar os métodos específicos do fornecedor, como [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) e [getResponseBuffering](../../../connect/jdbc/reference/getresponsebuffering-method-sqlserverstatement.md).  
   
 ```  
 public static void executeStoredProcedure(Connection con) {  
@@ -109,7 +106,7 @@ public static void executeStoredProcedure(Connection con) {
 }   
 ```  
   
-## <a name="see-also"></a>Consulte também  
+## <a name="see-also"></a>Consulte Também  
  [Método isWrapperFor &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/iswrapperfor-method-sqlservercallablestatement.md)   
  [Membros SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Classe SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  

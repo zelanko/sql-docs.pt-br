@@ -5,21 +5,18 @@ ms.date: 07/19/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: connectivity
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 451181b8-11e6-4d01-b547-9ac5aada8238
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8f354c557aaa44633f15640458138678ee18dfab
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 3b05ad276374427e13fcbca2cca2bd577d582451
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39459470"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47710546"
 ---
 # <a name="download-microsoft-jdbc-driver-for-sql-server"></a>Baixe o Microsoft JDBC Driver para SQL Server
 
@@ -43,6 +40,6 @@ O Driver JDBC pode ser adicionado a um projeto Maven adicionando-o como uma depe
  * [Microsoft JDBC Driver 4.1 para SQL Server](http://go.microsoft.com/fwlink/?linkid=841533) 
   
 ## <a name="unsupported-drivers"></a>Drivers sem suporte  
-As versões de driver sem suporte não estão disponíveis para download aqui. Estamos aperfeiçoando continuamente o suporte à conectividade com Java. Como tal, é altamente recomendável que você trabalhe com a versão mais recente do Microsoft JDBC driver.  
+As versões de driver sem suporte não estão disponíveis para download aqui. Estamos aperfeiçoando continuamente o suporte à conectividade com Java. Portanto, é altamente recomendável que você trabalhe com a versão mais recente do Microsoft JDBC driver.  
   
   
