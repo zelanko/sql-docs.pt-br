@@ -10,12 +10,12 @@ author: Abiola
 ms.author: aboke
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4038f6ee6be90e3c6cf11a3b7c70ec9576e6ee8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b1baf1655619a3bc4b61939e2de8310956c9678d
+ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818854"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48874265"
 ---
 # <a name="configure-polybase-to-access-external-data-in-teradata"></a>Configurar o PolyBase para acessar dados externos no Teradata
 
@@ -39,7 +39,6 @@ Estes objetos serão criados nesta seção:
 
 - CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL) 
 - CREATE EXTERNAL DATA SOURCE (Transact-SQL) 
-- CREATE EXTERNAL FILE FORMAT (Transact-SQL) 
 - CREATE EXTERNAL TABLE (Transact-SQL) 
 - CREATE STATISTICS (Transact-SQL)
 
@@ -64,16 +63,17 @@ Estes objetos serão criados nesta seção:
 1. Crie uma fonte de dados externa com [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md). Especifique o local da fonte de dados externa e credenciais para o Teradata.
 
      ```sql
-      /*  LOCATION: Server DNS name or IP address.
-     *  PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
-     *  CREDENTIAL: the database scoped credential, created above.
-     */  
-     CREATE EXTERNAL DATA SOURCE TeradataInstance
-     WITH ( 
-     LOCATION = '<vendor>://<server>[:<port>]',
-     -- PUSHDOWN = ON | OFF,
-       CREDENTIAL = TeradataCredentials
-     );
+    /*  LOCATION: Location string should be of format '<vendor>://<server>[:<port>]'.
+    *  PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
+    *  CREDENTIAL: the database scoped credential, created above.
+    */  
+    CREATE EXTERNAL DATA SOURCE TeradataInstance
+    WITH ( 
+    LOCATION = teradata://TeradataServer,
+    -- PUSHDOWN = ON | OFF,
+      CREDENTIAL = TeradataCredentials
+    );
+
      ```
 
 1. Crie esquemas para dados externos

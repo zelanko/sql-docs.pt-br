@@ -11,12 +11,12 @@ ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 729ec5fc4a811c1c201059ad58086712f6d16f9a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a33c2bd47bae8bede7fa71e1654627c123e7cdbc
+ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685374"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48874314"
 ---
 # <a name="tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service"></a>Tutorial: backup e restauração do SQL Server no serviço de Armazenamento de Blobs do Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ Usando a chave de acesso que você salvou, crie a credencial do SQL Server segui
 
   ```sql
   CREATE CREDENTIAL mycredential   
-  WITH IDENTITY= 'mystorageaccount', -- this is the name of the storage account you specified when creating a storage account   
+  WITH IDENTITY= 'msftutorialstorage', -- this is the name of the storage account you specified when creating a storage account   
   SECRET = '<storage account access key>' -- this should be either the Primary or Secondary Access Key for the storage account 
   ```
 1. Execute a instrução para criar a credencial. 
@@ -89,8 +89,8 @@ Nesta seção, você usará uma instrução T-SQL para executar um backup comple
 1. Copie e cole o exemplo a seguir na janela de consulta, modificando conforme necessário: 
 
  ```sql
- BACKUP DATABASE[AdventureWorks2016] 
- TO URL = 'https://mystorageaccount.blob.core.windows.net/privatecontainertest/AdventureWorks2016.bak' 
+ BACKUP DATABASE [AdventureWorks2016] 
+ TO URL = 'https://msftutorialstorage.blob.core.windows.net/sql-backup/AdventureWorks2016.bak' 
  /* URL includes the endpoint for the BLOB service, followed by the container name, and the name of the backup file*/ 
  WITH CREDENTIAL = 'mycredential';
  /* name of the credential you created in the previous step */ 
@@ -108,7 +108,7 @@ Nesta seção, você usará uma instrução T-SQL para restaurar o backup do ban
 
  ```sql
  RESTORE DATABASE AdventureWorks2016 
- FROM URL = 'https://mystorageaccount.blob.core.windows.net/privatecontainertest/AdventureWorks2012.bak' 
+ FROM URL = 'https://msftutorialstorage.blob.core.windows.net/sql-backup/AdventureWorks2016.bak' 
  WITH CREDENTIAL = 'mycredential',
  STATS = 5 -- use this to see monitor the progress
  GO
