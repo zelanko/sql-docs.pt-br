@@ -29,17 +29,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 9748fcba84e037a58007c4a50ce218291cb098d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 8252d8eca6a9196630bc224a39324989c4388a6a
+ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796624"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48252113"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
- > Para SQL Server 2014 e inferior, consulte [utilitário sqlcmd](sqlcmd-utility.md).
+ > Para SQL Server 2014 e inferior, consulte [utilitário sqlcmd](https://docs.microsoft.com/en-us/sql/tools/sqlcmd-utility?view=sql-server-2014
+).
 
  > Para usar o sqlcmd no Linux, confira [instalar o sqlcmd e bcp no Linux](../linux/sql-server-linux-setup-tools.md).
 
