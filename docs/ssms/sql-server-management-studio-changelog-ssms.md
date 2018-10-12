@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio – Changelog (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/26/2018
+ms.date: 09/04/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssms
@@ -15,26 +15,107 @@ caps.latest.revision: 72
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0c45c55f72b6c864087a0df2d45d9da0ef3cfce1
-ms.sourcegitcommit: 3b4a0ab8ccdd5d49f264e11b518640ceedbb467f
+ms.openlocfilehash: edfb4248c5f5102742ab13d7a2615bb3c192481b
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42899496"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43889792"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Este artigo fornece detalhes sobre atualizações, aprimoramentos e correções de bug para as versões atuais e anteriores do SSMS. Baixe [versões anteriores do SSMS abaixo](#previous-ssms-releases).
 
 
+## <a name="ssms-179download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.9](download-sql-server-management-studio-ssms.md)
 
 
-## <a name="ssms-1781download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.8.1](download-sql-server-management-studio-ssms.md)
+Número de build: 14.0.17285.0<br>
+Data de lançamento: 4 de setembro de 2018
+
+### <a name="whats-new"></a>Novidades
+
+**SSMS geral**
+
+
+Plano de execução:
+
+- O Plano de Execução Gráfico agora mostra os novos atributos de comentários de concessão de memória do modo de linha quando o recurso está ativado para um plano específico: IsMemoryGrantFeedbackAdjusted e LastRequestedMemory adicionados ao elemento XML de plano de consulta MemoryGrantInfo. Para saber mais sobre comentários de concessão de memória do modo de linha, confira [Processamento de consultas adaptável em bancos de dados SQL](https://docs.microsoft.com/sql/relational-databases/performance/adaptive-query-processing).
+
+SQL do Azure: 
+
+- Adição de suporte para SKUs vCore na criação de banco de dados do Azure. Para saber mais, confira [Modelo de compra baseado em vCore](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers#vcore-based-purchasing-model).
+ 
+
+### <a name="bug-fixes"></a>Correções de bugs
+
+**SSMS geral**
+    
+Replication Monitor:
+
+- Corrigido um problema que fazia com que o Replication Monitor (SqlMonitor.exe) não fosse iniciado (item Voz do usuário: https://feedback.azure.com/forums/908035-sql-server/suggestions/34791079) 
+
+Assistente Importar Arquivo Simples: 
+
+- Corrigido o link para a página de ajuda do diálogo "Assistente de Arquivo Simples" 
+- Corrigido o problema em que o assistente não permitia alteração na tabela de destino quando a tabela já existia: isso permite aos usuários tentar outra vez sem precisar sair do assistente, excluir a tabela com falha e, em seguida, inserir novamente as informações no assistente (item Voz do Usuário: https://feedback.azure.com/forums/908035-sql-server/suggestions/32896186). 
+
+Importar/Exportar o Aplicativo da Camada de Dados:
+
+- Corrigido um problema (em DacFx) que causava falha na importação de um .bacpac, com uma mensagem como “Error SQL72014: .Net SqlClient Data Provider: Msg 9108, Level 16, State 10, Line 1 This type of statistics is not supported to be incremental. ” ao lidar com tabelas com partições definidas e sem índices. 
+
+IntelliSense:
+
+- Corrigido um problema em que o preenchimento do intellisense não funcionava ao usar o AAD com MFA. 
+
+Pesquisador de Objetos: 
+
+- Corrigido um problema em que o “Diálogo Filtrar” era exibido em monitores aleatórios em vez de ser mostrado no monitor onde o SSMS estava em execução (sistemas com vários monitores).
+
+SQL do Azure: 
+
+- Corrigido um problema relacionado à enumeração de bancos de dados em "Bancos de Dados Disponíveis", em que "mestre" não era exibido na lista suspensa quando conectado a um banco de dados específico. 
+- Corrigido um problema em que ocorria falha ao tentar gerar um script ("Dados" ou "Esquema e Dados") e, em seguida, havia conexão com o Banco de Dados SQL do Azure usando AAD com MFA. 
+- Corrigido um problema no Designer de Exibição (Exibições) em que não era possível selecionar "Adicionar Tabelas" na interface do usuário quando conectado a um Banco de Dados SQL do Azure. 
+- Corrigido um problema em que o Editor de Consultas do SSMS fechava e reabria conexões silenciosamente durante a renovação de tokens do MFA. Isso impedirá a ocorrência de efeitos colaterais desconhecidos para o usuário (como fechar uma transação e não reabri-la). A alteração adiciona o tempo de expiração do token à janela Propriedades. 
+- Corrigido um problema em que o SSMS não forçava solicitações de senha para contas MSA importadas para o AAD com logon de MFA. 
+
+Monitor de Atividade: 
+
+- Corrigido um problema que fazia com que "Estatísticas de Consultas ao Vivo" parasse de responder quando eram iniciadas pelo Monitor de Atividade e a Autenticação do SQL era usada. 
+
+Integração do Microsoft Azure: 
+
+- Corrigido um problema em que o SSMS mostrava apenas as primeiras 50 assinaturas (caixas de diálogo Always Encrypted, diálogos Fazer backup/Restaurar da URL etc.). 
+- Corrigido um problema em que o SSMS lançava uma exceção (“Índice fora do intervalo”) ao tentar fazer logon em uma conta do Microsoft Azure que não tivesse nenhuma conta de armazenamento (diálogo Fazer backup/Restaurar da URL). 
+
+Script de objeto: 
+
+- Ao executar o script "Drop and Create", o SSMS agora evita gerar T-SQL dinâmico.
+- Ao executar o script de um objeto de banco de dados, o SSMS agora não gerará script para definir as configurações com escopo do banco de dados se elas estiverem definidas como valores padrão.
+
+Ajuda:
+
+- Corrigido um problema pendente há muito tempo em que "Help on Help" não respeitava o modo online/offline.
+- Ao clicar em “Ajuda | Projetos e Exemplos da Comunidade”, o SSMS agora abre o navegador padrão que aponta para uma página do Git e não mostra erros/avisos devido ao uso de um navegador antigo.
+
+### <a name="known-issues"></a>Problemas conhecidos
+
+- Atualmente, não há nenhum problema conhecido nesta versão.
+
+
+
+## <a name="previous-ssms-releases"></a>Versões anteriores do SSMS
+
+Baixe versões anteriores do SSMS clicando nos links de título nas seções a seguir.
+
+## <a name="downloadssdtmediadownloadpng-ssms-1781httpsgomicrosoftcomfwlinklinkid875802"></a>![baixar](../ssdt/media/download.png) [SSMS 17.8.1](https://go.microsoft.com/fwlink/?linkid=875802)
 *Um bug foi descoberto em 17.8, relacionado ao provisionamento de bancos de dados SQL, Portanto, o SSMS 17.8.1 substitui o 17.8.*
-
 
 Número de build: 14.0.17277.0<br>
 Data de lançamento: 26 de junho de 2018
+
+[Chinês (Simplificado)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x804) | [Chinês (Tradicional)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x404) | [Inglês (Estados Unidos)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x409) | [Francês](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x40c) | [Alemão](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x410) | [Japonês](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x412) | [Português (Brasil)](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x419) | [Espanhol](https://go.microsoft.com/fwlink/?linkid=875802&clcid=0x40a)
 
 
 ### <a name="whats-new"></a>Novidades
@@ -93,10 +174,6 @@ Always Encrypted:
 - Pode ser observada alguma latência no visualizador XEvents. Este é um [problema conhecido no .NET Framework](https://github.com/Microsoft/dotnet/blob/master/releases/net472/dotnet472-changes.md#sql). Considere a atualização para o NetFx 4.7.2.
 
 
-
-## <a name="previous-ssms-releases"></a>Versões anteriores do SSMS
-
-Baixe versões anteriores do SSMS clicando nos links de título nas seções a seguir.
 
 
 ## <a name="downloadssdtmediadownloadpng-ssms-177httpsgomicrosoftcomfwlinklinkid873126"></a>![baixar](../ssdt/media/download.png) [SSMS 17.7](https://go.microsoft.com/fwlink/?linkid=873126)

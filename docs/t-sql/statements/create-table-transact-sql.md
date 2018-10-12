@@ -1,7 +1,7 @@
 ---
 title: CREATE TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -50,20 +50,18 @@ caps.latest.revision: 256
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d70a8a17b0a168787da8f0894e2a8c681bd40b8d
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: a9a443f1cb6d951a486a1bf58ad2c96a2b47195c
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40405146"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171888"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Cria uma nova tabela no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e no [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
-
 > [!NOTE]   
 >  Para sintaxe [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], veja [CREATE TABLE (SQL Data Warehouse do Azure)](../../t-sql/statements/create-table-azure-sql-data-warehouse.md).
   
@@ -412,7 +410,7 @@ TEXTIMAGE_ON somente altera o local de "espaço de armazenamento LOB", não afet
   
  FILESTREAM_ON { *partition_scheme_name* | filegroup | **"** default **"** } 
  
- **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+ **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. O Banco de Dados SQL do Azure não é compatível com `FILESTREAM`.
  
  Especifica o grupo de arquivos para obter dados de FILESTREAM.  
   
@@ -852,7 +850,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  FILETABLE_COLLATE_FILENAME = { *collation_name* | database_default }  
    
-**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
+**Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. O Banco de Dados SQL do Azure não é compatível com `FILETABLE`. 
   
  Especifica o nome do agrupamento a ser aplicado à coluna **Name** da FileTable. O agrupamento não deve diferenciar maiúsculas de minúsculas para ser compatível com a semântica de nomenclatura de arquivos do Windows. Se esse valor não for especificado, o agrupamento padrão do banco de dados será usado. Se o agrupamento padrão do banco de dados diferenciar maiúsculas de minúsculas, será gerado um erro e a operação CREATE TABLE falhará.  
   
@@ -927,7 +925,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
  MEMORY_OPTIMIZED  
    
-**Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Aplica-se a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. A Instância Gerenciada do Banco de Dados SQL do Azure não oferece suporte a tabelas otimizadas de memória. 
   
  O valor ON indica que a tabela é otimizada para memória. Tabelas com otimização de memória são parte do recurso de OLTP in-memory, que é usado para otimização de desempenho do processamento de transações. Para começar a usar o OLTP in-memory, consulte [Início rápido 1: tecnologias OLTP in-memory para um desempenho mais rápido do Transact-SQL](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md). Para obter informações mais detalhadas sobre as tabelas com otimização de memória, veja [Tabelas com otimização de memória](../../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   

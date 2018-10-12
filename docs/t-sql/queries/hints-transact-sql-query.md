@@ -58,12 +58,12 @@ caps.latest.revision: 136
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 450812006d18f143ec2b6083bf2bd0701ea4c252
-ms.sourcegitcommit: 010755e6719d0cb89acb34d03c9511c608dd6c36
+ms.openlocfilehash: 0e0840861f98a9d178bbee29d9c6b7e82433dd97
+ms.sourcegitcommit: bab5f52b76ac53d0885683b7c39a808a41d93cfe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43240284"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44089986"
 ---
 # <a name="hints-transact-sql---query"></a>Dicas (Transact-SQL) – consulta
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -84,8 +84,6 @@ ms.locfileid: "43240284"
  [UPDATE](../../t-sql/queries/update-transact-sql.md)  
   
  [MERGE](../../t-sql/statements/merge-transact-sql.md)  
-  
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -280,13 +278,13 @@ ms.locfileid: "43240284"
 *  'FORCE_DEFAULT_CARDINALITY_ESTIMATION'    
  Força o otimizador de consulta a usar o modelo de [estimativa de cardinalidade](../../relational-databases/performance/cardinality-estimation-sql-server.md) que corresponde ao nível de compatibilidade do banco de dados atual. Use essa dica para substituir a definição da [Configuração de escopo do banco de dados](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) LEGACY_CARDINALITY_ESTIMATION=ON ou o [sinalizador de rastreamento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481.
 *  'DISABLE_INTERLEAVED_EXECUTION_TVF'   
- Desabilita a execução intercalada para funções com valor de tabela de várias instruções. Para obter mais informações, consulte [Interleaved execution for multi-statement table valued functions](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions) (Execução intercalada para funções com valor de tabela de várias instruções).
+ Desabilita a execução intercalada para funções com valor de tabela de várias instruções. Para saber mais, veja [Execução intercalada para funções com valor de tabela de várias instruções](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions).
 *  'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'     
  Desabilita os comentários de concessão de memória do modo de lote. Para obter mais informações, veja [Batch mode memory grant feedback](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-memory-grant-feedback) (Comentários de concessão de memória de modo de lote).
 *  'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'     
  Desabilita junções adaptáveis do modo de lote. Para obter mais informações, consulte [Batch mode Adaptive Joins](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins) (Junções adaptáveis de modo de lote).
 *  'QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n'       
- Força o comportamento do otimizador de consulta em um nível de consulta, como se a consulta fosse compilada com o nível de compatibilidade do banco de dados *n*, onde *n* é um nível de compatibilidade do banco de dados com suporte. Confira [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) para obter uma lista atual de valores com suporte para *n*. **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (começando com [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].   
+ Força o comportamento do otimizador de consulta em um nível de consulta, como se a consulta fosse compilada com o nível de compatibilidade do banco de dados *n*, onde *n* é um nível de compatibilidade do banco de dados com suporte. Confira [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) para obter uma lista atual de valores com suporte para *n*. **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir do [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10).   
  
     > [!NOTE]
     > A dica QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n não substitui a configuração de estimativa de cardinalidade padrão ou herdada, se ela é forçada pela configuração do escopo do banco de dados, pelo sinalizador de rastreamento ou por outra dica de consulta, como QUERYTRACEON.   
@@ -564,6 +562,6 @@ GO
  [Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
  [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  
- [Sinalizadores de rastreamento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
-  
+ [Sinalizadores de rastreamento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)       
+ [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)      
   

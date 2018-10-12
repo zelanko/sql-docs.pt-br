@@ -1,7 +1,7 @@
 ---
 title: Destinos para eventos estendidos no SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 04/17/2018
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: df5fc32aa7a6d42077e93d6b1dd4ca163404dc16
-ms.sourcegitcommit: 4cd008a77f456b35204989bbdd31db352716bbe6
+ms.openlocfilehash: 4d8a163b14cd44aab21a294fedee918b34fd95b0
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39533816"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171778"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>Destinos de eventos estendidos no SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ Os eventos estendidos do SQL Server podem interoperar com o ETW (Rastreamento de
 Esse destino ETW processa os dados recebidos *de forma síncrona* , enquanto a maioria dos destinos os processa *de forma assíncrona*.
 
 > [!NOTE]
-> O Banco de Dados SQL do Azure não é compatível com o destino ETW. Nem a Instância Gerenciada do Banco de Dados SQL do Azure.
+> O Banco de Dados SQL do Azure não é compatível com `etw_classic_sync_target target`.
 
 <!-- After OPS Versioning is live, the above !NOTE could be converted into a "3colon ZONE".  GeneMi = MightyPen. -->
 
@@ -157,7 +157,7 @@ O destino **event_file** grava a saída da sessão de evento do buffer em um arq
 ::: moniker range="= azuresqldb-current || = azuresqldb-mi-current || = sqlallproducts-allversions"
 
 > [!NOTE]
-> O Banco de Dados SQL do Azure é compatível com o destino **event_file**, mas apenas usando um blob no Armazenamento do Azure para a saída. O Banco de Dados SQL não pode armazenar a saída de evento em um arquivo em seu disco rígido local.
+> O Banco de dados SQL do Azure é compatível apenas com armazenamento de arquivos `xel` no Armazenamento de Blobs do Azure. 
 >
 > Para um exemplo de código **event_file** específico para o Banco de Dados SQL (e para a Instância Gerenciada do Banco de Dados SQL), consulte [Event File target code for extended events in SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-xevent-code-event-file) (Código de destino do Arquivo de Evento para eventos estendidos no Banco de Dados SQL).
 

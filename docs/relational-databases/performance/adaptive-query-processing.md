@@ -2,7 +2,7 @@
 title: Processamento de consultas adaptável em bancos de dados Microsoft SQL | Microsoft Docs | Microsoft Docs
 description: Recursos de processamento de consulta adaptável para melhorar o desempenho da consulta no SQL Server (2017 e posteriores) e no Banco de Dados SQL do Azure.
 ms.custom: ''
-ms.date: 07/16/2018
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,12 +16,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 705f8115ff773668993dbbc408f97946e3c9b180
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 2897b0bb371e68ab4e7cccaffe245191f21243ce
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43087482"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171631"
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>Processamento de consultas adaptável em bancos de dados SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -111,6 +111,9 @@ Uma dica de consulta USE HINT tem precedência sobre uma configuração de escop
 ## <a name="row-mode-memory-grant-feedback"></a>Comentários de concessão de memória do modo de linha
 **Aplica-se a**: Banco de Dados SQL como um recurso de visualização pública
 
+> [!NOTE]
+> Comentários de concessão de memória do modo de linha é uma versão prévia pública do recurso.  
+
 Os comentários de concessão de memória de modo de linha expande o recurso de comentários de concessão de memória do modo de lote, ajustando os tamanhos de concessão de memória para operadores de modo de lote e de linha.  
 
 Para habilitar a versão prévia dos comentários de concessão de memória de modo de linha no Banco de Dados SQL, habilite o nível de compatibilidade do banco de dados 150 para o banco de dados ao qual você está conectado ao executar a consulta.
@@ -129,7 +132,8 @@ LastRequestedMemory mostra a memória concedida em kilobytes (KB) na execução 
 | Sim: ajuste | Os comentários de concessão de memória foram aplicados e podem ser ainda mais ajustados para a próxima execução. |
 | Sim: estável | Os comentários de concessão de memória foram aplicados e a memória concedida está estável, ou seja, o que foi concedido para a execução anterior é o mesmo que foi concedido para a execução atual. |
 
-Os atributos de planejamento dos comentários de concessão de memória não são visíveis no momento em planos de execução de consultas gráficas do SQL Server Management Studio. Mas se quiser conferir testes iniciais exiba-os usando o XEvent SET STATISTICS XML ou query_post_execution_showplan.  
+> [!NOTE]
+> Os atributos do plano de comentários de concessão de memória do modo de linha da versão prévia pública estão visíveis nos planos de execução de consulta gráfica do SQL Server Management Studio nas versões 17.9 e superiores. 
 
 ## <a name="batch-mode-adaptive-joins"></a>Junções Adaptáveis de modo de lote
 O recurso de Junções Adaptáveis de modo de lote permite a escolha de um método de [Junção hash ou de Junção de loops aninhados](../../relational-databases/performance/joins.md) a ser adiado até **depois** que a primeira entrada for verificada. O operador de Junção Adaptável define um limite que é usado para decidir quando mudar para um plano de Loops aninhados. Seu plano, portanto, pode alternar dinamicamente para uma estratégia de junção melhor durante a execução.

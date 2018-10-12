@@ -1,7 +1,7 @@
 ---
 title: Log de mudanças para o SSDT (SQL Server Data Tools) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/02/2018
+ms.date: 09/05/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssdt
@@ -16,18 +16,41 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 9cf2952b907da3dc44046e57796de761e62336de
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 3e0a3d3cdd9904634e415d025c0866bff8140431
+ms.sourcegitcommit: c929887686eabd6b754cf644a45656f0a0eb0445
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43096115"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43743499"
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Log de mudanças para o SSDT (SQL Server Data Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Este log de alterações é para o [SSDT (SQL Server Data Tools)](download-sql-server-data-tools-ssdt.md).  
   
 Para ver postagens detalhadas sobre as novidades e alterações, visite [o blog da Equipe do SSDT](https://blogs.msdn.microsoft.com/ssdt/)
+
+## <a name="ssdt-for-visual-studio-2017-158"></a>SSDT para Visual Studio 2017 (15.8)
+Número de build: 14.0.16174.0  
+Data de lançamento: 05 de setembro de 2018  
+
+### <a name="whats-new"></a>Novidades
+
+**SSIS:**
+
+1. Foi corrigida a regressão no VS 15.8 em que salvar Tarefa Script/Componente causava erro de compilação.
+1. Foi corrigida a regressão no VS 15.8 em que o assistente de implantação não funcionava.
+1. Foi corrigido um problema em que o gerenciador de conexões do ADO.NET não oferecia suporte a provedor ADO.NET de terceiros.
+
+**Instalador:**
+
+- Implemente a reinicialização na metade da instalação do SSDT no Windows 10.
+
+
+### <a name="known-issues"></a>Problemas conhecidos:
+
+- A Tarefa Executar Pacote do SSIS não é compatível com a depuração quando ExecuteOutOfProcess está definido como True. Esse problema aplica-se somente à depuração. O salvamento, a implantação e a execução por meio do DTExec.exe ou do catálogo do SSIS não são afetados.
+
+
 
 
 ## <a name="ssdt-for-visual-studio-2017-1571"></a>SSDT para Visual Studio 2017 (15.7.1)

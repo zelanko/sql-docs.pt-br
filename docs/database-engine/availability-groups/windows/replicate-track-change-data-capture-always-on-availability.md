@@ -1,7 +1,7 @@
 ---
 title: Replicação, Controle de Alterações e Change Data Capture – grupos de disponibilidade | Microsoft Docs
 ms.custom: ''
-ms.date: 04/25/2018
+ms.date: 08/21/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -18,12 +18,12 @@ caps.latest.revision: 37
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 37070e0b036d109624048603b24464a2019ec69d
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: bc5f16247663591862c60dccd2e75975195b327c
+ms.sourcegitcommit: 8008ea52e25e65baae236631b48ddfc33014a5e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34769372"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44311666"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>Replicação, controle de alterações e Change Data Capture – grupos de disponibilidade AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -211,12 +211,10 @@ Se o Change Data Capture precisar ser desabilitado em um banco de dados que faz 
 |||||  
 |-|-|-|-|  
 ||**Publicador**|**Distribuidor***\*|**Assinante**|  
-|**Transacional.**|Sim<br /><br /> Observação: não inclui suporte para replicação transacional bidirecional e recíproca.|não|Sim|  
+|**Transacional.**|Sim<br /><br /> Observação: não inclui suporte para replicação transacional bidirecional e recíproca.|Sim|Sim| 
 |**P2P**|não|não|não|  
-|**Mesclagem**|Sim|não|Sim*|  
-|**Instantâneo**|Sim|não|Sim*|  
-  
- *O failover no banco de dados de réplica é um procedimento manual. O failover automático não é fornecido.  
+|**Mesclagem**|Sim|não|não|  
+|**Instantâneo**|Sim|não|Sim|
   
  **Não há suporte para o uso do banco de dados de distribuidor com espelhamento de banco de dados.  
   

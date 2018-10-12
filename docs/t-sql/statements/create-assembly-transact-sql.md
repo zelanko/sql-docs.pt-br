@@ -1,7 +1,7 @@
 ---
 title: CREATE ASSEMBLY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/30/2018
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -27,20 +27,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 99d7e5d69e560fd5d94c38bdab1d29f6d5e0860e
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 44c9ba8b3514c1a28ef2bbe800e0bec0c41b1bba
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39456750"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171548"
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
 
   Cria um módulo de aplicativo gerenciado que contém metadados de classe e código gerenciado como um objeto em uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ao fazer referência a esse módulo, funções CLR (Common Language Runtime), procedimentos armazenados, gatilhos, agregações definidas pelo usuário e tipos definidos pelo usuário podem ser criados no banco de dados.  
   
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
-
 >  [!WARNING]
 >  O CLR usa o CAS (Segurança de Acesso do Código) no .NET Framework, para o qual não há mais suporte como um limite de segurança. Um assembly CLR criado com o `PERMISSION_SET = SAFE` pode conseguir acessar recursos externos do sistema, chamar um código não gerenciado e adquirir privilégios sysadmin. A partir do [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], uma opção `sp_configure` chamada `clr strict security` é introduzida, a fim de aumentar a segurança de assemblies CLR. A `clr strict security` está habilitada por padrão e trata assemblies `SAFE` e `EXTERNAL_ACCESS` como se eles fossem marcados como `UNSAFE`. A opção `clr strict security` pode ser desabilitada para compatibilidade com versões anteriores, mas isso não é recomendado. A Microsoft recomenda que todos os assemblies sejam assinados por um certificado ou uma chave assimétrica com um logon correspondente que recebeu a permissão `UNSAFE ASSEMBLY` no banco de dados mestre. Para obter mais informações, consulte [Segurança estrita do CLR](../../database-engine/configure-windows/clr-strict-security.md).  
   
@@ -71,6 +69,9 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
   
  \<client_assembly_specifier>  
 Especifica o caminho local ou o local da rede onde o assembly que está sendo carregado está localizado e também o nome do arquivo de manifesto que corresponde ao assembly.  \<client_assembly_specifier> pode ser expresso como uma cadeia de caracteres fixa ou uma expressão que é avaliada para uma cadeia de caracteres fixa, com variáveis. CREATE ASSEMBLY não dá suporte ao carregamento de assemblies de vários módulos. O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] também procura assemblies dependentes desse assembly no mesmo lugar e os carrega com o mesmo proprietário do assembly do nível raiz. Se esses assemblies dependentes não forem encontrados e eles já não estiverem carregados no banco de dados atual, CREATE ASSEMBLY falhará. Se os assemblies dependentes já estiverem carregados no banco de dados atual, o proprietário deles deve ser o mesmo proprietário do assembly recém-criado.
+
+> [!IMPORTANT]
+> O Banco de Dados SQL do Azure não é compatível com a criação de um assembly a partir de um arquivo.
   
  \<client_assembly_specifier> não poderá ser especificado se o usuário conectado estiver sendo representado.  
   
@@ -181,6 +182,9 @@ CREATE ASSEMBLY HelloWorld
 FROM <system_drive>:\Program Files\Microsoft SQL Server\100\Samples\HelloWorld\CS\HelloWorld\bin\debug\HelloWorld.dll  
 WITH PERMISSION_SET = SAFE;  
 ```  
+
+> [!IMPORTANT]
+> O Banco de Dados SQL do Azure não é compatível com a criação de um assembly a partir de um arquivo.
   
 ### <a name="example-b-creating-an-assembly-from-assembly-bits"></a>Exemplo B: criando um assembly de bits do assembly  
   

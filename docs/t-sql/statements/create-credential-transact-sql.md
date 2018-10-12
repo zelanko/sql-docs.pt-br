@@ -1,7 +1,7 @@
 ---
 title: CREATE CREDENTIAL (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/09/2017
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -28,19 +28,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 87759a536e979600e7ff12d8ad932c4fcf4cd248
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 58250bd30559b497d6e2ab841086f9e5bbb26ffd
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39458070"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171608"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Cria uma credencial no nível do servidor. Uma credencial é um registro que contém as informações de autenticação necessárias para se conectar a um recurso fora do SQL Server. A maioria das credenciais inclui um usuário e uma senha do Windows. Por exemplo, salvar um backup de banco de dados em um local pode exigir que o SQL Server forneça credenciais especiais para acessar esse local. Para obter mais informações, consulte [Credenciais (Mecanismo de Banco de Dados)](../../relational-databases/security/authentication-access/credentials-database-engine.md).
-
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
 
 > [!NOTE]  
 >  Para tornar a credencial no nível do banco de dados, use [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md). Use uma credencial no nível do servidor quando precisa usar a mesma credencial para vários bancos de dados no servidor. Use uma credencial no escopo do banco de dados para tornar o banco de dados mais portátil. Quando um banco de dados for movido para um novo servidor, a credencial no escopo do banco de dados será movida com ele. Use as credenciais no escopo do banco de dados no [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -63,7 +61,10 @@ WITH IDENTITY = 'identity_name'
   
  IDENTITY **='***identity_name***'**  
  Especifica o nome da conta a ser usada ao conectar o servidor externamente. Quando a credencial é usada para acessar o Azure Key Vault, o **IDENTITY** é o nome do cofre de chaves. Veja o exemplo C a seguir. Quando a credencial usa uma SAS (assinatura de acesso compartilhado), a **IDENTITY** é *SHARED ACCESS SIGNATURE*. Veja o exemplo D abaixo.  
-  
+ 
+> [!IMPORTANT]
+> O Banco de dados SQL do Azure é compatível apenas as identidades do Azure Key Vault e com Assinatura de Acesso Compartilhado. Não há suporte para identidades de usuário do Windows.
+ 
  SECRET **='***secret***'**  
  Especifica o segredo necessário para a autenticação de saída.  
   

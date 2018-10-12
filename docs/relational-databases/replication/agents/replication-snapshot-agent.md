@@ -1,7 +1,7 @@
 ---
 title: Agente de instantâneo de replicação | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: replication
@@ -20,12 +20,12 @@ caps.latest.revision: 41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 45976c2d0e99303c9aba9aa3251a1ea65f610901
-ms.sourcegitcommit: 022d67cfbc4fdadaa65b499aa7a6a8a942bc502d
+ms.openlocfilehash: e2839e7dfa8c0dd32eb4904f4dde43e5ce992e6e
+ms.sourcegitcommit: 8008ea52e25e65baae236631b48ddfc33014a5e0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37349988"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44311656"
 ---
 # <a name="replication-snapshot-agent"></a>Replication Snapshot Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,6 +65,7 @@ snapshot [ -?]
 [-Output output_path_and_file_name]  
 [-OutputVerboseLevel [0|1|2] ]  
 [-PacketSize packet_size]  
+[-PrefetchTables [0|1] ]  
 [-ProfileName profile_name]  
 [-PublisherDB publisher_database]  
 [-PublisherDeadlockPriority [-1|0|1] ]  
@@ -202,7 +203,15 @@ snapshot [ -?]
   
 > [!NOTE]  
 >  Não altere o tamanho do pacote a menos que você tenha certeza que melhorará o desempenho. Para a maioria dos aplicativos, o tamanho do pacote padrão é o melhor.  
+
+**-PrefetchTables** [ **0**| **1**]  
+ Parâmetro opcional que especifica se será feita a pré-busca de objetos de tabela e se eles serão armazenados em cache.  O comportamento padrão é executar a pré-busca de determinadas propriedades de tabela usando o componente SMO com base em um cálculo interno.  Esse parâmetro pode ser útil em cenários em que a operação de pré-busca de SMO leva um tempo consideravelmente maior para ser executada. Se esse parâmetro não for usado, essa decisão será tomada no tempo de execução com base na porcentagem de tabelas adicionadas como artigos na publicação.  
   
+|Valor OutputVerboseLevel|Descrição|  
+|------------------------------|-----------------|  
+|**0**|A chamada ao método Pré-busca do componente de SMO está desativada.|  
+|**1**|O Agente de Instantâneo chamará o método Pré-busca para armazenar em cache algumas propriedades de tabela usando SMO|  
+
  **-ProfileName** *profile_name*  
  Especifica um perfil de agente a ser usado para parâmetros de agente. Se **ProfileName** for NULL, o perfil de agente será desabilitado. Se **ProfileName** não for especificado, o perfil padrão de tipo de agente será usado. Para obter mais informações, consulte [Perfis do agente de replicação](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   

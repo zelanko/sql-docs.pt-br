@@ -1,7 +1,7 @@
 ---
 title: SQL Server Service Broker | Microsoft Docs
 ms.custom: ''
-ms.date: 03/30/2018
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -27,12 +27,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 6b637e685063d8b1ca81aebc0d020824df22b766
-ms.sourcegitcommit: d9b7625322a2c7444ed25ca311d63fe70eb6fa0a
+ms.openlocfilehash: 757ee407d0831734b7c55b9e1b8b5a20e91d042a
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39509155"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171808"
 ---
 # <a name="sql-server-service-broker"></a>SQL Server Service Broker
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -40,8 +40,6 @@ ms.locfileid: "39509155"
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] oferece suporte nativo para aplicativos de mensagens e enfileiramento no [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Isso facilita para os desenvolvedores a criação de aplicativos sofisticados que usam os componentes do [!INCLUDE[ssDE](../../includes/ssde-md.md)] para comunicação entre bancos de dados díspares. Os desenvolvedores podem usar o [!INCLUDE[ssSB](../../includes/sssb-md.md)] para criar facilmente aplicativos distribuídos e confiáveis.  
   
  Os desenvolvedores de aplicativos que usam o [!INCLUDE[ssSB](../../includes/sssb-md.md)] podem distribuir cargas de trabalho de dados por vários bancos de dados sem programação de comunicação complexa e mensagens internas. Isso reduz o trabalho de desenvolvimento e teste porque o [!INCLUDE[ssSB](../../includes/sssb-md.md)] controla os caminhos de comunicação no contexto de uma conversa. Isso também melhora o desempenho. Por exemplo, bancos de dados front-end que oferecem suporte a sites podem gravar informações e enviar tarefas intensivas de processamento para enfileiramento em bancos de dados back-end. [!INCLUDE[ssSB](../../includes/sssb-md.md)] garante que todas as tarefas sejam gerenciadas no contexto de transações para assegurar a confiabilidade e a consistência técnica.  
-
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
   
 ## <a name="where-is-the-documentation-for-service-broker"></a>Onde está a documentação do Service Broker?  
  A documentação de referência do [!INCLUDE[ssSB](../../includes/sssb-md.md)] está incluída na documentação do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Esta documentação de referência inclui as seguintes seções:  
@@ -60,6 +58,13 @@ ms.locfileid: "39509155"
   
 ## <a name="whats-new-in-service-broker"></a>Novidades no Service Broker  
  Nenhuma alteração significativa foi introduzida no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  As alterações a seguir foram introduzidas no [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+
+### <a name="service-broker-and-azure-sql-database-managed-instance"></a>Service Broker e Instância Gerenciada do Banco de Dados SQL do Azure
+
+- Não há suporte para Service Broker entre instâncias 
+ - `sys.routes` – Pré-requisito: selecione o endereço de sys.routes. O endereço deve ser o LOCAL em cada rota. Confira [sys.routes](../../relational-databases/system-catalog-views/sys-routes-transact-sql.md).
+ - `CREATE ROUTE` – não é possível usar `CREATE ROUTE` com `ADDRESS` diferente de `LOCAL`. Confira [CREATE ROUTE](https://docs.microsoft.com/sql/t-sql/statements/create-route-transact-sql).
+ - `ALTER ROUTE` – não é possível usar `ALTER ROUTE` com `ADDRESS` diferente de `LOCAL`. Confira [ALTER ROUTE](../../t-sql/statements/alter-route-transact-sql.md).  
   
 ### <a name="messages-can-be-sent-to-multiple-target-services-multicast"></a>As mensagens podem ser enviadas a vários serviços de destino (multicast)  
  A sintaxe da instrução [SEND &#40;Transact-SQL&#41;](../../t-sql/statements/send-transact-sql.md) foi estendida para habilitar o multicast, dando suporte a vários identificadores de conversa.  

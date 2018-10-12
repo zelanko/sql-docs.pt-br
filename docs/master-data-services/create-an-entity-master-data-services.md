@@ -18,12 +18,12 @@ caps.latest.revision: 9
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 26ecc54177da5a224e1c26c5dcac58d4e4d4cf3e
-ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
+ms.openlocfilehash: bb37f2598422d739be318eec79d6ddc3a9bfdb8f
+ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/12/2018
-ms.locfileid: "35410458"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43811082"
 ---
 # <a name="create-an-entity-master-data-services"></a>Criar uma entidade (Master Data Services)
 
@@ -57,9 +57,11 @@ ms.locfileid: "35410458"
      Se você não preencher este campo, será usado o nome da entidade.  
   
     > [!TIP]  
-    >  Use o nome do modelo como parte do nome da tabela de preparo, por exemplo, *Modelname_Entityname*. Isto facilita a localização das tabelas no banco de dados. Para obter mais informações sobre as tabelas de preparo, consulte [Visão geral: Importando dados de tabelas &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
+    >  Use o nome do modelo como parte do nome da tabela de preparo, por exemplo, *Modelname_Entityname*. Isto facilita a localização das tabelas no banco de dados. Para obter mais informações sobre as tabelas de preparo, consulte [Visão geral: Importando dados de tabelas &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).
+    > [!TIP]  
+    >  Se a nomenclatura padrão para tabelas de preparo for usada, o MDS acrescentará automaticamente identificadores (por exemplo, " 1", " 2") aos nomes de tabelas de preparo se existir uma entidade com o mesmo nome em outro modelo.
   
-7.  No campo **Tipo de Log de Transações**, escolha o tipo de log de transações na lista suspensa.  
+7.  No campo **Tipo de Log de Transações** , escolha o tipo de log de transações na lista suspensa.  
   
      Para obter mais informações, consulte [Alterar o tipo de log de transações da entidade &#40;Master Data Services&#41;](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md)  
   

@@ -46,12 +46,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 1970cea904788325e1da45e65633d52039aeeb21
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 2cc06595f2827704009f96b4a7f7c047e5c27c28
+ms.sourcegitcommit: bab5f52b76ac53d0885683b7c39a808a41d93cfe
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43095334"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44089996"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>Opções de arquivo e grupos de arquivos de ALTER DATABASE (Transact-SQL) 
 
@@ -68,7 +68,7 @@ Na linha a seguir, clique em qualquer nome de produto de seu interesse. O clique
 > [!div class="mx-tdCol2BreakAll"]
 > |||
 > |-|-|-|
-> |**_\* SQL Server \*_**<br />&nbsp;|[Banco de Dados SQL<br />Instância Gerenciada](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
+> |**_\*SQL Server\*_**<br />&nbsp;|[Banco de Dados SQL<br />Instância Gerenciada](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
 
 # <a name="sql-server"></a>SQL Server
 
@@ -315,7 +315,10 @@ AUTOGROW_ALL_FILES
 
 **Aplica-se a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
   
-Quando um arquivo no grupo de arquivos atingir o limite de crescimento automático, todos os arquivos no grupo de arquivos crescerão.  
+Quando um arquivo no grupo de arquivos atingir o limite de crescimento automático, todos os arquivos no grupo de arquivos crescerão. 
+
+> [!NOTE]
+> Este é o valor padrão de TempDB.
   
 **\<filegroup_updatability_option>::=**  
   

@@ -1,7 +1,7 @@
 ---
 title: ALTER TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/01/2018
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -63,19 +63,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a471595321fba0e33f5ea37ea7bff68b528dafe5
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 483d22cd721166f3d62c3100524c9850a28bacc2
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43083930"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171868"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Modifica uma definição de tabela alterando, adicionando ou removendo colunas e restrições, reatribuindo e recriando partições, ou desabilitando ou habilitando restrições e gatilhos.  
-
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
 
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -244,7 +242,7 @@ ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
 ```  
   
 ```  
--- Memory optimized ALTER TABLE Syntax for SQL Server and Azure SQL Database
+-- Memory optimized ALTER TABLE Syntax for SQL Server and Azure SQL Database. Azure SQL Database Managed Instance does not support memory optiimized tables.
   
 ALTER TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name   
 {   
@@ -785,7 +783,7 @@ Para a restrição **SWITCH** ao usar replicação, consulte [Replicar tabelas e
  Índices columnstore não clusterizados criados para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 CTP1 e para o Banco de Dados SQL antes da versão V12 estavam em um formato somente leitura. Índices columnstore não clusterizado devem ser recriados para o formato atual (que é atualizável) antes de quaisquer operações de partição poderem ser executadas.  
   
  SET **(** FILESTREAM_ON = { *partition_scheme_name* | *filestream_filegroup_name* |         **"** default **"** | **"** NULL **"** }**)**  
- **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+ **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. O Banco de Dados SQL do Azure não é compatível com `FILESTREAM`.  
   
  Especifica onde os dados FILESTREAM são armazenados.  
   
@@ -892,7 +890,7 @@ TABLE
  Habilita ou desabilita as restrições definidas pelo sistema em uma FileTable. Pode ser usado apenas com uma FileTable.  
   
  SET ( FILETABLE_DIRECTORY = *directory_name* )  
- **Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Aplica-se a**: do [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  O Banco de Dados SQL do Azure não é compatível com `FILETABLE`.  
   
  Especifica o nome do diretório de FileTable compatível com o Windows. Esse nome deve ser exclusivo entre todos os nomes de diretórios de FileTable no banco de dados. A comparação de exclusividade não diferencia maiúsculas de minúsculas, independentemente das configurações de agrupamento do SQL. Pode ser usado apenas com uma FileTable.  
 ```    

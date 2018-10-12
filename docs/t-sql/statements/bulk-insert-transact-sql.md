@@ -1,7 +1,7 @@
 ---
 title: BULK INSERT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/09/2018
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -30,19 +30,17 @@ caps.latest.revision: 153
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 91e2501a500df7e6536f48f3ac3f17a12aad3b67
-ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
+ms.openlocfilehash: 83bf4405abdb8f245332a75cd731503cf07f7ce5
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37782667"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171688"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Importa um arquivo de dados para uma tabela ou exibição de banco de dados em um formato especificado pelo usuário no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
-
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
 
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -101,6 +99,10 @@ BULK INSERT
  *data_file* deve especificar um caminho válido do servidor no qual o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é executado. Se *data_file* for um arquivo remoto, especifique o nome UNC. Um nome UNC tem a forma \\\\*Systemname*\\*ShareName*\\*Path*\\*FileName*. Por exemplo, `\\SystemX\DiskZ\Sales\update.txt`.   
 **Aplica-se ao:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 Começando com o [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP1.1, o data_file pode estar localizado no Armazenamento de Blobs do Azure.
+
+> [!IMPORTANT]
+> O Banco de Dados SQL do Azure não oferece suporte à leitura de arquivos do Windows.
+
 
 **'** *data_source_name* **'**   
 **Aplica-se ao:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
@@ -293,7 +295,11 @@ BULK INSERT bulktest..t_float
 FROM 'C:\t_float-c.dat' WITH (FORMATFILE='C:\t_floatformat-c-xml.xml');  
 GO  
 ```  
+
+> [!IMPORTANT]
+> O Banco de Dados SQL do Azure não oferece suporte à leitura de arquivos do Windows.
   
+
 ### <a name="data-types-for-bulk-exporting-or-importing-sqlxml-documents"></a>Tipos de dados para exportação ou importação em massa de documentos SQLXML  
  Para exportar ou importar dados SQLXML em massa, use um dos tipos de dados a seguir em seu arquivo de formato:  
   
@@ -367,6 +373,9 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
          ROWTERMINATOR =' |\n'  
       );  
 ```  
+
+> [!IMPORTANT]
+> O Banco de Dados SQL do Azure não oferece suporte à leitura de arquivos do Windows.
   
 ### <a name="b-using-the-firetriggers-argument"></a>B. Usando o argumento FIRE_TRIGGERS  
  O exemplo a seguir especifica o argumento `FIRE_TRIGGERS`.  
@@ -381,6 +390,9 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
         FIRE_TRIGGERS  
       );  
 ```  
+
+> [!IMPORTANT]
+> O Banco de Dados SQL do Azure não oferece suporte à leitura de arquivos do Windows.
   
 ### <a name="c-using-line-feed-as-a-row-terminator"></a>C. Usando alimentação de linha como um terminador de linha  
  O exemplo a seguir importa um arquivo que usa a alimentação de linha como um terminador de linha, como uma saída UNIX:  
@@ -395,6 +407,9 @@ EXEC(@bulk_cmd);
   
 > [!NOTE]  
 >  Devido ao modo como o Microsoft Windows trata arquivos de texto, **(\n** automaticamente é substituído por **\r\n)**.  
+
+> [!IMPORTANT]
+> O Banco de Dados SQL do Azure não oferece suporte à leitura de arquivos do Windows.
   
 ### <a name="d-specifying-a-code-page"></a>D. Especificando uma página de código  
  O exemplo a seguir mostra como especificar uma página de código.  
@@ -408,6 +423,10 @@ WITH
     FIELDTERMINATOR = ','  
 );  
 ```  
+
+> [!IMPORTANT]
+> O Banco de Dados SQL do Azure não oferece suporte à leitura de arquivos do Windows.
+
 ### <a name="e-importing-data-from-a-csv-file"></a>E. Importando dados de um arquivo CSV   
 O exemplo a seguir mostra como especificar um arquivo CSV.   
 ```
@@ -415,6 +434,10 @@ BULK INSERT Sales.Invoices
 FROM '\\share\invoices\inv-2016-07-25.csv'
 WITH (FORMAT = 'CSV'); 
 ```
+
+> [!IMPORTANT]
+> O Banco de Dados SQL do Azure não oferece suporte à leitura de arquivos do Windows.
+
 
 ### <a name="f-importing-data-from-a-file-in-azure-blob-storage"></a>F. Importando dados de um arquivo no Armazenamento de Blobs do Azure   
 O exemplo a seguir mostra como carregar dados de um arquivo CSV em um local de Armazenamento de Blobs do Azure, que foi configurado como uma fonte de dados externa. Isso requer uma credencial no escopo do banco de dados usando uma Assinatura de Acesso Compartilhado.    
@@ -425,6 +448,9 @@ FROM 'inv-2017-01-19.csv'
 WITH (DATA_SOURCE = 'MyAzureInvoices',
      FORMAT = 'CSV'); 
 ```
+
+> [!IMPORTANT]
+> O Banco de Dados SQL do Azure não oferece suporte à leitura de arquivos do Windows.
 
 ### <a name="g-importing-data-from-a-file-in-azure-blob-storage-and-specifying-an-error-file"></a>G. Importando dados de um arquivo no armazenamento de blobs do Azure e especificando um arquivo de erro   
 O exemplo a seguir mostra como carregar dados de um arquivo CSV em um local de Armazenamento de Blobs do Azure, que foi configurado como uma fonte de dados externa e também especificar um arquivo de erro. Isso requer uma credencial no escopo do banco de dados usando uma Assinatura de Acesso Compartilhado. Observe que, se for executada no Banco de Dados SQL, a opção ERRORFILE deverá vir acompanhada de ERRORFILE_DATA_SOURCE; caso contrário, a importação poderá falhar com um erro de permissões. O arquivo especificado em ERRORFILE não deve existir no contêiner.

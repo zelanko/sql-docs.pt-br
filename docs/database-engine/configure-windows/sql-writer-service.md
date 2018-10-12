@@ -25,12 +25,12 @@ caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b6fab60401596743dc1cc38dd0c115e42ec89c71
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 80eb04dfefca7903592ea391d915e140d93f479f
+ms.sourcegitcommit: 2666ca7660705271ec5b59cc5e35f6b35eca0a96
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32865561"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43888342"
 ---
 # <a name="sql-writer-service"></a>Serviço do gravador do SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,6 +47,9 @@ ms.locfileid: "32865561"
  O VSS é um conjunto de APIs COM que implementa uma estrutura para permitir que backups dos volumes sejam feitos enquanto os aplicativos em um sistema continuam a gravar nos volumes. O VSS oferece uma interface consistente que permite a coordenação entre os aplicativos de usuário que atualizam dados em disco (gravadores) e os aplicativos de backup (solicitantes).  
   
  O VSS captura e copia imagens estáveis para backup em sistemas em execução, particularmente servidores, sem degradar indevidamente o desempenho e a estabilidade dos serviços que oferecem. Para obter mais informações sobre o VSS, consulte sua documentação do Windows.  
+
+> [!NOTE]
+> Ao usar o VSS para fazer backup de uma máquina virtual que esteja hospedando um Grupo de Disponibilidade Básico, se a máquina virtual estiver hospedando bancos de dados em um estado secundário, a partir do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU9 *não* será feito o backup desses bancos de dados com a máquina virtual.  Isso ocorre porque os Grupos de Disponibilidade Básicos não oferecem suporte para backup de bancos de dados na réplica secundária.  Antes dessas versões de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o backup falhará apresentando um erro.
   
 ## <a name="virtual-backup-device-interface-vdi"></a>VDI (Virtual Backup Device Interface)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferece uma API chamada VDI que permite que fornecedores de software independente integrem o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] em seus produtos para dar suporte a operações de backup e restauração. Essas APIs são criadas para prover confiabilidade e desempenho máximos, e dão suporte a todas as funcionalidades de backup e de restauração do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , inclusive todas as capacidades de backup hot e instantâneo.  
@@ -77,4 +80,6 @@ ms.locfileid: "32865561"
   
 -   Restauração de página  
   
-  
+## <a name="remarks"></a>Remarks
+O serviço Gravador do SQL é um serviço separado do mecanismo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], sendo compartilhado entre diferentes versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e entre diferentes instâncias do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no mesmo servidor.  O arquivo do serviço Gravador do SQL é fornecido como parte do pacote de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e será marcado com o mesmo número de versão que o mecanismo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornecido com ele.  Quando uma nova instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] é instalada em um servidor ou uma instância existente é atualizada, se o número de versão da instância que está sendo instalada ou atualizada for maior do que o número de versão do serviço Gravador do SQL que está no servidor no momento, esse arquivo será substituído por um do pacote de instalação.  Se o Serviço Gravador do SQL tiver sido atualizado por um Service Pack ou por Atualização cumulativa e uma versão RTM do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estiver sendo instalada, será possível substituir uma versão mais recente do Serviço Gravador do SQL por uma mais antiga, desde que a instalação tenha um número de versão principal maior.  Por exemplo, o Serviço Gravador do SQL foi atualizado no [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU2.  Se essa instância for atualizada para [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] RTM, o Gravador do SQL atualizado será substituído por uma versão mais antiga.  Nesse caso, você precisaria aplicar a CU mais recente à nova instância para obter a versão mais nova do serviço do Gravador do SQL.
+

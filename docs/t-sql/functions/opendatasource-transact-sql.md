@@ -1,7 +1,7 @@
 ---
 title: OPENDATASOURCE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 09/07/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -27,21 +27,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 63619b21a6e82458a64128a4f892cac6c6220420
-ms.sourcegitcommit: e02c28b0b59531bb2e4f361d7f4950b21904fb74
+ms.openlocfilehash: 58b37be191f9b3ce95d7442a4ba9d68f9fdc2339
+ms.sourcegitcommit: d8e3da95f5a2b7d3997d63c53e722d494b878eec
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39457960"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44171552"
 ---
 # <a name="opendatasource-transact-sql"></a>OPENDATASOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Fornece informações de conexão ad hoc como parte de um nome de objeto de quatro partes sem usar um nome de servidor vinculado.  
 
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
-
- ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Ícone de link](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link") [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -80,9 +78,9 @@ OPENDATASOURCE ( provider_name, init_string )
 > [!IMPORTANT]  
 >  A Autenticação do Windows é muito mais segura do que a Autenticação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sempre que possível, você deve usar a Autenticação do Windows. OPENDATASOURCE não deve ser usada com senhas explícitas na cadeia de conexão.  
   
- Os requisitos de conexão de cada provedor são semelhantes aos requisitos desses parâmetros durante a criação de servidores vinculados. Os detalhes dos muitos provedores comuns estão listados no tópico [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
+ Os requisitos de conexão de cada provedor são semelhantes aos requisitos desses parâmetros durante a criação de servidores vinculados. Os detalhes dos muitos provedores comuns estão listados no artigo [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
   
- Qualquer chamada para OPENDATASOURCE, OPENQUERY ou OPENROWSET na cláusula FROM é avaliada separada e independentemente de qualquer chamada para essas funções usadas como o destino da atualização, mesmo se argumentos idênticos forem fornecidos às duas chamadas. Em particular, as condições de filtro ou junção aplicadas no resultado de uma dessas chamadas não têm efeito sobre os resultado da outra.  
+ Qualquer chamada para OPENDATASOURCE, OPENQUERY ou OPENROWSET na cláusula FROM é avaliada separada e independentemente de qualquer chamada para essas funções usadas como o destino da atualização, mesmo se argumentos idênticos forem fornecidos às duas chamadas. Em particular, as condições de filtro ou junção aplicadas no resultado de uma dessas chamadas não têm efeito sobre os resultados da outra.  
   
 ## <a name="permissions"></a>Permissões  
  Qualquer usuário pode executar OPENDATASOURCE. As permissões usadas para estabelecer conexão com o servidor remoto são determinadas na cadeia de conexão.  
