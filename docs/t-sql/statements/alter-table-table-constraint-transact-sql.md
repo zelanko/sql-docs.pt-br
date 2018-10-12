@@ -1,13 +1,11 @@
 ---
 title: table_constraint (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/16/2018
+ms.date: 09/11/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CONSTRAINT_TSQL
@@ -16,16 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - table_constraint
 ms.assetid: ac2a11e0-cc77-4e27-b107-4fe5bc6f5195
-caps.latest.revision: 59
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 9ff101bbc0288a3a6ccb1671f3f3c125908cf567
-ms.sourcegitcommit: 50838d7e767c61dd0b5e677b6833dd5c139552f2
+ms.openlocfilehash: ed7329979efebd35e9979fe0ea37e3651149a12a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39106722"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47607904"
 ---
 # <a name="alter-table-tableconstraint-transact-sql"></a>ALTER TABLE table_constraint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,6 +49,12 @@ ms.locfileid: "39106722"
         [ ON DELETE { NO ACTION | CASCADE | SET NULL | SET DEFAULT } ]   
         [ ON UPDATE { NO ACTION | CASCADE | SET NULL | SET DEFAULT } ]   
         [ NOT FOR REPLICATION ]   
+    | CONNECTION
+        ( { node_table TO node_table } 
+          [ , {node_table TO node_table }]
+          [ , ...n ]
+        )
+        [ ON DELETE NO ACTION]
     | DEFAULT constant_expression FOR column [ WITH VALUES ]   
     | CHECK [ NOT FOR REPLICATION ] ( logical_expression )  
 }  
@@ -83,13 +86,13 @@ ms.locfileid: "39106722"
  [ **ASC** | DESC ]  
  Especifica a ordem na qual a coluna ou colunas que participam de restrições de tabela são classificadas. O padrão é ASC.  
   
- WITH FILLFACTOR **=***fillfactor*  
+ WITH FILLFACTOR **=**_fillfactor_  
  Especifica o quanto o [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve preencher cada página de índice usada para armazenar os dados de índice. Os valores de *fillfactor* especificados pelo usuário podem ser de 1 a 100. Se um valor não for especificado, o padrão será 0.  
   
 > [!IMPORTANT]  
 >  A documentação de WITH FILLFACTOR = *fillfactor* como a única opção de índice aplicável às restrições PRIMARY KEY ou UNIQUE é mantida para fins de compatibilidade com versões anteriores, mas não será documentada dessa maneira em versões futuras. Outras opções de índice podem ser especificadas na cláusula [index_option](../../t-sql/statements/alter-table-index-option-transact-sql.md) de ALTER TABLE.  
   
- ON { *partition_scheme_name ***(*** partition_column_name***)** | *filegroup*| **"** default **"** }  
+ ON { _partition\_scheme\_name_**(**_partition\_column\_name_**)** | _filegroup_| **"** default **"** }  
  **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Especifica o local de armazenamento do índice criado para a restrição. Se *partition_scheme_name* for especificado, o índice será particionado e as partições serão mapeadas para os grupos de arquivos especificados pelo *partition_scheme_name*. Se *filegroup* for especificado, o índice será criado no grupo de arquivos nomeado. Se **"** default **"** for especificado ou se ON não for especificado de modo algum, o índice será criado no mesmo grupo de arquivos que a tabela. Se ON for especificado quando um índice clusterizado for adicionado a uma restrição PRIMARY KEY ou UNIQUE, a tabela inteira será movida para o grupo de arquivos especificado quando o índice clusterizado for criado.  
@@ -159,7 +162,9 @@ ms.locfileid: "39106722"
  **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Pode ser especificado para restrições FOREIGN KEY e instruções CHECK. Se essa cláusula for especificada para uma restrição, ela não será aplicada quando os agentes de replicação executarem operações insert, update ou delete.  
-  
+
+ CONNECTION Especifica o par de tabelas de nós para os quais a restrição de borda fornecida tem permissão para se conectar.  
+ 
  DEFAULT  
  Especifica o valor padrão para a coluna. Podem ser usadas definições DEFAULT para fornecer valores para uma coluna nova nas linhas existentes de dados. As definições DEFAULT não podem ser adicionadas a colunas que tenham um tipo de dados **timestamp**, uma propriedade IDENTITY, uma definição DEFAULT existente ou um padrão associado. Se a coluna tiver um padrão existente, o padrão deve ser descartado antes de o novo padrão ser adicionado. Se um valor padrão for especificado para uma coluna de tipo definido pelo usuário, o tipo deverá ser compatível com uma conversão implícita de *constant_expression* para o tipo definido pelo usuário. Para manter a compatibilidade com versões anteriores do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um nome de restrição pode ser atribuído a um DEFAULT.  
   

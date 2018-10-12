@@ -4,7 +4,6 @@ ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: reports
-ms.suite: pro-bi
 ms.topic: conceptual
 helpviewer_keywords:
 - publishing reports [Reporting Services], uploading files
@@ -15,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 79027e11-f4ba-4bfd-bd8c-d334e3da02a1
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b24b1d8a73aa2f371642f9b8a54b20471e20cb23
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: ce224e5b45e22bdc27f675da5d2697c09b139b41
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43277285"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47660194"
 ---
 # <a name="upload-a-file-or-report-in-the-report-server"></a>Carregar um arquivo ou relatório no servidor de relatório
 O portal da Web do servidor de relatório fornece um recurso de upload que permite adicionar relatórios e outros arquivos a um servidor de relatório sem ter que publicar esses itens de um aplicativo cliente. Os arquivos carregados a partir do sistema de arquivos são armazenados como itens no servidor de relatório. O tipo de arquivo carregado determina o modo de armazenamento:  
@@ -35,7 +34,7 @@ O portal da Web do servidor de relatório fornece um recurso de upload que permi
   
 4.  Navegue até o arquivo que você deseja carregar. Você pode carregar um arquivo de definição de relatório, uma imagem, um documento ou qualquer arquivo que deseje disponibilizar no servidor de relatório.  
   
-5.  Digite um nome para o novo item. Um nome de item pode incluir espaços, mas não pode incluir os caracteres reservados: ; ? : \@ & = + , $ / * < > |.  
+5.  Digite um nome para o novo item. Um nome de item pode incluir espaços, mas não pode incluir os caracteres reservados: \; \? \: \@ \& \= \+ \, \$ \/ \* \< \> \|.  
   
 6.  Se desejar substituir um item existente pelo novo item, selecione **Substituir item, se existir**.  
   

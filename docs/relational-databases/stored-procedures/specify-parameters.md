@@ -5,8 +5,6 @@ ms.date: 03/16/2017
 ms.prod: sql
 ms.technology: stored-procedures
 ms.reviewer: ''
-ms.suite: sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - parameters [SQL Server], stored procedures
@@ -18,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 444ef71d36018193cb05e0403883105d650c60e2
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 42db9954a071865124d443be32203fc284dfe699
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43079819"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47838950"
 ---
 # <a name="specify-parameters"></a>Especificar parâmetros
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,10 +65,10 @@ GO
  A nomeação explícita dos parâmetros e a atribuição dos valores apropriados a cada parâmetro em uma chamada de procedimento permitem o fornecimento dos parâmetros em qualquer ordem. Por exemplo, se o procedimento **my_proc** espera três parâmetros com os nomes **\@first**, **\@second** e **\@third**, os valores passados ao procedimento podem ser atribuídos aos nomes de parâmetros, como: `EXECUTE my_proc @second = 2, @first = 1, @third = 3;`  
   
 > [!NOTE]  
->  Se um valor de parâmetro for fornecido no formato **\@parameter =***value*, forneça todos os parâmetros posteriores dessa maneira. Se os valores de parâmetros não forem passados no formato **\@parameter =***value*, os valores deverão ser fornecidos na mesma ordem (da esquerda para a direita) em que os parâmetros serão listados na instrução CREATE PROCEDURE.  
+>  Se um valor de parâmetro for fornecido no formato **\@parameter =**_value_, todos os parâmetros subsequentes deverão ser fornecidos dessa maneira. Se os valores de parâmetros não forem passados no formato **\@parameter =**_value_, os valores deverão ser fornecidos na mesma ordem (da esquerda para a direita) em que os parâmetros serão listados na instrução CREATE PROCEDURE.  
   
 > [!WARNING]  
->  Qualquer parâmetro passado no formato **\@parameter =***value*, com o parâmetro digitado incorretamente, fará com que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gere um erro e impedirá a execução do procedimento.  
+>  Qualquer parâmetro passado no formato **\@parameter =**_value_, com o parâmetro digitado incorretamente, fará com que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gere um erro e impedirá a execução do procedimento.  
   
 ## <a name="specifying-parameter-data-types"></a>Especificando tipos de dados de parâmetros  
  Parâmetros devem ser definidos com um tipo de dados quando são declarados em uma instrução CREATE PROCEDURE. O tipo de dados de um parâmetro determina o tipo e o intervalo dos valores aceitos pelo parâmetro quando o procedimento é chamado. Por exemplo, se você definir um parâmetro com um tipo de dados **tinyint** , somente valores numéricos no intervalo entre 0 e 255 serão aceitos quando passados para esse parâmetro. Um erro será retornado se um procedimento for executado com um valor incompatível com o tipo de dados.  
@@ -130,7 +128,7 @@ EXEC Sales.uspGetSalesYTD N'Blythe';
 GO  
 ```  
   
- Embora seja possível omitir os parâmetros para os quais foram fornecidos padrões, a lista de parâmetros só poderá ser truncada. Por exemplo, se um procedimento tiver cinco parâmetros, o quarto e o quinto parâmetros poderão ser omitidos. Entretanto, o quarto parâmetro não poderá ser ignorado desde que o quinto parâmetro seja incluído, a menos que os parâmetros sejam fornecidos no formato **\@parameter =***value*.  
+ Embora seja possível omitir os parâmetros para os quais foram fornecidos padrões, a lista de parâmetros só poderá ser truncada. Por exemplo, se um procedimento tiver cinco parâmetros, o quarto e o quinto parâmetros poderão ser omitidos. Entretanto, o quarto parâmetro não poderá ser ignorado desde que o quinto parâmetro seja incluído, a menos que os parâmetros sejam fornecidos no formato **\@parameter =**_value_.  
   
 ## <a name="specifying-parameter-direction"></a>Especificando a direção do parâmetro  
  A direção de um parâmetro é de entrada, em que um valor é passado para o corpo do procedimento armazenado, ou de saída, em que o procedimento retorna um valor ao programa de chamada. O padrão é um parâmetro de entrada.  

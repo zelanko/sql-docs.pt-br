@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-agent
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, operators
@@ -18,17 +15,16 @@ helpviewer_keywords:
 - jobs [SQL Server Agent], operators
 - notifications [SQL Server], job status
 ms.assetid: aa818155-6fa2-4565-a09f-5c7e31c89754
-caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 167011e2b54b4cf06bbc627b20cd206fdd7f91f9
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: b065fd332f45898a728edf7abc2bafb814b6555d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42775928"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47708104"
 ---
 # <a name="assign-alerts-to-an-operator"></a>Assign Alerts to an Operator
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -79,7 +75,7 @@ Somente membros da função de servidor fixa **sysadmin** podem atribuir alertas
   
 4.  Clique com o botão direito do mouse no operador ao qual você deseja atribuir um alerta e selecione **Propriedades**e a página **Notificações** .  
   
-5.  Na caixa de diálogo *operator_name***Propriedades*, em **Selecione uma página**, selecione **Notificações**.  
+5.  Na caixa de diálogo _operator\_name_**Propriedades**, em **Selecionar uma página**, selecione **Notificações**.  
   
 6.  Em **Exibir notificações enviadas a esse usuário por**, selecione **Alertas** , para visualizar uma lista dos alertas enviados ao operador, ou **Trabalhos** , para visualizar uma lista dos trabalhos que enviam notificações ao operador. Marque uma ou mais das seguintes caixas de seleção para definir o método de cada notificação, conforme a necessidade: **Email**, **Pager**ou **Net send**.  
   

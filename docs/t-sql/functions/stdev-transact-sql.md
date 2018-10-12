@@ -5,9 +5,7 @@ ms.date: 03/13/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STDEV_TSQL
@@ -19,17 +17,16 @@ helpviewer_keywords:
 - STDEV function [Transact-SQL]
 - statistical standard deviation
 ms.assetid: ff41b4fc-4f71-4f18-bf78-96614ea908cc
-caps.latest.revision: 40
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6d630e0729a9d75dadcb787c237f18ff3f971849
-ms.sourcegitcommit: df3923e007527ce79e2d05821b62d77ee06fd655
+ms.openlocfilehash: c42df7bdfca5356059f85452d914af2a0e93e951
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44375689"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47755804"
 ---
 # <a name="stdev-transact-sql"></a>STDEV (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,8 +55,8 @@ STDEV ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
  *expressão*  
  É uma [expressão](../../t-sql/language-elements/expressions-transact-sql.md) numérica. Funções de agregação e subconsultas não são permitidas. *expression* é uma expressão da categoria de tipo de dados numérico exato ou numérico aproximado, com exceção do tipo de dados **bit**.  
   
- OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause* divide o conjunto de resultados produzido pela cláusula FROM em partições às quais a função é aplicada. Se não for especificado, a função tratará todas as linhas do conjunto de resultados da consulta como um único grupo. *order_by_clause* determina a ordem lógica na qual a operação é executada. *order_by_clause* é obrigatório. Para obter mais informações, consulte [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ *partition_by_clause* ] _order\_by\_clause_**)**  
+ _partition\_by\_clause_ divide o conjunto de resultados produzidos pela cláusula FROM em partições às quais a função é aplicada. Se não for especificado, a função tratará todas as linhas do conjunto de resultados da consulta como um único grupo. _order\_by\_clause_ determina a ordem lógica na qual a operação é executada. _order\_by\_clause_ é necessário. Para obter mais informações, consulte [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Tipos de retorno  
  **float**  

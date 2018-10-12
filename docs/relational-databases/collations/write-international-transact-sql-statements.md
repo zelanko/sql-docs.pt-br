@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - writing international statements
@@ -17,17 +15,16 @@ helpviewer_keywords:
 - database international considerations [SQL Server], Transact-SQL
 - dates [SQL Server], international considerations
 ms.assetid: f0b10fee-27f7-45fe-aece-ccc3f63bdcdb
-caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 01dc0e49f381efa0e080f216ccf3943252239d1d
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 4ab973f34d0bcfb94d3df97e10efcbba69655f8b
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43075248"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47724734"
 ---
 # <a name="write-international-transact-sql-statements"></a>Gravar instruções Transact-SQL internacionais
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +38,7 @@ ms.locfileid: "43075248"
   
     -   Os aplicativos ODBC, ADO e OLE DB devem usar as cláusulas de fuga ODBC timestamp, data e hora para:  
   
-         **{ ts'** aaaa**-***mm***-***dd**hh ***:*** mm ***:*** ss *[**.***fff*] **'}** tal como: **{ ts'** 1998**-** 09**-** 24 10 **:** 02 **:** 20 **' }**  
+         **{ ts'** yyyy**-**_mm_**-_** dd**hh_**:**_mm_**:**_ss_[**.**_fff_] **'}** such as: **{ ts'** 1998**-**09**-**24 10**:**02**:**20**' }**  
   
          **{ d'** *yyyy* **-** *mm* **-** *dd* **'}** como: **{ d'** 1998**-** 09**-** 24 **'}**  
   

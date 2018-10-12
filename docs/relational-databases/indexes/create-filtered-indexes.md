@@ -5,9 +5,7 @@ ms.date: 06/02/2016
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - filtered indexes [SQL Server], about filtered indexes
@@ -16,17 +14,16 @@ helpviewer_keywords:
 - nonclustered indexes [SQL Server], filtered
 - indexes [SQL Server], filtered
 ms.assetid: 25e1fcc5-45d7-4c53-8c79-5493dfaa1c74
-caps.latest.revision: 73
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 36ce8bf525cb02a2ddee85e02fba8947bc6d1e95
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: d5dadd6da3f1f39060f8ec0f96e1034f42670300
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43065463"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47603244"
 ---
 # <a name="create-filtered-indexes"></a>Criar índices filtrados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -73,7 +70,9 @@ ms.locfileid: "43065463"
   
 ###  <a name="Restrictions"></a> Limitações e restrições  
   
--   Não é possível criar um índice filtrado em uma exibição. No entanto, o otimizador de consulta pode se beneficiar do índice filtrado definido em uma tabela referenciada em uma exibição. O otimizador de consulta considera um índice filtrado para uma consulta que seleciona uma exibição se os resultados da consulta estiverem corretos.  
+-   Não é possível criar um índice filtrado em uma exibição. No entanto, o otimizador de consulta pode se beneficiar do índice filtrado definido em uma tabela referenciada em uma exibição. O otimizador de consulta considera um índice filtrado para uma consulta que seleciona uma exibição se os resultados da consulta estiverem corretos.
+
+-   Não é possível criar um índice filtrado em uma tabela quando a coluna acessada na expressão de filtro é de um tipo de dados CLR.
   
 -   Os índices filtrados têm as seguintes vantagens em relação às exibições indexadas:  
   
@@ -120,7 +119,7 @@ ms.locfileid: "43065463"
   
 6.  Na guia **Colunas de chave de índice**, clique em **Adicionar…**.  
   
-7.  Na caixa de diálogo **Selecionar Colunas de***table_name*, marque as caixas de seleção das colunas da tabela a serem adicionadas ao índice exclusivo.  
+7.  Na caixa de diálogo **Selecionar Colunas de**_table\_name_, marque as caixas de seleção das colunas da tabela ou das colunas a serem adicionadas ao índice exclusivo.  
   
 8.  Clique em **OK**.  
   

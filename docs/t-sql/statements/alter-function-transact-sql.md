@@ -5,9 +5,7 @@ ms.date: 08/07/2017
 ms.prod: sql
 ms.prod_service: database-engine, pdw, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_FUNCTION_TSQL
@@ -19,17 +17,16 @@ helpviewer_keywords:
 - modifying functions
 - functions [SQL Server], modifying
 ms.assetid: 89f066ee-05ac-4439-ab04-d8c3d5911179
-caps.latest.revision: 62
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d24ea0f9548968723aa195211e268d97bde9788
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 8ab29f84194e2f277c6a0b5843038e87a6211a30
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43065989"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47643404"
 ---
 # <a name="alter-function-transact-sql"></a>ALTER FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -236,7 +233,7 @@ RETURNS return_data_type
   
 -   O esquema **dbo** no banco de dados atual.  
   
- [ **=***default* ]  
+ [ **=**_default_ ]  
  É um valor padrão para o parâmetro. Se um valor *default* for definido, a função poderá ser executada sem a necessidade de especificar um valor para esse parâmetro.  
   
 > [!NOTE]  
@@ -258,11 +255,11 @@ RETURNS return_data_type
  Especifica que a função escalar retorna um valor escalar.  
   
  TABLE  
- Especifica que o valor de retorno da função com valor de tabela é uma tabela. Somente constantes e **@***local_variables* podem ser passadas para funções com valor de tabela.  
+ Especifica que o valor de retorno da função com valor de tabela é uma tabela. Somente as constantes e **@**_local\_variables_ podem ser passadas para as funções com valor de tabela.  
   
  Em funções com valor de tabela embutidas, o valor de retorno TABLE é definido por uma única instrução SELECT. As funções embutidas não têm variáveis de retorno associadas.  
   
- Em funções com valor de tabela de várias instruções, **@***return_variable* é uma variável TABLE usada para armazenar e acumular as linhas que devem ser retornadas como o valor da função. **@***return_variable* pode ser especificado somente para funções [!INCLUDE[tsql](../../includes/tsql-md.md)] e não para funções CLR.  
+ Em funções com valor de tabela de várias instruções, **@**_return\_variable_ é uma variável TABLE usada para armazenar e acumular as linhas que devem ser retornadas como o valor da função. **@**_return\_variable_ pode ser especificado somente para funções [!INCLUDE[tsql](../../includes/tsql-md.md)] e não para funções CLR.  
   
  *select-stmt*  
  É a única instrução SELECT que define o valor de retorno de uma função com valor de tabela embutida.  
@@ -278,10 +275,10 @@ RETURNS return_data_type
 > [!NOTE]  
 >  Essa opção não está disponível em um banco de dados independente.  
   
- *\<* table_type_definition *>***(** { \<column_definition> \<column_constraint> | \<computed_column_definition> } [ \<table_constraint> ] [ **,**...*n* ]**)**  
+ _\<_table\_type\_definition_\>_**(** { \<column_definition\> \<column\_constraint\> | \<computed\_column\_definition\> } [ \<table\_constraint\> ] [ **,**...*n* ]**)**  
  Define o tipo de dados de tabela para uma função [!INCLUDE[tsql](../../includes/tsql-md.md)]. A declaração da tabela inclui definições de coluna e restrições de coluna ou tabela.  
   
-\< clr_table_type_definition > **(** { *column_name**data_type* } [ **,**...*n* ] **)** **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Versão prévia em algumas regiões](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
+\< clr_table_type_definition \> **(** { *column_name**data_type* } [ **,**...*n* ] **)** **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Versão prévia em algumas regiões](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
   
  Define os tipos de dados de tabela para uma função CLR. A declaração de tabela inclui somente nomes de colunas e tipos de dados.  
   

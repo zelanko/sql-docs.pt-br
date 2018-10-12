@@ -5,9 +5,7 @@ ms.date: 10/20/2015
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - PERCENT_RANK_TSQL
@@ -18,17 +16,16 @@ helpviewer_keywords:
 - PERCENT_RANK function
 - analytic functions, PERCENT_RANK
 ms.assetid: e361c2d4-c01f-4da4-8e89-1ddc724a2629
-caps.latest.revision: 14
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8444320cdfe2acdebd65610010eee3c19d48fbf4
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 84c0143fe79636fd8d9fc75b69fc25f1ebb84148
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43107884"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47831876"
 ---
 # <a name="percentrank-transact-sql"></a>PERCENT_RANK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
@@ -44,8 +41,8 @@ PERCENT_RANK( )
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause* divide o conjunto de resultados produzido pela cláusula FROM em partições às quais a função é aplicada. Se não for especificado, a função tratará todas as linhas do conjunto de resultados da consulta como um único grupo. *order_by_clause* determina a ordem lógica na qual a operação é executada. *order_by_clause* é obrigatória. A \<cláusula rows ou range> da sintaxe OVER não pode ser especificada em uma função PERCENT_RANK.  Para obter mais informações, consulte [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_**)**  
+ *partition_by_clause* divide o conjunto de resultados produzido pela cláusula FROM em partições às quais a função é aplicada. Se não for especificado, a função tratará todas as linhas do conjunto de resultados da consulta como um único grupo. _order\_by\_clause_ determina a ordem lógica na qual a operação é executada. *order_by_clause* é obrigatória. A \<cláusula rows ou range\> da sintaxe OVER não pode ser especificada em uma função PERCENT_RANK.  Para obter mais informações, consulte [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Tipos de retorno  
  **float(53)**  

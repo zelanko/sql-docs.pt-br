@@ -4,26 +4,22 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: xml
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: xml
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - RAW mode, requesting schema example
 - RAW mode, with XMLDATA and XMLSCHEMA
 ms.assetid: 3504ca38-be66-42b2-8dab-f499c9584840
-caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f3da4c5ab6d1286c908a0f39807d1a3dc7e9017b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 1ed788e3ae49ae227c904221a2998dba7908f8f0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38042584"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47633394"
 ---
 # <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>Exemplo: Solicitando esquemas como resultados com as opções XMLDATA e XMLSCHEMA
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +54,7 @@ GO
 ```  
   
 > [!NOTE]  
->  O <`Schema`> é declarado como um namespace. Para evitar colisões de namespace quando vários esquemas XML-Data são solicitados em diferentes consultas FOR XML, o identificador do namespace, `Schema1` neste exemplo, é alterado a cada execução da consulta. O identificador de namespace é composto por **Schema*n***, em que ***n*** é um inteiro.  
+>  O <`Schema`> é declarado como um namespace. Para evitar colisões de namespace quando vários esquemas XML-Data são solicitados em diferentes consultas FOR XML, o identificador do namespace, `Schema1` neste exemplo, é alterado a cada execução da consulta. O identificador de namespace é composto por **Schema**_**n**_ em que _**n**_ é um inteiro.  
   
  Com a especificação da opção `XMLSCHEMA` , é possível solicitar o esquema XSD para o resultado.  
   

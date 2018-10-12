@@ -6,20 +6,17 @@ ms.date: 02/09/2017
 ms.prod: sql
 ms.technology: ssdt
 ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
-caps.latest.revision: 14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d0c53627cbf6d113c68aca95be187d521d580476
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 12908c9a880e09f08cc4903032243128025dbb3e
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39087138"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47797341"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>Como: Executar testes de unidade do SQL Server no Team Foundation Build
 Você pode usar o Team Foundation Build para executar os testes de unidade do SQL Server como parte de um teste de verificação da compilação (BVT). Você pode configurar os testes de unidade para implantar o banco de dados, gerar dados de teste e executar os testes selecionados. Se você não estiver familiarizado com o Team Foundation Build, analise as seguintes informações antes de seguir os procedimentos deste tópico:  
@@ -118,7 +115,7 @@ Por padrão, o Team Foundation Build cria um arquivo de configuração no arquiv
   
 3.  Clique com o botão direito do mouse no arquivo **Copy of app.config** e clique em Renomear.  
   
-4.  Digite *BuildComputer***.sqlunitttest.config** e pressione ENTER, em que *BuildComputer* é o nome do computador no qual o agente de compilação é executado.  
+4.  Digite _BuildComputer_**.sqlunitttest.config** e pressione ENTER, em que *BuildComputer* é o nome do computador no qual o agente de build é executado.  
   
 5.  Clique duas vezes em *BuildComputer.sqlunitttest.config*.  
   
@@ -277,7 +274,7 @@ Neste procedimento, você faz o check-in de todos os arquivos da solução. Esse
   
 1.  No Team Explorer, expanda o nó do projeto de equipe, expanda o nó Compilações, clique com o botão direito do mouse na definição de compilação que deseja executar e clique em Enfileirar Nova Compilação.  
   
-    A caixa de diálogo **Enfileirar Compilação {***TeamProjectName***}** é exibida com uma lista de todos os tipos de compilação existentes.  
+    A caixa de diálogo **Enfileirar build {**_TeamProjectName_**}** é exibida com uma lista de todos os tipos de build existentes.  
   
 2.  Se necessário, em **Definição de build**, clique na nova definição de build.  
   

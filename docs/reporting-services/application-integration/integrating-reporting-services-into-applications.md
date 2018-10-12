@@ -1,22 +1,19 @@
 ---
 title: Integrando o Reporting Services em aplicativos | Microsoft Docs
-ms.date: 10/19/2017
+ms.date: 09/18/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
-ms.suite: pro-bi
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
 author: markingmyname
 ms.author: maghan
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ac677d269f25b8cc6d9c4587e729fd3e57063259
-ms.sourcegitcommit: d96b94c60d88340224371926f283200496a5ca64
+ms.openlocfilehash: f68945ab92db13f80236cfa900067a7d38533849
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43266543"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47614114"
 ---
 # <a name="integrating-reporting-services-into-applications"></a>Integrando o Reporting Services em aplicativos
 
@@ -27,26 +24,26 @@ ms.locfileid: "43266543"
 > [!NOTE]
 > A partir do SQL Server 2017 Reporting Services, o acesso à API REST está disponível para o desenvolvimento de soluções. O acesso à API SOAP foi preterido. Para obter mais informações, consulte [Desenvolver com as APIs REST do Reporting Services](../developer/rest-api.md).
   
- Existem três opções para a integração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a aplicativos personalizados: o serviço Web Servidor de Relatórios, também conhecido como a API SOAP do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], os controles ReportViewer do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] e o acesso à URL. Cada opção fornece uma abordagem diferente para a integração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] com os aplicativos.
+ Há três opções para a integração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a aplicativos personalizados: o serviço Web do Servidor de Relatórios, também conhecido como a API SOAP do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], os controles do Visualizador de Relatórios do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] e o acesso à URL. Cada opção fornece uma abordagem diferente para a integração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] com os aplicativos.
   
 ## <a name="report-server-web-service"></a>Serviço Web de servidor de relatório
 
  O serviço Web Servidor de Relatórios é a principal interface de desenvolvimento no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Esteja você desenvolvendo código para gerenciar o seu catálogo de relatórios ou desenvolvendo código para renderizar relatórios em um formato suportado, o serviço Web exibe todos os métodos necessários para a integração do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] aos seus aplicativos. Um exemplo desse aplicativo é o Gerenciador de Relatórios, incluído no [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]; ele usa o serviço Web para gerenciar o banco de dados do servidor de relatório.  
   
-## <a name="reportviewer-controls-for-visual-studio"></a>Controles ReportViewer do Visual Studio
+## <a name="report-viewer-controls-for-visual-studio"></a>Controles do Visualizador de Relatórios para Visual Studio
 
- Os controles ReportViewer disponíveis para o [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] são usados para integrar a exibição de relatório aos aplicativos. Existem dois controles: um para aplicativos baseados em Windows Forms e um para aplicativos Web Forms. Cada controle oferece o recurso de exibição de relatórios implantados como um servidor de relatório além da capacidade de renderizar relatórios existentes em um ambiente onde um servidor de relatório não foi instalado.  
+ Os controles do Visualizador de Relatórios disponíveis para o [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] são usados para integrar a exibição de relatório aos aplicativos. Existem dois controles: um para aplicativos baseados em Windows Forms e um para aplicativos Web Forms. Cada controle oferece o recurso de exibição de relatórios implantados como um servidor de relatório além da capacidade de renderizar relatórios existentes em um ambiente onde um servidor de relatório não foi instalado.  
   
 ## <a name="url-access"></a>acesso à URL  
- O acesso à URL é outra opção para a integração da exibição de relatório com os aplicativos, se os controles ReportViewer não forem uma opção. Além disso, o acesso à URL é útil para enviar aos usuários, por email, links para relatórios.  
+ O acesso à URL será outra opção para integrar a exibição de relatório aos seus aplicativos, se os controles ReportViewer não forem uma opção. Além disso, o acesso à URL é útil para enviar aos usuários, por email, links para relatórios.  
   
 ## <a name="in-this-section"></a>Nesta seção
 
  [Integração do Reporting Services usando SOAP](../../reporting-services/application-integration/integrating-reporting-services-using-soap.md)  
  Descreve como integrar a navegação de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e o gerenciamento aos seus aplicativos comerciais existentes usando o serviço Web Servidor de Relatórios.  
   
- [Integrando o Reporting Services usando os controles ReportViewer](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
- Descreve como integrar a exibição de relatório aos seus aplicativos existentes usando os controles ReportViewer.  
+ [Integrando o Reporting Services usando os controles do Visualizador de Relatórios](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
+ Descreve como integrar a exibição de relatório aos seus aplicativos existentes usando os controles doo Visualizador de Relatórios.  
   
  [Integração do Reporting Services usando o acesso à URL](../../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)  
  Descreve como integrar navegação de relatório do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] aos seus aplicativos comerciais existentes usando o acesso à URL.  

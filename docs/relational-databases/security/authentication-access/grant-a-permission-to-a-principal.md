@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Grant permission to a principal
 ms.assetid: 4107389d-05b6-4aa3-9fa8-95b40cdf05dc
-caps.latest.revision: 12
 author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c62a0eb58db1a57d68ca1e43980f23a799fe277f
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: a22a07d05fa6286eb88089393d563e746ee9def5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118083"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47787174"
 ---
 # <a name="grant-a-permission-to-a-principal"></a>Conceder uma permissão a uma entidade de segurança
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,7 +68,7 @@ ms.locfileid: "43118083"
   
 4.  Clique com o botão direito do mouse em um procedimento armazenado e selecione **Propriedades**.  
   
-5.  Na caixa de diálogo *Propriedades do Procedimento Armazenado –***stored_procedure_name*, em Selecionar uma página, selecione **Permissões**. Use essa página para adicionar usuários ou funções ao procedimento armazenado e especificar as permissões que esses usuários ou funções têm.  
+5.  Na caixa de diálogo **Propriedades do Procedimento Armazenado –**_stored\_procedure\_name_, em selecionar uma página, selecione **Permissões**. Use essa página para adicionar usuários ou funções ao procedimento armazenado e especificar as permissões que esses usuários ou funções têm.  
   
 6.  Quando terminar, clique em **OK**.  
   

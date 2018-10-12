@@ -5,9 +5,7 @@ ms.date: 01/02/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_AVAILABILITY_GROUP_TSQL
@@ -22,16 +20,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], configuring
 - Availability Groups [SQL Server], Transact-SQL statements
 ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
-caps.latest.revision: 152
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8cb006fec0248d22f5ec49e166e767787044a345
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 02ba00fe35a31237ddf86f0782f63f822a0f5935
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46713868"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47776954"
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -276,7 +273,7 @@ ALTER AVAILABILITY GROUP group_name
   
  ENDPOINT_URL é necessário na cláusula ADD REPLICA ON e opcional na cláusula MODIFY REPLICA ON.  Para obter mais informações, consulte [Especificar a URL do ponto de extremidade ao adicionar ou modificar uma réplica de disponibilidade &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
- **'** TCP **://***system-address***:***port***'**  
+ **'** TCP **://**_system-address_**:**_port_**'**  
  Especifica uma URL para especificar uma URL de ponto de extremidade ou URL de roteamento somente leitura. Os parâmetros de URL são os seguintes:  
   
  *system-address*  
@@ -331,7 +328,7 @@ ALTER AVAILABILITY GROUP group_name
  MANUAL  
  Especifica a propagação manual (padrão). Esse método requer que você crie um backup do banco de dados na réplica primária e restaure manualmente esse backup na réplica secundária.  
   
- BACKUP_PRIORITY **=***n*  
+ BACKUP_PRIORITY **=**_n_  
  Especifica sua prioridade para executar backups nesta réplica em relação às outras réplicas no mesmo grupo de disponibilidade. O valor é um número inteiro no intervalo de 0..100. Esses valores têm estes significados:  
   
 -   1..100 indica que a réplica de disponibilidade pode ser escolhida para executar backups. 1 indica a prioridade mais baixa, e 100 indica a prioridade mais alta. Se BACKUP_PRIORITY = 1, a réplica de disponibilidade será escolhida para só executar backups se nenhuma réplica de disponibilidade de prioridade mais alta estiver atualmente disponível.  
@@ -359,7 +356,7 @@ ALTER AVAILABILITY GROUP group_name
   
  Para obter mais informações, consulte [Secundárias ativas: réplicas secundárias legíveis &#40;Grupos de Disponibilidade AlwaysOn&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
- READ_ONLY_ROUTING_URL **='** TCP **://***system-address***:***port***'**  
+ READ_ONLY_ROUTING_URL **='** TCP **://**_system-address_**:**_port_**'**  
  Especifica a URL a ser usada para rotear solicitações de conexão de intenção de leitura para esta réplica de disponibilidade. Esta é a URL na qual o Mecanismo de Banco de Dados do SQL Server escuta. Normalmente, a instância padrão do Mecanismo de Banco de Dados do SQL Server escuta na porta TCP 1433.  
   
  Para uma instância nomeada, você pode obter o número da porta consultando as colunas **port** e **type_desc** da exibição de gerenciamento dinâmico [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md). A instância do servidor usa o ouvinte Transact-SQL (**type_desc='TSQL'**).  
@@ -402,7 +399,7 @@ ALTER AVAILABILITY GROUP group_name
  Nenhuma  
  Especifica que, quando esta réplica de disponibilidade for a réplica primária, o roteamento somente leitura não terá suporte. Esse é o comportamento padrão. Quando usado com MODIFY REPLICA ON, este valor desabilita uma lista existente, se houver.  
   
- SESSION_TIMEOUT **=***seconds*  
+ SESSION_TIMEOUT **=**_seconds_  
  Especifica o tempo limite da sessão, em segundos. Se você não especificar essa opção, por padrão, o período de tempo será de 10 segundos. O valor mínimo é 5 segundos.  
   
 > [!IMPORTANT]  
@@ -453,7 +450,7 @@ Inicia um failover manual do grupo de disponibilidade sem perda de dados para a 
   
  Para obter informações sobre as limitações, os pré-requisitos e as recomendações para forçar o failover e o efeito de um failover forçado nos bancos de dados primários antigos no grupo de disponibilidade, confira [Executar um failover manual forçado de um grupo de disponibilidade &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md).  
   
- ADD LISTENER **‘***dns_name***’(** \<add_listener_option> **)**  
+ ADD LISTENER **‘**_dns\_name_**’(** \<add_listener_option> **)**  
  Define um novo ouvinte de grupo de disponibilidade para esse grupo de disponibilidade. Com suporte apenas na réplica principal.  
   
 > [!IMPORTANT]  
@@ -480,12 +477,12 @@ Inicia um failover manual do grupo de disponibilidade sem perda de dados para a 
  \<ag_name>  
  Especifica o nome do grupo de disponibilidade que compõe metade do grupo de disponibilidade distribuído.  
   
- LISTENER **='** TCP **://***system-address***:***port***'**  
+ LISTENER **='** TCP **://**_system-address_**:**_port_**'**  
  Especifica o caminho da URL para o ouvinte associado ao grupo de disponibilidade.  
   
  A cláusula LISTENER é obrigatória.  
   
- **'** TCP **://***system-address***:***port***'**  
+ **'** TCP **://**_system-address_**:**_port_**'**  
  Especifica uma URL para o ouvinte associado ao grupo de disponibilidade. Os parâmetros de URL são os seguintes:  
   
  *system-address*  
@@ -537,7 +534,7 @@ Inicia um failover manual do grupo de disponibilidade sem perda de dados para a 
  \<add_listener_option>  
  ADD LISTENER escolhe uma das seguintes opções:  
   
- WITH DHCP [ ON { **(‘***four_part_ipv4_address***’,‘***four_part_ipv4_mask***’)** } ]  
+ WITH DHCP [ ON { **(‘**_four\_part\_ipv4\_address_**’,‘**_four\_part\_ipv4\_mask_**’)** } ]  
  Especifica que o ouvinte de grupo de disponibilidade usará o protocolo DHCP.  Opcionalmente, use a cláusula ON para identificar a rede na qual este ouvinte será criado. DHCP é limitado a uma única sub-rede que é usada para toda instância de servidor que hospeda uma réplica de disponibilidade no grupo de disponibilidade.  
   
 > [!IMPORTANT]  
@@ -547,7 +544,7 @@ Inicia um failover manual do grupo de disponibilidade sem perda de dados para a 
   
  `WITH DHCP ON ('10.120.19.0','255.255.254.0')`  
   
- WITH IP **(** { **(‘***four_part_ipv4_address***’,‘***four_part_ipv4_mask***’)** | **(‘***ipv6_address***’)** } [ **,** ...*n* ] **)** [ **,** PORT **=***listener_port* ]  
+ WITH IP **(** { **(‘**_four\_part\_ipv4\_address_**’,‘**_four\_part\_ipv4\_mask_**’)** | **(‘**_ipv6\_address_**’)** } [ **,** ..._n_ ] **)** [ **,** PORT **=**_listener\_port_ ]  
  Especifica que, em vez de usar o DHCP, o ouvinte do grupo de disponibilidade usará um ou mais endereços IP estáticos. Para criar um grupo de disponibilidade em várias sub-redes, cada sub-rede exige um endereço IP estático na configuração de ouvinte. Para determinada sub-rede, o endereço IP estático pode ser um endereço IPv4 ou um endereço IPv6. Contate o administrador da rede para obter um endereço IP estático para cada sub-rede que hospedará uma réplica de disponibilidade para o novo grupo de disponibilidade.  
   
  Por exemplo:  
@@ -570,22 +567,22 @@ Inicia um failover manual do grupo de disponibilidade sem perda de dados para a 
   
  Por exemplo: `WITH IP ( ('2001::4898:23:1002:20f:1fff:feff:b3a3') ) , PORT = 7777`  
   
- MODIFY LISTENER **‘***dns_name***’(** \<modify_listener_option> **)**  
+ MODIFY LISTENER **‘**_dns\_name_**’(** \<modify\_listener\_option\> **)**  
  Modifica um ouvinte de grupo de disponibilidade existente para esse grupo de disponibilidade. Com suporte apenas na réplica principal.  
   
- \<modify_listener_option>  
+ \<modify\_listener\_option\>  
  MODIFY LISTENER escolhe uma das seguintes opções:  
   
- ADD IP { **(‘***four_part_ipv4_address***’,‘***four_part_ipv4_mask***’)** | **(‘** dns_name*ipv6_address***’)** }  
- Adiciona o endereço IP especificado ao ouvinte do grupo de disponibilidade especificado por *dns_name*.  
+ ADD IP { **(‘**_four\_part\_ipv4\_address_**’,‘**_four\_part\_ipv4_mask_**’)** \| <b>(‘</b>dns\_name*ipv6\_address*__’)__ }  
+ Adiciona o endereço IP especificado ao ouvinte do grupo de disponibilidade especificado por *dns\_name*.  
   
  PORT **=** *listener_port*  
  Veja a descrição desse argumento anteriormente nesta seção.  
   
- RESTART LISTENER **‘***dns_name***’**  
+ RESTART LISTENER **‘**_dns\_name_**’**  
  Reinicia o ouvinte que está associado ao nome DNS especificado. Com suporte apenas na réplica principal.  
   
- REMOVE LISTENER **‘***dns_name***’**  
+ REMOVE LISTENER **‘**_dns\_name_**’**  
  Remove o ouvinte que está associado ao nome DNS especificado. Com suporte apenas na réplica principal.  
   
  OFFLINE  

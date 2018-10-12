@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-visual-db
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], types
@@ -17,16 +14,15 @@ helpviewer_keywords:
 - Insert Results query
 - queries [SQL Server], results
 ms.assetid: 8770d630-09cc-47ec-a0e9-e9de2d7bbc89
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 91c84391103acc56a4602bb91d960557f190cb52
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6e02bff525732632dc97c3dc2fe6955053106e5d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33053573"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47845004"
 ---
 # <a name="create-insert-results-queries-visual-database-tools"></a>Criar consultas Inserir Resultados (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -82,11 +78,11 @@ Quando você cria uma consulta Inserir Resultados, o painel Critérios é altera
     > [!NOTE]  
     > O Designer de Consulta e Exibição não pode determinar antecipadamente quais tabelas e exibições podem ser atualizadas. Portanto, a lista **Nome de Tabela** na caixa de diálogo **Escolher Tabela para Inserir a Partir da Consulta** mostra todas as tabelas e exibições disponíveis na conexão de dados que você estiver consultando, mesmo aquelas para as quais não é possível copiar linhas.  
   
-4.  No retângulo que representa a tabela ou o objeto com valor de tabela, escolha os nomes das colunas cujo conteúdo você quer copiar. Para copiar linhas inteiras, escolha **\&#42; (Todas as Colunas)**.  
+4.  No retângulo que representa a tabela ou o objeto com valor de tabela, escolha os nomes das colunas cujo conteúdo você quer copiar. Para copiar linhas inteiras, escolha **#42; (Todas as colunas)**.  
   
     O Designer de Consulta e Exibição adiciona as colunas escolhidas à coluna **Coluna** do painel Critérios.  
   
-5.  Na coluna **Acrescentar** do painel Critérios, selecione uma coluna de destino na tabela de destino para cada coluna que você está copiando. Escolha *tablename.\&#42;* se você estiver copiando linhas inteiras. As colunas na tabela de destino devem ter os mesmos tipos de dados (ou compatíveis) que as colunas na tabela de origem.  
+5.  Na coluna **Acrescentar** do painel Critérios, selecione uma coluna de destino na tabela de destino para cada coluna que você está copiando. Escolha *tablename.&#42;* se estiver copiando linhas inteiras. As colunas na tabela de destino devem ter os mesmos tipos de dados (ou compatíveis) que as colunas na tabela de origem.  
   
 6.  Se você quiser copiar as linhas em uma ordem específica, selecione a ordem de classificação. Para obter detalhes, consulte [Classificar e agrupar resultados da consulta &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md).  
   

@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - dropping views
@@ -15,17 +13,16 @@ helpviewer_keywords:
 - views [SQL Server], deleting
 - removing views
 ms.assetid: 6823c7f8-06ca-4bda-8482-7092f03d52a0
-caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 17859bdbaaf8a08569717c1d1cb64ab6eab6ff93
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 7846814b1158313bfc663b405cd7e0506235e1e4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43075937"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47689254"
 ---
 # <a name="delete-views"></a>Excluir exibições
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -69,7 +66,7 @@ ms.locfileid: "43075937"
 3.  Na caixa de diálogo **Excluir Objeto** , clique em **OK**.  
   
     > [!IMPORTANT]  
-    >  Clique em **Mostrar Dependências** na caixa de diálogo **Excluir Objeto** para abrir a caixa de diálogo *nome_da_exibição***Dependências*. Isso mostrará todos os objetos que dependem da exibição e todos os objetos dos quais a exibição depende.  
+    >  Clique em **Mostrar Dependências** na caixa de diálogo **Excluir Objeto** para abrir a caixa de diálogo _view\_name_**Dependências**. Isso mostrará todos os objetos que dependem da exibição e todos os objetos dos quais a exibição depende.  
   
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   

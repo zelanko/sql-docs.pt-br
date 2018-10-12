@@ -5,9 +5,7 @@ ms.date: 09/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - PROC
@@ -45,17 +43,16 @@ helpviewer_keywords:
 - automatic stored procedure execution
 - creating stored procedures
 ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
-caps.latest.revision: 180
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac2db40895cfc8690151b84beacb12f2fb8e3fac
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 8bddec40694be543a425a58c28a5a8d8f1bb65d1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43108174"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47780804"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -181,7 +178,7 @@ OR ALTER
   
  Os parâmetros não poderão ser declarados se FOR REPLICATION for especificado.  
   
- [ *type_schema_name***.** ] *data_type*  
+ [ _type\_schema\_name_**.** ] *data_type*  
  O tipo de dados do parâmetro e o esquema ao qual o tipo de dados pertence.  
   
 **Diretrizes para procedimentos [!INCLUDE[tsql](../../includes/tsql-md.md)]**:  
@@ -245,7 +242,7 @@ FOR REPLICATION
  { [ BEGIN ] *sql_statement* [;] [ ...*n* ] [ END ] }  
  Uma ou mais instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] que abrangem o corpo do procedimento. Você pode usar as palavras-chave BEGIN e END para delimitar as instruções. Para obter informações, consulte as seções Práticas recomendadas, Comentários gerais e Limitações e restrições a seguir.  
   
-EXTERNAL NAME *assembly_name ***.*** class_name ***.*** method_name*  
+EXTERNAL NAME _assembly\_name_**.**_class\_name_**.**_method\_name_  
  **Aplica-se a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Especifica o método de um assembly [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para um procedimento CLR a ser referenciado. *classe_name* deve ser um identificador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] válido e existir como uma classe no assembly. Se a classe tiver um nome qualificado por namespace que use um ponto final (**.**) para separar partes do namespace, o nome de classe deverá ser delimitado usando colchetes (**[]**) ou aspas (**""**). O método especificado deve ser um método estático da classe.  

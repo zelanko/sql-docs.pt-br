@@ -5,9 +5,7 @@ ms.date: 03/13/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SUM
@@ -24,17 +22,16 @@ helpviewer_keywords:
 - totals [SQL Server], SUM
 - summary values [SQL Server]
 ms.assetid: 9af94d0f-55d4-428f-a840-ec530160f379
-caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5d011f4af782c8d8a3d4af76a5f1b55f8743b3c0
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: d90d71770a25c95f2f1e845556997fe817f889d1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43068581"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47833784"
 ---
 # <a name="sum-transact-sql"></a>SUM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -68,8 +65,8 @@ SUM ( [ ALL | DISTINCT ] expression )
  *expressão*  
  É uma constante, coluna ou função e qualquer combinação de operadores aritméticos, bit a bit e de cadeia de caracteres. *expression* é uma expressão da categoria de tipo de dados numérico exato ou numérico aproximado, com exceção do tipo de dados **bit**. Funções de agregação e subconsultas não são permitidas. Para obter mais informações, veja [Expressões &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
   
- OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause* divide o conjunto de resultados produzido pela cláusula FROM em partições às quais a função é aplicada. Se não for especificado, a função tratará todas as linhas do conjunto de resultados da consulta como um único grupo. *order_by_clause* determina a ordem lógica na qual a operação é executada. *order_by_clause* é obrigatório. Para obter mais informações, consulte [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_**)**  
+ *partition_by_clause* divide o conjunto de resultados produzido pela cláusula FROM em partições às quais a função é aplicada. Se não for especificado, a função tratará todas as linhas do conjunto de resultados da consulta como um único grupo. _order\_by\_clause_ determina a ordem lógica na qual a operação é executada. _order\_by\_clause_ é necessário. Para obter mais informações, consulte [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Tipos de retorno  
  Retorna o somatório de todos os valores de *expression* no tipo de dados de *expression* mais preciso.  

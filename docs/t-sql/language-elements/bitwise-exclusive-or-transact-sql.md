@@ -5,9 +5,7 @@ ms.date: 01/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ^_TSQL
@@ -24,17 +22,16 @@ helpviewer_keywords:
 - exclusive OR mathematical operations
 - bitwise exclusive OR (^)
 ms.assetid: f38f0ad4-46d0-40ea-9851-0f928fda5293
-caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3f3c3ed5a501df1971268c2c647e57af4f11a840
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 83ab3a0beb034311f7d29ede9c33b6e291c20a32
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43072618"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47663664"
 ---
 # <a name="-bitwise-exclusive-or-transact-sql"></a>^ (OR exclusivo bit a bit) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -66,7 +63,7 @@ expression ^ expression
 ## <a name="remarks"></a>Remarks  
  O operador bit a bit **^** executa um OR exclusivo lógico bit a bit entre as duas expressões, usando cada bit correspondente para as duas expressões. Os bits no resultado são definidos como 1 se um dos dois bits  (mas não ambos) para o bit atual a ser resolvido nas expressões de entrada tiver o valor de 1. Se os dois bits forem 0 ou 1, o bit no resultado será limpo com o valor 0.  
   
- Se as expressões à esquerda e à direita tiverem tipos de dados inteiros diferentes (por exemplo, a *expression* à esquerda é **smallint** e a *expression* à direita é **int**), o argumento do tipo de dados menor será convertido no tipo de dados maior. Nesse caso, a **smallint***expression* é convertida em um **int**.  
+ Se as expressões à esquerda e à direita tiverem tipos de dados inteiros diferentes (por exemplo, a *expression* à esquerda é **smallint** e a *expression* à direita é **int**), o argumento do tipo de dados menor será convertido no tipo de dados maior. Nesse caso, a **smallint**_expression_ é convertida em um **int**.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir cria uma tabela usando o tipo de dados **int** para armazenar os valores originais e insere os dois valores em uma linha.  

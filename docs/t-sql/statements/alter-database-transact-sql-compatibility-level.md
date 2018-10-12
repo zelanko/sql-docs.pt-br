@@ -5,9 +5,7 @@ ms.date: 07/16/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - COMPATIBILITY_LEVEL_TSQL
@@ -23,17 +21,16 @@ helpviewer_keywords:
 - db compatibility level
 - db compat level
 ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
-caps.latest.revision: 89
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2c57b2d89689207885f621e6619b4771a4a217fe
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: e08cc23d78be8f617d51bd6d8310eaef5aa1f0e6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43099372"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47666594"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Nível de compatibilidade de ALTER DATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,7 +55,8 @@ SET COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 | 90 }
   
 |Product|Versão do Mecanismo de Banco de Dados|Designação de nível de compatibilidade|Valores do nível de compatibilidade com suporte|  
 |-------------|-----------------------------|-------------------------------------|------------------------------------------|  
-|[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]|14|140|140, 130, 120, 110, 100|
+|[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|15|150|150, 140, 130, 120, 110, 100| 
+|[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|14|140|140, 130, 120, 110, 100|
 |Servidor lógico [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|12|130|150, 140, 130, 120, 110, 100|  
 |[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Instância gerenciada|12|130|150, 140, 130, 120, 110, 100|  
 |[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|13|130|130, 120, 110, 100|  
@@ -170,7 +168,9 @@ Para obter o fluxo de trabalho recomendado para atualizar o nível de compatibil
 ## <a name="differences-between-compatibility-level-140-and-level-150"></a>Diferenças entre os níveis de compatibilidade 140 e 150  
 Esta seção descreve os novos comportamentos introduzidos com o nível de compatibilidade 150.
 
-O nível 150 de compatibilidade do banco do dados está atualmente em Versão Prévia Privada para o Banco de Dados SQL do Azure.  Esse nível de compatibilidade do banco de dados será associado à próxima geração de aprimoramentos de processamento de consulta, além do que foi introduzido no nível de compatibilidade 140 do banco de dados.  
+No momento, o nível 150 de compatibilidade do banco de dados está em versão prévia privada para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. Esse nível de compatibilidade do banco de dados será associado à próxima geração de aprimoramentos de processamento de consulta, além do que foi introduzido no nível de compatibilidade 140 do banco de dados.     
+
+Para obter mais informações sobre os recursos de processamento de consulta habilitados no nível 150 de compatibilidade do banco de dados, consulte [What's new in SQL Server 2019](../../sql-server/what-s-new-in-sql-server-ver15.md) (Novidades no SQL Server 2019).     
 
 ## <a name="differences-between-compatibility-level-130-and-level-140"></a>Diferenças entre os níveis de compatibilidade 130 e 140  
 Esta seção descreve os novos comportamentos introduzidos com o nível de compatibilidade 140.

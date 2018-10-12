@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - SQL13.SWB.SERVERROLE.GENERAL.F1
@@ -16,17 +14,16 @@ f1_keywords:
 helpviewer_keywords:
 - SERVER ROLE, creating
 ms.assetid: 74f19992-8082-4ed7-92a1-04fe676ee82d
-caps.latest.revision: 13
 author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8d99c22f795ff37487a220851b0828e952b192cd
-ms.sourcegitcommit: e4e9f02b5c14f3bb66e19dec98f38c012275b92c
+ms.openlocfilehash: 8eb7fad6678fba7e5e6b036166c53e8115a89a61
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43118444"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47659766"
 ---
 # <a name="create-a-server-role"></a>Criar uma função de servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -75,7 +72,7 @@ ms.locfileid: "43118444"
   
 3.  Clique com o botão direito do mouse na pasta **Funções de Servidor** e selecione **Nova Função de Servidor...**.  
   
-4.  Na caixa de diálogo **Nova Função de Servidor –***server_role_name*, na página **Geral**, insira um nome para a nova função de servidor na caixa **Nome da função de servidor**.  
+4.  Na caixa de diálogo **Nova Função de Servidor –**_server\_role\_name_, na página **Geral**, insira um nome para a nova função de servidor na caixa **Nome da função de servidor**.  
   
 5.  Na caixa **Proprietário** , digite o nome da entidade de segurança de servidor que será proprietária da nova função. Como alternativa, clique nas reticências **(…)** para abrir a caixa de diálogo **Selecionar Logon ou Função de Servidor** .  
   

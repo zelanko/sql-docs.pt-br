@@ -24,12 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4624b3444c41fee413429ebd729d7f05512a02f8
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.openlocfilehash: 380a73ff26d48abf90e5068395a2defc29d28746
+ms.sourcegitcommit: 351f09e57c9896804e1ecabef07db64aeeff947a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43808502"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47441742"
 ---
 # <a name="export-a-data-tier-application"></a>Exportar um aplicativo da camada de dados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,10 @@ ms.locfileid: "43808502"
  Você não poderá exportar um banco de dados com objetos sem suporte em um DAC ou usuários contidos. Para obter mais informações sobre os tipos de objetos com suporte em um DAC, consulte [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md).  
   
 ###  <a name="Permissions"></a> Permissões  
- A exportação de um DAC exige, no mínimo, as permissões ALTER ANY LOGIN e VIEW DEFINITION do escopo do banco de dados, bem como as permissões SELECT em **sys.sql_expression_dependencies**. A exportação de um DAC pode ser feita por membros da função de servidor fixa securityadmin que também são membros da função de banco de dados fixa database_owner no banco de dados do qual o DAC é exportado. Membros da função de servidor fixa sysadmin ou da conta interna do administrador do sistema do SQL Server denominada **sa** também podem exportar um DAC.  
+ A exportação de um DAC exige, no mínimo, as permissões ALTER ANY LOGIN e VIEW DEFINITION do escopo do banco de dados, bem como as permissões SELECT em **sys.sql_expression_dependencies**. A exportação de um DAC pode ser feita por membros da função de servidor fixa securityadmin que também são membros da função de banco de dados fixa database_owner no banco de dados do qual o DAC é exportado. Membros da função de servidor fixa sysadmin ou da conta interna do administrador do sistema do SQL Server denominada **sa** também podem exportar um DAC.
+ 
+No Banco de Dados SQL do Azure, é necessário conceder a permissão VIEW DEFINITION e SELECT **para cada banco de dados** em todas as tabelas ou em tabelas específicas
+
   
 ##  <a name="UsingDeployDACWizard"></a> Usando o Assistente para Exportar Aplicativo da Camada de Dados  
  **Para exportar um DAC usando um assistente**  

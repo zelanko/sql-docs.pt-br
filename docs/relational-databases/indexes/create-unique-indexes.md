@@ -5,9 +5,7 @@ ms.date: 02/17/2017
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - unique indexes
@@ -17,17 +15,16 @@ helpviewer_keywords:
 - nonclustered indexes [SQL Server], unique
 - unique indexes, design guidelines
 ms.assetid: 56b5982e-cb94-46c0-8fbb-772fc275354a
-caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a075fbf585435cc449d120d7a96bd72e45399a0d
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: ade996ce083c37bbf9ef2eeae30fb6e62a5786c8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43074273"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47680481"
 ---
 # <a name="create-unique-indexes"></a>Criar índices exclusivos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -131,7 +128,7 @@ ms.locfileid: "43074273"
   
 13. Clique em **Fechar**.  
   
-14. No menu **Arquivo**, clique em **Salvar***table_name*.  
+14. No menu **Arquivo**, clique em **Salvar**_table\_name_.  
   
 #### <a name="create-a-unique-index-by-using-object-explorer"></a>Crie um índice exclusivo usando o Pesquisador de Objetos  
   
@@ -149,7 +146,7 @@ ms.locfileid: "43074273"
   
 7.  Na guia **Colunas de chave de índice**, clique em **Adicionar…**.  
   
-8.  Na caixa de diálogo **Selecionar Colunas de***table_name*, marque as caixas de seleção das colunas da tabela a serem adicionadas ao índice exclusivo.  
+8.  Na caixa de diálogo **Selecionar Colunas de**_table\_name_, marque as caixas de seleção das colunas da tabela ou das colunas a serem adicionadas ao índice exclusivo.  
   
 9. Clique em **OK**.  
   

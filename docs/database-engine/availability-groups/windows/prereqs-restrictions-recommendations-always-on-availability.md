@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/05/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], server instance
@@ -18,21 +16,20 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], databases
 - Availability Groups [SQL Server]
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
-caps.latest.revision: 151
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 42f970d275a4dc6a03ddfb2292ce587540d4fe6b
-ms.sourcegitcommit: dcd29cd2d358bef95652db71f180d2a31ed5886b
+ms.openlocfilehash: d4830a84c3f1aef95013eb21e1cadd0a4896ef00
+ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37934898"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47864244"
 ---
 # <a name="prereqs-restrictions-recommendations---always-on-availability-groups"></a>Pré-requisitos, restrições e recomendações – Grupos de Disponibilidade AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Este tópico descreve considerações sobre a implantação do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], incluindo pré-requisitos, restrições e recomendações para computadores host, clusters WSFC (Cluster de Failover do Windows Server), instâncias de servidor e grupos de disponibilidade. Para cada um desses componentes, são indicadas considerações sobre segurança e as permissões exigidas, se houver.  
+  Este artigo descreve considerações sobre a implantação do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], incluindo pré-requisitos, restrições e recomendações para computadores host, clusters WSFC (Cluster de Failover do Windows Server), instâncias de servidor e grupos de disponibilidade. Para cada um desses componentes, são indicadas considerações sobre segurança e as permissões exigidas, se houver.  
   
 > [!IMPORTANT]  
 >  Antes de implantar o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], é altamente recomendável que você leia cada seção deste tópico.  
@@ -44,19 +41,7 @@ ms.locfileid: "37934898"
 |------|-----------------------|------------|----------|  
 |![Caixa de seleção](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|O hotfix para o .NET 3.5 SP1 adiciona suporte a recursos do Cliente SQL para AlwaysOn de intenção de Leitura, somente leitura e multisubnetfailover. O hotfix precisa ser instalado em cada servidor de relatório do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .|KB 2654347: [Hotfix para .NET 3.5 SP1 para adicionar suporte aos recursos AlwaysOn](http://go.microsoft.com/fwlink/?LinkId=242896)|  
   
-##  <a name="SystemReqsForAOAG"></a> Requisitos e recomendações do sistema Windows  
- **Nesta seção:**  
-  
--   [Lista de verificação: requisitos](#SystemRequirements)  
-  
--   [Recomendações para computadores que hospedam réplicas de disponibilidade (sistema Windows)](#ComputerRecommendations)  
-  
--   [Permissões](#PermissionsWindows)  
-  
--   [Tarefas relacionadas](#RelatedTasksWindows)  
-  
--   [Conteúdo relacionado](#RelatedContentWS)  
-  
+
 ###  <a name="SystemRequirements"></a> Lista de verificação: requisitos (sistema Windows)  
  Para oferecer suporte ao recurso [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , verifique se cada computador que participará de um ou mais grupos de disponibilidade atende aos seguintes requisitos básicos:  
   
@@ -148,7 +133,7 @@ ms.locfileid: "37934898"
 |-|------------------|-----------|  
 |![Caixa de seleção](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|O computador host deve ser um nó WSFC. As instâncias do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospedam as réplicas de disponibilidade de determinado grupo de disponibilidade residem em nós separados do cluster. Um grupo de disponibilidade pode temporariamente abranger dois clusters, enquanto está migrando para outro cluster. O SQL Server 2016 introduz grupos de disponibilidade distribuídos. Em um grupo de disponibilidade distribuído, dois grupos de disponibilidade residem em clusters diferentes.|[WSFC &#40;Windows Server Failover Clustering&#41; com o SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)<br /><br /> [Clustering de failover e Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)<br/> <br/> [Grupos de Disponibilidade Distribuída (Grupos de Disponibilidade AlwaysOn)](../../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md)|  
 |![Caixa de seleção](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Se você desejar um grupo de disponibilidade para funcionar com o Kerberos:<br /><br /> Todas as instâncias de servidor que hospedam uma réplica de disponibilidade para o grupo de disponibilidade deve usar a mesma conta de serviço do SQL Server.<br /><br /> O administrador de domínio precisa registrar um Nome de entidade de serviço (SPN) manualmente com Active Directory na conta de serviço do SQL Server para o nome de rede virtual (VNN) do ouvinte de grupo de disponibilidade. Se o SPN for registrado em uma conta diferente da conta de serviço do SQL Server, a autenticação falhará.<br /><br /> <br /><br /> <b>\*\* Importante \*\*</b> Se você alterar a conta de serviço do SQL Server, o administrador de domínio precisará registrar de novo o SPN manualmente.|[Registrar um nome de entidade de serviço para conexões de Kerberos](../../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)<br /><br /> **Breve explicação:**<br /><br /> O Kerberos e os SPNs impõem a autenticação mútua. O SPN é mapeado para a conta do Windows que inicia os serviços do SQL Server. Se o SPN não estiver registrado corretamente ou se ele falhar, a camada de segurança do Windows não poderá determinar a conta associada ao SPN e a autenticação Kerberos não será utilizada.<br /><br /> <br /><br /> Observação: o NTLM não tem esse requisito.|  
-|![Caixa de seleção](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Se você pretende usar uma instância de cluster de failover (FCI) do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para hospedar uma réplica de disponibilidade, verifique se compreende as restrições de FCI e se os requisitos de FCI são atendidos.|[Pré-requisitos e requisitos para usar uma FCI (Instância de Cluster de Failover) do SQL Server para hospedar uma réplica de disponibilidade](#FciArLimitations) (mais adiante neste tópico)|  
+|![Caixa de seleção](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Se você pretende usar uma instância de cluster de failover (FCI) do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para hospedar uma réplica de disponibilidade, verifique se compreende as restrições de FCI e se os requisitos de FCI são atendidos.|[Pré-requisitos e requisitos para usar uma FCI (Instância de Cluster de Failover) do SQL Server para hospedar uma réplica de disponibilidade](#FciArLimitations) (mais adiante neste artigo)|  
 |![Caixa de seleção](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Cada instância de servidor deve estar executando a Enterprise Edition do [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].|[Edições e recursos com suporte para SQL Server 2016](../../../sql-server/editions-and-supported-features-for-sql-server-2016.md)|  
 |![Caixa de seleção](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Todas as instâncias de servidor que hospedam réplicas de disponibilidade para um grupo de disponibilidade devem usar o mesmo agrupamento do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Definir ou alterar o agrupamento do servidor](../../../relational-databases/collations/set-or-change-the-server-collation.md)|  
 |![Caixa de seleção](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Habilite o recurso [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] em cada instância de servidor que hospedará uma réplica de disponibilidade para qualquer grupo de disponibilidade. Em determinado computador, você pode habilitar quantas instâncias de servidor desejar para o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , desde que tenham suporte da instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Habilitar e desabilitar Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)<br /><br /> <br /><br /> <b>\*\* Importante \*\*</b> Se você destruir e recriar um WSFC, deverá desabilitar e reabilitar o recurso [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] em cada instância de servidor habilitada para o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] no cluster original.|  
@@ -193,7 +178,7 @@ ms.locfileid: "37934898"
   
 ###  <a name="RelatedTasksSI"></a> Tarefas relacionadas (instância de servidor)  
   
-|Tarefa|Tópico|  
+|Tarefa|Artigo|  
 |----------|-----------|  
 |Determinando se existe um ponto de extremidade de espelhamento de banco de dados|[sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)|  
 |Criando o ponto de extremidade de espelhamento de banco de dados (caso ainda não exista)|[Criar um ponto de extremidade de espelhamento de banco de dados para a Autenticação do Windows &#40;SQL Server&#41;](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)<br /><br /> [Usar certificados para um ponto de extremidade de espelhamento de banco de dados &#40;Transact-SQL&#41;](../../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)<br /><br /> [Criar um ponto de extremidade de espelhamento de banco de dados para grupos de disponibilidade AlwaysOn &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)|  
@@ -227,9 +212,13 @@ ms.locfileid: "37934898"
 > [!NOTE]  
 > As Instâncias de Cluster de Failover dão suporte a CSVs (Volumes Compartilhados Clusterizados). Para obter mais informações sobre CSV, consulte [Noções básicas sobre volumes compartilhados clusterizados em um cluster de failover](http://technet.microsoft.com/library/dd759255.aspx).  
   
--   **Os nós de cluster de uma FCI podem hospedar somente uma réplica de determinado grupo de disponibilidade:** se você adicionar uma réplica de disponibilidade a uma FCI, os nós do WSFC que são possíveis proprietários da FCI não poderão hospedar outra réplica para o mesmo grupo de disponibilidade.  
+-   **Os nós de cluster de uma FCI podem hospedar somente uma réplica de determinado grupo de disponibilidade:** se você adicionar uma réplica de disponibilidade a uma FCI, os nós do WSFC que são possíveis proprietários da FCI não poderão hospedar outra réplica para o mesmo grupo de disponibilidade.  Para evitar possíveis conflitos, é recomendável configurar os possíveis proprietários para a instância do cluster de failover. Isso evitará a possibilidade de que um único WSFC tente hospedar duas réplicas de disponibilidade para o mesmo grupo de disponibilidade.
   
-     Além disso, cada uma das outras réplicas deve ser hospedada por uma instância do SQL Server 2016 que reside em um nó de cluster diferente no mesmo cluster de failover do Windows Server. A única exceção é que, embora tenha sido migrado para outro cluster, um grupo de disponibilidade pode temporariamente abranger dois clusters.  
+     Além disso, cada uma das outras réplicas deve ser hospedada por uma instância do SQL Server 2016 que reside em um nó de cluster diferente no mesmo cluster de failover do Windows Server. A única exceção é que, embora tenha sido migrado para outro cluster, um grupo de disponibilidade pode temporariamente abranger dois clusters. 
+
+  >[!WARNING]
+  > Usando o Gerenciador de Cluster de Failover para mover uma *instância de cluster de failover* que hospeda um grupo de disponibilidade para um nó que *já* está hospedando uma réplica do mesmo grupo de disponibilidade pode resultar na perda da réplica do grupo de disponibilidade, impedindo que ele seja colocado online no nó de destino. Um único nó de um cluster de failover não pode hospedar mais de uma réplica do mesmo grupo de disponibilidade. Para obter mais informações sobre como isso ocorre e como recuperar, consulte o blog [Replica unexpectedly dropped in availability group](https://blogs.msdn.microsoft.com/alwaysonpro/2014/02/03/issue-replica-unexpectedly-dropped-in-availability-group/) (Réplica removida inesperadamente no grupo de disponibilidade). 
+
   
 -   **FCIs não oferecem suporte ao failover automático por grupos de disponibilidade:**  FCIs não oferecem suporte ao failover automático por grupos de disponibilidade; portanto, qualquer réplica de disponibilidade hospedada por um FCI pode ser configurada apenas para failover manual.  
   
@@ -243,7 +232,7 @@ ms.locfileid: "37934898"
   
 ###  <a name="RelatedTasksFCIs"></a> Tarefas relacionadas (FCIs)  
   
-|Tarefa|Tópico|  
+|Tarefa|Artigo|  
 |----------|-----------|  
 |Instalando um cluster de failover do SQL Server|[Criar um novo cluster de failover do SQL Server &#40;Instalação&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)|  
 |Atualização in-loco de seu cluster de failover do SQL Server existente|[Atualizar uma instância de cluster de failover do SQL Server &#40;instalação&#41;](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance-setup.md)|  
@@ -292,7 +281,7 @@ ms.locfileid: "37934898"
   
 ||Pré-requisito|Descrição|  
 |-|------------------|-----------------|  
-|![Caixa de seleção](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Se você pretende usar uma instância de cluster de failover (FCI) do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para hospedar uma réplica de disponibilidade, verifique se compreende as restrições de FCI e se os requisitos de FCI são atendidos.|[Pré-requisitos e restrições do uso de uma FCI (instância de cluster de failover) do SQL Server para hospedar uma réplica de disponibilidade](#FciArLimitations) (anteriormente neste tópico)|  
+|![Caixa de seleção](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Se você pretende usar uma instância de cluster de failover (FCI) do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para hospedar uma réplica de disponibilidade, verifique se compreende as restrições de FCI e se os requisitos de FCI são atendidos.|[Pré-requisitos e restrições do uso de uma FCI (instância de cluster de failover) do SQL Server para hospedar uma réplica de disponibilidade](#FciArLimitations) (anteriormente neste artigo)|  
   
 ###  <a name="SecurityAG"></a> Segurança (grupos de disponibilidade)  
   
@@ -320,7 +309,7 @@ ms.locfileid: "37934898"
   
 ###  <a name="RelatedTasksAGs"></a> Tarefas relacionadas (grupos de disponibilidade)  
   
-|Tarefa|Tópico|  
+|Tarefa|Artigo|  
 |----------|-----------|  
 |Criando um grupo de disponibilidade|[Usar o grupo de disponibilidade (Novo assistente de grupo de disponibilidade)](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md)<br /><br /> [Criar um grupo de disponibilidade (Transact-SQL)](../../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md)<br /><br /> [Criar um Grupo de disponibilidade (SQL Server PowerShell)](../../../database-engine/availability-groups/windows/create-an-availability-group-sql-server-powershell.md)<br /><br /> [Especificar a URL do ponto de extremidade ao adicionar ou modificar uma réplica de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)|  
 |Modificando o número de réplicas de disponibilidade|[Adicionar uma réplica secundária a um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)<br /><br /> [Unir uma réplica secundária a um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)<br /><br /> [Remover uma réplica secundária de um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-a-secondary-replica-from-an-availability-group-sql-server.md)|  
@@ -385,7 +374,7 @@ ms.locfileid: "37934898"
   
 ###  <a name="RelatedTasksADb"></a> Tarefas relacionadas (bancos de dados de disponibilidade)  
   
-|Tarefa|Tópico|  
+|Tarefa|Artigo|  
 |----------|-----------|  
 |Preparando um banco de dados secundário (manualmente)|[Preparar um banco de dados secundário manualmente para um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)|  
 |Unindo um banco de dados secundário ao grupo de disponibilidade (manualmente)|[Unir um banco de dados secundário a um grupo de disponibilidade &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)|  

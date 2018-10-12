@@ -5,21 +5,18 @@ ms.date: 11/17/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
-caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d4d0071cbb32207d97d4df9c3bd4e69c91046691
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 07a0f669f9142f7b58d29089852d13f1cbd61a17
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40175107"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47614883"
 ---
 # <a name="sql-server-backup-to-url"></a>Backup do SQL Server para URL
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -62,6 +59,18 @@ ms.locfileid: "40175107"
   
  Criar uma conta de Armazenamento do Windows Azure dentro de sua assinatura do Azure é a primeira etapa nesse processo. Essa conta de armazenamento é uma conta administrativa que tem permissões administrativas completas em todos os contêineres e objetos criados com a conta. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pode usar o nome da conta de armazenamento do Windows Azure e seu valor de chave de acesso para autenticar, gravar e ler blobs do serviço de Armazenamento de Blobs do Microsoft Azure, ou usar um token de Assinatura de Acesso Compartilhado gerado em contêineres específicos, concedendo direitos de leitura e gravação. Para saber mais sobre a Conta de Armazenamento do Azure, confira [Sobre as contas de armazenamento do Azure](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/) e para saber mais sobre as Assinaturas de Acesso Compartilhado, confira [Assinaturas de Acesso Compartilhado, parte 1: noções básicas sobre o modelo SAS](http://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). A credencial do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] armazena essas informações de autenticação e é usada durante as operações de backup ou restauração.  
   
+###  <a name="blockbloborpageblob"></a> Backup no blob de blocos versus no blob de páginas 
+ Há dois tipos de blobs que podem ser armazenados no serviço de Armazenamento de Blobs do Microsoft Azure: blobs de blocos e de páginas. O backup do SQL Server pode usar qualquer tipo de blob dependendo da sintaxe Transact-SQL usada: se a chave de armazenamento for usada na credencial, o blob de páginas será usado; se a Assinatura de Acesso Compartilhado for usada, o blob de blocos será usado.
+ 
+ O backup no blob de blocos só está disponível no SQL Server 2016 ou versão posterior. Recomendamos que você faça backup no blob de blocos em vez do bloco de páginas se você estiver executando o SQL Server 2016 ou versão posterior. Os motivos principais são:
+- A Assinatura de Acesso Compartilhado é uma maneira mais segura de autorizar o acesso ao blob em comparação à chave de armazenamento.
+- Você pode fazer backup em vários blobs de blocos para ter um melhor desempenho de backup e restauração, bem como para dar suporte ao backup de bancos de dados maiores.
+- O [blob de blocos](https://azure.microsoft.com/pricing/details/storage/blobs/) é mais barato que o [blob de páginas](https://azure.microsoft.com/pricing/details/storage/page-blobs/). 
+
+Quando você faz backup no blob de blocos, o tamanho máximo de bloco que você pode especificar é de 4 MB. O tamanho máximo de um único arquivo de blob de blocos é 4 MB * 50000 = 195 GB. Se seu banco de dados tiver mais de 195 GB, recomendamos que você:
+- use a compactação de backup
+- faça backup em vários blobs de blocos
+
 ###  <a name="Blob"></a> Serviço de Armazenamento de Blobs do Microsoft Azure  
  **Conta de armazenamento:** a conta de armazenamento é o ponto de partida de todos os serviços de armazenamento. Para acessar o serviço de Armazenamento de Blobs do Microsoft Azure, primeiro crie uma conta de armazenamento do Windows Azure. Para saber mais, confira [Criar uma conta de armazenamento](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/).  
   

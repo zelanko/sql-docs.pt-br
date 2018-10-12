@@ -4,12 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: linked-servers
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - OLE DB, linked servers
@@ -21,16 +18,15 @@ helpviewer_keywords:
 - remote servers [SQL Server], linked servers
 - linked servers [SQL Server], about linked servers
 ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
-caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 76c1666b70f7df6b5aa0939dd469be444d865ed7
-ms.sourcegitcommit: a1d5382a8a441ee75411f05005ca537494fe6b0a
+ms.openlocfilehash: 3a6b69707626c67ae1d96f305a46bf5b0fd09317
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39349984"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47618050"
 ---
 # <a name="linked-servers-database-engine"></a>Servidores vinculados (Mecanismo de Banco de Dados)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +83,7 @@ Ao configurar um servidor vinculado, registre as informações de conexão e de 
   
 Também é possível definir servidores vinculados por meio do [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. No Pesquisador de Objetos, clique com o botão direito do mouse em **Objetos de Servidor**, selecione **Novo**e **Servidor Vinculado**. Você pode excluir uma definição de servidor vinculado clicando com o botão direito do mouse no nome do servidor vinculado e selecionando **Excluir**.  
   
- Ao executar uma consulta distribuída em relação a um servidor vinculado, inclua um nome de tabela de quatro partes totalmente qualificado para cada fonte de dados a consultar. Esse nome de quatro partes deve estar no formato *nome_do_servidor_vinculado.catalog ***.*** esquema ***.*** nome_do_objeto*.  
+ Ao executar uma consulta distribuída em relação a um servidor vinculado, inclua um nome de tabela de quatro partes totalmente qualificado para cada fonte de dados a consultar. Esse nome de quatro partes deve estar no formato _linked\_server\_name.catalog_**.**_schema_**.**_object\_name_.  
   
 > [!NOTE]  
 > Servidores vinculados podem ser definidos para apontar novamente (loopback) para o servidor no qual eles são definidos. Servidores de loopback são mais úteis ao testar um aplicativo que usa consultas distribuídas em uma única rede de servidores. Os servidores de loopback vinculados devem ser usados em testes e não têm suporte para várias operações, como transações distribuídas.  

@@ -5,24 +5,21 @@ ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
-caps.latest.revision: 9
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 8afad612e639d11a47c3c1bed4d5ac66404405a4
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 734d7558f8193879d13c4567d75a7ba269c114fc
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40412534"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47613124"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>Permissões: GRANT, DENY, REVOKE (SQL Data Warehouse do Azure, Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -86,7 +83,7 @@ REVOKE
   
  ON [ \<class_type> :: ] *securable* A cláusula **ON** descreve o parâmetro protegível no qual as permissões grant, deny ou revoke serão concedidas.  
   
- \<class_type> O tipo de classe do protegível. Pode ser **LOGIN**, **DATABASE**, **OBJECT**, **SCHEMA**, **ROLE** ou **USER**. As permissões também podem ser concedidas para o **SERVER***class_type*, mas **SERVER** não é especificado para essas permissões. **DATABASE** não é especificado quando a permissão inclui a palavra **DATABASE** (por exemplo **ALTER ANY DATABASE**). Quando nenhum *class_type* é especificado e o tipo de permissão não é restrito para o servidor ou a classe de banco de dados, a classe é considerada **OBJECT**.  
+ \<class_type> O tipo de classe do protegível. Pode ser **LOGIN**, **DATABASE**, **OBJECT**, **SCHEMA**, **ROLE** ou **USER**. As permissões também podem ser concedidas para o **SERVER**_class\_type_, mas **SERVER** não é especificado para essas permissões. **DATABASE** não é especificado quando a permissão inclui a palavra **DATABASE** (por exemplo **ALTER ANY DATABASE**). Quando nenhum *class_type* é especificado e o tipo de permissão não é restrito para o servidor ou a classe de banco de dados, a classe é considerada **OBJECT**.  
   
  *securable*  
  O nome do logon, do banco de dados, da tabela, da exibição, do esquema, do procedimento, da função ou do usuário em que as permissões serão concedidas, negadas ou revogadas. O nome do objeto pode ser especificado com as regras de nomenclatura de três partes descritas em [Convenções de sintaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  

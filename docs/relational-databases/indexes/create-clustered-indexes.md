@@ -5,9 +5,7 @@ ms.date: 02/17/2017
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - index creation [SQL Server], clustered indexes
@@ -16,17 +14,16 @@ helpviewer_keywords:
 - clustered indexes, UNIQUE constraint
 - indexes [SQL Server], clustered
 ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
-caps.latest.revision: 33
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0d998ff74480ffebf0f77dd1deacd9efe2e305f9
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 52ba8dd70e7b39dade42d21d3b02e5883be14735
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43069064"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47703204"
 ---
 # <a name="create-clustered-indexes"></a>Criar índices clusterizados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -93,7 +90,7 @@ ms.locfileid: "43069064"
   
 4.  Na guia **Colunas de chave de índice**, clique em **Adicionar…**.  
   
-5.  Na caixa de diálogo **Selecionar Colunas de***table_name*, marque a caixa de seleção da coluna de tabela a ser adicionada ao índice clusterizado.  
+5.  Na caixa de diálogo **Selecionar Colunas de** _table\_name_, marque a caixa de seleção da coluna de tabela a ser adicionada ao índice clusterizado.  
   
 6.  Clique em **OK**.  
   
@@ -119,7 +116,7 @@ ms.locfileid: "43069064"
   
 9. Clique em **Fechar**.  
   
-10. No menu **Arquivo**, clique em **Salvar***table_name*.  
+10. No menu **Arquivo**, clique em **Salvar**_table\_name_.  
   
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   

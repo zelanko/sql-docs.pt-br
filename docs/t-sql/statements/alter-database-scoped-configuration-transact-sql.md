@@ -1,13 +1,11 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/142018
+ms.date: 09/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - ALTER_DATABASE_SCOPED_CONFIGURATION
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - ALTER DATABASE SCOPED CONFIGURATION statement
 - configuration [SQL Server], ALTER DATABASE SCOPED CONFIGURATION statement
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
-caps.latest.revision: 32
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 1e4dab492102f4505c22dd5b415a590372855294
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 92b43f2ac4f8accd68266c5535578ff6e39f5978
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40406475"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47741224"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -187,7 +184,7 @@ Este valor eleva operações que dão suporte a ONLINE. As operações sem supor
  
 ELEVATE_RESUMABLE= { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
 
-**Aplica-se a**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (o recurso está na versão prévia pública)
+***Aplica-se a**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] e [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] como uma versão prévia públicado recurso
 
 Permite que você selecione as opções para fazer com que o mecanismo eleve automaticamente operações com suporte para retomáveis. O padrão é OFF, o que significa que as operações não serão elevadas para retomáveis, a menos que especificado na instrução. [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) reflete o valor atual de ELEVATE_RESUMABLE. Essas opções serão aplicadas somente a operações que geralmente têm suporte para retomável. 
 
@@ -242,7 +239,7 @@ no banco de dados. Essa permissão pode ser concedida por um usuário com a perm
   
 **DacFx**  
   
- Como ALTER DATABASE SCOPED CONFIGURATION é um novo recurso no Banco de Dados SQL do Azure e no SQL Server, começando com o SQL Server 2016, que afeta o esquema do banco de dados, as exportações do esquema (com ou sem dados) não podem importadas para uma versão mais antiga do SQL Server, por exemplo, o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ou o [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)]. Por exemplo, uma exportação para um [DACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md) ou um [BACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md) de um [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ou de um banco de dados do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] que tiver usado esse novo recurso não poderá ser importada em um servidor de nível inferior.  
+ Como ALTER DATABASE SCOPED CONFIGURATION é um novo recurso no [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] e no SQL Server, começando com o SQL Server 2016, que afeta o esquema do banco de dados, as exportações do esquema (com ou sem dados) não podem importadas para uma versão mais antiga do SQL Server, por exemplo, o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ou o [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)]. Por exemplo, uma exportação para um [DACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md) ou um [BACPAC](../../relational-databases/data-tier-applications/data-tier-applications.md) de um [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ou de um banco de dados do [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] que tiver usado esse novo recurso não poderá ser importada em um servidor de nível inferior.  
 
 **ELEVATE_ONLINE** 
 
@@ -250,8 +247,7 @@ Essa opção é aplicável somente a instruções DDL compatíveis com a sintaxe
 
 **ELEVATE_RESUMABLE**
 
-Essa opção é aplicável somente a instruções DDL compatíveis com a sintaxe WITH(ONLINE=). Índices XML não são afetados 
-
+Essa opção é aplicável somente a instruções DDL compatíveis com WITH(RESUMABLE= syntax). Índices XML não são afetados 
   
 ## <a name="metadata"></a>Metadados  
 
@@ -356,7 +352,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 
 ### <a name="i--set-elevateonline"></a>I.  Definir ELEVATE_ONLINE 
 
-**Aplica-se a**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (o recurso está na versão prévia pública)
+**Aplica-se a**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] e como uma versão prévia públicado recurso
  
 Este exemplo define ELEVATE_ONLINE como FAIL_UNSUPPORTED.  tsqlCopy 
 
@@ -366,7 +362,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE=FAIL_UNSUPPORTED ;
 
 ### <a name="j-set-elevateresumable"></a>J. Definir ELEVATE_RESUMABLE 
 
-**Aplica-se a**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (o recurso está na versão prévia pública)
+**Aplica-se a**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] e [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] como uma versão prévia públicado recurso
 
 Este exemplo define ELEVATE_RESUMABLE como FAIL_UNSUPPORTED.  tsqlCopy 
 
@@ -401,8 +397,13 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE=WHEN_SUPPORTED ;
 - [Diretrizes para operações de índice online](../../relational-databases/indexes/guidelines-for-online-index-operations.md) 
  
 ## <a name="more-information"></a>Mais informações  
- [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)   
- [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
- [Exibições de catálogo de bancos de dados e de arquivos](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
- [Opções de configuração do servidor](../../database-engine/configure-windows/server-configuration-options-sql-server.md) [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)  
+- [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)   
+- [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
+- [Exibições de catálogo de bancos de dados e de arquivos](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
+- [Opções de configuração de servidor](../../database-engine/configure-windows/server-configuration-options-sql-server.md) 
+- [Como funcionam as operações de índice online](../../relational-databases/indexes/how-online-index-operations-work.md)  
+- [Executar operações de índice online](../../relational-databases/indexes/perform-index-operations-online.md)  
+- [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)  
+- [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
+  
  

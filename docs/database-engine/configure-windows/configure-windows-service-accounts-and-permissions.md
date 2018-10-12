@@ -5,9 +5,7 @@ ms.date: 05/08/2018
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: configuration
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - startup service states [SQL Server]
@@ -50,16 +48,15 @@ helpviewer_keywords:
 - manual startup state [SQL Server]
 - accounts [SQL Server], user
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
-caps.latest.revision: 207
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2794fb22369bc00f8758778ea6952bea7e94ebd6
-ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
+ms.openlocfilehash: e8f10e1a42df80b66754bd8544fc560713cb90d9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43348567"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47694976"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Configurar contas de serviço e permissões do Windows
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -306,7 +303,8 @@ O[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] habilita o SID por servi�
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Cliente Distributed Replay:**|**Fazer logon como um serviço** (SeServiceLogonRight)|  
 |**Mecanismo PolyBase e DMS**| **Fazer logon como um serviço** (SeServiceLogonRight)  |   
 |**Launchpad:**|**Fazer logon como um serviço** (SeServiceLogonRight) <br /><br /> **Substituir um token no nível de processo** (SeAssignPrimaryTokenPrivilege)<br /><br />**Ignorar a verificação completa** (SeChangeNotifyPrivilege)<br /><br />**Ajustar quotas de memória para um processo** (SeIncreaseQuotaPrivilege)|     
-|**Serviços do R:** **SQLRUserGroup**  |**Permitir logon local** |   
+|**R Services:** **SQLRUserGroup** (SQL 2016 e 2017)  |**Permitir logon local** |   
+|**Machine Learning** "**Todos os pacotes de aplicativos" [AppContainer]** (SQL 2019)  |**Permissões read e execute** para os diretórios SQL Server 'Binn', R_Services e PYTHON_Services |   
 
  \*O serviço [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent está desabilitado em instâncias do [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
   

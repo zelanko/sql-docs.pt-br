@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-agent
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [SQL Server], SQL Server Agent
@@ -17,17 +14,16 @@ helpviewer_keywords:
 - SQL Server Agent, errors
 - errors [SQL Server Agent]
 ms.assetid: 90e3731e-6fae-43db-833e-9accecdd1c03
-caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: fc6f138002a8ecc7f17f86b334f967c0cd19670f
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: f2c1c9c494afd89627e397347870db2d1604886a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42775357"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47696795"
 ---
 # <a name="write-execution-trace-messages-to-the-sql-server-agent-error-log-sql-server-management-studio"></a>Write Execution Trace Messages to the SQL Server Agent Error Log (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -77,7 +73,7 @@ Para obter mais informações sobre as permissões do Windows necessárias para 
   
 2.  Clique com o botão direito do mouse em **SQL Server Agent** e selecione **Propriedades**.  
   
-3.  Na caixa de diálogo **Propriedades do SQL Server Agent –***server_name*, em **Log de erros** na página **Geral**, marque a caixa de seleção **Incluir mensagens de rastreamento de execução**.  
+3.  Na caixa de diálogo **Propriedades do SQL Server Agent Properties –**_server\_name_, em **Log de erros** na página **Geral**, marque a caixa de seleção **Incluir mensagens de rastreamento de execução**.  
   
 4.  Clique em **OK**.  
   

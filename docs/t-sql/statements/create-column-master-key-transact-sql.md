@@ -1,13 +1,11 @@
 ---
 title: CREATE COLUMN MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/18/2016
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SQL13.SWB.NEWCOLUMNMASTERKEYDEF.GENERAL.F1
@@ -26,16 +24,15 @@ helpviewer_keywords:
 - CREATE COLUMN MASTER KEY statement
 - Always Encrypted, create column master key
 ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
-caps.latest.revision: 32
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a4f7c950785268f1b462c8363e4fb9e5f426055b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 56af3e381d8466f7afe68a5a1e77584511de5422
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37993128"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47609604"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -43,14 +40,19 @@ ms.locfileid: "37993128"
   Cria um objeto de metadados de chave mestra de coluna em um banco de dados. Uma entrada de metadados de chave mestra de coluna que representa uma chave, armazenada em um repositório de chaves externas, que é usada para proteger (criptografar) as chaves de criptografia de coluna ao usar o recursos [Always Encrypted &#40;Mecanismo de Banco de Dados&#41; ](../../relational-databases/security/encryption/always-encrypted-database-engine.md). Múltiplas chaves mestras de coluna permitem a rotação de chaves; altere periodicamente a chave para aumentar a segurança. Você pode criar uma chave mestra de coluna em um repositório de chaves e seu objeto de metadados correspondente no banco de dados usando o Pesquisador de Objetos no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou no PowerShell. Para obter detalhes, veja [Visão geral do gerenciamento de chaves para Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).  
   
  ![Ícone de link do tópico](../../database-engine/configure-windows/media/topic-link.gif "Ícone de link do tópico") [Convenções de sintaxe de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
+ 
+
+> [!IMPORTANT]
+> A criação de chaves habilitadas para enclave (com ENCLAVE_COMPUTATIONS) requer o [Always Encrypted com enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
+
 ## <a name="syntax"></a>Sintaxe  
-  
+
 ```  
 CREATE COLUMN MASTER KEY key_name   
     WITH (  
         KEY_STORE_PROVIDER_NAME = 'key_store_provider_name',  
         KEY_PATH = 'key_path'   
+        [,ENCLAVE_COMPUTATIONS (SIGNATURE = signature)]
          )   
 [;]  
 ```  
@@ -153,10 +155,12 @@ As tabelas abaixo capturam os nomes de provedores do sistema:
      *KeyUrl*  
      A URL da chave no Azure Key Vault
 
+ENCLAVE_COMPUTATIONS  
+Especifica que chave mestra da coluna é habilitada para enclave, o que significa que todas as chaves de criptografia de coluna criptografadas com essa chave mestra de coluna podem ser compartilhadas com um enclave seguro do lado do servidor e usadas para cálculos dentro de enclave. Para obter mais informações, consulte [Always Encrypted com enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
-Exemplo:
- 
-`N'https://myvault.vault.azure.net:443/keys/MyCMK/4c05f1a41b12488f9cba2ea964b6a700'`  
+ *signature*  
+Um literal binário que é resultado de assinar digitalmente o *caminho da chave* e a configuração ENCLAVE_COMPUTATIONS com a chave mestra da coluna (a assinatura reflete se ENCLAVE_COMPUTATIONS foi especificado ou não). A assinatura protege os valores assinados de serem alterados por usuários não autorizados. Um driver cliente habilitado para Always Encrypted pode verificar a assinatura e retornar um erro para o aplicativo se a assinatura for inválida. A assinatura deve ser gerada usando ferramentas do lado do cliente. Para obter mais informações, consulte [Always Encrypted com enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
+  
   
 ## <a name="remarks"></a>Remarks  
 
@@ -190,7 +194,7 @@ WITH (
 );  
 ```  
   
- Criando uma chave mestra de coluna armazenada no Azure Key Vault, para aplicativos cliente que usam o provedor AZURE_KEY_VAULT, para acessar a chave mestra de coluna.  
+ Criando uma entrada de metadados da chave mestra de coluna para uma chave mestra da coluna armazenada no Azure Key Vault, para aplicativos cliente que usam o provedor AZURE_KEY_VAULT, para acessar a chave mestra de coluna.  
   
 ```  
 CREATE COLUMN MASTER KEY MyCMK  
@@ -200,7 +204,7 @@ WITH (
         MyCMK/4c05f1a41b12488f9cba2ea964b6a700');  
 ```  
   
- Criando uma CMK armazenada em um repositório de chave mestra de coluna personalizada:  
+ Criando uma entrada de metadados da chave mestra da coluna para uma chave mestra da coluna armazenada em um repositório de chaves mestra de coluna personalizadas:  
   
 ```  
 CREATE COLUMN MASTER KEY MyCMK  
@@ -208,6 +212,28 @@ WITH (
     KEY_STORE_PROVIDER_NAME = 'CUSTOM_KEY_STORE',    
     KEY_PATH = 'https://contoso.vault/sales_db_tce_key'  
 );  
+```  
+### <a name="b-creating-an-enclave-enabled-column-master-key"></a>B. Criando uma chave mestra da coluna habilitada para enclave  
+ Criando uma entrada de metadados de chave mestra de coluna para uma chave mestra de coluna habilitada para enclave armazenada no repositório de certificados para aplicativos cliente que usam o provedor MSSQL_CERTIFICATE_STORE para acessar a chave mestra de coluna:  
+  
+```  
+CREATE COLUMN MASTER KEY MyCMK  
+WITH (  
+     KEY_STORE_PROVIDER_NAME = N'MSSQL_CERTIFICATE_STORE',   
+     KEY_PATH = 'Current User/Personal/f2260f28d909d21c642a3d8e0b45a830e79a1420'  
+     ENCLAVE_COMPUTATIONS (SIGNATURE = 0xA80F5B123F5E092FFBD6014FC2226D792746468C901D9404938E9F5A0972F38DADBC9FCBA94D9E740F3339754991B6CE26543DEB0D094D8A2FFE8B43F0C7061A1FFF65E30FDDF39A1B954F5BA206AAC3260B0657232020542419990261D878318CC38EF4E853970ED69A8D4A306693B8659AAC1C4E4109DE5EB148FD0E1FDBBC32F002C1D8199D313227AD689279D8DEEF91064DF122C19C3767C463723AB663A6F8412AE17E745922C0E3A257EAEF215532588ACCBD440A03C7BC100A38BD0609A119E1EF7C5C6F1B086C68AB8873DBC6487B270340E868F9203661AFF0492CEC436ABF7C4713CE64E38CF66C794B55636BFA55E5B6554AF570CF73F1BE1DBD)
+  );  
+```  
+  
+ Criando uma entrada de metadados da chave mestra de coluna para uma chave mestra da coluna habilitada para enclave armazenada no Azure Key Vault, para aplicativos cliente que usam o provedor AZURE_KEY_VAULT, para acessar a chave mestra de coluna.  
+  
+```  
+CREATE COLUMN MASTER KEY MyCMK  
+WITH (  
+    KEY_STORE_PROVIDER_NAME = N'AZURE_KEY_VAULT',  
+    KEY_PATH = N'https://myvault.vault.azure.net:443/keys/MyCMK/4c05f1a41b12488f9cba2ea964b6a700');
+    ENCLAVE_COMPUTATIONS (SIGNATURE = 0xA80F5B123F5E092FFBD6014FC2226D792746468C901D9404938E9F5A0972F38DADBC9FCBA94D9E740F3339754991B6CE26543DEB0D094D8A2FFE8B43F0C7061A1FFF65E30FDDF39A1B954F5BA206AAC3260B0657232020582413990261D878318CC38EF4E853970ED69A8D4A306693B8659AAC1C4E4109DE5EB148FD0E1FDBBC32F002C1D8199D313227AD689279D8DEEF91064DF122C19C3767C463723AB663A6F8412AE17E745922C0E3A257EAEF215532588ACCBD440A03C7BC100A38BD0609A119E1EF7C5C6F1B086C68AB8873DBC6487B270340E868F9203661AFF0492CEC436ABF7C4713CE64E38CF66C794B55636BFA55E5B6554AF570CF73F1BE1DBD)
+  );
 ```  
   
 ## <a name="see-also"></a>Consulte Também

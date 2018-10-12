@@ -5,9 +5,7 @@ ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - AVG_TSQL
@@ -21,17 +19,16 @@ helpviewer_keywords:
 - values [SQL Server], average
 - average values
 ms.assetid: 4534b705-d946-441b-9b5d-5fbe561c9131
-caps.latest.revision: 52
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cb0f9681045ae537b0c702d646b760a38118a130
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: aed42e4ace43066db77670e94c4ec37457634f0d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43104836"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47735474"
 ---
 # <a name="avg-transact-sql"></a>AVG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,7 +54,7 @@ Especifica que a AVG funciona apenas em uma instância exclusiva de cada valor, 
 *expressão*  
 Uma [expressão](../../t-sql/language-elements/expressions-transact-sql.md) da categoria de tipo de dados numéricos exatos ou aproximados, com exceção do tipo de dados **bit**. Funções de agregação e subconsultas não são permitidas.
   
-OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+OVER **(** [ *partition_by_clause* ] _order\_by\_clause_**)**  
 *partition_by_clause* divide o conjunto de resultados produzido pela cláusula FROM em partições às quais a função é aplicada. Se não for especificado, a função tratará todas as linhas do conjunto de resultados da consulta como um único grupo. A *order_by_clause* determina a ordem lógica na qual a operação é executada. *order_by_clause* é obrigatória. Para obter mais informações, consulte [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).
   
 ## <a name="return-types"></a>Tipos de retorno

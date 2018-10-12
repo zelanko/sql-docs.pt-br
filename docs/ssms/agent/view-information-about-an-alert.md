@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-agent
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, alerts
@@ -17,17 +14,16 @@ helpviewer_keywords:
 - displaying alerts
 - status information [SQL Server], alerts
 ms.assetid: a0e3a8c4-e3c2-42a5-b2f8-aa06061d3fa6
-caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2b6e54424501d963313eab4817b83ac8767b8c2a
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 5bf9d7903fe4cf4ebaae55496ba036199d764eb4
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42775564"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47740574"
 ---
 # <a name="view-information-about-an-alert"></a>Exibir informações sobre um alerta
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -68,7 +64,7 @@ Por padrão, os membros da função de servidor fixa **sysadmin** podem exibir a
   
 4.  Clique com o botão direito do mouse no alerta que tem as informações que você deseja exibir e selecione **Propriedades**.  
   
-    Para obter mais informações sobre as opções disponíveis contidas na caixa de diálogo *alert_name***propriedades do alerta*, consulte:  
+    Para obter mais informações sobre as opções disponíveis contidas na caixa de diálogo _alert\_name_**propriedades do alerta** consulte:  
   
     -   [Propriedades do alerta – Novo alerta &#40;página Geral&#41;](../../ssms/agent/alert-properties-new-alert-general-page.md)  
   

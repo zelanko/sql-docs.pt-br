@@ -5,9 +5,7 @@ ms.date: 04/17/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_LOGIN_TSQL
@@ -23,17 +21,16 @@ helpviewer_keywords:
 - names [SQL Server], logins
 - modifying login accounts
 ms.assetid: e247b84e-c99e-4af8-8b50-57586e1cb1c5
-caps.latest.revision: 68
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9faa9de82ed9b5db0ba2ccac071d038fb430f096
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: c0097d1b2b6accad7283a1f97d4f28f9ec289c0f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43061569"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47749076"
 ---
 # <a name="alter-login-transact-sql"></a>ALTER LOGIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -133,12 +130,12 @@ ALTER LOGIN login_name
  ENABLE | DISABLE  
  Habilita ou desabilita este logon. Desabilitar um logon não afeta o comportamento de logons que já estão conectados. (Use a instrução `KILL` para encerrar as conexões existentes.) Logons desabilitados retêm suas permissões e ainda podem ser representados.  
   
- PASSWORD **='***password***'**  
+ PASSWORD **='**_password_**'**  
  Aplica-se somente a logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Especifica a senha do logon que está sendo alterado. As senhas diferenciam maiúsculas de minúsculas.  
   
  Conexões continuamente ativas para banco de dados SQL exigem nova autorização (executada pelo mecanismo de banco de dados) pelo menos a cada 10 horas. O Mecanismo de Banco de Dados tenta a nova autorização usando a senha enviada originalmente e não é necessária nenhuma entrada do usuário. Por motivos de desempenho, quando uma senha for redefinida no Banco de Dados SQL, a conexão não será autenticada novamente, mesmo que ela seja redefinida devido ao pool de conexões. Isso é diferente do comportamento do SQL Server local. Se a senha for alterada depois que a conexão for autorizada inicialmente, a conexão precisará ser terminada e uma nova conexão deverá ser feita usando a nova senha. Um usuário com a permissão KILL DATABASE CONNECTION pode terminar explicitamente uma conexão com o Banco de Dados SQL usando o comando KILL. Para obter mais informações, consulte [KILL &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-transact-sql.md).  
   
- PASSWORD **=***hashed_password*  
+ PASSWORD **=**_hashed\_password_  
  **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Só se aplica à palavra-chave HASHED. Especifica o valor com hash da senha para o logon que está sendo criado.  
@@ -152,7 +149,7 @@ ALTER LOGIN login_name
   
  Aplica-se somente a logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Especifica que a senha digitada depois do argumento PASSWORD já esteja com hash. Se esta opção não for selecionada, a senha terá hash antes de ser armazenada no banco de dados. Essa opção deve ser usada somente para sincronização de logon entre dois servidores. Não use a opção HASHED para alterar senhas rotineiramente.  
   
- OLD_PASSWORD **='***oldpassword***'**  
+ OLD_PASSWORD **='**_oldpassword_**'**  
  Aplica-se somente a logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A senha atual do logon a que uma senha nova será atribuída. As senhas diferenciam maiúsculas de minúsculas.  
   
  MUST_CHANGE  
@@ -160,12 +157,12 @@ ALTER LOGIN login_name
   
  Aplica-se somente a logons do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se esta opção estiver incluída, o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solicitará uma senha atualizada quando o logon alterado for usado pela primeira vez.  
   
- DEFAULT_DATABASE **=***database*  
+ DEFAULT_DATABASE **=**_database_  
 **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Especifica um banco de dados padrão a ser atribuído ao logon.  
   
- DEFAULT_LANGUAGE **=***language*  
+ DEFAULT_LANGUAGE **=**_language_  
  
  **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -300,7 +297,7 @@ GO
 ```  
   
 ### <a name="f-unlocking-a-login"></a>F. Desbloqueando um logon  
- Para desbloquear um logon no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], execute a seguinte instrução, substituindo **** pela senha da conta desejada.  
+ Para desbloquear um logon do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], execute a seguinte instrução, substituindo \*\*\*\* pela senha da conta desejada.  
   
   
 ```sql  

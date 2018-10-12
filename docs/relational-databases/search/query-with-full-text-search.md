@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.component: search
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: search
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [full-text search], about full-text queries
@@ -18,17 +15,16 @@ helpviewer_keywords:
 - full-text queries [SQL Server]
 - queries [full-text search], functions
 ms.assetid: 7624ba76-594b-4be5-ac10-c3ac4a3529bd
-caps.latest.revision: 80
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a4e62ce63f377d085d8726f7b1ad187351f164cf
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 92b2a975fbee89249850e4acfdf23f7f47e5bd23
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43078639"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47652624"
 ---
 # <a name="query-with-full-text-search"></a>Query with Full-Text Search
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -218,7 +214,7 @@ GO
   
  Todo texto que corresponder ao texto especificado antes do asterisco (*) será retornado. Se o texto e o asterisco não forem delimitados por aspas duplas, como em `CONTAINS (DESCRIPTION, 'top*')`, a pesquisa de texto completo não considerará o asterisco como sendo um curinga.  
   
- Quando o termo de prefixo for uma frase, todos os tokens que constituírem a frase serão considerados termos de prefixo separados. Todas as linhas que têm palavras que começam com os termos de prefixo serão retornadas. Por exemplo, o termo de prefixo “pão light*” encontrará linhas com o texto de “pãozinho light” ou “pão light”, mas não retornará “pão torrado light”.
+ Quando o termo de prefixo for uma frase, todos os tokens que constituírem a frase serão considerados termos de prefixo separados. Todas as linhas que têm palavras que começam com os termos de prefixo serão retornadas. Por exemplo, o prefixo "pão light\*" encontrará linhas com o texto "pãozinho light" ou "pão light", mas não retornará "pão torrado light."
 
 #### <a name="more-info-about-prefix-searches"></a>Mais informações pesquisas de prefixo
 

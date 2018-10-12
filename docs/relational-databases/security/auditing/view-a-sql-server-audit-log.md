@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - audits [SQL Server], viewing logs
@@ -17,12 +15,12 @@ ms.assetid: e8feaca0-7852-422b-895a-319b965d8d9b
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 0d40461b7f97456493017852adc7749fd78c4911
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: b05de4a591964336b9d54ff3319086f818d6231f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43033739"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47650234"
 ---
 # <a name="view-a-sql-server-audit-log"></a>Exibir um log auditoria do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +51,7 @@ ms.locfileid: "43033739"
   
 2.  Expanda a pasta **Auditorias** .  
   
-3.  Clique com o botão direito do mouse no log de auditoria que você deseja exibir e selecione **Exibir Logs de Auditoria**. Isso abrirá a caixa de diálogo *Visualizador de Arquivo de Log –***server_name*. Para obter mais informações, consulte [Log File Viewer F1 Help](../../../relational-databases/logs/log-file-viewer-f1-help.md).  
+3.  Clique com o botão direito do mouse no log de auditoria que você deseja exibir e selecione **Exibir Logs de Auditoria**. Isso abre a caixa de diálogo **Visualizador de Arquivo de Log –**_server\_name_. Para obter mais informações, consulte [Log File Viewer F1 Help](../../../relational-databases/logs/log-file-viewer-f1-help.md).  
   
 4.  Quando terminar, clique em **Fechar**.  
   

@@ -5,9 +5,7 @@ ms.date: 08/08/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - BACKUP_TSQL
@@ -45,17 +43,16 @@ helpviewer_keywords:
 - stripe sets [SQL Server]
 - cross-platform backups
 ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
-caps.latest.revision: 275
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 60fae479512b89afe2d9499716071a9376edd439
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: d35448aeeaba9815fbbc983bcb59e01d3e930476
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "40405741"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47760984"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -81,7 +78,7 @@ Na linha a seguir, clique em qualquer nome de produto de seu interesse. O clique
 > <tr>
 >   <th><strong><em>* SQL Server *<br />&nbsp;</em></strong></th>
 >   <th><a href="backup-transact-sql.md?view=azuresqldb-mi-current">Banco de Dados SQL<br />Banco de Dados SQL</a></th>
->   <th><a href="backup-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
+>   <th><a href="backup-transact-sql.md?view=aps-pdw-2016">Parallel<br />Data Warehouse</a></th>
 > </tr>
 > </table>
 
@@ -213,7 +210,8 @@ Especifica um backup apenas do log de transações. O backup do log é feito a p
 > [!NOTE]  
 >  Após um backup de log típico, alguns registros do log de transações se tornam inativos, a menos que você especifique `WITH NO_TRUNCATE` ou `COPY_ONLY`. O log é truncado depois que todos os registros contidos em um ou mais arquivos de log virtual se tornam ativos. Se o log não estiver sendo truncado após backups de log de rotina, algo pode estar atrasando o truncamento do log. Para obter mais informações, consulte [Fatores que podem atrasar o truncamento de log](../../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation).  
   
-{ *database_name* | **@***database_name_var* } É o banco de dados do qual é feito o backup do log de transações, do banco de dados parcial ou do banco de dados completo. Se for fornecido como uma variável (**@***database_name_var*), esse nome poderá ser especificado como uma constante de cadeia de caracteres (**@***database_name_var***=***database name*) ou como uma variável de tipo de dados de cadeia de caracteres, exceto para os tipos de dados **ntext** ou **text**.  
+{ _database\_name_ | **@**_database\_name\_var_ }   
+É o banco de dados do qual é feito o backup do log de transações, do banco de dados parcial ou do banco de dados completo. Se for fornecido como uma variável (**@**_database\_name\_var_), esse nome poderá ser especificado como uma constante de cadeia de caracteres (**@**_database\_name\_var_**=**_database name_) ou como uma variável de tipo de dados de cadeia de caracteres, exceto para os tipos de dados **ntext** ou **text**.  
   
 > [!NOTE]  
 > O backup do banco de dados espelho em uma parceria de espelhamento de banco de dados não pode ser feito.  
@@ -221,10 +219,10 @@ Especifica um backup apenas do log de transações. O backup do log é feito a p
 \<file_or_filegroup> [ **,**...*n* ]  
 Usado apenas com BACKUP DATABASE, especifica um arquivo ou grupo de arquivos do banco de dados a ser incluído em um backup de arquivo, ou especifica um arquivo ou grupo de arquivos somente leitura a ser incluído em um backup parcial.  
   
-FILE **=** { *logical_file_name* | **@***logical_file_name_var* }  
+FILE **=** { *logical_file_name* | **@**_logical\_file\_name\_var_ }  
 É o nome lógico de um arquivo ou variável cujo valor é igual ao nome lógico de um arquivo que deve ser incluído no backup.  
   
-FILEGROUP **=** { *logical_filegroup_name* | **@***logical_filegroup_name_var* }  
+FILEGROUP **=** { _logical\_filegroup\_name_ | **@**_logical\_filegroup\_name\_var_ }  
 É o nome lógico de um grupo de arquivos ou variável cujo valor é igual ao nome lógico de um grupo de arquivos que deve ser incluído no backup. No modelo de recuperação simples, um backup de grupo de arquivos é permitido apenas para grupos de arquivos somente leitura.  
   
 > [!NOTE]  
@@ -235,7 +233,7 @@ FILEGROUP **=** { *logical_filegroup_name* | **@***logical_filegroup_name_var* }
   
 Para obter mais informações, consulte [Backups completos de arquivos &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md) e [Fazer backup de arquivos e grupos de arquivos &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md).  
   
-READ_WRITE_FILEGROUPS [ **,** FILEGROUP = { *logical_filegroup_name* | **@***logical_filegroup_name_var* } [ **,**...* n* ] ]  
+READ_WRITE_FILEGROUPS [ **,** FILEGROUP = { _logical\_filegroup\_name_ | **@**_logical\_filegroup\_name\_var_ } [ **,**..._n_ ] ]  
 Especifica um backup parcial. Um backup parcial inclui todos os arquivos de leitura/gravação em um banco de dados: o grupo de arquivos primário e quaisquer grupos de arquivos secundários de leitura/gravação e também quaisquer arquivos ou grupos de arquivos somente leitura especificados.  
   
 READ_WRITE_FILEGROUPS  
@@ -244,7 +242,7 @@ Especifica que o backup de todos os grupos de arquivos de leitura/gravação sej
 > [!IMPORTANT]  
 > A listagem explícita de grupos de arquivos de leitura/gravação usando FILEGROUP em vez de READ_WRITE_FILEGROUPS cria um backup de arquivo.  
   
-FILEGROUP = { *logical_filegroup_name* | **@***logical_filegroup_name_var* }  
+FILEGROUP = { *logical_filegroup_name* | **@**_logical\_filegroup\_name\_var_ }  
 É o nome lógico de um grupo de arquivos somente leitura ou de uma variável cujo valor é igual ao nome lógico de um grupo de arquivos somente leitura que deve ser incluído no backup parcial. Para obter mais informações, consulte "\<file_or_filegroup>", anteriormente neste tópico.
   
 *n*  
@@ -258,9 +256,10 @@ TO \<backup_device> [ **,**...*n* ] Indica que o conjunto complementar de [dispo
 
 Especifica um dispositivo de backup lógico ou físico a ser usado para a operação de backup.  
   
-{ *logical_device_name* | **@***logical_device_name_var* } **Aplica-se a:** SQL Server É o nome lógico do dispositivo de backup no qual é feito o backup do banco de dados. O nome lógico deve seguir as regras para identificadores. Se for fornecida como uma variável (@* logical_device_name_var *), o nome do dispositivo de backup poderá ser especificado como uma constante de cadeia de caracteres (nome do dispositivo de backup lógico de @* logical_device_name_var***=**) ou como uma variável de qualquer tipo de dados de cadeia de caracteres, com exceção dos tipos de dados **ntext** ou **text**.  
+{ *logical_device_name* | **@**_logical\_device\_name\_var_ } **Aplica-se a:** SQL Server   
+É o nome lógico do dispositivo de backup no qual o backup do banco de dados é feito. O nome lógico deve seguir as regras para identificadores. Se for fornecida como uma variável (@*logical_device_name_var*), o nome do dispositivo de backup poderá ser especificado como uma constante de cadeia de caracteres (nome do dispositivo de backup lógico de @_logical\_device\_name\_var_**=**) ou como uma variável de qualquer tipo de dados de cadeia de caracteres, com exceção dos tipos de dados **ntext** ou **text**.  
   
-{ DISK | TAPE | URL} **=** { **'***physical_device_name***'** | **@***physical_device_name_var* | 'NUL' } **Aplica-se a:** DISK, TAPE e URL aplicam-se ao SQL Server. 
+{ DISK | TAPE | URL} **=** { **'**_physical\_device\_name_**'** | **@**_physical\_device\_name\_var_ | 'NUL' } **Aplica-se a:** DISK, TAPE e URL aplicam-se ao SQL Server. 
 Especifica um arquivo de disco ou dispositivo de fita, ou um serviço de Armazenamento de Blobs do Microsoft Azure. O formato da URL é usado para criar backups no serviço de armazenamento do Microsoft Azure. Para obter mais informações e exemplos, consulte [Backup e restauração do SQL Server com o serviço de Armazenamento de Blobs do Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). Para obter um tutorial, consulte [Tutorial: Backup e restauração do SQL Server para o serviço de Armazenamento de Blobs do Microsoft Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md). 
 
 > [!NOTE] 
@@ -371,13 +370,13 @@ Habilita explicitamente a compactação de backup.
 NO_COMPRESSION  
 Desabilita explicitamente a compactação de backup.  
   
-DESCRIPTION **=** { **'***text***'** | **@***text_variable* }  
+DESCRIPTION **=** { **'**_text_**'** | **@**_text\_variable_ }  
 Especifica o texto de forma livre que descreve o conjunto de backup. A cadeia de caracteres pode conter um máximo de 255 caracteres.  
   
-NAME **=** { *backup_set_name* | **@***backup_set_var* }  
+NAME **=** { *backup_set_name* | **@**_backup\_set\_var_ }  
 Especifica o nome do conjunto de backup. Os nomes podem ter no máximo de 128 caracteres. Se NAME não estiver especificado, ele estará em branco.  
   
-{ EXPIREDATE **='***date***'** | RETAINDAYS **=** *days* }  
+{ EXPIREDATE **='**_date_**'** | RETAINDAYS **=** *days* }  
 Especifica quando o conjunto de backup desse backup pode ser substituído. Se essas duas opções forem usadas, RETAINDAYS terá precedência sobre EXPIREDATE.  
   
 Se nenhuma opção for especificada, a data de expiração será determinada pela definição da configuração de **mediaretention**. Para obter mais informações, veja [Opções de configuração do servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).   
@@ -385,9 +384,10 @@ Se nenhuma opção for especificada, a data de expiração será determinada pel
 > [!IMPORTANT]  
 > Essas opções apenas impedem que o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] substitua um arquivo. Fitas podem ser apagadas por outros métodos e os arquivos de disco podem ser excluídos pelo sistema operacional. Para obter mais informações sobre verificação de validade, consulte SKIP e FORMAT neste tópico.  
   
-EXPIREDATE **=** { **'***date***'** | **@***date_var* } Especifica quando o conjunto de backup expira e pode ser substituído. Se for fornecida como uma variável (@* date_var*), essa data deverá seguir o formato de **datetime** do sistema configurado e ser especificado como um dos seguintes:  
+EXPIREDATE **=** { **'**_date_**'** | **@**_date\_var_ }  
+Especifica quando o conjunto de backup vence e pode ser substituído. Se for fornecida como uma variável (@_date\_var_), essa data deverá seguir o formato de **datetime** do sistema configurado e ser especificado como um dos seguintes:  
   
-- Uma constante de cadeia de caracteres (@*date_var* **=** date)  
+- Uma constante de cadeia de caracteres (@_date\_var_ **=** date)  
 - Uma variável do tipo de dados de cadeia de caracteres (exceto para os tipos de dados **ntext** ou **text**)  
 - Um **smalldatetime**  
 - Uma variável **datetime**  
@@ -402,7 +402,8 @@ Para obter informações sobre como especificar valores de **datetime**, consult
 > [!NOTE]  
 > Para ignorar a data de expiração, use a opção `SKIP`.  
   
-RETAINDAYS **=** { *days* | **@***days_var* } Especifica o número de dias que devem decorrer para que esse conjunto de mídias de backup possa ser substituído. Se for fornecida como uma variável (**@***days_var*), ela deverá ser especificada como um inteiro.  
+RETAINDAYS **=** { *days* | **@**_days\_var_ }  
+Especifica o número de dias que devem decorrer para que este conjunto de mídias de backup possa ser substituído. Se for fornecida como uma variável (**@**_days\_var_), ela deverá ser especificada como um inteiro.  
   
 **Opções de conjunto de mídias**  
   
@@ -456,13 +457,13 @@ Especifica que um novo conjunto de mídias deve ser criado. FORMAT faz com que a
   
 A especificação de FORMAT implica `SKIP`; `SKIP` não precisa ser declarado explicitamente.  
   
-MEDIADESCRIPTION **=** { *text* | **@***text_variable* }  
+MEDIADESCRIPTION **=** { *text* | **@**_text\_variable_ }  
 Especifica a descrição de texto de forma livre do conjunto de mídias, com um máximo de 255 caracteres.  
   
-MEDIANAME **=** { *media_name* | **@***media_name_variable* }  
+MEDIANAME **=** { *media_name* | **@**_media\_name\_variable_ }  
 Especifica o nome da mídia de todo o conjunto de mídias de backup. O nome da mídia não deve ter mais de 128 caracteres. Se `MEDIANAME` for especificado, ele deverá corresponder ao nome da mídia especificado anteriormente já existente nos volumes de backup. Se não estiver especificado ou se a opção SKIP estiver especificada, não haverá nenhuma verificação do nome da mídia.  
   
-BLOCKSIZE **=** { *blocksize* | **@***blocksize_variable* }  
+BLOCKSIZE **=** { *blocksize* | **@**_blocksize\_variable_ }  
 Especifica o tamanho do bloco físico, em bytes. Os tamanhos com suporte são 512, 1024, 2048, 4096, 8192, 16384, 32768 e 65536 (64 KB) bytes. O padrão é 65536 para dispositivos de fita e 512 para outros dispositivos. Normalmente, essa opção é desnecessária porque BACKUP seleciona automaticamente um tamanho de bloco apropriado ao dispositivo. A declaração explícita de um tamanho de bloco substitui a seleção automática de tamanho de bloco.  
   
 Se estiver fazendo um backup que planeja copiar e restaurar de um CD-ROM, especifique BLOCKSIZE=2048.  
@@ -472,7 +473,7 @@ Se estiver fazendo um backup que planeja copiar e restaurar de um CD-ROM, especi
   
 **Opções de transferência de dados**  
   
-BUFFERCOUNT **=** { *buffercount* | **@***buffercount_variable* }  
+BUFFERCOUNT **=** { *buffercount* | **@**_buffercount\_variable_ }  
 Especifica o número total de buffers de E/S a ser usado para a operação de backup. É possível especificar qualquer inteiro positivo. No entanto, grandes números de buffers podem provocar erros de "memória insuficiente" devido a espaço de endereço virtual inadequado no processo Sqlservr.exe.  
   
 O espaço total usado pelos buffers é determinado por: *buffercount/maxtransfersize*.  
@@ -480,7 +481,7 @@ O espaço total usado pelos buffers é determinado por: *buffercount/maxtransfer
 > [!NOTE]  
 > Para obter informações importantes sobre como usar a opção `BUFFERCOUNT`, confira o blog [BufferCount data transfer option can lead to OOM condition](http://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) (Opção incorreta de transferência de dados de BufferCount pode levar à condição OOM).  
   
-MAXTRANSFERSIZE **=** { *maxtransfersize* | ***@** maxtransfersize_variable* } Especifica a maior unidade de transferência em bytes a ser usada entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e a mídia de backup. Os valores possíveis são múltiplos de 65536 bytes (64 KB), estendendo-se até 4194304 bytes (4 MB).  
+MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ } Especifica a maior unidade de transferência em bytes a ser usada entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e a mídia de backup. Os valores possíveis são múltiplos de 65536 bytes (64 KB), estendendo-se até 4194304 bytes (4 MB).  
 
 > [!NOTE]  
 > Durante a criação de backups usando o Serviço Gravador do SQL, se o banco de dados tiver configurado [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md) ou incluir [grupos de arquivos com otimização de memória](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md), o `MAXTRANSFERSIZE` no momento de uma restauração deverá ser maior ou igual a `MAXTRANSFERSIZE` que foi usado quando o backup foi criado. 
@@ -955,7 +956,7 @@ WITH STATS = 5;
 > <tr>
 >   <th><a href="backup-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
 >   <th><strong><em>* Banco de Dados SQL<br />Instância Gerenciada *</em></strong></th>
->   <th><a href="backup-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
+>   <th><a href="backup-transact-sql.md?view=aps-pdw-2016">Parallel<br />Data Warehouse</a></th>
 > </tr>
 > </table>
 
@@ -1009,7 +1010,8 @@ Especifica um backup completo do banco de dados. Durante um backup de banco de d
   
 Ao restaurar um backup criado por BACKUP DATABASE (um *backup de dados*), o backup inteiro é restaurado. Para restaurar por meio de backups automáticos da Instância Gerenciada do Banco de Dados SQL do Azure, consulte [Restauração do Banco de Dados SQL](https://docs.microsoft.com/azure/sql-database/sql-database-restore)  
   
-{ *database_name* | **@***database_name_var* } É o banco de dados do qual é feito o backup do banco de dados completo. Se for fornecido como uma variável (**@***database_name_var*), esse nome poderá ser especificado como uma constante de cadeia de caracteres (**@***database_name_var***=***database name*) ou como uma variável de tipo de dados de cadeia de caracteres, exceto para os tipos de dados **ntext** ou **text**.  
+{ *database_name* | **@**_database\_name\_var_ }   
+É o banco de dados do qual é feito o backup do banco de dados completo. Se for fornecido como uma variável (**@**_database\_name\_var_), esse nome poderá ser especificado como uma constante de cadeia de caracteres (**@**_database\_name\_var_**=**_database name_) ou como uma variável de tipo de dados de cadeia de caracteres, exceto para os tipos de dados **ntext** ou **text**.  
   
 Para obter mais informações, consulte [Backups completos de arquivos &#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md) e [Fazer backup de arquivos e grupos de arquivos &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md).  
   
@@ -1061,24 +1063,24 @@ Habilita explicitamente a compactação de backup.
 NO_COMPRESSION  
 Desabilita explicitamente a compactação de backup.  
   
-DESCRIPTION **=** { **'***text***'** | **@***text_variable* }  
+DESCRIPTION **=** { **'**_text_**'** | **@**_text\_variable_ }  
 Especifica o texto de forma livre que descreve o conjunto de backup. A cadeia de caracteres pode conter um máximo de 255 caracteres.  
   
-NAME **=** { *backup_set_name* | **@***backup_set_var* }  
+NAME **=** { *backup_set_name* | **@**_backup\_set\_var_ }  
 Especifica o nome do conjunto de backup. Os nomes podem ter no máximo de 128 caracteres. Se NAME não estiver especificado, ele estará em branco.  
   
-MEDIADESCRIPTION **=** { *text* | **@***text_variable* }  
+MEDIADESCRIPTION **=** { *text* | **@**_text\_variable_ }  
 Especifica a descrição de texto de forma livre do conjunto de mídias, com um máximo de 255 caracteres.  
   
-MEDIANAME **=** { *media_name* | **@***media_name_variable* }  
+MEDIANAME **=** { *media_name* | **@**_media\_name\_variable_ }  
 Especifica o nome da mídia de todo o conjunto de mídias de backup. O nome da mídia não deve ter mais de 128 caracteres. Se `MEDIANAME` for especificado, ele deverá corresponder ao nome da mídia especificado anteriormente já existente nos volumes de backup. Se não estiver especificado ou se a opção SKIP estiver especificada, não haverá nenhuma verificação do nome da mídia.  
   
-BLOCKSIZE **=** { *blocksize* | **@***blocksize_variable* }  
+BLOCKSIZE **=** { *blocksize* | **@**_blocksize\_variable_ }  
 Especifica o tamanho do bloco físico, em bytes. Os tamanhos com suporte são 512, 1024, 2048, 4096, 8192, 16384, 32768 e 65536 (64 KB) bytes. O padrão é 65536 para dispositivos de fita e 512 para outros dispositivos. Normalmente, essa opção é desnecessária porque BACKUP seleciona automaticamente um tamanho de bloco apropriado ao dispositivo. A declaração explícita de um tamanho de bloco substitui a seleção automática de tamanho de bloco.  
   
 **Opções de transferência de dados**  
   
-BUFFERCOUNT **=** { *buffercount* | **@***buffercount_variable* }  
+BUFFERCOUNT **=** { *buffercount* | **@**_buffercount\_variable_ }  
 Especifica o número total de buffers de E/S a ser usado para a operação de backup. É possível especificar qualquer inteiro positivo. No entanto, grandes números de buffers podem provocar erros de "memória insuficiente" devido a espaço de endereço virtual inadequado no processo Sqlservr.exe.  
   
 O espaço total usado pelos buffers é determinado por: *buffercount/maxtransfersize*.  
@@ -1086,7 +1088,7 @@ O espaço total usado pelos buffers é determinado por: *buffercount/maxtransfer
 > [!NOTE]  
 > Para obter informações importantes sobre como usar a opção `BUFFERCOUNT`, confira o blog [BufferCount data transfer option can lead to OOM condition](http://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) (Opção incorreta de transferência de dados de BufferCount pode levar à condição OOM).  
   
-MAXTRANSFERSIZE **=** { *maxtransfersize* | ***@** maxtransfersize_variable* } Especifica a maior unidade de transferência em bytes a ser usada entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e a mídia de backup. Os valores possíveis são múltiplos de 65536 bytes (64 KB), estendendo-se até 4194304 bytes (4 MB).  
+MAXTRANSFERSIZE **=** { *maxtransfersize* | _**@** maxtransfersize\_variable_ } Especifica a maior unidade de transferência em bytes a ser usada entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e a mídia de backup. Os valores possíveis são múltiplos de 65536 bytes (64 KB), estendendo-se até 4194304 bytes (4 MB).  
 
 > [!NOTE]  
 > Para bancos de dados habilitados para [TDE (Transparent Data Encryption)](../../relational-databases/security/encryption/transparent-data-encryption.md) com um único arquivo de dados, o `MAXTRANSFERSIZE` padrão é 65.536 (64 KB). Para bancos de dados não criptografados com TDE, o `MAXTRANSFERSIZE` padrão é 1048576 (1 MB) ao usar o backup em DISK e 65536 (64 KB) ao usar VDI ou TAPE.
@@ -1159,7 +1161,7 @@ WITH STATS = 5;
 [Restaurar banco de dados](restore-statements-transact-sql.md)
 
 ::: moniker-end
-::: moniker range="=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
 > <table>
@@ -1171,13 +1173,13 @@ WITH STATS = 5;
 > <tr>
 >   <th><a href="backup-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
 >   <th><a href="backup-transact-sql.md?view=azuresqldb-mi-current">Banco de Dados SQL<br />Banco de Dados SQL</a></th>
->   <th><strong><em>* SQL Parallel<br />Data Warehouse*</em></strong></th>
+>   <th><strong><em>* Parallel<br />Data Warehouse*</em></strong></th>
 > </tr>
 > </table>
 
 &nbsp;
 
-# <a name="sql-parallel-data-warehouse"></a>SQL Parallel Data Warehouse
+# <a name="parallel-data-warehouse"></a>Parallel Data Warehouse
 
 Cria um backup de um banco de dados do [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] e armazena o backup fora do dispositivo em um local de rede especificado pelo usuário. Use esta instrução com [RESTORE DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/restore-statements-transact-sql.md) para recuperação de desastre ou para copiar um banco de dados de um dispositivo para outro.  
   
@@ -1221,12 +1223,12 @@ O caminho e o diretório de rede em que o [!INCLUDE[ssPDW](../../includes/sspdw-
 - O tamanho máximo do caminho UNC e do nome do diretório de backup é de 200 caracteres.  
 - O servidor ou o host precisa ser especificado como um endereço IP.  Não é possível especificá-lo como o nome de host ou do servidor.  
   
-DESCRIPTION = **'***text***'**  
+DESCRIPTION = **'**_text_**'**  
 Especifica uma descrição textual do backup. O comprimento máximo do texto é de 255 caracteres.  
   
 A descrição é armazenada nos metadados e será exibida quando o cabeçalho do backup for restaurado com RESTORE HEADERONLY.  
   
-NAME = **'***backup _name***'**  
+NAME = **'**_backup \_name_**'**  
 Especifica o nome do backup. O nome do backup pode ser diferente do nome do banco de dados.  
   
 - Os nomes podem ter no máximo de 128 caracteres.  

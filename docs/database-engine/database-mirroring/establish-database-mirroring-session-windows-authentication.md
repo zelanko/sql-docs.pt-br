@@ -5,23 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - database mirroring [SQL Server], sessions
 ms.assetid: 7cb418d6-dce1-4a0d-830e-9c5ccfe3bd72
-caps.latest.revision: 58
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 61fe97f28fc399ac261c06a962bd19bfe9efcd25
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e3a8430437bd4a4dae43e9a9b99f98c004a1b3c7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37988148"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47838934"
 ---
 # <a name="establish-database-mirroring-session---windows-authentication"></a>Estabelecer a sessão de espelhamento de banco de dados – Autenticação do Windows
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +63,7 @@ ms.locfileid: "37988148"
     |------------|--------------|-----------------|  
     |**Alto desempenho (assíncrono)**|Nulo (se existir; não usado, mas a sessão requer um quorum)|Para maximizar o desempenho, o banco de dados espelho fica sempre um pouco atrás do banco de dados principal, nunca se aproximando muito. Porém, a lacuna entre os bancos de dados é geralmente pequena. A perda de um parceiro tem o seguinte efeito:<br /><br /> Se a instância do servidor espelho ficar indisponível, o principal continuará.<br /><br /> Se a instância do servidor principal ficar indisponível, o espelho irá parar; mas se a sessão não tiver um servidor testemunha (como recomendado) ou se o servidor testemunha estiver conectado ao servidor espelho, o servidor espelho ficará acessível como espera passiva e o proprietário do banco de dados poderá forçar o serviço para a instância do servidor espelho (com possível perda de dados).<br /><br /> <br /><br /> Para obter mais informações, consulte [Troca de função durante uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).|  
     |**Alta segurança sem failover automático (síncrono)**|não|Todas as transações confirmadas têm a garantia de serem gravadas em disco no servidor espelho.<br /><br /> O failover manual é possível quando os parceiros estão conectados um ao outro e o banco de dados está sincronizado.<br /><br /> A perda de um parceiro tem o seguinte efeito:<br /><br /> Se a instância do servidor espelho ficar indisponível, o principal continuará.<br /><br /> Se a instância do servidor principal ficar indisponível o espelho irá parar, mas ficará acessível como espera passiva e o proprietário de banco de dados poderá forçar o serviço para a instância do servidor espelho (com possível perda de dados).<br /><br /> <br /><br /> Para obter mais informações, consulte [Troca de função durante uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).|  
-    |**Alta segurança com failover automático (síncrono)**|Sim (obrigatório)|Todas as transações confirmadas têm a garantia de serem gravadas em disco no servidor espelho.<br /><br /> A disponibilidade é maximizada incluindo uma instância do servidor testemunha para dar suporte ao failover automático. Observe que você só poderá selecionar a opção **Alta segurança com failover automático (síncrono)** se tiver especificado antes um endereço de um servidor testemunha.<br /><br /> O failover manual é possível quando os parceiros estão conectados um ao outro e o banco de dados está sincronizado.<br /><br /> Na presença de um servidor testemunha, a perda de um parceiro tem o seguinte efeito:<br /><br /> Se a instância do servidor principal ficar indisponível, ocorrerá failover automático. A instância do servidor espelho é alternada para a função principal e oferece seu banco de dados como banco de dados principal.<br /><br /> Se a instância do servidor espelho ficar indisponível, o principal continuará.<br /><br /> <br /><br /> Para obter mais informações, consulte [Troca de função durante uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).<br /><br /> **\*\* Importante \*\*** Se o servidor testemunha estiver desconectado, os parceiros deverão estar conectados entre si para que o banco de dados fique disponível. Para obter mais informações, consulte [Quorum: como uma testemunha afeta a disponibilidade do banco de dados &#40;Espelhamento de Banco de Dados&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).|  
+    |**Alta segurança com failover automático (síncrono)**|Sim (obrigatório)|Todas as transações confirmadas têm a garantia de serem gravadas em disco no servidor espelho.<br /><br /> A disponibilidade é maximizada incluindo uma instância do servidor testemunha para dar suporte ao failover automático. Observe que você só poderá selecionar a opção **Alta segurança com failover automático (síncrono)** se tiver especificado antes um endereço de um servidor testemunha.<br /><br /> O failover manual é possível quando os parceiros estão conectados um ao outro e o banco de dados está sincronizado.<br /><br /> Na presença de um servidor testemunha, a perda de um parceiro tem o seguinte efeito:<br /><br /> Se a instância do servidor principal ficar indisponível, ocorrerá failover automático. A instância do servidor espelho é alternada para a função principal e oferece seu banco de dados como banco de dados principal.<br /><br /> Se a instância do servidor espelho ficar indisponível, o principal continuará.<br /><br /> <br /><br /> Para obter mais informações, consulte [Troca de função durante uma sessão de espelhamento de banco de dados &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).<br /><br /> **&#42;&#42; Importante &#42;&#42;** Se o servidor testemunha estiver desconectado, os parceiros deverão estar conectados uns aos outros para que o banco de dados esteja disponível. Para obter mais informações, consulte [Quorum: como uma testemunha afeta a disponibilidade do banco de dados &#40;Espelhamento de Banco de Dados&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).|  
   
 7.  Quando todas as seguintes condições existirem, clique em **Iniciar Espelhamento** para iniciar o espelhamento:  
   

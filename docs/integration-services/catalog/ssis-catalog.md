@@ -5,25 +5,22 @@ ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: integration-services
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.ssms.iscreatecatalog.f1
 - sql13.ssis.ssms.iscatalogprop.general.f1
 - sql13.ssis.dbupgradewizard.f1
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
-caps.latest.revision: 28
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b7bc3002e305201d86dc529381af207e08a6908a
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: c168338d466273d28f2b8bd9d1f27c71f3a30b31
+ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085768"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47864294"
 ---
 # <a name="ssis-catalog"></a>Catálogo do SSIS
   O catálogo do **SSISDB** é o ponto central para trabalhar com projetos do [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) que você implantou no servidor [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]. Por exemplo, você define parâmetros de projeto e pacote, configura ambientes para especificar valores de tempo de execução para pacotes, executa e soluciona problemas de pacotes, e gerencia as operações de servidor do [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] .  
@@ -602,7 +599,7 @@ Execute as etapas de pré-requisito a seguir antes de habilitar o suporte do Alw
 > -   Você deve habilitar o **suporte do SSIS para Always On** *depois* de adicionar o SSISDB a um Grupo de Disponibilidade Always On.  
 
 > [!NOTE]
-> Para obter mais informações sobre esse procedimento, confira o seguinte passo a passo com capturas de tela adicionais fornecidas pelo MVP do SQL Server Marcos Freccia: [Adicionar o SSISDB a um Grupo de Disponibilidade para o SQL Server 2016](https://marcosfreccia.wordpress.com/2017/04/28/adding-ssisdb-to-ag-for-sql-server-2016/).
+> Para obter mais informações sobre esse procedimento, confira o seguinte passo a passo com capturas de tela adicionais fornecidas pelo MVP da Plataforma de Dados Marcos Freccia: [Adicionar o SSISDB a um Grupo de Disponibilidade para o SQL Server 2016](https://marcosfreccia.com/2017/04/28/adding-ssisdb-to-ag-for-sql-server-2016/).
 
 ####  <a name="Step1"></a> Etapa 1: Criar o catálogo do Integration Services  
   

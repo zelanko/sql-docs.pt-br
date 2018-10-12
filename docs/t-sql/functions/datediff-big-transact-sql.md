@@ -5,9 +5,7 @@ ms.date: 07/29/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DATEDIFF_BIG
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - functions [SQL Server], date and time
 - time [SQL Server], functions
 ms.assetid: 19ac1693-3cfa-400d-bf83-20a9cb46599a
-caps.latest.revision: 7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b309bb7411d3c75aa1c98a219123efffc5dbca3e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 4516965f66256e21e5e68310f7668770e17cabb9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38063614"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47644844"
 ---
 # <a name="datediffbig-transact-sql"></a>DATEDIFF_BIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -79,7 +76,7 @@ Uma expressão que pode resolver um dos seguintes valores:
 + **smalldatetime**
 + **time**
 
-Para *date*, `DATEDIFF_BIG` aceitará uma variável de expressão de coluna, de expressão, de literal de cadeia de caracteres ou definida pelo usuário. Um valor literal de cadeia de caracteres deve resolver um **datetime**. Para evitar ambiguidade, use anos de quatro dígitos. `DATEDIFF_BIG` subtrai *enddate* de *startdate*. Para evitar ambiguidade, use anos de quatro dígitos. Consulte [Configurar a opção two digit year cutoff de configuração de servidor](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md) para obter informações sobre anos de dois dígitos.
+Para *date*, `DATEDIFF_BIG` aceitará uma variável de expressão de coluna, de expressão, de literal de cadeia de caracteres ou definida pelo usuário. Um valor literal de cadeia de caracteres deve resolver um **datetime**. Para evitar ambiguidade, use anos de quatro dígitos. `DATEDIFF_BIG` subtrai *startdate* de *enddate*. Para evitar ambiguidade, use anos de quatro dígitos. Consulte [Configurar a opção two digit year cutoff de configuração de servidor](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md) para obter informações sobre anos de dois dígitos.
   
 *enddate*  
 Consulte *startdate*.
@@ -92,7 +89,7 @@ Consulte *startdate*.
 Retorna a contagem (como um valor bigint com sinal) dos limites de datepart especificados cruzados entre a startdate e a enddate especificadas.
 -   Cada *datepart* específico e as abreviações desse *datepart* retornarão o mesmo valor.  
   
-Para um valor retornado fora do intervalo para **bigint** (-9.223.372.036.854.775.808 a 9.223.372.036.854.775.807), `DATEDIFF_BIG` retorna um erro. Para **millisecond**, a diferença máxima entre *startdate* e *enddate* é de 24 dias, 20 horas, 31 minutos e 23.647 segundos. Para **second**, a diferença máxima é de 68 anos.
+Para um valor retornado fora do intervalo para **bigint** (-9.223.372.036.854.775.808 a 9.223.372.036.854.775.807), `DATEDIFF_BIG` retorna um erro. Para **millisecond**, a diferença máxima entre *enddate* e *startdate* é de 24 dias, 20 horas, 31 minutos e 23.647 segundos. Para **second**, a diferença máxima é de 68 anos.
   
 Se *startdate* e *enddate* receberem apenas um valor temporal e *datepart* não for um *datepart* de hora, `DATEDIFF_BIG` retornará 0.
   

@@ -5,9 +5,7 @@ ms.date: 08/08/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - RESTORE DATABASE
@@ -39,17 +37,16 @@ helpviewer_keywords:
 - transaction log backups [SQL Server], RESTORE statement
 - RESTORE LOG, see RESTORE statement
 ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
-caps.latest.revision: 248
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c37bc6aed288fd54e12839d5dd7f4f765e3eb823
-ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
+ms.openlocfilehash: 0b16e9925a2c7af141db9ea6e4e160081f2e63e6
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43348367"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47677930"
 ---
 # <a name="restore-statements-transact-sql"></a>Instruções RESTORE (Transact-SQL)
 Restaura backups do banco de dados SQL feitos usando o comando BACKUP. 
@@ -74,7 +71,7 @@ Na linha a seguir, clique em qualquer nome de produto de seu interesse. O clique
 > <tr>
 >   <th><strong><em>* SQL Server *<br />&nbsp;</em></strong></th>
 >   <th><a href="restore-statements-transact-sql.md?view=azuresqldb-mi-current">Banco de Dados SQL<br />Banco de Dados SQL</a></th>
->   <th><a href="restore-statements-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
+>   <th><a href="restore-statements-transact-sql.md?view=aps-pdw-2016">Parallel<br />Data Warehouse</a></th>
 > </tr>
 > </table>
 
@@ -258,7 +255,7 @@ Para obter descrições dos argumentos, consulte [Argumentos de RESTORE &#40;Tra
 ## <a name="about-restore-scenarios"></a>Sobre cenários de restauração  
 O [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dá suporte a vários cenários de restauração:  
   
-- Restauração completa do banco de dados  
+- restauração completa do banco de dados  
   
   Restaura todo o banco de dados, começando com um backup completo do banco de dados, que pode ser seguido pela restauração de um backup diferencial do banco de dados (e backups de log). Para obter mais informações, veja [Restaurações completas de banco de dados &#40;Modelo de recuperação simples#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md) ou [Restaurações completas de banco de dados &#40;Modelo de recuperação completa#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md).  
   
@@ -726,7 +723,7 @@ RESTORE DATABASE Sales
 > <tr>
 >   <th><a href="restore-statements-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
 >   <th><strong><em>* Banco de Dados SQL<br />Instância Gerenciada *</em></strong></th>
->   <th><a href="restore-statements-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
+>   <th><a href="restore-statements-transact-sql.md?view=aps-pdw-2016">Parallel<br />Data Warehouse</a></th>
 > </tr>
 > </table>
 
@@ -855,7 +852,7 @@ WHERE r.command = 'RESTORE DATABASE'
 > Esta exibição provavelmente mostra duas solicitações de restore. Uma é a instrução RESTORE original enviada pelo cliente e a outra é a instrução RESTORE em segundo plano que está sendo executada, mesmo se houver falha na conexão do cliente.
 
 ::: moniker-end
-::: moniker range="=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
 > <table>
@@ -867,13 +864,13 @@ WHERE r.command = 'RESTORE DATABASE'
 > <tr>
 >   <th><a href="restore-statements-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
 >   <th><a href="restore-statements-transact-sql.md?view=azuresqldb-mi-current">Banco de Dados SQL<br />Banco de Dados SQL</a></th>
->   <th><strong><em>* SQL Parallel<br />Data Warehouse*</em></strong></th>
+>   <th><strong><em>* Parallel<br />Data Warehouse*</em></strong></th>
 > </tr>
 > </table>
 
 &nbsp;
 
-# <a name="sql-parallel-data-warehouse"></a>SQL Parallel Data Warehouse
+# <a name="parallel-data-warehouse"></a>Parallel Data Warehouse
 
 
 Restaura um banco de dados de usuário do [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] por meio de um backup de banco de dados em um dispositivo do [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. O banco de dados é restaurado por meio de um backup que foi criado anteriormente pelo comando [!INCLUDE[ssPDW](../../includes/sspdw-md.md)][BACKUP DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/backup-transact-sql.md). Use as operações de backup e restauração para criar um plano de recuperação de desastre ou mover bancos de dados de um dispositivo para outro.  

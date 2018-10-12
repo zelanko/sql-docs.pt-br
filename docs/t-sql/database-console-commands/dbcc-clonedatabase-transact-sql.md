@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 05/01/2018
 ms.prod: sql
 ms.prod_service: sql-database
-ms.service: ''
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CLONEDATABASE
@@ -37,16 +34,15 @@ helpviewer_keywords:
 - database cloning [SQL Server]
 - DBCC CLONEDATABASE statement
 ms.assetid: ''
-caps.latest.revision: ''
 author: pamela
 ms.author: pamela
 manager: amitban
-ms.openlocfilehash: 00c1d492b8fd4b2315d825c2b74bac701781e9bd
-ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
+ms.openlocfilehash: 572470c85de7a8340a61e0a24b54c6632fe1b06f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36258408"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47666671"
 ---
 # <a name="dbcc-clonedatabase-transact-sql"></a>DBCC CLONEDATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -114,7 +110,7 @@ Cannot insert duplicate key row in object <system table> with unique index 'inde
 ```
 
 > [!IMPORTANT]
-> Se você tiver índices columnstore, veja [Considerações ao ajustar as consultas com índices Columnstore em bancos de dados do clone](https://blogs.msdn.microsoft.com/sql_server_team/considerations-when-tuning-your-queries-with-columnstore-indexes-on-clone-databases/) para atualizar as estatísticas de índice columnstore antes de executar o comando **DBCC CLONEDATABASE**.
+> Se você tiver índices columnstore, veja [Considerações ao ajustar as consultas com índices Columnstore em bancos de dados do clone](https://blogs.msdn.microsoft.com/sql_server_team/considerations-when-tuning-your-queries-with-columnstore-indexes-on-clone-databases/) para atualizar as estatísticas de índice columnstore antes de executar o comando **DBCC CLONEDATABASE**.  Começando com o SQL Server 2019, as etapas manuais descritas no artigo acima não serão mais necessárias, porque o comando **DBCC CLONEDATABASE** coleta essas informações automaticamente.
 
 Para obter informações relacionadas à segurança de dados em bancos de dados clonados, veja [Noções básicas sobre segurança de dados em bancos de dados clonados](https://blogs.msdn.microsoft.com/sql_server_team/understanding-data-security-in-cloned-databases-created-using-dbcc-clonedatabase/).
 

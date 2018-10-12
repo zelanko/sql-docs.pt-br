@@ -4,28 +4,24 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-agent
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - deleting SQL Server Agent proxies
 - proxies [SQL Server Agent], deleting
 - removing SQL Server Agent proxies
 ms.assetid: 9248841d-7294-47d4-94f3-b34a0521fabc
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 48fb0b5800e405e5a544c4c02bf2bfb232b29075
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: 07cbe87febd0d926b963934ddb3b37316e47ee8a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42776297"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47840104"
 ---
 # <a name="delete-a-sql-server-agent-proxy"></a>Delete a SQL Server Agent Proxy
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -53,7 +49,7 @@ Este tópico descreve como excluir uma conta proxy do [!INCLUDE[ssNoVersion](../
   
 ### <a name="Restrictions"></a>Limitações e restrições  
   
--   Ao excluir uma conta proxy do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, certifique-se de que o proxy não faça referência a nenhuma etapa de trabalho ativa. Para verificar se há etapas de trabalho que fazem referência ao proxy, clique com o botão direito do mouse no proxy, selecione **Propriedades** e, em seguida, na caixa de diálogo *proxy_name***Propriedades da Conta Proxy**, selecione a página **Referências**. Se excluir um proxy, você terá a opção de reatribuir todas as etapas de trabalho que o utilizam, na caixa de diálogo **Excluir Objeto** .  
+-   Ao excluir uma conta proxy do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, certifique-se de que o proxy não faça referência a nenhuma etapa de trabalho ativa. Para verificar se há etapas de trabalho que referenciam o proxy, clique com o botão direito do mouse no proxy, selecione **Propriedades** e, em seguida, na caixa de diálogo _proxy\_name_**Propriedades da Conta Proxy**, selecione a página **Referências**. Se excluir um proxy, você terá a opção de reatribuir todas as etapas de trabalho que o utilizam, na caixa de diálogo **Excluir Objeto** .  
   
 -   Os proxies do[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent usam credenciais para armazenar informações sobre as contas de usuário do Windows. O usuário especificado na credencial deve ter a permissão "Fazer logon como trabalho em lotes" no computador que executa o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

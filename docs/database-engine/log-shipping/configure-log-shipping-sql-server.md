@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - log shipping [SQL Server], enabling
 - log shipping [SQL Server], configuring
 ms.assetid: c42aa04a-4945-4417-b4c7-50589d727e9c
-caps.latest.revision: 42
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 66debf981b1a55dab1fb3b1b864782145d0c1f7f
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 20fc1e12f4aa3647016b4f39734eb0fa05cd7105
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40410291"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47703804"
 ---
 # <a name="configure-log-shipping-sql-server"></a>Configurar o envio de logs (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,6 +99,8 @@ ms.locfileid: "40410291"
 16. Observe a agenda de cópias listada na caixa **Agenda** em **Copiar trabalho**. Caso queira personalizar a agenda para sua instalação, clique em **Agenda** e, em seguida, ajuste a Agenda do agente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , conforme necessário. Essa agenda deve aproximar-se da agenda de backup.  
   
 17. Na guia **Restaurar** em **Estado de banco de dados ao restaurar backups**, escolha a opção **Nenhum modo de recuperação** ou **Modo de espera** .  
+    > [!IMPORTANT]  
+    > **Modo de espera** é apenas uma opção quando a versão do servidor primário e secundário são as mesmas. Quando a versão principal do servidor secundário for maior do que a do primário, apenas **Nenhum modo de recuperação** será permitido
   
 18. Caso tenha escolhido a opção **Modo de espera** , escolha se deseja desconectar os usuários do banco de dados secundário enquanto a operação de restauração está em andamento.  
   

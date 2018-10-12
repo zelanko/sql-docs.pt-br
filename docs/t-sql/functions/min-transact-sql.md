@@ -5,9 +5,7 @@ ms.date: 03/13/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - MIN
@@ -19,17 +17,16 @@ helpviewer_keywords:
 - minimum values [SQL Server]
 - values [SQL Server], minimum
 ms.assetid: 56cf6ec5-34f5-47e3-a402-7129039d4429
-caps.latest.revision: 49
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 748719839738d5e6f013acb827304909c709b594
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 639cfad5ba90294385c644c21cf0d7707892ef4d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43089100"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47753034"
 ---
 # <a name="min-transact-sql"></a>MIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -69,7 +66,7 @@ MIN ( expression ) OVER ( [ <partition_by_clause> ] [ <order_by_clause> ] )
   
  Para obter mais informações, veja [Expressões &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
   
- OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+ OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_**)**  
  *partition_by_clause* divide o conjunto de resultados produzido pela cláusula FROM em partições às quais a função é aplicada. Se não for especificado, a função tratará todas as linhas do conjunto de resultados da consulta como um único grupo. *order_by_clause* determina a ordem lógica na qual a operação é executada. *order_by_clause* é obrigatório. Para obter mais informações, consulte [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Tipos de retorno  

@@ -5,9 +5,7 @@ ms.date: 02/28/2018
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DATABASE SCOPED CREDENTIAL
@@ -21,17 +19,16 @@ helpviewer_keywords:
 - DATABASE SCOPED CREDENTIAL statement
 - credentials [SQL Server], DATABASE SCOPED CREDENTIAL statement
 ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
-caps.latest.revision: 21
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f0e356fc4e62fb07cff0f08c375488a759d01712
-ms.sourcegitcommit: b8e2e3e6e04368aac54100c403cc15fd4e4ec13a
+ms.openlocfilehash: 2220349cf0ab3db2a31e2c520fc8ef92acb48eb9
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45563992"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47762414"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,10 +51,10 @@ WITH IDENTITY = 'identity_name'
  *credential_name*  
  Especifica o nome da credencial no escopo do banco de dados que está sendo criada. *credential_name* não pode começar com a tecla jogo da velha (#). As credenciais de sistema começam com ##.  
   
- IDENTITY **='***identity_name***'**  
+ IDENTITY **='**_identity\_name_**'**  
  Especifica o nome da conta a ser usada ao conectar o servidor externamente. Para importar um arquivo do armazenamento de Blobs do Azure usando a chave de compartilhamento, o nome de identidade deve ser `SHARED ACCESS SIGNATURE`. Para carregar dados no SQL DW, qualquer valor válido pode ser usado para a identidade. Para mais informações sobre assinaturas de acesso compartilhado, consulte [Usando SAS (Assinatura de Acesso Compartilhado)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).  
   
- SECRET **='***secret***'**  
+ SECRET **='**_secret_**'**  
  Especifica o segredo necessário para a autenticação de saída. `SECRET` é necessário para importar um arquivo de armazenamento de Blobs do Azure. Para fazer o carregamento do armazenamento de Blobs do Azure no SQL DW ou no Parallel Data Warehouse, o Segredo deve ser a Chave de Armazenamento do Azure.  
 >  [!WARNING]
 >  O valor da chave SAS pode começar com um '?' (ponto de interrogação). Quando você usa a chave SAS, deve remover o '?' à esquerda. Caso contrário, seus esforços poderão ser bloqueados.  

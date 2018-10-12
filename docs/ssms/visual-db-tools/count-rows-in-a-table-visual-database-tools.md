@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-visual-db
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - totals [SQL Server], row counts
@@ -18,16 +15,15 @@ helpviewer_keywords:
 - number of values
 - counting rows
 ms.assetid: dda4296a-1d16-4e77-8d6f-e295f6dd4e87
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 829b3dc894e3976aef20a239f30ed33af9ac27fb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b0c049d11cf1e7a7a1d3fa4654756652b242183f
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33048803"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47759974"
 ---
 # <a name="count-rows-in-a-table-visual-database-tools"></a>Contar linhas em uma tabela (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +45,7 @@ Os procedimentos para todos os três tipos de contas são semelhantes.
   
 2.  Clique com o botão direito do mouse na tela de fundo do painel Diagrama e escolha **Adicionar Grupo por** no menu de atalho. O [Designer de Consulta e Exibição](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) adicionará a coluna **Agrupar por** à grade do painel Critérios.  
   
-3.  Selecione **\&#42; (Todas as Colunas)** no retângulo que representa a tabela ou objeto avaliado por tabela.  
+3.  Selecione **&#42; (Todas as Colunas)** no retângulo que representa a tabela ou objeto avaliado por tabela.  
   
     O Designer de Consulta e Exibição preenche automaticamente o termo **Contagem** na coluna **Agrupar por** no painel de critérios e atribui um alias de coluna à coluna que você está resumindo. Você pode substituir esse alias gerado automaticamente por outro que tenha mais significado. Para obter mais detalhes, veja [Criar aliases de coluna &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md).  
   
@@ -61,7 +57,7 @@ Os procedimentos para todos os três tipos de contas são semelhantes.
   
 2.  Clique com o botão direito do mouse na tela de fundo do painel Diagrama e escolha **Adicionar Grupo por** no menu de atalho. O Designer de Consulta e Exibição adicionará a coluna **Agrupar por** à grade do Painel de Critérios.  
   
-3.  Selecione **\&#42;(Todas as Colunas)** no retângulo que representa a tabela ou o objeto estruturado por tabela.  
+3.  Selecione **&#42;(Todas as Colunas)** no retângulo que representa a tabela ou o objeto estruturado por tabela.  
   
     O Designer de Consulta e Exibição preenche automaticamente o termo **Contagem** na coluna **Agrupar por** no painel de critérios e atribui um alias de coluna à coluna que você está resumindo. Para criar um título de coluna mais útil na saída da consulta, consulte [Criar aliases de coluna &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md).  
   

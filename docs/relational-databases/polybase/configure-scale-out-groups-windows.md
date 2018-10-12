@@ -1,0 +1,111 @@
+---
+title: Aprimorar grupos de expansão do PolyBase no Windows | Microsoft Docs
+ms.date: 09/24/2018
+ms.prod: sql
+ms.reviewer: ''
+ms.custom: ''
+ms.technology: polybase
+ms.topic: tutorial
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: c8fbf783d52f301de73c294a3d68965dece7ffa3
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47821173"
+---
+# <a name="improve-polybase-scale-out-groups-on-windows"></a>Aprimorar grupos de expansão do PolyBase no Windows
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+Este artigo descreve como configurar um [Grupo de expansão do PolyBase](polybase-scale-out-groups.md) no Windows. Isso cria um cluster de instâncias do SQL Server para processar grandes conjuntos de dados de fontes de dados externas, como Hadoop e Armazenamento de Blobs do Azure, de maneira expandir para melhor desempenho de consulta.
+
+## <a name="prerequisites"></a>Prerequisites
+  
+- Mais de um computador no mesmo domínio  
+  
+- Uma conta de usuário de domínio para executar serviços do PolyBase  
+  
+## <a name="process-overview"></a>Visão geral do processo
+
+As etapas a seguir resumem o processo de criação de um grupo de expansão do PolyBase. A próxima seção fornece uma explicação mais detalhada de cada etapa.
+  
+1. Instale a mesma versão do SQL Server com PolyBase em N computadores.
+  
+2. Selecione uma instância do SQL Server como o nó de cabeçalho. Um nó de cabeçalho pode ser designado apenas em uma instância executando o SQL Server Enterprise.
+  
+3. Adicione as instâncias restantes do SQL Server como nós de computação usando [sp_polybase_join_group](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md).
+
+4. Monitore os nós no grupo usando [sys.dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).
+
+5. Opcional. Remova um nó de computação usando [sp_polybase_leave_group &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md).
+
+## <a name="example-walk-through"></a>Exemplo detalhado
+
+Veja o passo a passo de como configurar um Grupo do PolyBase usando:  
+  
+1. Dois computadores no domínio *PQTH4A* Os nomes de computador são:  
+  
+   - PQTH4A-CMP01  
+  
+   - PQTH4A-CMP02  
+  
+2. Conta de domínio: *PQTH4A\PolybaseUse*r  
+
+## <a name="install-sql-server-with-polybase-on-all-machines"></a>Instalar o SQL Server com PolyBase em todos os computadores
+
+1. Execute setup.exe.
+  
+2. Na página Seleção de Recurso, escolha **Serviço de Consulta do PolyBase para Dados Externos**.
+  
+3. Na página Configuração do Servidor, use a **conta de domínio** PQTH4A\PolybaseUser para o Serviço de Movimentação de Dados do PolyBase do SQL Server e Mecanismo do PolyBase do SQL Server.
+  
+4. Na página Configuração do PolyBase, escolha a opção **Usar a instância do SQL Server como parte de um grupo de escala horizontal do PolyBase**. Isso abre o firewall para permitir conexões de entrada para os serviços do PolyBase.
+  
+5. Depois que a instalação estiver concluída, execute **services.msc**. Verifique se o SQL Server, o Mecanismo de PolyBase e o Serviço de Movimentação de Dados de PolyBase estão em execução.
+  
+   ![Serviços do PolyBase](../../relational-databases/polybase/media/polybase-services.png "Serviços do PolyBase")  
+  
+## <a name="select-one-sql-server-as-head-node"></a>Selecione um SQL Server como nó de cabeçalho  
+  
+Depois que a instalação estiver concluída, os computadores podem funcionar como nós de cabeçalho do Grupo do PolyBase. Neste exemplo, podemos escolher "MSSQLSERVER" em PQTH4A CMP01 como o nó de cabeçalho.
+  
+## <a name="add-other-sql-server-instances-as-compute-nodes"></a>Adicionar outras instâncias do SQL Server como nós de computação  
+  
+1. Conecte-se ao SQL Server no PQTH4A CMP02.
+  
+2. Execute o procedimento armazenado [sp_polybase_join_group](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md).
+
+   ```sql
+   -- Enter head node details:
+   -- head node machine name, head node dms control channel port, head node sql server name  
+    EXEC sp_polybase_join_group 'PQTH4A-CMP01', 16450, 'MSSQLSERVER';
+   ```  
+
+3. Execute services.msc no nó de computação (PQTH4A-CMP02).
+  
+4. Desligue o mecanismo de PolyBase e reinicie o serviço de movimentação de dados do PolyBase.
+  
+## <a name="optional-remove-a-compute-node"></a>Opcional: remover um nó de computação  
+  
+1. Conecte-se ao SQL Server do nó de computação (PQTH4A CMP02).
+  
+2. Execute o procedimento armazenado sp_polybase_leave_group.
+  
+    ```sql  
+    EXEC sp_polybase_leave_group;  
+    ```  
+  
+3. Execute services.msc no nó de computação que está sendo removido (PQTH4A-CMP02).
+  
+4. Inicie o Mecanismo de PolyBase. Reinicie o serviço de movimentação de dados de PolyBase.
+  
+5. Verifique se o nó foi removido executando o DMV sys.dm_exec_compute_nodes em PQTH4A-CMP01. Agora, PQTH4A-CMP02 funcionará como um nó de cabeçalho autônomo  
+  
+## <a name="next-steps"></a>Próximas etapas  
+
+Para solução de problemas, confira [PolyBase troubleshooting with dynamic management views](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80).
+  
+Para obter mais informações sobre o PolyBase, consulte [Visão geral do PolyBase](../../relational-databases/polybase/polybase-guide.md).

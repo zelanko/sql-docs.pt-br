@@ -4,24 +4,21 @@ ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, AlwaysOn Availability Groups
 - Availability Groups [SQL Server], interoperability
 ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
-caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: ce4f1a241959fcac09f6d8a41dad5a561e981ba3
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: 52e7bd927c8b3df503b335b522ca8b3444f5f5fe
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40412682"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47830904"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services com grupos de disponibilidade AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +48,7 @@ ms.locfileid: "40412682"
     -   [Comportamento do servidor de relatório quando ocorre um failover](#bkmk_failover_behavior)  
   
 ##  <a name="bkmk_requirements"></a> Requisitos para usar o Reporting Services e os grupos de disponibilidade AlwaysOn  
- [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] usa o .NET Framework 4.0 e dá suporte a propriedades de cadeia de conexão [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] para uso com fontes de dados.  
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] e o Servidor de Relatórios do Power BI usa o .Net Framework 4.0 e dá suporte às propriedades de cadeia de conexão do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] para uso com fontes de dados.  
   
  Para usar o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] com o  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 2014 e anteriores, você precisa baixar e instalar um hotfix para .NET 3.5 SP1. O hotfix adiciona suporte a Cliente SQL para os recursos do AG e suporte das propriedades da cadeia de conexão **ApplicationIntent** e **MultiSubnetFailover**. Se o Hotfix não estiver instalado em cada computador que hospeda um servidor de relatório, os usuários que tentarem visualizar relatórios verão uma mensagem de erro semelhante à seguinte, e a mensagem de erro será gravada no log de rastreamento do servidor de relatório:  
   
@@ -121,7 +118,7 @@ ms.locfileid: "40412682"
 > **Mensagem de erro:** "Palavra-chave sem suporte 'applicationintent'"  
   
 ##  <a name="bkmk_reportserverdatabases"></a> Bancos de dados do servidor de relatório e grupos de disponibilidade  
- O Reporting Services oferece suporte limitado para usar o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] com bancos de dados do servidor de relatório. Os bancos de dados do servidor de relatórios podem ser configurados no AG para fazer parte de uma réplica; porém, o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] não usará automaticamente uma réplica diferente para os bancos de dados do servidor de relatório quando um failover ocorrer. Não há suporte para o uso de MultiSubnetFailover com os bancos de dados do servidor de relatório.  
+ O Reporting Services e o Servidor de Relatórios do Power BI oferece suporte limitado para usar o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] com bancos de dados do servidor de relatório. Os bancos de dados do servidor de relatórios podem ser configurados no AG para fazer parte de uma réplica; porém, o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] não usará automaticamente uma réplica diferente para os bancos de dados do servidor de relatório quando um failover ocorrer. Não há suporte para o uso de MultiSubnetFailover com os bancos de dados do servidor de relatório.  
   
  Ações manuais ou scripts de automação personalizados precisam ser usados para concluir o failover e a recuperação. Até que estas ações sejam concluídas, alguns recursos do servidor de relatório poderão não funcionar corretamente depois do failover do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .  
   

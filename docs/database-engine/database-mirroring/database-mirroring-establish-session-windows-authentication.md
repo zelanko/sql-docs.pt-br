@@ -5,24 +5,21 @@ ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Windows authentication [SQL Server]
 - database mirroring [SQL Server], security
 ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
-caps.latest.revision: 77
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2d3c44a31a25379e142b87428ad8ef3f2e60b8b8
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: fd3762adabe4098d48bfd5352a0a159672b76ecd
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38020799"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47599094"
 ---
 # <a name="database-mirroring---establish-session---windows-authentication"></a>Espelhamento de Banco de Dados – estabelecer a sessão – Autenticação do Windows
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,15 +65,15 @@ ms.locfileid: "38020799"
   
 4.  Para definir o servidor principal como parceiro no banco de dados espelho, conecte-se ao servidor espelho e emita a seguinte instrução:  
   
-     ALTER DATABASE *<database_name>* SET PARTNER **=***<server_network_address>*  
+     ALTER DATABASE *\<database_name\>* SET PARTNER **=**_\<server\_network\_address\>_  
   
-     em que *<database_name>* é o nome do banco de dados a ser espelhado (esse nome é o mesmo em ambos os parceiros) e *<server_network_address>* é o endereço de rede de servidor do servidor principal.  
+     em que _\<database\_name\>_ é o nome do banco de dados a ser espelhado (esse nome é o mesmo em ambos os parceiros) e _\<server\_network\_address\>_ é o endereço de rede de servidor do servidor principal.  
   
      A sintaxe para um endereço de rede do servidor é a seguinte:  
   
-     TCP **://**\<*system-address>***:**\<* port>*  
+     TCP<b>\://</b>_\<system-address\>_<b>\:</b>_\<port\>_  
   
-     em que \<*system-address>* é uma cadeia de caracteres que identifica sem ambiguidade o sistema de computador de destino e \<*port>* é o número da porta usada pelo ponto de extremidade de espelhamento da instância do servidor parceiro. Para obter mais informações, consulte [Especificar um endereço de rede do servidor &#40;Espelhamento de banco de dados&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
+     em que _\<system-address>_ é uma cadeia de caracteres que identifica sem ambiguidade o sistema de computador de destino e _\<port>_ é o número da porta usada pelo ponto de extremidade de espelhamento da instância do servidor parceiro. Para obter mais informações, consulte [Especificar um endereço de rede do servidor &#40;Espelhamento de banco de dados&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
   
      Por exemplo, na instância do servidor espelho, a seguinte instrução ALTER DATABASE define o parceiro como a instância do servidor principal original. O nome de banco de dados é **AdventureWorks**, o endereço de sistema é DBSERVER1 - o nome de sistema do parceiro - e a porta usada pelo ponto de extremidade de espelhamento de banco de dados do parceiro é 7022:  
   
@@ -89,7 +86,7 @@ ms.locfileid: "38020799"
   
 5.  Para definir o servidor espelho como parceiro no banco de dados principal, conecte-se ao servidor principal e emita a seguinte instrução:  
   
-     ALTER DATABASE *<database_name>* SET PARTNER **=***<server_network_address>*  
+     ALTER DATABASE _\<database\_name\>_ SET PARTNER **=**_\<server\_network\_address\>_  
   
      Para obter mais informações, consulte a etapa 4.  
   

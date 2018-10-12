@@ -5,9 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.SWB.SQLAUDIT.FILTER.F1
@@ -20,12 +18,12 @@ ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 71af9860ae7af711c9c8e1cac4132f0046d8e01c
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 6742cefe44c2fd4a545b243d22993e0d7615e585
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43023211"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47845404"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>Criar uma auditoria de servidor e uma especificação de auditoria de servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +97,7 @@ ms.locfileid: "43023211"
      Especifica a localização da pasta em que os dados de auditoria serão gravados quando o **Destino da auditoria** for um arquivo.  
   
      **Reticências (...)**  
-     Abre a caixa de diálogo **Localizar Pasta –***server_name* para especificar um caminho de arquivo ou criar uma pasta na qual o arquivo de auditoria é gravado.  
+     Abre a caixa de diálogo **Localizar Pasta –**_server\_name_ para especificar um caminho de arquivo ou criar uma pasta na qual o arquivo de auditoria é gravado.  
   
      **Audite o limite máximo de arquivo:**  
      **Máximo de arquivos de substituição**  

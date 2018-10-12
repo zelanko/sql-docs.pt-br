@@ -4,28 +4,24 @@ ms.custom: ''
 ms.date: 06/08/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: relational-databases-misc
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - guide, memory management architecture
 - memory management architecture guide
 ms.assetid: 7b0d0988-a3d8-4c25-a276-c1bdba80d6d5
-caps.latest.revision: 6
 author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f056477d1de9ad2d73240f12e033e1022c44979e
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 7cd0d739f35f9f6cdcf03c525c41f0d2fb70d131
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43073055"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47623824"
 ---
 # <a name="memory-management-architecture-guide"></a>guia de arquitetura de gerenciamento de memória
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -98,7 +94,7 @@ A tabela a seguir indica se um tipo específico de alocação de memória é con
 |Memória de pilhas de thread|não|não|
 |Alocações diretas do Windows|não|não|
 
-A partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pode alocar mais memória do que o valor especificado na configuração max server memory. Esse comportamento pode ocorrer quando o valor de ***Memória Total do Servidor (KB)*** já tiver atingido a configuração da ***Memória do Servidor de Destino (KB)*** (conforme especificado por max server memory). Se houver memória contígua livre insuficiente para atender à demanda de solicitações de memória de várias páginas (mais de 8 KB) devido à fragmentação da memória, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] poderá exceder o uso em vez de rejeitar a solicitação de memória. 
+A partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pode alocar mais memória do que o valor especificado na configuração max server memory. Esse comportamento pode ocorrer quando o valor de **_Memória Total do Servidor (KB)_** já tiver atingido a configuração da **_Memória do Servidor de Destino (KB)_** (conforme especificado pela memória máxima do servidor). Se houver memória contígua livre insuficiente para atender à demanda de solicitações de memória de várias páginas (mais de 8 KB) devido à fragmentação da memória, o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] poderá exceder o uso em vez de rejeitar a solicitação de memória. 
 
 Assim que essa alocação for executada, a tarefa em segundo plano *Monitor de Recursos* começará a indicar para todos os consumidores de memória liberarem a memória alocada e tentará colocar o valor de *Memória Total do Servidor (KB)* abaixo da especificação da *Memória do Servidor de Destino (KB)*. Portanto, o uso de memória do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pode rapidamente exceder a configuração max server memory. Nessa situação, o leitor do contador de desempenho da *Memória Total do Servidor (KB)* excederá as configurações max server memory e *Memória do Servidor de Destino (KB)*.
 
@@ -111,7 +107,7 @@ Esse comportamento geralmente é observado durante as operações a seguir:
 ## <a name="changes-to-memorytoreserve-starting-with-includesssql11includessssql11-mdmd"></a>Alterações em “memory_to_reserve” a partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
 Nas versões anteriores do SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]), o gerenciador de memória do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] deixou de lado uma parte do espaço de endereço virtual do processo (VAS) para uso pelo **MPA (Alocador de Várias Páginas)** , pelo **Alocador de CLR**, pelas alocações de memória para as **pilhas de threads** no processo do SQL Server e pelas **DWA (Alocações Diretas do Windows)** . Esta parte do espaço de endereço virtual também é conhecida como região “Mem-To-Leave” ou como “Pool de buffers sem memória”.
 
-O espaço de endereço virtual reservado para essas alocações é determinado pela opção de configuração ***memory_to_reserve***. O valor padrão que o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa é 256 MB. Para substituir o valor padrão, use o parâmetro de inicialização [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] *-g*. Consulte a página de documentação em [Opções de inicialização do serviço Mecanismo de Banco de Dados](../database-engine/configure-windows/database-engine-service-startup-options.md) para obter informações sobre o parâmetro de inicialização *-g*.
+O espaço de endereço virtual reservado para essas alocações é determinado pela opção de configuração _**memory\_to\_reserve**_. O valor padrão que o [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa é 256 MB. Para substituir o valor padrão, use o parâmetro de inicialização [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] *-g*. Consulte a página de documentação em [Opções de inicialização do serviço Mecanismo de Banco de Dados](../database-engine/configure-windows/database-engine-service-startup-options.md) para obter informações sobre o parâmetro de inicialização *-g*.
 
 Uma vez que o novo alocador de páginas de “qualquer tamanho” também controla as alocações maiores que 8 KB a partir do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], o valor de *memory_to_reserve* não inclui as alocações de várias páginas. Exceto por essa alteração, tudo permanece igual com esta opção de configuração.
 

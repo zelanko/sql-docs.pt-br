@@ -1,11 +1,10 @@
 ---
 title: Diretrizes para operações de índice online | Microsoft Docs
 ms.custom: ''
-ms.date: 05/14/2018
+ms.date: 09/26/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: table-view-index
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - clustered indexes, online operations
@@ -15,19 +14,17 @@ helpviewer_keywords:
 - nonclustered indexes [SQL Server], online operations
 - transaction logs [SQL Server], indexes
 ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
-caps.latest.revision: 64
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.suite: sql
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b37a9c192d17275deb4d37ac244f45ad402f8b4b
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 8b2947f9e9d3a6ba075bfe1a87d5f76cdbcb84c7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43059668"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47730996"
 ---
 # <a name="guidelines-for-online-index-operations"></a>Diretrizes para operações de índice online
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,7 +36,7 @@ ms.locfileid: "43059668"
 -   Índices não clusterizados não exclusivos podem ser criados online, quando a tabela contiver tipos de dados LOB, mas nenhuma dessas colunas são usadas na definição de índice seja como colunas-chaves ou colunas não chave.  
   
 -   Os índices em tabelas temporárias locais, não podem ser criados, recriados ou soltos offline. Esta restrição não se aplica a índices em tabelas temporárias globais.
-- Índices podem ser retomados de onde pararam após uma falha inesperada, failover de banco de dados ou um comando **PAUSE**. Consulte [Alterar Índice](../../t-sql/statements/alter-index-transact-sql.md). 
+- Índices podem ser retomados de onde pararam após uma falha inesperada, failover de banco de dados ou um comando **PAUSE**. Consulte [Criar índice](../../t-sql/statements/create-index-transact-sql.md) e [Alterar índice](../../t-sql/statements/alter-index-transact-sql.md). 
 
 > [!NOTE]  
 >  As operações de índice online não estão disponíveis em todas as edições de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obter uma lista de recursos com suporte nas edições do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Recursos com suporte pelas edições](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
@@ -94,7 +91,7 @@ Para obter mais informações, consulte [Disk Space Requirements for Index DDL O
 ## <a name="resumable-index-considerations"></a>Considerações de índice retomável
 
 > [!NOTE]
-> A opção de índice retomável aplica-se ao SQL Server (começando com o SQL Server 2017) (somente a recompilação de índice) e o Banco de Dados SQL (criação de índice não clusterizado e recompilação de índice). Confira [Criar Índice](../../t-sql/statements/create-index-transact-sql.md) (atualmente em visualização pública para o Banco de Dados SQL somente) e [Alterar Índice](../../t-sql/statements/alter-index-transact-sql.md). 
+> A opção de índice retomável aplica-se ao SQL Server (começando com o SQL Server 2017) (somente a recompilação de índice) e o Banco de Dados SQL (criação de índice e recompilação de índice). Consulte [Criar Índice](../../t-sql/statements/create-index-transact-sql.md) (no momento, em visualização pública para o Banco de Dados SQL e [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)]) e [Alterar Índice](../../t-sql/statements/alter-index-transact-sql.md). 
 
 Quando você executa a criação ou a recriação de índice online retomável, as seguintes diretrizes se aplicam:
 -   Gerenciamento, planejamento e extensão das janelas de manutenção de índice. Você pode pausar e reiniciar uma operação de criação ou recriação de índice várias vezes para adequar-se às janelas de manutenção.
@@ -118,7 +115,7 @@ Em geral, não há nenhuma diferença na qualidade de desfragmentação entre a 
 ## <a name="online-default-options"></a>Opções online padrão 
 
 > [!IMPORTANT]
-> Essas opções estão em visualização pública.
+> Essas opções estão em visualização pública para o Banco de Dados SQL e o [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)].
 
 Você pode definir opções padrão para online ou retomáveis em um nível de banco de dados, definindo as opções de configuração com escopo do banco de dados ELEVATE_ONLINE ou ELEVATE_RESUMABLE. Com essas opções padrão, você pode evitar a execução acidental de uma operação que deixa a tabela do banco de dados offline. Ambas as opções farão com que o mecanismo eleve automaticamente determinadas operações para execução online ou retomável.  
 Você pode definir qualquer uma das opções como FAIL_UNSUPPORTED, WHEN_SUPPORTED ou OFF usando o comando [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md). Você pode definir valores diferentes para online e retomável. 
@@ -129,12 +126,9 @@ ELEVATE_ONLINE e ELEVATE_RESUMABLE são aplicáveis somente a instruções DDL q
 > ELEVATE_ONLINE e ELEVATE_RESUMABLE não se aplicam a operações de índice XML. 
  
 ## <a name="related-content"></a>Conteúdo relacionado  
- [Como funcionam as operações de índice online](../../relational-databases/indexes/how-online-index-operations-work.md)  
-  
- [Executar operações de índice online](../../relational-databases/indexes/perform-index-operations-online.md)  
-  
- [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)  
-  
- [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
+- [Como funcionam as operações de índice online](../../relational-databases/indexes/how-online-index-operations-work.md)  
+- [Executar operações de índice online](../../relational-databases/indexes/perform-index-operations-online.md)  
+- [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)  
+- [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
   
   

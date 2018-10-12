@@ -6,12 +6,12 @@ description: Saiba como criar e gerenciar aplicativos poderosos usando serviços
 ms.topic: hub-page
 featureFlags:
 - clicktale
-ms.openlocfilehash: 80a2d50537aeb133aa6489786924b5bf11d95cd3
-ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
+ms.openlocfilehash: 59e087c88ca3addf6afc3425770de77c2a851f5e
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48797080"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48877999"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -81,182 +81,7 @@ ms.locfileid: "48797080"
                     <li class="panelItem" data-index="0">
                         <a class="singlePanelNavItem selected" href="#products1" data-linktype="self-bookmark"></a>
                         <ul class="cardsD panelContent singlePanelContent" id="products1" style="margin-top: 0px; display: flex;">
-                            <li class="fullSpan">
-                                <div class="container intro">
-                                <h2>Guias de recursos internos do SQL</h2>
-                            </li>
-                            <li>
-                                <a href="/sql/relational-databases/ghost-record-cleanup-process-guide/">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="media/sql-education-center/ghost-record.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Processo de limpeza de registro fantasma</h3>
-                                                    <p> Este guia fornece uma visão geral do processo de limpeza de fantasma, que é um processo em segundo plano que exclui registros de páginas que foram marcadas para exclusão. </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/sql/relational-databases/sql-server-index-design-guide/">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="media/sql-education-center/index-arch-design.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Design e arquitetura de índice</h3>
-                                                    <p>Este guia contém informações sobre a arquitetura de índices e as melhores práticas para ajudá-lo a criar índices efetivos de acordo com as necessidades de seu aplicativo. </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/sql/relational-databases/memory-management-architecture-guide/">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="media/sql-education-center/memory-mgmt-arch.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Arquitetura de gerenciamento de memória</h3>
-                                                    <p> Este guia explica como o SQL Server gerencia a memória, bem como a utilização de memória durante a leitura e gravação de páginas. </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/sql/relational-databases/pages-and-extents-architecture-guide/">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="media/sql-education-center/pages-extents-architecture.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Arquitetura de páginas e extensões</h3>
-                                                    <p>Este guia descreve as estruturas de dados que são usadas para gerenciar páginas e extensões em todas as versões do SQL Server. Entender a arquitetura de páginas e extensões é importante para projetar e desenvolver bancos de dados que tenham um desempenho eficiente.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/sql/relational-databases/post-migration-validation-and-optimization-guide/">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="media/sql-education-center/post-migration-validation.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Validação e otimização após a migração</h3>
-                                                    <p>Uma visão geral de alguns cenários de desempenho comuns encontrados após migrar para o SQL Server e como resolvê-los. </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/sql/relational-databases/query-processing-architecture-guide/">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="media/sql-education-center/query-process-arch.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Arquitetura de processamento de consultas</h3>
-                                                    <p>O Mecanismo de Banco de Dados do SQL Server processa consultas em diversas arquiteturas de armazenamento de dados, como tabelas locais, particionadas e distribuídas entre vários servidores. Este guia aborda como o SQL Server processa consultas e otimiza a reutilização de consultas por meio do cache do plano de execução. </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide/">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="media/sql-education-center/trans-log-arch.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Arquitetura e gerenciamento de log de transações</h3>
-                                                    <p> Este guia fornece informações sobre a arquitetura física e lógica do log de transações. A compreensão da arquitetura pode melhorar sua efetividade na administração de logs de transações. </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/sql/relational-databases/thread-and-task-architecture-guide/">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="media/sql-education-center/thread-task-arch.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Arquitetura de threads e tarefas</h3>
-                                                    <p>Threads são um recurso do sistema operacional que permite a separação da lógica de aplicativo em vários caminhos de execução simultâneos. Este guia explica como o SQL manipula threads e tarefas. </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide/">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage">
-                                                        <img src="media/sql-education-center/trans-log-arch.svg" alt="" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Controle de versão de linha e bloqueio de transações</h3>
-                                                    <p> Este guia descreve os mecanismos de bloqueio e de controle de versão de linha que o Mecanismo de Banco de Dados do SQL Server usa para assegurar a integridade física de cada transação, além de fornecer informações sobre como os aplicativos podem controlar as transações de maneira eficiente. </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="fullSpan">
+                           <li class="fullSpan">
                                 <div class="container intro">
                                 <h2>Tutoriais</h2>
                             </li>
@@ -449,7 +274,182 @@ ms.locfileid: "48797080"
                                         </div>
                                     </div>
                                 </a>
+                            </li>  
+                            <li class="fullSpan">
+                                <div class="container intro">
+                                <h2>Guias de recursos internos do SQL</h2>
                             </li>
+                            <li>
+                                <a href="/sql/relational-databases/ghost-record-cleanup-process-guide/">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="media/sql-education-center/ghost-record.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Processo de limpeza de registro fantasma</h3>
+                                                    <p> Este guia fornece uma visão geral do processo de limpeza de fantasma, que é um processo em segundo plano que exclui registros de páginas que foram marcadas para exclusão. </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sql/relational-databases/sql-server-index-design-guide/">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="media/sql-education-center/index-arch-design.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Design e arquitetura de índice</h3>
+                                                    <p>Este guia contém informações sobre a arquitetura de índices e as melhores práticas para ajudá-lo a criar índices efetivos de acordo com as necessidades de seu aplicativo. </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sql/relational-databases/memory-management-architecture-guide/">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="media/sql-education-center/memory-mgmt-arch.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Arquitetura de gerenciamento de memória</h3>
+                                                    <p> Este guia explica como o SQL Server gerencia a memória, bem como a utilização de memória durante a leitura e gravação de páginas. </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sql/relational-databases/pages-and-extents-architecture-guide/">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="media/sql-education-center/pages-extents-architecture.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Arquitetura de páginas e extensões</h3>
+                                                    <p>Este guia descreve as estruturas de dados que são usadas para gerenciar páginas e extensões em todas as versões do SQL Server. Entender a arquitetura de páginas e extensões é importante para projetar e desenvolver bancos de dados que tenham um desempenho eficiente.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sql/relational-databases/post-migration-validation-and-optimization-guide/">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="media/sql-education-center/post-migration-validation.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Validação e otimização após a migração</h3>
+                                                    <p>Uma visão geral de alguns cenários de desempenho comuns encontrados após migrar para o SQL Server e como resolvê-los. </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sql/relational-databases/query-processing-architecture-guide/">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="media/sql-education-center/query-process-arch.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Arquitetura de processamento de consultas</h3>
+                                                    <p>O Mecanismo de Banco de Dados do SQL Server processa consultas em diversas arquiteturas de armazenamento de dados, como tabelas locais, particionadas e distribuídas entre vários servidores. Este guia aborda como o SQL Server processa consultas e otimiza a reutilização de consultas por meio do cache do plano de execução. </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide/">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="media/sql-education-center/trans-log-arch.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Arquitetura e gerenciamento de log de transações</h3>
+                                                    <p> Este guia fornece informações sobre a arquitetura física e lógica do log de transações. A compreensão da arquitetura pode melhorar sua efetividade na administração de logs de transações. </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sql/relational-databases/thread-and-task-architecture-guide/">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="media/sql-education-center/thread-task-arch.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Arquitetura de threads e tarefas</h3>
+                                                    <p>Threads são um recurso do sistema operacional que permite a separação da lógica de aplicativo em vários caminhos de execução simultâneos. Este guia explica como o SQL manipula threads e tarefas. </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/sql/relational-databases/sql-server-transaction-log-architecture-and-management-guide/">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage">
+                                                        <img src="media/sql-education-center/trans-log-arch.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>Controle de versão de linha e bloqueio de transações</h3>
+                                                    <p> Este guia descreve os mecanismos de bloqueio e de controle de versão de linha que o Mecanismo de Banco de Dados do SQL Server usa para assegurar a integridade física de cada transação, além de fornecer informações sobre como os aplicativos podem controlar as transações de maneira eficiente. </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>                            
                         </ul>
                     </li>
                 </ul>

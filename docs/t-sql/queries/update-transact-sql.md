@@ -5,9 +5,7 @@ ms.date: 09/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - UPDATE_TSQL
@@ -37,17 +35,16 @@ helpviewer_keywords:
 - FROM clause, UPDATE statement
 - WHERE clause, UPDATE statement
 ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
-caps.latest.revision: 91
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6cf48e61dd83eb7d0bc802a8b176c2bd91679336
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 2730d1bfc6418a9cc92dd8bea2e87541c6665e51
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43082039"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47776964"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -124,7 +121,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
   
  Expressões de tabela comuns também podem ser usadas com as instruções SELECT, INSERT, DELETE e CREATE VIEW. Para obter mais informações, confira [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
- TOP **(** *expression***)** [ PERCENT ]  
+ TOP **(** _expression_**)** [ PERCENT ]  
  Especifica o número ou o percentual de linhas atualizadas. *expression* pode ser um número ou uma porcentagem das linhas.  
   
  As linhas referenciadas na expressão TOP usada com INSERT, UPDATE ou DELETE não são organizadas em qualquer ordem.  
@@ -190,7 +187,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  *method_name* **(** *argument* [ **,**... *n*] **)**  
  É um método modificador público não estático de *udt_column_name* que usa um ou mais argumentos.  
   
- **.** WRITE **(***expressão***,***@Offset***,***@Length***)**  
+ **.** WRITE **(**_expressão_**,**_@Offset_**,**_@Length_**)**  
  Especifica que uma seção do valor de *column_name* deve ser modificada. A *expressão* substitui as unidades de *@Length* de *@Offset* do *column_name*. Somente colunas de **varchar(max)**, **nvarchar(max)** ou **varbinary(max)** podem ser especificadas com esta cláusula. *column_name* não pode ser NULL e não pode ser qualificado com um nome de tabela nem com um alias de tabela.  
   
  A *expressão* é o valor que é copiado para *column_name*. A *expressão* precisa ser avaliada ou ter a capacidade de ser convertida implicitamente no tipo *column_name*. Se a *expressão* for definida como NULL, *@Length* será ignorado e o valor em *column_name* será truncado no *@Offset* especificado.  
@@ -204,7 +201,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  **@** *variable*  
  É uma variável declarada definida como o valor retornado pela *expressão*.  
   
- SET **@***variable* = *column* = *expression* define a variável com o mesmo valor que a coluna. Isso é diferente de SET **@***variable* = *column*, *column* = *expression*, que define a variável para o valor de pré-atualização da coluna.  
+ SET **@**_variable_ = *column* = *expression* define a variável como o mesmo valor que a coluna. Isso é diferente de SET **@**_variable_ = _column_, _column_ = _expression_, que define a variável como o valor de pré-atualização da coluna.  
   
  \<OUTPUT_Clause>  
  Retorna dados atualizados ou expressões com base neles, como parte da operação UPDATE. A cláusula OUTPUT não tem suporte em nenhuma instrução DML destinada a exibições ou tabelas remotas. Para obter mais informações, confira [Cláusula OUTPUT &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
@@ -334,7 +331,7 @@ GO
 >  Os tipos de dados **ntext**, **text** e **image** serão removidos em uma versão futura do [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite usar esses tipos de dados em novos trabalhos de desenvolvimento e planeje modificar os aplicativos que os utilizam atualmente. Em vez disso, use [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)e [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) .  
   
 ### <a name="updating-large-value-data-types"></a>Atualizando tipos de dados de valor grande  
- Use a cláusula **.** WRITE (*expression***,** *@Offset ***,***@Length*) para executar uma atualização parcial ou completa dos tipos de dados **varchar(max)**, **nvarchar(max)** e **varbinary(max)**. Por exemplo, talvez uma atualização parcial de uma coluna **varchar(max)** poderá excluir ou modificar somente os 200 primeiros caracteres da coluna, enquanto uma atualização completa excluirá ou modificará todos os dados na coluna. As atualizações de **.** WRITE que inserem ou acrescentam novos dados serão registradas em log minimamente se o modelo de recuperação do banco de dados estiver definido como bulk-logged ou simples. A criação mínima de log não é usada quando valores existentes são atualizados. Para obter mais informações, consulte [O log de transações &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
+ Use a cláusula **\.** WRITE (_expression_**,** _@Offset_**,**_@Length_) para realizar uma atualização parcial ou completa dos tipos de dados **varchar(max)**, **nvarchar(max)** e **varbinary(max)**. Por exemplo, talvez uma atualização parcial de uma coluna **varchar(max)** poderá excluir ou modificar somente os 200 primeiros caracteres da coluna, enquanto uma atualização completa excluirá ou modificará todos os dados na coluna. As atualizações de **.** WRITE que inserem ou acrescentam novos dados serão registradas em log minimamente se o modelo de recuperação do banco de dados estiver definido como bulk-logged ou simples. A criação mínima de log não é usada quando valores existentes são atualizados. Para obter mais informações, consulte [O log de transações &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
  O [!INCLUDE[ssDE](../../includes/ssde-md.md)] converte uma atualização parcial em uma atualização completa quando a instrução UPDATE provoca uma destas ações:  
 -   Altera uma coluna de chave da exibição ou tabela particionada.  
@@ -346,7 +343,7 @@ Não é possível usar a cláusula **.** WRITE para atualizar uma coluna NULL ne
   
 Para obter melhor desempenho, é recomendável que os dados sejam inseridos ou atualizados em tamanhos de blocos que sejam múltiplos de 8040 bytes.  
   
-Se a coluna modificada pela cláusula **.** WRITE for referenciada em uma cláusula OUTPUT, o valor completo da coluna, na imagem anterior em **deleted.***column_name* ou na imagem posterior em **inserted.***column_name*, será retornado para a coluna especificada na variável de tabela. Veja o exemplo R a seguir.  
+Se a coluna modificada pela cláusula **.** WRITE for referenciada em uma cláusula OUTPUT, o valor completo da coluna, na imagem anterior em **deleted.**_column\_name_ ou na imagem posterior em **inserted.**_column\_name_, será retornado para a coluna especificada na variável de tabela. Veja o exemplo R a seguir.  
   
 Para obter a mesma funcionalidade de **.** WRITE com outros tipos de dados de caractere ou binários, use [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md).  
   

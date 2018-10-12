@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: performance
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.stat.properties.f1
@@ -21,12 +19,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dcccb4f911bd3067694ff959bea49f1838924172
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 32c1cfde6f887074e3aa40486ea93f73f3865782
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43070839"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47672094"
 ---
 # <a name="create-statistics"></a>Criar estatísticas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -73,7 +71,7 @@ ms.locfileid: "43070839"
   
 4.  Clique com o botão direito do mouse na pasta **Estatísticas** e selecione **Novas Estatísticas...**.  
   
-     As propriedades a seguir aparecem na página **Geral** na caixa de diálogo **Novas Estatísticas na Tabela***table_name*.  
+     As propriedades a seguir são mostradas na página **Geral** na caixa de diálogo **Novas Estatísticas na Tabela**_table\_name_.  
   
      **Nome da tabela**  
      Exibe o nome da tabela descrito pelas estatísticas.  
@@ -117,12 +115,12 @@ ms.locfileid: "43070839"
      **Atualize estatísticas para essas colunas**  
      Verifique para atualizar as estatísticas quando a caixa de diálogo estiver fechada.  
   
-     A propriedade a seguir aparece na página **Filtro** na caixa de diálogo **Novas Estatísticas na Tabela***table_name*.  
+     A propriedade a seguir é mostrada na página **Filtro** na caixa de diálogo **Novas Estatísticas na Tabela**_table\_name_.  
   
      **Expressão de filtro**  
      Define quais linhas de dados devem ser incluídas nas estatísticas filtradas. Por exemplo, `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
-5.  Na caixa de diálogo **Novas Estatísticas na Tabela***table_name*, na página **Geral**, clique em **Adicionar**.  
+5.  Na caixa de diálogo **Novas Estatísticas na Tabela**_table\_name_, na página **Geral**, clique em **Adicionar**.  
   
      As propriedades a seguir aparecem na caixa de diálogo **Selecionar Colunas** . Essas informações são somente leitura.  
   
@@ -143,7 +141,7 @@ ms.locfileid: "43070839"
   
 6.  Na caixa de diálogo **Selecionar Colunas** , marque as caixas de seleção de cada coluna para as quais você deseja criar uma estatística e clique em **OK**.  
   
-7.  Na caixa de diálogo **Novas Estatísticas na Tabela***table_name*, clique em **OK**.  
+7.  Na caixa de diálogo **Novas Estatísticas na Tabela**_table\_name_, clique em **OK**.  
   
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
   

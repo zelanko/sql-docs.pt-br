@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-agent
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - messages [SQL Server], SQL Server Agent
@@ -16,17 +13,16 @@ helpviewer_keywords:
 - SQL Server Agent, errors
 - errors [SQL Server Agent]
 ms.assetid: 2597d0d7-951a-48cf-989f-abb67b9fdb36
-caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3091bc13bae8b7273c788d64b9e24b5dc0843356
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: d3decb6d23f7194876e8723c299472beca1d85d0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42775947"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47793097"
 ---
 # <a name="send-sql-server-agent-error-messages"></a>Send SQL Server Agent Error Messages
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -77,7 +73,7 @@ Para obter mais informações sobre as permissões do Windows necessárias para 
   
 2.  Clique com o botão direito do mouse em **SQL Server Agent** e selecione **Propriedades**.  
   
-3.  Na caixa de diálogo **Propriedades do SQL Server Agent –***server_name*, em **Log de erros** na página **Geral**, digite o nome de usuário ou o nome do computador para o qual você deseja enviar mensagens de erro na caixa **Destinatário do net send**.  
+3.  Na caixa de diálogo **Propriedades do SQL Server Agent–**_server\_name_, em **Log de erros** na página **Geral**, digite o nome de usuário ou nome do computador ao qual você deseja enviar mensagens de erro na caixa **Destinatário do net send**.  
   
 4.  Clique em **OK**.  
   

@@ -4,28 +4,24 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-agent
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent, alerts
 - alerts [SQL Server], responding to
 - responding to alerts
 ms.assetid: c86ca6eb-c59f-46e9-bc32-d474e7c3b170
-caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 37ddfc40c4037174dde0967b2ae9687ee47c03cd
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: c7d801e08c7426b0dda2bfe08d791a384d22a880
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42776175"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47845764"
 ---
 # <a name="define-the-response-to-an-alert-sql-server-management-studio"></a>Define the Response to an Alert (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -76,9 +72,9 @@ Somente membros da função de servidor fixa **sysadmin** podem definir a respos
   
 4.  Clique com o botão direito do mouse no alerta no qual você deseja definir uma resposta e selecione **Propriedades**.  
   
-5.  Na caixa de diálogo *alert_name***Propriedades do alerta**, em **Selecione uma página**, selecione **Resposta**.  
+5.  Na caixa de diálogo _alert\_name_**propriedades do alerta**, em **Selecionar uma página**, selecione **Resposta**.  
   
-6.  Marque a caixa de seleção **Executar trabalho** e, na lista abaixo da caixa de seleção **Executar trabalho** , selecione um trabalho para executar quando o alerta ocorrer. Você pode criar um trabalho novo clicando em **Novo Trabalho** Você pode exibir mais informações sobre o trabalho clicando em **Exibir Trabalho**. Para obter mais informações sobre as opções disponíveis nas caixas de diálogo **Novo Trabalho** e **Propriedades de Trabalho***job_name*, consulte [Criar um Trabalho](../../ssms/agent/create-a-job.md) e [Exibir um Trabalho](../../ssms/agent/view-a-job.md).  
+6.  Marque a caixa de seleção **Executar trabalho** e, na lista abaixo da caixa de seleção **Executar trabalho** , selecione um trabalho para executar quando o alerta ocorrer. Você pode criar um trabalho novo clicando em **Novo Trabalho** Você pode exibir mais informações sobre o trabalho clicando em **Exibir Trabalho**. Para obter mais informações sobre as opções disponíveis nas caixas de diálogo **Novo Trabalho** e **Propriedades do trabalho**_job\_name_, consulte [Criar um trabalho](../../ssms/agent/create-a-job.md) e [Exibir um trabalho](../../ssms/agent/view-a-job.md).  
   
 7.  Marque a caixa de seleção **Notificar Operadores** se você quiser notificar os operadores quando o alerta for ativado. Na **Lista de operadores**, selecione um ou mais dos métodos a seguir para notificar o operador ou operadores: **Email**, **Pager**ou **Net Send**. Você pode criar um operador novo clicando em **Novo Operador** Você pode visualizar mais informações sobre um operador clicando em **Exibir Operador**. Para obter mais informações sobre as opções disponíveis nas caixas de diálogo **Novo Operador** e **Exibir Propriedades do Operador** , consulte [Create an Operator](../../ssms/agent/create-an-operator.md) e [View Information About an Operator](../../ssms/agent/view-information-about-an-operator.md).  
   

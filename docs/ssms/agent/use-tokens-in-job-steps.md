@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-agent
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - job steps [SQL Server Agent]
@@ -17,17 +14,16 @@ helpviewer_keywords:
 - tokens [SQL Server]
 - escape macros [SQL Server Agent]
 ms.assetid: 105bbb66-0ade-4b46-b8e4-f849e5fc4d43
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 942f13f947fad0692515ded169bb7bfccc3e0734
-ms.sourcegitcommit: 603d2e588ac7b36060fa0cc9c8621ff2a6c0fcc7
+ms.openlocfilehash: a122ffdd014b61f4253936f59e2a8766fe799824
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42774495"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47675564"
 ---
 # <a name="use-tokens-in-job-steps"></a>Usar tokens em etapas de trabalho
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -45,7 +41,7 @@ ms.locfileid: "42774495"
 ## <a name="understanding-using-tokens"></a>Noções básicas sobre o uso de tokens  
   
 > [!IMPORTANT]  
-> Qualquer usuário Windows com permissões de gravação no Log de Eventos do Windows pode acessar etapas de trabalho ativadas pelos alertas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ou alertas do WMI. Para evitar riscos de segurança, os tokens do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent que podem ser usados em trabalhos ativados por alertas encontram-se desabilitados por padrão. Os tokens são: **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG** e **WMI(***propriedade***)**. Observe que nesta versão, o uso de tokens foi estendido a todos os alertas.  
+> Qualquer usuário Windows com permissões de gravação no Log de Eventos do Windows pode acessar etapas de trabalho ativadas pelos alertas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent ou alertas do WMI. Para evitar riscos de segurança, os tokens do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent que podem ser usados em trabalhos ativados por alertas encontram-se desabilitados por padrão. São eles: **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG**e **WMI(**_propriedade_**)**. Observe que nesta versão, o uso de tokens foi estendido a todos os alertas.  
 >   
 > Se tiver que usar esses tokens, garanta, primeiro, que apenas membros dos grupos de segurança confiáveis do Windows, como o grupo Administradores, tenham permissões de gravação no Log de Eventos do computador em que reside o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Depois, clique com o botão direito do mouse em **SQL Server Agent** no Pesquisador de Objetos, selecione **Propriedades**e, na página **Sistema de Alerta** , selecione **Substituir tokens de todas as respostas de trabalho aos alertas** para habilitar esses tokens.  
   
@@ -93,16 +89,16 @@ As tabelas a seguir listam e descrevem os tokens e macros para os quais há supo
 |**(TIME)**|Hora atual (em formato HHMMSS).|  
 |**(STRTTM)**|A hora (em formato HHMMSS) em que o trabalho começou a ser executado.|  
 |**(STRTDT)**|A data (em formato AAAAMMDD) em que o trabalho começou a ser executado.|  
-|**(WMI (***propriedade***))**|Em trabalhos executados em resposta a alertas do WMI, o valor da propriedade especificado por *propriedade*. Por exemplo, `$(WMI(DatabaseName))` fornece o valor da propriedade **DatabaseName** do evento WMI que provocou a execução do alerta.|  
+|**(WMI (**_propriedade_**))**|Em trabalhos executados em resposta a alertas do WMI, o valor da propriedade especificado por *propriedade*. Por exemplo, `$(WMI(DatabaseName))` fornece o valor da propriedade **DatabaseName** do evento WMI que provocou a execução do alerta.|  
   
 ### <a name="sql-server-agent-escape-macros"></a>Macros de fuga do SQL Server Agent  
   
 |Macros de fuga|Descrição|  
 |-----------------|---------------|  
-|**$(ESCAPE_SQUOTE(***token_name***))**|Ignora aspas simples (') na cadeia de caracteres de substituição do token. Substitui um aspa simples por duas aspas simples.|  
-|**$(ESCAPE_DQUOTE(***token_name***))**|Ignora aspas duplas (") na cadeia de caracteres de substituição do token. Substitui um aspa dupla por duas aspas duplas.|  
-|**$(ESCAPE_RBRACKET(***token_name***))**|Ignora colchetes de fechamento (]) na cadeia de caracteres de substituição do token. Substitui um colchete de fechamento por dois colchetes de fechamento.|  
-|**$(ESCAPE_NONE(***token_name***))**|Substitui o token sem ignorar nenhum caractere da cadeia. Esta macro é fornecida para dar suporte a compatibilidade retroativa em ambientes nos quais cadeias de caracteres de substituição de tokens são esperadas apenas de usuários confiáveis. Para obter mais informações, consulte "Atualizando etapas de trabalho para usar macros", mais adiante, neste tópico.|  
+|**$(ESCAPE_SQUOTE(**_nome\_do token_**))**|Ignora aspas simples (') na cadeia de caracteres de substituição do token. Substitui um aspa simples por duas aspas simples.|  
+|**$(ESCAPE_DQUOTE(**_nome\_do token_**))**|Ignora aspas duplas (") na cadeia de caracteres de substituição do token. Substitui um aspa dupla por duas aspas duplas.|  
+|**$(ESCAPE_RBRACKET(**_nome\_do token_**))**|Ignora colchetes de fechamento (]) na cadeia de caracteres de substituição do token. Substitui um colchete de fechamento por dois colchetes de fechamento.|  
+|**$(ESCAPE_NONE(**_nome\_do token_**))**|Substitui o token sem ignorar nenhum caractere da cadeia. Esta macro é fornecida para dar suporte a compatibilidade retroativa em ambientes nos quais cadeias de caracteres de substituição de tokens são esperadas apenas de usuários confiáveis. Para obter mais informações, consulte "Atualizando etapas de trabalho para usar macros", mais adiante, neste tópico.|  
   
 ## <a name="updating-job-steps-to-use-macros"></a>Atualizando etapas de trabalho para usar macros  
 A partir do [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1, as etapas de trabalho que contêm tokens sem macros de fuga passaram a falhar e a retornar uma mensagem de erro indicando que a etapa contém um ou mais tokens que devem ser atualizados com uma macro para que o trabalho possa ser executado.  
@@ -113,7 +109,7 @@ A tabela a seguir descreve como a substituição de tokens é manipulada pelo [!
   
 |Sintaxe do token|Substituição do token de alerta ativada|Substituição do token de alerta desativada|  
 |----------------|------------------------------|-------------------------------|  
-|Macro ESCAPE usada|Todos os tokens em trabalhos são substituídos com êxito.|Não são substituídos tokens ativados por alertas. Os tokens são **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG** e **WMI(***propriedade***)**. Outros tokens estáticos são substituídos com êxito.|  
+|Macro ESCAPE usada|Todos os tokens em trabalhos são substituídos com êxito.|Não são substituídos tokens ativados por alertas. São eles: **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG**e **WMI(**_propriedade_**)**. Outros tokens estáticos são substituídos com êxito.|  
 |Nenhuma macro ESCAPE usada|Todo trabalho contendo tokens falha.|Todo trabalho contendo tokens falha.|  
   
 ## <a name="token-syntax-update-examples"></a>Exemplos de atualização de sintaxe de token  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 07/02/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: high-availability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - clustering [SQL Server]
@@ -16,17 +14,16 @@ helpviewer_keywords:
 - failover clustering [SQL Server], AlwaysOn Availability Groups
 - Availability Groups [SQL Server], Failover Cluster Instances
 ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
-caps.latest.revision: 48
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e75e0f70138c2ef6d783e72e80cfd0544f1bfa5e
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.openlocfilehash: 1373f5f90ae5e5cf147951b3462f0ca6b9e51b42
+ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40406121"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47864304"
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>Clustering de failover e Grupos de Disponibilidade AlwaysOn (SQL Server)
 
@@ -37,13 +34,6 @@ ms.locfileid: "40406121"
 > [!NOTE]  
 >  Para obter informações sobre os conceitos do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , confira [Visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
   
- **Neste tópico:**  
-  
--   [Windows Server Failover Clustering](#WSFC)  
-  
--   [Clustering de failover do SQL Server](#SQLServerFC)  
-  
--   [Restrições em relação ao uso do Gerenciador de Cluster de Failover do WSFC com grupos de disponibilidade](#FCMrestrictions)  
   
 ##  <a name="WSFC"></a> Windows Server Failover Clustering e grupos de disponibilidade  
  A implantação do [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] exige um cluster do WSFC (Windows Server Failover Clustering). Para ser habilitado para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], uma instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deve residir em um nó WSFC, e o nó e o cluster WSFC devem estar online. Além do mais, cada réplica de disponibilidade de um determinado grupo de disponibilidade deve residir em um nó diferente do mesmo cluster do WSFC. A única exceção é que, embora tenha sido migrado para outro cluster WSFC, um grupo de disponibilidade pode temporariamente abranger dois clusters.  
@@ -114,7 +104,10 @@ ms.locfileid: "40406121"
   
 -   Não altere nenhuma propriedade do grupo de disponibilidade, como os proprietários possíveis e os proprietários preferenciais. Essas propriedades são definidas automaticamente pelo grupo de disponibilidade.  
   
--   Não use o Gerenciador de Cluster de Failover para mover grupos de disponibilidade para nós diferentes ou para fazer o failover de grupos de disponibilidade. O Gerenciador de Cluster de Failover não reconhece o status da sincronização das réplicas de disponibilidade, e isso pode resultar em um longo tempo de inatividade. Você deve usar [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
+-   **Não use o Gerenciador de Cluster de Failover para mover grupos de disponibilidade para nós diferentes ou para fazer o failover de grupos de disponibilidade.** O Gerenciador de Cluster de Failover não reconhece o status da sincronização das réplicas de disponibilidade, e isso pode resultar em um longo tempo de inatividade. Você deve usar [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
+
+  >[!WARNING]
+  > Usando o Gerenciador de Cluster de Failover para mover uma *instância de cluster de failover* que hospeda um grupo de disponibilidade para um nó que *já* está hospedando uma réplica do mesmo grupo de disponibilidade pode resultar na perda da réplica do grupo de disponibilidade, impedindo que ele seja colocado online no nó de destino. Um único nó de um cluster de failover não pode hospedar mais de uma réplica do mesmo grupo de disponibilidade. Para obter mais informações sobre como isso ocorre e como recuperar, consulte o blog [Replica unexpectedly dropped in availability group](https://blogs.msdn.microsoft.com/alwaysonpro/2014/02/03/issue-replica-unexpectedly-dropped-in-availability-group/) (Réplica removida inesperadamente no grupo de disponibilidade). 
   
 ##  <a name="RelatedContent"></a> Conteúdo relacionado  
   

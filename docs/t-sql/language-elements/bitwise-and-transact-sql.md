@@ -5,9 +5,7 @@ ms.date: 01/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - bitwise
@@ -20,17 +18,16 @@ helpviewer_keywords:
 - '& (bitwise AND)'
 - bitwise AND (&)
 ms.assetid: 20275755-4fa7-47b1-a9be-ac85606d63b0
-caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 44b9d4acd20051477779edd721089340114c7fb1
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 34c2bd981869095df9cb4b4e79c383a9c58fd479
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43077378"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47716804"
 ---
 # <a name="amp-bitwise-and-transact-sql"></a>&amp; (AND bit a bit) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,7 +59,7 @@ expression & expression
 ## <a name="remarks"></a>Remarks  
  O operador bit a bit **&** executa uma expressão AND lógica bit a bit entre as duas expressões, usando cada bit correspondente para as duas expressões. Os bits no resultado são definidos como 1 se e somente se os dois bits (para o bit atual a ser resolvido) nas expressões de entrada tiverem um valor de 1; caso contrário, o bit no resultado será definido como 0.  
   
- Se as expressões à esquerda e à direita tiverem tipos de dados inteiros diferentes (por exemplo, a *expression* à esquerda é **smallint** e a *expression* à direita é **int**), o argumento do tipo de dados menor será convertido no tipo de dados maior. Nesse caso, a **smallint***expression* é convertida em um **int**.  
+ Se as expressões à esquerda e à direita tiverem tipos de dados inteiros diferentes (por exemplo, a *expression* à esquerda é **smallint** e a *expression* à direita é **int**), o argumento do tipo de dados menor será convertido no tipo de dados maior. Nesse caso, a **smallint**_expression_ é convertida em um **int**.  
   
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir cria uma tabela usando o tipo de dados **int** para armazenar os valores e insere dois valores em uma linha.  

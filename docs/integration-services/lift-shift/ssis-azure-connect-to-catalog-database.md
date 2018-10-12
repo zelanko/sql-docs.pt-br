@@ -1,23 +1,22 @@
 ---
 title: Conectar-se ao SSISDB (Catálogo do SSIS) no Azure | Microsoft Docs
 description: Encontre as informações de conexão necessárias para se conectar ao SSISDB (Catálogo do SSIS) hospedado em um servidor de Banco de Dados SQL do Azure.
-ms.date: 09/25/2017
+ms.date: 09/23/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.suite: sql
 ms.custom: ''
 ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 571fe7755803dcb3ef76a678969295864436f16a
-ms.sourcegitcommit: abd71294ebc39695d403e341c4f77829cb4166a8
+ms.openlocfilehash: c498f71be24d3f9e26aa1f6854dc048e0c9d6b89
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36798261"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47698114"
 ---
 # <a name="connect-to-the-ssis-catalog-ssisdb-in-azure"></a>Conectar-se ao SSISDB (Catálogo do SSIS) no Azure
 
@@ -30,7 +29,7 @@ Encontre as informações de conexão necessárias para se conectar ao SSISDB (C
 > No momento, não é possível criar o banco de dados do Catálogo do SSISDB no Banco de Dados SQL do Azure, independentemente da criação do Azure-SSIS Integration Runtime no Azure Data Factory. O Azure-SSIS IR é o ambiente de tempo de execução que executa pacotes SSIS no Azure. Para obter uma explicação passo a passo do processo, consulte [Implantar e executar um pacote SSIS no Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal). 
 
 ## <a name="prerequisites"></a>Prerequisites
-Antes de começar, verifique se você tem a versão 17.2 ou posterior do SSMS (SQL Server Management Studio). Se o banco de dados de catálogo do SSISDB estiver hospedado na Instância Gerenciada do Banco de Dados SQL (versão prévia), verifique se você tem a versão 17.6 ou posterior do SSMS. Para baixar a versão mais recente do SSMS, veja [Baixar o SSMS (SQL Server Management Studio)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+Antes de começar, verifique se você tem a versão 17.2 ou posterior do SSMS (SQL Server Management Studio). Se o banco de dados de catálogo do SSISDB estiver hospedado na Instância Gerenciada do Banco de Dados SQL, certifique-se de ter a versão 17.6 ou posterior do SSMS. Para baixar a versão mais recente do SSMS, veja [Baixar o SSMS (SQL Server Management Studio)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 ## <a name="get-the-connection-info-from-the-azure-portal"></a>Obter as informações de conexão do Portal do Azure
 1. Faça logon no [portal do Azure](https://portal.azure.com/).

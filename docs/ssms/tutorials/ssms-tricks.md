@@ -20,12 +20,12 @@ helpviewer_keywords:
 - Find SQL Server Instance
 - find instance name
 - find sql server instance name
-ms.openlocfilehash: f5443268f025b5bb30f673993819ab584230b676
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: df5ed680949f40e27d2df0184a2b4c387289129c
+ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749485"
+ms.locfileid: "47864384"
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>Tutorial: mais dicas e truques para usar o SSMS
 Este tutorial apresenta mais alguns truques para usar o SSMS (SQL Server Management Studio). Este artigo mostra como: 
@@ -82,12 +82,19 @@ Você pode comentar e remover a marca de comentário do seu texto usando o botã
 7. Realce tudo, exceto pelo comando **Alterar Banco de Dados**, e, em seguida, selecione o botão **Comentário**:
 
     ![Comentar tudo](media/ssms-tricks/commenteverything.png)
+    
+    > [!NOTE]
+    > O atalho de teclado para comentar texto é **CTRL + K, CTRL + C**. 
 
 8. Realce a parte **Alterar Banco de Dados** do texto e, em seguida, selecione o botão **Remover marca de comentário** para remover a marca de comentário:
 
     ![Remover marca de comentário do texto](media/ssms-tricks/uncomment.png)
     
+    > [!NOTE]
+    > O atalho de teclado para remover marca de comentário do texto é **CTRL + K, CTRL + U**. 
+    
 9. Selecione **Executar** para executar a parte cuja marca de comentário foi removida do texto. 
+
 
 ## <a name="indent-your-text"></a>Recuar o texto
 Você pode usar os botões de recuo na barra de ferramentas para aumentar ou diminuir o recuo do texto. 

@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/27/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: supportability
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
-caps.latest.revision: 20
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ac3d00cf51c5e01d3cb83ac4b3564f458a78b8c6
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: f8108bc8c08100fa8a28ab8e23058f056bff3b27
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39088598"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47646184"
 ---
 # <a name="database-engine-errors"></a>Erros do Mecanismo de Banco de Dados
 As tabelas contêm os números da mensagem de erro e a descrição, que é o texto da mensagem de erro da exibição sys.messages.message_id. 
@@ -1139,7 +1136,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   2325    |   16  |   não  |   %sA marca final '%ls' não corresponde à marca de abertura '%ls:%ls' da linha %u    |
 |   2326    |   16  |   não  |   %sA marca final '%ls:%ls' não corresponde à marca de abertura '%ls:%ls' da linha %u    |
 |   2327    |   16  |   não  |   %sO conteúdo ou definição de <%ls> está ausente.    |
-|   2328    |   16  |   não  |   %sO namespace do esquema '%ls' não corresponde ao '%ls' da política <include>  |
+|   2328    |   16  |   não  |   O namespace %sSchema '%ls' não corresponde a <include> '%ls' da diretiva  |
 |   2329    |   16  |   não  |   %sA cadeia de caracteres "%ls" não é um valor de duração de tempo válido.  |
 |   2331    |   16  |   não  |   %sA redefinição deve ter a si própria como tipo de base. Local: '%ls'.    |
 |   2332    |   16  |   não  |   %s'%ls' não pode ser usado com um operando 'empty' |
@@ -1378,6 +1375,7 @@ As tabelas contêm os números da mensagem de erro e a descrição, que é o tex
 |   2812    |   16  |   não  |   Não foi possível localizar o procedimento armazenado '%.*ls'.    |
 |   2813    |   16  |   não  |   %.*ls não é suportado nesta edição do SQL Server.   |
 |   [2814](mssqlserver-2814-database-engine-error.md)   |   10  |   não  |   Uma possível recompilação infinita foi detectada para SQLHANDLE %hs, PlanHandle %hs, deslocamento inicial %d, deslocamento final %d. O último motivo da recompilação foi %d.   |
+|   2628    |   16  |   não  |   Os dados da cadeia de caracteres seriam truncados na tabela '%.*ls', coluna '%.* ls'. Valor truncado: '%.*ls'.    |
 |   &nbsp;  |   &nbsp;  |&nbsp;     |   &nbsp;  |
 
 ## <a name="errors-3000---3999"></a>Erros 3000 a 3999

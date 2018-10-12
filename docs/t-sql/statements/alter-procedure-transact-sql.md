@@ -5,9 +5,7 @@ ms.date: 05/01/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_PROCEDURE_TSQL
@@ -22,17 +20,16 @@ helpviewer_keywords:
 - modifying stored procedures
 - stored procedures [SQL Server], modifying
 ms.assetid: ed9b2f76-11ec-498d-a95e-75b490a75733
-caps.latest.revision: 69
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a0e1dc25af9d44de5b435ff99cd7f283e7b7e08d
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 9422b06b96f6fa3e6b6260c2d22a4ec7180315fe
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43086479"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47641465"
 ---
 # <a name="alter-procedure-transact-sql"></a>ALTER PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -98,7 +95,7 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
  **@** *parâmetro*  
  Um parâmetro no procedimento. Podem ser especificados até 2.100 parâmetros.  
   
- [ *type_schema_name***.** ] *data_type*  
+ [ _type\_schema\_name_**.** ] _data\_type_  
  É o tipo de dados do parâmetro e o esquema ao qual ele pertence.  
   
  Para obter informações sobre restrições de tipo de dados, consulte [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md).  
@@ -146,7 +143,7 @@ AS { [ BEGIN ] sql_statement [ ; ] [ ,...n ] [ END ] }
  { [ BEGIN ] *sql_statement* [;] [ ...*n* ] [ END ] }  
  Uma ou mais instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] que abrangem o corpo do procedimento. Você pode usar as palavras-chave BEGIN e END para delimitar as instruções. Para obter mais informações, veja as seções Práticas recomendadas, Comentários gerais e Limitações e restrições em [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md).  
   
- EXTERNAL NAME *assembly_name ***.*** class_name ***.*** method_name*  
+ EXTERNAL NAME _assembly\_name_**.**_class\_name_**.**_method\_name_  
  **Aplica-se a**: do [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Especifica o método de um assembly [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para um procedimento armazenado CLR a ser referenciado. *classe_name* deve ser um identificador válido do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e deve existir como uma classe no assembly. Se a classe tiver um nome qualificado de namespace que use um ponto (**.**) para separar partes do namespace, o nome de classe deverá ser delimitado usando colchetes (**[]**) ou aspas (**""**). O método especificado deve ser um método estático da classe.  

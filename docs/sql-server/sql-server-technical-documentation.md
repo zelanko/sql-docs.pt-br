@@ -3,10 +3,8 @@ title: Documentação do SQL Server | Microsoft Docs
 ms.date: 08/10/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.custom: ''
 ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
 - sql13.portal.f1
@@ -23,12 +21,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: '>= sql-server-linux-2017  || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f199e904967d5a0420baed584ec73c5b2fd5b933
-ms.sourcegitcommit: 01fccb8015644e75fd99fc5543d8216a1539f6ca
+ms.openlocfilehash: 17598c6692ccb2b90a45fbee3d8cf5bae5245fe8
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42775675"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47857304"
 ---
 # <a name="sql-server-documentation"></a>Documentação do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,16 +46,26 @@ O SQL Server é uma parte central da plataforma de dados Microsoft. O SQL Server
 ::: moniker range="= sqlallproducts-allversions"
 |Novidades  | Notas de versão  |
 |---------|---------|
+|[Novidades no SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)     | [Notas de versão do SQL Server 2019](../sql-server/sql-server-ver15-release-notes.md)        |
 |[Novidades no SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)     | [Notas de Versão do SQL Server 2017.](../sql-server/sql-server-2017-release-notes.md)        |
 |[Novidades no SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)     | [Notas de Versão do SQL Server 2016.](../sql-server/sql-server-2016-release-notes.md)        |
 
 ![info_tip](../sql-server/media/info-tip.png) A documentação do SQL Server **2014** está disponível [aqui](https://docs.microsoft.com/sql/2014-toc/index?view=sql-server-2014).
 ::: moniker-end
 
+::: moniker range="= sql-server-ver15"
+|Novidades  | Notas de versão  |
+|---------|---------|
+|[Novidades no SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)     | [Notas de versão do SQL Server 2019](../sql-server/sql-server-ver15-release-notes.md)        |
+::: moniker-end
+
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 |Novidades  | Notas de versão  |
 |---------|---------|
 |[Novidades no SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)     | [Notas de Versão do SQL Server 2017.](../sql-server/sql-server-2017-release-notes.md)        |
+
+> [!NOTE]
+> Agora a versão prévia do SQL Server 2019 está disponível. Para obter mais informações, consulte [Novidades no SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15).
 ::: moniker-end
 
 ::: moniker range="=sql-server-2016"

@@ -4,24 +4,20 @@ ms.custom: ''
 ms.date: 02/05/2018
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: tutorial
 ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: ''
 ms.topic: quickstart
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
-caps.latest.revision: 26
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f22fc4b12c38b751eb3559d3a94071d0692d6531
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 3a28a9a1670f4d6b8ca64d9ed2aaf683b1af0636
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43019755"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47850084"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Lição 1: conectando-se ao mecanismo de banco de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +80,7 @@ Pelo menos uma conta de administrador foi selecionada quando o [!INCLUDE[ssNoVer
 
 ![object-explorer](../relational-databases/media/object-explorer.png)
 
-3.  Na caixa **Nome do servidor** , digite o nome da instância do [!INCLUDE[ssDE](../includes/ssde-md.md)]. Para a instância padrão do SQL Server, o nome do servidor é o nome do computador. Para uma instância nomeada do SQL Server, o nome do servidor é *<nome_do_computador>***\\***<nome_da_instância>,* por exemplo, **ACCTG_SRVR\SQLEXPRESS**. A captura de tela a seguir mostra a conexão à instância padrão (sem nome) do [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] em um computador chamado “PracticeComputer”. O usuário conectado no Windows é Marina do domínio Contoso. Ao usar a Autenticação do Windows, não é possível alterar o nome de usuário. 
+3.  Na caixa **Nome do servidor** , digite o nome da instância do [!INCLUDE[ssDE](../includes/ssde-md.md)]. Para a instância padrão do SQL Server, o nome do servidor é o nome do computador. Para uma instância nomeada do SQL Server, o nome do servidor é o _\<computer_name\>_**\\**_\<instance_name\>_, como **ACCTG_SRVR\SQLEXPRESS**. A captura de tela a seguir mostra a conexão à instância padrão (sem nome) do [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] em um computador chamado “PracticeComputer”. O usuário conectado no Windows é Marina do domínio Contoso. Ao usar a Autenticação do Windows, não é possível alterar o nome de usuário. 
 
 ![connect-to-server](../relational-databases/media/connect-to-server.png)
 

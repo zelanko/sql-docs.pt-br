@@ -1,26 +1,25 @@
 ---
 title: Implante e execute pacotes SSIS no Azure | Microsoft Docs
 description: Saiba como mover suas cargas de trabalho, pacotes e projetos do SSIS (SQL Server Integration Services) para a nuvem do Microsoft Azure.
-ms.date: 07/01/2018
+ms.date: 09/23/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.suite: sql
 ms.custom: ''
 ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 95705c0ac220ce4e7c0752785cba46d36dd1d984
-ms.sourcegitcommit: 575c9a20ca08f497ef7572d11f9c8604a6cde52e
+ms.openlocfilehash: bd2d91d38c964bc2795294a1ca4a4617fe2a0a48
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39482657"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47829658"
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>Migrar cargas de trabalho do SQL Server Integration Services por lift-and-shift para a nuvem
-Agora você pode mover suas cargas de trabalho, pacotes e projetos do SSIS (SQL Server Integration Services) para a nuvem do Microsoft Azure. Implantar, executar e gerenciar projetos do SSIS e pacotes no Catálogo SSIS (SSISDB) no Banco de Dados SQL ou no Banco de Dados de Instância Gerenciada do SQL (versão prévia) com ferramentas familiares, como o SQL Server Management Studio (SSMS).
+Agora você pode mover suas cargas de trabalho, pacotes e projetos do SSIS (SQL Server Integration Services) para a nuvem do Microsoft Azure. Implante, execute e gerencie projetos do SSIS e pacotes no Catálogo SSIS (SSISDB) no Banco de Dados SQL do Azure ou na Instância Gerenciada do Banco de Dados SQL com ferramentas familiares, como o SSMS (SQL Server Management Studio).
 
 ## <a name="benefits"></a>Benefícios
 Mover suas cargas de trabalho SSIS de local para o Azure tem os seguintes benefícios potenciais:
@@ -36,7 +35,7 @@ A diferença mais importante é a separação do armazenamento do tempo de execu
 | Local | Armazenamento | Tempo de execução | Escalabilidade |
 |---|---|---|---|
 | No local | SQL Server | Tempo de execução do SSIS hospedado pelo SQL Server | SSIS Scale Out (no SQL Server 2017 e posterior)<br/><br/>Soluções personalizadas (em versões anteriores do SQL Server) |
-| No Azure | Banco de Dados SQL ou Instância Gerenciada do Banco de Dados SQL (Versão prévia) | Integration Runtime do Azure-SSIS, um componente do Azure Data Factory | Opções de colocação em escala para o Integration Runtime do Azure-SSIS |
+| No Azure | Banco de Dados SQL ou Instância Gerenciada do Banco de Dados SQL | Integration Runtime do Azure-SSIS, um componente do Azure Data Factory | Opções de colocação em escala para o Integration Runtime do Azure-SSIS |
 | | | | |
 
 ## <a name="provision-ssis-on-azure"></a>Provisionar o SSIS no Azure

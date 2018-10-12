@@ -1,12 +1,10 @@
 ---
 title: ALTER DATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/07/2018
+ms.date: 09/23/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_DATABASE_TSQL
@@ -29,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1256884f13a576580588e877dd490f0757bfba9e
-ms.sourcegitcommit: aac654706b21f70962c7311f3b193000113d00d7
+ms.openlocfilehash: 2bb68aae23e0d36ff09ff673eae3d45f1082fec5
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "42802565"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47825374"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL) 
 
@@ -53,7 +51,7 @@ Na linha a seguir, clique em qualquer nome de produto de seu interesse. O clique
 > [!div class="mx-tdCol2BreakAll"]  
 > ||||||  
 > |---|---|---|---|---|  
-> |**_\* SQL Server \*_** &nbsp;|[Banco de Dados SQL<br />servidor lógico](alter-database-transact-sql.md?view=azuresqldb-current)|[Banco de Dados SQL<br />Instância Gerenciada](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[SQL Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)|  
+> |**_\* SQL Server \*_** &nbsp;|[Banco de Dados SQL<br />servidor lógico](alter-database-transact-sql.md?view=azuresqldb-current)|[Banco de Dados SQL<br />Instância Gerenciada](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](alter-database-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
@@ -158,7 +156,7 @@ Para saber mais, confira [Opções ALTER DATABASE SET](../../t-sql/statements/al
 **\<file_and_filegroup_options>::=**  
 Para saber mais, confira [Opções de arquivo e grupo de arquivos de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
 Para remover um banco de dados, use [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md).  
   
 Para diminuir o tamanho de um banco de dados, use [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).  
@@ -290,7 +288,7 @@ GO
 >   <th><strong><em>* Banco de Dados SQL<br />Banco de Dados SQL*</em></strong></th>
 >   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">Banco de Dados SQL<br />Banco de Dados SQL</a></th>
 >   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
->   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">Parallel<br />Data Warehouse</a></th>
 > </tr>
 > </table>
 
@@ -335,7 +333,7 @@ ALTER DATABASE { database_name | CURRENT }
 {  
 
   MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 … 1024 … 4096 GB }  
-  | EDITION = { 'basic' | 'standard' | 'premium' | 'GeneralPurpose' | 'BusinessCritical'} 
+  | EDITION = { 'basic' | 'standard' | 'premium' | 'GeneralPurpose' | 'BusinessCritical' 'Hyperscale'} 
   | SERVICE_OBJECTIVE = 
        {  <service-objective>
        | { ELASTIC_POOL (name = <elastic_pool_name>) } 
@@ -355,8 +353,10 @@ ALTER DATABASE { database_name | CURRENT }
        | 'P1' | 'P2' | 'P4'| 'P6' | 'P11'  | 'P15'
       | 'GP_GEN4_1' | 'GP_GEN4_2' | 'GP_GEN4_4' | 'GP_GEN4_8' | 'GP_GEN4_16' | 'GP_GEN4_24' |
       | 'BC_GEN4_1' | 'BC_GEN4_2' | 'BC_GEN4_4' | 'BC_GEN4_8' | 'BC_GEN4_16' | 'BC_GEN4_24' |
+      | 'HS_GEN4_1' | 'HS_GEN4_2' | 'HS_GEN4_4' | 'HS_GEN4_8' | 'HS_GEN4_16' | 'HS_GEN4_24' |
       | 'GP_GEN5_2' | 'GP_GEN5_4' | 'GP_GEN5_8' | 'GP_GEN5_16' | 'GP_GEN5_24' | 'GP_GEN5_32' | 'GP_GEN5_48' | 'GP_GEN5_80' |
       | 'BC_GEN5_2' | 'BC_GEN5_4' | 'BC_GEN5_8' | 'BC_GEN5_16' | 'BC_GEN5_24' | 'BC_GEN5_32' | 'BC_GEN5_48' | 'BC_GEN5_80' |
+      | 'HS_GEN5_2' | 'HS_GEN5_4' | 'HS_GEN5_8' | 'HS_GEN5_16' | 'HS_GEN5_24' | 'HS_GEN5_32' | 'HS_GEN5_48' | 'HS_GEN5_80' |
       }
 
 <option_spec> ::= 
@@ -397,7 +397,7 @@ ALTER DATABASE db1
     MODIFY Name = db2 ;  
 ```    
 
-MODIFY (EDITION **=** ['basic' | 'standard' | 'premium' |'GeneralPurpose' | 'BusinessCritical'])    
+MODIFY (EDITION **=** ['basic' | 'standard' | 'premium' |'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale'])    
 
 Altera a camada de serviço do banco de dados. 
 
@@ -412,8 +412,11 @@ A alteração da edição falhará se a propriedade MAXSIZE do banco de dados es
 
 MODIFY (MAXSIZE **=** [100 MB | 500 MB | 1 | 1024…4096] GB)  
 
-Especifica o tamanho máximo do banco de dados. O tamanho máximo deve estar em conformidade com o conjunto válido de valores da propriedade EDITION do banco de dados. A alteração do tamanho máximo do banco de dados pode fazer com que a EDIÇÃO do banco de dados seja alterada. A tabela a seguir lista os valores MAXSIZE com suporte e os padrões (D) para as camadas de serviço do [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
-  
+Especifica o tamanho máximo do banco de dados. O tamanho máximo deve estar em conformidade com o conjunto válido de valores da propriedade EDITION do banco de dados. A alteração do tamanho máximo do banco de dados pode fazer com que a EDIÇÃO do banco de dados seja alterada. 
+
+> [!NOTE]
+> O argumento **MAXSIZE** não é aplicável a bancos de dados individuais na camada de serviço em hiperescala. Os bancos de dados da camada em hiperescala crescem conforme necessário até 100 TB. O serviço de Banco de Dados SQL adiciona armazenamento automaticamente – não é necessário definir um tamanho máximo.
+
 **Modelo com base em DTU**
 
 |**MAXSIZE**|**Basic**|**S0-S2**|**S3-S12**|**P1-P6**|**P11-P15**|  
@@ -484,7 +487,7 @@ ALTER DATABASE current
     MODIFY (SERVICE_OBJECTIVE = 'P6');
 ```  
 
-Especifica o nível de desempenho. Os valores disponíveis para o objetivo de serviço são: `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_4`, `GP_GEN4_8`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1` `BC_GEN4_2` `BC_GEN4_4` `BC_GEN4_8` `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_8`, `GP_Gen5_16`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_48`, `GP_Gen5_80`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_8`, `BC_Gen5_16`, `BC_Gen5_24`, `BC_Gen5_32`, `BC_Gen5_48`, `BC_Gen5_80`.  
+Especifica o nível de desempenho. Os valores disponíveis para o objetivo de serviço são: `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_4`, `GP_GEN4_8`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1` `BC_GEN4_2` `BC_GEN4_4` `BC_GEN4_8` `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_8`, `GP_Gen5_16`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_48`, `GP_Gen5_80`, `BC_Gen5_2`, `BC_Gen5_4`, `BC_Gen5_8`, `BC_Gen5_16`, `BC_Gen5_24`, `BC_Gen5_32`, `BC_Gen5_48`, `BC_Gen5_80`, `HS_GEN4_1`, `HS_GEN4_2`, `HS_GEN4_4`, `HS_GEN4_8`, `HS_GEN4_16`, `HS_GEN4_24`, `HS_Gen5_2`, `HS_Gen5_4`, `HS_Gen5_8`, `HS_Gen5_16`, `HS_Gen5_24`, `HS_Gen5_32`, `HS_Gen5_48`, `HS_Gen5_80`.  
 
 Para obter descrições de objetivos de serviço e mais informações sobre o tamanho, as edições e as combinações de objetivo de serviço, veja [Camadas de serviço e níveis de desempenho do Banco de Dados SQL do Azure](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/), [Limites de recurso baseado em DTU](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits) e [Limites de recurso baseado em vCore](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits). O suporte para objetivos de serviço PRS foi removido. Em caso de dúvidas, use este alias de email: premium-rs@microsoft.com. 
   
@@ -492,9 +495,15 @@ MODIFY (SERVICE_OBJECTIVE = ELASTIC\_POOL (name = \<elastic_pool_name>)
 
 Para adicionar um banco de dados existente a um pool elástico, defina o SERVICE_OBJECTIVE do banco de dados como ELASTIC_POOL e forneça o nome do pool elástico. Você também pode usar esta opção para alterar o banco de dados para um pool elástico diferente no mesmo servidor. Para obter mais informações, confira [Criar e gerenciar um pool elástico do Banco de Dados SQL](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/). Para remover um banco de dados de um pool elástico, use ALTER DATABASE para definir o SERVICE_OBJECTIVE para um único nível de desempenho do banco de dados.  
 
+> [!NOTE]
+> Bancos de dados na camada de serviço de Hiperescala não podem ser adicionados a um pool elástico.
+
 ADD SECONDARY ON SERVER \<partner_server_name>  
 
 Cria um banco de dados de replicação geográfica secundário com o mesmo nome em um servidor parceiro, tornando o banco de dados local o primário da replicação geográfica e começa a replicação de dados assíncrona do primário para o novo secundário. Se um banco de dados com o mesmo nome já existir no secundário, o comando falhará. O comando é executado no banco de dados mestre no servidor que hospeda o banco de dados local que se torna o primário.  
+
+> [!IMPORTANT]
+> No momento, a camada de serviço de Hiperescala no momento não dá suporte para replicação geográfica.
   
 WITH ALLOW_CONNECTIONS { **ALL** | NO }  
 
@@ -550,7 +559,7 @@ Durante um failover forçado:
 > [!IMPORTANT]  
 >  O usuário que executa o comando FORCE_FAILOVER_ALLOW_DATA_LOSS precisa ser DBManager no servidor primário e no servidor secundário.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
 
 Para remover um banco de dados, use [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md).  
 Para diminuir o tamanho de um banco de dados, use [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).  
@@ -620,7 +629,7 @@ Promove o banco de dados secundário db1 no servidor `secondaryserver` para torn
 ALTER DATABASE db1 FAILOVER  
 ```  
   
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
   
 [CREATE DATABASE – Banco de Dados SQL do Azure](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqldbls)   
  [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)   
@@ -654,7 +663,7 @@ ALTER DATABASE db1 FAILOVER
 >   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">Banco de Dados SQL<br />Banco de Dados SQL</a></th>
 >   <th><strong><em>* Banco de Dados SQL<br />Instância Gerenciada *</em></strong></th>
 >   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
->   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">Parallel<br />Data Warehouse</a></th>
 > </tr>
 > </table>
 
@@ -724,7 +733,7 @@ CURRENT
 
 Designa que o banco de dados em uso deve ser alterado.  
   
-## <a name="remarks"></a>Comentários  
+## <a name="remarks"></a>Remarks  
 
 Para remover um banco de dados, use [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md).  
 Para diminuir o tamanho de um banco de dados, use [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).  
@@ -757,7 +766,7 @@ ALTER DATABASE WideWorldImporters
     ADD FILE (NAME = 'data_17')
 ```
 
-## <a name="see-also"></a>Consulte também
+## <a name="see-also"></a>Confira também
   
 [CREATE DATABASE – Banco de Dados SQL do Azure](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqldbmi)   
 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)   
@@ -790,7 +799,7 @@ ALTER DATABASE WideWorldImporters
 >   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">Banco de Dados SQL<br />Banco de Dados SQL</a></th>
 >   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">Banco de Dados SQL<br />Banco de Dados SQL</a></th>
 >   <th><strong><em>* SQL Data<br />Warehouse*</em></strong></th>
->   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
+>   <th><a href="alter-database-transact-sql.md?view=aps-pdw-2016">Parallel<br />Data Warehouse</a></th>
 > </tr>
 > </table>
 
@@ -903,7 +912,7 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 [Lista de artigos de referência do SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-overview-reference/) 
  
 ::: moniker-end
-::: moniker range="=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
 > <table>
@@ -919,13 +928,13 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 >   <th><a href="alter-database-transact-sql.md?view=azuresqldb-current">Banco de Dados SQL<br />Banco de Dados SQL</a></th>
 >   <th><a href="alter-database-transact-sql.md?view=azuresqldb-mi-current">Banco de Dados SQL<br />Banco de Dados SQL</a></th>
 >   <th><a href="alter-database-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
->   <th><strong><em>* SQL Parallel<br />Data Warehouse*</em></strong></th>
+>   <th><strong><em>* Parallel<br />Data Warehouse*</em></strong></th>
 > </tr>
 > </table>
 
 &nbsp;
 
-# <a name="sql-parallel-data-warehouse"></a>SQL Parallel Data Warehouse
+# <a name="parallel-data-warehouse"></a>Parallel Data Warehouse
 
 ## <a name="overview"></a>Visão geral
 

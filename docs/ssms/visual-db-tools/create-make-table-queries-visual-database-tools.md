@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-visual-db
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], types
@@ -17,16 +14,15 @@ helpviewer_keywords:
 - Make Table query
 - adding tables
 ms.assetid: 4493cffa-7b2d-4c24-8ef0-d49329198972
-caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d1edb9d9834489b1bb1626009deacc6a6a82a6eb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7fbbf4c1f23740bdce710f137e8dad26a4346b5a
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "33048533"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47653399"
 ---
 # <a name="create-make-table-queries-visual-database-tools"></a>Criar consultas Criar Tabela (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,7 +67,7 @@ Para usar uma consulta Criar Tabela com êxito:
   
     Para criar uma tabela de destino em outro banco de dados, especifique um nome de tabela totalmente qualificado incluindo o nome do banco de dados de destino, o proprietário (se necessário) e o nome da tabela.  
   
-4.  Especifique as colunas a serem copiadas adicionando-as à consulta. Para obter detalhes, veja [Adicionar colunas a consultas (Visual Database Tools)](../../ssms/visual-db-tools/add-columns-to-queries-visual-database-tools.md). As colunas só serão copiadas se você as adicionar à consulta. Para copiar linhas inteiras, escolha **\&#42; (Todas as Colunas)**.  
+4.  Especifique as colunas a serem copiadas adicionando-as à consulta. Para obter detalhes, veja [Adicionar colunas a consultas (Visual Database Tools)](../../ssms/visual-db-tools/add-columns-to-queries-visual-database-tools.md). As colunas só serão copiadas se você as adicionar à consulta. Para copiar linhas inteiras, escolha **#42; (Todas as colunas)**.  
   
     O Designer de Consulta e Exibição adiciona as colunas escolhidas à coluna **Coluna** do painel Critérios.  
   

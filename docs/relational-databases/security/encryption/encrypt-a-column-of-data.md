@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 05/22/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
-ms.suite: sql
+ms.reviewer: vanto
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - encryption [SQL Server], columns
@@ -15,24 +13,23 @@ helpviewer_keywords:
 - column level encryption
 - cell level encryption
 ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
-caps.latest.revision: 27
 author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 55f0b6d69e4f351c422a76cf5a578703ca172205
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: f104edbe976f516fac1d7439a454054d05ef7e30
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43098245"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47650364"
 ---
 # <a name="encrypt-a-column-of-data"></a>Criptografar uma coluna de dados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  Este tópico descreve como criptografar uma coluna de dados usando a criptografia simétrica no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Às vezes, isso é conhecido como criptografia no nível de coluna, ou criptografia no nível da célula.  
+  Este artigo descreve como criptografar uma coluna de dados usando uma criptografia simétrica no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Às vezes, isso é conhecido como criptografia no nível de coluna, ou criptografia no nível da célula.  
   
- **Neste tópico**  
+ **Neste artigo**  
   
 -   **Antes de começar:**  
   
@@ -57,12 +54,12 @@ ms.locfileid: "43098245"
   
 ##  <a name="TsqlProcedure"></a> Usando o Transact-SQL  
 
-Para usar os exemplos a seguir, você precisa ter uma chave mestra de banco de dados. Se seu banco de dados ainda não tiver uma chave mestra de banco de dados, crie uma executando a instrução a seguir e fornecendo sua senha:   
+Para usar os exemplos a seguir, é necessário ter uma chave mestra de banco de dados. Se seu banco de dados ainda não tiver uma chave mestra de banco de dados, crie uma executando a instrução a seguir e fornecendo sua senha:   
 ```  
 CREATE MASTER KEY ENCRYPTION BY   
 PASSWORD = '<some strong password>';  
 ```  
-Sempre faça backup da chave mestra do seu banco de dados. Para obter mais informações sobre chaves mestras de banco de dados, consulte [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-master-key-transact-sql.md).
+Sempre faça backup da sua chave mestra de banco de dados. Para obter mais informações sobre chaves mestras de banco de dados, consulte [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-master-key-transact-sql.md).
 
 #### <a name="to-encrypt-a-column-of-data-using-symmetric-encryption-that-includes-an-authenticator"></a>Para criptografar uma coluna de dados usando a criptografia simétrica que inclui um autenticador  
   

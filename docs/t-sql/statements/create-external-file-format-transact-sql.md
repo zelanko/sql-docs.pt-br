@@ -5,9 +5,7 @@ ms.date: 2/20/2018
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE EXTERNAL FILE FORMAT
@@ -19,17 +17,16 @@ helpviewer_keywords:
 - External, file format
 - PolyBase, external file format
 ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
-caps.latest.revision: 25
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5c316c7a1e2e2913c5f0b4ce2e2bb4f63a2f5246
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 7e96392c4dfd81e8b875227403b315a78419f318
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43084304"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47719254"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -303,7 +300,7 @@ Observações sobre a tabela:
 ## <a name="performance"></a>Desempenho
  O uso de arquivos compactados sempre traz a desvantagem de transferir menos dados entre a fonte de dados externa e o SQL Server e aumentar o uso da CPU para compactar e descompactar os dados.
   
- Os arquivos de texto compactados com gzip não são divisíveis. Para melhorar o desempenho dos arquivos de texto compactados com Gzip, é recomendável gerar vários arquivos armazenados no mesmo diretório na fonte de dados externa. Essa estrutura de arquivo permite que o PolyBase leia e descompacte os dados com mais rapidez por meio de vários processos do leitor e de descompactação. O número ideal de arquivos compactados é o número máximo de processos do leitor de dados por nó de computação. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e no [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], o número máximo de processos do leitor de dados é 8 por nó, na versão atual. No [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], o número máximo de processos do leitor de dados por nó varia por SLO. Confira [Azure SQL Data Warehouse loading patterns and strategies](https://blogs.msdn.microsoft.com/sqlcat/2016/02/06/azure-sql-data-warehouse-loading-patterns-and-strategies/) (Padrões e estratégias de carregamento do SQL Data Warehouse do Azure) para obter detalhes.  
+ Os arquivos de texto compactados com gzip não são divisíveis. Para melhorar o desempenho dos arquivos de texto compactados com Gzip, é recomendável gerar vários arquivos armazenados no mesmo diretório na fonte de dados externa. Essa estrutura de arquivo permite que o PolyBase leia e descompacte os dados com mais rapidez por meio de vários processos do leitor e de descompactação. O número ideal de arquivos compactados é o número máximo de processos do leitor de dados por nó de computação. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], o número máximo de processos de leitor de dados é de 8 por nó, exceto o SQL Data Warehouse do Azure Gen2, que é de 20 leitores por nó. No [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], o número máximo de processos do leitor de dados por nó varia por SLO. Confira [Azure SQL Data Warehouse loading patterns and strategies](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/) (Padrões e estratégias de carregamento do SQL Data Warehouse do Azure) para obter detalhes.  
   
 ## <a name="examples"></a>Exemplos  
   

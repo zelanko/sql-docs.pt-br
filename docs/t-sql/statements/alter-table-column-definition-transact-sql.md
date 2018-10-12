@@ -1,13 +1,11 @@
 ---
 title: column_definition (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/17/2018
+ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - column_definition
@@ -20,17 +18,16 @@ helpviewer_keywords:
 - column properties [SQL Server]
 - column definitions [SQL Server]
 ms.assetid: a1742649-ca29-4d9b-9975-661cdbf18f78
-caps.latest.revision: 78
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c0cdf8b03a5169d5067bdfc07dbd3f3cc99d2d58
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 820a11940cfd3ee904979420acb0c766a6b32fb0
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43080010"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47664044"
 ---
 # <a name="alter-table-columndefinition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -208,9 +205,11 @@ SPARSE
 ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED }  
  **Criptografia determinística** usa um método que sempre gera o mesmo valor criptografado para qualquer valor de texto não criptografado. Usar criptografia determinística permite pesquisar usando comparação de igualdade, agrupamento e junção de tabelas usando junções de igualdade baseadas em valores criptografados, mas também pode permitir que usuários não autorizados adivinhem informações sobre valores criptografados examinando padrões na coluna criptografada. A união de duas tabelas em colunas criptografadas de maneira determinística só é possível se ambas as colunas são criptografadas com a mesma chave de criptografia de coluna. A criptografia determinística deve usar um agrupamento de colunas com uma ordem de classificação binary2 para as colunas de caracteres.  
   
- **Criptografia aleatória** usa um método que criptografa os dados de uma maneira menos previsível. A criptografia randomizada é mais segura, mas impede pesquisas de igualdade, agrupamento e junção em colunas criptografadas. Colunas usando criptografia randomizada não podem ser indexadas.  
+ **Criptografia aleatória** usa um método que criptografa os dados de uma maneira menos previsível. A criptografia aleatória é mais segura, mas impede que cálculos e indexação sejam feitos em colunas criptografadas, a menos que sua instância do SQL Server tenha suporte para [Always Encrypted com enclaves seguros](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
   
- Use a criptografia determinística para colunas que serão parâmetros de pesquisa ou parâmetros de agrupamento, por exemplo, um número da ID do governo. Use criptografia randomizada para dados como número de cartão de crédito, que não são agrupados a outros registros nem usados para unir tabelas e que não são pesquisados porque você usa outras colunas (como número de transações) para localizar a linha que contém a coluna criptografada de interesse.  
+ Se você estiver usando o Always Encrypted (sem enclaves seguros), use a criptografia determinística para que as colunas sejam pesquisadas com parâmetros ou com parâmetros de agrupamento, por exemplo, um número de identificação do governo. Use criptografia randomizada para dados como número de cartão de crédito, que não são agrupados a outros registros nem usados para unir tabelas e que não são pesquisados porque você usa outras colunas (como número de transações) para localizar a linha que contém a coluna criptografada de interesse.  
+
+ Se você está usando o Always Encrypted com enclaves seguros, a criptografia aleatória é um tipo de criptografia recomendado.  
   
  As colunas devem ser de um tipo de dados qualificado.  
   

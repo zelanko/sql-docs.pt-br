@@ -5,9 +5,7 @@ ms.date: 12/04/2017
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ANSI_PADDING_TSQL
@@ -23,17 +21,16 @@ helpviewer_keywords:
 - SET ANSI_PADDING statement
 - trailing blanks
 ms.assetid: 92bd29a3-9beb-410e-b7e0-7bc1dc1ae6d0
-caps.latest.revision: 47
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0a03b86fcd019a1e53d592acc5a23a352ab12d3a
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: fd1a43b50d0d36efacfe3c5a93a9bf0a169c4ede
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43106233"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47760326"
 ---
 # <a name="set-ansipadding-transact-sql"></a>SET ANSI_PADDING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -68,7 +65,7 @@ SET ANSI_PADDING ON
   
 |Configuração|char(*n*) NOT NULL ou binary(*n*) NOT NULL|char(*n*) NULL ou binary(*n*) NULL|varchar(*n*) ou varbinary(*n*)|  
 |-------------|----------------------------------------------------|--------------------------------------------|----------------------------------------|  
-|ON|Valor original de preenchimento (com espaços em branco à direita para colunas **char** e com zeros à direita para colunas **binary**) até o comprimento da coluna.|Segue as mesmas regras de **char(***n***)** ou **binary(***n***)** NOT NULL quando SET ANSI_PADDING é ON.|Os espaços em branco à direita em valores de caractere inseridos em colunas **varchar** não são cortados. Os zeros à direita em valores binários inseridos em colunas **varbinary** não são cortados. Os valores não são preenchidos com o tamanho da coluna.|  
+|ON|Valor original de preenchimento (com espaços em branco à direita para colunas **char** e com zeros à direita para colunas **binary**) até o comprimento da coluna.|Siga as mesmas regras de **char(**_n_**)** ou **binary(**_n_**)** NOT NULL quando SET ANSI_PADDING for ON.|Os espaços em branco à direita em valores de caractere inseridos em colunas **varchar** não são cortados. Os zeros à direita em valores binários inseridos em colunas **varbinary** não são cortados. Os valores não são preenchidos com o tamanho da coluna.|  
 |OFF|Valor original de preenchimento (com espaços em branco à direita para colunas **char** e com zeros à direita para colunas **binary**) até o comprimento da coluna.|Segue as mesmas regras para **varchar** ou **varbinary** quando SET ANSI_PADDING está OFF.|Os espaços em branco à direita em valores de caractere inseridos em uma coluna **varchar** são cortados. Os zeros à direita em valores binários inseridos em uma coluna **varbinary** são cortados.|  
   
 > [!NOTE]  

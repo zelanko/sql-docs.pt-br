@@ -3,21 +3,19 @@ title: Suplemento de privacidade do SQL Server | Microsoft Docs
 ms.date: 4/24/2018
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.custom: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords: ''
 helpviewer_keywords: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 40c6bfb24ea3e711ca6b14509921d5599b316ebf
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 1cfb5ce2ed20788eead43c6b90a9d64378e58740
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37975283"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47785650"
 ---
 # <a name="sql-server-privacy-supplement"></a>Suplemento de privacidade do SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +25,7 @@ Este artigo resume o comportamento de diferentes objetos de dados usados dentro 
 - Banco de dados SQL do Azure
 - SQL Server Management Studio (SSMS)
 - SQL Server Data Tools (SSDT)
-- SQL Operations Studio
+- Azure Data Studio
 - Assistente de Migração de Banco de Dados
 - Assistente de Migração do SQL Server
 - Extensão do MS-SQL

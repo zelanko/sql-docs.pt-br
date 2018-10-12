@@ -5,9 +5,7 @@ ms.date: 06/13/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: backup-restore
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - backing up databases [SQL Server], full backups
@@ -15,16 +13,15 @@ helpviewer_keywords:
 - backups [SQL Server], creating
 - database backups [SQL Server], SQL Server Management Studio
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
-caps.latest.revision: 63
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3fbeaf60a67386aff9a286b80dd4f1a60b98b7a5
-ms.sourcegitcommit: 2a47e66cd6a05789827266f1efa5fea7ab2a84e0
+ms.openlocfilehash: 69d6721aae55102a9f48bd1a1bc4cb2d8540c71d
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43348477"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47782414"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Criar um backup completo de banco de dados (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -266,7 +263,7 @@ Uma política de acesso armazenado foi criada com direitos de leitura, gravaçã
     |Opção|Descrição|  
     |------------|-----------------|  
     |*database*|É o banco de dados do qual fazer backup.|  
-    |*backup_device* [ **,**...*n* ]|Especifica uma lista de 1 a 64 dispositivos de backup a serem usados para a operação de backup. Você pode especificar um dispositivo de backup físico ou pode especificar um dispositivo de backup lógico correspondente, se já definido. Para especificar um dispositivo de backup físico, use a opção DISK ou TAPE:<br /><br /> { DISK &#124; TAPE } **=***physical_backup_device_name*<br /><br /> Para obter mais informações, consulte [Dispositivos de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).|  
+    |*backup_device* [ **,**...*n* ]|Especifica uma lista de 1 a 64 dispositivos de backup a serem usados para a operação de backup. Você pode especificar um dispositivo de backup físico ou pode especificar um dispositivo de backup lógico correspondente, se já definido. Para especificar um dispositivo de backup físico, use a opção DISK ou TAPE:<br /><br /> { DISK &#124; TAPE } **=**_physical\_backup\_device\_name_<br /><br /> Para obter mais informações, consulte [Dispositivos de backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).|  
     |WITH *with_options* [ **,**...*o* ]|Opcionalmente, especifica uma ou mais opções adicionais, *o*. Para obter informações sobre os fundamentos de opções, consulte a etapa 2.|  
   
 2.  Opcionalmente, especifique uma ou mais opções WITH. Algumas opções WITH básicas são descritas aqui. Para obter informações sobre todas as opções WITH, consulte [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  
@@ -279,10 +276,10 @@ Uma política de acesso armazenado foi criada com direitos de leitura, gravaçã
          ENCRYPTION (ALGORITHM, SERVER CERTIFICATE |ASYMMETRIC KEY)  
          No SQL Server 2014 ou em versões posteriores somente, especifique o algoritmo de criptografia a ser usado, e o certificado ou chave assimétrica usada para proteger a criptografia.  
   
-         DESCRIPTION **=** { **'***text***'** | **@***text_variable* }  
+         DESCRIPTION **=** { **'**_text_**'** | **@**_text\_variable_ }  
          Especifica o texto de forma livre que descreve o conjunto de backup. A cadeia de caracteres pode conter um máximo de 255 caracteres.  
   
-         NAME **=** { *backup_set_name* | **@***backup_set_name_var* }  
+         NAME **=** { *backup_set_name* | **@**_backup\_set\_name\_var_ }  
          Especifica o nome do conjunto de backup. Os nomes podem ter no máximo de 128 caracteres. Se NAME não estiver especificado, ele estará em branco.  
   
     -   Opções WITH do conjunto de backup básico:  
@@ -291,7 +288,7 @@ Uma política de acesso armazenado foi criada com direitos de leitura, gravaçã
   
          Alternativamente, para formatar a mídia de backup, use a opção FORMAT:  
   
-         FORMAT [ **,** MEDIANAME**=** { *media_name* | **@***media_name_variable* } ] [ **,** MEDIADESCRIPTION **=** { *text* | **@***text_variable* } ]  
+         FORMAT [ **,** MEDIANAME**=** { *media_name* | **@**_media\_name\_variable_ } ] [ **,** MEDIADESCRIPTION **=** { *text* | **@**_text\_variable_ } ]  
          Use a cláusula FORMAT quando estiver usando a mídia pela primeira vez ou quando quiser sobrescrever todos os dados existentes Opcionalmente, atribua à nova mídia um nome e uma descrição.  
   
         > [!IMPORTANT]  

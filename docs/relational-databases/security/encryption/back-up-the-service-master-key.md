@@ -3,10 +3,8 @@ title: Fazer backup da chave mestra de serviço | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.reviewer: ''
-ms.suite: sql
+ms.reviewer: vanto
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - service master key [SQL Server], exporting
@@ -14,18 +12,18 @@ ms.assetid: f60b917c-6408-48be-b911-f93b05796904
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: d5c8455e24d892be9a12d2ade2a8d2f88d0b97b0
-ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.openlocfilehash: a5eafe9bfc66dca1949d308b307addad059d3bef
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37237706"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47856924"
 ---
 # <a name="back-up-the-service-master-key"></a>Fazer backup da chave mestra de serviço
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Este tópico descreve como fazer backup da Chave mestra de serviço no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. A chave mestra de serviço é a raiz da hierarquia de criptografia. Ela deve ter seu backup feito e armazenado em um local seguro, fora do site. Criar este backup deveria ser uma das primeiras ações administrativas executadas no servidor.  
+  Este artigo descreve como fazer backup da Chave mestra de serviço no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usando [!INCLUDE[tsql](../../../includes/tsql-md.md)]. A chave mestra de serviço é a raiz da hierarquia de criptografia. Ela deve ter seu backup feito e armazenado em um local seguro, fora do site. Criar este backup deveria ser uma das primeiras ações administrativas executadas no servidor.  
   
- **Neste tópico**  
+ **Neste artigo**  
   
 -   **Antes de começar:**  
   
@@ -48,7 +46,7 @@ ms.locfileid: "37237706"
 ####  <a name="Permissions"></a> Permissões  
  Exige a permissão CONTROL no banco de dados.  
   
-##  <a name="Procedure"></a> Usando Transact-SQL  
+##  <a name="Procedure"></a> Usando o Transact-SQL  
   
 #### <a name="to-back-up-the-service-master-key"></a>Para fazer backup da Chave mestra de serviço  
   
@@ -58,7 +56,7 @@ ms.locfileid: "37237706"
   
 3.  Obtenha uma mídia de backup removível para armazenar uma cópia da chave de backup.  
   
-4.  Identifique um diretório NTFS no qual criar o backup da chave. É aí que você criará o arquivo especificado na próxima etapa. O diretório deve ser protegido com ACLs (listas de controle de acesso) altamente restritivas.  
+4.  Identifique um diretório NTFS no qual criar o backup da chave. Este diretório é o local em que você criará o arquivo especificado na próxima etapa. O diretório deve ser protegido com ACLs (listas de controle de acesso) altamente restritivas.  
   
 5.  No **Pesquisador de Objetos**, conecte-se a uma instância do [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   

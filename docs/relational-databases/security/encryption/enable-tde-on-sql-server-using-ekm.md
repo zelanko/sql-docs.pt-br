@@ -4,10 +4,8 @@ ms.custom: ''
 ms.date: 04/15/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
-ms.suite: sql
+ms.reviewer: vanto
 ms.technology: security
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - encryption [SQL Server], TDE using an EKM
@@ -15,23 +13,22 @@ helpviewer_keywords:
 - EKM, TDE how to
 - Transparent Data Encryption, using EKM
 ms.assetid: b892e7a7-95bd-4903-bf54-55ce08e225af
-caps.latest.revision: 26
 author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b70e78455aca3f25ba880d3a4fb8ad5bd8ed32c8
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: 62d910ed7b43d0334c8bf15c49c47d2214e81b85
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43084202"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47627454"
 ---
 # <a name="enable-tde-on-sql-server-using-ekm"></a>Habilitar TDE no SQL Server usando EKM
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Este tópico descreve como habilitar TDE (criptografia de dados transparente) no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] para proteger uma chave de criptografia de banco de dados usando uma chave assimétrica armazenada em um módulo EKM (gerenciamento de chave extensível) com [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+  Este artigo descreve como habilitar a TDE (Transparent Data Encryption) no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] para proteger uma chave de criptografia de banco de dados usando uma chave assimétrica armazenada em um módulo EKM (gerenciamento extensível de chaves) com o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
- Ela criptografa o armazenamento de um banco de dados inteiro usando uma chave simétrica chamada de chave de criptografia de banco de dados. Também é possível proteger a chave de criptografia do banco de dados através do uso de um certificado protegido pela chave mestra do banco de dados mestre. Para obter mais informações sobre como proteger a chave de criptografia do banco de dados usando a chave mestra de banco de dados, veja [TDE &#40;Transparent Data Encryption&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md). Para obter informações sobre como configurar a TDE quando o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está em execução em uma VM do Azure, veja [Gerenciamento extensível de chaves usando o Cofre de Chaves do Azure &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md). Para obter informações sobre como configurar a TDE usando uma chave no Cofre de Chaves do Azure, veja [Usar o Conector do SQL Server com recursos de criptografia do SQL](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md). 
+ Ela criptografa o armazenamento de um banco de dados inteiro usando uma chave simétrica chamada de chave de criptografia de banco de dados. A chave de criptografia do banco de dados também pode ser protegida usando um certificado, protegido pela chave mestra do banco de dados mestre. Para obter mais informações sobre como proteger a chave de criptografia do banco de dados usando a chave mestra de banco de dados, veja [TDE &#40;Transparent Data Encryption&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md). Para obter informações sobre como configurar a TDE quando o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está em execução em uma VM do Azure, veja [Gerenciamento extensível de chaves usando o Cofre de Chaves do Azure &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md). Para obter informações sobre como configurar a TDE usando uma chave no Cofre de Chaves do Azure, veja [Usar o Conector do SQL Server com recursos de criptografia do SQL](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md). 
 
   
 ##  <a name="BeforeYouBegin"></a> Antes de começar  
@@ -40,7 +37,7 @@ ms.locfileid: "43084202"
   
 -   Você deve ser um usuário com altos privilégios (como um administrador do sistema) para criar uma chave de criptografia de banco de dados e criptografar um banco de dados. É necessário que esse usuário possa ser autenticado pelo módulo EKM.  
   
--   Ao iniciar, o [!INCLUDE[ssDE](../../../includes/ssde-md.md)] precisa abrir o banco de dados. Para fazer isso, você deverá criar uma credencial que será autenticada pelo EKM, que adicioná-la ao logon baseado em uma chave assimétrica. Os usuários não podem efetuar logon com esse logon, mas o [!INCLUDE[ssDE](../../../includes/ssde-md.md)] poderá se autenticar com o dispositivo de EKM.  
+-   Ao iniciar, o [!INCLUDE[ssDE](../../../includes/ssde-md.md)] deve abrir o banco de dados. Para fazer isso, você deverá criar uma credencial que será autenticada pelo EKM, que adicioná-la ao logon baseado em uma chave assimétrica. Os usuários não podem fazer logon com esse logon, mas o [!INCLUDE[ssDE](../../../includes/ssde-md.md)] poderá se autenticar com o dispositivo de EKM.  
   
 -   Se a chave assimétrica armazenada no módulo EKM for perdida, não será possível abrir o banco de dados no [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Se o provedor de EKM permitir o backup da chave assimétrica, você deverá criar o backup e armazená-lo em um local seguro.  
   
@@ -49,7 +46,7 @@ ms.locfileid: "43084202"
 ###  <a name="Security"></a> Segurança  
   
 ####  <a name="Permissions"></a> Permissões  
- Este tópico usa as seguintes permissões:  
+ Este artigo usa as seguintes permissões:  
   
 -   Para alterar uma opção de configuração e executar a instrução RECONFIGURE, você deve ter a permissão em nível de servidor ALTER SETTINGS. A permissão ALTER SETTINGS é implicitamente mantida pelas funções de servidor fixas **sysadmin** e **serveradmin** .  
   

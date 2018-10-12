@@ -4,11 +4,8 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.component: ssms-agent
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: ssms
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Agent jobs, operators
@@ -16,17 +13,16 @@ helpviewer_keywords:
 - jobs [SQL Server Agent], operators
 - notifications [SQL Server], job status
 ms.assetid: 0f4eb513-5c0a-4523-974e-e85c1deeb57f
-caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 12958d837ad000fec77e6d5c4a0f167ef2bdd7ec
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: 3f973f4894eb79456376250a838b9e71745a83c7
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42776177"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47678964"
 ---
 # <a name="designate-a-fail-safe-operator"></a>Designar um operador à prova de falhas
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -71,7 +67,7 @@ Somente membros da função de servidor fixa **sysadmin** podem designar operado
   
 2.  Clique com o botão direito do mouse em **SQL Server Agent** e selecione **Propriedades**.  
   
-3.  Na caixa de diálogo **Propriedades do SQL Server Agent –***server_name*, em **Selecionar uma página**, selecione **Sistema de Alerta**.  
+3.  Na caixa de diálogo **Propriedades do SQL Server Agent –**_server\_name_, em **Selecionar uma página**, selecione **Sistema de Alerta**.  
   
 4.  Em **Operador à prova de falhas**, selecione **Habilitar operador à prova de falhas**.  
   

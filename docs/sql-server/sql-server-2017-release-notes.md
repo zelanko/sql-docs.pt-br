@@ -4,21 +4,19 @@ ms.custom: ''
 ms.date: 10/30/2017
 ms.prod: sql
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: install
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 79e09b64fc044aaa6da89f34a4fa81d892fc6c5f
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 28dfb353d20f67d8adae6f38857b7ffb707ad107
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38041004"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47653406"
 ---
 # <a name="sql-server-2017-release-notes"></a>Notas de Versão do SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -30,6 +28,9 @@ Este tópico descreve as limitações e os problemas com o SQL Server 2017. Para
 **Experimente o SQL Server!**
 - [![Baixar no Centro de Avaliação](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [Baixar o SQL Server 2017](http://go.microsoft.com/fwlink/?LinkID=829477)
 - [![Criar a máquina virtual](../includes/media/azure-vm.png)](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [Criar uma máquina virtual com o SQL Server 2017](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
+
+> [!NOTE]
+> Agora a versão prévia do SQL Server 2019 está disponível. Para obter mais informações, consulte [Novidades no SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md?view=sql-server-ver15).
 
 ## <a name="sql-server-2017---general-availability-release-october-2017"></a>SQL Server 2017 – versão de disponibilidade geral (outubro de 2017)
 ### <a name="database-engine"></a>Mecanismo de Banco de Dados
@@ -122,7 +123,7 @@ Não há nenhuma nota de versão do SQL Server no Windows relacionada a essa ver
 - **Solução alternativa** Para contornar esse problema e corrigir um aplicativo que depende da versão v13 dos assemblies, siga estas etapas:
 
    1. Vá para **Adicionar ou Remover Programas**
-   2. Localize *Serviço de Linguagem T-SQL do Microsoft SQL Server vNext CTP2.1*, clique com o botão direito do mouse nele e selecione **Desinstalar**.
+   2. Localize *Serviço de Linguagem T-SQL do Microsoft SQL Server 2019 CTP2.1*, clique com o botão direito do mouse nele e selecione **Desinstalar**.
    3. Depois da remoção do componente, repare o aplicativo defeituoso ou reinstale a versão apropriada do *TSqlLanguageService.MSI*.
 
    Essa solução alternativa remove a versão v14 desses assemblies, assim, todos os aplicativos que dependem de versões v14 deixam de funcionar. Se esses assemblies forem necessários, será necessária uma instalação separada sem instalações 2016 lado a lado separadas.
