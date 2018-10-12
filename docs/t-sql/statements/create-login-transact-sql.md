@@ -5,9 +5,7 @@ ms.date: 08/10/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
-ms.suite: sql
 ms.technology: t-sql
-ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_LOGIN_TSQL
@@ -26,17 +24,16 @@ helpviewer_keywords:
 - re-hashing passwords
 - certificates [SQL Server], logins
 ms.assetid: eb737149-7c92-4552-946b-91085d8b1b01
-caps.latest.revision: 101
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6a5f2edc15c171a80c16ccc77f11bf7673571d53
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+ms.openlocfilehash: d7509aaa81af19bc94fdb09526f3a940695651a1
+ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43074469"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47840966"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -53,7 +50,7 @@ Na linha a seguir, clique em qualquer nome de produto de seu interesse. O clique
 > [!div class="mx-tdCol2BreakAll"]
 > ||||||
 > |-|-|-|-|-|
-> |**_\* SQL Server \*_**|[Banco de Dados SQL<br />servidor lógico](create-login-transact-sql.md?view=azuresqldb-current)|[Banco de Dados SQL<br />Instância Gerenciada](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[SQL Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
+> |**_\*SQL Server\*_**|[Banco de Dados SQL<br />servidor lógico](create-login-transact-sql.md?view=azuresqldb-current)|[Banco de Dados SQL<br />Instância Gerenciada](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Parallel<br />Data Warehouse](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -91,27 +88,27 @@ CREATE LOGIN login_name { WITH <option_list1> | FROM <sources> }
 *login_name*  
 Especifica o nome do logon criado. Há quatro tipos de logons: logons do SQL Server, logons do Windows, logons mapeados por certificado e logons mapeados por chave assimétrica. Ao criar logons mapeados de uma conta de domínio do Windows, você deve usar o nome de logon de usuário de versões anteriores ao Windows 2000 no formato [\<domainName>\\<login_name>]. Você não pode usar um UPN no formato login_name@DomainName. Para obter um exemplo, consulte o exemplo D posteriormente neste artigo. Os logons de autenticação são do tipo **sysname** e devem estar em conformidade com as regras para [Identificadores](../../relational-databases/databases/database-identifiers.md) e não podem conter um '**\\**'. Os logons do Windows podem conter um '**\\**'. Logons baseados em usuários do Active Directory estão limitados a nomes de menos de 21 caracteres. 
 
-PASSWORD **='***password***'* Aplica-se apenas a logons do SQL Server. Especifica a senha do logon que está sendo criado. Use uma senha forte. Para obter mais informações, consulte [Senhas fortes](../../relational-databases/security/strong-passwords.md) e [Política de senha](../../relational-databases/security/password-policy.md). Começando com o SQL Server 2012 (11.x), informações de senha armazenadas são calculadas usando SHA-512 da senha com valor de sal. 
+PASSWORD **='**_password_**'* Aplica-se apenas a logons do SQL Server. Especifica a senha do logon que está sendo criado. Use uma senha forte. Para obter mais informações, consulte [Senhas fortes](../../relational-databases/security/strong-passwords.md) e [Política de senha](../../relational-databases/security/password-policy.md). Começando com o SQL Server 2012 (11.x), informações de senha armazenadas são calculadas usando SHA-512 da senha com valor de sal. 
   
 As senhas diferenciam maiúsculas de minúsculas. As senhas sempre devem ter pelo menos 8 caracteres e não podem exceder 128 caracteres. Elas podem incluir caracteres de a-z, A-Z, 0-9, e a maioria dos caracteres não alfanuméricos. As senhas não podem conter aspas simples nem o *login_name*. 
   
-PASSWORD **=***hashed_password*  
+PASSWORD **=**_hashed\_password_  
 Só se aplica à palavra-chave HASHED. Especifica o valor com hash da senha para o logon que está sendo criado. 
   
 HASHED Aplica-se apenas a logons do SQL Server. Especifica que a senha digitada depois do argumento PASSWORD já esteja com hash. Se esta opção não for selecionada, a cadeia de caracteres inserida como senha terá hash antes de ser armazenada no banco de dados. Essa opção deve ser usada somente para migrar bancos de dados de um servidor para outro. Não use a opção HASHED para criar novos logons. A opção HASHED não pode ser usada com os hashes criados pelo SQL 7 ou anterior.
 
 MUST_CHANGE Aplica-se apenas a logons do SQL Server. Se esta opção estiver incluída, o SQL Server solicitará ao usuário uma nova senha quando o novo logon for usado pela primeira vez. 
   
-CREDENTIAL **=***credential_name*  
+CREDENTIAL **=**_credential\_name_  
 O nome de uma credencial a ser mapeada para o novo logon do SQL Server. A credencial já deve existir no servidor. Atualmente, esta opção vincula apenas a credencial a um logon. Uma credencial não pode ser mapeada para o logon de Administrador do Sistema (sa). 
   
 SID = *sid*  
 Usado para recriar um logon. Aplica-se apenas aos logons de autenticação do SQL Server, e não aos logons de autenticação do Windows. Especifica o SID do novo logon de autenticação do SQL Server. Se essa opção não for usada, o SQL Server atribuirá um SID automaticamente. A estrutura do SID depende da versão do SQL Server. SID de logon do SQL Server: um valor literal de 16 bytes (**binary(16)**) baseado em um GUID. Por exemplo, `SID = 0x14585E90117152449347750164BA00A7`. 
   
-DEFAULT_DATABASE **=***database*  
+DEFAULT_DATABASE **=**_database_  
 Especifica o banco de dados padrão a ser atribuído ao logon. Se esta opção não for incluída, o banco de dados padrão será definido como master. 
   
-DEFAULT_LANGUAGE **=***language*  
+DEFAULT_LANGUAGE **=**_language_  
 Especifica o idioma padrão a ser atribuído ao logon. Se esta opção não for incluída, o idioma padrão será definido como o idioma padrão atual do servidor. Se o idioma padrão do servidor for alterado posteriormente, o idioma padrão do logon permanecerá inalterado. 
   
 CHECK_EXPIRATION **=** { ON | **OFF** }  
@@ -276,7 +273,7 @@ GO
 >   <th><strong><em>* Banco de Dados SQL<br />Banco de Dados SQL*</em></strong></th>
 >   <th><a href="create-login-transact-sql.md?view=azuresqldb-mi-current">Banco de Dados SQL<br />Banco de Dados SQL</a></th>
 >   <th><a href="create-login-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
->   <th><a href="create-login-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
+>   <th><a href="create-login-transact-sql.md?view=aps-pdw-2016">Parallel<br />Data Warehouse</a></th>
 > </tr>
 > </table>
 
@@ -405,7 +402,7 @@ GO
 >   <th><a href="create-login-transact-sql.md?view=azuresqldb-current">Banco de Dados SQL<br />Banco de Dados SQL</a></th>
 >   <th><strong><em>* Banco de Dados SQL<br />Instância Gerenciada *</em></strong></th>
 >   <th><a href="create-login-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
->   <th><a href="create-login-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
+>   <th><a href="create-login-transact-sql.md?view=aps-pdw-2016">Parallel<br />Data Warehouse</a></th>
 > </tr>
 > </table>
 
@@ -535,7 +532,7 @@ GO
 > <tr>
 >   <th><a href="create-login-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
 >   <th><a href="create-login-transact-sql.md?view=azuresqldb-current">Banco de Dados SQL<br />Banco de Dados SQL</a></th>>   <th><strong><em>* SQL Data<br />Warehouse*</em></strong></th>
->   <th><a href="create-login-transact-sql.md?view=aps-pdw-2016">SQL Parallel<br />Data Warehouse</a></th>
+>   <th><a href="create-login-transact-sql.md?view=aps-pdw-2016">Parallel<br />Data Warehouse</a></th>
 > </tr>
 > </table>
 
@@ -644,7 +641,7 @@ GO
  [Criar um logon](../../relational-databases/security/authentication-access/create-a-login.md)  
   
 ::: moniker-end
-::: moniker range="=aps-pdw-2016||=sqlallproducts-allversions"
+::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
 > [!div class="mx-tdCol2BreakAll"]
 > <table>
@@ -658,13 +655,13 @@ GO
 >   <th><a href="create-login-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
 >   <th><a href="create-login-transact-sql.md?view=azuresqldb-current">Banco de Dados SQL<br />Banco de Dados SQL</a></th>
 >   <th><a href="create-login-transact-sql.md?view=azure-sqldw-latest">SQL Data<br />Warehouse</a></th>
->   <th><strong><em>* SQL Parallel<br />Data Warehouse*</em></strong></th>
+>   <th><strong><em>* Parallel<br />Data Warehouse*</em></strong></th>
 > </tr>
 > </table>
 
 &nbsp;
 
-# <a name="sql-parallel-data-warehouse"></a>SQL Parallel Data Warehouse
+# <a name="parallel-data-warehouse"></a>Parallel Data Warehouse
 
   
 ## <a name="syntax"></a>Sintaxe 
@@ -686,7 +683,7 @@ CREATE LOGIN loginName { WITH <option_list1> | FROM WINDOWS }
 *login_name*  
 Especifica o nome do logon criado. Há quatro tipos de logons: logons do SQL Server, logons do Windows, logons mapeados por certificado e logons mapeados por chave assimétrica. Ao criar logons mapeados de uma conta de domínio do Windows, você deve usar o nome de logon de usuário de versões anteriores ao Windows 2000 no formato [\<domainName>\\<login_name>]. Você não pode usar um UPN no formato login_name@DomainName. Para obter um exemplo, consulte o exemplo D posteriormente neste artigo. Os logons de autenticação são do tipo **sysname** e devem estar em conformidade com as regras para [Identificadores](../../relational-databases/databases/database-identifiers.md) e não podem conter um '**\\**'. Os logons do Windows podem conter um '**\\**'. Logons baseados em usuários do Active Directory estão limitados a nomes de menos de 21 caracteres. 
 
-PASSWORD **='***password***'* Aplica-se apenas a logons do SQL Server. Especifica a senha do logon que está sendo criado. Use uma senha forte. Para obter mais informações, consulte [Senhas fortes](../../relational-databases/security/strong-passwords.md) e [Política de senha](../../relational-databases/security/password-policy.md). Começando com o SQL Server 2012 (11.x), informações de senha armazenadas são calculadas usando SHA-512 da senha com valor de sal. 
+PASSWORD **='**_password_**'* Aplica-se apenas a logons do SQL Server. Especifica a senha do logon que está sendo criado. Use uma senha forte. Para obter mais informações, consulte [Senhas fortes](../../relational-databases/security/strong-passwords.md) e [Política de senha](../../relational-databases/security/password-policy.md). Começando com o SQL Server 2012 (11.x), informações de senha armazenadas são calculadas usando SHA-512 da senha com valor de sal. 
   
 As senhas diferenciam maiúsculas de minúsculas. As senhas sempre devem ter pelo menos 8 caracteres e não podem exceder 128 caracteres. Elas podem incluir caracteres de a-z, A-Z, 0-9, e a maioria dos caracteres não alfanuméricos. As senhas não podem conter aspas simples nem o *login_name*. 
   
