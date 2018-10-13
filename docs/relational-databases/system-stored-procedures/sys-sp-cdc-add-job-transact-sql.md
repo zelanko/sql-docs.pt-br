@@ -20,12 +20,12 @@ ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 544f6d9f8610ff9845df4c417d880fd88c4c180c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 930ae56634ae6bee70ceca750522aa90a3ed159d
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812095"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168777"
 ---
 # <a name="sysspcdcaddjob-transact-sql"></a>sys.sp_cdc_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@job_type=** ] **'***job_type***'**  
+ [  **@job_type=** ] **'**_trabalho\_tipo_**'**  
  Tipo de trabalho a adicionar. *job_type* está **nvarchar (20)** e não pode ser NULL. As entradas válidas são **'capture'** e **'cleanup'**.  
   
  [  **@start_job=** ] *start_job*  
@@ -60,12 +60,12 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  *max_trans* é válido somente para trabalhos de captura.  
   
- [ **@maxscans** ] **= * * * max_scans*  
+ [ **@maxscans** ] **=** _max\_examina_  
  O número máximo de ciclos de exame a executar para extrair todas as linhas do log. *max_scans* está **int** com um padrão de 10.  
   
  *max_scan* é válido somente para trabalhos de captura.  
   
- [ **@continuous** ] **= * * * contínua*  
+ [ **@continuous** ] **=** _contínua_  
  Indica se o trabalho de captura deve ser executado continuamente (1) ou apenas uma vez (0). *contínua* está **bit** com um padrão de 1.  
   
  Quando *contínua* = 1, o [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md) trabalho examina o log e processa até (*max_trans* \* *max_scans*) transações. Ele, em seguida, aguardará o número de segundos especificado no *polling_interval* antes de iniciar a próxima verificação de log.  
@@ -74,17 +74,17 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  *contínua* é válido somente para trabalhos de captura.  
   
- [ **@pollinginterval** ] **= * * * polling_interval*  
+ [ **@pollinginterval** ] **=** _sondagem\_intervalo_  
  Número de segundos entre ciclos de exame de log. *polling_interval* está **bigint** com um padrão de 5.  
   
  *polling_interval* é válido somente para captura de trabalhos quando *contínua* é definido como 1. Se especificado, o valor não pode ser negativo nem exceder 24 horas. Se um valor 0 estiver especificado, não haverá espera entre os exames de log.  
   
- [ **@retention** ] **= * * * retenção*  
+ [ **@retention** ] **=** _retenção_  
  O número de minutos que as linhas de alteração de dados serão retidas em tabelas de alteração. *retenção* está **bigint** com um padrão de 4320 (72 horas). O valor máximo é 52494800 (100 anos). Se especificado, o valor deve ser um inteiro positivo.  
   
  *retenção* é válido somente para trabalhos de limpeza.  
   
- [  **@threshold =** ] **'***delete_threshold***'**  
+ [  **@threshold =** ] **'**_excluir\_limite_**'**  
  O número máximo de entradas de exclusão que podem ser excluídas com o uso de uma única instrução na limpeza. *delete_threshold* está **bigint** com um padrão de 5000.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  
@@ -98,7 +98,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  Como os trabalhos de limpeza e captura são criados por padrão, este procedimento armazenado será necessário somente quando um trabalho tiver sido explicitamente encerrado e tiver de ser recriado.  
   
- É o nome do trabalho **cdc. ***< database_name >*** CleanUp** ou **cdc. ***< database_name >*** Capture**, onde *< database_name >* é o nome do banco de dados atual. Se um trabalho com o mesmo nome já existir, o nome é anexado com um ponto (**.**) seguido por um identificador exclusivo, por exemplo: **cdc. AdventureWorks_capture. A1ACBDED-13FC-428C-8302-10100EF74F52**.  
+ É o nome do trabalho **cdc.**  _\<banco de dados\_nome\>_**\_limpeza** ou **cdc.**  _\<banco de dados\_nome\>_**\_capturar**, onde *< database_name >* é o nome do banco de dados atual. Se um trabalho com o mesmo nome já existir, o nome é anexado com um ponto (**.**) seguido por um identificador exclusivo, por exemplo: **cdc. AdventureWorks_capture. A1ACBDED-13FC-428C-8302-10100EF74F52**.  
   
  Para exibir a configuração atual de um trabalho de limpeza ou captura, use [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md). Para alterar a configuração de um trabalho, use [sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md).  
   

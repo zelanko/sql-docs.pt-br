@@ -10,24 +10,24 @@ ms.assetid: 0186b7f2-cead-4203-8360-b6890f37cde8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ba04ced0358af468818bb755b1f3f2e9e14e0f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bea792099543df1cf33bf98b256f7dbc3f39c23c
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192186"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120373"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>Extensões do AdventureWorks para demonstrar OLTP na memória
     
 ## <a name="overview"></a>Visão geral  
- Esta amostra apresenta a nova [!INCLUDE[hek_2](../includes/hek-2-md.md)] recurso, que é parte de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Ele mostra as novas tabelas com otimização de memória e procedimentos armazenados compilados nativamente e pode ser usado para demonstrar os benefícios de desempenho do [!INCLUDE[hek_2](../includes/hek-2-md.md)].  
+ Este exemplo apresenta o novo recurso [!INCLUDE[hek_2](../includes/hek-2-md.md)], que faz parte do [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Ele mostra as novas tabelas com otimização de memória e os procedimentos armazenados compilados nativamente, e pode ser usado para demonstrar os benefícios de desempenho do [!INCLUDE[hek_2](../includes/hek-2-md.md)].  
   
 > [!NOTE]  
 >  Para exibir esse tópico para o SQL Server 2016, consulte [Extensões do AdventureWorks para demonstrar OLTP na memória](https://msdn.microsoft.com/en-US/library/mt465764.aspx)  
   
  O exemplo a seguir migra 5 tabelas do banco de dados do AdventureWorks para a otimização de memória, e inclui uma carga de trabalho de demonstração para o processamento de pedidos de vendas. Você pode usar essa carga de trabalho de demonstração para consultar o benefício de desempenho em usar [!INCLUDE[hek_2](../includes/hek-2-md.md)] no servidor.  
   
- Na descrição do exemplo, abordamos as compensações que foram feitas na migração as tabelas a serem [!INCLUDE[hek_2](../includes/hek-2-md.md)] levar em conta os recursos que (ainda) não tem suporte para tabelas com otimização de memória no [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
+ Na descrição do exemplo, abordamos as compensações que foram feitas na migração das tabelas para o [!INCLUDE[hek_2](../includes/hek-2-md.md)] , para levar em consideração os recursos que (ainda) não têm suporte para tabelas com otimização de memória no [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
  A documentação do exemplo foi estruturada como segue:  
   
@@ -87,9 +87,9 @@ ms.locfileid: "48192186"
     ALTER AUTHORIZATION ON DATABASE::AdventureWorks2014 TO [<NewLogin>]  
     ```  
   
-5.  Baixe o script de exemplo '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample. SQL ' de [exemplo SQL Server 2014 RTM In-Memory OLTP](http://go.microsoft.com/fwlink/?LinkID=396372) em uma pasta local.  
+5.  Baixe o exemplo de script ‘[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql’ de [Exemplo de OLTP na memória do SQL Server 2014 RTM](http://go.microsoft.com/fwlink/?LinkID=396372) em uma pasta local.  
   
-6.  Atualize o valor da variável ‘checkpoint_files_location’ no script '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql', para apontar para o local de destino dos arquivos de ponto de verificação de [!INCLUDE[hek_2](../includes/hek-2-md.md)]. Os arquivos de ponto de verificação devem ser colocados em uma unidade com bom desempenho sequencial de E/S.  
+6.  Atualize o valor da variável ‘checkpoint_files_location’ no script '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] Sample.sql', para apontar para o local de destino dos arquivos de ponto de verificação de [!INCLUDE[hek_2](../includes/hek-2-md.md)] . Os arquivos de ponto de verificação devem ser colocados em uma unidade com bom desempenho sequencial de E/S.  
   
      Atualize o nome da variável 'database_name' para apontar para o banco de dados do AdventureWorks2014.  
   
@@ -188,7 +188,7 @@ ms.locfileid: "48192186"
   
 -   *Colunas computadas* - as colunas computadas SalesOrderNumber e TotalDue são omitidas, pois o [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] não oferece suporte a colunas computadas em tabelas com otimização de memória. A nova exibição Sales.vSalesOrderHeader_extended_inmem reflete as colunas SalesOrderNumber e TotalDue. Por disso, você pode usar essa exibição se essas colunas são necessárias.  
   
--   *Restrições de chave estrangeira* não há suporte para tabelas com otimização de memória no [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Além disso, SalesOrderHeader_inmem é uma tabela ativa na carga de trabalho de exemplo, e as restrições de chaves estrangeiras exigem processamento adicional para todas as operações DML, pois são necessárias pesquisas em todas as outras tabelas referenciadas nessas restrições. Consequentemente, a suposição é a de que o aplicativo garante a integridade referencial, e a integridade referencial não é validada quando linhas são inseridas. A integridade referencial dos dados nessa tabela pode ser verificada usando o procedimento armazenado dbo.usp_ValidateIntegrity, através do seguinte script:  
+-   As*restrições de chave estrangeira* não têm suporte para tabelas com otimização de memória no [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Além disso, SalesOrderHeader_inmem é uma tabela ativa na carga de trabalho de exemplo, e as restrições de chaves estrangeiras exigem processamento adicional para todas as operações DML, pois são necessárias pesquisas em todas as outras tabelas referenciadas nessas restrições. Consequentemente, a suposição é a de que o aplicativo garante a integridade referencial, e a integridade referencial não é validada quando linhas são inseridas. A integridade referencial dos dados nessa tabela pode ser verificada usando o procedimento armazenado dbo.usp_ValidateIntegrity, através do seguinte script:  
   
     ```  
     DECLARE @o int = object_id(N'Sales.SalesOrderHeader_inmem')  
@@ -223,7 +223,7 @@ ms.locfileid: "48192186"
   
 -   *UDTs de alias* – a tabela original usa dados definidos pelo usuário do tipo dbo.Flag, que equivalem ao tipo de dados bit do sistema. A tabela migrada usa o tipo de dados bit.  
   
--   *Agrupamento BIN2* – as colunas Name e ProductNumber são incluídas em chaves de índice e devem ter agrupamentos BIN2 no [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Aqui, a suposição é a de que o aplicativo não se baseia em especificações de agrupamento, como a não diferenciação de maiúsculas e minúsculas.  
+-   *Agrupamento BIN2* – As colunas Name e ProductNumber são incluídas em chaves de índice e devem ter agrupamentos BIN2 no [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Aqui, a suposição é a de que o aplicativo não se baseia em especificações de agrupamento, como a não diferenciação de maiúsculas e minúsculas.  
   
 -   *Rowguid* - a coluna rowguid é omitida. Para obter detalhes, consulte a descrição da tabela SalesOrderHeader.  
   
@@ -412,7 +412,7 @@ ms.locfileid: "48192186"
   
 -   -S nome da instância do [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à qual se conectar  
   
--   -E use a autenticação do Windows para conexão (padrão); se você usar a autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , use as opções –U e –P para especificar o nome de usuário e a senha, respectivamente  
+-   -E use a autenticação do Windows para conexão (padrão); se você usar a autenticação do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], use as opções –U e –P para especificar o nome de usuário e a senha, respectivamente  
   
 -   -d nome do banco de dados; para este exemplo, AdventureWorks2014  
   
@@ -647,7 +647,7 @@ WHERE t.type='U'
 |SpecialOfferProduct_inmem|64|3712|  
 |DemoSalesOrderHeaderSeed|1984|5504|  
   
- Podemos ver um total de aproximadamente 6,5 GB de dados. Observe que o tamanho dos índices nas tabelas SalesOrderHeader_inmem e SalesOrderDetail_inmem equivale ao tamanho dos índices antes de inserir os pedidos de vendas. O tamanho do índice não foi alterado porque ambas as tabelas estão usando índices de hash, e os índices de hash são estáticos.  
+ Podemos ver um total de aproximadamente 6,5 GB de dados. Observe que o tamanho dos índices em tabelas SalesOrderHeader_inmem e SalesOrderDetail_inmem é igual ao tamanho dos índices antes de inserir os pedidos de vendas. O tamanho do índice não foi alterado porque ambas as tabelas estão usando índices de hash, e os índices de hash são estáticos.  
   
 #### <a name="after-demo-reset"></a>Após a redefinição de demonstração  
  O procedimento armazenado Demo.usp_DemoReset pode ser usado para redefinir a demonstração. Ele exclui os dados nas tabelas SalesOrderHeader_inmem e SalesOrderDetail_inmem, e repropaga os dados das tabelas originais SalesOrderHeader e SalesOrderDetail.  

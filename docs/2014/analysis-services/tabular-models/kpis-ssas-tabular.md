@@ -11,12 +11,12 @@ ms.assetid: a0524602-5239-45a7-8c44-2477302a3637
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 596fc7d8ebdbdac3795920948b5082a0e066ba0d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 142cdef210c541fb1394b84c8297823f36358ea0
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104616"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906056"
 ---
 # <a name="kpis-ssas-tabular"></a>KPIs (SSAS tabular)
   Um *KPI* (indicador chave de desempenho), em um modelo de tabela, é usado para medir o desempenho de um valor, definido por uma medida *Base*, em relação a um valor de *Destino*, também definido por uma medida ou por um valor absoluto. Este tópico oferece aos autores de modelo de tabela uma compreensão básica de KPIs em um modelo de tabela.  
@@ -46,7 +46,7 @@ ms.locfileid: "48104616"
  Um limite de Status é definido pelo intervalo entre um limite baixo e alto ou por um valor fixo. O limite de status é exibido com um gráfico para ajudar usuários a determinarem facilmente o status do Valor base comparado com o Valor de destino.  
   
 ##  <a name="bkmk_example"></a> Exemplo  
- A gerente de vendas da Adventure Works quer criar uma Tabela Dinâmica que possa ser usada para exibir rapidamente se os funcionários de vendas estão atingindo suas cotas de vendas para um determinado período (ano). Para cada funcionário de vendas, ela deseja que a Tabela Dinâmica exiba o valor de vendas real em dólares, o valor da cota de vendas em dólares e uma exibição gráfica simples mostrando o status de cada funcionário de vendas, se está abaixo, acima ou na cota. Ela deseja poder segmentar os dados por ano.  
+ A gerente de vendas da Adventure Works quer criar uma Tabela Dinâmica que possa ser usada para exibir rapidamente se os funcionários de vendas estão atingindo suas cotas de vendas para um determinado período (ano). Para cada funcionário de vendas, ela deseja da tabela dinâmica para exibir o valor de vendas real em dólares, o valor da cota de vendas em dólares e uma exibição gráfica simples mostrando o status do se é ou não cada funcionário de vendas abaixo, acima ou suas cotas de vendas. Ela deseja poder segmentar os dados por ano.  
   
  Para fazer isto, o gerente de vendas pede a ajuda do desenvolvedor de solução de BI da organização para adicionar um KPI de Vendas ao Modelo Tabular do AdventureWorks. A gerente de vendas em seguida usará o [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] para conectar-se ao Modelo tabular do Adventure Works como uma fonte de dados e criará uma Tabela Dinâmica com os campos (medidas e KPI) e segmentações de dados para analisar se a força de vendas está atingindo as cotas.  
   
@@ -84,10 +84,10 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
   
 |Tópico|Description|  
 |-----------|-----------------|  
-|[Criar e gerenciar KPIs &#40;Tabular do SSAS&#41;](kpis-ssas-tabular.md)|Descreve como criar um KPI com uma medida Base, uma medida de Destino e limites de status.|  
+|[Criar e gerenciar KPIs &#40;SSAS de Tabela&#41;](kpis-ssas-tabular.md)|Descreve como criar um KPI com uma medida Base, uma medida de Destino e limites de status.|  
   
 ## <a name="see-also"></a>Consulte também  
- [Medidas &#40;Tabular do SSAS&#41;](measures-ssas-tabular.md)   
- [Perspectivas &#40;Tabular do SSAS&#41;](perspectives-ssas-tabular.md)  
+ [Medidas &#40;SSAS de Tabela&#41;](measures-ssas-tabular.md)   
+ [Perspectivas &#40;SSAS de Tabela&#41;](perspectives-ssas-tabular.md)  
   
   

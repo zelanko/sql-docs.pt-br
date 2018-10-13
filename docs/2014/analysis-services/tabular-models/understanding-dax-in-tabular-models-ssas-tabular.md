@@ -11,12 +11,12 @@ ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7ecc95a89d3db446122d1da4e9701d1555028fe5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4bc835d09f02e170c3b5595495eb6554c1319df5
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136016"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906376"
 ---
 # <a name="understanding-dax-in-tabular-models-ssas-tabular"></a>Entendendo DAX em modelos de tabela (SSAS tabular)
   DAX é a linguagem de fórmula usada para criar cálculos personalizados no [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para pastas de trabalho do Microsoft Excel e projetos de modelo de tabela do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . As fórmulas DAX incluem funções, operadores e valores para executar cálculos avançados em dados em tabelas e colunas.  
@@ -91,7 +91,7 @@ ms.locfileid: "48136016"
   
  Os filtros de linha aplicam-se às linhas especificadas e também a linhas relacionadas. Quando uma tabela tiver várias relações, os filtros aplicam segurança para a relação que está ativa. Os filtros de linha serão intersectados com outros filtros de linha definidos para tabelas relacionadas.  
   
- Para obter mais informações, consulte [Roles &#40;SSAS Tabular&#41;](roles-ssas-tabular.md).  
+ Para obter mais informações, consulte [Funções &#40;SSAS de Tabela&#41;](roles-ssas-tabular.md).  
   
 ##  <a name="bkmk_DAX_datatypes"></a> Tipos de dados DAX  
  É possível importar para um modelo de diversas fontes de dados diferentes que podem dar suporte a diferentes tipos de dados. Quando você importa os dados em um modelo, os dados são convertidos em um dos tipos de dados de modelo de tabela. Quando os dados de modelo são usados em um cálculo, os dados são convertidos em um tipo de dados DAX para a duração e a saída do cálculo. Quando você cria uma fórmula DAX, os termos usados na fórmula determinarão o tipo de dados de valor retornado automaticamente.  
@@ -182,7 +182,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 |`[Date]`|Especifica a coluna Data na tabela de Data. As colunas estão entre colchetes.|  
 |`,`||  
 |`STARTOFQUARTER`|A função STARTOFQUARTER retorna a data do início do trimestre.|  
-|`LASTDATE`|A função LASTDATE retorna a última data do início do trimestre.|  
+|`LASTDATE`|A função LASTDATE retorna a última data do trimestre.|  
 |`'Date'`|Especifica a tabela de Data.|  
 |`[Date]`|Especifica a coluna Data na tabela de Data.|  
 |`,`||  
@@ -219,7 +219,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 -   As funções do DAX incluem uma variedade de funções de *inteligência de tempo* . Estas funções permitem definir ou selecionar intervalos de datas e executar cálculos dinâmicos com base nestas datas ou intervalos. Por exemplo, você pode comparar somas em períodos paralelos.  
   
 ### <a name="date-and-time-functions"></a>Funções de data e hora  
- As funções de data e hora na DAX são semelhantes às funções de data e hora do Microsoft Excel. No entanto, as funções DAX se baseiam os `datetime` tipos de dados usados pelo Microsoft SQL Server. Para obter mais informações, consulte [funções de data e hora &#40;DAX&#41;](https://msdn.microsoft.com/library/ee634786(v=sql.120).aspx).  
+ As funções de data e hora na DAX são semelhantes às funções de data e hora do Microsoft Excel. No entanto, as funções DAX se baseiam nos tipos de dados `datetime` usados pelo Microsoft SQL Server. Para obter mais informações, consulte [funções de data e hora &#40;DAX&#41;](https://msdn.microsoft.com/library/ee634786(v=sql.120).aspx).  
   
 ### <a name="filter-functions"></a>Funções de filtro  
  As funções de filtro em DAX retornam tipos de dados específicos, pesquisar valores em tabelas relacionadas e filtrar pelos valores relacionados. As funções de pesquisa funcionam com tabelas e relações, assim como um banco de dados. As funções de filtragem permitem manipular o contexto de dados para criar cálculos dinâmicos. Para obter mais informações, consulte [funções de filtro &#40;DAX&#41;](https://msdn.microsoft.com/library/ee634807(v=sql.120).aspx).  
@@ -332,7 +332,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
 ##### <a name="examples-of-context-in-formulas"></a>Exemplos de contexto em fórmulas  
   
-1.  O [função RELATED](https://msdn.microsoft.com/library/ee634202(v=sql.120).aspx) expande o contexto da linha atual para incluir valores em uma coluna relacionada. Isso permite a execução de pesquisas. O exemplo neste tópico ilustra a interação entre a filtragem e o contexto de linha.  
+1.  A função [RELATED Function](https://msdn.microsoft.com/library/ee634202(v=sql.120).aspx) expande o contexto da linha atual para incluir valores em uma coluna relacionada. Isso permite a execução de pesquisas. O exemplo neste tópico ilustra a interação entre a filtragem e o contexto de linha.  
   
 2.  O [função de filtro](https://msdn.microsoft.com/library/ee634966(v=sql.120).aspx) função permite que você especifique as linhas a serem incluídas no contexto atual. Os exemplos neste tópico também ilustram como inserir filtros em outras funções que executam agregações.  
   
@@ -393,7 +393,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  O processamento e o recálculo não têm efeito nas fórmulas de filtro de linha, a menos que o resultado de um recálculo retorne um valor diferente, tornando a linha consultável ou não consultável pelos membros da função.  
   
- Para obter mais informações, consulte [Processar dados &#40;SSAS tabular&#41;](../process-data-ssas-tabular.md).  
+ Para obter mais informações, consulte [Processar dados &#40;SSAS de Tabela&#41;](../process-data-ssas-tabular.md).  
   
 ##  <a name="bkmk_troubleshoot"></a> Solucionando problemas de erros em fórmulas  
  Se você receber um erro ao definir uma fórmula, talvez a fórmula contenha um *erro sintático*, um *erro semântico*ou *erro de cálculo*.  
@@ -417,16 +417,16 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 ##  <a name="bkmk_addional_resources"></a> Recursos adicionais  
  A [Modelagem Tabular &#40;Tutorial do Adventure Works&#41;](../tabular-modeling-adventure-works-tutorial.md) fornece instruções passo a passo sobre como criar um modelo de tabela que inclui muitos cálculos nas colunas calculadas, medidas e filtros de linha. Para a maioria das fórmulas, uma descrição sobre o que a fórmula deve fazer é fornecida.  
   
- O [Analysis Services e o Blog da equipe do PowerPivot](http://go.microsoft.com/fwlink/?LinkID=220949&clcid=0x409) fornece informações, dicas, notícias e anúncios sobre [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] e o PowerPivot.  
+ O [Blog da equipe do Analysis Services e PowerPivot](http://go.microsoft.com/fwlink/?LinkID=220949&clcid=0x409) fornece informações, dicas, notícias e anúncios sobre o [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] e o PowerPivot.  
   
  O [Central de Recursos do DAX](http://go.microsoft.com/fwlink/?LinkID=220966&clcid=0x409) fornece informações internas e externas sobre o DAX, incluindo várias soluções DAX enviadas por profissionais de Business Intelligence líderes.  
   
 ## <a name="see-also"></a>Consulte também  
  [Expressões de análise de dados &#40;DAX&#41; referência](https://msdn.microsoft.com/library/gg413422(v=sql.120).aspx)   
- [Medidas &#40;Tabular do SSAS&#41;](measures-ssas-tabular.md)   
- [Colunas calculadas &#40;Tabular do SSAS&#41;](ssas-calculated-columns.md)   
- [As funções &#40;Tabular do SSAS&#41;](roles-ssas-tabular.md)   
- [KPIs &#40;Tabular do SSAS&#41;](kpis-ssas-tabular.md)   
- [Fontes de dados com suporte &#40;SSAS Tabular&#41;](data-sources-supported-ssas-tabular.md)  
+ [Medidas &#40;SSAS de Tabela&#41;](measures-ssas-tabular.md)   
+ [Colunas calculadas &#40;SSAS de Tabela&#41;](ssas-calculated-columns.md)   
+ [Funções &#40;SSAS de Tabela&#41;](roles-ssas-tabular.md)   
+ [KPIs &#40;SSAS de Tabela&#41;](kpis-ssas-tabular.md)   
+ [Fontes de dados com suporte &#40;SSAS de Tabela&#41;](data-sources-supported-ssas-tabular.md)  
   
   

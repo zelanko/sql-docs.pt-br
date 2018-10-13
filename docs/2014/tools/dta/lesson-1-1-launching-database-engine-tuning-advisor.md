@@ -14,12 +14,12 @@ ms.assetid: 4abc0e10-96fd-4e46-93d6-d7ee03eec844
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 70f3a447b4398bbd1141a357ea878966d5a443ac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ad6b28f2e133abcc872186adc57fdd422687ddc5
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130606"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906246"
 ---
 # <a name="launching-database-engine-tuning-advisor"></a>Iniciando o Orientador de Otimização do Mecanismo de Banco de Dados
   Para começar, abra a GUI (interface gráfica do usuário) do Orientador de Otimização do Mecanismo de Banco de Dados. Ao usá-lo pela primeira vez, um membro da função de servidor fixa **sysadmin** deve iniciar o Orientador de Otimização do Mecanismo de Banco de Dados para inicializar o aplicativo. Após a inicialização, os membros da função de banco de dados fixa **db_owner** podem usar o Orientador de Otimização do Mecanismo de Banco de Dados para ajustar seus bancos de dados. Para obter mais informações sobre como inicializar o Orientador de Otimização do Mecanismo de Banco de Dados, consulte [Iniciar e usar o Orientador de Otimização do Mecanismo de Banco de Dados](../../relational-databases/performance/database-engine-tuning-advisor.md).  
@@ -35,7 +35,7 @@ ms.locfileid: "48130606"
  ![Janela de padrão do Orientador de otimização do mecanismo de banco de dados](media/defaultdtagui.gif "janela padrão do Orientador de otimização do mecanismo de banco de dados")  
   
 > [!NOTE]  
->  A guia e a caixa **Nome da Sessão** exibem o nome do computador e a instância à qual você está conectado. A guia e a caixa também exibem a data e a hora atuais.  
+>  Na guia e **nome da sessão** caixa Exibir o nome do seu computador e a instância que você está conectado. A guia e a caixa também exibem a data e a hora atuais.  
   
  Dois painéis principais são exibidos na GUI do Orientador de Otimização do Mecanismo de Banco de Dados quando ele é aberto pela primeira vez.  
   

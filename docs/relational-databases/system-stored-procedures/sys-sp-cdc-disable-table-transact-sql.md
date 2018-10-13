@@ -22,12 +22,12 @@ ms.assetid: da2156c0-504e-4d76-b9a0-4448becf9bda
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 556d6f5a7513f08867c73ba26369861d9e960688
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b797301b5b778bea34ad1552152e7e3e147dde37
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810304"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169166"
 ---
 # <a name="sysspcdcdisabletable-transact-sql"></a>sys.sp_cdc_disable_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,17 +47,17 @@ sys.sp_cdc_disable_table
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@source_schema=** ] **'***source_schema***'**  
+ [  **@source_schema=** ] **'**_origem\_esquema_**'**  
  É o nome do esquema no qual a tabela de origem está contida. *source_schema* está **sysname**, sem padrão, e não pode ser NULL.  
   
  *source_schema* deve existir no banco de dados atual.  
   
- [  **@source_name=** ] **'***source_name***'**  
+ [  **@source_name=** ] **'**_origem\_nome_**'**  
  É o nome da tabela de origem da qual desabilitar a captura de dados de alteração. *source_name* está **sysname**, sem padrão, e não pode ser NULL.  
   
  *source_name* deve existir no banco de dados atual.  
   
- [  **@capture_instance=** ] **'***capture_instance***'** | **'** todos os **'**  
+ [  **@capture_instance=** ] **'**_capturar\_instância_**'** | **'** todos os **'**  
  É o nome da instância de captura a ser desabilitada na tabela de origem especificada. *capture_instance* está **sysname** e não pode ser NULL.  
   
  Quando 'all'é especificado, todas as instâncias de captura definidas para *source_name* estão desabilitados.  

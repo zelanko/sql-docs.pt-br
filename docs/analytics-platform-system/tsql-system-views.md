@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: a34cf2aca18febea578da0dfd78b492f48842d29
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: bfd449a51948f3a5b88c28f5034550fe81a7f406
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395016"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906136"
 ---
 # <a name="system-views-for-analytics-platform-system-parallel-data-warehouse"></a>Exibições do sistema para o Analytics Platform System Parallel Data Warehouse
 Exibições do sistema para análise Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
@@ -133,7 +133,7 @@ As DMVs a seguir são aplicáveis ao Parallel Data Warehouse, mas devem ser exec
 ## <a name="sql-server-dmvs-available-in-parallel-data-warehouse"></a>DMVs do SQL Server disponíveis no Parallel Data Warehouse
 Parallel Data Warehouse expõe muitas das exibições de gerenciamento dinâmico (DMVs) do SQL Server. Essas exibições, quando consultada no Parallel Data Warehouse, estão comunicando o estado dos bancos de dados do SQL Server em execução nas distribuições.
 
-Cada um desses DMV tem uma coluna específica, chamada pdw_node_id. Esse é o identificador de nó de computação. 
+Cada um desses DMV tem uma coluna específica, chamada pdw_node_id. Este é o identificador para o nó de computação. 
 
 > [!NOTE]
 > Para usar esses exibição, insira "pdw_nodes _" no nome, conforme mostrado na tabela a seguir.

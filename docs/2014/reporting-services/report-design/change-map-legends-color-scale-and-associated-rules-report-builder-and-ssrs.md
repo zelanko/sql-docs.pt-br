@@ -34,12 +34,12 @@ ms.assetid: a1d691b2-c5ae-420f-af60-b7c54a7385a4
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 292e2575ee4ddac47036eb9a38210522f31d49e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 99f2edaac2962fe2a11f70b0fea18f892ed740a5
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105346"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169256"
 ---
 # <a name="change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs"></a>Alterar legendas de mapa, escala de cores e regras associadas (Construtor de Relatórios e SSRS)
   Um mapa pode conter legendas de mapa, uma escala de cores e uma escala de distância. Essas partes de um mapa ajudam os usuários a interpretar a visualização de dados no mapa.  
@@ -61,7 +61,7 @@ ms.locfileid: "48105346"
   
 #### <a name="to-change-the-position-of-a-legend-relative-to-the-viewport"></a>Para alterar a posição de uma legenda em relação ao visor  
   
-1.  No modo de exibição de Design, clique com o botão direito do mouse na legenda e abra a página *\<report item>***Propriedades**.  
+1.  No modo Design, clique com botão direito na legenda e abra o  _\<relatório de item ->_**propriedades** página.  
   
 2.  Em **Posição**, clique no local que especifica onde exibir a legenda em relação ao visor.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "48105346"
   
 1.  No modo Design, clique no mapa até que o painel Mapa seja exibido.  
   
-2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em *\<map element type>***Regra de Cores**.  
+2.  Clique com botão direito na camada que tem os dados que você deseja e, em seguida, clique em  _\<tipo de elemento do mapa\>_**regra de cor**.  
   
 3.  Clique em **Legenda**.  
   
@@ -131,7 +131,7 @@ ms.locfileid: "48105346"
   
 1.  No modo Design, clique no mapa até que o painel Mapa seja exibido.  
   
-2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em *\<map element type>***Regra de Cores**.  
+2.  Clique com botão direito na camada que tem os dados que você deseja e, em seguida, clique em  _\<tipo de elemento do mapa\>_**regra de cor**.  
   
 3.  Clique em **Aplicar estilo do modelo**.  
   
@@ -147,7 +147,7 @@ ms.locfileid: "48105346"
   
 1.  No modo Design, clique no mapa até que o painel Mapa seja exibido.  
   
-2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em *\<map element type>***Regra de Cores**.  
+2.  Clique com botão direito na camada que tem os dados que você deseja e, em seguida, clique em  _\<tipo de elemento do mapa\>_**regra de cor**.  
   
 3.  Clique em **Visualizar dados usando a paleta de cores**.  
   
@@ -167,7 +167,7 @@ ms.locfileid: "48105346"
   
 1.  No modo Design, clique no mapa até que o painel Mapa seja exibido.  
   
-2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em *\<map element type>***Regra de Cores**.  
+2.  Clique com botão direito na camada que tem os dados que você deseja e, em seguida, clique em  _\<tipo de elemento do mapa\>_**regra de cor**.  
   
 3.  Clique em **Visualizar dados usando intervalos de cores**.  
   
@@ -191,7 +191,7 @@ ms.locfileid: "48105346"
   
 1.  No modo Design, clique no mapa até que o painel Mapa seja exibido.  
   
-2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em *\<map element type>***Regra de Cores**.  
+2.  Clique com botão direito na camada que tem os dados que você deseja e, em seguida, clique em  _\<tipo de elemento do mapa\>_**regra de cor**.  
   
 3.  Clique em **Visualizar dados usando cores personalizadas**.  
   
@@ -211,9 +211,9 @@ ms.locfileid: "48105346"
   
 1.  No modo Design, clique no mapa até que o painel Mapa seja exibido.  
   
-2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em *\<map element type>***Regra de Cores**.  
+2.  Clique com botão direito na camada que tem os dados que você deseja e, em seguida, clique em  _\<tipo de elemento do mapa\>_**regra de cor**.  
   
-3.  Selecione a opção **Visualizar dados usando** \<tipo de regra>. Para usar as opções de distribuição, você deve criar intervalos na página **Distribuição** com base nos dados analíticos associados à camada.  
+3.  Selecione o **visualizar dados usando** \<tipo de regra\> opção. Para usar as opções de distribuição, você deve criar intervalos na página **Distribuição** com base nos dados analíticos associados à camada.  
   
 4.  Clique em **Distribuição**.  
   
@@ -245,7 +245,7 @@ ms.locfileid: "48105346"
   
 1.  No modo Design, clique no mapa até que o painel Mapa seja exibido.  
   
-2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em *\<map element type>***Regra**.  
+2.  Clique com botão direito na camada que tem os dados que você deseja e, em seguida, clique em  _\<tipo de elemento do mapa\>_**regra**.  
   
 3.  Verifique se a opção **Visualizar dados usando** \<*tipo de regra*> está selecionada.  
   
@@ -268,7 +268,7 @@ ms.locfileid: "48105346"
   
 1.  No modo Design, clique no mapa até que o painel Mapa seja exibido.  
   
-2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em *\<map element type>***Regra de Cores**.  
+2.  Clique com botão direito na camada que tem os dados que você deseja e, em seguida, clique em  _\<tipo de elemento do mapa\>_**regra de cor**.  
   
 3.  Selecione a opção de regra de cor a ser usada. Para exibir itens em uma legenda do mapa ou escala de cores, você deve selecionar uma das opções de **Visualizar dados usando** \<tipo de regra>.  
   
@@ -291,7 +291,7 @@ ms.locfileid: "48105346"
   
 1.  No modo Design, clique no mapa até que o painel Mapa seja exibido.  
   
-2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em *\<map element type>***Regra**.  
+2.  Clique com botão direito na camada que tem os dados que você deseja e, em seguida, clique em  _\<tipo de elemento do mapa\>_**regra**.  
   
 3.  Clique em **Legenda**.  
   
@@ -306,7 +306,7 @@ ms.locfileid: "48105346"
   
 1.  No modo Design, clique no mapa até que o painel Mapa seja exibido.  
   
-2.  Clique com o botão direito do mouse na camada que tem os dados desejados e clique em *\<map element type>***Regra**.  
+2.  Clique com botão direito na camada que tem os dados que você deseja e, em seguida, clique em  _\<tipo de elemento do mapa\>_**regra**.  
   
 3.  Clique em **Legenda**.  
   

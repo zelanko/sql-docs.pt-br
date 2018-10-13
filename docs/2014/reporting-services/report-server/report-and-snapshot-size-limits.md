@@ -18,12 +18,12 @@ ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 964c6dace976f54e053947c301b3093de5aa921f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6e60abee965bd78dd25c5db053bfbb679b153e4d
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217946"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119322"
 ---
 # <a name="report-and-snapshot-size-limits"></a>Limites de tamanho do relatório e do instantâneo
   Os administradores que gerenciam uma implantação do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] podem usar as informações deste tópico para entender os limites de tamanho de relatório quando este é publicado em um servidor de relatório, renderizado em tempo de execução e salvo no sistema de arquivos. Este tópico também fornece uma orientação prática sobre como medir o tamanho de um banco de dados do servidor de relatório e descreve o efeito do tamanho do instantâneo no desempenho do servidor.  
@@ -35,7 +35,7 @@ ms.locfileid: "48217946"
   
  [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] impõe um limite máximo em arquivos postados para reduzir a ameaça de ataques de negação de serviço contra o servidor. Aumentar o valor do limite superior destorce algumas proteções fornecidas por esse limite. Aumente o valor somente se você tiver certeza de que o benefício de fazer isso supera qualquer risco de segurança adicional.  
   
- Lembre-se de que o valor definido para o elemento `maxRequestLength` deve ser maior que os limites de tamanho reais que você deseja impor. Você precisa aumentar o valor para dar conta do aumento inevitável no tamanho da solicitação HTTP que ocorre depois que todos os parâmetros são encapsulados em um envelope SOAP, e a codificação Base64 é aplicada a certos parâmetros, como o parâmetro Definition nos métodos <xref:ReportService2010.ReportingService2010.CreateReportEditSession%2A> e <xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A>. A codificação Base64 aumenta o tamanho dos dados originais em aproximadamente 33%. Consequentemente, o valor especificado para o `maxRequestLength` elemento precisa ser aproximadamente 33% maior que o tamanho real utilizável do item. Por exemplo, se você especificar um valor de 64 MB para `maxRequestLength`, na verdade poderá esperar o tamanho máximo de aproximadamente 48 MB para os arquivos de relatório que são postados no servidor de relatório.  
+ Lembre-se de que o valor definido para o elemento `maxRequestLength` deve ser maior que os limites de tamanho reais que você deseja impor. Você precisa aumentar o valor para dar conta do aumento inevitável no tamanho da solicitação HTTP que ocorre depois que todos os parâmetros são encapsulados em um envelope SOAP, e a codificação Base64 é aplicada a certos parâmetros, como o parâmetro Definition nos métodos <xref:ReportService2010.ReportingService2010.CreateReportEditSession%2A> e <xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A>. A codificação Base64 aumenta o tamanho dos dados originais em aproximadamente 33%. Consequentemente, o valor que você especifica para o elemento `maxRequestLength` precisa ser aproximadamente 33% maior que o tamanho real utilizável do item. Por exemplo, se você especificar um valor de 64 MB para `maxRequestLength`, na verdade poderá esperar o tamanho máximo de aproximadamente 48 MB para os arquivos de relatório que são postados no servidor de relatório.  
   
 ## <a name="report-size-in-memory"></a>Tamanho do relatório na memória  
  Quando você executa um relatório, o tamanho do relatório é igual à quantidade de dados retornados no relatório mais o tamanho do fluxo de saída. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não impõe um limite máximo para o tamanho de um relatório renderizado. A memória do sistema determina o limite superior do tamanho (por padrão, um servidor de relatório usa toda a memória configurada disponível ao renderizar um relatório), mas é possível especificar configurações para definir os limites e as diretrizes de gerenciamento da memória. Para obter mais informações, consulte [Configurar memória disponível para aplicativos do Servidor de Relatório](../report-server/configure-available-memory-for-report-server-applications.md).  
@@ -60,7 +60,7 @@ ms.locfileid: "48217946"
   
  Por padrão, os bancos de dados **reportserver** e **reportservertempdb** são definidos como autogrow. Embora o tamanho do banco de dados possa aumentar automaticamente, nunca é diminuído automaticamente. Se o banco de dados **reportserver** tiver um excesso de capacidade devido à exclusão de instantâneos, reduza-o manualmente para recuperar o espaço em disco. Similarmente, se **reportservertempdb** tiver aumentado para acomodar um volume extremamente grande de relatórios interativos, a alocação do espaço em disco permanecerá nessa configuração até ser diminuída.  
   
- Para medir o tamanho dos bancos de dados do servidor de relatório, execute os seguintes comandos [!INCLUDE[tsql](../../includes/tsql-md.md)] . O cálculo do tamanho total do banco de dados em intervalos regulares pode ajudar você a desenvolver estimativas razoáveis de como alocar espaço para o banco de dados do servidor de relatórios com o passar do tempo. As seguintes instruções medem a quantidade de espaço usada atualmente (as instruções supõem que você está usando os nomes padrão de banco de dados):  
+ Para medir o tamanho dos bancos de dados do servidor de relatório, execute os seguintes comandos [!INCLUDE[tsql](../../includes/tsql-md.md)] . O cálculo do tamanho total do banco de dados em intervalos regulares pode ajudar você a desenvolver estimativas razoáveis de como alocar espaço para o banco de dados do servidor de relatórios com o passar do tempo. As seguintes instruções medem a quantidade de espaço usada atualmente (as instruções pressupõem o uso de nomes de banco de dados padrão):  
   
 ```  
 USE ReportServer  
@@ -81,7 +81,7 @@ EXEC sp_spaceused
  A quantidade de instantâneos que são armazenados em um banco de dados do servidor de relatório não é, por si só, um fator de desempenho. Você pode armazenar um número grande de instantâneos sem afetar o desempenho do servidor. Os instantâneos podem ser mantidos indefinidamente. Porém, verifique se o histórico de relatórios pode ser configurado. Se o administrador de um servidor de relatório diminuir o limite do histórico, os relatórios do histórico que você pretende manter podem ser perdidos. Se você excluir o relatório, todo o histórico relacionado será excluído também.  
   
 ## <a name="see-also"></a>Consulte também  
- [Definir propriedades de processamento de relatórios](set-report-processing-properties.md)   
+ [Definir as propriedades do processamento de relatórios](set-report-processing-properties.md)   
  [Banco de dados do servidor de relatório &#40;modo nativo do SSRS&#41;](report-server-database-ssrs-native-mode.md)   
  [Processar relatórios grandes](process-large-reports.md)  
   

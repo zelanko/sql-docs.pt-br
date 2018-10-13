@@ -15,12 +15,12 @@ ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 02cdf6e739ff0feb8c60bec5b9bf3bc4a87ffb7a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9bfbae24063bfa3daa7fbafd1004125e826f6886
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065686"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851861"
 ---
 # <a name="install-reporting-services-native-mode-report-server"></a>Instalar o servidor de relatórios de modo nativo do Reporting Services
   Um servidor de relatório do modo nativo do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pode ser instalado do assistente de instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou da linha de comando. No assistente de instalação, você pode selecionar para 1) instalar arquivos e configurar o servidor com as configurações padrão ou 1) somente instalar os arquivos e o servidor não é configurado pelo assistente de instalação. Esse tópico analisa a *Configuração padrão para o modo nativo* em que a Instalação instala e configura uma instância do servidor de relatório. Depois que a Instalação for concluída, o servidor de relatório estará em execução e pronto para uso. Um servidor de relatório no modo nativo é executado como um servidor de aplicativo autônomo. O modo nativo é o padrão de servidor.  
@@ -52,7 +52,7 @@ ms.locfileid: "48065686"
   
 -   Os utilitários de linha de comando do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (rsconfig.exe, rskeymgmt.exe e rs.exe)  
   
- Essa opção não se aplica a recursos compartilhados, como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], que devem ser especificados como itens separados se você quiser instalá-los.  
+ Essa opção não é aplicada a recursos compartilhados, tais como o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], que devem ser especificados como itens separados se você desejar instalá-los.  
   
  A Instalação configura o seguinte para uma instalação de servidor de relatório no modo nativo:  
   
@@ -90,7 +90,7 @@ ms.locfileid: "48065686"
   
  Se o computador não atender a todos os requisitos de uma instalação padrão, você deverá instalar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no modo somente arquivos e usar o Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para configurá-lo após o término da instalação.  
   
- Não tente reconfigurar o computador apenas para permitir que uma instalação padrão continue. Isso poderia requerer várias horas de trabalho, eliminando efetivamente o benefício de economia de tempo que a opção de instalação fornece. A melhor solução é instalar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no modo somente arquivos e, em seguida, configure o servidor de relatório para usar valores específicos.  
+ Não tente reconfigurar o computador apenas para permitir que uma instalação padrão continue. Isso poderia requerer várias horas de trabalho, eliminando efetivamente o benefício de economia de tempo que a opção de instalação fornece. A melhor solução é instalar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no modo somente arquivos e configurar o servidor de relatório para usar valores específicos.  
   
 ##  <a name="bkmk_defaultURLreservations"></a> Reservas de URL padrão  
  As reservas de URL são compostas de um prefixo, nome de host, porta e diretório virtual:  
@@ -121,11 +121,11 @@ ms.locfileid: "48065686"
   
     -   **Nativo do Reporting Services**.  
   
-    -   **Ferramentas de gerenciamento – Básico**. As ferramentas de gerenciamento não são necessárias, mas são recomendadas a menos que você tenha alguma outra instalação das ferramentas de gerenciamento. A opção de configuração padrão resultará em um servidor de relatório funcional, mas você talvez queira alterar as opções de configuração no futuro. Algumas opções como 'Meus relatórios' são gerenciadas por meio de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]  
+    -   **Ferramentas de gerenciamento – Básico**. As ferramentas de gerenciamento não são necessárias, mas são recomendadas a menos que você tenha alguma outra instalação das ferramentas de gerenciamento. A opção de configuração padrão resultará em um servidor de relatório está funcionando, mas você talvez queira alterar as opções de configuração em uma data posterior. Algumas opções como 'Meus Relatórios' são gerenciadas pelo [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]  
   
      ![Seleção do modo nativo do SSRS na seleção de recursos](../../../2014/sql-server/install/media/rs-setupfeatureselection-native-withcircles.gif "Seleção do modo nativo do SSRS na seleção de recursos")  
   
-3.  Se você planeja usar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] recurso de assinatura, em seguida, na **configuração do servidor** página, que você deseja verificar o SQL Server Agent está configurado para **automática** tipo de inicialização.  
+3.  Se você planejar usar o recurso de assinatura do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , na página **Configuração de Servidor** , verifique se o SQL Server Agent está configurado para o tipo de inicialização **Automático** .  
   
 4.  Na página **Configuração do Reporting Services** , selecione **Instalar e Configurar**.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "48065686"
   
     -   Abra o Gerenciador de Configurações do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e confirme que você pode conectar-se ao servidor de relatório.  
   
-    -   Abra seu navegador com privilégios administrativos e conecte-se ao Gerenciador de Relatórios do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], por exemplo `http://loclahost/Reports`.  
+    -   Abra seu navegador com privilégios administrativos e conecte-se ao Gerenciador de Relatórios do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , por exemplo `http://loclahost/Reports`.  
   
     -   Abra seu navegador com privilégios administrativos e conecte-se à página do servidor de relatórios do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Por exemplo,  `http://loclahost/ReportServer`  
   
@@ -161,10 +161,10 @@ SERVICE" /RSSVCSTARTUPTYPE="Manual" /RSINSTALLMODE="DefaultNativeMode"
  [Verificar uma instalação do Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)   
  [Configurar a conta de serviço do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Configurar as URLs do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Configurar uma Conexão de banco de dados do servidor de relatório &#40;Configuration Manager do SSRS&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Configurar uma conexão de banco de dados do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Instalação somente de arquivos &#40;Reporting Services&#41;](../../reporting-services/install-windows/files-only-installation-reporting-services.md)   
- [Inicializar um servidor de relatório &#40; Configuration Manager do SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
- [Configurar conexões SSL em um servidor de relatório do modo nativo](../security/configure-ssl-connections-on-a-native-mode-report-server.md)   
+ [Inicializar um servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
+ [Configurar conexões SSL em um servidor de relatórios de modo nativo](../security/configure-ssl-connections-on-a-native-mode-report-server.md)   
  [Configurar as URLs do servidor de relatório &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
  [Configurar contas de serviço e permissões do Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
  [Instalação de Início Rápido do SQL Server 2014](../../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)  

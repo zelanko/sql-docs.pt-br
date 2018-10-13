@@ -12,12 +12,12 @@ ms.assetid: 72daf008-f9ea-4077-b217-5048e7759d3e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5fe3e08d1d423afd6f54310dd3ba349c10534cf2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 864859365dac094377ab00cb6848f3fb7c3a81f7
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217876"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906216"
 ---
 # <a name="alert-properties-new-alert-response-page"></a>Alerta de propriedades do novo alerta (página resposta)
   Use esta página para especificar um trabalho que você quer executar e para obter uma lista de operadores a serem notificados em resposta a um alerta do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
@@ -51,7 +51,7 @@ ms.locfileid: "48217876"
  Exibe a caixa de diálogo **Novo Operador** que você pode usar para criar um operador novo.  
   
  **Exibir operador**  
- Exibe a caixa de diálogo **Propriedades** para o operador selecionado atualmente. Você pode exibir e modificar as propriedades do operador na caixa de diálogo **Propriedades do Operador** .  
+ Exibe a caixa de diálogo **Propriedades** para o operador selecionado atualmente. Você pode exibir e modificar as propriedades do operador na **propriedades do operador** caixa de diálogo.  
   
 ## <a name="see-also"></a>Consulte também  
  [Alerts](alerts.md)   

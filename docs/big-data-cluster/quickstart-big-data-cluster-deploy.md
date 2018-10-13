@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/01/2018
 ms.topic: quickstart
 ms.prod: sql
-ms.openlocfilehash: e44e6588cb58148c1474bc9e5ddda7527737ebba
-ms.sourcegitcommit: 8aecafdaaee615b4cd0a9889f5721b1c7b13e160
+ms.openlocfilehash: 5781b3acfd2262b3a3be540abb331839dfcc56c6
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48817984"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120453"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Início rápido: Implantar um cluster de big data do SQL Server no serviço de Kubernetes do Azure (AKS)
 
@@ -50,17 +50,12 @@ pip3 install --index-url https://private-repo.microsoft.com/python/ctp-2.0 mssql
 
 Definir variáveis de ambiente necessárias para a implantação de cluster de big data ligeiramente difere dependendo se você estiver usando o cliente Windows ou Linux/macOS.  Escolha as etapas a seguir dependendo de qual sistema operacional você está usando.
 
-> [!IMPORTANT]
-> Certifique-se de que encapsular as senhas entre aspas duplas se ele contiver caracteres especiais. Observe que os delimitadores de aspas duplas funcionam somente em comandos de bash.
->
-> Você pode definir a senha de variáveis de ambiente para que você quiser, mas certifique-se de que eles são suficientemente complexos e não usam o `!`, `&`, ou `‘` caracteres.
+Antes de continuar, observe as seguintes diretrizes importantes:
 
-[!IMPORTANT]
-O **SA** conta é um administrador do sistema na instância do SQL Server Master que é criada durante a instalação. Após a criação de seu contêiner do SQL Server, a variável de ambiente MSSQL_SA_PASSWORD especificada é detectável executando echo MSSQL_SA_PASSWORD $ no contêiner. Para fins de segurança, altere sua senha de SA, de acordo com práticas recomendadas documentadas [aqui](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password).
-
-
-> [!NOTE]
-> Para a versão do CTP 2.0 não altere as portas padrão.
+- Certifique-se de que encapsular as senhas entre aspas duplas se ele contiver caracteres especiais. Observe que os delimitadores de aspas duplas funcionam somente em comandos de bash.
+- Você pode definir a senha de variáveis de ambiente para que você quiser, mas certifique-se de que eles são suficientemente complexos e não usam o `!`, `&`, ou `‘` caracteres.
+- Na versão CTP 2.0, não altere as portas padrão.
+- O **SA** conta é um administrador do sistema na instância do SQL Server Master que é criada durante a instalação. Após a criação de seu contêiner do SQL Server, a variável de ambiente MSSQL_SA_PASSWORD especificada é detectável executando echo MSSQL_SA_PASSWORD $ no contêiner. Para fins de segurança, altere sua senha de SA, de acordo com práticas recomendadas documentadas [aqui](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password).
 
 Inicialize as variáveis de ambiente a seguir.  Eles são necessários para implantar um cluster de big data:
 
@@ -109,7 +104,7 @@ export DOCKER_PRIVATE_REGISTRY="1"
 > [!NOTE]
 > Durante a visualização pública limitada, credenciais do Docker para baixar as imagens de cluster de Big Data do SQL Server são fornecidas para cada cliente pela Microsoft. Para solicitar acesso, registre [aqui](https://aka.ms/eapsignup)e especifique seu interesse para tentar a clusters de grandes dados do SQL Server.
 
-## <a name="deploy-sql-server-big-data-cluster"></a>Implantar um CLuster de Big Data do SQL Server
+## <a name="deploy-a-big-data-cluster"></a>Implantar um cluster de big data
 
 Para implantar um cluster de big data SQL Server 2019 CTP 2.0 em seu cluster Kubernetes, execute o seguinte comando:
 
@@ -146,7 +141,7 @@ kubectl get svc service-proxy-lb -n <name of your cluster>
 > Você verá um aviso de segurança ao acessar a página da web, como estamos usando certificados gerados automaticamente SSL. Em futuras versões, fornecemos a capacidade de fornecer seus próprios certificados autoassinados.
  
 
-## <a name="connect-to-sql-server-master-instance-and-sql-server-big-data-cluster-hdfsspark-end-points"></a>Conectar-se a instância mestre do SQL Server e os pontos de extremidade HDFS/Spark do cluster de big data do SQL Server
+## <a name="connect-to-the-big-data-cluster"></a>Conectar-se para o cluster de big data
 
 Depois que o script de implantação foi concluída com êxito, você pode obter o endereço IP da instância mestre do SQL Server e os pontos de extremidade HDFS/Spark usando as etapas descritas abaixo. Todos os pontos de extremidade do cluster são exibidos na seção de pontos de extremidade de serviço no Portal de administração do Cluster também para facilitar a referência.
 
@@ -157,9 +152,9 @@ kubectl get svc service-master-pool-lb -n <name of your cluster>
 kubectl get svc service-security-lb -n <name of your cluster>
 ```
 
-Procure os **External-IP** valor que é atribuído aos serviços. Conectar-se à instância mestre do SQL Server usando o endereço IP para o `service-master-pool-lb` na porta 31433 (Ex:  **\<endereço ip\>, 31433**) e para o SQL Server grandes dados cluster ponto de extremidade usando o external-IP para o `service-security-lb` serviço.   Que dados grandes ponto de extremidade de cluster é onde você você pode interagir com o HDFS e Spark de enviar os trabalhos por meio do Knox.
+Procure os **External-IP** valor que é atribuído aos serviços. Conectar-se à instância mestre do SQL Server usando o endereço IP para o `service-master-pool-lb` na porta 31433 (Ex:  **\<endereço ip\>, 31433**) e para o SQL Server grandes dados cluster ponto de extremidade usando o external-IP para o `service-security-lb` serviço.   Que dados grandes ponto de extremidade de cluster é onde você pode interagir com o HDFS e enviar trabalhos do Spark por meio do Knox.
 
-# <a name="next-steps"></a>Próximas etapas
+## <a name="next-steps"></a>Próximas etapas
 
 Agora que o cluster de big data do SQL Server é implantado, experimente alguns dos novos recursos:
 

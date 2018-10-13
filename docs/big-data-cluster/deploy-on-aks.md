@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: ea1ab30f9b3b8ef77834a56b059b2a56de4467b5
-ms.sourcegitcommit: 448106b618fe243e418bbfc3daae7aee8d8553d2
+ms.openlocfilehash: 6c245365c231264f1aa56e2f1fad8ac17446ec5b
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48795881"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48877929"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-2019-ctp-20"></a>Configurar o serviço de Kubernetes do Azure para SQL Server 2019 CTP 2.0
 
@@ -24,7 +24,10 @@ Este artigo descreve as etapas para implantar o Kubernetes no AKS usando a CLI d
 
 ## <a name="prerequisites"></a>Prerequisites
 
-- Para um ambiente de AKS, o requisito mínimo de VM é pelo menos duas VMs de agente (além de mestre) tamanho mínimo Standard_DS3_V2. Os recursos mínimos necessários para cada VM são 4 CPUs e 14 GB de memória.
+- Para um ambiente de AKS, o requisito mínimo de VM é pelo menos duas VMs de agente (além de mestre) tamanho mínimo [Standard_DS3_v2](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-general#dsv2-series). Os recursos mínimos necessários para cada VM são 4 CPUs e 14 GB de memória.
+  
+   > [!NOTE]
+   > Se você planeja executar trabalhos de big data ou de vários aplicativos de Spark, o tamanho mínimo é [Standard_D8_v3](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-general#dv3-series-sup1sup), e os recursos mínimos necessários por VM são 8 CPUs e 32 GB de memória.
 
 - Nesta seção requer que você esteja executando a CLI do Azure versão 2.0.4 ou posterior. Se você precisar instalar ou atualizar, consulte [instalar o Azure CLI 2.0](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli). Executar `az --version` para localizar a versão, se necessário.
 
@@ -80,7 +83,7 @@ Um grupo de recursos do Azure é um grupo lógico no qual Azure recursos são im
     --kubernetes-version 1.10.7
     ```
 
-    Você pode aumentar ou diminuir a contagem de agentes padrão adicionando `--node-count <n>` para o az aks criar comando onde `<n>` é o número de nós de agente que você deseja ter.
+    Você pode aumentar ou diminuir a contagem de agentes padrão alterando o `--node-count <n>` onde `<n>` é o número de nós de agente que você deseja ter.
 
     Após alguns minutos, o comando for concluído e retorna informações formatadas em JSON sobre o cluster.
 

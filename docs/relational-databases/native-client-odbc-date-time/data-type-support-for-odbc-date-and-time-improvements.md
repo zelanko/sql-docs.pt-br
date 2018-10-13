@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b7fc0de4bf58368e888f3d7a73d07808df49211
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1a910fcac656bc70e974da5c3601288b1659bb57
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851444"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851801"
 ---
 # <a name="data-type-support-for-odbc-date-and-time-improvements"></a>Suporte a tipos de dados para aprimoramentos de data e hora do ODBC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -138,7 +138,7 @@ typedef struct tagSS_TIMESTAMPOFFSET_STRUCT {
 } SQL_SS_TIMESTAMPOFFSET_STRUCT;  
 ```  
   
- Se o **timezone_hour** for negativo, o **timezone_minute** deve ser negativo ou zero. Se o **timezone_hour** for positivo, o **timezone_minute** deve ser positivo ou zero. Se o **timezone_hour** for zero, o s**timezone_minute** pode ter qualquer valor no intervalo-59 por + 59.  
+ Se o **timezone_hour** for negativo, o **timezone_minute** deve ser negativo ou zero. Se o **timezone_hour** for positivo, o **timezone_minute** deve ser positivo ou zero. Se o **timezone_hour** for zero, o **timezone_minute** pode ter qualquer valor no intervalo-59 por + 59.  
   
 ## <a name="see-also"></a>Consulte também  
  [Aprimoramentos de data e hora &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  

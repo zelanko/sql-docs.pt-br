@@ -13,15 +13,15 @@ ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f8b839a64feb81a538f943d403733fee3772cce7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ecf61c3a073e43dc8ee5b385bf3d84a96d79332a
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116365"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119834"
 ---
 # <a name="specify-an-interval-of-change-data"></a>Especificar um intervalo de dados de alteração
-  No fluxo de controle de um pacote [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que realiza uma carga incremental de dados de alteração, a primeira tarefa serve para calcular os pontos de extremidade do intervalo de alteração. Esses pontos de extremidade são `datetime` valores e serão armazenados em variáveis de pacote para uso posteriormente no pacote.  
+  No fluxo de controle de um pacote [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que realiza uma carga incremental de dados de alteração, a primeira tarefa serve para calcular os pontos de extremidade do intervalo de alteração. Estes pontos de extremidade são valores `datetime` e são armazenados em variáveis do pacote para uso posterior.  
   
 > [!NOTE]  
 >  Para obter uma descrição do processo geral de criação do fluxo de controle, consulte [Change Data Capture &#40;SSIS&#41;](change-data-capture-ssis.md).  
@@ -35,44 +35,44 @@ ms.locfileid: "48116365"
   
 2.  Na janela **Variáveis** , criar as seguintes variáveis:  
   
-    1.  Crie uma variável com o `datetime` tipo de dados para guardar o ponto de partida para o intervalo.  
+    1.  Crie uma variável com o tipo de dados `datetime` para guardar o ponto inicial para o intervalo.  
   
          Este exemplo usa o nome de variável, ExtractStartTime.  
   
-    2.  Crie outra variável com o `datetime` tipo de dados para guardar o ponto final para o intervalo.  
+    2.  Crie outra variável com o tipo de dados `datetime` para guardar o ponto final para o intervalo.  
   
          Este exemplo usa o nome de variável, ExtractEndTime.  
   
  Ao se calcular os pontos de extremidade em um pacote mestre que executa vários pacotes filho, é possível usar as configurações de Variável de Pacote Pai para passar os valores destas variáveis para cada pacote filho. Para obter mais informações, consulte [Tarefa Executar Pacote](../control-flow/execute-package-task.md) e [Usar os valores de variáveis e parâmetros em um pacote filho](../use-the-values-of-variables-and-parameters-in-a-child-package.md).  
   
 ## <a name="calculate-a-starting-point-and-an-ending-point-for-change-data"></a>Calcule um Ponto Inicial e um Ponto Final para Dados de Alteração  
- Depois de definir as variáveis do pacote para os pontos de extremidade do intervalo, é possível calcular os valores reais para esses pontos de extremidade e mapear esses valores para as variáveis correspondentes. Devido a esses pontos de extremidade serem valores `datetime`, deve-se usar funções que podem calcular ou trabalhar com valores `datetime`. Os dois os [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] linguagem de expressão e Transact-SQL têm funções que funcionam com `datetime` valores:  
+ Depois de definir as variáveis do pacote para os pontos de extremidade do intervalo, é possível calcular os valores reais para esses pontos de extremidade e mapear esses valores para as variáveis correspondentes. Devido a esses pontos de extremidade serem valores `datetime`, deve-se usar funções que podem calcular ou trabalhar com valores `datetime`. A linguagem de expressão [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e a Transact-SQL têm funções que trabalham com valores `datetime`:  
   
- Funções na [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] linguagem de expressão que funcionam com `datetime` valores  
- -   [DATEADD &#40;expressão do SSIS&#41;](../expressions/dateadd-ssis-expression.md)  
+ Funções na linguagem de expressão [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que trabalham com valores `datetime`  
+ -   [DATEADD &#40;Expressão do SSIS&#41;](../expressions/dateadd-ssis-expression.md)  
   
--   [DATEDIFF &#40;expressão do SSIS&#41;](../expressions/datediff-ssis-expression.md)  
+-   [DATEDIFF &#40;Expressão do SSIS&#41;](../expressions/datediff-ssis-expression.md)  
   
--   [DATEPART &#40;expressão do SSIS&#41;](../expressions/datepart-ssis-expression.md)  
+-   [DATEPART &#40;Expressão do SSIS&#41;](../expressions/datepart-ssis-expression.md)  
   
--   [DIA &#40;expressão do SSIS&#41;](../expressions/day-ssis-expression.md)  
+-   [DAY &#40;Expressão do SSIS&#41;](../expressions/day-ssis-expression.md)  
   
--   [GETDATE &#40;expressão do SSIS&#41;](../expressions/getdate-ssis-expression.md)  
+-   [GETDATE &#40;Expressão do SSIS&#41;](../expressions/getdate-ssis-expression.md)  
   
--   [GETUTCDATE &#40;expressão do SSIS&#41;](../expressions/getutcdate-ssis-expression.md)  
+-   [GETUTCDATE &#40;Expressão do SSIS&#41;](../expressions/getutcdate-ssis-expression.md)  
   
--   [MÊS &#40;expressão do SSIS&#41;](../expressions/month-ssis-expression.md)  
+-   [MONTH &#40;Expressão do SSIS&#41;](../expressions/month-ssis-expression.md)  
   
--   [ANO &#40;expressão do SSIS&#41;](../expressions/year-ssis-expression.md)  
+-   [YEAR &#40;Expressão do SSIS&#41;](../expressions/year-ssis-expression.md)  
   
- Funções no Transact-SQL que funcionam com `datetime` valores  
+ Funções em Transact-SQL que trabalham com valores `datetime`  
  [Tipos de dados e funções de data e hora&#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql).  
   
  Antes de usar uma destas funções `datetime` para calcular os pontos de extremidade, deve-se determinar se o intervalo é fixo e se ocorre regularmente. Normalmente, você quer aplicar alterações que aconteceram em tabelas fonte para tabelas destino em um período regular. Por exemplo, você poderia querer aplicar essas alterações de hora em hora, diariamente, ou semanalmente.  
   
  Depois que você entender se seu intervalo de alteração é fixo ou é mais aleatório, você pode calcular os pontos de extremidade:  
   
--   **Calculando a data e hora inicial**. Usar a data e hora final da carga anterior como a data e hora inicial atual. Se você usar um intervalo fixo para cargas incrementais, você pode calcular esse valor usando o `datetime` funções do Transact-SQL ou do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] linguagem de expressão. Caso contrário, talvez seja preciso manter os pontos de extremidade entre execuções e usar uma tarefa Execute SQL ou uma tarefa Script para carregar o ponto de extremidade anterior.  
+-   **Calculando a data e hora inicial**. Usar a data e hora final da carga anterior como a data e hora inicial atual. Se você usar um intervalo fixo para cargas incrementais, calcule este valor usando as funções `datetime` da Transact-SQL ou da linguagem de expressão [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Caso contrário, talvez seja preciso manter os pontos de extremidade entre execuções e usar uma tarefa Execute SQL ou uma tarefa Script para carregar o ponto de extremidade anterior.  
   
 -   **Calculando a data e hora final**. Se você usar um intervalo fixo para cargas incrementais, calcule a data e hora final atual como um deslocamento da data e hora inicial. Novamente, você pode calcular esse valor usando o `datetime` funções do Transact-SQL ou do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] linguagem de expressão.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "48116365"
 3.  Na página **Conjunto de Resultados** do **Editor da tarefa Executar SQL**, mapeie o resultado de ExtractStartTime para a variável do pacote ExtractStartTime e o resultado de ExtractEndTime para a variável do pacote ExtractEndTime.  
   
     > [!NOTE]  
-    >  Quando você usa uma expressão para definir o valor de uma variável [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , a expressão é avaliada sempre que o valor da variável é acessado.  
+    >  Quando você usa uma expressão para definir o valor de um [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] variável, a expressão é avaliada toda vez que o valor da variável é acessado.  
   
 ## <a name="next-step"></a>Próxima etapa  
  Depois de calcular o ponto inicial e final para um intervalo de alterações, a próxima etapa é determinar se os dados de alteração estão prontos.  
@@ -110,7 +110,7 @@ ms.locfileid: "48116365"
   
 ## <a name="see-also"></a>Consulte também  
  [Usar variáveis em pacotes](../use-variables-in-packages.md)   
- [Expressões do SSIS &#40;Integration Services&#41;](../expressions/integration-services-ssis-expressions.md)   
+ [Expressões do Integration Services &#40;SSIS&#41;](../expressions/integration-services-ssis-expressions.md)   
  [Tarefa Executar SQL](../control-flow/execute-sql-task.md)   
  [Tarefa Script](../control-flow/script-task.md)  
   

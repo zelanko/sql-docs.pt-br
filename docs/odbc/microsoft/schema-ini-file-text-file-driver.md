@@ -14,12 +14,12 @@ ms.assetid: 0c4625c4-c730-4984-b430-9051b7bc0451
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6d6a86d2d45cecc2dce3275e28ca0fb9e06e0cba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8afb8b22ae2c6563641491b3bfe4289aa86e73e2
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713204"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169216"
 ---
 # <a name="schemaini-file-text-file-driver"></a>Schema.ini File (Driver de Arquivo de texto)
 Quando o driver de texto é usado, o formato do arquivo de texto é determinado por meio de um arquivo de informações de esquema. O arquivo de informações de esquema é sempre chamado Schema. ini e sempre é mantido no mesmo diretório que a fonte de dados de texto. O arquivo de informações de esquema fornece o IISAM com informações sobre o formato geral do arquivo, o nome da coluna e informações de tipo de dados e várias outras características de dados. Um arquivo Schema sempre é necessário para acessar dados de comprimento fixo. Você deve usar um arquivo Schema quando sua tabela de texto contém a data e hora, moeda, ou dados Decimal ou a qualquer momento que você quiser mais controle sobre a manipulação dos dados na tabela.  
@@ -80,14 +80,14 @@ ColNameHeader=True
 MaxScanRows=0  
 ```  
   
- A próxima entrada designa os campos em uma tabela usando o número da coluna (**Col * * * n*) opção, que é necessário para arquivos de comprimento fixo e opcional para arquivos delimitados por caracteres. O exemplo mostra as entradas de Schema. ini para dois campos, um campo de texto CustomerNumber 10 caracteres e um campo de texto CustomerName 30 caracteres:  
+ A próxima entrada designa os campos em uma tabela usando o número da coluna (**Col**_n_) opção, que é necessário para arquivos de comprimento fixo e opcional para arquivos delimitados por caracteres. O exemplo mostra as entradas de Schema. ini para dois campos, um campo de texto CustomerNumber 10 caracteres e um campo de texto CustomerName 30 caracteres:  
   
 ```  
 Col1=CustomerNumber Text Width 10  
 Col2=CustomerName Text Width 30  
 ```  
   
- A sintaxe de **Col * * * n* é:  
+ A sintaxe da **Col**_n_ é:  
   
 ```  
   
@@ -100,7 +100,7 @@ n=ColumnNametype [#]
 |Parâmetro|Description|  
 |---------------|-----------------|  
 |*ColumnName*|O nome da coluna de texto. Se o nome da coluna contiver espaços inseridos, você deverá colocá-lo entre aspas duplas.|  
-|*tipo*|Tipos de dados são da seguinte maneira:<br /><br /> **Tipos de dados Microsoft Jet**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> Longo<br /><br /> CURRENCY<br /><br /> Single<br /><br /> Double<br /><br /> DateTime<br /><br /> Texto<br /><br /> Memorando<br /><br /> **Tipos de dados ODBC** Char (mesmo que o texto)<br /><br /> Float (mesmo que Double)<br /><br /> Inteiro (mesmo que Short)<br /><br /> LongChar (mesmo que o memorando)<br /><br /> Data *formato de data*|  
+|*type*|Tipos de dados são da seguinte maneira:<br /><br /> **Tipos de dados Microsoft Jet**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> Longo<br /><br /> CURRENCY<br /><br /> Single<br /><br /> Double<br /><br /> DateTime<br /><br /> Texto<br /><br /> Memorando<br /><br /> **Tipos de dados ODBC** Char (mesmo que o texto)<br /><br /> Float (mesmo que Double)<br /><br /> Inteiro (mesmo que Short)<br /><br /> LongChar (mesmo que o memorando)<br /><br /> Data *formato de data*|  
 |**Width**|O valor de cadeia de caracteres literal `Width`. Indica que o número a seguir designa a largura da coluna (opcional para arquivos delimitados por caracteres; necessário para arquivos de comprimento fixo).|  
 |*#*|O valor de inteiro que determina a largura da coluna (necessário se **largura** for especificado).|  
   

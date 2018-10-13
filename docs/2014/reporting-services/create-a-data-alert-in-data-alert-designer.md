@@ -11,12 +11,12 @@ ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9edb241dab5b2a1aaeefb5c11c53726f1e46498d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 02e1222b289d4cb081335a3575b0e1948fb37728
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144416"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49071840"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Criar um Alerta de Dados no Designer de Alertas de Dados
   Você cria definições de alerta de dados no Designer de Alertas de Dados. Depois de salvar as definições de alertas, é possível abri-la novamente, editá-la e salvá-la novamente no Designer de Alertas de Dados. Para obter informações sobre como editar definições de alertas, consulte [Gerenciar meus alertas de dados no Gerenciador de Alertas de Dados](manage-my-data-alerts-in-data-alert-manager.md) e [Editar um alerta de dados no Designer de Alertas](edit-a-data-alert-in-alert-designer.md).  
@@ -55,7 +55,7 @@ ms.locfileid: "48144416"
   
      O nome padrão da definição de alerta é o nome do relatório. Os nomes de definições de alertas não precisam ser exclusivos, o que pode dificultar sua diferenciação quando você exibir a lista de alertas mais tarde no Gerenciador de Alertas de Dados. É recomendável usar nomes de definições de alertas significativos e exclusivos.  
   
-6.  Opcionalmente, altere a opção de dados padrão de **quaisquer dados do feed de dados possui** para **nenhum dos dados do feed de dados tem**.  
+6.  Opcionalmente, altere a opção de dados padrão de **todos os dados no feed de dados tem** à **nenhum dado no feed de dados tem**.  
   
 7.  Clique em **Adicionar regra**.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "48144416"
      Por padrão, uma mensagem de alerta não tem nenhuma data de parada.  
   
     > [!NOTE]  
-    >  Parar uma mensagem de alerta não exclui a definição do alerta. Depois que você parar uma mensagem de alerta, poderá reiniciá-la atualizando as datas de início e término. Para obter informações sobre como excluir definições de alertas, consulte [gerenciar meus alertas de dados no Gerenciador de alertas de dados](manage-my-data-alerts-in-data-alert-manager.md).  
+    >  Parar uma mensagem de alerta não exclui a definição do alerta. Depois que você parar uma mensagem de alerta, poderá reiniciá-la atualizando as datas de início e término. Para obter informações sobre como excluir definições de alertas, consulte [Gerenciar meus alertas de dados no Gerenciador de Alertas de Dados](manage-my-data-alerts-in-data-alert-manager.md).  
   
 18. Opcionalmente, desmarque a caixa de seleção **Enviar mensagens somente se os resultados forem alterados** .  
   
@@ -117,8 +117,8 @@ ms.locfileid: "48144416"
 22. Clique em **Salvar**.  
   
 ## <a name="see-also"></a>Consulte também  
- [Designer de alertas de dados](../../2014/reporting-services/data-alert-designer.md)   
- [Gerenciador de alertas de dados para administradores de alerta](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
- [Alertas de dados do Reporting Services](../ssms/agent/alerts.md)  
+ [Designer de Alertas de Dados](../../2014/reporting-services/data-alert-designer.md)   
+ [Gerenciador de Alertas de dados para administradores de alertas](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
+ [Reporting Services Data Alerts](../ssms/agent/alerts.md)  
   
   

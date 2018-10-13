@@ -10,12 +10,12 @@ ms.assetid: 6e005de0-3a77-4b91-b497-14cc0f9f6605
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 574188dc87c9d89e370cb0187c44d30cd5dc3158
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 93698be4738ef2a28c79581d0957f695b036c911
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076806"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119165"
 ---
 # <a name="configuring-storage-for-memory-optimized-tables"></a>Configuração do armazenamento para tabelas com otimização de memória
   Você precisa configurar a capacidade de armazenamento e operações de entrada/saída por segundo (IOPS).  
@@ -28,7 +28,7 @@ ms.locfileid: "48076806"
   
 -   Ao migrar tabelas baseadas em disco para tabelas com otimização de memória, verifique se o log de transações está em uma mídia de armazenamento compatível com atividade de log de transações aumentada. Por exemplo, se a mídia de armazenamento oferece suporte a operações de log de transações a 100 MB/s e as tabelas com otimização de memória resultam em um desempenho cinco vezes maior, a mídia de armazenamento do log de transações deve ser capaz de oferecer suporte também à melhoria de desempenho cinco vezes maior, para evitar que a atividade de log de transações se torne um gargalo de desempenho.  
   
--   Tabelas com otimização de memória persistem em arquivos distribuídos em um ou mais contêineres. Cada contêiner deve ser normalmente mapeado para seu próprio eixo e é usado para obter uma maior capacidade de armazenamento e um melhor desempenho. Você precisa garantir que o IOPS sequencial da mídia de armazenamento possa oferecer suporte 3 vezes maior em produtividade de logs de transações.  
+-   Tabelas com otimização de memória persistem em arquivos distribuídos em um ou mais contêineres. Cada contêiner deve ser normalmente mapeado para seu próprio eixo e é usado para obter uma maior capacidade de armazenamento e um melhor desempenho. Você precisa garantir que o IOPS sequencial da mídia de armazenamento pode oferecer suporte a um 3 vezes aumentam a taxa de transferência de log de transações.  
   
      Por exemplo, se tabelas com otimização de memória gerarem 500MB/s de atividade no log de transações, o armazenamento para tabelas com otimização de memória deve dar suporte a 1,5 GB/s. A necessidade de dar suporte a 3 vezes o aumento na taxa de transferência de log de transações surge da observação de que os pares de arquivos de dados e delta são gravados primeiro com os dados iniciais e, em seguida, precisam ser leitura/regravados como parte de uma operação de mesclagem.  
   

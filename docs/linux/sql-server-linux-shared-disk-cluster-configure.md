@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 6899f45231a0e77c529ba7b416a4a30f6a7955b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 322160591d1e4ce741459e3a338bca30b0ea1603
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853424"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085462"
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>Configurar a instância de cluster de failover – SQL Server no Linux (RHEL)
 
@@ -141,7 +141,7 @@ Você precisa fornecer armazenamento que ambos os nós podem acessar. Você pode
    ```bash
    sudo yum install pacemaker pcs fence-agents-all resource-agents
    ```
-1. Defina a senha para o usuário padrão criado ao instalar pacotes do Pacemaker e do Corosync. Use a mesma senha em ambos os nós. 
+1. Defina a senha do usuário padrão criado ao instalar pacotes do Pacemaker e do Corosync. Use a mesma senha em ambos os nós. 
 
    ```bash
    sudo passwd hacluster

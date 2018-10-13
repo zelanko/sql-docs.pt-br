@@ -24,12 +24,12 @@ ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 45fe288818c6234b61226311226cdbc6a471146b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8745874d47d173160848ea385d0479ccbbfb7173
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217426"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169309"
 ---
 # <a name="execute-package-utility-dtexecui-ui-reference"></a>Referência da interface do usuário do utilitário de Execução de Pacotes (DtExecUI)
   Use o **Utilitário do Pacote de Execução** para executar pacotes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . O utilitário executa pacotes que estão armazenados em um dos três locais: o banco de dados do [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o Repositório de pacotes [!INCLUDE[ssIS](../../includes/ssis-md.md)] e o sistema de arquivos Essa interface do usuário, que pode ser aberta no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou digitando `dtexecui` em um prompt de comando, é uma alternativa à execução de pacotes usando o **DTExec** ferramenta de prompt de comando.  
@@ -52,7 +52,7 @@ ms.locfileid: "48217426"
   
 ### <a name="to-open-the-execute-package-utility-at-the-command-prompt"></a>Para abrir o utilitário Executar Pacote no prompt de comando  
   
--   Em uma janela de prompt de comando, execute `dtexecui`.  
+-   Em uma janela do prompt de comando, execute `dtexecui`.  
   
  As seções a seguir descrevem páginas da caixa de diálogo **Utilitário de Execução de Pacotes** .  
   
@@ -283,7 +283,7 @@ ms.locfileid: "48217426"
  Clique para fechar a caixa de diálogo **Utilitário do Pacote de Execução** .  
   
 ## <a name="logging-page"></a>Página Log  
- Use a página **Log** da caixa de diálogo **Utilitário de Execução de Pacotes** para que os provedores de log sejam disponibilizados para o pacote no momento da execução. Forneça o tipo de provedor de log e a cadeia de conexão do pacote para estabelecer conexão com o log. Cada entrada de provedor de logs adiciona uma opção **/LOGGER***classid* ao prompt de comando.  
+ Use a página **Log** da caixa de diálogo **Utilitário de Execução de Pacotes** para que os provedores de log sejam disponibilizados para o pacote no momento da execução. Forneça o tipo de provedor de log e a cadeia de conexão do pacote para estabelecer conexão com o log. Cada entrada de provedor de log adiciona uma opção **/LOGGER**_classid_ ao prompt de comando.  
   
 ### <a name="options"></a>Opções  
  **Provedor de Log**  
@@ -302,7 +302,7 @@ ms.locfileid: "48217426"
  Clique para fechar a caixa de diálogo **Utilitário do Pacote de Execução** .  
   
 ## <a name="set-values-page"></a>Página Definir Valores  
- Use a página **Definir Valores** da caixa de diálogo **Utilitário de Execução de Pacotes** para definir os valores de propriedade, executáveis, conexões, variáveis e provedores de log dos pacotes digitando os caminhos e os valores das propriedades. Cada entrada de caminho adiciona uma opção **/SET***propertypath;value* ao prompt de comando.  
+ Use a página **Definir Valores** da caixa de diálogo **Utilitário de Execução de Pacotes** para definir os valores de propriedade, executáveis, conexões, variáveis e provedores de log dos pacotes digitando os caminhos e os valores das propriedades. Cada entrada de caminho adiciona uma opção **/SET**_propertypath;value_ ao prompt de comando.  
   
 ### <a name="options"></a>Opções  
  **Caminho da propriedade**  

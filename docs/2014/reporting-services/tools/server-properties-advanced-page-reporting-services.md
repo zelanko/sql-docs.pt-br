@@ -13,12 +13,12 @@ ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0af66da35bdc42bf78601e3040d91095646a9b75
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8756be81a5517602558ab974bb63310e19c32049
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183346"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119863"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>Propriedades do Servidor (página Avançado) - Reporting Services
   Use essa página para definir propriedades do sistema no servidor de relatórios. Há vários modos de definir propriedades do sistema. Essa ferramenta fornece uma interface gráfica do usuário para que você possa definir propriedades sem precisar gravar código.  
@@ -27,7 +27,7 @@ ms.locfileid: "48183346"
   
 ## <a name="options"></a>Opções  
  **EnableMyReports**  
- Indica se o recurso Meus Relatórios está habilitado. Um valor de `true` indica que o recurso está habilitado.  
+ Indica se o recurso Meus Relatórios está habilitado. Um valor `true` indica que o recurso está habilitado.  
   
  **MyReportsRole**  
  O nome da função usado ao criar políticas de segurança nas pastas de usuário Meus Relatórios. O valor padrão é `My Reports Role`.  
@@ -39,7 +39,7 @@ ms.locfileid: "48183346"
  Indica se o log de execução de relatório está habilitado. O valor padrão é `true`. Para obter mais informações sobre o log de execução do servidor de relatório, consulte [Log de execução do servidor de relatório e exibição do ExecutionLog3](../report-server/report-server-executionlog-and-the-executionlog3-view.md).  
   
  **ExecutionLogDaysKept**  
- O número de dias para manter informações de execução de relatório no log de execução. Os valores válidos para essa propriedade incluem `-1` por meio `2`,`147`,`483`,`647`. Se o valor for `-1` as entradas não serão excluídas da tabela de log de execução. O valor padrão é `60`.  
+ O número de dias para manter informações de execução de relatório no log de execução. Os valores válidos para essa propriedade incluem `-1` até `2`,`147`,`483`,`647`. Se o valor for `-1` as entradas não serão excluídas da tabela de log de execução. O valor padrão é `60`.  
   
  **SessionTimeout**  
  A quantidade de tempo, em segundos, que uma sessão permanece ativa. O valor padrão é `600`.  
@@ -51,10 +51,10 @@ ms.locfileid: "48183346"
  O nome do site de servidor de relatórios exibido no título da página do Gerenciador de Relatórios. O valor padrão é [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Essa propriedade pode ser uma cadeia de caracteres vazia. O tamanho máximo é de 8.000 caracteres.  
   
  **StoredParametersLifetime**  
- Especifica o número máximo de dias que um parâmetro armazenado pode ser armazenado. Os valores válidos são `-1`, `+1` por meio de `2,147,483,647`. O valor padrão é `180` dias.  
+ Especifica o número máximo de dias que um parâmetro armazenado pode ser armazenado. Os valores válidos são de `-1`, `+1` até `2,147,483,647`. O valor padrão é `180` dias.  
   
  **StoredParametersThreshold**  
- Especifica o número máximo de valores de parâmetro que pode ser armazenado pelo servidor de relatórios. Os valores válidos são `-1`, `+1` por meio de `2,147,483,647`. O valor padrão é `1500`.  
+ Especifica o número máximo de valores de parâmetros que podem ser armazenados pelo servidor de relatório. Os valores válidos são de `-1`, `+1` até `2,147,483,647`. O valor padrão é `1500`.  
   
  **UseSessionCookies**  
  Indica se o servidor de relatório dever usar cookies de sessão ao se comunicar com navegadores clientes. O valor padrão é `true`.  
@@ -72,10 +72,10 @@ ms.locfileid: "48183346"
  **All =** Instantâneos são compactados para todas as opções de armazenamento que incluem o banco de dados do servidor de relatórios ou o sistema de arquivos.  
   
  **SystemReportTimeout**  
- O valor do tempo limite de processamento do relatório padrão, em segundos, para todos os relatórios gerenciados no namespace do servidor de relatório. Esse valor pode ser substituído no nível do relatório. Se a propriedade estiver definida, o servidor de relatórios tentará interromper o processamento de um relatório quando o tempo especificado expirar. Os valores válidos são `-1` por meio `2`,`147`,`483`,`647`. Se o valor for `-1`, relatórios no namespace não expirarão durante o processamento. O valor padrão é `1800`.  
+ O valor do tempo limite de processamento do relatório padrão, em segundos, para todos os relatórios gerenciados no namespace do servidor de relatório. Esse valor pode ser substituído no nível do relatório. Se a propriedade estiver definida, o servidor de relatórios tentará interromper o processamento de um relatório quando o tempo especificado expirar. Os valores válidos são de `-1` até `2`,`147`,`483`,`647`. Se o valor for `-1`, relatórios no namespace não expirarão durante o processamento. O valor padrão é `1800`.  
   
  **SystemSnapshotLimit**  
- O número máximo de instantâneos que são armazenados para um relatório. Os valores válidos são `-1` por meio `2`,`147`,`483`,`647`. Se o valor for `-1`, não há nenhum limite de instantâneo.  
+ O número máximo de instantâneos que são armazenados para um relatório. Os valores válidos são de `-1` até `2`,`147`,`483`,`647`. Se o valor for `-1`, não haverá limite de instantâneo.  
   
  **EnableIntegratedSecurity**  
  Determina se a segurança integrada do Windows tem suporte para conexões de fonte de dados de relatório. O padrão é `True`. Os valores válidos são os seguintes:  
@@ -85,7 +85,7 @@ ms.locfileid: "48183346"
  `False` = a segurança integrada do Windows não está habilitada. Fontes de dados de relatório configuradas para usar a segurança integrada do Windows não serão executadas.  
   
  `EnableLoadReportDefinition`  
- Selecione essa opção para especificar se os usuários podem executar relatório ad hoc de um Construtor de Relatórios. Essa opção determina o valor da `EnableLoadReportDefinition` propriedade no servidor de relatório.  
+ Selecione essa opção para especificar se os usuários podem executar relatório ad hoc de um Construtor de Relatórios. A definição dessa opção determina o valor da propriedade `EnableLoadReportDefinition` no servidor de relatórios.  
   
  Se você desmarcar esta opção, a propriedade será definida como False e o servidor de relatório não irá gerar relatórios de clickthrough de relatórios que usam um modelo como uma fonte de dados. Qualquer chamada ao método LoadReportDefinition será bloqueada.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "48183346"
  Especifica o número de segundos antes que o tempo limite de uma sessão de edição de relatório seja excedido. O valor padrão é 7200 segundos (2 horas).  
   
  **EnableTestConnectionDetailedErrors**  
- Indica se são enviadas mensagens de erro detalhadas ao computador cliente quando os usuários testam as conexões de fonte de dados usando o servidor de relatório. O valor padrão é `true`. Se a opção é definida como `false`, apenas as mensagens de erro genéricas são enviadas.  
+ Indica se são enviadas mensagens de erro detalhadas ao computador cliente quando os usuários testam as conexões de fonte de dados usando o servidor de relatório. O valor padrão é `true`. Se a opção for definida como `false`, apenas as mensagens de erro genéricas serão enviadas.  
   
 ## <a name="see-also"></a>Consulte também  
  [Definir propriedades do servidor de relatório &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   

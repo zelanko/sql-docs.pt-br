@@ -10,12 +10,12 @@ ms.assetid: a34d35b0-48eb-4ed1-9f19-ea14754650da
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 00d66f99c09292046f2372621faf65e01757b80c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a4feb316cf43524fa84734d85bf62631833e26d0
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121738"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120063"
 ---
 # <a name="troubleshooting-sql-server-managed--backup-to-windows-azure"></a>Solucionar problemas de Backup Gerenciado do SQL Server para Microsoft Azure
   Este tópico descreve as tarefas e as ferramentas que você pode usar para solucionar erros que podem ocorrer durante as operações do [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)].  
@@ -56,7 +56,7 @@ ms.locfileid: "48121738"
   
 1.  **Erros ao habilitar ou configurar [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]:**  
   
-     Erro: “Falha ao acessar a URL de armazenamento…. Forneça uma credencial SQL válida..." : Você pode ver esse e outros erros similares em relação às credenciais SQL.  Nesses casos, examine o nome da Credencial do SQL que você forneceu e também as informações armazenadas na Credencial do SQL – o nome da conta de armazenamento e a chave de acesso de armazenamento e verifique se eles estão atualizados e válidos.  
+     Erro: “Falha ao acessar a URL de armazenamento…. Forneça uma credencial SQL válida..." : Você pode ver esse e outros erros similares em relação às credenciais SQL.  Nesses casos, examine o nome da credencial do SQL que você forneceu e também as informações armazenadas na credencial do SQL – o nome da conta de armazenamento e a chave de acesso de armazenamento e certifique-se de que eles estão atualizados e válidos.  
   
      Erro: "... não é possível configurar o banco de dados... porque ele é um banco de dados do sistema": você verá esse erro se você tentar habilitar [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para um banco de dados do sistema.  O [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] não oferece suporte a backups para bancos de dados do sistema.  Para configurar o backup para um banco de dados do sistema, use outras tecnologias de Backup do SQL Server como planos de manutenção.  
   

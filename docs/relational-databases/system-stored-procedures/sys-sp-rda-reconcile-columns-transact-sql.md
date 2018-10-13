@@ -17,17 +17,17 @@ ms.assetid: 60d9cc4e-1828-450b-9d88-5b8485800d73
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1d077da2847a430b2a225ea896b1eafd289218a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c4d2a8377466876270bcedd07138cf9cf30ef211
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603954"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906316"
 ---
 # <a name="syssprdareconcilecolumns-transact-sql"></a>sys.sp_rda_reconcile_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Reconcilia as colunas na tabela do Azure remota para as colunas na a tabela do SQL Server habilitados para Stretch.  
+  Reconcilia as colunas na tabela do Azure remota para as colunas na tabela do SQL Server habilitados para Stretch.  
     
   **sp_rda_reconcile_columns** adiciona colunas à tabela remota existentes na tabela do SQL Server habilitados para Stretch, mas não na tabela remota. Essas colunas podem ser colunas que foram acidentalmente excluídas da tabela remota. No entanto, **sp_rda_reconcile_columns** não exclui colunas da tabela remota existentes na tabela remota, mas não na tabela do SQL Server.
   
@@ -58,7 +58,7 @@ sp_rda_reconcile_columns @objname = '@objname'
  Se houver colunas na tabela remota do Azure que não existem mais na tabela do SQL Server habilitada para Stretch, essas colunas extras não impedirão o funcionamento normal do Stretch Database. Opcionalmente, é possível remover as colunas extras manualmente.  
   
 ## <a name="example"></a>Exemplo  
- Para reconciliar as colunas na tabela do Azure remota, execute a seguinte instrução.  
+ Para reconciliar as colunas na tabela do Azure remota, execute a instrução a seguir.  
   
 ```sql  
 EXEC sp_rda_reconcile_columns @objname = N'StretchEnabledTableName';  

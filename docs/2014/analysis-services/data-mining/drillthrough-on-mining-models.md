@@ -11,12 +11,12 @@ ms.assetid: f179a467-7d03-4d61-8e9a-6b5afb5fc2d5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1ce87b35d04b360168eb1d4070bb94d52c702f3c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fa70606a2edf735e7d8379dde51ba66b444d7f36
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180046"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085391"
 ---
 # <a name="drillthrough-on-mining-models"></a>Detalhamento em modelos de mineração
   *Detalhar* significa ter a capacidade de consultar um modelo de mineração ou uma estrutura de mineração e obter dados detalhados não expostos no modelo.  
@@ -24,7 +24,7 @@ ms.locfileid: "48180046"
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oferece duas opções diferentes de detalhamento em dados de caso. Você pode detalhar os casos que foram utilizados para criar dados ou os casos na estrutura de mineração.  
   
 ## <a name="drillthrough-to-model-cases-vs-drillthrough-to-structure"></a>Detalhar para casos do modelo vs. Detalhar para estrutura  
- O detalhamento para **casos do modelo** é útil para localizar detalhes adicionais sobre regras, padrões ou clusters em um modelo. Por exemplo, você não usaria informações de contato de cliente para análise em um modelo de clustering, mesmo que os dados estivessem disponíveis, usando detalhamento. Você pode obter acesso a essas informações no modelo.  
+ O detalhamento para **casos do modelo** é útil para localizar detalhes adicionais sobre regras, padrões ou clusters em um modelo. Por exemplo, você não usaria informações de contato do cliente para análise em um modelo de clustering, mesmo se os dados estivessem disponíveis, usando o detalhamento, você pode obter acesso a essas informações do modelo.  
   
  Em contraste, os dados **detalhamento para estrutura** visam fornecer acesso a informações que não foram disponibilizadas no modelo. Por exemplo, algumas colunas de estrutura podem ter sido excluídas de um modelo porque o tipo de dados era incompatível ou os dados não eram úteis para a análise.  
   
@@ -58,12 +58,12 @@ ms.locfileid: "48180046"
 |Tarefas|Links|  
 |-----------|-----------|  
 |Usar detalhamento nos visualizadores do modelo de mineração|[Usar detalhamento dos visualizadores do modelo](use-drillthrough-from-the-model-viewers.md)|  
-|Recuperar dados de caso para um modelo usando detalhamento|[Detalhar dados de caso com base em um modelo de mineração](drill-through-to-case-data-from-a-mining-model.md)|  
+|Recuperar dados de caso para um modelo usando detalhamento|[Detalhar dados do caso a partir do modelo de mineração](drill-through-to-case-data-from-a-mining-model.md)|  
 |Habilitar o detalhamento em um modelo de mineração existente|[Habilitar o detalhamento para um modelo de mineração](enable-drillthrough-for-a-mining-model.md)|  
 |Veja exemplos de consultas de detalhamento para tipos de modelo específicos.|[Consultas de mineração de dados](data-mining-queries.md)|  
 |Habilitar detalhamento no assistente do modelo de mineração|[Concluindo o assistente &#40;Assistente de Data Mining&#41;](../completing-the-wizard-data-mining-wizard.md).|  
   
 ## <a name="see-also"></a>Consulte também  
- [Detalhamento em estruturas de mineração](drillthrough-on-mining-structures.md)  
+ [Drillthrough em estruturas de mineração](drillthrough-on-mining-structures.md)  
   
   

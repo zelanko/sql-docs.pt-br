@@ -18,12 +18,12 @@ ms.assetid: ab1fa449-a695-4987-b1ee-bc68f89418dd
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cf13e60a25e4368b9e7877b7515aad17e3755071
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fba1826dcad9a183bab9b9b0106bb9b45eb29846
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748324"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085133"
 ---
 # <a name="nextrecordset-method-ado"></a>Método NextRecordset (ADO)
 Limpa o atual [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) do objeto e retorna o próximo **Recordset** por Avançar até uma série de comandos.  
@@ -56,7 +56,7 @@ Set recordset2 = recordset1.NextRecordset(RecordsAffected )
   
  Para passar parâmetros para mais de um comando na instrução composta, preenchendo a [parâmetros](../../../ado/reference/ado-api/parameters-collection-ado.md) coleção, ou passando uma matriz com o original **abra** ou **Execute** chamada, os parâmetros devem ser na mesma ordem na coleção ou matriz como seus respectivos comandos da série de comando. Você deve concluir a leitura de todos os resultados antes de ler os valores de parâmetro de saída.  
   
- Seu provedor de OLE DB determina quando cada comando de comando em uma instrução composta é executado. O [Microsoft OLE DB Provider para SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md), por exemplo, executa todos os comandos em um lote após receber a instrução composta. Resultante **conjuntos de registros** simplesmente são retornadas quando você chama **NextRecordset**.  
+ Seu provedor de OLE DB determina quando cada comando em uma instrução composta é executado. O [Microsoft OLE DB Provider para SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md), por exemplo, executa todos os comandos em um lote após receber a instrução composta. Resultante **conjuntos de registros** simplesmente são retornadas quando você chama **NextRecordset**.  
   
  No entanto, outros provedores podem executar o próximo comando em uma instrução somente depois NextRecordset é chamado. Para esses provedores, se você fechar explicitamente o **Recordset** objeto antes de passar por meio da instrução de comando inteira, ADO nunca executa os comandos restantes.  
   

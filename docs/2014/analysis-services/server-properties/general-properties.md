@@ -39,12 +39,12 @@ ms.assetid: 88a8117c-396a-469f-a62d-c6f262504021
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dab367196f1d4d80f965a2ff400fd6193b6e3508
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2ad086a7d6ee677fc54241f45d1dbe81e5c4c2d5
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171176"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905756"
 ---
 # <a name="general-properties"></a>Propriedades gerais
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oferece suporte às propriedades do servidor listadas nas tabelas a seguir. Este tópico documenta essas propriedades de servidor no arquivo msmdsrv.ini que não são incluídas em uma seção específica, como Segurança, Rede ou ThreadPool. Para obter mais informações sobre as propriedades de servidor adicionais e como defini-las, consulte [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
@@ -61,7 +61,7 @@ ms.locfileid: "48171176"
  Uma propriedade de cadeia de caracteres que especifica em uma lista delimitada as pastas que podem ser procuradas ao salvar, abrir e localizar arquivos em caixas de diálogo do Analysis Services. A conta de serviço do Analysis Services deve ter permissões de leitura e gravação em qualquer pasta adicionada à lista.  
   
  `BackupDir`  
- Uma propriedade de cadeia de caracteres que identifica o nome do diretório em que os arquivos de backup estão armazenados por padrão, para a eventualidade de o caminho não ser especificado como parte do comando Backup.  
+ Uma propriedade de cadeia de caracteres que identifica o nome do diretório onde os arquivos de backup são armazenados por padrão, no caso de um caminho não for especificado como parte do comando Backup.  
   
  `CollationName`  
  Uma propriedade de cadeia de caracteres que identifica o agrupamento do servidor. Para obter mais informações, consulte [Idiomas e agrupamentos &#40;Analysis Services&#41;](../languages-and-collations-analysis-services.md).  
@@ -77,12 +77,12 @@ ms.locfileid: "48171176"
  `CoordinatorCancelCount`  
  Uma propriedade de inteiro de 32 bits assinada que define com que frequência o servidor deve verificar se um evento de cancelamento ocorreu (com base na contagem de iterações internas). Diminua esse número para verificar cancelamentos frequentemente pelo desempenho geral.  
   
- `CoordinatorCancelCount` é ignorado no modo de servidor tabular.  
+ `CoordinatorCancelCount` é ignorado no modo de servidor de tabela.  
   
  `CoordinatorExecutionMode`  
  Uma propriedade de inteiro de 32 bits assinada que define o número máximo de operações paralelas que o servidor tentará, incluindo operações de processamento e consulta. Zero (0) indica que o servidor decidirá, com base em um algoritmo interno. Um número positivo indica o número máximo de operações no total. Um número negativo, com o sinal invertido, indica o número máximo de operações por processador.  
   
- `CoordinatorExecutionMode` é ignorado no modo de servidor tabular.  
+ `CoordinatorExecutionMode` é ignorado no modo de servidor de tabela.  
   
  O valor padrão dessa propriedade é -4, que indica que o servidor está limitado a 4 operações paralelas por processador. Para obter mais informações sobre esta propriedade, consulte [Guia de Operações do SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539).  
   
@@ -117,7 +117,7 @@ ms.locfileid: "48171176"
  O valor padrão desta propriedade é 3600 (segundos).  
   
  `ExternalConnectionTimeout`  
- Uma propriedade de número inteiro que define o tempo limite, em segundos, para criar conexões a servidores externos, incluindo fontes de dados relacionais e servidores externos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Esta propriedade é ignorada quando o tempo limite de uma conexão é especificado na cadeia de conexão.  
+ Uma propriedade integer que define o tempo limite, em segundos, para criar conexões a servidores externos, incluindo fontes de dados relacionais e servidores externos do [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Esta propriedade é ignorada quando o tempo limite de uma conexão é especificado na cadeia de conexão.  
   
  O valor padrão desta propriedade é 60 (segundos).  
   
@@ -132,7 +132,7 @@ ms.locfileid: "48171176"
  Para obter mais informações sobre esta propriedade, consulte [Guia de Operações do SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539).  
   
 > [!IMPORTANT]  
->  `ForceCommitTimeout` aplica-se aos comandos de processamento de cubo e para operações de write-back.  
+>  `ForceCommitTimeout` é aplicado para comandos de processamento de cubo e para operações de writeback.  
   
  `IdleConnectionTimeout`  
  Uma propriedade integer que especifica um tempo limite, em segundos, para conexões que estão inativas.  
@@ -179,6 +179,6 @@ ms.locfileid: "48171176"
   
 ## <a name="see-also"></a>Consulte também  
  [Configurar propriedades de servidor no Analysis Services](server-properties-in-analysis-services.md)   
- [Determina o Modo de Servidor de uma instância do Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [Determina o Modo de Servidor de uma instância do Analysis Services.](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

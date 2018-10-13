@@ -11,12 +11,12 @@ ms.assetid: f8a485d5-47ed-4dd5-bb66-ef4d6d463845
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f75599c201c4c34fe2b22f7ddb27308c4d69a38f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a30991f6104263d4c6f497a721cee340f3dc9e2b
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213876"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085472"
 ---
 # <a name="exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Explorando o modelo de clustering de sequências (Tutorial de mineração de dados intermediário)
   Agora que você criou o **Clustering de sequências com região** modelo, você pode explorá-lo usando o [!INCLUDE[msCoName](../includes/msconame-md.md)] Visualizador de Clustering de sequência no **Visualizador do modelo de mineração** guia do Designer de mineração de dados. O [!INCLUDE[msCoName](../includes/msconame-md.md)] Sequence Cluster Viewer contém cinco guias: **diagrama de Cluster**, **perfis de Cluster**, **características do Cluster**,  **ClusterDiscrimination**, e **transições de estado**. Para obter mais informações sobre como usar esse visualizador, consulte [procurar um modelo usando o Microsoft Sequence Cluster Viewer](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md).  
@@ -47,7 +47,7 @@ ms.locfileid: "48213876"
   
 2.  Selecione **Capacete para ciclismo** na **estado** lista.  
   
-     O diagrama é atualizado para mostrar a concentração do produto selecionado em cada um dos clusters. O cluster no diagrama com o sombreamento mais escuro contém a densidade mais alta de capacetes para ciclismo. É possível alterar a variável de sombreamento para usar qualquer estado de qualquer coluna de entrada.  
+     O diagrama é atualizado para mostrar a concentração do produto selecionado em cada um dos clusters. O cluster no diagrama com o sombreamento mais escuro contém a densidade mais alta de capacetes para ciclismo. Você pode alterar a variável de sombreamento para usar qualquer estado de qualquer coluna de entrada.  
   
 3.  No **variável de sombreamento** lista, selecione **população**.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "48213876"
     > [!NOTE]  
     >  O **reproduzir** botão permite que você consulte novamente os dados; no entanto, repetir a consulta não altera os dados que são exibidos, a menos que o modelo tenha sido dinamicamente atualizado em segundo plano por algum outro processo.  
   
- [Voltar ao início](#bkmk_CDiagram)  
+ [Voltar ao Início](#bkmk_CDiagram)  
   
 ##  <a name="bkmk_CProfiles"></a> Guia Perfis de cluster  
  O **perfis de Cluster** guia exibe as sequências que estão em cada cluster. Os clusters são listados em colunas individuais à direita do **estados** coluna.  
@@ -131,7 +131,7 @@ ms.locfileid: "48213876"
   
 6.  Fechar o **Detalhar** caixa de diálogo.  
   
- [Voltar ao início](#bkmk_CDiagram)  
+ [Voltar ao Início](#bkmk_CDiagram)  
   
 ##  <a name="bkmk_CChars"></a> Guia características do cluster  
  O **características do Cluster** guia resume as transições entre estados em um cluster exibindo barras que representam visualmente a importância do valor do atributo para o cluster selecionado. O **variáveis** coluna indica que o modelo encontrado para ser importante para o cluster ou população selecionados: um valor específico ou a relação entre valores, conhecidos como *transição*. O **valores** coluna fornece mais detalhes sobre o valor ou transição e o **probabilidade** coluna representa visualmente o peso desse atributo ou transição.  
@@ -168,7 +168,7 @@ ms.locfileid: "48213876"
   
  A segunda é que há um grande efeito de clustering em atributos para `Region`, que torna mais difícil ver os grupos de sequências. Dessa forma, você decide criar outro modelo que use somente sequências e que não inclua as colunas para região ou renda.  
   
- [Voltar ao início](#bkmk_CDiagram)  
+ [Voltar ao Início](#bkmk_CDiagram)  
   
 ##  <a name="bkmk_CDiscrim2"></a> Guia discriminação de cluster  
  O **discriminação do Cluster** guia o ajuda a comparar dois clusters, para determinar quais atributos distinguem um cluster específico de outro cluster. A guia contém quatro colunas: **variáveis**, **valores**, **Cluster 1**, e **Cluster 2**.  Você pode escolher qualquer cluster para usar como **Cluster 1** e **Cluster 2**.  
@@ -187,7 +187,7 @@ ms.locfileid: "48213876"
   
      Os itens a **valores** coluna pode incluir estados e transições. O sombreamento de cada item indica a contagem de distinção. Para saber mais sobre o significado de pontuações diferentes, consulte [Mining Model Content para modelos de Clustering de sequência de &#40;Analysis Services - mineração de dados&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md).  
   
- [Voltar ao início](#bkmk_CDiagram)  
+ [Voltar ao Início](#bkmk_CDiagram)  
   
 ##  <a name="bkmk_StateTran"></a> Guia transições de estado  
  Sobre o **transições de estado** guia, você pode selecionar um cluster e percorra as transições de estado. Se você selecionar **população (tudo)** na lista suspensa do cluster, o diagrama mostra a distribuição de estados para o modelo de mineração inteira.  
@@ -226,7 +226,7 @@ ms.locfileid: "48213876"
   
      A princípio, existem muitas linhas de transição conectando Pneu de Passeio a outros produtos, mas quando você sobe o limite de probabilidade, as transições menos prováveis são eliminadas do gráfico, deixando somente a transição Pneu de Passeio > Tubo de Pneu de Passeio. Essa transição significa que se um cliente colocar um Pneu de Passeio na cesta de compras, há uma grande probabilidade de que o cliente colocará em seguida um Tubo de Pneu de Passeio na cesta.  
   
- [Voltar ao início](#bkmk_CDiagram)  
+ [Voltar ao Início](#bkmk_CDiagram)  
   
 ##  <a name="bkmk_Generic"></a> Visualizador de árvore de conteúdo genérica  
  Esse visualizador pode ser usado em todos os modelos, independentemente do algoritmo ou do tipo de modelo. O **Visualizador de árvore de conteúdo MicrosoftGeneric** está disponível a partir o **visualizador** lista suspensa.  
@@ -251,13 +251,13 @@ ms.locfileid: "48213876"
   
  Para obter mais informações sobre o conteúdo do modelo de mineração e como usar os detalhes no visualizador, consulte [conteúdo do modelo de mineração para modelos de Clustering de sequência de &#40;Analysis Services - mineração de dados&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md).  
   
- [Voltar ao início](#bkmk_CDiagram)  
+ [Voltar ao Início](#bkmk_CDiagram)  
   
 ## <a name="next-task-in-lesson"></a>Próxima tarefa da lição  
  [Criando um modelo de Clustering de sequências relacionado &#40;Tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/creating-a-related-sequence-clustering-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Consulte também  
- [Algoritmo msc](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
- [Exemplos de consulta dos modelos de clustering de sequências](../../2014/analysis-services/data-mining/sequence-clustering-model-query-examples.md)  
+ [Microsoft Sequence Clustering Algorithm](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [Exemplos de consulta de modelo de clustering em sequência](../../2014/analysis-services/data-mining/sequence-clustering-model-query-examples.md)  
   
   

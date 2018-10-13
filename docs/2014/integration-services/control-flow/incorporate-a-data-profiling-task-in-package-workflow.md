@@ -13,12 +13,12 @@ ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9ac9b22a6f7157123ab233a6c10f24846eaca8fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 74e2ca64c47aaf1b0388fa0d58a3e76f2ec9d20e
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147566"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085512"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>Incorporar uma tarefa Criação de Perfil de Dados no fluxo de trabalho do pacote
   As tarefas de criação de perfil e limpeza de dados não são candidatas a um processo automatizado em seus estágios iniciais. No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], a saída da tarefa Criação de Perfil de Dados normalmente exige uma análise visual e uma opinião humana para determinar se as violações relatadas são significativas ou demasiadas. Mesmo depois de reconhecer os problemas de qualidade dos dados, ainda é necessário fazer um planejamento cuidadoso para escolher a melhor abordagem de limpeza.  
@@ -265,13 +265,13 @@ ms.locfileid: "48147566"
 8.  Feche o ambiente de desenvolvimento de script e, em seguida, o Editor da Tarefa Script.  
   
 #### <a name="alternative-codereading-the-profile-output-from-a-variable"></a>Código alternativo - Lendo a saída de perfil a partir de uma variável  
- O procedimento anterior mostra como carregar a saída da tarefa Criação de Perfil de Dados a partir de um arquivo. No entanto, como método alternativo, você pode carregar essa saída a partir de uma variável de pacote. Para carregar a saída a partir de uma variável, faça as seguintes alterações no código de amostra:  
+ O procedimento anterior mostra como carregar a saída da tarefa criação de perfil de dados de um arquivo. No entanto, como método alternativo, você pode carregar essa saída a partir de uma variável de pacote. Para carregar a saída a partir de uma variável, faça as seguintes alterações no código de amostra:  
   
--   Chame o `LoadXml` método da `XmlDocument` classe, em vez do `Load` método.  
+-   Chame o método `LoadXml` da classe `XmlDocument` em vez do método `Load`.  
   
--   No Editor da tarefa Script, adicione o nome da variável de pacote que contém a saída de perfil para a tarefa `ReadOnlyVariables` lista.  
+-   No Editor da Tarefa Script, adicione o nome da variável de pacote que contém a saída de perfil à lista `ReadOnlyVariables` da tarefa.  
   
--   Passe o valor de cadeia de caracteres da variável para o `LoadXML` método, conforme mostrado no exemplo de código a seguir. (Este exemplo usa “ProfileOutput” como o nome da variável de pacote que contém a saída de perfil.)  
+-   Passe o valor de cadeia da variável ao método `LoadXML`, como mostra o código de exemplo a seguir. (Este exemplo usa “ProfileOutput” como o nome da variável de pacote que contém a saída de perfil.)  
   
     ```vb  
     Dim outputString As String  
@@ -329,7 +329,7 @@ ms.locfileid: "48147566"
 7.  Nas restrições de precedência que conectam a tarefa Script às ramificações de downstream do fluxo de trabalho, grave expressões que usem os valores das variáveis para dirigir o fluxo de trabalho.  
   
 ## <a name="see-also"></a>Consulte também  
- [Instalação dos dados de tarefa criação de perfil](data-profiling-task.md)   
+ [Configuração da tarefa Criação de Perfil de Dados](data-profiling-task.md)   
  [Visualizador de Perfil de Dados](data-profile-viewer.md)  
   
   

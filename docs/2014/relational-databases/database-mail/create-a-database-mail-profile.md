@@ -15,12 +15,12 @@ ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4b8d8daec2367212b405f2cf39b8f4229cc7dace
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 667dbd4e0b323f50721af716a30709ba9ea6d5c8
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144236"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49071810"
 ---
 # <a name="create-a-database-mail-profile"></a>Criar um perfil do Database Mail
   Use o **Assistente para Configuração do Database Mail** ou o [!INCLUDE[tsql](../../includes/tsql-md.md)] para criar perfis públicos e privados do Database Mail.  
@@ -191,7 +191,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
      *@is_default* = '*Status de perfil padrão* '  
   
-     em que *@profile_name* é o nome do perfil e *@principal_name* indica que este é um perfil público e *@is_default* determina se esse perfil é o padrão para o usuário ou a função de banco de dados.  
+     em que *@profile_name* é o nome do perfil, e *@principal_name* para indicar que este é um perfil público, *@is_default* determina se este perfil é o padrão para o banco de dados usuário ou função.  
   
  O exemplo a seguir cria uma conta do Database Mail, cria um perfil privado do Database Mail, adiciona a conta ao perfil e concede acesso público ao perfil.  
   

@@ -22,12 +22,12 @@ ms.assetid: b7442cff-e616-475a-9c5a-5a765089e5f2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 809b0229e1f5d37ed285b8c5783f8c73a4af6056
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2923591c64eceab59424ddaadaaa7f243f2f1575
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108576"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906436"
 ---
 # <a name="enable-compression-on-a-table-or-index"></a>Permitir a compactação em uma tabela ou índice
   Este tópico descreve como habilitar a compactação em uma tabela ou índice no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -223,7 +223,7 @@ ms.locfileid: "48108576"
   
 2.  Na barra Padrão, clique em **Nova Consulta**.  
   
-3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Primeiro, o exemplo consulta a exibição de catálogo `sys.indexes` para retornar o nome e o `index_id` para cada índice na tabela `Production.TransactionHistory` . Em seguida, ele executa o procedimento armazenado `sp_estimate_data_compression_savings` para retornar o tamanho estimado do ID de índice especificado se fosse usar a configuração de compactação PAGE. Por fim, o exemplo recria o ID do índice 2 (`IX_TransactionHistory_ProductID`), especificando a compactação PAGE.  
+3.  Copie e cole o exemplo a seguir na janela de consulta e clique em **Executar**. Primeiro, o exemplo consulta a exibição de catálogo `sys.indexes` para retornar o nome e o `index_id` para cada índice na tabela `Production.TransactionHistory` . Depois, ele executará o procedimento armazenado `sp_estimate_data_compression_savings` para retornar o tamanho estimado do ID de índice especificado se ele fosse usar a configuração de compactação de página. Por fim, o exemplo recria o ID do índice 2 (`IX_TransactionHistory_ProductID`), especificando a compactação PAGE.  
   
     ```  
     USE AdventureWorks2012;   

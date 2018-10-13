@@ -18,12 +18,12 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3837e800bc1193a4f72b58bc0d78c0cb314e6076
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1d4026596d06941286b137a60201ba0ee6489c34
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48151999"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120203"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Criar servidores vinculados (Mecanismo de Banco de Dados do SQL Server)
   Este tópico mostra como criar um servidor vinculado e acessar dados de outro [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Criar um servidor vinculado permite trabalhar com dados de várias origens. O servidor vinculado não precisa ser outra instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mas esse é um cenário comum.  
@@ -82,7 +82,7 @@ ms.locfileid: "48151999"
     > [!NOTE]  
     >  Se a instância do **SQL Server** for a instância padrão, digite o nome do computador que hospeda a instância do **SQL Server**. Se o **SQL Server** for uma instância nomeada, digite o nome do computador e o nome da instância, como **Accounting\SQLExpress**.  
   
-3.  Na área **Tipo de servidor** , selecione **SQL Server** para indicar que o servidor vinculado é outra instância do **SQL Server**.  
+3.  No **tipo de servidor** área, selecione **SQL Server** para indicar que o servidor vinculado é outra instância do **SQL Server**.  
   
 4.  Na página **Segurança** , especifique o contexto de segurança que será usado quando o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] original se conectar ao servidor vinculado. Em um ambiente de domínio onde os usuários se conectam usando seus logons de domínio, a melhor opção é geralmente selecionar **Serão feitas usando o contexto de segurança atual do logon** . Quando os usuários se conectam ao **SQL Server** original com um logon do **SQL Server** , a melhor opção geralmente é selecionar **Usando este contexto de segurança**e fornecer as credenciais necessárias para autenticação no servidor vinculado.  
   
@@ -179,7 +179,7 @@ ms.locfileid: "48151999"
      Somente as interfaces OLE DB de nível 0 são invocadas em relação ao provedor.  
   
      **Permitir inprocess**  
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite que seja criada uma instância do servidor como um servidor em processo. Quando essa opção não é definida, o comportamento padrão é criar uma instância no provedor fora do processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Criando uma instância no provedor fora do processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] protege o processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de erros no provedor. Quando o provedor for instanciado fora do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processar, atualizações ou inserções colunas longas de referência (`text`, `ntext`, ou `image`) não são permitidos.  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite que seja criada uma instância do servidor como um servidor em processo. Quando essa opção não é definida, o comportamento padrão é criar uma instância no provedor fora do processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Criando uma instância no provedor fora do processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] protege o processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de erros no provedor. Quando uma instância é criada no provedor fora do processo do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ela atualiza ou insere colunas longas de referência (`text`, `ntext`ou `image`) que não são permitidas.  
   
      **Atualizações não transacionadas**  
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite atualizações, até mesmo se a **ITransactionLocal** não estiver disponível. Se essa opção estiver habilitada, atualizações em relação ao provedor não serão recuperáveis porque o provedor não possui suporte para transações.  

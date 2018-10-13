@@ -7,12 +7,12 @@ manager: craigg
 ms.date: 10/05/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.openlocfilehash: 989ee419406d0f69cd7bda26485d3d44cbf56550
-ms.sourcegitcommit: c7d3a903eb7f410db3a0230101d24de0af17621a
+ms.openlocfilehash: 137da00959f6f8d3498bb3d063ceb21337266aef
+ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48827327"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48878009"
 ---
 # <a name="how-to-use-notebooks-in-sql-server-2019-preview"></a>Como usar blocos de anotações na visualização do SQL Server de 2019
 
@@ -23,7 +23,7 @@ Este artigo mostra como iniciar os blocos de anotações em um cluster de big da
 Para usar os blocos de anotações, você deve instalar os seguintes pré-requisitos:
 
 - [Um cluster de big data do SQL Server de 2019](deployment-guidance.md)
-- [Studio de dados do Azure](../azure-data-studio/what-is.md)
+- [Azure Data Studio](../azure-data-studio/what-is.md)
 - [A extensão de 2019 do SQL Server (versão prévia)](../azure-data-studio/sql-server-2019-extension.md).
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
@@ -76,6 +76,9 @@ Quando você seleciona um desses kernels, vamos instalar esse kernel no ambiente
 A seleção para anexar fornece o contexto para o Kernel anexar. Quando você está conectado ao ponto de extremidade do cluster grande de dados de SQL Server, a seleção padrão para anexar será esse ponto de extremidade do cluster.
 
 ![image7](media/notebooks-guidance/image7.png)
+
+> [!NOTE]
+> Por padrão, o aplicativo Spark é configurado com o 1 driver e 3 executores que levará aproximadamente 8,5 GB de memória. A configuração recomendada para executar várias sessões do spark é para cada servidor no cluster tenha pelo menos 32 GB de memória (por exemplo, em um ambiente do AKS, use **Standard_D8_v3** tamanhos de VM que tenham 32 GB de memória).
 
 ## <a name="hello-world-in-the-different-contexts"></a>Olá, mundo em diferentes contextos
 

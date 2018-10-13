@@ -18,12 +18,12 @@ ms.assetid: 63ea7d0d-a567-456e-a778-bee99e21d16c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 28a1b42780b57fb5807e0ff8f900bfe7b1fc7559
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9e8ada6daf4fc7e545856b52b163a2ff8f9e40db
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670454"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168656"
 ---
 # <a name="spdeletecategory-transact-sql"></a>sp_delete_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [  **@class =**] **'***classe***'**  
+ [  **@class =**] **'**_classe_**'**  
  A classe da categoria. *classe* está **varchar(8)**, sem padrão e deve ter um destes valores.  
   
 |Valor|Description|  
@@ -50,7 +50,7 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 |**ALERTA**|Exclui uma categoria de alerta.|  
 |**OPERADOR**|Exclui uma categoria de operador.|  
   
- [  **@name =**] **'***nome***'**  
+ [  **@name =**] **'**_nome_**'**  
  O nome da categoria a ser removida. *nome da* está **sysname**, sem padrão.  
   
 ## <a name="return-code-values"></a>Valores do código de retorno  

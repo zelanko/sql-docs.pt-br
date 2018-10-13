@@ -2,7 +2,7 @@
 title: Extensão de dados Studio SQL Server 2019 do Azure (visualização) | Microsoft Docs
 description: Extensão de 2019 Preview do SQL Server para o Studio de dados do Azure
 ms.custom: tools|sos
-ms.date: 09/24/2018
+ms.date: 10/11/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -11,12 +11,12 @@ author: yualan
 ms.author: alayu
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8f9d10fbdec028549f9b23b23506882d5c5afe5d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d73f4a0d55cbe3fe3bacc0b2bb68f191046fe01b
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131226"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168778"
 ---
 # <a name="sql-server-2019-extension-preview"></a>Extensão do SQL Server 2019 (visualização)
 
@@ -24,23 +24,31 @@ A extensão de 2019 do SQL Server (versão prévia) fornece suporte de visualiza
 
 ## <a name="install-the-sql-server-2019-extension-preview"></a>Instalar a extensão do SQL Server 2019 (visualização)
 
-Baixe e instale a extensão do SQL Server 2019 (visualização):
+Para instalar a extensão de 2019 do SQL Server (versão prévia), baixe e instale o arquivo. VSIX associado.
 
-  |Plataforma|Download|Data de liberação|
-  |:---|:---|:---|
-  |Windows|[. VSIX](https://go.microsoft.com/fwlink/?linkid=2024911)|24 de setembro de 2018|
-  |macOS|[. VSIX](https://go.microsoft.com/fwlink/?linkid=2024587)|24 de setembro de 2018 |
-  |Linux|[. VSIX](https://go.microsoft.com/fwlink/?linkid=2024841)|24 de setembro de 2018 |
+1. Baixe o arquivo. VSIX de extensão (visualização) do SQL Server 2019 para um diretório local:
 
+   |Plataforma|Download|Data de liberação|
+   |:---|:---|:---|
+   |Windows|[. VSIX](https://go.microsoft.com/fwlink/?linkid=2024911)|24 de setembro de 2018|
+   |macOS|[. VSIX](https://go.microsoft.com/fwlink/?linkid=2024587)|24 de setembro de 2018 |
+   |Linux|[. VSIX](https://go.microsoft.com/fwlink/?linkid=2024841)|24 de setembro de 2018 |
 
-No estúdio de dados do Azure, escolha **instalar a extensão do pacote VSIX** da **arquivo** menu e selecione o arquivo. VSIX baixado. Escolher **Sim** quando for solicitado a confirmar a instalação e aguarde a notificação de que a instalação foi bem-sucedida.
+1. No estúdio de dados do Azure, escolha **instalar a extensão do pacote VSIX** da **arquivo** menu e selecione o arquivo. VSIX baixado.
 
-Selecione **recarregar** para habilitar a extensão (necessário somente na primeira vez que você instalar uma extensão).
+1. Escolher **Sim** quando for solicitado a confirmar a instalação e aguarde a notificação de que a instalação foi bem-sucedida.
 
+1. Selecione **recarregar** para habilitar a extensão (necessário somente na primeira vez que você instalar uma extensão).
+
+1. Após o recarregamento, a extensão instalará as dependências. Você pode ver o progresso na janela de saída, e pode levar vários minutos.
 
 ##  <a name="sql-server-2019-big-data-cluster-support"></a>Suporte de Cluster de Big Data do SQL Server de 2019
 
 * Clique em **Adicionar Conexão** na *Pesquisador de objetos* e escolha **cluster de big data do SQL Server** como o tipo de conexão.
+
+   > [!TIP]
+   > Se você não vir as **cluster de big data do SQL Server** tipo de conexão, reinicie o Studio de dados do Azure.
+
 * Insira o nome do host ou endereço IP do ponto de extremidade do cluster plus o nome de usuário e senha usadas para se conectar.
 * Opcionalmente, incluir um nome de exibição amigável na **nome** campo.
 * Clique em **Connect** e, em seguida, você pode iniciar tarefas comuns do painel, navegue **HDFS** no Pesquisador de objetos e tarefas a serem executadas no contexto de lá.

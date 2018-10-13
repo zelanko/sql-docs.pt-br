@@ -11,12 +11,12 @@ ms.assetid: 860a80dc-bac0-4ef0-bf7f-7a9b430d7aa3
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 67a6dbe4b9133f5ce31d12b1f361cea859026b53
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9bafb97065c86a4d227f79b62c3d388d45c1445f
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195916"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120374"
 ---
 # <a name="modify-the-trace-results-view"></a>Modificar a exibição dos resultados de rastreamento
   Este tópico descreve como modificar a exibição dos resultados do rastreamento de uma sessão de Eventos Estendidos no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] executando as tarefas a seguir.  
@@ -228,7 +228,7 @@ ms.locfileid: "48195916"
   
     -   **Colunas da tabela**. Use esta opção para procurar todas as colunas visíveis na janela de rastreamento.  
   
-    -   **Detalhes**. Use esta opção para procurar todas as colunas (promovida e não promovida) na janela de rastreamento que foi selecionada antes de abrir a caixa de diálogo **Localizar nos Eventos Estendidos** .  
+    -   **Detalhes**. Use esta opção para procurar todas as colunas (promovida e não promovida) na janela de rastreamento que foram selecionadas antes de abrir o **localizar nos eventos estendidos** caixa de diálogo.  
   
     -   **\<Nome da coluna de evento >**. Use esta opção para procurar uma coluna de evento específica na lista suspensa.  
   

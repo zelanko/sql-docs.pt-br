@@ -12,12 +12,12 @@ ms.custom: sql-linux
 ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 55375101434b719cfd785a6ddab2b6ec3e779927
-ms.sourcegitcommit: 2da0c34f981c83d7f1d37435c80aea9d489724d1
+ms.openlocfilehash: ddf8882cfe4c51194515b181fb6b9e6e80426710
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48782365"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085282"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>Guia de início rápido: Imagens de contêiner executar o SQL Server com o Docker
 
@@ -41,7 +41,7 @@ Neste início rápido, use o Docker para efetuar pull e executar a imagem de con
 
 Esta imagem consiste no SQL Server em execução no Linux, com base no Ubuntu 16.04. Ela pode ser usada com o Docker Engine 1.8 ou superior no Linux ou no Docker para Mac/Windows. Este guia de início rápido concentra-se especificamente sobre como usar o SQL Server no **linux** imagem. A imagem do Windows não é abordada, mas há mais informações sobre ela na [página de Hub do Docker mssql-server-windows-developer](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/).
 
-## <a id="requirements"></a> Prerequisites
+## <a id="requirements"></a> Pré-requisitos
 
 - O Docker Engine 1.8 ou superior em qualquer distribuição do Linux ou do Docker para Mac/Windows com suporte. Para obter mais informações, veja [Install Docker](https://docs.docker.com/engine/installation/) (Instalar o Docker).
 - Mínimo de 2 GB de espaço em disco
@@ -213,7 +213,7 @@ Configurar `-h` e `--name` com o mesmo valor é uma boa maneira de identificar f
 ::: moniker-end
 <!--End of 2019 "Pull and run" section-->
 
-## <a name="change-the-sa-password"></a>Alterar a senha SA
+## <a id="sapassword"></a> Alterar a senha SA
 
 [!INCLUDE [Change docker password](../includes/sql-server-linux-change-docker-password.md)]
 

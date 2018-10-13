@@ -14,49 +14,49 @@ ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a78f615493ad531b8607abb0764891ffcb2805f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 28bbf84564060e2840e0f8c35c5e4679c085a29c
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194476"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906126"
 ---
 # <a name="polygon"></a>Polygon
   Um `Polygon` é uma superfície bidimensional armazenada como uma sequência de pontos que define um anel delimitador exterior e zero ou mais anéis interiores.  
   
 ## <a name="polygon-instances"></a>Instâncias de polígono  
- Um `Polygon` instância pode ser formada por um anel que tem pelo menos três pontos distintos. Um `Polygon` instância também pode estar vazia.  
+ Uma instância `Polygon` pode ser formada de um anel que tem pelo menos três pontos distintos. Uma instância `Polygon` também pode estar vazia.  
   
- Exterior e todos os anéis interiores de um `Polygon` definem seu limite. O espaço dentro dos anéis define o interior do `Polygon`.  
+ Os anéis exteriores e todos os anéis interiores de um `Polygon` definem seu limite. O espaço dentro dos anéis define o interior do `Polygon`.  
   
- A ilustração a seguir mostra exemplos de `Polygon` instâncias.  
+ A ilustração a seguir mostra exemplos de instâncias `Polygon`.  
   
  ![Exemplos de instâncias geométricas Polygon](../../database-engine/media/polygon.gif "Exemplos de instâncias geométricas Polygon")  
   
  Conforme mostrado na ilustração:  
   
-1.  Figura 1 é um `Polygon` instância cujo limite está definido por um anel exterior.  
+1.  A Figura 1 é uma instância `Polygon` cujo limite está definido por um anel exterior.  
   
 2.  A Figura 2 é uma instância `Polygon` cujo limite está definido por um anel exterior e dois anéis interiores. A área dentro dos anéis interiores faz parte do exterior da instância `Polygon`.  
   
 3.  A Figura 3 é uma instância `Polygon` válida porque seus anéis interiores cruzam em um único ponto tangente.  
   
 ### <a name="accepted-instances"></a>Instâncias aceitas  
- Instâncias `Polygon` aceitas são instâncias que podem ser armazenadas em uma variável `geometry` ou `geography` sem lançar uma exceção. A seguir é aceitas `Polygon` instâncias:  
+ Instâncias `Polygon` aceitas são instâncias que podem ser armazenadas em uma variável `geometry` ou `geography` sem lançar uma exceção. As seguintes instâncias `Polygon` são aceitas:  
   
--   Vazio `Polygon` instância  
+-   Uma instância `Polygon` vazia  
   
 -   Uma instância `Polygon` que tem um anel exterior aceitável e zero ou mais anéis interiores aceitáveis  
   
  Os critérios a seguir são necessários para que um anel seja aceitável.  
   
--   O `LineString` instância deve ser aceitos.  
+-   A instância `LineString` deve ser aceita.  
   
 -   A instância `LineString` deve ter pelo menos quatro pontos.  
   
 -   Os pontos inicial e final da instância `LineString` devem ser iguais.  
   
- O exemplo a seguir mostra aceito `Polygon` instâncias.  
+ O exemplo a seguir mostra instâncias `Polygon` aceitas.  
   
 ```  
 DECLARE @g1 geometry = 'POLYGON EMPTY';  
@@ -66,7 +66,7 @@ DECLARE @g4 geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(3 0, 6 0, 6 3, 
 DECLARE @g5 geometry = 'POLYGON((1 1, 1 1, 1 1, 1 1))';  
 ```  
   
- Conforme mostrado por `@g4` e `@g5` uma instância aceita de `Polygon` talvez não seja uma instância válida de `Polygon`. `@g5` também mostra que uma instância do Polygon precisa conter apenas um anel com quatro pontos para ser aceita.  
+ Conforme mostrado por `@g4` e `@g5` uma instância aceita de `Polygon` talvez não seja uma instância válida de `Polygon`. `@g5` também mostra que uma instância de Polygon precisa conter apenas um anel com quatro pontos para ser aceita.  
   
  Os exemplos a seguir lançam uma `System.FormatException` porque as instâncias `Polygon` não são aceitas.  
   
@@ -82,9 +82,9 @@ DECLARE @g geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(0 0, 3 0, 0 0))'
 ```  
   
 ### <a name="valid-instances"></a>Instâncias válidas  
- Os anéis interiores de um `Polygon` podem tocar em si mesmos e um no outro em tangentes únicos pontos, mas se os anéis interiores de um `Polygon` cross, a instância não é válida.  
+ Os anéis interiores de um `Polygon` podem tocar em si mesmos e um no outro em pontos tangentes únicos, mas se os anéis interiores de um `Polygon` se cruzarem, a instância não será válida.  
   
- O exemplo a seguir mostra um `Polygon` instâncias.  
+ O exemplo a seguir mostra instâncias `Polygon` válidas.  
   
 ```  
 DECLARE @g1 geometry = 'POLYGON((-20 -20, -20 20, 20 20, 20 -20, -20 -20))';  

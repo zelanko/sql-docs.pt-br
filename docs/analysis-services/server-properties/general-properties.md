@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 53d2563c050fc1567d396e9526505c5d4dd813a8
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 935d2559705aba64ecb1f19cb25bebf174d995cb
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38033334"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906206"
 ---
 # <a name="general-properties"></a>Propriedades gerais
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "38033334"
  Uma propriedade de cadeia de caracteres que especifica em uma lista delimitada as pastas que podem ser procuradas ao salvar, abrir e localizar arquivos em caixas de diálogo do Analysis Services. A conta de serviço do Analysis Services deve ter permissões de leitura e gravação em qualquer pasta adicionada à lista.  
   
  **BackupDir**  
- Uma propriedade de cadeia de caracteres que identifica o nome do diretório em que os arquivos de backup estão armazenados por padrão, para a eventualidade de o caminho não ser especificado como parte do comando Backup.  
+ Uma propriedade de cadeia de caracteres que identifica o nome do diretório onde os arquivos de backup são armazenados por padrão, no caso de um caminho não for especificado como parte do comando Backup.  
   
  **CollationName**  
  Uma propriedade de cadeia de caracteres que identifica o agrupamento do servidor. Para obter mais informações, consulte [Idiomas e agrupamentos &#40;Analysis Services&#41;](../../analysis-services/languages-and-collations-analysis-services.md).  

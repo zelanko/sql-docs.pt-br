@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 147276d31ee08a0dc5908a49cd65925e62c3bae9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 32303301fb01e381fee0e28cfedb2cd299658c88
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796204"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851881"
 ---
 # <a name="spgetapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
  É o proprietário do bloqueio, que é o valor de *lock_owner* quando o bloqueio foi solicitado. *lock_owner* é **nvarchar(32)**. O valor pode ser **Transaction** (o padrão) ou **Session**. Quando o *lock_owner* valor estiver **transação**, por padrão ou explicitamente especificado, sp_getapplock deve ser executado de dentro de uma transação.  
   
  [ @LockTimeout=] '*valor*'  
- É um valor de tempo limite de bloqueio em milissegundos. O valor padrão é o mesmo que o valor retornado por@LOCK_TIMEOUT. Para indicar que uma solicitação de bloqueio deve retornar um erro em vez de esperar pelo bloqueio quando não for possível conceder a solicitação imediatamente, especifique 0.  
+ É um valor de tempo limite de bloqueio em milissegundos. O valor padrão é o mesmo que o valor retornado por@LOCK_TIMEOUT. Para indicar que uma solicitação de bloqueio deve retornar um código de retorno de -1 em vez de esperar pelo bloqueio quando a solicitação não pode ser concedida imediatamente, especifique 0.  
   
  [ @DbPrincipal=] '*database_principal*'  
  É o usuário, função ou função de aplicativo que tem permissões para um objeto em um banco de dados. O chamador da função deve ser um membro da *database_principal*, dbo ou db_owner fixa a função de banco de dados para chamar a função com êxito. O padrão é público.  

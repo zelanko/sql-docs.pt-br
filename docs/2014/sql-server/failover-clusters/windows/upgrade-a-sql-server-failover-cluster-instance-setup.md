@@ -17,12 +17,12 @@ ms.assetid: ea8b7d66-e5a1-402f-9928-8f7310e84f5c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4d10eb18560574e647c443caf4887b8e893d7501
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 63515340bb09598841904e5ef70a54eed8e077bc
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132106"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906486"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance-setup"></a>Atualizar uma instância de cluster de failover do SQL Server (instalação)
   Você pode atualizar um cluster de failover do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para um cluster de failover do [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] com o Assistente de Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou com um prompt de comando.  
@@ -44,7 +44,7 @@ ms.locfileid: "48132106"
   
 -   O .NET Framework 4.0 é instalado em um sistema operacional clusterizado. Para minimizar qualquer possível tempo de inatividade, considere instalar o .NET Framework 4.0 antes de executar a Instalação.  
   
--   Para certificar-se de que o componente do Visual Studio seja instalado corretamente, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] exige que você instalar uma atualização. A Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verifica a presença dessa atualização e requer o download e a instalação da atualização antes de continuar com a instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para evitar a interrupção durante [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] programa de instalação, você pode baixar e instalar a atualização antes de executar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de instalação conforme descrito abaixo (ou instalar todas as atualizações para o .NET 3.5 SP1 disponíveis no Windows Update):  
+-   Para garantir que o componente Visual Studio seja instalado corretamente, o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] exige que você instale uma atualização. A Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verifica a presença dessa atualização e requer o download e a instalação da atualização antes de continuar com a instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para evitar a interrupção durante a Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , você pode baixar e instalar a atualização antes de executar a Instalação do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , conforme descrito abaixo (ou instalar todas as atualizações para o .NET 3.5 SP1 disponíveis no Windows Update):  
   
      Se você instalar [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] em um computador com o sistema operacional Windows Server 2008 SP2, você pode obter a atualização necessária [aqui](http://go.microsoft.com/fwlink/?LinkId=198093)  
   

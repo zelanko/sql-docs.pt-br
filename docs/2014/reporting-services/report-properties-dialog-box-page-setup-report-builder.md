@@ -13,15 +13,15 @@ ms.assetid: eb3b5d01-7b82-4808-a58b-9e096742f8c6
 author: maggiesmsft
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a4e7fa108ffbfc083b84460795e17515ae300302
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 496b94444e79666c0ce57904f5ef6d7da81ed26f
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207376"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905076"
 ---
 # <a name="report-properties-dialog-box-page-setup-report-builder"></a>Caixa de diálogo Propriedades do Relatório, Configurar Página (Construtor de Relatórios)
-  Selecione **Configuração de Página** na caixa de diálogo **Propriedades do Relatório**para definir as opções de página para o relatório inteiro.  
+  Selecione **Configurar página** sobre o **propriedades do relatório**, caixa de diálogo para definir opções de página para todo o relatório.  
   
 ## <a name="options"></a>Opções  
  **Polegadas**  

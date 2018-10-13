@@ -10,12 +10,12 @@ ms.assetid: e223fb7d-05ec-4fa5-8973-d845c33a23dd
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: f1dde13356f684d7fa6d7273156485bd6b5d07fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe71e5b301c016e25bb179e0104831285dab3ce1
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780724"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49071772"
 ---
 # <a name="project-settingssynchronization-oracletosql"></a>Configurações do projeto (sincronização) (OracleToSQL)
 A página de sincronização do **configurações do projeto** caixa de diálogo contém configurações que personalizam o SSMA carrega e as atualizações de banco de dados objetos como tabelas e procedimentos armazenados, em [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -57,7 +57,7 @@ Especifica a configuração padrão na caixa de diálogo de sincronização quan
 **Ação quando os metadados de objeto local estão ausente**  
 Especifica a configuração padrão na caixa de diálogo de sincronização quando metadados local estão ausente. Conjunto de valor padrão é **Refresh do banco de dados**.  
   
--   Se você selecionar **Refresh do banco de dados**, SSMA SSMA carregará as definições de banco de dados nos metadados quando a condição for atendida.  
+-   Se você selecionar **Refresh do banco de dados**, SSMA carregará as definições de banco de dados nos metadados quando a condição for atendida.  
   
 -   Se você selecionar **Skip**, SSMA não executará nenhuma ação de atualização.  
   

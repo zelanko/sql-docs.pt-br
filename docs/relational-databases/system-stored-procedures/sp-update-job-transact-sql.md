@@ -18,12 +18,12 @@ ms.assetid: cbdfea38-9e42-47f3-8fc8-5978b82e2623
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4371609b9d0c72d9d589d37f0edacc4d37a2996c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5fd6986a245d960a96592c8c63c9744b741fa5ff
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651554"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119683"
 ---
 # <a name="spupdatejob-transact-sql"></a>sp_update_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,27 +61,27 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
  O número de identificação do trabalho a ser atualizado. *job_id*está **uniqueidentifier**.  
   
  [  **@job_name =**] **'***job_name***'**  
- O nome do trabalho. *job_name*está **nvarchar (128)**.  
+ O nome do trabalho. *job_name* está **nvarchar (128)**.  
   
 > **Observação:** ambos *job_id* ou *job_name* deve ser especificado, mas não podem ser especificados.  
   
  [  **@new_name =**] **'***new_name***'**  
- O novo nome do trabalho. *new_name*está **nvarchar (128)**.  
+ O novo nome do trabalho. *new_name* está **nvarchar (128)**.  
   
  [  **@enabled =**] *habilitado*  
- Especifica se o trabalho está habilitado (**1**) ou não habilitado (**0**). *habilitada*está **tinyint**.  
+ Especifica se o trabalho está habilitado (**1**) ou não habilitado (**0**). *habilitada* está **tinyint**.  
   
  [  **@description =**] **'***descrição***'**  
  A descrição do trabalho. *Descrição* está **nvarchar(512)**.  
   
  [  **@start_step_id =**] *step_id*  
- O número de identificação da primeira etapa a ser executada para o trabalho. *step_id*está **int**.  
+ O número de identificação da primeira etapa a ser executada para o trabalho. *step_id* está **int**.  
   
  [  **@category_name =**] **'***categoria***'**  
- ID da categoria do trabalho. *categoria*está **nvarchar (128)**.  
+ ID da categoria do trabalho. *categoria* está **nvarchar (128)**.  
   
  [  **@owner_login_name =**] **'***logon***'**  
- O nome do logon que é o proprietário do trabalho. *login*está **nvarchar (128)** somente os membros dos **sysadmin** função de servidor fixa pode alterar a propriedade do trabalho.  
+ O nome do logon que é o proprietário do trabalho. *login* está **nvarchar (128)** somente os membros dos **sysadmin** função de servidor fixa pode alterar a propriedade do trabalho.  
   
  [  **@notify_level_eventlog =**] *eventlog_level*  
  Especifica quando colocar uma entrada no log de aplicativo do Microsoft Windows para este trabalho. *eventlog_level*está **int**, e pode ser um destes valores.  
@@ -100,7 +100,7 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
  Especifica quando enviar uma mensagem de rede após a conclusão deste trabalho. *netsend_level*está **int**. *netsend_level*usa os mesmos valores *eventlog_level*.  
   
  [  **@notify_level_page =**] *page_level*  
- Especifica quando enviar uma página após a conclusão deste trabalho. *page_level*está **int**. *page_level*usa os mesmos valores *eventlog_level*.  
+ Especifica quando enviar uma página após a conclusão deste trabalho. *page_level* está **int**. *page_level*usa os mesmos valores *eventlog_level*.  
   
  [  **@notify_email_operator_name =**] **'***operator_name***'**  
  O nome do operador a quem o email é enviado quando *email_level* for atingido. *email_name* está **nvarchar (128)**.  

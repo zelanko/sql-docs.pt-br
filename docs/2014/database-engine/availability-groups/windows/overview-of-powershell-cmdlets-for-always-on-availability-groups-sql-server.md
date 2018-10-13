@@ -14,15 +14,15 @@ ms.assetid: b3fef0d5-b6d7-4386-a0f0-d06c165ad4de
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: db840abbf4caed344a1be055afd6432b4d2b18e4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4996a1026b4c85b105efc09b8381913f7a47942a
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209476"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169196"
 ---
 # <a name="overview-of-powershell-cmdlets-for-alwayson-availability-groups-sql-server"></a>Visão geral de cmdlets do PowerShell para grupos de disponibilidade AlwaysOn (SQL Server)
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] O PowerShell é um shell de linha de comando baseado em tarefa e linguagem de script criado especialmente para a administração do sistema. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] fornece um conjunto de cmdlets do PowerShell no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] que permitem implantar, gerenciar e monitorar grupos de disponibilidade, réplicas de disponibilidade e bancos de dados de disponibilidade.  
+  O [!INCLUDE[msCoName](../../../includes/msconame-md.md)] PowerShell é um shell de linha de comando baseado em tarefa e linguagem de script criado especialmente para a administração do sistema. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] fornece um conjunto de cmdlets do PowerShell no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] que permitem implantar, gerenciar e monitorar grupos de disponibilidade, réplicas de disponibilidade e bancos de dados de disponibilidade.  
   
 > [!NOTE]  
 >  Um cmdlet do PowerShell pode ser executado com o início bem-sucedido de uma ação. Isso não indica que o trabalho planejado, como o failover de um grupo de disponibilidade, foi concluído. Ao gerar o script de uma sequência de ações, talvez seja necessário verificar o status das ações e esperar que elas sejam concluídas.  
@@ -60,11 +60,11 @@ ms.locfileid: "48209476"
 |Cmdlets|Description|Com suporte em|  
 |-------------|-----------------|------------------|  
 |`Backup-SqlDatabase`|Cria um backup de dados ou de log.|Qualquer banco de dados online (para o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], um banco de dados na instância do servidor que hospeda a réplica primária).|  
-|`Restore-SqlDatabase`|Restaura um backup.|Qualquer instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (para o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], uma instância de servidor que hospeda uma réplica secundária)<br /><br /> **\*\* Importante \* \***  ao preparar um banco de dados secundário, você deve usar os `-NoRecovery` parâmetro em cada `Restore-SqlDatabase` comando.|  
+|`Restore-SqlDatabase`|Restaura um backup.|Qualquer instância do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (para o [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], uma instância de servidor que hospeda uma réplica secundária)<br /><br /> **&#42;&#42;Importante &#42; &#42;**  ao preparar um banco de dados secundário, você deve usar o `-NoRecovery` parâmetro em cada `Restore-SqlDatabase` comando.|  
   
  Para obter informações sobre como usar esses cmdlets para preparar um banco de dados secundário, veja [Preparar um banco de dados secundário manualmente para um grupo de disponibilidade &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
-##  <a name="DeployManageAGs"></a> Creating and Managing an Availability Group  
+##  <a name="DeployManageAGs"></a> Criando e gerenciando um grupo de disponibilidade  
   
 |Cmdlets|Description|Com suporte em|  
 |-------------|-----------------|------------------|  
@@ -73,7 +73,7 @@ ms.locfileid: "48209476"
 |`Set-SqlAvailabilityGroup`|Define as propriedades de um grupo de disponibilidade; coloca um grupo de disponibilidade online/offline|Instância de servidor que hospeda a réplica primária|  
 |`Switch-SqlAvailabilityGroup`|Inicia um dos seguintes formulários de failover:<br /><br /> Um failover forçado de um grupo de disponibilidade (com possível perda de dados).<br /><br /> Um failover manual de um grupo de disponibilidade.|Instância de servidor que hospeda a réplica secundária de destino|  
   
-##  <a name="AGlisteners"></a> Creating and Managing an Availability Group Listener  
+##  <a name="AGlisteners"></a> Criando e gerenciando um ouvinte de grupo de disponibilidade  
   
 |Cmdlet|Description|Com suporte em|  
 |------------|-----------------|------------------|  
@@ -85,12 +85,12 @@ ms.locfileid: "48209476"
   
 |Cmdlets|Description|Com suporte em|  
 |-------------|-----------------|------------------|  
-|**New-SqlAvailabilityReplica**|Cria uma nova réplica de disponibilidade. Você pode usar o `-AsTemplate` parâmetro para criar um objeto de réplica de disponibilidade na memória para cada nova réplica de disponibilidade.|Instância de servidor que hospeda a réplica primária|  
+|**New-SqlAvailabilityReplica**|Cria uma nova réplica de disponibilidade. Você pode usar o parâmetro `-AsTemplate` para criar um objeto de réplica de disponibilidade de memória para cada nova réplica de disponibilidade.|Instância de servidor que hospeda a réplica primária|  
 |`Join-SqlAvailabilityGroup`|Une uma réplica secundária ao grupo de disponibilidade.|Instância de servidor que hospeda a réplica secundária|  
 |**Remove-SqlAvailabilityReplica**|Exclui uma réplica de disponibilidade.|Instância de servidor que hospeda a réplica primária|  
 |`Set-SqlAvailabilityReplica`|Define as propriedades de uma réplica de disponibilidade.|Instância de servidor que hospeda a réplica primária|  
   
-##  <a name="DeployManageDbs"></a> Adding and Managing an Availability Database  
+##  <a name="DeployManageDbs"></a> Adicionando e gerenciando um banco de dados de disponibilidade  
   
 |Cmdlets|Description|Com suporte em|  
 |-------------|-----------------|------------------|  
@@ -99,7 +99,7 @@ ms.locfileid: "48209476"
 |`Resume-SqlAvailabilityDatabase`|Retoma a movimentação de dados para um banco de dados de disponibilidade suspenso.|As instância do servidor na qual o banco de dados é suspenso.|  
 |`Suspend-SqlAvailabilityDatabase`|Suspende a movimentação de dados para um banco de dados de disponibilidade.|Qualquer instância de servidor que hospeda uma réplica de disponibilidade.|  
   
-##  <a name="MonitorTblshtAGs"></a> Monitoring Availability Group Health  
+##  <a name="MonitorTblshtAGs"></a> Monitorando a integridade do grupo de disponibilidade  
  Os cmdlets [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a seguir permitem monitorar a integridade de um grupo de disponibilidade e de suas réplicas e bancos de dados.  
   
 > [!IMPORTANT]  

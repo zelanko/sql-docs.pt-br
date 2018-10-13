@@ -16,12 +16,12 @@ ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bd9ed39459d5302fa721c2e0eab176768bb66bc9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 43bd1337b811472cca53d4f89d51d668d3799a1a
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130676"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905240"
 ---
 # <a name="excel-destination"></a>Destino do Excel
   O destino do Excel carrega dados em planilhas ou intervalos em pastas de trabalho do [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  
@@ -49,7 +49,7 @@ ms.locfileid: "48130676"
   
      Para obter informações sobre como evitar incluir aspas simples, consulte esta postagem no blog, [Aspas simples são acrescentadas a todas as cadeias de caracteres quando os dados são transformados para Excel ao usar o componente de fluxo de dados de destino do Excel no pacote SSIS](http://go.microsoft.com/fwlink/?LinkId=400876), no msdn.com.  
   
--   **Salvando dados de memorando (ntext)**. Antes de salvar com sucesso cadeias de caracteres com mais de 255 caracteres em uma coluna do Excel, o driver deve reconhecer o tipo de dados da coluna de destino como **memorando** e não como **cadeia de caracteres**. Se a tabela de destino já contém linhas de dados, então as primeiras linhas que serão amostradas pelo driver devem conter pelo menos uma instância com um valor maior que 255 caracteres na coluna de memorando. Se a tabela de destino for criada durante o desenvolvimento do pacote ou em tempo de execução, a instrução CREATE TABLE deve usar o tipo de dados LONGTEXT (ou um de seus sinônimos) para a coluna de memorando.  
+-   **Salvando dados de memorando (ntext)**. Antes de salvar com sucesso cadeias de caracteres com mais de 255 caracteres em uma coluna do Excel, o driver deve reconhecer o tipo de dados da coluna de destino como **memorando** e não como **cadeia de caracteres**. Se a tabela de destino já contém linhas de dados, então as primeiras linhas que serão amostradas pelo driver devem conter pelo menos uma instância com um valor maior que 255 caracteres na coluna de memorando. Se a tabela de destino for criada durante o desenvolvimento de pacote ou em tempo de execução, a instrução CREATE TABLE deve usar LONGTEXT (ou um de seus sinônimos) como o tipo de dados da coluna de memorando.  
   
 -   **Tipos de dados**. O driver do Excel reconhece apenas um conjunto limitado de tipos de dados. Por exemplo, todas as colunas numéricas são interpretadas como duplas (DT_R8) e todas as colunas de cadeia de caracteres (que não sejam colunas de memorando) são interpretadas como cadeias Unicode de 255 caracteres (DT_WSTR). [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] mapeia os tipos de dados do Excel da seguinte maneira:  
   
@@ -82,11 +82,11 @@ ms.locfileid: "48130676"
   
  Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor de Destinos do Excel** , clique em um dos seguintes tópicos:  
   
--   [Editor de destino do Excel &#40;página do Gerenciador de Conexão&#41;](../excel-destination-editor-connection-manager-page.md)  
+-   [Editor de Destinos do Excel &#40;Página Gerenciador de Conexões&#41;](../excel-destination-editor-connection-manager-page.md)  
   
--   [Editor de destino do Excel &#40;página mapeamentos&#41;](../excel-destination-editor-mappings-page.md)  
+-   [Editor de Destinos do Excel &#40;página Mapeamentos&#41;](../excel-destination-editor-mappings-page.md)  
   
--   [Editor de destino do Excel &#40;página de saída de erro&#41;](../excel-destination-editor-error-output-page.md)  
+-   [Editor de Destinos do Excel &#40;Página Saída de Erro&#41;](../excel-destination-editor-error-output-page.md)  
   
  A caixa de diálogo **Editor Avançado** reflete todas as propriedades que podem ser definidas programaticamente. Para obter mais informações sobre as propriedades que podem ser definidas na caixa de diálogo **Editor Avançado** ou programaticamente, clique em um dos seguintes tópicos:  
   
@@ -114,7 +114,7 @@ ms.locfileid: "48130676"
   
 ## <a name="see-also"></a>Consulte também  
  [Origem do Excel](excel-source.md)   
- [Serviços de integração &#40;SSIS&#41; variáveis](../integration-services-ssis-variables.md)   
+ [Variáveis do SSIS &#40;Integration Services&#41;](../integration-services-ssis-variables.md)   
  [Fluxo de Dados](data-flow.md)   
  [Trabalhar com arquivos do Excel com a tarefa Script](../extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
   

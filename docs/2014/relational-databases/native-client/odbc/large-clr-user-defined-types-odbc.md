@@ -13,12 +13,12 @@ ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3f6695b6f5d77b506147fa6d9f6aa0b77e1978ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5af4f85652fc1a8a333912c741f96df014655ebe
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152742"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072280"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>Tipos de dados CLR grandes definidos pelo usuário (ODBC)
   Este tópico aborda as alterações feitas ao ODBC no SQL Server Native Client para dar suporte aos UDTs (tipos definidos pelo usuário) de CLR (Common Language Runtime) grande.  
@@ -163,7 +163,7 @@ ms.locfileid: "48152742"
  Esta seção discute as alterações feitas nas funções ODBC do SQL Server Native Client para dar suporte a UDTs de CLR grande.  
   
 ### <a name="sqlbindcol"></a>SQLBindCol  
- Valores de colunas de resultado UDT são convertidos de tipos de dados SQL para C, conforme descrito na seção "Associações e conversões", anteriormente neste tópico.  
+ Valores de coluna de resultado UDT são convertidos de SQL para tipos de dados C conforme descrito na seção "Associações e conversões", neste tópico.  
   
 ### <a name="sqlbindparameter"></a>SQLBindParameter  
  Os valores necessários para UDTs são os seguintes:  
@@ -196,13 +196,13 @@ ms.locfileid: "48152742"
 |SQL_SS_UDT<br /><br /> (comprimento maior que 8.000 bytes)|SQL_SS_UDT|SQL_SS_LENGTH_UNLIMITED (0)|0|  
   
 ### <a name="sqlfetch"></a>SQLFetch  
- Valores de colunas de resultado UDT são convertidos de tipos de dados SQL para C, conforme descrito na seção "Associações e conversões", anteriormente neste tópico.  
+ Valores de coluna de resultado UDT são convertidos de SQL para tipos de dados C conforme descrito na seção "Associações e conversões", neste tópico.  
   
 ### <a name="sqlfetchscroll"></a>SQLFetchScroll  
- Valores de colunas de resultado UDT são convertidos de tipos de dados SQL para C, conforme descrito na seção "Associações e conversões", anteriormente neste tópico.  
+ Valores de coluna de resultado UDT são convertidos de SQL para tipos de dados C conforme descrito na seção "Associações e conversões", neste tópico.  
   
 ### <a name="sqlgetdata"></a>SQLGetData  
- Valores de colunas de resultado UDT são convertidos de tipos de dados SQL para C, conforme descrito na seção "Associações e conversões", anteriormente neste tópico.  
+ Valores de coluna de resultado UDT são convertidos de SQL para tipos de dados C conforme descrito na seção "Associações e conversões", neste tópico.  
   
 ### <a name="sqlgetdescfield"></a>SQLGetDescField  
  Os campos de descritor disponíveis como os novos tipos são descritos nas seções "Campos do descritor dos parâmetros" e "Campos do descritor dos resultados", anteriormente neste tópico.  
@@ -222,7 +222,7 @@ ms.locfileid: "48152742"
  Os valores retornados para UDTs são os descritos na seção "Metadados de coluna retornados por SQLColumns e SQLProcedureColumns (metadados de catálogo)", anteriormente neste tópico.  
   
 ### <a name="sqlputdata"></a>SQLPutData  
- Valores de parâmetros UDT são convertidos de tipos de dados de C para SQL, conforme descrito na seção "Associações e conversões", anteriormente neste tópico.  
+ Valores de parâmetros UDT são convertidos de C para tipos de dados SQL conforme descrito na seção "Associações e conversões", neste tópico.  
   
 ### <a name="sqlsetdescfield"></a>SQLSetDescField  
  Campo de descritor disponível com os novos tipos são descritos nas seções "Campos do descritor dos resultados", neste tópico e "Campos de descritor para parâmetros".  

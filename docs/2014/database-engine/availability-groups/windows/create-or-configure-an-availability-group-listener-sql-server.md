@@ -15,12 +15,12 @@ ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 265bf3544f427f2dc23a437bc864cbac6dc53f1c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3d2a18c1f9f425ec7531c46299a5cf4c78278437
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052366"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120403"
 ---
 # <a name="create-or-configure-an-availability-group-listener-sql-server"></a>Criar ou configurar um ouvinte de grupo de disponibilidade (SQL Server)
   Este tópico descreve como criar ou configurar um único *ouvinte de grupo de disponibilidade* para um Grupo de Disponibilidade AlwaysOn usando o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou o PowerShell no [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -160,7 +160,7 @@ ms.locfileid: "48052366"
      `New-SqlAvailabilityGroupListener`  
      Cria um novo ouvinte de grupo de disponibilidade e conecta-o a um grupo de disponibilidade existente.  
   
-     Por exemplo, a seguinte `New-SqlAvailabilityGroupListener` comando cria um ouvinte de grupo de disponibilidade denominado `MyListener` para o grupo de disponibilidade `MyAg`. Este ouvinte usará o endereço IPv4 passado para o `-StaticIp` parâmetro como seu endereço IP virtual.  
+     Por exemplo, o comando `New-SqlAvailabilityGroupListener` a seguir cria ou ouvinte de grupo de disponibilidade denominado `MyListener` para o grupo de disponibilidade `MyAg`. Este ouvinte usará o endereço IPv4 passado para o parâmetro `-StaticIp` como seu endereço IP virtual.  
   
     ```  
     New-SqlAvailabilityGroupListener -Name MyListener `   
@@ -210,7 +210,7 @@ ms.locfileid: "48052366"
 ##  <a name="FollowUp"></a> Acompanhamento: após criar um ouvinte do grupo de disponibilidade  
   
 ###  <a name="MultiSubnetFailover"></a> Palavra-chave MultiSubnetFailover e recursos associados  
- `MultiSubnetFailover` uma palavra-chave cadeia de caracteres de conexão nova é usada para habilitar failover mais rápido com grupos de disponibilidade AlwaysOn e instâncias de Cluster de Failover do AlwaysOn no SQL Server 2012. Os três sub-recursos a seguir são habilitados quando `MultiSubnetFailover=True` está definido na cadeia de conexão:  
+ `MultiSubnetFailover` é uma nova palavra-chave de cadeia de conexão usada para habilitar o failover mais rápido com os Grupos de Disponibilidade AlwaysOn e as Instâncias de Cluster de Failover AlwaysOn no SQL Server 2012. Os três sub-recursos a seguir são habilitados quando `MultiSubnetFailover=True` está definido na cadeia de conexão:  
   
 -   Um failover de várias sub-redes mais rápido para um ouvinte de várias sub-redes para um Grupo de Disponibilidade AlwaysOn ou instâncias de cluster de failover.  
   
@@ -241,11 +241,11 @@ ms.locfileid: "48052366"
      **Contras:** se ocorrer um failover de sub-rede cruzado, o tempo de recuperação do cliente poderá ser de 15 minutos ou mais, dependendo da sua `HostRecordTTL` e da configuração de sua agenda de replicação DNS/AD entre sites.  
   
 ###  <a name="RegisterAllProvidersIP"></a> Configuração RegisterAllProvidersIP  
- Quando você usa [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], ou o PowerShell para criar um ouvinte de grupo de disponibilidade, o ponto de acesso do cliente é criado no WSFC com o `RegisterAllProvidersIP` propriedade definida como 1 (verdadeiro). O efeito de esse valor de propriedade depende da cadeia de conexão do cliente, da seguinte maneira:  
+ Quando você usa o [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], o [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou o PowerShell para criar um ouvinte de grupo de disponibilidade, o Ponto de Acesso para Cliente é criado no WSFC com a propriedade `RegisterAllProvidersIP` definida como 1 (true). O efeito de esse valor de propriedade depende da cadeia de conexão do cliente, da seguinte maneira:  
   
 -   Cadeias de conexão que definem `MultiSubnetFailover` como true  
   
-     [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] Define o `RegisterAllProvidersIP` propriedade para 1 para reduzir o tempo de reconexão após um failover para clientes cujas cadeias de conexão de cliente especificam `MultiSubnetFailover = True`, como recomendado. Observe que para aproveitar as vantagens do recurso de várias sub-redes do ouvinte, seus clientes podem exigir um provedor de dados que dê suporte à palavra-chave `MultiSubnetFailover`. Para obter mais informações sobre suporte a driver para failover de várias sub-redes, consulte [Conectividade do Cliente AlwaysOn &#40;SQL Server&#41;](always-on-client-connectivity-sql-server.md).  
+     [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] define a propriedade `RegisterAllProvidersIP` como 1 para reduzir o tempo de reconexão após um failover para clientes cujas cadeias de conexão de cliente especificam `MultiSubnetFailover = True`, como recomendado. Observe que para aproveitar as vantagens do recurso de várias sub-redes do ouvinte, seus clientes podem exigir um provedor de dados que dê suporte à palavra-chave `MultiSubnetFailover`. Para obter mais informações sobre suporte a driver para failover de várias sub-redes, consulte [Conectividade do Cliente AlwaysOn &#40;SQL Server&#41;](always-on-client-connectivity-sql-server.md).  
   
      Para obter informações sobre clustering de várias sub-redes, consulte [Clustering de várias sub-redes do SQL Server &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md).  
   
@@ -258,16 +258,16 @@ ms.locfileid: "48052366"
   
 -   Cadeias de conexão que não definem `MultiSubnetFailover` como true  
   
-     Quando `RegisterAllProvidersIP = 1`, quaisquer clientes cujas cadeias de conexão não usem `MultiSubnetFailover = True`encontrarão conexões de alta latência. Isso ocorre porque esses clientes tentam conexões com todos os IPs em sequência. Em contrapartida, se `RegisterAllProvidersIP` for alterado para 0, o endereço IP ativo será registrado no Ponto de Acesso para Cliente no cluster WSFC, reduzindo a latência para clientes herdados. Portanto, se você tiver clientes herdados que precisem se conectar a um ouvinte de grupo de disponibilidade e não possa usar a propriedade `MultiSubnetFailover`, recomendamos alterar `RegisterAllProvidersIP` para 0.  
+     Quando `RegisterAllProvidersIP = 1`, quaisquer clientes cujas cadeias de conexão não usem `MultiSubnetFailover = True` encontrarão conexões de alta latência. Isso ocorre porque esses clientes tentam conexões com todos os IPs em sequência. Em contrapartida, se `RegisterAllProvidersIP` for alterado para 0, o endereço IP ativo será registrado no Ponto de Acesso para Cliente no cluster WSFC, reduzindo a latência para clientes herdados. Portanto, se você tiver clientes herdados que precisam se conectar a um ouvinte de grupo de disponibilidade e não é possível usar o `MultiSubnetFailover` propriedade, é recomendável que você altere `RegisterAllProvidersIP` como 0.  
   
     > [!IMPORTANT]  
     >  Quando você cria um ouvinte de grupo de disponibilidade no cluster WSFC (GUI do Gerenciador de Cluster de Failover), `RegisterAllProvidersIP` será 0 (false) por padrão.  
   
 ###  <a name="HostRecordTTL"></a> Configuração HostRecordTTL  
- Por padrão, os clientes armazenam em cache registros DNS do cluster por 20 minutos.  Reduzindo `HostRecordTTL`, o tempo de vida (TTL), para o registro armazenado em cache, os clientes herdados poderão se reconectar mais rapidamente.  No entanto, a redução de `HostRecordTTL` definindo maio também resultado em maior tráfego para os servidores DN.  
+ Por padrão, os clientes armazenam em cache registros DNS do cluster por 20 minutos.  Reduzindo a configuração `HostRecordTTL`, a vida útil (TTL), para o registro armazenado em cache, os clientes herdados poderão se reconectar com mais rapidez.  No entanto, a redução da configuração `HostRecordTTL` também pode resultar em maior tráfego para os servidores DN.  
   
 ###  <a name="SampleScript"></a> Exemplo de script PowerShell para desabilitar RegisterAllProvidersIP e reduzir o TTL  
- O exemplo de PowerShell a seguir demonstra como configurar ambos os `RegisterAllProvidersIP` e `HostRecordTTL` parâmetros para o recurso de ouvinte de cluster.  O registro DNS será armazenado em cache por 5 minutos, e não pelos 20 minutos padrão.  A modificação dos dois parâmetros de cluster pode reduzir o tempo de conexão ao endereço IP correto após um failover para clientes herdados que não podem usar o parâmetro `MultiSubnetFailover`.  Substitua `yourListenerName` pelo nome do ouvinte que você está alterando.  
+ O exemplo do PowerShell a seguir demonstra como configurar os parâmetros de cluster `RegisterAllProvidersIP` e `HostRecordTTL` para o recurso de ouvinte.  O registro DNS será armazenado em cache por 5 minutos, e não pelos 20 minutos padrão.  A modificação dos dois parâmetros de cluster pode reduzir o tempo de conexão ao endereço IP correto após um failover para clientes herdados que não podem usar o parâmetro `MultiSubnetFailover`.  Substitua `yourListenerName` pelo nome do ouvinte que você está alterando.  
   
 ```  
 Import-Module FailoverClusters  

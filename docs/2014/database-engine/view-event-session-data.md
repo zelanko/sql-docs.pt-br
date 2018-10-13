@@ -11,12 +11,12 @@ ms.assetid: ac742a01-2a95-42c7-b65e-ad565020dc49
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d25e4c745ba7cd5d937ed558283c21a49d6ec0a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: befef498ab4cda12ce38a34678b78a2b5dcd278c
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159486"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120293"
 ---
 # <a name="view-event-session-data"></a>Exibir dados de sessão de evento
   Este tópico descreve o uso da interface do usuário de exibição para ver e analisar dados de evento estendidos:  
@@ -45,7 +45,7 @@ ms.locfileid: "48159486"
   
 -   Para um destino de event_file, exiba os dados de destino de arquivo (arquivo .XEL) usando um dos métodos a seguir:  
   
-    -   Use o arquivo -> Abrir no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
+    -   Use Arquivo -> Abrir no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
     -   Arraste e solte o arquivo no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
@@ -86,7 +86,7 @@ ms.locfileid: "48159486"
  O painel de **Detalhes** mostra todas as colunas para o evento selecionado, incluindo campos e ações. Você pode adicionar uma coluna à tabela de dados de destino clicando com o botão direito em uma linha no painel de **Detalhes** e selecionando **Mostrar Coluna na Tabela**.  
   
 ### <a name="create-modify-or-delete-merged-columns"></a>Criar, modificar ou excluir colunas mescladas  
- Uma coluna mesclada permite que você combine um conjunto de campos a ser exibido em uma única coluna. A coluna mesclada mostrará os dados do primeiro campo não NULL baseado na ordem que eles são adicionados à lista de campos. Isso é semelhante ao que você vê no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Profiler, onde uma coluna específica pode mostrar dados diferentes dependendo do evento (o exemplo mais comum disso é o campo TextData no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Profiler). Para um exemplo, você pode mesclar os campos instrução e batch_text dos eventos sql_statement_completed e sql_batch_completed, respectivamente, em um campo nomeado myStatement. Quando você exibe a coluna myStatement na tabela, ela mostrará os dados apropriados para o evento associado.  
+ Uma coluna mesclada permite que você combine um conjunto de campos a ser exibido em uma única coluna. A coluna mesclada mostrará os dados do primeiro campo não NULL baseado na ordem que eles são adicionados à lista de campos. Isto é semelhante ao que você vê no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Profiler, onde uma coluna específica pode mostrar dados diferentes dependendo do evento (o exemplo mais comum disto é o campo TextData no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Profiler). Para um exemplo, você pode mesclar os campos instrução e batch_text dos eventos sql_statement_completed e sql_batch_completed, respectivamente, em um campo nomeado myStatement. Quando você exibe a coluna myStatement na tabela, ela mostrará os dados apropriados para o evento associado.  
   
  Você pode criar, modificar ou excluir colunas mescladas:  
   
@@ -125,7 +125,7 @@ ms.locfileid: "48159486"
  Se você agrupou colunas, classificar a coluna só classificará os dados dentro do grupo.  
   
 ### <a name="group-results"></a>Agrupar resultados  
- Resultados agrupados são equivalentes à funcionalidade do `GROUP BY` cláusula em [!INCLUDE[tsql](../includes/tsql-md.md)]. A tabela de dados de destino mostrará os dados agrupados, permitindo expandir e recolher os dados.  
+ Os resultados agrupados são equivalentes à funcionalidade da cláusula `GROUP BY` no [!INCLUDE[tsql](../includes/tsql-md.md)]. A tabela de dados de destino mostrará os dados agrupados, permitindo expandir e recolher os dados.  
   
  Você deve agrupar dados antes de poder agregá-lo. Por exemplo, você pode agrupar no valor query_hash, classificar em ordem decrescente por duração, obter a duração média para cada grupo e classificar em ordem decrescente na agregação.  Isto produzirá uma lista que mostra a lista de instruções exclusivas da duração média mais longa para a mais curta. Quando você expande o grupo de nível superior, você verá as execuções individuais daquela consulta específica classificada da mais longa para a mais curta.  
   
@@ -175,7 +175,7 @@ ms.locfileid: "48159486"
   
     -   Colunas da tabela. Use esta opção para procurar todas as colunas visíveis na janela de rastreamento.  
   
-    -   Detalhes. Use esta opção para procurar todas as colunas (promovida e não promovida) na janela de rastreamento que foi selecionada antes de abrir a caixa de diálogo **Localizar nos Eventos Estendidos** .  
+    -   Detalhes. Use esta opção para procurar todas as colunas (promovida e não promovida) na janela de rastreamento que foram selecionadas antes de abrir o **localizar nos eventos estendidos** caixa de diálogo.  
   
     -   *Event_column_name*. Use esta opção para procurar uma coluna de evento específica na lista suspensa.  
   
@@ -220,7 +220,7 @@ ms.locfileid: "48159486"
   
  Para copiar resultados de rastreamento, selecione uma célula, linha ou linhas, clique com o botão direito, selecione **Cópia** e em **Célula**, **Linha**ou **Detalhes**. A opção Eventos Estendidos oferece suporte à cópia de um máximo de 1.000 linhas.  
   
- Você pode exportar resultados de rastreamento para um. XEL arquivo, tabela, ou. Arquivo CSV, selecionando **exportar para o** da **eventos estendidos** opção de menu no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
+ Você pode exportar resultados de rastreamento para um arquivo .XEL, tabela ou arquivo .CSV selecionando **Exportar para** da opção de menu **Eventos Estendidos** no [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
 ### <a name="view-a-deadlock-graph-and-query-plans"></a>Exibir um gráfico de Deadlock e planos de consulta  
  Você pode exibir o deadlock graph para **xml_deadlock_report** no painel Detalhes para ajudar a solucionar problemas de deadlocks. Você também pode exibir gráficos de plano de consulta para os seguintes eventos:  

@@ -9,14 +9,14 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 08cdfd62f25ec42195418938da37c502f221120d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d41b49e4585d2a256250a009b09ffa9ed94ea925
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023553"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906186"
 ---
-# <a name="mdx-query---existing-keyword"></a>Consulta MDX - palavra-chave existente
+# <a name="mdx-query---existing-keyword"></a>Consulta MDX – Palavra-chave EXISTING
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Força a avaliação de um conjunto especificado no contexto atual.  
   
@@ -35,7 +35,7 @@ Existing Set_Expression
  Por padrão, são avaliados conjuntos no contexto do cubo que contém os membros do conjunto. A palavra-chave **Existing** força a avaliação de um conjunto especificado no contexto atual.  
   
 ## <a name="example"></a>Exemplo  
- O exemplo a seguir retorna a contagem dos revendedores cujas vendas caíram ao longo do período anterior, com base em valores de Estado do membro, selecionados pelo usuário, avaliados usando a função **Aggregate** . A palavra-chave [Hierarchize &#40;MDX&#41;](../../../mdx/hierarchize-mdx.md) e [DrilldownLevel (MDX)](../../../mdx/drilldownlevel-mdx.md) são usadas para retornar valores por queda de vendas por categorias de produto na dimensão Produto. A palavra-chave **Existing** força a avaliação do conjunto na função **Filter** no contexto atual, ou seja, para os membros Washington e Oregon da hierarquia de atributo Estado.  
+ O exemplo a seguir retorna a contagem dos revendedores cujas vendas caíram ao longo do período anterior, com base em valores de Estado do membro, selecionados pelo usuário, avaliados usando a função **Aggregate** . A palavra-chave [Hierarchize &#40;MDX&#41;](../../../mdx/hierarchize-mdx.md) e [DrilldownLevel (MDX)](../../../mdx/drilldownlevel-mdx.md) são usadas para retornar valores por queda de vendas por categorias de produto na dimensão Produto. O **Existing** força a palavra-chave set na **filtro** função a ser avaliada no contexto atual, ou seja, para os membros Washington e Oregon da hierarquia de atributo estado-província.  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS  
@@ -73,13 +73,13 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Contagem de & #40; Definir & #41; & #40; MDX & #41;](../../../mdx/count-set-mdx.md)   
- [AddCalculatedMembers & #40; MDX & #41;](../../../mdx/addcalculatedmembers-mdx.md)   
- [Agregação & #40; MDX & #41;](../../../mdx/aggregate-mdx.md)   
- [Filtro & #40; MDX & #41;](../../../mdx/filter-mdx.md)   
- [Propriedades & #40; MDX & #41;](../../../mdx/properties-mdx.md)   
- [DrilldownLevel & #40; MDX & #41;](../../../mdx/drilldownlevel-mdx.md)   
- [Hierarquize & #40; MDX & #41;](../../../mdx/hierarchize-mdx.md)   
- [Referência de função MDX & #40; MDX & #41;](../../../mdx/mdx-function-reference-mdx.md)  
+ [Count &#40;Set&#41; &#40;MDX&#41;](../../../mdx/count-set-mdx.md)   
+ [AddCalculatedMembers &#40;MDX&#41;](../../../mdx/addcalculatedmembers-mdx.md)   
+ [Aggregate &#40;MDX&#41;](../../../mdx/aggregate-mdx.md)   
+ [Filter &#40;MDX&#41;](../../../mdx/filter-mdx.md)   
+ [Properties &#40;MDX&#41;](../../../mdx/properties-mdx.md)   
+ [DrilldownLevel &#40;MDX&#41;](../../../mdx/drilldownlevel-mdx.md)   
+ [Hierarchize &#40;MDX&#41;](../../../mdx/hierarchize-mdx.md)   
+ [Referência da Função MDX &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md)  
   
   

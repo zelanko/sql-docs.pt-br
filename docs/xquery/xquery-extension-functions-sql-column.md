@@ -17,12 +17,12 @@ ms.assetid: e8f67bdf-b489-49a9-9d0f-2069c1750467
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 75980cf457d1422bba783c02f9978bdd9263f220
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 17703c8a4c4839b977da9f4583a90ea3c3583b52
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627704"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119883"
 ---
 # <a name="xquery-extension-functions---sqlcolumn"></a>Funções de Extensão XQuery – sql:column()
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sql:column("columnName")
   
  A consulta constrói XML que tenha a seguinte forma:  
   
-```  
+```xml
 <Product ProductID="771" ProductName="Mountain-100 Silver, 38" ProductPrice="3399.99" ProductModelID="19"   
   ProductModelName="Mountain 100" />  
 ```  
@@ -67,7 +67,7 @@ sql:column("columnName")
   
 -   Para tornar a consulta mais interessante, o **ProductModelName** o valor de atributo é obtido do **CatalogDescription** coluna da **tipo de xml**. Como as informações do catálogo de modelo do produto XML não são armazenadas para todos os modelos de produtos, a instrução `if` será usada para recuperar o valor somente se ele existir.  
   
-    ```  
+    ```sql
     SELECT P.ProductID, CatalogDescription.query('  
     declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
            <Product   
@@ -109,7 +109,7 @@ ProductID               Result
   
  A consulta a seguir constrói XML que contenha informações específicas do produto. Tais informações incluem ProductID, ProductName, ProductPrice e, se disponível, ProductModelName de todos os produtos que pertencem a um modelo de produto específico, ProductModelID=19. O XML é atribuído, em seguida, para o @x variável de **xml** tipo.  
   
-```  
+```sql
 declare @x xml  
 SELECT @x = CatalogDescription.query('  
 declare namespace pd="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  

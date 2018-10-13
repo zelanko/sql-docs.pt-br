@@ -12,12 +12,12 @@ ms.assetid: 1a4a6564-9820-4a14-9305-2c0e9ea37454
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d9f3033aefbb01787fe0001a860a870960d98f15
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 25559152ebb3b748cee44a3a04dec2c23b7432b8
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141562"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072030"
 ---
 # <a name="ddl-triggers"></a>Gatilhos DDL
   Os gatilhos DDL são disparados em resposta a diversos eventos DDL (linguagem de definição de dados). Esses eventos correspondem principalmente a instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] que começam com as palavras-chave CREATE, ALTER, DROP, GRANT, DENY, REVOKE ou UPDATE STATISTICS. Determinados procedimentos armazenados do sistema que executam operações do tipo DDL também podem disparar gatilhos DDL.  
@@ -35,14 +35,14 @@ ms.locfileid: "48141562"
   
 ## <a name="types-of-ddl-triggers"></a>Tipos de gatilhos DDL  
  Gatilho DDL Transact-SQL  
- Um tipo especial de procedimento armazenado [!INCLUDE[tsql](../../includes/tsql-md.md)] que executa uma ou mais instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] em resposta a um evento com escopo de servidor ou de banco de dados. Por exemplo, um Gatilho DDL poderá ser disparado se uma instrução como ALTER SERVER CONFIGURATION for executada ou se uma tabela for excluída usando DROP TABLE.  
+ Um tipo especial de [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimento armazenado que executa uma ou mais [!INCLUDE[tsql](../../includes/tsql-md.md)] instruções em resposta a um evento no escopo do servidor ou no escopo do banco de dados. Por exemplo, um Gatilho DDL poderá ser disparado se uma instrução como ALTER SERVER CONFIGURATION for executada ou se uma tabela for excluída usando DROP TABLE.  
   
  Gatilho DDL CLR  
  Em vez de executar um procedimento armazenado [!INCLUDE[tsql](../../includes/tsql-md.md)] , um gatilho CLR executa um ou mais métodos gravados em código gerenciado que são membros de um assembly criado no .NET Framework e carregado para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Os gatilhos DDL são disparados somente após a execução das instruções DDL que os dispararam. Os gatilhos DDL não podem ser usados como gatilhos INSTEAD OF. Os gatilhos DDL não são disparados em resposta a eventos que afetem tabelas temporárias locais ou globais e procedimentos armazenados.  
   
- Gatilhos DDL não criam especiais `inserted` e `deleted` tabelas.  
+ Os gatilhos DDL não criam as tabelas especiais `inserted` e `deleted`.  
   
  As informações sobre um evento que dispara um gatilho DDL e as alterações subsequentes causadas pelo gatilho são capturadas por meio da função EVENTDATA.  
   

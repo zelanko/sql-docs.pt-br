@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
 ms.custom: sql-linux
-ms.openlocfilehash: cd4f7b3f447d5a7d05ed08fa07ecf36a685a10ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: feae91ed25dafa499026b2cadf72a2eafa0c63ae
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786964"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906226"
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Instruções passo a passo para os recursos de segurança do SQL Server no Linux
 
@@ -282,7 +282,7 @@ WITH
 GO  
 ```
 
-Para obter mais informações, consulte [criptografia de Backup](../relational-databases/backup-restore/backup-encryption.md).
+Para obter mais informações, consulte [Criptografia de backup](../relational-databases/backup-restore/backup-encryption.md).
 
 
 ## <a name="next-steps"></a>Próximas etapas

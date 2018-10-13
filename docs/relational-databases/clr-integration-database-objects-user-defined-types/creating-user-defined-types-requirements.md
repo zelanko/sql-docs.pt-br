@@ -20,12 +20,12 @@ ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6faf51099d0a5eced6543704d5f45b6fc922f522
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: acb2fe2d6c6b439295c0a6f0b7a4e233c23cb337
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697110"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119744"
 ---
 # <a name="creating-user-defined-types---requirements"></a>Criar tipos definidos pelo usuário – Requisitos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "47697110"
   
  **bool**, **byte**, **sbyte**, **short**, **ushort**, **int**, **uint**, **long**, **ulong**, **float**, **double**, **SqlByte**, **SqlInt16**, **SqlInt32**, **SqlInt64**, **SqlDateTime**, **SqlSingle**, **SqlDouble**, **SqlMoney**, **SqlBoolean**  
   
- Tipos de valores que são compostos de campos dos tipos mencionados acima são bons candidatos para **nativos** Formatar, como **structs** no Visual c# (ou **estruturas** conforme eles são conhecidos no Visual Basic). Por exemplo, um UDT especificado com o **nativos** formato de serialização pode conter um campo de outro UDT que também foi especificado com o **nativo** formato. Se a definição de UDT é mais complexa e contém os tipos de dados na lista acima, você deve especificar o **UserDefined** formato de serialização.  
+ Tipos de valor que são compostos de campos dos tipos acima são bons candidatos para **nativos** Formatar, como **structs** no Visual c# (ou **estruturas** conforme eles são conhecidos no Visual Basic). Por exemplo, um UDT especificado com o **nativos** formato de serialização pode conter um campo de outro UDT que também foi especificado com o **nativo** formato. Se a definição de UDT é mais complexa e contém os tipos de dados na lista acima, você deve especificar o **UserDefined** formato de serialização.  
   
  O **nativo** formato tem os seguintes requisitos:  
   

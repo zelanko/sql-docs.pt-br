@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: af0bb90170445cbfb073adeb8bfc8f8e4e478efe
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.openlocfilehash: 959189dbc1bae49c15fd23e49b5cdef98973a559
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38984488"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906496"
 ---
 # <a name="dax-in-tabular-models"></a>DAX em modelos de tabela 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -146,7 +146,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 |`[Date]`|Especifica a coluna Data na tabela de Data. As colunas estão entre colchetes.|  
 |`,`||  
 |`STARTOFQUARTER`|A função STARTOFQUARTER retorna a data do início do trimestre.|  
-|`LASTDATE`|A função LASTDATE retorna a última data do início do trimestre.|  
+|`LASTDATE`|A função LASTDATE retorna a última data do trimestre.|  
 |`'Date'`|Especifica a tabela de Data.|  
 |`[Date]`|Especifica a coluna Data na tabela de Data.|  
 |`,`||  
@@ -389,7 +389,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  O [Central de Recursos do DAX](http://go.microsoft.com/fwlink/?LinkID=220966&clcid=0x409) fornece informações internas e externas sobre o DAX, incluindo várias soluções DAX enviadas por profissionais de Business Intelligence líderes.  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência Data Analysis Expressions (DAX)](http://msdn.microsoft.com/70a82136-0926-4a91-bcb3-e18e82593b0d)   
+ [Referência de DAX (Data Analysis Expressions)](http://msdn.microsoft.com/70a82136-0926-4a91-bcb3-e18e82593b0d)   
  [Medidas](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
  [Colunas calculadas](../../analysis-services/tabular-models/ssas-calculated-columns.md)   
  [Funções](../../analysis-services/tabular-models/roles-ssas-tabular.md)   

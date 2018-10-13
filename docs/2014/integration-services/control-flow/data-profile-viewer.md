@@ -14,12 +14,12 @@ ms.assetid: b9043428-ce26-45bb-910c-588d07579565
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 01213b9d909ec9f9b2f47e1515015e64d2b958f7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 009ac57e854323c1340d600063dd1aee7fda2875
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125622"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905730"
 ---
 # <a name="data-profile-viewer"></a>Visualizador de Perfil de Dados
   Exibir e analisar os perfis de dados são a próxima etapa no processo de criação de perfil de dados. Esses perfis podem ser exibidos depois que você executar a tarefa Criação de Perfil de Dados dentro de um pacote do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e computá-los. Para obter mais informações sobre como configurar e executar a tarefa Criação de Perfil de Dados, consulte [Configuração da Tarefa Criação de Perfil de Dados](data-profiling-task.md).  
@@ -61,7 +61,7 @@ ms.locfileid: "48125622"
 > [!IMPORTANT]  
 >  O recurso de busca detalhada que está disponível no Visualizador de Perfil de Dados envia consultas ao vivo à fonte de dados original. Essas consultas podem ter um impacto negativo no desempenho do servidor.  
 >   
->  Se você fizer busca detalhada em um arquivo de saída que não foi criado recentemente, as consultas de busca detalhada poderão retornar um conjunto diferente de linhas daquelas nas quais a saída original foi calculada.  
+>  Se você fazer drill down de um arquivo de saída que não foi criado recentemente, as consultas de busca detalhada poderão retornar um conjunto diferente de linhas do que aqueles em que a saída original foi calculada.  
   
  Para obter mais informações sobre a interface do usuário do Visualizador de Perfil de Dados, consulte [Ajuda de F1 do Visualizador de Perfil de Dados](../data-profile-viewer-f1-help.md).  
   

@@ -13,12 +13,12 @@ ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4851fd039e73ce81602f17fd35af2f725b775d74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fecf123299d81f1d1b39c62c7ab1ecb2368f98dd
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125066"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072090"
 ---
 # <a name="connect-to-another-computer-sql-server-configuration-manager"></a>Conectar-se a um outro computador (SQL Server Configuration Manager)
   Este tópico descreve como conectar-se a outro computador no [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Siga o primeiro procedimento para abrir o Windows Computer Management [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (mmc), conecte-se ao computador e expanda a árvore Serviços e Aplicativos. Siga o segundo procedimento para criar um arquivo com um link para o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager em um computador remoto.  
@@ -64,7 +64,7 @@ ms.locfileid: "48125066"
   
 10. Clique com o botão direito do mouse no **SQL Server Configuration Manager**e clique em **Nova Janela daqui**.  
   
-11. No menu **Janela** , clique em **Raiz do Console**, para retornar à primeira janela e excluir a janela.  
+11. Sobre o **janela** menu, clique em **raiz do Console**, para voltar para a primeira janela e excluir a janela.  
   
 12. Sobre o **arquivo** menu, clique em **Salvar como**e salve o arquivo na pasta desejada, com um nome apropriado com o `.msc` extensão de arquivo. Feche o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console.  
   

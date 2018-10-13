@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7237a4023bf9ad67f0050951b60b1ee33db4a53f
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 9b53932676cae30e4b1111c785a6a78c992a3685
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740605"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119585"
 ---
 # <a name="exists-mdx"></a>Exists (MDX)
 
 
-  Retorna o conjunto de tuplas do primeiro conjunto especificado que existe com uma ou mais tuplas do segundo conjunto especificado. Essa função executa manualmente o que o auto exists executa automaticamente. Para obter mais informações sobre auto existem, consulte [principais conceitos em MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md).  
+  Retorna o conjunto de tuplas do primeiro conjunto especificado que existe com uma ou mais tuplas do segundo conjunto especificado. Essa função executa manualmente o que o auto exists executa automaticamente. Para obter mais informações sobre auto exists, consulte [principais conceitos em MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md).  
   
- Se o valor opcional \<nome do grupo de medidas > for fornecido, a função retorna tuplas existentes com uma ou mais tuplas do segundo conjunto e as tuplas que associaram linhas na tabela de fatos do grupo de medidas especificado.  
+ Se o opcional \<nome do grupo de medidas > for fornecido, a função retorna as tuplas existentes com uma ou mais tuplas do segundo conjunto e elas terão linhas na tabela de fatos do grupo de medidas especificado associadas.  
   
 ## <a name="syntax"></a>Sintaxe  
   
@@ -40,11 +40,11 @@ Exists( Set_Expression1 , Set_Expression2 [, MeasureGroupName] )
  *MeasureGroupName*  
  Uma expressão de cadeia de caracteres válida que especifica um nome de grupo de medidas.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Comentários  
   
-1.  Linhas de grupo de medidas com medidas que contêm valores nulos contribuem para **Exists** quando o argumento MeasureGroupName é especificado. Esta é a diferença entre esta forma de Exists e a função Nonempty: se a propriedade NullProcessing dessas medidas for definida como Preserve, isso significará que as medidas mostrarão valores nulos quando forem executadas consultas nessa parte do cubo; NonEmpty sempre removerá as tuplas de um conjunto que tiverem valores de medida nulos, ao passo que Exists com o argumento MeasureGroupName não filtrará as tuplas que tiverem linhas de grupo de medidas associadas, mesmo que os valores de medida sejam nulos.  
+1.  Linhas de grupo de medidas com medidas que contêm valores nulos contribuem para **Exists** quando o argumento MeasureGroupName é especificado. Essa é a diferença entre essa forma de Exists e a função Nonempty: se a propriedade NullProcessing dessas medidas for definida como Preserve, isso significa que as medidas mostrará valores nulos quando as consultas são executadas em relação a essa parte do cubo; NonEmpty sempre removerá as tuplas de um conjunto que têm valores de medida nulos, ao passo que Exists com o argumento MeasureGroupName não filtrará as tuplas que associaram linhas do grupo de medidas, mesmo se os valores de medida são Null.  
   
-2.  Se *MeasureGroupName* parâmetro é usado, os resultados dependerão se há medidas visíveis no grupo de medidas referenciado; se não há nenhum medidas visíveis no grupo de medidas referenciado EXISTS sempre retornará um conjunto vazio, independentemente dos valores de *Set_Expression1* e *Set_Expression2*.  
+2.  Se *MeasureGroupName* parâmetro é usado, os resultados dependerão se há medidas visíveis no grupo de medidas referenciado; se não há nenhum medidas visíveis no grupo de medidas referenciado, então EXISTS sempre retornará um conjunto vazio, independentemente dos valores de *Set_Expression1* e *Set_Expression2*.  
   
 ## <a name="examples"></a>Exemplos  
  Clientes que moram na Califórnia:  
@@ -94,10 +94,10 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Consulte também  
- [Referência de função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
- [Crossjoin &#40;MDX&#41;](../mdx/crossjoin-mdx.md)   
+ [Referência da Função MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
+ [Junção cruzada &#40;MDX&#41;](../mdx/crossjoin-mdx.md)   
  [NonEmptyCrossjoin &#40;MDX&#41;](../mdx/nonemptycrossjoin-mdx.md)   
- [NonEmpty &#40;MDX&#41;](../mdx/nonempty-mdx.md)   
+ [Não vazia &#40;MDX&#41;](../mdx/nonempty-mdx.md)   
  [IsEmpty &#40;MDX&#41;](../mdx/isempty-mdx.md)  
   
   

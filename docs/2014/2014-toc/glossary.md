@@ -24,12 +24,12 @@ ms.assetid: 0e8a7967-b407-4e01-b8c4-3eabe2820df5
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: e606d82d50d1293c9149476e9c976bfcea61201a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5338e17678f31a4bcdef1a6f7a73696f903bb76a
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085526"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120473"
 ---
 # <a name="glossary"></a>Glossário
   
@@ -1377,7 +1377,7 @@ ms.locfileid: "48085526"
 |utilitário rsconfig|Ferramenta de gerenciamento de conexões com o servidor.|  
 |rsconfig.exe|Ferramenta de gerenciamento de conexões com o servidor.|  
 |acionamento de regra|O processo de executar uma das regras do aplicativo (regras de crônica de eventos, regras de eventos de assinatura e regras agendadas de assinatura) definida no arquivo de definição de aplicativo.|  
-|consulta sem controle|Uma consulta com tempo de execução excedente que pode gerar um problema de bloqueio. Consultas sem controle normalmente não usam uma consulta ou tempo limite de bloqueio.|  
+|consulta sem controle|Uma consulta com tempo de execução excedente que pode gerar um problema de bloqueio. Consultas sem controle normalmente, não usam um tempo limite de consulta ou de bloqueio.|  
 |erro em tempo de execução|Erro de software que ocorre enquanto um programa está sendo executado, conforme detectado por um compilador ou outro programa de supervisão.|  
 |código seguro|Código executado pelo ambiente Common Language Runtime, e não diretamente pelo sistema operacional. Aplicativos de código gerenciado adquirem serviços de Common Language Runtime, como coleta de lixo automática, verificação de tipo em tempo de execução, suporte de segurança e assim por diante. Esses serviços ajudam a fornecer uma plataforma uniforme, bem como comportamento independente da linguagem de aplicativos de código gerenciado.|  
 |amostragem|Processo estatístico que rende um conhecimento deduzível sobre uma população ou conjunto de dados de interesse como um todo observando ou analisando uma parte da população ou do conjunto de dados.|  
@@ -1472,7 +1472,7 @@ ms.locfileid: "48085526"
 |perfil de cartão inteligente|Um perfil do CLM (Certificate Lifecycle Manager) criado quando uma solicitação é executada usando um modelo de perfil que inclui somente modelos de certificado baseados em cartão inteligente.|  
 |leitor de cartão inteligente|Um dispositivo que é instalado em computadores para habilitar o uso de cartões inteligentes para recursos de segurança aprimorados.|  
 |Controle de autoatendimento de cartão inteligente|Software instalado em um computador cliente que permite que usuários finais e administradores gerenciem cartões inteligentes fornecendo uma conexão do computador cliente com o cartão inteligente.|  
-|desbloqueio de cartão inteligente|A ação de associar um cartão inteligente a credenciais administrativas para reiniciar o contador de tentativas de PIN (número de identificação pessoal).|  
+|desbloqueio de cartão inteligente|Contador de tentativas da ação de associar um cartão inteligente com credenciais administrativas para redefinir o número de identificação pessoal (PIN).|  
 |SMO|Uma interface de programação de aplicativo com suporte para a incorporação da administração do SQL Server em qualquer aplicativo de automação COM ou OLE.|  
 |SMTP|Um membro do pacote de TCP/IP de protocolos que governa a troca de correio eletrônico entre agentes de transferência de mensagem.|  
 |snap-in|Tipo de ferramenta que você pode adicionar a um console compatível com o MMC (Console de Gerenciamento Microsoft). Um snap-in autônomo pode ser adicionado por conta própria; um snap-in de extensão pode ser adicionado somente para estender a função de outro snap-in.|  

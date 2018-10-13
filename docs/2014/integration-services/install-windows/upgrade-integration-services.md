@@ -16,12 +16,12 @@ ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: dce3ca08855925e9ef4825cc9f5017b99722ed6c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b6abc8e9e025bc24b4f456b58e0e9625e66b4b71
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215546"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072020"
 ---
 # <a name="upgrade-integration-services"></a>Atualização do Integration Services
   Se o [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] ou o [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] estiver atualmente instalado no computador, você poderá atualizar para o [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  
@@ -37,7 +37,7 @@ ms.locfileid: "48215546"
  Recomenda-se executar o Supervisor de Atualização antes de atualizar para o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. O Supervisor de Atualização reporta problemas que você poderá encontrar se migrar pacotes existentes do [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para o novo formato de pacote utilizado pelo [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Para obter mais informações, consulte [Use Upgrade Advisor to Prepare for Upgrades](../../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
   
 > [!NOTE]  
->  O suporte para a migração ou a execução de pacotes de DTS (Data Transformation Services) foram descontinuados na versão atual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. A seguinte funcionalidade do DTS foi descontinuada:  
+>  Suporte para a migração ou execução de pacotes do Data Transformation Services (DTS) foram descontinuados na versão atual do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. A seguinte funcionalidade do DTS foi descontinuada:  
 >   
 >  -   Tempo de execução DTS  
 > -   API DTS  

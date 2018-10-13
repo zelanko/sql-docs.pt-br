@@ -16,12 +16,12 @@ ms.assetid: 31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e7cc4dcb033a7baa86b81619f6e1dbb6dc37ddb1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b90a461af4969c9404af77bfbac75ebf7cad0fbc
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063436"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120353"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>Restrições de chave primária e chave estrangeira
   Chave primárias e estrangeiras são dois tipos de restrições que podem ser usadas para impor integridade de dados nas tabelas do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Esses são objetos de banco de dados importantes.  
@@ -79,7 +79,7 @@ ms.locfileid: "48063436"
  O [!INCLUDE[ssDE](../../includes/ssde-md.md)] gera um erro e a ação de exclusão ou atualização na linha da tabela pai é revertida.  
   
  CASCADE  
- As linhas correspondentes são atualizadas ou excluídas na tabela de referência quando essa linha é atualizada ou excluída na tabela pai. CASCADE não poderá ser especificada se uma `timestamp` coluna faz parte de chave estrangeira ou a chave referenciada. ON DELETE CASCADE não poderá ser especificada para a tabela que tenha um gatilho INSTEAD OF DELETE. ON UPDATE CASCADE não poderá ser especificada para tabelas que tenham um gatilho INSTEAD OF UPDATE.  
+ As linhas correspondentes são atualizadas ou excluídas na tabela de referência quando essa linha é atualizada ou excluída na tabela pai. CASCADE não poderá ser especificada se uma coluna `timestamp` fizer parte da chave estrangeira ou da chave referenciada. ON DELETE CASCADE não poderá ser especificada para a tabela que tenha um gatilho INSTEAD OF DELETE. ON UPDATE CASCADE não poderá ser especificada para tabelas que tenham um gatilho INSTEAD OF UPDATE.  
   
  SET NULL  
  Todos os valores que compõem a chave estrangeira são definidos como NULL quando a linha correspondente da tabela pai é atualizada ou excluída. Para que essa restrição seja executada, as colunas de chave estrangeira devem ser anuláveis. Não poderá ser especificada para tabelas que tenham gatilhos INSTEAD OF UPDATE.  

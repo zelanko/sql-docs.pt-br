@@ -20,12 +20,12 @@ ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9d652bb9f722b33eb6a0bfa0f2aed324b5ecbfc8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 63f297f1a2a3ae738e00e37acf381b830ced9e7b
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057546"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120093"
 ---
 # <a name="user-defined-type-requirements"></a>Requisitos do tipo definido pelo usuário
   Você deve tomar várias decisões de design importantes durante a criação de um tipo definido pelo usuário (UDT) a serem instalados em [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. De uma forma geral, é recomendável criar o UDT como uma estrutura, embora criá-lo como classe também seja uma opção. A definição do UDT precisa estar de acordo com as especificações para criação de UDTs para que seja registrado com o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -71,7 +71,7 @@ ms.locfileid: "48057546"
   
  **bool**, **byte**, **sbyte**, **short**, **ushort**, **int**, **uint**, **long**, **ulong**, **float**, **double**, **SqlByte**, **SqlInt16**, **SqlInt32**, **SqlInt64**, **SqlDateTime**, **SqlSingle**, **SqlDouble**, **SqlMoney**, **SqlBoolean**  
   
- Os tipos de valores compostos de campos dos tipos anteriores são ótimos candidatos ao formato `Native`, como `structs` no Visual C#, (ou `Structures` como são conhecidos no Visual Basic). Por exemplo, um UDT especificado com o formato de serialização `Native` pode conter um campo de outro UDT que também foi especificado com o formato `Native`. Se a definição de UDT for mais complexa e contiver tipos de dados na lista anterior, você precisará especificar o formato de serialização `UserDefined`.  
+ Tipos de valor que são compostos de campos dos tipos acima são bons candidatos para `Native` Formatar, como `structs` no Visual c# (ou `Structures` conforme eles são conhecidos no Visual Basic). Por exemplo, um UDT especificado com o formato de serialização `Native` pode conter um campo de outro UDT que também foi especificado com o formato `Native`. Se a definição de UDT for mais complexa e contiver tipos de dados na lista anterior, você precisará especificar o formato de serialização `UserDefined`.  
   
  O formato `Native` tem os requisitos a seguir:  
   

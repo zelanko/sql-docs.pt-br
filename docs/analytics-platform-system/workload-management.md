@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3e5ff998bc153921d9976e3996465c6cbd92f023
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.openlocfilehash: e602cacff0c8f92b2a7748f4113a5a2ec2f34947
+ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40394196"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100361"
 ---
 # <a name="workload-management-in-analytics-platform-system"></a>Gerenciamento de carga de trabalho no Analytics Platform System
 
@@ -107,7 +107,7 @@ Para cada logon, as configurações de classe de recurso são aplicadas às oper
   
 Antes de PDW do SQL Server executa uma instrução, ele tenta adquirir os slots de simultaneidade necessários para a solicitação. Se ele não é possível adquirir os slots de simultaneidade suficientes, o SQL Server PDW passa a solicitação em um estado de espera para executado. Sistema de recursos de todos os que já foram alocados para a solicitação são retornados para o sistema.  
   
-A maioria das instruções SQL sempre precisa de alocações de recursos padrão e, portanto, não é controlada pelas classes de recursos. Por exemplo, CREATE LOGIN só precisa de uma pequena quantidade de recursos e é alocado os recursos padrão, mesmo que o logon chamando CREATE LOGIN é um membro de um uma classe de recurso.  Por exemplo, se Anna é um membro da classe de recurso largerc e ela envia uma instrução CREATE LOGIN, executará a instrução CREATE LOGIN com o número padrão de recursos.  
+A maioria das instruções SQL sempre precisa de alocações de recursos padrão e, portanto, não é controlada pelas classes de recursos. Por exemplo, CREATE LOGIN só precisa de uma pequena quantidade de recursos e é alocado os recursos padrão, mesmo que o logon chamando CREATE LOGIN é um membro de uma classe de recurso.  Por exemplo, se Anna é um membro da classe de recurso largerc e ela envia uma instrução CREATE LOGIN, executará a instrução CREATE LOGIN com o número padrão de recursos.  
   
 Instruções SQL e operações governadas por classes de recursos:  
   

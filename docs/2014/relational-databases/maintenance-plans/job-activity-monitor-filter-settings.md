@@ -13,12 +13,12 @@ ms.assetid: 89cb0055-5262-447f-8464-7203d4caba78
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 07a8a8f04257e68b5294bb7ee0b0757ffc048fbb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 285d4863cfb3b3ccd812d7e0b4894d4446257562
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207546"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168817"
 ---
 # <a name="job-activity-monitor-filter-settings"></a>Monitor de atividade do trabalho (Configurações de Filtro)
   Use esta página para reduzir o número de linhas visíveis no Monitor de Atividade do Trabalho. Insira critérios em uma ou em várias das caixas disponíveis, para exibir apenas as linhas correspondentes aos valores especificados. Algumas das caixas, como **Status** ou **Tipo de Bloqueio** , oferecem um número limitado de valores possíveis em uma lista suspensa. Outras, como a caixa **Aplicativo,** permitem inserir qualquer valor e quantos valores você desejar em uma lista separada por vírgula. Ícones da barra de ferramentas permitem ordenar as caixas disponíveis por categoria ou em ordem alfabética. Clique nos critérios para mostrar uma breve descrição de cada um.  
@@ -60,7 +60,7 @@ ms.locfileid: "48207546"
  Essa caixa sem-nome fornece uma descrição curta dos critérios à medida que eles são selecionados.  
   
  **Aplicar filtro**  
- Para aplicar o filtro, clique em **Aplicar****filtro** e em **OK**. Para manter as configurações de filtro na caixa de diálogo **Configurações de****Filtro** sem aplicá-las, desmarque a opção **Aplicar****filtro**e clique em **OK**para exibir todas as linhas.  
+ Para aplicar o filtro, clique em **Aplicar filtro** e, em seguida, clique em **Okey**. Para manter as configurações de filtro na **configurações de filtro** diálogo caixa, mas não aplicá-las, desmarque a opção **Aplicar filtro**e, em seguida, clique em **Okey**, para exibir todas as linhas.  
   
  **Liberada**  
  Retorna as configurações de filtro para as configurações padrão.  

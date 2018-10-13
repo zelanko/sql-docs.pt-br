@@ -15,12 +15,12 @@ ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e5fc2c924249518ecc40d363722ba6a6b1e882d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 17062493d2c07e7dfbf1625aad584823953f043d
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051356"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120253"
 ---
 # <a name="sql-server-extended-events-sessions"></a>Sessões de eventos estendidos do SQL Server
   Uma sessão de eventos estendidos do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] é criada no processo do [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que está hospedando o mecanismo de eventos estendidos. Os seguintes aspectos de uma sessão de eventos estendidos fornecem um contexto para entender a infraestrutura de eventos estendidos e o processamento geral que ocorre:  
@@ -55,7 +55,7 @@ ms.locfileid: "48051356"
   
  Em relação à ilustração anterior, observe que:  
   
--   O mapeamento entre objetos de pacote e sessões são muitos para muitos, o que significa que um objeto pode aparecer em várias sessões, e uma sessão pode conter vários objetos.  
+-   O mapeamento entre objetos de pacote e sessões é muitos para muitos, o que significa que um objeto pode aparecer em várias sessões e uma sessão pode conter vários objetos.  
   
 -   O mesmo evento (Evento 1) ou destino (Destino 1) pode ser habilitado em mais de uma sessão.  
   

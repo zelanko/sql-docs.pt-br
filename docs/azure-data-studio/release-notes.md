@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d6b1328b1d0a0832e9d412d1fcd908f3cdb0d349
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 94a271991314225a80850ee2156a37b6134e10a7
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "48037695"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072300"
 ---
 # <a name="azure-data-studio-release-notes"></a>Notas de versão Data Studio do Azure
 
@@ -61,7 +61,7 @@ versão: 0.32.8
 
 *0.32.8 contém correções para algumas regressões, encontradas no 0.32.7 ([#1971](https://github.com/Microsoft/azuredatastudio/issues/1971), [#2372](https://github.com/Microsoft/azuredatastudio/issues/2372)*)
 
-O *agosto Public Preview* enfoca em correções de bugs, estabilização do produto e preenchendo as lacunas nos cenários existentes.  
+O *agosto Public Preview* se concentra em correções de bugs, estabilização do produto e preenchendo as lacunas nos cenários existentes.  
 
 - Anunciando a extensão de importação do SQL Server
 - Gerenciamento de sessão do SQL Server Profiler
