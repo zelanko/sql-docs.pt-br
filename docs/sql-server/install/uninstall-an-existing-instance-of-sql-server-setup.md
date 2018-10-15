@@ -16,12 +16,12 @@ ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2d0f77947a1651d65021b219480c8432e53498a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f945fca69c73d0cf334085064fe76d77b2b55759
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773839"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169246"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>Desinstalar uma instância existente do SQL Server (Instalação)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,9 +30,11 @@ ms.locfileid: "47773839"
 
   Este artigo descreve como desinstalar uma instância autônoma do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Seguindo as etapas deste artigo, você também prepara o sistema para que seja possível reinstalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
->**IMPORTANTE:** Para desinstalar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você deve ser um administrador local com permissão para fazer logon como um serviço.  
+  >[!IMPORTANT]
+  > Para desinstalar uma instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], você deve ser um administrador local com permissão para fazer logon como um serviço.  
   
-> **OBSERVAÇÃO:** para desinstalar um cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use a função Remover Nó fornecida na instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para remover cada nó individualmente. Para obter mais informações, consulte [Adicionar ou remover nós em um cluster de failover do SQL Server &#40;Instalação&#41;](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)  
+ > [!NOTE]
+ > Para desinstalar um cluster de failover do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use a função Remover Nó fornecida na instalação do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para remover cada nó individualmente. Para obter mais informações, consulte [Adicionar ou remover nós em um cluster de failover do SQL Server &#40;Instalação&#41;](../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)  
   
  Observe os seguintes cenários importantes antes de desinstalar o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
