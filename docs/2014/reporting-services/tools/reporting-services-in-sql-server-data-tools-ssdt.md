@@ -13,17 +13,17 @@ ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 7e245b5b97a9a65182a68dcc78102eaa6f33fe66
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fe561dcba4a0cff5b58ef7810b27f30b1c95e228
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122376"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906296"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services no SQL Server Data Tools (SSDT)
   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] é um [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] ambiente com aprimoramentos específicos para soluções de business intelligence. O [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] é incluído com o [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Use o [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] para criar e gerenciar soluções e projetos para relatórios e itens relacionados a relatórios do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] fornece o ambiente de criação do Designer de relatórios. No Designer de Relatórios, você pode abrir, modificar, visualizar, salvar e implantar definições de relatório, fontes de dados compartilhadas, conjuntos de dados compartilhados e partes de relatório.  
+ Use o [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] para criar e gerenciar soluções e projetos para relatórios e itens relacionados a relatórios do [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . O [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] fornece o ambiente de criação do Designer de Relatórios. No Designer de Relatórios, você pode abrir, modificar, visualizar, salvar e implantar definições de relatório, fontes de dados compartilhadas, conjuntos de dados compartilhados e partes de relatório.  
   
  Este tópico descreve as soluções, os projetos, os modelos de projetos e as configurações do [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] usados para o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]e as exibições, menus, barras de ferramentas e atalhos que podem ser usados no Designer de Relatórios.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "48122376"
 ##  <a name="bkmk_ReportServerProjects"></a> Projetos do Servidor de Relatório  
  Ao instalar o [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], os seguintes modelos de projeto são disponibilizados em [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]:  
   
--   **Projeto do servidor de relatório.** Quando você seleciona um Projeto do Servidor de Relatórios, o Designer de Relatórios é aberto. Um projeto do servidor de relatório é um modelo de projetos de Business Intelligence instalado pelo [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] que está disponível na **novo projeto** caixa de diálogo. Para obter mais informações, consulte [Adicionar um relatório novo ou existente a um projeto de relatório &#40;SSRS&#41;](add-a-new-or-existing-report-to-a-report-project-ssrs.md). As propriedades de projeto do Servidor de Relatório se aplicam a todos os relatórios e a todas as fontes de dados compartilhadas em um projeto do [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Estas propriedades incluem a URL para o servidor de relatórios e os nomes de pastas para relatórios e fontes de dados compartilhadas. Use a caixa de diálogo **Páginas de Propriedades de Projeto** para exibir os valores da propriedade atual. Para abrir a caixa de diálogo, nos **Project** menu, clique em  *\<nome do projeto >* **propriedades**.  
+-   **Projeto do servidor de relatório.** Quando você seleciona um Projeto do Servidor de Relatórios, o Designer de Relatórios é aberto. O Projeto do Servidor de Relatório é um modelo Projetos do Business Intelligence instalado pelo [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] que está disponível na caixa de diálogo **Novo Projeto** . Para obter mais informações, consulte [Adicionar um relatório novo ou existente a um projeto de relatório &#40;SSRS&#41;](add-a-new-or-existing-report-to-a-report-project-ssrs.md). As propriedades de projeto do Servidor de Relatório se aplicam a todos os relatórios e a todas as fontes de dados compartilhadas em um projeto do [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Estas propriedades incluem a URL para o servidor de relatórios e os nomes de pastas para relatórios e fontes de dados compartilhadas. Use a caixa de diálogo **Páginas de Propriedades de Projeto** para exibir os valores da propriedade atual. Para abrir a caixa de diálogo, nos **Project** menu, clique em  *\<nome do projeto >* **propriedades**.  
   
 -   **Assistente de projeto do servidor de relatório.** Quando você seleciona um Projeto do Assistente do Servidor de Relatórios, um projeto do servidor de relatórios é criado automaticamente e o Assistente de Relatório, aberto. No assistente, você pode criar um relatório seguindo as instruções em cada página para criar uma cadeia de conexão em uma origem de dados, definir credenciais de fonte de dados, criar uma consulta, adicionar uma região de dados de tabela ou matriz, especificar dados e grupos de relatórios, selecionar um estilo de fonte e cor, publicar o relatório em um servidor de relatórios e visualizá-lo localmente. Depois de criar um relatório com o assistente, você pode alterar os dados e o designer de relatórios, usando o Designer de Relatórios no Projeto do Servidor de Relatórios.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "48122376"
  ![Ícone de seta usado com o link Voltar ao início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")[Voltar ao início](#bkmk_Top)  
   
 ##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> Janelas e painéis do Designer de Relatórios  
- O Designer de relatórios dá suporte a dois modos de exibição: **Design** para definir os dados e layout do relatório, e **Visualização** para exibir uma exibição processada do relatório. Em cada exibição, você pode exibir várias janelas úteis para design ou exibição de um relatório renderizado.  
+ Designer de relatórios suporta duas exibições: **Design** para definir os dados do relatório e layout do relatório, e **visualização** para exibir uma exibição processada do relatório. Em cada exibição, você pode exibir várias janelas úteis para design ou exibição de um relatório renderizado.  
   
 ###  <a name="bkmk_ReportDataPane"></a> Painel de Dados do Relatório  
  O painel de Dados do Relatório exibe campos internos, fontes de dados, conjuntos de dados, coleções de campos, parâmetros do relatório e imagens.  
@@ -252,7 +252,7 @@ ms.locfileid: "48122376"
  ![Ícone de seta usado com o link Voltar ao início](../../2014-toc/media/uparrow16x16.gif "Ícone de seta usado com o link Voltar ao início")[Voltar ao início](#bkmk_Top)  
   
 ##  <a name="bkmk_SourceControl"></a> Controle do código-fonte  
- O [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] pode ser integrado com plug-ins de origem. Use as páginas de Projetos e Soluções na caixa de diálogo **Opções** para especificar o plug-in e configurar as propriedades.  
+ [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] pode ser integrado com plug-ins de origem. Use as páginas de Projetos e Soluções na caixa de diálogo Opções** para especificar o plug-in e configurar as propriedades.  
   
 ##  <a name="bkmk_CustomReportTemplates"></a> Modelos de relatório personalizados  
  Para usar relatórios personalizados como modelos de novos relatórios, basta copiá-los na pasta ReportProject no computador em que o [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] está instalado. Por padrão, esta pasta está em \<unidade >: \Program Files\Microsoft Visual Studio 10.0\Common7\IDE\Private assemblies\projectitems\reportproject. Quando você adiciona um novo item ao projeto de relatório, o relatório personalizado aparece no painel Modelos.  
@@ -268,7 +268,7 @@ ms.locfileid: "48122376"
   
 -   Pelo menos um conjunto de propriedades de configuração, por exemplo, Debug ou Release.  
   
- Para obter mais informações, consulte [relatórios e fontes de dados de publicação](../reports/publishing-data-sources-and-reports.md).  
+ Para obter mais informações, consulte [Publishing Data Sources and Reports](../reports/publishing-data-sources-and-reports.md).  
   
  Para um projeto de servidor de relatório, é possível especificar as seguintes opções pela linha de comando:  
   

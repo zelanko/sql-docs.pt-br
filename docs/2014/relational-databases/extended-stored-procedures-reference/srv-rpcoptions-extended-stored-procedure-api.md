@@ -22,12 +22,12 @@ ms.assetid: dbcce5d1-d5a1-4379-9597-04e43af5923d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5087c29feb94f22395573614ea10beb09ba344b0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 97a30b223df8420ba67aef21d9b7837b2d4e5557
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073832"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905905"
 ---
 # <a name="srvrpcoptions-extended-stored-procedure-api"></a>srv_rpcoptions (API de procedimento armazenado estendido)
     

@@ -71,7 +71,7 @@ ms.locfileid: "47661954"
  **Inverso**  
  Este atributo especificado em  **\<SQL: Relationship >** é usado por diagramas de atualização. Para obter mais informações, consulte [especificando o atributo SQL: Inverse em SQL: Relationship](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md).  
   
- O **SQL: Key-campos** anotação deve ser especificada em um elemento que contém um elemento filho, que tem um  **\<SQL: Relationship >** definida entre o elemento e o filho, e ele faz Forneça a chave primária da tabela especificada no elemento pai. Mesmo se o esquema não especificar  **\<SQL: Relationship >**, você deve especificar **SQL: Key-campos** para gerar a hierarquia adequada. Para obter mais informações, consulte [Identifying Key Columns by Using SQL: Key-campos](../../relational-databases/sqlxml-annotated-xsd-schemas-using/identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md).  
+ O **SQL: Key-campos** anotação deve ser especificada em um elemento que contém um elemento filho, que tem um  **\<SQL: Relationship >** definida entre o elemento e o filho, e ele faz Forneça a chave primária da tabela especificada no elemento pai. Mesmo se o esquema não especificar  **\<SQL: Relationship >**, você deve especificar **SQL: Key-campos** para gerar a hierarquia adequada. Para obter mais informações, consulte [Identificando colunas-chave usando o SQL: Key-campos](../../relational-databases/sqlxml-annotated-xsd-schemas-using/identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md).  
   
  Para produzir o aninhamento adequado no resultado, é recomendável que **SQL: Key-campos** são especificados em todos os esquemas.  
   
