@@ -41,7 +41,7 @@ ms.locfileid: "47855224"
   
  As melhorias de desempenho permitem a você criar modelos mais amplos, carregar dados com mais eficiência e obter melhor desempenho geral. Isso inclui melhoria de desempenho do suplemento para o Microsoft Excel com o intuito de diminuir os tempos de carregamento e habilitar o suplemento para lidar com entidades maiores.  
   
- Para saber mais sobre o suplemento do Microsoft Excel, confira [Master Data Services Add-in for Microsoft Excel](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md).  
+ Para saber mais sobre o suplemento do Microsoft Excel, confira [Suplemento do Master Data Services para Microsoft Excel](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md).  
   
  Veja a seguir as melhorias de recurso incluídas.  
   
