@@ -11,12 +11,12 @@ ms.assetid: d90fa182-1dab-4d6f-bd85-a04dd1479986
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0d0b1b34105df8568e12be170b0ab9afa8fdad88
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: d5e8a3234c7da4d350014463c3d1f96f417fa0b6
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716564"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084923"
 ---
 # <a name="system-requirements-installation-and-driver-files"></a>Requisitos do sistema, instalação e arquivos de driver
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -53,8 +53,8 @@ O driver é instalado quando você executa `msodbcsql.msi` de um dos links a seg
 - [Baixar o Microsoft ODBC Driver 13 for SQL Server no Windows](https://www.microsoft.com/download/details.aspx?id=50420)
 - [Baixar o Microsoft ODBC Driver 11 for SQL Server no Windows](https://www.microsoft.com/download/details.aspx?id=36434). 
 
-[!NOTE]
-Para aqueles que têm o Driver 17.1.0.1 ou instalado abaixo, é recomendável que ele seja desinstalado manualmente antes de instalar a versão mais recente do Driver
+> [!NOTE]
+> Para aqueles que têm o Driver 17.1.0.1 ou instalado abaixo, é recomendável que ele seja desinstalado manualmente antes de instalar a versão mais recente do Driver
 
 Ele pode ser instalado lado a lado com o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
 

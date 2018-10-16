@@ -11,12 +11,12 @@ ms.assetid: 6d392a5e-b08e-4b35-9e99-61260888fc41
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b60c7aa0f53be6d9c9a249c69ace6780a318e6f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: d883a74e8e783ed289917b9970cc1c5956f4b0be
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787444"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905799"
 ---
 # <a name="step-1-configure-development-environment-for-pymssql-python-development"></a>Etapa 1: configurar o ambiente de desenvolvimento para o desenvolvimento Python pymssql
 Você precisará configurar seu ambiente de desenvolvimento com os pré-requisitos para desenvolver um aplicativo usando o Driver Python para SQL Server.    
@@ -32,7 +32,7 @@ c. Executar uma vez baixado o msi para instalar o tempo de execução do Python
   
 2. **Baixar o módulo pymssql** de [aqui](http://www.lfd.uci.edu/~gohlke/pythonlibs/#pymssql)  
   
-    Verifique se que você escolher o arquivo whl correto.  Por exemplo: se você estiver usando o Python 2.7 em um computador de 64 bits, escolha: pymssql‑2.1.1‑cp27‑none‑win_amd64.whl. Depois de baixar o arquivo. whl colocá-lo a pasta c:/python27.  
+    Verifique se que você escolher o arquivo whl correto.  Por exemplo: se você estiver usando o Python 2.7 em um computador de 64 bits, escolha: pymssql‑2.1.1‑cp27‑none‑win_amd64.whl. Depois de baixar o arquivo. whl coloque-o na pasta c:/python27.  
       
 3. **Abra cmd.exe**  
   

@@ -8,12 +8,12 @@ ms.topic: include
 ms.date: 04/05/2018
 ms.author: genemi
 ms.custom: include file
-ms.openlocfilehash: 842a7377bcd6bdcb649a78b2f31eb66de95bc5a3
-ms.sourcegitcommit: 44e9bf62f2c75449c17753ed66bf85c43928dbd5
+ms.openlocfilehash: 0e7d549c2f3b02349007815019cc47647f172f73
+ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854388"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072330"
 ---
 ## <a name="specifying-application-intent"></a>Especificando a intenção do aplicativo
 
@@ -54,5 +54,5 @@ O roteamento somente leitura é um recurso que pode garantir a disponibilidade d
 
 Várias conexões usando o roteamento somente leitura pode não conectar-se à mesma réplica somente leitura. Alterações na sincronização de banco de dados ou alterações na configuração de roteamento de servidor podem resultar em conexões de cliente com réplicas somente leitura diferentes. Você pode garantir que todas as solicitações de somente leitura se conectem à mesma réplica somente leitura. Verifique se essa igualdade pela *não* passando um ouvinte de grupo de disponibilidade para o **Server** palavra-chave de cadeia de caracteres de conexão. Em vez disso, especifique o nome da instância somente leitura.
 
-Roteamento somente leitura pode demorar mais do que a conexão ao primário. A espera mais longa é porque o roteamento somente leitura se conecta primeiro à instância primária e, em seguida, procura a melhor instância secundária legível disponível. Devido a essas staps vários, você deverá aumentar o tempo limite de logon pelo menos 30 segundos.
+Roteamento somente leitura pode demorar mais do que a conexão ao primário. A espera mais longa é porque o roteamento somente leitura se conecta primeiro à instância primária e, em seguida, procura a melhor instância secundária legível disponível. Devido a essas staps vários, você deverá aumentar o tempo limite de logon para pelo menos 30 segundos.
 

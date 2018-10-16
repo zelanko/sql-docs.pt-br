@@ -13,12 +13,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 9dbda3ade33fcf0c5fb6952f061fefb6f48369ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5bf37fd0b92eef4ae8b8d467d41f02894353e2b8
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: MTE75
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789044"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084904"
 ---
 # <a name="execute-a-user-defined-function-and-process-return-code-ole-db"></a>Executar uma função definida pelo usuário e processar o código de retorno (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47789044"
 ## <a name="example"></a>Exemplo  
  Execute a primeira listagem de código ([!INCLUDE[tsql](../../../../includes/tsql-md.md)]) para criar o procedimento armazenado usado pelo aplicativo.  
   
- Compile com ole32.lib oleaut32.lib e execute a segunda listagem de código (C++). Esse aplicativo se conecta à instância padrão do [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] do computador. Em alguns sistemas operacionais Windows, será necessário alterar (localhost) ou (local) para o nome de sua instância do [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]. Para se conectar a uma instância nomeada, altere a cadeia de conexão de L"(local)" para L"(local)\\\name", em que name é a instância nomeada. Por padrão, o [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] Express é instalado em uma instância nomeada. Verifique se a variável de ambiente INCLUDE inclui o diretório que contém msoledbsql.h.  
+ Compile com ole32.lib oleaut32.lib e execute a segunda listagem de código (C++). Esse aplicativo se conecta à instância padrão do [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] do computador. Em alguns sistemas operacionais Windows, será necessário alterar (localhost) ou (local) para o nome de sua instância do [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] . Para se conectar a uma instância nomeada, altere a cadeia de conexão de L"(local)" para L"(local)\\\name", em que name é a instância nomeada. Por padrão, o [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] Express é instalado em uma instância nomeada. Verifique se a variável de ambiente INCLUDE inclui o diretório que contém msoledbsql.h.  
   
  Execute a terceira listagem de código ([!INCLUDE[tsql](../../../../includes/tsql-md.md)]) para excluir o procedimento armazenado usado pelo aplicativo.  
   
@@ -269,7 +269,7 @@ int main() {
   
    if (FAILED(pIDBInitialize->Uninitialize()))  
       // Uninitialize is not required, but it fails if an interface  
-      // has not not been released.  This can be used for debugging.  
+      // has not been released.  This can be used for debugging.  
       cout << "Problem uninitializing\n";  
   
    pIDBInitialize->Release();  
