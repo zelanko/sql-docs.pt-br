@@ -25,12 +25,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 28967819353769601e5ba8e760435f6d43aac3a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d07dc597f293414c2c4fae2704085ac4449038cf
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818494"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48905767"
 ---
 # <a name="from---using-pivot-and-unpivot"></a>FROM – usando PIVOT e UNPIVOT
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -63,13 +63,13 @@ FOR
 ```  
 
 ## <a name="remarks"></a>Remarks  
-Os identificadores de coluna na cláusula `UNPIVOT` seguem o agrupamento de catálogo. Para o [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], o agrupamento é sempre `SQL_Latin1_General_CP1_CI_AS`. Para bancos de dados parcialmente independentes do [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], o agrupamento é sempre `Latin1_General_100_CI_AS_KS_WS_SC`. Se a coluna for combinada com outras colunas, uma cláusula COLLATE (`COLLATE DATABASE_DEFAULT`) será necessária para evitar conflitos.  
+Os identificadores de coluna na cláusula `UNPIVOT` seguem a ordenação de catálogo. Para o [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], a ordenação é sempre `SQL_Latin1_General_CP1_CI_AS`. Para bancos de dados parcialmente independentes do [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], a ordenação é sempre `Latin1_General_100_CI_AS_KS_WS_SC`. Se a coluna for combinada com outras colunas, uma cláusula COLLATE (`COLLATE DATABASE_DEFAULT`) será necessária para evitar conflitos.  
 
   
 ## <a name="basic-pivot-example"></a>Exemplo de PIVOT básico  
  O seguinte exemplo de código produz uma tabela de duas colunas que tem quatro linhas.  
   
-```  
+```sql
 USE AdventureWorks2014 ;  
 GO  
 SELECT DaysToManufacture, AVG(StandardCost) AS AverageCost   
@@ -93,7 +93,7 @@ GROUP BY DaysToManufacture;
   
  O código a seguir exibe o mesmo resultado, dinamizado de forma que os valores `DaysToManufacture` tornem-se títulos de coluna. Uma coluna é criada para três dias `[3]`, embora os resultados sejam `NULL`.  
   
-```  
+```sql
 -- Pivot table with one row and five columns  
 SELECT 'AverageCost' AS Cost_Sorted_By_Production_Days,   
 [0], [1], [2], [3], [4]  
@@ -119,7 +119,7 @@ AverageCost                    5.0885      223.88      359.1082    NULL        9
 ## <a name="complex-pivot-example"></a>Exemplo de PIVOT complexo  
  Um cenário comum em que `PIVOT` pode ser útil ocorre quando você deseja gerar relatórios de tabulação cruzada para resumir dados. Por exemplo, suponha que você deseje consultar a tabela `PurchaseOrderHeader` no banco de dados de exemplo `AdventureWorks2014` para determinar o número de ordens de compra colocadas por alguns funcionários. A consulta a seguir fornece esse relatório, ordenado por fornecedor.  
   
-```  
+```sql
 USE AdventureWorks2014;  
 GO  
 SELECT VendorID, [250] AS Emp1, [251] AS Emp2, [256] AS Emp3, [257] AS Emp4, [260] AS Emp5  
@@ -149,7 +149,7 @@ VendorID    Emp1        Emp2        Emp3        Emp4        Emp5
   
  Os resultados retornados por essa instrução subselecionar são dinamizados na coluna `EmployeeID`.  
   
-```  
+```sql
 SELECT PurchaseOrderID, EmployeeID, VendorID  
 FROM PurchaseOrderHeader;  
 ```  
@@ -161,7 +161,7 @@ FROM PurchaseOrderHeader;
   
  `UNPIVOT` executa praticamente a operação inversa de `PIVOT`, transformando colunas em linhas. Suponha que a tabela produzida no exemplo anterior seja armazenada no banco de dados como `pvt` e que você deseje girar os identificadores de coluna `Emp1`, `Emp2`, `Emp3`, `Emp4` e `Emp5` em valores de linhas que correspondam a um fornecedor específico. Isso significa que você deve identificar duas colunas adicionais. A coluna que conterá os valores de coluna que você está girando (`Emp1`, `Emp2`,...) será chamada `Employee`, e a coluna que conterá os valores que atualmente estão localizados nas colunas que estão sendo girados será chamada `Orders`. Essas colunas correspondem a *pivot_column* e *value_column*, respectivamente, na definição de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Aqui está a consulta.  
   
-```  
+```sql
 -- Create the table and insert values as portrayed in the previous example.  
 CREATE TABLE pvt (VendorID int, Emp1 int, Emp2 int,  
     Emp3 int, Emp4 int, Emp5 int);  

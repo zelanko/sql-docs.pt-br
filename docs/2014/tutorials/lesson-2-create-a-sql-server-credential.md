@@ -50,7 +50,7 @@ ms.locfileid: "48194566"
   
 5.  Verifique a instrução T-SQL e clique em **Executar**.  
   
- Para obter mais informações sobre o serviço de armazenamento de Blob do Windows Azure para requisitos e conceitos de backup, consulte [SQL Server Backup and Restore with Windows Azure Blob Storage Service](../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+ Para obter mais informações sobre o serviço de armazenamento de Blob do Windows Azure para requisitos e conceitos de backup, consulte [Backup e restauração do SQL Server com o serviço de armazenamento de Blob do Windows Azure](../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
 ### <a name="next-lesson"></a>Próxima lição  
  [Lição 3: Gravar um Backup de banco de dados completo para o serviço de armazenamento de BLOBs do Azure Windows](../../2014/tutorials/lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service.md).  
