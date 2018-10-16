@@ -13,12 +13,12 @@ ms.assetid: 10ff37c0-9f3f-442a-889b-c351afbdc74c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ba25c8b70ad39c073c713a79381b058ece4599ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 72962fd498057ccb53126f31c13f91acac96b5eb
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749764"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906187"
 ---
 # <a name="hadoop-hive-task"></a>Tarefa do Hive do Hadoop
   Use a Tarefa do Hive do Hadoop para executar o script de Hive em um cluster Hadoop.  
@@ -32,7 +32,7 @@ ms.locfileid: "47749764"
   
 |Campo|Descrição|  
 |-----------|-----------------|  
-|**Conexão do Hadoop**|Especifique um gerenciador de conexões do Hadoop existente ou crie um novo. Esse gerenciador de conexões indica o local em que o serviço WebHCat está hospedado.|  
+|**Conexão do Hadoop**|Especifique um gerenciador de conexões do Hadoop existente ou crie um novo. Esse gerenciador de conexões indica onde o serviço WebHCat está hospedado.|  
 |**SourceType**|Especifique o tipo de fonte da consulta. Os valores disponíveis são **ScriptFile** e **DirectInput**.|  
 |**InlineScript**|Quando o valor de **SourceType** for **DirectInput**, especifique o script do Hive.|  
 |**HadoopScriptFilePath**|Quando o valor de **SourceType** for **ScriptFile**, especifique o caminho do arquivo de script no Hadoop.|  

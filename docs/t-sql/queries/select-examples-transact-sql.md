@@ -31,12 +31,12 @@ ms.assetid: 9b9caa3d-e7d0-42e1-b60b-a5572142186c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: f3344953d8956af1dd044960f7cce5c3d8fc12dc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 558092ec5c5cfe587b9a7644561cc94a6a5c1610
+ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661734"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48906086"
 ---
 # <a name="select-examples-transact-sql"></a>Exemplos de SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -132,7 +132,7 @@ ms.locfileid: "47661734"
   
  Esta consulta usa a cláusula `LIKE` na cláusula `HAVING`.  
   
-```  
+```sql
 USE AdventureWorks2012 ;  
 GO  
 SELECT SalesOrderID, CarrierTrackingNumber   

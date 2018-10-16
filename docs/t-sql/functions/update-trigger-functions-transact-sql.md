@@ -26,12 +26,12 @@ ms.assetid: 8e3be25b-2e3b-4d1f-a610-dcbbd8d72084
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e35740b1f32db10f69097e1d10417bcab28179c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d971857a0d46ff2ed0bd54588558ac74ab5eb549
+ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678044"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49119624"
 ---
 # <a name="update---trigger-functions-transact-sql"></a>UPDATE – Funções de gatilho (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47678044"
   
 ## <a name="syntax"></a>Sintaxe  
   
-```  
+```sql  
   
 UPDATE ( column )   
 ```  
@@ -69,7 +69,7 @@ UPDATE ( column )
 ## <a name="examples"></a>Exemplos  
  O exemplo a seguir cria um gatilho que imprime uma mensagem para o cliente quando qualquer pessoa tentar atualizar as colunas `StateProvinceID` ou `PostalCode` da tabela `Address`.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF EXISTS (SELECT name FROM sys.objects  

@@ -27,12 +27,12 @@ ms.assetid: 65c9cf0e-3e8a-45f8-87b3-3460d96afb0b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4591593408a6cbafb2f6a64b790403fd72cb97b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: efa562211bbd32633d149796162b67141e0c174e
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807054"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085313"
 ---
 # <a name="rowversion-transact-sql"></a>rowversion (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ UPDATE MyTest
 SET myValue = 2  
     OUTPUT inserted.myKey INTO @t(myKey)   
 WHERE myKey = 1   
-    AND RV = myValue;  
+    AND RV = myRv;  
 IF (SELECT COUNT(*) FROM @t) = 0  
     BEGIN  
         RAISERROR ('error changing row with myKey = %d'  
@@ -100,7 +100,7 @@ IF (SELECT COUNT(*) FROM @t) = 0
     END;  
 ```  
   
-`myValue` é o valor de coluna **rowversion** da linha que indica a última vez que você a leu. Esse valor deve ser substituído pelo valor de **rowversion** real. Um exemplo do valor de **rowversion** real é 0x00000000000007D3.
+`myRv` é o valor de coluna **rowversion** da linha que indica a última vez que você a leu. Esse valor deve ser substituído pelo valor de **rowversion** real. Um exemplo do valor de **rowversion** real é 0x00000000000007D3.
   
 Você também pode colocar as instruções [!INCLUDE[tsql](../../includes/tsql-md.md)] de amostra em uma transação. Consultando a variável `@t` no escopo da transação, você pode recuperar a coluna `myKey` atualizada da tabela, sem consultar a tabela `MyTes`t.
   
@@ -119,7 +119,7 @@ UPDATE MyTest2
 SET myValue = 2  
     OUTPUT inserted.myKey INTO @t(myKey)   
 WHERE myKey = 1   
-    AND TS = myValue;  
+    AND TS = myTS;  
 IF (SELECT COUNT(*) FROM @t) = 0  
     BEGIN  
         RAISERROR ('error changing row with myKey = %d'  

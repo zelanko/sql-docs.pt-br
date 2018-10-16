@@ -1,7 +1,7 @@
 ---
 title: CREATE VIEW (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 10/10/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 25b196ffefd3319b96865ebef92bd778bf72ceb8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 794f6310185292224d68624a16493aa3e8d91fe3
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808454"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085492"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -248,7 +248,7 @@ FROM Tn;
   
     -   Todas as colunas nas tabelas membro devem ser selecionadas na lista de colunas da definição de exibição.  
   
-    -   As colunas na mesma posição ordinal de cada `select list` devem ser do mesmo tipo, incluindo agrupamentos. Não é suficiente para as colunas serem tipos conversíveis implicitamente, como em geral é o caso de UNION.  
+    -   As colunas na mesma posição ordinal de cada `select list` devem ser do mesmo tipo, incluindo ordenações. Não é suficiente para as colunas serem tipos conversíveis implicitamente, como em geral é o caso de UNION.  
   
          Além disso, pelo menos uma coluna (por exemplo, `<col>`) deve aparecer em todas as listas de seleção na mesma posição ordinal. Esse `<col>` deve ser definido de uma forma que as tabelas membro `T1, ..., Tn` tenham restrições CHECK `C1, ..., Cn` definidas em `<col>`, respectivamente.  
   
@@ -442,11 +442,6 @@ supplyID INT PRIMARY KEY CHECK (supplyID BETWEEN 451 and 600),
 supplier CHAR(50)  
 );  
 GO  
-INSERT dbo.SUPPLY1 VALUES ('1', 'CaliforniaCorp'), ('5', 'BraziliaLtd')  
-, ('231', 'FarEast'), ('280', 'NZ')  
-, ('321', 'EuroGroup'), ('442', 'UKArchip')  
-, ('475', 'India'), ('521', 'Afrique');  
-GO  
 --Create the view that combines all supplier tables.  
 CREATE VIEW dbo.all_supplier_view  
 WITH SCHEMABINDING  
@@ -462,6 +457,12 @@ SELECT supplyID, supplier
 UNION ALL  
 SELECT supplyID, supplier  
   FROM dbo.SUPPLY4;  
+GO
+INSERT dbo.SUPPLY1 VALUES ('1', 'CaliforniaCorp'), ('5', 'BraziliaLtd')  
+, ('231', 'FarEast'), ('280', 'NZ')  
+, ('321', 'EuroGroup'), ('442', 'UKArchip')  
+, ('475', 'India'), ('521', 'Afrique');  
+GO  
 ```  
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemplos: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
