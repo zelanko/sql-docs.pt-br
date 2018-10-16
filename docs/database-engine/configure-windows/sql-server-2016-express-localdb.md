@@ -17,12 +17,12 @@ ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c4d4378091a58ac3f67704c4acff30196963b5f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 723d35453dcc01fb333a8c3a212a6a1b288cce8b
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608604"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851781"
 ---
 # <a name="sql-server-2016-express-localdb"></a>SQL Server 2016 Express LocalDB
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,10 @@ O **LocalDB** do Microsoft SQL Server 2016 Express é um recurso do [SQL Server 
  
  ## <a name="try-it-out"></a>Experimente! 
   
--   Para baixar e instalar o SQL Server 2016 Express, acesse **[Downloads do SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)**. LocalDB é um recurso selecionado durante a instalação e que está disponível durante o download da mídia. Se você baixar a mídia, escolha **Express Advanced** ou o pacote **LocalDB** . 
+-   Para baixar e instalar o SQL Server 2016 Express, acesse **[Downloads do SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)**. LocalDB é um recurso selecionado durante a instalação e que está disponível durante o download da mídia. Se você baixar a mídia, escolha **Express Advanced** ou o pacote **LocalDB** por meio do **Instalador do Visual Studio**. No **Instalador do Visual Studio**, você pode instalar o SQL Server Express LocalDB como parte da carga de trabalho do **Desenvolvimento para desktop com .NET** ou como um componente individual.
+
+   > [!TIP]
+   > Você pode instalar o LocalDB como parte do Visual Studio 2017. Durante a instalação do Visual Studio, selecione a carga de trabalho do **Desenvolvimento para desktop com .NET**, que inclui o SQL Server Express LocalDB.
   
 -   Tem uma conta do Azure?  Então, clique **[aqui](https://azure.microsoft.com/services/virtual-machines/sql-server/)** para executar uma máquina virtual com o [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] já instalado.  
   
@@ -129,6 +132,5 @@ REM Gather information about the instance of LocalDB
 >  O**LocalDB** sempre é executado sob o contexto de segurança de usuários; ou seja, o **LocalDB** nunca é executado com credenciais do grupo de Administradores local. Isto significa que todos os arquivos de banco de dados usados por uma instância do **LocalDB** devem estar acessíveis usando a conta de Windows do usuário proprietário, sem considerar a associação no grupo de Administradores local.  
   
 ## <a name="see-also"></a>Consulte Também  
- [Utilitário SqlLocalDB](../../tools/sqllocaldb-utility.md)  
-  
-  
+
+[Utilitário SqlLocalDB](../../tools/sqllocaldb-utility.md)

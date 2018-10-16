@@ -2,7 +2,7 @@
 title: Opções ALTER DATABASE SET (Transact-SQL) | Microsoft Docs
 description: Saiba mais sobre como definir opções de banco de dados, como criptografia e ajuste automáticos, repositório de consultas em um Banco de Dados SQL do Azure ou SQL Server
 ms.custom: ''
-ms.date: 08/08/2018
+ms.date: 10/02/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -30,12 +30,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 34dfaa1d241c015ed94bc21997d9e6a3c8254339
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 096948b417e29b073ecc30abd9831c62ef520646
+ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762624"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48252193"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opções ALTER DATABASE SET (Transact-SQL) 
 
@@ -43,7 +43,7 @@ Define opções em banco de dados em [!INCLUDE[ssNoVersion](../../includes/ssnov
 
 Clique em uma das guias a seguir para ver sintaxe, argumentos, comentários, permissões e exemplos de uma versão específica do SQL com a qual você está trabalhando.
 
-Para obter mais informações sobre as convenções de sintaxe, veja [Convenções de sintaxe do Transact-SQL] (../../t-sql/language-elements/transact-sql-synt). Para obter mais informações sobre as convenções de sintaxe, veja [Convenções de sintaxe do Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md). 
+Para obter mais informações sobre as convenções de sintaxe, consulte [Convenções de sintaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ## <a name="click-a-product"></a>Clique em um produto!
 
@@ -51,23 +51,14 @@ Na linha a seguir, clique em qualquer nome de produto de seu interesse. O clique
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><strong><em>* SQL Server *<br />&nbsp;</em></strong></th>
->   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-current">Banco de Dados SQL<br />Banco de Dados SQL</a></th>
->   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current">Banco de Dados SQL<br />Banco de Dados SQL</a></th>
-> </tr>
-> </table>
+> [!div class="mx-tdCol2BreakAll"]  
+> |||
+> |---|---| 
+> |**_\* SQL Server \*_** &nbsp;|[Banco de Dados SQL<br />servidor lógico](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[Banco de Dados SQL<br />Instância Gerenciada](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|||  
 
 &nbsp;
 
-# <a name="sql-server"></a>SQL Server
+## <a name="sql-server"></a>SQL Server
   
 O espelhamento de banco de dados, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] e os níveis de compatibilidade são opções `SET`, mas são descritos em artigos separados devido ao seu tamanho. Para saber mais, confira [Espelhamento de Banco de Dados de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md), [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md) e [Nível de compatibilidade de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
@@ -1285,24 +1276,15 @@ SET QUERY_STORE = ON
 ::: moniker-end
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="alter-database-transact-sql.md?view=sql-server-2016">SQL Server</a></th>
->   <th><strong><em>* SQL Server *<br />&nbsp;</em></strong></th>
->   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-current">Banco de Dados SQL<br />Banco de Dados SQL</a></th>
->   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current">Banco de Dados SQL<br />Banco de Dados SQL</a></th>
-> </tr>
-> </table>
+> [!div class="mx-tdCol2BreakAll"]  
+> |||
+> |---|---| 
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2016)|**_\* Banco de Dados SQL<br />servidor lógico \*_** &nbsp;|[Banco de Dados SQL<br />Instância Gerenciada](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|
 
 &nbsp;
 
-# <a name="azure-sql-database-logical-server"></a>Servidor lógico do Banco de Dados SQL do Azure
+## <a name="azure-sql-database-logical-server"></a>Servidor lógico do Banco de Dados SQL do Azure
+
 Níveis de compatibilidade são opções `SET`, mas são descritas em [Nível de Compatibilidade de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 > [!NOTE]  
@@ -2081,34 +2063,27 @@ SET QUERY_STORE = ON
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
-> [!div class="mx-tdCol2BreakAll"]
-> <table>
-> <tr>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
->   <th> &nbsp; </th>
-> </tr>
-> <tr>
->   <th><a href="alter-database-transact-sql-set-options.md?view=sql-server-2016">SQL Server</a></th>
->   <th><a href="alter-database-transact-sql-set-options.md?view=azuresqldb-current">Banco de Dados SQL<br />Banco de Dados SQL</a></th>
->   <th><strong><em>* Banco de Dados SQL<br />Instância Gerenciada *</em></strong></th>
-> </tr>
-> </table>
+> [!div class="mx-tdCol2BreakAll"]  
+> |||
+> |---|---|
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2016)|[Banco de Dados SQL<br />servidor lógico](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |**_\* Banco de Dados SQL<br />Instância Gerenciada \*_** &nbsp;|
+
+
 
 &nbsp;
 
-# <a name="azure-sql-database-managed-instance"></a>Instância Gerenciada do Banco de Dados SQL do Azure
+## <a name="azure-sql-database-managed-instance"></a>Instância Gerenciada do Banco de Dados SQL do Azure
 
 Níveis de compatibilidade são opções `SET`, mas são descritas em [Nível de Compatibilidade de ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 > [!NOTE]  
 > Muitas opções de definição de banco de dados podem ser configuradas para a sessão atual usando [Instruções SET](../../t-sql/statements/set-statements-transact-sql.md) e são configuradas com frequência por aplicativos quando eles são conectados. As opções definidas no nível de sessão substituem os valores de **ALTER DATABASE SET** . As opções de banco de dados descritas abaixo são os valores que podem ser definidos para as sessões que não fornecem explicitamente outros valores de definição de conjunto.  
   
-## <a name="syntax"></a>Sintaxe  
+## <a name="syntax"></a>Sintaxe
   
-```  
+```
 ALTER DATABASE { database_name | Current }  
-SET   
+SET
 {  
     <optionspec> [ ,...n ] 
 }  

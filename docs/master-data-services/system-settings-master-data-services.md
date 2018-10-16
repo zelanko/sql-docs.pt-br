@@ -15,12 +15,12 @@ ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2b5d840a5b6073a7026806ee084dffc0ca51af7b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 387aaeb28e0dfc976bce72c33dd50d8b865bb432
+ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801694"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48874364"
 ---
 # <a name="system-settings-master-data-services"></a>Configurações do sistema (Master Data Services)
 
@@ -102,6 +102,7 @@ ms.locfileid: "47801694"
 |-----------------------------------|--------------------|-----------------|  
 |**Número usado para incrementar novas regras de negócio**|**BusinessRuleDefaultPriorityIncrement**|Na área funcional [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **do** , o número pelo qual a prioridade de cada nova regra de negócio é incrementada. O valor padrão é **10**.|  
 |**Número de membros para os quais aplicar as regras de negócio**|**BusinessRuleRealtimeMemberCount**|Na área funcional do [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **do** , o número máximo de membros na grade aos quais as regras de negócio serão aplicadas. No [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)], o número máximo de membros na planilha ativa aos quais as regras de negócio serão aplicadas. O valor padrão é **10000**.|  
+|**Executar script primeiro em regra de negócios**|**BusinessRuleUserScriptExecuteFirst**|Normalmente, uma ação de regra de negócios executa a sequência "Valor Padrão", "Valor de Alteração", "Validação", "Ação Externa", "Ação de Script Definida pelo Usuário". Se essa configuração for alterada para **1**, "Ação de Script Definida pelo Usuário" será a primeira etapa para a execução de ação de regra de negócios. Essa é uma configuração oculta. O valor padrão é **0**.|  
   
  Para obter mais informações, consulte [Regras de negócio &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md).  
   

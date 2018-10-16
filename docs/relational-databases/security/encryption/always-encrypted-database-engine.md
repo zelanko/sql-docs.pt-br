@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: faa395ec9835c052d3570e9d7928f711acdf3732
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2d514532bc7c3c08a1c31a934c41761ee524c9d7
+ms.sourcegitcommit: c7d3a903eb7f410db3a0230101d24de0af17621a
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598784"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48827347"
 ---
 # <a name="always-encrypted-database-engine"></a>Sempre criptografados (mecanismo de banco de dados)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ Aqui está um exemplo de uma atualização que tenta mover dados de uma coluna c
 update dbo.Patients set testssn = SSN
 ```
 
-Se o SSN for uma coluna criptografada usando Always Encryption, a instrução de atualização acima falhará com um erro semelhante a:
+Se o SSN for uma coluna criptografada usando Always Encrypted, a instrução de atualização acima falhará com um erro semelhante a:
 
 ```
 Msg 206, Level 16, State 2, Line 89

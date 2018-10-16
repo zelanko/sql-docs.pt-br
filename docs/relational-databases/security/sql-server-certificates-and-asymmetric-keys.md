@@ -14,16 +14,17 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11dde12055fd45d78db1d55a15f6547798aa213a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b8a477f90842e7aa6c1fb9da5347e0555927a036
+ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689134"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48874324"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>Certificados e chaves assimétricas do SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  A PKI (criptografia de chave pública) é um formulário de mensagem secreto no qual um usuário cria uma chave *pública* e uma chave *privada* . A chave privada é mantida em segredo, enquanto que a chave pública pode ser distribuída a outros. Embora as chaves estejam matematicamente relacionadas, a chave privada não pode ser obtida facilmente usando a chave pública. A chave pública é usada para criptografar dados e a chave privada é usada para descriptografar dados. Uma mensagem que é criptografada usando a chave pública só pode ser descriptografada usando a chave privada correta. Como há duas chaves diferentes, essas chaves são *assimétricas*.  
+
+ A Public Key Cryptography é uma forma de sigilo nas mensagens na qual um usuário cria uma chave *pública* e uma chave *privada*. A chave privada é mantida em segredo, enquanto que a chave pública pode ser distribuída a outros. Embora as chaves estejam matematicamente relacionadas, a chave privada não pode ser obtida facilmente usando a chave pública. A chave pública pode ser usada para criptografar os dados que somente a chave privada correspondente será capaz de descriptografar. Isso pode ser usado para criptografar mensagens para o proprietário da chave privada. Da mesma forma, o proprietário de uma chave privada pode criptografar dados que só podem ser descriptografados com a chave pública. Esse uso constitui a base de certificados digitais em que informações contidas no certificado são criptografadas pelo proprietário de uma chave privada, permitindo que o autor tenha certeza sobre o conteúdo. Devido às chaves de criptografia e de descriptografia serem diferentes, elas são conhecidas como chaves *assimétricas*.
   
  Certificados e chaves assimétricas são duas formas de usar a criptografia assimétrica. Os certificados geralmente são usados como contêineres para chaves assimétricas porque podem conter mais informações, como datas de expiração e emissores. Não há diferenças entre os dois mecanismos para o algoritmo criptográfico, bem como na intensidade dada ao mesmo comprimento de chave. Geralmente você usa um certificado para criptografar outros tipos de chaves de criptografia em um banco de dados ou para assinar módulos de código.  
   

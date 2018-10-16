@@ -1,34 +1,33 @@
 ---
 title: Configurar um servidor de relatório em um cluster com balanceamento de carga de rede | Microsoft Docs
-ms.date: 03/20/2017
-ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.technology: report-server
-ms.topic: conceptual
-helpviewer_keywords:
-- report servers [Reporting Services], network load balancing
-ms.assetid: 6bfa5698-de65-43c3-b940-044f41c162d3
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 40564e92fa3eae3e7dcaf596a44792e8ee238a5f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: kfile
+ms.prod: reporting-services, reporting-services-sharepoint, reporting-services-native
+ms.technology: report-server
+ms.topic: conceptual
+ms.date: 10/3/2018
+ms.openlocfilehash: 68cc484911dd98e778d8b56977572f9a1db80132
+ms.sourcegitcommit: 2da0c34f981c83d7f1d37435c80aea9d489724d1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657774"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48782335"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>Configurar um servidor de relatório em um cluster com balanceamento de carga de rede
+
   Se você estiver configurando uma expansão do servidor de relatório a ser executada em um cluster NLB (Balanceamento de Carga de Rede), deverá fazer o seguinte:  
   
--   Verifique se o cluster NLB pode ser acessado através de um nome de servidor virtual que mapeia para o endereço IP do servidor virtual. Um nome de servidor virtual é necessário para que você possa configurar um único ponto de entrada para o cluster NLB. Quando você configurar uma URL para cada instância do servidor de relatório, especificará o nome do servidor virtual como host.  
+- Verifique se o cluster NLB pode ser acessado através de um nome de servidor virtual que mapeia para o endereço IP do servidor virtual. Um nome de servidor virtual é necessário para que você possa configurar um único ponto de entrada para o cluster NLB. Quando você configurar uma URL para cada instância do servidor de relatório, especificará o nome do servidor virtual como host.  
   
--   Configure a validação do estado de exibição para permitir a exibição de relatórios interativos. Esses relatórios costumam ser renderizados inúmeras vezes durante uma única sessão de usuário para exibir dados novos ou diferentes em resposta a ações do usuário. Quando você configura a validação do estado de exibição, a continuidade é preservada na sessão de usuário, independentemente dos serviços do servidor de relatório solicitados.  
+- Configure a validação do estado de exibição para permitir a exibição de relatórios interativos. Esses relatórios costumam ser renderizados inúmeras vezes durante uma única sessão de usuário para exibir dados novos ou diferentes em resposta a ações do usuário. Quando você configura a validação do estado de exibição, a continuidade é preservada na sessão de usuário, independentemente dos serviços do servidor de relatório solicitados.  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] não fornece a funcionalidade para balancear a carga de uma implantação em expansão ou para definir um único ponto de acesso através de uma URL compartilhada. Você deve implementar uma solução separada de software ou hardware de cluster NLB para dar suporte a uma implantação em expansão do [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  Você pode instalar o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] em nós que já fazem parte de um cluster NLB ou pode configurar primeiro uma implementação em expansão e, depois, instalar o software de cluster.  
   
-## <a name="steps-for-report-server-deployment-on-an-nlb-cluster"></a>Etapas da implantação do servidor de relatório em um cluster NLB  
+## <a name="steps-for-report-server-deployment-on-an-nlb-cluster"></a>Etapas da implantação do servidor de relatório em um cluster NLB
+
  Use as seguintes diretrizes para instalar e configurar sua implantação:  
   
 |Etapa|Descrição|Mais informações|  
@@ -41,27 +40,60 @@ ms.locfileid: "47657774"
 |6|Configure o **Hostname** e o **UrlRoot** para usar o IP do servidor virtual do cluster NLB.|[Como configurar Hostname e UrlRoot](#SpecifyingVirtualServerName) neste tópico.|  
 |7|Verifique se é possível acessar os servidores através do nome do host especificado.|[Verificar o acesso ao servidor de relatório](#Verify) neste tópico.|  
   
-##  <a name="ViewState"></a> Como configurar a validação do estado de exibição  
- Para executar uma implantação em expansão em um cluster NLB, você deve configurar a validação do estado de exibição para que os usuários possam exibir relatórios HTML interativos.
+## <a name="ViewState"></a> Como configurar a validação do estado de exibição
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+Para executar uma implantação em expansão em um cluster NLB, você deve configurar a validação do estado de exibição para que os usuários possam exibir relatórios HTML interativos.  Você precisa fazer isso para o serviço Web do servidor de relatório.
+::: moniker-end
+
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+Para executar uma implantação em expansão em um cluster NLB, você deve configurar a validação do estado de exibição para que os usuários possam exibir relatórios HTML interativos.
+::: moniker-end
   
  A validação do estado de exibição é controlada pelo ASP .NET. Por padrão, ela fica habilitada e usa a identidade do serviço Web para efetuar a validação. Porém, em um cenário de cluster NLB, existem várias instâncias de serviço e identidades de serviço Web que são executadas em computadores diferentes. Como a identidade do serviço varia para cada nó, não é possível usar uma única identidade de processo para efetuar a validação.  
   
  Para contornar esse problema, você pode gerar uma chave de validação arbitrária para dar suporte à validação do estado de exibição e, depois, configurar manualmente cada nó do servidor de relatório para usar a mesma chave. É possível usar qualquer sequência hexadecimal gerada aleatoriamente. O algoritmo de validação (como SHA1) determina o comprimento da sequência hexadecimal.  
 
-1.  Gere uma chave de validação e uma chave de descriptografia usando a funcionalidade de geração automática fornecida pelo [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. No final, você deve ter uma única entrada \<**MachineKey**> que pode ser colada no arquivo RSReportServer.config de cada instância do servidor de relatório na implantação escalável.
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+
+1. Gere uma chave de validação e uma chave de descriptografia usando a funcionalidade de geração automática fornecida pelo [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. No final, você precisa ter uma única entrada <`MachineKey`> que possa ser colada no arquivo Web.config de cada instância do servidor de relatório na implantação escalável.  
   
-     O exemplo a seguir mostra uma ilustração do valor a ser obtido. Não copie o exemplo nos seus arquivos de configuração; os valores de chave não são válidos. O servidor de relatório requer o uso de maiúsculas e minúsculas correto.
+    O exemplo a seguir mostra uma ilustração do valor a ser obtido. Não copie o exemplo nos seus arquivos de configuração; os valores de chave não são válidos.  
   
+    ```xml
+    <machineKey validationKey="123455555" decryptionKey="678999999" validation="SHA1" decryption="AES"/>  
     ```  
-    <MachineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>  
-    ```   
-2.  Salve o arquivo.  
   
-3.  Repita a etapa anterior para cada servidor de relatório na implantação em expansão.  
+2. Abra o arquivo Web.config do servidor de relatório e, na seção <`system.web`>, cole o elemento <`machineKey`> gerado por você. Por padrão, o arquivo Web.config do Gerenciador de Relatórios está localizado em \Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\Reportserver\Web.config.  
   
-4.  Verifique se todos os arquivos RSReportServer.config das pastas \Reporting Services\Servidor de Relatório contêm elementos \<**MachineKey**> idênticos.  
+3. Salve o arquivo.  
   
-##  <a name="SpecifyingVirtualServerName"></a> Como configurar Hostname e UrlRoot  
+4. Repita a etapa anterior para cada servidor de relatório na implantação em expansão.  
+  
+5. Verifique se todos os arquivos Web.config das pastas \Reporting Services\Reportserver contêm elementos <`machineKey`> idênticos na seção <`system.web`>.  
+
+::: moniker-end
+
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+
+1. Gere uma chave de validação e uma chave de descriptografia usando a funcionalidade de geração automática fornecida pelo [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. No final, você deve ter uma única entrada \<**MachineKey**> que pode ser colada no arquivo RSReportServer.config de cada instância do servidor de relatório na implantação escalável.
+
+    O exemplo a seguir mostra uma ilustração do valor a ser obtido. Não copie o exemplo nos seus arquivos de configuração; os valores de chave não são válidos. O servidor de relatório requer o uso de maiúsculas e minúsculas correto.
+
+    ```xml
+    <machineKey validationKey="123455555" decryptionKey="678999999" validation="SHA1" decryption="AES"/>
+    ```
+
+2. Salve o arquivo.
+
+3. Repita a etapa anterior para cada servidor de relatório na implantação em expansão.  
+
+4. Verifique se todos os arquivos RSReportServer.config das pastas \Reporting Services\Servidor de Relatório contêm elementos \<**MachineKey**> idênticos.
+
+::: moniker-end
+
+## <a name="SpecifyingVirtualServerName"></a> Como configurar Hostname e UrlRoot
+
  Para configurar uma implantação em expansão do servidor de relatório em um cluster NLB, é necessário definir um único nome de servidor virtual que forneça um único ponto de acesso ao cluster de servidores. Então registre esse nome de servidor virtual com o DNS (Domain Name Server, servidor de nomes de domínio) em seu ambiente.  
   
  Depois de definir o nome do servidor virtual, você poderá configurar as propriedades **Hostname** e as **UrlRoot** no arquivo RSReportServer.config para incluir o nome do servidor virtual na URL do servidor de relatório.  
@@ -74,42 +106,43 @@ ms.locfileid: "47657774"
   
  Não modifique **ReportServerUrl**. Se você modificar essa URL, introduzirá uma viagem de ida e volta a mais no servidor virtual sempre que uma solicitação interna for tratada. Para obter mais informações, consulte [URLs em arquivos de configuração &#40;Gerenciador de Configurações do SSRS&#41;](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md). Para obter mais informações sobre como editar o arquivo de configuração, consulte [Modificar um arquivo de configuração do Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) nos Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-1.  Abra o RSReportServer.config em um editor de texto.  
+1. Abra o RSReportServer.config em um editor de texto.  
   
-2.  Localize a seção **\<Service>** e adicione as seguintes informações ao arquivo de configuração, substituindo o valor **Hostname** pelo nome do servidor virtual do servidor NLB:  
+2. Localize a seção **\<Service>** e adicione as seguintes informações ao arquivo de configuração, substituindo o valor **Hostname** pelo nome do servidor virtual do servidor NLB:  
   
-    ```  
+    ```xml
     <Hostname>virtual_server</Hostname>  
     ```  
   
-3.  Localize **UrlRoot**. O elemento não é especificado no arquivo de configuração, mas o valor padrão usado é uma URL neste formato: http:// ou `https://<computername>/<reportserver>`, em que \<*reportserver*> corresponde ao nome do diretório virtual do serviço Web Servidor de Relatórios.  
+3. Localize **UrlRoot**. O elemento não é especificado no arquivo de configuração, mas o valor padrão usado é uma URL neste formato: http:// ou `https://<computername>/<reportserver>`, em que \<*reportserver*> corresponde ao nome do diretório virtual do serviço Web Servidor de Relatórios.  
   
-4.  Digite um valor para **UrlRoot** que inclui o nome virtual do cluster neste formato: http:// ou `https://<virtual_server>/<reportserver>`.  
+4. Digite um valor para **UrlRoot** que inclui o nome virtual do cluster neste formato: http:// ou `https://<virtual_server>/<reportserver>`.  
   
-5.  Salve o arquivo.  
+5. Salve o arquivo.  
   
-6.  Repita estas etapas em cada arquivo RSReportServer.config de cada servidor de relatório na implantação em expansão.  
+6. Repita estas etapas em cada arquivo RSReportServer.config de cada servidor de relatório na implantação em expansão.  
   
-##  <a name="Verify"></a> Verificar o acesso ao servidor de relatório  
+## <a name="Verify"></a> Verificar o acesso ao servidor de relatório
+
  Verifique se você pode acessar a implantação escalável por meio do nome do servidor virtual (por exemplo, `https://MyVirtualServerName/reportserver` e `https://MyVirtualServerName/reports`).  
   
  Você pode verificar que nó efetivamente processa relatórios examinando os arquivos de log do servidor de relatório ou verificando o log de execução do RS (a tabela do log de execução contém uma coluna denominada **InstanceName** que mostra qual instância processou uma determinada solicitação). Para obter mais informações, consulte [Fontes e arquivos de log do Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md) em Manuais Online do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Se não for possível se conectar ao servidor de relatório, verifique o NLB para assegurar que as solicitações sejam enviadas para o servidor de relatório e visualize o log do HTTP do servidor de relatório para assegurar que o servidor esteja recebendo as solicitações.  
   
-#### <a name="troubleshooting-failed-requests"></a>Solucionando problemas de solicitações falhas  
+### <a name="troubleshooting-failed-requests"></a>Solucionando problemas de solicitações falhas
+
  Se as solicitações não chegarem até as instâncias do servidor de relatório, verifique no arquivo RSReportServer.config se o nome do servidor virtual está especificado como o nome do host para as URLs do servidor de relatório:  
   
-1.  Abra o arquivo RSReportServer.config em um editor de texto.  
+1. Abra o arquivo RSReportServer.config em um editor de texto.  
   
-2.  Localize \<**Hostname**>, \<**ReportServerUrl**> e \<**UrlRoot**> e o nome do host de cada configuração. Se o valor não for o nome de host esperado, substitua-o pelo nome de host correto.  
+2. Localize \<**Hostname**>, \<**ReportServerUrl**> e \<**UrlRoot**> e o nome do host de cada configuração. Se o valor não for o nome de host esperado, substitua-o pelo nome de host correto.  
   
  Se você iniciar a ferramenta Configuração do Reporting Services depois de fazer essas alterações, a ferramenta poderá alterar as configurações de \<**ReportServerUrl**> para o valor padrão. Sempre tenha uma cópia de backup dos arquivos de configuração caso seja necessário substituí-los pela versão que contém as configurações desejadas.  
   
-## <a name="see-also"></a>Consulte Também  
+## <a name="see-also"></a>Consulte Também
+
  [Reporting Services Configuration Manager &#40;Modo Nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [Configurar uma URL &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [Configurar uma implantação escalável do servidor de relatório no modo nativo &#40;Gerenciador de configurações do SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
- [Gerenciar um servidor de relatórios de Modo Nativo do Reporting Services](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
-  
-  
+ [Gerenciar um servidor de relatórios de Modo Nativo do Reporting Services](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)

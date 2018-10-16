@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 566b8c860f097ae46de84076b0f355f8115bde6a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d59104a7c3759c8391a9f41d5ac600fea33caed
+ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769004"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48142266"
 ---
 # <a name="deploy-the-sql-server-reporting-services-report-viewer-web-part-on-a-sharepoint-site"></a>Implantar a web part do Visualizador de Relatórios do SQL Server Reporting Services em um site do SharePoint
 
@@ -27,7 +27,8 @@ Use as instruções a seguir para implantar manualmente o pacote de solução qu
 ## <a name="requirements"></a>Requisitos
 
 > [!IMPORTANT]
-> No momento, não será possível instalar essa web part se você já configurou o modo integrado do SharePoint do Reporting Services.
+> Da versão "15.X.X.X" em diante, você pode instalar o ReportViewerWebPart lado a lado com os aplicativos de serviço compartilhado do modo integrado do SharePoint do Reporting Services.
+> Com essa atualização da solução .wsp, apresentamos novos arquivos e a solução anterior deve ser retirada e o novo wsp reimplantado, usando respectivamente os cmdlets Uninstall-SPSolution e Install-SPSolution.
 >
 
 **Dar suporte a versões do SharePoint Server:**

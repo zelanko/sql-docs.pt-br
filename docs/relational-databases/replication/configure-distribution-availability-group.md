@@ -1,7 +1,7 @@
 ---
 title: Configurar o banco de dados de distribuição do SQL Server no grupo de disponibilidade | Microsoft Docs
 ms.custom: ''
-ms.date: 05/23/2018
+ms.date: 10/04/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: replication
@@ -20,18 +20,18 @@ ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1af1ffe2423fad7e8b9b2b07f2085bdf0efed1f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b8d12a1626d6d2d76e24f5aeebfe6d3f50a66959
+ms.sourcegitcommit: 8aecafdaaee615b4cd0a9889f5721b1c7b13e160
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615374"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48817994"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Configurar o banco de dados de distribuição de replicação no grupo de disponibilidade Always On
 
 Este artigo explica como configurar um banco de dados de distribuição de replicação do SQL Server em um AG (grupo de disponibilidade) Always On.
 
-O SQL Server 2017 CU 6 introduz o suporte para o banco de dados de distribuição de replicação em um AG por meio dos seguintes mecanismos:
+O SQL Server 2017 CU6 e o SQL Server 2016 SP2-CU3 introduzem o suporte para o banco de dados de distribuição de replicação em um AG por meio dos seguintes mecanismos:
 
 - O AG do banco de dados de distribuição deve ter um ouvinte. Quando o publicador adiciona o distribuidor, ele usa o nome de ouvinte como o nome do distribuidor.
 - Os trabalhos de replicação são criados com o nome do ouvinte como o nome do distribuidor.
@@ -190,13 +190,15 @@ Este exemplo adiciona um novo distribuidor a uma configuração de replicação 
    sp_adddistributiondb 'distribution'
    ```
 
-1. No DIST3, execute: 
+4. No DIST3, execute: 
 
    ```sql
    sp_adddistpublisher @publisher= 'PUB', @distribution_db= 'distribution', @working_directory= '<network path>'
    ```
 
    O valor de `@working_directory` deve ser o mesmo especificado para DIST1 e DIST2.
+
+4. Em DIST3, você precisa recriar servidores vinculados aos assinantes.
 
 ## <a name="remove-a-replica-from-distribution-database-ag"></a>Remover uma réplica do AG do banco de dados de distribuição
 

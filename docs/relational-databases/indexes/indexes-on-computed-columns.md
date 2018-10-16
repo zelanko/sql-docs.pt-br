@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5f3144520a5473a913dbc50f6002f69954042bcd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff278b06fcc964ec95b57bfc8f4685d22c420e0a
+ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789846"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48851871"
 ---
 # <a name="indexes-on-computed-columns"></a>Índices em colunas computadas
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ Todas as referências de função na coluna computada devem ter o mesmo propriet
 > [!IMPORTANT]  
 >  Expressões são determinísticas se elas sempre retornarem o mesmo resultado para um conjunto de entradas especificado. A propriedade **IsDeterministic** da função [COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md) relata se um *computed_column_expression* é determinístico.  
   
- A *computed_column_expression* deve ser determinística. Uma *computed_column_expression* é determinística quando uma ou mais das seguintes opções é verdadeira:  
+ A *computed_column_expression* deve ser determinística. Uma *computed_column_expression* é determinística quando todas as seguintes condições são verdadeiras:  
   
 -   Todas as funções mencionadas pela expressão são determinísticas e precisas. Essas funções incluem as funções definidas pelo usuário e internas. Para obter mais informações, veja [Funções determinísticas e não determinísticas](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md). Funções podem ser imprecisas se a coluna computada for PERSISTED. Para obter mais informações, veja [Criando índices em colunas computadas persistentes](#BKMK_persisted) , mais adiante neste tópico.  
   

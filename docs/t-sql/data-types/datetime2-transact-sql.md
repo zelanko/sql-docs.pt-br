@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed5b430bfdd6f24e0942c72b4ce8d0cfce40d672
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8c10e012010eb51973f3833573b09f0bb7e5fa18
+ms.sourcegitcommit: 2da0c34f981c83d7f1d37435c80aea9d489724d1
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626994"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48782325"
 ---
 # <a name="datetime2-transact-sql"></a>datetime2 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -144,7 +144,7 @@ SELECT @datetime2 AS '@datetime2', @datetimeoffset AS '@datetimeoffset';
 --2016-10-23 12:45:37.1234567 2016-10-23 12:45:37.1234567 +10:00
 ```  
 
-Quando a conversão é de **datetime**, a data e hora são copiadas.  A precisão fracionária é estendida para 7 dígitos.  O exemplo a seguir mostra os resultados da conversão de um valor `datetime` em um valor `datetime2`.
+Quando a conversão é de **datetime**, a data e hora são copiadas. A precisão fracionária é estendida para 7 dígitos. O exemplo a seguir mostra os resultados da conversão de um valor `datetime` em um valor `datetime2`.
 
 ```sql
 DECLARE @datetime datetime = '2016-10-23 12:45:37.333';
@@ -157,7 +157,10 @@ SELECT @datetime2 AS '@datetime2', @datetime AS '@datetime';
 ------------------------- ---------------------------
 --2016-10-23 12:45:37.3333333 2016-10-23 12:45:37.333
 ```  
-  
+
+> [!NOTE]
+> No nível de compatibilidade 130 do banco de dados, as conversões implícitas de tipos de dados datetime para datetime2 demonstram precisão aprimorada ao considerar os milissegundos fracionários. Isso resulta em diferentes valores convertidos, conforme visto no exemplo abaixo. Use conversão explícita para o tipo de dados datetime2 sempre que existir um cenário misto de comparação entre os tipos de dados datetime e datetime2. Para obter mais informações, consulte este [Artigo do Suporte da Microsoft](http://support.microsoft.com/help/4010261).
+
 ### <a name="converting-string-literals-to-datetime2"></a>Convertendo literais de cadeia de caracteres em datetime2  
 Serão permitidas conversões de literais de cadeia de caracteres para tipos de data e hora se todas as partes da cadeia de caracteres estiverem em formatos válidos. Caso contrário, será gerado um erro de tempo de execução. As conversões implícitas ou explícitas que não especificam um estilo, de tipos de data e hora em literais de cadeia de caracteres estarão no formato padrão da sessão atual. A tabela a seguir mostra as regras de conversão de uma literal de cadeia de caracteres no tipo de dados **datetime2**.
   
