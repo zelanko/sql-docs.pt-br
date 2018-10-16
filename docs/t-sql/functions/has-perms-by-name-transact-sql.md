@@ -23,12 +23,12 @@ ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a61cfca736629d3f8ffb7b1240f85a0aa9edb45a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0227ad3719b7b3ca02fa8595ed8cccf6ff8705f6
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749486"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169206"
 ---
 # <a name="haspermsbyname-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  Uma expressão escalar opcional do tipo **sysname** que representa o nome da subentidade protegível na qual a permissão é testada. O padrão é NULO.  
   
 > [!NOTE]  
->  Nas versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], os subprotegíveis não podem usar colchetes no formato **'[***sub name***]'**. Em vez disso, use **'***sub name***'**.  
+>  Nas versões do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ao [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], os subprotegíveis não podem usar colchetes no formato **'[**_sub name_**]'**. Em vez disso, use **'**_sub name_**'**.  
   
  *sub-securable_class*  
  Uma expressão escalar opcional do tipo **nvarchar(60)** que representa a classe da subentidade protegível na qual a permissão é testada. O padrão é NULO.  
@@ -94,11 +94,11 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
 SELECT class_desc FROM sys.fn_builtin_permissions(default);  
 ```  
   
- Os agrupamentos a seguir são usados:  
+ As ordenações a seguir são usadas:  
   
--   Agrupamento do banco de dados atual: protegíveis em nível de banco de dados, incluindo protegíveis não contidos por um esquema, protegíveis com escopo no esquema de uma ou duas partes; banco de dados de destino quando um nome de três partes é usado.  
+-   Ordenação do banco de dados atual: protegíveis em nível de banco de dados, incluindo protegíveis não contidos por um esquema, protegíveis com escopo no esquema de uma ou duas partes; banco de dados de destino quando um nome de três partes é usado.  
   
--   Agrupamento do banco de dadosmaster: itens protegíveis do nível de servidor.  
+-   Ordenação do banco de dadosmaster: itens protegíveis do nível de servidor.  
   
 -   Não há suporte para ‘ANY’ em verificações em nível de coluna. Você deve especificar a permissão apropriada.  
   

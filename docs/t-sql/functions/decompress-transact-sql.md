@@ -1,7 +1,7 @@
 ---
 title: DECOMPRESS (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/30/2015
+ms.date: 10/11/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,15 +16,15 @@ ms.assetid: 738d56be-3870-4774-b112-3dce27becc11
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d51a76161d9a2ad667773a947dd67efe5080c3f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d66bede3868b836c47527f51d527ba6b68282e79
+ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749274"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49168766"
 ---
 # <a name="decompress-transact-sql"></a>DECOMPRESS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
 Esta função descompactará um valor de expressão de entrada usando o algoritmo GZIP. `DECOMPRESS` retornará uma matriz de bytes (tipo VARBINARY(MAX)).  
   

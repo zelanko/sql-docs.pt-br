@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 921322126bc11642bd2140784efb6ea4ae6a8550
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 59d4ffbb3c2088ae4b517ab99e0b2705ffccd047
+ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703764"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49085442"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>Localizando, exibindo e gerenciando relatórios (Construtor de Relatórios e SSRS)
   No Construtor de Relatórios, você pode procurar pastas em um servidor de relatório ou site do SharePoint para encontrar relatórios, fontes de dados compartilhadas, modelos e outros itens de relatório relacionados e navegar no computador para localizar relatórios locais. Para facilitar a localização de relatórios, o Construtor de Relatórios mantém uma lista de servidores e sites usados recentemente e fornece acesso direto às pastas Área de Trabalho, Meus Documentos e Meu Computador no sistema de arquivos do computador.  
@@ -67,7 +67,7 @@ ms.locfileid: "47703764"
   
  Algumas dessas tarefas talvez sejam executadas para você pelo administrador do servidor de relatório. Para saber mais sobre as tarefas executadas em um servidor de relatório, consulte [Servidor de Relatório do Reporting Services &#40;modo nativo&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
   
- Em geral, o Gerenciador de Relatórios contém pastas, relatórios, fontes de dados e modelos de relatório, bem como a pasta Meus Relatórios. A pasta Meus Relatórios é um espaço de trabalho pessoal que pode ser usado para armazenar e trabalhar com seus relatórios e para exibi-los. Outras pastas do servidor de relatórios são públicas e geralmente exigem que os usuários tenham permissões avançadas para adicionar ou modificar o conteúdo de pasta. Você pode criar pastas em Meus Relatórios para organizar ainda mais seus relatórios. Para obter mais informações, consulte [Usando Meus Relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/using-my-reports-report-builder-and-ssrs.md).  
+ Em geral, o Gerenciador de Relatórios contém pastas, relatórios, fontes de dados e modelos de relatório, bem como a pasta Meus Relatórios. A pasta Meus Relatórios é um espaço de trabalho pessoal que pode ser usado para armazenar e trabalhar com seus relatórios e para exibi-los. Outras pastas do servidor de relatórios são públicas e geralmente exigem que os usuários tenham permissões avançadas para adicionar ou modificar o conteúdo de pasta. Você pode criar pastas em Meus Relatórios para organizar ainda mais seus relatórios.  
   
  O Gerenciador de Relatórios exibe relatórios no Visualizador de HTML do Reporting Services. O Visualizador de HTML fornece uma estrutura para a exibição de relatórios em HTML e inclui uma barra de ferramentas de relatório, uma seção de parâmetro, uma seção de credenciais e um mapa do documento. A barra de ferramentas de relatório fornece as funcionalidades de navegação de página, zoom, atualização, pesquisa, exportação, impressão e feed de dados. A barra de ferramentas do relatório também é exibida em uma janela do navegador na parte superior de um relatório quando você acessa relatórios por uma URL. A funcionalidade de impressão é opcional e deve ser ativada pelo administrador. Quando disponível, um ícone Impressora é exibido na barra de ferramentas de relatório. As ilustrações a seguir mostram a barra de ferramentas de relatório em uma janela do Gerenciador de Relatórios e um close-up dos recursos da barra de ferramentas de relatório.  
   
@@ -142,13 +142,7 @@ Barra de ferramentas do relatório
  [Localizando e exibindo relatórios com um navegador &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md)  
  Descreve como usar uma URL para localizar e exibir um relatório.  
   
- [Pesquisando relatórios e outros itens &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)  
- Descreve como usar a funcionalidade de pesquisa no Gerenciador de Relatórios para localizar itens no servidor de relatório.  
-  
- [Usando Meus Relatórios &#40;Construtor de Relatórios e SSRS&#41;](../../reporting-services/report-builder/using-my-reports-report-builder-and-ssrs.md)  
- Descreve como usar a pasta Meus Relatórios como um espaço de trabalho pessoal que pode ser usado para armazenar e trabalhar com seus relatórios e para exibi-los.  
-  
- [Visualizando relatórios no Construtor de Relatórios](../../reporting-services/report-builder/previewing-reports-in-report-builder.md)  
+ [Visualizar relatórios no Construtor de Relatórios](../../reporting-services/report-builder/previewing-reports-in-report-builder.md)  
  Descreve como visualizar relatórios durante sua criação ou atualização.  
   
 ## <a name="see-also"></a>Consulte Também  
