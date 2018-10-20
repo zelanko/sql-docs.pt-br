@@ -4,18 +4,18 @@ description: Saiba como fazer backup e restaurar um banco de dados usando o Stud
 ms.custom: tools|sos
 ms.date: 09/24/2018
 ms.prod: sql
+ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
-ms.prod_service: sql-tools
 ms.topic: tutorial
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b687c05e591e78b836a18c192828cca4fe7f97fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f2d9b4cbee5ab4da44961927809bf1fb4c771cc1
+ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "48037683"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49355907"
 ---
 # <a name="backup-and-restore-using-includename-sosincludesname-sos-shortmd"></a>Backup e restauração usando [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

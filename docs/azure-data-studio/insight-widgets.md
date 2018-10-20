@@ -4,18 +4,18 @@ description: Saiba mais sobre os widgets de Insights no estúdio de dados do Azu
 ms.custom: tools|sos
 ms.date: 09/24/2018
 ms.prod: sql
-ms.technology: ssops
+ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
 ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d838147a29fc83723ac97267f6c0a0a6ccf3cc90
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d669b72aadb9fe1ea2ec61c2059a1d932ee52d4d
+ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "48037819"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49356324"
 ---
 # <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>Gerenciar servidores e bancos de dados com os widgets de Insights em [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -57,5 +57,5 @@ A consulta T-SQL e seu conjunto de resultados determinam o comportamento de widg
 
 
 ## <a name="additional-resources"></a>Recursos adicionais
-- [Editor de consultas](tutorial-sql-editor.md)
+- [Editor de Consultas](tutorial-sql-editor.md)
 

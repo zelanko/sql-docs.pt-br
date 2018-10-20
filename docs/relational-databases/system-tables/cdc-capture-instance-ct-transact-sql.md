@@ -18,12 +18,12 @@ ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7b13f890063246c1557d11a504ccf229bb162057
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 346fea411891f04e4b4742ff50c2dd9cce6f1587
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621024"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336245"
 ---
 # <a name="cdcltcaptureinstancegtct-transact-sql"></a>CDC. &lt;capture_instance&gt;CT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ O `__$command_id` coluna foi a coluna foi introduzida em uma atualização cumul
 3.  Altere a tabela de origem especificando o novo tipo de dados. A alteração do tipo de dados é propagada com êxito na tabela de alteração.  
   
 ## <a name="data-manipulation-language-modifications"></a>Modificações da linguagem de manipulação de dados  
- Quando as operações de inserção, atualização e exclusão forem executadas em uma tabela de origem com a captura de dados de alteração habilitada, um registro dessas operações DML aparecerão no log de transações do banco de dados. O processo de captura de dados de alteração recupera informações sobre alterações do log de transações e insere uma ou duas linhas na tabela de alteração para registrar a alteração. As entradas são adicionadas à tabela de alteração na mesma ordem em que foram confirmadas na tabela de origem, embora a confirmação das entradas da tabela de alterações normalmente deva ser feita em um grupo de alterações e não para uma única entrada.  
+ Quando as operações de inserção, atualização e exclusão forem executadas em uma tabela de origem com a captura de dados de alteração habilitada, um registro dessas operações DML aparecerão no log de transações do banco de dados. O processo do change data capture recupera informações sobre essas alterações do log de transações e adiciona uma ou duas linhas à tabela de alteração para gravar a alteração. As entradas são adicionadas à tabela de alteração na mesma ordem em que foram confirmadas na tabela de origem, embora a confirmação das entradas da tabela de alterações normalmente deva ser feita em um grupo de alterações e não para uma única entrada.  
   
  Dentro da entrada de tabela de alteração, o **_ $start_lsn** coluna é usada para registrar o LSN que está associado com a alteração para a tabela de origem de confirmação e o **coluna do _ $seqval** é usada para ordenar a alteração em sua transação. Juntas, essas colunas de metadados podem ser usadas para garantir que a ordem de confirmação das  alterações de origem será preservada. Como o processo de captura obtém as informações sobre alterações do log de transações, é importante observar que as entradas da tabela de alteração não aparecem de forma sincronizada com as alterações da tabela de origem correspondente. Em vez disso, as alterações correspondentes aparecem de forma assíncrona, depois que o processo de captura processou as entradas de alteração pertinentes do log de transação.  
   

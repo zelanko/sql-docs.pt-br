@@ -1,3 +1,3 @@
 ## <a name="edit-contentmediaedit-topic-pencilpng-contribute-sql-documentation"></a>![editar conteúdo](../media/edit-topic-pencil.png) Contribua com a documentação do SQL
-
+Você sabia que você pode editar o conteúdo por conta própria? Se você fizer isso, não apenas melhora nossa documentação, mas você também vai ser creditado como um colaborador para a página.
 - [Como contribuir com a documentação do SQL Server](https://docs.microsoft.com/sql/sql-server/sql-server-docs-contribute)

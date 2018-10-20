@@ -1,34 +1,39 @@
 ---
-title: Usar o modelo de Python no SQL para treinamento e pontuação | Microsoft Docs
+title: Usar um modelo de Python no SQL Server para treinamento e previsões | Microsoft Docs
+description: Crie e treine um modelo usando o Python e o conjunto de dados íris clássico. Salvar o modelo para o SQL Server e, em seguida, usá-lo para gerar os resultados previstos.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 10/18/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 02ffd5a25c076ef5a65a6e3a998aae485e37d982
-ms.sourcegitcommit: c8f7e9f05043ac10af8a742153e81ab81aa6a3c3
+ms.openlocfilehash: 839bcecdeaf7b5e2a7ea1297fe941353bffed20e
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 07/17/2018
-ms.locfileid: "39085018"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461832"
 ---
-# <a name="use-python-model-in-sql-for-training-and-scoring"></a>Usar o modelo de Python no SQL para treinamento e pontuação
+# <a name="use-a-python-model-in-sql-server-for-training-and-scoring"></a>Usar um modelo de Python no SQL Server para treinamento e pontuação
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-No [lição anterior](wrap-python-in-tsql-stored-procedure.md), você aprendeu o padrão comum para usar o Python junto com o SQL. Você aprendeu que o Python, código de saída de um Frame claramente definida e pode, opcionalmente, gerar diversas variáveis escalares ou binárias. Você aprendeu que o procedimento armazenado SQL deve ser projetado para passar o tipo de dados para o Python e lidar com os resultados.
+Neste exercício de Python, saiba um padrão comum para a criação, treinamento e usando um modelo no SQL Server. Este exercício cria dois procedimentos armazenados. O primeiro deles gera um modelo de Naïve Bayes para prever uma espécie de íris com base nas características da flor. É o segundo procedimento para pontuação. Ele chama o modelo gerado no primeiro procedimento para um conjunto de previsões de saída. Percorrendo este exercício, você aprenderá técnicas básicas que são fundamentais para executar o código do Python em uma instância do mecanismo de banco de dados do SQL Server.
 
-Nesta seção, você deve usa esse mesmo padrão para treinar o modelo nos dados que você adicionou ao SQL Server e salva o modelo em uma tabela do SQL Server:
+Dados de exemplo usados neste exercício são o [conjunto de dados íris](demo-data-iris-in-sql.md) na **irissql** banco de dados.
 
-+ Criar um procedimento armazenado que chama uma função de aprendizado de máquina do Python.
-+ O procedimento armazenado precisa de dados do SQL Server para usar no treinamento do modelo.
-+ O procedimento armazenado gera um modelo treinado como uma variável binária. 
-+ Você pode salvar o modelo treinado, inserindo o modelo de variável em uma tabela. 
+## <a name="create-a-model-using-a-sproc"></a>Criar um modelo usando um sproc
 
-## <a name="create-the-stored-procedure-and-train-a-python-model"></a>Criar o procedimento armazenado e treine um modelo de Python
+1. Abra uma nova janela de consulta no Management Studio, conectado para o **irissql** banco de dados. 
 
-1. Execute o seguinte código no SQL Server Management Studio para criar o procedimento armazenado que cria um modelo.
+    ```sql
+    USE irissql
+    GO
+    ```
+
+2. Execute o seguinte código em uma nova janela de consulta para criar o procedimento armazenado que cria e treina um modelo. Modelos que são armazenados para reutilização no SQL Server são serializados como um fluxo de bytes e armazenados em uma coluna varbinary (max) em uma tabela de banco de dados. Depois de criar o modelo, treinado, serializado e salvos em um banco de dados, ele pode ser chamado por outros procedimentos ou pela função PREVER T-SQL em cargas de trabalho de pontuação.
+
+   Esse código usa pickle para serializar o modelo e o scikit para fornecer o algoritmo Naïve Bayes. O modelo será treinado usando dados de colunas de 0 a 4 dos **iris_data** tabela. Os parâmetros que você pode ver na segunda parte do procedimento articulam entradas de dados e saídas de modelo. 
 
     ```sql
     CREATE PROCEDURE generate_iris_model (@trained_model varbinary(max) OUTPUT)
@@ -49,63 +54,39 @@ Nesta seção, você deve usa esse mesmo padrão para treinar o modelo nos dados
     GO
     ```
 
-2. Se esse comando for executado sem erro, um novo procedimento armazenado é criado e adicionado ao banco de dados. Você pode encontrar os procedimentos armazenados no Management Studio **Pesquisador de objetos**, em **programação**.
+3. Verifique se que o procedimento armazenado existe. Se o script T-SQL da etapa anterior for executado sem erro, um novo procedimento armazenado chamado **generate_iris_model** é criado e adicionado para o **irissql** banco de dados. Você pode encontrar os procedimentos armazenados no Management Studio **Pesquisador de objetos**, em **programação**.
 
-3. Agora execute o procedimento armazenado.
+## <a name="execute-the-sproc-to-create-and-train-models"></a>Execute o sproc para criar e treinar modelos
 
-    ```sql
-    EXEC generate_iris_model
-    ```
+1. Depois que o procedimento armazenado é criado, execute o seguinte código abaixo para executá-lo. A instrução específica para executar um procedimento armazenado é `EXEC` na quinta linha.
 
-    Você deve receber um erro, porque você ainda não forneceu que requer a entrada do procedimento armazenado.
-
-    "Procedimento ou função 'generate_iris_model' espera o parâmetro '\@trained_model', que não foi fornecido."
-
-4. Para gerar o modelo com as entradas necessárias e salve-o em uma tabela requer algumas instruções adicionais:
-
-    ```sql
-    DECLARE @model varbinary(max);
-    EXEC generate_iris_model @model OUTPUT;
-    INSERT INTO iris_models (model_name, model) values('Naive Bayes', @model);
-    ```
-
-5. Agora, tente executar o código de geração de modelo mais uma vez. 
-
-    Você deve receber o erro: "violação de restrição de chave primária não é possível inserir chave duplicada no objeto 'dbo.iris_models'. O valor de chave duplicada é (Naive Bayes) ".
-
-    Isso ocorre porque o nome do modelo foi fornecido, digitando manualmente no "Bayesiana ingênua" como parte da instrução INSERT. Supondo que você planeja criar muitos modelos, com diferentes parâmetros ou algoritmos diferentes em cada execução, você deve considerar como configurar um esquema de metadados para que você pode nomear automaticamente os modelos e muito mais facilmente identificação-los.
-
-6. Para solucionar esse erro, você pode fazer algumas pequenas modificações para o wrapper SQL. Este exemplo gera um nome exclusivo do modelo por meio do acréscimo de data e hora atuais:
+   Esse script em particular exclui um modelo existente de mesmo nome ("Bayesiana ingênua") para liberar espaço para novos criados executando novamente o mesmo procedimento. Sem exclusão do modelo, ocorrerá um erro informando que o objeto já existe. 
 
     ```sql
     DECLARE @model varbinary(max);
     DECLARE @new_model_name varchar(50)
-    SET @new_model_name = 'Naive Bayes ' + CAST(GETDATE()as varchar)
+    SET @new_model_name = 'Naive Bayes '
     SELECT @new_model_name 
     EXEC generate_iris_model @model OUTPUT;
+    DELETE iris_models WHERE model_name = @new_model_name;
     INSERT INTO iris_models (model_name, model) values(@new_model_name, @model);
-    ```
-
-7. Para exibir os modelos, execute uma instrução SELECT simples.
-
-    ```sql
-    SELECT * FROM iris_models;
     GO
     ```
 
+2. Exiba os resultados na área de saída. O script inclui uma instrução SELECT, mostrando que o modelo existe. É outra maneira de retornar uma lista de modelos `SELECT * FROM iris_models` na **irissql**.
+
     **Resultados**
 
-    |nome_do_modelo | modelo |
-    |------|------|
-    | Naive Bayes | 0x800363736B6C656172... |
-    | Naive Bayes de 01 de janeiro de 2018 39 9H | 0x800363736B6C656172... |
-    | Naive Bayes 01 de Feb de 2018 51 10h | 0x800363736B6C656172... |
+    |   | (nenhum nome de coluna |
+    |---|-----------------|
+    | 1 | Naive Bayes     | 
 
-## <a name="generate-scores-from-the-model"></a>Gerar pontuações do modelo
 
-Por fim, vamos carregar esse modelo da tabela em uma variável e passá-lo de volta para o Python para gerar pontuações.
+## <a name="create-and-execute-a-sproc-for-generating-predictions"></a>Criar e executar um sproc para gerar previsões
 
-1. Execute o seguinte código para criar o procedimento armazenado que executa a pontuação. 
+Agora que você criou, treinado e salvo de um modelo, passar para a próxima etapa: criar um procedimento armazenado que gera previsões. Você fará isso por chamada sp_execute_external_script para iniciar o Python e, em seguida, passar no script de Python que carrega um modelo serializado criado no último exercício e, em seguida, ele fornece entradas de dados para a pontuação.
+
+1. Execute o seguinte código para criar o procedimento armazenado que executa a pontuação. Em tempo de execução, esse procedimento carregar um modelo binário, use colunas `[1,2,3,4]` assim como as entradas e especificar colunas `[0,5,6]` como saída.
 
     ```sql
     CREATE PROCEDURE predict_species (@model varchar(100))
@@ -118,7 +99,7 @@ Por fim, vamos carregar esse modelo da tabela em uma variável e passá-lo de vo
     irismodel = pickle.loads(nb_model)
     species_pred = irismodel.predict(iris_data[[1,2,3,4]])
     iris_data["PredictedSpecies"] = species_pred
-    OutputDataSet = iris_data.query( ''PredictedSpecies != SpeciesId'' )[[0, 5, 6]]
+    OutputDataSet = iris_data[[0,5,6]] 
     print(OutputDataSet)
     '
     , @input_data_1 = N'select id, "Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width", "SpeciesId" from iris_data'
@@ -130,33 +111,33 @@ Por fim, vamos carregar esse modelo da tabela em uma variável e passá-lo de vo
     GO
     ```
 
-    O procedimento armazenado obtém o modelo de Naïve Bayes da tabela e usa as funções associadas ao modelo para gerar pontuações. Neste exemplo, o procedimento armazenado obtém o modelo da tabela usando o nome do modelo. No entanto, dependendo de qual tipo de metadados que você está salvando com o modelo, você pode também obter o modelo mais recente, ou o modelo com a precisão mais alta.
-
-2. Execute as seguintes linhas para passar o nome do modelo "Bayesiana ingênua" para o procedimento armazenado que executa o código de pontuação. 
+2. Execute o procedimento armazenado, fornecendo o nome do modelo "Bayesiana ingênua" para que o procedimento sabe qual modelo usar. 
 
     ```sql
     EXEC predict_species 'Naive Bayes';
     GO
     ```
 
-    Quando você executa o procedimento armazenado, ele retorna um Frame do Python. Esta linha de T-SQL Especifica o esquema para os resultados retornados: `WITH RESULT SETS ( ("id" int, "SpeciesId" int, "SpeciesId.Predicted" int));`
+    Quando você executa o procedimento armazenado, ele retorna um Frame do Python. Esta linha de T-SQL Especifica o esquema para os resultados retornados: `WITH RESULT SETS ( ("id" int, "SpeciesId" int, "SpeciesId.Predicted" int));`. Você pode inserir os resultados em uma nova tabela ou retorná-los a um aplicativo.
 
-    Você pode inserir os resultados em uma nova tabela ou retorná-los a um aplicativo.
+    ![Conjunto de resultados de execução de procedimento armazenado](media/train-score-using-python-NB-model-results.png)
 
-    Este exemplo foi feito simple, usando os dados do conjunto de dados íris Python para pontuação. (Consulte a linha `iris_data[[1,2,3,4]])`.) No entanto, normalmente você executaria uma consulta SQL para obter os novos dados e passá-lo em Python como `InputDataSet`. 
+    Os resultados são 150 previsões sobre espécies usando flores características como entradas. Para a maioria das observações, a espécie prevista corresponde a espécie real.
 
-### <a name="remarks"></a>Remarks
+    Este exemplo foi feito simple usando o conjunto de dados de íris de Python para treinamento e pontuação. Uma abordagem mais típica seria envolver a execução de uma consulta SQL para obter os novos dados e passá-lo em Python como `InputDataSet`. 
 
-Se você está acostumado a trabalhar em Python, você talvez esteja acostumado a carregamento de dados, criando alguns resumos e gráficos, em seguida, treinar um modelo e gera algumas classificações em 250 linhas de código a mesma.
+## <a name="conclusion"></a>Conclusão
 
-No entanto, se sua meta é colocar o processo (criação de modelo, pontuação, etc.) no SQL Server, é importante considerar maneiras que você pode separar o processo em etapas reprodutíveis que podem ser modificadas usando parâmetros. Tanto quanto possível, você deseja que o código do Python que são executados em um procedimento armazenado para tenham definido claramente entradas e saídas que são mapeados para o procedimento armazenado de entradas e saídas.
+Neste exercício, você aprendeu a criar procedimentos armazenados para tarefas diferentes, onde cada procedimento armazenado usado o procedimento armazenado do sistema [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) para iniciar um processo de Python. Entradas para o processo de Python são passadas ao script sp_execute_external como parâmetros. O próprio script de Python e a variáveis de dados em um banco de dados do SQL Server são passadas como entradas.
 
-Além disso, você geralmente pode melhorar o desempenho, separando o processo de exploração de dados dos processos de treinamento de um modelo ou geração de pontuações. 
+Se você está acostumado a trabalhar em Python, você talvez esteja acostumado a carregamento de dados, criando alguns resumos e gráficos, em seguida, treinar um modelo e gera algumas classificações em 250 linhas de código a mesma. Este artigo é diferente de abordagens tradicionais, organizando operações em procedimentos separados. Essa prática é útil em vários níveis.
 
-Processos de treinamento e pontuação geralmente podem ser otimizados, aproveitando os recursos do SQL Server, como o processamento paralelo, ou usando algoritmos na [revoscalepy](../python/what-is-revoscalepy.md) ou [MicrosoftML](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) esse suporte de streaming e execução paralela, em vez de usar bibliotecas padrão do Python. 
+Um benefício é que você pode separar os processos em etapas reprodutíveis que podem ser modificados usando parâmetros. Tanto quanto possível, você deseja que o código do Python que são executados em um procedimento armazenado para tenham definido claramente entradas e saídas que são mapeados para o procedimento armazenado de entradas e saídas que podem ser transmitidas em tempo de execução. Neste exercício, o código do Python que cria um modelo (denominado "Naive Bayes" neste exemplo) é passado como entrada para um segundo procedimento armazenado que chama o modelo em um processo de pontuação.
 
-## <a name="next-lesson"></a>Próxima lição
+Um segundo benefício é que o treinamento e pontuação de processos pode ser otimizada, aproveitando os recursos do SQL Server, como o processamento paralelo, governança de recursos, ou usando algoritmos em [revoscalepy](../python/what-is-revoscalepy.md) ou [MicrosoftML ](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) que dão suporte a streaming e execução paralela. Separando o treinamento e pontuação, você pode direcionar otimizações para cargas de trabalho específicas.
 
-Na última lição, você pode executar código Python de um cliente remoto, usando o SQL Server como o contexto de computação. Esta etapa é opcional, se você não tiver um cliente Python ou não pretende executar Python fora de um procedimento armazenado.
+## <a name="next-steps"></a>Próximas etapas
+
+Tutoriais anteriores se concentrou em execução local. No entanto, você também pode executar código Python em uma estação de trabalho do cliente, usando o SQL Server como o contexto de computação remota. Para obter mais informações sobre como configurar uma estação de trabalho cliente que se conecta ao SQL Server, consulte [configurar as ferramentas de cliente do Python](../python/setup-python-client-tools-sql.md).
 
 + [Criar um modelo de revoscalepy de um cliente do Python](use-python-revoscalepy-to-create-model.md)

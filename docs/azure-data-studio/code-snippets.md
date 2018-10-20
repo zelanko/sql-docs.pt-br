@@ -5,17 +5,17 @@ ms.custom: tools|sos
 ms.date: 09/24/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
-ms.prod_service: sql-tools
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e24d1adc2c6a77d8416d63e205abc3c6c3e2f872
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8bcf50d192b679b250ce6f4baac8f9e0179080ea
+ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "48037691"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49384131"
 ---
 # <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-includename-sosincludesname-sos-shortmd"></a>Criar e usar trechos de código para criar rapidamente scripts Transact-SQL (T-SQL) [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -65,6 +65,7 @@ Você pode definir seus próprios trechos. Para abrir o arquivo de trecho de có
 1. Cole o seguinte código no *sql.json*:
 
    ```sql
+   {
    "Select top 5": {
     "prefix": "sqlSelectTop5",
     "body": "SELECT TOP 5 * FROM ${1:TableName}",
@@ -89,6 +90,7 @@ Você pode definir seus próprios trechos. Para abrir o arquivo de trecho de có
     "GO"
     ],
    "description": "User-defined snippet example 2"
+   }
    }
    ```
 

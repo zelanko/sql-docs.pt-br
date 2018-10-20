@@ -1,35 +1,31 @@
 ---
 title: Adicionar SQLRUserGroup como um usuário de banco de dados (aprendizado de máquina do SQL Server) | Microsoft Docs
-description: Como adicionar SQLRUserGroup como um usuário de banco de dados para serviços do SQL Server Machine Learning.
+description: Para conexões de loopback usando autenticação implícita, adicione SQLRUserGroup como um usuário de banco de dados para que uma conta de trabalho pode fazer logon no servidor, para conversão de identidade para o usuário que está chamando.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/10/2018
+ms.date: 10/17/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: fc5294453def64d13cc43a74a8a5fb299c3e23e3
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.openlocfilehash: 4685288eb383c486556efba1eb4861ca9d708c0f
+ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100317"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49419081"
 ---
 # <a name="add-sqlrusergroup-as-a-database-user"></a>Adicionar SQLRUserGroup como um usuário de banco de dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Crie um logon de banco de dados para o [SQLRUserGroup](../concepts/security.md#sqlrusergroup) para permitir conexões confiáveis provenientes de scripts R e Python quando o destino é dados ou operações na instância do SQL Server. 
+Crie um logon de banco de dados para [SQLRUserGroup](../concepts/security.md#sqlrusergroup) quando um [loop conexão back-](../../advanced-analytics/concepts/security.md#implied-authentication) em seu script especifica um *confiáveis conexão*e a identidade usada para executar um objeto contém o código é uma conta de usuário do Windows.
 
-Para scripts que contêm cadeias de caracteres de conexão com logons do SQL Server ou um nome de usuário totalmente especificado e uma senha, não é necessário criar um logon.
+Confiáveis conexões são aqueles que `Trusted_Connection=True` na cadeia de conexão. Quando o SQL Server recebe uma solicitação especificar uma conexão confiável, ele verifica se a identidade do usuário atual do Windows tem um logon. Para execução como uma conta de trabalho de processos externos (como MSSQLSERVER01 partir **SQLRUserGroup**), a solicitação falha porque essas contas não têm um logon por padrão.
 
-## <a name="when-a-login-is-required"></a>Quando um logon é necessário
-
-Se o script de R ou Python inclui uma cadeia de caracteres de conexão especificando uma conexão confiável (por exemplo, "Trusted_Connection = True"), configuração adicional é necessária para a apresentação correta da identidade do usuário para o SQL Server. Para processos externos em execução em um **SQLRUserGroup** conta de trabalho, como MSSQLSERVER01, o usuário confiável é apresentada como a identidade do trabalho. Como essa identidade não tem nenhum direito de logon para o SQL Server, o que é confiável conexões falhará a menos que você adicione **SQLRUserGroup** como um usuário de banco de dados. Para obter mais informações, consulte [ *autenticação implícita*](../../advanced-analytics/concepts/security.md#implied-authentication).
-
-Lembre-se de que o Launchpad mantém um mapeamento do usuário original que invocado o script e a conta de trabalho que executa o processo. Depois que a conexão confiável for bem-sucedida para a conta de trabalho, a identidade do usuário da chamada original assume e é usada para recuperar os dados. Você não precisa conceder permissões db_datareader **SQLRUserGroup**.
+Você pode contornar o erro de conexão, fornecendo **SQLServerRUserGroup** um logon do SQL Server. Para obter mais informações sobre as identidades e processos externos, consulte [visão geral de segurança para a estrutura de extensibilidade](../concepts/security.md).
 
 > [!Note]
->  Certifique-se de que **SQLRUserGroup** tem permissões de "Permitir logon localmente". Por padrão, esse direito é fornecido para todos os novos usuários locais, mas em algumas organizações políticas mais rígidas do grupo podem ser impostas.
+>  Certifique-se de que **SQLRUserGroup** tem permissões de "Permitir logon localmente". Por padrão, esse direito é fornecido para todos os novos usuários locais, mas em algumas organizações, políticas de grupo mais rígidas podem desabilitar esse direito.
 
 ## <a name="create-a-login"></a>Criar um logon
 
@@ -54,9 +50,9 @@ Lembre-se de que o Launchpad mantém um mapeamento do usuário original que invo
 5. Percorra a lista de contas de grupo no servidor até encontrar uma que começa com `SQLRUserGroup`.
     
     + O nome do grupo que está associada com o serviço Launchpad a _instância padrão_ é sempre **SQLRUserGroup**, independentemente de se você instalou o R ou Python ou ambos. Selecione essa conta somente a instância padrão.
-    + Se você estiver usando um _instância nomeada_, o nome da instância é acrescentado ao nome do nome do grupo de trabalho padrão, `SQLRUserGroup`. Portanto, se a instância é denominada "MLTEST", o nome do grupo de usuário padrão para essa instância seria **SQLRUserGroupMLTest**.
+    + Se você estiver usando um _instância nomeada_, o nome da instância é acrescentado ao nome do nome do grupo de trabalho padrão, `SQLRUserGroup`. Por exemplo, se a instância é denominada "MLTEST", o nome do grupo de usuário padrão para essa instância seria **SQLRUserGroupMLTest**.
  
-     ![Exemplo de grupos no servidor](media/implied-auth-login5.png "exemplo de grupos no servidor")
+ ![Exemplo de grupos no servidor](media/implied-auth-login5.png "exemplo de grupos no servidor")
    
 5. Clique em **Okey** para fechar a caixa de diálogo de pesquisa avançada.
 
@@ -66,3 +62,8 @@ Lembre-se de que o Launchpad mantém um mapeamento do usuário original que invo
 6. Clique em **Okey** mais uma vez para fechar o **Selecionar usuário ou grupo** caixa de diálogo.
 
 7. No **logon - novo** caixa de diálogo, clique em **Okey**. Por padrão, o logon é atribuído à função **pública** e tem permissão para se conectar ao mecanismo de banco de dados.
+
+## <a name="next-steps"></a>Próximas etapas
+
++ [Visão geral de segurança](../concepts/security.md)
++ [Estrutura de extensibilidade](../concepts/extensibility-framework.md)

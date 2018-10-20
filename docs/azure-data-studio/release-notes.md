@@ -4,22 +4,36 @@ description: Notas de versão Data Studio do Azure
 ms.custom: tools|sos
 ms.date: 09/24/2018
 ms.prod: sql
+ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
-ms.prod_service: sql-tools
 ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 94a271991314225a80850ee2156a37b6134e10a7
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: dfa3636ddba734d9c6ee6c9d9da4560a3cd61304
+ms.sourcegitcommit: ef115025e57ec342c14ed3151ce006f484d1fadc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072300"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49411193"
 ---
 # <a name="azure-data-studio-release-notes"></a>Notas de versão Data Studio do Azure
 
-**[Baixe o setembro *disponibilidade geral* versão (GA)!](download.md)**
+**[Baixe a versão de outubro!](download.md)**
+
+## <a name="october-2018-october-release"></a>Outubro de 2018 (versão de outubro)
+
+Data de lançamento: 18 de outubro de 2018  
+versão: 1.1.3
+
+- Apresentando o Azure Resource Explorer para procurar bancos de dados SQL do Azure
+- Aumentar a robustez de conectividade do Pesquisador de objetos e o Editor de consultas
+- Aprimoramentos de extensões do SQL Agent
+- Atualizar para o [extensão de visualização do SQL Server de 2019](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?view=sql-server-ver15)
+
+### <a name="bug-fixes"></a>Correções de bugs
+
+Para obter informações detalhadas, consulte o [Log de alterações](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), e [versões](https://github.com/Microsoft/azuredatastudio/releases).
 
 ## <a name="september-2018-september-ga-release"></a>Setembro de 2018 (versão de setembro GA)
 

@@ -4,18 +4,18 @@ description: Este tutorial demonstra como habilitar o tabela uso exemplo insight
 ms.custom: tools|sos
 ms.date: 09/24/2018
 ms.prod: sql
+ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
-ms.prod_service: sql-tools
 ms.topic: tutorial
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f3c71ee636eead33ab1beefed8ddeb72135c2828
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 55d6c96cc328f21d1b51ce7186c8396ab278ee6f
+ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "48037681"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49355987"
 ---
 # <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>Tutorial: Habilitar a tabela espaço uso exemplo insight widget [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 

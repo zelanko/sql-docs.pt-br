@@ -11,12 +11,12 @@ ms.assetid: 4f079485-9eb4-405c-9a20-81258298b810
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 59a10da991e4a6e029d3a108a8bf7aaa744a4972
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8936d7c79538f4cb609f9208c6bd458369093076
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083876"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460921"
 ---
 # <a name="defining-dimension-granularity-within-a-measure-group"></a>Definindo a granularidade da dimensão dentro de um grupo de medidas
   Os usuários podem dimensionar dados de fatos em diferentes granularidades ou especificidades para diversas finalidades. Por exemplo, dados de vendas de revendedores ou pela Internet podem ser gravados diariamente, enquanto que informações sobre cotas de vendas podem ser registradas apenas mensal ou trimestralmente. Nesses cenários, os usuários terão uma dimensão de tempo com granulação ou nível de detalhes diferente para cada uma dessas tabelas de fatos diferentes. Apesar de ser possível definir uma nova dimensão de banco de dados como uma dimensão de tempo com essa granulação diferente, há uma forma mais fácil de fazer isso com o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
@@ -221,11 +221,11 @@ ms.locfileid: "48083876"
      ![Grupo de medidas cota vendas dimensionado corretamente](../../2014/tutorials/media/l5-granularity-7.gif "grupo de medidas Sales Quota dimensionado corretamente")  
   
 ## <a name="next-lesson"></a>Próxima lição  
- [Lição 6: Definindo cálculos] ((lição-6-definir-calculations.md)  
+ [Lição 6: Definindo cálculos](lesson-6-defining-calculations.md)  
   
 ## <a name="see-also"></a>Consulte também  
  [Relações de dimensão](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [Definir uma relação Regular e propriedades de relação Regular](multidimensional-models/define-a-regular-relationship-and-regular-relationship-properties.md)   
- [Trabalhar com diagramas em Designer de exibição de fonte de dados &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+ [Trabalhar com diagramas em um Designer de exibição da fonte de dados &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
   

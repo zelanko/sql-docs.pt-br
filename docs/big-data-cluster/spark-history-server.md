@@ -9,12 +9,12 @@ ms.reviewer: jroth
 ms.custom: ''
 ms.topic: conceptual
 ms.date: 10/01/2018
-ms.openlocfilehash: 1e154ccfca46430f4ab96e620ac450e3c213313d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 09d22e5d3b55f48ab1873507e6f474f07d842801
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48795790"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460861"
 ---
 # <a name="debug-and-diagnose-spark-applications-on-sql-server-big-data-clusters-in-spark-history-server"></a>Depurar e diagnosticar aplicativos do Spark em clusters de grandes dados do SQL Server no servidor de histórico do Spark
 
@@ -201,5 +201,5 @@ O servidor de histórico do Spark tem os seguintes problemas conhecidos:
 
 ## <a name="next-steps"></a>Próximas etapas
 
-* [Gerenciar recursos para um cluster Spark no HDInsight](https://docs.microsoft.com/en-us/azure/hdinsight/spark/apache-spark-resource-manager)
-* [Definir configurações do Spark](https://docs.microsoft.com/en-us/azure/hdinsight/spark/apache-spark-settings)
+* [Gerenciar recursos para um cluster Spark no HDInsight](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-resource-manager)
+* [Definir configurações do Spark](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-settings)

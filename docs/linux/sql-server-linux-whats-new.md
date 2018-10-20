@@ -4,18 +4,18 @@ description: Este artigo destaca o que há de novo para o SQL Server 2017 no Lin
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/20/2018
+ms.date: 02/21/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
-ms.openlocfilehash: c2a2d7d479521d3925e1420b0caad77fccccf15c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 36c2ce9cd3faabee34f4c68285ec94b8d8ad11ab
+ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631574"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49419071"
 ---
 # <a name="whats-new-for-sql-server-on-linux"></a>O que há de novo para o SQL Server no Linux
 

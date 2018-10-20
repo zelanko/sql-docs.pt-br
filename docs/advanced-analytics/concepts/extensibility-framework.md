@@ -3,17 +3,17 @@ title: Arquitetura de extensibilidade no SQL Server Machine Learning Services | 
 description: Suporte para código externo para o mecanismo de banco de dados do SQL Server, com a arquitetura dual para executar o script de R e Python em dados relacionais.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/05/2018
+ms.date: 10/17/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 2a09f5ddfe39a122205f132b6901d8c8a99e5ad2
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: c2ada06ce41cd9a5faf3237ce2b9bac6fc40291d
+ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48878179"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49419214"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>Arquitetura de extensibilidade em serviços do SQL Server Machine Learning 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -52,7 +52,7 @@ Os componentes incluem uma **Launchpad** usado para invocar o idioma de iniciado
 
 ## <a name="launchpad"></a>Launchpad
 
-O Launchpad confiável do SQL Server é um serviço que gerencia e executa scripts externos, semelhantes à maneira que o serviço de indexação e consulta de texto completo inicia um host separado para o processamento de consultas de texto completo. O serviço Launchpad pode iniciar somente inicializadores confiáveis que são publicadas pela Microsoft ou que tenham sido certificados pela Microsoft como atendendo aos requisitos de desempenho e gerenciamento de recursos.
+O [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] é um serviço que gerencia e executa scripts externos, semelhantes à maneira que o serviço de indexação e consulta de texto completo inicia um host separado para o processamento de consultas de texto completo. O serviço Launchpad pode iniciar somente inicializadores confiáveis que são publicadas pela Microsoft ou que tenham sido certificados pela Microsoft como atendendo aos requisitos de desempenho e gerenciamento de recursos.
 
 | Inicializadores confiáveis | Extensão | Versões do SQL Server |
 |-------------------|-----------|---------------------|
@@ -60,6 +60,8 @@ O Launchpad confiável do SQL Server é um serviço que gerencia e executa scrip
 | Pythonlauncher.dll para o Python 3.5 | [Extensão do Python](extension-python.md) | SQL Server 2017 |
 
 O serviço [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] é executado em sua própria conta de usuário. Se você alterar a conta que executa o Launchpad, certifique-se de fazer isso usar o SQL Server Configuration Manager, para garantir que as alterações são gravadas para arquivos relacionados.
+
+Um separado [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] serviço é criado para cada instância do mecanismo de banco de dados ao qual você adicionou os serviços do SQL Server Machine Learning. Não há barra inicial de um serviço para cada instância do mecanismo de banco de dados, portanto, se você tiver várias instâncias com suporte de script externo, você terá um serviço barra inicial para cada uma delas. Uma instância do mecanismo de banco de dados está associada ao serviço Launchpad criado para ele. Todas as invocações de script externo em um procedimento armazenado ou o resultado de T-SQL no serviço do SQL Server que chamar o serviço Launchpad criado para a mesma instância.
 
 Para executar tarefas em um determinado idioma com suporte, a barra inicial obtém uma conta de trabalho protegida do pool e inicia um processo de satélite para gerenciar o tempo de execução externo. Cada processo satélite herda a conta de usuário do Launchpad e usa a conta de trabalho para a duração da execução do script. Se o script usa processos paralelos, eles são criados sob a conta de trabalho mesmo, único.
 

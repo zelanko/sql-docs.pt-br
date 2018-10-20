@@ -15,12 +15,12 @@ ms.assetid: c55a6748-e5d9-4fdb-9a1f-714475a419c5
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 64c8fc3b51cbf6c96b25218a3ea53be4eac12f21
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 45b13c29af6a9c5e82533a4b66213d1cb1b9dd15
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122396"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460691"
 ---
 # <a name="breaking-changes-to-full-text-search"></a>Alterações recentes na pesquisa de texto completo
   Este tópico descreve as alterações recentes feitas na pesquisa de texto completo. Essas alterações podem danificar aplicativos, scripts ou funcionalidades baseados em versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Talvez você tenha esses problemas ao atualizar. Para obter mais informações, consulte [Use Upgrade Advisor to Prepare for Upgrades](../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
@@ -30,8 +30,8 @@ ms.locfileid: "48122396"
   
 ## <a name="breaking-changes-in-full-text-search-in-includesssql11includessssql11-mdmd"></a>Alterações mais recentes na pesquisa de texto completo no [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
-### <a name="collation-changed-for-name-column-in-sysfulltextlanguages"></a>Agrupamento alterado para o nome Coluna em sys.fulltext_languages  
- O agrupamento do idioma **nome** coluna na exibição do catálogo [sys. fulltext_languages &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql) foi alterado do agrupamento fixo do banco de dados de recurso para o agrupamento selecionado para a instância do padrão [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Essa alteração torna possível comparar os valores a **nome** coluna quando você unir a [sys. syslanguages &#40;Transact-SQL&#41; ](/sql/relational-databases/system-compatibility-views/sys-syslanguages-transact-sql) exibir com **sys. fulltext_languages** . Por exemplo, você pode consultar todos os bancos de dados onde o idioma de texto completo padrão é diferente do idioma de banco de dados padrão.  
+### <a name="collation-changed-for-name-column-in-sysfulltextlanguages"></a>Ordenação alterada para o nome Coluna em sys.fulltext_languages  
+ A ordenação da coluna **name** do idioma na exibição do catálogo [sys.fulltext_languages &amp;#40;Transact-SQL&amp;#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql) foi alterada da ordenação fixa do banco de dados Resource para a ordenação padrão selecionada para a instância do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Esta alteração possibilitará comparar os valores na coluna **name** quando você unir a exibição [sys.syslanguages &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-syslanguages-transact-sql) com **sys.fulltext_languages**. Por exemplo, você pode consultar todos os bancos de dados onde o idioma de texto completo padrão é diferente do idioma de banco de dados padrão.  
   
 ## <a name="breaking-changes-in-full-text-search-in-sql-server-2008"></a>Analisando as alterações feitas na pesquisa de texto completo no SQL Server 2008  
  As últimas alterações a seguir aplicam-se à Pesquisar de texto completo entre o [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] e o [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] e versões posteriores.  
@@ -59,6 +59,6 @@ ms.locfileid: "48122396"
   
 ## <a name="see-also"></a>Consulte também  
  [Alterações de comportamento em pesquisa de texto completo](../relational-databases/search/full-text-search.md)   
- [Pesquisa de texto completo] ((.. / relational-databases/search/full-text-search.md)  
+ [Pesquisa de Texto Completo](../relational-databases/search/full-text-search.md)  
   
   

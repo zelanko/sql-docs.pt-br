@@ -19,12 +19,12 @@ ms.assetid: 6e262a1d-c89e-4033-8368-46cf25168ef5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dc99cd89dc1eeced81d3b199c745df93544ec0a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0c4c35b3cc6a1e7b925be09704fccd2d7ed5bc38
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210926"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461902"
 ---
 # <a name="market-basket-dmx-tutorial"></a>Tutorial de DMX do Market Basket
   Nesse tutorial, você aprenderá como criar, treinar e explorar modelos de mineração de dados, utilizando a linguagem de consulta DMX. Você então utilizará esses modelos de mineração de dados para criar previsões que descrevem quais produtos tendem a ser adquiridos ao mesmo tempo.  
@@ -49,7 +49,7 @@ ms.locfileid: "48210926"
  **Para obter mais informações:** [soluções de mineração de dados](../../2014/analysis-services/data-mining/data-mining-solutions.md)  
   
 ## <a name="mining-structure-and-mining-models"></a>Estrutura de mineração e modelos de mineração  
- Antes de começar a criar instruções DMX, é importante compreender os objetos principais que o  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usa para criar modelos de mineração. O *estrutura de mineração* é uma estrutura de dados que define o domínio de dados do qual modelos de mineração são criados. Uma única estrutura de mineração pode conter vários *modelos de mineração* que compartilham o mesmo domínio. Um modelo de mineração aplica um algoritmo de modelo de mineração aos dados que são representados por uma estrutura de mineração.  
+ Antes de começar a criar instruções DMX, é importante compreender os objetos principais que o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usa para criar modelos de mineração. O *estrutura de mineração* é uma estrutura de dados que define o domínio de dados do qual modelos de mineração são criados. Uma única estrutura de mineração pode conter vários *modelos de mineração* que compartilham o mesmo domínio. Um modelo de mineração aplica um algoritmo de modelo de mineração aos dados que são representados por uma estrutura de mineração.  
   
  Os blocos de construção da estrutura de mineração são as colunas da estrutura de mineração, que descrevem os dados que a fonte de dados contém. Essas colunas contêm informações como tipo de dados, tipo de conteúdo e como os dados são distribuídos.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "48210926"
   
  Há várias razões pelas quais você deseja adicionar mais de um modelo de mineração em uma única estrutura de mineração. Por exemplo, você poderia criar vários modelos de mineração utilizando algoritmos diferentes para ver qual trabalha melhor. Como alternativa, você poderia criar vários modelos de mineração usando o mesmo algoritmo, mas com um conjunto de parâmetros definido de modo diferente para cada modelo de mineração a fim de encontrar a melhor definição para o parâmetro.  
   
- Para obter mais informações, consulte [ALTER MINING STRUCTURE &#40;DMX&#41;] ((~/dmx/alter-mining-structure-dmx.md).  
+ Para obter mais informações, consulte [ALTER MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016).  
   
  Como você criará uma estrutura que contém vários modelos de mineração, utilizará o método secundário neste tutorial.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "48210926"
  Nesta lição, você aprenderá a usar a instrução `ALTER` para adicionar modelos de mineração a uma estrutura de mineração.  
   
  [Lição 3: Processando a estrutura de mineração do Market Basket](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  
- Nesta lição, você aprenderá como usar o `INSERT INTO` instrução para processar estruturas de mineração e seus modelos de mineração associados.  
+ Nesta lição, você aprenderá a usar a instrução `INSERT INTO` para processar estruturas de mineração e seus modelos de mineração associados.  
   
  [Lição 4: Executando previsões de Market Basket](../../2014/tutorials/lesson-4-executing-market-basket-predictions.md)  
  Nesta lição, você aprenderá a usar a instrução `PREDICTION JOIN` para criar previsões em relação aos modelos de mineração.  
@@ -106,7 +106,7 @@ ms.locfileid: "48210926"
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
   
--   O banco de dados [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]  
+-   O banco de dados [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]   
   
  Por padrão, e para reforçar a segurança, os bancos de dados de exemplo não são instalados. Para instalar os bancos de dados de exemplo oficial [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], acesse [ http://www.CodePlex.com/MSFTDBProdSamples ](http://go.microsoft.com/fwlink/?LinkId=88417) ou na home page Microsoft SQL Server Samples and Community Projects na seção de exemplos de produto do Microsoft SQL Server. Clique em **Bancos de Dados**e, em seguida, clique na guia **Releases** e selecione o banco de dados desejado.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "48210926"
   
 ## <a name="see-also"></a>Consulte também  
  [Bike Buyer DMX Tutorial](../../2014/tutorials/bike-buyer-dmx-tutorial.md)   
- [Tutorial de mineração de dados básicos](../../2014/tutorials/basic-data-mining-tutorial.md)   
- [Lição 3: Criando um cenário de cesta de compras &#40;Tutorial de mineração de dados intermediário&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [Tutorial de mineração de dados básico](../../2014/tutorials/basic-data-mining-tutorial.md)   
+ [Lição 3: Criando um cenário de cesta de compras &#40;Tutorial intermediário de mineração de dados&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
   

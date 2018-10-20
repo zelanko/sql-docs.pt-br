@@ -1,21 +1,21 @@
 ---
-title: Lição 3 explorar e visualizar dados usando R e T-SQL (aprendizado de máquina do SQL Server) | Microsoft Docs
+title: Lição 1 explorar e visualizar dados usando R e T-SQL (aprendizado de máquina do SQL Server) | Microsoft Docs
 description: Tutorial que mostra como incorporar o R no SQL Server procedimentos armazenados e funções T-SQL
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 06/07/2018
+ms.date: 10/19/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3fcf73193c44b72c46adb3300085650b20495a9d
-ms.sourcegitcommit: 7d702a1d01ef72ad5e133846eff6b86ca2edaff1
+ms.openlocfilehash: e3e32fef767193f8cf9a33553163f301da3cfa4d
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48798584"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461982"
 ---
-# <a name="lesson-3-explore-and-visualize-the-data"></a>Lição 3: Explorar e visualizar os dados
+# <a name="lesson-1-explore-and-visualize-the-data"></a>Lição 1: Explorar e visualizar os dados
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este artigo faz parte de um tutorial para desenvolvedores SQL sobre como usar o R no SQL Server.
@@ -279,8 +279,8 @@ Para exibir o gráfico, abra a pasta de destino e examine os arquivos que foram 
 
 ## <a name="next-lesson"></a>Próxima lição
 
-[Lição 3: Criar recursos de dados usando o T-SQL](sqldev-create-data-features-using-t-sql.md)
+[Lição 2: Criar recursos de dados usando o T-SQL](sqldev-create-data-features-using-t-sql.md)
 
 ## <a name="previous-lesson"></a>Lição anterior
 
-[Lição 1: Configurar os dados de demonstração de táxi de NYC](sqldev-download-the-sample-data.md)
+[Configurar dados de demonstração de táxi de NYC](demo-data-nyctaxi-in-sql.md)

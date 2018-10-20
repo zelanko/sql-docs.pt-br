@@ -16,25 +16,25 @@ ms.assetid: 36af59d7-ce96-4a02-8598-ffdd78cdc948
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dde4eb098dd034bf136c9885d3da37305068b016
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ed3c5436a8c3a922ea1a118714c1b429dcc9f286
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129786"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461071"
 ---
 # <a name="contained-databases"></a>Bancos de dados independentes
   Um*banco de dados independente* é um banco de dados isolado de outros bancos de dados e da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda o banco de dados.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ajuda o usuário a isolar seu banco de dados da instância de 4 maneiras.  
   
 -   A maioria dos metadados que descrevem um banco de dados é mantida no banco de dados. (Além de, ou em vez de, manter os metadados no banco de dados mestre.)  
   
--   Todo os metadados são definidos usando o mesmo agrupamento.  
+-   Todo os metadados são definidos usando a mesma ordenação.  
   
 -   A autenticação de usuário pode ser executada pelo banco de dados, reduzindo a dependência dos bancos de dados dos logons da instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   O ambiente do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (DMVs, XEvents etc.) relata e pode agir sobre as informações de contenção.  
   
- Alguns recursos de bancos de dados parcialmente independentes, como armazenar metadados no banco de dados, aplicam-se a todos os bancos de dados do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Alguns benefícios dos bancos de dados parcialmente independentes, como autenticação no nível de banco de dados e agrupamento de catálogos, devem ser habilitados antes de serem disponibilizados. A contenção parcial é habilitada usando o `CREATE DATABASE` e `ALTER DATABASE` instruções ou usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obter mais informações sobre como habilitar a contenção parcial de bancos de dados, consulte [Migrate to a Partially Contained Database](migrate-to-a-partially-contained-database.md).  
+ Alguns recursos de bancos de dados parcialmente independentes, como armazenar metadados no banco de dados, aplicam-se a todos os bancos de dados do [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Alguns benefícios dos bancos de dados parcialmente independentes, como autenticação no nível de banco de dados e ordenação de catálogos, devem ser habilitados antes de serem disponibilizados. A contenção parcial é habilitada usando as instruções `CREATE DATABASE` e `ALTER DATABASE` ou usando o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obter mais informações sobre como habilitar a contenção parcial de bancos de dados, consulte [Migrate to a Partially Contained Database](migrate-to-a-partially-contained-database.md).  
   
  Este tópico inclui as seções a seguir.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "48129786"
 > [!IMPORTANT]  
 >  Como determinados objetos têm uma configuração de contenção padrão de **NONE**, essa exibição pode retornar falsos positivos.  
   
- O comportamento de bancos de dados parcialmente independentes difere muito distintamente do comportamento de bancos de dados dependentes em termos de agrupamento. Para obter mais informações sobre problemas de agrupamento, consulte [Contained Database Collations](contained-database-collations.md).  
+ O comportamento de bancos de dados parcialmente independentes difere muito distintamente do comportamento de bancos de dados dependentes em termos de ordenação. Para obter mais informações sobre problemas de ordenação, consulte [Ordenações de banco de dados independentes](contained-database-collations.md).  
   
 ##  <a name="benefits"></a> Benefícios do uso de bancos de dados parcialmente independentes  
  Há problemas e complicações associadas aos bancos de dados dependentes que podem ser resolvidos por meio de um banco de dados parcialmente independente.  
@@ -126,7 +126,7 @@ ms.locfileid: "48129786"
 ### <a name="benefit-of-contained-database-users-with-alwayson"></a>Benefício de usuários de banco de dados independentes com AlwaysOn  
  Reduzindo as associações à instância do [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], bancos de dados parcialmente independentes podem ser úteis durante o failover quando o [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]é usado.  
   
- Criar os usuários independentes permite que o usuário se conecte diretamente no banco de dados independente. Este é um recurso muito significativo em cenários de alta disponibilidade e recuperação de desastres como em uma solução AlwaysOn. Se os usuários forem independentes, no caso de failover, as pessoas podem ser capazes de se conectar ao secundário sem criar logons na instância que hospeda o secundário. Isto fornece um benefício imediato. Para obter mais informações, consulte [visão geral dos grupos de disponibilidade AlwaysOn &#40;SQL Server&#41; ](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) e [pré-requisitos, restrições e recomendações para grupos de disponibilidade do AlwaysOn &#40;SQL Server&#41;] ((... /.. / database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
+ Criar os usuários independentes permite que o usuário se conecte diretamente no banco de dados independente. Este é um recurso muito significativo em cenários de alta disponibilidade e recuperação de desastres como em uma solução AlwaysOn. Se os usuários forem independentes, no caso de failover, as pessoas podem ser capazes de se conectar ao secundário sem criar logons na instância que hospeda o secundário. Isto fornece um benefício imediato. Para obter mais informações, veja [Visão geral de Grupos de Disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) e [Pré-requisitos, restrições e recomendações para grupos de disponibilidade AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 ### <a name="initial-database-development"></a>Desenvolvimento inicial de bancos de dados  
  Como um desenvolvedor talvez não saiba onde um novo banco de dados será implantado, a limitação dos impactos no ambiente implantados no banco de dados reduz o trabalho e a preocupação do desenvolvedor. No modelo não contido, o desenvolvedor deve considerar os possíveis impactos no ambiente no novo banco de dados e programa de maneira correspondente. No entanto, ao usar bancos de dados parcialmente independentes, os desenvolvedores podem detectar impactos de nível de instância no banco de dados e preocupações de nível de instância para o desenvolvedor.  
@@ -141,9 +141,9 @@ ms.locfileid: "48129786"
   
 -   Procedimentos numerados  
   
--   Objetos associados a esquema que dependem de funções internas com alterações de agrupamento  
+-   Objetos associados a esquema que dependem de funções internas com alterações de ordenação  
   
--   Alteração de associação resultante de alterações de agrupamento, inclusive referências a objetos, colunas, símbolos ou tipos.  
+-   Alteração de associação resultante de alterações de ordenação, inclusive referências a objetos, colunas, símbolos ou tipos.  
   
 -   Replicação, captura de dados de alteração e controle de alterações.  
   
@@ -162,7 +162,7 @@ ms.locfileid: "48129786"
 ## <a name="related-content"></a>Conteúdo relacionado  
  [Recursos modificados &#40;banco de dados independente&#41;](modified-features-contained-database.md)  
   
- [Agrupamentos de banco de dados independentes](contained-database-collations.md)  
+ [Ordenações de banco de dados independentes](contained-database-collations.md)  
   
  [Melhores práticas de segurança com bancos de dados independentes](security-best-practices-with-contained-databases.md)  
   

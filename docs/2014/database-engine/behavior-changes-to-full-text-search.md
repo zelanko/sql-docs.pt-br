@@ -14,12 +14,12 @@ ms.assetid: 573444e8-51bc-4f3d-9813-0037d2e13b8f
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: ff65938770d14d5f1084b33421f89bf8744031ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b269c4c3decfa2a4d7523666841e7cb04b441b3f
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198686"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461011"
 ---
 # <a name="behavior-changes-to-full-text-search"></a>Alterações de comportamento na pesquisa de texto completo
   Este tópico descreve alterações de comportamento em pesquisa de texto completo. Essas alterações afetam a maneira como os recursos funcionam ou interagem no [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] em comparação com as versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -28,12 +28,12 @@ ms.locfileid: "48198686"
  Informações que virão posteriormente.  
   
 ## <a name="behavior-changes-in-full-text-search-in-includesssql11includessssql11-mdmd"></a>Alterações de comportamento na pesquisa de texto completo do [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
- O [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] instala uma nova versão dos separadores de palavras e lematizadores para inglês dos EUA (LCID 1033) e inglês do Reino Unido (LCID 2057). Porém, você poderá alternar para a versão anterior desses componentes se desejar reter o comportamento anterior. Para obter mais informações, consulte [alterar o separador de palavras usado para inglês dos EUA e inglês do Reino Unido](../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
+ O [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] instala uma nova versão dos separadores de palavras e lematizadores para inglês dos EUA (LCID 1033) e inglês do Reino Unido (LCID 2057). Porém, você poderá alternar para a versão anterior desses componentes se desejar reter o comportamento anterior. Para obter mais informações, consulte [Alterar o separador de palavras usado para inglês (EUA) e inglês (Reino Unido)](../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
   
 ### <a name="new-word-breakers-and-stemmers-installed"></a>Novos separadores de palavras e lematizadores instalados  
  O [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] atualiza todos os separadores de palavras e lematizadores usados por Pesquisas de texto completo e semântico. Para obter consistência entre o conteúdo de índices e os resultados das consultas, nós recomendamos que você repopule os índices de texto completo existentes.  
   
-1.  Há novos separadores de palavras para inglês. Se você tiver que reter o comportamento anterior, consulte [alterar o separador de palavras usado para inglês dos EUA e inglês do Reino Unido](../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
+1.  Há novos separadores de palavras para inglês. Se você tiver que manter o comportamento anterior, consulte [Change the Word Breaker Used for US English and UK English](../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
   
 2.  Separadores de palavras de terceiros para dinamarquês, polonês e turco que foram incluídos com versões anteriores do [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] foram substituídos por componentes do [!INCLUDE[msCoName](../includes/msconame-md.md)] . Os novos componentes estão habilitados por padrão.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "48198686"
      O mecanismo de texto completo indexa o conteúdo dos BLOBs FILESTREAM. Arquivos de indexação como imagens podem não ser úteis. Quando um BLOB FILESTREAM é atualizado, ele é reindexado.  
   
 ## <a name="see-also"></a>Consulte também  
- [Pesquisa de texto completo] ((.. / relational-databases/search/full-text-search.md)   
+ [Pesquisa de Texto Completo](../relational-databases/search/full-text-search.md)   
  [Compatibilidade com versões anteriores de pesquisa de texto completo](../../2014/database-engine/full-text-search-backward-compatibility.md)   
  [Atualizar pesquisa de texto completo](../relational-databases/search/upgrade-full-text-search.md)   
  [Iniciar a pesquisa de texto completo](../relational-databases/search/get-started-with-full-text-search.md)  

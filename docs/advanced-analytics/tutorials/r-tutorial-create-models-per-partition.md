@@ -10,12 +10,12 @@ ms.author: heidist
 author: HeidiSteen
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3289e9f7493b7e5a6377de3491bd5726d557fdf7
-ms.sourcegitcommit: 615f8b5063aed679495d92a04ffbe00451d34a11
+ms.openlocfilehash: ddd6fd14d34b53eb14fd8b303b97dfd1b098154c
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48232560"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49462002"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>Tutorial: Criar a partição com base em modelos em R no SQL Server
 [!INCLUDE[appliesto-ssvnex-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -42,7 +42,7 @@ Para concluir este tutorial, você deve ter o seguinte:
 
 + Uma ferramenta para T-SQL, a execução de consulta como [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
-+ [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak), que você pode [Baixe e restaure](sqldev-download-the-sample-data.md) à sua instância do mecanismo de banco de dados local. Tamanho do arquivo é de aproximadamente 90 MB.
++ [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak), que você pode [Baixe e restaure](demo-data-nyctaxi-in-sql.md) à sua instância do mecanismo de banco de dados local. Tamanho do arquivo é de aproximadamente 90 MB.
 
 + SQL Server 2019 visualização banco de dados instância do mecanismo, com a integração de serviços de Machine Learning e R.
 
@@ -64,7 +64,7 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 ## <a name="connect-to-the-database"></a>Conectar-se ao banco de dados
 
-Inicie o Management Studio e conecte-se à instância do mecanismo de banco de dados. No Pesquisador de objetos, verifique se o [banco de dados NYCTaxi_Sample](sqldev-download-the-sample-data.md) existe. 
+Inicie o Management Studio e conecte-se à instância do mecanismo de banco de dados. No Pesquisador de objetos, verifique se o [banco de dados NYCTaxi_Sample](demo-data-nyctaxi-in-sql.md) existe. 
 
 ## <a name="create-calculatedistance"></a>Criar CalculateDistance
 

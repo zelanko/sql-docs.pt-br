@@ -16,12 +16,12 @@ ms.assetid: ffcb41a6-e23d-49ea-8c32-ac980e3dc495
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: cfe08cf1c21a4187008bb80a1f742ba35da7e9ad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0c9538a492ae6f2da0c4a5adeceb86bd7985d539
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131756"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460281"
 ---
 # <a name="identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation"></a>Identificar linhas de dados semelhantes por meio da transformação Agrupamento Difuso
   Para adicionar e configurar uma transformação Agrupamento Difuso, o pacote já deve incluir pelo menos uma tarefa de Fluxo de Dados e uma fonte.  
@@ -81,9 +81,9 @@ ms.locfileid: "48131756"
 20. Para salvar o pacote atualizado, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
   
 ## <a name="see-also"></a>Consulte também  
- [Transformação agrupamento difuso](fuzzy-grouping-transformation.md)   
+ [Fuzzy Grouping Transformation](fuzzy-grouping-transformation.md)   
  [Transformações do Integration Services](integration-services-transformations.md)   
  [Caminhos do Integration Services](../integration-services-paths.md)   
- [Tarefa de fluxo de dados] ((.. /.. /Control-Flow/Data-Flow-Task.MD)  
+ [Tarefa de Fluxo de Dados](../../control-flow/data-flow-task.md)  
   
   

@@ -4,17 +4,17 @@ description: Este artigo fornece respostas para perguntas frequentes sobre o SQL
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 07/24/2018
+ms.date: 07/25/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 0eb32296c0122709ff1dc6c83deda70d88293d38
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: c45203e8524fe2df9301250afd1bef40df37bc3d
+ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48851837"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49419351"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>SQL Server no Linux perguntas frequentes (FAQ)
 
@@ -69,6 +69,22 @@ As seções a seguir fornecem as perguntas e respostas comuns para o SQL Server 
 1. **Pode executar uma instalação autônoma do SQL Server no Linux?**
 
    Sim. Para uma discussão sobre instalação autônoma, consulte [orientação de instalação do SQL Server no Linux](sql-server-linux-setup.md#unattended). Consulte os scripts de exemplo para [Red Hat](sample-unattended-install-redhat.md), [SUSE Linux Enterprise Server](sample-unattended-install-suse.md), e [Ubuntu](sample-unattended-install-ubuntu.md). Você também pode examinar [Este exemplo de script](https://blogs.msdn.microsoft.com/sqlcat/2017/10/03/unattended-install-and-configuration-for-sql-server-2017-on-linux/) criado pela equipe de consultoria ao cliente do SQL Server.
+
+1. **Qual edição do SQL Server devo escolher quando eu já adquiriu?**
+
+   Ao executar a instalação do mssql-conf você terá estas opções:  
+   `Choose an edition of SQL Server:` <br>
+`     1. Evaluation (free, no production use rights, 180-day limit)` <br>
+`     2. Developer (free, no production use rights)` <br>
+`     3. Express (free)` <br>
+`     4. Web (PAID)` <br>
+`     5. Standard (PAID)` <br>
+`     6. Enterprise (PAID)` <br>
+`     7. Enterprise Core (PAID)` <br>
+`     8. I bought a license through a retail sales channel and have a product key to enter.`
+     
+   Se você tiver obtido sua licença por meio do licenciamento por volume, como parte de um contrato Enterprise ou por meio de sua assinatura do MSDN, você precisa selecionar de 4 a 7. Se você tiver comprado a Standard edition por meio de um canal de varejo, você precisa selecionar 8. 
+
 
 ## <a name="tools"></a>Ferramentas
 

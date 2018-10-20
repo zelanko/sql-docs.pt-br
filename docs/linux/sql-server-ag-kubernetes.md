@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cc5a96fd5efc4a2eb0e45a3034d17e98ae3c7172
-ms.sourcegitcommit: 4832ae7557a142f361fbf0a4e2d85945dbf8fff6
+ms.openlocfilehash: 02d76e3eadd8852d1c512c263e74dd8f8d6013de
+ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48251960"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49356447"
 ---
 # <a name="always-on-availability-groups-for-sql-server-containers"></a>Grupos de disponibilidade Always On para contêineres do SQL Server
 
@@ -70,7 +70,7 @@ O StatfulSet contém:
 
 * contêiner de MSSQL-ha-supervisor
 
-O código para o operador, o supervisor de alta disponibilidade e o SQL Server é empacotado em uma imagem do Docker chamada `mcr.microsoft.com/mssql/ha`. Esta imagem contém os seguintes binários:
+O código para o operador, o supervisor de alta disponibilidade e o SQL Server é empacotado em uma imagem do Docker chamada `mcr.microsoft.com/mssql/ha`. Esta imagem contém os binários a seguir:
 
 * `mssql-operator`
 

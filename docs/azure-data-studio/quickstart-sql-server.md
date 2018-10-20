@@ -4,18 +4,18 @@ description: Neste início rápido mostra como usar o Studio de dados do Azure p
 ms.custom: tools|sos
 ms.date: 09/24/2018
 ms.prod: sql
+ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
-ms.prod_service: sql-tools
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 2bc05fd234fd8e3e81add26bd0166e0aa40ce34b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6ad52b466c15ad81515e954cf8fa3fa5a727100f
+ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "48037701"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49356087"
 ---
 # <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>Guia de início rápido: Conectar e consultar usando o SQL Server [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 Neste início rápido mostra como usar [!INCLUDE[name-sos](../includes/name-sos-short.md)] para se conectar ao SQL Server e, em seguida, usar instruções Transact-SQL (T-SQL) para criar o *TutorialDB* usados em [!INCLUDE[name-sos](../includes/name-sos-short.md)] tutoriais.

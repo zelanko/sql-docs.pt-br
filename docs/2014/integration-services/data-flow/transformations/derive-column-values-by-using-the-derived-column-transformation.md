@@ -16,12 +16,12 @@ ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 07ac40b76f19fd8da7fcb4de6425365fe471471d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1809f90f170c0305713d4d054a48bd4a8b0b7048
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054307"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460291"
 ---
 # <a name="derive-column-values-by-using-the-derived-column-transformation"></a>Derivar valores de coluna por meio da transformação Coluna Derivada
   Para adicionar e configurar uma transformação Coluna Derivada, o pacote já deve incluir pelo menos uma tarefa de Fluxo de Dados e uma origem.  
@@ -60,11 +60,11 @@ ms.locfileid: "48054307"
 12. Para salvar o pacote atualizado, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
   
 ## <a name="see-also"></a>Consulte também  
- [Transformação coluna derivada](derived-column-transformation.md)   
+ [Derived Column Transformation](derived-column-transformation.md)   
  [Tipos de dados do Integration Services](../integration-services-data-types.md)   
  [Transformações do Integration Services](integration-services-transformations.md)   
  [Caminhos do Integration Services](../integration-services-paths.md)   
- [Tarefa de fluxo de dados] ((.. /.. /Control-Flow/Data-Flow-Task.MD)   
- [Expressões do SSIS &#40;Integration Services&#41;](../../expressions/integration-services-ssis-expressions.md)  
+ [Tarefa de Fluxo de Dados](../../control-flow/data-flow-task.md)   
+ [Expressões do Integration Services &#40;SSIS&#41;](../../expressions/integration-services-ssis-expressions.md)  
   
   

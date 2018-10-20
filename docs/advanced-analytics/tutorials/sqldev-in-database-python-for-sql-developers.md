@@ -1,5 +1,5 @@
 ---
-title: No banco de dados análise do Python para desenvolvedores em SQL | Microsoft Docs
+title: No banco de dados análise do Python para desenvolvedores do SQL | Microsoft Docs
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
@@ -7,60 +7,60 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: a8b41b1c0c48cb0cf5c9be5db8b7d59007bc22c1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 250d2efd6d212348083f5dc3bbc355c466f4811b
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31202758"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461852"
 ---
-# <a name="in-database-python-analytics-for-sql-developers"></a>Análise de Python no banco de dados para desenvolvedores em SQL
+# <a name="in-database-python-analytics-for-sql-developers"></a>Análise de Python no banco de dados para desenvolvedores do SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-O objetivo deste passo a passo é fornecer os programadores SQL com experiência prática na criação de uma solução usando Python é executado no SQL Server de aprendizado de máquina. Este passo a passo, você aprenderá como adicionar código Python para procedimentos armazenados e executar procedimentos armazenados para criar e previsão dos modelos.
+O objetivo deste passo a passo é fornecer aos programadores SQL experiência prática na criação de uma solução de machine learning usando o Python é executado no SQL Server. Neste passo a passo, você aprenderá como adicionar código do Python aos procedimentos armazenados e executar procedimentos armazenados para criar e a previsão a partir de modelos.
 
 > [!NOTE]
-> Preferir R? Consulte [este tutorial](sqldev-in-database-r-for-sql-developers.md), que fornece uma solução semelhante, mas usa o R e pode ser executado no SQL Server 2016 ou 2017 do SQL Server.
+> Prefere R? Ver [este tutorial](sqldev-in-database-r-for-sql-developers.md), que fornece uma solução semelhante, mas usa o R e pode ser executado no SQL Server 2016 ou SQL Server 2017.
 
 ## <a name="overview"></a>Visão geral
 
-O processo de criação de uma solução de aprendizado de máquina é complexo que pode envolver várias ferramentas e a coordenação de especialistas no assunto em várias fases:
+O processo de criação de uma solução de aprendizado de máquina é um complexo que pode envolver várias ferramentas e a coordenação de especialistas no assunto em várias fases:
 
-+ como obter e limpeza de dados
++ obtenção e limpeza de dados
 + explorar os dados e criação de recursos úteis para a modelagem
 + treinamento e o modelo de ajuste
-+ implantação em produção
++ implantação na produção
 
-**É o foco deste passo a passo sobre como compilar e implantar uma solução usando o SQL Server.**
+**O foco deste passo a passo é criar e implantar uma solução usando o SQL Server.**
 
-Os dados são do conjunto de dados NYC táxi bem conhecido. Para tornar este passo a passo rápido e fácil, os dados são amostrados. Você criará um modelo de classificação binária que prevê se uma viagem específica é provável obter uma dica ou não, com base em colunas, como a hora do dia, distância e local de coleta.
+Os dados estão no conjunto de dados de táxi de NYC bem conhecido. Para tornar este passo a passo rápido e fácil, os dados são amostrados. Você criará um modelo de classificação binária que prevê se uma corrida específica é provável que receber uma gorjeta ou não, com base em colunas, como a hora do dia, distância e local de embarque.
 
-Todas as tarefas podem ser realizadas usando [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimentos armazenados no ambiente familiar do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]
+Todas as tarefas podem ser feitas usando [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimentos armazenados no ambiente familiar do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]
 
-- [Etapa 1: Baixar os dados de exemplo](sqldev-py1-download-the-sample-data.md)
+- [Etapa 1: Baixar os dados de exemplo](demo-data-nyctaxi-in-sql.md)
 
-    Baixe o conjunto de dados de exemplo e todos os arquivos de script para um computador local.
+    Baixe o conjunto de dados de exemplo e todos os arquivos de script em um computador local.
 
 - [Etapa 2: Importar dados para o SQL Server usando o PowerShell](sqldev-py2-import-data-to-sql-server-using-powershell.md)
 
-    Execute um script do PowerShell que cria um banco de dados e uma tabela na instância especificada e carrega os dados de exemplo para a tabela.
+    Execute um script do PowerShell que cria um banco de dados e uma tabela na instância especificada e carrega os dados de exemplo na tabela.
 
-- [Etapa 3: Explorar e visualizar os dados usando Python](sqldev-py3-explore-and-visualize-the-data.md)
+- [Etapa 3: Explorar e visualizar os dados usando o Python](sqldev-py3-explore-and-visualize-the-data.md)
 
-    Executar a exploração de dados básicos e visualização, pela chamada Python de [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimentos armazenados.
+    Executar a exploração de dados básicos e visualização, pelo Python chamada de [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimentos armazenados.
 
-- [Etapa 4: Criar recursos de dados usando Python no T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+- [Etapa 4: Criar recursos de dados usando o Python no T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
     Crie novos recursos de dados usando funções personalizadas do SQL.
   
 - [Etapa 5: Treinar e salvar um modelo de Python usando o T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
-    Criar e salvar o modelo de aprendizado de máquina, usando Python em procedimentos armazenados.
+    Criar e salvar o modelo de aprendizado de máquina usando o Python em procedimentos armazenados.
   
-    Este passo a passo demonstra como executar uma tarefa de classificação binária. Você também pode usar os dados para criar modelos de regressão ou de classificação multiclasse.
+    Este passo a passo demonstra como executar uma tarefa de classificação binária. Você também pode usar os dados para criar modelos de regressão ou classificação multiclasse.
 
   
--  [Etapa 6: Colocar o modelo de Python](sqldev-py6-operationalize-the-model.md)
+-  [Etapa 6: Operacionalizar o modelo de Python](sqldev-py6-operationalize-the-model.md)
 
     Depois que o modelo foi salvo no banco de dados, chame o modelo de previsão usando [!INCLUDE[tsql](../../includes/tsql-md.md)].
 
@@ -68,33 +68,33 @@ Todas as tarefas podem ser realizadas usando [!INCLUDE[tsql](../../includes/tsql
 
 ### <a name="prerequisites"></a>Prerequisites
 
-+ Instale uma instância do SQL Server 2017 com serviços de aprendizado de máquina e Python habilitado. Para obter mais informações, consulte [instalar o SQL Server 2017 Machine Learning Services (no banco de dados)](../install/sql-machine-learning-services-windows-install.md).
++ Instale uma instância do SQL Server 2017 com serviços de Machine Learning e o Python habilitado. Para obter mais informações, consulte [instalar o SQL Server 2017 serviços Machine Learning (no banco de dados)](../install/sql-machine-learning-services-windows-install.md).
 + O logon usado para este passo a passo deve ter permissões para criar bancos de dados e outros objetos, carregar dados, selecionar dados e executar procedimentos armazenados.
 
 ### <a name="experience-level"></a>Nível de experiência
 
-Você deve estar familiarizado com operações fundamentais de banco de dados, como criação de tabelas e bancos de dados, importar dados em tabelas e criar consultas SQL.
+Você deve estar familiarizado com as operações de banco de dados fundamentais, como criação de bancos de dados e tabelas, importar dados em tabelas e criar consultas SQL.
 
 Um programador experiente do SQL deve conseguir concluir esse passo a passo usando o [!INCLUDE[tsql](../../includes/tsql-md.md)] no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou executando os scripts do PowerShell fornecidos.
 
-Python: Conhecimento básico é útil, mas não é necessária. Todo o código Python é fornecido.
+Python: Conhecimento básico é útil, mas não é necessário. Todo o código Python é fornecido.
 
 Algum conhecimento do PowerShell é útil.
 
 ### <a name="tools"></a>Ferramentas
 
-Para este tutorial, estamos supondo que você atingiu a fase de implantação. Você recebeu limpar dados, conclua código T-SQL para o recurso de engenharia e trabalhando código Python. Portanto, você pode concluir este tutorial usando o SQL Server Management Studio ou qualquer outra ferramenta que oferece suporte à execução de instruções SQL.
+Para este tutorial, vamos supor que você atingiu a fase de implantação. Você recebeu os dados limpos, código T-SQL para o recurso de engenharia e o trabalho de código Python completo. Portanto, você pode concluir este tutorial usando o SQL Server Management Studio ou qualquer outra ferramenta que oferece suporte à execução de instruções SQL.
 
 + [Visão geral das ferramentas do SQL Server](https://docs.microsoft.com/sql/tools/overview-sql-tools) 
 
-Se você deseja desenvolver e testar seu próprio código Python ou depura uma solução de Python, é recomendável usar um ambiente de desenvolvimento dedicado:
+Se você quiser desenvolver e testar seu próprio código Python ou depura uma solução de Python, recomendamos o uso de um ambiente de desenvolvimento dedicado:
 
-+ **Visual Studio de 2017** dá suporte a ambos os R e [Python](https://blogs.msdn.microsoft.com/visualstudio/2017/05/12/a-lap-around-python-in-visual-studio-2017/). É recomendável a [cargas de trabalho de ciência de dados](https://blogs.msdn.microsoft.com/visualstudio/2016/11/18/data-science-workloads-in-visual-studio-2017-rc/), que também oferece suporte a R e F #.
-+ Se você tiver uma versão anterior do Visual Studio, [extensões do Python para Visual Studio](https://docs.microsoft.com/visualstudio/python/python-in-visual-studio) torna mais fácil gerenciar vários ambientes de Python.
++ **Visual Studio 2017** dá suporte a ambos os R e [Python](https://blogs.msdn.microsoft.com/visualstudio/2017/05/12/a-lap-around-python-in-visual-studio-2017/). É recomendável o [carga de trabalho de ciência de dados](https://blogs.msdn.microsoft.com/visualstudio/2016/11/18/data-science-workloads-in-visual-studio-2017-rc/), que também oferece suporte a R e F #.
++ Se você tiver uma versão anterior do Visual Studio, [extensões do Python para Visual Studio](https://docs.microsoft.com/visualstudio/python/python-in-visual-studio) torna mais fácil de gerenciar vários ambientes do Python.
 + PyCharm é um IDE popular entre os desenvolvedores de Python.
 
     > [!NOTE]
-    > Em geral, evite escrever ou testando o novo código Python em [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Se o código que você inserir em um procedimento armazenado tiver problemas, as informações que são retornadas pelo procedimento armazenado serão geralmente inadequadas entender a causa do erro.
+    > Em geral, evite escrever ou teste de novo código do Python no [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Se o código que você inserir em um procedimento armazenado apresentar problemas, as informações que são retornadas do procedimento armazenado serão geralmente serão inadequadas para entender a causa do erro.
 
 Use os seguintes recursos para ajudá-lo a planejar e executar uma projeto de aprendizado de máquina com êxito:
 
@@ -109,8 +109,8 @@ Use os seguintes recursos para ajudá-lo a planejar e executar uma projeto de ap
 |Explorar e visualizar os dados|0:20|
 |Criar recursos de dados usando o T-SQL|0:30|
 |Treinar e salvar um modelo usando o T-SQL|0:15|
-|Colocar o modelo|0:40|
+|Colocar o modelo em operação|0:40|
 
 ## <a name="get-started"></a>Introdução
 
-  [Etapa 1: Baixar os dados de exemplo](sqldev-py1-download-the-sample-data.md)
+  [Etapa 1: Baixar os dados de exemplo](demo-data-nyctaxi-in-sql.md)

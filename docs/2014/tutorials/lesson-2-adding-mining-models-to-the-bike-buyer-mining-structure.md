@@ -11,12 +11,12 @@ ms.assetid: 03fe44c5-6452-4ed0-95f6-9682670c0f52
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7c4191d74e2c9a9e4e84bf87bfd0137a241407d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7bcc33e35ff0cdfcd46a73f939083ea23091673d
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222606"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49462042"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure"></a>Lição 2: Adicionando modelos de mineração à estrutura de mineração de Comprador de Bicicleta
   Nesta lição, você adicionará dois modelos de mineração à estrutura de mineração de comprador de bicicleta que você criou [lição 1: Criando a estrutura de mineração de comprador de bicicleta](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md). Esses modelos de mineração lhe permitirão explorar os dados usando um modelo e criar previsões usando outro.  
@@ -26,7 +26,7 @@ ms.locfileid: "48222606"
  Para prever se um cliente potencial é a probabilidade de comprar uma bicicleta, você criará um modelo de mineração com base nas [algoritmo de árvores de decisão Microsoft](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md). Esse algoritmo verifica as informações associadas a cada cliente potencial e identifica características que são úteis para prever se eles comprarão uma bicicleta. Em seguida, ele compara os valores das características dos compradores de bicicletas anteriores com as dos novos clientes potenciais para determinar se esses clientes novos têm probabilidade de comprar uma bicicleta.  
   
 ## <a name="alter-mining-structure-statement"></a>Instrução ALTER MINING STRUCTURE  
- Para adicionar um modelo de mineração à estrutura de mineração, use o [ALTER MINING STRUCTURE &#40;DMX&#41;] (instrução (~/dmx/alter-mining-structure-dmx.md). O código na instrução pode ser dividido nas seguintes partes:  
+ Para adicionar um modelo de mineração à estrutura de mineração, use o [ALTER MINING STRUCTURE &#40;DMX&#41; ](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016) instrução. O código na instrução pode ser dividido nas seguintes partes:  
   
 -   Identificando a estrutura de mineração  
   

@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7adfda1c31bd1fc32dc4149a568cfdd2149ab0b3
-ms.sourcegitcommit: 9d0ff4f3e40db48fc01788684d34719065d159b6
+ms.openlocfilehash: 651e529bf0aa4cd4b4fab7e292e570dbb78e89d5
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44724300"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461882"
 ---
 # <a name="tutorial-learn-in-database-analytics-using-r-in-sql-server"></a>Tutorial: Aprenda a análise de no banco de dados usando o R no SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,15 +32,15 @@ O processo de criação de uma solução de ponta a ponta normalmente consiste n
 
 No entanto, depois que a solução for criada, você poderá implantá-la com facilidade no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando os procedimentos armazenados do [!INCLUDE[tsql](../../includes/tsql-md.md)] no ambiente conhecido do [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
 
-- [Lição 1: Configurar os dados de demonstração de táxi de NYC](../tutorials/sqldev-download-the-sample-data.md)
+- [Configurar o banco de dados de táxi de NYC](demo-data-nyctaxi-in-sql.md)
 
-- [Lição 2: Explorar e visualizar a forma de dados e a distribuição chamando funções de R em procedimentos armazenados](../tutorials/sqldev-explore-and-visualize-the-data.md)
+- [Lição 1: Explorar e visualizar a forma de dados e a distribuição chamando funções de R em procedimentos armazenados](../tutorials/sqldev-explore-and-visualize-the-data.md)
 
-- [Lição 3: Criar recursos de dados usando o R em funções T-SQL](../tutorials/sqldev-create-data-features-using-t-sql.md)
+- [Lição 2: Criar recursos de dados usando o R em funções T-SQL](sqldev-create-data-features-using-t-sql.md)
   
-- [Lição 4: Treinar e salvar um modelo R usando procedimentos armazenados e funções](../r/sqldev-train-and-save-a-model-using-t-sql.md)
+- [Lição 3: Treinar e salvar um modelo R usando procedimentos armazenados e funções](sqldev-train-and-save-a-model-using-t-sql.md)
   
-- [Lição 5: Código de encapsulamento de R em um procedimento armazenado para operacionalização](../tutorials/sqldev-operationalize-the-model.md). 
+- [Lição 4: Código de encapsulamento de R em um procedimento armazenado para operacionalização](../tutorials/sqldev-operationalize-the-model.md). 
   Depois que o modelo for salvo no banco de dados, chame o modelo de previsão no [!INCLUDE[tsql](../../includes/tsql-md.md)] usando procedimentos armazenados.
 
 ## <a name="prerequisites"></a>Prerequisites
@@ -60,4 +60,4 @@ Antes de iniciar o tutorial:
 ## <a name="next-steps"></a>Próximas etapas
 
 > [!div class="nextstepaction"]
-> [Lição 1: Baixar os dados de exemplo](../tutorials/sqldev-download-the-sample-data.md)
+> [Configurar o banco de dados de táxi de NYC](demo-data-nyctaxi-in-sql.md)

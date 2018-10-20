@@ -16,12 +16,12 @@ ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a3e1f202305cf540043a4af51af5f0618c80916f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 855278c35de37f2b02e1bb7b194e174c66c643d2
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076016"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460661"
 ---
 # <a name="understanding-the-script-component-object-model"></a>Compreendendo o Component Object Model Script
   Conforme discutido em [codificando e depurando o componente Script] (... / extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md, o projeto de componente de Script contém três itens de projeto:  
@@ -137,7 +137,7 @@ public override void PreExecute()
   
 -   Substitua o **\<bufferdeentrada>_ProcessInputRow** para processar os dados em cada linha de entrada conforme ela passa.  
   
--   Só substitua o **\<bufferdeentrada>_ProcessInput** se você precisar fazer algo adicional enquanto executa um loop em linhas de entrada. (Por exemplo, verifique se o `EndOfRowset` executa outra ação após o processamento de todas as linhas.) Chame **\<bufferdeentrada>_ProcessInputRow** para executar o processamento de linha.  
+-   Só substitua o **\<bufferdeentrada>_ProcessInput** se você precisar fazer algo adicional enquanto executa um loop em linhas de entrada. (Por exemplo, verifique se o `EndOfRowset` executa outra ação após o processamento de todas as linhas.) Chame \<** bufferdeentrada>_ProcessInputRow para executar o processamento de linha.  
   
 -   Substitua o `FinishOutputs` se precisar fazer algo nas saídas antes de seu fechamento.  
   
@@ -203,10 +203,10 @@ public override void ReleaseConnections()
 }  
 ```  
   
-![Ícone do Integration Services (pequeno)](../../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services** <br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
+![Ícone do Integration Services (pequeno)](../../media/dts-16.gif "ícone do Integration Services (pequeno)")**mantenha-se para cima até o momento com o Integration Services**<br /> Para obter os downloads, artigos, exemplos e vídeos mais recentes da Microsoft, assim como soluções selecionadas pela comunidade, visite a página do [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no MSDN:<br /><br /> [Visite a página do Integration Services no MSDN](http://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para receber uma notificação automática dessas atualizações, assine os RSS feeds disponíveis na página.  
   
 ## <a name="see-also"></a>Consulte também  
- [Configurando o componente Script no Editor de componente Script] ((configuring-the-script-component-in-the-script-component-editor.md)   
+ [Configurar o componente de Script no Editor de Componentes de Script](configuring-the-script-component-in-the-script-component-editor.md)   
  [Codificando e depurando o componente Script] (.. /Extending-Packages-Scripting/Data-Flow-script-Component/Coding-and-Debugging-the-script-Component.MD  
   
   

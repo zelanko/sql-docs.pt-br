@@ -3,54 +3,26 @@ title: Conceder aos usuários permissão para serviços do SQL Server Machine Le
 description: Como fornecer aos usuários permissão para serviços do SQL Server Machine Learning.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/05/2018
+ms.date: 10/17/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: ad5c3fa3bf94bb88041c9ec81773b2a26013e517
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+ms.openlocfilehash: 07268386ad66350eed7f1382348fa4d698863600
+ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100327"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49419061"
 ---
 # <a name="give-users-permission-to-sql-server-machine-learning-services"></a>Conceder aos usuários permissão para serviços do SQL Server Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este artigo descreve como você pode dar aos usuários permissão para executar scripts externos em serviços do SQL Server Machine Learning e conceder permissões de DDL (linguagem) para bancos de dados de leitura, gravação ou definição de dados.
 
-Um logon do SQL Server ou a conta de usuário do Windows é necessário para executar scripts externos que usam dados do SQL Server ou que são executados com o SQL Server como o contexto de computação.
+Para obter mais informações, consulte a seção permissões nos [visão geral de segurança para a estrutura de extensibilidade](../../advanced-analytics/concepts/security.md#permissions).
 
-A conta de usuário ou logon identifica o *entidade de segurança*, que talvez seja necessário vários níveis de acesso, dependendo dos requisitos de script externo:
-
-+ Permissão para acessar o banco de dados em que os scripts externos estão habilitados.
-+ Permissões para ler dados de objetos protegidos, como tabelas.
-+ A capacidade de gravar novos dados em uma tabela, como um modelo ou resultados de pontuação.
-+ A capacidade de criar novos objetos, como tabelas, procedimentos armazenados que usam o script externo ou funções personalizadas do que usar o R ou o trabalho do Python.
-+ O direito de instalar novos pacotes no computador do SQL Server, ou usar os pacotes fornecidos a um grupo de usuários.
-
-Portanto, cada pessoa que executa um script externo usando o SQL Server como o contexto de execução deve ser mapeada para um usuário no banco de dados. Na segurança do SQL Server, é mais fácil de criar funções para gerenciar conjuntos de permissões e atribuir usuários a essas funções, em vez de individualmente, definir permissões de usuário.
-
-Até mesmo usuários que estão usando o R ou Python em uma ferramenta externa devem ser mapeados para um logon ou conta no banco de dados se o usuário precisa para executar um script externo no banco de dados, ou acessar objetos de banco de dados e dados. As mesmas permissões são necessárias se o script externo é enviado de um cliente de ciência de dados remoto ou ao uso de um procedimento armazenado T-SQL.
-
-Por exemplo, suponha que você criou um script externo que é executado no computador local, e você deseja executar esse código em SQL Server. Você deve certificar-se de que as seguintes condições sejam atendidas:
-
-+ O banco de dados permite conexões remotas.
-+ O logon SQL ou a conta do Windows que você usou para acesso ao banco de dados foi adicionada para o SQL Server no nível de instância.
-+ O logon do SQL ou o usuário do Windows deve ter a permissão para executar scripts externos. Em geral, essa permissão só pode ser adicionada por um administrador de banco de dados.
-+ O logon do SQL ou o usuário da janela deve ser adicionado como um usuário, com permissões apropriadas, em cada banco de dados em que o script externo executa qualquer uma dessas operações:
-  + Recuperando dados.
-  + Gravação ou a atualização de dados.
-  + Criando novos objetos, como tabelas ou procedimentos armazenados.
-
-Depois que o logon ou conta de usuário do Windows foi provisionada e recebeu as permissões necessárias, você pode executar um script externo no SQL Server usando um objeto de fonte de dados em R ou o **revoscalepy** biblioteca em Python ou chamando um armazenado procedimento que contém o script externo.
-
-Sempre que um script externo é iniciado a partir do SQL Server, a segurança do mecanismo de banco de dados obtém o contexto de segurança do usuário que iniciou o trabalho e gerencia os mapeamentos do usuário ou logon para objetos protegíveis.
-
-Portanto, todos os scripts externos que são iniciados de um cliente remoto devem especificar as informações de logon ou usuário como parte da cadeia de conexão.
-
-<a name="permissions-external-script"></a> 
+<a name="permissions-external-script"></a>
 
 ## <a name="permission-to-run-scripts"></a>Permissão para executar scripts
 
@@ -61,7 +33,7 @@ A maioria dos usuários, no entanto, não tem permissões elevadas desse tipo. P
 ```SQL
 USE <database_name>
 GO
-GRANT EXECUTE ANY EXTERNAL SCRIPT  TO [UserName]
+GRANT EXECUTE ANY EXTERNAL SCRIPT TO [UserName]
 ```
 
 > [!NOTE]

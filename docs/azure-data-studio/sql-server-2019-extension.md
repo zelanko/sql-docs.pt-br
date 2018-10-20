@@ -5,18 +5,18 @@ ms.custom: tools|sos
 ms.date: 10/11/2018
 ms.reviewer: alayu; sstein
 ms.prod: sql
-ms.prod_service: sql-tools
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d73f4a0d55cbe3fe3bacc0b2bb68f191046fe01b
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 6624f2efb14f5d056ee0ac052fa9396535ebb239
+ms.sourcegitcommit: ef115025e57ec342c14ed3151ce006f484d1fadc
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168778"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49411163"
 ---
 # <a name="sql-server-2019-extension-preview"></a>Extensão do SQL Server 2019 (visualização)
 
@@ -28,11 +28,11 @@ Para instalar a extensão de 2019 do SQL Server (versão prévia), baixe e insta
 
 1. Baixe o arquivo. VSIX de extensão (visualização) do SQL Server 2019 para um diretório local:
 
-   |Plataforma|Download|Data de liberação|
-   |:---|:---|:---|
-   |Windows|[. VSIX](https://go.microsoft.com/fwlink/?linkid=2024911)|24 de setembro de 2018|
-   |macOS|[. VSIX](https://go.microsoft.com/fwlink/?linkid=2024587)|24 de setembro de 2018 |
-   |Linux|[. VSIX](https://go.microsoft.com/fwlink/?linkid=2024841)|24 de setembro de 2018 |
+   |Plataforma|Download|Data de liberação|Versão
+   |:---|:---|:---|:---|
+   |Windows|[. VSIX](https://go.microsoft.com/fwlink/?LinkId=2031539)|18 de outubro de 2018|0.7.2
+   |macOS|[. VSIX](https://go.microsoft.com/fwlink/?LinkId=2031717)|18 de outubro de 2018 |0.7.2
+   |Linux|[. VSIX](https://go.microsoft.com/fwlink/?LinkId=2031538)|18 de outubro de 2018 |0.7.2
 
 1. No estúdio de dados do Azure, escolha **instalar a extensão do pacote VSIX** da **arquivo** menu e selecione o arquivo. VSIX baixado.
 
@@ -41,6 +41,18 @@ Para instalar a extensão de 2019 do SQL Server (versão prévia), baixe e insta
 1. Selecione **recarregar** para habilitar a extensão (necessário somente na primeira vez que você instalar uma extensão).
 
 1. Após o recarregamento, a extensão instalará as dependências. Você pode ver o progresso na janela de saída, e pode levar vários minutos.
+
+## <a name="release-notes-v072"></a>Notas de versão (v0.7.2)
+* Gerenciador de recursos do Azure agora é interno ao estúdio de dados do Azure e foi removido dessa extensão. Agradecemos seus comentários sobre isso!
+* Desempenho aprimorado de blocos de anotações com o número de células de Markdown.
+* Células de código de tamanho automático no bloco de anotações. Isso ainda tem um tamanho mínimo com base na barra de ferramentas de célula.
+* Notifique o usuário ao instalar as dependências do bloco de anotações. No Windows em particular isso pode levar muito tempo, portanto, as notificações são agora exibidas no modo de exibição de tarefas.
+* Suporte ao reinstalar as dependências do bloco de anotações. Isso é útil se o usuário fechou anteriormente Studio do Azure Data parcialmente por meio de instalação.
+* Cancelando a execução de célula no bloco de anotações de suporte.
+* Confiabilidade aprimorada ao usar o Assistente para criar dados externos, especificamente quando conexão ocorrem erros.
+* Bloquear o uso do Assistente para criar dados externos se o Polybase não está habilitado ou está em execução no servidor de destino.
+* Verificar ortografia e correções relacionadas ao SQL Server 2019 e criar dados externos de nomenclatura.
+* Removido um grande número de erros do console de depuração do estúdio de dados do Azure.
 
 ##  <a name="sql-server-2019-big-data-cluster-support"></a>Suporte de Cluster de Big Data do SQL Server de 2019
 
@@ -70,16 +82,6 @@ Para obter detalhes, consulte [Clusters de Big Data](../big-data-cluster/big-dat
 * Escolha um ponto de extremidade do cluster de big data do SQL Server para se conectar ao se executar remotamente (isso não é necessário para o desenvolvimento local com o Python 3).
 * Adicione as células de código ou markdown por meio de botões no cabeçalho de bloco de anotações. Remova as células com o ícone de Lixeira à esquerda de cada célula.
 * Executar as células com o botão Reproduzir para células de código e ativar/desativar a edição de markdown e visualizar com o ícone de olho
-
-
-## <a name="azure-resource-explorer"></a>Gerenciador de recursos do Azure
-
-* Para entrar no Azure, clique no ícone de pessoa na parte inferior esquerda do estúdio de dados do Azure e siga os diálogos para entrar no Azure.
-* Depois de conectado, clique no ícone do Azure triangular na esquerda barra do estúdio de Azure dados e expanda a árvore para mostrar os recursos SQL associados com suas assinaturas.
-* Clique duas vezes ou clique no ícone de plug em qualquer banco de dados SQL ou SQL Server para abrir a caixa de diálogo de conexão. Insira sua senha para se conectar e adicionar o recurso ao Pesquisador de objetos do estúdio de dados do Azure.
-
-Para obter detalhes, consulte [Azure Resource Explorer](azure-resource-explorer.md).
-
 
 ## <a name="polybase-create-external-table-wizard"></a>O Polybase criar Assistente de tabela externa
 

@@ -16,12 +16,12 @@ ms.assetid: 9e512c3c-f89b-45f3-8281-cdb8f35a2b1f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b88d3ec75e73329f8de1e97f7b9936203e745946
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fe0d9ebeea4693eeacebe9d0747bf71f26f85ad5
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062167"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460191"
 ---
 # <a name="extend-a-dataset-by-using-the-merge-join-transformation"></a>Estender um conjunto de dados por meio da transformação Junção de Mesclagem
   Para adicionar e configurar uma ttransformação Junção de Mesclagem, o pacote já deve incluir pelo menos uma tarefa de Fluxo de Dados e dois componentes de fluxo de dados que forneçam entradas para a ttransformação Junção de Mesclagem.  
@@ -62,9 +62,9 @@ ms.locfileid: "48062167"
 11. Para salvar o pacote atualizado, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
   
 ## <a name="see-also"></a>Consulte também  
- [Transformação junção de mesclagem](merge-join-transformation.md)   
+ [Merge Join Transformation](merge-join-transformation.md)   
  [Transformações do Integration Services](integration-services-transformations.md)   
  [Caminhos do Integration Services](../integration-services-paths.md)   
- [Tarefa de fluxo de dados] ((.. /.. /Control-Flow/Data-Flow-Task.MD)  
+ [Tarefa de Fluxo de Dados](../../control-flow/data-flow-task.md)  
   
   

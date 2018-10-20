@@ -1,21 +1,21 @@
 ---
-title: Lição 6 resultados potenciais de previsão usando modelos do R (aprendizado de máquina do SQL Server) | Microsoft Docs
+title: Lição 4 resultados potenciais de previsão usando modelos do R (aprendizado de máquina do SQL Server) | Microsoft Docs
 description: Tutorial que mostra como incorporar o R no SQL Server procedimentos armazenados e funções T-SQL
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 06/08/2018
+ms.date: 10/19/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 03118cec4ee068f5615af7d3319ca8f3172de0c1
-ms.sourcegitcommit: 7d702a1d01ef72ad5e133846eff6b86ca2edaff1
+ms.openlocfilehash: 07c99279fdb511f1c6f59e15f83644a89642c176
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48798566"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49462122"
 ---
-# <a name="lesson-6-predict-potential-outcomes-using-an-r-model-in-a-stored-procedure"></a>Lição 6: Prever resultados possíveis, usando um modelo do R em um procedimento armazenado
+# <a name="lesson-4-predict-potential-outcomes-using-an-r-model-in-a-stored-procedure"></a>Lição 4: Prever resultados possíveis, usando um modelo do R em um procedimento armazenado
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Este artigo faz parte de um tutorial para desenvolvedores SQL sobre como usar o R no SQL Server.
@@ -200,4 +200,4 @@ Isso conclui o tutorial. Agora que você aprendeu a incorporar código R em proc
 
 ## <a name="previous-lesson"></a>Lição anterior
 
-[Lição 5: Treinar e salvar um modelo do R usando o T-SQL](../r/sqldev-train-and-save-a-model-using-t-sql.md)
+[Lição 3: Treinar e salvar um modelo do R usando o T-SQL](sqldev-train-and-save-a-model-using-t-sql.md)

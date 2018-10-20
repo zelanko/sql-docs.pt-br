@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 09bac30e30a6549dd572b8594e5efeec6473ef2a
-ms.sourcegitcommit: 5afec8b4b73ce1727e4e5cf875d1e1ce9df50eab
+ms.openlocfilehash: 7bbf2dface759da63bd6b9845f4e62321b1cbe76
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47450332"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460619"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Configurar o PolyBase para acessar dados externos no armazenamento de BLOBs do Azure
 
@@ -32,7 +32,7 @@ O artigo explica como usar o PolyBase em uma instância do SQL Server para consu
 
 Primeiro, configure os pontos de acesso para usar o armazenamento de BLOBs do Azure.
 
-1. Execute [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) com 'conectividade do hadoop' definida como um provedor de armazenamento de BLOBs do Azure. Para encontrar o valor de provedores, consulte [configuração do PolyBase](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).
+1. Execute [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) com 'conectividade do hadoop' definida como um provedor de armazenamento de BLOBs do Azure. Para encontrar o valor dos provedores, consulte [Configuração de conectividade do PolyBase](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).
 
    ```sql  
    -- Values map to various external data sources.  
@@ -66,7 +66,7 @@ Para consultar os dados no armazenamento de BLOBs do Azure, você deve definir u
    WITH IDENTITY = 'user', Secret = '<azure_storage_account_key>';
    ```
 
-1. Criar uma fonte de dados externa com [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md)...
+1. Crie uma fonte de dados externa, usando [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md).
 
    ```sql
    -- LOCATION:  Azure account storage account name and blob container name.  
@@ -78,7 +78,7 @@ Para consultar os dados no armazenamento de BLOBs do Azure, você deve definir u
    );  
    ```
 
-1. Criar um formato de arquivo externo com [CREATE EXTERNAL FILE FORMAT](../t-sql/statements/create-external-file-format-transact-sql.md).
+1. Crie um formato de arquivo externo com [CREATE EXTERNAL FILE FORMAT](../t-sql/statements/create-external-file-format-transact-sql.md).
 
    ```sql
    -- FORMAT TYPE: Type of format in Azure Blob storage (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).
@@ -89,7 +89,7 @@ Para consultar os dados no armazenamento de BLOBs do Azure, você deve definir u
                USE_TYPE_DEFAULT = TRUE)  
    ```
 
-1. Criar uma tabela externa que aponta para dados armazenados no armazenamento do Azure com [CREATE EXTERNAL TABLE](../t-sql/statements/create-external-table-transact-sql.md). Neste exemplo, os dados externos contém os dados de sensor do carro.
+1. Crie uma tabela externa que aponta para dados armazenados no armazenamento do Azure com [CREATE EXTERNAL TABLE](../t-sql/statements/create-external-table-transact-sql.md). Neste exemplo, os dados externos contém os dados de sensor do carro.
 
    ```sql
    -- LOCATION: path to file or directory that contains the data (relative to HDFS root).  
@@ -117,10 +117,10 @@ Para consultar os dados no armazenamento de BLOBs do Azure, você deve definir u
 O PolyBase é adequado para três funções:  
   
 - Consultas ad hoc em tabelas externas.  
-- Importação de dados.  
-- Exportação de dados.  
+- importar dados.  
+- exportar dados.  
 
-As consultas a seguir fornecem exemplo com os dados de sensor de carro fictícia.
+As consultas a seguir fornecem exemplo com os dados de sensor de carro fictícios.
 
 ### <a name="ad-hoc-queries"></a>Consulta ad hoc  
 
@@ -179,7 +179,5 @@ No SQL Server Data Tools, as tabelas externas são exibidas em uma pasta separad
 
 ## <a name="next-steps"></a>Próximas etapas
 
-Explore mais maneiras de usar e monitorar o PolyBase nos seguintes artigos:
-
-[Mapeamento de tipo com o PolyBase](../relational-databases/polybase/polybase-type-mapping.md).  
+Para obter mais informações sobre o PolyBase, consulte o [o que é PolyBase?](../relational-databases/polybase/polybase-guide.md). 
 

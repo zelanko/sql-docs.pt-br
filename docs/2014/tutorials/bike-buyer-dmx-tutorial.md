@@ -1,7 +1,7 @@
 ---
 title: Tutorial DMX comprador de bicicleta | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 10/19/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -17,17 +17,17 @@ ms.assetid: 4b634cc1-86dc-42ec-9804-a19292fe8448
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2d5b77952cd3476adddcdf0a528c2e12ab30cc2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 25ca6a8a5769da023da506c25c858a012b7f7a7c
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074956"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49462012"
 ---
 # <a name="bike-buyer-dmx-tutorial"></a>Tutorial DMX Comprador de bicicleta
   Nesse tutorial, você aprenderá a criar, treinar e explorar modelos de mineração de dados com o uso da linguagem de consulta DMX (Extensões de Mineração de Dados). Você então utilizará esses modelos de mineração de dados para criar previsões que determinem se um cliente comprará uma bicicleta.  
   
- Os modelos de mineração serão criados a partir dos dados contidos no banco de dados de exemplo [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)], que armazena dados para a empresa fictícia [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] é uma grande empresa industrial e multinacional. A empresa fabrica e vende bicicletas de metal e compostas para os mercados norte-americano, europeu e asiático. A central de operações está situada em Bothell, Washington, com 290 funcionários, e possui várias equipes regionais de vendas distribuídas por toda a sua base de mercado internacional.  
+ Os modelos de mineração serão criados a partir dos dados contidos no banco de dados de exemplo [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] , que armazena dados para a empresa fictícia [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] é uma grande empresa industrial e multinacional. A empresa fabrica e vende bicicletas de metal e compostas para os mercados norte-americano, europeu e asiático. A central de operações está situada em Bothell, Washington, com 290 funcionários, e possui várias equipes regionais de vendas distribuídas por toda a sua base de mercado internacional.  
   
 ## <a name="tutorial-scenario"></a>Cenário do tutorial  
  A [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] decidiu estender a análise de dados, criando um aplicativo personalizado que usa a funcionalidade de data mining. Sua meta para o aplicativo personalizado é ser capaz de:  
@@ -36,7 +36,7 @@ ms.locfileid: "48074956"
   
 -   Usar como entrada uma lista de cliente potenciais, assim como características sobre clientes e prever quais comprarão uma bicicleta.  
   
- No primeiro caso, os dados de cliente são fornecidos por uma página de registro de cliente e, no segundo caso, uma lista de clientes potenciais é fornecida pelo departamento de marketing da [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)].  
+ No primeiro caso, os dados de cliente são fornecidos por uma página de registro de cliente e, no segundo caso, uma lista de clientes potenciais é fornecida pelo departamento de marketing da [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] .  
   
  Além disso, o departamento de marketing solicitou a capacidade de agrupar clientes existentes em categorias com base em características como onde eles vivem, o número de filhos que possuem e a distância do trabalho. Eles querem consultar se esses agrupamentos podem ser usados para ajudar a estabelecer como meta tipos específicos de clientes. Isso irá requerer um modelo de mineração adicional.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48074956"
   
 -   A linguagem de consulta DMX  
   
--   O [algoritmo árvores de decisão da Microsoft](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md) e o [algoritmo Microsoft Clustering](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)  
+-   O [algoritmo Árvores de Decisão da Microsoft](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md) e o [algoritmo Microsoft Clustering](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)  
   
 -   Editor de Consultas do [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]  
   
@@ -53,7 +53,7 @@ ms.locfileid: "48074956"
  **Para obter mais informações:** [soluções de mineração de dados](../../2014/analysis-services/data-mining/data-mining-solutions.md)  
   
 ## <a name="mining-structure-and-mining-models"></a>Estrutura de mineração e modelos de mineração  
- Antes de começar a criar instruções DMX, é importante compreender os objetos principais que o  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usa para criar modelos de mineração. A estrutura de mineração é uma estrutura de dados que define o domínio de dados do qual modelos de mineração são criados. Uma única estrutura de mineração pode conter vários modelos de mineração que compartilham o mesmo domínio. Um modelo de mineração aplica um algoritmo de modelo de mineração aos dados que são representados por uma estrutura de mineração.  
+ Antes de começar a criar instruções DMX, é importante compreender os objetos principais que o [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usa para criar modelos de mineração. A estrutura de mineração é uma estrutura de dados que define o domínio de dados do qual modelos de mineração são criados. Uma única estrutura de mineração pode conter vários modelos de mineração que compartilham o mesmo domínio. Um modelo de mineração aplica um algoritmo de modelo de mineração aos dados que são representados por uma estrutura de mineração.  
   
  Os blocos de construção da estrutura de mineração são as colunas da estrutura de mineração, que descrevem os dados que a fonte de dados contém. Essas colunas contêm informações como tipo de dados, tipo de conteúdo e como os dados são distribuídos.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48074956"
  ALTER MINING STRUCTURE  
  Use esta instrução para acrescentar um modelo de mineração a uma estrutura de mineração que já existe no servidor. Essa instrução será útil se você quiser criar uma estrutura de mineração que contenha vários modelos de mineração diferentes. Há várias razões pelas quais você deseja adicionar mais de um modelo de mineração em uma única estrutura de mineração. Por exemplo, é possível criar vários modelos de mineração que usam algoritmos diferentes para verificar qual algoritmo funciona melhor. Você pode criar vários modelos de mineração que usam o mesmo algoritmo, mas com um parâmetro definido de modo diferente para cada modelo de mineração a fim de encontrar a melhor definição para o parâmetro.  
   
- Para obter mais informações, consulte [ALTER MINING STRUCTURE &#40;DMX&#41;] ((~/dmx/alter-mining-structure-dmx.md).  
+ Para obter mais informações, consulte [ALTER MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016).  
   
  Como você criará uma estrutura que contém vários modelos de mineração, utilizará o método secundário neste tutorial.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "48074956"
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)], [!INCLUDE[ssASversion10](../includes/ssasversion10-md.md)], [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)], ou [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
   
--   O banco de dados [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]. Por padrão, e para reforçar a segurança, os bancos de dados de exemplo não são instalados. Para instalar os bancos de dados de exemplo oficiais do [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], visite o [Microsoft SQL Sample Databases](http://go.microsoft.com/fwlink/?LinkId=88417) página e selecione os bancos de dados que você deseja instalar...  
+-   O banco de dados [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] . Por padrão, e para reforçar a segurança, os bancos de dados de exemplo não são instalados. Para instalar um banco de dados de exemplo no [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], visite a página [Banco de dados de exemplo Microsoft SQL](http://go.microsoft.com/fwlink/?LinkId=88417) e selecione os bancos de dados que deseja instalar.  
   
 > [!NOTE]  
 >  Ao examinar os tutoriais, recomendamos que você adicione os botões **Próximo Tópico** e **Tópico Anterior** à barra de ferramentas do visualizador de documentos.  

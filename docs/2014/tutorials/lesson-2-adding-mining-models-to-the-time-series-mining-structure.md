@@ -11,18 +11,18 @@ ms.assetid: 75c2a74b-21ce-44fb-a26b-68be4c685c12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8efde3304c2aa0ff51936754e6cba255d3dce4de
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2b58723b20802619baf9489f6dd0c6302805301b
+ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158426"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461942"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-time-series-mining-structure"></a>Lição 2: Adicionando modelos de mineração à estrutura de mineração de série temporal
   Nesta lição, você adicionará um novo modelo de mineração à estrutura de mineração que você acabou de criar na [lição 1: Criando um modelo de mineração de série temporal e a estrutura de mineração](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md).  
   
 ## <a name="alter-mining-structure-statement"></a>Instrução ALTER MINING STRUCTURE  
- Para adicionar um novo modelo de mineração a uma estrutura de mineração existente, use o [ALTER MINING STRUCTURE &#40;DMX&#41;] (instrução (~/dmx/alter-mining-structure-dmx.md). O código na instrução pode ser dividido nas seguintes partes:  
+ Para adicionar um novo modelo de mineração a uma estrutura de mineração existente, use o [ALTER MINING STRUCTURE &#40;DMX&#41; ](/sql/dmx/alter-mining-structure-dmx?view=sql-server-2016) instrução. O código na instrução pode ser dividido nas seguintes partes:  
   
 -   Identificando a estrutura de mineração  
   

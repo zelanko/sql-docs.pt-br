@@ -15,12 +15,12 @@ ms.assetid: 23b3e84f-9296-4dc9-81c0-c7f06ae3f1ff
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1aedb460d51eb79325d6a45650eb4964a10618ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d16fc8f7911e358a5b46610d1c03d7304b514fb7
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184726"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460331"
 ---
 # <a name="split-a-dataset-by-using-the-conditional-split-transformation"></a>Dividir um conjunto de dados por meio da transformação Divisão Condicional
   Para adicionar e configurar uma transformação Divisão Condicional, o pacote já deve incluir pelo menos uma tarefa de Fluxo de Dados e uma origem.  
@@ -61,11 +61,11 @@ ms.locfileid: "48184726"
 12. Para salvar o pacote atualizado, clique em **Salvar Itens Selecionados** no menu **Arquivo** .  
   
 ## <a name="see-also"></a>Consulte também  
- [Transformação divisão condicional](conditional-split-transformation.md)   
+ [Conditional Split Transformation](conditional-split-transformation.md)   
  [Transformações do Integration Services](integration-services-transformations.md)   
  [Caminhos do Integration Services](../integration-services-paths.md)   
  [Tipos de dados do Integration Services](../integration-services-data-types.md)   
- [Tarefa de fluxo de dados] ((.. /.. /Control-Flow/Data-Flow-Task.MD)   
- [Expressões do SSIS &#40;Integration Services&#41;](../../expressions/integration-services-ssis-expressions.md)  
+ [Tarefa de Fluxo de Dados](../../control-flow/data-flow-task.md)   
+ [Expressões do Integration Services &#40;SSIS&#41;](../../expressions/integration-services-ssis-expressions.md)  
   
   

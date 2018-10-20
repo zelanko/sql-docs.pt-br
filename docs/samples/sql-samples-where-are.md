@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3167bff4f976cbf23c955eea40f63c4a51bc1b76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d071a1d56808f7c634070e19707daf125d589396
+ms.sourcegitcommit: 97463ffe99915f3bbdf298e6e6b8d170e738ea7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802576"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49390858"
 ---
 # <a name="sql-samples"></a>Exemplos do SQL
 
@@ -51,3 +51,13 @@ Bancos de dados AdventureWorks estão disponíveis na [exemplos do SQL Server](h
 - [Downloads do AdventureWorks para SQL Server 2014 e versões posteriores](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks). Inclui arquivos. bak para as versões de 2012.
 - [Downloads do AdventureWorks para SQL Server 2012](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2012).
 - [Downloads do AdventureWorks para SQL Server 2008 R2](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2008r2).
+
+## <a name="azure-samples-and-templates"></a>Exemplos do Azure e modelos
+Um número de exemplos de código do Microsoft Azure e estão disponíveis no Github no .NET, Java, Python, Node. js, PHP e Ruby. Além disso, o Azure Resource Manager permite que você provisione seus aplicativos usando um modelo declarativo. Em um único modelo, você pode implantar vários serviços, juntamente com suas dependências. Você pode usar o mesmo modelo para implantar repetidamente seu aplicativo durante cada estágio do ciclo de vida do aplicativo.
+
+- [Exemplos do Azure](https://github.com/Azure-Samples)
+- [Modelos de início rápido do Azure](https://azure.microsoft.com/resources/templates/)
+
+
+
+

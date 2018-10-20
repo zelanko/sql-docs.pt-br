@@ -4,7 +4,7 @@ description: Este artigo descreve a replicação do SQL Server no Linux.
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.date: 03/20/2018
+ms.date: 10/17/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -13,12 +13,12 @@ ms.technology: database-engine
 ms.assetid: ''
 ms.workload: On Demand
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a6c4bad8947944d59208a0516e5950d36f64a84e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2bef97eb018e35179f0f9288f18bf170b04ae630
+ms.sourcegitcommit: 97463ffe99915f3bbdf298e6e6b8d170e738ea7a
 ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734124"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49390838"
 ---
 # <a name="sql-server-replication-on-linux"></a>Replicação do SQL Server no Linux
 
@@ -34,7 +34,7 @@ Uma instância do SQL Server pode participar de qualquer função de replicaçã
 * Distribuidor
 * Assinante
 
-Um esquema de replicação pode misturar e combinar plataformas de sistema operacional. Por exemplo, um esquema de replicação pode usar instâncias do SQL Server no Linux para o publicador e distribuidor e assinantes podem incluir instâncias do SQL Server no Windows.
+Um esquema de replicação pode misturar e combinar plataformas de sistema operacional. Por exemplo, um esquema de replicação pode incluir uma instância do SQL Server no Linux para o publicador e distribuidor e assinantes incluem instâncias do SQL Server no Windows, bem como o Linux.
 
 Instâncias do SQL Server no Linux podem participar de qualquer tipo de replicação.
 
@@ -62,6 +62,7 @@ Para [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] os recursos de repl
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] não suporta os seguintes recursos:
 
 * Assinantes de atualização imediata
+* publicação Oracle
 
 ## <a name="next-steps"></a>Próximas etapas
 
