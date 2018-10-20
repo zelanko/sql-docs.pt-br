@@ -11,8 +11,6 @@ items:
     href: polybase-pushdown-computation.md
   - name: Grupos de expansão
     href: polybase-scale-out-groups.md
-  - name: Mapeamento de tipo
-    href: polybase-type-mapping.md
 - name: Guias de instruções
   items:
   - name: Instalar
@@ -71,9 +69,9 @@ items:
     href: https://feedback.azure.com/forums/908035-sql-server
   - name: Reddit
     href: https://www.reddit.com/r/SQLServer
-ms.openlocfilehash: fce4843898ceda44353610afc960e9b55dbcb0f8
-ms.sourcegitcommit: 448106b618fe243e418bbfc3daae7aee8d8553d2
+ms.openlocfilehash: 46ddf8e0f4bb3167a0d4346e9babb2c395c3d7b8
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48264846"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49460907"
