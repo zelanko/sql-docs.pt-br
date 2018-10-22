@@ -13,12 +13,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5a8f0b9a18627da1e7d407b396686cb756ca5a4b
-ms.sourcegitcommit: b75fc8cfb9a8657f883df43a1f9ba1b70f1ac9fb
+ms.openlocfilehash: 75263ad68af90f0dfd8035cc943a194c344f90fa
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48852101"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461022"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>Tutorial: Introdução ao Always Encrypted com enclaves seguros usando o SSMS
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -311,6 +311,6 @@ Agora você pode executar consultas avançadas nas colunas criptografadas. Algum
 ## <a name="next-steps"></a>Next Steps
 Ver [Configurar o Always Encrypted com enclaves seguros](encryption/configure-always-encrypted-enclaves.md) para ideias sobre outros casos de uso. Você também pode tentar fazer o seguinte:
 
-- [Configurar o atestado de TPM.](https://docs.microsoft.com/en-us/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-tpm-mode)
-- [Configurar o HTTPS para a instância do HGS.](https://docs.microsoft.com/en-us/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-configure-hgs-https)
+- [Configurar o atestado de TPM.](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-tpm-mode)
+- [Configurar o HTTPS para a instância do HGS.](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-configure-hgs-https)
 - Desenvolver aplicativos que emitem consultas avançadas a colunas criptografadas.

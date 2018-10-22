@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 59b0d8acbf6f0b99b3437dc866435595af00ab55
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
+ms.lasthandoff: 10/16/2018
 ms.locfileid: "47639774"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>Novidades do SQL Server Reporting Services (SSRS)
@@ -87,7 +87,7 @@ Você pode criar KPIs contextuais para a pasta em que você está diretamente no
   
  ![ssrs-webportal-kpi](../reporting-services/media/ssrs-webportal-kpi.png)
  
- Para obter mais informações, consulte [Working with KPIs in the web portal](http://msdn.microsoft.com/a28cf500-6d47-4268-a248-04837e7a09eb) (Trabalhando com KPIs no portal da Web)
+ Para obter mais informações, consulte [Trabalhando com KPIs no portal da Web](http://msdn.microsoft.com/a28cf500-6d47-4268-a248-04837e7a09eb)
   
  
  ### <a name="mobile-reports"></a>Relatórios móveis
@@ -95,7 +95,7 @@ Você pode criar KPIs contextuais para a pasta em que você está diretamente no
 Os relatórios móveis do Reporting Services são relatórios dedicados e otimizado para uma ampla variedade de fatores forma que proporcionam uma melhor experiência para usuários que acessam relatórios em dispositivos móveis. Relatórios móveis apresentam uma variedade de visualizações, desde gráficos de tempo, de categoria e de comparação, mapas de árvores e personalizados. Conecte seus relatórios móveis a uma variedade de fontes de dados, incluindo dados multidimensionais e tabulares do SQL Server Analysis Services local. Disponha seus relatórios móveis em uma superfície de design com colunas e linhas de grade ajustáveis e elementos de relatório móvel flexíveis que se adaptam bem a qualquer tamanho de tela. Salve esses relatórios móveis em um servidor do Reporting Service para exibir e interagir com eles em um navegador ou no aplicativo móvel do Power BI em iPads, iPhones, smartphones Android e dispositivos Windows 10.
   
 #### <a name="mobile-report-publisher"></a>Publicador de Relatórios Móveis  
- O [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)] permite a você criar e publicar relatórios móveis do SQL Server para seu [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)].  
+ O [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long.md)]permite a você criar e publicar relatórios móveis do SQL Server para seu [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)].  
   
  ![SS_MRP_LayoutTabSmall](../reporting-services/media/ss-mrp-layouttabsm.png "SS_MRP_LayoutTabSmall")  
   
@@ -170,14 +170,14 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
 
 ### <a name="report-builder-improvements"></a>Aprimoramentos do Construtor de Relatórios
 
-**Nova interface do usuário do Construtor de Relatórios:** a principal interface do usuário do [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] agora tem uma aparência moderna com elementos de interface do usuário simplificados.  
+**Nova interface de usuário do Construtor de Relatórios:** a principal interface de usuário do [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] agora tem uma aparência moderna com elementos de interface do usuário simplificados.  
   
 |||  
 |-|-|  
 |Nova|Previous|  
 |![ssrs_rbfacelift_new](../reporting-services/media/ssrs-rbfacelift-new.png "ssrs_rbfacelift_new")|![ssrs_rbfacelift_old](../reporting-services/media/ssrs-rbfacelift-old.png "ssrs_rbfacelift_old")|  
 
-**Painel de parâmetros personalizado:** agora você pode personalizar o painel de parâmetros. Usando a superfície de design no Construtor de Relatórios, você pode arrastar um parâmetro para uma coluna e linha específica no painel de parâmetros. Você pode adicionar e remover colunas para alterar o layout do painel.   Para obter mais informações, consulte [Personalizar o painel de parâmetros em um relatório &#40;Construtor de Relatórios&#41;](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md).  
+**Painel de parâmetros personalizado:** agora você pode personalizar o painel de parâmetros. Usando a superfície de design no Construtor de Relatórios, você pode arrastar um parâmetro para uma coluna e linha específica no painel de parâmetros. Você pode adicionar e remover colunas para alterar o layout do painel.   Para obter mais informações, consulte [Personalizar o painel de parâmetros em um relatório &#40;Construtor de Relatórios e SSRS&#41;](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md).  
   
  ![Lista de parâmetros no painel Dados de Relatório e no painel de parâmetros](../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png "Lista de parâmetros no painel Dados de Relatório e no painel de parâmetros")  
 
@@ -192,7 +192,7 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
 
 [Novidades do Analysis Services](http://msdn.microsoft.com/aa69c299-b8f4-4969-86d8-b3292fe13f08)  
 [Compatibilidade com versões anteriores](reporting-services-backward-compatibility.md)   
-[Recursos do Reporting Services compatíveis com as edições do SQL Server 2016](http://msdn.microsoft.com/39f03d2d-6e48-4b34-a9d3-07f86313b937)   
+[Recursos do Reporting Services com suporte nas edições do SQL Server 2016](http://msdn.microsoft.com/39f03d2d-6e48-4b34-a9d3-07f86313b937)   
 [Atualizar e migrar o Reporting Services](../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
 [Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
 
