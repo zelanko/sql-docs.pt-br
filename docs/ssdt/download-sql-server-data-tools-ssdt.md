@@ -1,7 +1,7 @@
 ---
 title: Baixar o SSDT (SQL Server Data Tools) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/27/2018
+ms.date: 09/28/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 703990d0484240d602c34ca24262df38e7aadc5b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 07fe3c1266cbdbabd13afc86aad9db04ea004932
+ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736596"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49419193"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Baixar e instalar o SSDT (SQL Server Data Tools) para o Visual Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +49,6 @@ O instalador lista instâncias disponíveis do Visual Studio às quais adicionar
 > [!IMPORTANT]
 > - Antes de instalar o SSDT para o Visual Studio 2017 (15.8.1), desinstale as extensões *Projetos do Analysis Services* e *Projetos do Reporting Services* caso elas já estejam instaladas e feche todas as instâncias do VS.
 > - Ao instalar o SSDT no Windows 10 1803 e optar por instalar o SSIS, você pode encontrar uma reinicialização inesperada. Você pode iniciar o instalador novamente e continuar a instalação após a reinicialização.
-> - No momento, o SSDT 15.8.1 não dá suporte ao Windows 7 SP1, portanto permaneça na versão 15.8.0 se você estiver usando o Windows 7 SP1.
 
 
 

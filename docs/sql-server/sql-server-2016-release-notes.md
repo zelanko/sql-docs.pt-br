@@ -1,6 +1,6 @@
 ---
 title: Notas de versão do SQL Server 2016 | Microsoft Docs
-ms.date: 04/24/2018
+ms.date: 04/25/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.custom: ''
@@ -14,12 +14,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7e935da31270a1fbcb98cc4861d9ba421ff9e58f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: da1dd90bb9a6ed19ed7bcbffc7afdfd0298291e2
+ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652915"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49419471"
 ---
 # <a name="sql-server-2016-release-notes"></a>Notas de Versão do SQL Server 2016.
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ Melhorias de compatibilidade e diagnóstico no SQL Server 2016 SP2.
 | |Novos atributos de tempo de execução [UdfCpuTime e UdfElapsedTime](https://blogs.msdn.microsoft.com/sql_server_team/more-showplan-enhancements-udfs/) na execução real do XML, para controlar o tempo gasto em UDFs (Funções Definidas pelo Usuário) escalares.| |
 | |Adicionar o tipo de espera CXPACKET à [lista das dez principais esperas possíveis](https://blogs.msdn.microsoft.com/sql_server_team/new-showplan-enhancements/) na execução real do XML – a execução paralela da consulta com frequência envolve esperas CXPACKET, mas esse tipo de espera não foi relatado na execução real do XML. |       |
 | |O aviso de despejo do tempo de execução foi estendido para relatar o número de páginas escritas para TempDB durante o despejo de um operador de paralelismo.| |
-|Compatibilidade da replicação com bancos de dados com agrupamentos de caracteres Suplementares  |   Agora, a replicação é compatível com bancos de dados que usam agrupamentos de caracteres Suplementares. |       |
+|Compatibilidade da replicação com bancos de dados com ordenações de caracteres Suplementares  |   Agora, a replicação é compatível com bancos de dados que usam ordenações de caracteres Suplementares. |       |
 |Manipulação adequada do Service Broker com o failover do grupo de disponibilidade |   Na implementação atual, quando o Service Broker é habilitado em um banco de dados do grupo de disponibilidade, durante um failover do grupo de disponibilidade, todas as conexões do Service Broker originadas na Réplica Primária são deixadas abertas. A melhoria fecha todas essas conexões abertas durante um failover do grupo de disponibilidade. |       |
 |Melhoria na solução de problemas das esperas de paralelismo |   com a adição de uma nova espera [CXCONSUMER](https://blogs.msdn.microsoft.com/sql_server_team/making-parallelism-waits-actionable/).   |       |
 |Maior consistência entre DMVs para as mesmas informações |   Agora, o DMV sys.dm_exec_session_wait_stats controla as esperas CXPACKET e CXCONSUMER de acordo com a DMV sys.dm_os_wait_stats. |       |

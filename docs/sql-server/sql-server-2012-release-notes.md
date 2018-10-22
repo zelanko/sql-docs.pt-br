@@ -3,7 +3,7 @@ title: Notas de versão do SQL Server 2012 | Microsoft Docs
 ms.prod: sql
 ms.technology: install
 ms.custom: ''
-ms.date: 01/31/2017
+ms.date: 02/01/2017
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,12 +13,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 407ad929d40c063f5648f109f3a89b669536eab5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e9539302dfa2bfdd13c55cd9d06544e5a55a6d5d
+ms.sourcegitcommit: 13d98701ecd681f0bce9ca5c6456e593dfd1c471
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47671904"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49419521"
 ---
 # <a name="sql-server-2012-release-notes"></a>Notas de Versão do SQL Server 2012
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -263,15 +263,15 @@ Ao usar o SQL Server Management Studio 2012 (SSMS), se um arquivo .sql estiver a
 -   Desconecte o editor SQL e conecte o editor do MDX/DMX a um servidor do AS.  
   
 ### <a name="22-cannot-create-or-open-tabular-projects-when-builtinadministrators-group-name-cannot-be-resolved"></a>2.2 Não é possível criar ou abrir projetos tabulares quando o nome de grupo BUILTIN\Administrators não pode ser resolvido  
-**Problema:** você deve ser um administrador em um servidor de banco de dados do local de trabalho antes de poder criar ou abrir projetos tabulares. Um usuário pode ser adicionado ao grupo de administradores de servidor por meio da adição do nome de usuário ou nome do grupo. Se você for membro do grupo BUILTIN\Administrator, não poderá criar ou editar arquivos BIM files, a menos que o servidor de banco de dados do local de trabalho tenha sido unido ao domínio do qual foi originalmente provisionado. Se você abrir ou criar o arquivo BIM, ele falhará com a seguinte mensagem de erro:  
+**Problema:** você deve ser um administrador em um servidor de banco de dados do workspace antes de poder criar ou abrir projetos tabulares. Um usuário pode ser adicionado ao grupo de administradores de servidor por meio da adição do nome de usuário ou nome do grupo. Se você for membro do grupo BUILTIN\Administrator, não poderá criar ou editar arquivos BIM files, a menos que o servidor de banco de dados do workspace tenha sido unido ao domínio do qual foi originalmente provisionado. Se você abrir ou criar o arquivo BIM, ele falhará com a seguinte mensagem de erro:  
   
 `"The BIM file cannot be opened. The server connected to is not valid. Reason: You are not an administrator of server [server name]."`  
   
 **Soluções alternativas:**  
   
--   Una novamente o servidor de banco de dados do local de trabalho e o computador do SQL Server Data Tools (SSDT) ao domínio.  
+-   Una novamente o servidor de banco de dados do workspace e o computador do SQL Server Data Tools (SSDT) ao domínio.  
   
--   Se o servidor de banco de dados do local de trabalho e/ou os computadores SSDT não forem ser unidos no domínio o tempo todo, adicione nomes de usuários individuais, em vez do grupo BUILTIN\Administrators como administradores no servidor de banco de dados do local de trabalho.  
+-   Se o servidor de banco de dados do workspace e/ou os computadores SSDT não forem ser unidos no domínio o tempo todo, adicione nomes de usuários individuais, em vez do grupo BUILTIN\Administrators como administradores no servidor de banco de dados do workspace.  
   
 ### <a name="23-ssis-components-for-as-tabular-models-do-not-work-as-expected"></a>2.3 Os componentes do SSIS para modelos tabulares do AS não funcionam como esperado  
 Os componentes do SSIS (SQL Server Integration Services) para o AS (Analysis Services) não funcionam como esperado para modelos tabulares. Veja a seguir os problemas conhecidos que podem ocorrer quando você tenta gravar um pacote do SSIS para funcionar com modelos tabulares.  

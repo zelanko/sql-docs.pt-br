@@ -1,7 +1,7 @@
 ---
 title: Novidades no SQL Server 2019 | Microsoft Docs
 ms.custom: ''
-ms.date: 09/26/2018
+ms.date: 09/27/2018
 ms.prod: sql-server-2018
 ms.reviewer: ''
 ms.technology:
@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 68a872164528bec49b0342f603107fb86e31fe50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 015a6d65f1d225ab5a8752352d41fd2201f871b5
+ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678264"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49461111"
 ---
 # <a name="whats-new-in-sql-server-2019"></a>Novidades no SQL Server 2019
 
@@ -233,7 +233,7 @@ Para obter mais informações, consulte [Descoberta e classificação de dados S
 A [auditoria](../relational-databases/security/auditing/sql-server-audit-database-engine.md) também foi aprimorada para incluir um novo campo no log de auditoria chamado `data_sensitivity_information`, que registra a classificações (rótulos) de confidencialidade dos dados reais que foram retornados pela consulta. Para obter detalhes e exemplos, consulte [Adicionar classificação de confidencialidade](../t-sql/statements/add-sensitivity-classification-transact-sql.md).
 
 >[!NOTE]
->Não há nenhuma alteração em termos de como a auditoria é habilitada. Foi adicionado um novo campo aos registros de auditoria, `data_sensitivity_information`, que registra a classificações (rótulos) de confidencialidade dos dados reais que foram retornados pela consulta. Consulte [Auditoria de acesso a dados confidenciais](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-data-discovery-and-classification#subheading-3).
+>Não há nenhuma alteração em termos de como a auditoria é habilitada. Foi adicionado um novo campo aos registros de auditoria, `data_sensitivity_information`, que registra a classificações (rótulos) de confidencialidade dos dados reais que foram retornados pela consulta. Consulte [Auditoria de acesso a dados confidenciais](https://docs.microsoft.com/azure/sql-database/sql-database-data-discovery-and-classification#subheading-3).
 
 ### <a name="expanded-support-for-persistent-memory-devices"></a>Suporte estendido para dispositivos de memória persistentes
 
