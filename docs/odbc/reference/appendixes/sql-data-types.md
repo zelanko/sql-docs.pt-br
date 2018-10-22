@@ -15,12 +15,12 @@ ms.assetid: 1b22f985-f5e4-4779-87eb-e43329a442b1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3325422169064c1e55ca7ce6d94da19a64392b82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: b932b7f102e304ad110e5073005d2623cee2693c
+ms.sourcegitcommit: fff9db8affb094a8cce9d563855955ddc1af42d2
+ms.translationtype: MT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707950"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49324589"
 ---
 # <a name="sql-data-types"></a>Tipos de dados SQL
 Cada DBMS define seus próprios tipos SQL. Cada driver ODBC expõe apenas esses tipos de dados SQL que define o DBMS associado. Informações sobre como um driver mapeia tipos de DBMS SQL para os identificadores de tipo definidas pelo ODBC SQL e como um driver mapeia os tipos de DBMS SQL para seus próprio identificadores de tipo SQL específica do driver é retornado por uma chamada para **SQLGetTypeInfo**. Um driver também retorna os tipos de dados SQL ao descrever os tipos de dados de colunas e parâmetros por meio de chamadas para **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLProcedureColumns**, e **SQLSpecialColumns**.  
@@ -46,20 +46,20 @@ Cada DBMS define seus próprios tipos SQL. Cada driver ODBC expõe apenas esses 
 |SQL_DECIMAL|DECIMAL (*p*,*s*)|Assinado, um valor numérico exato, com uma precisão de pelo menos *p* e a escala *s.* (A precisão máxima é definido pelo driver). (1 < = *p* < = 15; *s* <= *p*). [ 4]|  
 |SQL_NUMERIC|NUMÉRICO (*p*,*s*)|Valor numérico exato, com uma precisão sinal *p* e a escala *s* (1 < = *p* < = 15; *s* <= *p*). [ 4]|  
 |SQL_SMALLINT|SMALLINT|Valor numérico exato com precisão 5 e escala 0 (assinado: – 32,768 < = *n* < = 32,767, sem sinal: 0 < = *n* < = 65,535) [3].|  
-_INTEGER|INTEGER|Valor numérico exato com precisão 10 e escala 0 (assinado: – 2 [31] < = *n* < = 2 [31] – 1, sem sinal: 0 < = *n* < = 2 [32] – 1) [3].|  
+|SQL_INTEGER|INTEGER|Valor numérico exato com precisão 10 e escala 0 (assinado: – 2 [31] < = *n* < = 2 [31] – 1, sem sinal: 0 < = *n* < = 2 [32] – 1) [3].|  
 |SQL_REAL|real|Assinado, o valor numérico aproximado com uma precisão binária de 24 (zero ou valor absoluto 10 [–38] para 10[38]).|  
 |SQL_FLOAT|FLOAT (*p*)|Assinado, valor numérico aproximado com uma precisão binária de pelo menos *p*. (A precisão máxima é definido pelo driver). [5]|  
 |SQL_DOUBLE|DOUBLE PRECISION|Assinado, o valor numérico aproximado com uma precisão binária de 53 (zero ou valor absoluto 10 [–308] para 10[308]).|  
 |SQL_BIT|BIT|Dados binários de bit único. [8]|  
 |SQL_TINYINT|TINYINT|Valor numérico exato com precisão 3 e escala 0 (assinado: – 128 < = *n* < = 127, sem sinal: 0 < = *n* < = 255) [3].|  
-_BIGINT|bigint|Valor numérico exato com precisão 19 (se tiver sinal) ou 20 (se não tiver sinal) e escala 0 (assinado: – 2 [63] < = *n* < = 2 [63] – 1, sem sinal: 0 < = *n* < = 2 [64] – 1) [3], [9].|  
+|SQL_BIGINT|bigint|Valor numérico exato com precisão 19 (se tiver sinal) ou 20 (se não tiver sinal) e escala 0 (assinado: – 2 [63] < = *n* < = 2 [63] – 1, sem sinal: 0 < = *n* < = 2 [64] – 1) [3], [9].|  
 |SQL_BINARY|BINÁRIO (*n*)|Dados binários de comprimento fixo *n*. [ 9]|  
 |SQL_VARBINARY|VARBINARY (*n*)|Dados binários de comprimento máximo de comprimento variável *n*. O máximo é definido pelo usuário. [9]|  
 |SQL_LONGVARBINARY|VARBINARY LONGO|Dados binários de comprimento variável. Comprimento máximo é dependente da fonte de dados. [9]|  
 |SQL_TYPE_DATE [6]|DATE|Ano, mês e campos do dia, em conformidade com as regras do calendário gregoriano. (Consulte [restrições do calendário gregoriano](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md), mais adiante neste apêndice.)|  
 |SQL_TYPE_TIME [6]|TEMPO (*p*)|Hora, minuto e segundo campos, com os valores válidos para horas de 00 a 23, os valores válidos para de 00 a 59 minutos e valores válidos para segundos de 00 a 61. Precisão *p* indica a precisão de segundos.|  
 |SQL_TYPE_TIMESTAMP [6]|Carimbo de hora (*p*)|Ano, mês, dia, hora, minuto e segundo campos, com os valores válidos conforme definido para os tipos de dados de data e hora.|  
-_TYPE_UTCDATETIME|UTCDATETIME|Campos de ano, mês, dia, hora, minuto, segundo, utchour e utcminute. Os campos utchour e utcminute tem precisão de 1/10 microssegundos.|  
+|SQL_TYPE_UTCDATETIME|UTCDATETIME|Campos de ano, mês, dia, hora, minuto, segundo, utchour e utcminute. Os campos utchour e utcminute tem precisão de 1/10 microssegundos.|  
 |SQL_TYPE_UTCTIME|UTCTIME|Campos de hora, minuto, segundo, utchour e utcminute. Os campos utchour e utcminute têm precisão de 1/10 microssegundo...|  
 |SQL_INTERVAL_MONTH [7]|INTERVALO de mês (*p*)|Número de meses entre duas datas; *p* é o intervalo de precisão inicial.|  
 |SQL_INTERVAL_YEAR [7]|INTERVALO de ano (*p*)|Número de anos entre duas datas; *p* é o intervalo de precisão inicial.|  
@@ -68,17 +68,17 @@ _TYPE_UTCDATETIME|UTCDATETIME|Campos de ano, mês, dia, hora, minuto, segundo, u
 |SQL_INTERVAL_HOUR [7]|INTERVALO-hora (*p*)|Número de horas entre duas datas/horas; *p* é o intervalo de precisão inicial.|  
 |SQL_INTERVAL_MINUTE [7]|MINUTOS de intervalo (*p*)|Número de minutos entre duas datas/horas; *p* é o intervalo de precisão inicial.|  
 |SQL_INTERVAL_SECOND [7]|INTERVALO de segundo (*p*,*q*)|Número de segundos entre duas datas/horas; *p* é o intervalo de precisão inicial e *q* é a precisão de segundos de intervalo.|  
-_INTERVAL_DAY_TO_HOUR [7]|INTERVALO-dia (*p*) para hora|Número de dias/horas entre duas datas/horas; *p* é o intervalo de precisão inicial.|  
+|SQL_INTERVAL_DAY_TO_HOUR [7]|INTERVALO-dia (*p*) para hora|Número de dias/horas entre duas datas/horas; *p* é o intervalo de precisão inicial.|  
 |SQL_INTERVAL_DAY_TO_MINUTE [7]|INTERVALO-dia (*p*) para minuto|Número de dias/horas/minutos entre duas datas/horas; *p* é o intervalo de precisão inicial.|  
 |SQL_INTERVAL_DAY_TO_SECOND [7]|INTERVALO-dia (*p*) para o segundo (*q*)|Número de dias/horas/minutos/segundos entre duas datas/horas; *p* é o intervalo de precisão inicial e *q* é a precisão de segundos de intervalo.|  
 |SQL_INTERVAL_HOUR_TO_MINUTE [7]|INTERVALO-hora (*p*) para minuto|Número de horas/minutos entre duas datas/horas; *p* é o intervalo de precisão inicial.|  
 |SQL_INTERVAL_HOUR_TO_SECOND [7]|INTERVALO-hora (*p*) para o segundo (*q*)|Número de horas/minutos/segundos entre duas datas/horas; *p* é o intervalo de precisão inicial e *q* é a precisão de segundos de intervalo.|  
-_INTERVAL_MINUTE_TO_SECOND [7]|MINUTOS de intervalo (*p*) para o segundo (*q*)|Número de minutos/segundos entre duas datas/horas; *p* é o intervalo de precisão inicial e *q* é a precisão de segundos de intervalo.|  
+|SQL_INTERVAL_MINUTE_TO_SECOND [7]|MINUTOS de intervalo (*p*) para o segundo (*q*)|Número de minutos/segundos entre duas datas/horas; *p* é o intervalo de precisão inicial e *q* é a precisão de segundos de intervalo.|  
 |SQL_GUID|GUID|GUID de comprimento fixo.|  
   
  [1] esse é o valor retornado na coluna DATA_TYPE por uma chamada para **SQLGetTypeInfo**.  
   
- [2]] esse é o valor retornado na coluna Nome e criar PARAMS por uma chamada para **SQLGetTypeInfo**. A coluna de nome retorna a designação — por exemplo, CHAR — ao passo que a coluna de criar PARAMS retorna uma lista separada por vírgulas dos parâmetros de criação, como precisão, escala e comprimento.  
+ [2] esse é o valor retornado na coluna Nome e criar PARAMS por uma chamada para **SQLGetTypeInfo**. A coluna de nome retorna a designação — por exemplo, CHAR — ao passo que a coluna de criar PARAMS retorna uma lista separada por vírgulas dos parâmetros de criação, como precisão, escala e comprimento.  
   
  [3] um aplicativo usa **SQLGetTypeInfo** ou **SQLColAttribute** para determinar se um determinado tipo de dados ou uma coluna específica em um conjunto de resultados é sem sinal.  
   
