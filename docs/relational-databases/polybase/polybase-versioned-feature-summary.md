@@ -11,12 +11,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 766d1ec31dda38993a4d5a66a70d56a132c4667c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2052b098f0be7ab377cf38a36b896794d3caa07a
+ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848274"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48874344"
 ---
 # <a name="polybase-features-and-limitations"></a>Recursos e limitações do PolyBase
 
@@ -80,12 +80,10 @@ O PolyBase apresenta as seguintes limitações:
 - [O PolyBase não é instalado durante a adição de um nó a um Cluster de Failover do SQL Server 2016](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
 
 ::: moniker-end
+- A autenticação de integração não é compatível. Somente o nome de usuário e a senha são compatíveis por enquanto.  
+- Habilitamos a criptografia por padrão. Para desabilitar a criptografia, você deve... (falar com thanh)
+- [Limitações do mapeamento de tipo](polybase-type-mapping.md)
 
-- TBD: largura da linha
-- TBD: mapeamento de tipos
-- TBD: autenticação
-- TBD: ordenação 
-- TBD: aplicação  
 
 ## <a name="security-and-authentication"></a>Segurança e autenticação 
 
